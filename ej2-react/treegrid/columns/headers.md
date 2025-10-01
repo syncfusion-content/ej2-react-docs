@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Headers in React Treegrid component | Syncfusion
-description: Learn here all about Headers in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Headers in React TreeGrid component | Syncfusion
+description: Learn here all about Headers in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Headers 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Headers in React Treegrid component
+# Headers in React TreeGrid
 
 ## Header text
 
-By default, column header title is displayed from column [`field`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#field) value. To override the default header title, you have to define the [`headerText`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#headertext)value.
+By default, the column header title is derived from the column [field](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#field) value. To override the default title, set the [headerText](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#headertext) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -25,11 +25,11 @@ By default, column header title is displayed from column [`field`](https://ej2.s
 
  {% previewsample "page.domainurl/code-snippet/treegrid/column-cs20" %}
 
-> * If both the [`field`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#field) and [`headerText`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#headertext) are not defined in the column, the column renders with **“empty”** header text.
+> If both [field](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#field) and [headerText](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#headertext) are not defined, the column renders with an empty header.
 
 ## Header template
 
-You can customize the header element by using the [`headerTemplate`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#headertemplate)property.
+Customize the header element using the [headerTemplate](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#headertemplate) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -44,16 +44,15 @@ You can customize the header element by using the [`headerTemplate`](https://ej2
 
 ## Change header text dynamically
 
-The Syncfusion TreeGrid allows to modify the header text of a corresponding column in real-time based on events or other interactions. This feature is useful in various scenarios, such as displaying custom header text for a specific column or updating the header text dynamically based on user input. Dynamic changes to the header text provide a more flexible and customizable experience.
+The TreeGrid allows modifying a column’s header text at runtime based on events or other interactions. This feature is useful in various scenarios, such as displaying custom header text for a specific column or updating the header text dynamically based on input. Dynamic changes to the header text provide a more flexible and customizable experience.
 
-You can change the column [headerText](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#headertext) dynamically through an external button.
+Change the column [headerText](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#headertext) dynamically using an external button.
 
-Follow the given steps to change the header text dynamically:
+Follow these steps to change the header text dynamically:
 
 **Step 1**:
 
-Get the column object corresponding to the field name by using the [getColumnByField](https://ej2.syncfusion.com/react/documentation/api/treegrid/#getcolumnbyfield) method.
-Then change the header Text value.
+Get the column object corresponding to the field name using the [getColumnByField](https://ej2.syncfusion.com/react/documentation/api/treegrid/#getcolumnbyfield) method, then update the header text value.
 
 ```ts
       /** Get the JSON object of the column corresponding to the field name **/
@@ -90,13 +89,14 @@ Here is an example of how to change the header text of a column using the `getCo
 
 ## Change orientation of header text
 
-By default, the text in the column headers of the Syncfusion React TreeGrid is oriented horizontally. However, in some cases, you may want to change the orientation of the header text to vertical, diagonal, or at a custom angle. This can be achieved by adding a custom CSS class to the column header cell using the [customAttributes](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#customattributes) property of the TreeGrid columns.
+By default, TreeGrid column headers are oriented horizontally. To display header text vertically, diagonally, or at a custom angle, apply a custom CSS class to the header cell using the [customAttribute`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#customattributes) property of the TreeGrid columns.
 
-Follow the below steps to change the orientation of the header text in TreeGrid:
 
-**Step 1: Create a CSS class with orientation style for TreeGrid header cell**
+Follow the steps below to change the orientation of the header text:
 
-To rotate the header text, you can create a CSS class with the transform property that rotates the header text 90 degrees. This class will be added to the header cell using the `customAttributes` property.
+**Step 1: Create a CSS class with the desired orientation for the header cell**
+
+Create a CSS class that applies a transform to rotate the header text. This class will be added to the header cell via `customAttributes`.
 
 ```css
     .orientationcss .e-headercelldiv {
@@ -105,9 +105,9 @@ To rotate the header text, you can create a CSS class with the transform propert
 ```
 **Step 2: Add the custom CSS class to the TreeGrid column**
 
-Once you have created the CSS class, you can add it to the particular column by using the `customAttributes` property. This property allows you to add any custom attribute to the TreeGrid column.
+Add the CSS class to the target column by using the `customAttributes` property. This property allows to add any custom attribute to the TreeGrid column.
 
-For example, to add the orientation css class to the **EndDate** column, you can use the following code:
+For example, to apply the orientation class to the **EndDate** column:
 
 ```ts
     <ColumnDirective field='EndDate' headerText='End Date' width='90' format='yMd' customAttributes={this.customAttributes} textAlign='Center' />
@@ -115,7 +115,7 @@ For example, to add the orientation css class to the **EndDate** column, you can
 
 **Step 3: Resize the header cell height**
 
-After adding the custom CSS class to a column, you need to resize the header cell height in [create](https://ej2.syncfusion.com/react/documentation/api/treegrid/#create) event so that the rotated header text is fully visible. You can do this by using the following code:
+After applying the custom class, adjust the header cell height in the [create](https://ej2.syncfusion.com/react/documentation/api/treegrid/#create) event so the rotated text is fully visible.
 
 ```ts
   const setHeaderHeight = () => {
@@ -129,7 +129,7 @@ After adding the custom CSS class to a column, you need to resize the header cel
   }
 ```
 
-Here’s an example of how to change orientation of header text:
+Here’s an example of how to change the orientation of header text:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
