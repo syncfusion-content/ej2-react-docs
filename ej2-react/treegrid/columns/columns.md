@@ -1,26 +1,25 @@
 ---
 layout: post
-title: Columns in React Treegrid component | Syncfusion
-description: Learn here all about Columns in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Columns in React TreeGrid component | Syncfusion
+description: Learn here all about Columns in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Columns 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Columns in React Treegrid component
+# Columns in React TreeGrid
 
-The column definitions are used as the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#dataSource) schema in the TreeGrid. This plays a vital role in rendering column values in the required format. The treegrid operations such as sorting, filtering and searching etc. are performed based on column definitions. The [`field`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#field) property of the [`columns`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#column) is necessary to map the data source values in TreeGrid columns.
+The column definitions act as the [dataSource](https://ej2.syncfusion.com/react/documentation/api/treegrid/#dataSource) schema in the TreeGrid. They play a vital role in rendering column values in the desired format. TreeGrid operations such as sorting, filtering, and searching are performed based on the column definitions. The [field](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#field) property of the [columns](https://ej2.syncfusion.com/react/documentation/api/treegrid/#column) configuration is required to map data source values to TreeGrid columns.
 
-> 1. If the column [`field`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#field) is not specified in the dataSource, the column values will be empty.
-> 2. If the [`field`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#field) name contains “dot” operator, it is considered as complex binding.
+> 1. If the column `field` is not present in the data source, the column displays empty values.
+> 2. If the `field` name contains a dot (.), it is treated as complex binding.
 
-[`treeColumnIndex`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#treecolumnindex) property denotes the column that is used to expand and collapse child rows.
+The [treeColumnIndex](https://ej2.syncfusion.com/react/documentation/api/treegrid/#treecolumnindex) property denotes the column used to expand and collapse child rows.
 
 ## Format
 
-To format cell values based on specific culture, use the [`columns.format`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#format) property. The TreeGrid uses [Internalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) library to format [`number`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#number-formatting) and [`date`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#manipulating-datetime)
-values.
+To format cell values based on culture, use the [columns.format](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#format) property. The TreeGrid uses the [Internationalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) library to format [number](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#number-formatting) and [date](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#manipulating-datetime) values.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -33,27 +32,27 @@ values.
 
  {% previewsample "page.domainurl/code-snippet/treegrid/column-cs10" %}
 
-> By default, the [`number`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#number-formatting) and [`date`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#manipulating-datetime) values are formatted in **en-US** locale.
+> By default, [number](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#number-formatting) and [date](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#manipulating-datetime) values are formatted using the en-US locale.
 
 ### Number formatting
 
-The number or integer values can be formatted using the below format strings.
+Use the following format strings for numeric and integer values.
 
 Format |Description |Remarks
 -----|-----|-----
-N | Denotes numeric type. | The numeric format is followed by integer value as N2, N3. etc which denotes the number of precision to be allowed.
-C | Denotes currency type. | The currency format is followed by integer value as C2, C3. etc which denotes the number of precision to be allowed.
-P | Denotes percentage type | The percentage format expects the input value to be in the range of 0 to 1. For example the cell value `0.2` is formatted as `20%`. The percentage format is followed by integer value as P2, P3. etc which denotes the number of precision to be allowed.
+N | Numeric format | Append an integer to set precision (for example, N2, N3).
+C | Currency format | Append an integer to set precision (for example, C2, C3).
+P | Percentage format | Expects input from 0 to 1 (for example, 0.2 is shown as 20%). Append an integer to set precision (for example, P2, P3).
 
-Please refer to the link to know more about [`Number formatting`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#number-formatting).
+For more information, see [Number formatting](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#number-formatting).
 
 ### Date formatting
 
-You can format date values either using built-in date format string or custom format string.
+Date values can be formatted using built-in or custom format strings.
 
-For built-in date format you can specify [`columns.format`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#format) property as string   (Example: `yMd`). Please refer to the link to know more about [`Date formatting`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#manipulating-datetime).
+For built-in date formats, assign a string to the [columns.format](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#format) property (for example, `yMd`). For more information, see [Date formatting](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#manipulating-datetime).
 
-You can also use custom format string to format the date values. Some of the custom formats and the formatted date values are given in the below table.
+Custom format examples:
 
 Format | Formatted value
 -----|-----
@@ -76,9 +75,9 @@ Format | Formatted value
 
 ## Lock Columns
 
-You can lock columns by using [`column.lockColumn`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#lockcolumn) property. The locked columns will be moved to the first position. Also you can’t reorder its position.
+Lock columns using the [column.lockColumn](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#lockcolumn) property. Locked columns are moved to the first position and cannot be reordered.
 
-In the below example, duration column is locked and its reordering functionality is disabled.
+In the following example, the Duration column is locked and its reordering is disabled.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -93,24 +92,24 @@ In the below example, duration column is locked and its reordering functionality
 
 ## Column Type
 
-Column type can be specified using the [`columns.type`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#type) property. It specifies the type of data the column binds.
+Specify the column data type using the [columns.type](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#type) property. This ensures appropriate formatting and behavior.
 
-If the [`format`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#format)  is defined for a column, the column uses [`type`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#type) to select the appropriate format option ([number](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#number-formatting) or [date](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#manipulating-datetime)).
+If a [format](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#format) is defined, the [type](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#type) helps select the correct formatting (for example, [number](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#number-formatting) or [date](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#manipulating-datetime)).
 
-TreeGrid column supports the following types:
+TreeGrid columns support the following types:
 * string
 * number
 * boolean
 * date
 * datetime
 
-> If the [`type`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#type) is not defined, it will be determined from the first record of the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#datasource).
+> If the [type](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#type) is not set, it is inferred from the first record of the [dataSource](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#datasource).
 
 ## Checkbox Column
 
-To render checkboxes in existing column, you need to set [`columns.showCheckbox`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#showcheckbox) property as **true**
+To render checkboxes in an existing column, set the [columns.showCheckbox](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#showcheckbox) property to true.
 
-It is also possible to select the rows hierarchically using checkboxes in TreeGrid by enabling [`autoCheckHierarchy`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#autocheckhierarchy) property. When we check on any parent record checkbox then the child record checkboxes will get checked.
+Rows can be selected hierarchically using checkboxes by enabling the [autoCheckHierarchy](https://ej2.syncfusion.com/react/documentation/api/treegrid/#autocheckhierarchy) property. Selecting a parent record checkbox selects its child records.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -123,13 +122,13 @@ It is also possible to select the rows hierarchically using checkboxes in TreeGr
 
  {% previewsample "page.domainurl/code-snippet/treegrid/column-cs12" %}
 
-> For hierarchy selection between the records, we need to enable the [`autoCheckHierarchy`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#autocheckhierarchy) property.
+> For hierarchical selection between records, enable the [autoCheckHierarchy](https://ej2.syncfusion.com/react/documentation/api/treegrid/#autocheckhierarchy) property.
 
 ## Autofit columns 
 
-The [autoFitColumns](https://ej2.syncfusion.com/react/documentation/api/treegrid/#autofitcolumns) method resizes the column to fit the widest cell's content without wrapping. You can autofit a specific column at initial rendering by invoking the `autoFitColumns` method in [dataBound](https://ej2.syncfusion.com/react/documentation/api/treegrid/#databound) event.
+The [autoFitColumns](https://ej2.syncfusion.com/react/documentation/api/treegrid/#autofitcolumns) method resizes a column to fit the widest cell content without wrapping. You can autofit a specific column during initial rendering by invoking `autoFitColumns` method in the [dataBound](https://ej2.syncfusion.com/react/documentation/api/treegrid/#databound) event.
 
-To use `autoFitColumns` method, you need to inject **Resize** module in the TreeGrid.
+To use `autoFitColumns` method, inject the **Resize** module into the TreeGrid.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -142,11 +141,11 @@ To use `autoFitColumns` method, you need to inject **Resize** module in the Tree
 
  {% previewsample "page.domainurl/code-snippet/treegrid/column-cs1" %}
 
-> You can autofit all columns, by invoking `autoFitColumns` method without column name.
+> To autofit all columns, invoke the `autoFitColumns` method without specifying a column name.
 
 ## Controlling TreeGrid actions
 
-You can enable or disable treegrid action for a particular column by setting the [`allowFiltering`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#allowfiltering), and [`allowSorting`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#allowsorting) properties.
+Enable or disable TreeGrid actions for a specific column by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#allowfiltering) and [allowSorting](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#allowsorting) properties.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -161,7 +160,7 @@ You can enable or disable treegrid action for a particular column by setting the
 
 ## Show/Hide Columns by External Button
 
-You can show or hide treegrid columns dynamically using external buttons by invoking the [`showColumns`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#showcolumns) or [`hideColumns`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#hidecolumns) method.
+Show or hide TreeGrid columns dynamically using external buttons by invoking the [showColumns](https://ej2.syncfusion.com/react/documentation/api/treegrid/#showcolumns) or [hideColumns](https://ej2.syncfusion.com/react/documentation/api/treegrid/#hidecolumns) methods.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -176,7 +175,7 @@ You can show or hide treegrid columns dynamically using external buttons by invo
 
 ## ValueAccessor
 
-The [`valueAccessor`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#valueaccessor) is used to access/manipulate the value of display data. You can achieve custom value formatting by using the [`valueAccessor`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#valueaccessor).
+The [valueAccessor](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#valueaccessor) is used to access or manipulate display values. Use it to implement custom value formatting.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -191,7 +190,7 @@ The [`valueAccessor`](https://ej2.syncfusion.com/react/documentation/api/treegri
 
 ### Display Array type Columns
 
-You can bind an array of objects in a column by using the [`valueAccessor`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#valueaccessor) property. In this example, the name field has an array of two objects, FirstName and LastName. These two objects are joined and bound to a column using the [`valueAccessor`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#valueaccessor).
+Bind an array of objects to a column using the [valueAccessor](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#valueaccessor) property. In the following example, the name field contains two objects, FirstName and LastName. These values are joined and displayed via `valueAccessor`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -206,7 +205,7 @@ You can bind an array of objects in a column by using the [`valueAccessor`](http
 
 ### Expression Column
 
-You can achieve the expression column by using the [`valueAccessor`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#valueaccessor)property.
+An expression column can be achieved using the [valueAccessor](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#valueaccessor) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -221,7 +220,7 @@ You can achieve the expression column by using the [`valueAccessor`](https://ej2
 
 ## Render boolean value as checkbox
 
-To render boolean values as checkbox in columns, you need to set [`displayAsCheckBox`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#displayascheckbox) property as **true**.
+To render boolean values as checkboxes in columns, set the [displayAsCheckBox](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#displayascheckbox) property to **true**.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -236,7 +235,7 @@ To render boolean values as checkbox in columns, you need to set [`displayAsChec
 
 ## Responsive columns
 
-The Syncfusion React TreeGrid provides a built-in feature to toggle the visibility of columns based on media queries using the [hideAtMedia](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#hideatmedia) property of the column object. The `hideAtMedia` accepts valid [Media Queries](http://cssmediaqueries.com/what-are-css-media-queries.html).
+The Syncfusion React TreeGrid provides a built-in feature to toggle column visibility based on media queries using the [hideAtMedia](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#hideatmedia) property of the column object. The `hideAtMedia` property accepts valid [media queries](http://cssmediaqueries.com/what-are-css-media-queries.html).
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -249,4 +248,4 @@ The Syncfusion React TreeGrid provides a built-in feature to toggle the visibili
 
  {% previewsample "page.domainurl/code-snippet/treegrid/column-cs22" %}
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/bootstrap5/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> Refer to our [React TreeGrid](https://www.syncfusion.com/react-components/react-tree-grid) feature tour page for its groundbreaking feature representations. Explore our [React TreeGrid example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/treegrid/treegrid-overview) to knows how to present and manipulate data.
