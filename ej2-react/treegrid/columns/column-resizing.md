@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Column resizing in React Treegrid component | Syncfusion
-description: Learn here all about Column resizing in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Column resizing in React TreeGrid | Syncfusion
+description: Learn here all about Column resizing in Syncfusion React TreeGrid of Syncfusion Essential JS 2 and more.
 control: Column resizing 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column resizing in React Treegrid component
+# Column resizing in React TreeGrid 
 
-Column width can be resized by clicking and dragging the right edge of the column header. While dragging, the width of the respective column will be resized immediately. Each column can be auto resized by double-clicking the right edge of the column header to fit the width of that column based on the widest cell content. To enable column resize, set the [`allowResizing`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowresizing) property to true.
+Column width can be adjusted by clicking and dragging the right edge of a column header. While dragging, the column resizes immediately. Double-clicking the right edge of a column header automatically fits that column to the widest cell content. To enable column resizing, set the [`allowResizing`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowresizing) property to true.
 
-To use the column resize, inject **Resize** module in the treegrid.
+To use column resizing, inject the **Resize** module in the TreeGrid.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -25,14 +25,14 @@ To use the column resize, inject **Resize** module in the treegrid.
 
  {% previewsample "page.domainurl/code-snippet/treegrid/column-cs5" %}
 
-> You can disable Resizing for a particular column, by specifying [`columns.allowResizing`](https://ej2.syncfusion.com/react/documentation/api/treegrid/columnModel/#allowresizing) to false.
-> In RTL mode, you can click and drag the left edge of header cell to resize the column.
+> Resizing can be disabled for a specific column by setting [columns.allowResizing](https://ej2.syncfusion.com/react/documentation/api/treegrid/columnModel/#allowresizing) to false.  
+> In RTL mode, drag the left edge of the header cell to resize the column.
 
 ## Min and max width
 
-Column resize can be restricted between minimum and maximum width by defining the [`columns->minWidth`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#minwidth) and [`columns->maxWidth`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#maxwidth).
+Resizing can be constrained using [columns.minWidth`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#minwidth) and [columns.maxWidth](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#maxwidth).
 
-In the following sample, minimum and maximum width are defined for **Duration**, and **Task Name** columns.
+In the following sample, minimum and maximum widths are defined for the **Duration** and **Task Name** columns.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -47,7 +47,7 @@ In the following sample, minimum and maximum width are defined for **Duration**,
 
 ## Resize stacked column
 
-Stacked columns can be resized by clicking and dragging the right edge of the stacked column header. While dragging, the width of the respective child columns will be resized at the same time. You can disable resize for particular stacked column by setting [`allowResizing`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#allowresizing) as **false** to its columns.
+Stacked columns can be resized by dragging the right edge of the stacked header. While dragging, all child columns under the stacked header resize proportionally. To disable resizing for a particular stacked column, set [allowResizing](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#allowresizing) to **false** on the respective child columns.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -62,9 +62,9 @@ Stacked columns can be resized by clicking and dragging the right edge of the st
 
 ## Touch interaction
 
-When the right edge of the header cell is tapped, a floating handler will be visible over the right border of the column. To resize the column, tap and drag the floating handler as needed.
+When the right edge of a header cell is tapped, a floating handler appears over the column border. Drag the floating handler to adjust the column width.
 
-The following screenshot represents the column resizing in touch device.
+The following screenshot illustrates column resizing on a touch device.
 
 <!-- markdownlint-disable MD033 -->
 <img src="../images/column-resizing.png" alt="Touch interaction image" style="width:320px;height: 620px">

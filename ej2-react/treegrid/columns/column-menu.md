@@ -1,28 +1,28 @@
 ---
 layout: post
-title: Column menu in React Treegrid component | Syncfusion
-description: Learn here all about Column menu in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Column menu in React TreeGrid | Syncfusion
+description: Learn here all about Column menu in Syncfusion React TreeGrid of Syncfusion Essential JS 2 and more.
 control: Column menu 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column menu in React Treegrid component
+# Column menu in React TreeGrid
 
-The column menu has options to integrate features like sorting, filtering, and autofit. It will show a menu with the integrated feature when users click on multiple icon of the column. To enable column menu, you need to define the [`showColumnMenu`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#showcolumnmenu) property as true.
+The column menu provides built-in actions such as sorting, filtering, and autofit. A menu with these actions appears when the column menu icon is clicked. Enable the column menu by setting the [showColumnMenu](https://ej2.syncfusion.com/react/documentation/api/treegrid/#showcolumnmenu) property to true.
 
-To use the column menu, inject the **ColumnMenu** module in the treegrid.
+To use the column menu, inject the **ColumnMenu** module in the TreeGrid.
 
-The default items are displayed in following table.
+The default items are listed below.
 
 | Item | Description |
 |-----|-----|
-| **SortAscending** | Sort the current column in ascending order. |
-| **SortDescending** | Sort the current column in descending order. |
-| **AutoFit** | Auto fit the current column. |
-| **AutoFitAll** | Auto fit all columns. |
-| **Filter** | Show the filter option as given in [`filterSettings.type`](https://ej2.syncfusion.com/react/documentation/api/treegrid/filterSettings/#type) |
+| **SortAscending** | Sorts the current column in ascending order. |
+| **SortDescending** | Sorts the current column in descending order. |
+| **AutoFit** | Fits the current column to the widest cell content. |
+| **AutoFitAll** | Fits all columns to their widest cell content. |
+| **Filter** | Displays the filter UI defined by [filterSettings.type](https://ej2.syncfusion.com/react/documentation/api/treegrid/filterSettings/#type). |
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -35,11 +35,11 @@ The default items are displayed in following table.
 
  {% previewsample "page.domainurl/code-snippet/treegrid/column-cs2" %}
 
-> You can disable column menu for a particular column by defining the [`columns.showColumnMenu`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#showcolumnmenu) as **false**.
+> Disable the column menu for a specific column by setting [columns.showColumnMenu](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#showcolumnmenu) to **false**.
 
 ## Customize the icon for column menu
 
-To customize the column menu icon, you need to override the default TreeGrid class **.e-icons.e-columnmenu** with a custom CSS property called **content**. By specifying a Unicode character or an icon font’s CSS class, you can change the icon displayed in the column menu.
+Customize the column menu icon by overriding the default TreeGrid class `.e-icons.e-columnmenu` and setting a custom `content` value. A Unicode character or icon font class can be used to change the displayed icon.
 
 ```css
     .e-treegrid .e-columnheader .e-icons.e-columnmenu::before {
@@ -47,7 +47,7 @@ To customize the column menu icon, you need to override the default TreeGrid cla
     }
 ```
 
-Here is an example that demonstrates how to customize the column menu icon in the Syncfusion TreeGrid:
+Example demonstrating a custom column menu icon in the Syncfusion TreeGrid:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -64,4 +64,4 @@ Here is an example that demonstrates how to customize the column menu icon in th
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/treegrid/custom-column-menu-icon-cs1" %} 
+ {% previewsample "page.domainurl/code-snippet/treegrid/custom-column-menu-icon-cs1" %}

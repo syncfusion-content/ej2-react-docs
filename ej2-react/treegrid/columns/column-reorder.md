@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Column reorder in React Treegrid component | Syncfusion
-description: Learn here all about Column reorder in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Column reorder in React TreeGrid | Syncfusion
+description: Learn here all about Column reorder in Syncfusion React TreeGrid of Syncfusion Essential JS 2 and more.
 control: Column reorder 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column reorder in React Treegrid component
+# Column reorder in React TreeGrid 
 
-Reordering can be done by drag and drop of a particular column header from one index to another index within the treegrid. To enable reordering, set the [`allowReordering`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowreordering) to true.
+Columns can be reordered by drag and drop a column header from one index to another within the TreeGrid. Enable this behavior by setting [allowReordering](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowreordering) to true.
 
-To use reordering, inject the [`Reorder`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#reordermodule) module in the treegrid.
+To use reordering, inject the [Reorder](https://ej2.syncfusion.com/react/documentation/api/treegrid/#reordermodule) module into the TreeGrid.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -25,11 +25,11 @@ To use reordering, inject the [`Reorder`](https://ej2.syncfusion.com/react/docum
 
  {% previewsample "page.domainurl/code-snippet/treegrid/column-cs3" %}
 
-> You can disable reordering a particular column by setting the [`columns.allowReordering`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#reordermodule) to false.
+> Reordering can be disabled for a specific column by setting [columns.allowReordering](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#reordermodule) to false.
 
 ## Reorder multiple columns
 
-Multiple columns can be reordered at a time by using the [`reorderColumns`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column#reordercolumns) method.
+Multiple columns can be reordered programmatically using the [reorderColumns](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#reordercolumns) method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
