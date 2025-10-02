@@ -12,6 +12,8 @@ domainurl: ##DomainURL##
 
 This section explains you the steps required to create a simple Grid and demonstrate the basic usage of the Grid component in React environment.
 
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Developer Tools. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Developer Tools](https://ej2.syncfusion.com/react/documentation/ai-developer-tools/overview)
+
 To get start quickly with React Grid, you can check on this video:
 
 {% youtube "https://www.youtube.com/watch?v=QNwcXokKc70" %}

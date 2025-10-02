@@ -25,12 +25,12 @@ The [SyncfusionReactAssistant](https://www.npmjs.com/package/@syncfusion/react-a
 Before using [SyncfusionReactAssistant](https://www.npmjs.com/package/@syncfusion/react-assistant), ensure you have:
 
 * Required [node](https://nodejs.org/en/) version >= 18
-* A [compatible MCP client](https://modelcontextprotocol.io/clients) ([Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio](https://www.syncfusion.com/code-studio/), VS Code with GitHub Copilot, etc.)
+* A [compatible MCP client](https://modelcontextprotocol.io/clients) (VS Code with GitHub Copilot, [Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio](https://www.syncfusion.com/code-studio/), etc.)
 * An active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):
   - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
   - [Free Community License](https://www.syncfusion.com/products/communitylicense)
   - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
-* An active [API KEY](https://staging.syncfusion.com/account/user-token-generation)
+* An active [API KEY](https://syncfusion.com/account/api-key)
 
 ## Unlimited Access
 
@@ -55,7 +55,7 @@ Before you can invoke the `SyncfusionReactAssistant` MCP server, you need to con
 - **Arguments**: -y
 - **Server name**: syncfusionReactAssistant
 
-You need to add your [Syncfusion API key](https://staging.syncfusion.com/account/user-token-generation) as an env parameter in the configuration file:
+You need to add your [Syncfusion API key](https://syncfusion.com/account/api-key) as an env parameter in the configuration file:
 
 ```json
 "env": {
