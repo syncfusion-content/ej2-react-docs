@@ -15,14 +15,14 @@ The Syncfusion AI AssistView supports integration with [Gemini](https://ai.googl
 
 ## Getting Started with the AI AssistView component
 
-Before integrating Gemini AI, ensure that the Syncfusion AI AssistView control is correctly rendered in your React app:
+Before integrating Gemini AI, ensure that the Syncfusion AI AssistView component is correctly rendered in your React app:
 
 [React Getting Started Guide](../getting-started)
 
 ## Prerequisites
 
 * Requires `Node.js` (v16 or higher) and `npm`.
-* Google account to generate API key on accessing `Gemini AI`
+* Google account to generate API key on accessing [Gemini](https://ai.google.dev/gemini-api/docs).
 * Syncfusion AI AssistView for React `@syncfusion/ej2-react-interactive-chat` installed in your project.
 
 ## Install Dependencies
@@ -49,7 +49,7 @@ npm install @google/generative-ai
 
 2. Once logged in, click on `Get API Key` from the left-hand menu or the top-right corner of the dashboard. 
 
-3. Click the “Create API Key” button. You’ll be prompted to either select an existing Google Cloud project or create a new one. Choose the appropriate option and proceed. 
+3. Click the `Create API Key` button. You’ll be prompted to either select an existing Google Cloud project or create a new one. Choose the appropriate option and proceed. 
 
 4. After selecting or creating a project, your API key will be generated and displayed. Copy the key and store it securely, as it will only be shown once.
 
@@ -88,4 +88,4 @@ npm start
 
 ```
 
-Open `http://localhost:3000` to interact with your Gemini AI for dynamic response.
+Open the hosted link to interact with the Gemini AI for dynamic response.
