@@ -15,14 +15,14 @@ The Syncfusion AI AssistView supports integration with [Azure Open AI](https://m
 
 ## Getting Started with the AI AssistView component
 
-Before integrating Azure Open AI, ensure that the Syncfusion AI AssistView control is correctly rendered in your React app:
+Before integrating Azure Open AI, ensure that the Syncfusion AI AssistView component is correctly rendered in your React app:
 
 [React Getting Started Guide](../getting-started)
 
 ## Prerequisites
 
 * Requires `Node.js` (v16 or higher) and `npm`.
-* An Azure account with access to `Azure Open AI` services and a generated API key.
+* An Azure account with access to [Azure Open AI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai) services and a generated API key.
 * Syncfusion AI AssistView for React `@syncfusion/ej2-react-interactive-chat` installed in your project.
 
 ## Install Dependencies
@@ -41,7 +41,7 @@ npm install @syncfusion/ej2-react-interactive-chat --save
 
 2. Under Resource Management, select Keys and Endpoint to retrieve your API key and endpoint URL.  
 
-3. Copy the API key, endpoint, and deployment name (e.g., gpt-4o-mini). Ensure the API version (e.g., 2024-07-01-preview) matches your resource configuration.
+3. Copy the API key, endpoint, and deployment name (e.g., gpt-4o-mini). Ensure the API version matches your resource configuration.
 
 4. Store these values securely, as they will be used in your application.
 
@@ -83,4 +83,4 @@ npm start
 
 ```
 
-Open `http://localhost:3000` to interact with your Azure Open AI for dynamic response.
+Open the hosted link to interact with your Azure Open AI for dynamic response.

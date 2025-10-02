@@ -15,8 +15,7 @@ function App() {
         'How do I prioritize my tasks?',
         'How can I improve my time management skills?'
     ];
-    const bannerTemplate: string = '<div class="banner-content"><div class="e-icons e-assistview-icon"></div><h3>AI Assistance</h3><div>To get started, provide input or choose a suggestion.</div></div>';
-
+    const bannerTemplate = '<div class="banner-content"><div class="e-icons e-assistview-icon"></div><h3>How can I help you today?</h3></div>';
     const toolbarItemClicked = (args: ToolbarItemClickArgs): void => {
         if (args.item.iconCss === 'e-icons e-refresh') {
             if (assistInstance.current) {
