@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Getting started with React Schedule component | Syncfusion
