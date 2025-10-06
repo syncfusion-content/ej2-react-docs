@@ -12,6 +12,8 @@ domainurl: ##DomainURL##
 
 The Syncfusion React Rich Text Editor is a WYSIWYG (What You See Is What You Get) editor that enables users to create, edit, and format rich text content with features like multimedia insertion, lists, and links. This section explains the steps to create a simple React Rich Text Editor component and configure its core functionalities.
 
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://ej2.syncfusion.com/react/documentation/ai-coding-assistants/overview)
+
 To get started quickly with the React Rich Text Editor, refer to this video tutorial:
 
 {% youtube "https://www.youtube.com/watch?v=5mLO6_nwzww" %}
