@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# Integration of Azure Open AI With AI AssistView component 
+# Azure Open AI With AI AssistView component 
 
 The Syncfusion AI AssistView supports integration with [Azure Open AI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai), enabling advanced conversational AI features in your React applications.
 
@@ -47,7 +47,7 @@ npm install @syncfusion/ej2-react-interactive-chat --save
 
 > `Security Note`: Never expose your API key in client-side code for production applications. Use a server-side proxy or environment variables to manage sensitive information securely.
 
-##  Integration Azure Open AI with AI AssistView
+## Configure Azure Open AI with AI AssistView
 
 Create `src/App.js` to integrate the Azure Open AI with AI AssistView component
 
