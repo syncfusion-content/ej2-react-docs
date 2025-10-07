@@ -171,11 +171,9 @@ function SmartPaste() {
 
     return (
         <>
+            {% raw %}
             <div id="bug-form">
-                <form className="form-container container bug-form-container" style={{
-                    maxWidth: "900px",
-                    lineHeight: "35px", backgroundColor: "#f3f4f6"
-                }}>
+                <form className="form-container container bug-form-container" style={{ maxWidth: "900px", lineHeight: "35px", backgroundColor: "#f3f4f6" }}>
                     <div className="single-row-group">
                         <label htmlFor="bug-name" className="e-form-label">Bug Name</label>
                         <TextBoxComponent id="bug-name" placeholder="What's the bug ?" floatLabelType="Never" />
@@ -253,6 +251,7 @@ function SmartPaste() {
                     </div>
                 </div>
             </div>
+            {% endraw %}
         </>
     );
 }
