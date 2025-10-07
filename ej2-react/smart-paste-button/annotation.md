@@ -86,10 +86,9 @@ function SmartPaste() {
 
     return (
         <>
+            {% raw %}
             <div id="bug-form">
-                {% raw %}
                 <form className="form-container container bug-form-container" style={{ maxWidth: "900px", lineHeight: "35px", backgroundColor: "#f3f4f6" }}>
-                {% endraw %}
                     <div className="single-row-group">
                         <label htmlFor="bug-name" className="e-form-label">Bug Name</label>
                         <TextBoxComponent id="bug-name" placeholder="What's the bug ?" floatLabelType="Never" />
@@ -113,7 +112,7 @@ function SmartPaste() {
                         <TextAreaComponent id="bug-description" placeholder="Describe a little about the bug." rows={2} floatLabelType="Never" />
                     </div>
                     <div className="row-group">
-                        <div {% raw %}style={{ display: "flex", flexDirection: "column" }}{% endraw %}>
+                        <div style={{ display: "flex", flexDirection: "column" }}>
                             <label htmlFor="reproduce-steps" className="e-form-label">Reproduce Steps</label>
                             <TextAreaComponent id="reproduce-steps" placeholder="Enter the repro steps here.." 
                             data-smartpaste-description="Structure each steps in a Numbered format."
@@ -145,14 +144,14 @@ function SmartPaste() {
                             onClick={smartPasteClickHandler}
                             aiAssistHandler={serverAIRequest} />
                     </div>
-                {% raw %}</form>{% endraw %}
+                </form>
             </div>
 
-            <div className="col-lg-12 property-section" {% raw %}style={{ paddingTop: '5px' }}{% endraw %}>
-                <h4 {% raw %}style={{ textAlign: 'center', fontSize: '1.2rem' }}{% endraw %}> Sample content </h4>
+            <div className="col-lg-12 property-section" style={{ paddingTop: '5px' }}>
+                <h4 style={{ textAlign: 'center', fontSize: '1.2rem' }}> Sample content </h4>
                 <div className="content-flexed">
                     <div className="content-body" data-index="0">
-                        <div className="copy-container" {% raw %}style={{ float: 'right' }}{% endraw %}>
+                        <div className="copy-container" style={{ float: 'right' }}>
                             <ButtonComponent ref={btn => copyButton1 = btn as ButtonComponent} id="copy1" onClick={() => copyContent('1')} aria-label="content-copy-button" className="e-control e-btn e-lib custom-copy-icon e-primary e-icon-btn">
                                 <span className="e-icons e-copy e-btn-icon"></span>
                             </ButtonComponent>
@@ -162,7 +161,7 @@ function SmartPaste() {
                         </div>
                     </div>
                     <div className="content-body" data-index="1">
-                        <div className="copy-container" {% raw %}style={{ float: 'right' }}{% endraw %}>
+                        <div className="copy-container" style={{ float: 'right' }}>
                             <ButtonComponent ref={btn => copyButton2 = btn as ButtonComponent} id="copy2" onClick={() => copyContent('2')} aria-label="content-copy-button" className="e-control e-btn e-lib custom-copy-icon e-primary e-icon-btn">
                                 <span className="e-icons e-copy e-btn-icon"></span>
                             </ButtonComponent>
@@ -173,6 +172,7 @@ function SmartPaste() {
                     </div>
                 </div>
             </div>
+            {% endraw %}
         </>
     );
 }
