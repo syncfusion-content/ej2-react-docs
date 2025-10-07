@@ -1,38 +1,35 @@
 ---
 layout: post
-title: Tool bar items in React Treegrid component | Syncfusion
-description: Learn here all about Tool bar items in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
-control: Tool bar items 
+title: Tool bar items in React TreeGrid component | Syncfusion
+description: Learn here all about Tool bar items in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+control: Tool bar items
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-
-# Tool bar items in React Treegrid component
+# Tool bar items in React TreeGrid
 
 ## Built-in toolbar items
 
-Built-in toolbar items execute standard actions of the treegrid, and it can be added by defining the [`toolbar`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbar)
-as a collection of built-in items. It renders the button with icon and text.
+Built-in toolbar items execute standard TreeGrid actions and can be added by defining the [toolbar](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbar) property as a collection of built-in items. Each item renders as a button with an icon and text.
 
-The following table shows built-in toolbar items and its actions.
-
+The following table lists built-in toolbar items and their actions.
 | Built-in Toolbar Items | Actions |
 |------------------------|---------|
-| ExpandAll | Expands all the rows.|
-| CollapseAll | Collapses all the rows.|
-| Add | Adds a new record.|
-| Edit | Edits the selected record.|
-| Update | Updates the edited record.|
-| Delete | Deletes the selected record.|
-| Cancel | Cancels the edit state.|
-| Search | Searches the records by the given key.|
-| Print | Prints the treegrid.|
-| ExcelExport | Exports the treegrid to Excel.|
-| PdfExport | Exports the treegrid to PDF.|
-| WordExport | Exports the treegrid to Word.|
-| Indent | Indents the record to one level of hierarchy.|
-| Outdent | Outdents the record to one level of hierarchy.|
+| ExpandAll | Expands all rows. |
+| CollapseAll | Collapses all rows. |
+| Add | Adds a new record. |
+| Edit | Edits the selected record. |
+| Update | Updates the edited record. |
+| Delete | Deletes the selected record. |
+| Cancel | Cancels the edit state. |
+| Search | Searches records by the given key. |
+| Print | Prints the TreeGrid. |
+| ExcelExport | Exports the TreeGrid to Excel. |
+| PdfExport | Exports the TreeGrid to PDF. |
+| WordExport | Exports the TreeGrid to Word. |
+| Indent | Indents the record one hierarchy level. |
+| Outdent | Outdents the record one hierarchy level. |
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -42,16 +39,15 @@ The following table shows built-in toolbar items and its actions.
 {% include code-snippet/treegrid/toolbar-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
+{% previewsample "page.domainurl/code-snippet/treegrid/toolbar-cs1" %}
 
- {% previewsample "page.domainurl/code-snippet/treegrid/toolbar-cs1" %}
-
-> * The [`toolbar`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbar) has options to define both built-in and custom toolbar items.
+> The [toolbar](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbar) supports both built-in and custom toolbar items.
 
 ## Custom toolbar items
 
-Custom toolbar items can be added by defining the [`toolbar`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbar) as a collection of [`ItemModels`](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel/). Actions for this customized toolbar items are defined in the [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbarclick) event.
+Custom toolbar items can be added by defining the [toolbar](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbar) property as a collection of [ItemModels](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel/). Actions for custom items are handled in the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbarclick) event.
 
-By default, Custom toolbar items are in position **Left**. You can change the position by using the [`align`](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel/#align) property. In the below sample, we have applied position **Right** for the **Quick Filter** toolbar item.
+By default, custom items are aligned to the **Left**. The position can be changed using the [align](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel/#align) property. In the sample below, the position is set to **Right** for the **Quick Filter** toolbar item.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -61,17 +57,15 @@ By default, Custom toolbar items are in position **Left**. You can change the po
 {% include code-snippet/treegrid/toolbar-cs2/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
+{% previewsample "page.domainurl/code-snippet/treegrid/toolbar-cs2" %}
 
- {% previewsample "page.domainurl/code-snippet/treegrid/toolbar-cs2" %}
-
-> * The [`toolbar`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbar) has options to define both built-in and custom toolbar items.
-> * If a toolbar item does not match the built-in items, it will be treated as a custom toolbar item.
+> * The [toolbar](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbar) supports both built-in and custom items.  
+> * Any item that does not match a built-in name is treated as a custom toolbar item.
 
 ## Built-in and custom items in toolbar
 
-TreeGrid have an option to use both built-in and custom toolbar items at same time.
-
-In the below example, **ExpandAll**, **CollapseAll** are built-in toolbar items and *Click* is custom toolbar item.
+TreeGrid supports using built-in and custom toolbar items together.  
+In the example below, **ExpandAll** and **CollapseAll** are built-in items, and **Click** is a custom item.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -81,12 +75,11 @@ In the below example, **ExpandAll**, **CollapseAll** are built-in toolbar items 
 {% include code-snippet/treegrid/toolbar-cs3/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/treegrid/toolbar-cs3" %}
+{% previewsample "page.domainurl/code-snippet/treegrid/toolbar-cs3" %}
 
 ## Enable or disable toolbar items
 
-You can enable/disable toolbar items by using the `enableItems` method.
+Enable or disable toolbar items programmatically using the `enableItems` method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -96,5 +89,4 @@ You can enable/disable toolbar items by using the `enableItems` method.
 {% include code-snippet/treegrid/toolbar-cs4/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/treegrid/toolbar-cs4" %}
+{% previewsample "page.domainurl/code-snippet/treegrid/toolbar-cs4" %}

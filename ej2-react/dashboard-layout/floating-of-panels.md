@@ -2,15 +2,30 @@
 layout: post
 title: Floating of panels in React Dashboard Layout  component | Syncfusion
 description: Learn here all about Floating of panels in Syncfusion React Dashboard Layout  component of Syncfusion Essential JS 2 and more.
-control: Floating of panels 
+control: Dashboard Layout 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Floating of panels in React Dashboard Layout  component
+# Floating of panels in React Dashboard Layout component
 
-The floating functionality of the component allows you to effectively use the entire layout for panel placement. When the floating functionality is enabled, the panels within the layout automatically float upwards to occupy empty cells available in previous rows. This functionality can be enabled or disabled using the [allowFloating](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/#allowfloating) property of the component.
+The floating functionality enables panels to move upward automatically to fill empty spaces left by panels in previous rows, maximizing space utilization within the dashboard layout. When floating is enabled, panels dynamically reposition themselves to eliminate gaps and create a more compact layout arrangement.
+
+This behavior can be controlled using the [`allowFloating`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/#allowfloating) property, which accepts a boolean value (default: `true`).
+
+## How floating works
+
+When `allowFloating` is set to `true`:
+- Panels automatically move upward to occupy available space in previous rows
+- Empty cells are filled dynamically as panels are added, removed, or repositioned
+- The layout maintains a compact appearance without gaps between rows
+
+When `allowFloating` is set to `false`:
+- Panels remain in their designated row positions
+- Empty spaces remain unfilled, preserving the original grid structure
+- Panels maintain their exact row and column positions
+
 
 The following sample demonstrates how to enable or disable the floating of panels in the Dashboard Layout component.
 
@@ -37,4 +52,4 @@ The following sample demonstrates how to enable or disable the floating of panel
 
  {% previewsample "page.domainurl/code-snippet/dashboard-layout/floating-cs1" %}
 
-> You can refer to our [React Dashboard Layout](https://www.syncfusion.com/react-ui-components/react-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [React Dashboard Layout example](https://ej2.syncfusion.com/react/demos/#/material/dashboard-layout/default) to learn how to present and manipulate data.
+> You can refer to our [React Dashboard Layout](https://www.syncfusion.com/react-ui-components/react-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [React Dashboard Layout example](https://ej2.syncfusion.com/react/demos/#/material/dashboard-layout/default) to know how to present and manipulate data.

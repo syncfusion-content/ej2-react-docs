@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Edit in React Treegrid component | Syncfusion
-description: Learn here all about Edit in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Edit in React TreeGrid component | Syncfusion
+description: Learn here all about Edit in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Edit 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Edit in React Treegrid component
+# Edit in React TreeGrid
 
-The TreeGrid component has options to dynamically insert, delete and update records. Editing feature is enabled by using [`editSettings`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#editsettings) property and it requires a primary key column for CRUD operations. To define the primary key, set [`columns.isPrimaryKey`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#isprimarykey) to **true** in particular column.
+The TreeGrid supports dynamically inserting, deleting, and updating records. Enable editing by using the [`editSettings`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#editsettings) property, and define a primary key column for CRUD operations by setting [columns.isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#isprimarykey) to **true**.
 
-To get start quickly with CRUD functionalities, you can check on this video:
+The following video provides a quick start for CRUD functionalities:
 {% youtube "https://www.youtube.com/watch?v=JX8Ay-tH-WI" %}
 
-To use CRUD, inject the [`Edit`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#editmodule) module in treegrid.
+To use CRUD, inject the [Edit](https://ej2.syncfusion.com/react/documentation/api/treegrid/#editmodule) module in the TreeGrid.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -28,11 +28,11 @@ To use CRUD, inject the [`Edit`](https://ej2.syncfusion.com/react/documentation/
 
  {% previewsample "page.domainurl/code-snippet/treegrid/editing-cs8" %}
 
-> * You can disable editing for a particular column, by specifying [`columns.allowEditing`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#allowediting) to **false**.
+> Editing for a particular column can be disabled by setting [columns.allowEditing](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#allowediting) to **false**.
 
 ## Toolbar with edit option
 
-The treegrid toolbar has the built-in items to execute Editing actions. You can define this by using the [`toolbar`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbar) property.
+The TreeGrid toolbar includes built-in items to execute editing actions. Configure these using the [toolbar](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbar) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -47,9 +47,9 @@ The treegrid toolbar has the built-in items to execute Editing actions. You can 
 
 ## Disable editing for particular row cell
 
-You can disable the editing for a particular row by using the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/treegrid/#actionbegin) event of TreeGrid based on **requestType** as **beginEdit**.
+Disable editing for a particular row by using the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/treegrid/#actionbegin) event when `requestType` is `beginEdit`.
 
-In the below demo, the rows which are having the value for **Priority** column as **Breaker** is prevented from editing.
+In the following example, rows with the **Priority** value set to **Breaker** are prevented from editing.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -70,9 +70,9 @@ In the below demo, the rows which are having the value for **Priority** column a
 
 ## Adding row position
 
-The TreeGrid control provides the support to add the new row in the top, bottom, above selected row, below selected row and child position of tree grid content using [`editSettings.newRowPosition`](https://ej2.syncfusion.com/react/documentation/api/treegrid/editSettingsModel/#newrowposition) property. By default, a new row will be added at the top of the treegrid.
+The TreeGrid supports adding a new row at the top, bottom, above the selected row, below the selected row, or as a child of a row, using [`editSettings.newRowPosition`](https://ej2.syncfusion.com/react/documentation/api/treegrid/editSettingsModel/#newrowposition). By default, a new row is added at the top.
 
-The following examples shows how to set new row position as *Child* in tree grid.
+The following example sets the new row position to *Child*.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -89,7 +89,7 @@ The following examples shows how to set new row position as *Child* in tree grid
 
 ### Delete confirmation
 
-The delete confirm dialog can be shown when deleting a record by defining the [`showDeleteConfirmDialog`](https://ej2.syncfusion.com/react/documentation/api/treegrid/editSettingsModel/#showdeleteconfirmdialog) as **true**
+Display a delete confirmation dialog by setting [showDeleteConfirmDialog](https://ej2.syncfusion.com/react/documentation/api/treegrid/editSettingsModel/#showdeleteconfirmdialog) to **true**.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -102,11 +102,11 @@ The delete confirm dialog can be shown when deleting a record by defining the [`
 
  {% previewsample "page.domainurl/code-snippet/treegrid/editing-cs11" %}
 
-> The [`showDeleteConfirmDialog`](https://ej2.syncfusion.com/react/documentation/api/treegrid/editSettingsModel/#showdeleteconfirmdialog) supports all type of edit modes.
+> [showDeleteConfirmDialog](https://ej2.syncfusion.com/react/documentation/api/treegrid/editSettingsModel/#showdeleteconfirmdialog) supports all edit modes.
 
 ## Default column values on add new
 
-The treegrid provides an option to set the default value for the columns when adding a new record in it. To set a default value for the particular column by defining the [`columns.defaultValue`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#defaultvalue).
+Set default values for columns when adding a new record by defining [columns.defaultValue](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#defaultvalue).
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -121,9 +121,9 @@ The treegrid provides an option to set the default value for the columns when ad
 
 ## Disable editing for particular column
 
-You can disable editing for particular columns by using the [`columns.allowEditing`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#allowediting).
+Disable editing for specific columns using [columns.allowEditing](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#allowediting).
 
-In the following demo, editing is disabled for the *Start Date* column.
+In the following example, editing is disabled for the *Start Date* column.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -138,7 +138,6 @@ In the following demo, editing is disabled for the *Start Date* column.
 
 ## Troubleshoot: Editing works only for first row
 
-The Editing functionalities can be performed based upon the primary key value of the selected row.
-If [`column.primaryKey`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#isprimarykey) is not defined in the treegrid, then edit or delete action take places the first row.
+Editing relies on the primary key value of the selected row. If [columns.isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#isprimarykey) is not defined, edit or delete actions target the first row.
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> Refer to the [React TreeGrid](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour for key capabilities. Explore the [React TreeGrid example](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to learn how to present and manipulate data.

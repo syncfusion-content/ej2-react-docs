@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Getting Started with React Dashboard Layout  Component | Syncfusion
+title: Getting started with React Dashboard Layout  Component | Syncfusion
 description: Checkout and learn about getting started with Syncfusion Essential React Dashboard Layout  component, it's elements, and more.
-control: Getting started 
+control: Dashboard Layout
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Dashboard Layout 
+# Getting started with React Dashboard Layout
 
 This section explains how to create a simple **Dashboard Layout** component and its basic usage.
 
 ## Dependencies
 
-The following list of dependencies is required to use the Dashboard Layout component in your application.
+The following packages are required to use the Dashboard Layout component in your application:
 
 ```js
 |-- @syncfusion/ej2-react-layouts
@@ -25,23 +25,25 @@ The following list of dependencies is required to use the Dashboard Layout compo
 
 ## Installation and configuration
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To set up a React application quickly, use `create-vite-app`, which offers faster development, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite configures your environment using JavaScript and optimizes the application for production.
 
-> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+> **Note:** To create a React application using `create-react-app`, refer to the [Syncfusion documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
 To create a new React application, run the following command.
 
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+
+To set up a React application in a TypeScript environment, run the following command:
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+
+To set up a React application in a JavaScript environment, run the following command:
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -51,7 +53,7 @@ npm run dev
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+All Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 
 To install `Dashboard Layout` component, use the following command
 
@@ -59,7 +61,7 @@ To install `Dashboard Layout` component, use the following command
 npm install @syncfusion/ej2-react-layouts --save
 ```
 
-## Adding CSS Reference
+## Adding CSS reference
 
 To render the Dashboard Layout component, need to import Dashboard Layout and its dependent component's styles as given below in `src/App.css`.
 
@@ -68,7 +70,7 @@ To render the Dashboard Layout component, need to import Dashboard Layout and it
 @import "../node_modules/@syncfusion/ej2-react-layouts/styles/material.css";
 ```
 
-> Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
+> **Note:** If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
 
 ## Add Dashboard Layout to the application
 
@@ -217,13 +219,13 @@ export default App;
 
 ## Run the application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Run the following command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```bash
 npm run dev
 ```
 
-The following example shows a basic Dashboard Layout by adding the panels property directly into the HTML element.
+The following example shows a basic Dashboard Layout by adding panel definitions directly via HTML attributes.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -250,7 +252,7 @@ The following example shows a basic Dashboard Layout by adding the panels proper
 
 ## Setting the `panels` property directly
 
-You can render the Dashboard Layout component by using the **panels** property directly.
+You can render the Dashboard Layout component by defining the **panels** property in your component code.
 
 `[src/App.tsx]`
 
@@ -332,5 +334,5 @@ The following example shows a basic Dashboard Layout by using the `panels` prope
 
  {% previewsample "page.domainurl/code-snippet/dashboard-layout/getting-started-panel-cs1" %}
 
-> You can refer to our [React Dashboard Layout](https://www.syncfusion.com/react-components/react-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [React Dashboard Layout example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/dashboard-layout/default) to knows how to present and manipulate data.
+> You can refer to the [React Dashboard Layout](https://www.syncfusion.com/react-components/react-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [React Dashboard Layout example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/dashboard-layout/default) to knows how to present and manipulate data.
 

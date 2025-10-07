@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Tool bar in React Treegrid component | Syncfusion
-description: Learn here all about Tool bar in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
-control: Tool bar 
+title: Tool bar in React TreeGrid | Syncfusion
+description: Learn here all about Tool bar in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+control: Tool bar
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tool bar in React Treegrid component
+# Tool bar in React TreeGrid
 
-The TreeGrid provides ToolBar support to handle treegrid actions. The [`toolbar`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbar) property accepts either the collection of built-in toolbar items and [`ItemModel`](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel/)objects for custom toolbar items or HTML element ID for toolbar template.
+The TreeGrid provides toolbar support to handle TreeGrid actions. The [toolbar](https://ej2.syncfusion.com/react/documentation/api/TreeGrid/#toolbar) property accepts a collection of built-in toolbar items, [ItemModel](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel/) objects for custom items, or an HTML element ID for a toolbar template.
 
-To use ToolBar, inject **Toolbar** module in the treegrid.
+To use the toolbar, inject the **Toolbar** module into the TreeGrid.
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> Refer to the [React TreeGrid](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for highlights. Explore the [React TreeGrid example](https://ej2.syncfusion.com/react/demos/#/material/TreeGrid/TreeGrid-overview) to learn how to present and manipulate data.

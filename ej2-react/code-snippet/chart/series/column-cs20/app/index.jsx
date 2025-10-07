@@ -1,3 +1,6 @@
+{% raw %}
+
+
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Category, ChartComponent, ColumnSeries, Inject, LineSeries, SeriesCollectionDirective, SeriesDirective, ILoadedEventArgs } from '@syncfusion/ej2-react-charts';
@@ -116,3 +119,6 @@ function App() {
 };
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
+
+
+{% endraw %}

@@ -1,37 +1,37 @@
 ---
 layout: post
-title: Treegrid styling in React Treegrid component | Syncfusion
-description: Learn here all about Treegrid styling in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
-control: Treegrid styling 
+title: TreeGrid styling in React TreeGrid | Syncfusion
+description: Learn here all about TreeGrid styling in Syncfusion React TreeGrid of Syncfusion Essential JS 2 and more.
+control: TreeGrid styling
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Treegrid styling in React Treegrid component
+# TreeGrid styling in React TreeGrid
 
-To modify the TreeGrid appearance, you need to override the default CSS of treegrid. Please find the list of CSS classes and its corresponding section in treegrid. Also, you have an option to create your own custom theme for all the React controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
+Modify the TreeGrid appearance by overriding its default CSS. The following table lists CSS classes and their corresponding sections in the TreeGrid. A custom theme for all React controls can be created using the [Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=material).
 
 Section|CSS class|Purpose of CSS class
 -----|-----|-----
-**Root**|e-treegrid|This classes are in this root element (div) of the treegrid control.
-**Header**|e-gridheader|This class is added in the root element of header element. In this class, You can override thin line between header and content of the treegrid.
-||e-table|This class is added at 'table' of the treegrid header. This CSS class makes table width as 100 %.
-||e-columnheader|This class is added at 'tr' of the treegrid header.
-||e-headercell|This class is added in 'th' element of treegrid header. You can override background color of header and border color.
-||e-headercelldiv|This class is add in div which present 'th' element in the header. we recommend you to use the e-headercelldiv to override skeleton of header.
-**Body**|e-gridcontent|This class is added at root of body content. This is to override background color of the body.
-||e-table|This class is added to table of content. This CSS class makes table width as 100 %.
-||e-altrow|This class is added to alternate rows of treegrid. This is to override alternate row color of the treegrid.
-||e-rowcell|This class is added to all cells in the treegrid. This is to override cells appearance and styling.
-||e-groupcaption|This class is added to the 'td' of group caption which is to change the background color of caption cell.
-||e-selectionbackground|This class is added to rowcell's of the treegrid. This is override selection.
-||e-hover|This class adds to row of treegrid, while hovering the treegrid rows.
-**Pager**|e-pager|This class is added to root element of the pager. This to change appearance of the background color and color of font.
-||e-pagercontainer|This class is added to numeric items of the pager.
-||e-parentmsgbar|This class is added to pager info of the pager.
-**Summary**|e-gridfooter|This class is added to root of the summary div.
-||e-summaryrow|This class is added to rows of treegrid summary.
-||e-summarycell|This class is added to cells of summary row. This to override background color of summary.
+**Root**|e-treegrid|Applied to the root element (div) of the TreeGrid.
+**Header**|e-gridheader|Applied to the header root element; customize the dividing line between header and content.
+||e-table|Applied to the header table; sets the table width to 100%.
+||e-columnheader|Applied to the table row (tr) in the header.
+||e-headercell|Applied to the header cell (th); customize header background and border colors.
+||e-headercelldiv|Applied to the div inside the header cell (th); recommended for customizing header structure and layout.
+**Body**|e-gridcontent|Applied to the content root; customize the body background color.
+||e-table|Applied to the content table; sets the table width to 100%.
+||e-altrow|Applied to alternate rows; customize alternate row background color.
+||e-rowcell|Applied to all data cells; customize cell appearance and styling.
+||e-groupcaption|Applied to caption cells (td) in grouped rows; customize caption cell background color.
+||e-selectionbackground|Applied to selected cells; customize selection styling.
+||e-hover|Applied to rows on hover; customize hover styling.
+**Pager**|e-pager|Applied to the pager root element; customize background and font color.
+||e-pagercontainer|Applied to pager numeric items.
+||e-parentmsgbar|Applied to the pager information area.
+**Summary**|e-gridfooter|Applied to the summary (footer) root element.
+||e-summaryrow|Applied to summary rows.
+||e-summarycell|Applied to summary cells; customize summary background color.
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> Refer to the [React TreeGrid](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for highlights. Explore the [React TreeGrid example](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to learn how to present and manipulate data.

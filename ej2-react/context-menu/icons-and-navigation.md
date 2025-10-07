@@ -2,7 +2,7 @@
 layout: post
 title: Icons and navigation in React Context menu component | Syncfusion
 description: Learn here all about Icons and navigation in Syncfusion React Context menu component of Syncfusion Essential JS 2 and more.
-control: Icons and navigation 
+control: Context Menu 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Icons
 
-The ContextMenu item have an icon / image in it to provide visual representation of the action. To place the icon on a menu item, set the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/context-menu/menuItemModel/#iconcss) property to e-icons with the required icon CSS. By default, the icon is positioned to the left side of the menu item. In the following sample, the icons for Cut, Copy and Paste menu items are added using `iconCss` property.
+The ContextMenu component supports icons and images on menu items to provide visual representation of actions and enhance user experience. To add an icon to a menu item, configure the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/context-menu/menuItemModel/#iconcss) property with the appropriate CSS class. By default, icons are positioned to the left side of the menu item text. In the following sample, icons for Cut, Copy and Paste menu items are added using the `iconCss` property with e-icons CSS classes.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -25,9 +25,9 @@ The ContextMenu item have an icon / image in it to provide visual representation
 
  {% previewsample "page.domainurl/code-snippet/context-menu/icons-cs1" %}
 
-## Navigation URL
+## URL Navigation
 
-Navigation URL in ContextMenu is used for navigating to other web page when menu item is clicked. This can be achieved by providing link to the menu item using the [`url`](https://ej2.syncfusion.com/react/documentation/api/context-menu/menuItemModel/#url) property.In the following sample, Navigation URL for Flipkart, Amazon, and Snapdeal menu items are added using the `url` property.
+The ContextMenu component enables navigation to external web pages or internal routes when menu items are clicked. This functionality is implemented by configuring the [`url`](https://ej2.syncfusion.com/react/documentation/api/context-menu/menuItemModel/#url) property with the target destination URL. When a menu item with a URL is selected, the browser navigates to the specified location. In the following sample, navigation URLs for Flipkart, Amazon, and Snapdeal menu items are configured using the `url` property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -40,8 +40,7 @@ Navigation URL in ContextMenu is used for navigating to other web page when menu
 
  {% previewsample "page.domainurl/code-snippet/context-menu/navigation-cs1" %}
 
-> To open the links in new tab, set 'target' attribute with the value '_blank' in the
-[`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/context-menu/#beforeitemrender) event.
+> To open the links in new tab, set `target` attribute with the value `_blank` in the [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/context-menu/#beforeitemrender) event.
 
 ## See Also
 

@@ -1,29 +1,29 @@
 ---
 layout: post
-title: Aggregates in React Treegrid component | Syncfusion
-description: Learn here all about Aggregates in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
-control: Aggregates 
+title: Aggregates in React TreeGrid | Syncfusion
+description: Learn here all about Aggregates in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+control: Aggregates
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Aggregates in React Treegrid component
+# Aggregates in React TreeGrid
 
-Aggregate values are displayed in the TreeGrid footer and in parent row footer for child row aggregate values. It can be configured through [`aggregates`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#aggregates) property. [`field`](https://ej2.syncfusion.com/react/documentation/api/treegrid/aggregateColumnModel/#field) and [`type`](https://ej2.syncfusion.com/react/documentation/api/treegrid/aggregateColumnModel/#type) are the minimum properties required to represent an aggregate column.
+Aggregate values are displayed in the TreeGrid footer and in the parent row footer for child row aggregates. Configure aggregates using the [aggregates](https://ej2.syncfusion.com/react/documentation/api/treegrid/#aggregates) property. The [field](https://ej2.syncfusion.com/react/documentation/api/treegrid/aggregateColumnModel/#field) and [type](https://ej2.syncfusion.com/react/documentation/api/treegrid/aggregateColumnModel/#type) properties are the minimum requirements to define an aggregate column.
 
-To use the aggregate feature, you have to inject the **Aggregate** module.
+To use aggregates, inject the **Aggregate** module.
 
-By default, the aggregate value can be displayed in the treegrid footer, and footer of child rows. To show the aggregate value in one of the cells, use the [`footerTemplate`](https://ej2.syncfusion.com/react/documentation/api/treegrid/aggregateColumnModel/#footertemplate).
+By default, aggregate values can be shown in the TreeGrid footer and in child row footers. To display an aggregate inside a cell, use the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/treegrid/aggregateColumnModel/#footertemplate).
 
-To get start quickly with aggregates functionalities, you can check on this video:
+The following video provides a quick start for aggregate functionalities:
 {% youtube "https://www.youtube.com/watch?v=4Fs8mKL3DCg" %}
 
 ## Built-in aggregate types
 
-The aggregate type should be specified in the [`type`](https://ej2.syncfusion.com/react/documentation/api/treegrid/aggregateColumnModel/#type) property to configure an aggregate column.
+Specify the aggregate type in the [type](https://ej2.syncfusion.com/react/documentation/api/treegrid/aggregateRowModel/#type) property to configure an aggregate column.
 
-The built-in aggregates are,
+The built-in aggregates are:
 * Sum
 * Average
 * Min
@@ -32,13 +32,12 @@ The built-in aggregates are,
 * Truecount
 * Falsecount
 
-> * Multiple aggregates can be used for an aggregate column by setting the [`type`](https://ej2.syncfusion.com/react/documentation/api/treegrid/aggregateColumnModel/#type) property
-with an array of aggregate types.
-> * Multiple types for a column is supported only when one of the aggregate templates is used.
+> * Multiple aggregates can be configured for a single aggregate column by setting the [type](https://ej2.syncfusion.com/react/documentation/api/treegrid/aggregateRowModel/#type) property with an array of types.  
+> * Multiple types for a column are supported only when at least one aggregate template is used.
 
 ## Child aggregate
 
-Aggregate value is calculated for child rows, and it is displayed in the parent row footer. Use the [`showChildSummary`](https://ej2.syncfusion.com/react/documentation/api/treegrid/aggregateRowModel/#showchildsummary) property to render the child rows aggregate value.
+Aggregate values for child rows are calculated and displayed in the parent row footer. Use the [showChildSummary](https://ej2.syncfusion.com/react/documentation/api/treegrid/aggregateRowModel/#showchildsummary) property to render child row aggregate values.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -48,7 +47,6 @@ Aggregate value is calculated for child rows, and it is displayed in the parent 
 {% include code-snippet/treegrid/aggregate-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
+{% previewsample "page.domainurl/code-snippet/treegrid/aggregate-cs1" %}
 
- {% previewsample "page.domainurl/code-snippet/treegrid/aggregate-cs1" %}
-
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> Refer to the [React TreeGrid](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for feature highlights. Explore the [React TreeGrid example](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to learn how to present and manipulate data.

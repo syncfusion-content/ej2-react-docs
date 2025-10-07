@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Row editing in React Treegrid component | Syncfusion
-description: Learn here all about Row editing in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Row editing in React TreeGrid component | Syncfusion
+description: Learn here all about Row editing in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Row editing 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row editing in React Treegrid component
+# Row editing in React TreeGrid
 
-In Row edit mode, when you start editing the currently selected record, the entire row is changed to edit state. You can change the cell values of the row and save edited data to the data source. To enable Row edit, set the [`editSettings.mode`](https://ej2.syncfusion.com/react/documentation/api/treegrid/editSettingsModel/#mode) as **Row**.
+In row edit mode, starting an edit on the selected record switches the entire row to edit state. Cell values across the row can be modified and then saved to the datasource. Enable row editing by setting [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/treegrid/editSettingsModel/#mode) to **Row**.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

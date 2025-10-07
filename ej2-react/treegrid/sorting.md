@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Sorting in React Treegrid component | Syncfusion
-description: Learn here all about Sorting in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Sorting in React TreeGrid component | Syncfusion
+description: Learn here all about Sorting in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Sorting 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sorting in React Treegrid component
+# Sorting in React TreeGrid 
 
-Sorting enables you to sort data in the *Ascending* or *Descending* order. To sort a column, click the column header.
+Sorting arranges data in **Ascending** or **Descending** order. Click a column header to sort that column.
 
-To sort multiple columns, press and hold the CTRL key and click the column header.  You can clear sorting of any one of the multi-sorted columns by pressing and holding the SHIFT key and clicking the specific column header.
+For multi-column sorting, press and hold CTRL and then click additional column headers. To clear sorting for a specific column in a multi-sort state, press and hold SHIFT and click that column header.
 
-To enable sorting in the TreeGrid, set the [`allowSorting`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowsorting) to true. Sorting options can be configured through the [`sortSettings`](https://ej2.syncfusion.com/react/documentation/api/treegrid/sortSettings).
+Enable sorting in the TreeGrid by setting [allowSorting](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowsorting) to true. Sorting options are configured through [sortSettings](https://ej2.syncfusion.com/react/documentation/api/treegrid/sortSettings/).
 
-To use Sorting, inject **Sort** module in TreeGrid.
+To use sorting, inject the **Sort** module in the TreeGrid.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -29,13 +29,13 @@ To use Sorting, inject **Sort** module in TreeGrid.
 
  {% previewsample "page.domainurl/code-snippet/treegrid/sorting-cs1" %}
 
-> * TreeGrid columns are sorted in the **Ascending** order. If you click the already sorted column, the sort direction toggles.
-> * You can apply and clear sorting by invoking [`sortByColumn`](https://ej2.syncfusion.com/react/documentation/api/treegrid#sortbycolumn) and [`clearSorting`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#clearsorting) methods.
-> * To disable sorting for a particular column, set the [`columns.allowSorting`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowSorting) to *false*.
+> * Columns are sorted in ascending order by default. Clicking an already sorted column toggles the sort direction.
+> * Sorting can be applied or cleared by invoking [sortByColumn](https://ej2.syncfusion.com/react/documentation/api/treegrid/#sortbycolumn) and [clearSorting](https://ej2.syncfusion.com/react/documentation/api/treegrid/#clearsorting).
+> * To disable sorting for a particular column, set [columns.allowSorting](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#allowsorting) to **false**.
 
 ## Initial Sort
 
-To sort at initial rendering, set the [`field`](https://ej2.syncfusion.com/react/documentation/api/treegrid/sortDescriptorModel/#field) and [`direction`](https://ej2.syncfusion.com/react/documentation/api/treegrid/sortDescriptorModel/#direction) in the [`sortSettings.columns`](https://ej2.syncfusion.com/react/documentation/api/treegrid/sortSettings/#columns).
+To sort at initial render, set [field](https://ej2.syncfusion.com/react/documentation/api/treegrid/sortDescriptorModel/#field) and [direction](https://ej2.syncfusion.com/react/documentation/api/treegrid/sortDescriptorModel/#direction) in [sortSettings.columns](https://ej2.syncfusion.com/react/documentation/api/treegrid/sortSettings/#columns).
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -50,7 +50,7 @@ To sort at initial rendering, set the [`field`](https://ej2.syncfusion.com/react
 
 ## Sorting Events
 
-During the sort action, the treegrid component triggers two events. The [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#actionbegin) event triggers before the sort action starts, and the [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#actioncomplete) event triggers after the sort action is completed. Using these events you can perform the needed actions.
+During sorting, the TreeGrid triggers two events: [actionBegin](https://ej2.syncfusion.com/react/documentation/api/treegrid/#actionbegin) (before sorting starts) and [actionComplete](https://ej2.syncfusion.com/react/documentation/api/treegrid/#actioncomplete) (after sorting completes). These events can be used to run custom logic.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -63,13 +63,13 @@ During the sort action, the treegrid component triggers two events. The [`action
 
  {% previewsample "page.domainurl/code-snippet/treegrid/sorting-cs3" %}
 
-> The `args.requestType` is the current action name. For example, in sorting the `args.requestType` value is *sorting*.
+> The `args.requestType` value indicates the current action. For sorting, `args.requestType` is **sorting**.
 
 ## Custom sort comparer
 
-You can customize the default sort action for a column by defining the [`column.sortComparer`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#sortcomparer) property. The sort comparer function has the same functionality like [`Array.sort`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) sort comparer.
+Customize the default sort behavior for a column by defining [column.sortComparer](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#sortcomparer). The comparer function follows the same pattern as [Array.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort).
 
-In the following example, custom sort comparer function was defined in the *Category* column.
+In the following example, a custom comparer is defined for the Category column.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -82,13 +82,14 @@ In the following example, custom sort comparer function was defined in the *Cate
 
  {% previewsample "page.domainurl/code-snippet/treegrid/sorting-cs4" %}
 
-> The sort comparer function will work only for the local data.
+> The sort comparer function applies only to local data.
 
 ### Display null values at bottom
 
-By default, null values in a Syncfusion TreeGrid are displayed at the top when sorting in descending order and at the bottom when sorting in ascending order. However, there may be scenarios where you want to always display null values at the bottom of the TreeGrid regardless of the sort direction. This can be achieved by utilizing the [column.sortComparer](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#sortcomparer) method. This feature is particularly useful when working with data sets where null values might need to be clearly separated from actual data entries.
+By default, null values appear at the top when sorting in descending order and at the bottom when sorting in ascending order. To always place null values at the bottom regardless of sort direction, use [column.sortComparer](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#sortcomparer). This feature is particularly useful when working with data sets where null values might need to be clearly separated from actual data entries.
 
-The example below demonstrates how to display null date values at bottom of the TreeGrid row while sorting the **StartDate** column in both ways.
+
+The example below places null date values at the bottom of the TreeGrid when sorting the **StartDate** column in either direction.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -109,12 +110,12 @@ The example below demonstrates how to display null date values at bottom of the 
 
 ## Touch Interaction
 
-When you tap the treegrid header on touchscreen devices, the selected column header is sorted. A popup ![Multi column sorting](images/sorting.jpg) is displayed for multi-column sorting. To sort multiple columns, tap the popup![Multi sorting](images/msorting.jpg), and then tap the desired treegrid headers.
+On touch devices, tapping a column header sorts that column. A popup ![Multi column sorting](images/sorting.jpg) indicates multi-column sorting. For multi-column sorting, tap the popup ![Multi sorting](images/msorting.jpg), then tap additional headers.
 
-The following screenshot shows treegrid touch sorting.
+The following image shows TreeGrid touch sorting.
 
 <!-- markdownlint-disable MD033 -->
-<img src="images/touch-sorting.jpg" alt="Touch Sorting" style="width:320px;height: 620px">
+<img src="images/touch-sorting.jpg" alt="TreeGrid touch sorting example" style="width:320px;height: 620px">
 <!-- markdownlint-enable MD033 -->
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> Refer to the [React TreeGrid](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour for key capabilities. Explore the [React TreeGrid example](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to learn how to present and manipulate data.

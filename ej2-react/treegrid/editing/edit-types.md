@@ -1,43 +1,38 @@
 ---
 layout: post
-title: Edit types in React Treegrid component | Syncfusion
-description: Learn here all about Edit types in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Edit types in React TreeGrid component | Syncfusion
+description: Learn here all about Edit types in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Edit types 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Edit types in React Treegrid component
+# Edit types in React TreeGrid
 
 ## Cell edit type and its params
 
-The [`columns.editType`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#edittype) is used to customize the edit type of the particular column. You can set the [`columns.editType`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#edittype) based on data type of the column.
+The [columns.editType](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#edittype) property customizes the editor used for a column. Set the edit type based on the column’s data type.
 
-* `numericedit` - [`NumericTextBox`](../../numerictextbox) component for integers, double, and decimal data types.
+* `numericedit` - [NumericTextBox](../../numerictextbox) component for integer, double, and decimal types.
+* `defaultedit` - [TextBox](../../textbox) component for string type.
+* `dropdownedit` - [DropDownList](../../drop-down-list) component for list type.
+* `booleanedit` - [CheckBox](../../check-box) component for boolean type.
+* `datepickeredit` - [DatePicker](../../datepicker) component for date type.
+* `datetimepickeredit` - [DateTimePicker](../../datetimepicker) component for date and time type.
 
-* `defaultedit` - [`TextBox`](../../textbox) component for string data type.
+Customize the editor model through [columns.edit.params](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#edit).
 
-* `dropdownedit` - [`DropDownList`](../../drop-down-list) component for list data type.
+The following table lists editor components and example params.
 
-* `booleanedit` - [`CheckBox`](../../check-box) component for boolean data type.
-
-* `datepickeredit` - [`DatePicker`](../../datepicker) component for date data type.
-
-* `datetimepickeredit` - [`DateTimePicker`](../../datetimepicker) component for date time data type.
-
-Also, you can customize model of the [`columns.editType`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#edittype) component through the [`columns.edit.params`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#edit).
-
-The following table describes cell edit type component and their corresponding edit params of the column.
-
-Component |Example
+Component | Example
 -----|-----
-[`NumericTextBox`](../../numerictextbox) | params: { decimals: 2, value: 5 }
-[`TextBox`](../../textbox) | -
-[`DropDownList`](../../drop-down-list) | params: { value: 'Germany' }
-[`Checkbox`](../../check-box) | params: { checked: true}
-[`DatePicker`](../../datepicker) | params: { format:'dd.MM.yyyy' }
-[`DateTimePicker`](../../datetimepicker) | params: { value: new Date() }
+[NumericTextBox](../../numerictextbox) | params: { decimals: 2, value: 5 }
+[TextBox](../../textbox) | -
+[DropDownList](../../drop-down-list) | params: { value: 'Germany' }
+[CheckBox](../../check-box) | params: { checked: true }
+[DatePicker](../../datepicker) | params: { format: 'dd.MM.yyyy' }
+[DateTimePicker](../../datetimepicker) | params: { value: new Date() }
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -50,19 +45,16 @@ Component |Example
 
  {% previewsample "page.domainurl/code-snippet/treegrid/editing-cs6" %}
 
-> If edit type is not defined in the column, then it will be considered as the *stringedit* type (Textbox component).
+> If an edit type is not defined for a column, it defaults to the *stringedit* type (TextBox component).
 
 ## Cell edit template
 
-The cell edit template is used to add a custom component for a particular column by invoking the following functions:
+A cell edit template adds a custom component for a specific column by implementing the following functions:
 
-* **create** - It is used to create the element at time of initialization.
-
-* **write** - It is used to create custom component or assign default value at time of editing.
-
-* **read** - It is used to read the value from component at time of save.
-
-* **destroy** - It is used to destroy the component.
+* **create** - Create the element at initialization time.
+* **write** - Render the custom component or assign a default value when editing begins.
+* **read** - Retrieve the value from the component when saving.
+* **destroy** - Dispose the component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

@@ -2,7 +2,7 @@
 layout: post
 title: Data binding in React Breadcrumb component | Syncfusion
 description: Learn here all about Data binding in Syncfusion React Breadcrumb component of Syncfusion Essential JS 2 and more.
-control: Data binding 
+control: Breadcrumb 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##

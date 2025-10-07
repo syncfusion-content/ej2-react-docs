@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Provide custom data source and enabling filtering to drop down list in React Treegrid component | Syncfusion
+title: Custom Data and Filtering in React TreeGrid | Syncfusion
 description: Learn here all about Provide custom data source and enabling filtering to drop down list in Syncfusion React TreeGrid component and more.
 control: Provide custom data source and enabling filtering to drop down list 
 platform: ej2-react
@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Provide custom data source and enabling filtering to drop down list in React Treegrid component
+# Provide custom datasource and filter with React TreeGrid Dropdowns
 
-You can provide data source to the DropDownList by using the **params** of [`columns.edit`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#edit) property.
+Provide a data source to the DropDownList by using the **params** of the [columns.edit](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#edit) property.
 
-While setting new data source using edit params, you must specify a new **query** property for the DropDownList as follows,
+When setting a new data source using edit params, specify a new **query** property for the DropDownList as shown below.
 
 ```ts
   const priority : IEditCell = {
@@ -26,9 +26,9 @@ While setting new data source using edit params, you must specify a new **query*
   };
 ```
 
-You can also enable filtering for the DropDownList by passing the [`allowFiltering`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#allowfiltering) as **true** to the edit params.
+Enable filtering for the DropDownList by passing [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#allowfiltering) as **true** in the edit params.
 
-In the below demo, DropDownList is rendered with custom [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#datasource) for the *Priority* column and enabled filtering to search DropDownList items.
+In the following demo, the DropDownList is rendered with a custom [dataSource](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#datasource) for the **Priority** column, and filtering is enabled to search DropDownList items.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -47,4 +47,4 @@ In the below demo, DropDownList is rendered with custom [`dataSource`](https://e
 
  {% previewsample "page.domainurl/code-snippet/treegrid/cascade-drop-cs2" %}
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> Refer to the [React TreeGrid](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for highlights. Explore the [React Tree Grid example](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to learn how to present and manipulate data.

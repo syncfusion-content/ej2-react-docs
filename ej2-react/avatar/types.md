@@ -2,7 +2,7 @@
 layout: post
 title: Types in React Avatar component | Syncfusion
 description: Learn here all about Types in Syncfusion React Avatar component of Syncfusion Essential JS 2 and more.
-control: Types 
+control: Avatar 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,19 +10,19 @@ domainurl: ##DomainURL##
 
 # Types in React Avatar component
 
-This section explains different types of avatar.
+The React Avatar component provides different sizes and visual styles to suit various design requirements. This section covers the available avatar sizes and shape types that can be customized using CSS classes.
 
 ## Avatar size
 
-The Essential<sup style="font-size:70%">&reg;</sup> JS 2 Avatar has the following predefined sizes that can be used with the `.e-avatar` class to change the appearance of the avatar.
+The Essential<sup style="font-size:70%">&reg;</sup> JS 2 Avatar provides predefined sizes that can be applied using CSS classes with the base `.e-avatar` class to control the avatar's dimensions.
 
 | Class Name         | Description
-| :-------------:    |:-------------:
-| e-avatar-xlarge    | Displays xlarge size avatar.
+| :-------------     |:-------------
+| e-avatar-xlarge    | Displays extra large size avatar.
 | e-avatar-large     | Displays large size avatar.
 | e-avatar           | Displays default size avatar.
 | e-avatar-small     | Displays small size avatar.
-| e-avatar-xsmall    | Displays xsmall size avatar.
+| e-avatar-xsmall    | Displays extra small size avatar.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -43,14 +43,14 @@ The Essential<sup style="font-size:70%">&reg;</sup> JS 2 Avatar has the followin
 
 ## Avatar types
 
-The types of Essential<sup style="font-size:70%">&reg;</sup> JS 2 Avatar are:
+The Essential<sup style="font-size:70%">&reg;</sup> JS 2 Avatar supports two distinct shape styles to accommodate different design preferences:
 
-* Default
+* Default (rectangular  with rounded corners)
 * Circle
 
 ### Default
 
-The default style of the Avatar is rectangular shape with rounded corners, which can be applied from adding the modifier class `.e-avatar` to the target element.
+The default Avatar style features a rectangular shape with rounded corners, providing a modern appearance suitable for most applications. This style is applied by adding the base class `.e-avatar` to the target element.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -71,7 +71,7 @@ The default style of the Avatar is rectangular shape with rounded corners, which
 
 ### Circle
 
-The circle Avatar style can be applied by adding the modifier class `.e-avatar-circle` to the target element.
+The circular Avatar style creates a perfectly round appearance, ideal for profile pictures and user representations. Apply this style by adding the modifier class `.e-avatar-circle` along with the base `.e-avatar` class to the target element.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

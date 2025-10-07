@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Excel export in React Treegrid component | Syncfusion
-description: Learn here all about Excel export in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Excel export in React TreeGrid | Syncfusion
+description: Learn here all about Excel export in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Excel export 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Excel export in React Treegrid component
+# Excel export in React TreeGrid
 
-The excel export allows exporting TreeGrid data to Excel document. You need to use the [`excelExport`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#excelexport) method for exporting. To enable Excel export in the treegrid, set the [`allowExcelExport`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowexcelexport) as **true**.
+Excel export enables exporting TreeGrid data to an Excel document. Export by calling the [excelExport](https://ej2.syncfusion.com/react/documentation/api/treegrid/#excelexport) method. To enable Excel export in the TreeGrid, set [allowExcelExport](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowexcelexport) to **true**.
 
-To use excel export, You need to inject the **ExcelExport** module in treegrid.
+For Excel export, inject the **ExcelExport** module in the TreeGrid.
 
-To get start quickly with exporting functionalities, you can check on this video:
+For a quick start with exporting functionalities, refer to the following video:
 {% youtube "https://www.youtube.com/watch?v=Rz24Nk4eSEY" %}
 
 {% tabs %}
@@ -30,7 +30,7 @@ To get start quickly with exporting functionalities, you can check on this video
 
 ## Persist collapsed state
 
-You can persist the collapsed state in the exported document by defining `isCollapsedStatePersist` property as true in `TreeGridExcelExportProperties` parameter of [`excelExport`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#excelexport) method.
+Persist the collapsed state in the exported document by setting `isCollapsedStatePersist` to true in the `TreeGridExcelExportProperties` parameter of the [excelExport](https://ej2.syncfusion.com/react/documentation/api/treegrid/#excelexport) method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -45,7 +45,7 @@ You can persist the collapsed state in the exported document by defining `isColl
 
 ## Custom data source
 
-The excel export provides an option to define datasource dynamically before exporting. To export data dynamically, define the `dataSource` in `ExcelExportProperties`.
+Excel export supports defining a data source dynamically before exporting. To export data dynamically, set the `dataSource` in `ExcelExportProperties`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -58,10 +58,11 @@ The excel export provides an option to define datasource dynamically before expo
 
  {% previewsample "page.domainurl/code-snippet/treegrid/excel-export-cs9" %}
 
-## Exporting Custom Aggregates in Tree Grid  
-The Tree Grid enables exporting custom aggregates, which summarize column data, to an Excel document using the `ExcelAggregateQueryCellInfo` event.  
+## Exporting Custom Aggregates in TreeGrid  
 
-In the provided example, the `customAggregateFn` function computes the item count for a selected category, while the `ExcelAggregateQueryCellInfo` event customizes the exported cell values in the Excel document.
+The TreeGrid supports exporting custom aggregates, which summarize column data, to an Excel document using the `ExcelAggregateQueryCellInfo` event.  
+
+In the example, the `customAggregateFn` function computes the item count for a selected category, and the `ExcelAggregateQueryCellInfo` event customizes the exported cell values in the Excel document.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -76,11 +77,11 @@ In the provided example, the `customAggregateFn` function computes the item coun
 
 ## Passing additional parameters to the server when exporting
 
-Passing additional parameters to the server when exporting data in the Syncfusion React TreeGrid involves providing flexibility to include extra information or customize the export process based on specific requirements.
+Additional parameters can be sent to the server during export to include extra information or customize the export process.
 
-You can achieve this by utilizing the [query](https://ej2.syncfusion.com/react/documentation/api/treegrid/#query) property and the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbarclick) event. Within the query property, you can invoke the [addParams](https://ej2.syncfusion.com/documentation/api/data/query/#addparams)  method to add parameters to the request.
+This can be achieved using the [query](https://ej2.syncfusion.com/react/documentation/api/treegrid/#query) property and the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbarclick) event. Within the `query` property, invoke the [addParams](https://ej2.syncfusion.com/documentation/api/data/query/#addparams) method to append parameters to the request.
 
-The following example demonstrates how to pass additional parameters to the server when Excel exporting within the `toolbarClick` event. Within the event, the additional parameters, specifically **recordcount** as **12**, are passed using the `addParams` method and displayed as a message.
+The following example demonstrates passing additional parameters during Excel export within the `toolbarClick` event. In this example, the parameter **recordcount** with value **12** is added using `addParams` and displayed as a message.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -99,4 +100,4 @@ The following example demonstrates how to pass additional parameters to the serv
 
  {% previewsample "page.domainurl/code-snippet/treegrid/refresh-cs7" %}
  
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> Refer to the [React TreeGrid](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for highlights. Explore the [React TreeGrid example](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to learn how to present and manipulate data.

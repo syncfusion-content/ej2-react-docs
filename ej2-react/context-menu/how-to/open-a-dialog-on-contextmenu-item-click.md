@@ -1,18 +1,20 @@
 ---
 layout: post
-title: Open a dialog on contextmenu item click in React Context menu component | Syncfusion
+title: Open Dialog on Context Menu Item Click in React | Syncfusion
 description: Learn here all about Open a dialog on contextmenu item click in Syncfusion React Context menu component of Syncfusion Essential JS 2 and more.
-control: Open a dialog on contextmenu item click 
+control: Context Menu
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open a dialog on contextmenu item click in React Context menu component
+# Open Dialog on Context Menu Click in react
 
-This section explains about how to open a dialog on ContextMenu item click. This can be achieved by handling dialog open in `select` event of the ContextMenu.
+This section explains how to open a dialog when a ContextMenu item is clicked. This integration is commonly used for modal workflows, form interactions, and confirmation dialogs. The functionality is achieved by handling the dialog opening logic in the [`select`](https://ej2.syncfusion.com/react/documentation/api/context-menu/#select) event of the ContextMenu component.
 
-In the following sample, Dialog will open while clicking `Save As...` item:
+When a ContextMenu item is selected, the `select` event provides access to the clicked item's details, allowing you to conditionally open dialogs based on the selected menu option. This pattern is particularly useful for actions that require additional user input or confirmation before execution.
+
+In the following sample, a Dialog will open when clicking the `Save As...` menu item:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
