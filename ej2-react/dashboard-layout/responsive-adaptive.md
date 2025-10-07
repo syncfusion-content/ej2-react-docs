@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Responsive adaptive in React Dashboard Layout  component | Syncfusion
+title: Responsive adaptive in React Dashboard Layout component | Syncfusion
 description: Learn here all about Responsive adaptive in Syncfusion React Dashboard Layout  component of Syncfusion Essential JS 2 and more.
-control: Responsive adaptive 
+control: Dashboard Layout
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,11 +10,17 @@ domainurl: ##DomainURL##
 
 # Responsive adaptive in React Dashboard Layout  component
 
-The component is provided with built-in responsive support, where panels within the layout adjust based on their parent element's dimensions. This accommodates any resolution, relieving the burden of building responsive dashboards manually.
+The React Dashboard Layout component provides built-in responsive support that automatically adjusts panel positioning and sizing based on the parent element's dimensions. This responsive behavior accommodates various screen resolutions without requiring additional configuration for basic responsive dashboards.
 
-The Dashboard Layout  is designed to automatically adapt with lower resolutions by transforming the entire layout into a stacked one, so that, the panels will be displayed in a vertical column. By default, this layout transformation occurs whenever the screen resolution reaches 600 px or lower resolutions this layout transformation occurs. This transformation can be modified for any user-defined resolution by setting the [mediaQuery](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/#mediaquery) property of the component.
+## Adaptive Layout Behavior
 
-The following sample demonstrates the usage of the [mediaQuery](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/#mediaquery) property to transform the layout into a stacked one at a user-defined resolution. In this example, whenever the window size reaches 700 px or less, the layout becomes a stacked layout.
+The dashboard layout automatically transforms into a stacked layout when the screen resolution decreases. In a stacked layout, all panels are arranged vertically in a single column, ensuring optimal viewing on smaller screens. By default, this transformation occurs when the screen resolution reaches 600px or below.
+
+## Customizing Responsive Breakpoints
+
+The default responsive breakpoint can be customized using the [`mediaQuery`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/#mediaquery) property. This property accepts a CSS media query string that defines when the layout should transform to its stacked state.
+
+The following example demonstrates how to configure the [`mediaQuery`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/#mediaquery) property to trigger the stacked layout at 700px screen width:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -39,4 +45,4 @@ The following sample demonstrates the usage of the [mediaQuery](https://ej2.sync
 
  {% previewsample "page.domainurl/code-snippet/dashboard-layout/responsive-adaptive-cs1" %}
 
-> You can refer to our [React Dashboard Layout](https://www.syncfusion.com/react-ui-components/react-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [React Dashboard Layout example](https://ej2.syncfusion.com/react/demos/#/material/dashboard-layout/default) to learn how to present and manipulate data.
+> You can refer to our [React Dashboard Layout](https://www.syncfusion.com/react-ui-components/react-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [React Dashboard Layout example](https://ej2.syncfusion.com/react/demos/#/material/dashboard-layout/default) to knows how to present and manipulate data.

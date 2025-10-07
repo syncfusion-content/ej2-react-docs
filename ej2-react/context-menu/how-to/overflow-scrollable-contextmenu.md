@@ -2,7 +2,7 @@
 layout: post
 title: Overflow Scrollable in React Context menu component | Syncfusion
 description: Learn here all about Overflow Scrollable ContextMenu in Syncfusion React Context menu component of Syncfusion Essential JS 2 and more.
-control: Overflow Scrollable ContextMenu 
+control: Context Menu
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##

@@ -73,8 +73,6 @@ You need to add your [Syncfusion API key](https://syncfusion.com/account/api-key
 * Once installed, the server will appear in the User Installed Server list, and will be added to the **config.yaml** file.
 * The server is now ready for use in Code Studio. For more details, refer to the Code Studio [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/mcp/customservers#npm-server).
 
-For additional details, see the Code Studio [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/mcp/marketplace).
-
 ### VS Code (GitHub Copilot MCP)
 
 1. To configure an MCP server for a specific workspace, you can create a `.vscode/mcp.json` file in your workspace folder.

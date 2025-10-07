@@ -2,7 +2,7 @@
 layout: post
 title: Accessibility in React Splitter component | Syncfusion
 description: Learn here all about Accessibility in Syncfusion React Splitter component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+control: Splitter 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Splitter component
 
-The Splitter component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The React Splitter component adheres to major accessibility standards including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles), ensuring inclusive user experiences across platforms.
 
-The accessibility compliance for the Splitter component is outlined below.
+## Accessibility compliance overview
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,7 +40,7 @@ The accessibility compliance for the Splitter component is outlined below.
 
 ## Keyboard interaction
 
-You can use the following key shortcuts to access the splitter without interruptions:
+Use the following keyboard shortcuts to navigate and interact with the Splitter component:
 
 | **Keyboard shortcuts** | **Actions** |
 | --- | --- |

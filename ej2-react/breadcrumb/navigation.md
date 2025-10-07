@@ -2,7 +2,7 @@
 layout: post
 title: Navigation in React Breadcrumb component | Syncfusion
 description: Learn here all about Navigation in Syncfusion React Breadcrumb component of Syncfusion Essential JS 2 and more.
-control: Navigation 
+control: Breadcrumb 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Navigation in React Breadcrumb component
 
-The breadcrumb item navigates to the path while clicking the item. To enable navigation, [`url`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb/breadcrumbItem/#url) property was bound to the items.
+The Breadcrumb component enables navigation to specific paths when users click breadcrumb items. To enable navigation functionality, bind the [`url`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb/breadcrumbItem/#url) property to the breadcrumb items.
 
 ## URL
 
-In the Breadcrumb component, the item represents the url. The breadcrumb items can be provided with either relative or absolute URL.
+In the Breadcrumb component, each item represents a URL destination. Breadcrumb items can be configured with either relative or absolute URLs to define navigation paths.
 
 ### Relative URL
 
-The breadcrumb items with relative URL contain only the path but do not locate the path or server. The following example represents the breadcrumb items with relative url.
+Breadcrumb items with relative URLs contain only the path segment without specifying the complete location or server details. The following example demonstrates breadcrumb items configured with relative URLs.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -33,7 +33,7 @@ The breadcrumb items with relative URL contain only the path but do not locate t
 
 ### Absolute URL
 
-The breadcrumb items with Absolute URL contain the path and locate to the resource if the static url is bound to the breadcrumb item. The following example represents the breadcrumb items with static url.
+Breadcrumb items with absolute URLs contain the complete path and navigate directly to the specified resource when the absolute URL is bound to the breadcrumb item. The following example demonstrates breadcrumb items configured with absolute URLs.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -48,7 +48,7 @@ The breadcrumb items with Absolute URL contain the path and locate to the resour
 
 ## Enable navigation for last Breadcrumb item
 
-The feature enables the last item of the Breadcrumb component by setting the [`enableActiveItemNavigation`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb/#enableactiveitemnavigation) property to true. In the following example, the last item of the `Breadcrumb` was enabled.
+By default, the last breadcrumb item (active item) is not clickable. To enable navigation for the last item, set the [`enableActiveItemNavigation`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb/#enableactiveitemnavigation) property to `true`. The following example demonstrates enabling navigation for the last breadcrumb item.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

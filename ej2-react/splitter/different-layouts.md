@@ -2,7 +2,7 @@
 layout: post
 title: Different layouts in React Splitter component | Syncfusion
 description: Learn here all about Different layouts in Syncfusion React Splitter component of Syncfusion Essential JS 2 and more.
-control: Different layouts 
+control: Splitter
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,11 +10,12 @@ domainurl: ##DomainURL##
 
 # Different layouts in React Splitter component
 
-By using splitter control, you can create the different layouts with multiple and nested panes.
+Using the React Splitter component, you can create complex layouts with multiple and nested panes.
 
 ## Code editor style layout
 
-Create the element with two child to render the outer splitter and create the inner splitter from first pane of vertical splitter.
+Create an element with two child panes to render the outer Splitter. Then, create an inner Splitter inside the first pane of the vertical Splitter.
+
 
 `[Class-component]`
 
@@ -178,7 +179,7 @@ Once the above configurations has been completed, you will get the output like [
 
 ## Outlook style layout
 
-Create the element with three panes and place the elements within the pane to render `treeview`, `listview` and `RTE`.
+Create an element with three panes and place the required components inside each pane to render `TreeView`, `ListView`, and `Rich Text Editor`.
 
 `[Class-component]`
 

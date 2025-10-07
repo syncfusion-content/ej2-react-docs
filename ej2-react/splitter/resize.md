@@ -2,24 +2,24 @@
 layout: post
 title: Resize in React Splitter component | Syncfusion
 description: Learn here all about Resize in Syncfusion React Splitter component of Syncfusion Essential JS 2 and more.
-control: Resize 
+control: Splitter 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resize in React Splitter component
+# Resizing panes in React Splitter component
 
-By default, resizing will be enable for split panes. Resizing gripper element will be add to the separator to makes the resize easy.
+By default, pane resizing is enabled in the React Splitter component. A gripper element is added to the separator to make resizing intuitive and user-friendly.
 
-> Horizontal splitter will allows to resize in horizontal directions.
-> Vertical splitter will allows to resize in vertical directions.
+> The horizontal Splitter allows resizing in horizontal directions.  
+> The vertical Splitter allows resizing in vertical directions.
 
-While resizing, previous and next panes will be adjust its dimensions automatically.
+During resizing, the adjacent panes automatically adjust their dimensions to accommodate the change.
 
-## Min and Max validation
+## Minimum and Maximum size constraints
 
-Splitter allows you to set the minimum and maximum sizes for each pane. Resizing will not be occur over the minimum and maximum values.
+You can define minimum and maximum sizes for each pane. Resizing is restricted within these boundaries to maintain layout integrity.
 
 `[Class-component]`
 
@@ -47,7 +47,7 @@ Splitter allows you to set the minimum and maximum sizes for each pane. Resizing
 
  {% previewsample "page.domainurl/code-snippet/splitter/validation-cs2" %}
 
-## Prevent resizing
+## Disabling pane resizing
 
 You can disable the resizing for the pane by setting `false` to the [resizable](https://ej2.syncfusion.com/react/documentation/api/splitter/panePropertiesModel/#resizable) property within paneSettings.
 
@@ -77,14 +77,17 @@ You can disable the resizing for the pane by setting `false` to the [resizable](
 
  {% previewsample "page.domainurl/code-snippet/splitter/prevent-resize-cs2" %}
 
-## Refresh content on resizing
+## Refreshing content during resize
 
-While resizing the panes, you can refresh the pane contents by using either [resizeStart](https://ej2.syncfusion.com/react/documentation/api/splitter#resizestart),
-[resizing](https://ej2.syncfusion.com/react/documentation/api/splitter#resizestart) or [resizeStop](https://ej2.syncfusion.com/react/documentation/api/splitter#resizestart) events.
+You can refresh pane content dynamically during resizing by using the following events:
 
-## Customize the resize grip and cursor
+- [`resizeStart`](https://ej2.syncfusion.com/react/documentation/api/splitter/#resizestart)
+- [`resizing`](https://ej2.syncfusion.com/react/documentation/api/splitter/#resizing)
+- [`resizeStop`](https://ej2.syncfusion.com/react/documentation/api/splitter/#resizestop)
 
-You can customize the resize gripper icon and cursor in CSS level.
+## Customizing Resize-gripper and Cursor
+
+You can style the resize gripper icon and cursor using CSS to match your application's design.
 
 `[Class-component]`
 

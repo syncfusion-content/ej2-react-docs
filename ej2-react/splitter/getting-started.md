@@ -2,19 +2,19 @@
 layout: post
 title: Getting started with React Splitter component | Syncfusion
 description:  Checkout and learn about Getting started with React Splitter component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+control: Splitter
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Splitter
 
-The following section explains the steps required to build the Splitter component with step-by-step procedure.
+The following section explains the steps required to build the Splitter component with a step-by-step procedure.
 
 ## Dependencies
 
-The following list of dependencies required to use the Splitter component in your application:
+The following dependencies are required to use the Splitter component in your application:
 
 ```js
 |-- @syncfusion/ej2-layouts
@@ -26,26 +26,26 @@ The following list of dependencies required to use the Splitter component in you
 
 ## Installation and configuration
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To quickly set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+> **Note:** To create a React application using `create-react-app`, refer to this [Syncfusion guide](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
 To create a new React application, run the following command.
 
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+To set up a React application in TypeScript environment, run the following command.
 
 ```bash
-npm create vite@latest my-app -- --template react-ts
+npm create vite@latest my-app --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in JavaScript environment, run the following command.
 
 ```bash
-npm create vite@latest my-app -- --template react
+npm create vite@latest my-app --template react
 cd my-app
 npm run dev
 ```
@@ -55,7 +55,6 @@ Install the below required dependency package in order to use the `Splitter` com
 ```
 npm install @syncfusion/ej2-react-layouts --save
 ```
-
 
 ## Adding CSS Reference
 
@@ -71,7 +70,7 @@ This can be referred in your application using the following code.
 
 ## Adding Splitter to the project
 
-The Splitter can be initialized through `<SplitterComponent>` tag-directive with `<PanesDirective>` and `<PaneDirective>` as child elements respectively.
+Initialize the Splitter using the`<SplitterComponent>` tag-directive with `<PanesDirective>` and `<PaneDirective>` child elements respectively.
 
 Please refer the below code snippet,
 
@@ -122,7 +121,7 @@ Output will be as follows:
 
 ## Orientation
 
-Splitter supports both `Horizontal` and `Vertical` orientation for the panes. By default, it will be rendered in `Horizontal` orientation. You can change it by using [orientation](https://ej2.syncfusion.com/react/documentation/api/splitter#orientation) property.
+Splitter supports both `Horizontal` and `Vertical` orientations. By default, it renders in `Horizontal` orientation. Change the layout by setting the [orientation](https://ej2.syncfusion.com/react/documentation/api/splitter/#orientation) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -137,9 +136,9 @@ Splitter supports both `Horizontal` and `Vertical` orientation for the panes. By
 
 ## Load content to the pane
 
-You can load the pane contents in either HTML element or string types using [content](https://ej2.syncfusion.com/react/documentation/api/splitter/panePropertiesModel/#content) property.
+Use the [content](https://ej2.syncfusion.com/react/documentation/api/splitter/panePropertiesModel/#content) property to load pane contents as an HTML element or string. 
 
-For detailed information, refer to the [Pane Content](./pane-content/) section
+For detailed information, refer to the [Pane Content](./pane-content) section.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

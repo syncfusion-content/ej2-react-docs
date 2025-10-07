@@ -2,19 +2,19 @@
 layout: post
 title: Expand collapse in React Splitter component | Syncfusion
 description: Learn here all about Expand collapse in Syncfusion React Splitter component of Syncfusion Essential JS 2 and more.
-control: Expand collapse 
+control: Splitter 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Expand collapse in React Splitter component
+# Expand and collapse panes in React Splitter component
 
 ## Collapsible panes
 
-The Splitter panes can be configured with built-in expand and collapse functionalities. By default, the collapsible behavior is disabled. Enable the [collapsible](https://ej2.syncfusion.com/react/documentation/api/splitter/panePropertiesModel/#collapsible) behavior in the paneSettings property to show or hide the expand or collapse icons in the panes. You can dynamically expand and collapse the panes by the corresponding icons.
+The React Splitter component supports built-in expand and collapse functionality for its panes. By default, this behavior is disabled. To enable it, set the [collapsible](https://ej2.syncfusion.com/react/documentation/api/splitter/panePropertiesModel/#collapsible) property within `paneSettings`. This displays expand and collapse icons in the panes. You can dynamically expand and collapse the panes by clicking on the corresponding icons
 
-The following code shows how to enable collapsible behavior.
+The following example demonstrates how to enable collapsible behavior:
 
 `[Class-component]`
 
@@ -42,9 +42,11 @@ The following code shows how to enable collapsible behavior.
 
  {% previewsample "page.domainurl/code-snippet/splitter/expand-collapse-cs2" %}
 
-## Control the expand and collapse action in programmatic manner
+## Programmatically control the expand and collapse action
 
-The Splitter provides an option to control the expand and collapse behavior programmatically by using the `expand` and `collapse` methods. Refer to the following code sample.
+You can also control pane visibility programmatically using the Splitter’s public methods: [expand](https://ej2.syncfusion.com/react/documentation/api/splitter/#expand) and [collapse](https://ej2.syncfusion.com/react/documentation/api/splitter/#collapse). These methods allow you to dynamically toggle panes based on application logic.
+
+Here’s an example of using these methods:
 
 `[Class-component]`
 
@@ -72,9 +74,9 @@ The Splitter provides an option to control the expand and collapse behavior prog
 
  {% previewsample "page.domainurl/code-snippet/splitter/expand-collapse-method-cs2" %}
 
-## Specify initial state to panes
+## Set initial collapsed state
 
-You can render specific panes with collapsed state on page load. Specify a Boolean value to the [collapsed](https://ej2.syncfusion.com/react/documentation/api/splitter/panePropertiesModel/#collapsed) property to control this behavior. The following code explains how to collapse panes on rendering (the second panes renders with collapsed state).
+To render a pane in a collapsed state on initial load, set the [collapsed](https://ej2.syncfusion.com/react/documentation/api/splitter/#collapsed) property to `true`. This is useful for customizing the default layout based on user preferences or screen size.
 
 `[Class-component]`
 

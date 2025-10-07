@@ -2,7 +2,7 @@
 layout: post
 title: Style in React Splitter component | Syncfusion
 description: Learn here all about Style in Syncfusion React Splitter component of Syncfusion Essential JS 2 and more.
-control: Style 
+control: Splitter 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Style in React Splitter component
 
-The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
+This guide outlines the CSS structure used to customize the appearance of the React Splitter component based on user preferences.
 
 ## Customizing the split bar
 
-Use the following CSS to customize the split bar properties.
+Use the following CSS rules to modify the default, hover, and active states of the split bar.
 
 ### Horizontal split bar
 
@@ -48,7 +48,7 @@ Use the following CSS to customize the split bar properties.
 
 ## Customizing the split bar resize handle
 
-Use the following CSS to customize the split bar resize handle.
+Adjust the appearance of the resize handle within the split bar.
 
 ### Horizontal split bar resize handle
 
@@ -82,7 +82,7 @@ Use the following CSS to customize the split bar resize handle.
 
 ## Customizing the split bar arrows
 
-Use the following CSS to customize the split bar arrows.
+Modify the appearance of the navigation arrows displayed on the split bar.
 
 ### Horizontal split bar resize arrows
 
@@ -114,7 +114,7 @@ Use the following CSS to customize the split bar arrows.
 
 ## To hide the resize handle in Splitter
 
-Use the following CSS to hide the resize handler in the split bar
+To remove the resize handle from the split bar, apply the following CSS:
 
 ### Hide the horizontal split bar resize arrow
 

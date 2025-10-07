@@ -2,18 +2,19 @@
 layout: post
 title: Getting started with React Context menu component | Syncfusion
 description:  Checkout and learn about Getting started with React Context menu component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+control: Context Menu 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Getting Started
 
-This section explains how to create a simple ContextMenu, and configure its available functionalities in React
+# Getting started with React Context menu component
+
+This section explains how to create a simple ContextMenu and configure its core functionalities in a React application.
 
 ## Dependencies
 
-The following list of dependencies are required to use the ContextMenu component in your application.
+The following dependencies are required to use the ContextMenu component:
 
 ```javascript
 |-- @syncfusion/ej2-react-navigations
@@ -29,9 +30,9 @@ The following list of dependencies are required to use the ContextMenu component
 
 ## Setup your development environment
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To quickly set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+> **Note:** To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
 To create a new React application, run the following command.
 

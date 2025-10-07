@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Events in React Timeline component
 
-This section describes the Timeline events that will be triggered when appropriate actions are performed. The following events are available in the Timeline component.
+This section describes the Timeline events that trigger when appropriate actions are performed. The following events are available in the Timeline component.
 
 ## created
 
-The Timeline component triggers the [created](https://ej2.syncfusion.com/react/documentation/api/timeline#created) event when the component rendering is completed.
+The Timeline component triggers the [created](https://ej2.syncfusion.com/react/documentation/api/timeline/#created) event when the component rendering process is completed and the Timeline is ready for interaction.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -35,7 +35,7 @@ The Timeline component triggers the [created](https://ej2.syncfusion.com/react/d
 
 ## beforeItemRender
 
-The Timeline component triggers the [beforeItemRender](https://ej2.syncfusion.com/react/documentation/api/timeline#beforeitemrender) event before rendering each item.
+The Timeline component triggers the [beforeItemRender](https://ej2.syncfusion.com/react/documentation/api/timeline/#beforeitemrender) event before rendering each timeline item, allowing customization of individual items during the rendering process.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
