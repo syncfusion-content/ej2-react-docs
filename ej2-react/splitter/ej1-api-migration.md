@@ -2,7 +2,7 @@
 layout: post
 title: Ej1 api migration in React Splitter component | Syncfusion
 description: Learn here all about Ej1 api migration in Syncfusion React Splitter component of Syncfusion Essential JS 2 and more.
-control: Ej1 api migration 
+control: Splitter
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##

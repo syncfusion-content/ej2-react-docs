@@ -2,19 +2,19 @@
 layout: post
 title: Getting started functional with React Splitter component | Syncfusion
 description:  Checkout and learn about Getting started functional with React Splitter component of Syncfusion Essential JS 2 and more details.
-control: Getting started functional 
+control: Splitter
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Splitter
 
-The following section explains the steps required to build the Splitter component with step-by-step procedure.
+The following section explains the steps required to build the Splitter component with a step-by-step procedure.
 
 ## Dependencies
 
-The following list of dependencies required to use the Splitter component in your application:
+The following dependencies are required to use the Splitter component in your application:
 
 ```js
 |-- @syncfusion/ej2-layouts
@@ -67,7 +67,7 @@ This can be referred in your application using the following code.
 
 ## Adding Splitter to the project
 
-The Splitter can be initialized through `<SplitterComponent>` tag-directive with `<PanesDirective>` and `<PaneDirective>` as child elements respectively.
+Initialize the Splitter through `<SplitterComponent>` tag-directive with `<PanesDirective>` and `<PaneDirective>` as child elements respectively.
 
 Please refer the below code snippet,
 
@@ -118,7 +118,7 @@ Output will be as follows:
 
 ## Orientation
 
-Splitter supports both `Horizontal` and `Vertical` orientation for the panes. By default, it will be rendered in `Horizontal` orientation. You can change it by using [orientation](https://ej2.syncfusion.com/react/documentation/api/splitter#orientation) property.
+Splitter supports both `Horizontal` and `Vertical` pane layouts. By default, it renders in `Horizontal` orientation. Change it using the [orientation](https://ej2.syncfusion.com/react/documentation/api/splitter/#orientation) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -131,11 +131,11 @@ Splitter supports both `Horizontal` and `Vertical` orientation for the panes. By
 
  {% previewsample "page.domainurl/code-snippet/splitter/getting-started-cs2" %}
 
-## Load content to the pane
+## Load Content into Panes
 
-You can load the pane contents in either HTML element or string types using [content](https://ej2.syncfusion.com/react/documentation/api/splitter/panePropertiesModel/#content) property.
+Load pane content as an HTML element or string using the [content](https://ej2.syncfusion.com/react/documentation/api/splitter/panePropertiesModel/#content) property.
 
-For detailed information, refer to the [Pane Content](./pane-content/) section
+For detailed information, refer to the [Pane Content](./pane-content) section.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

@@ -2,7 +2,7 @@
 layout: post
 title: Pane sizing in React Splitter component | Syncfusion
 description: Learn here all about Pane sizing in Syncfusion React Splitter component of Syncfusion Essential JS 2 and more.
-control: Pane sizing 
+control: Splitter 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,9 +10,12 @@ domainurl: ##DomainURL##
 
 # Pane sizing in React Splitter component
 
-Splitter allows you to provide pane sizes either in pixel or percentage formats.
 
-## Pane size in pixel
+The React Splitter component allows you to define pane sizes using pixel values, percentage values, or automatic sizing based on layout behavior.
+
+## Set pane size in pixels
+
+To assign fixed pixel values to panes, use the `size` property in `paneSettings`. This ensures consistent pane dimensions regardless of container size.
 
 `[Class-component]`
 
@@ -40,7 +43,9 @@ Splitter allows you to provide pane sizes either in pixel or percentage formats.
 
  {% previewsample "page.domainurl/code-snippet/splitter/pane-sizes-cs2" %}
 
-## Pane size in percentage
+## Set pane size in percentage
+
+You can also define pane sizes as percentages. This approach ensures responsive behavior across different screen sizes.
 
 `[Class-component]`
 
@@ -68,9 +73,8 @@ Splitter allows you to provide pane sizes either in pixel or percentage formats.
 
  {% previewsample "page.domainurl/code-snippet/splitter/pane-sizes-cs4" %}
 
-## Auto size panes
-
-You can render the split panes without providing the size values. It will split up the sizes automatically.
+## Auto-size panes
+When no explicit size is provided, panes automatically adjust based on available space. This behavior is powered by the default flex layout, allowing dynamic resizing when panes are added, removed, shown, or hidden.
 
 `[Class-component]`
 
@@ -100,7 +104,7 @@ You can render the split panes without providing the size values. It will split 
 
 ## Fixed pane
 
-You can render the split panes with fixed sizes. Since last pane is a flexible pane, fixed size will not be applied.
+You can configure panes with fixed sizes in both horizontal and vertical orientations. However, even when all panes are assigned fixed sizes, the Splitter treats the last pane as flexible to ensure layout adaptability. At least one pane must remain flexible to accommodate container changes.
 
 `[Class-component]`
 

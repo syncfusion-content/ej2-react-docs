@@ -2,15 +2,15 @@
 layout: post
 title: Getting started with React Timeline component | Syncfusion
 description:  Checkout and learn about Getting started with Syncfusion React Timeline component of Syncfusion Essential JS 2 and more.
-control: Timeline 
+control: Timeline
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting started with the React Timeline component
 
-This section explains how to create a simple Timeline and configure its available functionalities in the React environment.
+This section explains how to create and configure a simple Timeline in a React application using Syncfusion Essential JS 2.
 
 ## Dependencies
 
@@ -26,9 +26,9 @@ The following list of dependencies is required to use the Timeline component in 
 
 ## Installation and Configuration
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To quickly set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+> **Note:** To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
 To create a new React application, run the following command.
 

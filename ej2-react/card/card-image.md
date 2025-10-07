@@ -2,7 +2,7 @@
 layout: post
 title: Card image in React Card component | Syncfusion
 description: Learn here all about Card image in Syncfusion React Card component of Syncfusion Essential JS 2 and more.
-control: Card image 
+control: Card
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 ## Images
 
-The Card supports to include images within the elements, you can add image as direct element anywhere inside card root by adding the `e-card-image` class to `div` element. Using the class defined, you can write CSS styles to load images to that element.
+The Card component supports including images within its elements. You can add an image as a direct element anywhere inside the card root by adding the `e-card-image` class to a `div` element. Using this class, you can write CSS styles to load images into that element.
 
-> By default, card images occupies full width of its parent element.
+> By default, card images occupy the full width of their parent element.
 
 ```
     <div className = "e-card">
@@ -25,7 +25,7 @@ The Card supports to include images within the elements, you can add image as di
 
 ### Title
 
-Card image is supported to include a title or caption for the image. By default, Title is placed over the image on left-bottom position with overlay.
+Card images support including a title or caption for the image. By default, the title is placed over the image in the left-bottom position with an overlay effect.
 
 ```
     <div className = "e-card">
@@ -69,9 +69,10 @@ Card image is supported to include a title or caption for the image. By default,
 
 ## Divider
 
-Divider used to separate the elements inside the card. You can add divider inside the card elements to separate it.
+Dividers are used to separate elements inside the card. You can add a divider inside the card elements to create visual separation between different sections.
 
-* Place the `div` element with `e-card-separator` class inside the card element for adding a divider.
+* Place a `div` element with the `e-card-separator` class inside the card element to add a divider.
+
 
 `[Class-component]`
 

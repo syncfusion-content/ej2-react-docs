@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Getting started with React Drop down tree component | Syncfusion
+title: Getting started with React Dropdown Tree component | Syncfusion
 description:  Checkout and learn about Getting started with React Drop down tree component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+control: Dropdown Tree
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# # Getting started with React Dropdown Tree component
 
 This section explains you about how to create a simple **Dropdown Tree** component and configure its available functionalities in React.
 
 ## Dependencies
 
-The following list of dependencies are required to use the `Dropdown Tree` component in your application.
+The following dependencies are required to use the `Dropdown Tree` component in your application:
 
 ```javascript
 |-- @syncfusion/ej2-react-dropdowns
@@ -33,7 +33,7 @@ The following list of dependencies are required to use the `Dropdown Tree` compo
 
 To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+> **Note:** To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
 To create a new React application, run the following command.
 
@@ -55,7 +55,7 @@ cd my-app
 npm run dev
 ```
 
-## Adding syncfusion<sup style="font-size:70%">&reg;</sup> packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
 All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. You can choose the component that you want to install.
 

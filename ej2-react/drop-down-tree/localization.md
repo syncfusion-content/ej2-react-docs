@@ -1,20 +1,22 @@
 ---
 layout: post
-title: Localization in React Drop down tree component | Syncfusion
+title: Localization in React Dropdown Tree component | Syncfusion
 description: Learn here all about Localization in Syncfusion React Drop down tree component of Syncfusion Essential JS 2 and more.
-control: Localization 
+control: Dropdown Tree
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in React Drop down tree component
+# Localization in React Dropdown Tree component
 
-The [`Localization`](../../base/localization.html) library allows you to localize default text content of the Dropdown Tree and it can be localized to any culture by defining the texts and messages of the Dropdown Tree in the corresponding culture. The default locale of the Dropdown Tree is `en` (English). The following table represents the default texts and messages of the Dropdown Tree in `en` culture.
+The Dropdown Tree component supports comprehensive localization to adapt text, messages, and user interface elements for different cultures and languages. This enables seamless integration into multi-language applications by customizing all user-facing strings according to specific cultural requirements. The component's default locale is `en` (English), providing a foundation that can be extended to support any target culture through resource configuration and locale property settings.
 
-|KEY|Text/Message|
-|----|----|
-|noRecordsTemplate|No records found|
-|actionFailureTemplate|Request failed|
-|overflowCountTemplate|+${count} more..|
-|totalCountTemplate|${count} selected|
+The following table represents the default localization keys and their corresponding text messages for the Dropdown Tree in `en` culture. These keys serve as templates that display dynamic content and can be customized for any target locale:
+
+|KEY|Text/Message|Usage Context|
+|----|----|----|
+|noRecordsTemplate|No records found|Displayed when no data matches the current filter or when the data source is empty|
+|actionFailureTemplate|Request failed|Shown when data loading operations encounter errors or network failures|
+|overflowCountTemplate|+${count} more..|Appears when multiple items are selected and the display area shows a summary count of additional selections|
+|totalCountTemplate|${count} selected|Displays the total number of currently selected items in multi-selection scenarios|

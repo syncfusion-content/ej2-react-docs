@@ -2,7 +2,7 @@
 layout: post
 title: Render with separator in React Context menu component | Syncfusion
 description: Learn here all about Render with separator in Syncfusion React Context menu component of Syncfusion Essential JS 2 and more.
-control: Render with separator 
+control: Context Menu  
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##

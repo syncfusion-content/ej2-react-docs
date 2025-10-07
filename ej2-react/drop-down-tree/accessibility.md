@@ -2,7 +2,7 @@
 layout: post
 title: Accessibility in React Dropdown Tree component | Syncfusion
 description: Learn here all about Accessibility in Syncfusion React Dropdown Tree component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+control: Dropdown Tree
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -40,7 +40,7 @@ The accessibility compliance for the Dropdown Tree component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Dropdown Tree component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/) patterns to meet the accessibility. The following ARIA attributes are used in the Dropdown Tree component:
+The Dropdown Tree component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/) patterns to meet accessibility requirements. The following ARIA attributes are used in the Dropdown Tree component:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -65,7 +65,7 @@ The Dropdown Tree component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/a
 
 ## Keyboard interaction
 
-The Dropdown Tree component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Dropdown Tree component.
+The Dropdown Tree component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboardinteraction) guidelines, making it accessible for users who rely on assistive technologies and keyboard navigation. The following keyboard shortcuts are supported by the Dropdown Tree component.
 
 | Interaction Keys | Description |
 |------|---------|
@@ -83,9 +83,9 @@ The Dropdown Tree component follows the [keyboard interaction](https://www.w3.or
 
 ## Ensuring accessibility
 
-The Dropdown Tree component's accessibility levels are verified using [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The accessibility compliance of the Dropdown Tree component is verified using [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Dropdown Tree component is demonstrated in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/drop-down-tree.html) in a new window to evaluate the accessibility of the Dropdown Tree component using accessibility tools.
+The accessibility compliance of the Dropdown Tree component is demonstrated in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/drop-down-tree.html) in a new window to evaluate the accessibility of the Dropdown Tree component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/drop-down-tree.html" %}
 
