@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Handling validation in ##Platform_Name## Smart Paste Button component | Syncfusion
+title: Handling validation in React Smart Paste Button component | Syncfusion
 description: Learn here all about Handling validation in Syncfusion ##Platform_Name## Smart Paste Button component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Handling validation
