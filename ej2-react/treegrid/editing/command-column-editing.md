@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Command column editing in React Treegrid component | Syncfusion
-description: Learn here all about Command column editing in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Command column editing in React TreeGrid component | Syncfusion
+description: Learn here all about Command column editing in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Command column editing 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Command column editing in React Treegrid component
+# Command column editing in React TreeGrid 
 
-The command column provides an option to add CRUD action buttons in a column. This can be defined by the [`column.commands`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#commands) property.
+The command column adds CRUD action buttons within a column. Configure command buttons using the [column.commands](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#commands) property.
 
 The available built-in command buttons are:
 
 | Command Button | Actions |
 |----------------|---------|
-| Edit | Edit the current row.|
-| Delete | Delete the current row.|
-| Save | Update the edited row.|
-| Cancel | Cancel the edited state. |
+| Edit | Edits the current row. |
+| Delete | Deletes the current row. |
+| Save | Saves updates to the edited row. |
+| Cancel | Cancels the edit state. |
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -34,7 +34,7 @@ The available built-in command buttons are:
 
 ## Custom command
 
- The custom command buttons can be added in a column by using the [`column.commands`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#commands) property and the action for the custom buttons can be defined in the [`buttonOption.click`](https://ej2.syncfusion.com/react/documentation/api/grid/commandButtonOptions/#click) event.
+Custom command buttons can be added using the [column.commands](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#commands) property. Define the action for custom buttons in the [buttonOption.click](https://ej2.syncfusion.com/react/documentation/api/grid/commandButtonOptions/#click) event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

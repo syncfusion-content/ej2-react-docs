@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Show spinner while exporting in React Treegrid component | Syncfusion
-description: Learn here all about Show spinner while exporting in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Show spinner while exporting in React TreeGrid | Syncfusion
+description: Learn here all about Show spinner while exporting in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Show spinner while exporting 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show spinner while exporting in React Treegrid component
+# Show spinner while exporting in React TreeGrid
 
-You can show/ hide spinner component while exporting the treegrid using [`showSpinner`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#showspinner)/ [`hideSpinner`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#hidespinner) methods. You can use  [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbarclick) event to show spinner before exporting and hide a spinner in the [`pdfExportComplete`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#pdfexportcomplete) or [`excelExportComplete`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#excelexportcomplete) event after the exporting.
+Show or hide the spinner during export operations by using the [showSpinner](https://ej2.syncfusion.com/react/documentation/api/treegrid/#showspinner) and [hideSpinner](https://ej2.syncfusion.com/react/documentation/api/treegrid/#hidespinner) methods. Display the spinner in the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbarclick) event before exporting, and hide it in the [pdfExportComplete](https://ej2.syncfusion.com/react/documentation/api/treegrid/#pdfexportcomplete) or [excelExportComplete](https://ej2.syncfusion.com/react/documentation/api/treegrid/#excelexportcomplete) event after exporting.
 
-In the [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbarclick) event, based on the parameter **args.item.text** as **PDF Export** or **Excel Export** we can call the [`showSpinner`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#showspinner) method from grid instance.
+In the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbarclick) event, when **args.item.text** is **PDF Export** or **Excel Export**, call [showSpinner](https://ej2.syncfusion.com/react/documentation/api/treegrid/#showspinner) from the TreeGrid instance.
 
-In the [`pdfExportComplete`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#pdfexportcomplete) or [`excelExportComplete`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#excelexportcomplete) event, We can call the [`hideSpinner`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#hidespinner) method.
+In the [pdfExportComplete](https://ej2.syncfusion.com/react/documentation/api/treegrid/#pdfexportcomplete) or [excelExportComplete](https://ej2.syncfusion.com/react/documentation/api/treegrid/#excelexportcomplete) event, call [hideSpinner](https://ej2.syncfusion.com/react/documentation/api/treegrid/#hidespinner).
 
-In the below demo, we have rendered the default spinner component when exporting the treegrid.
+The following demo renders the default spinner during TreeGrid export.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -35,4 +35,4 @@ In the below demo, we have rendered the default spinner component when exporting
 
  {% previewsample "page.domainurl/code-snippet/treegrid/refresh-cs11" %}
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> Refer to the [React TreeGrid](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for highlights. Explore the [React Tree Grid example](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to learn how to present and manipulate data.

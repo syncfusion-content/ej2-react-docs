@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Row selection in React Treegrid component | Syncfusion
-description: Learn here all about Row selection in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Row selection in React TreeGrid component | Syncfusion
+description: Learn here all about Row selection in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Row selection 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row selection in React Treegrid component
+# Row selection in React TreeGrid
 
 ## Select row at initial rendering
 
-To select a row at initial rendering, set the [`selectedRowIndex`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#selectedrowindex) value.
+Select a row during initial render by setting the [selectedRowIndex](https://ej2.syncfusion.com/react/documentation/api/treegrid/#selectedrowindex) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -23,11 +23,11 @@ To select a row at initial rendering, set the [`selectedRowIndex`](https://ej2.s
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/treegrid/selection-cs4" %}
+{% previewsample "page.domainurl/code-snippet/treegrid/selection-cs4" %}
 
 ## Get selected row indexes
 
-You can get the selected row indexes by using the [`getSelectedRowIndexes`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#getselectedrowindexes) method.
+Retrieve the selected row indexes using the [getSelectedRowIndexes](https://ej2.syncfusion.com/react/documentation/api/treegrid/#getselectedrowindexes) method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -38,13 +38,13 @@ You can get the selected row indexes by using the [`getSelectedRowIndexes`](http
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/treegrid/selection-cs5" %}
+{% previewsample "page.domainurl/code-snippet/treegrid/selection-cs5" %}
 
 ## Multiple selection based on condition
 
-You can select multiple treegrid rows based on condition by using the [`selectRows`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#selectrows) method.
+Select multiple TreeGrid rows based on a condition using the [selectRows](https://ej2.syncfusion.com/react/documentation/api/treegrid/#selectrows) method.
 
-In the following code, the rows which contains *taskID* value as *3* and *5* are selected at initial rendering.
+In the following example, rows with a *taskID* value of *3* and *5* are selected during initial render.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -55,11 +55,11 @@ In the following code, the rows which contains *taskID* value as *3* and *5* are
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/treegrid/selection-cs6" %}
+{% previewsample "page.domainurl/code-snippet/treegrid/selection-cs6" %}
 
 ## Toggle selection
 
-The Toggle selection allows to perform selection and unselection of the particular row or cell. To enable toggle selection, set [`enableToggle`](https://ej2.syncfusion.com/react/documentation/api/treegrid/selectionSettings/#enable toggle) property of the selectionSettings as true. If you click on the selected row or cell then it will be unselected and vice versa.
+Toggle selection enables selecting and unselecting a specific row or cell. Enable this behavior by setting [selectionSettings.enableToggle](https://ej2.syncfusion.com/react/documentation/api/treegrid/selectionSettings/#enabletoggle) to true. Clicking an already selected row or cell will unselect it, and clicking an unselected target will select it.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -70,6 +70,6 @@ The Toggle selection allows to perform selection and unselection of the particul
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/treegrid/selection-cs7" %}
+{% previewsample "page.domainurl/code-snippet/treegrid/selection-cs7" %}
 
->If multi selection is enabled, then first click on any selected row (without pressing Ctrl key), it will clear the multi selection and in second click on the same row, it will be unselected.
+> When multiple selection is enabled, clicking any selected row (without holding Ctrl key) clears the current selection. Clicking the same row again toggles its selection state off.

@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Filtering in React Treegrid component | Syncfusion
-description: Learn here all about Filtering in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Filtering in React TreeGrid component | Syncfusion
+description: Learn here all about Filtering in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Filtering 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering in React Treegrid component
+# Filtering in React TreeGrid
 
-Filtering allows you to view specific or related records based on filter criteria. To enable filtering in the TreeGrid, set the [`allowFiltering`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowfiltering) to true. Filtering options can be configured through [`filterSettings`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#filtersettings).
+Filtering displays only records that match specified criteria. Enable filtering by setting [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowfiltering) to true. Configure behavior using [filterSettings](https://ej2.syncfusion.com/react/documentation/api/treegrid/#filtersettings).
 
-To use filter, inject the **Filter** module in the treegrid.
+To use filtering, inject the **Filter**  module in the TreeGrid.
 
-To get start quickly with filtering functionalities, you can check on this video:
+The following video provides a quick overview of filtering:
 {% youtube "https://www.youtube.com/watch?v=_kxndJOgtuw" %}
 
 {% tabs %}
@@ -28,21 +28,17 @@ To get start quickly with filtering functionalities, you can check on this video
 
  {% previewsample "page.domainurl/code-snippet/treegrid/filtering-cs8" %}
 
-> * You can apply and clear filtering by using [`filterByColumn`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#filterbycolumn) and [`clearFiltering`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#clearfiltering) methods.
-> * To disable filtering for a particular column, set [`columns.allowFiltering`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#allowfiltering) to *false*.
+> * Apply and clear filtering programmatically using [filterByColumn](https://ej2.syncfusion.com/react/documentation/api/treegrid/#filterbycolumn) and [clearFiltering](https://ej2.syncfusion.com/react/documentation/api/treegrid/#clearfiltering).
+> * To disable filtering for a specific column, set [columns.allowFiltering](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#allowfiltering) to **false**.
 
 ## Filter hierarchy modes
 
-TreeGrid provides support for a set of filtering modes with [`filterSettings.filterHierarchyMode`](https://ej2.syncfusion.com/react/documentation/api/treegrid/filterSettingsModel/#hierarchymode) property.
-The below are the type of filter mode available in TreeGrid.
+TreeGrid provides support for a set of filtering modes with [filterSettings.filterHierarchyMode](https://ej2.syncfusion.com/react/documentation/api/treegrid/filterSettingsModel/#hierarchymode) property. The available modes are:
 
-* **Parent** : This is the default filter hierarchy mode in TreeGrid. The filtered records are displayed with its parent records, if the filtered records not have any parent record then the filtered records only displayed.
-
-* **Child** : The filtered records are displayed with its child record, if the filtered records not have any child record then the filtered records only displayed.
-
-* **Both** : The filtered records are displayed with its both parent and child record, if the filtered records not have any parent and child record then the filtered records only displayed.
-
-* **None** : The filtered records are only displayed.
+* **Parent** (default): Displays matching records along with their parent records. If a match has no parent, only the matching record is shown.
+* **Child** : Displays matching records along with their child records. If a match has no children, only the matching record is shown.
+* **Both** : Displays matching records with both parent and child records. If no related parent or child exists, only the matching record is shown.
+* **None** : Displays only the records that match the filter.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -57,7 +53,7 @@ The below are the type of filter mode available in TreeGrid.
 
 ## Initial filter
 
-To apply the filter at initial rendering, set the filter *predicate* object in [`filterSettings.columns`](https://ej2.syncfusion.com/react/documentation/api/treegrid/filterSettingsModel/#columns).
+Apply filters on initial render by specifying **predicate** objects in [filterSettings.columns](https://ej2.syncfusion.com/react/documentation/api/treegrid/filterSettingsModel/#columns).
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -72,29 +68,27 @@ To apply the filter at initial rendering, set the filter *predicate* object in [
 
 ## Filter operators
 
-The filter operator for a column can be defined in the [`operator`](https://ej2.syncfusion.com/react/documentation/api/grid/predicate/#operator) property of [`filterSettings.columns`](https://ej2.syncfusion.com/react/documentation/api/treegrid/filterSettings/#columns).
+Define the operator for each filtered column using the [operator](https://ej2.syncfusion.com/react/documentation/api/grid/predicate/#operator) property in [filterSettings.columns](https://ej2.syncfusion.com/react/documentation/api/treegrid/filterSettings/#columns).
 
-The available operators and its supported data types are:
-
-Operator |Description |Supported Types
+Operator | Description | Supported types
 -----|-----|-----
-startswith |Checks whether the value begins with the specified value. |String
-endswith |Checks whether the value ends with the specified value. |String
-contains |Checks whether the value contains the specified value. |String
-equal |Checks whether the value is equal to the specified value. |String &#124; Number &#124; Boolean &#124; Date
-notequal |Checks for values not equal to the specified value. |String &#124; Number &#124; Boolean &#124; Date
-greaterthan |Checks whether the value is greater than the specified value. |Number &#124; Date
-greaterthanorequal|Checks whether a value is greater than or equal to the specified value. |Number &#124; Date
-lessthan |Checks whether the value is less than the specified value. |Number &#124; Date
-lessthanorequal |Checks whether the value is less than or equal to the specified value. |Number &#124; Date
+startswith | Checks whether the value begins with the specified value. | String
+endswith | Checks whether the value ends with the specified value. | String
+contains | Checks whether the value contains the specified value. | String
+equal | Checks whether the value is equal to the specified value. | String | Number | Boolean | Date
+notequal | Checks for values not equal to the specified value. | String | Number | Boolean | Date
+greaterthan | Checks whether the value is greater than the specified value. | Number | Date
+greaterthanorequal | Checks whether a value is greater than or equal to the specified value. | Number | Date
+lessthan | Checks whether the value is less than the specified value. | Number | Date
+lessthanorequal | Checks whether the value is less than or equal to the specified value. | Number | Date
 
 > By default, the **filterSettings.columns.operator** value is *equal*.
 
 ## Diacritics
 
-By default, treegrid ignores diacritic characters while filtering. To include diacritic characters, set the [`filterSettings.ignoreAccent`](https://ej2.syncfusion.com/react/documentation/api/treegrid/filterSettingsModel/#ignoreaccent) as **true**.
+By default, the TreeGrid ignores diacritic characters during filtering. To include diacritic characters, set [filterSettings.ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/treegrid/filterSettingsModel/#ignoreaccent) to true.
 
-In the following sample, type **aero** in *Name* column to filter diacritic characters.
+In the following example, type **aero** in the Name column to match diacritic characters.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -107,4 +101,4 @@ In the following sample, type **aero** in *Name* column to filter diacritic char
 
  {% previewsample "page.domainurl/code-snippet/treegrid/filtering-cs11" %}
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> Refer to the [React TreeGrid](https://www.syncfusion.com/react-components/react-tree-grid) feature tour for key capabilities. Explore the [React TreeGrid example](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to learn how to present and manipulate data.

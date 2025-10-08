@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Loading animation in React Treegrid component | Syncfusion
-description: Learn here all about Loading animation in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
-control: Loading animation 
+title: Loading animation in React TreeGrid | Syncfusion
+description: Learn here all about Loading animation in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+control: Loading animation
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Loading animation in React Treegrid component
+# Loading animation in React TreeGrid
 
-The Tree Grid displays a loading indicator while the data is being fetched and bound to the tree grid during initial rendering, refreshing, and after performing any tree grid actions like sorting, filtering, and more.
+TreeGrid displays a loading indicator while data is fetched and bound during initial rendering, refresh operations, and after actions such as sorting or filtering.
 
-The tree grid supports two indicator types, which can be enabled by setting the `loadingIndicator.indicatorType` property to Spinner or Shimmer. The default value of the indicator type is Spinner.
+Two indicator types are supported and configured with the `loadingIndicator.indicatorType` property: `Spinner` or `Shimmer`. The default is `Spinner`.
 
-In the following sample, the Shimmer indicator is displayed while the tree grid is loading and refreshing when using the remote data.
+In the following sample, the `Shimmer` indicator is shown while the TreeGrid loads and refreshes with remote data.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -24,5 +24,4 @@ In the following sample, the Shimmer indicator is displayed while the tree grid 
 {% include code-snippet/treegrid/indicator-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/treegrid/indicator-cs1" %}
+{% previewsample "page.domainurl/code-snippet/treegrid/indicator-cs1" %}

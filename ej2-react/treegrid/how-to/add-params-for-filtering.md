@@ -1,17 +1,18 @@
 ---
 layout: post
-title: Add params for filtering in React Treegrid component | Syncfusion
-description: Learn here all about Add params for filtering in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Add params for filtering in React TreeGrid | Syncfusion
+description: Learn here all about Add params for filtering in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Add params for filtering 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add params for filtering in React Treegrid component
+# Add params for filtering in React TreeGrid
 
-You can customize the default settings of the components which are used in Menu filter by using params of filter property in column definition.
-In the below sample, TaskID and Duration Columns are numeric columns, while open the filter dialog then you can see that NumericTextBox with spin button is displayed to change/set the filter value. Now using the params option we hide the spin button in NumericTextBox for TaskID Column.
+Customize the default settings of the components used in the Menu filter by configuring the `params` of the column’s `filter` property.  
+
+In the following example, TaskID and Duration are numeric columns. When the filter dialog opens, a NumericTextBox displays with a spin button to adjust the filter value. Using the `params` option, the spin button is hidden in the NumericTextBox for the TaskID column.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -30,4 +31,4 @@ In the below sample, TaskID and Duration Columns are numeric columns, while open
 
  {% previewsample "page.domainurl/code-snippet/treegrid/refresh-cs1" %}
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> Refer to the [React TreeGrid](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for highlights. Explore the [React TreeGrid example](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to learn how to present and manipulate data.

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Dialog editing in React Treegrid component | Syncfusion
-description: Learn here all about Dialog editing in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Dialog editing in React TreeGrid component | Syncfusion
+description: Learn here all about Dialog editing in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Dialog editing 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dialog editing in React Treegrid component
+# Dialog editing in React TreeGrid
 
-In Dialog edit mode, when you start editing the currently selected row, data will be shown on a dialog. You can change the cell values and save edited data to the data source. To enable Dialog edit, set the [`editSettings.mode`](https://ej2.syncfusion.com/react/documentation/api/treegrid/editSettingsModel/#mode) as **Dialog**.
+In dialog edit mode, starting an edit on the selected row displays the row data in a dialog. Modify the values and save the changes to the data source. Enable dialog edit by setting [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/treegrid/editSettingsModel/#mode) to **Dialog**.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -25,11 +25,9 @@ In Dialog edit mode, when you start editing the currently selected row, data wil
 
 ## Customize edit dialog
 
-The edit dialog in the TreeGrid allows you to customize its appearance and behavior based on the type of action being performed, such as editing or adding a record.
+The edit dialog can be customized based on the action type (editing or adding). Handle the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/treegrid/#actioncomplete) event and apply changes according to the `requestType` value (for example, **beginEdit** for editing a record or **add** for adding a new record).
 
-To customize the edit dialog, you need to handle the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/treegrid/#actioncomplete) event of the TreeGrid and perform the necessary modifications based on the **requestType** parameter. The **requestType** parameter identifies the type of action being performed, such as **beginEdit** for editing a record or **add** for adding a new record.
-
-The following example that demonstrates how to customize the edit dialog using the `actionComplete` event:
+The following example demonstrates customizing the edit dialog using the `actionComplete` event:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -50,11 +48,12 @@ The following example that demonstrates how to customize the edit dialog using t
 
 ## Use wizard like dialog editing
 
-Wizard-like dialog editing is a powerful feature in the TreeGrid that enables the creation of intuitive step-by-step forms. This feature provides a structured approach to form completion or data entry by breaking down the process into manageable steps.This feature is particularly useful when you have complex forms that need to be broken down into smaller sections to guide you through the data entry process.
+Wizard-like dialog editing in TreeGrid enables the creation of structured, step-by-step forms for streamlined data entry. This approach simplifies complex form workflows by dividing them into manageable sections, allowing for progressive completion of each part.
 
-To achieve wizard-like dialog editing in the TreeGrid, you can use the dialog template feature. This feature allows you to define your own custom editing template using the [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/treegrid/editSettings/#mode) property set to **Dialog** and the [editSetting.template](https://ej2.syncfusion.com/react/documentation/api/treegrid/editSettings/#template) property to specify the template variable that defines the editors for each step of the wizard.
+To implement wizard-style editing, configure the TreeGrid with the [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/treegrid/editSettings/#mode) property set to **Dialog**, and define a custom template using the `editSettings.template` property. This template can include multiple steps, each representing a distinct section of the form, and can be enhanced with unobtrusive validation to ensure data accuracy throughout the process.
 
-The following example demonstrate the wizard like editing in the TreeGrid with the unobtrusive validation.
+
+The following example demonstrates wizard-like dialog editing with unobtrusive validation:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -73,11 +72,11 @@ The following example demonstrate the wizard like editing in the TreeGrid with t
 
  {% previewsample "page.domainurl/code-snippet/treegrid/wizardediting-cs1" %}
 
-## Using tab inside the dialog editing
+## Using Tab inside the dialog editing
 
-You can use [tab](../../tab/getting-started) component inside dialog edit UI using dialog template feature. The dialog template feature can be enabled by defining [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/treegrid/editSettings/#mode) as **Dialog** and [editSetting.template](https://ej2.syncfusion.com/react/documentation/api/treegrid/editSettings/#template) as a react component.
+The [Tab](../../tab/getting-started) component can be used inside the dialog edit UI via the dialog template feature. Enable the feature by setting [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/treegrid/editSettings/#mode) to **Dialog** and [editSettings.template](https://ej2.syncfusion.com/react/documentation/api/treegrid/editSettings/#template) to a react component.
 
-The following example demonstrate the usage of tab control inside the dialog template.
+The following example demonstrates using Tab inside the dialog template:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

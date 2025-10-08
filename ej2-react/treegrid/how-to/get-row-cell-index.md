@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Get row cell index in React Treegrid component | Syncfusion
-description: Learn here all about Get row cell index in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Get row cell index in React TreeGrid | Syncfusion
+description: Learn here all about Get row cell index in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Get row cell index 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get row cell index in React Treegrid component
+# Get row cell index in React TreeGrid
 
-You can get the specific row and cell index of the treegrid by using [`rowSelected`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowselected) event of the treegrid. Here, we can get the row and cell index by using *aria-rowindex* (get row Index from *tr* element) and *aria-colindex* (column index from *td* element) attribute.
+Obtain the specific row and cell index in the TreeGrid by using the [rowSelected](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowselected) event. Retrieve the row index from the *aria-rowindex* attribute of the table row (tr) element and the column index from the **aria-colindex** attribute of the table cell (td) element.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -29,4 +29,4 @@ You can get the specific row and cell index of the treegrid by using [`rowSelect
 
  {% previewsample "page.domainurl/code-snippet/treegrid/refresh-cs6" %}
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> Refer to the [React TreeGrid](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for highlights. Explore the [React TreeGrid example](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to learn how to present and manipulate data.

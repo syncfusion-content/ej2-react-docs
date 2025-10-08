@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Cascading drop down list with treegrid editing in React Treegrid component | Syncfusion
-description: Learn here all about Cascading drop down list with treegrid editing in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
-control: Cascading drop down list with treegrid editing 
+title: Cascading Dropdowns with TreeGrid in React | Syncfusion
+description: Learn here all about Cascading drop down list with TreeGrid editing in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+control: Cascading drop down list with TreeGrid editing 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Cascading drop down list with treegrid editing in React Treegrid component
+# Cascading drop down list with TreeGrid editing in React TreeGrid
 
-You can achieve the Cascading DropDownList with treegrid Editing by using the Cell Edit Template feature.
+Implement a cascading DropDownList in TreeGrid editing using the cell edit template feature.
 
-In the below demo, Cascading DropDownList rendered for **Priority** and **Duration** column.
+In the following example, cascading DropDownList editors are rendered for the **Priority** and **Duration** columns.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -31,4 +31,4 @@ In the below demo, Cascading DropDownList rendered for **Priority** and **Durati
 
  {% previewsample "page.domainurl/code-snippet/treegrid/cascade-drop-cs1" %}
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> Refer to the [React TreeGrid](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for highlights. Explore the [React TreeGrid example](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to learn how to present and manipulate data.

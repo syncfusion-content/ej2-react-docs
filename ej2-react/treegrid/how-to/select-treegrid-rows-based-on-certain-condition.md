@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Select treegrid rows based on certain condition in React Treegrid component | Syncfusion
-description: Learn here all about Select treegrid rows based on certain condition in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
-control: Select treegrid rows based on certain condition 
+title: Condition-Based Row Selection in React TreeGrid | Syncfusion
+description: Learn here all about Select TreeGrid rows based on certain condition in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+control: Select TreeGrid rows based on certain condition 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Select treegrid rows based on certain condition in React Treegrid component
+# Select TreeGrid rows based on certain condition in React TreeGrid
 
-You can select the specific row in the treegrid based on a certain condition by using the [`selectRows`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#selectrows) method in the [`dataBound`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#databound) event of TreeGrid.
+Select specific rows in the TreeGrid based on a condition by using the [selectRows](https://ej2.syncfusion.com/react/documentation/api/treegrid/#selectrows) method within the [dataBound](https://ej2.syncfusion.com/react/documentation/api/treegrid/#databound) event.
 
-In the below demo, we have selected the grid rows only when *Duration* column value greater than *4*.
+In the following demo, rows are selected when the value in the **Duration** column is greater than 4.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -31,4 +31,4 @@ In the below demo, we have selected the grid rows only when *Duration* column va
 
  {% previewsample "page.domainurl/code-snippet/treegrid/refresh-cs10" %}
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> Refer to the [React TreeGrid](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for highlights. Explore the [React Tree Grid example](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to learn how to present and manipulate data.

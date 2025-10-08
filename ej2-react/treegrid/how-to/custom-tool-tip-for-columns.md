@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Custom tool tip for columns in React Treegrid component | Syncfusion
-description: Learn here all about Custom tool tip for columns in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Custom tool tip for columns in React TreeGrid | Syncfusion
+description: Learn here all about Custom tool tip for columns in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Custom tool tip for columns 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom tool tip for columns in React Treegrid component
+# Custom tool tip for columns in React TreeGrid
 
-You can achieve the custom tooltip([`EJ2 Tooltip`](https://ej2.syncfusion.com/react/documentation/tooltip/getting-started)) for TreeGrid by using the [`queryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#querycellinfo) event.
+Implement a custom tooltip [EJ2 Tooltip](https://ej2.syncfusion.com/react/documentation/tooltip/getting-started) for the TreeGrid using the [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/treegrid/#querycellinfo) event.
 
-Render the ToolTip component for the treegrid cells by using the following code in the [`queryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#querycellinfo) event.
+Render the Tooltip component for TreeGrid cells by using the following code in the [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/treegrid/#querycellinfo) event.
 
 ```ts
 
@@ -42,4 +42,4 @@ Render the ToolTip component for the treegrid cells by using the following code 
 
  {% previewsample "page.domainurl/code-snippet/treegrid/custom-tooltip-cs1" %}
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> Refer to the [React TreeGrid](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for highlights. Explore the [React TreeGrid example](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to learn how to present and manipulate data.

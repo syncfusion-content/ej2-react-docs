@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Handling validation in React Smart Paste Button component | Syncfusion
+title: Handling validation in ##Platform_Name## Smart Paste Button component | Syncfusion
 description: Learn here all about Handling validation in Syncfusion ##Platform_Name## Smart Paste Button component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Handling validation
@@ -96,7 +96,10 @@ function SmartPasteValidation() {
     return (
         <>
             <div id="bug-form">
-            <form id="ai-bug-form" className="form-container container bug-form-container" style={{ maxWidth: "900px", lineHeight: "35px", backgroundColor: "#f3f4f6" }}>
+                <form id="ai-bug-form" className="form-container container bug-form-container" style={{
+                    maxWidth: "900px",
+                    lineHeight: "35px", backgroundColor: "#f3f4f6"
+                }}>
                     <div className="single-row-group">
                         <label htmlFor="bug-name" className="e-form-label">Bug Name</label>
                         <TextBoxComponent id="bug-name" placeholder="What's the bug ?" floatLabelType="Never" />
@@ -179,7 +182,7 @@ function SmartPasteValidation() {
     )
 }
 
-export default SmartPasteValidation;
+export default SmartPasteValidation
 
 {% endhighlight %}
 {% highlight ts tabtitle="ai-models.ts" %}

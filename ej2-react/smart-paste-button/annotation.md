@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Annotations in React Smart Paste Button component | Syncfusion
+title: Annotations in ##Platform_Name## Smart Paste Button component | Syncfusion
 description: Learn here all about Annotations in Syncfusion ##Platform_Name## Smart Paste Button component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Annotations 
@@ -86,9 +86,11 @@ function SmartPaste() {
 
     return (
         <>
-            {% raw %}
             <div id="bug-form">
-                <form className="form-container container bug-form-container" style={{ maxWidth: "900px", lineHeight: "35px", backgroundColor: "#f3f4f6" }}>
+                <form className="form-container container bug-form-container" style={{
+                    maxWidth: "900px",
+                    lineHeight: "35px", backgroundColor: "#f3f4f6"
+                }}>
                     <div className="single-row-group">
                         <label htmlFor="bug-name" className="e-form-label">Bug Name</label>
                         <TextBoxComponent id="bug-name" placeholder="What's the bug ?" floatLabelType="Never" />
@@ -172,7 +174,6 @@ function SmartPaste() {
                     </div>
                 </div>
             </div>
-            {% endraw %}
         </>
     );
 }

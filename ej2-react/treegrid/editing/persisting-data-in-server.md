@@ -1,28 +1,28 @@
 ---
 layout: post
-title: Persisting data in server in React Treegrid component | Syncfusion
-description: Learn here all about Persisting data in server in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Persisting data in server in React TreeGrid component | Syncfusion
+description: Learn here all about Persisting data in server in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Persisting data in server 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Persisting data in server in React Treegrid component
+# Persisting data in server in React TreeGrid
 
-Edited data can be persisted in the database using the RESTful web services.
+Edited data can be persisted to a database using RESTful web services.
 
-All the CRUD operations in the treegrid are done through [`DataManager`](../../data). The `DataManager` has an option to bind all the CRUD related data in server-side.
+All CRUD operations in the TreeGrid are performed through the [DataManager](../../data). The `DataManager` can bind CRUD requests to server-side endpoints.
 
-> For your information, the ODataAdaptor persists data in the server as per OData protocol.
+> The ODataAdaptor persists data on the server according to the OData protocol.
 
-In the following section, we have explained how to perform CRUD operation in server-side using the [`UrlAdaptor`](../../../data/adaptors.html#url-adaptor) and `RemoteSave Adaptor`.
+The following sections explain how to perform server-side CRUD using the [UrlAdaptor](../../../data/adaptors.html#url-adaptor) and the `RemoteSaveAdaptor`.
 
 ## URL adaptor
 
-You can use the [`UrlAdaptor`](../../../data/adaptors.html#url-adaptor) of `DataManager` when binding data source from remote data. In the initial load of treegrid, data are fetched from remote data and bound to the treegrid using `url` property of `DataManager`.You can map The CRUD operation in treegrid can be mapped to server-side Controller actions using the properties `insertUrl`, `removeUrl`, `updateUrl` and `batchUrl`.
+Use the [UrlAdaptor](../../../data/adaptors.html#url-adaptor) when binding a data source from a remote service. On initial load, data is fetched from the remote endpoint specified in the `url` property of `DataManager` and bound to the TreeGrid. Map CRUD operations to server-side controller actions using `insertUrl`, `removeUrl`, `updateUrl`, and `batchUrl`.
 
-The following code example describes the above behavior.
+The following example demonstrates this behavior.
 
 ```ts
 
@@ -64,9 +64,9 @@ export default App;
 
 ```
 
-Also, when using the `UrlAdaptor`, you need to return the data as JSON from the controller action and the JSON object must contain a property as `result` with dataSource as its value and one more property `count` with the dataSource total records count as its value.
+When using the `UrlAdaptor`, return JSON from controller actions. the JSON object must contain a property as `result` with dataSource as its value and one more property `count` with the dataSource total records count as its value.
 
-The following code example describes the above behavior.
+The following example illustrates the expected response pattern.
 
 ```ts
 
@@ -94,9 +94,9 @@ public ActionResult DataSource(DataManager dm)
 
 ## Insert record
 
-Using the `insertUrl` property, you can specify the controller action mapping URL to perform insert operation on the server-side.
+Specify the controller action URL for insert operations on the server-side using `insertUrl`.
 
-The following code example describes the above behavior and also we have inserted new record based on the newRowPosition TreeGrid editSettings as "Below".
+The following example inserts a new record based on `newRowPosition` set to "Below".
 
 ```ts
 
@@ -130,15 +130,15 @@ public int FindChildRecords(int id)
 
 ```
 
-The newly added record details are bound to the `value` parameter and `relationalKey` contains primaryKey value of an selected record helps to find out the position of newly added record. Please refer to the following screenshot.
+The newly added record is provided in the `value` parameter. The `relationalKey` parameter contains the primary key of the selected record and is used to determine the insert position.
 
 ![Insert](images/insert.PNG)
 
 ## Update record
 
-Using the `updateUrl` property, the controller action mapping URL can be specified to perform save/update operation on the server-side.
+Specify the controller action URL for save/update operations on the server-side using `updateUrl`.
 
-The following code example describes the previous behavior.
+The following example updates an existing record.
 
 ```ts
 
@@ -155,15 +155,15 @@ public ActionResult Update(TreeGridData value)
 
 ```
 
-The updated record details are bound to the `value` parameter. Please refer to the following screenshot.
+The updated record is provided in the `value` parameter.
 
 ![Update](images/update.PNG)
 
 ## Delete record
 
-Using the `removeUrl` and `batchUrl` property, the controller action mapping URL can be specified to perform delete operation on the server-side.
+Specify controller action URLs for delete operations  on the server-side using `removeUrl` and `batchUrl`.
 
-The following code example describes the previous behavior.
+The following example demonstrates single and batch delete operations.
 
 ```ts
 
@@ -184,21 +184,23 @@ public ActionResult Remove(List<TreeGridData> changed, List<TreeGridData> added,
 
 ```
 
-The deleted record primary key value is bound to the `key` parameter. Please refer to the following screenshot.
+For single delete, the primary key is provided in the `key` parameter.
 
 ![Delete](images/remove.PNG)
 
-While delete parent record, the parent and child records is bound to the `deleted` parameter. Please refer to the following screenshot.
+When deleting a parent record, both parent and child records are provided in the `deleted` parameter.
 
 ![Remove](images/delete.PNG)
 
 ## Remote save adaptor
 
-You may need to perform all Tree Grid Actions in client-side except the CRUD operations, that should be interacted with server-side to persist data. It can be achieved in TreeGrid by using **RemoteSaveAdaptor**.
+When all TreeGrid actions should run on the client except CRUD (which must be persisted on the server), use `RemoteSaveAdaptor`.
 
-Datasource must be set to **json** property and set **RemoteSaveAdaptor** to the **adaptor** property. CRUD operations can be mapped to server-side using **updateUrl**, **insertUrl**, **removeUrl** and **batchUrl** properties.
+* Set the initial data to the `json` property
+* Set `adaptor` to `RemoteSaveAdaptor`
+* Map CRUD operations using `updateUrl`, `insertUrl`, `removeUrl`, and `batchUrl`
 
-You can use the following code example to use **RemoteSaveAdaptor** in TreeGrid.
+The following example shows `RemoteSaveAdaptor` configuration.
 
 ```ts
 
@@ -241,7 +243,7 @@ export default App;
 
 ```
 
-The following code example describes the CRUD operations handled at server-side.
+The following example illustrates server-side handlers for CRUD with `RemoteSaveAdaptor`.
 
 ```ts
 

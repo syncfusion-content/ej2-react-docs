@@ -1,30 +1,30 @@
 ---
 layout: post
-title: Pdf export options in React Treegrid component | Syncfusion
-description: Learn here all about Pdf export options in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Pdf export options in React TreeGrid | Syncfusion
+description: Learn here all about Pdf export options in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Pdf export options 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Pdf export options in React Treegrid component
+# PDF export options in React TreeGrid
 
 ## Export selected records
 
-Exporting only the selected records from the Syncfusion React TreeGrid allows generating PDF document that include only the desired data from the TreeGrid. This feature provides the flexibility to export specific records that are relevant to the needs, enabling more focused and targeted PDF exports.
+Exporting only the selected records from the Syncfusion React TreeGrid enables generating a PDF that includes only relevant data. This feature supports focused and targeted exports.
 
-To export only the selected records by utilizing the [exportProperties.dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/) property in the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbarclick) event. 
+Export selected records by setting the [exportProperties.dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/) property in the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbarclick) event.
 
-To export the selected records from the TreeGrid to a PDF file, you can follow these steps:
+To export the selected records from the TreeGrid to a PDF document, follow these steps:
 
 1. Handle the `toolbarClick` event of the TreeGrid.
 
-2. Retrieve the selected records using the [getSelectedRecords](https://ej2.syncfusion.com/react/documentation/api/treegrid/#getselectedrecords) method.
+2. Retrieve selected records using the [getSelectedRecords](https://ej2.syncfusion.com/react/documentation/api/treegrid/#getselectedrecords) method.
 
 3. Assign the selected data to the `exportProperties.dataSource` property.
 
-4. Trigger the export operation using the [pdfExport](https://ej2.syncfusion.com/react/documentation/api/treegrid/#pdfexport) method.
+4. Trigger the export using the [pdfExport](https://ej2.syncfusion.com/react/documentation/api/treegrid/#pdfexport) method.
 
 The following example demonstrates how to export the selected records to a PDF document.
 
@@ -47,7 +47,7 @@ The following example demonstrates how to export the selected records to a PDF d
 
 ## Export hidden columns
 
-PDF export provides an option to export hidden columns of TreeGrid by defining the `includeHiddenColumn` as **true**.
+Export hidden columns by setting `includeHiddenColumn` to **true**.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -62,13 +62,13 @@ PDF export provides an option to export hidden columns of TreeGrid by defining t
 
 ## Show or hide columns on exported PDF
 
-You can show a hidden column or hide a visible column while exporting the treegrid using [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/treegrid#toolbarclick) and [`pdfExportComplete`](https://ej2.syncfusion.com/react/documentation/api/treegrid#pdfExportComplete) events.
+Show a hidden column or hide a visible column during export using the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbarclick) and [pdfExportComplete](https://ej2.syncfusion.com/react/documentation/api/treegrid/#pdfExportComplete) events.
 
-In the [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/treegrid#toolbarclick) event, based on **args.item.text** as **PDF Export**. We can show or hide columns by setting [`column.visible`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#visible) property to **true** or **false** respectively.
+In the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbarclick) event, when **args.item.text** is **PDF Export**, control visibility by setting the [column.visible](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#visible) property to **true** or **false**.
 
-In the pdfExportComplete event, We have reversed the state back to the previous state.
+In the `pdfExportComplete` event, revert the visibility changes to the previous state.
 
-In the below example, we have *Duration* as a hidden column in the treegrid. While exporting, we have changed *Duration* to visible column and *StartDate* as hidden column.
+In the following example, **Duration** is hidden in the TreeGrid. During export, **Duration** is shown and **StartDate** is hidden.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -83,7 +83,7 @@ In the below example, we have *Duration* as a hidden column in the treegrid. Whi
 
 ## How to change page orientation
 
-Page orientation can be changed Landscape(Default Portrait) for the exported document using the `PdfExportProperties`.
+Change page orientation to Landscape (default: Portrait) for the exported document using `PdfExportProperties`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -98,7 +98,7 @@ Page orientation can be changed Landscape(Default Portrait) for the exported doc
 
 ## How to change page size
 
-Page size can be customized for the exported document using the `PdfExportProperties`.
+Customize page size for the exported document using `PdfExportProperties`.
 
 Supported page sizes are:
 
@@ -143,11 +143,11 @@ Supported page sizes are:
 
 ## To customize PDF export
 
-PDF export provides an option to customize mapping of treegrid to exported PDF document.
+PDF export supports customizing the mapping of TreeGrid content to the exported PDF document.
 
 ### File name for exported document
 
-You can assign the file name for the exported document by defining `fileName` property in `PdfExportProperties`
+Assign a file name for the exported document by defining the `fileName` property in `PdfExportProperties`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -162,7 +162,7 @@ You can assign the file name for the exported document by defining `fileName` pr
 
 ### Default fonts for PDF exporting
 
-By default, treegrid uses **Helvetica** font in the exported document. You can change the default font by using `PdfExportProperties.theme` property. The available default fonts are,
+By default, TreeGrid uses the **Helvetica** font in the exported document. Change the default font using the `PdfExportProperties.theme` property. Available default fonts:
 
 * Helvetica
 * TimesRoman
@@ -170,7 +170,7 @@ By default, treegrid uses **Helvetica** font in the exported document. You can c
 * Symbol
 * ZapfDingbats
 
-The code example for changing default font,
+The code example for changing the default font:
 
 ```ts
 
@@ -189,9 +189,9 @@ The code example for changing default font,
 
 ### Add custom font for PDF exporting
 
-You can change the default font of TreeGrid header, content and caption cells in the exported document by using `PdfExportProperties.theme` property.
+Customize fonts for TreeGrid header, content, and caption cells in the exported document using the `PdfExportProperties.theme` property.
 
-In the following example, we have used Advent Pro font to export the treegrid with Hungarian fonts.
+In the following example, the Advent Pro font is applied to export the TreeGrid with Hungarian fonts.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -214,11 +214,11 @@ In the following example, we have used Advent Pro font to export the treegrid wi
 
 ## Conditional cell formatting
 
-When exporting data from the Syncfusion React TreeGrid, you have an option to conditionally format the cells in the exported PDF document. This allows you to customize the appearance of specific cells based on their values or other criteria.
+Conditional cell formatting in the exported PDF enables customizing cell appearance based on values or criteria.
 
-To implement conditional cell formatting, you can utilize the [pdfQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/treegrid/#pdfQueryCellInfo) event of the TreeGrid. Within this event, you can access the cell object using the `args.cell` property and modify its properties, such as the background color, based on your desired conditions.
+Implement conditional formatting using the [pdfQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/treegrid/#pdfQueryCellInfo) event. Within this event, access the cell object using `args.cell` and modify properties, such as background color, based on the required conditions.
 
-The following example demonstrate how to customize the background color of the **Freight** column in the exported PDF document using the **args.cell** and **backgroundColor** properties of the `pdfQueryCellInfo` event.
+The following example demonstrates customizing the background color of the **Freight** column in the exported PDF document using the `pdfQueryCellInfo` event and the `args.cell.backgroundColor` property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -233,9 +233,9 @@ The following example demonstrate how to customize the background color of the *
 
 ## Theme
 
-PDF export provides an option to include theme for exported PDF document.
+PDF export includes support for applying a theme to the exported PDF document.
 
-To apply theme in exported PDF, define the `theme` in `PdfExportProperties`.
+To apply a theme, define `theme` in `PdfExportProperties`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

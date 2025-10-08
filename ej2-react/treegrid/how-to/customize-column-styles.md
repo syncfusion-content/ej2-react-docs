@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Customize column styles in React Treegrid component | Syncfusion
-description: Learn here all about Customize column styles in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Customize column styles in React TreeGrid | Syncfusion
+description: Learn here all about Customize column styles in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Customize column styles 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize column styles in React Treegrid component
+# Customize column styles in React TreeGrid
 
-You can customise the appearance of header and content of the particular column using the [`customAttributes`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#customattributes) property.
+Customize the appearance of a specific column’s header and content using the [customAttributes](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#customattributes) property.
 
-To customize the treegrid column, follow the given steps:
+To customize a TreeGrid column, follow these steps:
 
 **Step 1**:
 
-Create a css class with custom style to override the default style for rowcell and headercell.
+Create a CSS class with custom styles to override the default styles for row cells and header cells.
 
 ```css
 
@@ -38,7 +38,7 @@ Create a css class with custom style to override the default style for rowcell a
 
 **Step 2**:
 
-Add the custom css class to particular column by using [`customAttributes`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#customattributes) property.
+Apply the custom CSS class to the target column using the [customAttributes](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#customattributes) property.
 
 ```ts
 <ColumnDirective field='TaskName' headerText='Task Name' width='100' customAttributes={customAttributes}></ColumnDirective>
@@ -62,4 +62,4 @@ Add the custom css class to particular column by using [`customAttributes`](http
 
  {% previewsample "page.domainurl/code-snippet/treegrid/custom-column-cs1" %}
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> Refer to the [React TreeGrid](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for highlights. Explore the [React TreeGrid example](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to learn how to present and manipulate data.

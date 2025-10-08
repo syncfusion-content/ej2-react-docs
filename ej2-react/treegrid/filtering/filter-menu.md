@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Filter menu in React Treegrid component | Syncfusion
-description: Learn here all about Filter menu in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Filter menu in React TreeGrid component | Syncfusion
+description: Learn here all about Filter menu in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Filter menu 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filter menu in React Treegrid component
+# Filter menu in React TreeGrid
 
-You can enable filter menu by setting the [`filterSettings.type`](https://ej2.syncfusion.com/react/documentation/api/treegrid/filterSettingsModel/#type) as *Menu*. The filter menu UI will be rendered based on its column type, which allows you to filter data. You can filter the records with different operators.
+Enable the filter menu by setting [filterSettings.type](https://ej2.syncfusion.com/react/documentation/api/treegrid/filterSettingsModel/#type) to `Menu`. The menu UI adapts to the column type and provides operator-based filtering.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -23,16 +23,14 @@ You can enable filter menu by setting the [`filterSettings.type`](https://ej2.sy
 
  {% previewsample "page.domainurl/code-snippet/treegrid/filtering-cs6" %}
 
-> * [`allowFiltering`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowfiltering) must be set as true to enable filter menu.
-> * Setting [`columns.allowFiltering`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#allowfiltering) as false will prevent filter menu rendering for a particular column.
+> * [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowfiltering) must be set to true.
+> * Setting [columns.allowFiltering](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#allowfiltering) to false disables the filter menu for that column.
 
 ## Custom component in filter menu
 
-You can customize default filter menu component of a column by custom component using **filterTemplate**.
+Customize a column’s filter menu input using a `filterTemplate`.
 
 The following example demonstrates the way to use filter template for a column when using filter menu. In the following example, the DropdownList component is used to filter **duration** column using **filterTemplate**.
-
-
 
 ```ts
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
@@ -65,12 +63,11 @@ function App() {
 export default App;
 ```
 
-
 ## Enable different filter dialog for a column
 
-You can use both *Menu* and *Excel* filter in a same TreeGrid. To do so, set the [`column.filter.type`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#filter) as *Menu* or *Excel*.
+Both **Menu** and **Excel** filtering can be used in the same TreeGrid. Set [column.filter.type](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#filter) to **Menu** or **Excel** per column.
 
-In the following sample menu filter is enabled by default and excel filter is enabled for the Task Name column using the [`column.filter.type`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#filter).
+In the following sample, Menu filtering is enabled globally, and Excel filtering is applied to the **Task Name** column using [column.filter.type](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#filter).
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

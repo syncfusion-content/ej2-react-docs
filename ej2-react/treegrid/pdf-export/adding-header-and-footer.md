@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Adding header and footer in React Treegrid component | Syncfusion
-description: Learn here all about Adding header and footer in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Adding header and footer in React TreeGrid | Syncfusion
+description: Learn here all about PDF Adding header and footer in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Adding header and footer 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adding header and footer in React Treegrid component
+# Adding header and footer in React TreeGrid
 
-You can customize text, page number, line, page size and changing orientation in header and footer.
+Customize header and footer content such as text, page numbers, lines, page size, and orientation.
 
 ## How to write a text in header or footer
 
-You can add text either in Header or Footer of exported PDF document.
+Add text in the header or footer of the exported PDF document.
 
 ```ts
 
@@ -37,7 +37,7 @@ You can add text either in Header or Footer of exported PDF document.
 
 ## How to draw a line in header or footer
 
-you can add line either in Header or Footer of the exported PDF document.
+Add a line in the header or footer of the exported PDF document.
 
 Supported line styles:
 
@@ -67,7 +67,7 @@ Supported line styles:
 
 ## Add page number in header or footer
 
-you can add page number either in Header or Footer of exported PDF document.
+Add page numbers in the header or footer of the exported PDF document.
 
 Supported page number types:
 
@@ -99,7 +99,7 @@ Supported page number types:
 
 ## Insert an image in header or footer
 
-Image (Base64 string) can be added in the exported document in header/footer using the `PdfExportProperties`.
+An image (Base64 string) can be added to the header or footer of the exported PDF document using `PdfExportProperties`.
 
 ```ts
 
@@ -120,7 +120,7 @@ let exportProperties: PdfExportProperties = {
 
 ```
 
-The below code illustrates the pdf export customization.
+The following example illustrates PDF export customization.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

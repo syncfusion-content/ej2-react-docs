@@ -1,29 +1,29 @@
 ---
 layout: post
-title: Exporting TreeGrid in server in React Tree Grid component | Syncfusion
-description: Learn here all about Exporting tree grid in server in Syncfusion React Tree Grid component of Syncfusion Essential JS 2 and more.
+title: Exporting TreeGrid in server in React TreeGrid | Syncfusion
+description: Learn here all about Exporting TreeGrid in server in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
-control: Exporting tree grid in server 
+control: Exporting TreeGrid in server 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Exporting tree grid in server in React Tree Grid component
+# Exporting TreeGrid in server in React TreeGrid
 
-The Tree Grid have an option to export the data to PDF in server side using tree grid server export library.
+The TreeGrid supports exporting data to PDF on the server side using the TreeGrid server export library.
 
 ## Server dependencies
 
-The Server side export functionality is shipped in the Syncfusion.EJ2.TreeGridExport package, which is available in Essential Studio<sup style="font-size:70%">&reg;</sup> and [nuget.org](https://www.nuget.org/). The following list of dependencies is required for tree grid server side PDF exporting action.
+The server side export functionality is provided in the Syncfusion.EJ2.TreeGridExport package, available in Essential Studio and at [nuget.org](https://www.nuget.org/). The following dependencies are required for server-side PDF export:
 
 * Syncfusion.EJ2
 * Syncfusion.EJ2.TreeGridExport
 
 ## Server configuration
 
-The following code snippet shows server configuration using ASP.NET Core Controller Action.
+The following code snippet shows an ASP.NET Core Controller Action for server configuration.
 
-To Export the tree grid in server side, You need to call the [`serverPdfExport`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#serverpdfexport) method for passing the tree grid properties to server exporting action.
+To export the TreeGrid on the server side, call the [serverPdfExport](https://ej2.syncfusion.com/react/documentation/api/treegrid/#serverpdfexport) method to pass TreeGrid properties to the server export action.
 
 ```ts
 
@@ -87,15 +87,15 @@ function App() {
 export default App;
 
 ```
-## Rotate a header text to a certain degree in the exported tree grid on the server side
+## Rotate a header text to a certain degree in the exported TreeGrid on the server side
 
-The Tree Grid has support to customize the column header styles such as changing text orientation, the font color, and so on in the exported PDF file. To achieve this requirement, define the `BeginCellLayout` event of the `PdfExportProperties` with an event handler to perform the required action.
+The TreeGrid supports customizing column header styles in the exported PDF file, such as text orientation and font color. To implement this, define the `BeginCellLayout` event of `PdfExportProperties` with an event handler to perform the required action.
 
-The `PdfHeaderCellRendering` will be triggered when creating a column header for the pdf document to be exported. Collect the column header details in this event and handle the custom in the BeginCellLayout event handler.
+The `PdfHeaderCellRendering` event is triggered while creating a column header for the PDF document. Capture the header details in this event and apply the customization in the `BeginCellLayout` event handler.
 
-In the following demo, the `DrawString` method from the `Graphics` is used to rotate the header text of the column header inside the `BeginCellLayout` event handler.
+In the following demo, the `DrawString` method from `Graphics` rotates the header text of the column header inside the `BeginCellLayout` event handler.
 
-> A PDF exporting is not supported to rotate the column header on the client side.
+> PDF export does not support rotating the column header on the client side.
 ```ts
 public IActionResult PdfExport(string treeGridModel)
 {
@@ -120,8 +120,8 @@ public void BeginCellEvent(object sender, PdfGridBeginCellLayoutEventArgs args)
     PdfGrid grid = (PdfGrid)sender;
     var brush = new PdfSolidBrush(new PdfColor(Color.DimGray));
     args.Graphics.Save();
-    args.Graphics.TranslateTransform(args.Bounds.X + 50, args.Bounds.Height + 40); // give the value for bounds x and Y by the user
-    args.Graphics.RotateTransform(-60);   // give the rotate degree value by the user
+    args.Graphics.TranslateTransform(args.Bounds.X + 50, args.Bounds.Height + 40); // Give the value for bounds x and Y. 
+    args.Graphics.RotateTransform(-60);   // Give the rotate degree value. 
                                           // Draw the text at particular bounds.
     args.Graphics.DrawString(headerValues[args.CellIndex], new PdfStandardFont(PdfFontFamily.Helvetica, 10), brush, new PointF(0, 0));
     if (args.IsHeaderRow)
@@ -146,11 +146,11 @@ private void PdfHeaderQueryCellInfo(object pdf)
 
 ## Passing additional parameters to the server while exporting
 
-Passing additional parameters to the server when exporting data in the Syncfusion React TreeGrid involves providing flexibility to include extra information or customize the export process based on specific requirements.
+Additional parameters can be passed to the server to customize the export process based on specific requirements.
 
-You can achieve this by utilizing the [query](https://ej2.syncfusion.com/react/documentation/api/treegrid/#query) property and the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbarclick) event. Within the `query` property, you can invoke the [addParams](https://ej2.syncfusion.com/documentation/api/data/query/#addparams) method to add parameters to the request.
+This can be achieved using the [query](https://ej2.syncfusion.com/react/documentation/api/treegrid/#query) property and the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbarclick) event. Within the `query` property, invoke the [addParams](https://ej2.syncfusion.com/documentation/api/data/query/#addparams) method to add parameters to the request.
 
-The following example demonstrates how to pass additional parameters to the server when PDF exporting within the `toolbarClick` event. Within the event, the additional parameters, specifically **recordcount** as **12**, are passed using the `addParams` method and displayed as a message.
+The following example demonstrates passing additional parameters during PDF export within the `toolbarClick` event. In this example, the parameter **recordcount** with value **12** is passed using `addParams` and shown as a message.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
