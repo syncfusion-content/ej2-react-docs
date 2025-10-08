@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Adaptive in React Treegrid component | Syncfusion
-description: Learn here all about Adaptive in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
-control: Adaptive 
+title: Adaptive in React TreeGrid | Syncfusion
+description: Learn here all about Adaptive in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+control: Adaptive
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adaptive in React Treegrid component
+# Adaptive in React TreeGrid
 
-The Grid user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, and edit dialogs adaptively and have an option to render the Tree Grid row elements in the horizontal direction.
+The TreeGrid interface (UI) is optimized for small screens to provide clear viewing and efficient interactions. When adaptive UI is enabled, the component renders filter, sort, and edit dialogs in a full-screen layout and offers an option to render TreeGrid rows horizontally to improve readability on compact layouts.
 
 ## Render adaptive dialogs
 
-When you enable the [`enableAdaptiveUI`](https://ej2.syncfusion.com/react/documentation/api/grid/#enableadaptiveui) property, the grid will render the filter, sort, and edit dialogs in full screen for a better user experience. The following demo demonstrates this behaviour.
+When the [enableAdaptiveUI](https://ej2.syncfusion.com/react/documentation/api/treegrid/#enableadaptiveui) property is enabled, the TreeGrid renders filter, sort, and edit dialogs in full screen mode. The following demo demonstrates this behavior.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -24,7 +24,6 @@ When you enable the [`enableAdaptiveUI`](https://ej2.syncfusion.com/react/docume
 {% include code-snippet/treegrid/adaptive-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
+{% previewsample "page.domainurl/code-snippet/treegrid/adaptive-cs1" %}
 
- {% previewsample "page.domainurl/code-snippet/treegrid/adaptive-cs1" %}
-
-> Please refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to learn how to present and manipulate data.
+> Refer to the [React TreeGrid](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for key highlights. Explore the [React TreeGrid example](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to learn how to present and manipulate data.

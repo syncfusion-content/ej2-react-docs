@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Custom aggregate in React Treegrid component | Syncfusion
-description: Learn here all about Custom aggregate in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
-control: Custom aggregate 
+title: Custom aggregate in React TreeGrid | Syncfusion
+description: Learn here all about Custom aggregate in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+control: Custom aggregate
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom aggregate in React Treegrid component
+# Custom aggregate in React TreeGrid
 
-To calculate the aggregate value with your own aggregate functions, use the custom aggregate option. To use custom aggregation, specify the [`type`](https://ej2.syncfusion.com/react/documentation/api/treegrid/aggregateColumnModel/#type) as **Custom**, and provide the custom aggregate function in the [`customAggregate`](https://ej2.syncfusion.com/react/documentation/api/treegrid/aggregateColumnModel/#customaggregate) property.
+Custom aggregates calculate summary values using application-defined functions. To enable custom aggregation, set [type](https://ej2.syncfusion.com/react/documentation/api/treegrid/aggregateColumnModel/#type) to **Custom** and provide the aggregate function through the [customAggregate](https://ej2.syncfusion.com/react/documentation/api/treegrid/aggregateColumnModel/#customaggregate) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -20,7 +20,6 @@ To calculate the aggregate value with your own aggregate functions, use the cust
 {% include code-snippet/treegrid/aggregate-cs2/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
+{% previewsample "page.domainurl/code-snippet/treegrid/aggregate-cs2" %}
 
- {% previewsample "page.domainurl/code-snippet/treegrid/aggregate-cs2" %}
-
-> To access the custom aggregate value inside the template, use the key as **Custom**.
+> To access the custom aggregate value inside a template, use the key **Custom**.

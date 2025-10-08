@@ -1,30 +1,29 @@
 ---
 layout: post
-title: Exporting TreeGrid in Server in React Tree Grid component | Syncfusion
-description: Learn here all about Exporting Tree Grid in Server in Syncfusion ##Platform_Name## Tree Grid Component of Syncfusion Essential JS 2 and more.
+title: Exporting TreeGrid in Server in React TreeGrid | Syncfusion
+description: Learn here all about Exporting TreeGrid in Server in Syncfusion ##Platform_Name## TreeGrid Component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Exporting TreeGrid in Server
 domainurl: ##DomainURL##
 documentation: ug
 ---
 
+# Exporting tree grid in Server in React TreeGrid
 
-# Exporting tree grid in Server in React Tree Grid Component
-
-The Tree Grid have an option to export the data to Excel in server side using tree grid server export library.
+TreeGrid supports exporting data to Excel on the server side using the TreeGrid server export library.
 
 ## Server dependencies
 
-The Server side export functionality is shipped in the Syncfusion.EJ2.TreeGridExport package, which is available in Essential Studio<sup style="font-size:70%">&reg;</sup> and [nuget.org](https://www.nuget.org/).The following list of dependencies is required for tree grid server side Excel exporting action.
+The server-side export functionality is available in the Syncfusion.EJ2.TreeGridExport package, which is distributed with Essential Studio and on [nuget.org](https://www.nuget.org/). The following dependencies are required for server-side Excel export:
 
 * Syncfusion.EJ2
 * Syncfusion.EJ2.TreeGridExport
 
 ## Server configuration
 
-The following code snippet shows server configuration using ASP.NET Core Controller Action.
+The following code snippet shows server configuration using an ASP.NET Core controller action.
 
-To Export the tree grid in server side, You need to call the [`serverExcelExport`](https://ej2.syncfusion.com/documentation/api/treegrid/#serverexcelexport) method for passing the tree grid properties to server exporting action.
+To export the TreeGrid on the server side, call the [serverExcelExport](https://ej2.syncfusion.com/documentation/api/treegrid/#serverexcelexport) method to pass TreeGrid properties to the server export action.
 
 ```ts
 
@@ -81,9 +80,9 @@ export default App;
 ```
 ## CSV Export in server side
 
-You can export the tree grid to CSV format by using the [`serverCsvExport`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#servercsvexport) method which will pass the tree grid properties to server.
+Export to CSV on the server side using the [serverCsvExport](https://ej2.syncfusion.com/react/documentation/api/treegrid/#servercsvexport) method, which passes TreeGrid properties to the server.
 
-In the below demo, we have invoked the above method inside the [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbarclick) event. In server side, we have deserialized the tree grid properties and passed to the [`ExportToCsv`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.TreeGridExport.TreeGridExcelExport.html#Syncfusion_EJ2_TreeGridExport_TreeGridExcelExport_ExportToCsv__1_Syncfusion_EJ2_TreeGrid_TreeGrid_System_Collections_IEnumerable_Syncfusion_EJ2_TreeGridExport_ExcelExportProperties_) method which will export the properties to CSV format.
+In the following demo, the method is invoked inside the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbarclick) event. On the server, TreeGrid properties are deserialized and passed to the [ExportToCsv](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.TreeGridExport.TreeGridExcelExport.html#Syncfusion_EJ2_TreeGridExport_TreeGridExcelExport_ExportToCsv__1_Syncfusion_EJ2_TreeGrid_TreeGrid_System_Collections_IEnumerable_Syncfusion_EJ2_TreeGridExport_ExcelExportProperties_) method, which generates the CSV.
 
 ```ts
 
@@ -150,11 +149,11 @@ export default App;
 
 ## Rotate a header text to a certain degree in the exported grid on the server side
 
-The TreeGrid has support to customize the column header styles such as changing text orientation, the font color, and so on in the exported Excel file. To achieve this requirement, use the `ExcelHeaderCellRendering` event of the tree grid.
+TreeGrid supports customizing column header styles in the exported Excel file, including text orientation and font color. To implement this, use the `ExcelHeaderCellRendering` event.
 
-The `ExcelHeaderCellRendering` will be triggered when creating a column header for the excel document to be exported in the server side. Customize the column header in this event.
+The `ExcelHeaderCellRendering` event triggers when creating a column header for the Excel document on the server side. Apply header customizations within this event.
 
-In the following demo, using the `HeaderCellRotate` method of the `TreeGridExcelExport` class in the `ExcelHeaderCellRendering` event, you can rotate the header text of the column header in the excel exported document.
+In the following demo, the `HeaderCellRotate` method of the `TreeGridExcelExport` class is used in the `ExcelHeaderCellRendering` event to rotate the header text in the exported document.
 
 ```ts
 

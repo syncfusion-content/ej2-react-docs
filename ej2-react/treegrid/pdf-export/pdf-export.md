@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Pdf export in React Treegrid component | Syncfusion
-description: Learn here all about Pdf export in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Pdf export in React TreeGrid | Syncfusion
+description: Learn here all about Pdf export in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Pdf export 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# PDF export in React Treegrid component
+# PDF export in React TreeGrid
 
-PDF export allows exporting TreeGrid data to PDF document. You need to use the [`pdfExport`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#pdfexport) method for exporting. To enable PDF export in the treegrid, set the [`allowPdfExport`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowpdfexport) as **true**.
+PDF export enables exporting TreeGrid data to a PDF document. Export by calling the [pdfExport](https://ej2.syncfusion.com/react/documentation/api/treegrid/#pdfexport) method. To enable PDF export in the TreeGrid, set [allowPdfExport](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowpdfexport) to **true**.
 
-To get start quickly with exporting functionalities, you can check on this video:
+For a quick start with exporting functionalities, refer to this video:
 {% youtube "https://www.youtube.com/watch?v=Rz24Nk4eSEY" %}
 
 {% tabs %}
@@ -28,7 +28,7 @@ To get start quickly with exporting functionalities, you can check on this video
 
 ## Custom data source
 
-PDF export provides an option to define datasource dynamically before exporting. To export data dynamically, define the `dataSource` in `PdfExportProperties`.
+PDF export supports defining a datasource dynamically before exporting. To export data dynamically, set the `dataSource` in `PdfExportProperties`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -41,11 +41,11 @@ PDF export provides an option to define datasource dynamically before exporting.
 
  {% previewsample "page.domainurl/code-snippet/treegrid/pdfexport-cs11" %}
 
-## Exporting Custom Aggregates in Tree Grid
+## Exporting Custom Aggregates in TreeGrid
 
-The Tree Grid enables exporting custom aggregates, which summarize column data, to an Excel document using the `PdfAggregateQueryCellInfo` event.
+The TreeGrid supports exporting custom aggregates, which summarize column data, to a PDF document using the `PdfAggregateQueryCellInfo` event.
 
-In the provided example, the `customAggregateFn` function computes the item count for a selected category, while the `PdfAggregateQueryCellInfo` event customizes the exported cell values in the Excel document.
+In the example, the `customAggregateFn` function computes the item count for a selected category, and the `PdfAggregateQueryCellInfo` event customizes the exported cell values in the PDF document.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -57,4 +57,5 @@ In the provided example, the `customAggregateFn` function computes the item coun
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/treegrid/pdfexport-cs12" %}
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+ 
+> Refer to the [React TreeGrid](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for highlights. Explore the [React TreeGrid example](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to learn how to present and manipulate data.

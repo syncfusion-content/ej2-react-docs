@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Render react component in column in React Treegrid component | Syncfusion
-description: Learn here all about Render react component in column in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Render react component in column in React TreeGrid | Syncfusion
+description: Learn here all about Render react component in column in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Render react component in column 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Render react component in column in React Treegrid component
+# Render react component in column in React TreeGrid
 
-You can use [`queryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#querycellinfo) event to render the React component inside TreeGrid cells.
+Render a React component inside TreeGrid cells by using the [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/treegrid/#querycellinfo) event.
 
-In the following sample, the DropDownList is rendered in the **Priority** column.
+In the following sample, a DropDownList is rendered in the **Priority** column.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -31,4 +31,4 @@ In the following sample, the DropDownList is rendered in the **Priority** column
 
  {% previewsample "page.domainurl/code-snippet/treegrid/dropdown-component-cs1" %}
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> Refer to the [React TreeGrid](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for highlights. Explore the [React Tree Grid example](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to learn how to present and manipulate data.

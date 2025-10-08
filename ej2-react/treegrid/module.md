@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Module in React Treegrid component | Syncfusion
+title: Module in React Treegrid | Syncfusion
 description: Learn here all about Module in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
 control: Module 
 platform: ej2-react
@@ -8,28 +8,27 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Module in React Treegrid component
+# Module in React Treegrid
 
-The following modules should be injected to extend treegrid's functionality.
+The following modules should be injected to extend TreeGrid functionality.
 
 | Module | Description |
 |------|-------------|
-| [`PageService`](../treegrid/paging)| Inject this module to use paging feature.|
-| [`SortService`](../treegrid/sorting)| Inject this module to use sorting feature.|
-| [`FilterService`](../treegrid/filtering/filtering)| Inject this module to use filtering feature.|
-| [`EditService`](../treegrid/editing/edit)| Inject this module to use editing feature.|
-| [`AggregateService`](../treegrid/aggregates/aggregates)| Inject this module to use aggregate feature.|
-| [`ColumnMenuService`](../treegrid/columns/columns#column-menu)| Inject this module to use column menu feature.|
-| [`CommandColumnService`](../../treegrid/edit/#command-column)| Inject this module to use command column feature.|
-| [`ContextMenuService`](../treegrid/context-menu)| Inject this module to use context menu feature.
-| [`ResizeService`](../treegrid/columns/columns#column-resizing)| Inject this module to use resize feature.|
-| [`ReorderService`](../treegrid/columns/columns#reorder)| Inject this module to use reorder feature.|
-| [`PrintService`](../treegrid/print)| Inject this module to use to use print feature and this is a default injected module.|
-| [`ToolbarService`](../treegrid/tool-bar/tool-bar)| Inject this module to use toolbar feature.|
-| [`ExcelExportService`](../treegrid/excel-export/excel-export)| Inject this module to use Excel export feature.|
-| [`PdfExportService`](../treegrid/pdf-export/pdf-export)| Inject this module to use PDF export feature.|
+| [PageService](../treegrid/paging)| Inject this module to enable paging.|
+| [SortService](../treegrid/sorting)| Inject this module to enable sorting.|
+| [FilterService](../treegrid/filtering/filtering)| Inject this module to enable filtering.|
+| [EditService](../treegrid/editing/edit)| Inject this module to enable editing.|
+| [AggregateService](../treegrid/aggregates/aggregates)| Inject this module to enable aggregates.|
+| [ColumnMenuService](../treegrid/columns/columns#column-menu)| Inject this module to enable the column menu.|
+| [CommandColumnService](../../treegrid/edit#command-column)| Inject this module to enable command columns.|
+| [ContextMenuService](../treegrid/context-menu)| Inject this module to enable the context menu.|
+| [ResizeService](../treegrid/columns/columns#column-resizing)| Inject this module to enable column resizing.|
+| [ReorderService](../treegrid/columns/columns#reorder)| Inject this module to enable column reordering.|
+| [PrintService](../treegrid/print)| Inject this module to enable printing; this module is injected by default.|
+| [ToolbarService](../treegrid/tool-bar/tool-bar)| Inject this module to enable the toolbar.|
+| [ExcelExportService](../treegrid/excel-export/excel-export)| Inject this module to enable Excel export.|
+| [PdfExportService](../treegrid/pdf-export/pdf-export)| Inject this module to enable PDF export.|
 
+Inject these modules into the TreeGrid using the `Inject` directive.
 
-These modules should be injected into the treegrid using the `Inject` directive.
-
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> Refer to the [React Tree Grid](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour for highlights. Explore the [React Tree Grid example](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to learn how to present and manipulate data.

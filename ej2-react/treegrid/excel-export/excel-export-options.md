@@ -1,36 +1,36 @@
 ---
 layout: post
-title: Excel export options in React Treegrid component | Syncfusion
-description: Learn here all about Excel export options in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Excel export options in React TreeGrid | Syncfusion
+description: Learn here all about Excel export options in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Excel export options 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Excel export options in React Treegrid component
+# Excel export options in React TreeGrid
 
 ## To customize excel export
 
-The excel export provides an option to customize mapping of the treegrid to excel document.
+Excel export supports customizing how TreeGrid content maps to the Excel document.
 
 ### Export selected records
 
-Exporting only the selected records from the TreeGrid allows generating Excel or CSV document that include only the desired data from the TreeGrid. This feature provides the flexibility to export specific records that are relevant to the needs, enabling more focused and targeted Excel or CSV exports.
+Export only the selected records to generate an Excel or CSV document that includes the intended subset of data. This enables focused and targeted exports.
 
-To export only the selected records by utilizing the [exportProperties.dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties/) property in the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbarclick) event.
+Export selected records by setting the [exportProperties.dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties/) property in the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbarclick) event.
 
-To export the selected records from the TreeGrid to a Excel or CSV file, you can follow these steps:
+To export the selected records from the TreeGrid to an Excel or CSV file, follow these steps:
 
 1. Handle the `toolbarClick` event of the TreeGrid.
 
-2. Retrieve the selected records using the [getSelectedRecords](https://ej2.syncfusion.com/react/documentation/api/treegrid/#getselectedrecords) method.
+2. Retrieve selected records using the [getSelectedRecords](https://ej2.syncfusion.com/react/documentation/api/treegrid/#getselectedrecords) method.
 
 3. Assign the selected data to the `exportProperties.dataSource` property.
 
 4. Trigger the export operation using the [excelExport](https://ej2.syncfusion.com/react/documentation/api/treegrid/#excelExport) or [csvExport](https://ej2.syncfusion.com/react/documentation/api/treegrid/#csvexport) method.
 
-The following example demonstrates how to export the selected records to a Excel document when a toolbar item is clicked.
+The following example demonstrates exporting selected records to an Excel document when a toolbar item is clicked.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -51,7 +51,7 @@ The following example demonstrates how to export the selected records to a Excel
 
 ### Export hidden columns
 
-The excel export provides an option to export hidden columns of treegrid by defining `includeHiddenColumn` as **true**.
+Export hidden columns by setting `includeHiddenColumn` to **true**.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -66,13 +66,13 @@ The excel export provides an option to export hidden columns of treegrid by defi
 
 ### Show or hide columns on exported excel
 
-You can show a hidden column or hide a visible column while printing the treegrid using [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/treegrid#toolbarclick) and [`excelExportComplete`](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties) events.
+Show a hidden column or hide a visible column during export using the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbarclick) and [excelExportComplete](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties/) events.
 
-In the [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/treegrid#toolbarclick) event, based on **args.item.text** as **Excel Export**. We can show or hide columns by setting [`column.visible`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#visible) property to *true* or *false* respectively.
+In the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbarclick) event, when **args.item.text** is **Excel Export**, control visibility by setting the [column.visible](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#visible) property to **true** or **false**.
 
-In the excelExportComplete event, We have reversed the state back to the previous state.
+In the `excelExportComplete` event, revert the visibility to the previous state.
 
-In the below example, we have *Duration* as a hidden column in the treegrid. While exporting, we have changed *Duration* to visible column and *StartDate* as hidden column.
+In the following example, the **Duration** column is hidden in the TreeGrid. During export, **Duration** is shown and **StartDate** is hidden.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -87,7 +87,7 @@ In the below example, we have *Duration* as a hidden column in the treegrid. Whi
 
 ### File name for exported document
 
-You can assign the file name for the exported document by defining `fileName` property in `ExcelExportProperties`.
+Assign a file name for the exported document by defining the `fileName` property in `ExcelExportProperties`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -102,11 +102,11 @@ You can assign the file name for the exported document by defining `fileName` pr
 
 ## Conditional cell formatting
 
-When exporting data from the TreeGrid, you have an option to conditionally format the cells in the exported Excel document. This allows you to customize the appearance of specific cells based on their values or other criteria.
+Conditional formatting customizes cell appearance in the exported Excel document based on values or criteria.
 
-To achieve this feature, you need to use the [excelQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/treegrid/#excelQueryCellInfo) event of the TreeGrid. This event is triggered for each cell during the export process to Excel. Within this event, you can access the cell object using the **args.cell** property and modify its properties, such as the background color, based on your desired conditions.
+Implement conditional formatting using the [excelQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/treegrid/#excelQueryCellInfo) event. This event triggers for each cell during export. Within the event, access the cell object using `args.cell` and modify properties such as background color according to required conditions.
 
-The following example demonstrate how to customize the background color of the Freight column in the exported Excel document using the **args.cell**  and **backgroundColor** properties of the `excelQueryCellInfo` event.
+The following example demonstrates customizing the background color of the Freight column in the exported Excel document using the `excelQueryCellInfo` event with `args.cell.backgroundColor`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -121,9 +121,9 @@ The following example demonstrate how to customize the background color of the F
 
 ## Theme
 
-The excel export provides an option to include theme for exported excel document.
+Excel export supports applying a theme to the exported Excel document.
 
-To apply theme in exported Excel, define the `theme` in `ExcelExportProperties`.
+To apply a theme, define `theme` in `ExcelExportProperties`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -136,4 +136,4 @@ To apply theme in exported Excel, define the `theme` in `ExcelExportProperties`.
 
  {% previewsample "page.domainurl/code-snippet/treegrid/excel-export-cs3" %}
 
->By default, material theme is applied to exported excel document.
+> By default, the Material theme is applied to the exported Excel document.

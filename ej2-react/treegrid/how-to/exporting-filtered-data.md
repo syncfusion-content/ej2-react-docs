@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Exporting filtered data in React Treegrid component | Syncfusion
-description: Learn here all about Exporting filtered data in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Exporting filtered data in React TreeGrid | Syncfusion
+description: Learn here all about Exporting filtered data in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Exporting filtered data 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Exporting filtered data in React Treegrid component
+# Exporting filtered data in React TreeGrid
 
-You can export the filtered data by defining the resulted data in [`PdfExportProperties.dataSource`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/#datasource) before export.
+Export filtered data by defining the resulting dataset in [PdfExportProperties.dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/#datasource) before export.
 
-In the below Pdf exporting demo, We have gotten the filtered data from the filteredResult of TreeGrid filterModule and then defines the resulted data in [`PdfExportProperties.dataSource`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/#datasource) and pass it to [`pdfExport`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#pdfexport) method.
+In the following PDF export demo, filtered data is obtained from the TreeGrid `filterModule.filteredResult`, assigned to [PdfExportProperties.dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/#datasource), and then passed to the [pdfExport](https://ej2.syncfusion.com/react/documentation/api/treegrid/#pdfexport) method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -31,4 +31,4 @@ In the below Pdf exporting demo, We have gotten the filtered data from the filte
 
  {% previewsample "page.domainurl/code-snippet/treegrid/refresh-cs4" %}
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> Refer to the [React TreeGrid](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for highlights. Explore the [React TreeGrid example](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to learn how to present and manipulate data.

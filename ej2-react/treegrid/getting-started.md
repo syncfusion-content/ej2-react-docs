@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Getting started with React Treegrid component | Syncfusion
@@ -11,31 +10,31 @@ domainurl: ##DomainURL##
 
 # Getting started in React Treegrid component
 
-This section explains the steps required to create a simple Essential<sup style="font-size:70%">&reg;</sup> JS 2 TreeGrid and demonstrates the basic usage of the TreeGrid control in a React application.
+This section outlines the steps to create a simple Essential JS 2 TreeGrid and demonstrates basic usage in a React application.
 
-To get start quickly with React Tree Grid, you can check on this video:
+For a quick start with React TreeGrid, refer to this video:
 
 {% youtube "https://www.youtube.com/watch?v=dQcIAoSgARc" %}
 
 ## Setup for Local Development
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up environment using JavaScript and optimizes application for production.
 
-> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+> **Note:**  To create a React application using `create-react-app`, refer to this documentation: https://ej2.syncfusion.com/react/documentation/getting-started/create-app.
 
 To create a new React application, run the following command.
 
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+To set up a React application in a TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in a JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -43,10 +42,9 @@ cd my-app
 npm run dev
 ```
 
+## Adding Syncfusion TreeGrid packages
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> TreeGrid packages
-
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. To install TreeGrid component, use the following command
+All Essential JS 2 packages are published in the npm public registry at [npmjs.com](https://www.npmjs.com/~syncfusionorg). Install the TreeGrid component with the following command:
 
 ```
 npm install @syncfusion/ej2-react-treegrid --save
@@ -54,7 +52,7 @@ npm install @syncfusion/ej2-react-treegrid --save
 
 ## Adding CSS reference
 
- Add components style as given below in **src/App.css**.
+Add component styles as shown below in src/App.css.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
@@ -69,13 +67,13 @@ npm install @syncfusion/ej2-react-treegrid --save
 @import "../node_modules/@syncfusion/ej2-react-treegrid/styles/material.css";
 ```
 
-> To refer **App.css** in the application then import it in the **src/App.tsx** file.
+> Import **App.css** in the **src/App.tsx**  file.
 
 ## Adding TreeGrid component
 
-Now, you can start adding TreeGrid component in the application. For getting started, add the TreeGrid component in **src/App.tsx** file using following code.
+Add the TreeGrid component to the application. For getting started, include the TreeGrid component in **src/App.tsx** using the following code.
 
-Place the following treegrid code in the **src/App.tsx**.
+Place the following treegrid code in **src/App.tsx**.
 
 ```ts
 import { ColumnDirective, ColumnsDirective, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
@@ -98,23 +96,23 @@ export default App;
 
 ## Module Injection
 
-TreeGrid component features are segregated into individual feature-wise modules. In order to use a particular feature, you need to inject its feature service in the `App`. In the current application, we are going to use paging, sorting, filtering and exporting feature of TreeGrid. Please find relevant feature service name and description as follows.
+TreeGrid features are segregated into individual feature-wise modules. To use a feature, inject its service in the App. The sample uses paging, sorting, filtering, and exporting features of TreeGrid. Relevant feature service names and descriptions:
 
-* **Page** - Inject this service to use paging feature.
-* **Sort** - Inject this service to use sorting feature.
-* **Filter** - Inject this service to use filtering feature.
-* **ExcelExport** - Inject this service to use Excel Export feature.
-* **PdfExport** - Inject this service to use PDF Export feature.
+* **Page** - Inject to enable paging.
+* **Sort** - Inject to enable sorting.
+* **Filter** - Inject to enable filtering.
+* **ExcelExport** - Inject to enable Excel export.
+* **PdfExport** - Inject to enable PDF export.
 
 These modules should be injected into the treegrid using the **Inject** directive.
 
-> Additional feature modules are available [`here`](./module).
+> Additional feature modules are available [here](./module).
 
 ## Enable Paging
 
-The paging feature enables users to view the TreeGrid record in a paged view. It can be enabled by setting [`allowPaging`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowpaging) property to true. Inject the **Page** module in **Inject.services** as follows. If the **Page** service is not injected, the pager will not be rendered in the treegrid. Pager can be customized using [`pageSettings`](https://ej2.syncfusion.com/react/documentation/api/treegrid/pageSettings) property.
+The paging feature displays records in a paged view. Enable paging by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowpaging) property to true. Inject the **Page** module in **Inject.services** as shown. If the **Page** service is not injected, the pager is not rendered. Customize the pager using the [pageSettings](https://ej2.syncfusion.com/react/documentation/api/treegrid/pageSettings/) property.
 
-We also have Root level paging mode in which paging is based on the root level rows only i.e., it ignores the child rows count and it can be enabled by using the [`pageSettings.pageSizeMode`](https://ej2.syncfusion.com/react/documentation/api/treegrid/pageSettings/#pagesizemode) property.
+Root-level paging mode is available, which bases paging on root-level rows only (ignoring child row count). Enable it using the [pageSettings.pageSizeMode](https://ej2.syncfusion.com/react/documentation/api/treegrid/pageSettings/#pagesizemode) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -135,7 +133,7 @@ We also have Root level paging mode in which paging is based on the root level r
 
 ## Enable Sorting
 
-The sorting feature enables you to order the records. It can be enabled by setting the [`allowSorting`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowsorting) property as *true*. Inject the **Sort** module in the **Inject.services** as follows. If the **Sort** module is not injected, you cannot sort when a header is clicked. Sorting feature can be customized using [`sortSettings`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#sortsettings) property.
+The sorting feature orders records. Enable sorting by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowsorting) property to true. Inject the **Sort** module in **Inject.services**. If the **Sort** module is not injected, clicking a header will not sort. Customize sorting using the [sortSettings](https://ej2.syncfusion.com/react/documentation/api/treegrid/#sortsettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -156,9 +154,9 @@ The sorting feature enables you to order the records. It can be enabled by setti
 
 ## Enable Filtering
 
-The filtering feature enables you to view reduced amount of records based on filter criteria. It can be enabled by setting the [`allowFiltering`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowfiltering) property as true. Inject the **Filter** module in the **Inject.services** as follows. If **Filter** module is not injected, filter bar will not be rendered in TreeGrid. Filtering feature can be customized using [`filterSettings`](https://ej2.syncfusion.com/react/documentation/api/treegrid/filterSettings) property.
+The filtering feature displays a reduced set of records based on filter criteria. Enable filtering by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowfiltering) property to true. Inject the **Filter** module in **Inject.services**. If the **Filter** module is not injected, the filter bar is not rendered. Customize filtering using the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/treegrid/filterSettings/) property.
 
-By default, filtered records are shown along with its parent records. This behavior can be changed by using [`filterSettings-hierarchyMode`](https://ej2.syncfusion.com/react/documentation/api/treegrid/filterSettings/#hierarchyMode) property.
+By default, filtered records are shown along with their parent records. Change this behavior using the [filterSettings-hierarchyMode](https://ej2.syncfusion.com/react/documentation/api/treegrid/filterSettings/#hierarchyMode) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -179,13 +177,13 @@ By default, filtered records are shown along with its parent records. This behav
 
 ## Run the application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Run the `npm run dev` command in the console to start the development server. This command compiles the code and serves the application locally, opening it in the browser.
 
 ```
 npm run dev
 ```
 
-Output will be appears as follows.
+The output appears as follows.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -204,28 +202,28 @@ Output will be appears as follows.
 
  {% previewsample "page.domainurl/code-snippet/treegrid/getting-started-cs4" %}
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> Refer to the [React TreeGrid](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for highlights. Explore the [React TreeGrid example](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to learn how to present and manipulate data.
 
 ## Handling errors
 
-Error handling in Tree Grid identifies exceptions and notifies them through the [actionFailure](https://ej2.syncfusion.com/react/documentation/api/treegrid/#actionfailure) event. When configuring the Tree Grid or enabling specific features through its API, mistakes can occur. The `actionFailure` event can be used to manage these errors. This event triggers when such mistakes happen. The `actionFailure` event handles various scenarios, including:
+Error handling in TreeGrid identifies exceptions and notifies them through the [actionFailure](https://ej2.syncfusion.com/react/documentation/api/treegrid/#actionfailure) event. When configuring the TreeGrid or enabling specific features through its API, configuration mistakes might occur. The `actionFailure` event triggers in such cases and can be used to manage these errors. The event covers scenarios such as:
 
-* For CRUD operations, row drag and drop, and persisiting the selection, ensure the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#isprimarykey) property is mapped to a unique data column. Failure to do so will cause an error.
-* [Paging](https://ej2.syncfusion.com/react/documentation/treegrid/paging) is not supported with [virtualization](https://ej2.syncfusion.com/react/documentation/treegrid/virtual-scroll). Enabling `paging` with `virtualization` will result in an error.
-* To render the Tree Grid, map either the [dataSource](https://ej2.syncfusion.com/react/documentation/api/treegrid/#datasource) or [columns](https://ej2.syncfusion.com/react/documentation/api/treegrid/#columns) property. Failure to do so will result in an error.
-* Freeze columns by mapping either [isFrozen](https://ej2.syncfusion.com/react/documentation/api/treegrid/treeGridColumn/#isfrozen) or [frozenColumns](https://ej2.syncfusion.com/react/documentation/api/treegrid#frozencolumns). Enabling both properties simultaneously will result in an error.
-* The [detailTemplate](https://ej2.syncfusion.com/react/documentation/api/treegrid#detailtemplate) is not supported with `virtualization` and `stacked header`. Enabling them with these features will result in an error.
-* The [frozenRows](https://ej2.syncfusion.com/react/documentation/api/treegrid#frozenrows) and `frozenColumns` are not supported with [rowtemplate](https://ej2.syncfusion.com/react/documentation/api/treegrid#rowtemplate), `detailTemplate`, and [cell editing](https://ej2.syncfusion.com/react/documentation/treegrid/editing/cell-editing). Enabling them with these features will result in an error.
+* For CRUD operations, row drag and drop, and persisting selection, map the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#isprimarykey) property to a unique data column. Otherwise, an error occurs.
+* [Paging](https://ej2.syncfusion.com/react/documentation/treegrid/paging) is not supported with [virtualization](https://ej2.syncfusion.com/react/documentation/treegrid/virtual-scroll). Enabling both results in an error.
+* To render the TreeGrid, map either the [dataSource](https://ej2.syncfusion.com/react/documentation/api/treegrid/#datasource) or [columns](https://ej2.syncfusion.com/react/documentation/api/treegrid/#columns) property. Missing both results in an error.
+* Freeze columns by mapping either [isFrozen](https://ej2.syncfusion.com/react/documentation/api/treegrid/treeGridColumn/#isfrozen) or [frozenColumns](https://ej2.syncfusion.com/react/documentation/api/treegrid/#frozencolumns). Enabling both simultaneously results in an error.
+* The [detailTemplate](https://ej2.syncfusion.com/react/documentation/api/treegrid/#detailtemplate) is not supported with `virtualization` and `stacked header`. Enabling them together results in an error.
+* The [frozenRows](https://ej2.syncfusion.com/react/documentation/api/treegrid/#frozenrows) and `frozenColumns` features are not supported with [rowtemplate](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowtemplate), `detailTemplate`, and [cell editing](https://ej2.syncfusion.com/react/documentation/treegrid/editing/cell-editing). Combining them results in an error.
 * In `stacked header`, the [freeze](https://ej2.syncfusion.com/react/documentation/api/treegrid/treeGridColumn/#freeze) direction is incompatible with [column reordering](https://ej2.syncfusion.com/react/documentation/treegrid/columns/column-reorder).
-* [Selection](https://ej2.syncfusion.com/react/documentation/treegrid/selection/selection) functionality is not supported when using `rowTemplate`. Enabling both properties simultaneously will result in an error.
-* Set the [treeColumnIndex](https://ej2.syncfusion.com/react/documentation/api/treegrid#treecolumnindex) value to display the tree structure. Make sure the value does not exceed the total column count, or it will result in an error.
-* For `virtualization`, do not specify height and width in percentages. Using percentages will result in an error.
-* When using the default filter ([filterbar](https://ej2.syncfusion.com/react/documentation/treegrid/filtering/filter-bar)) type, do not apply the other [filterType](https://ej2.syncfusion.com/react/documentation/api/treegrid/filterType/) to columns within the same tree grid, as this will result in an error.
-* In Tree Grid, avoid enabling [idMapping](https://ej2.syncfusion.com/react/documentation/api/treegrid#idmapping) and [childMapping](https://ej2.syncfusion.com/react/documentation/api/treegrid#childmapping) simultaneously. Enabling both properties at the same time will result in an error.
-* The [showCheckbox](https://ej2.syncfusion.com/react/documentation/api/treegrid/treeGridColumn/#showcheckbox) column should only be defined in the tree column. Defining it elsewhere will result in an error.
-* The [textAlign](https://ej2.syncfusion.com/react/documentation/api/treegrid/treeGridColumn/#textalign) right is not applicable for tree columns in the Tree Grid. Enabling right alignment for tree columns will result in an error.
+* [Selection](https://ej2.syncfusion.com/react/documentation/treegrid/selection/selection) is not supported when using `rowTemplate`. Enabling both simultaneously results in an error.
+* Set the [treeColumnIndex](https://ej2.syncfusion.com/react/documentation/api/treegrid/#treecolumnindex) value to display the tree structure. A value exceeding the total column count results in an error.
+* For `virtualization`, do not specify height and width in percentages. Percentages result in an error.
+* When using the default filter ([filterbar](https://ej2.syncfusion.com/react/documentation/treegrid/filtering/filter-bar)) type, do not apply other [filterType](https://ej2.syncfusion.com/react/documentation/api/treegrid/filterType/) values to columns within the same tree grid; this results in an error.
+* In TreeGrid, avoid enabling [idMapping](https://ej2.syncfusion.com/react/documentation/api/treegrid/#idmapping) and [childMapping](https://ej2.syncfusion.com/react/documentation/api/treegrid/#childmapping) simultaneously. Enabling both results in an error.
+* The [showCheckbox](https://ej2.syncfusion.com/react/documentation/api/treegrid/treeGridColumn/#showcheckbox) column should be defined only in the tree column. Defining it elsewhere results in an error.
+* The [textAlign](https://ej2.syncfusion.com/react/documentation/api/treegrid/treeGridColumn/#textalign) right value is not applicable for tree columns. Enabling right alignment for tree columns results in an error.
 
-The following code example shows how to use the [actionFailure](https://ej2.syncfusion.com/react/documentation/api/treegrid/#actionfailure) event in the Tree Grid control to display an exception when `isPrimaryKey`are not configured properly in the Tree Grid.
+The following example shows how to use the [actionFailure](https://ej2.syncfusion.com/react/documentation/api/treegrid/#actionfailure) event in the TreeGrid to display an exception when `isPrimaryKey` is not configured properly.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -246,10 +244,10 @@ The following code example shows how to use the [actionFailure](https://ej2.sync
 
 ## See Also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript documentation](https://ej2.syncfusion.com/documentation/treegrid/getting-started)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript (ES5) documentation](https://ej2.syncfusion.com/javascript/documentation/treegrid/getting-started)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Angular documentation](https://ej2.syncfusion.com/angular/documentation/treegrid/getting-started)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Vue documentation](https://ej2.syncfusion.com/vue/documentation/treegrid/getting-started)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core documentation](https://ej2.syncfusion.com/aspnetcore/documentation/tree-grid/getting-started-core)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC documentation](https://ej2.syncfusion.com/aspnetmvc/documentation/tree-grid/getting-started-mvc)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor documentation](https://blazor.syncfusion.com/documentation/treegrid/getting-started-webapp)
+* [Getting Started with Syncfusion JavaScript documentation](https://ej2.syncfusion.com/documentation/treegrid/getting-started)
+* [Getting Started with Syncfusion JavaScript (ES5) documentation](https://ej2.syncfusion.com/javascript/documentation/treegrid/getting-started)
+* [Getting Started with Syncfusion Angular documentation](https://ej2.syncfusion.com/angular/documentation/treegrid/getting-started)
+* [Getting Started with Syncfusion Vue documentation](https://ej2.syncfusion.com/vue/documentation/treegrid/getting-started)
+* [Getting Started with Syncfusion ASP.NET Core documentation](https://ej2.syncfusion.com/aspnetcore/documentation/tree-grid/getting-started-core)
+* [Getting Started with Syncfusion ASP.NET MVC documentation](https://ej2.syncfusion.com/aspnetmvc/documentation/tree-grid/getting-started-mvc)
+* [Getting Started with Syncfusion Blazor documentation](https://blazor.syncfusion.com/documentation/treegrid/getting-started-webapp)

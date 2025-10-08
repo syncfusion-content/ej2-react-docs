@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Cell in React Treegrid component | Syncfusion
-description: Learn here all about Cell in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Cell in React TreeGrid component | Syncfusion
+description: Learn here all about Cell in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Cell 
 platform: ej2-react
 documentation: ug
@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Cell in React TreeGrid 
 
-In the Syncfusion React TreeGrid, a cell represents the intersection of a row and column, displaying specific data values. Each cell can contain text, numbers, HTML content, or custom templates. The TreeGrid provides comprehensive options to customize cell appearance, behavior, and content rendering to create interactive and visually appealing data presentations.
+In the Syncfusion React TreeGrid, a cell represents the intersection of a row and column, displaying specific data values. Each cell can contain text, numbers, HTML content, or custom templates. The TreeGrid provides comprehensive options to customize cell appearance, behavior, and content rendering to create interactive and visually clear data presentations.
 
 ## Displaying the HTML content
 
-Displaying HTML content in a TreeGrid can be useful in scenarios where you want to display formatted content, such as images, links, or tables, in a tabular format. TreeGrid allows you to display HTML tags in the TreeGrid header and content. By default, the HTML content is encoded to prevent potential security vulnerabilities. However, you can enable the [disableHtmlEncode](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#disablehtmlencode) property by setting the value as false to display HTML tags without encoding. This feature is useful when you want to display HTML content in a TreeGrid cell.
+Displaying HTML content is useful for formatted values such as images, links, or tables. HTML tags can be rendered in both headers and content. By default, HTML is encoded to prevent security risks.To render raw HTML tags without encoding, set the [disableHtmlEncode](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#disablehtmlencode) property to false.
 
-The following example demonstrates how to display HTML content in TreeGrid headers and cells by configuring the `disableHtmlEncode` property:
+The following example demonstrates rendering HTML content in headers and cells by configuring the `disableHtmlEncode` property:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -31,17 +31,17 @@ The following example demonstrates how to display HTML content in TreeGrid heade
 
 ## Autowrap the TreeGrid content
 
-The auto wrap allows the cell content of the TreeGrid to wrap to the next line when it exceeds the boundary of the cell width. The cell content wrapping works based on the position of white space between words. To enable auto wrap, set the [allowTextWrap](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowtextwrap) property to **true**. You can configure the auto wrap mode by setting the [textWrapSettings.wrapMode](https://ej2.syncfusion.com/react/documentation/api/treegrid/#textwrapsettings) property.
+Auto wrap allows cell content to flow to the next line when it exceeds the column width. Wrapping occurs at whitespace boundaries. Enable auto wrap by setting [allowTextWrap](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowtextwrap) to **true**, and configure behavior using [textWrapSettings.wrapMode](https://ej2.syncfusion.com/react/documentation/api/treegrid/#textwrapsettings).
 
-There are three types of **wrapMode**. They are:
+There are three types of **wrapMode**:
 
-* **Both**: This value is set by default. Auto wrap will be enabled for both the content and the header.
-* **Header**: Auto wrap will be enabled only for the header.
-* **Content**: Auto wrap will be enabled only for the content.
+* **Both**: Default. Wraps both content and header.
+* **Header**: Wraps header only.
+* **Content**: Wraps content only.
 
-> When a column width is not specified, then auto wrap of columns will be adjusted with respect to the TreeGrid's width.
+> When a column width is not specified, auto wrap adjusts based on the TreeGrid width.
 
-The following example demonstrates how to set the `allowTextWrap` property to **true** and specify the wrap mode as **Content** by setting the `textWrapSettings.wrapMode` property.
+The following example sets `allowTextWrap` to **true** and `textWrapSettings.wrapMode` to **Content**:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -56,7 +56,7 @@ The following example demonstrates how to set the `allowTextWrap` property to **
 
 ## Customize cell styles
 
-The appearance of cells can be customized by using the [`queryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#querycellinfo) event. The [`queryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#querycellinfo) event triggers for every cell. In that event handler, you can get [`QueryCellInfoEventArgs`](https://ej2.syncfusion.com/react/documentation/api/grid/queryCellInfoEventArgs/) that contains the details of the cell.
+Cell appearance can be customized using the [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/treegrid/#querycellinfo) event, which triggers for every cell. The event provides [QueryCellInfoEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/queryCellInfoEventArgs/) with details of the cell.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -71,7 +71,7 @@ The appearance of cells can be customized by using the [`queryCellInfo`](https:/
 
 ## Custom attributes
 
-You can customize the treegrid cells by adding a CSS class to the [`customAttribute`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#customattributes) property of the column.
+Cells can be customized by adding a CSS class through the [customAttribute](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#customattributes) property of the column.
 
 ```css
 .e-attr {
@@ -87,7 +87,7 @@ You can customize the treegrid cells by adding a CSS class to the [`customAttrib
         field="taskID" headerText="Task ID" customAttributes={customAttr} width="90" textAlign='Right'/>
 ```
 
-In the below example, we have customized the cells of *TaskID* and *StartDate* columns.
+In the following example, cells in the *TaskID* and *StartDate* columns are customized.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -102,15 +102,15 @@ In the below example, we have customized the cells of *TaskID* and *StartDate* c
 
 ## Clip mode
 
-The clip mode feature is useful when you have a long text or content in a TreeGrid cell, which overflows the cell’s width or height. It provides options to display the overflow content by either truncating it, displaying an ellipsis or displaying an ellipsis with a tooltip. You can enable this feature by setting [clipMode](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#clipmode) property to one of the below available options.
+Clip mode manages long text that overflows cell boundaries. It supports truncation, ellipsis, and ellipsis with tooltip. Configure the behavior using the [clipMode](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#clipmode) property.
 
-There are three types of `clipMode` available:
+There are three types of `clipMode`:
 
-* **Clip**: Truncates the cell content when it overflows its area.
-* **Ellipsis**: Displays ellipsis when the cell content overflows its area.
-* **EllipsisWithTooltip**: Displays ellipsis when the cell content overflows its area, also it will display the tooltip while hover on ellipsis is applied.
+* **Clip**: Truncates overflow content.
+* **Ellipsis**: Displays an ellipsis for overflow content.
+* **EllipsisWithTooltip**: Displays an ellipsis and shows a tooltip on hover.
 
-The following example demonstrates, how to set the `clipMode` property:
+The following example demonstrates how to set the `clipMode` property:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -123,21 +123,21 @@ The following example demonstrates, how to set the `clipMode` property:
 
  {% previewsample "page.domainurl/code-snippet/treegrid/cell-cs4" %}
 
-> By default, `columns.clipMode` value is **Ellipsis**.
+> By default, `columns.clipMode` is **Ellipsis**.
 
 ## TreeGrid lines
 
-The [`gridLines`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#gridlines) have option to display cell border and it can be defined by the [`gridLines`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#gridlines) property.
+The [gridLines](https://ej2.syncfusion.com/react/documentation/api/treegrid/#gridlines) property controls cell borders.
 
-The available modes of grid lines are:
+The available modes are:
 
 | Modes | Actions |
 |-------|---------|
-| Both | Displays both the horizontal and vertical grid lines.|
-| None | No grid lines are displayed.|
-| Horizontal | Displays the horizontal grid lines only.|
-| Vertical | Displays the vertical grid lines only.|
-| Default | Displays grid lines based on the theme.|
+| Both | Displays both horizontal and vertical grid lines. |
+| None | Displays no grid lines. |
+| Horizontal | Displays horizontal grid lines only. |
+| Vertical | Displays vertical grid lines only. |
+| Default | Displays grid lines based on the theme. |
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -150,5 +150,5 @@ The available modes of grid lines are:
 
  {% previewsample "page.domainurl/code-snippet/treegrid/cell-cs3" %}
 
->By default, the treegrid renders with **Default** mode.
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> By default, the TreeGrid renders in **Default** mode.
+> Refer to the [React Tree Grid](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour for key capabilities. Explore the [React Tree Grid example](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to learn how to present and manipulate data.

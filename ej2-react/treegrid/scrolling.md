@@ -1,26 +1,28 @@
 ---
 layout: post
-title: Scrolling in React Treegrid component | Syncfusion
-description: Learn here all about Scrolling in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
-control: Scrolling 
+title: Scrolling in React TreeGrid | Syncfusion
+description: Learn here all about Scrolling in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+control: Scrolling
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Scrolling in React Treegrid component
+# Scrolling in React TreeGrid
 
-The scrollbar will be displayed in the treegrid when content exceeds the element [`width`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#width) or [`height`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#height). The vertical and horizontal scrollbars will be displayed based on the following criteria:
+The scrollbar is displayed in the TreeGrid when content exceeds the element [width](https://ej2.syncfusion.com/react/documentation/api/treegrid/#width) or [height](https://ej2.syncfusion.com/react/documentation/api/treegrid/#height). The vertical and horizontal scrollbars appear based on the following criteria:
 
-* The vertical scrollbar appears when the total height of rows present in the treegrid exceeds its element height.
-* The horizontal scrollbar appears when the sum of columns width exceeds the treegrid element width.
-* The [`height`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#height) and [`width`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#width) are used to set the treegrid height and width, respectively.
+* The vertical scrollbar appears when the total height of rows in the TreeGrid exceeds its element height.
 
-> The default value for [`height`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#height) and [`width`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#width) is *auto*.
+* The horizontal scrollbar appears when the sum of column widths exceeds the TreeGrid element width.
+
+* The [height](https://ej2.syncfusion.com/react/documentation/api/treegrid/#height) and [width](https://ej2.syncfusion.com/react/documentation/api/treegrid/#width) properties set the TreeGrid height and width, respectively.
+
+> The default value for [height](https://ej2.syncfusion.com/react/documentation/api/treegrid/#height) and [width](https://ej2.syncfusion.com/react/documentation/api/treegrid/#width) is *auto*.
 
 ## Set width and height
 
-To specify the [`width`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#height) of the scroller in the pixel, set the pixel value to a number.
+To specify the scroller [width](https://ej2.syncfusion.com/react/documentation/api/treegrid/#width) and [height](https://ej2.syncfusion.com/react/documentation/api/treegrid/#height) in pixels, assign a numeric pixel value.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -30,12 +32,11 @@ To specify the [`width`](https://ej2.syncfusion.com/react/documentation/api/tree
 {% include code-snippet/treegrid/scrolling-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/treegrid/scrolling-cs1" %}
+{% previewsample "page.domainurl/code-snippet/treegrid/scrolling-cs1" %}
 
 ## Responsive with parent container
 
-Specify the [`width`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#height) as **100%** to make the treegrid element fill its parent container. Setting the [`height`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#height) to **100%** requires the treegrid parent element to have explicit height.
+Specify [width](https://ej2.syncfusion.com/react/documentation/api/treegrid/#width) and [height](https://ej2.syncfusion.com/react/documentation/api/treegrid/#height) as **100%** to make the TreeGrid fill its parent container. When [height](https://ej2.syncfusion.com/react/documentation/api/treegrid/#height) is set to **100%**, the parent element must have an explicit height.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -45,18 +46,17 @@ Specify the [`width`](https://ej2.syncfusion.com/react/documentation/api/treegri
 {% include code-snippet/treegrid/responsive-scrolling-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/treegrid/responsive-scrolling-cs1" %}
+{% previewsample "page.domainurl/code-snippet/treegrid/responsive-scrolling-cs1" %}
 
 ## Sticky header
 
-The Syncfusion React TreeGrid provides a useful feature to keep the column headers fixed (sticky) while scrolling through large datasets. This ensures that the headers remain visible at all times, enhancing user experience by making it easier to understand the context of the data displayed, especially when dealing with wide or long hierarchical data.
+The Syncfusion React TreeGrid can keep column headers fixed (sticky) while scrolling through large datasets. Sticky headers remain visible to preserve column context during vertical scrolling, which is especially helpful with wide or lengthy hierarchical data.
 
-For example, in a project management application, users often need to scroll through a detailed list of tasks and subtasks. When the dataset is large, scrolling down can cause confusion if the column headers scroll out of view, making it difficult to remember what each column represents. By enabling sticky headers, the column headers remain visible even while scrolling, allowing users to easily keep track of the data context.
+Enabling sticky headers ensures that the header row remains anchored to the top of the TreeGrid container or its parent scrolling element, regardless of scroll position.
 
-To enable sticky headers in the TreeGrid, you can simply set the `enableStickyHeader` property to **true**. This makes the column headers stick to the top of the TreeGrid container or its parent scrolling container when you scroll vertically.
+To enable sticky headers in the TreeGrid, set the `enableStickyHeader` property to **true**. This keeps column headers anchored to the top of the TreeGrid container or its parent scrolling container during vertical scroll.
 
-The following sample demonstrates how to enable or disable the sticky header in the TreeGrid using a [Switch](https://ej2.syncfusion.com/react/documentation/switch/getting-started) and its [change](https://ej2.syncfusion.com/react/documentation/api/switch#change) event:
+The following sample demonstrates enabling or disabling the sticky header in the TreeGrid using a [Switch](https://ej2.syncfusion.com/react/documentation/switch/getting-started) and its [change](https://ej2.syncfusion.com/react/documentation/api/switch/#change) event:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -66,12 +66,11 @@ The following sample demonstrates how to enable or disable the sticky header in 
 {% include code-snippet/treegrid/scrolling-sticky-header/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/treegrid/scrolling-sticky-header" %}
+{% previewsample "page.domainurl/code-snippet/treegrid/scrolling-sticky-header" %}
 
 ## Scroll to selected row
 
-You can scroll the treegrid content to the selected row position by using the [`rowSelected`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowselected) event.
+Scroll the TreeGrid content to the selected row position by using the [rowSelected](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowselected) event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -81,5 +80,4 @@ You can scroll the treegrid content to the selected row position by using the [`
 {% include code-snippet/treegrid/scrolling-cs2/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/treegrid/scrolling-cs2" %}
+{% previewsample "page.domainurl/code-snippet/treegrid/scrolling-cs2" %}

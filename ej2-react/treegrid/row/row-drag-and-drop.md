@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Row drag and drop in React Treegrid component | Syncfusion
-description: Learn here all about Row drag and drop in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Row drag and drop in React TreeGrid component | Syncfusion
+description: Learn here all about Row drag and drop in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Row drag and drop 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row drag and drop in React Treegrid component
+# Row drag and drop in React TreeGrid
 
-The TreeGrid rows can be reordered, dropped to another TreeGrid or custom control by enabling the [`allowRowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowrowdraganddrop) to true.
+TreeGrid rows can be reordered or dropped into another TreeGrid or custom control by setting [allowRowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowrowdraganddrop) to true.
 
-To use row drag and drop, inject the `RowDD` module in the TreeGrid.
+To use row drag and drop, inject the **RowDD** module into the TreeGrid.
 
-## Drag and drop within Tree Grid
+## Drag and drop within TreeGrid
 
-The TreeGrid row drag and drop allows you to drag and drop TreeGrid rows on the same TreeGrid using drag icon. To enable row drag and drop, set the [`allowRowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowrowdraganddrop) to true. It provides the way to drop the row above, below or child to the target row with respective to the target row position.
+Row drag and drop supports reordering within the same TreeGrid using the drag icon. Enable it by setting [allowRowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowrowdraganddrop) to true. Rows can be dropped above, below, or as a child of the target row based on the drop position.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -29,14 +29,14 @@ The TreeGrid row drag and drop allows you to drag and drop TreeGrid rows on the 
 
  {% previewsample "page.domainurl/code-snippet/treegrid/row-cs1" %}
 
-> * Selection feature must be enabled for row drag and drop.
-> * Multiple rows can be selected by clicking and dragging inside the treegrid.
-> * For multiple row selection, the [`type`](https://ej2.syncfusion.com/react/documentation/api/treegrid/selectionSettings/#type) property must be set to `multiple`.
-> * The [`isPrimaryKey`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#isprimarykey) property is necessary to perform row drag and drop operation.
+> * Selection must be enabled for row drag and drop.
+> * Multiple rows can be selected by clicking and dragging inside the TreeGrid.
+> * For multiple row selection, set the [type](https://ej2.syncfusion.com/react/documentation/api/treegrid/selectionSettings/#type) property to `multiple`.
+> * The [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#isprimarykey) property is required to perform row drag-and-drop.
 
-## Drag and drop to another Tree Grid
+## Drag and drop to another TreeGrid
 
-To drag and drop between two TreeGrid, enable the [`allowRowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowrowdraganddrop) property and specify the target TreeGrid ID in [`targetID`](https://ej2.syncfusion.com/react/documentation/api/treegrid/rowDropSettings/#targetid) property of rowDropSettings.
+To drag and drop between two TreeGrids, enable [allowRowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowrowdraganddrop) and set the target TreeGrid ID in the [targetID](https://ej2.syncfusion.com/react/documentation/api/treegrid/rowDropSettings/#targetid) property of `rowDropSettings`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -51,18 +51,18 @@ To drag and drop between two TreeGrid, enable the [`allowRowDragAndDrop`](https:
 
 ## Drag and drop events
 
-The following events are triggered while drag and drop the treegrid rows.
+The following events are triggered during row drag and drop:
 
-[`rowDragStartHelper`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowdragstarthelper) - Triggers when click the drag icon or treegrid row and this event is used to customize the drag element based on user criteria.<br/>
-[`rowDragStart`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowdragstart) -Triggers when starts to drag the treegrid row. <br/>
-[`rowDrag`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowdrag) - Triggers while dragging the treegrid row. <br/>
-[`rowDrop`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowdrop) - Triggers when a drag element is dropped on the target element. <br/>
+[rowDragStartHelper](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowdragstarthelper) - Triggers when the drag icon or row is clicked; customize the drag element based on criteria.<br/>
+[rowDragStart](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowdragstart) - Triggers when a row drag starts.<br/>
+[rowDrag](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowdrag) - Triggers while a row is being dragged.<br/>
+[rowDrop](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowdrop) - Triggers when the dragged element is dropped on the target element.<br/>
 
 ## Prevent reordering a row as child to another row
 
-You can prevent the default behavior of dropping rows as children to the target by setting the `cancel` property to `true` in [rowDrop](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowdrop) event argument. You can also change the drop position after cancelling using [reorderRows](https://ej2.syncfusion.com/react/documentation/api/treegrid/#reorderrows) method.
+Prevent dropping rows as children by setting `cancel` to `true` in the [rowDrop](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowdrop) event arguments. After canceling, adjust the drop position programmatically using the [reorderRows](https://ej2.syncfusion.com/react/documentation/api/treegrid/#reorderrows) method.
 
-In the below example drop action is cancelled and dropped above to target row.
+In the following example, the drop action is canceled and the row is dropped above the target row.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

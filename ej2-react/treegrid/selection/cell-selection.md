@@ -10,14 +10,13 @@ domainurl: ##DomainURL##
 
 # Cell selection in React Treegrid component
 
-Cell Selection can be done through simple Mouse down or Arrow keys(up, down, left and right).
+Cells can be selected using mouse drag or arrow keys (Up, Down, Left, Right).
 
-TreeGrid supports two types of cell selection mode which can be set by using [`selectionSettings.cellSelectionMode`](https://ej2.syncfusion.com/react/documentation/api/treegrid/selectionSettings/#cellselectionmode). They are:
+TreeGrid provides two cell selection modes configured through [selectionSettings.cellSelectionMode](https://ej2.syncfusion.com/react/documentation/api/treegrid/selectionSettings/#cellselectionmode):
 
-* **Flow** - It is set by default.
-Select range of cells between the start index and end index which includes in between cells of rows.
-* **Box** - Select range of cells within the start and end column indexes which includes
-in between cells of rows within the range.
+
+* **Flow** (default): Select range of cells between the start index and end index which includes in between cells of rows.
+* **Box** - Select range of cells within the start and end column indexes which includes in between cells of rows within the range.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -28,4 +27,4 @@ in between cells of rows within the range.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/treegrid/selection-cs1" %}
+{% previewsample "page.domainurl/code-snippet/treegrid/selection-cs1" %}

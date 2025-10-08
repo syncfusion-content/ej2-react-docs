@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Adding header and footer in React Treegrid component | Syncfusion
-description: Learn here all about Adding header and footer in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Adding header and footer in React TreeGrid | Syncfusion
+description: Learn here all about Adding header and footer in Syncfusion React TreeGrid of Syncfusion Essential JS 2 and more.
 control: Adding header and footer 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adding header and footer in React Treegrid component
+# Adding header and footer in React TreeGrid
 
-The excel export provides an option to include header and footer content for exported excel document.
+Excel export supports adding header and footer content to the exported Excel document.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
