@@ -547,7 +547,7 @@ To connect to an OLAP data source that requires authentication, users can provid
 
 Below is an example of how to configure authentication settings in the Pivot Table:
 
-```tsx
+```ts
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { FieldList, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
@@ -611,7 +611,7 @@ SQL Server Analysis Services (SSAS) uses [roles](https://learn.microsoft.com/en-
 
 In the Syncfusion React Pivot Table, you can specify roles using the [`roles`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#roles) property within the [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#datasourcesettings) object. This allows you to provide one or more role names for connecting to an OLAP cube. If you want to use multiple roles, list them as a comma-separated string.
 
-```tsx
+```ts
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';

@@ -313,3 +313,7 @@ The [`created`](https://helpej2.syncfusion.com/react/documentation/api/image-edi
 ### Destroyed event 
 
 The [`destroyed`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#destroyed) event is triggered once the Image Editor component is destroyed or removed from the application. This event serves as a notification that the component and its associated resources have been successfully cleaned up and are no longer active.
+
+## See Also
+
+* [Set a Custom File Name in Save Dialog](https://support.syncfusion.com/kb/article/20962/how-to-set-a-custom-file-name-in-react-image-editor-save-dialog)
