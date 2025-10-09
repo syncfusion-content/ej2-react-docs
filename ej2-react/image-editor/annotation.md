@@ -451,3 +451,9 @@ In the following example, you can use the `drawImage` method in the button click
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/image-editor/default-cs37" %}
+
+## See Also
+
+* [Type Text After Adding Annotation](https://support.syncfusion.com/kb/article/21312/how-to-type-text-after-adding-annotation-in-react-image-editor)
+* [Change 'Enter Text' Placeholder](https://support.syncfusion.com/kb/article/21310/how-to-change-enter-text-placeholder-in-react-image-editor)
+* [Draw a Custom Circle](https://support.syncfusion.com/kb/article/21275/how-to-draw-a-custom-circle-on-an-image-in-react-image-editor)

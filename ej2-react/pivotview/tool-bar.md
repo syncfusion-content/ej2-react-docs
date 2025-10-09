@@ -390,9 +390,9 @@ When you select the **"Save a report"** option from the toolbar, the [saveReport
 
 For example, the report shown in the following code snippet will be passed to the **SaveReport** method along with the report name **"Sample Report"** and saved in the SQL database.
 
-[App.jsx]
+[App.js]
 
-```jsx
+```js
 import React, { Component } from 'react';
 import './index.css';
 import './App.css';
@@ -514,9 +514,10 @@ When you select the dropdown menu item from the toolbar, the [loadReport](https:
 
 For example, if the report name **"Sample Report 1"** is selected from a dropdown menu and passed, the **LoadReport** method will use that name to search for the report in the SQL database, retrieve it, and then load it into the pivot table.
 
-[App.jsx]
+[App.js]
 
-```jsx
+```js
+
 import React, { Component } from 'react';
 import './index.css';
 import './App.css';
@@ -634,9 +635,10 @@ When you select the **"Rename a current report"** option from the toolbar, the [
 
 For example, if we rename the current report from **"Sample Report 1"** to **"Sample Report 2"**, both **"Sample Report 1"** and **"Sample Report 2"** will be passed to the **RenameReport** method, which will rename the current report with the new report name **"Sample Report 2"** in the SQL database.
 
-[App.jsx]
+[App.js]
 
-```jsx
+```js
+
 import React, { Component } from 'react';
 import './index.css';
 import './App.css';
@@ -772,9 +774,10 @@ N> * When a report is removed from a pivot table with only one report, the SQL d
 
 For example, if we delete the current report **"Sample Report 2"** from the pivot table, the current report name **"Sample Report 2"** is passed to the **RemoveReport** method, which allows you to identify and delete the report from the SQL database.
 
-[App.jsx]
+[App.js]
 
-```jsx
+```js
+
 import React, { Component } from 'react';
 import './index.css';
 import './App.css';
