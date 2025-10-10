@@ -55,7 +55,7 @@ TreeGrid supports three selection modes configured via [selectionSettings.mode](
 
 ## Touch interaction
 
-On touch devices, tapping a row selects it. A floating menu ![Multi Row selection](images/selection.jpg) enables multi-row selection. To select multiple rows or cells, tap the menu ![Multi Row or Cells](images/mselection.jpg), then tap the desired targets.
+On touch devices, tapping a row selects it. A floating menu ![Multi Row selection](../images/selection.jpg) enables multi-row selection. To select multiple rows or cells, tap the menu ![Multi Row or Cells](../images/mselection.jpg), then tap the desired targets.
 
 > Multi-selection requires [selectionSettings.type](https://ej2.syncfusion.com/react/documentation/api/treegrid/selectionSettings/#type) set to **Multiple**.
 

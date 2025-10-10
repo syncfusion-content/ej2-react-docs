@@ -70,17 +70,17 @@ Apply filters on initial render by specifying **predicate** objects in [filterSe
 
 Define the operator for each filtered column using the [operator](https://ej2.syncfusion.com/react/documentation/api/grid/predicate/#operator) property in [filterSettings.columns](https://ej2.syncfusion.com/react/documentation/api/treegrid/filterSettings/#columns).
 
-Operator | Description | Supported types
+Operator |Description |Supported types
 -----|-----|-----
-startswith | Checks whether the value begins with the specified value. | String
-endswith | Checks whether the value ends with the specified value. | String
-contains | Checks whether the value contains the specified value. | String
-equal | Checks whether the value is equal to the specified value. | String | Number | Boolean | Date
-notequal | Checks for values not equal to the specified value. | String | Number | Boolean | Date
-greaterthan | Checks whether the value is greater than the specified value. | Number | Date
-greaterthanorequal | Checks whether a value is greater than or equal to the specified value. | Number | Date
-lessthan | Checks whether the value is less than the specified value. | Number | Date
-lessthanorequal | Checks whether the value is less than or equal to the specified value. | Number | Date
+startswith |Checks whether the value begins with the specified value. |String
+endswith |Checks whether the value ends with the specified value. |String
+contains |Checks whether the value contains the specified value. |String
+equal |Checks whether the value is equal to the specified value. |String &#124; Number &#124; Boolean &#124; Date
+notequal |Checks for values not equal to the specified value. |String &#124; Number &#124; Boolean &#124; Date
+greaterthan |Checks whether the value is greater than the specified value. |Number &#124; Date
+greaterthanorequal|Checks whether a value is greater than or equal to the specified value. |Number &#124; Date
+lessthan |Checks whether the value is less than the specified value. |Number &#124; Date
+lessthanorequal |Checks whether the value is less than or equal to the specified value. |Number &#124; Date
 
 > By default, the **filterSettings.columns.operator** value is *equal*.
 

@@ -132,7 +132,7 @@ public int FindChildRecords(int id)
 
 The newly added record is provided in the `value` parameter. The `relationalKey` parameter contains the primary key of the selected record and is used to determine the insert position.
 
-![Insert](images/insert.PNG)
+![Insert](../images/insert.PNG)
 
 ## Update record
 
@@ -157,7 +157,7 @@ public ActionResult Update(TreeGridData value)
 
 The updated record is provided in the `value` parameter.
 
-![Update](images/update.PNG)
+![Update](../images/update.PNG)
 
 ## Delete record
 
@@ -186,11 +186,11 @@ public ActionResult Remove(List<TreeGridData> changed, List<TreeGridData> added,
 
 For single delete, the primary key is provided in the `key` parameter.
 
-![Delete](images/remove.PNG)
+![Delete](../images/remove.PNG)
 
 When deleting a parent record, both parent and child records are provided in the `deleted` parameter.
 
-![Remove](images/delete.PNG)
+![Remove](../images/delete.PNG)
 
 ## Remote save adaptor
 

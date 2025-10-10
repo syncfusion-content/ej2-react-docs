@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Orthogonal connectors in React Diagram component | Syncfusion®
-description: Learn here all about Connectors in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: Orthogonal connectors in React Diagram Component | Syncfusion®
+description: Learn to create, customize, and edit orthogonal connectors in the Syncfusion React Diagram Component. Explore segment editing, avoiding overlaps, and custom styling.
 control: Orthogonal 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Orthogonal Connectors in React EJ2 Diagram control
+# Orthogonal Connectors in React Diagram Component
 
-Orthogonal segments is used to create segments that are perpendicular to each other.
+Orthogonal connectors use segments that are always perpendicular to each other, which is ideal for creating structured layouts in flowcharts or organizational charts.
 
-Set the segment [`type`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/#type) as orthogonal to create a default orthogonal segment and need to specify [`type`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/#type). The following code example illustrates how to create a default orthogonal segment.
+To create an orthogonal connector, set its [`type`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/#type) property to **Orthogonal**. The following code example illustrates how to create a default orthogonal connector.
 
 Multiple segments can be defined one after another. To create a connector with multiple segments, define and add the segments to [`connector.segments`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/#segments) collection. The following code example illustrates how to create a connector with multiple segments.
 
@@ -31,7 +31,7 @@ The [`length`](https://helpej2.syncfusion.com/react/documentation/api/diagram/or
 
 N> You need to mention the segment type as same as what you mentioned in connector type. There should be no contradiction between connector type and segment type.
 
-## Orthogonal segment editing
+## Orthogonal Segment Editing
 
 * Orthogonal thumbs allow you to adjust the length of adjacent segments by clicking and dragging them.
 * When necessary, some segments are added or removed automatically, while dragging the segment. 
@@ -50,9 +50,9 @@ N> You need to mention the segment type as same as what you mentioned in connect
 
 ![Orthogonal Segment edit Gif](images/orthoSegEdit.gif)
 
-## Avoid overlapping
+## Avoid Overlapping
 
-Orthogonal segments are automatically re-routed, in order to avoid overlapping with the source and target nodes. The following preview illustrates how orthogonal segments are re-routed.
+Orthogonal segments automatically reroute themselves to avoid overlapping with their connected source and target nodes. The following example illustrates how an orthogonal connector adjusts its path when a connected node is moved.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -65,9 +65,9 @@ Orthogonal segments are automatically re-routed, in order to avoid overlapping w
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5ConnectorsOverlapping-cs1" %}
 
-## How to customize Orthogonal Segment Thumb Shape
+## How to Customize Orthogonal Segment Thumb Shape
 
-The orthogonal connector can have any number of segments in between the source and the target point. Segments are rendered with the circle shape by default. The [`segmentThumbShape`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#segmentthumbshape) property allows you to change the default shape of the segment thumb. The following predefined shapes are provided:
+The thumbs used to edit orthogonal segments are rendered as a `Circle` by default. You can change this shape using the diagram's[`segmentThumbShape`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#segmentthumbshape) property. The following predefined shapes are available:
 
 | Shape name | Shape |
 |-------- | -------- |
@@ -84,7 +84,7 @@ The orthogonal connector can have any number of segments in between the source a
 | OutdentedArrow | ![OutdentedArrow](images/OutdentedArrow.png) |
 | DoubleArrow |![DoubleArrow](images/DoubleArrow.png) |
 
-You can customize the style of the thumb shape by overriding the class e-orthogonal-thumb.
+You can also customize the style of the thumb shape by overriding the `e-orthogonal-thumb` CSS class.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -99,7 +99,7 @@ You can customize the style of the thumb shape by overriding the class e-orthogo
 
 ![Segment Thumb Shape](images/thumbshape.png)
 
-Use the following CSS to customize the segment thumb shape.
+Use the following CSS to customize the segment thumb's appearance.
 
 ```scss
 
@@ -117,9 +117,9 @@ Use the following CSS to customize the segment thumb shape.
 
 ## How to customize Orthogonal Segment Thumb Size
 
-Orthogonal segment thumbs default to size 10. This can be adjusted globally or for individual connectors using the [`segmentThumbSize`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#segmentthumbsize) property.
-To change the thumb size for all Orthogonal connectors, set the [`segmentThumbSize`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#segmentthumbsize) property in the diagram’s model.
-To customize the thumb size for a specific connector, disable the [`InheritSegmentThumbSize`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connectorConstraints) constraint, then set the desired [`segmentThumbSize`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#segmentthumbsize). 
+By default, orthogonal segment thumbs have a width and height of 10px. This can be customized for all connectors or for individual ones using the[`segmentThumbSize`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#segmentthumbsize) property.
+To change the thumb size for all orthogonal connectors in a diagram, set the `segmentThumbSize` property in the diagram model.
+To customize the thumb size for a specific connector, you must first disable its `InheritSegmentThumbSize`  property. Then, you can set the connector's unique  `segmentThumbSize` value. 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -131,5 +131,3 @@ To customize the thumb size for a specific connector, disable the [`InheritSegme
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5ConnectorsOrthoThumbSize-cs1" %}
-
-

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Bezier connectors in React Diagram component | Syncfusion®
-description: Learn here all about Connectors in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: Bezier Connectors in React Diagram Component | Syncfusion®
+description: Learn to create, edit, and customize Bezier connectors in the Syncfusion React Diagram. Master smooth, interactive, and precise curved connections.
 control: Connectors 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bezier Connectors in EJ2 React Diagram control
+# Bezier Connectors in Diagram Component
 
-Bezier segments are used to create curve segments and the curves are configurable either with the control points or with vectors.
+Bezier segments create curved paths whose shape can be configured using either control points or vectors.
 
-To create a bezier segment, the [`segment.type`](https://ej2.syncfusion.com/react/documentation/api/diagram/segments) is set as `bezier` and need to specify [`type`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/#type) for the connector. 
+To create a bezier segment, the [`segment.type`](https://ej2.syncfusion.com/react/documentation/api/diagram/segments) is set as **bezier** and need to specify [`type`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/#type) for the connector. 
 
 The following code example illustrates how to create a default bezier segment.
 
@@ -27,23 +27,22 @@ The following code example illustrates how to create a default bezier segment.
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5ConnectorsBezier-cs1" %}
 
-## Bezier segment editing
+## Bezier Segment Editing
 
-* A segment control point of the Bezier connector is used to change the bezier vectors and points of the connector.
+The shape of a Bezier connector can be interactively modified by dragging its segment control points. These points, also known as thumbs, appear along the connector and allow you to adjust the curve's vectors and points.
 
 ![Bezier Segment edit Gif](images/Bezier-control.gif)
 
 
 ### Control Points
 
-* Bezier control points can be positioned in two ways.
+The curvature of a Bezier segment is determined by its control points. There are two primary ways to define the position of these control points:
 
-* When setting control point positions using the The [`point1`](https://helpej2.syncfusion.com/react/documentation/api/diagram/bezierSegment/#point1) and [`point2`](https://helpej2.syncfusion.com/react/documentation/api/diagram/bezierSegment/#point2)  properties, the control point remains fixed in its set position while dragging connector end points.
-* When setting control point positions using the [`vector1`](https://helpej2.syncfusion.com/react/documentation/api/diagram/bezierSegment/#vector1) and [`vector2`](https://helpej2.syncfusion.com/react/documentation/api/diagram/bezierSegment/#vector2) properties, the control point dynamically adjusts to maintain the angle and distance originally set while moving the connector end points.
+*   **Fixed Positioning (`point1`, `point2`)**: When you use the [`point1`](https://helpej2.syncfusion.com/react/documentation/api/diagram/bezierSegment/#point1) and [`point2`](https://helpej2.syncfusion.com/react/documentation/api/diagram/bezierSegment/#point2) properties, the control points are set at fixed coordinates. These points remain stationary even when the connector's start or end points are moved. This is useful for creating static, predictable curves.
 
 #### Point
 
-The [`point1`](https://helpej2.syncfusion.com/react/documentation/api/diagram/bezierSegment/#point1) and [`point2`](https://helpej2.syncfusion.com/react/documentation/api/diagram/bezierSegment/#point2) properties of bezier segment enable you to set the control points. The following code example illustrates how to configure the bezier segments with control points.
+The `point1 ` and `point2`(https://helpej2.syncfusion.com/react/documentation/api/diagram/bezierSegment/#point2) properties of bezier segment enable you to set the control points. The following code example illustrates how to configure the bezier segments with control points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -75,9 +74,9 @@ The [`vector1`](https://helpej2.syncfusion.com/react/documentation/api/diagram/b
 
 ![Bezier Control point set by vector1 and vector1](images/Bezier-vector1.gif)
 
-### Avoid overlapping with bezier
+### Avoid Overlapping with Bezier
 
-By default, when there are no segments defined for a bezier connector, the bezier segments will be created automatically and routed in such a way that avoids overlapping with the source and target nodes.
+By default, if no segments are explicitly defined for a Bezier connector, the Diagram component automatically generates segments. This routing logic is designed to prevent the connector from overlapping with its connected source and target nodes, ensuring a clean and readable layout.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -90,15 +89,19 @@ By default, when there are no segments defined for a bezier connector, the bezie
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5ConnectorBezierAvoidOverlapping-cs1" %}
 
-### Allow segment reset.
+### Allow Segment Reset.
 
-This feature allows users to choose whether to reset the control points of bezier segments when moving the source or target node. This decision empowers users to maintain control over the positioning of bezier curves, enhancing flexibility and precision in diagram editing.
+The `allowSegmentReset` property gives you control over whether a Bezier segment’s control points should be reset to their default positions when the source or target node is moved. This provides greater flexibility in maintaining custom curve shapes during diagram editing.
 
-#### With allow segment reset as true.
+#### `allowSegmentReset` is **true** (Default)
+
+When `allowSegmentReset` is **true**, moving a connected node will reset the Bezier control points, recalculating the curve.
 
 ![Allow Segment rest true](images/allowsegReset-true.gif)
 
-##### With allow segment reset as false.
+#### `allowSegmentReset` is **false**
+
+When `allowSegmentReset` is **false**, the custom positions of the control points are preserved when a connected node is moved, maintaining the user-defined curve.
 
 ![Allow Segment rest false](images/allowsegReset-false.gif)
 
@@ -113,11 +116,11 @@ This feature allows users to choose whether to reset the control points of bezie
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5Segmentreset-cs1" %}
 
-### How to customize Bezier Segment Thumb Size
+### How to Customize Bezier Segment Thumb Size
 
-Bezier segment thumbs default to size 10. This can be adjusted globally or for individual connectors using the [`segmentThumbSize`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#segmentthumbsize) property.
-To change the thumb size for all Bezier connectors, set the [`segmentThumbSize`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#segmentthumbsize) property in the diagram’s model.
-To customize the thumb size for a specific connector, disable the [`InheritSegmentThumbSize`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connectorConstraints/) constraint, then set the desired [`segmentThumbSize`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#segmentthumbsize).
+The interactive thumbs used to edit Bezier segments have a default size of 10×10 pixels. This size can be customized either globally for all connectors or individually for each connector using the [`segmentThumbSize`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#segmentthumbsize) property.
+To change the thumb size for all Bezier connectors, set the `segmentThumbSize` property in the diagram’s model.
+To customize the thumb size for a specific connector, disable the [`InheritSegmentThumbSize`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connectorConstraints/) constraint, then set the desired `segmentThumbSize.
 
 
 {% tabs %}

@@ -12,8 +12,7 @@ domainurl: ##DomainURL##
 
 Search records by calling the [search](https://ej2.syncfusion.com/react/documentation/api/treegrid/#search) method with a search key. A search text box can also be placed in the TreeGrid toolbar by adding the search item to the [toolbar](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbar).
 
-To enable searching, inject the **Filter**
- module into the TreeGrid.
+To enable searching, inject the **Filter** module into the TreeGrid.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -28,7 +27,7 @@ To enable searching, inject the **Filter**
 
 ## Initial search
 
-Apply search on initial render by setting [fields](https://ej2.syncfusion.com/react/documentation/api/treegrid/searchSettings/#fields), `operator`, [key](https://ej2.syncfusion.com/react/documentation/api/treegrid/searchSettings/#key), and [ignoreCase](https://ej2.syncfusion.com/react/documentation/api/treegrid/searchSettings/#ignorecase) in [searchSettings](https://ej2.syncfusion.com/react/documentation/api/treegrid/#searchsettings).
+Apply search on initial render by setting [fields](https://ej2.syncfusion.com/react/documentation/api/treegrid/searchSettings/#fields), [operator](https://ej2.syncfusion.com/react/documentation/api/treegrid/searchSettings/#operator), [key](https://ej2.syncfusion.com/react/documentation/api/treegrid/searchSettings/#key), and [ignoreCase](https://ej2.syncfusion.com/react/documentation/api/treegrid/searchSettings/#ignorecase) in [searchSettings](https://ej2.syncfusion.com/react/documentation/api/treegrid/#searchsettings).
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -72,7 +71,7 @@ Trigger a search from external UI by invoking the [search](https://ej2.syncfusio
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/treegrid/searching-cs3" %}}
+ {% previewsample "page.domainurl/code-snippet/treegrid/searching-cs3" %}
 
 ## Search specific columns
 
