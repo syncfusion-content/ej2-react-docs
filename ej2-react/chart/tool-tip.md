@@ -212,5 +212,6 @@ The [`showNearestTooltip`](https://ej2.syncfusion.com/react/documentation/api/ch
 
 ## See also
 
-* [Format the tooltip value](./how-to/tool-tip-format)
-* [Create a table in tooltip](./how-to/tool-tip-table)
+* [Format the Tooltip Value](./how-to/tool-tip-format)
+* [Create a Table in Tooltip](./how-to/tool-tip-table)
+* [Show Tooltip Template on Button Click](https://support.syncfusion.com/kb/article/21534/how-to-show-tooltip-template-on-button-click-using-react-chart)

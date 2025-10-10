@@ -406,5 +406,6 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 ## See also
 
-* [Data label](./data-labels/)
-* [Tooltip](./tool-tip/)
+* [Data label](./data-labels)
+* [Tooltip](./tool-tip)
+* [Color a Particular Bar](https://support.syncfusion.com/kb/article/21515/how-to-color-a-particular-bar-in-react-chart-component)
