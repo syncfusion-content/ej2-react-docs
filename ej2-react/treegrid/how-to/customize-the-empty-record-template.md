@@ -11,6 +11,7 @@ domainurl: ##DomainURL##
 # Customize the empty record template in React TreeGrid
 
 The empty record template feature in the TreeGrid allows custom content such as images, text, or other components when the TreeGrid does not contain any records to display. This feature replaces the default message of **No records to display** typically shown in the TreeGrid.
+
 To activate this feature, set the `emptyRecordTemplate` property of the TreeGrid. The `emptyRecordTemplate` property accepts an HTML element or a function that returns an HTML element.
 In the following example, an image and text are rendered as a template to indicate that the TreeGrid has no data to display.
 

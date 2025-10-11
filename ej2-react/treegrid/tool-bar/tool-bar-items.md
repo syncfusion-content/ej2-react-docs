@@ -14,18 +14,19 @@ domainurl: ##DomainURL##
 Built-in toolbar items execute standard TreeGrid actions and can be added by defining the [toolbar](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbar) property as a collection of built-in items. Each item renders as a button with an icon and text.
 
 The following table lists built-in toolbar items and their actions.
+
 | Built-in Toolbar Items | Actions |
 |------------------------|---------|
 | ExpandAll | Expands all rows. |
 | CollapseAll | Collapses all rows. |
 | Add | Adds a new record. |
 | Edit | Edits the selected record. |
-| Update | Updates the edited record. |
+| Update | Saves the current edit. |
 | Delete | Deletes the selected record. |
 | Cancel | Cancels the edit state. |
-| Search | Searches records by the given key. |
+| Search | Searches records by a given key. |
 | Print | Prints the TreeGrid. |
-| ColumnChooser | Opens a dialog to select column visibility.|
+| ColumnChooser | Opens a dialog to manage column visibility. |
 | ExcelExport | Exports the TreeGrid to Excel. |
 | PdfExport | Exports the TreeGrid to PDF. |
 | WordExport | Exports the TreeGrid to Word. |

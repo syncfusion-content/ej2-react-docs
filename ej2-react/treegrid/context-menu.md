@@ -14,26 +14,27 @@ The TreeGrid displays a context menu on right-click. Enable this feature by conf
 To use the context menu, inject the **ContextMenu** module in the TreeGrid.
 
 The default items are listed below.
-Items | Description
-----|----
-**AutoFit** | Auto-fit the current column.
-**AutoFitAll** | Auto-fit all columns.
-**Edit** | Edit the current record.
-**Delete** | Delete the current record.
-**Save** | Save the edited record.
-**Cancel** | Cancel the edited state.
-**PdfExport** | Export TreeGrid data as a PDF document.
-**ExcelExport** | Export TreeGrid data as an Excel document.
-**CsvExport** | Export TreeGrid data as a CSV document.
-**SortAscending** | Sort the current column in ascending order.
-**SortDescending** | Sort the current column in descending order.
-**FirstPage** | Go to the first page.
-**PrevPage** | Go to the previous page.
-**LastPage** | Go to the last page.
-**NextPage** | Go to the next page.
-**AddRow** | Add a new row to the TreeGrid.
-**Indent** | Indent the record by one hierarchy level.
-**Outdent** | Outdent the record by one hierarchy level.
+
+| Items | Description |
+|-------|-------------|
+| AutoFit | Auto-fit the current column. |
+| AutoFitAll | Auto-fit all columns. |
+| Edit | Edit the current record. |
+| Delete | Delete the current record. |
+| Save | Save the edited record. |
+| Cancel | Cancel the edited state. |
+| PdfExport | Export TreeGrid data as a PDF document. |
+| ExcelExport | Export TreeGrid data as an Excel document. |
+| CsvExport | Export TreeGrid data as a CSV document. |
+| SortAscending | Sort the current column in ascending order. |
+| SortDescending | Sort the current column in descending order. |
+| FirstPage | Go to the first page. |
+| PrevPage | Go to the previous page. |
+| LastPage | Go to the last page. |
+| NextPage | Go to the next page. |
+| AddRow | Add a new row to the TreeGrid. |
+| Indent | Indent the record by one hierarchy level. |
+| Outdent | Outdent the record by one hierarchy level. |
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

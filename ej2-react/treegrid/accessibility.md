@@ -39,6 +39,7 @@ The accessibility compliance for the TreeGrid component is outlined below.
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
 ## WAI-ARIA attributes
+
 The TreeGrid component follows [WAI‑ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/) patterns. The following ARIA attributes are used in the TreeGrid component:
 
 | Attributes | Purpose |
@@ -97,6 +98,7 @@ Interaction Keys | Description
 ## Ensuring accessibility
 
 Accessibility is validated using automated tools such as [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core). The following sample demonstrates TreeGrid accessibility. Open the [sample](https://ej2.syncfusion.com/accessibility/tree-grid.html) in a new window to evaluate accessibility with these tools.
+
 {% previewsample "https://ej2.syncfusion.com/accessibility/tree-grid.html" %}
 
 ## See also

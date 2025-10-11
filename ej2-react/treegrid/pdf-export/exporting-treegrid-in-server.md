@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Exporting TreeGrid in server in React TreeGrid | Syncfusion
+title: PDF Exporting TreeGrid in server in React TreeGrid | Syncfusion
 description: Learn here all about Exporting TreeGrid in server in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Exporting TreeGrid in server 
@@ -96,6 +96,7 @@ The `PdfHeaderCellRendering` event is triggered while creating a column header f
 In the following demo, the `DrawString` method from `Graphics` rotates the header text of the column header inside the `BeginCellLayout` event handler.
 
 > PDF export does not support rotating the column header on the client side.
+
 ```ts
 public IActionResult PdfExport(string treeGridModel)
 {
