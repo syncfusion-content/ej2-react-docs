@@ -12,8 +12,8 @@ domainurl: ##DomainURL##
 
 ## Localization
 
-The [`Localization`](../common/localization) library allows you to localize default text content of the TreeGrid. The treegrid component has static text on some features (like toolbar area text, filter menu text, pager information text, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the
-[`locale`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#locale) value and translation object.
+The [Localization](../common/localization) library allows you to localize default text content of the TreeGrid. The treegrid component has static text on some features (like toolbar area text, filter menu text, pager information text, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the
+[locale](https://ej2.syncfusion.com/react/documentation/api/treegrid/#locale) value and translation object.
 
 The following list of properties and its values are used in the treegrid.
 
@@ -27,7 +27,7 @@ CollapseAll | Collapse All
 RowIndent | Indent
 RowOutdent | Outdent
 InvalidFilterMessage | Invalid Filter Data
-FilterbarTitle | \s filter bar cell
+FilterbarTitle | Filter bar cell
 Add | Add
 Edit| Edit
 Cancel| Cancel
@@ -109,7 +109,7 @@ All | All
 
 ### Loading translations
 
-To load translation object in an application, use [`load`](https://ej2.syncfusion.com/documentation/api/base/l10n/#load) function of the [`L10n`](https://ej2.syncfusion.com/documentation/api/base/l10n/) class.
+To load translation object in an application, use [load](https://ej2.syncfusion.com/documentation/api/base/l10n/#load) function of the [L10n](https://ej2.syncfusion.com/documentation/api/base/l10n/) class.
 
 The following example demonstrates the TreeGrid in *Deutsch* culture.
 
@@ -124,7 +124,7 @@ The following example demonstrates the TreeGrid in *Deutsch* culture.
 
  {% previewsample "page.domainurl/code-snippet/treegrid/internationalization-cs1" %}
 
- ### Localization of dependent components in TreeGrid
+### Localization of dependent components in TreeGrid
 
 When localizing TreeGrid, it's important to include dependent components like DatePicker, Form Validator, and Grid, as they have their own static text that requires localization. Follow these steps to localize these components:
 
@@ -164,7 +164,7 @@ When localizing TreeGrid, it's important to include dependent components like Da
 
 
 
-    Below is an example JSON snippet consolidating the localization keys for dependent components used in TreeGrid using  [`load`](https://ej2.syncfusion.com/documentation/api/base/l10n/#load) function of the [`L10n`](https://ej2.syncfusion.com/documentation/api/base/l10n/) class and update the `locale` property of treegrid with the culture name used in the `load` function:
+    Below is an example JSON snippet consolidating the localization keys for dependent components used in TreeGrid using  [load](https://ej2.syncfusion.com/documentation/api/base/l10n/#load) function of the [L10n](https://ej2.syncfusion.com/documentation/api/base/l10n/) class and update the `locale` property of treegrid with the culture name used in the `load` function:
 
     ```json
     L10n.load({
@@ -195,7 +195,7 @@ When localizing TreeGrid, it's important to include dependent components like Da
 
 ## Internationalization
 
-The [`Internationalization`](../common/internationalization/) library is used to globalize number, date, and time values in treegrid component using format strings in the [`columns.format`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#format).
+The [Internationalization](../common/internationalization) library is used to globalize number, date, and time values in treegrid component using format strings in the [columns.format](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#format).
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -209,11 +209,11 @@ The [`Internationalization`](../common/internationalization/) library is used to
  {% previewsample "page.domainurl/code-snippet/treegrid/internationalization-cs2" %}
 
 > * In the above sample, *Price* column is formatted by **NumberFormatOptions**.
-> * By default, [`locale`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#locale) value is *en-US*. If you want to change the *en-US* culture to a different culture, you have to change  the [`locale`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#locale) accordingly.
+> * By default, [locale](https://ej2.syncfusion.com/react/documentation/api/treegrid/#locale) value is *en-US*. If you want to change the *en-US* culture to a different culture, you have to change  the [locale](https://ej2.syncfusion.com/react/documentation/api/treegrid/#locale) accordingly.
 
 ## Right to left (RTL)
 
-RTL provides an option to switch the text direction and layout of the TreeGrid component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable RTL Grid, set the [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#enablertl) to **true**.
+RTL provides an option to switch the text direction and layout of the TreeGrid component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable RTL Grid, set the [enableRtl](https://ej2.syncfusion.com/react/documentation/api/treegrid/#enablertl) to **true**.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -231,4 +231,4 @@ RTL provides an option to switch the text direction and layout of the TreeGrid c
 * [Internationalization](../common/internationalization)
 * [Localization](../common/localization)
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> You can refer to our [React Tree Grid](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [React Tree Grid example](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.

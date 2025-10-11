@@ -53,10 +53,10 @@ To drag and drop between two TreeGrids, enable [allowRowDragAndDrop](https://ej2
 
 The following events are triggered during row drag and drop:
 
-[rowDragStartHelper](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowdragstarthelper) - Triggers when the drag icon or row is clicked; customize the drag element based on criteria.<br/>
-[rowDragStart](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowdragstart) - Triggers when a row drag starts.<br/>
-[rowDrag](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowdrag) - Triggers while a row is being dragged.<br/>
-[rowDrop](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowdrop) - Triggers when the dragged element is dropped on the target element.<br/>
+* [rowDragStartHelper](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowdragstarthelper) - Triggers when the drag icon or row is clicked; customize the drag element based on criteria.
+* [rowDragStart](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowdragstart) - Triggers when a row drag starts.
+* [rowDrag](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowdrag) - Triggers while a row is being dragged.
+* [rowDrop](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowdrop) - Triggers when the dragged element is dropped on the target element.
 
 ## Prevent reordering a row as child to another row
 

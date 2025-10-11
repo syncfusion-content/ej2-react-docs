@@ -30,7 +30,7 @@ To use column resizing, inject the **Resize** module in the TreeGrid.
 
 ## Min and max width
 
-Resizing can be constrained using [columns.minWidth`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#minwidth) and [columns.maxWidth](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#maxwidth).
+Resizing can be constrained using [columns.minWidth](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#minwidth) and [columns.maxWidth](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#maxwidth).
 
 In the following sample, minimum and maximum widths are defined for the **Duration** and **Task Name** columns.
 
