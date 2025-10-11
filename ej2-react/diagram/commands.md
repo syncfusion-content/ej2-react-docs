@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Commands in React Diagram component | Syncfusion®
-description: Learn here all about Commands in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: Commands in React Diagram Component | Syncfusion®
+description: Learn here all about Commands in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
 control: Commands 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Commands in React Diagram component
+# Commands in React Diagram Component
 
 <!-- markdownlint-disable MD010 -->
 
 The commands in diagram control are used to perform various interactions within the diagram when called. Several commands are available in the diagram, as follows:
 
 * Alignment commands
-* Spacing commands
+* Distribute commands
 * Sizing commands
 * Clipboard commands
 * Grouping commands
@@ -25,9 +25,9 @@ The commands in diagram control are used to perform various interactions within 
 * FitToPage commands
 * Undo/Redo commands
 
-## Align commands
+## Alignment Commands
 
- The alignment commands enable you to align the selected or defined objects such as nodes and connectors with respect to the selection boundary. Refer to [`align`](https://ej2.syncfusion.com/react/documentation/api/diagram#align) commands which shows how to use align methods in the diagram.
+The alignment command enables you to align selected or defined objects, such as nodes and connectors, with respect to the selection boundary or the first selected object. The [`align`](https://ej2.syncfusion.com/react/documentation/api/diagram#align) method parameters are explained below.
 
 ### Alignment Options
 
@@ -46,17 +46,17 @@ The [`Alignment Options`](https://ej2.syncfusion.com/react/documentation/api/dia
 
 ### Objects 
 
-Defines the objects to be aligned. This is an optional parameter. By default, all the nodes and connectors in the selected region of the diagram gets aligned.
+Defines the objects to be aligned. This is an optional parameter. By default, all the nodes and connectors in the selected region of the diagram get aligned.
 
 ### Alignment Mode
 
-[`Alignment Mode`](https://ej2.syncfusion.com/react/documentation/api/diagram/alignmentMode/) defines the specific mode, with respect to which the objects to be aligned. This is an optional parameter. The default alignment mode is `Object`. The accepted values of the argument "alignment mode" are as follows.
+[`Alignment Mode`](https://ej2.syncfusion.com/react/documentation/api/diagram/alignmentMode/)  defines the specific mode with respect to which the objects are aligned. This is an optional parameter. The default alignment mode is **Object**. The accepted values of the argument "alignment mode" are as follows.
 
-The below table shows the alignment as `Left` for different alignment modes.
+The table below shows the alignment as **Left** for different alignment modes.
 
 |Nodes before alignment|Alignment mode|Description|Output image|
 |----|----|----|----|
-|![Align original](images/alignOrginal.png)|Object (Default)|Aligns the objects based on the bounds of first object in the selected list.|![Align Object](images/alignObject.png)|
+|![Align original](images/alignOrginal.png)|Object (Default)|Aligns the objects based on the bounds of the first object in the selected list.|![Align Object](images/alignObject.png)|
 |![Align original](images/alignOrginal.png)|Selector|Aligns the objects based on the selection boundary.|![Align Selector](images/alignSelector.png)|
 
 
@@ -75,13 +75,13 @@ The following code example illustrates how to align all the selected objects at 
 
 ![Align Sample](images/Commands_img1.png)
 
-## Distribute commands
+## Distribute Commands
 
-The [`distribute`](https://ej2.syncfusion.com/react/documentation/api/diagram#distribute)method enable you to place the selected objects on the page at equal intervals from each other. The selected objects are equally spaced within the selection boundary. The [`distribute`](https://ej2.syncfusion.com/react/documentation/api/diagram#distribute) method parameters are explained below.
+The [`distribute`](https://ej2.syncfusion.com/react/documentation/api/diagram#distribute)method enable you to place the selected objects on the page at equal intervals from each other. The selected objects are equally spaced within the selection boundary. The `distribute` method parameters are explained below.
 
-### Distribute options
+### Distribute Options
 
-The factor to distribute the shapes [`DistributeOptions`](https://ej2.syncfusion.com/react/documentation/api/diagram/distributeOptions#DistributeOptions) are listed as follows:
+The factors for distributing shapes using  [`DistributeOptions`](https://ej2.syncfusion.com/react/documentation/api/diagram/distributeOptions#DistributeOptions) are listed as follows:
 
 |Distribute option| Description|
 |----|----|
@@ -96,9 +96,9 @@ The factor to distribute the shapes [`DistributeOptions`](https://ej2.syncfusion
 
 ### Objects 
 
-Defines the objects to be distributed. This is an optional parameter. By default, all the nodes and connectors in the selected region of the diagram gets distributed.
+Defines the objects to be distributed. This is an optional parameter. By default, all the nodes and connectors in the selected region of the diagram get distributed.
 
-The following code example illustrates how the nodes are distributed using the `RightToLeft` option.
+The following code example illustrates how the nodes are distributed using the **RightToLeft** option.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -113,11 +113,11 @@ The following code example illustrates how the nodes are distributed using the `
 
 ![Distribute Sample](images/Commands_img2.png)
 
-## Sizing commands
+## Sizing Commands
 
-The [`sameSize`](https://ej2.syncfusion.com/react/documentation/api/diagram/#samesize) command enables you to size all selected nodes to match the size of the first selected object or the first node in the objects collection you provide as the second parameter. The parameters for the [`sameSize`](https://ej2.syncfusion.com/react/documentation/api/diagram/#samesize) method are explained below.
+The [`sameSize`](https://ej2.syncfusion.com/react/documentation/api/diagram/#samesize) command enables you to size all selected nodes to match the size of the first selected object or the first node in the objects collection you provide as the second parameter. The parameters for the `sameSize` method are explained below.
 
-### Sizing options
+### Sizing Options
 
 [`SizingOptions`](https://ej2.syncfusion.com/react/documentation/api/diagram/sizingOptions) include:
 
@@ -146,18 +146,17 @@ The following code example illustrates how to execute the size commands.
 
 ![Sizing Sample](images/Commands_img3.png)
 
-## Clipboard commands
+## Clipboard Commands
 
-
-Clipboard commands are used to cut, copy, or paste selected elements in the diagram using the [`cut`](https://ej2.syncfusion.com/react/documentation/api/diagram#cut), [`copy`](https://ej2.syncfusion.com/react/documentation/api/diagram#copy), [`paste`](https://ej2.syncfusion.com/react/documentation/api/diagram#paste) methods. You can also use keyboard shortcuts for these actions. For detailed information on using these methods refer the below table.
+Clipboard commands are used to cut, copy, or paste selected elements in the diagram using the [`cut`](https://ej2.syncfusion.com/react/documentation/api/diagram#cut), [`copy`](https://ej2.syncfusion.com/react/documentation/api/diagram#copy), and [`paste`](https://ej2.syncfusion.com/react/documentation/api/diagram#paste) methods. You can also use keyboard shortcuts for these actions. For detailed information on using these methods refer to the table below.
 
 | Command (Shortcut key) | Description |
 |---------|-------------|
-| `Cut` (CTRL+X)  | Removes the selected elements from the diagram and places them onto the diagram’s clipboard. This operation is performed using the [`cut`](https://ej2.syncfusion.com/react/documentation/api/diagram#cut)  method. |
-| `Copy`(CTRL+C)  | Duplicates the selected elements and places them onto the diagram’s clipboard without removing them from their original location. Use the [`copy`](https://ej2.syncfusion.com/react/documentation/api/diagram#copy) method for this operation. |
-| `Paste`(CTRL+V) | Inserts the elements stored on the diagram’s clipboard (nodes and connectors) into the diagram. This can be done using the [`paste`](https://ej2.syncfusion.com/react/documentation/api/diagram#paste) method. |
+| `Cut` (CTRL+X)  | Removes the selected elements from the diagram and places them onto the diagram’s clipboard. This operation is performed using the `cut`  method. |
+| `Copy`(CTRL+C)  | Duplicates the selected elements and places them onto the diagram’s clipboard without removing them from their original location. Use the `copy` method for this operation. |
+| `Paste`(CTRL+V) | Inserts the elements stored on the diagram’s clipboard (nodes and connectors) into the diagram. This can be done using the `paste` method. |
 
-The [`paste`](https://ej2.syncfusion.com/react/documentation/api/diagram#paste) method optionally accepts a collection of nodes or connectors to be added to the diagram.
+The `paste` method optionally accepts a collection of nodes or connectors to be added to the diagram.
 
 The following code illustrates how to execute the clipboard commands.
 
@@ -172,14 +171,14 @@ The following code illustrates how to execute the clipboard commands.
 
  {% previewsample "page.domainurl/code-snippet/diagram/commands/es5clipboard-cs1" %}
 
-## Grouping commands
+## Grouping Commands
 
-Grouping Commands are used to group or ungroup selected elements in the diagram. Grouping commands help in managing and organizing multiple elements by combining them into a single group or separating them into individual elements. You can also use keyboard shortcuts for these actions. The following table provides more details on these commands:
+Grouping commands are used to group or ungroup selected elements in the diagram. Grouping commands help in managing and organizing multiple elements by combining them into a single group or separating them into individual elements. You can also use keyboard shortcuts for these actions. The following table provides more details on these commands:
 
 | Commands (Shortcut key) | Description|
 |----|----|
 | [`Group`](https://ej2.syncfusion.com/react/documentation/api/diagram#group) (CTRL+G) | Combines the selected nodes and connectors into a single group, allowing you to move, resize, or apply other operations to all grouped elements as a unit. |
-| [`Ungroup`](https://ej2.syncfusion.com/react/documentation/api/diagram#ungroup) (CTRL+Shift+U) | Splits a previously grouped set of nodes and connectors into individual elements, enabling you to modify or manipulate them separately.            |
+| [`Ungroup`](https://ej2.syncfusion.com/react/documentation/api/diagram#ungroup) (CTRL+Shift+U) | Splits a previously grouped set of nodes and connectors into individual elements, enabling you to modify or manipulate them separately. |
 
 The following code examples demonstrate how to use the grouping commands in diagram:
 
@@ -194,9 +193,9 @@ The following code examples demonstrate how to use the grouping commands in diag
 
  {% previewsample "page.domainurl/code-snippet/diagram/commands/es5grouping-cs1" %}
 
-## Rotate commands
+## Rotate Commands
 
-The [`rotate`](https://ej2.syncfusion.com/react/documentation/api/diagram/#rotate) commands in the diagram allow users to rotate selected elements by specified angles. These commands are useful for adjusting the rotate angle of nodes or shapes within the diagram.
+The [`rotate`](https://ej2.syncfusion.com/react/documentation/api/diagram/#rotate) commands in the diagram allow users to rotate selected elements by specified angles. These commands are useful for adjusting the rotation angle of nodes or shapes within the diagram.
 
 | Parameter | Type | Description |
 |----------|-------|-------------|
@@ -205,7 +204,7 @@ The [`rotate`](https://ej2.syncfusion.com/react/documentation/api/diagram/#rotat
 | pivot (optional)   | PointModel| The reference point with respect to which the objects will be rotated. |
 | rotateUsingHandle (optional) | boolean | Whether to rotate using the handle. |
 
-You can also use CTRL+R to rotate clockwise and CTRL+L to rotate anti-clockwise. The following example shows how to rotate nodes in clockwise and anti-clockwise direction.
+You can also use CTRL+R to rotate clockwise and CTRL+L to rotate anti-clockwise. The following example shows how to rotate nodes in clockwise and anti-clockwise directions.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -218,11 +217,11 @@ You can also use CTRL+R to rotate clockwise and CTRL+L to rotate anti-clockwise.
 
  {% previewsample "page.domainurl/code-snippet/diagram/commands/rotate-cs1" %}
 
-## Z-Order command
+## Z-Order Command
 
-**Z-Order commands** enable you to visually arrange the selected objects such as nodes and connectors on the page.
+**Z-Order Commands** enable you to visually arrange the selected objects such as nodes and connectors on the diagram page.
 
-### Bring To Front command
+### Bring To Front Command
 
 The [`bringToFront`](https://ej2.syncfusion.com/react/documentation/api/diagram/#bringtofront)command moves the selected element to the front, placing it above all other elements in the diagram. The following code illustrates how to use the `bringToFront` command.
 
@@ -237,9 +236,9 @@ The [`bringToFront`](https://ej2.syncfusion.com/react/documentation/api/diagram/
 
  {% previewsample "page.domainurl/code-snippet/diagram/commands/es5bringfront-cs1" %}
 
-### Send To Back command
+### Send To Back Command
 
-The [`sendToBack`](https://ej2.syncfusion.com/react/documentation/api/diagram/#sendtoback) command moves the selected element to the back, placing it behind all other elements in the diagram. The following code illustrates how to use the `sendToBack` command.
+The [`sendToBack`](https://ej2.syncfusion.com/react/documentation/api/diagram/#sendtoback) command visually moves the selected element behind all the other overlapped elements. The following code illustrates how to execute the `sendToBack` command.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -252,9 +251,9 @@ The [`sendToBack`](https://ej2.syncfusion.com/react/documentation/api/diagram/#s
 
  {% previewsample "page.domainurl/code-snippet/diagram/commands/es5sendback-cs1" %}
 
-### Move Forward command
+### Move Forward Command
 
-The [`moveForward`](https://ej2.syncfusion.com/react/documentation/api/diagram/#moveforward) command  moves the selected element over the nearest overlapping element. The following code illustrates how to execute the `moveForward` command.
+The [`moveForward`](https://ej2.syncfusion.com/react/documentation/api/diagram/#moveforward) command visually moves the selected element over the nearest overlapping element. The following code illustrates how to execute the `moveForward` command.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -267,7 +266,7 @@ The [`moveForward`](https://ej2.syncfusion.com/react/documentation/api/diagram/#
 
  {% previewsample "page.domainurl/code-snippet/diagram/commands/es5moveforward-cs1" %}
 
-### sendBackward command
+### Send Backward Command
 
 The [`sendBackward`](https://ej2.syncfusion.com/react/documentation/api/diagram#sendbackward) command visually moves the selected element behind the underlying element. The following code illustrates how to execute the `sendBackward` command.
 
@@ -325,9 +324,9 @@ root.render(<App />);
 ```
 For more information about zoom refer to the [zoom](./scroll-settings/#update-zoom-at-runtime)
 
-## Nudge command
+## Nudge Command
 
-The [`nudge`](https://ej2.syncfusion.com/react/documentation/api/diagram#nudge) commands move the selected elements towards up, down, left, or right by 1 pixel.The parameters of [`nudge`](https://ej2.syncfusion.com/react/documentation/api/diagram#nudge) method is explained below.
+The [`nudge`](https://ej2.syncfusion.com/react/documentation/api/diagram#nudge) commands move the selected elements towards up, down, left, or right by 1 pixel.The parameters of the `nudge` method is explained below.
 
 | Parameter    | Type           | Description                                                      |
 |--------------|-----------|-----------|
@@ -356,13 +355,13 @@ The following code illustrates how to execute the nudge command.
 
  {% previewsample "page.domainurl/code-snippet/diagram/commands/nudge-cs1" %}
 
-### Nudge by using arrow keys
+### Nudge by Using Arrow Keys
 
-The arrow keys can be used to move the selected elements towards up, down, left, or right direction by 1 pixel.
+The arrow keys can be used to move the selected elements up, down, left, or right by 1 pixel.
 
 ![Nudge Command](images/Commands_img4.png)
 
-Nudge commands are particularly useful for accurate placement of elements.
+Nudge commands are particularly useful for accurate placement of elements.
 
 N> The position change event will not trigger when using keyboard keys to move a node or connector.
 
@@ -370,9 +369,9 @@ N> The position change event will not trigger when using keyboard keys to move a
 
 The [`bringIntoView`](https://ej2.syncfusion.com/react/documentation/api/diagram#bringintoview) command brings the specified rectangular region into the viewport of the diagram, ensuring that it is visible within the current view.
 
-The [`bringIntoView`](https://ej2.syncfusion.com/react/documentation/api/diagram#bringintoview) method takes a single parameter, an object that defines the rectangular region to bring into view. This object should include properties such as x, y, width, and height to specify the exact region to be made visible.
+The `bringIntoView` method takes a single parameter, an object that defines the rectangular region to bring into view. This object should include properties such as x, y, width, and height to specify the exact region to be made visible.
 
-The following code illustrates how to execute the bringIntoView command:
+The following code illustrates how to execute the `bringIntoView` command.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -389,9 +388,9 @@ The following code illustrates how to execute the bringIntoView command:
 
 The [`bringToCenter`](https://ej2.syncfusion.com/react/documentation/api/diagram#bringtocenter) command centers the specified rectangular region of the diagram content within the viewport.
 
-The [`bringToCenter`](https://ej2.syncfusion.com/react/documentation/api/diagram#bringtocenter)  method takes a single parameter, an object that defines the rectangular region to be centered. This object should include properties such as x, y, width, and height to specify the exact region to be brought to the center.
+The `bringToCenter` method takes a single parameter, an object that defines the rectangular region to be centered. This object should include properties such as x, y, width, and height to specify the exact region to be brought to the center.
 
-The following code illustrates how to execute the bringToCenter command.
+The following code illustrates how to execute the `bringToCenter` command.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -406,17 +405,17 @@ The following code illustrates how to execute the bringToCenter command.
 
 ## FitToPage
 
-The [`fitToPage`](https://ej2.syncfusion.com/react/documentation/api/diagram#fittopage)command adjusts the diagram content to fit within the viewport, considering either width, height, or the entire content. The fitToPage method takes one parameter,[`fitOptions`](https://ej2.syncfusion.com/react/documentation/api/diagram/FitOptions/), which specifies the options for fitting the diagram to the page.
+The [`fitToPage`](https://ej2.syncfusion.com/react/documentation/api/diagram#fittopage)command helps to fit the diagram content into the view with respect to either width, height, or the entire content. The fitToPage method takes one parameter,[`fitOptions`](https://ej2.syncfusion.com/react/documentation/api/diagram/FitOptions/), which specifies the options for fitting the diagram to the page.
 
 ### FitOptions
 
-The [`mode`](https://ej2.syncfusion.com/react/documentation/api/diagram/fitModes#modes) parameter defines how the diagram should fit into the viewport—horizontally, vertically, or based on the entire bounds of the diagram.
+The [`mode`](https://ej2.syncfusion.com/react/documentation/api/diagram/fitModes#modes)  parameter defines whether the diagram has to be horizontally/vertically fit into the viewport with respect to width, height, or entire bounds of the diagram.
 
-The [`region`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramRegions#region)parameter specifies the region of the diagram that should be fit within viewport.
+The [`region`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramRegions#region) parameter defines the region that has to be drawn as an image.
 
-The [`margin`](https://ej2.syncfusion.com/react/documentation/api/diagram/iFitOptions#margin) parameter sets the margin around the diagram content that should be included in the view.
+The [`margin`](https://ej2.syncfusion.com/react/documentation/api/diagram/iFitOptions#margin) parameter defines the region/bounds of the diagram content that is to be fit into the view.
 
-The [`canZoomIn`](https://ej2.syncfusion.com/react/documentation/api/diagram/iFitOptions#canZoomIn) parameter enables or disables zooming in to fit smaller content into a larger viewport.
+The [`canZoomIn`](https://ej2.syncfusion.com/react/documentation/api/diagram/iFitOptions#canZoomIn) parameter enables/disables zooming to fit the smaller content into a larger viewport.
 
 The [`canZoomOut`](https://ej2.syncfusion.com/react/documentation/api/diagram/iFitOptions/#canzoomout) parameter enables or disables zooming out to fit larger content into a smaller viewport.
 
@@ -435,13 +434,13 @@ The following code illustrates how to execute `FitToPage` command.
 
  {% previewsample "page.domainurl/code-snippet/diagram/commands/fitToPage-cs1" %}
 
-## Command manager
+## Command Manager
 
 The Diagram provides support for mapping or binding command execution to specific key gestures. It includes built-in commands and allows for the definition of custom commands through the [`CommandManager`](https://ej2.syncfusion.com/react/documentation/api/diagram/commandManager#commandManager) Custom commands are executed when the specified key gesture is recognized.
 
-## Custom command
+## Custom Command
 
-To define a custom command, specify the following properties:
+To define a custom command, you need to specify the following properties:
 
 * [`execute`](https://ej2.syncfusion.com/react/documentation/api/diagram/command#execute): A method to be executed when the command is triggered.
 * [`canExecute`](https://ej2.syncfusion.com/react/documentation/api/diagram/command#canexecute): A method to define whether the command can be executed at the moment.
@@ -451,7 +450,7 @@ To define a custom command, specify the following properties:
 
 To explore the properties of custom commands, refer to [`Commands`](https://ej2.syncfusion.com/react/documentation/api/diagram/command#commands).
 
-The following code example illustrates how to use the command manager to clone a node and change the fill color of a node while pressing `G` and `Shift+G` or `Alt+G`, respectively:
+The following code example illustrates how to use the command manager to clone a node and change the fill color of a node while pressing **G** and **Shift+G** or **Alt+G**, respectively:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -464,9 +463,9 @@ The following code example illustrates how to use the command manager to clone a
 
  {% previewsample "page.domainurl/code-snippet/diagram/commands/customCommand-cs1" %}
 
-### Disable/Modify the existing command
+### Disable/Modify the Existing Command
 
-When any of the default commands are not desired, they can be disabled. Additionally, if you need to change the functionality of a specific command, it can be completely modified.
+When any one of the default commands is not desired, they can be disabled. To change the functionality of a specific command, the command can be completely modified.
 
 The following code example illustrates how to disable the default cut and delete commands using CTRL+X and Delete keys, and how to modify the copy command to clone a node using CTRL+C:
 
@@ -481,9 +480,9 @@ The following code example illustrates how to disable the default cut and delete
 
  {% previewsample "page.domainurl/code-snippet/diagram/commands/modifyCommand-cs1" %}
 
-## Undo-redo
+## Undo-Redo
 
-Undo/redo commands can be executed through shortcut keys. Shortcut key for undo is **`Ctrl+z`** and shortcut key for redo is **`Ctrl+y`**. For more information refer to the [`undo-redo`](./undo-redo)
+Undo/redo commands can be executed through shortcut keys. Shortcut key for undo is **Ctrl+z** and shortcut key for redo is **Ctrl+y**. For more information refer to the [`undo-redo`](./undo-redo)
 
 ## See Also
 
