@@ -1,30 +1,36 @@
 ---
 layout: post
-title: Shapes in React Diagram component | Syncfusion®
-description: Learn here all about Shapes in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: Shapes in React Diagram Component | Syncfusion®
+description: Learn to create and customize text, image, HTML, native, basic, path, and flow shapes in the Syncfusion React Diagram Component with examples.
 control: Shapes 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Shapes in React Diagram component
+# Different Types of Shapes in React Diagram Component
 
-Diagram provides support to add different kind of nodes. They are as follows:
+The React Diagram component provides comprehensive support for adding various types of nodes to create rich, interactive diagrams. Shapes serve as the fundamental building blocks for representing data, processes, and visual elements in your diagrams.
 
-* Text node
-* Image node
-* HTML node
-* Native node
-* Basic shapes
-* Flow shapes
+This guide covers the following shape types and their implementation:
+
+* **Text nodes** - Display formatted text content.
+* **Image nodes** - Embed images from various sources.
+* **HTML nodes** - Include custom HTML elements.
+* **Native nodes** - Integrate SVG elements.
+* **Basic shapes** - Use predefined geometric shapes.
+* **Path shapes** - Create custom geometric paths.
+* **Flow shapes** - Represent process workflows.
 
 <!-- markdownlint-disable MD033 -->
 <!-- markdownlint-disable MD010 -->
 
-## Text
+## Text Nodes
 
-Texts can be added to the diagram as [`text`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#shape) node. The shape property of the node allows you to set the type of node and for text nodes, it should be set as **text**. In addition, define the content object that is used to define the text to be added and style is used to customize the appearance of that text. The following code illustrates how to create a text node.
+Text nodes enable you to add formatted text content directly to your diagram. They are ideal for labels, annotations, and textual information that enhances diagram readability.
+
+To create a text node, set the shape property to [`text`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#shape) and define the content object with your desired text and styling options.
+
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -37,11 +43,11 @@ Texts can be added to the diagram as [`text`](https://ej2.syncfusion.com/react/d
 
  {% previewsample "page.domainurl/code-snippet/diagram/shapes/es5Text-cs1" %}
 
-## Image
+## Image Nodes
 
-Diagram allows to add images as [`image`](https://helpej2.syncfusion.com/react/documentation/api/diagram/node/#shape) nodes. The shape property of node allows you to set the type of node and for image nodes, it should be set as **image**. In addition, the source property of shape enables you to set the image source.
+Image nodes allow you to incorporate visual elements from various sources including URLs, local files, and Base64-encoded data. These nodes are perfect for adding logos, icons, or illustrative content to your diagrams.
 
-The following code illustrates how an image node is created.
+To create an image node, set the shape property to [`image`](https://helpej2.syncfusion.com/react/documentation/api/diagram/node/#shape) and specify the image source through the source property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -54,9 +60,9 @@ The following code illustrates how an image node is created.
 
  {% previewsample "page.domainurl/code-snippet/diagram/shapes/es5Image-cs1" %}
 
-### Base64 Encoded Image Into The Image Node:
+### Base64 Encoded Images
 
-The following code illustrates how to add Base64 image into image node.
+For scenarios where you need to embed images directly without external dependencies, use Base64-encoded image data. This approach ensures your diagrams remain self-contained and portable.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -69,17 +75,15 @@ The following code illustrates how to add Base64 image into image node.
 
  {% previewsample "page.domainurl/code-snippet/diagram/shapes/es5Image-cs2" %}
 
-N> Deploy your HTML file in the web application and export the diagram (image node) or else the image node will not be exported in the Chrome and Firefox due to security issues. Refer to the following link.
+N> When deploying applications with image nodes, ensure your HTML files are served from a web server. Local file access restrictions in Chrome and Firefox may prevent image export functionality due to security policies. For more information, refer to browser-specific documentation on local image handling.
 
 Link 1: `http://asked.online/draw-images-on-canvas-locally-using-chrome/2546077/`
 
 Link 2: `http://stackoverflow.com/questions/4761711/local-image-in-canvas-in-chrome`
 
-### Image alignment
+### Image Alignment and Scaling
 
-Stretch and align the image content anywhere but within the node boundary.
-
-The scale property of the node allows to stretch the image as you desired (either to maintain proportion or to stretch). By default, the [`scale`](https://helpej2.syncfusion.com/react/documentation/api/diagram/image/#scale) property of the node is set as **meet**. The [`align`](https://helpej2.syncfusion.com/react/documentation/api/diagram/imageAlignment/) property is used to set the alignment of the image.
+Control how images appear within node boundaries using alignment and scaling properties. These features ensure your images display correctly regardless of node dimensions. The [`scale`](https://helpej2.syncfusion.com/react/documentation/api/diagram/image/#scale) property of the node is set as **meet**. The [`align`](https://helpej2.syncfusion.com/react/documentation/api/diagram/imageAlignment/) property controls positioning.
 
 The following code illustrates how to use scale and align properties to stretch the image.
 
@@ -105,13 +109,15 @@ The following table illustrates all the possible scale options for the image nod
 
 N> To visualize the changes in image scaling, it is Essential<sup style="font-size:70%">&reg;</sup> to use the align property along with scale.
 
-## HTML
+## HTML Nodes
 
-Html elements can be embedded in the diagram through [`Html`](https://helpej2.syncfusion.com/react/documentation/api/diagram/node/#shape) type node. The shape property of node allows you to set the type of node and to create a HTML node it should be set as `HTML`.
+HTML nodes provide the flexibility to embed rich HTML content directly into your diagrams. This powerful feature enables you to create highly customized visual elements with advanced formatting, styling, and interactivity.
 
-N> HTML node cannot be exported to image format, like JPEG, PNG, and BMP. It is by design, while exporting the diagram is drawn in a canvas. Further, this canvas is exported into image formats. Currently, drawing in a canvas equivalent from all possible HTML is not feasible. Hence, this limitation.
+Set the shape property to [`Html`](https://helpej2.syncfusion.com/react/documentation/api/diagram/node/#shape) to create HTML nodes. You can define content using either inline templates or external node templates.
 
-### HTML Node with contentTemplate.
+N> HTML nodes cannot be exported to image formats (JPEG, PNG, BMP) due to canvas rendering limitations. This is by design, as converting arbitrary HTML content to canvas equivalents is not feasible for all HTML elements.
+
+### HTML Node with Content Template
 
 To render an HTML node with a content template, we need to define the desired template string within the [`content`](../api/diagram/htmlModel/#content) property. The following code illustrates how to create an HTML node with a content template:
 
@@ -126,7 +132,7 @@ To render an HTML node with a content template, we need to define the desired te
 
  {% previewsample "page.domainurl/code-snippet/diagram/shapes/es5ContentTemplate-cs1" %}
 
-#### Functional content template.
+#### Functional Content Template.
 
 To render an HTML node using a functional template, we define a function that returns the template string. Within this function, modifications can be made based on the node's ID.
 
@@ -143,7 +149,7 @@ The following code illustrates how to render an HTML node using the function and
 
  {% previewsample "page.domainurl/code-snippet/diagram/shapes/es5ContentFunctionalTemplate-cs1" %}
 
-### HTML Node With nodeTemplate
+### HTML Node With Node Template
 
 To render html node with nodeTemplate we need to define the nodeTemplate in the html file and assign it to the [`nodeTemplate`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#nodetemplate) property of the diagram. The following code illustrates how to render html node with nodeTemplate.
 
@@ -158,7 +164,7 @@ To render html node with nodeTemplate we need to define the nodeTemplate in the 
 
  {% previewsample "page.domainurl/code-snippet/diagram/shapes/es5NodeTemplate-cs1" %}
 
-#### Functional nodeTemplate
+#### Functional NodeTemplate
 
 We can define a function which returns a template string and assign it directly to the `nodeTemplate` property of diagram.
 
@@ -175,9 +181,11 @@ Refer the code example below.
 
  {% previewsample "page.domainurl/code-snippet/diagram/shapes/es5NodeFunctionalTemplate-cs1" %}
 
-## Native
+## Native Nodes
 
-Diagram provides support to embed SVG element into a node. The shape property of node allows you to set the type of node. To create a [`native`](https://helpej2.syncfusion.com/react/documentation/api/diagram/node/#shape) node, it should be set as **native**. The following code illustrates how a native node is created.
+Native nodes allow you to embed SVG elements directly into your diagrams, providing scalable vector graphics with precise control over visual appearance. This approach is ideal for custom icons, complex shapes, and high-quality graphics that scale well at any size.
+
+To create a [`native`](https://helpej2.syncfusion.com/react/documentation/api/diagram/node/#shape) node, set the shape property to **native** and provide SVG content through the content property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -190,13 +198,13 @@ Diagram provides support to embed SVG element into a node. The shape property of
 
  {% previewsample "page.domainurl/code-snippet/diagram/shapes/es5Native-cs1" %}
 
-N> Like HTML node, the native node also cannot be exported to image format. Fill color of native node can be overridden by the inline style or fill of the SVG element specified in the template.
+N> Similar to HTML nodes, native nodes cannot be exported to image formats due to canvas rendering limitations. Fill colors of native nodes can be overridden by inline SVG styles or fill attributes specified in the SVG template.
 
-### SVG content alignment
+### SVG Content Alignment and Scaling
 
 Stretch and align the svg content anywhere but within the node boundary.
 
-The scale property of the node allows to stretch the svg content as you desired (either to maintain proportion or to stretch). By default, the [`scale`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nativeModel/#scale) property of native shape is set as **meet**.
+Control how SVG content appears within node boundaries using the same scaling principles as image nodes. The [`scale`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nativeModel/#scale) property determines how SVG content fits within the node bounds.
 
 The following tables illustrates all the possible scale options for the node.
 
@@ -207,11 +215,11 @@ The following tables illustrates all the possible scale options for the node.
 | Slice | ![Slice SVG Content Alignment](images/Native3.png) |
 | Stretch |![Stretch SVG Content Alignment](images/Native4.png) |
 
-## Basic shapes
+## Basic Shapes
 
-* The [`Basic`](https://helpej2.syncfusion.com/react/documentation/api/diagram/node/#shape) shapes are common shapes that are used to represent the geometrical information visually. To create basic shapes, the type of the shape should be set as **basic**. Its shape property can be set with any one of the built-in shape.
+Basic shapes provide a comprehensive set of predefined geometric forms commonly used in diagrams, flowcharts, and technical drawings. These shapes offer consistency and quick deployment for standard diagram elements.
 
-* To render a rounded rectangle, you need to set the type as basic and shape as rectangle. Set the [`cornerRadius`](https://helpej2.syncfusion.com/react/documentation/api/diagram/basicShapeModel/#cornerradius) property to specify the radius of rounded rectangle.
+To create [`Basic`](https://helpej2.syncfusion.com/react/documentation/api/diagram/node/#shape) shapes, set the type property to **basic** and choose from the available built-in shapes. For rounded rectangles, use the [`cornerRadius`](https://helpej2.syncfusion.com/react/documentation/api/diagram/basicShapeModel/#cornerradius) property to specify the radius.
 
 The following code example illustrates how to create a basic shape.
 
@@ -236,11 +244,12 @@ The list of basic shapes are as follows.
 
 ![BasicShapes](images/Basic.png)
 
-## Path
+The basic shapes library includes rectangles, ellipses, triangles, polygons, stars, and many other geometric forms suitable for various diagramming needs.
 
-The [`Path`](https://helpej2.syncfusion.com/react/documentation/api/diagram/node/#shape) shape is a commonly used basic shape that allows visually to represent the geometrical information. As node path data, any geometrical data can be provided. You can create your own Geometry and assign it to data if you want anything different from the standard figures. A geometry does not require any dimension specifications, such as width or height, because it specifies its own size. If the node’s size is set, the geometry is extended to fit the node’s dimensions.
+## Path Shapes
 
-To create a path node, specify the shape as Path. The [`data`](https://helpej2.syncfusion.com/react/documentation/api/diagram/pathModel/#data) property of node allows you to define the path to be drawn. The following code illustrates how a path node is created.
+Path shapes provide ultimate flexibility for creating custom geometric forms using SVG path data. This approach allows you to define any shape imaginable through precise path coordinates and commands.
+To create a [`Path`](https://helpej2.syncfusion.com/react/documentation/api/diagram/node/#shape) node, set the shape property to **path** and define the geometry through the [`data`](https://helpej2.syncfusion.com/react/documentation/api/diagram/pathModel/#data) property using standard SVG path syntax.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -255,7 +264,9 @@ To create a path node, specify the shape as Path. The [`data`](https://helpej2.s
 
 ## Flow Shapes
 
-The [`flow`](https://helpej2.syncfusion.com/react/documentation/api/diagram/node/#shape) shapes are used to represent the process flow. It is used for analyzing, designing, and managing for documentation process. To create a flow shape, specify the shape type as **flow**. Flow shapes and by default, it is considered as **process**. The following code example illustrates how to create a flow shape.
+Flow shapes are specialized elements designed for process modeling, workflow diagrams, and business process documentation. These standardized shapes follow common flowchart conventions and enhance diagram readability.
+
+To create [`flow`](https://helpej2.syncfusion.com/react/documentation/api/diagram/node/#shape) shapes, set the shape type to **flow** and specify the desired flow shape variant. The default flow shape is **process**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
