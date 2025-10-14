@@ -8,11 +8,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Configure data grid options on editing mode in React
+# Configure data grid options in editing mode in the React Pivot Table
 
-You can access the data grid options such as sort, group, filter, etc on editing mode using `beginDrillThrough` event in the pivot table. The event fires on every value cell click and provides the data grid information before it displays.
+The React Pivot Table component provides the ability to configure various data grid options when working with drill-through functionality in editing mode. When users double-click on value cells (cells containing aggregated data), the component displays the underlying raw data in a drill-through grid popup. The [`beginDrillThrough`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#begindrillthrough) event allows users to access and configure grid features such as sorting, grouping, and filtering before displaying the drill-through grid popup.
 
-> To access the data grid options, you need to inject module for the provided options in data grid itself.
+## Implementation
+
+The [`beginDrillThrough`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#begindrillthrough) event occurs when users double-click on any value cell in the pivot table. This event provides access to the grid instance and its configuration options before displaying the drill-through popup, enabling users to customize the grid behavior according to their requirements.
+
+> Grid features are segregated into individual feature-wise modules. For example, to use the sorting feature, the `Sort` module must be injected using the `Grid.Inject(Sort)` method.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -29,4 +33,4 @@ You can access the data grid options such as sort, group, filter, etc on editing
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs158" %}
+{% previewsample "page.domainurl/code-snippet/pivot-table/default-cs158" %}

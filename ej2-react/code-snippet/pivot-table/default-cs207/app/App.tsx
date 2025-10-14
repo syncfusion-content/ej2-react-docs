@@ -1,8 +1,9 @@
 
-import { PivotViewComponent, Pager, Inject } from '@syncfusion/ej2-react-pivotview';
+import { PivotViewComponent, Pager, Inject, PagerSettings, PageSettings } from '@syncfusion/ej2-react-pivotview';
 import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 import * as React from 'react';
+import { GridSettings } from '@syncfusion/ej2-pivotview/src/pivotview/model/gridsettings';
 
 function App() {
     let remoteData: DataManager = new DataManager({
@@ -21,17 +22,25 @@ function App() {
         filters: []
     };
 
-    return (<PivotViewComponent id='PivotView' height={350} dataSourceSettings={dataSourceSettings} gridSettings={{ columnWidth: 120 }} pageSettings={{
-            rowPageSize: 10,
-            columnPageSize: 5,
-            currentColumnPage: 1,
-            currentRowPage: 1
-        }} pagerSettings={{
-            columnPageSizes: [5, 10, 15, 20, 30],
-            rowPageSizes: [10, 20, 30, 40, 50]
-        }} enablePaging={true}>
-            <Inject services={[Pager]} />
-        </PivotViewComponent>);
+    let gridSettings: GridSettings = {
+        columnWidth: 120
+    } as GridSettings;
+
+    let pageSettings: PageSettings = {
+        rowPageSize: 10,
+        columnPageSize: 5,
+        currentColumnPage: 1,
+        currentRowPage: 1
+    };
+
+    let pagerSettings: PagerSettings = {
+        columnPageSizes: [5, 10, 15, 20, 30],
+        rowPageSizes: [10, 20, 30, 40, 50]
+    };
+
+    return (<PivotViewComponent id='PivotView' height={350} dataSourceSettings={dataSourceSettings} gridSettings={gridSettings} pageSettings={pageSettings} pagerSettings={pagerSettings} enablePaging={true}>
+        <Inject services={[Pager]} />
+    </PivotViewComponent>);
 };
 
 export default App;

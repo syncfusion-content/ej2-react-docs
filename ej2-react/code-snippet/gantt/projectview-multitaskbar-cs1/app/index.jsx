@@ -14,7 +14,7 @@ function App (){
     expandState: 'isExpand'
   };
   
-        return <GanttComponent dataSource={projectViewMultiTaskData} renableMultiTaskbar={true}
+        return <GanttComponent dataSource={projectViewMultiTaskData} enableMultiTaskbar={true}
         taskFields={taskFields} height = '400px'>
 
         </GanttComponent>

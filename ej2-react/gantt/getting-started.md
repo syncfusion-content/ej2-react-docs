@@ -273,6 +273,8 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 Bind data with the Gantt control by using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/gantt/#datasource) property. It accepts an array of JavaScript object or the DataManager instance.
 
+The Gantt component binds to project data through the [dataSource](https://ej2.syncfusion.com/react/documentation/api/gantt/#datasource) property, which accepts an array of JavaScript objects or a `DataManager` instance. The [taskFields](https://ej2.syncfusion.com/react/documentation/api/gantt/#taskfields) property maps data source fields to task attributes (e.g., id, name, startDate, duration).
+
 ```
 <!DOCTYPE html>
 <html lang="en">

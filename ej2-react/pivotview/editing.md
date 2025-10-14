@@ -1,18 +1,30 @@
 ---
 layout: post
-title: Editing in React Pivotview component | Syncfusion
-description: Learn here all about Editing in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
-control: Editing 
+title: Editing in React Pivot Table component | Syncfusion
+description: Learn here all about Editing in Syncfusion React Pivot Table component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
+control: Editing 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Editing in React Pivotview component
+# Editing in React Pivot Table component
 
 > This feature is applicable only for the relational data source.
 
-Cell edit allows to add, delete, or update the raw items of any value cell from the pivot table. The raw items can be viewed in a data grid inside a new window on double-clicking the appropriate value cell. In the data grid, CRUD operations can be performed by double-clicking the cells or using toolbar options. Once user finishes editing raw items, aggregation will be performed for the updated values in pivot table component immediately. This support can be enabled by setting the [`allowEditing`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#allowediting) property in [`cellEditSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#editsettings) to **true**.
+The cell editing option allows users to directly change data in the pivot table by adding, updating, or deleting raw data items within any value cell. When you double-click a value cell, the raw items appear in a data grid within a new window. In this data grid, you can perform CRUD operations by double-clicking cells or using toolbar options. After you finish editing the raw items, the pivot table automatically updates the aggregated values. To enable this option, set the [`allowEditing`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#allowediting) property in [`editSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#editsettings) to **true**.
+
+The [`editSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#editsettings) property provides comprehensive control over editing behavior through the following options:
+
+* [`allowAdding`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#allowadding): Enables adding new rows to the data grid.
+* [`allowEditing`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#allowediting): Allows editing existing records in the data grid.
+* [`allowDeleting`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#allowdeleting): Enables deleting records directly from the data grid.
+* [`allowCommandColumns`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#allowcommandcolumns): Displays built-in command buttons (edit, delete, save, cancel) in the data grid.
+* [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#mode): Sets the editing mode.
+* [`allowEditOnDblClick`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#alloweditondbclick): Enables users to start editing a cell by double-clicking it.
+* [`showConfirmDialog`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#showconfirmdialog): Shows a confirmation dialog before saving changes.
+* [`showDeleteConfirmDialog`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#showdeleteconfirmdialog): Shows a confirmation dialog before deleting a record.
+* [`allowInlineEditing`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#allowinlineediting): Allows users to edit content directly in the cell.
 
 The CRUD operations available in the data grid toolbar and command column are:
 
@@ -37,7 +49,7 @@ To learn about how to work with Editing options, you can check on this video for
 
 ## Normal
 
-In normal edit mode, when user starts editing, the state of the currently selected row alone will be completely changed to edit state. User can change the cell values and save it to the data source by clicking "Update" toolbar button. To enable the normal edit, set the [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#mode) property in [`cellEditSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#editsettings) to **Normal**.
+Normal edit mode allows users to edit one row at a time in the editing dialog with simple data changes and updates. In normal edit mode, when editing begins, the selected row changes to edit state. Cell values can be modified and saved to the data source by clicking the "Update" toolbar button. To enable normal edit mode, set the [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#mode) property in [`editSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#editsettings) to **Normal**.
 
 > The normal edit mode **Normal** is set as the default mode for editing.
 
@@ -56,13 +68,11 @@ In normal edit mode, when user starts editing, the state of the currently select
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs55" %}
-
-> The normal edit mode is the default mode of editing.
+{% previewsample "page.domainurl/code-snippet/pivot-table/default-cs55" %}
 
 ## Dialog
 
-In dialog edit mode, when user starts editing, the currently selected row data will be shown in an exclusive dialog. User can change cell values and save it to the data source by clicking "Save" button in the dialog. To enable the dialog edit, set the [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#mode) property in [`cellEditSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#editsettings) to **Dialog**.
+The dialog edit mode provides a focused editing environment by displaying the selected row data in an exclusive dialog window, ensuring clear visibility and controlled data modification. In dialog edit mode, when editing begins, the currently selected row data appears in a dedicated dialog. Cell values can be modified and saved to the data source by clicking the "Save" button in the dialog. To enable dialog editing, set the [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#mode) property in [`editSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#editsettings) to **Dialog**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -79,11 +89,11 @@ In dialog edit mode, when user starts editing, the currently selected row data w
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs56" %}
+{% previewsample "page.domainurl/code-snippet/pivot-table/default-cs56" %}
 
 ## Batch
 
-In batch edit mode, when user double-clicks any data grid cell, the state of target cell is changed to edit state. User can perform bulk changes and finally save (added, changed, and deleted data in the single request) to the data source by clicking "Update" toolbar button. To enable the batch edit, set the [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#mode) property in [`cellEditSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#editsettings) to **Batch**.
+Batch editing enables users to make multiple changes to data grid cells and save them all at once, improving efficiency for bulk updates. When a user double-clicks any data grid cell in batch mode, the target cell changes to edit state. Users can perform multiple changes and save all modifications (added, changed, and deleted data) to the data source by clicking the **Update** toolbar button. To enable batch editing, set the [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#mode) property in [`editSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#editsettings) to **Batch**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -100,11 +110,24 @@ In batch edit mode, when user double-clicks any data grid cell, the state of tar
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs57" %}
+{% previewsample "page.domainurl/code-snippet/pivot-table/default-cs57" %}
 
 ## Command column
 
-An additional column appended in the data grid layout holds the command buttons to perform the CRUD operation. To enable the command columns, set the [`allowCommandColumns`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#allowcommandcolumns) property in [`cellEditSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#editsettings) to **true**.
+The command column option provides dedicated action buttons within the data grid for streamlined CRUD operations as an alternative to using toolbar options. An additional column appears in the data grid layout containing command buttons to perform the CRUD operations. To enable the command columns, set the [`allowCommandColumns`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#allowcommandcolumns) property in [`editSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#editsettings) to **true**.
+
+The available built-in command buttons are:
+
+| Command Button | Actions |
+|----------------|---------|
+| Edit | Edit the current row.|
+| Delete | Delete the current row.|
+| Save | Update the edited row.|
+| Cancel | Cancel the edited state. |
+
+N>
+- When the command column option is enabled, the Edit, Delete, Update, and Cancel buttons are not shown in the Data Grid's toolbar. Instead, these action buttons appear in the last column of each row within the Data Grid.
+- To delete a record directly from the data grid using the **Delete** action button in the command column, you need to set the [`allowDeleting`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#allowdeleting) property to **true**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -121,11 +144,11 @@ An additional column appended in the data grid layout holds the command buttons 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs58" %}
+{% previewsample "page.domainurl/code-snippet/pivot-table/default-cs58" %}
 
 ## Inline Editing
 
-Allows editing of a value cell directly without the use of an external edit dialog. It is applicable if and only if a single raw data is used for the value of the cell. It is applicable to all editing modes, such as normal, batch, dialog and column commands. It can be enabled by setting the [`allowInlineEditing`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettings/#allowinlineediting) property in [`editSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#editsettings) to **true**.
+The inline editing option provides streamlined data modification by allowing direct editing of value cells without opening an external dialog, improving workflow efficiency for quick data updates. This editing mode applies only when a single raw data item corresponds to the value of the cell and works with all editing modes including normal, batch, dialog, and column commands. Enable inline editing by setting the [`allowInlineEditing`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettings/#allowinlineediting) property in [`editSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#editsettings) to **true**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -142,11 +165,13 @@ Allows editing of a value cell directly without the use of an external edit dial
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs59" %}
+{% previewsample "page.domainurl/code-snippet/pivot-table/default-cs59" %}
 
 ## Editing using the pivot chart
 
-Users can also add, delete, or update the underlying raw items of any data point via pivot chart. The raw items will be shown in the data grid in the new window by clicking the appropriate data point. Then you can edit the raw items as mentioned above by any of the edit types (normal, dialog, batch and command column).
+Pivot chart editing provides an alternative way to conveniently update, add, or remove underlying data associated with any chart data point. This empowers users to perform CRUD (Create, Read, Update, Delete) operations on the underlying raw items linked to visualized data points for enhanced analysis.
+
+Clicking a data point in the pivot chart displays the underlying raw items in a data grid within a popup window. Users can then add, update, or delete these items using any of the supported edit types (normal, dialog, batch, or command column), following the same steps as for pivot table cells.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -163,21 +188,18 @@ Users can also add, delete, or update the underlying raw items of any data point
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs60" %}
+{% previewsample "page.domainurl/code-snippet/pivot-table/default-cs60" %}
 
 ## Events
 
 ### EditCompleted
 
-The event [`editCompleted`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#editcompleted) triggers when values cells are edited completely. The event provides edited cell(s) information along with its previous cell value. It also helps to do the CRUD operation by manually updating the database which is connected to the component. It has the following parameters.
+The event [`editCompleted`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#editcompleted) triggers when values cells are edited completely. The event provides edited cell(s) information along with its previous cell value. It also helps to do the CRUD operation by manually updating the data source which is connected to the component. It has the following parameters.
 
-* `currentData` - It holds the current raw data of the edited cells.
-
-* `previousData` - It holds the previous raw data of the edited cells.
-
-* `previousPosition` - It holds the index of the raw data whose values are edited.
-
-* `cancel` - It is a boolean property and if it is set as **true**, the editing won’t be reflected in the pivot table.
+* [`currentData`](https://ej2.syncfusion.com/react/documentation/api/pivotview/editCompletedEventArgs/#currentdata) - It holds the current raw data of the edited cells.
+* [`previousData`](https://ej2.syncfusion.com/react/documentation/api/pivotview/editCompletedEventArgs/#previousdata) - It holds the previous raw data of the edited cells.
+* [`previousPosition`](https://ej2.syncfusion.com/react/documentation/api/pivotview/editCompletedEventArgs/#previousposition) - It holds the index of the raw data whose values are edited.
+* [`cancel`](https://ej2.syncfusion.com/react/documentation/api/pivotview/editCompletedEventArgs/#cancel) - It is a boolean property and if it is set as **true**, the editing won’t be reflected in the pivot table.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -194,117 +216,115 @@ The event [`editCompleted`](https://ej2.syncfusion.com/react/documentation/api/p
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs61" %}
+{% previewsample "page.domainurl/code-snippet/pivot-table/default-cs61" %}
 
 ### DrillThrough
 
-For more information [`refer`](./drill-through/#drillthrough) here.
+For more information [`refer`](./drill-through#drillthrough) here.
 
 ### BeginDrillThrough
 
-For more information [`refer`](./drill-through/#begindrillthrough) here.
+For more information [`refer`](./drill-through#begindrillthrough) here.
 
 ### ActionBegin
 
-The event [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#actionbegin) triggers when the UI actions such as CRUD operations (via dialog) and inline editing begin. This allows user to identify the current action being performed at runtime. It has the following parameters:
+The [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#actionbegin) event triggers when editing actions such as add, edit, save, or delete are started through the UI (either by dialog or inline editing). This event lets users monitor the editing workflow and take action before the operation completes. The following parameters are available in the event:
 
-* `dataSourceSettings`: It holds the current data source settings such as input data source, rows, columns, values, filters, format settings and so on.
+- [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotActionBeginEventArgs/#datasourcesettings): Contains the current data source settings, including all input data, rows, columns, values, filters, and format settings.
+- [`actionName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotActionBeginEventArgs/#actionname): Shows the name of the editing action that has started. The following are the UI actions and their names:
 
-* `actionName`: It holds the name of the current action began. The following are the UI actions and their names:
+   | Action  | Action Name         |
+   |---------|--------------------|
+   | Editing | Edit record        |
+   | Save    | Save edited records|
+   | Add     | Add new record     |
+   | Delete  | Remove record      |
 
-    | Action | Action Name|
-    |------|-------------|
-    | Editing| Edit record|
-    | Save| Save edited records|
-    | Add| Add new record|
-    | Delete| Remove record|
+- [`cancel`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotActionBeginEventArgs/#cancel): Allows users to stop (cancel) the action by setting this option to **true**.
 
-* `cancel`: It allows user to restrict the current action.
+For example, you can restrict add and save actions by setting **args.cancel** to **true** in the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#actionbegin) event.
 
-    In the below sample, editing actions such as add and save can be restricted by setting the **args.cancel** option to **true** in the `actionBegin` event.
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/pivot-table/default-cs62/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/pivot-table/default-cs62/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs62/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs62/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
 
-    {% tabs %}
-    {% highlight js tabtitle="App.jsx" %}
-    {% include code-snippet/pivot-table/default-cs62/app/App.jsx %}
-    {% endhighlight %}
-    {% highlight ts tabtitle="App.tsx" %}
-    {% include code-snippet/pivot-table/default-cs62/app/App.tsx %}
-    {% endhighlight %}
-    {% highlight js tabtitle="datasource.jsx" %}
-    {% include code-snippet/pivot-table/default-cs62/app/datasource.jsx %}
-    {% endhighlight %}
-    {% highlight ts tabtitle="datasource.tsx" %}
-    {% include code-snippet/pivot-table/default-cs62/app/datasource.tsx %}
-    {% endhighlight %}
-    {% endtabs %}
-
-    {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs62" %}
+{% previewsample "page.domainurl/code-snippet/pivot-table/default-cs62" %}
 
 ### ActionComplete
 
-The event [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#actioncomplete) triggers when the UI action such as CRUD operations (via dialog) or inline editing, is completed. This allows user to identify the current UI actions being completed at runtime. It has the following parameters:
+The [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#actioncomplete) event triggers whenever a UI action, such as add, update, remove, or save (using dialog or inline editing), is finished. This lets users know exactly what kind of action has just been completed. The event provides the following details:
 
-* `dataSourceSettings`: It holds the current data source settings such as input data source, rows, columns, values, filters, format settings and so on.
+* [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotActionCompleteEventArgs/#datasourcesettings): Contains the current data source settings, including input data, rows, columns, values, filters, format settings, and more.
+* [`actionName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotActionCompleteEventArgs/#actionname): It holds the name of the current action completed. The following are the UI actions and their names:
 
-* `actionName`: It holds the name of the current action completed. The following are the UI actions and their names:
+   | Action | Action Name            |
+   |--------|------------------------|
+   | Save   | Edited records saved   |
+   | Add    | New record added       |
+   | Delete | Record removed         |
+   | Update | Records updated        |
 
-    | Action | Action Name|
-    |------|-------------|
-    | Save| Edited records saved|
-    | Add| New record added|
-    | Delete| Record removed |
-    | Update| Records updated|
+* [`actionInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotActionCompleteEventArgs/#actioninfo): It holds the unique information about the current UI action. For example, if save action is completed, the event argument contains information such as mode of editing and saved records.
 
-* `actionInfo`: It holds the unique information about the current UI action. For example, if save action is completed, the event argument contains information such as mode of editing and saved records.
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/pivot-table/default-cs63/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/pivot-table/default-cs63/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs63/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs63/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
 
-    {% tabs %}
-    {% highlight js tabtitle="App.jsx" %}
-    {% include code-snippet/pivot-table/default-cs63/app/App.jsx %}
-    {% endhighlight %}
-    {% highlight ts tabtitle="App.tsx" %}
-    {% include code-snippet/pivot-table/default-cs63/app/App.tsx %}
-    {% endhighlight %}
-    {% highlight js tabtitle="datasource.jsx" %}
-    {% include code-snippet/pivot-table/default-cs63/app/datasource.jsx %}
-    {% endhighlight %}
-    {% highlight ts tabtitle="datasource.tsx" %}
-    {% include code-snippet/pivot-table/default-cs63/app/datasource.tsx %}
-    {% endhighlight %}
-    {% endtabs %}
-
-    {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs63" %}
+{% previewsample "page.domainurl/code-snippet/pivot-table/default-cs63" %}
 
 ### ActionFailure
 
-The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#actionfailure) triggers when the current UI action fails to achieve the desired result. It has the following parameters:
+The [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#actionfailure) event is triggered when a UI action fails to produce the expected result. This event provides detailed information about the failure through the following parameters:
 
-* `actionName`: It holds the name of the current action failed. The following are the UI actions and their names:
+* [`actionName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotActionFailureEventArgs/#actionname): It holds the name of the current action failed. The following are the UI actions and their names:
 
-    | Action | Action Name|
-    |------|-------------|
-    | Editing| Edit record|
-    | Save| Save edited records|
-    | Add| Add new record|
-    | Delete| Remove record|
+   | Action | Action Name|
+   |------|-------------|
+   | Editing| Edit record|
+   | Save| Save edited records|
+   | Add| Add new record|
+   | Delete| Remove record|
 
-* `errorInfo`: It holds the error information of the current UI action.
+* [`errorInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotActionFailureEventArgs/#errorinfo): It holds the error information of the current UI action.
 
-    {% tabs %}
-    {% highlight js tabtitle="App.jsx" %}
-    {% include code-snippet/pivot-table/default-cs64/app/App.jsx %}
-    {% endhighlight %}
-    {% highlight ts tabtitle="App.tsx" %}
-    {% include code-snippet/pivot-table/default-cs64/app/App.tsx %}
-    {% endhighlight %}
-    {% highlight js tabtitle="datasource.jsx" %}
-    {% include code-snippet/pivot-table/default-cs64/app/datasource.jsx %}
-    {% endhighlight %}
-    {% highlight ts tabtitle="datasource.tsx" %}
-    {% include code-snippet/pivot-table/default-cs64/app/datasource.tsx %}
-    {% endhighlight %}
-    {% endtabs %}
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/pivot-table/default-cs64/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/pivot-table/default-cs64/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs64/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs64/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
 
-    {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs64" %}
+{% previewsample "page.domainurl/code-snippet/pivot-table/default-cs64" %}
 
 ## See Also
 

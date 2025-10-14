@@ -1,11 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { ClickEventArgs } from '@syncfusion/ej2-navigations/src/toolbar/toolbar';
-import { GanttComponent, Inject, Toolbar, ToolbarItem, PdfExport, Selection } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, Inject, Toolbar, PdfExport, Selection } from '@syncfusion/ej2-react-gantt';
 import { data,image } from './datasource';
 function App(){
-
-    
     let ganttChart;
     const  taskFields = {
         id: 'TaskID',
@@ -17,7 +14,7 @@ function App(){
   };
   const  toolbarOptions = ['PdfExport'];
   function toolbarClick(args) {
-       if (args.item.text === 'Pdf export') {
+       if (args.item.text === 'PDF export') {
         var exportProperties = {
             header: {
                 fromTop: 0,

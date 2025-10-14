@@ -1,10 +1,10 @@
-import { PivotViewComponent, Pager, Inject } from '@syncfusion/ej2-react-pivotview';
+import { PivotViewComponent, Pager, Inject, PagerSettings, PageSettings } from '@syncfusion/ej2-react-pivotview';
 import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
 import { Pager as GridPager } from '@syncfusion/ej2-grids';
 import * as React from 'react';
-import './App.css';
+import { GridSettings } from '@syncfusion/ej2-pivotview/src/pivotview/model/gridsettings';
 
 function App() {
     let pivotObj: PivotViewComponent;
@@ -28,6 +28,21 @@ function App() {
     let rowPager: GridPager;
     let columnPager: GridPager;
 
+    let gridSettings: GridSettings = {
+        columnWidth: 120
+    } as GridSettings;
+
+    let pageSettings: PageSettings = {
+        rowPageSize: 10,
+        columnPageSize: 5,
+        currentColumnPage: 1,
+        currentRowPage: 1
+    };
+
+    let pagerSettings: PagerSettings = {
+        template: '#template'
+    };
+    
     function dataBound() {
         updateTemplate();
     }
@@ -75,16 +90,9 @@ function App() {
                 id='PivotView'
                 height={350}
                 dataSourceSettings={dataSourceSettings}
-                gridSettings={{ columnWidth: 120 }}
-                pageSettings={{
-                    rowPageSize: 10,
-                    columnPageSize: 5,
-                    currentColumnPage: 1,
-                    currentRowPage: 1
-                }}
-                pagerSettings={{
-                    template: '#template'
-                }}
+                gridSettings={gridSettings}
+                pageSettings={pageSettings}
+                pagerSettings={pagerSettings}
                 enablePaging={true}
                 dataBound={dataBound.bind(this)}
             >

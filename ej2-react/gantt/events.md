@@ -4666,7 +4666,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## endEdit
 
-The [endEdit](https://ej2.syncfusion.com/react/documentation/api/gantt/#endedit) event is triggered after a task is modified through cell or taskbar editing. It enables post-edit actions such as validation, logging, or syncing changes with external systems.
+The [endEdit](https://ej2.syncfusion.com/react/documentation/api/gantt/#endedit) event is triggered after a task is modified through cell editing. It enables post-edit actions such as validation, logging, or syncing changes with external systems.
 
 The event provides an argument of type [ITaskbarEditedEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/iTaskbarEditedEventArgs/) with the following properties:
 

@@ -9,7 +9,7 @@ System.config({
         "jsx": "react"
     },
     paths: {
-        "syncfusion:": "https://cdn.syncfusion.com/ej2/29.1.33/"
+        "syncfusion:": "https://cdn.syncfusion.com/ej2/31.1.17/"
     },
     map: {
         app: 'app',
