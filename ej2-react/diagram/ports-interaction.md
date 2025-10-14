@@ -1,16 +1,20 @@
 ---
 layout: post
-title: Ports interaction in React Diagram component | Syncfusion®
-description: Learn here all about Ports in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: Ports interaction in React Diagram Component | Syncfusion®
+description: Learn about ports interaction in Syncfusion® React Diagram Component including drawing connectors, drag functionality, and events.
 control: Ports 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Draw connector from port
+# Interactive Port Features in React Diagram Component
 
-The port can be used to create connector by enabling `Draw` constraints to the [`constraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/portconstraints/) property. By default, the connector segment type is set to **Orthogonal**.
+Ports in React Diagram components support various interactive features that enhance user workflow and diagram creation efficiency. This guide covers drawing connectors from ports, drag functionality, automatic port creation, tooltips, and event handling.
+
+## Draw Connector from Port
+
+Ports can serve as connection points for creating connectors dynamically. Enable the `Draw` constraint on the [`constraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/portconstraints/) property to allow users to draw connectors directly from ports. The default connector segment type is **Orthogonal**, providing structured, right-angled connections suitable for flowcharts and organizational diagrams.
 
 The following code explains how to draw the connector by using the port constraints.
 
@@ -25,15 +29,13 @@ The following code explains how to draw the connector by using the port constrai
 
 {% previewsample "page.domainurl/code-snippet/diagram/ports/ports-int1" %}
 
-### Draw different connector types from port
+### Draw Different Connector Types from Port
 
-You can change the default connector type while drawing the connector from the port by setting the specific connector type in connector defaults. This enables the drawing of various connector types from the port, including:
+The default connector type can be customized when drawing from ports by configuring connector defaults. This flexibility allows creation of various connector styles to match different diagram requirements:
 
-* Straight
-* Bezier
-* Orthogonal
-
-The following code explains how to draw different connectors by using the port constraints.
+* **Straight**: Direct linear connections for simple relationships.
+* **Bezier**: Curved connections for organic, flowing designs.
+* **Orthogonal**: Right-angled connections for structured layouts.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -46,9 +48,9 @@ The following code explains how to draw different connectors by using the port c
 
 {% previewsample "page.domainurl/code-snippet/diagram/ports/ports-int2" %}
 
-## Port drag
+## Port Drag
 
-The port drag feature allows users to click and drag a port using the mouse. This functionality can be enabled by setting the port constraints to **"Drag"**. 
+Port drag functionality enables users to reposition ports by clicking and dragging with the mouse. This feature enhances diagram flexibility by allowing dynamic port placement adjustments. Enable this capability by setting the port constraints to **Drag**.
 
 The following code explains how to enable port drag.
 
@@ -65,9 +67,9 @@ The following code explains how to enable port drag.
 
 ## Automatic Port Creation
 
-The Diagram component allows you to dynamically create ports on nodes or connectors by clicking and dragging the mouse while holding the Control (Ctrl) key. This feature is disabled by default and can be enabled by using the `DiagramConstraints.AutomaticPortCreation` constraint.
+The Diagram component supports dynamic port creation through user interaction. Users can create ports on nodes or connectors by clicking and dragging while holding the Control (Ctrl) key. This feature is disabled by default and requires enabling the `DiagramConstraints.AutomaticPortCreation` constraint.
 
-You can also remove a port using the same Ctrl + Click interaction, but only if the port is not currently connected to any connector.
+Ports can also be removed using the same Ctrl + Click interaction, provided the port is not connected to any connector. This prevents accidental disconnection of active connections.
 
 The following example shows how to enable automatic port creation:
 
@@ -82,9 +84,9 @@ The following example shows how to enable automatic port creation:
 
 {% previewsample "page.domainurl/code-snippet/diagram/ports/automaticPortCreation" %}
 
-## Port tooltip
+## Port Tooltip
 
-The port tooltip feature allows a tooltip to be displayed when hovering over a port. This functionality can be enabled by setting the port constraints to **"Tooltip"**.
+Port tooltips provide contextual information when users hover over ports, improving usability and user guidance. Enable this feature by setting the port constraints to **Tooltip**.
 
 The following code explains how to enable port tooltip.
 
@@ -101,7 +103,7 @@ The following code explains how to enable port tooltip.
 
 ## Events
 
-There are several events that can be triggered while interacting with ports. These events are listed in the table below.
+Port interactions trigger specific events that enable custom handling and application logic. These events provide hooks for implementing validation, logging, or custom behaviors during port operations.
 
 | Event| Description|
 |----|----|
@@ -123,12 +125,10 @@ The following example shows how to get these events in diagram.
 
 {% previewsample "page.domainurl/code-snippet/diagram/ports/ports-int5" %}
 
-
-
 ## See also
 
-* [How to customize the ports](./ports-appearance)
+* [How to customize the ports.](./ports-appearance)
 
-* [How to set the position of the port](./ports-positioning)
+* [How to set the position of the port.](./ports-positioning)
 
-* [How to create connector port](./ports-connector-port)
+* [How to create connector port.](./ports-connector-port)

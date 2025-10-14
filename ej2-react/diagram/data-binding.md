@@ -1,18 +1,22 @@
 ---
 layout: post
-title: Data binding in React Diagram component | Syncfusion®
-description: Learn here all about Data binding in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: Data binding in React Diagram Component | Syncfusion®
+description: Learn here all about Data binding in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
 control: Data binding 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in React Diagram component
+# Data Binding in React Diagram Component
 
-* Diagram can be populated with the `nodes` and `connectors` based on the information provided from an external data source.
+The React Diagram component supports data binding to populate nodes and connectors from external data sources. This feature enables dynamic diagram creation based on structured data, making it ideal for visualizing organizational charts, flowcharts, and hierarchical data structures.
 
-* Diagram exposes its specific data-related properties allowing you to specify the data source fields from where the node information has to be retrieved from.
+Data binding in the Diagram component works by mapping data source fields to diagram elements through the `dataSourceSettings` property. The component supports both local JSON data and remote data sources, providing flexibility for various application scenarios.
+
+## Key Data Binding Properties
+
+The Diagram component exposes several data-related properties that control how data is mapped to diagram elements:
 
 * The [`dataManager`](https://ej2.syncfusion.com/react/documentation/api/diagram/dataSourceModel#datamanager) property is used to define the data source either as a collection of objects or as an instance of `DataManager` that needs to be populated in the diagram.
 
@@ -24,16 +28,20 @@ domainurl: ##DomainURL##
 
 * To explore those properties, see [`DataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/diagram/dataSourceModel).
 
-* Diagram supports two types of data binding. They are:
+## Data Binding Types
 
-    1. Local data
-    2. Remote data
+The Diagram component supports two primary data binding approaches:
 
-## Local data
+1. **Local data binding** - Uses client-side JSON data.
+2. **Remote data binding** - Fetches data from server endpoints using DataManager.
 
-Diagram can be populated based on the user defined JSON data (Local Data) by mapping the relevant data source fields.
+## Local Data Binding
 
-To map the user defined JSON data with diagram, configure the fields of [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/diagram/dataSourceModel). The following code example illustrates how to bind local data with the diagram.
+Local data binding allows the diagram to render nodes and connectors based on client-side JSON data. This approach is ideal for static data or scenarios where the entire dataset is available on the client side.
+
+To implement local data binding, configure the [`dataSourceSettings`]fields to map your JSON data structure to diagram elements.
+
+The following code example illustrates how to bind local data with the diagram.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -46,15 +54,13 @@ To map the user defined JSON data with diagram, configure the fields of [`dataSo
 
  {% previewsample "page.domainurl/code-snippet/diagram/dataBinding/es5LocalBinding-cs1" %}
 
-## Remote data
+## Remote Data Binding
 
-You can bind the diagram with remote data by using [`dataManager`].
+Remote data binding enables the diagram to fetch data from server endpoints using the DataManager service. This approach is suitable for large datasets, real-time data, or when data needs to be retrieved from databases or web services.
 
-It uses two different classes: `DataManager` for processing and `Query` for serving data. `DataManager` communicates with data source and `Query` generates data queries that are read by the [`dataManager`](https://ej2.syncfusion.com/react/documentation/api/diagram/dataSourceModel).
+The DataManager handles data communication, while Query objects generate the requests that DataManager processes. This architecture provides powerful data manipulation capabilities including filtering, sorting, and paging.
 
-To learn more about data manager, refer to [`Data Manager`](https://ej2.syncfusion.com/react/documentation/api/diagram/dataSourceModel).
-
-To bind remote data to the diagram,configure the fields of [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/diagram/dataSourceModel). The following code illustrates how to bind remote data to the diagram.
+For comprehensive DataManager information, see the `dataSourceSettings`. The following code illustrates how to bind remote data to the diagram.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -67,35 +73,37 @@ To bind remote data to the diagram,configure the fields of [`dataSourceSettings`
 
  {% previewsample "page.domainurl/code-snippet/diagram/dataBinding/es5RemoteBinding-cs1" %}
 
-## CRUD
+## CRUD operations with Data Binding
 
-This feature allows you to read the data source and perform add or edit or delete the data in data source at runtime.
+The Diagram component supports Create, Read, Update, and Delete (CRUD) operations, allowing real-time synchronization between the diagram and its data source. This functionality enables users to modify diagram elements and persist changes to the backend.
 
-## Read DataSource
+### Reading Data from Multiple Sources
 
-* This feature allows you to define the nodes and connectors collection in the data source and connectionDataSource respectively.
+The diagram can simultaneously read from two data sources: one for nodes and another for connectors. This separation provides greater flexibility when dealing with complex data relationships.
 
-* You can set the data collection in the model’s dataSourceSettings [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/diagram/dataSourceModel#datasource) property. The nodes will be generated based on the data specified in the data source.
+**Node Data Source Configuration:**
 
-* You can set the connector collection in the model’s dataSourceSettings [`connectionDataSource`](https://ej2.syncfusion.com/react/documentation/api/diagram/dataSourceModel#connectiondatasource) property.
+*  Set the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/diagram/dataSourceModel#datasource) property to define the node data collection
+
+*Use the [`id`](https://ej2.syncfusion.com/react/documentation/api/diagram/dataSourceModel#id) property to specify the unique identifier field
+
+**Connector Data Source Configuration:**
+
+* Configure the [`connectionDataSource`](https://ej2.syncfusion.com/react/documentation/api/diagram/dataSourceModel#connectiondatasource) property for connector data.
+
+* Set [`sourceID`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectionDataSourceModel#sourceid) and [`targetID`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectionDataSourceModel#targetid) to establish connections.
+
+* Define connection points using [`sourcePointX`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectionDataSourceModel#sourcepointx), [`sourcePointY`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectionDataSourceModel#sourcepointy), [`targetPointX`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectionDataSourceModel#targetpointx), and [`targetPointY`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectionDataSourceModel#targetpointy)
 
 * The dataSourceSettings connectionDataSource [`dataManager`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectionDataSourceModel#datamanager) property is used to set the data source for the connection data source items.
 
-* If you have a data (data will be set in the dataSource property) with parent relationship in the database and also defined the connector in the connectionDataSource simultaneously, then the connectors set in the connectionDataSource will be considered as a priority to render the connector.
+**Priority handling:** When both parent-child relationships in the main data source and explicit connectors in the connectionDataSource are defined, the explicit connectors take priority for rendering.
 
 * The dataSourceSettings [`crudAction’s`](https://ej2.syncfusion.com/react/documentation/api/diagram/dataSourceModel#crudaction) [`read`](https://ej2.syncfusion.com/react/documentation/api/diagram/crudActionModel#read) property specifies the method, which is used to read the data source and its populate the nodes in the diagram.
 
-* The connectionDataSource crudAction’s [`read`](https://ej2.syncfusion.com/react/documentation/api/diagram/crudActionModel#read) specifies the method, which is used to read the data source and its populates the connectors in the diagram.
+* The connectionDataSource crudAction’s `read` specifies the method, which is used to read the data source and its populates the connectors in the diagram.
 
-* The dataSourceSettings’s [`id`](https://ej2.syncfusion.com/react/documentation/api/diagram/dataSourceModel#id) and connectionDataSource’s [`id`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectionDataSourceModel#id) properties are used to define the unique field of each JSON data.
-
-* The connectionDataSource’s [`sourceID`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectionDataSourceModel#sourceid) and [`targetID`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectionDataSourceModel#targetid) properties are used to set the sourceID and targetID for connection data source item.
-
-* The connectionDataSource’s [`sourcePointX`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectionDataSourceModel#sourcepointx), [`sourcePointY`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectionDataSourceModel#sourcepointy), [`targetPointX`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectionDataSourceModel#targetpointx), and [`targetPointY`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectionDataSourceModel#targetpointy) properties are used to define the sourcePoint and targetPoint values for connector from data source.
-
-* The dataSourceSettings crudAction’s [`customFields`](https://ej2.syncfusion.com/react/documentation/api/diagram/crudActionModel#customfields) property is used to maintain the additional information for nodes.
-
-* Similarly, connectionDataSource’s crudAction’s [`customFields`](https://ej2.syncfusion.com/react/documentation/api/diagram/crudActionModel#customfields) is used to maintain the additional information for connectors.
+**Custom fields:** Use the [`customFields`](https://ej2.syncfusion.com/react/documentation/api/diagram/crudActionModel#customfields) property in crudAction to maintain additional information for both nodes and connectors.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -108,17 +116,17 @@ This feature allows you to read the data source and perform add or edit or delet
 
 {% previewsample "page.domainurl/code-snippet/diagram/dataBinding/es5connectionDataSource-cs1" %}
 
-## How to perform Editing at runtime
+### How to Perform Editing at Runtime
 
 * The dataSourceSettings crudAction object allows you to define the method, which is used to get the changes done in the data source defined for shapes from the client-side to the server-side.
 
 * Similarly, the connectionDataSource crudAction object allows you to define the method, which is used to get the changes done in the data source defined for connectors from the client-side to the server-side.
 
-## InsertData
+#### Creating New Data (InsertData)
 
 * The dataSourceSettings crudAction’s [`create`](https://ej2.syncfusion.com/react/documentation/api/diagram/crudActionModel#create) property specifies the method, which is used to get the nodes added from the client-side to the server-side.
 
-* The connectionDataSource crudAction’s  [`create`](https://ej2.syncfusion.com/react/documentation/api/diagram/crudActionModel#create) specifies the method, which is used to get the connectors added from the client-side to the server-side.
+* The connectionDataSource crudAction’s  `create` specifies the method, which is used to get the connectors added from the client-side to the server-side.
 
 * The following code example illustrates how to send the newly added or inserted data from the client to server-side.
 
@@ -174,7 +182,7 @@ diagramInstance.insertData();
 
 * The dataSourceSettings crudAction’s [`update`](https://ej2.syncfusion.com/react/documentation/api/diagram/crudActionModel#update) property specifies the method, which is used to get the modified nodes from the client-side to the server-side.
 
-* The connectionDataSource crudAction’s [`update`](https://ej2.syncfusion.com/react/documentation/api/diagram/crudActionModel#update) specifies the method, which is used to get the modified connectors from the client-side to the server-side.
+* The connectionDataSource crudAction’s `update` specifies the method, which is used to get the modified connectors from the client-side to the server-side.
 
 * The following code example illustrates how to send the updated data from the client to the server side.
 
@@ -230,7 +238,7 @@ diagramInstance.updateData();
 
 * The dataSourceSettings crudAction’s [`destroy`](https://ej2.syncfusion.com/react/documentation/api/diagram/crudActionModel#destroy) property specifies the method, which is used to get the deleted nodes from the client-side to the server-side.
 
-* The connectionDataSource crudAction’s [`destroy`](https://ej2.syncfusion.com/react/documentation/api/diagram/crudActionModel#destroy) specifies the method, which is used to get the deleted connectors from the client-side to the server-side.
+* The connectionDataSource crudAction’s `destroy` specifies the method, which is used to get the deleted connectors from the client-side to the server-side.
 
 {% raw %}
 

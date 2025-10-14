@@ -1,18 +1,25 @@
 ---
 layout: post
-title: Bpmn DataObject in React Diagram component | Syncfusion®
-description: Learn here all about Bpmn shapes in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: BPMN DataObject in React Diagram Component | Syncfusion®
+description: Learn how to create and configure BPMN data objects including input, output, and collection types in Syncfusion® React Diagram Component.
 control: Bpmn DataObject 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# BPMN Data object in React Diagram component
+# BPMN Data Object in React Diagram Component
 
-## Data Object
+## Overview
 
-A data object represents information flowing through the process, such as data placed into the process, data resulting from the process, data that needs to be collected, or data that must be stored. To define a [`data object`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnDataObject), set the shape as **DataObject** and the type property defines whether data is an input or an output. You can create multiple instances of data object with the collection property of data.
+A BPMN data object represents information that flows through a business process. Data objects can represent data placed into the process, data resulting from the process, data that needs to be collected, or data that must be stored. In business process modeling, data objects help visualize how information moves through different process activities.
+
+## Creating Data Objects
+To create a BPMN data object in the React Diagram component, set the shape type as [`data object`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnDataObject). The [`type`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnDataObject/#type) property determines whether the data object represents input data, output data, or a collection of data items.
+
+### Basic Data Object Configuration
+
+The following example demonstrates how to create a basic BPMN data object:.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -25,7 +32,20 @@ A data object represents information flowing through the process, such as data p
 
  {% previewsample "page.domainurl/code-snippet/diagram/bpmnShapes/es5Data-cs1" %}
 
-The following table contains various representation of BPMN data object.
+## Data Object Types
+
+BPMN data objects support three distinct types, each serving different purposes in process modeling:
+
+### Collection Data Object
+Represents multiple instances of data items. Use this type when the process handles collections of information such as lists, arrays, or multiple documents.
+
+### Data Input
+Represents data that enters the process from external sources. This type indicates information required by the process to execute successfully.
+
+### Data Output
+Represents data generated or modified by the process. This type shows information produced as a result of process execution.
+
+The following table shows the visual representation of each data object type:
 
 | Boundary | Image |
 | -------- | -------- |

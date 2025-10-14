@@ -400,5 +400,9 @@ The [`layout`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSe
 
 ## See Also
 
+<<<<<<< HEAD
 * [Customize each shape in legend](./how-to#customize-each-shape-in-legend)
+=======
+* [Customize each shape in legend](./how-to/#customize-each-shape-in-legend)
+>>>>>>> remotes/origin/development
 * [Add Custom Legend Using SVG](https://support.syncfusion.com/kb/article/21530/how-to-add-custom-legend-using-svg-in-react-chart)

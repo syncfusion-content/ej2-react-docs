@@ -15,7 +15,11 @@ The Syncfusion AI AssistView supports integration with [Azure Open AI](https://m
 
 ## Getting Started with the AI AssistView component
 
+<<<<<<< HEAD
 Before integrating Azure Open AI, ensure that the Syncfusion AI AssistView component is correctly rendered in your React app:
+=======
+Before integrating Azure Open AI, ensure that the Syncfusion AI AssistView Component is correctly rendered in your React app:
+>>>>>>> remotes/origin/development
 
 [React Getting Started Guide](../getting-started)
 

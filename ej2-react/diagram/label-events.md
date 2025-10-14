@@ -1,25 +1,30 @@
 ---
 layout: post
 title: Label Events in React Diagram component | Syncfusion®
-description: Learn here all about Labels in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+description: Learn about annotation events in Syncfusion React Diagram component including keyDown, keyUp, doubleClick, textEdit, and selectionChange events with examples.
 control: Label Events
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation events.
+# Handling Annotation Events in Diagram Component
 
-There are some events which will trigger while interacting with annotation.
-* KeyDown.
-* KeyUp.
-* DoubleClick.
-* TextEdit.
+Annotations in React Diagram components are text labels that can be added to nodes and connectors to provide additional information. When users interact with these annotations, various events are triggered that allow developers to customize behavior and respond to user actions.
 
-## KeyDown event
+The diagram component provides several annotation-related events that fire during different interaction scenarios:
 
+- **KeyDown** - Triggered when any key is pressed while an annotation is focused.
+- **KeyUp** - Triggered when a pressed key is released while an annotation is focused.
+- **DoubleClick** - Triggered when double-clicking on annotations, nodes, connectors, or diagram surface.
+- **TextEdit** - Triggered when annotation text editing is completed and focus is lost.
+- **SelectionChange** - Triggered when annotations are selected or deselected.
 
-The [`keyDown`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iKeyEventArgs/) event is triggered whenever any key is pressed. The following example shows how to capture the keyDown event and modify the fill color of a node on each key press:
+## KeyDown Event
+
+The [`keyDown`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iKeyEventArgs/) event triggers whenever any key is pressed while interacting with the diagram. This event provides access to key information and allows modification of diagram elements based on keyboard input.
+
+The event arguments include details about the pressed key, modifier keys, and the current diagram state. The following example demonstrates capturing the keyDown event to modify a node's fill color with each key press:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -32,9 +37,11 @@ The [`keyDown`](https://helpej2.syncfusion.com/react/documentation/api/diagram/i
 
  {% previewsample "page.domainurl/code-snippet/diagram/annotations/es5Event-cs1" %}
 
-## KeyUp event
+## KeyUp Event
 
-The [`keyUp`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iKeyEventArgs/) event is triggered whenever we press and release any key. The following example shows how to capture the keyUp event and modify the fill color of a node on each key press:
+The [`keyUp`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iKeyEventArgs/) event triggers when a pressed key is released. This event is useful for handling scenarios where the complete key press cycle (press and release) needs to be captured, such as implementing keyboard shortcuts or text input validation.
+
+Unlike the keyDown event, keyUp ensures that the key action has been fully completed. The following example shows how to capture the keyUp event and modify the fill color of a node:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -47,9 +54,11 @@ The [`keyUp`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iKe
 
  {% previewsample "page.domainurl/code-snippet/diagram/annotations/es5Event-cs2" %}
 
-## Double click event
+## Double Click Event
 
-The [`doubleClick`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iDoubleClickEventArgs/) event is triggered when you double-click on a node, connector, or the diagram surface. Double-clicking on a diagram element activates the annotation editing mode. The following code example shows how to capture the [`doubleClick`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iDoubleClickEventArgs/) event:
+The [`doubleClick`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iDoubleClickEventArgs/) event triggers when users double-click on nodes, connectors, or the diagram surface. This interaction automatically activates annotation editing mode for the clicked element, allowing users to modify text content directly.
+
+The event provides information about the clicked element, mouse position, and current selection state. Developers can use this event to implement custom behaviors or prevent default annotation editing when needed:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -62,9 +71,11 @@ The [`doubleClick`](https://helpej2.syncfusion.com/react/documentation/api/diagr
 
  {% previewsample "page.domainurl/code-snippet/diagram/annotations/es5Event-cs3" %}
 
-## TextEdit event
+## TextEdit Event
 
-The [`textEdit`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iTextEditEventArgs/) event triggers when you finish editing the annotation text and the focus is removed from the annotation text.
+The [`textEdit`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iTextEditEventArgs/) event triggers when annotation text editing is completed and focus moves away from the text editor. This event occurs after users finish modifying annotation content and provides access to both the old and new text values.
+
+This event is particularly useful for implementing text validation, formatting, or saving changes to external data sources:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -77,7 +88,9 @@ The [`textEdit`](https://helpej2.syncfusion.com/react/documentation/api/diagram/
 
  {% previewsample "page.domainurl/code-snippet/diagram/annotations/es5Event-cs4" %}
 
-You can prevent adding new text to the annotation by setting the `cancel` property of [`textEdit`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iTextEditEventArgs/) to true.
+### Preventing Text Changes
+
+The textEdit event allows prevention of text modifications by setting the `cancel` property to **true**. This is useful for implementing validation rules or maintaining read-only annotations:
 
 ``` javascript
 textEdit: function (args) {
@@ -87,11 +100,15 @@ textEdit: function (args) {
 
 ```
 
-## Selection change event
+## Selection Change Event
 
-The [`selectionChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#selectionchange) event is triggered when an annotation of a node or connector is selected in the diagram.
+The [`selectionChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#selectionchange) event triggers when annotations of nodes or connectors are selected or deselected within the diagram. This event provides detailed information about the selection state changes and affected elements.
 
-You can prevent selection by setting the `cancel` property of [`SelectionChangeEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iselectionchangeeventargs/) to true, as shown in the code snippet below.
+The event is useful for implementing custom selection behaviors, updating property panels, or synchronizing selection state with other application components.
+
+### Preventing Selection
+
+Selection can be prevented by setting the `cancel` property of [`SelectionChangeEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iselectionchangeeventargs/) to **true** during the selection change process:
 
 ```javascript
 selectionChange: function (args) {
