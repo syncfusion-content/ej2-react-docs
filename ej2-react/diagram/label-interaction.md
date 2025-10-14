@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Label Interaction in React Diagram component | Syncfusion®
-description: Learn here all about Labels in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+description: Learn how to enable interactive label features in Syncfusion® React Diagram including selection, dragging, rotation, resizing, editing, and drag limits.
 control: Label Interaction
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Annotation Interactions
+# Interactive Label Features
 
-Diagram allows annotation to be interacted by selecting, dragging, rotating, and resizing. Annotation interaction is disabled, by default. You can enable annotation interaction with the `constraints` property of annotation. You can also curtail the services of interaction by enabling either selecting, dragging, rotating, or resizing individually with the respective constraints property of annotation. The following code illustrates how to enable interactive mode.
+The Diagram component allows labels to be interactive through selecting, dragging, rotating, and resizing operations. Label interaction is disabled by default. Enable label interaction using the `constraints` property of the label. You can also control specific interaction types by enabling individual constraints for selecting, dragging, rotating, or resizing. The following code demonstrates how to enable interactive mode.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -25,11 +25,36 @@ Diagram allows annotation to be interacted by selecting, dragging, rotating, and
 
 ## Constraints
 
-The [`constraints`](https://ej2.syncfusion.com/react/documentation/diagram/constraints#annotation-constraints) property of annotation allows you to enable/disable certain annotation behaviors.
+The [`constraints`](https://ej2.syncfusion.com/react/documentation/diagram/constraints#annotation-constraints) property of labels allows enabling or disabling specific label behaviors. Use these constraints to control which interaction types are available for each label.
 
-## Annotation rotation
+## Label Editing
 
-The [`rotationReference`](https://helpej2.syncfusion.com/react/documentation/api/diagram/shapeAnnotationModel/#rotationreference) property of an annotation allows you to control whether the text should rotate relative to its parent node or the Page. The following code examples illustrate how to configure rotationReference for an annotation.
+The Diagram component supports editing labels at runtime, both programmatically and interactively. By default, labels are in view mode. Labels can be switched to edit mode using two approaches:
+
+### Programmatic Editing
+By using [`startTextEdit`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#starttextedit) method to programmatically enter edit mode for a specific label.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/annotations/es5Opacity-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/annotations/es5Opacity-cs1/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/diagram/annotations/es5Opacity-cs1" %}
+
+### Interactive Editing
+Labels can be edited interactively through user actions:
+1. Double-clicking the label.
+2. Selecting the item and pressing the F2 key.
+
+Double-clicking any label enables editing mode. When the editor loses focus, the label content is updated. The  [`doubleClick`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#doubleclick) event triggers when double-clicking on nodes, connectors, or the diagram canvas.
+
+## Label Rotation
+
+The [`rotationReference`](https://helpej2.syncfusion.com/react/documentation/api/diagram/shapeAnnotationModel/#rotationreference) property controls whether labels rotate relative to their parent node or remain fixed relative to the page. The following code examples demonstrate how to configure rotationReference for labels.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -47,9 +72,9 @@ The [`rotationReference`](https://helpej2.syncfusion.com/react/documentation/api
 | Page | When this option is set, the annotation remains fixed in its original orientation even if its parent node is rotated. | ![No_Rotation](images/page_rotationreference.gif) |
 | Parent | In this case, the annotation rotates along with its parent node. | ![Rotation](images/parent_rotationreference.gif)|
 
-### Read-only annotations
+## Read-only Labels
 
-Diagram allows to create read-only annotations. You have to set the read-only constraints to the annotation's [`constraints`](https://helpej2.syncfusion.com/react/documentation/api/diagram/annotationModel/#constraints) property. The following code illustrates how to enable read-only mode.
+The Diagram component supports creating read-only labels that cannot be edited by users. Set the read-only constraint in the label's [`constraints`](https://helpej2.syncfusion.com/react/documentation/api/diagram/annotationModel/#constraints) property. The following code demonstrates how to enable read-only mode.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -62,39 +87,15 @@ Diagram allows to create read-only annotations. You have to set the read-only co
 
  {% previewsample "page.domainurl/code-snippet/diagram/annotations/es5Read-cs1" %}
 
-## Edit
+## Drag Limits
 
-Diagram provides support to edit an annotation at runtime, either programmatically or interactively. By default, annotation is in view mode. But it can be brought to edit mode in two ways;
+The diagram control supports defining  [`dragLimit`](https://helpej2.syncfusion.com/react/documentation/api/diagram/annotationModel/#draglimit) properties for connector labels to restrict dragging within specified boundaries. The drag limit automatically updates the label position to the nearest segment offset when dragging.
 
-### Programmatically
-By using [`startTextEdit`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#starttextedit) method, edit the text through programmatically.
+Configure drag limit boundaries using the [`left`](https://helpej2.syncfusion.com/react/documentation/api/diagram/marginModel/#left), [`right`](https://helpej2.syncfusion.com/react/documentation/api/diagram/marginModel/#right), [`top`](https://helpej2.syncfusion.com/react/documentation/api/diagram/marginModel/#top), and [`bottom`](https://helpej2.syncfusion.com/react/documentation/api/diagram/marginModel/#bottom) properties. These properties limit connector label dragging based on user-defined values.
 
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/annotations/es5Opacity-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/annotations/es5Opacity-cs1/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
+Drag limits are disabled by default for connectors. Enable drag limits by setting the connector constraints to include drag functionality.
 
- {% previewsample "page.domainurl/code-snippet/diagram/annotations/es5Opacity-cs1" %}
-
-### Interactively
-    1. By double-clicking the annotation.
-    2. By selecting the item and pressing the F2 key.
-
-Double-clicking any annotation will enables editing mode. When the focus of editor is lost, the annotation for the node is updated. When you double-click on the node/connector/diagram model, the [`doubleClick`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#doubleclick) event gets triggered.
-
-## Drag Limit
-
-* The diagram control now supports defining the [`dragLimit`](https://helpej2.syncfusion.com/react/documentation/api/diagram/annotationModel/#draglimit) to the label while dragging from the connector and also update the position to the nearest segment offset.
-
-* You can set the value to dragLimit [`left`](https://helpej2.syncfusion.com/react/documentation/api/diagram/marginModel/#left), [`right`](https://helpej2.syncfusion.com/react/documentation/api/diagram/marginModel/#right), [`top`](https://helpej2.syncfusion.com/react/documentation/api/diagram/marginModel/#top), and [`bottom`](https://helpej2.syncfusion.com/react/documentation/api/diagram/marginModel/#bottom) properties which allow the dragging of connector labels to a certain limit based on the user defined values.
-
-* By default, drag limit will be disabled for the connector. It can be enabled by setting connector constraints as drag.
-
-* The following code illustrates how to set a dragLimit for connector annotations.
+The following code demonstrates how to configure dragLimit for connector labels:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -107,9 +108,9 @@ Double-clicking any annotation will enables editing mode. When the focus of edit
 
  {% previewsample "page.domainurl/code-snippet/diagram/annotations/es5Interaction-cs2" %}
 
-## Multiple annotations
+## Multiple Labels
 
-You can add any number of annotations to a node or connector. The following code illustrates how to add multiple annotations to a node and connector.
+Nodes and connectors support multiple labels. Each label can have independent properties and constraints. The following code demonstrates how to add multiple labels to nodes and connectors.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

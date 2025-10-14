@@ -8,9 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Generate Syncfusion<sup style="font-size:70%">&reg;</sup> ReactJS License key
+# Generate Syncfusion<sup>®</sup> ReactJS License key
 
+<<<<<<< HEAD
 Syncfusion<sup>®</sup> license keys can be generated from the [License & Downloads](https://syncfusion.com/account/downloads) or [Trial & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) section of the Syncfusion<sup style="font-size:70%">&reg;</sup> website.
+=======
+Syncfusion<sup style="font-size:70%">®</sup> license keys can be generated from the [License & Downloads](https://syncfusion.com/account/downloads) or [Trial & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) section of the Syncfusion<sup style="font-size:70%">&reg;</sup> website.
+>>>>>>> remotes/origin/development
 
 ![Get Community License Key](images/get-community-license-key.png)
 

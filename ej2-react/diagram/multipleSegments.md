@@ -1,16 +1,21 @@
 ---
 layout: post
-title: Multiple segments in React Diagram component | Syncfusion®
-description: Learn here how to create connectors with multiple segments in in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: Multiple Segments for Connector in React Diagram Component | Syncfusion®
+description: Learn how to create connectors with multiple segments in Syncfusion® React Diagram Component, including configuration and practical examples.
 control: Multiple segments 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
+# Multiple Segments for Connectors
+Connectors in the React Diagram component can be composed of multiple segments to create complex routing paths between nodes. Multiple segments allow you to define precise connection routes that navigate around obstacles or follow specific pathways in your diagram layout.
 
-# Create multiple segments
+## Understanding Connector Segments
+A connector segment represents a portion of the connector's path. By combining multiple segments, you can create connectors that change direction multiple times, forming L-shapes, Z-shapes, or more complex routing patterns. Each segment can have different properties and behaviors depending on the segment type used.
 
-Multiple segments can be defined one after another. To create a connector with multiple segments, define and add the segments to the [`segments`] collection. The following code example illustrates how to create a connector with multiple segments.
+## Create Multiple Segments
+Multiple segments can be defined sequentially to form a complete connector path. To create a connector with multiple segments, define and add the segments to the [`segments`](https://ej2.syncfusion.com/react/documentation/api/diagram/connector/#segments) collection.
+The following example demonstrates how to create a connector with multiple segments that forms a custom routing path:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

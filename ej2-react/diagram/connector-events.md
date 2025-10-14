@@ -1,20 +1,22 @@
 ---
 layout: post
-title: Connector Events in React Diagram component | Syncfusion®
-description: Learn here all about Connectors in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: Connector Events in React Diagram Component | Syncfusion®
+description: Learn about connector events in Syncfusion® React Diagram Component, including click, selection, position, connection, and segment events with examples.
 control: Connector Events
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events
+# Connector Events in React Diagram
 
-Diagram provides some events support for connectors that triggers when interacting with the connector.
+The Diagram component provides comprehensive event support for connectors, allowing developers to respond to various user interactions and programmatic changes. These events enable dynamic behavior and custom logic when users interact with connectors through clicking, dragging, connecting, or modifying segments.
 
-## Click event
+## Click Event
 
-Triggers when the connector is clicked. The following code example explains how to get the [`click`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iClickEventArgs/) event in the diagram.
+Triggers when a connector is clicked by the user. This event is useful for implementing custom actions, showing context menus, or displaying connector-specific information.
+
+The following code example demonstrates how to handle the [`click`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iClickEventArgs/) event in the diagram.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,10 +29,11 @@ Triggers when the connector is clicked. The following code example explains how 
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5ClickEvent-cs1" %}
 
-## Selection change event
+## Selection Change Event
 
-When selecting/unselecting the connector, the selection change event will be triggered.
-The following code example explains how to get the [`selection change`](https://ej2.syncfusion.com/react/documentation/api/diagram/#selectionchange) event in the diagram.
+Triggers when a connector is selected or unselected. This event allows you to implement custom selection logic, update property panels, or perform actions based on selection state changes.
+
+The following code example demonstrates how to handle the [`selectionChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#selectionchange) event in the diagram:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -43,7 +46,7 @@ The following code example explains how to get the [`selection change`](https://
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5SelectionChangeEvent-cs1" %}
 
- You can prevent selection by setting the `cancel` property of [`SelectionChangeEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iselectionchangeeventargs/) to true, as shown in the code snippet below.
+ You can prevent selection by setting the `**cancel**` property of [`SelectionChangeEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iselectionchangeeventargs/) to **true**, as shown in the code snippet below:
 
 ```js
   selectionChange= {  (args) => {
@@ -56,10 +59,11 @@ The following code example explains how to get the [`selection change`](https://
 
 ```
 
-## Position change event
+## Position Change Event
 
-Triggers when the connector's position is changed in diagram.
-The following code example explains how to get the [`position change`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iDraggingEventArgs/) event in the diagram.
+Triggers when a connector's position changes during dragging operations. This event is essential for implementing validation, snapping behavior, or custom positioning logic.
+
+The following code example demonstrates how to handle the  [`positionChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iDraggingEventArgs/) event in the diagram:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -72,7 +76,7 @@ The following code example explains how to get the [`position change`](https://h
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5PositionChangeEvent-cs1" %}
 
- You can prevent dragging by setting the `cancel` property of [`DraggingEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iDraggingEventArgs/) to true, as shown in the code snippet below.
+ You can prevent dragging by setting the `cancel` property of [`DraggingEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iDraggingEventArgs/) to **true**, as shown in the code snippet below.
 
  ```js
    positionChange={  (args) => {
@@ -85,10 +89,11 @@ The following code example explains how to get the [`position change`](https://h
 
 ```
 
-## Connection change event
+## Connection Change Event
 
-Triggers when the connector’s source or target point is connected or disconnected from the source or target.
-The following code example explains how to get the [`connection change`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iConnectionChangeEventArgs/) event in the diagram.
+Triggers when a connector's source or target point connects to or disconnects from nodes. This event is crucial for implementing connection validation, automatic routing updates, or maintaining data relationships.
+
+The following code example demonstrates how to handle the  [`connectionChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iConnectionChangeEventArgs/) event in the diagram.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -101,10 +106,11 @@ The following code example explains how to get the [`connection change`](https:/
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5ConnectionChangeEvent-cs1" %}
 
-## Source Point change event
+## Source Point Change Event
 
-Triggers when the connector's source point is changed.
-The following code example explains how to get the [`source Point change`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iEndChangeEventArgs/) event in the diagram.
+Triggers when a connector's source point is modified through dragging or programmatic changes. This event enables validation of source connections and implementation of custom connection rules.
+
+The following code example demonstrates how to handle the [`sourcePointChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iEndChangeEventArgs/) event in the diagram.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -117,7 +123,7 @@ The following code example explains how to get the [`source Point change`](https
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5SourcePointchange-cs1" %}
 
- You can prevent source point dragging by setting the `cancel` property of [`EndChangeEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iEndChangeEventArgs/) to true, as shown in the code snippet below.
+ You can prevent source point dragging by setting the `cancel` property of [`EndChangeEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iEndChangeEventArgs/) to **true**, as shown in the code snippet below:
 
 ```javascript
 
@@ -132,10 +138,11 @@ The following code example explains how to get the [`source Point change`](https
 
 ```
 
-## Target Point change event
+## Target Point Change Event
 
-Triggers when the connector's target point is changed.
-The following code example explains how to get the [`target Point change`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iEndChangeEventArgs/) event in the diagram.
+Triggers when a connector's target point is modified through dragging or programmatic changes. This event allows validation of target connections and enforcement of connection constraints.
+
+The following code example demonstrates how to handle the [`targetPointChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iEndChangeEventArgs/) event in the diagram.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -148,7 +155,7 @@ The following code example explains how to get the [`target Point change`](https
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5TargetPontChange-cs1" %}
 
- You can prevent target point dragging by setting the `cancel` property of [`EndChangeEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iEndChangeEventArgs/) to true, as shown in the code snippet below.
+ You can prevent target point dragging by setting the `cancel` property of [`EndChangeEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iEndChangeEventArgs/) to **true**, as shown in the code snippet below.
 
 ```javascript
 
@@ -163,12 +170,13 @@ targetPointChange={  (args) => {
 
 ```
 
-## Segment Collection Change event
+## Segment Collection Change Event
 
-Triggers when the connector's segments added or removed at runtime.
-The following code example explains how to get the [`segment collection change`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iSegmentCollectionChangeEventArgs/) event in the diagram. 
+Triggers when connector segments are added or removed at runtime. This event is essential for tracking dynamic changes to connector paths and implementing custom segment management logic.
 
-Use `CTRL+Shift+Click` on connector to add/remove segments.
+The following code example demonstrates how to handle the [`segmentCollectionChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iSegmentCollectionChangeEventArgs/) event in the diagram: 
+
+Use **CTRL+Shift+Click** on connector to add/remove segments.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -181,10 +189,11 @@ Use `CTRL+Shift+Click` on connector to add/remove segments.
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5SegmentCollChange-cs1" %}
 
-## Segment Change event
+## Segment Change Event
 
-Triggers when the connector's segments were adjusted or edited.
-The following code example explains how to get the [`segment change`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iSegmentChangeEventArgs/) event in the diagram.
+Triggers when connector segments are adjusted or edited by the user. This event enables custom validation and modification of segment positions during interactive editing.
+
+The following code example demonstrates how to handle the [`segmentChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iSegmentChangeEventArgs/) event in the diagram:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -197,7 +206,7 @@ The following code example explains how to get the [`segment change`](https://he
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5SegmentChangeEvent-cs1" %}
 
- You can prevent segment editing by setting the `cancel` property of [`SegmentChangeEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iSegmentChangeEventArgs/) to true, as shown in the code snippet below.
+ You can prevent segment editing by setting the `cancel` property of [`SegmentChangeEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iSegmentChangeEventArgs/) to **true**, as shown in the code snippet below:
 
 ``` javascript
  segmentChange={  (args) => {
@@ -210,10 +219,11 @@ The following code example explains how to get the [`segment change`](https://he
 
 ```
 
-## Collection change event
+## Collection Change Event
 
-Triggers when the connector is added or removed from diagram.
-The following code example explains how to get the [`collection change`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iCollectionChangeEventArgs/) event in the diagram.
+Triggers when connectors are added to or removed from the diagram. This event is fundamental for tracking diagram modifications and implementing undo/redo functionality or change tracking systems.
+
+The following code example demonstrates how to handle the  [`collectionChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iCollectionChangeEventArgs/) event in the diagram.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -226,7 +236,7 @@ The following code example explains how to get the [`collection change`](https:/
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5CollectionChange-cs1" %}
 
-You can prevent changes to the diagram collection, such as adding or deleting connectors, by setting the `cancel` property of [`CollectionChangeEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iCollectionChangeEventArgs/) to true, as shown in the code snippet below.
+You can prevent changes to the diagram collection, such as adding or deleting connectors, by setting the `cancel` property of [`CollectionChangeEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iCollectionChangeEventArgs/) to **true**, as shown in the code snippet below:
 
 ``` javascript
 collectionChange={  (args) => {

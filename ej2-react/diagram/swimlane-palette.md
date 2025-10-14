@@ -1,16 +1,20 @@
 ---
 layout: post
-title: Swim lane in React Diagram component | Syncfusion®
-description: Learn here all about Swim lane in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: Swim lane in React Diagram Component | Syncfusion®
+description: Learn how to add, configure, and customize swimlane shapes in the symbol palette of Syncfusion® React Diagram Component.
 control: Swim lane in symbol palette 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Add swimlane to palette
+# Swimlane in Symbol Palette
 
-Diagram provides support to add swimlane and phases to symbol palette. The following code sample illustrate how to add swimlane and phases to palette.
+The React Diagram component provides comprehensive support for adding swimlane shapes and phases to the symbol palette. Swimlanes help organize process flows by grouping related activities into lanes, making complex diagrams more readable and structured.
+
+## Add Swimlane to Palette
+
+The diagram component supports adding both swimlane containers and individual phases to the symbol palette. This enables users to drag and drop pre-configured swimlane elements into their diagrams.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -23,10 +27,9 @@ Diagram provides support to add swimlane and phases to symbol palette. The follo
 
  {% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5Palette-cs1" %}
 
-### Drag and drop swimlane to palette
+### Drag and Drop Swimlane to Palette
 
 * The drag and drop support for swimlane shapes has been provided.
 * Horizontal lanes can be added to vertical swimlanes, and vice versa.
 * The phase will only drop on swimlane shape with same orientation. The following image illustrates how to drag symbol from palette.
 ![Drag Symbol from Palette](images/swimlane-drag-dropGif.gif)
-

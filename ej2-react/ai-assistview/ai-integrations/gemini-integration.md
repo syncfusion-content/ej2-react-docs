@@ -45,7 +45,11 @@ npm install @google/generative-ai
 
 ## Generate API Key
 
+<<<<<<< HEAD
 1. Go to [Google AI Studio](https://aistudio.google.com/app/apikey) and sign in with your Google account. If you don’t have one, create a new account. 
+=======
+1. Go to [Google AI Studio](https://aistudio.google.com/app/apikey) and sign in with your google account. If you don’t have one, create a new account. 
+>>>>>>> remotes/origin/development
 
 2. Once logged in, click on `Get API Key` from the left-hand menu or the top-right corner of the dashboard. 
 
@@ -88,4 +92,8 @@ npm start
 
 ```
 
+<<<<<<< HEAD
 Open the hosted link to interact with the Gemini AI for dynamic response.
+=======
+Open the hosted link to interact with the Gemini AI for dynamic response
+>>>>>>> remotes/origin/development

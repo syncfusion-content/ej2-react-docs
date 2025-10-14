@@ -1,20 +1,22 @@
 ---
 layout: post
 title: Events of node interaction in React Diagram component | Syncfusion®
-description: Learn here all about Nodes in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+description: Learn about node interaction events in Syncfusion React Diagram including click, selection, position, size, rotate, property and collection events.
 control: Events of node
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events of nodes in React Diagram control
+# Node Interaction Events in React Diagram Component
 
-Diagram provides some events support for node that triggers when interacting with the node.
+The React Diagram component provides comprehensive event support for node interactions, allowing developers to respond to user actions and customize behavior during various interaction scenarios. These events are triggered when users interact with nodes through clicking, dragging, resizing, rotating, and other operations.
 
-## Click event
+## Click Event
 
-Triggers when the node is clicked. The following code example explains how to get the [`click`](https://ej2.syncfusion.com/react/documentation/api/diagram/#click) event in the diagram.
+Triggered when a user clicks on a node. This event provides access to the clicked node and mouse event details, enabling custom click handling and node-specific actions.
+
+The following code example demonstrates how to handle the  [`click`](https://ej2.syncfusion.com/react/documentation/api/diagram/#click) event in the diagram:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,10 +29,11 @@ Triggers when the node is clicked. The following code example explains how to ge
  
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvent-cs1" %}
 
-## Selection change event
+## Selection Change Event
 
-Triggers when the node is selected in diagram.
-The following code example explains how to get the [`selectionChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#selectionchange) event in the diagram.
+Triggered when a node's selection state changes, either when selected or deselected. This event fires during both the selection process and completion, providing control over selection behavior.
+
+The following code example shows how to handle the [`selectionChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#selectionchange) event:
 
 
 {% tabs %}
@@ -44,8 +47,7 @@ The following code example explains how to get the [`selectionChange`](https://e
  
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvent-cs2" %}
 
- You can prevent selection by setting the `cancel` property of [`SelectionChangeEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iSelectionChangeEventArgs/) to true, as shown in the code snippet below.
-
+Selection can be prevented by setting the `cancel` property[`SelectionChangeEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iSelectionChangeEventArgs/) to **true**, as shown in the following code:
 ```ts
   selectionChange: function (args: ISelectionChangeEventArgs) {
     if (args.state == 'Changing') {
@@ -56,10 +58,11 @@ The following code example explains how to get the [`selectionChange`](https://e
 
 ```
 
-## Position change event
+## Position Change Event
 
-While dragging the node through interaction, the position change event can be used to do the customization.
-The following code example explains how to get the [`positionChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#positionchange) event in the diagram.
+Triggered during node dragging operations, providing real-time position updates as users move nodes. This event enables position validation, snap-to-grid functionality, and custom drag behavior.
+
+The following code example demonstrates how to handle the  [`positionChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#positionchange) event:
 
 
 {% tabs %}
@@ -73,7 +76,7 @@ The following code example explains how to get the [`positionChange`](https://ej
  
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvent-cs3" %}
 
- You can prevent dragging by setting the `cancel` property of [`DraggingEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iDraggingEventArgs/) to true, as shown in the code snippet below.
+Dragging can be prevented by setting the `cancel` property of [`DraggingEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iDraggingEventArgs/) to **true**:
 
  ```ts
    positionChange: function (args: IDraggingEventArgs) {
@@ -85,10 +88,11 @@ The following code example explains how to get the [`positionChange`](https://ej
 
 ```
 
-## Size change event
+## Size Change Event
 
-While resizing the node during the interaction, the size change event can be used to do the customization.
-The following code example explains how to get the [`sizeChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#sizechange) event in the diagram.
+Triggered during node resizing operations when users interact with resize handles. This event provides access to the new dimensions and allows for size constraints and validation.
+
+The following code example shows how to handle the [`sizeChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#sizechange) event:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -101,7 +105,7 @@ The following code example explains how to get the [`sizeChange`](https://ej2.sy
  
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvent-cs4" %}
 
- You can prevent resizing by setting the `cancel` property of [`SizeChangeEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/isizechangeeventargs/) to true, as shown in the code snippet below.
+Resizing can be prevented by setting the `cancel` property of[`SizeChangeEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/isizechangeeventargs/) to **true**:
 
  ```ts
     sizeChange: function (args: ISizeChangeEventArgs) {
@@ -113,10 +117,11 @@ The following code example explains how to get the [`sizeChange`](https://ej2.sy
 
 ```
 
-## Rotate change event
+## Rotate Change Event
 
-While rotating the node during the interaction, the rotate change event can be used to do the customization.
-The following code example explains how to get the [`rotateChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#rotatechange) event in the diagram.
+Triggered during node rotation operations when users interact with the rotation handle. This event enables rotation constraints and custom rotation behavior.
+
+The following code example demonstrates how to handle the [`rotateChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#rotatechange) event:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -129,7 +134,7 @@ The following code example explains how to get the [`rotateChange`](https://ej2.
  
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvent-cs5" %}
 
- You can prevent rotation by setting the `cancel` property of [`RotationEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/irotationeventargs/) to true, as shown in the code snippet below.
+Rotation can be prevented by setting the `cancel` property of[`RotationEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/irotationeventargs/) to **true**:
 
  ```ts
   rotateChange: function (args: IRotationEventArgs) {
@@ -141,9 +146,11 @@ The following code example explains how to get the [`rotateChange`](https://ej2.
 
 ```
 
-## Property change event
+## Property Change Event
 
-Triggers when there is any property change occurred for the node. The following code example explains how to get the [`propertyChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#propertychange) event in the diagram.
+Triggered when any property of a node is modified programmatically or through user interaction. This event is useful for tracking changes and implementing custom validation logic.
+
+The following code example shows how to handle the [`propertyChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#propertychange) event:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -156,10 +163,11 @@ Triggers when there is any property change occurred for the node. The following 
  
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvent-cs6" %}
 
-## Collection change event
+## Collection Change Event
 
-Triggers when the node is added or removed in diagram dynamically.
-The following code example explains how to get the [`collectionChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#collectionchange) event in the diagram.
+Triggered when nodes are added to or removed from the diagram dynamically. This event provides control over diagram modifications and enables validation before collection changes occur.
+
+The following code example demonstrates how to handle the  [`collectionChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#collectionchange) event:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -172,7 +180,7 @@ The following code example explains how to get the [`collectionChange`](https://
  
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvent-cs7" %}
 
-You can prevent changes to the diagram collection, such as adding or deleting nodes, by setting the `cancel` property of [`CollectionChangeEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/icollectionchangeeventargs/) to true, as shown in the code snippet below.
+Collection changes can be prevented by setting the `cancel` property of[`CollectionChangeEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/icollectionchangeeventargs/) to **true**:
 
  ```ts
     collectionChange: function (args: ICollectionChangeEventArgs) {
@@ -186,19 +194,21 @@ You can prevent changes to the diagram collection, such as adding or deleting no
 
 ## Mouse Events
 
-### Mouse enter event
+The diagram component provides mouse interaction events that trigger when users hover over or move the mouse cursor in relation to node surfaces.
 
-The [`mouseEnter`](https://ej2.syncfusion.com/react/documentation/api/diagram/#mouseenter) is triggered when the mouse enters the node surface.
+### Mouse Enter Event
 
-### Mouse over event
+The [`mouseEnter`](https://ej2.syncfusion.com/react/documentation/api/diagram/#mouseenter) event is triggered when the mouse cursor enters a node's boundary area.
 
-The [`mouseOver`](https://ej2.syncfusion.com/react/documentation/api/diagram/#mouseover) is triggered when the mouse hover over the node surface.
+### Mouse Over Event
 
-### Mouse leave event
+The [`mouseOver`](https://ej2.syncfusion.com/react/documentation/api/diagram/#mouseover) event is triggered when the mouse cursor hovers over a node's surface area.
 
-The [`mouseLeave`](https://ej2.syncfusion.com/react/documentation/api/diagram/#mouseleave) is triggered when the mouse leaves the node surface.
+### Mouse Leave Event
 
-The following code example shows how to handle these events in the diagram and change the color of a node based on these events:
+The [`mouseLeave`](https://ej2.syncfusion.com/react/documentation/api/diagram/#mouseleave) event is triggered when the mouse cursor leaves a node's boundary area.
+
+The following code example demonstrates how to handle these mouse events and implement visual feedback by changing node colors based on mouse interactions:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

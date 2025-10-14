@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Connectors in React Diagram component | Syncfusion®
-description: Learn here all about Connectors in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: Connectors in React Diagram Component | Syncfusion®
+description: Explore the various types of connectors available in the Syncfusion React Diagram Component and learn how to create, customize, and manage them.
 control: Connectors 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connectors in React Diagram component
+# Connectors in React Diagram Component
 
-Connectors are objects used to create link between two points, nodes or ports to represent the relationships between them.
+Connectors are objects used to create links between two points, nodes, or ports to represent relationships between them. They provide visual connections that help illustrate data flow, process sequences, hierarchical relationships, and other logical connections in diagrams.
 
-## Create connector
+## Create Connector
 
-Connector can be created by defining the source and target point of the connector. The path to be drawn can be defined with a collection of segments. To explore the properties of a [`connector`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/), refer to [`Connector Properties`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/). The [`id`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connectorModel/#id) property of a connector is used to define its unique identifier and can later be used to find the connector at runtime for customization.
+Connectors can be created by defining the source and target points. The path to be drawn can be defined with a collection of segments. To explore the properties of a [`connector`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/), refer to [`Connector Properties`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/). The [`id`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connectorModel/#id) property of a connector is used to define its unique identifier and can later be used to find the connector at runtime for customization.
 
 ```ts
 let connectors = [{
@@ -26,7 +26,7 @@ let connectors = [{
 ```
 N> When setting a Connector's ID, ensure that it does not contain white spaces, does not start with numbers or special characters, and does not include special characters like underscores (_) or spaces.
 
-## Add connectors through connectors collection
+## Add connectors through Connectors Collection
 
 The [`sourcePoint`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/#sourcepoint) and [`targetPoint`](https://ej2.syncfusion.com/react/documentation/api/diagram/connector/#targetpoint) properties of connector allow you to define the end points of a connector.
 
@@ -43,9 +43,9 @@ The following code example illustrates how to add a connector through connector 
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5Connectors-cs1" %}
 
-## Add/remove connector at runtime
+## Add/Remove Connector at Runtime
 
-Connectors can be added at runtime by using public method, [`add`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#add) and can be removed at runtime by using public method, [`remove`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#remove).
+Connectors can be added at runtime by using public method, [`add`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#add) and can be removed at runtime by using public method, [`remove`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#remove).These methods are useful when you need to dynamically modify diagram structure based on user interactions or data changes.
 
 The following code example illustrates how to add connector at runtime.
 
@@ -60,7 +60,7 @@ The following code example illustrates how to add connector at runtime.
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5Connectorsatruntime-cs1" %}
 
-## Add collection of connectors at runtime
+## Add Collection of Connectors at Runtime
 
 The collection of connectors can be dynamically added using [`addElements`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#addelements) method.Each time an element is added to the diagram canvas, the [`collectionChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#collectionchange) event will be triggered.
 
@@ -77,9 +77,9 @@ The following code illustrates how to add connectors collection at runtime.
           
 {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5ConnectoraddatRunTime-cs2" %}
 
-## Add Connectors from palette
+## Add Connectors from Palette
 
-Connectors can be predefined and added to the symbol palette. You can drop those connectors into the diagram, when required.
+Connectors can be predefined and added to the symbol palette. You can drop those connectors into the diagram, when required. This approach is useful for creating reusable connector templates that users can easily drag and drop into their diagrams.
 
 The following code example illustrates how to add connectors in palette.
 
@@ -94,11 +94,11 @@ The following code example illustrates how to add connectors in palette.
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5Connectorfrompalette-cs1" %}
 
-## Draw connectors
+## Draw Connectors
 
-Connectors can be interactively drawn by clicking and dragging the diagram surface.
+Connectors can be interactively drawn by clicking and dragging on the diagram surface. This feature enables users to create connections dynamically during diagram creation or editing.
 
-To draw a shape, you have to activate the drawing tool by setting `DrawOnce` or `ContinuousDraw` to the [`tool`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#tool) property and you need to set the `connector` object by using the [`drawingObject`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#drawingobject) property.
+To draw a shape, you have to activate the drawing tool by setting **DrawOnce** or **ContinuousDraw** to the [`tool`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#tool) property and you need to set the `connector` object by using the [`drawingObject`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#drawingobject) property.
 
 The following code example illustrates how to draw a connector at runtime.
 
@@ -113,11 +113,13 @@ The following code example illustrates how to draw a connector at runtime.
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5ConnectordrawTool-cs1" %}
 
-## Update connector at runtime
+ For more information about drawing connectors, refer to [`Draw Connectors`](https://ej2.syncfusion.com/react/documentation/api/diagram/#drawingobject).
+
+## Update Connector at Runtime
 
 Various connector properties such as `sourcePoint`, `targetPoint`, `style`, `sourcePortID`, `targetPortID`, etc., can be updated at the runtime.
 
-The following code example illustrates how to update a connector's source point, target point, styles properties at runtime.
+The following code example illustrates how to update a connector's source point, target point, styles properties at runtime.This flexibility allows for dynamic modification of connector appearance and behavior based on application logic or user interactions.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -130,11 +132,11 @@ The following code example illustrates how to update a connector's source point,
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5Connectorsupdate-cs1" %}
 
-## Clone connector at runtime
+## Clone Connector at Runtime
 
-Cloning a connector creates a new connector instance with identical properties and attributes.
+Cloning a connector creates a new connector instance with identical properties and attributes. This feature is useful when you need to duplicate existing connectors while maintaining their configuration.
 
-The following code example illustrates how to clone a connector
+The following code example illustrates how to clone a connector.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -147,11 +149,11 @@ The following code example illustrates how to clone a connector
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5ConnectorClone-cs1" %}
 
-## Get Connector defaults
+## Configure Default Connector Properties
 
-Get Connector defaults helps to define default properties of the connector. It is triggered when the diagram is initialized. In this event, you can customize the connector properties.
+The connector defaults functionality allows you to define default properties for all connectors in the diagram. This is triggered when the diagram is initialized, providing an opportunity to customize connector properties globally rather than setting them individually for each connector.
 
-The following code example explains how to customize the connector using [`getConnectorDefaults`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#getconnectordefaults).
+The following code example explains how to customize connector defaults using [`getConnectorDefaults`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#getconnectordefaults).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -166,11 +168,11 @@ The following code example explains how to customize the connector using [`getCo
 
 ## Connections
 
-### Connection with nodes
+### Connection with Nodes
 
-* The [`sourceID`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/#sourceid) and [`targetID`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/#targetid) properties allow to define the nodes to be connected.
+* The [`sourceID`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/#sourceid) and [`targetID`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/#targetid) properties allow you to define the nodes to be connected. When these properties are set, the connector will automatically attach to the specified nodes and move with them when the nodes are repositioned.
 
-* The following code example illustrates how to connect two nodes.
+The following code example illustrates how to connect two nodes.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -185,9 +187,9 @@ The following code example explains how to customize the connector using [`getCo
 
 * When you remove NodeConstraints [`InConnect`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeConstraints) from Default, the node accepts only an outgoing connection to dock in it. Similarly, when you remove NodeConstraints [`OutConnect`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeConstraints) from Default, the node accepts only an incoming connection to dock in it.
 
-* When you remove both InConnect and OutConnect NodeConstraints from Default, the node restricts connector to establish connection in it.
+When you remove both InConnect and OutConnect NodeConstraints from Default, the node restricts connectors from establishing connections to it.
 
-* The following code illustrates how to disable InConnect constraints.
+The following code illustrates how to disable InConnect constraints.
 
 ```ts
 import * as React from "react";
@@ -223,9 +225,9 @@ root.render(<App />);
 
 ```
 
-## Connections with ports
+## Connections with Ports
 
-The [`sourcePortID`](https://ej2.syncfusion.com/react/documentation/api/diagram/connector/#sourceportid) and [`targetPortID`](https://ej2.syncfusion.com/react/documentation/api/diagram/connector/#targetportid) properties allow to create connections between some specific points of source/target nodes.
+The [`sourcePortID`](https://ej2.syncfusion.com/react/documentation/api/diagram/connector/#sourceportid) and [`targetPortID`](https://ej2.syncfusion.com/react/documentation/api/diagram/connector/#targetportid) properties allow you to create connections between specific points of source and target nodes. This provides more precise control over where connectors attach to nodes.
 
 The following code example illustrates how to create port to port connections.
 
@@ -297,11 +299,11 @@ const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
 ```
 
-## Automatic line routing
+## Automatic Line Routing
 
-Diagram provides additional flexibility to re-route the diagram connectors. A connector will frequently re-route itself when a shape moves next to it.Routing adjusts the geometry of connectors to prevent them from overlapping with any nearby nodes in their path. This feature can be activated by adding the LineRouting constraints property to the diagram.
+Diagram provides additional flexibility to re-route diagram connectors automatically. A connector will frequently re-route itself when a shape moves next to it. Routing adjusts the geometry of connectors to prevent them from overlapping with any nearby nodes in their path. This feature can be activated by adding the LineRouting constraints property to the diagram.
 
-* Dependency LineRouting module should be injected to the application as the following code snippet.
+The LineRouting module should be injected to the application as shown in the following code snippet.
 
     ```ts
 
@@ -312,7 +314,7 @@ Diagram provides additional flexibility to re-route the diagram connectors. A co
      Diagram.Inject(LineRouting);
    ```
 
-* Now, the line routing constraints must be included to the default diagram constraints to enable automatic line routing support like below.
+The line routing constraints must be included in the default diagram constraints to enable automatic line routing support as shown below.
 
     ```ts
      /**
@@ -357,7 +359,7 @@ The following image illustrates how the connector automatically re-routes the se
         
 {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5ConnectorsLineRoutingDisabled-cs1" %}
 
-## Avoid line overlapping
+## Avoid Line Overlapping
 
 The diagram provides flexibility to prevent connectors from overlapping, ensuring better clarity and readability. This feature intelligently adjusts connector paths to avoid stacking orthogonal connectors on top of each other, reducing visual clutter and enhancing diagram structure. It is especially useful in complex diagrams with multiple orthogonal connectors, where overlapping lines can make interpretation difficult.
 
@@ -408,8 +410,8 @@ N> The `AvoidLineOverlapping` feature applies only to orthogonal connectors and 
 
 ## See Also
 
-* [How to add annotations to the connector](./labels)
-* [How to enable/disable the behavior of the node](./constraints)
-* [How to add connectors to the symbol palette](./symbol-palette)
-* [How to perform the interaction on the connector](./interaction#connection-editing)
-* [How to create diagram connectors using drawing tools](./tools)
+* [How to add annotations to the connector.](./labels)
+* [How to enable/disable the behavior of the node.](./constraints)
+* [How to add connectors to the symbol palette.](./symbol-palette)
+* [How to perform the interaction on the connector.](./interaction#connection-editing)
+* [How to create diagram connectors using drawing tools.](./tools)
