@@ -16,8 +16,6 @@ AI Coding Assistant:
 
 * **The SyncfusionReactAssistant MCP Server**
   Processes advanced prompts and returns tailored code suggestions via [MCP-compatible clients](https://modelcontextprotocol.io/clients).
-* **SyncfusionReact GitHub Copilot Extension**
-  Augments GitHub Copilot with Syncfusion-specific support for rapid component setup and contextual guidance in the IDE.
 
 ## Getting Started
 
@@ -37,7 +35,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> offers unlimited access to the 
 
 * Number of requests
 * Components usage
-* Query types
+* Query formats
 * Usage duration
 
 This ensures users can fully leverage Syncfusion<sup style="font-size:70%">&reg;</sup> components to enhance their development experience without limitations.
@@ -69,5 +67,4 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant is desi
 ## See also
 
 * Add the [SyncfusionReactAssistant MCP Server](https://ej2.syncfusion.com/react/documentation/ai-coding-assistants/mcp-server) to an MCP-enabled client
-* Install the [SyncfusionReact GitHub Copilot Extension](https://ej2.syncfusion.com/react/documentation/ai-coding-assistants/copilot-extension)
 * [Syncfusion<sup style="font-size:70%">&reg;</sup> React Documentation](https://ej2.syncfusion.com/react/documentation)
