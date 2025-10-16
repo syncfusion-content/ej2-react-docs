@@ -1,6 +1,3 @@
-{% raw %}
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
@@ -25,7 +22,3 @@ class App extends React.Component<{}, {}>{
   }
 };
 ReactDOM.render(<App />, document.getElementById('kanban'));
-
-
-
-{% endraw %}

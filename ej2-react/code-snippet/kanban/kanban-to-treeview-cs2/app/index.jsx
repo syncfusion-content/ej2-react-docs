@@ -1,4 +1,3 @@
-{% raw %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { extend, closest } from '@syncfusion/ej2-base';
@@ -55,4 +54,3 @@ function App() {
     </div>);
 }
 ReactDOM.render(<App />, document.getElementById('kanban'));
-{% endraw %}
