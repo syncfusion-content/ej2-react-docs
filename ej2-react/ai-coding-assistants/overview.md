@@ -35,7 +35,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> offers unlimited access to the 
 
 * Number of requests
 * Components usage
-* Query formats
+* Query caps
 * Usage duration
 
 This ensures users can fully leverage Syncfusion<sup style="font-size:70%">&reg;</sup> components to enhance their development experience without limitations.
