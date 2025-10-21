@@ -8,35 +8,35 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Microsoft Bot Framework With React Chat UI component
+# Integrate Microsoft Bot Framework with React Chat UI Component
 
-The Syncfusion React Chat UI supports integration with a [Microsoft Bot Framework](https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0) bot hosted on Azure, enabling a custom chat interface for seamless user interaction. The process involves setting up a secure backend token server, configuring the bot in Azure, and integrating the Syncfusion Chat UI in a React application.
-
-## Getting Started With the Chat UI Component
-
-Before integrating Microsoft Bot Framework, ensure that the Syncfusion Chat UI component is correctly rendered in your React app:
-
-[React Getting Started Guide](../getting-started)
+The Chat UI component integrates with a [Microsoft Bot Framework](https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0) bot hosted on Azure, enabling a custom chat interface for seamless user interaction. The process involves setting up a secure backend token server, configuring Direct Line in Azure, and integrating the Chat UI in the application.
 
 ## Prerequisites
 
-* [Microsoft Azure Account](https://portal.azure.com/#home): Required to create and host the bot.
-* `Node.js Environment`: The backend portion requires `Node.js` and `npm`.
-* `Syncfusion Chat UI for React`: Install @syncfusion/ej2-react-interactive-chat in your React project.
-* `Deployed Azure Bot`: A bot should be created and published using the Bot Framework, which is accessible via an Azure App Service. Refer to Microsoft's Bot Creation Guide.
+Before starting, ensure you have the following:
+
+* **Node.js**: Version 16 or higher with npm.
+
+* [Microsoft Azure Account](https://portal.azure.com/#home) : Required to create and host the bot.
+
+* **Syncfusion Chat UI**: Package [@syncfusion/ej2-react-interactive-chat](https://www.npmjs.com/package/@syncfusion/ej2-react-interactive-chat) installed.
+
+* **Deployed Azure Bot**: A bot should be created and published using the [Microsoft Bot Framework](https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0), which is accessible via an Azure App Service. Refer to Microsoft's Bot Creation Guide.
+
+## Set Up the React Environment
+
+Follow the Syncfusion Chat UI [Getting Started](../getting-started) guide to configure and render the Chat UI component in your React application.
 
 ## Install Dependencies
 
+Install the required packages:
+
 * Install `frontend` dependencies for bot communication and the Syncfusion Chat UI:
-
-    * Install `directline-js` package to handle communication with the Bot Framework.
-
-    * Install `axios` for the HTTP requests.
 
 ```bash
 
-npm install @syncfusion/ej2-react-interactive-chat --save
-npm install directline-js axios --save
+npm install botframework-directlinejs axios --save
 
 ```
 
@@ -110,7 +110,7 @@ app.listen(port, () => console.log(`Token server running on http://localhost:${p
 
 ## Configure ChatUI
 
-Create `src/App.js` to connect the Syncfusion Chat UI to the bot via the direct line API:
+Modify the `src/App.js` file to connect the Syncfusion Chat UI to the bot via the direct line API:
 
 {% tabs %}
 {% highlight js tabtitle="App.js" %}

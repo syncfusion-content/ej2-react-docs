@@ -4,24 +4,19 @@ import { SymbolPaletteComponent, NodeModel, PaletteModel, SymbolInfo } from "@sy
 import { CheckBoxComponent } from "@syncfusion/ej2-react-buttons";
 
 let palette: SymbolPaletteComponent;
-let checkBox: CheckBoxComponent;
-
-// Initialize the basic shapes for the symbol palette.
 export function getBasicShapes(): NodeModel[] {
     let basicShapes: NodeModel[] = [
         { id: 'Rectangle', shape: { type: 'Basic', shape: 'Rectangle' } },
         { id: 'Ellipse', shape: { type: 'Basic', shape: 'Ellipse' } },
-        { id: 'Triangle', shape: { type: 'Basic', shape: 'Triangle' } },
-        { id: 'Hexagon', shape: { type: 'Basic', shape: 'Hexagon' } },
-        { id: 'Parallelogram', shape: { type: 'Basic', shape: 'Parallelogram' } },
+        { id: 'Hexagon', shape: { type: 'Basic', shape: 'Triangle' } },
+        { id: 'Star', shape: { type: 'Basic', shape: 'Hexagon' } },
+        { id: 'Pentagon', shape: { type: 'Basic', shape: 'Parallelogram' } },
         { id: 'Diamond', shape: { type: 'Basic', shape: 'Diamond' } },
         { id: 'Pentagon', shape: { type: 'Basic', shape: 'Pentagon' } },
         { id: 'Heptagon', shape: { type: 'Basic', shape: 'Heptagon' } },
     ];
     return basicShapes;
 }
-
-// Initialize the flow shapes for the symbol palette.
 export function getFlowShapes(): NodeModel[] {
     let basicShapes: NodeModel[] = [
         { id: 'Terminator', shape: { type: 'Flow', shape: 'Terminator' } },
@@ -30,13 +25,15 @@ export function getFlowShapes(): NodeModel[] {
         { id: 'Document', shape: { type: 'Flow', shape: 'Document' } },
         { id: 'PreDefinedProcess', shape: { type: 'Flow', shape: 'PreDefinedProcess' } },
         { id: 'DirectData', shape: { type: 'Flow', shape: 'DirectData' } },
-        { id: 'Card', shape: { type: 'Flow', shape: 'Card' } },
-        { id: 'Collate', shape: { type: 'Flow', shape: 'Collate' } },
+        { id: 'SequentialData', shape: { type: 'Flow', shape: 'Card' } },
+        { id: 'Sort', shape: { type: 'Flow', shape: 'Collate' } },
     ];
     return basicShapes;
 }
-function getSymbolInfo(symbol: SymbolInfo): SymbolInfo {
-    return { showTooltip: (checkBox && (checkBox as any).checked) };
+export function getSymbolInfo(symbol: SymbolInfo): SymbolInfo {
+    return {
+        showTooltip: true,
+    };
 }
 const symbolPreview = {
     height: 8,
@@ -49,6 +46,10 @@ const symbolMargin = {
     bottom: 15,
 };
 function tooltipChange() {
+    var checkBox = document.getElementById("showTooltip");
+    palette.getSymbolInfo = function (symbol: SymbolInfo): SymbolInfo {
+        return { showTooltip: (checkBox as any).checked };
+    }
     palette.refresh();
 }
 const palettes: PaletteModel[] = [{
@@ -77,14 +78,13 @@ function App() {
                 symbolMargin={symbolMargin}
                 symbolHeight={70}
                 symbolWidth={70}
-                // Enable/disable tooltip for the symbols.
                 getSymbolInfo={getSymbolInfo}
-                getNodeDefaults={(symbol: NodeModel) => {
-                    symbol.style.fill = '#6495ED';
-                    symbol.style.strokeColor = '#6495ED';
-                    return symbol;
+                getNodeDefaults={(node: NodeModel) => {
+                    node.style.fill = '#6495ED';
+                    node.style.strokeColor = '#6495ED';
+                    return node;
                 }}/>
-            <CheckBoxComponent id="showTooltip" ref={checkbox => (checkBox = checkbox)} checked={true} change={tooltipChange} /> Show Tooltip
+            <CheckBoxComponent id="showTooltip" checked={true} change={tooltipChange} /> Show Tooltip
         </div>
     );
 }

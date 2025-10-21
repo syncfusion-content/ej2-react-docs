@@ -21,6 +21,7 @@ Gantt contains the following in-built timeline view modes:
 * Week
 * Month
 * Year
+* Minutes
 
 Timescale mode in Gantt can be defined by using [`timelineViewMode`](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineViewMode/) property and also we can define timescale mode of top tier and bottom tier by using [`topTier.unit`](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineTierSettingsModel/#unit) and [`bottomTier.unit`](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineTierSettingsModel/#unit) properties.
 
@@ -113,6 +114,24 @@ An `Hour` timeline mode tracks the tasks in minutes scale. In this mode, the upp
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/gantt/hourtimeline-cs1" %}
+
+### Minutes timeline mode
+
+In Minutes timeline mode, the tier displays minute-level intervals, ideal for tracking short-duration tasks with high precision.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/minutetimeline-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/minutetimeline-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/minutetimeline-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/minutetimeline-cs1" %}
 
 ## Change timeline view mode programmatically
 

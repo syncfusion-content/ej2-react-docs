@@ -1,20 +1,28 @@
 ---
 layout: post
-title: Bpmn DataSource in React Diagram component | Syncfusion®
-description: Learn here all about Bpmn shapes in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: BPMN DataSource in React Diagram Component | Syncfusion®
+description: Learn how to create and configure BPMN data source shapes in Syncfusion® React Diagram Component for business process modeling.
 control: Bpmn DataSource 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# BPMN Data source in React Diagram component
+# BPMN Data Source in React Diagram Component
 
-## Datasource
+## Overview
 
-Datasource is used to store or access data associated with a business process. To create a datasource, set the shape as **datasource**. The following code example illustrates how to create a datasource.
+BPMN data sources represent information that is required for or produced by business process activities. Data sources are essential elements in business process modeling that indicate where data comes from, how it flows through the process, and where it is stored or accessed.
+
+## Creating a Data Source
+
+To create a BPMN data source shape in the React Diagram component, set the shape type as **BpmnShape** and specify the shape property as **DataSource**. Data sources are typically used to represent databases, files, or other data repositories that business processes interact with.
 
 ![DataSource BPMN Shape](images/Datasource.png)
+
+### Basic Data Source Implementation
+
+The following code example demonstrates how to create a basic BPMN data source shape:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

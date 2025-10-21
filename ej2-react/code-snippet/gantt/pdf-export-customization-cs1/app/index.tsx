@@ -15,7 +15,8 @@ function App(){
   };
   const  toolbarOptions: ToolbarItem[] = ['PdfExport'];
   function toolbarClick(args: ClickEventArgs): void {
-       if (args.item.text === 'Pdf export') {
+    console.log(args.item.text);
+       if (args.item.text === 'PDF export') {
         var exportProperties = {
             header: {
                 fromTop: 0,

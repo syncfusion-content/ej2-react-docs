@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Area Chart in React Charts | Syncfusion
-description: Learn here all about Area Chart in Syncfusion React Charts Component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Area Chart in Syncfusion React Charts of Syncfusion Essential JS 2 and more.
 control: Area Chart 
 platform: ej2-react
 documentation: ug
@@ -278,6 +278,6 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 ## See Also
 
-* [Data label](./data-labels)
-* [Tooltip](./tool-tip)
+* [Data label](./data-labels/)
+* [Tooltip](./tool-tip/)
 * [Use SVG Linear Gradient](https://support.syncfusion.com/kb/article/21513/how-to-use-svg-linear-gradient-for-react-area-chart-with-css)

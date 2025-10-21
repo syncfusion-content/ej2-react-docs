@@ -1,20 +1,22 @@
 ---
 layout: post
-title: Lane in React Diagram component | Syncfusion®
-description: Learn here all about Swim lane in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: Lane in React Diagram Component | Syncfusion®
+description: Learn here all about Swim lane in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
 control: Lane 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Lanes
+# Lane Management in React Diagram Component
 
-Lane is a functional unit or a responsible department of a business process that helps to map a  process within the functional unit or in between other functional units.
+## Overview
 
-The number of [`lanes`](https://ej2.syncfusion.com/react/documentation/api/diagram/laneModel) can be added to swimlane. The lanes are automatically stacked inside  swimlane based on the order they are added.
+A lane is a functional unit or responsible department of a business process that helps to map a process within the functional unit or between other functional units. In swimlane diagrams, lanes represent different actors, departments, or systems that participate in the process workflow.
 
-### Create an empty lane
+The number of [`lanes`](https://ej2.syncfusion.com/react/documentation/api/diagram/laneModel) can be added to a swimlane. The lanes are automatically stacked inside the swimlane based on the order they are added.
+
+### Create an Empty Lane
 
 * The lane `id` is used to define the name of the lane and its further used to find the lane at runtime and do any customization.
 
@@ -31,7 +33,7 @@ The following code example illustrates how to define a swimlane with lane.
 
  {% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5Emptylane-cs1" %}
 
-### Create lane header
+### Create Lane Header
 
 * The [`header`](https://ej2.syncfusion.com/react/documentation/api/diagram/laneModel#header) property of lane allows you to textually describe the lane and to customize the appearance of the description.
 
@@ -48,7 +50,7 @@ The following code example illustrates how to define a lane header.
 
  {% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5Laneheader-cs1" %}
 
-### Customizing lane and lane header
+### Customizing Lane and Lane Header
 
 * The size of lane can be controlled by using [`width`](https://ej2.syncfusion.com/react/documentation/api/diagram/headerModel#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/diagram/headerModel#height) properties of lane.
 
@@ -69,9 +71,9 @@ The following code example illustrates how to customize the lane header.
 
  {% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5Laneheadercustomize-cs1" %}
 
-#### Dynamic customization of lane header
+#### Dynamic Customization of Lane Header
 
-You can customize the lane header style and text properties dynamically. The following code illustrates how to dynamically customize the lane header.
+Lane header style and text properties can be customized dynamically. The following code illustrates how to dynamically customize the lane header.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -84,9 +86,9 @@ You can customize the lane header style and text properties dynamically. The fol
 
  {% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5Dynamiclaneheader-cs1" %}
 
-### Add/remove lane at runtime
+### Add and Remove Lanes at Runtime
 
-You can add the a lanes at runtime by using the [`addLanes`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addlanes) method and remove lane at runtime using the [`removeLane`](https://ej2.syncfusion.com/react/documentation/api/diagram/#removelane) method. The following code illustrates how to dynamically add and remove lane in swimlane.
+Lanes can be added at runtime by using the [`addLanes`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addlanes) method and remove lane at runtime using the [`removeLane`](https://ej2.syncfusion.com/react/documentation/api/diagram/#removelane) method. The following code illustrates how to dynamically add and remove lane in swimlane.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -99,9 +101,9 @@ You can add the a lanes at runtime by using the [`addLanes`](https://ej2.syncfus
 
  {% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5PhaseCustomize-cs1" %}
 
-### Add children to lane
+### Add Children to Lane
 
-To add nodes to lane,you should add [`children`](https://ej2.syncfusion.com/react/documentation/api/diagram/laneModel#children) collection of the lane.
+To add nodes to a lane, you should add them to the [`children`](https://ej2.syncfusion.com/react/documentation/api/diagram/laneModel#children) collection of the lane.
 
 The following code example illustrates how to add nodes to lane.
 
@@ -116,7 +118,7 @@ The following code example illustrates how to add nodes to lane.
 
  {% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5Lanechildern-cs1" %}
 
-#### Add child dynamically into the lane.
+#### Add Child Dynamically into the Lane.
 
 The child node can be inserted into the lane at runtime by using the [`addNodetoLane`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addnodetolane) method.
 
@@ -131,13 +133,13 @@ The child node can be inserted into the lane at runtime by using the [`addNodeto
 
  {% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5Lanechildren-cs2" %}
 
-We can also drag nodes from palette or diagram and drop it inside the lane. 
+Nodes can also be dragged from the palette or diagram and dropped inside the lane.
 
 ![Add child into lane](images/addChildToSwimlane.gif)
 
-### Prevent child movement outside lane
+### Prevent Child Movement Outside Lane
 
-To prevent child nodes from moving outside their designated lanes, you can use specific constraints. By default, nodes are allowed to move freely. To restrict their movement, you need to set the constraints accordingly.
+To prevent child nodes from moving outside their designated lanes, specific constraints can be used. By default, nodes are allowed to move freely. To restrict their movement, the constraints need to be set accordingly.
 
 Here is an example of how to apply these constraints:
 
@@ -152,9 +154,9 @@ Here is an example of how to apply these constraints:
 
  {% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5Lanechildren-cs3" %}
 
-### AddInfo
+### Additional Information Storage
 
-AddInfo for lanes similar to the nodes. we can store additional information about the specific lane by using the [`addInfo`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addinfo).
+Additional information storage for lanes is similar to nodes. Additional information about a specific lane can be stored by using the [`addInfo`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addinfo) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -167,23 +169,24 @@ AddInfo for lanes similar to the nodes. we can store additional information abou
 
  {% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5Lanechildren-cs4" %}
 
-### Lane interaction
+### Lane Interaction
 
-#### Resizing lane
+#### Resizing Lane
 
-* Lane can be resized in the bottom and left direction.
-* Lane can be resized by using resize selector of the lane.
-* Once you resize the lane, the swimlane will be resized automatically.
-* The lane can be resized either resizing the selector or the tight bounds of the child object. If the child node move to edge of the lane it can be automatically resized. The following image illustrates how resize the lane. ![Lane Resizing](images/lane-resizeGif.gif)
+* Lanes can be resized in the bottom and left directions.
+* Lanes can be resized by using the resize selector of the lane.
+* Once a lane is resized, the swimlane will be resized automatically.
+* The lane can be resized either by using the resize selector or the tight bounds of the child object. If the child node moves to the edge of the lane,it can be automatically resized. The following image illustrates how to resize the lane.
+![Lane Resizing](images/lane-resizeGif.gif)
 
-#### Lane swapping
+#### Lane Swapping
 
-* Lanes can be swapped using drag the lanes over another lane.
-* Helper should intimate the insertion point while lane swapping. The following image illustrates how swapping the lane. ![Lane Swapping](images/swapping.gif)
+* Lanes can be swapped by dragging the lanes over another lane.
+* A helper should indicate the insertion point while lane swapping. The following image illustrates how to swap lanes. ![Lane Swapping](images/swapping.gif)
 
-#### Disable Swimlane Lane swapping
+#### Disable Swimlane Lane Swapping
 
-You can disable swimlane lane swapping by using the property called `canMove`..
+Swimlane lane swapping can be disabled by using the property called `canMove`.
 
 The following code illustrates how to disable swimlane lane swapping.
 
@@ -198,24 +201,28 @@ The following code illustrates how to disable swimlane lane swapping.
 
  {% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5PhaseCustomize-cs2" %}
 
-#### Resize helper
+#### Resize Helper
 
-* The special resize helper will be used to resize the lanes.
-* The resize cursor will be available on the left and bottom direction alone.
-* Once resize the lane the swimlane will be resized automatically.
+* A special resize helper will be used to resize the lanes.
+* The resize cursor will be available on the left and bottom directions only.
+* Once the lane is resized, the swimlane will be resized automatically.
 
-#### Children interaction in lanes
+#### Children Interaction in Lanes
 
-* You can resize the child node within swimlanes.
-* You can drag the child nodes within lane.
-* Interchange the child nodes from one lane to another lane.
-* Drag and drop the child nodes from lane to diagram.
-* Drag and drop the child nodes from diagram to lane.
-* Based on the child node interactions,the lane size should be updated.
-The following image illustrates children interaction in lane. ![Lane Children Interaction](images/child-interaction.gif)
+* Child nodes can be resized within swimlanes.
+* Child nodes can be dragged within lanes.
+* Child nodes can be interchanged from one lane to another lane.
+* Child nodes can be dragged and dropped from lanes to the diagram.
+* Child nodes can be dragged and dropped from the diagram to lanes.
+* Based on the child node interactions, the lane size should be updated.
+
+The following image illustrates children interaction in lanes.
+
+![Lane Children Interaction](images/child-interaction.gif)
   
-#### Lane header editing
+#### Lane Header Editing
 
-Diagram provides the support to edit Lane headers at runtime. We achieve the header editing by double click event. Double clicking the header label will enables the editing of that.
-The following image illustrates how to edit the lane header. ![Lane Header Editing](images/lane-header-edit.gif)
+The diagram provides support to edit lane headers at runtime. Header editing is achieved by double-click events. Double-clicking the header label will enable the editing of that header.
 
+The following image illustrates how to edit the lane header.
+![Lane Header Editing](images/lane-header-edit.gif)

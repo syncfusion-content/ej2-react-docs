@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# In dent and out dent in React Gantt component
+# Indent and outdent in React Gantt component
 
 Indent and Outdent of a task are used to update the level of the task in hierarchical order of the task. It can be performed bu enabling the ['editSettings.allowEditing'](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings/#allowediting) property.
 

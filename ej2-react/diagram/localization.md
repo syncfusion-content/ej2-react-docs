@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Localization in React Diagram component | Syncfusion®
-description: Learn here all about Layers in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: Localization in React Diagram Component | Syncfusion®
+description: Learn how to localize context menus and symbol palette functionality in Syncfusion® React Diagram Component with culture-specific text.
 control: Localization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in EJ2 React Diagram control
+# Localization in EJ2 React Diagram Component
 
-The EJ2 Diagram component supports `localization`. In the Diagram component, the symbol palette search box and context menu items can be localized based on the selected culture. By using the locale property of the diagram, you can change the culture.
+The EJ2 React Diagram component supports localization functionality, allowing developers to adapt the user interface to different languages and regions. The diagram's symbol palette search box and context menu items can be localized based on the selected culture. Use the locale property of the diagram to specify the desired culture for localization.
 
-## Localize Diagram context menu
+## Localize Diagram Context Menu
 
 To localize the diagram context menu, we need to define the [`locale`](https://ej2.syncfusion.com/react/documentation/api/diagram/#locale) property of the diagram with our preferred culture. In the example below, we use **'de-DE**', which is the locale code for German as used in Germany.
 
@@ -27,9 +27,9 @@ To localize the diagram context menu, we need to define the [`locale`](https://e
     nodes={node}/>
 ```
 
-Next, we need to call the `setCulture('de')` function, which sets the default culture for all EJ2 components. This method takes one parameter, cultureName, which specifies the culture name to be set as the default.
+Next, call the `setCulture('de')` function to set the default culture for all EJ2 components. This method accepts one parameter, cultureName, which specifies the culture name to be set as the default.
 
-We also need to define the text we want to render in the context menu instead of the default English, as shown below.
+Define the localized text for the context menu items to replace the default English text:
 
 ```javascript
 
@@ -60,7 +60,7 @@ L10n.load({
 
 ```
 
-The following code example summarizes the locale settings for the context menu.
+The following code example demonstrates the complete locale settings for the context menu:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -73,13 +73,13 @@ The following code example summarizes the locale settings for the context menu.
 
  {% previewsample "page.domainurl/code-snippet/diagram/localization/es5localeContextMenu-cs1" %}
 
-## Localize Symbol palette
+## Localize Symbol Palette
 
-You can enable the search option in the symbol palette to search for symbols by using the [`enableSearch`](../api/diagram/symbolPaletteModel/#enablesearch) option. This search box can also be localized.
+Enable the search functionality in the symbol palette using the [`enableSearch`](../api/diagram/symbolPaletteModel/#enablesearch) property. The search box supports localization to match the application's target language.
 
-To localize the symbol palette search box, we need to define the [`locale`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolPaletteModel/#locale) property of the symbol palette with our preferred culture. In the example below, we use **'de-DE**', which is the locale code for German as used in Germany.
+To localize the symbol palette search box, define the [`locale`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolPaletteModel/#locale) property of the symbol palette with the preferred culture. The example below uses 'de-DE' for German localization.
 
-The following code shows how to localize symbol palette.
+The following code demonstrates symbol palette localization:
 
 ```javascript
 // Set the default culture to German

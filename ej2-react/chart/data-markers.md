@@ -146,5 +146,5 @@ Marker can be filled with the series color by setting the [`isFilled`](https://e
 
 ## See Also
 
-* [Customize the marker with different shape](./how-to#customize-the-marker-with-different-shape)
+* [Customize the marker with different shape](./how-to/#customize-the-marker-with-different-shape)
 * [Highlight a Marker in Multicolored Line Series](https://support.syncfusion.com/kb/article/21514/how-to-highlight-a-specific-marker-in-a-multicolored-line-series-in-react-chart)

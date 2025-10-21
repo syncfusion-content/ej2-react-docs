@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Accessibility in React Diagram component | Syncfusion®
-description: Learn here all about Accessibility in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: Accessibility in React Diagram Component | Syncfusion®
+description: Learn here all about Accessibility in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Diagram component
+# Accessibility in React Diagram Component
 
-Diagram provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications. WAI-ARIA Accessibility supports are achieved through the attributes like `aria-label`. It helps to provides information about elements in a document for assistive technology.
+The Diagram component provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications. WAI-ARIA accessibility support is achieved through attributes like `aria-label`, which provide information about elements in a document for assistive technologies such as screen readers.
 
-The accessibility compliance for the diagram component is outlined below.
+The following table outlines accessibility compliance for the Diagram component:
 
 | Accessibility Criteria                                                              | Compatibility                                                                        |
 | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
@@ -38,16 +38,16 @@ The accessibility compliance for the diagram component is outlined below.
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
-## WAI-ARIA attributes
+## WAI-ARIA Attributes
 
-The Diagram component followed the [WAI-ARIA](?) patterns to meet the accessibility. The following ARIA attributes are used in the Diagram component:
+The Diagram component follows [WAI-ARIA] patterns to meet accessibility requirements. The following ARIA attributes are used in the Diagram component:
 
 | Attributes | Purpose |
 | --- | --- |
 | `aria-label` | Provides an accessible name for the Diagram Objects. |
 
-## Aria-label
-Attribute provides the text label with some default description for below elements in diagram.
+## Aria-Label
+The `aria-label` attribute provides text labels with default descriptions for the following elements in the Diagram component:
 
 <!-- markdownlint-disable MD033 -->
 <table>
@@ -102,45 +102,60 @@ Attribute provides the text label with some default description for below elemen
 </table>
 
 
-### Mobile device support
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component are more user-friendly and accessible to individuals using mobile devices, including those with disabilities. These are designed to be responsive, adaptable to various screen sizes and orientations, and touch-friendly.
-
 ### Screen Reader Support
 
-The Diagram component supports and its information was dictated properly by the screen readers based on the ARIA attributes and content.
+The Diagram component supports screen readers, and its information is properly conveyed by screen readers based on ARIA attributes and content structure.
 
-### Keyboard navigation support
+### Mobile Device Support
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component support keyboard navigation, allowing users who rely on alternate methods to effortlessly navigate and interact with the component.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component is designed to be user-friendly and accessible on mobile devices, including for users with disabilities. The component is responsive, adapts to various screen sizes and orientations, and provides touch-friendly interactions.
 
-## Keyboard interaction
 
-The Diagram component followed the [keyboard interaction](https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Diagram component.
 
+### Keyboard Navigation Support
+
+Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component supports keyboard navigation, allowing users who rely on assistive technologies to navigate and interact with the component effectively.
+
+## Keyboard Interaction
+
+The Diagram component follows [keyboard interaction](https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html) guidelines, making it accessible for users who rely on keyboard navigation. The following keyboard shortcuts are supported:
+
+**Selection and Clipboard Operations**
 | **Command** | **Action** |
 | --- | --- |
 | Ctrl + A | Select All |
 | Ctrl + X | Cut |
-| Ctrl + C |Copy |
+| Ctrl + C | Copy |
 | Ctrl + V | Paste |
+
+**Edit Operations**
+| **Command** | **Action** |
+| --- | --- |
 | Ctrl + Z | Undo |
 | Ctrl + Y | Redo |
 | Delete | Delete |
+
+**Navigation and Movement**
+| **Command** | **Action** |
+| --- | --- |
 | <kbd>Up Arrow </kbd> | Move selected object to up |
 | <kbd>Down Arrow</kbd> | Move selected object to down |
 | <kbd>Left Arrow</kbd> | Move selected object to left |
 | <kbd>Right Arrow</kbd> | Move selected object to right |
+
+**Annotation Editing**
+| **Command** | **Action** |
+| --- | --- |
 | <kbd>Enter</kbd> | Start Annotation Edit |
 | <kbd>Escape</kbd> | End Annotation Edit |
 
 
 
-## Ensuring accessibility
+## Ensuring Accessibility
 
-The Diagram component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Diagram component's accessibility levels are validated through [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Diagram component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/diagram.html) in a new window to evaluate the accessibility of the Diagram component with accessibility tools.
+The accessibility compliance of the Diagram component is demonstrated in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/diagram.html) in a new window to evaluate the accessibility of the Diagram component with accessibility tools.
 
 ## See also
 

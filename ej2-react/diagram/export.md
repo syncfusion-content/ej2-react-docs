@@ -1,18 +1,22 @@
 ---
 layout: post
-title: Export in React Diagram component | Syncfusion®
-description: Learn here all about Export in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: Export in React Diagram Component | Syncfusion®
+description: Learn here all about Export in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
 control: Export 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export in React Diagram component
+# Export in React Diagram Component
 
-Diagram provides support to export its content as image/svg files. The [`exportDiagram`](https://ej2.syncfusion.com/react/documentation/api/diagram/#exportdiagram) method of diagram helps to export the diagram. The following code illustrates how to export the diagram as image.
+The React Diagram component provides comprehensive support for exporting diagram content as image files (JPG, PNG) or vector graphics (SVG). This functionality enables users to save diagrams for documentation, presentations, or further processing. The [`exportDiagram`](https://ej2.syncfusion.com/react/documentation/api/diagram/#exportdiagram) method serves as the primary interface for all export operations.
 
->Note: To Export diagram, you need to inject `PrintAndExport` in the diagram.
+>Note: To export diagrams, inject `PrintAndExport` in the diagram component.
+
+## Basic Export Example
+
+The following code demonstrates a simple diagram export operation:
 
 <!-- markdownlint-disable MD033 -->
 
@@ -42,37 +46,38 @@ To export the React Diagram elements in various formats, refer to below video li
 
 {% youtube "https://www.youtube.com/watch?v=IkWXjhRE-o0" %}
 
-## Exporting options
+## Export Configuration Options
 
-The diagram provides support to export the desired region of the diagram to various formats. The following table shows the list of [`exportOptions`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/) in diagram.
+The diagram component supports extensive customization through the [`exportOptions`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/) interface. The following table details all available configuration properties:
 
 | Name | Type | Description|
 |-------- | -------- | -------- |
-| bounds | object | Sets the bounds that has to be exported |
-| region | enum | Sets the region of the diagram to be exported. |
-| fileName | string | Sets the file name of the exported image. |
-| format | string | Sets the export image format. |
-| mode | string | Sets the Mode for the file to be downloaded. |
-| margin | object | Sets the margin of the page to be exported. |
-| stretch| enum | Sets the aspect ratio of the exported image.|
-| multiplePage | boolean | exports the diagram into multiple pages. |
-| pageWidth | number | Sets the page width of the diagram while exporting the diagram into multiple pages. |
-| pageHeight| number | Sets the page height of the diagram while exporting the diagram into multiple pages.|
-| pageOrientation | enum | Sets the orientation of the page. |
+| bounds | object | Defines specific bounds for CustomBounds region export |
+| region | enum | Specifies the diagram area to export (PageSettings, Content, or CustomBounds) |
+| fileName | string | Sets the exported file name (default: "Diagram") |
+| format | string | Defines export format (JPG, PNG, or SVG) |
+| mode | string | Controls export behavior (Download or Data) |
+| margin | object | Adds spacing around the exported content |
+| stretch| enum | Adjusts aspect ratio and image quality of exported content |
+| multiplePage | boolean | Enables multi-page export for large diagrams |
+| pageWidth | number | Sets page width for multi-page exports |
+| pageHeight| number | Sets page height for multi-page exports |
+| pageOrientation | enum | Controls page orientation (Portrait or Landscape) |
+
+## File Name Configuration
+
+[`FileName`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/#filename) property specifies the name for downloaded files. When not specified, the default name **Diagram** is used.
 
 
-### File Name
+## Export Formats
 
-[`FileName`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/#filename) is the name of the file to be downloaded. By default, the file name is set to **Diagram**.
+The [`Format`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/#format) property determines the output file type. The component supports three formats with distinct characteristics:
 
+* **JPG**: Compressed format suitable for photographs and complex diagrams with many colors.
+* **PNG**: Lossless format ideal for diagrams with transparency or sharp edges.
+* **SVG**: Vector format that maintains quality at any scale and supports text selection.
 
-### Format
-
-[`Format`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/#format) specifies the type/format of the exported file. By default, the diagram is exported in .jpg format. You can export the diagram to the following formats:
-
-* JPG
-* PNG
-* SVG
+The default export format is JPG. The following example shows format specification:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -86,12 +91,9 @@ The diagram provides support to export the desired region of the diagram to vari
 
  {% previewsample "page.domainurl/code-snippet/diagram/export/export-cs1" %}
 
+## Margin Configuration
 
-### Margin
-
-The [`margin`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/#margin) specifies the amount of space that has to be left around the diagram while exporting.
-
-The following code example demonstrates how to set margin for the exported image.
+The [`margin`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/#margin) property adds whitespace around the exported diagram content. This spacing improves presentation and prevents content from appearing cramped.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -105,12 +107,14 @@ The following code example demonstrates how to set margin for the exported image
 
  {% previewsample "page.domainurl/code-snippet/diagram/export/export-cs2" %}
 
-### Mode
+## Export Modes
 
-The [`mode`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/#mode) option specifies whether to export the diagram as an image or to return the base64 data of the diagram. The available export modes are:
+The [`mode`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/#mode) property controls how the exported content is delivered:
 
-* Download: Exports and downloads the diagram as an image or SVG file.
-* Data: Returns a base64 string representation of the diagram.
+* **Download**: Automatically downloads the diagram as a file to the user's device.
+* **Data**: Returns a base64 string representation for programmatic processing.
+
+The Data mode is useful for applications that need to process or transmit the exported content programmatically:
 
 The following code example demonstrates how to export the diagram as raw data.
 
@@ -142,17 +146,17 @@ root.render(<App />);
 
 ```
 
-### Region
+## Region-Based Export
 
 Exporting particular region of diagram is possible by using the [`region`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/#region) property of the [`exportOptions`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/). The available export regions are listed in the table below.
 
 | Region | Description |
 |-------- | -------- |
-| PageSettings | The region to be exported will be based on the given page settings |
-| Content | Only the content of the diagram control will be exported | 
-| CustomBounds | The region to be exported will be explicitly defined |
+| PageSettings | Exports based on the configured page dimensions and settings. |
+| Content | Exports only the visible diagram elements, excluding empty space. | 
+| CustomBounds | Exports a user-defined rectangular area. |
 
-The following example shows how to export diagram with different regions.
+The following example demonstrates different region export options:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -166,13 +170,16 @@ The following example shows how to export diagram with different regions.
 
  {% previewsample "page.domainurl/code-snippet/diagram/export/export-cs3" %}
 
->Note: The [`bounds`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/#bounds) property of [`exportOptions`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/) should be defined to export the diagram with CustomBounds region.
+>Note: The [`bounds`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/#bounds) property of `exportOptions` should be defined to export the diagram with CustomBounds region.
 
-### MultiplePage
+## Multi-Page Export
 
-When the [`multiplePage`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/#multiplepage) option is set to false, the diagram is exported as a single image. When it set to true, the diagram is exported as multiple images based on its width and height.
+For large diagrams that exceed standard page dimensions, the [`multiplePage`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/#multiplepage) option enables export across multiple pages:
 
-The following code example demonstrates how to export the diagram as multiple images.
+* **false** (default): Export as a single image regardless of size
+* **true**: Split the diagram across multiple pages based on specified dimensions
+
+The following example shows multi-page export configuration:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -186,9 +193,9 @@ The following code example demonstrates how to export the diagram as multiple im
 
  {% previewsample "page.domainurl/code-snippet/diagram/export/export-cs4" %}
 
-### Export image
+## Direct Image Export
 
-You can pass the base64 data of an image to the [`exportImage`](https://ej2.syncfusion.com/react/documentation/api/diagram/#exportimage) method to export it directly. The following example shows how to export base64 data using the `exportImage` method.
+The [`exportImage`](https://ej2.syncfusion.com/react/documentation/api/diagram/#exportimage)  method allows direct export of base64 image data without requiring a diagram instance. This method is useful for processing pre-existing image data.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -202,9 +209,9 @@ You can pass the base64 data of an image to the [`exportImage`](https://ej2.sync
 
  {% previewsample "page.domainurl/code-snippet/diagram/export/export-cs5" %}
 
-### Get diagram content
+## Diagram Content Retrieval
 
-To get the html diagram content, the [`getDiagramContent`](https://ej2.syncfusion.com/react/documentation/api/diagram/#getdiagramcontent) method is used. the following example shows how to get the diagram content at runtime.
+The [`getDiagramContent`](https://ej2.syncfusion.com/react/documentation/api/diagram/#getdiagramcontent) method retrieves the HTML representation of the diagram at runtime. This functionality supports dynamic content analysis and processing.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -218,9 +225,9 @@ To get the html diagram content, the [`getDiagramContent`](https://ej2.syncfusio
 
  {% previewsample "page.domainurl/code-snippet/diagram/export/export-cs6" %}
 
-### Export diagram with stretch option
+## Stretch Option for Enhanced Quality
 
-Diagram provides support to export the diagram as image for [`stretch`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/#stretch) option. The exported images will be clearer but larger in file size.
+The [`stretch`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/#stretch) property improves exported image quality by adjusting the aspect ratio. Images exported with stretch enabled are clearer but result in larger file sizes.
 
 The following code example illustrates how to export the region occupied by the diagram elements.
 
@@ -253,6 +260,6 @@ root.render(<App />);
 
 ```
 
-## Limitations
+## Export Limitations
 
 Currently, exporting diagram into image format with native and HTML nodes is not supported. To overcome this limitation, we make use of the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> PDF library. This library incorporates the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> HTML converter, which employs the advanced Blink rendering engine. This converter seamlessly transforms HTML content into images. Refer to [`export Html-and-Native node`](https://support.syncfusion.com/kb/article/15530/how-to-print-or-export-the-html-and-native-node-into-image-format-using-react-diagram) kb for more information.

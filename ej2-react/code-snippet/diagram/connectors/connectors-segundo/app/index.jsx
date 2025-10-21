@@ -4,8 +4,6 @@ import { Diagram, DiagramComponent, ConnectorConstraints, ConnectorEditing, Undo
 Diagram.Inject(ConnectorEditing, UndoRedo);
 
 let diagramInstance;
-
-// Initialize the nodes for the diagram.
 let nodes = [
   {
     id: 'sourcenode',
@@ -40,7 +38,6 @@ let nodes = [
     ],
   },
 ];
-// Initialize the connectors for the diagram.
 let connectors = [{
   id: 'connector1',
   sourceID: 'sourcenode',

@@ -171,7 +171,7 @@ You can enable or disable gantt action for a particular column by setting the [`
 
 Column type can be specified using the `columns.type` property. It specifies the type of data the column binds.
 
-If the `format` is defined for a column, the column uses `type` to select the appropriate format option [number](../common/internationalization/#number-formatting) or [date](../common/internationalization/#manipulating-datetime).
+If the `format` is defined for a column, the column uses `type` to select the appropriate format option [number](../common/internationalization#number-formatting) or [date](../common/internationalization#manipulating-datetime).
 
 Gantt column supports the following types:
 * string
@@ -182,3 +182,46 @@ Gantt column supports the following types:
 
 > If the `type` is not defined, it will be determined from the first record of the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/gantt/#datasource).
 > In case if the first record of the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/gantt/#datasource) is null/blank value for a column then it is necessary to define the `type` for that column.
+
+## Render boolean value as checkbox
+
+You can render boolean values as checkboxes in Gantt component by setting the [displayAsCheckBox](https://ej2.syncfusion.com/react/documentation/api/gantt/column/#displayascheckbox) property to **true** for the desired column. This replaces the default text representation of **true** or **false** with a checkbox, making boolean fields visually clearer and more intuitive.
+
+The following sample demonstrates how to display a boolean value as a checkbox for the **Verified** column.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/checkbox-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/checkbox-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/checkbox-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/checkbox-cs1" %}
+
+>* The `displayAsCheckBox` property is only applicable to boolean values in Gantt columns.
+>* When `displayAsCheckBox` is set to **true**, the boolean values will be rendered as checkboxes in the Gantt column, with checked state indicating **true** and unchecked state indicating **false**.
+
+## Responsive columns
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> react Gantt component provides a built-in feature to control column visibility based on media queries using the `hideAtMedia` property in the column object. This method can be used to hide columns automatically when the screen width matches specified [media query](http://cssmediaqueries.com/what-are-css-media-queries.html) conditions.
+
+The following example demonstrates a Gantt chart where the **Task Name** column is set to `(min-width: 700px)`, meaning it will be hidden when the browser width is less than or equal to 700px. Similarly, the **Duration** column is set to `(max-width: 500px)`, so it will be hidden when the browser width exceeds 500px.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/column-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/column-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/column-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/column-cs1" %}

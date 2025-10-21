@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Connector Interaction in React Diagram component | Syncfusion®
-description: Learn here all about Connectors in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: Connector Interaction in React Diagram Component | Syncfusion®
+description: Explore how to interact with connectors in the Syncfusion React Diagram Component, including selection, dragging, endpoint manipulation, and flipping.
 control: Connector Interaction
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connector interaction in EJ2 React Diagram
+# Connector Interaction in EJ2 React Diagram Component
 
-Connectors can be selected, dragged, and routed over the diagram page.
+Connectors in the React Diagram component support various interaction capabilities including selection, dragging, endpoint manipulation, segment editing, and flipping operations. These interactions enable users to dynamically modify connector behavior and appearance within the diagram.
 
-## Select and unSelect connector.
+## Select and Unselect connector
 
-A connector can be selected, simply just by clicking on it.
+A connector can be selected by clicking on it. This selection enables further operations such as dragging, editing, or applying transformations.
 
-A connector can be selected at runtime by using the Select method and clear the selection in the diagram using the ClearSelection. The following code explains how to select and clear selection in the diagram.
+Connectors can be selected programmatically at runtime using the **select** method and selection can be cleared using the **clearSelection** method. The following code demonstrates how to select and clear selection in the diagram.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -31,7 +31,7 @@ A connector can be selected at runtime by using the Select method and clear the 
 
 ## Drag Connector
 
-Connector can be dragged by just clicking on the connector and dragging.
+Connectors can be repositioned by clicking and dragging them to a new location within the diagram canvas.
 
 ![Connector Drag Gif](images/connector-dragGif.gif)
 
@@ -48,15 +48,15 @@ A connector can be dragged at runtime by using the Drag method. The following co
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5DragConnector-cs1" %}
 
-## End point dragging
+## End Point Dragging
 
-The connector can be selected by clicking it. When the connector is selected, circles will be added on the starting and ending of the connector that is represented by Thumbs. Clicking and dragging those handles helps you to adjust the source and target points.
+When a connector is selected, circular handles (thumbs) appear at the source and target endpoints. These handles allow users to adjust the connector's start and end positions by clicking and dragging them.
 
 ![End Point drag GIF](images/EndPointDragGif.gif)
 
-You can also update the endPoints of diagram by using [`dragSourceEnd`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#dragsourceend) and [`dragTargetEnd`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#dragtargetend) methods of diagram. 
+The end points of connectors can also be updated programmatically using the [`dragSourceEnd`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#dragsourceend) and [`dragTargetEnd`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#dragtargetend) methods of the diagram component.
 
-The following code example shows the ways to drag connector end point at runtime.
+The following code example demonstrates how to drag connector end points at runtime.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -69,9 +69,9 @@ The following code example shows the ways to drag connector end point at runtime
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5dragEnd-cs1" %}
 
-## Segment editing
+## Segment Editing
 
-Diagram allows you to edit connector segments at runtime. To enable this feature, you need to activate the [`DragSegmentThumb`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/#constraints) constraint for the connector.
+The diagram allows editing of individual connector segments at runtime. To enable this feature, activate the [`DragSegmentThumb`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/#constraints) constraint for the connector.
 
 ```ts
 {     connector.constraints =
@@ -80,24 +80,22 @@ Diagram allows you to edit connector segments at runtime. To enable this feature
 
 ```
 
-N> To edit a connector segment, you need to inject the `ConnectorEditing` module into the diagram.
+N> To edit connector segments, inject the **ConnectorEditing** module into the diagram.
 
 ![Connector segmnet edit](images/connectorEditing.gif)
 
 ## Flip
 
-The diagram Provides support to flip the connector. The [`flip`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/#flip) is performed to give the mirrored image of the original element.
+The diagram provides support for flipping connectors to create mirrored versions of the original element. The [`flip`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/#flip) operation transforms the connector based on the specified flip direction.
 
-The flip types are as follows:
+The available flip types are:
 
-* HorizontalFlip
- [`Horizontal`](https://helpej2.syncfusion.com/react/documentation/api/diagram/flipDirection/) is used to interchange the connector source and target x points.
+* **Horizontal Flip** - [`Horizontal`](https://helpej2.syncfusion.com/react/documentation/api/diagram/flipDirection/) interchanges the connector source and target x coordinates.
 
-* VerticalFlip
-[`Vertical`](https://helpej2.syncfusion.com/react/documentation/api/diagram/flipDirection/) is used to interchange the connector source and target y points.
+* **Vertical Flip** - [`Vertical`](https://helpej2.syncfusion.com/react/documentation/api/diagram/flipDirection/) interchanges the connector source and target y coordinates.
 
-* Both
-[`Both`](https://helpej2.syncfusion.com/react/documentation/api/diagram/flipDirection/) is used to interchange the source point as target point and target point as source point
+* **Both** - [`Both`](https://helpej2.syncfusion.com/react/documentation/api/diagram/flipDirection/) swaps the source point as the target point and the target point as the source point.
+
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -110,4 +108,4 @@ The flip types are as follows:
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5ConnectNode-cs3" %}
 
- N> The flip is not applicable when the connectors connect in nodes
+ N> The flip operation is not applicable when connectors are connected to nodes.

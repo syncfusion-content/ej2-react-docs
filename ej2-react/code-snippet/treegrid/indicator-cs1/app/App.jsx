@@ -1,3 +1,4 @@
+{% raw %}
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, Inject, Page, TreeGridComponent, Sort } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
@@ -21,3 +22,4 @@ function App() {
 }
 ;
 export default App;
+{% endraw %}
