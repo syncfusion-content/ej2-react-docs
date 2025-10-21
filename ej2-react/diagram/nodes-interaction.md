@@ -1,27 +1,27 @@
 ---
 layout: post
 title: Nodes in React Diagram component | Syncfusion®
-description: Learn here all about Nodes in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
-control: Nodes 
+description: Learn about interactive node operations in Syncfusion React Diagram component including selection, dragging, resizing, and rotation.
+control: Nodes interaction
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Node Interaction in React Diagram control
+# Node Interaction in React Diagram Component
 
-The diagram provides support for selecting, dragging, resizing, and rotating nodes interactively. A node can be selected by simply clicking on it, dragged by dragging it on diagram canvas, resized using the resize handle, and rotated using the rotate handle. Additionally, interactions can be performed using some public methods, which are explained below:
+The React Diagram component provides comprehensive support for interactive node operations, enabling users to select, drag, resize, rotate, and flip nodes through both mouse interactions and programmatic methods. These interactions form the foundation of dynamic diagram editing capabilities.
 
 ## Select
 
-You can simply click on the node to select it and click on diagram canvas to unselect it like below.
+Node selection is fundamental to diagram interaction. Users can select nodes by clicking on them and deselect by clicking on the diagram canvas.
 
 ![Select/UnSelect Node](images/Single-node-select.gif)
 
+### Programmatic Node Selection
 
-### To select node programatically
-
-A node can be selected at runtime by using the [`select`](https://ej2.syncfusion.com/react/documentation/api/diagram/#select) method and the selection can be cleared in the diagram by using the [`clearSelection`](https://ej2.syncfusion.com/react/documentation/api/diagram/#clearselection) or [`unSelect`](https://ej2.syncfusion.com/react/documentation/api/diagram/#unselect) method. The following code explains how to select and clear selection in the diagram.
+Nodes can be selected at runtime by using the [`select`](https://ej2.syncfusion.com/react/documentation/api/diagram/#select) method and the selection can be cleared in the diagram by using the [`clearSelection`](https://ej2.syncfusion.com/react/documentation/api/diagram/#clearselection) or [`unSelect`](https://ej2.syncfusion.com/react/documentation/api/diagram/#unselect) method to remove specific objects from selection.
+ The following code explains how to select and clear selection in the diagram.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -33,6 +33,7 @@ A node can be selected at runtime by using the [`select`](https://ej2.syncfusion
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/nInteraction-cs1" %}
+### Selection Methods Reference
 
 |Method | Parameter | Description|
 |----|----|----|
@@ -41,13 +42,13 @@ A node can be selected at runtime by using the [`select`](https://ej2.syncfusion
 
 ## Drag
 
-You can simply mousedown on a node and drag it anywhere on the diagram canvas like below.
+Node dragging allows users to reposition nodes within the diagram canvas. Users can click and hold a node, then drag it to any location on the canvas.
 
 ![Drag node](images/drag-single-node.gif)
 
-### To drag node programatically
+### Programmatic Node Dragging
 
-A node can be dragged at runtime by using the [`drag`](https://ej2.syncfusion.com/react/documentation/api/diagram/#drag) method. The following code explains how to drag the node by using the drag method.
+Nodes can be moved programmatically using the [`drag`](https://ej2.syncfusion.com/react/documentation/api/diagram/#drag) method, which accepts the target object and new position coordinates.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -62,13 +63,13 @@ A node can be dragged at runtime by using the [`drag`](https://ej2.syncfusion.co
 
 ## Resize
 
-When we select a node a resize handle will appear on all the sides of the node. We can resize the node by clicking and dragging the resize handle.
+When a node is selected, resize handles appear on all sides, allowing users to modify the node's dimensions by clicking and dragging these handles.
 
 ![Resize Node](images/resize-Single-node.gif)
 
-### To resize node programatically
+### Programmatic Node Resizing
 
-A node can be resized at runtime by using the [`scale`](https://ej2.syncfusion.com/react/documentation/api/diagram/#scale) method. The following code explains how to resize the node by using the scale method.
+Node dimensions can be modified at runtime using the  [`scale`](https://ej2.syncfusion.com/react/documentation/api/diagram/#scale) method, which applies scaling factors to adjust the node size proportionally.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -83,13 +84,13 @@ A node can be resized at runtime by using the [`scale`](https://ej2.syncfusion.c
 
 ## Rotate
 
-A node can be rotated interactively by clicking and dragging the rotate handle of the node.
+Node rotation is performed interactively by clicking and dragging the rotate handle that appears when a node is selected.
 
 ![Rotate Node](images/rotate-single-node.gif)
 
-### To rotate node programatically
+### Programmatic Node Rotation
 
-A node can be rotated at runtime by using the [`rotate`](https://ej2.syncfusion.com/react/documentation/api/diagram/#rotate) method. The following code explains how to rotate the node by using the rotate method.
+Nodes can be rotated at runtime using the [`rotate`](https://ej2.syncfusion.com/react/documentation/api/diagram/#rotate) method, which accepts the target object and rotation angle in degrees.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -104,7 +105,9 @@ A node can be rotated at runtime by using the [`rotate`](https://ej2.syncfusion.
 
 ## Flip
 
-The diagram Provides support to flip the node. [`flip`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#flip) is performed to
+The diagram component supports node flipping operations to create mirrored images of nodes. The [`flip`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#flip) property controls the flip direction and behavior.
+
+### Flip Directions
 give the mirrored image of the original element.
 The flip types are as follows:
 
@@ -117,7 +120,7 @@ The flip types are as follows:
 * Both
 [`Both`](https://ej2.syncfusion.com/react/documentation/api/diagram/flipDirection/) which involves both vertical and horizontal changes of the element.
 
-The following code illustrates how to provide the mirror image of the original element.
+The following example demonstrates how to apply flip transformations to nodes:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -132,9 +135,10 @@ The following code illustrates how to provide the mirror image of the original e
 
 >Note: The flip is also applicable for group and BPMN shapes.
 
-### Update flip at runtime
+### Runtime Flip Updates
 
-You can dynamically update the flip for a node at runtime using the `^` operator. This operator allows you to apply the same flip direction multiple times, toggling the node's orientation effectively.
+Node flip properties can be updated dynamically at runtime using the `^` operator, which allows toggling flip states by applying the same flip direction multiple times.
+
 The following example demonstrates how to update the flip for a node dynamically:
 
 {% tabs %}
@@ -149,9 +153,9 @@ The following example demonstrates how to update the flip for a node dynamically
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/node-cs4-flip" %}
 
 
-### Flip modes
+### Flip Modes
 
-The [`flipMode`](https://ej2.syncfusion.com/angular/documentation/api/diagram/flipMode/) is used to control the behavior of the flip object whether to flip the object along with the port and label.
+The [`flipMode`](https://ej2.syncfusion.com/react/documentation/api/diagram/flipMode/) property controls which elements are affected during flip operations, determining whether ports, labels, and label text are flipped along with the node.
 
 | FlipMode | Description | 
 | -------- | -------- |
@@ -164,7 +168,9 @@ The [`flipMode`](https://ej2.syncfusion.com/angular/documentation/api/diagram/fl
 |PortAndLabelText| It flips the port and label text along with the object.|
 |LabelAndLabelText| It flips the label and label text along with the Object.|
 
-Below are examples of a node undergoing various FlipModes in different flip directions.
+### Flip Mode Visual Examples
+
+The following table demonstrates how different flip modes affect node appearance across various flip directions:
 
 | Flip Direction | Flip Mode | Default Node | Flipped Node |
 | -------- | -------- | -------- | -------- |

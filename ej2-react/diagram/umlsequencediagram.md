@@ -1,36 +1,45 @@
 ---
 layout: post
-title: UmlSequenceDiagram in React Diagram component | Syncfusion®
-description: Learn here all about UmlSequenceDiagram in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: UmlSequenceDiagram in React Diagram Component | Syncfusion®
+description: Learn how to create and customize UML sequence diagrams in Syncfusion® React Diagram Component with participants, messages, activation boxes, and fragments.
 control: UmlSequenceDiagram 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# UML Sequence Diagram in React Diagram component
+# UML Sequence Diagram in React Diagram Component
+A UML sequence diagram is a type of interaction diagram that visualizes how objects communicate with each other over time. These diagrams show the sequence of messages exchanged between participants, making them essential for understanding system interactions, API workflows, and process flows.
 
-A UML sequence diagram is an interaction diagram that demonstrates how objects interact with each other and the order of these interactions. The Syncfusion® diagram control provides comprehensive support for creating and visualizing UML sequence diagrams through the [UmlSequenceDiagramModel](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceDiagramModel/). To enable this functionality, assign the `UmlSequenceDiagramModel` to the [model](https://ej2.syncfusion.com/react/documentation/api/diagram/#model) property of the diagram control.
+The Syncfusion® React Diagram component provides comprehensive support for creating and visualizing UML sequence diagrams through the [`UmlSequenceDiagramModel`](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceDiagramModel/). This specialized model enables the creation of sequence diagrams with proper UML notation and automated layout capabilities.
 
 ## UML Sequence Diagram Elements
 
-A sequence diagram includes several key elements such as participants, messages, activation boxes, and fragments. The sections below demonstrate how to define and configure these components using the diagram control.
+A sequence diagram comprises several essential elements that work together to represent system interactions. The following sections demonstrate how to define and configure these components.
 
 ### Participants
 
-[UmlSequenceParticipantModel](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceParticipantModel/) in a sequence diagram represent the entities that interact with each other, appearing at the top of the diagram with lifelines extending vertically downward.
+[`UmlSequenceParticipantModel`](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceParticipantModel/) represents the entities that participate in the interaction sequence. Participants appear as rectangular boxes at the top of the diagram, with lifelines extending vertically downward to show their existence throughout the interaction timeline.
+
+#### Participant Types
+
+Participants can be displayed in two forms:
+- **Actors**: Human users or external systems (displayed with stick figure notation).
+- **Objects**: System components, classes, or services (displayed as rectangular boxes).
 
 #### UmlSequenceParticipantModel Properties
 
 | Property | Type | Description |
 |---|---|---|
-| id | string \| number | A unique identifier for the participant |
-| content | string | The display text for the participant |
-| isActor | boolean | Specifies whether the participant is displayed as an actor (true) or an object (false) |
-| showDestructionMarker | boolean | Indicates whether a destruction marker (X) is shown at the end of the lifeline |
-| activationBoxes | UmlSequenceActivationBoxModel[] | A collection of activation boxes associated with the participant |
+| id | string \| number | A unique identifier for the participant. |
+| content | string | The display text for the participant.. |
+| isActor | boolean | Specifies whether the participant is displayed as an actor (true) or an object (false). |
+| showDestructionMarker | boolean | Indicates whether a destruction marker (X) is shown at the end of the lifeline. |
+| activationBoxes | UmlSequenceActivationBoxModel[] | A collection of activation boxes associated with the participant .|
 
-The following code example illustrates how to create participants:
+#### Creating Participants
+
+The following code example demonstrates how to create different types of participants:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -45,9 +54,11 @@ The following code example illustrates how to create participants:
 
 ### Messages
 
-[UmlSequenceMessageModel](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceMessageModel/) represents communication between participants and are displayed as arrows connecting lifelines.
+[`UmlSequenceMessageModel`](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceMessageModel/) represents communication between participants . Messages are displayed as arrows connecting lifelines and indicate the flow of information or requests between system components.
 
-#### Types of Messages
+#### Message Types and Usage
+
+Different message types serve specific purposes in sequence diagrams:
 
 | Message Type | Description | Example |
 |---|---|---|
@@ -62,13 +73,15 @@ The following code example illustrates how to create participants:
 
 | Property | Type | Description |
 |---|---|---|
-| id | string \| number | A unique identifier for the message |
-| content | string | The display text for the message |
-| fromParticipantID | string \| number | ID of the participant sending the message |
+| id | string \| number | A unique identifier for the message. |
+| content | string | The display text for the message. |
+| fromParticipantID | string \| number | ID of the participant sending the message.. |
 | toParticipantID | string \| number | ID of the participant receiving the message |
-| type | UmlSequenceMessageType | Type of the message (Synchronous, Asynchronous, Reply, Create, Delete, Self) |
+| type | UmlSequenceMessageType | Type of the message (Synchronous, Asynchronous, Reply, Create, Delete, Self). |
 
-The following code example illustrates how to create messages:
+#### Creating Messages
+
+The following example shows how to create different types of messages between participants:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -83,17 +96,19 @@ The following code example illustrates how to create messages:
  
 ### Activation Boxes
 
-[UmlSequenceActivationBoxModel](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceActivationBoxModel/) represents periods when a participant is active and processing a message. They appear as thin rectangles on participant lifelines.
+[`UmlSequenceActivationBoxModel`](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceActivationBoxModel/) represents periods when a participant is actively processing or executing operations. Activation boxes appear as thin rectangles overlaid on participant lifelines, indicating the duration of active processing between specific messages.
 
 #### UmlSequenceActivationBoxModel Properties
 
 | Property | Type | Description |
 |---|---|---|
-| id | string \| number | A unique identifier for the activation box |
-| startMessageID | string \| number | ID of the message that initiates the activation |
-| endMessageID | string \| number | ID of the message that terminates the activation |
+| id | string \| number | A unique identifier for the activation box. |
+| startMessageID | string \| number | ID of the message that initiates the activation.. |
+| endMessageID | string \| number | ID of the message that terminates the activation. |
 
-The following code example illustrates how to create activation boxes:
+#### Creating Activation Boxes
+
+The following example demonstrates how to create activation boxes that span specific message sequences:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -108,11 +123,20 @@ The following code example illustrates how to create activation boxes:
 
 ### Fragments
 
-[UmlSequenceFragmentModel](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceFragmentModel/) groups a set of messages based on specific conditions in a sequence diagram. They are displayed as rectangular enclosures that visually separate conditional or looping interactions.
+[`UmlSequenceFragmentModel`](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceFragmentModel/) represents logical groupings of messages based on specific conditions or control structures. Fragments appear as rectangular enclosures that visually organize conditional logic, loops, and alternative execution paths within sequence diagrams.
 
-#### Types of Fragments
+#### Fragment Applications
 
-The [UmlSequenceFragmentType](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceFragmentType/) enum defines the following fragment types:
+Fragments are essential for modeling:
+- Conditional logic (if-then-else statements).
+- Iterative processes (loops and repetitions).
+- Optional operations that may or may not execute.
+- Error handling and exception flows.
+- Parallel processing scenarios.
+
+#### Fragment Types
+
+The [`UmlSequenceFragmentType`](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceFragmentType/) enum defines the following fragment types:
 
 | Fragment Type  | Description  | Example  |  
 |---------------|-------------|--------|  
@@ -124,19 +148,21 @@ The [UmlSequenceFragmentType](https://ej2.syncfusion.com/react/documentation/api
 
 | Property | Type | Description |
 |---|---|---|
-| id | string \| number | A unique identifier for the fragment |
-| type | UmlSequenceFragmentType | Type of the fragment (Optional, Loop, Alternative) |
-| conditions | UmlSequenceFragmentConditionModel[] | Collection of conditions for the fragment |
+| id | string \| number | A unique identifier for the fragment. |
+| type | UmlSequenceFragmentType | Type of the fragment (Optional, Loop, Alternative). |
+| conditions | UmlSequenceFragmentConditionModel[] | Collection of conditions for the fragment. |
 
 #### UmlSequenceFragmentConditionModel Properties
 
 | Property | Type | Description |
 |---|---|---|
-| content | string | Text describing the condition or parameter |
-| messageIds | (string \| number)[] | Collection of message IDs included in this condition section |
-| fragmentIds | string[] | Collection of nested fragments ids (for complex structures) |
+| content | string | Text describing the condition or parameter. |
+| messageIds | (string \| number)[] | Collection of message IDs included in this condition section. |
+| fragmentIds | string[] | Collection of nested fragments ids (for complex structures). |
 
-The following code example illustrates how to create fragments:
+#### Creating Fragments
+
+The following example illustrates how to create fragments with different condition types:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -149,9 +175,11 @@ The following code example illustrates how to create fragments:
 
  {% previewsample "page.domainurl/code-snippet/diagram/umlsequencediagram/umlsequencediagram-4" %}
 
-### Customizing Participant Spacing in Sequence Diagram 
+## Customization Options
 
-The [spaceBetweenParticipants](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceDiagramModel/#spaceBetweenParticipants) property in `UmlSequenceDiagramModel` controls the horizontal spacing between participants. The default value is 100, and it can be adjusted based on your layout requirements.
+### Adjusting Participant Spacing
+
+The [`spaceBetweenParticipants`](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceDiagramModel/#spaceBetweenParticipants) property controls the horizontal spacing between participants in the sequence diagram. Adjust this value to accommodate longer message labels or improve diagram readability.
 
 ```javascript
 // Define the UML Sequence Diagram model

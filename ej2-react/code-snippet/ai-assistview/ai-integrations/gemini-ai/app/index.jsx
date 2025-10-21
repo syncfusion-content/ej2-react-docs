@@ -15,6 +15,7 @@ function App() {
         'How can I improve my time management skills?'
     ];
     const bannerTemplate = '<div class="banner-content"><div class="e-icons e-assistview-icon"></div><h3>How can I help you today?</h3></div>';
+
     const toolbarItemClicked = (args) => {
         if (args.item.iconCss === 'e-icons e-refresh') {
             assistInstance.current.prompts = [];
@@ -47,7 +48,7 @@ function App() {
     };
 
     const onPromptRequest = (args) => {
-        const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' }); //Replace Your Model Name Here
+        const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' }); // Replace Your Model Name Here
         model.generateContent(args.prompt)
             .then(result => {
                 const responseText = result.response.text().trim() || 'No respons received.';

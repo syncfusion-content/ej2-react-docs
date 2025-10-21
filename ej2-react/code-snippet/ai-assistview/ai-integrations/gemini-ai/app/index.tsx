@@ -15,7 +15,8 @@ function App() {
         'How do I prioritize my tasks?',
         'How can I improve my time management skills?'
     ];
-    const bannerTemplate = '<div class="banner-content"><div class="e-icons e-assistview-icon"></div><h3>How can I help you today?</h3></div>';
+    const bannerTemplate: string = '<div class="banner-content"><div class="e-icons e-assistview-icon"></div><h3>How can I help you today?</h3></div>';
+
     const toolbarItemClicked = (args: ToolbarItemClickArgs): void => {
         if (args.item.iconCss === 'e-icons e-refresh') {
             if (assistInstance.current) {
@@ -52,7 +53,7 @@ function App() {
     };
 
     const onPromptRequest = (args: { prompt: string }): void => {
-        const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' }); //Replace Your Model Name Here
+        const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' }); // Replace Your Model Name Here
         model.generateContent(args.prompt)
             .then((result: GenerateContentResult) => {
                 const responseText: string = result.response.text().trim() || 'No response received.';

@@ -377,7 +377,7 @@ The [`itemPadding`](https://ej2.syncfusion.com/react/documentation/api/chart/leg
 
 ## Legend layout
 
-The [`layout`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel/#layout) property in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/chart/#legendsettings) allows you to display the legend either horizontally or vertically. By default, the [`layout`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel/#layout) is set to **Auto**. The [`maximumColumns`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel/#maximumcolumns) property in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/chart/#legendsettings) defines the maximum number of columns that can be displayed within the available space when using the auto layout. Additionally, enabling the [`fixedWidth`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel/#fixedwidth) property in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/chart/#legendsettings) ensures that all legend items are displayed with equal widths. The width of each item is determined by the maximum width among the legend items.
+The [`layout`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel/#layout) property in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/chart#legendsettings) allows you to display the legend either horizontally or vertically. By default, the [`layout`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel/#layout) is set to **Auto**. The [`maximumColumns`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel/#maximumcolumns) property in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/chart#legendsettings) defines the maximum number of columns that can be displayed within the available space when using the auto layout. Additionally, enabling the [`fixedWidth`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel/#fixedwidth) property in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/chart#legendsettings) ensures that all legend items are displayed with equal widths. The width of each item is determined by the maximum width among the legend items.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -400,5 +400,5 @@ The [`layout`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSe
 
 ## See Also
 
-* [Customize each shape in legend](./how-to#customize-each-shape-in-legend)
+* [Customize each shape in legend](./how-to/#customize-each-shape-in-legend)
 * [Add Custom Legend Using SVG](https://support.syncfusion.com/kb/article/21530/how-to-add-custom-legend-using-svg-in-react-chart)

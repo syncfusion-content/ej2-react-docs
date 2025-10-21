@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Azure Open AI With React AI AssistView component | Syncfusion
-description:  Checkout and learn about Integration of Azure Open AI With React AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: Azure OpenAI With React AI AssistView component | Syncfusion
+description:  Checkout and learn about Integration of Azure OpenAI With React AI AssistView component of Syncfusion Essential JS 2 and more details.
 platform: ej2-react
 control: AI AssistView
 documentation: ug
@@ -9,49 +9,51 @@ domainurl: ##DomainURL##
 ---
 
 
-# Azure Open AI With AI AssistView component 
+# Integrate Azure OpenAI with React AI AssistView Component
 
-The Syncfusion AI AssistView supports integration with [Azure Open AI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai), enabling advanced conversational AI features in your React applications.
-
-## Getting Started with the AI AssistView component
-
-Before integrating Azure Open AI, ensure that the Syncfusion AI AssistView component is correctly rendered in your React app:
-
-[React Getting Started Guide](../getting-started)
+The AI AssistView component integrates with [Azure OpenAI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai) to enable advanced conversational AI features in your React applications. The component acts as a user interface, where user prompts are sent to the Azure OpenAI service via API calls, providing natural language understanding and context-aware responses.
 
 ## Prerequisites
 
-* Requires `Node.js` (v16 or higher) and `npm`.
-* An Azure account with access to [Azure Open AI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai) services and a generated API key.
-* Syncfusion AI AssistView for React `@syncfusion/ej2-react-interactive-chat` installed in your project.
+Before starting, ensure you have the following:
 
-## Install Dependencies
+* **Node.js**: Version 16 or higher with npm.
 
-Install the Syncfusion AI AssistView in your project
+* **Azure Account**: With access to Azure OpenAI services and a generated API key.
 
-```bash 
+* **Syncfusion AI AssistView**: Package [@syncfusion/ej2-react-interactive-chat](https://www.npmjs.com/package/@syncfusion/ej2-react-interactive-chat) installed.
 
-npm install @syncfusion/ej2-react-interactive-chat --save
+* **Marked Library**: For parsing Markdown responses (`npm install marked --save`).
 
-```
+## Set Up the React Environment
 
-## Configure Azure Open AI
+Follow the Syncfusion AI AssistView [Getting Started](../getting-started) guide to configure and render the AI AssistView component in your React application.
 
-1. Log in to the [Azure Portal](https://portal.azure.com/#home) and navigate to your Azure Open AI resource. 
+## Install Dependency
 
-2. Under Resource Management, select Keys and Endpoint to retrieve your API key and endpoint URL.  
+To install the marked library, run `npm install marked --save` in your project directory to add it as a dependency in your package.json file.
 
-3. Copy the API key, endpoint, and deployment name (e.g., gpt-4o-mini). Ensure the API version matches your resource configuration.
+## Configure Azure OpenAI
+
+1. Log in to the [Azure Portal](https://portal.azure.com/#home) and navigate to your Azure OpenAI resource. 
+
+2. Under resource Management, select keys and endpoint to retrieve your API key and endpoint URL.
+
+3. Note the following values:
+   - API key
+   - Endpoint (for example, https://<resource-name>.openai.azure.com/)
+   - API version (must be supported by your resource)
+   - Deployment name (for example, gpt-4o-mini)
 
 4. Store these values securely, as they will be used in your application.
 
 > `Security Note`: Never expose your API key in client-side code for production applications. Use a server-side proxy or environment variables to manage sensitive information securely.
 
-## Configure Azure Open AI with AI AssistView
+## Configure Azure OpenAI with AI AssistView
 
-Create `src/App.js` to integrate the Azure Open AI with AI AssistView component
+Modify the `src/App.js` file to integrate Azure OpenAI with the Syncfusion AI AssistView component. 
 
-* Update the following configuration values with your Azure Open AI details:
+* Update the following configuration values with Azure OpenAI details:
 
 ```bash
 
@@ -72,15 +74,3 @@ const azureDeploymentName = 'Your_Deployment_Name';
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/ai-assistview/ai-integrations/open-ai" %}
-
-## Run and Test 
-
-Run the application in the browser using the following command.
-
-```bash
-
-npm start
-
-```
-
-Open the hosted link to interact with your Azure Open AI for dynamic response.

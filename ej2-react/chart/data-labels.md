@@ -282,6 +282,6 @@ You can calculate the percentage value based on the sum for each series using th
 
 ## See Also
 
-* [Show total stacking values in data label](./how-to#show-the-total-value-for-stacking-series-in-data-label)
-* [Prevent the data label when the data value is 0](./how-to#prevent-the-data-label-when-the-data-value-is-0)
+* [Show total stacking values in data label](./how-to/#show-the-total-value-for-stacking-series-in-data-label)
+* [Prevent the data label when the data value is 0](./how-to/#prevent-the-data-label-when-the-data-value-is-0)
 * [Display Data Labels in Lakh](https://support.syncfusion.com/kb/article/21250/how-to-display-data-labels-in-lakh-in-react-accumulation-chart)

@@ -1,24 +1,28 @@
 ---
 layout: post
-title: Symmetric layout in React Diagram component | Syncfusion®
-description: Learn here all about Symmetric layout in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: Symmetric layout in React Diagram Component | Syncfusion®
+description: Learn here all about Symmetric layout in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
 control: Symmetric layout 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Symmetric layout in React Diagram control
+# Symmetric Layout in React Diagram Component
 
-The symmetric layout has been formed using nodes position by closer together or pushing them further apart. This is repeated iteratively until the system comes to an equilibrium state.
+The symmetric layout is a force-directed algorithm that positions nodes by simulating physical forces between them. Nodes are repositioned iteratively by moving them closer together or pushing them further apart until the system reaches an equilibrium state, creating a balanced and visually appealing arrangement.
 
+## Understanding Symmetric Layout
 
-## Symmetric layout
+Symmetric layout works by applying spring-like forces between connected nodes and repulsion forces between all nodes. This creates a natural, organic layout where strongly connected components cluster together while maintaining proper spacing throughout the diagram.
+The layout’s [`springLength`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout/#springlength)property defines the ideal length that edges should maintain. This serves as the resting length for the springs connecting nodes. 
 
-The layout’s [`springLength`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout/#springlength) defined as how long edges should be, ideally. This will be the resting length for the springs. Edge attraction and vertex repulsion forces to be defined by using layout’s [`springFactor`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout/#springfactor), the more sibling nodes repel each other. The relative positions do not change any more from one iteration to the next. The number of iterations can be specified by using layout’s [`maxIteration`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout/#maxiteration).
+Edge attraction and vertex repulsion forces are controlled using the layout's [`springFactor`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout/#springfactor)property. Higher values cause sibling nodes to repel each other more strongly, creating greater separation between unconnected elements.
 
-The following code illustrates how to arrange the nodes in a radial tree structure.
+The algorithm continues iterating until node positions stabilize and relative positions no longer change significantly between iterations. You can control the maximum number of iterations using the layout's [`maxIteration`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout/#maxiteration).
+## Implementation
 
+The following code demonstrates how to arrange nodes using symmetric layout:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

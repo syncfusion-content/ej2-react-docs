@@ -17,7 +17,8 @@ function App() {
     'How can I improve my time management skills?',
   ];
 
-  const bannerTemplate = '<div class="banner-content"><div class="e-icons e-assistview-icon"></div><h3>How can I help you today?</h3></div>';
+  const bannerTemplate =
+    '<div class="banner-content"><div class="e-icons e-assistview-icon"></div><h3>How can I help you today?</h3></div>';
 
   const toolbarItemClicked = (args) => {
     if (args.item.iconCss === 'e-icons e-refresh' && assistInstance.current) {

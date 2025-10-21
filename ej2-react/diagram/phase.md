@@ -1,16 +1,18 @@
 ---
 layout: post
-title: Phase in React Diagram component | Syncfusion®
-description: Learn here all about Swim lane in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: Phase in React Diagram Component | Syncfusion®
+description: Learn here all about Swim lane in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
 control: Phase 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Phase
+# Phase in React Diagram Component
 
-Phase are the subprocess which will split each lanes as horizontally or vertically based on the swimlane orientation. We can add multiple number of [`Phase`](https://ej2.syncfusion.com/react/documentation/api/diagram/phaseModel)to swimlane.
+## Overview
+
+Phases are subprocesses that split each lane horizontally or vertically based on the swimlane orientation. Phases help organize workflow stages within lanes, making it easier to visualize process steps and milestones. Multiple [`Phase`](https://ej2.syncfusion.com/react/documentation/api/diagram/phaseModel)objects can be added to a swimlane to represent different stages of a process.
 
 The following code example illustrates how to create phase.
 
@@ -25,9 +27,11 @@ The following code example illustrates how to create phase.
 
  {% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5Phase-cs1" %}
 
-### Dynamically add/remove phase to Lane
+### Dynamically Add and Remove Phases from Lanes
 
-You can add a phase at runtime by using [`addPhases`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addphases) method and remove phase by using [`removePhase`](https://ej2.syncfusion.com/react/documentation/api/diagram/#removephase) method. The following code example illustrates how to add and remove phase at run time.
+Phases can be added at runtime using the [`addPhases`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addphases) method and removed using the [`removePhase`](https://ej2.syncfusion.com/react/documentation/api/diagram/#removephase) method. This dynamic functionality allows for flexible workflow management as process requirements change.
+
+The following code example illustrates how to add and remove phases at runtime.
 
   {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -40,12 +44,14 @@ You can add a phase at runtime by using [`addPhases`](https://ej2.syncfusion.com
 
  {% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5PhaseCustomize-cs3" %}
 
-### Customizing phase
+### Customizing Phase Appearance and Properties
 
-* The length of the region can be set by using the  [`offset`](https://ej2.syncfusion.com/react/documentation/api/diagram/phaseModel#offset) property of the phase.
-* Every phase region can be textually described with the [`header`](https://ej2.syncfusion.com/react/documentation/api/diagram/headerModel) property of the phase.
-* You can increase the height of phase by using [`phaseSize`](https://ej2.syncfusion.com/react/documentation/api/diagram/swimLaneModel#phaseSize) property of swimlane.
-* We can provide additional information to the phase by using the [`addInfo`](https://ej2.syncfusion.com/react/documentation/api/diagram/phaseModel#addInfo) property of the phase.
+Phase appearance and behavior can be customized through several properties:
+
+* The length of each region can be controlled using the[`offset`](https://ej2.syncfusion.com/react/documentation/api/diagram/phaseModel#offset) property of the phase.
+* Each phase region can include descriptive text through the[`header`](https://ej2.syncfusion.com/react/documentation/api/diagram/headerModel) property of the phase.
+* The height of phases can be increased using the [`phaseSize`](https://ej2.syncfusion.com/react/documentation/api/diagram/swimLaneModel#phaseSize) property of swimlane.
+* Additional information can be stored with phases using the [`addInfo`](https://ej2.syncfusion.com/react/documentation/api/diagram/phaseModel#addInfo) property of the phase.
 
 The following code example illustrates how to customize the phase in swimlane.
 
@@ -60,9 +66,9 @@ The following code example illustrates how to customize the phase in swimlane.
 
  {% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5PhaseCustomize-cs4" %}
 
-#### Dynamic customization of phase
+#### Dynamic Customization of Phases
 
-You can customize the phase style and text properties dynamically. The following code illustrates how to dynamically customize the phase.
+Phase style and text properties can be customized dynamically during runtime. This capability enables responsive design adjustments based on user interactions or changing data requirements.
 
 The following code example illustrates how to customize the phase at runtime.
 
@@ -77,21 +83,23 @@ The following code example illustrates how to customize the phase at runtime.
 
  {% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5PhaseCustomize-cs5" %}
 
-### Phase interaction
+### Phase Interaction Capabilities
 
-#### Resizing
+#### Resizing Phases
 
-* The phase can be resized by using its selector.
-* You must select the phase header to enable the phase selection.
-* Once the phase can be resized, the lane size will be updated automatically.
+* Phases can be resized using their selection handles.
+* The phase header must be selected first to enable phase selection.
+* When a phase is resized, the associated lane size updates automatically to maintain layout consistency.
 
-#### Resizing helper
+#### Resizing Helper Functionality
 
-* The special resize selector will be used to resize the phase.
-* The resize cursor will be available on the left and bottom direction for horizontal, and the top and bottom direction for vertical swimlane.
+* A specialized resize selector is used for phase resizing operations.
+* The resize cursor appears in different directions based on swimlane orientation: left and bottom directions for horizontal swimlanes, and top and bottom directions for vertical swimlanes.
 
-#### Phase header editing
+#### Phase Header Editing
 
-Diagram provides the support to edit phase headers at runtime. We achieve the header editing by double click event. Double clicking the header label will enables the editing of that. The following image illustrates how to edit the swimlane header.The following image illustrates how to edit the phase header. ![Phase Header Editing](images/phase-header-edit.gif)
+The diagram component provides support for editing phase headers at runtime through double-click interaction. Double-clicking the header label enables inline editing functionality, allowing users to modify phase titles directly within the diagram.
 
+The following image illustrates the phase header editing process:
 
+![Phase Header Editing](images/phase-header-edit.gif)

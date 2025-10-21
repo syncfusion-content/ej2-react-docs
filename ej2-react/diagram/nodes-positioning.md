@@ -8,11 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Positioning a node in React Diagram control
+# Positioning a Node in in React Diagram Component
 
 To customize the position of nodes in the React Diagram component, refer to the video link below.
 
 {% youtube "https://www.youtube.com/watch?v=pn02S_rwupw" %}
+
+Node positioning in the React Diagram component allows precise control over where nodes appear on the diagram canvas. Understanding positioning fundamentals enables developers to create well-organized diagrams with nodes placed exactly where needed.
 
 ## Position
 
@@ -25,13 +27,15 @@ To customize the position of nodes in the React Diagram component, refer to the 
 
 * Rotation of a node is controlled by using its [`rotateAngle`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#rotateangle) property.
 
-The following table illustrates how pivot relates offset values with node boundaries.
+### Understanding Pivot Points
 
-| Pivot | Offset |
+The pivot point determines which part of the node the offset coordinates reference. The following table illustrates how different pivot values affect node positioning:
+
+| Pivot | Offset Behavior |
 |-------- | -------- |
 | (0.5,0.5)| offsetX and offsetY values are considered as the node’s center point. |
-| (0,0) | offsetX and offsetY values are considered as the top-left corner of the node. |
-| (1,1) | offsetX and offsetY values are considered as the bottom-right corner of the node. |
+| (0,0) | offsetX and offsetY values position the node's top-left corner |
+| (1,1) | offsetX and offsetY values position the node's bottom-right corner |
 
 The following code illustrates how to change the `pivot` value.
 
@@ -46,9 +50,11 @@ The following code illustrates how to change the `pivot` value.
 
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/nPositioning-cs1" %}
 
-## Minimum and maximum size for nodes.
+## Minimum and Maximum size for nodes.
 
-The [`minWidth`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#minwidth) and [`minHeight`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#minheight) properties of node allows you to control the minimum size of the node while resizing. Similarly, the [`maxWidth`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#maxwidth) and [`maxHeight`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#maxheight) properties of node allows you to control the maximum size of the node while resizing.
+The size constraints ensure nodes maintain appropriate dimensions during resizing operations. The [`minWidth`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#minwidth) and [`minHeight`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#minheight) properties define the smallest allowable size for a node during resize operations. Similarly, the `maxWidth` and `maxHeight` properties define the largest allowable size.
+
+These constraints are particularly useful when creating diagrams where nodes need to maintain specific size ranges for visual consistency or functional requirements.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
