@@ -8,7 +8,6 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-
 # Integrate Azure OpenAI with React AI AssistView Component
 
 The AI AssistView component integrates with [Azure OpenAI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai) to enable advanced conversational AI features in your React applications. The component acts as a user interface, where user prompts are sent to the Azure OpenAI service via API calls, providing natural language understanding and context-aware responses.

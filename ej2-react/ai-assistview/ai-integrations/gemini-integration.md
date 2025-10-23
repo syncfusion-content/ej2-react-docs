@@ -8,7 +8,6 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-
 # Integrate Gemini AI with React AI AssistView component
 
 The AI AssistView component integrates with Google’s [Gemini](https://ai.google.dev/gemini-api/docs) API to deliver intelligent conversational interfaces. It leverages advanced natural language understanding to interpret user input, maintain context throughout interactions, and provide accurate, relevant responses. By configuring secure authentication and data handling, developers can unlock powerful AI-driven communication features that elevate user engagement and streamline support experiences.
@@ -33,7 +32,7 @@ Follow the Syncfusion AI AssistView [Getting Started](../getting-started) guide 
 
 Install the required packages:
 
-1. Google Generative AI SDK:
+* Google Generative AI SDK:
 
 ```bash
 
@@ -41,7 +40,7 @@ npm install @google/generative-ai
 
 ```
 
-2. Marked Library:
+* Marked Library:
 
 ```bash
 
@@ -63,7 +62,7 @@ npm install marked --save
 
 ## Configure Gemini AI with AI AssistView
 
-To integrate Gemini AI with the Syncfusion AI AssistView component in your Angular application:
+To integrate Gemini AI with the Syncfusion AI AssistView component in your application:
 
 * Modify the `src/App.js` file to host the integration logic.
 
