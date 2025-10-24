@@ -1,6 +1,3 @@
-{% raw %}
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Ajax } from '@syncfusion/ej2-base';
@@ -30,7 +27,3 @@ function App(){
    );
 }
 ReactDOM.render(<App />, document.getElementById('kanban'));
-
-
-
-{% endraw %}

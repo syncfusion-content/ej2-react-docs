@@ -28,6 +28,7 @@ function App() {
     itemClicked: (args) => onResponseToolbarItemClicked(args)
   };
 
+  // Renders the banner template indicating voice-enabled assistance
   const bannerTemplate = () => {
     return (
       <div className="banner-content">
@@ -37,6 +38,7 @@ function App() {
     );
   };
 
+  // Streams the AI response character by character to create a typing effect
   const streamResponse = async (response) => {
     let lastResponse = "";
     const responseUpdateRate = 10;
@@ -54,6 +56,7 @@ function App() {
     }
   };
 
+  // Handles prompt requests by sending them to the Azure OpenAI API and streaming the response
   const onPromptRequest = (args) => {
     const url =
       azureOpenAIEndpoint.replace(/\/$/, '') +
@@ -84,12 +87,14 @@ function App() {
       });
   };
 
+  // Handles toolbar item clicks, such as clearing the conversation on refresh
   const toolbarItemClicked = (args) => {
     if (args.item.iconCss === 'e-icons e-refresh') {
       assistInstance.current.prompts = [];
     }
   };
 
+  // Handles clicks on response toolbar items, such as copying, reading aloud, liking, or disliking the response
   const onResponseToolbarItemClicked = (args) => {
     const responseHtml = assistInstance.current?.prompts[args.dataIndex].response;
     if (responseHtml) {
@@ -118,6 +123,7 @@ function App() {
     }
   };
 
+  // Stops the ongoing streaming response
   const handleStopResponse = () => {
     stopStreaming = true;
   };

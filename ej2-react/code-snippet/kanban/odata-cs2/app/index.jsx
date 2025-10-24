@@ -1,4 +1,3 @@
-{% raw %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { DataManager, ODataAdaptor } from '@syncfusion/ej2-data';
@@ -22,4 +21,3 @@ function App() {
       </KanbanComponent>);
 }
 ReactDOM.render(<App />, document.getElementById('kanban'));
-{% endraw %}

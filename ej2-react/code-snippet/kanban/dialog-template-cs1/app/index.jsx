@@ -1,4 +1,3 @@
-{% raw %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { extend } from '@syncfusion/ej2-base';
@@ -86,4 +85,3 @@ export class KanbanDialogFormTemplate extends React.Component {
         </div>);
     }
 }
-{% endraw %}
