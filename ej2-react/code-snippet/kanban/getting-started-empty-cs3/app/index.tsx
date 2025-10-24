@@ -1,5 +1,3 @@
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-react-kanban";
@@ -17,6 +15,3 @@ function App(){
     );
 }
 ReactDOM.render(<App />, document.getElementById('kanban'));
-
-
-

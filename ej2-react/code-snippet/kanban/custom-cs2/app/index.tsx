@@ -1,5 +1,3 @@
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { DataManager } from '@syncfusion/ej2-data';
@@ -26,6 +24,3 @@ function App(){
     );
 }
 ReactDOM.render(<App />, document.getElementById('kanban'));
-
-
-

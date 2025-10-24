@@ -31,6 +31,7 @@ function App() {
         }
     };
 
+    // Renders the banner template with instructions for voice input
     const bannerTemplate = () => {
         return (
             <div className="banner-content">
@@ -40,6 +41,7 @@ function App() {
         );
     };
 
+    // Renders the footer template including editable input, speech-to-text component, and send button
     const footerTemplate = () => {
         return (
             <div className="e-footer-wrapper">
@@ -52,6 +54,7 @@ function App() {
         );
     };
 
+    // Streams the AI response character by character to create a typing effect
     const streamResponse = async (response: string) => {
         let lastResponse = "";
         const responseUpdateRate = 10;
@@ -70,6 +73,7 @@ function App() {
         toggleButtons();
     };
 
+    // Handles prompt requests by sending them to the Azure OpenAI API and streaming the response
     const onPromptRequest = (args: PromptRequestEventArgs) => {
         const url =
             azureOpenAIEndpoint.replace(/\/$/, '') +
@@ -101,31 +105,37 @@ function App() {
             });
     };
 
+    // Handles toolbar item clicks, such as clearing the conversation on refresh
     const toolbarItemClicked = (args: ToolbarItemClickedEventArgs) => {
         if (args.item.iconCss === 'e-icons e-refresh') {
             assistInstance.current.prompts = [];
         }
     };
 
+    // Executes the current prompt from the footer input and clears it
     const sendIconClicked = () => {
         assistInstance.current.executePrompt(assistviewFooter.current.innerText);
         assistviewFooter.current.innerText = '';
     };
 
+    // Updates the footer input with the latest speech transcript
     const onTranscriptChange = (args: any) => {
         if (assistviewFooter.current) {
             assistviewFooter.current.innerText = args.transcript;
         }
     };
 
+    // Toggles button visibility when speech-to-text listening stops
     const onListeningStop = () => {
         toggleButtons();
     };
 
+    // Initializes button visibility when the speech-to-text component is created
     const onCreated = () => {
         toggleButtons();
     };
 
+    // Toggles visibility of send and speech buttons based on whether the input has text
     const toggleButtons = () => {
         const assistviewFooterEle = assistviewFooter.current;
         const sendButtonEle = assistviewSendButton.current?.element;
@@ -148,6 +158,7 @@ function App() {
         }
     };
 
+    // Stops the ongoing streaming response
     const handleStopResponse = () => {
         stopStreaming = true;
         toggleButtons();
