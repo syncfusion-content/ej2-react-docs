@@ -49,8 +49,8 @@ function App() {
       i++;
       if (i % responseUpdateRate === 0 || i === responseLength) {
         const htmlResponse = marked.parse(lastResponse);
-        assistInstance.current?.addPromptResponse(htmlResponse, i === responseLength);
-        assistInstance.current?.scrollToBottom();
+        assistInstance.current.addPromptResponse(htmlResponse, i === responseLength);
+        assistInstance.current.scrollToBottom();
       }
       await new Promise(resolve => setTimeout(resolve, 15)); // Delay for streaming effect
     }
@@ -96,7 +96,7 @@ function App() {
 
   // Handles clicks on response toolbar items, such as copying, reading aloud, liking, or disliking the response
   const onResponseToolbarItemClicked = (args) => {
-    const responseHtml = assistInstance.current?.prompts[args.dataIndex].response;
+    const responseHtml = assistInstance.current.prompts[args.dataIndex].response;
     if (responseHtml) {
       const tempDiv = document.createElement('div');
       tempDiv.innerHTML = responseHtml;
