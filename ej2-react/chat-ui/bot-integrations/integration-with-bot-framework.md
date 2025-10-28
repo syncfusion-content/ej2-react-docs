@@ -26,7 +26,7 @@ Before starting, ensure you have the following:
 
 ## Set Up the React Environment
 
-Follow the Syncfusion Chat UI [Getting Started](../getting-started) guide to configure and render the Chat UI component in your React application.
+Follow the [Getting Started](../getting-started) guide to configure and render the Chat UI component in your React application.
 
 ## Install Dependencies
 
@@ -110,7 +110,7 @@ app.listen(port, () => console.log(`Token server running on http://localhost:${p
 
 ## Configure ChatUI
 
-Modify the `src/App.js` file to connect the Syncfusion Chat UI to the bot via the direct line API:
+Modify the `src/App.js` file to connect the Chat UI to the bot via the direct line API:
 
 {% tabs %}
 {% highlight js tabtitle="App.js" %}

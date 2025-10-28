@@ -65,7 +65,7 @@ function App() {
             return response.json();
         })
         .then(reply => {
-            const responseText = reply.response?.trim() || 'No response received.';
+            const responseText = reply.response.trim() || 'No response received.';
             stopStreaming = false;
             streamResponse(responseText);
         })

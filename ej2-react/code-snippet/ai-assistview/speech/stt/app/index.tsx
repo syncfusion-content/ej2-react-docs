@@ -25,8 +25,10 @@ function App() {
     const promptToolbarSettings: PromptToolbarSettingsModel = {
         itemClicked: (args) => {
             if (args.item.iconCss === "e-icons e-assist-edit") {
-                assistviewFooter.current.innerHTML = assistInstance.current.prompts[args.dataIndex].prompt;
-                toggleButtons();
+                if (assistInstance.current && assistviewFooter.current) { // Added null check
+                    assistviewFooter.current.innerHTML = assistInstance.current.prompts[args.dataIndex].prompt;
+                    toggleButtons();
+                }
             }
         }
     };
@@ -65,8 +67,11 @@ function App() {
             i++;
             if (i % responseUpdateRate === 0 || i === responseLength) {
                 const htmlResponse = marked.parse(lastResponse);
-                assistInstance.current?.addPromptResponse(htmlResponse, i === responseLength);
-                assistInstance.current?.scrollToBottom();
+                // Ensure assistInstance.current exists before using it
+                if (assistInstance.current) {
+                    assistInstance.current.addPromptResponse(htmlResponse, i === responseLength);
+                    assistInstance.current.scrollToBottom();
+                }
             }
             await new Promise(resolve => setTimeout(resolve, 15)); // Delay for streaming effect
         }
@@ -99,7 +104,10 @@ function App() {
                 streamResponse(responseText);
             })
             .catch((error: unknown) => {
-                assistInstance.current.addPromptResponse('⚠️ Something went wrong while connecting to the AI service. Please check your API key, Deployment model, endpoint or try again later.', true);
+                // Ensure assistInstance.current exists before using it
+                if (assistInstance.current) {
+                    assistInstance.current.addPromptResponse('⚠️ Something went wrong while connecting to the AI service. Please check your API key, Deployment model, endpoint or try again later.', true);
+                }
                 stopStreaming = true;
                 toggleButtons();
             });
@@ -108,14 +116,18 @@ function App() {
     // Handles toolbar item clicks, such as clearing the conversation on refresh
     const toolbarItemClicked = (args: ToolbarItemClickedEventArgs) => {
         if (args.item.iconCss === 'e-icons e-refresh') {
-            assistInstance.current.prompts = [];
+            if (assistInstance.current) { // Added null check
+                assistInstance.current.prompts = [];
+            }
         }
     };
 
     // Executes the current prompt from the footer input and clears it
     const sendIconClicked = () => {
-        assistInstance.current.executePrompt(assistviewFooter.current.innerText);
-        assistviewFooter.current.innerText = '';
+        if (assistInstance.current && assistviewFooter.current) { // Added null check
+            assistInstance.current.executePrompt(assistviewFooter.current.innerText);
+            assistviewFooter.current.innerText = '';
+        }
     };
 
     // Updates the footer input with the latest speech transcript
@@ -138,11 +150,13 @@ function App() {
     // Toggles visibility of send and speech buttons based on whether the input has text
     const toggleButtons = () => {
         const assistviewFooterEle = assistviewFooter.current;
-        const sendButtonEle = assistviewSendButton.current?.element;
-        const speechButtonEle = speechToTextObj.current?.element;
-        if (!assistviewFooterEle || !sendButtonEle || !speechButtonEle) {
+        const sendButtonComp = assistviewSendButton.current; // Get the component instance
+        const speechButtonComp = speechToTextObj.current;   // Get the component instance
+        if (!assistviewFooterEle || !sendButtonComp || !sendButtonComp.element || !speechButtonComp || !speechButtonComp.element) {
             return;
         }
+        const sendButtonEle = sendButtonComp.element;
+        const speechButtonEle = speechButtonComp.element;
         const hasText = assistviewFooterEle.innerText.trim() !== '';
         sendButtonEle.classList.toggle('visible', hasText);
         speechButtonEle.classList.toggle('visible', !hasText);
@@ -163,11 +177,6 @@ function App() {
         stopStreaming = true;
         toggleButtons();
     };
-
-    React.useEffect(() => {
-        // Defer toggleButtons until after mount to ensure refs are ready
-        toggleButtons();
-    }, []);
 
     return (
         <div className="integration-speechtotext-section">
