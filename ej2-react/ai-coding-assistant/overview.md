@@ -66,5 +66,5 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant is desi
 
 ## See also
 
-* Add the [SyncfusionReactAssistant MCP Server](https://ej2.syncfusion.com/react/documentation/ai-coding-assistants/mcp-server) to an MCP-enabled client
+* Add the [SyncfusionReactAssistant MCP Server](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/mcp-server) to an MCP-enabled client
 * [Syncfusion<sup style="font-size:70%">&reg;</sup> React Documentation](https://ej2.syncfusion.com/react/documentation)
