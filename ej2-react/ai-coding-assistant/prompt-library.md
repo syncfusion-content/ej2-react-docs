@@ -406,5 +406,5 @@ Advanced Calendar Setup
 
 ## See also
 
-* [AI Coding Assistant Overview](https://ej2.syncfusion.com/react/documentation/ai-coding-assistants/overview)
-* [SyncfusionReactAssistant MCP Server](https://ej2.syncfusion.com/react/documentation/ai-coding-assistants/mcp-server)
+* [AI Coding Assistant Overview](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview)
+* [SyncfusionReactAssistant MCP Server](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/mcp-server)
