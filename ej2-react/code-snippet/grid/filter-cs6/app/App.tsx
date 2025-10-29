@@ -1,4 +1,4 @@
-import { ColumnDirective, ColumnsDirective, FilterEventArgs, FilterSettingsModel, Page, PageSettingsModel } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, FilterMenuRendererArgs, FilterSettingsModel, Page, PageSettingsModel } from '@syncfusion/ej2-react-grids';
 import { Filter, GridComponent, Inject } from '@syncfusion/ej2-react-grids'
 import * as React from 'react';
 import { data } from './datasource';
@@ -8,8 +8,8 @@ function App() {
   const pageSettings: PageSettingsModel = { pageCount: 5 };
   const filterSettings: FilterSettingsModel = { type: 'Menu' };
   const formatOptions: Object = { type: 'dateTime', format: 'M/d/y HH:mm' };
-  const actionComplete = (args: FilterEventArgs) => {
-    if (args.requestType === 'filterafteropen') {
+  const actionComplete = (args: FilterMenuRendererArgs) => {
+    if (args.requestType === 'filterAfterOpen') {
       const columnObj = (grid as GridComponent).getColumnByField(args.columnName);
       if (columnObj.type === 'datetime') {
         const dateObj = (document.getElementById('dateui-' + columnObj.uid)as Element)['ej2_instances'][0];
