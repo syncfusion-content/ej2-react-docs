@@ -9,7 +9,7 @@ function App() {
   const filterSettings = { type: 'Menu' };
   const formatOptions = { type: 'dateTime', format: 'M/d/y HH:mm' };
   const actionComplete = (args) => {
-    if (args.requestType === 'filterafteropen') {
+    if (args.requestType === 'filterAfterOpen') {
       const columnObj = grid.getColumnByField(args.columnName);
       if (columnObj.type === 'datetime') {
         const dateObj = document.getElementById('dateui-' + columnObj.uid)['ej2_instances'][0];
