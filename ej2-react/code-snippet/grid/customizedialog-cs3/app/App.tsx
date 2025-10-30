@@ -27,7 +27,6 @@ function App() {
           }
         }
       ];
-      dialogInstance.refresh();
     }
   }
   return <GridComponent ref={g => grid = g} dataSource={data} actionComplete={actionComplete}

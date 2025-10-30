@@ -5,6 +5,7 @@ import * as React from 'react';
 import { data } from './datasource';
 
 function App() {
+  let grid;
   const editOptions = { allowEditing: true, allowAdding: true, allowDeleting: true };
   const toolbarOptions = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
   const orderIDRules = { required: true, number: true };
@@ -12,14 +13,19 @@ function App() {
   const freightRules = { required: true, min: 1, max: 1000 };
   const verifiedRules = { required: true };
   const dateRules = { required: true };
+
+  const onVerifiedChange = (args, rowData) => {
+    const rowIndex = grid.getRowIndexByPrimaryKey(rowData.OrderID);
+    grid.updateRow(rowIndex, { ...rowData, Verified: args.checked });
+  };
   const template = (props) => {
     return (<div>
-      <CheckBoxComponent checked={props.Verified}></CheckBoxComponent>
+      <CheckBoxComponent checked={props.Verified} change={(args) => onVerifiedChange(args, props)}></CheckBoxComponent>
     </div>)
 
   }
   return (<div>
-    <GridComponent id='Grid' dataSource={data} editSettings={editOptions}
+    <GridComponent id='Grid' ref={(g) => (grid = g)} dataSource={data} editSettings={editOptions}
       toolbar={toolbarOptions} height={315}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' validationRules={orderIDRules} width='100' textAlign="Right" isPrimaryKey={true} />
