@@ -42,7 +42,7 @@ function App() {
       ref={g => grid = g}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
-        <ColumnDirective field='CustomerID' headerText='Customer ID' width='100'/>
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' headerTemplate='<button>HeaderTemplate</button>'/>
         <ColumnDirective field='ShipCity' headerText='Ship City' width='100' />
         <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
       </ColumnsDirective>
