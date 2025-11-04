@@ -1,46 +1,89 @@
 import React, { useRef, useEffect, useState } from 'react';
-import {RichTextEditorComponent,HtmlEditor,Toolbar,Image,Link,QuickToolbar,Inject} from '@syncfusion/ej2-react-richtexteditor';
+import {
+  RichTextEditorComponent,
+  HtmlEditor,
+  Toolbar,
+  Image,
+  Link,
+  QuickToolbar,
+  Inject
+} from '@syncfusion/ej2-react-richtexteditor';
 import { SliderComponent } from '@syncfusion/ej2-react-inputs';
 
 function App() {
   const rteRef = useRef(null);
+  const sliderRef = useRef(null);
   const [sliderValue, setSliderValue] = useState([0, 50]);
   const [maxLength, setMaxLength] = useState(400);
 
-  const rteContent = `<p>The Syncfusion Rich Text Editor, a WYSIWYG (what you see is what you get) editor, is a user interface that allows you to create, edit, and format rich text content. You can try out a demo of this editor here. Key features: Provides IFRAME and DIV modes. Bulleted and numbered lists. Handles images, hyperlinks, videos, hyperlinks, uploads, etc. Contains undo/redo manager.</p>`;
+  const rteContent = `<p>The Syncfusion Rich Text Editor, a WYSIWYG ("what you see is what you get") editor, is a user interface that allows you to create, edit, and format rich text content. You can try out a demo of this editor here. Key features: Provides IFRAME and DIV modes. Bulleted and numbered lists. Handles images, hyperlinks, videos, uploads, etc. Contains undo/redo manager.</p>`;
 
   useEffect(() => {
-    const rte = rteRef.current;
-    if (rte) {
-      const panel = rte.contentModule.getEditPanel();
-      const textNode = panel?.firstChild?.firstChild;
-      if (textNode && textNode.textContent) {
-        setMaxLength(textNode.textContent.length);
+    setTimeout(() => {
+      const rte = rteRef.current;
+      if (rte) {
+        const panel = rte.contentModule.getEditPanel();
+        const realLength = panel.textContent?.length || 0;
+
+        setMaxLength(realLength);
+
+        if (sliderRef.current) {
+          sliderRef.current.max = realLength;
+          sliderRef.current.dataBind();
+        }
+
+        panel.focus();
+        onSliderChange({ value: sliderValue });
       }
-    }
+    }, 100);
   }, []);
 
-  const onSliderChange = (args) => {
-    const value = args.value;
-    const [start, end] = value;
+  const getTextNodeAtOffset = (root, offset) => {
+    let currentOffset = 0;
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
 
+    while (walker.nextNode()) {
+      const node = walker.currentNode;
+      const nodeLength = node.textContent.length;
+
+      if (currentOffset + nodeLength >= offset) {
+        return {
+          node,
+          offset: offset - currentOffset
+        };
+      }
+
+      currentOffset += nodeLength;
+    }
+
+    return null;
+  };
+
+  const onSliderChange = (args) => {
+    const [start, end] = args.value;
     const rte = rteRef.current;
     if (!rte) return;
 
     const panel = rte.contentModule.getEditPanel();
-    const textNode = panel?.firstChild?.firstChild;
-    if (!textNode || !(textNode instanceof Text)) return;
+    const maxLength = panel.textContent?.length || 0;
 
-    const safeStart = Math.min(start, textNode.length);
-    const safeEnd = Math.min(end, textNode.length);
+    const safeStart = Math.min(start, maxLength);
+    const safeEnd = Math.min(end, maxLength);
 
-    const range = document.createRange();
-    range.setStart(textNode, safeStart);
-    range.setEnd(textNode, safeEnd);
+    const startInfo = getTextNodeAtOffset(panel, safeStart);
+    const endInfo = getTextNodeAtOffset(panel, safeEnd);
 
-    const selection = window.getSelection();
-    selection?.removeAllRanges();
-    selection?.addRange(range);
+    if (startInfo && endInfo) {
+      const range = document.createRange();
+      range.setStart(startInfo.node, startInfo.offset);
+      range.setEnd(endInfo.node, endInfo.offset);
+
+      const selection = window.getSelection();
+      if (selection) {
+        selection.removeAllRanges();
+        selection.addRange(range);
+      }
+    }
 
     setSliderValue([safeStart, safeEnd]);
   };
@@ -50,6 +93,7 @@ function App() {
       <div className="sliderwrap">
         <label className="labeltext">Range Slider</label>
         <SliderComponent
+          ref={sliderRef}
           type="Range"
           value={sliderValue}
           min={0}

@@ -29,9 +29,9 @@ When users type the `@` symbol followed by a character the Rich Text Editor, a s
 
 You can control when the suggestion list appears by setting the [minLength](https://ej2.syncfusion.com/react/documentation/api/mention/#minlength) property in the Mention component. This property defines the minimum number of characters a user must type after the mention character (@) to trigger the search action. This is especially useful when working with large datasets, as it helps reduce unnecessary queries and improves performance.
 
-By default, minLength is set to 0, which means the suggestion list appears immediately after the mention character is entered. However, you can increase this value to delay the search until the user has typed a specific number of characters.
+By default, `minLength` is set to 0, which means the suggestion list appears immediately after the mention character is entered. However, you can increase this value to delay the search until the user has typed a specific number of characters.
 
-In the following example, the minLength is set to 3, so the suggestion list will only appear once the user types three or more characters after the @ symbol.
+In the following example, the `minLength` is set to 3, so the suggestion list will only appear once the user types three or more characters after the @ symbol.
 
 `[Class-component]`
 
