@@ -30,6 +30,20 @@ class App extends React.Component {
                 iconCss: 'e-icons e-signature',
                 type: 'Custom',
                 command: 'Signature'
+            },
+            {
+                text: 'HorizontalLine',
+                description: 'Insert a horizontal line',
+                iconCss: 'e-icons e-horizontal-line',
+                type: 'Custom',
+                command: 'HorizontalLine',
+            },
+            {
+                text: 'CheckList',
+                description: 'Insert a check list',
+                iconCss: 'e-icons e-checklist',
+                type: 'Custom',
+                command: 'CheckList',
             }]
     };
     slashMenuItemSelect(args) {
@@ -39,6 +53,12 @@ class App extends React.Component {
             }
             if (args.itemData.command === 'Signature') {
                 this.formatRTE.executeCommand('insertHTML', this.signature, { undo: true });
+            }
+            if (args.itemData.command === 'HorizontalLine') {
+                this.formatRTE.executeCommand('insertHTML', '<hr>');
+            }
+            if (args.itemData.command === 'CheckList') {
+                this.formatRTE.executeCommand('insertHTML',`<ul class="e-rte-checklist"><li> Task 1</li><li> Task 2</li></ul>`);
             }
         }
     }

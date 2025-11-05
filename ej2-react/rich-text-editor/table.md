@@ -70,6 +70,42 @@ You can insert `Rows` above or below the selected table cell using the quick too
 
 ![Rich Text Editor table column](images/table_column.png)
 
+## Table column resizing
+
+The Rich Text Editor supports resizing of table columns, allowing users to adjust the size of individual columns to better fit their content. To resize a column, hover the pointer near the edge of a table cell until the resize cursor appears. Then, click and drag the cell border to modify the column size as needed.
+
+This feature provides flexibility in organizing tabular data and ensures that tables remain clear, structured, and easy to read, especially when working with varying content lengths or complex layouts.
+
+## Nesting tables
+
+The Rich Text Editor allows users to insert tables within other table cells, enabling the creation of nested tables. This feature is useful for building complex layouts such as structured forms, hierarchical data views, or detailed reports. Users can manually insert a nested table by placing the cursor inside a cell and using the table toolbar option or HTML source editing.
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/nesting-table-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/nesting-table-cs1/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/nesting-table-cs1" %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/nesting-table-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/nesting-table-cs2/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/nesting-table-cs2" %}
+
 ## Quick insert for table rows and columns
 
 The Rich Text Editor offers a simple and intuitive way to add rows and columns to your tables without interrupting your workflow. You can expand tables directly from the interface, no need to use toolbar buttons.

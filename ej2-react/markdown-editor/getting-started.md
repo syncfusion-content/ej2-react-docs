@@ -102,7 +102,15 @@ To create Markdown Editor with additional features, inject the required modules.
 * **Link** - Inject this module to use link feature in Markdown Editor.
 * **Toolbar** - Inject this module to use Toolbar feature.
 
-These modules should be injected into the **providers** section of root **NgModule** or component class.
+These modules should be injected into the `services` section of the component as shown below:
+
+```ts
+
+<RichTextEditorComponent >
+      <Inject services={[MarkdownEditor,Image, Link, Toolbar]} />
+</RichTextEditorComponent>
+
+```
 
 > Additional feature modules are available [here](https://ej2.syncfusion.com/react/documentation/rich-text-editor/module).
 

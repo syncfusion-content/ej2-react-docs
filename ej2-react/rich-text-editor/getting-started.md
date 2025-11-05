@@ -124,7 +124,15 @@ To create Rich Text Editor with additional features, inject the required modules
 * **QuickToolbar** - Inject this module to use quick toolbar feature for the target element.
 * **Toolbar** - Inject this module to use Toolbar feature.
 
-These modules should be injected into the **providers** section of root **NgModule** or component class.
+These modules should be injected into the `services` section of the component as shown below:
+
+```ts
+
+<RichTextEditorComponent >
+      <Inject services={[HtmlEditor,Image, Link, Toolbar, QuickToolbar]} />
+</RichTextEditorComponent>
+
+```
 
 > Additional feature modules are available [here](./module.md).
 
