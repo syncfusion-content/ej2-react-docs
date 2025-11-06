@@ -1,3 +1,4 @@
+{% raw %}
 import { HtmlEditor, Image, Inject, IToolbarItems, Link, QuickToolbar, RichTextEditorComponent, ToolbarSettingsModel, Toolbar, NodeSelection, ActionCompleteEventArgs, ActionBeginEventArgs, Table, PasteCleanup } from '@syncfusion/ej2-react-richtexteditor';
 import * as React from 'react';
 import { DropDownButtonComponent, MenuEventArgs } from '@syncfusion/ej2-react-splitbuttons';
@@ -146,3 +147,4 @@ function App() {
         </div>);
 }
 export default App;
+{% endraw %}

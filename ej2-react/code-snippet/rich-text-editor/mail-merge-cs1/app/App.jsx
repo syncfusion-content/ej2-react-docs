@@ -1,3 +1,4 @@
+{% raw %}
 import React from 'react';
 import {
   RichTextEditorComponent,
@@ -258,3 +259,4 @@ class App extends React.Component {
 }
 
 export default App;
+{% endraw %}

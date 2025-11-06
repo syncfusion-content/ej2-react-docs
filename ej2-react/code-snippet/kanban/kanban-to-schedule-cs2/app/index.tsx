@@ -1,3 +1,4 @@
+{% raw %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { extend, closest, removeClass } from '@syncfusion/ej2-base';
@@ -103,3 +104,4 @@ function App(){
     );
 }
 ReactDOM.render(<App />, document.getElementById('kanban'));
+{% endraw %}
