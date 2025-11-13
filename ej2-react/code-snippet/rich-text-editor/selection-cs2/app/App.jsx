@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import {
   RichTextEditorComponent,
   HtmlEditor,
@@ -21,41 +21,33 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       const rte = rteRef.current;
-      if (rte) {
-        const panel = rte.contentModule.getEditPanel();
-        const realLength = panel.textContent?.length || 0;
+      if (!rte) return;
 
-        setMaxLength(realLength);
+      const panel = rte.contentModule.getEditPanel();
+      const realLength = panel.textContent ? panel.textContent.length : 0;
 
-        if (sliderRef.current) {
-          sliderRef.current.max = realLength;
-          sliderRef.current.dataBind();
-        }
-
-        panel.focus();
-        onSliderChange({ value: sliderValue });
+      setMaxLength(realLength);
+      if (sliderRef.current) {
+        sliderRef.current.max = realLength;
+        sliderRef.current.dataBind();
       }
+
+      panel.focus();
+      onSliderChange({ value: sliderValue });
     }, 100);
   }, []);
 
   const getTextNodeAtOffset = (root, offset) => {
-    let currentOffset = 0;
-    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
-
-    while (walker.nextNode()) {
-      const node = walker.currentNode;
-      const nodeLength = node.textContent.length;
-
-      if (currentOffset + nodeLength >= offset) {
-        return {
-          node,
-          offset: offset - currentOffset
-        };
+    let current = 0;
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    let node;
+    while ((node = walker.nextNode())) {
+      const len = node.textContent ? node.textContent.length : 0;
+      if (current + len >= offset) {
+        return { node, offset: offset - current };
       }
-
-      currentOffset += nodeLength;
+      current += len;
     }
-
     return null;
   };
 
@@ -65,10 +57,9 @@ function App() {
     if (!rte) return;
 
     const panel = rte.contentModule.getEditPanel();
-    const maxLength = panel.textContent?.length || 0;
-
-    const safeStart = Math.min(start, maxLength);
-    const safeEnd = Math.min(end, maxLength);
+    const max = panel.textContent ? panel.textContent.length : 0;
+    const safeStart = Math.min(start, max);
+    const safeEnd = Math.min(end, max);
 
     const startInfo = getTextNodeAtOffset(panel, safeStart);
     const endInfo = getTextNodeAtOffset(panel, safeEnd);
@@ -77,11 +68,10 @@ function App() {
       const range = document.createRange();
       range.setStart(startInfo.node, startInfo.offset);
       range.setEnd(endInfo.node, endInfo.offset);
-
-      const selection = window.getSelection();
-      if (selection) {
-        selection.removeAllRanges();
-        selection.addRange(range);
+      const sel = window.getSelection();
+      if (sel) {
+        sel.removeAllRanges();
+        sel.addRange(range);
       }
     }
 

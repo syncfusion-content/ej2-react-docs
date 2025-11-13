@@ -1,5 +1,10 @@
-import * as React from 'react';
+import React from 'react';
 import * as ReactDOM from 'react-dom';
-import App  from './App';
+import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = document.getElementById('sample');
+if (root) {
+  ReactDOM.render(<App />, root);
+} else {
+  console.error('Root element #sample not found');
+}
