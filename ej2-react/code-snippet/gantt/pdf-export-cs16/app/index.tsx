@@ -16,7 +16,7 @@ function App(){
   };
   const  toolbarOptions: ToolbarItem[] = ['PdfExport'];
   function toolbarClick(args: ClickEventArgs): void {
-       if (args.item.text === 'Pdf export') {
+       if (args.item.text === 'PDF export') {
            ganttChart.pdfExport();
         }
     };

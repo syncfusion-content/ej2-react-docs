@@ -1,46 +1,69 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
-import { data } from './datasource';
+import { GanttData } from './datasource';
 import { QueryCellInfoEventArgs } from '@syncfusion/ej2-react-gantt';
 
-function App(){
+function App() {
     const queryCellInfoEvent = (args: QueryCellInfoEventArgs) => {
-        switch(args.data.TaskID) {
+        const field = args.column.field;
+        switch (args.data.TaskID) {
             case 1:
-            if ((args.column.field == 'work1') && (args.data.taskData.work1 == 'support')) {
-                args.colSpan= 2;
-            }
-            break;
+                if (field === 'work3' || field === 'work4') {
+                    args.colSpan = 1;
+                } else if (field === 'work1') {
+                    args.colSpan = 2;
+                }
+                break;
             case 2:
-            if ((args.column.field == 'work1') && (args.data.taskData.work1 == 'support')) {
-                args.colSpan= 2;
-            }
-            break;
+                if (field === 'work1' || field === 'work4') {
+                    args.colSpan = 1;
+                } else if (field === 'work2') {
+                    args.colSpan = 2;
+                }
+                break;
             case 3:
-            if ((args.column.field == 'work1') && (args.data.taskData.work1 == 'support')) {
-                args.colSpan = 2;
-            }
-            break;
+                if (field === 'work4') {
+                    args.colSpan = 1;
+                } else if (field === 'work1') {
+                    args.colSpan = 3;
+                }
+                break;
             case 4:
-            if ((args.column.field == 'work1') && (args.data.taskData.work1 == 'support')) {
-                args.colSpan = 2;
-            }
-            break;
-            case 5  :
-            if ((args.column.field == 'work1') && (args.data.taskData.work1 == 'support')) {
-                args.colSpan = 2;
-            }
-            break;
+                if (field === 'work4' || field === 'work1') {
+                    args.colSpan = 1;
+                }
+                break;
+            case 5:
+                if (field === 'work3') {
+                    args.colSpan = 2;
+                } else if (field === 'work1') {
+                    args.colSpan = 2;
+                }
+                break;
+            case 6:
+                if (field === 'work4') {
+                    args.colSpan = 1;
+                } else if (field === 'work1') {
+                    args.colSpan = 3;
+                }
+                break;
             case 7:
-            if ((args.column.field == 'work1') && (args.data.taskData.work1 == 'support')) {
-                args.colSpan = 2;
-            }
-            break;
+                if (field === 'work4' || field === 'work1') {
+                    args.colSpan = 1;
+                }
+                break;
+            case 8:
+                if (field === 'work1' || field === 'work4') {
+                    args.colSpan = 1;
+                } else if (field === 'work2') {
+                    args.colSpan = 2;
+                }
+                break;
         }
     }
     let ganttInstance: any;
-    const  taskFields: any = {
+    const taskFields: any = {
         id: 'TaskID',
         name: 'TaskName',
         startDate: 'StartDate',
@@ -51,19 +74,27 @@ function App(){
         work2: 'work2',
     };
     const splitterSettings: any = {
-        position : '75%'
+        position: '75%'
     };
-        return (<div>
-        <GanttComponent dataSource={data} taskFields={taskFields} queryCellInfo={queryCellInfoEvent} splitterSettings={splitterSettings} gridLines='Both' height='450px' ref={gantt => ganttInstance = gantt}>
-         <ColumnsDirective>
-            <ColumnDirective field='TaskID' width='100' ></ColumnDirective>
-            <ColumnDirective field='TaskName' headerText='Task Name'></ColumnDirective>
-            <ColumnDirective field='work1' headerText='Work 1'></ColumnDirective>
-            <ColumnDirective field='work2' headerText='Work 2'></ColumnDirective>
-            <ColumnDirective field='StartDate'></ColumnDirective>
-            <ColumnDirective field='Duration'></ColumnDirective>
-            <ColumnDirective field='Progress'></ColumnDirective>
+    return (<div> <GanttComponent
+        dataSource={GanttData}
+        taskFields={taskFields}
+        splitterSettings={splitterSettings}
+        gridLines="Both"
+        height="430px"
+        queryCellInfo={queryCellInfoEvent}
+    >
+        <ColumnsDirective>
+            <ColumnDirective field="TaskID" headerText="Task ID" textAlign="Right" width="90" />
+            <ColumnDirective field="TaskName" headerText="Task Name" textAlign="Left" width="290" />
+            <ColumnDirective field="work1" headerText="Work 1" textAlign="Center" width="150" />
+            <ColumnDirective field="work2" headerText="Work 2" textAlign="Center" width="150" />
+            <ColumnDirective field="work3" headerText="Work 3" textAlign="Center" width="150" />
+            <ColumnDirective field="work4" headerText="Work 4" textAlign="Center" width="150" />
+            <ColumnDirective field="StartDate" headerText="Start Date" textAlign="Right" width="120" />
+            <ColumnDirective field="Duration" headerText="Duration" textAlign="Right" width="90" />
+            <ColumnDirective field="Progress" headerText="Progress" textAlign="Right" width="120" />
         </ColumnsDirective>
-        </GanttComponent></div>)
+    </GanttComponent></div>)
 };
 ReactDOM.render(<App />, document.getElementById('root'));
