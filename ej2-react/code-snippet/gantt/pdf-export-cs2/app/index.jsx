@@ -15,7 +15,7 @@ function App () {
         const toolbarOptions = ['PdfExport'];
     let ganttChart;
    function toolbarClick(args) {
-        if (args.item.text === 'Pdf export') {
+        if (args.item.text === 'PDF export') {
         let exportProperties = {
             pageOrientation: 'Portrait'
         };

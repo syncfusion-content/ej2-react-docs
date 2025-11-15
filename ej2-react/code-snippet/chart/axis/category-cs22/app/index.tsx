@@ -1,4 +1,4 @@
-{% raw %}
+
 
 
 import * as React from "react";
@@ -9,7 +9,6 @@ from'@syncfusion/ej2-react-charts';
 import { chartData1, chartData2, chartData3 } from './datasource';
 
 function App() {
-
   const primaryxAxis: AxisModel = {valueType: 'Category', interval: 1, majorGridLines: { width: 0 } };
   const primaryyAxis: AxisModel = {majorGridLines: { width: 0 },
             majorTickLines: { width: 0 }, lineStyle: { width: 0 }, labelStyle: { color: 'transparent'}};
@@ -41,4 +40,3 @@ export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
 
 
-{% endraw %}

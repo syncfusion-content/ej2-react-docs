@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Work Breakdown Structure (WBS) in React Gantt Component | Syncfusion
-description: Discover how to integrate and manage WBS codes in the Syncfusion React Gantt component, ensuring streamlined task tracking and project management.
-control: WBS Column 
+title: Work Breakdown Structure (WBS) in React Gantt component | Syncfusion
+description: Learn how to integrate and manage WBS codes in the Syncfusion React Gantt component to improve task hierarchy visualization and project tracking.
 platform: ej2-react
+control: WBS Column 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Work Breakdown Structure (WBS) in React Gantt Component
+# Work Breakdown Structure (WBS) in React Gantt component
 
-The Work Breakdown Structure (WBS) organizes project tasks hierarchically in the Gantt component by assigning unique codes to each task. This system enhances visualization and management by clearly reflecting task relationships and levels. It is especially useful in complex environments like construction projects or enterprise-scale software development.
+The Work Breakdown Structure (WBS) organizes project tasks hierarchically by assigning unique codes to each task. This improves task visibility and management, especially in large-scale construction or enterprise-level software projects.
 
 ## Configuration and implementation
 
-To enable and configure WBS in your Gantt component:
+To enable WBS in the Gantt component:
 
-- **Enable WBS Codes**: Set the [`enableWBS`](https://ej2.syncfusion.com/react/documentation/api/gantt/#enablewbs) property to `true` to automatically generate unique task codes and their predecessors.
-- **Auto-Update Codes**: Set the [`enableAutoWbsUpdate`](https://ej2.syncfusion.com/react/documentation/api/gantt/#enableautowbsupdate) property to `true` to maintain WBS code accuracy during operations like sorting, filtering, editing, or drag-and-drop.
+- **Enable WBS Codes**: Set [enableWBS](https://ej2.syncfusion.com/react/documentation/api/gantt/#enablewbs) to **true**  to automatically generate unique task codes and define their predecessors.
+- **Auto-Update Codes**: Set [enableAutoWbsUpdate](https://ej2.syncfusion.com/react/documentation/api/gantt/#enableautowbsupdate) to **true** to maintain accurate WBS codes during operations such as sorting, editing, or drag-and-drop.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -35,27 +35,27 @@ To enable and configure WBS in your Gantt component:
 
 ## Managing WBS code updates
 
-For better performance, you can control when WBS codes are updated by using the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/gantt/#actionbegin) and [`dataBound`](https://ej2.syncfusion.com/react/documentation/api/gantt/#databound) events. This is particularly useful during actions like dragging and dropping rows.
+To optimize performance, WBS code updates can be controlled using the [actionBegin](https://ej2.syncfusion.com/react/documentation/gantt/events#actionbegin) and [dataBound](https://ej2.syncfusion.com/react/documentation/gantt/events#databound) events. This is especially useful during operations like row drag-and-drop, where auto-update is triggered only during that specific action to ensure efficient and accurate code handling.
 
-In the following example, WBS auto-update is enabled only during the **row drag and drop** action using these events.
+In the following example, WBS auto-update is enabled only during the row drag and drop action using these events.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/wbscolumn-cs2/app/index.jsx %}
+{% include code-snippet/gantt/wbs-column-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/wbscolumn-cs2/app/index.tsx %}
+{% include code-snippet/gantt/wbs-column-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/wbscolumn-cs2/index.html %}
+{% include code-snippet/gantt/wbs-column-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/gantt/wbscolumn-cs2" %}
+{% previewsample "page.domainurl/code-snippet/gantt/wbs-column-cs2" %}
 
 ## Limitations
 
-The WBS feature has a few limitations in the React Gantt component:
+The WBS feature has a few limitations in the Gantt component:
 
 * Editing of the WBS code and WBS predecessor columns is not supported.
 * Load on demand is not supported with the WBS feature.

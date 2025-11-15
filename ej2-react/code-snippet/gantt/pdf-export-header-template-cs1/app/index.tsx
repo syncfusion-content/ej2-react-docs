@@ -19,7 +19,7 @@ function App() {
     const toolbarOptions = ['PdfExport'];
     let ganttChart: any;
     function toolbarClick(args: ClickEventArgs) {
-        if (args.item.text === 'Pdf export') {
+        if (args.item.text === 'PDF export') {
             let exportProperties: PdfExportProperties = {
                 enableFooter: false
             };

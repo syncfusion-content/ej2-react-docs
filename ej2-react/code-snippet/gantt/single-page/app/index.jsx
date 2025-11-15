@@ -17,7 +17,7 @@ function App(){
   };
   const  toolbarOptions = ['PdfExport'];
   function toolbarClick(args) {
-       if (args.item.text === 'Pdf export') {
+       if (args.item.text === 'PDF export') {
         var exportProperties= {
             fitToWidthSettings: {       
                 isFitToWidth: true,       
