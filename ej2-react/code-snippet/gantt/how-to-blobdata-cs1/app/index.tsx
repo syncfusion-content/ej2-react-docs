@@ -45,7 +45,7 @@ let exportBlob: Function = (blob: Blob) => {
         const toolbarOptions = ['PdfExport','ExcelExport'];
     let ganttChart:any;
    function toolbarClick(args:any) {
-    if (args.item.text === "Pdf export") {
+    if (args.item.text === "PDF export") {
       ganttChart.pdfExport(null,null,null,true);
       }
       if (args.item.text === 'Excel export') {

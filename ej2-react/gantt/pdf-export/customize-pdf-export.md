@@ -8,7 +8,6 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-
 # To customize PDF export
 
 PDF export provides an option to customize the mapping of Gantt to exported PDF document.

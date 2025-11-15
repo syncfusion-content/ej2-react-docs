@@ -17,7 +17,7 @@ function App(){
   const  toolbarOptions: any = ['PdfExport'];
   
   const toolbarClick=(args:any)=>{
-    if(args.item.text === 'Pdf export'){
+    if(args.item.text === 'PDF export'){
       let exportProperties = {
         ganttStyle: {font: new PdfTrueTypeFont(robotoFont, 12, PdfFontStyle.Bold)}
     };

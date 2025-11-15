@@ -50,7 +50,7 @@ function App() {
         "Outdent",
     ];
     const RightLabelTemplate = (props) => {
-        getConstraintText(props.ganttProperties.constraintType);
+        return <span>{getConstraintText(props.ganttProperties.constraintType)}</span>;
     };
     const templateRight = RightLabelTemplate;
     const labelSettings = {
@@ -71,40 +71,39 @@ function App() {
             args.validateMode.respectMustStartOn = true
         }
     };
-    return (
-        <div className="control-section">
-            <GanttComponent
-                id="Constraint"
-                dataSource={data}
-                taskFields={taskFields}
-                editSettings={editSettings}
-                toolbar={toolbar}
-                allowSelection={true}
-                actionBegin={actionBegin.bind(this)}
-                gridLines="Both"
-                highlightWeekends={true}
-                height="450px"
-                treeColumnIndex={1}
-                labelSettings={labelSettings}
-                splitterSettings={splitterSettings}
-                projectStartDate={projectStartDate}
-                projectEndDate={projectEndDate}
-                eventMarkers={eventMarkers}
-            >
-                <ColumnsDirective>
-                    <ColumnDirective field="TaskID" visible={false} />
-                    <ColumnDirective field="TaskName" headerText="Job Name" width="200" clipMode="EllipsisWithTooltip" />
-                    <ColumnDirective field="StartDate" />
-                    <ColumnDirective field="Duration" />
-                    <ColumnDirective field="ConstraintType" width="180" />
-                    <ColumnDirective field="ConstraintDate" />
-                    <ColumnDirective field="EndDate" />
-                    <ColumnDirective field="Predecessor" />
-                    <ColumnDirective field="Progress" />
-                </ColumnsDirective>
-                <Inject services={[Edit, Selection, Toolbar, DayMarkers]} />
-            </GanttComponent>
-        </div>
+    return (<div className="control-section">
+        <GanttComponent
+            id="Constraint"
+            dataSource={data}
+            taskFields={taskFields}
+            editSettings={editSettings}
+            toolbar={toolbar}
+            allowSelection={true}
+            actionBegin={actionBegin.bind(this)}
+            gridLines="Both"
+            highlightWeekends={true}
+            height="450px"
+            treeColumnIndex={1}
+            labelSettings={labelSettings}
+            splitterSettings={splitterSettings}
+            projectStartDate={projectStartDate}
+            projectEndDate={projectEndDate}
+            eventMarkers={eventMarkers}
+        >
+            <ColumnsDirective>
+                <ColumnDirective field="TaskID" visible={false} />
+                <ColumnDirective field="TaskName" headerText="Job Name" width="200" clipMode="EllipsisWithTooltip" />
+                <ColumnDirective field="StartDate" />
+                <ColumnDirective field="Duration" />
+                <ColumnDirective field="ConstraintType" width="180" />
+                <ColumnDirective field="ConstraintDate" />
+                <ColumnDirective field="EndDate" />
+                <ColumnDirective field="Predecessor" />
+                <ColumnDirective field="Progress" />
+            </ColumnsDirective>
+            <Inject services={[Edit, Selection, Toolbar, DayMarkers]} />
+        </GanttComponent>
+    </div>
     )
 };
 ReactDOM.render(<App />, document.getElementById('root'));

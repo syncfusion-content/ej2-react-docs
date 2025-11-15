@@ -50,7 +50,7 @@ function App() {
         "Outdent",
     ];
     const RightLabelTemplate = (props) => {
-        getConstraintText(props.ganttProperties.constraintType);
+        return <span>{getConstraintText(props.ganttProperties.constraintType)}</span>;
     };
     const templateRight = RightLabelTemplate;
     const labelSettings = {

@@ -1,8 +1,8 @@
 import { createElement } from '@syncfusion/ej2-base';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, ColumnMenu, ColumnDirective, ColumnsDirective, ColumnMenuOpenEventArgs } from '@syncfusion/ej2-react-gantt';
-import { ColumnMenuItemModel, Inject, Sort, Filter } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, ColumnMenu, ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-react-gantt';
+import { Inject, Sort, Filter } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
 function App(){
     const taskFields = {
