@@ -101,5 +101,3 @@ export interface KanbanDataModel {
     RankId?: number;
     Color?: string;
 }
-
-
