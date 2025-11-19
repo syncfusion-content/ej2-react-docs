@@ -1,4 +1,4 @@
-import { ColumnDirective, ColumnsDirective, Grid, GridComponent, Toolbar, Inject, Page,  PageSettingsModel,RowDataBoundEventArgs } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, Grid, GridComponent, Toolbar, Inject, Page,  PageSettingsModel, RowDataBoundEventArgs } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
 
@@ -22,7 +22,7 @@ function App() {
           <ColumnDirective field='Freight' headerText='Freight' format='C2' width='90' textAlign='Right' />
           <ColumnDirective field='OrderDate' headerText='Order Date' format='yMd' width='120' textAlign='Right' />
         </ColumnsDirective>
-        <Inject services={[Toolbar, Page, Edit]} />
+        <Inject services={[Toolbar, Page]} />
       </GridComponent></div>
   )
 }

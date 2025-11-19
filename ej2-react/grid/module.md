@@ -18,7 +18,7 @@ The following modules should be injected to extend grid's functionality.
 | [Sort](https://ej2.syncfusion.com/angular/documentation/api/grid/sort/)| Inject this module to use sorting feature.|
 | [Filter](https://ej2.syncfusion.com/angular/documentation/api/grid/filter/)| Inject this module to use filtering feature.|
 | [Group](https://ej2.syncfusion.com/angular/documentation/api/grid/group/)| Inject this module to use grouping feature|
-| [Edit](https://ej2.syncfusion.com/angular/documentation/api/grid/edit/)| Inject this module is use editing feature.|
+| [Edit](https://ej2.syncfusion.com/angular/documentation/api/grid/edit/)| Inject this module to use editing feature.|
 | `Aggregate`| Inject this module to use aggregate feature.|
 | [ColumnChooser](https://ej2.syncfusion.com/angular/documentation/api/grid/columnChooser/)| Inject this module to use column chooser feature.|
 | `ColumnMenu`| Inject this module to use column menu feature.|

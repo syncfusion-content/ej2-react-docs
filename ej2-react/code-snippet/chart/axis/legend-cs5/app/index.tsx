@@ -19,7 +19,7 @@ class App extends React.Component<{}, {}> {
     visible: true, textStyle: { color: "red" }
   };
   render() {
-    return <ChartComponent id='charts' primaryXAxis={this.primaryxAxis} primaryYAxis={this.primaryyAxis} legendSettings={this.legendSettings}  title='Olympic Medals'>
+    return <ChartComponent id='charts' primaryXAxis={this.primaryxAxis} primaryYAxis={this.primaryyAxis} legendSettings={legendSettings}  title='Olympic Medals'>
     <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, Category]}/>
     <SeriesCollectionDirective>
       <SeriesDirective dataSource={data} xName='country' yName='gold' name='Gold' type='Column'>

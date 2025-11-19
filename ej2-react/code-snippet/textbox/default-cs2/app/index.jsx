@@ -4,7 +4,7 @@ import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
 import { useRef } from 'react';
 
 function Default()  {
-   const textBoxObj = useRef(null);
+    const textBoxObj = useRef(null);
 
     function oncreate() {  
         textBoxObj.current.addIcon('append', 'e-icons e-input-popup-date');

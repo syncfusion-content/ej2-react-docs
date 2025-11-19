@@ -14,7 +14,7 @@ function App() {
   })
   return (
     <div>
-      <GridComponent dataSource={data} height={315} ref={g => grid = g} allowPaging={true} pageSettings={pageSettings}  rowDataBound={rowDataBound}>
+      <GridComponent dataSource={data} height={315} ref={g => grid = g} allowPaging={true} pageSettings={pageSettings} rowDataBound={rowDataBound}>
         <ColumnsDirective>
           <ColumnDirective field='S.No' headerText='S.No' width='90' textAlign='Center' />
           <ColumnDirective field='OrderID' headerText='Order ID' width='90' textAlign='Right' />

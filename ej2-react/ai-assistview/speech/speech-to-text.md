@@ -24,7 +24,18 @@ Before integrating `Speech-to-Text`, ensure the following:
 
 ## Configure Speech-to-Text
 
-To enable Speech-to-Text functionality, modify the `src/App.jsx` or `src/App.tsx` file to incorporate the Web Speech API. The [SpeechToText](https://ej2.syncfusion.com/react/documentation/speech-to-text/getting-started) component listens for microphone input, transcribes spoken words, and updates the AI AssistView's editable footer with the transcribed text. The transcribed text is then sent as a prompt to the Azure OpenAI service via the AI AssistView component.
+To enable Speech-to-Text functionality in the React AI AssistView component, update the `src/App.jsx` or `src/App.tsx` file to incorporate the Web Speech API.
+
+The [SpeechToText](https://ej2.syncfusion.com/react/documentation/speech-to-text/getting-started) component listens to audio input from the device’s microphone, transcribes spoken words into text, and updates the AI AssistView’s editable footer using the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#footertemplate) property to display the transcribed text. The transcribed text is then sent as a prompt to the Azure OpenAI service via the AI AssistView component.
+
+### Configuration Options
+
+* **[`lang`](https://ej2.syncfusion.com/react/documentation/api/speech-to-text/#lang)**: Specifies the language for speech recognition. For example:
+
+    * `en-US` for American English
+    * `fr-FR` for French
+
+* **[`allowInterimResults`](https://ej2.syncfusion.com/react/documentation/api/speech-to-text/#allowInterimResults)**: Set to `true` to receive real-time (interim) recognition results, or `false` to receive only final results.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -36,6 +47,14 @@ To enable Speech-to-Text functionality, modify the `src/App.jsx` or `src/App.tsx
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/ai-assistview/speech/stt" %}
+
+## Error Handling
+
+The `SpeechToText` component provides events to handle errors that may occur during speech recognition. For more information, refer to the [Error Handling](https://ej2.syncfusion.com/react/documentation/speech-to-text/speech-recognition#error-handling) section in the documentation.
+
+## Browser Compatibility
+
+The `SpeechToText` component relies on the [Speech Recognition API](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition), which has limited browser support. Refer to the [Browser Compatibility](https://ej2.syncfusion.com/react/documentation/speech-to-text/speech-recognition#browser-support) section for detailed information.
 
 ## See Also
 
