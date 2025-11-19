@@ -16,22 +16,22 @@ The Work Breakdown Structure (WBS) organizes project tasks hierarchically by ass
 
 To enable WBS in the Gantt component:
 
-- **Enable WBS Codes**: Set [enableWBS](https://ej2.syncfusion.com/react/documentation/api/gantt/#enablewbs) to **true**  to automatically generate unique task codes and define their predecessors.
-- **Auto-Update Codes**: Set [enableAutoWbsUpdate](https://ej2.syncfusion.com/react/documentation/api/gantt/#enableautowbsupdate) to **true** to maintain accurate WBS codes during operations such as sorting, editing, or drag-and-drop.
+- **Enable WBS Codes**: Set [enableWBS](https://ej2.syncfusion.com/react/documentation/api/gantt#enablewbs) to **true**  to automatically generate unique task codes and define their predecessors.
+- **Auto-Update Codes**: Set [enableAutoWbsUpdate](https://ej2.syncfusion.com/react/documentation/api/gantt#enableautowbsupdate) to **true** to maintain accurate WBS codes during operations such as sorting, editing, or drag-and-drop.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/wbscolumn-cs1/app/index.jsx %}
+{% include code-snippet/gantt/wbs-column-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/wbscolumn-cs1/app/index.tsx %}
+{% include code-snippet/gantt/wbs-column-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/wbscolumn-cs1/index.html %}
+{% include code-snippet/gantt/wbs-column-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/gantt/wbscolumn-cs1" %}
+{% previewsample "page.domainurl/code-snippet/gantt/wbs-column-cs1" %}
 
 ## Managing WBS code updates
 
