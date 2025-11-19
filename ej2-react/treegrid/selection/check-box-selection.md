@@ -49,3 +49,18 @@ In checkbox selection, rows can also be selected by clicking anywhere on the row
 {% previewsample "page.domainurl/code-snippet/treegrid/selection-cs3" %}
 
 > Checkbox selection applies to row selection only and is not compatible with cell selection mode.
+
+## Conditional row selection using isRowSelectable
+
+The TreeGrid supports conditional row selection through the [isRowSelectable](https://ej2.syncfusion.com/react/documentation/api/treegrid/#isRowSelectable) property. This feature enables dynamic business logic to determine which rows can be selected, ensuring that only rows meeting specific conditions are selectable. The `isRowSelectable` property accepts a function that evaluates each row’s data and returns **true** to enable selection or **false** to disable it. The function is executed for the entire data source before rendering, making it suitable for scenarios where selection must be restricted based on criteria.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/treegrid/selection-cs10/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/treegrid/selection-cs10/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/treegrid/selection-cs10" %}

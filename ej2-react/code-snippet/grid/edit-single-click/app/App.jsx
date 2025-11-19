@@ -13,6 +13,7 @@ function App() {
   const freightRules = { required: true, min: 1, max: 1000 };
   const verifiedRules = { required: true };
   const dateRules = { required: true };
+
   const onVerifiedChange = (args, rowData) => {
     const rowIndex = grid.getRowIndexByPrimaryKey(rowData.OrderID);
     grid.updateRow(rowIndex, { ...rowData, Verified: args.checked });

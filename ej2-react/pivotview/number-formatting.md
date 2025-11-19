@@ -177,4 +177,3 @@ The following sample demonstrates how to prevent number formatting changes for t
 * [Customize number, date, and time values](./how-to/customize-number-date-and-time-values)
 * [NumberFormatOptions](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#number-formatting)
 * [Toolbar](./tool-bar)
-* [Internationalization](./globalization-and-localization#internationalization)

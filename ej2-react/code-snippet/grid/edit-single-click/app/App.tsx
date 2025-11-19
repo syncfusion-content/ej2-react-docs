@@ -1,4 +1,4 @@
-import { CheckBoxComponent , ChangeEventArgs } from '@syncfusion/ej2-react-buttons';
+import { CheckBoxComponent,ChangeEventArgs } from '@syncfusion/ej2-react-buttons';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import { Edit, EditSettingsModel, Inject, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
@@ -14,7 +14,7 @@ function App() {
   const verifiedRules: object = { required: true };
   const dateRules: object = { required: true };
 
-  const onVerifiedChange = (args: ChangeEventArgs, rowData: object | any) => {
+   const onVerifiedChange = (args: ChangeEventArgs, rowData: object | any) => {
     const rowIndex = (grid as GridComponent).getRowIndexByPrimaryKey(rowData.OrderID);
     (grid as GridComponent).updateRow(rowIndex, { ...rowData, Verified: args.checked });
   };
@@ -26,7 +26,7 @@ function App() {
 
   }
   return (<div>
-    <GridComponent id='Grid'ref={(g) => (grid = g)} dataSource={data} editSettings={editOptions}
+    <GridComponent id='Grid' ref={(g) => (grid = g)} dataSource={data} editSettings={editOptions}
       toolbar={toolbarOptions} height={315}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' validationRules={orderIDRules} width='100' textAlign="Right" isPrimaryKey={true} />

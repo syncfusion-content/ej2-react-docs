@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt component supports **column spanning**, allowing adjacent cells to merge horizontally for improved layout clarity. This feature is useful for grouping related data or enhancing visual structure.
 
-To enable column spanning, use the [queryCellInfo](https://ej2.syncfusion.com/react/documentation/gantt/events#querycellinfo) event and set the [colSpan](https://ej2.syncfusion.com/react/documentation/api/gantt/queryCellInfoEventArgs/#colspan) property to define how many columns a cell should span.
+To enable column spanning, use the [queryCellInfo](https://ej2.syncfusion.com/react/documentation/gantt/events#querycellinfo) event and set the [colSpan](https://ej2.syncfusion.com/react/documentation/api/gantt/queryCellInfoEventArgs#colspan) property to define how many columns a cell should span.
 
 In the following example, **Work** cells are spanned to improve visual clarity:
 
@@ -37,20 +37,18 @@ You can customize the border color of spanned cells using the [queryCellInfo](ht
 The following example demonstrates how to change the border color of spanned cells:
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/gantt/columns/columnspan-cs2/src/app.component.ts %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/column-span-cs2/app/index.jsx %}
 {% endhighlight %}
-
-{% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/gantt/columns/columnspan-cs2/src/main.ts %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/column-span-cs2/app/index.tsx %}
 {% endhighlight %}
-
-{% highlight ts tabtitle="datasource.ts" %}
-{% include code-snippet/gantt/columns/columntype-cs1/src/data.ts %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/column-span-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "page.domainurl/samples/gantt/columns/columnspan-cs2" %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/column-span-cs2" %}
 
 ## Limitations
 
