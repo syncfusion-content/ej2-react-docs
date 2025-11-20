@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Data labels in React Chart component
 
-Data label can be added to a chart series by enabling the [`visible`](https://ej2.syncfusion.com/react/documentation/api/chart/dataLabelSettings/#visible)option in the dataLabel. By default, the labels will arrange smartly without overlapping.
+Data label can be added to a chart series by enabling the [`visible`](https://ej2.syncfusion.com/react/documentation/api/chart/dataLabelSettings#visible)option in the dataLabel. By default, the labels will arrange smartly without overlapping.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -33,7 +33,7 @@ Data label can be added to a chart series by enabling the [`visible`](https://e
 
 ## Position
 
-Using [`position`](https://ej2.syncfusion.com/react/documentation/api/chart/dataLabelSettings/#position) property, you can place the label either on `Top`, `Middle`,`Bottom` or `Outer` (outer is applicable for column and bar type series).
+Using [`position`](https://ej2.syncfusion.com/react/documentation/api/chart/dataLabelSettings#position) property, you can place the label either on `Top`, `Middle`,`Bottom` or `Outer` (outer is applicable for column and bar type series).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -56,7 +56,7 @@ Using [`position`](https://ej2.syncfusion.com/react/documentation/api/chart/data
 
 ## Data Label Template
 
-Label content can be formatted by using the template option. Inside the template, you can add the placeholder text `${point.x}` and `${point.x}` to display corresponding data points x & y value. Using [`template`](https://ej2.syncfusion.com/react/documentation/api/chart/dataLabelSettings/#template) property, you can set data label template in chart.
+Label content can be formatted by using the template option. Inside the template, you can add the placeholder text `${point.x}` and `${point.x}` to display corresponding data points x & y value. Using [`template`](https://ej2.syncfusion.com/react/documentation/api/chart/dataLabelSettings#template) property, you can set data label template in chart.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -98,7 +98,7 @@ Text from the data source can be mapped using `name` property.
 
 ## Format
 
-Data label for the chart can be formatted using [`format`](https://ej2.syncfusion.com/react/documentation/api/chart/dataLabelSettings/#format) property. You can use the global formatting options, such as 'n', 'p', and 'c'.
+Data label for the chart can be formatted using [`format`](https://ej2.syncfusion.com/react/documentation/api/chart/dataLabelSettings#format) property. You can use the global formatting options, such as 'n', 'p', and 'c'.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -240,7 +240,7 @@ Using `angle` property, you can rotate the data label by its given angle.
 
 ## Customizing Specific Point
 
-You can also customize the specific marker and label using [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel/#pointrender) and [`textRender`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel/#textrender/) event. `pointRender` event allows you to change the shape, color and border for a point, whereas the `textRender` event allows you to change the text for the point.
+You can also customize the specific marker and label using [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#pointrender) and [`textRender`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#textrender) event. `pointRender` event allows you to change the shape, color and border for a point, whereas the `textRender` event allows you to change the text for the point.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -280,8 +280,56 @@ You can calculate the percentage value based on the sum for each series using th
 
 {% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs6" %}
 
+## Last value label
+
+The `lastValueLabel` in a chart allows you to easily display the value of the last data point in a series. This feature provides an intuitive way to highlight the most recent or last data value in a series on your chart.
+
+### Enable last value label
+
+To show the last value label, make sure the `enable` property inside the `lastValueLabel` settings is set to `true` within the series configuration.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/last-value-label/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/last-value-label/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/last-value-label/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/last-value-label/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/last-value-label" %}
+
+>Note: To use the last value label feature, we need to inject `LastValueLabel` module into the `services`.
+
+### Customization
+
+The appearance of the last value label can be customized using style properties such as `font`, `background`, `border`, `dashArray`, `lineWidth`, `lineColor`, `rx`, and `ry` in the lastValueLabel property of the chart series. These settings allow you to tailor the label’s look to align with your desired visual presentation.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/last-value-label-customization/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/last-value-label-customization/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/last-value-label-customization/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/last-value-label-customization/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/last-value-label-customization" %}
+
 ## See Also
 
-* [Show total stacking values in data label](./how-to/#show-the-total-value-for-stacking-series-in-data-label)
-* [Prevent the data label when the data value is 0](./how-to/#prevent-the-data-label-when-the-data-value-is-0)
+* [Show total stacking values in data label](./how-to#show-the-total-value-for-stacking-series-in-data-label)
+* [Prevent the data label when the data value is 0](./how-to#prevent-the-data-label-when-the-data-value-is-0)
 * [Display Data Labels in Lakh](https://support.syncfusion.com/kb/article/21250/how-to-display-data-labels-in-lakh-in-react-accumulation-chart)
