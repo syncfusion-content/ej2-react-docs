@@ -1,4 +1,3 @@
-{% raw %}
 import React from 'react';
 import {RichTextEditorComponent, HtmlEditor, Toolbar, Image, Link, QuickToolbar, Table, PasteCleanup, Inject} from '@syncfusion/ej2-react-richtexteditor';
 import { DropDownButtonComponent } from '@syncfusion/ej2-react-splitbuttons';
@@ -249,4 +248,3 @@ class App extends React.Component {
 }
 
 export default App;
-{% endraw %}
