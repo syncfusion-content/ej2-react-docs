@@ -8,7 +8,7 @@ function App() {
         return instance.formatDate(value, { skeleton: 'yMd', type: 'date' });
     };
     const gridTemplate = (props) => {
-        const src = props.EmployeeID + ".png";
+      const src = 'https://ej2.syncfusion.com/react/demos/src/grid/images/' + props.EmployeeID + ".png";
         return (<tr className="templateRow">
       <td className="photo">
         <img src={src} alt={props.EmployeeID}/>
