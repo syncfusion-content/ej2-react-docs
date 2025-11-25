@@ -4,13 +4,13 @@ import { GanttComponent, Inject, Edit, Selection, ContextMenu, Sort, Resize, Edi
 import { data } from './datasource';
 function App(){
     const taskFields: any = {
-        id: 'TaskId',
+        id: 'TaskID',
         name: 'TaskName',
         startDate: 'StartDate',
         duration: 'Duration',
         progress: 'Progress',
         dependency: 'Predecessor',
-        parentID: 'parentId'
+        parentID: 'ParentID'
     };
     const editSettings: EditSettingsModel = {
         allowAdding: true,
