@@ -1,4 +1,3 @@
-{% raw %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-react-kanban";
@@ -94,4 +93,3 @@ class App extends React.Component<{}, {}>{
   }
 };
 ReactDOM.render(<App />, document.getElementById('kanban'));
-{% endraw %}
