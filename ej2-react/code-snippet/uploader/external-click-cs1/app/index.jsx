@@ -1,4 +1,3 @@
-{% raw %}
 import { select } from '@syncfusion/ej2-base';
 import { UploaderComponent } from '@syncfusion/ej2-react-inputs';
 import * as React from 'react';
@@ -23,4 +22,3 @@ export default class App extends React.Component {
     }
 }
 ReactDOM.render(<App />, document.getElementById('fileupload'));
-{% endraw %}
