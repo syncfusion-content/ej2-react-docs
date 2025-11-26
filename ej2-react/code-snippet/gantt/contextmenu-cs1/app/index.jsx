@@ -4,7 +4,7 @@ import { GanttComponent, Inject, Edit, Selection, ContextMenu, Sort, Resize } fr
 import { data } from './datasource';
 function App(){
     const taskFields = {
-        id: 'TaskId',
+        id: 'TaskID',
         name: 'TaskName',
         startDate: 'StartDate',
         duration: 'Duration',

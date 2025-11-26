@@ -17,7 +17,7 @@ function App () {
  let secondGantt;
    function  toolbarClick(args) {
         if (args.item.text === 'PDF export') {
-            const firstGanttExport = this.firstGantt.pdfExport({}, true);
+            const firstGanttExport = firstGantt.pdfExport({}, true);
             firstGanttExport.then((pdfData) => {
               secondGantt.pdfExport({}, false, pdfData);
             });

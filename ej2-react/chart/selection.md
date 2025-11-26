@@ -98,7 +98,7 @@ To fetch the collection of data under a particular region, you have to set `sele
 * DragX - Allows us to select data with respect to horizontal axis.
 * DragY - Allows us to select data with respect to vertical axis.
 
-The selected data’s are returned as an array collection in the [`dragComplete`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel/#dragcomplete) event.
+The selected data’s are returned as an array collection in the [`dragComplete`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#dragcomplete) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -161,7 +161,7 @@ To select multiple region on the chart, set the `allowMultiSelection` property t
 
 ## Selection Type
 
-You can select multiple points or series, by enabling the [`isMultiSelect`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel/#ismultiselect) property.
+You can select multiple points or series, by enabling the [`isMultiSelect`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#ismultiselect) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -182,7 +182,7 @@ You can select multiple points or series, by enabling the [`isMultiSelect`](http
 
 ## Selection on Load
 
-You can able to select a point or series programmatically on a chart using [`selectedDataIndexes`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel/#selecteddataindexes) property.
+You can able to select a point or series programmatically on a chart using [`selectedDataIndexes`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#selecteddataindexes) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -203,7 +203,9 @@ You can able to select a point or series programmatically on a chart using [`sel
 
 ## Selection through on legend
 
-You can able to select a point or series through on legend using [`toggleVisibility`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel/#toggleVisibility) property. Also, use [`enableHighlight`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettings/#enableHighlight) property for highlighting the series through legend.
+You can able to select a point or series through on legend using [`toggleVisibility`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel#toggleVisibility) property. Also, use [`enableHighlight`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettings#enableHighlight) property for highlighting the series through legend.
+
+>When [`highlightMode`](https://ej2.syncfusion.com/react/documentation/api/chart/highlightmode) is set to 'Series', 'Cluster' or 'Point', legend highlighting will still occur even when [`enableHighlight`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettings#enableHighlight) is set to false. This is because, the [`highlightMode`](https://ej2.syncfusion.com/react/documentation/api/chart/highlightmode) takes precedence, so hovering over legend items will trigger highlighting of the corresponding series regardless of the legend’s [`enableHighlight`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettings#enableHighlight) setting.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -224,7 +226,7 @@ You can able to select a point or series through on legend using [`toggleVisibil
 
 ## Customization for selection
 
-You can apply custom style to selected points or series with [`selectionStyle`](https://ej2.syncfusion.com/react/documentation/api/chart/series/#selectionstyle) property.
+You can apply custom style to selected points or series with [`selectionStyle`](https://ej2.syncfusion.com/react/documentation/api/chart/series#selectionstyle) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -247,4 +249,6 @@ You can apply custom style to selected points or series with [`selectionStyle`](
 
 ## See Also
 
-* [Display selected data for range selection](./how-to/#display-selected-data-for-range-selection)
+* [Display selected data for range selection](./how-to#display-selected-data-for-range-selection)
+
+
