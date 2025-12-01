@@ -22,6 +22,7 @@ To enable mail merge functionality, the Rich Text Editor toolbar is extended wit
 - **Merge Data:** Replaces all placeholders in the editor with actual values from a predefined data source.
 
 ```ts
+{% raw %}
 function App() {
     const items: (string | IToolbarItems)[] = ['Bold', 'Italic', 'Underline', '|', 'Formats', 'Alignments', 'OrderedList', 'UnorderedList', '|',
       'CreateLink', 'Image', 'CreateTable', '|',
@@ -39,6 +40,8 @@ function App() {
 }
 
 export default App;
+
+{% endraw %}
 ```
 
 ## Using DropDownButton for selecting placeholders
@@ -46,6 +49,7 @@ export default App;
 The **DropDownButton** component displays a list of merge fields such as First Name, Last Name, and Company Name. When a user selects an item, the corresponding placeholder (e.g., {{FirstName}}) is inserted at the current cursor position using the `insertHTML` command.
 
 ```ts
+{% raw %}
 function App() {
     let itemsName: { text: string }[] = [
       { text: 'First Name' },
@@ -81,6 +85,8 @@ function App() {
 }
 
 export default App;
+
+{% endraw %}
 ```
 
 ## Populating merge fields using Mention
@@ -88,6 +94,7 @@ export default App;
 The **Mention** component provides an alternative way to insert placeholders by typing the <code>&#123;&#123;</code> character inside the editor. A popup list of merge fields appears, allowing quick selection without using the toolbar.
 
 ```ts
+{% raw %}
 function App() {
     const fieldsData: { text: string; value: string } = { text: 'text', value: 'value' };
     const data: { text: string; value: string }[] = [
@@ -113,6 +120,7 @@ function App() {
 }
 
 export default App;
+{% endraw %}
 ```
 
 ## Replacing placeholders with actual data dynamically
@@ -120,6 +128,7 @@ export default App;
 When the **Merge Data** button is clicked, the editor content is processed to replace all placeholders with actual values from the `placeholderData` object. This is done using a regular expression in the `replacePlaceholders()` function.
 
 ```ts
+{% raw %}
 function App() {
      function onClickHandler(args: any): void {
       if (rteObj) {
@@ -150,6 +159,7 @@ function App() {
     </button>
   );
 }
+{% endraw %}
 ```
 
 `[Class-component]`
