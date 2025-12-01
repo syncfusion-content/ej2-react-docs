@@ -227,4 +227,4 @@ In the following sample, remove the data from the Kanban board using the [delete
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/kanban/kanban-to-schedule-cs2" %}
+{% previewsample "page.domainurl/code-snippet/kanban/kanban-to-schedule-cs4" %}

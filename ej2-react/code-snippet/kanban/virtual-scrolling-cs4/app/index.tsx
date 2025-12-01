@@ -1,29 +1,31 @@
-{% raw %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-react-kanban";
+
 function App() {
-  return (<KanbanComponent id="KanbanVirtualScrolling" enableVirtualization={true} keyField="Status"
-    dataSource={generateKanbanDataVirtualScrollData()} enableTooltip={true}
-    cardSettings={{ headerField: "Id", contentField: "Summary", selectionType: 'Multiple' }}
-    dialogSettings={{
-      fields: [
-        { key: 'Id', text: 'ID', type: 'TextBox' },
-        { key: 'Status', text: 'Status', type: 'DropDown' },
-        { key: 'StoryPoints', text: 'Story Points', type: 'Numeric' },
-        { key: 'Summary', text: 'Summary', type: 'TextArea' }
-      ]
-    }}>
-    <ColumnsDirective>
-      <ColumnDirective headerText="To Do" keyField="Open" />
-      <ColumnDirective headerText="In Progress" keyField="InProgress" />
-      <ColumnDirective headerText="Code Review" keyField="Review" />
-      <ColumnDirective headerText="Done" keyField="Close" />
-    </ColumnsDirective>
-  </KanbanComponent>);
-  function generateKanbanDataVirtualScrollData() {
-    var kanbanData = [];
-    var BUG_TASKS = [
+  return (
+    <KanbanComponent id="KanbanVirtualScrolling" enableVirtualization={true} keyField="Status"
+      dataSource={generateKanbanDataVirtualScrollData()} enableTooltip={true}
+      cardSettings={{ headerField: "Id", contentField: "Summary", selectionType: 'Multiple' }}
+      dialogSettings={{
+        fields: [
+          { key: 'Id', text: 'ID', type: 'TextBox' },
+          { key: 'Status', text: 'Status', type: 'DropDown' },
+          { key: 'StoryPoints', text: 'Story Points', type: 'Numeric' },
+          { key: 'Summary', text: 'Summary', type: 'TextArea' }
+        ]
+      }}>
+      <ColumnsDirective>
+        <ColumnDirective headerText="To Do" keyField="Open" />
+        <ColumnDirective headerText="In Progress" keyField="InProgress" />
+        <ColumnDirective headerText="Code Review" keyField="Review" />
+        <ColumnDirective headerText="Done" keyField="Close" />
+      </ColumnsDirective>
+    </KanbanComponent>
+  );
+  function generateKanbanDataVirtualScrollData(): Record<string, any>[] {
+    const kanbanData: Record<string, any>[] = [];
+    const BUG_TASKS: string[] = [
       'UI component not displaying images in IE browser',
       'Button not responding on hover action',
       'Text overlapping in mobile view',
@@ -35,7 +37,7 @@ function App() {
       'Font size inconsistency',
       'UI element misaligned on scroll'
     ];
-    var FEATURE_TASKS = [
+    const FEATURE_TASKS: string[] = [
       'Implement new user registration flow',
       'Add pagination to search results',
       'Improve accessibility for visually impaired users',
@@ -47,7 +49,7 @@ function App() {
       'Create onboarding tutorial for new users',
       'Implement push notifications for mobile app'
     ];
-    var EPIC_TASKS = [
+    const EPIC_TASKS: string[] = [
       'Revamp UI design for entire application',
       'Develop mobile application for iOS and Android',
       'Create API for integration with external systems',
@@ -59,16 +61,17 @@ function App() {
       'Create analytics dashboard for administrators',
       'Introduce gamification elements to increase user engagement',
     ];
-    var assignee = ['Andrew Fuller', 'Janet Leverling', 'Steven walker', 'Robert King', 'Margaret hamilt', 'Nancy Davloio', 'Margaret Buchanan', 'Laura Bergs', 'Anton Fleet', 'Jack Kathryn', 'Martin Davolio', 'Fleet Jack'];
-    var status = ['Open', 'InProgress', 'Review', 'Testing', 'Close'];
-    var priority = ['Ultra-Critical', 'Critical', 'High', 'Normal', 'Low'];
-    var types = ['Epic', 'Bug', 'Story'];
-    var tagsField = ['Feature', 'Bug', 'Enhancement', 'Documentation', 'Automation', 'Mobile', 'Web', 'iOS', 'Safari', 'Chrome', 'Firefox', 'Manual Testing'];
-    var storyPoints = ['1', '2', '3', '3.5', '4', '4.5', '5', '6', '7.5', '8'];
-    var count = 600000;
-    for (let a = 500000, id = 500000; a < count; a++) {
-      var typeValue = types[Math.floor(Math.random() * types.length)];
-      var summary = typeValue === 'Bug' ? BUG_TASKS[Math.floor(Math.random() * BUG_TASKS.length)] :
+
+    const assignee: string[] = ['Andrew Fuller', 'Janet Leverling', 'Steven walker', 'Robert King', 'Margaret hamilt', 'Nancy Davloio', 'Margaret Buchanan', 'Laura Bergs', 'Anton Fleet', 'Jack Kathryn', 'Martin Davolio', 'Fleet Jack'];
+    const status: string[] = ['Open', 'InProgress', 'Review', 'Testing', 'Close'];
+    const priority: string[] = ['Ultra-Critical', 'Critical', 'High', 'Normal', 'Low'];
+    const types: string[] = ['Epic', 'Bug', 'Story'];
+    const tagsField: string[] = ['Feature', 'Bug', 'Enhancement', 'Documentation', 'Automation', 'Mobile', 'Web', 'iOS', 'Safari', 'Chrome', 'Firefox', 'Manual Testing'];
+    const storyPoints: string[] = ['1', '2', '3', '3.5', '4', '4.5', '5', '6', '7.5', '8'];
+    const count: number = 60000;
+    for (let a: number = 50000, id: number = 50000; a < count; a++) {
+      const typeValue: string = types[Math.floor(Math.random() * types.length)];
+      const summary: string = typeValue === 'Bug' ? BUG_TASKS[Math.floor(Math.random() * BUG_TASKS.length)] :
         typeValue === 'Story' ? FEATURE_TASKS[Math.floor(Math.random() * FEATURE_TASKS.length)] :
           EPIC_TASKS[Math.floor(Math.random() * EPIC_TASKS.length)];
       kanbanData.push({
@@ -88,4 +91,3 @@ function App() {
   }
 }
 ReactDOM.render(<App />, document.getElementById('kanban'));
-{% endraw %}

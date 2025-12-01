@@ -48,7 +48,7 @@ When the Kanban column is scrolled, the virtual scrolling feature dynamically lo
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/kanban/virtual-scrolling-cs2" %}
+{% previewsample "page.domainurl/code-snippet/kanban/virtual-scrolling-cs4" %}
 
 ### Configure the remote data service
 
