@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Syncfusion AI Coding Assistant Prompt Library | Syncfusion
-description: Explore the Syncfusion AI Coding Assistant Prompt Library to enhance React development productivity with intelligent code generation, configuration examples, and contextual guidance.
+description: Explore the AI Coding Assistant Prompt Library to enhance React development productivity with code generation, configuration examples, and contextual guidance.
 control: Syncfusion AI Coding Assistant Prompt Library
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Prompt Library
+# AI Coding Assistant Prompt Library
 
 Speed up your React projects using these ready-made prompts for popular Syncfusion components. Each prompt is short, easy to understand, and focused on real tasks—like quick setups, tweaks, and fixes.
 
@@ -26,383 +26,258 @@ Before starting, make sure your MCP Server is set up and running.
 
 ### Grid
 
-The Syncfusion React Grid delivers flexible, performant data tables for handling extensive records with built-in interactivity.
+The Syncfusion React Grid delivers flexible, performance data tables for handling extensive records with built-in interactivity.
 
-Paging and Sorting
-```
+{% promptcards %}
+{% promptcard Paging and Sorting %}
 #SyncfusionReactAssistant How do I enable paging and sorting in the Syncfusion React Grid?
-```
-
-Grouping and Filtering
-```
+{% endpromptcard %}
+{% promptcard Grouping and Filtering %}
 #SyncfusionReactAssistant Show me an example of grouping and filtering data in the Grid component.
-```
-
-CRUD Operations
-```
+{% endpromptcard %}
+{% promptcard CRUD Operations %}
 #SyncfusionReactAssistant What’s the code to implement full CRUD operations in Syncfusion React Grid?
-```
-
-Grid Export to PDF and Excel
-```
+{% endpromptcard %}
+{% promptcard Grid Export to PDF and Excel %}
 #SyncfusionReactAssistant How can I add PDF and Excel export options to the Grid toolbar?
-```
-
-Virtual Scrolling
-```
+{% endpromptcard %}
+{% promptcard Virtual Scrolling %}
 #SyncfusionReactAssistant How do I configure virtual scrolling for large datasets in the Grid?
-```
-
-Multicolumn Grid Setup
-```
+{% endpromptcard %}
+{% promptcard Multicolumn Grid Setup %}
 #SyncfusionReactAssistant Create a multicolumn Grid to display product details with sorting and filtering.
-```
-
-Chat Integration
-```
+{% endpromptcard %}
+{% promptcard Chat Integration %}
 #SyncfusionReactAssistant How can I integrate a chat widget inside each row of the Syncfusion Grid?
-```
-
-Advanced Grid Features
-```
-#SyncfusionReactAssistant
-Show me a Grid with paging, sorting, grouping, filtering, and virtual scrolling
-```
-
-Troubleshooting Grid Export
-```
+{% endpromptcard %}
+{% promptcard Advanced Grid Features %}
+#SyncfusionReactAssistant Show me a Grid with paging, sorting, grouping, filtering, and virtual scrolling
+{% endpromptcard %}
+{% promptcard Troubleshooting Grid Export %}
 #SyncfusionReactAssistant Why isn’t my Grid exporting to PDF and Excel correctly?
-```
-
-Inline Editing
-```
+{% endpromptcard %}
+{% promptcard Inline Editing %}
 #SyncfusionReactAssistant How do I enable inline editing for CRUD operations in the Grid?
-```
-
-Custom Toolbar
-```
+{% endpromptcard %}
+{% promptcard Custom Toolbar %}
 #SyncfusionReactAssistant Add custom toolbar buttons for PDF and Excel export in the Grid.
-```
-
-Dynamic Column Configuration
-```
+{% endpromptcard %}
+{% promptcard Dynamic Column Configuration %}
 #SyncfusionReactAssistant How can I dynamically configure multicolumn layout with filtering and sorting?
-```
+{% endpromptcard %}
+{% endpromptcards %}
 
 ### Chart
 
 The Syncfusion React Chart suite offers versatile visualization tools across various series types for insightful data representation.
 
-Local and Remote Data
-```
+{% promptcards %}
+{% promptcard Local and Remote Data %}
 #SyncfusionReactAssistant How do I bind both local and remote data sources to a Syncfusion Chart?
-```
-
-Range Selection
-```
+{% endpromptcard %}
+{% promptcard Range Selection %}
 #SyncfusionReactAssistant Show me how to enable range selection in a Syncfusion React Chart.
-```
-
-Chart Types Overview
-```
+{% endpromptcard %}
+{% promptcard Chart Types Overview %}
 #SyncfusionReactAssistant What chart types are available in Syncfusion React Chart and how to configure them?
-```
-
-Markers and Data Labels
-```
+{% endpromptcard %}
+{% promptcard Markers and Data Labels %}
 #SyncfusionReactAssistant How can I display markers and data labels on a line chart?
-```
-
-Annotations
-```
+{% endpromptcard %}
+{% promptcard Annotations %}
 #SyncfusionReactAssistant Add custom annotations to highlight specific data points in a chart.
-```
-
-Chart Export to Image or PDF
-```
+{% endpromptcard %}
+{% promptcard Chart Export to Image or PDF %}
 #SyncfusionReactAssistant How do I export a Syncfusion Chart to PDF or image format?
-```
-
-Print Support
-```
+{% endpromptcard %}
+{% promptcard Print Support %}
 #SyncfusionReactAssistant Enable print functionality for a Syncfusion React Chart component.
-```
-
-Dynamic Chart with Remote Data
-```
+{% endpromptcard %}
+{% promptcard Dynamic Chart with Remote Data %}
 #SyncfusionReactAssistant Create a chart that updates dynamically with remote API data.
-```
-
-Multiple Series Types
-```
+{% endpromptcard %}
+{% promptcard Multiple Series Types %}
 #SyncfusionReactAssistant How do I combine bar and line chart types in a single Syncfusion Chart?
-```
-
-Troubleshooting Chart Data Binding
-```
+{% endpromptcard %}
+{% promptcard Troubleshooting Chart Data Binding %}
 #SyncfusionReactAssistant Why isn’t my remote data showing up in the Syncfusion Chart?
-```
-
-Interactive Range Selector
-```
+{% endpromptcard %}
+{% promptcard Interactive Range Selector %}
 #SyncfusionReactAssistant Configure a range selector for zooming and filtering in a time-series chart.
-```
-
-Custom Markers and Labels
-```
+{% endpromptcard %}
+{% promptcard Custom Markers and Labels %}
 #SyncfusionReactAssistant Show me an example of customizing chart markers and data label styles.
-```
+{% endpromptcard %}
+{% endpromptcards %}
 
 ### Schedule
 
 The Syncfusion React Schedule component helps manage events, resources, and timelines with powerful views and customization.
 
-Module Injection
-```
+{% promptcards %}
+{% promptcard Module Injection %}
 #SyncfusionReactAssistant How do I inject required modules into the Syncfusion React Schedule component?
-```
-
-Remote Data Binding
-```
+{% endpromptcard %}
+{% promptcard Remote Data Binding %}
 #SyncfusionReactAssistant Bind the Schedule component to a remote API for dynamic event loading.
-```
-
-CRUD Actions
-```
+{% endpromptcard %}
+{% promptcard CRUD Actions %}
 #SyncfusionReactAssistant Show me how to implement full CRUD operations in the Schedule component.
-```
-
-Virtual Scrolling
-```
+{% endpromptcard %}
+{% promptcard Virtual Scrolling %}
 #SyncfusionReactAssistant Enable virtual scrolling for large event datasets in the Schedule view.
-```
-
-Timezone Support
-```
+{% endpromptcard %}
+{% promptcard Timezone Support %}
 #SyncfusionReactAssistant How can I configure timezone support in the Syncfusion React Schedule?
-```
-
-Export Schedule to PDF or Excel
-```
+{% endpromptcard %}
+{% promptcard Export Schedule to PDF or Excel %}
 #SyncfusionReactAssistant Add export functionality to download the Schedule view as PDF or Excel.
-```
-
-Timeline Header Rows
-```
+{% endpromptcard %}
+{% promptcard Timeline Header Rows %}
 #SyncfusionReactAssistant How do I customize timeline header rows in the Schedule component?
-```
-
-Multiple Module Injection
-```
+{% endpromptcard %}
+{% promptcard Multiple Module Injection %}
 #SyncfusionReactAssistant Inject multiple modules like Day, Week, and Timeline views into Schedule.
-```
-
-Troubleshooting Schedule CRUD
-```
+{% endpromptcard %}
+{% promptcard Troubleshooting Schedule CRUD %}
 #SyncfusionReactAssistant Why aren’t my CRUD actions working correctly in the Schedule component?
-```
-
-Local and Remote Data
-```
+{% endpromptcard %}
+{% promptcard Local and Remote Data %}
 #SyncfusionReactAssistant Bind both local and remote event data to the Schedule component.
-```
-
-Export and Timezone
-```
+{% endpromptcard %}
+{% promptcard Export and Timezone %}
 #SyncfusionReactAssistant Configure timezone-aware exporting for the Schedule view.
-```
-
-Advanced Schedule Setup
-```
+{% endpromptcard %}
+{% promptcard Advanced Schedule Setup %}
 #SyncfusionReactAssistant Create a Schedule with module injection, CRUD, virtual scrolling, and exporting.
-```
+{% endpromptcard %}
+{% endpromptcards %}
 
 ### Kanban
 
 The Syncfusion React Kanban organizes tasks in columns with drag-and-drop, swimlanes, and templating for agile workflows.
 
-Data Binding
-```
+{% promptcards %}
+{% promptcard Data Binding %}
 #SyncfusionReactAssistant How do I bind local or remote data to the Syncfusion React Kanban board?
-```
-
-Sorting
-```
+{% endpromptcard %}
+{% promptcard Sorting %}
 #SyncfusionReactAssistant Enable sorting of cards within columns in the Kanban component.
-```
-
-Swimlane View
-```
+{% endpromptcard %}
+{% promptcard Swimlane View %}
 #SyncfusionReactAssistant Show me how to group Kanban cards using swimlane headers.
-```
-
-Kanban Card Editing
-```
+{% endpromptcard %}
+{% promptcard Kanban Card Editing %}
 #SyncfusionReactAssistant How can I enable inline editing of Kanban cards?
-```
-
-Virtualization
-```
+{% endpromptcard %}
+{% promptcard Virtualization %}
 #SyncfusionReactAssistant Configure virtualization for performance with large Kanban datasets.
-```
-
-Localization
-```
+{% endpromptcard %}
+{% promptcard Localization %}
 #SyncfusionReactAssistant How do I localize labels and messages in the Kanban component?
-```
-
-Drag and Drop
-```
+{% endpromptcard %}
+{% promptcard Drag and Drop %}
 #SyncfusionReactAssistant Enable drag-and-drop functionality for moving cards between columns.
-```
-
-Sorting and Swimlane
-```
+{% endpromptcard %}
+{% promptcard Sorting and Swimlane %}
 #SyncfusionReactAssistant Create a Kanban board with swimlane grouping and sortable cards.
-```
-
-Editable Cards and Localization
-```
+{% endpromptcard %}
+{% promptcard Editable Cards and Localization %}
 #SyncfusionReactAssistant Show me how to edit cards and apply localization in Kanban.
-```
-
-Troubleshooting Kanban Drag and Drop
-```
+{% endpromptcard %}
+{% promptcard Troubleshooting Kanban Drag and Drop %}
 #SyncfusionReactAssistant Why isn’t drag-and-drop working correctly in my Kanban board?
-```
-
-Remote Data and Virtualization
-```
+{% endpromptcard %}
+{% promptcard Remote Data and Virtualization %}
 #SyncfusionReactAssistant Bind remote data to Kanban and enable virtualization for performance.
-```
-
-Advanced Kanban Setup
-```
+{% endpromptcard %}
+{% promptcard Advanced Kanban Setup %}
 #SyncfusionReactAssistant Create a Kanban board with data binding, swimlane, card editing, and drag-and-drop.
-```
+{% endpromptcard %}
+{% endpromptcards %}
 
 ### RichTextEditor
 
 The Syncfusion React RichTextEditor offers a modern WYSIWYG editor with extensive formatting, media, and integration features.
 
-Toolbar Configuration
-```
+{% promptcards %}
+{% promptcard Toolbar Configuration %}
 #SyncfusionReactAssistant How do I customize the toolbar options in the Syncfusion RichTextEditor?
-```
-
-Link Manipulation
-```
+{% endpromptcard %}
+{% promptcard Link Manipulation %}
 #SyncfusionReactAssistant Show me how to add, edit, and remove hyperlinks in RichTextEditor content.
-```
-
-Iframe Mode
-```
+{% endpromptcard %}
+{% promptcard Iframe Mode %}
 #SyncfusionReactAssistant How can I render the RichTextEditor inside an iframe for isolated styling?
-```
-
-Module Injection
-```
+{% endpromptcard %}
+{% promptcard Module Injection %}
 #SyncfusionReactAssistant Inject feature modules like toolbar, link, and image into RichTextEditor.
-```
-
-Undo and Redo
-```
+{% endpromptcard %}
+{% promptcard Undo and Redo %}
 #SyncfusionReactAssistant Enable undo and redo functionality in the RichTextEditor toolbar.
-```
-
-Forms Integration
-```
+{% endpromptcard %}
+{% promptcard Forms Integration %}
 #SyncfusionReactAssistant How do I integrate a React form and validate input?
-```
-
-Content Import and Export
-```
+{% endpromptcard %}
+{% promptcard Content Import and Export %}
 #SyncfusionReactAssistant Export RichTextEditor content to HTML or import existing HTML content.
-```
-
-Advanced Toolbar
-```
+{% endpromptcard %}
+{% promptcard Advanced Toolbar %}
 #SyncfusionReactAssistant Create a RichTextEditor with toolbar options for formatting, links, and undo/redo.
-```
-
-Iframe and Forms Support
-```
+{% endpromptcard %}
+{% promptcard Iframe and Forms Support %}
 #SyncfusionReactAssistant Use RichTextEditor in iframe mode and bind it to a form for submission.
-```
-
-Undo/Redo and Export
-```
+{% endpromptcard %}
+{% promptcard Undo/Redo and Export %}
 #SyncfusionReactAssistant Enable undo/redo and export content to HTML in RichTextEditor.
-```
-
-Module Injection and Link Editing
-```
+{% endpromptcard %}
+{% promptcard Module Injection and Link Editing %}
 #SyncfusionReactAssistant Inject toolbar and link modules to enable rich link editing in the editor.
-```
+{% endpromptcard %}
+{% endpromptcards %}
 
 ### Calendar
 
 The Syncfusion React Calendar supports flexible date selection, localization, and custom rendering.
 
-Date Range Selection
-```
+{% promptcards %}
+{% promptcard Date Range Selection %}
 #SyncfusionReactAssistant How do I enable date range selection in the Syncfusion React Calendar?
-```
-
-Globalization Support
-```
+{% endpromptcard %}
+{% promptcard Globalization Support %}
 #SyncfusionReactAssistant Configure the Calendar to support multiple cultures and languages.
-```
-
-Multi-Date Selection
-```
+{% endpromptcard %}
+{% promptcard Multi-Date Selection %}
 #SyncfusionReactAssistant Show me how to allow users to select multiple dates in the Calendar.
-```
-
-Islamic Calendar Support
-```
+{% endpromptcard %}
+{% promptcard Islamic Calendar Support %}
 #SyncfusionReactAssistant How can I switch the Calendar to use the Islamic calendar system?
-```
-
-Skip Months Feature
-```
+{% endpromptcard %}
+{% promptcard Skip Months Feature %}
 #SyncfusionReactAssistant Enable skipping months in the Calendar navigation for faster browsing.
-```
-
-Calendar Showing Other Month Days
-```
+{% endpromptcard %}
+{% promptcard Calendar Showing Other Month Days %}
 #SyncfusionReactAssistant How do I show days from adjacent months in the current Calendar view?
-```
-
-Custom Day Cell Format
-```
+{% endpromptcard %}
+{% promptcard Custom Day Cell Format %}
 #SyncfusionReactAssistant Customize the day cell format in the Calendar to show short weekday names.
-```
-
-Calendar Highlighting Weekends
-```
+{% endpromptcard %}
+{% promptcard Calendar Highlighting Weekends %}
 #SyncfusionReactAssistant Highlight weekends in the Calendar with a different background color.
-```
-
-Globalization and Islamic Calendar
-```
+{% endpromptcard %}
+{% promptcard Globalization and Islamic Calendar %}
 #SyncfusionReactAssistant Configure the Calendar for Arabic culture using Islamic calendar and localization.
-```
-
-Multi-Selection and Range
-```
+{% endpromptcard %}
+{% promptcard Multi-Selection and Range %}
 #SyncfusionReactAssistant Enable both multi-date selection and range selection in the Calendar.
-```
-
-Troubleshooting Calendar Date Range
-```
+{% endpromptcard %}
+{% promptcard Troubleshooting Calendar Date Range %}
 #SyncfusionReactAssistant Why isn’t my Calendar selecting the correct date range?
-```
-
-Advanced Calendar Setup
-```
+{% endpromptcard %}
+{% promptcard Advanced Calendar Setup %}
 #SyncfusionReactAssistant Create a Calendar with date range, multi-selection, globalization, and weekend highlights.
-```
+{% endpromptcard %}
+{% endpromptcards %}
 
 ## See also
 
