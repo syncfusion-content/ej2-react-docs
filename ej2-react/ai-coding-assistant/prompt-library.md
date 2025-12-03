@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# AI Coding Assistant Prompt Library
+# Prompt Library - AI Coding Assistant
 
 Speed up your React projects using these ready-made prompts for popular Syncfusion components. Each prompt is short, easy to understand, and focused on real tasks—like quick setups, tweaks, and fixes.
 
@@ -26,7 +26,7 @@ Before starting, make sure your MCP Server is set up and running.
 
 ### Grid
 
-The Syncfusion React Grid delivers flexible, performance data tables for handling extensive records with built-in interactivity.
+The Syncfusion React Data Grid delivers fast, flexible tables for large datasets with built-in interactivity.
 
 {% promptcards %}
 {% promptcard Paging and Sorting %}
