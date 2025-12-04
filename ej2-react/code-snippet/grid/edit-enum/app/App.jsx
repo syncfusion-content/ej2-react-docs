@@ -7,6 +7,10 @@ import { data } from './datasource';
 function App() {
   let details = data;
   let orderData;
+  const Feedback = {
+    Positive: 0,
+    Negative: 1
+  };
   const editOptions = { allowEditing: true, allowAdding: true, allowDeleting: true };
   const toolbarOptions = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
   const orderIDRules = { required: true, number: true };
