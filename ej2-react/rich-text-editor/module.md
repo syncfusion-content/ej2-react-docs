@@ -74,7 +74,9 @@ The following example demonstrates how to import and inject modules.
 | `SlashMenu` | Injecting this module allows users to apply formats, open dialogs by typing "/" in the Rich Text Editor. |
 | `ImportExport` | Injecting this module allows users to import content from Word documents into the Rich Text Editor and export the Rich Text Editor's content into Word and PDF files |
 | `CodeBlock` | Injecting this module allows users to format the selected text as inline code, highlighting code snippets within the text in the Rich Text Editor. |
+| `AutoFormat` | Injecting this module automatically converts Markdown syntax into HTML as you type, supporting inline and block-level formatting for a seamless editing experience. |
 | `Audio` | Injecting this module allows users to insert and manage audios in the Rich Text Editor. |
 | `Video` | Injecting this module allows users to insert and manage videos in the Rich Text Editor. |
+| `ClipboardCleanup` | Injecting this module allows to automatically clean clipboard content during copy and cut—removing unwanted inline styles while preserving structure. |
 
 These modules should be injected using the `<Inject>` component inside the Rich Text Editor component.
