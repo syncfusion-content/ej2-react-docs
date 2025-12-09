@@ -22,12 +22,13 @@ The steps below help you to create **Syncfusion<sup style="font-size:70%">&reg;<
 
     ![CreateProjectPalette](images/CreateProjectPalette.png)
 
-2. Select **Syncfusion<sup style="font-size:70%">&reg;</sup> Web Template Studio: Launch** and then press enter, Template Studio wizard for configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> Web app will appear. Provide the require Project Name and Path to create the new Syncfusion<sup style="font-size:70%">&reg;</sup> Web application along with any one of the Framework (React, Angular, and Vue).
+2. Select **Syncfusion<sup style="font-size:70%">&reg;</sup> Web Template Studio: Launch** and then press enter, Template Studio wizard for configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> Web app will appear. Provide the require Project Name and Path to create the new Syncfusion<sup style="font-size:70%">&reg;</sup> Web application along with any one of the Framework (React, Pure React, Angular, and Vue).
 
     ![ProjectLocation](images/ProjectLocationName.png)
 
 3. Click either **Next** or **Framework** tab, and the Framework types will be appears. Choose any one of the Framework:
    * React
+   * Pure React
    * Angular
    * Vue
 
