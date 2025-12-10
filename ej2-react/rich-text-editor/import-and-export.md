@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 The Rich Text Editor provides functionality to import content directly from Microsoft Word documents, preserving the original formatting and structure. This feature ensures a smooth transition of content from Word to the editor, maintaining elements such as headings, lists, tables, and text styles.
 
-To integrate an `ImportWord` option into the Rich Text Editor toolbar, you can add it as a custom toolbar  [toolbarSettings.items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items) using the items property in toolbarSettings.
+To integrate an `ImportWord` option into the Rich Text Editor toolbar, you can add it as a custom toolbar  [toolbarSettings.items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings#items) using the items property in toolbarSettings.
 
 The following example shows how to configure `ImportWord`:
 
@@ -44,7 +44,101 @@ The following example shows how to configure `ImportWord`:
 
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/import-cs2" %}
 
-Here’s how to handle the server-side action for importing content from Word.
+## Secure importing with authentication
+
+The Rich Text Editor provides functionality to import Word documents with authentication for secure importing.
+
+The [wordImporting](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/index-default#wordimporting) event provides [UploadingEventArgs](https://ej2.syncfusion.com/react/documentation/api/uploader/uploadingeventargs) for secure Word file import. Use `currentRequest` to add authentication headers and `customFormData` to include extra parameters in the POST body along with the uploaded file. On the server, read headers and form data from the request to validate and process the import securely.
+
+`[Class-component]`
+
+```html
+import * as React from 'react';
+import { RichTextEditorComponent, Toolbar, Inject, Image, Link, HtmlEditor, QuickToolbar, Table, PasteCleanup, ImportExport, UploadingEventArgs } from '@syncfusion/ej2-react-richtexteditor';
+import { ToolbarSettingsModel, ImportWordModel } from '@syncfusion/ej2-react-richtexteditor';
+
+class App extends React.Component<{},{}> {
+    private hostUrl: string = 'https://services.syncfusion.com/react/production/';
+    private items: any = ['ImportWord']
+    private insertImageSettings: any = {
+        saveUrl: this.hostUrl + 'api/RichTextEditor/SaveFile',
+        removeUrl: this.hostUrl + 'api/RichTextEditor/DeleteFile',
+        path: this.hostUrl + 'RichTextEditor/'
+    }
+    private toolbarSettings: ToolbarSettingsModel = {
+        items: this.items
+    };
+    private importWord: ImportWordModel = {
+        serviceUrl: this.hostUrl + 'api/RichTextEditor/ImportFromWord',
+    };
+    private onWordImport = (args: UploadingEventArgs) => {
+    let accessToken = "Authorization_token";
+    // adding authorization header
+    args.currentRequest.setRequestHeader('Authorization', accessToken)
+    // adding custom form Data
+    args.customFormData = [{'userId': '1234'}];
+  };
+    
+    render() {
+        return (
+            <div className='control-pane'>
+                <div className='control-section' id="rteTools">
+                    <div className='rte-control-section'>
+                        <RichTextEditorComponent id="importDocument" importWord={this.importWord} toolbarSettings={this.toolbarSettings} insertImageSettings={this.insertImageSettings} enableXhtml={true} wordImporting={this.onWordImport}>
+                            <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar, Table, PasteCleanup, ImportExport]} />
+                        </RichTextEditorComponent>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
+export default App;
+```
+
+`[Functional-component]`
+
+```html
+import * as React from 'react';
+import { RichTextEditorComponent, Toolbar, Inject, Image, Link, HtmlEditor, QuickToolbar, Table, PasteCleanup, ImportExport,UploadingEventArgs } from '@syncfusion/ej2-react-richtexteditor';
+import { ToolbarSettingsModel, ImportWordModel } from '@syncfusion/ej2-react-richtexteditor';
+
+function App() {
+    const hostUrl: string = 'https://services.syncfusion.com/react/production/';
+    const items: any = ['ImportWord']
+    const insertImageSettings: any = {
+        saveUrl: hostUrl + 'api/RichTextEditor/SaveFile',
+        removeUrl: hostUrl + 'api/RichTextEditor/DeleteFile',
+        path: hostUrl + 'RichTextEditor/'
+    }
+    const toolbarSettings: ToolbarSettingsModel = {
+        items: items
+    };
+    const importWord: ImportWordModel = {
+        serviceUrl: hostUrl + 'api/RichTextEditor/ImportFromWord',
+    };
+    const onWordImport=(args: UploadingEventArgs) =>{
+      let accessToken = "Authorization_token";
+      // adding authorization header
+      args.currentRequest.setRequestHeader('Authorization', accessToken)
+      // adding custom form Data
+      args.customFormData = [{'userId': '1234'}];
+    };
+    return (
+        <div className='control-pane'>
+            <div className='control-section' id="rteTools">
+                <div className='rte-control-section'>
+                    <RichTextEditorComponent id="importDocument" importWord={importWord} toolbarSettings={toolbarSettings} insertImageSettings={insertImageSettings} enableXhtml={true} wordImporting={onWordImport}>
+                        <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar, Table, PasteCleanup, ImportExport]} />
+                    </RichTextEditorComponent>
+                </div>
+            </div>
+        </div>
+    );
+}
+export default App;
+```
+Here’s how to handle the server-side action for importing content from Word with authentication.
 
 ```csharp
 
@@ -58,6 +152,10 @@ public class RichTextEditorController : Controller
         [Route("ImportFromWord")]
         public IActionResult ImportFromWord(IList<IFormFile> UploadFiles)
         {
+            // Read headers (e.g., Authorization)
+            var authorization = Request.Headers["Authorization"].ToString();
+            // Read custom form data (from args.customFormData)
+            var formData = Request.Form("userId").ToString();
             string HtmlString = string.Empty;
             if (UploadFiles != null)
             {
@@ -114,7 +212,7 @@ public class RichTextEditorController : Controller
 
 The Rich Text Editor's export functionality allows users to convert their edited content into PDF or Word documents with a single click, preserving all text styles, images, tables, and other formatting elements.
 
-You can add `ExportWord` and `ExportPdf` tools to the Rich Text Editor toolbar using the toolbarSettings  [toolbarSettings.items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items) property.
+You can add `ExportWord` and `ExportPdf` tools to the Rich Text Editor toolbar using the toolbarSettings  [toolbarSettings.items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings#items) property.
 
 The following example demonstrates how to configure the `ExportWord` and `ExportPdf` tools in the Rich Text Editor, facilitating the export of content into Word or PDF documents:
 
@@ -144,7 +242,157 @@ The following example demonstrates how to configure the `ExportWord` and `Export
 
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/export-cs2" %}
 
-Here’s how to handle the server-side action for exporting content to PDF and Microsoft Word
+## Secure exporting with authentication
+
+The Rich Text Editor provides functionality to export Word or PDF documents with authentication for secure exporting.
+
+The [documentExporting](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/index-default#documentexporting) event provides `ExportingEventArgs` for secure export of Word or PDF files. Use `exportType` to identify the format, `currentRequest` to add authentication headers, and `customFormData` to send extra parameters in the POST body. On the server, read headers and custom data to validate and process the export securely.
+
+The following example demonstrates how to configure `documentExporting` for secure exporting:
+
+`[Class-component]`
+
+```html
+import * as React from 'react';
+import { RichTextEditorComponent, Toolbar, Inject, Image, Link, HtmlEditor, QuickToolbar, Table, PasteCleanup, ImportExport, UploadingEventArgs } from '@syncfusion/ej2-react-richtexteditor';
+import { ToolbarSettingsModel, ExportWordModel, ExportPdfModel } from '@syncfusion/ej2-react-richtexteditor';
+
+class App extends React.Component<{},{}> {
+
+  private hostUrl: string = 'https://services.syncfusion.com/react/production/';
+
+  // Rich Text Editor items list
+  private items: any =  ['ExportWord', 'ExportPdf'];
+
+  private insertImageSettings: any = {
+      saveUrl: this.hostUrl + 'api/RichTextEditor/SaveFile',
+      removeUrl: this.hostUrl + 'api/RichTextEditor/DeleteFile',
+      path: this.hostUrl + 'RichTextEditor/'
+  }
+
+  //Rich Text Editor ToolbarSettings
+  private toolbarSettings: ToolbarSettingsModel = {
+      items: this.items
+  };
+
+  private exportWord: ExportWordModel = {
+      serviceUrl: this.hostUrl + 'api/RichTextEditor/ExportToDocx',
+      fileName: 'RichTextEditor.docx',
+      stylesheet: `
+      .e-rte-content {
+          font-size: 1em;
+          font-weight: 400;
+          margin: 0;
+      }
+  `
+  };
+
+  private exportPdf: ExportPdfModel = {
+      serviceUrl: 'https://ej2services.syncfusion.com/react/development/api/RichTextEditor/ExportToPdf',
+      fileName: 'RichTextEditor.pdf',
+      stylesheet: `
+      .e-rte-content{
+          font-size: 1em;
+          font-weight: 400;
+          margin: 0;
+      }
+  `
+  };
+
+  public onDocumentExporting = (args: ExportingEventArgs) => {
+      const accessToken = "Authorization_token";
+      // Specify export type (e.g., 'Pdf' or 'Word')
+      args.exportType = 'Pdf';
+      // Add authentication header
+      args.currentRequest = [{ Authorization: accessToken }];
+      // Add custom form data
+      args.customFormData = [{ userId: '1234' }, { exportMode: 'secure' }];
+  };
+
+    render() {
+        return (
+            <div className='control-pane'>
+                <div className='control-section' id="rteTools">
+                    <div className='rte-control-section'>
+                        <RichTextEditorComponent id="exportDocument" exportPdf={this.exportPdf} exportWord={this.exportWord} toolbarSettings={this.toolbarSettings} enableXhtml={true} insertImageSettings={this.insertImageSettings} documentExporting={this.onDocumentExporting}>
+                            <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar, Table, PasteCleanup, ImportExport]} />
+                        </RichTextEditorComponent>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
+export default App;
+```
+`[Functional-component]`
+
+```html
+import * as React from 'react';
+import { RichTextEditorComponent, Toolbar, Inject, Image, Link, HtmlEditor, QuickToolbar, Table, PasteCleanup, ImportExport, UploadingEventArgs } from '@syncfusion/ej2-react-richtexteditor';
+import { ToolbarSettingsModel, ExportWordModel, ExportPdfModel } from '@syncfusion/ej2-react-richtexteditor';
+
+function App() {
+    const hostUrl: string = 'https://services.syncfusion.com/react/production/';
+    // Rich Text Editor items list
+    const items: any = ['ExportWord', 'ExportPdf'];
+    const insertImageSettings: any = {
+        saveUrl: hostUrl + 'api/RichTextEditor/SaveFile',
+        removeUrl: hostUrl + 'api/RichTextEditor/DeleteFile',
+        path: hostUrl + 'RichTextEditor/'
+    }
+
+    //Rich Text Editor ToolbarSettings
+    const toolbarSettings: ToolbarSettingsModel = {
+        items: items
+    };
+
+    const exportWord: ExportWordModel = {
+        serviceUrl: hostUrl + 'api/RichTextEditor/ExportToDocx',
+        fileName: 'RichTextEditor.docx',
+        stylesheet: `
+        .e-rte-content {
+            font-size: 1em;
+            font-weight: 400;
+            margin: 0;
+        }`
+    };
+
+    const exportPdf: ExportPdfModel = {
+        serviceUrl: 'https://ej2services.syncfusion.com/react/development/api/RichTextEditor/ExportToPdf',
+        fileName: 'RichTextEditor.pdf',
+        stylesheet: `
+        .e-rte-content{
+            font-size: 1em;
+            font-weight: 400;
+            margin: 0;
+        }`
+    };
+    const onDocumentExporting=(args: ExportingEventArgs) =>{
+      const accessToken = "Authorization_token";
+      // Specify export type (e.g., 'Pdf' or 'Word')
+      args.exportType = 'Pdf';
+      // Add authentication header
+      args.currentRequest = [{ Authorization: accessToken }];
+      // Add custom form data
+      args.customFormData = [{ userId: '1234' }, { exportMode: 'secure' }];
+    };
+
+    return (
+        <div className='control-pane'>
+            <div className='control-section' id="rteTools">
+                <div className='rte-control-section'>
+                    <RichTextEditorComponent id="exportDocument" exportPdf={exportPdf} exportWord={exportWord}  toolbarSettings={toolbarSettings} enableXhtml={true} insertImageSettings={insertImageSettings} documentExporting={onDocumentExporting}>
+                        <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar, Table, PasteCleanup, ImportExport]} />
+                    </RichTextEditorComponent>
+                </div>
+            </div>
+        </div>
+    );
+}
+export default App;
+```
+Here’s how to handle the server-side action for exporting content to PDF and Microsoft Word with authentication
 
  ```csharp
 
@@ -158,6 +406,10 @@ public class RichTextEditorController : Controller
         [Route("ExportToPdf")]
         public ActionResult ExportToPdf([FromBody] ExportParam args)
         {
+            // Read headers (e.g., Authorization)
+            var authorization = Request.Headers["Authorization"].ToString();
+            // Read custom form data (from args.customFormData)
+            var formData = args.CustomFormData;
             string htmlString = args.html;
             if (htmlString == null && htmlString == "")
             {
@@ -232,6 +484,8 @@ public class RichTextEditorController : Controller
         public class ExportParam
         {
             public string html { get; set; }
+            // For receiving custom form data
+            public List<Dictionary<string,string>> CustomFormData { get; set; }
         }
     }    
 
