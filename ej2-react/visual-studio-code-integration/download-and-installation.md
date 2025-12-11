@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Download and installation in React Visual studio code integration component | Syncfusion
+title: Download and installation in Visual studio code | Syncfusion
 description: Learn here all about Download and installation in Syncfusion React Visual studio code integration component of Syncfusion Essential JS 2 and more.
 control: Download and installation 
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Download and Installation
+# Download and Installation Guide
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> publishes its Visual Studio Code extension in the [Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Web-VSCode-Extensions). You can install the extension directly within Visual Studio Code or download it from the marketplace and then install it.
 
