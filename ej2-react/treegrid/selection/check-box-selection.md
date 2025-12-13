@@ -64,3 +64,71 @@ The TreeGrid supports conditional row selection through the [isRowSelectable](ht
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/treegrid/selection-cs10" %}
+
+In this sample, we have disabled checkbox selection for rows where the "Progress" column has the value **"Completed"**.
+
+## Interactive Checkbox Selection via showCheckbox
+
+1. ### Enable Checkboxes in Columns
+
+   To render checkboxes in existing column, you need to set [`columns.showCheckbox`] property as `true`.
+
+   It is also possible to select the rows hierarchically using checkboxes in TreeGrid by enabling [`autoCheckHierarchy`] property. When we check on any parent record checkbox then the child record checkboxes will get checked.
+
+   {% if page.publishingplatform == "typescript" %}
+
+    {% tabs %}
+    {% highlight ts tabtitle="index.ts" %}
+    {% include code-snippet/treegrid/columns-cs10/index.ts %}
+    {% endhighlight %}
+    {% highlight html tabtitle="index.html" %}
+    {% include code-snippet/treegrid/columns-cs10/index.html %}
+    {% endhighlight %}
+    {% endtabs %}
+
+    {% previewsample"page.domainurl/code-snippet/treegrid/columns-cs10" %}
+
+    {% elsif page.publishingplatform == "javascript" %}
+
+    {% tabs %}
+    {% highlight js tabtitle="index.js" %}
+    {% include code-snippet/treegrid/columns-cs10/index.js %}
+    {% endhighlight %}
+    {% highlight html tabtitle="index.html" %}
+    {% include code-snippet/treegrid/columns-cs10/index.html %}
+    {% endhighlight %}
+    {% endtabs %}
+
+    {% previewsample "page.domainurl/code-snippet/treegrid/columns-cs10" %}
+    {% endif %}
+
+2. ### Column cell checkbox support for checkbox selection in virtualization
+
+    The TreeGrid component is designed to efficiently manage large datasets while offering flexible row selection interactions. The [`showCheckbox`](../../api/treegrid/columnmodel#showcheckbox) property displays checkboxes in column cells, allowing rows to be selected or deselected through direct interaction, and this functionality is enabled by setting the property to **"true"**. The [`enableVirtualization`](../../api/treegrid/#enablevirtualization) property improves performance by rendering only visible rows and columns during scrolling, and this feature is activated by setting the property to "**true**". When both properties are applied together, the Data Grid component supports checkbox‑based row selection seamlessly within a virtualized environment, ensuring usability and efficiency even with extensive data.
+
+    {% if page.publishingplatform == "typescript" %}
+
+    {% tabs %}
+    {% highlight ts tabtitle="index.ts" %}
+    {% include code-snippet/treegrid/selection-cs11/index.ts %}
+    {% endhighlight %}
+    {% highlight html tabtitle="index.html" %}
+    {% include code-snippet/treegrid/selection-cs11/index.html %}
+    {% endhighlight %}
+    {% endtabs %}
+
+    {% previewsample "page.domainurl/code-snippet/treegrid/selection-cs11" %}
+
+    {% elsif page.publishingplatform == "javascript" %}
+
+    {% tabs %}
+    {% highlight js tabtitle="index.js" %}
+    {% include code-snippet/treegrid/selection-cs11/index.js %}
+    {% endhighlight %}
+    {% highlight html tabtitle="index.html" %}
+    {% include code-snippet/treegrid/selection-cs11/index.html %}
+    {% endhighlight %}
+    {% endtabs %}
+
+    {% previewsample "page.domainurl/code-snippet/treegrid/selection-cs11" %}
+    {% endif %}
