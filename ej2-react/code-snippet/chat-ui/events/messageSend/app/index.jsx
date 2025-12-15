@@ -7,9 +7,14 @@ function App() {
     const messageSend = () => {
         // Your required action here
     }
+    const currentUserModel = {
+        id: "user1",
+        user: "Albert"
+    };
+
     return (
         // specifies the tag for render the Chat UI component
-        <ChatUIComponent messageSend={messageSend}></ChatUIComponent>
+        <ChatUIComponent user={currentUserModel} messageSend={messageSend}></ChatUIComponent>
     );
 }
 

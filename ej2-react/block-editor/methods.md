@@ -16,15 +16,20 @@ The Block Editor component provides a comprehensive set of public methods to pro
 
 ### Adding a block
 
-Add a new block to the editor at a specified position using the [addBlock](../api/blockeditor/#addblock) method. This method can also insert the block before or after a target block.
+Add a new block to the editor at a specified position using the [addBlock](../api/blockeditor#addblock) method. This method can also insert the block before or after a target block.
 
 {% raw %}
 ```typescript
 // Add a new paragraph block after a specific block
 const newBlock: BlockModel = {
     id: 'new-block-1',
-    type: 'Paragraph',
-    content: 'This is a new paragraph block'
+    blockType: 'Paragraph',
+    content: [
+        {
+            contentType: ContentType.Text,
+            content: 'This is a newly added block'
+        }
+    ]
 };
 
 editor.addBlock(newBlock, 'target-block-id', true); // true = after, false = before
@@ -33,7 +38,7 @@ editor.addBlock(newBlock, 'target-block-id', true); // true = after, false = bef
 
 ### Removing a block
 
-Remove a block from the editor using the [removeBlock](../api/blockeditor/#removeblock) method.
+Remove a block from the editor using the [removeBlock](../api/blockeditor#removeblock) method.
 
 {% raw %}
 ```typescript
@@ -44,7 +49,7 @@ editor.removeBlock('block-to-remove-id');
 
 ### Moving a block
 
-Move a block from one position to another within the editor using the [moveBlock](../api/blockeditor/#moveblock) method.
+Move a block from one position to another within the editor using the [moveBlock](../api/blockeditor#moveblock) method.
 
 {% raw %}
 ```typescript
@@ -55,7 +60,7 @@ editor.moveBlock('source-block-id', 'target-block-id');
 
 ### Updating a block
 
-Update the properties of an existing block with the [updateBlock](../api/blockeditor/#updateblock) method. Only the specified properties are modified, while others remain unchanged. It returns `true` if the update was successful and `false` otherwise.
+Update the properties of an existing block with the [updateBlock](../api/blockeditor#updateblock) method. Only the specified properties are modified, while others remain unchanged. It returns `true` if the update was successful and `false` otherwise.
 
 {% raw %}
 ```typescript
@@ -68,7 +73,7 @@ editor.updateBlock('block-id', {
 
 ### Getting a block
 
-Retrieve a block model by its unique identifier using the [getBlock](../api/blockeditor/#getblock) method. It returns `null` if the block is not found.
+Retrieve a block model by its unique identifier using the [getBlock](../api/blockeditor#getblock) method. It returns `null` if the block is not found.
 
 {% raw %}
 ```typescript
@@ -83,7 +88,7 @@ if (block) {
 
 ### Getting block count
 
-Use the [getBlockCount](../api/blockeditor/#getblockcount) method to retrieve the total number of blocks in the editor.
+Use the [getBlockCount](../api/blockeditor#getblockcount) method to retrieve the total number of blocks in the editor.
 
 {% raw %}
 ```typescript
@@ -109,7 +114,7 @@ The following example demonstrates the usage of the block editor methods.
 
 ### Setting text selection
 
-Set the text selection within a specific content element using start and end positions with the [setSelection](../api/blockeditor/#setselection) method.
+Set the text selection within a specific content element using start and end positions with the [setSelection](../api/blockeditor#setselection) method.
 
 {% raw %}
 ```typescript
@@ -120,7 +125,7 @@ editor.setSelection('content-element-id', 5, 15);
 
 ### Setting cursor position
 
-Place the cursor at a specific position within a block using the [setCursorPosition](../api/blockeditor/#setcursorposition) method.
+Place the cursor at a specific position within a block using the [setCursorPosition](../api/blockeditor#setcursorposition) method.
 
 {% raw %}
 ```typescript
@@ -131,7 +136,7 @@ editor.setCursorPosition('block-id', 10);
 
 ### Getting selected blocks
 
-Retrieve the currently selected blocks in the editor with the [getSelectedBlocks](../api/blockeditor/#getselectedblocks) method. It returns `null` if no blocks are selected.
+Retrieve the currently selected blocks in the editor with the [getSelectedBlocks](../api/blockeditor#getselectedblocks) method. It returns `null` if no blocks are selected.
 
 {% raw %}
 ```typescript
@@ -145,7 +150,7 @@ if (selectedBlocks) {
 
 ### Getting selection range
 
-Get the current selection range in the editor using the [getRange](../api/blockeditor/#getrange) method. This method returns a `Range` object representing the selected text, or `null` if no selection is active.
+Get the current selection range in the editor using the [getRange](../api/blockeditor#getrange) method. This method returns a `Range` object representing the selected text, or `null` if no selection is active.
 
 {% raw %}
 ```typescript
@@ -160,7 +165,7 @@ if (range) {
 
 ### Setting selection range
 
-Set the selection range in the editor using the [selectRange](../api/blockeditor/#selectrange) method. This method accepts a `Range` object that defines the start and end positions of the selection.
+Set the selection range in the editor using the [selectRange](../api/blockeditor#selectrange) method. This method accepts a `Range` object that defines the start and end positions of the selection.
 
 {% raw %}
 ```typescript
@@ -174,7 +179,7 @@ editor.selectRange(range);
 
 ### Selecting a block
 
-Select a specific block in the editor using the [selectBlock](../api/blockeditor/#selectblock) method.
+Select a specific block in the editor using the [selectBlock](../api/blockeditor#selectblock) method.
 
 {% raw %}
 ```typescript
@@ -185,7 +190,7 @@ editor.selectBlock('block-id');
 
 ### Selecting all blocks
 
-Select all blocks in the editor using the [selectAllBlocks](../api/blockeditor/#selectallblocks) method.
+Select all blocks in the editor using the [selectAllBlocks](../api/blockeditor#selectallblocks) method.
 
 {% raw %}
 ```typescript
@@ -212,7 +217,7 @@ The following example demonstrates the usage of the selection and cursor methods
 
 ### FocusIn
 
-Use the [focusIn](../api/blockeditor/#focusin) method to programmatically set focus on the editor, making it ready for user input.
+Use the [focusIn](../api/blockeditor#focusin) method to programmatically set focus on the editor, making it ready for user input.
 
 {% raw %}
 ```typescript
@@ -223,7 +228,7 @@ editor.focusIn();
 
 ### FocusOut
 
-Use the [focusOut](../api/blockeditor/#focusout) method to programmatically remove focus from the editor. This clears any active selections and makes the editor inactive.
+Use the [focusOut](../api/blockeditor#focusout) method to programmatically remove focus from the editor. This clears any active selections and makes the editor inactive.
 
 {% raw %}
 ```typescript
@@ -236,7 +241,7 @@ editor.focusOut();
 
 ### Executing toolbar action
 
-Execute a built-in toolbar formatting command using the [executeToolbarAction](../api/blockeditor/#executetoolbaraction) method. Use this to apply formatting such as bold, italic, or color to the selected text.
+Execute a built-in toolbar formatting command using the [executeToolbarAction](../api/blockeditor#executetoolbaraction) method. Use this to apply formatting such as bold, italic, or color to the selected text.
 
 {% raw %}
 ```typescript
@@ -250,7 +255,7 @@ editor.executeToolbarAction(BuiltInToolbar.Color, '#ff0000');
 
 ### Enabling toolbar items
 
-Enable specific items in the inline toolbar using the [enableToolbarItems](../api/blockeditor/#enabletoolbaritems) method. This method accepts a single item or an array of items to enable.
+Enable specific items in the inline toolbar using the [enableToolbarItems](../api/blockeditor#enabletoolbaritems) method. This method accepts a single item or an array of items to enable.
 
 {% raw %}
 ```typescript
@@ -264,7 +269,7 @@ editor.enableToolbarItems(['bold', 'italic', 'underline']);
 
 ### Disabling toolbar items
 
-Disable specific items in the inline toolbar using the [disableToolbarItems](../api/blockeditor/#disabletoolbaritems) method. This method accepts a single item or an array of items to disable.
+Disable specific items in the inline toolbar using the [disableToolbarItems](../api/blockeditor#disabletoolbaritems) method. This method accepts a single item or an array of items to disable.
 
 {% raw %}
 ```typescript
@@ -294,7 +299,7 @@ The following example demonstrates the usage of the formatting and focus methods
 
 ### Getting data as JSON
 
-Export the editor content in JSON format using the [getDataAsJson](../api/blockeditor/#getdataasjson) method. This method allows exporting all blocks or a specific block.
+Export the editor content in JSON format using the [getDataAsJson](../api/blockeditor#getdataasjson) method. This method allows exporting all blocks or a specific block.
 
 {% raw %}
 ```typescript
@@ -308,7 +313,7 @@ const specificBlock = editor.getDataAsJson('block-id');
 
 ### Getting data as HTML
 
-Export the editor content in HTML format using the [getDataAsHtml](../api/blockeditor/#getdataashtml) method. This method allows exporting all blocks or a specific block.
+Export the editor content in HTML format using the [getDataAsHtml](../api/blockeditor#getdataashtml) method. This method allows exporting all blocks or a specific block.
 
 {% raw %}
 ```typescript
@@ -320,9 +325,37 @@ const specificBlockHtml: string = editor.getDataAsHtml('block-id');
 ```
 {% endraw %}
 
+### Rendering Blocks from JSON
+
+Renders blocks from JSON data using the [renderBlocksFromJson](../api/blockeditor#renderblocksfromjson) method. This method allows either replacing all existing content or inserting at the cursor position.
+
+{% raw %}
+```typescript
+// Replace all existing content
+const replaceAllBlocks = editor.renderBlocksFromJson(jsonData, true);
+
+// Insert at cursor without replacing existing blocks (default behavior)
+const insertedAtCursor = editor.renderBlocksFromJson(jsonData);
+
+// Insert after a specific block (only applicable when replace = false)
+const insertedAfterTarget = editor.renderBlocksFromJson(jsonData, false, 'target-block-id');
+```
+{% endraw %}
+
+### Parsing HTML to Blocks
+
+Convert an HTML string into an array of `BlockModel` objects using the [parseHtmlToBlocks](../api/blockeditor#parsehtmltoblocks) method. This method allows transforming HTML content into structured editor blocks.
+
+{% raw %}
+```typescript
+// Parse HTML into block
+const blocks: BlockModel[] = editor.parseHtmlToBlocks(html);
+```
+{% endraw %}
+
 ### Printing editor content
 
-Print the editor content using the [print](../api/blockeditor/#print) method. This action opens the browser's print dialog with the current editor content.
+Print the editor content using the [print](../api/blockeditor#print) method. This action opens the browser's print dialog with the current editor content.
 
 {% raw %}
 ```typescript

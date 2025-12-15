@@ -8,8 +8,7 @@ function App() {
   
 const blocksData = [
     {
-        id: 'demo-block',
-        type: 'Paragraph'
+        blockType: 'Paragraph'
     }
 ];
     const handleAfterPaste = (args) => {
@@ -54,11 +53,11 @@ Copy content from the test area above and paste it into the editor to see the cl
         <BlockEditorComponent
             id="blockeditor"
             blocks={blocksData}
-            pasteSettings={{
+            pasteCleanupSettings={{
                 keepFormat: false,
                 plainText: true
             }}
-            afterPaste={handleAfterPaste}
+            afterPasteCleanup={handleAfterPaste}
         ></BlockEditorComponent>
          <div id="output"></div>
     </div>

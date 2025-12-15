@@ -1,4 +1,4 @@
-import { ChatUIComponent } from '@syncfusion/ej2-react-interactive-chat';
+import { ChatUIComponent, UserModel } from '@syncfusion/ej2-react-interactive-chat';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 
@@ -6,10 +6,14 @@ function App() {
     const userTyping = () => {
         // Your required action here
     }
+    const currentUserModel: UserModel = {
+        id: "user1",
+        user: "Albert"
+    };
 
     return (
         // specifies the tag for render the Chat UI component
-        <ChatUIComponent userTyping={userTyping} ></ChatUIComponent>
+        <ChatUIComponent user={currentUserModel} userTyping={userTyping} ></ChatUIComponent>
     );
 }
 

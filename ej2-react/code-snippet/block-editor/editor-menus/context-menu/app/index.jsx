@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
+import { BlockEditorComponent, ContentType } from '@syncfusion/ej2-react-blockeditor';
 
 function App() {
     const customContextMenuItems = [
@@ -58,54 +58,49 @@ function App() {
     }
 ];
 
+
+const contextMenuSettings =  {
+        enable: true,
+        showItemOnClick: true,
+        items: customContextMenuItems,
+        opening: (args) => {
+            // Your actions here
+        },
+        closing: (args) => {
+            // Your actions here
+        },
+        itemSelect: (args) => {
+            // Handle custom actions here
+        }
+    }
+
 const blocksData = [
     {
-        id: 'title-block',
-        type: 'Heading',
-        props: { level: 1 },
+        blockType: 'Heading',
+        properties: { level: 1 },
         content: [
             {
-                type: 'Text',
+                contentType: ContentType.Text,
                 content: 'Context Menu Demo'
             }
         ]
     },
     {
-        id: 'intro-block',
-        type: 'Quote',
+        blockType: 'Quote',
         content: [
             {
-                type: 'Text',
+                contentType: ContentType.Text,
                 content: 'Right-click anywhere in this editor to open the custom context menu. Try different areas and blocks.'
             }
         ]
     }
 ];
-    const handleBeforeOpen = (args) => {
-        // Your actions here
-    };
-
-    const handleOpen = (args) => {
-        // Your actions here
-    };
-
-    const handleBeforeClose = (args) => {
-        // Your actions here
-    };
-
-    const handleClose = (args) => {
-        // Your actions here
-    };
-
-    const handleItemClick = (args) => {
-        // Handle custom actions here
-    };
 
     return (
         <div>
             <div id="controls">
         <h3>Context Menu Configuration Demo</h3>
-        <div class="instructions">
+        <div className="instructions">
           <p><strong>Instructions:</strong></p>
           <ol>
             <li>Right-click anywhere in the editor to open the context menu</li>
@@ -117,16 +112,7 @@ const blocksData = [
         <BlockEditorComponent
             id="blockeditor"
             blocks={blocksData}
-            contextMenu={{
-                enable: true,
-                showItemOnClick: true,
-                items: customContextMenuItems,
-                beforeOpen: handleBeforeOpen,
-                open: handleOpen,
-                beforeClose: handleBeforeClose,
-                close: handleClose,
-                itemClick: handleItemClick
-            }}
+            contextMenuSettings={contextMenuSettings}
         ></BlockEditorComponent>
          </div>
     );

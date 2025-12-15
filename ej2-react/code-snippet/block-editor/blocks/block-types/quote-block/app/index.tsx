@@ -2,16 +2,15 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
-import { BlockModel, ContentType } from '@syncfusion/ej2-blockeditor';
+import { BlockEditorComponent, BlockModel, ContentType } from '@syncfusion/ej2-react-blockeditor';
 
 function App() {
     const blocksData: BlockModel[] = [
      {
-        type: 'Quote',
+        blockType: 'Quote',
         content: [
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'The greatest glory in living lies not in never falling, but in rising every time we fall.'
             }
         ]

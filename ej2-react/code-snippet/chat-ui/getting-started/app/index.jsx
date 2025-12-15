@@ -3,9 +3,14 @@ import * as React from 'react';
 import * as ReactDOM from "react-dom";
 
 function App() {
+    const currentUserModel = {
+        id: "user1",
+        user: "Albert"
+    };
+
     return (
         // specifies the tag for render the Chat UI component
-        <ChatUIComponent id="chat-ui"></ChatUIComponent>
+        <ChatUIComponent user={currentUserModel} id="chat-ui"></ChatUIComponent>
     );
 }
 

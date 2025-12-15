@@ -3,37 +3,34 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { useRef, useState, useEffect } from 'react';
-import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
+import { BlockEditorComponent, ContentType } from '@syncfusion/ej2-react-blockeditor';
  
 function App() {
     const blocksData = [
     {
-        id: 'sample-heading',
-        type: 'Heading',
-        props: { level: 1 },
+        blockType: 'Heading',
+        properties: { level: 1 },
         content: [
             {
-                type: 'Text',
+                contentType: ContentType.Text,
                 content: 'Formatting Demo'
             }
         ]
     },
     {
-        id: 'sample-paragraph-1',
-        type: 'Paragraph',
+        blockType: 'Paragraph',
         content: [
             {
-                type: 'Text',
+                contentType: ContentType.Text,
                 content: 'Select this text and apply different formatting options using the buttons below. You can make text bold or change colors for the text.'
             }
         ]
     },
     {
-        id: 'sample-list',
-        type: 'BulletList',
+        blockType: 'BulletList',
         content: [
             {
-                type: 'Text',
+                contentType: ContentType.Text,
                 content: 'List item for formatting demonstration'
             }
         ]
@@ -117,13 +114,13 @@ function App() {
 <div>
             <div id="controls">
             <h3>Formatting Methods</h3>
-            <div class="button-group">
+            <div className="button-group">
                 <button id="applyBoldBtn">Apply Bold </button>
                 <button id="applyColorBtn">Apply Color</button>
                 <button id="enableToolbarBtn">Enable Toolbar Items</button>
                 <button id="disableToolbarBtn">Disable Toolbar Items</button>
             </div>
-            <div class="instruction">
+            <div className="instruction">
                 <p><strong>Instructions:</strong> Select some text in the editor first, then click the formatting buttons to see the effects.</p>
             </div>
             <div id="output"></div>

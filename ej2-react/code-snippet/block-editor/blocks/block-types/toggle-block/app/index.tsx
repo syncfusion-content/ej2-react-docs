@@ -2,51 +2,50 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
-import { BlockModel, ContentType } from '@syncfusion/ej2-blockeditor';
+import { BlockEditorComponent, BlockModel, ContentType } from '@syncfusion/ej2-react-blockeditor';
 
 function App() {
     const blocksData: BlockModel[] = [
     {
-      type: 'CollapsibleHeading',
+      blockType: 'CollapsibleHeading',
       content: [
         {
-          type: ContentType.Text,
+          contentType: ContentType.Text,
           content: 'Collapsible Section'
         }
       ],
-      props:{
-      level: 1,
-      isExpanded: true,
-      children: [
-        {
-          type: 'Paragraph',
-          content: [
-            {
-              type: ContentType.Text,
-              content: 'This content is inside a toggle section and can be collapsed.'
-            }
-          ]
-        }
-      ]
+      properties:{
+        level: 1,
+        isExpanded: true,
+        children: [
+          {
+            blockType: 'Paragraph',
+            content: [
+              {
+                contentType: ContentType.Text,
+                content: 'This content is inside a toggle section and can be collapsed.'
+              }
+            ]
+          }
+        ]
     }
     },
     {
-      type: 'CollapsibleParagraph',
+      blockType: 'CollapsibleParagraph',
       content: [
         {
-          type: ContentType.Text,
+          contentType: ContentType.Text,
           content: 'Toggle paragraph section'
         }
       ],
-      props:{
+      properties:{
       isExpanded: false,
       children: [
         {
-          type: 'Paragraph',
+          blockType: 'Paragraph',
           content: [
             {
-              type: ContentType.Text,
+              contentType: ContentType.Text,
               content: 'This content is initially hidden because isExpanded is set to false.'
             }
           ]

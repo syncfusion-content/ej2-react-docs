@@ -2,42 +2,67 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
-import { ContentType } from '@syncfusion/ej2-blockeditor';
+import { BlockEditorComponent, ContentType } from '@syncfusion/ej2-react-blockeditor';
 
 function App() {
   const blocksData = [
     {
-      type: 'Heading',
-      props: { level: 2},
-      content: [
-        {
-          type: ContentType.Text,
-          content: 'Different Content Types'
-        }
-      ]
-    },
-    {
-      type: 'Paragraph',
-      content: [
-        { type: ContentType.Text, content: 'The Block Editor supports various content types: ' },
-        {
-          type: ContentType.Link,
-          content: 'hyperlinks',
-          props: {
-            url: 'https://ej2.syncfusion.com/documentation/',
-            openInNewWindow: true
-          }
+            blockType: 'Heading',
+            properties: { level: 2 },
+            content: [
+                {
+                    contentType: ContentType.Text,
+                    content: 'Different Content Types'
+                }
+            ]
         },
-        { type: ContentType.Text, content: ', inline ' },
-        { type: ContentType.Code, content: 'code snippets.' },
-        { type: ContentType.Text, content: '\nUser mentions like' },
-        { type: ContentType.Mention, id: 'user1' },
-        { type: ContentType.Text, content: ', and labels such as' },
-        { type: ContentType.Label, props: { labelId: 'label1'} },
-        { type: ContentType.Text, content: '.' }
-      ]
-    }
+        {
+            blockType: 'Paragraph',
+            content: [
+                {
+                    contentType: ContentType.Text,
+                    content: 'The Block Editor supports various content types: '
+                },
+                {
+                    contentType: ContentType.Link,
+                    content: 'hyperlinks',
+                    properties: {
+                        url: 'https://ej2.syncfusion.com/documentation/',
+                    }
+                },
+                {
+                    contentType: ContentType.Text,
+                    content: ', inline ',
+                },
+                {
+                    contentType: ContentType.Text,
+                    content: 'code snippets.',
+                    properties: {
+                        styles: { inlineCode: true },
+                    }
+                },
+                {
+                    contentType: ContentType.Text,
+                    content: '\nUser mentions like'
+                },
+                {
+                    contentType: ContentType.Mention,
+                    properties: { userId: "user1" }
+                },
+                {
+                    contentType: ContentType.Text,
+                    content: ', and labels such as '
+                },
+                {
+                    contentType: ContentType.Label,
+                    properties: { labelId: 'label1' }
+                },
+                {
+                    contentType: ContentType.Text,
+                    content: '.'
+                }
+            ]
+        }
   ];
 
   return (
@@ -46,8 +71,8 @@ function App() {
       blocks={blocksData}
       users={[{ id: 'user1', user: 'John Doe' }]}
       labelSettings={{
-        labelItems: [
-          { id: 'label1', text: 'Bug', labelColor: '#ff5252', groupHeader: 'Status' }
+        items: [
+          { id: 'label1', text: 'Bug', labelColor: '#ff5252', groupBy: 'Status' }
         ]
       }}
     ></BlockEditorComponent>

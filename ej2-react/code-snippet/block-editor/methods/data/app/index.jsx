@@ -3,22 +3,22 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { useRef, useEffect } from 'react';
-import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
+import { BlockEditorComponent, ContentType } from '@syncfusion/ej2-react-blockeditor';
  
 function App() {
     const blockData = [
     {
         id: 'title-block',
-        type: 'Heading',
-        props: { level: 1 },
-        content: [{ type: 'Text', content: 'Document Export Demo' }]
+        blockType: 'Heading',
+        properties: { level: 1 },
+        content: [{ contentType: ContentType.Text, content: 'Document Export Demo' }]
     },
     {
         id: 'intro-paragraph',
-        type: 'Paragraph',
+        blockType: 'Paragraph',
         content: [
             {
-                type: 'Text',
+                contentType: ContentType.Text,
                 content:
                     'This document demonstrates the data export capabilities of the Block Editor. You can export content as JSON or HTML formats.'
             }
@@ -26,31 +26,31 @@ function App() {
     },
     {
         id: 'features-heading',
-        type: 'Heading',
-        props: { level: 2},
-        content: [{ type: 'Text', content: 'Export Features' }]
+        blockType: 'Heading',
+        properties: { level: 2},
+        content: [{ contentType: ContentType.Text, content: 'Export Features' }]
     },
     {
         id: 'features-list',
-        type: 'BulletList',
-        content: [{ type: 'Text', content: 'JSON export for data processing' }]
+        blockType: 'BulletList',
+        content: [{ contentType: ContentType.Text, content: 'JSON export for data processing' }]
     },
     {
         id: 'features-list-2',
-        type: 'BulletList',
-        content: [{ type: 'Text', content: 'HTML export for web display' }]
+        blockType: 'BulletList',
+        content: [{ contentType: ContentType.Text, content: 'HTML export for web display' }]
     },
     {
         id: 'features-list-3',
-        type: 'BulletList',
-        content: [{ type: 'Text', content: 'Print functionality for hard copies' }]
+        blockType: 'BulletList',
+        content: [{ contentType: ContentType.Text, content: 'Print functionality for hard copies' }]
     },
     {
         id: 'code-example',
-        type: 'Code',
+        blockType: 'Code',
         content: [
             {
-                type: 'Text',
+                contentType: ContentType.Text,
                 content: 'var data = editor.getDataAsJson();\nconsole.log(data);'
             }
         ]
@@ -155,7 +155,7 @@ function App() {
  <div>
         <div id="controls">
             <h3>Data Export Methods</h3>
-            <div class="button-group">
+            <div className="button-group">
                 <button id="getJsonAllBtn">Get All Data as JSON</button>
                 <button id="getJsonBlockBtn">Get Block Data as JSON</button>
                 <button id="getHtmlAllBtn">Get All Data as HTML</button>

@@ -2,23 +2,23 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BlockEditorComponent,  } from '@syncfusion/ej2-react-blockeditor';
+import { BlockEditorComponent, ContentType } from '@syncfusion/ej2-react-blockeditor';
 
 function App() {
   const blocksData = [
     {
       id: 'security-callout',
-      type: 'Callout',
-      props:{
+      blockType: 'Callout',
+      properties:{
       children: [
         {
           id: 'security-title',
           parentId: 'security-callout',
-          type: 'Heading',
-          props: { level: 3},
+          blockType: 'Heading',
+          properties: { level: 3},
           content: [
             {
-              type: 'Text',
+              contentType: ContentType.Text,
               content: 'Security Notice'
             }
           ]
@@ -26,10 +26,10 @@ function App() {
         {
           id: 'security-warning',
           parentId: 'security-callout',
-          type: 'Paragraph',
+          blockType: 'Paragraph',
           content: [
             {
-              type: 'Text',
+              contentType: ContentType.Text,
               content:
                 'Always validate user input before processing to prevent security vulnerabilities.'
             }
@@ -38,10 +38,10 @@ function App() {
         {
           id: 'security-tips',
           parentId: 'security-callout',
-          type: 'Paragraph',
+          blockType: 'Paragraph',
           content: [
             {
-              type: 'Text',
+              contentType: ContentType.Text,
               content: 'Use HTTPS for all data transmission'
             }
           ],
@@ -50,10 +50,10 @@ function App() {
         {
           id: 'security-tips-2',
           parentId: 'security-callout',
-          type: 'Paragraph',
+          blockType: 'Paragraph',
           content: [
             {
-              type: 'Text',
+              contentType: ContentType.Text,
               content: 'Implement proper authentication mechanisms'
             }
           ],
@@ -62,10 +62,10 @@ function App() {
         {
           id: 'security-tips-3',
           parentId: 'security-callout',
-          type: 'Paragraph',
+          blockType: 'Paragraph',
           content: [
             {
-              type: 'Text',
+              contentType: ContentType.Text,
               content: 'Regularly update dependencies and libraries'
             }
           ],

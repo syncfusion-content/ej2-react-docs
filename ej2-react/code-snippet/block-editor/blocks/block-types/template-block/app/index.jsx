@@ -3,12 +3,11 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
-import { ContentType } from '@syncfusion/ej2-blockeditor';
 
 function App() {
   const blocksData = [
     {
-        type: 'Template',
+        blockType: 'Template',
         template: `<div class="notification-card">
             <div class="notification-header">
                 <span class="notification-icon">📢</span>

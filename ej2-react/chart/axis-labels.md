@@ -16,7 +16,7 @@ To get start quickly with Axis Labels in React Charts, you can check on this vid
 
 ## Smart axis labels
 
-When the axis labels overlap with each other, you can use [`labelIntersectAction`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#labelintersectaction) property in the axis, to place them smartly.
+When the axis labels overlap with each other, you can use [`labelIntersectAction`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel#labelintersectaction) property in the axis, to place them smartly.
 
 When setting `labelIntersectAction` as `Hide`
 
@@ -237,7 +237,7 @@ The chart’s data source can be sorted using the `sort` method of chart. The ar
 
 ## Edge label placement
 
-Labels with long text at the edges of an axis may appear partially in the chart. To avoid this, use [`edgeLabelPlacement`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#edgelabelplacement) property in axis, which moves the label inside the chart area for better appearance or hides it. By default, the [`edgeLabelPlacement`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#edgelabelplacement) property is set to Shift to ensure that labels are shifted inside the chart area, avoiding any overlap or coincidence.
+Labels with long text at the edges of an axis may appear partially in the chart. To avoid this, use [`edgeLabelPlacement`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel#edgelabelplacement) property in axis, which moves the label inside the chart area for better appearance or hides it. By default, the [`edgeLabelPlacement`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel#edgelabelplacement) property is set to Shift to ensure that labels are shifted inside the chart area, avoiding any overlap or coincidence.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -300,7 +300,7 @@ You can customize the specific text in the axis labels using `axisLabelRender` e
 
 ## Trim using maximum label width
 
-You can trim the label using [`enableTrim`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#enabletrim) property and width of the labels can also be customized using [`maximumLabelWidth`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#maximumlabelwidth) property in the axis, the value maximum label width is `34` by default.
+You can trim the label using [`enableTrim`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel#enabletrim) property and width of the labels can also be customized using [`maximumLabelWidth`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel#maximumlabelwidth) property in the axis, the value maximum label width is `34` by default.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -339,3 +339,24 @@ Line break feature used to customize the long axis label text into multiple line
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs21" %}
+
+## Axis label template
+
+The axis label template allows you to customize axis labels by formatting them with HTML content, applying conditional styling, and including dynamic elements such as icons, images or additional data. This customization is enabled by setting the template content in the [labelTemplate](https://ej2.syncfusion.com/react/documentation/api/chart/axismodel#labelTemplate) property of the `AxisModel`.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/axis/axisLabeltemplate/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/axis/axisLabeltemplate/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/axisLabeltemplate/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/axisLabeltemplate/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/axis/axisLabeltemplate" %}
