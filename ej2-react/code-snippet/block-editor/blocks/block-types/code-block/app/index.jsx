@@ -2,33 +2,33 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
-import { ContentType } from '@syncfusion/ej2-blockeditor';
+import { BlockEditorComponent, ContentType } from '@syncfusion/ej2-react-blockeditor';
 
 function App() {
   const blocksData = [
     {
-      type: 'Code',
+      blockType: 'Code',
       content: [
         {
-          type: ContentType.Text,
+          contentType: ContentType.Text,
           content: 'function greeting() {\n  console.log("Hello, world!");\n}'
         }
-      ],
-      props: {
-        defaultLanguage: 'javascript',
-        languages: [
-          { language: 'javascript', label: 'JavaScript' },
-          { language: 'typescript', label: 'TypeScript' },
-          { language: 'html', label: 'HTML' },
-          { language: 'css', label: 'CSS' }
-        ]
-      }
+      ]
     }
   ];
 
+  const codeBlockData = {
+    defaultLanguage: 'javascript',
+    languages: [
+      { language: 'javascript', label: 'JavaScript' },
+      { language: 'typescript', label: 'TypeScript' },
+      { language: 'html', label: 'HTML' },
+      { language: 'css', label: 'CSS' }
+    ]
+  };
+
   return (
-    <BlockEditorComponent id="block-editor" blocks={blocksData}></BlockEditorComponent>
+    <BlockEditorComponent id="block-editor" blocks={blocksData} codeBlockSettings={codeBlockData}></BlockEditorComponent>
   );
 }
 

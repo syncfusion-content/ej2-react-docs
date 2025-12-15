@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create project in React Visual studio code integration component | Syncfusion
+title: Create React project in Visual studio code | Syncfusion
 description: Learn here all about Create project in Syncfusion React Visual studio code integration component of Syncfusion Essential JS 2 and more.
 control: Create project 
 platform: ej2-react
@@ -22,12 +22,13 @@ The steps below help you to create **Syncfusion<sup style="font-size:70%">&reg;<
 
     ![CreateProjectPalette](images/CreateProjectPalette.png)
 
-2. Select **Syncfusion<sup style="font-size:70%">&reg;</sup> Web Template Studio: Launch** and then press enter, Template Studio wizard for configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> Web app will appear. Provide the require Project Name and Path to create the new Syncfusion<sup style="font-size:70%">&reg;</sup> Web application along with any one of the Framework (React, Angular, and Vue).
+2. Select **Syncfusion<sup style="font-size:70%">&reg;</sup> Web Template Studio: Launch** and then press enter, Template Studio wizard for configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> Web app will appear. Provide the require Project Name and Path to create the new Syncfusion<sup style="font-size:70%">&reg;</sup> Web application along with any one of the Framework (React, Pure React, Angular, and Vue).
 
     ![ProjectLocation](images/ProjectLocationName.png)
 
 3. Click either **Next** or **Framework** tab, and the Framework types will be appears. Choose any one of the Framework:
    * React
+   * Pure React
    * Angular
    * Vue
 
@@ -64,4 +65,4 @@ We have showcased the Chart, Grid and Schedule component in Syncfusion<sup style
 
 ## Upgrading the npm packages
 
-While creating the new Syncfusion<sup style="font-size:70%">&reg;</sup> web app, it install the npm packages with latest version. If you want to use your existing project in future, you can update the npm packages without uninstalling it. Refer to the [update npm packages](https://ej2.syncfusion.com/react/documentation/common/how-to/update-npm-package/) section for upgrading the package.
+While creating the new Syncfusion<sup style="font-size:70%">&reg;</sup> web app, it install the npm packages with latest version. If you want to use your existing project in future, you can update the npm packages without uninstalling it. Refer to the [update npm packages](https://ej2.syncfusion.com/react/documentation/upgrade/update-npm-package) section for upgrading the package.

@@ -15,7 +15,7 @@ function App() {
     (grid as GridComponent).enableRtl = !args.checked;
   }
   return (<div>
-    <label style={{ padding: "10px 10px" }}>Enable or diable RTL mode</label>
+    <label style={{ padding: "10px 10px" }}>Enable or disable RTL mode</label>
     <SwitchComponent change={changeRTL}></SwitchComponent>
     <GridComponent ref={g => grid = g} dataSource={data} locale='ar-AE' allowPaging={true} pageSettings={pageOptions} allowGrouping={true} allowSorting={true} allowReordering={true}
       allowFiltering={true} editSettings={editSettings} toolbar={toolbar} enableRtl={true} showColumnChooser={true} showColumnMenu={true}>

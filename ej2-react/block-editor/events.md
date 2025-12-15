@@ -14,7 +14,7 @@ The Block Editor component provides a comprehensive set of events that allow you
 
 ## Created
 
-The [created](../api/blockeditor/#created) event is triggered when the Block Editor component is successfully initialized and ready for use. This event is useful for performing setup operations or initializing additional features after the editor is created.
+The [created](../api/blockeditor#created) event is triggered when the Block Editor component is successfully initialized and ready for use. This event is useful for performing setup operations or initializing additional features after the editor is created.
 
 {% raw %}
 ```typescript
@@ -22,19 +22,19 @@ The [created](../api/blockeditor/#created) event is triggered when the Block Edi
 ```
 {% endraw %}
 
-## ContentChanged
+## BlockChanged
 
-The [contentChanged](../api/blockeditor/#contentchanged) event is triggered whenever the content within the editor is modified. This includes content additions, deletions, or any structural modifications to the document. Its event handler receives details about the changes.
+The [blockChanged](../api/blockeditor#blockchanged) event is triggered whenever the editor blocks are changed. This includes block additions, deletions, or any structural modifications to the document. Its event handler receives details about the changes.
 
 {% raw %}
 ```typescript
-<BlockEditorComponent contentChanged={handleContentChanged}></BlockEditorComponent>
+<BlockEditorComponent blockChanged={handleBlockChanged}></BlockEditorComponent>
 ```
 {% endraw %}
 
 ## SelectionChanged
 
-The [selectionChanged](../api/blockeditor/#selectionchanged) event is triggered when the user's text selection changes within the editor. The event arguments contain details about the new selection, which can be useful for updating UI elements.
+The [selectionChanged](../api/blockeditor#selectionchanged) event is triggered when the user's text selection changes within the editor. The event arguments contain details about the new selection, which can be useful for updating UI elements.
 
 {% raw %}
 ```typescript
@@ -42,49 +42,9 @@ The [selectionChanged](../api/blockeditor/#selectionchanged) event is triggered 
 ```
 {% endraw %}
 
-## UndoRedoPerformed
-
-The [undoRedoPerformed](../api/blockeditor/#undoredoperformed) event is triggered when an undo or redo operation is executed. This event provides information about the action performed and the state before and after the operation.
-
-{% raw %}
-```typescript
-<BlockEditorComponent undoRedoPerformed={handleUndoRedoPerformed}></BlockEditorComponent>
-```
-{% endraw %}
-
-## BlockAdded
-
-The [blockAdded](../api/blockeditor/#blockadded) event is triggered when a new block is added to the editor. The event arguments include data about the added block, such as its ID and type. This includes blocks added through user interaction, paste operations, or programmatic insertion.
-
-{% raw %}
-```typescript
-<BlockEditorComponent blockAdded={handleBlockAdded}></BlockEditorComponent>
-```
-{% endraw %}
-
-## BlockRemoved
-
-The [blockRemoved](../api/blockeditor/#blockremoved) event is triggered when a block is removed from the editor. This can occur through user deletion, cut operations, or programmatic removal. The event handler receives the details of the removed block.
-
-{% raw %}
-```typescript
-<BlockEditorComponent blockRemoved={handleBlockRemoved}></BlockEditorComponent>
-```
-{% endraw %}
-
-## BlockMoved
-
-The [blockMoved](../api/blockeditor/#blockmoved) event is triggered when blocks are moved from one position to another within the editor. This includes drag-and-drop operations, through keyboard shortcuts, or programmatic block reordering.
-
-{% raw %}
-```typescript
-<BlockEditorComponent blockMoved={handleBlockMoved}></BlockEditorComponent>
-```
-{% endraw %}
-
 ## BlockDragStart
 
-The [blockDragStart](../api/blockeditor/#blockdragstart) event is triggered at the beginning of a block drag operation, providing information about the blocks being dragged and their initial position.
+The [blockDragStart](../api/blockeditor#blockdragstart) event is triggered at the beginning of a block drag operation, providing information about the blocks being dragged and their initial position.
 
 {% raw %}
 ```typescript
@@ -92,29 +52,29 @@ The [blockDragStart](../api/blockeditor/#blockdragstart) event is triggered at t
 ```
 {% endraw %}
 
-## BlockDrag
+## BlockDragging
 
-The [blockDrag](../api/blockeditor/#blockdrag) event is triggered continuously  during a drag operation, providing information about the blocks being dragged and their current position.
+The [blockDragging](../api/blockeditor#blockdragging) event is triggered continuously during a dragging operation, providing information about the blocks being dragged and their current position.
 
 {% raw %}
 ```typescript
-<BlockEditorComponent blockDrag={handleBlockDrag}></BlockEditorComponent>
+<BlockEditorComponent blockDragging={handleBlockDragging}></BlockEditorComponent>
 ```
 {% endraw %}
 
-## BlockDrop
+## BlockDropped
 
-The [blockDrop](../api/blockeditor/#blockdrop) event is triggered when blocks are successfully dropped at their destination during a drag-and-drop operation. This event includes data about the drop target and position.
+The [blockDropped](../api/blockeditor#blockdropped) event is triggered when blocks are successfully dropped at their destination during a drag-and-drop operation. This event includes data about the drop target and position.
 
 {% raw %}
 ```typescript
-<BlockEditorComponent blockDrop={handleBlockDrop}></BlockEditorComponent>
+<BlockEditorComponent blockDropped={handleBlockDropped}></BlockEditorComponent>
 ```
 {% endraw %}
 
 ## Focus
 
-The [focus](../api/blockeditor/#focus) event is triggered when the editor gains focus. This is useful for updating UI states and managing editor interactions.
+The [focus](../api/blockeditor#focus) event is triggered when the editor gains focus. This is useful for updating UI states and managing editor interactions.
 
 {% raw %}
 ```typescript
@@ -124,7 +84,7 @@ The [focus](../api/blockeditor/#focus) event is triggered when the editor gains 
 
 ## Blur
 
-The [blur](../api/blockeditor/#blur) event is triggered when the editor loses focus. This is commonly used for auto-saving content or hiding UI elements that should only be visible when the editor is active.
+The [blur](../api/blockeditor#blur) event is triggered when the editor loses focus. This is commonly used for auto-saving content or hiding UI elements that should only be visible when the editor is active.
 
 {% raw %}
 ```typescript
@@ -132,32 +92,22 @@ The [blur](../api/blockeditor/#blur) event is triggered when the editor loses fo
 ```
 {% endraw %}
 
-## KeyActionExecuted
+## BeforePasteCleanup
 
-The [keyActionExecuted](../api/blockeditor/#keyactionexecuted) event is triggered when a keyboard shortcut is executed. This provides information about the key combination used and the corresponding action performed.
+The [beforePasteCleanup](../api/blockeditor#beforepastecleanup) event is triggered before content is pasted into the editor. This event allows you to inspect, modify, or cancel the paste operation via its event arguments.
 
 {% raw %}
 ```typescript
-<BlockEditorComponent keyActionExecuted={handleKeyActionExecuted}></BlockEditorComponent>
+<BlockEditorComponent beforePasteCleanup={handleBeforePasteCleanup}></BlockEditorComponent>
 ```
 {% endraw %}
 
-## BeforePaste
+## AfterPasteCleanup
 
-The [beforePaste](../api/blockeditor/#beforepaste) event is triggered before content is pasted into the editor. This event allows you to inspect, modify, or cancel the paste operation via its event arguments.
-
-{% raw %}
-```typescript
-<BlockEditorComponent beforePaste={handleBeforePaste}></BlockEditorComponent>
-```
-{% endraw %}
-
-## AfterPaste
-
-The [afterPaste](../api/blockeditor/#afterpaste) event is triggered after content has been successfully pasted into the editor. This is useful for post-processing pasted content or updating related UI elements.
+The [afterPasteCleanup](../api/blockeditor#afterpastecleanup) event is triggered after content has been successfully pasted into the editor. This is useful for post-processing pasted content or updating related UI elements.
 
 {% raw %}
 ```typescript
-<BlockEditorComponent afterPaste={handleAfterPaste}></BlockEditorComponent>
+<BlockEditorComponent afterPasteCleanup={handleAfterPasteCleanup}></BlockEditorComponent>
 ```
 {% endraw %}

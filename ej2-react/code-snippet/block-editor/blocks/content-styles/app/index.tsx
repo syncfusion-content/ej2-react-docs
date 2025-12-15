@@ -2,28 +2,27 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
-import { BlockModel, ContentType } from '@syncfusion/ej2-blockeditor';
+import { BlockEditorComponent, BlockModel, ContentType } from '@syncfusion/ej2-react-blockeditor';
 
 function App() {
     const blocksData: BlockModel[] = [
       {
-        type: 'Heading',
-        props: { level: 2 },
+        blockType: 'Heading',
+        properties: { level: 2 },
         content: [
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'Content Styling Options'
             }
         ]
     },
     {
-        type: 'Paragraph',
+        blockType: 'Paragraph',
         content: [
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'Bold text: ',
-                props:{
+                properties:{
                 styles: { 
                     bold: true,
                     color: '#1976d2'
@@ -31,9 +30,9 @@ function App() {
             }
             },
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'This text is bold.',
-                props: {
+                properties: {
                 styles: { 
                     bold: true 
                 }
@@ -42,12 +41,12 @@ function App() {
         ]
     },
     {
-        type: 'Paragraph',
+        blockType: 'Paragraph',
         content: [
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'Italic text: ',
-                props: {
+                properties: {
                 styles: { 
                     bold: true,
                     color: '#1976d2'
@@ -55,9 +54,9 @@ function App() {
             }
             },
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'This text is italicized.',
-                props:{
+                properties:{
                 styles: { 
                     italic: true 
                 }
@@ -66,12 +65,12 @@ function App() {
         ]
     },
     {
-        type: 'Paragraph',
+        blockType: 'Paragraph',
         content: [
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'Text with color: ',
-                props:{
+                properties:{
                 styles: { 
                     bold: true,
                     color: '#1976d2'
@@ -79,9 +78,9 @@ function App() {
             }
             },
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'This text has custom color.',
-                props:{
+                properties:{
                 styles: { 
                     color: '#e91e63' 
                 }
@@ -90,12 +89,12 @@ function App() {
         ]
     },
     {
-        type: 'Paragraph',
+        blockType: 'Paragraph',
         content: [
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'Text with background: ',
-                props:{
+                properties:{
                 styles: { 
                     bold: true,
                     color: '#1976d2'
@@ -103,23 +102,23 @@ function App() {
             }
             },
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'This text has background color.',
-                props:{
+                properties:{
                 styles: { 
-                    bgColor: '#fff9c4' 
+                    backgroundColor: '#fff9c4' 
                 }
             }
             }
         ]
     },
     {
-        type: 'Paragraph',
+        blockType: 'Paragraph',
         content: [
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'Multiple styles: ',
-                props:{
+                properties:{
                 styles: { 
                     bold: true,
                     color: '#1976d2'
@@ -127,9 +126,9 @@ function App() {
             }
             },
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'This text combines multiple styles.',
-                props:{
+                properties:{
                 styles: { 
                     bold: true,
                     italic: true,

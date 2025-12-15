@@ -3,6 +3,11 @@ import * as React from 'react';
 import * as ReactDOM from "react-dom";
 
 function App() {
+    const currentUserModel = {
+        id: "user1",
+        user: "Albert"
+    };
+
     const emptyChatTemplate = () => {
         return (
           <div className="empty-chat-text">
@@ -15,7 +20,7 @@ function App() {
 
     return (
         // specifies the tag for render the Chat UI component
-        <ChatUIComponent emptyChatTemplate={emptyChatTemplate}></ChatUIComponent>
+        <ChatUIComponent user={currentUserModel} emptyChatTemplate={emptyChatTemplate}></ChatUIComponent>
     );
 }
 

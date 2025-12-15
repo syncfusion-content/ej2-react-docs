@@ -14,7 +14,7 @@ The React AI AssistView component provides a comprehensive set of events that en
 
 ## created
 
-The [created](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#created/) event is triggered when the AI AssistView component rendering is completed.
+The [created](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#created) event is triggered when the AI AssistView component rendering is completed.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +27,7 @@ The [created](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#
 
 ## promptRequest
 
-The [promptRequest](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptrequest/) event is triggered when a user sends a prompt request in the AI AssistView component.
+The [promptRequest](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#promptrequest) event is triggered when a user sends a prompt request in the AI AssistView component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -40,7 +40,7 @@ The [promptRequest](https://ej2.syncfusion.com/react/documentation/api/ai-assist
 
 ## promptChanged
 
-The [promptChanged](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptchanged/) event is triggered whenever the prompt text is modified in the AI AssistView component.
+The [promptChanged](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#promptchanged) event is triggered whenever the prompt text is modified in the AI AssistView component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -53,7 +53,7 @@ The [promptChanged](https://ej2.syncfusion.com/react/documentation/api/ai-assist
 
 ## beforeAttachmentUpload
 
-The [beforeAttachmentUpload](../api/ai-assistview/#beforeattachmentupload/) event is triggered before attached files begin uploading in the AI AssistView.
+The [beforeAttachmentUpload](../api/ai-assistview#beforeattachmentupload) event is triggered before attached files begin uploading in the AI AssistView.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -66,7 +66,7 @@ The [beforeAttachmentUpload](../api/ai-assistview/#beforeattachmentupload/) even
 
 ## attachmentUploadSuccess
 
-The [attachmentUploadSuccess](../api/ai-assistview/#attachmentuploadsuccess/) event is triggered when an attached file is successfully uploaded in the AI AssistView.
+The [attachmentUploadSuccess](../api/ai-assistview#attachmentuploadsuccess) event is triggered when an attached file is successfully uploaded in the AI AssistView.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -79,7 +79,7 @@ The [attachmentUploadSuccess](../api/ai-assistview/#attachmentuploadsuccess/) ev
 
 ## attachmentUploadFailure
 
-The [attachmentUploadFailure](../api/ai-assistview/#attachmentuploadfailure/) event is triggered when an attached file upload fails in the AI AssistView.
+The [attachmentUploadFailure](../api/ai-assistview#attachmentuploadfailure) event is triggered when an attached file upload fails in the AI AssistView.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -92,7 +92,7 @@ The [attachmentUploadFailure](../api/ai-assistview/#attachmentuploadfailure/) ev
 
 ## attachmentRemoved
 
-The [attachmentRemoved](../api/ai-assistview/#attachmentremoved/) event is triggered when an attached file is removed from the AI AssistView.
+The [attachmentRemoved](../api/ai-assistview#attachmentremoved) event is triggered when an attached file is removed from the AI AssistView.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -100,5 +100,18 @@ The [attachmentRemoved](../api/ai-assistview/#attachmentremoved/) event is trigg
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/ai-assistview/events/attachment-removed/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+## attachmentClick
+
+The [attachmentClick](../api/ai-assistview#attachmentclick) event is triggered when an attached file is clicked in the AI AssistView.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/ai-assistview/events/attachment-click/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/ai-assistview/events/attachment-click/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}

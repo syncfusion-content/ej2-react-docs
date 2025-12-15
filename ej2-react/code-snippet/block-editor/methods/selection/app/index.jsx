@@ -3,48 +3,48 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { useRef, useEffect } from 'react';
-import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
+import { BlockEditorComponent, ContentType } from '@syncfusion/ej2-react-blockeditor';
  
 function App() {
     const blockData = [
     {
         id: 'heading-block',
-        type: 'Heading',
-        props: { level: 1 },
+        blockType: 'Heading',
+        properties: { level: 1 },
         content: [
             {
-                type: 'Text',
+                contentType: ContentType.Text,
                 content: 'Welcome to Block Editor'
             }
         ]
     },
     {
         id: 'paragraph-1',
-        type: 'Paragraph',
+        blockType: 'Paragraph',
         content: [
             {
                 id: 'paragraph1-content',
-                type: 'Text',
+                contentType: ContentType.Text,
                 content: 'This is the first paragraph with some sample text content for selection demonstration.'
             }
         ]
     },
     {
         id: 'paragraph-2',
-        type: 'Paragraph',
+        blockType: 'Paragraph',
         content: [
             {
-                type: 'Text',
+                contentType: ContentType.Text,
                 content: 'This is the second paragraph that can be used for various selection operations.'
             }
         ]
     },
     {
         id: 'list-block',
-        type: 'BulletList',
+        blockType: 'BulletList',
         content: [
             {
-                type: 'Text',
+                contentType: ContentType.Text,
                 content: 'First list item'
             }
         ]
@@ -87,7 +87,7 @@ function App() {
                 const selectedBlocks = editorRef.current.getSelectedBlocks();
                 if (outputRef.current) {
                     if (selectedBlocks && selectedBlocks.length > 0) {
-                        const blockInfo = selectedBlocks.map(block => `ID: ${block.id}, Type: ${block.type}`).join('\n');
+                        const blockInfo = selectedBlocks.map(block => `ID: ${block.id}, Type: ${block.blockType}`).join('\n');
                         outputRef.current.textContent = `Selected blocks (${selectedBlocks.length}):\n${blockInfo}`;
                     } else {
                         outputRef.current.textContent = 'No blocks are currently selected';
@@ -207,7 +207,7 @@ function App() {
  <div>
              <div id="controls">
             <h3>Selection and Cursor Methods</h3>
-            <div class="button-group">
+            <div className="button-group">
                 <button id="setSelectionBtn">Set Text Selection</button>
                 <button id="setCursorBtn">Set Cursor Position</button>
                 <button id="getSelectedBlocksBtn">Get Selected Blocks</button>

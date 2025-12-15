@@ -2,18 +2,17 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BlockEditorComponent, AfterPasteEventArgs } from '@syncfusion/ej2-react-blockeditor';
+import { BlockEditorComponent, AfterPasteCleanupEventArgs } from '@syncfusion/ej2-react-blockeditor';
 
 function App() {
     
-const blocksData = [
-    {
-        id: 'demo-block',
-        type: 'Paragraph'
-    }
-];
+    const blocksData = [
+        {
+            blockType: 'Paragraph'
+        }
+    ];
 
-    const handleAfterPaste = (args: AfterPasteEventArgs) => {
+    const handleAfterPaste = (args: AfterPasteCleanupEventArgs) => {
         displayOutput(`After Paste Event: Processed content length: ${args.content.length} characters`);
     };
 
@@ -37,7 +36,7 @@ Copy content from the test area above and paste it into the editor to see the cl
         <div>
             <div id="controls">
         <h4>Test Content to Copy and Paste:</h4>
-        <div class="test-content">
+        <div className="test-content">
                 <div id="sampleContent" contentEditable={true}>
       <h2 style={{ color: 'red', fontWeight: 'bold', fontSize: '24px' }}>
         Formatted Heading
@@ -58,11 +57,11 @@ Copy content from the test area above and paste it into the editor to see the cl
         <BlockEditorComponent
             id="blockeditor"
             blocks={blocksData}
-            pasteSettings={{
+            pasteCleanupSettings={{
                 allowedStyles: ['text-decoration'],
                 deniedTags: ['script', 'iframe']
             }}
-            afterPaste={handleAfterPaste}
+            afterPasteCleanup={handleAfterPaste}
         ></BlockEditorComponent>
                 <div id="output"></div>
                 </div>

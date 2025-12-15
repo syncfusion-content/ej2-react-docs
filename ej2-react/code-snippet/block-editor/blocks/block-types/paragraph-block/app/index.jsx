@@ -2,16 +2,15 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
-import { ContentType } from '@syncfusion/ej2-blockeditor';
+import { BlockEditorComponent, ContentType } from '@syncfusion/ej2-react-blockeditor';
 
 function App() {
   const blocksData = [
      {
-        type: 'Paragraph',
+        blockType: 'Paragraph',
         content: [
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'This is a paragraph block example.'
             }
         ]

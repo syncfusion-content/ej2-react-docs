@@ -2,8 +2,7 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BlockEditorComponent} from '@syncfusion/ej2-react-blockeditor';
-import {  BlockModel,  ContentType} from '@syncfusion/ej2-blockeditor';
+import { BlockEditorComponent, BlockModel,  ContentType } from '@syncfusion/ej2-react-blockeditor';
 
 function App() {
   const editorRef = React.useRef<BlockEditorComponent>(null);
@@ -11,31 +10,31 @@ function App() {
   const blockData: BlockModel[] = [
     {
       id: 'block-1',
-      type: 'Heading',
-      props: { level: 1 },
+      blockType: 'Heading',
+      properties: { level: 1 },
       content: [
         {
-          type: ContentType.Text,
+          contentType: ContentType.Text,
           content: 'Sample Heading'
         }
       ]
     },
     {
       id: 'block-2',
-      type: 'Paragraph',
+      blockType: 'Paragraph',
       content: [
         {
-          type: ContentType.Text,
+          contentType: ContentType.Text,
           content: 'This is a sample paragraph block.'
         }
       ]
     },
     {
       id: 'block-3',
-      type: 'Paragraph',
+      blockType: 'Paragraph',
       content: [
         {
-          type: ContentType.Text,
+          contentType: ContentType.Text,
           content: 'This is another paragraph block.'
         }
       ]
@@ -57,10 +56,10 @@ function App() {
     addBlockBtn!.addEventListener('click', () => {
       const newBlock: BlockModel = {
         id: 'new-block',
-        type: 'Paragraph',
+        blockType: 'Paragraph',
         content: [
           {
-            type: ContentType.Text,
+            contentType: ContentType.Text,
             content: 'This is a newly added block'
           }
         ]
@@ -77,7 +76,7 @@ function App() {
     getBlockBtn!.addEventListener('click', () => {
       const block = editorInstance.getBlock('block-1');
       if (block && block.content) {
-        displayOutput(`Block found:\nID: ${block.id}\nType: ${block.type}\nContent: ${block.content[0].content}`);
+        displayOutput(`Block found:\nID: ${block.id}\nType: ${block.blockType}\nContent: ${block.content[0].content}`);
       } else {
         displayOutput('Block with ID "block-1" not found');
       }
@@ -93,7 +92,7 @@ function App() {
         indent: 1,
         content: [
           {
-            type: ContentType.Text,
+            contentType: ContentType.Text,
             content: 'Updated content'
           }
         ]
@@ -124,7 +123,7 @@ function App() {
     <div>
       <div id="controls">
             <h3>Block Management Methods</h3>
-            <div class="button-group">
+            <div className="button-group">
                 <button id="addBlockBtn">Add Block</button>
                 <button id="removeBlockBtn">Remove Block</button>
                 <button id="getBlockBtn">Get Block</button>

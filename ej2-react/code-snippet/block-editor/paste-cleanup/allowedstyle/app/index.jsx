@@ -8,8 +8,7 @@ function App() {
     
     const blocksData = [
     {
-        id: 'demo-block',
-        type: 'Paragraph'
+        blockType: 'Paragraph'
     }
 ];
 
@@ -37,7 +36,7 @@ Copy content from the test area above and paste it into the editor to see the cl
        <div>
             <div id="controls">
         <h4>Test Content to Copy and Paste:</h4>
-        <div class="test-content">
+        <div className="test-content">
                 <div id="sampleContent" contentEditable={true}>
       <h2 style={{ color: 'red', fontWeight: 'bold', fontSize: '24px' }}>
         Formatted Heading
@@ -58,11 +57,11 @@ Copy content from the test area above and paste it into the editor to see the cl
         <BlockEditorComponent
             id="blockeditor"
             blocks={blocksData}
-            pasteSettings={{
+            pasteCleanupSettings={{
                 allowedStyles: ['text-decoration'],
                 deniedTags: ['script', 'iframe']
             }}
-            afterPaste={handleAfterPaste}
+            afterPasteCleanup={handleAfterPaste}
         ></BlockEditorComponent>
           <div id="output"></div>
                 </div>

@@ -2,44 +2,67 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BlockEditorComponent, BlockModel, ContentType, BlockActionMenuOpenEventArgs, BlockActionMenuCloseEventArgs, BlockActionItemClickEventArgs} from '@syncfusion/ej2-react-blockeditor';
+import { BlockEditorComponent, BlockModel, ContentType, BlockActionMenuOpeningEventArgs, BlockActionMenuClosingEventArgs, BlockActionItemSelectEventArgs} from '@syncfusion/ej2-react-blockeditor';
 
 function App() {
   const blocksData: BlockModel[] = [
   {
-    id: 'title-block',
-    type: 'Heading',
-    props: { level: 1 },
+    blockType: 'Heading',
+    properties: { level: 1 },
     content: [
       {
-        type: ContentType.Text,
+        contentType: ContentType.Text,
         content: 'Block Action Menu Demo'
       }
     ]
   },
   {
-    id: 'intro-block',
-    type: 'Quote',
+    blockType: 'Quote',
     content: [
       {
-        type: ContentType.Text,
+        contentType: ContentType.Text,
         content: 'Hover over any block and click the drag handle icon to see custom actions.'
       }
     ]
   }
 ];
-  const handleMenuOpen = (args: BlockActionMenuOpenEventArgs) => {
-    console.log('Menu opened for block:', args.blockId);
-  };
 
-  const handleMenuClose = (args: BlockActionMenuCloseEventArgs) => {
-    console.log('Menu closed for block:', args.blockId);
-  };
-
-  const handleItemClick = (args: BlockActionItemClickEventArgs) => {
-    console.log('Action clicked:', args.item.id, 'on block:', args.blockId);
-    // You can add custom logic here for each action
-  };
+// Block Action Menu Configuration
+    const blockActionMenuSettings = {
+        enable: true,
+        popupWidth: '180px',
+        popupHeight: '110px',
+        enableTooltip: false,
+        // Custom action items
+        items: [
+            {
+                id: 'highlight-action',
+                label: 'Highlight Block',
+                iconCss: 'e-icons e-highlight',
+                tooltip: 'Highlight this block'
+            },
+            {
+                id: 'copy-content-action',
+                label: 'Copy Content',
+                iconCss: 'e-icons e-copy',
+                tooltip: 'Copy block content to clipboard'
+            },
+            {
+                id: 'block-info-action',
+                label: 'Block Info',
+                tooltip: 'Show block information'
+            }
+        ],
+        opening: (args: BlockActionMenuOpeningEventArgs) => {
+            // Your actions here
+        },
+        closing: (args: BlockActionMenuClosingEventArgs) => {
+            // Your actions here
+        },
+        itemSelect: (args: BlockActionItemSelectEventArgs) => {
+            // Handle custom block actions
+        }
+    }
 
   return (
     <div>
@@ -58,34 +81,7 @@ function App() {
       <BlockEditorComponent
         id="blockeditor"
         blocks={blocksData}
-        blockActionsMenu={{
-          enable: true,
-          popupWidth: '180px',
-          popupHeight: '110px',
-          enableTooltip: false,
-          items: [
-            {
-              id: 'highlight-action',
-              label: 'Highlight Block',
-              iconCss: 'e-icons e-highlight',
-              tooltip: 'Highlight this block'
-            },
-            {
-              id: 'copy-content-action',
-              label: 'Copy Content',
-              iconCss: 'e-icons e-copy',
-              tooltip: 'Copy block content to clipboard'
-            },
-            {
-              id: 'block-info-action',
-              label: 'Block Info',
-              tooltip: 'Show block information'
-            }
-          ],
-          open: handleMenuOpen,
-          close: handleMenuClose,
-          itemClick: handleItemClick
-        }}
+        blockActionMenuSettings={blockActionMenuSettings}
       />
     </div>
   );

@@ -6,114 +6,106 @@ import { BlockEditorComponent, BlockModel, ContentType, LabelSettingsModel } fro
 
 function App() {
     const labelSettings: LabelSettingsModel = {
-    triggerChar: '#',
-    labelItems: [
-        { id: 'bug', text: 'Bug', labelColor: '#ff5252', groupHeader: 'Status' },
-        { id: 'task', text: 'Task', labelColor: '#90caf9', groupHeader: 'Status' },
-        { id: 'feature', text: 'Feature', labelColor: '#81c784', groupHeader: 'Status' },
-        { id: 'enhancement', text: 'Enhancement', labelColor: '#ba68c8', groupHeader: 'Status' },
-        { id: 'low', text: 'Low Priority', labelColor: '#c5e1a5', groupHeader: 'Priority' },
-        { id: 'medium', text: 'Medium Priority', labelColor: '#fff59d', groupHeader: 'Priority' },
-        { id: 'high', text: 'High Priority', labelColor: '#ffab91', groupHeader: 'Priority' },
-        { id: 'critical', text: 'Critical', labelColor: '#ef9a9a', groupHeader: 'Priority' }
-    ]
-};
+        triggerChar: '#',
+        items: [
+            { id: 'bug', text: 'Bug', labelColor: '#ff5252', groupBy: 'Status' },
+            { id: 'task', text: 'Task', labelColor: '#90caf9', groupBy: 'Status' },
+            { id: 'feature', text: 'Feature', labelColor: '#81c784', groupBy: 'Status' },
+            { id: 'enhancement', text: 'Enhancement', labelColor: '#ba68c8', groupBy: 'Status' },
+            { id: 'low', text: 'Low Priority', labelColor: '#c5e1a5', groupBy: 'Priority' },
+            { id: 'medium', text: 'Medium Priority', labelColor: '#fff59d', groupBy: 'Priority' },
+            { id: 'high', text: 'High Priority', labelColor: '#ffab91', groupBy: 'Priority' },
+            { id: 'critical', text: 'Critical', labelColor: '#ef9a9a', groupBy: 'Priority' }
+        ]
+    };
 
-const blocksData: BlockModel[] = [
-    {
-        id: 'block-1',
-        type: 'Heading',
-        props: { level: 1 },
-        content: [
-            {
-                type: ContentType.Text,
-                content: 'Project Planning with Custom Labels'
-            }
-        ]
-    },
-    {
-        id: 'block-2',
-        type: 'Paragraph',
-        content: [
-            {
-                type: ContentType.Text,
-                content: 'Type # to add status labels to your tasks.'
-            }
-        ]
-    },
-    {
-        id: 'block-3',
-        type: 'Paragraph',
-        content: [
-            {
-                type: ContentType.Text,
-                content: 'Fix homepage layout issue - '
-            },
-            {
-                type: ContentType.Label,
-                props: { labelId: 'bug' }
-            },
-            {
-                type: ContentType.Text,
-                content: ' '
-            },
-            {
-                type: ContentType.Label,
-                props: { lableId: 'high' }
-            }
-        ]
-    },
-    {
-        id: 'block-4',
-        type: 'Paragraph',
-        content: [
-            {
-                type: ContentType.Text,
-                content: 'Update user documentation - '
-            },
-            {
-                type: ContentType.Label,
-                props: { labelId: 'task' }
-            },
-            {
-                type: ContentType.Text,
-                content: ' '
-            },
-            {
-                type: ContentType.Label,
-                props: { labelId: 'medium' }
-            }
-        ]
-    },
-    {
-        id: 'block-5',
-        type: 'Paragraph',
-        content: [
-            {
-                type: ContentType.Text,
-                content: 'Implement payment gateway - '
-            },
-            {
-                type: ContentType.Label,
-                props: { lableId: 'feature' }
-            },
-            {
-                type: ContentType.Text,
-                content: ' '
-            },
-            {
-                type: ContentType.Label,
-                props: { labelId: 'critical' }
-            }
-        ]
-    }
-];
+    const blocksData: BlockModel[] = [
+        {
+            blockType: 'Heading',
+            properties: { level: 1 },
+            content: [
+                {
+                    contentType: ContentType.Text,
+                    content: 'Project Planning with Custom Labels'
+                }
+            ]
+        },
+        {
+            blockType: 'Paragraph',
+            content: [
+                {
+                    contentType: ContentType.Text,
+                    content: 'Type # to add status labels to your tasks.'
+                }
+            ]
+        },
+        {
+            blockType: 'Paragraph',
+            content: [
+                {
+                    contentType: ContentType.Text,
+                    content: 'Fix homepage layout issue - '
+                },
+                {
+                    contentType: ContentType.Label,
+                    properties: { labelId: 'bug' }
+                },
+                {
+                    contentType: ContentType.Text,
+                    content: ' '
+                },
+                {
+                    contentType: ContentType.Label,
+                    properties: { labelId: 'high' }
+                }
+            ]
+        },
+        {
+            blockType: 'Paragraph',
+            content: [
+                {
+                    contentType: ContentType.Text,
+                    content: 'Update user documentation - '
+                },
+                {
+                    contentType: ContentType.Label,
+                    properties: { labelId: 'task' }
+                },
+                {
+                    contentType: ContentType.Text,
+                    content: ' '
+                },
+                {
+                    contentType: ContentType.Label,
+                    properties: { labelId: 'medium' }
+                }
+            ]
+        },
+        {
+            blockType: 'Paragraph',
+            content: [
+                {
+                    contentType: ContentType.Text,
+                    content: 'Implement payment gateway - '
+                },
+                {
+                    contentType: ContentType.Label,
+                    properties: { labelId: 'feature' }
+                },
+                {
+                    contentType: ContentType.Text,
+                    content: ' '
+                },
+                {
+                    contentType: ContentType.Label,
+                    properties: { labelId: 'critical' }
+                }
+            ]
+        }
+    ];
+
     return (
-        <BlockEditorComponent
-            id="blockeditor_labels"
-            blocks={blocksData}
-            labelSettings={labelSettings}
-        ></BlockEditorComponent>
+        <BlockEditorComponent id="blockeditor_labels" blocks={blocksData} labelSettings={labelSettings}></BlockEditorComponent>
     );
 }
 

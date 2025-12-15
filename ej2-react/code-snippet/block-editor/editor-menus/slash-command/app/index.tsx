@@ -2,63 +2,54 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BlockEditorComponent, BlockModel, ContentType, CommandItemModel, CommandMenuOpenEventArgs, CommandMenuCloseEventArgs, CommandQueryFilteringEventArgs, CommandItemClickedEventArgs } from '@syncfusion/ej2-react-blockeditor';
-
-const commandItems: CommandItemModel[] = [
-    {
-        id: 'line-cmd',
-        type: 'Divider',
-        groupHeader: 'Utility',
-        label: 'Insert a Line',
-        iconCss: 'e-icons e-divider',
-    },
-    {
-        id: 'timestamp-cmd',
-        groupHeader: 'Actions',
-        label: 'Insert Timestamp',
-        iconCss: 'e-icons e-schedule',
-    }
-];
-
-const blocksData: BlockModel[] = [
-    {
-        id: 'demo-block',
-        type: 'Paragraph',
-        content: [
-            {
-                type: ContentType.Text,
-                content: 'Type "/" anywhere in this editor to open the custom slash command menu.'
-            }
-        ]
-    }
-];
+import { BlockEditorComponent, BlockModel, ContentType, CommandFilteringEventArgs, CommandItemSelectEventArgs, CommandMenuSettingsModel  } from '@syncfusion/ej2-react-blockeditor';
 
 function App() {
-    const handleItemClicked = (args: CommandItemClickedEventArgs) => {
-        // Handle custom command actions
-        console.log('Command clicked:', args.item); // Debug
-    };
+    // Slash Command Menu Configuration
+    const commandMenuSettings: CommandMenuSettingsModel = {
+        popupWidth: '350px',
+        popupHeight: '400px',
+        // Custom command items
+        commands: [
+            {
+                id: 'line-cmd',
+                type: 'Divider',
+                groupBy: 'Utility',
+                label: 'Insert a Line',
+                iconCss: 'e-icons e-divider',
+            },
+            {
+                id: 'timestamp-cmd',
+                groupBy: 'Actions',
+                label: 'Insert Timestamp',
+                iconCss: 'e-icons e-schedule',
+            }
+        ],
+        itemSelect: (args: CommandItemSelectEventArgs) => {
+            // Handle custom command actions
+        },
+        filtering: (args: CommandFilteringEventArgs) => {
+            // Your actions here
+        }
+    }
 
-    const handleOpen = (args: CommandMenuOpenEventArgs) => {
-        // Your actions here
-        console.log('Command menu opened:', args); // Debug
-    };
-
-    const handleClose = (args: CommandMenuCloseEventArgs) => {
-        // Your actions here
-        console.log('Command menu closed:', args); // Debug
-    };
-
-    const handleQueryFiltering = (args: CommandQueryFilteringEventArgs) => {
-        // Your actions here
-        console.log('Query filtering:', args); // Debug
-    };
+    const blocksData: BlockModel[] = [
+        {
+            blockType: 'Paragraph',
+            content: [
+                {
+                    contentType: ContentType.Text,
+                    content: 'Type "/" anywhere in this editor to open the custom slash command menu.'
+                }
+            ]
+        }
+    ];
 
     return (
         <div>
             <div id="controls">
         <h3>Slash Command Menu Configuration Demo</h3>
-        <div class="instructions">
+        <div className="instructions">
           <p><strong>Instructions:</strong></p>
           <ol>
             <li>
@@ -73,16 +64,7 @@ function App() {
             id="blockeditor"
             blocks={blocksData}
             created={() => console.log('BlockEditor initialized')} // Debug initialization
-            commandMenu={{
-                popupWidth: '350px',
-                popupHeight: '400px',
-                enableTooltip: false,
-                commands: commandItems,
-                itemClicked: handleItemClicked,
-                open: handleOpen,
-                close: handleClose,
-                queryFiltering: handleQueryFiltering
-            }}
+            commandMenuSettings={commandMenuSettings}
             style={{ border: '1px solid red' }} // Temporary styling to confirm rendering
         ></BlockEditorComponent>
         </div>

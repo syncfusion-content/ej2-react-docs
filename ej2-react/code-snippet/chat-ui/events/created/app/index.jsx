@@ -7,10 +7,14 @@ function App() {
     const created = () => {
         // Your required action here
     }
+    const currentUserModel = {
+        id: "user1",
+        user: "Albert"
+    };
 
     return (
         // specifies the tag for render the Chat UI component
-        <ChatUIComponent created={created}></ChatUIComponent>
+        <ChatUIComponent user={currentUserModel} created={created}></ChatUIComponent>
     );
 }
 

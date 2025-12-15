@@ -3,22 +3,19 @@
 { /* Import the BlockEditor.*/ }
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
-import { ContentType } from '@syncfusion/ej2-blockeditor';
+import { BlockEditorComponent, ContentType } from '@syncfusion/ej2-react-blockeditor';
 
 function App() {
   const blocksData = [
     {
-      type: 'Callout',
-      props:{
+      blockType: 'Callout',
+      properties:{
       children: [
         {
-          id: 'callout-content',
-          type: 'Paragraph',
+          blockType: 'Paragraph',
           content: [
             {
-              id: 'callout-content-1',
-              type: ContentType.Text,
+              contentType: ContentType.Text,
               content:
                 'Important information: This is a callout block used to highlight important content.'
             }
@@ -30,10 +27,7 @@ function App() {
   ];
 
   return (
-    <BlockEditorComponent
-      id="blockeditor"
-      blocks={blocksData}
-    ></BlockEditorComponent>
+    <BlockEditorComponent id="blockeditor" blocks={blocksData}></BlockEditorComponent>
   );
 }
 export default App;

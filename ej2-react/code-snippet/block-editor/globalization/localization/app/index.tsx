@@ -2,8 +2,7 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
-import { BlockModel, ContentType } from '@syncfusion/ej2-blockeditor';
+import { BlockEditorComponent, BlockModel, ContentType } from '@syncfusion/ej2-react-blockeditor';
 import { L10n } from '@syncfusion/ej2-base';
 
 function App() {
@@ -45,29 +44,26 @@ function App() {
 // Initial blocks data
 const blocksData: BlockModel[] = [
   {
-    id: 'block-1',
-    type: 'Heading',
-    props: { level: 1 },
+    blockType: 'Heading',
+    properties: { level: 1 },
     content: [
       {
-        type: ContentType.Text,
+        contentType: ContentType.Text,
         content: 'Sample Heading'
       }
     ]
   },
   {
-    id: 'block-2',
-    type: 'Paragraph',
+    blockType: 'Paragraph',
     content: [
       {
-        type: ContentType.Text,
+        contentType: ContentType.Text,
         content: 'This is a sample paragraph block.'
       }
     ]
   },
   {
-    id: 'block-3',
-    type: 'Paragraph'
+    blockType: 'Paragraph'
   }
 ];
   return (

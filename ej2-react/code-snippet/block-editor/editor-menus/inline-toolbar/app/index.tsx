@@ -2,55 +2,48 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BlockEditorComponent, BlockModel, ContentType, ToolbarItemModel, ToolbarOpenEventArgs, ToolbarCloseEventArgs, ToolbarItemClickedEventArgs } from '@syncfusion/ej2-react-blockeditor';
+import { BlockEditorComponent, BlockModel, ContentType, ToolbarItemClickEventArgs } from '@syncfusion/ej2-react-blockeditor';
 
 function App() {
     
-const customToolbarItems: ToolbarItemModel[] = [
-    { id: 'clear', iconCss: 'e-icons e-format-painter', item: 'Custom', tooltip: 'Format Painter' },
-    { id: 'highlight', iconCss: 'e-icons e-highlight', item: 'Custom', tooltip: 'Highlight' },
-];
+const customToolbarItems = [ 'Bold', 'Italic' ];
 
 const blocksData: BlockModel[] = [
     {
-        id: 'title-block',
-        type: 'Heading',
-        props: { level: 1 },
+        blockType: 'Heading',
+        properties: { level: 1 },
         content: [
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'Inline Toolbar Demo'
             }
         ]
     },
     {
-        id: 'intro-block',
-        type: 'Quote',
+        blockType: 'Quote',
         content: [
             {
-                type: ContentType.Text,
+                contentType: ContentType.Text,
                 content: 'Select any text in the editor to open the Inline Toolbar'
             }
         ]
     }
 ];
-    const handleOpen = (args: ToolbarOpenEventArgs) => {
-        // Your actions here
-    };
 
-    const handleClose = (args: ToolbarCloseEventArgs) => {
-        // Your actions here
-    };
-
-    const handleItemClicked = (args: ToolbarItemClickedEventArgs) => {
-        // Handle custom actions here
-    };
+const inlineToolbarSettings = {
+        popupWidth: '100px',
+        enable: true,
+        items: customToolbarItems,
+        itemClick: (args: ToolbarItemClickEventArgs) => {
+            // Handle custom actions here
+        }
+    }
 
     return (
         <div>
             <div id="controls">
             <h3>Inline Toolbar Configuration Demo</h3>
-            <div class="instructions">
+            <div className="instructions">
                 <p><strong>Instructions:</strong></p>
                 <ol>
                     <li>Select any text in the editor to open the Inline Toolbar</li>
@@ -62,15 +55,7 @@ const blocksData: BlockModel[] = [
         <BlockEditorComponent
             id="blockeditor"
             blocks={blocksData}
-            inlineToolbar={{
-                width: '80px',
-                enable: true,
-                items: customToolbarItems,
-                enableTooltip: true,
-                open: handleOpen,
-                close: handleClose,
-                itemClicked: handleItemClicked
-            }}
+            inlineToolbarSettings={inlineToolbarSettings}
         ></BlockEditorComponent>
            </div>
     );

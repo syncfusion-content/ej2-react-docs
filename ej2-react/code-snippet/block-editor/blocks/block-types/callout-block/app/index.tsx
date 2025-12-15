@@ -3,22 +3,19 @@
 { /* Import the BlockEditor.*/ }
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
-import { BlockModel, ContentType } from '@syncfusion/ej2-blockeditor';
+import { BlockEditorComponent, BlockModel, ContentType } from '@syncfusion/ej2-react-blockeditor';
 
 function App() {
     const blocksData: BlockModel[] = [
     {
-      type: 'Callout',
-      props:{
+      blockType: 'Callout',
+      properties:{
       children: [
         {
-          id: 'callout-content',
-          type: 'Paragraph',
+          blockType: 'Paragraph',
           content: [
             {
-              id: 'callout-content-1',
-              type: ContentType.Text,
+              contentType: ContentType.Text,
               content:
                 'Important information: This is a callout block used to highlight important content.'
             }
