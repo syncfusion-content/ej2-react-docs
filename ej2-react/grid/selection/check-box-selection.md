@@ -122,7 +122,7 @@ export default App;
 
  {% previewsample "page.domainurl/code-snippet/grid/selection-cs4" %}
 
-## Hide selectall checkbox in column header 
+## Hide select-all checkbox in column header 
 
 You can hide the select all checkbox in the column header of the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid. This is a useful feature in various scenarios where you want to customize the appearance and behavior of the checkboxes within the grid.
 
@@ -155,92 +155,13 @@ To achieve this, you can use the [rowDataBound](https://ej2.syncfusion.com/react
 
 In the following sample, the selection of specific rows has been prevented based on the `isSelectable` argument in the `rowDataBound` event.
 
-{% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-{% raw %}
-import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Edit, Toolbar, Filter, Selection, Page } from '@syncfusion/ej2-react-grids';
-import * as React from 'react';
-import { data } from './datasource';
-function App() {
-    const settings = { persistSelection: true, type: 'Multiple' };
-    const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
-    const toolbarOptions = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'];
-    const filterOptions = { type: 'CheckBox' };
-    const load = () => {
-        for (let i = 0; i < data.length; i++) {
-            data[i]['List'] = i + 1;
-        }
-    }
-    const rowDataBound = (args) => {
-        args.isSelectable = args.data.List % 5 === 0;
-    }
-    return <GridComponent dataSource={data} selectionSettings={settings}
-        editSettings={editSettings} toolbar={toolbarOptions} filterSettings={filterOptions} allowPaging={true} allowFiltering={true} pageSettings={{ pageSize: 5 }}
-        rowDataBound={rowDataBound} load={load}>
-        <ColumnsDirective>
-            <ColumnDirective type='checkbox' width='50' />
-            <ColumnDirective field='List' width='120' headerText="List" />
-            <ColumnDirective field='OrderID' headerText="Order ID" isPrimaryKey="true" width='150' />
-            <ColumnDirective field='CustomerID' headerText="Customer ID" width='150' />
-            <ColumnDirective field='EmployeeID' headerText="Employee ID" width='150' />
-            <ColumnDirective field='ShipCity' headerText="Ship City" width='150' />
-        </ColumnsDirective>
-        <Inject services={[Edit, Toolbar, Filter, Selection, Page]} />
-    </GridComponent>
-};
-export default App;
-{% endraw %}
-{% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-{% raw %}
-import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Edit, Toolbar, Filter, Selection, Page, ToolbarItems, FilterSettingsModel, RowDataBoundEventArgs, EditSettingsModel, SelectionSettingsModel} from '@syncfusion/ej2-react-grids';
-import * as React from 'react';
-import { data } from './datasource';
-function App() {
-  const settings: SelectionSettingsModel = { persistSelection: true, type:'Multiple' };
-  const editSettings: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
-  const toolbarOptions: ToolbarItems[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'];
-  const filterOptions: FilterSettingsModel = { type: 'CheckBox' };
-  const load = () => {
-    for (let i = 0; i < data.length; i++) {
-      data[i]['List'] = i + 1;
-    }
-  }
-  const rowDataBound = (args: RowDataBoundEventArgs) => {
-    args.isSelectable = args.data.List % 5 === 0;
-  }
-    return <GridComponent dataSource={data} selectionSettings={settings}
-    editSettings={editSettings} toolbar={toolbarOptions} filterSettings={filterOptions} allowPaging={true} allowFiltering={true} pageSettings={{pageSize : 5}}
-    rowDataBound={rowDataBound} load={load}>
-            <ColumnsDirective>
-              <ColumnDirective type='checkbox' width='50'/>
-              <ColumnDirective field='List' width='120' headerText="List"/>
-              <ColumnDirective field='OrderID' headerText="Order ID" isPrimaryKey="true" width='150'/>
-              <ColumnDirective field='CustomerID' headerText="Customer ID" width='150'/>
-              <ColumnDirective field='EmployeeID' headerText="Employee ID" width='150'/>
-              <ColumnDirective field='ShipCity' headerText="Ship City" width='150'/>
-            </ColumnsDirective>
-            <Inject services={[Edit, Toolbar, Filter, Selection, Page]}/>
-            </GridComponent>
-};
-export default App;
-{% endraw %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/selection-cs5/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/selection-cs5/app/datasource.tsx %}
-{% endhighlight %}
-{% endtabs %}
+## Conditional row selection
 
- {% previewsample "page.domainurl/code-snippet/grid/selection-cs5" %}
+The `isRowSelectable` callback determines which rows in the Data Grid can be selected. It evaluates each row's data and returns **true** for rows that should be selectable and **false** for those that should not.
 
-## Partial selection using isRowSelectable
+**Local data:** The callback runs once when the grid initializes and evaluates all records because the full dataset is already available on the client.
 
-The `isRowSelectable` callback in Syncfusion's EJ2 Grid allows control over which rows users can select. It uses a simple callback that runs before the grid loads the data. This callback checks each row data and returns **true** if the row can be selected, or **false** for non-selectable rows.
-
-For local data, the callback checks all items just once when the grid first loads. For remote data, it only checks the rows shown on the current page when the grid first appears. It re-checks them every time an action occurs, such as changing pages, filtering, or sorting.
+**Remote data:** The callback runs only for the rows displayed on the current page when the grid first loads. It runs again whenever the grid fetches new data such as during paging, filtering, or sorting to re-evaluate the newly visible rows.
 
 In the example below, it prevents selection of rows with canceled orders.
 
@@ -261,7 +182,7 @@ In the example below, it prevents selection of rows with canceled orders.
 
 {% previewsample "page.domainurl/code-snippet/grid/prevent-checkbox-selection" %}
 
-## How to select single row in checkbox selection mode
+## Select single row in checkbox selection mode
 
 The React Grid allows you to select only one row at a time within the Grid. This feature is particularly useful when you want to ensure that only a single row is selected, and any previous selections are cleared when a new row is selected.
 

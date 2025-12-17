@@ -30,19 +30,17 @@ In the following demo, the **Lunch Break** cell spans multiple rows in the "1:00
 Row spanning in the React TreeGrid has the following limitations:
 
 * The [updateCell](https://ej2.syncfusion.com/react/documentation/api/treegrid/index-default#updatecell) method does not support row spanning.
-* Rowx spanning is not compatible with the following features:
+* Row spanning is not compatible with the following features:
     1. Virtual scrolling
     2. Infinite scrolling
 
 > When using row spanning, ensure that the spanned cells do not interfere with TreeGrid operations such as sorting, filtering, or editing, as this may lead to unexpected behavior.
 
-## Row spanning using enableRowSpan property
+## Row spanning implementation through API
 
-The Syncfusion React TreeGrid introduces a simplified approach to vertically merge cells with identical values in the same column across consecutive rows.
+The Syncfusion React TreeGrid provides an API-based approach to vertically merge cells with identical values in the same column across consecutive rows.
 
-The row spanning feature in the Syncfusion React TreeGrid can be enabled using `enableRowSpan` property which significantly enhances readability and delivers a clean, professional look by eliminating repetitive data in columns such as "Status", "Permit Status", "Inspection Status" and "Punch List Status".
-
-To enable row spanning, set the `enableRowSpan` property to **true** in the TreeGrid configuration.
+The row spanning feature in the Syncfusion React TreeGrid can be enabled using `enableRowSpan` property to **true** in the TreeGrid configuration, which significantly enhances readability and delivers a cleaner layout by eliminating repetitive data in columns such as "Status", "Permit Status", "Inspection Status" and "Punch List Status".
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -68,7 +66,3 @@ Row spanning feature is not compatible with all the features which are available
 * Detail Template
 * Editing
 * Export
-
-## See Also
-
-* [Column spanning in Syncfusion<sup style="font-size:70%">&reg;</sup> TreeGrid](https://ej2.syncfusion.com/react/documentation/treegrid/columns/column-spanning)
