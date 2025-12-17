@@ -1,10 +1,7 @@
-
-
 import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-
-    function App() {
+function App() {
         return (
              <div className="App">
                 <div className="textboxes">

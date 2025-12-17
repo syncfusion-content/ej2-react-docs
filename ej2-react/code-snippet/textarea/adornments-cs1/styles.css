@@ -1,0 +1,148 @@
+.content-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    min-width: 185px;
+}
+
+.content-wrapper div.row {
+    padding: 15px 0px;
+}
+
+#textarea-sample .e-multi-line-input {
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+    .content-wrapper {
+        width: 92%;
+    }
+    .col-xs-6,
+    .col-xs-4,
+    .col-xs-12 {
+        padding: 10px 5px;
+        width: 100%;
+    }
+    .content-wrapper div.row {
+        padding: 0px;
+    }
+}
+
+#description td {
+    vertical-align: top;
+}
+.e-outline.e-control-wrapper {
+    margin-top: 0;
+}
+.fabric .row.material,
+.bootstrap .row.material,
+.bootstrap4 .row.material,
+.highcontrast .row.material,
+.tailwind .row.material,
+.tailwind3 .row.material,
+.bootstrap5 .row.material,
+.bootstrap5-dark .row.material,
+.bootstrap5\.3 .row.material,
+.bootstrap5\.3-dark .row.material,
+.tailwind-dark .row.material,
+.tailwind3-dark .row.material,
+.fabric-dark .row.material,
+.bootstrap-dark .row.material,
+.fluent .row.material,
+.fluent-dark .row.material,
+.fluent2 .row.material,
+.fluent2-dark .row.material {
+    display: none;
+}
+
+.fluent .e-control-wrapper.e-filled,
+.fluent-dark .e-control-wrapper.e-filled {
+    margin-top: 0px;
+}
+
+.content-wrapper div.api-row {
+    margin: 30px 150px;
+}
+
+.api-property .left-side {
+    font-size: 14px;
+    padding: 8px;
+    width: auto;
+}
+
+.content-wrapper div.floatinglabel-row {
+    margin: 30px 150px;
+}
+
+.floatinglabel-property .left-side {
+    font-size: 14px;
+    padding: 8px;
+    width: auto;
+}
+
+.content-wrapper div.resize-row {
+    margin: 30px 150px;
+}
+
+.resize-property .left-side {
+    font-size: 14px;
+    padding: 8px;
+    width: auto;
+}
+
+.content-wrapper-adornments {
+    width: 100% !important;
+    min-width: 250px !important;
+}
+
+.content-wrapper div.multiline-row {
+    margin: 0 auto;
+    padding: 40px 0px 0px;
+}
+
+.property-panel-content .multiline-property td {
+    padding: 10px 0px;
+    width: 50%;
+}
+
+.material3 .e-textarea-adornments .e-textarea,
+.material3-dark .e-textarea-adornments .e-textarea {
+    margin-top: 8px !important;
+}
+
+.e-bigger.fluent2-highcontrast .e-textarea-adornments .e-outline label.e-float-text.e-label-bottom {
+    top: -11px !important;
+}
+
+.e-bigger .e-textarea-adornments .e-prepend-template {
+    padding-right: 0 !important;
+}
+
+.e-bigger.material3 .e-textarea-adornments .e-input-separator,
+.e-bigger.material3-dark .e-textarea-adornments .e-input-separator {
+    margin-top: 3px !important;
+}
+
+.e-bigger.material3 div.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper label.e-label-bottom,
+.e-bigger.material3-dark div.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper label.e-label-bottom {
+    top: -10px !important;
+}
+
+.e-bigger.fluent2 .e-textarea-adornments .e-input-separator,
+.e-bigger.fluent2-dark .e-textarea-adornments .e-input-separator,
+.e-bigger.fluent2-highcontrast .e-textarea-adornments .e-input-separator {
+    margin-top: 3px !important;
+}
+
+.e-bigger.fluent2-highcontrast .e-textarea-adornments .e-outline label.e-float-text.e-label-bottom {
+    top: 8px !important;
+}
+
+.e-bigger.tailwind3 .e-textarea-adornments .e-outline.e-float-input:not(.e-error):not(.e-valid-input):not(.e-input-focus) textarea:not(:focus):valid ~ label.e-float-text.e-label-bottom,
+.e-bigger.tailwind3-dark .e-textarea-adornments .e-outline.e-float-input:not(.e-error):not(.e-valid-input):not(.e-input-focus) textarea:not(:focus):valid ~ label.e-float-text.e-label-bottom {
+    top: -7px !important;
+}
+ 
+.e-bigger.tailwind3 .e-textarea-adornments div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline.e-float-input.e-control-wrapper Label.e-label-top,
+.e-bigger.tailwind3-dark .e-textarea-adornments div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline.e-float-input.e-control-wrapper Label.e-label-top {
+    top: -26px !important;
+}
