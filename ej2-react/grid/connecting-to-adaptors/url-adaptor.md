@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # UrlAdaptor in Syncfusion React Grid Component
 
-The [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#url-adaptor) serves as the base adaptor for facilitating communication between remote data services and an UI component. It enables seamless data binding and interaction with custom API services or any remote service through URLs. The UrlAdaptor is particularly useful for the scenarios where a custom API service with unique logic for handling data and CRUD operations is in place. This approach allows for custom handling of data and CRUD operations, and the resultant data returned in the `result` and `count` format for display in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component.
+The [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#url-adaptor) serves as the base adaptor for facilitating communication between remote data services and an UI component. It enables seamless data binding and interaction with custom API services or any remote service through URLs. The `UrlAdaptor` is particularly useful for the scenarios where a custom API service with unique logic for handling data and CRUD operations is in place. This approach allows for custom handling of data and CRUD operations, and the resultant data returned in the `result` and `count` format for display in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component.
 
 This section describes a step-by-step process for retrieving data using UrlAdaptor, then binding it to the React Grid component to facilitate data and CRUD operations.
 
@@ -731,77 +731,7 @@ if (batchOperation.deleted != null)
 
 ## Foreign key column with UrlAdaptor
 
-Configuration of foreign key column with remote data using `UrlAdaptor` requires assigning the DataManager instance with the endpoint URL to the particular column dataSource along with foreign key field and foreign key value properties. When both grid and foreign key column uses a `UrlAdaptor`, the grid data and the foreign key data are fetched separately from their respective remote endpoints. During operations such as filtering or sorting, the grid sends requests to the server based on the foreign key field and its corresponding value.
-
-### Handling Filter operation on foreign key column
-
-Filter operation on a foreign key column ensures that the displayed value ("CustomerName") is automatically mapped to the underlying foreign key field ("CustomerID"). This ensures the filter request sent to the server uses the value from the foreign key field ("CustomerID"), applying the filter correctly to the main dataset.
-
-![ForeignKey column filtering](../images/foreign-key-filter.png)
-
-```csharp
-[HttpPost]
-public object Post([FromBody] DataManagerRequest DataManagerRequest)
-{
-  // Retrieve data from the data source.
-  IQueryable<OrdersDetails> DataSource = GetOrderData().AsQueryable();
-
-  QueryableOperation queryableOperation = new QueryableOperation(); // Initialize QueryableOperation instance.
-
-  // Handling filtering operation
-  if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0)
-  {
-   DataSource = operation.PerformFiltering(DataSource, DataManagerRequest.Where, DataManagerRequest.Where[0].Operator);
-  }
-
-  // Get the total count of records.
-  int totalRecordsCount = DataSource.Count();
-
-  // Return data based on the request.
-  return new { result = DataSource, count = totalRecordsCount };
-```
-### Handling Sort operation on foreign key column
-
-Sort operation on a foreign key column orders records based on the underlying field ("CustomerID"). The sorting query sent to the server includes the corresponding foreign key value. To sort by the foreign key value, supply the foreign key's data source to the sorted query within the performSorting method.
-
-![ForeignKey column Sorting](../images/foreign-key-sorting.png)
-
-```csharp
-[HttpPost]
-public object Post([FromBody] DataManagerRequest DataManagerRequest)
-{
-  // Retrieve data from the data source (e.g., database).
-  IQueryable<OrdersDetails> DataSource = GetOrderData().AsQueryable();
-
-  QueryableOperation queryableOperation = new QueryableOperation(); // Initialize QueryableOperation instance.
-
-  if (DataManagerRequest.Sorted != null && DataManagerRequest.Sorted.Count > 0) //Sorting
-  {
-    for (int i = 0; i < DataManagerRequest.Sorted.Count; i++)
-    {
-      if (DataManagerRequest.Sorted[i].ForeignKeyValue == "CustomerName")
-      {
-        DataManagerRequest.Sorted[i].ForeignKeyDataSource = GetCustomerData().AsQueryable();
-      }
-    }
-    DataSource = operation.PerformSorting(DataSource, DataManagerRequest.Sorted);
-  }
-  // Get the total count of records.
-  int totalRecordsCount = DataSource.Count();
-
-  // Return data based on the request.
-  return new { result = DataSource, count = totalRecordsCount };
-}
-```
-> Sort operation for a foreign key column based on its foreign key value mandates including the foreign key DataSource in the sorted query of the DataManager request on the server. If the foreign key DataSource is not passed, the sorting operation will be performed based on the column field.
-
-### Handling search operation on foreign key column
-
-Search process in a grid with foreign key columns produces a filter query for each column using the provided search term. For foreign key columns specifically, the grid first queries the associated foreign key data source to retrieve the underlying field value that matches the search term. It then constructs a filter query using that value and the column's field, applying it to the main dataset.
-
-### Client side configuration for a foreign key column with UrlAdaptor
-
-The following example demonstrates how to configure a foreign key column using the `UrlAdaptor`.
+Configuration of foreign key column with remote data using `UrlAdaptor` requires assigning the `DataManager` instance with the endpoint URL to the particular column dataSource along with foreign key field and foreign key value properties. When both grid and foreign key column uses a `UrlAdaptor`, the grid data and the foreign key data are fetched separately from their respective remote endpoints. During operations such as filtering or sorting, the grid sends requests to the server based on the foreign key field and its corresponding value.
 
 ```ts
 [App.tsx]
@@ -877,3 +807,65 @@ function ForeignKeyColumn() {
 }
 export default ForeignKeyColumn;
 ```
+
+### Handling filter and search operation
+
+Filtering a foreign‑key column automatically shows the related text value through `foreignKeyValue`, while the actual filtering is performed using the `foreignKeyField` value. This ensures that the filter request sent to the server uses the actual "CustomerID" field value, allowing the main data source to be filtered accurately.
+
+![ForeignKey column filtering](../images/foreign-key-filter.png)
+
+```csharp
+[HttpPost]
+public object Post([FromBody] DataManagerRequest DataManagerRequest)
+{
+  // Retrieve data from the data source.
+  IQueryable<OrdersDetails> DataSource = GetOrderData().AsQueryable();
+
+  QueryableOperation queryableOperation = new QueryableOperation(); // Initialize QueryableOperation instance.
+
+  // Handling filtering operation
+  if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0)
+  {
+   DataSource = operation.PerformFiltering(DataSource, DataManagerRequest.Where, DataManagerRequest.Where[0].Operator);
+  }
+
+  // Get the total count of records.
+  int totalRecordsCount = DataSource.Count();
+
+  // Return data based on the request.
+  return new { result = DataSource, count = totalRecordsCount };
+```
+### Handling sort operation
+
+Sort operation on a foreign key column orders records based on the underlying "CustomerID" field value. The sorting query sent to the server includes the corresponding foreign key value. To sort by the foreign key value, supply the foreign key's data source to the sorted query within the `PerformSorting` method.
+
+![ForeignKey column Sorting](../images/foreign-key-sorting.png)
+
+```csharp
+[HttpPost]
+public object Post([FromBody] DataManagerRequest DataManagerRequest)
+{
+  // Retrieve data from the data source (e.g., database).
+  IQueryable<OrdersDetails> DataSource = GetOrderData().AsQueryable();
+
+  QueryableOperation queryableOperation = new QueryableOperation(); // Initialize QueryableOperation instance.
+
+  if (DataManagerRequest.Sorted != null && DataManagerRequest.Sorted.Count > 0) //Sorting
+  {
+    for (int i = 0; i < DataManagerRequest.Sorted.Count; i++)
+    {
+      if (DataManagerRequest.Sorted[i].ForeignKeyValue == "CustomerName")
+      {
+        DataManagerRequest.Sorted[i].ForeignKeyDataSource = GetCustomerData().AsQueryable();
+      }
+    }
+    DataSource = operation.PerformSorting(DataSource, DataManagerRequest.Sorted);
+  }
+  // Get the total count of records.
+  int totalRecordsCount = DataSource.Count();
+
+  // Return data based on the request.
+  return new { result = DataSource, count = totalRecordsCount };
+}
+```
+> Sort operation for a foreign key column based on its foreign key value mandates including the foreign key data source in the sorted query of the `DataManager` request on the server. If the foreign key data source is not passed, the sorting operation will be performed based on the column field.

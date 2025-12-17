@@ -2,14 +2,13 @@
 layout: post
 title: Attachments in React Chat UI component | Syncfusion
 description: Checkout and learn about attachments with React Chat UI component of Syncfusion Essential JS 2 and more details.
-platform: ej2-javascript
-control: Chat UI 
-publishingplatform: ##Platform_Name##
+platform: ej2-react
+control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# File Attachments in ##Platform_Name## Chat UI component
+# File Attachments in React Chat UI component
 
 The Chat UI component supports message attachments, enabling users to upload and send files (images, documents, and more) alongside messages for richer, more contextual conversations. Enable this functionality using the [enableAttachments](../api/chat-ui/enableAttachments) property and customize the behavior through the [attachmentSettings](../api/chat-ui/attachmentSettings) configuration.
 
