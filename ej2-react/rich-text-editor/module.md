@@ -78,5 +78,6 @@ The following example demonstrates how to import and inject modules.
 | `Audio` | Injecting this module allows users to insert and manage audios in the Rich Text Editor. |
 | `Video` | Injecting this module allows users to insert and manage videos in the Rich Text Editor. |
 | `ClipboardCleanup` | Injecting this module allows to automatically clean clipboard content during copy and cut—removing unwanted inline styles while preserving structure. |
+| `AIAssistant` | Injecting this module provides AI Assistant functionalities to the Rich Text Editor. |
 
 These modules should be injected using the `<Inject>` component inside the Rich Text Editor component.
