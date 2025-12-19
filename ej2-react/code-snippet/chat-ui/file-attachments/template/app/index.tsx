@@ -7,16 +7,16 @@ function App() {
     // Preview Template Component
     const PreviewTemplate = (props: { selectedFile: any, index?: number }) => {
       const file = props.selectedFile;
-      const type = (file?.rawFile?.type || file?.type || '').toLowerCase();
+      const type = (file.rawFile.type || file.type || '').toLowerCase();
       const isImage = type.startsWith('image/');
       const isVideo = type.startsWith('video/');
-      const sizeBytes = file?.size || 0;
+      const sizeBytes = file.size || 0;
       const humanSize = sizeBytes < 1024
         ? `${sizeBytes} B`
         : sizeBytes < 1024 * 1024
           ? `${(sizeBytes / 1024).toFixed(1)} KB`
           : `${(sizeBytes / (1024 * 1024)).toFixed(1)} MB`;
-      const ext = (file?.name?.split('.').pop() || '').toUpperCase();
+      const ext = (file.name.split('.').pop() || '').toUpperCase();
 
       return (
         <div className="c-preview--card">
