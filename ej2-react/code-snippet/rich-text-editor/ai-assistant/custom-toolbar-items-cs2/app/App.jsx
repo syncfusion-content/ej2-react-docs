@@ -1,0 +1,62 @@
+import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar, AIAssistant } from '@syncfusion/ej2-react-richtexteditor';
+import { DropDownButton } from '@syncfusion/ej2-splitbuttons';
+import * as React from 'react';
+
+function App() {
+
+    const editor = React.createRef();
+    let userDropDown;
+    const toolbarSettings = { items: ['AICommands', 'AIQuery'] };
+    const aiAssistantSettings = {
+        promptToolbarSettings: ['Edit', 'Copy', { command: 'Prompt', subCommand: 'Search', iconCss: 'e-icons e-open-link', tooltip: 'Search in Google' }],
+        responseToolbarSettings: [{ command: 'Response', subCommand: 'Save', iconCss: 'e-icons e-save', tooltip: 'Save Response' }, 'Regenerate', 'Copy', '|', 'Insert'],
+        headerToolbarSettings: ['AIcommands',
+            { command: 'Header', subCommand: 'Profile', template: '<button id="profileDropDown" class="e-rte-dropdown-menu"></button>', align: 'Right' }, 'Close',],
+        prompts: [
+            {
+                prompt: 'What is Essential Studio ?',
+                response:
+                    'Essential Studio is a software toolkit by Syncfusion that offers a variety of UI controls, frameworks, and libraries for developing applications on web, desktop, and mobile platforms. It aims to streamline application development with customizable, pre-built components.',
+            },
+        ],
+    };
+    const onAIAssistantToolbarClick = (args) => {
+        if (args.item.iconCss === 'e-icons e-open-link') {
+            const target = args.originalEvent.target;
+            const promptContainer = target.closest('.e-prompt-container');
+            const prompt = promptContainer.querySelector('.e-prompt-text').textContent;
+            window.open(`https://www.google.com/search?q=${prompt}`, '_blank')
+        } else if (args.item.iconCss === 'e-icons e-save') {
+            const response = (args).event.currentTarget.closest('.e-output-container').querySelector('.e-content-body').innerHTML;
+            console.log(response); // Handle Saving response here.
+        }
+    };
+    const beforePopupOpen = (event) => {
+        if (event.type === 'AIAssistant') {
+            userDropDown = new DropDownButton({
+                items: [
+                    { text: 'Usage', iconCss: 'e-icons e-chart' },
+                    { text: 'Saved Response', iconCss: 'e-icons e-save' },
+                    { separator: true },
+                    { text: 'Log out', iconCss: 'e-icons e-view-side' }
+                ],
+                iconCss: 'e-icons e-user',
+                cssClass: 'e-caret-hide',
+            }, event.element.querySelector('#profileDropDown'));
+        }
+    }
+    const beforePopupClose = (event) => {
+        if (event.type === 'AIAssistant') {
+            userDropDown.destroy();
+        }
+    }
+    return (
+        <div>
+            <RichTextEditorComponent ref={editor} toolbarSettings={toolbarSettings} aiAssistantSettings={aiAssistantSettings} aiAssistantToolbarClick={onAIAssistantToolbarClick} beforePopupOpen={beforePopupOpen} beforePopupClose={beforePopupClose}>
+                <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar, AIAssistant]} />
+            </RichTextEditorComponent>
+        </div>
+    );
+}
+
+export default App;
