@@ -1,4 +1,4 @@
-{% raw %}
+
 import { RichTextEditorComponent, Inject, IToolbarItems, HtmlEditor, Toolbar, ToolbarSettingsModel, Image, Link, NodeSelection, QuickToolbar, ActionCompleteEventArgs, ActionBeginEventArgs, Table, PasteCleanup } from '@syncfusion/ej2-react-richtexteditor';
 import { DropDownButtonComponent } from '@syncfusion/ej2-react-splitbuttons';
 import { MentionComponent, FieldsModel } from '@syncfusion/ej2-react-dropdowns';
@@ -178,4 +178,3 @@ private displayTemplate = (data: { value: string }) => (
 }
 
 export default App;
-{% endraw %}
