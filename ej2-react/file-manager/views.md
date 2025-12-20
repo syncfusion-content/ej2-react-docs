@@ -38,7 +38,7 @@ By default, File Manager is rendered with **largeicons** view. The following exa
 
  {% previewsample "page.domainurl/code-snippet/file-manager/large-icon-cs1" %}
 
- ### Customize existing Large Icons View
+### Customize existing Large Icons View
 
 The large icons view layout can be customized using the `largeIconsTemplate` property, which allows you to display file or folder information, apply custom formatting, and use conditional rendering based on item type. You can customize it further based on your application requirements.
 

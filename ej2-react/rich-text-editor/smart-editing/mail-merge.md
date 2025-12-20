@@ -18,7 +18,7 @@ This feature simplifies the creation of dynamic documents by allowing users to i
 
 To enable mail merge functionality, the Rich Text Editor toolbar is extended with two custom buttons: `Insert Field` and `Merge Data`. These buttons are added using the `template` property in [toolbarSettings.items](https://helpej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettingsModel#items), which points to custom HTML elements (#insertField and #merge_data).
 
-- **Insert Field:** Opens a dropdown list of merge fields for inserting placeholders like `{{FirstName}}` into the editor.
+- **Insert Field:** Opens a dropdown list of merge fields for inserting placeholders like <code>&#123;&#123;FirstName&#125;&#125;</code> into the editor.
 - **Merge Data:** Replaces all placeholders in the editor with actual values from a predefined data source.
 
 ```ts

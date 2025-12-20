@@ -3,31 +3,63 @@ import { DetailsView, FileManagerComponent, NavigationPane, Toolbar, Inject } fr
 import * as React from 'react';
 function App() {
     let hostUrl = "https://ej2-aspcore-service.azurewebsites.net/";
+    const getFileIconCssClass = (item) => {
+        if (!item.isFile) return 'e-list-icon e-fe-folder';
+        const extensionMap = {
+            jpg: 'image',
+            jpeg: 'image',
+            png: 'image',
+            gif: 'image',
+            mp3: 'music',
+            wav: 'music',
+            mp4: 'video',
+            avi: 'video',
+            doc: 'doc',
+            docx: 'docx',
+            ppt: 'pptx',
+            pptx: 'pptx',
+            xls: 'xlsx',
+            xlsx: 'xlsx',
+            txt: 'txt',
+            js: 'js',
+            css: 'css',
+            html: 'html',
+            exe: 'exe',
+            msi: 'msi',
+            php: 'php',
+            xml: 'xml',
+            zip: 'zip',
+            rar: 'rar',
+            pdf: 'pdf',
+        };
+        const extension = (item.name.split('.').pop() || '').toLowerCase();
+        const iconType = extensionMap[extension] || 'unknown';
+        return `e-list-icon e-fe-${iconType}`;
+    };
     const largeIconsTemplate = (item) => {
-        var formattedDate = item.dateModified
-            ? new Date(item.dateModified).toLocaleDateString('en-US', {
+        const formattedDate = item.dateCreated
+            ? new Date(item.dateCreated).toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
-                day: 'numeric'
+                day: 'numeric',
             })
             : '';
+        const iconClass = getFileIconCssClass(item);
         return (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                <span>
-                    <strong>{item.name}</strong>
-                </span>
-                <span>
-                    <strong>Type:</strong> {item.isFile ? 'File' : 'Folder'}
-                </span>
-                <span>
-                    <strong>Modified:</strong> {formattedDate}
-                </span>
+            <div className="custom-icon-card">
+                <div className="file-header">
+                    <div className="file-name" title={item.name}>
+                        {item.name}
+                    </div>
+                </div>
+                <div className={iconClass}></div>
+                <div className="file-formattedDate">Created on {formattedDate}</div>
             </div>
         );
     };
 
     return (<div className="control-section">
-        <FileManagerComponent id="file" cssClass="fm_template" height="375px" ajaxSettings={{
+        <FileManagerComponent id="file" cssClass="e-fm-template-sample" height="375px" ajaxSettings={{
             downloadUrl: hostUrl + 'api/FileManager/Download',
             getImageUrl: hostUrl + "api/FileManager/GetImage",
             uploadUrl: hostUrl + 'api/FileManager/Upload',
