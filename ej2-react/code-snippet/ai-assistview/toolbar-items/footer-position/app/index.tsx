@@ -27,10 +27,10 @@ function App() {
 
     const UpdateToolbarPosition = () => {
       if (assistInstance.current.footerToolbarSettings.toolbarPosition === 'Inline') {
-        assistInstance.current.aiAssistViewComponent.footerToolbarSettings.toolbarPosition = 'Bottom';
+        assistInstance.current.footerToolbarSettings.toolbarPosition = 'Bottom';
       }
       else {
-        assistInstance.current.aiAssistViewComponent.footerToolbarSettings.toolbarPosition = 'Inline';
+        assistInstance.current.footerToolbarSettings.toolbarPosition = 'Inline';
       }
     }
   
