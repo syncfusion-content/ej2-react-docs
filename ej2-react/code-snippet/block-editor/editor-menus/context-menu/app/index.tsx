@@ -1,5 +1,3 @@
-{% raw %}
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { BlockEditorComponent, BlockModel, ContentType, ContextMenuOpeningEventArgs, ContextMenuClosingEventArgs, ContextMenuItemSelectEventArgs, ContextMenuItemModel } from '@syncfusion/ej2-react-blockeditor';
@@ -121,5 +119,3 @@ const blocksData: BlockModel[] = [
 export default App;
 
 ReactDOM.render(<App />, document.getElementById('container'));
-
-{% endraw %}

@@ -50,7 +50,7 @@ In checkbox selection, rows can also be selected by clicking anywhere on the row
 
 ## Conditional row selection
 
-The TreeGrid supports conditional row selection through the [isRowSelectable](https://ej2.syncfusion.com/react/documentation/api/treegrid#isRowSelectable) callback. This feature enables dynamic business logic to determine which rows can be selected, ensuring that only rows meeting specific conditions are selectable. The callback accepts a function that evaluates each row’s data and returns "true" to enable selection or "false" to disable it.
+The TreeGrid supports conditional row selection through the [isRowSelectable](https://ej2.syncfusion.com/react/documentation/api/treegrid#isrowselectable) callback. This allows selection to be controlled by custom business logic, ensuring that only rows meeting specific conditions can be selected. The callback receives each row’s data and returns "true" to allow selection or "false" to prevent it.
 
 Local data: The callback runs once when the TreeGrid initializes and evaluates all records because the full dataset is already available on the client.
 
