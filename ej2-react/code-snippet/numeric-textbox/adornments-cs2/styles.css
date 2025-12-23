@@ -1,0 +1,132 @@
+#container {
+    visibility: hidden;
+}
+
+#loader {
+  color: #008cff;
+  font-family: 'Helvetica Neue','calibiri';
+  font-size: 14px;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+
+.wrap {
+  margin: 0 auto;
+  width: 240px;
+  padding-top: 100px;
+}
+
+/* csslint ignore:start */
+.e-numeric .e-input-group-icon.e-spin-up:before {
+  content: "\e823";
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.e-numeric .e-input-group-icon.e-spin-down:before {
+  content: "\e934";
+  color: rgba(0, 0, 0, 0.54);
+}
+ .control-section .content-wrapper.sample-numeric {
+        width: 30%;
+        margin: 0 auto;
+        min-width: 250px;
+    }
+
+.format-wrapper .e-float-input.e-numeric.e-input-group { 
+    margin-bottom: 40px; 
+}
+
+.sample-numeric .control-label {
+    padding: 24px 0px 10px 0px;
+    font-size: 12px;
+    opacity: 1;
+}
+
+.highcontrast #min,
+.highcontrast #max,
+.highcontrast #step {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);;
+}
+
+.material3-dark #min,
+.material3-dark #max,
+.material3-dark #step,
+.material-dark #min,
+.material-dark #max,
+.material-dark #step {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.fabric-dark #min,
+.fabric-dark #max,
+.fabric-dark #step {
+    background-color: rgb(32, 31, 31);
+    color: rgb(218, 218, 218);
+}
+
+.bootstrap-dark #min,
+.bootstrap-dark #max,
+.bootstrap-dark #step {
+    background-color: rgb(26, 26, 26);
+    color: rgb(240, 240, 240);
+}
+
+.bootstrap5-dark #min,
+.bootstrap5-dark #max,
+.bootstrap5-dark #step {
+    background-color: rgb(33, 37, 41);
+    color: rgb(255, 255, 255);
+}
+
+.tailwind-dark #min,
+.tailwind3-dark #min,
+.tailwind-dark #max,
+.tailwind3-dark #max,
+.tailwind-dark #step,
+.tailwind3-dark #step {
+    background-color: rgb(31, 41, 55);
+    color: rgb(255, 255, 255);
+}
+
+.fluent-dark #min,
+.fluent-dark #max,
+.fluent-dark #step {
+    background-color: rgb(27, 26, 25);
+    color: rgb(255, 255, 255);
+}
+
+.content-wrapper.sample-numeric-icon {
+    width: 35%;
+    margin: 0 auto;
+    min-width: 250px;
+}
+.sample-numeric-icon .custom-margin {
+    margin: 25px 0;
+}
+.sample-numeric-icon .custom-margin-row {
+    padding: 0 !important;
+}
+.e-numeric.e-control-wrapper.e-input-group .e-input-group-icon {
+    background-color: rgba(0,0,0,0) !important;
+}
+.bootstrap5_3 .sample-numeric-icon .e-prepend-template,
+.bootstrap5_3-dark .sample-numeric-icon .e-prepend-template,
+.tailwind3 .sample-numeric-icon .e-prepend-template,
+.tailwind3-dark .sample-numeric-icon .e-prepend-template {
+    padding-right: 0 !important;
+}
+.fluent2 .sample-numeric-icon .e-prepend-template,
+.fluent2-dark .sample-numeric-icon .e-prepend-template,
+.fluent2-highcontrast .sample-numeric-icon .e-prepend-template {
+    padding-left: 11px !important;
+}
+.sample-numeric-icon .e-icons.e-reset,
+.sample-numeric-icon .e-icons.e-horizontal-line,
+.sample-numeric-icon .e-icons.e-plus {
+    cursor: pointer;
+}

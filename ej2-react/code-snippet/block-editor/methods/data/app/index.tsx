@@ -1,5 +1,3 @@
-{% raw %}
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { useRef, useEffect } from 'react';
@@ -174,5 +172,3 @@ function App() {
  
 export default App;
 ReactDOM.render(<App />, document.getElementById('container'));
-
-{% endraw %}
