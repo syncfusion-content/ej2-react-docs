@@ -1,5 +1,3 @@
-{% raw %}
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
@@ -70,5 +68,3 @@ Copy content from the test area above and paste it into the editor to see the cl
 
 export default App;
 ReactDOM.render(<App />, document.getElementById('container'));
-
-{% endraw %}

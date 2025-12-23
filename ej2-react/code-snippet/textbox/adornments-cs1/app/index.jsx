@@ -1,5 +1,5 @@
-import './index.css';
 import * as React from 'react';
+import * as ReactDOM from "react-dom";
 import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
 
 export default class App extends React.Component {
@@ -107,4 +107,4 @@ export default class App extends React.Component {
   }
 }
 
-ReactDom.render(<App />,document.getElementById('sample'));
+ReactDOM.render(<App />,document.getElementById('sample'));

@@ -1,8 +1,8 @@
 ----
 layout: post
-title: AI Assistant Configuration in React Rich Text Editor component | Syncfusion
-description: Learn about the AI Assistant feature in the Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
-control: Integrating the AI Assistant
+title: Configure AI Assistant in React Rich Text Editor | Syncfusion
+description: Learn about the AI Assistant feature configuration in the Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
+control: Properties of AI Assistant
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -47,27 +47,27 @@ In the below example, a set of prompts and texts are configured to demonstrate t
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/commands-cs1/app/App.jsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/commands-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/commands-cs1/app/App.tsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/commands-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/commands-cs1" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/commands-cs1" %}
 
 `[Functional-component]`
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/commands-cs2/app/App.jsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/commands-cs2/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/commands-cs2/app/App.tsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/commands-cs2/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/commands-cs2" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/commands-cs2" %}
 
 ## Preloading Prompts, Response and Suggestions
 
@@ -81,27 +81,27 @@ In the below sample, the `prompts` and `suggestions` properties of the `aiAssist
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/prompts-cs1/app/App.jsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/prompts-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/prompts-cs1/app/App.tsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/prompts-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/prompts-cs1" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/prompts-cs1" %}
 
 `[Functional-component]`
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/prompts-cs2/app/App.jsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/prompts-cs2/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/prompts-cs2/app/App.tsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/prompts-cs2/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/prompts-cs2" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/prompts-cs2" %}
 
 ## Header, Prompt and Response Toolbar
 
@@ -113,9 +113,9 @@ The following table lists the available toolbar items for the Header, Prompt, an
 
 | Toolbar | Items & Their Use |
 |---------|-------------------|
-| **Header** | **AIcommands** – Opens AI-related command options.<br>**Close** – Closes the current panel or window. <br> **Clear** - Clear the current conversations. |
-| **Prompt** | **Edit** – Allows you to modify the prompt text.<br>**Copy** – Copies the prompt to your clipboard. |
-| **Response** | **Regenerate** – Produces a new response for the same prompt.<br>**Copy** – Copies the AI response.<br>**\|** – Visual separator between actions.<br>**Insert** – Inserts the generated response into the target editor or field. |
+| **Header** | `AIcommands` – Opens AI-related command options.<br>`Close` – Closes the current panel or window. <br> `Clear` - Clear the current conversations. |
+| **Prompt** | `Edit` – Allows you to modify the prompt text.<br>`Copy` – Copies the prompt to your clipboard. |
+| **Response** | `Regenerate` – Produces a new response for the same prompt.<br>`Copy` – Copies the AI response.<br>**\|** – Visual separator between actions.<br>`Insert` – Inserts the generated response into the target editor or field. |
 
 ### Default Toolbar Items
 
@@ -133,27 +133,27 @@ In the below sample, the toolbar settings are configured to modify the order and
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/toolbar-settings-cs1/app/App.jsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/toolbar-settings-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/toolbar-settings-cs1/app/App.tsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/toolbar-settings-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-settings-cs1" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/toolbar-settings-cs1" %}
 
 `[Functional-component]`
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/toolbar-settings-cs2/app/App.jsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/toolbar-settings-cs2/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/toolbar-settings-cs2/app/App.tsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/toolbar-settings-cs2/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-settings-cs2" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/toolbar-settings-cs2" %}
 
 ## Popup Dimensions
 
@@ -167,27 +167,27 @@ In the below sample, the popup width and maximum height are configured.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/popup-dimensions-cs1/app/App.jsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/popup-dimensions-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/popup-dimensions-cs1/app/App.tsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/popup-dimensions-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/popup-dimensions-cs1" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/popup-dimensions-cs1" %}
 
 `[Functional-component]`
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/popup-dimensions-cs2/app/App.jsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/popup-dimensions-cs2/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/popup-dimensions-cs2/app/App.tsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/popup-dimensions-cs2/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/popup-dimensions-cs2" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/popup-dimensions-cs2" %}
 
 ## Setting Maximum Conversation History Length
 
@@ -201,27 +201,27 @@ In the below sample, the maximum prompt history is configured to `30`, and when 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/prompt-history-cs1/app/App.jsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/prompt-history-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/prompt-history-cs1/app/App.tsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/prompt-history-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/prompt-history-cs1" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/prompt-history-cs1" %}
 
 `[Functional-component]`
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/prompt-history-cs2/app/App.jsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/prompt-history-cs2/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/prompt-history-cs2/app/App.tsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/prompt-history-cs2/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/prompt-history-cs2" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/prompt-history-cs2" %}
 
 ## Setting the Banner
 
@@ -235,24 +235,24 @@ In the below sample, a custom banner template is applied to the AI Assistant.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/banner-cs1/app/App.jsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/banner-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/banner-cs1/app/App.tsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/banner-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/banner-cs1" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/banner-cs1" %}
 
 `[Functional-component]`
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/banner-cs2/app/App.jsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/banner-cs2/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/banner-cs2/app/App.tsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/banner-cs2/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/banner-cs2" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/banner-cs2" %}

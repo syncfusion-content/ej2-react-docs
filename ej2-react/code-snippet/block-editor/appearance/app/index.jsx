@@ -1,5 +1,3 @@
-{% raw %}
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { useRef, useState, useEffect } from 'react';
@@ -116,7 +114,7 @@ function App() {
   }, [isReadonly, currentTheme]);
 
   return (
-    <div>
+    <div className='appearance'>
       <div id="controls">
         <h3>Appearance Configuration Demo</h3>
         <div className="button-group">
@@ -155,5 +153,3 @@ function App() {
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('container'));
-
-{% endraw %}
