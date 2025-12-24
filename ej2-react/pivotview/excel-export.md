@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Excel export in React Pivot Table component
 
-The Pivot Table component supports exporting pivot data to **Excel** and **CSV** file formats. This enables data sharing and analysis in spreadsheet applications such as Microsoft Excel, Google Sheets, and more. To enable the export functionality, inject the `ExcelExport` module into the Pivot Table and set the [`allowExcelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#allowexcelexport) property to **true**.
+The Pivot Table component supports exporting pivot data to **Excel** and **CSV** file formats. This enables data sharing and analysis in spreadsheet applications such as Microsoft Excel, Google Sheets, and more. To enable the export functionality, inject the `ExcelExport` module into the Pivot Table and set the [`allowExcelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#allowexcelexport) property to **true**.
 
 ## Export data to an Excel file
 
-Pivot Table data can be exported to an Excel file (.xlsx format) while preserving all formatting and structure. This format is compatible with Microsoft Excel and other spreadsheet applications. To export the data to Excel, invoke the [`excelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#excelexport) method.
+Pivot Table data can be exported to an Excel file (.xlsx format) while preserving all formatting and structure. This format is compatible with Microsoft Excel and other spreadsheet applications. To export the data to Excel, invoke the [`excelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#excelexport) method.
 
 > The Pivot Table component can be exported to Excel format using options available in the toolbar. For more details, [`refer`](./tool-bar) here.
 
@@ -37,7 +37,7 @@ Pivot Table data can be exported to an Excel file (.xlsx format) while preservin
 
 ## Export data to a CSV file
 
-Pivot Table data can be exported to a plain text CSV file. The CSV format is lightweight and compatible with most spreadsheet and data analysis applications. To export the data to CSV, invoke the [`csvExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#csvexport) method.
+Pivot Table data can be exported to a plain text CSV file. The CSV format is lightweight and compatible with most spreadsheet and data analysis applications. To export the data to CSV, invoke the [`csvExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#csvexport) method.
 
 > The Pivot Table component can be exported to CSV format using options available in the toolbar. For more details, [`refer`](./tool-bar) here.
 
@@ -66,7 +66,7 @@ Multiple Pivot Tables can be exported to a single Excel file, allowing for side-
 
 Data from multiple Pivot Tables can be organized in a single view by exporting them to the same worksheet. Set the **multipleExport.type** property to **AppendToSheet** in the `excelExportProperties`, which will append each Pivot Table to the same sheet.
 
-To add visual separation between Pivot Tables, use the **multipleExport.blankRows** property to specify the number of blank rows to insert between them. This helps maintain readability when multiple Pivot Tables are added in a single worksheet. After configuring these options, call the [`excelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#excelexport) method with the `isMultipleExport` parameter set to **true**.
+To add visual separation between Pivot Tables, use the **multipleExport.blankRows** property to specify the number of blank rows to insert between them. This helps maintain readability when multiple Pivot Tables are added in a single worksheet. After configuring these options, call the [`excelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#excelexport) method with the `isMultipleExport` parameter set to **true**.
 
 > By default, the **multipleExport.blankRows** property is set to **5** blank rows.
 
@@ -89,7 +89,7 @@ To add visual separation between Pivot Tables, use the **multipleExport.blankRow
 
 ### Exporting to a new worksheet
 
-Multiple Pivot Tables can be organized into separate worksheets within a single Excel file for better structured data management. Set the **multipleExport.type** property to **NewSheet** in the `excelExportProperties`. Each Pivot Table will be exported to its own dedicated worksheet. After configuring these options, call the [`excelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#excelexport) method with the `isMultipleExport` parameter set to **true**.
+Multiple Pivot Tables can be organized into separate worksheets within a single Excel file for better structured data management. Set the **multipleExport.type** property to **NewSheet** in the `excelExportProperties`. Each Pivot Table will be exported to its own dedicated worksheet. After configuring these options, call the [`excelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#excelexport) method with the `isMultipleExport` parameter set to **true**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -244,8 +244,8 @@ The style of each cell in the exported file can be customized, including rotatin
 
 To rotate text, use the following events:
 
-*   [`excelHeaderQueryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettingsModel/#excelheaderquerycellinfo): Triggered for column headers. This event is used to customize column header cell styles.
-*   [`excelQueryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettingsModel/#excelquerycellinfo): Triggered for row and value cells. This event is used to customize row header and value cell styles.
+*   [`excelHeaderQueryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridsettingsmodel#excelheaderquerycellinfo): Triggered for column headers. This event is used to customize column header cell styles.
+*   [`excelQueryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridsettingsmodel#excelquerycellinfo): Triggered for row and value cells. This event is used to customize row header and value cell styles.
 
 Within these events, set the [`rotation`](https://ej2.syncfusion.com/react/documentation/api/grid/excelstyle#rotation) property in the [`style`](https://ej2.syncfusion.com/react/documentation/api/grid/excelheaderquerycellinfoeventargs#style) argument to rotate the text to the desired angle.
 
@@ -268,7 +268,7 @@ Within these events, set the [`rotation`](https://ej2.syncfusion.com/react/docum
 
 ## Apply custom styles based on specific conditions
 
-When exporting Pivot Table data to Excel, custom styles can be applied to cells based on their values or other criteria. To apply custom styles, use the [`excelQueryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettingsModel/#excelquerycellinfo) event. In this event, the cell information can be accessed through the [`args.cell`](https://ej2.syncfusion.com/react/documentation/api/grid/excelquerycellinfoeventargs#cell) property, and its style properties, such as [`backColor`](https://ej2.syncfusion.com/react/documentation/api/grid/excelstyle#backcolor), [`fontName`](https://ej2.syncfusion.com/react/documentation/api/grid/excelstyle#fontname), and [`fontColor`](https://ej2.syncfusion.com/react/documentation/api/grid/excelstyle#fontcolor), can be customized.
+When exporting Pivot Table data to Excel, custom styles can be applied to cells based on their values or other criteria. To apply custom styles, use the [`excelQueryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridsettingsmodel#excelquerycellinfo) event. In this event, the cell information can be accessed through the [`args.cell`](https://ej2.syncfusion.com/react/documentation/api/grid/excelquerycellinfoeventargs#cell) property, and its style properties, such as [`backColor`](https://ej2.syncfusion.com/react/documentation/api/grid/excelstyle#backcolor), [`fontName`](https://ej2.syncfusion.com/react/documentation/api/grid/excelstyle#fontname), and [`fontColor`](https://ej2.syncfusion.com/react/documentation/api/grid/excelstyle#fontcolor), can be customized.
 
 The following example demonstrates how to apply conditional formatting to the **Sold** field values in the exported Excel document. Values below **700** units are highlighted in **red**, while values of **700** units or more are highlighted in **green**.
 
@@ -291,7 +291,7 @@ The following example demonstrates how to apply conditional formatting to the **
 
 ## Changing the Pivot Table style while exporting
 
-The Excel export provides an option to change colors for headers, caption, and records in Pivot Table before exporting. To apply colors, define [`theme`](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties/#theme) settings in [`excelExportProperties`](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties/) object and pass it as a parameter to the [`excelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#excelexport) method.
+The Excel export provides an option to change colors for headers, caption, and records in Pivot Table before exporting. To apply colors, define [`theme`](https://ej2.syncfusion.com/react/documentation/api/grid/excelexportproperties#theme) settings in [`excelExportProperties`](https://ej2.syncfusion.com/react/documentation/api/grid/excelexportproperties) object and pass it as a parameter to the [`excelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#excelexport) method.
 
 > By default, material theme is applied to exported Excel document.
 
@@ -314,7 +314,7 @@ The Excel export provides an option to change colors for headers, caption, and r
 
 ## Add header and footer while exporting
 
-The Excel export provides an option to include header and footer content for the Excel document before exporting. To add header and footer, define [`header`](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties/#header) and [`footer`](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties/#footer) properties in [`excelExportProperties`](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties/) object and pass it as a parameter to the [`excelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#excelexport) method.
+The Excel export provides an option to include header and footer content for the Excel document before exporting. To add header and footer, define [`header`](https://ej2.syncfusion.com/react/documentation/api/grid/excelexportproperties#header) and [`footer`](https://ej2.syncfusion.com/react/documentation/api/grid/excelexportproperties#footer) properties in [`excelExportProperties`](https://ej2.syncfusion.com/react/documentation/api/grid/excelexportproperties) object and pass it as a parameter to the [`excelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#excelexport) method.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -335,7 +335,7 @@ The Excel export provides an option to include header and footer content for the
 
 ## Changing the file name while exporting
 
-This option provides flexibility to specify a custom file name for your exported Excel document, making it easier to organize and identify your exported data files. The Excel export provides an option to change the file name of the document before exporting. To change the file name, define the [`fileName`](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties/#filename) property in the [`excelExportProperties`](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties/) object and pass it as a parameter to the [`excelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#excelexport) method.
+This option provides flexibility to specify a custom file name for your exported Excel document, making it easier to organize and identify your exported data files. The Excel export provides an option to change the file name of the document before exporting. To change the file name, define the [`fileName`](https://ej2.syncfusion.com/react/documentation/api/grid/excelexportproperties#filename) property in the [`excelExportProperties`](https://ej2.syncfusion.com/react/documentation/api/grid/excelexportproperties) object and pass it as a parameter to the [`excelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#excelexport) method.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -356,7 +356,7 @@ This option provides flexibility to specify a custom file name for your exported
 
 ## Show spinner during export
 
-When exporting data, displaying a spinner provides visual feedback to end users that the export process is in progress. To show a spinner, invoke the `showWaitingPopup` method in the button's click event before calling the export method. After the export is complete, use the [`exportComplete`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#exportcomplete) event to trigger the `hideWaitingPopup` method, which will hide the spinner and indicate that the export has finished successfully.
+When exporting data, displaying a spinner provides visual feedback to end users that the export process is in progress. To show a spinner, invoke the `showWaitingPopup` method in the button's click event before calling the export method. After the export is complete, use the [`exportComplete`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#exportcomplete) event to trigger the `hideWaitingPopup` method, which will hide the spinner and indicate that the export has finished successfully.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -365,19 +365,13 @@ When exporting data, displaying a spinner provides visual feedback to end users 
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs339/app/App.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/pivot-table/default-cs339/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/pivot-table/default-cs339/app/datasource.tsx %}
-{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs339" %}
 
 ## Export only the current page
 
-By default, the Pivot Table exports all data records, which can result in larger file sizes when a large data source is assigned to the Pivot Table. To improve performance, export only the data records currently visible in the viewport by setting the [`exportAllPages`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#exportallpages) property to **false**.
+By default, the Pivot Table exports all data records, which can result in larger file sizes when a large data source is assigned to the Pivot Table. To improve performance, export only the data records currently visible in the viewport by setting the [`exportAllPages`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#exportallpages) property to **false**.
 
 > This option is applicable only when the virtualization or paging feature is enabled.
 
@@ -402,14 +396,14 @@ By default, the Pivot Table exports all data records, which can result in larger
 
 ### ExcelQueryCellInfo
 
-The [`excelQueryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettingsModel/#excelquerycellinfo) event is triggered during the creation of each row and value cell while exporting data to Excel. This event offers options to change the content and style of individual cells in the exported Excel document, improving the flexibility and appearance of exported reports.
+The [`excelQueryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridsettingsmodel#excelquerycellinfo) event is triggered during the creation of each row and value cell while exporting data to Excel. This event offers options to change the content and style of individual cells in the exported Excel document, improving the flexibility and appearance of exported reports.
 
 The event provides the following arguments:
 
-* [`value`](https://ej2.syncfusion.com/react/documentation/api/grid/excelQueryCellInfoEventArgs/#value) – Represents the value of the current cell in the exported Excel sheet.
-* [`column`](https://ej2.syncfusion.com/react/documentation/api/grid/excelQueryCellInfoEventArgs/#column) – Provides details about the column to which the current cell belongs.
-* [`data`](https://ej2.syncfusion.com/react/documentation/api/grid/excelQueryCellInfoEventArgs/#data) – Contains all data for the row that includes the current cell.
-* [`style`](https://ej2.syncfusion.com/react/documentation/api/grid/excelQueryCellInfoEventArgs/#style) – Defines the style settings (such as font, color, borders) applied to the current cell.
+* [`value`](https://ej2.syncfusion.com/react/documentation/api/grid/excelquerycellinfoeventargs#value) – Represents the value of the current cell in the exported Excel sheet.
+* [`column`](https://ej2.syncfusion.com/react/documentation/api/grid/excelquerycellinfoeventargs#column) – Provides details about the column to which the current cell belongs.
+* [`data`](https://ej2.syncfusion.com/react/documentation/api/grid/excelquerycellinfoeventargs#data) – Contains all data for the row that includes the current cell.
+* [`style`](https://ej2.syncfusion.com/react/documentation/api/grid/excelquerycellinfoeventargs#style) – Defines the style settings (such as font, color, borders) applied to the current cell.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -430,10 +424,10 @@ The event provides the following arguments:
 
 ### ExcelHeaderQueryCellInfo
 
-The [`excelHeaderQueryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettingsModel/#excelheaderquerycellinfo) event provides the ability to modify header cell appearance and content during Excel export, ensuring exported documents match specific formatting requirements or business standards. This event triggers while processing each header cell during the Excel export operation. The event contains the following parameters:
+The [`excelHeaderQueryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridsettingsmodel#excelheaderquerycellinfo) event provides the ability to modify header cell appearance and content during Excel export, ensuring exported documents match specific formatting requirements or business standards. This event triggers while processing each header cell during the Excel export operation. The event contains the following parameters:
 
-* [`cell`](https://ej2.syncfusion.com/react/documentation/api/grid/excelHeaderQueryCellInfoEventArgs/#cell) – Contains the current cell information and properties.
-* [`style`](https://ej2.syncfusion.com/react/documentation/api/grid/excelHeaderQueryCellInfoEventArgs/#style) – Contains the style properties that can be applied to the cell.
+* [`cell`](https://ej2.syncfusion.com/react/documentation/api/grid/excelheaderquerycellinfoeventargs#cell) – Contains the current cell information and properties.
+* [`style`](https://ej2.syncfusion.com/react/documentation/api/grid/excelheaderquerycellinfoeventargs#style) – Contains the style properties that can be applied to the cell.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -454,10 +448,10 @@ The [`excelHeaderQueryCellInfo`](https://ej2.syncfusion.com/react/documentation/
 
 ### ExportComplete
 
-The [`exportComplete`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#exportcomplete) event triggers after the Pivot Table data exports to an Excel or CSV document. This event enables acquiring blob stream data for further processing and customization by setting the `isBlob` parameter to **true** when calling the [`excelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#excelexport) method. The event includes the following parameters:
+The [`exportComplete`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#exportcomplete) event triggers after the Pivot Table data exports to an Excel or CSV document. This event enables acquiring blob stream data for further processing and customization by setting the `isBlob` parameter to **true** when calling the [`excelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#excelexport) method. The event includes the following parameters:
 
-* [`type`](https://ej2.syncfusion.com/react/documentation/api/pivotview/exportCompleteEventArgs/#type) – Specifies the current export format such as PDF, Excel, or CSV.
-* [`promise`](https://ej2.syncfusion.com/react/documentation/api/pivotview/exportCompleteEventArgs/#promise) – Contains the promise object that resolves with blob data for the exported file.
+* [`type`](https://ej2.syncfusion.com/react/documentation/api/pivotview/exportcompleteeventargs#type) – Specifies the current export format such as PDF, Excel, or CSV.
+* [`promise`](https://ej2.syncfusion.com/react/documentation/api/pivotview/exportcompleteeventargs#promise) – Contains the promise object that resolves with blob data for the exported file.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
