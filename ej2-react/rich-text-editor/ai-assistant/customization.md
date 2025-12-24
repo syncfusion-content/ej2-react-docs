@@ -1,7 +1,7 @@
 ----
 layout: post
-title: AI Assistant Customization in React Rich Text Editor component | Syncfusion
-description: Learn about the customization options available for the AI Assistant feature in the Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
+title: Customize AI Assistant in React Rich Text Editor | Syncfusion
+description: Learn about AI Assistant customization in the Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Customization of AI Assistant
 platform: ej2-react
 documentation: ug
@@ -56,27 +56,27 @@ In the following example, **custom toolbar items** are added to the **Header**, 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/custom-toolbar-items/-cs1/app/App.jsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/custom-toolbar-items-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/custom-toolbar-items/-cs1/app/App.tsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/custom-toolbar-items-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/custom-toolbar-items/-cs1" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/custom-toolbar-items-cs1" %}
 
 `[Functional-component]`
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/custom-toolbar-items/-cs2/app/App.jsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/custom-toolbar-items-cs2/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/custom-toolbar-items/-cs2/app/App.tsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/custom-toolbar-items-cs2/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/custom-toolbar-items/-cs2" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/custom-toolbar-items-cs2" %}
 
 ## Styling the Popup
 
@@ -107,27 +107,27 @@ In the following example, a CSS animation is applied to the popup while the requ
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/popup-styling-cs1/app/App.jsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/popup-styling-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/popup-styling-cs1/app/App.tsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/popup-styling-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/popup-styling-cs1" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/popup-styling-cs1" %}
 
 `[Functional-component]`
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/popup-styling-cs2/app/App.jsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/popup-styling-cs2/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/popup-styling-cs2/app/App.tsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/popup-styling-cs2/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/popup-styling-cs2" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/popup-styling-cs2" %}
 
 ## Use Case
 
@@ -153,24 +153,24 @@ The following example demonstrates a Proofread use case by rendering a button ou
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/usecase-cs1/app/App.jsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/usecase-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/usecase-cs1/app/App.tsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/usecase-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/usecase-cs1" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/usecase-cs1" %}
 
 `[Functional-component]`
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/usecase-cs2/app/App.jsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/usecase-cs2/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/usecase-cs2/app/App.tsx %}
+{% include code-snippet/rich-text-editor/ai-assistant/usecase-cs2/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/usecase-cs2" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/usecase-cs2" %}
