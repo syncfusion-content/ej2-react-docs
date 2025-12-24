@@ -145,15 +145,7 @@ Here's an example of how to hide selectall checkbox in column header using empty
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/selection-checkbox-cs1" %}
-
-## Prevent specific rows from being selected in checkbox selection
-
-The checkbox selection mode allows you to select rows either by clicking on checkboxes or by clicking on the rows themselves. However, there might be scenarios where you want to prevent specific rows from being selected based on certain conditions or business requirements.
-
-To achieve this, you can use the [rowDataBound](https://ej2.syncfusion.com/react/documentation/api/grid#rowdatabound) event of the Grid. The `rowDataBound` event is triggered for each row after it is bound to the data source. In this event, you can check the row data and determine whether the row should be selectable or not. If you want to prevent the row from being selected, you can set the [isSelectable](https://ej2.syncfusion.com/react/documentation/api/grid/rowDataBoundEventArgs#isselectable) argument of the event to **false**.
-
-In the following sample, the selection of specific rows has been prevented based on the `isSelectable` argument in the `rowDataBound` event.
+{% previewsample "page.domainurl/code-snippet/grid/selection-checkbox-cs1" %}
 
 ## Conditional row selection
 

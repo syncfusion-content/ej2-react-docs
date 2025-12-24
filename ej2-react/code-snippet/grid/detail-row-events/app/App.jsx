@@ -5,13 +5,13 @@ import { data, employeeData } from './datasource';
 function App() {
     // Prevent expanding detail row.
     const detailExpand = (args) =>{
-        if (args.data.FirstName === 'Nancy') {
+        if (args.rowData.FirstName === 'Nancy') {
         args.cancel = true;
         }
     }
     // Prevent collapsing detail row.
     const detailCollapse = (args) =>{
-        if (args.data.FirstName === 'Andrew') {
+        if (args.rowData.FirstName === 'Andrew') {
         args.cancel = true;
         }
     }
