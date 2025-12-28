@@ -40,9 +40,9 @@ The following example demonstrates how to add adornments in the NumericTextBox c
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/numeric-textbox/adornments-cs1" %}
+You can view the demo here: [NumericTextBox Adornments demo](https://ej2.syncfusion.com/react/demos/#/tailwind3/numerictextbox/adornments).
 
- `[Functional-component]`
+`[Functional-component]`
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -53,4 +53,4 @@ The following example demonstrates how to add adornments in the NumericTextBox c
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/numeric-textbox/adornments-cs2" %}
+You can view the demo here: [NumericTextBox Adornments demo](https://ej2.syncfusion.com/react/demos/#/tailwind3/numerictextbox/adornments).
