@@ -120,7 +120,7 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/selection-cs4" %}
+{% previewsample "page.domainurl/code-snippet/grid/selection-cs4" %}
 
 ## Hide select-all checkbox in column header 
 
@@ -145,7 +145,7 @@ Here's an example of how to hide selectall checkbox in column header using empty
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/selection-checkbox-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/selection-checkbox-cs1" %}
 
 ## Conditional row selection
 

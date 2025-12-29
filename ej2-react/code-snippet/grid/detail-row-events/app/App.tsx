@@ -1,20 +1,20 @@
 
 
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import { DetailRow, GridModel, Inject } from '@syncfusion/ej2-react-grids';
+import { DetailRow, GridModel, Inject, DetailExpandCollapseArgs } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data, employeeData } from './datasource';
 
 function App() {
   // Prevent expanding detail row.
-  const detailExpand = (args: any) =>{
-    if (args.data.FirstName === 'Nancy') {
+  const detailExpand = (args: DetailExpandCollapseArgs) =>{
+    if (args.rowData.FirstName === 'Nancy') {
       args.cancel = true;
     }
   }
   // Prevent collapsing detail row.
-  const detailCollapse = (args: any) =>{
-    if (args.data.FirstName === 'Andrew') {
+  const detailCollapse = (args: DetailExpandCollapseArgs) =>{
+    if (args.rowData.FirstName === 'Andrew') {
       args.cancel = true;
     }
   }
