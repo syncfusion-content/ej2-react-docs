@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filtering in React Grid component | Syncfusion
-description: Learn here all about Filtering in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: Filter customization in React Grid component | Syncfusion
+description: Learn here all about Filter customization in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Filtering 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering in React Grid component
+# Filter customization in React Grid component
 
 You can customize the appearance of filtering elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component using CSS. Below are examples of how to customize various filtering elements, including filter bar cell elements, filter bar input elements, focus styles, clear icons, filter icons, filter dialog content, filter dialog footer, filter dialog input elements, filter dialog button elements, and Excel filter dialog number filters.
 

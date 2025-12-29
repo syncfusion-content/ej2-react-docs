@@ -144,5 +144,5 @@ Here's an example of how to integrate Mention with Iframe editor,
 
 ## See also
 
-* [Implementing Inline Editing](https://ej2.syncfusion.com/react/documentation/rich-text-editor/inline-editing)
-* [Using the Markdown Editor](https://ej2.syncfusion.com/react/documentation/rich-text-editor/markdown)
+* [Implementing Inline Editing](https://ej2.syncfusion.com/react/documentation/rich-text-editor/editor-types/inline-editing)
+* [Using the Markdown Editor](https://ej2.syncfusion.com/react/documentation/markdown-editor/getting-started)
