@@ -10,9 +10,7 @@ function App() {
     }
     
     const onImageUpload=(args) =>{
-        let accessToken = "Authorization_token";
-        // adding custom form Data
-        args.customFormData = [ { 'Authorization': accessToken}];
+        args.currentRequest.setRequestHeader('Authorization', 'Syncfusion');
     };
     return (<RichTextEditorComponent height={450} toolbarSettings={toolbarSettings} imageUploading={onImageUpload} insertImageSettings={insertImageSettings}>
       <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar]}/>
