@@ -12,9 +12,7 @@ function App() {
   }
   
   const onImageUpload=(args: UploadingEventArgs) =>{
-      let accessToken = "Authorization_token";
-      // adding custom form Data
-      args.customFormData = [ { 'Authorization': accessToken}];
+      args.currentRequest.setRequestHeader('Authorization', 'Syncfusion');
   };
   
   return (

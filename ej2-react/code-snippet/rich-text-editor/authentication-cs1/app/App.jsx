@@ -10,9 +10,7 @@ class App extends React.Component {
     }
     
     onImageUpload(args) {
-        let accessToken = "Authorization_token";
-        // adding custom form Data
-        args.customFormData = [ { 'Authorization': accessToken}];
+        args.currentRequest.setRequestHeader('Authorization', 'Syncfusion');
     };
     render() {
         return (<RichTextEditorComponent height={450} toolbarSettings={this.toolbarSettings} imageUploading={this.onImageUpload} insertImageSettings={insertImageSettings}>
