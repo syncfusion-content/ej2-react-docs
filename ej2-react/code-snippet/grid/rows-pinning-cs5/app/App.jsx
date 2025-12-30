@@ -1,4 +1,4 @@
-import { GridComponent, ColumnsDirective, ColumnDirective, Inject, Filter, Sort, Page, Edit} from '@syncfusion/ej2-react-grids';
+import { GridComponent, ColumnsDirective, ColumnDirective, Inject, Filter, Sort, Page, Edit, Toolbar} from '@syncfusion/ej2-react-grids';
 import { data } from './datasource';
 import * as React from 'react';
 
@@ -23,7 +23,7 @@ function App() {
             <ColumnDirective field='Assignee' headerText='Assignee' width={100} />
             <ColumnDirective field='Priority' headerText='Priority' width={100} />
           </ColumnsDirective>
-          <Inject services={[Filter, Sort, Page, Edit]}/>
+          <Inject services={[Filter, Sort, Page, Edit, Toolbar]}/>
         </GridComponent>
       </div>
     </div>);

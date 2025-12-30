@@ -1,7 +1,6 @@
-{% raw %}
 
 import * as React from "react";
-import { createRoot } from 'react-dom/client';
+import * as ReactDOM from "react-dom";
 import { DataManager, Query } from '@syncfusion/ej2-data';
 import { StackPanel, TextElement, DataBinding, OverviewComponent, HierarchicalTree, DiagramTools, DiagramComponent, Inject } from "@syncfusion/ej2-react-diagrams";
 /**
@@ -149,8 +148,7 @@ function App() {
       <OverviewComponent id="overview"  sourceID="container" width={'100%'} height={'250px'}/>
     </>);
 }
-const root = createRoot(document.getElementById('diagram'));
+const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
 
-{% endraw %}
 
