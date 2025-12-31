@@ -1,7 +1,7 @@
 import { createElement } from '@syncfusion/ej2-base';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, Inject, Sort, Filter, ColumnMenu } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, Inject, Sort, Filter, ColumnMenu, SplitterSettings } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
 function App(){
     const taskFields: any = {
@@ -12,7 +12,7 @@ function App(){
     progress: 'Progress',
     parentID: 'ParentID'
   };
-  const splitterSettings: any = {
+  const splitterSettings: SplitterSettings = {
     columnIndex : 5
 };
     function columnMenuOpen(){

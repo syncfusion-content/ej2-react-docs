@@ -1,33 +1,24 @@
 ---
 layout: post
-title: Time line in React Gantt component | Syncfusion
-description: Learn here all about Time line in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
-control: Time line 
+title: Timeline in React Gantt Chart component | Syncfusion
+description: Learn how to configure timelines in the Syncfusion React Gantt Chart component with view modes, zooming, weekend highlighting, and templates.
 platform: ej2-react
+control: Timeline
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Time line in React Gantt component
+# Timeline in React Gantt Chart Component
 
-In the Gantt component, timeline is used to represent the project duration as individual cells with defined unit and formats.
+The timeline in the React Gantt Chart component represents project durations as cells with defined units and formats, supporting in-built view modes like Hour-Minute, Day-Hour, Week-Day, Month-Week, Year-Month, and Minutes for flexible visualization. Configure modes using the [timelineViewMode](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineViewMode/) property, with top and bottom tiers customized via [topTier.unit](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineTierSettings#unit) and [bottomTier.unit](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineTierSettings#unit) in [timelineSettings](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings/). This enables detailed views, such as weekly overviews with daily breakdowns for projects, ensuring accurate timeline representation.
 
-## Timeline view modes
+## Configure timeline view modes
 
-Gantt contains the following in-built timeline view modes:
-
-* Hour
-* Day
-* Week
-* Month
-* Year
-* Minutes
-
-Timescale mode in Gantt can be defined by using [`timelineViewMode`](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineViewMode/) property and also we can define timescale mode of top tier and bottom tier by using [`topTier.unit`](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineTierSettingsModel/#unit) and [`bottomTier.unit`](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineTierSettingsModel/#unit) properties.
+Set the timeline view mode using the [timelineViewMode](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineViewMode/) property, with top tier displaying broader units (e.g., weeks) and bottom tier finer ones (e.g., days), ideal for project schedules.
 
 ### Week timeline mode
 
-In the `Week` timeline mode, the upper part of the schedule header displays the weeks, whereas the bottom half of the header displays the days. Refer to the following code example.
+In Week mode, the top tier shows weeks and the bottom tier days, suitable for short-term project tracking.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -45,7 +36,7 @@ In the `Week` timeline mode, the upper part of the schedule header displays the 
 
 ### Month timeline mode
 
-In the `Month` timeline mode, the upper part of the schedule header displays the months, whereas the bottom header of the schedule displays its corresponding weeks. Refer to the following code example.
+In Month mode, the top tier shows months and the bottom tier weeks, ideal for medium-term planning.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -63,7 +54,7 @@ In the `Month` timeline mode, the upper part of the schedule header displays the
 
 ### Year timeline mode
 
-In the `Year` timeline mode, the upper schedule header displays the years whereas, the bottom header displays its corresponding months. Refer to the following code example.
+In Year mode, the top tier shows years and the bottom tier months, suitable for long-term projects.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -81,7 +72,7 @@ In the `Year` timeline mode, the upper schedule header displays the years wherea
 
 ### Day timeline mode
 
-In the `Day` timeline mode, the upper part of the header displays the days whereas, the bottom schedule header displays its corresponding hours. Refer to the following code example.
+In Day mode, the top tier shows days and the bottom tier hours, ideal for detailed daily scheduling.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -99,7 +90,7 @@ In the `Day` timeline mode, the upper part of the header displays the days where
 
 ### Hour timeline mode
 
-An `Hour` timeline mode tracks the tasks in minutes scale. In this mode, the upper schedule header displays hour scale and the lower schedule header displays its corresponding minutes.
+In Hour mode, the top tier shows hours and the bottom tier minutes, perfect for minute-level task tracking.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -133,27 +124,9 @@ In Minutes timeline mode, the tier displays minute-level intervals, ideal for tr
         
 {% previewsample "page.domainurl/code-snippet/gantt/minutetimeline-cs1" %}
 
-## Change timeline view mode programmatically
+## Customize week start day
 
-In the Gantt component, the timeline view mode can be modified programmatically. As described below, the Dropdown menu is also used to change the timeline view. The `Dropdownlist` component can be used to create a dropdown menu. Once the dropdown menu is enabled, the [`timelineViewMode`](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineViewMode/) property from the [`timelineSettings`](https://helpej2.syncfusion.com/react/documentation/api/gantt/timelineSettings/) can be utilized to switch the timeline view between Hour, Day, Week, Month, and Year. Refer to the following code example.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/changetimeline-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/changetimeline-cs1/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/changetimeline-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/gantt/changetimeline-cs1" %}
-
-## Week start day customization
-
-In the Gantt component, you can customize the week start day using the [`weekStartDay`](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings/#weekstartday) property. By default, the [`weekStartDay`](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings/#weekstartday) is set to 0, which specifies the Sunday as a start day of the week. But, you can customize the week start day by using the following code example.
+In the Gantt Chart component, you can customize the week start day using the [weekStartDay](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings#weekstartday) property. By default, the [weekStartDay](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings#weekstartday) is set to **0**, which specifies the **Sunday** as a start day of the week. But, you can customize the week start day by using the following code example.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -171,7 +144,7 @@ In the Gantt component, you can customize the week start day using the [`weekSta
 
 ## Customize automatic timescale update action
 
-In the Gantt component, the schedule timeline will be automatically updated when the tasks date values are updated beyond the project start date and end date ranges. This can be enabled or disabled using the [`updateTimescaleView`](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings/#updatetimescaleview) property.
+In the Gantt Chart component, the schedule timeline will be automatically updated when the tasks date values are updated beyond the project start date and end date ranges. This can be enabled or disabled using the [updateTimescaleView](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings#updatetimescaleview) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -187,9 +160,27 @@ In the Gantt component, the schedule timeline will be automatically updated when
         
 {% previewsample "page.domainurl/code-snippet/gantt/updatetimescale-cs1" %}
 
+## Dynmically change timeline mode
+
+You can dynamically change the timeline mode in the Gantt Chart by updating the [timelineSettings.timelineViewMode](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineViewMode/) property using the [change](https://ej2.syncfusion.com/react/documentation/api/combo-box/index-default#change) event of the [ComboBox](https://ej2.syncfusion.com/react/documentation/combo-box/getting-started) component.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/timeline-cs2/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/timeline-cs2/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/timeline-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/timeline-cs2" %}
+
 ## Timeline cells tooltip
 
-In the Gantt component, you can enable or disable the mouse hover tooltip of timeline cells using the [`timelineSettings.showTooltip`](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings/#showtooltip) property. The default value of this property is `true`. The following code example shows how to enable the timeline cells tooltip in Gantt.
+In the Gantt Chart component, you can enable or disable the mouse hover tooltip of timeline cells using the [timelineSettings.showTooltip](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings#showtooltip) property. The default value of this property is **true**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -205,11 +196,9 @@ In the Gantt component, you can enable or disable the mouse hover tooltip of tim
         
 {% previewsample "page.domainurl/code-snippet/gantt/tooltip-cs2" %}
 
-## Show/hide weekends
+## Highlight weekends
 
-The [timelineSettings.showWeekend](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings/#showweekend) property is used to customize the timeline in the Gantt component by controlling the visibility of weekends. To exclude weekends from the timeline, set the `showWeekend` property to `false` in the `timelineSettings` configuration. This feature is particularly useful for focusing the timeline on working days, enhancing project management efficiency by hiding weekends from the view.
-
->Note: To customize non-working or weekend days in the Gantt chart, refer to the [workWeek](https://ej2.syncfusion.com/react/documentation/gantt/task-scheduling#weekendnon-working-days) documentation for detailed information.
+Highlight weekends by setting [showWeekend](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings#showweekend) to **true** and [workWeek](https://ej2.syncfusion.com/react/documentation/api/gantt#workweek) to define weekdays, aiding in identifying non-working days in a project schedule.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -225,15 +214,36 @@ The [timelineSettings.showWeekend](https://ej2.syncfusion.com/react/documentatio
         
 {% previewsample "page.domainurl/code-snippet/gantt/showweekend-cs1" %}
 
-> Limitations
->* The `showWeekend` feature does not support baselines.
->* The `showWeekend` is not compatible with the manual task mode.
->* Non-working hours cannot be excluded when `showWeekend` is set to false.
->* Holidays are not excluded from the timeline if `showWeekend` is set to false.
+**Limitations:**
+* The `showWeekend` feature does not support baselines and not compatible with the manual task mode.
+* Non-working hours cannot be excluded when `showWeekend` is set to **false**.
+* Holidays are not excluded from the timeline if `showWeekend` is set to **false**.
+
+## Navigating Gantt Chart Timeline
+
+You can adjust the Gantt Chart view by shifting the timeline forward or backward by one unit using the following methods:
+
+- [previousTimeSpan](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#previoustimespan): Moves the timeline backward by one unit from the current start point.
+
+- [nextTimeSpan](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#nexttimespan): Moves the timeline forward by one unit from the current end point.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/timeline-cs3/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/timeline-cs3/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/timeline-cs3/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/timeline-cs3" %}
 
 ## Timeline template
 
-In the Gantt component, you can customize timeline cells using the [timelineTemplate](https://ej2.syncfusion.com/react/documentation/api/gantt/#timelineTemplate) property, allowing for the customization of HTML content within timeline cells. This feature enhances the visual appeal and enables personalized functionality.
+In the Gantt Chart component, you can customize timeline cells using the [timelineTemplate](https://ej2.syncfusion.com/react/documentation/api/gantt#timelineTemplate) property, allowing for the customization of HTML content within timeline cells. This feature enhances the visual appeal and enables personalized functionality.
 
 When designing the timeline cells, you can utilize the following context properties within the template:
 
@@ -530,3 +540,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
         
 {% previewsample "page.domainurl/code-snippet/gantt/tooltip-cs8" %}
 
+## See also
+- [How to configure taskbars?](https://ej2.syncfusion.com/react/documentation/gantt/taskbar)
+- [How to zoom the timeline?](https://ej2.syncfusion.com/react/documentation/gantt/timeline/zooming)
+- [How to configure non-working days?](https://ej2.syncfusion.com/react/documentation/gantt/scheduling-tasks#weekendnon-working-days)

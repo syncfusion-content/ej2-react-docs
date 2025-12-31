@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { GanttComponent, Inject, Resize, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-react-gantt";
+import { GanttComponent, SplitterSettings, Inject, Resize, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-react-gantt";
 import { DropDownListComponent } from "@syncfusion/ej2-react-dropdowns";
 import { ButtonComponent } from "@syncfusion/ej2-react-buttons";
 import { TextBoxComponent } from "@syncfusion/ej2-react-inputs";
@@ -15,7 +15,7 @@ function App() {
     progress: "Progress",
     parentID: "ParentID"
   };
-  const splitterSettings: any = {
+  const splitterSettings: SplitterSettings = {
     position: "75%"
   };
   let ganttInstance: GanttComponent | null;

@@ -12,7 +12,7 @@ let data: Object[]  = [
   
   import * as React from 'react';
   import * as ReactDOM from 'react-dom';
-  import { GanttComponent } from '@syncfusion/ej2-react-gantt';
+  import { GanttComponent, SplitterSettings } from '@syncfusion/ej2-react-gantt';
   
   function App(){
     const taskFields: any = {
@@ -23,7 +23,7 @@ let data: Object[]  = [
       progress: 'Progress',
       parentID: 'ParentID'
     };
-      const splitterSettings: any = {
+      const splitterSettings: SplitterSettings = {
           columnIndex: 5
       };
     function customizeCell(args: any) {

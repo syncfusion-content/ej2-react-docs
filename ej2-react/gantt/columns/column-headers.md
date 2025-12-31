@@ -291,10 +291,82 @@ To customize the appearance of column headers in the Gantt component, use the [c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/columnheader-cs11/app/index.jsx %}
+{% raw %}
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject } from "@syncfusion/ej2-react-gantt";
+import { data } from "./datasource";
+
+function App() {
+  const taskFields = {
+    id: "TaskID",
+    name: "TaskName",
+    startDate: "StartDate",
+    duration: "Duration",
+    progress: "Progress",
+    parentID: "ParentID",
+  };
+  let gantt;
+  const splitterSettings = {
+    position: "75%"
+  }
+  return (
+    <div>
+      <GanttComponent ref={g => gantt = g} dataSource={data} taskFields={taskFields} height="450px" splitterSettings={splitterSettings}>
+        <ColumnsDirective>
+          <ColumnDirective field="TaskID" headerText="Task ID" />
+          <ColumnDirective field="TaskName" headerText="Task Name" customAttributes={{ class: 'customcss' }} />
+          <ColumnDirective field="StartDate" headerText="Start Date" />
+          <ColumnDirective field="Duration" headerText="Duration" customAttributes={{ class: 'customcss' }} />
+          <ColumnDirective field="Progress" headerText="Progress" />
+        </ColumnsDirective>
+        <Inject />
+      </GanttComponent>
+    </div>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/columnheader-cs11/app/index.tsx %}
+{% raw %}
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject } from "@syncfusion/ej2-react-gantt";
+import { data } from "./datasource";
+
+function App() {
+  const taskFields = {
+    id: "TaskID",
+    name: "TaskName",
+    startDate: "StartDate",
+    duration: "Duration",
+    progress: "Progress",
+    parentID: "ParentID",
+  };
+  let gantt: GanttComponent;
+  const splitterSettings: object = {
+    position: "75%"
+  }
+  return (
+    <div>
+      <GanttComponent ref={g => gantt = g} dataSource={data} taskFields={taskFields} height="450px" splitterSettings={splitterSettings}>
+        <ColumnsDirective>
+          <ColumnDirective field="TaskID" headerText="Task ID" />
+          <ColumnDirective field="TaskName" headerText="Task Name" customAttributes={{ class: 'customcss' }} />
+          <ColumnDirective field="StartDate" headerText="Start Date" />
+          <ColumnDirective field="Duration" headerText="Duration" customAttributes={{ class: 'customcss' }} />
+          <ColumnDirective field="Progress" headerText="Progress" />
+        </ColumnsDirective>
+        <Inject />
+      </GanttComponent>
+    </div>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/gantt/columnheader-cs11/index.html %}
