@@ -772,21 +772,15 @@ The server-side engine seamlessly supports Excel export functionality, enabling 
     import * as React from 'react';
     function App() {
         let dataSourceSettings = {
-            url: 'https://localhost:44350/api/pivot/post',
+            url: 'https://services.syncfusion.com/react/production/api/pivot/post',
             mode: 'Server',
-            rows: [{
-                name: 'ProductID', caption: 'Product ID'
-            }],
-            formatSettings: [{
-                name: 'Price', format: 'C'
-            }],
-            columns: [{
-                name: 'Year', caption: 'Production Year'
-            }],
+            columns: [ { name: 'Year', caption: 'Production Year' }],
             values: [
                 { name: 'Sold', caption: 'Units Sold' },
-                { name: 'Price', caption: 'Sold Amount' }
+                { name: 'Amount', caption: 'Sold Amount' }
             ],
+            rows: [{ name: 'Country' }, {name: 'Products'}],
+            formatSettings: [{ name: 'Amount', format: 'C0' }, { name: 'Sold', format: 'N0' }]
         };
         let pivotObj;
         return (<div><div className="col-md-9"> <PivotViewComponent ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings} allowExcelExport={true}></PivotViewComponent></div>
@@ -858,21 +852,15 @@ The Excel export provides an option to include header and footer content for the
     import * as React from 'react';
     function App() {
         let dataSourceSettings = {
-            url: 'https://localhost:44350/api/pivot/post',
+            url: 'https://services.syncfusion.com/react/production/api/pivot/post',
             mode: 'Server',
-            rows: [{
-                name: 'ProductID', caption: 'Product ID'
-            }],
-            formatSettings: [{
-                name: 'Price', format: 'C'
-            }],
-            columns: [{
-                name: 'Year', caption: 'Production Year'
-            }],
+            columns: [ { name: 'Year', caption: 'Production Year' }],
             values: [
                 { name: 'Sold', caption: 'Units Sold' },
-                { name: 'Price', caption: 'Sold Amount' }
+                { name: 'Amount', caption: 'Sold Amount' }
             ],
+            rows: [{ name: 'Country' }, {name: 'Products'}],
+            formatSettings: [{ name: 'Amount', format: 'C0' }, { name: 'Sold', format: 'N0' }]
         };
         let pivotObj;
         return (<div><div className="col-md-9"> <PivotViewComponent ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings} allowExcelExport={true}></PivotViewComponent></div>
@@ -916,21 +904,15 @@ The Excel export allows pivot table data to be exported in **CSV** file format a
     import * as React from 'react';
     function App() {
         let dataSourceSettings = {
-            url: 'https://localhost:44350/api/pivot/post',
+            url: 'https://services.syncfusion.com/react/production/api/pivot/post',
             mode: 'Server',
-            rows: [{
-                name: 'ProductID', caption: 'Product ID'
-            }],
-            formatSettings: [{
-                name: 'Price', format: 'C'
-            }],
-            columns: [{
-                name: 'Year', caption: 'Production Year'
-            }],
+            columns: [ { name: 'Year', caption: 'Production Year' }],
             values: [
                 { name: 'Sold', caption: 'Units Sold' },
-                { name: 'Price', caption: 'Sold Amount' }
+                { name: 'Amount', caption: 'Sold Amount' }
             ],
+            rows: [{ name: 'Country' }, {name: 'Products'}],
+            formatSettings: [{ name: 'Amount', format: 'C0' }, { name: 'Sold', format: 'N0' }]
         };
         let pivotObj;
         return (<div><div className="col-md-9"> <PivotViewComponent ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings} allowExcelExport={true}></PivotViewComponent></div>
@@ -1004,20 +986,15 @@ To enable native Excel pivot export in the PivotTable, the user must call the `e
     import * as React from 'react';
     function App() {
         let dataSourceSettings = {
-            url: 'https://localhost:44350/api/pivot/post',
+            url: 'https://services.syncfusion.com/react/production/api/pivot/post',
             mode: 'Server',
-            rows: [{
-                name: 'ProductID', caption: 'Product ID'
-            }],
-            formatSettings: [{
-                name: 'Price', format: 'C'
-            }],
-            columns: [{
-                name: 'Year', caption: 'Production Year'
-            }],
+            columns: [ { name: 'Year', caption: 'Production Year' }],
             values: [
-                { name: 'Sold', caption: 'Units Sold' }
+                { name: 'Sold', caption: 'Units Sold' },
+                { name: 'Amount', caption: 'Sold Amount' }
             ],
+            rows: [{ name: 'Country' }, {name: 'Products'}],
+            formatSettings: [{ name: 'Amount', format: 'C0' }, { name: 'Sold', format: 'N0' }]
         };
         let pivotObj;
         return (<div><div className="col-md-9"> <PivotViewComponent ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings} allowExcelExport={true}></PivotViewComponent></div>
