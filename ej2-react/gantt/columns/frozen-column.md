@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Column pinning (Frozen) in React Gantt component | Syncfusion
-description: Learn here all about Column pinning (Frozen) in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Column pinning (Frozen) in React Gantt Chart Component | Syncfusion
+description: Learn here all about Column pinning (Frozen) in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Column pinning (Frozen) 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column pinning (Frozen) in React Gantt component
+# Column pinning (Frozen) in React Gantt Chart Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt component provides a frozen columns feature that keeps selected columns fixed while scrolling horizontally through large datasets. This functionality ensures that critical information remains visible at all times, improving readability and user experience. By maintaining key columns in view, it simplifies navigation and makes referencing important data points easier when working with extensive project details.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component provides a frozen columns feature that keeps selected columns fixed while scrolling horizontally through large datasets. This functionality ensures that critical information remains visible at all times, improving readability and user experience. By maintaining key columns in view, it simplifies navigation and makes referencing important data points easier when working with extensive project details.
 
-To enable frozen columns, use the [frozenColumns](https://ej2.syncfusion.com/react/documentation/api/gantt#frozencolumns) property in the Gantt component.
+To enable frozen columns, use the [frozenColumns](https://ej2.syncfusion.com/react/documentation/api/gantt#frozencolumns) property in the Gantt Chart component.
 
 In the following example, the `frozenColumns` property is set to **2**, which keeps the first two columns fixed on the left while the remaining columns can be scrolled horizontally.
 
@@ -84,7 +84,7 @@ In the following example, the **TaskID** column is frozen on the left side, the 
 
 ## Change default frozen line color
 
-The frozen line borders of frozen columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt component can be customized by applying custom CSS styles to the respective frozen columns. This allows you to change the border color of left, right, and fixed frozen columns to match your application's design and theme.
+The frozen line borders of frozen columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component can be customized by applying custom CSS styles to the respective frozen columns. This allows you to change the border color of left, right, and fixed frozen columns to match your application's design and theme.
 
 To change the default frozen line color, use the following CSS class names and apply the desired border color:
 

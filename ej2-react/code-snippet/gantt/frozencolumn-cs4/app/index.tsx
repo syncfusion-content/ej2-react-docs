@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, ColumnsDirective, ColumnDirective, Inject } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Freeze } from '@syncfusion/ej2-react-gantt';
 import { GanttData } from './datasource';
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
         <ColumnDirective field="Progress" headerText="Progress" freeze="Right" />
         <ColumnDirective field="Status" headerText="Status" />
       </ColumnsDirective>
-      <Inject services={[]} />
+      <Inject services={[ Freeze ]} />
     </GanttComponent>
   );
 }

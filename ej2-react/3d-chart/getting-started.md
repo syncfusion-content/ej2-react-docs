@@ -192,9 +192,9 @@ export let data: any[] = [
 {% endhighlight %}
 {% endtabs %}
 
-Add a series object to the chart by using [`series`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3dseries) property. Now map the field names `x` and `y` in the JSON data to the [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3dseries#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3dseries#yname) properties of the series, then set the JSON data to [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3dseries#datasource) property.
+Add a series object to the chart by using [`series`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3dseriesmodel) property. Now map the field names `x` and `y` in the JSON data to the [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3dseriesmodel#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3dseriesmodel#yname) properties of the series, then set the JSON data to [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3dseriesmodel#datasource) property.
 
-Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3daxis#valuetype)for horizontal axis to `Category`. By default, the axis valueType is `Numeric`.
+Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3daxismodel#valuetype)for horizontal axis to `Category`. By default, the axis valueType is `Numeric`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

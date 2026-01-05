@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Column template in React Gantt component | Syncfusion
-description: Learn here all about Column template in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Column template in React Gantt Chart Component | Syncfusion
+description: Learn here all about Column template in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Column template 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column template in React Gantt component
+# Column template in React Gantt Chart Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt component provides a [template](https://ej2.syncfusion.com/react/documentation/api/gantt/column/#template) option that allows you to display custom elements in a column instead of the field value. This can be useful when you need to display images, buttons, or other custom content within a column.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component provides a [template](https://ej2.syncfusion.com/react/documentation/api/gantt/column/#template) option that allows you to display custom elements in a column instead of the field value. This can be useful when you need to display images, buttons, or other custom content within a column.
 
 > When using template columns, they are primarily meant for rendering custom content and may not provide built-in support for gantt actions like sorting, filtering, editing unless [field](https://ej2.syncfusion.com/react/documentation/api/gantt/column/#field) property of the column is specified.
 
@@ -124,7 +124,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## Render hyperlink in a column
 
-The Gantt component supports hyperlink columns and allows routing on click using the `template` property. This is useful for displaying data that links to another page or website.
+The Gantt Chart component supports hyperlink columns and allows routing on click using the `template` property. This is useful for displaying data that links to another page or website.
 
 To configure a hyperlink column, define a [template](https://ej2.syncfusion.com/react/documentation/api/gantt/column/#template) for the column and use an <a> tag inside it. The `onClick` handler is triggered when the hyperlink is clicked.
 

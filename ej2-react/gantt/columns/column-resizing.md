@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resize columns in React Gantt Chart component | Syncfusion
+title: Resize columns in React Gantt Chart Component | Syncfusion
 description: Learn to resize columns in the React Gantt Chart with dynamic sizing, width limits, and external customization options.
 platform: ej2-react
 control: Column resizing
@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resize columns in React Gantt component
+# Resize columns in React Gantt Chart Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt component allows you to resize columns dynamically by dragging the edges of column headers. This feature enhances readability and layout flexibility, especially when working with large datasets.  To enable this feature, set the [allowResizing](https://ej2.syncfusion.com/react/documentation/api/gantt/#allowresizing) property to **true** in the Gantt configuration. 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component allows you to resize columns dynamically by dragging the edges of column headers. This feature enhances readability and layout flexibility, especially when working with large datasets.  To enable this feature, set the [allowResizing](https://ej2.syncfusion.com/react/documentation/api/gantt/#allowresizing) property to **true** in the Gantt configuration. 
 
 Column width can be adjusted by dragging the right edge of the header, with changes applied immediately.  
 
-To use the column resize feature, inject the `Resize` module into the Gantt component.
+To use the column resize feature, inject the `Resize` module into the Gantt Chart component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -58,7 +58,7 @@ The following example demonstrates how the **TaskID** column can be configured w
 
 ## Prevent resizing for particular column
 
-You can prevent resizing for a specific column in the Gantt component to maintain a consistent column width. To disable resizing, set the [allowResizing](https://ej2.syncfusion.com/react/documentation/api/gantt/columnDirective/#allowresizing) property of the respective column to **false**.  
+You can prevent resizing for a specific column in the Gantt Chart component to maintain a consistent column width. To disable resizing, set the [allowResizing](https://ej2.syncfusion.com/react/documentation/api/gantt/columnDirective/#allowresizing) property of the respective column to **false**.  
 
 The following example demonstrates how to disable resizing for the **TaskID** column.
 
@@ -80,7 +80,7 @@ The following example demonstrates how to disable resizing for the **TaskID** co
 
 ## Column resizing modes
 
-The React Gantt component supports two resizing modes that determine how column widths behave during resizing. These modes are configured using the [resizeSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/resizeSettings/#mode) property of the underlying TreeGrid. Resizing behavior is defined using the `ResizeSettingsModel` interface, where the `mode` property specifies the type of resizing to be applied.
+The React Gantt Chart component supports two resizing modes that determine how column widths behave during resizing. These modes are configured using the [resizeSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/resizeSettings/#mode) property of the underlying TreeGrid. Resizing behavior is defined using the `ResizeSettingsModel` interface, where the `mode` property specifies the type of resizing to be applied.
 
 There are two available resizing modes:
 
@@ -109,7 +109,7 @@ The following example demonstrates how to set the `resizeSettings.mode` to **Nor
 
 ## Resize columns programmatically
 
-You can programmatically resize columns in the React Gantt component by accessing the target column using the `getColumnByField` method and updating its [width](https://ej2.syncfusion.com/react/documentation/api/gantt/columnDirective/#width) property. This is useful for implementing custom UI controls or dynamic layout adjustments.  To reflect the change, call the `refreshColumns` method from the `treeGrid` object within the Gantt instance.
+You can programmatically resize columns in the React Gantt Chart component by accessing the target column using the `getColumnByField` method and updating its [width](https://ej2.syncfusion.com/react/documentation/api/gantt/columnDirective/#width) property. This is useful for implementing custom UI controls or dynamic layout adjustments.  To reflect the change, call the `refreshColumns` method from the `treeGrid` object within the Gantt instance.
 
 The following example demonstrates how to resize a column externally using the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#change) event of the [DropDownList](https://ej2.syncfusion.com/react/documentation/drop-down-list/getting-started) component. 
 
@@ -153,7 +153,7 @@ The following example demonstrates how resizing events work: `resizeStart` cance
 
 ## Touch interaction
 
-The Gantt component supports touch interactions for mobile devices. Users can resize columns by tapping and dragging the floating handler, or use the column menu to autofit columns.
+The Gantt Chart component supports touch interactions for mobile devices. Users can resize columns by tapping and dragging the floating handler, or use the column menu to autofit columns.
 
 **Resizing columns on touch devices:**
 

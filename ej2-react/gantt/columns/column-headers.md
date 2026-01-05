@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Headers in React Gantt component | Syncfusion
-description: Learn here all about Headers in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Headers in React Gantt Chart Component | Syncfusion
+description: Learn here all about Headers in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Headers
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column headers in React Gantt component
+# Column headers in React Gantt Chart Component
 
-The React Gantt component provides flexible options to manage and customize column headers. You can define static header text, apply custom templates, align header content, and even update header titles dynamically through events or methods. These features help tailor the Gantt chart to match specific UI requirements and improve readability.
+The React Gantt Chart component provides flexible options to manage and customize column headers. You can define static header text, apply custom templates, align header content, and even update header titles dynamically through events or methods. These features help tailor the Gantt chart to match specific UI requirements and improve readability.
 
 ## Set custom header text
 
@@ -57,7 +57,7 @@ In this example, custom elements are applied to both the **TaskName** and **Dura
 
 ## Align header text
 
-You can align the column header text in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt component using the [headerTextAlign](https://ej2.syncfusion.com/react/documentation/api/gantt/column#headertextalign) property. By default, the text is aligned to the **left**. The available alignment options are:
+You can align the column header text in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component using the [headerTextAlign](https://ej2.syncfusion.com/react/documentation/api/gantt/column#headertextalign) property. By default, the text is aligned to the **left**. The available alignment options are:
 
 - **Left:** Aligns text to the left (default).  
 - **Center:** Aligns text to the center.  
@@ -82,7 +82,7 @@ You can align the column header text in the Syncfusion<sup style="font-size:70%"
 
 ## Enable header text wrapping
 
-You can enable autowrap in the Syncfusion React Gantt component to allow cell content to wrap onto the next line when it exceeds the defined column width. This wrapping behavior is based on the whitespace between words. To activate this feature, set the `allowTextWrap` property to **true** and specify an appropriate column [width](https://ej2.syncfusion.com/react/documentation/api/gantt/column#width).
+You can enable autowrap in the Syncfusion React Gantt Chart component to allow cell content to wrap onto the next line when it exceeds the defined column width. This wrapping behavior is based on the whitespace between words. To activate this feature, set the `allowTextWrap` property to **true** and specify an appropriate column [width](https://ej2.syncfusion.com/react/documentation/api/gantt/column#width).
 
 The wrapping behavior is defined using the `textWrapSettings.wrapMode` property of the `treeGrid` object. Available options include:
 
@@ -110,7 +110,7 @@ The wrapping behavior is defined using the `textWrapSettings.wrapMode` property 
 
 ## Update header text dynamically
 
-The React Gantt component allows dynamic updates to column header text, either through events or method calls. This is useful for customizing headers based on user input or application logic.
+The React Gantt Chart component allows dynamic updates to column header text, either through events or method calls. This is useful for customizing headers based on user input or application logic.
 
 **Using Event**
 
@@ -151,7 +151,7 @@ Here is an example of how to change the header text of a column using the `getCo
 
 **Changing the header text of all columns:**
 
-To modify the header text of all columns in the Gantt component, iterate through the columns collection and set the [headerText](https://ej2.syncfusion.com/react/documentation/api/gantt/column#headertext) property for each column. This approach ensures consistent customization across all headers.
+To modify the header text of all columns in the Gantt Chart component, iterate through the columns collection and set the [headerText](https://ej2.syncfusion.com/react/documentation/api/gantt/column#headertext) property for each column. This approach ensures consistent customization across all headers.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -169,7 +169,7 @@ To modify the header text of all columns in the Gantt component, iterate through
 
 ## Rotate header text
 
-By default, header text in the Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt component is displayed horizontally. To rotate it vertically, diagonally, or at a custom angle, follow the steps below using the [customAttributes](https://ej2.syncfusion.com/react/documentation/api/gantt/column#customattributes) property of the column.
+By default, header text in the Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component is displayed horizontally. To rotate it vertically, diagonally, or at a custom angle, follow the steps below using the [customAttributes](https://ej2.syncfusion.com/react/documentation/api/gantt/column#customattributes) property of the column.
 
 **Step 1**: Create a CSS class with rotation styles.
 
@@ -219,7 +219,7 @@ By default, header text in the Syncfusion<sup style="font-size:70%">&reg;</sup> 
 
 ## Add custom tooltip to header
 
-You can display additional information in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt component by adding custom tooltips to column headers. This is especially helpful when space is limited or when extra context is needed. To implement this, use the [beforeRender](https://ej2.syncfusion.com/react/documentation/api/gantt#beforeRender) event of the `Tooltip` component. This event triggers before each header cell is rendered, allowing you to assign a custom tooltip dynamically.
+You can display additional information in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component by adding custom tooltips to column headers. This is especially helpful when space is limited or when extra context is needed. To implement this, use the [beforeRender](https://ej2.syncfusion.com/react/documentation/api/gantt#beforeRender) event of the `Tooltip` component. This event triggers before each header cell is rendered, allowing you to assign a custom tooltip dynamically.
 
 The following example demonstrates how to use the `beforeRender` event to add a tooltip to a header cell:
 
@@ -241,11 +241,11 @@ The following example demonstrates how to use the `beforeRender` event to add a 
 
 ## Style header text 
 
-To modify the appearance of column headers in the Gantt, follow the steps below. You can use CSS, properties, methods, or events provided by the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt component.
+To modify the appearance of column headers in the Gantt, follow the steps below. You can use CSS, properties, methods, or events provided by the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component.
 
 ### Using CSS
 
-You can apply styles to Gantt component header cells using the **.e-headercell** class. This allows you to customize font, background color, and other visual properties.
+You can apply styles to Gantt Chart component header cells using the **.e-headercell** class. This allows you to customize font, background color, and other visual properties.
 
 ```css
   .e-gantt .e-headercell {
@@ -270,7 +270,7 @@ You can apply styles to Gantt component header cells using the **.e-headercell**
 
 ### Using property
 
-To customize the appearance of column headers in the Gantt component, use the [customAttributes](https://ej2.syncfusion.com/react/documentation/api/gantt/column#customattributes) property. It accepts an object containing CSS class names that apply styles directly to header cells.
+To customize the appearance of column headers in the Gantt Chart component, use the [customAttributes](https://ej2.syncfusion.com/react/documentation/api/gantt/column#customattributes) property. It accepts an object containing CSS class names that apply styles directly to header cells.
 
 **Step 1:** Define a CSS class with the desired styles.
 
@@ -377,7 +377,7 @@ ReactDOM.render(<App />, document.getElementById("root"));
 
 ### Using method 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt component provides methods in the `treeGrid` object to customize column header appearance:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component provides methods in the `treeGrid` object to customize column header appearance:
 
 - `getColumnHeaderByIndex(index)` – Gets the header element by column index.
 - `getColumnHeaderByField(field)` – Retrieves the header element using the field name.
@@ -409,7 +409,7 @@ The following example demonstrates how to apply custom styles to specific column
 
 ### Using event
 
-To customize the Gantt component header appearance, use the [headerCellInfo](https://ej2.syncfusion.com/react/documentation/gantt/events#headercellinfo) event. This event triggers when each header cell is rendered and provides access to its details, allowing you to apply custom styles.
+To customize the Gantt Chart component header appearance, use the [headerCellInfo](https://ej2.syncfusion.com/react/documentation/gantt/events#headercellinfo) event. This event triggers when each header cell is rendered and provides access to its details, allowing you to apply custom styles.
 
 The following example demonstrates how to check if the current header column is the **TaskID** field and apply a CSS class conditionally:
 
@@ -429,7 +429,7 @@ The following example demonstrates how to check if the current header column is 
 
 ## Refresh header programmatically 
 
-To refresh the header in Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt component after updating column properties (such as text, width, or alignment), use the `refreshHeader` method from the `treeGrid` object. This method re-renders the header to reflect the latest column changes.
+To refresh the header in Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component after updating column properties (such as text, width, or alignment), use the `refreshHeader` method from the `treeGrid` object. This method re-renders the header to reflect the latest column changes.
 
 The following example demonstrates how to update the header text of the column at index 1 for the **TaskName** column using a button click.
 

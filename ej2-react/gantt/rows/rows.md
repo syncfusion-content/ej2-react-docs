@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Rows in React Gantt component | Syncfusion
-description: Learn here all about Rows in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Rows in React Gantt Chart Component | Syncfusion
+description: Learn here all about rows in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Rows
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row in React Gantt component
+# Rows in React Gantt Chart Component
 
 Each row typically represents a single record or item from a data source. Rows in a Gantt chart are used to present data in both tabular and timeline chart formats. Each row displays a set of values representing the fields of an individual data record. Rows allow you to interact with the data in the Gantt chart. You can select rows, edit cell values, perform taskbar editing in the chart side of the Gantt, perform sorting or filtering operations, and trigger events based on actions.
 
@@ -18,7 +18,7 @@ Customizing row styles in the Syncfusion<sup style="font-size:70%">&reg;</sup> R
 
 ### Using event
 
-You can customize the row appearance in the React Gantt component by using the [rowDataBound](https://ej2.syncfusion.com/react/documentation/gantt/events#rowdatabound) event. This event allows you to apply styles or perform other row-level modifications based on the data or specific logic requirements.
+You can customize the row appearance in the React Gantt Chart component by using the [rowDataBound](https://ej2.syncfusion.com/react/documentation/gantt/events#rowdatabound) event. This event allows you to apply styles or perform other row-level modifications based on the data or specific logic requirements.
 
 The following example demonstrates how to customize row styles based on the value of the **Progress** column.
 
@@ -79,7 +79,7 @@ To create a visual separation between consecutive rows, you can style alternate 
 
 ### Using method 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt component provides methods to customize the appearance of rows in both the grid and chart sections. These methods are accessible through the `treeGrid` object and the Gantt instance.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component provides methods to customize the appearance of rows in both the grid and chart sections. These methods are accessible through the `treeGrid` object and the Gantt instance.
 
 To customize rows in the grid section, you can use the following methods:
 
