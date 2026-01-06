@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sorting in React Grid component | Syncfusion
-description: Learn here all about Sorting in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: Sorting customization in React Grid component | Syncfusion
+description: Learn here all about Sorting customization in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Sorting 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sorting in React Grid component
+# Sorting customization in React Grid component
 
 You can customize the appearance of the sorting icons and multi sorting icons in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component using CSS. You can use the available Syncfusion<sup style="font-size:70%">&reg;</sup> [icons](https://ej2.syncfusion.com/react/documentation/appearance/icons#material) based on your theme. Here's how to do it:
 

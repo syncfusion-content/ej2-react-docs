@@ -624,5 +624,5 @@ In the given example, the filtering is prevented for **ShipCity** column during 
 
 ## See also
 
-* [Hide sorting options on Excel filter dialog](../how-to/hide-sorting-in-excel-filter)
+* [Hide sorting options on Excel filter dialog](./excel-like-filter#hide-sorting-option-in-filter-dialog)
 * [How to change loading indicator in React Grid](../data-binding/data-binding#loading-animation)
