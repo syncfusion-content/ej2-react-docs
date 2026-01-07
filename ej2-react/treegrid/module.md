@@ -21,7 +21,7 @@ The following modules should be injected to extend TreeGrid functionality.
 | [Aggregate](../treegrid/aggregates/aggregates)| Inject this module to enable aggregates.|
 | [ColumnChooser](../treegrid/columns/column-chooser) | Inject to enable the column chooser feature. |
 | [ColumnMenu](../treegrid/columns/column-menu)| Inject this module to enable the column menu.|
-| [CommandColumn](../../treegrid/edit#command-column)| Inject this module to enable command columns.|
+| [CommandColumn](../treegrid/editing/command-column-editing)| Inject this module to enable command columns.|
 | [ContextMenu](../treegrid/context-menu)| Inject this module to enable the context menu.|
 | [Resize](../treegrid/columns/column-resizing)| Inject this module to enable column resizing.|
 | [Reorder](../treegrid/columns/column-reorder)| Inject this module to enable column reordering.|

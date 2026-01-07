@@ -1,4 +1,3 @@
-
 import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import * as React from 'react';
@@ -19,6 +18,7 @@ function App() {
         filters: []
     };
 
+    // Attach an Authorization header before each server call
     function beforeServiceInvoke(args: any) {
         const token = getAuthToken(); // obtain securely at runtime
 
