@@ -17,6 +17,7 @@ function App() {
         filters: []
     };
 
+    // Attach an Authorization header before each server call
     function beforeServiceInvoke(args) {
         const token = getAuthToken(); // obtain securely at runtime
 
