@@ -1,4 +1,4 @@
-----
+---
 layout: post
 title: Customize AI Assistant in React Rich Text Editor | Syncfusion
 description: Learn about AI Assistant customization in the Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
@@ -6,7 +6,7 @@ control: Customization of AI Assistant
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
-----
+---
 
 # Customization of AI Assistant
 
