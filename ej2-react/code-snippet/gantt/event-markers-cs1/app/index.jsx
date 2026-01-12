@@ -1,23 +1,44 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, Inject, DayMarkers, EventMarkersDirective, EventMarkerDirective } from '@syncfusion/ej2-react-gantt';
-import { data } from './datasource';
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject } from '@syncfusion/ej2-react-gantt';
+import { DayMarkers } from '@syncfusion/ej2-react-gantt';
+import { projectNewData } from './datasource';
 
-function App (){
-    const taskFields = {
-    id: 'TaskID',
-    name: 'TaskName',
-    startDate: 'StartDate',
-    duration: 'Duration',
-    progress: 'Progress',
-    parentID: 'ParentID'
-  };
-  const eventMarkerDay = new Date('4/10/2019');
-        return <GanttComponent dataSource={data} taskFields={taskFields} height = '450px'>
-        <EventMarkersDirective>
-              <EventMarkerDirective day={eventMarkerDay} cssClass='e-custom-event-marker'  label='Project approval and kick-off' ></EventMarkerDirective>
-        </EventMarkersDirective>
+function App() {
+    const taskSettings = {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        endDate: 'EndDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        parentID: 'ParentID'
+    };
+
+    const eventMarkers = [
+        { day: new Date('2019-04-20'), label: 'Research phase ends' },
+        { day: new Date('2019-05-18'), label: 'Design phase ends' },
+        { day: new Date('2019-06-05'), label: 'Production phase ends' },
+        { day: new Date('2019-06-20'), label: 'Sales and marketing phase starts' }
+    ];
+
+    return (
+        <GanttComponent
+            height="430px"
+            dataSource={projectNewData}
+            taskFields={taskSettings}
+            eventMarkers={eventMarkers}
+        >
+            <ColumnsDirective>
+                <ColumnDirective field="TaskID" headerText="Task ID" width="100" />
+                <ColumnDirective field="TaskName" headerText="Task Name" width="150" />
+                <ColumnDirective field="StartDate" headerText="Start Date" width="150" />
+                <ColumnDirective field="Duration" headerText="Duration" width="150" />
+                <ColumnDirective field="Progress" headerText="Progress" width="150" />
+            </ColumnsDirective>
             <Inject services={[DayMarkers]} />
         </GanttComponent>
-};
+    );
+}
+
 ReactDOM.render(<App />, document.getElementById('root'));

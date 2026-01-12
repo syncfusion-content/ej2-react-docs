@@ -11,6 +11,9 @@ System.config({
     meta: {
         'typescript': {
             "exports": "ts"
+        },
+        '*.json': {
+            loader: 'https://cdn.jsdelivr.net/npm/systemjs-plugin-json@0.3.0/json.js'
         }
     },
     paths: {
@@ -23,7 +26,7 @@ System.config({
         "@syncfusion/ej2-inputs": "syncfusion:ej2-inputs/dist/ej2-inputs.umd.min.js",
         "@syncfusion/ej2-calendars": "syncfusion:ej2-calendars/dist/ej2-calendars.umd.min.js",
         "@syncfusion/ej2-lists": "syncfusion:ej2-lists/dist/ej2-lists.umd.min.js",
-         "@syncfusion/ej2-base": "syncfusion:ej2-base/dist/ej2-base.umd.min.js",
+        "@syncfusion/ej2-base": "syncfusion:ej2-base/dist/ej2-base.umd.min.js",
         "@syncfusion/ej2-markdown-converter": "syncfusion:ej2-markdown-converter/dist/ej2-markdown-converter.umd.min.js",
         "@syncfusion/ej2-interactive-chat": "syncfusion:ej2-interactive-chat/dist/ej2-interactive-chat.umd.min.js",
         "@syncfusion/ej2-grids": "syncfusion:ej2-grids/dist/ej2-grids.umd.min.js",
@@ -39,7 +42,7 @@ System.config({
         "@syncfusion/ej2-file-utils": "syncfusion:ej2-file-utils/dist/ej2-file-utils.umd.min.js",
         "@syncfusion/ej2-filemanager": "syncfusion:ej2-filemanager/dist/ej2-filemanager.umd.min.js",
         "@syncfusion/ej2-dropdowns": "syncfusion:ej2-dropdowns/dist/ej2-dropdowns.umd.min.js",
-        "@syncfusion/ej2-notifications":"syncfusion:ej2-notifications/dist/ej2-notifications.umd.min.js",
+        "@syncfusion/ej2-notifications": "syncfusion:ej2-notifications/dist/ej2-notifications.umd.min.js",
         "@syncfusion/ej2-splitbuttons": "syncfusion:ej2-splitbuttons/dist/ej2-splitbuttons.umd.min.js",
         "@syncfusion/ej2-layouts": "syncfusion:ej2-layouts/dist/ej2-layouts.umd.min.js",
         "@syncfusion/ej2-richtexteditor": "syncfusion:ej2-richtexteditor/dist/ej2-richtexteditor.umd.min.js",
@@ -51,8 +54,8 @@ System.config({
         "@syncfusion/ej2-react-dropdowns": "syncfusion:ej2-react-dropdowns/dist/ej2-react-dropdowns.umd.min.js",
         "@syncfusion/ej2-svg-base": "syncfusion:ej2-svg-base/dist/ej2-svg-base.umd.min.js",
         "@syncfusion/ej2-react-svg-base": "syncfusion:ej2-react-svg-base/dist/ej2-react-svg-base.umd.min.js",
-"react-dom":"https://unpkg.com/react-dom@16.3.1/umd/react-dom.development.js",
-"react":"https://unpkg.com/react@16.3.1/umd/react.development.js",
+        "react-dom": "https://unpkg.com/react-dom@16.3.1/umd/react-dom.development.js",
+        "react": "https://unpkg.com/react@16.3.1/umd/react.development.js",
     },
     packages: {
         'app': { main: 'index', defaultExtension: 'tsx' },

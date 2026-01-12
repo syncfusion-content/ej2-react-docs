@@ -1,21 +1,33 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, TaskFieldsModel, TimelineSettingsModel } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-function App(){
-    const taskFields: any = {
+
+function App() {
+  const taskFields: TaskFieldsModel = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
+    endDate: 'EndDate',
     duration: 'Duration',
     progress: 'Progress',
+    dependency: 'Predecessor',
     parentID: 'ParentID'
   };
-  const timelineSettings: any = {
-    timelineViewMode:'Day'
+
+  const timelineSettings: TimelineSettingsModel = {
+    timelineViewMode: 'Day'
   };
-        return <GanttComponent dataSource={data} taskFields={taskFields}
-        timelineSettings={timelineSettings} height = '450px'>
-      </GanttComponent>
-};
+
+  return (
+    <GanttComponent
+      height="430px"
+      dataSource={data}
+      taskFields={taskFields}
+      timelineSettings={timelineSettings}
+    >
+    </GanttComponent>
+  );
+}
+
 ReactDOM.render(<App />, document.getElementById('root'));

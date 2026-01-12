@@ -27,7 +27,7 @@ let data: Object[]  =  [
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, SplitterSettings, } from '@syncfusion/ej2-react-gantt';
 
 class App extends React.Component<{}, {}>{
     public taskFields: any = {
@@ -39,7 +39,7 @@ class App extends React.Component<{}, {}>{
     durationUnit:'DurationUnit',
     child: 'subtasks'
   };
-  public splitterSettings: any = {
+  public splitterSettings: SplitterSettings = {
     columnIndex: 4
   };
     render() {

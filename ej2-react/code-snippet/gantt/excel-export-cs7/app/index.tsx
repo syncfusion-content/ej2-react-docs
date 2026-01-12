@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
-import { GanttComponent, Inject, Toolbar, ToolbarItem, ExcelExport, Selection, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, Inject, Toolbar, ToolbarItem, ExcelExport, Selection, ColumnsDirective, ColumnDirective, SplitterSettings, } from '@syncfusion/ej2-react-gantt';
 import { ganttData } from './datasource';
 function App (){
     let ganttInstance: any;
@@ -51,7 +51,7 @@ function toolbarClick(args: ClickEventArgs): void {
    const labelSettings: any = {
         taskLabel: '${Progress}%'
     };
-    const splitterSettings: any = {
+    const splitterSettings: SplitterSettings = {
         columnIndex: 3
     };
         return <GanttComponent id='GanttExport' dataSource={ganttData} taskFields={taskFields} toolbar={toolbarOptions}

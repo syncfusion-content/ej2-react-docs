@@ -1,9 +1,9 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, Inject, Reorder } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, SplitterSettings, Inject, Reorder } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-function App (){
-    const taskFields: any = {
+function App() {
+  const taskFields: any = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -11,12 +11,11 @@ function App (){
     progress: 'Progress',
     parentID: 'ParentID'
   };
-  const splitterSettings: any = {
-    columnIndex : 5
-};
-        return <GanttComponent dataSource={data} taskFields={taskFields} splitterSettings={splitterSettings}
-        allowReordering={true} height = '450px'>
-           <Inject services={[Reorder]} />
-        </GanttComponent>
+  const splitterSettings: SplitterSettings = {
+    columnIndex: 5
+  };
+  return <GanttComponent dataSource={data} taskFields={taskFields} splitterSettings={splitterSettings} allowReordering={true} height='450px'>
+    <Inject services={[Reorder]} />
+  </GanttComponent>
 };
 ReactDOM.render(<App />, document.getElementById('root'));

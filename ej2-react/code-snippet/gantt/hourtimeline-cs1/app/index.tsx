@@ -1,30 +1,10 @@
-let data: Object[] = [
-    {
-        TaskID: 1,
-        TaskName: 'Project Initiation',
-        StartDate: new Date('04/02/2019'),
-        EndDate: new Date('04/21/2019'),
-    },
-    { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, ParentID: 1, Progress: 50 },
-    { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, ParentID: 1, Progress: 50 },
-    { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, ParentID: 1, Progress: 50 },
-    {
-        TaskID: 5,
-        TaskName: 'Project Estimation',
-        StartDate: new Date('04/02/2019'),
-        EndDate: new Date('04/21/2019'),
-    },
-    { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, ParentID: 5, Progress: 50 },
-    { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, ParentID: 5, Progress: 50 },
-    { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, ParentID: 5, Progress: 50 }
-];
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, TaskFieldsModel, TimelineSettingsModel } from '@syncfusion/ej2-react-gantt';
+import { data } from './datasource';
 
-function App(){
-   const  taskFields: any = {
+function App() {
+  const taskFields: TaskFieldsModel = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -32,11 +12,21 @@ function App(){
     progress: 'Progress',
     parentID: 'ParentID'
   };
-  const timelineSettings: any = {
-    timelineViewMode:'Hour'
+
+  const timelineSettings: TimelineSettingsModel = {
+    timelineViewMode: 'Hour'
   };
-        return <GanttComponent dataSource={data} taskFields={taskFields} dateFormat="M/d/yyyy hh:mm:ss tt" durationUnit="Minute"
-        timelineSettings={timelineSettings} height = '450px'>
-      </GanttComponent>
-};
+
+  return (
+    <GanttComponent
+      id="ganttDefault"
+      height="430px"
+      dataSource={data}
+      taskFields={taskFields}
+      timelineSettings={timelineSettings}
+    >
+    </GanttComponent>
+  );
+}
+
 ReactDOM.render(<App />, document.getElementById('root'));
