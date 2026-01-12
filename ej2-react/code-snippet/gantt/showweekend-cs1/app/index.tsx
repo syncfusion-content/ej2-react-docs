@@ -1,27 +1,41 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, Inject, Edit, EditSettingsModel, Selection } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-function App(){
-   const taskFields: any = {
+import { TaskFieldsModel, TimelineSettingsModel } from '@syncfusion/ej2-gantt';
+
+function App() {
+  const taskSettings: TaskFieldsModel = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
+    endDate: 'EndDate',
     duration: 'Duration',
     progress: 'Progress',
     parentID: 'ParentID'
   };
-  const editOptions: EditSettingsModel = {
-    allowEditing: true,
-    allowTaskbarEditing: true
-  };
-  const timelineSettings: any = {
+
+  const timelineSettings: TimelineSettingsModel = {
     showWeekend: false
   };
-        return <GanttComponent dataSource={data} taskFields={taskFields}
-        timelineSettings={timelineSettings} allowSelection={true}
-        editSettings={editOptions} height = '450px'>
-            <Inject services={[Edit, Selection]} />
-        </GanttComponent>
-};
+
+  return (
+    <GanttComponent
+      height="430px"
+      dataSource={data}
+      taskFields={taskSettings}
+      timelineSettings={timelineSettings}
+    >
+      <ColumnsDirective>
+        <ColumnDirective field="TaskID" headerText="Task ID" textAlign="Left" width="100" />
+        <ColumnDirective field="TaskName" headerText="Task Name" width="250" />
+        <ColumnDirective field="StartDate" headerText="Start Date" width="150" />
+        <ColumnDirective field="Duration" headerText="Duration" width="150" />
+        <ColumnDirective field="Progress" headerText="Progress" width="150" />
+      </ColumnsDirective>
+      <Inject services={[]} />
+    </GanttComponent>
+  );
+}
+
 ReactDOM.render(<App />, document.getElementById('root'));

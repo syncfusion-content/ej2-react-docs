@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Column menu in React Gantt component | Syncfusion
-description: Learn here all about Column menu in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Column menu in React Gantt Chart Component | Syncfusion
+description: Learn here all about column menu in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Column menu 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column menu in React Gantt component
+# Column menu in React Gantt Chart Component
 
-The column menu in the React Gantt component offers built-in actions including sorting, filtering, column chooser, and autofit. When you click the column menu icon, a menu appears with these features.
+The column menu in the React Gantt Chart component offers built-in actions including sorting, filtering, column chooser, and autofit. When you click the column menu icon, a menu appears with these features.
 
-To activate the column menu feature, set the [showColumnMenu](https://ej2.syncfusion.com/react/documentation/api/gantt/#showcolumnmenu) property to **true** in the Gantt configuration and inject the `ColumnMenu` service in the Gantt component.
+To activate the column menu feature, set the [showColumnMenu](https://ej2.syncfusion.com/react/documentation/api/gantt/#showcolumnmenu) property to **true** in the Gantt configuration and inject the `ColumnMenu` service in the Gantt Chart component.
 
 The following built-in column menu items are available:
 
@@ -45,7 +45,7 @@ The following built-in column menu items are available:
 
 ## Add a custom column menu item
 
-The React Gantt component allows adding custom items to the column menu using the [columnMenuItems](https://ej2.syncfusion.com/react/documentation/api/gantt/#columnmenuitems) property, which accepts a set of `columnMenuItemModel` objects.
+The React Gantt Chart component allows adding custom items to the column menu using the [columnMenuItems](https://ej2.syncfusion.com/react/documentation/api/gantt/#columnmenuitems) property, which accepts a set of `columnMenuItemModel` objects.
 
 Define the behavior of custom items through the [columnMenuClick](https://ej2.syncfusion.com/react/documentation/gantt/events#columnmenuclick) event.
 
@@ -89,7 +89,7 @@ The following example demonstrates hiding the **Filter** item when the column me
 
 ## Render nested column menu items
 
-Extend the column menu in Gantt component by adding nested items using the [columnMenuItems](https://ej2.syncfusion.com/react/documentation/api/gantt/#columnmenuitems) property. This property accepts an array of built-in item names or custom objects to define additional actions.
+Extend the column menu in Gantt Chart component by adding nested items using the [columnMenuItems](https://ej2.syncfusion.com/react/documentation/api/gantt/#columnmenuitems) property. This property accepts an array of built-in item names or custom objects to define additional actions.
 
 The following example demonstrates how to configure `columnMenuItems` to include a nested menu.
 
@@ -109,7 +109,7 @@ The following example demonstrates how to configure `columnMenuItems` to include
 
 ## Customize the column menu icon
 
-Customize the default column menu icon in Gantt component by overriding the **.e-icons.e-columnmenu** class using the `content` CSS property. This allows you to use a Unicode character or a custom icon font.
+Customize the default column menu icon in Gantt Chart component by overriding the **.e-icons.e-columnmenu** class using the `content` CSS property. This allows you to use a Unicode character or a custom icon font.
 
 To customize the column menu icon, follow these steps:
 

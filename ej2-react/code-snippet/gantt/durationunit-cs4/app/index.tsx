@@ -40,7 +40,7 @@ class App extends React.Component<{}, {}>{
     progress: 'Progress',
     child: 'subtasks'
   };
-  public splitterSettings: any = {
+  public  = {
     columnIndex: 4
   };
     render() {

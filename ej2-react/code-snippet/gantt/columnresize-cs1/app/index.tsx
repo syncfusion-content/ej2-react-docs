@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, Inject, Resize } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, SplitterSettings, Inject, Resize } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
 function App(){
     const taskFields: any = {
@@ -11,7 +11,7 @@ function App(){
     progress: 'Progress',
     parentID: 'ParentID'
   };
-  const splitterSettings: any = {
+  const splitterSettings: SplitterSettings = {
     position : '90%'
 };
         return <GanttComponent dataSource={data} taskFields={taskFields}

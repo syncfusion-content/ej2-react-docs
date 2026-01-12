@@ -1,7 +1,7 @@
 import { createElement } from '@syncfusion/ej2-base';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, ColumnMenu, ColumnDirective, ColumnsDirective, ColumnMenuOpenEventArgs } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, ColumnMenu, ColumnDirective, ColumnsDirective, ColumnMenuOpenEventArgs, SplitterSettings } from '@syncfusion/ej2-react-gantt';
 import { ColumnMenuItemModel, Inject, Sort, Filter } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
 function App(){
@@ -23,7 +23,7 @@ function App(){
         }
     }
 
-    const splitterSettings: any = {
+    const splitterSettings: SplitterSettings = {
         columnIndex : 5
     };
         return (<div>

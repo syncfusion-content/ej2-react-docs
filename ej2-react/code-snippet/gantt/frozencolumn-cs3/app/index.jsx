@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, SplitterSettings } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Freeze } from '@syncfusion/ej2-react-gantt';
 import { GanttData, resourceCollection } from './datasource';
 
 function App() {
@@ -51,7 +51,7 @@ function App() {
                 <ColumnDirective field="Predecessor" headerText="Dependency" width="120" />
                 <ColumnDirective field="Resources" headerText="Assignee" freeze="Right" />
             </ColumnsDirective>
-            <Inject services={[]} />
+            <Inject services={[ Freeze ]} />
         </GanttComponent>
     );
 }

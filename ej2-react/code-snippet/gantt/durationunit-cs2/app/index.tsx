@@ -23,7 +23,7 @@ let data: Object[] = [
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, SplitterSettings, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
 
 function App(){
     const taskFields: any = {
@@ -34,7 +34,7 @@ function App(){
     progress: 'Progress',
     parentID: 'ParentID'
   };
-  const splitterSettings: any = {
+  const splitterSettings: SplitterSettings = {
     columnIndex: 4
   };
         return <GanttComponent dataSource={data} taskFields={taskFields}

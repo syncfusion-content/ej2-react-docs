@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, ColumnsDirective, ColumnDirective, SplitterSettings } from '@syncfusion/ej2-react-gantt';
 import { GanttData } from './datasource';
 import { QueryCellInfoEventArgs } from '@syncfusion/ej2-react-gantt';
 
@@ -75,7 +75,7 @@ function App() {
         work1: 'work1',
         work2: 'work2',
     };
-    const splitterSettings: any = {
+    const splitterSettings: SplitterSettings = {
         position: '75%'
     };
     return (<div> <GanttComponent
