@@ -24,9 +24,9 @@ By default, DatePicker date format, week, and month names are specific to the `A
 
 * Now import the installed CLDR JSON data into the `app.ts` file.
 
-* Now use the [`loadCldr`](http://ej2.syncfusion.com/documentation/base/internationalization#cldr-data-dependencies) method to load the culture specific CLDR JSON data from the installed location to `app.ts` file.
+* Now use the [`loadCldr`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#installing-cldr-data) method to load the culture specific CLDR JSON data from the installed location to `app.ts` file.
 
-* DatePicker displayed `Sunday` as the first day of week based on default culture ("en-US"). If you want to display the DatePicker with loaded culture’s first day of week, you need to import `weekdata.json` file from the `cldr-data/suppemental` as given in the code example.
+* DatePicker displayed `Sunday` as the first day of week based on default culture ("en-US"). If you want to display the DatePicker with loaded culture’s first day of week, you need to import `weekdata.json` file from the `cldr-data/supplemental` as given in the code example.
 
 ```ts
 
@@ -172,7 +172,7 @@ The following example demonstrates the DatePicker in `German` culture.
 The DatePicker supports right-to-left functionality for languages like Arabic, Hebrew to displays the text in the right-to-left direction. Use [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/datepicker#enablertl) property to set the RTL direction.
 
 The below code example demonstrates the DatePicker component in `Hebrew` culture and also explains how to set the localized text to the placeholder using [`load`](http://ej2.syncfusion.com/documentation/api/base/l10n#load) method of
-[L10n](http://ej2.syncfusion.com/documentation/api/base/l10n/) class.
+[L10n](http://ej2.syncfusion.com/documentation/api/base/l10n) class.
 
 `[Class-component]`
 
