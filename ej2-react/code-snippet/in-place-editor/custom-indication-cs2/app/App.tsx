@@ -1,6 +1,3 @@
-
-
-
 import { isNullOrUndefined as isNOU } from '@syncfusion/ej2-base';
 import { ActionEventArgs, InPlaceEditorComponent } from '@syncfusion/ej2-react-inplace-editor';
 import * as React from 'react';

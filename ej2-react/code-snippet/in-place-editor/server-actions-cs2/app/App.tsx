@@ -1,7 +1,3 @@
-{% raw %}
-
-
-
 import { ActionEventArgs, Inject, InPlaceEditorComponent, MultiSelect } from '@syncfusion/ej2-react-inplace-editor';
 import * as React from 'react';
 
@@ -49,6 +45,3 @@ function App () {
 }
 
 export default App;
-
-
-{% endraw %}

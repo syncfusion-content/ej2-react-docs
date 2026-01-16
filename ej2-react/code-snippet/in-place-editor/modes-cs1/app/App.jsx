@@ -1,4 +1,3 @@
-{% raw %}
 import { InPlaceEditorComponent } from '@syncfusion/ej2-react-inplace-editor';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
@@ -34,4 +33,3 @@ class App extends React.Component {
     }
 }
 export default App;
-{% endraw %}

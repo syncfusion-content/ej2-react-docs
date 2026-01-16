@@ -1,7 +1,3 @@
-{% raw %}
-
-
-
 import { InPlaceEditorComponent } from '@syncfusion/ej2-react-inplace-editor';
 import * as React from 'react';
 
@@ -43,6 +39,3 @@ function actionSuccess(e: any) {
 
 }
 export default App;
-
-
-{% endraw %}

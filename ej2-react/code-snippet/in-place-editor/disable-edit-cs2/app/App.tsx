@@ -1,5 +1,3 @@
-{% raw %}
-
 
 import { ChangeEventArgs, CheckBoxComponent } from '@syncfusion/ej2-react-buttons';
 import { InPlaceEditorComponent } from '@syncfusion/ej2-react-inplace-editor';
@@ -39,6 +37,3 @@ function App () {
 }
 
 export default App;
-
-
-{% endraw %}
