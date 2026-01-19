@@ -1,6 +1,3 @@
-
-
-
 import { DataManager, ODataV4Adaptor, Query } from '@syncfusion/ej2-data';
 import { InPlaceEditorComponent } from '@syncfusion/ej2-react-inplace-editor';
 import * as React from 'react';

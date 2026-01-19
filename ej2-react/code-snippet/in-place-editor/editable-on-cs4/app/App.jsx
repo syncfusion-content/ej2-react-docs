@@ -1,4 +1,3 @@
-{% raw %}
 import { L10n } from '@syncfusion/ej2-base';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { InPlaceEditorComponent } from '@syncfusion/ej2-react-inplace-editor';
@@ -48,4 +47,3 @@ function App() {
         </div>);
 }
 export default App;
-{% endraw %}

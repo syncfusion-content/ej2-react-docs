@@ -1,6 +1,3 @@
-
-
-
 import { AutoComplete, ColorPicker, ComboBox, Inject, InPlaceEditorComponent } from '@syncfusion/ej2-react-inplace-editor';
 import { DateRangePicker, MultiSelect, Rte, Slider, TimePicker } from '@syncfusion/ej2-react-inplace-editor';
 import * as React from 'react';
