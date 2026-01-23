@@ -1,6 +1,3 @@
-{% raw %}
-
-
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
@@ -12,7 +9,7 @@ import { zoomData } from './datasource';
 
 function App() {
 
-  const primaryxAxis: AxisModel = { valueType: 'DateTime', zoomFactor: 0.2, zoomPosition: 0.6, scrollbarSettings: { enable: true, enableZoom: false, height: 14, trackRadius: 8, scrollbarRadius: 8, gripColor: 'transparent', trackColor: 'yellow', scrollbarColor: 'red' } };
+  const primaryxAxis: AxisModel = { valueType: 'DateTime', zoomFactor: 0.2, zoomPosition: 0.6, scrollbarSettings: { enable: false, enableZoom: true, height: 14, trackRadius: 8, scrollbarRadius: 8, gripColor: 'transparent', trackColor: 'yellow', scrollbarColor: 'red' } };
   const legendSettings: LegendSettingsModel = { visible: false };
   const zoomsettings: ZoomSettingsModel = { enableSelectionZooming: true, enableScrollbar: true };
   const border = { width: 0.5, color: '#00bdae' };
@@ -34,7 +31,3 @@ function App() {
 };
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
-
-
-
-{% endraw %}
