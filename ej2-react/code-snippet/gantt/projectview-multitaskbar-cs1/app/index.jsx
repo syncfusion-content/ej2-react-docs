@@ -3,21 +3,30 @@ import * as ReactDOM from 'react-dom';
 import { GanttComponent } from '@syncfusion/ej2-react-gantt';
 import { projectViewMultiTaskData } from './datasource';
 
-function App (){
-   const taskFields = {
+function App() {
+
+  const data = projectViewMultiTaskData;
+
+  const taskSettings = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
-    progress:'Progress',
-    duration:'Duration',
-    parentID: 'ParentID',
-    expandState: 'isExpand'
+    endDate: 'EndDate',
+    progress: 'Progress',
+    parentID: 'ParentID'
   };
-  
-        return <GanttComponent dataSource={projectViewMultiTaskData} enableMultiTaskbar={true}
-        taskFields={taskFields} height = '400px'>
 
-        </GanttComponent>
-    
-};
+  return (
+    <GanttComponent
+      id="Gantt"
+      height="430px"
+      dataSource={data}
+      taskFields={taskSettings}
+      enableMultiTaskbar={true}
+      treeColumnIndex={1}
+      allowSelection={true}
+    />
+  );
+}
+
 ReactDOM.render(<App />, document.getElementById('root'));
