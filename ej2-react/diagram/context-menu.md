@@ -20,7 +20,7 @@ The Diagram control includes built-in context menu items and allows you to defin
 
 To ensure the context menu renders correctly, include the necessary CSS references from the Syncfusion® `ej2-navigations` package by adding the following line to your `src/styles.css` file:
 
-`@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";`
+`@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";`
 
 N> If you want to use contextMenu in diagram, you need to inject `DiagramContextMenu` Module in the diagram.
 

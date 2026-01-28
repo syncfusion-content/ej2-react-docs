@@ -1,51 +1,52 @@
-let data: Object[] = [
-    {
-        TaskID: 1,
-        TaskName: 'Project Initiation',
-        StartDate: new Date('04/02/2019'),
-        EndDate: new Date('04/21/2019'),
-    },
-    { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 0, ParentID: 1, Progress: 50 },
-    { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, ParentID: 1, Progress: 50 },
-    { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, ParentID: 1, Predecessor: "2FS", Progress: 50 },
-    {
-        TaskID: 5,
-        TaskName: 'Project Estimation',
-        StartDate: new Date('04/02/2019'),
-        EndDate: new Date('04/21/2019'),
-    },
-    { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, ParentID: 5, Progress: 50 },
-    { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, ParentID: 5, Progress: 50 },
-    { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 0, ParentID: 5, Predecessor: "6SS", Progress: 50 }
-];
 
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Edit } from '@syncfusion/ej2-react-gantt';
+import { TaskFieldsModel, EditSettingsModel, ActionEventArgs } from '@syncfusion/ej2-react-gantt';
+import { data } from './datasource';
 
-  import * as React from 'react';
-  import * as ReactDOM from 'react-dom';
-  import { GanttComponent, Inject, Edit, EditSettingsModel } from '@syncfusion/ej2-react-gantt';
-  
-  function App (){
-      const taskFields: any = {
-          id: 'TaskID',
-          name: 'TaskName',
-          startDate: 'StartDate',
-          duration: 'Duration',
-          progress: 'Progress',
-          dependency: 'Predecessor',
-          parentID: 'ParentID'
-      };
-     const editOptions: EditSettingsModel = {
-        allowEditing: true,
-        allowTaskbarEditing:true
+function App() {
+    const taskSettings: TaskFieldsModel = {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        endDate: 'EndDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        dependency: 'Predecessor',
+        parentID: 'ParentID'
     };
-   function actionBegin (args: any)  {
-        if (args.requestType == "validateLinkedTask") {
-            args.validateMode.respectLink = true;
-          }
-      }
-     return <GanttComponent dataSource={data} taskFields={taskFields}
-                  editSettings={editOptions} actionBegin={actionBegin} height = '450px'>
-                  <Inject services={[Edit]} />
-          </GanttComponent>
-  };
-  ReactDOM.render(<App />, document.getElementById('root'));
+
+    const editSettings: EditSettingsModel = {
+        allowTaskbarEditing: true
+    };
+
+    const actionBegin = (args: ActionEventArgs) => {
+        if (args.requestType === 'validateLinkedTask') {
+            (args as any).validateMode.respectLink = true;
+        }
+    };
+
+    return (
+        <GanttComponent
+            id="ganttDefault"
+            height="430px"
+            dataSource={data}
+            taskFields={taskSettings}
+            editSettings={editSettings}
+            actionBegin={actionBegin}
+        >
+            <ColumnsDirective>
+                <ColumnDirective field="TaskID" headerText="Task ID" textAlign="Left" width="100" />
+                <ColumnDirective field="TaskName" headerText="Task Name" width="150" />
+                <ColumnDirective field="StartDate" headerText="Start Date" width="150" />
+                <ColumnDirective field="Duration" headerText="Duration" width="150" />
+                <ColumnDirective field="Predecessor" headerText="Dependency" width="150" />
+                <ColumnDirective field="Progress" headerText="Progress" width="150" />
+            </ColumnsDirective>
+            <Inject services={[Edit]} />
+        </GanttComponent>
+    );
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));

@@ -111,11 +111,11 @@ Import the `Material` theme into the **src/app/globals.css** file and removed th
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
 
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-react-diagrams/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-react-diagrams/styles/tailwind3.css";
 
 {% endhighlight %}
 {% endtabs %}
