@@ -1,40 +1,37 @@
-let data = [
-    {
-        TaskID: 1,
-        TaskName: 'Project Initiation',
-        StartDate: new Date('04/02/2019'),
-        EndDate: new Date('04/21/2019'),
-    },
-    { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 0, ParentID: 1, Progress: 50 },
-    { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, ParentID: 1, Progress: 50 },
-    { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/04/2019'), Duration: 4, ParentID: 1, Predecessor: "2FS+2days", Progress: 50 },
-    { TaskID: 5, TaskName: 'Clear the building site', StartDate: new Date('04/04/2019'), Duration: 2, ParentID: 1, Progress: 30, Predecessor: '4FF+960m' },
-    {
-        TaskID: 6,
-        TaskName: 'Project Estimation',
-        StartDate: new Date('04/02/2019'),
-        EndDate: new Date('04/21/2019'),
-    },
-    { TaskID: 7, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, ParentID: 6, Progress: 50 },
-    { TaskID: 8, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, ParentID: 6, Progress: 50 },
-    { TaskID: 9, TaskName: 'Estimation approval', StartDate: new Date('04/06/2019'), Duration: 0, ParentID: 6, Predecessor: "7SS+16h", Progress: 50 }
-];
-  
-  import * as React from 'react';
-  import * as ReactDOM from 'react-dom';
-  import { GanttComponent } from '@syncfusion/ej2-react-gantt';
-  
-  function App (){
-      const taskFields = {
-          id: 'TaskID',
-          name: 'TaskName',
-          startDate: 'StartDate',
-          duration: 'Duration',
-          progress: 'Progress',
-          dependency: 'Predecessor',
-          parentID: 'ParentID'
-      };
-      return <GanttComponent dataSource={data} taskFields={taskFields} height = '450px'>
-          </GanttComponent>
-      };
-  ReactDOM.render(<App />, document.getElementById('root'));
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject } from '@syncfusion/ej2-react-gantt';
+import { data } from './datasource';
+
+function App() {
+    const taskSettings = {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        endDate: 'EndDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        dependency: 'Predecessor',
+        parentID: 'ParentID'
+    };
+
+    return (
+        <GanttComponent
+            height="430px"
+            dataSource={data}
+            taskFields={taskSettings}
+        >
+            <ColumnsDirective>
+                <ColumnDirective field="TaskID" headerText="Task ID" textAlign="Left" width="100" />
+                <ColumnDirective field="Predecessor" headerText="Dependency" width="150" />
+                <ColumnDirective field="TaskName" headerText="Task Name" width="150" />
+                <ColumnDirective field="StartDate" headerText="Start Date" width="150" />
+                <ColumnDirective field="Duration" headerText="Duration" width="150" />
+                <ColumnDirective field="Progress" headerText="Progress" width="150" />
+            </ColumnsDirective>
+            <Inject services={[]} />
+        </GanttComponent>
+    );
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
