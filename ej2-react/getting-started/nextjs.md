@@ -20,7 +20,7 @@ This section outlines the process of creating a Next.js application and integrat
 
 Before getting started with the Next.js application, ensure the following prerequisites are met:
 
-* [Node.js 18.17](https://nodejs.org/en) or later.
+* [Node.js 18.17.0](https://nodejs.org/en) or later (LTS recommended).
 
 * Compatible with macOS, Windows, and Linux
 
@@ -43,7 +43,7 @@ yarn create next-app
 
 Using one of the above commands will lead you to set up additional configurations for the project as below:
 
-1.Define the project name: Users can specify the name of the project directly. Let's specify the name of the project as `ej2-nextjs-grid`.
+**Step 1: Define the project name** - You can specify the name of the project directly. Let's specify the name of the project as `ej2-nextjs-grid`.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -53,24 +53,23 @@ Using one of the above commands will lead you to set up additional configuration
 {% endhighlight %}
 {% endtabs %}
 
-2.Select the required packages.
+**Step 2: Select the required packages** - Choose the configuration options for your project. Select **Yes** to use default packages in the application.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
 √ What is your project named? ... ej2-nextjs-grid
-√ Would you like to use TypeScript? ... No / `Yes`
-√ Would you like to use ESLint? ... No / `Yes`
-√ Would you like to use Tailwind CSS? ... `No` / Yes
-√ Would you like to use `src/` directory? ... No / `Yes`
-√ Would you like to use App Router? (recommended) ... No / `Yes`
-√ Would you like to customize the default import alias? ... `No`/ Yes
-Creating a new Next.js app in D:\ej2-nextjs-grid.
+? Would you like to use the recommended Next.js defaults?
+>   Yes, use recommended defaults - TypeScript, ESLint, Tailwind CSS, App Router
+    No, reuse previous settings
+    No, customize settings
 
 {% endhighlight %}
 {% endtabs %}
 
-3.Once complete the above mentioned steps to create `ej2-nextjs-grid`, navigate to the directory using the below command:
+After running the above commands, the project will be created and all required dependencies will be installed automatically.
+
+**Step 3: Navigate to the project directory** - Once you complete the above steps to create `ej2-nextjs-grid`, navigate to the directory using the below command:
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -86,7 +85,7 @@ The application is ready to run with default settings. Now, let's add Syncfusion
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
-Here, the [React Grid component](https://www.syncfusion.com/react-components/react-data-grid) is used as an example. To install the React Grid component in the project, use the following command:
+This guide uses the [React Grid component](https://www.syncfusion.com/react-components/react-data-grid) as an example. To install the React Grid component in the project, use the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -103,33 +102,33 @@ yarn add @syncfusion/ej2-react-grids
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme/), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
 
-Import the `Material` theme into the **src/app/globals.css** file and removed the existing styles in that file, as shown below:
+Import the **Tailwind 3** CSS styles for the Grid component and its dependent components in the **src/app/globals.css** file and remove the existing styles in that file, as shown below:
 
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
 
-@import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-calendars/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import "../../node_modules/@syncfusion/ej2-react-grids/styles/material.css";
+@import '../../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import "../../node_modules/@syncfusion/ej2-react-grids/styles/tailwind3.css";
 
 {% endhighlight %}
 {% endtabs %}
 
-> To know more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme/) section.
+> **Note:** To learn more about built-in themes, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
 
 ## Add a Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
 Follow the below steps to add the React Grid component to the Next.js project:
 
-1.Before adding the Grid component to your markup, create a `datasource.tsx` file within the **src/app/** folder and add the Grid component data.
+**Step 1:** Create a `datasource.tsx` file within the **src/app/** folder and add the Grid component data.
 
 {% tabs %}
 {% highlight ts tabtitle="datasource.tsx" %}
@@ -215,7 +214,7 @@ export let data: Object[] = [
 {% endhighlight %}
 {% endtabs %}
 
-2.Then, import and define the Grid component with the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource) property and column definitions in the **src/app/page.tsx** file, as shown below: 
+**Step 2:** Import and define the Grid component with the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource) property and column definitions in the **src/app/page.tsx** file, as shown below:
 
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
@@ -263,6 +262,8 @@ export default function Home() {
 
 {% endhighlight %}
 {% endtabs %}
+
+> NOTE: When using the Next.js App Router, the **src/app/page.tsx** file must be a client component to use Syncfusion interactive features. So the code includes `'use client'` at the top of the file.
 
 ## Run the application
 

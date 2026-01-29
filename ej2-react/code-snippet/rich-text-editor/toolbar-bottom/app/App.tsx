@@ -1,7 +1,7 @@
 /**
  * Rich Text Editor - Expand Toolbar Sample
  */
-import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar, PasteCleanup, Table, Audio, Vedio } from '@syncfusion/ej2-react-richtexteditor';
+import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar, PasteCleanup, Table } from '@syncfusion/ej2-react-richtexteditor';
 import * as React from 'react';
 
 function App(){

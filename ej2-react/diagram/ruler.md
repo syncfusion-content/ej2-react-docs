@@ -55,10 +55,10 @@ The following code shows how the diagram ruler can be customized.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/ruler/customRuler-cs1/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/customRuler-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/ruler/customRuler-cs1/app/index.tsx %}
+{% include code-snippet/diagram/reactCurlyExamples/customRuler-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

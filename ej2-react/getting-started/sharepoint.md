@@ -24,13 +24,13 @@ This article provides a step-by-step guide for setting up a [SharePoint](https:/
 
 Create a new SPFx project using the following command:
 
-1\. To initiate the creation of a new [SharePoint](https://learn.microsoft.com/en-us/sharepoint/dev/) project, use the following commands:
+**Step 1:** To initiate the creation of a new [SharePoint](https://learn.microsoft.com/en-us/sharepoint/dev/) project, use the following command:
 
 ```bash
 yo @microsoft/sharepoint
 ```
 
-2\. Let's specify the name of the project as `my-project` and the name of the WebPart as `App` for this article. To set up additional configurations based on your requirements, it will direct you to a series of questions for the project as below:
+**Step 2:** Specify the name of the project as `my-project` and the name of the WebPart as `App` for this article. You will be prompted with a series of configuration questions as shown below:
 
 ```bash
 Let's create a new Microsoft 365 solution.
@@ -41,7 +41,7 @@ Add new Web part to solution my-project.
 ? Which template would you like to use? React
 ```
 
-3\. To establish trust for the certificate in the development environment, execute the provided command:
+**Step 3:** To establish trust for the certificate in the development environment, execute the following command:
 
 ```bash
 gulp trust-dev-cert
@@ -53,22 +53,22 @@ With these steps complete, your `my-project` SharePoint Framework solution is re
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
-This article uses the [React Grid component](https://www.syncfusion.com/react-components/react-data-grid) as an example. To use the React Grid component in the project, the `@syncfusion/ej2-react-grids` package needs to be installed using the following command:
+This guide uses the [React Grid component](https://www.syncfusion.com/react-components/react-data-grid) as an example. To install the React Grid component package, use the following command:
 
 ```bash
-npm install @syncfusion/ej2-react-grids --save 
+npm install @syncfusion/ej2-react-grids --save
 ```
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS files from npm packages, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/). Refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme/) for more detail.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS files from npm packages, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). Refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for more detail.
 
-This article demonstrates importing the `Material` theme CSS within the `App.tsx` file located at `~/src/webparts/app/components/App.tsx`:
+This example demonstrates importing the `Material` theme CSS within the `App.tsx` file located at `~/src/webparts/app/components/App.tsx`:
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
 
-require ('@syncfusion/ej2-grids/styles/material.css');
+require('@syncfusion/ej2-react-grids/styles/material.css');
 
 {% endhighlight %}
 {% endtabs %}
@@ -77,7 +77,7 @@ require ('@syncfusion/ej2-grids/styles/material.css');
 
 Follow the below steps to add the React Grid component:
 
-1\. In `App.tsx` file inside the **~/src/webparts/app/components** folder, declare the values for the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource) property.
+**Step 1:** In the `App.tsx` file inside the **~/src/webparts/app/components** folder, declare the values for the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource) property.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -97,11 +97,12 @@ const data = [
 {% endhighlight %}
 {% endtabs %}
 
-2\. Define the Grid component with the `dataSource` property and column definitions.
+**Step 2:** Define the Grid component with the `dataSource` property and column definitions.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
 
+import * as React from 'react';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 
 export default class App extends React.Component<IAppProps, {}> {
@@ -133,7 +134,7 @@ import * as React from 'react';
 import { IAppProps } from './IAppProps';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 
-require('@syncfusion/ej2-grids/styles/material.css');
+require('@syncfusion/ej2-react-grids/styles/material.css');
 
 export default class App extends React.Component<IAppProps, {}> {
   

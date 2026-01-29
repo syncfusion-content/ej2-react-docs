@@ -18,10 +18,10 @@ The diagram component supports adding both swimlane containers and individual ph
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/swimlane/es5Palette-cs1/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/es5Palette-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/swimlane/es5Palette-cs1/app/index.tsx %}
+{% include code-snippet/diagram/reactCurlyExamples/es5Palette-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

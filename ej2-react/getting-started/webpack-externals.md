@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Webpack externals with React Getting started component | Syncfusion
-description:  Checkout and learn about Webpack externals with React Getting started component of Syncfusion Essential JS 2 and more details.
+description:  Check out and learn about Webpack externals with React Getting started component of Syncfusion Essential JS 2 and more details.
 control: Webpack externals 
 platform: ej2-react
 documentation: ug
@@ -31,16 +31,16 @@ This approach helps reduce bundle sizes and allows for sharing libraries via CDN
 * Use the following commands to create a `package.json` file. Then install the [react](https://www.npmjs.com/package/react) and [react-dom](https://www.npmjs.com/package/react-dom) packages in the application.
 
      ```bash
-     npm init
+     npm init -y
 
      npm install react react-dom
      ```
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
-Install the required Syncfusion<sup style="font-size:70%">&reg;</sup> React component package in the application. All Syncfusion<sup style="font-size:70%">&reg;</sup> React (Essential<sup style="font-size:70%">&reg;</sup> JS 2) packages are published on the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. So, choose the component that you want to install.
+Install the required Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages in the application. All Syncfusion<sup style="font-size:70%">&reg;</sup> React (Essential<sup style="font-size:70%">&reg;</sup> JS 2) packages are published on the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.
 
-In this article, the Grid component is used as an example. To install the Grid component package, use the following command.
+In this article, the **Grid component** is used as an example. To install the Grid component package, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
@@ -48,7 +48,7 @@ npm install @syncfusion/ej2-react-grids --save
 
 ## Add babel packages
 
-Install the required babel presets packages in the application.
+Install the required babel preset packages in the application using the following command:
 
 ```bash
 npm install babel-loader @babel/preset-react @babel/preset-env @babel/core --save-dev
@@ -115,7 +115,7 @@ root.render(
 
 ## Install and configure the webpack
 
-* Install the webpack packages by using the following command.
+* Install the webpack packages using the following command:
 
     ```bash
      npm install webpack webpack-cli webpack-dev-server html-webpack-plugin --save-dev
@@ -164,13 +164,13 @@ module.exports = {
 
    ``` js
     module.exports = {
-    ---
+    ...
     externals: {
         "react": "React",
         "react-dom": "ReactDOM",
         "@syncfusion/ej2-react-grids": "SyncfusionReactGrids"
      },
-     ---
+     ...
     }
   ```
 
@@ -194,27 +194,27 @@ module.exports = {
     <script crossorigin src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
 
     <!-- Syncfusion React controls styles -->
-    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/27.2.2/material.css" />
+    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/32.1.19/tailwind3.css" />
 
     <!-- Syncfusion React controls scripts -->
-    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-base/dist/ej2-base.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-data/dist/ej2-data.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-buttons/dist/ej2-buttons.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-splitbuttons/dist/ej2-splitbuttons.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-popups/dist/ej2-popups.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-navigations/dist/ej2-navigations.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-inputs/dist/ej2-inputs.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-dropdowns/dist/ej2-dropdowns.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-calendars/dist/ej2-calendars.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-lists/dist/ej2-lists.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-excel-export/dist/ej2-excel-export.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-pdf-export/dist/ej2-pdf-export.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-file-utils/dist/ej2-file-utils.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-compression/dist/ej2-compression.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-grids/dist/ej2-grids.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-react-base/dist/ej2-react-base.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-react-grids/dist/ej2-react-grids.min.js"></script>
-    <title>Document</title>
+    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-base/dist/ej2-base.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-data/dist/ej2-data.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-buttons/dist/ej2-buttons.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-splitbuttons/dist/ej2-splitbuttons.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-popups/dist/ej2-popups.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-navigations/dist/ej2-navigations.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-inputs/dist/ej2-inputs.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-dropdowns/dist/ej2-dropdowns.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-calendars/dist/ej2-calendars.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-lists/dist/ej2-lists.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-excel-export/dist/ej2-excel-export.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-pdf-export/dist/ej2-pdf-export.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-file-utils/dist/ej2-file-utils.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-compression/dist/ej2-compression.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-grids/dist/ej2-grids.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-react-base/dist/ej2-react-base.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-react-grids/dist/ej2-react-grids.min.js"></script>
+    <title>Syncfusion Webpack Externals Demo</title>
 </head>
 <body>
   <div id="root"></div>
@@ -228,7 +228,7 @@ module.exports = {
 
 ## Configure the package JSON
 
-Open the `package.json` file and configure the application process in the scripts as follows.
+Open the `package.json` file and configure the application scripts as follows:
 
 ```
 {
@@ -241,13 +241,13 @@ Open the `package.json` file and configure the application process in the script
 
 ## Run the application
 
-Run the application using the following command.
+Run the application using the following command:
 
 ```bash
 npm start
 ```
 
-The application displays a Syncfusion Grid component as shown below:
+Your browser should automatically open. The application displays a Syncfusion Grid component as shown below:
 
 ![Grid component](images/grid-component.png)
 
