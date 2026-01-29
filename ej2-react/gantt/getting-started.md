@@ -70,20 +70,20 @@ npm install @syncfusion/ej2-react-gantt --save
  Add components style as given below in src/App.css.
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-gantt/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-notifications/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-treegrid/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-gantt/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-richtexteditor/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css';
 ```
 
 > To refer App.css in the application then import it in the src/App.tsx file.
@@ -285,7 +285,7 @@ The Gantt component binds to project data through the [dataSource](https://ej2.s
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Essential JS 2 for React Components" />
     <meta name="author" content="Syncfusion" />
-    <link href="https://cdn.syncfusion.com/ej2/32.1.19/material.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdn.syncfusion.com/ej2/32.1.19/tailwind3.css" rel="stylesheet" type="text/css"/>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>

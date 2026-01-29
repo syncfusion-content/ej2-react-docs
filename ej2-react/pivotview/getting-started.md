@@ -98,20 +98,20 @@ npm install @syncfusion/ej2-react-pivotview --save
 
 ## Adding CSS reference
 
-To style the [Pivot Table](https://www.syncfusion.com/react-components/react-pivot-table), include the necessary CSS files for the Pivot Table and its [dependent](#dependencies) components in the **src/App.css** file. For this example, we use the **material** theme to ensure a consistent and modern appearance. Add the following code to import the required styles:
+To style the [Pivot Table](https://www.syncfusion.com/react-components/react-pivot-table), include the necessary CSS files for the Pivot Table and its [dependent](#dependencies) components in the **src/App.css** file. For this example, we use the **tailwind3** theme to ensure a consistent and modern appearance. Add the following code to import the required styles:
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-react-pivotview/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-react-pivotview/styles/tailwind3.css';
 ```
 
 These styles ensure the [Pivot Table](https://www.syncfusion.com/react-components/react-pivot-table) and its related components, such as buttons and dropdowns, display correctly. You can also use other themes like **bootstrap**, **fabric**, or **high-contrast** to match your application's look. For details on individual component styles, refer to the [Syncfusion theme documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio).
@@ -122,7 +122,7 @@ Next, import the **App.css** file into your application by adding the following 
 import './App.css';
 ```
 
-This import applies the CSS styles to your React application, enabling the [Pivot Table](https://www.syncfusion.com/react-components/react-pivot-table) to render with the **material** theme.
+This import applies the CSS styles to your React application, enabling the [Pivot Table](https://www.syncfusion.com/react-components/react-pivot-table) to render with the **tailwind3** theme.
 
 ## Browser compatibility
 
@@ -419,7 +419,7 @@ npm run dev
 
 For more information and to access the quick start project, visit: [GitHub Repository](https://github.com/SyncfusionExamples/getting-started-with-the-react-pivot-table-component)
 
-> You can also explore our [React Pivot Table example](https://ej2.syncfusion.com/react/demos/#/material/pivot-table/default) that shows how to rendering of the pivot table with drill-up and drill-down functionality bound to a relational report.
+> You can also explore our [React Pivot Table example](https://ej2.syncfusion.com/react/demos/#/tailwind3/pivot-table/default) that shows how to rendering of the pivot table with drill-up and drill-down functionality bound to a relational report.
 
 ## See Also
 

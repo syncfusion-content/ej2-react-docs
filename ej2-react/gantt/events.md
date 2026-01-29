@@ -307,7 +307,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -667,7 +667,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Essential JS 2 for React Components" />
     <meta name="author" content="Syncfusion" />
-    <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
@@ -861,7 +861,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -1087,7 +1087,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -1311,7 +1311,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -1539,7 +1539,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -1758,7 +1758,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -1983,7 +1983,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -2214,7 +2214,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -2433,7 +2433,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -2659,7 +2659,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -2869,7 +2869,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -3078,7 +3078,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -3293,7 +3293,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -3507,7 +3507,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -3727,7 +3727,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -3899,7 +3899,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -4066,7 +4066,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -4239,7 +4239,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -4409,7 +4409,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -4638,7 +4638,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -4858,7 +4858,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -5094,7 +5094,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -5333,7 +5333,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -5577,7 +5577,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -5780,7 +5780,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -5993,7 +5993,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -6210,7 +6210,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -6456,7 +6456,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -6683,7 +6683,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -6909,7 +6909,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -7160,7 +7160,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -7403,7 +7403,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -7655,7 +7655,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -7904,7 +7904,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -8145,7 +8145,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -8401,7 +8401,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -8663,7 +8663,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -8916,7 +8916,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -9150,7 +9150,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -9376,7 +9376,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -9602,7 +9602,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -9832,7 +9832,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -10061,7 +10061,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -10290,7 +10290,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -10525,7 +10525,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -10761,7 +10761,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -10994,7 +10994,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -11231,7 +11231,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -11478,7 +11478,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -11726,7 +11726,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -11962,7 +11962,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -12199,7 +12199,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -12430,7 +12430,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -12683,7 +12683,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -12927,7 +12927,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>
@@ -13141,7 +13141,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Essential JS 2 for React Components" />
   <meta name="author" content="Syncfusion" />
-  <link href="https://cdn.syncfusion.com/ej2/30.1.4/material.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.syncfusion.com/ej2/30.1.4/tailwind3.css" rel="stylesheet" type="text/css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
   <script src="systemjs.config.js"></script>

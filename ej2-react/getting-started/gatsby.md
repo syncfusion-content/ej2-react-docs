@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> React Components in a Gatsby Project
 
-This guide provides a step-by-step workflow for creating a [Gatsby](https://www.gatsbyjs.com/) application and integrating Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components.
+This article provides a step-by-step guide for creating a [Gatsby](https://www.gatsbyjs.com/) application and integrating Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components.
 
 `Gatsby` is an open-source React-based framework for building high-performance, modern web applications and static websites. It includes out-of-the-box optimizations and integrates React, GraphQL, and the modern JavaScript ecosystem.
 
@@ -23,7 +23,7 @@ This guide provides a step-by-step workflow for creating a [Gatsby](https://www.
 To create a new `Gatsby` project, use one of the commands that are specific to either NPM or Yarn.
 
 ```bash
-npm create gatsby
+npm create gatsby@latest
 ```
 
 or
@@ -34,7 +34,7 @@ yarn create gatsby
 
 Using one of the above commands will lead you to set up additional configurations for the project, as below:
 
-Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+**Define the project name:** You can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
 
 ```bash
 What would you like to call your site?
@@ -67,7 +67,7 @@ Now that `my-project` is ready to run with default settings, let's add Syncfusio
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). Install the required component package using:
+Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). Install the required component package using the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
@@ -85,31 +85,31 @@ This guide uses the [React Grid component](https://www.syncfusion.com/react-comp
 
 Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be imported using CSS or SASS styles provided in the npm packages. Additional customization options, CDN, and theme generation tools are available; see the [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) for more information.
 
-For this example, the `Material 3` theme is imported into the **src/pages/style.css** file to style the Grid component and its dependencies.
+For this example, the `Tailwind 3` theme is imported into the **src/pages/style.css** file to style the Grid component and its dependencies.
 
 {% tabs %}
 {% highlight css tabtitle="~/src/pages/style.css" %}
 
-@import "../../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-@import "../../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
-@import "../../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-@import "../../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-@import "../../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-@import "../../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-@import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-@import "../../node_modules/@syncfusion/ej2-react-grids/styles/material3.css";
+@import "../../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-react-grids/styles/tailwind3.css";
 
 {% endhighlight %}
 {% endtabs %}
 
-> The order of importing CSS styles should be in line with its dependency graph.
+> **Note:** The order of importing CSS styles should be in line with its dependency graph. The Grid component requires CSS from multiple packages because it depends on other Syncfusion components for its full functionality.
 
 ## Add a Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
-Follow the below steps to add the React Grid component to the Vite project:
+Follow the below steps to add the React Grid component to the Gatsby project:
 
-1\. Before adding the Grid component to your markup, import the Grid component in the **src/pages/index.tsx** file.
+**Step 1:** Import the Grid component and its required directives in the **src/pages/index.tsx** file.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/pages/index.tsx" %}
@@ -119,7 +119,7 @@ import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej
 {% endhighlight %}
 {% endtabs %}
 
-2\. Then, define the Grid component with the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource) property and column definitions. Declare the values for the `dataSource` property.
+**Step 2:** Define the Grid component with the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource) property and column definitions. Declare the values for the `dataSource` property.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/pages/index.tsx" %}
