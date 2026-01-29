@@ -103,22 +103,22 @@ The provided code installs the Syncfusion React Pivot Table package. The `--save
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components include [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) that you can easily apply to style your Pivot Table. These themes are available in the installed Syncfusion packages and can be imported to match your application's look. To use the Material theme, import its CSS files into the **src/app/globals.css** file after removing any existing styles, as shown below:
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components include [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) that you can easily apply to style your Pivot Table. These themes are available in the installed Syncfusion packages and can be imported to match your application's look. To use the Tailwind3 theme, import its CSS files into the **src/app/globals.css** file after removing any existing styles, as shown below:
 
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
 
-@import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-grids/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-calendars/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-react-pivotview/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-react-pivotview/styles/tailwind3.css';
 
 {% endhighlight %}
 {% endtabs %}

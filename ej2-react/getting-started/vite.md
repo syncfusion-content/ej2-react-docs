@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> React Components in a Vite Project
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with JavaScript and integrating Syncfusion<sup style="font-size:70%">&reg;</sup> React components.
+This article provides a step-by-step guide for setting up a [Vite](https://vite.dev/guide/) project with JavaScript and integrating Syncfusion<sup style="font-size:70%">&reg;</sup> React components.
 
 `Vite` is a fast, modern build tool and development server optimized for projects using technologies such as ES modules, TypeScript, JSX, and CSS modules. Its development server leverages native ES modules in modern browsers, providing rapid project startup and efficient feedback during development.
 
@@ -34,13 +34,13 @@ yarn create vite
 
 Using one of the above commands will lead you to set up additional configurations for the project as below:
 
-1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+**Step 1: Define the project name** - You can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
 
 ```bash
 ? Project name: » my-project
 ```
 
-2.Select `React` as the framework. It will creates a React project.
+**Step 2: Select the framework** - Select `React` as the framework. This will create a React project.
 
 ```bash
 ? Select a framework: » - Use arrow-keys. Return to submit.
@@ -50,40 +50,63 @@ Using one of the above commands will lead you to set up additional configuration
   Preact
   Lit
   Svelte
+  Solid
+  Qwik
+  Angular
   Others
 ```
 
-3.Choose `JavaScript` as framework variant to build this Vite project using JavaScript and React.
+**Step 3: Choose the framework variant** - Select `JavaScript` as the framework variant to build this Vite project using JavaScript.
 
 ```bash
 ? Select a variant: » - Use arrow-keys. Return to submit.
-> JavaScript
   TypeScript
+  TypeScript + React Compiler
+  TypeScript + SWC 
+> JavaScript  
+  JavaScript + React Compiler
   JavaScript + SWC
-  TypeScript + SWC
+  React Router v7
+  TanStack Router
+  RedwoodSDK
+  RSC
+  Vike
 ```
 
-4.Upon completing the aforementioned steps to create `my-project`, run the following command to install its dependencies:
+**Step 4:** If prompted for experimental options, choose according to your needs. In this guide, **No** option is selected.
+```bash
+? Use rolldown-vite (Experimental)?:
+  Yes
+> No
+```
+
+**Step 5:** When asked whether to install dependencies and start now, choose "Yes" to install and run immediately, or "No" to install later and run the dev server manually.
+
+```bash
+? Install with npm and start now?
+  > Yes /   No
+```
+
+As Syncfusion packages are not installed, as of now, **No** option is selected. Then navigate to the project directory and install its dependencies using below commands:
 
 ```bash
 cd my-project
 npm install
 ```
-
 or
 
 ```bash
 cd my-project
-yarn install
+yarn
 ```
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+After running the above commands, the project will be created and all required dependencies will be installed automatically.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
-This article uses the [React Grid component](https://www.syncfusion.com/react-components/react-grid) as an example. To use the React Grid component in the project, the `@syncfusion/ej2-react-grids` package needs to be installed using the following command:
+This guide uses the [React Grid component](https://www.syncfusion.com/react-components/react-grid) as an example. To install the React Grid component package, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
@@ -97,22 +120,22 @@ yarn add @syncfusion/ej2-react-grids
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied with CSS files supplied by the npm packages, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme/).
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied with CSS files supplied by the npm packages, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
 
-In this example, the `Material` theme styles for the Grid component and its dependencies are imported in the **src/App.css** file:
+In this example, the `Tailwind 3` theme styles for the Grid component and its dependencies are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
 
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-react-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-react-grids/styles/tailwind3.css";
 
 {% endhighlight %}
 {% endtabs %}
@@ -123,7 +146,7 @@ In this example, the `Material` theme styles for the Grid component and its depe
 
 Follow the below steps to add the React Grid component to the Vite project:
 
-1.Before adding the Grid component to your markup, import the Grid component in the **src/App.jsx** file.
+1. Before adding the Grid component to your markup, import the Grid component in the **src/App.jsx** file.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

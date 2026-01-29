@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BlockEditorComponent, BlockModel, ContentType } from '@syncfusion/ej2-react-blockeditor';
+import { BlockEditorComponent, BlockModel, ContentType, LabelSettingsModel } from '@syncfusion/ej2-react-blockeditor';
 
 function App() {
   const blocksData: BlockModel[] = [
@@ -63,17 +63,18 @@ function App() {
         }
   ];
     
+    const labelSettings: LabelSettingsModel = {
+        items: [
+            { id: 'label1', text: 'Bug', labelColor: '#ff5252', groupBy: 'Status' }
+        ]
+    };
 
   return (
     <BlockEditorComponent
-      id="block-editor"
-      blocks={blocksData}
-      users={[{ id: 'user1', user: 'John Doe' }]}
-      labelSettings={{
-        items: [
-          { id: 'label1', text: 'Bug', labelColor: '#ff5252', groupBy: 'Status' }
-        ]
-      }}
+        id="block-editor"
+        blocks={blocksData}
+        users={[{ id: 'user1', user: 'John Doe' }]}
+        labelSettings={labelSettings}
     />
   );
 }

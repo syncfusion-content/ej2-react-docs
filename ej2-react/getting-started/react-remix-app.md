@@ -34,15 +34,15 @@ Remix automatically manages loading states during navigation or data fetching. D
 
 ## Create Remix application
 
-To setup basic Remix sample, use the following commands.
+To set up a basic Remix sample, run the following command:
 
 ```
 npx create-remix@latest
 ```
 
-`create-remix@latest` command create the remix app with latest version of packages.
+The `create-remix@latest` command create a remix app using the latest package versions.
 
-When you run this command, You will be asked the following questions.
+When you run this command, you will be asked the following questions.
 
 ```
 dir  :: Where should we create your new project?
@@ -66,30 +66,30 @@ cd quick-start
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Grid package
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React packages are available on [Syncfusion’s npm registry](https://www.npmjs.com/~syncfusionorg). To include the React Grid component in your project, run:
+Syncfusion<sup style="font-size:70%">&reg;</sup> React packages are available at [npmjs.com](https://www.npmjs.com/~syncfusionorg). To include the React Grid component in your project, use the following command:
 
 ```
 npm install @syncfusion/ej2-react-grids --save
 ```
 
-> The --save will instruct NPM to include the Grid package inside of the dependencies section of the `package.json`.
-
 ## Adding CSS reference
 
-Reference themes for Syncfusion<sup style="font-size:70%">&reg;</sup> components in the `~/app/routes/_index.tsx` as CSS reference.
+Import the Syncfusion<sup style="font-size:70%">&reg;</sup> component themes in the `~/app/routes/_index.tsx` file as shown below:
 
 ```ts
-import '@syncfusion/ej2-base/styles/material3.css';
-import '@syncfusion/ej2-buttons/styles/material3.css';
-import '@syncfusion/ej2-calendars/styles/material3.css';
-import '@syncfusion/ej2-dropdowns/styles/material3.css';
-import '@syncfusion/ej2-inputs/styles/material3.css';
-import '@syncfusion/ej2-navigations/styles/material3.css';
-import '@syncfusion/ej2-popups/styles/material3.css';
-import '@syncfusion/ej2-splitbuttons/styles/material3.css';
-import '@syncfusion/ej2-notifications/styles/material3.css';
-import '@syncfusion/ej2-react-grids/styles/material3.css';
+import '@syncfusion/ej2-base/styles/tailwind3.css';
+import '@syncfusion/ej2-buttons/styles/tailwind3.css';
+import '@syncfusion/ej2-calendars/styles/tailwind3.css';
+import '@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+import '@syncfusion/ej2-inputs/styles/tailwind3.css';
+import '@syncfusion/ej2-navigations/styles/tailwind3.css';
+import '@syncfusion/ej2-popups/styles/tailwind3.css';
+import '@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+import '@syncfusion/ej2-notifications/styles/tailwind3.css';
+import '@syncfusion/ej2-react-grids/styles/tailwind3.css';
 ```
+
+> **Note:** The Grid component requires CSS from multiple packages because it depends on other Syncfusion components for its full functionality.
 
 ## Configure Server-Side Rendering (SSR)
 
@@ -111,7 +111,7 @@ This configuration ensures Syncfusion modules are properly transpiled for SSR co
 
 ## Adding React Grid component
 
-Now, you can add Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the Remix application. For getting started, add the React Grid component in `~/app/routes/_index.tsx` file using following code.
+Now, you can add Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the Remix application. Add the React Grid component in `~/app/routes/_index.tsx` file using the following code:
 
 {% tabs %}
 {% highlight ts tabtitle="~/app/routes/_index.tsx" %}

@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Quick start with React Getting started component | Syncfusion
-description:  Checkout and learn about Quick start with React Getting started component of Syncfusion Essential JS 2 and more details.
+description:  Check out and learn about Quick start with React Getting started component of Syncfusion Essential JS 2 and more details.
 control: Quick start 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Component.
+# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Components
 
-This article provides a step-by-step introduction to get started with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components.
+This article provides a step-by-step introduction to getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components.
 
 ## Prerequisites
 
@@ -18,9 +18,11 @@ This article provides a step-by-step introduction to get started with Syncfusion
 
 ## Create the React application
 
-To easily set up a React application, use `create-vite-app`, which offers a faster and more optimized environment. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production. Unlike Create React App, Vite uses esbuild under the hood for lightning-fast builds and leverages native ES modules (ESM) during development, resulting in significantly better performance.
+To set up a React application, we recommend using **Vite**, which offers a faster and more optimized development environment. For detailed steps, refer to the Vite [installation instructions](https://vite.dev/guide/). Vite uses esbuild under the hood for lightning-fast builds and leverages native ES modules (ESM) during development, resulting in significantly better performance compared to traditional build tools.
 
-To create a new React application, run the following command.
+### Option 1: Interactive Setup (Recommended for beginners)
+
+To create a new React application with interactive prompts, run the following command:
 
 ```bash
 npm create vite@latest my-app
@@ -32,10 +34,9 @@ or
 yarn create vite my-app
 ```
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+Using one of the above commands will prompt you to configure your project interactively:
 
-
-1. Select `React` as the framework. It will create a React project.
+**Step 1:** Select `React` as the framework. This will create a React project.
 
 ```bash
 ? Select a framework: » - Use arrow-keys. Return to submit.
@@ -51,17 +52,38 @@ Using one of the above commands will lead you to set up additional configuration
   Others
 ```
 
-2. Choose `TypeScript` as the framework variant to build this React project.
+**Step 2:** Choose `TypeScript` as the framework variant to build this React project using TypeScript.
 
 ```bash
 ? Select a variant: » - Use arrow-keys. Return to submit.
 > TypeScript
+  TypeScript + React Compiler
   TypeScript + SWC 
   JavaScript  
+  JavaScript + React Compiler
   JavaScript + SWC
   React Router v7
+  TanStack Router
+  RedwoodSDK
+  RSC
+  Vike
 ```
-3. Upon completing the aforementioned steps to create `my-app`, run the following command to install its dependencies:
+
+**Step 3:** If prompted for experimental options, choose according to your needs. In this guide, **No** option is selected.
+```bash
+? Use rolldown-vite (Experimental)?:
+  Yes
+> No
+```
+
+**Step 4:** When asked whether to install dependencies and start now, choose "Yes" to install and run immediately, or "No" to install later and run the dev server manually.
+
+```bash
+? Install with npm and start now?
+  > Yes /   No
+```
+
+As Syncfusion packages are not installed, as of now, **No** option is selected. Then navigate to the project directory and install its dependencies using below commands:
 
 ```bash
 cd my-app
@@ -74,41 +96,49 @@ cd my-app
 yarn
 ```
 
-To set-up a React application in `TypeScript` environment, run the following command.
+### Option 2: Direct Command-Line Setup
+
+Alternatively, you can skip the interactive prompts and directly create your project using template flags.
+
+**For TypeScript environment:**
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
+
 or
 
 ```bash
-yarn create vite my-app --template ts
+yarn create vite my-app --template react-ts
 cd my-app
-yarn dev
+yarn
 ```
-To set-up a React application in `Javascript` environment, run the following command.
+
+**For JavaScript environment:**
 
 ```bash
 npm create vite@latest my-app -- --template react
 cd my-app
-npm run dev
+npm install
 ```
+
 or
 
 ```bash
-yarn create vite my-app
+yarn create vite my-app --template react
 cd my-app
-yarn dev
+yarn
 ```
 
+After running the above commands, the project will be created and all required dependencies will be installed automatically.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
 Once you have created the React application, install the required Syncfusion<sup style="font-size:70%">&reg;</sup> React component package in the application. All Syncfusion<sup style="font-size:70%">&reg;</sup> React (Essential<sup style="font-size:70%">&reg;</sup> JS 2) packages are published on the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. So, choose the component that you want to install.
 
-In this quick start article, the Grid component used as an example. To install the Grid component package, use the following command.
+In this quick start guide, the **Grid** component is used as an example. To install the Grid component package, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
@@ -120,43 +150,41 @@ or
 yarn add @syncfusion/ej2-react-grids
 ```
 
-You can also checkout the [installation section](https://ej2.syncfusion.com/react/documentation/installation/npm-package) to know the different ways of installing the packages.
+> **Tip:** You can also check out the [installation section](https://ej2.syncfusion.com/react/documentation/installation/npm-package) to learn about different ways of installing packages.
 
 ## Import the Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
 After installing the Syncfusion<sup style="font-size:70%">&reg;</sup> component packages in your application, import the required themes based on the components used.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React component comes with built-in [themes](../appearance/theme), which are available in installed packages. It is quite simple to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components based on the application style by referring to any of the built-in themes. Let's import the `Material` theme for the Grid component.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React component comes with built-in [themes](../appearance/theme), which are available in installed packages. It is quite simple to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components based on the application style by referring to any of the built-in themes. Let's import the `Tailwind 3` theme for the Grid component.
 
-Import the CSS styles for the Grid component and it's dependencies in the `src/App.css.` file.
+Import the CSS styles for the Grid component and its dependencies in the `src/App.css` file.
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-react-grids/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';  
+@import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';  
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';  
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';  
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import "../node_modules/@syncfusion/ej2-react-grids/styles/tailwind3.css";
 ```
 
-You can checkout the [Themes topic](../appearance/theme) to know more about built-in themes and different ways to refer themes in React application.
+You can check out the [Themes](../appearance/theme) topic to know more about built-in themes and different ways to refer themes in a React application.
 
 ## Add a Syncfusion<sup style="font-size:70%">&reg;</sup> component to the application
 
 Start adding the required components to the application. Let's add the Grid component in the `src/App.tsx` file using the following code.
 
-1.Before adding the Grid component to your markup, import the Grid component in the `src/App.tsx` file.
+**Step 1:** Import the Grid component and its required directives at the top of the `src/App.tsx` file:
 
-   ```bash
-    import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+   ```ts
+   import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
    ```
 
-2.Then, to display the Grid with records, add the Grid component and bind the `dataSource` to it. Here, we have mapped the simple data as the `dataSource`.
-
-
+**Step 2:** Replace the entire content of the `src/App.tsx` file with the following code. This code creates a Grid component with sample data and defines five columns to display order information:
 
 ```ts
 
@@ -208,12 +236,12 @@ npm run dev
 or
 
 ```bash
- yarn dev
+yarn dev
 ```
 
-The output will appears as follows.
+The output will appear as follows.
 
-  {% tabs %}
+{% tabs %}
 {% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/common/default-cs9/app/index.jsx %}
 {% endhighlight %}

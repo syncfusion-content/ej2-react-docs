@@ -35,6 +35,7 @@ N> By default, the `gateway` will be set as **none**.
 ## Gateway Types
 
 The React Diagram component supports various gateway types, each serving specific process control requirements:
+
 | Shape | Image |
 | -------- | -------- |
 | Exclusive | ![Exclusive GateWay BPMN Shape](images/Exclusive.png) |
@@ -44,3 +45,4 @@ The React Diagram component supports various gateway types, each serving specifi
 | EventBased | ![EventBased GateWay BPMNShape](images/EventBased.png) |
 | ExclusiveEventBased | ![Exclusive EventBased GateWay BPMN Shape](images/EEBased.png) |
 | ParallelEventBased | ![Parallel EventBased GateWay BPMN Shape](images/PEBased.png) |
+
