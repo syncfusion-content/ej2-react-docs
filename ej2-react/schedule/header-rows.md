@@ -2,7 +2,7 @@
 layout: post
 title: Header rows in React Schedule component | Syncfusion
 description: Learn here all about Header rows in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Header rows 
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Header rows in React Schedule component
 
-The Timeline views can have additional header rows other than its default date and time header rows. It is possible to show individual header rows for displaying year, month and week separately using the [`HeaderRowDirective`](https://ej2.syncfusion.com/react/documentation/api/schedule#headerrows). This is applicable only on the timeline views. The possible rows which can be added using [`HeaderRowDirective`](https://ej2.syncfusion.com/react/documentation/api/schedule#headerrows) are as follows.
+The Timeline views can have additional header rows other than its default date and time header rows. It is possible to show individual header rows for displaying year, month and week separately using the [`HeaderRowDirective`](https://ej2.syncfusion.com/react/documentation/api/schedule#headerrows). This is applicable only on the Timeline views. The possible rows which can be added using [`HeaderRowDirective`](https://ej2.syncfusion.com/react/documentation/api/schedule#headerrows) are as follows.
 
 * `Year`
 * `Month`
@@ -18,13 +18,13 @@ The Timeline views can have additional header rows other than its default date a
 * `Date`
 * `Hour`
 
-> The `Hour` row is not applicable for Timeline month view.
+> The `Hour` row is not applicable for the Timeline month view.
 
-Learn to add and customize additional header rows in the Timeline views of React Scheduler from this video:
+See how to add and customize header rows in the Timeline views of the Angular Scheduler in this video:
 
 {% youtube "https://www.youtube.com/watch?v=uV5Axqj5UsI" %}
 
-The following example shows the Scheduler displaying all the available header rows on timeline views.
+The example below shows the Scheduler displaying all available header rows in Timeline views.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -42,9 +42,9 @@ The following example shows the Scheduler displaying all the available header ro
 
 > Importing `HeaderRowsDirective` and `HeaderRowDirective` is mandatory.
 
-## Display year and month rows in timeline views
+## Display year and month rows in Timeline views
 
-To display the timeline Scheduler simply with year and month names alone, define the option `Year` and `Month` within the [`HeaderRowDirective`](https://ej2.syncfusion.com/react/documentation/api/schedule#headerrows).
+To display only the year and month header rows in the Scheduler, specify `Year` and `Month` in the [`HeaderRowDirective`](https://ej2.syncfusion.com/react/documentation/api/schedule#headerrows).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -60,9 +60,9 @@ To display the timeline Scheduler simply with year and month names alone, define
         
 {% previewsample "page.domainurl/code-snippet/schedule/views-cs3" %}
 
-## Display week numbers in timeline views
+## Display week numbers in Timeline views
 
-The week number can be displayed in a separate header row of the timeline Scheduler by setting `Week` option within [`HeaderRowDirective`](https://ej2.syncfusion.com/react/documentation/api/schedule#headerrows).
+The week number can be displayed in a separate header row of the Timeline Scheduler by setting `Week` option within [`HeaderRowDirective`](https://ej2.syncfusion.com/react/documentation/api/schedule#headerrows).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -80,7 +80,7 @@ The week number can be displayed in a separate header row of the timeline Schedu
 
 ## Timeline view displaying dates of a complete year
 
-It is possible to display a complete year in a timeline view by setting [`interval`](https://ej2.syncfusion.com/react/documentation/api/schedule/timeScale/#interval) value as 12 and defining **TimelineMonth** view option within the `ViewDirective` of Scheduler.
+You can display a full year in a Timeline view by setting the [`interval`](https://ej2.syncfusion.com/react/documentation/api/schedule/timeScale#interval) to 12 and including the **TimelineMonth** view in the `ViewDirective` of Scheduler.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -96,9 +96,9 @@ It is possible to display a complete year in a timeline view by setting [`interv
         
 {% previewsample "page.domainurl/code-snippet/schedule/views-cs5" %}
 
-## Customizing the header rows using template
+## Customizing header rows with templates
 
-You can customize the text of the header rows and display any images or formatted text on each individual header rows using the built-in [`template`](https://ej2.syncfusion.com/react/documentation/api/schedule/headerRows/#template) option available within the [`HeaderRowDirective`](https://ej2.syncfusion.com/react/documentation/api/schedule#headerrows).
+You can customize the text of the header rows and display any images or formatted text on each individual header rows using the built-in [`template`](https://ej2.syncfusion.com/react/documentation/api/schedule/headerRows#template) option available within the [`HeaderRowDirective`](https://ej2.syncfusion.com/react/documentation/api/schedule#headerrows).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -114,4 +114,4 @@ You can customize the text of the header rows and display any images or formatte
         
 {% previewsample "page.domainurl/code-snippet/schedule/views-cs6" %}
 
-> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/material/schedule/overview) to knows how to present and manipulate data.
+> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview) to knows how to present and manipulate data.

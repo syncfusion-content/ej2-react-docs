@@ -2,7 +2,7 @@
 layout: post
 title: Accessibility in React Schedule component | Syncfusion
 description: Learn here all about Accessibility in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Schedule component
 
-The Scheduler has been designed based on the WAI-ARIA specifications, thus applying the appropriate ARIA roles, states and properties for the Scheduler elements. It is also available with a built-in keyboard navigation support, making it easier for the people who use assistive technologies or who completely rely on the Keyboard support. As per the accessibility standard, the navigated dates, views and other interactive actions performed on the Scheduler will be read out to the target users who use assistive technologies such as screen readers.
+The Scheduler has been designed based on the WAI-ARIA specifications, thus applying the appropriate ARIA roles, states, and properties for the Scheduler elements. It also includes built-in keyboard navigation support, enhancing usability for individuals using assistive technologies or relying solely on keyboard input. As per accessibility standards, navigated dates, views, and other interactive actions performed within the Scheduler are announced to users utilizing assistive technologies such as screen readers.
 
-The Scheduler makes use of the most required ARIA attributes such as `aria-label` and `role` to support the accessibility in it. To be more accurate, it must be used with an ARIA compliant browser along with the screen reader running from backend.
+The Scheduler utilizes essential ARIA attributes like `aria-label` and `role` to ensure accessibility. For accurate interpretation, it should be used with an ARIA-compliant browser and a running screen reader.
 
 The accessibility compliance for the Schedule component is outlined below.
 
@@ -43,9 +43,9 @@ The accessibility compliance for the Schedule component is outlined below.
 
 ## ARIA attributes
 
-The Scheduler parent element is assigned with a role of `main`, to denote it as the main content of a component as well as a unique element of the entire document.
+The Scheduler's parent element is assigned with a role of `main`, to denote it as the main content of a component as well as a unique element of the entire document.
 
-The following ARIA attributes are used in the Scheduler.
+The following ARIA attributes are used in the Scheduler:
 
 | Attributes | Description |
 |-------|---------|
@@ -58,7 +58,7 @@ The following ARIA attributes are used in the Scheduler.
 
 ## Keyboard interaction
 
-All the Scheduler actions can be controlled via keyboard keys by using the `allowKeyboardInteraction` property which is set to `true` by default. The following are the standard keys that work on Scheduler.
+All Scheduler actions can be controlled via keyboard using the `allowKeyboardInteraction` property, which is `true` by default. The following standard keys are supported within the Scheduler:
 
 | Keys | Description |
 |-----|-----|
@@ -81,13 +81,13 @@ All the Scheduler actions can be controlled via keyboard keys by using the `allo
 | <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>Y</kbd> | To navigate to today date. |
 | <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>N</kbd> | To open editor window. |
 
-> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/material/schedule/overview) to knows how to present and manipulate data.
+> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview) to know how to present and manipulate data.
 
 ## Ensuring accessibility
 
-The Scheduler component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Scheduler component's accessibility levels are ensured through automated testing using tools such as an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core).
 
-The accessibility compliance of the Scheduler component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/schedule.html) in a new window to evaluate the accessibility of the Scheduler component with accessibility tools.
+The accessibility compliance of the Scheduler component is demonstrated in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/schedule.html) in a new window to evaluate the accessibility of the Scheduler component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/schedule.html" %}
 

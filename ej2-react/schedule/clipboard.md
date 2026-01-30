@@ -3,7 +3,7 @@ layout: post
 title: Clipboard in React Schedule component | Syncfusion
 description: Learn here all about Context menu in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
-control: Clipboard 
+control: Scheduler
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -17,7 +17,7 @@ To activate the clipboard feature in the scheduler, simply set the [`allowClipbo
 
 ## Cut, copy and paste using keyboard
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Schedule control supports keyboard shortcuts to streamline the process of managing appointments.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Schedule control supports keyboard shortcuts to streamline appointment management:
 
 These keyboard shortcuts enable users to efficiently manage their schedules:
 
@@ -27,7 +27,7 @@ These keyboard shortcuts enable users to efficiently manage their schedules:
 | Cut       | Ctrl+X   | Move appointments to a new time slot without duplicates.         |
 | Paste     | Ctrl+V   | Place copied or cut appointments into the desired time slot.     |
 
-To use these shortcuts, simply click on the appointment and press **Ctrl+C** to copy or **Ctrl+X** to cut. To paste the copied or cut appointment, click on the desired time slot and press **Ctrl+V**
+To use these shortcuts, click an appointment and press **Ctrl+C** to copy or **Ctrl+X** to cut. To paste, click a time slot and press **Ctrl+V**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -50,15 +50,15 @@ To use these shortcuts, simply click on the appointment and press **Ctrl+C** to 
 
 ## Cut, copy, and paste using context menu
 
-You can programmatically manage appointments by using the public methods **cut**, **copy**, and **paste**. These methods allow you to perform the same actions as the context menu or external buttons.
+You can programmatically manage appointments by using the public methods **cut**, **copy**, and **paste**. These methods perform the same actions as keyboard shortcuts or context menu options.
 
-Utilize these public methods to manage appointments programmatically in Syncfusion<sup style="font-size:70%">&reg;</sup> Schedule control:
+Utilize these methods to manage appointments in the Syncfusion<sup style="font-size:70%">&reg;</sup> Schedule control:
 
 | Method | Parameters                     | Description                                                                                     |
 |--------|--------------------------------|-------------------------------------------------------------------------------------------------|
-| [`copy`](https://ej2.syncfusion.com/react/documentation/api/schedule/#copy)   | None                           | Duplicate the selected appointment for reuse.                                                   |
-| [`cut`](https://ej2.syncfusion.com/react/documentation/api/schedule/#cut)    | None                           | Remove the selected appointment from its current slot for moving.                               |
-| [`paste`](https://ej2.syncfusion.com/react/documentation/api/schedule/#paste)  | targetElement (Scheduler's work-cell) | Insert the copied or cut appointment into the specified time slot.                              |
+| [`copy`](https://ej2.syncfusion.com/react/documentation/api/schedule#copy)   | None                           | Duplicate the selected appointment for reuse.                                                   |
+| [`cut`](https://ej2.syncfusion.com/react/documentation/api/schedule#cut)    | None                           | Remove the selected appointment from its current slot for moving.                               |
+| [`paste`](https://ej2.syncfusion.com/react/documentation/api/schedule#paste)  | targetElement (Scheduler's work-cell) | Insert the copied or cut appointment into the specified time slot.                              |
 
 By using these methods, you can programmatically cut, copy, and paste appointments in the scheduler, providing more control over the appointment management process.
 
@@ -81,7 +81,7 @@ By using these methods, you can programmatically cut, copy, and paste appointmen
 
 ## Modifying Content before pasting
 
-You can modify the content of an appointment before pasting it by using [`beforePaste`](https://ej2.syncfusion.com/react/documentation/api/schedule/#beforepaste) event accessing the appointment details and making necessary changes.
+You can modify the content of an appointment before pasting it by using [`beforePaste`](https://ej2.syncfusion.com/react/documentation/api/schedule#beforepaste) event accessing the appointment details and making necessary changes.
 
 The following example demonstrates how to seamlessly copy and paste content from a grid to a scheduler. To do this, follow these steps:
 
@@ -111,4 +111,4 @@ In this example, the `beforePaste` event can be utilized to intercept the event 
 
 {% previewsample "page.domainurl/code-snippet/schedule/clipboard-cs3" %}
 
->  You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/material/schedule/overview) to knows how to present and manipulate data.
+>  You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview) to knows how to present and manipulate data.

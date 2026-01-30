@@ -2,7 +2,7 @@
 layout: post
 title: Scheduler styling in React Schedule component | Syncfusion
 description: Learn here all about Scheduler styling in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Scheduler styling 
+control: Scheduler 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Scheduler styling in React Schedule component
 
-To modify the Scheduler appearance, you need to override the default CSS of Scheduler. Also, you have an option to create your own custom theme using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material). Please find the list of CSS classes in Scheduler.
+To customize the Scheduler's appearance, override its default CSS. You can also create a custom theme using our [Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=tailwind3). Below is a list of Scheduler CSS classes.
 
-| Css class | Purpose |
+| CSS class | Purpose |
 |-------|---------|
 | .e-schedule .e-vertical-view .e-work-cells | Work cells in vertical views of scheduler |
 | .e-schedule .e-month-view .e-work-cells | Work cells in month view of scheduler |

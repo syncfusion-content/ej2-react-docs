@@ -2,7 +2,7 @@
 layout: post
 title: Row auto height in React Schedule component | Syncfusion
 description: Learn here all about Row auto height in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Row auto height 
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,17 +10,17 @@ domainurl: ##DomainURL##
 
 # Row auto height in React Schedule component
 
-By default, the height of the Scheduler rows in Timeline views are static and therefore, when the same time range holds multiple overlapping appointments, a `+n more` text indicator will be displayed. With this feature enabled, you can now view all the overlapping appointments present in those specific time range by auto-adjusting the row height based on the presence of the appointments count, instead of displaying the `+n more` text indicators.
+By default, the height of the Scheduler rows in Timeline views is static. Therefore, when the same time ranges hold multiple overlapping appointments, a `+n more` text indicator is displayed. With this feature enabled, you can now view all overlapping appointments in a specific time range by auto-adjusting the row height according to the number of appointments, instead of displaying the `+n more` text indicators.
 
-To enable auto row height adjustments on Scheduler Timeline views and Month view, set `true` to the [`rowAutoHeight`](https://ej2.syncfusion.com/react/documentation/api/schedule#rowautoheight) property whose default value is `false`.
+To enable auto row height adjustments on Scheduler Timeline views and the Month view, set the [`rowAutoHeight`](https://ej2.syncfusion.com/react/documentation/api/schedule#rowautoheight) property to `true` (default is `false`).
 
-> This auto row height adjustment is applicable only on all the Timeline views as well as on the calendar Month view.
+> This auto row height adjustment applies only to all Timeline views and the calendar Month view.
 
-Now, let's see how it works on those applicable views with examples.
+Now, let us see how it works on those applicable views with examples.
 
 ## Calendar month view
 
-By default, the rows of the calendar Month view can hold only the limited appointments count based on its row height, and the rest of the overlapping appointments are indicated with a `+n more` text indicator. The following example shows how the month view row auto-adjusts based on the number of appointments count, when this [`rowAutoHeight`](https://ej2.syncfusion.com/react/documentation/api/schedule#rowautoheight) feature is enabled.
+By default, the rows of the calendar Month view can hold only a limited number of appointments based on its row height, and the rest of the overlapping appointments are indicated with a `+n more` text indicator. The following example shows how the month view row auto-adjusts based on the number of appointments when this [`rowAutoHeight`](https://ej2.syncfusion.com/react/documentation/api/schedule#rowautoheight) feature is enabled.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -38,7 +38,7 @@ By default, the rows of the calendar Month view can hold only the limited appoin
 
 ## Timeline views
 
-When the feature [`rowAutoHeight`](https://ej2.syncfusion.com/react/documentation/api/schedule#rowautoheight) is enabled in Timeline views, the row height gets auto-adjusted based on the number of overlapping events occupied on the same time range, which is demonstrated in the following example.
+When the [`rowAutoHeight`](https://ej2.syncfusion.com/react/documentation/api/schedule#rowautoheight) feature is enabled in Timeline views, the row height auto-adjusts based on the number of overlapping events in the same time range, as demonstrated in the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -56,7 +56,7 @@ When the feature [`rowAutoHeight`](https://ej2.syncfusion.com/react/documentatio
 
 ## Timeline views with multiple resources
 
-The following example shows how the auto row adjustment feature works on timeline views with multiple resources.
+The following example shows how the auto row adjustment feature works on Timeline views with multiple resources.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -74,7 +74,7 @@ The following example shows how the auto row adjustment feature works on timelin
 
 ## Appointments occupying entire cell
 
-By default, with the feature [`rowAutoHeight`](https://ej2.syncfusion.com/react/documentation/api/schedule#rowautoheight), there will be a space in the bottom of the cell when appointment is rendered. To avoid this space, we can set true to the property [`ignoreWhitespace`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/#ignorewhitespace) with in [`eventSettings`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/) whereas its default property value is false. In the following code example, the whitespace below the appointments has been ignored.
+By default, with the feature [`rowAutoHeight`](https://ej2.syncfusion.com/react/documentation/api/schedule#rowautoheight), there will be a space in the bottom of the cell when appointment is rendered. To avoid this space, we can set true to the property [`ignoreWhitespace`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings#ignorewhitespace) with in [`eventSettings`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings) whereas its default property value is false. In the following code example, the whitespace below the appointments has been ignored.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -90,6 +90,6 @@ By default, with the feature [`rowAutoHeight`](https://ej2.syncfusion.com/react/
         
 {% previewsample "page.domainurl/code-snippet/schedule/ignore-whitespace-cs1" %}
 
-**Note**: The property [`ignoreWhitespace`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/#ignorewhitespace) will be applicable only when [`rowAutoHeight`](https://ej2.syncfusion.com/react/documentation/api/schedule#rowautoheight) feature is enabled in the Scheduler
+**Note**: The [`ignoreWhitespace`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings#ignorewhitespace) property applies only when the [`rowAutoHeight`](https://ej2.syncfusion.com/react/documentation/api/schedule#rowautoheight) feature is enabled in the Scheduler.
 
-> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/material/schedule/overview) to knows how to present and manipulate data.
+> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview) to knows how to present and manipulate data.
