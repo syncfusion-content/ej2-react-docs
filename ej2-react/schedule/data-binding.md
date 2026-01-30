@@ -2,7 +2,7 @@
 layout: post
 title: Data binding in React Schedule component | Syncfusion
 description: Learn here all about Data binding in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Data binding 
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Data binding in React Schedule component
 
-The Scheduler uses `DataManager`, which supports both RESTful data service binding and JavaScript object array binding. The [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/#datasource) property of Scheduler can be assigned either with the instance of `DataManager` or JavaScript object array collection, as it supports the following two kind of data binding methods:
+The Scheduler utilizes the `DataManager`, which supports both RESTful data service binding and JavaScript object array binding. The [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings#datasource) property of Scheduler can be assigned either an instance of `DataManager` or a JavaScript object array collection. Scheduler supports the following data binding methods:
 
 * Local data
 * Remote data
 
 ## Binding local data
 
-To bind local JSON data to the Scheduler, you can simply assign a JavaScript object array to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/#datasource) option of the scheduler within the [`eventSettings`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/) property. The JSON object dataSource can also be provided as an instance of `DataManager` and assigned to the Scheduler `dataSource` property.
+o bind local JSON data to the Scheduler, assign a JavaScript object array to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings#datasource) option of the Scheduler within the [`eventSettings`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings) property. The JSON object dataSource can also be provided as an instance of `DataManager` and assigned to the Scheduler `dataSource` property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -33,17 +33,17 @@ To bind local JSON data to the Scheduler, you can simply assign a JavaScript obj
         
 {% previewsample "page.domainurl/code-snippet/schedule/local-data-cs2" %}
 
-> By default, `DataManager` uses `JsonAdaptor` for binding local data.
+> By default, `DataManager` uses the `JsonAdaptor` for binding local data.
 
-> You can also bind different field names to the default event fields as well as include additional `custom fields` to the event object collection which can be referred [here](./appointments/#event-fields).
+> You can also map different field names to the default event fields, as well as include additional `custom fields` in the event object collection. For details, refer to [event fields](./appointments#event-fields).
 
 ## Binding remote data
 
-Any kind of remote data services can be bound to the Scheduler. To do so, create an instance of `DataManager` and provide the service URL to the `url` option of `DataManager` and then assign it to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/#datasource) property within  [`eventSettings`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/).
+The Scheduler supports binding to various remote data services. To configure this, create an instance of `DataManager`, supply the remote service URL to the `url` option, and assign it to the[`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings#datasource) property within  [`eventSettings`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings).
 
 ### Using ODataV4Adaptor
 
-[ODataV4](https://www.odata.org/documentation/) is a standardized protocol for creating and consuming data. Refer to the following code example to retrieve the data from ODataV4 service using the DataManager. To connect with ODataV4 service end points, it is necessary to make use of `ODataV4Adaptor` within `DataManager`.
+[ODataV4](https://www.odata.org/documentation/) is a standardized protocol for creating and consuming data. The following example demonstrates how to retrieve data from an ODataV4 service using DataManager. To connect with ODataV4 service endpoints, utilize the `ODataV4Adaptor` within `DataManager`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -61,7 +61,7 @@ Any kind of remote data services can be bound to the Scheduler. To do so, create
 
 ### Filter events using the in-built query
 
-To enable server-side filtering operations based on predetermined conditions, the [`includeFiltersInQuery`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettingsModel/#includefiltersinquery) API can be set to true, this allows the filter query to be constructed using the start date, end date, and recurrence rule which in turn enables the request to be filtered accordingly.
+To enable server-side filtering operations based on specific conditions, set the [`includeFiltersInQuery`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettingsModel#includefiltersinquery) API to true. This allows the filter query to include the start date, end date, and recurrence rule, enabling the request to retrieve only the relevant data from the server.
 
 This method greatly improves the component's performance by reducing the data that needs to be transferred to the client side. As a result, the component's efficiency and responsiveness are significantly enhanced, resulting in a better user experience. However, it is important to consider the possibility of longer query strings, which may cause issues with the maximum URL length or server limitations on query string length.
 
@@ -79,13 +79,13 @@ This method greatly improves the component's performance by reducing the data th
         
 {% previewsample "page.domainurl/code-snippet/schedule/local-data-cs41" %}
 
-The following image represents how the parameters are passed using ODataV4 filter.
+The image below illustrates how parameters are passed using an ODataV4 filter for remote data binding.
 
 ![ODataV4 filter](images/odatav4-filter.jpg)
 
 ### Using custom adaptor
 
-It is possible to create your own custom adaptor by extending the built-in available adaptors. The following example demonstrates the custom adaptor usage and how to add a custom field `EventID` for the appointments by overriding the built-in response processing using the `processResponse` method of the `ODataV4Adaptor`.
+You can create a custom adaptor by extending one of the built-in adaptors. The following example demonstrates how to use a custom adaptor and add a custom field, such as `EventID`, to the appointments by overriding the response processing using the `processResponse` method of the `ODataV4Adaptor`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -152,7 +152,7 @@ root.render(<App />);
 
 ## Passing additional parameters to the server
 
-To send an additional custom parameter to the server-side post, you need to make use of the `addParams` method of `Query`. Now, assign this `Query` object with additional parameters to the [`query`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/#query) property of Scheduler.
+To send additional custom parameters in the server-side request, use the `addParams` method of `Query`. Assign this `Query` object with the custom parameters to the [`query`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings#query) property of Scheduler.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -168,13 +168,13 @@ To send an additional custom parameter to the server-side post, you need to make
         
 {% previewsample "page.domainurl/code-snippet/schedule/local-data-cs5" %}
 
-> The parameters added using the [`query`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/#query) property will be sent along with the data request sent to the server on every scheduler actions.
+> Parameters added using the [`query`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings#query) property are sent with the data request to the server on every Scheduler action.
 
 ## Handling failure actions
 
-During the time of Scheduler interacting with server, there are chances that some server-side exceptions may occur. You can acquire those error messages or exception details in client-side using the [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/schedule/#actionfailure) event of Scheduler.
+When Scheduler interacts with the server, server-side exceptions may occur. These error messages or exception details can be accessed client-side using the [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/schedule#actionfailure) event of Scheduler.
 
-The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/schedule/#actionfailure) event contains the error details returned from the server.
+The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/schedule#actionfailure) event contains all error details returned from the server.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -190,11 +190,11 @@ The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/react/do
         
 {% previewsample "page.domainurl/code-snippet/schedule/local-data-cs6" %}
 
-> The [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/schedule/#actionfailure) event will be triggered not only on server returning errors, but also when there is an exception while processing any of the Scheduler CRUD actions.
+> The [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/schedule#actionfailure) event is triggered not only when the server returns errors, but also when an exception occurs during Scheduler CRUD operations.
 
 ## Scheduler CRUD actions
 
-The CRUD (Create, Read, Update and Delete) actions can be performed easily on Scheduler appointments using the various adaptors available within the `DataManager`. Most preferably, we will be using `UrlAdaptor` for performing CRUD actions on scheduler appointments.
+The CRUD (Create, Read, Update, and Delete) actions can be performed on Scheduler appointments using the adaptors available within the `DataManager`. Typically, the `UrlAdaptor` is used for CRUD operations on scheduler appointments.
 
 ```ts
 import { Schedule, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-schedule';
@@ -339,4 +339,4 @@ We have assigned our custom created Google Calendar url to the DataManager and a
         
 {% previewsample "page.domainurl/code-snippet/schedule/local-data-cs7" %}
 
-> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/material/schedule/overview) to knows how to present and manipulate data.
+> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview) to knows how to present and manipulate data.

@@ -2,7 +2,7 @@
 layout: post
 title: Virtual scrolling in React Schedule component | Syncfusion
 description: Learn here all about Virtual scrolling in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Virtual scrolling 
+control: scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Virtual scrolling in React Schedule component
 
-To achieve better performance in the Scheduler when loading a large number of resources and events, we have added virtual scrolling support to load a large set of resources and events instantly as you scroll. You can dynamically load large number of resources and events in the Scheduler by setting `true` to the [`allowVirtualScrolling`](https://ej2.syncfusion.com/react/documentation/api/schedule/viewsModel/#allowvirtualscrolling) property within the view specific settings. The virtual loading of events is possible in Agenda view, by setting [`allowVirtualScrolling`](https://ej2.syncfusion.com/react/documentation/api/schedule/viewsModel/#allowvirtualscrolling) property to `true` within the agenda view specific settings.
+Virtual scrolling support in the Scheduler component enhances performance when working with a substantial number of resources and events. This feature allows large sets of resources and events to load dynamically in the timeline views as users scroll, resulting in a seamless user experience. Enable virtual scrolling by setting the [`allowVirtualScrolling`](https://ej2.syncfusion.com/react/documentation/api/schedule/viewsModel#allowvirtualscrolling) property to `true` within the specific timeline view settings. In the Agenda view, enable the same property in the agenda view configuration to allow virtual loading of events.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -30,13 +30,13 @@ To achieve better performance in the Scheduler when loading a large number of re
 
 ## Enabling lazy loading for appointments
 
-The lazy loading feature provides a convenient way to efficiently load resource appointments into the Scheduler using an on-demand approach. With this feature, you can seamlessly load a large volume of appointment data into the Scheduler without experiencing any performance degradation.
+The lazy loading feature provides an efficient approach for loading appointment data into the Scheduler on-demand. This allows large volumes of appointments to be loaded without performance issues.
 
-By default, the Scheduler fetches all the relevant appointments from the server with in the current date range. However, enabling this feature will trigger query requests to the server for appointment retrieval whenever new resources are rendered due to scroll actions. These queries contain the resource IDs of currently displayed resources along with current date range, which can be passed as a comma-separated string. In the server controller, these resource IDs are parsed to filter the necessary appointments to render in the scheduler. 
+By default, the Scheduler retrieves all relevant appointments within the current date range from the server. When lazy loading is enabled, the Scheduler sends queries to the server to retrieve appointments only for resources currently displayed as a result of scroll actions. These queries include the resource IDs and the current date range as a comma-separated string. On the server, these resource IDs are parsed to filter and serve only the necessary appointments for rendering in the Scheduler.
 
-When you enable this feature, the Scheduler becomes capable of fetching events from remote services only for the current view port alone to optimize the data retrieval. The remaining appointment data is fetched form the server on-demand based on currently rendered view port resources as you scroll's through the scheduler content.
+With this feature enabled, the Scheduler fetches events from remote services solely for the appointments currently visible in the viewport, optimizing data retrieval. Additional appointment data is fetched from the server on-demand as new resources enter the viewport during scrolling.
 
-To enable this feature, you have to set the [`enableLazyLoading`](https://ej2.syncfusion.com/react/documentation/api/schedule/viewsModel/#enablelazyloading) property to `true` within the view specific settings.
+Enable this feature by setting the [`enableLazyLoading`](https://ej2.syncfusion.com/react/documentation/api/schedule/viewsModel#enablelazyloading) property to `true` in the appropriate view settings.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -52,7 +52,7 @@ To enable this feature, you have to set the [`enableLazyLoading`](https://ej2.sy
         
 {% previewsample "page.domainurl/code-snippet/schedule/events-cs50" %}
 
-Here's the server-side controller code that retrieves appointment data based on the resource IDs provided as query parameters:
+The following server-side controller code demonstrates how to retrieve appointment data based on resource IDs received as query parameters:
 
 ```c#
 using Microsoft.AspNetCore.Mvc;
@@ -93,11 +93,12 @@ namespace LazyLoadingServices.Controllers
 }
 ```
 
-> * The property will be effective, when large number of resources and appointments bound to the Scheduler.
-> * This property is applicable only when [resource grouping](https://ej2.syncfusion.com/react/documentation/api/schedule/group/#resources) is enabled in Scheduler.
+**Note:**  
+* The property will be effective, when large number of resources and appointments bound to the Scheduler.
+* This property is applicable only when [resource grouping](https://ej2.syncfusion.com/react/documentation/api/schedule/group#resources) is enabled in Scheduler.
 
 ## See Also
 
-* [Virtual scrolling in Agenda view](./views/#agenda-view)
+* [Virtual scrolling in Agenda view](./views#agenda-view)
 
-> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/material/schedule/overview) to knows how to present and manipulate data.
+> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview) to knows how to present and manipulate data.

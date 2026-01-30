@@ -2,7 +2,7 @@
 layout: post
 title: Add edit and remove events in React Schedule component | Syncfusion
 description: Learn here all about Add edit and remove events in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Add edit and remove events 
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Add edit and remove events in React Schedule component
 
-CRUD actions can be manually performed on appointments using [`addEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule#addevent), [`saveEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule#saveevent) and [`deleteEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule#deleteevent) methods as shown below.
+CRUD actions can be manually performed on appointments using the [`addEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule#addevent), [`saveEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule#saveevent), and [`deleteEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule#deleteevent) methods in the Syncfusion react Schedule component, as shown below.
 
-## Normal event
+## Normal events
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -28,7 +28,7 @@ CRUD actions can be manually performed on appointments using [`addEvent`](https:
         
 {% previewsample "page.domainurl/code-snippet/schedule/app-crud-cs6" %}
 
-## Recurrence event
+## Recurring events
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
