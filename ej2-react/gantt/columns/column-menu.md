@@ -124,7 +124,7 @@ To customize the column menu icon, follow these steps:
 **2.** Import the required icon stylesheets (e.g., Material or Bootstrap5):
 
 ```html
-<link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/material.css" rel="stylesheet" />
+<link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/tailwind3.css" rel="stylesheet" />
 <link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/bootstrap5.css" rel="stylesheet" />
 ```
 

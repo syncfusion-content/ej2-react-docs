@@ -2,7 +2,7 @@
 layout: post
 title: Cell customization in React Schedule component | Syncfusion
 description: Learn here all about Cell customization in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Cell customization 
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Cell customization in React Schedule component
 
-The cells of the Scheduler can be easily customized either using the cell template or [`RenderCell`](https://ej2.syncfusion.com/react/documentation/api/schedule#rendercell) event.
+The cells of the Scheduler can be customized using a template or the [`renderCell`](https://ej2.syncfusion.com/react/documentation/api/schedule#rendercell) event.
 
 ## Setting cell dimensions in all views
 
-The height and width of the Scheduler cells can be customized either to increase or reduce its size through the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/schedule#cssclass) property, which overrides the default CSS applied on cells.
+The height and width of the Scheduler cells can be customized to increase or reduce their size through the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/schedule#cssclass) property, which overrides the default CSS applied on cells.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -35,7 +35,7 @@ The height and width of the Scheduler cells can be customized either to increase
 
 ## Check for cell availability
 
-You can check whether the given time range slots are available for event creation or already occupied by other events using the [`isSlotAvailable`](https://ej2.syncfusion.com/react/documentation/api/schedule#isslotavailable) method. In the following code example, if a specific time slot already contains an appointment, then no more appointments can be added to that cell.
+You can check whether the given time range slots are available for event creation or already occupied by other events using the [`isSlotAvailable`](https://ej2.syncfusion.com/react/documentation/api/schedule#isslotavailable) method. In the following code example, if a specific time slot already contains an appointment, no more appointments can be added to that cell.
 
 >Note: The **isSlotAvailable** is centered around verifying appointments within the present view's date range. Yet, it does not encompass an evaluation of availability for recurrence occurrences that fall beyond this particular date range.
 
@@ -53,13 +53,13 @@ You can check whether the given time range slots are available for event creatio
         
 {% previewsample "page.domainurl/code-snippet/schedule/local-data-cs1" %}
 
-## Customizing cells in all the views
+## Customizing cells in all views
 
-It is possible to customize the appearance of the cells using both template options and [`renderCell`](https://ej2.syncfusion.com/react/documentation/api/schedule#rendercell) event on all the views.
+It is possible to customize the appearance of cells using both template options and [`renderCell`](https://ej2.syncfusion.com/react/documentation/api/schedule#rendercell) event in all views.
 
 ### Using template
 
-The [`cellTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule#celltemplate) option accepts the template string and is used to customize the cell background with specific images or appropriate text on the given date values.
+The [`cellTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule#celltemplate) option accepts a template string and is used to customize the cell background with specific images or text for the given date values.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -80,7 +80,7 @@ The [`cellTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule
 
 ### Using renderCell event
 
-An alternative to `cellTemplate`[`cellTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule#celltemplate) is the [`renderCell`](https://ej2.syncfusion.com/react/documentation/api/schedule#rendercell) event, which can also be used to customize the cells with appropriate images or formatted text values.
+An alternative to `cellTemplate`[`cellTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule#celltemplate) is the [`renderCell`](https://ej2.syncfusion.com/react/documentation/api/schedule#rendercell) event, which can also be used to customize cells with images or formatted text.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -99,25 +99,25 @@ An alternative to `cellTemplate`[`cellTemplate`](https://ej2.syncfusion.com/reac
         
 {% previewsample "page.domainurl/code-snippet/schedule/cell-dimension-cs2" %}
 
-You can customize cells such as work cells, month cells, all-day cells, header cells, resource header cells using [`renderCell`](https://ej2.syncfusion.com/react/documentation/api/schedule#rendercell) event by checking the [`elementType`](https://ej2.syncfusion.com/react/documentation/api/schedule/renderCellEventArgs/#elementtype) option within the event. You can check elementType with any of the following.
+You can customize cells such as work cells, month cells, all-day cells, header cells, and resource header cells using the [`renderCell`](https://ej2.syncfusion.com/react/documentation/api/schedule#rendercell) event by checking the [`elementType`](https://ej2.syncfusion.com/react/documentation/api/schedule/renderCellEventArgs#elementtype) property within the event. You can check `elementType` against any of the following.
 
 | Element type | Description |
 |-------|---------|
-| dateHeader | triggers on header cell rendering.|
-| monthDay | triggers on header cell in month view rendering.|
-| resourceHeader | triggers on resource header cell rendering.|
-| alldayCells | triggers on all day cell rendering.|
-| emptyCells | triggers on empty cell rendering on header bar.|
-| resourceGroupCells | triggers on rendering of work cells for parent resource.|
-| workCells | triggers on work cell rendering.|
-| monthCells | triggers on month cell rendering.|
-| majorSlot | triggers on major time slot cell rendering.|
-| minorSlot | triggers on minor time slot cell rendering.|
-| weekNumberCell | triggers on cell displaying week number.|
+| dateHeader | Triggers on header cell rendering.|
+| monthDay | Triggers on header cell in month view rendering.|
+| resourceHeader | Triggers on resource header cell rendering.|
+| alldayCells | Triggers on all day cell rendering.|
+| emptyCells | Triggers on empty cell rendering on header bar.|
+| resourceGroupCells | Triggers on rendering of work cells for parent resource.|
+| workCells | Triggers on work cell rendering.|
+| monthCells | Triggers on month cell rendering.|
+| majorSlot | Triggers on major time slot cell rendering.|
+| minorSlot | Triggers on minor time slot cell rendering.|
+| weekNumberCell | Triggers on cell displaying week number.|
 
 ## Customizing cell header in month view
 
-The month header of each date cell in the month view can be customized using the [`cellHeaderTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule#cellheadertemplate) option which accepts the string or HTMLElement. The corresponding date can be accessed with the template.
+The month header of each date cell in the month view can be customized using the [`cellHeaderTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule#cellheadertemplate) option, which accepts a string or `HTMLElement`. The corresponding date can be accessed within the template.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -161,7 +161,7 @@ Providing the [`minDate`](https://ej2.syncfusion.com/react/documentation/api/sch
 
 ## Customizing the weekend cells background color
 
-You can customize the background color of weekend cells by utilizing the [`renderCell`](https://ej2.syncfusion.com/react/documentation/api/schedule/#rendercell) event and checking the [`elementType`](https://ej2.syncfusion.com/react/documentation/api/schedule/renderCellEventArgs/#elementtype) option within the event.
+You can customize the background color of weekend cells by utilizing the [`renderCell`](https://ej2.syncfusion.com/react/documentation/api/schedule#rendercell) event and checking the [`elementType`](https://ej2.syncfusion.com/react/documentation/api/schedule/renderCellEventArgs#elementtype) option within the event.
 
 ```ts
 
@@ -181,7 +181,7 @@ const onRendercell = (args) => {
 
 ```
 
-And, the background color for weekend cells in the Month view through the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/schedule/#cssclass) property, which overrides the default CSS applied on cells.
+And, the background color for weekend cells in the Month view through the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/schedule#cssclass) property, which overrides the default CSS applied on cells.
 
 ```css
 
@@ -209,4 +209,4 @@ And, the background color for weekend cells in the Month view through the [`cssC
 
 By default, the [`allowMultiCellSelection`](https://ej2.syncfusion.com/react/documentation/api/schedule#allowmulticellselection) and [`allowMultiRowSelection`](https://ej2.syncfusion.com/react/documentation/api/schedule#allowmultirowselection)  properties of the Schedule are set to `true`. So, the Schedule allows user to select multiple cells and rows. If the user want to disable this multiple cell and row selection. The user can disable this feature by setting up `false` to these properties.
 
-> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/material/schedule/overview) to knows how to present and manipulate data.
+> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview) to knows how to present and manipulate data.

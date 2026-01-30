@@ -2,7 +2,7 @@
 layout: post
 title: Exporting in React Schedule component | Syncfusion
 description: Learn here all about Exporting in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Exporting 
+control: Scheduler 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Exporting in React Schedule component
 
-The Scheduler supports exporting all its appointments both to an Excel or ICS extension file at client-side. It offers different client-side methods to export its appointments in an Excel or ICal format file. Let's look onto the ways on how to implement the exporting functionality in Scheduler.
+The Scheduler supports exporting all its appointments both to an Excel or ICS extension file at client-side. It offers different client-side methods to export its appointments in an Excel or iCal format file. Let's look onto the ways on how to implement the exporting functionality in Scheduler.
 
 ## Excel Exporting
 
-The Scheduler allows you to export all its events into an Excel format file by using the [`exportToExcel`](https://ej2.syncfusion.com/react/documentation/api/schedule#exporttoexcel) client-side method. By default, it exports all the default fields of Scheduler mapped through [`eventSettings`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/)  property.
+The Scheduler enables exporting events to an Excel file using the [`exportToExcel`](https://ej2.syncfusion.com/react/documentation/api/schedule#exporttoexcel) method. By default, it includes all fields mapped in the [`eventSettings`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings) property.
 
 > Before you start with excel exporting functionality, you need to import and inject the `ExcelExport` module from the `@syncfusion/ej2-schedule` package using the `Inject` method of Scheduler.
 
@@ -34,7 +34,7 @@ The Scheduler allows you to export all its events into an Excel format file by u
 
 ### Exporting with custom fields
 
-By default, Scheduler exports all the default event fields that are mapped to it through the [`eventSettings`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/) property. To limit the number of fields on the exported excel file, it provides an option to export only the custom fields of the event data. To export such custom fields alone, define the required `fields` through the [`eventSettings`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/) interface and pass it as argument to the [`exportToExcel`](https://ej2.syncfusion.com/react/documentation/api/schedule#exporttoexcel) method as shown in the following example. For example: `['Id', 'Subject', 'StartTime', 'EndTime', 'Location']`.
+By default, Scheduler exports all the default event fields that are mapped to it through the [`eventSettings`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings) property. To limit the number of fields on the exported excel file, it provides an option to export only the custom fields of the event data. To export such custom fields alone, define the required `fields` through the [`eventSettings`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings) interface and pass it as argument to the [`exportToExcel`](https://ej2.syncfusion.com/react/documentation/api/schedule#exporttoexcel) method as shown in the following example. For example: `['Id', 'Subject', 'StartTime', 'EndTime', 'Location']`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -52,7 +52,7 @@ By default, Scheduler exports all the default event fields that are mapped to it
 
 ### Exporting individual occurrences of a recurring series
 
-By default, the Scheduler exports recurring events as a single data by exporting only its parent record into the excel file. If you want to export each individual occurrences of a recurring series appointment as separate records in an Excel file, define the [`includeOccurrences`](https://ej2.syncfusion.com/react/documentation/api/schedule/exportOptions/#includeoccurrences) option as `true` through the [`ExportOptions`](https://ej2.syncfusion.com/react/documentation/api/schedule/exportOptions/) interface and pass it as argument to the [`exportToExcel`](https://ej2.syncfusion.com/react/documentation/api/schedule#exporttoexcel) method. By default, the [`includeOccurrences`](https://ej2.syncfusion.com/react/documentation/api/schedule/exportOptions/#includeoccurrences) option is set to `false`.
+By default, the Scheduler exports recurring events as a single data by exporting only its parent record into the excel file. If you want to export each individual occurrences of a recurring series appointment as separate records in an Excel file, define the [`includeOccurrences`](https://ej2.syncfusion.com/react/documentation/api/schedule/exportOptions#includeoccurrences) option as `true` through the [`ExportOptions`](https://ej2.syncfusion.com/react/documentation/api/schedule/exportOptions) interface and pass it as argument to the [`exportToExcel`](https://ej2.syncfusion.com/react/documentation/api/schedule#exporttoexcel) method. By default, the [`includeOccurrences`](https://ej2.syncfusion.com/react/documentation/api/schedule/exportOptions#includeoccurrences) option is set to `false`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -70,7 +70,7 @@ By default, the Scheduler exports recurring events as a single data by exporting
 
 ### Exporting custom event data
 
-By default, the whole event collection bound to the Scheduler gets exported as an excel file. To export only specific events of Scheduler or some custom event collection, you need to pass those custom data collection as a parameter to the [`exportToExcel`](https://ej2.syncfusion.com/react/documentation/api/schedule#exporttoexcel) method as shown in this following example, through the [`customData`](https://ej2.syncfusion.com/react/documentation/api/schedule/exportOptions/#customdata) option of [`ExportOptions`](https://ej2.syncfusion.com/react/documentation/api/schedule/exportOptions/) interface.
+By default, the whole event collection bound to the Scheduler gets exported as an excel file. To export only specific events of Scheduler or some custom event collection, you need to pass those custom data collection as a parameter to the [`exportToExcel`](https://ej2.syncfusion.com/react/documentation/api/schedule#exporttoexcel) method as shown in this following example, through the [`customData`](https://ej2.syncfusion.com/react/documentation/api/schedule/exportOptions#customdata) option of [`ExportOptions`](https://ej2.syncfusion.com/react/documentation/api/schedule/exportOptions) interface.
 
 > By default, the event data are taken from Scheduler dataSource.
 
@@ -90,7 +90,7 @@ By default, the whole event collection bound to the Scheduler gets exported as a
 
 ### Customizing column header with custom fields exporting
 
-Using fields property, we can only export the defined fields into excel without customizing the header. Now we can provide the alternate support to customize the header of custom fields exporting using the [`fieldsInfo`](https://ej2.syncfusion.com/react/documentation/api/schedule/exportOptions/#fieldsinfo) option through the [`ExportFieldInfo`](https://ej2.syncfusion.com/react/documentation/api/schedule/exportFieldInfo/) interface and pass it as an argument to the [`exportToExcel`](https://ej2.syncfusion.com/react/documentation/api/schedule#exporttoexcel) method as shown in the following example.
+Using fields property, we can only export the defined fields into excel without customizing the header. Now we can provide the alternate support to customize the header of custom fields exporting using the [`fieldsInfo`](https://ej2.syncfusion.com/react/documentation/api/schedule/exportOptions#fieldsinfo) option through the [`ExportFieldInfo`](https://ej2.syncfusion.com/react/documentation/api/schedule/exportFieldInfo) interface and pass it as an argument to the [`exportToExcel`](https://ej2.syncfusion.com/react/documentation/api/schedule#exporttoexcel) method as shown in the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -108,7 +108,7 @@ Using fields property, we can only export the defined fields into excel without 
 
 ### Export with custom file name
 
-By default, the Scheduler allows you to download the exported Excel file with a name `Schedule.xlsx`. It also provides an option to export the excel file with a custom file name, by defining the desired `fileName` through the [`ExportOptions`](https://ej2.syncfusion.com/react/documentation/api/schedule/exportOptions/) interface and passing it as an argument to the [`exportToExcel`](https://ej2.syncfusion.com/react/documentation/api/schedule#exporttoexcel) method.
+The default exported file name is `Schedule.xlsx`. Customize it by setting `fileName` in [`ExportOptions`](https://ej2.syncfusion.com/react/documentation/api/schedule/exportOptions) and passing the options to [`exportToExcel`](https://ej2.syncfusion.com/react/documentation/api/schedule#exporttoexcel).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -126,7 +126,7 @@ By default, the Scheduler allows you to download the exported Excel file with a 
 
 ### Excel file formats
 
-By default, the Scheduler exports event data to an excel file in the `.xlsx` format. You can also export the Scheduler data in either of the file type such as `.xlsx` or `csv` formats, by defining the `exportType` option as either `csv` or `xlsx` through the [`ExportOptions`](https://ej2.syncfusion.com/react/documentation/api/schedule/exportOptions/) interface. By default, the `exportType` is set to `xlsx`.
+By default, the Scheduler exports event data to an excel file in the `.xlsx` format. You can also export the Scheduler data in either of the file type such as `.xlsx` or `csv` formats, by defining the `exportType` option as either `csv` or `xlsx` through the [`ExportOptions`](https://ej2.syncfusion.com/react/documentation/api/schedule/exportOptions) interface. By default, the `exportType` is set to `xlsx`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -144,7 +144,7 @@ By default, the Scheduler exports event data to an excel file in the `.xlsx` for
 
 ### Custom separator in CSV
 
-The Scheduler exports the event data to CSV format with `,` as separator. You can change separator by setting [separator](https://ej2.syncfusion.com/react/documentation/api/schedule/exportOptions/#separator) property in [ExportOptions](https://ej2.syncfusion.com/react/documentation/api/schedule/exportOptions/#exporttype).
+When exporting to CSV, the default separator is `,`. Change it by setting the [`separator`](https://ej2.syncfusion.com/react/documentation/api/schedule/exportOptions#separator) property in [`ExportOptions`](https://ej2.syncfusion.com/react/documentation/api/schedule/exportOptions).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -291,7 +291,7 @@ You can print the Schedule element with the current view by using the[`print`](h
 
 ### Using a print method with options
 
-You can print the Schedule element based on your needs using the `print` method by passing the print options used in this example with its values. The following example shows how to print the Scheduler using the `print` method by passing the options.
+You can print the Schedule element based on your needs using the [`print`](https://ej2.syncfusion.com/react/documentation/api/schedule/index-default#print) method by passing the print options used in this example with its values. The following example shows how to print the Scheduler using the [`print`](https://ej2.syncfusion.com/react/documentation/api/schedule/index-default#print) method by passing the options.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -332,4 +332,4 @@ Here’s an example of how you can add a custom header and footer to the print l
         
 {% previewsample "page.domainurl/code-snippet/schedule/print-cs3" %}
 
-> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/material/schedule/overview) to knows how to present and manipulate data.
+> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview) to knows how to present and manipulate data.

@@ -2,53 +2,53 @@
 layout: post
 title: Resources in React Schedule component | Syncfusion
 description: Learn here all about Resources in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Resources 
+control: Scheduler 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resources in React Schedule component
+# Resources in React Scheduler component
 
-Resources and grouping support allows the Scheduler to be shared by multiple resources. Also, the appointments of each resources are displayed under relevant resources. Each resource in the Scheduler is arranged in a column/row wise order, with individual spacing to display all its respective appointments on a single page. It also supports the multiple levels of grouping of resources, thus enabling the categorization of resources in a hierarchical structure and shows it either in expandable groups (Timeline views) or else vertical hierarchy one after the other (Calendar views).
+Resources and grouping support allow the Scheduler to be shared across multiple resources. The appointments of each resource are displayed under the relevant resource. Each resource in the Scheduler is arranged in a column or row order, with dedicated spacing to display all its respective appointments on a single page. The Scheduler also supports multiple levels of resource grouping, enabling hierarchical categorization. Resources can be displayed either in expandable groups (Timeline views) or in vertical hierarchy (Calendar views).
 
-It is also possible to assign one or more resources to the same appointment, by allowing multiple selection of resource options available in the event editor window.
+It is possible to assign one or more resources to the same appointment by allowing multiple selection of resource options available in the event editor window.
 
-The HTML5 JavaScript Scheduler groups the resources based on different criteria. It includes grouping appointments based on resources, grouping resources based on dates, and timeline scheduling. Also, the data for resources bind with Scheduler either as a local JSON collection or URL, retrieving data from remote data services.
+The React Scheduler groups resources based on different criteria, including grouping appointments by resources, grouping resources by dates, and timeline scheduling. Resource data can be bound to the Scheduler either as a local JSON collection or via a remote service URL.
 
-Learn how to add appointments of multiple resources to the React Scheduler from this video:
+Learn how to add appointments for multiple resources in the React Scheduler from this video:
 
 {% youtube "https://www.youtube.com/watch?v=uzlwjdvaJzw" %}
 
 ## Resource fields
 
-The default options available within the [`resources`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/) collection are as follows,
+The default options available within the [`resources`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources) collection are:
 
 | Field name | Type | Description |
 |-------|---------| --------------- |
-| `field` | String | A value that binds to the resource [`field`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#field) of event object. |
-| `title` | String | It holds the [`title`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#title) of the resource field to be displayed on the event editor window. |
-| `name` | String | A unique resource [`name`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#name) used for differentiating various resource objects while grouping. |
-| `allowMultiple` | Boolean | When set to `true`, the [`allowMultiple`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#allowmultiple) property allows the selection of multiple resource names, thus creating multiple instances of the same appointment for the selected resources. |
-| `dataSource` | Object | Assigns the resource [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#datasource), where data can be passed either as an array of JavaScript objects, or else can create an instance of [`DataManager`](https://ej2.syncfusion.com/documentation/data/api-datamanager) in case of processing remote data and can be assigned to the `dataSource` property. With the remote data assigned to [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#datasource), check the available [adaptors](https://ej2.syncfusion.com/react/documentation/data/adaptors) to customize the data processing. |
-| `query` | Query | Defines the external [`query`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#query) that will be executed along with the data processing. |
-| `idField` | String | Binds the resource ID field name from the resources [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#datasource). |
-| `expandedField` | String | Binds the [`expandedField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#expandedfield) name from the resources [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#datasource). It usually holds boolean value which decide whether the resource of timeline views is in collapse or expand state on initial load. |
-| `textField` | String | Binds the [`textField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#textfield) name from the resources [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#datasource). It usually holds the resource names. |
-| `groupIDField` | String | Binds the [`groupIDField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#groupidfield) name from the resource [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#datasource). It usually holds the value of resource IDs of parent level resources. |
-| `colorField` | String | Binds the [`colorField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#colorfield) name from the resource [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#datasource). The color value mapped in this field will be applied to the events of resources. |
-| `startHourField` | String | Binds the [`startHourField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#starthourfield) name from the resource [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#datasource). It allows to provide different work start hour for the resources. |
-| `endHourField` | String | Binds the  [`endHourField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#endhourfield) name from the resource [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#datasource). It allows to provide different work end hour for the resources. |
-| `workDaysField` | String | Binds the [`workDaysField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#workdaysfield) name from the resources [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#datasource). It allows to provide different working days collection for the resources. |
-| `cssClassField` | String | Binds the custom [`cssClassField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#cssclassfield) name from the resources [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#datasource). It maps the CSS class written for the specific resources and applies it to the events of those resources. |
+| `field` | String | Binds to the resource [`field`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#field) of the event object. |
+| `title` | String | Displays the [`title`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#title) of the resource field in the event editor window. |
+| `name` | String | A unique resource [`name`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#name) used to differentiate resource objects during grouping. |
+| `allowMultiple` | Boolean | When set to `true`, the [`allowMultiple`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#allowmultiple) property allows the selection of multiple resource names, creating multiple instances of the same appointment for the selected resources. |
+| `dataSource` | Object | Assigns the resource [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#datasource). Data can be passed as an array of JavaScript objects or via a [`DataManager`](https://ej2.syncfusion.com/documentation/data/api-datamanager) instance for remote data. Adaptors can be used to customize remote data processing. |
+| `query` | Query | Defines the external [`query`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#query) executed during data processing. |
+| `idField` | String | Binds the resource ID field name from the resource [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#datasource). |
+| `expandedField` | String | Binds the [`expandedField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#expandedfield) from the resource [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#datasource). A boolean value determines whether the resource in timeline views is collapsed or expanded on initial load. |
+| `textField` | String | Binds the [`textField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#textfield) name from the resource [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#datasource). Typically holds resource names. |
+| `groupIDField` | String | Binds the [`groupIDField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#groupidfield) name from the resource [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#datasource). Holds parent resource IDs for hierarchical grouping. |
+| `colorField` | String | Binds the [`colorField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#colorfield) name from the resource [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#datasource). The mapped color is applied to events of the resource. |
+| `startHourField` | String | Binds the [`startHourField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#starthourfield) name from the resource [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#datasource). Defines different work start hours for resources. |
+| `endHourField` | String | Binds the [`endHourField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#endhourfield) name from the resource [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#datasource). Defines different work end hours for resources. |
+| `workDaysField` | String | Binds the [`workDaysField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#workdaysfield) name from the resource [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#datasource). Defines different working days for resources. |
+| `cssClassField` | String | Binds the custom [`cssClassField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#cssclassfield) name from the resource [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#datasource). Applies mapped CSS classes to events of those resources. |
 
 ## Resource data binding
 
-The data for resources can bind with Scheduler either as a local JSON collection or a service URL, retrieving resource data from remote data services.
+Resource data can be bound to the Scheduler either as a local JSON collection or via a remote service URL.
 
 ### Using local JSON data
 
-The following code example depicts how to bind the local JSON data to the  [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#datasource)  of [`resources`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/) collection.
+The following example shows how to bind local JSON data to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#datasource) of the [`resources`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources) collection.
 
 
 
@@ -85,7 +85,7 @@ root.render(<App />);
 
 ### Using remote service URL
 
-The following code example depicts how to bind the remote data for resources [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#datasource).
+The following example shows how to bind remote data to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#datasource).
 
 
 
@@ -124,7 +124,7 @@ It is possible to display the Scheduler in default mode without visually showcas
 
 The appointments belonging to the different resources will be displayed altogether on the default Scheduler, which will be differentiated based on the resource color assigned in the **resources** (depicting to which resource that particular appointment belongs) collection.
 
-**Example:** To display default Scheduler with multiple resource options in the event editor, ignore the group option and simply define the [`resources`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/) property with all its internal options.
+**Example:** To display default Scheduler with multiple resource options in the event editor, ignore the group option and simply define the [`resources`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources) property with all its internal options.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -140,15 +140,15 @@ The appointments belonging to the different resources will be displayed altogeth
         
 {% previewsample "page.domainurl/code-snippet/schedule/resource-cs2" %}
 
-> Setting [`allowMultiple`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#allowmultiple)  to `true` in the above code example allows you to select multiple resources from the event editor and also creates multiple copies of the same appointment in the Scheduler for each resources while rendering.
+> Setting [`allowMultiple`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#allowmultiple)  to `true` in the above code example allows you to select multiple resources from the event editor and also creates multiple copies of the same appointment in the Scheduler for each resources while rendering.
 
 ## Resource grouping
 
-Resource grouping support allows the Scheduler to group the resources in a hierarchical structure both as an expandable groups (Timeline views) and as vertical hierarchy displaying resources one after the other (Resources view).
+Resource grouping allows the Scheduler to organize resources hierarchically, either as expandable groups (Timeline views) or as vertical hierarchy (Calendar views). Both single-level and multi-level grouping are supported.
 
 Scheduler supports both single and multiple levels of resource grouping that can be customized both in timeline and vertical Scheduler views.
 
-Explore the advanced options available with the multiple resources and grouping concepts of React Scheduler by watching this video:
+Explore advanced options for multiple resources and grouping in the React Scheduler by watching this video:
 
 {% youtube "https://www.youtube.com/watch?v=uzlwjdvaJzw" %}
 
@@ -190,7 +190,7 @@ The following code example depicts how to group the multiple resources on Timeli
 
 ### Grouping single-level resources
 
-This kind of grouping allows the Scheduler to display all the resources at a single level simultaneously. The appointments mapped under resources will be displayed with the colors as per the [`colorField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#colorfield) defined on the resources collection.
+This kind of grouping allows the Scheduler to display all the resources at a single level simultaneously. The appointments mapped under resources will be displayed with the colors as per the [`colorField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#colorfield) defined on the resources collection.
 
 **Example:** To display the Scheduler with single level resource grouping,
 
@@ -208,11 +208,11 @@ This kind of grouping allows the Scheduler to display all the resources at a sin
         
 {% previewsample "page.domainurl/code-snippet/schedule/resource-cs5" %}
 
-> The [`name`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#name) field defined in the **resources** collection namely `Owners` will be mapped within the [`group`](https://ej2.syncfusion.com/react/documentation/api/schedule/group/) property, in order to enable the grouping option with those resource levels on the Scheduler.
+> The [`name`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#name) field defined in the **resources** collection namely `Owners` will be mapped within the [`group`](https://ej2.syncfusion.com/react/documentation/api/schedule/group) property, in order to enable the grouping option with those resource levels on the Scheduler.
 
 ### Grouping multi-level resources
 
-It is possible to group the resources of Scheduler in multiple levels, by mapping the child resources to each parent resource. In the following example, there are 2 levels of resources, on which the second level resources are defined with [`groupID`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#groupidfield) mapping to the first level resource's ID so as to establish the parent-child relationship between them.
+It is possible to group the resources of Scheduler in multiple levels, by mapping the child resources to each parent resource. In the following example, there are 2 levels of resources, on which the second level resources are defined with [`groupID`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#groupidfield) mapping to the first level resource's ID so as to establish the parent-child relationship between them.
 
 **Example:** To display the Scheduler with multiple level resource grouping options,
 
@@ -232,7 +232,7 @@ It is possible to group the resources of Scheduler in multiple levels, by mappin
 
 ### One-to-One grouping
 
-In multi-level grouping, Scheduler usually groups the resources on the child level based on the `GroupID` that maps with the `Id` field of parent level resources (as [`byGroupID`](https://ej2.syncfusion.com/react/documentation/api/schedule/group/#bygroupid) set to true by default). There are also option which allows you to group all the child resource(s) against each of its parent resource(s). To enable this kind of grouping, set `false` to the [`byGroupID`](https://ej2.syncfusion.com/react/documentation/api/schedule/group/#bygroupid) option within the [`group`](https://ej2.syncfusion.com/react/documentation/api/schedule/group/) property. In the following code example, there are two levels of resources, on which all the 3 resources at the child level is mapped one to one with each resource on the first level.
+In multi-level grouping, Scheduler usually groups the resources on the child level based on the `GroupID` that maps with the `Id` field of parent level resources (as [`byGroupID`](https://ej2.syncfusion.com/react/documentation/api/schedule/group#bygroupid) set to true by default). There are also option which allows you to group all the child resource(s) against each of its parent resource(s). To enable this kind of grouping, set `false` to the [`byGroupID`](https://ej2.syncfusion.com/react/documentation/api/schedule/group#bygroupid) option within the [`group`](https://ej2.syncfusion.com/react/documentation/api/schedule/group) property. In the following code example, there are two levels of resources, on which all the 3 resources at the child level is mapped one to one with each resource on the first level.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -250,7 +250,7 @@ In multi-level grouping, Scheduler usually groups the resources on the child lev
 
 ### Grouping resources by date
 
-It groups the number of resources under each date and is applicable only on the calendar views such as Day, Week, Work Week, Month, Agenda and Month-Agenda. To enable such grouping, set [`byDate`](https://ej2.syncfusion.com/react/documentation/api/schedule/group/#bydate) option to `true` within the [`group`](https://ej2.syncfusion.com/react/documentation/api/schedule/group/) property.
+It groups the number of resources under each date and is applicable only on the calendar views such as Day, Week, Work Week, Month, Agenda and Month-Agenda. To enable such grouping, set [`byDate`](https://ej2.syncfusion.com/react/documentation/api/schedule/group#bydate) option to `true` within the [`group`](https://ej2.syncfusion.com/react/documentation/api/schedule/group) property.
 
 **Example:** To display the Scheduler with resources grouped by date,
 
@@ -268,11 +268,13 @@ It groups the number of resources under each date and is applicable only on the 
         
 {% previewsample "page.domainurl/code-snippet/schedule/resource-cs8" %}
 
-> This kind of grouping by date is not applicable on any of the timeline views.
+> Grouping by date is not applicable in timeline views.
+
+---
 
 ## Working with shared events
 
-Multiple resources can share the same events, thus allowing the CRUD action made on it to reflect on all other shared instances simultaneously. To enable such option, set [`allowGroupEdit`](https://ej2.syncfusion.com/react/documentation/api/schedule/group/#allowgroupedit) option to `true` within the [`group`](https://ej2.syncfusion.com/react/documentation/api/schedule/group/) property. With this property enabled, a single appointment
+Multiple resources can share the same events. CRUD actions performed on one shared event instance are reflected across all related instances. To enable such option, set [`allowGroupEdit`](https://ej2.syncfusion.com/react/documentation/api/schedule/group#allowgroupedit) option to `true` within the [`group`](https://ej2.syncfusion.com/react/documentation/api/schedule/group) property. With this property enabled, a single appointment
 object will be maintained within the appointment collection, even if it is shared by more than one resource – whereas the resource fields of such appointment object will hold the IDs of the multiple resources.
 
 > Any actions such as create, edit or delete held on any one of the shared event instances, will be reflected on all other related instances visible on the UI.
@@ -297,7 +299,7 @@ object will be maintained within the appointment collection, even if it is share
 
 It is possible to customize the resource header cells using built-in template option and change the look and appearance of it in both the vertical and timeline view modes. All the resource related fields and other information can be accessed within the resource header template option.
 
-**Example:** To customize the resource header and display it along with the designation [`resource field`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/), refer the below code example.
+**Example:** To customize the resource header and display it along with the designation [`resource field`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources), refer the below code example.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -337,7 +339,7 @@ It is possible to customize the resource headers to display with multiple column
 
 ## Collapse/Expand child resources in timeline views
 
-It is possible to expand and collapse the resources which have child resource in timeline views dynamically. By default, resources are in expanded state with their child resource. We can collapse and expand the child resources in UI by setting [`expandedField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#expandedfield) option as `false` whereas its default value is `true`.
+It is possible to expand and collapse the resources which have child resource in timeline views dynamically. By default, resources are in expanded state with their child resource. We can collapse and expand the child resources in UI by setting [`expandedField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#expandedfield) option as `false` whereas its default value is `true`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -355,7 +357,7 @@ It is possible to expand and collapse the resources which have child resource in
 
 ## Displaying tooltip for resource headers
 
-It is possible to display tooltips over the resource headers showing the resource information. By default, there won't be any tooltips displayed on the resource headers, and to enable it, you need to assign the customized template design to the `headerTooltipTemplate`[`headerTooltipTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule/group/#headertooltiptemplate) option within the [`group`](https://ej2.syncfusion.com/react/documentation/api/schedule/group/) property.
+Tooltips can be displayed over resource headers to show resource information. By default, tooltips are not displayed. To enable them, assign a customized template design to the [`headerTooltipTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule/group#headertooltiptemplate) option within the [`group`](https://ej2.syncfusion.com/react/documentation/api/schedule/group) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -373,7 +375,7 @@ It is possible to display tooltips over the resource headers showing the resourc
 
 ## Choosing between resource colors for appointments
 
-By default, the colors defined on the top level resources collection will be applied for the events. In case, if you want to apply specific resource color to events irrespective of its top-level parent resource color, it can be achieved by defining [`resourceColorField`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/#resourcecolorfield) option within the [`eventSettings`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/) property.
+By default, the colors defined on the top level resources collection will be applied for the events. In case, if you want to apply specific resource color to events irrespective of its top-level parent resource color, it can be achieved by defining [`resourceColorField`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings#resourcecolorfield) option within the [`eventSettings`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings) property.
 
 In the following example, the colors mentioned in the second level will get applied over the events.
 
@@ -391,7 +393,7 @@ In the following example, the colors mentioned in the second level will get appl
         
 {% previewsample "page.domainurl/code-snippet/schedule/resource-cs11" %}
 
-> The value of the [`resourceColorField`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/#resourcecolorfield) field should be mapped with the [`name`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#name) value given within the [`resources`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/) property.
+> The value of the [`resourceColorField`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings#resourcecolorfield) field should be mapped with the [`name`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#name) value given within the [`resources`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources) property.
 
 ## Dynamically add and remove resources
 
@@ -415,7 +417,7 @@ To remove the resources dynamically, [`removeResource`](https://ej2.syncfusion.c
 
 ## Setting different working days and hours for resources
 
-Each resource in the Scheduler can have different working hours as well as different working days set to it. There are default options available within the [`resources`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/)` collection, to customize the default working hours and days of the Scheduler.
+Each resource in the Scheduler can have different working hours as well as different working days set to it. There are default options available within the [`resources`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources)` collection, to customize the default working hours and days of the Scheduler.
 
 
 * [Using the work day field for different work days](#Set-different-work-days)
@@ -423,7 +425,7 @@ Each resource in the Scheduler can have different working hours as well as diffe
 
 ### Set different work days
 
-Different `working days` can be set for the resources of Scheduler using the [`workDaysField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#workdaysfield) property which maps the working days field from the resource dataSource. This field accepts the collection of day indexes (from 0 to 6) of a week. By default, it is set to [1, 2, 3, 4, 5] and in the following example, each resource has been set with different values and therefore each of them will render only those working days. This option is applicable only on the calendar views and is not applicable on timeline views.
+Different `working days` can be set for the resources of Scheduler using the [`workDaysField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#workdaysfield) property which maps the working days field from the resource dataSource. This field accepts the collection of day indexes (from 0 to 6) of a week. By default, it is set to [1, 2, 3, 4, 5] and in the following example, each resource has been set with different values and therefore each of them will render only those working days. This option is applicable only on the calendar views and is not applicable on timeline views.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -441,10 +443,10 @@ Different `working days` can be set for the resources of Scheduler using the [`w
 
 ### Set different work hours
 
-Different `working Hours` can be set for the resources of Scheduler using the [`startHourField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#starthourfield) and [`endHourField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#endhourfield) property which maps the `startHourField` and `endHourField` field from the resource dataSource.
+Different `working Hours` can be set for the resources of Scheduler using the [`startHourField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#starthourfield) and [`endHourField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#endhourfield) property which maps the `startHourField` and `endHourField` field from the resource dataSource.
 
-* [`startHourField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#starthourfield) - Denotes the start time of the working/business hour in a day.
-* [`endHourField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources/#endhourfield)  - Denotes the end time limit of the working/business hour in a day.
+* [`startHourField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#starthourfield) - Denotes the start time of the working/business hour in a day.
+* [`endHourField`](https://ej2.syncfusion.com/react/documentation/api/schedule/resources#endhourfield)  - Denotes the end time limit of the working/business hour in a day.
 
 Working hours indicates the work hour duration of a day, which is highlighted visually with active color over the work cells. Each resource on the Scheduler can be defined with its own set of working hours as depicted in the following example.
 
@@ -466,9 +468,9 @@ In this example, a resource named `Will Smith` is depicted with working hours ra
 
 ## Hide non-working days when grouped by date
 
-In Scheduler, you can set custom work days for each resource and group the Scheduler by date to display these work days. By default, the Scheduler will show all days when it is grouped by date, even if they are not included in the custom work days for the resources. However, you can use the [`hideNonWorkingDays`](https://ej2.syncfusion.com/react/documentation/api/schedule/group/#hidenonworkingdays) property to only display the custom work days in the Scheduler.
+In Scheduler, you can set custom work days for each resource and group the Scheduler by date to display these work days. By default, the Scheduler will show all days when it is grouped by date, even if they are not included in the custom work days for the resources. However, you can use the [`hideNonWorkingDays`](https://ej2.syncfusion.com/react/documentation/api/schedule/group#hidenonworkingdays) property to only display the custom work days in the Scheduler.
 
-To use the [`hideNonWorkingDays`](https://ej2.syncfusion.com/react/documentation/api/schedule/group/#hidenonworkingdays) property, you need to include it in the configuration options for your Scheduler component. Set the value of [`hideNonWorkingDays`](https://ej2.syncfusion.com/react/documentation/api/schedule/group/#hidenonworkingdays) to `true` to enable this feature.
+To use the [`hideNonWorkingDays`](https://ej2.syncfusion.com/react/documentation/api/schedule/group#hidenonworkingdays) property, you need to include it in the configuration options for your Scheduler component. Set the value of [`hideNonWorkingDays`](https://ej2.syncfusion.com/react/documentation/api/schedule/group#hidenonworkingdays) to `true` to enable this feature.
 
 **Example:** To display the Scheduler with resources grouped by date for custom working days,
 
@@ -486,11 +488,11 @@ To use the [`hideNonWorkingDays`](https://ej2.syncfusion.com/react/documentation
         
 {% previewsample "page.domainurl/code-snippet/schedule/resource-cs15" %}
 
-> The [`hideNonWorkingDays`](https://ej2.syncfusion.com/react/documentation/api/schedule/group/#hidenonworkingdays) property only applies when the Scheduler is grouped [`byDate`](https://ej2.syncfusion.com/react/documentation/api/schedule/group/#bydate).
+> The [`hideNonWorkingDays`](https://ej2.syncfusion.com/react/documentation/api/schedule/group#hidenonworkingdays) property only applies when the Scheduler is grouped [`byDate`](https://ej2.syncfusion.com/react/documentation/api/schedule/group#bydate).
 
 ## Compact view in mobile
 
-Although the Scheduler views are designed keeping in mind the responsiveness of the control in mobile devices, however when using Scheduler with multiple resources - it is difficult to view all the resources and its relevant events at once on the mobile. Therefore, we have introduced a new compact mode specially for displaying multiple resources of Scheduler on mobile devices. By default, this mode is enabled while using Scheduler with multiple resources on mobile devices. If in case, you need to disable this compact mode, set `false` to the [`enableCompactView`](https://ej2.syncfusion.com/react/documentation/api/schedule/group/#enablecompactview) option within the [`group`](https://ej2.syncfusion.com/react/documentation/api/schedule/group/) property. Disabling this option will display the exact desktop mode of Scheduler view on mobile devices.
+Although the Scheduler views are designed keeping in mind the responsiveness of the control in mobile devices, however when using Scheduler with multiple resources - it is difficult to view all the resources and its relevant events at once on the mobile. Therefore, we have introduced a new compact mode specially for displaying multiple resources of Scheduler on mobile devices. By default, this mode is enabled while using Scheduler with multiple resources on mobile devices. If in case, you need to disable this compact mode, set `false` to the [`enableCompactView`](https://ej2.syncfusion.com/react/documentation/api/schedule/group#enablecompactview) option within the [`group`](https://ej2.syncfusion.com/react/documentation/api/schedule/group) property. Disabling this option will display the exact desktop mode of Scheduler view on mobile devices.
 
 With this compact view enabled on mobile, you can view only single resource at a time and to switch to other resources, there is a tree view at the left listing out all other available resources - clicking on which will display that particular resource and its related appointments.
 

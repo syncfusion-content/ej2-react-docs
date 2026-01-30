@@ -143,8 +143,6 @@ function App() {
             outputRef.current.textContent = 'Editor lost focus.';
           }
         }}
-        created={() => console.log('BlockEditor initialized')}
-        style={{ border: '1px solid red' }}
       />
 
       <div id="output" ref={outputRef}></div>

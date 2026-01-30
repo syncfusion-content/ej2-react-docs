@@ -2,8 +2,6 @@ import { ChatUIComponent, MessagesDirective, MessageDirective} from '@syncfusion
 import { marked } from 'marked';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
-import { enableRipple } from '@syncfusion/ej2-base';
-enableRipple(true);
 
 function App() {
   const currentUserModel = {

@@ -41,11 +41,11 @@ yarn create next-app
 {% endhighlight %}
 {% endtabs %}
 
-### Project Configuration
+### Project configuration
 
 The setup process will prompt for project configuration. Provide the following responses:
 
-**1. Define the project name:**
+**Define the project name:**
 Users can specify the name of the project directly. Let's specify the name of the project as `ej2-nextjs-grid`.
 
 {% tabs %}
@@ -56,7 +56,7 @@ Users can specify the name of the project directly. Let's specify the name of th
 {% endhighlight %}
 {% endtabs %}
 
-**2. Select the required packages:**
+**Select the required packages:**
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -75,7 +75,7 @@ Creating a new Next.js app in D:\ej2-nextjs-grid.
 {% endhighlight %}
 {% endtabs %}
 
-**3. Navigate to the project directory:**
+**Navigate to the project directory:**
 Once complete the above mentioned steps to create `ej2-nextjs-grid`, navigate to the directory using the below command:
 
 {% tabs %}
@@ -135,7 +135,7 @@ Import the `Material` theme into the **src/app/globals.css** file and removed th
 
 Follow the below steps to add the React Grid component to the Next.js project:
 
-### Step 1: Create a datasource file
+**Step 1: Create a datasource file**
 
 Create a `datasource.tsx` file in the **src/app/** folder and add the sample data for the Grid component:
 
@@ -223,7 +223,7 @@ export let data: Object[] = [
 {% endhighlight %}
 {% endtabs %}
 
-### Step 2: Define the Grid component
+**Step 2: Define the Grid component**
 
 Import and configure the Grid component with the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource) property, column definitions, and required modules in the **src/app/page.tsx** file: 
 

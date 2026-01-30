@@ -18,7 +18,7 @@ To get started quickly with React Grid, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=QNwcXokKc70" %}
 
-## Setup for Local Development
+## Setup for local development
 
 To set up a React application quickly, use Vite with `create-vite-app`. Vite provides a faster development environment, smaller bundle sizes, and optimized production builds compared to traditional tools like `create-react-app`. For detailed setup steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/).
 
@@ -150,7 +150,7 @@ export let data: Object[] = [
     }];
 ```
 
-## Module Injection
+## Module injection
 
 React Grid component features are segregated into individual feature-wise modules.
 In order to use a particular feature, you need to inject its feature service in the **App**.
@@ -166,7 +166,7 @@ These modules should be injected into the grid using the **Inject** directive.
 
 > Additional feature modules are available [here](./module).
 
-## Enable Paging
+## Enable paging
 
 The paging feature divides Grid records into multiple pages, improving performance and usability when handling large datasets. Enable paging by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid/#allowpaging) property to `true` and injecting the **Page** module. Without the **Page** module, the pager will not render. Customize pager behavior using the [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid/#pagesettings) property.
 
@@ -187,7 +187,7 @@ The paging feature divides Grid records into multiple pages, improving performan
 
  {% previewsample "page.domainurl/code-snippet/grid/getting-started-cs1" %}
 
-## Enable Sorting
+## Enable sorting
 
 The sorting feature allows ordering Grid records by clicking column headers. Enable sorting by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/#allowsorting) property to `true` and injecting the **Sort** module. Without the **Sort** module, clicking headers will not sort the data. Customize sorting behavior using the [sortSettings](https://ej2.syncfusion.com/react/documentation/api/grid/#sortsettings) property.
 
@@ -208,7 +208,7 @@ The sorting feature allows ordering Grid records by clicking column headers. Ena
 
  {% previewsample "page.domainurl/code-snippet/grid/getting-started-cs2" %}
 
-## Enable Filtering
+## Enable filtering
 
 The filtering feature enables searching and refining Grid records based on column values. Enable filtering by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/#allowfiltering) property to `true` and injecting the [Filter](https://ej2.syncfusion.com/react/documentation/api/grid/#filtermodule) module. Without the **Filter** module, the filter bar will not render. Customize filtering options using the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid/#filtersettings) property.
 
@@ -229,7 +229,7 @@ The filtering feature enables searching and refining Grid records based on colum
 
  {% previewsample "page.domainurl/code-snippet/grid/getting-started-cs3" %}
 
-## Enable Grouping
+## Enable grouping
 
 The grouping feature organizes Grid records into logical groups based on column values, improving data visualization and analysis. Enable grouping by setting the [allowGrouping](https://ej2.syncfusion.com/react/documentation/api/grid/#allowgrouping) property to `true` and injecting the [Group](https://ej2.syncfusion.com/react/documentation/api/grid/#groupmodule) module. Without the **Group** module, the group drop area will not render. Customize grouping behavior using the [groupSettings](https://ej2.syncfusion.com/react/documentation/api/grid/#groupsettings) property.
 
@@ -277,3 +277,6 @@ The output appears as follows.
 
 * [Top 5 Features of React Data Grid](https://www.syncfusion.com/blogs/post/top-5-features-react-data-grid.aspx)
 * [How to render React Grid with bootstrap theme](https://support.syncfusion.com/kb/article/10054/how-to-render-react-grid-with-bootstrap-theme)
+* [Getting Started with Next.js](./nextjs-getting-started.md)
+* [Getting Started with SharePoint](./sharepoint.md)
+* [Getting Started with Preact](./preact.md)

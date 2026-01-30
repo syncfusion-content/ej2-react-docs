@@ -2,7 +2,7 @@
 layout: post
 title: Editor template in React Schedule component | Syncfusion
 description: Learn here all about Editor template in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Editor template 
+control: Scheduler 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Editor template in React Schedule component
 
-Scheduler makes use of popups and dialog to display the required notifications, as well as includes an editor window with event fields for making the appointment creation and editing process easier. You can also easily customize the editor window and the fields present in it, and can also apply validations on those fields.
+The Scheduler uses popups and dialogs to display notifications and provides a detailed event editor window to simplify appointment creation and editing. You can customize this editor window, its fields, and apply validations as needed.
 
 ## Event editor
 
@@ -18,11 +18,11 @@ The editor window usually opens on the Scheduler, when a cell or event is double
 
 In mobile devices, you can open the detailed editor window in edit mode by clicking the edit icon on the popup, that opens on single tapping an event. You can also open it in add mode by single tapping a cell, which will display a `+` indication, clicking on it again will open the editor window.
 
-> You can also prevent the editor window from opening, by rendering Scheduler in a [`readonly`](https://ej2.syncfusion.com/react/documentation/api/schedule#readonly) mode or by doing code customization within the [`popupOpen`](https://ej2.syncfusion.com/react/documentation/api/schedule#popupopen) event.
+> You can prevent the editor window from opening by rendering Scheduler in a [`readonly`](https://ej2.syncfusion.com/react/documentation/api/schedule#readonly) mode or by doing code customization within the [`popupOpen`](https://ej2.syncfusion.com/react/documentation/api/schedule#popupopen) event.
 
 ### How to change the editor window header title and text of footer buttons
 
-You can change the header title and the text of buttons displayed at the footer of the editor window by changing the appropriate localized word collection used in the Scheduler.
+You can customize the header title and footer button text by updating the corresponding localized strings in the Scheduler.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -40,7 +40,7 @@ You can change the header title and the text of buttons displayed at the footer 
 
 ### How to change the label text of default editor fields
 
-To change the default labels such as Subject, Location and other field names in the editor window, make use of the `title` property available within the field option of [`eventSettings`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/).
+To change the default labels such as Subject, Location and other field names in the editor window, make use of the `title` property available within the field option of [`eventSettings`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -96,7 +96,7 @@ The additional fields can be added to the default event editor by making use of 
 
 ### Customizing the default time duration in editor window
 
-In default event editor window, start and end time duration are processed based on the `interval` value set within the [`timeScale`](https://ej2.syncfusion.com/react/documentation/api/schedule#timescale) property. By default, [`interval`](https://ej2.syncfusion.com/react/documentation/api/schedule/timeScale/#interval) value is set to 30, and therefore the start/end time duration within the event editor will be in a 30 minutes time difference. You can change this duration value by changing the [`duration`](https://ej2.syncfusion.com/react/documentation/api/schedule/popupOpenEventArgs/#duration) option within the [`popupOpen`](https://ej2.syncfusion.com/react/documentation/api/schedule#popupopen) event as shown in the following code example.
+In default event editor window, start and end time duration are processed based on the `interval` value set within the [`timeScale`](https://ej2.syncfusion.com/react/documentation/api/schedule#timescale) property. By default, [`interval`](https://ej2.syncfusion.com/react/documentation/api/schedule/timeScale#interval) value is set to 30, and therefore the start/end time duration within the event editor will be in a 30 minutes time difference. You can change this duration value by changing the [`duration`](https://ej2.syncfusion.com/react/documentation/api/schedule/popupOpenEventArgs#duration) option within the [`popupOpen`](https://ej2.syncfusion.com/react/documentation/api/schedule#popupopen) event as shown in the following code example.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -114,7 +114,7 @@ In default event editor window, start and end time duration are processed based 
 
 ### How to prevent the display of editor and quick popups
 
-It is possible to prevent the display of editor and quick popup windows by passing the value `true` to `cancel` option within the [`popupOpen`](https://ej2.syncfusion.com/react/documentation/api/schedule#popupopen) event.
+To prevent the editor or quick info popup from appearing, set the `cancel` property to `true` in the [`popupOpen`](https://ej2.syncfusion.com/react/documentation/api/schedule#popupopen) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -130,7 +130,7 @@ It is possible to prevent the display of editor and quick popup windows by passi
         
 {% previewsample "page.domainurl/code-snippet/schedule/editor-cs3" %}
 
-In case, if you need to prevent only specific popups on Scheduler, then you can check the condition based on the popup type. The types of the popup that can be checked within the [`popupOpen`](https://ej2.syncfusion.com/react/documentation/api/schedule#popupopen) event are as follows.
+To prevent only specific popups, check the `type` property in the [`popupOpen`](https://ej2.syncfusion.com/react/documentation/api/schedule/popupOpenEventArgs) event arguments. The available popup types are:
 
 | Type | Description |
 |------|-------------|
@@ -146,7 +146,7 @@ In case, if you need to prevent only specific popups on Scheduler, then you can 
 
 ### Customizing timezone collection in the editor window
 
-By default, the timezone collections in the editor window have been loaded with built-in timezone collections. Now we can be able to customize the timezone collections using the [`timezoneDataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule#timezonedatasource) property with the collection of [`TimezoneFields`](https://helpej2.syncfusion.com/react/documentation/api/schedule/timezoneFields/) data.
+By default, the timezone collections in the editor window have been loaded with built-in timezone collections. Now we can be able to customize the timezone collections using the [`timezoneDataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule#timezonedatasource) property with the collection of [`TimezoneFields`](https://helpej2.syncfusion.com/react/documentation/api/schedule/timezoneFields) data.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -192,9 +192,9 @@ Learn how to customize the event editor window using templates from this video:
 
 ### How to customize header and footer using template
 
-The editor window's header and footer can be enhanced with custom designs using the [`editorHeaderTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule/#editorheadertemplate) and [`editorFooterTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule/#editorfootertemplate) options. To achieve this, create a script template that includes the necessary fields. Ensure that the template type is set to **text/x-template**.
+The editor window's header and footer can be enhanced with custom designs using the [`editorHeaderTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule#editorheadertemplate) and [`editorFooterTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule#editorfootertemplate) options. To achieve this, create a script template that includes the necessary fields. Ensure that the template type is set to **text/x-template**.
 
-In this demo, we tailor the editor's header according to the appointment's subject field using the [`editorHeaderTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule/#editorheadertemplate). Furthermore, we make use of the [`editorFooterTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule/#editorfootertemplate) to handle the functionality of validating specific fields before proceeding with the save action or canceling it if validation requirements are not met.
+In this demo, we tailor the editor's header according to the appointment's subject field using the [`editorHeaderTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule#editorheadertemplate). Furthermore, we make use of the [`editorFooterTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule#editorfootertemplate) to handle the functionality of validating specific fields before proceeding with the save action or canceling it if validation requirements are not met.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -212,7 +212,7 @@ In this demo, we tailor the editor's header according to the appointment's subje
 
 ### How to add resource options within editor template
 
-The resource field can be added within editor template with multiselect control for allow multiple resources.
+You can include a resource field with multiple selection support using a MultiSelect control in the editor template.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -230,7 +230,7 @@ The resource field can be added within editor template with multiselect control 
 
 ### How to add recurrence options within editor template
 
-The following code example shows how to add recurrence options within the editor template by importing `RecurrenceEditor`.
+The following example demonstrates how to include recurrence options in the editor template by importing and using the `RecurrenceEditor` component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -248,7 +248,7 @@ The following code example shows how to add recurrence options within the editor
 
 ### Apply validations on editor template fields
 
-In the following code example, validation has been added to the status field.
+The following example applies validation to the status field in a custom editor template.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -304,9 +304,9 @@ In case, if you need to prevent only specific popups on Scheduler, then you can 
 
 The quick info popups are the ones that gets opened, when a cell or appointment is single clicked on the desktop mode. On single clicking a cell, you can simply provide a subject and save it. Also, while single clicking on an event, a popup will be displayed where you can get the overview of the event information. You can also edit or delete those events through the options available in it.
 
-By default, these popups are displayed over cells and appointments of Scheduler and to disable this action, set `false` to [`showQuickInfo`](https://ej2.syncfusion.com/react/documentation/api/schedule#showquickinfo)  property.
+To disable quick info popups, set [`showQuickInfo`](https://ej2.syncfusion.com/react/documentation/api/schedule#showquickinfo) to `false`.
 
-> The quick popup that opens while single clicking on the cells are not applicable on mobile devices.
+> Quick popups on cell single-click are not supported on mobile devices.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -356,7 +356,7 @@ L10n.load({
 
 ### Customizing quick popups
 
-The look and feel of the built-in quick popup window, which opens when single clicked on the cells or appointments can be customized by making use of the [`quickInfoTemplates`](https://helpej2.syncfusion.com/react/documentation/api/schedule/quickInfoTemplates/) property of the Scheduler. There are 3 sub-options available to customize them easily,
+The look and feel of the built-in quick popup window, which opens when single clicked on the cells or appointments can be customized by making use of the [`quickInfoTemplates`](https://helpej2.syncfusion.com/react/documentation/api/schedule/quickInfoTemplates) property of the Scheduler. There are 3 sub-options available to customize them easily,
 
 * header - Accepts the template design that customizes the header part of the quick popup.
 * content - Accepts the template design that customizes the content part of the quick popup.
@@ -458,7 +458,7 @@ The following code example shows you how to customize the [`MoreEventsClick`](ht
 
 ### How to close the editor window manually
 
-You can close the editor window by using [closeEditor](https://ej2.syncfusion.com/react/documentation/api/schedule/#closeeditor) method.
+You can close the editor window by using [closeEditor](https://ej2.syncfusion.com/react/documentation/api/schedule#closeeditor) method.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -476,7 +476,7 @@ You can close the editor window by using [closeEditor](https://ej2.syncfusion.co
 
 ### How to open the quick info popup manually
 
-You can open the quick info popup in scheduler by using the [openQuickInfoPopup](https://ej2.syncfusion.com/react/documentation/api/schedule/#openquickinfopopup) public method. To open the cell quick info popup, you can pass the cell data as an argument to the method. To open the event quick info popup, you should pass the event data object as an argument to the method.
+You can open the quick info popup in scheduler by using the [openQuickInfoPopup](https://ej2.syncfusion.com/react/documentation/api/schedule#openquickinfopopup) public method. To open the cell quick info popup, you can pass the cell data as an argument to the method. To open the event quick info popup, you should pass the event data object as an argument to the method.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -494,7 +494,7 @@ You can open the quick info popup in scheduler by using the [openQuickInfoPopup]
 
 ### How to close the quick info popup manually
 
-You can close the quick info popup in scheduler by using the [closeQuickInfoPopup](https://ej2.syncfusion.com/react/documentation/api/schedule/#closequickinfopopup) public method. The following code example demonstrates the how to close quick info popup manually.
+You can close the quick info popup in scheduler by using the [closeQuickInfoPopup](https://ej2.syncfusion.com/react/documentation/api/schedule#closequickinfopopup) public method. The following code example demonstrates the how to close quick info popup manually.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -510,4 +510,4 @@ You can close the quick info popup in scheduler by using the [closeQuickInfoPopu
         
 {% previewsample "page.domainurl/code-snippet/schedule/editor-cs17" %}
 
-> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/material/schedule/overview) to knows how to present and manipulate data.
+> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview) to knows how to present and manipulate data.

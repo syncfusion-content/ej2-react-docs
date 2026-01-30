@@ -34,7 +34,7 @@ yarn init preact
 
 Using one of the above commands will lead you to set up additional configurations for the project, as below:
 
-### 1. Project name
+**Project name**
 
 Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
 
@@ -46,7 +46,7 @@ T  Preact - Fast 3kB alternative to React with the same modern API
 —      
 ```
 
-### 2. Project language
+**Project language**
 
 Choose `JavaScript` as the framework variant to build this Preact project using JavaScript and React.
 
@@ -58,7 +58,7 @@ T  Preact - Fast 3kB alternative to React with the same modern API
 |    TypeScript
 —
 ```
-### 3. Configuration options
+**Configuration options**
 
 Respond to the following prompts with the default selections:
 
@@ -78,7 +78,7 @@ T  Preact - Fast 3kB alternative to React with the same modern API
 —
 ```
 
-### 4. Navigate to project
+**Navigate to project**
 
 Once setup is complete, navigate to your project directory:
 
@@ -129,7 +129,7 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 
 Follow these steps to add the React Grid component to your Preact project:
 
-### Step 1: Import Grid components
+**Step 1: Import Grid components**
 
 In the **src/index.jsx** file, import the necessary Grid components:
 
@@ -141,7 +141,7 @@ import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej
 {% endhighlight %}
 {% endtabs %}
 
-### Step 2: Define and render the Grid
+**Step 2: Define and render the Grid**
 
 Create the Grid component with sample data and column definitions:
 

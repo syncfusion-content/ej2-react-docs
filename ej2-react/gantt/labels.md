@@ -69,6 +69,7 @@ This code creates a left label with priority-based icons (e.g., red for high pri
 Create templates that show different content based on task properties:
 
 ```typescript
+{% raw %}
 // Left label template with conditional logic.
 const leftLabelTemplate = (props: any) => {
     const { Priority, TaskName } = props;
@@ -103,6 +104,7 @@ const leftLabelTemplate = (props: any) => {
     leftLabel: leftLabelTemplate,
     rightLabel: rightLabelTemplate,
   };
+{% endraw %}
 ```
 
 **Rich content labels with multiple data points:**

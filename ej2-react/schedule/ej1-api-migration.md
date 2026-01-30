@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Ej1 api migration in React Schedule component | Syncfusion
+title: EJ1 API migration in React Schedule component | Syncfusion
 description: Learn here all about Ej1 api migration in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Ej1 api migration 
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ej1 api migration in React Schedule component
+# EJ1 API migration in React Schedule component
 
-This topic shows the API equivalent of JS2 Scheduler component to be used, while migrating your project that uses JS1 Scheduler.
+This topic shows the API equivalents for Essential<sup style="font-size:70%">&reg;</sup> JS1 Scheduler to Essential<sup style="font-size:70%">&reg;</sup> JS2 Scheduler.
 
 ## Scheduler
 
@@ -193,5 +193,5 @@ This topic shows the API equivalent of JS2 Scheduler component to be used, while
 | Fires on rendering of every scheduler elements | **Event:** *queryCellInfo*<br/><br/> `<EJ.Schedule queryCellInfo={onQueryCellInfo}>`<br> `</EJ.Schedule>` <br> `function onQueryCellInfo (args){}` | **Event:** *renderCell* <br/><br/> `<ScheduleComponent renderCell ={onRenderCell}>` <br>`</ScheduleComponent>`<br>`function onRenderCell (args){}` |
 | Fires before the event rendering on UI | Not applicable |  **Event:** *eventRendered* <br/><br/>  `<ScheduleComponent eventRendered ={onEventRendered}>` <br>`</ScheduleComponent>`<br>`function onEventRendered (args){}` |
 
-> You can refer to our [React Scheduler](https://www.syncfusion.com/react-ui-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/material/schedule/overview) to knows how to present and manipulate data.
+> You can refer to our [React Scheduler](https://www.syncfusion.com/react-ui-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview) to knows how to present and manipulate data.
 

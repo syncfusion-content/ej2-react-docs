@@ -2,7 +2,6 @@
 import { SpeechToTextComponent, TextAreaComponent, TranscriptChangedEventArgs } from '@syncfusion/ej2-react-inputs';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
-import { useRef } from 'react';
 
 // To render SpeechToText.
 function App() {

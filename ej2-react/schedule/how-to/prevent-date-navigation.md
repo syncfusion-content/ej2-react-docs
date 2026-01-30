@@ -2,7 +2,7 @@
 layout: post
 title: Prevent date navigation in React Schedule component | Syncfusion
 description: Learn here all about Prevent date navigation in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Prevent date navigation 
+control: Scheduler 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##

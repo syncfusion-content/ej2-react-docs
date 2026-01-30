@@ -97,7 +97,7 @@ function App() {
     }, []);
 
     return (
-        <div class="integration-speechtotext">
+        <div className="integration-speechtotext">
             <ChatUIComponent id="chatui" ref={chatInstance} user={currentUserModel} footerTemplate={footerTemplate}>
                 <MessagesDirective>
                 <MessageDirective text="Hi Michale, are we on track for the deadline?" author={currentUserModel}/>

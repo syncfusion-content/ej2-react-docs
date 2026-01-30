@@ -80,12 +80,15 @@ The following implementation demonstrates how to open the edit dialog for a spec
 You can programmatically modify the styling of the indicator by targeting the `.e-indicator-span` class.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/gantt/datamarkers/indicator-customize/src/app.component.ts %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/datamarkers-cs3/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/gantt/datamarkers/indicator-customize/src/main.ts %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/datamarkers-cs3/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/datamarkers-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "page.domainurl/samples/gantt/datamarkers/indicator-customize" %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/datamarkers-cs3" %}

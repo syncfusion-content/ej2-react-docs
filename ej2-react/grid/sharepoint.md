@@ -100,7 +100,7 @@ gulp trust-dev-cert
 gulp serve
 ```
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React Packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
 To utilize Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component in your project, you need to install the necessary npm package. 
 
@@ -142,7 +142,7 @@ const data = [
 ];
 ```
 
-**2. Define Grid Component:** Define the Grid component with the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource) and column definitions as shown below:
+**2. Define Grid component:** Define the Grid component with the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource) and column definitions as shown below:
 
 ```ts
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';

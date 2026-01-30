@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
+import { BlockEditorComponent, ContentType } from '@syncfusion/ej2-react-blockeditor';
 
 function App() {
     // Slash Command Menu Configuration
@@ -36,7 +36,7 @@ function App() {
             blockType: 'Paragraph',
             content: [
                 {
-                    contentType: 'Text',
+                    contentType: ContentType.Text,
                     content: 'Type "/" anywhere in this editor to open the custom slash command menu.'
                 }
             ]

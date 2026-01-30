@@ -6,8 +6,7 @@ function App() {
   
     const blocksData = [
         {
-            id: 'demo-block',
-            blockType: 'Paragraph'
+          blockType: 'Paragraph'
         }
     ];
     const handleAfterPaste = (args: AfterPasteCleanupEventArgs) => {
