@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Custom data source in React Gantt component | Syncfusion
-description: Learn here all about Custom data source in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Custom Data Source in React Gantt Chart Component | Syncfusion
+description: Learn here all about Custom data source in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Custom data source 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom data source in React Gantt component
+# Custom Data Source in React Gantt Chart Component
 
 The excel export provides an option to define datasource dynamically before exporting. To export data dynamically, define the `dataSource` in `exportProperties`.
 

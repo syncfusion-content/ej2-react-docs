@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Data binding in React Gantt component | Syncfusion
-description: Learn here all about Data binding in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Data binding in React Gantt Chart component | Syncfusion
+description: Learn here all about Data binding in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Data binding 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in React Gantt component
+# Data binding in React Gantt Chart component
 
-The Gantt component uses `DataManager` for binding the data source, which supports both RESTful JSON data services and local JavaScript object array. The [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/gantt/#datasource) property can be assigned either with the instance of DataManager or JavaScript object array collection. The Gantt component supports binding two types of data:
+The Gantt Chart component uses `DataManager` for binding the data source, which supports both RESTful JSON data services and local JavaScript object array. The [dataSource](https://ej2.syncfusion.com/react/documentation/api/gantt#datasource) property can be assigned either with the instance of DataManager or JavaScript object array collection. The Gantt Chart component supports binding two types of data:
 * Local data
 * Remote data
 
@@ -20,20 +20,20 @@ The following video explains about the types of data binding and how to use it o
 
 ## Local data
 
-To bind local data to Gantt, you can assign a JavaScript object array to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/gantt/#datasource) property. The local data source can also be provided as an instance of the `DataManager`.
+To bind local data to Gantt, you can assign a JavaScript object array to the [dataSource](https://ej2.syncfusion.com/react/documentation/api/gantt#datasource) property. The local data source can also be provided as an instance of the `DataManager`.
 
-In local data binding, the data source for rendering the Gantt component is retrieved from the same application locally.
+In local data binding, the data source for rendering the Gantt Chart component is retrieved from the same application locally.
 
-The following are the two types of data binding possible with the Gantt component:
+The following are the two types of data binding possible with the Gantt Chart component:
 
 * Hierarchical data binding.
 * Self-referential data binding (Flat data).
 
 ### Hierarchical data binding
 
-The [`child`](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/#child) property is used to map the child records in hierarchical data.
+The [child](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#child) property is used to map the child records in hierarchical data.
 
-The following code example shows how to bind the hierarchical local data into the Gantt component.
+The following code example shows how to bind the hierarchical local data into the Gantt Chart component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -51,10 +51,10 @@ The following code example shows how to bind the hierarchical local data into th
 
 ### Self-referential data binding (Flat data)
 
-The Gantt component can be bound with self-referential data by mapping the data source field values to the [`id`](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/#id) and [`parentID`](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/#parentid) properties.
+The Gantt Chart component can be bound with self-referential data by mapping the data source field values to the [id](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#id) and [parentID](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#parentid) properties.
 
-* ID field: This field contains unique values used to identify each individual task and it is mapped to the [`id`](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/#id) property.
-* Parent ID field: This field contains values that indicate parent tasks and it is mapped to the [`parentID`](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/#parentid) property.
+* ID field: This field contains unique values used to identify each individual task and it is mapped to the [id](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#id) property.
+* Parent ID field: This field contains values that indicate parent tasks and it is mapped to the [parentID](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#parentid) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -72,7 +72,7 @@ The Gantt component can be bound with self-referential data by mapping the data 
 
 ## Remote data
 
-To bind remote data to the Gantt component, assign service data as an instance of `DataManager` to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/gantt/#datasource) property.
+To bind remote data to the Gantt Chart component, assign service data as an instance of `DataManager` to the [dataSource](https://ej2.syncfusion.com/react/documentation/api/gantt#datasource) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -90,7 +90,7 @@ To bind remote data to the Gantt component, assign service data as an instance o
 
 ### URL Adaptor
 
-In Gantt, we can fetch data from SQL database using `ADO.NET` Entity Data Model and update the changes on CRUD action to the server by using `DataManager` support. To communicate with the remote data we are using `UrlAdaptor` of DataManager property to call the server method and get back resultant data in JSON format. We can know more about `UrlAdaptor` from [`here`](https://ej2.syncfusion.com/react/documentation/data/adaptors?no-cache=1).
+In Gantt, we can fetch data from SQL database using `ADO.NET` Entity Data Model and update the changes on CRUD action to the server by using `DataManager` support. To communicate with the remote data we are using `UrlAdaptor` of DataManager property to call the server method and get back resultant data in JSON format. We can know more about `UrlAdaptor` from [here](https://ej2.syncfusion.com/react/documentation/data/adaptors?no-cache=1).
 
 > Please refer the [link](https://learn.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/models-data/creating-model-classes-with-the-entity-framework-cs) to create the `ADO.NET` Entity Data Model in Visual Studio,
 
@@ -247,11 +247,11 @@ The following code example describes the CRUD operations handled at server-side.
 
 ### Load child on demand
 
-To render child records on demand, assign a remote service URL in the instance of DataManager to the Url property. To interact with the remote data source, provide the endpoint URL and also define the [`hasChildMapping`](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/#hasChildMapping) property in taskFields of Gantt Chart.
+To render child records on demand, assign a remote service URL in the instance of DataManager to the Url property. To interact with the remote data source, provide the endpoint URL and also define the [hasChildMapping](https://ej2.syncfusion.com/react/documentation/api/gantt/taskfields#haschildmapping) property in taskFields of Gantt Chart.
 
 The <code>hasChildMapping</code> property maps the field name in the data source, which denotes whether the current record holds any child records. This is useful internally to show expand icon while binding child data on demand.
 
-When [`loadChildOnDemand`](https://ej2.syncfusion.com/react/documentation/api/gantt/#loadChildOnDemand) is disabled, all the root nodes are rendered in a collapsed state at initial load. On expanding the root node, the child nodes will be loaded from the remote server.
+When [loadChildOnDemand](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#loadchildondemand) is disabled, all the root nodes are rendered in a collapsed state at initial load. On expanding the root node, the child nodes will be loaded from the remote server.
 
 When <code>enableVirtualization</code> is enabled and <code>loadChildOnDemand</code> is disabled, only the current viewport root nodes are rendered in a collapsed state.
 
@@ -597,7 +597,7 @@ The following code example describes handling of Load on demand at server end.
 
 ### Sending additional parameters to the server
 
-We can pass additional parameters using `addParams` method of [`Query`](https://ej2.syncfusion.com/react/documentation/api/gantt/#query) class. In server side we have inherited and shown the additional parameter value in Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager class itself. We pass an additional parameter in load time using [`load`](https://ej2.syncfusion.com/react/documentation/api/gantt/#load) event. We can also pass additional parameter to the CRUD model. Please Check the below code snippet to send additional parameter to Gantt.
+We can pass additional parameters using `addParams` method of [Query](https://ej2.syncfusion.com/react/documentation/api/gantt#query) class. In server side we have inherited and shown the additional parameter value in Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager class itself. We pass an additional parameter in load time using [load](https://ej2.syncfusion.com/react/documentation/api/gantt#load) event. We can also pass additional parameter to the CRUD model. Please Check the below code snippet to send additional parameter to Gantt.
 
 ```ts
 
@@ -690,7 +690,7 @@ You can find the full sample from here.
 
 #### Handling HTTP error
 
-During server interaction from the Gantt, some server-side exceptions may occur, and you can acquire those error messages or exception details in client-side using the [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/gantt/#actionfailure) event.
+During server interaction from the Gantt, some server-side exceptions may occur, and you can acquire those error messages or exception details in client-side using the [actionFailure](https://ej2.syncfusion.com/react/documentation/api/gantt#actionfailure) event.
 
 The argument passed to the `actionFailure` event contains the error details returned from the server.
 
@@ -710,7 +710,7 @@ The argument passed to the `actionFailure` event contains the error details retu
 
 #### Binding with Ajax
 
-You can use Gantt [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/gantt/#datasource) property to bind the data source to Gantt from external Ajax request. In the below code we have fetched the data source from the server with the help of Ajax request and provided that to `dataSource` property by using `onSuccess` event of the Ajax.
+You can use Gantt [dataSource](https://ej2.syncfusion.com/react/documentation/api/gantt#datasource) property to bind the data source to Gantt from external Ajax request. In the below code we have fetched the data source from the server with the help of Ajax request and provided that to `dataSource` property by using `onSuccess` event of the Ajax.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -735,7 +735,7 @@ We can split the task either in load time or dynamically, by defining the segmen
 
 ### Hierarchical
 
-To split a task at load time in hierarchical way, we need to define the segment details in datasource and this field should be mapped by using the [`taskFields.segments`](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/#segments) property.
+To split a task at load time in hierarchical way, we need to define the segment details in datasource and this field should be mapped by using the [taskFields.segments](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#segments) property.
 
 ```ts
 
@@ -767,7 +767,7 @@ To split a task at load time in hierarchical way, we need to define the segment 
 
 ### Self-referential
 
-We can also define segment details as a flat data and this collection can be mapped by using [`segmentData`](https://ej2.syncfusion.com/react/documentation/api/gantt/#segmentData) property. The segment id field of this collection is mapped by using the [`taskFields.segmentId`](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/#segmentId) property.
+We can also define segment details as a flat data and this collection can be mapped by using [segmentData](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#segmentdata) property. The segment id field of this collection is mapped by using the [taskFields.segmentId](https://ej2.syncfusion.com/react/documentation/api/gantt/taskfields#segmentid) property.
 
 ```ts
 
@@ -801,7 +801,7 @@ We can also define segment details as a flat data and this collection can be map
 
 ## Improve performance by disabling validations
 
-The [`autoCalculateDateScheduling`](https://ej2.syncfusion.com/react/documentation/api/gantt/#autoCalculateDateScheduling) property can help you reduce the time taken for the Gantt chart to render on the initial load. When this API is enabled, parent-child validation, data validation, and predecessor validation are restricted, allowing the Gantt chart to load more quickly. Since we are disabling the validations, data source provided to gantt should have all data such as start date, end date, duration, as proper data.
+The [autoCalculateDateScheduling](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#autocalculatedatescheduling) property can help you reduce the time taken for the Gantt chart to render on the initial load. When this API is enabled, parent-child validation, data validation, and predecessor validation are restricted, allowing the Gantt chart to load more quickly. Since we are disabling the validations, data source provided to gantt should have all data such as start date, end date, duration, as proper data.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

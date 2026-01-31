@@ -1,20 +1,19 @@
 ---
 layout: post
 title: Validation in React Gantt Chart component | Syncfusion
-description: Learn how to validate task data in the Syncfusion React Gantt Chart component using column, custom, dependency, and resource grid rules for accurate project management.
-platform: ej2-react
+description: Learn here all about Validation Rule in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Validating Tasks
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Validation in React Gantt Chart component
+# Validation in React Gantt control
 
-Validation in the React Gantt Chart component ensures accurate task data by enforcing rules during adding or editing, preventing invalid entries before saving. Using the [Form Validator](https://ej2.syncfusion.com/documentation/form-validator) component, apply validation to columns in inline or dialog editing, custom rules for specific fields, or dependency and resource grids in the add/edit dialog. Requires `Edit` and valid [taskFields](https://ej2.syncfusion.com/react/documentation/api/gantt#taskfields) mappings (e.g., id, name) to ensure data integrity for tasks updated on September 23, 2025, or later, maintaining valid date ranges or dependency formats.
+## Column validation
 
-## Validate columns
-
-Define validation rules for columns using [columns.validationRules](https://ej2.syncfusion.com/react/documentation/api/gantt/column#validationrules), such as `required` or `minLength`, to display error messages for invalid fields like missing task names in inline or dialog editing.
+Column validation validates the editing and adding data and it display errors for invalid fields before saving data. This is effective in both inline and dialog editing.
+Gantt uses [Form Validator](https://ej2.syncfusion.com/react/documentation/form-validator) component for column validation. You can set [validation rules](https://ej2.syncfusion.com/react/documentation/form-validator/validation-rules) by defining the [columns.validationRules](https://ej2.syncfusion.com/react/documentation/api/gantt/column#validationrules). The value cannot be saved unless the validation rule get satisfied.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -30,9 +29,11 @@ Define validation rules for columns using [columns.validationRules](https://ej2.
         
 {% previewsample "page.domainurl/code-snippet/gantt/celledit-cs4" %}
 
-## Apply custom validation
+## Custom validation
 
-Implement custom validation for specific columns, like `TaskName`, using callback functions in [columns.validationRules](https://ej2.syncfusion.com/react/documentation/api/gantt/column#validationrules) to enforce unique requirements, such as ensuring task names meet specific patterns.
+You can define your own custom validation rules for the specific columns by using callback function to it's [validation rule](https://ej2.syncfusion.com/react/documentation/form-validator/validation-rules#defining-custom-rules).
+
+In the below demo, custom validation applied for `TaskName` column.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -48,9 +49,10 @@ Implement custom validation for specific columns, like `TaskName`, using callbac
         
 {% previewsample "page.domainurl/code-snippet/gantt/celledit-cs5" %}
 
-## Validate dependency and resource grids
+## Dependency and resource grid validation
 
-Set validation rules for dependency and resource grids in the add/edit dialog using the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/gantt#actionbegin) event with `requestType` set to **beforeOpenEditDialog** or **beforeOpenAddDialog**, configuring `validationRules` for fields like predecessor types or resource assignments to ensure valid entries.
+Validation rules can also be implemented for the dependency and resource grid in the add or edit dialog by employing the event [actionBegin](https://ej2.syncfusion.com/react/documentation/api/gantt#actionbegin).
+Within the actionBegin event, validationRules can be configured for columns in the grid of the dependency and resource tabs using the requestType `beforeOpenEditDialog` or `beforeOpenAddDialog`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -66,7 +68,4 @@ Set validation rules for dependency and resource grids in the add/edit dialog us
         
 {% previewsample "page.domainurl/code-snippet/gantt/celledit-cs6" %}
 
-## See also
-- [How to configure task editing?](https://ej2.syncfusion.com/react/documentation/gantt/managing-tasks/editing-tasks)
-- [How to manage task dependencies?](https://ej2.syncfusion.com/react/documentation/gantt/task-dependency)
-- [How to add new tasks?](https://ej2.syncfusion.com/react/documentation/gantt/managing-tasks/adding-new-tasks)
+

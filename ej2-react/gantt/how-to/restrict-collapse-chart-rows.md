@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Restrict collapse chart rows in React Gantt component | Syncfusion
-description: Learn here all about Restrict collapse chart rows in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Restrict Collapse Chart Rows in React Gantt Chart Component | Syncfusion
+description: Learn here all about restrict collapse chart rows in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Restrict collapse chart rows 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Restrict collapse chart rows in React Gantt component
+# Restrict Collapse Chart Rows in React Gantt Chart Component
 
-Restriction of collapsing the records when clicking on gantt chart rows can be performed by using the [`collapsing`](https://ej2.syncfusion.com/react/documentation/api/gantt/#collapsing) event.
+Restriction of collapsing the records when clicking on gantt chart rows can be performed by using the [collapsing](https://ej2.syncfusion.com/react/documentation/api/gantt#collapsing) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

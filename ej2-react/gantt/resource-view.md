@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Resource view in React Gantt component | Syncfusion
-description: Learn here all about Resource view in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Resource view in React Gantt Chart component | Syncfusion
+description: Learn here all about Resource view in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Resource view 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resource view in React Gantt component
+# Resource view in React Gantt Chart component
 
-The resource breakdown view is used to visualize the tasks assigned to each resource in hierarchy manner. Resources are displayed as parents and all the tasks assigned to each resource are displayed as its child records. It can be initialized by setting the [`viewType`](https://ej2.syncfusion.com/react/documentation/api/gantt/#viewtype) property to `ResourceView`.
+The resource breakdown view is used to visualize the tasks assigned to each resource in hierarchy manner. Resources are displayed as parents and all the tasks assigned to each resource are displayed as its child records. It can be initialized by setting the [viewType](https://ej2.syncfusion.com/react/documentation/api/gantt#viewtype) property to `ResourceView`.
 
 ## Resource task
 
@@ -62,7 +62,7 @@ A task not assigned to any one of the resource are termed as unassigned tasks. T
 
 ## Enable taskbar drag and drop
 
-In Gantt, you can enable taskbar drag and drop between resources by using the [`allowTaskbarDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/gantt/#allowtaskbardraganddrop) property. This allows you to move a taskbar from one resource to another vertically, making it easier to schedule tasks and manage resources.
+In Gantt, you can enable taskbar drag and drop between resources by using the [allowTaskbarDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/gantt#allowtaskbardraganddrop) property. This allows you to move a taskbar from one resource to another vertically, making it easier to schedule tasks and manage resources.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

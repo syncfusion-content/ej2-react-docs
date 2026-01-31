@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Copy paste records in React Gantt component | Syncfusion
-description: Learn here all about Copy paste records in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Copy Paste Records in React Gantt Chart Component | Syncfusion
+description: Learn here all about Copy paste records in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Copy paste records 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Copy paste records in React Gantt component
+# Copy Paste Records in React Gantt Chart Component
 
 You can copy and paste a record in the Gantt chart by using the `addRecord` method and `custom context menu`. It is also possible to copy and paste the parent record with multiple hierarchical child records on the required position.
 

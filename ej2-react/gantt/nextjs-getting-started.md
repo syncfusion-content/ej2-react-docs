@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Creating a Next.js Application Using Syncfusion<sup style="font-size:70%">&reg;</sup> React Components 
 
-This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt component.
+This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component.
 
 ## What is Next.js?
 
@@ -87,7 +87,7 @@ The application is ready to run with default settings. Now, let's add Syncfusion
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
-Here, the [React Gantt component](https://www.syncfusion.com/react-components/react-gantt-chart) is used in the project. To install the React Gantt component, use the following command:
+Here, the [React Gantt Chart component](https://www.syncfusion.com/react-components/react-gantt-chart) is used in the project. To install the React Gantt Chart component, use the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -133,9 +133,9 @@ Import the `Material` theme into the **src/app/globals.css** file and removed th
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
-Follow the below steps to add the React Gantt component to the Next.js project:
+Follow the below steps to add the React Gantt Chart component to the Next.js project:
 
-1.Before adding the Gantt component to your markup, create a `datasource.tsx` file within the **src/app/** folder and add the Gantt component data.
+1.Before adding the Gantt Chart component to your markup, create a `datasource.tsx` file within the **src/app/** folder and add the Gantt Chart component data.
 
 {% tabs %}
 {% highlight ts tabtitle="datasource.tsx" %}
@@ -171,7 +171,7 @@ export const data: object[] = [
 {% endhighlight %}
 {% endtabs %}
 
-2.Then, import and define the Gantt component in the **src/app/page.tsx** file, as shown below: 
+2.Then, import and define the Gantt Chart component in the **src/app/page.tsx** file, as shown below: 
 
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
@@ -234,6 +234,6 @@ yarn run dev
 {% endhighlight %}
 {% endtabs %}
 
-To learn more about the functionality of the Gantt component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/gantt/getting-started#module-injection).
+To learn more about the functionality of the Gantt Chart component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/gantt/getting-started#module-injection).
 
 > [View the NEXT.js Gantt sample in the GitHub repository](https://github.com/SyncfusionExamples/ej2-nextjs-gantt).

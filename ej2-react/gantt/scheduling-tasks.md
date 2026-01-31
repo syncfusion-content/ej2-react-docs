@@ -1,31 +1,125 @@
 ---
 layout: post
-title: Scheduling tasks in React Gantt component | Syncfusion
-description: Learn here all about Scheduling tasks in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
-control: Scheduling tasks 
+title: Scheduling tasks in React Gantt Chart Component | Syncfusion
+description: Learn how to configure task scheduling modes, types, duration units, working time, and holidays in the Syncfusion React Gantt Chart component.
 platform: ej2-react
+control: Scheduling tasks
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Scheduling tasks in React Gantt component
+# Scheduling Tasks in React Gantt Chart Component
 
-## Duration units
+Task scheduling in the React Gantt Chart component defines and visualizes task start dates, durations, and end dates as taskbars in a project timeline, enabling precise planning and tracking. Configure scheduling with properties like [taskFields](https://ej2.syncfusion.com/react/documentation/api/gantt#taskfields) for mapping task data, [taskMode](https://ej2.syncfusion.com/react/documentation/api/gantt#taskmode) for auto or manual validation, [taskType](https://ej2.syncfusion.com/react/documentation/api/gantt#tasktype) for fixed unit, work, or duration, and [durationUnit](https://ej2.syncfusion.com/react/documentation/api/gantt#durationunit) for day, hour, or minute units. Working time, set via [dayWorkingTime](https://ej2.syncfusion.com/react/documentation/api/gantt#dayworkingtime), and non-working periods, like weekends or holidays, ensure realistic calculations. Events like [dataBound](https://ej2.syncfusion.com/react/documentation/gantt/events#databound) customize scheduling logic on run-time. Taskbars include ARIA labels for accessibility, describing start, end, and duration, and adapt to responsive designs, though narrow screens may require scrolling for long timelines.
 
-In Gantt, the tasks’ duration value can be measured by the following duration units,
+## Configure scheduling modes
 
-* Day
-* Hour
-* Minute
+Scheduling modes control task date validation:
+- **Auto** (default): Validates dates based on dependencies, working time, holidays, and weekends. Parent tasks adjust to child tasks' minimum start and maximum end dates.
+- **Manual**: Allows custom dates without automatic validation, editable for parent tasks.
+- **Custom**: Renders both auto and manual tasks from the data source.
 
-In Gantt, we can define duration unit for whole project by using [`durationUnit`](https://ej2.syncfusion.com/react/documentation/api/gantt/#durationunit) property, when we defines the value for this property, this unit will be applied for all task which don't has duration unit value. And each task in the project can be defined with different duration units and the duration unit of a task can be defined by the following ways,
+Configure using:
+- [taskMode](https://ej2.syncfusion.com/react/documentation/api/gantt#taskmode): Sets global mode.
+- [taskFields.manual](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#manual): Sets per-task mode.
 
-* Using [`taskFields.durationUnit`](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/#durationunit) property, to map the duration unit data source field.
-* Defining the duration unit value along with the duration field in the data source.
+### Automatically scheduled Tasks
 
-### Mapping the duration unit field
+The following example configures auto scheduling:
 
-The below code snippet explains the mapping of duration unit data source field to the Gantt component using the [`taskFields.durationUnit`](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/#durationunit) property.
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/task-scheduling-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/task-scheduling-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/task-scheduling-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/task-scheduling-cs1" %}
+
+### Manually scheduled Tasks
+
+The following example configures manual scheduling:
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/task-scheduling-cs2/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/task-scheduling-cs2/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/task-scheduling-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/task-scheduling-cs2" %}
+
+### Custom scheduled
+
+The following example mixes auto and manual tasks:
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/task-scheduling-cs3/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/task-scheduling-cs3/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/task-scheduling-cs3/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/task-scheduling-cs3" %}
+
+## Configure task types
+
+Task types define how changes to duration, work, or resource units affect other properties:
+
+- **FixedUnit** (default): Adjusts duration when work changes, maintaining unit allocation.
+- **FixedWork**: Adjusts duration when units change, maintaining work amount.
+- **FixedDuration**: Adjusts units when work changes, maintaining duration.
+
+Configure using:
+- [taskType](https://ej2.syncfusion.com/react/documentation/api/gantt#tasktype): Sets global type.
+- [taskFields.type](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#type): Sets per-task type.
+
+The following example configures task types:
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/tasktype-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/tasktype-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/tasktype-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/tasktype-cs1" %}
+
+## Configure duration units
+
+Duration units determine how task length is measured and calculated within the project. The Gantt Chart component supports three duration units that can be applied at both project and individual task levels.
+
+The Gantt Chart component supports the following duration units:
+- **Day**: Standard for general planning.
+- **Hour**: For detailed task management.
+- **Minute**: For short-duration tasks.
+
+Configure using:
+- [durationUnit](https://ej2.syncfusion.com/react/documentation/api/gantt#durationunit): Sets global unit (default: `day`).
+- [taskFields.durationUnit](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#durationunit): Maps per-task units.
+- Duration field values: Includes units directly (e.g., "5 minutes").
+
+The following example maps duration units:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -41,55 +135,55 @@ The below code snippet explains the mapping of duration unit data source field t
         
 {% previewsample "page.domainurl/code-snippet/gantt/durationunit-cs3" %}
 
-> NOTE
-The default value of the [`durationUnit`](https://ej2.syncfusion.com/react/documentation/api/gantt/#durationunit) property is `day`.
+**Defining duration unit with duration value:**
 
-### Defining duration unit along with duration field
-
-Duration units for the tasks can also be defined along with the duration values, the below code snippet explains the duration unit for a task along with duration value,
+The following example defines units in duration values:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/durationunit-cs4/app/index.jsx %}
+{% include code-snippet/gantt/durationunit-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/durationunit-cs4/app/index.tsx %}
+{% include code-snippet/gantt/durationunit-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/durationunit-cs4/index.html %}
+{% include code-snippet/gantt/durationunit-cs5/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/gantt/durationunit-cs4" %}
+{% previewsample "page.domainurl/code-snippet/gantt/durationunit-cs5" %}
 
->NOTE:
-The edit type of the duration column in Gantt is string, to support editing the duration field along with duration units.
+## Enable unscheduled tasks
 
-## Unscheduled Tasks
+Unscheduled tasks lack start date, end date, or duration, visualized as milestones or single-day tasks. Enable with [allowUnscheduledTasks](https://ej2.syncfusion.com/react/documentation/api/gantt#allowunscheduledtasks) set to **true** (default: **false**), defaulting to a 1-day duration from the project start.
 
-Unscheduled tasks are planned for a project without any definite schedule dates. The Gantt component supports rendering the unscheduled tasks. You can create or update the tasks with anyone of start date, end date, and duration values or none. You can enable or disable the unscheduled tasks by using the [`allowUnscheduledTasks`](https://ej2.syncfusion.com/react/documentation/api/gantt/#allowunscheduledtasks) property. The following images represent the various types of unscheduled tasks in Gantt.
+Available unscheduled task types:
 
-### Start Date Only
+- **Start date only**
 
-![Alt text](images/startDate-only.png)
+    Tasks with only a start date defined, allowing for open-ended planning.
 
-### End Date Only
+    ![Start date only task](images/startDate-only.png)
 
-![Alt text](images/endDate-only.png)
+- **End date only** 
 
-### Duration Only
+    Tasks with only an end date defined, useful for deadline-driven activities.
 
-![Alt text](images/duration-only.png)
+    ![End date only task](images/endDate-only.png)
 
-### Milestone
+- **Duration only**
 
-The milestone task, one without a start and end date, but having a duration value of zero is represented as follows.
+    Tasks with only duration specified, providing flexibility in scheduling timing.
 
-![Alt text](images/milestone.png)
+    ![Duration only task](images/duration-only.png)
 
-## Define unscheduled tasks in data source
+- **Milestone**
 
-You can define the various types of unscheduled tasks in the data source as follows
+    Special tasks with zero duration representing key project events or deliverables.
+
+    ![Milestone task](images/milestone.png)
+
+The following example enables unscheduled tasks:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -105,14 +199,29 @@ You can define the various types of unscheduled tasks in the data source as foll
         
 {% previewsample "page.domainurl/code-snippet/gantt/unscheduledtask-cs1" %}
 
-> NOTE
-> If the [`allowUnscheduledTasks`](https://ej2.syncfusion.com/react/documentation/api/gantt/#allowunscheduledtasks) property is set to `false`, then the Gantt component automatically calculates the scheduled date values with a default value of duration 1 and the project start date is considered as the start date for the task.
+### Convert to milestone using method
 
-## Working Time Range
+You can convert a task into a milestone using the [ConvertToMilestone](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#converttomilestone) method.
 
-In the Gantt component, working hours in a day for a project can be defined by using the [`dayWorkingTime`](https://ej2.syncfusion.com/react/documentation/api/gantt/dayWorkingTime/) property. Based on the working hours, automatic date scheduling and duration validations for a task are performed.
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/unscheduledtasks-method-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/unscheduledtasks-method-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/unscheduledtasks-method-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/unscheduledtasks-method-cs1" %}
 
-The following code snippet explains how to define the working time range for the project in Gantt.
+## Configure working time range
+
+Working time ranges define productive hours per day, ensuring accurate scheduling calculations. Configure with [dayWorkingTime](https://ej2.syncfusion.com/react/documentation/api/gantt#dayworkingtime) sets project-wide working hours.
+
+The following example sets working hours from 9 AM to 6 PM:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -125,16 +234,16 @@ The following code snippet explains how to define the working time range for the
 {% include code-snippet/gantt/workingTimeRange-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
-        
+   
 {% previewsample "page.domainurl/code-snippet/gantt/workingTimeRange-cs1" %}
 
-> NOTE
->* Individual tasks can lie between any time within the defined working time range of the project.
->* The [`dayWorkingTime`](https://ej2.syncfusion.com/react/documentation/api/gantt/dayWorkingTime/) property is used to define the working time for the whole project.
+Non-working days represent periods when project work cannot be performed, such as weekends, holidays, or planned maintenance periods. These settings ensure realistic project scheduling by excluding non-productive time from calculations.
 
-## Weekend/Non-working days
+### Configure work week
 
-Non-working days/weekend are used to represent the non-productive days in a project. You can define the non-working days in a week using the [`workWeek`](https://ej2.syncfusion.com/react/documentation/api/gantt/#workweek) property in Gantt.
+Define which days of the week are considered working days using the [workWeek](https://ej2.syncfusion.com/react/documentation/api/gantt#workweek) property.
+
+The following example excludes Monday and Tuesday:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -150,6 +259,36 @@ Non-working days/weekend are used to represent the non-productive days in a proj
         
 {% previewsample "page.domainurl/code-snippet/gantt/how-to-changeworkweek-cs1" %}
 
-> By default, Saturdays and Sundays are considered as non-working days/weekend in a project.
-> To show or hide weekend in timeline, use [timelineSettings.showWeekend](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings/#showweekend/) property in `timelineSettings`. To know more about `showWeekend`, refer [here](https://ej2.syncfusion.com/react/documentation/gantt/time-line/time-line#showhide-weekends).
-> In the Gantt component, you can make weekend as working day by setting the [`includeWeekend`](https://ej2.syncfusion.com/react/documentation/api/gantt/#includeweekend) property to `true`.
+### Weekend configuration
+
+Configure weekends with:
+- Default behavior: Saturday and Sunday are non-working.
+- Timeline display: [timelineSettings.showWeekend](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings#showweekend) controls visibility.
+- Working weekends: [includeWeekend](https://ej2.syncfusion.com/react/documentation/api/gantt#includeweekend) set to **true** includes weekends.
+
+## Customize scheduling with events
+
+Customize scheduling with:
+- [dataBound](https://ej2.syncfusion.com/react/documentation/gantt/events#databound): Adjusts task scheduling after data binding, e.g., switching auto-scheduled tasks to manual mode if their start date precedes the project start date.
+
+The following example uses `dataBound` to switch auto-scheduled tasks to manual mode if their start date is before the project start date (04/01/2025):
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/scheduling-customization-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/scheduling-customization-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/scheduling-customization-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/scheduling-customization-cs1" %}
+
+## See also
+
+- [How to configure task dependencies?](https://ej2.syncfusion.com/react/documentation/gantt/task-dependency)
+- [How to manage resources?](https://ej2.syncfusion.com/react/documentation/gantt/resources)
+- [How to configure holidays?](https://ej2.syncfusion.com/react/documentation/gantt/holidays)

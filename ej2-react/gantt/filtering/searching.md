@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Searching in React Gantt component | Syncfusion
-description: Learn here all about Searching in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Searching in React Gantt Chart Component | Syncfusion
+description: Learn here all about Searching in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Searching 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Searching in React Gantt component
+# Searching in React Gantt Chart Component
 
-You can search for records in the Gantt component by using the [`search`](https://ej2.syncfusion.com/react/documentation/api/gantt/#search) method with search key as a parameter. The Gantt component provides an option to integrate the search text box in the toolbar by adding the search item to the [`toolbar`](https://ej2.syncfusion.com/react/documentation/api/gantt/#toolbar) property.
+You can search for records in the Gantt Chart component by using the [search](https://ej2.syncfusion.com/react/documentation/api/gantt#search) method with search key as a parameter. The Gantt Chart component provides an option to integrate the search text box in the toolbar by adding the search item to the [toolbar](https://ej2.syncfusion.com/react/documentation/api/gantt#toolbar) property.
 
-To search records, inject the `Filter` module into the Gantt component.
+To search records, inject the `Filter` module into the Gantt Chart component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -30,8 +30,8 @@ To search records, inject the `Filter` module into the Gantt component.
 
 ## Initial search
 
-In the Gantt component, you can load a task with some search criteria by using the [`searchSettings`](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings/) property.
-To apply a search at initial rendering, set the value for [`fields`](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings/#fields), [`operator`](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings/#operator), [`key`](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings/#key), and [`ignoreCase`](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings/#ignorecase) in the [`searchSettings`](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings/) property.
+In the Gantt Chart component, you can load a task with some search criteria by using the [searchSettings](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings/) property.
+To apply a search at initial rendering, set the value for [fields](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings#fields), [operator](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings#operator), [key](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings#key), and [ignoreCase](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings#ignorecase) in the [searchSettings](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings/) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -47,11 +47,11 @@ To apply a search at initial rendering, set the value for [`fields`](https://ej2
         
 {% previewsample "page.domainurl/code-snippet/gantt/searching-cs2" %}
 
-> By default, Gantt searches all the bound column values. To customize this behavior, define the [`searchSettings.fields`](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings/#fields) property.
+> By default, Gantt searches all the bound column values. To customize this behavior, define the [searchSettings.fields](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings#fields) property.
 
 ## Search operators
 
-The search operator can be defined in the [`searchSettings.operator`](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings/#operator) property to configure specific searching.
+The search operator can be defined in the [searchSettings.operator](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings#operator) property to configure specific searching.
 
 The following operators are supported in searching:
 
@@ -63,11 +63,11 @@ contains |Checks whether a value contains the specified value.
 equal |Checks whether a value is equal to the specified value.
 notEqual |Checks for the values that are not equal to the specified value.
 
-> By default, the [`searchSettings.operator`](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings/#operator) value is `contains`.
+> By default, the [searchSettings.operator](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings#operator) value is `contains`.
 
 ## Search by external button
 
-To search the Gantt records from an external button, invoke the [`search`](https://ej2.syncfusion.com/react/documentation/api/gantt/#search) method.
+To search the Gantt records from an external button, invoke the [search](https://ej2.syncfusion.com/react/documentation/api/gantt#search) method.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -83,11 +83,11 @@ To search the Gantt records from an external button, invoke the [`search`](https
         
 {% previewsample "page.domainurl/code-snippet/gantt/searching-cs3" %}
 
->Note: You should set the [`allowFiltering`](https://ej2.syncfusion.com/react/documentation/api/gantt/#allowfiltering) property to `true` for searching the content externally.
+>Note: You should set the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/gantt#allowfiltering) property to `true` for searching the content externally.
 
 ## Search specific columns
 
-By default, the Gantt component searches all the columns. You can search specific columns by defining the specific column's field names in the [`searchSettings.fields`](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings/#fields) property.
+By default, the Gantt Chart component searches all the columns. You can search specific columns by defining the specific column's field names in the [searchSettings.fields](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings#fields) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -107,7 +107,7 @@ By default, the Gantt component searches all the columns. You can search specifi
 
 ## Clear search by external button
 
-You can set [`searchSettings.key`](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings/#key) property as `empty` string, to clear the searched Gantt records from external button.
+You can set [searchSettings.key](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings#key) property as `empty` string, to clear the searched Gantt records from external button.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

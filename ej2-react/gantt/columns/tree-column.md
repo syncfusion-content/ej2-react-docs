@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tree column in React Gantt Chart Component
+# Tree Column in React Gantt Chart Component
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component provides a structured way to display parent-child relationships using expand/collapse icons.  
 

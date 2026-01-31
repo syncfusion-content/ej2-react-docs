@@ -1,20 +1,18 @@
 ---
 layout: post
-title: Task bar editing in React Gantt Chart Component | Syncfusion
-description: Learn how to edit tasks via taskbar interactions in the Syncfusion React Gantt Chart component for intuitive project timeline adjustments.
+title: Task bar editing in React Gantt Chart component | Syncfusion
+description: Learn here all about Task bar editing in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
+control: Task bar editing 
 platform: ej2-react
-control: Task bar editing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Task Bar Editing in React Gantt Chart Component
+# Taskbar editing in React Gantt Chart component
 
-Task bar editing in the React Gantt Chart component enables intuitive project timeline adjustments by allowing to drag or resize taskbars to modify task details, such as start dates, durations, or progress, using mouse or touch interactions. Enable this feature by setting the [allowTaskbarEditing](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings#allowtaskbarediting) property to **true** and injecting `Edit`, ensuring task data aligns with valid [taskFields](https://ej2.syncfusion.com/react/documentation/api/gantt#taskfields) mappings (e.g., id, startDate, duration). Taskbars can be dragged to shift dates, resize them to adjust durations, or move progress grips to update completion percentages. The [taskbarEditing](https://ej2.syncfusion.com/react/documentation/gantt/events#taskbarediting) event allows preventing edits for specific tasks, while the [queryTaskbarInfo](https://ej2.syncfusion.com/react/documentation/gantt/events#querytaskbarinfo) event customizes taskbar visuals by hiding editing indicators like resizers or connector points.
+## Taskbar editing
 
-## Edit taskbars
-
-Enable taskbar editing by setting [allowTaskbarEditing](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings#allowtaskbarediting) to **true** and injecting `Edit`. Drag taskbars to adjust start and end dates, resize them to modify durations, or adjust progress grips to update completion percentages, ideal for quick timeline updates.
+Modify the task details through user interaction, such as resizing and dragging the taskbar, by enabling the [allowTaskbarEditing](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings#allowtaskbarediting) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -30,9 +28,9 @@ Enable taskbar editing by setting [allowTaskbarEditing](https://ej2.syncfusion.c
         
 {% previewsample "page.domainurl/code-snippet/gantt/taskbaredit-cs2" %}
 
-## Prevent taskbar editing for specific tasks
+## Prevent editing for specific tasks
 
-Prevent taskbar editing for specific tasks using the [taskbarEditing](https://ej2.syncfusion.com/react/documentation/gantt/events#taskbarediting) event by setting its `cancel` property to **true** based on task data, such as protecting milestones. Customize taskbar visuals by hiding editing indicators (e.g., resizers, connector points) using the [queryTaskbarInfo](https://ej2.syncfusion.com/react/documentation/gantt/events#querytaskbarinfo) event, ensuring a tailored editing experience.
+On taskbar edit action, the [taskbarEditing](https://ej2.syncfusion.com/react/documentation/api/gantt#taskbarediting) event will be triggered. You can prevent the taskbar from editing using the [taskbarEditing](https://ej2.syncfusion.com/react/documentation/api/gantt#taskbarediting) event. This can be done by setting cancel property of [taskbarEditing](https://ej2.syncfusion.com/react/documentation/api/gantt#taskbarediting) event argument to true. And we can hide the taskbar editing indicators like taskbar resizer, progress resizer and connector points by using [queryTaskbarInfo](https://ej2.syncfusion.com/react/documentation/api/gantt#querytaskbarinfo) event.  The following code example shows how to achieve this.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -48,7 +46,3 @@ Prevent taskbar editing for specific tasks using the [taskbarEditing](https://ej
         
 {% previewsample "page.domainurl/code-snippet/gantt/preventtaskbaredit-cs1" %}
 
-## See also
-- [How to configure task editing?](https://ej2.syncfusion.com/react/documentation/gantt/editing)
-- [How to manage task dependencies?](https://ej2.syncfusion.com/react/documentation/gantt/task-dependency)
-- [How to configure critical path?](https://ej2.syncfusion.com/react/documentation/gantt/critical-path)

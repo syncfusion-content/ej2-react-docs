@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in React Gantt Component | Syncfusion
-description: Learn here all about events in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+description: Learn here all about events in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Events
 platform: ej2-react
 documentation: ug
@@ -14,7 +14,7 @@ The Syncfusion React Gantt Chart component offers comprehensive support for visu
 
 ## actionBegin
 
-The [actionBegin](https://ej2.syncfusion.com/react/documentation/api/gantt/#actionbegin) event triggers before the Gantt component processes actions such as **adding**, **editing(cell, dialog, taskbar)**, **deleting**, **sorting**, **filtering**, **dependency changes**, and **zooming**. It provides detailed contextual information through the [ActionBeginArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/actionBeginArgs/) argument. The argument type and structure depend on the triggered operation. Each argument type provides specific properties to help you inspect and modify the action.
+The [actionBegin](https://ej2.syncfusion.com/react/documentation/api/gantt#actionbegin) event triggers before the Gantt Chart component processes actions such as **adding**, **editing(cell, dialog, taskbar)**, **deleting**, **sorting**, **filtering**, **dependency changes**, and **zooming**. It provides detailed contextual information through the [ActionBeginArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/actionBeginArgs/) argument. The argument type and structure depend on the triggered operation. Each argument type provides specific properties to help you inspect and modify the action.
 
 The event argument structure varies based on the operation type. The following tables describe the supported argument types and their properties.
 
@@ -335,7 +335,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## actionComplete
 
-The [actionComplete](https://ej2.syncfusion.com/react/documentation/api/gantt/#actioncomplete) event is triggered after the Gantt component successfully completes an operation such as **adding**, **editing(cell, dialog, taskbar)**, **deleting**, **sorting**, **filtering**, **dependency changes**, and **zooming**. It provides detailed contextual information about the completed action through the [ActionCompleteArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/actionCompleteArgs/) argument. The structure of this argument varies depending on the type of operation performed, and includes specific properties that allow you to inspect the outcome and implement custom logic based on the completed action. 
+The [actionComplete](https://ej2.syncfusion.com/react/documentation/api/gantt#actioncomplete) event is triggered after the Gantt Chart component successfully completes an operation such as **adding**, **editing(cell, dialog, taskbar)**, **deleting**, **sorting**, **filtering**, **dependency changes**, and **zooming**. It provides detailed contextual information about the completed action through the [ActionCompleteArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/actionCompleteArgs/) argument. The structure of this argument varies depending on the type of operation performed, and includes specific properties that allow you to inspect the outcome and implement custom logic based on the completed action. 
 
 Below are detailed descriptions of each argument type's properties, and their purposes.
 
@@ -697,7 +697,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## actionFailure
 
-The [actionFailure](https://ej2.syncfusion.com/react/documentation/api/gantt/#actionfailure) event is triggered when an operation in the Gantt encounters an error due to configuration issues, invalid data, or missing modules. It returns a [FailureEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/failureEventArgs/#failureeventargs/) object containing detailed information about the failure, including the following property:
+The [actionFailure](https://ej2.syncfusion.com/react/documentation/api/gantt#actionfailure) event is triggered when an operation in the Gantt encounters an error due to configuration issues, invalid data, or missing modules. It returns a [FailureEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/failureEventArgs#failureeventargs/) object containing detailed information about the failure, including the following property:
 
 | **Property**     | **Type**   | **Description** |
 |------------------|------------|-----------------|
@@ -889,7 +889,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## beforeExcelExport
 
-The [beforeExcelExport](https://ej2.syncfusion.com/react/documentation/api/gantt/#beforeexcelexport) event is triggered before initiating data export from the Gantt component to Excel or CSV format. This event enables conditional control over the export process, such as canceling the operation or applying format-specific logic.
+The [beforeExcelExport](https://ej2.syncfusion.com/react/documentation/api/gantt#beforeexcelexport) event is triggered before initiating data export from the Gantt Chart component to Excel or CSV format. This event enables conditional control over the export process, such as canceling the operation or applying format-specific logic.
 
 The event argument is an `object` containing the following properties:
 
@@ -1115,7 +1115,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## beforePdfExport
 
-The [beforePdfExport](https://ej2.syncfusion.com/react/documentation/api/gantt/#beforepdfexport) event is triggered before exporting Gantt data to a PDF file. This event provides an opportunity to conditionally cancel the export or modify behavior based on the current Gantt configuration.
+The [beforePdfExport](https://ej2.syncfusion.com/react/documentation/api/gantt#beforepdfexport) event is triggered before exporting Gantt data to a PDF file. This event provides an opportunity to conditionally cancel the export or modify behavior based on the current Gantt configuration.
 
 The event provides an argument of type `object` with the following properties:
 
@@ -1339,7 +1339,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## beforeTooltipRender
 
-The [beforeTooltipRender](https://ej2.syncfusion.com/react/documentation/api/gantt/#beforetooltiprender) event is triggered before rendering a tooltip for interactive elements within the Gantt component. This includes taskbars, timeline headers, and connector lines. The event allows dynamic customization or suppression of tooltip content based on contextual data.
+The [beforeTooltipRender](https://ej2.syncfusion.com/react/documentation/api/gantt#beforetooltiprender) event is triggered before rendering a tooltip for interactive elements within the Gantt Chart component. This includes taskbars, timeline headers, and connector lines. The event allows dynamic customization or suppression of tooltip content based on contextual data.
 
 The event provides an argument of type [BeforeTooltipRenderEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/beforeTooltipRenderEventArgs/) with the following properties:
 
@@ -1567,7 +1567,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## cellDeselected
 
-The [cellDeselected](https://ej2.syncfusion.com/react/documentation/api/gantt/#celldeselected) event is triggered when a selected cell in the Gantt component is deselected. This occurs when the selection is cleared by clicking outside the cell, selecting a different cell or row, or through programmatic control. This event is typically used to validate cell data after deselection, synchronize external state, or trigger updates based on cell-level interactions.
+The [cellDeselected](https://ej2.syncfusion.com/react/documentation/api/gantt#celldeselected) event is triggered when a selected cell in the Gantt Chart component is deselected. This occurs when the selection is cleared by clicking outside the cell, selecting a different cell or row, or through programmatic control. This event is typically used to validate cell data after deselection, synchronize external state, or trigger updates based on cell-level interactions.
 
 The event provides an argument of type [CellDeselectEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/cellDeselectEventArgs/) with the following properties:
 
@@ -1786,7 +1786,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## cellDeselecting
 
-The [cellDeselecting](https://ej2.syncfusion.com/react/documentation/api/gantt/#celldeselecting) event is triggered when a previously selected cell in the Gantt component is deselected. This occurs when the selection is cleared either through user interaction or programmatic control. This event is typically used to validate cell data after deselection, synchronize external state, or trigger updates based on cell-level interactions.
+The [cellDeselecting](https://ej2.syncfusion.com/react/documentation/api/gantt#celldeselecting) event is triggered when a previously selected cell in the Gantt Chart component is deselected. This occurs when the selection is cleared either through user interaction or programmatic control. This event is typically used to validate cell data after deselection, synchronize external state, or trigger updates based on cell-level interactions.
 
 The event provides an argument of type [CellDeselectEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/cellDeselectEventArgs/) with the following properties:
 
@@ -2011,7 +2011,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## cellEdit
 
-The [cellEdit](https://ej2.syncfusion.com/react/documentation/api/gantt/#celledit) event is triggered when a cell enters edit mode in the Gantt Chart component. This event allows customization of the editing behavior, such as validating input, modifying cell values, or preventing edits based on specific conditions. It helps ensure that data changes meet application requirements before being applied.
+The [cellEdit](https://ej2.syncfusion.com/react/documentation/api/gantt#celledit) event is triggered when a cell enters edit mode in the Gantt Chart component. This event allows customization of the editing behavior, such as validating input, modifying cell values, or preventing edits based on specific conditions. It helps ensure that data changes meet application requirements before being applied.
 
 The event provides an argument of type [CellEditArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/cellEditArgs/) with the following properties:
 
@@ -2242,7 +2242,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## cellSelected
 
-The [cellSelected](https://ej2.syncfusion.com/react/documentation/api/gantt/#cellselected) event is triggered after a cell in the Gantt component is selected. This event provides access to the selected cell’s context and enables interaction logic based on cell-level selection. This event is commonly used to apply conditional styling, display contextual information, or trigger logic based on the selected task or field.
+The [cellSelected](https://ej2.syncfusion.com/react/documentation/api/gantt#cellselected) event is triggered after a cell in the Gantt Chart component is selected. This event provides access to the selected cell’s context and enables interaction logic based on cell-level selection. This event is commonly used to apply conditional styling, display contextual information, or trigger logic based on the selected task or field.
 
 The event provides an argument of type [CellSelectEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/cellSelectEventArgs/) with the following properties:
 
@@ -2461,7 +2461,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## cellSelecting
 
-The [cellSelecting](https://ej2.syncfusion.com/react/documentation/api/gantt/#cellselecting) event is triggered before a cell is selected in the Gantt Chart component. It enables logic to control selection behavior based on cell context, such as preventing selection under specific conditions or customizing appearance dynamically.
+The [cellSelecting](https://ej2.syncfusion.com/react/documentation/api/gantt#cellselecting) event is triggered before a cell is selected in the Gantt Chart component. It enables logic to control selection behavior based on cell context, such as preventing selection under specific conditions or customizing appearance dynamically.
 
 The event provides an argument of type [CellSelectingEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/cellSelectingEventArgs/)  with the following properties:
 
@@ -2687,7 +2687,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## columnDrag
 
-The [columnDrag](https://ej2.syncfusion.com/react/documentation/api/gantt/#columndrag) event is triggered while a column header is being dragged during reordering. It provides contextual details about the drag operation and enables customization of the column's behavior during the process, such as restricting movement, applying visual styles, or preparing layout adjustments based on the interaction.
+The [columnDrag](https://ej2.syncfusion.com/react/documentation/api/gantt#columndrag) event is triggered while a column header is being dragged during reordering. It provides contextual details about the drag operation and enables customization of the column's behavior during the process, such as restricting movement, applying visual styles, or preparing layout adjustments based on the interaction.
 
 The event provides an argument of type [ColumnDragEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/columnDragEventArgs/) with the following properties:
 
@@ -2897,7 +2897,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## columnDragStart
 
-The [columnDragStart](https://ej2.syncfusion.com/react/documentation/api/gantt/#columndragstart) event is triggered when a column header drag operation begins in the Gantt component. This event provides access to the initial drag context and enables customization or restriction of the drag behavior.
+The [columnDragStart](https://ej2.syncfusion.com/react/documentation/api/gantt#columndragstart) event is triggered when a column header drag operation begins in the Gantt Chart component. This event provides access to the initial drag context and enables customization or restriction of the drag behavior.
 
 The event provides an argument of type [ColumnDragEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/columnDragEventArgs/) with the following properties:
 
@@ -3106,7 +3106,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## columnDrop
 
-The [columnDrop](https://ej2.syncfusion.com/react/documentation/api/gantt/#columndrop) is triggered when a column header is dropped after a drag operation in the Gantt component.  It provides drop context and supports post-reorder logic such as validation or UI updates.
+The [columnDrop](https://ej2.syncfusion.com/react/documentation/api/gantt#columndrop) is triggered when a column header is dropped after a drag operation in the Gantt Chart component.  It provides drop context and supports post-reorder logic such as validation or UI updates.
 
 The event provides an argument of type [ColumnDragEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/columnDragEventArgs/) with the following properties:
 
@@ -3321,7 +3321,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## columnMenuClick
 
-The [columnMenuClick](https://ej2.syncfusion.com/react/documentation/api/gantt/#columnmenuclick) event is triggered when a column menu item is selected in the Gantt Chart. It provides access to the clicked item and its associated column, allowing you to customize menu behavior or execute additional logic.
+The [columnMenuClick](https://ej2.syncfusion.com/react/documentation/api/gantt#columnmenuclick) event is triggered when a column menu item is selected in the Gantt Chart. It provides access to the clicked item and its associated column, allowing you to customize menu behavior or execute additional logic.
 
 The event provides an argument of type [ColumnMenuClickEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/columnMenuClickEventArgs/) with the following properties:
 
@@ -3535,7 +3535,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## columnMenuOpen
 
-The [columnMenuOpen](https://ej2.syncfusion.com/react/documentation/api/gantt/#columnmenuopen) event is triggered when the column menu is opened. This event provides access to the menu context and allows customization of its appearance, behavior, or available options.
+The [columnMenuOpen](https://ej2.syncfusion.com/react/documentation/api/gantt#columnmenuopen) event is triggered when the column menu is opened. This event provides access to the menu context and allows customization of its appearance, behavior, or available options.
 
 The event provides an argument of type [ColumnMenuOpenEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/columnMenuOpenEventArgs/) with the following properties:
 
@@ -3755,7 +3755,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## contextMenuClick
 
-The [contextMenuClick](https://ej2.syncfusion.com/react/documentation/api/gantt/#contextmenuclick) event is triggered when a context menu item is clicked within the Gantt component. This event provides access to the clicked item and the associated context, enabling customization of menu behavior or execution of additional logic.
+The [contextMenuClick](https://ej2.syncfusion.com/react/documentation/api/gantt#contextmenuclick) event is triggered when a context menu item is clicked within the Gantt Chart component. This event provides access to the clicked item and the associated context, enabling customization of menu behavior or execution of additional logic.
 
 The event provides an argument of type [ContextMenuClickEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/contextMenuClickEventArgs/) with the following properties:
 
@@ -3927,7 +3927,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## contextMenuOpen
 
-The [contextMenuOpen](https://ej2.syncfusion.com/react/documentation/api/gantt/#contextmenuopen) event is triggered when the context menu is opened in the Gantt Chart.  This event allows customization of menu behavior or execution of additional logic based on the selected item and context.
+The [contextMenuOpen](https://ej2.syncfusion.com/react/documentation/api/gantt#contextmenuopen) event is triggered when the context menu is opened in the Gantt Chart.  This event allows customization of menu behavior or execution of additional logic based on the selected item and context.
 
 The event provides an argument of type [ContextMenuOpenEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/contextMenuOpenEventArgs/) with the following properties:
 
@@ -4094,7 +4094,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## created
 
-The [created](https://ej2.syncfusion.com/react/documentation/api/gantt/#created) event is triggered after the Gantt component has been fully initialized and rendered. This event is useful for executing logic that depends on the component being completely loaded and ready for interaction.
+The [created](https://ej2.syncfusion.com/react/documentation/api/gantt#created) event is triggered after the Gantt Chart component has been fully initialized and rendered. This event is useful for executing logic that depends on the component being completely loaded and ready for interaction.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -4143,7 +4143,7 @@ function App() {
   };
 
   const created = () => {
-    console.log("Gantt component created.");
+    console.log("Gantt Chart component created.");
     if (ganttInstance.current) {
       // Select the row at index 6 after component created.
       ganttInstance.current.selectedRowIndex = 6;
@@ -4209,7 +4209,7 @@ function App() {
   };
 
   const created = () => {
-    console.log("Gantt component created.");
+    console.log("Gantt Chart component created.");
     if (ganttInstance.current) {
       // Select the row at index 6 after component created.
       ganttInstance.current.selectedRowIndex = 6;
@@ -4267,7 +4267,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## dataBound
 
-The [dataBound](https://ej2.syncfusion.com/react/documentation/api/gantt/#databound) event is triggered after the Gantt component has successfully bound its data source and rendered the task data. This event is useful for executing logic that depends on the data being fully loaded and available in the UI.
+The [dataBound](https://ej2.syncfusion.com/react/documentation/api/gantt#databound) event is triggered after the Gantt Chart component has successfully bound its data source and rendered the task data. This event is useful for executing logic that depends on the data being fully loaded and available in the UI.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -4437,7 +4437,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## destroyed
 
-The [destroyed](https://ej2.syncfusion.com/react/documentation/api/gantt/#destroyed) event is triggered when the Gantt component is removed from the DOM using the `destroy` method. This event is useful for handling cleanup operations and releasing resources associated with the component instance.
+The [destroyed](https://ej2.syncfusion.com/react/documentation/api/gantt#destroyed) event is triggered when the Gantt Chart component is removed from the DOM using the `destroy` method. This event is useful for handling cleanup operations and releasing resources associated with the component instance.
 
 The event provides an argument of type `object` with the following properties:
 
@@ -4512,7 +4512,7 @@ function App() {
 
   const destroyed = (args) => {
     // Log the destroyed event arguments.
-    console.log("Gantt component destroyed.", args);
+    console.log("Gantt Chart component destroyed.", args);
     // You can perform cleanup or reset logic here.
   };
 
@@ -4601,7 +4601,7 @@ function App() {
 
   const destroyed = (args: object) => {
     // Log the destroyed event arguments.
-    console.log("Gantt component destroyed.", args);
+    console.log("Gantt Chart component destroyed.", args);
     // You can perform cleanup or reset logic here.
   };
 
@@ -4666,7 +4666,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## endEdit
 
-The [endEdit](https://ej2.syncfusion.com/react/documentation/api/gantt/#endedit) event is triggered after a task is modified through cell editing. It enables post-edit actions such as validation, logging, or syncing changes with external systems.
+The [endEdit](https://ej2.syncfusion.com/react/documentation/api/gantt#endedit) event is triggered after a task is modified through cell editing. It enables post-edit actions such as validation, logging, or syncing changes with external systems.
 
 The event provides an argument of type [ITaskbarEditedEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/iTaskbarEditedEventArgs/) with the following properties:
 
@@ -4886,7 +4886,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## excelExportComplete
 
-The [excelExportComplete](https://ej2.syncfusion.com/react/documentation/api/gantt/#excelexportcomplete) event is triggered after the Gantt component has completed exporting data to an Excel file. This event enables post-export actions such as displaying notifications, logging activity, or applying additional formatting to the exported content.
+The [excelExportComplete](https://ej2.syncfusion.com/react/documentation/api/gantt#excelexportcomplete) event is triggered after the Gantt Chart component has completed exporting data to an Excel file. This event enables post-export actions such as displaying notifications, logging activity, or applying additional formatting to the exported content.
 
 The event provides an argument of type [ExcelExportCompleteArgs](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportCompleteArgs/) with the following property:
 
@@ -4971,7 +4971,7 @@ function App() {
   const toolbarClick = (args) => {
     // Check if the clicked toolbar item is the Excel export button.
     if (args.item.id === 'gantt_chart_excelexport') {
-      // Trigger Excel export from the Gantt component.
+      // Trigger Excel export from the Gantt Chart component.
       ganttInstance.current.excelExport();
     }
   };
@@ -5066,7 +5066,7 @@ function App() {
   const toolbarClick = (args: ClickEventArgs) => {
     // Check if the clicked toolbar item is the Excel export button.
     if (args.item.id === 'gantt_chart_excelexport') {
-      // Trigger Excel export from the Gantt component.
+      // Trigger Excel export from the Gantt Chart component.
       ganttInstance.current.excelExport();
     }
   };
@@ -5122,7 +5122,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## excelHeaderQueryCellInfo
 
-The [excelHeaderQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/gantt/#excelheaderquerycellinfo) event is triggered during the Excel export process when customizing header cells in the exported file. It allows modification of header text, styles, and other properties before they are written to the Excel sheet.
+The [excelHeaderQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/gantt#excelheaderquerycellinfo) event is triggered during the Excel export process when customizing header cells in the exported file. It allows modification of header text, styles, and other properties before they are written to the Excel sheet.
 
 The event provides an argument of type [ExcelHeaderQueryCellInfoEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/excelHeaderQueryCellInfoEventArgs/) with the following properties:
 
@@ -5361,7 +5361,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## excelQueryCellInfo
 
-The [excelQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/gantt/#excelquerycellinfo) event is triggered during the Excel export process when customizing individual data cells in the exported file. It allows modification of cell values, styles, and formatting before they are written to the Excel sheet.
+The [excelQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/gantt#excelquerycellinfo) event is triggered during the Excel export process when customizing individual data cells in the exported file. It allows modification of cell values, styles, and formatting before they are written to the Excel sheet.
 
 The event provides an argument of type [ExcelQueryCellInfoEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/excelQueryCellInfoEventArgs/) with the following properties:
 
@@ -5605,7 +5605,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## expanded
 
-The [expanded](https://ej2.syncfusion.com/react/documentation/api/gantt/#expanded) event is triggered after a row is expanded in the Gantt Chart. It enables actions that respond to row expansion, such as loading additional data, updating UI elements, or tracking user interaction.
+The [expanded](https://ej2.syncfusion.com/react/documentation/api/gantt#expanded) event is triggered after a row is expanded in the Gantt Chart. It enables actions that respond to row expansion, such as loading additional data, updating UI elements, or tracking user interaction.
 
 The event provides an argument of type [ICollapsingEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/iCollapsingEventArgs/) with the following properties:
 
@@ -5808,7 +5808,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## expanding
 
-The [expanding](https://ej2.syncfusion.com/react/documentation/api/gantt/#expanding) event is triggered before a row is expanded in the Gantt Chart. It enables interception of the expansion process and allows cancellation based on custom logic or conditions.
+The [expanding](https://ej2.syncfusion.com/react/documentation/api/gantt#expanding) event is triggered before a row is expanded in the Gantt Chart. It enables interception of the expansion process and allows cancellation based on custom logic or conditions.
 
 The event provides an argument of type [ICollapsingEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/iCollapsingEventArgs/) with the following properties:
 
@@ -6021,7 +6021,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## headerCellInfo
 
-The [headerCellInfo](https://ej2.syncfusion.com/react/documentation/api/gantt/#headercellinfo) event is triggered during the rendering of column header cells in the Gantt Chart. It allows customization of header cell appearance and content before they are displayed in the UI.
+The [headerCellInfo](https://ej2.syncfusion.com/react/documentation/api/gantt#headercellinfo) event is triggered during the rendering of column header cells in the Gantt Chart. It allows customization of header cell appearance and content before they are displayed in the UI.
 
 The event provides an object of type [HeaderCellInfoEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/headerCellInfoEventArgs/) with the following properties:
 
@@ -6238,7 +6238,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## load
 
-The [load](https://ej2.syncfusion.com/react/documentation/api/gantt/#load) event is triggered before the Gantt Chart component is rendered. It allows execution of pre-rendering logic such as modifying initial settings, injecting dynamic configurations, or preparing data before the component is displayed.
+The [load](https://ej2.syncfusion.com/react/documentation/api/gantt#load) event is triggered before the Gantt Chart component is rendered. It allows execution of pre-rendering logic such as modifying initial settings, injecting dynamic configurations, or preparing data before the component is displayed.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -6484,7 +6484,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## onMouseMove
 
-The [onMouseMove](https://ej2.syncfusion.com/react/documentation/api/gantt/#onmousemove) event is triggered when the mouse moves within the Gantt Chart area. It enables tracking of cursor movement and interaction with elements under the pointer.
+The [onMouseMove](https://ej2.syncfusion.com/react/documentation/api/gantt#onmousemove) event is triggered when the mouse moves within the Gantt Chart area. It enables tracking of cursor movement and interaction with elements under the pointer.
 
 The event provides an argument of type [IMouseMoveEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/iMouseMoveEventArgs/) with the following properties:
 
@@ -6711,7 +6711,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## onTaskbarClick
 
-The [onTaskbarClick](https://ej2.syncfusion.com/react/documentation/api/gantt/#ontaskbarclick) event is triggered when a taskbar element is clicked in the Gantt Chart. It supports custom actions based on the selected task, such as displaying task details, navigating to related views, or tracking interactions.
+The [onTaskbarClick](https://ej2.syncfusion.com/react/documentation/api/gantt#ontaskbarclick) event is triggered when a taskbar element is clicked in the Gantt Chart. It supports custom actions based on the selected task, such as displaying task details, navigating to related views, or tracking interactions.
 
 The event provides an argument of type [ITaskbarClickEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/iTaskbarClickEventArgs/) with the following properties:
 
@@ -6937,7 +6937,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## pdfColumnHeaderQueryCellInfo
 
-The [pdfColumnHeaderQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/gantt/#pdfcolumnheaderquerycellinfo) event is triggered before each column header cell is exported to a PDF document in the Gantt Chart. It enables customization of header cell content, style, and formatting during the export process.
+The [pdfColumnHeaderQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/gantt#pdfcolumnheaderquerycellinfo) event is triggered before each column header cell is exported to a PDF document in the Gantt Chart. It enables customization of header cell content, style, and formatting during the export process.
 
 The event provides an argument of type [PdfColumnHeaderQueryCellInfoEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/pdfColumnHeaderQueryCellInfoEventArgs/)  with the following properties:
 
@@ -7188,7 +7188,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## pdfExportComplete
 
-The [pdfExportComplete](https://ej2.syncfusion.com/react/documentation/api/gantt/#pdfexportcomplete) event is triggered after the Gantt Chart completes the process of exporting data to a PDF document. It enables post-export operations such as handling the generated file, displaying notifications, or logging export activity.
+The [pdfExportComplete](https://ej2.syncfusion.com/react/documentation/api/gantt#pdfexportcomplete) event is triggered after the Gantt Chart completes the process of exporting data to a PDF document. It enables post-export operations such as handling the generated file, displaying notifications, or logging export activity.
 
 The event provides an `object` with the following property:
 
@@ -7431,7 +7431,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## pdfQueryCellInfo
 
-The [pdfQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/gantt/#pdfquerycellinfo) event is triggered for each cell during the PDF export process in the Gantt Chart. It allows customization of individual cell content, style, and formatting in the exported PDF document.
+The [pdfQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/gantt#pdfquerycellinfo) event is triggered for each cell during the PDF export process in the Gantt Chart. It allows customization of individual cell content, style, and formatting in the exported PDF document.
 
 The event provides an argument of type [PdfExportCompleteArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/pdfQueryCellInfoEventArgs/) with the following properties:
 
@@ -7683,7 +7683,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## pdfQueryTaskbarInfo
 
-The [pdfQueryTaskbarInfo](https://ej2.syncfusion.com/react/documentation/api/gantt/#pdfquerytaskbarinfo) event is triggered for each taskbar during the PDF export process in the Gantt Chart. This event allows customization of the taskbar appearance and content in the exported PDF document.
+The [pdfQueryTaskbarInfo](https://ej2.syncfusion.com/react/documentation/api/gantt#pdfquerytaskbarinfo) event is triggered for each taskbar during the PDF export process in the Gantt Chart. This event allows customization of the taskbar appearance and content in the exported PDF document.
 
 The event provides an argument of type [PdfQueryTaskbarInfoEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/pdfQueryTaskbarInfoEventArgs/) with the following properties:
 
@@ -7770,7 +7770,7 @@ function App() {
   };
 
   const pdfQueryTaskbarInfo = (args) => {
-    args.taskbar.taskColor = new PdfColor(234, 234, 234);;
+    args.taskbar.taskColor = new PdfColor(234, 234, 234);
     args.taskbar.taskColor = new PdfColor(255, 87, 34); 
     args.taskbar.progressColor = new PdfColor(0, 188, 212);
     console.log('PDF Taskbar Info:', args);
@@ -7869,7 +7869,7 @@ function App() {
   };
 
   const pdfQueryTaskbarInfo = (args: PdfQueryTaskbarInfoEventArgs) => {
-    args.taskbar.taskColor = new PdfColor(234, 234, 234);;
+    args.taskbar.taskColor = new PdfColor(234, 234, 234);
     args.taskbar.taskColor = new PdfColor(255, 87, 34); 
     args.taskbar.progressColor = new PdfColor(0, 188, 212);
     console.log('PDF Taskbar Info:', args);
@@ -7932,7 +7932,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## pdfQueryTimelineCellInfo
 
-The [pdfQueryTimelineCellInfo](https://ej2.syncfusion.com/react/documentation/api/gantt/#pdfquerytimelinecellinfo) event is triggered for each timeline cell during the PDF export process in the Gantt chart. It allows customization of the appearance, content, and style of timeline cells in the exported PDF document.
+The [pdfQueryTimelineCellInfo](https://ej2.syncfusion.com/react/documentation/api/gantt#pdfquerytimelinecellinfo) event is triggered for each timeline cell during the PDF export process in the Gantt chart. It allows customization of the appearance, content, and style of timeline cells in the exported PDF document.
 
 The event provides an argument of type [pdfQueryTimelineCellInfoEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/pdfQueryTimelineCellInfoEventArgs/) with the following properties:
 
@@ -8173,7 +8173,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## queryCellInfo
 
-The [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/gantt/#querytaskbarinfo) event is triggered during the rendering of each cell in the Gantt Chart. It allows customization of cell content, appearance, and style before they are displayed.
+The [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/gantt#querytaskbarinfo) event is triggered during the rendering of each cell in the Gantt Chart. It allows customization of cell content, appearance, and style before they are displayed.
 
 The event provides an argument of type  [QueryCellInfoEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/querycellinfoeventargs/) with the following properties:
 
@@ -8429,7 +8429,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## queryTaskbarInfo
 
-The [queryTaskbarInfo](https://ej2.syncfusion.com/react/documentation/api/gantt/#querytaskbarinfo) event is triggered while rendering each taskbar in the Gantt Chart. It allows customization of taskbar appearance, content, and behavior before they are displayed in the UI.
+The [queryTaskbarInfo](https://ej2.syncfusion.com/react/documentation/api/gantt#querytaskbarinfo) event is triggered while rendering each taskbar in the Gantt Chart. It allows customization of taskbar appearance, content, and behavior before they are displayed in the UI.
 
 The event provides an argument of type [IQueryTaskbarInfoEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/iquerytaskbarinfoeventargs/) with the following properties:
 
@@ -8691,7 +8691,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## recordDoubleClick
 
-The [recordDoubleClick](https://ej2.syncfusion.com/react/documentation/api/gantt/#recorddoubleclick) event is triggered when a row in the Gantt Chart is double-clicked. It enables custom actions based on the selected task, such as opening detailed views, initiating inline editing, or displaying contextual information.
+The [recordDoubleClick](https://ej2.syncfusion.com/react/documentation/api/gantt#recorddoubleclick) event is triggered when a row in the Gantt Chart is double-clicked. It enables custom actions based on the selected task, such as opening detailed views, initiating inline editing, or displaying contextual information.
 
 The event provides an argument of type [RecordDoubleClickEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/recorddoubleclickeventargs/) with the following properties:
 
@@ -8944,7 +8944,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## resizeStart
 
-The [resizeStart](https://ej2.syncfusion.com/react/documentation/api/gantt/#resizestart) event is triggered when a column resize action begins in the Gantt Chart. It allows interception of the resize process to apply validations or restrict resizing for specific columns.
+The [resizeStart](https://ej2.syncfusion.com/react/documentation/api/gantt#resizestart) event is triggered when a column resize action begins in the Gantt Chart. It allows interception of the resize process to apply validations or restrict resizing for specific columns.
 
 The event provides an argument of type [ResizeArgs](https://ej2.syncfusion.com/react/documentation/api/grid/resizeArgs/) with the following properties:
 
@@ -9178,7 +9178,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## resizeStop
 
-The [resizeStop](https://ej2.syncfusion.com/react/documentation/api/gantt/#resizestop) event is triggered when a column resize operation is completed in the Gantt Chart. It enables layout updates, persistence of dimensions, or UI adjustments.
+The [resizeStop](https://ej2.syncfusion.com/react/documentation/api/gantt#resizestop) event is triggered when a column resize operation is completed in the Gantt Chart. It enables layout updates, persistence of dimensions, or UI adjustments.
 
 The event provides an argument of type [ResizeArgs](https://ej2.syncfusion.com/react/documentation/api/grid/resizeArgs/) with the following properties:
 
@@ -9404,7 +9404,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## resizing
 
-The [resizing](https://ej2.syncfusion.com/react/documentation/api/gantt/#resizing) event is triggered continuously while a column is being resized in the Gantt Chart. It provides access to the current column width and supports dynamic updates to layout, styling, or constraints while the resize operation is in progress. This event is commonly used to enforce minimum or maximum widths, preview layout changes, or display contextual indicators during interaction.
+The [resizing](https://ej2.syncfusion.com/react/documentation/api/gantt#resizing) event is triggered continuously while a column is being resized in the Gantt Chart. It provides access to the current column width and supports dynamic updates to layout, styling, or constraints while the resize operation is in progress. This event is commonly used to enforce minimum or maximum widths, preview layout changes, or display contextual indicators during interaction.
 
 The event provides an argument of type [ResizeArgs](https://ej2.syncfusion.com/react/documentation/api/grid/resizeArgs/) with the following properties:
 
@@ -9630,7 +9630,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## rowDataBound
 
-The [rowDataBound](https://ej2.syncfusion.com/react/documentation/api/gantt/#rowdatabound) event is triggered each time a row is bound to data in the Gantt chart. It enables customization of row appearance and content based on the associated task data. This event supports scenarios such as applying conditional formatting, injecting tooltips or icons, and modifying row structure to reflect task-specific context or status.
+The [rowDataBound](https://ej2.syncfusion.com/react/documentation/api/gantt#rowdatabound) event is triggered each time a row is bound to data in the Gantt chart. It enables customization of row appearance and content based on the associated task data. This event supports scenarios such as applying conditional formatting, injecting tooltips or icons, and modifying row structure to reflect task-specific context or status.
 
 The event provides an argument of type [RowDataBoundEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/rowDataBoundEventArgs/) with the following properties:
 
@@ -9860,7 +9860,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## rowDeselected
 
-The [rowDeselected](https://ej2.syncfusion.com/react/documentation/api/gantt/#rowdeselected) event is triggered after a row is deselected in the Gantt Chart. It enables logic execution tied to selection changes, such as removing visual highlights, updating contextual UI elements, or tracking interaction patterns. This event supports scenarios involving both user-driven and programmatic deselection, ensuring consistent behavior across selection workflows.
+The [rowDeselected](https://ej2.syncfusion.com/react/documentation/api/gantt#rowdeselected) event is triggered after a row is deselected in the Gantt Chart. It enables logic execution tied to selection changes, such as removing visual highlights, updating contextual UI elements, or tracking interaction patterns. This event supports scenarios involving both user-driven and programmatic deselection, ensuring consistent behavior across selection workflows.
 
 The event provides an argument of type [RowDeselectEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/rowDeselectEventArgs/) with the following properties:
 
@@ -10089,7 +10089,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## rowDeselecting
 
-The [rowDeselecting](https://ej2.syncfusion.com/react/documentation/api/gantt/#rowdeselecting) event is triggered before a row is deselected in the Gantt Chart. It enables conditional control over the deselection process, allowing validations, confirmation prompts, or logic to prevent deselection based on task state or application rules. This event supports consistent behavior across both interactive and programmatic selection workflows.
+The [rowDeselecting](https://ej2.syncfusion.com/react/documentation/api/gantt#rowdeselecting) event is triggered before a row is deselected in the Gantt Chart. It enables conditional control over the deselection process, allowing validations, confirmation prompts, or logic to prevent deselection based on task state or application rules. This event supports consistent behavior across both interactive and programmatic selection workflows.
 
 The event provides an argument of type [RowDeselectEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/rowDeselectEventArgs/) with the following properties:
 
@@ -10318,7 +10318,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## rowDrag
 
-The [rowDrag](https://ej2.syncfusion.com/react/documentation/api/gantt/#rowdrag) event is triggered while a row is being dragged in the Gantt Chart. It allows customization during drag operations, such as showing visual indicators, applying drag constraints, or tracking drag operations.
+The [rowDrag](https://ej2.syncfusion.com/react/documentation/api/gantt#rowdrag) event is triggered while a row is being dragged in the Gantt Chart. It allows customization during drag operations, such as showing visual indicators, applying drag constraints, or tracking drag operations.
 
 The event provides an argument of type [RowDragEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/rowDropEventArgs/) with the following properties:
 
@@ -10553,7 +10553,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## rowDragStart
 
-The [rowDragStart](https://ej2.syncfusion.com/react/documentation/api/gantt/#rowdragstart) event is triggered when a row drag operation begins in the Gantt Chart. It allows handling of drag initiation, such as applying movement restrictions, customizing visuals, or initiating tracking mechanisms.
+The [rowDragStart](https://ej2.syncfusion.com/react/documentation/api/gantt#rowdragstart) event is triggered when a row drag operation begins in the Gantt Chart. It allows handling of drag initiation, such as applying movement restrictions, customizing visuals, or initiating tracking mechanisms.
 
 The event provides an argument of type [RowDragEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/rowDropEventArgs/) with the following properties:
 
@@ -10789,7 +10789,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## rowDragStartHelper
 
-The [rowDragStartHelper](https://ej2.syncfusion.com/react/documentation/api/gantt/#rowdragstarthelper) event is triggered before a row drag operation begins in the Gantt Chart. It allows handling of drag eligibility checks, such as validating conditions, modifying behavior, or canceling the drag action.
+The [rowDragStartHelper](https://ej2.syncfusion.com/react/documentation/api/gantt#rowdragstarthelper) event is triggered before a row drag operation begins in the Gantt Chart. It allows handling of drag eligibility checks, such as validating conditions, modifying behavior, or canceling the drag action.
 
 The event provides an argument of type [RowDragEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/rowDropEventArgs/) with the following properties:
 
@@ -11022,7 +11022,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## rowDrop
 
-The [rowDrop](https://ej2.syncfusion.com/react/documentation/api/gantt/#rowdrop) event is triggered after a row is dropped into a new position in the Gantt Chart. It allows handling of row reordering, such as updating data, validating hierarchy changes, or tracking user actions.
+The [rowDrop](https://ej2.syncfusion.com/react/documentation/api/gantt#rowdrop) event is triggered after a row is dropped into a new position in the Gantt Chart. It allows handling of row reordering, such as updating data, validating hierarchy changes, or tracking user actions.
 
 The event provides an argument of type [RowDragEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/rowDropEventArgs/) with the following properties:
 
@@ -11259,7 +11259,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## rowSelected
 
-The [rowSelected](https://ej2.syncfusion.com/react/documentation/api/gantt/#rowselected) event is triggered after a row is selected in the Gantt Chart. It enables actions that respond to selection changes, such as styling the row, displaying related details, or tracking user interaction.
+The [rowSelected](https://ej2.syncfusion.com/react/documentation/api/gantt#rowselected) event is triggered after a row is selected in the Gantt Chart. It enables actions that respond to selection changes, such as styling the row, displaying related details, or tracking user interaction.
 
 The event provides an argument of type [RowSelectEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/rowselecteventargs/) with the following properties:
 
@@ -11506,7 +11506,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## rowSelecting
 
-The [rowSelecting](https://ej2.syncfusion.com/react/documentation/api/gantt/#rowselecting) event is triggered before a row is selected in the Gantt Chart. It enables actions that intercept the selection process, such as validating conditions, prompting confirmation, or canceling the selection.
+The [rowSelecting](https://ej2.syncfusion.com/react/documentation/api/gantt#rowselecting) event is triggered before a row is selected in the Gantt Chart. It enables actions that intercept the selection process, such as validating conditions, prompting confirmation, or canceling the selection.
 
 The event provides an argument of type [RowSelectingEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/rowselecteventargs/) with the following properties:
 
@@ -11754,7 +11754,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## splitterResizeStart
 
-The [splitterResizeStart](https://ej2.syncfusion.com/react/documentation/api/gantt/#splitterresizestart) event is triggered when the splitter bar begins resizing in the Gantt Chart layout.It enables actions that respond to resize initiation, such as applying layout constraints, customizing visuals, or tracking user interaction.
+The [splitterResizeStart](https://ej2.syncfusion.com/react/documentation/api/gantt#splitterresizestart) event is triggered when the splitter bar begins resizing in the Gantt Chart layout.It enables actions that respond to resize initiation, such as applying layout constraints, customizing visuals, or tracking user interaction.
 
 The event provides an argument of type [ResizeArgs](https://ej2.syncfusion.com/react/documentation/api/grid/resizeArgs/) with the following properties:
 
@@ -11990,7 +11990,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## splitterResized
 
-The [splitterResized](https://ej2.syncfusion.com/react/documentation/api/gantt/#splitterresized) event is triggered after the splitter bar has been resized in the Gantt Chart layout. It enables actions that respond to final layout changes, such as saving pane dimensions, updating related components, or tracking user interaction.
+The [splitterResized](https://ej2.syncfusion.com/react/documentation/api/gantt#splitterresized) event is triggered after the splitter bar has been resized in the Gantt Chart layout. It enables actions that respond to final layout changes, such as saving pane dimensions, updating related components, or tracking user interaction.
 
 The event provides an argument of type [ISplitterResizedEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/isplitterresizedeventargs/) with the following properties:
 
@@ -12227,7 +12227,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## splitterResizing
 
-The [splitterResizing](https://ej2.syncfusion.com/react/documentation/api/gantt/#splitterresizing) event is triggered continuously while the splitter bar is being dragged in the Gantt Chart layout. It enables responsive actions during resizing, such as enforcing layout constraints, updating visual elements, or tracking user interaction.
+The [splitterResizing](https://ej2.syncfusion.com/react/documentation/api/gantt#splitterresizing) event is triggered continuously while the splitter bar is being dragged in the Gantt Chart layout. It enables responsive actions during resizing, such as enforcing layout constraints, updating visual elements, or tracking user interaction.
 
 The event provides an argument of type `ResizingEventArgs` with the following properties:
 
@@ -12458,7 +12458,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## taskbarEdited
 
-The [taskbarEdited](https://ej2.syncfusion.com/react/documentation/api/gantt/#taskbaredited) event is triggered after a taskbar is modified in the Gantt Chart. It enables actions that respond to task updates, such as saving changes, validating edits, or updating related components.
+The [taskbarEdited](https://ej2.syncfusion.com/react/documentation/api/gantt#taskbaredited) event is triggered after a taskbar is modified in the Gantt Chart. It enables actions that respond to task updates, such as saving changes, validating edits, or updating related components.
 
 The event provides an argument of type [TaskbarEditedEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/itaskbareditedeventargs/) with the following properties:
 
@@ -12711,7 +12711,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## taskbarEditing
 
-The [taskbarEditing](https://ej2.syncfusion.com/react/documentation/api/gantt/#taskbarediting) event is triggered while a taskbar is being dragged or resized in the Gantt Chart. It enables actions that respond to live taskbar changes, such as enforcing constraints, updating tooltips, or canceling edits based on conditions.
+The [taskbarEditing](https://ej2.syncfusion.com/react/documentation/api/gantt#taskbarediting) event is triggered while a taskbar is being dragged or resized in the Gantt Chart. It enables actions that respond to live taskbar changes, such as enforcing constraints, updating tooltips, or canceling edits based on conditions.
 
 The event provides an argument of type [ITaskbarEditedEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/iTaskbarEditedEventArgs/) with the following properties:
 
@@ -12955,7 +12955,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## toolbarClick
 
-The [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/gantt/#toolbarclick) event is triggered when any toolbar item is clicked in the Gantt chart. It enables actions that respond to toolbar interactions, such as overriding default behavior, confirming actions, or triggering external workflows.
+The [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/gantt#toolbarclick) event is triggered when any toolbar item is clicked in the Gantt chart. It enables actions that respond to toolbar interactions, such as overriding default behavior, confirming actions, or triggering external workflows.
 
 The event provides an argument of type [ClickEventArgs](https://ej2.syncfusion.com/react/documentation/api/toolbar/clickEventArgs/) with the following properties:
 

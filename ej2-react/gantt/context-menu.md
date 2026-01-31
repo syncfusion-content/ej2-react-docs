@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Context menu in React Gantt component | Syncfusion
-description: Learn here all about Context menu in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Context menu in React Gantt Chart component | Syncfusion
+description: Learn here all about Context menu in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Context menu 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Context menu in React Gantt component
+# Context menu in React Gantt Chart component
 
-The Gantt control allows you to perform quick actions by using context menu. When right-clicking the context menu, the context menu options are shown. To enable this feature, set the [`enableContextMenu`](https://ej2.syncfusion.com/react/documentation/api/gantt/#enablecontextmenu) to true. The default context menu options are enabled using the [`editSettings`](https://ej2.syncfusion.com/react/documentation/api/gantt/#editsettings) property. The context menu options can be customized using the [`contextMenuItems`](https://ej2.syncfusion.com/react/documentation/api/gantt/#contextmenuitems) property.
+The Gantt control allows you to perform quick actions by using context menu. When right-clicking the context menu, the context menu options are shown. To enable this feature, set the [enableContextMenu](https://ej2.syncfusion.com/react/documentation/api/gantt#enablecontextmenu) to true. The default context menu options are enabled using the [editSettings](https://ej2.syncfusion.com/react/documentation/api/gantt#editsettings) property. The context menu options can be customized using the [contextMenuItems](https://ej2.syncfusion.com/react/documentation/api/gantt#contextmenuitems) property.
 
-To use the context menu, inject the [`ContextMenu`](https://ej2.syncfusion.com/react/documentation/api/gantt/#contextmenumodule) module into the Gantt component.
+To use the context menu, inject the [ContextMenu](https://ej2.syncfusion.com/react/documentation/api/gantt#contextmenumodule) module into the Gantt Chart component.
 
 The default items are listed in the following table.
 
@@ -48,7 +48,7 @@ Items| Description
 
 ## Custom context menu items
 
-The custom context menu items can be added by defining the [`contextMenuItems`](https://ej2.syncfusion.com/react/documentation/api/gantt/#contextmenuitems) as a collection of [`contextMenuItemModel`](https://ej2.syncfusion.com/react/documentation/api/grid/contextMenuItemModel/). Actions for the customized items can be defined in the [`contextMenuClick`](https://ej2.syncfusion.com/react/documentation/api/gantt/#contextmenuclick) event and the visibility of customized items can be defined in the [`contextMenuOpen`](https://ej2.syncfusion.com/react/documentation/api/gantt/#contextmenuopen) event.
+The custom context menu items can be added by defining the [contextMenuItems](https://ej2.syncfusion.com/react/documentation/api/gantt#contextmenuitems) as a collection of [contextMenuItemModel](https://ej2.syncfusion.com/react/documentation/api/grid/contextMenuItemModel/). Actions for the customized items can be defined in the [contextMenuClick](https://ej2.syncfusion.com/react/documentation/api/gantt#contextmenuclick) event and the visibility of customized items can be defined in the [contextMenuOpen](https://ej2.syncfusion.com/react/documentation/api/gantt#contextmenuopen) event.
 
 To create custom context menu items for header area, define the target property as `.e-gridheader`.
 
@@ -72,4 +72,4 @@ The following sample shows context menu item for parent rows to expand or collap
 
 ## Touch interaction
 
-To perform `long press` action on a row, [`context menu`](context-menu/#context-menu) is opened, and then tap a menu item to trigger its action.
+To perform `long press` action on a row, [context menu](context-menu#context-menu) is opened, and then tap a menu item to trigger its action.

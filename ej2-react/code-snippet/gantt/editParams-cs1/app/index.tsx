@@ -1,7 +1,8 @@
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, ColumnsDirective, ColumnDirective, Edit } from '@syncfusion/ej2-react-gantt';
-import { DropDownList, DropDownListComponent } from '@syncfusion/ej2-dropdowns';
+import { DropDownList } from '@syncfusion/ej2-dropdowns';
 import { data } from './datasource';
 import { IEditCell } from '@syncfusion/ej2-grids';
 function App () {
@@ -23,7 +24,7 @@ function App () {
             dropdownlistObj = new DropDownList({
                 dataSource: ganttInstance.treeGrid.grid.dataSource,
                 fields: { value: 'TaskName' },
-                value: (args as any).rowData[(args as any).column.field],
+                value: args.rowData[args.column.field],
                 floatLabelType: 'Auto',
             });
             dropdownlistObj.appendTo(elem);

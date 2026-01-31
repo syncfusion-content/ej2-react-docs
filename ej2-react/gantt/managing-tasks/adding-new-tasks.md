@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Adding new tasks in React Gantt Chart Component | Syncfusion
-description: Learn how to add tasks dynamically in the Syncfusion React Gantt Chart component using toolbar, context menu, or programmatic methods for project management.
+title: Adding New Tasks in React Gantt Chart Component | Syncfusion
+description: Learn here all about Adding new tasks in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
+control: Adding new tasks 
 platform: ej2-react
-control: Adding new tasks
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adding new tasks in React Gantt Chart Component
+# Adding New Tasks in React Gantt Chart Component
 
-Adding new tasks to the React Gantt Chart component enables flexible project management by inserting tasks like milestones or subtasks using the toolbar, context menu, or programmatic methods. With [editSettings.allowAdding](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings#allowadding) enabled and `Edit` injected, tasks can be added at the top, as children, or at specific positions, seamlessly integrating with dependencies and critical path calculations. Ensure task data aligns with [taskFields](https://ej2.syncfusion.com/react/documentation/api/gantt#taskfields) mappings (e.g., id, name, startDate) for successful addition, and verify parent rows support subtasks when adding child tasks. The toolbar opens a dialog for task details, the context menu provides positional options, and the [addRecord](https://ej2.syncfusion.com/react/documentation/api/gantt#addrecord) method offers precise control, making task creation efficient for dynamic project updates.
+Tasks can be dynamically added to the Gantt project by enabling the [editSettings.allowAdding](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings#allowadding) property.
 
-## Add tasks via toolbar
+## Toolbar
 
-Enable task addition through the toolbar by setting [editSettings.allowAdding](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings#allowadding) to **true** and injecting `Edit`. Clicking the toolbar’s **Add** icon opens a dialog to enter details like task name, start date, and duration, adding the task at the top of the Gantt chart. This is ideal for quickly inserting high-level tasks or milestones, with all required fields (e.g., TaskID) validated for successful creation.
+A row can be added to the Gantt Chart component from the toolbar while the [editSettings.allowAdding](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings#allowadding) property is set to `true`. After clicking the toolbar add icon, you should provide the task information in the add dialog.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -30,9 +30,11 @@ Enable task addition through the toolbar by setting [editSettings.allowAdding](h
         
 {% previewsample "page.domainurl/code-snippet/gantt/toolbarRowadding-cs1" %}
 
-## Add tasks via context menu
+> By default, a new row will be added to the top-most row in the Gantt Chart component.
 
-Enable context menu task addition by setting [enableContextMenu](https://ej2.syncfusion.com/react/documentation/api/gantt#enablecontextmenu) to **true**, injecting `ContextMenu` and `Edit`, and enabling [editSettings.allowAdding](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings#allowadding). Right-clicking a row opens a menu with **Above**, **Below**, and **Child** options. This method suits precise placement within project hierarchies.
+## Context menu
+
+A row can also be added above, below or child of the selected row by using context menu support. For this, we need to enable the property[enableContextMenu](https://ej2.syncfusion.com/react/documentation/api/gantt#enablecontextmenu) and inject the [ContextMenu](https://ej2.syncfusion.com/react/documentation/api/gantt#contextmodule) module into the Gantt control.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -48,9 +50,15 @@ Enable context menu task addition by setting [enableContextMenu](https://ej2.syn
         
 {% previewsample "page.domainurl/code-snippet/gantt/contextMenuRowAdding-cs1" %}
 
-## Add tasks programmatically
+## Using method
 
-Add tasks programmatically using the [addRecord](https://ej2.syncfusion.com/react/documentation/api/gantt#addrecord) method, specifying task data, `rowPosition` (**Top**, **Bottom**, **Above**, **Below**, **Child**), and an optional `rowIndex`. Inject `Edit` and ensure `taskFields` mappings are valid (e.g., unique TaskID). For example, adding a task as a child creates a subtask under a parent row, updating the project hierarchy. Verify dependencies to avoid issues like circular references.
+You can add rows to the Gantt Chart component dynamically using the [addRecord](https://ej2.syncfusion.com/react/documentation/api/gantt#addrecord) method and you can define the add position of the default new record by using the [rowPosition](https://ej2.syncfusion.com/react/documentation/api/gantt/rowPosition/) property. You can also pass the `rowIndex` as an additional parameter.
+
+* Top of all the rows.
+* Bottom to all the existing rows.
+* Above the selected row.
+* Below the selected row.
+* As child to the selected row.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -65,8 +73,3 @@ Add tasks programmatically using the [addRecord](https://ej2.syncfusion.com/reac
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/gantt/customRowadding-cs1" %}
-
-## See also
-- [How to configure task editing?](https://ej2.syncfusion.com/react/documentation/gantt/managing-tasks/editing-tasks)
-- [How to manage task dependencies?](https://ej2.syncfusion.com/react/documentation/gantt/taskdependency)
-- [How to configure critical path?](https://ej2.syncfusion.com/react/documentation/gantt/critical-path)
