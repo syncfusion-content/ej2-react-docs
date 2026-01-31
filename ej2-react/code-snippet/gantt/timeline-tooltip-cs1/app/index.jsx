@@ -2,9 +2,9 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-function  App(){
-    let ganttInstance;
-    const taskFields = {
+function App() {
+  let ganttInstance;
+  const taskFields = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -13,7 +13,7 @@ function  App(){
     progress: 'Progress',
     parentID: 'ParentID'
   };
-  function timelineTooltip (props) {
+  function timelineTooltip(props) {
     const tier = props.tier;
     const date = props.date;
     const endDate = new Date(date);
@@ -24,12 +24,12 @@ function  App(){
 
     return (
       <div style={{ padding: '5px' }}>
-        <div style={{ paddingBottom: '9px', textAlign: 'center' , borderBottom: `2px solid white` }}>
+        <div style={{ paddingBottom: '9px', textAlign: 'center', borderBottom: `2px solid white` }}>
           <span style={{ fontWeight: 'bold', fontSize: '14px' }}>
             {tier === 'topTier' ? props.value : date}
           </span>
         </div>
-        <div style={{ display: 'flex', paddingBottom: '5px',  paddingTop: '9px' }}>
+        <div style={{ display: 'flex', paddingBottom: '5px', paddingTop: '9px' }}>
           <span style={{ fontWeight: 'bold' }}>Active Tasks:</span>
           <span style={{ paddingLeft: '2px' }}>{data.activeTasks}</span>
         </div>
@@ -44,11 +44,11 @@ function  App(){
       </div>
     );
   };
-  
+
   const getTooltipData = (startDate, endDate, tier) => {
     const gantt = ganttInstance;
     let activeTasks = [];
-   
+
     if (tier === 'topTier') {
       activeTasks = gantt.currentViewData.filter((task) => {
         const taskStart = new Date(task['StartDate']);
@@ -70,7 +70,7 @@ function  App(){
     const milestones = activeTasks.filter((task) => task.Duration === 0);
     const totalProgress = activeTasks.reduce((acc, task) => acc + (task.Progress || 0), 0);
     const overallProgress = (activeTasks.length > 0) ? (totalProgress / activeTasks.length).toFixed(2) : '0';
-   
+
     return {
       activeTasks: activeTasks.length,
       milestones: milestones.length,
@@ -79,10 +79,10 @@ function  App(){
   }
   const template = timelineTooltip;
   const tooltipSettings = {
-    timeline:template
+    timeline: template
   };
-        return <GanttComponent dataSource={data} taskFields={taskFields}
-           tooltipSettings={tooltipSettings} height = '450px' ref={gantt => ganttInstance = gantt}>
-        </GanttComponent>
+  return <GanttComponent dataSource={data} taskFields={taskFields}
+    tooltipSettings={tooltipSettings} height='450px' ref={gantt => ganttInstance = gantt}>
+  </GanttComponent>
 };
 ReactDOM.render(<App />, document.getElementById('root'));

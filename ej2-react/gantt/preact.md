@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the React Gantt Component in the Preact Framework
 
-This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt component.
+This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component.
 
 `Preact` is a fast and lightweight JavaScript library for building user interfaces. It's often used as an alternative to larger frameworks like React. The key difference is that Preact is designed to be smaller in size and faster in performance, making it a good choice for projects where file size and load times are critical factors. 
 
@@ -85,7 +85,7 @@ Now that `my-project` is ready to run with default settings, let's add Syncfusio
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
-This article uses the [React Gantt component](https://www.syncfusion.com/react-components/react-gantt-chart) as an example. To use the React Gantt component in the project, the `@syncfusion/ej2-react-gantt` package needs to be installed using the following command:
+This article uses the [React Gantt Chart component](https://www.syncfusion.com/react-components/react-gantt-chart) as an example. To use the React Gantt Chart component in the project, the `@syncfusion/ej2-react-gantt` package needs to be installed using the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-gantt --save
@@ -101,7 +101,7 @@ yarn add @syncfusion/ej2-react-gantt
 
 You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> React component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to theme's in a React project.
 
-In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the Gantt component and its dependents were imported into the **src/style.css** file.
+In this article, the `Tailwind 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Tailwind 3` CSS styles for the Gantt Chart component and its dependents were imported into the **src/style.css** file.
 
 {% tabs %}
 {% highlight css tabtitle="~/src/style.css" %}
@@ -126,9 +126,9 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 > The order of importing CSS styles should be in line with its dependency graph.
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
-Follow the below steps to add the React Gantt component to the Vite project:
+Follow the below steps to add the React Gantt Chart component to the Vite project:
 
-1\. Before adding the Gantt component to your markup, import the Gantt component in the **src/index.jsx** file.
+1\. Before adding the Gantt Chart component to your markup, import the Gantt Chart component in the **src/index.jsx** file.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
@@ -138,7 +138,7 @@ import { GanttComponent } from '@syncfusion/ej2-react-gantt';
 {% endhighlight %}
 {% endtabs %}
 
-2\. Then, define the Gantt component with the [dataSource](https://helpej2.syncfusion.com/react/documentation/api/gantt#datasource) property. Declare the values for the `dataSource` property.
+2\. Then, define the Gantt Chart component with the [dataSource](https://helpej2.syncfusion.com/react/documentation/api/gantt#datasource) property. Declare the values for the `dataSource` property.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}

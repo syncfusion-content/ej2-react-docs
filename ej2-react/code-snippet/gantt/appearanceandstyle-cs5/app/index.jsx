@@ -9,7 +9,7 @@ function App(){
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    parentID: 'parentId'
+    parentID: 'ParentID'
   };
   return (
     <GanttComponent 

@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Filtering in React Gantt component | Syncfusion
-description: Learn here all about Filtering in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Filtering in React Gantt Chart Component | Syncfusion
+description: Learn here all about Filtering in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Filtering 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering in React Gantt component
+# Filtering in React Gantt Chart Component
 
-Filtering allows you to view specific or related records based on filter criteria. This can be done in the Gantt component by using the filter menu and toolbar search. To enable filtering in the Gantt component, set the [`allowFiltering`](https://ej2.syncfusion.com/react/documentation/api/gantt/#allowfiltering) to `true`. Menu -filtering support can be configured using the [`filterSettings`](https://ej2.syncfusion.com/react/documentation/api/gantt/filterSettings/) property and toolbar searching can be configured using the [`searchSettings`](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings/) property.
+Filtering allows you to view specific or related records based on filter criteria. This can be done in the Gantt Chart component by using the filter menu and toolbar search. To enable filtering in the Gantt Chart component, set the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/gantt#allowfiltering) to `true`. Menu -filtering support can be configured using the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/gantt/filterSettings/) property and toolbar searching can be configured using the [searchSettings](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings/) property.
 
-To use filter, inject the [`Filter`](https://ej2.syncfusion.com/react/documentation/api/gantt/#filtermodule) module into the Gantt component.
+To use filter, inject the [Filter](https://ej2.syncfusion.com/react/documentation/api/gantt#filtermodule) module into the Gantt Chart component.
 
 ## Filter hierarchy modes
 
-The Gantt component supports a set of filtering modes with the [`filterSettings.hierarchyMode`](https://ej2.syncfusion.com/react/documentation/api/gantt/filterSettings/#hierarchymode) property. The following are the types of filter hierarchy modes available in the Gantt component:
+The Gantt Chart component supports a set of filtering modes with the [filterSettings.hierarchyMode](https://ej2.syncfusion.com/react/documentation/api/gantt/filterSettings#hierarchymode) property. The following are the types of filter hierarchy modes available in the Gantt Chart component:
 
 * `Parent`: This is the default filter hierarchy mode in Gantt. The filtered records are displayed with their parent records. If the filtered records do not have any parent record, then only the filtered records will be displayed.
 
@@ -42,7 +42,7 @@ The Gantt component supports a set of filtering modes with the [`filterSettings.
 
 ## Initial filter
 
-To apply the filter at initial rendering, set the filter to `predicate` object in the [`filterSettings.columns`](https://ej2.syncfusion.com/react/documentation/api/gantt/filterSettings/#columns) property.
+To apply the filter at initial rendering, set the filter to `predicate` object in the [filterSettings.columns](https://ej2.syncfusion.com/react/documentation/api/gantt/filterSettings#columns) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -80,7 +80,7 @@ lessthanorequal |Checks whether the value is less than or equal to the specified
 
 ## Diacritics
 
-By default, the Gantt component ignores the diacritic characters while filtering. To include diacritic characters, set the [`filterSettings.ignoreAccent`](https://ej2.syncfusion.com/react/documentation/api/gantt/filterSettings/#ignoreaccent) to `true`.
+By default, the Gantt Chart component ignores the diacritic characters while filtering. To include diacritic characters, set the [filterSettings.ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/gantt/filterSettings#ignoreaccent) to `true`.
 
 In the following sample, type **Perform** in the `TaskName` column to filter diacritic characters.
 
@@ -100,7 +100,7 @@ In the following sample, type **Perform** in the `TaskName` column to filter dia
 
 ## Filtering a specific column by method
 
-You can filter the columns dynamically by using the [`filterByColumn`](https://ej2.syncfusion.com/react/documentation/api/gantt/#filterbycolumn) method.
+You can filter the columns dynamically by using the [filterByColumn](https://ej2.syncfusion.com/react/documentation/api/gantt#filterbycolumn) method.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -118,7 +118,7 @@ You can filter the columns dynamically by using the [`filterByColumn`](https://e
 
 ## Clear filtered columns
 
-You can clear all the filtering conditions done in the Gantt component by using the [`clearFiltering`](https://ej2.syncfusion.com/react/documentation/api/gantt/#clearfiltering) method.The following code snippet explains the above behavior.
+You can clear all the filtering conditions done in the Gantt Chart component by using the [clearFiltering](https://ej2.syncfusion.com/react/documentation/api/gantt#clearfiltering) method.The following code snippet explains the above behavior.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -136,11 +136,11 @@ You can clear all the filtering conditions done in the Gantt component by using 
 
 ## Custom component in filter menu
 
-The [`column.filter.ui`](https://ej2.syncfusion.com/react/documentation/api/gantt/column/#filter) is used to add custom filter components to a particular column.
+The [column.filter.ui](https://ej2.syncfusion.com/react/documentation/api/gantt/column#filter) is used to add custom filter components to a particular column.
 To implement a custom filter UI, define the following functions:
 
 * `create`:  Creates custom component.
-* `write`: Wire events for custom component.
+* `write`: Write events for custom component.
 * `read`: Read the filter value from custom component.
 
 In the following sample, the dropdown is used as a custom component in the TaskName column.

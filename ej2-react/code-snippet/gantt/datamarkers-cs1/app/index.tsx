@@ -1,66 +1,68 @@
-import { GanttComponent } from '@syncfusion/ej2-react-gantt';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Selection, Toolbar } from '@syncfusion/ej2-react-gantt';
+import type { TaskFieldsModel, ResourceFieldsModel, EditSettingsModel } from '@syncfusion/ej2-react-gantt';
+import { data, resources } from './datasource';
 
-const data: object[] = [
-    {
-        TaskID: 1,
-        TaskName: 'Project Initiation',
-        StartDate: new Date('04/02/2019'),
-        EndDate: new Date('04/21/2019'),
-    },
-    {
-        TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, ParentID: 1, Progress: 50,
-        Indicators: [
-            {
-                'date': '04/08/2019',
-                'iconClass': 'e-btn-icon e-notes-info e-icons e-icon-left e-gantt e-notes-info::before',
-                'name': 'Custom String',
-                'tooltip': 'Follow up'
-            },
-            {
-                'date': '04/11/2019',
-                'iconClass': 'e-btn-icon e-notes-info e-icons e-icon-left e-gantt e-notes-info::before',
-                'name': '<span style="color:red">String Template</span>',
-            }
-        ]
-    },
-    { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, ParentID: 1, Progress: 50 },
-    { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, ParentID: 1, Progress: 50, },
-    {
-        TaskID: 5,
-        TaskName: 'Project Estimation',
-        StartDate: new Date('04/02/2019'),
-        EndDate: new Date('04/21/2019'),
-    },
-    {
-        TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, ParentID: 5, Progress: 50,
-        Indicators: [
-            {
-                'date': '04/10/2019',
-                'iconClass': 'e-btn-icon e-notes-info e-icons e-icon-left e-gantt e-notes-info::before',
-                'name': 'Indicator title',
-                'tooltip': 'tooltip'
-            }
-        ]
-    },
-    { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, ParentID: 5, Progress: 50 },
-    { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, ParentID: 5, Progress: 50 }
-];
+function App() {
+  const taskFields: TaskFieldsModel = {
+    id: 'TaskID',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    endDate: 'EndDate',        
+    duration: 'Duration',
+    progress: 'Progress',
+    dependency: 'Predecessor',
+    parentID: 'ParentID',
+    resourceInfo: 'resources',
+    indicators: 'Indicators'
+  };
 
-function App(){
-    const taskFields: any = {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        resourceInfo: 'resources',
-        duration: 'Duration',
-        progress: 'Progress',
-        dependency: 'Predecessor',
-        parentID: 'ParentID',
-        indicators: 'Indicators'
-    };
-        return <GanttComponent dataSource={data} taskFields={taskFields} height = '400px'>
-        </GanttComponent>
-};
-ReactDOM.render(<App />, document.getElementById('root'));
+  const resourceFields: ResourceFieldsModel = {
+    id: 'resourceId',
+    name: 'resourceName'
+  };
+
+  const editSettings: EditSettingsModel = {
+    allowAdding: true,
+    allowEditing: true,
+    allowDeleting: true,
+    allowTaskbarEditing: true,
+    showDeleteConfirmDialog: true
+  };
+
+  const toolbar = ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll'];
+
+  return (
+    <div style={{ padding: 12 }}>
+      <GanttComponent
+        dataSource={data}
+        taskFields={taskFields}
+        resourceFields={resourceFields}
+        resources={resources}
+        height="430px"
+        allowSelection={true}
+        allowSorting={true}
+        enableContextMenu={true}
+        highlightWeekends={true}
+        treeColumnIndex={1}
+        toolbar={toolbar}
+        editSettings={editSettings}
+        projectStartDate={new Date(2026, 0, 25)}
+        projectEndDate={new Date(2026, 1, 28)}
+      >
+        <ColumnsDirective>
+          <ColumnDirective field="TaskID" headerText="ID" width="70" textAlign="Right" />
+          <ColumnDirective field="TaskName" headerText="Task Name" width="180" />
+          <ColumnDirective field="StartDate" headerText="Start" />
+          <ColumnDirective field="Duration" headerText="Duration (d)" />
+          <ColumnDirective field="Progress" headerText="Progress (%)" />
+          <ColumnDirective field="Predecessor" headerText="Depends On" />
+          <ColumnDirective field="resources" headerText="Resources" />
+        </ColumnsDirective>
+        <Inject services={[Selection, Toolbar]} />
+      </GanttComponent>
+    </div>
+  );
+}
+
+export default App;

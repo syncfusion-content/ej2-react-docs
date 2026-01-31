@@ -1,41 +1,111 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+
+import {
+  GanttComponent,
+  Inject,
+  Edit,
+  Toolbar,
+  Selection,
+  Filter,
+  TaskFieldsModel,
+  ToolbarItem,
+  EditSettingsModel
+} from '@syncfusion/ej2-react-gantt';
+
+import { SwitchComponent, ChangeEventArgs } from '@syncfusion/ej2-react-buttons';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
-import { GanttComponent, Inject, Toolbar, Filter, ColumnsDirective, ColumnDirective} from '@syncfusion/ej2-react-gantt';
+
 import { data } from './datasource';
-function App(){
-   let ganttInstance: any;
-    const taskFields: any = {
+
+function App() {
+  let ganttInstance: GanttComponent | null = null;
+  let message = '';
+
+  const taskSettings: TaskFieldsModel = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
+    endDate: 'EndDate',
     duration: 'Duration',
     progress: 'Progress',
     parentID: 'ParentID'
   };
-  const toolbarOptions: any[] = ['QuickFilter', 'ClearFilter'];
-  function enable() {
-      ganttInstance.toolbarModule.enableItems([ganttInstance.element.id + '_QuickFilter', ganttInstance.element.id + '_ClearFilter'], true);// enable toolbar items.
-   };
-   function disable() {
-      ganttInstance.toolbarModule.enableItems([ganttInstance.element.id + '_QuickFilter', ganttInstance.element.id + '_ClearFilter'], false);// disable toolbar items.
-    };
-   function toolbarClick(args: ClickEventArgs): void {
-        if (args.item.text === 'QuickFilter') {
-           ganttInstance.filterByColumn('TaskName', 'startswith', 'Identify');
-        }
-        if (args.item.text === 'ClearFilter') {
-          ganttInstance.clearFiltering();
-        }
-    };
-        return (<div>
-        <ButtonComponent  onClick= {enable}>Enable</ButtonComponent>
-        <ButtonComponent  onClick= { disable}>Disable</ButtonComponent>
-        <GanttComponent dataSource={data} taskFields={taskFields} toolbar={toolbarOptions}
-         toolbarClick={toolbarClick} allowFiltering={true} height = '450px'
-         ref={gantt => ganttInstance = gantt}>
-            <Inject services={[Toolbar, Filter]} />
-        </GanttComponent></div>)
-};
+
+  const editSettings: EditSettingsModel = {
+    allowAdding: true,
+    allowEditing: true,
+    allowDeleting: true
+  };
+
+  const toolbar: ToolbarItem[] = [
+    { text: 'Quick Filter', id: 'QuickFilter' },
+    { text: 'Clear Filter', id: 'ClearFilter' }
+  ];
+
+  const toolbarClick = (args: ClickEventArgs): void => {
+    if (!ganttInstance) return;
+
+    if (args.item.id === 'QuickFilter') {
+      ganttInstance.filterByColumn('TaskName', 'startswith', 'Approval');
+
+      message = 'Filtered rows starting with "Approval".';
+      document.getElementById('message')!.textContent = message;
+    }
+
+    if (args.item.id === 'ClearFilter') {
+      ganttInstance.clearFiltering();
+
+      message = 'Filters cleared.';
+      document.getElementById('message')!.textContent = message;
+    }
+  };
+
+  const onSwitchChange = (args: ChangeEventArgs): void => {
+    if (!ganttInstance) return;
+
+    const enable = args.checked as boolean;
+
+    ganttInstance.toolbarModule.enableItems(['QuickFilter', 'ClearFilter'], enable);
+
+    message = enable ? 'Toolbar items enabled.' : 'Toolbar items disabled.';
+    document.getElementById('message')!.textContent = message;
+  };
+
+  return (
+    <div>
+      <div style={{ marginBottom: '20px' }}>
+        <label style={{ marginRight: '10px', fontWeight: 'bold' }}>
+          Enable or disable toolbar items
+        </label>
+        <SwitchComponent checked={true} change={onSwitchChange} />
+      </div>
+
+      <p
+        id="message"
+        style={{
+          color: 'red',
+          textAlign: 'center',
+          fontWeight: 'bold'
+        }}
+      >
+        {message}
+      </p>
+
+      <GanttComponent
+        height="430px"
+        dataSource={data}
+        taskFields={taskSettings}
+        allowFiltering={true}
+        editSettings={editSettings}
+        toolbar={toolbar}
+        toolbarClick={toolbarClick}
+        ref={(gantt) => (ganttInstance = gantt)}
+      >
+        <Inject services={[Edit, Toolbar, Selection, Filter]} />
+      </GanttComponent>
+    </div>
+  );
+}
+
 ReactDOM.render(<App />, document.getElementById('root'));

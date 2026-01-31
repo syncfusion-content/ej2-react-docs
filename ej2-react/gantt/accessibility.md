@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Accessibility in React Gantt component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Gantt Chart component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Gantt component
+# Accessibility in React Gantt Chart component
 
-The Gantt component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Gantt Chart component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Gantt component is outlined below.
+The accessibility compliance for the Gantt Chart component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -41,7 +41,7 @@ The accessibility compliance for the Gantt component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Gantt component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns) patterns to meet the accessibility. The following ARIA attributes are used in the Gantt component:
+The Gantt Chart component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns) patterns to meet the accessibility. The following ARIA attributes are used in the Gantt Chart component:
 
 The following ARIA attributes are used in Gantt:
 
@@ -60,11 +60,11 @@ The following ARIA attributes are used in Gantt:
 
 ## Keyboard navigation
 
-The Gantt component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns) guideline, ensuring accessibility for users of assistive technologies (AT) and those who rely solely on keyboard navigation. The following keyboard shortcuts are supported by the Gantt component:
+The Gantt Chart component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns) guideline, ensuring accessibility for users of assistive technologies (AT) and those who rely solely on keyboard navigation. The following keyboard shortcuts are supported by the Gantt Chart component:
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Alt + J</kbd> | Focus Gantt component. |
+| <kbd>Alt + J</kbd> | Focus Gantt Chart component. |
 | <kbd>Tab / Shift + Tab</kbd> | Focus the next or previous element. |
 | <kbd>Home</kbd> | Selects the first row. |
 | <kbd>End</kbd> | Selects the last row. |
@@ -93,18 +93,18 @@ The Gantt component follows the [keyboard interaction](https://www.w3.org/WAI/AR
 
 **Navigate between toolbar items using keyboard**
 
-In the Gantt component, follow these steps to navigate between toolbar items using the keyboard:
+In the Gantt Chart component, follow these steps to navigate between toolbar items using the keyboard:
 
 **Step 1**: Press `ALT + J` to focus on the gantt component.
 **Step 2**: Press the `Tab` key to navigate to the first item in the toolbar.
 **Step 3**: Use the `LeftArrow` or `RightArrow` keys to move between toolbar items.
-**Step 4**: Press `Tab` key again to remove focus from the toolbar and return focus to the Gantt component.
+**Step 4**: Press `Tab` key again to remove focus from the toolbar and return focus to the Gantt Chart component.
 
 ## Ensuring accessibility
 
-The Gantt component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Gantt Chart component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Gantt component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/gantt.html) in a new window to evaluate the accessibility of the Gantt component with accessibility tools.
+The accessibility compliance of the Gantt Chart component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/gantt.html) in a new window to evaluate the accessibility of the Gantt Chart component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/gantt.html" %}
 

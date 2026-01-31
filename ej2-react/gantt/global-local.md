@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Global local in React Gantt component | Syncfusion
-description: Learn here all about Global local in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Global local in React Gantt Chart component | Syncfusion
+description: Learn here all about Global local in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Global local 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Global local in React Gantt component
+# Global local in React Gantt Chart component
 
 ## Localization
 
-The [`Localization`](../../base/localization.html) library allows you to localize default text content of the Gantt.The Gantt component has static text on some features (like column headers, add and edit dialog, tooltip, toolbar, etc.)that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the
-[`locale`](https://ej2.syncfusion.com/react/documentation/api/gantt/#locale) value and translation object.
+The [Localization](../../base/localization.html) library allows you to localize default text content of the Gantt.The Gantt Chart component has static text on some features (like column headers, add and edit dialog, tooltip, toolbar, etc.)that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the
+[locale](https://ej2.syncfusion.com/react/documentation/api/gantt#locale) value and translation object.
 
 The following list of properties and its values are used in the Gantt.
 
@@ -117,7 +117,7 @@ SS | SS
 
 ### Loading translations
 
-To load translation object in an application use [`load`](https://ej2.syncfusion.com/documentation/api/base/l10n/#load) function of [`L10n`](https://ej2.syncfusion.com/documentation/api/base/l10n/) class.
+To load translation object in an application use [load](https://ej2.syncfusion.com/documentation/api/base/l10n#load) function of [L10n](https://ej2.syncfusion.com/documentation/api/base/l10n/) class.
 
 The below example demonstrates the Gantt in **Deutsch** culture.
 
@@ -137,7 +137,7 @@ The below example demonstrates the Gantt in **Deutsch** culture.
 
 ## Internationalization
 
-The [`Internationalization`](../../base/internationalization.html) library is used to globalize number, date, and time values in gantt component.
+The [Internationalization](../../base/internationalization.html) library is used to globalize number, date, and time values in gantt component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -154,11 +154,11 @@ The [`Internationalization`](../../base/internationalization.html) library is us
 {% previewsample "page.domainurl/code-snippet/gantt/internationalization-cs1" %}
 
 > * In the above sample, `Timeline` is formatted by `NumberFormatOptions` and `DateFormatOptions`.
-> * By default, [`locale`](https://ej2.syncfusion.com/react/documentation/api/gantt/#locale) value is `en-US`. If you want to change `en-US` culture, then set the [`locale`](https://ej2.syncfusion.com/react/documentation/api/gantt/#locale).
+> * By default, [locale](https://ej2.syncfusion.com/react/documentation/api/gantt#locale) value is `en-US`. If you want to change `en-US` culture, then set the [locale](https://ej2.syncfusion.com/react/documentation/api/gantt#locale).
 
 ## Right to left (RTL)
 
-RTL provides an option to switch the text direction and layout of the Gantt component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Urdu, etc.). To enable RTL Gantt, set the [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/gantt/#enablertl) to **true**.
+RTL provides an option to switch the text direction and layout of the Gantt Chart component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Urdu, etc.). To enable RTL Gantt, set the [enableRtl](https://ej2.syncfusion.com/react/documentation/api/gantt#enablertl) to **true**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

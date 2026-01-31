@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Splitting and merging tasks in React Gantt component | Syncfusion
-description: Learn here all about Splitting and merging tasks in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Splitting and Merging tasks in React Gantt Chart Component | Syncfusion
+description: Learn here all about Splitting and merging tasks in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Splitting and merging tasks 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Splitting and merging tasks in React Gantt component
+# Splitting and Merging tasks in React Gantt Chart component
 
 ## Splitting task at load time
 
@@ -21,9 +21,9 @@ Refer below link for more details.
 
 The task can be split dynamically, either by using the context menu or dialog.
 
-* `Dialog`: `Segments` tab is rendered in add/edit dialog, when the [`taskFields.segments`](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/#segments) or [`taskFields.segmentId`](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/#segmentId) property is mapped. Using this tab, we can split the task based on the original start and end date of a particular task.
+* `Dialog`: `Segments` tab is rendered in add/edit dialog, when the [taskFields.segments](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#segments) or [taskFields.segmentId](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#segmentId) property is mapped. Using this tab, we can split the task based on the original start and end date of a particular task.
 
-* `Context menu`: When the [`taskFields.segments`](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/#segments) or [`taskFields.segmentId`](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/#segmentId) property is mapped and the [`enableContextMenu`](https://ej2.syncfusion.com/react/documentation/api/gantt/#enablecontextmenu) property is enabled, `Split Task` item will be included in the context menu.
+* `Context menu`: When the [taskFields.segments](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#segments) or [taskFields.segmentId](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#segmentId) property is mapped and the [enableContextMenu](https://ej2.syncfusion.com/react/documentation/api/gantt#enablecontextmenu) property is enabled, `Split Task` item will be included in the context menu.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

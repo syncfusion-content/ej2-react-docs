@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Holidays in React Gantt Component | Syncfusion
-description: Learn how to configure holidays in the Syncfusion React Gantt component for accurate task scheduling with non-working days.
+description: Learn how to configure holidays in the Syncfusion React Gantt Chart component for accurate task scheduling with non-working days.
 platform: ej2-react
 control: Holidays
 documentation: ug
@@ -10,21 +10,21 @@ domainurl: ##DomainURL##
 
 # Holidays in React Gantt Component
 
-The React Gantt component supports holidays to define non-working days, such as national holidays or company closures, that impact task scheduling and project timelines. Holidays override regular working time settings like [workWeek](https://ej2.syncfusion.com/react/documentation/api/gantt/#workweek) or [includeWeekend](https://ej2.syncfusion.com/react/documentation/api/gantt/#includeweekend), ensuring tasks do not progress during these periods. In the timeline, holidays appear as highlighted backgrounds with descriptive labels, creating visible gaps in taskbars to reflect scheduling adjustments. Custom CSS classes allow distinct styling for different holiday types (e.g., national vs. company holidays), enhancing visual clarity. Properly configured holidays ensure accurate duration calculations, dependency adjustments, and critical path analysis, aligning project timelines with resource availability and regional requirements.
+The React Gantt Chart component supports holidays to define non-working days, such as national holidays or company closures, that impact task scheduling and project timelines. Holidays override regular working time settings like [workWeek](https://ej2.syncfusion.com/react/documentation/api/gantt#workweek) or [includeWeekend](https://ej2.syncfusion.com/react/documentation/api/gantt#includeweekend), ensuring tasks do not progress during these periods. In the timeline, holidays appear as highlighted backgrounds with descriptive labels, creating visible gaps in taskbars to reflect scheduling adjustments. Custom CSS classes allow distinct styling for different holiday types (e.g., national vs. company holidays), enhancing visual clarity. Properly configured holidays ensure accurate duration calculations, dependency adjustments, and critical path analysis, aligning project timelines with resource availability and regional requirements.
 
 ## Understanding holiday effects on tasks
 
 Holidays adjust task scheduling to reflect non-working periods:
 - **Duration adjustments**: Task durations exclude holidays, extending end dates. For example, a task starting December 20, 2024, skips a December 25-26 holiday, adjusting its completion to account for these days.
 - **Dependency management**: Successor tasks shift to maintain relationships (e.g., FS), ensuring no work occurs during holidays.
-- **Critical path integration**: Holidays impact slack calculations when using [enableCriticalPath](https://ej2.syncfusion.com/react/documentation/api/gantt/#enablecriticalpath), as tasks delayed by holidays may become critical.
+- **Critical path integration**: Holidays impact slack calculations when using [enableCriticalPath](https://ej2.syncfusion.com/react/documentation/api/gantt#enablecriticalpath), as tasks delayed by holidays may become critical.
 - **Resource allocation**: Holidays reduce resource availability, pausing task progress during these periods.
 
-The [projectStartDate](https://ej2.syncfusion.com/react/documentation/api/gantt/#projectstartdate) and [projectEndDate](https://ej2.syncfusion.com/react/documentation/api/gantt/#projectenddate) properties provide context for scheduling, ensuring holidays align with the project timeline.
+The [projectStartDate](https://ej2.syncfusion.com/react/documentation/api/gantt#projectstartdate) and [projectEndDate](https://ej2.syncfusion.com/react/documentation/api/gantt#projectenddate) properties provide context for scheduling, ensuring holidays align with the project timeline.
 
 ## Configure holidays
 
-Holidays are defined using the [holidays](https://ej2.syncfusion.com/react/documentation/api/gantt/#holidays) property, which accepts an array of holiday objects specifying dates, labels, and styling. The `DayMarkersService` must be injected to render holidays as visual markers in the timeline and adjust task scheduling calculations. Holidays take precedence over settings like `workWeek` or `includeWeekend`, ensuring tasks do not progress during these periods.
+Holidays are defined using the [holidays](https://ej2.syncfusion.com/react/documentation/api/gantt#holidays) property, which accepts an array of holiday objects specifying dates, labels, and styling. The `DayMarkersService` must be injected to render holidays as visual markers in the timeline and adjust task scheduling calculations. Holidays take precedence over settings like `workWeek` or `includeWeekend`, ensuring tasks do not progress during these periods.
 
 **Holiday configuration properties**
 - `from`: Sets the start date of the holiday (e.g., `new Date('2024-12-25')`).

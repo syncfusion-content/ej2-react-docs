@@ -1,25 +1,43 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, Inject, Edit, Filter,  Selection, Toolbar }from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, Inject, Edit, Toolbar, Selection } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-function App(){
-   const taskFields = {
+
+function App() {
+  const taskSettings = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
+    endDate: 'EndDate',
     duration: 'Duration',
     progress: 'Progress',
     parentID: 'ParentID'
   };
-  const editOptions = {
-      allowAdding: true,
-      allowEditing: true,
-      allowDeleting: true
+
+  const editSettings = {
+    allowAdding: true,
+    allowEditing: true,
+    allowDeleting: true,
+    allowTaskbarEditing: true,
+    showDeleteConfirmDialog: true
   };
-  const toolbarOptions = ['Add','Edit','Delete','Cancel','Update','PrevTimeSpan','NextTimeSpan','ExpandAll','CollapseAll','Search','Indent','Outdent'];
-        return <GanttComponent dataSource={data} taskFields={taskFields} allowSelection={true}
-        editSettings={editOptions} toolbar={toolbarOptions} height = '450px'>
-           <Inject services={[Edit, Selection, Toolbar, Filter]} />
-        </GanttComponent>
-};
+
+  const toolbar = [
+    'Add', 'Edit', 'Delete', 'Update', 'Cancel',
+    'ExpandAll', 'CollapseAll', 'PrevTimeSpan',
+    'NextTimeSpan', 'Indent', 'Outdent'
+  ];
+
+  return (
+    <GanttComponent
+      height="430px"
+      dataSource={data}
+      taskFields={taskSettings}
+      editSettings={editSettings}
+      toolbar={toolbar}>
+      <Inject services={[Edit, Toolbar, Selection]} />
+    </GanttComponent>
+  );
+}
+
 ReactDOM.render(<App />, document.getElementById('root'));

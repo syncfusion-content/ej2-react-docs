@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Drag and drop from another in React Gantt component | Syncfusion
-description: Learn here all about Drag and drop from another in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Drag and Drop from Another in React Gantt Chart component | Syncfusion
+description: Learn here all about Drag and drop from another in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Drag and drop from another 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drag and drop from another in React Gantt component
+# Drag and Drop From Another in React Gantt Chart component
 
-In Gantt, it is possible to drag a record from another component and drop it in Gantt chart with updating the Gantt record. Here, dragging an item from `TreeView` component to Gantt and that item is updated as a resource for the Gantt record, we can achieve this, by using [`nodeDragStop`](https://ej2.syncfusion.com/react/documentation/api/treeview/#nodedragstop) event of `TreeView` control.
+In Gantt, it is possible to drag a record from another component and drop it in Gantt chart with updating the Gantt record. Here, dragging an item from `TreeView` component to Gantt and that item is updated as a resource for the Gantt record, we can achieve this, by using [nodeDragStop](https://ej2.syncfusion.com/react/documentation/api/treeview#nodedragstop) event of `TreeView` control.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
