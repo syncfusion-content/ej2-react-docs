@@ -1,78 +1,104 @@
 ---
 layout: post
-title: Splitter in React Gantt component | Syncfusion
-description: Learn here all about Splitter in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
-control: Splitter 
+title: Splitter in React Gantt Chart Component | Syncfusion
+description: Learn how to configure the splitter in the Syncfusion React Gantt Chart component for flexible TreeGrid and Chart panel sizing.
+control: Splitter
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Splitter in React Gantt component
+# Splitter in React Gantt Chart Component
 
-## Splitter
+The splitter in the React Gantt Chart component divides the TreeGrid pane and Chart pane, enabling flexible width allocation for project visualization. Configured via the [splitterSettings](https://ej2.syncfusion.com/react/documentation/api/gantt/splitterSettings) property, the splitter supports pixel or percentage-based positioning, column-based alignment, and predefined view modes. The [setSplitterPosition](https://ej2.syncfusion.com/react/documentation/api/gantt#setsplitterposition) method adjusts positioning dynamically, while the [splitterResizeStart](https://ej2.syncfusion.com/react/documentation/gantt/events#splitterresizestart), [splitterResizing](https://ej2.syncfusion.com/react/documentation/gantt/events#splitterresizing), and [splitterResized](https://ej2.syncfusion.com/react/documentation/gantt/events#splitterresized) events handle resize interactions. The splitter includes ARIA labels for accessibility, ensuring screen reader compatibility, and adapts to responsive designs, though narrow screens may limit visible columns or timeline segments. By default, both panels are visible with equal width.
 
-In the Gantt component, the Splitter separates the TreeGrid section from the Chart section. You can change the position of the Splitter when loading the Gantt component using the [`splitterSettings`](https://ej2.syncfusion.com/react/documentation/api/gantt/splitterSettings/) property. By splitting the TreeGrid from the chart, the width of the TreeGrid and chart sections will vary in the component. The [`splitterSettings.position`](https://ej2.syncfusion.com/react/documentation/api/gantt/splitterSettings/#position) property denotes the percentage of the TreeGrid section’s width to be rendered and this property supports both pixels and percentage values. You can define the splitter position as column index value using the [`splitterSettings.columnIndex`](https://ej2.syncfusion.com/react/documentation/api/gantt/splitterSettings/#columnindex) property. You can also define the splitter position with built-in splitter view modes by using the [`splitterSettings.view`](https://ej2.syncfusion.com/react/documentation/api/gantt/splitterSettings/#view) property. The following list is the possible values for this property:
+## Configure splitter position
 
-* `Default`: Shows Grid side and Gantt side.
-* `Grid`: Shows Grid side alone in Gantt.
-* `Chart`: Shows chart side alone in Gantt.
+Set the splitter position using [splitterSettings.position](https://ej2.syncfusion.com/react/documentation/api/gantt/splitterSettings#position) with pixel (e.g., "300px") or percentage (e.g., "30%") values to define the TreeGrid pane width, or align to a column edge with [splitterSettings.columnIndex](https://ej2.syncfusion.com/react/documentation/api/gantt/splitterSettings#columnindex).
 
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/how-to-splitter-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/how-to-splitter-cs1/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/how-to-splitter-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/gantt/how-to-splitter-cs1" %}
-
-## Changing splitter view
-
-In the Gantt component, it is possible to change the view of the component to a grid view, a chart view, or both using the dropdown menu. This can be achieved by customizing the toolbar, which allows to add  custom toolbar items using the `template` attribute.
-Refer below link for more details.
-
-* [To Add Custom Toolbar items](https://ej2.syncfusion.com/react/documentation/gantt/tool-bar)
-
-To add a custom dropdown menu to the toolbar, use the `DropDownList` component which is available in `@syncfusion/ej2-react-dropdowns` library.
-
-After enabling the dropdown menu in the toolbar, pass the data to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/dropDownListModel/#datasource) property. To modify the component's view, use the [`change`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/dropDownListModel/#change) property. To do this, call the [`setSplitterPosition`](https://ej2.syncfusion.com/react/documentation/api/gantt/#setsplitterposition) method on the `ganttInstance` with the `value` and `type` of splitter property as an parameter, after checking with the user's choice and the given data condition is true.
-
-The following code example shows, how to enable the dropdown menu in the Toolbar and change view of the Gantt component.
+The following example sets a percentage-based splitter position. This configuration allocates 50% width to the TreeGrid panel.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/changeSplitterDynamically-cs2/app/index.jsx %}
+{% include code-snippet/gantt/splitter-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/changeSplitterDynamically-cs2/app/index.tsx %}
+{% include code-snippet/gantt/splitter-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/changeSplitterDynamically-cs2/index.html %}
+{% include code-snippet/gantt/splitter-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/gantt/changeSplitterDynamically-cs2" %}
+{% previewsample "page.domainurl/code-snippet/gantt/splitter-cs1" %}
 
-## Change splitter position dynamically
+> If both [position](https://ej2.syncfusion.com/react/documentation/api/gantt/splitterSettings#position) and [columnIndex](https://ej2.syncfusion.com/react/documentation/api/gantt/splitterSettings#columnindex) are defined in [splitterSettings](https://ej2.syncfusion.com/react/documentation/api/gantt/splitterSettings), only `position` is applied because it takes precedence over `columnIndex`.
 
-In Gantt, we can change the splitter position dynamically by using [`setSplitterPosition`](https://ej2.syncfusion.com/react/documentation/api/gantt/#setsplitterposition) method. We can change the splitter position by passing value and type parameter to [`setSplitterPosition`](https://ej2.syncfusion.com/react/documentation/api/gantt/#setsplitterposition) method. Type parameter will accept one of the following values 'position', 'columnIndex', 'viewType'. The following code example shows how to use this method.
+## Configure view modes
+
+Set predefined view modes with [splitterSettings.view](https://ej2.syncfusion.com/react/documentation/api/gantt/splitterSettings#view):
+
+- **Default**: Displays both TreeGrid and Chart panels.
+- **Grid**: Shows only the TreeGrid panel for data-focused views.
+- **Chart**: Shows only the Chart panel for timeline visualization.
+
+The following example configures the Grid view mode. This configuration prioritizes the TreeGrid for detailed task analysis.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/changeSplitterDynamically-cs1/app/index.jsx %}
+{% include code-snippet/gantt/splitter-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/changeSplitterDynamically-cs1/app/index.tsx %}
+{% include code-snippet/gantt/splitter-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/changeSplitterDynamically-cs1/index.html %}
+{% include code-snippet/gantt/splitter-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+![Splitter view](./images/splitter-view.gif)
+
+## Adjust splitter position dynamically
+
+Change the splitter position using the [setSplitterPosition](https://ej2.syncfusion.com/react/documentation/api/gantt#setsplitterposition) method with pixel, percentage, or column index values, triggered by events like window resizing or button clicks.
+
+The following example adjusts the splitter dynamically:
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/splitter-cs3/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/splitter-cs3/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/splitter-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/gantt/changeSplitterDynamically-cs1" %}
+{% previewsample "page.domainurl/code-snippet/gantt/splitter-cs3" %}
+
+## Customize splitter appearance
+
+Customize the splitter’s appearance in the Gantt Chart component by handling the [dataBound](https://ej2.syncfusion.com/react/documentation/gantt/events#databound), [splitterResizing](https://ej2.syncfusion.com/react/documentation/gantt/events#splitterresizing) and [splitterResized](https://ej2.syncfusion.com/react/documentation/gantt/events#splitterresized) events to dynamically adjust styles, such as the background color or visibility of the resize handler. This enhances visual feedback during splitter interactions, improving usability for resizing the TreeGrid and Chart panels. The splitter retains ARIA labels for accessibility, ensuring screen reader compatibility.
+
+The following example customizes the splitter’s background and hides the resize handler during resizing:
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/splitter-cs4/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/splitter-cs4/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/splitter-cs4/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/gantt/splitter-cs4" %}
+
+## See also
+- [How to configure Gantt Chart columns?](https://ej2.syncfusion.com/react/documentation/gantt/columns/columns)
+- [How to customize the timeline?](https://ej2.syncfusion.com/react/documentation/gantt/time-line/time-line)
+- [How to handle scrolling?](https://ej2.syncfusion.com/react/documentation/gantt/scrolling)

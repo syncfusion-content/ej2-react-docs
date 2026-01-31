@@ -1,6 +1,6 @@
 
 
-import { ColumnDirective, ColumnsDirective, Filter, GridComponent, Group, Inject, Page, PageSettingsModel, Sort } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, Filter, GridComponent, Group, Inject, Page, type PageSettingsModel, Sort } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
 

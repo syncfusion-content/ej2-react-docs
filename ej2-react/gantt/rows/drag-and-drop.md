@@ -12,11 +12,11 @@ domainurl: ##DomainURL##
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt chart component includes built-in support for row drag and drop, enabling rows to be rearranged within the Gantt chart or dropped into custom components. 
 
-To enable this feature, inject the `RowDD` and `Edit` module in the Gantt. Once injected, enable the functionality by setting the [allowRowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/gantt/#allowrowdraganddrop) property.
+To enable this feature, inject the `RowDD` and `Edit` module in the Gantt. Once injected, enable the functionality by setting the [allowRowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/gantt#allowrowdraganddrop) property.
 
 ## Drag and drop within the Gantt chart
 
-The Gantt Chart component allows you to rearrange rows using a drag icon. To enable this feature, set the [allowRowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/gantt/#allowrowdraganddrop) property to **true**.
+The Gantt Chart component allows you to rearrange rows using a drag icon. To enable this feature, set the [allowRowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/gantt#allowrowdraganddrop) property to **true**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -60,7 +60,7 @@ If the border line appears at both the top and bottom of the target row (e.g., T
 
 ## Drag and drop to custom component 
 
-You can drag rows from the Gantt Chart component into custom components for seamless data transfer. To enable this feature, set the [allowRowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/gantt/#allowrowdraganddrop) property to **true**, and configure the `targetID` property within the `rowDropSettings` object of the `treeGrid` in the Gantt instance, inside the [load](https://ej2.syncfusion.com/react/documentation/gantt/events#load) event. The value of `targetID` must match the ID of the destination component. You can use the [rowDrop](https://ej2.syncfusion.com/react/documentation/gantt/events#rowdrop) event to handle the drop and perform necessary actions.
+You can drag rows from the Gantt Chart component into custom components for seamless data transfer. To enable this feature, set the [allowRowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/gantt#allowrowdraganddrop) property to **true**, and configure the `targetID` property within the `rowDropSettings` object of the `treeGrid` in the Gantt instance, inside the [load](https://ej2.syncfusion.com/react/documentation/gantt/events#load) event. The value of `targetID` must match the ID of the destination component. You can use the [rowDrop](https://ej2.syncfusion.com/react/documentation/gantt/events#rowdrop) event to handle the drop and perform necessary actions.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -78,7 +78,7 @@ You can drag rows from the Gantt Chart component into custom components for seam
 
 ## Drag and drop multiple rows together
 
-You can drag and drop multiple rows simultaneously in the Gantt Chart component. To enable this functionality, set the [selectionSettings.type](https://ej2.syncfusion.com/react/documentation/api/gantt/selectionSettings/#type) property to **Multiple** , and set the [allowRowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/gantt/#allowrowdraganddrop) property is set to **true**.
+You can drag and drop multiple rows simultaneously in the Gantt Chart component. To enable this functionality, set the [selectionSettings.type](https://ej2.syncfusion.com/react/documentation/api/gantt/selectionSettings#type) property to **Multiple** , and set the [allowRowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/gantt#allowrowdraganddrop) property is set to **true**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -96,7 +96,7 @@ You can drag and drop multiple rows simultaneously in the Gantt Chart component.
 
 ## Taskbar drag and drop between rows
 
-You can rearrange rows in the Gantt Chart component by dragging the taskbar element. This functionality is enabled by setting the [allowTaskbarDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/gantt/#allowtaskbardraganddrop) property to **true**, allowing taskbars to be repositioned across rows for improved scheduling control.
+You can rearrange rows in the Gantt Chart component by dragging the taskbar element. This functionality is enabled by setting the [allowTaskbarDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/gantt#allowtaskbardraganddrop) property to **true**, allowing taskbars to be repositioned across rows for improved scheduling control.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -389,13 +389,13 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## Perform row drag and drop action programmatically
 
-To rearrange rows programmatically in the Gantt Chart component, use the [reorderRows](https://ej2.syncfusion.com/react/documentation/api/gantt/#reorderrows) method. This method accepts the following parameters: 
+To rearrange rows programmatically in the Gantt Chart component, use the [reorderRows](https://ej2.syncfusion.com/react/documentation/api/gantt#reorderrows) method. This method accepts the following parameters: 
 
 - **fromIndexes**: Indexes of the rows to be moved.  
 - **toIndex**: Target index for placement.  
 - **position**: Placement relative to the target (e.g., above or below).
 
-In the example, a [click](https://ej2.syncfusion.com/react/documentation/api/button/#click) event on an external button moves the row at index 1 **below** the row at index 2.
+In the example, a [click](https://ej2.syncfusion.com/react/documentation/api/button#click) event on an external button moves the row at index 1 **below** the row at index 2.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -433,7 +433,7 @@ In this example, drag and drop actions are customized using event hooks. The `ro
 
 ### Prevent reordering a row as child to another row
 
-To prevent rows from being reordered as children, set `args.cancel` to **true** in the [rowDrop](https://ej2.syncfusion.com/react/documentation/api/gantt/#rowdrop) event. After canceling the default drop action, use the [reorderRows](https://ej2.syncfusion.com/react/documentation/api/gantt/#reorderrows) method to reposition the row at a specific index. 
+To prevent rows from being reordered as children, set `args.cancel` to **true** in the [rowDrop](https://ej2.syncfusion.com/react/documentation/api/gantt#rowdrop) event. After canceling the default drop action, use the [reorderRows](https://ej2.syncfusion.com/react/documentation/api/gantt#reorderrows) method to reposition the row at a specific index. 
  
 In the example, the drop action in **Child** position is blocked, and the dragged row is reordered **above** the target row.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Virtual scroll in React Gantt component | Syncfusion
-description: Learn here all about Virtual scroll in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Virtual Scroll in React Gantt Chart Component | Syncfusion
+description: Learn here all about Virtual scroll in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Virtual scroll 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Virtual scroll in React Gantt component
+# Virtual Scroll in React Gantt Chart Component
 
 Virtual Scroll support in Gantt allows you to load large amount of data without performance degradation. To enable Virtual Scrolling, you need to inject `VirtualScroll` module in Gantt.
 

@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Managing tasks in React Gantt component | Syncfusion
-description: Learn here all about Managing tasks in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Managing Tasks in React Gantt Chart Component | Syncfusion
+description: Learn here all about Managing tasks in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Managing tasks 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Managing tasks in React Gantt component
+# Managing Tasks in React Gantt Chart Component
 
-The Gantt component has options to dynamically insert, delete, and update tasks in a project. The primary key column is necessary to manage the tasks and perform CRUD operations in Gantt. To define the primary key, set the [`columns.isPrimaryKey`](https://ej2.syncfusion.com/react/documentation/api/gantt/column/#isprimarykey) property to `true` in the column.
+The Gantt Chart component has options to dynamically insert, delete, and update tasks in a project. The primary key column is necessary to manage the tasks and perform CRUD operations in Gantt. To define the primary key, set the [columns.isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/gantt/column#isprimarykey) property to `true` in the column.
 
-To use CRUD, inject the [`Edit`](https://ej2.syncfusion.com/react/documentation/api/gantt/#editmodule) module into the Gantt component.
+To use CRUD, inject the [Edit](https://ej2.syncfusion.com/react/documentation/api/gantt#editmodule) module into the Gantt Chart component.
 
-`Note:` If the [`Edit`](https://ej2.syncfusion.com/react/documentation/api/gantt/#editmodule) module is not injected, you cannot edit the tasks through TreeGrid cells.
+`Note:` If the [Edit](https://ej2.syncfusion.com/react/documentation/api/gantt#editmodule) module is not injected, you cannot edit the tasks through TreeGrid cells.
 
-The following code example shows you how to enable the cell editing in Gantt component.
+The following code example shows you how to enable the cell editing in Gantt Chart component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -34,32 +34,32 @@ The following code example shows you how to enable the cell editing in Gantt com
 
 ## Cell edit type and its params
 
-The [`columns.editType`](https://ej2.syncfusion.com/react/documentation/api/gantt/column/#edittype) is used to define the edit type for any particular column.
-You can set the [`columns.editType`](https://ej2.syncfusion.com/react/documentation/api/gantt/column/#edittype) based on data type of the column.
+The [columns.editType](https://ej2.syncfusion.com/react/documentation/api/gantt/column#edittype) is used to define the edit type for any particular column.
+You can set the [columns.editType](https://ej2.syncfusion.com/react/documentation/api/gantt/column#edittype) based on data type of the column.
 
-* `numericedit` - [`NumericTextBox`](../numerictextbox) component for integers, double, and decimal data types.
+* `numericedit` - [NumericTextBox](../numerictextbox) component for integers, double, and decimal data types.
 
-* `defaultedit` - [`TextBox`](../textbox) component for string data type.
+* `defaultedit` - [TextBox](../textbox) component for string data type.
 
-* `dropdownedit` - [`DropDownList`](../drop-down-list) component to show all unique values related to that field.
+* `dropdownedit` - [DropDownList](../drop-down-list) component to show all unique values related to that field.
 
-* `booleanedit` - [`CheckBox`](../check-box) component for boolean data type.
+* `booleanedit` - [CheckBox](../check-box) component for boolean data type.
 
-* `datepickeredit` - [`DatePicker`](../datepicker) component for date data type.
+* `datepickeredit` - [DatePicker](../datepicker) component for date data type.
 
-* `datetimepickeredit` - [`DateTimePicker`](../datetimepicker) component for date time data type.
+* `datetimepickeredit` - [DateTimePicker](../datetimepicker) component for date time data type.
 
-Also, you can customize the behavior of the editor component through the [`columns.edit.params`](https://ej2.syncfusion.com/react/documentation/api/gantt/column/#edit).
+Also, you can customize the behavior of the editor component through the [columns.edit.params](https://ej2.syncfusion.com/react/documentation/api/gantt/column#edit).
 
 The following table describes cell edit type component and their corresponding edit params of the column.
 
 Edit Type |Component |Example
 -----|-----|-----
-`numericedit` | [`NumericTextBox`](../numerictextbox) | params: { decimals: 2, value: 5 }
-`dropdownedit` | [`DropDownList`](../drop-down-list) | params: { value: 'Germany' }
-`booleanedit` | [`Checkbox`](../check-box) | params: { checked: true}
-`datepickeredit` | [`DatePicker`](../datepicker) | params: { format:'dd.MM.yyyy' }
-`datetimepickeredit` | [`DateTimePicker`](../datetimepicker) | params: { value: new Date() }
+`numericedit` | [NumericTextBox](../numerictextbox) | params: { decimals: 2, value: 5 }
+`dropdownedit` | [DropDownList](../drop-down-list) | params: { value: 'Germany' }
+`booleanedit` | [Checkbox](../check-box) | params: { checked: true}
+`datepickeredit` | [DatePicker](../datepicker) | params: { format:'dd.MM.yyyy' }
+`datetimepickeredit` | [DateTimePicker](../datetimepicker) | params: { value: new Date() }
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -103,7 +103,7 @@ The cell edit template is used to create a custom component for a particular col
 
 ## Disable editing for particular column
 
-You can disable editing for particular columns, by using the [`columns.allowEditing`](https://ej2.syncfusion.com/react/documentation/api/gantt/column/#allowediting) property.
+You can disable editing for particular columns, by using the [columns.allowEditing](https://ej2.syncfusion.com/react/documentation/api/gantt/column#allowediting) property.
 
 In the following demo, editing is disabled for the `TaskName` column.
 
@@ -143,11 +143,11 @@ In Gantt, all create, update, delete operations can be disabled by setting the `
 ## Troubleshoot: Editing works only when primary key column is defined
 
 Editing feature requires a primary key column for CRUD operations.
-While defining columns in Gantt using the [`columns`](https://ej2.syncfusion.com/react/documentation/api/gantt/#columns) property, it is mandatory that any one of the columns, must be a primary column. By default, the [`id`](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/#id) column will be the primary key column.  If [`id`](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/#id) column is not defined, we need to enable [`isPrimaryKey`](https://ej2.syncfusion.com/react/documentation/api/gantt/column/#isprimarykey) for any one of the columns defined in the [`columns`](https://ej2.syncfusion.com/react/documentation/api/gantt/#columns) property.
+While defining columns in Gantt using the [columns](https://ej2.syncfusion.com/react/documentation/api/gantt#columns) property, it is mandatory that any one of the columns, must be a primary column. By default, the [id](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#id) column will be the primary key column.  If [id](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#id) column is not defined, we need to enable [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/gantt/column#isprimarykey) for any one of the columns defined in the [columns](https://ej2.syncfusion.com/react/documentation/api/gantt#columns) property.
 
 ## Open new task dialog with default values
 
-You can set default values when new task dialog opens using [actionBegin](https://ej2.syncfusion.com/react/documentation/api/gantt/#actionbegin) event when `requestType` is `beforeOpenAddDialog`.
+You can set default values when new task dialog opens using [actionBegin](https://ej2.syncfusion.com/react/documentation/api/gantt#actionbegin) event when `requestType` is `beforeOpenAddDialog`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -165,11 +165,11 @@ You can set default values when new task dialog opens using [actionBegin](https:
 
 ## Customize control in add/edit dialog
 
-In Gantt Chart, the controls such as form elements, grid and RTE in add and edit dialog can be customized by using [additionalParams](https://ej2.syncfusion.com/react/documentation/api/gantt/addDialogFieldSettingsModel/#additionalParams) property.
+In Gantt Chart, the controls such as form elements, grid and RTE in add and edit dialog can be customized by using [additionalParams](https://ej2.syncfusion.com/react/documentation/api/gantt/addDialogFieldSettingsModel#additionalParams) property.
 
 ### Customize general tab of dialog
 
-The form element in the `General` tab of the add/edit dialog can be added or removed by using the [fields](https://ej2.syncfusion.com/react/documentation/api/gantt/addDialogFieldSettings/#fields) property within the [addDialogFields](https://ej2.syncfusion.com/react/documentation/api/gantt/addDialogFieldSettings/) and [editDialogFields](https://ej2.syncfusion.com/react/documentation/api/gantt/editDialogFieldSettings/) settings respectively.
+The form element in the `General` tab of the add/edit dialog can be added or removed by using the [fields](https://ej2.syncfusion.com/react/documentation/api/gantt/addDialogFieldSettings#fields) property within the [addDialogFields](https://ej2.syncfusion.com/react/documentation/api/gantt/addDialogFieldSettings/) and [editDialogFields](https://ej2.syncfusion.com/react/documentation/api/gantt/editDialogFieldSettings/) settings respectively.
 
 The controls of the `fields` can be customized by using the [edit](https://ej2.syncfusion.com/react/documentation/gantt/managing-tasks/managing-tasks#cell-edit-template) template feature.
 
@@ -191,12 +191,12 @@ In the below sample, `General` tab is customized using the `fields` property. Th
   
 ### Customize dependency, segments and resources tab of dialog
 
-You can customize the dependency, segments, and resource tabs of the dialog box using the [additionalParams](https://ej2.syncfusion.com/react/documentation/api/gantt/addDialogFieldSettingsModel/#additionalParams) property within the [addDialogFields](https://ej2.syncfusion.com/react/documentation/api/gantt/addDialogFieldSettings/) and [editDialogFields](https://ej2.syncfusion.com/react/documentation/api/gantt/editDialogFieldSettings/) settings respectively. This customization involves defining properties from the [grid](https://ej2.syncfusion.com/react/documentation/api/grid/) within the `additionalParams` property.
+You can customize the dependency, segments, and resource tabs of the dialog box using the [additionalParams](https://ej2.syncfusion.com/react/documentation/api/gantt/addDialogFieldSettingsModel#additionalParams) property within the [addDialogFields](https://ej2.syncfusion.com/react/documentation/api/gantt/addDialogFieldSettings/) and [editDialogFields](https://ej2.syncfusion.com/react/documentation/api/gantt/editDialogFieldSettings/) settings respectively. This customization involves defining properties from the [grid](https://ej2.syncfusion.com/react/documentation/api/grid/) within the `additionalParams` property.
 
 In the example below:
-* The `dependency` tab enables [sorting](https://ej2.syncfusion.com/react/documentation/api/grid/#allowsorting) and [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbar) options. 
-* The `segments` tab enables `sorting` and `toolbar` options and includes a new column `newData` defined with a specified [field](https://ej2.syncfusion.com/react/documentation/api/grid/columnModel/#field).
-* The `resources` tab defines a new column `Segment Task`  with specific properties such as `field`, [width](https://ej2.syncfusion.com/react/documentation/api/grid/columnModel/#width) and [headerText](https://ej2.syncfusion.com/react/documentation/api/grid/columnModel/#headertext).
+* The `dependency` tab enables [sorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) and [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) options. 
+* The `segments` tab enables `sorting` and `toolbar` options and includes a new column `newData` defined with a specified [field](https://ej2.syncfusion.com/react/documentation/api/grid/columnModel#field).
+* The `resources` tab defines a new column `Segment Task`  with specific properties such as `field`, [width](https://ej2.syncfusion.com/react/documentation/api/grid/columnModel#width) and [headerText](https://ej2.syncfusion.com/react/documentation/api/grid/columnModel#headertext).
 These customizations are applied to both `addDialogFields` and `editDialogFields` settings.
 
 {% tabs %}
@@ -215,9 +215,9 @@ These customizations are applied to both `addDialogFields` and `editDialogFields
 
 ### Customize note dialog tab
 
- You can customize the note dialog tab using the [additionalParams](https://ej2.syncfusion.com/react/documentation/api/gantt/addDialogFieldSettingsModel/#additionalParams) property within the [addDialogFields](https://ej2.syncfusion.com/react/documentation/api/gantt/addDialogFieldSettings/) and [editDialogFields](https://ej2.syncfusion.com/react/documentation/api/gantt/editDialogFieldSettings/) settings respectively. This customization involves defining properties from the [RTE](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/) module within the `additionalParams` property.
+ You can customize the note dialog tab using the [additionalParams](https://ej2.syncfusion.com/react/documentation/api/gantt/addDialogFieldSettingsModel#additionalParams) property within the [addDialogFields](https://ej2.syncfusion.com/react/documentation/api/gantt/addDialogFieldSettings/) and [editDialogFields](https://ej2.syncfusion.com/react/documentation/api/gantt/editDialogFieldSettings/) settings respectively. This customization involves defining properties from the [RTE](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/) module within the `additionalParams` property.
 
-In the following example, the `notes` tab is customized with the [inlinemode](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#inlinemode) property enabled, allowing for in-place editing. Additionally, the `OnSelection` property is enabled, which opens the toolbar inline upon selecting text.
+In the following example, the `notes` tab is customized with the [inlinemode](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor#inlinemode) property enabled, allowing for in-place editing. Additionally, the `OnSelection` property is enabled, which opens the toolbar inline upon selecting text.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -241,15 +241,15 @@ The following table describes different types of editing modes available in Gant
 
 Action |Description
 -----|-----
-[`Cell editing`](managing-tasks/#cell-editing) | To perform `double tap` on a specific cell, initiate the cell to be in edit state.
-[`Dialog editing`](managing-tasks/#dialog-editing) | To perform `double tap` on a specific row, initiate the edit dialog to be opened.
-[`Taskbar editing`](managing-tasks/#taskbar-editing) | Taskbar editing action is initiated using the `tap` action on the taskbar. <br> **Parent taskbar** : Once you tap on the parent taskbar, it will be changed to editing state. Perform only dragging action on parent taskbar editing. <br>
+[Cell editing](managing-tasks#cell-editing) | To perform `double tap` on a specific cell, initiate the cell to be in edit state.
+[Dialog editing](managing-tasks#dialog-editing) | To perform `double tap` on a specific row, initiate the edit dialog to be opened.
+[Taskbar editing](managing-tasks#taskbar-editing) | Taskbar editing action is initiated using the `tap` action on the taskbar. <br> **Parent taskbar** : Once you tap on the parent taskbar, it will be changed to editing state. Perform only dragging action on parent taskbar editing. <br>
 ![Alt text](../images/editing-parent.PNG) <br> **Child taskbar** : Once you tap the child taskbar, it will be changed to editing state. <br>
 ![Alt text](../images/editing-state.PNG) <br> **Dragging taskbar** : To drag a taskbar to the left or right in editing state. <br> <br> **Resizing taskbar** : To resize a taskbar, drag the left/right resize icon. <br> <br> **Progress resizing** : To change the progress, drag the progress resize icon to the left or right direction.
 
 ### Task dependency editing
 
-You can `tap` the left/right connector point to initiate [`task dependencies`](managing-tasks/#task-dependencies) edit mode and again tap another taskbar to establish the dependency line between two taskbars.
+You can `tap` the left/right connector point to initiate [task dependencies](managing-tasks#task-dependencies) edit mode and again tap another taskbar to establish the dependency line between two taskbars.
 
 The following table explains the taskbar state in dependency edit mode.
 
@@ -280,7 +280,7 @@ Taskbar state |Description
 
 ## Taskbar editing tooltip
 
-The taskbar editing tooltip can be customized using the [`tooltipSettings.editing`](https://ej2.syncfusion.com/react/documentation/api/gantt/tooltipSettings/#editing) property. The following code example shows how to customize the taskbar editing tooltip in Gantt.
+The taskbar editing tooltip can be customized using the [tooltipSettings.editing](https://ej2.syncfusion.com/react/documentation/api/gantt/tooltipSettings#editing) property. The following code example shows how to customize the taskbar editing tooltip in Gantt.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

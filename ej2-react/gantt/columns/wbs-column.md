@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Work Breakdown Structure (WBS) in React Gantt Chart Component | Syncfusion
+title: Work Breakdown Structure (WBS) in React Gantt Chart | Syncfusion
 description: Learn how to integrate and manage WBS codes in the Syncfusion React Gantt Chart component to improve task hierarchy visualization and project tracking.
 platform: ej2-react
 control: WBS Column 
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Work Breakdown Structure (WBS) in React Gantt Chart Component
+# Work Breakdown Structure (WBS) in React Gantt Chart
 
 The Work Breakdown Structure (WBS) organizes project tasks hierarchically by assigning unique codes to each task. This improves task visibility and management, especially in large-scale construction or enterprise-level software projects.
 

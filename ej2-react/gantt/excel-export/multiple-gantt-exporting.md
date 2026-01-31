@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Multiple gantt exporting in React Gantt component | Syncfusion
-description: Learn here all about Multiple gantt exporting in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Multiple Gantt Exporting in React Gantt Chart Component | Syncfusion
+description: Learn here all about multiple gantt exporting in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Multiple gantt exporting 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Multiple gantt exporting in React Gantt component
+# Multiple Gantt Exporting in React Gantt Chart Component
 
 In Gantt, the Excel export provides support to export multiple Gantt data in new sheet or same sheet.
 
@@ -74,7 +74,7 @@ In Gantt, the Excel export provides an option to export hidden columns by defini
 
 ### Show or hide columns on exported Excel
 
-In Gantt, while exporting, you can show a hidden column or hide a visible column using the [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/gantt/#toolbarclick) and [`excelExportComplete`](https://ej2.syncfusion.com/react/documentation/api/gantt/#excelexportcomplete) events.
+In Gantt, while exporting, you can show a hidden column or hide a visible column using the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/gantt#toolbarclick) and [excelExportComplete](https://ej2.syncfusion.com/react/documentation/api/gantt#excelexportcomplete) events.
 
 In the `toolbarClick` event, using the `args.item.id` property, you can show or hide columns by setting the `column.visible` property to `true` or `false` respectively.
 
@@ -96,7 +96,7 @@ Similarly, in the excelExportComplete event, you can revert the columns visibili
 
 ### Cell formatting during export
 
-In Gantt, you can customize the TreeGrid cells in the exported document using the [`excelQueryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/gantt/#excelquerycellinfo) event. In this event, you can format the TreeGrid cells of exported Excel and CSV documents based on the required condition.
+In Gantt, you can customize the TreeGrid cells in the exported document using the [excelQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/gantt#excelquerycellinfo) event. In this event, you can format the TreeGrid cells of exported Excel and CSV documents based on the required condition.
 
 In the following sample, the background color has been customized for `TaskID` column in the exported Excel using the `args.style` and `backColor` properties.
 

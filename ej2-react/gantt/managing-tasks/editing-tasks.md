@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Editing tasks in React Gantt component | Syncfusion
-description: Learn here all about Editing tasks in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Editing Tasks in React Gantt Chart Component | Syncfusion
+description: Learn here all about Editing tasks in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Editing tasks 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Editing tasks in React Gantt component
+# Editing Tasks in React Gantt Chart Component
 
-The editing feature can be enabled in the Gantt component by enabling the [`editSettings.allowEditing`](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings/#allowediting) and [`editSettings.allowTaskbarEditing`](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings/#allowtaskbarediting) properties.
+The editing feature can be enabled in the Gantt Chart component by enabling the [editSettings.allowEditing](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings#allowediting) and [editSettings.allowTaskbarEditing](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings#allowtaskbarediting) properties.
 
 The following editing options are available to update the tasks in the Gantt chart:
 * Cell
@@ -24,11 +24,11 @@ To get start quickly with CRUD functionalities, you can check on this video:
 
 ## Cell editing
 
-By setting the edit mode to auto using the [`editSettings.mode`](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings/#mode) property, the tasks can be edited by double-clicking the TreeGrid cells.
+By setting the edit mode to auto using the [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings#mode) property, the tasks can be edited by double-clicking the TreeGrid cells.
 
-`Note:` If the [`Edit`](https://ej2.syncfusion.com/react/documentation/api/gantt/#editmodule) module is not injected, you cannot edit the tasks through TreeGrid cells.
+`Note:` If the [Edit](https://ej2.syncfusion.com/react/documentation/api/gantt#editmodule) module is not injected, you cannot edit the tasks through TreeGrid cells.
 
-The following code example shows you how to enable the cell editing in Gantt component.
+The following code example shows you how to enable the cell editing in Gantt Chart component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -48,7 +48,7 @@ The following code example shows you how to enable the cell editing in Gantt com
 
 ## Dialog editing
 
-Modify the task details through the edit dialog by setting the edit [`mode`](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings/#mode).
+Modify the task details through the edit dialog by setting the edit [mode](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings#mode).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -68,7 +68,7 @@ Modify the task details through the edit dialog by setting the edit [`mode`](htt
 
 ### Sections or tabs in dialog
 
-In the Gantt dialog, you can define the required tabs or editing sections using the [`addDialogFields`](https://ej2.syncfusion.com/react/documentation/api/gantt/#adddialogfields) and [`editDialogFields`](https://ej2.syncfusion.com/react/documentation/api/gantt/#editdialogfields) properties. Every tab is defined using the [`type`](https://ej2.syncfusion.com/react/documentation/api/gantt/dialogFieldType/) property.
+In the Gantt dialog, you can define the required tabs or editing sections using the [addDialogFields](https://ej2.syncfusion.com/react/documentation/api/gantt#adddialogfields) and [editDialogFields](https://ej2.syncfusion.com/react/documentation/api/gantt#editdialogfields) properties. Every tab is defined using the [type](https://ej2.syncfusion.com/react/documentation/api/gantt/dialogFieldType/) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -86,9 +86,9 @@ In the Gantt dialog, you can define the required tabs or editing sections using 
 
 ### Limiting data fields in general tab
 
-In the Gantt dialog, you can make only specific data source fields visible for editing by using the [`addDialogFields`](https://ej2.syncfusion.com/react/documentation/api/gantt/#adddialogfields) and [`editDialogFields`](https://ej2.syncfusion.com/react/documentation/api/gantt/#editdialogfields) properties. The data fields are defined with [`type`](https://ej2.syncfusion.com/react/documentation/api/gantt/addDialogFieldSettings/#type) and [`fields`] (https://ej2.syncfusion.com/react/documentation/api/gantt/addDialogFieldSettings/#fields) properties.
+In the Gantt dialog, you can make only specific data source fields visible for editing by using the [addDialogFields](https://ej2.syncfusion.com/react/documentation/api/gantt#adddialogfields) and [editDialogFields](https://ej2.syncfusion.com/react/documentation/api/gantt#editdialogfields) properties. The data fields are defined with [type](https://ej2.syncfusion.com/react/documentation/api/gantt/addDialogFieldSettings#type) and [fields] (https://ej2.syncfusion.com/react/documentation/api/gantt/addDialogFieldSettings#fields) properties.
 
-`Note:` You can also define the custom fields in the add/edit dialog General tab using the [`fields`](https://ej2.syncfusion.com/react/documentation/api/gantt/addDialogFieldSettings/#fields) property.
+`Note:` You can also define the custom fields in the add/edit dialog General tab using the [fields](https://ej2.syncfusion.com/react/documentation/api/gantt/addDialogFieldSettings#fields) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -106,7 +106,7 @@ In the Gantt dialog, you can make only specific data source fields visible for e
 
 ## Task dependencies
 
-In the Gantt component, you can update the dependencies between tasks and link the tasks interactively. The task dependencies can be mapped from the data source using the [`dependency`](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/#dependency) property.
+In the Gantt Chart component, you can update the dependencies between tasks and link the tasks interactively. The task dependencies can be mapped from the data source using the [dependency](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#dependency) property.
 
 You can update the task dependencies using the following ways:
 
@@ -114,7 +114,7 @@ You can update the task dependencies using the following ways:
 * Edit dialog: Create or remove the task dependencies using the `Dependency` tab in the edit dialog.
 * Cell editing: Create or remove the task links using cell editing.
 
-The following code example demonstrates how to enable task dependency editing in the Gantt chart using the [`editSettings`](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings/) property.
+The following code example demonstrates how to enable task dependency editing in the Gantt chart using the [editSettings](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings/) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -146,9 +146,9 @@ Updating with Dialog
 
 ## Update task values using method
 
-Tasks' value can be dynamically updated by using the [`updateRecordById`](https://ej2.syncfusion.com/react/documentation/api/gantt/#updaterecordbyid) method. You can call this method on any custom action. The following code example shows how to use this method to update a task.
+Tasks' value can be dynamically updated by using the [updateRecordById](https://ej2.syncfusion.com/react/documentation/api/gantt#updaterecordbyid) method. You can call this method on any custom action. The following code example shows how to use this method to update a task.
 
->NOTE: Using the [`updateRecordById`](https://ej2.syncfusion.com/react/documentation/api/gantt/#updaterecordbyid) method, you cannot update the task ID value.
+>NOTE: Using the [updateRecordById](https://ej2.syncfusion.com/react/documentation/api/gantt#updaterecordbyid) method, you cannot update the task ID value.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -164,9 +164,9 @@ Tasks' value can be dynamically updated by using the [`updateRecordById`](https:
         
 {% previewsample "page.domainurl/code-snippet/gantt/updaterecord-cs1" %}
 
-## Capture the modified records in React Gantt component
+## Capture the modified records in React Gantt Chart component
 
-In the EJ2 Gantt chart, modified records can be conveniently retrieved after adding, editing, or deleting data by utilizing the [`actionComplete`] (https://ej2.syncfusion.com/react/documentation/api/gantt/actionCompleteArgs/) event.
+In the EJ2 Gantt chart, modified records can be conveniently retrieved after adding, editing, or deleting data by utilizing the [actionComplete] (https://ej2.syncfusion.com/react/documentation/api/gantt/actionCompleteArgs/) event.
 
 The following code example serves as a practical illustration of how to effectively capture the modified records within the Gantt control.
 
@@ -186,14 +186,14 @@ The following code example serves as a practical illustration of how to effectiv
 
 The following screenshots represent sample add, edit, and delete record actions using the gantt `args`.
 
-The data of the newly added record can be obtained from actionComplete event by requestType of [`args.requestType`] (https://ej2.syncfusion.com/react/documentation/api/gantt/iActionBeginEventArgs/#requesttype) to the action `add` and the following screenshot shows that the added record's data is available in [`args.newTaskData`] (https://ej2.syncfusion.com/react/documentation/api/gantt/actionCompleteArgs/#newtaskdata) property.
+The data of the newly added record can be obtained from actionComplete event by requestType of [args.requestType] (https://ej2.syncfusion.com/react/documentation/api/gantt/iActionBeginEventArgs#requesttype) to the action `add` and the following screenshot shows that the added record's data is available in [args.newTaskData] (https://ej2.syncfusion.com/react/documentation/api/gantt/actionCompleteArgs#newtaskdata) property.
 
 ![Add action](../images/add-action.png)
 
-The data of the edited record can be obtained from actionComplete event by requestType of [`args.requestType`] (https://ej2.syncfusion.com/react/documentation/api/gantt/iActionBeginEventArgs/#requesttype) to the action `save` and the following screenshot shows that the edited record's data is available in [`args.modifiedTaskData`] (https://ej2.syncfusion.com/react/documentation/api/gantt/iActionBeginEventArgs/#modifiedtaskdata) property.
+The data of the edited record can be obtained from actionComplete event by requestType of [args.requestType] (https://ej2.syncfusion.com/react/documentation/api/gantt/iActionBeginEventArgs#requesttype) to the action `save` and the following screenshot shows that the edited record's data is available in [args.modifiedTaskData] (https://ej2.syncfusion.com/react/documentation/api/gantt/iActionBeginEventArgs#modifiedtaskdata) property.
 
 ![Edit action](../images/edit-action.png)
 
-The data of the deleted record can be obtained from actionComplete event by requestType of [`args.requestType`] (https://ej2.syncfusion.com/react/documentation/api/gantt/iActionBeginEventArgs/#requesttype) to the action `delete` and the following screenshot shows that the deleted record's data is available in [`args.modifiedRecords`] (https://ej2.syncfusion.com/react/documentation/api/gantt/iActionBeginEventArgs/#modifiedrecords) property.
+The data of the deleted record can be obtained from actionComplete event by requestType of [args.requestType] (https://ej2.syncfusion.com/react/documentation/api/gantt/iActionBeginEventArgs#requesttype) to the action `delete` and the following screenshot shows that the deleted record's data is available in [args.modifiedRecords] (https://ej2.syncfusion.com/react/documentation/api/gantt/iActionBeginEventArgs#modifiedrecords) property.
 
 ![Delete action](../images/delete-action.png)

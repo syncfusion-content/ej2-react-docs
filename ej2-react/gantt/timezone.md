@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Timezone in React Gantt component | Syncfusion
-description: Learn here all about Timezone in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Timezone in React Gantt Chart component | Syncfusion
+description: Learn here all about Timezone in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Timezone 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Timezone in React Gantt component
+# Timezone in React Gantt Chart component
 
 The Gantt makes use of the current system time zone by default. If it needs to follow some other user-specific time zone, then the `timezone` property needs to be used.
 

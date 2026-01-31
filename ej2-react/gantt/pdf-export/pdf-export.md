@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Pdf export in React Gantt component | Syncfusion
-description: Learn here all about Pdf export in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Pdf export in React Gantt Chart component | Syncfusion
+description: Learn here all about Pdf export in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Pdf export 
 platform: ej2-react
 documentation: ug
@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Export
 
-## Pdf export in React Gantt component
+## Pdf export in React Gantt Chart component
 
-PDF export allows exporting Gantt data to PDF document. You need to use the [`pdfExport`](https://ej2.syncfusion.com/react/documentation/api/gantt/#pdfexport) method for exporting. To enable PDF export in the Gantt, set the [`allowPdfExport`](https://ej2.syncfusion.com/react/documentation/api/gantt/#allowpdfexport) to true.
+PDF export allows exporting Gantt data to PDF document. You need to use the [pdfExport](https://ej2.syncfusion.com/react/documentation/api/gantt#pdfexport) method for exporting. To enable PDF export in the Gantt, set the [allowPdfExport](https://ej2.syncfusion.com/react/documentation/api/gantt#allowpdfexport) to true.
 
 To export data to PDF document, inject the `PdfExport` module in Gantt.
 
@@ -39,7 +39,7 @@ To get start quickly with PDF exporting and to know its functionalities, you can
 ## Indicators in PDF exporting 
 
 The PDF export functionality allows users to export Gantt charts enriched with dynamic indicators and accompanying images.
-These indicators, represented by images,can be effortlessly defined using the  [`base64`](https://ej2.syncfusion.com/react/documentation/api/gantt/iIndicator/#base64) encoding value in the data object of datasource.This data object field should be mapped to indiactor property of [`task fields`](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/#indicators).
+These indicators, represented by images,can be effortlessly defined using the  [base64](https://ej2.syncfusion.com/react/documentation/api/gantt/iIndicator#base64) encoding value in the data object of datasource.This data object field should be mapped to indiactor property of [task fields](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#indicators).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -81,10 +81,9 @@ step 2: Then , `pdfExpComplete` return as blob object.
 
 ## Single page exporting in gantt
 
+In Gantt, we have provided support to export the Gantt Chart component where each rows are auto-fit to the PDF document page width by setting `isFitToWidth` as true in <code>fitToWidthSettings</code> of <code>PdfExportProperties</code>.
 
-In Gantt, we have provided support to export the Gantt component where each rows are auto-fit to the PDF document page width by setting [`isFitToWidth`](https://ej2.syncfusion.com/react/documentation/api/gantt/pdfExportProperties/fitToWidthSettings/#isFitToWidth) as true in <code>fitToWidthSettings</code> of <code>PdfExportProperties</code>.
-
-Also, we can customize the chart width and grid width in exported file using [`chartWidth`](https://ej2.syncfusion.com/react/documentation/api/gantt/pdfExportProperties/fitToWidthSettings/isFitToWidth/#chartWidth) and [`gridWidth`](https://ej2.syncfusion.com/react/documentation/api/gantt/pdfExportProperties/fitToWidthSettings/isFitToWidth/#gridWidth) by defining it as percentage in string.
+Also, we can customize the chart width and grid width in exported file using `chartWidth` and `gridWidth` by defining it as percentage in string.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -100,7 +99,7 @@ Also, we can customize the chart width and grid width in exported file using [`c
         
 {% previewsample "page.domainurl/code-snippet/gantt/single-page" %}
 
-## Multiple gantt exporting in React Gantt component
+## Multiple gantt exporting in React Gantt Chart component
 
 PDF export provides an option for exporting multiple Gantt to same file. In this exported document, each Gantt will be exported to a new page of the document in same file.
 
@@ -121,7 +120,7 @@ PDF export provides an option for exporting multiple Gantt to same file. In this
 ## Applying Themes in PDF Export
 
 PDF export provides an option to include theme for the exported PDF document.
-To apply theme in exported PDF, define the [theme](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfExportProperties/#theme) in [pdfExportProperties](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfExportProperties/).
+To apply theme in exported PDF, define the [theme](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfExportProperties#theme) in [pdfExportProperties](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfExportProperties/).
 The available themes are:
 
 * Material

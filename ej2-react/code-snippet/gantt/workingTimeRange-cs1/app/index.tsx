@@ -1,37 +1,25 @@
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-
-class App extends React.Component<{}, {}>{
-    public taskFields: any = {
+function App() {
+  const taskFields = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    child: 'subtasks'
+    parentID: 'ParentID'
   };
-  public timelineSettings: any = {
-    timelineUnitSize: 60,
-    topTier: {
-      format: 'MMM dd, yyyy',
-      unit: 'Day',
-    },
-    bottomTier: {
-      unit: 'Hour',
-      format: 'h.mm a'
-    },
+  const timelineSettings = {
+    timelineViewMode: 'Day'
   };
-  public dayWorkingTime: any = [{ from: 9, to: 18 }]
-    render() {
-        return <GanttComponent dataSource={data} taskFields={this.taskFields}
-          dayWorkingTime={this.dayWorkingTime} timelineSettings={this.timelineSettings} height = '450px'>
-      </GanttComponent>
-    }
+  const dayWorkingTime = [{ from: 9, to: 18 }];
+  const splitterSettings = {
+    position : 0
+  }
+
+  return <GanttComponent dataSource={data} taskFields={taskFields} dayWorkingTime={dayWorkingTime} timelineSettings={timelineSettings} splitterSettings={splitterSettings} height='450px'>
+  </GanttComponent>;
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-

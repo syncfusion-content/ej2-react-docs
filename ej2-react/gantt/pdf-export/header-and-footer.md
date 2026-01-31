@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Header and footer of PDF export in React Gantt component | Syncfusion
-description: Learn here all about Header and footer of PDF export in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Header and footer of PDF export in React Gantt Chart component | Syncfusion
+description: Learn here all about Header and footer of PDF export in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Header and footer of PDF export
 platform: ej2-react
 documentation: ug
@@ -160,7 +160,7 @@ The below code illustrates the pdf export customization.
 
 ## Disable footer 
 
-By default, the exported PDF file includes a footer. The footer can be disabled by setting the [enableFooter](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfExportProperties/#enableFooter) property to `false`.
+By default, the exported PDF file includes a footer. The footer can be disabled by setting the [enableFooter](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfExportProperties#enableFooter) property to `false`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

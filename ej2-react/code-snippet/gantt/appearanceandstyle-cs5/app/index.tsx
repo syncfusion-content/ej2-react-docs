@@ -9,7 +9,7 @@ function App(){
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    parentID: 'parentId'
+    parentID: 'ParentID'
   };
   return (
     <GanttComponent 
@@ -17,6 +17,7 @@ function App(){
       gridLines='Both' 
       taskFields={taskFields} 
       height = '450px'
+      gridLines="Both"
     >
     </GanttComponent>
   ); 

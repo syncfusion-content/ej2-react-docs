@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Index in React Gantt component | Syncfusion
-description: Learn here all about Index in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Index in React Gantt Chart component | Syncfusion
+description: Learn here all about Index in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Index 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in React Gantt component
+# Index in React Gantt Chart component
 
 The Gantt chart is a project management tool which provides a Microsoft Project-like interface for scheduling and managing projects. Its intuitive user interface lets you visually manage tasks, task relationships, and resources in a project.
 
 ## Key Features
 
-* [**Data sources**](./data-binding/) - Bind the Grid component with an array of JSON objects or DataManager.
+* [**Data sources**](./data-binding/) - Bind the Gantt Chart component with an array of JSON objects or DataManager.
 * [**Large data binding**](./data-binding/) - To render a large number of tasks in the Gantt Chart with an effective performance. It allows users to load parent records alone on load time. Child records render on demand during expansion action.
 * [**Editing**](./managing-tasks/): A task’s fields, such as duration, start date, end date, predecessors, and more, can be edited directly in their respective cells using the Edit dialog or interactively using taskbars.
 * [**Undo/Redo**](./undo-redo/): It enables users to revert the most recent action performed in the Gantt Chart. Redo feature can reapply an action that was previously undone using the Undo feature. This allows users to revert their decision to undo an action.
@@ -25,7 +25,7 @@ The Gantt chart is a project management tool which provides a Microsoft Project-
 * [**Timezone**](./timezone/): It explains the Gantt Chart schedules project in their respective timezones.
 * [**Columns**](./columns/): Customizes the columns and adds the custom columns to the Gantt chart at initialization.
 * [**Resources**](./resources/): Resources are represented by staff, equipment, materials, and more. You can show and allocate the resources for each task.
-* [**Filtering**](./filtering/): Filters individual column using the menu filtering along with toolbar search box.
+* [**Filtering**](./filtering/): Filters individual columns using menu and excel-like filtering options, along with the toolbar search box.
 * [**Toolbar**](./tool-bar/): Managing the Gantt data using toolbars.
 * [**Rows**](./rows/): Customizes the rows and adds the custom rows to the Gantt chart at initialization and dynamically.
 * [**Selection**](./selection/): Customizes the row and cell selection to the Gantt chart at initialization and dynamically.

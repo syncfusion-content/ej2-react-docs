@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Resources in React Gantt component | Syncfusion
-description: Learn here all about Resources in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Resources in React Gantt Chart component | Syncfusion
+description: Learn here all about Resources in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Resources 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resources in React Gantt component
+# Resources in React Gantt Chart component
 
-In Gantt, the resources are represented by staff, equipment and materials etc. In Gantt component you can show or allocate the resources (human resources) for each task.
+In Gantt, the resources are represented by staff, equipment and materials etc. In Gantt Chart component you can show or allocate the resources (human resources) for each task.
 
 To get start quickly with Resource Allocation for each task and to know about Resource view Gantt, you can check on this video
 
@@ -18,14 +18,14 @@ To get start quickly with Resource Allocation for each task and to know about Re
 
 ## Resource collection
 
-The resource collection contains details about resources that are used in the project. Resources are JSON object that contains id, name, unit and group of the resources and this collection is mapped to the Gantt control using the [`resources`](https://ej2.syncfusion.com/react/documentation/api/gantt/#resources) property. These resource fields are mapped to the Gantt control using the [`resourceFields`](https://ej2.syncfusion.com/react/documentation/api/gantt/#resourcefields) property.
+The resource collection contains details about resources that are used in the project. Resources are JSON object that contains id, name, unit and group of the resources and this collection is mapped to the Gantt control using the [resources](https://ej2.syncfusion.com/react/documentation/api/gantt#resources) property. These resource fields are mapped to the Gantt control using the [resourceFields](https://ej2.syncfusion.com/react/documentation/api/gantt#resourcefields) property.
 
 Resource fields | Description
 -----|-----
-[`id`](https://ej2.syncfusion.com/react/documentation/api/gantt/resourceFields/#id) | This field is used to assign resources to the tasks.
-[`name`](https://ej2.syncfusion.com/react/documentation/api/gantt/resourceFields/) | This field is used to map the resource names. These names are displayed as one of Gantt columns and also can display as labels using the [`labelSettings`](https://ej2.syncfusion.com/react/documentation/api/gantt/labelSettings/) property.
-[`unit`](https://ej2.syncfusion.com/react/documentation/api/gantt/resourceFields/#unit) | It indicates the amount of work that can be done by a resource for the task in a day.
-[`group`](https://ej2.syncfusion.com/react/documentation/api/gantt/resourceFields/#group) | This field is used to group the resources and the tasks assigned to that particular resource into category.
+[id](https://ej2.syncfusion.com/react/documentation/api/gantt/resourceFields#id) | This field is used to assign resources to the tasks.
+[name](https://ej2.syncfusion.com/react/documentation/api/gantt/resourcefields#name) | This field is used to map the resource names. These names are displayed as one of Gantt columns and also can display as labels using the [labelSettings](https://ej2.syncfusion.com/react/documentation/api/gantt/labelSettings/) property.
+[unit](https://ej2.syncfusion.com/react/documentation/api/gantt/resourceFields#unit) | It indicates the amount of work that can be done by a resource for the task in a day.
+[group](https://ej2.syncfusion.com/react/documentation/api/gantt/resourceFields#group) | This field is used to group the resources and the tasks assigned to that particular resource into category.
 
 The following code snippets shows resource collection and how it assigned to Gantt control.
 
@@ -60,7 +60,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## Assign resource
 
-We can assign resources for a task at initial load, using the resource id value of the resources as a collection. This collection is mapped from the dataSource to the Gantt control using the [`resourceInfo`](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/#resourceinfo) property.
+We can assign resources for a task at initial load, using the resource id value of the resources as a collection. This collection is mapped from the dataSource to the Gantt control using the [resourceInfo](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#resourceinfo) property.
 
 Resources are assigned to tasks in following ways.
 
@@ -115,7 +115,7 @@ By using cell/ dialog edit option, we can add/remove the multiple resources for 
 
 In the Gantt Component, you can customize the background colors of the resource column and taskbars based on the resources assigned to each task. This customization enhances the readability and usability of the Gantt chart.
 
-To achieve this, utilize the [template](https://ej2.syncfusion.com/react/documentation/api/gantt/column/#template) property for the resource column and the [queryTaskbarInfo](https://ej2.syncfusion.com/react/documentation/api/gantt#querytaskbarinfo) event. The `template` property allows you to define a custom template for the resource column, while the `queryTaskbarInfo` event to modify the taskbar properties, including background colors.
+To achieve this, utilize the [template](https://ej2.syncfusion.com/react/documentation/api/gantt/column#template) property for the resource column and the [queryTaskbarInfo](https://ej2.syncfusion.com/react/documentation/api/gantt#querytaskbarinfo) event. The `template` property allows you to define a custom template for the resource column, while the `queryTaskbarInfo` event to modify the taskbar properties, including background colors.
 
 The following code snippet demonstrates how to customize the background colors of the taskbar and resource column according to the assigned resources:
 

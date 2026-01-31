@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Custom field in React Gantt component | Syncfusion
-description: Learn here all about Custom field in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Custom Field in React Gantt Chart Component | Syncfusion
+description: Learn here all about Custom field in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Custom field 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom field in React Gantt component
+# Custom Field in React Gantt Chart Component
 
 Generally in Gantt, Custom fields are displayed in the Custom Tab of the Add/Edit dialogs. However, they can be included in the General Tab of Add/Edit Dialog Box using `actionBegin` and `actionComplete` events. These events are used to append the custom field to the dialog box. The following code snippets demonstrate the solution.
 

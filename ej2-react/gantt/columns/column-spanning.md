@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column spanning in React Gantt Chart Component
+# Column Spanning in React Gantt Chart Component
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component supports **column spanning**, allowing adjacent cells to merge horizontally for improved layout clarity. This feature is useful for grouping related data or enhancing visual structure.
 
