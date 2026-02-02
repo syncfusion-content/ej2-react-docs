@@ -195,4 +195,3 @@ export interface IProjectModel {
   currentTab?: number;
 }
 export default App;
-

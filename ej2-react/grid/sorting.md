@@ -728,4 +728,4 @@ export default App;
 
 ## See also
 
-* [How to change loading indicator in React Grid](./data-binding/data-binding#loading-indicator)
+* [How to change loading indicator in React Grid](./data-binding/data-binding#loading-animation)

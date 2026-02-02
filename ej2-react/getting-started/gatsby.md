@@ -119,7 +119,7 @@ import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej
 {% endhighlight %}
 {% endtabs %}
 
-**Step 2:** Define the Grid component with the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasource) property and column definitions. Declare the values for the `dataSource` property.
+**Step 2:** Define the Grid component with the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource) property and column definitions. Declare the values for the `dataSource` property.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/pages/index.tsx" %}

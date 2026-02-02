@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Pager Component
+# Getting started
 
 This section explains you the steps required to create a simple Pager and demonstrate the basic usage of the Pager component in React environment.
 

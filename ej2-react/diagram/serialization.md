@@ -110,7 +110,6 @@ The [`preventDefaults`](https://ej2.syncfusion.com/react/documentation/api/diagr
 
 When enabled, only explicitly set properties are included in the JSON output, significantly reducing file size and improving load times.
 
-{% raw %}
 
 ```ts
   return (
@@ -122,8 +121,6 @@ When enabled, only explicitly set properties are included in the JSON output, si
   )
 
 ```
-{% endraw %}
-
 # File-Based Save and Load Operations
 
 ### Using Uploader Component

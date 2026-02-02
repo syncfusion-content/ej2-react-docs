@@ -50,7 +50,7 @@ Defines the objects to be aligned. This is an optional parameter. By default, al
 
 ### Alignment Mode
 
-[`Alignment Mode`](https://ej2.syncfusion.com/react/documentation/api/diagram/alignmentMode)  defines the specific mode with respect to which the objects are aligned. This is an optional parameter. The default alignment mode is **Object**. The accepted values of the argument "alignment mode" are as follows.
+[`Alignment Mode`](https://ej2.syncfusion.com/react/documentation/api/diagram/alignmentMode/)  defines the specific mode with respect to which the objects are aligned. This is an optional parameter. The default alignment mode is **Object**. The accepted values of the argument "alignment mode" are as follows.
 
 The table below shows the alignment as **Left** for different alignment modes.
 
@@ -115,7 +115,7 @@ The following code example illustrates how the nodes are distributed using the *
 
 ## Sizing Commands
 
-The [`sameSize`](https://ej2.syncfusion.com/react/documentation/api/diagram#samesize) command enables you to size all selected nodes to match the size of the first selected object or the first node in the objects collection you provide as the second parameter. The parameters for the `sameSize` method are explained below.
+The [`sameSize`](https://ej2.syncfusion.com/react/documentation/api/diagram/#samesize) command enables you to size all selected nodes to match the size of the first selected object or the first node in the objects collection you provide as the second parameter. The parameters for the `sameSize` method are explained below.
 
 ### Sizing Options
 
@@ -195,7 +195,7 @@ The following code examples demonstrate how to use the grouping commands in diag
 
 ## Rotate Commands
 
-The [`rotate`](https://ej2.syncfusion.com/react/documentation/api/diagram#rotate) commands in the diagram allow users to rotate selected elements by specified angles. These commands are useful for adjusting the rotation angle of nodes or shapes within the diagram.
+The [`rotate`](https://ej2.syncfusion.com/react/documentation/api/diagram/#rotate) commands in the diagram allow users to rotate selected elements by specified angles. These commands are useful for adjusting the rotation angle of nodes or shapes within the diagram.
 
 | Parameter | Type | Description |
 |----------|-------|-------------|
@@ -223,7 +223,7 @@ You can also use CTRL+R to rotate clockwise and CTRL+L to rotate anti-clockwise.
 
 ### Bring To Front Command
 
-The [`bringToFront`](https://ej2.syncfusion.com/react/documentation/api/diagram#bringtofront)command moves the selected element to the front, placing it above all other elements in the diagram. The following code illustrates how to use the `bringToFront` command.
+The [`bringToFront`](https://ej2.syncfusion.com/react/documentation/api/diagram/#bringtofront)command moves the selected element to the front, placing it above all other elements in the diagram. The following code illustrates how to use the `bringToFront` command.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -238,7 +238,7 @@ The [`bringToFront`](https://ej2.syncfusion.com/react/documentation/api/diagram#
 
 ### Send To Back Command
 
-The [`sendToBack`](https://ej2.syncfusion.com/react/documentation/api/diagram#sendtoback) command visually moves the selected element behind all the other overlapped elements. The following code illustrates how to execute the `sendToBack` command.
+The [`sendToBack`](https://ej2.syncfusion.com/react/documentation/api/diagram/#sendtoback) command visually moves the selected element behind all the other overlapped elements. The following code illustrates how to execute the `sendToBack` command.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -253,7 +253,7 @@ The [`sendToBack`](https://ej2.syncfusion.com/react/documentation/api/diagram#se
 
 ### Move Forward Command
 
-The [`moveForward`](https://ej2.syncfusion.com/react/documentation/api/diagram#moveforward) command visually moves the selected element over the nearest overlapping element. The following code illustrates how to execute the `moveForward` command.
+The [`moveForward`](https://ej2.syncfusion.com/react/documentation/api/diagram/#moveforward) command visually moves the selected element over the nearest overlapping element. The following code illustrates how to execute the `moveForward` command.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -282,7 +282,7 @@ The [`sendBackward`](https://ej2.syncfusion.com/react/documentation/api/diagram#
  {% previewsample "page.domainurl/code-snippet/diagram/commands/es5sendbackward-cs1" %}
 
  
-The Z-order commands can also be performed using keyboard shortcuts. For more information, refer to the [`keyboard commands`](./interaction#keyboard).
+The Z-order commands can also be performed using keyboard shortcuts. For more information, refer to the [`keyboard commands`](./interaction/#keyboard).
 
 ## Zoom
 
@@ -322,7 +322,7 @@ const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
 
 ```
-For more information about zoom refer to the [zoom](./scroll-settings#update-zoom-at-runtime)
+For more information about zoom refer to the [zoom](./scroll-settings/#update-zoom-at-runtime)
 
 ## Nudge Command
 
@@ -405,7 +405,7 @@ The following code illustrates how to execute the `bringToCenter` command.
 
 ## FitToPage
 
-The [`fitToPage`](https://ej2.syncfusion.com/react/documentation/api/diagram#fittopage)command helps to fit the diagram content into the view with respect to either width, height, or the entire content. The fitToPage method takes one parameter,[`fitOptions`](https://ej2.syncfusion.com/react/documentation/api/diagram/FitOptions), which specifies the options for fitting the diagram to the page.
+The [`fitToPage`](https://ej2.syncfusion.com/react/documentation/api/diagram#fittopage)command helps to fit the diagram content into the view with respect to either width, height, or the entire content. The fitToPage method takes one parameter,[`fitOptions`](https://ej2.syncfusion.com/react/documentation/api/diagram/FitOptions/), which specifies the options for fitting the diagram to the page.
 
 ### FitOptions
 
@@ -417,7 +417,7 @@ The [`margin`](https://ej2.syncfusion.com/react/documentation/api/diagram/iFitOp
 
 The [`canZoomIn`](https://ej2.syncfusion.com/react/documentation/api/diagram/iFitOptions#canZoomIn) parameter enables/disables zooming to fit the smaller content into a larger viewport.
 
-The [`canZoomOut`](https://ej2.syncfusion.com/react/documentation/api/diagram/iFitOptions#canzoomout) parameter enables or disables zooming out to fit larger content into a smaller viewport.
+The [`canZoomOut`](https://ej2.syncfusion.com/react/documentation/api/diagram/iFitOptions/#canzoomout) parameter enables or disables zooming out to fit larger content into a smaller viewport.
 
 The [`customBounds`](https://ej2.syncfusion.com/react/documentation/api/diagram/iFitOptions#customBounds) parameter defines a custom region that should be fit into the viewport.
 
@@ -425,10 +425,10 @@ The following code illustrates how to execute `FitToPage` command.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/reactCurlyExamples/fitToPage-cs1/app/index.jsx %}
+{% include code-snippet/diagram/commands/fitToPage-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/reactCurlyExamples/fitToPage-cs1/app/index.tsx %}
+{% include code-snippet/diagram/commands/fitToPage-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

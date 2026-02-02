@@ -12,7 +12,7 @@ class App extends React.Component<{},{}> {
   }
 
   public onImageUpload = (args: UploadingEventArgs) => {
-   args.currentRequest.setRequestHeader('Authorization', 'Syncfusion');
+    args.currentRequest.setRequestHeader('Authorization', 'Syncfusion');
   };
 
   public render() {

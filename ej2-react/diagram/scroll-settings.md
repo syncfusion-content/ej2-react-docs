@@ -122,10 +122,10 @@ The following example demonstrates how to configure autoscroll:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/reactCurlyExamples/es5Connect-cs1/app/index.jsx %}
+{% include code-snippet/diagram/undoredo/es5Connect-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/reactCurlyExamples/es5Connect-cs1/app/index.tsx %}
+{% include code-snippet/diagram/undoredo/es5Connect-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

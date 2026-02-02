@@ -16,8 +16,6 @@ The EJ2 React Diagram component supports localization functionality, allowing de
 
 To localize the diagram context menu, we need to define the [`locale`](https://ej2.syncfusion.com/react/documentation/api/diagram/#locale) property of the diagram with our preferred culture. In the example below, we use **'de-DE**', which is the locale code for German as used in Germany.
 
-{% raw %}
-
 ```javascript
 <DiagramComponent id="container" width={'100%'} height={'600px'} 
     //Set locale
@@ -28,8 +26,6 @@ To localize the diagram context menu, we need to define the [`locale`](https://e
     }}
     nodes={node}/>
 ```
-
-{% endraw %}
 
 Next, call the `setCulture('de')` function to set the default culture for all EJ2 components. This method accepts one parameter, cultureName, which specifies the culture name to be set as the default.
 

@@ -26,10 +26,10 @@ The following example shows the customization of page settings.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/reactCurlyExamples/es5pagesettings-cs1/app/index.jsx %}
+{% include code-snippet/diagram/pagesettings/es5pagesettings-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/reactCurlyExamples/es5pagesettings-cs1/app/index.tsx %}
+{% include code-snippet/diagram/pagesettings/es5pagesettings-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

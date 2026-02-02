@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting started with React Multi select component
 
 This section explains how to create a simple **MultiSelect** component and configure its available functionalities in React.
 
-To get start quickly with React MultiSelect component, you can check on this video:
+To get started quickly with the React MultiSelect component, you can check this video:
 
 {% youtube "https://www.youtube.com/watch?v=mJyXh99THzQ" %}
 
@@ -29,13 +29,14 @@ The following list of dependencies are required to use the `MultiSelect` compone
     |-- @syncfusion/ej2-lists
     |-- @syncfusion/ej2-inputs
     |-- @syncfusion/ej2-navigations
+    |-- @syncfusion/ej2-notifications
     |-- @syncfusion/ej2-popups
         |-- @syncfusion/ej2-buttons
 ```
 
 ## Installation and configuration
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To easily set up a React application, use Vite, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite supports TypeScript, JSX, and other modern JavaScript features while optimizing your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -44,14 +45,14 @@ To create a new React application, run the following command.
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+To set up a React application in a TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in a JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -71,9 +72,7 @@ npm install @syncfusion/ej2-react-dropdowns --save
 
 ## Adding MultiSelect component
 
-Now, you can start adding MultiSelect component in the application. For getting started, add the MultiSelect component in `src/App.tsx` file using following code.
-
-Add the below code in the `src/App.tsx` to initialize the MultiSelect.
+Now, you can start adding the MultiSelect component to your application. Update the `src/App.tsx` file with the following code to initialize the MultiSelect component.
 
 `[Class-component]`
 
@@ -82,6 +81,7 @@ Add the below code in the `src/App.tsx` to initialize the MultiSelect.
 import { MultiSelectComponent  } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
+import './App.css'
 
 export default class App extends React.Component<{}, {}> {
   public render() {
@@ -91,7 +91,6 @@ export default class App extends React.Component<{}, {}> {
     );
   }
 }
-ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
 `[Functional-component]`
@@ -100,14 +99,14 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 import { MultiSelectComponent  } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
+import './App.css'
 
-function App(){
+export default function App(){
     return (
        // specifies the tag for render the MultiSelect component
       <MultiSelectComponent  id='mtselement'/>
     );
 }
-ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
 ## Adding CSS reference
@@ -125,9 +124,11 @@ Import the MultiSelect component required CSS references as follows in `src/App.
 
 ```
 
+You can check out the [Themes](../appearance/theme) topic to know more about built-in themes and different ways to refer themes in a React application.
+
 ## Binding data source
 
-After initialization, populate the data using [dataSource](https://ej2.syncfusion.com/react/documentation/api/multi-select/#datasource) &nbsp;property. Here, an array of string values is passed to the MultiSelect component.
+After initialization, populate the data using [dataSource](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#datasource) &nbsp;property. Here, an array of string values is passed to the MultiSelect component.
 
 `[Class-component]`
 
@@ -136,6 +137,7 @@ After initialization, populate the data using [dataSource](https://ej2.syncfusio
 import { MultiSelectComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import './App.css'
 
 export default class App extends React.Component<{}, {}> {
   // define the array of data
@@ -147,7 +149,6 @@ export default class App extends React.Component<{}, {}> {
     );
   }
 }
-ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
 `[Functional-component]`
@@ -156,8 +157,9 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 import { MultiSelectComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import './App.css'
 
-function App(){
+export default function App(){
   // define the array of data
   let sportsData: string[] = ['Badminton', 'Basketball', 'Cricket', 'Football', 'Golf', 'Gymnastics', 'Hockey', 'Rugby', 'Snooker', 'Tennis'];
     return (
@@ -165,7 +167,6 @@ function App(){
       <MultiSelectComponent id="mtselement" dataSource={sportsData} />
     );
 }
-ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
 ## Run the application
@@ -206,7 +207,7 @@ npm run dev
 
 By default, the width of the popup list automatically adjusts according to the MultiSelect input element's width and the height of the popup list has '300px'.
 
-You can also customize the suggestion list height and width using [popupHeight](https://ej2.syncfusion.com/react/documentation/api/multi-select/#popupheight) &nbsp;and [popupWidth](https://ej2.syncfusion.com/react/documentation/api/multi-select/#popupwidth) properties respectively.
+You can also customize the suggestion list height and width using [popupHeight](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#popupheight) &nbsp;and [popupWidth](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#popupwidth) properties respectively.
 
 In the following sample, popup list's width and height are configured.
 
