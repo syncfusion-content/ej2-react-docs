@@ -12,8 +12,8 @@ domainurl: ##DomainURL##
 
 Globalization is the combination of internalization and localization. You can adapt the component to various languages by parsing and formatting the date or number ([Internationalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization)), and also add culture specific customization and translation to the text ([localization](https://ej2.syncfusion.com/react/documentation/common/globalization/localization)).
 
-By default, Calendar date format, week and month names are specific to American English culture. It utilizes the [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Internationalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization)
-package to parse and format the date object based on the culture by using the official [`UNICODE CLDR`](http://cldr.unicode.org/) JSON data and also it provides the [`loadCldr`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#installing-cldr-data) method to load the culture specific CLDR JSON data.
+By default, Calendar date format, week and month names are specific to American English culture. It utilizes the [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Internationalization](http://ej2.syncfusion.com/documentation/base/internationalization/)
+package to parse and format the date object based on the culture by using the official [`UNICODE CLDR`](http://cldr.unicode.org/) JSON data and also it provides the [`loadCldr`](http://ej2.syncfusion.com/documentation/base/intl.html#cldr-data-dependencies) method to load the culture specific CLDR JSON data.
 
 To go with the different culture other than `English`, follow the below steps.
 
@@ -27,9 +27,9 @@ To go with the different culture other than `English`, follow the below steps.
 
 * Now import the installed CLDR JSON data into the `app.ts` file.
 
-* Now use the [`loadCldr`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#installing-cldr-data) method to load the culture specific CLDR JSON data from the installed location to `app.ts` file.
+* Now use the [`loadCldr`](http://ej2.syncfusion.com/documentation/base/intl.html#cldr-data-dependencies) method to load the culture specific CLDR JSON data from the installed location to `app.ts` file.
 
-* Calendar displayed `Sunday` as the first day of week based on default culture ("en-US"). If you want to display the Calendar with loaded culture’s first day of week, you need to import `weekdata.json` file from the `cldr-data/supplemental` as given in the code example.
+* Calendar displayed `Sunday` as the first day of week based on default culture ("en-US"). If you want to display the Calendar with loaded culture’s first day of week, you need to import `weekdata.json` file from the `cldr-data/suppemental` as given in the code example.
 
 ```ts
 //import the loadCldr from ej2-base
@@ -257,4 +257,4 @@ The following example demonstrates the Calendar in `Arabic` culture with Right-T
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/calendar/rtl-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/calendar/rtl-cs2" %}

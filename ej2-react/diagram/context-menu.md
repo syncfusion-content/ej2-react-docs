@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD010 -->
 
-In graphical user interfaces, a context menu appears when you perform a right-click operation, offering users a set of actions relevant to the current context. The React Diagram component provides extensive context menu customization capabilities through the [`contextMenuSettings`](https://ej2.syncfusion.com/react/documentation/api/diagram#contextmenusettings) property.
+In graphical user interfaces, a context menu appears when you perform a right-click operation, offering users a set of actions relevant to the current context. The React Diagram component provides extensive context menu customization capabilities through the [`contextMenuSettings`](https://ej2.syncfusion.com/react/documentation/api/diagram/#contextmenusettings) property.
 
 The Diagram control includes built-in context menu items and allows you to define custom menu items. This flexibility enables you to tailor menus to specific application needs, including creating nested levels of menu items for complex user interactions.
 
@@ -20,13 +20,13 @@ The Diagram control includes built-in context menu items and allows you to defin
 
 To ensure the context menu renders correctly, include the necessary CSS references from the Syncfusion® `ej2-navigations` package by adding the following line to your `src/styles.css` file:
 
-`@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";`
+`@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";`
 
 N> If you want to use contextMenu in diagram, you need to inject `DiagramContextMenu` Module in the diagram.
 
 ## Default Context Menu
 
-The Diagram component provides default context menu items for frequently used commands. Use the [`show`](https://ej2.syncfusion.com/react/documentation/api/diagram/contextMenuSettings#show) property to enable or disable the context menu.
+The Diagram component provides default context menu items for frequently used commands. Use the [`show`](https://ej2.syncfusion.com/react/documentation/api/diagram/contextMenuSettings/#show) property to enable or disable the context menu.
 
 The following code demonstrates how to enable the default context menu items:
 
@@ -43,27 +43,27 @@ The following code demonstrates how to enable the default context menu items:
 
 ## Customize Context Menu
 
-You can customize context menus for individual nodes by defining specific menu items beyond the default options. To add custom context menu items, define and incorporate them into the [`items`](https://ej2.syncfusion.com/react/documentation/api/diagram/contextMenuSettings#items) property of the context menu.
+You can customize context menus for individual nodes by defining specific menu items beyond the default options. To add custom context menu items, define and incorporate them into the [`items`](https://ej2.syncfusion.com/react/documentation/api/diagram/contextMenuSettings/#items) property of the context menu.
 
-Each custom item can be defined with specific text and ID using the[`text`](https://ej2.syncfusion.com/react/documentation/api/diagram/contextMenuItemModel#items) and [`ID`](https://ej2.syncfusion.com/react/documentation/api/diagram/contextMenuItemModel#id) properties, respectively. Additionally, you can enhance visual cues by associating icons through the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/diagram/contextMenuItemModel#iconcss) for enabling the use of font icons. The [`target`](https://ej2.syncfusion.com/react/documentation/api/diagram/contextMenuItemModel#target) property specifies where each menu item should appear, and separators can be included using the [`separator`](https://ej2.syncfusion.com/react/documentation/api/diagram/contextMenuItemModel#separator) property to visually group menu items. This flexibility allows for a tailored user interface that meets specific application needs efficiently. Nested menu items are defined within the [`items`](https://ej2.syncfusion.com/react/documentation/api/diagram/contextMenuItemModel#items) property of a parent menu item.
+Each custom item can be defined with specific text and ID using the[`text`](https://ej2.syncfusion.com/react/documentation/api/diagram/contextMenuItemModel/#items) and [`ID`](https://ej2.syncfusion.com/react/documentation/api/diagram/contextMenuItemModel/#id) properties, respectively. Additionally, you can enhance visual cues by associating icons through the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/diagram/contextMenuItemModel/#iconcss) for enabling the use of font icons. The [`target`](https://ej2.syncfusion.com/react/documentation/api/diagram/contextMenuItemModel/#target) property specifies where each menu item should appear, and separators can be included using the [`separator`](https://ej2.syncfusion.com/react/documentation/api/diagram/contextMenuItemModel/#separator) property to visually group menu items. This flexibility allows for a tailored user interface that meets specific application needs efficiently. Nested menu items are defined within the [`items`](https://ej2.syncfusion.com/react/documentation/api/diagram/contextMenuItemModel/#items) property of a parent menu item.
 
 
 ### Display Custom Menu Only
 
-To display only custom context menu items, set the [`showCustomMenuOnly`](https://ej2.syncfusion.com/react/documentation/api/diagram/contextMenuSettingsModel#showcustommenuonly) property to **true**.
+To display only custom context menu items, set the [`showCustomMenuOnly`](https://ej2.syncfusion.com/react/documentation/api/diagram/contextMenuSettingsModel/#showcustommenuonly) property to **true**.
 
 ### Context Menu Click
 
-Handle custom menu item actions using the [`contextMenuClick`](https://ej2.syncfusion.com/react/documentation/api/diagram#contextmenuclick) event. This event triggers when a menu item is clicked and allows you to define specific actions based on the selected item.
+Handle custom menu item actions using the [`contextMenuClick`](https://ej2.syncfusion.com/react/documentation/api/diagram/#contextmenuclick) event. This event triggers when a menu item is clicked and allows you to define specific actions based on the selected item.
 
 The following example demonstrates context menu click handling for node cloning and color changes:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/reactCurlyExamples/contextmenu-cs2/app/index.jsx %}
+{% include code-snippet/diagram/contextmenu/contextmenu-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/reactCurlyExamples/contextmenu-cs2/app/index.tsx %}
+{% include code-snippet/diagram/contextmenu/contextmenu-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -72,7 +72,7 @@ The following example demonstrates context menu click handling for node cloning 
 
 ### Context Menu Open
 
-In certain situations, you may want to hide specific menu items based on the selected elements in the diagram. This can be achieved using the [`contextMenuOpen`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramBeforeMenuOpenEventArgs) event. When the context menu opens via right-click, this event triggers and allows you to create an array of menu items to hide for the selected element. Pass this array to the[`hiddenItems`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramBeforeMenuOpenEventArgs#hiddenitems) property of the contextMenuOpen event argument. 
+In certain situations, you may want to hide specific menu items based on the selected elements in the diagram. This can be achieved using the [`contextMenuOpen`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramBeforeMenuOpenEventArgs/) event. When the context menu opens via right-click, this event triggers and allows you to create an array of menu items to hide for the selected element. Pass this array to the[`hiddenItems`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramBeforeMenuOpenEventArgs/#hiddenitems) property of the contextMenuOpen event argument. 
 
 The following example shows how to display different custom menu items for nodes, connectors, and the diagram based on selection:
 
@@ -160,7 +160,7 @@ root.render(<App />);
 
 ## Template Support for Context Menu
 
-The Diagram component provides template support for context menu customization. Customize menu item templates before rendering using the [`contextMenuBeforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/diagram#contextmenubeforeitemrender) event, which triggers while rendering each menu item.
+The Diagram component provides template support for context menu customization. Customize menu item templates before rendering using the [`contextMenuBeforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/diagram/#contextmenubeforeitemrender) event, which triggers while rendering each menu item.
 
 The following example renders menu items with shortcut key codes for specific actions. Key codes for cut, copy, and paste actions display in the right corner of menu items by adding a span element in the `contextMenuBeforeItemRender` event:
 
@@ -179,9 +179,9 @@ The following example renders menu items with shortcut key codes for specific ac
 
 |Event|Description|
 |----|----|
-|[`contextMenuBeforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/diagram#contextmenubeforeitemrender) |Triggers while initializing each menu item.|
-|[`contextMenuOpen`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramBeforeMenuOpenEventArgs)|Triggers upon right-click before opening the context menu.|
-|[`contextMenuClick`](https://ej2.syncfusion.com/react/documentation/api/diagram#contextmenuclick)|Triggers when a menu item is clicked.|
+|[`contextMenuBeforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/diagram/#contextmenubeforeitemrender) |Triggers while initializing each menu item.|
+|[`contextMenuOpen`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramBeforeMenuOpenEventArgs/)|Triggers upon right-click before opening the context menu.|
+|[`contextMenuClick`](https://ej2.syncfusion.com/react/documentation/api/diagram/#contextmenuclick)|Triggers when a menu item is clicked.|
 
 The following example shows how to get these events.
 

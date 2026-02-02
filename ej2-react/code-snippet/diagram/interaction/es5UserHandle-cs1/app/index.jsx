@@ -1,4 +1,4 @@
-
+{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DiagramComponent, MoveTool, SelectorConstraints, randomId, cloneObject } from "@syncfusion/ej2-react-diagrams";
@@ -70,3 +70,4 @@ class CloneTool extends MoveTool {
         this.inAction = true;
     }
 }
+{% endraw %}
