@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Right to left in React Common control | Syncfusion
-description: Learn here all about Right to left in Syncfusion React Common control of Syncfusion Essential JS 2 and more.
+title: Right to Left (RTL) in React Common control | Syncfusion
+description: Learn how to enable Right-to-Left (RTL) support in Syncfusion React components for languages like Arabic and Hebrew.
 control: common
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Right-To-Left support in Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
+# Right-To-Left Support in Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
 
-Right-to-Left (RTL) support allows applications to effectively communicate with users who use languages that are written from right to left, such as Arabic, Hebrew, etc.
+Right-to-Left (RTL) support is essential for applications serving users who read and write in languages that flow from right to left, such as Arabic, Hebrew, and Persian. RTL rendering ensures that UI elements, text alignment, and navigation patterns align with the natural reading direction of these languages, providing an intuitive and culturally appropriate user experience.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components support for right-to-left (RTL) by setting the `enableRtl` property to `true`. This adds the class name `e-rtl` to the component element and renders all Syncfusion<sup style="font-size:70%">&reg;</sup> React components in a right-to-left direction.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components provide built-in RTL support through the `enableRtl` property. When set to `true`, this property applies the `e-rtl` CSS class to the component, automatically rendering all internal elements and layout structures in a right-to-left direction. This transformation affects text alignment, icon positioning, navigation flow, and component-specific layouts without requiring manual CSS adjustments.
 
 ## Enable RTL for all components
 
-To enable Right-To-Left (RTL) support for all components, users can set the `enableRtl` property directly in their application. Here is an example code snippet using the ListView component:
+To enable RTL support globally across all Syncfusion<sup style="font-size:70%">&reg;</sup> components in the application, set the `enableRtl` property to `true` using the `L10n.load()` method or by configuring it at the application root level. This approach ensures consistent RTL behavior throughout the application and is recommended when the entire application targets RTL language users. The following example demonstrates global RTL enablement using the ListView component:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -34,7 +34,7 @@ To enable Right-To-Left (RTL) support for all components, users can set the `ena
 
 ## Enable RTL for an individual component
 
-To enable Right-To-Left (RTL) support for an individual component, users can set the `enableRtl` property in the component's options. Here is an example code snippet using the ListView component:
+To enable RTL support for specific components while maintaining left-to-right rendering for the rest of the application, set the `enableRtl` property directly on individual component instances. This selective approach is useful in mixed-language interfaces or when only certain sections of the application require RTL rendering. The following example demonstrates individual RTL enablement using the ListView component:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

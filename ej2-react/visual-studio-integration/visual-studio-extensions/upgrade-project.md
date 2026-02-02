@@ -10,48 +10,42 @@ domainurl: ##DomainURL##
 
 # Upgrade Project
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React migration add-in for Visual Studio allows you to migrate an existing Syncfusion<sup style="font-size:70%">&reg;</sup> React application from one version of Essential Studio<sup style="font-size:70%">&reg;</sup> version to another version. This reduces the amount of manual work required when migrating the Syncfusion<sup style="font-size:70%">&reg;</sup> version.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React migration add-in for Visual Studio helps migrate an existing Syncfusion<sup style="font-size:70%">&reg;</sup> React application from one Essential Studio version to another, reducing manual effort.
 
-> The Syncfusion<sup style="font-size:70%">&reg;</sup> React Project migration are available from v17.3.0.9.
+> Project migration support is available from v17.3.0.9 onward.
 
-The steps below help you to upgrade the Syncfusion<sup style="font-size:70%">&reg;</sup> version in **Syncfusion<sup style="font-size:70%">&reg;</sup> React Application** through the **Visual Studio**:
+To upgrade the Syncfusion version in a Syncfusion React application using Visual Studio:
 
-1. Open the Syncfusion<sup style="font-size:70%">&reg;</sup> React application which uses the Syncfusion<sup style="font-size:70%">&reg;</sup> component.
+1. Open the Syncfusion React application in Visual Studio.
 
-2. To open Migration Wizard, follow either one of the options below:
+2. Open the Migration Wizard using one of these methods:
 
-    **Option 1:**
-
-    Choose **Extensions-> Syncfusion-> Essential Studio<sup style="font-size:70%">&reg;</sup> for ASP.NET Core ->Migrate Project…** in **Visual Studio** menu.
+    **Option 1:**  
+    Choose **Extensions → Syncfusion → Essential Studio for ASP.NET Core → Migrate Project…** from the Visual Studio menu.
 
     ![menu](images/migrate-menu.png)
 
-    > In Visual Studio 2017, you can see the **Syncfusion** menu directly in the Visual Studio menu
-
-    **Option 2:**
-
-    Right-click on the **Application** from the **Solution Explorer** and select the **Syncfusion<sup style="font-size:70%">&reg;</sup> Web** and choose the **Migrate the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Project to Another version…**
+    **Option 2:**  
+    Right-click the project in Solution Explorer, select **Syncfusion Web**, then choose **Migrate the Syncfusion ASP.NET Core Project to Another version…**.
 
     ![Context menu](images/migrate-context-menu.png)
 
-3. The Syncfusion<sup style="font-size:70%">&reg;</sup> Project Migration window will appear. You can choose the required version of Syncfusion<sup style="font-size:70%">&reg;</sup> React to migrate.
-
-    > The Syncfusion<sup style="font-size:70%">&reg;</sup> React versions are loaded from published Syncfusion<sup style="font-size:70%">&reg;</sup> React NPM packages and it requires the internet connectivity.
+3. In the Project Migration window, select the target Syncfusion React version, asset source (NPM, CDN, or Installed Location), and themes.
 
     ![Migration Window](images/migration-window.PNG)
 
-    **Assets From:** Load the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JS 2 assets to React Project, from either NPM, CDN, or Installed Location.
+    > The available Syncfusion React versions are loaded from published NPM package versions and require internet connectivity.
 
-    > Installed location option will be available only when the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 setup has been installed.
+    *Installed Location* is available only when the Syncfusion EJ2 setup is installed locally.
 
-4. Check the **“Enable a backup before migrating** checkbox if you want to take the project backup and choose the location.
+4. (Optional) Enable **Enable a backup before migrating** and choose a backup location.
 
-5. Once the migration process completed, will get the success message window.
+5. Run the migration. After completion, a success message is shown.
 
     ![project Success](images/Confirmation-window.PNG)
 
-    if you enabled project backup before migrating, the old project was saved in the specified backup path location, as shown below once the migration process completed
+    If backup was enabled, the original project is saved at the specified backup path.
 
     ![BackupLocation](images/BackupLocation.png)
 
-6. The Syncfusion<sup style="font-size:70%">&reg;</sup> React NPM packages, and CSS are updated to the selected version in the project.
+6. The Syncfusion React NPM packages and CSS are updated to the selected target version in the project. Verify `package.json` and the project files to confirm the migration.

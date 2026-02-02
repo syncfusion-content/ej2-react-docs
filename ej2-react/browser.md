@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Browser in React Browser md component | Syncfusion
-description: Learn here all about Browser in Syncfusion React Browser md component of Syncfusion Essential JS 2 and more.
+title: Browser support for React | Syncfusion
+description: Learn about browser support and required polyfills for Syncfusion Essential JS 2 React components.
 control: Browser 
 platform: ej2-react
 documentation: ug
@@ -10,55 +10,63 @@ domainurl: ##DomainURL##
 
 # Browser support
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential JS 2 components are supported only in modern browsers. This includes the following versions.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Essential JS 2 components are supported in modern browsers. Supported browser families and general support notes:
 
-|    Chrome    |    Firefox    |    Opera     |    Edge    |    IE      |    Safari    |    IOS    |    Android    |    Windows   Mobile    |
-|--------------|---------------|--------------|------------|------------|--------------|-----------|---------------|------------------------|
-|    Latest    |    Latest     |    Latest    |    13 +    |    11 +    |    9 +       |    9 +    |    4.4 +      |    IE 11 +             |
+| Browser | Supported versions |
+|---|---|
+| Chrome | Latest |
+| Firefox | Latest |
+| Opera | Latest |
+| Edge | 13+ |
+| Internet Explorer (IE) | 11+ |
+| Safari | 9+ |
+| iOS Safari | 9+ |
+| Android Browser / Chrome for Android | 4.4+ |
+| Windows Mobile | IE 11+ |
 
 ## Required polyfills
 
-The following polyfills are required to run Essential JS 2 components in each browser.
+The following polyfills are required to run Essential JS 2 components in certain browsers:
 
-|    Browser                                             |    Polyfills      |
-|:--------------------------------------------------------:|:-------------------:|
-|    Chrome(latest), Firefox(latest), Opera(latest), Edge, Safari 9+    |    NONE           |
-|    IE 11                                               |    ES6 Promise    |
+| Browser | Required polyfills |
+|---:|:---|
+| Chrome (latest), Firefox (latest), Opera (latest), Edge, Safari 9+ | None |
+| Internet Explorer 11 | ES6 Promise polyfill |
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential JS 2 components are supported in IE 11 browser with ES6 Promise polyfill.
+Essential JS 2 components are supported in IE 11 when the ES6 Promise polyfill is present.
 
 ## Using CDN
 
-To include the ES6 Promise polyfill in your HTML file via a CDN, add the following script tags:
+To include the ES6 Promise polyfill via CDN, add one of the following script tags to the HTML page (choose one of the provided variants):
 
-```ts
-<!-- Automatically provides/replaces `Promise` if missing or broken. -->
+```html
+<!-- Full (development) -->
 <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script>
-<!-- Minified version of `es6-promise-auto` below. -->
+
+<!-- Minified (production) -->
 <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
-
 ```
+
+Include the polyfill before loading Syncfusion scripts so Promise is available when components initialize.
 
 ## Node.js
 
-ES6 Promise polyfill can also be installed on the Node.js.
+To use the ES6 Promise polyfill in a Node.js environment:
 
-To install:
+Install:
 
-```ts
-yarn add es6-promise
-(or)
+```bash
 npm install es6-promise
-
+# or
+yarn add es6-promise
 ```
 
-To Use:
+Use in code:
 
-```ts
+```js
 var Promise = require('es6-promise').Promise;
-
 ```
 
-For further details, refer to the link [here](https://github.com/stefanpenner/es6-promise).
+For more details, refer to the polyfill project: https://github.com/stefanpenner/es6-promise.

@@ -18,7 +18,7 @@ function App() {
     }
     return (
         <div id='container'>
-            <div class="actions" >
+            <div className="actions" >
                 <button id="startListening" className="e-btn" onClick={startListening}>Start Listening</button>
                 <button id="stopListening" className="e-btn" onClick={stopListening}>Stop Listening</button>
             </div>

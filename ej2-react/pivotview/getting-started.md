@@ -56,35 +56,123 @@ The main package `@syncfusion/ej2-react-pivotview` serves as the primary React w
 
 ## Setup for Local Development
 
-To set up a React application for using the Pivot Table component, use `create-vite-app`. This tool offers a fast and efficient development environment with smaller bundle sizes and optimized builds compared to other tools like `create-react-app`. For detailed steps, refer to the Vite [installation guide](https://vitejs.dev/guide/). By following these steps, you can create a React application ready for development and production.
+To set up a React application, we recommend using **Vite**, which offers a faster and more optimized development environment. For detailed steps, refer to the Vite [installation instructions](https://vite.dev/guide/). Vite uses esbuild under the hood for lightning-fast builds and leverages native ES modules (ESM) during development, resulting in significantly better performance compared to traditional build tools.
 
 > **Note:** To create a React application using `create-react-app`, refer to this [guide](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-To create a new React application, open your terminal and run the following command:
+### Option 1: Interactive Setup (Recommended for beginners)
+
+To create a new React application with interactive prompts, run the following command:
 
 ```bash
 npm create vite@latest my-app
 ```
 
-To set up a React application with TypeScript, use this command:
+or
+
+```bash
+yarn create vite my-app
+```
+
+Using one of the above commands will prompt you to configure your project interactively:
+
+**Step 1:** Select `React` as the framework. This will create a React project.
+
+```bash
+? Select a framework: » - Use arrow-keys to navigate. Press Enter to confirm.
+  Vanilla
+  Vue
+> React
+  Preact
+  Lit
+  Svelte
+  Solid
+  Qwik
+  Angular
+  Others
+```
+
+**Step 2:** Choose `TypeScript` as the framework variant to build this React project using TypeScript.
+
+```bash
+? Select a variant: » - Use arrow-keys to navigate. Press Enter to confirm.
+> TypeScript
+  TypeScript + React Compiler
+  TypeScript + SWC 
+  JavaScript  
+  JavaScript + React Compiler
+  JavaScript + SWC
+  React Router v7
+  TanStack Router
+  RedwoodSDK
+  RSC
+  Vike
+```
+
+**Step 3:** If prompted for experimental options, choose according to your needs. In this guide, **No** option is selected.
+```bash
+? Use rolldown-vite (Experimental)?:
+  Yes
+> No
+```
+
+**Step 4:** When asked whether to install dependencies and start now, choose "Yes" to install and run immediately, or "No" to install later and run the dev server manually.
+
+```bash
+? Install with npm and start now?
+   Yes / > No
+```
+
+As Syncfusion packages are not installed, as of now, **No** option is selected. Then navigate to the project directory and install its dependencies using below commands:
+
+```bash
+cd my-app
+npm install
+```
+or
+
+```bash
+cd my-app
+yarn
+```
+
+### Option 2: Direct Command-Line Setup
+
+Alternatively, you can skip the interactive prompts and directly create your project using template flags.
+
+**For TypeScript environment:**
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
-npm run dev
+npm install
 ```
 
-This command creates a TypeScript-based React application, navigates to the project folder, and starts the development server.
+or
 
-To set up a React application with JavaScript, use this command:
+```bash
+yarn create vite my-app --template react-ts
+cd my-app
+yarn
+```
+
+**For JavaScript environment:**
 
 ```bash
 npm create vite@latest my-app -- --template react
 cd my-app
-npm run dev
+npm install
 ```
 
-This command creates a JavaScript-based React application, navigates to the project folder, and starts the development server.
+or
+
+```bash
+yarn create vite my-app --template react
+cd my-app
+yarn
+```
+
+After running the above commands, the project will be created and all required dependencies will be installed automatically.
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
@@ -94,11 +182,19 @@ To use the Pivot Table component in your React project, you need to install the 
 npm install @syncfusion/ej2-react-pivotview --save
 ```
 
+or
+
+```bash
+yarn add @syncfusion/ej2-react-pivotview
+```
+
 > The `--save` option ensures that the Pivot Table package is added to the `dependencies` section of your `package.json` file.
+
+> **Tip:** You can also check out the [installation section](https://ej2.syncfusion.com/react/documentation/installation/npm-package) to learn about different ways of installing packages.
 
 ## Adding CSS reference
 
-To style the [Pivot Table](https://www.syncfusion.com/react-components/react-pivot-table), include the necessary CSS files for the Pivot Table and its [dependent](#dependencies) components in the **src/App.css** file. For this example, we use the **tailwind3** theme to ensure a consistent and modern appearance. Add the following code to import the required styles:
+To style the [Pivot Table](https://www.syncfusion.com/react-components/react-pivot-table), include the necessary CSS files for the Pivot Table and its [dependent](#dependencies) components in the **src/App.css** file. For this example, we use the **Tailwind3** theme to ensure a consistent and modern appearance. Add the following code to import the required styles:
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
@@ -116,13 +212,13 @@ To style the [Pivot Table](https://www.syncfusion.com/react-components/react-piv
 
 These styles ensure the [Pivot Table](https://www.syncfusion.com/react-components/react-pivot-table) and its related components, such as buttons and dropdowns, display correctly. You can also use other themes like **bootstrap**, **fabric**, or **high-contrast** to match your application's look. For details on individual component styles, refer to the [Syncfusion theme documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio).
 
-Next, import the **App.css** file into your application by adding the following line in the **src/App.js** file:
+Next, import the **App.css** file into your application by adding the following line in the `src/App.tsx` file:
 
 ```js
 import './App.css';
 ```
 
-This import applies the CSS styles to your React application, enabling the [Pivot Table](https://www.syncfusion.com/react-components/react-pivot-table) to render with the **tailwind3** theme.
+This import applies the CSS styles to your React application, enabling the [Pivot Table](https://www.syncfusion.com/react-components/react-pivot-table) to render with the **Tailwind3** theme.
 
 ## Browser compatibility
 
@@ -133,12 +229,16 @@ The Pivot Table works smoothly across modern browsers. For Internet Explorer 11,
 To integrate the Pivot Table component into your React application, follow these steps to initialize it and populate it with sample data for meaningful data analysis.
 
 ### 1. Import the Pivot Table Component
-In your `App.js` file, import the `PivotViewComponent` from the `@syncfusion/ej2-react-pivotview` package.
+In your `src/App.tsx` file, import the `PivotViewComponent` from the `@syncfusion/ej2-react-pivotview` package.
+
+```ts
+import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+```
 
 ### 2. Initialize the Component
 Set up the `<PivotViewComponent/>` in your application using the following code:
 
-```js
+```ts
 import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
 import './App.css';
@@ -153,11 +253,11 @@ export default App;
 ### 3. Populate with Sample Data
 To enable users to perform meaningful analysis and generate actionable insights, the Pivot Table component requires a well-structured data source. This data source contains the information you want to analyze and visualize.
 
-For demonstration purposes, we'll use a collection of objects containing sales details for various products across different periods and regions. This sample data is assigned to the Pivot Table component through the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#datasource) property under the [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/) configuration. For more details on relational data binding, refer [here](./data-binding).
+For demonstration purposes, we'll use a collection of objects containing sales details for various products across different periods and regions. This sample data is assigned to the Pivot Table component through the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#datasource) property under the [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings) configuration. For more details on relational data binding, refer [here](./data-binding).
 
 Here’s the complete code to initialize the Pivot Table with sample data:
 
-```js
+```ts
 import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
@@ -193,22 +293,22 @@ export default App;
 
 Organizing fields into appropriate axes transforms raw data into a structured, meaningful Pivot Table that enables users to analyze patterns and trends effectively. With the Pivot Table now initialized and populated with sample data, the next logical step involves organizing the appropriate fields into row, column, value, and filter axes to create a functional data analysis tool.
 
-In the [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/) configuration, four primary axes play a crucial role in defining and organizing fields from the bound data source to render the Pivot Table component in the desired format.
+In the [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings) configuration, four primary axes play a crucial role in defining and organizing fields from the bound data source to render the Pivot Table component in the desired format.
 
 **Understanding the four axes:**
 
-- [`rows`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#rows) – Collection of fields that will be displayed along the row axis of the Pivot Table.
-- [`columns`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#columns) – Collection of fields that will be displayed along the column axis of the Pivot Table.
-- [`values`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#values) – Collection of fields that will be displayed as aggregated numeric values within the Pivot Table.
-- [`filters`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#filters) – Collection of fields that act as master filters over the data bound to the row, column, and value axes of the Pivot Table.
+- [`rows`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#rows) – Collection of fields that will be displayed along the row axis of the Pivot Table.
+- [`columns`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#columns) – Collection of fields that will be displayed along the column axis of the Pivot Table.
+- [`values`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#values) – Collection of fields that will be displayed as aggregated numeric values within the Pivot Table.
+- [`filters`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#filters) – Collection of fields that act as master filters over the data bound to the row, column, and value axes of the Pivot Table.
 
 **Essential field properties:**
 
 To define each field in its respective axis, configure the following basic properties:
 
-* [`name`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldOptionsModel/#name): Sets the field name from the bound data source. The casing must match exactly as it appears in the data source, otherwise the Pivot Table will not render correctly.
-* [`caption`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldOptionsModel/#caption): Sets the field caption, which serves as the display name for the field in the Pivot Table.
-* [`type`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldOptionsModel/#type): Sets the summary type for the field. By default, the **Sum** aggregation is applied.
+* [`name`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldoptionsmodel#name): Sets the field name from the bound data source. The casing must match exactly as it appears in the data source, otherwise the Pivot Table will not render correctly.
+* [`caption`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldoptionsmodel#caption): Sets the field caption, which serves as the display name for the field in the Pivot Table.
+* [`type`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldoptionsmodel#type): Sets the summary type for the field. By default, the **Sum** aggregation is applied.
 
 In this example, "Date" and "Product" are positioned in the column axis, "Country" and "State" are placed in the row axis, and "Sold" and "Quantity" are configured as values respectively.
 
@@ -233,9 +333,9 @@ In this example, "Date" and "Product" are positioned in the column axis, "Countr
 
 Formatting enhances the readability and presentation of numerical data in a Pivot Table, making it more user-friendly and professional. For instance, you can display values with currency symbols or control the number of decimal places for better clarity.
 
-To apply formatting to value fields in the Pivot Table, use the [`formatSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatSettings/) property. This property accepts an array of format objects, where each object defines formatting rules for a specific field in your data.
+To apply formatting to value fields in the Pivot Table, use the [`formatSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatsettings) property. This property accepts an array of format objects, where each object defines formatting rules for a specific field in your data.
 
-Within each format object in the [`formatSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatSettings/) array, set the [`name`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatSettings/#name) property to match the exact field name from your value section. Then, specify the desired display format using the [`format`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatSettings/#format) property. In the example below, the **Amount** field is configured to display values in currency format using the "C0" pattern, which shows currency symbols without decimal places.
+Within each format object in the [`formatSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatsettings) array, set the [`name`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatsettings#name) property to match the exact field name from your value section. Then, specify the desired display format using the [`format`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatsettings#format) property. In the example below, the **Amount** field is configured to display values in currency format using the "C0" pattern, which shows currency symbols without decimal places.
 
 > **Note:** Formatting can only be applied to numeric fields in the value section of the Pivot Table.
 
@@ -256,7 +356,7 @@ Within each format object in the [`formatSettings`](https://ej2.syncfusion.com/r
 
 {% previewsample "page.domainurl/code-snippet/pivot-table/getting-started-cs2" %}
 
-This approach allows you to apply different formatting patterns to multiple value fields by adding additional objects to the [`formatSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatSettings/) array. Each object in the array can target a different field, providing complete control over how numerical data is displayed in the Pivot Table.
+This approach allows you to apply different formatting patterns to multiple value fields by adding additional objects to the [`formatSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatsettings) array. Each object in the array can target a different field, providing complete control over how numerical data is displayed in the Pivot Table.
 
 ## Module Injection
 
@@ -290,7 +390,7 @@ export default App;
 
 The field list enhances user interaction by allowing you to dynamically add, remove, and rearrange fields across different axes **including column, row, value, and filter axes**. This user-friendly interface also provides sorting and filtering options that can be applied at runtime without requiring code changes.
 
-To enable the field list, set the [`showFieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel/#showfieldlist) property to **true** and inject the `FieldList` module into your component. This combination activates the field list interface, making it accessible to users to modify PivotTable report settings. For comprehensive details about field list functionality, [`refer`](./field-list) to the dedicated field list documentation.
+To enable the field list, set the [`showFieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotviewmodel#showfieldlist) property to **true** and inject the `FieldList` module into your component. This combination activates the field list interface, making it accessible to users to modify PivotTable report settings. For comprehensive details about field list functionality, [`refer`](./field-list) to the dedicated field list documentation.
 
 > The `FieldList` module must be injected for the field list to render properly with the Pivot Table component. Without this module, the field list will not be available.
 
@@ -315,7 +415,7 @@ To enable the field list, set the [`showFieldList`](https://ej2.syncfusion.com/r
 
 The grouping bar allows users to easily manage and modify the report settings of the Pivot Table directly through the user interface. With the grouping bar, users can instantly move fields between columns, rows, values, and filters by dragging them, allowing for quick arrangement and analysis of the data.
 
-Users can also use the grouping bar to sort, filter, or remove fields quickly without needing to write any code. To enable the grouping bar, set the [`showGroupingBar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel/#showgroupingbar) property to **true**, and make sure to inject the `GroupingBar` module in your application. For more details about using the grouping bar, see the [Grouping Bar documentation](./grouping-bar).
+Users can also use the grouping bar to sort, filter, or remove fields quickly without needing to write any code. To enable the grouping bar, set the [`showGroupingBar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotviewmodel#showgroupingbar) property to **true**, and make sure to inject the `GroupingBar` module in your application. For more details about using the grouping bar, see the [Grouping Bar documentation](./grouping-bar).
 
 > The `GroupingBar` module must be injected for the grouping bar to render properly with the Pivot Table component. Without this module, the grouping bar will not be available.
 
@@ -338,7 +438,7 @@ Users can also use the grouping bar to sort, filter, or remove fields quickly wi
 
 ## Exploring Filter Axis
 
-The filter axis helps users display only the most relevant information in the Pivot Table for easier analysis. Users can add fields to the filter axis, which act as a master filter over the data displayed in the [`rows`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#rows), [`columns`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#columns), and [`values`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#values) axes. You can set these fields and their filter items in two ways: by configuring them in your [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/) through code, or by simply dragging and dropping fields from other axes to the filter axis using the grouping bar or the field list at runtime. This makes it easier to analyze targeted subsets of data without modifying the underlying structure of the Pivot Table.
+The filter axis helps users display only the most relevant information in the Pivot Table for easier analysis. Users can add fields to the filter axis, which act as a master filter over the data displayed in the [`rows`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#rows), [`columns`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#columns), and [`values`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#values) axes. You can set these fields and their filter items in two ways: by configuring them in your [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings) through code, or by simply dragging and dropping fields from other axes to the filter axis using the grouping bar or the field list at runtime. This makes it easier to analyze targeted subsets of data without modifying the underlying structure of the Pivot Table.
 
 The following example shows how to add fields to the filter axis in a React Pivot Table:
 
@@ -364,12 +464,12 @@ The following example shows how to add fields to the filter axis in a React Pivo
 The calculated field feature enables users to create custom value fields using mathematical formulas and existing fields from their data source. Users can perform complex calculations with basic arithmetic operators and seamlessly integrate these custom fields into their pivot table for enhanced data visualization and reporting.
 
 Users can add calculated fields in two ways:
-- **Using code:** Set up calculated fields through the [`CalculatedFieldSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/calculatedFieldSettings/) property when configuring the Pivot Table.
-- **Using the user interface:** Alternatively, calculated fields can be added at runtime through a built-in dialog by setting the [`allowCalculatedField`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel/#allowcalculatedfield) property to **true** and by injecting the **CalculatedField** module. When enabled, a button appears in the Field List UI. Clicking this button opens a dialog that allows users to create, edit, or remove calculated fields at runtime. To learn more about calculated fields, [`refer`](./calculated-field) here.
+- **Using code:** Set up calculated fields through the [`CalculatedFieldSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/calculatedfieldsettings) property when configuring the Pivot Table.
+- **Using the user interface:** Alternatively, calculated fields can be added at runtime through a built-in dialog by setting the [`allowCalculatedField`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotviewmodel#allowcalculatedfield) property to **true** and by injecting the **CalculatedField** module. When enabled, a button appears in the Field List UI. Clicking this button opens a dialog that allows users to create, edit, or remove calculated fields at runtime. To learn more about calculated fields, [`refer`](./calculated-field) here.
 
 > To use the calculated field dialog, make sure the **CalculatedField** module is injected. If it is not injected, the popup dialog will not be shown with the Pivot Table.
 
-> By default, calculated fields created through code-behind are only added to the field list and calculated field dialog UI. To display a calculated field in the Pivot Table UI, you must add it to the [`values`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#values) property, as shown in the code below. Additionally, calculated fields can only be added to the value axis.
+> By default, calculated fields created through code-behind are only added to the field list and calculated field dialog UI. To display a calculated field in the Pivot Table UI, you must add it to the [`values`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#values) property, as shown in the code below. Additionally, calculated fields can only be added to the value axis.
 
 Below is a sample code that shows how to set up calculated fields both through code-behind and using the popup dialog:
 
@@ -396,8 +496,14 @@ Running the Pivot Table application allows you to see your changes and data in r
 
 To start the application, open a command prompt in your project folder and run the following command. This will compile the project and automatically open it in your browser.
 
-```sh
+```bash
 npm run dev
+```
+
+or
+
+```bash
+yarn dev
 ```
 
 {% tabs %}

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Theme in React Appearance component | Syncfusion
-description: Learn here all about Theme in Syncfusion React Appearance component of Syncfusion Essential JS 2 and more.
+description: Learn all about built-in themes including Tailwind 3.4, Material 3, Fluent 2, Bootstrap 5.3 in Syncfusion React (Essential JS 2) components, optimized CSS, and customization options.
 control: Theme 
 platform: ej2-react
 documentation: ug
@@ -10,49 +10,46 @@ domainurl: ##DomainURL##
 
 # React Themes in Syncfusion<sup style="font-size:70%">&reg;</sup> Components
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components support a wide range of built-in themes, ensuring a consistent and visually appealing look for your applications. Below is a list of all available themes in the Syncfusion<sup style="font-size:70%">&reg;</sup> React components library:
+Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components provide a comprehensive set of built-in themes to deliver a consistent, modern, and visually appealing appearance across applications. The following table lists all currently supported themes in the Syncfusion<sup style="font-size:70%">&reg;</sup> React components library:
 
-|Theme  |Style Sheet Name|
-|--------|--------|
-|Tailwind 3.4 | tailwind3.css |
-|Tailwind 3.4 Dark | tailwind3-dark.css |
-|Bootstrap 5.3 | bootstrap5.3.css |
-|Bootstrap 5.3 Dark | bootstrap5.3-dark.css |
-|Fluent 2 | fluent2.css |
-|Fluent 2 Dark | fluent2-dark.css |
-|Material 3 | material3.css |
-|Material 3 Dark | material3-dark.css |
-|Bootstrap 5 | bootstrap5.css |
-|Bootstrap 5 | bootstrap5.css |
-|Bootstrap 5 Dark | bootstrap5-dark.css |
-|Bootstrap 4 | bootstrap4.css |
-|Bootstrap 3 | bootstrap.css |
-|Bootstrap 3 Dark | bootstrap-dark.css |
-|Google’s Material | material.css |
-|Google’s Material-Dark | material-dark.css |
-|Tailwind CSS | tailwind.css |
-|Tailwind CSS Dark | tailwind-dark.css |
-|Fluent | fluent.css |
-|Fluent Dark | fluent-dark.css |
-|Microsoft Office Fabric | fabric.css |
-|Microsoft Office Fabric Dark | fabric-dark.css |
-|High Contrast | highcontrast.css |
+|Theme                 |Style Sheet Name       |
+|----------------------|-----------------------|
+|Tailwind 3.4          | tailwind3.css         |
+|Tailwind 3.4 Dark     | tailwind3-dark.css    |
+|Bootstrap 5.3         | bootstrap5.3.css      |
+|Bootstrap 5.3 Dark    | bootstrap5.3-dark.css |
+|Fluent 2              | fluent2.css           |
+|Fluent 2 Dark         | fluent2-dark.css      |
+|Material 3            | material3.css         |
+|Material 3 Dark       | material3-dark.css    |
+|Bootstrap 5           | bootstrap5.css        |
+|Bootstrap 5 Dark      | bootstrap5-dark.css   |
+|Bootstrap 4           | bootstrap4.css        |
+|Bootstrap 3           | bootstrap.css         |
+|Bootstrap 3 Dark      | bootstrap-dark.css    |
+|Material              | material.css          |
+|Material Dark         | material-dark.css     |
+|Tailwind CSS          | tailwind.css          |
+|Tailwind CSS Dark     | tailwind-dark.css     |
+|Fluent                | fluent.css            |
+|Fluent Dark           | fluent-dark.css       |
+|Microsoft Office Fabric| fabric.css           |
+|Microsoft Office Fabric Dark| fabric-dark.css |
+|High Contrast         | highcontrast.css      |
 
-> The Syncfusion<sup style="font-size:70%">&reg;</sup> React Bootstrap theme is designed based on the `Bootstrap v3`, whereas the Bootstrap 4 theme is designed based on `Bootstrap v4`. In addition to these built-in themes, the [ThemeStudio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) provides support for the Fusion Theme that can only be downloaded from the [ThemeStudio](https://ej2.syncfusion.com/themestudio/?theme=fusion).
+> The Syncfusion<sup style="font-size:70%">&reg;</sup> React Bootstrap theme is based on Bootstrap v3, while the Bootstrap 4, Bootstrap 5, and Bootstrap 5.3 themes are aligned with their respective Bootstrap framework versions. In addition to these built-in themes, the [ThemeStudio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) supports the Fusion theme, which can be customized and downloaded exclusively from [Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=fusion).
 
 ## Optimized CSS files
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> components provide two size modes for each theme: **normal** and **bigger**. By default, the **normal size mode** is applied, offering a standard appearance that is suitable for all devices. The **bigger size mode** provides an enlarged interface for enhanced interactions, visibility, and an overall improved user experience by increasing the size of the UI components.
-
-The bigger size mode is ideal when an enlarged appearance is needed, while the normal size mode works best for maintaining the default appearance of components.
+Syncfusion<sup style="font-size:70%">&reg;</sup> components support two size modes in each theme: **normal** (default) and **bigger**. The normal size mode provides the standard appearance suitable for most devices and scenarios. The bigger size mode increases the size of UI elements to enhance readability, touch interaction, and accessibility — particularly useful for high-resolution displays or touch-based applications.
 
 Below is a comparison of the Button component in normal and bigger size modes:
 
-![bigger-sized-button](./images/bigger-theme-button.png)
+![Button component displayed in normal size mode (left) and bigger size mode (right)](./images/bigger-theme-button.png)
 
-Each theme includes both normal and bigger size modes, which increases the overall file size. To optimize performance, Syncfusion<sup style="font-size:70%">&reg;</sup> offers additional theme files (e.g., `fluent2-lite.css`), which only include the normal size mode styles. This results in a significant reduction in file size, improving load times and overall application performance, especially when the bigger size mode is unnecessary.
+Each complete theme stylesheet includes styles for both size modes, which increases the file size. To optimize performance in applications that do not need the bigger size mode, Syncfusion provides optimized (lite) theme variants that include only normal size styles. These lite files significantly reduce CSS size and improve application load times.
 
-Refer to the comparison below for the default and optimized theme file sizes:
+Refer to the comparison below for default and optimized theme file sizes (example shown for Fluent 2):
 
 | Theme Name | Default Theme Size | Optimized Theme Size |
 | -- | -- | -- |
@@ -60,77 +57,74 @@ Refer to the comparison below for the default and optimized theme file sizes:
 
 ## Reference themes in the React application
 
-Using the following approaches, the themes can be referenced in the React application,
+Themes can be included in a React application using one of the following approaches:
 
-* [npm packages](#refer-themes-through-npm-packages) - Used to customize the existing themes and bundle stylesheet in an application.
+* [npm packages](#refer-themes-through-npm-packages) — Recommended for most projects; supports customization and bundling.
+* [CDN](#refer-themes-through-cdn-reference) — Suitable for static sites or rapid prototyping.
+* [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) — Generates resources only for the components actually used in the application.
+* [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) — Allows deep customization and generation of component-specific themes.
 
-* [CDN](#refer-themes-through-cdn-reference) - Used to refer complete css via static web assest.
-
-* [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) - Used to generate resources only for the selected (used) components.
-
-* [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) - Used to customize and generate themes only for the selected (used) components.
-
-Instead of using the `CDN reference`, use the `npm packages` reference in your projects to customize the theme or bundle it with the other style sheets.
+For better maintainability, customization, and bundle optimization, prefer the **npm packages** method over CDN references in production applications.
 
 ## Refer themes through npm packages
 
-Themes are shipped as individual and combined CSS files. The combined CSS file can be referred from the npm package `@syncfusion/ej2` and individual CSS files are available within the same component repository’s `style` folder. In ej2 npm packages, we have shipped both CSS and SCSS files for all components.
+Themes are shipped as both combined and individual CSS/SCSS files. Combined files are available in the `@syncfusion/ej2` package, while component-specific files are located in each component package’s `styles` folder. Both CSS and SCSS formats are provided.
 
-To use the combined CSS files, install the npm package using the following command
+To use the combined CSS files, install the `ej2` package:
 
 ```bash
  npm install @syncfusion/ej2
 ```
 
-Referring all components CSS
+**Referring all components CSS**
 
 ```css
 @import "./node_modules/@syncfusion/ej2/<theme_name>.css";
 ```
 
-Referring all components SCSS
+**Referring all components SCSS**
 
-```
+```css
 @import "./node_modules/@syncfusion/ej2/<theme_name>.scss";
 ```
 
 ### Referring to individual component theme
 
-You can get the individual theme from the individual package or from ej2 package.
+You can reference individual component themes either from dedicated component packages or from the unified `@syncfusion/ej2` package.
 
-Referring to individual component from the `individual package`
+**From individual package** (recommended for smallest possible bundle):
 
-```
+```css
 @import "<dependent-package>/styles/<theme_name>.scss";
 @import "ej2-react-buttons/styles/button/<theme_name>.scss";
 ```
 
 **Example:**
 
-```
+```css
 @import "ej2-base/styles/material.scss";
 @import "ej2-react-buttons/styles/button/material.scss";
 ```
 
-> The `ej2-base` is a common dependent package for all Syncfusion<sup style="font-size:70%">&reg;</sup> React component styles. So, it needs to be added first in the import statement.
+> The `ej2-base` package contains shared styles required by all Syncfusion<sup style="font-size:70%">&reg;</sup> React components and must be imported first.
 
-Referring to individual component from the `ej2 package`
+**From `@syncfusion/ej2` package:**
 
-```
+```css
 @import "ej2/<dependent-component>/<theme_name>.scss";
 @import "ej2/button/<theme_name>.scss";
 ```
 
 **Example:**
 
-```
+```css
 @import "ej2/base/material.scss";
 @import "ej2/button/material.scss";
 ```
 
 ### Referring all components optimized CSS file
 
-To refer to all component's optimized CSS files from the `@syncfusion/ej2` package, follow the below syntax:
+To reference optimized (lite) versions of all components from the `@syncfusion/ej2` package:
 
 ```css
 @import "@syncfusion/ej2/<theme_name>-lite.css";
@@ -148,7 +142,7 @@ To refer to all component's optimized CSS files from the `@syncfusion/ej2` packa
 
 ### Referring individual component optimized CSS file
 
-To refer to individual component's optimized CSS files from an individual packages, follow the below syntax:
+From individual component packages:
 
 ```css
 @import "<dependent-package>/styles/<theme_name>-lite.css";
@@ -166,55 +160,52 @@ To refer to individual component's optimized CSS files from an individual packag
 
 ### Advantages of individual components theme
 
-* Reducing the page load time of application
-* Reducing bundling size
-* Avoid unused CSS
+* Reduces page load time of the application
+* Decreases overall bundle size
+* Eliminates unused CSS rules
 
 ## Refer themes through CDN reference
 
-Instead of using a local resource on your server, use a cloud CDN to reference the theme style sheets.
+Instead of hosting files locally, you can reference themes directly from the Syncfusion CDN. Always ensure the version number in the URL matches the version of the Syncfusion<sup style="font-size:70%">&reg;</sup> React package installed in your project (e.g., 32.1.19 for the latest major release as of December 2025).
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React Themes are available in the CDN. Make sure that the version in the URLs matches the version of the Syncfusion<sup style="font-size:70%">&reg;</sup> React package you are using.
-
-```
+```html
 <head>
     <link href="https://cdn.syncfusion.com/ej2/<version>/<theme_name>.css" rel="stylesheet"/>
 </head>
-
 ```
 
-To refer to optimized CSS files, use the following syntax:
+Optimized (lite) version:
 
-```
+```html
 <head>
     <link href="https://cdn.syncfusion.com/ej2/<version>/<theme_name>-lite.css" rel="stylesheet"/>
 </head>
 ```
 
-| Theme Name | CDN Reference |
-|--- | --- |
-| Tailwind 3.4 | [https://cdn.syncfusion.com/ej2/28.1.33/tailwind3.css](https://cdn.syncfusion.com/ej2/28.1.33/tailwind3.css) |
-| Tailwind 3.4 Dark | [https://cdn.syncfusion.com/ej2/28.1.33/tailwind3-dark.css](https://cdn.syncfusion.com/ej2/28.1.33/tailwind3-dark.css) |
-| Bootstrap 5.3 | [https://cdn.syncfusion.com/ej2/27.1.48/bootstrap5.3.css](https://cdn.syncfusion.com/ej2/27.1.48/bootstrap5.3.css) |
-| Bootstrap 5.3 Dark | [https://cdn.syncfusion.com/ej2/27.1.48/bootstrap5.3-dark.css](https://cdn.syncfusion.com/ej2/27.1.48/bootstrap5.3-dark.css) |
-| Fluent 2 | [https://cdn.syncfusion.com/ej2/27.1.48/fluent2.css](https://cdn.syncfusion.com/ej2/27.1.48/fluent2.css) |
-| Fluent 2 Dark | [https://cdn.syncfusion.com/ej2/27.1.48/fluent2-dark.css](https://cdn.syncfusion.com/ej2/27.1.48/fluent2-dark.css) |
-| Material 3 | [https://cdn.syncfusion.com/ej2/27.1.48/material3.css](https://cdn.syncfusion.com/ej2/27.1.48/material3.css) |
-| Material 3 Dark | [https://cdn.syncfusion.com/ej2/27.1.48/material3-dark.css](https://cdn.syncfusion.com/ej2/27.1.48/material3-dark.css) |
-| Fluent | [https://cdn.syncfusion.com/ej2/27.1.48/fluent.css](https://cdn.syncfusion.com/ej2/27.1.48/fluent.css) |
-| Fluent Dark | [https://cdn.syncfusion.com/ej2/27.1.48/fluent-dark.css](https://cdn.syncfusion.com/ej2/27.1.48/fluent-dark.css) |
-| Bootstrap 5 | [https://cdn.syncfusion.com/ej2/27.1.48/bootstrap5.css](https://cdn.syncfusion.com/ej2/27.1.48/bootstrap5.css) |
-| Bootstrap 5 Dark| [https://cdn.syncfusion.com/ej2/27.1.48/bootstrap5-dark.css](https://cdn.syncfusion.com/ej2/27.1.48/bootstrap5-dark.css) |
-| Bootstrap 4 | [https://cdn.syncfusion.com/ej2/27.1.48/bootstrap4.css](https://cdn.syncfusion.com/ej2/27.1.48/bootstrap4.css) |
-| Bootstrap 3 | [https://cdn.syncfusion.com/ej2/27.1.48/bootstrap.css](https://cdn.syncfusion.com/ej2/27.1.48/bootstrap.css) |
-| Bootstrap 3 Dark| [https://cdn.syncfusion.com/ej2/27.1.48/bootstrap-dark.css](https://cdn.syncfusion.com/ej2/27.1.48/bootstrap-dark.css) |
-| Google’s Material | [https://cdn.syncfusion.com/ej2/27.1.48/material.css](https://cdn.syncfusion.com/ej2/27.1.48/material.css) |
-| Google’s Material Dark | [https://cdn.syncfusion.com/ej2/27.1.48/material-dark.css](https://cdn.syncfusion.com/ej2/27.1.48/material-dark.css) |
-| Tailwind CSS | [https://cdn.syncfusion.com/ej2/27.1.48/tailwind.css](https://cdn.syncfusion.com/ej2/27.1.48/tailwind.css) |
-| Tailwind CSS Dark | [https://cdn.syncfusion.com/ej2/27.1.48/tailwind-dark.css](https://cdn.syncfusion.com/ej2/27.1.48/tailwind-dark.css) |
-| Microsoft Office Fabric  | [https://cdn.syncfusion.com/ej2/27.1.48/fabric.css](https://cdn.syncfusion.com/ej2/27.1.48/fabric.css) |
-| Microsoft Office Fabric Dark | [https://cdn.syncfusion.com/ej2/27.1.48/fabric-dark.css](https://cdn.syncfusion.com/ej2/27.1.48/fabric-dark.css) |
-| High Contrast  | [https://cdn.syncfusion.com/ej2/27.1.48/highcontrast.css](https://cdn.syncfusion.com/ej2/27.1.48/highcontrast.css) |
+| Theme Name            | CDN Reference (example – replace <version> with 32.1.19 or your installed version) |
+|-----------------------|------------------------------------------------------------------------------------|
+| Tailwind 3.4          | https://cdn.syncfusion.com/ej2/32.1.19/tailwind3.css                               |
+| Tailwind 3.4 Dark     | https://cdn.syncfusion.com/ej2/32.1.19/tailwind3-dark.css                          |
+| Bootstrap 5.3         | https://cdn.syncfusion.com/ej2/32.1.19/bootstrap5.3.css                            |
+| Bootstrap 5.3 Dark    | https://cdn.syncfusion.com/ej2/32.1.19/bootstrap5.3-dark.css                       |
+| Fluent 2              | https://cdn.syncfusion.com/ej2/32.1.19/fluent2.css                                 |
+| Fluent 2 Dark         | https://cdn.syncfusion.com/ej2/32.1.19/fluent2-dark.css                            |
+| Material 3            | https://cdn.syncfusion.com/ej2/32.1.19/material3.css                               |
+| Material 3 Dark       | https://cdn.syncfusion.com/ej2/32.1.19/material3-dark.css                          |
+| Fluent                | https://cdn.syncfusion.com/ej2/32.1.19/fluent.css                                  |
+| Fluent Dark           | https://cdn.syncfusion.com/ej2/32.1.19/fluent-dark.css                             |
+| Bootstrap 5           | https://cdn.syncfusion.com/ej2/32.1.19/bootstrap5.css                              |
+| Bootstrap 5 Dark      | https://cdn.syncfusion.com/ej2/32.1.19/bootstrap5-dark.css                         |
+| Bootstrap 4           | https://cdn.syncfusion.com/ej2/32.1.19/bootstrap4.css                              |
+| Bootstrap 3           | https://cdn.syncfusion.com/ej2/32.1.19/bootstrap.css                               |
+| Bootstrap 3 Dark      | https://cdn.syncfusion.com/ej2/32.1.19/bootstrap-dark.css                          |
+| Material              | https://cdn.syncfusion.com/ej2/32.1.19/material.css                                |
+| Material Dark         | https://cdn.syncfusion.com/ej2/32.1.19/material-dark.css                           |
+| Tailwind CSS          | https://cdn.syncfusion.com/ej2/32.1.19/tailwind.css                                |
+| Tailwind CSS Dark     | https://cdn.syncfusion.com/ej2/32.1.19/tailwind-dark.css                           |
+| Microsoft Office Fabric  | https://cdn.syncfusion.com/ej2/32.1.19/fabric.css                               |
+| Microsoft Office Fabric Dark | https://cdn.syncfusion.com/ej2/32.1.19/fabric-dark.css                       |
+| High Contrast         | https://cdn.syncfusion.com/ej2/32.1.19/highcontrast.css                            |
 
 ## Common variables
 
@@ -1137,7 +1128,7 @@ The following list of common variables are used in the Syncfusion<sup style="fon
             </td>
         </tr>
         <tr>
-            <td>--color-sf-on-tertiary-containe</td>
+            <td>--color-sf-on-tertiary-container</td>
             <td>
                 <span class="circle-color-indicator" style="background: rgb(55, 11, 30)"></span> rgb(55, 11, 30)
             </td>
@@ -1958,25 +1949,25 @@ The following list of common variables are used in the Syncfusion<sup style="fon
             </td>
         </tr>
         <tr>
-        <td>$gray-700</td>
+            <td>$gray-700</td>
             <td>
                 <span class="circle-color-indicator" style="background: #495057;"></span> #495057
             </td>
         </tr>
         <tr>
-        <td>$gray-800</td>
+            <td>$gray-800</td>
             <td>
                 <span class="circle-color-indicator" style="background: #343a40;"></span> #343a40
             </td>
         </tr>
         <tr>
-        <td>$gray-900</td>
+            <td>$gray-900</td>
             <td>
                 <span class="circle-color-indicator" style="background: #212529;"></span> #212529
             </td>
         </tr>
         <tr>
-        <td>$black</td>
+            <td>$black</td>
             <td>
                 <span class="circle-color-indicator" style="background: #000;"></span> #000
             </td>

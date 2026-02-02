@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Update npm package in React Upgrade component | Syncfusion
-description: Learn here all about Update npm package in Syncfusion React Upgrade component of Syncfusion Essential JS 2 and more.
+description: Learn how to update Syncfusion npm packages for React (Essential JS 2) using npm-check-updates and npm commands.
 control: Update npm package 
 platform: ej2-react
 documentation: ug
@@ -10,38 +10,41 @@ domainurl: ##DomainURL##
 
 # Update Syncfusion<sup style="font-size:70%">&reg;</sup> npm Package
 
-It is easy to upgrade your Syncfusion<sup style="font-size:70%">&reg;</sup> npm package to the latest version without uninstalling the packages. The Syncfusion<sup style="font-size:70%">&reg;</sup> packages can be updated with the help of [npm-check-updates](https://www.npmjs.com/package/npm-check-updates) package.
+Upgrading Syncfusion<sup style="font-size:70%">&reg;</sup> npm packages to the latest versions is straightforward and does not require uninstalling packages first. Use the [npm-check-updates](https://www.npmjs.com/package/npm-check-updates) tool to update package versions in package.json, then install the updated packages.
 
 ## Update all Syncfusion<sup style="font-size:70%">&reg;</sup> npm packages
 
-Refer the below steps to upgrade Syncfusion<sup style="font-size:70%">&reg;</sup> npm packages.
+Follow these steps to upgrade all Syncfusion<sup style="font-size:70%">&reg;</sup> npm packages:
 
-1.  **Install `npm-check-updates` globally.** This tool helps you interactively upgrade your `package.json` dependencies.
+1. Install npm-check-updates globally. This tool helps update dependencies in package.json interactively.
 
-    ```bash
-    npm install -g npm-check-updates
-    ```
+```bash
+npm install -g npm-check-updates
+```
 
-2. Run the below command to update npm packages. The below command will filters only Syncfusion<sup style="font-size:70%">&reg;</sup> packages and update it with latest version. This will update the package.json file with latest version of all `@syncfusion` packages.
+2. Run the following command to update only Syncfusion packages in package.json to the latest versions:
 
-    ```bash
-    ncu -u -f /^@syncfusion/
-    ```
+```bash
+ncu -u -f /^@syncfusion/
+```
 
-3. Now, run the following commands to update the packages in `node_modules` and remove the duplicate package which is already installed.
+This updates package.json with the latest versions for all `@syncfusion` packages.
 
-    ```bash
-    npm update
-    npm dedupe
-    ```
+3. Install the updated packages and remove duplicate packages:
 
-## Updating a specific npm package
+```bash
+npm update
+npm dedupe
+```
 
-If you want to upgrade only a specific Syncfusion<sup style="font-size:70%">&reg;</sup> npm package, run the following command.
+## Update a specific npm package
 
-    ```bash
-    npm update @syncfusion/ej2-grids
-    npm update @syncfusion/ej2-react-grids
-    npm dedupe
-    ```
-> [dedupe](https://docs.npmjs.com/cli/v8/commands/npm-dedupe) searches and deletes the duplicate packages in `node_modules`.
+To upgrade one or more specific Syncfusion packages, run:
+
+```bash
+npm update @syncfusion/ej2-grids
+npm update @syncfusion/ej2-react-grids
+npm dedupe
+```
+
+> Note: The `npm dedupe` command [searches and removes duplicate packages](https://docs.npmjs.com/cli/v8/commands/npm-dedupe) in `node_modules`, helping to avoid multiple versions of the same package.

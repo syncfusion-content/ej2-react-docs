@@ -1,6 +1,6 @@
 import { AIAssistViewComponent } from '@syncfusion/ej2-react-interactive-chat';
-import * as React from 'react';
-import * as ReactDOM from "react-dom";
+import React from "react";
+import ReactDOM from "react-dom";
 
 function App() {
     const assistInstance = React.useRef(null);

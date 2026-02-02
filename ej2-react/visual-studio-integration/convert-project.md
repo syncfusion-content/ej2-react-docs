@@ -10,52 +10,49 @@ domainurl: ##DomainURL##
 
 # Convert Project
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React conversion is a Visual Studio add-in that converts an existing React application into a Syncfusion<sup style="font-size:70%">&reg;</sup> React Web application.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React conversion is a Visual Studio add-in that converts an existing React application into a Syncfusion<sup style="font-size:70%">&reg;</sup> React web application.
 
-> The Syncfusion<sup style="font-size:70%">&reg;</sup> React Project conversion are available from v17.3.0.9.
+> The Syncfusion<sup style="font-size:70%">&reg;</sup> React project conversion feature is available from v17.3.0.9.
 
-The steps below help you to convert the React application to Syncfusion<sup style="font-size:70%">&reg;</sup> React application through the Visual Studio:
+Follow these steps to convert a React application to a Syncfusion React application using Visual Studio:
 
-1. Open your existing React application or create a new React application
+1. Open your existing React application or create a new React application.
 
-2. To open the Syncfusion<sup style="font-size:70%">&reg;</sup> Project Conversion Wizard, follow either one of the options below:
+2. To open the Syncfusion<sup style="font-size:70%">&reg;</sup> Project Conversion Wizard, use one of the options below:
 
-    **Option 1:**
-
-    Choose **Extensions-> Syncfusion-> Essential Studio for ASP.NET Core ->Convert Project…** in **Visual Studio** menu.
+    **Option 1:**  
+    Choose **Extensions → Syncfusion → Essential Studio<sup style="font-size:70%">&reg;</sup> for ASP.NET Core → Convert Project…** from the Visual Studio menu.
 
     ![convert project](images/convert-react-menu.png)
 
-    > In Visual Studio 2017, you can see the **Syncfusion** menu directly in the Visual Studio menu
+    > In Visual Studio 2017, the **Syncfusion** menu may appear directly in the Visual Studio menu.
 
-    **Option 2:**
-
-    Right-click on the **React Application** from the Solution Explorer and select the **Syncfusion<sup style="font-size:70%">&reg;</sup> Web** and choose the **Convert to Syncfusion<sup style="font-size:70%">&reg;</sup> React application...**
+    **Option 2:**  
+    Right-click the React project in Solution Explorer, select **Syncfusion Web**, then choose **Convert to Syncfusion React application...**.
 
     ![convert to syncfusion](images/Convert-react-context.png)
 
-3. The **Syncfusion<sup style="font-size:70%">&reg;</sup> React Project Conversion** window will appear. You can choose the required version of Syncfusion<sup style="font-size:70%">&reg;</sup> React version, Assets from, and Themes to convert the application.
+3. The **Syncfusion React Project Conversion** window will appear. Choose the target Syncfusion React version, select the asset source, and pick the theme(s) to apply to the application.
 
     ![project-conversion-wizard](images/react-conversion-window.PNG)
 
-    > The Syncfusion<sup style="font-size:70%">&reg;</sup> React versions are loaded from published Syncfusion<sup style="font-size:70%">&reg;</sup> React NPM package versions and it requires the internet connectivity.
+    > Available Syncfusion React versions are loaded from published Syncfusion NPM packages and require an internet connection.
 
-    The following configurations are used in the Project conversion wizard.
+    Configuration options in the Project Conversion wizard:
 
-    **Assets From:** Load the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JS 2 assets to React Project, from either NPM, CDN, or Installed Location.
+    * **Assets From:** Load Syncfusion EJ2 assets into the React project from NPM, CDN, or Installed Location.  
+      > The *Installed Location* option is available only when the Syncfusion EJ2 setup is installed locally.
 
-    > Installed location option will be available only when the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 setup has been installed.
+    * **Choose the Theme:** Select the required theme(s).
 
-    **Choose the Theme:** Choose the required theme.
+4. (Optional) Check **Enable a backup before converting** and choose a backup location if you want the original project preserved.
 
-4. Check the **“Enable a backup before converting”** checkbox if you want to take the project backup and choose the location.
-
-5. Once the conversion process completed, will get the success message window.
+5. After the conversion completes, a success message is displayed.
 
     ![project-backup](images/react-convertion-confirmation.png)
 
-    if you enabled project backup before converting, the old project was saved in the specified backup path location, as shown below once the conversion process completed.
+    If a backup was enabled, the original project is saved to the specified backup path.
 
     ![BackupLocation](images/BackupLocation.png)
 
-6. The required Syncfusion<sup style="font-size:70%">&reg;</sup> React NPM packages with selected version, scripts and selected style are added in the application.
+6. The required Syncfusion React NPM packages (for the selected version), scripts, and styles are added to the application. Verify `package.json` and installed files to confirm the conversion is complete.

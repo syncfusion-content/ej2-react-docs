@@ -1,9 +1,8 @@
 import { ChatUIComponent, MessagesDirective, MessageDirective, UserModel, MessageModel, MessageSentEventArgs} from '@syncfusion/ej2-react-interactive-chat';
 import { marked } from 'marked';
+import DOMPurify from 'dompurify';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
-
-declare var DOMPurify: any;
 function App() {
   const currentUserModel: UserModel = {
     id: 'user1',

@@ -2,7 +2,6 @@
 import { SpeechToTextComponent, TextAreaComponent } from '@syncfusion/ej2-react-inputs';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
-import { useRef } from 'react';
 
 // To render SpeechToText.
 export default class App extends React.Component {
@@ -12,7 +11,7 @@ export default class App extends React.Component {
     };
     render() {
         return (
-            <div class='speechText-container'>
+            <div className='speechText-container'>
                 <SpeechToTextComponent transcriptChanged={this.onTranscriptChanged.bind(this)} cssClass="customClass"></SpeechToTextComponent>
                 <TextAreaComponent
                     id="textareaInst"

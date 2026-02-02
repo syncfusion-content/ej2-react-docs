@@ -2,7 +2,6 @@
 import { SpeechToTextComponent, TextAreaComponent } from '@syncfusion/ej2-react-inputs';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
-import { useRef } from 'react';
 import { L10n } from '@syncfusion/ej2-base';
 // To render SpeechToText.
 export default class App extends React.Component {

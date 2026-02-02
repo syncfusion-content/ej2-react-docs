@@ -1,44 +1,54 @@
 ---
 layout: post
-title: Installation in React Installation component | Syncfusion
-description: Learn here all about Installation in Syncfusion React Installation component of Syncfusion Essential JS 2 and more.
+title: Installing Syncfusion React Components via npm | Syncfusion
+description: Learn how to install Syncfusion React components using npm CLI or package.json for Essential JS 2 packages.
 control: Installation 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-
 # Installation
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React npm packages can be installed in the application through any of the following steps:
+Syncfusion<sup style="font-size:70%">&reg;</sup> React npm packages can be added to a project using either of the following methods:
 
-* Installation using npm CLI.
-* Installation through a package reference in the `Package.json` file.
+- Installation using the npm CLI
+- Installation by declaring the package in `package.json`
 
-## Install by using npm CLI
+## Method 1: Install using npm CLI
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React (Essential<sup style="font-size:70%">&reg;</sup> JS 2) packages are published in [npm](https://www.npmjs.com/search?q=scope:syncfusion). You can install the necessary packages from npm’s install command. For example, React Grid package can be installed using following command.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React (JavaScript - EJ2) packages are published on [npm](https://www.npmjs.com/search?q=scope:syncfusion). Install packages using the npm install command. For example, to install the React Grid package:
 
-```
+```bash
 npm install @syncfusion/ej2-react-grids --save
 ```
 
-The above command will install the Grid component package and all its dependency packages. You can see the `package.json` file updated with Grid package in dependencies.
+This command installs the Grid component package and its dependencies. The `package.json` file will be updated with the Grid package under `dependencies`.
 
-## Install by using package.json
+## Method 2: Install using package.json
 
-1. Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React (Essential<sup style="font-size:70%">&reg;</sup> JS 2) package references in the `dependencies` of `~/package.json` file.
+1. Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React (JavaScript - EJ2) package reference in the `dependencies` section of `package.json`:
 
-    ```
+    ```json
     {
         "dependencies": {
-            "@syncfusion/ej2-react-grids": "*",
+            "@syncfusion/ej2-react-grids": "*"
         }
     }
     ```
-    > The `*` indicates the latest version of npm package.
+    
+    > The `*` indicates the latest version of the npm package. For reproducible builds, specify an exact version (for example, `"32.1.19"`).
 
-2. Now, open the command prompt and run the `npm install` command line. By default, npm install will install all modules listed as dependencies in [package.json](https://docs.npmjs.com/cli/v8/configuring-npm/package-json).
+2. Open a terminal and run `npm install`. This installs all modules listed as dependencies in [package.json](https://docs.npmjs.com/cli/v8/configuring-npm/package-json).
 
-> Refer the [documentation](https://docs.npmjs.com/files/package.json) for more details about npm package.json
+If using an alternative package manager, use the equivalent command (for example, `yarn install` or `pnpm install`).
+
+## Prerequisites
+
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components require `react` and `react-dom` as peer dependencies. Ensure these are installed in the project and that installed versions are compatible with the Syncfusion packages being used:
+
+```bash
+npm install react react-dom --save
+```
+
+> For more details about `package.json` configuration, refer to the [npm documentation](https://docs.npmjs.com/files/package.json). Also consult the Syncfusion release notes or support matrix for compatible React and Node.js versions.

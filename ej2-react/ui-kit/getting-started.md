@@ -12,56 +12,59 @@ domainurl: ##DomainURL##
 
 Follow the steps below to start using the Essential<sup style="font-size:70%">&reg;</sup> UI Kit for React. You can begin in one of two ways:
 
-- **Download the App from GitHub:** Get the full source code and run the app locally to explore the blocks.
-- **View the Online Demo:** Interact with the blocks directly through the online demo without downloading any files.
+- **Download the app from GitHub:** Get the full source code and run the app locally to explore the blocks.
+- **View the online demo:** Interact with the blocks directly through the online demo without downloading any files.
 
-## Get Started by Downloading the App from GitHub
+## Get started by downloading the app from GitHub
 
-### Step 1: Download and Open the App in Visual Studio Code
+### Step 1: Download and open the app in Visual Studio Code
 
-Download the app from the GitHub [link](https://github.com/syncfusion/essential-ui-kit-for-react), and then open the same in Visual Studio Code to start working with it.
+Download the app from the GitHub repository: https://github.com/syncfusion/essential-ui-kit-for-react, and open the project in Visual Studio Code to start working with it.
 
 ![Launching the downloaded app](images/launching-the-downloaded-app.png)
 
-### Step 2: Open a New Terminal
+### Step 2: Open a new terminal
 
-In Visual Studio Code, open the integrated terminal by selecting **Terminal > New Terminal**.
+In Visual Studio Code, open the integrated terminal via **Terminal > New Terminal**.
 
 ![Opening a new terminal](images/opening-a-new-terminal.png)
 
-### Step 3: Install Dependencies and Run the App
-Run the following commands one after the other in the terminal:
+### Step 3: Install dependencies and run the app
+
+Run the following commands in the terminal:
 
 1. **Install dependencies**  
-   Run the command below to install all necessary packages related to the blocks, the Syncfusion<sup style="font-size:70%">&reg;</sup> React components, and the sample browser.
+   Install all required packages for the blocks, Syncfusion<sup style="font-size:70%">&reg;</sup> React components, and the sample browser:
 
-    ![Installing the required dependencies](images/installing-the-required-dependencies.png)
+   ![Installing the required dependencies](images/installing-the-required-dependencies.png)
 
-    This will download and install all the dependencies listed in the **package.json** file.
+   This downloads and installs all dependencies listed in the project's **package.json** file.
 
-2. **Serve the App Locally**  
-    Once the dependencies are installed, you can run the app locally by starting the React local development server. To do so, run the following command.
-    
-    ![Running the React development server](images/running-the-react-development-server.png)
+2. **Serve the app locally**  
+   After installing dependencies, start the React development server:
 
-    This command will start the local development server, and you'll see an output in the terminal indicating the app is running. Typically, it will display a local host URL like this:
+   ![Running the React development server](images/running-the-react-development-server.png)
 
-    ![Local development server running](images/local-development-server-running.png)
+   The server will display a local host URL in the terminal, for example:
 
-    To view the app in your browser, simply **Ctrl + Click** (or **Cmd + Click** on macOS) on the local host URL displayed in the terminal. This will open the app in your default browser, allowing you to interact with the blocks.
+   ![Local development server running](images/local-development-server-running.png)
 
-### Step 4: License Key Requirement
+   To view the app, **Ctrl + Click** (Windows) or **Cmd + Click** (macOS) the localhost URL displayed in the terminal to open the app in the default browser.
 
-The blocks include several Syncfusion<sup style="font-size:70%">&reg;</sup> React components that require an active license key for proper display and usage. To activate the license, refer to the topics below:
+### Step 4: License key requirement
 
-#### How to Obtain the License Key
-To obtain the license key, visit the following page: [Syncfusion<sup style="font-size:70%">&reg;</sup> License](https://ej2.syncfusion.com/react/documentation/licensing/license-key-generation).
+The blocks include Syncfusion<sup style="font-size:70%">&reg;</sup> React components that require an active license key for proper display and usage. Activate and register a license key as described below.
 
-#### How to Register the License Key in the App
-Register your license key using one of the methods described on this [registration page](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration#register-syncfusion-license-key-using-the-npx-command).
+#### How to obtain the license key
 
-Registering the license key ensures that the components function seamlessly without any licensing issues.
+Generate a license key from the Syncfusion account page: https://ej2.syncfusion.com/react/documentation/licensing/license-key-generation.
 
-## Get Started by Viewing the Online Demo
+#### How to register the license key in the app
 
-If you prefer a quick demo instead of downloading the app, you can explore the blocks directly through the online demo. Simply visit the official [Essential<sup style="font-size:70%">&reg;</sup> UI Kit for React](https://ej2.syncfusion.com/react/essential-ui-kit/blocks) website to interact with the blocks.
+Register the license key using one of the methods on the registration guide: https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration#register-syncfusion-license-key-using-the-npx-command.
+
+Registering the license key ensures components function without licensing warnings.
+
+## Get started by viewing the online demo
+
+If you prefer a quick demo instead of downloading the app, explore the blocks directly via the online demo: https://ej2.syncfusion.com/react/essential-ui-kit/blocks.

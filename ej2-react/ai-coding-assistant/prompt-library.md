@@ -10,19 +10,19 @@ domainurl: ##DomainURL##
 
 # Prompt Library - AI Coding Assistant
 
-Speed up your React projects using these ready-made prompts for popular Syncfusion components. Each prompt is short, easy to understand, and focused on real tasks—like quick setups, tweaks, and fixes.
+Speed up React development using these ready-made prompts for popular Syncfusion components. Each prompt is short, easy to understand, and focused on real tasks—like quick setups, tweaks, and fixes.
 
-## How to Use
+## How to use
 
-Before starting, make sure your MCP Server is set up and running.
+Before starting, make sure your MCP server is set up and running.
 
 * Choose a prompt that fits your need.
-* Copy the full prompt with the #SyncfusionReactAssistant handle.
+* Copy the full prompt including the #SyncfusionReactAssistant handle.
 * Customize the prompt for your specific use case.
-* Execute via the MCP Server.
-* Always check and test the code before adding it to your project.
+* Execute the prompt via the MCP server.
+* Always review and test the generated code before adding it to your project.
 
-## Component-Specific Prompts
+## Component-specific prompts
 
 ### Grid
 
@@ -281,5 +281,5 @@ The Syncfusion React Calendar supports flexible date selection, localization, an
 
 ## See also
 
-* [AI Coding Assistant Overview](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview)
+* [AI Coding Assistant Overview](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview)  
 * [SyncfusionReactAssistant MCP Server](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/mcp-server)
