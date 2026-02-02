@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BlockEditorComponent, BlockModel, ContentType, CommandFilteringEventArgs, CommandItemSelectEventArgs, CommandMenuSettingsModel  } from '@syncfusion/ej2-react-blockeditor';
+import { BlockEditorComponent, BlockModel, ContentType, CommandFilteringEventArgs, CommandItemSelectEventArgs, CommandMenuSettingsModel } from '@syncfusion/ej2-react-blockeditor';
 
 function App() {
     // Slash Command Menu Configuration
@@ -46,25 +46,23 @@ function App() {
     return (
         <div>
             <div id="controls">
-        <h3>Slash Command Menu Configuration Demo</h3>
-        <div className="instructions">
-          <p><strong>Instructions:</strong></p>
-          <ol>
-            <li>
-              Click in the editor below and type "/" to open the slash command
-              menu
-            </li>
-            <li>Notice the custom popup size, commands and disabled tooltips</li>
-          </ol>
-        </div>
-      </div>
-        <BlockEditorComponent
-            id="blockeditor"
-            blocks={blocksData}
-            created={() => console.log('BlockEditor initialized')} // Debug initialization
-            commandMenuSettings={commandMenuSettings}
-            style={{ border: '1px solid red' }} // Temporary styling to confirm rendering
-        ></BlockEditorComponent>
+                <h3>Slash Command Menu Configuration Demo</h3>
+                <div className="instructions">
+                    <p><strong>Instructions:</strong></p>
+                    <ol>
+                        <li>
+                            Click in the editor below and type "/" to open the slash command
+                            menu
+                        </li>
+                        <li>Notice the custom popup size, commands and disabled tooltips</li>
+                    </ol>
+                </div>
+            </div>
+            <BlockEditorComponent
+                id="blockeditor"
+                blocks={blocksData}
+                commandMenuSettings={commandMenuSettings}
+            ></BlockEditorComponent>
         </div>
     );
 }

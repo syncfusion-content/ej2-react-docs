@@ -1,80 +1,75 @@
 ---
 layout: post
-title: Download in React Installation component | Syncfusion
-description: Learn here all about Download in Syncfusion React Installation component of Syncfusion Essential JS 2 and more.
+title: Download Linux Installer for React Components | Syncfusion
+description: Learn how to download the Syncfusion React (Essential JS 2) Linux Installer for both trial and licensed versions.
 control: Download 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Download Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript Linux Installer
+# Download Syncfusion<sup style="font-size:70%">&reg;</sup> React Linux Installer
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> installer can be downloaded from the [Syncfusion<sup style="font-size:70%">&reg;</sup> ](https://www.syncfusion.com/) website. You can either download the licensed installer or try our trial installer depending on your license.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> installer is available from the [Syncfusion](https://www.syncfusion.com/) website. Select the appropriate download based on license type:
 
-   -	Trial Installer
-   -	Licensed Installer
-
-You can download the Syncfusion<sup style="font-size:70%">&reg;</sup> installer from [Syncfusion.com](https://www.syncfusion.com/) website 
+- **Trial Installer**: Use to evaluate the product for 30 days.
+- **Licensed Installer**: Use if a valid Syncfusion license is available.
 
 ## Download the Trial Version
 
-Our 30-day trial can be downloaded in two ways.
+The 30-day trial can be obtained in two ways:
 
-* Download Free Trial Setup
-* Start Trials if using components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
-
+1. Download the Free Trial setup (offline installer).
+2. Start a trial from the account pages if components were installed via NPM or NuGet.
 
 ### Download Free Trial Setup
 
-1. You can evaluate our 30-day free trial by visiting the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the product
-2. After completing the required form or logging in with your registered Syncfusion<sup style="font-size:70%">&reg;</sup> account, you can download the trial installer from the confirmation page. (as shown in below screenshot.)
+1. Visit the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the Syncfusion product to evaluate.
+2. Complete the download form or sign in with a registered Syncfusion<sup style="font-size:70%">&reg;</sup> account, then download the trial installer from the confirmation page.
 
-   ![Trial and downloads of Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript](images/trial-confirmation.png)
-   
-3. With a trial license, only the latest version’s trial installer can be downloaded.
-4. Unlock key is not required to install the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript Linux trial installer.
-5. Before the trial expires, you can download the trial installer at any time from your registered account’s [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (as shown in below screenshot.)
- 
-   ![Trial and downloads of Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript](images/trial-download.png)
+   ![Trial download confirmation page](images/trial-confirmation.png)
 
-6. Click the More Download Options (element 2 in the above screenshot) button to get the JavaScript Product Offline trial installer which is available in ZIP format.
+3. Trial downloads provide the latest version only.
+4. An unlock key is not required to run the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript/React Linux trial installer.
+5. While an active trial exists, the installer can also be downloaded from the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page in the account.
 
-   ![License and downloads of Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript](images/start-trial-download-offline-installer.png)
+   ![Manage Trials and Downloads page](images/trial-download.png)
 
-### Start Trials if using components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
+6. Click the **More Download Options** button (labeled 2 in the screenshot) to access the JavaScript product offline trial installer (ZIP format).
 
-You should initiate an evaluation if you have already obtained our components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
+   ![Offline installer download option](images/start-trial-download-offline-installer.png)
 
-1. You can start your 30-day free trial from the [Start Trial](https://www.syncfusion.com/account/manage-trials/start-trials) page from your account.
+### Start Trial for NPM/NuGet Users
 
-   N> You can generate the license key for your active trial products from [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page. This license key will be mandatory to use our trial products in your application. To know more about License key, refer this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview).
-	
-    ![Trial and downloads of Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript](images/start-trial-download.png)
-   
-2. To access this page, you must sign up\log in with your Syncfusion<sup style="font-size:70%">&reg;</sup> account.
-3. Begin your trial by selecting the Syncfusion<sup style="font-size:70%">&reg;</sup> product. 
+If components were installed via [NPM](https://www.npmjs.com/search?q=syncfusion%20ej2) or [NuGet](https://www.nuget.org/packages?q=syncfusion), start an evaluation to obtain the license key required for using trial packages in applications.
 
-   N> If you've already used the trial products and they haven't expired, you won't be able to start the trial for the same product again.
+1. Start the 30-day free trial from the [Start Trial](https://www.syncfusion.com/account/manage-trials/start-trials) page in the account.
 
-4. After you've started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer. You can generate the [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://help.syncfusion.com/common/essential-studio/licensing/how-to-generate) here at any time before the trial period expires. (as shown in below screenshot.)
+   > A license key for active trial products can be generated on the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page. This license key is required when using trial packages in applications. Refer to the [Licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.
 
-   ![License and downloads of Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript](images/start-trial-download-installer.png)
+   ![Start trial page](images/start-trial-download.png)
 
-5. You can find your current active trial products on the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
-   
+2. Sign in with the registered Syncfusion<sup style="font-size:70%">&reg;</sup> account and select the product to begin the trial.
 
-## Download the License Version
+   > If an active trial for the same product already exists and has not expired, it cannot be restarted.
 
-1. Syncfusion<sup style="font-size:70%">&reg;</sup> licensed products will be available in the [License & Downloads](https://www.syncfusion.com/account/downloads) page under your registered Syncfusion<sup style="font-size:70%">&reg;</sup> account.
-2. You can view all the licenses (both active and expired) associated with your account.
-3. You can download JavaScript Linux licensed installer by going to More Downloads Options (element 3 in the screenshot below).
+3. After starting the trial, download the latest installer from the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page. Older installers may require an unlock key; generate the unlock key (if applicable) or the license key from the same page.
 
-   ![License and downloads of Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript](images/license-download.png)
-   
-4. Unlock key is not required to install the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript Linux trial installer.   
-5. For Linux OS, ZIP formats is available for download.
-   
-   ![License and downloads of Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript](images/Linux_Download.PNG)
+   ![Trial installer download](images/start-trial-download-installer.png)
 
-You can also refer to the [**JavaScript Linux installer**](https://ej2.syncfusion.com/react/documentation/installation/linux-installer/installation-using-linux-installer) links for step-by-step installation guidelines.	
+4. Active trial products are listed on the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
+
+## Download the Licensed Version
+
+1. Licensed products are available on the [License & Downloads](https://www.syncfusion.com/account/downloads) page in the registered Syncfusion<sup style="font-size:70%">&reg;</sup> account.
+2. The page lists all licenses associated with the account (active and expired).
+3. To download the JavaScript/React Linux licensed installer, select the product and click **More Download Options** (labeled 3 in the screenshot).
+
+   ![Licensed downloads page](images/license-download.png)
+
+4. An unlock key is not required to install the JavaScript/React Linux licensed installer. For package activation in NPM/NuGet scenarios, a license key may still be required; obtain it from the account pages if needed.
+5. For Linux, installers are provided as downloadable archive files (ZIP offline installers).
+
+   ![Linux ZIP download option](images/Linux_Download.PNG)
+
+Refer to the [**Installation using Linux Installer**](https://ej2.syncfusion.com/react/documentation/installation/linux-installer/installation-using-linux-installer) guide for step-by-step installation instructions.

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in React component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React component of Syncfusion Essential JS 2 and more.
+title: Accessibility Support for React Components | Syncfusion
+description: Learn about accessibility standards, WCAG 2.2 compliance, Section 508, WAI-ARIA, keyboard navigation, and screen reader support in Syncfusion React components.
 control: common
 platform: ej2-react
 documentation: ug
@@ -10,85 +10,121 @@ domainurl: ##DomainURL##
 
 # Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
 
-## Accessibility overview
+## Accessibility Overview
 
-Accessibility in components refers to designing and developing user interface elements so they are usable by individuals with disabilities. This includes ensuring high-contrast, easy-to-read text, providing alternative descriptions for images, and implementing controls that are accessible via keyboard and assistive technologies.
+Accessibility ensures user interface components are usable by people with disabilities. This includes high-contrast themes, readable text, alternative text for images, and controls that support keyboard navigation and assistive technologies such as screen readers.
 
-## Accessibility standards
+## Accessibility Standards
 
-The component is said to be accessible when it is constructed in accordance with certain standards that are required to make it accessible.
+A component is considered accessible when it conforms to established standards that ensure usability for people with disabilities. Syncfusion<sup style="font-size:70%">&reg;</sup> React components adhere to the following key standards:
 
-The accessibility of the components consists of the following standards and aspects:
+### ADA (Americans with Disabilities Act)
 
-* [ADA](https://www.ada.gov/) - A law to ensure that people with disabilities have the same opportunities and access as people without disabilities.
+[ADA](https://www.ada.gov/) is a comprehensive civil rights law prohibiting discrimination based on disability. It ensures equal access and opportunities in digital experiences for people with disabilities.
 
-* [WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/) - The Web Content Accessibility Guidelines (WCAG) provide guidelines developed by the World Wide Web Consortium (W3C) to ensure web content is accessible to people with disabilities. `WCAG 2.2` establishes a framework of accessibility principles and their associated success criteria. The level of accessibility conformance achieved by a web application is determined by the extent to which it meets these success criteria, categorized into three levels: A, AA, and AAA.
+### WCAG 2.2 (Web Content Accessibility Guidelines)
 
-* [Section 508](https://www.section508.gov/) - It is a set of guidelines for making electronic and information technology (EIT) accessible to people with disabilities. These standards apply to federal agencies in the United States, and they are based on the Web Content Accessibility Guidelines (WCAG).
+[WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/) provides internationally recognized guidelines from the World Wide Web Consortium (W3C) to make web content accessible. It defines principles and success criteria organized under four core principles: Perceivable, Operable, Understandable, and Robust.
 
-* [WAI-ARIA](https://www.w3.org/WAI/ARIA/) - WAI-ARIA stands for "Web Accessibility Initiative - Accessible Rich Internet Applications." It is a set of technical specifications and guidelines developed by the World Wide Web Consortium (W3C) as part of the Web Accessibility Initiative (WAI). WAI-ARIA is designed to enhance the accessibility of dynamic web content, particularly web applications and rich internet applications (RIAs), for people with disabilities. WAI-ARIA provides a set of roles, states, and properties that can be added to HTML elements to provide additional context and information about the purpose and behavior of those elements. This can help assistive technologies better understand and interpret web content and interact with web applications.
+### Section 508
 
-* [Keyboard navigation](https://www.w3.org/TR/WCAG22/#keyboard-accessible) - It refers to the ability to use a keyboard to interact with and navigate through a user interface. It is an important aspect of web accessibility, as it allows people who cannot use a mouse or other pointing device to access and use web content and applications.
+[Section 508](https://www.section508.gov/) establishes U.S. federal requirements for electronic and information technology accessibility. These standards, aligned with WCAG, apply to federal agencies and ensure accessible digital content for people with disabilities.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components adhere to these established standards.
+### WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications)
 
-## Accessibility compliance
+[WAI-ARIA](https://www.w3.org/WAI/ARIA/) supplies technical specifications to improve accessibility of dynamic content and rich internet applications. It defines roles, states, and properties that enhance compatibility with assistive technologies.
 
-The accessibility support provided by Syncfusion<sup style="font-size:70%">&reg;</sup> React components is based on a collection of methodologies for adhering to and applying [recognized standards and technical specifications](#accessibility-standards) to ensure an intuitive experience for people with disabilities.
+### Keyboard Navigation
 
-There are several methodologies of accessibility validation that can be performed on the Syncfusion<sup style="font-size:70%">&reg;</sup> React components, such as:
+[Keyboard navigation](https://www.w3.org/TR/WCAG22/#keyboard-accessible) enables users to interact with interfaces using only a keyboard. This capability is essential for people who cannot use a mouse or other pointing devices.
 
-* The [WAI-ARIA patterns](https://www.w3.org/WAI/ARIA/apg/patterns/) are followed by the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to enable appreciable accessibility.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components comply with these standards to deliver an inclusive user experience.
 
-* Each component undergoes manual testing with screen readers and automated test cases to verify required attributes.
+## Accessibility Compliance
 
-* Attributes are allocated and updated correctly during interaction as well. Each component has been assigned a distinct `Role` attribute and its own set of ARIA attributes defined by the [WCAG 2.2](https://www.w3.org/TR/WCAG22/) specification.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components implement recognized accessibility standards and specifications to provide an intuitive experience for users with disabilities.
 
-In addition to the methodologies mentioned above, Syncfusion<sup style="font-size:70%">&reg;</sup> React components are constructed to support the following accessibility aspects.
+### Compliance Methodologies
 
-### Screen reader support
+Syncfusion<sup style="font-size:70%">&reg;</sup> applies the following approaches to validate and maintain accessibility:
 
-A screen reader allows people who are blind or visually impaired to use a computer by reading aloud the text that is displayed on the screen. Syncfusion<sup style="font-size:70%">&reg;</sup> React components followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/) standards to work properly in the screen readers such as [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) for Windows and [Embedded VoiceOver](https://support.apple.com/en-in/guide/voiceover/vo2706/mac) for MAC.
+#### WAI-ARIA Pattern Implementation
 
-### Right-To-Left support
+Components follow [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/patterns/) to implement appropriate ARIA roles, states, and properties, ensuring consistent behavior with assistive technologies.
 
-Right-to-Left (RTL) support allows applications to effectively communicate with users who use languages that are written from right to left, such as Arabic, Hebrew, etc. Syncfusion<sup style="font-size:70%">&reg;</sup> React components support the Right-to-Left feature. Refer to the [Right-to-Left documentation](https://ej2.syncfusion.com/react/documentation/common/right-to-left) to learn more about this support.
+#### Manual and Automated Testing
 
-### Color contrast
+- **Manual Testing**: Components are tested with screen readers including [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) (Windows) and [VoiceOver](https://support.apple.com/en-in/guide/voiceover/vo2706/mac) (macOS) to confirm accurate announcements and interaction flows.
+- **Automated Testing**: Tools such as [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) detect and help resolve violations.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components come equipped with [predefined themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) that guarantee the presence of satisfactory color contrast, benefiting individuals with visual impairments.
+#### ARIA Attribute Management
 
-### Mobile device support
+Each component receives a suitable `role` attribute and dynamically updates ARIA attributes in accordance with WCAG 2.2 requirements, accurately reflecting state changes to assistive technologies.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components are more user-friendly and accessible to individuals using mobile devices, including those with disabilities. These are designed to be responsive, adaptable to various screen sizes and orientations, and touch-friendly.
+## Accessibility Features
 
-### Keyboard navigation support
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components incorporate the following accessibility features:
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components support keyboard navigation, allowing users who rely on alternate methods to effortlessly navigate and interact with the component.
+### Screen Reader Support
 
-## Ensuring accessibility
+Components conform to [WAI-ARIA](https://www.w3.org/WAI/ARIA/) standards and are compatible with major screen readers, including:
+- [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) (Windows)
+- [VoiceOver](https://support.apple.com/en-in/guide/voiceover/vo2706/mac) (macOS)
+- JAWS
+- NVDA
 
-Ensuring the accessibility of Syncfusion<sup style="font-size:70%">&reg;</sup> React components is crucial for making the product inclusive and user-friendly for individuals with disabilities. This process involves various types of accessibility testing, including:
+### Right-to-Left Support
 
-* **Automated testing**: The Syncfusion<sup style="font-size:70%">&reg;</sup> React component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools.
+Right-to-Left (RTL) layout support enables effective communication in languages such as Arabic, Hebrew, and Persian. For details, see the [Right-to-Left documentation](https://ej2.syncfusion.com/react/documentation/common/right-to-left).
 
-* **Manual testing**: This type of testing involves manually evaluating the Syncfusion<sup style="font-size:70%">&reg;</sup> React components. During manual accessibility testing, testers will ensure accessibility using the screen readers such as [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) for Windows and [Embedded VoiceOver](https://support.apple.com/en-in/guide/voiceover/vo2706/mac) for MAC.
+### Color Contrast
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components will keep improving when there is anything required. It also involves client feedback to make the component more accessible.
+Predefined themes satisfy WCAG 2.2 Level AA contrast ratios (4.5:1 for normal text and 3:1 for large text). Custom themes should be validated to maintain these ratios.
 
-## Voluntary Product Accessibility Template
+### Mobile Device Support
 
-The [Voluntary Product Accessibility Template (VPAT)](https://www.itic.org/policy/accessibility/vpat) provides a structured format to document how information and communication technology (ICT) products and services comply with accessibility standards. This template helps organizations clearly and effectively communicate their conformance with standards such as **Section 508**, **WCAG 2.2**, and **EN 301 549**.
+Components are fully responsive, adapt to different screen sizes and orientations, and provide touch-friendly interactions, improving accessibility on mobile devices.
 
-[Download the Latest VPAT Document](https://www.itic.org/dotAsset/0d397438-611d-47da-861a-be9ee508da51.docx)
+### Keyboard Navigation Support
 
-To review the accessibility conformance of Syncfusion<sup style="font-size:70%">&reg;</sup> products, you can download the latest version of the **Syncfusion<sup style="font-size:70%">&reg;</sup> VPAT document** here: [VPAT Document](https://ej2.syncfusion.com/accessibility/Syncfusion-VPAT2.5.docx)
+Comprehensive keyboard support allows navigation and interaction without a mouse. Standard patterns include:
+- **Tab** / **Shift + Tab**: Move focus forward/backward
+- **Enter** / **Space**: Activate buttons and interactive elements
+- **Arrow Keys**: Navigate within lists, grids, menus, and similar controls
+- **Escape**: Close dialogs, popups, and overlays
+- **Home** / **End**: Jump to first/last item in lists and grids
 
-This document provides detailed information on how Syncfusion<sup style="font-size:70%">&reg;</sup> products meet accessibility requirements, ensuring they are inclusive and usable for all individuals, including those with disabilities.
+## Ensuring Accessibility
 
-## Accessibility support for specific components
+Syncfusion<sup style="font-size:70%">&reg;</sup> maintains accessibility through rigorous testing and ongoing refinement.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components are designed to ensure compliance with key accessibility standards, including **Section 508**, **WAI-ARIA**, **WCAG 2.2**, and **keyboard navigation**. Below, you’ll find control-specific documentation that provides detailed guidance on how each control meets these standards.
+### Automated Testing
+
+Tools such as [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) continuously scan components for compliance issues and suggest fixes.
+
+### Manual Testing
+
+Manual evaluation with screen readers (Narrator, VoiceOver) verifies correct labeling, state announcements, and interaction behavior for assistive technology users.
+
+### Continuous Improvement
+
+Accessibility is enhanced through:
+- Regular internal audits
+- User-reported issues and feedback
+- Alignment with evolving standards
+- Advances in assistive technology
+
+## Voluntary Product Accessibility Template (VPAT)
+
+The [Voluntary Product Accessibility Template (VPAT)](https://www.itic.org/policy/accessibility/vpat) documents conformance to accessibility standards such as Section 508, WCAG 2.2, and EN 301 549.
+
+Download the latest **Syncfusion<sup style="font-size:70%">&reg;</sup> VPAT**: [VPAT Document](https://ej2.syncfusion.com/accessibility/Syncfusion-VPAT2.5.docx)
+
+This report details how Syncfusion<sup style="font-size:70%">&reg;</sup> products meet accessibility requirements.
+
+## Accessibility Support for Specific Components
+
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components comply with **Section 508**, **WCAG 2.2**, **WAI-ARIA**, and **keyboard navigation** standards. The table below links to component-specific accessibility documentation.
 
 <style>
 #table
@@ -631,3 +667,13 @@ vertical-align: top;
     </tr>
 </tbody>
 </table>
+
+> **Note**: Components marked with "NA" for keyboard navigation are primarily visual components that do not require direct keyboard interaction. These components still maintain accessibility through proper ARIA attributes and semantic HTML structure.
+
+## See Also
+
+- [Right-to-Left Support](./right-to-left)
+- [Globalization and Localization](./globalization/overview)
+- [Theming](../appearance/theme)
+- [WAI-ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/)
+- [WCAG 2.2 Guidelines](https://www.w3.org/TR/WCAG22/)

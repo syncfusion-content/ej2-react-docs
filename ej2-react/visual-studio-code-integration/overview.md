@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview in React Visual studio code integration | Syncfusion
-description: Learn here all about Overview in Syncfusion React Visual studio code integration component of Syncfusion Essential JS 2 and more.
+title: Visual Studio Code integration overview | Syncfusion
+description: Learn about the Visual Studio Code integration for Syncfusion React (Essential JS 2) and how the extension helps create projects with required packages and themes.
 control: Overview 
 platform: ej2-react
 documentation: ug
@@ -12,8 +12,8 @@ domainurl: ##DomainURL##
 
 ## Overview
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> Web extension for Visual Studio Code allows you to use the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript components(React, Pure React, Angular, and Vue) easily by configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> NPM packages and themes.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> Web extension for Visual Studio Code simplifies using Syncfusion JavaScript components (React, Pure React, Angular, and Vue) by configuring required Syncfusion NPM packages and themes.
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Web Extension provides the following support in Visual Studio Code:
+The Syncfusion Web Extension provides the following support in Visual Studio Code:
 
-[Project-Template](https://help.syncfusion.com/extension/javascript-extension/visual-studio-code/create-project): Creates Syncfusion<sup style="font-size:70%">&reg;</sup> Web applications by adding the required Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript components.
+* [Project templates](https://help.syncfusion.com/extension/javascript-extension/visual-studio-code/create-project): Creates Syncfusion Web applications by adding the required Syncfusion JavaScript components, packages, and starter code.

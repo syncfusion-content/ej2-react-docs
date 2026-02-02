@@ -1,124 +1,132 @@
 ---
 layout: post
-title: Common installation errors in React Common control | Syncfusion
-description: Learn here all about Common installation errors in Syncfusion React Common control of Syncfusion Essential JS 2 and more.
+title: Common Installation Errors for React Components | Syncfusion
+description: Learn about common installation errors when installing Syncfusion React components, including causes and solutions.
 control: common
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Common Installation Errors
+# Common installation errors for React components
 
-This article describes the most common installation errors, as well as the causes and solutions to those errors.
+This article describes the most common installation errors, their causes, and suggested solutions.
 
-* Unlocking the license installer using the trial key
-* License expiration
-* Unable to find a valid license or trial
-* Unable to install because of another installation
-* Unable to install due to controlled folder access
+* [Unlocking the license installer using the trial key](#unlocking-the-license-installer-using-the-trial-key)
+* [License expiration](#license-expiration)
+* [Unable to find a valid license or trial](#unable-to-find-a-valid-license-or-trial)
+* [Unable to install because of another installation](#unable-to-install-because-of-another-installation)
+* [Unable to install due to controlled folder access](#unable-to-install-due-to-controlled-folder-access)
 
 ## Unlocking the license installer using the trial key
 
 **Error Message:** Sorry, the provided unlock key is a trial unlock key and cannot be used to unlock the licensed version of our Essential Studio<sup style="font-size:70%">&reg;</sup> for JavaScript installer.
 
-![license download](images/error1.png)
+![Trial key error message](images/error1.png)
 
-**Reason** <br /> You are attempting to use a Trial unlock key to unlock the licensed installer.
+**Reason:**
+You are trying to use a trial unlock key to unlock the licensed installer.
 
-**Suggested solution** <br /> Only a licensed unlock key can unlock a licensed installer. So, to unlock the Licensed installer, use the Licensed unlock key. To generate the licensed unlock key, refer to [this](https://www.syncfusion.com/kb/2326/how-to-generate-syncfusion-setup-unlock-key-from-syncfusion-support-account) article.
+**Suggested Solution:**
+Only a licensed unlock key can unlock the licensed installer. To generate a licensed unlock key, refer to [this article](https://www.syncfusion.com/kb/2326/how-to-generate-syncfusion-setup-unlock-key-from-syncfusion-support-account).
 
 ## License Expiration
 
-**Error Message:** Your license for Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> for JavaScript – EJ2 has been expired since {date}. Please renew your subscription and try again.
+**Error Message:** Your license for Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> for JavaScript - EJ2 expired on {date}. Please renew your subscription and try again.
 
-***Online Installer***
+***Online Installer:***
 
-![license download](images/error2.png)
+![License expiration error](images/error2.png)
 
-**Reason** <br /> This error message will appear if your license has expired.
+**Reason:**
+This error appears when the license associated with the account has expired.
 
-**Suggested solution** <br /> You can choose from the options below.
+**Suggested Solution:**
+Choose one of the following options:
 
-1. You can renew your subscription [here](https://www.syncfusion.com/account/my-renewals).
-
-2. You can get a new license [here](https://www.syncfusion.com/sales/products).
-
-3. You can reach out to our sales team by emailing sales@syncfusion.com.
-
-4. You can also extend the 30-day trial period after your trial license has expired.
+1. Renew the subscription [here](https://www.syncfusion.com/account/my-renewals).
+2. Purchase a new license [here](https://www.syncfusion.com/sales/products).
+3. Contact the sales team: sales@syncfusion.com.
+4. Contact support or sales to request options for extending the 30-day trial period.
 
 ## Unable to find a valid license or trial
 
-**Error Message:** Sorry, we are unable to find a valid license or trial for Essential Studio<sup style="font-size:70%">&reg;</sup> for JavaScript – EJ2 under your account.
+**Error Message:** Sorry, we are unable to find a valid license or trial for Essential Studio<sup style="font-size:70%">&reg;</sup> for JavaScript - EJ2 under your account.
 
-***Offline installer***
+***Offline installer:***
 
-![license download](images/error3.png)
+![No valid license - offline](images/error3.png)
 
-***Online installer***
+***Online installer:***
 
-![license download](images/error4.png)
+![No valid license - online](images/error4.png)
 
-**Reason** <br /> The following are possible causes of this error:
+**Reason:**
+Possible causes of this error include:
 
-The following are possible causes of this error:
+* The trial period has expired.
+* There is no license or active trial associated with the account.
+* The current user is not the license holder.
+* The account administrator has not assigned a license to the user.
 
-* When your trial period expired
-* When you don’t have a license or an active trial
-* You are not the license holder of your license
-* Your account administrator has not yet assigned you a license.
+**Suggested Solution:**
 
-**Suggested solution** <br />
-
-1. You can get a new license [here](https://www.syncfusion.com/sales/products).
-
-2. Contact your account administrator.
-
-3. Send an email to clientrelations@syncfusion.com to request a license.
-
-4. You can reach out to our sales team by emailing sales@syncfusion.com.
+1. Purchase a new license [here](https://www.syncfusion.com/sales/products).
+2. Contact the account administrator to verify license assignment.
+3. Email clientrelations@syncfusion.com to request license assignment.
+4. Contact the sales team: sales@syncfusion.com.
 
 ## Unable to install because of another installation
 
 **Error Message:** Another installation is in progress. You cannot start this installation without completing all other currently active installations. Click cancel to end this installer or retry to attempt after currently active installation completed to install again.
 
-![license download](images/error5.png)
+![Another installation in progress](images/error5.png)
 
-**Reason** <br /> You are trying to install when another installation is already running in your machine.
+**Reason:**
+You are trying to install while another installation is already running on your machine.
 
-**Suggested solution** <br /> Open and kill the msiexec process in the task manager and then continue to install Syncfusion. If the problem is still present, restart the computer and try Syncfusion<sup style="font-size:70%">&reg;</sup> installer.
+**Suggested Solution:**
+If possible, save work and restart the computer before attempting to terminate installer processes. If an immediate termination is required, end the `msiexec.exe` process and retry the Syncfusion<sup style="font-size:70%">&reg;</sup> installer.
 
 1. Open the Windows Task Manager.
+2. Go to the **Details** tab.
+3. Select **msiexec.exe** and click **End task**.
 
-2. Browse the Details tab.
-
-3. Select the msiexec.exe and click **End task**.
-
-![license download](images/error6.png)
+![Ending msiexec process](images/error6.png)
 
 ## Unable to install due to controlled folder access
 
-***Offline***
+***Offline Installer:***
 
-**Error Message:** Controlled folder access seems to be enabled in your machine. The provided install or samples location (e.g., Public Documents) is protected by the controlled folder access settings.
+**Error Message:** Controlled folder access appears to be enabled on your machine. The chosen install or samples location (for example, Public Documents) is protected by controlled folder access settings.
 
-![license download](images/error7.png)
+![Controlled folder access - offline](images/error7.png)
 
-***Online***
+***Online Installer:***
 
 **Error Message:** Controlled folder access seems to be enabled in your machine. The provided install, samples, or download location (e.g., Public Documents) is protected by the controlled folder access settings.
 
-![license download](images/error8.png)
+![Controlled folder access - online](images/error8.png)
 
-**Reason** <br /> You have enabled controlled folder access settings on your computer.
+**Reason:**
+Controlled folder access is enabled on the computer and is preventing the installer from writing to protected locations.
 
-***Suggested solution***
+**Suggested Solution:**
 
-**Suggestion 1:** <br />
-1. We will ship our demos in the public documents folder by default.
-2. You have controlled folder access enabled on your machine, so our demos cannot be installed in the documents folder. If you need to install our demos in the Documents folder, follow the steps in this [link](https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034) and disable the controlled folder access.
-3. You can enable this option after the installing our Syncfusion<sup style="font-size:70%">&reg;</sup> setup.
+### Option 1: Temporarily Disable Controlled Folder Access
 
-**Suggestion 2:** <br />
-1. If you do not want to disable controlled folder access, you can install our demos in another directory.
+1. By default, demos are installed in the Public Documents folder.
+2. When controlled folder access is enabled, demos cannot be installed in the Documents folder.
+3. To allow installation in the Documents folder, follow the steps in [this Microsoft article](https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034) to temporarily disable controlled folder access or allow the installer.
+4. Re-enable controlled folder access after the Syncfusion<sup style="font-size:70%">&reg;</sup> setup completes, if desired.
+
+### Option 2: Change Installation Directory
+
+If you do not want to disable controlled folder access, install the demos in another directory that is not protected by controlled folder access.
+
+## Need Additional Help?
+
+If you encounter installation errors not covered in this article, contact Syncfusion<sup style="font-size:70%">&reg;</sup> support:
+
+* Email support@syncfusion.com
+* Refer to the [Syncfusion Knowledge Base](https://www.syncfusion.com/kb) for additional troubleshooting articles

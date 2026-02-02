@@ -1,5 +1,3 @@
-{% raw %}
-
 
 
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
@@ -25,6 +23,3 @@ function App() {
     </TreeGridComponent>
 };
 export default App;
-
-
-{% endraw %}

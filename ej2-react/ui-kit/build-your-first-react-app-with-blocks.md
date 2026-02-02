@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Build your first React app with our blocks | Syncfusion
-description: Learn all about building your first React app using our blocks from the Essential React UI Kit in Syncfusion Essential JS 2 and more.
+description: Learn all about building your first React app using UI Kit blocks from Syncfusion Essential React UI Kit, including Next.js setup, theming, and adding a sign-in block.
 platform: ej2-react
 control: Build your first React app with our blocks 
 documentation: ug
@@ -10,230 +10,199 @@ domainurl: ##DomainURL##
 
 # Build your first React app with our blocks
 
-This tutorial guides you through building a React application using Syncfusion's UI Kit blocks. It demonstrates how to set up a new React app with Next.js, choose between Tailwind CSS or Bootstrap 5.3 themes, and add a sign-in block in your application. The goal is to help developers quickly build responsive, modern web apps using a variety of pre built blocks with minimal effort.
+This tutorial guides through building a React application using Syncfusion's UI Kit blocks. It demonstrates how to set up a new React app with Next.js, choose between Tailwind CSS or Bootstrap 5.3 themes, and add a sign-in block. The goal is to help developers quickly build responsive, modern web apps using prebuilt blocks with minimal effort.
 
-To quickly get started with building your first React app, you can check out this video:
+To quickly get started, watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=_a4lJNUcDng" %}
 
 ## Create a new React app
 
-In this example, a **Next.js** app is used. To create a new app, please refer to the official setup guide on the [Next.js](https://nextjs.org/docs/app/getting-started/installation). This tutorial walks you through adding a simple sign-in block to the newly created app, which we will name **my-app**.
+This example uses a **Next.js** app. To create a new app, follow the official Next.js setup guide: [Next.js Getting Started](https://nextjs.org/docs/app/getting-started/installation). This tutorial adds a simple sign-in block to a new app named **my-app**.
 
-> * When prompted with the question **"Would you like to use Tailwind CSS?"** during **Next.js** app setup, select **No** to avoid automatically integrating **Tailwind CSS** into your app.
-> * When prompted with the question **"Would you like your code inside a `src/` directory?"** during **Next.js** app setup, select **Yes** to maintain consistency with the following steps.
+> When prompted during Next.js setup:
+> * For "Would you like to use Tailwind CSS?" select **No** to avoid automatic Tailwind integration.
+> * For "Would you like your code inside a `src/` directory?" select **Yes** to match the steps below.
 
 ![New React App](images/new-react-app.png)
 
-## Setting up Tailwind CSS or Bootstrap 5.3 theme in the app
+## Setting up Tailwind CSS or Bootstrap 5.3 theme
 
-After creating the new app named **my-app**, open it in Visual Studio Code (which will be used throughout this walkthrough). Once the app is open, navigate to the **src -> app -> page.tsx** file and remove only the template HTML code. Then, navigate to **src -> app -> globals.css** and **src -> app -> page.module.css** files, and remove all default CSS code.
+Open **my-app** in Visual Studio Code. In **src/app/page.tsx** remove the template HTML. Also clear default CSS in **src/app/globals.css** and **src/app/page.module.css**.
 
-The next step is to choose a theme, either **Tailwind CSS** or **Bootstrap 5.3**, in either light or dark mode, and configure **my-app** accordingly.
+Choose a theme (Tailwind CSS or Bootstrap 5.3) and configure **my-app** accordingly.
 
 ### Tailwind CSS configuration
 
-If you choose **Tailwind CSS** theme, follow these steps to configure it.
+1. Install Tailwind CSS and create the config:
 
-1. In the Visual Studio Code terminal, run the following commands to install the **Tailwind CSS** packages and create the **tailwind.config.js** file.
+```bash
+npm install -D tailwindcss@3 postcss autoprefixer
+npx tailwindcss init -p
+```
 
-    ```bash
-    npm install -D tailwindcss@3 postcss autoprefixer
-    npx tailwindcss init -p
-    ```
-  
-    ![Tailwind Installation](images/tailwind-installation.PNG)
+![Tailwind Installation](images/tailwind-installation.PNG)
 
-2. In the **tailwind.config.js** file, add the following code to `content`, `darkMode`, and `theme` configurations. When creating the **Next.js** app, if the option **"Would you like your code inside a `src/` directory?"** was set to **Yes**, all the app-related files will be placed inside the **src** folder. Therefore, the `content` configuration should reflect this. If this option was not selected, the `content` configuration will need to be adjusted accordingly.
+2. Update **tailwind.config.js** (adjust `content` if you used `src/`):
 
-    ```js
-    module.exports = {
-      content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            primary: {
-              // NOTE: In this demo, different shades of "Indigo" are used as primary colors.
-              "50": "#eef2ff",
-              "100": "#e0e7ff",
-              "200": "#c7d2fe",
-              "300": "#a5b4fc",
-              "400": "#818cf8",
-              "500": "#6366f1",
-              "600": "#4f46e5",
-              "700": "#4338ca",
-              "800": "#3730a3",
-              "900": "#312e81",
-              "950": "#1e1b4b"
-            }
-          }
-        },
-      },
-      plugins: [],
-    }
-    ```
-    > The Syncfusion<sup style="font-size:70%">&reg;</sup> React components uses **Indigo** for light mode and **Cyan** for dark mode. To maintain a uniform appearance, change the primary color accordingly.
+```js
+module.exports = {
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          "50": "#eef2ff",
+          "100": "#e0e7ff",
+          "200": "#c7d2fe",
+          "300": "#a5b4fc",
+          "400": "#818cf8",
+          "500": "#6366f1",
+          "600": "#4f46e5",
+          "700": "#4338ca",
+          "800": "#3730a3",
+          "900": "#312e81",
+          "950": "#1e1b4b"
+        }
+      }
+    },
+  },
+  plugins: [],
+}
+```
 
+> Syncfusion React components use **Indigo** for light mode and **Cyan** for dark mode. Adjust the primary color to match your theme.
 
-3. In the **src -> app -> globals.css** file, add the following code. This will ensure that the **Tailwind CSS** styles are generated and consolidated for the entire application.
+3. Add Tailwind directives in **src/app/globals.css**:
 
-    ```css
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
-    ```
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
 
-4. In the **src -> app -> layout.tsx** file, add the following code for light mode (`className="light"`) and dark mode (`className="dark"`) in the `<html>` tag.
+4. Set the document `<html>` class in **src/app/layout.tsx**:
 
-    - For **light mode**:
+- Light mode:
+```html
+<html lang="en" className="light">
+```
+- Dark mode:
+```html
+<html lang="en" className="dark">
+```
 
-    ```html
-    <html lang="en" className="light">
-    ```
+5. Import Syncfusion Tailwind theme CSS in **src/app/globals.css** (place above Tailwind imports to reduce conflicts):
 
-    - For **dark mode**:
+- Light mode:
+```css
+@import url('https://cdn.syncfusion.com/ej2/27.2.5/tailwind.css');
+```
+- Dark mode:
+```css
+@import url('https://cdn.syncfusion.com/ej2/27.2.5/tailwind-dark.css');
+```
 
-    ```html
-    <html lang="en" className="dark">
-    ```
+![Syncfusion Components - Tailwind CSS Theme](images/syncfusion-components-tailwind-theme.PNG)
 
-5. In the **src -> app -> globals.css** file, add the style-oriented CDN link for Syncfusion<sup style="font-size:70%">&reg;</sup> React components using `@import` in the CSS. Ensure that the Syncfusion<sup style="font-size:70%">&reg;</sup> React components CSS is placed above the Tailwind CSS to avoid any potential style conflicts.
-
-    - For **light mode**:
-
-    ```css
-    @import url('https://cdn.syncfusion.com/ej2/27.2.5/tailwind.css');
-    ```
-
-    - For **dark mode**:
-
-    ```css
-    @import url('https://cdn.syncfusion.com/ej2/27.2.5/tailwind-dark.css');
-    ```
-
-    ![Syncfusion Components - Tailwind CSS Theme](images/syncfusion-components-tailwind-theme.PNG)
-    
-6. **OPTIONAL**: If you wish to use our font icons prepared for **Tailwind CSS**, you can include the following CDN link:
-
-    ```css
-    @import url('https://cdn.syncfusion.com/ej2/react/ui-kit/font-icons/tailwind-icons.css');
-    ```
-  
-Now that the **Tailwind CSS** theme is configured for either light or dark mode of your choice, the app is ready for the next set of processes.
+6. (Optional) Include Syncfusion font icons for Tailwind:
+```css
+@import url('https://cdn.syncfusion.com/ej2/react/ui-kit/font-icons/tailwind-icons.css');
+```
 
 ### Bootstrap 5.3 configuration
 
-If you choose **Bootstrap 5.3** theme, follow these steps to configure it.
+1. Set the theme attribute in **src/app/layout.tsx**:
 
-1. In the **src -> app -> layout.tsx** file, add the following code for light mode (`data-bs-theme="light"`) and dark mode (`data-bs-theme="dark"`) in the `<html>` tag.
+- Light mode:
+```html
+<html lang="en" data-bs-theme="light">
+```
+- Dark mode:
+```html
+<html lang="en" data-bs-theme="dark">
+```
 
-    - For **light mode**:
+2. Add Bootstrap CSS in the `<head>`:
 
-    ```html
-    <html lang="en" data-bs-theme="light">
-    ```
+```html
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+```
 
-    - For **dark mode**:
+3. Add Syncfusion Bootstrap theme CSS in the `<head>`:
 
-    ```html
-    <html lang="en" data-bs-theme="dark">
-    ```
+- Light mode:
+```html
+<link href="https://cdn.syncfusion.com/ej2/27.2.5/bootstrap5.3.css" rel="stylesheet" />
+```
+- Dark mode:
+```html
+<link href="https://cdn.syncfusion.com/ej2/27.2.5/bootstrap5.3-dark.css" rel="stylesheet" />
+```
 
-2. In the **src -> app -> layout.tsx** file, add the style oriented CDN link for **Bootstrap 5.3** theme in the `<head>` tag.
-
-     ```html
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-     ```
-
-3. In the **src -> app -> layout.tsx** file, add the style oriented CDN link for Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the `<head>` tag.
-
-    - For **light mode**:
-
-    ```html
-    <link href="https://cdn.syncfusion.com/ej2/27.2.5/bootstrap5.3.css" rel="stylesheet">
-    ```
-
-    - For **dark mode**:
-
-    ```html
-    <link href="https://cdn.syncfusion.com/ej2/27.2.5/bootstrap5.3-dark.css" rel="stylesheet" />
-    ```
-
-4. **OPTIONAL**: If you wish to use our font icons prepared for **Bootstrap 5.3**, you can include the following CDN link:
-
-    ```html
-    <link href="https://cdn.syncfusion.com/ej2/react/ui-kit/font-icons/bootstrap5.3-icons.css" rel="stylesheet" />
-    ```
-
-You can refer to the consolidated screenshot below for more details.
+4. (Optional) Include Syncfusion font icons for Bootstrap:
+```html
+<link href="https://cdn.syncfusion.com/ej2/react/ui-kit/font-icons/bootstrap5.3-icons.css" rel="stylesheet" />
+```
 
 ![Bootstrap 5.3 configuration](images/bootstrap-5.3-configuration.png)
 
-Now that the **Bootstrap 5.3** theme is configured for either light or dark mode of your choice, the app is ready for the next set of processes.
-
 ## Steps to explore and copy block code snippets
 
-Now that **my-app** is set up with the desired theme configuration, the next step is to copy and paste the pre-built simple sign-in block code into the app for quick development. Here are a couple of ways to achieve this.
+After configuring the theme, copy a prebuilt sign-in block into **my-app**.
 
-### Steps to explore and copy block code snippets from the online demo
+### From the online demo
 
-1. In the [online demo](https://ej2.syncfusion.com/react/essential-ui-kit/blocks), navigate to the **Authentication** category and select the **Sign In** block. This will direct you to the appropriate demo page.
+1. Open the online demo: [Essential UI Kit - Blocks](https://ej2.syncfusion.com/react/essential-ui-kit/blocks). Navigate to **Authentication** > **Sign In**.
 
-    ![Navigate to the sign-in block demo](images/navigate-to-the-sign-in-block-demo.png)
+![Navigate to the sign-in block demo](images/navigate-to-the-sign-in-block-demo.png)
 
-2. On the demo page, go to the first demo, which showcases a simple sign-in block. Choose the desired theme, then switch from the **Preview** tab to the **Code** tab.
+2. On the demo page select the desired theme and switch from **Preview** to **Code**.
 
-    ![Choose Tailwind CSS or Bootstrap theme](images/choose-tailwind-or-bootstrap-theme.png)
+![Choose Tailwind CSS or Bootstrap theme](images/choose-tailwind-or-bootstrap-theme.png)
 
-3. In the **Code** tab, copy the TSX (HTML and TS) code using the **Copy to Clipboard** option and paste it into the **src -> app -> page.tsx** file. Once done, modify `export default function Signin1` to `export default function Home`. Additionally, it is mandatory to include the `'use client';` statement in the **src -> app -> page.tsx** file.
+3. Copy the TSX code (use **Copy to Clipboard**) and paste into **src/app/page.tsx**. Change `export default function Signin1` to `export default function Home` and include `'use client';` at the top of the file.
 
-    ![Copy HTML code snippet to clipboard](images/copy-HTML-code-snippet-to-clipboard.png)
+![Copy HTML code snippet to clipboard](images/copy-HTML-code-snippet-to-clipboard.png)
 
-4. If CSS is provided, copy the CSS code and paste it into the **src -> app -> page.module.css** file; otherwise, ignore it.
+4. If CSS is provided, paste it into **src/app/page.module.css**.
 
-### Steps to explore and copy block code snippets from the GitHub source
+### From GitHub source
 
-1. On [downloading](https://github.com/syncfusion/essential-ui-kit-for-react) and opening the GitHub source in Visual Studio Code, navigate to the following folder: **src -> app -> blocks-section**.
+1. Clone or download the GitHub source: https://github.com/syncfusion/essential-ui-kit-for-react and open it in VS Code. Navigate to **src/app/blocks-section/signin/signin-1** to find TSX and CSS files to copy.
 
-    ![Downloaded GitHub app in Visual Studio Code](images/downloaded-github-app-in-visual-studio-code.png)
+![Downloaded GitHub app in Visual Studio Code](images/downloaded-github-app-in-visual-studio-code.png)
 
-2. Inside, you'll find a list of folders, each corresponding to a specific block. Open the **signin** block folder, where you'll see the demo arranged sequentially.
+> Notes:
+> * Include `'use client';` in the TSX file.
+> * Tailwind and Bootstrap code is placed in switch cases—copy the appropriate block.
+> * Ignore code within **"SB Code - Start"** and **"SB Code - End"** comments (sample browser utilities).
 
-3. Go to the first folder, **src/app/blocks-section/signin/signin-1**, where you'll find the TSX and CSS files of the simple sign-in block. You can copy the code directly from these files.
+## Install and configure Syncfusion React components
 
-    ![View the sign-in block demo files](images/view-the-sign-in-block-demo-files.png)
+Add required packages referenced by the block (e.g., `@syncfusion/ej2-react-buttons`, `@syncfusion/ej2-react-inputs`) to **package.json** and run:
 
-> **Note:**
-> 
-> 1. It is mandatory to include the `'use client';` statement in the TSX file.
-> 2. In the TSX, the **Tailwind CSS** and **Bootstrap 5.3** design code is placed in their respective switch case statements. You can copy and paste as per your requirement.
-> 3. Ignore the code within the **"SB Code - Start"** and **"SB Code - End"** comments, as it is intended solely for sample browser purposes.
+```bash
+npm install
+```
 
-## Steps to install and configure Syncfusion<sup style="font-size:70%">&reg;</sup> React components
+![Adding required packages for Syncfusion components](images/adding-required-packages-for-syncfusion-components.png)
 
-While copying and pasting the TSX (HTML and TS) code, you'll notice that Syncfusion<sup style="font-size:70%">&reg;</sup> React components are used. To incorporate them into **my-app**, install the necessary packages and import the corresponding modules to the **src -> app -> page.tsx** file for the app to run.
+## Add assets to the app
 
-In the simple sign-in block, components such as textbox, checkbox and button are used. After copying and pasting HTML and TS code into the TSX file, open the **package.json** file and add the required packages: `@syncfusion/ej2-react-buttons` and `@syncfusion/ej2-react-inputs`. For more details about other Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages, refer to this [link](https://www.npmjs.com/search?q=%40syncfusion%2Fej2-react).
+To include design images, download the **assets** folder from the GitHub repo: https://github.com/syncfusion/essential-ui-kit-for-react/tree/master/ui-blocks/public and place it in the **public** folder. Update image URLs as needed.
 
-![Adding required packages for Syncfusion<sup style="font-size:70%">&reg;</sup> components](images/adding-required-packages-for-syncfusion-components.png)
+## Run the app
 
-Once the necessary packages are added, run the `npm install` command via the terminal to install those packages in the **node_modules** folder.
+Start the development server:
 
-![Install Syncfusion<sup style="font-size:70%">&reg;</sup> component packages](images/install-syncfusion-component-packages.png)
+```bash
+npm run dev
+```
 
-Finally, again check the [online demo](https://ej2.syncfusion.com/react/essential-ui-kit/blocks) or the [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-react) and copy the required HTML, TS, and CSS code for the simple sign-in block into your app as outlined in the previous topic.
-
-## Steps to download and add assets to the app
-
-If you want to view and experience the images used in our design, you can download the **assets** folder from the following [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-react/tree/master/ui-blocks/public), place it inside the **public** folder of **my-app**, and modify the image URLs in the HTML if necessary.
-
-## Steps to run the app
-
-Now that everything is set up in **my-app** — including the TSX (HTML and TS), CSS (if applicable), and assets (optional) — you are ready to build and launch the app. Type the `npm run dev` command in the terminal, and you will see a localhost URL provided by the React development server.
+Open the provided localhost URL in the browser to view the sign-in block.
 
 ![Build and launch the app](images/build-and-launch-the-app.png)
-
-To view the app in your browser, simply **Ctrl + Click** (or **Cmd + Click** on macOS) on the localhost URL displayed in the terminal. This will open the app in your default browser, allowing you to view and experience the simple sign-in block.
 
 ![View the app in the browser using the localhost URL](images/view-the-app-in-the-browser-using-the-localhost-URL.png)

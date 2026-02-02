@@ -1,6 +1,5 @@
 
 
-
 import * as React from 'react';
 import {
     TreeGridComponent,
@@ -68,7 +67,8 @@ function App() {
         }
         const filterMenudivs = treegridInstance.element.querySelectorAll('.e-filtermenudiv');
         filterMenudivs.forEach((div) => {
-            if (isGridEmpty && treegridInstance.grid.filterSettings.columns?.length === 0) {
+            const columns = treegridInstance.grid.filterSettings.columns.length; 
+            if (isGridEmpty && (!columns || columns.length === 0)) {
                 div.classList.add('e-disabled');
                 div.style.cursor = 'default';
             } else {

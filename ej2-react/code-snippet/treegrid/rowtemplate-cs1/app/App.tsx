@@ -1,4 +1,3 @@
-{% raw %}
 
 
 import { ColumnDirective, ColumnsDirective, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
@@ -43,6 +42,3 @@ export default class App extends React.Component<{}, {}>{
                 </TreeGridComponent>
     }
 }
-
-
-{% endraw %}

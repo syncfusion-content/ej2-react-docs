@@ -21,7 +21,7 @@ This section explains how to set up a Next.js application and add the Syncfusion
 
 To begin building a Next.js application with the Syncfusion<sup style="font-size:70%">&reg;</sup> React [Pivot Table](https://ej2.syncfusion.com/react/documentation/pivotview/getting-started), ensure the following requirements are met:
 
-- [Node.js 16.8](https://nodejs.org/en) or a later version installed on your system.
+- [Node.js 18.17.0](https://nodejs.org/en) or later (LTS recommended).
 - A compatible operating system, such as macOS, Windows, or Linux.
 
 ## Create a Next.js application
@@ -53,22 +53,21 @@ After running the command, you will be prompted to configure your project with t
 {% endhighlight %}
 {% endtabs %}
 
-2. **Choose project settings**: Select options to customize your project setup. The prompts will ask about using TypeScript, ESLint, Tailwind CSS, a `src/` directory, App Router, and import alias customization.
+2. **Select the required packages**: Choose the configuration options for your project. Select **Yes** to use default packages in the application.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
 √ What is your project named? ... ej2-nextjs-pivotview
-√ Would you like to use TypeScript? ... No / `Yes`
-√ Would you like to use ESLint? ... No / `Yes`
-√ Would you like to use Tailwind CSS? ... `No` / Yes
-√ Would you like to use `src/` directory? ... No / `Yes`
-√ Would you like to use App Router? (recommended) ... No / `Yes`
-√ Would you like to customize the default import alias? ... `No`/ Yes
-Creating a new Next.js app in D:\ej2-nextjs-pivotview.
+? Would you like to use the recommended Next.js defaults?
+>   Yes, use recommended defaults - TypeScript, ESLint, Tailwind CSS, App Router
+    No, reuse previous settings
+    No, customize settings
 
 {% endhighlight %}
 {% endtabs %}
+
+After running the above commands, the project will be created and all required dependencies will be installed automatically.
 
 3. **Navigate to the project folder**: Once the setup is complete, move to the project directory using the command below:
 
@@ -103,22 +102,22 @@ The provided code installs the Syncfusion React Pivot Table package. The `--save
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components include [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) that you can easily apply to style your Pivot Table. These themes are available in the installed Syncfusion packages and can be imported to match your application's look. To use the Tailwind3 theme, import its CSS files into the **src/app/globals.css** file after removing any existing styles, as shown below:
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components include [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) that you can easily apply to style your Pivot Table. These themes are available in the installed Syncfusion packages and can be imported to match your application's look. To use the **Tailwind 3** theme, import its CSS files into the **app/globals.css** file after removing any existing styles, as shown below:
 
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
 
-@import '../../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-react-pivotview/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-react-pivotview/styles/tailwind3.css';
 
 {% endhighlight %}
 {% endtabs %}
@@ -129,7 +128,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> React components include [built
 
 This section guides you through adding the Syncfusion<sup style="font-size:70%">&reg;</sup> React Pivot Table component to your Next.js project. Follow these steps to set up the data and display the component in your application.
 
-1. First, create a file named `datasource.tsx` in the **src/app/** folder. This file will hold the data for the Pivot Table component. Add the following sample data to populate the table:
+1. First, create a file named `datasource.tsx` in the **app/** folder. This file will hold the data for the Pivot Table component. Add the following sample data to populate the table:
 
 {% tabs %}
 {% highlight ts tabtitle="datasource.tsx" %}
@@ -151,7 +150,7 @@ export let pivotData: object[] = [
 {% endhighlight %}
 {% endtabs %}
 
-2. Next, update the **src/app/page.tsx** file to import and set up the Pivot Table component. This step connects the data and configures the table’s report settings. Use the following code to define the component:
+2. Next, update the **app/page.tsx** file to import and set up the Pivot Table component. This step connects the data and configures the table’s report settings. Use the following code to define the component:
 
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
@@ -184,6 +183,8 @@ export default function Home() {
 
 {% endhighlight %}
 {% endtabs %}
+
+> NOTE: When using the Next.js App Router, the **app/page.tsx** file must be a client component to use Syncfusion interactive features. So the code includes `'use client'` at the top of the file.
 
 ## Run the application
 

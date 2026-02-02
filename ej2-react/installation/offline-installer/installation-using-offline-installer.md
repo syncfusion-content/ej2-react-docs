@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Installation using offline installer in React Installation component | Syncfusion
-description: Learn here all about Installation using offline installer in Syncfusion React Installation component of Syncfusion Essential JS 2 and more.
+title: Installing React Components Using Offline Installer | Syncfusion
+description: Step-by-step guide to installing Syncfusion React (JavaScript - EJ2) components using the offline installer, including UI and silent mode installation.
 control: Installation using offline installer 
 platform: ej2-react
 documentation: ug
@@ -10,126 +10,156 @@ domainurl: ##DomainURL##
 
 # Installation using Offline Installer
 
-The frameworks listed below are supported in this installer.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 offline installer supports the following frameworks:
 
-* JavaScript
+* JavaScript (ES5)
+* JavaScript (ES6+)
 * Angular
 * React
 * Vue
-* JavaScript (ES5)
 
-## Installing with UI
+> The offline installer includes shared resources and samples for all supported frameworks. Once installed, you can access React-specific content and demos.
 
-The steps below shows how to install the Essential Studio<sup style="font-size:70%">&reg;</sup> JavaScript – EJ2 installer.
+## System Requirements
 
-1. Open the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript – EJ2 offline installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package
+Before installation, ensure the system meets these requirements:
 
-    ![license download](images/offline1.png)
+- **Operating System**: Windows 7 SP1 or later, macOS 10.13 or later, Linux (Ubuntu 16.04 or later)
+- **Disk space**: At least 2 GB of free disk space
+- **Node.js**: Version 14.x or later (required to run demos)
 
-    >Note: The Installer wizard extracts the syncfusionejs2 (version).exe dialog, which displays the package’s unzip operation.
+## Installing with UI (Windows)
 
-2. To unlock the Syncfusion<sup style="font-size:70%">&reg;</sup> offline installer, you have two options:
+These steps describe installing the Essential Studio<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 offline installer using the graphical interface on Windows.
 
-    * Login To Install
-    * Use Unlock Key
+### Step 1: Launch the Installer
 
-    **Login To Install**
-    You must enter your Syncfusion<sup style="font-size:70%">&reg;</sup> email address and password. If you don’t have a Syncfusion<sup style="font-size:70%">&reg;</sup> account, you can sign up for one by clicking **“Create an account”**. If you have forgotten your password, click on **“Forgot Password”** to create a new one. Once you’ve entered your Syncfusion<sup style="font-size:70%">&reg;</sup> email and password, click Next.
+1. Double-click the downloaded Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 offline installer (.exe) to open the Installer Wizard; the package is extracted automatically.
 
-    ![license download](images/offline2.png)
+    ![Installer extraction](images/offline1.png)
 
-    **Use Unlock Key**
-    Unlock keys are used to unlock the Syncfusion<sup style="font-size:70%">&reg;</sup> offline installer, and they are platform and version specific. You should use either Syncfusion<sup style="font-size:70%">&reg;</sup> licensed or trial Unlock key to unlock Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript – EJ2 installer.
+    > The installer displays an extraction progress dialog while unpacking the installation files.
 
-    The trial unlock key is only valid for 30 days, and the installer will not accept an expired trial key.
+### Step 2: Unlock the Installer
 
-    To learn how to generate an unlock key for both trial and licensed products, see [this](https://www.syncfusion.com/kb/2326) Knowledge Base article.
+2. To unlock the installer, choose one of the following options:
 
-    ![license download](images/offline3.png)
+    **Option 1: Login to install**
 
-3. After reading the License Terms and Privacy Policy, check the **“I agree to the License Terms and Privacy Policy”** check box. Click the Next button.
+    Enter the Syncfusion<sup style="font-size:70%">&reg;</sup> account email and password. If an account is not available, select **Create an account**. Use **Forgot Password** to reset credentials if necessary, then click **Next**.
 
-4. Change the install and sample locations here. You can also change the Additional settings. Click Next\Install to install with the default settings.
+    ![Login to install](images/offline2.png)
 
-    ![license download](images/offline4.png)
+    **Option 2: Use unlock key**
 
-    **Additional Settings**
+    Unlock keys are platform- and version-specific. Provide a licensed or trial unlock key to proceed; trial keys are valid for 30 days.
 
-    * Select the **Install Demos** check box to install Syncfusion<sup style="font-size:70%">&reg;</sup> samples, or leave the check box unchecked, if you do not want to install Syncfusion<sup style="font-size:70%">&reg;</sup> samples
-    * Select the **Configure Syncfusion<sup style="font-size:70%">&reg;</sup> Extensions controls in Visual Studio** checkbox to configure the Syncfusion<sup style="font-size:70%">&reg;</sup> Extensions in Visual Studio or clear this check box when you do not want to configure the Syncfusion<sup style="font-size:70%">&reg;</sup> Extensions in Visual Studio.
-    * Check the **Create Desktop Shortcut** checkbox to add a desktop shortcut for Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel
-    * Check the **Create Start Menu Shortcut** checkbox to add a shortcut to the start menu for Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel
+    For instructions on generating an unlock key, see the Knowledge Base article: [Syncfusion Knowledge Base - How to generate unlock key](https://www.syncfusion.com/kb/2326).
 
-5. If any previous versions of the current product is installed, the **Uninstall** Previous Version(s) wizard will be opened. Select Uninstall checkbox to uninstall the previous versions and then click the Proceed button.
+    ![Unlock key entry](images/offline3.png)
 
-    ![license download](images/offline5.png)
+### Step 3: Accept License Agreement
 
-    >Note: From the 2021 Volume 1 release, Syncfusion<sup style="font-size:70%">&reg;</sup> has added the option to uninstall previous versions from 18.1 while installing the new version.
-    >
-    >Note: If any version is selected to uninstall, a confirmation screen will appear; if continue is selected, the Progress screen will display the uninstall and install progress, respectively. If none of the versions are chosen to be uninstalled, only the installation progress will be displayed.
+3. After reading the License Terms and Privacy Policy, check the **"I agree to the License Terms and Privacy Policy"** checkbox and click **Next**.
 
-    **Confirmation Alert**
+### Step 4: Configure Installation Settings
 
-    ![license download](images/offline6.png)
+4. Specify the installation and sample locations, or accept the defaults. Click **Next** or **Install** to continue.
 
-    **Uninstall Progress:**
+    ![Installation settings](images/offline4.png)
 
-    ![license download](images/offline7.png)
+    **Additional settings:**
 
-    **Install Progress**
+    * **Install Demos**: Installs sample projects and demos when checked; uncheck to skip demo installation.
+    * **Create Desktop Shortcut**: Adds a Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel shortcut to the desktop.
+    * **Create Start Menu Shortcut**: Adds a Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel shortcut to the Start Menu.
 
-    ![license download](images/offline8.png)
+    > The "Configure Syncfusion Extensions in Visual Studio" option applies only to ASP.NET development and does not affect React projects.
 
-    >Note: The Completed screen is displayed once the JavaScript – EJ2 product is installed. If any version is selected to uninstall, The completed screen will display both install and uninstall status.
+### Step 5: Uninstall Previous Versions (Optional)
 
-    ![license download](images/offline9.png)
+5. If previous versions are detected, the **Uninstall Previous Version(s)** wizard appears; select versions to remove and click **Proceed**.
 
-6. After installing, click the Launch Control Panel link to open the Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel.
+    ![Uninstall previous versions](images/offline5.png)
 
-7. Click the Finish button. Your system has been installed with the Syncfusion<sup style="font-size:70%">&reg;</sup> <sup style="font-size:70%">&reg;</sup> Studio JavaScript – EJ2 product.
+    > Starting with the 2021 Volume 1 release, Syncfusion<sup style="font-size:70%">&reg;</sup> offers the option to uninstall versions 18.1 and later during installation.
 
-## Installing in silent mode
+    **Confirmation dialog:**
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> JavaScript – EJ2 Installer supports installation and uninstallation via the command line.
+    ![Uninstall confirmation](images/offline6.png)
 
-### Command line installation
+    **Uninstall progress:**
 
-To install through the Command Line in Silent mode, follow the steps below.
+    ![Uninstall progress](images/offline7.png)
 
-1. Run the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript – EJ2 installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
-2. The file syncfusionejs2_(version).exe file will be extracted into the Temp directory.
-3. Run %temp%. The Temp folder will be opened. The syncfusionejs2_(version).exe file will be located in one of the folders.
-4. Copy the extracted syncfusionejs2_(version).exe file in local drive.
-5. Exit the Wizard.
-6. Run Command Prompt in administrator mode and enter the following arguments.
+### Step 6: Monitor Installation Progress
 
-    Arguments: “installer file path\SyncfusionEssentialStudio(product)_(version).exe” /Install silent /UNLOCKKEY:“(product unlock key)” [/log “{Log file path}”] [/InstallPath:{Location to install}] [/InstallSamples:{true/false}] [/InstallAssemblies:{true/false}] [/UninstallExistAssemblies:{true/false}] [/InstallToolbox:{true/false}]
+6. The installer displays progress for uninstallation (if selected) and for installation.
 
-    >Note: [..] – Arguments inside the square brackets are optional.
+    **Installation progress:**
 
-    **Example:** “D:\Temp\syncfusionejs2x.x.x.x.exe” /Install silent /UNLOCKKEY:“product unlock key” /log “C:\Temp\EssentialStudioPlatform.log” /InstallPath:C:\Syncfusion\x.x.x.x /InstallSamples:true /InstallAssemblies:true /UninstallExistAssemblies:true /InstallToolbox:true
+    ![Installation progress](images/offline8.png)
 
-7. Essential Studio<sup style="font-size:70%">&reg;</sup> for JavaScript (Essential<sup style="font-size:70%">&reg;</sup> JS2) is installed.
+### Step 7: Complete Installation
 
-    >Note: x.x.x.x should be replaced with the Essential Studio<sup style="font-size:70%">&reg;</sup> version and the Product Unlock Key needs to be replaced with the Unlock Key for that version.
+7. After installation completes, the completion screen displays the status.
 
-### Command line uninstallation
+    ![Installation complete](images/offline9.png)
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JavaScript – EJ2 can be uninstalled silently using the Command Line.
+8. Click **Launch Control Panel** to open the Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel, or click **Finish** to exit.
 
-1. Run the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript – EJ2 installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+## Installing in Silent Mode (Windows)
 
-2. The syncfusionejs2_(version).exe file will be extracted into the Temp directory.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 installer supports silent installation and uninstallation via the command line on Windows.
 
-3. Run %temp%. The Temp folder will be opened. The syncfusionejs2_(version).exe file will be located in one of the folders.
+### Silent mode installation
 
-4. Copy the extracted syncfusionejs2_(version).exe file in local drive.
+1. Run the installer by double-clicking it; the installer extracts files to the Temp directory.
+2. Open the Temp folder by typing `%temp%` in File Explorer or the Run dialog.
+3. Locate the extracted `syncfusionejs2_x.x.x.x.exe` file and copy it to a local drive (for example, `D:\Temp`).
+4. Exit the Installer Wizard.
+5. Open an elevated Command Prompt (Run as administrator) and run the command using this syntax:
 
-5. Exit the Wizard.
+    **Syntax:**
+    ```
+    "installer_path\\syncfusionejs2_x.x.x.x.exe" /Install silent /UNLOCKKEY:"your_unlock_key" [/log "log_file_path"] [/InstallPath:"install_location"] [/InstallSamples:true|false]
+    ```
 
-6. Run Command Prompt in administrator mode and enter the following arguments.
+    **Example:**
+    ```
+    "D:\Temp\\syncfusionejs2_20.1.0.47.exe" /Install silent /UNLOCKKEY:"ABC123XYZ456" /log "C:\Temp\\install.log" /InstallPath:"C:\Syncfusion\\20.1.0.47" /InstallSamples:true
+    ```
 
-    Arguments: “Copied installer file path\ syncfusionejs2_(version).exe” /uninstall silent
-    Example: “D:\Temp\syncfusionejs2_x.x.x.x.exe” /uninstall silent
+    **Parameters:**
+    * `/Install silent`: Runs the installer in silent mode.
+    * `/UNLOCKKEY`: Specifies the unlock key for the version being installed.
+    * `/log`: (Optional) Specifies the log file path.
+    * `/InstallPath`: (Optional) Specifies the installation directory.
+    * `/InstallSamples`: (Optional) Install samples using `/InstallSamples:true` or `/InstallSamples:false`.
 
-7. Essential Studio<sup style="font-size:70%">&reg;</sup> for JavaScript (Essential<sup style="font-size:70%">&reg;</sup> JS2) is uninstalled.
+6. The installation completes silently. Check the log file (if specified) for details.
+
+### Silent mode uninstallation
+
+1. Follow steps 1–4 from the silent installation procedure to locate the installer executable.
+2. Open Command Prompt in administrator mode and run the uninstallation command:
+
+    **Syntax:**
+    ```
+    "installer_path\\syncfusionejs2_x.x.x.x.exe" /Uninstall silent
+    ```
+
+    **Example:**
+    ```
+    "D:\Temp\\syncfusionejs2_20.1.0.47.exe" /Uninstall silent
+    ```
+
+3. The uninstallation completes silently.
+
+## Post-Installation
+
+After installation:
+
+- **Access demos**: Navigate to the installation directory (default: `C:\Program Files (x86)\Syncfusion\Essential Studio\JavaScript - EJ2\\x.x.x.x`) to find sample projects.
+- **Launch Control Panel**: Use the desktop or Start Menu shortcut to open the Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel for utilities and documentation.
+- **Register license key**: For licensed installations, register the license key in React projects. See the License Key Registration Guide: Syncfusion - License Key Registration (https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration).

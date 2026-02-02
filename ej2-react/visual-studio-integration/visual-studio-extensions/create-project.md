@@ -15,37 +15,36 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> provides Visual Studio Project 
 > The Syncfusion<sup style="font-size:70%">&reg;</sup> React project templates are available from v17.1.0.47.
 
 Follow these steps to create a Syncfusion<sup style="font-size:70%">&reg;</sup> React application using Visual Studio:
+
 1. Open Visual Studio 2017 or later.
 2. Launch the Syncfusion<sup style="font-size:70%">&reg;</sup> Project creation wizard using one of these methods:
 
     **Option 1:**
 
-     Choose the **Extension->Syncfusion-> Essential Studio<sup style="font-size:70%">&reg;</sup> for ASP.NET Core -> Create New Syncfusion<sup style="font-size:70%">&reg;</sup> Project… in the Visual Studio menu.**
+    Choose **Extensions → Syncfusion → Essential Studio<sup style="font-size:70%">&reg;</sup> for ASP.NET Core → Create New Syncfusion<sup style="font-size:70%">&reg;</sup> Project…** from the Visual Studio menu.
 
     ![new project](images/new-project.png)
 
-    > In Visual Studio 2017, you can see the **Syncfusion** menu directly in the Visual Studio menu.
+    > In Visual Studio 2017, the **Syncfusion** menu may appear directly in the Visual Studio menu.
 
     **Option 2:**
 
-     Choose **File > New > Project** in Visual Studio. The Create a new project dialog opens. You can get the Syncfusion<sup style="font-size:70%">&reg;</sup> provided templates by filtering the Project type with Syncfusion<sup style="font-size:70%">&reg;</sup> or use the **Search option** with the key word of **Syncfusion<sup style="font-size:70%">&reg;</sup>.**
+    Choose **File > New > Project** in Visual Studio. In the Create a new project dialog, filter by Syncfusion or search for "Syncfusion" to list the provided templates.
 
-    ![Syncfusion<sup style="font-size:70%">&reg;</sup> template](images/create-new-project.png)
+    ![Syncfusion template](images/create-new-project.png)
 
-    > In Visual Studio 2017, choose **File > New > Project** and navigate to **Syncfusion<sup style="font-size:70%">&reg;</sup> > .NET Core > Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core (Essential<sup style="font-size:70%">&reg;</sup> JS 2) Web Application** in **Visual Studio**.
+    > In Visual Studio 2017, navigate to **Syncfusion > .NET Core > Syncfusion ASP.NET Core (Essential JS 2) Web Application**.
 
-3. Select the **Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Web Application** and choose the Next button.
+3. Select the **Syncfusion ASP.NET Core Web Application** template and click **Next**.
 
     ![project configuration](images/syncfusion-template.png)
 
-4. Name the **Project**, choose the destination location and then click **Create** button. The **Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core**  project configuration wizard appears.
+4. Provide the project name and destination, then click **Create**. The Syncfusion project configuration wizard appears.
 
     ![project configuration](images/react-project-wizard.png)
 
-    Choose the **Syncfusion<sup style="font-size:70%">&reg;</sup> React.js** template and choose required theme and asset.
+    Choose the **Syncfusion React.js** template, select the required theme and assets, then click **Create**.
 
-5. Click the Create button, the Syncfusion<sup style="font-size:70%">&reg;</sup> React application has been created.
+5. The Syncfusion React application is created and configured with the selected Syncfusion packages, scripts, and styles.
 
-6. The created Syncfusion<sup style="font-size:70%">&reg;</sup> React application configured with Syncfusion.
-
-7. The required Syncfusion<sup style="font-size:70%">&reg;</sup> React NPM packages, scripts and selected style configured with the application.
+6. Verify the added Syncfusion NPM packages, scripts, and selected styles are present in the project files.

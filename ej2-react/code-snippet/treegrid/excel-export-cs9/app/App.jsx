@@ -1,4 +1,4 @@
-{% raw %}
+
 import * as React from 'react';
 import { TreeGridComponent, ColumnsDirective, ColumnDirective, Page, Toolbar, ExcelExport, Inject } from '@syncfusion/ej2-react-treegrid';
 import { sampleData } from './datasource';
@@ -25,4 +25,3 @@ function App() {
 }
 ;
 export default App;
-{% endraw %}

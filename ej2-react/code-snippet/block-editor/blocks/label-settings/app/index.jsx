@@ -88,7 +88,7 @@ const blocksData = [
             },
             {
                 contentType: ContentType.Label,
-                properties: { lableId: 'feature' }
+                properties: { labelId: 'feature' }
             },
             {
                 contentType: ContentType.Text,

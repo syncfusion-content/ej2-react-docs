@@ -1,7 +1,7 @@
 ---
 layout: post
 title: State persistence in React State persistence md component | Syncfusion
-description: Learn here all about State persistence in Syncfusion React State persistence md component of Syncfusion Essential JS 2 and more.
+description: Learn how to enable state persistence for Syncfusion React components so component state is retained across page reloads and navigation.
 control: State persistence 
 platform: ej2-react
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # State Persistence
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React library supports maintaining a component’s state across page refreshes or navigation. By setting the `enablePersistence` property to `true` on a component, its state is stored in the browser’s `localStorage` during the page `unload` event. This ensures that user settings and configurations are retained when the page is revisited.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React library supports persisting a component’s state across page refreshes and navigation. By setting the `enablePersistence` property to `true` on a component, its state is stored in the browser’s `localStorage` during the page `unload` event. This ensures user settings and configurations are retained when the page is revisited.
 
 Below is an example demonstrating how to enable state persistence on the Grid component:
 
@@ -37,3 +37,5 @@ class App extends React.Component<{}, {}>{
 ReactDOM.render(<App />, document.getElementById('grid'));
 
 ```
+
+> Note: Ensure consistent package versions across the project to prevent persistence compatibility issues.

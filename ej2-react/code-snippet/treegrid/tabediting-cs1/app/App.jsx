@@ -1,4 +1,4 @@
-{% raw %}
+
 import * as React from 'react';
 import { DataUtil } from '@syncfusion/ej2-data';
 import { projectData } from './datasource';
@@ -163,4 +163,3 @@ function TabTwoComponent(props) {
     </div>);
 }
 export default App;
-{% endraw %}

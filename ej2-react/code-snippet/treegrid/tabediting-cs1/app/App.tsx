@@ -1,6 +1,3 @@
-{% raw %}
-
-
 
 import * as React from 'react';
 import { DataUtil } from '@syncfusion/ej2-data';
@@ -199,5 +196,3 @@ export interface IProjectModel {
 }
 export default App;
 
-
-{% endraw %}

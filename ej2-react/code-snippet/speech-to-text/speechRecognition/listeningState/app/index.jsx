@@ -1,6 +1,6 @@
 // Import the SpeechToText.
 import { SpeechToTextComponent } from '@syncfusion/ej2-react-inputs';
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDom from 'react-dom';
 
 export default class App extends React.Component {
