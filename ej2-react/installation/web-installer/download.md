@@ -1,81 +1,79 @@
 ---
 layout: post
-title: Download in React Installation component | Syncfusion
-description: Learn here all about Download in Syncfusion React Installation component of Syncfusion Essential JS 2 and more.
+title: Download Web Installer for React Components | Syncfusion
+description: Learn how to download the Syncfusion React (JavaScript - EJ2) web installer for both trial and licensed versions.
 control: Download 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Download JavaScript – EJ2 Installer
+# Download React (JavaScript - EJ2) Web Installer
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 web installer can be downloaded from the [Syncfusion](https://www.syncfusion.com/react-ui-components) website. You can either download the licensed installer or try our trial installer depending on your license.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 web installer can be downloaded from the [Syncfusion](https://www.syncfusion.com/react-ui-components) website. Depending on your license type, you can download either the licensed installer or the trial installer.
 
-* Trial Installer
-* Licensed Installer
+* **Trial Installer**: For evaluating the product.
+* **Licensed Installer**: For customers with a valid license.
 
-## Download the free trial version
+## Download the Free Trial Version
 
-Our 30-day trial can be downloaded in two ways.
+Obtain the 30-day trial in either of the following ways:
 
-* Download Free Trial Setup
-* Start Trials if using components through [npm](https://www.npmjs.com/~syncfusionorg)
+1. Download the Free Trial setup.
+2. Start a trial if components were installed via [npm](https://www.npmjs.com/~syncfusionorg).
 
-### Download free trial setup
+### Download Free Trial Setup
 
-1. You can evaluate our 30-day free trial by visiting the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the JavaScript platform.
+1. Visit the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the JavaScript platform to start the evaluation.
 
-2. After completing the required form or logging in with your registered Syncfusion<sup style="font-size:70%">&reg;</sup> account, you can download the JavaScript - EJ2 trial installer from the confirmation page. (See the screenshot below.)
+2. After completing the form or signing in with a registered Syncfusion<sup style="font-size:70%">&reg;</sup> account, download the JavaScript - EJ2 trial installer from the confirmation page.
 
-    ![ej2 trial confirmation](images/trial-confirmation.PNG)
+    ![Trial download confirmation](images/trial-confirmation.PNG)
 
-3. With a trial license, only the latest version’s trial installer can be downloaded.
+3. Trial installers are available only for the latest product version.
 
-4. After downloading, the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 trial installer can be unlocked using either the trial unlock key or the Syncfusion<sup style="font-size:70%">&reg;</sup> registered login credential.
+4. The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 trial installer can be unlocked using a trial unlock key or the registered Syncfusion<sup style="font-size:70%">&reg;</sup> account credentials.
 
-5. Before the trial expires, you can download the trial installer at any time from your registered account’s [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (See the screenshot below.)
+5. Before the trial expires, download the installer at any time from the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page in the registered account.
 
-    ![trail installer dashboard](images/dashboard.png)
+    ![Trials & Downloads dashboard](images/dashboard.png)
 
-6. Click the Download (element 1 in the screenshot below) button to get the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> JavaScript – EJ2 web installer.
+6. Click the **Download** button (labeled 1 in the screenshot below) to obtain the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 web installer.
 
-    ![start trial download installer](images/start-trial-download-installer.png)
+    ![Download installer button](images/start-trial-download-installer.png)
 
-**Start Trials if using components through [npm](https://www.npmjs.com/~syncfusionorg)**
+### Start Trial for npm Users
 
-You should initiate an evaluation if you have already obtained our components through [npm](https://www.npmjs.com/~syncfusionorg)
+If components were installed via [npm](https://www.npmjs.com/~syncfusionorg), start an evaluation to obtain a license key:
 
-1. You can start your 30-day free trial for JavaScript – EJ2 from the [Start Trial](https://www.syncfusion.com/account/manage-trials/start-trials) page from your account.
+1. Start the 30-day free trial for JavaScript - EJ2 from the [Start Trial](https://www.syncfusion.com/account/manage-trials/start-trials) page in the Syncfusion account.
 
-    ![start trial download](images/start-trial-download.png)
+    ![Start trial page](images/start-trial-download.png)
 
-2. To access this page, you must sign up\log in with your Syncfusion<sup style="font-size:70%">&reg;</sup> account.
+2. Sign in with the registered Syncfusion<sup style="font-size:70%">&reg;</sup> account.
 
-3. Begin your trial by selecting the JavaScript – EJ2 product.
+3. Select the **JavaScript - EJ2** product to begin the trial.
 
-    >Note: If you’ve already used the trial products and they haven’t expired, you won’t be able to start the trial for the same product again.
+    > If an active trial exists and has not expired, the trial cannot be restarted for the same product.
 
-4. After you’ve started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/start-trials) page to get the latest version trial installer. You can generate the [unlock](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) key and [license key](https://ej2.syncfusion.com/react/documentation/licensing/license-key-generation/) here at any time before the trial period expires. (See the screenshot below). You can find your current active trial products on the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/start-trials) page.
+4. After starting the trial, visit the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to download the latest trial installer. Generate the [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) and the [license key](https://ej2.syncfusion.com/react/documentation/licensing/license-key-generation/) from this page before the trial expires. Active trial products are listed on this page.
 
-    ![start trial download installer](images/start-trial-download-installer.png)
+    ![Trial installer download](images/start-trial-download-installer.png)
 
-5. You can find your current active trial products on the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/start-trials) page.
+## Download the Licensed Version
 
-### Download the license version
+1. Licensed installers are available on the [License & Downloads](https://www.syncfusion.com/account/downloads) page in the registered Syncfusion<sup style="font-size:70%">&reg;</sup> account.
 
-1. Syncfusion<sup style="font-size:70%">&reg;</sup> licensed products will be available in the [License & Downloads](https://www.syncfusion.com/account/downloads) page under your registered Syncfusion<sup style="font-size:70%">&reg;</sup> account.
+2. This page lists all licenses (active and expired) associated with the account.
 
-2. You can view all the licenses (both active and expired) associated with your account.
+3. Click the **Download** button (labeled 1 in the screenshot) to obtain the installer for the selected product.
 
-3. Click the **Download** (element 1 in the screenshot below) button to download the respective product’s installer.
+4. The most recent installer version is downloaded by default.
 
-4. The most recent version of the installer will be downloaded from this page.
+5. To access older installers, open **Downloads Older Versions** (labeled 2 in the screenshot).
 
-5. To download older version installers, go to [Downloads Older Versions](https://www.syncfusion.com/account/downloads/studio) (element 2 in the screenshot below).
+6. For additional platforms or add-on installers, choose **More Downloads Options** (labeled 3 in the screenshot).
 
-6. You can download other platform\add-on installers by going to **More Downloads Options** (element 3 in the screenshot below).
+    ![Licensed downloads page](images/license-download.png)
 
-    ![license download](images/license-download.png)
-
-You can refer to the [Online installer](https://ej2.syncfusion.com/react/documentation/installation/web-installer/installation-using-web-installer) link for step-by-step installation guidelines.
+Refer to the [Web Installer Installation Guide](https://ej2.syncfusion.com/react/documentation/installation/web-installer/installation-using-web-installer) for step-by-step installation instructions.

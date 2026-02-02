@@ -1,8 +1,7 @@
-
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { TreeGridComponent, ColumnsDirective, ColumnDirective, Page, Toolbar, ColumnChooser, ToolbarItems, Inject } from '@syncfusion/ej2-react-treegrid';
-import { stackedData } from './data';
+import { stackedData } from './datasource';
 import { TreeView, TreeViewComponent } from '@syncfusion/ej2-react-navigations';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 

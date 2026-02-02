@@ -1,4 +1,3 @@
-{% raw %}
 
 
 import { DataManager } from '@syncfusion/ej2-data';
@@ -53,6 +52,3 @@ function App() {
     </TreeGridComponent>
 };
 export default App;
-
-
-{% endraw %}

@@ -1,80 +1,62 @@
 ---
 layout: post
-title: Create React Project with Visual Studio Integration | Syncfusion
-description: Learn here all about Create project in Syncfusion React Visual studio integration component of Syncfusion Essential JS 2 and more.
+title: Download and installation | Syncfusion
+description: Learn how to download and install the Syncfusion Visual Studio extension for creating and managing React projects with Syncfusion components.
 platform: ej2-react
-control: Create project 
+control: Download and installation 
 publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
 # Download and Installation
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> publishes the Visual Studio extension in the below Visual Studio marketplace link. You can either install it directly from Visual Studio or download and install it from the Visual Studio marketplace.
+Syncfusion<sup style="font-size:70%">&reg;</sup> publishes the Visual Studio extension on the Visual Studio Marketplace. Install it directly from Visual Studio or download and install the VSIX from the marketplace.
 
-[Visual Studio 2022](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.ASPNETCoreVSExtensions)
-
-[Visual Studio 2019 or lower](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.ASPNETCoreExtensions)
+- Visual Studio 2022: https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.ASPNETCoreVSExtensions  
+- Visual Studio 2019 or earlier: https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.ASPNETCoreExtensions
 
 ## Prerequisites
 
-Ensure you have the following software installed before installing the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core extension for creating, adding snippets, converting, and upgrading Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core applications:
+Ensure the following software is installed before installing the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core extension for creating, adding snippets, converting, and upgrading Syncfusion applications:
 
-* [Visual Studio 2022](https://visualstudio.microsoft.com/downloads).
+* [Visual Studio 2022](https://visualstudio.microsoft.com/downloads)
+* [.NET 6.0 or later](https://dotnet.microsoft.com/en-us/download/dotnet)
 
-* [.NET Core 6.0 or later](https://dotnet.microsoft.com/en-us/download/dotnet).
+## Install through Visual Studio Manage Extensions
 
-## Install through the Visual Studio Manage Extensions
+Follow these steps to install the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core extension from Visual Studio's Manage Extensions:
 
-The steps below assist you to install the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core extensions from **Visual Studio Manage Extensions**.
-
-1. Open the Visual Studio.
-
-2. Navigate to **Extension ->Manage Extensions** and open the Manage Extensions.
-
-    N>  In Visual Studio 2017, go to Tools -> Extensions and Updates.
-
-3. On the left, click the **Online** tab and type **"Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2"** in the **search box**.
+1. Open Visual Studio.  
+2. Navigate to **Extensions → Manage Extensions**.  
+   > In Visual Studio 2017, go to **Tools → Extensions and Updates**.
+3. Click the **Online** tab and search for **Syncfusion EJ2**.
 
     ![Online-Manage-Extension-window](images/OnlineExtension.png)
 
-4. Click the **Download** button in the **“ASP.NET Core Extension - Syncfusion”**.
-
-5. Close all Visual Studio instances after downloading the extensions to begin the installation process. You will see the following VSIX installation prompt.
+4. Click **Download** on the **ASP.NET Core Extension - Syncfusion** entry.  
+5. Close all Visual Studio instances to begin the VSIX installation. A VSIX installation prompt appears.
 
     ![VSIX-Installation-Window](images/InstallUpdatedVersion.png)
 
-6. Click the **Modify** button.
-
-7. After the installation is completed, open Visual Studio.
-
-8. Now, under the menu **Extensions**, you can use the Syncfusion<sup style="font-size:70%">&reg;</sup> extensions from the Visual Studio.
+6. Click **Modify** to install the extension.  
+7. After installation completes, reopen Visual Studio.  
+8. Use Syncfusion extension commands from the **Extensions** menu.
 
     ![SyncfusionMenu](images/SyncfusionMenu.png)
 
-    N> In Visual Studio 2017, you can see the Syncfusion<sup style="font-size:70%">&reg;</sup> menu directly in the Visual Studio menu
-
 ## Install from the Visual Studio Marketplace
 
-The steps below illustrate how to download and install the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core extension from the Visual Studio Marketplace.
+To install the extension from the Marketplace site:
 
-1. Download the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Extensions from the below Visual Studio Marketplace.
-
-    [Visual Studio 2022](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.ASPNETCoreVSExtensions)
-
-    [Visual Studio 2019 or lower](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.ASPNETCoreExtensions)
-
-2. Close all Visual Studio instances running, if any.
-
-3. Double-click to install the downloaded VSIX file. You will see the VSIX installation prompts with the corresponding installed Visual Studio version checkbox for select the Visual Studio to install extension.
+1. Open the extension page for your Visual Studio version and click **Install**:
+   - Visual Studio 2022: https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.ASPNETCoreVSExtensions  
+   - Visual Studio 2019 or earlier: https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.ASPNETCoreExtensions
+2. Close all running instances of Visual Studio.  
+3. If downloading the VSIX, double-click the file to start installation. Select the Visual Studio instances to install into when prompted.
 
     ![VSIX-Installation-Window](images/InstallVSIX.png)
 
-4. Click the **Modify** button.
+4. Click **Modify** to proceed.  
+5. After installation finishes, open Visual Studio and use Syncfusion commands from the **Extensions** menu.
 
-5. After the installation is complete, open Visual Studio. You can now use Syncfusion<sup style="font-size:70%">&reg;</sup> extensions from the Visual Studio under the **Extensions** menu.
-
-     ![SyncfusionMenu](images/SyncfusionMenu.png)
-
-     N> In Visual Studio 2017, you can see the Syncfusion<sup style="font-size:70%">&reg;</sup> menu directly in the Visual Studio menu
-     
+    ![SyncfusionMenu](images/SyncfusionMenu.png)

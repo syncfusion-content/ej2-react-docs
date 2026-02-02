@@ -1,4 +1,3 @@
-{% raw %}
 
 
 import * as React from 'react';
@@ -125,6 +124,3 @@ function App() {
     </TreeGridComponent>
 };
 export default App;
-
-
-{% endraw %}

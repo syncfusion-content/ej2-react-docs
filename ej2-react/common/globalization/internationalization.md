@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Internationalization in React Common control | Syncfusion
-description: Learn here all about Internationalization in Syncfusion<sup style="font-size:70%">&reg;</sup> React Common control of Syncfusion Essential JS 2 and more.
+title: Internationalization for Syncfusion React Components
+description: Learn how to implement internationalization in Syncfusion React components using CLDR data to format and parse dates, numbers, and currencies across different cultures and locales.
 control: common
 platform: ej2-react
 documentation: ug
@@ -10,116 +10,113 @@ domainurl: ##DomainURL##
 
 # Internationalization
 
-The `Internationalization` library provides support for formatting and parsing date and number objects using the official [Unicode CLDR](http://cldr.unicode.org/) JSON data. The `en-US` locale is set as default _culture_ and `USD` is set as default `_currencyCode_` for all Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Components.
+The Internationalization library enables formatting and parsing of date and number values according to culture-specific rules using official [Unicode CLDR](https://cldr.unicode.org/) JSON data. The default culture is `en-US` and the default currency code is `USD` for all Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Components.
 
 ## Loading Culture Data
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> CLDR data package contains only JSON data files generated using the official [Unicode CLDR](http://cldr.unicode.org/) JSON data. This helps users avoid utilizing the existing [cldr-data](https://www.npmjs.com/package/cldr-data) package, which has third-party library vulnerabilities. The `loadCldr` function is required to load the following CLDR data for cultures other than `en-US`.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> CLDR data package contains only JSON data files generated from the official [Unicode CLDR](https://cldr.unicode.org/) JSON data. This approach avoids the third-party [cldr-data](https://www.npmjs.com/package/cldr-data) package and its associated vulnerabilities. Use the `loadCldr` function to load CLDR data for cultures other than `en-US`.
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> CLDR data package is published based on the releases of the Unicode CLDR JSON data. The package will be published within a week after the official [Unicode CLDR](http://cldr.unicode.org/) JSON data is released.
+> The Syncfusion<sup style="font-size:70%">&reg;</sup> CLDR data package is published shortly after each official [Unicode CLDR](https://cldr.unicode.org/) JSON data release, typically within one week.
 
-### Individual file path reference
+### Installing CLDR Data
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> CLDR data can be loaded by referring to individual paths from the package below, such as:
-
-| File Name | Path |
-| ------------- | ------------- |
-| ca-gregorian | @syncfusion/ej2-cldr-data/main/en/ca-gregorian.json |
-| timeZoneNames |@syncfusion/ej2-cldr-data/main/en/timeZoneNames.json |
-| numbers | @syncfusion/ej2-cldr-data/main/en/numbers.json |
-| currencies | @syncfusion/ej2-cldr-data/main/en/currencies.json |
-| numberingSystems | @syncfusion/ej2-cldr-data/supplemental/numberingSystems.json |
-
-
-### Single file path reference
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> CLDR data can also be loaded by referring to a single path from the package below, such as:
-
-| File Name | Path |
-| ------------- | ------------- |
-| ca-gregorian, timeZoneNames, numbers, currencies  | @syncfusion/ej2-cldr-data/main/en/all.json |
-| numberingSystems | @syncfusion/ej2-cldr-data/supplemental/numberingSystems.json |
-
->Note: For `en`, dependency files are already loaded in the library.
-
-### Installing CLDR data
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> CLDR data is available as npm package. So, we can install it through below command to our package.
+Install the Syncfusion<sup style="font-size:70%">&reg;</sup> CLDR data package using the following command:
 
 ```bash
 npm install @syncfusion/ej2-cldr-data
 ```
 
-### Binding to i18n library
+### Individual File Path Reference
 
-The i18n library to use the CLDR data to format, parse number and date/time values in a way that is appropriate for the `en` culture. The loadCldr function takes two arguments, enNumberData and enTimeZoneData, which are the CLDR data for numbers and time zones, respectively, for the en culture.
+CLDR data files can be loaded by referencing individual paths from the package. Replace `en` with the desired culture code (for example, `de`, `fr`, `ar`) for other locales:
+
+| File Name         | Path                                                            |
+| ----------------- | --------------------------------------------------------------- |
+| ca-gregorian      | @syncfusion/ej2-cldr-data/main/en/ca-gregorian.json             |
+| timeZoneNames     | @syncfusion/ej2-cldr-data/main/en/timeZoneNames.json            |
+| numbers           | @syncfusion/ej2-cldr-data/main/en/numbers.json                  |
+| currencies        | @syncfusion/ej2-cldr-data/main/en/currencies.json               |
+| numberingSystems  | @syncfusion/ej2-cldr-data/supplemental/numberingSystems.json    |
+
+### Single File Path Reference
+
+Multiple CLDR data types for a single culture can be loaded from a combined file. Replace `en` with the target culture code as needed:
+
+| File Name                              | Path                                                             |
+| -------------------------------------- | ---------------------------------------------------------------- |
+| ca-gregorian, timeZoneNames, numbers, currencies | @syncfusion/ej2-cldr-data/main/en/all.json                       |
+| numberingSystems                       | @syncfusion/ej2-cldr-data/supplemental/numberingSystems.json     |
+
+> For the `en-US` culture, all required data files are preloaded in the library, so explicit loading is optional for `en-US`.
+
+### Binding to i18n Library
+
+The internationalization library relies on loaded CLDR data to correctly format and parse numbers and dates for specific cultures. The `loadCldr` function accepts one or more CLDR JSON files as arguments. The following example loads data for the `en` culture (optional, included here for demonstration):
 
 ```typescript
-
 import { loadCldr } from "@syncfusion/ej2-base";
 import enNumberData from "@syncfusion/ej2-cldr-data/main/en/numbers.json";
-import entimeZoneData from "@syncfusion/ej2-cldr-data/main/en/timeZoneNames.json";
+import enTimeZoneData from "@syncfusion/ej2-cldr-data/main/en/timeZoneNames.json";
+import enGregorian from "@syncfusion/ej2-cldr-data/main/en/ca-gregorian.json";
+import enCurrencies from "@syncfusion/ej2-cldr-data/main/en/currencies.json";
+import numberingSystems from "@syncfusion/ej2-cldr-data/supplemental/numberingSystems.json";
 
-loadCldr(enNumberData, entimeZoneData);
-
+loadCldr(enNumberData, enTimeZoneData, enGregorian, enCurrencies, numberingSystems);
 ```
 
-## Changing culture and currency code
+## Changing Culture and Currency Code
 
-To set the default culture and the currency code for all Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Components, you can use the methods `setCulture` for setting the default locale and `setCurrencyCode` for setting the currency code.
+Use the `setCulture` method to change the default locale and the `setCurrencyCode` method to change the default currency code for all Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Components.
 
-```ts
+```typescript
+import { setCulture, setCurrencyCode } from '@syncfusion/ej2-base';
 
-import {setCulture, setCurrencyCode} from '@syncfusion/ej2-base';
 setCulture('ar');
 setCurrencyCode('QAR');
-
 ```
 
->Note: If global culture is not set, then `en-US` is set as the default locale, and `USD` is set as the default currency code.
+> If no global culture is set, `en-US` is used as the default locale and `USD` as the default currency code.
 
 ## Manipulating Numbers
 
-### Supported format string
+### Supported Format String
 
-Based on the  [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberFormatOptions/) number formatting and parsing operations are processed. You need to specify some or all of the following properties mentioned below table.
+Number formatting and parsing are processed based on the [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberFormatOptions/). Specify some or all of the following properties to control number formatting behavior:
 
-| No | Properties | Description |
-| --- | --- | --- |
-| 1 | `format` | Denotes the format to be set .Possible values are  <br />  1. **N -** denotes numeric type  <br /> 2.   **C -** denotes currency type  <br /> 3. **P** – denotes percentage type.  <br /> Ex:  <br /> `formatNumber`( **1234344** ,{format:&#39;N4&#39;}).   <br /> <br/> > Note: If no format is specified it takes numeric as default format type. |
-| 2 | `minimumFractionDigits` | Indicates the minimum number of fraction digits . Possible values are 0 to 20.  |
-| 3 | `maximumFractionDigits` | Indicates the maximum number of fraction digits. Possible values are 0 to 20.  |
-| 4 | `minimumSignificantDigits` | Indicates he minimum number of significant digits. Possible values are  1 to 21. <br /> > Note: If `minimumSignificantDigits` is given it is mandatory to give `maximumSignificantDigits`  |
-| 5 | `maximumSignificantDigits` | Indicates he maximum number of significant digits. . Possible values are  1 to 21.  <br /> > Note: If `maximumSignificantDigits` is given it is mandatory to give `minimumSignificantDigits`  |
-| 6 | `useGrouping` | Indicates whether to enable  the group separator or not . By default grouping value will be true.  |
-| 7 | `minimumIntegerDigits` | Indicates the minimum number of the integer digits to be placed in the value. Possible values are 1 to 21.  |
-| 8 | `currency`| Indicates the currency code which needs to considered for the currency formatting.  |
+| Properties                  | Description                                                                                                           |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `format`                    | Specifies the format type to be applied. Possible values are: <br />1. **N** - Numeric type <br />2. **C** - Currency type <br />3. **P** - Percentage type <br />Example: `formatNumber`(1234344, {format:'N4'}) <br /> > If no format is specified, numeric format is used by default. |
+| `minimumFractionDigits`     | Indicates the minimum number of fraction digits. Possible values are 0 to 20.                                         |
+| `maximumFractionDigits`     | Indicates the maximum number of fraction digits. Possible values are 0 to 20.                                         |
+| `minimumSignificantDigits`  | Indicates the minimum number of significant digits. Possible values are 1 to 21. <br /> > If `minimumSignificantDigits` is specified, `maximumSignificantDigits` must also be provided. |
+| `maximumSignificantDigits`  | Indicates the maximum number of significant digits. Possible values are 1 to 21. <br /> > If `maximumSignificantDigits` is specified, `minimumSignificantDigits` must also be provided. |
+| `useGrouping`               | Indicates whether to enable the group separator. By default, grouping value is true.                                  |
+| `minimumIntegerDigits`      | Indicates the minimum number of integer digits to be placed in the value. Possible values are 1 to 21.                |
+| `currency`                  | Indicates the currency code to be considered for currency formatting.                                                 |
 
-> Note: The `minimumIntegerDigits`, `minimumFractionDigits` and `maximumFractionDigits` are
-categorized as group one, `minimumSignificantDigits` and `maximumSignificantDigits` are categorized as group two.
-If group two properties are defined, then the  group one property will be ignored.
+> The `minimumIntegerDigits`, `minimumFractionDigits`, and `maximumFractionDigits` properties are categorized as group one. The `minimumSignificantDigits` and `maximumSignificantDigits` properties are categorized as group two. If group two properties are defined, group one properties will be ignored.
 
-### Custom number formatting and parsing
+### Custom Number Formatting and Parsing
 
- Custom number formatting and parsing can also be achieved by directly specifying the pattern in the **format** property of `NumberFormatOptions`. One or more of the custom format specifiers listed in the table below can be used to create custom number format.
+Custom number formatting and parsing can be achieved by directly specifying a pattern in the `format` property of `NumberFormatOptions`. One or more of the custom format specifiers listed in the following table can be used to create custom number formats:
 
-| Specifier | Description | Input     | Format Output |
-| ------- |--------------- | ---------------- | --------------- |
-| 0 | Replaces the zero with the corresponding digit if one is present. Otherwise, zero appears in the result string. | `instance.formatNumber`(123,{format: '0000' })     | '0123' |
-| # | Replaces the "#" symbol with the corresponding digit if one is present; otherwise, no digit appears in the result string.| `instance.formatNumber`(1234,{format: '####' })     | ‘1234’ |
-| . | Denotes the number of digits allowed after the decimal points  if it’s not specified then no need to specify decimal point values. | `instance.formatNumber`(546321,{format: '###0.##0#' })     | ‘546321.000’ |
-| % | Percent specifier denotes the percentage type format. | `instance.formatNumber`(1,{format: '0000 %' })     | ‘0100 %’ |
-| $ | Denotes the currency type format based on the global currency code specified. | `instance.formatNumber`(13,{format: '$ ###.00' });     | ‘$ 13.00’ |
-| ; | Denotes separate formats for positive, negative and zero values. | `instance.formatNumber`(-120,{format: '###.##;(###.00);-0'});     | ‘(120.00)’    |
-| 'String' (single Quotes) | Denotes the characters enclosed within single Quote(') to be replaced in the resultant string. | `instance.formatNumber`(-123.44,{format: "####.## '@'"})     | ‘123.44 @’    |
+| Specifier | Description                                                                 | Input                                              | Format Output     |
+| --------- | --------------------------------------------------------------------------- | -------------------------------------------------- | ----------------- |
+| 0         | Replaces the zero with the corresponding digit if present. Otherwise, zero appears in the result string. | `intl.formatNumber`(123, {format: '0000'})         | '0123'            |
+| #         | Replaces the "#" symbol with the corresponding digit if present. Otherwise, no digit appears in the result string. | `intl.formatNumber`(1234, {format: '####'})        | '1234'            |
+| .         | Specifies the number of digits allowed after the decimal point. If not specified, no decimal point values are included. | `intl.formatNumber`(546321, {format: '###0.##0#'}) | '546321.000'      |
+| %         | Represents the percentage type format.                                      | `intl.formatNumber`(1, {format: '0000 %'})         | '0100 %'          |
+| $         | Represents the currency type format based on the global currency code specified. | `intl.formatNumber`(13, {format: '$ ###.00'})      | '$ 13.00'         |
+| ;         | Specifies separate formats for positive, negative, and zero values.         | `intl.formatNumber`(-120, {format: '###.##;(###.00);-0'}) | '(120.00)'        |
+| 'String' (single quotes) | Specifies characters enclosed within single quotes (') to be replaced in the resultant string. | `intl.formatNumber`(-123.44, {format: "####.## '@'"}) | '123.44 @'        |
 
-> Note: If a custom format pattern is specified, other [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberFormatOptions/) properties will not be considered.
+> If a custom format pattern is specified, other [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberFormatOptions/) properties will not be considered.
 
-### Number parsing
+### Number Parsing
 
-#### `getNumberParser`
+#### getNumberParser
 
-The [`getNumberParser`](https://ej2.syncfusion.com/documentation/api/base/internationalization/#getnumberparser) method, which will return a function that parses a given string based on the [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberFormatOptions/) specified.
+The [`getNumberParser`](https://ej2.syncfusion.com/documentation/api/base/internationalization/#getnumberparser) method returns a function that parses a given string based on the [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberFormatOptions/) specified.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -135,9 +132,9 @@ The [`getNumberParser`](https://ej2.syncfusion.com/documentation/api/base/intern
         
 {% previewsample "page.domainurl/code-snippet/common/default-cs1" %}
 
-#### `parseNumber`
+#### parseNumber
 
-The [`parseNumber`](https://ej2.syncfusion.com/documentation/api/base/internationalization/#parsenumber) method, which takes two arguments, the string value and [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberFormatOptions/) and returns the numeric value.
+The [`parseNumber`](https://ej2.syncfusion.com/documentation/api/base/internationalization/#parsenumber) method takes two arguments—a string value and [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberFormatOptions/)—and returns the parsed numeric value.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -153,11 +150,11 @@ The [`parseNumber`](https://ej2.syncfusion.com/documentation/api/base/internatio
         
 {% previewsample "page.domainurl/code-snippet/common/default-cs2" %}
 
-### Number formatting
+### Number Formatting
 
-#### `getNumberFormat`
+#### getNumberFormat
 
-The [`getNumberFormat`](https://ej2.syncfusion.com/documentation/api/base/internationalization/#getnumberformat) method will return a function that formats a given number based on the [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberformatoptions/) specified.
+The [`getNumberFormat`](https://ej2.syncfusion.com/documentation/api/base/internationalization/#getnumberformat) method returns a function that formats a given number based on the [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberformatoptions) specified.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -173,9 +170,9 @@ The [`getNumberFormat`](https://ej2.syncfusion.com/documentation/api/base/intern
         
 {% previewsample "page.domainurl/code-snippet/common/default-cs3" %}
 
-#### `formatNumber`
+#### formatNumber
 
- The [`formatNumber`](https://ej2.syncfusion.com/documentation/api/base/internationalization/)  method, which takes two arguments, a numeric value and [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberformatoptions/) and returns the formatted string.
+The [`formatNumber`](https://ej2.syncfusion.com/documentation/api/base/internationalization/) method takes two arguments—a numeric value and [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberformatoptions)—and returns the formatted string.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -193,124 +190,118 @@ The [`getNumberFormat`](https://ej2.syncfusion.com/documentation/api/base/intern
 
 ## Manipulating DateTime
 
-### Supported format string
+### Supported Format String
 
- Date formatting and parsing operations are performed based on the [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateFormatOptions/). Specify any of the following properties:
+Date formatting and parsing operations are performed based on the [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateFormatOptions/). Specify any of the following properties to control date formatting behavior:
 
-| Options | Descriptions |
-| --- | --- | --- |
-| Type | It specifies the type of format to be used supported types .<br/>1. **`date`** <br/> 2. **`dateTime`** <br/> 3. **`time`** <br/> Based on the type specified the supported skeletons are given below <br/> 1. short <br/> 2. medium, <br/>3. long <br/>4. full  <br/> **Ex:** `formatDate`(new Date(), {type: &#39;date&#39;, skeleton:medium})<br/> > Note: If not type specified then **date** type is set by default   |
-| skeleton | Specifies the format in which the `dateTime` format will process |
+| Options   | Description                                                                                                           |
+| --------- | --------------------------------------------------------------------------------------------------------------------- |
+| Type      | Specifies the type of format to be used. Supported types: <br />1. **date** <br />2. **dateTime** <br />3. **time** <br />Based on the type specified, the following skeletons are supported: <br />1. short <br />2. medium <br />3. long <br />4. full <br />**Example:** `formatDate`(new Date(), {type: 'date', skeleton: 'medium'}) <br /> > If no type is specified, **date** type is set by default. |
+| skeleton  | Specifies the format in which the `dateTime` format will be processed.                                                |
 
-<!-- markdownlint-disable MD036 -->
+**Date Type Skeletons**
 
-**Date type skeletons**
+| Skeleton | Option Input                        | Format Output              |
+| -------- | ----------------------------------- | -------------------------- |
+| short    | {type: 'date', skeleton: 'short'}   | 11/4/16                    |
+| medium   | {type: 'date', skeleton: 'medium'}  | Nov 4, 2016                |
+| long     | {type: 'date', skeleton: 'long'}    | November 4, 2016           |
+| full     | {type: 'date', skeleton: 'full'}    | Friday, November 4, 2016   |
 
-| skeleton | Option input |  Format Output |
-| --- | --- | --- |
-| short | {type: &#39;date&#39;, skeleton:&#39;short&#39;}) | 11/4/16 |
-| medium  | {type: &#39;date&#39;, skeleton:&#39;medium&#39;}) | Nov 4, 2016 |
-| long | {type: &#39;date&#39;, skeleton:&#39;long&#39;} | November 4, 2016 |
-| full | {type: &#39;date&#39;, skeleton:full}) | Friday, November 4, 2016   |
+**Time Type Skeletons**
 
-**Time type skeletons**
+| Skeleton | Option Input                        | Format Output              |
+| -------- | ----------------------------------- | -------------------------- |
+| short    | {type: 'time', skeleton: 'short'}   | 1:03 PM                    |
+| medium   | {type: 'time', skeleton: 'medium'}  | 1:03:04 PM                 |
+| long     | {type: 'time', skeleton: 'long'}    | 1:03:04 PM GMT+5           |
+| full     | {type: 'time', skeleton: 'full'}    | 1:03:04 PM GMT+05:30       |
 
-| skeleton | Option input | Format Output |
-| --- | --- | --- |
-| short | {type: &#39;time&#39;, skeleton:&#39;short&#39;}  | 1:03 PM  |
-| medium  | {type: &#39;time&#39;, skeleton:&#39;medium&#39;}  | 1:03:04 PM |
-| Long | {type: &#39;time&#39;, skeleton:&#39;long&#39;})  | 1:03:04 PM GMT+5 |
-| full | {type: &#39;time&#39;, skeleton:&#39;full&#39;})  | 1:03:04 PM GMT+05:30 |
+**DateTime Type Skeletons**
 
-**DateTime type skeletons**
+| Skeleton | Option Input                            | Format Output                              |
+| -------- | --------------------------------------- | ------------------------------------------ |
+| short    | {type: 'dateTime', skeleton: 'short'}   | 11/4/16, 1:03 PM                           |
+| medium   | {type: 'dateTime', skeleton: 'medium'}  | Nov 4, 2016, 1:03:04 PM                    |
+| long     | {type: 'dateTime', skeleton: 'long'}    | November 4, 2016 at 1:03:04 PM GMT+5       |
+| full     | {type: 'dateTime', skeleton: 'full'}    | Friday, November 4, 2016 at 1:03:04 PM GMT+05:30 |
 
-| Skeleton | Option input | Format Output |
-| --- | --- | --- |
-| short | {type: &#39;`dateTime`&#39;, skeleton:&#39;short&#39;}  | 11/4/16, 1:03 PM  |
-| medium  | {type: &#39;`dateTime`, skeleton:&#39;medium&#39;}  | Nov 4, 2016, 1:03:04 PM |
-| Long | {type: &#39;`dateTime`&#39;, skeleton:&#39;long&#39;})  | November 4, 2016 at 1:03:04 PM GMT+5 |
-| full | {type: &#39;`dateTime`&#39;, skeleton:&#39;full&#39;})  | Friday, November 4, 2016 at 1:03:04 PM GMT+05:30  |
+**Additional Skeletons**
 
-**Additional skeletons**
+Apart from the standard date type formats, additional formats are supported using the following skeletons:
 
-Apart from the standard date type formats, additional formats are supported by using the additional skeletons given in the below table.
+| Skeleton   | Option Input              | Format Output              |
+| ---------- | ------------------------- | -------------------------- |
+| d          | {skeleton: 'd'}           | 7                          |
+| E          | {skeleton: 'E'}           | Mon                        |
+| Ed         | {skeleton: 'Ed'}          | 7 Mon                      |
+| Ehm        | {skeleton: 'Ehm'}         | Mon 12:43 AM               |
+| EHm        | {skeleton: 'EHm'}         | Mon 12:43                  |
+| Ehms       | {skeleton: 'Ehms'}        | Mon 2:45:23 PM             |
+| EHms       | {skeleton: 'EHms'}        | Mon 12:45:45               |
+| Gy         | {skeleton: 'Gy'}          | 2016 AD                    |
+| GyMMM      | {skeleton: 'GyMMM'}       | Nov 2016 AD                |
+| GyMMMd     | {skeleton: 'GyMMMd'}      | Nov 7, 2016 AD             |
+| GyMMMEd    | {skeleton: 'GyMMMEd'}     | Mon, Nov 7, 2016 AD        |
+| h          | {skeleton: 'h'}           | 12 PM                      |
+| H          | {skeleton: 'H'}           | 12                         |
+| hm         | {skeleton: 'hm'}          | 12:59 PM                   |
+| Hm         | {skeleton: 'Hm'}          | 12:59                      |
+| hms        | {skeleton: 'hms'}         | 12:59:13 PM                |
+| Hms        | {skeleton: 'Hms'}         | 12:59:13                   |
+| M          | {skeleton: 'M'}           | 11                         |
+| Md         | {skeleton: 'Md'}          | 11/7                       |
+| MEd        | {skeleton: 'MEd'}         | Mon, 11/7                  |
+| MMM        | {skeleton: 'MMM'}         | Nov                        |
+| MMMEd      | {skeleton: 'MMMEd'}       | Mon, Nov 7                 |
+| MMMd       | {skeleton: 'MMMd'}        | Nov 7                      |
+| ms         | {skeleton: 'ms'}          | 59:13                      |
+| y          | {skeleton: 'y'}           | 2016                       |
+| yM         | {skeleton: 'yM'}          | 11/2016                    |
+| yMd        | {skeleton: 'yMd'}         | 11/7/2016                  |
+| yMEd       | {skeleton: 'yMEd'}        | Mon, 11/7/2016             |
+| yMMM       | {skeleton: 'yMMM'}        | Nov 2016                   |
+| yMMMd      | {skeleton: 'yMMMd'}       | Nov 7, 2016                |
+| yMMMEd     | {skeleton: 'yMMMEd'}      | Mon, Nov 7, 2016           |
 
-| skeleton | Option input |  Format Output |
-| --- | --- | --- |
-| d | {skeleton:&#39;d&#39;} | 7 |
-| E |  {skeleton:&#39;E&#39;} |   Mon |
-| Ed | {skeleton:&#39;Ed&#39;} | 7 Mon |
-| Ehm | {skeleton:&#39;Ehm&#39;}) | Mon 12:43 AM |
-| EHm | {skeleton:&#39;EHm;}); |   Mon 12:43 |
-| Ehms | {skeleton:&#39;Ehms&#39; } |   Mon 2:45:23 PM |
-|  EHms | {skeleton:&#39;EHms&#39;}) |   Mon 12:45:45   |
-| Gy | {skeleton:&#39;Gy&#39; } |  2016 AD |
-| GyMMM | {skeleton:&#39;GyMMM&#39;} | : Nov 2016 AD   |
-| GyMMMd | {skeleton:&#39;GyMMMd&#39;} |  Nov 7, 2016 AD |
-| GyMMMEd | {skeleton:&#39;GyMMMEd&#39;} | Mon, Nov 7, 2016 AD |
-| h | {skeleton:&#39;h&#39;} |   12 PM |
-| H | {skeleton:&#39;H&#39;} |   12   |
-| hm | {skeleton:&#39;hm&#39;} |   12:59 PM |
-| Hm | {skeleton:&#39;Hm&#39;}  |   12:59 |
-| hms | {skeleton:&#39;hms&#39;}  | 12:59:13 PM |
-| Hms | {skeleton:&#39;Hms&#39;}  | 12:59:13 |
-| M | {skeleton:&#39;M&#39;} | 11  |
-| Md | {skeleton:&#39;Md&#39;} |   11/7   |
-| MEd | {skeleton:&#39;hms&#39;}  | Mon, 11/7 |
-| MMM | {skeleton:&#39;MMM&#39;}  | Nov |
-| MMMEd | {skeleton:&#39;MMMEd&#39;}  | Mon, Nov 7   |
-| MMMd | {skeleton:&#39;MMMEd&#39;}  | Nov 7 |
-| ms | {skeleton:&#39;ms&#39;}  | 59:13 |
-| y | {skeleton:&#39;y&#39; } | 2016 |
-| yM | {skeleton:&#39;yM&#39; } |   11/2016   |
-| yMd | {skeleton:&#39;yMd&#39; } | 11/7/2016 |
-| yMEd | {skeleton:&#39;yMEd&#39; } |  Mon, 11/7/2016 |
-| yMMM | {skeleton:&#39;yMMM&#39; } | Nov 2016   |
-|  yMMMd | {skeleton:&#39;yMMMd&#39;}  |  Nov 7, 2016 |
-| yMMMEd | {skeleton:&#39;yMMMEd&#39;}  |  Mon, Nov 7, 2016 |
-| yMMM | {skeleton:&#39;yMMM&#39;} | Nov 2016   |
+> Culture-specific format skeletons are also supported.
 
-> Note: Culture specific format skeletons are also supported.
+### Custom Formats
 
-### Custom formats
+To use custom date and time formats, specify the date/time pattern directly in the `format` property. A custom format string must contain one or more of the following standard date/time symbols:
 
- To use the custom date and time formats, we need to specify the date/time pattern directly in the *format* property.
-A custom format string must contain one or more of the following standard date/time symbols.
+| Symbols | Description                                                                 |
+| ------- | --------------------------------------------------------------------------- |
+| G       | Represents the era in the date.                                             |
+| y       | Represents the year.                                                        |
+| M / L   | Represents the month.                                                       |
+| E / c   | Represents the day of the week.                                             |
+| d       | Represents the day of the month.                                            |
+| h / H   | Represents the hour. Use `h` for 12-hour format and `H` for 24-hour format. |
+| m       | Represents minutes.                                                         |
+| s       | Represents seconds.                                                         |
+| f       | Represents milliseconds.                                                    |
+| a       | Represents the AM/PM designator. It will only be displayed if the hour is specified in the `h` format. |
+| z       | Represents the time zone.                                                   |
+| ' (single quotes) | To display words in the formatted date, specify the words within single quotes. |
 
-| Symbols | Description |
-|--------- |------------- |
-| G | Denotes the era in the date |
-| y | Denotes the year.|
-| M / L | Denotes month.|
-| E / c | Denotes the day of week. |
-| d | Denotes the day of month. |
-| h / H | Denotes the hour. *h* for 12 hour and *H* for 24 hours format. |
-| m | Denotes minutes. |
-| s | Denotes seconds. |
-| f | Denotes milliseconds. |
-| a | Denotes the am/pm designator it will only be displayed if hour is specified in the h format. |
-| z | Denotes the time zone. |
-| ' (single quotes) | To display words in the formatted date you can specify the words with in the single quotes |
+**Custom Format Example**
 
-**Custom format example**
-
-```ts
+```typescript
 import { Internationalization } from '@syncfusion/ej2-base';
 
 let intl: Internationalization = new Internationalization();
-let formattedString: string =  intl.formatDate(new Date('1/12/2014 10:20:33'), { format: '\'year:\'y' \'month:\' MM' });
-//Output: "year:2014 month:01"
+let formattedString: string = intl.formatDate(new Date('1/12/2014 10:20:33'), { format: '\'year:\' y \'month:\' MM' });
+// Output: "year: 2014 month: 01"
 ```
 
-> Note: If the format property is given as an option, other properties are not considered.
+> If the `format` property is provided as an option, other properties are not considered.
 
-<!-- markdownlint-enable MD036 -->
+### Date Parsing
 
-### Date parsing
+#### getDateParser
 
-#### `getDateParser`
-
-The [`getDateParser`](https://ej2.syncfusion.com/documentation/api/base/internationalization/#getdateParser/) method will return a function that parses a given string based on the [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateformatoptions/) specified.
+The [`getDateParser`](https://ej2.syncfusion.com/documentation/api/base/internationalization/#getdateparser) method returns a function that parses a given string based on the [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateformatoptions) specified.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -326,9 +317,9 @@ The [`getDateParser`](https://ej2.syncfusion.com/documentation/api/base/internat
         
 {% previewsample "page.domainurl/code-snippet/common/default-cs5" %}
 
-#### `parseDate`
+#### parseDate
 
-The date object is returned by the [`parseDate`](https://ej2.syncfusion.com/documentation/api/base/internationalization/#parsedate) method, which takes two arguments, a string value and [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateformatoptions/).
+The [`parseDate`](https://ej2.syncfusion.com/documentation/api/base/internationalization/#parsedate) method takes two arguments—a string value and [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateformatoptions)—and returns the parsed date object.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -344,11 +335,11 @@ The date object is returned by the [`parseDate`](https://ej2.syncfusion.com/docu
         
 {% previewsample "page.domainurl/code-snippet/common/default-cs6" %}
 
-### Date formatting
+### Date Formatting
 
-#### `getDateFormat`
+#### getDateFormat
 
-The [`getDateFormat`](https://ej2.syncfusion.com/documentation/api/base/internationalization/#getdateformat) method, which will return a function that formats a given date object based on the [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateFormatOptions/) specified.
+The [`getDateFormat`](https://ej2.syncfusion.com/documentation/api/base/internationalization/#getdateformat) method returns a function that formats a given date object based on the [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateFormatOptions/) specified.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -364,9 +355,9 @@ The [`getDateFormat`](https://ej2.syncfusion.com/documentation/api/base/internat
         
 {% previewsample "page.domainurl/code-snippet/common/default-cs7" %}
 
-#### `formatDate`
+#### formatDate
 
-The [`formatDate`](https://ej2.syncfusion.com/documentation/api/base/internationalization/) method, which takes two arguments, the date object and [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateFormatOptions/), returns the formatted string.
+The [`formatDate`](https://ej2.syncfusion.com/documentation/api/base/internationalization/) method takes two arguments—a date object and [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateFormatOptions/)—and returns the formatted string.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -381,3 +372,29 @@ The [`formatDate`](https://ej2.syncfusion.com/documentation/api/base/internation
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/common/default-cs8" %}
+
+## Error Handling
+
+When working with internationalization, invalid format strings or unsupported culture codes may cause errors. Ensure that:
+
+- Culture codes follow the standard locale identifier format (e.g., `en-US`, `fr-FR`, `ar-SA`)
+- Required CLDR data files are loaded before using the corresponding culture
+- Format strings use valid specifiers as documented in the format tables above
+- Date and number values passed to parsing methods are in expected formats
+
+If an error occurs, check the browser console for detailed error messages and verify that all necessary CLDR data files have been loaded correctly.
+
+## Performance Considerations
+
+Loading multiple CLDR data files can impact application performance. Consider the following best practices:
+
+- Load only the CLDR data files required for the cultures used in the application
+- Use the single file path reference when multiple data types are needed for a culture
+- Load CLDR data during application initialization rather than on-demand
+- Cache formatted values when the same data is displayed multiple times
+
+## See Also
+
+- [Localization](./localization)
+- [Right-to-Left Support](./right-to-left)
+- [Unicode CLDR Documentation](https://cldr.unicode.org/)

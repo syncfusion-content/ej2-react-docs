@@ -1,38 +1,37 @@
 ---
 layout: post
-title: Installation using linux installer in React Installation component | Syncfusion
-description: Learn here all about Installation using linux installer in Syncfusion React Installation component of Syncfusion Essential JS 2 and more.
-control: Installation using linux installer 
+title: Installing Syncfusion React (JavaScript) Linux Installer | Syncfusion
+description: Step-by-step guide to installing the Syncfusion React (JavaScript) Linux installer, extracting the contents, and registering the license key.
+control: Installation using Linux installer
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Installing Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript Linux installer
+# Installing Syncfusion<sup style="font-size:70%">&reg;</sup> React (JavaScript - EJ2) Linux Installer
 
 ## Step-by-Step Installation
 
-The steps below show how to install JavaScript Linux installer.
+Follow the steps below to install the JavaScript Linux installer:
 
-1. Extract the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript Linux installer(.zip) file. The files are extracted in your machine.
+1. Extract the downloaded Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript Linux installer (`.zip`) file to your desired directory.
 
-   ![Welcome wizard](images/Linux_Installer1.png)
+   ![Extracting the installer](images/Linux_Installer1.png)
+
+2. Once extracted, the directory will typically contain the following folders:
+
+   * **Samples**: Contains the local demos and source code for the components.
+   * **Packages** (or similar): May contain local package feeds, if applicable.
+
+   ![Installer contents](images/Linux_Installer2.png)   
    
+   > An unlock key is not required to install or extract the Linux installer.
 
-2. The Linux zip file contains the following folders.
+3. Launch the demo sources or use the included packages locally in a development environment.
 
-   ![License Agreement](images/Linux_Installer2.png)   
-   
-   N> The Unlock key is not required to install the Linux installer.
+## License Key Registration in Samples
 
-
-4. You can launch the demo source and use the NuGet packages included in the Linux installer.
-
-
-
-## License key registration in samples
-
-After the installation, the license key is required to register the demo source that is included in the Linux installer. To learn about the steps for license registration for the JavaScript - EJ2 linux installer, please refer to this.
+A license key is required to register and run the demo sources included with the Linux installer. For instructions on registering the license key, refer to the following topics:
 
 * [Register Syncfusion<sup style="font-size:70%">&reg;</sup> License key in the project](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration#register-syncfusion-license-key-in-the-project)
 * [Register the license key using the npx command](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration#register-syncfusion-license-key-using-the-npx-command)

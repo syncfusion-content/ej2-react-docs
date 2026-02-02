@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animation in React Common control | Syncfusion
-description: Learn here all about Animation in Syncfusion React Common control of Syncfusion Essential JS 2 and more.
+description: Learn how to use the Animation utility in Syncfusion React components to create element transition effects, control timing, and configure global animation settings.
 control: common
 platform: ej2-react
 documentation: ug
@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Animation in React
 
-The **Animation** utility is designed to produce animation effects on HTML elements by rendering sequences of frames, enhancing the overall user experience.
+The Animation utility creates smooth visual transitions for HTML elements by applying CSS-based animation effects over time, enhancing the user experience and interface responsiveness.
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> [Animation](https://ej2.syncfusion.com/documentation/api/base/animation/) library supports animating HTML elements through the [animate](https://ej2.syncfusion.com/documentation/api/base/animation/#animate) method. This method applies the `e-animate` and `e-animation-id` attributes, along with relevant CSS styles, to the HTML element during the animation and removes them upon completion of the effect.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [Animation](https://ej2.syncfusion.com/documentation/api/base/animation/) library enables animating HTML elements through the [animate](https://ej2.syncfusion.com/documentation/api/base/animation/#animate) method. This method applies the `e-animate` and `e-animation-id` attributes, along with the necessary CSS styles, to the target element during the animation and automatically removes them when the animation completes.
 
 ## Animation effects
 
-Animation effects refer to the visual transitions applied to HTML elements over a set duration, contributing to dynamic and engaging interfaces. The [Animation](https://ej2.syncfusion.com/documentation/api/base/animation/) library offers a range of animation [effects](https://ej2.syncfusion.com/documentation/api/base/effect/#effect), which can be specified using the [name](https://ej2.syncfusion.com/documentation/api/base/animation/#name) property.
+Animation effects are visual transitions applied to HTML elements over a specified duration. The [Animation](https://ej2.syncfusion.com/documentation/api/base/animation/) library provides several built-in animation [effects](https://ej2.syncfusion.com/documentation/api/base/effect/#effect), selectable via the [name](https://ej2.syncfusion.com/documentation/api/base/animation/#name) property. Available effects include `FadeIn`, `FadeOut`, `FadeZoomIn`, `FadeZoomOut`, `FlipLeftDownIn`, `FlipLeftDownOut`, `FlipLeftUpIn`, `FlipLeftUpOut`, `FlipRightDownIn`, `FlipRightDownOut`, `FlipRightUpIn`, `FlipRightUpOut`, `FlipXDownIn`, `FlipXDownOut`, `FlipXUpIn`, `FlipXUpOut`, `FlipYLeftIn`, `FlipYLeftOut`, `FlipYRightIn`, `FlipYRightOut`, `SlideBottomIn`, `SlideBottomOut`, `SlideDownIn`, `SlideDownOut`, `SlideLeftIn`, `SlideLeftOut`, `SlideRightIn`, `SlideRightOut`, `SlideTopIn`, `SlideTopOut`, `SlideUpIn`, `SlideUpOut`, `ZoomIn`, `ZoomOut`, and `None`.
 
-The following code snippets demonstrate use of the `FadeOut` and `ZoomOut` animation effects:
+The following code snippets demonstrate the `FadeOut` and `ZoomOut` animation effects:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -36,13 +36,9 @@ The following code snippets demonstrate use of the `FadeOut` and `ZoomOut` anima
 
 ## Animation duration
 
-Animation [duration](https://ej2.syncfusion.com/documentation/api/base/animation/#duration) defines the total time, in milliseconds (ms), that an animation effect takes to complete. This property determines the pacing of visual transitions and allows for adjustment to achieve desired animation speeds.
+Animation [duration](https://ej2.syncfusion.com/documentation/api/base/animation/#duration) defines the total time, in milliseconds (ms), that an animation effect takes to complete from start to finish. Adjusting the duration controls the animation speed: shorter durations produce faster animations, while longer durations produce slower, more gradual animations. The default duration is `400` milliseconds.
 
-For example, if an animation has a duration of 2 seconds, it will take 2 seconds to complete from start to finish. The duration of an animation affects the overall pace of the animation and can be adjusted to match the desired speed and style of the animation.
-
-The value of the animation duration can be adjusted to change the speed of the animation, with shorter durations resulting in faster animations and longer durations resulting in slower animations.
-
-Here is an example code snippet using the animation effects with a duration of `5000` milliseconds:
+The example below demonstrates an animation duration of `5000` milliseconds:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -60,11 +56,9 @@ Here is an example code snippet using the animation effects with a duration of `
 
 ## Animation delay
 
-The animation [delay](https://ej2.syncfusion.com/documentation/api/base/animation/#delay) property specifies the length of time, in milliseconds (ms), to wait before an animation begins. This setting enables designers to coordinate complex animation sequences or trigger animations after specific user interactions.
+The animation [delay](https://ej2.syncfusion.com/documentation/api/base/animation/#delay) property specifies the time, in milliseconds (ms), to wait before an animation begins execution. Delay is particularly useful for coordinating sequential animations, creating staggered effects, or triggering animations after specific user interactions. The default delay is `0` milliseconds.
 
-For example, if an animation has a delay of 2 seconds, it will wait for 2 seconds before starting. This can be useful in creating more complex animations, where multiple elements are animated in sequence, or in creating animations that start only after a user interaction has taken place.
-
-Here is an example code snippet using the animation effects with a delay of `2000` milliseconds:
+The example below demonstrates an animation delay of `2000` milliseconds:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -82,13 +76,13 @@ Here is an example code snippet using the animation effects with a delay of `200
 
 ## Enable or disable animation globally
 
-Animations can be enabled or disabled globally for all React components using the `setGlobalAnimation` method with any of the following modes:
+Animations can be enabled or disabled globally for all Syncfusion React components using the `setGlobalAnimation` method with one of the following modes:
 
-* `GlobalAnimationMode.Enable` — Enables animations for all components, regardless of individual settings.
-* `GlobalAnimationMode.Disable` — Disables animations for all components, regardless of individual settings.
-* `GlobalAnimationMode.Default` — Uses each component’s own animation configuration.
+* `GlobalAnimationMode.Enable` — Enables animations for all components, overriding individual component animation settings.
+* `GlobalAnimationMode.Disable` — Disables animations for all components, overriding individual component animation settings.
+* `GlobalAnimationMode.Default` — Uses each component's own animation configuration without global override.
 
-Below, animation is globally disabled:
+The example below demonstrates globally disabling animations. This should be called in the application entry point (such as `index.js` or `App.js`) before components are initialized:
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.js" %}
@@ -100,4 +94,4 @@ setGlobalAnimation(GlobalAnimationMode.Disable);
 {% endhighlight %}
 {% endtabs %}
 
-> `setGlobalAnimation` method controls script-level animations only, and it is not applicable for direct CSS-level animations (animations defined from CSS classes or properties).
+> The `setGlobalAnimation` method controls JavaScript-based animations initiated through component APIs and the Animation library. It does not affect animations defined purely through CSS classes, stylesheets, or CSS property-based animations applied directly to elements.

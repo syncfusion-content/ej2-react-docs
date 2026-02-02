@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Introduction to the Figma UI Kit | Syncfusion
-description: Check out and learn about the introduction to the Figma UI Kit of Syncfusion Essential JS 2 and more details.
+description: Check out and learn about the Figma UI Kit for Syncfusion React components and how to export design tokens for implementation.
 platform: ej2-react
 control: Figma 
 documentation: ug
@@ -10,94 +10,93 @@ domainurl: ##DomainURL##
 
 # Figma UI Kits for Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> offers [Figma UI kits](https://www.figma.com/@syncfusion) to facilitate efficient collaboration between designers and developers. The Figma UI kits are available in four themes: [Material 3](https://www.figma.com/community/file/1385969023252455137), [Fluent](https://www.figma.com/community/file/1385969120047188707), [Tailwind](https://www.figma.com/community/file/1385969065626384098), and [Bootstrap 5](https://www.figma.com/community/file/1385968977953858272). These kits reflect the themes used in Syncfusion<sup style="font-size:70%">&reg;</sup> React components.
+Syncfusion<sup style="font-size:70%">&reg;</sup> provides [Figma UI kits](https://www.figma.com/@syncfusion) to enable efficient collaboration between designers and developers. The Figma UI kits are available in four themes: [Material 3](https://www.figma.com/community/file/1454123774600129202/syncfusion-ui-kit-material-3-theme), [Fluent](https://www.figma.com/community/file/1385969120047188707/syncfusion-ui-kit-fluent-theme), [Tailwind](https://www.figma.com/community/file/1385969065626384098/syncfusion-ui-kit-tailwind-theme), and [Bootstrap 5](https://www.figma.com/community/file/1385968977953858272/syncfusion-ui-kit-bootstrap-5-theme). These kits align with the themes implemented in Syncfusion<sup style="font-size:70%">&reg;</sup> React components.
 
-Each kit provides reusable design components with multiple states and variants, along with detailed figures, measurements, and icons that accurately represent the Syncfusion<sup style="font-size:70%">&reg;</sup> React components.
+Each kit includes reusable design components featuring multiple states and variants, along with precise measurements, detailed figures, and icons that faithfully represent the corresponding Syncfusion<sup style="font-size:70%">&reg;</sup> React components.
 
 ![Material 3](./images/material3.png)
 
 ## Advantages of UI kits
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Figma UI kit offers these key benefits:
-- Comprehensive documentation of Syncfusion<sup style="font-size:70%">&reg;</sup> React components, including control lists with available states and variants for easy reference.
-- Design components leverage the [atomic design methodology](https://atomicdesign.bradfrost.com/chapter-2/), enabling straightforward and efficient customization.
-- Developers can align Syncfusion<sup style="font-size:70%">&reg;</sup> React components precisely with project requirements, ensuring design consistency.
-- Standardized components and themes in the UI kit maintain visual uniformity across projects.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Figma UI kits deliver these primary benefits:
+
+- Comprehensive documentation of Syncfusion<sup style="font-size:70%">&reg;</sup> React components, including a control list with available states and variants for quick reference.
+- Design components structured according to the [atomic design methodology](https://atomicdesign.bradfrost.com/chapter-2/), supporting simple and efficient customization.
+- Developers can match Syncfusion<sup style="font-size:70%">&reg;</sup> React components exactly to project specifications, ensuring consistent design implementation.
+- Standardized components and themes across the UI kit promote visual uniformity throughout projects.
 
 ## Downloading the UI kits
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Figma UI kits are provided through the [Figma community](https://www.figma.com/@syncfusion). Theme-specific Figma UI kits can be accessed from these links:
+Syncfusion<sup style="font-size:70%">&reg;</sup> Figma UI kits are accessible through the [Figma community](https://www.figma.com/@syncfusion). Theme-specific kits include:
 
-- [Material 3](https://www.figma.com/community/file/1385969023252455137)
-- [Fluent](https://www.figma.com/community/file/1385969120047188707)
-- [Tailwind](https://www.figma.com/community/file/1385969065626384098)
-- [Bootstrap 5](https://www.figma.com/community/file/1385968977953858272)
+- [Material 3](https://www.figma.com/community/file/1454123774600129202/syncfusion-ui-kit-material-3-theme)  
+- [Fluent](https://www.figma.com/community/file/1385969120047188707/syncfusion-ui-kit-fluent-theme)  
+- [Tailwind](https://www.figma.com/community/file/1385969065626384098/syncfusion-ui-kit-tailwind-theme)  
+- [Bootstrap 5](https://www.figma.com/community/file/1385968977953858272/syncfusion-ui-kit-bootstrap-5-theme)
 
 ## Structure of the UI kits
 
-Syncfusion’s Figma UI kit features a well-organized layout to enhance navigation and exploration of components. The structure includes:
+Syncfusion’s Figma UI kit is structured for improved navigation and ease of use:
 
-- **Thumbnail**: This page serves as the cover page for the UI kit.
-- **Index**: Here, users can find a detailed list of all control names, making it simple to identify and locate specific components within the UI kit.
-- **Icons**: Contains a collection of all icons used in the design components.
-- **UI Components**: At the core of the UI kit, this section features a wide range of essential UI components. Each control is meticulously designed with detailed figures, measurements, and icons, showcasing various states and variants.
+- **Thumbnail**: Cover page for the UI kit.  
+- **Index**: Comprehensive list of control names for fast navigation.  
+- **Icons**: Dedicated collection of icons used across the designs.  
+- **UI Components**: Main section displaying controls with figures, measurements, variants, and states.
 
 ![Layout](./images/layout.png)
 
 ## Customizing the UI kits
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Figma UI kits support effortless customization to align with specific branding or design needs. Leveraging the [atomic design methodology](https://atomicdesign.bradfrost.com/chapter-2/), customizations are efficiently reflected across relevant components and their variants.
+The Figma UI kits allow customization to align with specific branding or design requirements. By leveraging the [atomic design methodology](https://atomicdesign.bradfrost.com/chapter-2/), modifications automatically apply across associated components and variants.
 
-To customize the primary button color in the Material 3 theme layout:
+To customize the primary button color in the Material 3 theme:
 
-1. Visit the [UI kits](#downloading-the-ui-kits) and select your preferred theme, such as Material 3.
+1. Visit the [UI kits](#downloading-the-ui-kits) section and select your preferred theme, such as Material 3.
 2. Open the theme in the Figma web application by clicking **Open in Figma**.
-3. For the desktop application, click **Import** in the top-right corner. Choose the downloaded Syncfusion<sup style="font-size:70%">&reg;</sup> `.fig` file and click **Open**.
-4. Locate the button you want to customize within your layout.
-5. On the right panel in Figma, locate the color variable options. For example, a primary button color may be labeled as `$primary-bg-color` and is derived from the primary color variable.
-6. To update the primary button color, click outside the button to display the **Local variables** option in the Figma interface. This panel contains design tokens for the color variables. Click **Local variables**.
-7. In the popup, browse the design token list and select a new primary color using the provided color palette.
-8. After choosing the new color (e.g., pink), the primary button style updates immediately, reflecting your change in the design.
+3. For the desktop application, click **Import** in the top-right corner, select the downloaded Syncfusion<sup style="font-size:70%">&reg;</sup> `.fig` file, and click **Open**.
+4. Locate the button you wish to customize in your layout.
+5. In the right panel of Figma, find the color variable options (for example, a primary button color might be labeled `$primary-bg-color` and linked to the primary color variable).
+6. Deselect the button to reveal the **Local variables** section in the Figma interface. This panel displays the design tokens for color variables. Click **Local variables**.
+7. In the variables popup, locate the primary color token in the list and use the color picker or palette to select a new value (for example, pink).
+8. The primary button style updates instantly across all related instances and variants in the design.
 
 ![Customization](./images/customize.png)
 
-In addition to updating button color, further customization options are available, including font, spacing, shadows, and more. Adjust these settings to develop a design that suits your specific requirements.
+Beyond button colors, additional customizations are possible for fonts, spacing, shadows, and other properties. Adjust these design tokens as needed to create a tailored design system.
 
 ## Downloading the customized styles
 
-Download your customized styles as tokens and CSS variables using the `Syncfusion<sup style="font-size:70%">&reg;</sup> Design Tokens` plugin. This plugin enables seamless conversion of Figma design variables into Syncfusion<sup style="font-size:70%">&reg;</sup> tokens for direct use in your applications, ensuring a consistent transition from design to implementation.
+Use the **Syncfusion Design Tokens** Figma plugin [](https://www.figma.com/community/plugin/1456992070400223733/syncfusion-design-tokens) to export customized styles as design tokens and CSS variables. This converts Figma variables into Syncfusion-compatible formats for seamless application integration.
 
 ### Exporting design tokens
 
-To download customized styles from the Figma UI Kit:
+To export customized styles from the Figma UI Kit:
 
-- Open a [Syncfusion<sup style="font-size:70%">&reg;</sup> Figma UI Kit](https://www.figma.com/@syncfusion).
-- Navigate to the `Plugins & widgets` section in Figma and search for `Syncfusion<sup style="font-size:70%">&reg;</sup> Design Tokens`.
-- Launch the plugin. When the popup appears, click the `Export` button.
-- This action generates a zip file containing the design tokens.
-- Choose a directory to save the exported files.
-- Extract the downloaded zip file to access its contents.
+- Open a Syncfusion Figma UI Kit: https://www.figma.com/@syncfusion  
+- In Figma, navigate to **Plugins & widgets** and search for **Syncfusion Design Tokens**.  
+- Run the plugin and click **Export** to create a ZIP file containing the design tokens.  
+- Save and extract the ZIP file to access the exported contents.
 
 ![export-design-tokens](./images/syncfusion-design-tokens.png)
 
 ### Utilizing design tokens
 
-The exported zip file includes the following files:
+The exported ZIP file typically contains:
 
-  - `css-variables.css`: The css-variables.css file contains CSS variables for both light and dark themes, directly derived from your Figma designs. You can easily import this file into your application alongside the component styles to reflect your custom designs. For more detailed usage instructions, consult the [CSS variables](./css-variables) documentation.
-  - `<theme-name>-tokens.json`: This file (e.g., material3-tokens.json) contains style variables and values in a JSON format compatible with [Theme Studio](./theme-studio). This file, prefixed with the corresponding theme name, can be [imported](./theme-studio#import-previously-changed-settings-into-the-theme-studio) into [Theme Studio](./theme-studio) for further customization. After processing in [Theme Studio](./theme-studio), you can [download](./theme-studio#download-the-customized-theme) the updated styles file and integrate it into your application, bringing your custom themes to life.
+  - `css-variables.css`: This file provides CSS variables for both light and dark themes, generated directly from your customized Figma design. Import it into your application alongside the component styles to apply your custom designs. For detailed integration steps, refer to the [CSS variables](./css-variables) documentation.
+  - `<theme-name>-tokens.json`: This file (e.g., material3-tokens.json) contains style variables and values in JSON format. It is compatible with [Theme Studio](./theme-studio) and can be [imported](./theme-studio#import-previously-changed-settings-into-the-theme-studio) (as a supported tokens file or equivalent settings format) into [Theme Studio](./theme-studio) for additional refinements. After further adjustments in [Theme Studio](./theme-studio), [download](./theme-studio#download-the-customized-theme) the updated theme package and integrate it into your application to realize your custom theme.
 
-This streamlined process ensures that your unique design vision, crafted in Figma, is accurately translated into your final application, maintaining consistency between design and implementation.
+This process maintains strong fidelity from Figma designs through to the implemented application.
 
 ## Upgrading the UI kits
 
-To upgrade your UI kits, download the latest version from the provided links. Follow these guidelines for a seamless upgrade process:
+To upgrade a UI kit, download the latest version from the Figma community. Recommended practices include:
 
-- Keep track of updates or new versions of UI kits from Syncfusion.
-- Before upgrading, back up your ongoing projects to prevent data loss or compatibility issues.
-- Share your experience with Syncfusion<sup style="font-size:70%">&reg;</sup> regarding the upgraded UI kits, including any issues encountered or suggestions for improvement.
+- Monitor updates or new releases of UI kits published by Syncfusion.
+- Back up current projects before upgrading to avoid potential data loss or compatibility concerns.
+- Share feedback with Syncfusion<sup style="font-size:70%">&reg;</sup> about the upgraded UI kits, including any challenges faced or suggested improvements.
 
 ## See also
 
-* [Available themes](https://ej2.syncfusion.com/documentation/appearance/theme)
-* [Customizing themes](https://ej2.syncfusion.com/documentation/appearance/theme-studio#customizing-theme-color-from-theme-studio)
+* [Available themes](https://ej2.syncfusion.com/documentation/appearance/theme)  
+* [Customizing themes with Theme Studio](https://ej2.syncfusion.com/documentation/appearance/theme-studio#customizing-theme-color-from-theme-studio)

@@ -1,5 +1,3 @@
-{% raw %}
-
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
@@ -35,6 +33,3 @@ function App() {
     </TreeGridComponent>
 };
 export default App;
-
-
-{% endraw %}

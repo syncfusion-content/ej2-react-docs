@@ -1,27 +1,27 @@
 ---
 layout: post
-title: License key registration in React Licensing component | Syncfusion
-description: Learn here all about License key registration in Syncfusion React Licensing component of Syncfusion Essential JS 2 and more.
+title: How to Register Syncfusion License Key in React | Syncfusion
+description: Learn how to register Syncfusion license keys in React applications using direct registration or the npx command.
 control: License key registration 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Register Syncfusion<sup style="font-size:70%">&reg;</sup> License key in ReactJS application
+# Register Syncfusion<sup style="font-size:70%">&reg;</sup> License Key in ReactJS Application
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> license key should be registered, if your project using Syncfusion<sup style="font-size:70%">&reg;</sup> ReactJS packages reference. The generated license key is a string that needs to be registered after any [Syncfusion<sup style="font-size:70%">&reg;</sup> ReactJS reference](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start/#preparing-the-application).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> license key must be registered if your project uses Syncfusion<sup style="font-size:70%">&reg;</sup> ReactJS packages. The generated license key is a string that needs to be registered after any [Syncfusion<sup style="font-size:70%">&reg;</sup> ReactJS reference](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start/#preparing-the-application).
 
->Note: Syncfusion<sup style="font-size:70%">&reg;</sup> license validation is done offline during application execution and does not require internet access. Apps registered with a Syncfusion<sup style="font-size:70%">&reg;</sup> license key can be deployed on any system that does not have an internet connection.
+> Syncfusion<sup style="font-size:70%">&reg;</sup> license validation is performed offline during application execution and does not require internet access. Apps registered with a Syncfusion<sup style="font-size:70%">&reg;</sup> license key can be deployed on any system without an internet connection.
 
-Generate the [Syncfusion<sup style="font-size:70%">&reg;</sup> license key](https://ej2.syncfusion.com/react/documentation/licensing/license-key-generation/) and register it in one of the following ways,
+Generate the [Syncfusion<sup style="font-size:70%">&reg;</sup> license key](https://ej2.syncfusion.com/react/documentation/licensing/license-key-generation/) and register it using one of the following methods:
 
 * [Register the license key in the project](#register-syncfusion-license-key-in-the-project)
 * [Register the license key using the npx command](#register-syncfusion-license-key-using-the-npx-command)
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> license key in the project
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> License Key in the Project
 
-Register the license key in the `index.js` file of the React project.
+Register the license key in the `index.js` file of the React project:
 
 ```ts
 import React from 'react';
@@ -42,52 +42,52 @@ ReactDOM.render(
 );
 ```
 
->Note: Only from 2022 Vol 1 v20.1.0.47, license key registration required for Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 products.
+> License key registration is required only from 2022 Vol 1 (v20.1.0.47) onwards for Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 products.
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> license key using the npx command
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> License Key Using the npx Command
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key through npx command in one of the following ways,
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key through the npx command using one of the following methods:
 
 * [Register the license key with the license file](#register-the-license-key-with-the-license-file)
 * [Register the license key with the environment variable](#register-the-license-key-with-the-environment-variable)
 
->If both the license text file and the environment variable are used for license registration, priority is set to `syncfusion-license.txt` file. If you want to use the environment variable for license registration, then remove the license text file from the application.
+> If both the license text file and the environment variable are used for license registration, priority is given to the `syncfusion-license.txt` file. To use the environment variable for license registration, remove the license text file from the application.
 
-### Register the license key with the license file
+### Register the License Key with the License File
 
-The following steps show how to register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key with the license text file.
+The following steps show how to register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key using a license text file:
 
-* Create the `syncfusion-license.txt` file in the application root directory and paste the license key.
+* Create a `syncfusion-license.txt` file in the application root directory and paste the license key.
 
-* Open the command prompt in the application root directory and activate the license key by using the below command,
+* Open the command prompt in the application root directory and activate the license key using the following command:
 
-      ```
+      ```bash
        npx syncfusion-license activate
       ```
 
-* Once the Syncfusion<sup style="font-size:70%">&reg;</sup> license key is activated, the following console message will appear.
+* Once the Syncfusion<sup style="font-size:70%">&reg;</sup> license key is activated, the following console message will appear:
 
   **License message:** <br /> (INFO) Syncfusion<sup style="font-size:70%">&reg;</sup> License imported successfully.
 
-* Remove the `.cache` folder from node modules in the application.
+* Remove the `.cache` folder from `node_modules` in the application.
 
-* Now run the application. If you are facing a license validation error, refer to this [link](https://ej2.syncfusion.com/react/documentation/licensing/licensing-errors/) to resolve it. Also, find the most frequent license registration questions from this [`link`](https://ej2.syncfusion.com/react/documentation/licensing/licensing-troubleshoot/).
+* Now run the application. If you encounter a license validation error, refer to this [link](https://ej2.syncfusion.com/react/documentation/licensing/licensing-errors/) to resolve it. Also, find the most frequently asked license registration questions at this [link](https://ej2.syncfusion.com/react/documentation/licensing/licensing-troubleshoot/).
 
->If you don't want to use the license text file in the application, refer to this [link](#register-the-license-key-with-the-environment-variable) to use an environment variable and register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key. Also, check out some common licensing FAQs while registering the license key using the npx command from this [link](https://ej2.syncfusion.com/react/documentation/licensing/licensing-troubleshoot#Reactivating-license-once-after-updating-the-package-version-while-using-npx)
+> If you don't want to use the license text file in the application, refer to [this section](#register-the-license-key-with-the-environment-variable) to use an environment variable and register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key. Also, check out common licensing FAQs while registering the license key using the npx command from this [link](https://ej2.syncfusion.com/react/documentation/licensing/licensing-troubleshoot#reactivating-license-once-after-updating-the-package-version-while-using-npx).
 
-### Register the license key with the environment variable
+### Register the License Key with the Environment Variable
 
-You can set the environment variable as `SYNCFUSION_LICENSE` in the system and paste the license key as a value. It can be used in all applications on your machine.
+You can set the environment variable `SYNCFUSION_LICENSE` in your system and paste the license key as its value. This can be used in all applications on your machine.
 
-The following steps show how to set environment variable in different operating systems and register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key.
+The following steps show how to set the environment variable in different operating systems and register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key:
 
-* Set the environment variable in different operating systems like below,
+* Set the environment variable in different operating systems as shown below:
 
 #### Windows
 
-* Open the command prompt and use [setx](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/setx) command to add the new environment variable.
+* Open the command prompt and use the [setx](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/setx) command to add the new environment variable:
 
-    ```
+    ```bash
      setx SYNCFUSION_LICENSE "license key"
     ```
 
@@ -95,59 +95,59 @@ The following steps show how to set environment variable in different operating 
 
 * Open the terminal and use the `env` command to view the variables list.
 
-* You can set the environment variable by using below command,
+* Set the environment variable using the following command:
 
-    ```
+    ```bash
     echo 'export SYNCFUSION_LICENSE="license key"' >> ~/.bash_profile
     ```
 
-* If you want to modify the environment variable in the bash profile. Use the below command,
+* To modify the environment variable in the bash profile, use the following command:
 
-     ```
+     ```bash
      nano .bash_profile
      ```
 
-* Once modified the variable. Press `ctrl+x` to exit then `Y` and `Enter` button to save the changes.
+* Once modified, press `Ctrl+X` to exit, then press `Y` and `Enter` to save the changes.
 
-* Close the terminal and open it again to see the environment variables changes using `env` command.
+* Close the terminal and reopen it to see the environment variable changes using the `env` command.
 
 #### Linux
 
 * Open the terminal and use the `env` command to view the variables list.
 
-* You can set or modify the [environment variable](https://help.ubuntu.com/community/EnvironmentVariables) by using below command,
+* Set or modify the [environment variable](https://help.ubuntu.com/community/EnvironmentVariables) using the following command:
 
-    ```
+    ```bash
     export SYNCFUSION_LICENSE='license key'
     ```
 
-* Once set the `SYNCFUSION_LICENSE` environment variable, restart the IDE or application terminal before using the license activation command.
+* Once the `SYNCFUSION_LICENSE` environment variable is set, restart the IDE or application terminal before using the license activation command.
 
-* Open the command prompt in the application root directory and activate the license key by using the below command,
+* Open the command prompt in the application root directory and activate the license key using the following command:
 
-     ```
+     ```bash
      npx syncfusion-license activate
      ```
 
-* Once the Syncfusion<sup style="font-size:70%">&reg;</sup> license key is activated, the following console message will appear.
+* Once the Syncfusion<sup style="font-size:70%">&reg;</sup> license key is activated, the following console message will appear:
 
   **License message:** <br /> (INFO) Syncfusion<sup style="font-size:70%">&reg;</sup> License imported successfully.
 
-* Remove the `.cache` folder from node modules in the application.
+* Remove the `.cache` folder from `node_modules` in the application.
 
-* Now run the application. If you are facing a license validation error, refer to this [link](https://ej2.syncfusion.com/react/documentation/licensing/licensing-errors/) to resolve it. Also, find the most frequent license registration questions from this [`link`](https://ej2.syncfusion.com/react/documentation/licensing/licensing-troubleshoot/).
+* Now run the application. If you encounter a license validation error, refer to this [link](https://ej2.syncfusion.com/react/documentation/licensing/licensing-errors/) to resolve it. Also, find the most frequently asked license registration questions at this [link](https://ej2.syncfusion.com/react/documentation/licensing/licensing-troubleshoot/).
 
-### Register Syncfusion<sup style="font-size:70%">&reg;</sup> license key in CI services
+### Register Syncfusion<sup style="font-size:70%">&reg;</sup> License Key in CI Services
 
 The following sections show how to use an environment variable in CI services.
 
-#### GitHub actions
+#### GitHub Actions
 
-* Create a [new Repository Secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) or an [Organization Secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-an-organization). Set the name of the secret to `SYNCFUSION_LICENSE` and use the license key as a value.
+* Create a [new Repository Secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) or an [Organization Secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-an-organization). Set the name of the secret to `SYNCFUSION_LICENSE` and use the license key as the value.
 
-* Add the Syncfusion<sup style="font-size:70%">&reg;</sup> license activation command after running npm install or yarn like below,
+* Add the Syncfusion<sup style="font-size:70%">&reg;</sup> license activation command after running npm install or yarn:
 
-```bash
+```yaml
   steps:
   - name: Install node modules
     run: npm install
@@ -160,13 +160,13 @@ The following sections show how to use an environment variable in CI services.
 
 #### Azure Pipelines (YAML)
 
-* Create a new [User-defined Variable](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch) named `SYNCFUSION_LICENSE`. Use the license key as a value.
+* Create a new [User-defined Variable](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch) named `SYNCFUSION_LICENSE`. Use the license key as the value.
 
-* Add the Syncfusion<sup style="font-size:70%">&reg;</sup> license activation command after running npm install or yarn like below,
+* Add the Syncfusion<sup style="font-size:70%">&reg;</sup> license activation command after running npm install or yarn.
 
-The following example shows the syntax for Windows build agents.
+The following example shows the syntax for Windows build agents:
 
-```bash
+```yaml
 pool:
   vmImage: 'windows-latest'
 
@@ -175,14 +175,14 @@ steps:
   displayName: 'Install node modules'
 
 - script: call npx syncfusion-license activate
-  displayName: 'Activate Syncfusion<sup style="font-size:70%">&reg;</sup> License'
+  displayName: 'Activate Syncfusion License'
   env:
     SYNCFUSION_LICENSE: $(SYNCFUSION_LICENSE)
 ```
 
-The following example shows the syntax for Linux build agents.
+The following example shows the syntax for Linux build agents:
 
-```bash
+```yaml
 pool:
   vmImage: 'ubuntu-latest'
 
@@ -198,9 +198,9 @@ steps:
 
 #### Azure Pipelines (Classic)
 
-* Create a new [User-defined Variable](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch) named `SYNCFUSION_LICENSE`. Use the license key as a value.
+* Create a new [User-defined Variable](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch) named `SYNCFUSION_LICENSE`. Use the license key as the value.
 
-* Add the Syncfusion<sup style="font-size:70%">&reg;</sup> license activation command after running npm install or yarn using bash task like below,
+* Add the Syncfusion<sup style="font-size:70%">&reg;</sup> license activation command after running npm install or yarn using a bash task:
 
    ```bash
     # Activate the license
@@ -209,6 +209,6 @@ steps:
 
 ![Bash task](images/bash-script.png)
 
-## See also
+## See Also
 
 * [Licensing FAQ](https://ej2.syncfusion.com/react/documentation/licensing/licensing-troubleshoot/)

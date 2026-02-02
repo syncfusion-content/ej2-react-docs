@@ -1,29 +1,29 @@
 ---
 layout: post
 title: Icons in React Appearance component | Syncfusion
-description: Learn here all about Icons in Syncfusion React Appearance component of Syncfusion Essential JS 2 and more.
+description: Learn about the predefined icon library, usage, CDN and npm references, and customization options for Syncfusion React components.
 control: Icons 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Predefined Icons Library in Syncfusion<sup style="font-size:70%">&reg;</sup> React Component
+# Predefined icons library in Syncfusion<sup style="font-size:70%">&reg;</sup> React components
 
-Syncfusion's icon library provides an extensive collection of pre-designed icons for enhancing user interfaces in React applications. These icons are available as `base64` formatted font icons, enabling the creation of visually consistent designs with minimal effort.
+Syncfusion's icon library provides an extensive collection of pre-designed, font-based icons (embedded as base64 in themes) to enhance user interfaces in React applications. These icons ensure visual consistency across Syncfusion components and are available via npm or CDN with minimal setup.
 
-## Referring icons in the React application
+## Referencing icons in a React application
 
-Icons can be referenced in a React application using the following methods:
+Icons can be included in a React application using the following methods:
 
-* [npm package](#the-npm-package) – Access icons via the npm package.
-* [CDN reference](#cdn-reference) – Access icons via CDN-hosted resources.
+* [npm package](#the-npm-package) — Install and import icon styles from npm.  
+* [CDN reference](#cdn-reference) — Link to CDN-hosted icon styles.
 
 ### The npm package
 
-All Syncfusion<sup style="font-size:70%">&reg;</sup> theme icons are distributed in the [ej2-icons](https://www.npmjs.com/package/@syncfusion/ej2-icons) package, available on the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. This package includes both CSS and SCSS files supporting all themes.
+Syncfusion theme icons are distributed in the [@syncfusion/ej2-icons](https://www.npmjs.com/package/@syncfusion/ej2-icons) package on npm. The package includes CSS/SCSS files for all supported themes.
 
-To use these icons, install the `ej2-icons` npm package:
+Install the package:
 
 ```bash
 npm install @syncfusion/ej2-icons
@@ -37,7 +37,7 @@ Then import the desired theme’s icon stylesheet in your application:
 @import "../node_modules/@syncfusion/ej2-icons/styles/<theme_name>.css";
 ```
 
-> To apply these styles in your application, ensure you import `App.css` in the `src/App.tsx` file.
+> To apply these styles, ensure you import `App.css` in your `src/App.tsx` (or equivalent entry file).
 
 **Example:**
 
@@ -45,61 +45,46 @@ Then import the desired theme’s icon stylesheet in your application:
 @import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
 ```
 
-### CDN Reference
+### CDN reference
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> theme icons are also available via CDN. Reference the correct version to ensure compatibility with your Syncfusion<sup style="font-size:70%">&reg;</sup> React package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> theme icons are also available via CDN. To ensure compatibility with your installed Syncfusion React packages, use a version-specific CDN path that matches your EJ2 package version (for example, 32.1.19).
 
-To use CDN-hosted icons, add a link tag in your HTML file’s head section:
+Include the appropriate `<link>` tag in the `<head>` section of your HTML:
 
 ```html
 <!-- Bootstrap5 -->
-<head>
-    <link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/bootstrap5.css" rel="stylesheet"/>
-</head>
+<link href="https://cdn.syncfusion.com/ej2/32.1.19/ej2-icons/styles/bootstrap5.css" rel="stylesheet"/>
+
 <!-- Material -->
-<head>
-    <link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/material.css" rel="stylesheet"/>
-</head>
+<link href="https://cdn.syncfusion.com/ej2/32.1.19/ej2-icons/styles/material.css" rel="stylesheet"/>
 ```
 
-## Steps to use the icons library
+Always match the version number in the CDN URL to the version of your `@syncfusion/ej2-*` packages to prevent icon mismatches or rendering issues.
 
-Create a React application as shown:
+## Using the icons library
 
-```bash
-npx create-react-app my-app
-cd my-app
-npm start
-```
+Syncfusion icons are rendered by applying the base class `e-icons` (which provides font styling) together with a specific icon class (prefixed with `e-`) to an HTML element.
 
-For details on common setup and configuration, see [getting started with the Syncfusion<sup style="font-size:70%">&reg;</sup> React application](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start).
-
-### Using icons directly in HTML elements
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> icons can be rendered by assigning the `e-icons` class (which provides font icon styling) and the specific icon class prefixed with `e-` to an HTML element.
-
-Steps to render a Syncfusion<sup style="font-size:70%">&reg;</sup> icon directly:
+Steps to render an icon:
 
 1. Add the `e-icons` class to the desired HTML element.
-2. Add the desired icon class (e.g., `e-paste`) as listed in the [available icons](#available-icons) section. For example:
+2. Add the specific icon class (for example, `e-paste`) as listed in the [available icons](#available-icons) section.
 
-    ```css
-    .e-paste:before {
-        content:'\e355';
-    }
-    ```
+Example HTML:
 
-3. Use both the `e-icons` and specific icon class on your element:
+```html
+<span class="e-icons e-paste"></span>
+```
 
-    ```html
-    <span class="e-icons e-paste"></span>
-    ```
+The icon library defines each glyph using a CSS `:before` pseudo-element rule. For reference, the glyph for `e-paste` is defined as:
 
-4. Reference the icons library in your `index.html` file with a CDN link:
+```css
+.e-paste:before {
+  content: '\e355';
+}
+```
 
-    ```html
-    <link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/bootstrap5.css" rel="stylesheet" />
-    ```
+4. Reference the icons stylesheet in your application (via npm import or CDN link as shown above).
 
 A complete example is shown below.
 
@@ -119,9 +104,10 @@ A complete example is shown below.
 
 ### Icon size
 
-The `ej2-icons` package provides class-based options for varying icon sizes. Choose the size mode suitable for your interface—`e-large` for touch-friendly elements, or `e-small` and `e-medium` for pointer-based interactions.
+The `ej2-icons` package provides utility classes to adjust icon size. Use the class that best fits your interface design — `e-large` for touch targets, or `e-small`/`e-medium` for compact layouts.
 
-The available size classes are:
+Available size classes:
+
 * `e-small` – Sets icon size to `8px`.
 * `e-medium` – Sets icon size to `16px`.
 * `e-large` – Sets icon size to `24px`.
@@ -150,9 +136,9 @@ The available size classes are:
 
 ### Customizing Icon Appearance
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> icons support further customization by modifying the `e-icons` class. Changing icon color or size enables alignment with your application’s visual guidelines and improves accessibility or emphasis where needed.
+Syncfusion<sup style="font-size:70%">&reg;</sup> icons can be further customized by overriding styles on the `e-icons` class or the specific icon element. This allows alignment with your application’s design system, improved accessibility, or visual emphasis.
 
-For example, to apply a custom color to an icon:
+For example, to change the icon color:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -170,54 +156,54 @@ For example, to apply a custom color to an icon:
 
 ## Available Icons
 
-The Essential<sup style="font-size:70%">&reg;</sup> JS 2 icon package includes a complete library of icons. Refer to the content section for each icon’s specific CSS class and code.
+The Essential<sup style="font-size:70%">&reg;</sup> JS 2 icon package includes a comprehensive library of icons across multiple themes. Each theme demo below shows the icon name, CSS class, and visual preview.
 
 <!-- markdownlint-disable MD033 -->
 
 ### Material 3
 
-<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/material3/demo.html" style="height:1000px;width:100%;"></iframe>
+<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/material3/demo.html" style="height:1000px;width:100%;" title="Material 3 icons preview" loading="lazy"></iframe>
 
 ### Material
 
-<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/material/demo.html" style="height:1000px;width:100%;"></iframe>
+<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/material/demo.html" style="height:1000px;width:100%;" title="Material icons preview" loading="lazy"></iframe>
 
 ### Fabric
 
-<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/fabric/demo.html" style="height:1000px;width:100%;"></iframe>
+<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/fabric/demo.html" style="height:1000px;width:100%;" title="Fabric icons preview" loading="lazy"></iframe>
 
 ### Bootstrap
 
-<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/bootstrap/demo.html" style="height:1000px;width:100%;"></iframe>
+<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/bootstrap/demo.html" style="height:1000px;width:100%;" title="Bootstrap icons preview" loading="lazy"></iframe>
 
 ### Bootstrap 4
 
-<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/bootstrap4/demo.html" style="height:1000px;width:100%;"></iframe>
+<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/bootstrap4/demo.html" style="height:1000px;width:100%;" title="Bootstrap 4 icons preview" loading="lazy"></iframe>
 
 ### Bootstrap 5
 
-<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/bootstrap5/demo.html" style="height:1000px;width:100%;"></iframe>
+<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/bootstrap5/demo.html" style="height:1000px;width:100%;" title="Bootstrap 5 icons preview" loading="lazy"></iframe>
 
 ### High Contrast
 
-<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/highcontrast/demo.html" style="height:1000px;width:100%;"></iframe>
+<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/highcontrast/demo.html" style="height:1000px;width:100%;" title="High Contrast icons preview" loading="lazy"></iframe>
 
 ### Tailwind CSS
 
-<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/tailwind/demo.html" style="height:1000px;width:100%;"></iframe>
+<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/tailwind/demo.html" style="height:1000px;width:100%;" title="Tailwind CSS icons preview" loading="lazy"></iframe>
 
 ### Tailwind 3.4
 
-<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/tailwind3/demo.html" style="height:1000px;width:100%;"></iframe>
+<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/tailwind3/demo.html" style="height:1000px;width:100%;" title="Tailwind 3.4 icons preview" loading="lazy"></iframe>
 
 ### Fluent 2
 
-<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/fluent2/demo.html" style="height:1000px;width:100%;"></iframe>
+<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/fluent2/demo.html" style="height:1000px;width:100%;" title="Fluent 2 icons preview" loading="lazy"></iframe>
 
 ### Fluent
 
-<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/fluent/demo.html" style="height:1000px;width:100%;"></iframe>
+<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/fluent/demo.html" style="height:1000px;width:100%;" title="Fluent icons preview" loading="lazy"></iframe>
 
 ## See also
 
-* [Using icons in Syncfusion<sup style="font-size:70%">&reg;</sup> React Button](https://ej2.syncfusion.com/react/documentation/button/types-and-styles#icons)
+* [Using icons in Syncfusion React Button](https://ej2.syncfusion.com/react/documentation/button/types-and-styles#icons)

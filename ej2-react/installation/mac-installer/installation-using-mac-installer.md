@@ -1,63 +1,76 @@
 ---
 layout: post
-title: Installation using mac installer in React | Syncfusion
-description: Learn here all about Installation using mac installer in Syncfusion React Installation component of Syncfusion Essential JS 2 and more.
-control: Installation using mac installer 
+title: Installing Syncfusion React Components on macOS | Syncfusion
+description: Step-by-step guide to installing the Syncfusion React (JavaScript - EJ2) macOS DMG installer, handling Catalina security warnings, and registering the license key.
+control: Installation using mac installer
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Installing Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript – EJ2 Mac Installer
+# Installing Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Mac Installer
 
-## Steps to resolve the warning message in Catalina OS or later
+## Resolving Security Warnings on macOS Catalina or Later
 
-   While running Essential Studio<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Mac Installer on Catalina MacOS or later, the below alert will be displayed.
+When running the Essential Studio<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Mac Installer on macOS Catalina or later, you may encounter the following security alert:
 
-   ![Alert Image](images/Mac_Catalina_MacOS_Alert1.png)
+![macOS security alert dialog](images/Mac_Catalina_MacOS_Alert1.png)
 
-   If you receive this alert, follow the below steps for the easiest solution.
+If this alert appears, follow these steps:
 
-   1. Right-click the downloaded dmg file.
-   2. Select the "Open With" option and choose "DiskImageMounter (Default)". The following pop-up appears.
+1. Right-click the downloaded DMG file.
+2. Select **Open With** and choose **DiskImageMounter (Default)**. The following dialog appears:
 
-      ![pop-up Image](images/Mac_Catalina_MacOS_Alert2.png)
+   ![macOS security confirmation dialog showing Open option](images/Mac_Catalina_MacOS_Alert2.png)
 
-   3. When you click "Open" the installer window will be opened.
+3. Click **Open** to proceed with mounting the installer.
 
-## Step-by-Step installation
+4. If macOS still prevents the installer from opening, open **System Preferences > Security & Privacy > General**, locate the blocked app message, and click **Open Anyway**. Then repeat step 3.
 
-The steps below show how to install the Essential Studio<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Mac installer.
+## Step-by-Step Installation
 
-1. Locate the downloaded dmg file and open the file by double click on it.
+Follow the steps below to install the Essential Studio<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Mac installer:
 
-   ![Welcome wizard](images/Mac_Installer1.png)
+1. Locate the downloaded DMG file and double-click it to mount the disk image.
 
-2. This action will automatically mount the disk image and create a virtual drive on your desktop or in the Finder sidebar.
+   ![DMG file mounted](images/Mac_Installer1.png)
 
-   ![License Agreement](images/Mac_Installer2.png)
+2. The disk image will automatically mount, creating a virtual drive on your desktop or in the Finder sidebar, displaying the installer contents.
 
-3. Copy the mounted disk file.
+   ![Installer window displaying Syncfusion application and Applications shortcut](images/Mac_Installer2.png)
 
-   ![License Agree Confirmation](images/Mac_Installer3.png)
+3. Drag the Syncfusion application icon to the **Applications** folder shortcut within the installer window.
 
-4. And paste it in "Applications" folder shortcut.
+   ![Dragging Syncfusion app icon to Applications shortcut in installer window](images/Mac_Installer3.png)
 
-   ![License Agree Confirmation](images/Mac_Installer4.png)
+4. The application will be copied to your Applications folder, completing the installation.
 
-   N> The Unlock key is not required to install the Mac installer. The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio JavaScript - EJ2 Mac installer can be used for development purposes without registering the Unlock key.
+   ![Installation complete showing copy progress to Applications folder](images/Mac_Installer4.png)
 
-5. Now you can open the folder to explore the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> Mac installer.
+   > No unlock key is required to install the Mac installer. However, a **license key is required** to use the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio JavaScript - EJ2 components in your applications (see [License Key Registration](#license-key-registration-in-samples) below).
 
-   ![Destination](Images/Mac_Installer5.png)
+5. Navigate to the Applications folder to access the installed Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> content, including demos and documentation.
 
-6. To remove the DMG file, Right-click on the virtual drive on your desktop or in the Finder sidebar and select "Eject." Also delete the folder from the Applications.
+   ![Installed Syncfusion application in Finder Applications folder](images/Mac_Installer5.png)
 
-   ![Install Location](images/Mac_Installer6.png)
+6. After installation is complete, you can eject the DMG file by right-clicking the virtual drive on your desktop or in the Finder sidebar and selecting **Eject**. You may also delete the downloaded DMG file if desired.
 
-## License key registration in samples
+   ![Ejecting the mounted DMG from Finder sidebar](images/Mac_Installer6.png)
 
-After the installation, the license key is required to register the demo source that is included in the Mac installer. To learn about the steps for license registration for the JavaScript - EJ2 Mac installer, please refer to this.
+   > The installed application remains in your Applications folder and is not affected by ejecting or deleting the DMG file.
+
+## License Key Registration in Samples
+
+After installation, a license key is required to run the demo source included in the Mac installer. For instructions on registering the license key for JavaScript - EJ2, refer to the following topics:
 
 * [Register Syncfusion<sup style="font-size:70%">&reg;</sup> License key in the project](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration#register-syncfusion-license-key-in-the-project)
 * [Register the license key using the npx command](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration#register-syncfusion-license-key-using-the-npx-command)
+
+## System Requirements
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Mac installer is compatible with:
+
+* macOS 10.13 (High Sierra) or later
+* Node.js 14.x or later (LTS recommended) (for running demos and using npm packages)
+
+For the latest system requirements, refer to the [Syncfusion system requirements documentation](https://ej2.syncfusion.com/react/documentation/system-requirements).
