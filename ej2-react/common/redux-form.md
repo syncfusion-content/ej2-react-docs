@@ -131,10 +131,10 @@ npm install @syncfusion/ej2-react-calendars @syncfusion/ej2-react-inputs @syncfu
 {% highlight js tabtitle="App.js" %}
 
 import './App.css';
-import '@syncfusion/ej2-base/styles/material3.css';
-import '@syncfusion/ej2-react-inputs/styles/material3.css';
-import '@syncfusion/ej2-react-calendars/styles/material3.css';
-import '@syncfusion/ej2-react-buttons/styles/material3.css';
+import '@syncfusion/ej2-base/styles/tailwind3.css';
+import '@syncfusion/ej2-react-inputs/styles/tailwind3.css';
+import '@syncfusion/ej2-react-calendars/styles/tailwind3.css';
+import '@syncfusion/ej2-react-buttons/styles/tailwind3.css';
 import LoginForm from "./LoginForm";
 
 {% endhighlight %}

@@ -7,13 +7,12 @@ platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-<!-- markdownlint-disable MD036 -->
 
 # Date time axis in React Chart component
 
 ## DateTime Axis
 
-Date time axis uses date time scale and displays the date time values as axis labels in the specified format.
+The DateTime axis uses a date-time scale and displays date-time values as axis labels based on the specified format. This axis type is ideal for visualizing time-based data such as trends, timelines, and time-series data.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -32,12 +31,11 @@ Date time axis uses date time scale and displays the date time values as axis la
 
 {% previewsample "page.domainurl/code-snippet/chart/axis/datetime-cs2" %}
 
->Note: To use datetime axis, we need to inject `DateTime` module into the `services` and
-set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart/axis/#valuetype) of axis to DateTime.
+> Note: To use the DateTime axis, inject `DateTime` into the `services` option and set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#valuetype) property of the axis to `DateTime`.
 
 ## DateTimeCategory Axis
 
-Date-time category axis is used to display the date-time values with non-linear intervals. For example, the business days alone have been depicted in a week here.
+The DateTimeCategory axis is used to render date-time values with non-linear intervals. This axis type is especially useful when certain time ranges, such as weekends or holidays, need to be excluded. In the following example, only business days are displayed within a week.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -56,12 +54,11 @@ Date-time category axis is used to display the date-time values with non-linear 
 
 {% previewsample "page.domainurl/code-snippet/chart/axis/datetime-cs3" %}
 
->Note: To use dateTimeCategory axis, we need to inject `DateTimeCategory` module into the `services` method and
-set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart/axis/#valuetype) of axis to DateTimeCategory.
+> Note: To use the DateTimeCategory axis, inject `DateTimeCategory` into the `services` option and set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#valuetype) property of the axis to `DateTimeCategory`. The axis range can be controlled using the [`minimum`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#minimum), [`maximum`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#maximum), and [`interval`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#interval) properties.
 
 ### Range
 
-Range for an axis, will be calculated automatically based on the provided data, you can also customize the range of the axis using [`minimum`](https://ej2.syncfusion.com/react/documentation/api/chart/axis/#minimum), [`maximum`](https://ej2.syncfusion.com/react/documentation/api/chart/axis/#maximum) and [`interval`](https://ej2.syncfusion.com/react/documentation/api/chart/axis/#interval) property of the axis.
+Range for an axis, will be calculated automatically based on the provided data, you can also customize the range of the axis using [`minimum`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#minimum), [`maximum`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#maximum) and [`interval`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#interval) property of the axis.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -80,19 +77,18 @@ Range for an axis, will be calculated automatically based on the provided data, 
 
 {% previewsample "page.domainurl/code-snippet/chart/axis/datetime-cs4" %}
 
-### Interval Customization
+### Interval customization
 
-Date time intervals can be customized by using the [`interval`](https://ej2.syncfusion.com/react/documentation/api/chart/axis/#interval) and [`intervalType`](https://ej2.syncfusion.com/react/documentation/api/chart/axis/#intervaltype) properties of the axis. For example, when you set interval as 2 and intervalType as years, it considers 2 years as interval.
+	Date-time intervals can be customized using the [`interval`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#interval) and [`intervalType`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#intervaltype) properties of the axis. For example, when the interval is set to `2` and the interval type is set to `Years`, the axis displays labels at two-year intervals.
 
-DateTime axis supports following interval types,
-
-* Auto
-* Years
-* Months
-* Days
-* Hours
-* Minutes
-* Seconds
+The DateTime axis supports the following interval types:
+- Auto
+- Years
+- Months
+- Days
+- Hours
+- Minutes
+- Seconds
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -111,17 +107,16 @@ DateTime axis supports following interval types,
 
 {% previewsample "page.domainurl/code-snippet/chart/axis/datetime-cs5" %}
 
-**Applying Padding to the Range**
+**Applying padding to the range**
 
-Padding can be applied to the minimum and maximum extremes of the range by using the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart/axis/#rangepadding) property. Date time axis supports the following types of padding,
+Padding can be applied to the minimum and maximum values of the axis range using the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#rangepadding) property. The DateTime axis supports the following range padding types:
 
 * None
 * Round
 * Additional
 
-**DateTime - None**
-
-When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart/axis/#rangepadding) is set to `None`, minimum and maximum of the axis is based on the data.
+**DateTime – None**
+When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#rangepadding) property is set to `None`, the minimum and maximum values of the axis are calculated directly from the data values.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -140,11 +135,9 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/ch
 
 {% previewsample "page.domainurl/code-snippet/chart/axis/datetime-cs6" %}
 
-**DateTime - Round**
+**DateTime – Round**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart/axis/#rangepadding) is set to `Round`, minimum and maximum will be rounded to the nearest possible value divisible by interval.
-For example, when the minimum is 15th Jan, interval is 1 and the interval type is ‘month’,
-then the axis minimum will be Jan 1st.
+When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#rangepadding) property is set to `Round`, the minimum and maximum values are rounded to the nearest interval boundary. For example, if the minimum value is January 15 and the interval type is set to `Months` with an interval of `1`, the axis minimum is adjusted to January 1.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -163,9 +156,9 @@ then the axis minimum will be Jan 1st.
 
 {% previewsample "page.domainurl/code-snippet/chart/axis/datetime-cs7" %}
 
-**DateTime - Additional**
+**DateTime – Additional**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart/axis/#rangepadding) is set to `Additional`, interval of an axis will be padded to the minimum and maximum of the axis.
+When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#rangepadding) property is set to `Additional`, an additional interval is added before the minimum and after the maximum values of the axis range to provide extra spacing.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -184,9 +177,9 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/ch
 
 {% previewsample "page.domainurl/code-snippet/chart/axis/datetime-cs8" %}
 
-## Label Format
+## Label format
 
-You can format and parse the date to all globalize format using [`labelFormat`](https://ej2.syncfusion.com/react/documentation/api/chart/axis/#labelformat) property in an axis.
+Date values displayed on the DateTime axis can be formatted using the [`labelFormat`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#labelformat) property. This property supports globalized date and time formats for clear and localized label rendering.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -205,33 +198,32 @@ You can format and parse the date to all globalize format using [`labelFormat`]
 
 {% previewsample "page.domainurl/code-snippet/chart/axis/datetime-cs9" %}
 
-The following table describes the result of applying some common date time formats to the labelFormat property
+The following table illustrates the output produced by applying commonly used date-time format strings to the `labelFormat` property.
 
-<!-- markdownlint-disable MD033 -->
 <table>
 <tr>
 <td><b>Label Value</b></td>
 <td><b>Label Format Property Value</b></td>
-<td><b>Result </b></td>
-<td><b>Description </b></td>
+<td><b>Result</b></td>
+<td><b>Description</b></td>
 </tr>
 <tr>
 <td>new Date(2000, 03, 10)</td>
 <td>EEEE</td>
 <td>Monday</td>
-<td>The Date is displayed in day format</td>
+<td>Displays the full name of the day</td>
 </tr>
 <tr>
 <td>new Date(2000, 03, 10)</td>
 <td>yMd</td>
 <td>04/10/2000</td>
-<td>The Date is displayed in month/date/year format</td>
+<td>Displays the date in month/day/year format</td>
 </tr>
 <tr>
 <td>new Date(2000, 03, 10)</td>
-<td> MMM </td>
+<td>MMM</td>
 <td>Apr</td>
-<td>The Shorthand month for the date is displayed</td>
+<td>Displays the abbreviated month name</td>
 </tr>
 <tr>
 <td>new Date(2000, 03, 10)</td>
@@ -243,6 +235,6 @@ The following table describes the result of applying some common date time forma
 <td>new Date(2000, 03, 10)</td>
 <td>hms</td>
 <td>12:00:00 AM</td>
-<td>The Label is displayed in hours:minutes:seconds format</td>
+<td>Displays the abbreviated month name</td>
 </tr>
 </table>

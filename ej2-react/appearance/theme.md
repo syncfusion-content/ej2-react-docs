@@ -102,8 +102,8 @@ You can reference individual component themes either from dedicated component pa
 **Example:**
 
 ```css
-@import "ej2-base/styles/material.scss";
-@import "ej2-react-buttons/styles/button/material.scss";
+@import "ej2-base/styles/tailwind3.scss";
+@import "ej2-react-buttons/styles/button/tailwind3.scss";
 ```
 
 > The `ej2-base` package contains shared styles required by all Syncfusion<sup style="font-size:70%">&reg;</sup> React components and must be imported first.
@@ -118,8 +118,8 @@ You can reference individual component themes either from dedicated component pa
 **Example:**
 
 ```css
-@import "ej2/base/material.scss";
-@import "ej2/button/material.scss";
+@import "ej2/base/tailwind3.scss";
+@import "ej2/button/tailwind3.scss";
 ```
 
 ### Referring all components optimized CSS file

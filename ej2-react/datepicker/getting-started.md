@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Getting started with React Datepicker component | Syncfusion
-description:  Checkout and learn about Getting started with React Datepicker component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React DatePicker component | Syncfusion
+description: Check out and learn the steps to get started with the React DatePicker component of Syncfusion Essential JS 2.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started
+# Getting started with React DatePicker component
 
-This section explains you the steps required to create a simple [React DatePicker](https://www.syncfusion.com/react-components/react-datepicker) and demonstrate the basic usage of the DatePicker component.
+This section explains the steps required to create a simple [React DatePicker](https://www.syncfusion.com/react-components/react-datepicker) and demonstrates the basic usage of the DatePicker component.
 
-To get start quickly with React Date Picker, you can check on this video:
+To get started quickly with the React DatePicker, watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=B7LvXEwgTyw" %}
 
@@ -44,14 +44,14 @@ To create a new React application, run the following command.
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+To set up a React application in a TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in a JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -64,15 +64,15 @@ npm run dev
 All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 You can choose the component that you want to install. For this application, we are going to use `DatePicker` component.
 
-To install DatePicker component, use the following command
+To install the DatePicker component, use the following command
 
 ```bash
-npm install @syncfusion/ej2-react-calendars –save
+npm install @syncfusion/ej2-react-calendars --save
 ```
 
 ## Adding Style sheet to the Application
 
-To render the DatePicker component, need to import DatePicker and its dependent component's styles as given below in `App.css`.
+To render the DatePicker component, import the DatePicker and its dependent component styles into `App.css` as shown below.
 
 ```css
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -82,44 +82,42 @@ To render the DatePicker component, need to import DatePicker and its dependent 
 @import "../node_modules/@syncfusion/ej2-react-calendars/styles/material.css";
 ```
 
+You can check out the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) topic to know more about built-in themes and different ways to refer themes in a React application.
+
 >Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
 
 ## Adding DatePicker component to the Application
 
-* To include the DatePicker component in application import the `DatePickerComponent` from `ej2-react-calendars` package in `App.tsx`.
+* To include the DatePicker component in the application, import the `DatePickerComponent` from the `@syncfusion/ej2-react-calendars` package in `App.tsx`.
 
-* Then add the DatePicker component as shown in below code example.
+* Then add the DatePicker component as shown in the code example below.
 
 `[src/App.tsx]`
 
 `[Class-component]`
 
 ```ts
-
-// import the datepickerComponent
 import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
 import * as React from 'react';
 import './App.css';
 
 export default class App extends React.Component<{}, {}> {
-    public render() {
-        return <DatePickerComponent id="datepicker" />;
-    }
+  public render() {
+    return <DatePickerComponent id="datepicker" />;
+  }
 }
 ```
 
 `[Functional-component]`
 
 ```ts
-// import the datepickerComponent
 import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import './App.css';
 
-function App() {
-    return <DatePickerComponent id="datepicker" />;
+export default function App() {
+  return <DatePickerComponent id="datepicker" />;
 }
-ReactDOM.render(<App />, document.getElementById('element'));
 ```
 
 ## Run the application
@@ -130,10 +128,9 @@ Now run the `npm run dev` command in the console to start the development server
 npm run dev
 ```
 
-The below examples shows the basic DatePicker component.
+The examples below show the basic DatePicker component.
 
 `[Class-component]`
-
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/datepicker/default-cs11/app/index.jsx %}
@@ -160,8 +157,8 @@ The below examples shows the basic DatePicker component.
 
 ## Setting the value, min and max dates
 
-The following example demonstrates how to set the value,  min and max dates on initializing the DatePicker.
-Here the DatePicker allows to select a date within a range from 9th to 15th in a month of May 2017. To know more about range restriction in DatePicker, please refer this [page](./date-range).
+The following example demonstrates how to set the value, min, and max dates when initializing the DatePicker.
+Here the DatePicker allows selection within a range from the 9th to the 15th of May 2017. To learn more about range restriction in DatePicker, refer this [page](./date-range).
 
 `[Class-component]`
 
@@ -196,4 +193,4 @@ Here the DatePicker allows to select a date within a range from 9th to 15th in a
 * [How to change the initial view of the DatePicker](./date-views)
 * [How to achieve dynamic form validation with DatePicker](./how-to/dynamic-form-validation)
 
-N> You can also explore our [React DatePicker example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/datepicker/default) that shows you how to render the DatePicker in React.
+N> You can also explore our [React DatePicker example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/datepicker/default) that shows how to render the DatePicker in React.

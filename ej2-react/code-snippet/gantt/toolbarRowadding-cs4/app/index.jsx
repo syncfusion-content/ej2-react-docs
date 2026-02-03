@@ -15,7 +15,7 @@ function App() {
     work: 'Work',
     parentID: 'ParentID',
     segments: 'Segments',
-    notes:"Note",
+    notes: "Note",
   };
   const resourceFields = {
     id: 'ResourceId',

@@ -97,11 +97,11 @@ module.exports = {
 
 - Light mode:
 ```css
-@import url('https://cdn.syncfusion.com/ej2/27.2.5/tailwind.css');
+@import url('https://cdn.syncfusion.com/ej2/32.1.19/tailwind.css');
 ```
 - Dark mode:
 ```css
-@import url('https://cdn.syncfusion.com/ej2/27.2.5/tailwind-dark.css');
+@import url('https://cdn.syncfusion.com/ej2/32.1.19/tailwind-dark.css');
 ```
 
 ![Syncfusion Components - Tailwind CSS Theme](images/syncfusion-components-tailwind-theme.PNG)
@@ -134,11 +134,11 @@ module.exports = {
 
 - Light mode:
 ```html
-<link href="https://cdn.syncfusion.com/ej2/27.2.5/bootstrap5.3.css" rel="stylesheet" />
+<link href="https://cdn.syncfusion.com/ej2/32.1.19/bootstrap5.3.css" rel="stylesheet" />
 ```
 - Dark mode:
 ```html
-<link href="https://cdn.syncfusion.com/ej2/27.2.5/bootstrap5.3-dark.css" rel="stylesheet" />
+<link href="https://cdn.syncfusion.com/ej2/32.1.19/bootstrap5.3-dark.css" rel="stylesheet" />
 ```
 
 4. (Optional) Include Syncfusion font icons for Bootstrap:

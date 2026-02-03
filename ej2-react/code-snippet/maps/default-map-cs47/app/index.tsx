@@ -2,9 +2,9 @@
 
 {% raw %}
 
-import { texas } from 'texas.ts';
-import { usa_map } from 'usa.ts';
-import { california } from 'california.ts'
+import { texas } from './texas.ts';
+import { usa_map } from './usa.ts';
+import { california } from './california.ts'
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective } from '@syncfusion/ej2-react-maps';

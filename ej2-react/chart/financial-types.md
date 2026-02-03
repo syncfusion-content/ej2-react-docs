@@ -22,7 +22,7 @@ Chart supports the following financial series
 
 ## Hilo
 
-To render a Hilo series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/series/#type) as `Hilo` and inject `HiloSeries` module into the `services`.
+To render a Hilo series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/series#type) as `Hilo` and inject `HiloSeries` module into the `services`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -37,7 +37,7 @@ To render a Hilo series, use series [`type`](https://ej2.syncfusion.com/react/do
 
 ## High Low Open Close
 
-To render a HiloOpenClose series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/series/#type) as `HiloOpenClose` and inject `HiloOpenCloseSeries` module into the `services`.
+To render a HiloOpenClose series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/series#type) as `HiloOpenClose` and inject `HiloOpenCloseSeries` module into the `services`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -52,7 +52,7 @@ To render a HiloOpenClose series, use series [`type`](https://ej2.syncfusion.com
 
 ## Customization of HiloOpenClose Series
 
-In HiloOpenClose series, [`bullFillColor`](https://ej2.syncfusion.com/react/documentation/api/chart/series#bullfillcolor) is used to fill the segment when the open value is greater than the close value and [`bearFillColor`](https://ej2.syncfusion.com/react/documentation/api/chart/series/#bearfillcolor) is used to fill the segment when the open value is less than the close value.
+In HiloOpenClose series, [`bullFillColor`](https://ej2.syncfusion.com/react/documentation/api/chart/series#bullfillcolor) is used to fill the segment when the open value is greater than the close value and [`bearFillColor`](https://ej2.syncfusion.com/react/documentation/api/chart/series#bearfillcolor) is used to fill the segment when the open value is less than the close value.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -67,7 +67,7 @@ In HiloOpenClose series, [`bullFillColor`](https://ej2.syncfusion.com/react/docu
 
 ## Candle
 
-To render a Candle series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/series/#type) as `Candle` and inject `CandleSeries` module into the `services`.
+To render a Candle series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/series#type) as `Candle` and inject `CandleSeries` module into the `services`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -11,11 +11,11 @@ domainurl: ##DomainURL##
 
 # Selection in React Chart component
 
-Chart provides selection support for the series and its data points on mouse click.
+The chart provides selection support for both series and individual data points when users interact with the chart using mouse clicks.
 
->When Mouse is clicked on the data points, the corresponding series legend will also be selected.
+> When a data point is clicked, the corresponding series legend item is also selected.
 
-We have different type of selection mode for selecting the data. They are,
+Multiple selection modes are available to help select and analyze chart data effectively. The supported selection modes are:
 
 * None
 * Point
@@ -27,7 +27,7 @@ We have different type of selection mode for selecting the data. They are,
 
 ## Point
 
-You can select a point, by setting `selectionMode` to point.
+A single data point can be selected by setting the `selectionMode` property to `Point`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -48,7 +48,7 @@ You can select a point, by setting `selectionMode` to point.
 
 ## Series
 
-You can select a series, by setting `selectionMode` to series.
+An entire series can be selected by setting the `selectionMode` property to `Series`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -69,7 +69,7 @@ You can select a series, by setting `selectionMode` to series.
 
 ## Cluster
 
-You can select the points that corresponds to the same index in all the series, by setting `selectionMode` to cluster.
+Cluster selection allows selection of data points that share the same index across all series. This can be enabled by setting the `selectionMode` property to `Cluster`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -90,15 +90,15 @@ You can select the points that corresponds to the same index in all the series, 
 
 ## Rectangular selection
 
-**DragXY, DragX and DragY**
+**DragXY, DragX, and DragY**
 
-To fetch the collection of data under a particular region, you have to set `selectionMode` as `DragXY`.
+Rectangular selection enables users to select a group of data points within a defined region by setting the `selectionMode` property accordingly.
 
-* DragXY - Allows us to select data with respect to horizontal and vertical axis.
-* DragX - Allows us to select data with respect to horizontal axis.
-* DragY - Allows us to select data with respect to vertical axis.
+* **DragXY** – Selects data points along both the horizontal and vertical axes.
+* **DragX** – Selects data points along the horizontal axis.
+* **DragY** – Selects data points along the vertical axis.
 
-The selected data’s are returned as an array collection in the [`dragComplete`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#dragcomplete) event.
+The selected data points are returned as an array collection through the [`dragComplete`](https://ej2.syncfusion.com/react/documentation/api/chart/iDragCompleteEventArgs) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -119,7 +119,7 @@ The selected data’s are returned as an array collection in the [`dragComplete`
 
 ## Lasso selection
 
-To select a region by drawing freehand shapes to fetch a collection of data use `selectionMode` as `Lasso`. You can also select multiple regions on the chart through this mode.
+Lasso selection allows users to draw a freehand shape on the chart to select data points within that region. Set the `selectionMode` property to `Lasso` to enable this feature. Multiple regions can be selected on the same chart using this mode.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -140,7 +140,7 @@ To select a region by drawing freehand shapes to fetch a collection of data use 
 
 ## Multi-region selection
 
-To select multiple region on the chart, set the `allowMultiSelection` property to true.
+Multiple regions can be selected on the chart by setting the `allowMultiSelection` property to **true**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -161,7 +161,7 @@ To select multiple region on the chart, set the `allowMultiSelection` property t
 
 ## Selection Type
 
-You can select multiple points or series, by enabling the [`isMultiSelect`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#ismultiselect) property.
+Multiple data points or series can be selected simultaneously by enabling the [`isMultiSelect`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#ismultiselect) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -182,7 +182,7 @@ You can select multiple points or series, by enabling the [`isMultiSelect`](http
 
 ## Selection on Load
 
-You can able to select a point or series programmatically on a chart using [`selectedDataIndexes`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#selecteddataindexes) property.
+Data points or series can be selected programmatically when the chart is loaded by using the [`selectedDataIndexes`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#selecteddataindexes) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -203,9 +203,10 @@ You can able to select a point or series programmatically on a chart using [`sel
 
 ## Selection through on legend
 
-You can able to select a point or series through on legend using [`toggleVisibility`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel#toggleVisibility) property. Also, use [`enableHighlight`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettings#enableHighlight) property for highlighting the series through legend.
+Points or series can also be selected through the legend by enabling the [`toggleVisibility`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel#toggleVisibility) property.  
+To visually emphasize the selected series, use the [`enableHighlight`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettings#enableHighlight) property.
 
->When [`highlightMode`](https://ej2.syncfusion.com/react/documentation/api/chart/highlightmode) is set to 'Series', 'Cluster' or 'Point', legend highlighting will still occur even when [`enableHighlight`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettings#enableHighlight) is set to false. This is because, the [`highlightMode`](https://ej2.syncfusion.com/react/documentation/api/chart/highlightmode) takes precedence, so hovering over legend items will trigger highlighting of the corresponding series regardless of the legend’s [`enableHighlight`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettings#enableHighlight) setting.
+> When [`highlightMode`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/highlightmode) is set to `Series`, `Cluster`, or `Point`, legend highlighting occurs even if [`enableHighlight`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettings#enableHighlight) is set to **false**. In this case, `highlightMode` takes precedence, and hovering over legend items highlights the corresponding series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -226,7 +227,7 @@ You can able to select a point or series through on legend using [`toggleVisibil
 
 ## Customization for selection
 
-You can apply custom style to selected points or series with [`selectionStyle`](https://ej2.syncfusion.com/react/documentation/api/chart/series#selectionstyle) property.
+Custom styles can be applied to selected points or series by using the [`selectionStyle`](https://ej2.syncfusion.com/react/documentation/api/chart/series#selectionstyle) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

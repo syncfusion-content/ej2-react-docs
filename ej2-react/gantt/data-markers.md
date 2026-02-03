@@ -81,14 +81,14 @@ You can programmatically modify the styling of the indicator by targeting the `.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/datamarkers-cs1/app/index.jsx %}
+{% include code-snippet/gantt/datamarkers-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/datamarkers-cs1/app/index.tsx %}
+{% include code-snippet/gantt/datamarkers-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/datamarkers-cs1/index.html %}
+{% include code-snippet/gantt/datamarkers-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/gantt/datamarkers-cs1" %}
+{% previewsample "page.domainurl/code-snippet/gantt/datamarkers-cs3" %}
