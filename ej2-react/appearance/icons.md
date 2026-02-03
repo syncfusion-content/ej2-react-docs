@@ -42,7 +42,7 @@ Then import the desired theme’s icon stylesheet in your application:
 **Example:**
 
 ```css
-@import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-icons/styles/tailwind3.css";
 ```
 
 ### CDN reference

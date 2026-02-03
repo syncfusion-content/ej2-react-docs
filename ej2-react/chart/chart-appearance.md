@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Custom color palette
 
-You can customize the default color of series or points by providing a custom color palette of your choice by using the [`palettes`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#palettes) property.
+Customize the default color of series or points by providing a custom color palette using the  [`palettes`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#palettes) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -79,7 +79,7 @@ You can differentiate data points based on their y values using [`rangeColorSett
 
 ## Point level customization
 
-Marker, datalabel and fill color of each data point can be customized with [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#pointrender) and [`textRender`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#textrender) event.
+Marker, data label, and fill color of individual data points can be customized using the [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#pointrender) and [`textRender`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#textrender) events.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -107,7 +107,7 @@ Marker, datalabel and fill color of each data point can be customized with [`poi
 **Customize the chart background**
 
 <!-- markdownlint-disable MD013 -->
-Using [`background`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#background) and [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#border) properties, you can change the background color and border of the chart.
+Use the [`background`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#background) and [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#border) properties on the chart to change its background color and border.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -128,7 +128,7 @@ Using [`background`](https://ej2.syncfusion.com/react/documentation/api/chart/ch
 
 **Chart margin**
 
-You can set margin for chart from its container through [`margin`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#margin) property.
+Set the chart margin relative to its container using the [`margin`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#margin) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -149,7 +149,7 @@ You can set margin for chart from its container through [`margin`](https://ej2.s
 
 **Chart area customization**
 
-Using [`background`](https://ej2.syncfusion.com/react/documentation/api/chart/chartAreaModel#background) and [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/chartareamodel#border) properties, you can change the background color and border of the chart area. Width for the chart area can be customized using [`width`](https://ej2.syncfusion.com/react/documentation/api/chart/chartAreaModel#width) property.
+To customize the plotting region (chart area), use the `chartArea` properties: [`background`](https://ej2.syncfusion.com/react/documentation/api/chart/chartAreaModel#background) and [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/chartareamodel#border) change the chart area's appearance, and [`width`](https://ej2.syncfusion.com/react/documentation/api/chart/chartAreaModel#width) adjusts its size.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -191,7 +191,7 @@ You can customize the space between the chart area from its chart container thro
 
 ## Animation
 
-You can customize animation for a particular series using [`animation`](https://ej2.syncfusion.com/react/documentation/api/chart/animationModel) property. You can enable or disable animation of the series using `enable` property, `duration` specifies the duration of an animation and `delay` allows us to start the animation at desire time.
+Customize animation for a series using the [`animation`](https://ej2.syncfusion.com/react/documentation/api/chart/animationModel) property. Use `enable` to turn animation on or off; `duration` controls the animation length and `delay` sets when the animation starts.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
