@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Size for Container
 
-Chart can render to its container size. You can set the size via inline or CSS as demonstrated below.
+The chart can render to its container size. Set the size via inline styles or CSS as shown below.
 
 ```
  <div id="charts" style="width:650px; height:350px"></div>
@@ -69,8 +69,8 @@ ReactDOM.render(<App />, document.getElementById("charts"));
 
 ## Size for Chart
 
-You can also set size for chart directly through [`width`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel/#width) and
-[`height`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel/#height) properties.
+Set the chart size directly using the [`width`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#width) and
+[`height`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#height) properties.
 
 <!-- markdownlint-disable MD036 -->
 **In Pixel**
@@ -97,7 +97,7 @@ You can set the size of chart in pixel as demonstrated below.
 
 **In Percentage**
 
-By setting value in percentage, chart gets its dimension with respect to its container. For example, when the height is ‘50%’, chart renders to half of the container height.
+When percentage values are used, the chart dimensions are relative to the container. For example, a height of `50%` renders the chart to half the container height.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

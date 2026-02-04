@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the React Chart Component in the Preact Framework
 
-This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Chart component.
+This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Chart component.
 
 `Preact` is a fast and lightweight JavaScript library for building user interfaces. It's often used as an alternative to larger frameworks like React. The key difference is that Preact is designed to be smaller in size and faster in performance, making it a good choice for projects where file size and load times are critical factors. 
 

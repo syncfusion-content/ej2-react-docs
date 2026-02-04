@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with React TextBox component | Syncfusion
 description:  Checkout and learn about Getting started with React TextBox component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+control: Getting started
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting started with React TextBox component
 
-This section briefly explains about how to create a simple TextBox using `Create React App`.
+This section explains how to create a simple TextBox using Vite.
 
 ## Dependencies
 
@@ -20,12 +20,15 @@ The following list of dependencies are required to use the TextBox component in 
 |-- @syncfusion/ej2-react-inputs
     |-- @syncfusion/ej2-react-base
     |-- @syncfusion/ej2-inputs
-    |-- @syncfusion/ej2-base
+        |-- @syncfusion/ej2-base
+		|-- @syncfusion/ej2-buttons
+		|-- @syncfusion/ej2-popups
+		|-- @syncfusion/ej2-splitbuttons
 ```
 
 ## Installation and Configuration
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To easily set up a React application, use Vite, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment and optimizes your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -52,10 +55,10 @@ npm run dev
 * To install TextBox component, use the following command.
 
 ```bash
-npm install @syncfusion/ej2-react-inputs –save
+npm install @syncfusion/ej2-react-inputs --save
  ```
 
-* The above package installs [Input dependencies](./getting-started/#dependencies) which are required to render the TextBox component in React environment.
+* The above package installs [Input dependencies](./getting-started#dependencies) which are required to render the TextBox component in React environment.
 
 * The TextBox CSS files are available in the `ej2-react-inputs` package folder. This can be referenced in your application using the following code.
 
@@ -63,28 +66,33 @@ npm install @syncfusion/ej2-react-inputs –save
 
 ```css
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-react-inputs/styles/material.css";
 ```
+
+You can check out the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) topic to know more about built-in themes and different ways to refer themes in a React application.
 
 > The [Custom Resource Generator (CRG)](https://crg.syncfusion.com/) is an online web tool, which can be used to generate the custom script and styles for a set of specific components.
 > This web tool is useful to combine the required component scripts and styles in a single file.
 
 ## Adding TextBox to the application
 
-Return the TextBoxComponent within `render` method in `src/App.tsx` file to render the TextBox component as like below code.
+Return the TextBoxComponent within the `render` method in the `src/App.tsx` file to render the TextBox component, as shown below.
 
 `[Class-component]`
 
 ```ts
 import * as React from "react";
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
 import './App.css';
+
 export default class App extends React.Component<{}, {}> {
-    public render() {
-      return (
-        // element which is going to render the TextBox
-        <TextBoxComponent placeholder="Enter Name"></TextBoxComponent>
-      );
-    }
+  public render() {
+    return (
+      // element which is going to render the TextBox
+      <TextBoxComponent placeholder="Enter Name"></TextBoxComponent>
+    );
+  }
 };
 ```
 
@@ -92,75 +100,74 @@ export default class App extends React.Component<{}, {}> {
 
 ```ts
 import * as React from "react";
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
 import './App.css';
-function App() {
-    return (
-        // element which is going to render the TextBox
-         <TextBoxComponent placeholder="Enter Name"></TextBoxComponent>
-    );
+
+export default function App() {
+  return (
+    // element which is going to render the TextBox
+    <TextBoxComponent placeholder="Enter Name"></TextBoxComponent>
+  );
 };
-ReactDOM.render(<App />, document.getElementById('input-container'));
 ```
 
 ## Adding icons to the TextBox
 
-You can create a TextBox with an icon by using the [addIcon](https://ej2.syncfusion.com/react/documentation/api/textbox/#addicon) method within the [created](https://ej2.syncfusion.com/react/documentation/api/textbox/#created) event. For detailed information, refer to the [Groups](./groups/) section.
+You can create a TextBox with an icon by using the [addIcon](https://ej2.syncfusion.com/react/documentation/api/textbox/index-default#addicon) method within the [created](https://ej2.syncfusion.com/react/documentation/api/textbox/index-default#created) event. For detailed information, refer to the [Groups](./groups) section.
 
 `[Class-component]`
 
 ```ts
 import * as React from "react";
-import { createRoot } from 'react-dom/client';
 import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+import './App.css';
 
-export default class Default extends React.Component {
-    public textboxObj = React.createRef();
+export default class App extends React.Component {
+  public textboxObj = React.createRef<TextBoxComponent>();
 
-    public oncreate() {  
-        (this.textboxObj.current as any).addIcon('append', 'e-icons e-input-popup-date');
-    }
+  public oncreate = () => {
+    (this.textboxObj.current as TextBoxComponent).addIcon('append', 'e-icons e-input-group-icon e-input-popup-date');
+  };
 
-    public render() {
-        return (
-            <TextBoxComponent
-                id='default'
-                placeholder="Enter Date"
-                ref={this.textboxObj}
-                created={this.oncreate}
-            />
-        );
-    }
+  public render() {
+    return (
+      <TextBoxComponent
+        id='textbox'
+        placeholder="Enter Date"
+        ref={this.textboxObj}
+        created={this.oncreate}
+      />
+    );
+  }
 }
-
-createRoot(document.getElementById('default')).render(<Default />);
-
 ```
 
 `[Functional-component]`
 
 ```ts
 import * as React from "react";
-import { createRoot } from 'react-dom/client';
 import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
 import { useRef } from 'react';
+import './App.css';
 
-function Default()  {
-    const textboxObj = useRef(null);
+export default function App() {
+  const textboxObj = useRef<TextBoxComponent>(null);
 
-    function oncreate() {  
-        textboxObj.current.addIcon('append', 'e-icons e-input-group-icon e-input-popup-date');
+  function oncreate() {
+    if (textboxObj.current) {
+      textboxObj.current.addIcon('append', 'e-icons e-input-group-icon e-input-popup-date');
     }
-    return (
-        <TextBoxComponent
-            id='default'
-            placeholder="Enter Date"
-            ref={textboxObj}
-            created={oncreate}
-        />
-    );
-};   
+  }
 
-createRoot(document.getElementById('default')).render(<Default />);
+  return (
+    <TextBoxComponent
+      id='textbox'
+      placeholder="Enter Date"
+      ref={textboxObj}
+      created={oncreate}
+    />
+  );
+};
 ```
 
 ```

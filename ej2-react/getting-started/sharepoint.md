@@ -68,7 +68,7 @@ This example demonstrates importing the `Material` theme CSS within the `App.tsx
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
 
-require('@syncfusion/ej2-react-grids/styles/material.css');
+require('@syncfusion/ej2-react-grids/styles/tailwind3.css');
 
 {% endhighlight %}
 {% endtabs %}
@@ -134,7 +134,7 @@ import * as React from 'react';
 import { IAppProps } from './IAppProps';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 
-require('@syncfusion/ej2-react-grids/styles/material.css');
+require('@syncfusion/ej2-react-grids/styles/tailwind3.css');
 
 export default class App extends React.Component<IAppProps, {}> {
   

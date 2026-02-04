@@ -10,19 +10,15 @@ domainurl: ##DomainURL##
 
 # Multiple panes in React Chart component
 
-Chart area can be divided into multiple panes using [`rows`](https://ej2.syncfusion.com/react/documentation/api/chart/rowModel/) and [`columns`](https://ej2.syncfusion.com/react/documentation/api/chart/columnModel/).
+The chart area can be divided into multiple panes by defining rows and columns using the [`rows`](https://ej2.syncfusion.com/react/documentation/api/chart/row) and [`columns`](https://ej2.syncfusion.com/react/documentation/api/chart/column) collections. This feature is useful for displaying multiple related datasets within the same chart container while maintaining clear visual separation.
 
 ## Rows
 
-To split the chart area vertically into number of rows, use [`rows`](https://ej2.syncfusion.com/react/documentation/api/chart/rowModel/) property of the chart.
+To split the chart area vertically into multiple rows, use the [`rows`](https://ej2.syncfusion.com/react/documentation/api/chart/row) property of the chart.
 
-*1. You can allocate space for each row by using the [`height`](https://ej2.syncfusion.com/react/documentation/api/chart/rowModel/#height) property.
-The value can be either in percentage or in pixel.*
-
-*2. To associate a vertical axis to a particular row, specify its index to
-  [`rowIndex`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#rowindex) property of the axis.*
-
-*3. To customize each row’s bottom line, use [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/rowModel/#border) property.*
+- Space for each row can be allocated by using the [`height`](https://ej2.syncfusion.com/react/documentation/api/chart/row#height) property. The value can be specified either in pixels or as a percentage.
+- To associate a vertical axis with a specific row, assign the corresponding index using the [`rowIndex`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#rowindex) property of the axis.
+- To customize the bottom line of each row, use the [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#border) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -41,7 +37,7 @@ The value can be either in percentage or in pixel.*
 
 {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-panes-cs1" %}
 
-For spanning the vertical axis along multiple row, you can use [`span`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#span) property of an axis.
+To span a vertical axis across multiple rows, use the [`span`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#span) property of the axis.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -62,16 +58,12 @@ For spanning the vertical axis along multiple row, you can use [`span`](https://
 
 ## Columns
 
-To split the chart area horizontally into number of columns, use [`columns`](https://ej2.syncfusion.com/react/documentation/api/chart/columnModel/) property of the chart.
-
-*1. You can allocate space for each column by using the [`width`](https://ej2.syncfusion.com/react/documentation/api/chart/columnModel/#width)
-property. The given width can be either in percentage or in pixel.*
-
-*2. To associate a horizontal axis to a particular column, specify its index to
-  [`columnIndex`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#columnindex) property of the axis.*
-
-*3. To customize each column’s bottom line, use [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/columnModel/#border)
+To split the chart area horizontally into multiple columns, use the [`columns`](https://ej2.syncfusion.com/react/documentation/api/chart/column) property of the chart.
   property.*
+
+- Space for each column can be allocated using the [`width`](https://ej2.syncfusion.com/react/documentation/api/chart/column#width) property. The width can be specified either in pixels or as a percentage.
+- To associate a horizontal axis with a specific column, assign the corresponding index using the [`columnIndex`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#columnindex) property of the axis.
+- To customize the bottom line of each column, use the [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/column#border) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -90,7 +82,7 @@ property. The given width can be either in percentage or in pixel.*
 
 {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-panes-cs3" %}
 
-For spanning the horizontal axis along multiple column, you can use [`span`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#span) property of an axis.
+To span a horizontal axis across multiple columns, use the [`span`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#span) property of the axis.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

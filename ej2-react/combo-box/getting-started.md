@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting started with React Combo box component
 
 This section explains how to create a simple **ComboBox** component and configure its available functionalities in React.
 
-To get start quickly with React ComboBox, you can check on this video:
+To get started quickly with the React ComboBox component, you can check this video:
 
 {% youtube "https://www.youtube.com/watch?v=o77F7gewC40" %}
 
@@ -29,13 +29,14 @@ The following list of dependencies are required to use the `ComboBox` component 
         |-- @syncfusion/ej2-lists
         |-- @syncfusion/ej2-inputs
         |-- @syncfusion/ej2-navigations
+        |-- @syncfusion/ej2-notifications
         |-- @syncfusion/ej2-popups
             |-- @syncfusion/ej2-buttons
 ```
 
 ## Installation and configuration
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To easily set up a React application, use Vite, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite supports TypeScript, JSX, and other modern JavaScript features while optimizing your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -44,14 +45,14 @@ To create a new React application, run the following command.
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+To set up a React application in a TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in a JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -66,12 +67,12 @@ All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages 
 To install ComboBox component, use the following command
 
 ```bash
-npm install @syncfusion/ej2-react-dropdowns –save
+npm install @syncfusion/ej2-react-dropdowns --save
 ```
 
 ## Adding ComboBox component
 
-Now, you can start adding ComboBox component in the application. For getting started, add the ComboBox component in `src/App.tsx` file using following code.Now place the below ComboBox code in the `src/App.tsx`.
+Now, you can start adding the ComboBox component to your application. Update the `src/App.tsx` file with the following code to initialize the ComboBox component.
 
 `[Class-component]`
 
@@ -79,7 +80,7 @@ Now, you can start adding ComboBox component in the application. For getting sta
 
 import { ComboBoxComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
-import * as ReactDOM from "react-dom";
+import './App.css'
 
 export default class App extends React.Component<{}, {}> {
   public render() {
@@ -89,8 +90,6 @@ export default class App extends React.Component<{}, {}> {
     );
   }
 }
-
-ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
 `[Functional-component]`
@@ -98,16 +97,14 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 ```ts
 import { ComboBoxComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
-import * as ReactDOM from "react-dom";
+import './App.css'
 
-function App() {
+export default function App() {
     return (
     // specifies the tag for render the ComboBox component
         <ComboBoxComponent id='comboelement'/>
     );
 }
-
-ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
 ## Adding CSS reference
@@ -120,9 +117,11 @@ Import the ComboBox component required CSS references as follows in `src/App.css
 
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-react-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-react-dropdowns/styles/material.css";;
+@import "../node_modules/@syncfusion/ej2-react-dropdowns/styles/material.css";
 
 ```
+
+You can check out the [Themes](../appearance/theme) topic to know more about built-in themes and different ways to refer themes in a React application.
 
 ## Binding data source
 
@@ -134,7 +133,7 @@ After initialization, populate the ComboBox with data using the `dataSource` pro
 
 import { ComboBoxComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import './App.css'
 
 export default class App extends React.Component<{}, {}> {
   // define the array of data
@@ -146,7 +145,6 @@ export default class App extends React.Component<{}, {}> {
     );
   }
 }
-ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
 `[Functional-component]`
@@ -155,9 +153,9 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 import { ComboBoxComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import './App.css'
 
-function App() {
+export default function App() {
   // define the array of data
   const sportsData: string[] = ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis'];
     return (
@@ -165,7 +163,6 @@ function App() {
         <ComboBoxComponent id="comboelement" dataSource={sportsData} />
     );
 }
-ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
 ## Run the application
@@ -176,7 +173,7 @@ Now run the `npm run dev` command in the console to start the development server
 npm run dev
 ```
 
-`[Class-componnet]`
+`[Class-component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -189,7 +186,7 @@ npm run dev
 
  {% previewsample "page.domainurl/code-snippet/combobox/basic-cs21" %}
 
-`[Functional-componnet]`
+`[Functional-component]`
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -204,7 +201,7 @@ npm run dev
 
 ## Custom values
 
-The ComboBox allows the user to give input as custom value which is not required to present in predefined set of values. By default, this support is enabled by [allowCustom](https://ej2.syncfusion.com/react/documentation/api/combo-box/#allowcustom) property. In this case, both text field and value field considered as same. The custom value will be sent to post back handler when a form is about to be submitted.
+The ComboBox allows the user to give input as custom value which is not required to present in predefined set of values. By default, this support is enabled by [allowCustom](https://ej2.syncfusion.com/react/documentation/api/combo-box/index-default#allowcustom) property. In this case, both text field and value field considered as same. The custom value will be sent to post back handler when a form is about to be submitted.
 
 `[Class-component]`
 
@@ -236,9 +233,9 @@ The ComboBox allows the user to give input as custom value which is not required
 
 By default, the width of the popup list automatically adjusts according to the ComboBox input element's width, and the height of the popup list has '300px'.
 
-The height and width of the popup list can also be customized using the [popupHeight](https://ej2.syncfusion.com/react/documentation/api/combo-box/#popupheight) &nbsp;and [popupWidth](https://ej2.syncfusion.com/react/documentation/api/combo-box/#popupwidth) property respectively.
+The height and width of the popup list can also be customized using the [popupHeight](https://ej2.syncfusion.com/react/documentation/api/combo-box/index-default#popupheight) &nbsp;and [popupWidth](https://ej2.syncfusion.com/react/documentation/api/combo-box/index-default#popupwidth) property respectively.
 
-In the following sample, popup list's width and height have configured.
+In the following sample, popup list's width and height have been configured.
 
 `[Class-component]`
 

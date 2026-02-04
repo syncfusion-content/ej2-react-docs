@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Data markers in React Chart component
 
-Data markers are used to provide information about the data points in the series. You can add a shape to adorn each data point.
+Data markers are visual indicators placed at each data point on a series, helping to clearly identify and highlight individual values in your chart. Markers improve readability and accessibility, especially in line and area charts where data points may otherwise be unclear. Customize marker shape, color, size, and appearance to match your design requirements.
 
 <!-- markdownlint-disable MD036 -->
 
@@ -18,7 +18,7 @@ Data markers are used to provide information about the data points in the series
 
 <!-- markdownlint-disable MD036 -->
 
-Markers can be added to points by enabling the [`visible`](https://ej2.syncfusion.com/react/documentation/api/chart/markerSettings/#visible) option of the marker property. By default, distinct markers will be enabled for each series in the chart.
+Enable markers for data points by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/chart/markerSettings#visible) option to `true` in the marker property. Each series receives distinct markers by default, improving visual differentiation.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -39,7 +39,7 @@ Markers can be added to points by enabling the [`visible`](https://ej2.syncfusi
 
 ## Shape
 
-Markers can be assigned with different shapes such as Rectangle, Circle, Diamond, etc. using the [`shape`](https://ej2.syncfusion.com/react/documentation/api/chart/markerSettings/#shape) property.
+Assign different shapes to markers such as Rectangle, Circle, Diamond, Triangle, and others using the [`shape`](https://ej2.syncfusion.com/react/documentation/api/chart/markerSettings#shape) property. Shape selection helps distinguish between multiple series and improves visual clarity.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -58,11 +58,11 @@ Markers can be assigned with different shapes such as Rectangle, Circle, Diamond
 
 {% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs8" %}
 
->Note : To know more about the marker shape type refer the [`shape`](https://ej2.syncfusion.com/react/documentation/api/chart/markerSettings/#shape).
+>Note : To know more about the marker shape type refer the [`shape`](https://ej2.syncfusion.com/react/documentation/api/chart/markerSettings#shape).
 
 ## Images
 
-Apart from the shapes, you can also add custom images to mark the data point using the [`imageUrl`](https://ej2.syncfusion.com/react/documentation/api/chart/markerSettings/#imageurl) property.
+Use custom images as markers instead of predefined shapes by setting the [`imageUrl`](https://ej2.syncfusion.com/react/documentation/api/chart/markerSettings#imageurl) property. This allows branded or thematic markers that enhance visual appeal and user engagement.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -83,7 +83,7 @@ Apart from the shapes, you can also add custom images to mark the data point usi
 
 ## Customization
 
-Marker's color and border can be customized using `fill` and `border` properties.
+Customize marker appearance by modifying the `fill` (background color) and `border` properties. Combined with shape and image options, these customizations enable comprehensive marker styling to match your application design.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -104,7 +104,7 @@ Marker's color and border can be customized using `fill` and `border` properties
 
 ## Customizing specific point
 
-You can also customize the specific marker and label using [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/#pointrender-emittypeipointrendereventargs) event. The `pointRender` event allows you to change the shape, color and border for a point.
+Use the [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart#pointrender-emittypeipointrendereventargs) event to customize markers for individual data points. This event allows you to conditionally change shape, color, and border properties based on data values or other criteria.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -125,7 +125,7 @@ You can also customize the specific marker and label using [`pointRender`](https
 
 ## Fill marker with series color
 
-Marker can be filled with the series color by setting the [`isFilled`](https://ej2.syncfusion.com/react/documentation/api/chart/markerSettingsModel/#isFilled-boolean) property to <b>true</b>.
+Fill markers with the series color by enabling the [`isFilled`](https://ej2.syncfusion.com/react/documentation/api/chart/markerSettingsModel#isFilled-boolean) property. This creates a cohesive visual design where markers inherit the series color automatically.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -146,5 +146,5 @@ Marker can be filled with the series color by setting the [`isFilled`](https://e
 
 ## See Also
 
-* [Customize the marker with different shape](./how-to/#customize-the-marker-with-different-shape)
+* [Customize the marker with different shape](./how-to#customize-the-marker-with-different-shape)
 * [Highlight a Marker in Multicolored Line Series](https://support.syncfusion.com/kb/article/21514/how-to-highlight-a-specific-marker-in-a-multicolored-line-series-in-react-chart)

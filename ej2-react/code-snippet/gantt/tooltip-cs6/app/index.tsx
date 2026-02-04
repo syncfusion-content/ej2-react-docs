@@ -1,29 +1,50 @@
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, Inject, Edit, EditSettingsModel } from '@syncfusion/ej2-react-gantt';
+import {  GanttComponent,  Inject,  Edit,  EditSettingsModel, TooltipSettings, TaskFieldsModel} from '@syncfusion/ej2-react-gantt';
+
 import { data } from './datasource';
-function App(){
-    const taskFields: any = {
+
+function App() {
+
+  const taskFields: TaskFieldsModel = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    parentID: 'ParentID',
+    parentID: 'ParentID'
   };
-  const  editOptions: EditSettingsModel = {
+
+  const editOptions: EditSettingsModel = {
     allowTaskbarEditing: true
   };
-  function tooltipTemplate(props:any) {
-    return (<div>Duration : {props.Duration}</div>)
+
+  const taskbarTooltipTemplate = (props: any) => {
+    return (
+      <div>
+        <div><b>{props.TaskName}</b></div>
+        <div>Duration : {props.Duration}</div>
+      </div>
+    );
   };
-  const template: any = tooltipTemplate;
-  const tooltipSettings: any = {
-     editing: template
+
+  const tooltipSettings: TooltipSettings = {
+    showTooltip: true,
+    taskbar: taskbarTooltipTemplate
   };
-        return <GanttComponent dataSource={data} taskFields={taskFields}
-           tooltipSettings={tooltipSettings} editSettings={editOptions} height = '450px'>
-            <Inject services={[Edit]} />
-        </GanttComponent>
-};
+
+  return (
+    <GanttComponent
+      dataSource={data}
+      taskFields={taskFields}
+      editSettings={editOptions}
+      tooltipSettings={tooltipSettings}
+      height="450px"
+    >
+      <Inject services={[Edit]} />
+    </GanttComponent>
+  );
+}
+
 ReactDOM.render(<App />, document.getElementById('root'));

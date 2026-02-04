@@ -12,8 +12,8 @@ const data = [
     { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, ParentID: 5, Progress: 50 },
     { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 4, ParentID: 5, Predecessor: "6SS", Progress: 50 }
 ];
-function  App(){
-    const  taskFields = {
+function App() {
+    const taskFields = {
         id: 'TaskID',
         name: 'TaskName',
         startDate: 'StartDate',
@@ -22,16 +22,21 @@ function  App(){
         dependency: 'Predecessor',
         parentID: 'ParentID'
     };
-   const  editSettings = {
+    const editSettings = {
         allowTaskbarEditing: true
     };
-   let ganttInstance;
-    function load() {
-        this.isAdaptive = true;  // Forcing desktop layout to change as mobile layout
-    }
-        return <GanttComponent dataSource={data} ref={gantt => ganttInstance = gantt} taskFields={taskFields}
-        editSettings={editSettings} height = '400px' load={load}>
-            <Inject services={[Edit, Selection]} />
-        </GanttComponent>
+    let ganttInstance;
+
+    const load = () => {
+        const ganttObj = document.getElementById('ganttDefault')?.ej2_instances[0];
+        if (ganttObj) {
+            ganttObj.isAdaptive = true; // Forces mobile layout
+        }
+    };
+
+    return <GanttComponent dataSource={data} ref={gantt => ganttInstance = gantt} taskFields={taskFields}
+        editSettings={editSettings} height='400px' load={load}>
+        <Inject services={[Edit, Selection]} />
+    </GanttComponent>
 };
 ReactDOM.render(<App />, document.getElementById('root'));

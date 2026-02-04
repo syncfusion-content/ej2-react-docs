@@ -12,7 +12,8 @@ domainurl: ##DomainURL##
 
 ## Multiple Series
 
-You can add multiple series to the chart by using [`series`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/) property. The series are rendered in the order as it is added to the series array.
+Multiple series can be added to a chart by using the [`series`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel) property. Each series represents a distinct set of data, and all configured series are rendered in the same chart area for easy comparison.
+The series are rendered in the same order in which they are defined in the `series` collection. This ordering determines the visual stacking of series when multiple series overlap.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -33,7 +34,7 @@ You can add multiple series to the chart by using [`series`](https://ej2.syncfus
 
 ## Combination Series
 
-Combination of different types like Line, column etc, can be rendered in a chart.
+A combination chart allows different series types, such as Line and Column, to be rendered together in a single chart. This is useful for comparing multiple datasets that have different visual representation requirements.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -52,4 +53,4 @@ Combination of different types like Line, column etc, can be rendered in a chart
 
 {% previewsample "page.domainurl/code-snippet/chart/series/combination-cs1" %}
 
->Note: Bar series cannot be combined with any other series as the axis orientation is different from other series.
+> Note: Bar series cannot be combined with other series types because their axis orientation differs from other series.

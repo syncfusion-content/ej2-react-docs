@@ -105,7 +105,7 @@ Include a matching `index.html` with the element where the app mounts:
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Essential JS 2 for React Components" />
     <meta name="author" content="Syncfusion" />
-    <link href="http://npmci.syncfusion.com/packages/development/ej2-react-buttons/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/32.1.19/tailwind3.css" rel="stylesheet" />
     <link href="index.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
@@ -123,8 +123,8 @@ Include a matching `index.html` with the element where the app mounts:
 Individual component CSS files are available in each package's `styles` folder. Reference them in your CSS, for example:
 
 ```css
-@import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-react-buttons/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-react-buttons/styles/tailwind3.css';
 ```
 
 **Step 6:** Run the application
