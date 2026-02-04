@@ -12,11 +12,11 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD013 -->
 
-Annotations are used to mark the specific area of interest in the Maps with texts, shapes, or images. Any number of annotations can be added to the Maps component.
+Annotations allow marking specific areas of interest on a map by adding custom content such as text, shapes, images, or HTML elements. Unlike markers and data labels, annotations provide flexibility to overlay any custom HTML content at precise locations. Multiple annotations can be added to the Maps component.
 
-## Annotation
+## Adding an annotation
 
-By using the [`content`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel/#content) property of [`AnnotationsDirective`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel), text content or id of an element or an HTML string can be specified to render a new HTML element in Maps.
+The [`content`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel#content) property of [`AnnotationsDirective`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel), accepts text content, the ID of an HTML element, or an HTML string to render custom content on the Maps.
 
 <!-- markdownlint-disable MD036 -->
 
@@ -58,7 +58,7 @@ root.render(<App />);
 
 ### Changing the z-index
 
-The stack order of an annotation element can be changed using the [`zIndex`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel/#zindex) property in the [`AnnotationsDirective`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel).
+The [`zIndex`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel#zindex) property in the [`AnnotationsDirective`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel) controls the stack order of annotation elements. A higher z-index value places the annotation above other Maps elements.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -75,7 +75,7 @@ The stack order of an annotation element can be changed using the [`zIndex`](ht
 
 ### Positioning an annotation
 
-Annotations can be placed anywhere in the Maps by specifying pixel or percentage values to the [`x`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel/#x) and [`y`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel/#y) properties in the [`AnnotationsDirective`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel).
+Annotations can be placed anywhere in the Maps by specifying pixel or percentage values to the [`x`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel#x) and [`y`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel#y) properties in the [`AnnotationsDirective`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -92,7 +92,7 @@ Annotations can be placed anywhere in the Maps by specifying pixel or percentage
 
 ### Alignment of an annotation
 
-Annotations can be aligned using the [`horizontalAlignment`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel/#horizontalalignment) and [`verticalAlignment`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel/#verticalalignment) properties in the [`AnnotationsDirective`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel). The possible values can be **Center**, **Far**, **Near** and **None**.
+Annotations can be aligned using the [`horizontalAlignment`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel#horizontalalignment) and [`verticalAlignment`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel#verticalalignment) properties in the [`AnnotationsDirective`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel). The supported values are **Center**, **Far**, **Near**, and **None**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -105,9 +105,9 @@ Annotations can be aligned using the [`horizontalAlignment`](https://ej2.syncfus
 
  {% previewsample "page.domainurl/code-snippet/maps/default-map-cs3" %}
 
-## Multiple Annotation
+## Multiple annotations
 
-Multiple annotations can be added to the Maps by adding multiple [`AnnotationDirective`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel) in the [`AnnotationsDirective`](https://ej2.syncfusion.com/react/documentation/api/maps/#annotations) and customization for the annotations can be done with the [`AnnotationDirective`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel).
+Multiple annotations can be added to the Maps component by defining an array of annotation objects in the [`AnnotationDirective`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel) property. Each annotation can be customized individually using the [`AnnotationsDirective`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel) settings.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -119,3 +119,22 @@ Multiple annotations can be added to the Maps by adding multiple [`AnnotationDir
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/maps/default-map-cs4" %}
+
+## Creating custom annotation templates
+
+Initialize the Maps component with annotation option, text content or ID of an HTML element or an HTML string can be specified to render a new element that needs to be displayed in the Maps by using the [`content`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel#content) property. To specify the content position with [`x`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel#x) and [`y`](https://ej2.syncfusion.com/react/documentation/api/maps/annotationModel#y) properties as mentioned in the following example.
+	
+```		
+const logo = require('./compass.png');		
+<img src={logo} height="75px" width="75px"/>		
+```		
+[`app.tsx`]		
+{% tabs %}		
+{% highlight js tabtitle="index.jsx" %}		
+{% include code-snippet/maps/default-map-cs40/app/index.jsx %}		
+{% endhighlight %}		
+{% highlight ts tabtitle="index.tsx" %}		
+{% include code-snippet/maps/default-map-cs40/app/index.tsx %}		
+{% endhighlight %}		
+{% endtabs %}		
+ {% previewsample "page.domainurl/code-snippet/maps/default-map-cs40" %}
