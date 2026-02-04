@@ -8,26 +8,25 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
+# Getting Started with Syncfusion React Gantt Component in Next.js
 
-# Creating a Next.js Application Using Syncfusion<sup style="font-size:70%">&reg;</sup> React Components 
-
-This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component.
+This section outlines the process of creating a Next.js application and integrating Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component.
 
 ## What is Next.js?
 
-[Next.js](https://nextjs.org/) is a React framework that makes it easy to build fast, SEO-friendly, and user-friendly web applications. It provides features such as server-side rendering, automatic code splitting, routing, and API routes, making it an excellent choice for building modern web applications.
+[Next.js](https://nextjs.org/) is a React framework designed for building fast, SEO-friendly web applications. It provides server-side rendering, automatic code splitting, routing, and API routes.
 
 ## Prerequisites
 
 Before getting started with the Next.js application, ensure the following prerequisites are met:
 
-* [Node.js 16.8](https://nodejs.org/en) or later.
+* [Node.js 18.17.0](https://nodejs.org/en) or later (LTS recommended).
 
-* The application is compatible with macOS, Windows, and Linux operating systems.
+* Compatible with macOS, Windows, and Linux
 
 ## Create a Next.js application
 
-To create a new `Next.js` application, use one of the commands that are specific to either NPM or Yarn.
+Generate a new Next.js application using npm or yarn:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -44,7 +43,7 @@ yarn create next-app
 
 Using one of the above commands will lead you to set up additional configurations for the project as below:
 
-1.Define the project name: Users can specify the name of the project directly. Let's specify the name of the project as `ej2-nextjs-gantt`.
+**Step 1: Define the project name** - You can specify the name of the project directly. Let's specify the name of the project as `ej2-nextjs-gantt`.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -54,25 +53,23 @@ Using one of the above commands will lead you to set up additional configuration
 {% endhighlight %}
 {% endtabs %}
 
-2.Select the required packages.
+**Step 2: Select the required packages** - Choose the configuration options for your project. Select **Yes** to use default packages in the application.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
 √ What is your project named? ... ej2-nextjs-gantt
-√ Would you like to use TypeScript? ... No / `Yes`
-√ Would you like to use ESLint? ... No / `Yes`
-√ Would you like to use Tailwind CSS? ... `No` / Yes
-√ Would you like to use `src/` directory? ... No / `Yes`
-√ Would you like to use App Router? (recommended) ... No / `Yes`
-√ Would you like to customize the default import alias? ... `No`/ Yes
-Creating a new Next.js app in D:\ej2-nextjs-gantt.
+? Would you like to use the recommended Next.js defaults?
+>   Yes, use recommended defaults - TypeScript, ESLint, Tailwind CSS, App Router
+    No, reuse previous settings
+    No, customize settings
 
 {% endhighlight %}
 {% endtabs %}
 
-3.Once complete the above mentioned steps to create `ej2-nextjs-gantt`, navigate to the directory using the below command:
+After running the above commands, the project will be created and all required dependencies will be installed automatically.
 
+**Step 3: Navigate to the project directory** - Once you complete the above steps to create `ej2-nextjs-gantt`, navigate to the directory using the below command:
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
@@ -87,7 +84,7 @@ The application is ready to run with default settings. Now, let's add Syncfusion
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
-Here, the [React Gantt Chart component](https://www.syncfusion.com/react-components/react-gantt-chart) is used in the project. To install the React Gantt Chart component, use the following command:
+This guide uses the [React Gantt Chart component](https://www.syncfusion.com/react-components/react-gantt-chart) as an example. To install the React Gantt Chart component in the project, use the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -104,9 +101,9 @@ yarn add @syncfusion/ej2-react-gantt
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme/), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
 
-Import the `Material` theme into the **src/app/globals.css** file and removed the existing styles in that file, as shown below:
+Import the **Tailwind 3** CSS styles for the Gantt Chart component and its dependent components in the **src/app/globals.css** file and remove the existing styles in that file, as shown below:
 
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
@@ -129,13 +126,13 @@ Import the `Material` theme into the **src/app/globals.css** file and removed th
 {% endhighlight %}
 {% endtabs %}
 
-> To know more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme/) section.
+> **Note:** To learn more about built-in themes, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React component
+## Add a Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
 Follow the below steps to add the React Gantt Chart component to the Next.js project:
 
-1.Before adding the Gantt Chart component to your markup, create a `datasource.tsx` file within the **src/app/** folder and add the Gantt Chart component data.
+**Step 1:** Create a `datasource.tsx` file within the **src/app/** folder and add the Gantt Chart component data.
 
 {% tabs %}
 {% highlight ts tabtitle="datasource.tsx" %}
@@ -171,7 +168,7 @@ export const data: object[] = [
 {% endhighlight %}
 {% endtabs %}
 
-2.Then, import and define the Gantt Chart component in the **src/app/page.tsx** file, as shown below: 
+**Step 2:** Import and define the Gantt Chart component with the [dataSource](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#datasource) property and column definitions in the **src/app/page.tsx** file, as shown below:
 
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
@@ -217,6 +214,8 @@ export default function Home() {
 {% endhighlight %}
 {% endtabs %}
 
+> NOTE: When using the Next.js App Router, the **src/app/page.tsx** file must be a client component to use Syncfusion interactive features. So the code includes `'use client'` at the top of the file.
+
 ## Run the application
 
 To run the application, use the following command:
@@ -236,4 +235,4 @@ yarn run dev
 
 To learn more about the functionality of the Gantt Chart component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/gantt/getting-started#module-injection).
 
-> [View the NEXT.js Gantt sample in the GitHub repository](https://github.com/SyncfusionExamples/ej2-nextjs-gantt).
+> [View the Next.js Gantt sample in the GitHub repository](https://github.com/SyncfusionExamples/ej2-nextjs-gantt).
