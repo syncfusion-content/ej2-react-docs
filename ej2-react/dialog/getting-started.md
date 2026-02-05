@@ -20,7 +20,7 @@ To get started quickly with the React Dialog component, watch the following vide
 
 The following dependencies are required to use the React Dialog component in an application.
 
-```javascript
+```
 |-- @syncfusion/ej2-react-popups
     |-- @syncfusion/ej2-react-base
     |-- @syncfusion/ej2-react-buttons
@@ -38,19 +38,19 @@ To set up a React application quickly, use Vite, which provides a faster develop
 
 To create a new Vite-based React application, run the following command.
 
-```bash
+```
 npm create vite@latest my-app
 ```
 To set up a React application in a TypeScript environment, run the following command.
 
-```bash
+```
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
 To set up a React application in a JavaScript environment, run the following command.
 
-```bash
+```
 npm create vite@latest my-app -- --template react
 cd my-app
 npm run dev
@@ -63,7 +63,7 @@ All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages 
 
 To install Dialog component, use the following command
 
-```bash
+```
 npm install @syncfusion/ej2-react-popups --save
 ```
 
@@ -71,7 +71,7 @@ npm install @syncfusion/ej2-react-popups --save
 
 Import the Dialog component's required CSS references in `src/App.css` as follows.
 
-```css
+```
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-react-popups/styles/material.css";
@@ -88,7 +88,7 @@ Now add the React Dialog component to the application. The examples below show h
 
 `[Class-component]`
 
-```ts
+```
 import React, { Component } from 'react';
 import { DialogComponent } from '@syncfusion/ej2-react-popups';
 import './App.css';
@@ -124,7 +124,7 @@ export default class App extends Component<{}, AppState> {
 
 `[Functional-component]`
 
-```ts
+```
 import { DialogComponent } from '@syncfusion/ej2-react-popups';
 import * as React from "react";
 import './App.css';
@@ -150,7 +150,7 @@ export default function App() {
 
 Run the `npm run dev` command to start the development server. This command compiles the code and serves the application locally.
 
-```bash
+```
 npm run dev
 ```
 
@@ -185,7 +185,7 @@ The following example shows the Dialog.
 > In the Dialog control, the `max-height` is calculated based on the height of the Dialog target element. If the `target` property is not configured, `document.body` is used as the target. To ensure the Dialog displays at the proper height, add a `min-height` to the target element.
 > If the Dialog is rendered based on the body, the Dialog height is determined by the body element height. If the Dialog's height is larger than the body height, the Dialog height will not be set; in that case, set the CSS for `html` and `body` to ensure the Dialog can size correctly.
 
-```css
+```
 
 html, body {
    height: 100%;
@@ -201,7 +201,7 @@ For more details, see the [React 17 Release Notes](https://reactjs.org/blog/2020
 
 Solution: Bind the Dialog to the React root element using the `target` property:
 
-```jsx
+```
 <DialogComponent
   id="parent-dialog"
   target={"#root"}  // Bind to React root element
@@ -214,7 +214,7 @@ Ensure the application setup correctly references the root element:
 
 In main entry file (e.g., main.jsx):
 
-```jsx
+```
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
@@ -224,7 +224,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 In html file (e.g., index.html):
 
-```html
+```
 <div id="root"></div>
 ```
 
