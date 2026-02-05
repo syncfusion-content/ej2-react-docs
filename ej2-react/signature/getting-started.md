@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting started with React Signature component
 
 The following section explains the required steps to build the Signature component with its basic usage in step-by-step procedure.
 
