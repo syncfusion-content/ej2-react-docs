@@ -16,7 +16,7 @@ The following section explains the required steps to build the Dialog component 
 
 The following dependencies are required to use the Dialog component in an application.
 
-```javascript
+```
 |-- @syncfusion/ej2-react-popups
     |-- @syncfusion/ej2-react-base
     |-- @syncfusion/ej2-react-buttons
@@ -30,7 +30,7 @@ The following dependencies are required to use the Dialog component in an applic
 
 You can use [Create React App](https://github.com/facebook/create-react-app) to set up applications. To install `create-react-app`, run the following command:
 
-```bash
+```
 npm install -g create-react-app
 ```
 
@@ -38,7 +38,7 @@ Start a new project using Create React App as follows:
 
 <div class='tsx'>
 
-```bash
+```
 create-react-app quickstart --scripts-version=react-scripts-ts
 cd quickstart
 ```
@@ -46,7 +46,7 @@ cd quickstart
 
 <div class='jsx'>
 
-```bash
+```
 create-react-app quickstart
 cd quickstart
 ```
@@ -58,7 +58,7 @@ All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages 
 
 To install Dialog component, use the following command
 
-```bash
+```
 npm install @syncfusion/ej2-react-popups --save
 ```
 
@@ -66,7 +66,7 @@ npm install @syncfusion/ej2-react-popups --save
 
 Import the Dialog component's required CSS references in `src/App.css` as follows.
 
-```css
+```
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-react-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-react-popups/styles/material.css";
@@ -82,7 +82,7 @@ You can check out the [Themes](https://ej2.syncfusion.com/react/documentation/ap
 
 Now add the Dialog component to the application. The examples below show how to add the Dialog component in `src/App.tsx`.
 
-```ts
+```
 import { DialogComponent } from '@syncfusion/ej2-react-popups';
 import * as React from "react";
 import './App.css';
@@ -108,7 +108,7 @@ export default function App() {
 
 Run the `npm run start` command to run the application in the browser.
 
-```bash
+```
 npm run start
 ```
 
@@ -128,7 +128,7 @@ The below example shows the Dialog.
 > In the Dialog control, the `max-height` is calculated based on the height of the Dialog target element. If the `target` property is not configured, `document.body` is used as the target. To ensure the Dialog displays at the proper height, add a `min-height` to the target element.
 > If the Dialog is rendered based on the body, the Dialog height is determined by the body element height. If the Dialog's height is larger than the body height, the Dialog height will not be set; in that case, set the CSS for `html` and `body` to ensure the Dialog can size correctly.
 
-```css
+```
 
 html, body {
    height: 100%;
