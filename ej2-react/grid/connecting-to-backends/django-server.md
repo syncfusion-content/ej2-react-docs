@@ -500,12 +500,12 @@ import {
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 
 const App: React.FC = () => {
-
+const editSettings: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true };
   return (
     <GridComponent
       dataSource={data}
       toolbar={['Add','Edit','Delete','Update','Cancel','Search']}
-      editSettings={{ allowAdding: true, allowEditing: true, allowDeleting: true }}
+      editSettings={editSettings}
     >
       <ColumnsDirective>
         <ColumnDirective field="record_id" headerText="Record ID" width="120" isPrimaryKey={true} visible={false} />
@@ -763,10 +763,11 @@ Filtering helps refine records by applying conditions on column values. It allow
 2. Optionally configure the filtering user interface (for example, Menu, CheckBox, or Excel style) by setting the[filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid#filtersettings) property.
 
 ```ts
+    const filterSettings: FilterSettingsModel = { type: 'Excel' };
     <GridComponent
         dataSource={data}
         allowFiltering={true}
-        filterSettings={{type: "Excel" }}>
+        filterSettings={filterSettings}>
       <ColumnsDirective>
         <ColumnDirective field="record_id" headerText="Record ID" width="120" isPrimaryKey={true} visible={false} />
         {/* Include additional columns here */}

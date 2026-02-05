@@ -67,7 +67,7 @@ The above command installs [Signature dependencies](./getting-started#dependenci
 
 Add Signature component's styles as given below in `App.css`.
 
-```
+```c
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
 ```

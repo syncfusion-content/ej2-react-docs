@@ -761,6 +761,7 @@ function ForeignKeyColumn() {
     url: 'http://localhost:xxxx/api/Customers',
     adaptor: new UrlAdaptor(),
   });
+  const filterSettings: FilterSettingsModel = { type: 'Menu' };
 
   return (
     <div className="control-pane">
@@ -771,7 +772,7 @@ function ForeignKeyColumn() {
           ref={(grid) => (gridInstance = grid)}
           allowFiltering={true}
           allowSorting={true}
-          filterSettings={{ type: 'Menu' }}
+          filterSettings={filterSettings}
           toolbar={toolbarOptions}
         >
           <ColumnsDirective>

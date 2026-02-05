@@ -806,11 +806,12 @@ The `GraphQLAdaptor` automatically passes the filter conditions to the server th
 1. Set the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowfiltering) property to "true".
 
 ```ts
+const filterSettings: FilterSettingsModel = { type: 'Excel' };
 <GridComponent
   ref={gridRef}
   dataSource={productDetails}
   allowFiltering={true}
-  filterSettings={{type: "CheckBox" }}>    
+  filterSettings={filterSettings}>    
   <ColumnsDirective>
     <ColumnDirective
       field="productId"

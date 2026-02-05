@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Grid Component in the SharePoint Framework
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component can be integrated into a [SharePoint](https://learn.microsoft.com/en-us/sharepoint/dev/) Framework (SPFx) project using the techniques outlined in this article. These steps will walk you through the process of adding a robust data grid to your SharePoint solutions.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component can be integrated into a [SharePoint](https://learn.microsoft.com/en-us/sharepoint/dev) Framework (SPFx) project using the techniques outlined in this article. These steps will walk you through the process of adding a robust data grid to your SharePoint solutions.
 
 `SharePoint` Framework (SPFx) is a development model and framework provided by Microsoft for building custom solutions and extensions for SharePoint and Microsoft Teams. It is a modern, client-side framework that allows developers to create web parts, extensions, and customizations that can be deployed and used within SharePoint sites and Teams applications.
 
@@ -110,7 +110,7 @@ npm install @syncfusion/ej2-react-grids
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> provides various themes for React components. You can import CSS styles for the desired theme into your project.  Refer to the [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme/) to learn more about built-in themes and different ways to refer to themes in a React project.
+Syncfusion<sup style="font-size:70%">&reg;</sup> provides various themes for React components. You can import CSS styles for the desired theme into your project.  Refer to the [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a React project.
 
 In this article, the `Fluent` theme is applied using CSS styles, which are available in installed packages. The necessary `Fluent` CSS styles for the Grid component were imported into the `~src/webparts/reactGridComponent/components/ReactGridComponent.tsx` file. 
 
@@ -218,7 +218,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component provides sup
 
 When using custom binding, the Grid expects the result of the custom logic to be an object with properties `result` and `count`. The result property should contain the data to be displayed in the Grid, while the `count` property indicates the total number of records in the dataset for your application. To utilize custom binding, you can handle the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started). The DataManager integrates seamlessly with the React Grid to manage custom data processing and binding.
 
-The Grid component offers various powerful features for managing grid actions such as **paging**, **grouping**, **sorting**, and **filtering**. These actions trigger the [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/#datastatechange) event. For CRUD operations, including **Create**, **Read**, **Update**, and **Delete**, the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/#datasourcechanged) event is triggered. This event allows you to handle and manipulate data based on user interactions.
+The Grid component offers various powerful features for managing grid actions such as **paging**, **grouping**, **sorting**, and **filtering**. These actions trigger the [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid#datastatechange) event. For CRUD operations, including **Create**, **Read**, **Update**, and **Delete**, the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid#datasourcechanged) event is triggered. This event allows you to handle and manipulate data based on user interactions.
 
 ### Integrating the redux service with the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid
 
@@ -383,7 +383,7 @@ const dataStateChange = (state: DataStateChangeEventArgs) => {
 
 **Step 7: Fetching Grid Data using useEffect**
 
-To fetch grid data and populate the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource) property of the grid, you can use the [useEffect](https://react.dev/reference/react/useEffect) hook in React. The useEffect hook allows you to perform side effects, such as fetching data, after the component has rendered. Here's an example of how to fetch grid data using useEffect:
+To fetch grid data and populate the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource) property of the grid, you can use the [useEffect](https://react.dev/reference/react/useEffect) hook in React. The useEffect hook allows you to perform side effects, such as fetching data, after the component has rendered. Here's an example of how to fetch grid data using useEffect:
 
 Add the following code to the `~src/webparts/reactGridComponent/components/ReactGridComponent.tsx` file.
 
@@ -630,7 +630,7 @@ export const GridInitialState: GridModel  = {
 
 ### Handling filtering operations
 
-When filtering operation is performed in the grid, the [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/#datastatechange) event is triggered, providing access to the following referenced arguments within the event.
+When filtering operation is performed in the grid, the [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid#datastatechange) event is triggered, providing access to the following referenced arguments within the event.
 
 ![FilterBar](./images/custom-binding-filterbar.png)
 
@@ -867,7 +867,7 @@ const gridReducer = (state = initialState, action: any) => {
 
 In React, lazy loading refers to the technique of loading data dynamically when they are needed, instead of loading everything upfront. Lazy load grouping allows you to load and display grouped data efficiently by fetching only the required data on demand. 
 
-To enable this feature, you need to set the [groupSettings.enableLazyLoading](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings/#enableLazyLoading) property to **true**. Also, you need to manage the state based on the initial grid action as follows.
+To enable this feature, you need to set the [groupSettings.enableLazyLoading](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings#enableLazyLoading) property to **true**. Also, you need to manage the state based on the initial grid action as follows.
 
 You can change the grid state as follows:
 
@@ -926,7 +926,7 @@ const gridReducer = (state = initialState, action: any) => {
 
 ### Handling CRUD operations
 
-To perform CRUD (Create, Read, Update, Delete) operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component, you can utilize the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/#datasourcechanged) event. This event is triggered when a CRUD action is performed in the grid, allowing you to capture the changes and update the Redux `store` or perform any other necessary operations.
+To perform CRUD (Create, Read, Update, Delete) operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component, you can utilize the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid#datasourcechanged) event. This event is triggered when a CRUD action is performed in the grid, allowing you to capture the changes and update the Redux `store` or perform any other necessary operations.
 
 **Integrating CRUD Operations**
 
@@ -934,11 +934,11 @@ To implement CRUD operations using Syncfusion<sup style="font-size:70%">&reg;</s
 
 1. **Configure grid settings:** Set up the necessary grid settings, such as allowing editing, adding, and deleting records. Define the toolbar options to facilitate your interactions.
 
-2. **Handle data state changes:** Utilize the [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/#datastatechange) event to respond to changes in the grid's data state. This event is triggered whenever you interact with the grid, such as paging or sorting.
+2. **Handle data state changes:** Utilize the [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid#datastatechange) event to respond to changes in the grid's data state. This event is triggered whenever you interact with the grid, such as paging or sorting.
 
-3. **Execute CRUD operations:** Within the event handler for [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/#datasourcechanged), implement logic to handle various CRUD actions based on the action or requestType property of the event arguments.
+3. **Execute CRUD operations:** Within the event handler for [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid#datasourcechanged), implement logic to handle various CRUD actions based on the action or requestType property of the event arguments.
 
-4. **Call endEdit method:** After performing CRUD operations (adding, editing, or deleting), call the [endEdit](https://ej2.syncfusion.com/react/documentation/api/grid/#endedit) method to signal the completion of the operation and update the grid accordingly.
+4. **Call endEdit method:** After performing CRUD operations (adding, editing, or deleting), call the [endEdit](https://ej2.syncfusion.com/react/documentation/api/grid#endedit) method to signal the completion of the operation and update the grid accordingly.
 
 **Insert operation**
 
@@ -955,7 +955,7 @@ const gridReducer = (state = initialState, action: any) => {
 
     switch (action.type) {       
         case Grid_Add: {
-            // Here, we will perform the insert action using the DataManager
+            // Here, the insert action is performed using the DataManager
             gridData.insert(action.payload.data, '', undefined);
             const addedData = gridData.executeLocal(new Query());
             // Update the original state.
@@ -964,7 +964,7 @@ const gridReducer = (state = initialState, action: any) => {
             const result = new DataManager(addedData).executeLocal(action.gridQuery);
             // Execute the grid page query based on your skip and take values.
             const currentPageData = new DataManager(result).executeLocal(new Query().skip(action.payload.state.skip).take(action.payload.state.take));
-            // We need to return the grid data as result and count with object type.
+            // The grid data must be returned as result and count with object type.
             return ({
                 data: { result: currentPageData, count: filter.length ? result.length : count },
             })
@@ -988,7 +988,7 @@ const gridReducer = (state = initialState, action: any) => {
 
     switch (action.type) {
         case Grid_Editing: {
-            // Here, we are going to perform update action by using the DataManager.
+            // Here, the update action is performed by using the DataManager.
             gridData.update('OrderID', action.payload.data);
             const updatedData = gridData.executeLocal(new Query());
             // Update the original state.
@@ -997,7 +997,7 @@ const gridReducer = (state = initialState, action: any) => {
             const result = new DataManager(updatedData).executeLocal(action.gridQuery);
             // Execute the grid page query based on your skip and take values.
             const currentPageData = new DataManager(result).executeLocal(new Query().skip(action.payload.state.skip).take(action.payload.state.take));
-            // We need to return the grid data as result and count with object type.
+            // The grid data must be returned as result and count with object type.
             return ({
                 data: { result: currentPageData, count: filter.length ? result.length : count }
             })
@@ -1021,7 +1021,7 @@ const gridReducer = (state = initialState, action: any) => {
 
     switch (action.type) {
         case Grid_Delete: {
-            // Here, we will perform the delete action by using DataManager.
+            // Here, the delete action is performed by using DataManager.
             gridData.remove('OrderID', { OrderID: action.payload.data[0]['OrderID'] });
             const updatedData = gridData.executeLocal(new Query());
             // Update the original state.
@@ -1030,7 +1030,7 @@ const gridReducer = (state = initialState, action: any) => {
             const result = new DataManager(updatedData).executeLocal(action.gridQuery);
             // Execute the grid page query based on your skip and take values.
             const currentPageData = new DataManager(result).executeLocal(new Query().skip(action.payload.state.skip).take(action.payload.state.take));
-            // We need to return the grid data as result and count with object type.
+            // The grid data must be returned as result and count with object type.
             return ({
                 data: { result: currentPageData, count: filter.length ? result.length : count }
             })
@@ -1259,7 +1259,7 @@ const gridReducer = (state = initialState, action: any) => {
                 }
             })        
         case Grid_Add: {
-            // Here, we will perform the insert action using the DataManager
+            // Here, the insert action is performed using the DataManager
             gridData.insert(action.payload.data, '', undefined);
             const addedData = gridData.executeLocal(new Query());
             // Update the original state.
@@ -1268,13 +1268,13 @@ const gridReducer = (state = initialState, action: any) => {
             const result = new DataManager(addedData).executeLocal(action.gridQuery);
             // Execute the grid page query based on your skip and take values.
             const currentPageData = new DataManager(result).executeLocal(new Query().skip(action.payload.state.skip).take(action.payload.state.take));
-            // We need to return the grid data as result and count with object type.
+            // The grid data must be returned as result and count with object type.
             return ({
                 data: { result: currentPageData, count: filter.length ? result.length : count },
             })
         }
         case Grid_Editing: {
-            // Here, we are going to perform update action by using the DataManager.
+            // Here, the update action is performed by using the DataManager.
             gridData.update('OrderID', action.payload.data);
             const updatedData = gridData.executeLocal(new Query());
             // Update the original state.
@@ -1283,13 +1283,13 @@ const gridReducer = (state = initialState, action: any) => {
             const result = new DataManager(updatedData).executeLocal(action.gridQuery);
             // Execute the grid page query based on your skip and take values.
             const currentPageData = new DataManager(result).executeLocal(new Query().skip(action.payload.state.skip).take(action.payload.state.take));
-            // We need to return the grid data as result and count with object type.
+            // The grid data must be returned as result and count with object type.
             return ({
                 data: { result: currentPageData, count: filter.length ? result.length : count }
             })
         }
         case Grid_Delete: {
-            // Here, we will perform the delete action by using DataManager.
+            // Here, the delete action is performed by using DataManager.
             gridData.remove('OrderID', { OrderID: action.payload.data[0]['OrderID'] });
             const updatedData = gridData.executeLocal(new Query());
             // Update the original state.
@@ -1298,7 +1298,7 @@ const gridReducer = (state = initialState, action: any) => {
             const result = new DataManager(updatedData).executeLocal(action.gridQuery);
             // Execute the grid page query based on your skip and take values.
             const currentPageData = new DataManager(result).executeLocal(new Query().skip(action.payload.state.skip).take(action.payload.state.take));
-            // We need to return the grid data as result and count with object type.
+            // The grid data must be returned as result and count with object type.
             return ({
                 data: { result: currentPageData, count: filter.length ? result.length : count }
             })

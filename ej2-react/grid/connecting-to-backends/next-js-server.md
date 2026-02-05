@@ -105,8 +105,12 @@ The Syncfusion React Grid provides [custom binding](https://ej2.syncfusion.com/r
   [app/page.tsx]
 
   'use client';
+  import { useEffect } from 'react';
+  import { GridComponent } from '@syncfusion/ej2-react-grids';
 
   export default function HealthCareGrid() {
+    let gridInstance: GridComponent;
+    const doctorIdRules: Object = { required: true };
     // Fetch data from server with current state
     const fetchData = async (gridState: any) => {
       const response = await fetch(`/api/health_care?gridState=${encodeURIComponent(JSON.stringify(gridState))}`, {
@@ -137,17 +141,18 @@ The Syncfusion React Grid provides [custom binding](https://ej2.syncfusion.com/r
 
     return (
       <GridComponent
-        dataSource={data}
-        dataStateChange={dataStateChange}
+        ref={(g: GridComponent) => { gridInstance = g }}
+        dataSource= {[]}
       >
         <ColumnsDirective>
-          <ColumnDirective field='DoctorId' headerText='Doctor ID' width='120' isPrimaryKey={true} validationRules={{ required: true }} />
+          <ColumnDirective field='DoctorId' headerText='Doctor ID' width='120' isPrimaryKey={true} validationRules={doctorIdRules} />
           {/* Include additional columns here */}
         </ColumnsDirective>
       </GridComponent>
     );
   }
 ```
+
 **Custom binding workflow**:
 The Syncfusion React Grid custom databinding feature to seamlessly integrate with external API services. When Grid actions such as paging, sorting, filtering, or CRUD operations are performed, requests are sent to the API. The API processes these operations and returns the results in the required format, giving complete control over application‑specific workflows and enabling efficient handling of large datasets. The custom databinding feature can interact with backend APIs through two key events.
 
@@ -182,7 +187,7 @@ Inside the **api/health_care/route.ts** file, import the `DataManager` and `Quer
   // GET - Retrieve the resultant data
   export async function GET(request: NextRequest) {
 
-    const gridStateParam = new URL(request.url).searchParams.get('gridState');
+    const gridStateParam: string = new URL(request.url).searchParams.get('gridState') as string;
     const gridState = JSON.parse(decodeURIComponent(gridStateParam));
     const query = new Query();
 
@@ -199,6 +204,7 @@ In this application, the Grid communicates with the Next.js  server through the 
   [app/page.tsx]
 
   export default function HealthCareGrid() {
+    const doctorIdRules: Object = { required: true };
     // Handle data state changes (paging, sorting, filtering, searching)
     const dataStateChange = async (args: DataStateChangeEventArgs) => {
       const gridState = {
@@ -215,7 +221,7 @@ In this application, the Grid communicates with the Next.js  server through the 
       if (
         args.action &&
         (args.action.requestType === 'filterchoicerequest' ||
-          args.action.requestType === 'filtersearchbegin' ||
+          args.action.requestType === 'filterSearchBegin' ||
           args.action.requestType === 'stringfilterrequest')
       ) {
         args.dataSource(res.result); // For binding data to the Excel filter popup
@@ -227,11 +233,12 @@ In this application, the Grid communicates with the Next.js  server through the 
 
     return (
       <GridComponent
+        ref={(g: GridComponent) => { gridInstance = g }
         dataSource={[]}
         dataStateChange={dataStateChange}
       >
         <ColumnsDirective>
-          <ColumnDirective field='DoctorId' headerText='Doctor ID' width='120' isPrimaryKey={true} validationRules={{ required: true }} />
+          <ColumnDirective field='DoctorId' headerText='Doctor ID' width='120' isPrimaryKey={true} validationRules={doctorIdRules} />
           {/* Include additional columns here */}
         </ColumnsDirective>
       </GridComponent>
@@ -246,19 +253,21 @@ The Grid supports filtering through a menu interface that restricts data based o
 ```ts
   [app/page.tsx]
 
-  import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Filter } from '@syncfusion/ej2-react-grids';
+  import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Filter, FilterSettingsModel  } from '@syncfusion/ej2-react-grids';
 
   export default function HealthCareGrid() {
+    const doctorIdRules: Object = { required: true };
+    const filterSettings: FilterSettingsModel = { type: 'Excel' };
     return (
       <GridComponent
         ref={(g: any) => { gridInstance = g }}
         dataSource={[]}
         allowFiltering={true}
-        filterSettings={{ type: 'Excel' }}
+        filterSettings={filterSettings}
         dataStateChange={dataStateChange}
       >
         <ColumnsDirective>
-          <ColumnDirective field='DoctorId' headerText='Doctor ID' width='120' isPrimaryKey={true} validationRules={{ required: true }} />
+          <ColumnDirective field='DoctorId' headerText='Doctor ID' width='120' isPrimaryKey={true} validationRules={doctorIdRules} />
           {/* Include additional columns here */}
         </ColumnsDirective>
         <Inject services={[Filter]} />
@@ -282,7 +291,7 @@ The following code example demonstrates handling the filter action in the server
   // GET - Retrieve the resultant data
   export async function GET(request: NextRequest) {
 
-    const gridStateParam = new URL(request.url).searchParams.get('gridState');
+    const gridStateParam: string = new URL(request.url).searchParams.get('gridState') as string;
     const gridState = JSON.parse(decodeURIComponent(gridStateParam));
     const query = new Query();
 
@@ -341,15 +350,16 @@ The search feature in the Grid allows users to quickly find and filter records b
   import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
 
   export default function HealthCareGrid() {
+    const doctorIdRules: Object = { required: true };
     return (
       <GridComponent
-        ref={(g: any) => { gridInstance = g }}
+        ref={(g: GridComponent) => { gridInstance = g }}
         dataSource={[]}
         toolbar={['Search']}
         dataStateChange={dataStateChange}
       >
         <ColumnsDirective>
-          <ColumnDirective field='DoctorId' headerText='Doctor ID' width='120' isPrimaryKey={true} validationRules={{required: true}}/>
+          <ColumnDirective field='DoctorId' headerText='Doctor ID' width='120' isPrimaryKey={true} validationRules={doctorIdRules}/>
           {/* Include additional columns here */}
         </ColumnsDirective>
         <Inject services={[Toolbar]} />
@@ -379,7 +389,7 @@ The following code example demonstrates handling the search action inside the se
   // GET - Retrieve the resultant data
   export async function GET(request: NextRequest) {
 
-    const gridStateParam = new URL(request.url).searchParams.get('gridState');
+    const gridStateParam: string = new URL(request.url).searchParams.get('gridState') as string;
     const gridState = JSON.parse(decodeURIComponent(gridStateParam));
     const query = new Query();
 
@@ -406,15 +416,16 @@ The sorting feature in the Grid allows users to organize records in ascending or
   import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Sort } from '@syncfusion/ej2-react-grids';
 
   export default function HealthCareGrid() {
+    const doctorIdRules: Object = { required: true };
     return (
       <GridComponent
-        ref={(g: any) => { gridInstance = g }}
+        ref={(g: GridComponent) => { gridInstance = g }}
         dataSource={[]}
         allowSorting={true}
         dataStateChange={dataStateChange}
       >
         <ColumnsDirective>
-          <ColumnDirective field='DoctorId' headerText='Doctor ID' width='120' isPrimaryKey={true} validationRules={{required: true}}/>
+          <ColumnDirective field='DoctorId' headerText='Doctor ID' width='120' isPrimaryKey={true} validationRules={doctorIdRules}/>
           {/* Include additional columns here */}
         </ColumnsDirective>
         <Inject services={[Sort]} />
@@ -445,7 +456,7 @@ The following code example demonstrates handling the sort action inside the serv
   // GET - Retrieve the resultant data
   export async function GET(request: NextRequest) {
 
-    const gridStateParam = new URL(request.url).searchParams.get('gridState');
+    const gridStateParam: string = new URL(request.url).searchParams.get('gridState') as string;
     const gridState = JSON.parse(decodeURIComponent(gridStateParam));
     const query = new Query();
 
@@ -471,15 +482,16 @@ The paging feature allows efficient loading of large data sets through on‑dema
   import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page } from '@syncfusion/ej2-react-grids';
 
   export default function HealthCareGrid() {
+    const doctorIdRules: Object = { required: true };
     return (
       <GridComponent
-        ref={(g: any) => { gridInstance = g }}
+        ref={(g: GridComponent) => { gridInstance = g }}
         dataSource={[]}
         allowPaging={true}
         dataStateChange={dataStateChange}
       >
         <ColumnsDirective>
-          <ColumnDirective field='DoctorId' headerText='Doctor ID' width='120' isPrimaryKey={true} validationRules={{required: true}}/>
+          <ColumnDirective field='DoctorId' headerText='Doctor ID' width='120' isPrimaryKey={true} validationRules={doctorIdRules}/>
           {/* Include additional columns here */}
         </ColumnsDirective>
         <Inject services={[Page]} />
@@ -503,7 +515,7 @@ The following code example demonstrates handling the paging action inside the se
   // GET - Retrieve the resultant data
   export async function GET(request: NextRequest) {
 
-    const gridStateParam = new URL(request.url).searchParams.get('gridState');
+    const gridStateParam: string = new URL(request.url).searchParams.get('gridState') as string;
     const gridState = JSON.parse(decodeURIComponent(gridStateParam));
     const query = new Query();
 
@@ -532,27 +544,25 @@ Grid data requires a primary key to modify row data based on the database’s un
 ```ts
   [app/page.tsx]
 
-  import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Edit, Toolbar } from '@syncfusion/ej2-react-grids';
+  import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Edit, Toolbar, EditSettingsModel } from '@syncfusion/ej2-react-grids';
 
   export default function HealthCareGrid() {
     const dataSourceChanged = (args: DataSourceChangedEventArgs) => {
       // Handle CRUD operations here 
     };
+    const editSettings: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
+    const doctorIdRules: Object = { required: true };
     return (
       <GridComponent
-        dataSource={data}
-        editSettings={{
-          allowEditing: true,
-          allowAdding: true,
-          allowDeleting: true,
-          mode: 'Normal',
-        }}
+        ref={(g: GridComponent) => { gridInstance = g }
+        dataSource={[]}
+        editSettings={editSettings}
         toolbar={['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search']}
         dataStateChange={dataStateChange}
         dataSourceChanged={dataSourceChanged}
       >
         <ColumnsDirective>
-          <ColumnDirective field='DoctorId' headerText='Doctor ID' width='120' isPrimaryKey={true} validationRules={{ required: true }} />
+          <ColumnDirective field='DoctorId' headerText='Doctor ID' width='120' isPrimaryKey={true} validationRules={doctorIdRules} />
           {/* Include the additional columns here */}
         </ColumnsDirective>
         <Inject
@@ -595,8 +605,8 @@ The image illustrates the newly insert data passed to the server through the `da
 
 ```ts
   // Handle CRUD operations
-  const dataSourceChanged = (args: DataSourceChangedEventArgs) => {
-    const response = fetch('/api/health_care', {
+  const dataSourceChanged = async (args: DataSourceChangedEventArgs) => {
+    const response = await fetch('/api/health_care', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ ...args.data, action: 'add' }),
@@ -641,9 +651,9 @@ The image illustrates the update data passed to the server through the `dataSour
 
 ```ts
   // Handle CRUD operations
-  const dataSourceChanged = (args: DataSourceChangedEventArgs) => {
-    const response = fetch('/api/health_care', {
-      'PUT',
+  const dataSourceChanged = async (args: DataSourceChangedEventArgs) => {
+    const response = await fetch('/api/health_care', {
+      method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ ...args.data, action: 'edit' }),
     });
@@ -681,9 +691,9 @@ The image illustrates the update data passed to the server through the `dataSour
 
 ```ts
   // Handle CRUD operations
-  const dataSourceChanged = (args: DataSourceChangedEventArgs) => {
-    const response = fetch('/api/health_care', {
-      'DELETE',
+  const dataSourceChanged = async (args: DataSourceChangedEventArgs) => {
+    const response = await fetch('/api/health_care', {
+      method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ ...args.data, action: 'delete' }),
     });
@@ -701,14 +711,21 @@ Next.js uses a file‑system‑based router to manage navigation, primarily thro
 
 In this application, routing is used to display the appointment details of doctors. When the "View Appointment Details" button in the Doctors portal is clicked, the selected "DoctorId" is passed as a router parameter. The patients assigned to that doctor are then displayed on a separate page.
 
-**Step 1:** Create a dynamic route folder (**app/patients/doctorID**).
+**Step 1:** Create a dynamic route folder (**app/patients/[doctorID]**).
 
-**Step 2:** Create a (**page.tsx**) file inside this folder (**app/patients/doctorID/page.tsx**).
+**Step 2:** Create a (**page.tsx**) file inside this folder (**app/patients/[doctorID]/page.tsx**).
 
-**Step 3:** Configure the Doctors portal page with a template column. Enable routing to the appointment details page when the button inside the template column is clicked, and pass "DoctorID" as the router parameter.
+**Step 3:** Install the Syncfusion React Button component to the render routing button.
+
+```bash
+  npm install @syncfusion/ej2-react-buttons --save
+```
+
+**Step 4:** Configure the Doctors portal page with a template column. Enable routing to the appointment details page when the button inside the template column is clicked, and pass "DoctorID" as the router parameter.
 
 ```ts
   import { useRouter } from 'next/navigation';
+  import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 
   export default function HealthCareGrid() {
     const router = useRouter();
@@ -727,12 +744,12 @@ In this application, routing is used to display the appointment details of docto
     }
 
     return (
-      <div style={{ padding: '20px' }}>
+      <div>
         <h1>Doctors Portal</h1>
         <GridComponent
           ref={(g: any) => { gridInstance = g }}
           height={400}
-        >
+          >
           <ColumnsDirective>
             {/* Include columns here */}
             <ColumnDirective headerText='Appointments' width='150' template={appointmentTemplate} allowEditing={false} />
@@ -743,9 +760,16 @@ In this application, routing is used to display the appointment details of docto
   }
 
 ```
-**Step 4:** Add the code for the Grid containing appointment details inside the dynamic route file (**app/Patients/DoctorID/page.tsx**). Retrieve the router parameters and pass the "DoctorId" to the query property of the Grid. This ensures that only the patients associated with the current doctor are fetched and displayed.
+**Step 5:** Add the code for the Grid containing appointment details inside the dynamic route file (**app/Patients/DoctorID/page.tsx**). Retrieve the router parameters and pass the "DoctorId" to the query property of the Grid. This ensures that only the patients associated with the current doctor are fetched and displayed.
 
 ```ts
+  'use client';
+
+  import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+  import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+  import { patientData } from '../../data/health_care_Entities';
+  import { use } from 'react';
+  import { Query } from '@syncfusion/ej2-data';
   import { useRouter } from 'next/navigation';
 
   export default function Patient({ params }: { params: Promise<{ DoctorID: string }> }) {
@@ -772,7 +796,6 @@ In this application, routing is used to display the appointment details of docto
           <ColumnsDirective>
             {/* Include columns here */}
           </ColumnsDirective>
-          <Inject services={[Page, Sort, Filter, Group, Edit, Toolbar]} />
         </GridComponent>
         <div className='backbtn'>
           {/* Button to return back to Home page */}

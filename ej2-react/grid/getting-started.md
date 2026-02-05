@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started
+# Getting Started
 
 This section explains the steps required to create a simple React Grid component and demonstrate its basic usage in a React environment.
 
-> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview)
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
 
 To get started quickly with React Grid, you can watch this video:
 
@@ -20,7 +20,7 @@ To get started quickly with React Grid, you can watch this video:
 
 ## Setup for local development
 
-To set up a React application quickly, use Vite with `create-vite-app`. Vite provides a faster development environment, smaller bundle sizes, and optimized production builds compared to traditional tools like `create-react-app`. For detailed setup steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/).
+Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -33,14 +33,14 @@ This command will prompt you for a few settings for the new project, such as sel
 
 ![Initial_setup](images/Initial-setup.jpg)
 
-To set-up a React application in TypeScript environment, run the following command.
+To set up a React application in TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -50,8 +50,8 @@ npm run dev
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Grid packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
-To install Grid component, use the following command
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+To install the Grid component, use the following command
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
@@ -80,9 +80,9 @@ The following CSS files are available in the **../node_modules/@syncfusion** pac
 
 ## Adding Grid component
 
-Now, you can start adding React Grid component in the application. For getting started, add the Grid component in **src/App.tsx** file using following code.
+The React Grid component can be added to the application by following these steps. To get started, add the Grid component to the **src/App.tsx** file using the following code.
 
-Place the following grid code in the **src/App.tsx**.
+The following grid code should be placed in the **src/App.tsx** file.
 
 ```ts
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
@@ -104,7 +104,7 @@ function App() {
 export default App;
 ```
 
-Create a [src/app/datasource.ts] file and utilize the following dataset to provide JSON data for the grid component.
+Create a [src/app/datasource.ts] file and use the following dataset to provide JSON data for the grid component.
 
 ```typescript
 export let data: Object[] = [
@@ -154,8 +154,8 @@ export let data: Object[] = [
 
 React Grid component features are segregated into individual feature-wise modules.
 In order to use a particular feature, you need to inject its feature service in the **App**.
-In the current application, we are going to use paging, sorting, filtering and grouping feature of Grid.
-Please find relevant feature service name and description as follows.
+The paging, sorting, filtering, and grouping features of the Grid are used in the current application.
+The relevant feature service names and descriptions are listed below.
 
 * **Page** - Inject this service to use paging feature.
 * **Sort** - Inject this service to use sorting feature.
@@ -168,7 +168,7 @@ These modules should be injected into the grid using the **Inject** directive.
 
 ## Enable paging
 
-The paging feature divides Grid records into multiple pages, improving performance and usability when handling large datasets. Enable paging by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid/#allowpaging) property to `true` and injecting the **Page** module. Without the **Page** module, the pager will not render. Customize pager behavior using the [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid/#pagesettings) property.
+The paging feature divides Grid records into multiple pages, improving performance and usability when handling large datasets. Enable paging by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid#allowpaging) property to `true` and injecting the **Page** module. Without the **Page** module, the pager will not render. Customize pager behavior using the [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid#pagesettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -189,7 +189,7 @@ The paging feature divides Grid records into multiple pages, improving performan
 
 ## Enable sorting
 
-The sorting feature allows ordering Grid records by clicking column headers. Enable sorting by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/#allowsorting) property to `true` and injecting the **Sort** module. Without the **Sort** module, clicking headers will not sort the data. Customize sorting behavior using the [sortSettings](https://ej2.syncfusion.com/react/documentation/api/grid/#sortsettings) property.
+The sorting feature allows ordering Grid records by clicking column headers. Enable sorting by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) property to `true` and injecting the **Sort** module. Without the **Sort** module, clicking headers will not sort the data. Customize sorting behavior using the [sortSettings](https://ej2.syncfusion.com/react/documentation/api/grid#sortsettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -210,7 +210,7 @@ The sorting feature allows ordering Grid records by clicking column headers. Ena
 
 ## Enable filtering
 
-The filtering feature enables searching and refining Grid records based on column values. Enable filtering by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/#allowfiltering) property to `true` and injecting the [Filter](https://ej2.syncfusion.com/react/documentation/api/grid/#filtermodule) module. Without the **Filter** module, the filter bar will not render. Customize filtering options using the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid/#filtersettings) property.
+The filtering feature enables searching and refining Grid records based on column values. Enable filtering by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) property to `true` and injecting the [Filter](https://ej2.syncfusion.com/react/documentation/api/grid#filtermodule) module. Without the **Filter** module, the filter bar will not render. Customize filtering options using the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid#filtersettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -231,7 +231,7 @@ The filtering feature enables searching and refining Grid records based on colum
 
 ## Enable grouping
 
-The grouping feature organizes Grid records into logical groups based on column values, improving data visualization and analysis. Enable grouping by setting the [allowGrouping](https://ej2.syncfusion.com/react/documentation/api/grid/#allowgrouping) property to `true` and injecting the [Group](https://ej2.syncfusion.com/react/documentation/api/grid/#groupmodule) module. Without the **Group** module, the group drop area will not render. Customize grouping behavior using the [groupSettings](https://ej2.syncfusion.com/react/documentation/api/grid/#groupsettings) property.
+The grouping feature organizes Grid records into logical groups based on column values, improving data visualization and analysis. Enable grouping by setting the [allowGrouping](https://ej2.syncfusion.com/react/documentation/api/grid#allowgrouping) property to `true` and injecting the [Group](https://ej2.syncfusion.com/react/documentation/api/grid#groupmodule) module. Without the **Group** module, the group drop area will not render. Customize grouping behavior using the [groupSettings](https://ej2.syncfusion.com/react/documentation/api/grid#groupsettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -271,7 +271,7 @@ The output appears as follows.
 
  {% previewsample "page.domainurl/code-snippet/grid/getting-started-cs5" %}
 
-> You can refer to our [React Grid](https://www.syncfusion.com/react-components/react-data-grid) feature tour page for its groundbreaking feature representations. You can also explore our [React Grid Component example](https://ej2.syncfusion.com/react/demos/#/material/grid/overview) that shows how to render the Grid in React.
+> Refer to the [React Grid](https://www.syncfusion.com/react-components/react-data-grid) feature tour page for its groundbreaking feature representations. You can also explore our [React Grid Component example](https://ej2.syncfusion.com/react/demos/#/material/grid/overview) that shows how to render the Grid in React.
 
 ## See also
 

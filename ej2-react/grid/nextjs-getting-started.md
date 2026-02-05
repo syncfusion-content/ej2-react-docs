@@ -15,14 +15,14 @@ This section provides a step-by-step guide for creating a Next.js application an
 
 ## What is Next.js?
 
-[Next.js](https://nextjs.org/) is a React framework that makes it easy to build fast, SEO-friendly, and user-friendly web applications. It provides features such as server-side rendering, automatic code splitting, routing, and API routes, making it an excellent choice for building modern web applications.
+[Next.js](https://nextjs.org) is a React framework that makes it easy to build fast, SEO-friendly, and user-friendly web applications. It provides features such as server-side rendering, automatic code splitting, routing, and API routes, making it an excellent choice for building modern web applications.
 
 ## Prerequisites
 
-Before getting started with the Next.js application, ensure the following prerequisites are met:
+Before starting with Next.js, ensure the following prerequisites are met:
 
-* [Node.js 16.8](https://nodejs.org/en) or later (verify your installed version using `node --version`)
-* A compatible operating system: macOS, Windows, or Linux
+* [Node.js 16.8](https://nodejs.org/en) or later (verify your installed version using `node --version`).
+* A compatible operating system: macOS, Windows, or Linux.
 
 ## Create a Next.js application
 
@@ -46,7 +46,7 @@ yarn create next-app
 The setup process will prompt for project configuration. Provide the following responses:
 
 **Define the project name:**
-Users can specify the name of the project directly. Let's specify the name of the project as `ej2-nextjs-grid`.
+Specify the project name as `ej2-nextjs-grid`.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -76,7 +76,7 @@ Creating a new Next.js app in D:\ej2-nextjs-grid.
 {% endtabs %}
 
 **Navigate to the project directory:**
-Once complete the above mentioned steps to create `ej2-nextjs-grid`, navigate to the directory using the below command:
+After completing the above mentioned steps to create `ej2-nextjs-grid`, navigate to the directory using the below command:
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -86,7 +86,7 @@ cd ej2-nextjs-grid
 {% endhighlight %}
 {% endtabs %}
 
-Once the setup is complete, the application is ready to configure with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
+Once the setup is complete, the application is ready to be configured with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
@@ -109,9 +109,9 @@ yarn add @syncfusion/ej2-react-grids
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme/), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
 
-Import the `Material` theme into the **src/app/globals.css** file and removed the existing styles in that file, as shown below:
+Import the `Material` theme into the **src/app/globals.css** file and remove the existing styles in that file, as shown below:
 
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
@@ -129,7 +129,7 @@ Import the `Material` theme into the **src/app/globals.css** file and removed th
 {% endhighlight %}
 {% endtabs %}
 
-> Refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme/) for information about other available themes and component-specific CSS references.
+> Refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for information about other available themes and component-specific CSS references.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
