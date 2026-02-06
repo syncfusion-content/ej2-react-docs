@@ -8,17 +8,17 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting started with React Carousel component
 
 This section explains how to create a simple [React Carousel](https://www.syncfusion.com/react-components/react-carousel), and configure its available functionalities in React.
 
-To get started quickly with React Carousel component, you can check out this video:
+To get started quickly with the React Carousel component, refer to this video:
 
 {% youtube "https://www.youtube.com/watch?v=g0cjYdIqs5g" %}
 
 ## Dependencies
 
-The following list of dependencies are required to use the Carousel component in your application.
+The following dependencies are required to use the Carousel component in an application. These packages provide core functionalities and UI controls for the Carousel.
 
 ```javascript
 |-- @syncfusion/ej2-react-navigations
@@ -28,9 +28,9 @@ The following list of dependencies are required to use the Carousel component in
         |-- @syncfusion/ej2-buttons
 ```
 
-## Setup your development environment
+## Setup a development environment
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up the environment using JavaScript and optimizes applications for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -72,9 +72,9 @@ which are required to render the component in the `React` environment.
 Add Carousel component's styles as given below in `App.css`.
 
 ```css
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
 ```
 
 ## Add Carousel to the project
@@ -105,7 +105,7 @@ export default App;
 
 ## Run the application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Now run the `npm run dev` command in the console to start the development server. This command compiles code and serves the application locally, opening it in the browser.
 
 ```
 npm run dev
@@ -113,4 +113,4 @@ npm run dev
 
  {% previewsample "page.domainurl/code-snippet/carousel/getting-started-cs1" %}
 
-N> You can also explore our [React Carousel example](https://ej2.syncfusion.com/react/demos/#/fabric/carousel/default) that shows you how to configure the Carousel in React.
+N> Explore the [React Carousel example](https://ej2.syncfusion.com/react/demos/#/tailwind3/carousel/default) for a demonstration of configuring the Carousel in React.

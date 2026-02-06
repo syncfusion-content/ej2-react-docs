@@ -14,11 +14,11 @@ This section explains how to create a simple **Card** component with basic styli
 
 ## Dependencies
 
-The Card component is styled entirely via CSS. To use it, include the appropriate CSS files; no additional JavaScript dependencies are required.
+The Card component is styled entirely using CSS. To use the component, include the required CSS files in the application. No additional JavaScript dependencies are required for basic card rendering and styling.
 
 ## Setup for local development
 
-To set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide).  Vite scaffolds the project using JavaScript or TypeScript and optimizes the application for production.
 
 > **Note:** To create a React application using `create-react-app`, see the [Syncfusion documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app).
 
@@ -59,7 +59,7 @@ npm install @syncfusion/ej2-layouts --save
 `[src/styles/styles.css]`
 
 ```css
-@import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css';
 ```
 
 ## Add a simple Card

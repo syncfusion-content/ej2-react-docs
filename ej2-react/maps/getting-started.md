@@ -113,6 +113,7 @@ you need to inject its feature services using `Inject` tag.  You can find the mo
 * NavigationLine - Inject this provider to use navigation lines feature.
 * Selection - Inject this provider to use selection feature.
 * Zoom - Inject this provider to use zooming and panning feature.
+* Polygon - Inject this provider to use polygon feature.
 
 For example, we are going to use tooltip, data label and legend features of the maps.
 Now import the MapsTooltip, DataLabel and Legend modules from maps package and inject it into the
@@ -152,8 +153,8 @@ This section explains how to bind GeoJSON data to the map.
 
    ```
 
-Elements in the maps will get rendered in the layers. So add a layer collection to the maps by using [`layers`](../api/maps/#layers) property.
-Now bind the GeoJSON data to the [`shapeData`](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel/#shapedata) property.
+Elements in the maps will get rendered in the layers. So add a layer collection to the maps by using [`layers`](../api/maps#layers) property.
+Now bind the GeoJSON data to the [`shapeData`](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel#shapedata) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -170,9 +171,9 @@ Now bind the GeoJSON data to the [`shapeData`](https://ej2.syncfusion.com/react/
 
 The following properties in layers are used for binding data source to map.
 
-   * [dataSource](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel/#datasource)
-   * [shapeDataPath](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel/#shapedatapath)
-   * [shapePropertyPath](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel/#shapepropertypath)
+   * [dataSource](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel#datasource)
+   * [shapeDataPath](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel#shapedatapath)
+   * [shapePropertyPath](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel#shapepropertypath)
 
 The `dataSource` property takes collection value as input. For example, the list of objects can be provided as input. This data is further used in tooltip, data label, bubble, legend and in color mapping.
 
@@ -196,9 +197,9 @@ The JSON object "electionData" is used as data source below.
 ## Apply Color Mapping
 
 The Color Mapping feature supports customization of shape colors based on the underlying value of shape received from bounded data.
-Specify the field name from which the values have to be compared for the shapes in [`colorValuePath`](https://ej2.syncfusion.com/react/documentation/api/maps/shapeSettingsModel/#colorvaluepath) property in [`shapeSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/shapeSettingsModel/).
+Specify the field name from which the values have to be compared for the shapes in [`colorValuePath`](https://ej2.syncfusion.com/react/documentation/api/maps/shapeSettingsModel#colorvaluepath) property in [`shapeSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/shapeSettingsModel).
 
-Specify color and value in [`colorValuePath`](https://ej2.syncfusion.com/react/documentation/api/maps/shapeSettingsModel/#colorvaluepath) property. Here '#D84444' is specified for 'Trump' and '#316DB5' is specified for 'Clinton'.
+Specify color and value in [`colorValuePath`](https://ej2.syncfusion.com/react/documentation/api/maps/shapeSettingsModel#colorvaluepath) property. Here '#D84444' is specified for 'Trump' and '#316DB5' is specified for 'Clinton'.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -215,7 +216,7 @@ Specify color and value in [`colorValuePath`](https://ej2.syncfusion.com/react/d
 
 ## Add Title for Maps
 
-You can add a title using [`titleSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/titleSettingsModel/) property to the map to provide quick
+You can add a title using [`titleSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/titleSettingsModel) property to the map to provide quick
 information to the user about the shapes rendered in the map.
 
 {% tabs %}
@@ -233,7 +234,7 @@ information to the user about the shapes rendered in the map.
 
 ## Enable Legend
 
-You can show legend for the maps by setting true to the [`visible`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#visible)property in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/) object and by injecting the `Legend`
+You can show legend for the maps by setting true to the [`visible`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel#visible)property in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel) object and by injecting the `Legend`
 service using `Inject` tag.
 
 {% tabs %}
@@ -252,7 +253,7 @@ service using `Inject` tag.
 ## Add Data Label
 
 You can add data labels to show additional information of the shapes in map. This can be achieved by
-setting [`visible`](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel/#visible) property to true in the [`dataLabelSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel/) object and by injecting `DataLabel` service using `Inject` tag.
+setting [`visible`](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel#visible) property to true in the [`dataLabelSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel) object and by injecting `DataLabel` service using `Inject` tag.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -268,7 +269,7 @@ setting [`visible`](https://ej2.syncfusion.com/react/documentation/api/maps/data
 ## Enable Tooltip
 
 The tooltip is useful when you cannot display information by using the data labels due to space constraints.
-You can enable tooltip by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/maps/tooltipSettingsModel/#visible) property as true in [`tooltipSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/tooltipSettingsModel/) object and by injecting `MapsTooltip` service using `Inject` tag.
+You can enable tooltip by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/maps/tooltipSettingsModel#visible) property as true in [`tooltipSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/tooltipSettingsModel) object and by injecting `MapsTooltip` service using `Inject` tag.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

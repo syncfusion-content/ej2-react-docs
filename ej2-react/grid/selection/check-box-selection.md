@@ -120,7 +120,7 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/selection-cs4" %}
+ {% previewsample "page.domainurl/code-snippet/grid/selection-cs4" %}
 
 ## Hide select-all checkbox in column header 
 

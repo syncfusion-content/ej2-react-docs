@@ -8,19 +8,19 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Schedule Component
+# Getting Started with React Scheduler Component
 
-This section briefly explains how to create [**React Scheduler**](https://www.syncfusion.com/react-components/react-scheduler) component and configure its available functionalities in React environment, using Essential<sup style="font-size:70%">&reg;</sup> JS 2 [quickstart](https://github.com/syncfusion/ej2-quickstart.git) seed repository.
+This section explains how to create the [**React Scheduler**](https://www.syncfusion.com/react-components/react-scheduler) component and configure its functionalities in a React environment using the Essential<sup style="font-size:70%">&reg;</sup> JS 2 [quickstart](https://github.com/syncfusion/ej2-quickstart.git) seed repository.
 
-> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview)
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio, and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview)
 
-To get start quickly with React Scheduler using the Create React App, you can check on this video:
+To get started quickly with the React Scheduler using Create React App, refer to this video:
 
 {% youtube "https://www.youtube.com/watch?v=iNkryf_TtZw" %}
 
 ## Dependencies
 
-The following list of dependencies are required to use the Scheduler component in your application.
+The following dependencies are required to use the Scheduler component in your application:
 
 ```ts
 |-- @syncfusion/ej2-react-schedule
@@ -40,27 +40,29 @@ The following list of dependencies are required to use the Scheduler component i
         |-- @syncfusion/ej2-dropdowns
 ```
 
-## Installation and configuration
+## Installation and Configuration
 
-### Setup for local development
+### Setup for Local Development
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To set up a React application efficiently, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-To create a new React application, run the following command.
+To create a new React application, run the following command:
 
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+
+To set up a React application in a TypeScript environment, run:
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+
+To set up a React application in a JavaScript environment, run:
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -68,7 +70,7 @@ cd my-app
 npm run dev
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Packages
 
 All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 To install Scheduler component, use the following command
@@ -77,11 +79,11 @@ To install Scheduler component, use the following command
 npm install @syncfusion/ej2-react-schedule --save
 ```
 
-### Adding CSS reference
+### Adding CSS Reference
 
-Add scheduler component's styles as given below in `src/App.css`.
+Add the Scheduler component's styles in `src/App.css`:
 
-```
+```css
 @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
@@ -93,38 +95,39 @@ Add scheduler component's styles as given below in `src/App.css`.
 @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-react-schedule/styles/tailwind3.css";
 ```
->To refer `App.css` in the application then import it in the `src/App.tsx` file.
 
-In case, if you want to make use of the combined CSS files of entire components, then you can avail it from the root folder of Essential<sup style="font-size:70%">&reg;</sup> JS 2 package and reference it with the code shown below.
+> To use `App.css` in the application, import it in the `src/App.tsx` file.
+
+If you prefer using the combined CSS file for all components, reference it as shown below:
 
 ```css
 @import '../../node_modules/@syncfusion/ej2/tailwind3.css';
 ```
 
-## Module injection
+## Module Injection
 
-Each view types available in scheduler are maintained as individual modules and to work with those views, it is necessary to inject the required modules. The following modules are available in scheduler namely,
+Each Scheduler view type is maintained as an individual module. To use these views, inject the required modules. The available modules are:
 
-* `Day` - Inject this module to work with the day view.
-* `Week` - Inject this module to work with the week view.
-* `WorkWeek` - Inject this module to work with the work week view.
-* `Month` - Inject this module to work with the month view.
-* `Agenda` - Inject this module to work with the agenda view.
-* `MonthAgenda` - Inject this module for displaying month agenda view.
-* `TimelineViews` - Inject this module to work with the timeline day, timeline week, timeline work week view.
-* `TimelineMonth` - Inject this module to work with the timeline month view.
+* `Day` - Enables the day view.
+* `Week` - Enables the week view.
+* `WorkWeek` - Enables the work week view.
+* `Month` - Enables the month view.
+* `Agenda` - Enables the agenda view.
+* `MonthAgenda` - Enables the month agenda view.
+* `TimelineViews` - Enables timeline day, timeline week, and timeline work week views.
+* `TimelineMonth` - Enables the timeline month view.
 
-These modules should be injected into the schedule using the `Inject` method within the `app.tsx` file as shown below. On doing so, only the injected views will be loaded and displayed on the schedule.
+Inject these modules into the Scheduler using the `Inject` method within the `app.tsx` file:
 
 `[src/app/app.tsx]`
 
 ```ts
-<Inject services={[Day, Week, WorkWeek, Month, Agenda, MonthAgenda, TimelineViews, TimelineMonth ]} />
+<Inject services={[Day, Week, WorkWeek, Month, Agenda, MonthAgenda, TimelineViews, TimelineMonth]} />
 ```
 
-## Initialize the schedule
+## Initialize the Scheduler
 
-Import the Scheduler component to your `app.tsx` file using following code.
+Import the Scheduler component into your `app.tsx` file:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -149,15 +152,13 @@ npm run dev
 
 > Above demo will display the empty scheduler.
 
-## Populating appointments
+## Populating Appointments
 
 * To populate the empty Scheduler with appointments, bind the event data to it by assigning the `dataSource` property either with valid JSON data or else with remote URL, from where the data will be fetched.
 
 Here, the local JSON data is assigned to Scheduler's dataSource.
 
 `[src/app/app.tsx]`
-
-
 
 ```ts
 import * as React from 'react';

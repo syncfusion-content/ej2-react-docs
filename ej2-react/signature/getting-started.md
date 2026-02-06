@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting started with React Signature component
 
 The following section explains the required steps to build the Signature component with its basic usage in step-by-step procedure.
 
@@ -20,7 +20,7 @@ To get start quickly with Signature Component using React, you can check on this
 
 The following list of dependencies are required to use the Signature component in your application.
 
-```javascript
+```
 |-- @syncfusion/ej2-react-base
 ```
 
@@ -32,19 +32,19 @@ To easily set up a React application, use `create-vite-app`, which provides a fa
 
 To create a new React application, run the following command.
 
-```bash
+```
 npm create vite@latest my-app
 ```
 To set-up a React application in TypeScript environment, run the following command.
 
-```bash
+```
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
 To set-up a React application in JavaScript environment, run the following command.
 
-```bash
+```
 npm create vite@latest my-app -- --template react
 cd my-app
 npm run dev
@@ -57,7 +57,7 @@ You can choose the component that you want to install. For this application, we 
 
 To install Signature component, use the following command
 
-```bash
+```
 npm install @syncfusion/ej2-react-inputs –save
 ```
 
@@ -67,7 +67,7 @@ The above command installs [Signature dependencies](./getting-started#dependenci
 
 Add Signature component's styles as given below in `App.css`.
 
-```css
+```c
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
 ```
@@ -76,7 +76,7 @@ Add Signature component's styles as given below in `App.css`.
 
 Now, you can create `Signature` component in the application. Add `Signature` component in `src/App.tsx` file using the following code snippet.
 
-```ts
+```
 import { SignatureComponent } from '@syncfusion/ej2-react-inputs';
 import * as React from 'react';
 function App() {

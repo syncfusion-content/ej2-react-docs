@@ -61,7 +61,7 @@ npm install @syncfusion/ej2-react-grids --save
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS files from npm packages, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). Refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for more detail.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS files from npm packages, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/). Refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme/) for more detail.
 
 This example demonstrates importing the `Material` theme CSS within the `App.tsx` file located at `~/src/webparts/app/components/App.tsx`:
 

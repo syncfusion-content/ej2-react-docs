@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with React Gantt Chart component | Syncfusion
+title: Getting Started With React Gantt Chart Component | Syncfusion
 description: Checkout and learn about Getting started with React Gantt Chart component of Syncfusion Essential JS 2 and more details.
 control: Getting started
 platform: ej2-react
@@ -8,19 +8,19 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started in React Gantt control
+# Getting started With React Gantt Chart Component
 
-This section explains you the steps required to create a simple Essential<sup style="font-size:70%">&reg;</sup> JS 2 Gantt in a React application and demonstrates its basic features.
+This section explains the steps required to create a simple React Gantt Chart component and demonstrate its basic usage in a React environment.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview)
 
-To get started quickly with React Gantt Chart the following video explains the project configuration and basic Gantt chart features behaviors:
+To get started quickly with React Gantt Chart, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=pCg5hUSKRh8" %}
 
 ## Dependencies
 
-Following is the list of minimum dependencies required to use the Gantt.
+The following is the list of minimum dependencies required to use the Gantt component.
 
 ```javascript
 |-- @syncfusion/ej2-react-gantt
@@ -28,12 +28,11 @@ Following is the list of minimum dependencies required to use the Gantt.
   |-- @syncfusion/ej2-gantt
   |-- @syncfusion/ej2-layouts
   |-- @syncfusion/ej2-treegrid
-
 ```
 
 ## Setup for Local Development
 
-To easily set up a React application, use `create-vite`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:** To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -42,8 +41,10 @@ To create a new React application, run the following command.
 ```bash
 npm create vite@latest my-app
 ```
+This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
 
-To set-up a React application in TypeScript environment, run the following command.
+![Initial setup](./images/initial-setup.png)
+To set up a React application in a TypeScript environment, run the following command:
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
@@ -51,7 +52,7 @@ cd my-app
 npm run dev
 ```
 
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in a JavaScript environment, run the following command:
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -59,17 +60,20 @@ cd my-app
 npm run dev
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.To install Gantt Chart component, use the following command
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.
+To install Gantt Chart component, use the following command
 
 ```bash
 npm install @syncfusion/ej2-react-gantt --save
 ```
+> The --save will instruct NPM to include the Gantt Chart package inside of the **dependencies** section of the package.json.
+
 
 ## Adding CSS reference
 
-Add components style as given below in src/App.css.
+The following CSS files are available in the **../node_modules/@syncfusion** package folder. Add these as references in **src/App.css**.
 
 ```css
 @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
@@ -88,761 +92,308 @@ Add components style as given below in src/App.css.
 @import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
 ```
 
-> To refer App.css in the application then import it in the src/App.tsx file.
+> To refer **App.css** in the application then import it in the **src/App.tsx** file.
 
 ## Adding Gantt Chart component
 
-Now, you can start adding React Gantt Chart component in the application. For getting started, add the Gantt Chart component in `src/App.tsx` file using following code.
+The React Gantt Chart component can be added to the application by following these steps. To get started, add the Gantt Chart component to the **src/App.tsx** file using the following code.
 
-Place the following gantt code in the src/App.tsx.
+The following Gantt Chart code should be placed in the **src/App.tsx** file.
 
-```ts
-import { GanttComponent } from '@syncfusion/ej2-react-gantt';
+{% tabs %}
+{% highlight js tabtitle="App.tsx" %}
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import { GanttComponent } from '@syncfusion/ej2-react-gantt';
 import './App.css';
 
-const GanttData: object[] = [
-  {
-    TaskID: 1,
-    TaskName: 'Project Initiation',
-    StartDate: new Date('04/02/2019'),
-    EndDate: new Date('04/21/2019'),
-  },
-  {
-    TaskID: 2,
-    TaskName: 'Identify Site location',
-    StartDate: new Date('04/02/2019'),
-    Duration: 4,
-    Progress: 50,
-    ParentId: 1,
-  },
-  {
-    TaskID: 3,
-    TaskName: 'Perform Soil test',
-    StartDate: new Date('04/02/2019'),
-    Duration: 4,
-    Progress: 50,
-    ParentId: 1,
-  },
-  {
-    TaskID: 4,
-    TaskName: 'Soil test approval',
-    StartDate: new Date('04/02/2019'),
-    Duration: 4,
-    Progress: 50,
-    ParentId: 1,
-  },
-  {
-    TaskID: 5,
-    TaskName: 'Project Estimation',
-    StartDate: new Date('04/02/2019'),
-    EndDate: new Date('04/21/2019'),
-  },
-  {
-    TaskID: 6,
-    TaskName: 'Develop floor plan for estimation',
-    StartDate: new Date('04/04/2019'),
-    Duration: 3,
-    Progress: 50,
-    ParentId: 5,
-  },
-  {
-    TaskID: 7,
-    TaskName: 'List materials',
-    StartDate: new Date('04/04/2019'),
-    Duration: 3,
-    Progress: 50,
-    ParentId: 5,
-  },
-  {
-    TaskID: 8,
-    TaskName: 'Estimation approval',
-    StartDate: new Date('04/04/2019'),
-    Duration: 3,
-    Progress: 50,
-    ParentId: 5,
-  },
-];
-function App () {
-    const taskFields: any = {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        parentID:'ParentId'
-    };
-        return (
-            <GanttComponent
-                dataSource={GanttData}
-                height="450px"
-                taskFields={taskFields}
-            />
-        );
-   }
-ReactDOM.render(<App />, document.getElementById('root'));
-```
-
-```ts
-import { GanttComponent } from '@syncfusion/ej2-react-gantt';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import './App.css';
-const GanttData = [
-  {
-    TaskID: 1,
-    TaskName: 'Project Initiation',
-    StartDate: new Date('04/02/2019'),
-    EndDate: new Date('04/21/2019'),
-  },
-  {
-    TaskID: 2,
-    TaskName: 'Identify Site location',
-    StartDate: new Date('04/02/2019'),
-    Duration: 4,
-    Progress: 50,
-    ParentId: 1,
-  },
-  {
-    TaskID: 3,
-    TaskName: 'Perform Soil test',
-    StartDate: new Date('04/02/2019'),
-    Duration: 4,
-    Progress: 50,
-    ParentId: 1,
-  },
-  {
-    TaskID: 4,
-    TaskName: 'Soil test approval',
-    StartDate: new Date('04/02/2019'),
-    Duration: 4,
-    Progress: 50,
-    ParentId: 1,
-  },
-  {
-    TaskID: 5,
-    TaskName: 'Project Estimation',
-    StartDate: new Date('04/02/2019'),
-    EndDate: new Date('04/21/2019'),
-  },
-  {
-    TaskID: 6,
-    TaskName: 'Develop floor plan for estimation',
-    StartDate: new Date('04/04/2019'),
-    Duration: 3,
-    Progress: 50,
-    ParentId: 5,
-  },
-  {
-    TaskID: 7,
-    TaskName: 'List materials',
-    StartDate: new Date('04/04/2019'),
-    Duration: 3,
-    Progress: 50,
-    ParentId: 5,
-  },
-  {
-    TaskID: 8,
-    TaskName: 'Estimation approval',
-    StartDate: new Date('04/04/2019'),
-    Duration: 3,
-    Progress: 50,
-    ParentId: 5,
-  },
-];
 function App() {
-    const taskFields = {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        parentID:'ParentId'
-    };
-    return (<GanttComponent
-        dataSource={GanttData}
-        height="450px"
-        taskFields={taskFields}
-    />);
+  return (
+    <GanttComponent
+    ......
+    />
+  );
 }
-ReactDOM.render(<App />, document.getElementById('root'));
-```
+
+export default App;
+{% endhighlight %}
+{% highlight ts tabtitle="App.jsx" %}
+import * as React from 'react';
+import { GanttComponent } from '@syncfusion/ej2-react-gantt';
+import './App.css';
+
+function App() {
+  return (
+    <GanttComponent
+      .....
+    />
+  );
+}
+
+export default App;
+{% endhighlight %}
+{% endtabs %}
 
 ## Binding Gantt with data
 
-Bind data with the Gantt control by using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/gantt#datasource) property. It accepts an array of JavaScript object or the DataManager instance.
+Bind data to the Gantt Chart component by using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/gantt#datasource) property. This property supports assigning an array of JavaScript objects or a `DataManager` instance as the data source for the Gantt Chart.
 
-The Gantt Chart component binds to project data through the [dataSource](https://ej2.syncfusion.com/react/documentation/api/gantt#datasource) property, which accepts an array of JavaScript objects or a `DataManager` instance. The [taskFields](https://ej2.syncfusion.com/react/documentation/api/gantt#taskfields) property maps data source fields to task attributes (e.g., id, name, startDate, duration).
+To ensure that the Gantt component correctly interprets each task's information, map the fields in the data source to the Gantt attributes using the [taskFields](https://ej2.syncfusion.com/react/documentation/api/gantt#taskfields) property. Task field mappings typically include values such as the task ID, name, start date, duration, progress, and parent task identifier for defining hierarchical relationships.
 
-```
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Syncfusion React Gantt</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Essential JS 2 for React Components" />
-    <meta name="author" content="Syncfusion" />
-    <link href="https://cdn.syncfusion.com/ej2/32.1.19/tailwind3.css" rel="stylesheet" type="text/css"/>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
-    <script src="systemjs.config.js"></script>
-     <style>
-        #loader {
-            color: #008cff;
-            height: 40px;
-            left: 45%;
-            position: absolute;
-            top: 45%;
-            width: 30%;
-        }
-    </style>
-</head>
-
-<body>
-        <div id='root'>
-            <div id='loader'>Loading....</div>
-        </div>
-</body>
-
-</html>
-
-```
-
-Place the following code in the `src/App.tsx`.
-
-```ts
-import { GanttComponent } from '@syncfusion/ej2-react-gantt';
+{% tabs %}
+{% highlight js tabtitle="App.tsx" %}
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import { GanttComponent } from '@syncfusion/ej2-react-gantt';
 import './App.css';
 
-const GanttData: object[] = [
-     {
-    TaskID: 1,
-    TaskName: 'Project Initiation',
-    StartDate: new Date('04/02/2019'),
-    EndDate: new Date('04/21/2019'),
-  },
-  {
-    TaskID: 2,
-    TaskName: 'Identify Site location',
-    StartDate: new Date('04/02/2019'),
-    Duration: 4,
-    Progress: 50,
-    ParentId: 1,
-  },
-  {
-    TaskID: 3,
-    TaskName: 'Perform Soil test',
-    StartDate: new Date('04/02/2019'),
-    Duration: 4,
-    Progress: 50,
-    ParentId: 1,
-  },
-  {
-    TaskID: 4,
-    TaskName: 'Soil test approval',
-    StartDate: new Date('04/02/2019'),
-    Duration: 4,
-    Progress: 50,
-    ParentId: 1,
-  },
-  {
-    TaskID: 5,
-    TaskName: 'Project Estimation',
-    StartDate: new Date('04/02/2019'),
-    EndDate: new Date('04/21/2019'),
-  },
-  {
-    TaskID: 6,
-    TaskName: 'Develop floor plan for estimation',
-    StartDate: new Date('04/04/2019'),
-    Duration: 3,
-    Progress: 50,
-    ParentId: 5,
-  },
-  {
-    TaskID: 7,
-    TaskName: 'List materials',
-    StartDate: new Date('04/04/2019'),
-    Duration: 3,
-    Progress: 50,
-    ParentId: 5,
-  },
-  {
-    TaskID: 8,
-    TaskName: 'Estimation approval',
-    StartDate: new Date('04/04/2019'),
-    Duration: 3,
-    Progress: 50,
-    ParentId: 5,
-  },
+const GanttData: Object = [
+  { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019') },
+  { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+  { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+  { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+  { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019') },
+  { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+  { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+  { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 }
 ];
-function App () {
-     return (
-        <GanttComponent dataSource={GanttData} />
-        );
-    }
-ReactDOM.render(<App />, document.getElementById('root'));
-```
 
-```ts
-import { GanttComponent } from '@syncfusion/ej2-react-gantt';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import './App.css';
-const GanttData = [
- {
-    TaskID: 1,
-    TaskName: 'Project Initiation',
-    StartDate: new Date('04/02/2019'),
-    EndDate: new Date('04/21/2019'),
-  },
-  {
-    TaskID: 2,
-    TaskName: 'Identify Site location',
-    StartDate: new Date('04/02/2019'),
-    Duration: 4,
-    Progress: 50,
-    ParentId: 1,
-  },
-  {
-    TaskID: 3,
-    TaskName: 'Perform Soil test',
-    StartDate: new Date('04/02/2019'),
-    Duration: 4,
-    Progress: 50,
-    ParentId: 1,
-  },
-  {
-    TaskID: 4,
-    TaskName: 'Soil test approval',
-    StartDate: new Date('04/02/2019'),
-    Duration: 4,
-    Progress: 50,
-    ParentId: 1,
-  },
-  {
-    TaskID: 5,
-    TaskName: 'Project Estimation',
-    StartDate: new Date('04/02/2019'),
-    EndDate: new Date('04/21/2019'),
-  },
-  {
-    TaskID: 6,
-    TaskName: 'Develop floor plan for estimation',
-    StartDate: new Date('04/04/2019'),
-    Duration: 3,
-    Progress: 50,
-    ParentId: 5,
-  },
-  {
-    TaskID: 7,
-    TaskName: 'List materials',
-    StartDate: new Date('04/04/2019'),
-    Duration: 3,
-    Progress: 50,
-    ParentId: 5,
-  },
-  {
-    TaskID: 8,
-    TaskName: 'Estimation approval',
-    StartDate: new Date('04/04/2019'),
-    Duration: 3,
-    Progress: 50,
-    ParentId: 5,
-  },
-];
 function App() {
-    return (<GanttComponent dataSource={GanttData}/>);
+  return (
+    <GanttComponent
+    datasource ={GanttData}
+    .....
+    />
+  );
 }
-ReactDOM.render(<App />, document.getElementById('root'));
-```
+
+export default App;
+{% endhighlight %}
+{% highlight ts tabtitle="App.jsx" %}
+import * as React from 'react';
+import { GanttComponent } from '@syncfusion/ej2-react-gantt';
+import './App.css';
+
+const GanttData = [
+  { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019') },
+  { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+  { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+  { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+  { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019') },
+  { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+  { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+  { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 }
+];
+
+function App() {
+  return (
+    <GanttComponent
+      datasource= {GanttData}
+      .....
+    />
+  );
+}
+
+export default App;
+{% endhighlight %}
+{% endtabs %}
 
 ## Mapping task fields
 
-The data source fields that are required to render the tasks are mapped to the Gantt Chart component using the [taskFields](https://ej2.syncfusion.com/react/documentation/api/gantt#taskfields) property.
+The data source fields that are required to render tasks are mapped to the Gantt Chart component using the [taskFields](https://ej2.syncfusion.com/react/documentation/api/gantt#taskfields) property.
 
-```ts
-import { GanttComponent } from '@syncfusion/ej2-react-gantt';
+{% tabs %}
+{% highlight js tabtitle="App.tsx" %}
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import { GanttComponent, TaskFieldsModel } from '@syncfusion/ej2-react-gantt';
 import './App.css';
 
 const GanttData: object[] = [
- {
-    TaskID: 1,
-    TaskName: 'Project Initiation',
-    StartDate: new Date('04/02/2019'),
-    EndDate: new Date('04/21/2019'),
-  },
-  {
-    TaskID: 2,
-    TaskName: 'Identify Site location',
-    StartDate: new Date('04/02/2019'),
-    Duration: 4,
-    Progress: 50,
-    ParentId: 1,
-  },
-  {
-    TaskID: 3,
-    TaskName: 'Perform Soil test',
-    StartDate: new Date('04/02/2019'),
-    Duration: 4,
-    Progress: 50,
-    ParentId: 1,
-  },
-  {
-    TaskID: 4,
-    TaskName: 'Soil test approval',
-    StartDate: new Date('04/02/2019'),
-    Duration: 4,
-    Progress: 50,
-    ParentId: 1,
-  },
-  {
-    TaskID: 5,
-    TaskName: 'Project Estimation',
-    StartDate: new Date('04/02/2019'),
-    EndDate: new Date('04/21/2019'),
-  },
-  {
-    TaskID: 6,
-    TaskName: 'Develop floor plan for estimation',
-    StartDate: new Date('04/04/2019'),
-    Duration: 3,
-    Progress: 50,
-    ParentId: 5,
-  },
-  {
-    TaskID: 7,
-    TaskName: 'List materials',
-    StartDate: new Date('04/04/2019'),
-    Duration: 3,
-    Progress: 50,
-    ParentId: 5,
-  },
-  {
-    TaskID: 8,
-    TaskName: 'Estimation approval',
-    StartDate: new Date('04/04/2019'),
-    Duration: 3,
-    Progress: 50,
-    ParentId: 5,
-  },
+  { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019') },
+  { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+  { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+  { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+  { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019') },
+  { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+  { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+  { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 }
 ];
-function App (){
-  const taskFields: any = {
+
+function App() {
+
+  const taskFields: TaskFieldsModel = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
+    endDate: 'EndDate',
     duration: 'Duration',
     progress: 'Progress',
-    parentID:'ParentId'
-    };
- return (
-     <GanttComponent
-        dataSource={GanttData}
-        height="450px"
-        taskFields={taskFields}
-     />
-        );
-   }
-ReactDOM.render(<App />, document.getElementById('root'));
-```
+    parentID: 'ParentID'
+  };
 
-```ts
-import { GanttComponent } from '@syncfusion/ej2-react-gantt';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import './App.css';
-const GanttData = [
-   {
-    TaskID: 1,
-    TaskName: 'Project Initiation',
-    StartDate: new Date('04/02/2019'),
-    EndDate: new Date('04/21/2019'),
-  },
-  {
-    TaskID: 2,
-    TaskName: 'Identify Site location',
-    StartDate: new Date('04/02/2019'),
-    Duration: 4,
-    Progress: 50,
-    ParentId: 1,
-  },
-  {
-    TaskID: 3,
-    TaskName: 'Perform Soil test',
-    StartDate: new Date('04/02/2019'),
-    Duration: 4,
-    Progress: 50,
-    ParentId: 1,
-  },
-  {
-    TaskID: 4,
-    TaskName: 'Soil test approval',
-    StartDate: new Date('04/02/2019'),
-    Duration: 4,
-    Progress: 50,
-    ParentId: 1,
-  },
-  {
-    TaskID: 5,
-    TaskName: 'Project Estimation',
-    StartDate: new Date('04/02/2019'),
-    EndDate: new Date('04/21/2019'),
-  },
-  {
-    TaskID: 6,
-    TaskName: 'Develop floor plan for estimation',
-    StartDate: new Date('04/04/2019'),
-    Duration: 3,
-    Progress: 50,
-    ParentId: 5,
-  },
-  {
-    TaskID: 7,
-    TaskName: 'List materials',
-    StartDate: new Date('04/04/2019'),
-    Duration: 3,
-    Progress: 50,
-    ParentId: 5,
-  },
-  {
-    TaskID: 8,
-    TaskName: 'Estimation approval',
-    StartDate: new Date('04/04/2019'),
-    Duration: 3,
-    Progress: 50,
-    ParentId: 5,
-  },
-];
-function App() {
-    const taskFields = {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        parentID:'ParentId'
-    };
-    return (
+  return (
     <GanttComponent
-        dataSource={GanttData}
-        height="450px"
-        taskFields={taskFields}
-    />);
+      dataSource={GanttData}
+      taskFields={taskFields}
+    />
+  );
 }
-ReactDOM.render(<App />, document.getElementById('root'));
-```
+
+export default App;
+{% endhighlight %}
+{% highlight ts tabtitle="App.jsx" %}
+import * as React from 'react';
+import { GanttComponent } from '@syncfusion/ej2-react-gantt';
+import './App.css';
+
+const GanttData = [
+  { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019') },
+  { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+  { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+  { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+  { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019') },
+  { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+  { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+  { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 }
+];
+
+function App() {
+
+  const taskFields = {
+    id: 'TaskID',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    endDate: 'EndDate',
+    duration: 'Duration',
+    progress: 'Progress',
+    parentID: 'ParentID'
+  };
+
+  return (
+    <GanttComponent
+      dataSource={GanttData}
+      taskFields={taskFields}
+    />
+  );
+}
+
+export default App;
+{% endhighlight %}
+{% endtabs %}
 
 ## Defining columns
 
-Gantt has an option to define columns as an array. You can customize the Gantt columns using the following properties:
+Columns can be defined in the Gantt component by assigning them as an array. Each column can be customized using the following properties:
 
-- `field`: Maps the data source fields to the columns.
-- `headerText`: Changes the title of columns.
-- `textAlign`: Changes the alignment of columns. By default, columns will be left aligned. To change the columns to right align, set `textAlign` to right.
-- `format`: Formats the number and date values to standard or custom formats. Here, it is defined for the conversion of numeric values to currency.
-
-```ts
-import { GanttComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
+* `field`: Maps a data source field to the corresponding column.
+* `headerText`: Specifies the header text displayed for the column.
+* `textAlign`: Defines the alignment of column content. Columns are left‑aligned by default; set `textAlign` to Right to right‑align the content.
+* `format`: Applies standard or custom formatting to number and date values. This can be used, for example, to display numeric values in a currency format.
+  
+{% tabs %}
+{% highlight js tabtitle="App.tsx" %}
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import { ColumnDirective, ColumnsDirective, GanttComponent, TaskFieldsModel } from '@syncfusion/ej2-react-gantt';
 import './App.css';
 
-const GanttData: object[] = [
-    {
-    TaskID: 1,
-    TaskName: 'Project Initiation',
-    StartDate: new Date('04/02/2019'),
-    EndDate: new Date('04/21/2019'),
-  },
-  {
-    TaskID: 2,
-    TaskName: 'Identify Site location',
-    StartDate: new Date('04/02/2019'),
-    Duration: 4,
-    Progress: 50,
-    ParentId: 1,
-  },
-  {
-    TaskID: 3,
-    TaskName: 'Perform Soil test',
-    StartDate: new Date('04/02/2019'),
-    Duration: 4,
-    Progress: 50,
-    ParentId: 1,
-  },
-  {
-    TaskID: 4,
-    TaskName: 'Soil test approval',
-    StartDate: new Date('04/02/2019'),
-    Duration: 4,
-    Progress: 50,
-    ParentId: 1,
-  },
-  {
-    TaskID: 5,
-    TaskName: 'Project Estimation',
-    StartDate: new Date('04/02/2019'),
-    EndDate: new Date('04/21/2019'),
-  },
-  {
-    TaskID: 6,
-    TaskName: 'Develop floor plan for estimation',
-    StartDate: new Date('04/04/2019'),
-    Duration: 3,
-    Progress: 50,
-    ParentId: 5,
-  },
-  {
-    TaskID: 7,
-    TaskName: 'List materials',
-    StartDate: new Date('04/04/2019'),
-    Duration: 3,
-    Progress: 50,
-    ParentId: 5,
-  },
-  {
-    TaskID: 8,
-    TaskName: 'Estimation approval',
-    StartDate: new Date('04/04/2019'),
-    Duration: 3,
-    Progress: 50,
-    ParentId: 5,
-  },
+const GanttData: object [] = [
+  { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019') },
+  { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+  { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+  { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+  { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019') },
+  { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+  { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+  { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 }
 ];
-function App (){
-    const taskFields: any = {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        parentID:'ParentId'
-    };
-    return (
-            <GanttComponent dataSource={GanttData} height="450px" taskFields={taskFields}>
-                <ColumnsDirective>
-                    <ColumnDirective field='TaskID' width='50' />
-                    <ColumnDirective field='TaskName' headerText='Job Name'/>
-                    <ColumnDirective field='StartDate'/>
-                    <ColumnDirective field='Duration'/>
-                </ColumnsDirective>
-            </GanttComponent>
-        );
-    }
-ReactDOM.render(<App />, document.getElementById('root'));
-```
 
-```ts
-import { GanttComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import './App.css';
-const GanttData = [
-    {
-    TaskID: 1,
-    TaskName: 'Project Initiation',
-    StartDate: new Date('04/02/2019'),
-    EndDate: new Date('04/21/2019'),
-  },
-  {
-    TaskID: 2,
-    TaskName: 'Identify Site location',
-    StartDate: new Date('04/02/2019'),
-    Duration: 4,
-    Progress: 50,
-    ParentId: 1,
-  },
-  {
-    TaskID: 3,
-    TaskName: 'Perform Soil test',
-    StartDate: new Date('04/02/2019'),
-    Duration: 4,
-    Progress: 50,
-    ParentId: 1,
-  },
-  {
-    TaskID: 4,
-    TaskName: 'Soil test approval',
-    StartDate: new Date('04/02/2019'),
-    Duration: 4,
-    Progress: 50,
-    ParentId: 1,
-  },
-  {
-    TaskID: 5,
-    TaskName: 'Project Estimation',
-    StartDate: new Date('04/02/2019'),
-    EndDate: new Date('04/21/2019'),
-  },
-  {
-    TaskID: 6,
-    TaskName: 'Develop floor plan for estimation',
-    StartDate: new Date('04/04/2019'),
-    Duration: 3,
-    Progress: 50,
-    ParentId: 5,
-  },
-  {
-    TaskID: 7,
-    TaskName: 'List materials',
-    StartDate: new Date('04/04/2019'),
-    Duration: 3,
-    Progress: 50,
-    ParentId: 5,
-  },
-  {
-    TaskID: 8,
-    TaskName: 'Estimation approval',
-    StartDate: new Date('04/04/2019'),
-    Duration: 3,
-    Progress: 50,
-    ParentId: 5,
-  },
-];
 function App() {
-    const taskFields = {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        parentID:'ParentId'
-    };
-    return (<GanttComponent dataSource={GanttData} height="450px" taskFields={taskFields}>
-                <ColumnsDirective>
-                    <ColumnDirective field='TaskID' width='50'/>
-                    <ColumnDirective field='TaskName' headerText='Job Name'/>
-                    <ColumnDirective field='StartDate'/>
-                    <ColumnDirective field='Duration'/>
-                </ColumnsDirective>
-            </GanttComponent>);
+
+  const taskFields: TaskFieldsModel = {
+    id: 'TaskID',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    endDate: 'EndDate',
+    duration: 'Duration',
+    progress: 'Progress',
+    parentID: 'ParentID'
+  };
+
+  return (
+    <GanttComponent dataSource={GanttData} height="450px" taskFields={taskFields}>
+      <ColumnsDirective>
+        <ColumnDirective field='TaskID' width='50' />
+        <ColumnDirective field='TaskName' headerText='Job Name' />
+        <ColumnDirective field='StartDate' />
+        <ColumnDirective field='Duration' />
+      </ColumnsDirective>
+    </GanttComponent>
+  );
 }
-ReactDOM.render(<App />, document.getElementById('root'));
-```
+
+export default App;
+{% endhighlight %}
+{% highlight ts tabtitle="App.jsx" %}
+import * as React from 'react';
+import { ColumnDirective, ColumnsDirective, GanttComponent } from '@syncfusion/ej2-react-gantt';
+import './App.css';
+
+const GanttData = [
+  { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019') },
+  { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+  { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+  { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
+  { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019') },
+  { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+  { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
+  { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 }
+];
+
+function App() {
+
+  const taskFields = {
+    id: 'TaskID',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    endDate: 'EndDate',
+    duration: 'Duration',
+    progress: 'Progress',
+    parentID: 'ParentID'
+  };
+
+  return (
+    <GanttComponent dataSource={GanttData} height="450px" taskFields={taskFields}>
+      <ColumnsDirective>
+        <ColumnDirective field='TaskID' width='50' />
+        <ColumnDirective field='TaskName' headerText='Job Name' />
+        <ColumnDirective field='StartDate' />
+        <ColumnDirective field='Duration' />
+      </ColumnsDirective>
+    </GanttComponent>
+  );
+}
+
+export default App;
+{% endhighlight %}
+{% endtabs %}
 
 ## Module Injection
 
-Gantt Chart component features are segregated into individual feature-wise modules. In order to use a particular feature, you need to inject its feature service in the App. In the current application, we are going to use editing, sorting and filtering feature of Gantt.Please find relevant feature service name and description as follows.
+Gantt component features are organized into individual feature‑specific modules. To enable a particular feature, the corresponding module must be injected into the application. In the following example, the editing, sorting, and filtering features are enabled by injecting their respective modules.
+
+The feature modules used in this context are outlined as follows:
 
 - [Edit](https://ej2.syncfusion.com/react/documentation/api/gantt#editmodule): Inject this module to use the editing feature.
 - [Filter](https://ej2.syncfusion.com/react/documentation/api/gantt#filtermodule): Inject this module to use the filtering feature.
 - [Sort](https://ej2.syncfusion.com/react/documentation/api/gantt#sortmodule): Inject this module to use the sorting feature.
 
-These modules should be injected into the gantt using the Inject directive.
+These modules should be injected into the gantt using the **Inject** directive.
+
+> Additional feature modules are available [here](./module).
 
 ## Enable editing
 
-The editing feature enables you to edit the tasks in the Gantt Chart component. It can be enabled by using the [editSettings.allowEditing](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings#allowediting) and [editSettings.allowTaskbarEditing](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings#allowtaskbarediting) properties.
+The editing feature enables editing of tasks in the Gantt Chart component. It can be enabled by using the [editSettings.allowEditing](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings#allowediting) and [editSettings.allowTaskbarEditing](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings#allowtaskbarediting) properties.
 
-The following editing options are available to update the tasks in Gantt,
+The following editing options are available to update tasks in the Gantt Chart:
 
 - Cell
 - Dialog
@@ -851,7 +402,7 @@ The following editing options are available to update the tasks in Gantt,
 
 ### Cell editing
 
-Modify the task details through cell editing by setting the edit mode to `Auto`. Inject the [Edit](https://ej2.syncfusion.com/react/documentation/api/gantt#editmodule) module as follows. If the [Edit](https://ej2.syncfusion.com/react/documentation/api/gantt#editmodule) module is not injected, you cannot edit the cell when a grid cell is clicked.
+Modify task details through cell editing by setting the edit mode to `Auto`. Inject the [Edit](https://ej2.syncfusion.com/react/documentation/api/gantt#editmodule) module as shown. If the `Edit` module is not injected, cell editing cannot be performed when a grid cell is clicked.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -867,11 +418,11 @@ Modify the task details through cell editing by setting the edit mode to `Auto`.
 
 {% previewsample "page.domainurl/code-snippet/gantt/celledit-cs1" %}
 
-`Note:` When the edit mode is set to `Auto`, you can change the cells to editable mode by double-clicking anywhere at the TreeGrid and edit the task details in the edit dialog by double-clicking anywhere at the chart.
+> When the edit mode is set to `Auto`, cells can be switched to editable mode by double‑clicking anywhere in the TreeGrid, and task details can be edited in the edit dialog by double‑clicking anywhere in the chart.
 
 ### Dialog editing
 
-Modify the task details through dialog by setting the edit mode to `Dialog`. Inject the [Edit](https://ej2.syncfusion.com/react/documentation/api/gantt#editmodule) module as follows. If the [Edit](https://ej2.syncfusion.com/react/documentation/api/gantt#editmodule) module is not injected, you cannot edit the task details through the edit dialog.
+Modify task details through a dialog by setting the edit mode to `Dialog`. Inject the [Edit](https://ej2.syncfusion.com/react/documentation/api/gantt#editmodule) module as follows. If the `Edit` module is not injected, task details cannot be edited through the edit dialog.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -887,11 +438,11 @@ Modify the task details through dialog by setting the edit mode to `Dialog`. Inj
 
 {% previewsample "page.domainurl/code-snippet/gantt/dialogedit-cs1" %}
 
-`Note:` In dialog editing mode, the edit dialog will appear while performing double-click action in both TreeGrid and chart sides.
+> In dialog editing mode, the edit dialog will appear when performing a double‑click action on both the TreeGrid and chart sides.
 
 ### Taskbar editing
 
-Modify the task details through user interaction such as resizing and dragging the taskbar by enabling the [allowTaskbarEditing](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings#allowtaskbarediting) property. Inject the [Edit](https://ej2.syncfusion.com/react/documentation/api/gantt#editmodule) module as follows. If the [Edit](https://ej2.syncfusion.com/react/documentation/api/gantt#editmodule) module is not injected, you cannot edit the task details while dragging the taskbar.
+Modify task details through user interactions such as resizing and dragging the taskbar by enabling the [allowTaskbarEditing](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings#allowtaskbarediting) property. Inject the [Edit](https://ej2.syncfusion.com/react/documentation/api/gantt#editmodule) module as follows. If the `Edit` module is not injected, task details cannot be edited while dragging the taskbar.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -909,7 +460,7 @@ Modify the task details through user interaction such as resizing and dragging t
 
 ### Dependency editing
 
-Modify the task dependencies using mouse interactions by enabling the [allowTaskbarEditing](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings#allowtaskbarediting) property along with mapping the task dependency data source field to the [dependency](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#dependency) property.
+Modify task dependencies using mouse interactions by enabling the [allowTaskbarEditing](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings#allowtaskbarediting) property along with mapping the task dependency data source field to the [dependency](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#dependency) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -927,14 +478,14 @@ Modify the task dependencies using mouse interactions by enabling the [allowTask
 
 ## Enabling predecessors or task relationships
 
-Predecessor or task dependency in the Gantt Chart component is used to depict the relationship between the tasks.
+Predecessor or task dependency in the Gantt Chart component is used to depict the relationship between tasks.
 
-- Start to Start (SS): You cannot start a task until the dependent task starts.
-- Start to Finish (SF): You cannot finish a task until the dependent task starts.
-- Finish to Start (FS): You cannot start a task until the dependent task completes.
-- Finish to Finish (FF): You cannot finish a task until the dependent task completes.
+* Start to Start (SS): A task cannot start until the dependent task starts.
+* Start to Finish (SF): A task cannot finish until the dependent task starts.
+* Finish to Start (FS): A task cannot start until the dependent task completes.
+* Finish to Finish (FF): A task cannot finish until the dependent task completes.
 
-You can show the relationship in tasks by using the [dependency](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#dependency) property as shown in the following code example.
+The relationship between tasks can be shown by mapping the task dependency field to the [dependency](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#dependency) property, as demonstrated in the following code example.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -952,7 +503,7 @@ You can show the relationship in tasks by using the [dependency](https://ej2.syn
 
 ## Assigning resources
 
-You can display and assign the resource for each task in the Gantt control. Create a collection of JSON object, which contains id, name, unit and group of the resources and assign it to the [resources](https://ej2.syncfusion.com/react/documentation/api/gantt#resources) property. Map these fields to the Gantt control using the [resourceFields](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#resourcefields) property.
+The Gantt Chart component allows displaying and assigning resources for each task. Create a collection of JSON objects containing the id, name, unit, and group fields for the resources, and assign it to the [resources](https://ej2.syncfusion.com/react/documentation/api/gantt#resources) property. Map these fields to the Gantt Chart component using the [resourceFields](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#resourcefields) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -970,7 +521,7 @@ You can display and assign the resource for each task in the Gantt control. Crea
 
 ## Enable filtering
 
-The filtering feature enables you to view the reduced amount of records based on filter criteria. Gantt provides the menu filtering support for each column. It can be enabled by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/gantt#allowfiltering) property to true along with injecting the [Filter](https://ej2.syncfusion.com/react/documentation/api/gantt#filtermodule) module as shown in the following code example. Filtering feature can also be customized using the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/gantt/filterSettings/) property.
+The filtering feature allows viewing a reduced set of records based on filter criteria. The Gantt component provides menu filtering support for each column. It can be enabled by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/gantt#allowfiltering) property to **true**, along with injecting the [Filter](https://ej2.syncfusion.com/react/documentation/api/gantt#filtermodule) module as shown in the following code example. The filtering behavior can also be customized using the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/gantt/filtersettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -988,7 +539,7 @@ The filtering feature enables you to view the reduced amount of records based on
 
 ## Enable sorting
 
-The sorting feature enables you to order the records. It can be enabled by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/gantt#allowsorting) property to `true`. Inject the [Sort](https://ej2.syncfusion.com/react/documentation/api/gantt#sortmodule) module as follows. If the [Sort](https://ej2.syncfusion.com/react/documentation/api/gantt#sortmodule) module is not injected, you cannot sort the records when a header is clicked. The sorting feature can be customized using the [sortSettings](https://ej2.syncfusion.com/react/documentation/api/gantt/sortSettings/) property.
+The sorting feature allows ordering the records. It can be enabled by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/gantt#allowsorting) property to `true`. Inject the [Sort](https://ej2.syncfusion.com/react/documentation/api/gantt#sortmodule) module as follows. If the [Sort](https://ej2.syncfusion.com/react/documentation/api/gantt#sortmodule)  module is not injected, sorting cannot be performed when clicking a column header. The sorting behavior can be customized using the [sortSettings](https://ej2.syncfusion.com/react/documentation/api/gantt/sortsettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -1006,13 +557,13 @@ The sorting feature enables you to order the records. It can be enabled by setti
 
 ## Run the application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Run the `npm run dev` command in the console to start the development server. This command compiles the code and serves the application locally, opening it in the browser.
 
 ```bash
 npm run dev
 ```
 
-Output will be appears as follows.
+The output will appear as follows.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -1028,21 +579,21 @@ Output will be appears as follows.
 
 {% previewsample "page.domainurl/code-snippet/gantt/run-cs1" %}
 
-> You can refer to our [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [React Gantt Chart example](https://ej2.syncfusion.com/react/demos#/material/gantt/default) that shows how to render the Gantt Chart in React.
+> Refer to the [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) feature tour page for detailed feature representations. The [React Gantt Chart example](https://ej2.syncfusion.com/react/demos/#/tailwind3/gantt/default) also illustrates how to render the Gantt Chart in a React application.
 
 ## Error handling
 
-Error handling is used to identify errors, display them and develop recovery strategies to handle errors from gantt. In Gantt, error handling is done by using the [actionFailure](https://ej2.syncfusion.com/react/documentation/api/gantt#actionfailure) event. Some of the scenarios that this event handles are:
+Error handling is used to identify errors, display them, and develop recovery strategies to handle errors from gantt. In Gantt, error handling is done by using the [actionFailure](https://ej2.syncfusion.com/react/documentation/api/gantt#actionfailure) event. Some of the scenarios that this event handles are:
 
-- Invalid duration : The [duration](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#duration) field accepts only numerical values with an optional decimal point. Entering non-numerical values triggers the `actionFailure` event and displays issue information in the event argument.
+- Invalid duration: The [duration](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#duration) field accepts only numerical values with an optional decimal point. Entering non-numerical values triggers the `actionFailure` event and displays issue information in the event argument.
 - Invalid dependency: The [dependency](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#dependency) field accepts only a number followed by a predecessor type (FS, FF, SS, SF). Entering invalid values, such as special characters or incorrect predecessor types, triggers the `actionFailure` event and displays issue information in the event argument.
-- Invalid offset : The [offset](https://ej2.syncfusion.com/react/documentation/api/gantt/iPredecessor#offset) accepts only numerical values or their word equivalents followed by a unit. Entering invalid values, such as special characters triggers `actionFailure` event and displays issue information in the event argument.
-- Failure to map task fields : The data source fields necessary for rendering tasks should be mapped to the Gantt control using the [taskFields](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/) property. Failure to map `taskFields` in the sample triggers `actionFailure` event and displays issue information in the event argument.
-- Failure to map resource fields : To assign resources to a task, resource fields should be mapped to the Gantt control using the [resourceFields](https://ej2.syncfusion.com/react/documentation/api/gantt/resourceFields/). Failure to map `resourceFields` in the sample triggers `actionFailure` event and displays issue information in the event argument.
-- Failure to map `isPrimaryKey` : [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/gantt/column#isprimarykey) field is crucial for CRUD operations. Failure to map [id](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#id) column in gantt column collection or [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/gantt/column#isprimarykey) field in one of the columns will trigger `actionFailure` event and display issue information in the event argument.
-- Invalid date format : [format](https://ej2.syncfusion.com/react/documentation/api/gantt/iTimelineFormatter/) property under `topTier` and `bottomTier` determines how the timelines are displayed in the top tier and bottom tier of the Gantt chart timeline. If the `format` does not contain a valid standard [date format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date), it triggers the `actionFailure` event, displaying issue information in the event argument.
-- Failure to map `hasChildMapping` : [hasChildMapping](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#haschildmapping) property should configured for [load-on-demand](https://ej2.syncfusion.com/react/documentation/gantt/data-binding#load-child-on-demand). Ensure it properly configured in the [taskFields](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/). Failure to map `hasChildMapping` in the `load-on-demand` sample triggers `actionFailure` event and displays issue information in the event argument.
-- Invalid day in event markers : [day](https://ej2.syncfusion.com/react/documentation/api/gantt/eventMarker#day) should configured in [eventMarkers](https://ej2.syncfusion.com/react/documentation/api/gantt/eventMarker/) to render striplines in a particular day. Failure to configure the `day` in `eventMarkers` triggers `actionFailure` event and displays issue information in the event argument.
+- Invalid offset: The [offset](https://ej2.syncfusion.com/react/documentation/api/gantt/iPredecessor#offset) accepts only numerical values or their word equivalents followed by a unit. Entering invalid values, such as special characters, triggers `actionFailure` event and displays issue information in the event argument.
+- Failure to map task fields : The data source fields necessary for rendering tasks should be mapped to the Gantt control using the [taskFields](https://ej2.syncfusion.com/react/documentation/api/gantt/taskfields) property. Failure to map `taskFields` in the sample triggers `actionFailure` event and displays issue information in the event argument.
+- Failure to map resource fields : To assign resources to a task, resource fields should be mapped to the Gantt control using the [resourceFields](https://ej2.syncfusion.com/react/documentation/api/gantt/resourceFields). Failure to map `resourceFields` in the sample triggers `actionFailure` event and displays issue information in the event argument.
+- Failure to map `isPrimaryKey` : The [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/gantt/column#isprimarykey) field is crucial for CRUD operations. Failure to map [id](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#id) column in Gantt Chart column collection or [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/gantt/column#isprimarykey) field in one of the columns will trigger `actionFailure` event and display issue information in the event argument.
+- Invalid date format : [format](https://ej2.syncfusion.com/react/documentation/api/gantt/itimelineformatter) property under `topTier` and `bottomTier` determines how the timelines are displayed in the top tier and bottom tier of the Gantt chart timeline. If the `format` does not contain a valid standard [date format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date), it triggers the `actionFailure` event, displaying issue information in the event argument.
+- Failure to map `hasChildMapping` : [hasChildMapping](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#haschildmapping) property should configured for [load-on-demand](https://ej2.syncfusion.com/react/documentation/gantt/data-binding#load-child-on-demand). Ensure it properly configured in the [taskFields](https://ej2.syncfusion.com/react/documentation/api/gantt/taskfields). Failure to map `hasChildMapping` in the `load-on-demand` sample triggers `actionFailure` event and displays issue information in the event argument.
+- Invalid day in event markers : [day](https://ej2.syncfusion.com/react/documentation/api/gantt/eventMarker#day) should configured in [eventMarkers](https://ej2.syncfusion.com/react/documentation/api/gantt/eventmarker) to render striplines in a particular day. Failure to configure the `day` in `eventMarkers` triggers `actionFailure` event and displays issue information in the event argument.
 
 > Additionally, TreeGrid side error handling information is also displayed from the Gantt `actionFailure` event. For more details on TreeGrid side error handling, refer [here](https://ej2.syncfusion.com/react/documentation/treegrid/getting-started#handling-errors).
 
@@ -1065,3 +616,8 @@ The following code example shows how to use the [actionFailure](https://ej2.sync
 The following screenshot represents the Gantt Exception handling in `actionFailure` event.
 
 ![Error Handling](images/error-handling.png)
+
+## See also
+
+* [Getting Started with Next.js](https://ej2.syncfusion.com/react/documentation/gantt/nextjs-getting-started)
+* [Getting Started with Preact]([./preact.md](https://ej2.syncfusion.com/react/documentation/gantt/preact))

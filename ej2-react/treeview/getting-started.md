@@ -30,7 +30,7 @@ The following list of dependencies are required to use the `TreeView` component 
 
 ## Installation and configuration
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up the environment using JavaScript and optimizes the application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -114,17 +114,17 @@ Import the TreeView component required CSS references as follows in **src/App.cs
 
 /* import the TreeView dependency styles */
 
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-react-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-react-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
 ```
 
->Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
+>Note:  Note: To include combined component styles, use the [`CRG`](https://crg.syncfusion.com) (Custom Resource Generator) in the application.
 
 ## Binding data source
 
-TreeView can load data either from local data sources or remote data services. This can be done using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treeview/fieldsSettingsModel/#datasource) property that is a member of the [fields](https://ej2.syncfusion.com/react/documentation/api/treeview/#fields) property. The dataSource property supports array of JavaScript objects and [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started). Here, an array of JSON values is passed to the TreeView component.
+TreeView can load data either from local data sources or remote data services. This can be done using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treeview/fieldsSettingsModel#datasource) property that is a member of the [fields](https://ej2.syncfusion.com/react/documentation/api/treeview#fields) property. The dataSource property supports array of JavaScript objects and [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started). Here, an array of JSON values is passed to the TreeView component.
 
 
 
@@ -348,7 +348,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## Run the application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Run the `npm run dev` command in the console to start the development server. This command compiles the code and serves the application locally in the browser.
 
 ```
 npm run dev
@@ -371,7 +371,7 @@ npm run dev
 
  {% previewsample "page.domainurl/code-snippet/tree-view/basic-cs8" %}
 
-> You can also explore our [React TreeView example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/treeview/default) to knows how to present and manipulate data.
+> You can also explore our [React TreeView example](https://ej2.syncfusion.com/react/demos/#/tailwind3/treeview/default) to knows how to present and manipulate data.
 
 ## See Also
 

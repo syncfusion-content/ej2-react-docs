@@ -14,7 +14,7 @@ The following section explains the required steps to build the simple **Sidebar*
 
 ## Dependencies
 
-The following list of dependencies are required to use the Sidebar component in your application.
+The following list of dependencies are required to use the Sidebar component in an application.
 
 ```javascript
 |-- @syncfusion/ej2-react-navigations
@@ -31,7 +31,7 @@ The following list of dependencies are required to use the Sidebar component in 
 
 ## Installation and configuration
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up the environment using JavaScript and optimizes applications for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -71,12 +71,12 @@ To render the Sidebar component, need to import Sidebar and its dependent compon
 
 ```css
 
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-react-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-react-navigations/styles/tailwind3.css";
 
 ```
 
->Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
+>Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com) (Custom Resource Generator) in your application.
 
 ## Adding Sidebar component to the Application
 
@@ -135,7 +135,7 @@ export default App;
 
 ## Run the application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Now run the `npm run dev` command in the console to start the development server. This command compiles code and serves the application locally, opening it in the browser.
 
 ```
 npm run dev
@@ -168,7 +168,7 @@ The following sample, shows the basic Sidebar component.
 
 ## Enable backdrop
 
-Enabling the [showBackdrop](https://ej2.syncfusion.com/react/documentation/api/sidebar/#showbackdrop) in the Sidebar component will prevent the main content from user interactions.
+Enabling the [showBackdrop](https://ej2.syncfusion.com/react/documentation/api/sidebar#showbackdrop) in the Sidebar component will prevent the main content from user interactions.
 
 Here, DOM elements will not get changed. It only closes the main content by covering with a black backdrop overlay and focuses the Sidebar in the screen. Sidebar can be rendered with specific width by setting [`width`](https://ej2.syncfusion.com/react/documentation/api/sidebar#width) property.
 
@@ -199,7 +199,7 @@ N> To achieve a proper **backdrop**, we suggest that you create a wrapper parent
 
 ## Position
 
-Positioning the Sidebar to the right or left of the main content can be achieved by using the [position](https://ej2.syncfusion.com/react/documentation/api/sidebar/#position) property. If the position is not set, the Sidebar will expand from the left to the body element. [`enablePersistence`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#enablepersistence) will persist the component's state between page reloads. The [`change`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#change) event will be triggered when the state(expand/collapse) of the component is changed.
+Positioning the Sidebar to the right or left of the main content can be achieved by using the [position](https://ej2.syncfusion.com/react/documentation/api/sidebar#position) property. If the position is not set, the Sidebar will expand from the left to the body element. [`enablePersistence`](https://ej2.syncfusion.com/react/documentation/api/sidebar#enablepersistence) will persist the component's state between page reloads. The [`change`](https://ej2.syncfusion.com/react/documentation/api/sidebar#change) event will be triggered when the state(expand/collapse) of the component is changed.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -226,7 +226,7 @@ Positioning the Sidebar to the right or left of the main content can be achieved
 
 ## Animate
 
-Animation transitions can be set while expanding or collapsing the Sidebar using the [`animate`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#animate) property. By default , [`animate`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#animate) property is set to true. The [`enableRTL`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#enablertl) will display the Sidebar in the right-to-left direction.
+Animation transitions can be set while expanding or collapsing the Sidebar using the [`animate`](https://ej2.syncfusion.com/react/documentation/api/sidebar#animate) property. By default , [`animate`](https://ej2.syncfusion.com/react/documentation/api/sidebar#animate) property is set to true. The [`enableRTL`](https://ej2.syncfusion.com/react/documentation/api/sidebar#enablertl) will display the Sidebar in the right-to-left direction.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -253,7 +253,7 @@ Animation transitions can be set while expanding or collapsing the Sidebar using
 
 ## Close on document click
 
-Sidebar can be closed on document click by setting [`closeOnDocumentClick`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#closeondocumentclick) to true. If this property is not set, the Sidebar will not close on document click since its default value is false. Sidebar can be kept opened during rendering using [`isOpen`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#isopen) property.
+Sidebar can be closed on document click by setting [`closeOnDocumentClick`](https://ej2.syncfusion.com/react/documentation/api/sidebar#closeondocumentclick) to true. If this property is not set, the Sidebar will not close on document click since its default value is false. Sidebar can be kept opened during rendering using [`isOpen`](https://ej2.syncfusion.com/react/documentation/api/sidebar#isopen) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -280,7 +280,7 @@ Sidebar can be closed on document click by setting [`closeOnDocumentClick`](http
 
 ## Enable gestures
 
-Expand or collapse the Sidebar while swiping in touch devices using [`enableGestures`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#enablegestures) property. By default, `enableGestures` is set to true.
+Expand or collapse the Sidebar while swiping in touch devices using [`enableGestures`](https://ej2.syncfusion.com/react/documentation/api/sidebar#enablegestures) property. By default, `enableGestures` is set to true.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -307,6 +307,6 @@ Expand or collapse the Sidebar while swiping in touch devices using [`enableGest
 
 ## See Also
 
-* [Sidebar with navigation menu](https://ej2.syncfusion.com/react/demos/#/material/sidebar/sidebar-menu)
-* [Sidebar responsive panel](https://ej2.syncfusion.com/react/demos/#/material/sidebar/responsive-panel)
+* [Sidebar with navigation menu](https://ej2.syncfusion.com/react/demos/#/tailwind3/sidebar/sidebar-menu)
+* [Sidebar responsive panel](https://ej2.syncfusion.com/react/demos/#/tailwind3/sidebar/responsive-panel)
 * [Sidebar with listview](./how-to/sidebar-with-listview)

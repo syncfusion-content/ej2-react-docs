@@ -10,11 +10,13 @@ domainurl: ##DomainURL##
 
 # Data label in React Maps component
 
-Data labels provide information to users about the shapes of the Maps component. It can be enabled by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel/#visible) property of the [dataLabelSettings](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel/) to **true**.
+Data labels display information about map shapes. Enable data labels by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel#visible) property of the [dataLabelSettings](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel) to **true**.
 
 ## Adding data labels
 
-To display data labels in the Maps, the [labelPath](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel/#labelpath) property of [dataLabelSettings](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel/) must be used. The value of the [labelPath](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel/#labelpath) property can be taken from the field name in the shape data or data source. In the following example, the value of the [labelPath](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel/#labelpath) property is the field name in the shape data of the Maps layer.
+To display data labels, specify the field name containing the label text in the [labelPath](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel#labelpath) property of [dataLabelSettings](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel) must be used. The value of the [labelPath](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel#labelpath). The field can come from either the shape data or the layer data source.
+
+The following example sets [labelPath](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel#labelpath) from a field in the shape data.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +29,7 @@ To display data labels in the Maps, the [labelPath](https://ej2.syncfusion.com/r
 
  {% previewsample "page.domainurl/code-snippet/maps/default-map-cs27" %}
 
-In the following example, the value of [labelPath](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel/#labelpath) property is set from the field name in the data source of the layer settings.
+In the following example, the value of [labelPath](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel#labelpath) property is set from the field name in the data source of the layer settings.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -42,12 +44,12 @@ In the following example, the value of [labelPath](https://ej2.syncfusion.com/re
 
 ## Customization
 
-The following properties are available in the [dataLabelSettings](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel/) to customize the data label of the Maps component.
+Customize data label appearance using the following properties in [dataLabelSettings](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel).
 
-* [border](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel/#border) - To customize the color, width and opacity for the border of the data labels in Maps.
-* [fill](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel/#fill) - To apply the color of the data labels in Maps.
-* [opacity](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel/#opacity) - To customize the transparency of the data labels in Maps.
-* [textStyle](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel/#textstyle) - To customize the text style of the data labels in Maps.
+* [border](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel#border) - To customize the color, width and opacity for the border of the data labels in Maps.
+* [fill](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel#fill) - To apply the color of the data labels in Maps.
+* [opacity](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel#opacity) - To customize the transparency of the data labels in Maps.
+* [textStyle](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel#textstyle) - To customize the text style of the data labels in Maps.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -62,7 +64,7 @@ The following properties are available in the [dataLabelSettings](https://ej2.sy
 
 ## Label animation
 
-The data labels can be animated during the initial rendering of the Maps. This can be enabled by setting the [animationDuration](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel/#animationduration) property in the `dataLabelSettings` of the Maps. The duration of the animation is specified in milliseconds.
+Animate data labels during initial rendering by setting the [animationDuration](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel#animationduration) property in the [dataLabelSettings](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel). Specify the duration in milliseconds.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -77,11 +79,13 @@ The data labels can be animated during the initial rendering of the Maps. This c
 
 ## Smart labels
 
-The Maps component provides an option to handle the labels when they intersect with the corresponding shape borders using the [smartLabelMode](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel/#smartlabelmode) property. The following options are available in the [smartLabelMode](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel/#smartlabelmode) property.
+Control label behavior when labels exceed shape boundaries using the [smartLabelMode](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel#smartlabelmode) property. 
 
-* None
-* Hide
-* Trim
+The following modes are available:
+
+* **None** -  It specifies that no action is taken, when a label exceeds the shape's region.
+* **Hide** -  It specifies to hide the labels, when it exceeds the shape's region.
+* **Trim** -  It specifies to trim the labels, when it exceeds the shape's region.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -96,11 +100,11 @@ The Maps component provides an option to handle the labels when they intersect w
 
 ## Intersect action
 
-The Maps component provides an option to handle the labels when a label intersects with another label using the [intersectionAction](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel/#intersectionaction) property. The following options are available in the [intersectionAction](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel/#intersectionaction) property.
+Control label behavior when labels overlap with other labels using the [intersectionAction](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel#intersectionaction) property. The following options are available:
 
-* None
-* Hide
-* Trim
+* **None** -  It specifies that no action is taken, when the labels intersect.
+* **Hide** -  It specifies to hide the labels when they intersect.
+* **Trim** -  It specifies to trim the labels when they intersect.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -115,9 +119,9 @@ The Maps component provides an option to handle the labels when a label intersec
 
 ## Adding data label as a template
 
-The data label can be added as a template in the Maps component. The [template](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel/#template) property of [dataLabelSettings](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel) is used to set the data label as a template. Any text or HTML element can be added as the template in data labels.
+Add custom HTML elements as data label templates using the [template](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel#template) property of [dataLabelSettings](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel) is used to set the data label as a template. Any text or HTML element can be added as the template in data labels.
 
->The properties of data label such as, `smartLabelMode` , `intersectionAction`, `animationDuration`, `border`, `fill`, `opacity` and `textStyle` properties are not applicable to `template` property. The styles can be applied to the label template using the CSS styles of the HTML element.
+>The `smartLabelMode`, `intersectionAction`, `animationDuration`, `border`, `fill`, `opacity`, and `textStyle` properties do not apply to templates. Apply styles to label templates using standard CSS for HTML elements.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

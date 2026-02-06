@@ -91,7 +91,7 @@ let hierarchicalData: { [key: string]: Object }[] = [
                 ]
             },
             {
-                id: '03-03', name: 'Study Materials',
+                id: '03-03', name: 'Study tailwind3s',
                 subChild: [
                     { id: '03-03-01', name: 'UI-Guide.pdf' },
                     { id: '03-03-02', name: 'Tutorials.zip' },

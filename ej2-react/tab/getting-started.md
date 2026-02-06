@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Tab Component
 
-This section briefly explains about how to create a simple **Tab** component and configuring the Tab header content in React.
+This section explains how to create a simple **Tab** component and configure the Tab header content in a React application.
 
 To get started quickly with React Tabs using Create React App, you can check out this video:
 
@@ -31,7 +31,7 @@ The following is the list of dependencies required to use the Tab component in y
 
 ## Setup for Local Development
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up the environment using JavaScript and optimizes the application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -69,10 +69,10 @@ npm install @syncfusion/ej2-react-navigations --save
  Add components style as given below in `src/App.css`.
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-react-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-react-navigations/styles/tailwind3.css';
 
 ```
 
@@ -80,9 +80,9 @@ npm install @syncfusion/ej2-react-navigations --save
 
 ## Initialize the Tab using JSON items collection
 
-The Tab can be rendered by defining a JSON array. The item is rendered with [`header`](https://ej2.syncfusion.com/react/documentation/api/tab/tabItem/#header) text and [`content`](https://ej2.syncfusion.com/react/documentation/api/tab/tabItem/#content) for each Tab.
+The Tab can be rendered by defining a JSON array. The item is rendered with [`header`](https://ej2.syncfusion.com/react/documentation/api/tab/tabItem#header) text and [`content`](https://ej2.syncfusion.com/react/documentation/api/tab/tabItem#content) for each Tab.
 
-* Import the Tab component to your `src/App.tsx` file using following code.
+*   Import the Tab component into the `src/App.tsx` file using the following code.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -97,7 +97,7 @@ The Tab can be rendered by defining a JSON array. The item is rendered with [`he
 {% endtabs %}
 
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Now run the `npm run dev` command in the console to start the development server. This command compiles the code and serves the application locally in the browser.
 
 ```
 npm run dev
@@ -110,7 +110,8 @@ npm run dev
 ## Initialize the Tab using HTML elements
 
 The Tab component can be rendered based on the given HTML element using `<TabComponent>` tag. Header section must be enclosed with in a wrapper element using `e-tab-header` class and corresponding content must be mapped with `e-content` class.
-You need to follow the below structure of HTML elements to render the Tab,
+
+Use the following HTML structure to render the Tab:
 
 ```
 

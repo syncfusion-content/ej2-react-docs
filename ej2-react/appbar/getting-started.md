@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting started with React AppBar component
 
 This section explains how to create a simple AppBar, and configure its available functionalities in React.
 
 ## Dependencies
 
-The following list of dependencies are required to use the AppBar component in your application.
+The following dependencies are required to use the AppBar component in an application. These packages provide core functionalities and UI controls for the AppBar.
 
 ```javascript
 |-- @syncfusion/ej2-react-navigations
@@ -25,7 +25,7 @@ The following list of dependencies are required to use the AppBar component in y
 
 ## Setup your development environment
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -69,13 +69,13 @@ which are required to render the component in the `React` environment.
 Add AppBar component's styles as given below in `App.css`.
 
 ```css
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
 ```
 
 ## Add AppBar to the project
 
-Now, you can create `AppBar` component in the application. Add `AppBar` component in `src/App.tsx` file using the following code snippet.
+Create the `AppBar` component in the application by adding the following code snippet to the `src/App.tsx` file.
 
 
 
@@ -102,7 +102,7 @@ export default App;
 
 ## Run the application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Run the `npm run dev` command in the console to start the development server. This command compiles code and serves the application locally, opening it in the browser.
 
 ```
 npm run dev
