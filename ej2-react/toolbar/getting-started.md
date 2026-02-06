@@ -27,7 +27,7 @@ Below is the list of minimum dependencies required to use the Toolbar component.
 
 ## Setup for Local Development
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -66,17 +66,17 @@ npm install @syncfusion/ej2-react-navigations --save
  Add components style as given below in `src/App.css`.
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-react-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-react-navigations/styles/tailwind3.css';
 ```
 
 > To refer `App.css` in the application then import it in the `src/App.tsx` file.
 
 ## Initialize the Toolbar with commands
 
-The Toolbar can be rendered by defining an array of [`items`](https://ej2.syncfusion.com/react/documentation/api/toolbar/#items). An item is rendered with text by defining the default item type as a `Button`. For more information about item configuration, refer the [Item Configuration](./item-configuration/) section.
+The Toolbar can be rendered by defining an array of [`items`](https://ej2.syncfusion.com/react/documentation/api/toolbar#items). An item is rendered with text by defining the default item type as a `Button`. For more information about item configuration, refer the [Item Configuration](./item-configuration) section.
 
 * Import the Toolbar component to your `src/App.tsx` file using following code.
 
@@ -103,7 +103,7 @@ export default ReactApp;
 
 ```
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Now run the `npm run dev` command in the console to start the development server. This command compiles the code and serves the application locally in the browser.
 
 ```
 npm run dev
@@ -142,4 +142,4 @@ The Toolbar component can be rendered based on the given HTML element using `<To
 
 * [How to add Toggle Button](./how-to/add-toggle-button)
 
-N> You can refer to our [React Toolbar](https://www.syncfusion.com/react-components/react-toolbar) feature tour page for its groundbreaking feature representations. You can also explore our [React Toolbar Example](https://ej2.syncfusion.com/react/demos/#/fabric/toolbar/default) that shows you how to render the Toolbar in React.
+N> Refer to the [React Toolbar](https://www.syncfusion.com/react-components/react-toolbar) feature tour page for its groundbreaking feature representations. Explore the [React Toolbar Example](https://ej2.syncfusion.com/react/demos/#/tailwind3/toolbar/default) for a demonstration of rendering the Toolbar in React.

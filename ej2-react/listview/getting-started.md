@@ -14,7 +14,7 @@ The following section explains the required steps to build the simple **ListView
 
 ## Dependencies
 
-Install the below required dependent packages to render the ListView component.
+Install the following dependent packages that are required to render the ListView component.
 
 ```javascript
 +-- @syncfusion/ej2-react-lists
@@ -26,7 +26,7 @@ Install the below required dependent packages to render the ListView component.
 
 ## Installation and Configuration
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite configures the project using JavaScript and prepares it for production deployment.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -66,9 +66,7 @@ The above command installs [ListView dependencies](#dependencies) which are requ
 
 ## Adding ListView component
 
-Now, you can add `ListView` component in the application. For getting started, add `ListView` component in `src/App.tsx` file using the following code snippet.
-
-
+The `ListView` component can now be added to the application. To get started, include the `ListView` component in the `src/App.tsx` file using the following code snippets.
 
 ```ts
 import * as React from 'react';
@@ -102,14 +100,14 @@ Import `ListView` component required theme references at the top of `src/App.css
 
 ```css
 /* import the ListView dependency styles */
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-react-lists/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-react-lists/styles/tailwind3.css";
 ```
 
-If you are using `CheckList` behavior in ListView, we need to add `Button` component's styles as given below in `src/App.css` file
+If the `CheckList` behavior is used in the ListView, include the Button component styles as shown below in the `src/App.css` file.
 
 ```css
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
 ```
 
 ## Bind dataSource
@@ -164,7 +162,7 @@ export default App;
 
 ## Running the application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Run the `npm run dev` command in the console to start the development server. This command compiles the application and serves it locally, allowing it to open in the browser.
 
 ```
 npm run dev
@@ -187,7 +185,7 @@ npm run dev
 
  {% previewsample "page.domainurl/code-snippet/listview/getting-started-cs1" %}
 
-> You can refer to our [React ListView](https://www.syncfusion.com/react-components/react-listview) feature tour page for its groundbreaking feature representations. You can also explore our [React ListView example](https://ej2.syncfusion.com/react/demos/#/material/listview/default) to know how to render and configure the listview.
+> Refer to the [React ListView](https://www.syncfusion.com/react-components/react-listview) feature tour page to explore feature highlights. For practical implementation details and configuration options, see the [React ListView example](https://ej2.syncfusion.com/react/demos/#/tailwind3/listview/default) to know how to render and configure the listview.
 
 ## See Also
 

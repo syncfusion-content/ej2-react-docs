@@ -108,7 +108,7 @@ The GraphQL schema defines the structure of the "product" data model and the ser
 1. Create a new schema file (**src/schema.graphql**) in the **GraphQLServer** folder.
 2. Add type definition for "Product".
 
-```graphql
+```
 #--- Product type definition ---
 type Product {
   productId: String!
@@ -118,7 +118,7 @@ type Product {
 ```
 3. Add type definition for "ReturnType".
 
-```graphql
+```
 # --- Return type for Grid paging ---
 type ReturnType {
   result: [Product!]!
@@ -127,7 +127,7 @@ type ReturnType {
 ```
 4. Add type definition for "Sort".
 
-```graphql
+```
 # --- Sorting input ---
 input Sort {
   name: String
@@ -136,7 +136,7 @@ input Sort {
 ```
 5. Add type definition for "ProductInput".
 
-```graphql
+```
 # --- Product input for mutation operations ---
 input ProductInput {
   productId: String!
@@ -146,7 +146,7 @@ input ProductInput {
 ```
 6. Add type definition for "DataManagerInput".
 
-```graphql
+```
 # --- Syncfusion DataManager payload ---
 input DataManagerInput {
   skip: Int
@@ -165,14 +165,14 @@ input DataManagerInput {
 
 7. Define the Query type to expose the "getProducts" operation that returns the list of products.
 
-```graphql
+```
 type Query {
   getProducts(datamanager: DataManagerInput): ReturnType!
 }
 ```
 8. Define Mutation types for CRUD operations.
 
-```graphql
+```
 type Mutation {
   createProduct(value: ProductInput!): Product!
   updateProduct(key: String!, keyColumn: String, value: ProductInput!): Product
@@ -267,7 +267,7 @@ Mutation: {
 | **3. Insert Record** | Add the "product" to the existing data collection. | use `productDetails.push(newProduct)` to add record. |
 | **4. Return Created** | Send the inserted record back to the client. | return `newProduct` - returns the newly added "product" so the client can update the Grid instantly. |
 
-3. Implement the "updateProduct" mutation
+3. Implement the "updateProduct" mutation:
 
 ```ts
 Mutation: {
@@ -287,9 +287,10 @@ Mutation: {
 |------|---------|-----------------|
 | **1. Receive Input** | Accept the `key`, `keyColumn`, and updated field values. | Resolver parameters: `key`, `keyColumn`, and `value`. |
 | **2. Locate Record** | Find the matching "product" using a dynamic key. | `find((p:ProductDetails) => String(p[keyColumn]) === String(key))` |
-| **3. Apply Updates** | Merge updated values into the located "product" record. | `if (!product) throw new Error("Product not found")` |
-| **4. Preserve Key** | Keep the original key field unchanged. | Key field `(productId by default)` is not overwritten. |
-| **5. Return Updated** | Send back the modified "product" to the client. | return `product` object with all updates applied. |
+| **3. Verification** | Fail fast if no matching product exists. | `if (!product) throw new Error("Product not found")` |
+| **4. Apply Updates** | Merge incoming fields into the located product. | `Object.assign(product, value)` |
+| **5. Preserve Key** | Keep the original key field unchanged. | The code does not overwrite the key unless `value[keyColumn]` is provided.|
+| **6. Return Updated** | Send back the modified "product" to the client. | return `product` object with all updates applied. |
 
 4. Implement the "deleteProduct" mutation.
 
@@ -322,7 +323,7 @@ Now all required GraphQL types, queries, and mutations have now been fully added
 
 Create a new React application using `create vite@latest`, which provides a faster development environment, smaller bundle sizes, and optimized builds.
 
-Open a Visual Code terminal or Command prompt and run the below command.
+Open a Visual Studio Code terminal or Command prompt and run the below command:
 
 ```bash
 npm create vite@latest GridClient
@@ -334,7 +335,7 @@ The integration process begins by installing the required Syncfusion React Grid 
 
 ### Step 1: Adding Syncfusion packages
 
-Install the necessary Syncfusion packages using the below command in Visual Code terminal or Command prompt.
+Install the necessary Syncfusion packages using the below command in Visual Studio Code terminal or Command prompt:
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
@@ -362,7 +363,7 @@ Once the dependencies are installed, the required CSS files are made available i
 @import '@syncfusion/ej2-react-grids/styles/tailwind3.css';
 ```
 
-For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation to learn more about theming and customization options.
+For this project, the "Tailwind3" theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation to learn more about theming and customization options.
 
 ### Step 3: Configure GraphQL Adaptor
 
@@ -381,7 +382,7 @@ An adaptor is a translator between two different systems. The `GraphQLAdaptor` s
 
 The adaptor enables bi-directional communication between the frontend (Grid) and backend (GraphQL server).
 
-![GraphQL-NodeJs-DataFlow-Diagram](../images/GraphQL-NodeJs-DataFlow-Diagram.png)
+![GraphQL-NodeJs-DataFlow-Diagram](../images/GraphQL-Nodejs-DataFlowDiagram.png)
 
 When using the `GraphQLAdaptor`, the client expects the response from the server in a specific structure so that the Grid can process and render the results correctly.
 
@@ -440,7 +441,7 @@ The `GraphQLAdaptor` needs to be configured to the Syncfusion `DataManager` to c
 
 The Query property is critical for understanding the data flows. Let's break down each component:
 
-```graphql
+```
 query getProducts($datamanager: DataManagerInput) {}
 ```
 
@@ -451,7 +452,7 @@ query getProducts($datamanager: DataManagerInput) {}
   - `$dataManager` - Variable name (referenced as $dataManager throughout the query).
   - `: DataManagerInput` - Type specification.
 
-```graphql
+```
 getProducts(datamanager: $datamanager) {}
 ```
 
@@ -460,7 +461,7 @@ getProducts(datamanager: $datamanager) {}
 - `dataManager: $dataManager` - Passes the "$dataManager" variable to the resolver.
 - The resolver receives this object and uses it to apply filters, sorts, searches, and pagination.
 
-```graphql
+```
 count
   result {
     productId, productImage 
@@ -805,11 +806,12 @@ The `GraphQLAdaptor` automatically passes the filter conditions to the server th
 1. Set the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowfiltering) property to "true".
 
 ```ts
+const filterSettings: FilterSettingsModel = { type: 'Excel' };
 <GridComponent
   ref={gridRef}
   dataSource={productDetails}
   allowFiltering={true}
-  filterSettings={{type: "CheckBox" }}>    
+  filterSettings={filterSettings}>    
   <ColumnsDirective>
     <ColumnDirective
       field="productId"
@@ -997,7 +999,7 @@ The `getMutation` function in the `GraphQLAdaptor` handles the Grid CRUD actions
 
 > Previously, the required mutation definitions and schema for CRUD operations were created in the (**resolver.ts**) and (**schema.graphql**) files. The next step is to enable CRUD actions in the client Data Grid by using the GraphQL adaptor.
 
-**Insert**
+**Insert:**
 
 The Insert operation enables adding new "product" records to the product list. When the Add button in the toolbar is selected, the Grid opens a dialog that displays input fields for entering product details. 
 
@@ -1047,7 +1049,7 @@ When the `Add` button is clicked, the dialog is filled, and the data is submitte
 
 ![GraphQL-Nodejs-insertRecord](../images/GraphQL-Nodejs-insertRecord.png)
 
-**Update**
+**Update:**
 
 The Update operation enables editing of existing product records. When the Edit option in the toolbar is selected and a row is chosen, the Grid opens a dialog displaying the current values of the selected record. 
 
@@ -1097,7 +1099,7 @@ When the `Update` button is clicked, the dialog is modified, and the changes are
 
 ![GraphQL-Nodejs-updateRecord](../images/GraphQL-Nodejs-updateRecord.png)
 
-**Delete**
+**Delete:**
 
 The Delete operation enables removal of product records from the application. When the `Delete` option in the `toolbar` is selected and a row is marked for removal, a confirmation prompt appears. After confirmation, a GraphQL mutation sends a delete request to the backend containing only the primary key value.
 
@@ -1143,7 +1145,7 @@ Open the (**ProductGrid.tsx**) and Configure the `getMutation` function in the `
 
 When the `Delete` button is clicked, a row is selected for deletion, and the action is confirmed, the GraphQL adaptor constructs the mutation using minimal parameters:
 
-![GraphQL-Nodejs-deleteRecord](../images/GraphQL-Nodejs-deleteRecord.png)
+![GraphQL-Nodejs-deleting](../images/GraphQL-Nodejs-deleting.png)
 
 
 > Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) for the Grid component. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property is set to "true" for a specific Grid Column which has unique values.
@@ -1155,7 +1157,7 @@ When the `Delete` button is clicked, a row is selected for deletion, and the act
 Open a terminal or Command Prompt. Run the server application first, then start the client application.
 
 ### Run the GraphQL server
-- Run the following commands to start the server.
+- Run the following commands to start the server:
 
 ```bash
   cd GraphQLServer
@@ -1164,7 +1166,7 @@ Open a terminal or Command Prompt. Run the server application first, then start 
 - The server is now running at http://localhost:4205/.
 
  ### Run the client
- - Execute the below commands to run the client application.
+ - Execute the below commands to run the client application:
 ```bash
     cd GridClient
     npm run dev

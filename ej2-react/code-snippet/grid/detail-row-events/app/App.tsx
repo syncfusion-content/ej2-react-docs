@@ -1,7 +1,7 @@
 
 
-import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import { DetailRow, GridModel, Inject, DetailExpandCollapseArgs } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, GridComponent, DetailExpandCollapseArgs } from '@syncfusion/ej2-react-grids';
+import { DetailRow, GridModel, Inject } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data, employeeData } from './datasource';
 

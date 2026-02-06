@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import {
   DiagramComponent,
   PortVisibility,
@@ -137,5 +137,5 @@ function App() {
   );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('diagram'));
+const root = createRoot(document.getElementById('diagram'));
 root.render(<App />);

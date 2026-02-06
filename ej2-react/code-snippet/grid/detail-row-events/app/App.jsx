@@ -6,13 +6,13 @@ function App() {
     // Prevent expanding detail row.
     const detailExpand = (args) =>{
         if (args.rowData.FirstName === 'Nancy') {
-            args.cancel = true;
+        args.cancel = true;
         }
     }
     // Prevent collapsing detail row.
     const detailCollapse = (args) =>{
         if (args.rowData.FirstName === 'Andrew') {
-            args.cancel = true;
+        args.cancel = true;
         }
     }
     const childGridOptions = {

@@ -105,24 +105,6 @@ TreeGrid columns support the following types:
 
 > If the [type](https://ej2.syncfusion.com/react/documentation/api/treegrid/column#type) is not set, it is inferred from the first record of the [dataSource](https://ej2.syncfusion.com/react/documentation/api/treegrid/column#datasource).
 
-## Checkbox Column
-
-To render checkboxes in an existing column, set the [columns.showCheckbox](https://ej2.syncfusion.com/react/documentation/api/treegrid/column#showcheckbox) property to true.
-
-Rows can be selected hierarchically using checkboxes by enabling the [autoCheckHierarchy](https://ej2.syncfusion.com/react/documentation/api/treegrid#autocheckhierarchy) property. Selecting a parent record checkbox selects its child records.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/treegrid/column-cs12/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/treegrid/column-cs12/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/treegrid/column-cs12" %}
-
-> For hierarchical selection between records, enable the [autoCheckHierarchy](https://ej2.syncfusion.com/react/documentation/api/treegrid#autocheckhierarchy) property.
 
 ## Autofit columns 
 

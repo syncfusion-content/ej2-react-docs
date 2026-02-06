@@ -83,7 +83,7 @@ function App() {
                     ]
                 },
                 {
-                    id: '03-03', name: 'Study Materials', tooltip: 'Study Materials',
+                    id: '03-03', name: 'Study tailwind3s', tooltip: 'Study tailwind3s',
                     subChild: [
                         { id: '03-03-01', name: 'UI-Guide.pdf', tooltip: 'UI-Guide.pdf' },
                         { id: '03-03-02', name: 'Tutorials.zip', tooltip: 'Tutorials.zip' },

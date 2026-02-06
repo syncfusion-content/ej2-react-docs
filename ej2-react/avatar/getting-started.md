@@ -14,11 +14,11 @@ This section explains how to create a simple **Avatar** using styles in the Reac
 
 ## Dependencies
 
-The Avatar component is a pure CSS component, so it has no specific dependencies for rendering.
+The Avatar component is a pure CSS-based component and does not require any JavaScript dependencies for rendering.
 
 ## Installation and configuration
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools such as `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools such as `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite configures the project using JavaScript or TypeScript and streamlines the build process for production environments.
 
 > **Note:** To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -56,16 +56,16 @@ npm install @syncfusion/ej2-layouts --save
 
 ## Adding CSS Reference
 
-The Avatar CSS files, which include base styles from `@syncfusion/ej2-base`, are available in the `@syncfusion/ej2-layouts` package. Reference them in your application by adding the following to `src/App.css`:
+The Avatar CSS files include base styles from `@syncfusion/ej2-base` and component styles from `@syncfusion/ej2-layouts`. Add the following CSS references to the `src/App.css` file to apply the required styles:
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css';
 ```
 
 ## Adding a simple Avatar
 
-Add a `div` element with the `e-avatar` class to your `App.tsx`:
+Add a `div` element with the `e-avatar` class in the `App.tsx` file:
 
 ```bash
 <div className="e-avatar">AJ</div>
@@ -73,7 +73,7 @@ Add a `div` element with the `e-avatar` class to your `App.tsx`:
 
 ## Run the application
 
-Run the `npm run dev` command to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Run the `npm run dev` command to start the development server. This command compiles the application and serves it locally in the browser.
 
 ```bash
 npm run dev

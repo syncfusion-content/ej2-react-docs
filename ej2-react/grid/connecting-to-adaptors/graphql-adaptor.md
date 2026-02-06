@@ -236,10 +236,27 @@ To integrate GraphQL with the Syncfusion<sup style="font-size:70%">&reg;</sup> G
 
 **Step 1: Create an Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid:**
 
-Start a new React application using below command.
+1. Start a new React application using below command.
 
 ```bash
-ng new GridClient
+npm create vite@latest GridClient
+```
+2. Name the project:
+   
+```bash
+? Project name: » GridClient
+
+```
+3. Select React as the framework:
+   
+```bash
+? Select a framework: » React
+```
+
+4. Choose JavaScript as the variant:
+
+```bash
+? Select a variant: » JavaScript
 ```
 
 This command will prompt you for a few settings for the new project, such as whether to add React routing and which stylesheet format to use.

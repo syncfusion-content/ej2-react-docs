@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started
+# Getting Started
 
 This section explains the steps required to create a simple React Grid component and demonstrate its basic usage in a React environment.
 
-> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview)
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
 
 To get started quickly with React Grid, you can watch this video:
 
@@ -189,7 +189,7 @@ The paging feature divides Grid records into multiple pages, improving performan
 
 ## Enable sorting
 
-The sorting feature allows ordering Grid records by clicking column headers. Enable sorting by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/allowsorting) property to `true` and injecting the **Sort** module. Without the **Sort** module, clicking headers will not sort the data. Customize sorting behavior using the [sortSettings](https://ej2.syncfusion.com/react/documentation/api/grid/sortsettings) property.
+The sorting feature allows ordering Grid records by clicking column headers. Enable sorting by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) property to `true` and injecting the **Sort** module. Without the **Sort** module, clicking headers will not sort the data. Customize sorting behavior using the [sortSettings](https://ej2.syncfusion.com/react/documentation/api/grid#sortsettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -210,7 +210,7 @@ The sorting feature allows ordering Grid records by clicking column headers. Ena
 
 ## Enable filtering
 
-The filtering feature enables searching and refining Grid records based on column values. Enable filtering by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/allowfiltering) property to `true` and injecting the [Filter](https://ej2.syncfusion.com/react/documentation/api/grid/filtermodule) module. Without the **Filter** module, the filter bar will not render. Customize filtering options using the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid/filtersettings) property.
+The filtering feature enables searching and refining Grid records based on column values. Enable filtering by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) property to `true` and injecting the [Filter](https://ej2.syncfusion.com/react/documentation/api/grid#filtermodule) module. Without the **Filter** module, the filter bar will not render. Customize filtering options using the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid#filtersettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -231,7 +231,7 @@ The filtering feature enables searching and refining Grid records based on colum
 
 ## Enable grouping
 
-The grouping feature organizes Grid records into logical groups based on column values, improving data visualization and analysis. Enable grouping by setting the [allowGrouping](https://ej2.syncfusion.com/react/documentation/api/grid/#allowgrouping) property to `true` and injecting the [Group](https://ej2.syncfusion.com/react/documentation/api/grid/groupmodule) module. Without the **Group** module, the group drop area will not render. Customize grouping behavior using the [groupSettings](https://ej2.syncfusion.com/react/documentation/api/grid/groupsettings) property.
+The grouping feature organizes Grid records into logical groups based on column values, improving data visualization and analysis. Enable grouping by setting the [allowGrouping](https://ej2.syncfusion.com/react/documentation/api/grid#allowgrouping) property to `true` and injecting the [Group](https://ej2.syncfusion.com/react/documentation/api/grid#groupmodule) module. Without the **Group** module, the group drop area will not render. Customize grouping behavior using the [groupSettings](https://ej2.syncfusion.com/react/documentation/api/grid#groupsettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting started with React Accordion component
 
-This section briefly explains you the steps required to create a simple [React Accordion](https://www.syncfusion.com/react-components/react-accordion) and demonstrate the basic usage of the Accordion control.
+This section briefly explains the steps required to create a simple [React Accordion](https://www.syncfusion.com/react-components/react-accordion) and demonstrates the basic usage of the Accordion control.
 
 ## Dependencies
 
-The following list of dependencies are required to use the React Accordion component in your application.
+The following dependencies are required to use the React Accordion component in an application.
 
 ```js
 |-- @syncfusion/ej2-react-navigations
@@ -28,7 +28,7 @@ The following list of dependencies are required to use the React Accordion compo
 
 ## Setup for Local Development
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -66,10 +66,10 @@ npm install @syncfusion/ej2-react-navigations --save
  Add components style as given below in `src/App.css`.
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-react-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-react-navigations/styles/tailwind3.css';
 
 ```
 
@@ -77,7 +77,7 @@ npm install @syncfusion/ej2-react-navigations --save
 
 ## Initialize the Accordion using Items
 
-The React Accordion can be rendered by defining an array of [`items`](https://ej2.syncfusion.com/react/documentation/api/accordion/#items).
+The React Accordion can be rendered by defining an array of [`items`](https://ej2.syncfusion.com/react/documentation/api/accordion#items).
 
 * Import the Accordion component to your `src/App.tsx` file using following code.
 
@@ -164,10 +164,10 @@ You need to follow the below structure of HTML elements to render the Accordion.
         
 {% previewsample "page.domainurl/code-snippet/accordion/accordion-cs5" %}
 
-> You can add the custom class into Accordion component using [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/accordion/accordionItem/#cssclass) property which is used to customize the Accordion component.
+> A custom class can be added to the Accordion component using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/accordion/accordionItem#cssclass) property to customize its appearance.
 
 ## See Also
 
 * [How to load accordion items dynamically](./how-to/load-accordion-items-dynamically)
 
-N> You can also explore our [React Accordion example](https://ej2.syncfusion.com/react/demos/#/fabric/accordion/default) that shows you how to configure the Accordion in React.
+N> Explore the [React Accordion example](https://ej2.syncfusion.com/react/demos/#/tailwind3/accordion/default) for a demonstration of configuring the Accordion in React.

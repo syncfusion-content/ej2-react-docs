@@ -14,7 +14,7 @@ This section explains how to create and configure a simple Timeline in a React a
 
 ## Dependencies
 
-The following list of dependencies is required to use the Timeline component in your application.
+The following list of dependencies is required to use the Timeline component in the application.
 
 ```js
 |-- @syncfusion/ej2-react-layouts
@@ -26,7 +26,7 @@ The following list of dependencies is required to use the Timeline component in 
 
 ## Installation and Configuration
 
-To quickly set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To quickly set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite configures the development environment using modern tooling and optimizes the application for production.
 
 > **Note:** To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -62,18 +62,18 @@ npm install @syncfusion/ej2-react-layouts --save
 
 ## Adding CSS Reference
 
-Import the Timeline component's required CSS references as follows in `src/App.css`.
+Import the required CSS references for the Timeline component in `src/App.css` as shown below.
 
 ```css
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
 ```
 
 ## Adding Timeline component to the application
 
-To include the Timeline component in your application, import the `TimelineComponent` from `ej2-react-layouts` package in the `App.tsx`.
+To include the Timeline component in the application, import the `TimelineComponent` from the `ej2-react-layouts` package into the `App.tsx` file.
 
-To define each item, you can use the `ItemDirective` tag inside the `ItemsDirective` tag as shown in below code example.
+Each Timeline item is defined using the `ItemDirective`, which must be placed inside the `ItemsDirective`. The `ItemsDirective` acts as a container for managing multiple Timeline items, and each `ItemDirective` represents an individual entry in the Timeline.
 
 {% raw %}
 
@@ -105,7 +105,7 @@ root.render(<App />);
 
 ## Running the application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Run the `npm run dev` command in the console to start the development server. This command compiles the application and serves it locally, making it available in the browser.
 
 ```
 npm run dev
