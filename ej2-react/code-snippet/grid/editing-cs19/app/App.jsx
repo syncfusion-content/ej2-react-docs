@@ -8,20 +8,18 @@ function App() {
       <input id={props.OrderID} defaultValue={props.Freight} className='custemp' type='text'/>
     </div>);
     };
-    const created = (args) => {
-        grid.element.addEventListener('keyup', function (e) {
-            if (e.target.classList.contains('custemp')) { // Based on condition, you can find whether the target is an input element or not.
-                let row = parentsUntil(e.target, 'e-row');
-                let rowIndex = row.rowIndex; // Get the row index.
-                let uid = row.getAttribute('data-uid');
-                let grid = document.getElementsByClassName('e-grid')[0].ej2_instances[0];
-                let rowData = grid.getRowObjectFromUID(uid).data; // Get the row data.
-                rowData.Freight = e.target.value; // Update the new value for the corresponding column.
-                grid.updateRow(rowIndex, rowData); // Update the modified value in the row data.
-            }
-        });
-    };
-    return <GridComponent dataSource={data} ref={g => grid = g} height={315} created={created}>
+    const onKeyUp = (e) => {
+      if (e.target.classList.contains('custemp')) { // Based on condition, you can find whether the target is an input element or not.
+          let row = parentsUntil(e.target, 'e-row');
+          let rowIndex = row.rowIndex; // Get the row index.
+          let uid = row.getAttribute('data-uid');
+          let grid = document.getElementsByClassName('e-grid')[0].ej2_instances[0];
+          let rowData = grid.getRowObjectFromUID(uid).data; // Get the row data.
+          rowData.Freight = e.target.value; // Update the new value for the corresponding column.
+          grid.updateRow(rowIndex, rowData); // Update the modified value in the row data.
+      }
+    }
+    return <GridComponent dataSource={data} ref={g => grid = g} height={315} onKeyUp={onKeyUp}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" isPrimaryKey={true}/>
       <ColumnDirective field='OrderDate' headerText='Order Date' width='130' textAlign="Right" format='yMd'/>

@@ -23,7 +23,7 @@ function App() {
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='120' textAlign='Right' />
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
-      <ColumnDirective field='Freight' headerText='Freight' format='C2' editType='numericedit' width='150' />
+      <ColumnDirective field='Freight' headerText='Freight' format='C2' editType='numericedit' textAlign='Right'  width='150' />
       <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
     </ColumnsDirective>
     <AggregatesDirective>

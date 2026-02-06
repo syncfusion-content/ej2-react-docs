@@ -1,7 +1,8 @@
-import { TextBoxComponent, FocusInEventArgs } from '@syncfusion/ej2-react-inputs'
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs'
 import { ColumnDirective, ColumnsDirective, EditSettingsModel, GridComponent, Inject, SaveEventArgs } from '@syncfusion/ej2-react-grids';
 import { Edit, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
+import { useRef } from 'react';
 import { data } from './datasource';
 export interface columnDataType {
   OrderID: number,
@@ -27,10 +28,11 @@ function App() {
   const orderIDRules: Object = { required: true, number: true };
   const customerIDRules: Object = { required: true, minLength: 5 };
   const freightRules: Object = { required: true, min: 1, max: 1000 };
+  const textbox = useRef<TextBoxComponent>(null);
   const editTemplate = () => {
     return (
       <div>
-        <TextBoxComponent id='ShipAddress' multiline={true} value={orderData.ShipAddress} focus={onFocus}></TextBoxComponent>
+        <TextBoxComponent ref={textbox} id='ShipAddress' multiline={true} value={orderData.ShipAddress} created={created}></TextBoxComponent>
       </div>
     )
   }
@@ -46,8 +48,8 @@ function App() {
       orderData['ShipAddress'] = (args.data as columnDataType)['ShipAddress'];
     }
   }
-  const onFocus = (args: FocusInEventArgs) => {
-    ((args.event as Event).target as EventTarget).addEventListener('keydown', (e) => {
+  const created = () => {
+    (textbox.current?.['textarea'] as HTMLTextAreaElement).addEventListener('keydown', (e) => { // bind multi line textbox, textarea element keydown event to prevent enter key action in grid
       if ((e as KeyboardEvent).key === 'Enter') {
         e.stopPropagation();
       }

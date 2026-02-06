@@ -1,16 +1,18 @@
 ---
 layout: post
-title: Detail template in React Grid component | Syncfusion
-description: Learn here all about Detail template in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Detail Template | Syncfusion
+description: Learn to display additional row information using detail templates in Syncfusion React Grid and customization.
 control: Detail template 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Detail template in React Grid component
+# Detail Template in React Grid Component
 
-The detail template in the Grid component allows you to display additional information about a specific row in the grid by expanding or collapsing detail content. This feature is useful when you need to show additional data or custom content that is specific to each row in the grid. You can use the [detailTemplate](https://ej2.syncfusion.com/react/documentation/api/grid#detailtemplate) property to define an HTML template for the detail row. This template can include any HTML element or React component that you want to display as detail content.
+The detail template in the Grid component displays additional information about a specific row by expanding or collapsing detail content. This feature proves useful when additional data or custom content specific to each row requires display. The [detailTemplate](https://ej2.syncfusion.com/react/documentation/api/grid#detailtemplate) property defines an HTML template for the detail row. This template can include any HTML element or React component for displaying detail content.
+
+To use detail template feature, inject the [DetailRow](https://ej2.syncfusion.com/angular/documentation/api/grid/detailrow) module to the grid.
 
 Here's an example of using the `detailTemplate` property in the grid component:
 
@@ -181,15 +183,13 @@ export default App;
 
  {% previewsample "page.domainurl/code-snippet/grid/row-template-cs1" %}
 
-## Rendering custom component
+## Rendering custom components
 
-The Grid component provides a powerful feature that allows you to render custom components inside the detail row. This feature is helpful when you need to add additional information or functionality for a specific row in the grid.
+The Grid component provides a powerful feature for rendering custom components inside the detail row. This capability proves helpful when additional information or functionality specific to a grid row requires display.
 
-To render a custom component inside the detail row, you need to define a template using the[detailTemplate](https://ej2.syncfusion.com/react/documentation/api/grid#detailtemplate)  property and handle the [detailDataBound](https://ej2.syncfusion.com/react/documentation/api/grid#detaildatabound) event.This template can include any HTML element or React component that you want to display as the detail content.
+To render a custom component inside the detail row, define a template using the [detailTemplate](https://ej2.syncfusion.com/react/documentation/api/grid#detailtemplate) property and handle the [detailDataBound](https://ej2.syncfusion.com/react/documentation/api/grid#detaildatabound) event. This event triggers after a detail row binds to data and provides an object of type [DetailDataBoundEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/detaildataboundeventargs) as a parameter.
 
-The `detailDataBound` event is an event that is triggered after a detail row is bound to data. This event provides an object of type [DetailDataBoundEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/detaildataboundeventargs) as a parameter.
-
-For example, to render grid inside the detail row, place an HTML div element as the `detailTemplate` and render the DIV element as grid component in the `detailDataBound` event.
+For example, to render a grid inside the detail row, place an HTML div element as the `detailTemplate` and render the DIV element as a grid component in the `detailDataBound` event.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -210,11 +210,11 @@ For example, to render grid inside the detail row, place an HTML div element as 
 
 ## Expand by external button
 
-The Grid provides a feature that allows users to expand the detail row of a grid using an external button. By default, detail rows render in a collapsed state, but this feature enables users to view additional details associated with a particular row. 
+The Grid provides a feature that enables expanding the detail row using an external button. By default, detail rows render in a collapsed state with an icon in each row to expand or collapse the detail view.
 
-To achieve expanding the detail row of a grid using an external button, you need to invoke the [expand](https://ej2.syncfusion.com/react/documentation/api/grid/detailRow#expand) method provided by the **detailRowModule** object of the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid library. This method will expand the detail row of a specific grid row.
+To expand the grid detail row using an external button, invoke the [expand](https://ej2.syncfusion.com/react/documentation/api/grid/detailRow#expand) method provided by the **detailRowModule** of the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid library. This method expands the detail row of a specific grid row.
 
-Here is an example of how to use the `expand` method to expand a detail row:
+Here is an example of using the `expand` method to expand a detail row:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -407,7 +407,7 @@ export default App;
 
 ## Customize detail template icon
 
-The detail template icon in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid is used to expand or collapse the detail content of a row. By default, the icon represents a right arrow for the collapsed state and a down arrow for the expanded state. If you want to customize this icon, you can achieve it by overriding the following CSS styles:
+The detail template icon in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid expands or collapses the detail content of a row. By default, the icon represents a right arrow for the collapsed state and a down arrow for the expanded state. To customize this icon, override the following CSS styles:
 
 ```css
 
@@ -421,7 +421,7 @@ The detail template icon in the Syncfusion<sup style="font-size:70%">&reg;</sup>
 
 ```
 
-Here is an example of how to customize the detail template icon:
+Here is an example of customizing the detail template icon:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

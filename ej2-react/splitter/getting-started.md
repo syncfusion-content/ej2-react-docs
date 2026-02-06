@@ -14,7 +14,7 @@ The following section explains the steps required to build the Splitter componen
 
 ## Dependencies
 
-The following dependencies are required to use the Splitter component in your application:
+The following dependencies are required to use the Splitter component in the application:
 
 ```js
 |-- @syncfusion/ej2-layouts
@@ -26,7 +26,7 @@ The following dependencies are required to use the Splitter component in your ap
 
 ## Installation and configuration
 
-To quickly set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To quickly set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up the environment using JavaScript and optimizes the application for production.
 
 > **Note:** To create a React application using `create-react-app`, refer to this [Syncfusion guide](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -50,7 +50,7 @@ cd my-app
 npm run dev
 ```
 
-Install the below required dependency package in order to use the `Splitter` component in your application.
+Install the required dependency package to use the `Splitter` component in the application:
 
 ```
 npm install @syncfusion/ej2-react-layouts --save
@@ -58,14 +58,13 @@ npm install @syncfusion/ej2-react-layouts --save
 
 ## Adding CSS Reference
 
-The Splitter CSS files are available in the `ej2-layouts` package folder.
-This can be referred in your application using the following code.
+The Splitter CSS files are available in the `ej2-layouts` package folder. These styles can be referenced in the application using the following import statements.
 
 `[src/App.css]`
 
 ```css
-@import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-layouts/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css';
 ```
 
 ## Adding Splitter to the project
@@ -100,7 +99,7 @@ export default App;
 
 ```
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Run the `npm run dev` command in the console to start the development server. This command compiles the code and serves the application locally, opening it in the browser.
 
 ```
 npm run dev
@@ -121,7 +120,7 @@ Output will be as follows:
 
 ## Orientation
 
-Splitter supports both `Horizontal` and `Vertical` orientations. By default, it renders in `Horizontal` orientation. Change the layout by setting the [orientation](https://ej2.syncfusion.com/react/documentation/api/splitter/#orientation) property.
+Splitter supports both `Horizontal` and `Vertical` orientations. By default, it renders in `Horizontal` orientation. Change the layout by setting the [orientation](https://ej2.syncfusion.com/react/documentation/api/splitter#orientation) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -136,7 +135,7 @@ Splitter supports both `Horizontal` and `Vertical` orientations. By default, it 
 
 ## Load content to the pane
 
-Use the [content](https://ej2.syncfusion.com/react/documentation/api/splitter/panePropertiesModel/#content) property to load pane contents as an HTML element or string. 
+Use the [content](https://ej2.syncfusion.com/react/documentation/api/splitter/panePropertiesModel#content) property to load pane contents as an HTML element or string. 
 
 For detailed information, refer to the [Pane Content](./pane-content) section.
 

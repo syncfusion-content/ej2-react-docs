@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # # Getting started with React Dropdown Tree component
 
-This section explains you about how to create a simple **Dropdown Tree** component and configure its available functionalities in React.
+This section explains how to create a simple **Dropdown Tree** component and configure its available features in a React application.
 
 ## Dependencies
 
-The following dependencies are required to use the `Dropdown Tree` component in your application:
+The following dependencies are required to use the `Dropdown Tree` component in an application:
 
 ```javascript
 |-- @syncfusion/ej2-react-dropdowns
@@ -31,7 +31,7 @@ The following dependencies are required to use the `Dropdown Tree` component in 
 
 ## Installation and configuration
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite configures the project using JavaScript or TypeScript and optimizes the application for production.
 
 > **Note:** To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -57,7 +57,7 @@ npm run dev
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. You can choose the component that you want to install.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. Install only the packages required for the component being used.
 
 To install Dropdown Tree component, use the following command
 
@@ -67,7 +67,7 @@ npm install @syncfusion/ej2-react-dropdowns --save
 
 ## Adding Dropdown Tree component
 
-Now, you can start adding Dropdown Tree component in the application. For getting started, add the Dropdown Tree component in `src/App.tsx` file using following code. Add the below code in the `src/App.tsx` to initialize the Dropdown Tree.
+After installing the required packages, add the Dropdown Tree component to the application. For a basic setup, add the following code to the `src/App.tsx` file to initialize the component.
 
 ```ts
 
@@ -107,17 +107,17 @@ Import the Dropdown Tree component required CSS references as follows in `src/Ap
 
 /* import the Dropdown Tree dependency styles */
 
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-react-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-react-dropdowns/styles/tailwind3.css";
 
 ```
 
 ## Binding data source
 
-The Dropdown Tree component can load the data either from local data sources or remote data services. This can be done using the [`dataSource`](https://helpej2.syncfusion.com/react/documentation/api/drop-down-tree/fieldsModel/#datasource) property that is a member of the [`fields`](https://helpej2.syncfusion.com/react/documentation/api/drop-down-tree/#fields) property. The dataSource property supports array of JavaScript objects and DataManager. Here, an array of JSON values is passed to the Dropdown Tree component.
+The Dropdown Tree component can load the data either from local data sources or remote data services. This can be done using the [`dataSource`](https://helpej2.syncfusion.com/react/documentation/api/drop-down-tree/fieldsModel#datasource) property that is a member of the [`fields`](https://helpej2.syncfusion.com/react/documentation/api/drop-down-tree#fields) property. The dataSource property supports array of JavaScript objects and DataManager. Here, an array of JSON values is passed to the Dropdown Tree component.
 
 
 
@@ -207,7 +207,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ## Run the application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Run the `npm run dev` command in the console to start the development server. This command compiles the application and serves it locally in the browser.
 
 ```
 npm run dev

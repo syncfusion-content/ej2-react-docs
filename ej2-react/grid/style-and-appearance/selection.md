@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Selection in React Grid component | Syncfusion
-description: Learn here all about Selection in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: Selection Customization in React Grid component | Syncfusion
+description: Learn here all about Selection customization in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Selection 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Selection in React Grid component
+# Selection Customization in React Grid Component
 
 You can customize the appearance of the selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component using CSS. Here are examples of how to customize the row selection background, cell selection background, and column selection background.
 

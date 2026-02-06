@@ -1,4 +1,4 @@
-{% raw %}
+
 import { usa_map } from 'usa.ts';
 import { california } from 'california.ts';
 import { texas } from 'texas.ts';
@@ -44,4 +44,4 @@ return(
 }
 const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
-{% endraw %}
+ 

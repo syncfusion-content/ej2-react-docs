@@ -12,12 +12,12 @@ domainurl: ##DomainURL##
 
 This section explains how to create a simple Stepper and configure its available functionalities in the React environment.
 
-To get started quickly with React Stepper component, you can check out this video:
+To get started quickly with React Stepper component, check out this video:
 {% youtube "https://www.youtube.com/watch?v=6VFmox3cV0s" %}
 
 ## Dependencies
 
-The following list of dependencies is required to use the Stepper component in your application.
+The following list of dependencies is required to use the Stepper component in an application.
 
 ```js
 |-- @syncfusion/ej2-react-navigations
@@ -28,9 +28,10 @@ The following list of dependencies is required to use the Stepper component in y
 
 ```
 
-## Setup your development environment
+## Setup a development environment
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up the environment using JavaScript and optimizes applications for production.
+
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -71,9 +72,9 @@ npm install @syncfusion/ej2-react-navigations --save
 Import the Stepper component's required CSS references as follows in `src/App.css`.
 
 ```css
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
 ```
 
 ## Adding Stepper component to the application
@@ -111,7 +112,7 @@ root.render(<App />);
 
 ## Running the application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Now run the `npm run dev` command in the console to start the development server. This command compiles code and serves the application locally, opening it in the browser.
 
 ```
 npm run dev
@@ -132,7 +133,7 @@ The following example shows a basic Stepper component.
 
 ## Configure icon and label
 
-You can define the step icon and label by setting the `iconCss` and `label` properties using the `StepDirective` tag.
+The step icon and label can be defined by setting the `iconCss` and `label` properties using the `StepDirective` tag.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

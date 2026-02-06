@@ -10,7 +10,7 @@ function App() {
   const selectionSettings: SelectionSettingsModel = { mode: 'Row', type: 'Multiple' };
   const showSelectedRecord = () => {
     setSelectedRecord((grid as GridComponent).getSelectedRecords().length);
-    setShowMessage(selectedRecord > 0);
+    setShowMessage((grid as GridComponent).getSelectedRecords().length > 0);
   }
   return (<div>
     <div>
@@ -23,7 +23,7 @@ function App() {
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
         <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
-        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' textAlign="Right"/>
       </ColumnsDirective>
       <Inject services={[Page]} />
     </GridComponent></div>)

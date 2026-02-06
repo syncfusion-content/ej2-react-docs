@@ -120,6 +120,7 @@ app.include_router(
     products_router,
     prefix="/products",
     tags=["products"]
+)
 ```
 
 > 
@@ -747,7 +748,7 @@ This step renders the Grid and binds it to a DataManager instance. The DataManag
 
 Open **client/src/App.tsx** file and render the Grid with paging, sorting, searching, editing, and filtering enabled. Configure it with a DataManager that points to the FastAPI products endpoint, ensuring all operations post to a single URL.
 
-```tsx
+```ts
 import {
   GridComponent, ColumnsDirective, ColumnDirective, Inject,
   Page, Sort, Filter, Edit, Toolbar, type FilterSettingsModel,
@@ -767,8 +768,7 @@ const editSettings = {
   allowAdding: true,
   allowEditing: true,
   allowDeleting: true,
-  showDeleteConfirmDialog: true,
-  newRowPosition: 'Top',
+  mode: 'Normal'
 };
 
 const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'];
@@ -810,7 +810,7 @@ The Grid client is now ready, and every interaction flows seamlessly to the Fast
 
 The paging feature allows efficient loading of large data sets through on‑demand loading. Paging in the Grid is enabled by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowpaging) property to "true" and injecting the `Page` module. This sends parameters to fetch only the data required for the current viewport.
 
-```tsx
+```ts
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page } from '@syncfusion/ej2-react-grids';
 
 <GridComponent
@@ -833,7 +833,7 @@ The image illustrates the paging details (`skip` and `take`) included in the ser
 
 The sorting feature in the Grid allows users to organize records in ascending or descending order based on one or more columns. The sorting feature in the Grid is enabled by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to "true" and injecting the `Sort` module.
 
-```tsx
+```ts
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Sort } from '@syncfusion/ej2-react-grids';
 
 <GridComponent
@@ -856,7 +856,7 @@ The image below shows the values passed to the "sorted" parameter.
 
 The search feature in the Grid allows users to quickly find and filter records by entering keywords. It scans all visible columns and displays only the matching rows, making it easier to locate specific information within large datasets. The searching feature in the Grid is enabled by adding `Search` to the Grid’s [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbar) items and injecting the `Toolbar` module.
 
-```tsx
+```ts
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
 
 <GridComponent toolbar={["Search"]} >
@@ -875,13 +875,14 @@ The image below displays the "search" parameter values.
 
 The Grid supports filtering through a menu interface that restricts data based on column values. Filtering is enabled by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowfiltering) property to "true" and injecting the `Filter` module.
 
-```tsx
+```ts
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Filter } from '@syncfusion/ej2-react-grids';
+const filterSettings: FilterSettingsModel = { type: 'Excel' };
 
 <GridComponent
   dataSource={dataManager}
   allowFiltering={true} 
-  filterSettings={{ type: 'Excel' }}
+  filterSettings={filterSettings}
   /* other props */
 >
     {/* Include columns here */}
@@ -901,17 +902,14 @@ CRUD operations allow users to add new products, modify existing records, and re
 
 Editing operations in the Grid are enabled through configuring the [Edit Settings](https://ej2.syncfusion.com/react/documentation/api/grid#editsettings) properties ([allowEditing](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#allowediting), [allowAdding](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#allowadding), and [allowDeleting](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#allowdeleting)) to "true" and injecting the `Edit` module.
 
-```tsx
-import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Edit, Toolbar } from '@syncfusion/ej2-react-grids';
+```ts
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Edit, Toolbar, EditSettingsModel } from '@syncfusion/ej2-react-grids';
+
+const editSettings: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
 
 <GridComponent
     dataSource={dataManager}
-    editSettings={{
-        allowEditing: true,
-        allowAdding: true,
-        allowDeleting: true,
-        mode: 'Normal',
-    }}
+    editSettings={editSettings}
     toolbar={['Add', 'Edit', 'Delete', 'Update', 'Cancel']}
     /* other props */
 >
@@ -919,6 +917,18 @@ import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Edit, Toolbar
     <Inject services={[Edit, Toolbar]} />
 </GridComponent>
 ```
+
+**Insert details included in request payload:**
+
+The image illustrates the added record passed from the DataManager.
+
+![FastAPI-Add](../images/FastAPI-Add.png)
+
+**Update details included in request payload:**
+
+The image illustrates the edited record passed from the DataManager.
+
+![FastAPI-Edit](../images/FastAPI-Edit.png)
 
 **Remove details included in request payload:**
 
@@ -952,6 +962,8 @@ npm run dev
 ## Complete Sample Repository
 
 For a complete working implementation of this example, refer to the following GitHub repository.
+
+[Syncfusion Grid with FastAPI Sample](https://github.com/SyncfusionExamples/syncfusion-react-grid-with-fastapi-server)
 
 ## Summary
 

@@ -1,4 +1,4 @@
-{% raw %}
+
 import { africa_continent } from 'africa-continent.ts';
 import * as React from 'react';
 import { MapsComponent, LayersDirective, LayerDirective, Inject, Annotations } from '@syncfusion/ej2-react-maps';
@@ -74,4 +74,4 @@ export function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
-{% endraw %}
+ 

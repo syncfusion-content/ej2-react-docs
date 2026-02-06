@@ -1,24 +1,8 @@
 import { TextBoxComponent } from '@syncfusion/ej2-react-inputs'
-import { ColumnDirective, ColumnsDirective, EditSettingsModel, GridComponent, Inject, SaveEventArgs } from '@syncfusion/ej2-react-grids';
-import { Edit, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
-import * as React from 'react';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import { Edit, Toolbar } from '@syncfusion/ej2-react-grids';
+import { useRef } from 'react';
 import { data } from './datasource';
-export interface columnDataType {
-  OrderID: number,
-  CustomerID: string,
-  Role: string,
-  Freight: number,
-  ShipCity: string,
-  EmployeeID: number,
-  ShipCountry: string,
-  ShipAddress: string,
-  OrderDate: Date,
-  ShipName: string,
-  ShipRegion: string,
-  ShipPostalCode: string,
-  Verified: Boolean
-
-}
 
 function App() {
   let orderData;
@@ -27,10 +11,11 @@ function App() {
   const orderIDRules = { required: true, number: true };
   const customerIDRules = { required: true, minLength: 5 };
   const freightRules = { required: true, min: 1, max: 1000 };
+  const textbox = useRef(null);
   const editTemplate = () => {
     return (
       <div>
-        <TextBoxComponent id='ShipAddress' multiline={true} value={orderData.ShipAddress} focus={onFocus}></TextBoxComponent>
+        <TextBoxComponent ref={textbox} id='ShipAddress' multiline={true} value={orderData.ShipAddress} created={created}></TextBoxComponent>
       </div>
     )
   }
@@ -46,8 +31,8 @@ function App() {
       orderData['ShipAddress'] = args.data['ShipAddress'];
     }
   }
-  const onFocus = (args) => {
-    (args.event.target).addEventListener('keydown', (e) => {
+  const created = () => {
+    textbox.current?.textarea.addEventListener('keydown', (e) => { // bind multi line textbox, textarea element keydown event to prevent enter key action in grid
       if (e.key === 'Enter') {
         e.stopPropagation();
       }

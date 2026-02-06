@@ -52,7 +52,7 @@ function App() {
         <div className="form-row">
           <div className="form-group col-md-12">
             <label >OrderID</label>
-            <input className="form-control" defaultValue={selectedProduct.OrderID || '' } type="number" onChange={(e) => handleInputChange('OrderID', e.target.value)}/>
+            <input disabled className="form-control" defaultValue={selectedProduct.OrderID || '' } type="number" onChange={(e) => handleInputChange('OrderID', e.target.value)}/>
           </div>
         </div>
         <div className="form-row">

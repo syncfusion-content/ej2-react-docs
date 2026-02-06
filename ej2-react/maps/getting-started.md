@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Maps Library component
 
-This section explains you the steps required to create a map and demonstrate the basic usage of the maps component.
+This section explains the steps required to create a map and demonstrates the basic usage of the maps component.
 
 You can explore some useful features in the Maps component using the following video.
 
@@ -88,20 +88,19 @@ Now, the Maps component can be added in the application. To initialize the Maps 
     export default App;
 ```
 
-> Refer to the data values for [world_map](https://www.syncfusion.com/downloads/support/directtrac/general/ze/world_map1557035892) here.
+> Refer to the `world_map` dataset here: https://www.syncfusion.com/downloads/support/directtrac/general/ze/world_map1557035892
 
 ### Run the application
 
 Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-```
+```bash
 npm run dev
 ```
 
 ## Module Injection
 
-Maps component are segregated into individual feature-wise modules. In order to use a particular feature,
-you need to inject its feature services using `Inject` tag.  You can find the modules available in maps and its description as follows.
+The Maps component is divided into feature-specific modules. To use a feature, inject its module with the `Inject` method. The available modules and their purposes are:
 
 * Annotations - Inject this provider to use annotations feature.
 * Bubble - Inject this provider to use bubble feature.
@@ -115,9 +114,7 @@ you need to inject its feature services using `Inject` tag.  You can find the mo
 * Zoom - Inject this provider to use zooming and panning feature.
 * Polygon - Inject this provider to use polygon feature.
 
-For example, we are going to use tooltip, data label and legend features of the maps.
-Now import the MapsTooltip, DataLabel and Legend modules from maps package and inject it into the
-Maps component using `Inject` tag with required services.
+For example, to use the tooltip, data label, and legend features, import the corresponding modules and inject them into the Maps component using the `Inject` component.
 
 ```ts
 
@@ -137,7 +134,7 @@ root.render(<App />);
 
 ## Render shapes from GeoJSON data
 
-This section explains how to bind GeoJSON data to the map.
+This section shows how to bind GeoJSON data to a layer.
 
    ```ts
 
@@ -153,8 +150,7 @@ This section explains how to bind GeoJSON data to the map.
 
    ```
 
-Elements in the maps will get rendered in the layers. So add a layer collection to the maps by using [`layers`](../api/maps#layers) property.
-Now bind the GeoJSON data to the [`shapeData`](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel#shapedata) property.
+Map elements are rendered within layers. Add a layer collection to the Maps using the  [`layers`](../api/maps#layers) property, then bind the GeoJSON data to the [`shapeData`](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel#shapedata) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -169,7 +165,7 @@ Now bind the GeoJSON data to the [`shapeData`](https://ej2.syncfusion.com/react/
 
 ## Bind data source to map
 
-The following properties in layers are used for binding data source to map.
+The following layer properties are used to bind a data source to the map:
 
    * [dataSource](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel#datasource)
    * [shapeDataPath](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel#shapedatapath)
@@ -177,7 +173,7 @@ The following properties in layers are used for binding data source to map.
 
 The `dataSource` property takes collection value as input. For example, the list of objects can be provided as input. This data is further used in tooltip, data label, bubble, legend and in color mapping.
 
-The `shapeDataPath` property used to refer the data ID in dataSource. Where as, the `shapePropertyPath` property is used to refer the column name in shapeData to identify the shape. Both the properties are related to each other. When the values of the shapeDataPath property in the dataSource property and the value of shapePropertyPath in the shapeData property match, then the associated object from the dataSource is bound to the corresponding shape.
+The [shapeDataPath](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel#shapedatapath) property refers to the field in the [dataSource](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel#datasource) that identifies a shape. The [shapePropertyPath](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel#shapepropertypath) property refers to the field in `shapeData` that matches [shapeDataPath](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel#shapedatapath). When these values match, the corresponding object from the [dataSource](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel#datasource) is bound to the shape.
 
 The JSON object "electionData" is used as data source below.
 

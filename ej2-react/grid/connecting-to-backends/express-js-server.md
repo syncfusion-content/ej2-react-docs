@@ -567,7 +567,7 @@ export const patientDataManager = new DataManager({
 
 Create a new React component that renders the Syncfusion Grid and connects it to the Express.js backend at `GridClient/src/components/PatientsGrid.tsx`.
 
-```tsx
+```ts
 
 import React from 'react';
 import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-grids';
@@ -599,7 +599,7 @@ export default PatientsGrid;
 
 The paging feature divides Grid records into multiple pages, improving performance and usability when handling large datasets. Enable paging by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid#allowpaging) property to `true` and injecting the **Page** module. Without the **Page** module, the pager will not render. Customize pager behavior using the [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid#pagesettings) property.
 
-```tsx
+```ts
 
 import React from 'react';
 import { GridComponent, Page, Inject } from '@syncfusion/ej2-react-grids';
@@ -627,7 +627,7 @@ When paging is performed in the Grid, a request is sent to the server with the f
 
 The filtering feature enables searching and refining Grid records based on column values. Enable filtering by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) property to `true` and injecting the [Filter](https://ej2.syncfusion.com/react/documentation/api/grid#filtermodule) module. Without the **Filter** module, the filter bar will not render. Customize filtering options using the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid#filtersettings) property.
 
-```tsx
+```ts
 import React from 'react';
 import { GridComponent, Filter, Inject } from '@syncfusion/ej2-react-grids';
 import { patientDataManager } from '../services/dataManager';
@@ -656,7 +656,7 @@ When filtering is performed in the Grid, a request is sent to the server with th
 To enhance the search functionality, you can integrate a search text box directly into the grid's toolbar. This allows users to enter search criteria conveniently within the grid interface. To add the search item to the grid's toolbar, use the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property and add **Search** item.
 
 
-```tsx
+```ts
 
 import React from 'react';
 import { GridComponent, Toolbar, Inject } from '@syncfusion/ej2-react-grids';
@@ -685,7 +685,7 @@ When searching is performed in the Grid, a request is sent to the server with th
 The sorting feature allows ordering Grid records by clicking column headers. Enable sorting by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) property to `true` and injecting the **Sort** module. Without the **Sort** module, clicking headers will not sort the data. Customize sorting behavior using the [sortSettings](https://ej2.syncfusion.com/react/documentation/api/grid#sortsettings) property.
 
 
-```tsx
+```ts
 
 import React from 'react';
 import { GridComponent, Sort, Inject } from '@syncfusion/ej2-react-grids';
@@ -717,17 +717,18 @@ Editing feature requires a primary key column for CRUD operations. To define the
 
 The [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property of the Grid component allows you to define the items that will be displayed in the grid toolbar. By including the relevant items like **Edit**, **Add**, **Delete**, **Update**, and **Cancel** within the `toolbar` property, you can enable the edit options in the toolbar.
 
-```tsx
+```ts
 
 import React from 'react';
-import { GridComponent, ColumnsDirective, ColumnDirective, Edit, Toolbar, Inject } from '@syncfusion/ej2-react-grids';
+import { GridComponent, ColumnsDirective, ColumnDirective, Edit, Toolbar, Inject, EditSettingsModel } from '@syncfusion/ej2-react-grids';
 import { patientDataManager } from '../services/dataManager';
 
 export const PatientsGrid: React.FC = () => {
+  const editSettings: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
   return (
     <GridComponent
       dataSource={patientDataManager}
-      editSettings={{ allowAdding: true, allowEditing: true, allowDeleting: true, mode: 'Dialog' }}
+      editSettings={editSettings}
       toolbar={['Add', 'Edit', 'Delete', 'Update', 'Cancel']}
     >
       <ColumnsDirective>

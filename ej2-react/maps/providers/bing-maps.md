@@ -64,7 +64,7 @@ Bing Maps provides different map styles, all of which are supported in the Maps 
 
 To render a specific map style, specify the desired type (such as **CanvasLight**) in the URL passed to the[getBingUrlTemplate](https://ej2.syncfusion.com/react/documentation/api/maps#getbingurltemplate) method, as demonstrated in the following code sample.
 
-{% raw %}
+
 
 ```ts
 import * as React from "react";
@@ -95,13 +95,13 @@ const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 ```
-{% endraw %}
+ 
 
 ## Enabling zooming and panning
 
 The Bing Maps layer supports zooming and panning interactions for enhanced map exploration. Zooming provides a closer view of specific areas for detailed analysis, while panning allows navigation across different regions of the map. These features can be enabled using the [zoomSettings](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel) property with toolbar controls for user interaction.
 
-{% raw %}
+
 
 ```ts
 import * as React from "react";
@@ -135,13 +135,13 @@ const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 ```
-{% endraw %}
+ 
 
 ## Adding markers and navigation line
 
 Markers can be added to Bing Maps layers to highlight specific locations by setting the latitude and longitude coordinates using [MarkerDirective](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel#markersettings). Navigation lines can be drawn on top of the Bing Maps layer to visualize routes or connections between locations by configuring the [NavigationLineDirective](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel#navigationlinesettings) with corresponding latitude and longitude coordinates.
 
-{% raw %}
+
 
 ```ts
 
@@ -204,13 +204,13 @@ const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 ```
-{% endraw %}
+ 
 
 ## Adding sublayer
 
 GeoJSON shapes can be rendered as a sublayer on top of the Bing Maps base layer to highlight specific regions such as continents, countries, or custom geographic areas. This is accomplished by adding an additional layer and setting the [type](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel#type) property to **SubLayer**. The sublayer overlays the Bing Maps tiles while maintaining interactivity with the base map.
 
-{% raw %}
+
 
 ```ts
 
@@ -244,13 +244,13 @@ const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 ```
-{% endraw %}
+ 
 
 ## Enabling legend
 
 The legend can be added to the tile Maps by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel#visible) property of [legendSettings](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel) to **true**.
 
-{% raw %}
+
 
 ```ts
 
@@ -305,4 +305,4 @@ const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 ```
-{% endraw %}
+ 

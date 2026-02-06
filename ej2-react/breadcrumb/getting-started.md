@@ -14,7 +14,7 @@ This section explains how to create a simple Breadcrumb and configure its availa
 
 ## Dependencies
 
-The following list of dependencies is required to use the Breadcrumb component in your application.
+The following dependencies are required to use the Breadcrumb component in an application. These packages provide core functionalities for component rendering and navigation.
 
 ```javascript
 |-- @syncfusion/ej2-react-navigations
@@ -28,9 +28,9 @@ The following list of dependencies is required to use the Breadcrumb component i
             |-- @syncfusion/ej2-buttons
 ```
 
-## Set up your development environment
+## Set up a development environment
 
-To set up a React application quickly, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To set up a React application quickly, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up the environment using JavaScript and optimizes applications for production.
 
 > **Note:** To create a React application using `create-react-app`, see this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app).
 
@@ -71,14 +71,14 @@ The above command installs [Breadcrumb dependencies](./getting-started#dependenc
 Add Breadcrumb component's styles as given below in `App.css`.
 
 ```css
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
 
 ```
 
 ## Add Breadcrumb to the project
 
-Now, you can create `Breadcrumb` component in the application. Add `Breadcrumb` component in `src/App.tsx` file using the following code snippet.
+Now, the `Breadcrumb` component can be created in the application. Add the `Breadcrumb` component in `src/App.tsx` file using the following code snippet.
 
 
 
@@ -105,7 +105,7 @@ export default App;
 
 ## Run the application
 
-Run the following command to start the development server. This compiles your code and serves the application locally.
+Run the following command to start the development server. This compiles code and serves the application locally.
 
 ```bash
 npm run dev
@@ -126,7 +126,7 @@ The following example shows a basic Breadcrumb component.
 
 ## Add items to the Breadcrumb component
 
-Use the [`items`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb/#items) property to bind items for the Breadcrumb component. The example below demonstrates basic rendering with items support.
+Use the [`items`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb#items) property to bind items for the Breadcrumb component. The example below demonstrates basic rendering with items support.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -141,7 +141,7 @@ Use the [`items`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb/
 
 ## Enable or Disable Navigation
 
-This feature enables or disables the item navigation. By default, the navigation will be enabled when setting [`url`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb/#url) property. To prevent breadcrumb item navigation, set [`enableNavigation`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb/#enablenavigation) property as false in Breadcrumb. The below example shows enabling and disabling the navigation of Breadcrumb items.
+This feature enables or disables the item navigation. By default, the navigation will be enabled when setting [`url`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb#url) property. To prevent breadcrumb item navigation, set [`enableNavigation`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb#enablenavigation) property as false in Breadcrumb. The below example shows enabling and disabling the navigation of Breadcrumb items.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

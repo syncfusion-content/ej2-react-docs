@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting started with React Dashboard Layout
 
-This section explains how to create a simple **Dashboard Layout** component and its basic usage.
+This section explains how to create a simple **Dashboard Layout** component and demonstrates its basic usage.
 
 ## Dependencies
 
@@ -25,7 +25,7 @@ The following packages are required to use the Dashboard Layout component in you
 
 ## Installation and configuration
 
-To set up a React application quickly, use `create-vite-app`, which offers faster development, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite configures your environment using JavaScript and optimizes the application for production.
+To set up a React application quickly, use `create-vite-app`, which offers faster development, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite configures the development environment using JavaScript and optimizes the application for production.
 
 > **Note:** To create a React application using `create-react-app`, refer to the [Syncfusion documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -66,11 +66,11 @@ npm install @syncfusion/ej2-react-layouts --save
 To render the Dashboard Layout component, need to import Dashboard Layout and its dependent component's styles as given below in `src/App.css`.
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-react-layouts/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import "../node_modules/@syncfusion/ej2-react-layouts/styles/tailwind3.css";
 ```
 
-> **Note:** If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
+> **Note:** To include combined component styles, use the [CRG](https://crg.syncfusion.com) (Custom Resource Generator) to generate and add the required styles to the application.
 
 ## Add Dashboard Layout to the application
 
@@ -81,7 +81,7 @@ You can render the Dashboard Layout component in the following two ways.
 
 ## Setting the `panels` property using HTML attributes
 
-You can render the Dashboard Layout component by adding the panels property as the attribute to the HTML element. Add the HTML div element with panel definition for Dashboard Layout into your `App.tsx` file.
+The Dashboard Layout component can be rendered by adding the panels property to the HTML element. Insert a div element containing the panel definition for Dashboard Layout into `App.tsx`.
 
 `[src/App.tsx]`
 
@@ -219,7 +219,7 @@ export default App;
 
 ## Run the application
 
-Run the following command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Run the following command in the to start the development server. This command compiles the code and serves the application locally in the browser.
 
 ```bash
 npm run dev
@@ -252,7 +252,7 @@ The following example shows a basic Dashboard Layout by adding panel definitions
 
 ## Setting the `panels` property directly
 
-You can render the Dashboard Layout component by defining the **panels** property in your component code.
+Render the Dashboard Layout by setting the `panels` property within the component.
 
 `[src/App.tsx]`
 
@@ -309,7 +309,7 @@ function App() {
 export default App;
 ```
 
-The following example shows a basic Dashboard Layout by using the `panels` property.
+The following example shows a basic Dashboard Layout created using the `panels` property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -334,5 +334,4 @@ The following example shows a basic Dashboard Layout by using the `panels` prope
 
  {% previewsample "page.domainurl/code-snippet/dashboard-layout/getting-started-panel-cs1" %}
 
-> You can refer to the [React Dashboard Layout](https://www.syncfusion.com/react-components/react-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [React Dashboard Layout example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/dashboard-layout/default) to knows how to present and manipulate data.
-
+> Refer to the [React Dashboard Layout](https://www.syncfusion.com/react-components/react-dashboard-layout) feature tour for detailed demonstrations, and view the [React Dashboard Layout example](https://ej2.syncfusion.com/react/demos/#/tailwind3/dashboard-layout/default) example to learn how to present and manipulate data.

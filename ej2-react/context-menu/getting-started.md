@@ -28,9 +28,9 @@ The following dependencies are required to use the ContextMenu component:
             |-- @syncfusion/ej2-buttons
 ```
 
-## Setup your development environment
+## Setup a development environment
 
-To quickly set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To quickly set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up the environment using JavaScript and optimizes applications for production.
 
 > **Note:** To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -71,12 +71,12 @@ The above command installs [ContextMenu dependencies](./getting-started#dependen
 Add ContextMenu component's styles as given below in `App.css`.
 
 ```css
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
 
 /* Context Menu target */
 
@@ -94,7 +94,7 @@ Add ContextMenu component's styles as given below in `App.css`.
 
 ## Add ContextMenu to the project
 
-Now, you can add `ContextMenu` component in the application. For getting started, add `ContextMenu` component in `src/App.tsx` file and the options contain `menuItems` and `target` in which ContextMenu will be opened. Using the following code snippet.
+Create the `ContextMenu` component in the application. Add the ContextMenu component to the `src/App.tsx` file. The component uses items for `menu` options and a `target` property to specify where the ContextMenu will open.
 
 
 
@@ -155,7 +155,7 @@ export default App;
 
 ## Run the application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Now run the `npm run dev` command in the console to start the development server. This command compiles code and serves the application locally, opening it in the browser.
 
 ```
 npm run dev
