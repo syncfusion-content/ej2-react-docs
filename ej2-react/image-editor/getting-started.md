@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Getting started with React Image editor component | Syncfusion
-description:  Checkout and learn about Getting started with React Image editor component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+title: Getting started with React Image Editor component | Syncfusion
+description:  Check out and learn about getting started with the React Image Editor component of Syncfusion Essential JS 2 and more details.
+control: Getting started
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started in the React Image Editor component
+# Getting started with the React Image Editor component
 
 This section explains how to create and configure a simple [React Image Editor component](https://www.syncfusion.com/react-components/react-image-editor).
 
-To get start quickly with Image Editor Component using React, you can check on this video:
+To get started quickly with the Image Editor component in React, watch the following video:
 
 {% youtube "https://www.youtube.com/watch?v=1Fjuk5Dn3BU" %}
 
@@ -30,11 +30,12 @@ The list of dependencies required to use the Image Editor component in your appl
     |-- @syncfusion/ej2-navigations
     |-- @syncfusion/ej2-popups
     |-- @syncfusion/ej2-splitbuttons
+    |-- @syncfusion/ej2-dropdowns
 ```
 
 ## Installation and configuration
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To easily set up a React application, use Vite, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -43,14 +44,14 @@ To create a new React application, run the following command.
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+To set up a React application in a TypeScript environment, run the following commands.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in a JavaScript environment, run the following commands.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -60,17 +61,17 @@ npm run dev
 
 ## Adding Syncfusion packages
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+All the available Essential JS 2 packages are published in the [npmjs.com](https://www.npmjs.com/~syncfusion) public registry.
 
-To install Image Editor component, use the following command.
+To install the Image Editor component, use the following command.
 
-  ```bash
-   npm install @syncfusion/ej2-react-image-editor --save
-   ```
+```bash
+npm install @syncfusion/ej2-react-image-editor --save
+```
 
 ## Adding CSS reference
 
-Import the Image Editor component's required CSS references as follows in `src/App.css`.
+Import the required CSS for the Image Editor component in `src/App.css`.
 
 ```css
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -83,16 +84,17 @@ Import the Image Editor component's required CSS references as follows in `src/A
 
 ```
 
-## Adding Image editor component to the application
+You can check out the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) topic to know more about built-in themes and different ways to refer themes in a React application.
 
-To include the Image Editor component in your application import the `ImageEditorComponent` from `ej2-react-image-editor` package in `App.tsx`.
+## Adding Image Editor component to the application
 
-Add the Image Editor component in application as shown in below code example.
+To include the Image Editor component in your application, import the `ImageEditorComponent` from the `ej2-react-image-editor` package in `App.tsx`.
+
+Add the Image Editor component to the application as shown in the following example.
 
 ```ts
+import React from 'react';
 import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
 import './App.css';
 
 function App() {
@@ -103,7 +105,6 @@ function App() {
   );
 }
 export default App;
-
 ```
 
 ## Run the application

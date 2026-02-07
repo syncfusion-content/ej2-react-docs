@@ -8,13 +8,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting started with predefined dialogs
 
-This section explain how to create the predefined dialogs in React application with its basic features in step-by-step procedure.
+
+This section explains how to create predefined dialogs in a React application and configure their basic features in a step-by-step manner.
 
 ## Dependencies
 
-The following list of dependencies are required to use the React Dialog component in your application.
+
+The following dependencies are required to use the React Dialog component in your application.
 
 ```javascript
 |-- @syncfusion/ej2-react-popups
@@ -55,17 +57,20 @@ npm run dev
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
 All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.
-You can choose the component that you want to install. For this application, we are going to use Dialog component.
 
-To install Dialog component, use the following command
+You can select the specific component you want to install. For this application, the Dialog component will be used.
+
+
+To install the Dialog component, use the following command:
 
 ```bash
-npm install @syncfusion/ej2-react-popups –save
+npm install @syncfusion/ej2-react-popups -–save
 ```
 
 ## Adding CSS reference
 
-Import the Dialog component's required CSS references as follows in `src/App.css`.
+
+Import the required CSS references for the Dialog component in `src/App.css` as shown below:
 
 ```css
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -73,22 +78,25 @@ Import the Dialog component's required CSS references as follows in `src/App.css
 @import "../node_modules/@syncfusion/ej2-react-popups/styles/material.css";
 ```
 
-> The [Custom Resource Generator (CRG)](https://crg.syncfusion.com/) is an online web tool, which can be used to generate the custom script and styles for a set of specific components.
-> This web tool is useful to combine the required component scripts and styles in a single file.
+You can check out the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) topic to know more about built-in themes and different ways to refer themes in a React application.
+
+> The [Custom Resource Generator (CRG)](https://crg.syncfusion.com/) is an online tool that can be used to generate custom scripts and styles for specific components.
+> This tool is useful for combining the required component scripts and styles into a single file.
 
 ## Render a dialog using utility functions
 
-The dialog component provides built-in utility functions to render the alert and confirm dialogs with the minimal code.
-The following options are used as an argument on calling the utility functions:
+
+The Dialog component provides built-in utility functions to render alert and confirm dialogs with minimal code.
+The following options can be used as arguments when calling the utility functions:
 
 | Options   | Description |
 |-----------|-------------|
-| title | Specifies the title of dialog like the [`header`](https://ej2.syncfusion.com/react/documentation/api/dialog/#header) property.|
-| content | Specifies the value that can be displayed in dialog's content area like the [`content`](https://ej2.syncfusion.com/react/documentation/api/dialog/#content) property. |
-| isModal | Specifies the Boolean value whether the dialog can be displayed as modal or non-modal. For more details, refer to the [`isModal`](https://ej2.syncfusion.com/react/documentation/api/dialog/#ismodal) property.|
-| position | Specifies the value where the alert or confirm dialog is positioned within the document. For more details, refer to the [`position`](https://ej2.syncfusion.com/react/documentation/api/dialog/#position) property { X: ‘center’, Y: ‘center’}|
-| okButton | Configures the `OK button` that contains button properties with the click events. `okButton:{ icon:'prefix icon to the button', cssClass:'custom class to the button', click: 'action for OK button click', text: 'Yes' // <-- Default value is 'OK' }`|
-| cancelButton | Configures the `Cancel button` that contains button properties with the click events. `cancelButton:{ icon:'prefix icon to the button', cssClass:'custom class to the button', click: 'action for ‘Cancel’ button click', text: 'No' // <-- Default value is 'Cancel'}`|
+| title | Specifies the title of dialog like the [`header`](https://ej2.syncfusion.com/react/documentation/api/dialog#header) property.|
+| content | Specifies the value that can be displayed in dialog's content area like the [`content`](https://ej2.syncfusion.com/react/documentation/api/dialog#content) property. |
+| isModal | Specifies the Boolean value whether the dialog can be displayed as modal or non-modal. For more details, refer to the [`isModal`](https://ej2.syncfusion.com/react/documentation/api/dialog#ismodal) property.|
+| position | Specifies the value where the alert or confirm dialog is positioned within the document. For more details, refer to the [`position`](https://ej2.syncfusion.com/react/documentation/api/dialog#position) property { X: ‘center’, Y: ‘center’}|
+| okButton | Configures the `OK` button, including button properties and click events. Example: `okButton: { icon: 'prefix icon to the button', cssClass: 'custom class to the button', click: 'action for OK button click', text: 'Yes' }` (Default value is 'OK').|
+| cancelButton | Configures the `Cancel` button, including button properties and click events. Example: `cancelButton: { icon: 'prefix icon to the button', cssClass: 'custom class to the button', click: 'action for Cancel button click', text: 'No' }` (Default value is 'Cancel').|
 |isDraggable|Specifies the value whether the alert or confirm dialog can be dragged by the user.|
 | showCloseIcon | When set to true, the close icon is shown in the dialog component. |
 |closeOnEscape|When set to true, you can close the dialog by pressing ESC key.|
@@ -100,7 +108,8 @@ The following options are used as an argument on calling the utility functions:
 
 ## Adding predefined dialogs to the application
 
-Now, you can start adding React predefined dialog to the application. We have added predefined dialog component in `src/App.tsx` file using following code.
+
+Now you can start adding the React predefined dialog to your application. The following code demonstrates how to add the predefined dialog component in the `src/App.tsx` file:
 
 `[Class-component]`
 
@@ -246,7 +255,8 @@ The below example shows the alert dialog.
 
 ## Alert dialog
 
-An alert dialog box used to display an errors, warnings, and information alerts that needs user awareness. The alert dialog is displayed along with the OK button. When user clicks on ‘OK’ button, alert dialog will get closed. Use the following code to render a simple alert dialog in an application.
+
+An alert dialog box is used to display errors, warnings, or informational alerts that require user awareness. The alert dialog is displayed with an OK button. When the user clicks the OK button, the alert dialog closes. Use the following code to render a simple alert dialog in an application.
 
 `[Class-component]`
 
@@ -276,7 +286,8 @@ An alert dialog box used to display an errors, warnings, and information alerts 
 
 ## Confirm dialog
 
-A confirm dialog box used to displays a specified message along with the ‘OK’ and ‘Cancel’ button. It is used to get approval from the user, and it appears before any critical action. After get approval from the user the dialog will disappear automatically. Use the following code to render a simple confirm dialog in an application.
+
+A confirm dialog box is used to display a specified message along with OK and Cancel buttons. It is used to get approval from the user before performing any critical action. After receiving approval, the dialog will disappear automatically. Use the following code to render a simple confirm dialog in an application.
 
 `[Class-component]`
 
@@ -306,7 +317,8 @@ A confirm dialog box used to displays a specified message along with the ‘OK�
 
 ## Prompt dialog
 
-A prompt dialog is used to get the input from the user. When the user clicks the ‘OK’ button the input value from the dialog is returned. If the user clicks the ‘Cancel’ button the null value is returned. After getting the input from the user the dialog will disappear automatically.
+
+A prompt dialog is used to get input from the user. When the user clicks the OK button, the input value from the dialog is returned. If the user clicks the Cancel button, a null value is returned. After receiving input, the dialog will disappear automatically.
 
 `[Class-component]`
 

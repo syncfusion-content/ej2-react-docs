@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Connecting the React Grid with Flask API
 
-[Flask](https://flask.palletsprojects.com/en/stable/) is a lightweight and flexible Python web application framework that provides a simple set of features for building REST APIs quickly. **Flask follows a traditional REST API approach** with multiple endpoints for different data operations.
+[Flask](https://flask.palletsprojects.com/en/stable/) is a lightweight and flexible Python web application framework that provides a simple set of features for building REST APIs quickly. Flask follows a traditional REST API approach with multiple endpoints for different data operations.
 
 **Application architecture:**
 - **Backend**: Flask server (Python) - Handles REST API endpoints, task data CRUD operations, and business logic.
@@ -41,7 +41,7 @@ For this implementation, a Flask server is created to manage a **Task Management
 
 **Create project root folder:**
 
-Open a terminal (for example, an integrated terminal in Visual Studio Code, Windows Command Prompt opened with <kbd>(Win+R)</kbd>, or macOS Terminal launched with <kbd>(Cmd+Space)</kbd>) and run the following commands.
+Open a terminal (for example, an integrated terminal in Visual Studio Code, Windows Command Prompt opened with <kbd>Win+R</kbd>, or macOS Terminal launched with <kbd>Cmd+Space</kbd>) and run the following commands.
 
 ```bash
 mkdir react-grid-flask-api
@@ -110,7 +110,7 @@ The Flask server will start on `http://localhost:5000`.
 
 ### Step 3: Create sample data file
 
-Create a new file at server/task_data.json** with sample task data. This file stores task records in JSON format.
+Create a new file at **server/task_data.json** with sample task data. This file stores task records in JSON format.
 
 ```json
 [
@@ -395,7 +395,7 @@ The "delete_task" function finds the record by its primary key, removes it from 
 
 ### Running the Flask server
 
-To run the Flask application, execute the following command in the `server` directory:
+To run the Flask application, execute the following command in the **server** directory:
 
 ```bash
 python app.py
@@ -447,7 +447,7 @@ For this project, the "Bootstrap 5.3" theme is applied. Other themes can be sele
 
 ### Step 4: Create the Grid component
 
-Create a new React component in `client/src/App.tsx` that renders the Syncfusion Grid. This component will serve as the base for integrating custom binding and data operations.
+Create a new React component in **client/src/App.tsx** that renders the Syncfusion Grid. This component will serve as the base for integrating custom binding and data operations.
 
 ```ts
 import { useEffect, useRef } from 'react';
@@ -547,7 +547,7 @@ The Grid custom binding feature expects the following response from the backend:
 
 This format has already been implemented in the Flask server during the backend setup.
 
-### Step 6: Configure the dataStateChange event
+### Step 6: Configure data operations with custom binding
 
 The `dataStateChange` event is the primary mechanism for handling Grid state changes like paging, sorting, filtering, and searching. This event is triggered whenever the Grid state changes and provides the current state details that need to be sent to the server.
 
@@ -611,7 +611,7 @@ export default function App() {
 
 The `dataStateChange` event handler collects the current grid state parameters (skip, take, sorted, where, search) from the event arguments and passes them to the "fetchData" function. The response is then bound to the Grid's dataSource. The handler also checks if the request is for filter dropdown choices or search popup data and handles those cases separately by calling the dataSource callback.
 
-### Step 7: Configure the dataSourceChanged event
+### Step 7: Configure CRUD operations with custom binding
 
 The `dataSourceChanged` event is triggered when users perform CRUD operations. This event provides the affected record along with the action type, which is sent to the Flask API to execute the corresponding operation.
 
@@ -721,9 +721,13 @@ export default function App() {
 }
 ```
 
+The image illustrates how the page state is passed to the `skip` and `take` property of the `dataStateChange` event arguments.
+
+![flaskapi_page](../images/flaskapi_page.png)
+
 ### Step 9: Enable Filtering
 
-The filtering feature enables searching and refining Grid records based on column values. Enable filtering by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) property to "true" and injecting the [Filter](https://ej2.syncfusion.com/react/documentation/api/grid#filtermodule) module. Customize filtering options using the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid#filtersettings) property.
+The filtering feature enables searching and refining Grid records based on column values. Enable filtering by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) property to "true" and injecting the `Filter` module. Customize filtering options using the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid#filtersettings) property.
 
 ```ts
 import { GridComponent, Filter, Inject, type FilterSettingsModel } from '@syncfusion/ej2-react-grids';
@@ -743,6 +747,10 @@ export default function App() {
   );
 }
 ```
+
+The image below illustrates how the filter state is passed to the `where` property of the `dataStateChange` event arguments.
+
+![flaskapi_filter](../images/flaskapi_filter.png)
 
 ### Step 10: Enable Searching
 
@@ -766,6 +774,10 @@ export default function App() {
 }
 ```
 
+The image illustrates how the search state is passed to the `search` property of the `dataStateChange` event arguments.
+
+![flaskapi_search](../images/flaskapi_search.png)
+
 ### Step 11: Enable Sorting
 
 The sorting feature allows ordering Grid records by clicking column headers. Enable sorting by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) property to "true" and injecting the `Sort` module.
@@ -785,6 +797,10 @@ export default function App() {
   );
 }
 ```
+
+The image illustrates how the sort state is passed to the `sorted` property of the `dataStateChange` event arguments.
+
+![flaskapi_sort](../images/flaskapi_sort.png)
 
 ### Step 12: Enable CRUD actions
 
@@ -819,6 +835,18 @@ export default function App() {
   );
 }
 ```
+
+Inserted data passed to the server through the `dataSourceChanged` event arguments in the Grid:
+
+![flaskapi_add](../images/flaskapi_add.png)
+
+Updated data passed to the server through the `dataSourceChanged` event arguments in the Grid:
+
+![flaskapi_edit](../images/flaskapi_edit.png)
+
+Deleted data passed to the server through the `dataSourceChanged` event arguments in the Grid:
+
+![flaskapi_delete](../images/flaskapi_delete.png)
 
 ## Run the application
 
@@ -885,25 +913,26 @@ react-grid-flask-api/
 ## Complete sample repository
 
 For a complete working implementation, refer to the GitHub repository:
-[Syncfusion React Grid with Flask API Backend Sample]()
+[Syncfusion React Grid with Flask API Backend Sample](https://github.com/SyncfusionExamples/syncfusion-react-grid-with-flaskapi-server)
 
 The repository contains the complete Flask backend implementation with all API endpoints, business logic, data models, and a ready-to-run React frontend application.
 
 ## Summary
 
-This guide covers the following key areas:
+This guide demonstrates:
 
-1. [Prerequisites](#prerequisites) - Tools, frameworks, and versions required to build the application.
-2. [Setting up the Flask backend](#setting-up-the-flask-backend-using-python) - Create a Python project and set up Flask server with virtual environment.
-3. [Perform data operations in server](#perform-data-operations-in-server) - Handle server-side filtering, searching, sorting, and paging for efficient data processing.
-4. [Perform CRUD operations in server](#perform-crud-operations-in-server) - Handle server-side CRUD actions with REST endpoints.
-5. [Connecting Syncfusion React Grid](#connecting-syncfusion-react-grid-with-flask-api) - Create a React project and configure Syncfusion Grid with custom binding.
-6. [Run the application](#run-the-application) - Start servers locally and access the frontend.
-7. [Complete sample repository](#complete-sample-repository) - Explore a complete working sample on GitHub.
+1. Prerequisites for building the application with required tools, frameworks, and versions. [🔗](#prerequisites)
+2. Setting up and configuring the Flask backend using Python. [🔗](#setting-up-the-flask-backend-using-python)
+3. Performing data operations in server with filtering, searching, sorting, and paging for efficient data processing. [🔗](#perform-data-operations-in-server)
+4. Performing CRUD operations in server with REST endpoints. [🔗](#perform-crud-operations-in-server)
+5. Connecting Syncfusion React Grid with Flask API and configuring Syncfusion Grid with custom binding. [🔗](#connecting-syncfusion-react-grid-with-flask-api)
+6. Running the application by starting servers locally and accessing the frontend. [🔗](#run-the-application)
+7. Exploring a complete working sample in the complete sample repository on GitHub. [🔗](#complete-sample-repository)
 
 The application now provides a complete solution for integrating the Syncfusion React Grid with Flask API backend, enabling seamless data operations with a modern, user-friendly interface.
 
 ## See also
 
-- Explore [Syncfusion React Grid documentation](https://ej2.syncfusion.com/react/documentation/grid/getting-started) for advanced features.
-- Learn about [custom binding](https://ej2.syncfusion.com/react/documentation/grid/data-binding/remote-data#custom-binding) in Syncfusion Grid.
+  - [Types of Edit](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
+  - [Validation Rules](https://ej2.syncfusion.com/react/documentation/grid/editing/validation)
+  - [Filter Menu](https://ej2.syncfusion.com/react/documentation/grid/filtering/filter-menu)

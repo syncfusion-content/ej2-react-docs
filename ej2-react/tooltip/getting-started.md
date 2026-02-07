@@ -8,28 +8,31 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting started with React Tooltip component
 
-This section briefly explains how to create a simple **Tooltip** component and configure its available functionalities in React.
+This section provides a brief overview of how to create a simple **Tooltip** component and configure its available features in React.
 
-To get start quickly with React Tooltip, you can check on this video:
+
+To get started quickly with the React Tooltip component, refer to this video:
 
 {% youtube "https://www.youtube.com/watch?v=lCzUw3fOS1g" %}
 
-Tooltips can be initialized on,
 
-* A single element (or)
-* A container that has more than one sub-element within it and the sub-elements are considered as targets.
+Tooltips can be initialized on:
+
+* A single element
+* A container with multiple sub-elements, where the sub-elements are considered as targets
 
 ## Dependencies
 
-The following list of dependencies are required to use the Tooltip component in your application.
+
+The following dependencies are required to use the Tooltip component in your application.
 
 ```javascript
 |-- @syncfusion/ej2-react-popups
-    |-- @syncfusion/ej2-base
     |-- @syncfusion/ej2-react-base
     |-- @syncfusion/ej2-popups
+        |-- @syncfusion/ej2-base
         |-- @syncfusion/ej2-buttons
 ```
 
@@ -62,9 +65,10 @@ npm run dev
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 
-Install the below required dependency package in order to use the `Tooltip` component in your application.
+All available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+
+Install the required dependency package below to use the `Tooltip` component in your application.
 
 ```bash
 npm install @syncfusion/ej2-react-popups --save
@@ -72,18 +76,20 @@ npm install @syncfusion/ej2-react-popups --save
 
 ## Adding CSS Reference
 
-To render the Tooltip component, need to import Tooltip and its dependent component's styles as given below in `src/App.css`.
+
+To render the Tooltip component, import Tooltip and its dependent component styles as shown below in `src/App.css`.
 
 ```css
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-react-popups/styles/material.css";
 ```
 
->Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
+> Note: If you want to use combined component styles, use the [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
 
 ## Initialize the Tooltip on a single element
 
-Import the Tooltip component to your `src/App.tsx` file using following code.
+
+Import the Tooltip component into your `src/App.tsx` file using the following code:
 
 
 
@@ -93,7 +99,7 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import './App.css';
 
 function App() {
-  let style: object = {
+  const style: object = {
     display: 'inline-block',
     margin: '60px'
   };
@@ -111,7 +117,7 @@ import * as React from 'react';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import './App.css';
 function App() {
-    let style = {
+    const style = {
         display: 'inline-block',
         margin: '60px'
     };
@@ -150,7 +156,8 @@ The output will be as follows:
 
 ## Initialize Tooltip within a container
 
-You can create Tooltips on multiple targets within a container. To do so, you have to define specific target elements to the [`target`](https://helpej2.syncfusion.com/react/documentation/api/tooltip#target) property so that the Tooltip is initialized only on matched targets within a container. In this case, the Tooltip content is assigned from the `title` attribute of the target element.
+
+You can create Tooltips on multiple targets within a container. To do this, define specific target elements using the [`target`](https://helpej2.syncfusion.com/react/documentation/api/tooltip#target) property so that the Tooltip is initialized only on matched targets within the container. In this case, the Tooltip content is assigned from the `title` attribute of each target element.
 
 Refer to the following code example to create a Tooltip on multiple targets within a container.
 
