@@ -8,17 +8,17 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with Syncfusion React File Manager Component
 
-This section explains how to create and configure the simple **File Manager** component.
+This section explains how to create and configure the **File Manager** component in a React application.
 
-To get started quickly with React File Manager, you can check the video below.
+To get started quickly with the React File Manager, refer to the video below:
 
 {% youtube "https://www.youtube.com/watch?v=_9bKaJBgkxs" %}
 
 ## Dependencies
 
-The following list of dependencies are required to use the File Manager component in your application.
+The following dependencies are required to use the File Manager component in your application:
 
 ```javascript
 |-- @syncfusion/ej2-react-filemanager
@@ -29,25 +29,27 @@ The following list of dependencies are required to use the File Manager componen
 |-- @syncfusion/ej2-navigations
 ```
 
-## Installation and configuration
+## Installation and Configuration
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To set up a React application efficiently, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-To create a new React application, run the following command.
+To create a new React application, run the following command:
 
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+
+To set up a React application in a TypeScript environment, run:
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+
+To set up a React application in a JavaScript environment, run:
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -66,12 +68,11 @@ To install File Manager component, use the following command
 npm install @syncfusion/ej2-react-filemanager --save
 ```
 
-## Adding Style sheet to the Application
+## Adding Stylesheet to the Application
 
-To render the File Manager component, need to import File Manager and its dependent component's styles as given below in **App.css**.
+To render the File Manager component, import File Manager and its dependent styles in **App.css**:
 
 ```css
-
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-icons/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
@@ -82,12 +83,11 @@ To render the File Manager component, need to import File Manager and its depend
 @import '../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
 @import "../node_modules/@syncfusion/ej2-react-filemanager/styles/tailwind3.css";
-
 ```
 
->Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
+> **Note:** If you want to use combined component styles, make use of the [Custom Resource Generator (CRG)](https://crg.syncfusion.com) in your application.
 
-## Adding File Manager component to the Application
+## Adding File Manager Component to the Application
 
 File Manager can be initialized using the `<FileManagerComponent>` tag. Now, you can start adding Essential<sup style="font-size:70%">&reg;</sup> JS 2 File Manager component to the application.
 
@@ -98,10 +98,8 @@ File Manager can be initialized using the `<FileManagerComponent>` tag. Now, you
 **src/App.tsx**
 
 {% raw %}
-
 ```ts
-
-import {  FileManagerComponent } from '@syncfusion/ej2-react-filemanager';
+import { FileManagerComponent } from '@syncfusion/ej2-react-filemanager';
 import * as React from 'react';
 
 function App() {
@@ -137,7 +135,7 @@ export default App;
 ```
 {% endraw %}
 
-## Run the application
+## Run the Application
 
 Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
@@ -145,7 +143,7 @@ Now run the `npm run dev` command in the console to start the development server
 npm run dev
 ```
 
-The following sample, shows the basic File Manager component.
+The following sample shows the basic File Manager component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -167,15 +165,13 @@ The following sample, shows the basic File Manager component.
 
  {% previewsample "page.domainurl/code-snippet/file-manager/default-cs1" %}
 
-## File Download support
+## File Download Support
 
-To perform the download operation, initialize the `downloadUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/#ajaxsettings) of File Manager component.
+To perform the download operation, initialize the `downloadUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager#ajaxsettings) of File Manager component.
 
 {% raw %}
-
 ```ts
-
-import {  FileManagerComponent } from '@syncfusion/ej2-react-filemanager';
+import { FileManagerComponent } from '@syncfusion/ej2-react-filemanager';
 import * as React from 'react';
 
 function App() {
@@ -191,19 +187,16 @@ function App() {
   );
 }
 export default App;
-
 ```
 {% endraw %}
 
-## File Upload support
+## File Upload Support
 
-To perform the upload operation, initialize the `uploadUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/#ajaxsettings) of File Manager Component.
+To perform the upload operation, initialize the `uploadUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager#ajaxsettings) of File Manager Component.
 
 {% raw %}
-
 ```ts
-
-import {  FileManagerComponent } from '@syncfusion/ej2-react-filemanager';
+import { FileManagerComponent } from '@syncfusion/ej2-react-filemanager';
 import * as React from 'react';
 
 function App() {
@@ -223,9 +216,9 @@ export default App;
 ```
 {% endraw %}
 
-## Image Preview support
+## Image Preview Support
 
-To perform the image preview support in the File Manager component, need to initialize the `getImageUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/#ajaxsettings) of File Manager component.
+To perform the image preview support in the File Manager component, need to initialize the `getImageUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager#ajaxsettings) of File Manager component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -247,9 +240,9 @@ To perform the image preview support in the File Manager component, need to init
 
  {% previewsample "page.domainurl/code-snippet/file-manager/image-preview-cs1" %}
 
-## Injecting services for Overview
+## Injecting Services for Overview
 
-By default, the File Manager component not having any extra module. You can configure `NavigationPane`, `Toolbar` , `ContextMenu` module using Inject.
+By default, the File Manager component does not include additional modules. You can configure `NavigationPane`, `Toolbar`, and `ContextMenu` modules using `Inject`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -271,11 +264,11 @@ By default, the File Manager component not having any extra module. You can conf
 
  {% previewsample "page.domainurl/code-snippet/file-manager/overview-cs1" %}
 
->**Note:** The appearance of the File Manager can be customized by using [cssClass](https://ej2.syncfusion.com/react/documentation/api/file-manager/#cssclass) property. This adds a css class to the root of the File Manager which can be used to add new styles or override existing styles to the File Manager.
+>**Note:** The appearance of the File Manager can be customized by using [cssClass](https://ej2.syncfusion.com/react/documentation/api/file-manager#cssclass) property. This adds a css class to the root of the File Manager which can be used to add new styles or override existing styles to the File Manager.
 
-## Switching initial view of the File Manager
+## Switching Initial View of the File Manager
 
-The initial view of the File Manager can be changed to details or largeicons view with the help of [view](https://ej2.syncfusion.com/react/documentation/api/file-manager/#view) property. By default, the File Manager will be rendered in large icons view. When the File Manager is initially rendered, [created](https://ej2.syncfusion.com/react/documentation/api/file-manager/#created) will be triggered. This event can be utilized for performing operations once the File Manager has been successfully created.
+The initial view of the File Manager can be changed to details or largeicons view with the help of [view](https://ej2.syncfusion.com/react/documentation/api/file-manager#view) property. By default, the File Manager will be rendered in large icons view. When the File Manager is initially rendered, [created](https://ej2.syncfusion.com/react/documentation/api/file-manager#created) will be triggered. This event can be utilized for performing operations once the File Manager has been successfully created.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -297,14 +290,14 @@ The initial view of the File Manager can be changed to details or largeicons vie
 
  {% previewsample "page.domainurl/code-snippet/file-manager/switch-view-cs1" %}
 
-## Maintaining component state on page reload
+## Maintaining Component State on Page Reload
 
-The File Manager supports maintaining the component state on page reload. This can be achieved by enabling [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/file-manager/#enablepersistence) property which maintains the following,
-* Previous view of the File Manager - [View](https://ej2.syncfusion.com/react/documentation/api/file-manager/#view)
-* Previous path of the File Manager - [Path](https://ej2.syncfusion.com/react/documentation/api/file-manager/#path)
-* Previous selected items of the File Manager - [SelectedItems](https://ej2.syncfusion.com/react/documentation/api/file-manager/#selecteditems)
+The File Manager supports maintaining the component state on page reload. This can be achieved by enabling [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/file-manager#enablepersistence) property which maintains the following,
+* Previous view of the File Manager - [View](https://ej2.syncfusion.com/react/documentation/api/file-manager#view)
+* Previous path of the File Manager - [Path](https://ej2.syncfusion.com/react/documentation/api/file-manager#path)
+* Previous selected items of the File Manager - [SelectedItems](https://ej2.syncfusion.com/react/documentation/api/file-manager#selecteditems)
 
-For every operation in File Manager, ajax request will be sent to the server which then processes the request and sends back the response. When the ajax request is success, [success](https://ej2.syncfusion.com/react/documentation/api/file-manager/#success) event will be triggered and [failure](https://ej2.syncfusion.com/react/documentation/api/file-manager/#failure) event will be triggered if the request gets failed.
+For every operation in File Manager, ajax request will be sent to the server which then processes the request and sends back the response. When the ajax request is success, [success](https://ej2.syncfusion.com/react/documentation/api/file-manager#success) event will be triggered and [failure](https://ej2.syncfusion.com/react/documentation/api/file-manager#failure) event will be triggered if the request gets failed.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -326,11 +319,11 @@ For every operation in File Manager, ajax request will be sent to the server whi
 
  {% previewsample "page.domainurl/code-snippet/file-manager/persistence-cs1" %}
 
->**Note:** The files of the current folder opened in the File Manager can be refreshed programatically by calling [refreshFiles](https://ej2.syncfusion.com/react/documentation/api/file-manager/#refreshfiles) method.
+>**Note:** The files of the current folder opened in the File Manager can be refreshed programatically by calling [refreshFiles](https://ej2.syncfusion.com/react/documentation/api/file-manager#refreshfiles) method.
 
-## Rendering component in right-to-left direction
+## Rendering Component in Right-to-Left Direction
 
-It is possible to render the File Manager in right-to-left direction by setting the [enableRtl](https://ej2.syncfusion.com/react/documentation/api/file-manager/#enablertl) API to true.
+It is possible to render the File Manager in right-to-left direction by setting the [enableRtl](https://ej2.syncfusion.com/react/documentation/api/file-manager#enablertl) API to true.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -352,9 +345,9 @@ It is possible to render the File Manager in right-to-left direction by setting 
 
  {% previewsample "page.domainurl/code-snippet/file-manager/rtl-cs1" %}
 
-## Specifying the current path of the File Manager
+## Specifying the Current Path of the File Manager
 
-The current path of the File Manager can be specified initially or dynamically using the [path](https://ej2.syncfusion.com/react/documentation/api/file-manager/#path) property.
+The current path of the File Manager can be specified initially or dynamically using the [path](https://ej2.syncfusion.com/react/documentation/api/file-manager#path) property.
 
 The following code snippet demonstrates specifying the current path in File Manager on rendering.
 
@@ -382,7 +375,6 @@ export default App;
 {% endraw %}
 
 {% raw %}
-
 ```ts
 import { FileManagerComponent } from '@syncfusion/ej2-react-filemanager';
 import * as React from 'react';
@@ -398,4 +390,4 @@ export default App;
 ```
 {% endraw %}
 
->Note: You can refer to our [React File Manager](https://www.syncfusion.com/react-ui-components/react-file-manager) feature tour page for its groundbreaking feature representations. You can also explore our [React File Manager example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/file-manager/overview) that shows you how to render the File Manager in React.
+>Note: You can refer to our [React File Manager](https://www.syncfusion.com/react-ui-components/react-file-manager) feature tour page for its groundbreaking feature representations. You can also explore our [React File Manager example](https://ej2.syncfusion.com/react/demos/#/tailwind3/file-manager/overview) that shows you how to render the File Manager in React.
