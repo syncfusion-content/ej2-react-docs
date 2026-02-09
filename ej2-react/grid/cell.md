@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Cell in React Grid component
+# Cell in React Grid Component
 
 ## Displaying the HTML content
 
-Displaying HTML content in a Grid can be useful in scenarios where you want to display formatted content, such as images, links, or tables, in a tabular format. Grid component allows you to display HTML tags in the Grid header and content. By default, the HTML content is encoded to prevent potential security vulnerabilities. However, you can enable the [disableHtmlEncode](https://ej2.syncfusion.com/react/documentation/api/grid/column/#disablehtmlencode) property by setting the value as false to display HTML tags without encoding. This feature is useful when you want to display HTML content in a grid cell.
+Displaying HTML content in a Grid can be useful when displaying formatted content, such as images, links, or tables, in a tabular format. The Grid component allows HTML tags to be displayed in the Grid header and content. By default, HTML content is encoded to prevent potential security vulnerabilities. However, the [disableHtmlEncode](https://ej2.syncfusion.com/react/documentation/api/grid/column#disablehtmlencode) property can be set to "false" to display HTML tags without encoding. This feature is useful when displaying HTML content in a grid cell.
 
-In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component is added  to enable and disable the [disableHtmlEncode](https://ej2.syncfusion.com/react/documentation/api/grid/column/#disablehtmlencode) property. When the switch is toggled, the [change](https://ej2.syncfusion.com/react/documentation/api/switch/#change) event is triggered and the `disableHtmlEncode` property of the column is updated accordingly. The [refresh](https://ej2.syncfusion.com/react/documentation/api/grid/#refresh) method is called to refresh the grid and display the updated content.
+In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component is added  to enable and disable the [disableHtmlEncode](https://ej2.syncfusion.com/react/documentation/api/grid/column#disablehtmlencode) property. When the switch is toggled, the [change](https://ej2.syncfusion.com/react/documentation/api/switch#change) event is triggered and the `disableHtmlEncode` property of the column is updated accordingly. The [refresh](https://ej2.syncfusion.com/react/documentation/api/grid#refresh) method is called to refresh the grid and display the updated content.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -42,7 +42,7 @@ function App() {
         <SwitchComponent id="switch" change={change}></SwitchComponent>
         <GridComponent ref={g => grid = g} dataSource={data} height={315}>
           <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+            <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign='Right' />
             <ColumnDirective field='CustomerID' headerText='<strong> Customer ID </strong>' width='120' />
             <ColumnDirective field='Freight' headerText='Freight' width='150' textAlign='Right' format='C' />
             <ColumnDirective field='ShipCountry' headerText='Ship Country' width='120' />
@@ -78,7 +78,7 @@ function App() {
         <SwitchComponent id="switch" change={change}></SwitchComponent>
         <GridComponent ref={g => grid = g} dataSource={data} height={315}>
           <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+            <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign='Right' />
             <ColumnDirective field='CustomerID' headerText='<strong> Customer ID </strong>' width='120' />
             <ColumnDirective field='Freight' headerText='Freight' width='150' textAlign='Right' format='C' />
             <ColumnDirective field='ShipCountry' headerText='Ship Country' width='120' />
@@ -99,12 +99,12 @@ export default App;
 
  {% previewsample "page.domainurl/code-snippet/grid/display-html-cs1" %}
 
-> * The [disableHtmlEncode](https://ej2.syncfusion.com/react/documentation/api/grid/column/#disablehtmlencode) property disables HTML encoding for the corresponding column in the grid. 
-> * If the property is set to **true**, any HTML tags in the column's data will be displayed. 
-> * If the property is set to **false**, the HTML tags will be removed and displayed as plain text.
+> * The [disableHtmlEncode](https://ej2.syncfusion.com/react/documentation/api/grid/column#disablehtmlencode) property disables HTML encoding for the corresponding column in the grid. 
+> * If the property is set to "true", any HTML tags in the column's data will be displayed. 
+> * If the property is set to "false", the HTML tags will be removed and displayed as plain text.
 > * Disabling HTML encoding can potentially introduce security vulnerabilities, so use caution when enabling this feature.
-> * If [enableHtmlSanitizer](https://ej2.syncfusion.com/react/documentation/api/grid/#enablehtmlsanitizer) property of grid is set to true, then the content is sanitized to prevent any potential security vulnerabilities.
-> * You can also disable the `disableHtmlEncode` property of the column using [getColumns](https://ej2.syncfusion.com/react/documentation/api/grid#getcolumns) method on [change](https://ej2.syncfusion.com/react/documentation/api/switch/#change) event of Switch component.This is demonstrated in the below code snippet, 
+> * If [enableHtmlSanitizer](https://ej2.syncfusion.com/react/documentation/api/grid#enablehtmlsanitizer) property of grid is set to true, then the content is sanitized to prevent any potential security vulnerabilities.
+> * The `disableHtmlEncode` property of the column can also be disabled using [getColumns](https://ej2.syncfusion.com/react/documentation/api/grid#getcolumns) method on [change](https://ej2.syncfusion.com/react/documentation/api/switch#change) event of Switch component. This is demonstrated in the following code snippet: 
 
 ```typescript
 const change = ((args:ChangeEventArgs) {
@@ -119,21 +119,21 @@ const change = ((args:ChangeEventArgs) {
 
 ## Autowrap the grid content
 
-The auto wrap feature allows the cell content in the grid to wrap to the next line when it exceeds the boundary of the specified cell width. The cell content wrapping works based on the position of white space between words. To support the Autowrap functionality in Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you should set the appropriate [width](https://ej2.syncfusion.com/react/documentation/api/grid/column/#width) for the columns. The column width defines the maximum width of a column and helps to wrap the content automatically.
+The auto wrap feature allows cell content in the grid to wrap to the next line when it exceeds the boundary of the specified cell width. Cell content wrapping works based on the position of white space between words. To support the Autowrap functionality in Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, an appropriate [width](https://ej2.syncfusion.com/react/documentation/api/grid/column#width) must be set for the columns. The column width defines the maximum width of a column and helps wrap content automatically.
 
-To enable auto wrap, set the [allowTextWrap](https://ej2.syncfusion.com/react/documentation/api/grid/#allowtextwrap) property to **true**. You can also configure the wrap mode by setting the [textWrapSettings.wrapMode](https://ej2.syncfusion.com/react/documentation/api/grid/textWrapSettings/#wrapmode) property.
+To enable auto wrap, set the [allowTextWrap](https://ej2.syncfusion.com/react/documentation/api/grid#allowtextwrap) property to "true". The wrap mode can also be configured by setting the [textWrapSettings.wrapMode](https://ej2.syncfusion.com/react/documentation/api/grid/textWrapSettings#wrapmode) property.
 
 Grid provides the below three options for configuring:
 
-* **Both** - This is the default value for wrapMode. With this option, both the grid **Header** and **Content** text is wrapped.
+* **Both** - This is the default value for wrapMode. With this option, both the grid header and content text is wrapped.
 * **Header** - With this option, only the grid header text is wrapped.
 * **Content** - With this option, only the grid content is wrapped.
 
 > * If a column width is not specified, then the Autowrap of columns will be adjusted with respect to the grid's width.
 > * If a column's header text contains no white space, the text may not be wrapped.
-> * If the content of a cell contains HTML tags, the Autowrap functionality may not work as expected. In such cases, you can use the [headerTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/column/#headertemplate) and [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template) properties of the column to customize the appearance of the header and cell content.
+> * If the content of a cell contains HTML tags, the Autowrap functionality may not work as expected. In such cases, the [headerTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/column#headertemplate) and [template](https://ej2.syncfusion.com/react/documentation/api/grid/column#template) properties of the column can be used to customize the appearance of the header and cell content.
 
-The following example demonstrates how to set the [allowTextWrap](https://ej2.syncfusion.com/react/documentation/api/grid/#allowtextwrap) property to **true** and specify the wrap mode as **Content** by setting the [textWrapSettings.wrapMode](https://ej2.syncfusion.com/react/documentation/api/grid/textWrapSettings/#wrapmode) property. Also change the `textWrapSettings.wrapMode` property to **Content** and **Both** on changing the dropdown value using the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#change) event of the DropDownList component.
+The following example demonstrates setting the [allowTextWrap](https://ej2.syncfusion.com/react/documentation/api/grid#allowtextwrap) property to "true" and specify the wrap mode as "Content" by setting the [textWrapSettings.wrapMode](https://ej2.syncfusion.com/react/documentation/api/grid/textWrapSettings#wrapmode) property. Also change the `textWrapSettings.wrapMode` property to "Content" and "Both" on changing the dropdown value using the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#change) event of the DropDownList component.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -161,7 +161,7 @@ function App() {
       <GridComponent dataSource={inventoryData} height={315} allowPaging={true} allowTextWrap={true} textWrapSettings={wrapSettings}>
         <ColumnsDirective>
           <ColumnDirective field='Inventor' headerText='Inventor' width='100' />
-          <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' width='100' />
+          <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' textAlign='Right' width='100' />
           <ColumnDirective field='Country' headerText='Country' width='100' />
           <ColumnDirective field='Mainfieldsofinvention' headerText='Main fields of invention' width='140' />
         </ColumnsDirective>
@@ -196,7 +196,7 @@ function App() {
       <GridComponent dataSource={inventoryData} height={315} allowPaging={true} allowTextWrap={true} textWrapSettings={wrapSettings}>
         <ColumnsDirective>
           <ColumnDirective field='Inventor' headerText='Inventor' width='100' />
-          <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' width='100' />
+          <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' textAlign='Right' width='100' />
           <ColumnDirective field='Country' headerText='Country' width='100' />
           <ColumnDirective field='Mainfieldsofinvention' headerText='Main fields of invention' width='140' />
         </ColumnsDirective>
@@ -217,13 +217,13 @@ export default App;
 
 ## Customize cell styles
 
-Customizing the grid cell styles allows you to modify the appearance of cells in the Grid control to meet your design requirements. You can customize the font, background color, and other styles of the cells. To customize the cell styles in the grid, you can use grid event, css, property or method support.
+Customizing grid cell styles allows modification of cell appearance in the Grid control to meet specific design requirements. The font, background color, and other cell styles can be customized using grid events, CSS, properties, or method support.
 
 ### Using event
 
-To customize the appearance of the grid cell, you can use the [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/#querycellinfo) event of the grid. This event is triggered when each header cell is rendered in the grid, and provides an object that contains information about the header cell. You can use this object to modify the styles of the header cell.
+The [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#querycellinfo) event of the grid can be used to customize cell appearance. This event triggers when the grid renders each header cell and provides an object containing information about the header cell. This object can be used to modify header cell styles.
 
-The following example demonstrates how to add a [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/#querycellinfo) event handler to the grid. In the event handler, checked whether the current column is **Freight** field and then applied the appropriate CSS class to the cell based on its value.
+The following example demonstrates adding the [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#querycellinfo) event handler to the grid. In the event handler, the current column is checked to determine if it is the "Freight" field, and the appropriate CSS class is applied to the cell based on its value.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -242,11 +242,11 @@ The following example demonstrates how to add a [queryCellInfo](https://ej2.sync
 
  {% previewsample "page.domainurl/code-snippet/grid/rows-cs1" %}
 
-> * The [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/#querycellinfo) event is triggered for every cell of the grid, so it may impact the performance of the grid whether used to modify a large number of cells.
+> * The [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#querycellinfo) event is triggered for every cell of the grid, so it may impact grid performance when used to modify a large number of cells.
 
 ### Using CSS
 
-You can apply styles to the cells using CSS selectors. The Grid provides a class name for each cell element, which you can use to apply styles to that specific cell or cells in a particular column. The `e-rowcell` class is used to style the row cells, and the `e-selectionbackground` class is used to change the background color of the selected row.
+Styles can be applied to cells using CSS selectors. The Grid provides a class name for each cell element, which can be used to apply styles to specific cells or cells in a particular column. The `e-rowcell` class is used to style row cells, and the `e-selectionbackground` class is used to change the background color of selected rows.
 
 ```CSS
 .e-grid td.e-cellselectionbackground {
@@ -255,7 +255,7 @@ You can apply styles to the cells using CSS selectors. The Grid provides a class
 }
 ```
 
-The following example demonstrates how to customize the appearance of a specific row in the grid on selection using `className`. 
+The following example demonstrates customizing the appearance of a specific row in the grid on selection using `className`. 
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -275,9 +275,9 @@ function App() {
       <div style={{ padding: '40px 0 0 0' }}>
         <GridComponent dataSource={data} height={315} selectionSettings={selectOptions}>
           <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='OrderID' width='100' />
+            <ColumnDirective field='OrderID' headerText='OrderID' width='100' textAlign='Right' />
             <ColumnDirective field='CustomerID' headerText='CustomerID' width='100' />
-            <ColumnDirective field='Freight' headerText='Freight' width='100' />
+            <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign='Right' />
             <ColumnDirective field='ShipCountry' headerText='ShipCountry' width='140' />
           </ColumnsDirective>
         </GridComponent></div></div>)
@@ -302,9 +302,9 @@ function App() {
       <div style={{ padding: '40px 0 0 0' }}>
         <GridComponent dataSource={data} height={315} selectionSettings={selectOptions}>
           <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='OrderID' width='100' />
+            <ColumnDirective field='OrderID' headerText='OrderID' width='100' textAlign="Right"/>
             <ColumnDirective field='CustomerID' headerText='CustomerID' width='100' />
-            <ColumnDirective field='Freight' headerText='Freight' width='100' />
+            <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign="Right"/>
             <ColumnDirective field='ShipCountry' headerText='ShipCountry' width='140' />
           </ColumnsDirective>
         </GridComponent></div></div>)
@@ -324,7 +324,7 @@ export default App;
 
 ### Using property
 
-To customize the style of grid cells, define [customAttributes](https://ej2.syncfusion.com/react/documentation/api/grid/column/#customattributes) property to the column definition object. The `customAttributes` property takes an object with the name-value pair to customize the CSS properties for grid cells. You can also set multiple CSS properties to the custom class using the customAttributes property.
+To customize the style of grid cells, define the [customAttributes](https://ej2.syncfusion.com/react/documentation/api/grid/column#customattributes) property in the column definition object. The `customAttributes` property takes an object with name-value pairs to customize CSS properties for grid cells. Multiple CSS properties can be set to the custom class using the customAttributes property.
 
 ```CSS
 .custom-css {
@@ -333,12 +333,12 @@ To customize the style of grid cells, define [customAttributes](https://ej2.sync
   color:navy
 }
 ```
-Here, setting the customAttributes property of the **ShipCity** column to an object that contains the CSS class 'custom-css'. This CSS class will be applied to all the cells in the **ShipCity** column of the grid.
+Here, the customAttributes property of the "ShipCity" column is set to an object that contains the CSS class 'custom-css'. This CSS class is applied to all cells in the "ShipCity" column of the grid.
 
 ```typescript
     <ColumnDirective field="OrderID" headerText="Order ID" customAttributes={class: 'custom-css'} width="100" textAlign="Right" />
 ```
-The following example demonstrates how to customize the appearance of the **OrderID** and **ShipCity** columns using custom attributes. 
+The following example demonstrates customizing the appearance of the "OrderID" and "ShipCity" columns using custom attributes. 
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -399,13 +399,13 @@ export default App;
 
 ### Using methods
 
-The Grid provides below methods to customize the appearance of the grid columns header and cell:
+The Grid provides the following methods to customize the appearance of grid column headers and cells:
 
-1. [getHeaderContent](https://ej2.syncfusion.com/react/documentation/api/grid/#getheadercontent): The `getHeaderContent` method is used to customize the appearance of the column header in the grid and accessing the header element using the `querySelector` method and applying the style using the style property of the cell element.
+1. [getHeaderContent](https://ej2.syncfusion.com/react/documentation/api/grid#getheadercontent): The `getHeaderContent` method is used to customize column header appearance. The header element is accessed using the `querySelector` method, and styles are applied using the style property of the cell element.
 
-2. [getCellFromIndex](https://ej2.syncfusion.com/react/documentation/api/grid/#getcellfromindex): The `getCellFromIndex` method is used to customize the appearance of a specific cell in the grid by specifying the index of the row and column for which you want to customize the appearance.
+2. [getCellFromIndex](https://ej2.syncfusion.com/react/documentation/api/grid#getcellfromindex): The `getCellFromIndex` method is used to customize the appearance of a specific cell in the grid by specifying the row and column index of the target cell.
 
-The following example demonstrates how to use [getColumnHeaderByIndex](https://ej2.syncfusion.com/react/documentation/api/grid/#getcolumnheaderbyindex) and [getCellFromIndex](https://ej2.syncfusion.com/react/documentation/api/grid/#getcellfromindex) methods to customize the appearance of the **CustomerID** column header and specific cell inside the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid/#databound) event of the grid.
+The following example demonstrates how to use [getColumnHeaderByIndex](https://ej2.syncfusion.com/react/documentation/api/grid#getcolumnheaderbyindex) and [getCellFromIndex](https://ej2.syncfusion.com/react/documentation/api/grid#getcellfromindex) methods to customize the appearance of the "CustomerID" column header and specific cell inside the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid#databound) event of the grid.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -430,9 +430,9 @@ function App() {
       <div style={{ padding: '40px 0 0 0' }}>
         <GridComponent dataSource={data} height={315} ref={g => grid = g} dataBound={dataBound}>
           <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='OrderID' width='100' />
+            <ColumnDirective field='OrderID' headerText='OrderID' width='100' textAlign="Right"/>
             <ColumnDirective field='CustomerID' headerText='CustomerID' width='100' />
-            <ColumnDirective field='Freight' headerText='Freight' width='100' />
+            <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign="Right"/>
             <ColumnDirective field='ShipCountry' headerText='ShipCountry' width='140' />
           </ColumnsDirective>
         </GridComponent></div></div>)
@@ -461,9 +461,9 @@ function App() {
       <div style={{ padding: '40px 0 0 0' }}>
         <GridComponent dataSource={data} height={315} ref={g => grid = g} dataBound={dataBound}>
           <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='OrderID' width='100' />
+            <ColumnDirective field='OrderID' headerText='OrderID' width='100' textAlign="Right"/>
             <ColumnDirective field='CustomerID' headerText='CustomerID' width='100' />
-            <ColumnDirective field='Freight' headerText='Freight' width='100' />
+            <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign="Right"/>
             <ColumnDirective field='ShipCountry' headerText='ShipCountry' width='140' />
           </ColumnsDirective>
         </GridComponent></div></div>)
@@ -481,19 +481,19 @@ export default App;
 
  {% previewsample "page.domainurl/code-snippet/grid/customize-cell-cs3" %}
 
-> Make sure to pass the correct row and column indices to [getCellFromIndex](https://ej2.syncfusion.com/react/documentation/api/grid/#getcellfromindex) method, or else the appearance of the wrong cell might get customized.
+> Make sure to pass the correct row and column indices to [getCellFromIndex](https://ej2.syncfusion.com/react/documentation/api/grid#getcellfromindex) method, or else the appearance of the wrong cell might get customized.
 
 ## Clip mode
 
-The clip mode feature is useful when you have a long text or content in a grid cell, which overflows the cell's width or height. It provides options to display the overflow content by either truncating it, displaying an ellipsis or displaying an ellipsis with a tooltip. You can enable this feature by setting [clipMode](https://ej2.syncfusion.com/react/documentation/api/grid/column/#clipmode) property to one of the below available options.
+The clip mode feature is useful when grid cells contain long text or content that overflows the cell's width or height. It provides options to display overflow content by truncating it, displaying an ellipsis, or displaying an ellipsis with a tooltip. This feature is enabled by setting the [clipMode](https://ej2.syncfusion.com/react/documentation/api/grid/column#clipmode) property to one of the available options.
 
-There are three types of [clipMode](https://ej2.syncfusion.com/react/documentation/api/grid/column/#clipmode) available:
+Three types of [clipMode](https://ej2.syncfusion.com/react/documentation/api/grid/column#clipmode) are available:
 
 * **Clip**: Truncates the cell content when it overflows its area.
 * **Ellipsis**: Displays ellipsis when the cell content overflows its area.
-* **EllipsisWithTooltip**: Displays ellipsis when the cell content overflows its area, also it will display the tooltip while hover on ellipsis is applied. Also it will display the tooltip while hover on ellipsis is applied.
+* **EllipsisWithTooltip**: Displays ellipsis when the cell content overflows its area, also it will display the tooltip while hover on ellipsis is applied. It also displays a tooltip when hover over the ellipsis.
 
-The following example demonstrates, how to set the [clipMode](https://ej2.syncfusion.com/react/documentation/api/grid/column/#clipmode) property to **Clip** for the **Name of the Inventor** column, **Ellipsis** for the **Number of Patent Families** column, and **EllipsisWithTooltip** for the **Main Fields of Invention** column, on changing the dropdown value using the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#change) event of the DropDownList component.
+The following example demonstrates, setting the [clipMode](https://ej2.syncfusion.com/react/documentation/api/grid/column#clipmode) property to "Clip" for the "Name of the Inventor" column, "Ellipsis" for the "Number of Patent Families" column, and "EllipsisWithTooltip" for the "Main Fields of Invention" column, on changing the dropdown value using the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#change) event of the DropDownList component.
 
 
 {% tabs %}
@@ -524,7 +524,7 @@ function App() {
       <GridComponent dataSource={inventoryData} height={315} ref={g => grid = g} allowPaging={true}>
         <ColumnsDirective>
           <ColumnDirective field='Inventor' headerText='Inventor' width='100' />
-          <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' width='100' />
+          <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' textAlign='Right' width='100' />
           <ColumnDirective field='Country' headerText='Country' width='100' />
           <ColumnDirective field='Mainfieldsofinvention' headerText='Main fields of invention' width='140' />
         </ColumnsDirective>
@@ -560,7 +560,7 @@ function App() {
       <GridComponent dataSource={inventoryData} height={315} ref={g => grid = g} allowPaging={true}>
         <ColumnsDirective>
           <ColumnDirective field='Inventor' headerText='Inventor' width='100' />
-          <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' width='100' />
+          <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' textAlign='Right' width='100' />
           <ColumnDirective field='Country' headerText='Country' width='100' />
           <ColumnDirective field='Mainfieldsofinvention' headerText='Main fields of invention' width='140' />
         </ColumnsDirective>
@@ -579,19 +579,19 @@ export default App;
 
  {% previewsample "page.domainurl/code-snippet/grid/autowrap-cs3" %}
 
-> * By default, [clipMode](https://ej2.syncfusion.com/react/documentation/api/grid/column/#clipmode) value is **Ellipsis**.
-> * If you set the [width](https://ej2.syncfusion.com/react/documentation/api/grid/column/#width) property of a column, the clip mode feature will be automatically applied to that column if the content exceeds the specified width.
-> * Be careful when using the Clip mode, as it may result in important information being cut off. It is generally recommended to use the Ellipsis or EllipsisWithTooltip modes instead.
+> * By default, [clipMode](https://ej2.syncfusion.com/react/documentation/api/grid/column#clipmode) value is "Ellipsis".
+> * When the [width](https://ej2.syncfusion.com/react/documentation/api/grid/column#width) property is set for a column, the clip mode feature is automatically applied to that column if content exceeds the specified width.
+> * The Clip mode should be used with caution, as it may result in important information being truncated. The Ellipsis or EllipsisWithTooltip modes are generally recommended instead.
 
 ## Tooltip
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows you to display information about the grid columns to the user when they hover over them with the mouse.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid displays information about grid columns when the user hovers over them with the mouse.
 
 ### Render bootstrap tooltip in grid cells
 
-The Grid component allows rendering Bootstrap tooltips in the cells. To enable this feature, you need to add the Bootstrap link. 
+The Grid component allows rendering Bootstrap tooltips in cells. To enable this feature, the Bootstrap link must be added. 
 
-This is demonstrated in the sample code below which shows how to enable Bootstrap tooltip for the **CustomerID** field using `template` in grid cells,
+This is demonstrated in the sample code below which shows how to enable Bootstrap tooltip for the "CustomerID" field using `template` in grid cells,
 
 Step 1: Run the following command to install the Bootstrap package using npm.
 
@@ -600,7 +600,7 @@ npm install react-bootstrap
 npm install bootstrap   
 ```
 
-Step 2: You need to import the below required files in your component.
+Step 2: Import the following required files in the component.
 
 ```typescript
 
@@ -610,7 +610,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 ```
 
-Step 3: The following code demonstrates how to render Bootstrap tooltip for the **CustomerID** field with `template` on grid cells,
+Step 3: The following code demonstrates rendering Bootstrap tooltip for the "CustomerID" field with `template` on grid cells:
 
 ```typescript
 
@@ -641,9 +641,9 @@ function App() {
     <div>
       <GridComponent dataSource={data} height={315}>
         <ColumnsDirective>
-          <ColumnDirective field='OrderID' headerText='OrderID' width='100' />
+          <ColumnDirective field='OrderID' headerText='OrderID' width='100' textAlign="Right"/>
           <ColumnDirective field='CustomerID' headerText='CustomerID' width='100' template={customerIDTemplate} />
-          <ColumnDirective field='Freight' headerText='Freight' width='100' format='C' />
+          <ColumnDirective field='Freight' headerText='Freight' width='100' format='C' textAlign="Right"/>
           <ColumnDirective field='ShipCountry' headerText='ShipCountry' width='140' />
         </ColumnsDirective>
       </GridComponent>
@@ -654,19 +654,19 @@ export default App;
 
 ```
 
-The following screenshot represents the Bootstrap tooltip for the **CustomerID** field,
+The following screenshot represents the Bootstrap tooltip for the "CustomerID" field,
 
 ![Bootstrap tooltip](./images/bootstrap-tooltip.gif)
 
-> * The Bootstrap link must be import to the App.tsx file.
+> * The Bootstrap link must be imported in the App.tsx file.
 
 ### Display custom tooltip for columns
 
-The Grid provides a feature to display custom tooltips for its columns using the [EJ2 Tooltip](https://ej2.syncfusion.com/react/documentation/tooltip/getting-started) component. This allows you to provide additional information about the columns when the user hovers over them.
+The Grid provides a feature to display custom tooltips for its columns using the [EJ2 Tooltip](https://ej2.syncfusion.com/react/documentation/tooltip/getting-started) component. This allows providing additional information about columns when the user hovers over them.
 
-To enable custom tooltips for columns in the Grid, you can render the Grid control inside the Tooltip component and set the target as `.e-rowcell`. This will display the tooltip when hovering over the grid cells.
+To enable custom tooltips for columns in the Grid, the Grid control is rendered inside the Tooltip component and the target is set as `.e-rowcell`. This displays the tooltip when hovering over grid cells.
 
-Change the tooltip content for the grid cells by using the following code in the [beforeRender](https://ej2.syncfusion.com/react/documentation/api/tooltip/#beforerender) event.
+The tooltip content for grid cells can be changed by using the following code in the [beforeRender](https://ej2.syncfusion.com/react/documentation/api/tooltip#beforerender) event.
 
 ```typescript
  const beforeRender = (args: TooltipEventArgs) => {
@@ -678,7 +678,7 @@ Change the tooltip content for the grid cells by using the following code in the
 
 ```
 
-The following example demonstrates how to customize the tooltip content for the grid cells by using the [beforeRender](https://ej2.syncfusion.com/react/documentation/api/tooltip/#beforerender) event of the EJ2 Tooltip component.
+The following example demonstrates how to customize the tooltip content for the grid cells by using the [beforeRender](https://ej2.syncfusion.com/react/documentation/api/tooltip#beforerender) event of the EJ2 Tooltip component.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -699,7 +699,7 @@ The following example demonstrates how to customize the tooltip content for the 
 
 ## Grid lines
 
-The [gridLines](https://ej2.syncfusion.com/react/documentation/api/grid/#gridlines) in a grid are used to separate the cells with horizontal and vertical lines for better readability. You can enable the grid lines by setting the [gridLines](https://ej2.syncfusion.com/react/documentation/api/grid/#gridlines) property to one of the following values:
+The [gridLines](https://ej2.syncfusion.com/react/documentation/api/grid#gridlines) in a grid are used to separate cells with horizontal and vertical lines for better readability. Grid lines are enabled by setting the [gridLines](https://ej2.syncfusion.com/react/documentation/api/grid#gridlines) property to one of the following values:
 
 | Modes | Actions |
 |-------|---------|
@@ -709,7 +709,7 @@ The [gridLines](https://ej2.syncfusion.com/react/documentation/api/grid/#gridlin
 | Vertical | Displays the vertical grid lines only.|
 | Default | Displays grid lines based on the theme.|
 
-The following example demonstrates how to set the [gridLines](https://ej2.syncfusion.com/react/documentation/api/grid/#gridlines) property based on changing the dropdown value using the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#change) event of the DropDownList component.
+The following example demonstrates how to set the [gridLines](https://ej2.syncfusion.com/react/documentation/api/grid#gridlines) property based on changing the dropdown value using the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#change) event of the DropDownList component.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -717,7 +717,7 @@ The following example demonstrates how to set the [gridLines](https://ej2.syncfu
 
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
-import * as React from 'react';
+import React, { useState } from 'react';
 import { inventoryData } from './datasource';
 
 function App() {
@@ -739,7 +739,7 @@ function App() {
       <GridComponent dataSource={inventoryData} height={315} gridLines={gridLine}>
         <ColumnsDirective>
           <ColumnDirective field='Inventor' headerText='Inventor' width='100' />
-          <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' width='100' />
+          <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' textAlign='Right' width='100' />
           <ColumnDirective field='Country' headerText='Country' width='100' />
           <ColumnDirective field='Mainfieldsofinvention' headerText='Main fields of invention' width='140' />
         </ColumnsDirective>
@@ -775,7 +775,7 @@ function App() {
       <GridComponent dataSource={inventoryData} height={315} gridLines={gridLine}>
         <ColumnsDirective>
           <ColumnDirective field='Inventor' headerText='Inventor' width='100' />
-          <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' width='100' />
+          <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' textAlign='Right' width='100' />
           <ColumnDirective field='Country' headerText='Country' width='100' />
           <ColumnDirective field='Mainfieldsofinvention' headerText='Main fields of invention' width='140' />
         </ColumnsDirective>
@@ -794,7 +794,7 @@ export default App;
 
  {% previewsample "page.domainurl/code-snippet/grid/autowrap-cs2" %}
 
-> By default, the grid renders with **Default** mode.
+> By default, the grid renders with "Default" mode.
 
 ## See also
 

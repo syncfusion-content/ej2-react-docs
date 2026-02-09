@@ -65,7 +65,7 @@ Follow the steps below to set up the MongoDB database for the application:
     ![mongodb-database-collection](./images/react-mongodb-database-collection.png)
     *Image illustrating the MongoDB database & collection*
 
-6. Ensure the database connection status shows as Connected in MongoDB Compass.
+6. Confirm that MongoDB Compass shows the database in the connected state, as illustrated in the screenshot.
     ![mongodb-connectivity](./images/react-mongodb-connectivity.png)
     *Image illustrating the MongoDB connectivity*
 
@@ -127,7 +127,7 @@ Running one of the above commands will prompt you to configure the project as sh
     {% endhighlight %}
     {% endtabs %}
 
-3. **Confirm Additional Vite Options**
+3. **Select additional Vite options**
 
     {% tabs %}
     {% highlight bash tabtitle="CMD" %}
@@ -143,7 +143,7 @@ After executing the above commands, the application will be available at: `http:
 The React application is now created and running with default settings.
 Next, we will proceed with integrating Syncfusion® React Scheduler component into the project after setting up the server.
 
-4. **Terminate & Navigate to the project directory**   
+4. **Terminate & navigate to the project directory**   
     Once the project is created successfully, stop the running state of the application and move into the application folder using the following command:
 
     {% tabs %}
@@ -155,9 +155,9 @@ Next, we will proceed with integrating Syncfusion® React Scheduler component in
     {% endhighlight %}
     {% endtabs %}
 
-## Create the Node.js server application
+## Create a server application
 
-1. **To set up the backend for the MERN application, Install the required packages and make a new directory for server in the react project folder itself.**
+1. **To set up the backend for the MERN application, Install the required packages and make a new directory for server in the react project folder `mern-react-app/` itself.**
 
     {% tabs %}
     {% highlight bash tabtitle="CMD" %}
@@ -227,40 +227,44 @@ Create a new file named `server.js` inside the directory `server` created above 
     // Handle batch CRUD operations
     app.post('/BatchData', async (req, res) => {
         try {
-        const body = req.body;
-        let events = [];
-        // INSERT
-        if (body.action === 'insert' || (body.added && body.added.length)) {
-            events = body.added || [body.value];
-            for (const e of events) {
-            e.StartTime = new Date(e.StartTime);
-            e.EndTime = new Date(e.EndTime);
-            await collection.insertOne(e);
+            const body = req.body;
+            let events = [];
+
+            // INSERT
+            if (body.action === 'insert' || (body.added && body.added.length)) {
+                events = body.added || [body.value];
+                for (const e of events) {
+                e.StartTime = new Date(e.StartTime);
+                e.EndTime = new Date(e.EndTime);
+                await collection.insertOne(e);
+                }
             }
-        }
-        // UPDATE
-        if (body.action === 'update' || (body.changed && body.changed.length)) {
-            events = body.changed || [body.value];
-            for (const e of events) {
-            delete e._id;
-            e.StartTime = new Date(e.StartTime);
-            e.EndTime = new Date(e.EndTime);
-            await collection.updateOne(
-                { Id: e.Id },
-                { $set: e }
-            );
+
+            // UPDATE
+            if (body.action === 'update' || (body.changed && body.changed.length)) {
+                events = body.changed || [body.value];
+                for (const e of events) {
+                delete e._id;
+                e.StartTime = new Date(e.StartTime);
+                e.EndTime = new Date(e.EndTime);
+                await collection.updateOne(
+                    { Id: e.Id },
+                    { $set: e }
+                );
+                }
             }
-        }
-        // DELETE
-        if (body.action === 'remove' || (body.deleted && body.deleted.length)) {
-            events = body.deleted || [{ Id: body.key }];
-            for (const e of events) {
-            await collection.deleteOne({ Id: e.Id });
+
+            // DELETE
+            if (body.action === 'remove' || (body.deleted && body.deleted.length)) {
+                events = body.deleted || [{ Id: body.key }];
+                for (const e of events) {
+                await collection.deleteOne({ Id: e.Id });
+                }
             }
-        }
-        res.json(body);
+
+            res.json(body);
         } catch (err) {
-        res.status(500).json({ error: err.message });
+            res.status(500).json({ error: err.message });
         }
     });
     })();
@@ -270,7 +274,7 @@ Create a new file named `server.js` inside the directory `server` created above 
 
     Here database name is `mydb` and collection name is `ScheduleData`, both were previously created during the database setup process 
 
-3. **Add Server Script to package.json**    
+3. **Add server script to package.json**    
 To enable running the Node.js backend directly from the React project’s root, add the following script inside your root `package.json` under the "scripts" section:
     
     {% tabs %}
@@ -286,10 +290,7 @@ To enable running the Node.js backend directly from the React project’s root, 
 ## Integrating Syncfusion React Scheduler to MERN Application
 This section integrates [Syncfusion React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) to the above created MERN application.
 
-1. **Clean Up Default React (Vite + TypeScript) Files**  
-    Remove default assets and boilerplate of the react application.
-
-2. **Install the required [Syncfusion React Scheduler Package](https://www.npmjs.com/package/@syncfusion/ej2-react-schedule)** 
+1. **Install the required [Syncfusion React Scheduler Package](https://www.npmjs.com/package/@syncfusion/ej2-react-schedule)** 
     
     {% tabs %}
     {% highlight bash tabtitle="NPM" %}
@@ -304,8 +305,8 @@ This section integrates [Syncfusion React Scheduler](https://www.syncfusion.com/
     {% endhighlight %}
     {% endtabs %}
 
-3. **Adding CSS references for Schedule**   
-Add CSS references needed for a Schedule in `src/App.css` from the `../node_modules/@syncfusion` package folder.
+2. **Adding CSS references**   
+Add CSS references for the Schedule in `src/App.css`:
    
     {% tabs %}
     {% highlight css tabtitle="App.css" %}
@@ -322,11 +323,11 @@ Add CSS references needed for a Schedule in `src/App.css` from the `../node_modu
     {% endhighlight %}
     {% endtabs %}
 
-4. **Add Schedule Component**   
-In the `src/App.tsx` file, use the following code snippet to render the Syncfusion React Schedule control and import `App.css` to apply styles to the schedule:
+3. **Add the Schedule component**   
+In the `src/App.tsx` file, use the following code snippet to render the Syncfusion React Schedule component and import `App.css` to apply styles to the schedule:
     
     {% tabs %}
-    {% highlight tsx tabtitle="App.tsx" %}
+    {% highlight jsx tabtitle="App.tsx" %}
 
     import React from 'react';
     import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
@@ -380,7 +381,7 @@ In the `src/App.tsx` file, use the following code snippet to render the Syncfusi
 If your project’s package.json contains **"type": "module"**, remove it before running the server.  
 This project uses CommonJS (require), not ES modules—keeping "type": "module" will cause Node.js to throw a “require is not defined in ES module scope” error.
 
-1. **From the project folder `mern-react-app/`, Run the Backend Server:**
+1. **From the project folder `mern-react-app/`, run the backend server:**
     
     {% tabs %}
     {% highlight bash tabtitle="NPM" %} 
@@ -395,9 +396,9 @@ This project uses CommonJS (require), not ES modules—keeping "type": "module" 
     {% endhighlight %}
     {% endtabs %}
 
-    node server started running on http://localhost:5000/
+    The Node server started running on http://localhost:5000/
 
-2. **Open another terminal from the same project folder `mern-react-app/` and Run the React Application:**
+2. **Open another terminal from the same project folder `mern-react-app/` and run the React application:**
     
     {% tabs %}
     {% highlight bash tabtitle="NPM" %}
@@ -412,7 +413,7 @@ This project uses CommonJS (require), not ES modules—keeping "type": "module" 
     {% endhighlight %}
     {% endtabs %}
 
-    react application started running on http://localhost:5173/
+    The React application started running on http://localhost:5173/
 
 3. **You can create, read, update and delete events in the React Scheduler and able to see the changes in DB as well.**
 
@@ -455,8 +456,6 @@ This project uses CommonJS (require), not ES modules—keeping "type": "module" 
 
     Persist RecurrenceRule, RecurrenceID, RecurrenceException fields; they are needed for repeats and exceptions. [Scheduler events](https://ej2.syncfusion.com/react/documentation/schedule/appointments)
 
-## Syncfusion Sample Repository
+<br>
 
-1. Complete MERN Stack Sample – A Syncfusion reference implementation that integrates MongoDB with the React Scheduler component.
-    
-    GitHub: [SyncfusionExamples/ej2-react-scheduler-with-mongodb](https://github.com/SyncfusionExamples/ej2-react-scheduler-with-mongodb)
+> Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/ej2-react-scheduler-with-mongodb)

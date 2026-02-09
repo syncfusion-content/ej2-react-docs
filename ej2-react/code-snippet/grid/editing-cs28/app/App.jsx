@@ -20,13 +20,6 @@ function App() {
                 /** Add Validation Rules */
                 args.form.ej2_instances[0].addRules('Freight', { max: 500 });
             }
-            /** Set initial Focus */
-            if (args.requestType === 'beginEdit') {
-                args.form.elements.namedItem('CustomerID').focus();
-            }
-            else if (args.requestType === 'add') {
-                args.form.elements.namedItem('OrderID').focus();
-            }
         }
     };
     const actionBegin = (args) => {

@@ -1,31 +1,43 @@
 ---
 layout: post
-title: Command column editing in React Grid component | Syncfusion
-description: Learn here all about Command column editing in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Command Column Editing | Syncfusion
+description: Learn how to implement command column editing in React Grid for streamlined CRUD operations with built-in and custom command buttons.
 control: Command column editing 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Command column editing in React Grid component
+# Command Column Editing in React Grid Component
 
-The command column editing feature allows you to add CRUD (Create, Read, Update, Delete) action buttons in a column for performing operations on individual rows.This feature is commonly used when you need to enable inline editing, deletion, or saving of row changes directly within the grid. 
+The command column editing feature enables seamless CRUD (Create, Read, Update, Delete) action buttons in a column for performing operations on individual rows. This powerful feature is particularly useful when inline editing, deletion, or saving of row changes is required directly within the grid interface.
 
-To enable command column editing, you can utilize the [commands](https://ej2.syncfusion.com/react/documentation/api/grid/column/#commands) property. By defining this property, you can specify the command buttons to be displayed in the command column, such as Edit, Delete, Save, and Cancel.
+> For basic editing setup and configuration, refer to the [Editing Feature Setup](../editing#set-up-editing).
 
-To utilize CRUD operations, you need to inject the **CommandColumn** module in the grid. This service provides the necessary functionalities for handling the command column actions.
+## Enable command column editing
+
+Command column editing is activated through the [commands](https://ej2.syncfusion.com/react/documentation/api/grid/column#commands) property. This property specifies which command buttons display in the command column, such as `Edit`, `Delete`, `Save`, and `Cancel`.
+
+The `CommandColumn` module must be injected into the grid to enable command column functionalities. Inject the service as shown in the following code:
+
+```tsx
+import { GridComponent, ColumnsDirective, ColumnDirective, Inject } from '@syncfusion/ej2-react-grids';
+import { CommandColumn } from '@syncfusion/ej2-react-grids';
+
+<GridComponent>
+  <Inject services={[CommandColumn]} />
+  {/* Grid configuration */}
+</GridComponent>
+```
 
 The available built-in command buttons are: 
 
 | Command Button | Actions |
 |----------------|---------|
-| Edit | Edit the current row.|
-| Delete | Delete the current row.|
-| Save | Update the edited row.|
-| Cancel | Cancel the edited state. |
-
-Here's an example that demonstrates how to add CRUD action buttons in a column using the `command` column property : 
+| Edit | Enables inline editing for the current row |
+| Delete | Removes the current row from the grid |
+| Save | Updates changes made to the edited row |
+| Cancel | Discards changes and exits edit mode |
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -46,11 +58,11 @@ Here's an example that demonstrates how to add CRUD action buttons in a column u
 
 ## Custom command column
 
-The custom command column feature in the Grid component allows you to add custom command buttons in a column to perform specific actions on individual rows. This feature is particularly useful when you need to provide customized functionality for editing, deleting, or performing any other operation on a row.
+The custom command column feature extends the Grid component's capabilities by enabling custom command buttons in a column to perform specific actions on individual rows. This is particularly powerful when specialized functionality for editing, deletion, or custom operations is required beyond the built-in command set.
 
-To add custom command buttons in a column, you can utilize the [commands](https://ej2.syncfusion.com/react/documentation/api/grid/column/#commands) property. Furthermore, you can define the actions associated with these custom buttons using the [commandClick](https://ej2.syncfusion.com/react/documentation/api/grid/#commandClick) event.
+Custom command buttons utilize the [commands](https://ej2.syncfusion.com/react/documentation/api/grid/column#commands) property for definition. The [commandClick](https://ej2.syncfusion.com/react/documentation/api/grid#commandClick) event handles the custom button click actions, enabling any operation such as displaying grid details in a dialog or triggering custom workflows.
 
-Here's an example that demonstrates how to add custom command buttons using the `commands` property and customize the button click behavior to display grid details in a dialog using the `commandClick` event:
+The following code demonstrates how to implement custom command buttons with the `commands` property and handle custom actions through the `commandClick` event to display grid details in a dialog:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

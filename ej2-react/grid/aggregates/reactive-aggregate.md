@@ -36,6 +36,7 @@ When the Grid is in batch editing mode, aggregate values in the footer, group fo
 > Adding a new record to the grouped grid will not refresh the aggregate values.
 
 ## Auto-update aggregate values in Inline and Dialog edit modes
+
 By default, reactive aggregate updates are not supported in Inline and Dialog edit modes because value changes cannot be automatically detected for all editor types.
 
 To ensure aggregates are updated correctly, they must be refreshed manually using the `aggregateModule.refresh()` method:
@@ -63,7 +64,7 @@ The code below registers an `input` event on the "Freight" column editor and man
 {% previewsample "page.domainurl/code-snippet/grid/aggregate-cs7" %}
 
 ## See also
-- [Aggregates overview](aggregates.md)
+- [Aggregates overview](./aggregates)
 - [Batch editing](../editing/batch-editing)
 - [Inline editing](../editing/in-line-editing)
 - [Aggregates API](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn)

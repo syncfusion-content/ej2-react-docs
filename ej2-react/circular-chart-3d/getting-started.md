@@ -9,9 +9,9 @@ domainurl: ##DomainURL##
 ---
 <!-- markdownlint-disable MD036 -->
 
-# Getting started
+# Getting started with React 3D Circular Chart component
 
-This section explains you the steps required to create a simple 3D Circular Chart and demonstrate the basic usage of the 3D Circular Chart control.
+This section describes the steps to create a simple 3D Circular Chart and demonstrates the basic usage of the 3D Circular Chart component.
 
 ## Dependencies
 
@@ -57,16 +57,15 @@ npm run dev
 ```
 
 
-* Install Syncfusion<sup style="font-size:70%">&reg;</sup> packages using below command.
+* Install the Syncfusion<sup style="font-size:70%">&reg;</sup> packages using the command below.
 
 ```bash
    npm install @syncfusion/ej2-react-charts --save
 ```
 
-## Add 3D Circular Chart to the project
+## Add 3D circular chart to the project
 
-Now, you can start adding 3D Circular Chart component in the application.
-For getting started, add the 3D Circular Chart component in `src/App.tsx` file using following code.
+Add the 3D Circular Chart component to `src/App.tsx` using the following code.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -92,7 +91,7 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-**Pie Series**
+**Pie series**
 
 By default, the pie series will be rendered when assigning the JSON data to the series using the `dataSource` property. Map the field names in the JSON data to the `xName` and `yName` properties of the series.
 

@@ -6,10 +6,9 @@ function App() {
     return (<div id='container'>
         <div className='wrap'>
             <h4>Choose Color</h4>
-            <ColorPickerComponent id='color-picker'/>
+            <ColorPickerComponent id='color-picker' />
         </div>
-        </div>);
-}
-;
+    </div>);
+};
 export default App;
 ReactDOM.render(<App />, document.getElementById('element'));

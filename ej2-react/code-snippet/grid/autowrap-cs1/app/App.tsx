@@ -1,4 +1,3 @@
-
 import { ColumnDirective, ColumnsDirective, GridComponent, TextWrapSettingsModel } from '@syncfusion/ej2-react-grids';
 import { ChangeEventArgs, DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import React, { useState } from 'react';
@@ -21,7 +20,7 @@ function App() {
       <GridComponent dataSource={inventoryData} height={315} allowPaging={true} allowTextWrap={true} textWrapSettings={wrapSettings}>
         <ColumnsDirective>
           <ColumnDirective field='Inventor' headerText='Inventor' width='100' />
-          <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' width='100' />
+          <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' textAlign='Right' width='100' />
           <ColumnDirective field='Country' headerText='Country' width='100' />
           <ColumnDirective field='Mainfieldsofinvention' headerText='Main fields of invention' width='140' />
         </ColumnsDirective>

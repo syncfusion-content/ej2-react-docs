@@ -1,5 +1,4 @@
 
-
 import { setValue } from '@syncfusion/ej2-base';
 import { ColumnDirective, ColumnsDirective, DialogEditEventArgs, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
 import { Edit, EditSettingsModel, Inject, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
@@ -23,12 +22,6 @@ function App() {
       if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {
         /** Add Validation Rules */
         args.form.ej2_instances[0].addRules('Freight', { max: 500 });
-      }
-      /** Set initial Focus */
-      if (args.requestType === 'beginEdit') {
-        (args.form.elements.namedItem('CustomerID') as HTMLInputElement).focus();
-      } else if (args.requestType === 'add') {
-        (args.form.elements.namedItem('OrderID') as HTMLInputElement).focus();
       }
     }
   }

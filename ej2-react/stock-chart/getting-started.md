@@ -9,17 +9,17 @@ domainurl: ##DomainURL##
 ---
 <!-- markdownlint-disable MD036 -->
 
-# Getting Started with React Stock Chart
+# Getting started with React Stock Chart
 
-This section explains you the steps required to create a simple Stock Chart and demonstrate the basic usage of the Stock Chart control.
+This section describes the steps to create a simple Stock Chart and demonstrates the basic usage of the Stock Chart component.
 
-To get start quickly with React Stock Chart, you can check on this video:
+A quick video overview of the React Stock Charts setup is available:
 
 {% youtube "https://www.youtube.com/watch?v=LdTuxkJFfJI" %}
 
 ## Dependencies
 
-Below is the list of minimum dependencies required to use the chart component.
+Below is the list of minimum dependencies required to use the Stock Chart component.
 
 ```javascript
 
@@ -68,10 +68,15 @@ cd my-app
 npm run dev
 ```
 
-## Add Stock Chart to the Project
+* Install the Syncfusion<sup style="font-size:70%">&reg;</sup> packages using the command below.
 
-Now, you can start adding Chart component in the application.
-For getting started, add the Chart component in `src/App.tsx` file using following code.
+   ```
+    npm install @syncfusion/ej2-react-charts --save
+   ```
+
+## Add stock chart to the project
+
+Add the Stock Chart component to `src/App.tsx` using the following code.
 
 
 {% tabs %}
@@ -81,9 +86,7 @@ import {StockChartComponent} from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
 
 function App()  {
-
     return  (<StockChartComponent />);
-
 }
 export  default  App;
 
@@ -106,7 +109,7 @@ Now run the `npm run dev` command in the console to start the development server
 npm run dev
 ```
 
-he below example shows a basic Chart.
+The below example shows a basic Stock Chart.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -117,33 +120,30 @@ he below example shows a basic Chart.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/stock-chart/getting-started/initialize-cs1" %}
+{% previewsample "page.domainurl/code-snippet/stock-chart/getting-started/initialize-cs1" %}
 
-## Module Injection
+## Module injection
 
-Stock Chart component are segregated into individual feature-wise modules. In order to use a particular feature, you need to inject its feature service in the AppModule. In the current application, we are going to modify the above basic chart to visualize stock value of a company.
-For this application we are going to use candle series, tooltip, data label, DateTime axis
-feature of the chart. Please find the relevant feature service name and description as follows.
+Stock Chart component are segregated into individual feature-wise modules. In order to use a particular feature, you need to inject its feature service in the AppModule. In the current application, we are going to modify the above basic chart to visualize stock value of a company. For this application we are going to use candle series, tooltip, data label, datetime axis feature of the Stock Chart. Please find relevant feature service name and description as follows.
 
 * `CandleSeries` - Inject this module in to `services` to use candle series.
 * `Tooltip` - Inject this module in to `services` to use tooltip feature.
 * `DataLabel` - Inject this module in to `services` to use datalabel feature.
 * `DateTime`  - Inject this module in to `services` to use DateTime feature.
 
-These modules should be injected to the `services` section as follows,
-
+Import the above-mentioned modules from the chart package and inject them into the `services` section of the Stock Chart component as follows.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
 
-import { DateTime, StockChartComponent, DataLabel, CandleSeries, Tooltip } from '@syncfusion/ej2-react-charts';
+import { StockChartComponent, CandleSeries, Tooltip, DataLabel, DateTime, Inject } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
 function App() {
 
     return <StockChartComponent id='stockcharts'>
-      <Inject services={[CandleSeries, Tooltip, DataLabel, Category]} />
+      <Inject services={[CandleSeries, Tooltip, DataLabel, DateTime]} />
     </StockChartComponent>
   
 };
@@ -153,12 +153,12 @@ ReactDOM.render(<App />, document.getElementById("charts"));
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 
-import { StockChartComponent, DataLabel, CandleSeries, Tooltip } from '@syncfusion/ej2-react-charts';
+import { StockChartComponent, CandleSeries, Tooltip, DataLabel, DateTime, Inject } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 function App() {
     return <StockChartComponent id='stockcharts'>
-      <Inject services={[CandleSeries, Tooltip, DataLabel, Category]}/>
+      <Inject services={[CandleSeries, Tooltip, DataLabel, DateTime]}/>
     </StockChartComponent>;
 };
 export default App;
@@ -167,84 +167,92 @@ ReactDOM.render(<App />, document.getElementById("charts"));
 {% endhighlight %}
 {% endtabs %}
 
-## Populate Chart with Data
+## Populate chart with data
 
-This section explains how to plot below JSON data to the  Stock Chart.Please find the below imported datasource.
-
+This section explains how to plot the following JSON data to the Stock Chart.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
 
-export let data = [{
+export let data = [
+    {
         "x": new Date('2012-04-02T00:00:00.000Z'),
         "open": 320.705719,
         "high": 324.074066,
         "low": 317.737732,
         "close": 323.783783,
         "volume": 45638000
-    }, {
+    }, 
+    {
         "x": new Date('2012-04-03T00:00:00.000Z'),
         "open": 323.028015,
         "high": 324.299286,
         "low": 319.639648,
         "close": 321.631622,
         "volume": 40857000
-    }, {
+    }, 
+    {
         "x": new Date('2012-04-04T00:00:00.000Z'),
         "open": 319.544556,
         "high": 319.819824,
         "low": 315.865875,
         "close": 317.892883,
         "volume": 32519000
-    }, {
+    }, 
+    {
         "x": new Date('2012-04-05T00:00:00.000Z'),
         "open": 316.436432,
         "high": 318.533539,
         "low": 314.599609,
         "close": 316.476471,
         "volume": 46327000
-    }];
+    }
+];
 
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 
-export let data: any[] = [{
-            "x": new Date('2012-04-02T00:00:00.000Z'),
-            "open": 320.705719,
-            "high": 324.074066,
-            "low": 317.737732,
-            "close": 323.783783,
-            "volume": 45638000
-        }, {
-            "x": new Date('2012-04-03T00:00:00.000Z'),
-            "open": 323.028015,
-            "high": 324.299286,
-            "low": 319.639648,
-            "close": 321.631622,
-            "volume": 40857000
-        }, {
-            "x": new Date('2012-04-04T00:00:00.000Z'),
-            "open": 319.544556,
-            "high": 319.819824,
-            "low": 315.865875,
-            "close": 317.892883,
-            "volume": 32519000
-        }, {
-            "x": new Date('2012-04-05T00:00:00.000Z'),
-            "open": 316.436432,
-            "high": 318.533539,
-            "low": 314.599609,
-            "close": 316.476471,
-            "volume": 46327000
-        }]
+export let data: Object[] = [
+    {
+        "x": new Date('2012-04-02T00:00:00.000Z'),
+        "open": 320.705719,
+        "high": 324.074066,
+        "low": 317.737732,
+        "close": 323.783783,
+        "volume": 45638000
+    }, 
+    {
+        "x": new Date('2012-04-03T00:00:00.000Z'),
+        "open": 323.028015,
+        "high": 324.299286,
+        "low": 319.639648,
+        "close": 321.631622,
+        "volume": 40857000
+    }, 
+    {
+        "x": new Date('2012-04-04T00:00:00.000Z'),
+        "open": 319.544556,
+        "high": 319.819824,
+        "low": 315.865875,
+        "close": 317.892883,
+        "volume": 32519000
+    }, 
+    {
+        "x": new Date('2012-04-05T00:00:00.000Z'),
+        "open": 316.436432,
+        "high": 318.533539,
+        "low": 314.599609,
+        "close": 316.476471,
+        "volume": 46327000
+    }
+];
 
 {% endhighlight %}
 {% endtabs %}
 
+Add a series object to the chart by using [`series`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockSeries) property and then set the JSON data to [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockSeries#datasource) property.
 
- Add a series object to the chart by using [`series`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockSeries/) property and then set the JSON data to [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockSeries/#datasource) property.
-
-Since the JSON contains DateTime data, set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockChartAxis/#valuetype)for horizontal axis to `DateTime`. By default, the axis valueType is `Numeric`.
+Since the JSON contains DateTime data, set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockChartAxis#valuetype) for the horizontal axis (primaryXAxis) to `DateTime`. By default, the axis valueType is `Numeric`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -255,11 +263,11 @@ Since the JSON contains DateTime data, set the [`valueType`](https://ej2.syncfus
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/stock-chart/getting-started/datasource-cs1" %}
+{% previewsample "page.domainurl/code-snippet/stock-chart/getting-started/datasource-cs1" %}
 
-## Add Stock Chart Title
+## Add stock chart title
 
-You can add a title using [`title`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockChartModel/#title) property to the Stock Chart to provide quick information to the user about the data plotted in the chart.
+You can add a title using the [`title`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockChartModel#title) property to the Stock Chart to provide quick information to the user about the data plotted in the Chart.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -270,13 +278,13 @@ You can add a title using [`title`](https://ej2.syncfusion.com/react/documentati
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/stock-chart/getting-started/datasource-cs2" %}
+{% previewsample "page.domainurl/code-snippet/stock-chart/getting-started/datasource-cs2" %}
 
-## Add Crosshair
+## Add crosshair
 
 Crosshair has a vertical and horizontal line to view the value of the axis at mouse or touch position.
 
-Crosshair lines can be enabled by using [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettings/#enable) property in the `crosshair`. Likewise tooltip label for an axis can be enabled by using [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairTooltipModel/#enable) property of `crosshairTooltip` in the corresponding axis.
+Crosshair lines can be enabled by using the [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettings#enable) property in the `crosshair`. Likewise tooltip label for an axis can be enabled by using [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairTooltipModel#enable) property of `crosshairTooltip` in the corresponding axis.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -287,13 +295,13 @@ Crosshair lines can be enabled by using [`enable`](https://ej2.syncfusion.com/r
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/stock-chart/getting-started/crosshair-cs1" %}
+{% previewsample "page.domainurl/code-snippet/stock-chart/getting-started/crosshair-cs1" %}
 
-## Add Trackball
+## Add trackball
 
-Trackball is used to track a data point closest to the mouse or touch position. Trackball marker indicates the closest point and trackball tooltip displays the information about the point. To use trackball feature, we need to inject `Crosshair` and `Tooltip` module into the `services`.
+Trackball is used to track a data point closest to the mouse or touch position. Trackball marker indicates the closest point and trackball tooltip displays the information about the point. To use trackball feature, we need to inject `Crosshair` and `Tooltip` modules into the `services`.
 
-Trackball can be enabled by setting the [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettings/#enable) property of the crosshair to true and [`shared`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel/#shared) property in `tooltip` to true in chart.
+Trackball can be enabled by setting the [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettings#enable) property of the crosshair to true and [`shared`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#shared) property in `tooltip` to true in chart.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -304,6 +312,6 @@ Trackball can be enabled by setting the [`enable`](https://ej2.syncfusion.com/re
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/stock-chart/getting-started/trackball-cs1" %}
+{% previewsample "page.domainurl/code-snippet/stock-chart/getting-started/trackball-cs1" %}
 
 > You can refer to our [React Stock Chart](https://www.syncfusion.com/react-components/react-stock-chart) feature tour page for its groundbreaking feature representations. You can also explore our [React Stock Chart example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/stock-chart/default) that shows you how to present and manipulate data.
