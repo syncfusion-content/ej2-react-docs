@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Connecting the Syncfusion React Grid with GraphQL backend in Node.js
 
-GraphQL is a query language that allows applications to request exactly the data needed, nothing more and nothing less. Unlike traditional REST APIs that return fixed data structures, GraphQL enables the client to specify the shape and content of the response.
+[GraphQL](https://graphql.org/learn/introduction/) is a query language that allows applications to request exactly the data needed, nothing more and nothing less. Unlike traditional REST APIs that return fixed data structures, GraphQL enables the client to specify the shape and content of the response.
 
 **Traditional REST APIs** and **GraphQL** differ mainly in the way data is requested and returned: **REST APIs expose** multiple endpoints that return fixed data structures, often including unnecessary fields and requiring several requests to fetch related data, while **GraphQL** uses a single endpoint where queries define the exact fields needed, enabling precise responses and allowing related data to be retrieved efficiently in one request. This makes **GraphQL** especially useful for **React Grid integration**, the **reason** is data‑centric UI components require well‑structured and selective datasets to support efficient filtering, reduce network calls, and improve overall performance.
 
@@ -24,14 +24,12 @@ GraphQL is a query language that allows applications to request exactly the data
 [Node.js](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs) is a fast and efficient JavaScript runtime built on Google’s V8 engine. It enables JavaScript to run on the server, making it a popular platform for building web APIs, real‑time applications, and modern backend services. Node.js offers a non‑blocking, event‑driven architecture that supports high performance and scalability.
 
 ## Prerequisites
-
-| Software / Package          | Recommended version          | Purpose                                 |
-|-----------------------------|------------------------------|--------------------------------------   |
-| Node.js                     | 20.x LTS or later            | Runtime                                 |
-| npm / yarn / pnpm           | 11.x or later                | Package manager                         | 
-| Vite                        | 7.3.1                        | Use this to create the React application |
-| TypeScript                  | 5.x or later                 | Server‑side and client‑side type safety |
-
+| Software / Package | Recommended version | Purpose |
+| ------------------ | ------------------- | ------- |
+| Node.js            | 20.x LTS or later   | Runtime |
+| npm / yarn / pnpm  | 11.x or later       | Package manager |
+| Vite               | 7.3.1               | Use this to create the React application |
+| TypeScript         | 5.x or later        | Server‑side and client‑side type safety |
 
 ## Setting up the GraphQL backend using Node.js
 
@@ -43,16 +41,48 @@ Before configuring the GraphQL API, a new folder must be created to host the Gra
 
 For this guide, a GraphQL server named **GraphQLServer** is created using Node.js and TypeScript.
 
-**Create project folder**
+**Create project folder:**
 
-Open a terminal (for example, an integrated terminal in Visual Studio Code or Windows Command Prompt opened with  <kbd>(Win+R)</kbd>, or macOS Terminal launched with <kbd>(Cmd+Space)</kbd>) and run the following command to create and navigate to the project folder:
+Open a terminal ( for example, an integrated terminal in Visual Studio Code or Windows Command prompt opened with  <kbd>Win+R</kbd>, or macOS Terminal launched with <kbd>Cmd+Space</kbd> ) and run the following command to create and navigate to the project folder:
 
 ```bash
 mkdir GraphQLServer
 cd GraphQLServer
+mkdir src
+cd src
+```
+**Configure TypeScript:**
+
+TypeScript configuration tells the compiler to convert TypeScript to JavaScript and sets up the project structure.
+
+Create a new **tsconfig.json** file in the **GraphQLServer** folder using the below command:
+
+```bash
+npx tsc --init
 ```
 
-**Install required packages**
+Replace (**GraphQLServer/tsconfig.json**) file content with the following configuration:
+
+```json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2020"],
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": ["src"]
+}
+```
+
+**Install required packages:**
 
 The GraphQL server is set up using graphpack, a lightweight GraphQL development tool. TypeScript support is added to enable strongly typed development, and the Syncfusion `ej2-data` package is installed to handle data operations such as filtering, sorting, and paging.
 
@@ -67,7 +97,7 @@ npm install @syncfusion/ej2-data --save
 - **typescript, ts-node** – Enables TypeScript-based development.
 - **@syncfusion/ej2-data** – Provides data utilities for advanced data operations.
 
-**Create sample datasource**
+**Create sample datasource:**
 
 After installing the required packages, create a new file named **data.ts** inside the **src** folder. This file acts as an in‑memory datasource for the GraphQL server.
 
@@ -106,91 +136,91 @@ The GraphQL schema defines the structure of the "product" data model and the ser
 
 **Instructions:**
 1. Create a new schema file (**src/schema.graphql**) in the **GraphQLServer** folder.
-2. Add type definition for "Product".
+2. Add type definition for **Product**:
 
-```
-#--- Product type definition ---
-type Product {
-  productId: String!
-  productImage: String
-  #include additional fields--
-}
-```
-3. Add type definition for "ReturnType".
+    ```
+    #--- Product type definition ---
+    type Product {
+      productId: String!
+      productImage: String
+      #include additional fields--
+    }
+    ```
+3. Add type definition for **ReturnType**:
 
-```
-# --- Return type for Grid paging ---
-type ReturnType {
-  result: [Product!]!
-  count: Int!
-}
-```
-4. Add type definition for "Sort".
+    ```
+    # --- Return type for Grid paging ---
+    type ReturnType {
+      result: [Product!]!
+      count: Int!
+    }
+    ```
+4. Add type definition for **Sort**:
 
-```
-# --- Sorting input ---
-input Sort {
-  name: String
-  direction: String
-} 
-```
-5. Add type definition for "ProductInput".
+    ```
+    # --- Sorting input ---
+    input Sort {
+      name: String
+      direction: String
+    } 
+    ```
+5. Add type definition for **ProductInput**:
 
-```
-# --- Product input for mutation operations ---
-input ProductInput {
-  productId: String!
-  productName: String
-  #include additional fields--
-}
-```
-6. Add type definition for "DataManagerInput".
+    ```
+    # --- Product input for mutation operations ---
+    input ProductInput {
+      productId: String!
+      productName: String
+      #include additional fields--
+    }
+    ```
+6. Add type definition for **DataManagerInput**:
 
-```
-# --- Syncfusion DataManager payload ---
-input DataManagerInput {
-  skip: Int
-  take: Int
-  sorted: [Sort]
-  group: [String!]
-  table: String
-  select: [String!]
-  where: String   
-  search: String  
-  requiresCounts: Boolean
-  params: String
-}
-```
-> For detailed information about **DataManagerInput** type refer to [Configuring Syncfusion DataManagerInput schema](#step-3-configuring-syncfusion-datamanagerinput-schema)
+    ```
+    # --- Syncfusion DataManager payload ---
+    input DataManagerInput {
+      skip: Int
+      take: Int
+      sorted: [Sort]
+      group: [String!]
+      table: String
+      select: [String!]
+      where: String   
+      search: String  
+      requiresCounts: Boolean
+      params: String
+    }
+    ```
+    > For detailed information about **DataManagerInput** type refer to [Configuring Syncfusion DataManagerInput schema](#step-3-configuring-syncfusion-datamanagerinput-schema)
 
-7. Define the Query type to expose the "getProducts" operation that returns the list of products.
+7. Define the Query type to expose the "getProducts" operation that returns the list of "products".
 
-```
-type Query {
-  getProducts(datamanager: DataManagerInput): ReturnType!
-}
-```
+    ```
+    type Query {
+      getProducts(datamanager: DataManagerInput): ReturnType!
+    }
+    ```
 8. Define Mutation types for CRUD operations.
 
-```
-type Mutation {
-  createProduct(value: ProductInput!): Product!
-  updateProduct(key: String!, keyColumn: String, value: ProductInput!): Product
-  deleteProduct(key: String!, keyColumn: String): Product!
-}
-```
-**Key Parameters Definitions:**
-- **key**: The unique identifier (primary key) of the product to be updated.
-- **keyColumn**: The name of the column containing the unique identifier.
-- **value**: An object containing the created or updated product details.
+    ```
+    type Mutation {
+      createProduct(value: ProductInput!): Product!
+      updateProduct(key: String!, keyColumn: String, value: ProductInput!): Product
+      deleteProduct(key: String!, keyColumn: String): Product!
+    }
+    ```
+    **Key Parameters Definitions:**
+    - **key**: The unique identifier (primary key) of the product to be updated.
+    - **keyColumn**: The name of the column containing the unique identifier.
+    - **value**: An object containing the created or updated product details.
 
 ### Step 3: Configuring Syncfusion DataManagerInput schema
 
 Syncfusion Data Grid sends all operation details paging, sorting, filtering, and searching as a single request object. GraphQL requires a clear, typed structure to understand these values. 
 
- Syncfusion’s [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) follows a fixed schema when sending operation details from the client. To ensure seamless integration, the GraphQL backend defines a corresponding input type that mirrors this structure.
+Syncfusion’s [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) follows a fixed schema when sending operation details from the client. To ensure seamless integration, the GraphQL backend defines a corresponding input type that mirrors this structure.
  
- **DataManagerInput** serves as the input type that matches the structure of the `DataManager` request, ensuring that all operation details are correctly received by the GraphQL API.
+**DataManagerInput** serves as the input type that matches the structure of the `DataManager` request, ensuring that all operation details are correctly received by the GraphQL API.
 
 **Purpose:**
 The **DataManagerInput** schema provides a standard format for delivering Grid operation parameters to the GraphQL server.This structure allows the backend to return only the required records, improving performance, reducing payload size, and enabling efficient data handling.
@@ -218,8 +248,8 @@ A resolver in GraphQL is a function responsible for fetching the data for a spec
 When a client sends a GraphQL query, resolvers run behind the scenes to retrieve the requested information from a database, API, or any data source and return it in the format defined by the schema. 
 
 **Instructions:**
-1. Create a new resolver file **(src/resolvers.ts)** inside the **GraphQLServer** folder.
-2. Import the required data source **(e.g., productDetails)** from the data file.
+1. Create a new resolver file (**src/resolvers.ts**) inside the **GraphQLServer** folder.
+2. Import the required data source (**e.g., productDetails**) from the data file.
 3. Implement the "getProducts" resolver to handle the logic for the "getProducts" query defined in the schema.
 4. Ensure the resolver returns the processed list of "products" in the structure specified by the schema.
 
@@ -243,81 +273,80 @@ When a client sends a GraphQL query, resolvers run behind the scenes to retrieve
 
 Mutations in GraphQL are used to modify data on the server, such as creating, updating, or deleting records.
 
-Previously, the CRUD mutation types were defined in the (**schema.graphql**) file. The next step is to implement these mutation actions inside the (**resolver.ts**) file.
+Previously, the CRUD mutation types were defined in the **schema.graphql** file. The next step is to implement these mutation actions inside the **resolver.ts** file.
 
 **Instructions:**
-1. Open the **(src/resolvers.ts)** file.
+1. Open the (**src/resolvers.ts**) file.
 2. Implement the "createProduct" mutation.
 
-```ts
-Mutation: {
-    createProduct: (_parent: unknown, { value }: CreateProductArgs) => {
-      const newProduct = value;
-      productDetails.push(newProduct);
-      return newProduct;
-    },
-}
-```
-**"createProduct" - code breakdown:**
+    ```ts
+    Mutation: {
+        createProduct: (_parent: unknown, { value }: CreateProductArgs) => {
+          const newProduct = value;
+          productDetails.push(newProduct);
+          return newProduct;
+        },
+    }
+    ```
+    **"createProduct" - code breakdown:**
 
-| Step | Purpose | Implementation |
-|------|---------|-----------------|
-| **1. Receive Input** | Read incoming product details sent from the client. | `value` parameter inside "createProduct" contains all submitted fields. |
-| **2. Prepare Record** | Store the incoming values as a new product object. | `const newProduct = value` |
-| **3. Insert Record** | Add the "product" to the existing data collection. | use `productDetails.push(newProduct)` to add record. |
-| **4. Return Created** | Send the inserted record back to the client. | return `newProduct` - returns the newly added "product" so the client can update the Grid instantly. |
+    | Step | Purpose | Implementation |
+    |------|---------|-----------------|
+    | **1. Receive Input** | Read incoming product details sent from the client. | `value` parameter inside "createProduct" contains all submitted fields. |
+    | **2. Prepare Record** | Store the incoming values as a new product object. | `const newProduct = value` |
+    | **3. Insert Record** | Add the "product" to the existing data collection. | use `productDetails.push(newProduct)` to add record. |
+    | **4. Return Created** | Send the inserted record back to the client. | return `newProduct` - returns the newly added "product" so the client can update the Grid instantly. |
 
 3. Implement the "updateProduct" mutation:
 
-```ts
-Mutation: {
-    updateProduct: (_parent: unknown, { key, keyColumn = "productId", value }: UpdateProductArgs):ProductDetails => {
-       const product = productDetails.find((p:ProductDetails) => String(p[keyColumn]) === String(key));
-      if (!product) throw new Error("Product not found");
-      // Merge the incoming partial fields into the existing product.
-      Object.assign(product, value);
-      return product;
-    },
+    ```ts
+    Mutation: {
+        updateProduct: (_parent: unknown, { key, keyColumn = "productId", value }: UpdateProductArgs):ProductDetails => {
+          const product = productDetails.find((p:ProductDetails) => String(p[keyColumn]) === String(key));
+          if (!product) throw new Error("Product not found");
+          // Merge the incoming partial fields into the existing product.
+          Object.assign(product, value);
+          return product;
+        },
 
-  }
-```
-**"updateProduct" - code breakdown:**
+      }
+    ```
+    **"updateProduct" - code breakdown:**
 
-| Step | Purpose | Implementation |
-|------|---------|-----------------|
-| **1. Receive Input** | Accept the `key`, `keyColumn`, and updated field values. | Resolver parameters: `key`, `keyColumn`, and `value`. |
-| **2. Locate Record** | Find the matching "product" using a dynamic key. | `find((p:ProductDetails) => String(p[keyColumn]) === String(key))` |
-| **3. Verification** | Fail fast if no matching product exists. | `if (!product) throw new Error("Product not found")` |
-| **4. Apply Updates** | Merge incoming fields into the located product. | `Object.assign(product, value)` |
-| **5. Preserve Key** | Keep the original key field unchanged. | The code does not overwrite the key unless `value[keyColumn]` is provided.|
-| **6. Return Updated** | Send back the modified "product" to the client. | return `product` object with all updates applied. |
+    | Step | Purpose | Implementation |
+    |------|---------|-----------------|
+    | **1. Receive Input** | Accept the `key`, `keyColumn`, and updated field values. | Resolver parameters: `key`, `keyColumn`, and `value`. |
+    | **2. Locate Record** | Find the matching "product" using a dynamic key. | `find((p:ProductDetails) => String(p[keyColumn]) === String(key))` |
+    | **3. Verification** | Fail fast if no matching product exists. | `if (!product) throw new Error("Product not found")` |
+    | **4. Apply Updates** | Merge incoming fields into the located product. | `Object.assign(product, value)` |
+    | **5. Preserve Key** | Keep the original key field unchanged. | The code does not overwrite the key unless `value[keyColumn]` is provided.|
+    | **6. Return Updated** | Send back the modified "product" to the client. | return `product` object with all updates applied. |
 
 4. Implement the "deleteProduct" mutation.
 
-```ts
-Mutation: {
-    deleteProduct: (_parent: unknown, { key, keyColumn = 'productId' }:DeleteProductArgs) => {
-      const idx = productDetails.findIndex((p:ProductDetails) => String(p[keyColumn]) === String(key));
-      if (idx === -1) throw new Error('Product not found');
-      const [deleted] = productDetails.splice(idx, 1);
-      return deleted;
-    }
+    ```ts
+    Mutation: {
+        deleteProduct: (_parent: unknown, { key, keyColumn = 'productId' }:DeleteProductArgs) => {
+          const idx = productDetails.findIndex((p:ProductDetails) => String(p[keyColumn]) === String(key));
+          if (idx === -1) throw new Error('Product not found');
+          const [deleted] = productDetails.splice(idx, 1);
+          return deleted;
+        }
 
-  }
-```
-**"deleteProduct" - code breakdown:**
+      }
+      ```
+    **"deleteProduct" - code breakdown:**
 
-| Step | Purpose | Implementation |
-|------|---------|-----------------|
-| **1. Receive Key** | Backend receives only the primary key value from client. | Resolver parameters: `key`, `keyColumn` = '`productId` |
-| **2. Locate Index** | Identify the array index of the target record using the dynamic key column. | `findIndex((p) => String(p[keyColumn]) === String(key))` |
-| **3. Validate Existence** | Ensure a matching record exists before deletion. | `if (idx === -1) throw new Error('Product not found')` check. |
-| **4. Remove Record** | Delete the record from the data source at the located index. | `const [deleted] = productDetails.splice(idx, 1)` |
-| **5.  Return Deleted** | Provide the removed record back to the client. | return `deleted` |
+    | Step | Purpose | Implementation |
+    |------|---------|-----------------|
+    | **1. Receive Key** | Backend receives only the primary key value from client. | Resolver parameters: `key`, `keyColumn` = '`productId` |
+    | **2. Locate Index** | Identify the array index of the target record using the dynamic key column. | `findIndex((p) => String(p[keyColumn]) === String(key))` |
+    | **3. Validate Existence** | Ensure a matching record exists before deletion. | `if (idx === -1) throw new Error('Product not found')` check. |
+    | **4. Remove Record** | Delete the record from the data source at the located index. | `const [deleted] = productDetails.splice(idx, 1)` |
+    | **5.  Return Deleted** | Provide the removed record back to the client. | return `deleted` |
 
-Now all required GraphQL types, queries, and mutations have now been fully added.
+Now all required `GraphQL` types, queries, and mutations have now been fully added.
 
----
 
 ## Integrating Syncfusion React Grid with GraphQL
 
@@ -363,7 +392,7 @@ Once the dependencies are installed, the required CSS files are made available i
 @import '@syncfusion/ej2-react-grids/styles/tailwind3.css';
 ```
 
-For this project, the "Tailwind3" theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation to learn more about theming and customization options.
+For this project, the `Tailwind3` theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation to learn more about theming and customization options.
 
 ### Step 3: Configure GraphQL Adaptor
 
@@ -398,83 +427,85 @@ The `GraphQLAdaptor` needs to be configured to the Syncfusion `DataManager` to c
 3. Ensure the GraphQL schema exposes "getProducts(datamanager: DataManagerInput)" and `returns { count, result }`.
 4. Render GridComponent with dataSource and define columns matching the fields returned by the query.
 
-```ts
-[ProductGrid.tsx]
+    ```ts
+    [ProductGrid.tsx]
 
- const productDetails : DataManager = React.useMemo(() => {
-    return new DataManager({
-      url: 'http://localhost:xxxx/', // xxxx represents the port number
-        adaptor: new GraphQLAdaptor({
-          response: {
-            result: 'getProducts.result',
-            count: 'getProducts.count'
-          },
-          query: `
-            query getProducts($datamanager: DataManagerInput) {
-              getProducts(datamanager: $datamanager) {
-                count
-                result {
-                  productId, productName   // add additional fields to fetch initially, e.g.:category
+    const productDetails : DataManager = React.useMemo(() => {
+        return new DataManager({
+          url: 'http://localhost:xxxx/', // xxxx represents the port number
+            adaptor: new GraphQLAdaptor({
+              response: {
+                result: 'getProducts.result',
+                count: 'getProducts.count'
+              },
+              query: `
+                query getProducts($datamanager: DataManagerInput) {
+                  getProducts(datamanager: $datamanager) {
+                    count
+                    result {
+                      productId, productName      # add additional fields to fetch initially, e.g.:category
+                    }
+                  }
                 }
-              }
-            }
-          `,
-        }),
-    });
-  }, []);
- <GridComponent
-    ref={gridRef}
-    dataSource={productDetails}>  
-      <ColumnsDirective>
-        <ColumnDirective
-          field="productId"
-          headerText="Product ID"
-          textAlign="Right"
-          width={150}
-          isPrimaryKey={true}/>
-         {/* Include additional columns here */}
-      </ColumnsDirective>
-  </GridComponent> 
-```
+              `,
+            }),
+        });
+      }, []);
+    <GridComponent
+        ref={gridRef}
+        dataSource={productDetails}>  
+          <ColumnsDirective>
+            <ColumnDirective
+              field="productId"
+              headerText="Product ID"
+              textAlign="Right"
+              width={150}
+              isPrimaryKey={true}/>
+            {/* Include additional columns here */}
+          </ColumnsDirective>
+      </GridComponent> 
+    ```
 
-**GraphQL Query structure explained in detail**
+    **GraphQL Query structure explained in detail**
 
-The Query property is critical for understanding the data flows. Let's break down each component:
+    The Query property is critical for understanding the data flows. Let's break down each component:
 
-```
-query getProducts($datamanager: DataManagerInput) {}
-```
+    ```
+    query getProducts($datamanager: DataManagerInput) {}
+    ```
 
-**Line breakdown:**
-- `query` - GraphQL keyword indicating a read operation.
-- `getProducts` - Name of the query (must match resolver name with camelCase).
-- `($dataManager: DataManagerInput!)` - Parameter declaration.
-  - `$dataManager` - Variable name (referenced as $dataManager throughout the query).
-  - `: DataManagerInput` - Type specification.
+      **Line breakdown:**
+      - `query` - GraphQL keyword indicating a read operation.
+      - `getProducts` - Name of the query (must match resolver name with camelCase).
+      - `($dataManager: DataManagerInput!)` - Parameter declaration.
+        - `$dataManager` - Variable name (referenced as $dataManager throughout the query).
+        - `: DataManagerInput` - Type specification.
 
-```
-getProducts(datamanager: $datamanager) {}
-```
 
-**Line breakdown:**
-- `getProducts(...)` - Calls the resolver method in backend.
-- `dataManager: $dataManager` - Passes the "$dataManager" variable to the resolver.
-- The resolver receives this object and uses it to apply filters, sorts, searches, and pagination.
+    ```
+    getProducts(datamanager: $datamanager) {}
+    ```
 
-```
-count
-  result {
-    productId, productImage 
-  }
-```
+      **Line breakdown:**
+      - `getProducts(...)` - Calls the resolver method in backend.
+      - `dataManager: $dataManager` - Passes the "$dataManager" variable to the resolver.
+      - The resolver receives this object and uses it to apply filters, sorts, searches, and pagination.
 
-**Line breakdown:**
-- `count` - Returns total number of records (used for pagination).
-  - Example: If "150" total "product" records exist, count = 150.
-  - Grid uses this to calculate the number of pages that exist.
-- `result` - Contains the array of "product" records.
-  - `{ ... }` - List of fields to return for each record.
-  - Only requested fields are returned (no over-fetching).
+
+    ```
+    count
+      result {
+        productId, productImage 
+      }
+    ```
+
+      **Line breakdown:**
+      - `count` - Returns total number of records (used for pagination).
+        - Example: If "150" total "product" records exist, count = 150.
+        - Grid uses this to calculate the number of pages that exist.
+      - `result` - Contains the array of "product" records.
+        - `{ ... }` - List of fields to return for each record.
+        - Only requested fields are returned (no over-fetching).
 
 **Response structure example**
 
@@ -514,34 +545,32 @@ When the backend executes the query, it returns a JSON response in this exact st
 | `result` | Array of "products" objects. | [ {...}, {...} ] |
 | Each `field` in result | Matches GraphQL query field names. | Field values from database. |
 
----
 
 ### Step 4: Add toolbar with CRUD and search options
 
 The toolbar provides buttons for adding, editing, deleting records, and searching the data.
 
 **Instructions:**
-
 1. Open the **ProductGrid.tsx** file.
 2. Update the `Grid` component to include the [Toolbar]((https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbar)) property with CRUD and search options.
 
-```ts
-const toolbar = ["Add", "Edit", "Delete", "Search"];
-<GridComponent
-    ref={gridRef}
-    dataSource={productDetails}
-    toolbar={toolbar} >    
-  <ColumnsDirective>
-    <ColumnDirective
-      field="productId"
-      headerText="Product ID"
-      textAlign="Right"
-      width={150}
-      isPrimaryKey={true}/>
-    {/* Include additional columns here */}
-    <Inject services={[Toolbar, Edit ]} />
-  </GridComponent>
-```
+  ```ts
+  const toolbar = ["Add", "Edit", "Delete", "Search"];
+  <GridComponent
+      ref={gridRef}
+      dataSource={productDetails}
+      toolbar={toolbar} >    
+    <ColumnsDirective>
+      <ColumnDirective
+        field="productId"
+        headerText="Product ID"
+        textAlign="Right"
+        width={150}
+        isPrimaryKey={true}/>
+      {/* Include additional columns here */}
+      <Inject services={[Toolbar, Edit ]} />
+    </GridComponent>
+  ```
 ### Step 5: Implement paging feature
 
 Paging divides large datasets into smaller pages to improve performance and usability.
@@ -553,67 +582,66 @@ During pagination, the `GraphQLAdaptor` sends the paging details though "skip" a
 
 2. The page size is configured with [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#pagesettings) property.
 
-```ts
-const pageSettings = { pageSize: 10, pageSizes: true };
+    ```ts
+    const pageSettings = { pageSize: 10, pageSizes: true };
 
-<GridComponent
-  ref={gridRef}
-  dataSource={productDetails}
-  pageSettings={pageSettings}
-  allowPaging={true}>    
-  <ColumnsDirective>
-    <ColumnDirective
-      field="productId"
-      headerText="Product ID"
-      textAlign="Right"
-      width={150}
-      isPrimaryKey={true}/>
-      {/* Include additional columns here */}
-      <Inject services={[Page]} />
-</GridComponent>
-```
+    <GridComponent
+      ref={gridRef}
+      dataSource={productDetails}
+      pageSettings={pageSettings}
+      allowPaging={true}>    
+      <ColumnsDirective>
+        <ColumnDirective
+          field="productId"
+          headerText="Product ID"
+          textAlign="Right"
+          width={150}
+          isPrimaryKey={true}/>
+          {/* Include additional columns here */}
+          <Inject services={[Page]} />
+    </GridComponent>
+    ```
 
-2. Implement the page logic within the "getProducts" resolver function located in the (**resolver.ts**) file.
+2. Implement the page logic within the "getProducts" resolver function located in the **resolver.ts** file.
 
-```ts
-import { productDetails } from "./data";
-import { Query, DataManager, Predicate } from "@syncfusion/ej2-data";
+    ```ts
+    import { productDetails } from "./data";
+    import { Query, DataManager, Predicate } from "@syncfusion/ej2-data";
 
-const resolvers = {
-  Query: {
-    getProducts: (_parent: unknown, { datamanager }: GetProductsArgs) => {
-      let products = [...productDetails];
-      const query = new Query();
+    const resolvers = {
+      Query: {
+        getProducts: (_parent: unknown, { datamanager }: GetProductsArgs) => {
+          let products = [...productDetails];
+          const query = new Query();
 
-      if (datamanager.take !== undefined) {
-        const skip = datamanager.skip || 0;
-        const take = datamanager.take;
+          if (datamanager.take !== undefined) {
+            const skip = datamanager.skip || 0;
+            const take = datamanager.take;
 
-        query.page(skip / take + 1, take);
-      }
-      let result = new DataManager(products).executeLocal(query);
-      let count = products.length
-      return {
-        result,
-        count
-      };
-    },
-  },
-};
+            query.page(skip / take + 1, take);
+          }
+          let result = new DataManager(products).executeLocal(query);
+          let count = products.length
+          return {
+            result,
+            count
+          };
+        },
+      },
+    };
 
-export default resolvers;
-```
+    export default resolvers;
+    ```
 
-**Page logic breakdown:**
+    **Page logic breakdown:**
 
-| Part                | Purpose |
-|---------------------|---------|
-| ``datamanager.skip``    | Number of records to `skip` before fetching data (e.g., `(pageIndex - 1) * pageSize`). |
-| ``datamanager.take``    | Number of records to return (page size). |
-| ``query.page(...)``     | Applies paging to the Syncfusion query instance. |
-| ``executeLocal(query)`` | Executes the query on the in‑memory dataset and returns paged results. |
+    | Part                | Purpose |
+    |---------------------|---------|
+    | ``datamanager.skip``    | Number of records to `skip` before fetching data (e.g., `(pageIndex - 1) * pageSize`). |
+    | ``datamanager.take``    | Number of records to return (page size). |
+    | ``query.page(...)``     | Applies paging to the Syncfusion query instance. |
+    | ``executeLocal(query)`` | Executes the query on the in‑memory dataset and returns paged results. |
 
- 
 **Paging details included in request payloads:**
 
 The image illustrates the paging details (`skip` and `take`) included in the server request payload.
@@ -621,7 +649,6 @@ The image illustrates the paging details (`skip` and `take`) included in the ser
 ![GraphQLAdaptor-NodeJs-Paging](../images/GraphQLAdaptor-NodeJs-Paging.png)
  
 The resolver processes the Grid’s `skip` and `take` parameters and returns the total count along with the paged result. Paging feature is now active with "10" records per page.
-
 
 > To use [Row Virtualization](https://ej2.syncfusion.com/react/documentation/grid/scrolling/virtual-scrolling), inject the `VirtualScroll` service and set [enableVirtualization](https://ej2.syncfusion.com/react/documentation/grid/scrolling/virtual-scrolling) property to "true". When virtualization is enabled, the grid automatically sends the correct "skip" and "take" values to the server.The resolver does not require any additional modifications. The Grid inherently handles all virtual block requests, ensuring the expected behavior without additional configuration.
 
@@ -634,69 +661,68 @@ When a search action is performed in the Grid, the `GraphQLAdaptor` sends the se
 **Instructions**
 1. Ensure the toolbar includes the "Search" item.
 
-```ts
-const toolbar = ['Search'];
-    <GridComponent
-        ref={gridRef}
-        dataSource={productDetails}
-        toolbar={toolbar} >    
-      <ColumnsDirective>
-        <ColumnDirective
-          field="productId"
-          headerText="Product ID"
-          textAlign="Right"
-          width={150}
-          isPrimaryKey={true}/>
-       {/* Include additional columns here */}
-        <Inject services={[Toolbar]} />
-      </GridComponent>
-```
+    ```ts
+      const toolbar = ['Search'];
+        <GridComponent
+            ref={gridRef}
+            dataSource={productDetails}
+            toolbar={toolbar} >    
+          <ColumnsDirective>
+            <ColumnDirective
+              field="productId"
+              headerText="Product ID"
+              textAlign="Right"
+              width={150}
+              isPrimaryKey={true}/>
+          {/* Include additional columns here */}
+            <Inject services={[Toolbar]} />
+          </GridComponent>
+    ```
+2. Implement the search logic within the "getProducts" resolver function located in the **resolver.ts** file.
 
-2. Implement the search logic within the "getProducts" resolver function located in the (**resolver.ts**) file.
+    ```ts
+    import { productDetails } from "./data";
+    import { Query, DataManager, Predicate } from "@syncfusion/ej2-data";
 
-```ts
-import { productDetails } from "./data";
-import { Query, DataManager, Predicate } from "@syncfusion/ej2-data";
+    const resolvers = {
+      Query: {
+        getProducts: (_parent: unknown, { datamanager }: GetProductsArgs) => {
+            let products = [...productDetails];
+            const query = new Query();
 
-const resolvers = {
-  Query: {
-    getProducts: (_parent: unknown, { datamanager }: GetProductsArgs) => {
-        let products = [...productDetails];
-        const query = new Query();
+            /** Custom function to handle the search operation.**/
+            const performSearching = (searchParam : string) => {
+              const { fields, key } = JSON.parse(searchParam)[0];
+              query.search(key, fields);
+            }
+          
+            if (datamanager.search) {
+              performSearching(datamanager.search);
+            }
+          
+            /** Execute the composed Query.
+              * result: data to render.
+              * count: total number of mathched records.
+            */
+            let result = new DataManager(products).executeLocal(query);
+            let count = result.length
+            return {
+              result,
+              count
+            };
+        },
+      },
+    }
+    ```
 
-         /** Custom function to handle the search operation.**/
-        const performSearching = (searchParam : string) => {
-          const { fields, key } = JSON.parse(searchParam)[0];
-          query.search(key, fields);
-        }
-       
-        if (datamanager.search) {
-          performSearching(datamanager.search);
-        }
-       
-        /** Execute the composed Query.
-          * result: data to render.
-          * count: total number of mathched records.
-        */
-        let result = new DataManager(products).executeLocal(query);
-        let count = result.length
-        return {
-          result,
-          count
-        };
-    },
-  },
-}
-```
+    **Search logic breakdown:**
 
-**Search logic breakdown:**
-
-| Part | Purpose |
-|------|---------|
-| ``datamanager.search`` | JSON‑stringified array of search instructions sent by the Grid via `GraphQLAdaptor`. |
-| ``performSearching(searchParam)`` | Parses the JSON and applies the search to the query.|
-| ``query.search(key, fields)`` | Applies Syncfusion’s contains search across the specified fields. |
-| ``executeLocal(query)``| Runs the composed search query on the dataset.|
+    | Part | Purpose |
+    |------|---------|
+    | ``datamanager.search`` | JSON‑stringified array of search instructions sent by the Grid via `GraphQLAdaptor`. |
+    | ``performSearching(searchParam)`` | Parses the JSON and applies the search to the query.|
+    | ``query.search(key, fields)`` | Applies Syncfusion’s contains search across the specified fields. |
+    | ``executeLocal(query)``| Runs the composed search query on the dataset.|
  
 **Searching details included in request payloads:**
 
@@ -715,75 +741,75 @@ The `GraphQLAdaptor` automatically passes the sorting details to the server thro
 **Instructions:**
 1. Set the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to "true".
 
-```ts
-<GridComponent
-  ref={gridRef}
-  dataSource={productDetails}
-  allowSorting={true}>  
-  <ColumnsDirective>
-    <ColumnDirective
-      field="productId"
-      headerText="Product ID"
-      textAlign="Right"
-      width={150}
-      isPrimaryKey={true}
-    />
-    {/* Include additional columns here */}
-    <Inject services={[Sort]} />
-  </GridComponent>
-```
+    ```ts
+    <GridComponent
+      ref={gridRef}
+      dataSource={productDetails}
+      allowSorting={true}>  
+      <ColumnsDirective>
+        <ColumnDirective
+          field="productId"
+          headerText="Product ID"
+          textAlign="Right"
+          width={150}
+          isPrimaryKey={true}
+        />
+        {/* Include additional columns here */}
+        <Inject services={[Sort]} />
+      </GridComponent>
+    ```
 
-2. Implement the sort logic within the "getProducts" resolver function located in the (**resolver.ts**) file.
+2. Implement the sort logic within the "getProducts" resolver function located in the **resolver.ts** file.
 
-```ts
-import { productDetails } from "./data";
-import { Query, DataManager, Predicate } from "@syncfusion/ej2-data";
+    ```ts
+    import { productDetails } from "./data";
+    import { Query, DataManager, Predicate } from "@syncfusion/ej2-data";
 
-const resolvers = {
-  Query: {
-    getProducts: (_parent: unknown, { datamanager }: GetProductsArgs) => {
-      let products = [...productDetails];
-      const query = new Query();  
-      
-      /**Custom function to apply sorting**/
-      const performSorting = (sorted:SortParam[]|string) => {
-          for (let i = 0; i < sorted.length; i++) {
-            const { name, direction } = sorted[i];
-            
-            /** Append sorting to the Query for the specified field and direction**/
-            query.sortBy(name, direction);
+    const resolvers = {
+      Query: {
+        getProducts: (_parent: unknown, { datamanager }: GetProductsArgs) => {
+          let products = [...productDetails];
+          const query = new Query();  
+          
+          /**Custom function to apply sorting**/
+          const performSorting = (sorted:SortParam[]|string) => {
+              for (let i = 0; i < sorted.length; i++) {
+                const { name, direction } = sorted[i];
+                
+                /** Append sorting to the Query for the specified field and direction**/
+                query.sortBy(name, direction);
+              }
+            }
+
+          if (datamanager.sorted) {
+            performSorting(datamanager.sorted);
           }
-        }
 
-      if (datamanager.sorted) {
-        performSorting(datamanager.sorted);
-      }
+          /** Execute the composed Query
+            * result: data to render
+            * count: total number of records
+          */
+          let result = new DataManager(products).executeLocal(query);
+          let count = products.length;
 
-      /** Execute the composed Query
-        * result: data to render
-        * count: total number of records
-      */
-      let result = new DataManager(products).executeLocal(query);
-      let count = products.length;
+          return {
+            result,
+            count
+          };
+        },
+      },
+    };
 
-      return {
-        result,
-        count
-      };
-    },
-  },
-};
+    export default resolvers;
+    ```
 
-export default resolvers;
-```
+    **Sorting logic breakdown:**
 
-**Sorting logic breakdown:**
-
-| Part | Purpose |
-|------|---------|
-| ``datamanager.sorted`` | Array of sort instructions sent by the Grid via `GraphQLAdaptor`. |
-| ``performSorting(sorted)`` | Iterates the sort array and appends sort clauses to the Query.|
-| ``query.sortBy(name, direction)`` | Field/column name to sort by (e.g., "productName", "category"). | 
+    | Part | Purpose |
+    |------|---------|
+    | ``datamanager.sorted`` | Array of sort instructions sent by the Grid via `GraphQLAdaptor`. |
+    | ``performSorting(sorted)`` | Iterates the sort array and appends sort clauses to the Query.|
+    | ``query.sortBy(name, direction)`` | Field/column name to sort by (e.g., "productName", "category"). | 
 
 **Sorting details included in request payloads:**
 
@@ -802,160 +828,157 @@ Filtering allows the user to narrow down records by specifying conditions on col
 The `GraphQLAdaptor` automatically passes the filter conditions to the server through the "where" parameter of the "DataManagerInput". In the server, the filter parameters are converted to the Syncfusion [filter query](https://ej2.syncfusion.com/react/documentation/data/querying#filtering) and executed through the `DataManager` to get the filtered data.
 
  **Instructions:**
-
 1. Set the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowfiltering) property to "true".
 
-```ts
-const filterSettings: FilterSettingsModel = { type: 'Excel' };
-<GridComponent
-  ref={gridRef}
-  dataSource={productDetails}
-  allowFiltering={true}
-  filterSettings={filterSettings}>    
-  <ColumnsDirective>
-    <ColumnDirective
-      field="productId"
-      headerText="Product ID"
-      textAlign="Right"
-      width={150}
-      isPrimaryKey={true}/>
-      {/* Include additional columns here */}
-    <Inject services={[Filter]} />
-</GridComponent>
-```
+    ```ts
+    const filterSettings: FilterSettingsModel = { type: 'Excel' };
+    <GridComponent
+      ref={gridRef}
+      dataSource={productDetails}
+      allowFiltering={true}
+      filterSettings={filterSettings}>    
+      <ColumnsDirective>
+        <ColumnDirective
+          field="productId"
+          headerText="Product ID"
+          textAlign="Right"
+          width={150}
+          isPrimaryKey={true}/>
+          {/* Include additional columns here */}
+        <Inject services={[Filter]} />
+    </GridComponent>
+    ```
+2. Implement the filter processing logic within the "getProducts" resolver function located in the **resolver.ts** file.
 
-2. Implement the filter processing logic within the "getProducts" resolver function located in the (**resolver.ts**) file.
+    ```ts
+      const resolvers = {
+        Query: {
+          getProducts: (_parent: unknown, { datamanager }: GetProductsArgs) => {
+              let products = [...productDetails];
+              const query = new Query();
 
-```ts
-const resolvers = {
-  Query: {
-    getProducts: (_parent: unknown, { datamanager }: GetProductsArgs) => {
-        let products = [...productDetails];
-        const query = new Query();
-
-        if (datamanager.where) {
-          performFiltering(datamanager.where);
-        }       
-        
-      // Execute filtering using Syncfusion DataManager.
-      const result = new DataManager(products).executeLocal(query);      
-      // Total count after filtering.
-      const count = result.length;
-      
-      return {
-        result,
-        count
+              if (datamanager.where) {
+                performFiltering(datamanager.where);
+              }       
+              
+            // Execute filtering using Syncfusion DataManager.
+            const result = new DataManager(products).executeLocal(query);      
+            // Total count after filtering.
+            const count = result.length;
+            
+            return {
+              result,
+              count
+            };
+          },
+        },
       };
-    },
-  },
-};
+    ```
+    The "performFiltering" function processes the filtering rules received from the client and return the filter query.
 
-```
-The "performFiltering" function processes the filtering rules received from the client and return the filter query.
+    ```ts
+      const query = new Query();
 
-```ts
-  const query = new Query();
-
-  const performFiltering = (filterString:string) => {
-    const parsed = JSON.parse(filterString);
-    //The parsed filter can be an array or a single object.
-    
-    const predicateCollection = Array.isArray(parsed) ? parsed[0] : parsed;
-
-    // If no valid predicate structure exists, return the original query unchanged.
-    if (!predicateCollection || !Array.isArray(predicateCollection.predicates) || predicateCollection.predicates.length === 0) {
-      return query;
-    }
-    
-    // Determines whether multiple predicates should be combined using AND / OR.
-    const condition = (predicateCollection.condition || 'and').toLowerCase();
-    const ignoreCase = predicateCollection.ignoreCase !== undefined ? !!predicateCollection.ignoreCase : true;
-
-    //This variable will accumulate the full predicate chain.
-    let combinedPredicate: Predicate | null = null;
-    
-    //Loop through each predicate and convert it into Syncfusion Predicate objects.
-    predicateCollection.predicates.forEach((p:any) => {
-      if (p.isComplex && Array.isArray(p.predicates)) {
-        // Handle nested predicates via recursive helper.
-        const nested = buildNestedPredicate(p, ignoreCase);
-        if (nested) {
-          combinedPredicate = combinedPredicate
-            ? (condition === 'or' ? combinedPredicate.or(nested) : combinedPredicate.and(nested))
-            : nested;
-        }
-        return;
-      }
-
-      // Create a simple (single field) predicate.
-      const singlePredicate = new Predicate(p.field, p.operator, p.value, ignoreCase);
-
-      // Merge predicate into the chain using AND/OR.
-      combinedPredicate = combinedPredicate
-        ? (condition === 'or' ? combinedPredicate.or(singlePredicate) : combinedPredicate.and(singlePredicate))
-        : singlePredicate;
-    });
-
-    // Apply the final combined predicate to the Syncfusion Query object.
-    if (combinedPredicate) {
-      query.where(combinedPredicate);
-    }
-    return query;
-  };
-```
-The "buildNestedPredicate" function handles complex filtering scenarios containing nested structures.
-
-```ts
-    /**
-     * This function is called recursively to handle multi-level filter logic.
-     * @param block - A complex filter object containing nested predicates.
-     * @param ignoreCase - Whether string comparisons should ignore case.
-     * @returns A merged Predicate representing the entire nested filter block.
-     */
-
-    function buildNestedPredicate(block : FilterBlock, ignoreCase :boolean) {
-      /** Determine whether this block uses "and" or "or" to merge its child predicates.**/
-      const condition = (block.condition || 'and').toLowerCase();
+      const performFiltering = (filterString:string) => {
+        const parsed = JSON.parse(filterString);
+        //The parsed filter can be an array or a single object.
         
-      /** Will store the final combined Predicate after processing all nested items.**/
-      let mergedPredicate : Predicate | null = null;
-      
-      
-      /**Loop through each predicate entry within the current block.**/
-      block.predicates.forEach((p:any) => {
-        let node;
-        if (p.isComplex && Array.isArray(p.predicates)) {
-          node = buildNestedPredicate(p, ignoreCase);
-        } else {
-          node = new Predicate(p.field, p.operator, p.value, ignoreCase);
+        const predicateCollection = Array.isArray(parsed) ? parsed[0] : parsed;
+
+        // If no valid predicate structure exists, return the original query unchanged.
+        if (!predicateCollection || !Array.isArray(predicateCollection.predicates) || predicateCollection.predicates.length === 0) {
+          return query;
         }
-        if (node) {
-          mergedPredicate  = mergedPredicate 
-            ? (condition === 'or' ? mergedPredicate .or(node) : mergedPredicate .and(node))
-            : node;
+        
+        // Determines whether multiple predicates should be combined using AND / OR.
+        const condition = (predicateCollection.condition || 'and').toLowerCase();
+        const ignoreCase = predicateCollection.ignoreCase !== undefined ? !!predicateCollection.ignoreCase : true;
+
+        //This variable will accumulate the full predicate chain.
+        let combinedPredicate: Predicate | null = null;
+        
+        //Loop through each predicate and convert it into Syncfusion Predicate objects.
+        predicateCollection.predicates.forEach((p:any) => {
+          if (p.isComplex && Array.isArray(p.predicates)) {
+            // Handle nested predicates via recursive helper.
+            const nested = buildNestedPredicate(p, ignoreCase);
+            if (nested) {
+              combinedPredicate = combinedPredicate
+                ? (condition === 'or' ? combinedPredicate.or(nested) : combinedPredicate.and(nested))
+                : nested;
+            }
+            return;
+          }
+
+          // Create a simple (single field) predicate.
+          const singlePredicate = new Predicate(p.field, p.operator, p.value, ignoreCase);
+
+          // Merge predicate into the chain using AND/OR.
+          combinedPredicate = combinedPredicate
+            ? (condition === 'or' ? combinedPredicate.or(singlePredicate) : combinedPredicate.and(singlePredicate))
+            : singlePredicate;
+        });
+
+        // Apply the final combined predicate to the Syncfusion Query object.
+        if (combinedPredicate) {
+          query.where(combinedPredicate);
         }
-      });
+        return query;
+      };
+    ```
+    The "buildNestedPredicate" function handles complex filtering scenarios containing nested structures.
 
-      return mergedPredicate ;
-    }
-```
+    ```ts
+        /**
+        * This function is called recursively to handle multi-level filter logic.
+        * @param block - A complex filter object containing nested predicates.
+        * @param ignoreCase - Whether string comparisons should ignore case.
+        * @returns A merged Predicate representing the entire nested filter block.
+        */
 
-**Filter logic breakdown:**
+        function buildNestedPredicate(block : FilterBlock, ignoreCase :boolean) {
+          /** Determine whether this block uses "and" or "or" to merge its child predicates.**/
+          const condition = (block.condition || 'and').toLowerCase();
+            
+          /** Will store the final combined Predicate after processing all nested items.**/
+          let mergedPredicate : Predicate | null = null;
+          
+          
+          /**Loop through each predicate entry within the current block.**/
+          block.predicates.forEach((p:any) => {
+            let node;
+            if (p.isComplex && Array.isArray(p.predicates)) {
+              node = buildNestedPredicate(p, ignoreCase);
+            } else {
+              node = new Predicate(p.field, p.operator, p.value, ignoreCase);
+            }
+            if (node) {
+              mergedPredicate  = mergedPredicate 
+                ? (condition === 'or' ? mergedPredicate .or(node) : mergedPredicate .and(node))
+                : node;
+            }
+          });
 
-| Part | Purpose |
-|------|---------|
-| ``dataManager.Where`` | List of filter conditions from the Grid. |
-| ``predicateCollection`` | The normalized top-level filter group object containing condition, ignoreCase, and predicates.|
-| ``predicateCollection.condition`` | Logical operator to combine child predicates at the current level: "and" or "or" (defaults to "and"). |
-| ``predicate.Value`` | The value to compare against. |
-| ``predicateCollection.ignoreCase`` | Whether string comparisons ignore case (defaults to true if not present). |
-| ``predicateCollection.predicates[]`` | Array of predicate entries; each entry can be a simple predicate or a complex (nested) group. |
-| ``p.isComplex`` | Flag indicating a nested group that contains its own predicates (processed recursively). |
-| ``p.field`` | Column/field name to filter (e.g., "productName", "category"). |
-| ``p.operator``| Operator string (equal, contains, greaterthan, etc.) passed into new Predicate(...). |
-| ``performFiltering(filterString)``| Parses the where string, builds a combined Predicate chain (AND/OR), and applies it to query via query.where(combinedPredicate).|
-|``buildNestedPredicate(block, ignoreCase)`` | Recursively constructs a Predicate tree for nested groups using the group’s condition and child predicates.|
-|``query.where(combinedPredicate)``| Applies the final merged Predicate to the Syncfusion Query.|
+          return mergedPredicate ;
+        }
+    ```
+
+    **Filter logic breakdown:**
+
+    | Part | Purpose |
+    |------|---------|
+    | ``dataManager.Where`` | List of filter conditions from the Grid. |
+    | ``predicateCollection`` | The normalized top-level filter group object containing condition, ignoreCase, and predicates.|
+    | ``predicateCollection.condition`` | Logical operator to combine child predicates at the current level: "and" or "or" (defaults to "and"). |
+    | ``predicate.Value`` | The value to compare against. |
+    | ``predicateCollection.ignoreCase`` | Whether string comparisons ignore case (defaults to true if not present). |
+    | ``predicateCollection.predicates[]`` | Array of predicate entries; each entry can be a simple predicate or a complex (nested) group. |
+    | ``p.isComplex`` | Flag indicating a nested group that contains its own predicates (processed recursively). |
+    | ``p.field`` | Column/field name to filter (e.g., "productName", "category"). |
+    | ``p.operator``| Operator string (equal, contains, greaterthan, etc.) passed into new Predicate(...). |
+    | ``performFiltering(filterString)``| Parses the where string, builds a combined Predicate chain (AND/OR), and applies it to query via query.where(combinedPredicate).|
+    |``buildNestedPredicate(block, ignoreCase)`` | Recursively constructs a Predicate tree for nested groups using the group’s condition and child predicates.|
+    |``query.where(combinedPredicate)``| Applies the final merged Predicate to the Syncfusion Query.|
 
 **Supported Filter Operators:**
 
@@ -987,8 +1010,6 @@ When a user selects multiple checkbox values for the same column (e.g., (categor
 
 The resolver handles the filter conditions passed from the Grid and returns the filtered data along with the updated count. Filtering is now enabled.
 
----
-
 ### Step 9: Perform CRUD operations
 
 CRUD operations (Create, Read, Update, Delete) allow users to manage data through the Grid. The Grid provides built-in dialogs and buttons to perform these operations, while the backend resolvers handle the actual data modifications.
@@ -997,7 +1018,7 @@ Enable editing operations in the Grid by configuring `editSettings` and setting 
 
 The `getMutation` function in the `GraphQLAdaptor` handles the Grid CRUD actions by sending the appropriate mutation for each action (insert, update, or delete) to the GraphQL server.
 
-> Previously, the required mutation definitions and schema for CRUD operations were created in the (**resolver.ts**) and (**schema.graphql**) files. The next step is to enable CRUD actions in the client Data Grid by using the GraphQL adaptor.
+> Previously, the required mutation definitions and schema for CRUD operations were created in the **resolver.ts** and **schema.graphql** files. The next step is to enable CRUD actions in the client Data Grid by using the GraphQL adaptor.
 
 **Insert:**
 
@@ -1005,7 +1026,7 @@ The Insert operation enables adding new "product" records to the product list. W
 
 After the required data is submitted, the GraphQL mutation sends the new "product" record to the backend for processing and storage.
 
-Open the (**ProductGrid.tsx**) and Configure the `getMutation` function in the `GraphQLAdaptor` to return the GraphQL mutation for the insert action.
+Open the **ProductGrid.tsx** and Configure the `getMutation` function in the `GraphQLAdaptor` to return the GraphQL mutation for the insert action.
 
   ```ts
   [ProductGrid.tsx]
@@ -1055,7 +1076,7 @@ The Update operation enables editing of existing product records. When the Edit 
 
 After the required modifications are submitted, a GraphQL mutation sends the updated record to the backend for processing.
 
-Open the (**ProductGrid.tsx**) and Configure the `getMutation` function in the `GraphQLAdaptor` to return the appropriate GraphQL mutation based on the update action which reference the "updateProduct" mutation defined in the schema.
+Open the **ProductGrid.tsx** and Configure the `getMutation` function in the `GraphQLAdaptor` to return the appropriate GraphQL mutation based on the update action which reference the "updateProduct" mutation defined in the schema.
 
   ```ts
   [ProductGrid.tsx]
@@ -1103,9 +1124,9 @@ When the `Update` button is clicked, the dialog is modified, and the changes are
 
 The Delete operation enables removal of product records from the application. When the `Delete` option in the `toolbar` is selected and a row is marked for removal, a confirmation prompt appears. After confirmation, a GraphQL mutation sends a delete request to the backend containing only the primary key value.
 
-Open the (**ProductGrid.tsx**) and Configure the `getMutation` function in the `GraphQLAdaptor` to return the delete mutation that matches the "deleteProduct" mutation defined in the schema.
-.
-  ```ts
+Open the **ProductGrid.tsx** and Configure the `getMutation` function in the `GraphQLAdaptor` to return the delete mutation that matches the "deleteProduct" mutation defined in the schema.
+
+```ts
   [ProductGrid.tsx]
   // mutation for perform delete.
   const productDetails : DataManager = React.useMemo(() => {
@@ -1128,7 +1149,7 @@ Open the (**ProductGrid.tsx**) and Configure the `getMutation` function in the `
           `,
             // mutation for performing CRUD
           getMutation: function (action: any): string {
-            if (action === 'delete') {
+            if (action === 'remove') {
               return `mutation RemoveProductMutation($key: String!, $keyColumn: String) {
                   deleteProduct(key: $key, keyColumn: $keyColumn) {
                     productId, productName                    # add additional fields as needed, e.g.:price, category
@@ -1139,7 +1160,7 @@ Open the (**ProductGrid.tsx**) and Configure the `getMutation` function in the `
         }),
     });
   }, []);
-  ```
+```
 
 **Delete mutation request parameters:**
 
@@ -1147,10 +1168,7 @@ When the `Delete` button is clicked, a row is selected for deletion, and the act
 
 ![GraphQL-Nodejs-deleting](../images/GraphQL-Nodejs-deleting.png)
 
-
 > Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) for the Grid component. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property is set to "true" for a specific Grid Column which has unique values.
-
----
 
 ## Running the application
 
@@ -1165,14 +1183,14 @@ Open a terminal or Command Prompt. Run the server application first, then start 
 ```
 - The server is now running at http://localhost:4205/.
 
- ### Run the client
+### Run the client
  - Execute the below commands to run the client application:
+
 ```bash
     cd GridClient
     npm run dev
 ```
 - Open http://localhost:4200/ in the browser.
---- 
 
 ## Complete Sample Repository
 
@@ -1180,7 +1198,6 @@ For a complete working implementation of this example, refer to the following Gi
  
 [Syncfusion Grid with GraphQL Sample](https://github.com/SyncfusionExamples/Performing-data-and-CRUD-operations-in-ej2-react-grid-using-GraphQLAdaptor)
 
----
 ## Summary
 
 This guide demonstrates:
@@ -1191,3 +1208,9 @@ This guide demonstrates:
 4. Perform CRUD operations. [🔗](#perform-crud-operations)
 
 The application now provides a fully integrated "product" management workflow using the Syncfusion React Grid connected to a Node.js GraphQL backend.
+
+## See also
+
+- [Organizes related records by grouping rows based on column values, offering structured and categorized data views.](https://ej2.syncfusion.com/react/documentation/grid/grouping/grouping)
+- [Exports grid data to Excel format, enabling convenient data sharing and offline analysis.](https://ej2.syncfusion.com/react/documentation/grid/excel-export/excel-exporting)
+- [Integrates seamlessly with various filter UIs, ensuring consistent behavior across all grid configurations.](https://ej2.syncfusion.com/react/documentation/grid/filtering/filter-menu#custom-component-in-filter-menu)

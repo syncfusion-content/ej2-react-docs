@@ -118,10 +118,11 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component supports keyb
 
 ## Keyboard Interaction
 
-The Diagram component follows [keyboard interaction](https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html) guidelines, making it accessible for users who rely on keyboard navigation. The following keyboard shortcuts are supported:
+The Diagram component follows [keyboard interaction](https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html) guidelines, making it accessible for users who rely on keyboard navigation. The following keyboard shortcuts are supported. Use the tables below for quick reference:
 
 **Selection and Clipboard Operations**
-| **Command** | **Action** |
+
+| Command | Action |
 | --- | --- |
 | Ctrl + A | Select All |
 | Ctrl + X | Cut |
@@ -129,22 +130,25 @@ The Diagram component follows [keyboard interaction](https://www.w3.org/WAI/WCAG
 | Ctrl + V | Paste |
 
 **Edit Operations**
-| **Command** | **Action** |
+
+| Command | Action |
 | --- | --- |
 | Ctrl + Z | Undo |
 | Ctrl + Y | Redo |
 | Delete | Delete |
 
 **Navigation and Movement**
-| **Command** | **Action** |
+
+| Command | Action |
 | --- | --- |
-| <kbd>Up Arrow </kbd> | Move selected object to up |
-| <kbd>Down Arrow</kbd> | Move selected object to down |
-| <kbd>Left Arrow</kbd> | Move selected object to left |
-| <kbd>Right Arrow</kbd> | Move selected object to right |
+| <kbd>Up Arrow</kbd> | Move selected object up |
+| <kbd>Down Arrow</kbd> | Move selected object down |
+| <kbd>Left Arrow</kbd> | Move selected object left |
+| <kbd>Right Arrow</kbd> | Move selected object right |
 
 **Annotation Editing**
-| **Command** | **Action** |
+
+| Command | Action |
 | --- | --- |
 | <kbd>Enter</kbd> | Start Annotation Edit |
 | <kbd>Escape</kbd> | End Annotation Edit |

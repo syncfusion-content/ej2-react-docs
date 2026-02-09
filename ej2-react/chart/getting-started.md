@@ -11,11 +11,11 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Charts of Syncfusion
 
-This section explains you the steps required to create a simple chart and demonstrate the basic usage of the chart control.
+This section describes the steps to create a simple chart and demonstrates the basic usage of the chart component.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview)
 
-To get start quickly with React Charts, you can check on this video:
+A quick video overview of the React Charts setup is available:
 
 {% youtube "https://www.youtube.com/watch?v=w1xHn0CceqE" %}
 
@@ -62,16 +62,15 @@ cd my-app
 npm run dev
 ```
 
-* Install Syncfusion<sup style="font-size:70%">&reg;</sup> packages using below command.
+* Install the Syncfusion<sup style="font-size:70%">&reg;</sup> packages using the command below.
 
    ```
     npm install @syncfusion/ej2-react-charts --save
    ```
 
-## Add Chart to the Project
+## Add chart to the project
 
-Now, you can start adding Chart component in the application.
-For getting started, add the Chart component in `src/App.tsx` file using following code.
+Add the Chart component to `src/App.tsx` using the following code.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -116,7 +115,7 @@ The below example shows a basic Chart.
 
 {% previewsample "page.domainurl/code-snippet/chart/getting-started/initialize-cs1" %}
 
-## Module Injection
+## Module injection
 
 Chart component are segregated into individual feature-wise modules. In order to use a particular feature, you need to inject its feature service in the AppModule. In the current application, we are going to modify the above basic chart to visualize sales data for a particular year. For this application we are going to use line series, tooltip, data label, category axis and legend feature of the chart. Please find the relevant feature service name and description as follows.
 
@@ -126,12 +125,12 @@ Chart component are segregated into individual feature-wise modules. In order to
 * `DataLabel` - Inject this module in to `services` to use datalabel feature.
 * `Category`  - Inject this module in to `services` to use category feature.
 
-These modules should be injected to the `services` section as follows,
+Import the above-mentioned modules from the chart package and inject them into the `services` section of the Chart component as follows.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 
-import { Category, ChartComponent, DataLabel, LineSeries, Legend, Tooltip, Inject } from '@syncfusion/ej2-react-charts';
+import { ChartComponent, LineSeries, Legend, Tooltip, DataLabel, Category, Inject } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
@@ -145,7 +144,7 @@ export default App;
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
 
-import { Category, ChartComponent, DataLabel, LineSeries, Legend, Tooltip, Inject } from '@syncfusion/ej2-react-charts';
+import { ChartComponent, LineSeries, Legend, Tooltip, DataLabel, Category, Inject } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 function App() {
@@ -158,9 +157,9 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-## Populate Chart with Data
+## Populate chart with data
 
-This section explains how to plot below JSON data to the chart.
+This section explains how to plot the following JSON data to the chart.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -177,7 +176,7 @@ export let data = [
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
 
-export let data: any[] = [
+export let data: Object[] = [
     { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
     { month: 'Mar', sales: 34 }, { month: 'Apr', sales: 32 },
     { month: 'May', sales: 40 }, { month: 'Jun', sales: 32 },
@@ -189,9 +188,9 @@ export let data: any[] = [
 {% endhighlight %}
 {% endtabs %}
 
-Add a series object to the chart by using [`series`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel) property. Now map the field names `month` and `sales` in the JSON data to the [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#yname) properties of the series, then set the JSON data to [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#datasource) property.
+Add a series object to the chart by using the [`series`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel) property. Map the JSON fields `month` and `sales` to the series [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#yname) properties, and set the JSON array as the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#datasource) property.
 
-Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel#valuetype)for horizontal axis to `Category`. By default, the axis valueType is `Numeric`.
+Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel#valuetype) for the horizontal axis (primaryXAxis) to `Category`. By default, the axis valueType is `Numeric`.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -229,9 +228,9 @@ The sales data are in thousands, so format the vertical axis label by adding `$`
 
 {% previewsample "page.domainurl/code-snippet/chart/getting-started/datasource-cs4" %}
 
-## Add Chart Title
+## Add chart title
 
-You can add a title using [`title`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#title) property to the chart to provide quick information to the user about the data plotted in the chart.
+You can add a title using the [`title`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#title) property to the chart to provide quick information to the user about the data plotted in the chart.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -250,9 +249,9 @@ You can add a title using [`title`](https://ej2.syncfusion.com/react/documentati
 
 {% previewsample "page.domainurl/code-snippet/chart/getting-started/tooltip-cs1" %}
 
-## Enable Legend
+## Enable legend
 
-You can use legend for the chart by setting the `visible` property to true in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel#visible) object and by injecting the `Legend` module into the `services`.
+You can use legend for the chart by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel#visible) property to `true` in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/chart/chartmodel#legendsettings) object and by injecting the `Legend` module into the `services`.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -271,9 +270,9 @@ You can use legend for the chart by setting the `visible` property to true in [`
 
 {% previewsample "page.domainurl/code-snippet/chart/getting-started/legend-cs1" %}
 
-## Add Data Label
+## Add data label
 
-You can add data labels to improve the readability of the chart. This can be achieved by setting the visible property to true in the `dataLabel` object  and by injecting `DataLabel` module into the `services`.
+You can add data labels to improve the readability of the chart. This can be achieved by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/chart/datalabelsettingsmodel#visible) property to `true` in the [`dataLabel`](https://ej2.syncfusion.com/react/documentation/api/chart/markersettingsmodel#datalabel) object and by injecting `DataLabel` module into the `services`. Now, the data labels are arranged smartly based on series. 
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -292,9 +291,9 @@ You can add data labels to improve the readability of the chart. This can be ach
 
 {% previewsample "page.domainurl/code-snippet/chart/getting-started/datalabel-cs1" %}
 
-## Enable Tooltip
+## Enable tooltip
 
-The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the enable property as true in [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#enable) object and by injecting `Tooltip` module into the `services`.
+The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#enable) property as `true` in [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/chart/chartmodel#tooltip) object and by injecting `Tooltip` module into the `services`.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -313,4 +312,4 @@ The tooltip is useful when you cannot display information by using the data labe
 
 {% previewsample "page.domainurl/code-snippet/chart/getting-started/tooltip-cs2" %}
 
-> You can refer to our [React Charts](https://www.syncfusion.com/react-components/react-charts) feature tour page for its groundbreaking feature representations. You can also explore our [React Charts example](https://ej2.syncfusion.com/react/demos#/bootstrap5/chart/line) that shows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> You can refer to our [React Charts](https://www.syncfusion.com/react-components/react-charts) feature tour page for its groundbreaking feature representations. You can also explore our [React Charts example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/chart/line) that shows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.

@@ -45,10 +45,10 @@ The following code example illustrates how to bind local data with the diagram.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/dataBinding/es5LocalBinding-cs1/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/es5LocalBinding-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/dataBinding/es5LocalBinding-cs1/app/index.tsx %}
+{% include code-snippet/diagram/reactCurlyExamples/es5LocalBinding-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

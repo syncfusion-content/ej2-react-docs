@@ -21,16 +21,16 @@ domainurl: ##DomainURL##
 
 ## Building the Next.js application
 
-Open a terminal (for example, an integrated terminal in Visual Studio Code or Windows Command Prompt opened with <kbd>(Win+R)</kbd>, or macOS Terminal launched with <kbd>(Cmd+Space)</kbd>) and run the following command to create and navigate to the project folder:
+Open a terminal (for example, an integrated terminal in Visual Studio Code or Windows Command prompt opened with <kbd>Win+R</kbd>, or macOS terminal launched with <kbd>Cmd+Space</kbd>) and run the following command to create and navigate to the project folder:
 
 ```bash
-  npm create next-app@latest nextjs_grid
-  cd nextjs_grid
+npm create next-app@latest nextjs_grid
+cd nextjs_grid
 ```
 Start the development server by running the below command:
 
 ```bash 
-  npm run dev
+npm run dev
 ```
 Now the project has been successfully launched, and the application is available at **http://localhost:3000**.
 
@@ -38,7 +38,7 @@ Now the project has been successfully launched, and the application is available
 
 Next.js Route handlers provide a modern way to create server-side endpoints within the App router, utilizing the Web-standard request and response APIs. They enable the execution of backend operations such as data processing, CRUD actions, and custom API creation without requiring an additional server layer.
 
-Route Handlers are defined in the **route.ts** file within the **app** directory, enabling custom request handlers for specific routes. The following steps outline the process for populating health care data entries:
+Route handlers are defined in the **route.ts** file within the **app** directory, enabling custom request handlers for specific routes. The following steps outline the process for populating health care data entries:
 
 **Step 1:** Create a new route file (**api/health_care/route.ts**) to implement the server-side data logic.
 
@@ -73,8 +73,8 @@ The Syncfusion React Grid is a robust, high‑performance component built to eff
 Install the necessary Syncfusion packages using the below command in Visual Studio Code terminal or Command prompt.
 
 ```bash
-  npm install @syncfusion/ej2-react-grids --save
-  npm install @syncfusion/ej2-data --save
+npm install @syncfusion/ej2-react-grids --save
+npm install @syncfusion/ej2-data --save
 ```
 
 After installation, the necessary CSS files are available in the (**../node_modules/@syncfusion**) directory. Add the required CSS references to the **global.css** file to ensure proper styling of the Grid component.
@@ -99,7 +99,7 @@ For this project, the "Material 3" theme is applied. Other themes can be selecte
 
 ### Step 2: Add Syncfusion React Grid component with Next.js
 
-The Syncfusion React Grid provides [custom binding](https://ej2.syncfusion.com/react/documentation/grid/data-binding/remote-data#custom-binding), which enables seamless integration with external API services. With this feature, the grid can fetch data from a Next.js server and efficiently display health care details. It supports search, filter, sort, and pagination capabilities, making it easy to navigate and manage large datasets.
+The Syncfusion React Grid provides [custom data binding](https://ej2.syncfusion.com/react/documentation/grid/data-binding/remote-data#custom-binding), which enables seamless integration with external API services. With this feature, the grid can fetch data from a Next.js server and efficiently display health care details. It supports search, filter, sort, and pagination capabilities, making it easy to navigate and manage large datasets.
 
 ```ts
   [app/page.tsx]
@@ -153,8 +153,9 @@ The Syncfusion React Grid provides [custom binding](https://ej2.syncfusion.com/r
   }
 ```
 
-**Custom binding workflow**:
-The Syncfusion React Grid custom databinding feature to seamlessly integrate with external API services. When Grid actions such as paging, sorting, filtering, or CRUD operations are performed, requests are sent to the API. The API processes these operations and returns the results in the required format, giving complete control over application‑specific workflows and enabling efficient handling of large datasets. The custom databinding feature can interact with backend APIs through two key events.
+**Custom data binding workflow**:
+
+The Syncfusion Angular Grid supports custom data binding, enabling seamless integration with external API services. When Grid actions such as paging, sorting, filtering, or CRUD operations are performed, requests are sent to the API. The API processes these operations and returns the results in the required format, giving complete control over application‑specific workflows and enabling efficient handling of large datasets. The custom data binding feature can interact with backend APIs through two key events.
 
   - [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datastatechange): Triggered when the Grid performs actions such as paging, sorting, or filtering. It provides the current state details, which are sent to the API so the request can be processed and data returned in the required "{ result:[], count:100 }" format.
 
@@ -163,12 +164,14 @@ The Syncfusion React Grid custom databinding feature to seamlessly integrate wit
 Since the `dataStateChange` event does not fire on the first render, use the React `useEffect` hook to load the initial dataset when the component mounts. In **page.tsx**, define a "fetchData" function to send the grid state to the Next.js API and bind the returned data.
 
 **API response format:**
-  The Grid custom binding feature expects the following response from the backend:
+
+  The Grid custom data binding feature expects the following response from the backend:
+
 ```ts
   { "result": [ /* records to display */ ], "count": 100 }
 ```
 
-This format has already been implemented in the route.ts file during the Next.js server setup. 
+This format has already been implemented in the **route.ts** file during the Next.js server setup. 
 
 > Include the line `use client` at the very beginning of the **page.tsx** file to ensure that the Grid runs as a client‑side component. The Grid depends on browser features such as event handling and dynamic rendering, which require client‑side execution in Next.js.
 
@@ -176,7 +179,7 @@ This format has already been implemented in the route.ts file during the Next.js
 
 In a Next.js server environment, the Syncfusion [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) efficiently handles data operations such as filtering, sorting, searching, paging. It processes the Syncfusion DataManager [Query](https://ej2.syncfusion.com/react/documentation/data/querying), which specifies all operation details, and executes them directly against the data source. By streamlining these tasks, DataManager ensures consistent, accurate results and significantly reduces development effort and time.
 
-Inside the **api/health_care/route.ts** file, import the `DataManager` and `Query` from the `@syncfusion/ej2-data` package to implement the data operations using the Syncfusion DataManager.
+Inside the (**api/health_care/route.ts**) file, import the `DataManager` and `Query` from the `@syncfusion/ej2-data` package to implement the data operations using the Syncfusion DataManager.
 
 ```typescript
 //[route.ts]
@@ -280,7 +283,7 @@ The [Implement data operations](#step-3-implement-data-operations-on-server-side
 
 ![next_js_filter](../images/next_js_filter.png)
 
-The following code example demonstrates handling the filter action in the server file (**route.ts**) based on the Grid request.
+The following code example demonstrates handling the filter action in the server file **route.ts** based on the Grid request.
 
 ```typescript
   import { Predicate } from '@syncfusion/ej2-data';
@@ -308,7 +311,7 @@ The following code example demonstrates handling the filter action in the server
   }
 ```
 
-Complex filter conditions, where multiple predicates are combined with logical operators such as **and** or **or**, can be handled using the following helper functions in the server file (**route.ts**):
+Complex filter conditions, where multiple predicates are combined with logical operators such as **and** or **or**, can be handled using the following helper functions in the server file **route.ts**:
 
 
 ```typescript
@@ -372,7 +375,7 @@ The [Implement data operations](#step-3-implement-data-operations-on-server-side
 
 ![next_js_search](../images/next_js_search.png)
 
-The following code example demonstrates handling the search action inside the server (**route.ts**) file based on the Grid request:
+The following code example demonstrates handling the search action inside the server **route.ts** file based on the Grid request:
   
 ```typescript
   import { Predicate } from '@syncfusion/ej2-data';
@@ -437,7 +440,7 @@ The [Implement data operations](#step-3-implement-data-operations-on-server-side
 
 ![next_js_sort](../images/next_js_sort.png)
 
-The following code example demonstrates handling the sort action inside the server (**route.ts**) file based on the Grid request:
+The following code example demonstrates handling the sort action inside the server **route.ts** file based on the Grid request:
 
 ```typescript
   import { Predicate } from '@syncfusion/ej2-data';
@@ -504,7 +507,7 @@ The [Implement data operations](#step-3-implement-data-operations-on-server-side
 
 ![next_js_page](../images/next_js_page.png)
 
-The following code example demonstrates handling the paging action inside the server (**route.ts**) file based on the Grid request:
+The following code example demonstrates handling the paging action inside the server **route.ts** file based on the Grid request:
 
 ```typescript
   import { Predicate } from '@syncfusion/ej2-data';
@@ -537,7 +540,7 @@ The following code example demonstrates handling the paging action inside the se
   
 ### Step 8: Implement CRUD operations
 
-Editing operations in the Grid are enabled through custom binding by configuring the editSettings properties(`allowEditing`, `allowAdding`, and `allowDeleting`) to "true" and injecting the `Edit` module. The `dataSourceChanged` event must be included in the Grid component to send CRUD requests to the Next.js server. During a CRUD operation, this event is triggered and provides the necessary parameters to the server for processing create, update, or delete actions.
+Editing operations in the Grid are enabled through custom data binding by configuring the editSettings properties(`allowEditing`, `allowAdding`, and `allowDeleting`) to "true" and injecting the `Edit` module. The `dataSourceChanged` event must be included in the Grid component to send CRUD requests to the Next.js server. During a CRUD operation, this event is triggered and provides the necessary parameters to the server for processing create, update, or delete actions.
 
 Grid data requires a primary key to modify row data based on the database’s unique values. To enable this, configure a primary key by setting the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property must be set to "true" on the column that contains unique values.
 
@@ -597,9 +600,9 @@ In the **route.ts** file, define the "POST" method to manage the creation of new
   }
 ```
 
-The `dataSourceChanged` event handler in the **page.tsx** file is responsible for sending an asynchronous request to the server based on the Grid’s add record details provided in the event arguments. Once the server("POST") method response is received, the `endEdit` method is invoked within the `dataSourceChanged` event to complete the Grid operation.
+The `dataSourceChanged` event handler in the **page.tsx** file is responsible for sending an asynchronous request to the server based on the Grid’s add record details provided in the event arguments. Once the server ("POST") method response is received, the `endEdit` method is invoked within the `dataSourceChanged` event to complete the Grid operation.
 
-The image illustrates the newly insert data passed to the server through the `dataSourceChanged` event arguments in the Grid:
+The image illustrates the newly inserted data passed to the server through the `dataSourceChanged` event arguments in the Grid:
 
 ![next_js_add](../images/next_js_add.png)
 
@@ -644,7 +647,7 @@ In the **route.ts** file, define the "PUT" method to manage updates for an exist
 
 The `dataSourceChanged` event handler in the **page.tsx** file is responsible for sending an asynchronous request to the server based on the Grid’s update record details provided in the event arguments. Once the server ("PUT") method response is received, the `endEdit` method is invoked within the `dataSourceChanged` event to complete the Grid operation.
 
-The image illustrates the update data passed to the server through the `dataSourceChanged` event arguments in the Grid:
+The image illustrates the updated data passed to the server through the `dataSourceChanged` event arguments in the Grid:
 
 
 ![next_js_edit](../images/next_js_edit.png)
@@ -685,7 +688,7 @@ In the **route.ts** file, define the "DELETE" method to handle the removal of ex
 
 The `dataSourceChanged` event handler in the **page.tsx** file is responsible for sending an asynchronous request to the server based on the Grid’s delete record details provided in the event arguments. Once the server ("DELETE") method response is received, the `endEdit` method is invoked within the `dataSourceChanged` event to complete the Grid operation.
 
-The image illustrates the update data passed to the server through the `dataSourceChanged` event arguments in the Grid:
+The image illustrates the deleted data passed to the server through the `dataSourceChanged` event arguments in the Grid:
 
 ![Next_JS_Delete](../images/next_js_delete.png)
 
@@ -718,7 +721,7 @@ In this application, routing is used to display the appointment details of docto
 **Step 3:** Install the Syncfusion React Button component to the render routing button.
 
 ```bash
-  npm install @syncfusion/ej2-react-buttons --save
+npm install @syncfusion/ej2-react-buttons --save
 ```
 
 **Step 4:** Configure the Doctors portal page with a template column. Enable routing to the appointment details page when the button inside the template column is clicked, and pass "DoctorID" as the router parameter.
@@ -811,7 +814,7 @@ In this application, routing is used to display the appointment details of docto
 Use the below command to run the application.
   
 ```bash
-  npm run dev
+npm run dev
 ```
 Open http://localhost:3000 in the browser.
   
@@ -822,16 +825,18 @@ A complete, working sample implementation is available in the [GitHub repository
 ## Summary
   
 This guide demonstrates how to:
-1. [Create a Next.js project and install the required packages.](#building-the-nextjs-application)
-2. [Configure Next.js route handlers to create server-side API endpoints.](#configuring-nextjs-server)
-3. [Integrate Syncfusion React Grid with the Next.js server using the custom binding feature.](#integrating-syncfusion-react-grid-with-nextjs)
-4. [Handle data operations like filtering, searching, sorting, and paging in the Grid.](#step-3-implement-data-operations-on-server-side)
-5. [Implement CRUD operations (Create, Read, Update, Delete) using POST, GET, PUT, and DELETE methods.](#step-8-implement-crud-operations)
-6. [Set up navigation to other pages using the Next.js routing feature.](#routing)
-7. [Deploy and run the application to manage and display data efficiently in the Grid.](#running-the-application)
+1. Create a Next.js project and install the required packages. [🔗](#building-the-nextjs-application)
+2. Configure Next.js route handlers to create server-side API endpoints. [🔗](#configuring-nextjs-server)
+3. Integrate Syncfusion React Grid with the Next.js server using the custom data binding feature. [🔗](#integrating-syncfusion-react-grid-with-nextjs)
+4. Handle data operations like filtering, searching, sorting, and paging in the Grid. [🔗](#step-3-implement-data-operations-on-server-side)
+5. Implement CRUD operations (Create, Read, Update, Delete) using POST, GET, PUT, and DELETE methods. [🔗](#step-8-implement-crud-operations)
+6. Set up navigation to other pages using the Next.js routing feature. [🔗](#routing)
+7. Deploy and run the application to manage and display data efficiently in the Grid. [🔗](#running-the-application)
   
 The application now provides a complete solution for integrating the Syncfusion React Grid with Next.js server, enabling seamless data operations with a modern, user-friendly interface.
 
 ## See also
+
   - [Types of Edit](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
   - [Validation Rules](https://ej2.syncfusion.com/react/documentation/grid/editing/validation)
+  - [Filter Menu](https://ej2.syncfusion.com/react/documentation/grid/filtering/filter-menu)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with React Chart Component | Syncfusion
+title: Getting Started with React Chart Component for Preact | Syncfusion
 description: Check out and learn about getting started with the Preact Framework and React Chart Component of Syncfusion Essential JS 2 and more details.
 control: Preact
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the React Chart Component in the Preact Framework
+# Getting started with the React Chart Component in the Preact Framework
 
 This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Chart component.
 
