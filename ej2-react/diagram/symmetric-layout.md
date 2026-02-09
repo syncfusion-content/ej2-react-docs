@@ -26,11 +26,11 @@ The following code demonstrates how to arrange nodes using symmetric layout:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/AutomaticLayout/symmetric-cs1/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/symmetric-cs1/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/AutomaticLayout/symmetric-cs1/app/index.tsx %}
+{% include code-snippet/diagram/reactCurlyExamples/symmetric-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD036 -->
 
-# Getting Started
+# Getting started with React Bullet Chart component
 
-This section explains you the steps required to create a simple Bullet Chart and demonstrate the basic usage of the Bullet Chart control.
+This section describes the steps to create a simple Bullet Chart and demonstrates the basic usage of the Bullet Chart component.
 
 ## Dependencies
 
@@ -58,16 +58,15 @@ npm run dev
 ```
 
 
-Install Syncfusion<sup style="font-size:70%">&reg;</sup> packages using below command.
+Install the Syncfusion<sup style="font-size:70%">&reg;</sup> packages using the command below.
 
   ```
    npm install @syncfusion/ej2-react-charts --save
   ```
 
-## Add Bullet Chart to the Project
+## Add bullet chart to the project
 
-Now, you can start adding Bullet Chart component in the application.
-For getting started, add the Bullet Chart component in `src/App.tsx` file using following code.
+Add the Bullet Chart component to `src/App.tsx` using the following code.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -112,13 +111,13 @@ The below example shows a basic Bullet Chart.
 
  {% previewsample "page.domainurl/code-snippet/bullet-chart/getting-started/initialize-cs1" %}
 
-## Module Injection
+## Module injection
 
-Bullet Chart are segregated into individual feature-wise modules. In order to use a particular feature, you need to inject its feature service in the AppModule. Please find the relevant feature service name and description as follows.
+Bullet Chart component are segregated into individual feature-wise modules. In order to use a particular feature, you need to inject its feature service in the AppModule. In the current application, we are going to use tooltip feature of the chart.
 
 * `BulletTooltip` - Inject this module in to `services` to use tooltip feature.
 
-These modules should be injected to the `services` section as follows,
+Import the above-mentioned module from the chart package and inject them into the `services` section of the Bullet Chart component as follows.
 
 
 {% tabs %}
@@ -141,7 +140,7 @@ ReactDOM.render(<App />, document.getElementById("charts"));
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 
-import { BulletChartComponent, BulletTooltip } from "@syncfusion/ej2-react-charts";
+import { BulletChartComponent, BulletTooltip, Inject } from "@syncfusion/ej2-react-charts";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
@@ -157,10 +156,9 @@ ReactDOM.render(<App />, document.getElementById("charts"));
 {% endtabs %}
 
 
-## Bullet Chart With Data
+## Bullet chart with data
 
-This section explains how to plot local data to the Bullet Chart.
-
+This section explains how to plot the following JSON data to the Bullet Chart.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -176,18 +174,18 @@ const data = [
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 
-const data: any[] = [
-  { value: 100, target: 80 },
-  { value: 200, target: 180 },
-  { value: 300, target: 280 },
-  { value: 400, target: 380 },
-  { value: 500, target: 480 }
+const data: Object[] = [
+    { value: 100, target: 80 },
+    { value: 200, target: 180 },
+    { value: 300, target: 280 },
+    { value: 400, target: 380 },
+    { value: 500, target: 480 }
 ];
 
 {% endhighlight %}
 {% endtabs %}
 
-Now assign the local data to `dataSource` property. **value** and **target** values should be mapped with `valueField` and `targetField` respectively.
+Now assign the local data to `dataSource` property. `value` and `target` values should be mapped with `valueField` and `targetField` respectively.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -198,11 +196,11 @@ Now assign the local data to `dataSource` property. **value** and **target** val
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/bullet-chart/getting-started/datasource-cs1" %}
+{% previewsample "page.domainurl/code-snippet/bullet-chart/getting-started/datasource-cs1" %}
 
-## Add Bullet Chart Title
+## Add bullet chart title
 
-You can add a title using `title` property to the Bullet Chart to provide quick information to the user about the data plotted in the Bullet Chart.
+You can add a title using the [`title`](https://ej2.syncfusion.com/react/documentation/api/bullet-chart/bulletchartmodel#title) property to the Bullet Chart to provide quick information to the user about the data plotted in the Bullet Chart.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -213,7 +211,7 @@ You can add a title using `title` property to the Bullet Chart to provide quick 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/bullet-chart/getting-started/title-cs1" %}
+{% previewsample "page.domainurl/code-snippet/bullet-chart/getting-started/title-cs1" %}
 
 ## Ranges
 
@@ -228,11 +226,11 @@ You can add a range using `BulletRangeCollectionDirective` and `BulletRangeDirec
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/bullet-chart/getting-started/ranges-cs1" %}
+{% previewsample "page.domainurl/code-snippet/bullet-chart/getting-started/ranges-cs1" %}
 
 ## Tooltip
 
-You can use tooltip for the Bullet Chart by setting the `enable` property to true in `tooltip` object and by injecting the `BulletTooltip` module into the services.
+You can use tooltip for the Bullet Chart by setting the [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipsettingsmodel#enable) property to `true` in [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/chart/chartmodel#tooltip) object and by injecting the `BulletTooltip` module into the `services`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -243,4 +241,4 @@ You can use tooltip for the Bullet Chart by setting the `enable` property to tru
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/bullet-chart/getting-started/tooltip-cs1" %}
+{% previewsample "page.domainurl/code-snippet/bullet-chart/getting-started/tooltip-cs1" %}

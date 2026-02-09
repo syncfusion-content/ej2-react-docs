@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting started with React Sparkline component
 
-This section explains you the steps required to create a sparkline and demonstrate its basic usage.
+This section describes the steps to create a simple Sparkline and demonstrates the basic usage of the Sparkline component.
 
 ## Dependencies
 
-The following list of minimum dependencies are required to use the sparkline:
+Below is the list of minimum dependencies required to use the Sparkline component.
 
 ```ts
 |-- @syncfusion/ej2-react-charts
@@ -28,7 +28,7 @@ The following list of minimum dependencies are required to use the sparkline:
     |-- @syncfusion/ej2-compression
 ```
 
-## Installation and Configuration
+## Installation and configuration
 
 To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
@@ -55,17 +55,15 @@ npm run dev
 ```
 
 
-* Install Syncfusion<sup style="font-size:70%">&reg;</sup> packages using below command.
+* Install the Syncfusion<sup style="font-size:70%">&reg;</sup> packages using the command below.
 
 ```
 npm install @syncfusion/ej2-react-charts --save
 ```
 
-## Add Sparkline to the Project
+## Add sparkline to the project
 
-Now, you can start adding Sparkline component in the application. For getting started, add the Sparkline component in `src/index.tsx` file using following code.
-
-
+Add the Sparkline component to `src/App.tsx` using the following code.
 
 ```ts
 
@@ -87,19 +85,15 @@ Now run the `npm run dev` command in the console to start the development server
 npm run dev
 ```
 
-Since the data source has not been specified to the sparkline, no shape will be rendered. Only an empty SVG element is appended to the sparkline container.
+Since the data source has not been specified to the sparkline, no shapes will be rendered. Only an empty SVG element is appended to the sparkline container.
 
-## Module Injection
+## Module injection
 
-The sparkline component is segregated into individual feature-wise modules. To use a particular feature, inject its feature module using the `<Inject services={} />` method. The module available in sparkline and its descriptions is as follows.
+Sparkline component are segregated into individual feature-wise modules. In order to use a particular feature, you need to inject its feature service in the AppModule. Please find relevant feature service name and description as follows.
 
-* SparklineTooltip - Inject this provider to use tooltip series.
+* SparklineTooltip - Inject this module in to `services` to use tooltip feature.
 
-In the current application, the above basic sparkline is modified to visualize the types of sparkline.
-
-In this application, tooltip feature of the sparkline is used. Now, import the SparklineTooltip module from the sparkline package, and inject it into the sparkline control using the `Sparkline.Inject` method.
-
-
+Import the above-mentioned module from the chart package and inject them into the `services` section of the Sparkline component as follows.
 
 ```ts
 
@@ -115,9 +109,9 @@ export default App;
 
 ```
 
-## Bind data source to Sparkline
+## Bind data source to sparkline
 
-The dataSource property is used for binding data source to the sparkline. This property takes the collection value as input. For example, the list of objects can be provided as input.
+The [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/sparkline/sparklinemodel#datasource) property enables data binding for the sparkline. It accepts a collection of values as input, such as a list of objects.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -128,11 +122,11 @@ The dataSource property is used for binding data source to the sparkline. This p
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/sparkline/getting-started-cs1" %}
+{% previewsample "page.domainurl/code-snippet/sparkline/getting-started-cs1" %}
 
-## Change the type of Sparkline
+## Change the type of sparkline
 
-You can change the sparkline type by setting the [`type`] property to [`Line`], [`Column`], [`WinLoss`], [`Pie`], or [`Area`]. Here, the sparkline type has been set to [`area`].
+The sparkline type can be configured using the [`type`](https://ej2.syncfusion.com/react/documentation/api/sparkline/sparklinemodel#type) property, which supports `Line`, `Column`, `WinLoss`, `Pie`, and `Area`. Here, the `area` type is applied.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -143,11 +137,11 @@ You can change the sparkline type by setting the [`type`] property to [`Line`], 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/sparkline/getting-started-cs2" %}
+{% previewsample "page.domainurl/code-snippet/sparkline/getting-started-cs2" %}
 
-## Enable tooltip for Sparkline
+## Enable tooltip for sparkline
 
-The sparkline displays additional information through tooltip when the mouse is hovered over the sparkline. You can enable tooltip by setting the [`visible`] property to true in [`tooltipSettings`] and injecting `SparklineTooltip` module using the `Sparkline.Inject(SparklineTooltip )` method.
+The sparkline provides additional information through a tooltip that appears when the mouse pointer hovers over the chart. You can enable tooltip by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/sparkline/sparklinetooltipsettingsmodel#visible) property to `true` in [`tooltipSettings`](https://ej2.syncfusion.com/react/documentation/api/sparkline/sparklinemodel#tooltipsettings) and injecting `SparklineTooltip` module into the `services`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -158,4 +152,4 @@ The sparkline displays additional information through tooltip when the mouse is 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/sparkline/getting-started-cs3" %}
+{% previewsample "page.domainurl/code-snippet/sparkline/getting-started-cs3" %}

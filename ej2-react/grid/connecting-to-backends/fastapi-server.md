@@ -31,22 +31,23 @@ The FastAPI backend serves as the central data service for the React Grid. It re
 The first step establishes a dedicated Python workspace and installs the minimal runtime dependencies required to host a FastAPI application during development.
 
 **Instructions:**
+
 1. Create a new server workspace and activate an isolated virtual environment so that the backend dependencies do not interfere with other projects on the machine.
 
-```bash
-mkdir server
-cd server
-python -m venv .venv
-# Windows
-.venv\Scripts\activate
-# macOS/Linux
-# source .venv/bin/activate
-```
+    ```bash
+    mkdir server
+    cd server
+    python -m venv .venv
+    # Windows
+    .venv\Scripts\activate
+    # macOS/Linux
+    # source .venv/bin/activate
+    ```
 
 2. Install FastAPI and [Uvicorn](https://pypi.org/project/uvicorn/) to provide the project with a high-performance web framework and an ASGI server optimized for local development with hot reload.
-```bash
-pip install fastapi uvicorn
-```
+    ```bash
+    pip install fastapi uvicorn
+    ```
 
 **Explanations:**
 - This step creates a clean Python environment that keeps backend dependencies isolated from global packages and other projects.  
@@ -56,9 +57,9 @@ pip install fastapi uvicorn
 
 The backend workspace has been successfully initialized, and the core runtime is now prepared for subsequent configuration steps.
 
-### Step 2: Create sample datasource 
+### Step 2: Create sample datasource:
 
-This step initializes the application with a dataset. Create a new file named "server/products_data.json" and paste the following JSON. This file will be used by the API to load and persist product data:
+This step initializes the application with a dataset. Create a new file named (**server/products_data.json**) and paste the following JSON. This file will be used by the API to load and persist product data:
 
 ```json
 [
@@ -96,7 +97,7 @@ This step initializes the application with a dataset. Create a new file named "s
 
 The application entry point configures cross‑origin concerns and registers the products router, ensuring that the API exposes a cohesive surface under a predictable path.
 
-Open the exising "server/main.py" file and add the following code to enable CORS and mount the products routes:
+Open the exising (**server/main.py**) file and add the following code to enable CORS and mount the products routes:
 
 ```python
 from fastapi import FastAPI
@@ -120,6 +121,7 @@ app.include_router(
     products_router,
     prefix="/products",
     tags=["products"]
+)
 ```
 
 > 
@@ -132,140 +134,140 @@ The application starts successfully and serves product endpoints under the confi
 
 The router centralizes data loading, read pipelines for grid operations, and mutation handlers, which results in a single cohesive endpoint that the DataManager can call.
 
-1. Navigate to the project’s "routers/" directory and create a new file named "products.py". This file is used to centralize product data loading, define API paths, and expose metadata for helper modules and persistence.
-2. Inside "server/routers/", create a new folder named "services/data_actions/" to implement data actions. Within this folder, add the following new files:
-    - "search.py" - executes search actions.
-    - "sort.py" - executes sorting actions.
-    - "page.py" - executes paging actions.
-    - "filter.py" - executes filtering actions.
-    - "select.py" - executes column selection actions.
-3. Inside "server/routers/", create a new folder named "services/crud_actions/" to implement data actions. Within this folder, add the following new files:
-    - "insert.py" - executes insert actions.
-    - "update.py" - executes update actions.
-    - "remove.py" - executes remove actions.
+1. Navigate to the project’s "**routers/**" directory and create a new file named **products.py**. This file is used to centralize product data loading, define API paths, and expose metadata for helper modules and persistence.
+2. Inside (**server/routers/**), create a new folder named (**services/data_actions/**) to implement data actions. Within this folder, add the following new files:
+    - **search.py** - executes search actions.
+    - **sort.py** - executes sorting actions.
+    - **page.py** - executes paging actions.
+    - **filter.py** - executes filtering actions.
+    - **select.py** - executes column selection actions.
+3. Inside (**server/routers/**), create a new folder named (**services/crud_actions/**) to implement data actions. Within this folder, add the following new files:
+    - **insert.py** - executes insert actions.
+    - **update.py** - executes update actions.
+    - **remove.py** - executes remove actions.
 
-4. Add the following code example to configure routing in the "routers/products.py" file. This router centralizes product data loading, defines API paths, and exposes metadata for helper modules and persistence
+4. Add the following code example to configure routing in the (**routers/products.py**) file. This router centralizes product data loading, defines API paths, and exposes metadata for helper modules and persistence
 
-```python
-from fastapi import APIRouter, HTTPException
-from fastapi.responses import JSONResponse
-from typing import Any, Dict, List
-import json
-import os
-from pathlib import Path
+    ```python
+    from fastapi import APIRouter, HTTPException
+    from fastapi.responses import JSONResponse
+    from typing import Any, Dict, List
+    import json
+    import os
+    from pathlib import Path
 
-# Import the data action files in feature wise
-from .services.data_actions.search import apply_search
-from .services.data_actions.filter import apply_where
-from .services.data_actions.sort import apply_sorting
-from .services.data_actions.select import apply_select
-from .services.data_actions.page import apply_paging
+    # Import the data action files in feature wise
+    from .services.data_actions.search import apply_search
+    from .services.data_actions.filter import apply_where
+    from .services.data_actions.sort import apply_sorting
+    from .services.data_actions.select import apply_select
+    from .services.data_actions.page import apply_paging
 
-from .services.crud_actions.insert import handle_insert
-from .services.crud_actions.update import handle_update
-from .services.crud_actions.remove import handle_remove
+    from .services.crud_actions.insert import handle_insert
+    from .services.crud_actions.update import handle_update
+    from .services.crud_actions.remove import handle_remove
 
-router = APIRouter()
+    router = APIRouter()
 
-DATA_FILE = Path(__file__).resolve().parent.parent / 'products_data.json'
+    DATA_FILE = Path(__file__).resolve().parent.parent / 'products_data.json'
 
-# Define field types
-FIELDS_META = {
-    'id': 'int',
-    'productName': 'str',
-    'category': 'str',
-    'sku': 'str',
-    'price': 'float',
-    'stock': 'int',
-    'status': 'str',
-}
-```
+    # Define field types
+    FIELDS_META = {
+        'id': 'int',
+        'productName': 'str',
+        'category': 'str',
+        'sku': 'str',
+        'price': 'float',
+        'stock': 'int',
+        'status': 'str',
+    }
+    ```
 
 5. Add the "_load_products()" and "save_products()" functions to load products from disk and persist changes, ensuring the API maintains an in‑memory store backed by a durable file.
 
-```python
-def _load_products() -> List[Dict[str, Any]]:
-    """Load products from disk."""
-    if os.path.exists(DATA_FILE):
+    ```python
+    def _load_products() -> List[Dict[str, Any]]:
+        """Load products from disk."""
+        if os.path.exists(DATA_FILE):
+            try:
+                with open(DATA_FILE, 'r', encoding='utf-8') as f:
+                    return json.load(f)
+            except Exception:
+                return []
+        return []
+
+    PRODUCTS: List[Dict[str, Any]] = _load_products()
+
+    def save_products() -> None:
+        """Persist products to disk."""
         try:
-            with open(DATA_FILE, 'r', encoding='utf-8') as f:
-                return json.load(f)
+            with open(DATA_FILE, 'w', encoding='utf-8') as f:
+                json.dump(PRODUCTS, f, indent=2)
         except Exception:
-            return []
-    return []
-
-PRODUCTS: List[Dict[str, Any]] = _load_products()
-
-def save_products() -> None:
-    """Persist products to disk."""
-    try:
-        with open(DATA_FILE, 'w', encoding='utf-8') as f:
-            json.dump(PRODUCTS, f, indent=2)
-    except Exception:
-        pass
-```
+            pass
+    ```
 
 6. Define a helper that detects when the incoming payload is a Syncfusion DataManager READ request. This allows the handler to branch cleanly between read and mutation logic without ambiguity.
 
-```python
-DM_READ_KEYS = {'requiresCounts', 'skip', 'take', 'sorted', 'where', 'search', 'select'}
+    ```python
+    DM_READ_KEYS = {'requiresCounts', 'skip', 'take', 'sorted', 'where', 'search', 'select'}
 
-def is_dm_read(payload: Dict[str, Any]) -> bool:
-    """Detect a Syncfusion DataManager READ payload."""
-    return any(k in payload for k in DM_READ_KEYS)
-```
+    def is_dm_read(payload: Dict[str, Any]) -> bool:
+        """Detect a Syncfusion DataManager READ payload."""
+        return any(k in payload for k in DM_READ_KEYS)
+    ```
 
 7. Implement a "GET" guard and a unified "POST" handler so that the endpoint accepts only `UrlAdaptor` HTTP POST calls, routing them through the appropriate pipeline for either read or CRUD operations.
 
-```python
-@router.get('/')
-def list_products_get():
-    """Reject GET to enforce POST-only transport."""
-    raise HTTPException(status_code=405, detail='GET not supported; use POST with UrlAdaptor payload to /products/')
+    ```python
+    @router.get('/')
+    def list_products_get():
+        """Reject GET to enforce POST-only transport."""
+        raise HTTPException(status_code=405, detail='GET not supported; use POST with UrlAdaptor payload to /products/')
 
-@router.post('/')
-def list_or_crud(payload: Dict[str, Any]):
-    """Route DataManager READ or CRUD actions based on the POST body."""
-    if is_dm_read(payload):
-        skip = int(payload.get('skip', 0) or 0)
-        take = int(payload.get('take', 12) or 12)
-        requires_counts = bool(payload.get('requiresCounts', False))
+    @router.post('/')
+    def list_or_crud(payload: Dict[str, Any]):
+        """Route DataManager READ or CRUD actions based on the POST body."""
+        if is_dm_read(payload):
+            skip = int(payload.get('skip', 0) or 0)
+            take = int(payload.get('take', 12) or 12)
+            requires_counts = bool(payload.get('requiresCounts', False))
 
-        items = PRODUCTS[:]
-        
-        # Search handler
-        items = apply_search(items, payload)
+            items = PRODUCTS[:]
+            
+            # Search handler
+            items = apply_search(items, payload)
 
-        # Filter handler
-        items = apply_where(items, payload.get('where'))
+            # Filter handler
+            items = apply_where(items, payload.get('where'))
 
-        total_count = len(items)
-        # Sort handler
-        items = apply_sorting(items, payload.get('sorted'))
+            total_count = len(items)
+            # Sort handler
+            items = apply_sorting(items, payload.get('sorted'))
 
-        select_fields = payload.get('select')
-        if select_fields is not None:
-            # Select handler
-            data, count = apply_select(items, select_fields, skip, take)
-            return JSONResponse({'result': data, 'count': count} if requires_counts else data)
+            select_fields = payload.get('select')
+            if select_fields is not None:
+                # Select handler
+                data, count = apply_select(items, select_fields, skip, take)
+                return JSONResponse({'result': data, 'count': count} if requires_counts else data)
 
-        # Page handler
-        data = apply_paging(items, skip, take)
-        return JSONResponse({'result': data, 'count': total_count} if requires_counts else data)
+            # Page handler
+            data = apply_paging(items, skip, take)
+            return JSONResponse({'result': data, 'count': total_count} if requires_counts else data)
 
-    action = payload.get('action')
-    if action == 'insert':
-        # Insert handler
-        return handle_insert(payload, PRODUCTS, save_products, FIELDS_META)
-    if action == 'update':
-        # Update handler
-        return handle_update(payload, PRODUCTS, save_products)
-    if action == 'remove':
-        # Remove handler
-        return handle_remove(payload, PRODUCTS, save_products)
+        action = payload.get('action')
+        if action == 'insert':
+            # Insert handler
+            return handle_insert(payload, PRODUCTS, save_products, FIELDS_META)
+        if action == 'update':
+            # Update handler
+            return handle_update(payload, PRODUCTS, save_products)
+        if action == 'remove':
+            # Remove handler
+            return handle_remove(payload, PRODUCTS, save_products)
 
-    return JSONResponse(payload)
-```
+        return JSONResponse(payload)
+    ```
 
 **Explanations:**
 - The router consolidates read and mutation flows into a single endpoint, which is exactly how the `UrlAdaptor` expects to communicate with a REST backend.  
@@ -293,7 +295,7 @@ The handlers in the "data_actions" and "crud_actions" modules are explained in d
 
 At this stage, the server configuration for the dataset, application, and routing has been completed. The following sections explain how to apply server‑side data operations within the application.
 
-As part of the earlier backend configuration, all data action function files were imported into the router and defined in "routers/products.py" file. 
+As part of the earlier backend configuration, all data action function files were imported into the router and defined in (**routers/products.py**) file. 
 
 ```python
 . . .
@@ -317,7 +319,7 @@ Next, insert the following code into the step-by-step process of creating the ex
 
 The paging function slices the dataset based on `skip` and `take` values to return the requested page segment.
 
-Open the file **server/routers/services/data_actions/page.py** and add the following code, which demonstrates how to handle paging actions on the server based on the Grid request.
+Open the file (**server/routers/services/data_actions/page.py**) and add the following code, which demonstrates how to handle paging actions on the server based on the Grid request.
 
 ```python
 from typing import Any, Dict, List
@@ -331,7 +333,7 @@ def apply_paging(items: List[Dict[str, Any]], skip: int, take: int) -> List[Dict
 
 The sorting function orders the dataset by the specified `field` and `direction` using sort descriptors.
 
-Open the file **server/routers/services/data_actions/sort.py** and include following code demonstrates handling the sorting action inside the server based on the Grid request.
+Open the file (**server/routers/services/data_actions/sort.py**) and include following code demonstrates handling the sorting action inside the server based on the Grid request.
 
 ```python
 from typing import Any, Dict, List
@@ -357,7 +359,7 @@ def apply_sorting(items: List[Dict[str, Any]], sort_descriptors: Any) -> List[Di
 
 The searching function filters the dataset by applying search blocks across the provided fields with the requested operator.
 
-Open the file **server/routers/services/data_actions/search.py** and include following code demonstrates handling the searching action inside the server based on the Grid request:
+Open the file (**server/routers/services/data_actions/search.py**) and include following code demonstrates handling the searching action inside the server based on the Grid request:
 
 ```python
 from typing import Any, Dict, List
@@ -396,7 +398,7 @@ def apply_search(items: List[Dict[str, Any]], payload: Dict[str, Any]) -> List[D
 
 The filtering module interprets DataManager predicates (simple and complex), normalizes operators, coerces field types, and evaluates conditions to return only records that satisfy the specified criteria.
 
-Open the file **server/routers/services/data_actions/filter.py** and include following code demonstrates handling the filtering action inside the server based on the Grid request.
+Open the file (**server/routers/services/data_actions/filter.py**) and include following code demonstrates handling the filtering action inside the server based on the Grid request.
 
 The following code block provides filter helpers and operator normalization.
 
@@ -577,7 +579,7 @@ def apply_where(items: List[Dict[str, Any]], where_clause: Any) -> List[Dict[str
 
 The selection routine projects specified fields, applies distinct semantics, and returns the paged subset together with the total distinct count.
 
-Open the file **server/routers/services/data_actions/select.py** and include following code demonstrates handling the selecting action inside the server based on the Grid request.
+Open the file (**server/routers/services/data_actions/select.py**) and include following code demonstrates handling the selecting action inside the server based on the Grid request.
 
 ```python
 from typing import Any, Dict, List, Tuple
@@ -612,7 +614,7 @@ This section focuses on the server-side CRUD implementation of create, update an
 
 The insert handler creates a new record with a generated key, initializes missing fields, appends the record to the collection, and persists the updated dataset.
 
-Open the file **server/routers/services/crud_actions/insert.py** and include following code demonstrates handling the insert operation inside the server based on the Grid request.
+Open the file (**server/routers/services/crud_actions/insert.py**) and include following code demonstrates handling the insert operation inside the server based on the Grid request.
 
 ```python
 from typing import Any, Callable, Dict, List
@@ -637,7 +639,7 @@ def handle_insert(payload: Dict[str, Any], products: List[Dict[str, Any]], save_
 
 The update handler locates the target record by key, merges incoming changes while preserving the key, writes the result back to the collection, and persists the modification.
 
-Open the file **server/routers/services/crud_actions/update.py** and include following code demonstrates handling the update operation inside the server based on the Grid request.
+Open the file (**server/routers/services/crud_actions/update.py**) and include following code demonstrates handling the update operation inside the server based on the Grid request.
 
 ```python
 from typing import Any, Callable, Dict, List
@@ -666,7 +668,7 @@ def handle_update(payload: Dict[str, Any], products: List[Dict[str, Any]], save_
 
 The delete handler resolves the key from the payload, removes the matching record from the collection, and persists the dataset after deletion.
 
-Open the file **server/routers/services/crud_actions/remove.py** and include following code demonstrates handling the delete operation inside the server based on the Grid request.
+Open the file (**server/routers/services/crud_actions/remove.py**) and include following code demonstrates handling the delete operation inside the server based on the Grid request.
 
 ```python
 from typing import Any, Callable, Dict, List
@@ -723,7 +725,7 @@ The client application is now prepared to reference the Grid component and the d
 
 Once the dependencies are installed, the required CSS files are made available in the (**../node_modules/@syncfusion**) package directory, These styles must be referenced globally so the Grid renders with its complete visual system.
 
-Open **client/src/index.css** file and import the "Bootstrap v5.3" theme along with the dependent Syncfusion styles:
+Open (**client/src/index.css**) file and import the "Bootstrap v5.3" theme along with the dependent Syncfusion styles:
 
 
 ```css
@@ -745,9 +747,9 @@ For this project, the "Bootstrap v5.3" theme is used. A different theme can be s
 
 This step renders the Grid and binds it to a DataManager instance. The DataManager uses the `UrlAdaptor` transport to post every Grid action to the FastAPI endpoint.
 
-Open **client/src/App.tsx** file and render the Grid with paging, sorting, searching, editing, and filtering enabled. Configure it with a DataManager that points to the FastAPI products endpoint, ensuring all operations post to a single URL.
+Open (**client/src/App.tsx**) file and render the Grid with paging, sorting, searching, editing, and filtering enabled. Configure it with a DataManager that points to the FastAPI products endpoint, ensuring all operations post to a single URL.
 
-```tsx
+```ts
 import {
   GridComponent, ColumnsDirective, ColumnDirective, Inject,
   Page, Sort, Filter, Edit, Toolbar, type FilterSettingsModel,
@@ -767,8 +769,7 @@ const editSettings = {
   allowAdding: true,
   allowEditing: true,
   allowDeleting: true,
-  showDeleteConfirmDialog: true,
-  newRowPosition: 'Top',
+  mode: 'Normal'
 };
 
 const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'];
@@ -799,7 +800,7 @@ export default function App() {
 ```
 
 **Explanations:**
-- The DataManager converts Grid actions—such as paging, filtering, sorting, searching, and editing—into a single POST request directed to the /"products/" endpoint.
+- The DataManager converts Grid actions—such as paging, filtering, sorting, searching, and editing—into a single POST request directed to the **/products/** endpoint.
 - The injected services enable features like Page, Sort, Filter, Edit, and Toolbar on the client, while the server performs the corresponding operations.
 - A primary key is enabled for the "ID" column to support CRUD operations, and this configuration is mandatory.
 
@@ -810,7 +811,7 @@ The Grid client is now ready, and every interaction flows seamlessly to the Fast
 
 The paging feature allows efficient loading of large data sets through on‑demand loading. Paging in the Grid is enabled by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowpaging) property to "true" and injecting the `Page` module. This sends parameters to fetch only the data required for the current viewport.
 
-```tsx
+```ts
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page } from '@syncfusion/ej2-react-grids';
 
 <GridComponent
@@ -833,7 +834,7 @@ The image illustrates the paging details (`skip` and `take`) included in the ser
 
 The sorting feature in the Grid allows users to organize records in ascending or descending order based on one or more columns. The sorting feature in the Grid is enabled by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to "true" and injecting the `Sort` module.
 
-```tsx
+```ts
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Sort } from '@syncfusion/ej2-react-grids';
 
 <GridComponent
@@ -856,7 +857,7 @@ The image below shows the values passed to the "sorted" parameter.
 
 The search feature in the Grid allows users to quickly find and filter records by entering keywords. It scans all visible columns and displays only the matching rows, making it easier to locate specific information within large datasets. The searching feature in the Grid is enabled by adding `Search` to the Grid’s [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbar) items and injecting the `Toolbar` module.
 
-```tsx
+```ts
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
 
 <GridComponent toolbar={["Search"]} >
@@ -875,13 +876,14 @@ The image below displays the "search" parameter values.
 
 The Grid supports filtering through a menu interface that restricts data based on column values. Filtering is enabled by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowfiltering) property to "true" and injecting the `Filter` module.
 
-```tsx
+```ts
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Filter } from '@syncfusion/ej2-react-grids';
+const filterSettings: FilterSettingsModel = { type: 'Excel' };
 
 <GridComponent
   dataSource={dataManager}
   allowFiltering={true} 
-  filterSettings={{ type: 'Excel' }}
+  filterSettings={filterSettings}
   /* other props */
 >
     {/* Include columns here */}
@@ -901,17 +903,14 @@ CRUD operations allow users to add new products, modify existing records, and re
 
 Editing operations in the Grid are enabled through configuring the [Edit Settings](https://ej2.syncfusion.com/react/documentation/api/grid#editsettings) properties ([allowEditing](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#allowediting), [allowAdding](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#allowadding), and [allowDeleting](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#allowdeleting)) to "true" and injecting the `Edit` module.
 
-```tsx
-import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Edit, Toolbar } from '@syncfusion/ej2-react-grids';
+```ts
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Edit, Toolbar, EditSettingsModel } from '@syncfusion/ej2-react-grids';
+
+const editSettings: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
 
 <GridComponent
     dataSource={dataManager}
-    editSettings={{
-        allowEditing: true,
-        allowAdding: true,
-        allowDeleting: true,
-        mode: 'Normal',
-    }}
+    editSettings={editSettings}
     toolbar={['Add', 'Edit', 'Delete', 'Update', 'Cancel']}
     /* other props */
 >
@@ -919,6 +918,18 @@ import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Edit, Toolbar
     <Inject services={[Edit, Toolbar]} />
 </GridComponent>
 ```
+
+**Insert details included in request payload:**
+
+The image illustrates the added record passed from the DataManager.
+
+![FastAPI-Add](../images/FastAPI-Add.png)
+
+**Update details included in request payload:**
+
+The image illustrates the edited record passed from the DataManager.
+
+![FastAPI-Edit](../images/FastAPI-Edit.png)
 
 **Remove details included in request payload:**
 
@@ -937,8 +948,7 @@ cd server
 uvicorn main:app --reload --port 8000
 ```
 
-- The server is now running at http://localhost:8000/.
-
+The server is now running at http://localhost:8000/.
 
 Execute the below commands to run the client application:
 
@@ -947,11 +957,13 @@ cd client
 npm run dev
 ```
 
-- Open the URL shown in the terminal which is typically http://localhost:5173/.
+Open the URL shown in the terminal which is typically http://localhost:5173/.
 
 ## Complete Sample Repository
 
 For a complete working implementation of this example, refer to the following GitHub repository.
+
+[Syncfusion Grid with FastAPI Sample](https://github.com/SyncfusionExamples/syncfusion-react-grid-with-fastapi-server)
 
 ## Summary
 
@@ -961,3 +973,9 @@ For a complete working implementation of this example, refer to the following Gi
 4. Integrated the Syncfusion React Grid with the backend using DataManager and the UrlAdaptor. [🔗](#integrating-syncfusion-react-grid-with-fastapi)
 
 The application demonstrates a complete product management workflow with a Syncfusion React Grid connected to a Python FastAPI REST backend through a single, predictable transport.
+
+## See also
+
+  - [Types of Edit](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
+  - [Validation Rules](https://ej2.syncfusion.com/react/documentation/grid/editing/validation)
+  - [Filter Menu](https://ej2.syncfusion.com/react/documentation/grid/filtering/filter-menu)

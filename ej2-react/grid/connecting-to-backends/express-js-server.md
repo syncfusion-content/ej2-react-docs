@@ -10,9 +10,10 @@ domainurl: ##DomainURL##
 
 # Connecting the React Grid with Express.js Server
 
-[Express.js](https://expressjs.com/) is a lightweight and flexible Node.js web application framework that provides a simple set of features for building REST APIs quickly. **Express.js follows a traditional REST API approach** with multiple endpoints for different data operations.
+[Express.js](https://expressjs.com/) is a lightweight and flexible Node.js web application framework that provides a simple set of features for building REST APIs quickly. Express.js follows a traditional REST API approach with multiple endpoints for different data operations.
 
 **Application architecture:**
+
 - **Backend**: Express.js server (Node.js) - Handles REST API endpoints, patient data CRUD operations, and business logic.
 - **Frontend**: React application - Displays the Syncfusion DataGrid UI with `UrlAdaptor` for seamless data binding.
 - **Data Model**: Hospital Patient Management System with comprehensive patient information.
@@ -38,7 +39,7 @@ For this implementation, an Express.js server is created to manage a **Hospital 
 
 **Create project root folder:**
 
-Open a terminal (for example, an integrated terminal in Visual Studio Code, Windows Command Prompt opened with <kbd>(Win+R)</kbd>, or macOS Terminal launched with <kbd>(Cmd+Space)</kbd>) and run the following commands.
+Open a terminal ( for example, an integrated terminal in Visual Studio Code, Windows Command prompt opened with <kbd>Win+R</kbd>, or macOS Terminal launched with <kbd>Cmd+Space</kbd> ) and run the following commands.
 
 ```bash
 mkdir ej2-react-grid-with-express-js
@@ -72,7 +73,7 @@ ej2-react-grid-with-express-js/
 
 **Initialize Node.js and install packages:**
 
-Run the following commands in the terminal window (ensure it is in the `server` directory) to install the required packages.
+Run the following commands in the terminal window (ensure it is in the **server** directory) to install the required packages.
 
 ```bash
 npm init -y
@@ -107,7 +108,7 @@ ej2-react-grid-with-express-js/
 
 TypeScript configuration tells the compiler how to convert TypeScript to JavaScript and sets up the project structure.
 
-Create a new `tsconfig.json` in the `server` folder using the below command:
+Create a new **tsconfig.json** in the **server** folder using the below command:
 
 ```bash
 npx tsc --init
@@ -150,7 +151,7 @@ Scripts in `package.json` make it easy to run and build the server. Update the *
 
 ### Step 4: Create TypeScript interfaces
 
-Express.js requires clear data type definitions to ensure type safety throughout the application. Create a new file at `server/src/types/interface.ts` with the following content.
+Express.js requires clear data type definitions to ensure type safety throughout the application. Create a new file at (**server/src/types/interface.ts**) with the following content.
 
 ```typescript
 export interface Patient {
@@ -182,7 +183,7 @@ export interface DataManagerRequest {
 
 ### Step 5: Generate sample data
 
-Create a new file at `server/src/utils/data.ts` with the following content.
+Create a new file at (**server/src/utils/data.ts**) with the following content.
 
 ```typescript
 import { Patient } from "../types/interface";
@@ -216,7 +217,7 @@ export function generatePatients(count: number): Patient[] {
 
 ### Step 6: Create the Express server configuration
 
-Create a new server file at `server/server.ts` that initializes Express.js, sets up middleware, and defines routes.
+Create a new server file at (**server/server.ts**) that initializes Express.js, sets up middleware, and defines routes.
 
 ```typescript
 import express, { Application } from 'express';
@@ -239,7 +240,7 @@ export default app;
 
 ### Step 7: Create API routes
 
-Create a new routes file at `server/src/routes/patients.routes.ts` that defines all HTTP endpoints for data operations.
+Create a new routes file at (**server/src/routes/patients.routes.ts**) that defines all HTTP endpoints for data operations.
 
 ```typescript
 import { Router } from 'express';
@@ -262,7 +263,7 @@ export default router;
 
 ## Perform data operations in server
 
-Create a new controller file at `server/src/controllers/patients.controller.ts` to handle all server request operations for data actions. 
+Create a new controller file at (**server/src/controllers/patients.controller.ts**) to handle all server request operations for data actions. 
 
 Inside this file, add a `getPatients` method to return the data to the client when a request is sent. Ensure the response follows a structured format that includes both the current view dataset and the total data count. This approach supports on‑demand data loading and enables the client to handle operations such as paging or filtering effectively when using Syncfusion data binding approaches.
 
@@ -484,7 +485,7 @@ cd ej2-react-grid-with-express-js/server
 npm run dev
 ```
 
-The server will start on `http://localhost:5000` and the patients endpoint is `http://localhost:5000/api/patients`.
+The server will start on http://localhost:5000 and the patients endpoint is http://localhost:5000/api/patients.
 
 With the Express.js backend now fully implemented, all data operations (filtering, searching, sorting, and paging) along with CRUD operations (create, update, delete) are handled on the server side.
 The backend is now ready to be connected to the Syncfusion React Grid component in the React frontend.
@@ -495,7 +496,7 @@ Create a new React application using Vite, which provides a faster development e
 
 ### Step 1: Create React application with Vite
 
-Open a terminal (for example, an integrated terminal in Visual Studio Code, Windows Command Prompt opened with <kbd>(Win+R)</kbd>, or macOS Terminal launched with <kbd>(Cmd+Space)</kbd>) and run the following commands (navigate to the root `ej2-react-grid-with-express-js` directory first).
+Open a terminal (for example, an integrated terminal in Visual Studio Code, Windows Command prompt opened with <kbd>Win+R</kbd>, or macOS Terminal launched with <kbd>Cmd+Space</kbd>) and run the following commands (navigate to the root `ej2-react-grid-with-express-js` directory first).
 
 ```bash
 npm create vite@latest GridClient -- --template react-ts
@@ -538,7 +539,7 @@ For this project, the "Material 3" theme is applied. Other themes can be selecte
 
 The Syncfusion [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) acts as a communication layer between the React Grid and backend services. It sends all Grid operations such as reading data, sorting, filtering, searching, paging, and performing CRUD actions—to the server in a standardized format.
  
-The [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#url-adaptor) is a built‑in adaptor that formats requests for REST-style endpoints, like the Express.js REST Framework API. It defines how requests are formatted and how responses are processed. The UrlAdaptor converts Grid actions into HTTP POST requests and handles the JSON responses returned by the server, allowing the Grid to display and manage data seamlessly.
+The [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#url-adaptor) is a built‑in adaptor that formats requests for REST-style endpoints, like the Express.js REST Framework API. It defines how requests are formatted and how responses are processed. The `UrlAdaptor` converts Grid actions into HTTP POST requests and handles the JSON responses returned by the server, allowing the Grid to display and manage data seamlessly.
  
 When using `DataManager` with `UrlAdaptor`, the server is expected to return a specific response structure:
  
@@ -547,7 +548,7 @@ When using `DataManager` with `UrlAdaptor`, the server is expected to return a s
  
 This response format ensures seamless interaction between the React Grid and backend services, enabling all data operations to work consistently.
 
-Create the data manager service file at `GridClient/src/services/dataManager.ts`.
+Create the data manager service file at (**GridClient/src/services/dataManager.ts**).
 
 ```typescript
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
@@ -565,9 +566,9 @@ export const patientDataManager = new DataManager({
 
 ### Step 5: Create the Grid component
 
-Create a new React component that renders the Syncfusion Grid and connects it to the Express.js backend at `GridClient/src/components/PatientsGrid.tsx`.
+Create a new React component that renders the Syncfusion Grid and connects it to the Express.js backend at (**GridClient/src/components/PatientsGrid.tsx**).
 
-```tsx
+```ts
 
 import React from 'react';
 import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-grids';
@@ -595,11 +596,11 @@ export const PatientsGrid: React.FC = () => {
 export default PatientsGrid;
 ```
 
-### Enable Paging
+### Enable paging
 
-The paging feature divides Grid records into multiple pages, improving performance and usability when handling large datasets. Enable paging by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid#allowpaging) property to `true` and injecting the **Page** module. Without the **Page** module, the pager will not render. Customize pager behavior using the [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid#pagesettings) property.
+The paging feature divides Grid records into multiple pages, improving performance and usability when handling large datasets. Enable paging by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid#allowpaging) property to "true" and injecting the `Page` module. Without the `Page` module, the pager will not render. Customize pager behavior using the [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid#pagesettings) property.
 
-```tsx
+```ts
 
 import React from 'react';
 import { GridComponent, Page, Inject } from '@syncfusion/ej2-react-grids';
@@ -623,11 +624,11 @@ When paging is performed in the Grid, a request is sent to the server with the f
 
 ![Paging Operation Payload](../images/grid-expressjs-paging.png)
 
-### Enable Filtering
+### Enable filtering
 
-The filtering feature enables searching and refining Grid records based on column values. Enable filtering by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) property to `true` and injecting the [Filter](https://ej2.syncfusion.com/react/documentation/api/grid#filtermodule) module. Without the **Filter** module, the filter bar will not render. Customize filtering options using the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid#filtersettings) property.
+The filtering feature enables searching and refining Grid records based on column values. Enable filtering by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) property to "true" and injecting the `Filter` module. Without the `Filter` module, the filter bar will not render. Customize filtering options using the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid#filtersettings) property.
 
-```tsx
+```ts
 import React from 'react';
 import { GridComponent, Filter, Inject } from '@syncfusion/ej2-react-grids';
 import { patientDataManager } from '../services/dataManager';
@@ -651,12 +652,12 @@ When filtering is performed in the Grid, a request is sent to the server with th
 ![Filtering Operation Payload](../images/grid-expressjs-filtering.png)
 
 
-### Enable Searching
+### Enable searching
 
-To enhance the search functionality, you can integrate a search text box directly into the grid's toolbar. This allows users to enter search criteria conveniently within the grid interface. To add the search item to the grid's toolbar, use the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property and add **Search** item.
+To enhance the search functionality, you can integrate a search text box directly into the grid's toolbar. This allows users to enter search criteria conveniently within the grid interface. To add the search item to the grid's toolbar, use the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property and add `Search` item.
 
 
-```tsx
+```ts
 
 import React from 'react';
 import { GridComponent, Toolbar, Inject } from '@syncfusion/ej2-react-grids';
@@ -680,12 +681,12 @@ When searching is performed in the Grid, a request is sent to the server with th
 
 ![Searching Operation Payload](../images/grid-expressjs-searching.png)
 
-### Enable Sorting
+### Enable sorting
 
-The sorting feature allows ordering Grid records by clicking column headers. Enable sorting by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) property to `true` and injecting the **Sort** module. Without the **Sort** module, clicking headers will not sort the data. Customize sorting behavior using the [sortSettings](https://ej2.syncfusion.com/react/documentation/api/grid#sortsettings) property.
+The sorting feature allows ordering Grid records by clicking column headers. Enable sorting by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) property to "true" and injecting the `Sort` module. Without the `Sort` module, clicking headers will not sort the data. Customize sorting behavior using the [sortSettings](https://ej2.syncfusion.com/react/documentation/api/grid#sortsettings) property.
 
 
-```tsx
+```ts
 
 import React from 'react';
 import { GridComponent, Sort, Inject } from '@syncfusion/ej2-react-grids';
@@ -711,23 +712,24 @@ When sorting is performed in the Grid, a request is sent to the server with the 
 
 ### Enable CRUD actions
 
-To enable editing functionality directly within the grid, you need to configure the [allowEditing](https://ej2.syncfusion.com/react/documentation/api/grid/editSettingsModel#allowediting), [allowAdding](https://ej2.syncfusion.com/react/documentation/api/grid/editSettingsModel#allowadding), and [allowDeleting](https://ej2.syncfusion.com/react/documentation/api/grid/editSettingsModel#allowdeleting) properties within the [editSettings](https://ej2.syncfusion.com/react/documentation/api/grid#editsettings)  to **true**.
+To enable editing functionality directly within the grid, you need to configure the [allowEditing](https://ej2.syncfusion.com/react/documentation/api/grid/editSettingsModel#allowediting), [allowAdding](https://ej2.syncfusion.com/react/documentation/api/grid/editSettingsModel#allowadding), and [allowDeleting](https://ej2.syncfusion.com/react/documentation/api/grid/editSettingsModel#allowdeleting) properties within the [editSettings](https://ej2.syncfusion.com/react/documentation/api/grid#editsettings)  to "true".
 
-Editing feature requires a primary key column for CRUD operations. To define the primary key, set [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) to **true** in particular column.
+Editing feature requires a primary key column for CRUD operations. To define the primary key, set [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) to "true" in particular column.
 
-The [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property of the Grid component allows you to define the items that will be displayed in the grid toolbar. By including the relevant items like **Edit**, **Add**, **Delete**, **Update**, and **Cancel** within the `toolbar` property, you can enable the edit options in the toolbar.
+The [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property of the Grid component allows you to define the items that will be displayed in the grid toolbar. By including the relevant items like `Edit`, `Add`, `Delete`, `Update`, and `Cancel` within the `toolbar` property, you can enable the edit options in the toolbar.
 
-```tsx
+```ts
 
 import React from 'react';
-import { GridComponent, ColumnsDirective, ColumnDirective, Edit, Toolbar, Inject } from '@syncfusion/ej2-react-grids';
+import { GridComponent, ColumnsDirective, ColumnDirective, Edit, Toolbar, Inject, EditSettingsModel } from '@syncfusion/ej2-react-grids';
 import { patientDataManager } from '../services/dataManager';
 
 export const PatientsGrid: React.FC = () => {
+  const editSettings: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
   return (
     <GridComponent
       dataSource={patientDataManager}
-      editSettings={{ allowAdding: true, allowEditing: true, allowDeleting: true, mode: 'Dialog' }}
+      editSettings={editSettings}
       toolbar={['Add', 'Edit', 'Delete', 'Update', 'Cancel']}
     >
       <ColumnsDirective>
@@ -762,7 +764,7 @@ Both the backend Express.js server and the frontend React application need to ru
 
 Before starting the servers, the following must be available:
 - Two terminal windows or tabs open (one for backend, one for frontend)
-- Both `server` and `GridClient` directories created and configured
+- Both **server** and **GridClient** directories created and configured
 - All npm packages installed in both directories
 
 ### Step 1: Start the Express.js backend server
@@ -774,18 +776,18 @@ cd ej2-react-grid-with-express-js/server
 npm run dev
 ```
 
-The server will start on `http://localhost:5000` and the patients endpoint is `http://localhost:5000/api/patients`.
+The server will start on http://localhost:5000 and the patients endpoint is http://localhost:5000/api/patients.
 
 ### Step 2: Start the React frontend application
 
-Open a **new terminal** and navigate to the **GridClient** folder from the project root:
+Open a new terminal and navigate to the **GridClient** folder from the project root:
 
 ```bash
 cd ej2-react-grid-with-express-js/GridClient
 npm run dev
 ```
 
-The React application will start on `http://localhost:5173`.
+The React application will start on http://localhost:5173.
 
 The complete folder structure look like below.
 
@@ -833,15 +835,17 @@ Run the server application.
 ## Summary
 
 This guide covers the following key areas:
-1. [Prerequisites](#prerequisites) - Tools, frameworks, and versions required to build the application.
-2. [Setting up the Express.js backend](#setting-up-the-express.js-backend-using-node-js) - Create a Node.js project, configure TypeScript, and set up Express server.
-3. [Perform data operations in server](#perform-data-operations-in-server) - Handle server-side filtering, searching, sorting, and paging for efficient data processing.
-4. [Perform CRUD operations in server](#perform-crud-operations-in-server) - Handle server-side CRUD actions.
-5. [Run the server application](#run-the-server-application) - Start servers locally and access the backend.
-6. [Connecting Syncfusion React Grid](#connecting-syncfusion-react-grid-with-express-js) - Create a React project and configure Syncfusion Grid with UrlAdaptor.
-7. [Run the application](#run-the-application) - Start servers locally and access the frontend.
-8. [Complete sample repository](#complete-sample-repository) - Explore a complete working sample on GitHub.
+1. Tools, frameworks, and versions required to build the application. [🔗](#prerequisites)
+2. Create a Node.js project, configure TypeScript, and set up Express server. [🔗](#setting-up-the-express.js-backend-using-node-js)
+3. Handle server-side filtering, searching, sorting, and paging for efficient data processing. [🔗](#perform-data-operations-in-server)
+4. Handle server-side CRUD actions. [🔗](#perform-crud-operations-in-server) 
+5. Start servers locally and access the backend. [🔗](#run-the-server-application)
+6. Connecting Syncfusion React Grid [🔗](#connecting-syncfusion-react-grid-with-express-js) - Create a React project and configure Syncfusion Grid with UrlAdaptor.
+7. Start servers locally and access the frontend. [🔗](#run-the-application)
+8. Explore a complete working sample on GitHub. [🔗](#complete-sample-repository)
 
 ## See also
 
-- Explore [Syncfusion React Grid documentation](https://ej2.syncfusion.com/react/documentation/grid/getting-started) for advanced features.
+  - [Types of Edit](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
+  - [Validation Rules](https://ej2.syncfusion.com/react/documentation/grid/editing/validation)
+  - [Filter Menu](https://ej2.syncfusion.com/react/documentation/grid/filtering/filter-menu)

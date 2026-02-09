@@ -8,17 +8,17 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting started with React Smithchart component
 
-This section explains you the steps required to create a simple Smith Chart and demonstrate the basic usage of the Smith Chart control.
+This section describes the steps to create a simple Smith Chart and demonstrates the basic usage of the Smith Chart component.
 
-To get start quickly with React Smith Chart, you can check on this video:
+A quick video overview of the React Smith Charts setup is available:
 
 {% youtube "https://www.youtube.com/watch?v=9FVLSNIMxnU" %}
 
 ## Dependencies
 
-Below is the list of minimum dependencies required to use the Smith Chart.
+Below is the list of minimum dependencies required to use the Smith Chart component.
 
 ```ts
     |-- @syncfusion/ej2-react-charts
@@ -59,16 +59,15 @@ npm run dev
 ```
 
 
-* Install Syncfusion<sup style="font-size:70%">&reg;</sup> packages using below command.
+* Install the Syncfusion<sup style="font-size:70%">&reg;</sup> packages using the command below.
 
 ```
 npm install @syncfusion/ej2-react-charts --save
 ```
 
-## Add Smith Chart to the Project
+## Add smith chart to the project
 
-Now, you can start adding Smith Chart component in the application. For getting started, add the Smith Chart component in `src/App.tsx` file using following code.
-
+Add the Smith Chart component to `src/App.tsx` using the following code.
 
 ```ts
 
@@ -76,9 +75,7 @@ import * as React from "react";
 import { SmithchartComponent } from '@syncfusion/ej2-react-charts';
 
 function App() {
-
   return ( <SmithchartComponent></SmithchartComponent> );
-
 }
 export default App;
 
@@ -90,7 +87,7 @@ Now run the `npm run dev` command in the console to start the development server
 npm run dev
 ```
 
-The below example shows basic Smithchart.
+The below example shows a basic Smithchart.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -101,28 +98,21 @@ The below example shows basic Smithchart.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs1" %}
+{% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs1" %}
 
-## Module Injection
+## Module injection
 
-Smithchart component are segregated into individual feature-wise modules. In order to use a particular feature,
-you need to inject its feature module using `<Inject services={} />` method. In the current application, we are
-going to modify the above basic smithchart to visualize transmission lines.
-For this application we are going to use  tooltip and legend feature of the smithchart. Please find relevant
-feature module name and description as follows.
+Smithchart component are segregated into individual feature-wise modules. In order to use a particular feature, you need to inject its feature service in the AppModule. In the current application, we are going to modify the above basic Smithchart to visualize transmission lines. For this application we are going to use tooltip, and legend feature of the Smithchart. Please find relevant feature service name and description as follows.
 
-* SmithchartLegend - Inject this provider to use legend feature.
-* TooltipRender - Inject this provider to use tooltip feature.
+* `SmithchartLegend` - Inject this module in to `services` to use legend feature.
+* `TooltipRender` - Inject this module in to `services` to use tooltip feature.
 
-Now import the above mentioned modules from smithchart package and inject it into the Smithchart component using
-`<Inject services={} />`  method.
-
-
+Import the above-mentioned modules from the chart package and inject them into the `services` section of the Smithchart component as follows.
 
 ```ts
 
 import * as React from "react";
-import { SmithchartComponent } from '@syncfusion/ej2-react-charts';
+import { SmithchartComponent, SmithchartLegend, TooltipRender, Inject } from '@syncfusion/ej2-react-charts';
 
 function App() {
 
@@ -135,15 +125,17 @@ export default App;
 
 ```
 
-## Add Series to Smithchart
+## Add series to smithchart
 
 Smithchart had two type of specification for adding series.
-* dataSource - Using this, Data object can bind directly by specifying the resistance and reactance values, series add to smithchart.
-* points - Using this, collection of resistance and reactance values can bind directly to render series.
+
+* dataSource — Bind a data object directly by specifying resistance and reactance values; the series renders from the provided dataSource.
+* points — Provide a collection of resistance and reactance value points for the series.
 
 Below sample demonstrate adding two series to smithchart both ways.
-* First series Transmission1 shows dataSource bound series.
-* Second series Transmission2 shows points bound series.
+
+* First series `Transmission1` shows dataSource bound series.
+* Second series `Transmission2` shows points bound series.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -154,12 +146,11 @@ Below sample demonstrate adding two series to smithchart both ways.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs2" %}
+{% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs2" %}
 
-## Add title to SmithChart
+## Add title to smithChart
 
-smithchart `title` API used to add title for smithchart. In that `text` API used to set text of the title.
-API `visible` used to toggle the title.
+You can add a title using the [`title`](https://ej2.syncfusion.com/react/documentation/api/smithchart/smithchartmodel#title) property to the Smith Chart to provide quick information to the user about the data plotted in the Smith Chart.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -170,11 +161,11 @@ API `visible` used to toggle the title.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs3" %}
+{% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs3" %}
 
-## Enable Marker to Smithchart
+## Enable marker to smithchart
 
-To use series marker and it's customization in smithchart, use series `marker`. To display marker for particular series, need to specify  `marker visible` as true. Below sample marker enabled for first series only.
+You can add and customize the markers in the smith chart. This can be achieved by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/smithchart/seriesmarkermodel#visible) property to `true` in the [`marker`](https://ej2.syncfusion.com/react/documentation/api/smithchart/smithchartseriesmodel#marker) object. The sample below enables markers for the first series. 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -185,11 +176,11 @@ To use series marker and it's customization in smithchart, use series `marker`. 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs4" %}
+{% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs4" %}
 
-## Enable DataLabel to Smithchart Marker
+## Enable dataLabel to smithchart marker
 
-To use marker dataLabel and it's customization in smithchart, use marker `dataLabel`. To display dataLabel for particular series marker, need to specify  `dataLabel visible` as true in that series `marker`. Below sample dataLabel enabled for first series.
+You can add data labels to improve the readability of the smith chart. This can be achieved by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/smithchart/seriesmarkerdatalabelmodel#visible) property to `true` in the [`dataLabel`](https://ej2.syncfusion.com/react/documentation/api/smithchart/seriesmarkermodel#datalabel) object. Now, the data labels are arranged smartly based on series. The sample below enables data labels for the first series. 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -200,11 +191,11 @@ To use marker dataLabel and it's customization in smithchart, use marker `dataLa
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs5" %}
+{% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs5" %}
 
-## Enable Legend for Smithchart
+## Enable legend for smithchart
 
-Smithchart had a legend feature, which is used to denote the correspond series. To enable the legend, need to inject `SmithchartLegend` module using `Smithchart.Inject(SmithchartLegend)` method and smithchart `legendSettings` `visible` as true. Following example sample shows enabling legend for smithchart. Series name can customize using series `name`.
+You can use legend for the Smith Chart by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/smithchart/smithchartlegendsettingsmodel#visible) property to `true` in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/smithchart/smithchartmodel#legendsettings) object and by injecting the `SmithchartLegend` module into the `services`. Following example sample shows enabling legend for smithchart. Series name can customize using series `name`. 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -215,11 +206,11 @@ Smithchart had a legend feature, which is used to denote the correspond series. 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs6" %}
+{% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs6" %}
 
-## Enable Tooltip for Smithchart Series
+## Enable tooltip for smithchart series
 
-Smithchart had a tooltip feature, which is used to show the current point's values. To enable the tooltip, need to inject `TooltipRender` module using `Smithchart.Inject(TooltipRender)` method and smithchart series `tooltip` `visible` as true. Following example sample shows enabling tooltip for smithchart series collection.
+The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/smithchart/seriestooltipmodel#visible) property as `true` in [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/smithchart/smithchartseriesmodel#tooltip) object and by injecting the `TooltipRender` module into the `services`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -230,5 +221,5 @@ Smithchart had a tooltip feature, which is used to show the current point's valu
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs7" %}
+{% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs7" %}
  

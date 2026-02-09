@@ -101,11 +101,11 @@ The following example demonstrates customizing subtree alignment for horizontal 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/AutomaticLayout/organizationalchart-cs3/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/organizationalchart-cs3/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/AutomaticLayout/organizationalchart-cs3/app/index.tsx %}
+{% include code-snippet/diagram/reactCurlyExamples/organizationalchart-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

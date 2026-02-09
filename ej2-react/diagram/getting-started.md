@@ -42,46 +42,88 @@ To easily set up a React application, use `create-vite-app`, which provides a fa
 
 > **Note:** To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-To create a new React application, run the following command.
+To create a new React application with Vite, follow the steps for your preferred environment:
 
-```bash
-npm create vite@latest my-app
-```
-To set-up a React application in TypeScript environment, run the following command.
+## JavaScript Environment
 
-```bash
-npm create vite@latest my-app -- --template react-ts
-cd my-app
-npm run dev
-```
-To set-up a React application in JavaScript environment, run the following command.
+Run the following command in PowerShell:
 
-```bash
+```powershell
 npm create vite@latest my-app -- --template react
+```
+
+You will see interactive prompts:
+
+```
+│
+◇  Use rolldown-vite (Experimental)?:
+│  > No  ✓ (Recommended for stable projects)
+│
+◇  Install with npm and start now?
+│  > No (or Yes)
+```
+
+**If you select "No"** for "Install with npm and start now?", follow these manual steps:
+
+```powershell
 cd my-app
+npm install
 npm run dev
 ```
+
+**If you select "Yes"** for "Install with npm and start now?", npm will automatically install dependencies and start the dev server. No further commands are needed.
+
+## TypeScript Environment
+
+Run the following command in PowerShell:
+
+```powershell
+npm create vite@latest my-app -- --template react-ts
+```
+
+You will see interactive prompts:
+
+```
+│
+◇ Use rolldown-vite (Experimental)?:
+│  > No  ✓ (Recommended for stable projects)
+│
+◇  Install with npm and start now?
+│  > No (or Yes)
+```
+
+**If you select "No"** for "Install with npm and start now?", follow these manual steps:
+
+```powershell
+cd my-app
+npm install
+npm run dev
+```
+
+**If you select "Yes"** for "Install with npm and start now?", npm will automatically install dependencies and start the dev server. No further commands are needed.
 
 ### Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`Node Package Manager`](https://www.npmjs.com/~syncfusionorg) public registry. You can choose the component that you want to install. For this application, we are going to use the `Diagram` component.
+All Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`Node Package Manager`](https://www.npmjs.com/~syncfusionorg) public registry. For this application, we will use the `Diagram` component.
 
-To install the Diagram component, use the following command:
+To install the Diagram component, navigate to your project directory (`my-app`) and run the following command:
 
-```bash
+```powershell
 npm install @syncfusion/ej2-react-diagrams --save
 ```
+
+This command installs the Syncfusion Diagram package along with all its dependencies into your `node_modules` folder.
 
 ### Adding Style Sheet to the Application
 
 The following CSS files are available in ../node_modules/@syncfusion package folder. Add these references in `src/App.css`.
 
 ```css
-@import "../node_modules/@syncfusion/ej2-react-diagrams/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-diagrams/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
 ```
 N> To refer App.css in the application, import it in the src/App.tsx file.        `import './App.css';`
 
@@ -101,7 +143,7 @@ function App() {
     <div className="App">
         <DiagramComponent 
         id="diagram"
-        width={'100%'}
+        width={'700px'}
         height={'500px'}></DiagramComponent>
     </div>
   );
@@ -174,9 +216,9 @@ Create and add a `node` (JSON data) with specific position, size, label, and sha
 ### Apply Shape and Style to Node
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> diagram control provides support to render many built-in shapes in diagrams.
-Please refer to [`Shapes`](https://helpej2.syncfusion.com/react/documentation/api/diagram/shapes/) to know about built-in shapes.
+Please refer to [`Shapes`](https://ej2.syncfusion.com/react/documentation/api/diagram/shapes) to know about built-in shapes.
 
-The appearance of a node can be customized by changing its [`fill`](../api/diagram/shapeStyleModel/#fill-string) color, [`strokeColor`](../api/diagram/shapeStyleModel/#strokecolor-string), [`strokeWidth`](../api/diagram/shapeStyleModel/#strokewidth-number), [`borderColor`](../api/diagram/node/#borderColor-string), [`borderWidth`](../api/diagram/node/#borderWidth-number), [`strokeDashArray`](../api/diagram/shapeStyleModel/#strokeDashArray-number), [`opacity`](../api/diagram/shapeStyleModel/#opacity-number), and [`shadow`](../api/diagram/shapeStyleModel/#shadow-number).
+The appearance of a node can be customized by changing its [`fill`](https://ej2.syncfusion.com/react/documentation/api/diagram/shapeStyleModel#fill) color, [`strokeColor`](https://ej2.syncfusion.com/react/documentation/api/diagram/shapeStyleModel#strokecolor), [`strokeWidth`](https://ej2.syncfusion.com/react/documentation/api/diagram/shapeStyleModel#strokewidth), [`borderColor`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#borderColor), [`borderWidth`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#borderwidth), [`strokeDashArray`](https://ej2.syncfusion.com/react/documentation/api/diagram/shapeStyleModel#strokeDashArray), [`opacity`](https://ej2.syncfusion.com/react/documentation/api/diagram/shapeStyleModel#opacity), and [`shadow`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#shadow).
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -199,7 +241,6 @@ You can add multiple nodes with different shapes to create a complete flowchart 
 ```Javascript
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
 import { DiagramComponent } from "@syncfusion/ej2-react-diagrams";
 export default function App() {
     const nodes = [
@@ -231,16 +272,15 @@ export default function App() {
             style:{fill:'skyblue',strokeColor:'skyblue',},
         }
     ];
-    return (<DiagramComponent id="container" width={"100%"} height={"350px"} nodes={nodes}/>);
+    return (<DiagramComponent id="container" width={"700px"} height={"350px"} nodes={nodes}/>);
 }
-const root = ReactDOM.createRoot(document.getElementById("diagram"));
-root.render(<App />);
+
 
 ```
 
 ### Connect Flow Chart Nodes
 
-Connect these nodes by adding a connector using the [`connectors`](../api/diagram/connectorModel/) property of the diagram and refer to the source and target end by using the [`sourceID`](../api/diagram/connectorModel/#sourceid) and [`targetID`](../api/diagram/connectorModel/#targetid) properties.
+Connect these nodes by adding a connector using the [`connectors`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectorModel) property of the diagram and refer to the source and target end by using the [`sourceID`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectorModel#sourceid) and [`targetID`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectorModel#targetid) properties.
 The required nodes and connectors can be added to form a complete flow diagram.
 
 {% tabs %}
@@ -257,7 +297,7 @@ The required nodes and connectors can be added to form a complete flow diagram.
 
  {% previewsample "page.domainurl/code-snippet/diagram/getting-started/flowdiagram-cs1" %}
  
-Default values for all [`nodes`](../api/diagram/nodemodel/) and [`connectors`](../api/diagram/connectorModel/) can be set using the [`getNodeDefaults`](../api/diagram/#getnodedefaults) and [`getConnectorDefaults`](../api/diagram/#getconnectordefaults) properties, respectively. For example, if all nodes have the same width and height, such properties can be moved into `getNodeDefaults`.
+Default values for all [`nodes`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodemodel) and [`connectors`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectorModel) can be set using the [`getNodeDefaults`](https://ej2.syncfusion.com/react/documentation/api/diagram#getnodedefaults) and [`getConnectorDefaults`](https://ej2.syncfusion.com/react/documentation/api/diagram#getconnectordefaults) properties, respectively. For example, if all nodes have the same width and height, such properties can be moved into `getNodeDefaults`.
 
 
 ## Module Injection
@@ -382,13 +422,13 @@ Define Employee Information as JSON data. The following code example shows an em
 
 ### Map Data Source
 
-You can configure the above "Employee Information" with the diagram, so that the nodes and connectors are automatically generated using the mapping properties. The following code example demonstrates how to use [`dataSourceSettings`](../api/diagram/datasourcemodel/) to map [`id`](../api/diagram/dataSourceModel/#id) and [`parentId`](../api/diagram/dataSourceModel/#parentid) with the corresponding property names of employee information.
+You can configure the above "Employee Information" with the diagram, so that the nodes and connectors are automatically generated using the mapping properties. The following code example demonstrates how to use [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/diagram/datasourcemodel) to map [`id`](https://ej2.syncfusion.com/react/documentation/api/diagram/dataSourceModel#id) and [`parentId`](https://ej2.syncfusion.com/react/documentation/api/diagram/dataSourceModel#parentid) with the corresponding property names of employee information.
 
 ```ts
 import { DataManager } from "@syncfusion/ej2-data";
-
+import { DiagramComponent,Inject,HierarchicalTree, DataBinding } from "@syncfusion/ej2-react-diagrams";
 export default function App() {
-  const data: Object[] = [
+  const data = [
     {
       Name: "Elizabeth",
       Role: "Director"
@@ -424,29 +464,33 @@ export default function App() {
       Role: "Lead"
     }
   ];
-  const dataSettings: object = {
+  const dataSettings = {
     id: "Name",
     parentId: "ReportingPerson",
-    dataManager: new DataManager(data as JSON[])
+    dataManager: new DataManager(data )
   }
+  const layoutSetting = { type: "OrganizationalChart" };
   return (
     <DiagramComponent
       id="container"
-      width={"100%"}
+      width={"700px"}
       height={"350px"}
       dataSourceSettings={dataSettings}
+      layout={layoutSetting}
+       getConnectorDefaults={(connector) => {
+          connector.type = 'Orthogonal';
+          return connector;
+        }}
     >
       <Inject services={[HierarchicalTree, DataBinding]} />
     </DiagramComponent>
   );
 }
-const root = ReactDOM.createRoot(document.getElementById("diagram"));
-root.render(<App />);
 ```
 
 ### Rendering Layout with Data Source
 
-To create an organizational chart, the [`type`](../api/diagram/layoutType/) of layout should be set as an `OrganizationalChart`. The following code example shows how DataManager is used to generate layouts based on the DataSourceSettings of the Diagram.
+To create an organizational chart, the [`type`](https://ej2.syncfusion.com/react/documentation/api/diagram/layoutType) of layout should be set as an `OrganizationalChart`. The following code example shows how DataManager is used to generate layouts based on the DataSourceSettings of the Diagram.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -464,7 +508,7 @@ To create an organizational chart, the [`type`](../api/diagram/layoutType/) of l
 
 ### Customize Employee Appearance
 
-The following code examples indicate how to define the default appearance of nodes and connectors. The [`setNodeTemplate`](../api/diagram/#setnodetemplate) is used to update each node based on employee data.
+The following code examples indicate how to define the default appearance of nodes and connectors. The [`setNodeTemplate`](https://ej2.syncfusion.com/react/documentation/api/diagram#setnodetemplate) is used to update each node based on employee data.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
