@@ -8,30 +8,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Message component
 
-This article provides a step-by-step introduction to get started with the Syncfusion<sup style="font-size:70%">&reg;</sup> React Message component.
+This section explains the steps required to create a simple React Message component and demonstrate its basic usage in a React environment.
 
-## Prerequisites
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](../system-requirement)
+## Setup for local development
 
-## Dependencies
-
-The following list of dependencies are required to use the `Message` component in the application.
-
-```javascript
-|-- @syncfusion/ej2-react-notifications
-  |-- @syncfusion/ej2-base
-  |-- @syncfusion/ej2-buttons
-  |-- @syncfusion/ej2-popups
-  |-- @syncfusion/ej2-notifications
-  |-- @syncfusion/ej2-react-base
-```
-
-## Create the React application
-
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -40,14 +25,18 @@ To create a new React application, run the following command.
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
+
+![Initial_setup](images/Initial-setup.jpg)
+
+To set up a React application in TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -55,54 +44,37 @@ cd my-app
 npm run dev
 ```
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Message packages
 
-Once you have created the React application, install the required Syncfusion<sup style="font-size:70%">&reg;</sup> React component package in the application. All Syncfusion<sup style="font-size:70%">&reg;</sup> React (Essential<sup style="font-size:70%">&reg;</sup> JS 2) packages are published on the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.
-
-To install the Message component package, use the following command.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+To install the Message component, use the following command
 
 ```bash
 npm install @syncfusion/ej2-react-notifications --save
 ```
 
-or
+> The --save will instruct NPM to include the Message package inside of the **dependencies** section of the package.json.
 
-```bash
-yarn add @syncfusion/ej2-react-notifications
-```
+## Adding CSS reference
 
-Also, check out the [installation section](https://ej2.syncfusion.com/react/documentation/installation/npm-package) to know the different ways of installing the packages.
-
-## Import the Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
-
-After installing the Syncfusion<sup style="font-size:70%">&reg;</sup> component packages in the application, import the required themes based on the components used.
-
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React component comes with built-in [themes](../appearance/theme), which are available in installed packages. It is quite simple to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components based on the application style by referring to any of the built-in themes. Import the `Material` theme for the Message component.
-
-Import the CSS styles for the Message component and its dependencies in the `src/App.css` file.
+The following CSS files are available in the **../node_modules/@syncfusion** package folder. Add these as references in **src/App.css**.
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-react-notifications/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-react-notifications/styles/tailwind3.css';
 ```
 
-Check out the [Themes topic](../appearance/theme) to know more about built-in themes and different ways to refer to themes in React applications.
+> To refer **App.css** in the application then import it in the **src/App.tsx** file.
 
-## Add Message component to the application
+## Adding Message component
 
-Start adding the required components to the application. Add the Message component in the `src/App.js` or `src/App.tsx` file using the following code.
+The React Message component can be added to the application by following these steps. To get started, add the Message component to the **src/App.tsx** file using the following code.
 
-* Before adding the Message component to the markup, import the Message component in the `src/App.js` or `src/App.tsx` file.
-
-     ```bash
-        import { MessageComponent } from '@syncfusion/ej2-react-notifications';
-     ```
-
-* Then, add the `Message` component in the application using the following code sample.
+The following message code should be placed in the **src/App.tsx** file.
 
 ```ts
-import './App.css';
 import { MessageComponent } from '@syncfusion/ej2-react-notifications';
+import './App.css';
 
 function App() {
   return (<MessageComponent content="Please read the comments carefully"></MessageComponent>);
@@ -113,19 +85,13 @@ export default App;
 
 ## Run the application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```bash
 npm run dev
 ```
 
-or
-
-```bash
- yarn dev
-```
-
-The output will appear as follows.
+The output appears as follows.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -140,3 +106,5 @@ The output will appear as follows.
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/message/getting-started-cs1" %}
+
+> Refer to the [React Message](https://www.syncfusion.com/react-components/react-message) feature tour page for its groundbreaking feature representations. You can also explore our [React Message component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/message/default) that shows how to render the Message in React.

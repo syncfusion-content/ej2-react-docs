@@ -8,10 +8,10 @@ import * as ReactDOM from "react-dom";
 function App() {
     return (
         <div id='container'>
-        <div className='wrap'>
-            <h4>Choose Color</h4>
-            <ColorPickerComponent id='color-picker'/>
-        </div>
+            <div className='wrap'>
+                <h4>Choose Color</h4>
+                <ColorPickerComponent id='color-picker' />
+            </div>
         </div>
     );
 };

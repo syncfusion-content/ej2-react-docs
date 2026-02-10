@@ -50,6 +50,7 @@ The first step establishes a dedicated Python workspace and installs the minimal
     ```
 
 **Explanations:**
+
 - This step creates a clean Python environment that keeps backend dependencies isolated from global packages and other projects.  
 - FastAPI provides an expressive routing model, automatic documentation, and strong request validation that reduces boilerplate code.  
 - Uvicorn supplies an efficient ASGI server that starts quickly and supports code reload for rapid feedback while building the API.  
@@ -59,7 +60,7 @@ The backend workspace has been successfully initialized, and the core runtime is
 
 ### Step 2: Create sample datasource:
 
-This step initializes the application with a dataset. Create a new file named (**server/products_data.json**) and paste the following JSON. This file will be used by the API to load and persist product data:
+This step initializes the application with a dataset. Create a new file named (**server/products_data.json**) and paste the following JSON. This file will be used by the API to load and persist "product" data:
 
 ```json
 [
@@ -270,7 +271,8 @@ The router centralizes data loading, read pipelines for grid operations, and mut
     ```
 
 **Explanations:**
-- The router consolidates read and mutation flows into a single endpoint, which is exactly how the `UrlAdaptor` expects to communicate with a REST backend.  
+ 
+- The router consolidates read and mutation flows into a single endpoint, which is exactly what the UrlAdaptor expects to communicate with a REST backend.
 - The handler executes a clear sequence for reads that applies searching, filtering, sorting, projection, and paging in an intuitive order.  
 - The CRUD branch delegates to focused helpers that update the in‑memory list and then persist the change to disk.  
 - The design keeps the controller thin while allowing the data operation modules to remain reusable and independently testable.  
@@ -293,7 +295,7 @@ The handlers in the "data_actions" and "crud_actions" modules are explained in d
 
 ## Perform server-side data operations
 
-At this stage, the server configuration for the dataset, application, and routing has been completed. The following sections explain how to apply server‑side data operations within the application.
+At this stage, the server configuration for the dataset, application, and routing is complete. The following sections describe applying server‑side data operations within the application.
 
 As part of the earlier backend configuration, all data action function files were imported into the router and defined in (**routers/products.py**) file. 
 
@@ -319,7 +321,7 @@ Next, insert the following code into the step-by-step process of creating the ex
 
 The paging function slices the dataset based on `skip` and `take` values to return the requested page segment.
 
-Open the file (**server/routers/services/data_actions/page.py**) and add the following code, which demonstrates how to handle paging actions on the server based on the Grid request.
+Open the file (**server/routers/services/data_actions/page.py**) and add the following code, which demonstrates handling paging actions on the server based on the Grid request.
 
 ```python
 from typing import Any, Dict, List
@@ -695,11 +697,11 @@ At this point, the server configuration supports all Grid data operations, inclu
 
 ## Integrating Syncfusion React Grid with FastAPI
 
-This section demonstrates how to bind the Syncfusion React Grid to a FastAPI endpoint using the DataManager and the `UrlAdaptor`. The DataManager standardizes how the Grid serializes its actions into a request body, and the `UrlAdaptor` formats the transport to align with a RESTful endpoint that accepts POST requests for both reads and mutations.
+This section demonstrates binding the Syncfusion React Grid to a FastAPI endpoint using the DataManager and the `UrlAdaptor`. The DataManager standardizes the way the Grid serializes its actions into a request body, and the `UrlAdaptor` formats the transport to align with a RESTful endpoint that accepts POST requests for both reads and mutations.
 
-[DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) is a data layer that sends all Grid actions (read, sort, filter, search, paging, CRUD) to the backend. It standardizes how components communicate with remote services and handles query serialization.
+[DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) is a data layer that sends all Grid actions (read, sort, filter, search, paging, CRUD) to the backend. It standardizes the way components communicate with remote services and handles query serialization.
 
-Before you configure the Grid component, confirm that the React application has been created and the required Syncfusion packages are installed.
+Before configuring the Grid component, confirm that the React application has been created and the required Syncfusion packages are installed.
 
 ### Step 1: Create React application and install dependencies
 
@@ -800,6 +802,7 @@ export default function App() {
 ```
 
 **Explanations:**
+
 - The DataManager converts Grid actions—such as paging, filtering, sorting, searching, and editing—into a single POST request directed to the **/products/** endpoint.
 - The injected services enable features like Page, Sort, Filter, Edit, and Toolbar on the client, while the server performs the corresponding operations.
 - A primary key is enabled for the "ID" column to support CRUD operations, and this configuration is mandatory.
@@ -832,7 +835,7 @@ The image illustrates the paging details (`skip` and `take`) included in the ser
 
 ### Step 5: Enable sorting feature
 
-The sorting feature in the Grid allows users to organize records in ascending or descending order based on one or more columns. The sorting feature in the Grid is enabled by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to "true" and injecting the `Sort` module.
+The sorting feature in the Grid allows records to be organized in ascending or descending order based on one or more columns. Sorting is enabled by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to "true" and injecting the Sort module.
 
 ```ts
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Sort } from '@syncfusion/ej2-react-grids';
@@ -855,7 +858,8 @@ The image below shows the values passed to the "sorted" parameter.
 
 ### Step 6: Enable searching feature
 
-The search feature in the Grid allows users to quickly find and filter records by entering keywords. It scans all visible columns and displays only the matching rows, making it easier to locate specific information within large datasets. The searching feature in the Grid is enabled by adding `Search` to the Grid’s [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbar) items and injecting the `Toolbar` module.
+The search feature in the Grid allows records to be quickly located by entering keywords. It scans all visible columns and displays only the matching rows, making it easier to locate specific information within large datasets. The searching feature in the Grid is enabled by adding `Search` to the Grid’s [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbar) items and injecting the `Toolbar` module.
+
 
 ```ts
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
@@ -899,7 +903,7 @@ The image illustrates the serialized "where" condition passed from the DataManag
 
 ### Step 8: Enable CRUD operations
 
-CRUD operations allow users to add new products, modify existing records, and remove items that are no longer relevant. The DataManager posts a specific action for each operation so that the server can route to the appropriate handler.
+CRUD operations allow adding new products, modifying existing records, and removing items that are no longer relevant. The `DataManager` posts a specific action for each operation so that the server can route the request to the appropriate handler.
 
 Editing operations in the Grid are enabled through configuring the [Edit Settings](https://ej2.syncfusion.com/react/documentation/api/grid#editsettings) properties ([allowEditing](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#allowediting), [allowAdding](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#allowadding), and [allowDeleting](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#allowdeleting)) to "true" and injecting the `Edit` module.
 

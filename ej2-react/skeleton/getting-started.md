@@ -1,35 +1,26 @@
 ---
 layout: post
-title: Getting started with React Skeleton component | Syncfusion
-description:  Checkout and learn about Getting started with React Skeleton component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+title: Getting Started with the React Skeleton Component | Syncfusion
+description: Learn how to quickly set up and use the Syncfusion React Skeleton component, including dependencies, installation, and configuration details.
+control: Getting started
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the React Skeleton component
 
-This section explains how to create a simple Skeleton, and configure its available functionalities in React.
+This section explains the steps required to create a simple React Skeleton component and demonstrate its basic usage in a React environment.
 
-To get started quickly with the React Skeleton component, you can check out this video.
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
+
+To get started quickly with React Skeleton, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=5SvWFJ74uTk" %}
 
-## Dependencies
+## Setup for local development
 
-The following list of dependencies are required to use the Skeleton component in your application.
-
-```js
-|-- @syncfusion/ej2-react-notifications
-    |-- @syncfusion/ej2-react-base
-    |-- @syncfusion/ej2-notifications
-      |-- @syncfusion/ej2-base
-```
-
-## Setup your development environment
-
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -38,14 +29,18 @@ To create a new React application, run the following command.
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
+
+![Initial_setup](images/Initial-setup.jpg)
+
+To set up a React application in TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -53,57 +48,57 @@ cd my-app
 npm run dev
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Skeleton packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
-
-To install `Skeleton` component, use the following command
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+To install the Skeleton component, use the following command
 
 ```bash
 npm install @syncfusion/ej2-react-notifications --save
 ```
 
-The above command installs [Skeleton dependencies](./getting-started#dependencies)
-which are required to render the component in the `React` environment.
+> The --save will instruct NPM to include the Skeleton package inside of the **dependencies** section of the package.json.
 
-## Adding style sheet to the Application
+## Adding CSS reference
 
-Add Skeleton component's styles as given below in `App.css`.
+The following CSS files are available in the **../node_modules/@syncfusion** package folder. Add these as references in **src/App.css**.
 
 ```css
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
-
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css";
 ```
 
-## Add Skeleton to the Application
+> To refer **App.css** in the application then import it in the **src/App.tsx** file.
 
-Now, you can create `Skeleton` component in the application. Add `Skeleton` component in `src/App.tsx` file using the following code snippet.
+## Adding Skeleton component
+
+The React Skeleton component can be added to the application by following these steps. To get started, add the Skeleton component to the **src/App.tsx** file using the following code.
+
+The following skeleton code should be placed in the **src/App.tsx** file.
 
 ```ts
 import { SkeletonComponent } from '@syncfusion/ej2-react-notifications';
 import * as React from "react";
-import * as ReactDOM from 'react-dom';
+import './App.css';
 
 function App() {
     return (
         <SkeletonComponent height='15px'></SkeletonComponent>
     );
 }
+
 export default App;
-ReactDOM.render(<App />, document.getElementById('element'));
 ```
 
 ## Run the application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-```
+```bash
 npm run dev
-
 ```
 
-The following example shows a basic Skeleton component.
+The output appears as follows.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -114,4 +109,6 @@ The following example shows a basic Skeleton component.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/skeleton/getting-started-cs1" %}
+{% previewsample "page.domainurl/code-snippet/skeleton/getting-started-cs1" %}
+
+> Refer to the [React Skeleton](https://www.syncfusion.com/react-components/react-skeleton) feature tour page for its groundbreaking feature representations. You can also explore our [React Skeleton component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/skeleton/default) that shows how to render the Skeleton in React.

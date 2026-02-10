@@ -33,7 +33,7 @@ Following is the list of minimum dependencies required to use the Linear Gauge.
 
 ## Installation and configuration
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To set up a React application quickly, use Vite (`npm create vite@latest`), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools such as `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite supports both JavaScript and TypeScript templates and optimizes the application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -42,14 +42,14 @@ To create a new React application, run the following command.
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+To set up a React application in a TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in a JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -84,7 +84,7 @@ export default App;
 
 ### Run the application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Run the `npm run dev` command in the console to start the development server. This command compiles and serves the application locally; the browser may open automatically depending on the development server configuration.
 
 ```
 npm run dev
@@ -120,7 +120,7 @@ These modules should be injected into the `services` section as follows,
 
 ## Adding the Linear Gauge Title
 
-The title can be added to the Linear Gauge component using the [`title`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/linearGaugeModel/#title-string) property in the Linear Gauge.
+The title can be added to the Linear Gauge component using the [`title`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/linearGaugeModel#title-string) property in the Linear Gauge.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -135,7 +135,7 @@ The title can be added to the Linear Gauge component using the [`title`](https:/
 
 ## Axis Range
 
-The range of the axis can be set using the [`minimum`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/axis/#minimum-number) and [`maximum`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/axis/#maximum-number) properties in the Linear Gauge.
+The range of the axis can be set using the [`minimum`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/axis#minimum-number) and [`maximum`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/axis#maximum-number) properties in the Linear Gauge.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -148,9 +148,9 @@ The range of the axis can be set using the [`minimum`](https://ej2.syncfusion.co
 
  {% previewsample "page.domainurl/code-snippet/linear-gauge/getting-started-cs2" %}
 
-To denote the axis values with temperature units, add the °C as suffix to each label. This can be achieved by setting the **{value}°C** to the [`format`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/labelModel/#format-string) property in the [`labelStyle`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/axis/#labelstyle-labelmodel) object of the axis. Here, **{value}** acts as a placeholder for each axis label.
+To denote the axis values with temperature units, add the °C as suffix to each label. This can be achieved by setting the **{value}°C** to the [`format`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/labelModel#format-string) property in the [`labelStyle`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/axis#labelstyle-labelmodel) object of the axis. Here, **{value}** acts as a placeholder for each axis label.
 
-To change the pointer value from the default value of the gauge, set the [`value`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/pointer/#value-number) property in [`pointers`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/pointerModel/) object of the axis.
+To change the pointer value from the default value of the gauge, set the [`value`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/pointer#value-number) property in [`pointers`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/pointerModel) object of the axis.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -165,7 +165,7 @@ To change the pointer value from the default value of the gauge, set the [`value
 
 ## Setting the value of the pointer
 
-The pointer value is changed in the below sample using the [`value`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/pointer/#value-number) property in [`pointers`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/pointer) object of the axis.
+The pointer value is changed in the below sample using the [`value`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/pointer#value-number) property in [`pointers`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/pointer) object of the axis.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

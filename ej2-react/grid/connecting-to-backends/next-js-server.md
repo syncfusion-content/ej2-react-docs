@@ -32,7 +32,7 @@ Start the development server by running the below command:
 ```bash 
 npm run dev
 ```
-Now the project has been successfully launched, and the application is available at **http://localhost:3000**.
+Now the project has been successfully launched, and the application is available at `http://localhost:3000`.
 
 ## Configuring Next.js server
 
@@ -159,7 +159,7 @@ The Syncfusion Angular Grid supports custom data binding, enabling seamless inte
 
   - [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datastatechange): Triggered when the Grid performs actions such as paging, sorting, or filtering. It provides the current state details, which are sent to the API so the request can be processed and data returned in the required "{ result:[], count:100 }" format.
 
- - [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasourcechanged): Triggered when users perform CRUD operations (Create, Update, Delete). It provides the affected record along with the action type, which is sent to the API to execute the corresponding insert, update, or delete operation.
+ - [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasourcechanged): Triggered during CRUD operations (Create, Update, Delete). It provides the affected record along with the action type, which is sent to the API to execute the corresponding insert, update, or delete operation.
 
 Since the `dataStateChange` event does not fire on the first render, use the React `useEffect` hook to load the initial dataset when the component mounts. In **page.tsx**, define a "fetchData" function to send the grid state to the Next.js API and bind the returned data.
 
@@ -201,7 +201,7 @@ Inside the (**api/health_care/route.ts**) file, import the `DataManager` and `Qu
     return NextResponse.json({ result, count });
   }
 ```
-In this application, the Grid communicates with the Next.js  server through the `dataStateChange` event. The complete code example below shows how to manage filtering, searching, sorting, and paging using this event.
+In this application, the Grid communicates with the Next.js  server through the `dataStateChange` event. The complete code example below demonstrates managing filtering, searching, sorting, and paging using this event.
 
 ```ts
   [app/page.tsx]
@@ -279,7 +279,9 @@ The Grid supports filtering through a menu interface that restricts data based o
   }
 ```
 
-The [Implement data operations](#step-3-implement-data-operations-on-server-side) section already includes a code example that sends filter parameters from the Grid to the Next.js server using the `dataStateChange` event handler. When filtering is applied in the Grid, the `dataStateChange` event provides the current filter details through its `where` parameter. The image below illustrates how the filter state is passed to the `where` property of the `dataStateChange` event arguments.
+The [Implement data operations](#step-3-implement-data-operations-on-server-side) section already includes a code example that sends filter parameters from the Grid to the Next.js server using the `dataStateChange` event handler. When filtering is applied in the Grid, the `dataStateChange` event provides the current filter details through its `where` parameter. 
+
+The image below illustrates the filter state being passed to the `where` property of the `dataStateChange` event arguments.
 
 ![next_js_filter](../images/next_js_filter.png)
 
@@ -345,7 +347,7 @@ Complex filter conditions, where multiple predicates are combined with logical o
   
 ### Step 5: Implement searching feature 
 
-The search feature in the Grid allows users to quickly find and filter records by entering keywords. It scans all visible columns and displays only the matching rows, making it easier to locate specific information within large datasets. The searching feature in the Grid is enabled by adding `Search` to the Grid’s [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbar) items and injecting the `Toolbar` module.
+The search feature in the Grid allows records to be located and filtered using keywords. It scans all visible columns and displays only the matching rows, making it easier to locate specific information within large datasets. The searching feature in the Grid is enabled by adding `Search` to the Grid’s [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbar) items and injecting the `Toolbar` module.
 
 ```ts
   [app/page.tsx]
@@ -371,7 +373,9 @@ The search feature in the Grid allows users to quickly find and filter records b
   }
 ```
 
-The [Implement data operations](#step-3-implement-data-operations-on-server-side) section already includes a code example that sends search parameters from the Grid to the Next.js server using the `dataStateChange` event handler. When searching is applied in the Grid, the `dataStateChange` event provides the current search details through its `search` parameter. The image illustrates how the search state is passed to the `search` property of the `dataStateChange` event arguments.
+The [Implement data operations](#step-3-implement-data-operations-on-server-side) section already includes a code example that sends search parameters from the Grid to the Next.js server using the `dataStateChange` event handler. When searching is applied in the Grid, the `dataStateChange` event provides the current search details through its `search` parameter. 
+
+The image illustrates that the search state is passed to the `search` property of the `dataStateChange` event arguments.
 
 ![next_js_search](../images/next_js_search.png)
 
@@ -411,7 +415,7 @@ The following code example demonstrates handling the search action inside the se
 
 ### Step 6: Implement sorting feature
 
-The sorting feature in the Grid allows users to organize records in ascending or descending order based on one or more columns. The sorting feature in the Grid is enabled by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to "true" and injecting the `Sort` module.
+The sorting feature in the Grid allows records to be organized in ascending or descending order based on one or more columns.The sorting feature in the Grid is enabled by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to "true" and injecting the `Sort` module.
 
 ```ts
   [app/page.tsx]
@@ -436,7 +440,9 @@ The sorting feature in the Grid allows users to organize records in ascending or
     );
   }
 ```
-The [Implement data operations](#step-3-implement-data-operations-on-server-side) section already includes a code example that sends sort parameters from the Grid to the Next.js server using the `dataStateChange` event handler. When sorting is applied in the Grid, the `dataStateChange` event provides the current sort details through its `sorted` parameter. The image illustrates how the sort state is passed to the `sorted` property of the `dataStateChange` event arguments.
+The [Implement data operations](#step-3-implement-data-operations-on-server-side) section already includes a code example that sends sort parameters from the Grid to the Next.js server using the `dataStateChange` event handler. When sorting is applied in the Grid, the `dataStateChange` event provides the current sort details through its `sorted` parameter. 
+
+The image below illustrates the sort state being passed to the `sorted` property of the `dataStateChange` event arguments.
 
 ![next_js_sort](../images/next_js_sort.png)
 
@@ -503,7 +509,9 @@ The paging feature allows efficient loading of large data sets through on‑dema
   }
 ```
 
-The [Implement data operations](#step-3-implement-data-operations-on-server-side) section already includes a code example that sends page parameters from the Grid to the Next.js server using the `dataStateChange` event handler. When paging is applied in the Grid, the `dataStateChange` event provides the current page details through its `skip` and `take` parameter. The image illustrates how the page state is passed to the `skip` and `take` property of the `dataStateChange` event arguments.
+The [Implement data operations](#step-3-implement-data-operations-on-server-side) section already includes a code example that sends page parameters from the Grid to the Next.js server using the `dataStateChange` event handler. When paging is applied in the Grid, the `dataStateChange` event provides the current page details through its `skip` and `take` parameter. 
+
+The image below illustrates the page state being passed to the `skip` and `take` property of the `dataStateChange` event arguments.
 
 ![next_js_page](../images/next_js_page.png)
 
@@ -816,7 +824,7 @@ Use the below command to run the application.
 ```bash
 npm run dev
 ```
-Open http://localhost:3000 in the browser.
+Open `http://localhost:3000` in the browser.
   
 ## Complete sample repository
 
@@ -824,7 +832,7 @@ A complete, working sample implementation is available in the [GitHub repository
   
 ## Summary
   
-This guide demonstrates how to:
+This guide covers the following key areas:
 1. Create a Next.js project and install the required packages. [🔗](#building-the-nextjs-application)
 2. Configure Next.js route handlers to create server-side API endpoints. [🔗](#configuring-nextjs-server)
 3. Integrate Syncfusion React Grid with the Next.js server using the custom data binding feature. [🔗](#integrating-syncfusion-react-grid-with-nextjs)

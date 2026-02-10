@@ -64,7 +64,7 @@ root.render(<App />);
 
 Tile-based map layers support zooming and panning interactions for enhanced map exploration. Zooming provides a closer view of specific areas for detailed analysis, while panning allows navigation across different regions of the map. These features can be enabled using the [zoomSettings](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel) property with toolbar controls for user interaction.
 
-{% raw %}
+
 
 ```ts
 
@@ -89,7 +89,7 @@ const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 ```
-{% endraw %}
+ 
 
 ![TomTom Maps with Zooming and Panning](../images/MapProviders/tomtom-maps-zooming.PNG)
 
@@ -97,7 +97,7 @@ root.render(<App />);
 
 Markers can be added to tile-based map layers to highlight specific locations by setting the latitude and longitude coordinates using [MarkerDirective](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel#markersettings) property. Navigation lines can be drawn on top of the tile layer to visualize routes or connections between locations by configuring the [NavigationLineDirective](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel#navigationlinesettings) with corresponding latitude and longitude coordinates.
 
-{% raw %}
+
 
 ```ts
 
@@ -151,7 +151,7 @@ const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 ```
-{% endraw %}
+ 
 
 ![TomTom Maps with Markers and Navigation Line](../images/MapProviders/tomtom-maps-marker-and-line.PNG)
 
@@ -159,7 +159,7 @@ root.render(<App />);
 
 GeoJSON shapes can be rendered as a sublayer on top of the tile-based map layer to highlight specific regions such as continents, countries, or custom geographic areas. This is accomplished by adding an additional layer and setting the [type](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel#type) property to **SubLayer**. The sublayer overlays the base map tiles while maintaining interactivity with the underlying map.
 
-{% raw %}
+
 
 ```ts
 
@@ -186,7 +186,7 @@ return(
 const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 ```
-{% endraw %}
+ 
 
 ![TomTom Maps with Sublayer](../images/MapProviders/tomtom-map-sublayer.PNG)
 
@@ -194,7 +194,7 @@ root.render(<App />);
 
 A legend can be displayed with tile-based maps to provide visual context for markers, shapes, or data classifications. The legend is enabled by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel#visible) property of [legendSettings](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel) to **true**. The legend can be configured to display marker shapes, custom icons, and interactive toggle functionality for controlling layer visibility.
 
-{% raw %}
+
 
 ```ts
 
@@ -241,6 +241,6 @@ const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 ```
-{% endraw %}
+ 
 
 ![TomTom Maps with Legend](../images/MapProviders/tomtom-map-legend.PNG)

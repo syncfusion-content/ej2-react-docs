@@ -1,4 +1,4 @@
-{% raw %}
+
 
 
 import { world_map } from 'world-map.ts';
@@ -31,4 +31,4 @@ root.render(<App />);
 
 
 
-{% endraw %}
+ 

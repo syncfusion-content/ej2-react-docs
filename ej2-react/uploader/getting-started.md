@@ -10,28 +10,17 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Uploader component
 
-This section explains how to create and configure the simple uploader component with its basic usage in step by step procedure.
+This section explains the steps required to create a simple React Uploader component and demonstrate its basic usage in a React environment.
 
-To get start quickly with React Uploader component, you can check on this video:
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
+
+To get started quickly with React Uploader, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=UBsZgNI99ro" %}
 
-## Dependencies
+## Setup for local development
 
-The following are the dependencies required to use the uploader component in your application:
-
-```javascript
-|-- @syncfusion/ej2-react-inputs
-    |-- @syncfusion/ej2-react-base
-    |-- @syncfusion/ej2-inputs
-    |-- @syncfusion/ej2-base
-    |-- @syncfusion/ej2-buttons
-
-```
-
-## Installation and Configuration
-
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -40,14 +29,18 @@ To create a new React application, run the following command.
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
+
+![Initial_setup](images/Initial-setup.jpg)
+
+To set up a React application in TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -55,40 +48,37 @@ cd my-app
 npm run dev
 ```
 
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Uploader packages
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Packages
-
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.
-
-To install uploader component, use the following command
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+To install the Uploader component, use the following command
 
 ```bash
 npm install @syncfusion/ej2-react-inputs --save
 ```
 
-## Adding CSS Reference
+> The --save will instruct NPM to include the Uploader package inside of the **dependencies** section of the package.json.
 
-Import the uploader component's required CSS references as follows in `src/App.css`.
+## Adding CSS reference
+
+The following CSS files are available in the **../node_modules/@syncfusion** package folder. Add these as references in **src/App.css**.
 
 ```css
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-react-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-react-inputs/styles/tailwind3.css";
 ```
 
-> The [Custom Resource Generator (CRG)](https://crg.syncfusion.com/) is an online web tool, which can be used to generate the custom script and styles for a set of specific components.
-> This web tool is useful to combine the required component scripts and styles in a single file.
+> To refer **App.css** in the application then import it in the **src/App.tsx** file.
 
-## Adding uploader to the application
+## Adding Uploader component
 
-Now, you can start adding uploader component to the application. We have added uploader component in `src/App.tsx`
-file using following code.
+The React Uploader component can be added to the application by following these steps. To get started, add the Uploader component to the **src/App.tsx** file using the following code.
 
+The following uploader code should be placed in the **src/App.tsx** file.
 `[Class-component]`
 
 ```ts
-
-// import uploader component
 import { UploaderComponent } from '@syncfusion/ej2-react-inputs';
 import * as React from 'react';
 import './App.css';
@@ -105,28 +95,23 @@ export default class App extends React.Component<{}, {}> {
 ```ts
 import { UploaderComponent } from '@syncfusion/ej2-react-inputs';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import './App.css';
 
 function App() {
         return <UploaderComponent id="uploader" />;
 }
-ReactDOM.render(<App />, document.getElementById('fileupload'));
+export default App;
 ```
-
-> From v16.2.41 version, the `Essential JS2 AJAX` library has been integrated for uploader server requests. Hence, use the third party `promise` library like blue-bird to use the uploader in Internet Explorer.
 
 ## Run the application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-   ```
-    npm run dev
-   ```
+```bash
+npm run dev
+```
 
-> From v16.2.41 version, the `Essential JS2 AJAX` library has been integrated for uploader server requests. Hence, use the third party `promise` library like blue-bird to use the uploader in Internet Explorer.
-
-The following code example illustrates the output in your browser.
+The output appears as follows.
 
 `[Class-component]`
 
@@ -246,10 +231,10 @@ You can handle the success and failure actions using the **success** and **failu
 
  {% previewsample "page.domainurl/code-snippet/uploader/basic-cs20" %}
 
+> Refer to the [React File Upload](https://www.syncfusion.com/react-components/react-file-upload) feature tour page for its groundbreaking feature representations. You can also explore our [React File Upload example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/uploader/default) that shows how to render the Uploader in React.
+
 ## See Also
 
 * [How to add additional data on upload](./how-to/add-additional-data-on-upload)
 * [Achieve file upload programmatically](./how-to/achieve-file-upload-programmatically)
 * [Achieve invisible upload](./how-to/achieve-invisible-upload)
-
-> You can also explore [React File Upload](https://www.syncfusion.com/react-components/react-file-upload) feature tour page for its groundbreaking features. You can also explore our [React File Upload example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/uploader/default) that shows how to render the file upload and browse the files which you want to upload to the server.

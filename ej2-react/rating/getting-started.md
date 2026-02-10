@@ -1,32 +1,22 @@
 ---
 layout: post
-title: Getting started with React Rating component | Syncfusion
-description:  Checkout and learn about Getting started with React Rating component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Rating | Syncfusion
+description: Learn how to get started with the React Rating component in Syncfusion Essential JS 2, including installation with Vite, configuration, and required styles.
 control: Getting started
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Rating Control
+# Getting Started with React Rating component
 
-This section explains how to create a simple Rating and demonstrate the basic usage of the Rating component in an React environment.
+This section explains the steps required to create a simple React Rating component and demonstrate its basic usage in a React environment.
 
-## Dependencies
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
 
-The list of dependencies required to use the Rating component in your application is given below:
+## Setup for local development
 
-```js
-|-- @syncfusion/ej2-react-inputs
-    |-- @syncfusion/ej2-react-base
-    |-- @syncfusion/ej2-inputs
-    |-- @syncfusion/ej2-base
-    |-- @syncfusion/ej2-popups
-```
-
-## Installation and Configuration
-
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -35,14 +25,18 @@ To create a new React application, run the following command.
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
+
+![Initial_setup](images/Initial-setup.jpg)
+
+To set up a React application in TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -50,57 +44,57 @@ cd my-app
 npm run dev
 ```
 
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Rating packages
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
-
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
-
-To install Rating component, use the following command
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+To install the Rating component, use the following command
 
 ```bash
 npm install @syncfusion/ej2-react-inputs --save
 ```
 
-## Adding Rating component to the Application
+> The --save will instruct NPM to include the Rating package inside of the **dependencies** section of the package.json.
 
-To include the Rating component in your application import the `RatingComponent` from `ej2-react-inputs` package in `App.tsx`.
+## Adding CSS reference
 
-Add the Rating component in application as shown in below code example.
+The following CSS files are available in the **../node_modules/@syncfusion** package folder. Add these as references in **src/App.css**.
+
+```css
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-react-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+```
+
+> To refer **App.css** in the application then import it in the **src/App.tsx** file.
+
+## Adding Rating component
+
+The React Rating component can be added to the application by following these steps. To get started, add the Rating component to the **src/App.tsx** file using the following code.
+
+The following rating code should be placed in the **src/App.tsx** file.
 
 ```ts
-{ /* Import the Rating.*/ }
 import { RatingComponent } from '@syncfusion/ej2-react-inputs';
 import * as React from 'react';
 import './App.css';
 
-{ /* To render Rating. */ }
 function App() {
-    return (
-        <RatingComponent id='rating'></RatingComponent>
-    );
+  return (
+    <RatingComponent id='rating'></RatingComponent>
+  );
 }
 export default App;
 ```
 
-## Adding CSS Reference
+## Run the application
 
-Import the Rating component's required CSS references as follows in `src/App.css`.
+Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-```css
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-```
-
-## Running the application
-
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
-
-```
+```bash
 npm run dev
 ```
 
-The following example shows a basic Rating component.
+The output appears as follows.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -115,7 +109,7 @@ The following example shows a basic Rating component.
 
 ## Value
 
-You can set the rating value by using the [`value`](https://ej2.syncfusion.com/react/documentation/api/rating/#value) property.
+You can set the rating value by using the [`value`](https://ej2.syncfusion.com/react/documentation/api/rating/index-default#value) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -127,3 +121,5 @@ You can set the rating value by using the [`value`](https://ej2.syncfusion.com/r
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/rating/value-cs1" %}
+
+> Refer to the [React Rating](https://www.syncfusion.com/react-components/react-rating) feature tour page for its groundbreaking feature representations. You can also explore our [React Rating component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/rating/default) that shows how to render the Rating in React.

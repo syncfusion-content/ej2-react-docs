@@ -14,7 +14,7 @@ This article describes the API migration process of Maps component from Essentia
 
 ## Size Customization
 
-{% raw %}
+
 
 | **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
@@ -281,4 +281,4 @@ This article describes the API migration process of Maps component from Essentia
 | Bubble Mouse Move | Not Applicable | **Property:** *annotationRendering*<br/><br/> `<MapsComponent id='maps'  annotationRendering={this.annotationRendering.bind(this)}></MapsComponent>,`<br/>`document.getElementById('maps');`<br/>` public  annotationRendering(args: IAnnotationRenderingEventArgs): void {}` |
 | Animation Complete | Not Applicable | **Property:** *animationComplete*<br/><br/> `<MapsComponent id='maps'  animationComplete={this.animationComplete.bind(this)}></MapsComponent>,`<br/>`document.getElementById('maps');`<br/>` public  animationComplete(args: IAnimationCompleteEventArgs): void {}` |
 
-{% endraw %}
+ 

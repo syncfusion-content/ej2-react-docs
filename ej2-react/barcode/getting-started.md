@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD036 -->
 
-# Getting Started
+# Getting Started with the React Barcode Component
 
-This section explains you the steps required to create a simple barcode and demonstrate the basic usage of the barcode control.
+This section explains the steps required to create a simple barcode and demonstrates the basic usage of the barcode control.
 
 ## Dependencies
 
-Below is the list of minimum dependencies required to use the barcode component.
+The following packages are the minimum dependencies required to use the barcode component:
 
-```javascript
+```
 
 |-- @syncfusion/ej2-react-barcode-generator
     |-- @syncfusion/ej2-base
@@ -31,46 +31,108 @@ Below is the list of minimum dependencies required to use the barcode component.
     |-- @syncfusion/ej2-svg-base
 ```
 
-## Installation and configuration
+## Installation and Configuration
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To set up a React application, we recommend using Vite, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-To create a new React application, run the following command.
+## JavaScript Environment
 
-```bash
-npm create vite@latest my-app
-```
-To set-up a React application in TypeScript environment, run the following command.
+Run the following command in PowerShell:
 
-```bash
-npm create vite@latest my-app -- --template react-ts
-cd my-app
-npm run dev
-```
-To set-up a React application in JavaScript environment, run the following command.
-
-```bash
+```powershell
 npm create vite@latest my-app -- --template react
+```
+
+You will see interactive prompts:
+
+```
+│
+◇  Use rolldown-vite (Experimental)?:
+│  > No  ✓ (Recommended for stable projects)
+│
+◇  Install with npm and start now?
+│  > No (or Yes)
+```
+
+**If you select "No"** for "Install with npm and start now?", follow these manual steps:
+
+```powershell
 cd my-app
+npm install
 npm run dev
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
+**If you select "Yes"** for "Install with npm and start now?", npm will automatically install dependencies and start the dev server. No further commands are needed.
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+## TypeScript Environment
 
+Run the following command in PowerShell:
 
-```bash
-npm install @syncfusion/ej2-react-barcodegenerator --save
+```powershell
+npm create vite@latest my-app -- --template react-ts
 ```
 
-## Adding Barcode Generator control
+You will see interactive prompts:
 
-You can start adding Essential® JS 2 barcode-generator component to the application. To get started, add the barcode component in `app.tsx` and `index.html` files using the following code.
+```
+│
+◇ Use rolldown-vite (Experimental)?:
+│  > No  ✓ (Recommended for stable projects)
+│
+◇  Install with npm and start now?
+│  > No (or Yes)
+```
 
-Place the following barcode-generator  code in the `app.tsx`.
+**If you select "No"** for "Install with npm and start now?", follow these manual steps:
+
+```powershell
+cd my-app
+npm install
+npm run dev
+```
+
+**If you select "Yes"** for "Install with npm and start now?", npm will automatically install dependencies and start the dev server. No further commands are needed.
+
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Packages
+
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+
+To install the barcode generator package, run the following command:
+
+```bash
+npm install @syncfusion/ej2-react-barcode-generator --save
+```
+
+
+## Adding Barcode Component to the Application
+
+To integrate the Barcode component into your application, import the `BarcodeGeneratorComponent` from the `@syncfusion/ej2-react-barcode-generator` package and add it to your component as demonstrated below.
+
+`[src/App.jsx]`
+
+```js
+import './App.css';
+import { BarcodeGeneratorComponent } from '@syncfusion/ej2-react-barcode-generator';
+function App() {
+  return (
+    <div className="App">
+        <BarcodeGeneratorComponent 
+        id="barcode" 
+        width={"200px"} 
+        height={"150px"} 
+        type='Codabar'
+         value='123456789'></BarcodeGeneratorComponent>
+    </div>
+  );
+}
+export default App;
+
+```
+## Adding Barcode Generator Control
+
+The following example demonstrates how to generate various barcode types using the Barcode Generator component:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -86,9 +148,9 @@ Place the following barcode-generator  code in the `app.tsx`.
         
 {% previewsample "page.domainurl/code-snippet/barcode/getting-started/initialize-cs1" %}
 
-## Adding QR Generator control
+## Adding QR Code Generator Control
 
-You can add the QR code in our barcode generator component.
+The following example demonstrates how to generate QR codes using the Barcode Generator component:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -104,9 +166,9 @@ You can add the QR code in our barcode generator component.
         
 {% previewsample "page.domainurl/code-snippet/barcode/getting-started/qrcode-cs1" %}
 
-## Adding Datamatrix Generator control
+## Adding Data Matrix Generator Control
 
-You can add the datamatrix code in our barcode generator component.
+The following example demonstrates how to generate Data Matrix codes using the Barcode Generator component:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

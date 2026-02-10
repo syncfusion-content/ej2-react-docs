@@ -1,34 +1,22 @@
 ---
 layout: post
-title: Getting started with React Toast component | Syncfusion
-description:  Checkout and learn about Getting started with React Toast component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+title: Getting Started with the React Toast Component | Syncfusion
+description: Learn how to set up and use the Syncfusion React Toast component, including dependencies, installation, and configuration details.
+control: Getting started
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the React Toast component
 
-This section briefly explains you the steps required to create a simple Toast and demonstrate the basic usage of the Toast component.
+This section explains the steps required to create a simple React Toast component and demonstrate its basic usage in a React environment.
 
-## Dependencies
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
 
-The following list of dependencies are required to use the Toast component in your application.
+## Setup for local development
 
-```javascript
-|-- @syncfusion/ej2-react-notifications
-    |-- @syncfusion/ej2-react-base
-    |-- @syncfusion/ej2-notifications
-      |-- @syncfusion/ej2-base
-      |-- @syncfusion/ej2-buttons
-      |-- @syncfusion/ej2-react-buttons
-      |-- @syncfusion/ej2-popups
-```
-
-## Installation and configuration
-
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -37,14 +25,18 @@ To create a new React application, run the following command.
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
+
+![Initial_setup](images/Initial-setup.jpg)
+
+To set up a React application in TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -52,41 +44,45 @@ cd my-app
 npm run dev
 ```
 
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Toast packages
 
-Install the below required dependency package in order to use the `Toast` component in your application.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+To install the Toast component, use the following command
 
 ```bash
-npm install @syncfusion/ej2-react-notifications –save
+npm install @syncfusion/ej2-react-notifications --save
 ```
 
-The above package installs [Toast dependencies](#dependencies) which are required to render the Toast component in React environment.
+> The --save will instruct NPM to include the Toast package inside of the **dependencies** section of the package.json.
 
-* Toast CSS files are available in the `ej2-react-notifications` package folder.
-Import the Toast component's required CSS references as follows in `src/App.css`.
+## Adding CSS reference
+
+The following CSS files are available in the **../node_modules/@syncfusion** package folder. Add these as references in **src/App.css**.
 
 ```css
-@import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-react-buttons/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-react-notifications/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-react-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-react-notifications/styles/tailwind3.css';
 ```
 
-## Initialize the Toast with message
+> To refer **App.css** in the application then import it in the **src/App.tsx** file.
 
-The Toast message can be rendered by defining an `title` or `content`.
+## Adding Toast component
 
-* Import the Toast component to your `src/App.tsx` file using following code.
+The React Toast component can be added to the application by following these steps. To get started, add the Toast component to the **src/App.tsx** file using the following code.
+
+The following toast code should be placed in the **src/App.tsx** file.
 
 `[Class-component]`
 
-
-
 ```ts
-import { ToastComponent  } from '@syncfusion/ej2-react-notifications';
+import { ToastComponent } from '@syncfusion/ej2-react-notifications';
 import * as React from "react";
+import './App.css';
 
 class App extends React.Component<{}, {}> {
-  public toastInstance:ToastComponent;
+  public toastInstance: ToastComponent;
 
   public toastCreated(): void {
     this.toastInstance.show();
@@ -98,43 +94,39 @@ class App extends React.Component<{}, {}> {
     );
   }
 };
-ReactDOM.render(<App />, document.getElementById('element'));
-
+export default App;
 ```
-
-
 
 `[Functional-component]`
 
-
-
 ```ts
-import { ToastComponent  } from '@syncfusion/ej2-react-notifications';
+import { ToastComponent } from '@syncfusion/ej2-react-notifications';
 import * as React from "react";
+import './App.css';
 
 function App() {
-    let toastInstance:ToastComponent;
+  let toastInstance: ToastComponent;
 
-    function toastCreated(): void {
-      toastInstance.show();
-    }
+  function toastCreated(): void {
+    toastInstance.show();
+  }
 
-    return (
-      <ToastComponent ref={toast => toastInstance = toast!} title="Sample Toast Title" content="Sample Toast Content" created={toastCreated.bind(this)} />
-    );
-  
+  return (
+    <ToastComponent ref={toast => toastInstance = toast!} title="Sample Toast Title" content="Sample Toast Content" created={toastCreated.bind(this)} />
+  );
 };
-ReactDOM.render(<App />, document.getElementById('element'));
-
+export default App;
 ```
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+## Run the application
 
-```
+Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+
+```bash
 npm run dev
 ```
 
-Output will be as follows:
+The output appears as follows.
 
 `[Class-component]`
 
@@ -147,7 +139,7 @@ Output will be as follows:
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/toast/toast-cs15" %}
+{% previewsample "page.domainurl/code-snippet/toast/toast-cs15" %}
 
 `[Functional-component]`
 
@@ -160,13 +152,13 @@ Output will be as follows:
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/toast/toast-cs16" %}
+{% previewsample "page.domainurl/code-snippet/toast/toast-cs16" %}
 
 ## Initialize the Toast with target
 
-By default toast can be rendered in document body, we can change the target position for toast rendering using `target` property.
+By default, the Toast is rendered in the document body. The target position for Toast rendering can be changed using the `target` property.
 
-> In the above sample code, `#element` is the `id` of the HTML element in a page to which the Toast is initialized.
+> In the above sample code, `#element` is the `id` of the HTML element in the page to which the Toast is initialized.
 
 `[Class-component]`
 
@@ -179,7 +171,7 @@ By default toast can be rendered in document body, we can change the target posi
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/toast/toast-cs17" %}
+{% previewsample "page.domainurl/code-snippet/toast/toast-cs17" %}
 
 `[Functional-component]`
 
@@ -192,10 +184,10 @@ By default toast can be rendered in document body, we can change the target posi
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/toast/toast-cs18" %}
+{% previewsample "page.domainurl/code-snippet/toast/toast-cs18" %}
+
+> Refer to the [React Toast](https://www.syncfusion.com/react-components/react-toast) feature tour page for its groundbreaking feature representations. You can also explore our [React Toast component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/toast/default) that shows how to render the Toast in React.
 
 ## See Also
 
-* [Render different types of toast](./how-to/show-different-types-of-toast/)
-
-N> You can refer to our [React Toast](https://www.syncfusion.com/react-components/react-toast) feature tour page for its groundbreaking feature representations. You can also explore our [React Toast Example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/toast/default) that shows you how to render the Toast in React.
+* [Render different types of toast](./how-to/show-different-types-of-toast)

@@ -1,5 +1,5 @@
-{% raw %}
-import { texas } from 'texas.ts';
+
+import { texas } from './texas.ts';
 import { usa_map } from 'usa.ts';
 import { california } from 'california.ts'
 import * as React from "react";
@@ -30,4 +30,4 @@ export function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
-{% endraw %}
+ 
