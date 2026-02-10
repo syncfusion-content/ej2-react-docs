@@ -10,10 +10,10 @@ const oldGenerateQuery = Data.prototype.generateQuery;
 
 Data.prototype.generateQuery = function() {
   const query = oldGenerateQuery.call(this, true);
-  // Check if 'pageQuery' is available in the prototype chain
+  // Check if 'pageQuery' is available in the prototype chain.
   if (Data.prototype.hasOwnProperty('pageQuery')) {
-      const pageQueryFn = Data.prototype['pageQuery'] as (query: Query) => void;
-      pageQueryFn.call(this, query);
+    const pageQueryFn = Data.prototype['pageQuery'] as (query: Query) => void;
+    pageQueryFn.call(this, query);
   }
   return query;
 };
@@ -30,7 +30,7 @@ function App() {
       <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
       <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
-      <ColumnDirective field='Freight' headerText='Freight' width='100' format="C2" />
+      <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign="Right" format="C2" />
     </ColumnsDirective>
     <Inject services={[Group, Page]} />
   </GridComponent>

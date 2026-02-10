@@ -24,20 +24,20 @@ function App() {
   return (<div>
     <GridComponent id="Grid" ref={g => grid = g} dataSource={sampleGridData} height={315} allowRowDragAndDrop={true} rowDrop={onRowDrop} editSettings={gridEditSettings} selectionSettings={selectionOptions} rowDropSettings={rowDropOptions}>
       <ColumnsDirective>
-        <ColumnDirective field='taskID' headerText='Task ID' width='140' />
+        <ColumnDirective field='taskID' isPrimaryKey={true} headerText='Task ID' width='140' textAlign='Right' />
         <ColumnDirective field='taskName' headerText='Task Name' width='140' />
         <ColumnDirective field='description' headerText='Description' width='150' />
-        <ColumnDirective field='startDate' headerText='Start Date' width='150' format='yMd' />
-        <ColumnDirective field='duration' headerText='Duration' width='150' />
+        <ColumnDirective field='startDate' headerText='Start Date' width='150' format='yMd' textAlign='Right' />
+        <ColumnDirective field='duration' headerText='Duration' width='150' textAlign='Right' />
       </ColumnsDirective>
       <Inject services={[RowDD, Edit]} />
     </GridComponent>
     <TreeGridComponent id="treeGrid" ref={t => treeGrid = t} childMapping='subtasks' editSettings={treeGridEditSettings}>
       <ColumnsDirective>
-        <ColumnDirective field='taskID' headerText='Task ID' width='140' />
+        <ColumnDirective field='taskID' isPrimaryKey={true} headerText='Task ID' width='140' textAlign='Right' />
         <ColumnDirective field='taskName' headerText='Task Name' width='140' />
-        <ColumnDirective field='startDate' headerText='Start Date' width='150' format='yMd' />
-        <ColumnDirective field='duration' headerText='Duration' width='150' />
+        <ColumnDirective field='startDate' headerText='Start Date' width='150' format='yMd' textAlign='Right' />
+        <ColumnDirective field='duration' headerText='Duration' width='150' textAlign='Right' />
       </ColumnsDirective>
       <Inject services={[TreeEdit]} />
     </TreeGridComponent>

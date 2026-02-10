@@ -8,46 +8,39 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React TextArea Component
+# Getting Started with React TextArea component
 
-This section briefly explains how to create a simple TextArea and demonstrate the basic functionalities of the TextArea component in a React environment.
+This section explains the steps required to create a simple React TextArea component and demonstrate its basic usage in a React environment.
 
-To get started quickly with React TextArea, watch this video:
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
+
+To get started quickly with React TextArea, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=cVT42kWTyEQ" %}
 
-## Dependencies
+## Setup for local development
 
-The following list of dependencies are required to use the TextArea component in your application.
+Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-```javascript
-|-- @syncfusion/ej2-react-inputs
-    |-- @syncfusion/ej2-react-base
-    |-- @syncfusion/ej2-inputs
-        |-- @syncfusion/ej2-base
-```
-
-## Installation and Configuration
-
-To easily set up a React application, use Vite, which provides a fast development server, smaller bundles, and optimized builds compared to tools like Create React App. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide).
-
-> Note: To create a React application using Create React App, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
 To create a new React application, run the following command.
 
 ```bash
 npm create vite@latest my-app
 ```
+This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
 
-To set up a React application in a TypeScript environment, run the following command.
+![Initial_setup](images/Initial-setup.jpg)
+
+To set up a React application in TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-
-To set up a React application in a JavaScript environment, run the following command.
+To set up a React application in JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -55,38 +48,33 @@ cd my-app
 npm run dev
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> TextArea packages
 
-All Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published on the public npm registry at [npmjs.com](https://www.npmjs.com/~syncfusionorg). This guide uses the TextArea component from these packages.
-
-To install the TextArea component, use the following command.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+To install the TextArea component, use the following command
 
 ```bash
 npm install @syncfusion/ej2-react-inputs --save
 ```
 
-The above command installs the required [Slider dependencies](#dependencies) to render the component in the React environment.
+> The --save will instruct NPM to include the TextArea package inside of the **dependencies** section of the package.json.
 
-## Adding CSS Reference
+## Adding CSS reference
 
-* The TextArea CSS files are available in the `ej2-react-inputs` package. Reference them in your application using the following code.
-
-`[src/App.css]`
+The following CSS files are available in the **../node_modules/@syncfusion** package folder. Add these as references in **src/App.css**.
 
 ```css
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-react-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-react-inputs/styles/tailwind3.css";
 ```
 
-You can check out the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) topic to know more about built-in themes and different ways to refer themes in a React application.
+> To refer **App.css** in the application then import it in the **src/App.tsx** file.
 
-> Note: The Custom Resource Generator (CRG) at https://crg.syncfusion.com/ is an online tool used to generate custom scripts and styles for specific components. It helps combine the required component scripts and styles into a single file.
+## Adding TextArea component
 
-## Adding TextArea to the Application
+The React TextArea component can be added to the application by following these steps. To get started, add the TextArea component to the **src/App.tsx** file using the following code.
 
-To include the TextArea component in your application, import the `TextAreaComponent` from the `ej2-react-inputs` package in `App.tsx`.
-
-Add the TextArea component to the application as shown in the following example.
+The following textarea code should be placed in the **src/App.tsx** file.
 
 ```ts
 import { TextAreaComponent } from '@syncfusion/ej2-react-inputs';
@@ -101,15 +89,15 @@ function App() {
 export default App;
 ```
 
-## Run the Application
+## Run the application
 
-Run the `npm run dev` command in the console to start the development server. This compiles your code and serves the application locally, opening it in the browser.
+Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-```
+```bash
 npm run dev
 ```
 
-The following example shows a basic TextArea component.
+The output appears as follows.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -207,3 +195,5 @@ function App() {
 }
 export default App;
 ```
+
+> Refer to the [React TextArea](https://www.syncfusion.com/react-components/react-textarea) feature tour page for its groundbreaking feature representations. You can also explore our [React TextArea component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/textarea/default) that shows how to render the TextArea in React.

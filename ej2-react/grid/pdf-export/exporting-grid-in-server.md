@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Exporting grid in server in React Grid component | Syncfusion
-description: Learn here all about Exporting grid in server in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Exporting grid in server | Syncfusion
+description: Learn performing server‑side PDF export in the Syncfusion React Grid, including customization options and practical examples.
 control: Exporting grid in server 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Exporting Grid in Server in React Grid Component
+# Performing Server Side PDF Export in the React Grid
 
-The Grid component provides an option to export grid data to a PDF document on the server side using the Grid server export library. This allows you to perform PDF export operations on the server, providing additional security and flexibility. To enable server-side PDF exporting, you need to configure the server dependencies and implement the necessary server configuration.
+The Grid component provides the ability to export grid data to a PDF document on the server side using the Grid server export library. Server-side PDF export operations provide additional security and flexibility. Enabling server-side PDF exporting requires configuring server dependencies and implementing the necessary server configuration.
 
 ## Server dependencies
 
-To enable server-side PDF exporting in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component, you need to include the following dependencies:
+To enable server-side PDF exporting in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component, include the following dependencies:
 
 * Syncfusion.EJ2
 * Syncfusion.EJ2.GridExport
@@ -23,13 +23,13 @@ These dependencies are available in the Essential Studio<sup style="font-size:70
 
 ## Server configuration
 
-To export the grid data to a PDF document on the server side, you need to perform the following server configuration using an ASP.NET Core Controller Action:
+To export grid data to a PDF document on the server side, perform the following server configuration using an ASP.NET Core Controller Action:
 
-1. Set up the necessary dependencies and imports in your server-side code.
+1. Set up the necessary dependencies and imports in the server-side code.
 
-2. Define a controller action that handles the server-side PDF export. This action should receive the Grid properties from the client-side and initiate the PDF export operation on the server.
+2. Define a controller action that handles server-side PDF export. This action receives Grid properties from the client-side and initiates the PDF export operation on the server.
 
-3. Use the [serverPdfExport](https://ej2.syncfusion.com/react/documentation/api/grid/#serverpdfexport) method to pass the Grid properties to the server exporting action. This method allows you to specify the server action URL and other export options.
+3. Use the [serverPdfExport](https://ej2.syncfusion.com/react/documentation/api/grid#serverpdfexport) method to pass Grid properties to the server exporting action. This method specifies the server action URL and other export options.
 
 The following code snippet shows server configuration using ASP.NET Core Controller Action.
 
@@ -103,9 +103,9 @@ export default App;
 
 ## Export grid as memory stream
 
-The Grid offers an option to export the data as a memory stream instead of downloading it as a file in the browser. To obtain the memory stream of the exported grid, set the `AsMemoryStream` parameter to **true** in the [PdfExport](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.GridExport.GridPdfExport.html#Syncfusion_EJ2_GridExport_GridPdfExport_PdfExport__1_Syncfusion_EJ2_Grids_Grid_System_Collections_IEnumerable_System_Boolean_Syncfusion_EJ2_GridExport_PdfExportProperties_) method.
+The Grid provides the ability to export data as a memory stream instead of downloading it as a file in the browser. To obtain the memory stream of the exported grid, set the `AsMemoryStream` parameter to "true" in the [PdfExport](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.GridExport.GridPdfExport.html#Syncfusion_EJ2_GridExport_GridPdfExport_PdfExport__1_Syncfusion_EJ2_Grids_Grid_System_Collections_IEnumerable_System_Boolean_Syncfusion_EJ2_GridExport_PdfExportProperties_) method.
 
-The following code demonstrates how to get the memory stream of exported grid.
+The following code demonstrates getting the memory stream of exported grid.
 
 ```ts
 public object PdfExport(string gridModel)
@@ -120,15 +120,15 @@ public object PdfExport(string gridModel)
 
 ## Merge grid's memory stream
 
-The [Essential<sup style="font-size:70%">&reg;</sup> PDF](https://help.syncfusion.com/file-formats/pdf/overview) library is used to merge multiple memory streams into a single stream. To learn more about the merge option, please refer to this [documentation](https://help.syncfusion.com/file-formats/pdf/merge-documents).
+The [Essential<sup style="font-size:70%">&reg;</sup> PDF](https://help.syncfusion.com/file-formats/pdf/overview) library merges multiple memory streams into a single stream. For more information about the merge option, refer to this [documentation](https://help.syncfusion.com/file-formats/pdf/merge-documents).
 
-You can merge a memory stream, a file stream, and a local file with the Grid's memory stream in the following ways:
+A memory stream, file stream, or local file can be merged with the Grid's memory stream in the following ways:
 
 ### Merging with an existing memory stream
 
-If you already have a memory stream, you can directly use it to merge with the Grid's memory stream.
+When an existing memory stream is available, it can be directly used to merge with the Grid's memory stream.
 
-In the following code, the [Merge](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_Merge_Syncfusion_Pdf_PdfDocumentBase_Syncfusion_Pdf_Parsing_PdfLoadedDocument_) method of the [PdfDocumentBase](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html) class is used to merge the grid's memory stream with an existing memory stream.
+In the following code, the [Merge](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_Merge_Syncfusion_Pdf_PdfDocumentBase_Syncfusion_Pdf_Parsing_PdfLoadedDocument_) method of the [PdfDocumentBase](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html) class merges the grid's memory stream with an existing memory stream.
 
 ```ts
 using Syncfusion.Pdf;
@@ -163,7 +163,7 @@ public object PdfExport(string gridModel)
 
 ### Merging with an existing file stream
 
-If you already have a file stream, you can directly use it to merge with the Grid's memory stream. In the following code, the existing file stream is merged with the Grid's memory stream.
+When an existing file stream is available, it can be directly used to merge with the Grid's memory stream. In the following code, the existing file stream is merged with the Grid's memory stream.
 
 ```ts
 using Syncfusion.Pdf;
@@ -189,7 +189,7 @@ public ActionResult PdfExport(string gridModel)
 
 ### Merging with a local file
 
-To merge a local file with the Grid's memory stream, you need to convert it into a file stream before merging. In the following code, the existing local file is merged with the Grid's memory stream.
+To merge a local file with the Grid's memory stream, convert it into a file stream before merging. In the following code, the existing local file is merged with the Grid's memory stream.
 
 ```ts
 using Syncfusion.Pdf;
@@ -216,7 +216,7 @@ public ActionResult PdfExport(string gridModel)
 
 ### Downloading the merged memory stream
 
-You can download the merged memory stream by converting it into a `FileStreamResult`. In the following code, the merged memory stream is downloaded to the browser.
+The merged memory stream can be downloaded by converting it into a `FileStreamResult`. In the following code, the merged memory stream is downloaded to the browser.
 
 ```ts
 using Syncfusion.Pdf;
@@ -224,7 +224,7 @@ using Syncfusion.Pdf;
 public ActionResult PdfExport(string gridModel)
 {
     PdfDocument finalDoc = new PdfDocument();
-    //ms1 and ms2 represents the streams needs to merge.
+    //ms1 and ms2 represent the streams that need to be merged.
     Stream[] streams = { ms1, ms2 };
     PdfDocumentBase.Merge(finalDoc, streams);
     MemoryStream ms3 = new MemoryStream();
@@ -244,15 +244,17 @@ public ActionResult PdfExport(string gridModel)
 
 ```
 
-## Rotate a header text to a certain degree in the exported grid on the server side
+## Rotate header text in server side exported grids
 
-1. The [PdfHeaderQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#pdfheaderquerycellinfo) event is triggered when creating a column header for the PDF document to be exported. In this event, you can collect the column header details and handle customizations.
+The Grid provides the ability to rotate the header text while exporting the grid on the server side.
 
-2. In the `BeginCellLayout` event handler, you can use the `Graphics.DrawString` method to rotate the header text to the desired degree, will be triggered when creating a column header for the PDF document to be exported. Collect the column header details in this event and handle the custom in the `BeginCellLayout` event handler.
+1. The the server side event `PdfHeaderQueryCellInfo` is triggered when creating a column header for the PDF document to be exported. In this event, column header details can be collected and customizations can be handled.
+
+2. In the `BeginCellLayout` event handler, the `Graphics.DrawString` method can be used to rotate the header text to the desired degree. This event is triggered when creating a column header for the PDF document to be exported, and column header details are collected in this event with custom handling done in the `BeginCellLayout` event handler.
 
 In the following demo, the `DrawString` method from the `Graphics` is used to rotate the header text of the column header inside the `BeginCellLayout` event handler.
 
-> A PDF exporting is not supported to rotate the column header on the client side.
+> Rotating column headers is not supported in client side PDF exporting.
 
 ```ts
 const ActionResult PdfExport(string gridModel)
@@ -274,8 +276,8 @@ public void BeginCellEvent(object sender, PdfGridBeginCellLayoutEventArgs args)
     PdfGrid grid = (PdfGrid)sender;
     var brush = new PdfSolidBrush(new PdfColor(Color.DimGray));
     args.Graphics.Save();
-    args.Graphics.TranslateTransform(args.Bounds.X + 50, args.Bounds.Height + 40); // give the value for bounds x and Y by the user
-    args.Graphics.RotateTransform(-60);   // give the rotate degree value by the user
+    args.Graphics.TranslateTransform(args.Bounds.X + 50, args.Bounds.Height + 40); // provide the value for bounds x and Y
+    args.Graphics.RotateTransform(-60);   // provide the rotate degree value
     // Draw the text at particular bounds.
     args.Graphics.DrawString(headerValues[args.CellIndex], new PdfStandardFont(PdfFontFamily.Helvetica, 10), brush, new PointF(0, 0));
     if (args.IsHeaderRow)
@@ -298,11 +300,11 @@ private void PdfHeaderQueryCellInfo(object pdf)
 
 ## Passing additional parameters to the server while exporting
 
-Passing additional parameters to the server when exporting data in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid involves providing flexibility to include extra information or customize the export process based on specific requirements.
+Passing additional parameters to the server when exporting data in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides flexibility to include extra information or customize the export process based on specific requirements.
 
-You can achieve this by utilizing the [query](https://ej2.syncfusion.com/react/documentation/api/grid/#query) property and the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbarclick) event. Within the `query` property, you can invoke the `addParams` method to add parameters to the request.
+This is achieved by utilizing the [query](https://ej2.syncfusion.com/react/documentation/api/grid#query) property and the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid#toolbarclick) event. Within the `query` property, invoke the `addParams` method to add parameters to the request.
 
-The following example demonstrates how to pass additional parameters to the server when PDF exporting within the `toolbarClick` event. Within the event, the additional parameters, specifically **recordcount** as **15**, are passed using the addParams method and displayed as a message.
+The following example demonstrates how to pass additional parameters to the server when PDF exporting within the `toolbarClick` event. Within the event, the additional parameters, specifically "recordcount" as "15", are passed using the addParams method and displayed as a message.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

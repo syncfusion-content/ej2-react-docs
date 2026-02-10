@@ -8,24 +8,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Switch component
 
-This section explains how to create a simple Switch, and configure its available functionalities in React, using React quickstart application.
+This section explains the steps required to create a simple React Switch component and demonstrate its basic usage in a React environment.
 
-## Dependencies
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
 
-The following list of dependencies are required to use Switch component in your application.
+## Setup for local development
 
-```javascript
-|-- @syncfusion/ej2-react-buttons
-    |-- @syncfusion/ej2-react-base
-    |-- @syncfusion/ej2-base
-    |-- @syncfusion/ej2-buttons
-```
-
-## Installation and Configuration
-
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -34,14 +25,18 @@ To create a new React application, run the following command.
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
+
+![Initial_setup](images/Initial-setup.jpg)
+
+To set up a React application in TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -49,54 +44,54 @@ cd my-app
 npm run dev
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Switch packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
-
-To install Switch component, use the following command
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+To install the Switch component, use the following command
 
 ```bash
 npm install @syncfusion/ej2-react-buttons --save
 ```
 
-## Adding CSS Reference
+> The --save will instruct NPM to include the Switch package inside of the **dependencies** section of the package.json.
 
-Import the Switch component's required CSS references as follows in `src/App.css`.
+## Adding CSS reference
+
+The following CSS files are available in the **../node_modules/@syncfusion** package folder. Add these as references in **src/App.css**.
 
 ```css
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
 ```
 
-## Adding Switch component to the Application
+> To refer **App.css** in the application then import it in the **src/App.tsx** file.
 
-To include Switch component in your application import the `SwitchComponent` from `ej2-react-buttons` package in `App.tsx`.
+## Adding Switch component
 
-Add Switch component in application as shown in below code example.
+The React Switch component can be added to the application by following these steps. To get started, add the Switch component to the **src/App.tsx** file using the following code.
 
-{% raw %}
+The following switch code should be placed in the **src/App.tsx** file.
+
 ```ts
-// Import the Switch.
 import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
 import './App.css';
-// To render Switch.
+
 function App() {
     return ( <div style={{marginTop: '150px'}}><SwitchComponent /></div>);
 }
 export default App;
 ```
-{% endraw %}
 
 ## Run the application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-```
+```bash
 npm run dev
 ```
 
-The following example shows a basic Switch component.
+The output appears as follows.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -108,6 +103,8 @@ The following example shows a basic Switch component.
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/switch/getting-started-cs1" %}
+
+> Refer to the [React Switch](https://www.syncfusion.com/react-components/react-toggle-switch-button) feature tour page for its groundbreaking feature representations. You can also explore our [React Switch component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/button/switch) that shows how to render the Switch in React.
 
 ## See Also
 

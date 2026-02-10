@@ -8,11 +8,17 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column chooser in React Grid component
+# Column Chooser in React Grid component
 
-The column chooser feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component allows you to dynamically show or hide columns. This feature can be enabled by defining the [showColumnChooser](https://ej2.syncfusion.com/react/documentation/api/grid/#showcolumnchooser) property as **true**.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid includes a built-in Column Chooser feature that allows columns to be shown or hidden through a simple dialog with checkboxes.
 
-To use the column chooser, you need to inject the **ColumnChooser** module.
+To enable the Column Chooser, configure the following properties in the Grid component:
+
+- Set the [showColumnChooser](https://ej2.syncfusion.com/react/documentation/api/grid#showcolumnchooser) property to "true" .
+- Add 'ColumnChooser' to the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property.
+- Inject the `ColumnChooser` module into the Grid.
+
+The column chooser dialog displays the header text of each column. If a column does not have a header text assigned in the column configuration, the field name of that column is shown by default. The Grid automatically updates its layout and column widths based on the columns that are currently visible.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -29,15 +35,13 @@ To use the column chooser, you need to inject the **ColumnChooser** module.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/column-cs5" %}
-
-> The column chooser dialog displays the header text of each column by default. If the header text is not defined for a column, the corresponding column field name is displayed instead.
+{% previewsample "page.domainurl/code-snippet/grid/column-cs5" %}
 
 ## Hide column in column chooser dialog
 
-You can hide the column names in column chooser by defining the [showInColumnChooser](https://ej2.syncfusion.com/react/documentation/api/grid/column/#showincolumnchooser) as **false**. This feature is useful when working with a large number of columns or when you want to limit the number of columns that are available for selection in the column chooser dialog.
+Column names can be hidden in the column chooser by setting the [showInColumnChooser](https://ej2.syncfusion.com/react/documentation/api/grid/column#showincolumnchooser) property to "false". This is useful when a column should always remain visible in the Grid and should not be hidden through the Column Chooser.
 
-In this example, the `showInColumnChooser` property is set to false for the **Order ID** column. As a result, the **Order ID** column will not be displayed in the column chooser dialog.
+In this example, the `showInColumnChooser` property is set to "false" for the "Order ID" column, preventing it from appearing in the Column Chooser dialog.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -54,15 +58,13 @@ In this example, the `showInColumnChooser` property is set to false for the **Or
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/column-chooser-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/column-chooser-cs1" %}
 
-> The `showInColumnChooser` property is applied to each <ColumnDirective> element individually. By setting it to false, you can hide specific columns from the column chooser dialog.
+> The `showInColumnChooser` property is applied to each `<ColumnDirective>` element individually. Setting it to "false" hides specific columns from the Column Chooser dialog.
 
-## Open column chooser by externally
+## Open column chooser externally
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides the flexibility to open the column chooser dialog on a web page using an external button. By default, the column chooser button is displayed in the right corner of the grid component, and clicking the button opens the column chooser dialog below it. However, you can programmatically open the column chooser dialog at specific **X** and **Y** axis positions by using the [openColumnChooser](https://ej2.syncfusion.com/react/documentation/api/grid/columnChooser/#opencolumnchooser) method.
-
-Here's an example of how to open the column chooser in the Grid using an external button:
+The column chooser dialog can be opened using an external button through the [openColumnChooser](https://ej2.syncfusion.com/react/documentation/api/grid/columnChooser#opencolumnchooser) method. By default, the column chooser button appears in the right corner of the Grid, opening the dialog below it when clicked. The method allows programmatically opening the dialog at specific "X" and "Y" axis positions.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -79,12 +81,11 @@ Here's an example of how to open the column chooser in the Grid using an externa
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/column-cs6" %}
+{% previewsample "page.domainurl/code-snippet/grid/column-cs6" %}
 
 ## Customize column chooser dialog size
 	
-The column chooser dialog in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid comes with default size, but you can modify its height and width as per your specific needs using CSS styles.
-To customize the column chooser dialog size, you can use the following CSS styles:
+The column chooser dialog comes with a default size, but height and width can be modified using CSS styles to meet specific needs.
 
 ```css
 .e-grid .e-dialog.e-ccdlg {
@@ -112,27 +113,21 @@ To customize the column chooser dialog size, you can use the following CSS style
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/column-chooser-cs2" %}
+{% previewsample "page.domainurl/code-snippet/grid/column-chooser-cs2" %}
 
-## Customizing the order of columns in the column chooser
+## Customize column order in column chooser dialog
 
-The Syncfusion React Grid makes it easy to customize the order of columns in the column chooser, without affecting their actual order in the Grid.
-
-By default, the column chooser displayed columns in the same order as they appeared in the Grid. With the introduction of customization options, the column list in the chooser can now be rearranged.
+By default, the Column Chooser displays columns in the same order as they appear in the Grid. However, this display order can be customized to prioritize specific columns without altering their actual arrangement in the Grid layout. This customization is especially useful when working with a large number of columns, as it enhances clarity and helps quickly locate important columns within the column chooser dialog.
 
 ### Sorting columns in the column chooser
 
-The Syncfusion Grid allows to sort the list of columns displayed in the column chooser dialog.
-
-You can control the sorting behavior by specifying the `sortDirection` in the event argument of the `beforeOpenColumnChooser` event. The available sorting options are:
+The Grid allows to sort the list of columns displayed in the column chooser dialog. Sorting behavior can be controlled by specifying the [sortDirection](https://ej2.syncfusion.com/react/documentation/api/grid/columnchoosereventargs) in the event argument of the `beforeOpenColumnChooser` event. The available sorting options are:
 
 Option     | Description
 ---------- | ---------------------------------------------------------------
 None       | No sorting is applied to the column list.
 Ascending  | Columns are sorted in ascending alphabetical order (A → Z).
 Descending | Columns are sorted in descending alphabetical order (Z → A).
-
-Here is an example of how to sort the column chooser list based on sort direction:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -149,15 +144,13 @@ Here is an example of how to sort the column chooser list based on sort directio
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/columnchooser-sorting-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/columnchooser-sorting-cs1" %}
 
-### Displaying specific columns in the column chooser
+### Displaying selected columns in the column chooser
 
-The Grid also supports displaying only selected columns in the column chooser. This is helpful when only specific columns need to be shown in the column chooser, making it easier to focus on the most important ones.
+The Grid also supports displaying only selected columns in the column chooser. This is helpful when only specific columns need to be shown in the column chooser, making it easier to focus on the most important ones. 
 
-To achieve this, you can specify which columns should appear in the column chooser by setting `selectedColumns` in the event argument of the `beforeOpenColumnChooser` event.
-
-Here is an example of how to show only specific columns in the column chooser:
+Specific columns can be shown in the column chooser by setting [selectedColumns](https://ej2.syncfusion.com/react/documentation/api/grid/columnchoosereventargs) in the event argument of the `beforeOpenColumnChooser` event.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -174,15 +167,13 @@ Here is an example of how to show only specific columns in the column chooser:
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/specified-columnchooser-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/specified-columnchooser-cs1" %}
 
-## Change default search operator of the column chooser 
+## Change default search operator in the column chooser
 
-The column chooser dialog in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a search box that allows you to search for column names. By default, the search functionality uses the "startsWith" operator to match columns and display the results in the column chooser dialog. However, there might be cases where you need to change the default search operator to achieve more precise data matching.
+The column chooser dialog provides a search box for searching column names. By default, the search functionality uses the "startsWith" operator to match columns and display results. The default search operator can be modified using the [operator](https://ej2.syncfusion.com/react/documentation/api/grid/columnChooserSettings#operator) property of the [columnChooserSettings](https://ej2.syncfusion.com/react/documentation/api/grid/columnchoosersettings) to achieve more precise data matching.
 
-To change the default search operator of the column chooser in Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you need to use the [operator](https://ej2.syncfusion.com/react/documentation/api/grid/columnChooserSettings/#operator) property of the columnChooserSettings.
-
-Here's an example of how to change the default search operator of the column chooser to **contains** in the React Grid:
+The following example demonstrates changing the default search operator to "contains".
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -199,13 +190,11 @@ Here's an example of how to change the default search operator of the column cho
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/column-chooser-cs3" %}
+{% previewsample "page.domainurl/code-snippet/grid/column-chooser-cs3" %}
 
 ## Diacritics searching in column chooser
 
-By default, the grid ignores diacritic characters when performing a search in the column chooser. However, in some cases, you may want to include diacritic characters in the search. To enable this behavior, you can set the [columnchoosersettings.ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/grid/columnChooserSettings/#ignoreaccent) property to **true**.
-
-Here is an example that demonstrates the usage of the `ignoreAccent` property to include diacritic characters for searching in the column chooser:
+By default, diacritic characters are ignored when performing a search in the column chooser. Diacritic characters can be included in the search by setting the [columnchoosersettings.ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/grid/columnChooserSettings#ignoreaccent) property to "true".
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -224,21 +213,17 @@ Here is an example that demonstrates the usage of the `ignoreAccent` property to
 
 {% previewsample "page.domainurl/code-snippet/grid/column-chooser-cs4" %}
 
-## Column Chooser Template in Syncfusion React Grid
+## Column chooser template
 
-The Column Chooser Template feature allows full customization of the column chooser’s header, content, and footer, making it easier to manage column visibility. To enable the column chooser, set [showColumnChooser](https://ej2.syncfusion.com/react/documentation/api/grid/#showcolumnchooser) to **true** and add **ColumnChooser** to the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property.
+The Column Chooser template feature supports full customization of the column chooser dialog’s appearance. The column chooser consists of three main parts: the header, content area, and footer. Each section can be customized using the following properties:
 
-To implement a custom column chooser template in the Grid, use the following properties:
+* `columnChooserSettings.headerTemplate` – Customizes the header area of the column chooser. By default, it displays the text "Choose Column." This property allows changing the default header content. It is optional.
+* `columnChooserSettings.template` – Customizes the main content area of the column chooser. Instead of showing a list of checkboxes with column names, a custom layout can be defined using this property.
+* `columnChooserSettings.footerTemplate` – Customizes the footer area of the column chooser. By default, it includes "OK" and "Cancel" buttons. This property allows replacing or modifying the footer content. It is optional.
 
-* **columnChooserSettings.headerTemplate** - Defines the header template of the column chooser.
+In this example, a Syncfusion TreeView component is rendered inside the column chooser. The Syncfusion TreeView package installation is described in the [documentation](https://ej2.syncfusion.com/react/documentation/treeview/getting-started). The `columnChooserSettings.template` property renders the TreeView component with checkboxes. Checkbox selection is handled using the [nodeClicked](https://ej2.syncfusion.com/react/documentation/api/treeview#nodeclicked) and [keyPress](https://ej2.syncfusion.com/react/documentation/api/treeview#keypress) events, organizing columns into "Order Details", "Shipping Details", and "Delivery Status".
 
-* **columnChooserSettings.template**- Defines the content template.
-
-* **columnChooserSettings.footerTemplate** - Defines the footer template.
-
-In this example, a Syncfusion TreeView component is rendered inside the column chooser. To use the TreeView component, install the Syncfusion TreeView package as described in the [documentation](https://ej2.syncfusion.com/react/documentation/treeview/getting-started). The `columnChooserSettings.template` property is used to render the TreeView component with checkboxes.Checkbox selection is handled using the [nodeClicked](https://ej2.syncfusion.com/react/documentation/api/treeview#nodeclicked) and [keyPress](https://ej2.syncfusion.com/react/documentation/api/treeview#keypress) events, which organize columns into **Order Details**, **Shipping Details**, and **Delivery Status**.
-
-The column chooser footer is customized using `columnChooserSettings.footerTemplate`, replacing the default buttons with customized **Apply** and **Close** buttons. The **Apply** button updates column visibility based on selection, while the **Close** button closes the column chooser via the `onClick` event. Additionally, the header is customized using `columnChooserSettings.headerTemplate` to include a title and an icon.
+The column chooser footer is customized using `columnChooserSettings.footerTemplate`, replacing default buttons with customized "Apply" and "Close" buttons. The "Apply" button updates column visibility based on selection, while the "Close" button closes the column chooser via the `onClick` event. The header is customized using `columnChooserSettings.headerTemplate` to include a title and an icon.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -257,13 +242,16 @@ The column chooser footer is customized using `columnChooserSettings.footerTempl
 
 {% previewsample "page.domainurl/code-snippet/grid/column-chooser-template" %}
 
-## Enable and disable search option
+## Enable or disable search in column chooser
 
-By default, the search option in the column chooser allows filtering specific columns from the Grid's column list.
+The column chooser includes a built-in search box by default that allows to quickly filter and find columns from the list. This search functionality can be controlled using the [enableSearching](https://ej2.syncfusion.com/react/documentation/api/grid/columnChooserSettings#enablesearching) property of the `columnChooserSettings`.
 
-The search option is enabled by default in the column chooser. However, you can disable it by setting the `columnChooserSettings.enableSearching` property to **false**.
+**Property values:**
 
-The following example demonstrates how to enable or disable the search option dynamically using a [Switch](https://ej2.syncfusion.com/react/documentation/switch/getting-started) and its [change](https://ej2.syncfusion.com/react/documentation/api/switch#change) event in the Grid.
+- **true** (default): The search box is displayed in the column chooser dialog.
+- **false**: The search box is hidden from the column chooser dialog.
+
+The following example demonstrates how to dynamically enable or disable the search option using a Syncfusion [Switch](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component. When the switch is toggled, the [change](https://ej2.syncfusion.com/react/documentation/api/switch#change) event updates the `enableSearching` property:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

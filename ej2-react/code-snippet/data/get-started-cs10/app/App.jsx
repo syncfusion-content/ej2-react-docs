@@ -2,6 +2,7 @@ import { DataManager, Query } from '@syncfusion/ej2-data';
 import * as React from 'react';
 import { data } from './datasource';
 import { Row } from './rowTemplate';
+import './App.css';
 
 export default class App extends React.Component {
     result = new DataManager(data).executeLocal(new Query()

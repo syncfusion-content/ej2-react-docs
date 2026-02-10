@@ -19,10 +19,10 @@ MERN is a full‑stack JavaScript technology stack consisting of MongoDB, Expres
 ## Overview
 This integration enables full CRUD (Create, Read, Update, Delete) operations for calendar events using:
 
-* Frontend: React + Syncfusion React Scheduler
-* Backend: Node.js + Express
-* Database: MongoDB
-* Communication: REST APIs via Syncfusion DataManager
+* Frontend: **React + Syncfusion React Scheduler**
+* Backend: **Node.js + Express**
+* Database: **MongoDB**
+* Communication: **REST APIs via Syncfusion DataManager**
 
 Users can create, edit, and delete appointments in the Scheduler UI, with all changes persisted in MongoDB.
 
@@ -47,8 +47,7 @@ Required for storing and retrieving application data. Supports both local instal
 4. MongoDB stores event data
 5. Updated data is sent back to Scheduler UI
 
-## Database Setup
-**MongoDB**   
+## Database Setup 
 Follow the steps below to set up the MongoDB database for the application:
 
 1. Download the MongoDB Community Edition from the official website: [MongoDB](https://www.mongodb.com/try/download/community)
@@ -87,7 +86,7 @@ yarn create vite
 
 Running one of the above commands will prompt you to configure the project as shown below.
 
-1. **Define the project name**     
+1. Define the project name:     
     For example, let us name the project mern-react-app.
 
     {% tabs %}
@@ -98,7 +97,7 @@ Running one of the above commands will prompt you to configure the project as sh
     {% endhighlight %}
     {% endtabs %}
 
-2. **Select the required configurations**   
+2. Select the required configurations:   
 
     Choose React as the framework and TypeScript as the variant for better type safety and maintainability.
     
@@ -127,7 +126,7 @@ Running one of the above commands will prompt you to configure the project as sh
     {% endhighlight %}
     {% endtabs %}
 
-3. **Select additional Vite options**
+3. Select additional Vite options:
 
     {% tabs %}
     {% highlight bash tabtitle="CMD" %}
@@ -143,8 +142,8 @@ After executing the above commands, the application will be available at: `http:
 The React application is now created and running with default settings.
 Next, we will proceed with integrating Syncfusion® React Scheduler component into the project after setting up the server.
 
-4. **Terminate & navigate to the project directory**   
-    Once the project is created successfully, stop the running state of the application and move into the application folder using the following command:
+4. Terminate & navigate to the project directory:   
+    Once the project is created successfully, stop the running state of the application and move into the application folder using the following command.
 
     {% tabs %}
     {% highlight bash tabtitle="CMD" %}
@@ -157,7 +156,7 @@ Next, we will proceed with integrating Syncfusion® React Scheduler component in
 
 ## Create a server application
 
-1. **To set up the backend for the MERN application, Install the required packages and make a new directory for server in the react project folder `mern-react-app/` itself.**
+1. To set up the backend for the MERN application, Install the required packages and make a new directory for server in the react project folder `mern-react-app/` itself:
 
     {% tabs %}
     {% highlight bash tabtitle="CMD" %}
@@ -167,9 +166,9 @@ Next, we will proceed with integrating Syncfusion® React Scheduler component in
     {% endhighlight %}
     {% endtabs %}
 
-    * Express – A minimal and flexible web framework used to build API endpoints
-    * MongoDB (Node.js Driver) – The official MongoDB driver that allows your server to communicate with the database
-    * CORS – A package that enables your application (running on a different port) to access the server’s API
+    - Express – A minimal and flexible web framework used to build API endpoints
+    - MongoDB (Node.js Driver) – The official MongoDB driver that allows your server to communicate with the database
+    - CORS – A package that enables your application (running on a different port) to access the server’s API
 
     {% tabs %}
     {% highlight bash tabtitle="CMD" %}
@@ -179,8 +178,8 @@ Next, we will proceed with integrating Syncfusion® React Scheduler component in
     {% endhighlight %}
     {% endtabs %}
 
-2. **Create a file server.js**   
-Create a new file named `server.js` inside the directory `server` created above and add the following code to set up the server: 
+2. Create a file **server.js**:   
+Create a new file named `server.js` inside the directory `server` created above and add the following code to set up the server. 
 
     {% tabs %}
     {% highlight js tabtitle="server.js" %}
@@ -274,8 +273,8 @@ Create a new file named `server.js` inside the directory `server` created above 
 
     Here database name is `mydb` and collection name is `ScheduleData`, both were previously created during the database setup process 
 
-3. **Add server script to package.json**    
-To enable running the Node.js backend directly from the React project’s root, add the following script inside your root `package.json` under the "scripts" section:
+3. Add **server script** to `package.json`:    
+To enable running the Node.js backend directly from the React project’s root, add the following script inside your root `package.json` under the "scripts" section.
     
     {% tabs %}
     {% highlight json tabtitle="package.json" %}
@@ -290,7 +289,7 @@ To enable running the Node.js backend directly from the React project’s root, 
 ## Integrating Syncfusion React Scheduler to MERN Application
 This section integrates [Syncfusion React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) to the above created MERN application.
 
-1. **Install the required [Syncfusion React Scheduler Package](https://www.npmjs.com/package/@syncfusion/ej2-react-schedule)** 
+1. Install the required [Syncfusion React Scheduler Package](https://www.npmjs.com/package/@syncfusion/ej2-react-schedule): 
     
     {% tabs %}
     {% highlight bash tabtitle="NPM" %}
@@ -305,8 +304,8 @@ This section integrates [Syncfusion React Scheduler](https://www.syncfusion.com/
     {% endhighlight %}
     {% endtabs %}
 
-2. **Adding CSS references**   
-Add CSS references for the Schedule in `src/App.css`:
+2. Add CSS references:   
+Add CSS references for the Schedule in `src/App.css`.
    
     {% tabs %}
     {% highlight css tabtitle="App.css" %}
@@ -323,11 +322,57 @@ Add CSS references for the Schedule in `src/App.css`:
     {% endhighlight %}
     {% endtabs %}
 
-3. **Add the Schedule component**   
-In the `src/App.tsx` file, use the following code snippet to render the Syncfusion React Schedule component and import `App.css` to apply styles to the schedule:
+3. Add the Schedule component:   
+In the `src/App.tsx` file, use the following code snippet to render the Syncfusion React Schedule component and import `App.css` to apply styles to the schedule.
     
     {% tabs %}
-    {% highlight jsx tabtitle="App.tsx" %}
+    {% highlight ts tabtitle="App.tsx" %}
+
+    import React from 'react';
+    import { ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
+    import './App.css';
+
+    export default class App extends React.Component<{}, {}> {
+        public scheduleObj: ScheduleComponent = new ScheduleComponent({});
+        
+        public render() {
+            return (
+            
+                <div className="control-section">
+                    <div className="schedule-control">
+                        <ScheduleComponent 
+                            id="schedule" 
+                            ref={(schedule: ScheduleComponent | null) => { 
+                                    this.scheduleObj = schedule!;
+                                }}
+                            height="550px"
+                            selectedDate={new Date(2026, 0, 1)} 
+                            currentView="Month" >
+                
+                            <ViewsDirective>
+                                <ViewDirective option="Day" />
+                                <ViewDirective option="Week" />
+                                <ViewDirective option="WorkWeek" />
+                                <ViewDirective option="Month" />
+                                <ViewDirective option="Agenda" />
+                            </ViewsDirective>
+                            <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
+                        </ScheduleComponent>
+                    </div>
+                </div>
+
+            );
+        }
+    }
+    
+    {% endhighlight %}
+    {% endtabs %}
+
+4. Perform CRUD operations using Syncfusion's DataManager URL Adaptor:  
+This connects the scheduler to your backend through REST endpoints and enables create, read, update, and delete from the UI.
+
+    {% tabs %}
+    {% highlight ts tabtitle="App.tsx" %}
 
     import React from 'react';
     import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
@@ -335,45 +380,53 @@ In the `src/App.tsx` file, use the following code snippet to render the Syncfusi
     import './App.css';
 
     export default class App extends React.Component<{}, {}> {
-    public scheduleObj: ScheduleComponent = new ScheduleComponent({});
-    private dataManager: DataManager = new DataManager({
-        url: 'http://localhost:5000/GetData',
-        crudUrl: 'http://localhost:5000/BatchData',
-        adaptor: new UrlAdaptor(),
-        crossDomain: true
-    });
+        public scheduleObj: ScheduleComponent = new ScheduleComponent({});
+        private dataManager: DataManager = new DataManager({
+            url: 'http://localhost:5000/GetData',
+            crudUrl: 'http://localhost:5000/BatchData',
+            adaptor: new UrlAdaptor(),
+            crossDomain: true
+        });
 
-    public render() {
-    return (
-    
-    <div className="control-section">
-        <div className="schedule-control">
-        <ScheduleComponent 
-        id="schedule" 
-        ref={(schedule: ScheduleComponent | null) => { 
-            this.scheduleObj = schedule!;
-            }}
-        height="550px"
-        selectedDate={new Date(2026, 0, 1)} 
-        currentView="Month" 
-        eventSettings={ {dataSource: this.dataManager }}>
-            <ViewsDirective>
-            <ViewDirective option="Day" />
-            <ViewDirective option="Week" />
-            <ViewDirective option="WorkWeek" />
-            <ViewDirective option="Month" />
-            <ViewDirective option="Agenda" />
-            </ViewsDirective>
-            <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
-        </ScheduleComponent>
-        </div>
-    </div>
-    );
+        public render() {
+            return (
+            
+            <div className="control-section">
+                <div className="schedule-control">
+                <ScheduleComponent 
+                    id="schedule" 
+                    ref={(schedule: ScheduleComponent | null) => { 
+                            this.scheduleObj = schedule!;
+                        }}
+                    height="550px"
+                    selectedDate={new Date(2026, 0, 1)} 
+                    currentView="Month" 
+                    eventSettings={ {dataSource: this.dataManager }}>
+                    <ViewsDirective>
+                        <ViewDirective option="Day" />
+                        <ViewDirective option="Week" />
+                        <ViewDirective option="WorkWeek" />
+                        <ViewDirective option="Month" />
+                        <ViewDirective option="Agenda" />
+                    </ViewsDirective>
+                    <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
+                </ScheduleComponent>
+                </div>
+            </div>
+            );
+        }
     }
-    }
-    
+
     {% endhighlight %}
     {% endtabs %}
+
+    The Scheduler is connected to a backend service using **Syncfusion’s DataManager**, a powerful data-handling component built to seamlessly manage remote data operations.
+    - DataManager is configured with two API endpoints:
+        - url → to read event data
+        - crudUrl → to handle create, update, and delete actions
+    - The UrlAdaptor ensures standard REST-style communication with your server.
+    - Once this is set, the Scheduler automatically sends requests when users add, edit, drag, resize, or delete events.
+    - The server processes these operations and returns updated event data, allowing the Scheduler to stay perfectly in sync with the backend.
 
 ## Run the MERN Application
 
@@ -381,7 +434,7 @@ In the `src/App.tsx` file, use the following code snippet to render the Syncfusi
 If your project’s package.json contains **"type": "module"**, remove it before running the server.  
 This project uses CommonJS (require), not ES modules—keeping "type": "module" will cause Node.js to throw a “require is not defined in ES module scope” error.
 
-1. **From the project folder `mern-react-app/`, run the backend server:**
+1. From the project folder `mern-react-app/`, run the backend server:
     
     {% tabs %}
     {% highlight bash tabtitle="NPM" %} 
@@ -398,7 +451,7 @@ This project uses CommonJS (require), not ES modules—keeping "type": "module" 
 
     The Node server started running on http://localhost:5000/
 
-2. **Open another terminal from the same project folder `mern-react-app/` and run the React application:**
+2. Open another terminal from the same project folder `mern-react-app/` and run the React application:
     
     {% tabs %}
     {% highlight bash tabtitle="NPM" %}
@@ -415,7 +468,7 @@ This project uses CommonJS (require), not ES modules—keeping "type": "module" 
 
     The React application started running on http://localhost:5173/
 
-3. **You can create, read, update and delete events in the React Scheduler and able to see the changes in DB as well.**
+3. You can create, read, update and delete events in the React Scheduler and able to see the changes in DB as well.
 
 ## Output Preview
 **Syncfusion React Scheduler**
@@ -428,31 +481,31 @@ This project uses CommonJS (require), not ES modules—keeping "type": "module" 
 
 ## Common pitfalls & solutions
 
-1. **CORS issues (blocked by CORS)**
+1. CORS issues (blocked by CORS)
 
     Ensure app.use(cors(...)) is registered before routes and that origin matches your React dev URL. Set credentials: true only if you send cookies/Authorization and then also configure DataManager to send them. 
 
-2. **Dates stored as strings**
+2. Dates stored as strings
 
     Convert StartTime/EndTime to Date objects on the server before inserting/updating. Otherwise, Scheduler rendering/timezone math may be off.
 
-3. **Immutable _id error on updates**
+3. Immutable _id error on updates
 
     Delete _id from payload before calling updateOne. The MongoDB driver does not allow changing _id.
 
-4. **Missing CSS → broken layout**
+4. Missing CSS → broken layout
 
     Import all required CSS bundles for EJ2 controls; otherwise the editor/pickers won’t render correctly.
 
-5. **ID management collisions**
+5. ID management collisions
 
     Scheduler uses Id for CRUD. Ensure uniqueness; either generate on the client (e.g., from timestamp) or on the server (find max + 1, or use a counter). If you rely on user-provided Ids, duplicates will cause updates to affect the wrong row.
 
-6. **Load-on-demand expectations**
+6. Load-on-demand expectations
 
     The Scheduler can load data on demand via DataManager/adaptors. If you implement server-side filtering (by date range), make sure to honor the query parameters that DataManager sends.
 
-7. **Recurring events**
+7. Recurring events
 
     Persist RecurrenceRule, RecurrenceID, RecurrenceException fields; they are needed for repeats and exceptions. [Scheduler events](https://ej2.syncfusion.com/react/documentation/schedule/appointments)
 

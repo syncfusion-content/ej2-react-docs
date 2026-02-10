@@ -10,85 +10,76 @@ domainurl: ##DomainURL##
 
 # Getting started with React Dialog component
 
-The following section explains the required steps to build the Dialog component and demonstrates its basic usage in a step-by-step procedure.
+This section explains the steps required to create a simple React Dialog component and demonstrate its basic usage in a React environment.
 
-To get started quickly with the React Dialog component, watch the following video:
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
+
+To get started quickly with React Dialog, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=upDeXQMYFoc" %}
 
-## Dependencies
+## Setup for local development
 
-The following dependencies are required to use the React Dialog component in an application.
+Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-```
-|-- @syncfusion/ej2-react-popups
-    |-- @syncfusion/ej2-react-base
-    |-- @syncfusion/ej2-react-buttons
-    |-- @syncfusion/ej2-popups
-        |-- @syncfusion/ej2-base
-        |-- @syncfusion/ej2-buttons
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-```
+To create a new React application, run the following command.
 
-## Installation and configuration
-
-To set up a React application quickly, use Vite, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/).
-
-> **Note:** To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app).
-
-To create a new Vite-based React application, run the following command.
-
-```
+```bash
 npm create vite@latest my-app
 ```
-To set up a React application in a TypeScript environment, run the following command.
+This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
 
-```
+![Initial_setup](images/Initial-setup.jpg)
+
+To set up a React application in TypeScript environment, run the following command.
+
+```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set up a React application in a JavaScript environment, run the following command.
+To set up a React application in JavaScript environment, run the following command.
 
-```
+```bash
 npm create vite@latest my-app -- --template react
 cd my-app
 npm run dev
 ```
 
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Dialog packages
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+To install the Dialog component, use the following command
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. You can choose the component that you want to install. For this application, we are going to use Dialog component.
-
-To install Dialog component, use the following command
-
-```
+```bash
 npm install @syncfusion/ej2-react-popups --save
 ```
 
+> The --save will instruct NPM to include the Dialog package inside of the **dependencies** section of the package.json.
+
 ## Adding CSS reference
 
-Import the Dialog component's required CSS references in `src/App.css` as follows.
+The following CSS files are available in the **../node_modules/@syncfusion** package folder. Add these as references in **src/App.css**.
 
+```css
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import "../node_modules/@syncfusion/ej2-react-popups/styles/tailwind3.css";
 ```
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-react-popups/styles/material.css";
-```
 
-You can check out the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) topic to know more about built-in themes and different ways to refer themes in a React application.
+> To refer **App.css** in the application then import it in the **src/App.tsx** file.
 
-> The [Custom Resource Generator (CRG)](https://crg.syncfusion.com/) is an online tool for generating custom scripts and styles for a selected set of components.
-> This tool is useful to combine the required component scripts and styles into a single file.
+## Adding Dialog component
 
-## Adding Dialog to the application
+The React Dialog component can be added to the application by following these steps. To get started, add the Dialog component to the **src/App.tsx** file using the following code.
 
-Now add the React Dialog component to the application. The examples below show how to add the Dialog component in `src/App.tsx`.
+The following dialog code should be placed in the **src/App.tsx** file.
 
 `[Class-component]`
 
-```
+```ts
 import React, { Component } from 'react';
 import { DialogComponent } from '@syncfusion/ej2-react-popups';
 import './App.css';
@@ -124,7 +115,7 @@ export default class App extends Component<{}, AppState> {
 
 `[Functional-component]`
 
-```
+```ts
 import { DialogComponent } from '@syncfusion/ej2-react-popups';
 import * as React from "react";
 import './App.css';
@@ -148,13 +139,13 @@ export default function App() {
 
 ## Run the application
 
-Run the `npm run dev` command to start the development server. This command compiles the code and serves the application locally.
+Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-```
+```bash
 npm run dev
 ```
 
-The following example shows the Dialog.
+The output appears as follows.
 
 `[Class-component]`
 
@@ -185,51 +176,11 @@ The following example shows the Dialog.
 > In the Dialog control, the `max-height` is calculated based on the height of the Dialog target element. If the `target` property is not configured, `document.body` is used as the target. To ensure the Dialog displays at the proper height, add a `min-height` to the target element.
 > If the Dialog is rendered based on the body, the Dialog height is determined by the body element height. If the Dialog's height is larger than the body height, the Dialog height will not be set; in that case, set the CSS for `html` and `body` to ensure the Dialog can size correctly.
 
-```
-
+```css
 html, body {
    height: 100%;
 }
-
 ```
-
-## Buttons inside Dialog content not triggering events (React 17+)
-
-In React 17 and later, the event delegation model changed so that events are delegated to the root DOM node. This can affect click events on buttons placed inside Dialog content when the Dialog is rendered outside the React root element.
-
-For more details, see the [React 17 Release Notes](https://reactjs.org/blog/2020/10/20/react-v17.html#react-dom).
-
-Solution: Bind the Dialog to the React root element using the `target` property:
-
-```
-<DialogComponent
-  id="parent-dialog"
-  target={"#root"}  // Bind to React root element
-  // Other properties...
->
-  <button onClick={handleClick}>Click me</button>
-</DialogComponent>
-```
-Ensure the application setup correctly references the root element:
-
-In main entry file (e.g., main.jsx):
-
-```
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-```
-
-In html file (e.g., index.html):
-
-```
-<div id="root"></div>
-```
-
->Why this works: Setting `target` to `#root` ensures the Dialog renders within the React root element, preserving event binding behavior in React 17+.
-
 
 ## Modal Dialog
 
@@ -399,6 +350,8 @@ The sample below demonstrates different Dialog positions.
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/dialog/positioning-cs3" %}
+
+> Refer to the [React Dialog](https://www.syncfusion.com/react-components/react-modal-dialog) feature tour page for its groundbreaking feature representations. You can also explore our [React Dialog component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/dialog/default) that shows how to render the Dialog in React.
 
 ## See Also
 

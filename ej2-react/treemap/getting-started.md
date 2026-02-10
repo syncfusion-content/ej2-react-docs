@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Getting started with React Treemap component | Syncfusion
-description:  Checkout and learn about Getting started with React Treemap component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React TreeMap component | Syncfusion
+description:  Checkout and learn about Getting started with React TreeMap component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React TreeMap component
 
-This section explains you the steps required to create a TreeMap control and demonstrate its basic usage.
+This document explains the steps required to create and render a TreeMap component and demonstrates the component's basic usage.
 
 ## Dependencies
 
-The following list of minimum dependencies are required to use the TreeMap control:
+The following list of minimum dependencies are required to use the TreeMap component:
 
 ```ts
 |-- @syncfusion/ej2-react-treemap
@@ -44,6 +44,7 @@ npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
+Choose the `react-ts` template for TypeScript projects or `react` for JavaScript projects.
 To set-up a React application in JavaScript environment, run the following command.
 
 ```bash
@@ -62,7 +63,7 @@ npm install @syncfusion/ej2-react-treemap --save
 
 ### Add TreeMap to project
 
-Now, the TreeMap component can be added in the application. To initialize the TreeMap control in the React application, import the TreeMap control in the **src/App.js**
+Now, the TreeMap component can be added in the application. To initialize the TreeMap component in the React application, import the TreeMap component in the **src/App.js**
 or **src/App.tsx** as per the application. Please use the below code to include the TreeMap component in the application.
 
 ```ts
@@ -102,7 +103,7 @@ npm run dev
 
 ## Module injection
 
-The TreeMap control is segregated into individual feature-wise modules. To use a particular feature, inject its feature module using the `<Inject services={} />` method. You can find the modules available in TreeMap and their descriptions below.
+The TreeMap component is segregated into individual feature-wise modules. To use a particular feature, inject its feature module using the `<Inject services={} />` method. You can find the modules available in TreeMap and their descriptions below.
 
 * TreeMapHighlight - Inject this provider to use highlight feature.
 * TreeMapSelection - Inject this provider to use selection feature.
@@ -111,7 +112,7 @@ The TreeMap control is segregated into individual feature-wise modules. To use a
 
 ## Render TreeMap
 
-This section explains how to render the TreeMap with data source. In the below example, TreeMap is modified to visualize international airport count in South America.
+This section shows how to render a TreeMap using a bound data source. The example visualizes the number of international airports in South America.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

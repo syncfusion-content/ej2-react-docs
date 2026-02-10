@@ -24,8 +24,11 @@ function App() {
     }
   }
   return (
-    <div><TextBoxComponent ref={t => textbox = t} type='number' placeholder="Enter Grouped Row Index" width={200} ></TextBoxComponent>
-      <ButtonComponent onClick={onExpandCollapseButtonClick}>Collapse or Expand Row</ButtonComponent>
+    <div>
+      <div style={{display: "flex", margin: "10px"}}>
+        <TextBoxComponent ref={t => textbox = t} type='number' placeholder="Enter Grouped Row Index" width={200}></TextBoxComponent>
+        <ButtonComponent style={{marginLeft: "5px"}} onClick={onExpandCollapseButtonClick}>Collapse or Expand Row</ButtonComponent>
+      </div>
       <p style={{ color: "red" }}>{message}</p>
       <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={315}>
         <ColumnsDirective>

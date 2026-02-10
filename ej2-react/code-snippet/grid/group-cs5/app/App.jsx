@@ -3,8 +3,8 @@ import * as React from 'react';
 import { data } from './datasource';
 function App() {
     const groupOptions = {
-        columns: ['OrderDate', 'Freight'],
-        showDropArea: false
+      columns: ['OrderDate', 'Freight'],
+      showDropArea: false
     };
     return <GridComponent dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={315}>
     <ColumnsDirective>

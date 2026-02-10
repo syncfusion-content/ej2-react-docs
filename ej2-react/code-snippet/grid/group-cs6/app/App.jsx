@@ -8,11 +8,12 @@ function App() {
   const actionBegin = (args) => {
     if (args.requestType === 'grouping' && args.columnName === 'OrderID') {
       args.cancel = true;
+      setMessage('Grouping action cancelled for ' + args.columnName + ' column');
     }
   }
   const actionComplete = (args) => {
     if (args.requestType === 'grouping') {
-    setMessage(args.requestType + ' action completed for ' + args.columnName + ' column');
+    setMessage('Grouping action completed for ' + args.columnName + ' column');
     }
     else{
       setMessage('');
@@ -28,6 +29,8 @@ function App() {
         <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
       </ColumnsDirective>
       <Inject services={[Group]} />
-    </GridComponent></div>)
+    </GridComponent>
+    </div>
+  )
 };
 export default App;

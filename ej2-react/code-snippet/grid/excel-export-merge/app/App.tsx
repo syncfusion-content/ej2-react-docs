@@ -14,59 +14,7 @@ function App() {
           (grid as GridComponent).excelExport();
       }
     };
-    const onDataBound= function() {
-        let previousData: number | null = null;
-        let startRowIndex: number | null = null;
-        let endRowIndex: number | null = null;
-    
-          let rows =  (grid as GridComponent).getRows();
-          let data =  (grid as GridComponent).getCurrentViewRecords();
-    
-          for (let i = 0, len = rows.length; i < len; i++) {
-              if (!previousData) {
-                  previousData = (data[i] as Order)['OrderID'];
-                  startRowIndex = parseInt(((rows[i] as HTMLElement).getAttribute("aria-rowindex") as string));
-              }
-              else if (previousData === (data[i] as Order)['OrderID']) {
-                  rows[i].children[0].classList.add('e-hide');
-              }
-              else if (previousData && previousData !== (data[i] as Order)['OrderID']) {
-                  if ((grid as GridComponent).getRows().length > 0 && (grid as GridComponent).getRows().length > (startRowIndex as number)) {
-                      endRowIndex = parseInt(((rows[i] as HTMLElement).getAttribute("aria-rowindex") as string), 10);
-                      let targetRow =  (grid as GridComponent).getRows()[(startRowIndex as number)];
-                      let currentRowChild = rows[i] && rows[i].children[0];
-                      if (targetRow && currentRowChild) {
-                        let targetCell = [].slice.call(targetRow.querySelectorAll('.e-rowcell')).filter((cell) =>
-                          parseInt(((cell as HTMLElement).getAttribute('aria-colindex') as string), 10) === parseInt(((currentRowChild as HTMLElement).getAttribute('aria-colindex') as string))
-                        );
-                        if (targetCell[0]) {
-                          (targetCell[0] as HTMLElement).setAttribute("rowSpan",((endRowIndex as number) - (startRowIndex as number)).toString());
-                        }
-                      }
-                      previousData = (data[i]as Order)['OrderID'];
-                      startRowIndex = parseInt(((rows[i] as HTMLElement).getAttribute("aria-rowindex") as string), 10);
-                  }
-              }
-              if (rows[i].children[0].classList.contains("e-hide") || i < len) {
-                  endRowIndex = parseInt(((rows[i] as HTMLElement).getAttribute("aria-rowindex") as string), 10);
-                  if (endRowIndex > 0) {
-                    let targetRow = (grid as GridComponent).getRows()[(startRowIndex as number)];  
-                    let currentRowChild = rows[i] && rows[i].children[0];
-                    if (targetRow && currentRowChild) {
-                        let targetCell = [].slice.call(targetRow.querySelectorAll('.e-rowcell')).filter((cell) =>
-                            parseInt(((cell as HTMLElement).getAttribute('aria-colindex') as string), 10) === parseInt(((currentRowChild as HTMLElement).getAttribute('aria-colindex') as string))
-                        );
-                        if (targetCell.length > 0) {
-                            (targetCell[0] as HTMLElement).setAttribute("rowSpan", ((endRowIndex as number) - (startRowIndex as number) +1).toString());
-                        }
-                    }
-                  }
-              }
-          }
-          
-      };
     const excelQueryCellInfo = function(args:ExcelQueryCellInfoEventArgs) {
-    
           if (!currentOrderID && args.column.field == "OrderID") {
               currentOrderID = (args.data as Order)["OrderID"];
               gridcells = (args.cell as HTMLElement) ;
@@ -88,7 +36,8 @@ function App() {
    
     return (<div>
       <GridComponent id='Grid' dataSource={data} height={270} allowExcelExport={true} 
-      toolbarClick={toolbarClick} ref={g => grid = g} toolbar={toolbarOptions} dataBound={onDataBound} excelQueryCellInfo={excelQueryCellInfo} excelExportComplete={excelExportComplete}>
+      toolbarClick={toolbarClick} ref={g => grid = g} toolbar={toolbarOptions} enableRowSpan={true}
+        gridLines = 'Both'  excelQueryCellInfo={excelQueryCellInfo} excelExportComplete={excelExportComplete}>
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right'/>
           <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'/>

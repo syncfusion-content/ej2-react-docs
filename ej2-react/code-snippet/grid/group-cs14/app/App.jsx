@@ -26,10 +26,12 @@ function App() {
   }
   return (
     <div>
-      <label style={{ padding: "30px 20px 0 0" }}> Column name :</label>
-      <DropDownListComponent ref={drop => dropColumn = drop} index={0} width={120} dataSource={columns} fields={field}></DropDownListComponent><br />
-      <ButtonComponent style={{ marginTop: "10px" }} id="group" cssClass="e-outline" onClick={groupColumn}>GroupColumn</ButtonComponent>
-      <ButtonComponent style={{ marginTop: "10px" }} id="ungroup" cssClass="e-outline" onClick={unGroupColumn}>UnGroupColumn</ButtonComponent>
+      <div style={{display: "inline-block"}}>
+        <label style={{ padding:  "10px 10px 15px 0" }}> Column name :</label>
+        <DropDownListComponent ref={drop => dropColumn = drop} index={0} width={120} dataSource={columns} fields={field}></DropDownListComponent>
+      </div>
+      <ButtonComponent style={{ margin:"5px 0 5px 5px", padding: "8px 8px" }} id="group" cssClass="e-outline" onClick={groupColumn}>Group Column</ButtonComponent>
+      <ButtonComponent style={{ margin:"5px 0 5px 5px", padding: "8px 8px" }} id="ungroup" cssClass="e-outline" onClick={unGroupColumn}>UnGroup Column</ButtonComponent>
       <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={267}>
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
@@ -38,6 +40,8 @@ function App() {
           <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
         </ColumnsDirective>
         <Inject services={[Group]} />
-      </GridComponent ></div>)
+      </GridComponent >
+    </div>
+  )
 };
 export default App;

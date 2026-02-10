@@ -2,10 +2,10 @@ import { ColumnDirective, ColumnsDirective, GridComponent, Group, Inject } from 
 import * as React from 'react';
 import { data } from './datasource';
 function App() {
-    const groupOptions = {
-        columns: ['CustomerID', 'ShipCity']
-    };
-    return <GridComponent dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={267}>
+  const groupOptions = {
+    columns: ['CustomerID', 'ShipCity']
+  };
+  return <GridComponent dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={267}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right"/>
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'/>

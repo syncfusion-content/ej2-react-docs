@@ -8,95 +8,96 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Signature component
+# Getting Started with React Signature component
 
-The following section explains the required steps to build the Signature component with its basic usage in step-by-step procedure.
+This section explains the steps required to create a simple React Signature component and demonstrate its basic usage in a React environment.
 
-To get start quickly with Signature Component using React, you can check on this video:
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
+
+To get started quickly with React Signature, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=Nj5V4iKLgv4" %}
 
-## Dependencies
+## Setup for local development
 
-The following list of dependencies are required to use the Signature component in your application.
-
-```
-|-- @syncfusion/ej2-react-base
-```
-
-## Setup your development environment
-
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
 To create a new React application, run the following command.
 
-```
+```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
 
-```
+![Initial_setup](images/Initial-setup.jpg)
+
+To set up a React application in TypeScript environment, run the following command.
+
+```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in JavaScript environment, run the following command.
 
-```
+```bash
 npm create vite@latest my-app -- --template react
 cd my-app
 npm run dev
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Signature packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.
-You can choose the component that you want to install. For this application, we are going to use Signature component.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+To install the Signature component, use the following command
 
-To install Signature component, use the following command
-
-```
-npm install @syncfusion/ej2-react-inputs –save
+```bash
+npm install @syncfusion/ej2-react-inputs --save
 ```
 
-The above command installs [Signature dependencies](./getting-started#dependencies) which are required to render the component in the `React` environment.
+> The --save will instruct NPM to include the Signature package inside of the **dependencies** section of the package.json.
 
-## Adding Style sheet to the Application
+## Adding CSS reference
 
-Add Signature component's styles as given below in `App.css`.
+The following CSS files are available in the **../node_modules/@syncfusion** package folder. Add these as references in **src/App.css**.
 
-```c
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+```css
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
 ```
 
-## Add Signature to the project
+> To refer **App.css** in the application then import it in the **src/App.tsx** file.
 
-Now, you can create `Signature` component in the application. Add `Signature` component in `src/App.tsx` file using the following code snippet.
+## Adding Signature component
 
-```
+The React Signature component can be added to the application by following these steps. To get started, add the Signature component to the **src/App.tsx** file using the following code.
+
+The following signature code should be placed in the **src/App.tsx** file.
+
+```ts
 import { SignatureComponent } from '@syncfusion/ej2-react-inputs';
 import * as React from 'react';
+import './App.css';
+
 function App() {
     return (<div style={{marginTop: '150px'}}>
         <SignatureComponent id='signature'></SignatureComponent>
     </div>);
-    
 }
 export default App;
 ```
 
 ## Run the application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-   ```
-   npm run dev
-   ```
+```bash
+npm run dev
+```
 
-The following example shows the default Signature.
+The output appears as follows.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -108,3 +109,5 @@ The following example shows the default Signature.
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/signature/getting-started-cs2" %}
+
+> Refer to the [React Signature](https://www.syncfusion.com/react-components/react-signature) feature tour page for its groundbreaking feature representations. You can also explore our [React Signature component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/signature/default) that shows how to render the Signature in React.

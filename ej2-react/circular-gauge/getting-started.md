@@ -8,9 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Circular gauge component
 
-This section explains you the steps required to create a simple circular gauge and demonstrate the basic usage of circular gauge control.
+This article describes the steps to create a simple Circular Gauge and demonstrates the component's basic usage.
+
+Prerequisites: Node.js (recommended v14 or later), npm, and a compatible React version (hooks-enabled React 16.8+).
 
 ## Dependencies
 
@@ -27,7 +29,7 @@ Following is the list of minimum dependencies required to use the Circular Gauge
 
 ## Installation and configuration
 
-To get started with the React application, [create-react-app](https://github.com/facebook/create-react-app) can be used to setup the application. To install **create-react-app** run the following command.
+To get started with the React application, use [create-react-app](https://github.com/facebook/create-react-app) to set up the project. To install the `create-react-app` tool globally, run the following command.
 
 ```
 npm install -g create-react-app
@@ -47,6 +49,8 @@ cd quickstart
 
 > In the **quickstart** application, the Syncfusion<sup style="font-size:70%">&reg;</sup> component is added in the JavaScript file.
 
+Note: For production builds, register the Syncfusion license as required by Syncfusion licensing terms. See the Syncfusion licensing documentation for instructions.
+
 ### Creating a React application with TypeScript
 
 To create React application with TypeScript, use the following command.
@@ -55,7 +59,7 @@ To create React application with TypeScript, use the following command.
 create-react-app quickstart --template typescript
 ```
 
-Now, the application is created in the **quickstart** folder. Run the following command to navigate to the **quickstart** folder, and install the required **npm** packages.
+The TypeScript template creates the application in the **quickstart** folder. Change directory into **quickstart** before installing additional packages.
 
 ```
 cd quickstart
@@ -71,7 +75,7 @@ npm install @syncfusion/ej2-react-circulargauge --save
 
 ### Adding Circular Gauge component to the Project
 
-Now, the Circular Gauge component can be added in the application. To initialize the Circular Gauge control in the React application, import the Circular Gauge control in the **src/App.js** or **src/App.tsx** as per the application. Please use the below code to include the Circular Gauge component in the application.
+Add the Circular Gauge component to the application. To initialize the Circular Gauge control in the React application, import the component into `src/App.js` or `src/App.tsx` as appropriate. Use the example below to include the Circular Gauge component.
 
 ```ts
 
@@ -109,7 +113,7 @@ The below example shows the basic Circular Gauge.
 
 ## Set Pointer Value
 
-You can change the pointer value in the above sample using [value](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#value-number)property in [pointers](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/).
+You can change the pointer value in the above sample using [value](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer#value-number) property in [pointers](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

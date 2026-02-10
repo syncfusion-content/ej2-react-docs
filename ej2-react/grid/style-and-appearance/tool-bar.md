@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tool bar in React Grid component | Syncfusion
-description: Learn here all about Tool bar in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: Tool bar Customization in React Grid component | Syncfusion
+description: Learn here all about Tool bar customization in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Tool bar 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Toolbar in React Grid component
+# Toolbar Customization in React Grid Component
 
 You can customize the appearance of the toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component using CSS. Here are examples of how to customize the toolbar root element and toolbar button element.
 

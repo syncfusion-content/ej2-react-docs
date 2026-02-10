@@ -17,14 +17,13 @@ function App() {
   const freightrules = { min: 1, max: 1000 };
   const shipCountryrules = { required: true };
   const orderDaterules = { required: true };
-  const created = (() => {
-    (grid as GridComponent).getContentTable().addEventListener('click', (args) => {
-      if (args.target.classList.contains('e-rowcell')) {
-        (grid as GridComponent).editModule.editCell(parseInt(args.target.getAttribute('index')),
-          (grid as GridComponent).getColumnByIndex(parseInt(args.target.getAttribute('aria-colindex')) - 1).field);
-      }
-    });
-    (grid as GridComponent).element.addEventListener('keydown', (e) => {
+  const onClick = (args: React.MouseEvent) => {
+    if (args.target.classList.contains('e-rowcell')) {
+      (grid as GridComponent).editModule.editCell(parseInt(args.target.getAttribute('data-index')),
+        (grid as GridComponent).getColumnByIndex(parseInt(args.target.getAttribute('aria-colindex')) - 1).field);
+    }
+  };
+  const onKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
       var closesttd = e.target.closest('td');
       if (e.keyCode === 39 && !isNullOrUndefined(closesttd.nextSibling)) {
         editACell(closesttd.nextSibling);
@@ -44,13 +43,12 @@ function App() {
           closesttd.closest('tr').previousSibling.querySelectorAll('td')[
           parseInt(closesttd.getAttribute('aria-colindex')) - 1]);
       }
-    });
-  });
+  };
   const editACell = (args) => {
-    (grid as GridComponent).editModule.editCell(parseInt(args.getAttribute('index')), (grid as GridComponent).getColumnByIndex(parseInt(args.getAttribute('aria-colindex')) - 1).field);
-  }
+    (grid as GridComponent).editModule.editCell(parseInt(args.getAttribute('data-index')), (grid as GridComponent).getColumnByIndex(parseInt(args.getAttribute('aria-colindex')) - 1).field);
+  };
   return (<div>
-    <GridComponent ref={g => grid = g} dataSource={data} editSettings={editOptions} enableHover={false} toolbar={toolbarOptions} height={265} created={created} >
+    <GridComponent ref={g => grid = g} dataSource={data} editSettings={editOptions} enableHover={false} toolbar={toolbarOptions} height={265} onClick={onClick} onKeyDown={onKeyDown}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} validationRules={orderidrules} />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' validationRules={customeridrules} />

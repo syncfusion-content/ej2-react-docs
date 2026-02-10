@@ -8,42 +8,35 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React MaskedTextBox Component
+# Getting Started with React MaskedTextBox component
 
-The following section explains the required steps to build the MaskedTextBox component with its basic usage in step-by-step procedure.
+This section explains the steps required to create a simple React MaskedTextBox component and demonstrate its basic usage in a React environment.
 
-## Dependencies
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
 
-The following list of dependencies are required to use the MaskedTextBox component in your application.
+## Setup for local development
 
-```javascript
-|-- @syncfusion/ej2-react-inputs
-  |-- @syncfusion/ej2-react-base
-  |-- @syncfusion/ej2-inputs
-    |-- @syncfusion/ej2-base
-```
+Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-## Installation and Configuration
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-To quickly set up a React application, use Vite, which provides a fast development server, smaller bundles, and optimized builds compared to tools like Create React App. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide).
-
-> Note: To create a React application using Create React App, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
-
-To create a new React application, run one of the following commands based on the desired template.
+To create a new React application, run the following command.
 
 ```bash
 npm create vite@latest my-app
 ```
+This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
 
-To set up a React application in a TypeScript environment, run the following command.
+![Initial_setup](images/Initial-setup.jpg)
+
+To set up a React application in TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-
-To set up a React application in a JavaScript environment, run the following command.
+To set up a React application in JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -51,19 +44,33 @@ cd my-app
 npm run dev
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> MaskedTextBox packages
 
-All Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published on the public npm registry at [npmjs.com](https://www.npmjs.com/~syncfusionorg). Choose the component to install. This guide uses the MaskedTextBox component.
-
-To install the MaskedTextBox component, use the following command.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+To install the MaskedTextBox component, use the following command
 
 ```bash
 npm install @syncfusion/ej2-react-inputs --save
 ```
 
-## Adding MaskedTextBox to the Application
+> The --save will instruct NPM to include the MaskedTextBox package inside of the **dependencies** section of the package.json.
 
-Add the MaskedTextBox component to the application. Use the following code in `src/App.tsx`.
+## Adding CSS reference
+
+The following CSS files are available in the **../node_modules/@syncfusion** package folder. Add these as references in **src/App.css**.
+
+```css
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-react-inputs/styles/tailwind3.css";
+```
+
+> To refer **App.css** in the application then import it in the **src/App.tsx** file.
+
+## Adding MaskedTextBox component
+
+The React MaskedTextBox component can be added to the application by following these steps. To get started, add the MaskedTextBox component to the **src/App.tsx** file using the following code.
+
+The following maskedtextbox code should be placed in the **src/App.tsx** file.
 
 `[Class-component]`
 
@@ -97,7 +104,7 @@ export default function App() {
 
 ## Set the Mask
 
-Set the input mask using the [mask](https://ej2.syncfusion.com/react/documentation/api/maskedtextbox/index-default#mask) property to validate user input. For details about mask tokens and configuration, see the mask configuration guide at ./mask-configuration/.
+Set the input mask using the [mask](https://ej2.syncfusion.com/react/documentation/api/maskedtextbox/index-default#mask) property to validate user input. For details about mask tokens and configuration, see the mask configuration guide at [mask-configuration](./mask-configuration).
 
 The following example demonstrates the `0` mask token, which requires a single digit from 0 to 9 for each position.
 
@@ -131,28 +138,15 @@ export default function App() {
 };
 ```
 
-## Adding CSS Reference
+## Run the application
 
-Import the MaskedTextBox component's required CSS in `src/App.css`.
+Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-```css
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-react-inputs/styles/material.css";
-```
-
-You can check out the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) topic to know more about built-in themes and different ways to refer themes in a React application.
-
-> Note: To reference combined component styles, use the Custom Resource Generator (CRG) at https://crg.syncfusion.com/ in your application.
-
-## Run the Application
-
-Run the `npm run dev` command in the console to start the development server. This compiles the code and serves the application locally, opening it in the browser.
-
-```
+```bash
 npm run dev
 ```
 
-The following example shows the MaskedTextBox.
+The output appears as follows.
 
 `[Class-component]`
 
@@ -179,6 +173,8 @@ The following example shows the MaskedTextBox.
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/masked-textbox/getting-started-cs2" %}
+
+> Refer to the [React MaskedTextBox](https://www.syncfusion.com/react-components/react-input-mask) feature tour page for its groundbreaking feature representations. You can also explore our [React MaskedTextBox component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/maskedtextbox/default) that shows how to render the MaskedTextBox in React.
 
 ## See Also
 

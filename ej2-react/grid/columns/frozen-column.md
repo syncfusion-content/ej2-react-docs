@@ -10,252 +10,58 @@ domainurl: ##DomainURL##
 
 # Column Pinning (Frozen) in React Grid component
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component, you have the capability to **freeze** columns, ensuring they remain visible as you scroll through extensive datasets. This functionality significantly improves user experience by keeping critical information constantly within view, even when navigating through large volumes of data. This means that important columns remain fixed in their positions, making it easier to access and reference key data points while working with the grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a column pinning (freezing) feature that keeps selected columns visible while scrolling across large datasets. This improves readability by ensuring that important information remains accessible, even when working with wide tables.
 
-In the following example, the [frozenColumns](https://ej2.syncfusion.com/react/documentation/api/grid/#frozencolumns) property is set to **2**. This configuration freezes the left two columns of the grid, and they will remain fixed in their positions while the rest of the columns grid can be scrolled horizontally.
+In a frozen layout, chosen columns remain fixed on either the left or right side of the grid, while other columns continue to scroll horizontally. This makes it easier to compare and analyze data without losing sight of key details.
 
-{% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-{% raw %}
-import { ColumnDirective, ColumnsDirective, Freeze, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
-import * as React from 'react';
-import { data } from './datasource';
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import { NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs';
+To enable frozen columns, the `Freeze` module must be injected into the Grid.
 
-function App() {
-    let grid;
-    let textBox;
-    const frozenColumn = (() => {
-        grid.frozenColumns = textBox.value;
-    })
-    return (
-        <div>
-            <label style={{ padding: '30px 17px 0 0' }}>Change the frozen columns:</label>
-            <NumericTextBoxComponent id='frozencolums' ref={t => textBox = t} min={0} max={3} validateDecimalOnType={true} decimals={0} format='n' value={2} width={100}></NumericTextBoxComponent>
-            <ButtonComponent style={{ marginLeft: '5px' }} onClick={frozenColumn}>UPDATE</ButtonComponent>
-            <div style={{ padding: '40px 0 0 0' }}>
-                <GridComponent dataSource={data} height={315} ref={g => grid = g} frozenColumns={2}>
-                    <ColumnsDirective>
-                        <ColumnDirective field='OrderID' headerText='Order ID' width='150' />
-                        <ColumnDirective field='CustomerID' headerText='Customer ID' width='180' />
-                        <ColumnDirective field='Freight' headerText='Freight' width='120' />
-                        <ColumnDirective field='ShipCity' headerText='Ship City' width='200' />
-                        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
-                        <ColumnDirective field='ShipName' headerText='Ship Name' width='180' />
-                        <ColumnDirective field='ShipRegion' headerText='Ship Region' width='220' />
-                        <ColumnDirective field='ShipAddress' headerText='Ship Address' width='200' />
-                        <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' />
-                    </ColumnsDirective>
-                    <Inject services={[Freeze]} />
-                </GridComponent></div></div>)
-}
-export default App;
-{% endraw %}
-{% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-{% raw %}
-import { ColumnDirective, ColumnsDirective, Freeze, Grid, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
-import * as React from 'react';
-import { data } from './datasource';
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import { NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs';
-
-function App() {
-    let grid: Grid | null;
-    let textBox: NumericTextBoxComponent | null;
-    const frozenColumn = (() => {
-        (grid as any).frozenColumns = (textBox as any).value;
-    })
-    return (
-        <div>
-            <label style={{ padding: '30px 17px 0 0' }}>Change the frozen columns:</label>
-            <NumericTextBoxComponent id='frozencolums' ref={t => textBox = t} min={0} max={3} validateDecimalOnType={true} decimals={0} format='n' value={2} width={100}></NumericTextBoxComponent>
-            <ButtonComponent style={{ marginLeft: '5px' }} onClick={frozenColumn}>UPDATE</ButtonComponent>
-            <div style={{ padding: '40px 0 0 0' }}>
-                <GridComponent dataSource={data} height={315} ref={g => grid = g} frozenColumns={2}>
-                    <ColumnsDirective>
-                        <ColumnDirective field='OrderID' headerText='Order ID' width='150' />
-                        <ColumnDirective field='CustomerID' headerText='Customer ID' width='180' />
-                        <ColumnDirective field='Freight' headerText='Freight' width='120' />
-                        <ColumnDirective field='ShipCity' headerText='Ship City' width='200' />
-                        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
-                        <ColumnDirective field='ShipName' headerText='Ship Name' width='180' />
-                        <ColumnDirective field='ShipRegion' headerText='Ship Region' width='220' />
-                        <ColumnDirective field='ShipAddress' headerText='Ship Address' width='200' />
-                        <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' />
-                    </ColumnsDirective>
-                    <Inject services={[Freeze]} />
-                </GridComponent></div></div>)
-}
-export default App;
-{% endraw %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/frozen-column-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/frozen-column-cs1/app/datasource.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/grid/frozen-column-cs1" %}
-
-> * Frozen columns should not be set outside the grid view port.
-> * Frozen Grid support column virtualization feature, which helps to improve the Grid performance while loading a large dataset.
-> * The frozen feature is supported only for the columns that are visible in the current view.
-> * You can use both `frozenColumns` property and [frozenRows](https://ej2.syncfusion.com/react/documentation/api/grid/#frozenrows) property in the same application.
-
-## Freeze particular columns
-
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a valuable feature that enables you to freeze specific columns, significantly enhancing data visibility and improving your overall user experience. This functionality allows you to select particular columns and freeze them by positioning them at the leftmost side of the grid, ensuring they remain fixed in place while the remaining grid columns can still be scrolled horizontally. While the `frozenColumns` property freezes columns in the order they are initialized in the grid, you can also use the `isFrozen` property at the column level to freeze a specific column at any desired index on the left side, offering flexibility in managing which columns are frozen.
-
-To freeze a particular column in the grid, you can utilize the [isFrozen](https://ej2.syncfusion.com/react/documentation/api/grid/column/#isfrozen) property of the grid component as **true**.
-
-The following example demonstrates how to freeze particular column in grid using `isFrozen` property. This is achieved by the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#change) event of the `DropDownList` component. Within the change event, you can modify the `isFrozen` property of the selected column using the [getColumnByField](https://ej2.syncfusion.com/react/documentation/api/grid/#getcolumnbyfield) method. Afterward, you can use the [refreshColumns](https://ej2.syncfusion.com/react/documentation/api/grid/#refreshcolumns) method to update the displayed columns based on your interaction.
-
-{% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-{% raw %}
-import { ColumnDirective, ColumnsDirective, Freeze, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
-import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
-import * as React from 'react';
+```ts
+import { GridComponent, ColumnsDirective, ColumnDirective, Inject, Freeze } from '@syncfusion/ej2-react-grids';
 import { data } from './datasource';
 
 function App() {
-    let grid;
-    const field = { text: 'text', value: 'value' };
-    const ddlData = [
-        { text: 'OrderID', value: 'OrderID' },
-        { text: 'CustomerID', value: 'CustomerID' },
-        { text: 'OrderDate', value: 'OrderDate' },
-        { text: 'ShipName', value: 'ShipName' },
-        { text: 'ShipCity', value: 'ShipCity' },
-        { text: 'ShipCountry', value: 'ShipCountry' },
-        { text: 'ShipRegion', value: 'ShipRegion' },
-        { text: 'ShipAddress', value: 'ShipAddress' },
-        { text: 'Freight', value: 'Freight' },
-    ]
-    const columnChange = ((args) => {
-        const selectedColumn = grid.getColumnByField(args.value);
-        // Iterate through all columns and unfreeze any previously frozen columns
-        grid.columns.forEach((column) => {
-            if (column.isFrozen) {
-                column.isFrozen = false;
-            }
-        });
-        // Freeze the newly selected column, if it exists
-        if (selectedColumn) {
-            selectedColumn.isFrozen = true;
-        }
-        // Refresh the columns
-        grid.refreshColumns();
-    })
-    return (
-        <div>
-            <label style={{ padding: '30px 17px 0 0' }}>Change the frozen column:</label>
-            <DropDownListComponent id='dropdown' index={0} width={150} fields={field} dataSource={ddlData} change={columnChange}></DropDownListComponent>
-            <GridComponent dataSource={data} height={315} ref={g => grid = g} >
-                <ColumnsDirective>
-                    <ColumnDirective field='OrderID' headerText='Order ID' width='150' isFrozen={true} />
-                    <ColumnDirective field='CustomerID' headerText='Customer ID' width='180' />
-                    <ColumnDirective field='Freight' headerText='Freight' width='120' />
-                    <ColumnDirective field='ShipCity' headerText='Ship City' width='200' />
-                    <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
-                    <ColumnDirective field='ShipName' headerText='Ship Name' width='180' />
-                    <ColumnDirective field='ShipRegion' headerText='Ship Region' width='220' />
-                    <ColumnDirective field='ShipAddress' headerText='Ship Address' width='200' />
-                    <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' />
-                </ColumnsDirective>
-                <Inject services={[Freeze]} />
-            </GridComponent></div>)
+  return (
+    <GridComponent dataSource={data} height={315}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='150' freeze='Left' />
+                 . . .
+                 . . .
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' freeze='Right' />
+      </ColumnsDirective>
+      <Inject services={[Freeze]} />
+    </GridComponent>
+  );
 }
-export default App;
-{% endraw %}
-{% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-{% raw %}
-import { ColumnDirective, ColumnsDirective, Freeze, Grid, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
-import { ChangeEventArgs, DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
-import * as React from 'react';
-import { data } from './datasource';
 
-function App() {
-    let grid: Grid | null;
-    const field: any = { text: 'text', value: 'value' };
-    const ddlData: any = [
-        { text: 'OrderID', value: 'OrderID' },
-        { text: 'CustomerID', value: 'CustomerID' },
-        { text: 'OrderDate', value: 'OrderDate' },
-        { text: 'ShipName', value: 'ShipName' },
-        { text: 'ShipCity', value: 'ShipCity' },
-        { text: 'ShipCountry', value: 'ShipCountry' },
-        { text: 'ShipRegion', value: 'ShipRegion' },
-        { text: 'ShipAddress', value: 'ShipAddress' },
-        { text: 'Freight', value: 'Freight' },
-    ]
-    const columnChange = ((args: ChangeEventArgs) => {
-        const selectedColumn = (grid as any).getColumnByField(args.value as string);
-        // Iterate through all columns and unfreeze any previously frozen columns
-        ((grid as any).columns).forEach((column: any) => {
-            if (column.isFrozen) {
-                column.isFrozen = false;
-            }
-        });
-        // Freeze the newly selected column, if it exists
-        if (selectedColumn) {
-            selectedColumn.isFrozen = true;
-        }
-        // Refresh the columns
-        (grid as any).refreshColumns();
-    })
-    return (
-        <div>
-            <label style={{ padding: '30px 17px 0 0' }}>Change the frozen column:</label>
-            <DropDownListComponent id='dropdown' index={0} width={150} fields={field} dataSource={ddlData} change={columnChange}></DropDownListComponent>
-            <GridComponent dataSource={data} height={315} ref={g => grid = g} >
-                <ColumnsDirective>
-                    <ColumnDirective field='OrderID' headerText='Order ID' width='150' isFrozen={true} />
-                    <ColumnDirective field='CustomerID' headerText='Customer ID' width='180' />
-                    <ColumnDirective field='Freight' headerText='Freight' width='120' />
-                    <ColumnDirective field='ShipCity' headerText='Ship City' width='200' />
-                    <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
-                    <ColumnDirective field='ShipName' headerText='Ship Name' width='180' />
-                    <ColumnDirective field='ShipRegion' headerText='Ship Region' width='220' />
-                    <ColumnDirective field='ShipAddress' headerText='Ship Address' width='200' />
-                    <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' />
-                </ColumnsDirective>
-                <Inject services={[Freeze]} />
-            </GridComponent></div>)
-}
 export default App;
-{% endraw %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/frozen-column-cs2/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/frozen-column-cs2/app/datasource.tsx %}
-{% endhighlight %}
-{% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/frozen-column-cs2" %}
+```
 
 ## Freeze direction
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, the "freeze direction" feature serves to reposition frozen columns either to the left, right, or in a fixed position, while still allowing the remaining columns to be horizontally movable. This feature is designed to optimize user experience by ensuring that critical information remains visible even during horizontal scrolling. By default, when you set the `frozenColumns` property of the grid or the `isFrozen` property of individual columns, it results in freezing those columns on the left side of the grid. This helps in keeping important data readily accessible as you navigate through your dataset.
+The Grid supports different freeze directions, which determine where frozen columns appear. By setting the [freeze](https://ej2.syncfusion.com/react/documentation/api/grid/column#freeze) property in a column definition, columns can be pinned to the left, right, or fixed in place. This makes it easy to keep important columns visible while scrolling and gives flexibility when designing grids with multiple frozen sections.
 
-To achieve this, you can utilize the [freeze](https://ej2.syncfusion.com/react/documentation/api/grid/column/#freeze) property. This property is used to specify the freeze direction for individual columns. The grid will adjust the column positions based on the `freeze` value.
+The Grid supports three freeze direction types:
 
-The types of the `freeze` directions:
+| Direction | Description | Behavior |
+|-----------|-------------|----------|
+| **Left** | Freezes columns on the left side | Frozen columns remain fixed on the left while other columns scroll horizontally |
+| **Right** | Freezes columns on the right side | Frozen columns remain fixed on the right while other columns scroll horizontally |
+| **Fixed** | Locks columns at a specific position | Frozen columns stay fixed in their position, creating a locked section between scrollable areas |
 
-* **Left**: When you set the `freeze` property to **Left**, specific columns will be frozen on the left side of the grid. The remaining columns will be movable.
+**Combining Freeze Directions**
 
-* **Right**: When you set the `freeze` property to **Right**, certain columns will be frozen on the right side of the grid, while the rest of the columns remain movable.
+The following table illustrates how columns behave when different freeze directions are applied:
 
-* **Fixed**: The Fixed direction locks a column at a fixed position within the grid. This ensures that the column is always visible during horizontal scroll.
+| Scenario | Result |
+|----------|--------|
+| **Only Left freeze** | Left-frozen columns stay fixed on the left; remaining columns scroll |
+| **Only Right freeze** | Right-frozen columns stay fixed on the right; remaining columns scroll |
+| **Left + Right freeze** | Left columns fixed on left, right columns fixed on right; middle columns scroll |
+| **Left + Fixed + Right** | Creates three sections: left-frozen, middle-frozen (fixed), and right-frozen, with scrollable areas between them |
 
-In the following example, the **ShipCountry** column is frozen on the left side, the **CustomerID** column is frozen on the right side and the **Freight** column is frozen on the fixed of the content table. Additionally, you can modify the `freeze` property to **Left**, **Right** and **Fixed** based on the selected column by utilizing the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#change) event of the `DropDownList` component.
+The following example demonstrates multiple freeze directions in action. The "ShipCountry" column is frozen on the left side by default. The example allows dynamically changing the freeze direction of any column using a DropDownList component. Select a column and choose a freeze direction ("Left", "Right", or "Fixed") to see how it affects the column positioning.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -382,43 +188,285 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/frozen-column-cs3" %}
+{% previewsample "page.domainurl/code-snippet/grid/frozen-column-cs3" %}
+
+> If a column should no longer remain frozen, the `freeze` property can be set to "None" in the column definition. This action removes the frozen state and the column will behave like a normal scrollable column, moving along with the rest of the grid content.
 
 
-> * Freeze Direction is not compatible with the [isFrozen](https://ej2.syncfusion.com/react/documentation/api/grid/column/#isfrozen) and [frozenColumns](https://ej2.syncfusion.com/react/documentation/api/grid/#frozencolumns) properties.
+## Freeze particular columns
 
-## Change default frozen line color
+The Grid provides a straightforward way to freeze individual columns on the left side using the [isFrozen](https://ej2.syncfusion.com/react/documentation/api/grid/column#isfrozen) property in the column definition. When this property is set to "true", the chosen column is locked at the leftmost position of the Grid and remains visible while scrolling horizontally.
 
-You can customize the frozen line borders of frozen columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component by applying custom CSS styles to the specific frozen column. This allows you to change the border color of the left frozen columns, right frozen columns, and fixed frozen columns to match your application's design and theme.
 
-To change default frozen line color, use the following class name and apply the border color based on your requirement.
+The following example demonstrates freezing a particular column using the `isFrozen` property. Initially, the "OrderID" column is frozen. The [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#change) event of the [DropDownList](https://ej2.syncfusion.com/react/demos/#bootstrap5/drop-down-list/default) component allows dynamically changing which column is frozen. The selected column's `isFrozen` property is modified using the [getColumnByField](https://ej2.syncfusion.com/react/documentation/api/grid#getcolumnbyfield) method, and the [refreshColumns](https://ej2.syncfusion.com/react/documentation/api/grid#refreshcolumns) method updates the display.
 
-For left frozen columns: 
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, Freeze, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+    let grid;
+    const field = { text: 'text', value: 'value' };
+    const ddlData = [
+        { text: 'OrderID', value: 'OrderID' },
+        { text: 'CustomerID', value: 'CustomerID' },
+        { text: 'OrderDate', value: 'OrderDate' },
+        { text: 'ShipName', value: 'ShipName' },
+        { text: 'ShipCity', value: 'ShipCity' },
+        { text: 'ShipCountry', value: 'ShipCountry' },
+        { text: 'ShipRegion', value: 'ShipRegion' },
+        { text: 'ShipAddress', value: 'ShipAddress' },
+        { text: 'Freight', value: 'Freight' },
+    ]
+    const columnChange = ((args) => {
+        const selectedColumn = grid.getColumnByField(args.value);
+        // Iterate through all columns and unfreeze any previously frozen columns
+        grid.columns.forEach((column) => {
+            if (column.isFrozen) {
+                column.isFrozen = false;
+            }
+        });
+        // Freeze the newly selected column, if it exists
+        if (selectedColumn) {
+            selectedColumn.isFrozen = true;
+        }
+        // Refresh the columns
+        grid.refreshColumns();
+    })
+    return (
+        <div>
+            <label style={{ padding: '30px 17px 0 0' }}>Change the frozen column:</label>
+            <DropDownListComponent id='dropdown' index={0} width={150} fields={field} dataSource={ddlData} change={columnChange}></DropDownListComponent>
+            <GridComponent dataSource={data} height={315} ref={g => grid = g} >
+                <ColumnsDirective>
+                    <ColumnDirective field='OrderID' headerText='Order ID' width='150' isFrozen={true} />
+                    <ColumnDirective field='CustomerID' headerText='Customer ID' width='180' />
+                    <ColumnDirective field='Freight' headerText='Freight' width='120' />
+                    <ColumnDirective field='ShipCity' headerText='Ship City' width='200' />
+                    <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+                    <ColumnDirective field='ShipName' headerText='Ship Name' width='180' />
+                    <ColumnDirective field='ShipRegion' headerText='Ship Region' width='220' />
+                    <ColumnDirective field='ShipAddress' headerText='Ship Address' width='200' />
+                    <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' />
+                </ColumnsDirective>
+                <Inject services={[Freeze]} />
+            </GridComponent></div>)
+}
+export default App;
+{% endraw %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, Freeze, Grid, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import { ChangeEventArgs, DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+    let grid: Grid | null;
+    const field: any = { text: 'text', value: 'value' };
+    const ddlData: any = [
+        { text: 'OrderID', value: 'OrderID' },
+        { text: 'CustomerID', value: 'CustomerID' },
+        { text: 'OrderDate', value: 'OrderDate' },
+        { text: 'ShipName', value: 'ShipName' },
+        { text: 'ShipCity', value: 'ShipCity' },
+        { text: 'ShipCountry', value: 'ShipCountry' },
+        { text: 'ShipRegion', value: 'ShipRegion' },
+        { text: 'ShipAddress', value: 'ShipAddress' },
+        { text: 'Freight', value: 'Freight' },
+    ]
+    const columnChange = ((args: ChangeEventArgs) => {
+        const selectedColumn = (grid as any).getColumnByField(args.value as string);
+        // Iterate through all columns and unfreeze any previously frozen columns
+        ((grid as any).columns).forEach((column: any) => {
+            if (column.isFrozen) {
+                column.isFrozen = false;
+            }
+        });
+        // Freeze the newly selected column, if it exists
+        if (selectedColumn) {
+            selectedColumn.isFrozen = true;
+        }
+        // Refresh the columns
+        (grid as any).refreshColumns();
+    })
+    return (
+        <div>
+            <label style={{ padding: '30px 17px 0 0' }}>Change the frozen column:</label>
+            <DropDownListComponent id='dropdown' index={0} width={150} fields={field} dataSource={ddlData} change={columnChange}></DropDownListComponent>
+            <GridComponent dataSource={data} height={315} ref={g => grid = g} >
+                <ColumnsDirective>
+                    <ColumnDirective field='OrderID' headerText='Order ID' width='150' isFrozen={true} />
+                    <ColumnDirective field='CustomerID' headerText='Customer ID' width='180' />
+                    <ColumnDirective field='Freight' headerText='Freight' width='120' />
+                    <ColumnDirective field='ShipCity' headerText='Ship City' width='200' />
+                    <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+                    <ColumnDirective field='ShipName' headerText='Ship Name' width='180' />
+                    <ColumnDirective field='ShipRegion' headerText='Ship Region' width='220' />
+                    <ColumnDirective field='ShipAddress' headerText='Ship Address' width='200' />
+                    <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' />
+                </ColumnsDirective>
+                <Inject services={[Freeze]} />
+            </GridComponent></div>)
+}
+export default App;
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/frozen-column-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/frozen-column-cs2/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/frozen-column-cs2" %}
+
+> By default, when using `frozenColumns` or `isFrozen` properties, columns freeze on the left side.
+
+## Auto-Generated columns with frozen support
+
+When columns are not explicitly defined using `ColumnDirective`, the Grid automatically generates them based on the bound data source. Even in this scenario, the [frozenColumns](https://ej2.syncfusion.com/react/documentation/api/grid#frozencolumns) property can be applied to lock the first n auto-generated columns on the left side of the Grid.
+
+The `frozenColumns` property accepts a numeric value that determines how many columns remain frozen during initialization. For example, setting `frozenColumns` to "2" will freeze the first two columns created from the data source. These columns stay visible while scrolling horizontally. 
+
+The following example demonstrates the `frozenColumns` property set to "2". This configuration freezes the first two auto-generated columns, such as OrderID and CustomerID, keeping them fixed on the left side of the Grid. The remaining columns continue to support horizontal scrolling.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, Freeze, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs';
+
+function App() {
+    let grid;
+    let textBox;
+    const frozenColumn = (() => {
+        grid.frozenColumns = textBox.value;
+    })
+    return (
+        <div>
+            <label style={{ padding: '30px 17px 0 0' }}>Change the frozen columns:</label>
+            <NumericTextBoxComponent id='frozencolums' ref={t => textBox = t} min={0} max={3} validateDecimalOnType={true} decimals={0} format='n' value={2} width={100}></NumericTextBoxComponent>
+            <ButtonComponent style={{ marginLeft: '5px' }} onClick={frozenColumn}>UPDATE</ButtonComponent>
+            <div style={{ padding: '40px 0 0 0' }}>
+                <GridComponent dataSource={data} height={315} ref={g => grid = g} frozenColumns={2}>
+                    <ColumnsDirective>
+                        <ColumnDirective field='OrderID' headerText='Order ID' width='150' />
+                        <ColumnDirective field='CustomerID' headerText='Customer ID' width='180' />
+                        <ColumnDirective field='Freight' headerText='Freight' width='120' />
+                        <ColumnDirective field='ShipCity' headerText='Ship City' width='200' />
+                        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+                        <ColumnDirective field='ShipName' headerText='Ship Name' width='180' />
+                        <ColumnDirective field='ShipRegion' headerText='Ship Region' width='220' />
+                        <ColumnDirective field='ShipAddress' headerText='Ship Address' width='200' />
+                        <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' />
+                    </ColumnsDirective>
+                    <Inject services={[Freeze]} />
+                </GridComponent></div></div>)
+}
+export default App;
+{% endraw %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, Freeze, Grid, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs';
+
+function App() {
+    let grid: Grid | null;
+    let textBox: NumericTextBoxComponent | null;
+    const frozenColumn = (() => {
+        (grid as any).frozenColumns = (textBox as any).value;
+    })
+    return (
+        <div>
+            <label style={{ padding: '30px 17px 0 0' }}>Change the frozen columns:</label>
+            <NumericTextBoxComponent id='frozencolums' ref={t => textBox = t} min={0} max={3} validateDecimalOnType={true} decimals={0} format='n' value={2} width={100}></NumericTextBoxComponent>
+            <ButtonComponent style={{ marginLeft: '5px' }} onClick={frozenColumn}>UPDATE</ButtonComponent>
+            <div style={{ padding: '40px 0 0 0' }}>
+                <GridComponent dataSource={data} height={315} ref={g => grid = g} frozenColumns={2}>
+                    <ColumnsDirective>
+                        <ColumnDirective field='OrderID' headerText='Order ID' width='150' />
+                        <ColumnDirective field='CustomerID' headerText='Customer ID' width='180' />
+                        <ColumnDirective field='Freight' headerText='Freight' width='120' />
+                        <ColumnDirective field='ShipCity' headerText='Ship City' width='200' />
+                        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+                        <ColumnDirective field='ShipName' headerText='Ship Name' width='180' />
+                        <ColumnDirective field='ShipRegion' headerText='Ship Region' width='220' />
+                        <ColumnDirective field='ShipAddress' headerText='Ship Address' width='200' />
+                        <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' />
+                    </ColumnsDirective>
+                    <Inject services={[Freeze]} />
+                </GridComponent></div></div>)
+}
+export default App;
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/frozen-column-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/frozen-column-cs1/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/frozen-column-cs1" %}
+
+> * The frozen column count should not exceed the total number of visible columns in the Grid.
+> * Frozen columns should be within the Grid viewport for proper functionality.
+> * [Column virtualization](https://ej2.syncfusion.com/react/documentation/api/grid#enablecolumnvirtualization) is supported for frozen columns, improving performance when loading large datasets.
+> * The frozen feature works only with columns visible in the current view.
+> * Both `frozenColumns` and [frozenRows](https://ej2.syncfusion.com/react/documentation/api/grid#frozenrows) properties can be used simultaneously in the same Grid.
+> * Freeze Direction is incompatible with the `isFrozen` and `frozenColumns` properties.
+
+## Customize frozen line color
+
+The visual separator between frozen and scrollable columns (the "frozen line") can be customized to match application design requirements. Custom CSS styles can be applied to change the border color for left, right, and fixed frozen columns. The Grid applies specific CSS classes to frozen column borders based on their freeze direction. These classes can be targeted to customize the frozen line appearance.
+
+The visual separator between frozen and scrollable columns, known as the **frozen line**, can be customized to align with application design requirements. Custom CSS styles can be applied to change the border color for left, right, and fixed frozen columns. The Grid applies specific CSS classes to frozen column borders based on their freeze direction. These classes can be targeted to customize the frozen line appearance.
+
+
+**For left frozen columns:**
 
 ```css
 .e-grid .e-leftfreeze.e-freezeleftborder {
-    border-right-color: rgb(198, 30, 204);
+    border-right-color: rgb(198, 30, 204); /* Purple border */
 }
 ```
-For right frozen columns:
+
+**For right frozen columns:**
 
 ```css
 .e-grid .e-rightfreeze.e-freezerightborder {
-    border-left-color: rgb(19, 228, 243);
+    border-left-color: rgb(19, 228, 243); /* Cyan border */
 }
 ```
-For fixed frozen columns, you need to specify both left and right border as mentioned below
+
+**For fixed frozen columns:**
+
+Specify both left and right borders:
 
 ```css
-.e-grid .e-fixedfreeze.e-freezeleftborder{
-    border-left-color: rgb(9, 209, 9); 
+.e-grid .e-fixedfreeze.e-freezeleftborder {
+    border-left-color: rgb(9, 209, 9); /* Green left border */
 }
 
-.e-grid .e-fixedfreeze.e-freezerightborder{
-    border-right-color: rgb(10, 224, 10);
+.e-grid .e-fixedfreeze.e-freezerightborder {
+    border-right-color: rgb(10, 224, 10); /* Green right border */
 }
 ```
-The following example demonstrates how to change the default frozen line color using CSS.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -435,15 +483,22 @@ The following example demonstrates how to change the default frozen line color u
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/frozen-column-cs4" %}
+{% previewsample "page.domainurl/code-snippet/grid/frozen-column-cs4" %}
 
-## Render DatePicker in frozen columns in Grid
+## Render custom editors in frozen columns
 
-The Syncfusion React Grid allows rendering a [DatePicker](https://ej2.syncfusion.com/react/demos/#/bootstrap5/datepicker/default) inside frozen columns during editing. This is achieved using the [edit](https://ej2.syncfusion.com/react/documentation/api/grid/column/#edit) property, where a custom editor (DatePicker) is assigned to the specific column. 
+Custom edit controls, such as a [DatePicker](https://ej2.syncfusion.com/react/demos/#bootstrap5/datepicker/default), can be rendered inside frozen columns during editing. This is achieved using the [edit](https://ej2.syncfusion.com/react/documentation/api/grid/column#edit) property of the column definition, which accepts an object with custom editor methods.
 
-To integrate a `DatePicker` in a frozen column, configure the column’s `edit` property with custom `create`, `write`, `read`, and `destroy` methods. These methods ensure that the `DatePicker` initializes, retrieves, and destroys correctly within the frozen column.
+**Custom editor methods:**
 
-The following example demonstrates how to render the `DatePicker` in the **OrderDate** column while keeping it frozen. Here the datepicker object is appended to the corresponding input element in the editing row.
+| Method | Description | Purpose |
+|--------|-------------|---------|
+| `create` | Creates and returns the editor element | Initializes the custom editor control (e.g., DatePicker) |
+| `read` | Retrieves the value from the editor | Extracts the current value from the editor when saving |
+| `write` | Writes the value to the editor | Sets the initial or updated value in the editor |
+| `destroy` | Destroys the editor instance | Cleans up resources when editing is complete |
+
+The following example demonstrates rendering a DatePicker component in the frozen "OrderDate" column. The DatePicker allows date selection during edit mode and properly integrates with the grid's editing lifecycle.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -465,22 +520,37 @@ The following example demonstrates how to render the `DatePicker` in the **Order
 
 {% previewsample "page.domainurl/code-snippet/grid/frozen-column-cs5" %}
 
-## Deprecated methods 
+## Deprecated methods
 
-Previous | Current | Explanation 
- ---  | --- | --- 
-`getMovableRows()` gridInstance.getMovableRows()[0].querySelectorAll('.e-unfreeze') | `getRows()` gridInstance.getRows()[0].querySelectorAll('.e-unfreeze') | The previous architecture used separate tables for left, right, and movable contents, returning only movable rows when calling the method, whereas the current architecture combines them into one table, returning all rows and introduces the `e-unfreeze` class for selecting movable rows
-`getFrozenRightRows()` gridInstance.getFrozenRightRows()[0].querySelectorAll('.e-rightfreeze') | `getRows()` gridInstance.getRows()[0].querySelectorAll('.e-rightfreeze') | In the previous architecture, it returned only the table rows from the right freeze table, but in the current architecture, all rows of the entire table are returned, introducing the `e-rightfreeze` class for selecting right freeze rows. 
-`getMovableRowByIndex()` <br> `getFrozenRowByIndex()` <br> `getFrozenRightRowByIndex()` | `getRowByIndex()` gridInstance.getRowByIndex(1).querySelectorAll('.e-unfreeze') | In the previous architecture, separate methods were used to select rows from different table sections, while in the current architecture, the `getMovableRowByIndex()`, `getFrozenRightRowByIndex()`, and `getFrozenRowByIndex()` methods now return the same table row based on the given index. Additionally, class names for table cells (td's) have been separated into `e-leftfreeze`, `e-unfreeze`, and `e-rightfreeze`, making it easier to customize cells within a row.
-`getMovableCellFromIndex()` <br> `getFrozenRightCellFromIndex()` | `getCellFromIndex()` gridInstance.getCellFromIndex(1,1) | In the previous approach, the `getMovableCellFromIndex()` method was used to choose a specific cell within the movable table, and the `getFrozenRightCellFromIndex()` method was utilized to target a particular cell within the right freeze table. However, in the current architecture, you have the flexibility to select a specific cell in either the movable or right freeze table by using both the `getFrozenRightCellFromIndex()` and `getMovableCellFromIndex()` methods. This new method simplifies the process of selecting and retrieving specific cells within these tables, offering more versatility and convenience.
-`getMovableDataRows()` <br> `getFrozenRightDataRows()` <br> `getFrozenDataRows()` | `getDataRows()` gridInstance.getDataRows()[0].querySelectorAll('.e-unfreeze') | In the previous approach, there were separate methods (`getMovableDataRows()`, `getFrozenRightDataRows()`, and `getFrozenDataRows()`) for obtaining viewport data rows from the freeze, movable, and right tables individually. However, in the new approach, these methods have been enhanced to return the entire viewport data rows for all sections together, simplifying data retrieval. You can now extract specific cells within these rows using selectors such as `e-leftfreeze` for the **left freeze**, `e-unfreeze` for the **movable**, and `e-rightfreeze` for the **right freeze** tables, providing greater flexibility in working with the data.
-`getMovableColumnHeaderByIndex()` <br> `getFrozenRightColumnHeaderByIndex()` <br> `getFrozenLeftColumnHeaderByIndex()` | `getColumnHeaderByIndex()` gridInstance.getColumnHeaderByIndex(1) | In the previous architecture, the methods selected movable, right freeze, and left freeze headers separately. However, in the new approach, when using the `getMovableColumnHeaderByIndex()`, `getFrozenRightColumnHeaderByIndex()`, and `getFrozenLeftColumnHeaderByIndex()` methods, you will still obtain the same results as in the previous architecture.
+The Grid's frozen column implementation has evolved to use a unified table architecture instead of separate tables for different freeze sections. This change improves performance and simplifies the API. The following methods from the previous architecture are now deprecated in favor of new methods with CSS class-based selectors.
 
-> When a validation message is displayed in the frozen part (Left, Right, Fixed) of the table, scrolling is prevented until the validation message is cleared.
+| Deprecated Method | Current Method | Explanation |
+|-------------------|----------------|-------------|
+| `getMovableRows()` | `getRows()` with CSS selector | **Previous:** `gridInstance.getMovableRows()[0].querySelectorAll('.e-unfreeze')`<br>**Current:** `gridInstance.getRows()[0].querySelectorAll('.e-unfreeze')`<br><br>The previous architecture used separate tables for left, right, and movable contents, returning only movable rows. The current architecture combines them into one table, returning all rows. Use the `e-unfreeze` class to select movable (non-frozen) rows. |
+| `getFrozenRightRows()` | `getRows()` with CSS selector | **Previous:** `gridInstance.getFrozenRightRows()[0].querySelectorAll('.e-rightfreeze')`<br>**Current:** `gridInstance.getRows()[0].querySelectorAll('.e-rightfreeze')`<br><br>The previous architecture returned only rows from the right freeze table. The current architecture returns all rows. Use the `e-rightfreeze` class to select right-frozen rows. |
+| `getMovableRowByIndex()`<br>`getFrozenRowByIndex()`<br>`getFrozenRightRowByIndex()` | `getRowByIndex()` with CSS selector | **Previous:** Three separate methods for different table sections<br>**Current:** `gridInstance.getRowByIndex(1).querySelectorAll('.e-unfreeze')`<br><br>The current architecture methods return the same table row based on the given index. Use CSS class selectors to target specific cell types:<br>• `e-leftfreeze` - Left-frozen cells<br>• `e-unfreeze` - Movable cells<br>• `e-rightfreeze` - Right-frozen cells |
+| `getMovableCellFromIndex()`<br>`getFrozenRightCellFromIndex()` | `getCellFromIndex()` | **Previous:** Separate methods for movable and right-frozen cells<br>**Current:** `gridInstance.getCellFromIndex(1, 1)`<br><br>The current architecture allows selecting any cell using a single method, simplifying cell selection and retrieval regardless of freeze status. |
+| `getMovableDataRows()`<br>`getFrozenRightDataRows()`<br>`getFrozenDataRows()` | `getDataRows()` with CSS selector | **Previous:** Separate methods for each table section<br>**Current:** `gridInstance.getDataRows()[0].querySelectorAll('.e-unfreeze')`<br><br>The current approach returns entire viewport data rows for all sections together. Extract specific cells using:<br>• `e-leftfreeze` - Left-frozen cells<br>• `e-unfreeze` - Movable cells<br>• `e-rightfreeze` - Right-frozen cells |
+| `getMovableColumnHeaderByIndex()`<br>`getFrozenRightColumnHeaderByIndex()`<br>`getFrozenLeftColumnHeaderByIndex()` | `getColumnHeaderByIndex()` | **Previous:** Separate methods for each header section<br>**Current:** `gridInstance.getColumnHeaderByIndex(1)`<br><br>The current approach returns the same results but through a unified method that works across all freeze sections. |
+
+```typescript
+// Get all rows and filter for movable (non-frozen) cells
+const rows = gridInstance.getRows();
+const movableCells = rows[0].querySelectorAll('.e-unfreeze');
+
+// Get all rows and filter for right-frozen cells
+const rightFrozenCells = rows[0].querySelectorAll('.e-rightfreeze');
+
+// Get all rows and filter for left-frozen cells
+const leftFrozenCells = rows[0].querySelectorAll('.e-leftfreeze');
+```
+
+> * Scrolling is prevented when a validation message is displayed in the frozen part (Left, Right, Fixed) of the table until the validation message is cleared or dismissed.
+> * When using the new unified architecture, always use the CSS classes (`e-leftfreeze`, `e-unfreeze`, `e-rightfreeze`) to target specific column types rather than relying on deprecated methods.
 
 ## Limitations
 
-While freezing columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides enhanced visibility and scrolling capabilities, there are certain limitations to consider. The following features are not supported when using frozen columns:
+The following features are not supported when using frozen columns:
 
 * Detail Template
 * Hierarchy Grid

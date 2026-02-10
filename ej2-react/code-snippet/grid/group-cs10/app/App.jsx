@@ -2,11 +2,11 @@ import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej
 import * as React from 'react';
 import { data } from './datasource';
 function App() {
-    const rowSelected = (args) => {
-        alert("row index: " + args.row.getAttribute('aria-rowindex'));
-        alert("column index: " + args.target.getAttribute('aria-colindex'));
-    };
-    return <GridComponent dataSource={data} rowSelected={rowSelected} height={267}>
+  const rowSelected = (args) => {
+    alert("row index: " + args.row.getAttribute('aria-rowindex'));
+    alert("column index: " + args.target.getAttribute('aria-colindex'));
+  };
+  return <GridComponent dataSource={data} rowSelected={rowSelected} height={267}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right"/>
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'/>
