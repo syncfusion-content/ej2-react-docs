@@ -8,30 +8,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React ListBox component
 
-This section briefly explains how to create a simple **ListBox** component and configure its available functionalities in React.
+This section explains the steps required to create a simple React ListBox component and demonstrate its basic usage in a React environment.
 
-## Dependencies
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
 
-The following list of dependencies are required to use the `ListBox` component in your application.
+## Setup for local development
 
-```javascript
-|-- @syncfusion/ej2-react-dropdowns
-    |-- @syncfusion/ej2-base
-    |-- @syncfusion/ej2-data
-    |-- @syncfusion/ej2-react-base
-    |-- @syncfusion/ej2-dropdowns
-        |-- @syncfusion/ej2-lists
-        |-- @syncfusion/ej2-inputs
-        |-- @syncfusion/ej2-navigations
-        |-- @syncfusion/ej2-popups
-            |-- @syncfusion/ej2-buttons
-```
-
-## Installation and configuration
-
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -40,14 +25,18 @@ To create a new React application, run the following command.
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
+
+![Initial_setup](images/Initial-setup.jpg)
+
+To set up a React application in TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -55,41 +44,38 @@ cd my-app
 npm run dev
 ```
 
-## Adding syncfusion<sup style="font-size:70%">&reg;</sup> packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> ListBox packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. You can choose the component that you want to install.
-
-To install ListBox component, use the following command
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+To install the ListBox component, use the following command
 
 ```bash
 npm install @syncfusion/ej2-react-dropdowns --save
 ```
 
+> The --save will instruct NPM to include the ListBox package inside of the **dependencies** section of the package.json.
+
 ## Adding CSS reference
 
-Import the ListBox component required CSS references as follows in `src/App.css`.
+The following CSS files are available in the **../node_modules/@syncfusion** package folder. Add these as references in **src/App.css**.
 
 ```css
-
-/* import the ListBox dependency styles */
-
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-react-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-react-dropdowns/styles/material.css";
-
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-react-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-react-dropdowns/styles/tailwind3.css";
 ```
+
+> To refer **App.css** in the application then import it in the **src/App.tsx** file.
 
 ## Adding ListBox component
 
-Now, you can start adding ListBox component in the application. For getting started, add the ListBox component in `src/App.tsx` file using following code.
+The React ListBox component can be added to the application by following these steps. To get started, add the ListBox component to the **src/App.tsx** file using the following code.
 
-Add the below code in the `src/App.tsx` to initialize the ListBox.
+The following listbox code should be placed in the **src/App.tsx** file.
 
 ```ts
-
-import * as React from 'react';
-import * as ReactDOM from "react-dom";
 import { ListBoxComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
 import './App.css';
 
 function App() {
@@ -99,18 +85,15 @@ function App() {
   );
 }
 export default App;
-
 ```
 
 ## Binding data source
 
-After initialization, populate the ListBox with data using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/list-box/#datasource) property. Here, an array of object is passed to the ListBox component.
+After initialization, populate the ListBox with data using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/list-box/index-default#datasource) property. Here, an array of object is passed to the ListBox component.
 
 ```ts
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { ListBoxComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
 import './App.css';
 
 function App() {
@@ -133,18 +116,17 @@ function App() {
   );
 }
 export default App;
-
 ```
 
 ## Run the application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-```
+```bash
 npm run dev
 ```
 
-The following example shows a basic Listbox component.
+The output appears as follows.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -156,3 +138,5 @@ The following example shows a basic Listbox component.
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/listbox/basic-cs7" %}
+
+> Refer to the [React ListBox](https://www.syncfusion.com/react-components/react-listbox) feature tour page for its groundbreaking feature representations. You can also explore our [React ListBox component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/list-box/default) that shows how to render the ListBox in React.

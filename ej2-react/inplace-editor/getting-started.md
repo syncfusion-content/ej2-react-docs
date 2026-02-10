@@ -10,32 +10,17 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Inplace editor component
 
-This section briefly explains about how to create a simple In-place Editor and demonstrate the basic usage of the In-place Editor component.
+This section explains the steps required to create a simple React In-place Editor component and demonstrate its basic usage in a React environment.
 
-To get start quickly with React Inplace editor, you can check on this video:
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
+
+To get started quickly with React Inplace editor, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=hr3JVzTgnRI" %}
 
-## Dependencies
+## Setup for local development
 
-The following is the list of dependencies required to use the In-place Editor component in your application.
-
-```javascript
-|-- @syncfusion/ej2-react-inplace-editor
-    |-- @syncfusion/ej2-react-base
-    |-- @syncfusion/ej2-base
-    |-- @syncfusion/ej2-buttons
-    |-- @syncfusion/ej2-calendars
-    |-- @syncfusion/ej2-data
-    |-- @syncfusion/ej2-dropdowns
-    |-- @syncfusion/ej2-inputs
-    |-- @syncfusion/ej2-popups
-    |-- @syncfusion/ej2-richtexteditor
-```
-
-## Set up your development environment
-
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -44,14 +29,18 @@ To create a new React application, run the following command.
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
+
+![Initial_setup](images/Initial-setup.jpg)
+
+To set up a React application in TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -59,97 +48,89 @@ cd my-app
 npm run dev
 ```
 
-Install the below required dependency package in order to use the `In-place Editor` component in your application.
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> In-place Editor packages
+
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+To install the In-place Editor component, use the following command
 
 ```bash
-npm install @syncfusion/ej2-react-inplace-editor –save
+npm install @syncfusion/ej2-react-inplace-editor --save
 ```
 
-The above package installs [In-place Editor dependencies](#dependencies) which are required to render the In-place Editor component in React environment.
+> The --save will instruct NPM to include the In-place Editor package inside of the **dependencies** section of the package.json.
 
-* In-place Editor CSS files are available in the `ej2-react-inplace-editor` package folder. Import the In-place Editor component's required CSS references as follows in `src/App.css`.
+## Adding CSS reference
 
-    ```css
-    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-react-inplace-editor/styles/material.css';
-    ```
+The following CSS files are available in the **../node_modules/@syncfusion** package folder. Add these as references in **src/App.css**.
 
-## Add the In-place Editor with Textbox
+```css
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-richtexteditor/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-react-inplace-editor/styles/tailwind3.css';
+```
 
-By default, Essential<sup style="font-size:70%">&reg;</sup> JS2 React TextBox component is rendered in In-place Editor with [`type`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputType/) property sets as Text.
+> To refer **App.css** in the application then import it in the **src/App.tsx** file.
 
-* Import the In-place Editor component to your `src/App.tsx` file using following code.
+## Adding In-place Editor component
 
-    `[Class-component]`
+The React Inplace editor component can be added to the application by following these steps. To get started, add the In-place Editor component to the **src/App.tsx** file using the following code.
 
-
-
-    ```ts
-
-    import { InPlaceEditorComponent } from '@syncfusion/ej2-react-inplace-editor';
-    import * as React from 'react';
-    import './App.css';
-
-    class App extends React.Component {
-      public model = { placeholder: 'Enter employee name' };
-      public render() {
-        return (
-        <InPlaceEditorComponent id='element' model={this.model} type='Text' value='Andrew'/>
-        );
-      }
-    }
-
-    export default App;
-
-    ```
-
-
-
-    `[Functional-component]`
-
-
-
-    ```ts
-
-    import { InPlaceEditorComponent } from '@syncfusion/ej2-react-inplace-editor';
-    import * as React from 'react';
-    import './App.css';
-
-    function App () {
-      const model = { placeholder: 'Enter employee name' };
-
-        return (
-        <InPlaceEditorComponent id='element' model={model} type='Text' value='Andrew'/>
-        );
-    }
-
-    export default App;
-
-    ```
-
-
-
-## Configuring DropDownList
-
-You can render Essential<sup style="font-size:70%">&reg;</sup> JS 2 React DropDownList by changing [`type`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputType/) property as [`DropDownList`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list) and configure its properties and methods using `model` property.
-
-In the below sample, [`type`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputType/) and [`model`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#model) values are configured to render the [`DropDownList`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list) component.
+The following in-place editor code should be placed in the **src/App.tsx** file.
 
 `[Class-component]`
 
+```ts
+import { InPlaceEditorComponent } from '@syncfusion/ej2-react-inplace-editor';
+import * as React from 'react';
+import './App.css';
 
+class App extends React.Component {
+  public model = { placeholder: 'Enter employee name' };
+  public render() {
+    return (
+    <InPlaceEditorComponent id='element' model={this.model} type='Text' value='Andrew'/>
+    );
+  }
+}
+
+export default App;
+```
+
+`[Functional-component]`
 
 ```ts
+import { InPlaceEditorComponent } from '@syncfusion/ej2-react-inplace-editor';
+import * as React from 'react';
+import './App.css';
 
+function App () {
+  const model = { placeholder: 'Enter employee name' };
+
+    return (
+    <InPlaceEditorComponent id='element' model={model} type='Text' value='Andrew'/>
+    );
+}
+
+export default App;
+```
+
+## Configuring DropDownList
+
+You can render Essential<sup style="font-size:70%">&reg;</sup> JS 2 React DropDownList by changing [`type`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputtype) property as [`DropDownList`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/index-default) and configure its properties and methods using `model` property.
+
+In the below sample, [`type`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputtype) and [`model`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/index-default#model) values are configured to render the [`DropDownList`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/index-default) component.
+
+`[Class-component]`
+
+```ts
 import { InPlaceEditorComponent } from '@syncfusion/ej2-react-inplace-editor';
 import * as React from 'react';
 import './App.css';
@@ -165,13 +146,11 @@ class App extends React.Component {
 }
 
 export default App;
-
 ```
 
 `[Functional-component]`
 
 ```ts
-
 import { InPlaceEditorComponent } from '@syncfusion/ej2-react-inplace-editor';
 import * as React from 'react';
 import './App.css';
@@ -186,21 +165,17 @@ function App () {
 }
 
 export default App;
-
 ```
 
 ## Integrate DatePicker
 
-You can render Essential<sup style="font-size:70%">&reg;</sup> JS2 [DatePicker](https://ej2.syncfusion.com/react/documentation/api/datepicker/) by changing [`type`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputType/) property as [`Date`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputType/) and also configure its properties and methods using [`model`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#model) property.
+You can render Essential<sup style="font-size:70%">&reg;</sup> JS2 [DatePicker](https://ej2.syncfusion.com/react/documentation/api/datepicker/index-default) by changing [`type`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputtype) property as [`Date`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputtype) and also configure its properties and methods using [`model`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/index-default#model) property.
 
-In the below sample, [`type`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputType/) and [`model`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#model) values are configured to render the [DatePicker](https://ej2.syncfusion.com/react/documentation/api/datepicker) component.
+In the below sample, [`type`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputtype) and [`model`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/index-default#model) values are configured to render the [DatePicker](https://ej2.syncfusion.com/react/documentation/api/datepicker/index-default) component.
 
 `[Class-component]`
 
-
-
 ```ts
-
 import { InPlaceEditorComponent } from '@syncfusion/ej2-react-inplace-editor';
 import * as React from 'react';
 import './App.css';
@@ -216,13 +191,11 @@ class App extends React.Component {
 }
 
 export default App;
-
 ```
 
 `[Functional-component]`
 
 ```ts
-
 import { InPlaceEditorComponent } from '@syncfusion/ej2-react-inplace-editor';
 import * as React from 'react';
 import './App.css';
@@ -237,18 +210,17 @@ function App () {
 
 }
 export default App;
-
 ```
 
 ## Run the application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-```
+```bash
 npm run dev
 ```
 
-Output will be as follows:
+The output appears as follows.
 
 `[Class-component]`
 
@@ -278,7 +250,7 @@ Output will be as follows:
 
 ## Submitting data to the server (save)
 
-You can submit editor value to server by configuring the [`url`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#url), [`adaptor`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/adaptorType/) and [`primaryKey`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#primarykey) property.
+You can submit editor value to server by configuring the [`url`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/index-default#url), [`adaptor`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/adaptortype) and [`primaryKey`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/index-default#primarykey) property.
 
 | Property   | Usage                                           |
 |------------|---------------------------------------------------------|
@@ -286,7 +258,7 @@ You can submit editor value to server by configuring the [`url`](https://ej2.syn
 | **`adaptor`**    | Specifies the adaptor type that are used by DataManager to communicate with DataSource.  |
 | **`primarykey`** | Defines the unique primary key of editable field which can be used for saving data in data-base. |
 
-> [`primaryKey`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#primarykey) property is mandatory. If it's not set, edited data are not sent to the server.
+> [`primaryKey`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/index-default#primarykey) property is mandatory. If it's not set, edited data are not sent to the server.
 
 ## Refresh with modified value
 
@@ -318,6 +290,8 @@ The edited data is submitted to the server and you can see the new values gettin
 
  {% previewsample "page.domainurl/code-snippet/in-place-editor/getting-started-cs3" %}
 
+> Refer to the [React In-place Editor](https://www.syncfusion.com/react-components/react-in-place-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React In-place Editor component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/inplace-editor/default) that shows how to render the In-place Editor in React.
+
 ## See Also
 
-* [Types of rendering the editor](./integration/)
+* [Types of rendering the editor](./integration)

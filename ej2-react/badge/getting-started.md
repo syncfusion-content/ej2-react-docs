@@ -8,21 +8,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Badge component
+# Getting Started with React Badge component
 
-The following section explains how to create a simple Badge component using styles and Badge’s basic usage.
+This section explains the steps required to create a simple React Badge component and demonstrate its basic usage in a React environment.
 
-## Dependencies
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
 
-Install the following required dependent package to render the `Badge` component.
+## Setup for local development
 
-```javascript
-|-- @syncfusion/ej2-notifications
-```
-
-## Installation and configuration
-
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -31,14 +25,18 @@ To create a new React application, run the following command.
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
+
+![Initial_setup](images/Initial-setup.jpg)
+
+To set up a React application in TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -46,31 +44,35 @@ cd my-app
 npm run dev
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Badge packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
-
-To install `Badge` component, use the following command
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+To install the Badge component, use the following command
 
 ```bash
-npm install @syncfusion/ej2-notifications --save
+npm install @syncfusion/ej2-react-notifications --save
 ```
 
-## Adding CSS Reference
+> The --save will instruct NPM to include the Badge package inside of the **dependencies** section of the package.json.
 
-Badge CSS files are available in the `ej2-notifications` package folder. Import the Badge component's required CSS references as follows in `src/App.css`.
+## Adding CSS reference
+
+The following CSS files are available in the **../node_modules/@syncfusion** package folder. Add these as references in **src/App.css**.
 
 ```css
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css";
 ```
-> We can also use [CRG](https://crg.syncfusion.com/) to generate combined component styles.
 
-## Initialize the Badge Component
+> To refer **App.css** in the application then import it in the **src/App.tsx** file.
 
-Add an HTML span element with `e-badge` class inside any wrapper element (h1) into your return method.
+## Adding Badge component
 
-```
+The React Badge component can be added to the application by following these steps. To get started, add the Badge component to the **src/App.tsx** file using the following code.
+
+The following badge code should be placed in the **src/App.tsx** file.
+
+```ts
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import './App.css';
@@ -81,18 +83,17 @@ function App() {
   );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById("element"));
 ```
 
 ## Run the application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-```
+```bash
 npm run dev
 ```
 
-Output will be as follows:
+The output appears as follows.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -110,6 +111,8 @@ Output will be as follows:
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/badge/getting-started-cs1" %}
+
+> Refer to the [React Badge](https://www.syncfusion.com/react-components/react-badge) feature tour page for its groundbreaking feature representations. You can also explore our [React Badge component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/badge/default) that shows how to render the Badge in React.
 
 ## See Also
 

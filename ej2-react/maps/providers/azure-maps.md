@@ -61,7 +61,7 @@ root.render(<App />);
 
 The Azure Maps layer supports zooming and panning interactions for enhanced map exploration. Zooming provides a closer view of specific areas for detailed analysis, while panning allows navigation across different regions of the map. These features can be enabled using the [zoomSettings](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel) property with toolbar controls for user interaction.
 
-{% raw %}
+
 
 ```ts
 
@@ -89,13 +89,13 @@ const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 ```
-{% endraw %}
+ 
 
 ## Adding markers and navigation line
 
 Markers can be added to Azure Maps layers to highlight specific locations by setting the latitude and longitude coordinates using [MarkerDirective](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel#markersettings) tag. Navigation lines can be added on top of the Azure Maps layer for highlighting a path among various places by setting the corresponding location's coordinates of latitude and longitude in the [NavigationLineDirective](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel#navigationlinesettings) with corresponding latitude and longitude coordinates.
 
-{% raw %}
+
 
 ```ts
 
@@ -145,13 +145,13 @@ const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 ```
-{% endraw %}
+ 
 
 ## Adding sublayer
 
 GeoJSON shapes can be rendered as a sublayer on top of the Azure Maps base layer to highlight specific regions such as continents, countries, or custom geographic areas. This is accomplished by adding an additional layer and setting the [type](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel#type) property to **SubLayer**. The sublayer overlays the Azure Maps tiles while maintaining interactivity with the base map.
 
-{% raw %}
+
 
 ```ts
 
@@ -179,13 +179,13 @@ const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 ```
-{% endraw %}
+ 
 
 ## Enabling legend
 
 A legend can be displayed with Azure Maps to provide visual context for markers, shapes, or data classifications. The legend is enabled by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel#visible) property of [legendSettings](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel) to **true**. The legend can be configured to display marker shapes, custom icons, and interactive toggle functionality for controlling layer visibility.
 
-{% raw %}
+
 
 ```ts
 
@@ -232,4 +232,4 @@ const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 ```
-{% endraw %}
+ 

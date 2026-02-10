@@ -8,27 +8,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Predefined Dialogs component
 
-This section explain how to create the predefined dialogs in React application with its basic features in step-by-step procedure.
+This section explains the steps required to create a simple React Predefined Dialogs component and demonstrate its basic usage in a React environment.
 
-## Dependencies
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
 
-The following list of dependencies are required to use the React Dialog component in your application.
+## Setup for local development
 
-```javascript
-|-- @syncfusion/ej2-react-popups
-    |-- @syncfusion/ej2-react-base
-    |-- @syncfusion/ej2-react-buttons
-    |-- @syncfusion/ej2-popups
-        |-- @syncfusion/ej2-base
-        |-- @syncfusion/ej2-buttons
-
-```
-
-## Setup your development environment
-
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -37,14 +25,18 @@ To create a new React application, run the following command.
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
+
+![Initial_setup](images/Initial-setup.jpg)
+
+To set up a React application in TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -52,62 +44,38 @@ cd my-app
 npm run dev
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Predefined Dialogs packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.
-You can choose the component that you want to install. For this application, we are going to use Dialog component.
-
-To install Dialog component, use the following command
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+To install the Predefined Dialogs component, use the following command
 
 ```bash
-npm install @syncfusion/ej2-react-popups –save
+npm install @syncfusion/ej2-react-popups --save
 ```
+
+> The --save will instruct NPM to include the Predefined Dialogs package inside of the **dependencies** section of the package.json.
 
 ## Adding CSS reference
 
-Import the Dialog component's required CSS references as follows in `src/App.css`.
+The following CSS files are available in the **../node_modules/@syncfusion** package folder. Add these as references in **src/App.css**.
 
 ```css
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-react-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-react-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-react-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-react-popups/styles/tailwind3.css";
 ```
 
-> The [Custom Resource Generator (CRG)](https://crg.syncfusion.com/) is an online web tool, which can be used to generate the custom script and styles for a set of specific components.
-> This web tool is useful to combine the required component scripts and styles in a single file.
+> To refer **App.css** in the application then import it in the **src/App.tsx** file.
 
-## Render a dialog using utility functions
+## Adding Predefined Dialogs component
 
-The dialog component provides built-in utility functions to render the alert and confirm dialogs with the minimal code.
-The following options are used as an argument on calling the utility functions:
+The React Predefined Dialogs component can be added to the application by following these steps. To get started, add the Predefined Dialogs component to the **src/App.tsx** file using the following code.
 
-| Options   | Description |
-|-----------|-------------|
-| title | Specifies the title of dialog like the [`header`](https://ej2.syncfusion.com/react/documentation/api/dialog/#header) property.|
-| content | Specifies the value that can be displayed in dialog's content area like the [`content`](https://ej2.syncfusion.com/react/documentation/api/dialog/#content) property. |
-| isModal | Specifies the Boolean value whether the dialog can be displayed as modal or non-modal. For more details, refer to the [`isModal`](https://ej2.syncfusion.com/react/documentation/api/dialog/#ismodal) property.|
-| position | Specifies the value where the alert or confirm dialog is positioned within the document. For more details, refer to the [`position`](https://ej2.syncfusion.com/react/documentation/api/dialog/#position) property { X: ‘center’, Y: ‘center’}|
-| okButton | Configures the `OK button` that contains button properties with the click events. `okButton:{ icon:'prefix icon to the button', cssClass:'custom class to the button', click: 'action for OK button click', text: 'Yes' // <-- Default value is 'OK' }`|
-| cancelButton | Configures the `Cancel button` that contains button properties with the click events. `cancelButton:{ icon:'prefix icon to the button', cssClass:'custom class to the button', click: 'action for ‘Cancel’ button click', text: 'No' // <-- Default value is 'Cancel'}`|
-|isDraggable|Specifies the value whether the alert or confirm dialog can be dragged by the user.|
-| showCloseIcon | When set to true, the close icon is shown in the dialog component. |
-|closeOnEscape|When set to true, you can close the dialog by pressing ESC key.|
-| animationSettings |Specifies the animation settings of the dialog component. |
-| cssClass |Specifies the CSS class name that can be appended to the dialog. |
-| zIndex |Specifies the order of the dialog, that is displayed in front or behind of another component. |
-| open |Event which is triggered after the dialog is opened. |
-| Close |Event which is triggered after the dialog is closed. |
-
-## Adding predefined dialogs to the application
-
-Now, you can start adding React predefined dialog to the application. We have added predefined dialog component in `src/App.tsx` file using following code.
+The following predefined dialogs code should be placed in the **src/App.tsx** file.
 
 `[Class-component]`
 
-
-
 ```ts
-
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { DialogUtility } from '@syncfusion/ej2-react-popups';
 import * as React from "react";
@@ -125,36 +93,10 @@ public buttonClick() {
     });
 }
 public render() {
-  return (
-  <div className="App" id='dialog-target'>
-       <ButtonComponent id="alertBtn" cssClass="e-danger" onClick={this.buttonClick.bind(this)}>Alert</ButtonComponent>
-  </div>);
-   }
-}
-export default App;
-
-```
-
-```ts
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import { DialogUtility } from '@syncfusion/ej2-react-popups';
-import * as React from "react";
-class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
-    buttonClick() {
-        dialogObj = DialogUtility.alert({
-            title: 'Low Battery',
-            width: '250px',
-            content: '10% of battery remaining'
-        });
-    }
-    render() {
-        return (<div className="App" id='dialog-target'>
-       <ButtonComponent id="alertBtn" cssClass="e-danger" onClick={this.buttonClick.bind(this)}>Alert</ButtonComponent>
-  </div>);
+    return (
+        <div className="App" id='dialog-target'>
+            <ButtonComponent id="alertBtn" cssClass="e-danger" onClick={this.buttonClick.bind(this)}>Alert</ButtonComponent>
+        </div>);
     }
 }
 export default App;
@@ -162,10 +104,7 @@ export default App;
 
 `[Functional-component]`
 
-
-
 ```ts
-
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { DialogUtility } from '@syncfusion/ej2-react-popups';
 import * as React from "react";
@@ -186,37 +125,17 @@ function App(){
     );
 }
 export default App;
-
-```
-
-```ts
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import { DialogUtility } from '@syncfusion/ej2-react-popups';
-import * as React from "react";
-function App() {
-    function buttonClick() {
-        dialogObj = DialogUtility.alert({
-            title: 'Low Battery',
-            width: '250px',
-            content: '10% of battery remaining'
-        });
-    }
-    return (<div className="App" id='dialog-target'>
-            <ButtonComponent id="alertBtn" cssClass="e-danger" onClick={buttonClick.bind(this)}>Alert</ButtonComponent>
-        </div>);
-}
-export default App;
 ```
 
 ## Run the application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-```
+```bash
 npm run dev
 ```
 
-The below example shows the alert dialog.
+The output appears as follows.
 
 `[Class-component]`
 
@@ -246,7 +165,7 @@ The below example shows the alert dialog.
 
 ## Alert dialog
 
-An alert dialog box used to display an errors, warnings, and information alerts that needs user awareness. The alert dialog is displayed along with the OK button. When user clicks on ‘OK’ button, alert dialog will get closed. Use the following code to render a simple alert dialog in an application.
+An alert dialog box is used to display errors, warnings, or informational alerts that require user awareness. The alert dialog is displayed with an OK button. When the user clicks the OK button, the alert dialog closes. Use the following code to render a simple alert dialog in an application.
 
 `[Class-component]`
 
@@ -276,7 +195,7 @@ An alert dialog box used to display an errors, warnings, and information alerts 
 
 ## Confirm dialog
 
-A confirm dialog box used to displays a specified message along with the ‘OK’ and ‘Cancel’ button. It is used to get approval from the user, and it appears before any critical action. After get approval from the user the dialog will disappear automatically. Use the following code to render a simple confirm dialog in an application.
+A confirm dialog box is used to display a specified message along with OK and Cancel buttons. It is used to get approval from the user before performing any critical action. After receiving approval, the dialog will disappear automatically. Use the following code to render a simple confirm dialog in an application.
 
 `[Class-component]`
 
@@ -306,7 +225,7 @@ A confirm dialog box used to displays a specified message along with the ‘OK�
 
 ## Prompt dialog
 
-A prompt dialog is used to get the input from the user. When the user clicks the ‘OK’ button the input value from the dialog is returned. If the user clicks the ‘Cancel’ button the null value is returned. After getting the input from the user the dialog will disappear automatically.
+A prompt dialog is used to get input from the user. When the user clicks the OK button, the input value from the dialog is returned. If the user clicks the Cancel button, a null value is returned. After receiving input, the dialog will disappear automatically.
 
 `[Class-component]`
 
@@ -333,3 +252,5 @@ A prompt dialog is used to get the input from the user. When the user clicks the
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/predefined-dialogs/prompt-dialog-cs2" %}
+
+> You can also explore our [React Predefined Dialogs component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/predefined-dialogs/default) that shows how to render the Predefined Dialogs in React.

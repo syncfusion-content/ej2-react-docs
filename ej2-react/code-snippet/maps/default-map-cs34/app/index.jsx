@@ -1,4 +1,4 @@
-{% raw %}
+
 
 import { world_map } from 'world-map.ts';
 import { uncountries } from 'data.ts'
@@ -19,4 +19,4 @@ export function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
-{% endraw %}
+ 

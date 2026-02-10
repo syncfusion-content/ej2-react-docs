@@ -1,6 +1,3 @@
-
-
-{% raw %}
 import { world_map } from './world-map';
 import { usa_map } from './usa';
 import * as React from "react";
@@ -18,6 +15,3 @@ export function App() {
 }  
 const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
-
-
-{% endraw %}

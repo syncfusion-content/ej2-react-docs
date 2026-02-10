@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Flask API Backend | Syncfusion.
-description: Learn how to connect Syncfusion React Data Grid to Flask backend for server-side paging, sorting, filtering, searching, and CRUD operations.
+description: Integrate the Syncfusion Angular Grid with a Flask backend for server‑side data handling and CRUD actions.
 control: Custom Binding
 platform: ej2-react
 documentation: ug
@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 **Application architecture:**
 - **Backend**: Flask server (Python) - Handles REST API endpoints, task data CRUD operations, and business logic.
-- **Frontend**: React application - Displays the Syncfusion DataGrid UI with **custom binding** for seamless data binding.
+- **Frontend**: React application - Displays the Syncfusion DataGrid UI with **custom data binding** for seamless data binding.
 - **Data Model**: Task Management System with comprehensive task information.
 
 ## Prerequisites
@@ -291,9 +291,9 @@ def apply_paging(rows, skip, take):
 
 ### GET request endpoint
 
-The Flask GET endpoint retrieves task data with applied filtering, searching, sorting, and paging operations. The endpoint accepts a grid state parameter containing all operation details and returns the result in the standardized format.
+The Flask "GET" endpoint retrieves task data with applied filtering, searching, sorting, and paging operations. The endpoint accepts a grid state parameter containing all operation details and returns the result in the standardized format.
 
-Ensure the response follows a structured format that includes both the current view dataset and the total data count. This approach supports on-demand data loading and enables the client to handle operations such as paging or filtering effectively when using Syncfusion custom binding.
+Ensure the response follows a structured format that includes both the current view dataset and the total data count. This approach supports on-demand data loading and enables the client to handle operations such as paging or filtering effectively when using Syncfusion custom data binding.
 
 The required response format includes:
 
@@ -341,7 +341,7 @@ CRUD operations are handled by the controllers and routed through corresponding 
 
 ### Insert
 
-Insert operation creates a new task record in the dataset. When the Grid user clicks the Add button and submits the new record, this endpoint receives the data and persists it.
+The insert operation creates a new task record in the dataset. When the `Add` button is clicked and the record is submitted, the endpoint receives the data and persists it.
 
 ```python
 @app.post("/tasks")
@@ -359,7 +359,7 @@ The "create_task" function receives the new task data from the client, generates
 
 ### Update
 
-Update operation modifies an existing task record in the dataset. When the Grid user clicks the Edit button, modifies the record, and submits the changes, this endpoint receives the updated data and applies the modifications.
+The update operation modifies an existing task record in the dataset. When the `Edit` button is clicked, the record is changed and submitted, and the endpoint receives the updated data to apply the modifications.
 
 ```python
 @app.put("/tasks/<int:item_id>")
@@ -378,7 +378,7 @@ The "update_task" function locates the existing record by its primary key, repla
 
 ### Delete
 
-Delete operation removes a task record from the dataset. When the Grid user selects a record and clicks the Delete button, this endpoint receives the primary key and removes the corresponding record.
+The delete operation removes a task record from the dataset. When a record is selected and the `Delete` button is clicked, the endpoint receives the primary key and deletes the corresponding record.
 
 ```python
 @app.delete("/tasks/<int:item_id>")
@@ -428,7 +428,7 @@ npm install @syncfusion/ej2-data --save
 
 ### Step 3: Include Syncfusion styles
 
-Include the required CSS files in the **src/index.css** file:
+Include the required CSS files in the (**src/index.css**) file:
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/bootstrap5.3.css';  
@@ -447,7 +447,7 @@ For this project, the "Bootstrap 5.3" theme is applied. Other themes can be sele
 
 ### Step 4: Create the Grid component
 
-Create a new React component in (**client/src/App.tsx**) that renders the Syncfusion Grid. This component will serve as the base for integrating custom binding and data operations.
+Create a new React component in (**client/src/App.tsx**) that renders the Syncfusion Grid. This component will serve as the base for integrating custom data binding and data operations.
 
 ```ts
 import { useEffect, useRef } from 'react';
@@ -473,13 +473,13 @@ export default function App() {
 }
 ```
 
-### Step 5: Integrate Syncfusion React Grid with custom binding
+### Step 5: Integrate Syncfusion React Grid with custom data binding
 
-The Syncfusion React Grid custom databinding feature seamlessly integrates with external API services. When Grid actions such as paging, sorting, filtering, or CRUD operations are performed, requests are sent to the API. The API processes these operations and returns the results in the required format, giving complete control over application-specific workflows and enabling efficient handling of large datasets. The custom databinding feature interacts with backend APIs through two key events.
+The Syncfusion React Grid custom data binding feature seamlessly integrates with external API services. When Grid actions such as paging, sorting, filtering, or CRUD operations are performed, requests are sent to the API. The API processes these operations and returns the results in the required format, giving complete control over application-specific workflows and enabling efficient handling of large datasets. The custom data binding feature interacts with backend APIs through two key events.
 
 - [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datastatechange): Triggered when the Grid performs actions such as paging, sorting, or filtering. It provides the current state details (skip, take, sorted, where, search), which are sent to the API so the request can be processed and data returned in the required `{ result:[], count:100 }` format.
 
-- [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasourcechanged): Triggered when users perform CRUD operations (Create, Update, Delete). It provides the affected record along with the action type, which is sent to the API to execute the corresponding insert, update, or delete operation.
+- [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasourcechanged): Triggered when perform CRUD operations (Create, Update, Delete). It provides the affected record along with the action type, which is sent to the API to execute the corresponding insert, update, or delete operation.
 
 Since the `dataStateChange` event does not fire on the first render, use the React `useEffect` hook to load the initial dataset when the component mounts. In the Grid component, define a "fetchData" function to send the grid state to the Flask API and bind the returned data.
 
@@ -536,10 +536,11 @@ export default function App() {
 }
 ```
 
-This component includes the `useEffect` hook that loads the initial data when the component mounts. The "initialState" object defines the starting grid state with default values for skip (0), take (12), and empty arrays for sorting, filtering, and searching. The "fetchData" function sends the grid state to the Flask API via a GET request and retrieves the data in the required format.
+This component includes the `useEffect` hook that loads the initial data when the component mounts. The "initialState" object defines the starting grid state with default values for skip (0), take (12), and empty arrays for sorting, filtering, and searching. The "fetchData" function sends the grid state to the Flask API via a "GET" request and retrieves the data in the required format.
 
 **API response format:**
-The Grid custom binding feature expects the following response from the backend:
+
+The Grid custom data binding feature expects the following response from the backend:
 
 ```typescript
 { "result": [ /* records to display */ ], "count": 100 }
@@ -547,13 +548,13 @@ The Grid custom binding feature expects the following response from the backend:
 
 This format has already been implemented in the Flask server during the backend setup.
 
-### Step 6: Configure data operations with custom binding
+### Step 6: Configure data operations with custom data binding
 
 The `dataStateChange` event is the primary mechanism for handling Grid state changes like paging, sorting, filtering, and searching. This event is triggered whenever the Grid state changes and provides the current state details that need to be sent to the server.
 
 The event handler is responsible for:
 1. Collecting the current grid state (skip, take, sorted, where, search)
-2. Sending this state to the Flask API via a GET request
+2. Sending this state to the Flask API via a "GET" request
 3. Processing the response and binding data to the Grid
 4. Handling special cases like filter dropdown requests
 
@@ -611,14 +612,14 @@ export default function App() {
 
 The `dataStateChange` event handler collects the current grid state parameters (skip, take, sorted, where, search) from the event arguments and passes them to the "fetchData" function. The response is then bound to the Grid's dataSource. The handler also checks if the request is for filter dropdown choices or search popup data and handles those cases separately by calling the dataSource callback.
 
-### Step 7: Configure CRUD operations with custom binding
+### Step 7: Configure CRUD operations with custom data binding
 
-The `dataSourceChanged` event is triggered when users perform CRUD operations. This event provides the affected record along with the action type, which is sent to the Flask API to execute the corresponding operation.
+The `dataSourceChanged` event is triggered when perform CRUD operations. This event provides the affected record along with the action type, which is sent to the Flask API to execute the corresponding operation.
 
 The event handler is responsible for:
 1. Identifying the type of operation (add, edit, or delete)
 2. Extracting the record data from the event arguments
-3. Sending the appropriate HTTP request (POST for insert, PUT for update, DELETE for delete)
+3. Sending the appropriate HTTP request ("POST" for insert, "PUT" for update, "DELETE" for delete)
 4. Calling `endEdit()` to notify the Grid that the operation is complete
 
 Configure the Grid to use the `dataSourceChanged` event handler by adding it as a property:
@@ -693,7 +694,7 @@ export default function App() {
 }
 ```
 
-The `dataSourceChanged` event handler checks the action type from the event arguments to determine whether a create, update, or delete operation is being performed. For insert operations, a POST request is sent to the "/tasks" endpoint with the new record data. For update operations, a PUT request is sent to "/tasks/{id}" with the modified data. For delete operations, a DELETE request is sent to "/tasks/{id}" to remove the record. After each operation completes successfully, the `endEdit()` method is called to notify the Grid that the operation is complete.
+The `dataSourceChanged` event handler checks the action type from the event arguments to determine whether a create, update, or delete operation is being performed. For insert operations, a POST request is sent to the "/tasks" endpoint with the new record data. For update operations, a "PUT" request is sent to "/tasks/{id}" with the modified data. For delete operations, a DELETE request is sent to "/tasks/{id}" to remove the record. After each operation completes successfully, the `endEdit()` method is called to notify the Grid that the operation is complete.
 
 ### Step 8: Enable Paging
 
@@ -721,7 +722,7 @@ export default function App() {
 }
 ```
 
-The image illustrates how the page state is passed to the `skip` and `take` property of the `dataStateChange` event arguments.
+The image illustrates that the page state is passed to the `skip` and `take` property of the `dataStateChange` event arguments.
 
 ![flaskapi_page](../images/flaskapi_page.png)
 
@@ -748,13 +749,13 @@ export default function App() {
 }
 ```
 
-The image below illustrates how the filter state is passed to the `where` property of the `dataStateChange` event arguments.
+The image below illustrates that the filter state is passed to the `where` property of the `dataStateChange` event arguments.
 
 ![flaskapi_filter](../images/flaskapi_filter.png)
 
 ### Step 10: Enable Searching
 
-The search feature in the Grid allows users to quickly find and filter records by entering keywords. Enable searching by adding "Search" to the Grid's [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) items and injecting the `Toolbar` module.
+The search feature in the Grid allows records to be located and filtered using keywords. Enable searching by adding `Search` to the Grid's [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) items and injecting the `Toolbar` module.
 
 ```ts
 import { GridComponent, Toolbar, Inject, type ToolbarItems } from '@syncfusion/ej2-react-grids';
@@ -774,7 +775,7 @@ export default function App() {
 }
 ```
 
-The image illustrates how the search state is passed to the `search` property of the `dataStateChange` event arguments.
+The image illustrates that the search state is passed to the `search` property of the `dataStateChange` event arguments.
 
 ![flaskapi_search](../images/flaskapi_search.png)
 
@@ -798,7 +799,7 @@ export default function App() {
 }
 ```
 
-The image illustrates how the sort state is passed to the `sorted` property of the `dataStateChange` event arguments.
+The image illustrates that the sort state is passed to the `sorted` property of the `dataStateChange` event arguments.
 
 ![flaskapi_sort](../images/flaskapi_sort.png)
 
@@ -925,11 +926,11 @@ This guide demonstrates:
 2. Setting up and configuring the Flask backend using Python. [🔗](#setting-up-the-flask-backend-using-python)
 3. Performing data operations in server with filtering, searching, sorting, and paging for efficient data processing. [🔗](#perform-data-operations-in-server)
 4. Performing CRUD operations in server with REST endpoints. [🔗](#perform-crud-operations-in-server)
-5. Connecting Syncfusion React Grid with Flask API and configuring Syncfusion Grid with custom binding. [🔗](#connecting-syncfusion-react-grid-with-flask-api)
+5. Connecting Syncfusion React Grid with Flask API and configuring Syncfusion Grid with custom data binding. [🔗](#connecting-syncfusion-react-grid-with-flask-api)
 6. Running the application by starting servers locally and accessing the frontend. [🔗](#run-the-application)
 7. Exploring a complete working sample in the complete sample repository on GitHub. [🔗](#complete-sample-repository)
 
-The application now provides a complete solution for integrating the Syncfusion React Grid with Flask API backend, enabling seamless data operations with a modern, user-friendly interface.
+The application now provides a complete solution for integrating the Syncfusion React Grid with Flask API backend, enabling seamless data operations with a modern interface.
 
 ## See also
 

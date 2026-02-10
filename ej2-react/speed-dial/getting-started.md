@@ -8,24 +8,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Speed Dial Control
+# Getting Started with React Speed Dial component
 
-This section explains how to create a simple Speed Dial and demonstrate the basic usage of the Speed Dial component in an React environment.
+This section explains the steps required to create a simple React Speed Dial component and demonstrate its basic usage in a React environment.
 
-## Dependencies
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
 
-The list of dependencies required to use the Speed Dial component in your application is given below:
+## Setup for local development
 
-```js
-|-- @syncfusion/ej2-react-buttons
-    |-- @syncfusion/ej2-react-base
-    |-- @syncfusion/ej2-base
-    |-- @syncfusion/ej2-buttons
-```
-
-## Installation and Configuration
-
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -34,14 +25,18 @@ To create a new React application, run the following command.
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
+
+![Initial_setup](images/Initial-setup.jpg)
+
+To set up a React application in TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -49,30 +44,39 @@ cd my-app
 npm run dev
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Speed Dial packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
-
-To install Speed Dial component, use the following command
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+To install the Speed Dial component, use the following command
 
 ```bash
 npm install @syncfusion/ej2-react-buttons --save
 ```
 
-## Adding Speed Dial component to the Application
+> The --save will instruct NPM to include the Speed Dial package inside of the **dependencies** section of the package.json.
 
-To include the Speed Dial component in your application import the `SpeedDialComponent` from `ej2-react-buttons` package in `App.tsx`.
+## Adding CSS reference
 
-Add the Speed Dial component in application as shown in below code example.
+The following CSS files are available in the **../node_modules/@syncfusion** package folder. Add these as references in **src/App.css**.
 
-{% raw %}
+```css
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+```
+
+> To refer **App.css** in the application then import it in the **src/App.tsx** file.
+
+## Adding Speed Dial component
+
+The React Speed Dial component can be added to the application by following these steps. To get started, add the Speed Dial component to the **src/App.tsx** file using the following code.
+
+The following speed dial code should be placed in the **src/App.tsx** file.
+
 ```ts
-{ /* Import the Speed Dial.*/ }
 import { SpeedDialComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
 import './App.css';
 
-{ /* To render Speed Dial. */ }
 function App() {
     return (
         <SpeedDialComponent id='speeddial'></SpeedDialComponent>
@@ -80,26 +84,16 @@ function App() {
 }
 export default App;
 ```
-{% endraw %}
 
-## Adding CSS Reference
+## Run the application
 
-Import the Speed Dial component's required CSS references as follows in `src/App.css`.
+Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-```css
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-```
-
-## Running the application
-
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
-
-```
+```bash
 npm run dev
 ```
 
-The following example shows a basic Speed Dial component.
+The output appears as follows.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -111,4 +105,5 @@ The following example shows a basic Speed Dial component.
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/speed-dial/getting-started-cs1" %}
- 
+
+> Refer to the [React Speed Dial](https://www.syncfusion.com/react-components/react-speed-dial) feature tour page for its groundbreaking feature representations. You can also explore our [React Speed Dial component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/speed-dial/default) that shows how to render the Speed Dial in React.
