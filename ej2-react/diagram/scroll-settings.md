@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Scroll Settings in React Diagram Component
 
-The diagram component provides comprehensive scrolling capabilities through both vertical and horizontal scrollbars, as well as mouse wheel navigation. The diagram's [`scrollSettings`](https://helpej2.syncfusion.com/react/documentation/api/diagram/scrollSettingsModel/) enable developers to monitor the current scroll status, viewport dimensions, zoom levels, and programmatically control diagram navigation. These settings are essential for managing large diagrams and providing smooth user interaction experiences.
+The diagram component provides comprehensive scrolling capabilities through both vertical and horizontal scrollbars, as well as mouse wheel navigation. The diagram's [`scrollSettings`](https://ej2.syncfusion.com/react/documentation/api/diagram/scrollsettingsmodel) enable developers to monitor the current scroll status, viewport dimensions, zoom levels, and programmatically control diagram navigation. These settings are essential for managing large diagrams and providing smooth user interaction experiences.
 
 ## Access and Customize Scroll Settings
 
-Scroll settings in a diagram provide access to various properties that control navigation and viewport behavior, including [`horizontalOffset`](https://helpej2.syncfusion.com/react/documentation/api/diagram/scrollSettingsModel/#horizontaloffset), [`verticalOffset`](https://helpej2.syncfusion.com/react/documentation/api/diagram/scrollSettingsModel/#verticaloffset), [`viewPortWidth`](https://helpej2.syncfusion.com/react/documentation/api/diagram/scrollSettingsModel/#viewportwidth), [`viewPortHeight`](https://helpej2.syncfusion.com/react/documentation/api/diagram/scrollSettingsModel/#viewportheight), [`currentZoom`](https://helpej2.syncfusion.com/react/documentation/api/diagram/scrollSettingsModel/#currentzoom), [`zoomFactor`](https://helpej2.syncfusion.com/react/documentation/api/diagram/scrollSettingsModel/#zoomfactor), [`maxZoom`](https://helpej2.syncfusion.com/react/documentation/api/diagram/scrollSettingsModel/#maxzoom), [`minZoom`](https://helpej2.syncfusion.com/react/documentation/api/diagram/scrollSettingsModel/#minzoom), [`scrollLimit`](https://helpej2.syncfusion.com/react/documentation/api/diagram/scrollSettingsModel/#scrolllimit), [`canAutoScroll`](https://helpej2.syncfusion.com/react/documentation/api/diagram/scrollSettingsModel/#canautoscroll), [`autoScrollBorder`](https://helpej2.syncfusion.com/react/documentation/api/diagram/marginModel/), [`padding`](https://helpej2.syncfusion.com/react/documentation/api/diagram/marginModel/), [`scrollableArea`](https://helpej2.syncfusion.com/react/documentation/api/diagram/rect/).
+Scroll settings in a diagram provide access to various properties that control navigation and viewport behavior, including [`horizontalOffset`](https://ej2.syncfusion.com/react/documentation/api/diagram/scrollsettingsmodel#horizontaloffset), [`verticalOffset`](https://ej2.syncfusion.com/react/documentation/api/diagram/scrollsettingsmodel#verticaloffset), [`viewPortWidth`](https://ej2.syncfusion.com/react/documentation/api/diagram/scrollsettingsmodel#viewportwidth), [`viewPortHeight`](https://ej2.syncfusion.com/react/documentation/api/diagram/scrollsettingsmodel#viewportheight), [`currentZoom`](https://ej2.syncfusion.com/react/documentation/api/diagram/scrollsettingsmodel#currentzoom), [`zoomFactor`](https://ej2.syncfusion.com/react/documentation/api/diagram/scrollsettingsmodel#zoomfactor), [`maxZoom`](https://ej2.syncfusion.com/react/documentation/api/diagram/scrollsettingsmodel#maxzoom), [`minZoom`](https://ej2.syncfusion.com/react/documentation/api/diagram/scrollsettingsmodel#minzoom), [`scrollLimit`](https://ej2.syncfusion.com/react/documentation/api/diagram/scrollsettingsmodel#scrolllimit), [`canAutoScroll`](https://ej2.syncfusion.com/react/documentation/api/diagram/scrollsettingsmodel#canautoscroll), [`autoScrollBorder`](https://ej2.syncfusion.com/react/documentation/api/diagram/marginmodel), [`padding`](https://ej2.syncfusion.com/react/documentation/api/diagram/marginmodel), [`scrollableArea`](https://ej2.syncfusion.com/react/documentation/api/diagram/rect).
 
-These properties enable developers to read and adjust the scroll status, scroll offsets, zoom levels, and scrolling behavior. For a comprehensive overview of all available properties, refer to the[`Scroll Settings`](https://helpej2.syncfusion.com/react/documentation/api/diagram/scrollSettingsModel/)
+These properties enable developers to read and adjust the scroll status, scroll offsets, zoom levels, and scrolling behavior. For a comprehensive overview of all available properties, refer to the[`Scroll Settings`](https://ej2.syncfusion.com/react/documentation/api/diagram/scrollsettingsmodel)
 
 ## Define Scroll Offset
 
@@ -41,12 +41,12 @@ The diagram provides multiple methods to update scroll offsets during runtime:
 
 * **Scrollbar**: Use the horizontal and vertical scrollbars of the diagram for direct navigation.
 * **Mouse wheel**: Scroll vertically with the mouse wheel. Hold the Shift key while scrolling to scroll horizontally.
-* **Pan Tool**: Activate the ZoomPan [`tool`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTools/) in the diagram to scroll by panning.
+* **Pan Tool**: Activate the ZoomPan [`tool`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramtools) in the diagram to scroll by panning.
 * **Touch**: Use touch pad gestures for smooth scrolling on touch-enabled devices.
 
 ### Programmatically Update Scroll Offset
 
-The scroll offsets of the diagram can be programmatically modified by customizing the `horizontalOffset` and `verticalOffset` of [`Scroll Settings`](https://helpej2.syncfusion.com/react/documentation/api/diagram/scrollSettingsModel/)at runtime. The following code demonstrates how to change the scroll offsets dynamically.
+The scroll offsets of the diagram can be programmatically modified by customizing the `horizontalOffset` and `verticalOffset` of [`Scroll Settings`](https://ej2.syncfusion.com/react/documentation/api/diagram/scrollsettingsmodel)at runtime. The following code demonstrates how to change the scroll offsets dynamically.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -79,11 +79,11 @@ Keyboard shortcuts offer a quick and efficient way to zoom the diagram without u
 
 ### Programmatically Update Zoom
 
-The current zoom level of the diagram can be programmatically modified by utilizing the [`zoomTo`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#zoomto) public method.
+The current zoom level of the diagram can be programmatically modified by utilizing the [`zoomTo`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#zoomto) public method.
 
 #### ZoomOptions
 
-The [`zoomTo`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#zoomto) method takes one parameter [`zoomOptions`](https://helpej2.syncfusion.com/react/documentation/api/diagram/zoomOptions/). In that zoomOptions we can specify the [`focusPoint`](https://helpej2.syncfusion.com/react/documentation/api/diagram/pointModel/), [`type`](https://helpej2.syncfusion.com/react/documentation/api/diagram/zoomTypes/) and [`zoomFactor`](https://helpej2.syncfusion.com/react/documentation/api/diagram/zoomOptions/#zoomfactor)
+The [`zoomTo`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#zoomto) method takes one parameter [`zoomOptions`](https://ej2.syncfusion.com/react/documentation/api/diagram/zoomoptions). In that zoomOptions we can specify the [`focusPoint`](https://ej2.syncfusion.com/react/documentation/api/diagram/pointmodel), [`type`](https://ej2.syncfusion.com/react/documentation/api/diagram/zoomtypes) and [`zoomFactor`](https://ej2.syncfusion.com/react/documentation/api/diagram/zoomoptions#zoomfactor)
 
 The following example demonstrates how to zoom in and zoom out of the diagram using the zoomTo method:
 
@@ -110,13 +110,13 @@ The autoscroll behavior activates automatically when any of the following action
 - Connector control point editing.
 - Rubber band selection.
 
-The client-side event [`ScrollChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iScrollChangeEventArgs/) is triggered when autoscroll occurs, enabling custom behavior implementation. Refer to the [`scrollChange-event`](https://ej2.syncfusion.com/react/documentation/diagram/scroll-settings#scroll-change-event) for more information.
+The client-side event [`ScrollChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/iscrollchangeeventargs) is triggered when autoscroll occurs, enabling custom behavior implementation. Refer to the [`scrollChange-event`](https://ej2.syncfusion.com/react/documentation/diagram/scroll-settings#scroll-change-event) for more information.
 
-Autoscroll behavior can be enabled or disabled using the  [`canAutoScroll`](https://helpej2.syncfusion.com/react/documentation/api/diagram/scrollSettingsModel/#canautoscroll) property of the diagram.
+Autoscroll behavior can be enabled or disabled using the  [`canAutoScroll`](https://ej2.syncfusion.com/react/documentation/api/diagram/scrollsettingsmodel#canautoscroll) property of the diagram.
 
 ### Autoscroll border
 
-The autoscroll border defines the maximum distance from the mouse pointer to the diagram edge that triggers autoscroll behavior. By default, this distance is set to 15 pixels for all sides (left, right, top, and bottom). This distance can be customized using the[`autoScrollBorder`](https://helpej2.syncfusion.com/react/documentation/api/diagram/marginModel/) property of the scroll settings.
+The autoscroll border defines the maximum distance from the mouse pointer to the diagram edge that triggers autoscroll behavior. By default, this distance is set to 15 pixels for all sides (left, right, top, and bottom). This distance can be customized using the[`autoScrollBorder`](https://ej2.syncfusion.com/react/documentation/api/diagram/marginmodel) property of the scroll settings.
 
 The following example demonstrates how to configure autoscroll:
 
@@ -135,13 +135,13 @@ N> To use auto scroll the scrollLimit should be set as 'Infinity'
 
 ### Controlling Autoscroll Speed
 
-The frequency of automatic scrolling in the Diagram component during autoscroll behavior can be precisely controlled. The scrolling frequency can be adjusted from slow and smooth to quick and rapid to suit different requirements. Configure this by setting a value in milliseconds to the[`autoScrollFrequency`](https://helpej2.syncfusion.com/react/documentation/api/diagram/scrollSettingsModel/#autoscrollfrequency) property within the scrollSettings, allowing precise control over autoscroll timing.
+The frequency of automatic scrolling in the Diagram component during autoscroll behavior can be precisely controlled. The scrolling frequency can be adjusted from slow and smooth to quick and rapid to suit different requirements. Configure this by setting a value in milliseconds to the[`autoScrollFrequency`](https://ej2.syncfusion.com/react/documentation/api/diagram/scrollsettingsmodel#autoscrollfrequency) property within the scrollSettings, allowing precise control over autoscroll timing.
 
 ![AutoscrollFrequency GIF](images/AutoscrollFrequency.gif)
 
 ## Scroll limit
 
-The [`scrollLimit`](https://helpej2.syncfusion.com/react/documentation/api/diagram/scrollSettingsModel/#scrolllimit) allows you to define the scrollable region of the diagram. It includes the following options:
+The [`scrollLimit`](https://ej2.syncfusion.com/react/documentation/api/diagram/scrollsettingsmodel#scrolllimit) allows you to define the scrollable region of the diagram. It includes the following options:
 
 * **Infinity**: Allows scrolling in all directions without any restriction.
 * **Diagram**: Allows scrolling within the diagram region only.
@@ -151,7 +151,7 @@ The `scrollLimit` property in scroll settings helps to define these scrolling bo
 
 ### Scrollable Area
 
-Scrolling beyond a particular rectangular area can be restricted by using the [`scrollableArea`](https://helpej2.syncfusion.com/react/documentation/api/diagram/rect/) property in [`scrollSettings`](https://helpej2.syncfusion.com/react/documentation/api/diagram/scrollSettingsModel/). To restrict scrolling beyond a custom region, set the scrollLimit to "limited" and define the desired bounds in `scrollableArea` property.
+Scrolling beyond a particular rectangular area can be restricted by using the [`scrollableArea`](https://ej2.syncfusion.com/react/documentation/api/diagram/rect) property in [`scrollSettings`](https://ej2.syncfusion.com/react/documentation/api/diagram/scrollsettingsmodel). To restrict scrolling beyond a custom region, set the scrollLimit to "limited" and define the desired bounds in `scrollableArea` property.
 
 The following code example illustrates how to specify the scroll limit and customize the scrollable area.
 
@@ -168,16 +168,16 @@ The following code example illustrates how to specify the scroll limit and custo
 
 ## Scroll Padding
 
-The [`padding`](https://helpej2.syncfusion.com/react/documentation/api/diagram/marginModel/) property of the scroll settings allows you to extend the scrollable region based on the scroll limit. This property is useful for adding extra space around the diagram content, making it easier to navigate and interact with elements near the edges.
+The [`padding`](https://ej2.syncfusion.com/react/documentation/api/diagram/marginmodel) property of the scroll settings allows you to extend the scrollable region based on the scroll limit. This property is useful for adding extra space around the diagram content, making it easier to navigate and interact with elements near the edges.
 
 The following code example illustrates how to set scroll padding for the diagram region:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/undoredo/es5Connect-cs3/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/es5Connect-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/undoredo/es5Connect-cs3/app/index.tsx %}
+{% include code-snippet/diagram/reactCurlyExamples/es5Connect-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -185,7 +185,7 @@ The following code example illustrates how to set scroll padding for the diagram
 
 ## Reset scroll
 
-The [`reset`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#reset) method resets both the zoom level and scroller offsets to their default values. This is useful for returning the diagram to its initial state after user interactions.
+The [`reset`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#reset) method resets both the zoom level and scroller offsets to their default values. This is useful for returning the diagram to its initial state after user interactions.
 
 ``` javascript
 //Resets the scroll and zoom to default values
@@ -195,7 +195,7 @@ diagramInstance.reset();
 
 ## Update Viewport Dimensions
 
-The [`updateViewPort`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#updateviewport) method is used to update the dimensions of the diagram viewport. This method is typically called when the diagram container size changes or when dynamic resizing is required.
+The [`updateViewPort`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#updateviewport) method is used to update the dimensions of the diagram viewport. This method is typically called when the diagram container size changes or when dynamic resizing is required.
 
 
 ```javascript
@@ -208,7 +208,7 @@ diagramInstance.updateViewPort();
 
 ### Scroll Change Event
 
-The [`scrollChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iScrollChangeEventArgs/) event is triggered whenever the scrollbar is updated. This can occur during actions such as zooming in, zooming out, using the mouse wheel, or panning. The following example shows how to capture the `scrollChange` event.
+The [`scrollChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/iscrollchangeeventargs) event is triggered whenever the scrollbar is updated. This can occur during actions such as zooming in, zooming out, using the mouse wheel, or panning. The following example shows how to capture the `scrollChange` event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

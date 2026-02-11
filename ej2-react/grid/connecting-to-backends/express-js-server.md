@@ -15,7 +15,7 @@ domainurl: ##DomainURL##
 **Application architecture:**
 
 - **Backend**: Express.js server (Node.js) - Handles REST API endpoints, patient data CRUD operations, and business logic.
-- **Frontend**: React application - Displays the Syncfusion DataGrid UI with `UrlAdaptor` for seamless data binding.
+- **Frontend**: React application - Displays the Syncfusion Grid UI with `UrlAdaptor` for seamless data binding.
 - **Data Model**: Hospital Patient Management System with comprehensive patient information.
 
 ## Prerequisites
@@ -39,7 +39,7 @@ For this implementation, an Express.js server is created to manage a **Hospital 
 
 **Create project root folder:**
 
-Open a terminal ( for example, an integrated terminal in Visual Studio Code, Windows Command prompt opened with <kbd>Win+R</kbd>, or macOS Terminal launched with <kbd>Cmd+Space</kbd> ) and run the following commands.
+Open a terminal ( for example, an integrated terminal in Visual Studio Code, Windows Command prompt opened with <kbd>Win+R</kbd>, or macOS terminal launched with <kbd>Cmd+Space</kbd> ) and run the following commands.
 
 ```bash
 mkdir ej2-react-grid-with-express-js
@@ -537,9 +537,9 @@ For this project, the "Material 3" theme is applied. Other themes can be selecte
 
 ### Step 4: Configure DataManager for REST API communication
 
-The Syncfusion [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) acts as a communication layer between the React Grid and backend services. It sends all Grid operations such as reading data, sorting, filtering, searching, paging, and performing CRUD actions—to the server in a standardized format.
+The Syncfusion [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) acts as a communication layer between the React Grid and backend services. It sends all grid operations such as reading data, sorting, filtering, searching, paging, and performing CRUD actions—to the server in a standardized format.
 
-The [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#url-adaptor) is a built‑in adaptor that formats requests for REST‑style endpoints, such as the Express.js REST Framework API. It defines the request structure and processes the server responses. The `UrlAdaptor` converts Grid actions into HTTP POST requests and handles the JSON responses returned by the server, enabling the Grid to manage and display data seamlessly.
+The [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#url-adaptor) is a built‑in adaptor that formats requests for REST‑style endpoints, such as the Express.js REST Framework API. It defines the request structure and processes the server responses. The `UrlAdaptor` converts grid actions into HTTP POST requests and handles the JSON responses returned by the server, enabling the grid to manage and display data seamlessly.
 
 When using `DataManager` with `UrlAdaptor`, the server is expected to return a specific response structure:
  
@@ -598,7 +598,7 @@ export default PatientsGrid;
 
 ### Enable paging
 
-The paging feature divides Grid records into multiple pages, improving performance and usability when handling large datasets. Enable paging by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid#allowpaging) property to "true" and injecting the `Page` module. Without the `Page` module, the pager will not render. Customize pager behavior using the [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid#pagesettings) property.
+The paging feature divides Grid records into multiple pages, improving performance and usability when handling large datasets. Enable paging by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid#allowpaging) property to `true` and injecting the `Page` module. Without the `Page` module, the pager will not render. Customize pager behavior using the [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid#pagesettings) property.
 
 ```ts
 
@@ -626,7 +626,7 @@ When paging is performed in the Grid, a request is sent to the server with the f
 
 ### Enable filtering
 
-The filtering feature enables searching and refining Grid records based on column values. Enable filtering by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) property to "true" and injecting the `Filter` module. Without the `Filter` module, the filter bar will not render. Customize filtering options using the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid#filtersettings) property.
+The filtering feature enables searching and refining grid records based on column values. Enable filtering by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) property to `true` and injecting the `Filter` module. Without the `Filter` module, the filter bar will not render. Customize filtering options using the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid#filtersettings) property.
 
 ```ts
 import React from 'react';
@@ -683,7 +683,7 @@ When searching is performed in the Grid, a request is sent to the server with th
 
 ### Enable sorting
 
-The sorting feature allows ordering Grid records by clicking column headers. Enable sorting by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) property to "true" and injecting the `Sort` module. Without the `Sort` module, clicking headers will not sort the data. Customize sorting behavior using the [sortSettings](https://ej2.syncfusion.com/react/documentation/api/grid#sortsettings) property.
+The sorting feature allows ordering grid records by clicking column headers. Enable sorting by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) property to `true` and injecting the `Sort` module. Without the `Sort` module, clicking headers will not sort the data. Customize sorting behavior using the [sortSettings](https://ej2.syncfusion.com/react/documentation/api/grid#sortsettings) property.
 
 
 ```ts
@@ -712,9 +712,9 @@ When sorting is performed in the Grid, a request is sent to the server with the 
 
 ### Enable CRUD actions
 
-Enabling editing functionality within the grid requires configuring the [allowEditing](https://ej2.syncfusion.com/react/documentation/api/grid/editSettingsModel#allowediting), [allowAdding](https://ej2.syncfusion.com/react/documentation/api/grid/editSettingsModel#allowadding), and [allowDeleting](https://ej2.syncfusion.com/react/documentation/api/grid/editSettingsModel#allowdeleting) properties within the [editSettings](https://ej2.syncfusion.com/react/documentation/api/grid#editsettings)  to "true".
+Enabling editing functionality within the grid requires configuring the [allowEditing](https://ej2.syncfusion.com/react/documentation/api/grid/editSettingsModel#allowediting), [allowAdding](https://ej2.syncfusion.com/react/documentation/api/grid/editSettingsModel#allowadding), and [allowDeleting](https://ej2.syncfusion.com/react/documentation/api/grid/editSettingsModel#allowdeleting) properties within the [editSettings](https://ej2.syncfusion.com/react/documentation/api/grid#editsettings)  to `true`.
 
-Editing feature requires a primary key column for CRUD operations. To define the primary key, set [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) to "true" in particular column.
+Editing feature requires a primary key column for CRUD operations. To define the primary key, set [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) to `true` in particular column.
 
 The [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property of the Grid component specifies the items displayed in the grid’s toolbar. By adding items such as `Edit`, `Add`, `Delete`, `Update`, and `Cancel` to the `toolbar` property, the corresponding edit options become available in the `toolbar`.
 
@@ -840,7 +840,7 @@ This guide covers the following key areas:
 3. Handle server-side filtering, searching, sorting, and paging for efficient data processing. [🔗](#perform-data-operations-in-server)
 4. Handle server-side CRUD actions. [🔗](#perform-crud-operations-in-server) 
 5. Start servers locally and access the backend. [🔗](#run-the-server-application)
-6. Connecting Syncfusion React Grid [🔗](#connecting-syncfusion-react-grid-with-express-js) - Create a React project and configure Syncfusion Grid with UrlAdaptor.
+6. Connecting Syncfusion React Grid [🔗](#connecting-syncfusion-react-grid-with-express-js)
 7. Start servers locally and access the frontend. [🔗](#run-the-application)
 8. Explore a complete working sample on GitHub. [🔗](#complete-sample-repository)
 

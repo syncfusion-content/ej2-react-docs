@@ -230,7 +230,7 @@ Here are the details of **DataManagerInput** parameter type.
 
 | Parameters       | Description                                                                     |
 | ---------------- | ------------------------------------------------------------------------------- |
-| `requiresCounts` | If it is "true" then the total count of records will be included in response. |
+| `requiresCounts` | If it is `true` then the total count of records will be included in response. |
 | `skip`           | Holds the number of records to skip.                                            |
 | `take`           | Holds the number of records to take.                                            |
 | `sorted`         | Contains details about current sorted column and its direction.                 |
@@ -395,7 +395,7 @@ Once the dependencies are installed, the required CSS files are made available i
 @import '@syncfusion/ej2-react-grids/styles/tailwind3.css';
 ```
 
-For this project, the `Tailwind3` theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation to learn more about theming and customization options.
+For this project, the "Tailwind3" theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation to learn more about theming and customization options.
 
 ### Step 3: Configure GraphQL Adaptor
 
@@ -584,7 +584,7 @@ During pagination, the `GraphQLAdaptor` sends the paging details though "skip" a
 
 **Instructions:**
 
-1. Set the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowpaging) property "true" to enable paging in the Grid.
+1. Set the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowpaging) property `true` to enable paging in the Grid.
 
 2. The page size is configured with [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#pagesettings) property.
 
@@ -656,7 +656,7 @@ The image illustrates the paging details (`skip` and `take`) included in the ser
  
 The resolver processes the Grid’s `skip` and `take` parameters and returns the total count along with the paged result. Paging feature is now active with "10" records per page.
 
-> To use [Row Virtualization](https://ej2.syncfusion.com/react/documentation/grid/scrolling/virtual-scrolling), inject the `VirtualScroll` service and set [enableVirtualization](https://ej2.syncfusion.com/react/documentation/grid/scrolling/virtual-scrolling) property to "true". When virtualization is enabled, the grid automatically sends the correct "skip" and "take" values to the server.The resolver does not require any additional modifications. The Grid inherently handles all virtual block requests, ensuring the expected behavior without additional configuration.
+> To use [Row Virtualization](https://ej2.syncfusion.com/react/documentation/grid/scrolling/virtual-scrolling), inject the `VirtualScroll` service and set [enableVirtualization](https://ej2.syncfusion.com/react/documentation/grid/scrolling/virtual-scrolling) property to `true`. When virtualization is enabled, the grid automatically sends the correct "skip" and "take" values to the server.The resolver does not require any additional modifications. The Grid inherently handles all virtual block requests, ensuring the expected behavior without additional configuration.
 
 ### Step 6: Implement searching feature
 
@@ -747,7 +747,7 @@ The `GraphQLAdaptor` automatically passes the sorting details to the server thro
 
 **Instructions:**
 
-1. Set the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to "true".
+1. Set the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to `true`.
 
     ```ts
     <GridComponent
@@ -837,7 +837,7 @@ The `GraphQLAdaptor` automatically passes the filter conditions to the server th
 
  **Instructions:**
  
-1. Set the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowfiltering) property to "true".
+1. Set the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowfiltering) property to `true`.
 
     ```ts
     const filterSettings: FilterSettingsModel = { type: 'Excel' };
@@ -980,7 +980,7 @@ The `GraphQLAdaptor` automatically passes the filter conditions to the server th
     | ``predicateCollection`` | The normalized top-level filter group object containing condition, ignoreCase, and predicates.|
     | ``predicateCollection.condition`` | Logical operator to combine child predicates at the current level: "and" or "or" (defaults to "and"). |
     | ``predicate.Value`` | The value to compare against. |
-    | ``predicateCollection.ignoreCase`` | Whether string comparisons ignore case (defaults to true if not present). |
+    | ``predicateCollection.ignoreCase`` | Whether string comparisons ignore case (defaults to `true` if not present). |
     | ``predicateCollection.predicates[]`` | Array of predicate entries; each entry can be a simple predicate or a complex (nested) group. |
     | ``p.isComplex`` | Flag indicating a nested group that contains its own predicates (processed recursively). |
     | ``p.field`` | Column/field name to filter (e.g., "productName", "category"). |
@@ -1023,7 +1023,7 @@ The resolver handles the filter conditions passed from the Grid and returns the 
 
 CRUD operations (Create, Read, Update, Delete) are supported in the Grid for managing data. The Grid provides built-in dialogs and buttons to perform these operations, while the backend resolvers handle the actual data modifications.
 
-Enable editing operations in the Grid by configuring `editSettings` and setting `allowEditing`, `allowAdding`, and `allowDeleting` to "true".
+Enable editing operations in the Grid by configuring `editSettings` and setting `allowEditing`, `allowAdding`, and `allowDeleting` to `true`.
 
 The `getMutation` function in the `GraphQLAdaptor` handles the Grid CRUD actions by sending the appropriate mutation for each action (insert, update, or delete) to the GraphQL server.
 
@@ -1177,7 +1177,7 @@ When the `Delete` button is clicked, a row is selected for deletion, and the act
 
 ![GraphQL-Nodejs-deleting](../images/GraphQL-Nodejs-deleting.png)
 
-> Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) for the Grid component. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property is set to "true" for a specific Grid Column which has unique values.
+> Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) for the Grid component. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property is set to `true` for a specific Grid Column which has unique values.
 
 ## Running the application
 
@@ -1205,7 +1205,7 @@ Open a terminal or Command Prompt. Run the server application first, then start 
 
 For a complete working implementation of this example, refer to the following GitHub repository:
  
-[Syncfusion Grid with GraphQL Sample](https://github.com/SyncfusionExamples/Performing-data-and-CRUD-operations-in-ej2-react-grid-using-GraphQLAdaptor)
+[Syncfusion React Grid with GraphQL Sample](https://github.com/SyncfusionExamples/Performing-data-and-CRUD-operations-in-ej2-react-grid-using-GraphQLAdaptor)
 
 ## Summary
 

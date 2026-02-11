@@ -185,7 +185,7 @@ root.render(<App />);
 
 A legend can be displayed with Azure Maps to provide visual context for markers, shapes, or data classifications. The legend is enabled by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel#visible) property of [legendSettings](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel) to **true**. The legend can be configured to display marker shapes, custom icons, and interactive toggle functionality for controlling layer visibility.
 
-
+{% raw %}
 
 ```ts
 
@@ -207,8 +207,8 @@ export function App() {
                   border: {
                     color: 'green',
                     width: 2,
-                  },
-                },
+                  }
+                }
               }}
             >
               <Inject services={[Marker, Legend]} />
@@ -232,4 +232,5 @@ const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 ```
- 
+
+{% endraw %}

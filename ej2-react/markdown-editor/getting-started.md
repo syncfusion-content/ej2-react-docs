@@ -61,7 +61,7 @@ To create Markdown Editor with additional features, inject the required modules.
 
 These modules should be injected into the `services` section of the component as shown below:
 
-```tsx
+```typescript
 <RichTextEditorComponent >
       <Inject services={[MarkdownEditor,Image, Link, Toolbar]} />
 </RichTextEditorComponent>
@@ -90,7 +90,7 @@ Place the following Markdown Editor code in the **src/App.tsx**.
 
 Configure the toolbar with the tools using items field of the [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor#toolbarsettings) property as your application.
 
-```tsx 
+```typescript
 import { MarkdownEditor, Inject, RichTextEditorComponent, Toolbar, Link, Image, Table } from '@syncfusion/ej2-react-richtexteditor';
 
 function App() {

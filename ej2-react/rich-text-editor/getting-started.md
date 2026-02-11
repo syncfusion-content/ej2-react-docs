@@ -69,7 +69,7 @@ To create Rich Text Editor with additional features, inject the required modules
 
 These modules should be injected into the `services` section of the component as shown below:
 
-```tsx
+```typescript
 
 <RichTextEditorComponent>
       <Inject services={[HtmlEditor,Image, Link, Toolbar, QuickToolbar]} />
@@ -98,7 +98,7 @@ Now, you can start adding React Rich Text Editor component in the application. F
 
 Configure the toolbar with the tools using items field of the toolbarSettings property as your application requires.
 
-```tsx
+```typescript
 import { HtmlEditor, Inject, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
 import * as React from 'react';
 

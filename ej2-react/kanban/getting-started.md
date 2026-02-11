@@ -66,7 +66,7 @@ Start adding the required components to the application. Add the Kanban componen
 
 * Then, add the Kanban component in the application using the following code sample.
 
-```tsx
+```typescript
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-react-kanban";
