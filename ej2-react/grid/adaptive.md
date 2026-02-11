@@ -14,11 +14,9 @@ The Grid user interface (UI) was redesigned to provide an optimal viewing experi
 
 ## Render adaptive dialogs
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid offers a valuable feature for rendering adaptive dialogs, specifically designed to enhance the user experience on smaller screens. This feature proves especially useful for optimizing the interface on devices with limited screen real estate. The functionality is achieved by enabling the [enableAdaptiveUI](https://ej2.syncfusion.com/react/documentation/api/grid/#enableadaptiveui) property, allowing the grid to render filter, sort, and edit dialogs in full-screen mode.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid offers a valuable feature for rendering adaptive dialogs, specifically designed to enhance usability on smaller screens. This feature proves especially useful for optimizing the interface on devices with limited screen real estate. The functionality is achieved by enabling the [enableAdaptiveUI](https://ej2.syncfusion.com/react/documentation/api/grid#enableadaptiveui) property, allowing the grid to render filter, sort, and edit dialogs in full-screen mode.
 
 Additionally, apply the `e-bigger` class to the grid's parent element to enable the adaptive view.
-
-The following sample demonstrates how to enable and utilize adaptive dialogs in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -39,11 +37,9 @@ The following sample demonstrates how to enable and utilize adaptive dialogs in 
 
 ## Vertical row rendering
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid introduces the feature of vertical row rendering, allowing you to display row elements in a vertical order. This is particularly useful for scenarios where a vertical presentation enhances data visibility. This is achieved by setting the [rowRenderingMode](https://ej2.syncfusion.com/react/documentation/api/grid#rowrenderingmode) property to the value **Vertical**.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid introduces vertical row rendering, which displays row elements in a vertical order. This presentation enhances data visibility in scenarios where a vertical layout is preferable. Set the [rowRenderingMode](https://ej2.syncfusion.com/react/documentation/api/grid#rowrenderingmode) property to `Vertical`.
 
 >The default row rendering mode is **Horizontal**.
-
-The following sample demonstrates how to dynamically change the row rendering mode between **Vertical** and **Horizontal** based on a DropDownList selection:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -196,7 +192,7 @@ export default App;
 
  {% previewsample "page.domainurl/code-snippet/grid/adaptive-cs2" %}
 
-> * [enableAdaptiveUI](https://ej2.syncfusion.com/react/documentation/api/grid/#enableadaptiveui) property must be enabled for vertical row rendering.
+> [enableAdaptiveUI](https://ej2.syncfusion.com/react/documentation/api/grid#enableadaptiveui) property must be enabled for vertical row rendering.
 
 ### Supported features by vertical row rendering
 
@@ -209,7 +205,7 @@ The following features are only supported in vertical row rendering:
 * Dialog Editing
 * Aggregate
 * Infinite scroll
-* Toolbar - Options like **Add**, **Filter**, **Sort**, **Edit**, **Delete**, **Search**, and **Toolbar template** are available when their respective features are enabled. The toolbar dynamically includes a three-dotted icon, containing additional features like **ColumnChooser**, **Print**, **PdfExport**, **ExcelExport**, or **CsvExport**, once these features are enabled. Please refer to the following snapshot.
+* Toolbar - Options like `Add`, `Filter`, `Sort`, `Edit`, `Delete`, `Search` and `toolbarTemplate` are available when their respective features are enabled. The toolbar dynamically includes a three-dotted icon, containing additional features like `ColumnChooser`, `Print`, `PdfExport`, `ExcelExport`, or `CsvExport`, once these features are enabled. Please refer to the following snapshot.
 
 ![VerticalmodeColumnMenu](./images/VerticalmodeColumnMenu.gif)
 
@@ -217,13 +213,13 @@ A snapshot of the adaptive grid displaying enabled paging along with a pager dro
 
 ![AdaptivePagerDropdown](./images/PagerDropdown_Adaptive.gif)
 
-> The Column Menu feature, which includes grouping, sorting, autofit, filter, and column chooser, is exclusively supported for the Grid in **Horizontal** [rowRenderingMode](https://ej2.syncfusion.com/react/documentation/api/grid#rowRenderingMode/).
+> The Column Menu feature, which includes grouping, sorting, autofit, filter, and column chooser, is exclusively supported for the Grid in **Horizontal** [rowRenderingMode](https://ej2.syncfusion.com/react/documentation/api/grid#rowRenderingMode).
 
 ## Rendering an adaptive layout for smaller screens alone
 
-By default, adaptive UI layout is rendered in both mobile devices and desktop mode too while setting the [enableAdaptiveUI](https://ej2.syncfusion.com/react/documentation/api/grid/#enableadaptiveui) property as **true**. Now the DataGrid component has an option to render an adaptive layout only for mobile screen sizes. This can be achieved by specifying the `AdaptiveUIMode` property value as `Mobile`. The default value of the `AdaptiveUIMode` property is "Both".
+By default, adaptive UI layout is rendered in both mobile devices and desktop mode too while setting the [enableAdaptiveUI](https://ej2.syncfusion.com/react/documentation/api/grid#enableadaptiveui) property as `true`. Now the DataGrid component has an option to render an adaptive layout only for mobile screen sizes. This can be achieved by specifying the `AdaptiveUIMode` property value as `Mobile`. The default value of the `AdaptiveUIMode` property is `Both`.
 
-> The [rowRenderingMode](https://ej2.syncfusion.com/react/documentation/api/grid#rowrenderingmode) property is rendered on the adaptive layout based on the `AdaptiveUIMode` property.
+> The [rowRenderingMode](https://ej2.syncfusion.com/react/documentation/api/grid#rowRenderingMode) property is rendered on the adaptive layout based on the `AdaptiveUIMode` property.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

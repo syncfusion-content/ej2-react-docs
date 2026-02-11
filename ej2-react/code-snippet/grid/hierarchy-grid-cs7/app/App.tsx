@@ -7,7 +7,6 @@ import { data, employeeData } from './datasource';
 import {DataManager,Query} from '@syncfusion/ej2-data';
 
 function App() {
-  let grid: Grid | null;
   let childGridOptions : GridModel = {
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
@@ -27,8 +26,7 @@ function App() {
     args.childGrid.dataSource = matchedData;
   };
     return (<div>
-    <GridComponent  dataSource={employeeData} childGrid={childGridOptions} height={265}
-        ref={g => grid = g} detailDataBound={detailDataBound}>
+    <GridComponent  dataSource={employeeData} childGrid={childGridOptions} height={265} detailDataBound={detailDataBound}>
       <ColumnsDirective>
         <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign="Right"/>
         <ColumnDirective field='FirstName' headerText='First Name' width='150'/>

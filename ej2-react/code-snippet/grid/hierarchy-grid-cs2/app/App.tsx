@@ -29,8 +29,8 @@ function App() {
     }
   }
   return (<div>
-    <ButtonComponent onClick={expandHandler}>ExpandAll</ButtonComponent>
-    <ButtonComponent onClick={collapseHandler}>CollapseAll</ButtonComponent>
+    <ButtonComponent id="expandAll" onClick={expandHandler}>ExpandAll</ButtonComponent>
+    <ButtonComponent id="collapseAll" onClick={collapseHandler}>CollapseAll</ButtonComponent>
     <GridComponent dataSource={employeeData} childGrid={childGridOptions} height={265}
       ref={g => grid = g}>
       <ColumnsDirective>
@@ -40,6 +40,7 @@ function App() {
         <ColumnDirective field='Country' headerText='Country' width='150' />
       </ColumnsDirective>
       <Inject services={[DetailRow]} />
-    </GridComponent></div>)
+    </GridComponent></div>
+  )
 };
 export default App;

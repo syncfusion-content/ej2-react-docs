@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Filtering in React Grid component | Syncfusion
+title: React Grid - Filtering | Syncfusion
 description: Learn here all about Filtering in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Filtering 
 platform: ej2-react
@@ -10,13 +10,27 @@ domainurl: ##DomainURL##
 
 # Filtering in React Grid component
 
-Filtering is a powerful feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component that enables you to selectively view data based on specific criteria. It allows you to narrow down large datasets and focus on the information you need, thereby enhancing data analysis and decision-making.
+Filtering is a powerful feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component that enables selective viewing of data based on specific criteria. It allows narrowing down large datasets to focus on relevant information, thereby enhancing data analysis and decision-making.
 
-To use filter, inject **Filter** module in the grid.
+## Set up filtering
 
-To enable filtering in the Grid, you need to set the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) property of the Grid component to true. Once filtering is enabled, you can configure various filtering options through the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings) property of the Grid component. This property allows you to define the behavior and appearance of the filter.
+Before using filtering in the Grid, understand that the component needs the **Filter module** to unlock all filtering features. 
 
-Here is an example that demonstrates the default filtering feature of the grid:
+Inject the [Filter](https://ej2.syncfusion.com/react/documentation/api/grid/filter) module into the Grid component's `Inject` services array to enable filtering.
+
+```jsx
+import { Inject, Filter } from '@syncfusion/ej2-react-grids';
+
+<GridComponent>
+  <Inject services={[Filter]} />
+</GridComponent>
+```
+
+## Enable filtering
+
+To enable the filtering functionality in the Grid, set [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) property to `true`. The [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings) property configures filtering behavior and criteria.
+
+Here is an example demonstrating the default filtering feature:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -35,14 +49,18 @@ Here is an example that demonstrates the default filtering feature of the grid:
 
  {% previewsample "page.domainurl/code-snippet/grid/filter-cs8" %}
 
-> * You can apply and clear filtering, by using [filterByColumn](https://ej2.syncfusion.com/react/documentation/api/grid/filter#filterbycolumn) and [clearFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/filter#clearfiltering) methods.
-> * To disable Filtering for a particular column, by specifying [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowfiltering) to false.
+> * Apply and clear filtering programmatically using [filterByColumn](https://ej2.syncfusion.com/react/documentation/api/grid/filter#filterbycolumn) and [clearFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/filter#clearfiltering) methods.
+> * Disable filtering for a particular column by setting its [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowfiltering) property to `false`.
 
 ## Initial filter
 
-To apply an initial filter, you need to specify the filter criteria using the [predicate](https://ej2.syncfusion.com/react/documentation/api/grid/predicate) object in [filterSettings.columns](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettingsModel#columns). The `predicate` object represents the filtering condition and contains properties such as field, operator, and value.
+Apply filters automatically when the Grid loads by specifying filter criteria using a predicate object. A predicate object defines the filter condition with three key properties:
 
-Here is an example of how to configure the initial filter using the `predicate` object:
+* `field`: The column name to filter.
+* `operator`: The comparison type (equal, startswith, greaterthan, etc.).
+* `value`: The filter criterion to match.
+
+Configure initial filters in [filterSettings.columns](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettingsModel#columns).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -63,11 +81,11 @@ Here is an example of how to configure the initial filter using the `predicate` 
 
 ### Initial filter with multiple values for same column
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, you can establish an initial filter containing multiple values for a particular column, which helps you to preset filter conditions for a specific column using multiple values. This functionality allows you to display a filtered records in the grid right after the grid is initially loaded.
+Initial filtering with multiple values allows to preset filter conditions for a specific column using multiple criteria. This displays only records matching any of the specified values when the Grid first renders.
 
-To apply the filter with multiple values for same column at initial rendering, set the filter [predicate](https://ej2.syncfusion.com/react/documentation/api/grid/predicate) object in [filterSettings.columns](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettingsModel#columns).
+Set multiple [predicate](https://ej2.syncfusion.com/react/documentation/api/grid/predicate) objects in [filterSettings.columns](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettingsModel#columns) for the same field.
 
-The following example demonstrates, how to perform an initial filter with multiple values for same **CustomerID** column using `filterSettings.columns` and `predicate`.
+The following example filters the "Customer ID" column to show only specific customer records.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -88,11 +106,9 @@ The following example demonstrates, how to perform an initial filter with multip
 
 ### Initial filter with multiple values for different columns 
 
-By applying an initial filter with multiple values for different columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, you have the flexibility to set predefined filter settings for each column. This results in a filtered records of the grid right after the grid is initially loaded.
+Initial filter configuration with multiple values across different columns sets predefined filter criteria for each column. This configuration displays filtered records immediately when the Grid loads.
 
-To apply the filter with multiple values for different column at initial rendering, set the filter [predicate](https://ej2.syncfusion.com/react/documentation/api/grid/predicate) object in [filterSettings.columns](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettingsModel#columns).
-
-The following example demonstrates how to perform an initial filter with multiple values for different **Order ID** and **Customer ID** columns using `filterSettings.columns` and `predicate`.
+The following example filters both "Order ID" and "Customer ID" columns simultaneously.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -113,41 +129,41 @@ The following example demonstrates how to perform an initial filter with multipl
 
 ## Filter operators
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component provides various filter operators that can be used to define filter conditions for columns. The filter operator for a column can be defined using the [operator](https://ej2.syncfusion.com/react/documentation/api/grid/predicateModel#operator) property in the [filterSettings.columns](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings#columns) object.
+The Grid provides various filter operators to define filter conditions for columns. Define the filter operator using the [operator](https://ej2.syncfusion.com/react/documentation/api/grid/predicateModel#operator) property in [filterSettings.columns](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings#columns).
 
-The available operators and its supported data types are,
+The available operators and their supported data types are:
 
-Operator |Description |Supported Types
+Operator |Description |Supported Types
 -----|-----|-----
-startsWith |Checks whether a value begins with the specified value. |String
-endsWith |Checks whether a value ends with specified value. |String
-contains |Checks whether a value contains with specified value. |String
+startsWith |Checks whether a value begins with the specified value. |String
+endsWith |Checks whether a value ends with specified value. |String
+contains |Checks whether a value contains the specified value. |String
 doesnotstartwith |Checks whether the value does not begin with the specified value. |String
 doesnotendwith |Checks whether the value does not end with the specified value. |String
 doesnotcontain |Checks whether the value does not contain the specified value. |String
-equal |Checks whether a value equal to specified value. |String &#124; Number &#124; Boolean &#124; Date
-notEqual |Checks whether a value not equal to specified value. |String &#124; Number &#124; Boolean &#124; Date
-greaterThan |Checks whether a value is greater than with specified value. |Number &#124; Date
-greaterThanOrEqual|Checks whether a value is greater than or equal to specified value. |Number &#124; Date
-lessThan |Checks whether a value is less than with specified value. |Number &#124; Date
-lessThanOrEqual |Checks whether a value is less than or equal to specified value. |Number &#124; Date
-isnull |Returns the values that are null. |String &#124; Number &#124; Date
-isnotnull |Returns the values that are not null. |String &#124; Number &#124; Date
-isempty |Returns the values that are empty. |String
-isnotempty |Returns the values that are not empty. |String
-between|Filter the values based on the range between the start and end specified values. |Number &#124; Date
+equal |Checks whether a value equals the specified value. |String &#124; Number &#124; Boolean &#124; Date
+notEqual |Checks whether a value does not equal the specified value. |String &#124; Number &#124; Boolean &#124; Date
+greaterThan |Checks whether a value is greater than the specified value. |Number &#124; Date
+greaterThanOrEqual|Checks whether a value is greater than or equal to the specified value. |Number &#124; Date
+lessThan |Checks whether a value is less than the specified value. |Number &#124; Date
+lessThanOrEqual |Checks whether a value is less than or equal to the specified value. |Number &#124; Date
+isnull |Returns values that are null. |String &#124; Number &#124; Date
+isnotnull |Returns values that are not null. |String &#124; Number &#124; Date
+isempty |Returns values that are empty. |String
+isnotempty |Returns values that are not empty. |String
+between|Filters values within a range between the start and end specified values. |Number &#124; Date
 in |Filters multiple records in the same column that exactly match any of the selected values. |String &#124; Number &#124; Date
 notin |Filters multiple records in the same column that do not match any of the selected values. |String &#124; Number &#124; Date
 
-## Wildcard and LIKE operator filter
+> By default, the Grid uses different filter operators for different column types. The default filter operator for string columns is "startswith", for numeric columns is "equal", and for boolean columns is "equal".
 
-**Wildcard** and **LIKE** filter operators filters the value based on the given string pattern, and they apply to string-type columns. But it will work slightly differently.
+## Wildcard and like operator filter
+
+"Wildcard" and "like" operators filter values based on string patterns and apply to string-type columns. They work slightly differently in pattern matching.
 
 ### Wildcard filtering
 
-The **Wildcard** filter can process one or more search patterns using the "*" symbol, retrieving values matching the specified patterns.
-
-* The **Wildcard** filter option is supported for the DataGrid that has all search options.
+The "Wildcard" filter processes one or more search patterns using the "*" symbol, retrieving values matching the specified patterns. Wildcard characters match any sequence of characters in a search pattern.
 
 **For example:**
 
@@ -161,31 +177,33 @@ a* |Everything that starts with "a".
 
 ![WildcardFilter](../images/wildcard_search.gif)
 
-### LIKE filtering
+### Like filtering
 
-The **LIKE** filter can process single search patterns using the "%" symbol, retrieving values matching the specified patterns. The following Grid features support LIKE filtering on string-type columns:
+The "like" filter processes search patterns using the "%" symbol, retrieving values matching the specified patterns. The following Grid features support like filtering on string-type columns:
 
 * Filter Menu
-* Filter Bar with the [filterSettings.showFilterBarOperator](https://ej2.syncfusion.com/react/documentation/api/grid/filter#showFilterBarOperator) property enabled on the Grid [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings).
-* Custom Filter of Excel filter type.
+* Filter Bar with the [filterSettings.showFilterBarOperator](https://ej2.syncfusion.com/react/documentation/api/grid/filter#showFilterBarOperator) property enabled
+* Custom Filter of Excel filter type
 
 **For example:**
 
 Operator |Description
 -----|-----
-%ab% |Returns all the value that are contains "ab" character.
-ab% |Returns all the value that are ends with "ab" character.
-%ab |Returns all the value that are starts with "ab" character.
+%ab% |Returns all values containing the "ab" character sequence.
+ab% |Returns all values ending with the "ab" character sequence.
+%ab |Returns all values starting with the "ab" character sequence.
 
 ![LIKEFilter](../images/like_filter.gif)
 
-> By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid uses different filter operators for different column types. The default filter operator for string type columns is **startsWith**, for numerical type columns is **equal**, and for boolean type columns is also **equal**.
-
 ## Diacritics filter
 
-The diacritics filter feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid is useful when working with text data that includes accented characters (diacritic characters). By default, the grid ignores these characters during filtering. However, if you need to consider diacritic characters in your filtering process, you can enable this feature by setting the [filterSettings.ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/grid/filter#filterbycolumn) property to true using the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings).
+The diacritics filter feature handles text data that includes accented characters. Diacritics are accent marks added to letters (examples: é, ñ, ü, ç). By default, the Grid ignores these characters during filtering.
 
-Consider the following sample where the `ignoreAccent` property is set to true in order to include diacritic characters in the filtering process:
+This feature is essential for international data where names like "José" and "Jose" should be treated differently (or the same, depending on requirements).
+
+Enable diacritic character consideration by setting [filterSettings.ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/grid/filter#filterbycolumn) to `true`.
+
+The following example includes diacritic characters in the filtering process:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -206,19 +224,17 @@ Consider the following sample where the `ignoreAccent` property is set to true i
 
 ## Perform ENUM column filtering
 
-The Syncfusion React Grid allows you to filter enum-type data using the [filterTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/column#filtertemplate) feature. This is particularly useful for filtering predefined values, such as categories or statuses.
+The Grid allows filtering enum-type data using the [filterTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/column#filtertemplate) feature. Enumerated values (enum) are predefined fixed options, such as status categories (Active, Inactive, Pending) or priority levels (High, Medium, Low). This is particularly useful for filtering columns with dropdown-based data.
 
-To achieve this functionality:
+To filter columns containing enum values, follow the steps below:
 
 1. Render [DropDownList](https://ej2.syncfusion.com/react/documentation/drop-down-list/getting-started) in the `filterTemplate` for the enum-type column.
 
 2. Bind the enumerated list data to the column.
 
-3. Use the [template](https://ej2.syncfusion.com/react/documentation/api/grid/column#template) property in the **Type** column to display enum values in a readable format.
+3. Use the [template](https://ej2.syncfusion.com/react/documentation/api/grid/column#template) property in the "Type" column to display enum values in a readable format.
 
-4. In the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#change) event of the **DropDownList**, dynamically filter the column using the [filterByColumn](https://ej2.syncfusion.com/react/documentation/api/grid#filterbycolumn) method of the Grid.
-
-Below is an example demonstrating how to filter enum-type data in a Grid:
+4. In the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#change) event of the `DropDownList`, dynamically filter the column using the [filterByColumn](https://ej2.syncfusion.com/react/documentation/api/grid#filterbycolumn) method.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -239,9 +255,9 @@ Below is an example demonstrating how to filter enum-type data in a Grid:
 
 ## Filtering with case sensitivity
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides the flexibility to enable or disable case sensitivity during filtering. This feature is useful when you want to control whether filtering operations should consider the case of characters. It can be achieved by using the  [enableCaseSensitivity](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings#enablecasesensitivity) property within the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings) of the grid.
+The Grid provides the flexibility to enable or disable case sensitivity during filtering. Control whether filtering operations consider the case of characters using the [enableCaseSensitivity](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings#enablecasesensitivity) property within [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings).
 
-Below is an example code demonstrating how to enable or disable case sensitivity while filtering:
+Below is an example demonstrating how to toggle case sensitivity.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -328,11 +344,11 @@ export default App;
 
 ## Enable different filter for a column
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid offers the flexibility to customize filtering behavior for different columns by enabling various types of filters such as **Menu**, **Excel**, **Checkbox**. This feature allows you to tailor the filtering experience to suit the specific needs of each column in your grid. For example, you might prefer a menu-based filter for a category column, an Excel-like filter for a date column, and a checkbox filter for a status column. 
+The Grid offers flexibility to customize filtering behavior for different columns by enabling various filter types such as `Menu`, `Excel`, or `CheckBox`. This allows tailoring the filtering experience to suit specific column needs. For example, use a menu-based filter for a category column, an Excel-like filter for a date column, and a checkbox filter for a status column.
 
-It can be achieved by adjusting the [filter.type](https://ej2.syncfusion.com/react/documentation/api/grid/column#filter) property based on your requirements.
+Adjust the [filter.type](https://ej2.syncfusion.com/react/documentation/api/grid/column#filter) property based on requirements.
 
-Here's an example where the menu filter is enabled by default for all columns, but you can dynamically modify the filter types through a dropdown:
+Here's an example where the menu filter is enabled by default, but filter types can be dynamically modified through a dropdown.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -353,9 +369,7 @@ Here's an example where the menu filter is enabled by default for all columns, b
 
 ## Change default filter operator for particular column
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component provides the flexibility to change the default filter operator for a particular column. By default, the filter operator for string-type columns is **startsWith**, for numerical-type columns is **equal**, and for boolean-type columns is also **equal**. However, you may need to customize the filter operator to better match the nature of the data in a specific column. This can be achieved using the operator property within the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid#filtersettings) configuration.
-
-Here's an example that demonstrates how to change the default filter operator column :
+The Grid provides flexibility to change the default filter operator for a particular column. By default, the filter operator for string columns is `startswith`, for numeric columns is `equal`, and for boolean columns is `equal`. Customize the filter operator to better match the nature of the data using the "operator" property within [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid#filtersettings).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -374,13 +388,11 @@ Here's an example that demonstrates how to change the default filter operator co
 
  {% previewsample "page.domainurl/code-snippet/grid/filter-cs14" %}
 
-## Filter grid programmatically with single and multiple values using method 
+## Programmatic filtering
 
-Programmatic filtering in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid with single and multiple values allows you to apply filters to specific columns in the grid without relying on interactions through the interface.
+Programmatic filtering allows applying filters to specific columns without relying on user interface interactions. This is achieved using the [filterByColumn](https://ej2.syncfusion.com/react/documentation/api/grid#filterbycolumn) method.
 
-This can be achieved by utilizing the [filterByColumn](https://ej2.syncfusion.com/react/documentation/api/grid#filterbycolumn) method of the Grid.
-
-The following example demostrates, how to programmatically filter the Grid using single and multiple values for the **OrderID** and **CustomerID** columns. This is accomplished by calling the `filterByColumn` method within an external button click function.
+The following example demonstrates programmatic filtering using single and multiple values for the "OrderID" and "Customer ID" columns. The `filterByColumn` method is called within an external button click function.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -401,15 +413,11 @@ The following example demostrates, how to programmatically filter the Grid using
 
 ## How to get filtered records
 
-Retrieving filtered records in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid is Essential<sup style="font-size:70%">&reg;</sup> when you want to work with data that matches the currently applied filters. You can achieve this using available methods and properties in the grid component.
+Retrieving filtered records is essential when working with data matching currently applied filters. Achieve this using available methods and properties in the Grid component.
 
-**1.Using the getFilteredRecords() method**
+**1. Using the getFilteredRecords() method**
 
-The [getFilteredRecords](https://ej2.syncfusion.com/react/documentation/api/grid#getfilteredrecords) method is used to obtain an array of records that match the currently applied filters on the grid.
-
-This method retrieves an array of records that match the currently applied filters on the grid.
-
-Here's an example of how to get the filtering data in a Syncfusion<sup style="font-size:70%">&reg;</sup> grid using the `getFilteredRecords` method:
+The [getFilteredRecords](https://ej2.syncfusion.com/react/documentation/api/grid#getfilteredrecords) method retrieves an array of records matching currently applied filters.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -554,17 +562,17 @@ export default App;
 
  {% previewsample "page.domainurl/code-snippet/grid/filter-cs10" %}
 
-**2.Using the properties in the FilterEventArgs object**
+**2. Using the properties in the FilterEventArgs object**
 
-Alternatively, you can use the properties available in the [FilterEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/filterEventArgs) object to obtain the filter record details.
+Alternatively, use properties available in the [FilterEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/filterEventArgs) object to obtain filter record details.
 
-* [columns](https://ej2.syncfusion.com/react/documentation/api/grid/filterEventArgs#columns): This property returns the collection of filtered columns.
+* [columns](https://ej2.syncfusion.com/react/documentation/api/grid/filterEventArgs#columns): Returns the collection of filtered columns.
 
-* [currentFilterObject](https://ej2.syncfusion.com/react/documentation/api/grid/filterEventArgs#currentfilterobject): This property returns the object that is currently filtered.
+* [currentFilterObject](https://ej2.syncfusion.com/react/documentation/api/grid/filterEventArgs#currentfilterobject): Returns the object currently filtered.
 
-* [currentFilteringColumn](https://ej2.syncfusion.com/react/documentation/api/grid/filterEventArgs#currentfilteringcolumn): This property returns the column name that is currently filtered.
+* [currentFilteringColumn](https://ej2.syncfusion.com/react/documentation/api/grid/filterEventArgs#currentfilteringcolumn): Returns the column name currently filtered.
 
-To access these properties, you can use the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) event handler as shown below:
+Access these properties using the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) event handler:
 
 ```typescript
 actionComplete(args: FilterEventArgs) {
@@ -576,9 +584,7 @@ actionComplete(args: FilterEventArgs) {
 
 ## Clear filtering using methods
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid provides a method called [clearFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#clearfiltering) to clear the filtering applied to the grid. This method is used to remove the filter conditions and reset the grid to its original state. 
-
-Here's an example of how to clear the filtering in a Syncfusion<sup style="font-size:70%">&reg;</sup> grid using the `clearFiltering` method:
+The Grid provides a [clearFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#clearfiltering) method to clear applied filtering. This method removes filter conditions and resets the Grid to its original state.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -599,11 +605,11 @@ Here's an example of how to clear the filtering in a Syncfusion<sup style="font-
 
 ## Filtering events
 
-Filtering events allow you to customize the behavior of the grid when filtering is applied. You can prevent filtering for specific columns, show messages to users, or perform other actions to suit your application's needs.
+Filtering events allow customizing the behavior of the Grid when filtering is applied. Prevent filtering for specific columns, show messages, or perform other actions to suit application needs.
 
-To implement filtering events in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, you can utilize the available events such as [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid#actionbegin) and [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete). These events allow you to intervene in the filtering process and customize it as needed.
+Implement filtering events using available events such as [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid#actionbegin) and [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete). These events allow intervention in the filtering process and customization as needed.
 
-In the given example, the filtering is prevented for **ShipCity** column during `actionBegin` event.
+In the given example, filtering is prevented for the "Ship City" column during the `actionBegin` event.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

@@ -3,11 +3,11 @@ import { GridComponent, Group, Page, LazyLoadGroup, Inject } from '@syncfusion/e
 import * as React from 'react';
 import { data } from './datasource';
 function App() {
-    const groupOptions = {
-        enableLazyLoading: true,
-        columns: ['ProductName', 'CustomerName']
-    };
-    return (<div>
+  const groupOptions = {
+    enableLazyLoading: true,
+    columns: ['ProductName', 'CustomerName']
+  };
+  return (<div>
     <GridComponent dataSource={data} allowPaging={true} allowGrouping={true} groupSettings={groupOptions}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' textAlign="Right" width='120'/>
@@ -16,7 +16,7 @@ function App() {
         <ColumnDirective field='CustomerName' headerText='Customer Name' width='160'/>
       </ColumnsDirective>
       <Inject services={[Page, Group, LazyLoadGroup]}/>
-    </GridComponent></div>);
-}
-;
+    </GridComponent></div>
+  );
+};
 export default App;

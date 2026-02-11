@@ -6,13 +6,14 @@ import { ChangeEventArgs, SwitchComponent } from '@syncfusion/ej2-react-buttons'
 
 function App() {
   let grid: GridComponent | null;
+  const isQueryEnabled = React.useState(true);
   const toggleQueryString = (args: ChangeEventArgs) => {
     (grid as GridComponent).pageSettings.enableQueryString = args.checked;
   }
   return (<div>
     <label style={{ padding: "30px 17px 0 0" }}>Enable/Disable Query String</label>
-    <SwitchComponent change={toggleQueryString}></SwitchComponent>
-    <GridComponent dataSource={data} height={265} ref={g => grid = g} allowPaging={true} >
+    <SwitchComponent checked={isQueryEnabled} change={toggleQueryString}></SwitchComponent>
+    <GridComponent dataSource={data} height={265} ref={g => grid = g} allowPaging={true} pageSettings={{ enableQueryString: true }}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" isPrimaryKey={true} />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />

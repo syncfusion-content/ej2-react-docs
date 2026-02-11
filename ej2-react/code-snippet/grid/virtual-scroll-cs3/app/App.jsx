@@ -15,8 +15,10 @@ function App() {
         grid.refresh();
     }
     return (<div>
-        <label>Enable/Disable Cache mode: </label>
-        <SwitchComponent change={onChange}></SwitchComponent>
+        <div style={{display: "flex", margin: "10px"}}>
+            <label style={{ marginRight: "5px" }}>Enable/Disable Cache mode: </label>
+            <SwitchComponent change={onChange}></SwitchComponent>
+        </div>
         <GridComponent ref={g => grid = g} dataSource={datas} height={300} enableInfiniteScrolling={true} pageSettings={pageSettings}>
             <Inject services={[InfiniteScroll]} />
             <ColumnsDirective>
@@ -26,7 +28,8 @@ function App() {
                 <ColumnDirective field='Estimation' headerText='Estimation' textAlign='Right' width='100' />
                 <ColumnDirective field='Status' width='100' />
             </ColumnsDirective>
-        </GridComponent></div>)
+        </GridComponent></div>
+    )
 }
 export default App;
 

@@ -1,18 +1,20 @@
 ---
 layout: post
-title: Accessibility in React Grid component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+title: Accessibility in the React Grid Component | Syncfusion
+description: Learn about accessibility support, standards compliance, keyboard navigation, and WAI‑ARIA integration in the Syncfusion React Grid component.
+control: Accessibility
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Grid component
+# Accessibility in the React Grid Component
 
-The Grid component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component follows major accessibility guidelines and standards, including the [Americans with Disabilities Act (ADA)](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI‑ARIA roles](https://www.w3.org/TR/wai-aria/#roles). These standards ensure the grid is usable with assistive technologies and keyboard‑only navigation. 
 
-The accessibility compliance for the Grid component is outlined below.
+The sections below describe the Grid's accessibility compliance and behavior.
+
+## Accessibility criteria
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,41 +42,39 @@ The accessibility compliance for the Grid component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Grid component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) patterns to meet the accessibility. The following ARIA attributes are used in the Grid component:
+The React Grid follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) grid pattern to ensure compatibility with assistive technologies. The following attributes and roles are used throughout the component:
 
-| Attributes | Purpose |
-| --- | --- |
-| `role=grid` | To represent the element containing the grid component. |
-| `role=row` | To represent the element containing the cells of the row in the grid. |
-| `role=rowgroup` | To represent the group of rows in the grid. |
-| `role=columnheader` | To represent the cell in a row contains header information for a column in the grid. |
-| `role=gridcell` | To represent a cell in the grid component. |
-| `role=button` | To represent the element that acts as a button in the grid. |
-| `role=search` | To represent the element that acts as a search region in the grid. |
-| `role=presentation` | To represent the element to be not available for accessibility concerns. |
-| `role=navigation` | To represent the element containing pager elements to navigate from one page to another. |
-| `aria-colindex` | Defines the column index of the column with respect to the total number of columns within the grid. |
-| `aria-rowindex` | Defines row index of the row with respect to the total number of rows within the grid.  |
-| `aria-rowspan` | Defines the number of rows spanned by a cell within the grid.  |
-| `aria-colspan` | Defines the number of columns spanned by a cell within the grid. |
-| `aria-rowcount` | Defines the total number of rows in the grid.  |
-| `aria-colcount` | Defines the total number of columns in the grid. |
-| `aria-selected` | Indicates the current "selected" state of the rows and cells in the grid. |
-| `aria-expanded` | Indicate if the expand icon in the hierarchy grid or grouped grid or detail grid is expanded or collapsed |
-| `aria-sort` | Indicates whether the data in the grid are sorted in ascending or descending order. |
-| `aria-busy` | Indicates an element is being modified and that assistive technologies may want to wait until the changes are complete before informing the user about the update. |
-| `aria-owns` | Identifies an element in order to define a visual, functional, or contextual relationship between a parent and its child elements. |
-| `aria-hidden` | Hides the element from accessibility concerns. |
-| `aria-labelledby` | Provides an accessible name for the checkbox labels in excel filter, checkbox filter and column chooser dialog.  |
-| `aria-describedby` | Provides an description about the features enabled in the header when the grid header cell is focused. |
+| Attribute / Role | Purpose |
+|------------------|---------|
+| `role=grid` | Identifies the container element of the grid. |
+| `role=row` | Represents a row containing grid cells. |
+| `role=rowgroup` | Represents a logical grouping of rows. |
+| `role=columnheader` | Identifies header cells that describe a column. |
+| `role=gridcell` | Defines an individual grid cell. |
+| `role=button` | Represents button elements inside the grid. |
+| `role=search` | Identifies a search region, the toolbar search control. |
+| `role=presentation` | Indicates elements that are ignored by assistive technologies (used for layout-only elements). |
+| `role=navigation` | Identifies the pager navigation region. |
+| `aria-colindex` | Defines the column index relative to total columns. |
+| `aria-rowindex` | Defines the row index relative to total rows. |
+| `aria-rowspan` | Indicates how many rows a cell spans. |
+| `aria-colspan` | Indicates how many columns a cell spans. |
+| `aria-rowcount` | Specifies the total number of rows. |
+| `aria-colcount` | Specifies the total number of columns. |
+| `aria-selected` | Indicates the selection state of a row or cell. |
+| `aria-expanded` | Indicates the expanded or collapsed state in hierarchical grids. |
+| `aria-sort` | Indicates ascending or descending sort order. |
+| `aria-busy` | Indicates that an element is being updated. |
+| `aria-owns` | Defines contextual relationships between parent and child elements. |
+| `aria-hidden` | Hides elements from assistive technologies. |
+| `aria-labelledby` | Provides an accessible name for specific elements such as filter dialog items. |
+| `aria-describedby` | Provides descriptive help text for focused header cells. |
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component is structured with a two-table architecture for its header and content. To enhance accessibility for screen readers, roles and ARIA attributes are incorporated for both the grid parent and all its child elements. Although this architectural approach may have some limitations with accessibility checker tools. It's important to note that these limitations do not affect the readability of the grid content over screen readers.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid uses a two‑table structure for header and content rendering. This improves screen reader interpretation but may trigger warnings in automated accessibility tools. These warnings do not necessarily affect actual assistive-technology usability. Known checker tool warnings include:
 
-The accessibility checker tools highlights the following known issues:
+* aria-required-children: This warning can occur when the grid renders certain feature elements (for example, textarea or toolbar content). It may be reported when toolbar or grouping features are enabled.
 
-* aria-required-children: This warning appears when rendering the grid without any features, as it contains textarea and grid content. Additionally, it appears when enabling features such as the toolbar and grouping.
-
-* color-contrast: This warning appears when you are enabling the search item in the grid's toolbar.
+* color-contrast: This warning can appear when the toolbar search item or custom styles reduce text contrast below WCAG thresholds.
 
 * An explicit ARIA 'role' is not valid for `<tr>` element within an ARIA role 'grid' per the ARIA in HTML specification.
 
@@ -96,124 +96,120 @@ The accessibility checker tools highlights the following known issues:
 
 ## Keyboard interaction
 
-The Grid component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Grid component.
+The Grid provides keyboard navigation and follows WAI‑ARIA [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guidelines. Some keyboard behaviors vary depending on which features are enabled; consult the compatibility table above and the examples below for specific behavior.
 
-<b>Pager</b>
+### Pager
+
+**Windows**  | **MAC** | **Description**
+-----|----- | -----
+<kbd>Tab</kbd> | <kbd>Tab</kbd> | Focus the next pager item.
+<kbd>Shift + Tab</kbd> | <kbd>Shift + Tab</kbd> | Focus the previous pager item.
+<kbd>Enter / Space</kbd> | <kbd>Enter / Space</kbd> | Select the focused page.
+<kbd>PageUp / Left Arrow</kbd> | <kbd>Left Arrow</kbd> | Navigate to the previous page.
+<kbd>PageDown / Right Arrow</kbd> | <kbd>Right Arrow</kbd> | Navigate to the next page.
+<kbd>Home / Ctrl + Alt + PageUp</kbd> | <kbd>Fn + Left Arrow</kbd> | Navigate to the first page.
+<kbd>End / Ctrl + Alt + PageDown</kbd> | <kbd>Fn + Right Arrow</kbd> | Navigate to the last page.
+
+### Focus Elements
 
 **Windows**  | **MAC** | **To do this**
 -----|----- | -----
-<kbd>Tab</kbd> | <kbd>Tab</kbd> | Focus on the next pager item.
-<kbd>Shift + Tab</kbd> | <kbd>Shift + Tab</kbd> | Focus on the previous pager item.
-<kbd>Enter / Space</kbd> | <kbd>Enter / Space</kbd> | Select the currently focused page.
-<kbd>PageUp / Left Arrow</kbd> | <kbd>Left Arrow</kbd> | Navigate to previous page.
-<kbd>PageDown / Right Arrow</kbd> | <kbd>Right Arrow</kbd> | Navigate to next page.
-<kbd>Home / Ctrl + Alt + PageUp</kbd> | <kbd>Fn + Left Arrow</kbd> | Navigate to first page.
-<kbd>End / Ctrl + Alt + PageDown</kbd> | <kbd>Fn + Right Arrow</kbd> | Navigate to last page.
-
-<b>Focus Elements</b>
-
-**Windows**  | **MAC** | **To do this**
------|----- | -----
-<kbd>Home</kbd> | <kbd>Fn + Left Arrow</kbd> | Moves the focus to the first cell of the focused row.
-<kbd>End</kbd> | <kbd>Fn + Right Arrow</kbd> | Moves the focus to the last cell of the focused row.
-<kbd>Ctrl + Home</kbd> | <kbd>Command + Fn + Left Arrow</kbd> | Moves the focus to the first Cell of the first row in the grid.
-<kbd>Ctrl + End</kbd> | <kbd>Command +  Fn + Right Arrow</kbd> | Moves the focus to the last Cell of the last row in the grid.
-<kbd>Up Arrow</kbd> | <kbd>Up Arrow</kbd> | Moves the cell focus upward from the focused cell.
-<kbd>Down Arrow</kbd> | <kbd>Down Arrow</kbd> |  Moves the cell focus downward from the focused cell.
-<kbd>Right Arrow</kbd> | <kbd>Right Arrow</kbd> | Moves the cell focus right side from the focused cell.
-<kbd>Left Arrow</kbd> | <kbd>Left Arrow</kbd> |  Moves the cell focus left side from the focused cell.
+<kbd>Home</kbd> | <kbd>Fn + Left Arrow</kbd> | Shifts the focus to the first cell in the currently focused row.
+<kbd>End</kbd> | <kbd>Fn + Right Arrow</kbd> | Shifts the focus to the last cell in the currently focused row.
+<kbd>Ctrl + Home</kbd> | <kbd>Command + Fn + Left Arrow</kbd> | Shifts the focus to the first cell of the first row within the grid.
+<kbd>Ctrl + End</kbd> | <kbd>Command + Fn + Right Arrow</kbd> | Shifts the focus to the last cell of the last row within the grid.
+<kbd>Up Arrow</kbd> | <kbd>Up Arrow</kbd> | Moves the cell focus upward from the current cell.
+<kbd>Down Arrow</kbd> | <kbd>Down Arrow</kbd> | Moves the cell focus downward from the current cell.
+<kbd>Right Arrow</kbd> | <kbd>Right Arrow</kbd> | Moves the cell focus to the right of the current cell.
+<kbd>Left Arrow</kbd> | <kbd>Left Arrow</kbd> | Moves the cell focus to the left of the current cell.
 <kbd>Alt + J</kbd> | <kbd>Alt + J</kbd> | Moves the focus to the entire grid.
-<kbd>Alt + W</kbd> | <kbd>Alt + W</kbd> | Move the focus to the grid content element.
+<kbd>Alt + W</kbd> | <kbd>Alt + W</kbd> | Moves the focus to the grid content element.
 
-<b>Selection</b>
-
-**Windows**  | **MAC** | **To do this**
------|----- | -----
-<kbd>Up Arrow</kbd> | <kbd>Up Arrow</kbd> | Moves up a row/cell selection from the selected row/cell.
-<kbd>Down Arrow</kbd> | <kbd>Down Arrow</kbd> | Moves down a row/cell selection from the selected row/cell.
-<kbd>Right Arrow</kbd> | <kbd>Right Arrow</kbd> | Moves to the right cell selection from the selected cell.
-<kbd>Left Arrow</kbd> | <kbd>Left Arrow</kbd> | Moves to the left cell selection from the selected cell.
-<kbd>Shift + Up Arrow</kbd> | <kbd>Shift + Up Arrow</kbd> | Extends the row/cell selection upwards from the selected row/cell.
-<kbd>Shift + Down Arrow</kbd> | <kbd>Shift + Down Arrow</kbd> | Extends the row/cell selection downwards from the selected row/cell.
-<kbd>Shift + Right Arrow</kbd> | <kbd>Shift + Right Arrow</kbd> | Extends the cell selection to the right side from the selected cell.
-<kbd>Shift + Left Arrow</kbd> | <kbd>Shift + Left Arrow</kbd> | Extends the cell selection to the left side from the selected cell.
-<kbd>Enter</kbd> | <kbd>Enter</kbd> | Moves the row/cell selection downward from the selected cell/row.
-<kbd>Shift + Enter</kbd> | <kbd>Shift + Enter</kbd> | Moves the row/cell selection upward.
-<kbd>Esc</kbd> | <kbd>Esc</kbd> | Deselects all the selected row/cells.
-<kbd>Ctrl + A</kbd> | <kbd>Ctrl + A</kbd> | Select all the row/cells in the current page.
-
-<b>Grouping</b>
+### Selection
 
 **Windows**  | **MAC** | **To do this**
 -----|----- | -----
-<kbd>Ctrl + Up Arrow</kbd> | <kbd>Command + Up Arrow</kbd> | Collapses all the visible groups.
-<kbd>Ctrl + Down Arrow</kbd> | <kbd>Command + Down Arrow</kbd> | Expands all the visible groups.
-<kbd>Ctrl + Space</kbd> | <kbd>Ctrl + Space</kbd> | Performs grouping when focused on a header element.
-<kbd>Enter</kbd> | <kbd>Enter</kbd> | If the current cell is an expand/collapse cell then expands/collapses the current group/detailrow/childgrid.
+<kbd>Up Arrow</kbd> | <kbd>Up Arrow</kbd> | Moves the selection up by one row or cell from the current position.
+<kbd>Down Arrow</kbd> | <kbd>Down Arrow</kbd> | Moves the selection down by one row or cell from the current position.
+<kbd>Right Arrow</kbd> | <kbd>Right Arrow</kbd> | Moves the selection one cell to the right from the current cell.
+<kbd>Left Arrow</kbd> | <kbd>Left Arrow</kbd> | Moves the selection one cell to the left from the current cell.
+<kbd>Shift + Up Arrow</kbd> | <kbd>Shift + Up Arrow</kbd> | Extends the selection upward by rows or cells from the current selection.
+<kbd>Shift + Down Arrow</kbd> | <kbd>Shift + Down Arrow</kbd> | Extends the selection downward by rows or cells from the current selection.
+<kbd>Shift + Right Arrow</kbd> | <kbd>Shift + Right Arrow</kbd> | Extends the selection to the right from the current cell.
+<kbd>Shift + Left Arrow</kbd> | <kbd>Shift + Left Arrow</kbd> | Extends the selection to the left from the current cell.
+<kbd>Enter</kbd> | <kbd>Enter</kbd> | Moves the selection down by one row or cell.
+<kbd>Shift + Enter</kbd> | <kbd>Shift + Enter</kbd> | Moves the selection up by one row or cell.
+<kbd>Esc</kbd> | <kbd>Esc</kbd> | Clears all current selections.
+<kbd>Ctrl + A</kbd> | <kbd>Ctrl + A</kbd> | Selects all rows or cells on the current page.
 
-<b>Print</b>
+### Grouping
+
+**Windows**  | **MAC** | **To do this**
+-----|----- | -----
+<kbd>Ctrl + Up Arrow</kbd> | <kbd>Command + Up Arrow</kbd> | Collapses all visible groups.
+<kbd>Ctrl + Down Arrow</kbd> | <kbd>Command + Down Arrow</kbd> | Expands all visible groups.
+<kbd>Ctrl + Space</kbd> | <kbd>Ctrl + Space</kbd> | Groups items when the header element is focused.
+<kbd>Enter</kbd> | <kbd>Enter</kbd> | Expands or collapses the current group, detail row, or child grid if the active cell controls this function.
+
+### Print
 
 **Windows**  | **MAC** | **To do this**
 -----|----- | -----
 <kbd>Ctrl + P</kbd> | <kbd>Command + P</kbd>| Prints the Grid.
 
-<b>Clipboard</b>
+### Clipboard
 
 **Windows**  | **MAC** | **To do this**
 -----|----- | -----
-<kbd>Ctrl + C</kbd> | <kbd>Command + C</kbd> | Copies selected rows or cells data into the clipboard.
-<kbd>Ctrl + Shift + H</kbd> | <kbd>Ctrl + Shift + H</kbd> | Copies selected rows or cells data with header into clipboard
+<kbd>Ctrl + C</kbd> | <kbd>Command + C</kbd> | Copies the data of selected rows or cells to the clipboard.
+<kbd>Ctrl + Shift + H</kbd> | <kbd>Ctrl + Shift + H</kbd> | Copies the data of selected rows or cells along with the header to the clipboard.
 
-<b>Editing</b>
-
-**Windows**  | **MAC** | **To do this**
------|----- | -----
-<kbd>F2</kbd> | <kbd>F2</kbd> | Starts editing of selected row if Mode is Normal/Dialog or Starts editing of selected cell if Mode is Batch.
-<kbd>Enter</kbd> | <kbd>Enter</kbd> | Saves the current form it the Mode is Normal or Dialog / Saves the current cell and starts editing the next row cell if Mode is Batch.
-<kbd>Insert</kbd> | <kbd>Ctrl + Command + Enter<kbd> | Creates a new add form depending on the NewRowPosition.
-<kbd>Delete</kbd> | <kbd>Delete</kbd> | Deletes the current selected record.
-<kbd>Tab</kbd> | <kbd>Tab</kbd> | Navigates to the next editable cell if the Mode is Normal or Dialog / Saves the current cell and starts editing the next cell is Mode is Batch.
-<kbd>Shift + Tab</kbd> | <kbd>Shift + Tab</kbd> | Navigates to the previous editable cell if the Mode is Normal or Dialog / Saves the current cell and starts editing the previous cell is Mode is Batch.
-<kbd>Shift + Enter</kbd> | <kbd>Shift + Enter</kbd> | Saves the current cell and starts editing the previous row cell if Mode is Batch.
-
-<b>Filtering</b>
+### Editing
 
 **Windows**  | **MAC** | **To do this**
 -----|----- | -----
-<kbd>Alt + Down arrow</kbd> | <kbd>Alt + Down arrow</kbd> | Opens the filter menu(excel, menu and checkbox filter) when its header element is in focused state.
+<kbd>F2</kbd> | <kbd>F2</kbd> | Begins editing the selected row when Mode is Normal or Dialog, or begins editing the selected cell when Mode is Batch.
+<kbd>Enter</kbd> | <kbd>Enter</kbd> | Saves the current form if Mode is Normal or Dialog; saves the current cell and begins editing the next row cell if Mode is Batch.
+<kbd>Insert</kbd> | <kbd>Ctrl + Command + Enter</kbd> | Creates a new add form based on the NewRowPosition.
+<kbd>Delete</kbd> | <kbd>Delete</kbd> | Removes the currently selected record.
+<kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves to the next editable cell if Mode is Normal or Dialog; saves the current cell and begins editing the next cell if Mode is Batch.
+<kbd>Shift + Tab</kbd> | <kbd>Shift + Tab</kbd> | Moves to the previous editable cell if Mode is Normal or Dialog; saves the current cell and begins editing the previous cell if Mode is Batch.
+<kbd>Shift + Enter</kbd> | <kbd>Shift + Enter</kbd> | Saves the current cell and begins editing the previous row cell when Mode is Batch.
 
-<b>Column Menu</b>
-
-**Windows**  | **MAC** | **To do this**
------|----- | -----
-<kbd>Alt + Down arrow</kbd> | <kbd>Alt + Down arrow</kbd> | Opens column menu when its header element is in focused state.
-
-<b>Reordering</b>
-
-**Windows**  | **MAC** | **To do this**
------|----- | -----
-<kbd>Ctrl + left arrow or right arrow</kbd> | <kbd>Command  + left arrow or right arrow</kbd> | Reorders the focused header column to the left or right side.
-
-<b>Sorting</b>
+### Filtering
 
 **Windows**  | **MAC** | **To do this**
 -----|----- | -----
-<kbd>Enter</kbd> | <kbd>Enter</kbd> | Performs sorting(ascending/descending) on a column when its header element is in focused state.
-<kbd>Ctrl + Enter</kbd> | <kbd>Command + Enter</kbd> | Performs multi-sorting on a column when its header element is in focused state.
-<kbd>Shift + Enter</kbd> | <kbd>Shift + Enter</kbd> | Clears sorting for the focused header column.
+<kbd>Alt + Down arrow</kbd> | <kbd>Alt + Down arrow</kbd> | Opens the filter menu (Excel, menu, and checkbox filter) when the header element is focused.
 
+### Column Menu
+
+**Windows**  | **MAC** | **To do this**
+-----|----- | -----
+<kbd>Alt + Down arrow</kbd> | <kbd>Alt + Down arrow</kbd> | Opens the column menu when the header element is focused.
+
+**Windows**  | **MAC** | **To do this**
+-----|----- | -----
+<kbd>Ctrl + left arrow or right arrow</kbd> | <kbd>Command + left arrow or right arrow</kbd> | Moves the selected header column to the left or right.
+
+**Windows**  | **MAC** | **To do this**
+-----|----- | -----
+<kbd>Enter</kbd> | <kbd>Enter</kbd> | Executes sorting (ascending or descending) on a column when its header element is focused.
+<kbd>Ctrl + Enter</kbd> | <kbd>Command + Enter</kbd> | Executes multi-sorting on a column when its header element is focused.
+<kbd>Shift + Enter</kbd> | <kbd>Shift + Enter</kbd> | Removes sorting from the currently focused header column.
 <br>
 
-> * The <kbd>Command</kbd> and <kbd>Control</kbd> keys on Mac devices can be interchanged. When this switch occurs, use the <kbd>Command</kbd> key in place of the <kbd>Control</kbd> key and the <kbd>Control</kbd> key in place of the <kbd>Command</kbd> key for the above listed key interactions with Mac devices. 
-> * For example, after switching the keys to group the columns when the header element is focused use <kbd>Command + Space</kbd> and for expanding the visible groups use <kbd>Ctrl + Down Arrow</kbd>.
+> * The <kbd>Command</kbd> and <kbd>Control</kbd> keys on Mac devices can be swapped. When this swap is made, use the <kbd>Command</kbd> key instead of the <kbd>Control</kbd> key, and the <kbd>Control</kbd> key instead of the <kbd>Command</kbd> key for the key interactions mentioned above with Mac devices.
+> * For instance, after swapping the keys, to group the columns when the header element is focused, use <kbd>Command + Space</kbd>, and to expand the visible groups, use <kbd>Ctrl + Down Arrow</kbd>.
 
-### How to prevent default key action behavior
+### Preventing Default Key Actions
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides flexibility to prevent the default key action behavior based on your requirements. This enables you to intercept and customize the behavior when specific keys are pressed within a web application
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides the capability to disable the default key action behavior according to your needs.
 
-To prevent the default key action behavior in the grid, you can utilize the [keyPressed](https://ej2.syncfusion.com/react/documentation/api/grid/#keypressed) event. This event is triggered for every key press, allowing you to customize the behavior based on the pressed key.
+This allows you to intercept and modify the response when certain keys are pressed within a web application.
 
-The following example demonstrates how to prevent the default behavior of the **"ENTER"** key using the `keyPressed` event. 
+To disable the default key action in the grid, you can use the [keyPressed](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#keypressed) event.
+
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -229,32 +225,33 @@ The following example demonstrates how to prevent the default behavior of the **
 {% include code-snippet/grid/keyboard-navigation-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
+{% previewsample "page.domainurl/code-snippet/grid/keyboard-navigation-cs1" %}
 
- {% previewsample "page.domainurl/code-snippet/grid/keyboard-navigation-cs1" %}
+### Custom shortcut keys
 
-### Custom shortcut keys to perform grid actions
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component allows improving the usability of keyboard shortcuts for various grid actions and navigation.
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component enables you to enhance the usablity of keyboard shortcuts for various grid actions and navigation. In addition to the built-in keyboard navigation capabilities, you can implement custom keyboard shortcuts to execute specific actions.
+Besides the built-in keyboard navigation features, custom keyboard shortcuts can be created to perform specific tasks.
 
-To achieve this, you can utilize the [keyPressed](https://ej2.syncfusion.com/react/documentation/api/grid/#keypressed) event of the grid. This event is triggered for every key press, allowing you to customize the behavior based on the pressed key.
+Use the [keyPressed](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#keypressed) event of the grid to achieve this. This event triggers on every key press, enabling customization of the response according to the key pressed.
 
-The following example demonstrates how to perform grid actions using shortcut keys through the `keyPressed` event. Within the event, define the following custom shortcuts to perform various grid actions:
+The example below illustrates how to use shortcut keys to perform grid actions via the `keyPressed` event. Define the following custom shortcuts within the event to execute different grid actions:
 
 * Pressing N adds a new record.
-* Pressing Ctrl + S save a record by invoking endEdit.
+* Pressing Ctrl + S saves a record by calling `endEdit`.
 * Pressing Ctrl + D deletes a record.
 * Pressing Ctrl + A selects all rows.
-* Pressing Ctrl + G groups the grid by a specified column.
+* Pressing Ctrl + G groups the grid by a selected column.
 
-And prevented the default actions associated with the following keyboard shortcuts used for default grouping and editing action:
+Additionally, the default actions for these keyboard shortcuts related to grouping and editing are prevented:
 
 * Ctrl + Space
 * Insert
-* F2 
-* Delete 
+* F2
+* Delete
 * Enter
 
-You can add more custom shortcuts and actions as needed to enhance the functionality of your Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component.
+You can add further custom shortcuts and actions as required to enhance the capabilities of your Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -270,15 +267,13 @@ You can add more custom shortcuts and actions as needed to enhance the functiona
 {% include code-snippet/grid/customizedialog-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
+{% previewsample "page.domainurl/code-snippet/grid/customizedialog-cs8" %}
 
- {% previewsample "page.domainurl/code-snippet/grid/customizedialog-cs8" %}
+## Ensuring Accessibility
 
-## Ensuring accessibility
+The accessibility standards of the Grid component are verified using the software tools [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) during automated testing.
 
-The Grid component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
-
-The accessibility compliance of the Grid component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/grid.html) in a new window to evaluate the accessibility of the Grid component with accessibility tools.
-
+The compliance of the Grid component with accessibility requirements is demonstrated in the example below. Open the [sample](https://ej2.syncfusion.com/accessibility/grid.html) in a new window to assess the Grid component's accessibility using appropriate tools.
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/ensuring-accessibility/app/App.jsx %}
@@ -293,8 +288,7 @@ The accessibility compliance of the Grid component is shown in the following sam
 {% include code-snippet/grid/ensuring-accessibility/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/grid/ensuring-accessibility" %}
+{% previewsample "page.domainurl/code-snippet/grid/ensuring-accessibility" %}
 
 ## See also
 

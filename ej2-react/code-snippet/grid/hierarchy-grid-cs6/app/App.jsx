@@ -6,7 +6,7 @@ function App() {
     let childGridOptions = {
         actionBegin(args) {
             if (args.requestType === "add") {
-                /** parentKeyFieldValue refers to the queryString field value of the parent record. */
+                // parentKeyFieldValue refers to the queryString field value of the parent record.
                 args.data['EmployeeID'] = this.parentDetails.parentKeyFieldValue; // 'this' refers to the instance of the child grid.
             }
         },
@@ -21,15 +21,16 @@ function App() {
         queryString: 'EmployeeID',
         toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
     };
-    return (<GridComponent dataSource={employeeData} childGrid={childGridOptions} height={315}>
+    return (
+        <GridComponent dataSource={employeeData} childGrid={childGridOptions} height={315}>
             <ColumnsDirective>
-              <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign="Right"/>
-              <ColumnDirective field='FirstName' headerText='First Name' width='150'/>
-              <ColumnDirective field='City' headerText='City' width='150'/>
-              <ColumnDirective field='Country' headerText='Country' width='150'/>
-          </ColumnsDirective>
-          <Inject services={[DetailRow, Edit, Toolbar]}/>
-      </GridComponent>);
-}
-;
+                <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign="Right"/>
+                <ColumnDirective field='FirstName' headerText='First Name' width='150'/>
+                <ColumnDirective field='City' headerText='City' width='150'/>
+                <ColumnDirective field='Country' headerText='Country' width='150'/>
+            </ColumnsDirective>
+            <Inject services={[DetailRow, Edit, Toolbar]}/>
+        </GridComponent>
+    );
+};
 export default App;

@@ -23,9 +23,8 @@ function App() {
     queryString: 'ID'
   };
 
-    return (<div>
-    <GridComponent  dataSource={employeeData} childGrid={childGridOptions} height={265}
-        ref={g => grid = g} >
+  return (<div>
+    <GridComponent  dataSource={employeeData} childGrid={childGridOptions} height={265} ref={g => grid = g} >
       <ColumnsDirective>
         <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign='Right'/>
         <ColumnDirective field='FirstName' headerText='First Name' width='150'/>
@@ -33,7 +32,8 @@ function App() {
         <ColumnDirective field='Country' headerText='Country' width='150'/>
       </ColumnsDirective>
       <Inject services={[DetailRow]}/>
-    </GridComponent></div>)
+    </GridComponent>
+  </div>)
 };
 export default App;
 

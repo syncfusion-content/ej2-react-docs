@@ -33,7 +33,7 @@ function App() {
               <ColumnDirective field='Country' headerText='Country' width='150'/>
           </ColumnsDirective>
           <Inject services={[DetailRow]}/>
-        </GridComponent>);
-}
-;
+        </GridComponent>
+    );
+};
 export default App;

@@ -19,7 +19,8 @@ function App() {
         <ColumnDirective field='CustomerName' headerText='Customer Name' width='160' />
       </ColumnsDirective>
       <Inject services={[Page, Group, LazyLoadGroup]} />
-    </GridComponent></div>)
+    </GridComponent></div>
+  )
 };
 export default App;
 

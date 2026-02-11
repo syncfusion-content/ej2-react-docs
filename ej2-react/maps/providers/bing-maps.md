@@ -101,7 +101,7 @@ root.render(<App />);
 
 The Bing Maps layer supports zooming and panning interactions for enhanced map exploration. Zooming provides a closer view of specific areas for detailed analysis, while panning allows navigation across different regions of the map. These features can be enabled using the [zoomSettings](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel) property with toolbar controls for user interaction.
 
-
+{% raw %}
 
 ```ts
 import * as React from "react";
@@ -135,7 +135,8 @@ const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 ```
- 
+
+{% endraw %}
 
 ## Adding markers and navigation line
 

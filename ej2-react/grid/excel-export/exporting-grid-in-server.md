@@ -1,41 +1,39 @@
 ---
 layout: post
-title: Exporting grid in server in React Grid component | Syncfusion
-description: Learn here all about Exporting grid in server in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
-control: Exporting grid in server 
+title: React Grid - Server-Side Export | Syncfusion
+description: Learn about server-side Excel and CSV export functionality in the Syncfusion React Grid component, including memory stream operations and worksheet merging.
+control: Server-side Export
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Exporting grid in server in React Grid component
+# Server-Side Excel Export
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component in React provides a powerful option to export data to Excel on the server side using the Grid server export library. This allows you to perform Excel export operations on the server, providing additional security and flexibility. To enable server-side Excel exporting, you need to configure the server dependencies and implement the necessary server configuration.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component provides server-side Excel export functionality using the Grid server export library. This approach enables Excel export operations to execute on the server, delivering enhanced security and flexibility. Server-side export requires configuring server dependencies and implementing the necessary server configuration.
+
+> For client-side Excel export setup, refer to the [Excel Export Feature Guide](https://ej2.syncfusion.com/react/documentation/grid/excel-export/excel-exporting).
 
 ## Server dependencies
 
-To enable the server-side export functionality for the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component in React, you need to include the required dependencies for Grid server-side Excel exporting. These dependencies are Essential<sup style="font-size:70%">&reg;</sup> for handling the export process on the server-side.
+Server-side export functionality for the Grid component requires specific dependencies to handle the export process on the server.
 
-The server-side export functionality is provided in the **Syncfusion.EJ2.GridExport** package, which is available in Essential<sup style="font-size:70%">&reg;</sup> Studio<sup style="font-size:70%">&reg;</sup> and can also be obtained from [nuget.org](https://www.nuget.org/).
-
-The following list of dependencies is required for Grid server-side Excel exporting action:
-
-* **Syncfusion.EJ2**: This is the core package that includes the main components and functionalities of Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JS 2.
-
-* **Syncfusion.EJ2.GridExport**: This package contains the server-side export functionality specifically for the Grid component. It provides the necessary APIs and tools to handle data export to Excel on the server.
+| **Dependency** | **Description** |
+|---|---|
+| `Syncfusion.EJ2` | Core package containing main components and functionalities of Syncfusion Essential JS 2. |
+| `Syncfusion.EJ2.GridExport` | Server-side export functionality package for Grid component, providing APIs and tools to handle Excel data export. |
 
 ## Server configuration
 
-To export the grid data to a Excel document on the server side, you need to perform the following server configuration using an ASP.NET Core Controller Action:
+Server configuration for Grid Excel export requires the following setup using an ASP.NET Core Controller Action:
 
-1. Set up the necessary dependencies and imports in your server-side code.
+| **Step** | **Action** | **Description** |
+|---|---|---|
+| 1 | Set up dependencies | Import necessary server-side dependencies and libraries. |
+| 2 | Define controller action | Create action to receive Grid properties from client and initiate server export. |
+| 3 | Call serverExcelExport | Use [serverExcelExport](https://ej2.syncfusion.com/react/documentation/api/grid#serverexcelexport) method to pass Grid properties to server action URL. |
 
-2. Define a controller action that handles the server-side Excel export. This action should receive the Grid properties from the client-side and initiate the Excel export operation on the server.
-
-3. Use the [serverExcelExport](https://ej2.syncfusion.com/react/documentation/api/grid/#serverexcelexport) method to pass the Grid properties to the server exporting action. This method allows you to specify the server action URL and other export options.
-
-The following code snippet shows server configuration using ASP.NET Core Controller Action.
-
+The following example demonstrates server configuration using ASP.NET Core Controller Action:
 
 ```ts
 public ActionResult ExcelExport([FromForm] string gridModel)
@@ -64,6 +62,8 @@ public IActionResult UrlDatasource([FromBody]DataManagerRequest dm)
   return dm.RequiresCounts ? Json(new { result = DataSource, count = count }) : Json(DataSource);
 }
 ```
+
+In the client side, call the `serverExcelExport` method with the server action URL inside the `toolbarClick` event.
 
 ```ts
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
@@ -101,15 +101,15 @@ function App() {
 export default App;
 ```
 
-> Note: Refer to the GitHub sample for quick implementation and testing from [here](https://github.com/SyncfusionExamples/React-EJ2-Grid-server-side-exporting).
+> Refer to the GitHub sample for quick implementation and testing from [here](https://github.com/SyncfusionExamples/React-EJ2-Grid-server-side-exporting).
 
-## CSV Export in server side
+## CSV export in server side
 
-To perform CSV export on the server-side, you can use the [serverCsvExport](https://ej2.syncfusion.com/react/documentation/api/grid/#servercsvexport) method, which sends the Grid properties to the server for processing and generating the CSV file.
+The Grid component provides powerful server-side CSV export capabilities using the [serverCsvExport](https://ej2.syncfusion.com/react/documentation/api/grid#servercsvexport) method, enabling seamless export operations with enhanced server-side processing and CSV file generation.
 
-To initiate the CSV export, you can invoke the `serverCsvExport` method within the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbarclick) event. Upon triggering the event, the server will deserialize the Grid properties and pass them to the `CsvExport` method, which will handle exporting the properties to the CSV format.
+To initiate CSV export, invoke the `serverCsvExport` method within the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid#toolbarclick) event. The server deserialize Grid properties and passes them to the `CsvExport` method, which handles exporting the properties to CSV format.
 
-Here's an example of how you can accomplish CSV export on the server-side:
+The following example demonstrates server-side CSV export implementation:
 
 ```ts
 public ActionResult CsvGridExport([FromForm] string gridModel)
@@ -117,14 +117,6 @@ public ActionResult CsvGridExport([FromForm] string gridModel)
   GridExcelExport exp = new GridExcelExport();
   Grid gridProperty = ConvertGridObject(gridModel);
   return exp.CsvExport<OrdersDetails>(gridProperty, OrdersDetails.GetAllRecords());
-}
-
-private Grid ConvertGridObject(string gridProperty)
-{
-  Grid GridModel = (Grid)Newtonsoft.Json.JsonConvert.DeserializeObject(gridProperty, typeof(Grid));
-  GridColumnModel cols = (GridColumnModel)Newtonsoft.Json.JsonConvert.DeserializeObject(gridProperty, typeof(GridColumnModel));
-  GridModel.Columns = cols.columns;
-  return GridModel;
 }
 
 public IActionResult UrlDatasource([FromBody]DataManagerRequest dm)
@@ -135,6 +127,8 @@ public IActionResult UrlDatasource([FromBody]DataManagerRequest dm)
   return dm.RequiresCounts ? Json(new { result = DataSource, count = count }) : Json(DataSource);
 }
 ```
+
+> For the `ConvertGridObject` method implementation, refer to the [Server configuration](#server-configuration) section above.
 
 ```ts
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
@@ -171,11 +165,12 @@ function App() {
 };
 export default App;
 ```
-## Export grid as memory stream
 
-The Grid offers an option to export the data as a memory stream instead of downloading it as a file in the browser. To obtain the memory stream of the exported grid, set the `AsMemoryStream` parameter to **true** in the [ExcelExport](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.GridExport.GridExcelExport.html#Syncfusion_EJ2_GridExport_GridExcelExport_ExcelExport__1_Syncfusion_EJ2_Grids_Grid_System_Collections_IEnumerable_System_Boolean_Syncfusion_EJ2_GridExport_ExcelExportProperties_) and [CsvExport](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.GridExport.GridExcelExport.html#Syncfusion_EJ2_GridExport_GridExcelExport_CsvExport__1_Syncfusion_EJ2_Grids_Grid_System_Collections_IEnumerable_System_Boolean_Syncfusion_EJ2_GridExport_ExcelExportProperties_) methods.
+## Export Grid as memory stream
 
-The following code demonstrates how to get the memory stream of exported grid.
+The Grid component delivers flexible memory stream export capabilities, allowing data export as a memory stream for advanced processing instead of direct browser downloads. This powerful feature enables seamless integration with backend systems and custom file handling workflows. To obtain the memory stream of exported Grid data, set the `AsMemoryStream` parameter to `true` in the [ExcelExport](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.GridExport.GridExcelExport.html#Syncfusion_EJ2_GridExport_GridExcelExport_ExcelExport__1_Syncfusion_EJ2_Grids_Grid_System_Collections_IEnumerable_System_Boolean_Syncfusion_EJ2_GridExport_ExcelExportProperties_) and [CsvExport](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.GridExport.GridExcelExport.html#Syncfusion_EJ2_GridExport_GridExcelExport_CsvExport__1_Syncfusion_EJ2_Grids_Grid_System_Collections_IEnumerable_System_Boolean_Syncfusion_EJ2_GridExport_ExcelExportProperties_) methods.
+
+The following example demonstrates obtaining the memory stream of exported grid data:
 
 ```ts
 public object ExcelExport(string gridModel)
@@ -195,17 +190,19 @@ public object CsvExport(string gridModel)
 
 ```
 
-## Merge grid's memory stream
+> For the `ConvertGridObject` method implementation, refer to the [Server configuration](#server-configuration) section above.
 
-The [Essential<sup style="font-size:70%">&reg;</sup> XlsIO](https://help.syncfusion.com/file-formats/xlsio/overview) library is used to merge multiple memory streams into a single stream. To learn more about the merge option, please refer to this [documentation](https://help.syncfusion.com/file-formats/xlsio/working-with-excel-worksheet#move-or-copy-a-worksheet).
+## Merge Grid memory stream
 
-You can merge a memory stream, a file stream, and a local file with the Grid's memory stream in the following ways:
+The powerful [Essential XlsIO](https://help.syncfusion.com/file-formats/xlsio/overview) library enables seamless merging of multiple memory streams into a single stream, providing efficient data consolidation capabilities for complex export scenarios. For comprehensive information about merge options and advanced worksheet manipulation, refer to the [XlsIO documentation](https://help.syncfusion.com/file-formats/xlsio/working-with-excel-worksheet#move-or-copy-a-worksheet).
 
-### Merging with an existing memory stream
+The Grid's memory stream can be merged with an existing memory stream, file stream, or local file using the following flexible approaches.
 
-If you already have a memory stream, you can directly use it to merge with the Grid's memory stream.
+### Merge with existing memory stream
 
-In the following code, `ExcelEngine` and `AddCopy` method of Worksheets are used to merge the grid's memory stream with an existing memory stream.
+Memory stream merging provides efficient data consolidation capabilities. To merge the Grid's memory stream with an existing memory stream, use the `ExcelEngine` and `AddCopy` method of Worksheets directly.
+
+The following example demonstrates merging the Grid's memory stream with an existing memory stream.
 
 ```ts
 using Syncfusion.XlsIO;
@@ -248,9 +245,11 @@ public object ExcelExport(string gridModel)
 
 ```
 
-### Merging with an existing file stream
+### Merge with existing file stream
 
-If you already have a file stream, you can directly use it to merge with the Grid's memory stream. In the following code, the existing file stream is merged with the Grid's memory stream.
+File stream integration enables seamless merging with existing file resources. To merge the Grid's memory stream with an existing file stream, directly use the file stream in the merge operation.
+
+The following example demonstrates merging with an existing file stream:
 
 ```ts
 using Syncfusion.XlsIO;
@@ -283,9 +282,11 @@ public object ExcelExport(string gridModel)
 
 ```
 
-### Merging with a local file
+### Merge with local file
 
-To merge a local file with the Grid's memory stream, you need to convert it into a file stream before merging. In the following code, the existing local file is merged with the Grid's memory stream.
+Local file integration provides flexible merge capabilities. To merge a local file with the Grid's memory stream, first convert the local file into a file stream.
+
+The following example demonstrates merging with a local file:
 
 ```ts
 using Syncfusion.XlsIO;
@@ -317,9 +318,11 @@ public object ExcelExport(string gridModel)
 
 ```
 
-### Downloading the merged memory stream
+### Download merged memory stream
 
-You can download the merged memory stream by converting it into a `FileStreamResult`. In the following code, the merged memory stream is downloaded to the browser.
+Download capabilities enable seamless file delivery to end users. The merged memory stream can be downloaded by converting it into a `FileStreamResult`.
+
+The following example demonstrates downloading the merged memory stream to the browser:
 
 ```ts
 using Syncfusion.XlsIO;
@@ -354,13 +357,14 @@ public ActionResult ExcelExport(string gridModel)
 }
 
 ```
-## Rotate a header text to a certain degree in the exported grid on the server side
 
-The Grid provides support to customize the column header styles, including changing text orientation, font color, and other visual aspects, in the exported Excel file on the server-side. This feature is particularly useful when you want to enhance the appearance of the exported data and create a unique representation of the Grid in the Excel document.
+## Rotate header text in exported Grid on server side
 
-To achieve this requirement, you can use the [excelHeaderQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/#excelheaderquerycellinfo) event of the Grid. This event is triggered when creating column headers for the Excel document to be exported on the server-side. In this event, you can collect the column header details and handle customizations.
+The Grid component delivers powerful server-side customization capabilities for column header styles in exported Excel files, including advanced text orientation, font color, and comprehensive visual styling options. This feature enhances the professional appearance of exported data and creates highly customized Grid representations in Excel documents.
 
-In the following demo, using the `HeaderCellRotate` method of the `GridExcelExport` class in the `ServerExcelHeaderQueryCellInfo` event, you can rotate the header text of the column header in the excel exported document.
+To customize column headers, use the [excelHeaderQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#excelheaderquerycellinfo) event of the Grid. This event triggers when creating column headers for the Excel document during server-side export, allowing collection of column header details and handling of customizations.
+
+The following example demonstrates rotating header text of column headers in the exported Excel document using the `HeaderCellRotate` method of the `GridExcelExport` class in the `ServerExcelHeaderQueryCellInfo` event:
 
 ```ts
 public ActionResult ExcelExport(string gridModel)

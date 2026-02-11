@@ -31,7 +31,7 @@ To enable batch editing mode, set the [editSettings.mode](https://ej2.syncfusion
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs2" %}
 
-> For Grid editing setup and configuration, refer to the [Edit Feature Setup](../editing#set-up-editing).
+> For Grid editing setup and configuration, refer to the [Edit Feature Setup](./edit#set-up-editing).
 
 ## Automatically update the column based on another column edited value
 

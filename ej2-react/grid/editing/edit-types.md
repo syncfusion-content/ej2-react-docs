@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The React Grid component in Syncfusion<sup style="font-size:70%">&reg;</sup> provides powerful edit types that enable seamless customization of the editing behavior for different column types. These edit types deliver flexibility in handling diverse data types, enhance the editing experience, and provide efficient solutions for different editing scenarios.
 
-> For grid basic editing setup and configuration prerequisites, refer to the [Edit Feature Setup](../editing/edit#set-up-editing). 
+> For grid basic editing setup and configuration prerequisites, refer to the [Edit Feature Setup](./edit#set-up-editing). 
 
 ## Built-in cell editors
 

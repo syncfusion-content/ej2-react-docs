@@ -4,7 +4,6 @@ import { data } from './datasource';
 function App() {
   const groupOptions = {
     columns: ['CustomerID', 'ShipCity'],
-    showDropArea: false,
     captionTemplate: '<span class="groupItems"> ${headerText} - ${key} : ${count} Items </span>'
   };
   return <GridComponent dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={315}>

@@ -18,7 +18,7 @@ The Aggregates feature in Syncfusion<sup style="font-size:70%">&reg;</sup> React
 
 The aggregate feature is enabled by importing the `Aggregate` module from `@syncfusion/ej2-react-grids` and injecting the `Aggregate` service into the grid.
 
-```jsx
+```js
 import { GridComponent, Inject, Aggregate } from '@syncfusion/ej2-react-grids';
 
 <GridComponent>

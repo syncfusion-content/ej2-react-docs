@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component supports template editing, providing a powerful and flexible way to customize the appearance and behavior of cells during editing. React templates enable defining the structure and content of cells within the Grid.
 
-> For grid basic editing setup and configuration, refer to the [Edit Feature Setup](../editing#set-up-editing).
+> For grid basic editing setup and configuration, refer to the [Edit Feature Setup](./edit#set-up-editing).
 
 ## Inline or dialog template editing
 

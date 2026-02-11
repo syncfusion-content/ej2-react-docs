@@ -1,8 +1,8 @@
 .e-grid .e-icon-grightarrow::before,
 .e-grid-menu .e-icon-grightarrow::before {
-content: '\e85f';
+  content: '\e7f9';
 }
 .e-grid .e-icon-gdownarrow::before,
 .e-grid-menu .e-icon-gdownarrow::before {
-content: '\e83f';
+  content: '\e7d8';
 }

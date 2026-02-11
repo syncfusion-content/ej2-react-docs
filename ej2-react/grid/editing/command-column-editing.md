@@ -20,7 +20,7 @@ Command column editing is activated through the [commands](https://ej2.syncfusio
 
 The `CommandColumn` module must be injected into the grid to enable command column functionalities. Inject the service as shown in the following code:
 
-```tsx
+```ts
 import { GridComponent, ColumnsDirective, ColumnDirective, Inject } from '@syncfusion/ej2-react-grids';
 import { CommandColumn } from '@syncfusion/ej2-react-grids';
 

@@ -14,8 +14,8 @@ function App() {
   return (<div>
     <label style={{ padding: "30px 17px 0 0" }}>Enter current page:</label>
     <TextBoxComponent ref={t => textbox = t} width={120}></TextBoxComponent>
-    <ButtonComponent onClick={click}>Click button</ButtonComponent>
-    <GridComponent dataSource={data} height={265} allowPaging={true} pageSettings={pageSettings}>
+    <ButtonComponent id="button" onClick={click}>Click button</ButtonComponent>
+    <GridComponent id="grid" dataSource={data} height={265} allowPaging={true} pageSettings={pageSettings}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" isPrimaryKey={true} />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />

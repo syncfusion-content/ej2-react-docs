@@ -14,7 +14,7 @@ The grouping feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Rea
 
 The group feature is enabled by importing the `Group` module from `@syncfusion/ej2-react-grids` and injecting the `Group` service into the grid.
 
-```jsx
+```js
 import { GridComponent, Inject, Group } from '@syncfusion/ej2-react-grids';
 
 <GridComponent>

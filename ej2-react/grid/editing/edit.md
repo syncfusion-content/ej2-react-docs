@@ -59,16 +59,22 @@ The Grid component supports multiple editing modes through the [editSettings.mod
 | `Batch` | Multiple rows or cells can be edited simultaneously. All changes saved together in one operation | Enables simultaneous editing before submission. Prevents accidental saves and allows reviewing all changes before committing to the data source |
 | `Dialog` | Row data opens in a dialog box that blocks the grid until closed | Consolidates data into a focused form interface for organized multi-field editing. Ensures focused editing and enforced validation before submission |
 
-```jsx
-// Inline editing
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
+
+// Inline editing.
 <GridComponent editSettings={{ mode: 'Inline', allowEditing: true }}>
 
-// Batch editing
+// Batch editing.
 <GridComponent editSettings={{ mode: 'Batch', allowEditing: true }}>
 
-// Dialog editing
+// Dialog editing.
 <GridComponent editSettings={{ mode: 'Dialog', allowEditing: true }}>
-```
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 For a comprehensive overview of edit modes and [edit types](./edit-types.md) available in React Grid, refer to the following video:
 
@@ -128,7 +134,7 @@ The Grid component provides the option to disable editing for specific columns. 
 
 To permanently disable editing for a column, set the [allowEditing](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowediting) property to `false` on the column. This prevents editing for that column across all rows:
 
-```jsx
+```js
 <ColumnDirective field='OrderID' allowEditing={false} />
 ```
 
@@ -488,8 +494,3 @@ The following example demonstrates how to render a textbox in the "Freight" colu
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs19" %}
 
 > * When a template column has a corresponding `field` property defined, the value entered in the template column's input field is stored in the associated edit column of the row's data object.
-
-## See also
-
-* [Cascading DropDownList with Grid Editing](../how-to/cascading-drop-down-list-with-grid-editing)
-* [Tab Inside the Dialog Editing](../how-to/using-tab-inside-the-dialog-editing)

@@ -17,9 +17,7 @@ function App() {
       { field: 'ShipName', headerText: 'Ship Name', width: 150 }
     ],
     dataSource: data,
-    editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true },
     queryString: 'EmployeeID',
-    toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
   };
   return (<div>
     <div style={{ marginLeft: "100px" }}>
@@ -33,6 +31,7 @@ function App() {
         <ColumnDirective field='Country' headerText='Country' width='150' />
       </ColumnsDirective>
       <Inject services={[DetailRow, Edit, Toolbar]} />
-    </GridComponent ></div>)
+    </GridComponent ></div>
+  )
 };
 export default App;
