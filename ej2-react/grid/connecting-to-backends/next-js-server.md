@@ -155,7 +155,7 @@ The Syncfusion React Grid provides [custom data binding](https://ej2.syncfusion.
 
 **Custom data binding workflow**:
 
-The Syncfusion Angular Grid supports custom data binding, enabling seamless integration with external API services. When Grid actions such as paging, sorting, filtering, or CRUD operations are performed, requests are sent to the API. The API processes these operations and returns the results in the required format, giving complete control over application‑specific workflows and enabling efficient handling of large datasets. The custom data binding feature can interact with backend APIs through two key events.
+The Syncfusion React Grid supports custom data binding, enabling seamless integration with external API services. When Grid actions such as paging, sorting, filtering, or CRUD operations are performed, requests are sent to the API. The API processes these operations and returns the results in the required format, giving complete control over application‑specific workflows and enabling efficient handling of large datasets. The custom data binding feature can interact with backend APIs through two key events.
 
   - [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datastatechange): Triggered when the Grid performs actions such as paging, sorting, or filtering. It provides the current state details, which are sent to the API so the request can be processed and data returned in the required "{ result:[], count:100 }" format.
 
@@ -251,7 +251,7 @@ In this application, the Grid communicates with the Next.js  server through the 
 
 ### Step 4: Implement filtering feature
 
-The Grid supports filtering through a menu interface that restricts data based on column values. Filtering is enabled by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowfiltering) property to "true" and injecting the `Filter` module.  
+The Grid supports filtering through a menu interface that restricts data based on column values. Filtering is enabled by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowfiltering) property to `true` and injecting the `Filter` module.  
 
 ```ts
   [app/page.tsx]
@@ -415,7 +415,7 @@ The following code example demonstrates handling the search action inside the se
 
 ### Step 6: Implement sorting feature
 
-The sorting feature in the Grid allows records to be organized in ascending or descending order based on one or more columns.The sorting feature in the Grid is enabled by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to "true" and injecting the `Sort` module.
+The sorting feature in the Grid allows records to be organized in ascending or descending order based on one or more columns.The sorting feature in the Grid is enabled by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to `true` and injecting the `Sort` module.
 
 ```ts
   [app/page.tsx]
@@ -484,7 +484,7 @@ The following code example demonstrates handling the sort action inside the serv
   
 ### Step 7: Implement paging feature
 
-The paging feature allows efficient loading of large data sets through on‑demand loading. Paging in the Grid is enabled by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowpaging) property to "true" and injecting the `Page` module. This sends parameters to fetch only the data required for the current viewport.
+The paging feature allows efficient loading of large data sets through on‑demand loading. Paging in the Grid is enabled by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowpaging) property to `true` and injecting the `Page` module. This sends parameters to fetch only the data required for the current viewport.
 ```ts
   [app/page.tsx]
 
@@ -548,9 +548,9 @@ The following code example demonstrates handling the paging action inside the se
   
 ### Step 8: Implement CRUD operations
 
-Editing operations in the Grid are enabled through custom data binding by configuring the editSettings properties(`allowEditing`, `allowAdding`, and `allowDeleting`) to "true" and injecting the `Edit` module. The `dataSourceChanged` event must be included in the Grid component to send CRUD requests to the Next.js server. During a CRUD operation, this event is triggered and provides the necessary parameters to the server for processing create, update, or delete actions.
+Editing operations in the Grid are enabled through custom data binding by configuring the editSettings properties(`allowEditing`, `allowAdding`, and `allowDeleting`) to `true` and injecting the `Edit` module. The `dataSourceChanged` event must be included in the Grid component to send CRUD requests to the Next.js server. During a CRUD operation, this event is triggered and provides the necessary parameters to the server for processing create, update, or delete actions.
 
-Grid data requires a primary key to modify row data based on the database’s unique values. To enable this, configure a primary key by setting the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property must be set to "true" on the column that contains unique values.
+Grid data requires a primary key to modify row data based on the database’s unique values. To enable this, configure a primary key by setting the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property must be set to `true` on the column that contains unique values.
 
 ```ts
   [app/page.tsx]
@@ -828,7 +828,7 @@ Open `http://localhost:3000` in the browser.
   
 ## Complete sample repository
 
-A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-grid-component-in-nextjs/tree/master)
+A complete, working sample implementation is available in the [Syncfusion React Grid with Next.js Backend Sample](https://github.com/SyncfusionExamples/syncfusion-react-grid-component-in-nextjs/tree/master)
   
 ## Summary
   

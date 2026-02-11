@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Maps component can be customized as the desired layout using the custom path map feature. Here, the Maps component has been showcased with normal geometry type shapes to represent the bus seat selection layout.
 
-
+{% raw %}
 
 ```ts
 import { seatData } from 'seat.ts';
@@ -42,5 +42,7 @@ import * as ReactDOM from 'react-dom';
 const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 ```
+
+{% endraw %}
 
  

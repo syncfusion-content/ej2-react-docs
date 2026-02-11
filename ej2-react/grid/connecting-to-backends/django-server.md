@@ -39,9 +39,9 @@ The Django REST Framework backend serves as the core data service, managing API 
 
 **Instructions:**
 
-1. Open a terminal ( for example, an integrated terminal in Visual Studio Code or Windows Command prompt opened with <kbd>Win+R</kbd>, or macOS Terminal launched with <kbd>Cmd+Space</kbd> ).
+1. Open a terminal ( for example, an integrated terminal in Visual Studio Code or Windows Command prompt opened with <kbd>Win+R</kbd>, or macOS terminal launched with <kbd>Cmd+Space</kbd> ).
 
-2. Before creating the `Django` project, set up a virtual environment. A virtual environment keeps project dependencies isolated, ensuring that package installations do not affect other projects.
+2. Before creating the Django project, set up a virtual environment. A virtual environment keeps project dependencies isolated, ensuring that package installations do not affect other projects.
 
     The following commands create and activate the environment:
 
@@ -54,12 +54,12 @@ The Django REST Framework backend serves as the core data service, managing API 
     ```bash
     pip install django djangorestframework django-filter django-cors-headers mssql-django pyodbc
     ```
-    - `mssql-django` enables `Django` to connect to SQL Server through `pyodbc`.
-    - For `Django` settings reference, see [databases](https://docs.djangoproject.com/en/6.0/ref/settings/#databases).
+    - `mssql-django` enables Django to connect to SQL Server through `pyodbc`.
+    - For Django settings reference, see [databases](https://docs.djangoproject.com/en/6.0/ref/settings/#databases).
 
-4. Initialize the `Django` project and Application:
+4. Initialize the Django project and Application:
 
-    For this guide, a `Django` project named **django_server** is created, along with a new application module, using the following commands:
+    For this guide, a Django project named **django_server** is created, along with a new application module, using the following commands:
 
     ```bash
     django-admin startproject django_server .
@@ -96,9 +96,9 @@ This step updates the file to establish the SQL Server connection and enable ess
     }
     ```
     **Line breakdown:**
-    - **ENGINE**: Database backend; for SQL Server via `mssql-django`, set to `"mssql"`.
+    - **ENGINE**: Database backend; for SQL Server via `mssql-django`, set to `mssql`.
     - **NAME**: Database name to connect to (e.g., **LibraryDB**).
-    - **USER**: SQL Server login used by `Django`.
+    - **USER**: SQL Server login used by Django.
     - **PASSWORD**: Password for the above user.
     - **HOST**: Server/instance name or address (e.g., **(localdb)\MSSQLLocalDB** or a hostname).
     - **OPTIONS.driver**: ODBC driver to use (e.g., **ODBC Driver 18 for SQL Server**). Must be installed on the machine.
@@ -396,7 +396,7 @@ Install the necessary Syncfusion packages using the below command in Visual Stud
 npm install @syncfusion/ej2-react-grids @syncfusion/ej2-data --save
 ```
 - **@syncfusion/ej2-react-grids** – Required package for integrating the Syncfusion Grid component in React.
-- **@syncfusion/ej2-data** – Provides data utilities for binding and manipulating Grid data.
+- **@syncfusion/ej2-data** – Provides data utilities for binding and manipulating grid data.
 
 ### Step 3: Including required Syncfusion stylesheets
 
@@ -417,13 +417,13 @@ Once the dependencies are installed, the required CSS files are made available i
 @import '../node_modules/@syncfusion/ej2-react-grids/styles/bootstrap5.3.css';
 ```
 
-For this project, the `Bootstrap 5.3` theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation to learn more about theming and customization options.
+For this project, the "Bootstrap 5.3" theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation to learn more about theming and customization options.
 
 ### Step 4: Configure DataManager with Django REST Framework (DRF)
 
-The Syncfusion [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) acts as a communication layer between the React Grid and backend services. It sends all Grid operations—such as reading data, sorting, filtering, searching, paging, and performing CRUD actions—to the server in a standardized format.
+The Syncfusion [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) acts as a communication layer between the React Grid and backend services. It sends all grid operations—such as reading data, sorting, filtering, searching, paging, and performing CRUD actions—to the server in a standardized format.
 
-The [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#url-adaptor) is a built‑in adaptor that formats requests for REST-style endpoints, like the Django REST Framework API. It serializes all Grid actions and posts them to the DRF API endpoint, then processes the JSON responses returned by the server.
+The [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#url-adaptor) is a built‑in adaptor that formats requests for REST-style endpoints, like the Django REST Framework API. It serializes all grid actions and posts them to the DRF API endpoint, then processes the JSON responses returned by the server.
 
 When using `DataManager` with `UrlAdaptor`, the server is expected to return a specific response structure:
 
@@ -435,7 +435,7 @@ This response format ensures seamless interaction between the React Grid and bac
 **Instructions:**
 
 1. Open the **App.tsx** file.
-2. Create a `DataManager` instance with the `UrlAdaptor` inside the React component and point it to the DRF endpoint. This `DataManager` will serialize all Grid interactions (data and CRUD) and post them to the DRF server.
+2. Create a `DataManager` instance with the `UrlAdaptor` inside the React component and point it to the DRF endpoint. This `DataManager` will serialize all grid interactions (data and CRUD) and post them to the DRF server.
 
     ```ts
     import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
@@ -449,8 +449,8 @@ This response format ensures seamless interaction between the React Grid and bac
     ```
     **Explanation:**
     
-    - **url** - Base API endpoint exposed by the `Django` router.
-    - **adaptor** - Converts Grid operations into standard REST requests.
+    - **url** - Base API endpoint exposed by the Django router.
+    - **adaptor** - Converts grid operations into standard REST requests.
     - **crossDomain** - Enables communication with a backend running on a different port.
 
 3. Configure the Grid Component.
@@ -523,7 +523,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
 
 **Instructions:**
 
-1. Enable paging by setting [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid#allowpaging) to "true" on the Grid so that paging requests include the required `skip` and `take` parameters.
+1. Enable paging by setting [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid#allowpaging) to `true` on the grid so that paging requests include the required `skip` and `take` parameters.
 
 2. Configure **pageSettings** to define the page size and any additional paging options needed for the intended layout and interaction design.
 
@@ -698,7 +698,7 @@ Sorting allows records to be organized by clicking on column headers to arrange 
 
 **Instructions:**
 
-1. Enable sorting by setting [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) to "true" on the Grid so that sort changes are emitted.
+1. Enable sorting by setting [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) to `true` on the Grid so that sort changes are emitted.
 
     ```ts
         <GridComponent
@@ -761,7 +761,7 @@ Filtering helps refine records by applying conditions on column values. It allow
 
 **Instructions:**
 
-1. Enable filtering by setting [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) to "true" on the Grid so that filter interactions are sent to the server.
+1. Enable filtering by setting [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) to "true" on the grid so that filter interactions are sent to the server.
 2. Optionally configure the filtering user interface (for example, Menu, CheckBox, or Excel style) by setting the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid#filtersettings) property.
 
     ```ts
@@ -873,7 +873,7 @@ When multiple checkbox values are selected for the same column(e.g., (book-title
 
 ## Performing CRUD operations
 
-CRUD operations allow creating, updating, and deleting rows directly in the Grid, with changes persisted to the database through DRF.
+CRUD operations allow creating, updating, and deleting rows directly in the grid, with changes persisted to the database through DRF.
 
 **Instructions:**
 
@@ -912,14 +912,14 @@ CRUD operations allow creating, updating, and deleting rows directly in the Grid
 
     **Explanation:**
 
-    - The "handle_crud_action" function reads the action field from the incoming Grid payload.
+    - The "handle_crud_action" function reads the action field from the incoming grid payload.
     - Based on the action (insert, update, remove/delete), it routes the request to the corresponding handler function.
     - Each handler performs the actual database operation.
     - If the action is unknown, it returns None, allowing the ViewSet to continue with default behavior.
 
 **Insert:**
 
-Insert operation creates a new record in the database using the values provided from the Grid.
+Insert operation creates a new record in the database using the values provided from the grid.
 
 Open (**library/services/ej2_crud.py**) and add the following code:
 
@@ -953,7 +953,7 @@ def _handle_insert(viewset, payload) -> Response:
 
 **Update:**
 
-Update operation modifies an existing record by applying the edited values sent from the Grid.
+Update operation modifies an existing record by applying the edited values sent from the grid.
 
 Open the (**library/services/ej2_crud.py**) file and include the following code:
 
@@ -1023,7 +1023,7 @@ def _handle_remove(viewset, payload) -> Response:
 
 ![Delete_Payload](../images/grid-django-crud-delete.png)
 
-> Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#mode) for the Grid component. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property is set to "true" for a specific Grid Column which has unique values.
+> Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#mode) for the Grid component. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property is set to `true` for a specific Grid Column which has unique values.
 
 ## Running the application
 
@@ -1051,7 +1051,7 @@ npm run dev
 
 For a complete working implementation of this example, refer to the following GitHub repository:
 
-[Syncfusion DataGrid with DRF Sample](https://github.com/SyncfusionExamples/syncfusion-react-grid-component-with-django-server)
+[Syncfusion React Grid with DRF Sample](https://github.com/SyncfusionExamples/syncfusion-react-grid-component-with-django-server)
 
 ## Summary
 

@@ -250,10 +250,10 @@ The following example demonstrates how to set custom text values for yes and no 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/AutomaticLayout/flowchart-cs4/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/flowchart-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/AutomaticLayout/flowchart-cs4/app/index.tsx %}
+{% include code-snippet/diagram/reactCurlyExamples/flowchart-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Organizational Chart Layout in React Diagram Component
 
-An organizational chart is a diagram that displays the hierarchical structure of an organization, showing reporting relationships and roles within the company. The React Diagram component provides specialized support for creating professional organizational charts through automatic layout algorithms. To create an organizational chart, set the [`type`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout/#type) of layout should be set as an **OrganizationalChart**.
+An organizational chart is a diagram that displays the hierarchical structure of an organization, showing reporting relationships and roles within the company. The React Diagram component provides specialized support for creating professional organizational charts through automatic layout algorithms. To create an organizational chart, set the [`type`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout#type) of layout should be set as an **OrganizationalChart**.
 
 
 ## Organizational Chart with DataSource
@@ -54,7 +54,7 @@ You can render an org-chart layout without using DataSource. The following code 
 
 ## Advanced Layout Customization with getLayoutInfo
 
-Organizational chart layout starts parsing from root and iterate through all its child elements. The [`getLayoutInfo`](https://ej2.syncfusion.com/react/documentation/api/diagram/layoutModel/#getlayoutinfo) method provides granular control over how each subtree within the organizational chart is arranged. This method is invoked for every node during the layout process, allowing customization of orientation, alignment, spacing, and special node types like assistants.
+Organizational chart layout starts parsing from root and iterate through all its child elements. The [`getLayoutInfo`](https://ej2.syncfusion.com/react/documentation/api/diagram/layoutmodel#getlayoutinfo) method provides granular control over how each subtree within the organizational chart is arranged. This method is invoked for every node during the layout process, allowing customization of orientation, alignment, spacing, and special node types like assistants.
 
 The organizational chart layout engine parses the hierarchy starting from the root node and processes each subtree. By overriding the `getLayoutInfo` method, developers can customize the arrangement of child nodes based on specific business requirements.
 
@@ -117,11 +117,11 @@ This example shows how to implement vertical arrangement for leaf-level organiza
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/AutomaticLayout/organizationalchart-cs4/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/organizationalchart-cs4/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/AutomaticLayout/organizationalchart-cs4/app/index.tsx %}
+{% include code-snippet/diagram/reactCurlyExamples/organizationalchart-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

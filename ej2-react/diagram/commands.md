@@ -454,10 +454,10 @@ The following code example illustrates how to use the command manager to clone a
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/commands/customCommand-cs1/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/customCommand-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/commands/customCommand-cs1/app/index.tsx %}
+{% include code-snippet/diagram/reactCurlyExamples/customCommand-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

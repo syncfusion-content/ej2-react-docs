@@ -16,8 +16,8 @@ The diagram ruler consists of two components: a horizontal ruler displayed along
 
 ## Define Rulers
 
-The [`rulerSettings`](https://ej2.syncfusion.com/react/documentation/api/diagram/rulerSettings/) property of diagram controls the visibility and appearance of the ruler in the diagram.
-The [`showRulers`](https://ej2.syncfusion.com/react/documentation/api/diagram/rulerSettings/#showrulers) property shows or hides the rulers in the diagram.
+The [`rulerSettings`](https://ej2.syncfusion.com/react/documentation/api/diagram/rulersettings) property of diagram controls the visibility and appearance of the ruler in the diagram.
+The [`showRulers`](https://ej2.syncfusion.com/react/documentation/api/diagram/rulersettings#showrulers) property shows or hides the rulers in the diagram.
 
 The following code shows how to add a ruler to the diagram.
 
@@ -34,22 +34,22 @@ The following code shows how to add a ruler to the diagram.
 
 ## Customizing the Ruler
 
-The [`horizontalRuler`](https://ej2.syncfusion.com/react/documentation/api/diagram/rulerSettings/#horizontalruler) and [`verticalRuler`](https://ej2.syncfusion.com/react/documentation/api/diagram/rulerSettings/#verticalruler) properties of `rulerSettings` customize the rulers appearance in the diagram.
+The [`horizontalRuler`](https://ej2.syncfusion.com/react/documentation/api/diagram/rulersettings#horizontalruler) and [`verticalRuler`](https://ej2.syncfusion.com/react/documentation/api/diagram/rulersettings#verticalruler) properties of `rulerSettings` customize the rulers appearance in the diagram.
 
 By default, the ruler segments are arranged based on pixel values, with each segment representing a unit of measurement on the diagram canvas.
 
 ### Ruler Spacing and Dimensions
 
-The [`interval`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramRuler/#interval) property defines the spacing between ruler segments, while the [`segmentWidth`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramRuler/#segmentwidth) property sets the width of each segment.
+The [`interval`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramruler#interval) property defines the spacing between ruler segments, while the [`segmentWidth`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramruler#segmentwidth) property sets the width of each segment.
 These properties apply to both horizontal and vertical rulers.
 
 ### Tick Alignment
 
-The [`tickAlignment`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramRuler/#tickalignment) property controls the positioning of ruler tick marks. For the horizontal ruler, ticks can be aligned to the left or right side, while for the vertical ruler, they can be aligned to the top or bottom.
+The [`tickAlignment`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramruler#tickalignment) property controls the positioning of ruler tick marks. For the horizontal ruler, ticks can be aligned to the left or right side, while for the vertical ruler, they can be aligned to the top or bottom.
 
 ### Ruler Thickness
 
-The [`thickness`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramRuler/#thickness) property sets the thickness of the ruler display area for both horizontal and vertical rulers.
+The [`thickness`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramruler#thickness) property sets the thickness of the ruler display area for both horizontal and vertical rulers.
 
 The following code shows how the diagram ruler can be customized.
 
@@ -67,16 +67,16 @@ The following code shows how the diagram ruler can be customized.
 
 ### Arrange Tick
 
-The [`arrangeTick`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramRuler/#arrangetick) function allows customization of ruler tick appearance for both horizontal and vertical rulers. This function is called during the rendering of each tick mark, providing control over tick properties such as length and style.
+The [`arrangeTick`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramruler#arrangetick) function allows customization of ruler tick appearance for both horizontal and vertical rulers. This function is called during the rendering of each tick mark, providing control over tick properties such as length and style.
 
 The following code demonstrates how to use the `arrangeTick` function to customize the tick length.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/ruler/customRuler-cs2/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/customRuler-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/ruler/customRuler-cs2/app/index.tsx %}
+{% include code-snippet/diagram/reactCurlyExamples/customRuler-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -84,6 +84,6 @@ The following code demonstrates how to use the `arrangeTick` function to customi
 
 ### Marker Color
 
-The HorizontalRuler’s [`markerColor`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramRuler/#markercolor)property defines the ruler marker color for both horizontal and vertical rulers. The marker appears when hovering the mouse over the diagram canvas, providing precise position feedback.
+The HorizontalRuler’s [`markerColor`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramruler#markercolor)property defines the ruler marker color for both horizontal and vertical rulers. The marker appears when hovering the mouse over the diagram canvas, providing precise position feedback.
 
-N>  The MarkerColor property can be customized using the [`marker`](./style/#customizing-the-ruler) CSS style.
+N>  The MarkerColor property can be customized using the [`marker`](https://ej2.syncfusion.com/react/documentation/diagram/style#customizing-ruler-elements) CSS style.

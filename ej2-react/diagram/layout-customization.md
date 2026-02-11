@@ -179,11 +179,11 @@ The following code example shows how to expand/collapse the children of a node:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/AutomaticLayout/layout-expandandcollapse-cs1/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/layout-expandandcollapse-cs1/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/AutomaticLayout/layout-expandandcollapse-cs1/app/index.tsx %}
+{% include code-snippet/diagram/reactCurlyExamples/layout-expandandcollapse-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

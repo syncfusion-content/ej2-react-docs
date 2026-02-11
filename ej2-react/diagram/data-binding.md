@@ -64,10 +64,10 @@ For comprehensive DataManager information, see the `dataSourceSettings`. The fol
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/dataBinding/es5RemoteBinding-cs1/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/es5RemoteBinding-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/dataBinding/es5RemoteBinding-cs1/app/index.tsx %}
+{% include code-snippet/diagram/reactCurlyExamples/es5RemoteBinding-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

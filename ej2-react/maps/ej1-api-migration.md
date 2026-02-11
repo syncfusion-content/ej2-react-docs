@@ -8,6 +8,8 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
+{% raw %}
+
 # Ej1 api migration in React Maps component
 
 This article describes the API migration process of Maps component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
@@ -282,3 +284,4 @@ This article describes the API migration process of Maps component from Essentia
 | Animation Complete | Not Applicable | **Property:** *animationComplete*<br/><br/> `<MapsComponent id='maps'  animationComplete={this.animationComplete.bind(this)}></MapsComponent>,`<br/>`document.getElementById('maps');`<br/>` public  animationComplete(args: IAnimationCompleteEventArgs): void {}` |
 
  
+{% endraw %}

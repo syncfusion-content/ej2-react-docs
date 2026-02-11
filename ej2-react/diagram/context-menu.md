@@ -78,10 +78,10 @@ The following example shows how to display different custom menu items for nodes
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/contextmenu/contextmenu-cs3/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/contextmenu-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/contextmenu/contextmenu-cs3/app/index.tsx %}
+{% include code-snippet/diagram/reactCurlyExamples/contextmenu-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
