@@ -1,11 +1,7 @@
-{% raw %}
-
-
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
 
-// To render Switch.
 function App() {
     return (
         <div className="switch-control">
@@ -22,13 +18,10 @@ function App() {
             </div>
             <div>
                 <label htmlFor='switch3' style={{ padding: "10px 103px 10px 0" }}> iOS Switch </label>
-                <SwitchComponent id="switch3" cssClass='custom-iOS' checked={true}  />
+                <SwitchComponent id="switch3" cssClass='custom-iOS' checked={true} />
             </div>
         </div>
     );
 }
 export default App;
 ReactDom.render(<App />, document.getElementById('switch'));
-
-
-{% endraw %}

@@ -1,4 +1,3 @@
-{% raw %}
 import { SpeedDialComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
@@ -13,11 +12,10 @@ function App() {
         alert(args.item.text + " is clicked");
     }
     return (<div>
-      <div id="targetElement" style={{ position: 'relative', minHeight: '350px', border: '1px solid' }}></div>
-      {/* Initialize the SpeedDial component */}
-      <SpeedDialComponent id='speeddial' items={items} content='Edit' target='#targetElement' clicked={itemClick}></SpeedDialComponent>
+        <div id="targetElement" style={{ position: 'relative', minHeight: '350px', border: '1px solid' }}></div>
+        {/* Initialize the SpeedDial component */}
+        <SpeedDialComponent id='speeddial' items={items} content='Edit' target='#targetElement' clicked={itemClick}></SpeedDialComponent>
     </div>);
 }
 export default App;
 ReactDom.render(<App />, document.getElementById('button'));
-{% endraw %}

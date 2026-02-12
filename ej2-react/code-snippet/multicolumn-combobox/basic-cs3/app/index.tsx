@@ -1,7 +1,3 @@
-{% raw %}
-
-
-
 import { MultiColumnComboBoxComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-multicolumn-combobox';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
@@ -50,6 +46,3 @@ export default class App extends React.Component<{}, {}> {
     }
 }
 ReactDOM.render(<App />, document.getElementById('multicolumn'));
-
-
-{% endraw %}

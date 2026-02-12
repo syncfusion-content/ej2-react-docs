@@ -1,9 +1,7 @@
-{% raw %}
-{ /* Import the Speed Dial. */ }
 import { ButtonComponent, SpeedDialComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
-{ /* To render Speed Dial.*/ }
+
 function App() {
     let speeddialObj;
     const items = [
@@ -23,4 +21,3 @@ function App() {
 }
 export default App;
 ReactDom.render(<App />, document.getElementById('button'));
-{% endraw %}

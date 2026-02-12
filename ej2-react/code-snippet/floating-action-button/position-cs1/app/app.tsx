@@ -1,6 +1,3 @@
-{% raw %}
-
-
 import { FabComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
@@ -16,13 +13,10 @@ function App() {
             <FabComponent id="fab5" iconCss='fab-icons fab-icon-people' position='MiddleCenter' target='#target'></FabComponent>
             <FabComponent id="fab6" iconCss='fab-icons fab-icon-people' position='MiddleRight' target='#target'></FabComponent>
             <FabComponent id="fab7" iconCss='fab-icons fab-icon-people' position='BottomLeft' target='#target'></FabComponent>
-            <FabComponent id="fab8" iconCss='fab-icons fab-icon-people' position='BottomCenter'  target='#target'></FabComponent>
+            <FabComponent id="fab8" iconCss='fab-icons fab-icon-people' position='BottomCenter' target='#target'></FabComponent>
             <FabComponent id="fab9" iconCss='fab-icons fab-icon-people' position='BottomRight' target='#target'></FabComponent>
         </div>
     );
 }
 export default App;
 ReactDom.render(<App />, document.getElementById('button'));
-
-
-{% endraw %}

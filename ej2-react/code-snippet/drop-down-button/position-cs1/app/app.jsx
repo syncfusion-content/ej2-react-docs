@@ -1,9 +1,9 @@
-{% raw %}
 import { enableRipple } from '@syncfusion/ej2-base';
 import { DropDownButtonComponent } from '@syncfusion/ej2-react-splitbuttons';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 enableRipple(true);
+
 // To render DropDownButton.
 function App() {
     let ddb;
@@ -25,8 +25,7 @@ function App() {
     }
     return (<div>
         <DropDownButtonComponent ref={(scope) => { ddb = scope; }} items={items} open={onOpen} cssClass='e-caret-up'>Clipboard</DropDownButtonComponent>
-      </div>);
+    </div>);
 }
 export default App;
 ReactDom.render(<App />, document.getElementById('button'));
-{% endraw %}

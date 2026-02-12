@@ -1,7 +1,7 @@
-{% raw %}
 import { FabComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
+
 function App() {
     function onClick() {
         alert("Edit is clicked!");
@@ -14,4 +14,3 @@ function App() {
 }
 export default App;
 ReactDom.render(<App />, document.getElementById('button'));
-{% endraw %}
