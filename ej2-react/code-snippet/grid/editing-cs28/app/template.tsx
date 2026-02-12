@@ -7,8 +7,8 @@ import { IOrderModel } from './orderModel';
 
 export class DialogFormTemplate extends React.Component<{}, {}> {
     private shipCountryDistinctData: any = DataUtil.distinct(orderData, 'ShipCountry', true );
-    private orderIDRef = React.createRef<HTMLElement>();
-    private customerIDRef = React.createRef<HTMLElement>();
+    private orderIDRef: React.RefObject<HTMLInputElement> = React.createRef<HTMLInputElement>();
+    private customerIDRef: React.RefObject<HTMLInputElement> = React.createRef<HTMLInputElement>();
     constructor(props: object) {
         super(props);
         this.state = Object.assign({}, props);
@@ -21,7 +21,8 @@ export class DialogFormTemplate extends React.Component<{}, {}> {
     /** Set initial Focus */
     // Focus the input after the component mounts (DOM is ready)
     public componentDidMount() {
-        if ((this.state as {isAdd: boolean}).isAdd) {
+        const { isAdd } = this.state as { isAdd: boolean };
+        if (isAdd) {
             this.orderIDRef.current?.focus();
         } else {
             this.customerIDRef.current?.focus();

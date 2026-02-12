@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides support for pinning specific rows at the top, ensuring important information stays visible during vertical scrolling. This feature is useful when certain rows must remain accessible for quick reference or priority viewing, regardless of user interactions.
 
-To enable row pinning, configure the [isRowPinned](https://ej2.syncfusion.com/react/documentation/api/grid#isrowpinned) callback function. This function receives each row's data and returns "true" or "false" based on the desired pinning condition. It executes only during the initial rendering of the Grid, ensuring that each row's pinning state is determined at that stage.
+To enable row pinning, configure the [isRowPinned](https://ej2.syncfusion.com/react/documentation/api/grid#isrowpinned) callback function. This function receives each row's data and returns `true` or `false` based on the desired pinning condition. It executes only during the initial rendering of the Grid, ensuring that each row's pinning state is determined at that stage.
 
 Row pinning does not alter the overall content height of the Grid. The scrollable area remains fully visible, allowing smooth vertical scrolling even when multiple rows are pinned. Pinned rows appear in a fixed region above the content area, while the Grid preserves its layout and continues to allow full interaction with all other rows.
 
@@ -35,7 +35,7 @@ The following example pins rows with "Critical" priority and "Open" status at th
 
  {% previewsample "page.domainurl/code-snippet/grid/rows-pinning-cs1" %}
 
-> Pinning rows requires a primary key column to map pinned rows to their original records. Set [columns->isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) to "true" for the key column.
+> Pinning rows requires a primary key column to map pinned rows to their original records. Set [columns->isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) to `true` for the key column.
 
 ## Paging with row pinning
 
@@ -60,7 +60,7 @@ Row pinning keeps important rows visible at the top while navigating pages. Pinn
 
 ## Pinned rows selection
 
-Pinned rows can be selected like regular rows, with their selection state synchronized with corresponding data rows via the primary key. This ensures consistent behavior across all grid operations—paging, sorting, and filtering—whether selection is performed using the mouse, keyboard, or checkbox.
+Pinned rows can be selected like regular rows, with their selection state synchronized with corresponding data rows via the primary key. This ensures consistent behavior across all grid operations, such as paging, sorting, and filtering, whether selection is performed using the mouse, keyboard, or checkbox.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

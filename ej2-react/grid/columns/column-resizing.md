@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Column resizing in React Grid component | Syncfusion
-description: Learn here all about Column resizing in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+description: Learn about column resizing feature in the Syncfusion React Grid component of Syncfusion Essential JS 2.
 control: Column resizing 
 platform: ej2-react
 documentation: ug
@@ -12,16 +12,16 @@ domainurl: ##DomainURL##
 
 Column resizing in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component allows adjusting column widths dynamically to fit content and improve data readability. This feature provides flexibility in customizing the grid layout based on data requirements and screen size.
 
-To enable column resizing, set the [allowResizing](https://ej2.syncfusion.com/react/documentation/api/grid#allowresizing) property to "true" and inject the `Resize` module into the Grid component. Once enabled, columns can be resized by clicking and dragging the right edge of the column header. The column width updates immediately during the drag operation, providing real-time visual feedback.
+To enable column resizing, set the [`allowResizing`](https://ej2.syncfusion.com/react/documentation/api/grid#allowresizing) property to `true` and inject the `Resize` module into the Grid component. Once enabled, columns can be resized by clicking and dragging the right edge of the column header. The column width updates immediately during the drag operation, providing real-time visual feedback.
 
 **Key features:**
 
-- Interactive resizing via mouse drag or touch
-- Minimum and maximum width constraints
-- Column-specific resize control
-- Multiple resizing modes (Normal and Auto)
-- External programmatic resizing
-- Touch device support
+- Interactive resizing via mouse drag or touch.
+- Minimum and maximum width constraints.
+- Column-specific resize control.
+- Multiple resizing modes (`Normal` and `Auto`).
+- External programmatic resizing.
+- Touch device support.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -40,20 +40,20 @@ To enable column resizing, set the [allowResizing](https://ej2.syncfusion.com/re
 
 {% previewsample "page.domainurl/code-snippet/grid/column-cs15" %}
 
-> * Resizing can be disabled for a particular column by setting the [allowResizing](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowresizing) property to "false".
+> * Resizing can be disabled for a particular column by setting the [`allowResizing`](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowresizing) property to `false`.
 > * In RTL mode, the left edge of the header cell can be clicked and dragged to resize the column.
 > * The `width` property defines the default column width. When column resizing is enabled, the default width can be overridden by manually resizing the columns.
 
 ## Set column resizing limits
 
-Column resizing can be limited to a specific range by defining minimum and maximum widths. This ensures that columns remain readable and do not shrink too small or expand too wide during resize actions. The [minWidth](https://ej2.syncfusion.com/react/documentation/api/grid/column#minwidth) and [maxWidth](https://ej2.syncfusion.com/react/documentation/api/grid/column#maxwidth) properties control these boundaries for each column. Both properties accept numeric values that represent pixel widths.
+Column resizing can be limited to a specific range by defining minimum and maximum widths. This ensures that columns remain readable and do not shrink too small or expand too wide during resize actions. The `minWidth` and `maxWidth` properties control these boundaries for each column. Both properties accept numeric values that represent pixel widths.
 
-**How it works:**
+**Behavior:**
 
 | Property | Description | Example |
 |----------|-------------|---------|
-| **minWidth** | Defines the minimum width (in pixels). The column cannot be resized smaller than this value. | `minWidth='100'` keeps the column width at "100px" or more.  |
-| **maxWidth** | Defines the maximum width (in pixels). The column cannot be resized larger than this value | `maxWidth='250'` keeps the column width at "250px" or less.  |
+| **`minWidth`** | Defines the minimum width (in pixels). The column cannot be resized smaller than this value. | `minWidth='100'` keeps the column width at "100px" or more.  |
+| **`maxWidth`** | Defines the maximum width (in pixels). The column cannot be resized larger than this value | `maxWidth='250'` keeps the column width at "250px" or less.  |
 
 In the following example, resize constraints are applied to multiple columns:
 
@@ -84,7 +84,7 @@ In the following example, resize constraints are applied to multiple columns:
 
 ## Prevent resizing for specific columns
 
-In some scenarios, certain columns may need to maintain a fixed width to preserve data consistency or layout structure. The Grid provides column-level control to prevent resizing for specific columns while allowing others to be resized freely. To disable resizing for a particular column, set the [allowResizing](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowresizing) property of that column to "false". This property overrides the grid-level `allowResizing` setting for the specified column.
+In some scenarios, certain columns may need to maintain a fixed width to preserve data consistency or layout structure. The Grid provides column-level control to prevent resizing for specific columns while allowing others to be resized freely. To disable resizing for a particular column, set the [`allowResizing`](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowresizing) property of that column to `false`. This property overrides the grid-level `allowResizing` setting for the specified column.
 
 The following example demonstrates disabling resize functionality for the "Customer ID" column while keeping other columns resizable:
 
@@ -105,7 +105,7 @@ The following example demonstrates disabling resize functionality for the "Custo
 
 {% previewsample "page.domainurl/code-snippet/grid/resize-cs1" %}
 
-> Resizing can also be prevented by setting `args.cancel` to "true" in the [resizeStart](https://ej2.syncfusion.com/react/documentation/api/grid#resizestart) event.
+> Resizing can also be prevented by setting `args.cancel` to `true` in the [resizeStart](https://ej2.syncfusion.com/react/documentation/api/grid#resizestart) event.
 
 ## Resize stacked header columns
 
@@ -116,7 +116,7 @@ The Grid supports resizing stacked header columns, which are columns grouped und
 - Dragging the right edge of a stacked header resizes all child columns together.
 - The total width of the child columns adjusts to match the new stacked header width.
 - Each child column keeps its proportional width during the resize.
-- Resizing can be disabled for specific child columns by setting their `allowResizing` property to "false".
+- Resizing can be disabled for specific child columns by setting their `allowResizing` property to `false`.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -137,7 +137,7 @@ The Grid supports resizing stacked header columns, which are columns grouped und
 
 ## Resizing modes
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component provides flexible column resizing behavior through the [ResizeSettingsModel](https://ej2.syncfusion.com/react/documentation/api/grid/resizeSettingsModel#resizesettingsmodel) interface. The [mode](https://ej2.syncfusion.com/react/documentation/api/grid/resizeSettings#mode) property determines how the Grid handles space distribution when columns are resized.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component provides flexible column resizing behavior through the [ResizeSettingsModel](https://ej2.syncfusion.com/react/documentation/api/grid/resizeSettingsModel#resizesettingsmodel) interface. The [mode](https://ej2.syncfusion.com/react/documentation/api/grid/resizeSettings#mode) property determines the way the Grid handles space distribution when columns are resized.
 
 **Available resize modes:**
 
@@ -145,11 +145,11 @@ The [ResizeMode](https://ej2.syncfusion.com/react/documentation/api/grid/resizeM
 
 | Mode    | Description                                                                 | Behavior                                                                                          | When to Use                                                                                   |
 |---------|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| **Normal** | Keeps fixed column widths without automatic adjustment.                    | - If total column width < grid width: Empty space appears to the right.<br>- If total column width > grid width: A horizontal scrollbar appears. | Use when exact column widths are required and extra space or scrolling is acceptable.        |
-| **Auto**   | Dynamically adjusts columns to fill available space.                       | - If total column width < grid width: Columns expand proportionally to fill space.<br>- If total column width > grid width: Columns shrink proportionally to fit within the grid. | Use when the grid should always fill its container without empty space or scrollbars.        |
+| **`Normal`** | Keeps fixed column widths without automatic adjustment.                    | - If total column width < grid width: Empty space appears to the right.<br>- If total column width > grid width: A horizontal scrollbar appears. | Use when exact column widths are required and extra space or scrolling is acceptable.        |
+| **`Auto`**  | Dynamically adjusts columns to fill available space.                       | - If total column width < grid width: Columns expand proportionally to fill space.<br>- If total column width > grid width: Columns shrink proportionally to fit within the grid. | Use when the grid should always fill its container without empty space or scrollbars.        |
 
 
-The following example demonstrates dynamically switching between "Normal" and "Auto" resize modes using a DropDownList. The `resizeSettings.mode` property is updated in the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#change) event handler:
+The following example demonstrates dynamically switching between `Normal` and `Auto` resize modes using a DropDownList. The `resizeSettings.mode` property is updated in the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#change) event handler:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -230,7 +230,7 @@ export default App;
 
 {% previewsample "page.domainurl/code-snippet/grid/resize-cs2" %}
 
-> When the [autoFit](https://ej2.syncfusion.com/react/documentation/api/grid#autofit) property is set to "true", column widths automatically adjust based on their content. In "Normal" resize mode, empty space remains after resizing. In "Auto" resize mode, columns expand to eliminate empty space.
+> When the [autoFit](https://ej2.syncfusion.com/react/documentation/api/grid#autofit) property is set to `true`, column widths automatically adjust based on their content. In `Normal` resize mode, empty space remains after resizing. In `Auto` resize mode, columns expand to eliminate empty space.
 
 ## Touch interaction
 

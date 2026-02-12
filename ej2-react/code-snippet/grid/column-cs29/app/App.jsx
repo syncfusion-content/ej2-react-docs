@@ -6,8 +6,8 @@ function App() {
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right"/>
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'/>
-      <ColumnDirective field='ShipCity' headerText='Ship City' width='150'  format='C' textAlign="Right"/>
-      <ColumnDirective field='ShipName' headerText='Ship Name' width='150'  format='yMd' textAlign="Right"/>
+      <ColumnDirective field='Freight' headerText='Freight' width='150'  format='C' textAlign="Right"/>
+      <ColumnDirective field='OrderDate' headerText='Order Date' width='150'  format='yMd' textAlign="Right"/>
     </ColumnsDirective>
   </GridComponent>;
 }

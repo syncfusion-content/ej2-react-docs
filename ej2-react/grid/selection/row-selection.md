@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Row Selection in React Grid Component
 
-Row selection in the Grid component provides interactive selection of specific rows or ranges of rows within the grid. Row selection can be performed effortlessly through mouse clicks or arrow keys (up, down, left, and right). This feature is useful when highlighting, manipulating, or performing actions on specific rows within the Grid.
+Row selection in the Grid component provides interactive selection of specific rows or ranges of rows within the grid. Row selection can be performed effortlessly through mouse clicks or arrow keys (up, down, left, and right). This feature is useful when highlighting, manipulating, or performing actions on specific rows within the grid.
 
-> To enable row selection, set the [selectionSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#mode) property to either "Row" or "Both". This property determines the selection mode of the grid.
+> To enable row selection, set the [selectionSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#mode) property to either `Row` or `Both`. This property determines the selection mode of the grid.
 
 ## Single row selection 
 
-Single row selection provides selecting a single row at a time within the Grid. This feature is useful when focusing on specific rows or performing actions on the data within a particular row.
+Single row selection provides selecting a single row at a time within the grid. This feature is useful when focusing on specific rows or performing actions on the data within a particular row.
 
-To configure single row selection, set the [selectionSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#mode) property to "Row" and the [selectionSettings.type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) property to "Single". This configuration allows selecting only one row at a time within the grid.
+To configure single row selection, set the [selectionSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#mode) property to `Row` and the [selectionSettings.type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) property to `Single`. This configuration allows selecting only one row at a time within the grid.
 
 The following example demonstrates single row selection in Grid component:
 
@@ -41,9 +41,9 @@ The following example demonstrates single row selection in Grid component:
 
 ## Multiple row selection 
 
-Multiple row selection provides option to select multiple rows within the Grid. This feature is useful when performing actions on several rows simultaneously or focusing on specific data areas.
+Multiple row selection provides option to select multiple rows within the grid. This feature is useful when performing actions on several rows simultaneously or focusing on specific data areas.
 
-To configure multiple row selection, set the [selectionSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#mode) property to "Row" and the [selectionSettings.type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) property to "Multiple". This configuration allows selecting multiple rows at a time within the grid.
+To configure multiple row selection, set the [selectionSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#mode) property to `Row` and the [selectionSettings.type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) property to `Multiple`. This configuration allows selecting multiple rows at a time within the grid.
 
 The following example demonstrates multiple rows selection in Grid component:
 
@@ -91,9 +91,9 @@ The following example demonstrates selecting a row at initial rendering:
 
 The Grid allows selecting rows in any page based on their index value. This feature is useful when performing specific actions on rows, such as highlighting, applying styles, or executing operations, regardless of their location across multiple pages within the grid.
 
-To achieve this, utilize the [selectRow](https://ej2.syncfusion.com/react/documentation/api/grid#selectrow) method and the [goToPage](https://ej2.syncfusion.com/react/documentation/api/grid#gotopage) method of the Grid control. By handling the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#change) event of the `DropDownList` component, implement the logic to navigate to the desired page and select the row based on the index value. 
+To achieve this, utilize the [selectRow](https://ej2.syncfusion.com/react/documentation/api/grid#selectrow) method and the [goToPage](https://ej2.syncfusion.com/react/documentation/api/grid#gotopage) method of the grid control. By handling the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#change) event of the `DropDownList` component, implement the logic to navigate to the desired page and select the row based on the index value. 
 
-Additionally, by handling the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) event of the Grid, maintain the selection of the desired row after completing the paging action.
+Additionally, by handling the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) event of the grid, maintain the selection of the desired row after completing the paging action.
 
 The following example demonstrates how to select rows in any page based on index value using `actionComplete` and `change` event:
 
@@ -242,9 +242,9 @@ export default App;
 
 The Grid component allows multiple row selection by simply clicking on rows one by one without pressing CTRL or SHIFT keys. When clicking on a row, it becomes selected, and clicking on another row adds it to the selection without deselecting the previously selected rows. To deselect a previously selected row, click on the row again.
 
-To configure simple multiple row selection, set the [selectionSettings.enableSimpleMultiRowSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#enablesimplemultirowselection) property to "true". 
+To configure simple multiple row selection, set the [selectionSettings.enableSimpleMultiRowSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#enablesimplemultirowselection) property to `true`. 
 
-The following example demonstrates how to configure multiple row selection with a single click on the Grid row using `enableSimpleMultiRowSelection` property:
+The following example demonstrates how to configure multiple row selection with a single click on the grid row using `enableSimpleMultiRowSelection` property:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -297,7 +297,7 @@ function App() {
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
-        <ColumnDirective field='ShipCity' headerText='ShipCity' width='150' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
         <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
       </ColumnsDirective>
     </GridComponent></div>)
@@ -317,13 +317,13 @@ export default App;
 
 ## Select rows programmatically 
 
-Single row selection, multiple row selection, and range of row selection can be performed externally in a Grid using built-in methods. This feature allows interacting with specific rows within the Grid programmatically.
+Single row selection, multiple row selection, and range of row selection can be performed externally in a grid using built-in methods. This feature allows interacting with specific rows within the grid programmatically.
 
 ### Single row selection
 
-To achieve single row selection, use the [selectRow](https://ej2.syncfusion.com/react/documentation/api/grid/selection#selectrow) method. This method allows programmatic selection of a specific row within the Grid by specifying the row index.
+To achieve single row selection, use the [selectRow](https://ej2.syncfusion.com/react/documentation/api/grid/selection#selectrow) method. This method allows programmatic selection of a specific row within the grid by specifying the row index.
 
-The example below demonstrates single row selection in the Grid. The row index is obtained from a textbox component and passed to the `selectRow` method. Upon clicking the "Select Row" button, the corresponding row is selected:
+The example below demonstrates single row selection in the grid. The row index is obtained from a textbox component and passed to the `selectRow` method. Upon clicking the "Select Row" button, the corresponding row is selected:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -418,7 +418,7 @@ export default App;
 
 To achieve multiple row selection, use the [selectRows](https://ej2.syncfusion.com/react/documentation/api/grid/selection#selectrows) method. This method allows selecting a collection of rows by specifying their indexes, providing the ability to interact with multiple rows together.
 
-The following example demonstrates selecting multiple rows in the Grid by calling the `selectRows` method within the button click event and passing an array of row indexes as arguments.
+The following example demonstrates selecting multiple rows in the grid by calling the `selectRows` method within the button click event and passing an array of row indexes as arguments.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -513,11 +513,11 @@ export default App;
 
 ### Select range of rows
 
-Range selection in the Grid provides selecting a continuous range of rows within the grid. This feature is particularly useful when performing actions on multiple rows simultaneously or focusing on a specific range of data.
+Range selection in the grid provides selecting a continuous range of rows within the grid. This feature is particularly useful when performing actions on multiple rows simultaneously or focusing on a specific range of data.
 
 To achieve range selection, use the [selectRowsByRange](https://ej2.syncfusion.com/react/documentation/api/grid/selection#selectrowsbyrange) method. This method selects a range of rows from start and end row indexes.
  
-The following example demonstrates selecting a range of rows within the Grid by obtaining the selected rows start index and end index through textbox components. Then pass these start index and end index as arguments to the `selectRowsByRange` method. When the "Select Rows" button is clicked, a range of rows is selected within the Grid:
+The following example demonstrates selecting a range of rows within the grid by obtaining the selected rows start index and end index through textbox components. Then pass these start index and end index as arguments to the `selectRowsByRange` method. When the "Select Rows" button is clicked, a range of rows is selected within the grid:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -626,9 +626,9 @@ export default App;
 
 ## Select rows conditionally
 
-Specific rows in the React Grid component can be programmatically selected based on a certain condition. This feature is particularly useful when dynamically highlighting or manipulating specific rows in the grid based on custom conditions. This functionality can be achieved using the [selectRows](https://ej2.syncfusion.com/react/documentation/api/grid#selectrows) method in the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid#databound) event of the Grid.
+Specific rows in the React Grid component can be programmatically selected based on a certain condition. This feature is particularly useful when dynamically highlighting or manipulating specific rows in the grid based on custom conditions. This functionality can be achieved using the [selectRows](https://ej2.syncfusion.com/react/documentation/api/grid#selectrows) method in the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid#databound) event of the grid.
 
-The following example demonstrates selecting grid rows only when the "EmployeeID" column value is greater than "3".
+The following example demonstrates selecting grid rows only when the "Employee ID" column value is greater than "3".
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -676,11 +676,11 @@ The following example demonstrates getting selected row indexes using the `getSe
 
 The Grid component allows retrieving the selected records even when navigating to different pages. This feature is useful when working with large data sets and allows performing actions on the selected records across multiple pages. 
 
-To persist the selection across pages, enable the [persistSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#persistselection) property. By default, this property is set to "false". To enable it, set the value to "true" in the `selectionSettings` property of the Grid component.
+To persist the selection across pages, enable the [persistSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#persistselection) property. By default, this property is set to `false`. To enable it, set the value to `true` in the `selectionSettings` property of the Grid component.
 
 To retrieve the selected records from different pages, use the [getSelectedRecords](https://ej2.syncfusion.com/react/documentation/api/grid#getselectedrecords) method. This method returns an array of the selected records.
 
-The following example demonstrates how to retrieve selected records from various pages using the `getSelectedRecords` method and display "OrderID" values of the selected records in a dialog when the "Show Selected Records" button is clicked:
+The following example demonstrates how to retrieve selected records from various pages using the `getSelectedRecords` method and display "Order ID" values of the selected records in a dialog when the "Show Selected Records" button is clicked:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -730,7 +730,7 @@ The following example displays the selected row count using the `getSelectedReco
 
 Clearing row selection programmatically in the Grid component is a useful feature when removing any existing row selections. To achieve this, use the [clearRowSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selection#clearrowselection) method.
 
->The `clearRowSelection` method is applicable when the selection [type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) is set to "Multiple" or "Single".
+>The `clearRowSelection` method is applicable when the selection [type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) is set to `Multiple` or `Single`.
 
 The following example demonstrates clearing row selection by calling the `clearRowSelection` method in the button click event.
 
@@ -763,7 +763,7 @@ The Grid provides several events related to row selection that allow responding 
 
 [rowDeselected](https://ej2.syncfusion.com/react/documentation/api/grid#rowdeselected): This event is triggered when a particular selected row is deselected. Use this event to perform actions or validations when a row is no longer selected.
 
-In the following example, row selection is canceled when the value of "CustomerID" is equal to "VINET" within the `rowSelecting` event. The background color changes to green when the value of "Freight" is greater than 10 and less than or equal to 140, triggering the `rowDeselected` event. The background color changes to red when the value of "Freight" is less than or equal to 10 during the `rowDeselected` event. Furthermore, the background color changes to yellow when the value of "Freight" is greater than 140 during the `rowDeselected` event. A notification message is displayed to indicate which event was triggered whenever a row is selected.
+In the following example, row selection is canceled when the value of "Customer ID" is equal to "VINET" within the `rowSelecting` event. The background color changes to green when the value of "Freight" is greater than 10 and less than or equal to 140, triggering the `rowDeselected` event. The background color changes to red when the value of "Freight" is less than or equal to 10 during the `rowDeselected` event. Furthermore, the background color changes to yellow when the value of "Freight" is greater than 140 during the `rowDeselected` event. A notification message is displayed to indicate which event was triggered whenever a row is selected.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -786,13 +786,13 @@ In the following example, row selection is canceled when the value of "CustomerI
 
 The Syncfusion React Grid enables selecting multiple or single records and sending them to the server using AJAX requests. This feature is useful for scenarios where processing or manipulating selected data on the server side is required.
 
-To achieve passing selected records to the server using AJAX requests in the Grid, follow these steps:
+To achieve passing selected records to the server using AJAX requests in the grid, follow these steps:
 
 **Step 1:** Open Visual Studio and create a "React and ASP.NET Core" project named "SelectedRecord". To create a React and ASP.NET Core application, follow the documentation [link](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-react?view=vs-2022) for detailed steps.
 
 **Step 2:** Create a simple React Grid by following the [Getting Started](https://ej2.syncfusion.com/react/documentation/grid/getting-started) documentation link.
 
-**Step 3:** In the React component file (e.g., "App.js"), add a button to trigger the AJAX call and include the Grid with necessary configurations. Handle the button [click](https://ej2.syncfusion.com/react/documentation/api/button#click) event to retrieve the selected records using the [getSelectedRecords](https://ej2.syncfusion.com/react/documentation/api/grid#getselectedrecords) method from the Grid and send them to the server using AJAX.
+**Step 3:** In the React component file (e.g., "App.js"), add a button to trigger the AJAX call and include the grid with necessary configurations. Handle the button [click](https://ej2.syncfusion.com/react/documentation/api/button#click) event to retrieve the selected records using the [getSelectedRecords](https://ej2.syncfusion.com/react/documentation/api/grid#getselectedrecords) method from the grid and send them to the server using AJAX.
 
 {% tabs %}
 {% highlight js tabtitle="App.js" %}
@@ -976,35 +976,24 @@ namespace SelectedReacord.Server.Models
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
-
-// Setup CORS properly
+// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi.
+builder.Services.AddOpenApi();
 builder.Services.AddCors(options =>
 {
-  options.AddPolicy(MyAllowSpecificOrigins, policy =>
+  options.AddDefaultPolicy(builder =>
   {
-    policy.WithOrigins("https://localhost:****")
-      .AllowAnyHeader()
-      .AllowAnyMethod()
-      .AllowCredentials();
+    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
   });
 });
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 var app = builder.Build();
-
+app.UseCors();
 app.UseDefaultFiles();
-app.UseStaticFiles();
-
+app.MapStaticAssets();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-  app.UseSwagger();
-  app.UseSwaggerUI();
+  app.MapOpenApi();
 }
-// Apply CORS globally before Authorization and Routing
-app.UseCors(MyAllowSpecificOrigins);
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
@@ -1021,13 +1010,13 @@ The following screenshot shows passing of selected records to the server:
 
 The Syncfusion React Grid enables selecting multiple or single records and sending them to the server using Fetch requests. This feature is useful for scenarios where processing or manipulating selected data on the server side is required.
 
-To achieve passing selected records to the server using Fetch requests in the Grid, follow these steps:
+To achieve passing selected records to the server using Fetch requests in the grid, follow these steps:
 
 **Step 1:** Open Visual Studio and create a "React and ASP.NET Core" project named "SelectedRecord". To create a React and ASP.NET Core application, follow the documentation [link](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-react?view=vs-2022) for detailed steps.
 
 **Step 2:** Create a simple React Grid by following the [Getting Started](https://ej2.syncfusion.com/react/documentation/grid/getting-started) documentation link.
 
-**Step 3:** In the React component file (e.g., "App.js"), add a button to trigger the Fetch call and include the Grid with necessary configurations. Handle the button [click](https://ej2.syncfusion.com/react/documentation/api/button#click) event to retrieve the selected records using the [getSelectedRecords](https://ej2.syncfusion.com/react/documentation/api/grid#getselectedrecords) method from the Grid and send them to the server using Fetch.
+**Step 3:** In the React component file (e.g., "App.js"), add a button to trigger the Fetch call and include the grid with necessary configurations. Handle the button [click](https://ej2.syncfusion.com/react/documentation/api/button#click) event to retrieve the selected records using the [getSelectedRecords](https://ej2.syncfusion.com/react/documentation/api/grid#getselectedrecords) method from the grid and send them to the server using Fetch.
 
 {% tabs %}
 {% highlight js tabtitle="App.js" %}
@@ -1211,35 +1200,24 @@ namespace SelectedReacord.Server.Models
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
-
-// Setup CORS properly
+// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi.
+builder.Services.AddOpenApi();
 builder.Services.AddCors(options =>
 {
-  options.AddPolicy(MyAllowSpecificOrigins, policy =>
+  options.AddDefaultPolicy(builder =>
   {
-    policy.WithOrigins("https://localhost:****")
-      .AllowAnyHeader()
-      .AllowAnyMethod()
-      .AllowCredentials();
+    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
   });
 });
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 var app = builder.Build();
-
+app.UseCors();
 app.UseDefaultFiles();
-app.UseStaticFiles();
-
+app.MapStaticAssets();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-  app.UseSwagger();
-  app.UseSwaggerUI();
+  app.MapOpenApi();
 }
-// Apply CORS globally before Authorization and Routing
-app.UseCors(MyAllowSpecificOrigins);
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();

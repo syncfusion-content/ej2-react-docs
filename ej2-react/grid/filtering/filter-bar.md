@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Filter Bar in React Grid Component
 
-The filter bar feature provides a row of input fields directly below the Grid headers, enabling instant data filtering. Each column displays an input field where filter criteria can be entered, and the Grid updates immediately to show matching results.
+The filter bar feature provides a row of input fields directly below the grid headers, enabling instant data filtering. Each column displays an input field where filter criteria can be entered, and the grid updates immediately to show matching results.
 
 For grid filtering setup and configuration, refer to the [Filtering](filtering#set-up-filtering).
 
@@ -19,7 +19,7 @@ To activate the filter bar, set the [allowFiltering](https://ej2.syncfusion.com/
 
 **Filter bar expressions:**
 
-Filter expressions are operators that define how the Grid compares entered values against data. The available operators depend on the column data type.
+Filter expressions are operators that define how the grid compares entered values against data. The available operators depend on the column data type.
 
 | Expression | Example | Description | Column Type |
 |------------|---------|-------------|-------------|
@@ -51,7 +51,7 @@ Filter expressions are operators that define how the Grid compares entered value
 
  {% previewsample "page.domainurl/code-snippet/grid/filter-cs2" %}
 
-> If [filterSettings.type](https://ej2.syncfusion.com/react/documentation/api/grid/filtersettings#type) is not explicitly specified, the Grid defaults to **FilterBar** mode.
+> If [filterSettings.type](https://ej2.syncfusion.com/react/documentation/api/grid/filtersettings#type) is not explicitly specified, the grid defaults to `FilterBar` mode.
 
 ## Filter bar modes
 
@@ -63,7 +63,7 @@ Set [filterSettings.mode](https://ej2.syncfusion.com/react/documentation/api/gri
 
 ### Immediate
 
-Set [filterSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings#mode) to `Immediate` to apply filtering instantly as each character is typed. The Grid updates in real-time as the filter criteria changes, enabling instant feedback as filter text is entered.
+Set [filterSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings#mode) to `Immediate` to apply filtering instantly as each character is typed. The grid updates in real-time as the filter criteria changes, enabling instant feedback as filter text is entered.
 
 The following example demonstrates both modes with a toggle.
 
@@ -86,7 +86,7 @@ The following example demonstrates both modes with a toggle.
 
 ## Display filter text in pager
 
-The [showFilterBarStatus](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings#showfilterbarstatus) property displays the current filter criteria in the Grid pager area. This provides a clear summary of active filters without examining each column's filter bar input.
+The [showFilterBarStatus](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings#showfilterbarstatus) property displays the current filter criteria in the grid pager area. This provides a clear summary of active filters without examining each column's filter bar input.
 
 **When to use**: Enable this when working with complex multi-column filters to maintain awareness of all active filtering criteria. This is particularly useful when filters are applied across columns that are scrolled out of view.
 
@@ -165,7 +165,7 @@ export default App;
 
  {% previewsample "page.domainurl/code-snippet/grid/filter-bar-cs2" %}
 
- > For Grid paging setup and configuration, refer to the [Page Feature Setup](../paging#set-up-paging).
+ > For grid paging setup and configuration, refer to the [Page Feature Setup](../paging#set-up-paging).
 
 ## Show or hide filter bar operator
 

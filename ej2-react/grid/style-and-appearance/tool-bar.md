@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Toolbar in React Grid component | Syncfusion
+title: Toolbar customization in React Grid component | Syncfusion
 description: Learn here all about Toolbar customization in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Toolbar 
 platform: ej2-react

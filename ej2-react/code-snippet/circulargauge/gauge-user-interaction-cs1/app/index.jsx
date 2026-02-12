@@ -1,4 +1,4 @@
-{% raw %}
+
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { CircularGaugeComponent, RangesDirective, Annotations, AnnotationsDirective, AnnotationDirective, RangeDirective, AxesDirective, AxisDirective, PointersDirective, PointerDirective, Inject, GaugeTooltip } from '@syncfusion/ej2-react-circulargauge';
@@ -45,4 +45,3 @@ export function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
-{% endraw %}

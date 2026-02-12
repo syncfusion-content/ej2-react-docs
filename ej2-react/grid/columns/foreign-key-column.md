@@ -22,7 +22,7 @@ To enable the foreign key column in the Grid:
 
 **Step 1: Inject the ForeignKey module**
 
-Import and inject the **ForeignKey** module into the Grid component:
+Import and inject the `ForeignKey` module into the Grid component:
 
 ```typescript
 import { ForeignKey } from '@syncfusion/ej2-react-grids';
@@ -112,14 +112,14 @@ The following example demonstrates foreign key column implementation with remote
 
 ## Use edit template in foreign key column
 
-The Grid supports custom edit templates for foreign key columns. By default, a dropdown component renders for editing. Alternative components can be rendered using the [edit](https://ej2.syncfusion.com/react/documentation/api/grid/column#edit) property. The `edit` property accepts an object with four callback functions:
+The Grid supports custom edit templates for foreign key columns. By default, a `DropDownList` component renders for editing. Alternative components can be rendered using the [edit](https://ej2.syncfusion.com/react/documentation/api/grid/column#edit) property. The `edit` property accepts an object with four callback functions:
 
-- **create**: Creates the input element when editing begins.
-- **write**: Initializes the component with the current value.
-- **read**: Retrieves the selected value from the component when editing ends.
-- **destroy**: Cleans up the component when editing ends.
+- **`create`**: Creates the input element when editing begins.
+- **`write`**: Initializes the component with the current value.
+- **`read`**: Retrieves the selected value from the component when editing ends.
+- **`destroy`**: Cleans up the component when editing ends.
 
-In the following example, an [AutoComplete](https://ej2.syncfusion.com/react/demos/#/bootstrap5/auto-complete/default) component is rendered as the edit template for the "EmployeeID" foreign key column. This provides a better editing experience with search-as-type functionality. The [dataSource](https://ej2.syncfusion.com/react/documentation/api/auto-complete#datasource) property of the AutoComplete component is set to the employees data, and the fields property is configured to display the "FirstName" field as the value.
+In the following example, an [AutoComplete](https://ej2.syncfusion.com/react/demos/#/bootstrap5/auto-complete/default) component is rendered as the edit template for the "EmployeeID" foreign key column. The [dataSource](https://ej2.syncfusion.com/react/documentation/api/auto-complete#datasource) property of the `AutoComplete` component is set to the employees data, and the `fields` property is configured to display the "FirstName" field as the value.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -140,13 +140,13 @@ In the following example, an [AutoComplete](https://ej2.syncfusion.com/react/dem
 
 ## Customize filter UI of foreign key column
 
-The Grid supports customization of the filtering UI for foreign key columns using the [filter](https://ej2.syncfusion.com/react/documentation/api/grid/column#filter) property. By default, an AutoComplete component renders for filtering. Custom filtering UI can be created by specifying a template function for the `filter` property. The `filter` property requires following callback functions:
+The Grid supports customization of the filtering UI for foreign key columns using the [filter](https://ej2.syncfusion.com/react/documentation/api/grid/column#filter) property. By default, an `AutoComplete` component renders for filtering. Custom filtering UI can be created by specifying a template function for the `filter` property. The `filter` property requires the following callback functions:
 
-- **ui.create**: Generates the filter input element.
-- **ui.write**: Initializes the filter component with existing filter values.
-- **ui.read**: Extracts the filter value when filtering is applied.
+- **`ui.create`**: Generates the filter input element.
+- **`ui.write`**: Initializes the filter component with existing filter values.
+- **`ui.read`**: Extracts the filter value when filtering is applied.
 
-In the following example, a [DropDownList](https://ej2.syncfusion.com/react/demos/#/bootstrap5/drop-down-list/default) component is rendered as the filter UI for the "EmployeeID" foreign key column. The [dataSource](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#datasource) property of the DropDownList component is set to the employees data, with the fields property configured to display the "FirstName" field as the [text](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#text) and "EmployeeID" field as the [value](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#value). The `value` property is bound to the current filter value of the column.
+In the following example, a [DropDownList](https://ej2.syncfusion.com/react/demos/#/bootstrap5/drop-down-list/default) component is rendered as the filter UI for the "EmployeeID" foreign key column. The [dataSource](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#datasource) property of the `DropDownList` component is set to the employees data, with the `fields` property configured to display the "FirstName" field as the `text` and the "EmployeeID" field as the `value`. The `value` property is bound to the current filter value of the column.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -171,10 +171,10 @@ The filter bar for foreign key columns can be customized using the [filterBarTem
 
 **Filter Bar vs Filter Menu:**
 
-- **Filter Bar**: A simple input field that appears directly below each column header
-- **Filter Menu**: Opens a popup with advanced filtering options
+- **Filter Bar**: A simple input field that appears directly below each column header.
+- **Filter Menu**: Opens a popup with advanced filtering options.
 
-In the following example, the "EmployeeID" column is a foreign key column with the `filter` function defined as the filter bar template. The `filter` function returns a DropDownList component for the filter bar. When filtering, an employee name is selected from the dropdown, and the Grid filters rows based on the selected "EmployeeID".
+In the following example, the "EmployeeID" column is a foreign key column with the `filter` function defined as the filter bar template. The `filter` function returns a `DropDownList` component for the filter bar. When filtering, an employee name is selected from the dropdown, and the Grid filters rows based on the selected "EmployeeID".
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -195,15 +195,15 @@ In the following example, the "EmployeeID" column is a foreign key column with t
 
 ## Perform aggregation in foreign key column
 
-By default, aggregations (sum, average, count, etc.) are not supported in foreign key columns because they display text values from related data sources. However, aggregation can be achieved using [customAggregate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn#customaggregate).
+By default, aggregations (sum, average, count, etc.) are not supported in foreign key columns because they display text values from related data sources. Aggregation can be achieved using [customAggregate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn#customaggregate).
 
-**Steps to Aggregate Foreign Key Data:**
+**Steps to aggregate foreign key data:**
 
 1. Define a foreign key column in the Grid.
 2. Implement a custom aggregate function to calculate the aggregation based on the foreign key values.
 3. Set the `customAggregate` property to the custom aggregate function.
 
-**How Custom Aggregate Works:**
+**How custom aggregate works:**
 
 The custom aggregate function receives the Grid data and processes it to calculate a meaningful result. In the following example, the `customAggregateFn` function:
 
@@ -231,7 +231,7 @@ The custom aggregate function receives the Grid data and processes it to calcula
 
 ## Render foreign key value in column template
 
-Foreign key values can be rendered within column templates to enhance display of related data. This enables more meaningful representation with custom formatting, styling, or additional information beyond just displaying the foreign key value. To render foreign key values in a column template, define a [template](https://ej2.syncfusion.com/react/documentation/api/grid/column#template) for the column. The `template` property accepts either an HTML element or a function that returns the desired HTML element. Within the template, access the foreign key data using the row data properties.
+Foreign key values can be rendered within column templates to enhance display of related data. This enables more meaningful representation with custom formatting, styling, or additional information beyond just displaying the foreign key value. To render foreign key values in a column template, define the [template](https://ej2.syncfusion.com/react/documentation/api/grid/column#template) property for the column. The `template` property accepts either an HTML element or a function that returns the desired HTML element. Within the template, access the foreign key data using the row data properties.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -254,7 +254,7 @@ Foreign key values can be rendered within column templates to enhance display of
 
 The Grid supports multiple foreign key columns with editing capabilities. This enables display of multiple columns from different foreign data sources simultaneously.
 
-In the following example, "Customer Name" and "Ship City" are foreign key columns displaying the "ContactName" and "City" columns from their respective foreign data sources. This demonstrates how a single Grid row can display related information from multiple external data sources.
+In the following example, "Customer Name" and "Ship City" are foreign key columns displaying the "ContactName" and "City" columns from their respective foreign data sources. This demonstrates that a single Grid row can display related information from multiple external data sources.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -277,27 +277,27 @@ In the following example, "Customer Name" and "Ship City" are foreign key column
 
 The Grid supports customization of edit templates for foreign key columns when using remote data. By default, a [DropDownList](https://ej2.syncfusion.com/react/documentation/drop-down-list/getting-started) component renders for editing. Alternative components can be rendered by configuring the `column.edit` property. 
 
-The following example demonstrates a complete implementation with React and ASP.NET Core. An [AutoComplete](https://ej2.syncfusion.com/react/documentation/auto-complete/getting-started) component is rendered as the edit template for the "EmployeeID" foreign key column. The `dataSource` property of the AutoComplete component is set to the employees data from the remote API, and the [field](https://helpej2.syncfusion.com/react/documentation/api/grid/column#field) property is configured to display the "FirstName" field as the value.
+The following example demonstrates a complete implementation with React and ASP.NET Core. An [AutoComplete](https://ej2.syncfusion.com/react/documentation/auto-complete/getting-started) component is rendered as the edit template for the "EmployeeID" foreign key column. The `dataSource` property of the `AutoComplete` component is set to the employees data from the remote API, and the [field](https://helpej2.syncfusion.com/react/documentation/api/grid/column#field) property is configured to display the "FirstName" field as the value.
 
 **Step 1:** Open Visual Studio and create a **React and ASP.NET Core** project named **EditTemplate**. Refer to the documentation [link](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-react?view=vs-2022) for detailed steps.
 
-**Step 2:** Create a simple Grid following the [Getting Started](https://ej2.syncfusion.com/react/documentation/grid/getting-started) documentation.
+**Step 2:** Create a Grid following the [Getting Started](https://ej2.syncfusion.com/react/documentation/grid/getting-started) documentation.
 
-**Step 3:** In the React component styles file (**styles.css**), include the following styles to import necessary Syncfusion styles:
+**Step 3:** In the React component styles file (**styles.css**), include the following styles to import necessary Syncfusion<sup style="font-size:70%">&reg;</sup> styles:
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-react-grids/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-react-grids/styles/tailwind3.css';
 ```
 
-**Step 4:** In the React component file (e.g., **App.js**), define the Grid with necessary configurations, including a foreign key column for "EmployeeID", and implement the required logic to manage its behavior.
+**Step 4:** In the React component file (e.g., **App.js**), define the Grid with the required configurations, including a foreign key column for "EmployeeID", and implement the required logic to manage its behavior.
 
 ```js
 import './App.css';

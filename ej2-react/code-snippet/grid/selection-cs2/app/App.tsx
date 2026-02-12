@@ -21,7 +21,7 @@ function App() {
     (enableToggle as boolean) = args.checked;
   }
   return (<div>
-    <label style={{ padding: "30px 17px 0 0" }}>Choose cell selection mode:</label>
+    <label style={{ padding: "30px 17px 0 0" }}>Choose selection mode:</label>
     <DropDownListComponent index={0} width={150} dataSource={dropdownData} change={valueChange}></DropDownListComponent><br />
     <label style={{ padding: "30px 17px 0 0" }}>Enable/Disable Toggle selection</label>
     <SwitchComponent change={toggleColumnSelection} checked={enableToggle}></SwitchComponent>

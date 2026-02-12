@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Dialog Editing in React Grid Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid Component dialog editing provides a powerful, efficient way to edit row data through a dedicated modal dialog window that focuses attention on the editing form. Instead of editing cells directly in the grid, multiple field values can be entered and modified at once in a clean, organized form. The Grid automatically saves all changes to the data source without navigating away from the current page—making data entry faster, more intuitive, and less error-prone, especially when dealing with complex records that span multiple columns.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid Component dialog editing provides a powerful, efficient way to edit row data through a dedicated modal dialog window that focuses attention on the editing form. Instead of editing cells directly in the grid, multiple field values can be entered and modified at once in a clean, organized form. The grid automatically saves all changes to the data source without navigating away from the current page—making data entry faster, more intuitive, and less error-prone, especially when dealing with complex records that span multiple columns.
 
 To enable dialog editing in the grid component, set the [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) property to `Dialog`. This property determines the editing mode for the grid.
 
@@ -51,7 +51,7 @@ Use the `requestType` parameter to identify which action triggered the event and
 | `save` | Updating a new or existing record |
 | `delete` | Deleting an existing record |
 
-> Refer to the Grid [Default text](../global-local) list for localization options.
+> Refer to the grid [Default text](../global-local) list for localization options.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -83,7 +83,7 @@ The `actionBegin` event is triggered whenever an action is initiated in the grid
 | `beginEdit` or `add` | Editing or creating a record | Modify visibility using the `visible` property |
 | `save` | Saving the record | Reset columns to initial visibility state using `visible` property |
 
-In the following example, the "CustomerID" column is rendered as a hidden column, and the "ShipCountry" column is rendered as a visible column. In the edit mode, the "CustomerID" column will be changed to a visible state and the "ShipCountry" column will be changed to a hidden state.
+In the following example, the "Customer ID" column is rendered as a hidden column, and the "Ship Country" column is rendered as a visible column. In the edit mode, the "Customer ID" column will be changed to a visible state and the "Ship Country" column will be changed to a hidden state.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

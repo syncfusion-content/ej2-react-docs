@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Column Pinning (Frozen) in React Grid component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a column pinning (freezing) feature that keeps selected columns visible while scrolling across large datasets. This improves readability by ensuring that important information remains accessible, even when working with wide tables.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a column pinning (freezing) feature that keeps "selected columns" visible while scrolling across large datasets. This improves readability by ensuring that important information remains accessible, even when working with wide tables.
 
-In a frozen layout, chosen columns remain fixed on either the left or right side of the grid, while other columns continue to scroll horizontally. This makes it easier to compare and analyze data without losing sight of key details.
+In a frozen layout, chosen columns remain fixed on either the left or right side of the Grid, while other columns continue to scroll horizontally. This makes it easier to compare and analyze data without losing sight of key details.
 
 To enable frozen columns, the `Freeze` module must be injected into the Grid.
 
@@ -40,19 +40,19 @@ export default App;
 
 ## Freeze direction
 
-The Grid supports different freeze directions, which determine where frozen columns appear. By setting the [freeze](https://ej2.syncfusion.com/react/documentation/api/grid/column#freeze) property in a column definition, columns can be pinned to the left, right, or fixed in place. This makes it easy to keep important columns visible while scrolling and gives flexibility when designing grids with multiple frozen sections.
+The Grid supports different freeze directions, which determine where frozen columns appear. By setting the [`freeze`](https://ej2.syncfusion.com/react/documentation/api/grid/column#freeze) property in a column definition, columns can be pinned to the left, right, or fixed in place. This makes it easy to keep important columns visible while scrolling and gives flexibility when designing grids with multiple frozen sections.
 
 The Grid supports three freeze direction types:
 
 | Direction | Description | Behavior |
 |-----------|-------------|----------|
-| **Left** | Freezes columns on the left side | Frozen columns remain fixed on the left while other columns scroll horizontally |
-| **Right** | Freezes columns on the right side | Frozen columns remain fixed on the right while other columns scroll horizontally |
-| **Fixed** | Locks columns at a specific position | Frozen columns stay fixed in their position, creating a locked section between scrollable areas |
+| `Left` | Freezes columns on the left side | Frozen columns remain fixed on the left while other columns scroll horizontally |
+| `Right` | Freezes columns on the right side | Frozen columns remain fixed on the right while other columns scroll horizontally |
+| `Fixed` | Locks columns at a specific position | Frozen columns stay fixed in their position, creating a locked section between scrollable areas |
 
 **Combining Freeze Directions**
 
-The following table illustrates how columns behave when different freeze directions are applied:
+The following table illustrates the behavior of columns when different freeze directions are applied:
 
 | Scenario | Result |
 |----------|--------|
@@ -61,7 +61,7 @@ The following table illustrates how columns behave when different freeze directi
 | **Left + Right freeze** | Left columns fixed on left, right columns fixed on right; middle columns scroll |
 | **Left + Fixed + Right** | Creates three sections: left-frozen, middle-frozen (fixed), and right-frozen, with scrollable areas between them |
 
-The following example demonstrates multiple freeze directions in action. The "ShipCountry" column is frozen on the left side by default. The example allows dynamically changing the freeze direction of any column using a DropDownList component. Select a column and choose a freeze direction ("Left", "Right", or "Fixed") to see how it affects the column positioning.
+The following example demonstrates multiple freeze directions in action. The "ShipCountry" column is frozen on the left side by default. The example allows dynamically changing the freeze direction of any column using a DropDownList component. Select a column and choose a freeze direction (`Left`, `Right`, or `Fixed`) to observe the effect on column positioning.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -190,15 +190,15 @@ export default App;
 
 {% previewsample "page.domainurl/code-snippet/grid/frozen-column-cs3" %}
 
-> If a column should no longer remain frozen, the `freeze` property can be set to "None" in the column definition. This action removes the frozen state and the column will behave like a normal scrollable column, moving along with the rest of the grid content.
+> If a column should no longer remain frozen, the `freeze` property can be set to `None` in the column definition. This action removes the frozen state and the column will behave like a normal scrollable column, moving along with the rest of the Grid content.
 
 
 ## Freeze particular columns
 
-The Grid provides a straightforward way to freeze individual columns on the left side using the [isFrozen](https://ej2.syncfusion.com/react/documentation/api/grid/column#isfrozen) property in the column definition. When this property is set to "true", the chosen column is locked at the leftmost position of the Grid and remains visible while scrolling horizontally.
+The Grid provides a straightforward way to freeze individual columns on the left side using the [`isFrozen`](https://ej2.syncfusion.com/react/documentation/api/grid/column#isfrozen) property in the column definition. When this property is set to `true`, the chosen column is locked at the leftmost position of the Grid and remains visible while scrolling horizontally.
 
 
-The following example demonstrates freezing a particular column using the `isFrozen` property. Initially, the "OrderID" column is frozen. The [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#change) event of the [DropDownList](https://ej2.syncfusion.com/react/demos/#bootstrap5/drop-down-list/default) component allows dynamically changing which column is frozen. The selected column's `isFrozen` property is modified using the [getColumnByField](https://ej2.syncfusion.com/react/documentation/api/grid#getcolumnbyfield) method, and the [refreshColumns](https://ej2.syncfusion.com/react/documentation/api/grid#refreshcolumns) method updates the display.
+The following example demonstrates freezing a particular column using the `isFrozen` property. Initially, the "OrderID" column is frozen. The [`change`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#change) event of the [`DropDownList`](https://ej2.syncfusion.com/react/demos/#bootstrap5/drop-down-list/default) component allows dynamically changing which column is frozen. The selected column's `isFrozen` property is modified using the [`getColumnByField`](https://ej2.syncfusion.com/react/documentation/api/grid#getcolumnbyfield) method, and the [`refreshColumns`](https://ej2.syncfusion.com/react/documentation/api/grid#refreshcolumns) method updates the display.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -331,11 +331,11 @@ export default App;
 
 ## Auto-Generated columns with frozen support
 
-When columns are not explicitly defined using `ColumnDirective`, the Grid automatically generates them based on the bound data source. Even in this scenario, the [frozenColumns](https://ej2.syncfusion.com/react/documentation/api/grid#frozencolumns) property can be applied to lock the first n auto-generated columns on the left side of the Grid.
+When columns are not explicitly defined using `ColumnDirective`, the Grid automatically generates them based on the bound data source. Even in this scenario, the [`frozenColumns`](https://ej2.syncfusion.com/react/documentation/api/grid#frozencolumns) property can be applied to lock the first n auto-generated columns on the left side of the Grid.
 
 The `frozenColumns` property accepts a numeric value that determines how many columns remain frozen during initialization. For example, setting `frozenColumns` to "2" will freeze the first two columns created from the data source. These columns stay visible while scrolling horizontally. 
 
-The following example demonstrates the `frozenColumns` property set to "2". This configuration freezes the first two auto-generated columns, such as OrderID and CustomerID, keeping them fixed on the left side of the Grid. The remaining columns continue to support horizontal scrolling.
+The following example demonstrates the `frozenColumns` property set to "2". This configuration freezes the first two auto-generated columns, such as "OrderID" and "CustomerID", keeping them fixed on the left side of the Grid. The remaining columns continue to support horizontal scrolling.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -429,15 +429,13 @@ export default App;
 > * [Column virtualization](https://ej2.syncfusion.com/react/documentation/api/grid#enablecolumnvirtualization) is supported for frozen columns, improving performance when loading large datasets.
 > * The frozen feature works only with columns visible in the current view.
 > * Both `frozenColumns` and [frozenRows](https://ej2.syncfusion.com/react/documentation/api/grid#frozenrows) properties can be used simultaneously in the same Grid.
-> * Freeze Direction is incompatible with the `isFrozen` and `frozenColumns` properties.
+This is achieved using the [`edit`](https://ej2.syncfusion.com/react/documentation/api/grid/column#edit) property of the column definition, which accepts an object with custom editor methods.
 
 ## Customize frozen line color
 
 The visual separator between frozen and scrollable columns (the "frozen line") can be customized to match application design requirements. Custom CSS styles can be applied to change the border color for left, right, and fixed frozen columns. The Grid applies specific CSS classes to frozen column borders based on their freeze direction. These classes can be targeted to customize the frozen line appearance.
 
-The visual separator between frozen and scrollable columns, known as the **frozen line**, can be customized to align with application design requirements. Custom CSS styles can be applied to change the border color for left, right, and fixed frozen columns. The Grid applies specific CSS classes to frozen column borders based on their freeze direction. These classes can be targeted to customize the frozen line appearance.
-
-
+**For left frozen columns:**
 **For left frozen columns:**
 
 ```css

@@ -14,20 +14,19 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid enables customiz
 
 ## Adding text in header and footer
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports addition of custom text in header or footer sections of exported PDF documents.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports adding custom text to the `header` or `footer` sections of exported PDF documents.
 
-The header section of a PDF document is positioned at the top of each page and provides a space for additional information or branding elements such as company logos, document titles, dates, or other information that repeats consistently across every page.
+The `header` section of a PDF document is positioned at the top of each page and provides a space for additional information or branding elements such as company logos, document titles, dates, or other information that repeats consistently across every page.
 
-The footer section is positioned at the bottom of each page and serves as an area for custom text content. Common footer content includes page numbers, copyright information, and disclaimers, with footer content repeated on every page similar to the header.
+The `footer` section is positioned at the bottom of each page and serves as an area for custom text content. Common footer content includes page numbers, copyright information, and disclaimers, with footer content repeated on every page similar to the header.
 
-To add text in the header or footer of the exported PDF document, follow these steps:
+To add text to the `header` or `footer` of the exported PDF document, follow these steps:
 
 1. Access the [pdfExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties) of the Grid component.
 2. Set the [header](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties#header) or [footer](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties#footer) property to a string value representing the desired text.
 3. Trigger the PDF export operation.
 
-The following code example demonstrates adding the header in the exported PDF document. 
-
+The following code example demonstrates adding a `header` in the exported PDF document.
 ```typescript
 
 const exportProperties: PdfExportProperties = {
@@ -52,16 +51,15 @@ Line elements can be added to the header and footer sections of exported PDF doc
 
 This can be achieved using the [pdfExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties) property of the Grid. Line styles can be customized using the supported dash styles listed below:
 
-* Dash
-* Dot
-* DashDot
-* DashDotDot
-* Solid
+- `Dash`
+- `Dot`
+- `DashDot`
+- `DashDotDot`
+- `Solid`
 
-To add a line in the header or footer of the exported PDF document, access the `header.contents` or `footer.contents` property of the [header](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties#header) or [footer](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties#footer) in the `pdfExportProperties` property of the grid. 
+To add a line in the `header` or `footer` of the exported PDF document, access the `header.contents` or `footer.contents` property of the [header](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties#header) or [footer](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties#footer) in the `pdfExportProperties` property of the Grid.
 
-The following code example demonstrates drawing a line in the header of the exported PDF document. 
-
+The following code example demonstrates drawing a line in the `header` of the exported PDF document.
 ```typescript
 
 const exportProperties: PdfExportProperties = {
@@ -75,7 +73,7 @@ const exportProperties: PdfExportProperties = {
                 points: { x1: 0, y1: 4, x2: 685, y2: 4 },
             }
         ]
-    }
+    },
     footer: {
         fromBottom: 10,
         height: 60,
@@ -84,10 +82,10 @@ const exportProperties: PdfExportProperties = {
                 type: 'Line',
                 style: { penColor: '#000080', penSize: 2, dashStyle: 'Dot' },
                 points: { x1: 0, y1: 4, x2: 685, y2: 4 },
-            },
-        ],
-    },
-}
+            }
+        ]
+    }
+};
 
 ```
 
@@ -97,16 +95,16 @@ Page numbers can be included in the header and footer sections of exported PDF d
 
 This can be achieved using the [pdfExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties) property of the Grid. Different page number types are supported as listed below:
 
-* LowerLatin - a, b, c,
-* UpperLatin - A, B, C,
-* LowerRoman - i, ii, iii,
-* UpperRoman - I, II, III,
-* Number - 1,2,3,
-* Arabic - 1,2,3.
+- `LowerLatin` - a, b, c
+- `UpperLatin` - A, B, C
+- `LowerRoman` - i, ii, iii
+- `UpperRoman` - I, II, III
+- `Number` - 1, 2, 3
+- `Arabic` - 1, 2, 3
 
-To add a page number in the header or footer of the exported PDF document, access the `header.contents` or `footer.contents` property of the [header](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties#header) or [footer](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties#footer) in the `pdfExportProperties` property of the grid. 
+To add a page number to the `header` or `footer` of the exported PDF document, access the `header.contents` or `footer.contents` property of the [header](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties#header) or [footer](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties#footer) in the `pdfExportProperties` property of the Grid.
 
-The following code example demonstrates adding a page number in the footer of the exported PDF document.
+The following code example demonstrates adding a page number in the `footer` of the exported PDF document.
 
 ```typescript
 
@@ -185,7 +183,7 @@ The following example demonstrates adding a header and footer to the exported gr
 
 The column header can be repeated on every page of an exported PDF document. This feature ensures that the column header remains visible and easily identifiable, even when data spans multiple pages in the exported PDF document.
 
-By default, the column header appears only on the first page of the PDF document. Enabling the `repeatHeader` property of the "pdfGrid" object to "true" displays the column header on every page. This can be achieved using the [pdfHeaderQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#pdfheaderquerycellinfo) event of the Grid.
+By default, the column header appears only on the first page of the PDF document. Enabling the `repeatHeader` property of the "pdfGrid" object to `true` to display the column header on every page. This behavior can be implemented using the [pdfHeaderQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#pdfheaderquerycellinfo) event of the Grid.
 
 The following example demonstrates repeating the column header on every page of the exported PDF document using the `pdfHeaderQueryCellInfo` event.
 

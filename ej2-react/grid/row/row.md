@@ -47,7 +47,7 @@ Row styles can be applied using CSS selectors. The Grid provides a class name fo
 
 **Customize alternate rows**
 
-The appearance of alternate rows can be customized using CSS. This can be useful for improving the readability of the data and making it easier to distinguish between rows. By default, Syncfusion<sup style="font-size:70%">&reg;</sup> Grid provides the CSS class ".e-altrow" to style the alternate rows. This default style can be customized by overriding the ".e-altrow" class with custom CSS styles. 
+The appearance of alternate rows can be customized using CSS. This can be useful for improving the readability of the data and making it easier to distinguish between rows. By default, Syncfusion<sup style="font-size:70%">&reg;</sup> Grid provides the CSS class `.e-altrow` to style the alternate rows. This default style can be customized by overriding the `.e-altrow` class with custom CSS styles. 
 
 To change the background color of the alternate rows, add the following CSS code to the application's stylesheet:
 
@@ -57,7 +57,7 @@ To change the background color of the alternate rows, add the following CSS code
 }
 ```
 
-Here's an example of how to use the ".e-altrow" class to style alternate rows:
+Here's an example of how to use the `.e-altrow` class to style alternate rows:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -78,7 +78,7 @@ Here's an example of how to use the ".e-altrow" class to style alternate rows:
 
 **Customize selected row**
 
-The appearance of the selected row can be customized using CSS. This is useful when highlighting the currently selected row to improve the visual appeal of the Grid. By default, the Grid provides the CSS class ".e-selectionbackground" to style the selected row. This default style can be customized by overriding the ".e-selectionbackground" class with custom CSS styles.
+The appearance of the selected row can be customized using CSS. This is useful when highlighting the currently selected row to improve the visual appeal of the Grid. By default, the Grid provides the CSS class `.e-selectionbackground` to style the selected row. This default style can be customized by overriding the `.e-selectionbackground` class with custom CSS styles.
 
 To change the background color of the selected row, add the following CSS code to the application:
 
@@ -88,7 +88,7 @@ To change the background color of the selected row, add the following CSS code t
 }
 ```
 
-Here's an example of styling the selected row using the ".e-selectionbackground" class:
+Here's an example of styling the selected row using the `.e-selectionbackground` class:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -190,13 +190,13 @@ In the following example, the row height for the row with "OrderID" as "10249" i
 
 >* In virtual scrolling mode, it is not applicable to set different row heights.
 >* The row height of multiple rows can be customized by checking the relevant criteria in the `rowDataBound` event and setting the `rowHeight` property accordingly.
->* In the `rowDataBound` event handler, the current row can be accessed using the [args.row](https://ej2.syncfusion.com/react/documentation/api/grid/rowDataBoundEventArgs#row) property and the `rowHeight` property can be set for that row using the setAttribute method.
+>* In the `rowDataBound` event handler, the current row can be accessed using the [args.row](https://ej2.syncfusion.com/react/documentation/api/grid/rowDataBoundEventArgs#row) property and the `rowHeight` property can be set for that row using the `setAttribute` method.
 
 ## Row hover
 
 The Row Hover feature in Grid provides a visual effect when the mouse pointer hovers over the rows, making it easy to highlight and identify the selected row. This feature can also improve the readability of data in the grid. The row hover effect can be enabled or disabled using the [enableHover](https://ej2.syncfusion.com/react/documentation/api/grid#enablehover) property of the Grid component.
 
-By default, the `enableHover` property is set to "true", which means that the row hovering effect is enabled. To disable the row hover effect, set the `enableHover` property to "false".
+By default, the `enableHover` property is set to `true`, which means that the row hovering effect is enabled. To disable the row hover effect, set the `enableHover` property to `false`.
 
 Here is an example that demonstrates enabling or disabling the Row hover feature:
 
@@ -393,7 +393,9 @@ export default App;
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid allows freezing rows to keep them visible while scrolling vertically through large datasets. This feature enhances the experience by maintaining important information within view at all times.
 
-In the following example, the [frozenRows](https://ej2.syncfusion.com/react/documentation/api/grid#frozenrows) property is set to "3". This configuration freezes the top three rows of the grid, and they will remain fixed in their positions while the rest of the grid can be scrolled vertically.
+The [frozenRows](https://ej2.syncfusion.com/react/documentation/api/grid#frozenrows) property in the React Grid is used to freeze a specified number of rows at the top of the grid, keeping them fixed while the rest of the content scrolls vertically. 
+
+In the following example, the `frozenRows` property is set to "3". This configuration freezes the top three rows of the grid, and they will remain fixed in their positions while the rest of the grid can be scrolled vertically.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -497,7 +499,7 @@ To change the default frozen rows line color, use the following CSS class:
 }
 ```
 
-By applying this CSS class, the background color of frozen rows can be set to the specified RGB color. The following example demonstrates how to change the default frozen rows line color using CSS.
+By applying this CSS class, the background color of frozen rows can be set to the specified RGB color. The following example demonstrates changing the default frozen‑rows line color using CSS.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -531,8 +533,7 @@ By applying this CSS class, the background color of frozen rows can be set to th
 
 ## Limitations
 
-* Frozen row is not compatible with the following features:
-    1. Autofill
+The autofill feature is not compatible with frozen rows.
 
 ## Add a new row programmatically
 
@@ -543,7 +544,7 @@ The addRecord method takes two parameters:
 * The **data** object representing the new row to be added
 * The **index** at which the new row should be inserted. If no index is specified, the new row will be added at the end of the Grid.
 
-Here's an example of how to add a new row using the `addRecord` method:
+Here’s an example that demonstrates adding a new row using the addRecord method
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -568,15 +569,15 @@ Here's an example of how to add a new row using the `addRecord` method:
 
 ## Show or hide a row using external actions
 
-In a Syncfusion<sup style="font-size:70%">&reg;</sup> grid, rows can be shown or hidden based on some external action, such as a checkbox click. This can be useful in scenarios where certain rows should be hidden from the grid temporarily without removing them from the underlying data source. This can be achieved by using the [getRowByIndex](https://ej2.syncfusion.com/react/documentation/api/grid#getrowbyindex) and `getRowsObject` methods of the grid along with the [change](https://ej2.syncfusion.com/react/documentation/api/check-box#change) event of the checkbox.
+In a Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, rows can be shown or hidden based on some external action, such as a checkbox click. This can be useful in scenarios where certain rows should be hidden from the grid temporarily without removing them from the underlying data source. This can be achieved by using the [getRowByIndex](https://ej2.syncfusion.com/react/documentation/api/grid#getrowbyindex) and [getRowsObject](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#getrowsobject) methods of the grid along with the [change](https://ej2.syncfusion.com/react/documentation/api/check-box#change) event of the checkbox.
 
 The `getRowsObject` method returns an array of row objects that represents all the rows in the grid. This method allows iteration through all the rows and access to their data and index.
 
-The [getRowByIndex](https://ej2.syncfusion.com/react/documentation/api/grid#getrowbyindex) method returns the HTML element of a row at the specified index. This method gets a specific row and applies changes to it.
+The `getRowByIndex` method returns the HTML element of a row at the specified index. This method gets a specific row and applies changes to it.
 
-In the following example, the **onCheckBoxChange** method checks whether the checkbox is checked or not. If it is checked, the method iterates through all the rows in the grid using the `getRowsObject` method. For each row, it checks whether the value in the "CustomerID" column is equal to "VINET". If it is, the index of that row is obtained using the `getRowByIndex` method and hidden by setting its display style to "none". The index of the hidden row is also added to an array called hiddenRows.
+In the following example, the "onCheckBoxChange" method checks whether the checkbox is checked or not. If it is checked, the method iterates through all the rows in the grid using the `getRowsObject` method. For each row, it checks whether the value in the "CustomerID" column is equal to "VINET". If it is, the index of that row is obtained using the `getRowByIndex` method and hidden by setting its display style to "none". The index of the hidden row is also added to an array called "hiddenRows".
 
-If the checkbox is unchecked, the method iterates through the hiddenRows array and shows each row by setting its display style to an empty string. The hiddenRows array is also cleared.
+If the checkbox is unchecked, the method iterates through the "hiddenRows" array and shows each row by setting its display style to an empty string. The "hiddenRows" array is also cleared.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

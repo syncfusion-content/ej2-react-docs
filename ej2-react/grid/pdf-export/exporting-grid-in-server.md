@@ -16,8 +16,8 @@ The Grid component provides the ability to export grid data to a PDF document on
 
 To enable server-side PDF exporting in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component, include the following dependencies:
 
-* Syncfusion.EJ2
-* Syncfusion.EJ2.GridExport
+* `Syncfusion.EJ2`
+* `Syncfusion.EJ2.GridExport`
 
 These dependencies are available in the Essential Studio<sup style="font-size:70%">&reg;</sup> package and can also be obtained from [nuget.org](https://www.nuget.org/).
 
@@ -29,7 +29,7 @@ To export grid data to a PDF document on the server side, perform the following 
 
 2. Define a controller action that handles server-side PDF export. This action receives Grid properties from the client-side and initiates the PDF export operation on the server.
 
-3. Use the [serverPdfExport](https://ej2.syncfusion.com/react/documentation/api/grid#serverpdfexport) method to pass Grid properties to the server exporting action. This method specifies the server action URL and other export options.
+3. Use the `serverPdfExport` method to pass Grid properties to the server exporting action. This method specifies the server action URL and other export options.
 
 The following code snippet shows server configuration using ASP.NET Core Controller Action.
 
@@ -76,22 +76,22 @@ function App() {
     adaptor: new UrlAdaptor(),
     url: "Home/UrlDatasource"
   });
-  const toolbar: ToolbarItems[] = ['PdfExport'];
+  const toolbar: ToolbarItems[] = ["PdfExport"];
   const toolbarClick = (args: ClickEventArgs) => {
-    if (grid && args.item.id === 'grid_pdfexport') {
-        grid.serverPdfExport('Home/PdfExport');
+    if (grid && args.item.id === "grid_pdfexport") {
+        grid.serverPdfExport("Home/PdfExport");
     }
   }
   return (
     <div>
-      <GridComponent id='grid' dataSource={dataManager} height={270} toolbar={toolbar} toolbarClick={toolbarClick} ref={g=> grid = g}>
-      <ColumnsDirective>
-          <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right'/>
-          <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
-          <ColumnDirective field='Freight' format="C2" width='100' textAlign='Right'/>
-          <ColumnDirective field='ShipCity' headerText='Ship City' width='150'/>
-          <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
-      </ColumnsDirective>
+        <GridComponent id="grid" dataSource={dataManager} height={270} toolbar={toolbar} toolbarClick={toolbarClick} ref={g=> grid = g}>
+        <ColumnsDirective>
+          <ColumnDirective field="OrderID" headerText="Order ID" width="120" textAlign="Right"/>
+          <ColumnDirective field="CustomerID" headerText="Customer ID" width="150" />
+          <ColumnDirective field="Freight" format="C2" width="100" textAlign="Right"/>
+          <ColumnDirective field="ShipCity" headerText="Ship City" width="150"/>
+          <ColumnDirective field="ShipName" headerText="Ship Name" width="150" />
+        </ColumnsDirective>
       <Inject services={[Toolbar]}/>
     </GridComponent>
   </div>
@@ -103,7 +103,7 @@ export default App;
 
 ## Export grid as memory stream
 
-The Grid provides the ability to export data as a memory stream instead of downloading it as a file in the browser. To obtain the memory stream of the exported grid, set the `AsMemoryStream` parameter to "true" in the [PdfExport](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.GridExport.GridPdfExport.html#Syncfusion_EJ2_GridExport_GridPdfExport_PdfExport__1_Syncfusion_EJ2_Grids_Grid_System_Collections_IEnumerable_System_Boolean_Syncfusion_EJ2_GridExport_PdfExportProperties_) method.
+The Grid provides the ability to export data as a memory stream instead of downloading it as a file in the browser. To obtain the memory stream of the exported Grid, set the `AsMemoryStream` parameter to `true` in the `PdfExport` method.
 
 The following code demonstrates getting the memory stream of exported grid.
 
@@ -112,7 +112,7 @@ public object PdfExport(string gridModel)
 {
     GridPdfExport exp = new GridPdfExport();
     Grid gridProperty = ConvertGridObject(gridModel);
-    // pass third parameter as true to get the Memory Stream of exported grid data
+    // pass third parameter as `true` to get the Memory Stream of exported grid data
     return (MemoryStream)exp.PdfExport<OrdersDetails>(gridProperty, OrdersDetails.GetAllRecords(), true);
 }
 
@@ -248,7 +248,7 @@ public ActionResult PdfExport(string gridModel)
 
 The Grid provides the ability to rotate the header text while exporting the grid on the server side.
 
-1. The the server side event `PdfHeaderQueryCellInfo` is triggered when creating a column header for the PDF document to be exported. In this event, column header details can be collected and customizations can be handled.
+1. The server-side event `PdfHeaderQueryCellInfo` is triggered when creating a column header for the PDF document to be exported. In this event, column header details can be collected and customizations can be handled.
 
 2. In the `BeginCellLayout` event handler, the `Graphics.DrawString` method can be used to rotate the header text to the desired degree. This event is triggered when creating a column header for the PDF document to be exported, and column header details are collected in this event with custom handling done in the `BeginCellLayout` event handler.
 
@@ -304,7 +304,7 @@ Passing additional parameters to the server when exporting data in the Syncfusio
 
 This is achieved by utilizing the [query](https://ej2.syncfusion.com/react/documentation/api/grid#query) property and the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid#toolbarclick) event. Within the `query` property, invoke the `addParams` method to add parameters to the request.
 
-The following example demonstrates how to pass additional parameters to the server when PDF exporting within the `toolbarClick` event. Within the event, the additional parameters, specifically "recordcount" as "15", are passed using the addParams method and displayed as a message.
+The following example demonstrates passing additional parameters to the server when PDF exporting within the `toolbarClick` event. Within the event, the additional parameters, specifically "recordcount" as "15", are passed using the addParams method and displayed as a message.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

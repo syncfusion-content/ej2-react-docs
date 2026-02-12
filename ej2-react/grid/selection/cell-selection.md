@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Cell Selection in React Grid Component
 
-Cell selection in the Grid component allows interactive selection of specific cells or ranges of cells within the grid. Selection can be performed through mouse clicks or arrow keys (up, down, left, and right). This functionality allows highlighting, manipulating, or performing actions on specific cells within the Grid.
+Cell selection in the Grid component allows interactive selection of specific cells or ranges of cells within the grid. Selection can be performed through mouse clicks or arrow keys (up, down, left, and right). This functionality allows highlighting, manipulating, or performing actions on specific cells within the grid.
 
-> To enable cell selection, set the [selectionSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#mode) property to either "Cell" or "Both". This property determines the selection mode of the grid.
+> To enable cell selection, set the [selectionSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#mode) property to either `Cell` or `Both`. This property determines the selection mode of the grid.
 
 ## Single cell selection 
 
-Single cell selection provides selection of a single cell within a Grid. This functionality focuses on a specific cell or allows actions on individual cells within the grid.
+Single cell selection provides selection of a single cell within a grid. This functionality focuses on a specific cell or allows actions on individual cells within the grid.
 
-To configure single cell selection, set the [selectionSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#mode) property to "Cell" and the [selectionSettings.type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) property to "Single". This configuration allows selection of a single cell at a time within the grid.
+To configure single cell selection, set the [selectionSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#mode) property to `Cell` and the [selectionSettings.type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) property to `Single`. This configuration allows selection of a single cell at a time within the grid.
 
 The following example demonstrates single cell selection:
 
@@ -41,9 +41,9 @@ The following example demonstrates single cell selection:
 
 ## Multiple cell selection 
 
-Multiple cell selection provides selection of multiple cells within a Grid. This feature is useful for performing actions on multiple cells simultaneously or focusing on specific areas of data.
+Multiple cell selection provides selection of multiple cells within a grid. This feature is useful for performing actions on multiple cells simultaneously or focusing on specific areas of data.
 
-To configure multiple cell selection, set the [selectionSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#mode) property to "Cell" and the [selectionSettings.type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) property to "Multiple". This configuration allows selection and interaction with multiple cells within the grid.
+To configure multiple cell selection, set the [selectionSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#mode) property to `Cell` and the [selectionSettings.type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) property to `Multiple`. This configuration allows selection and interaction with multiple cells within the grid.
 
 The following example demonstrates multiple cell selection:
 
@@ -68,13 +68,15 @@ The following example demonstrates multiple cell selection:
 
 The cell selection mode allows interactive selection of specific cells or ranges of cells within the grid. This feature is particularly useful for performing actions on specific cells or obtaining data from selected cells.
 
-The grid supports three types of cell selection mode which can be configured using [selectionSettings.cellSelectionMode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#cellselectionmode). These modes are:
+The Grid supports three types of cell selection mode which can be configured using [selectionSettings.cellSelectionMode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#cellselectionmode). These modes are:
 
 * `Flow` - This is the default mode. It allows selection of a range of cells between the start index and end index, including all cells in between the rows. It provides a continuous flow of cell selection.
 * `Box` - In this mode, selection of a range of cells is possible within the start and end column indexes, including all cells in between the rows within the specified range. This mode is useful for selecting cells within specific columns.
-* `BoxWithBorder` - This mode is similar to the Box mode, but it adds borders to the selected range of cells. This visual distinction makes it easy to identify the selected cells within the grid.
+* `BoxWithBorder` - This mode is similar to the `Box` mode, but it adds borders to the selected range of cells. This visual distinction makes it easy to identify the selected cells within the grid.
 
-> Cell Selection requires the `selectionSettings.mode` to be "Cell" or  "Both" and [type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) should be "Multiple".
+> Cell Selection requires the `selectionSettings.mode` to be `Cell` or  `Both` and [type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) should be `Multiple`.
+
+> To select a range of cells in the UI using the keyboard, hold the **Shift key** and click on the start cell, then click on the end cell to complete the selection. This will apply the currently configured `cellSelectionMode` (Flow, Box, or BoxWithBorder) to the selected range.
 
 The following example demonstrates how to dynamically enable and change the `cellSelectionMode` using the `DropDownList` component:
 
@@ -157,7 +159,7 @@ export default App;
 
 ## Select cells programmatically 
 
-Single cell selection, multiple cell selection, and range of cell selection can be performed externally in a Grid using built-in methods. This feature allows interaction with specific cells within the Grid. The following section demonstrates achieving cell selection using methods.
+Single cell selection, multiple cell selection, and range of cell selection can be performed externally in a grid using built-in methods. This feature allows interaction with specific cells within the grid. The following section demonstrates achieving cell selection using methods.
 
 ### Single cell selection
 
@@ -272,7 +274,7 @@ export default App;
 
 The [selectCells](https://ej2.syncfusion.com/react/documentation/api/grid/selection#selectcells) method allows selection of multiple cells based on a collection of row and column indexes. This method provides programmatic control for selecting multiple cells simultaneously within the grid.
 
-The following example demonstrates how to select multiple cells in the Grid by calling the `selectCells` method within the button click event and passing a collection of row and column indexes as arguments:
+The following example demonstrates how to select multiple cells in the grid by calling the `selectCells` method within the button click event and passing a collection of row and column indexes as arguments:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -367,14 +369,14 @@ export default App;
 
  {% previewsample "page.domainurl/code-snippet/grid/selection-cell-cs4" %}
 
-> Cell Selection requires the `selectionSettings.mode` to be "Cell" or "Both" and [type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) should be "Multiple".
+> Cell Selection requires the `selectionSettings.mode` to be `Cell` or `Both` and [type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) should be `Multiple`.
 
 ### Range of cell selection
 
 The [selectCellsByRange](https://ej2.syncfusion.com/react/documentation/api/grid/selection#selectcellsbyrange) method allows selection of a continuous range of cells based on start and end index values. This method provides programmatic control for selecting multiple cells within a defined range.
 
->* Range cell selection allows selection of multiple cells in box mode when `cellSelectionMode` is set to "Box". However, when `cellSelectionMode` is set to "Flow", it will select the range of cells between the start and end indexes, including other cells of the selected rows.
-> * Cell Selection requires the `selectionSettings.mode` to be "Cell" or "Both" and [type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) should be "Multiple".
+>* Range cell selection allows selection of multiple cells in box mode when `cellSelectionMode` is set to `Box`. However, when `cellSelectionMode` is set to `Flow`, it will select the range of cells between the start and end indexes, including other cells of the selected rows.
+> * Cell Selection requires the `selectionSettings.mode` to be `Cell` or `Both` and [type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) should be `Multiple`.
 
 The following example demonstrates programmatic range selection by passing start and end row/cell index values to the `selectCellsByRange` method:
 
@@ -534,7 +536,7 @@ The following example demonstrates how to obtain the selected row cell indexes u
 
 Clearing cell selection programmatically in the Grid component is a useful feature for removing any existing cell selections. To achieve this, the [clearCellSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selection#clearcellselection) method can be used.
 
-> The `clearCellSelection` method is applicable when the selection [type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) is set to "Multiple" or "Single".
+> The `clearCellSelection` method is applicable when the selection [type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) is set to `Multiple` or `Single`.
 
 The following example demonstrates how to clear cell selection by calling the `clearCellSelection` method in the button click event:
 
@@ -567,7 +569,7 @@ The Grid provides several events related to cell selection, allowing customizati
 
 [cellDeselected](https://ej2.syncfusion.com/react/documentation/api/grid#celldeselected): This event is triggered when a particular selected cell is deselected. This event can be used to perform actions or validations when a cell is no longer selected.
 
-In the following example, cell selection is canceled when the value of "ShipCountry" is equal to "France" within the `cellSelecting` event. The background color changes to green when the `cellSelected` event is triggered, and it changes to red when the `cellDeselecting` event is triggered. Furthermore, the text color switches to white when the `cellDeselected` event is triggered. A notification message is displayed to indicate which event was triggered whenever a cell is selected:
+In the following example, cell selection is canceled when the value of "Ship Country" is equal to "France" within the `cellSelecting` event. The background color changes to green when the `cellSelected` event is triggered, and it changes to red when the `cellDeselecting` event is triggered. Furthermore, the text color switches to white when the `cellDeselected` event is triggered. A notification message is displayed to indicate which event was triggered whenever a cell is selected:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

@@ -31,6 +31,8 @@ function App() {
                     <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'></ColumnDirective>
                     <ColumnDirective field='Freight' headerText='Freight' width='120' format='C2' />
                 </ColumnsDirective>
-            </GridComponent></div></div>)
+            </GridComponent>
+        </div>
+    </div>)
 };
 export default App;

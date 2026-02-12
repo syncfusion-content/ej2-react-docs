@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Pdf export options in React Grid component | Syncfusion
-description: Learn here all about Pdf export options in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: PDF export options in React Grid component | Syncfusion
+description: Learn here all about PDF export options in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Pdf export options 
 platform: ej2-react
 documentation: ug
@@ -18,7 +18,7 @@ The PDF export action can be customized using the [pdfExportProperties](https://
 
 Exporting the current page in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid to a PDF document provides the ability to export the currently displayed page records. This feature allows for generating PDF documents that specifically include the content from the current page of the grid.
 
-To export the current page of the grid to a PDF document, set the [exportType](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties#exporttype) property to "CurrentPage".
+To export the current page of the grid to a PDF document, set the [exportType](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties#exporttype) property to `CurrentPage`.
 
 The following example demonstrates exporting current page to a PDF document when a toolbar item is clicked.
 
@@ -113,7 +113,7 @@ The following example demonstrates exporting the filtered records to a PDF docum
 
 Exporting hidden columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid enables including hidden columns in the exported PDF document. This feature is useful when columns are hidden in the UI but still need to be included in the exported document.
 
-To export hidden columns of the grid to a PDF file, set the [includeHiddenColumn](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties#includehiddencolumn) property to "true" in the [pdfExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties) property.
+To export hidden columns of the grid to a PDF file, set the [includeHiddenColumn](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties#includehiddencolumn) property to `true` in the [pdfExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties) property.
 
 The following example demonstrates exporting hidden columns to a PDF file. In this example, the "ShipCity" column, which is not visible in the UI, is exported to the PDF document. The grid can be exported by changing the `pdfExportProperties.includeHiddenColumn` property based on the switch toggle using the [checked](https://ej2.syncfusion.com/react/documentation/api/switch#checked) property of the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component.
 
@@ -211,7 +211,7 @@ To show or hide columns based on user interaction during the export process, fol
 
 1. Handle the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid#toolbarclick) event of the Grid component.
 
-2. Update the visibility of the desired columns by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/grid/column#visible) property of the column to "true" or "false".
+2. Update the visibility of the desired columns by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/grid/column#visible) property of the column to `true` or `false`.
 
 3. Export the grid to PDF.
 
@@ -238,13 +238,13 @@ In the following example, the "CustomerID" is initially a hidden column in the g
 
 ## Show or hide columns while exporting with stacked header
 
-The Syncfusion React Grid provides the ability to control the visibility of columns during export operations. This feature is particularly useful when customizing the data presented in exported files while using stacked headers.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides the ability to control the visibility of columns during export operations. This feature is particularly useful when customizing the data presented in exported files while using stacked headers.
 
 To implement the show or hide columns feature during PDF export in the Grid, follow these steps:
 
 1. Handle the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid#toolbarclick) event of the Grid.
 
-2. Update the visibility of the desired columns by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/grid/column#visible) property of the column to "true" or "false".
+2. Update the visibility of the desired columns by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/grid/column#visible) property of the column to `true` or `false`.
 
 3. Export the Grid to PDF document using [pdfExport](https://ej2.syncfusion.com/react/documentation/api/grid#pdfexport) method.
 
@@ -277,9 +277,9 @@ To change the page orientation to landscape for the exported document, set the [
 
 The supported `pageOrientation` options are:
 
-1. **Landscape**: Exports the grid with a landscape PDF page orientation.
+1. `Landscape`: Exports the grid with a landscape PDF page orientation.
 
-2. **Portrait**: Exports the grid with a portrait PDF page orientation.
+2. `Portrait`: Exports the grid with a portrait PDF page orientation.
 
 The following example demonstrates exporting the grid into PDF document by setting the `pdfExportProperties.pageOrientation` property using the [value](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#value) property of the `DropDownList` component.
 
@@ -810,7 +810,7 @@ To customize the grid columns, follow these steps:
 
 3. Trigger the PDF export operation to apply the customized column settings.
 
-The following example demonstrates customizing the grid columns when exporting a document. In this scenario, the attributes for different columns have been customized: "OrderID" with `textAlign` set to "Right", "CustomerID" with `headerText` as ""Customer Name"", and "Freight" with a center-aligned `textAlign` property, which is not rendered in the grid columns.
+The following example demonstrates customizing the grid columns when exporting a document. In this scenario, the attributes for different columns have been customized: "OrderID" with `textAlign` set to `Right`, "CustomerID" with `headerText` as "Customer Name", and "Freight" with `textAlign` set to `Center`, which is not rendered in the grid columns.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -835,13 +835,13 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provid
 
 ### Default fonts
 
-By default, the Grid uses the "Helvetica" font in the exported document. However, the default font can be changed by utilizing the [pdfExportProperties.theme](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties#theme) property. The available default fonts are:
+By default, the Grid uses the `Helvetica` font in the exported document. However, the default font can be changed by utilizing the [pdfExportProperties.theme](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties#theme) property. The available default fonts are:
 
-* Helvetica
-* TimesRoman
-* Courier
-* Symbol
-* ZapfDingbats
+* `Helvetica`
+* `TimesRoman`
+* `Courier`
+* `Symbol`
+* `ZapfDingbats`
 
 To change the default font, follow these steps:
 
@@ -901,7 +901,7 @@ The following example demonstrates the usage of the custom "Algeria" font for ex
 
  {% previewsample "page.domainurl/code-snippet/grid/pdf-export-cs15" %}
 
-> "PdfTrueTypeFont" accepts base64 format of the custom font.
+> `PdfTrueTypeFont` accepts base64 format of the custom font.
 
 ## Conditional cell customization
 
@@ -930,7 +930,7 @@ The following example demonstrates customizing the background color of the "Frei
 
 ## Export grid as blob
 
-The Grid offers an option to export the data as a Blob instead of downloading it as a file in the browser. To export the grid as a Blob, set the `isBlob` parameter to "true" in the [pdfExport](https://ej2.syncfusion.com/react/documentation/api/grid#pdfexport) method. The grid returns the promise of a blob in the [pdfExportComplete](https://ej2.syncfusion.com/react/documentation/api/grid#pdfexportcomplete) event.
+The Grid offers an option to export the data as a Blob instead of downloading it as a file in the browser. To export the grid as a Blob, set the `isBlob` parameter to `true` in the [pdfExport](https://ej2.syncfusion.com/react/documentation/api/grid#pdfexport) method. The grid returns the promise of a blob in the [pdfExportComplete](https://ej2.syncfusion.com/react/documentation/api/grid#pdfexportcomplete) event.
 
 The following example demonstrates obtaining the blob data of the exported grid by executing the promise in the `pdfExportComplete` event.
 

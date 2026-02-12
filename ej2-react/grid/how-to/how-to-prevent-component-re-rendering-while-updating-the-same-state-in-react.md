@@ -1,20 +1,22 @@
 ---
 layout: post
-title: How to prevent component re-rendering while updating the same state in React | Syncfusion
+title: React Grid - Prevent component re-rendering while updating the same state | Syncfusion
 description: Learn here all about How to prevent component re-rendering while updating the same state in React in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
-control: How to prevent component re-rendering while updating the same state in React
+control: Prevent React Component Re-Rendering on Same State Update
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to prevent component re-rendering while updating the same state in React
+# Prevent React Component Re-Rendering on Same State Update
 
-The React component will automatically re-render whenever the state is updated. If you need to prevent unnecessary re-rendering while updating the same state value by using the `useCallback` or `useMemo` hook. This utilization of both `useCallback` and `useMemo` hooks is to improve the overall performance.
+React components re-render whenever state is updated, even if the new value is identical to the previous one. To enhance performance and avoid unnecessary re-renders, React provides hooks such as `useCallback` and `useEffect` that help control when updates should trigger re-renders.
 
-This demonstration showcases the implementation of a Master-Detail Grid using the React `useCallback` hook. It allows users to view the details of a specific record from the Master Grid in a separate grid known as the Detail Grid. This is achieved by clicking on a particular row. The steps to accomplish this scenario are as follows:
+This implementation demonstrates a Master-Detail Grid structure using the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid. The detail view is rendered in a separate grid, which displays information related to the selected record from the master grid. Selection is handled through row interactions, and updates are optimized using React `useCallback` hook.
 
-1. In the Master Grid's [rowSelected](https://ej2.syncfusion.com/react/documentation/api/grid/#rowselected) event, you can retrieve the selected record and update the state value called "setRecord" using the React `useState` hook. By doing this, the component will automatically re-render whenever the state is modified. To optimize performance and avoid unnecessary re-renders, you can utilize the `useCallback` hook to pass the selected record from the Master Grid to the Detail Grid only when there is a change in the row index value. The row index value is updated in the "setRowIdx" state using the [rowSelecting](https://ej2.syncfusion.com/react/documentation/api/grid/#rowselecting) event of the grid. Refer to the code snippet below.
+Step 1: Optimize state updates with `useCallback`
+
+The [rowSelecting](https://ej2.syncfusion.com/react/documentation/api/grid#rowselecting) event captures the selected row index, while the [rowSelected](https://ej2.syncfusion.com/react/documentation/api/grid#rowselected) event retrieves the corresponding data. Wrapping the `rowSelected` handler in `useCallback` ensures it only re-executes when the row index changes, preventing unnecessary updates. Refer to the code snippet below.
 
     ```typescript
         const [rowIdx, setRowIdx] = useState(null);
@@ -29,7 +31,9 @@ This demonstration showcases the implementation of a Master-Detail Grid using th
         }, [rowIdx]);
     ```
 
-2. After obtaining the value from the Master Grid, you need to filter the CustomerID data within the detail's data source based on the selected record. This filtered data should then be bound to the Detail Grid using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource) property within the React `useEffect` hook. By using the `useEffect` hook, the binding operation will take place after the component renders and will be triggered whenever the selected record changes. Refer to the below code snippet.
+Step 2: Bind filtered data to the Detail Grid using `useEffect`
+
+After retrieving the selected record, the `useEffect` hook filters the detail data source based on a "Customer Name" field (e.g., "CustomerName") and binds the result to the Detail Grid using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource) property. This ensures the update occurs only when the selected record changes.
 
     ```typescript
         useEffect(()=>{
@@ -41,7 +45,7 @@ This demonstration showcases the implementation of a Master-Detail Grid using th
         },[detailGrid, props.detailRecord]);
     ```
 
-In this demonstration, the [selectedRowIndex](https://ej2.syncfusion.com/react/documentation/api/grid/#selectedrowindex) property of the Grid was used to automatically select the second row. Based on that, Detail-Grid will be loaded with data during the initial rendering.
+To display detail data during initial render, the [selectedRowIndex](https://ej2.syncfusion.com/react/documentation/api/grid#selectedrowindex) property of the Master Grid can be used to preselect a specific row. This ensures the Detail Grid is populated with relevant data on load.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

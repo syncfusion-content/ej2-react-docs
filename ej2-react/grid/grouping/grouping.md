@@ -526,8 +526,8 @@ function App() {
   let grid: GridComponent | null;
   let dropColumn: DropDownListComponent | null;
   const columns: { [key: string]: Object; }[] = [
-    { text: 'CustomerID', value: 'CustomerID' },
-    { text: 'OrderID', value: 'OrderID' },
+    { text: 'Customer ID', value: 'CustomerID' },
+    { text: 'Order ID', value: 'OrderID' },
     { text: 'Ship City', value: 'ShipCity' },
     { text: 'Ship Name', value: 'ShipName' },
   ];

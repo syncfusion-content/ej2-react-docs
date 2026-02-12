@@ -16,9 +16,9 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a [temp
 
 ## Render image in a column
 
-To render an image in a grid column, define a `template` for the column using the template property. The `template` property accepts either an HTML element or a function that returns an HTML element. When using a function-based template, the Grid passes the current row's data as the "props" parameter. This allows accessing field values from the data source directly within the template (e.g., "props.EmployeeID", "props.ImageURL").
+To render an image in a grid column, define a template for the column using the `template` property. The `template` property accepts either an HTML element or a function that returns an HTML element. When using a function-based template, the Grid passes the current row's data as the "props" parameter. This allows accessing field values from the data source directly within the template (e.g., "props.EmployeeID", "props.ImageURL").
 
-The following example demonstrates how to define a `template` for the "Employee Image" field that displays an image element. The `template` property is set to a function that returns an HTML element containing an image tag with "src" and "alt" attributes.
+The following example demonstrates defining a `template` for the "Employee Image" field that displays an image element. The `template` property is set to a function that returns an HTML element containing an image tag with "src" and "alt" attributes.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -40,7 +40,7 @@ The following example demonstrates how to define a `template` for the "Employee 
 
 ## Render hyperlink in a column
 
-The Grid component provides support for rendering hyperlink columns and performing navigation on click using the `template` property. This feature is useful when displaying data that requires a link to another page or website. The template function receives the row data as "props", allowing access to field values. In the template, attach event handlers (like `onClick`) to trigger custom logic when the element is clicked. The event handler receives the click event and any other parameters passed to it.
+The Grid component provides support for rendering hyperlink columns and performing navigation on click using the `template` property. This feature is useful when displaying data that requires a link to another page or website. The template function receives the row data as "props", allowing access to field values. In the template, attach event handlers (for example, `onClick`) to trigger custom logic when the element is clicked. The event handler receives the click event and any additional parameters passed to it.
 
 The following example shows a hyperlink column in the Grid where the "hyperLinkTemplate" function returns an anchor tag that calls the `onClick` handler when clicked, opening a URL in a new window.
 
@@ -244,7 +244,11 @@ export default App;
 
 ### Render ColorPicker component in a column
 
+<<<<<<< HEAD
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [ColorPicker](https://ej2.syncfusion.com/react/documentation/color-picker/getting-started) component provides an intuitive method to select colors from a predefined color palette or custom colors. This component is suitable for scenarios such as picking a theme color or changing element colors on a page.
+=======
 The Syncfusion<sup style="font-size:70%">&reg;</sup> [ColorPicker](https://ej2.syncfusion.com/react/documentation/color-picker/getting-started) component provides a user-friendly way to select colors from a pre-defined color palette or custom colors. This component is useful for scenarios such as picking a theme color or changing element colors on a page.
+>>>>>>> 872db1b5d2947e36facb9c247fbf32aae106285e
 
 ```
 <div>
@@ -358,7 +362,7 @@ The following example shows the Progress Bar component in the Grid "Freight" col
 
 ### Render RadioButton in a column 
 
-The Syncfusion React Grid supports rendering the [RadioButton](https://ej2.syncfusion.com/react/documentation/radio-button/getting-started) within a column using the `template` property. This feature is useful for displaying selection options, such as order statuses, payment methods, or approval choices, within the Grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports rendering the [RadioButton](https://ej2.syncfusion.com/react/documentation/radio-button/getting-started) within a column using the `template` property. This feature is useful for displaying selection options, such as order statuses, payment methods, or approval choices, within the Grid.
 
 The following example demonstrates rendering a RadioButton in the "Order Status" column of the Grid by defining the `template` property.
 
@@ -389,7 +393,7 @@ The following example demonstrates rendering a RadioButton in the "Order Status"
 
 The conditional column `template` allows displaying template elements based on specific conditions. This is useful for showing different content depending on the data values in each row. Use the ternary operator ("condition ? trueValue : falseValue") or "if/else" statements to conditionally render elements. The template function receives row data through "props", which can be evaluated to determine what content to display.
 
-The following example demonstrates how to render a checkbox conditionally based on the "Discontinued" field value. The template uses a ternary operator to check if "props.Discontinued" is "true". If "true", it renders a checked checkbox; otherwise, it renders an unchecked checkbox. 
+The following example demonstrates rendering a checkbox conditionally based on the "Discontinued" field value. The template uses a ternary operator to check if "props.Discontinued" is `true`. If `true`, it renders a checked checkbox; otherwise, it renders an unchecked checkbox. 
 
 ```
 <div>
@@ -414,11 +418,11 @@ The following example demonstrates how to render a checkbox conditionally based 
 
 {% previewsample "page.domainurl/code-snippet/grid/template-cs4" %}
 
-> Any template element or custom component can be used instead of the checkbox in the conditional template based on specific requirements.
+> Any template element or custom component can replace the checkbox in the conditional template based on specific requirements.
 
 ## Getting the row object by clicking on a template element
 
-The Grid component allows retrieving the row object of the selected record when clicking on a `template` element. This feature is useful for performing custom actions based on the selected record.
+The Grid component allows retrieving the row object of the selected record when clicking on a `template` element. This capability enables performing custom actions based on the selected record.
 
 The following example demonstrates a button element rendered in the "Employee Data" column with an `onClick` event handler that calls the "showDetails" method. The method receives the complete row data object as a parameter, which provides access to all field values for that record and enables displaying the information in a dialog popup.
 
@@ -440,7 +444,7 @@ The following example demonstrates a button element rendered in the "Employee Da
 {% previewsample "page.domainurl/code-snippet/grid/template-cs7" %}
 
 ## Use custom helper inside the template
-The Grid supports custom helper functions inside the template property of a column. These functions are JavaScript methods that perform specific operations—such as formatting, calculations, or transformations—on row data.
+The Grid supports custom helper functions inside the `template` property of a column. These functions are JavaScript methods that perform specific operations—such as formatting, calculations, or transformations—on row data.
 
 To use a helper function:
 
@@ -468,13 +472,13 @@ The following example shows a custom helper function inside the `template` prope
 
 {% previewsample "page.domainurl/code-snippet/grid/template-cs5" %}
 
-> Custom helpers can only be used inside the template method of a column.
+> Custom helpers can only be used inside the `template` method of a column.
 
 ## Dynamically adding template column
 
-The Grid component supports dynamically adding template columns at runtime. This allows modifying the grid structure after it has been initialized based on UI interactions or other dynamic conditions (e.g., adding a new column when a button is clicked). Dynamically adding columns involves creating a new `ColumnDirective` with a template and inserting it into the grid's column collection.
+The Grid component supports dynamically adding template columns at runtime. This allows modifying the grid structure after initialization based on UI interactions or other dynamic conditions (for example, adding a new column when a button is clicked). Dynamically adding columns involves creating a new `ColumnDirective` with a `template` and inserting it into the grid's column collection.
 
-The following example demonstrates how to add a template column using an external button click. When the button is clicked, a new "Ship Country" column with a Dropdownlist template is added to the grid at runtime. The column uses both the `template` property for the cell content and the [headerTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/column#headertemplate) property to customize the column header.
+The following example demonstrates adding a template column using an external button click. When the button is clicked, a new "Ship Country" column with a Dropdownlist template is added to the grid at runtime. The column uses both the `template` property for the cell content and the [headerTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/column#headertemplate) property to customize the column header.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -495,11 +499,11 @@ The following example demonstrates how to add a template column using an externa
 
 ## Enhancing Grid performance by enabling or disabling Aria Labels
 
-By default, the Syncfusion React Grid automatically adds custom "aria-label" attributes to template cells. These attributes combine the cell value, the identifier "is template cell", and the column header name. Aria labels are accessibility features that help screen readers understand the content and purpose of cells.
+By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid automatically adds custom "aria-label" attributes to template cells. These attributes combine the cell value, the identifier "is template cell", and the column header name. Aria labels are accessibility features that help screen readers understand the content and purpose of cells.
 
 However, in applications with many template columns, these labels can slightly impact rendering performance. To improve performance, disable aria labels for non-critical template columns by setting the `enableAriaLabel` property to `false` in the `templateOptions` of those columns. If accessibility support is required, set it to `true` to retain aria labels.
 
-The following example enables Aria labels for the "Employee Image" column and disables them for the "First Name" column in the Syncfusion React Grid.
+The following example enables Aria labels for the "Employee Image" column and disables them for the "First Name" column in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

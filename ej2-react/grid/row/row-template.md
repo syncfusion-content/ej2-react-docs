@@ -134,7 +134,7 @@ export default App;
 
 ## Row template with formatting
 
-By default, Syncfusion<sup style="font-size:70%">&reg;</sup> Grid provides the [format](https://ej2.syncfusion.com/react/documentation/api/grid/column#format) property to format the values displayed in each column. When using the [rowtemplate](https://ej2.syncfusion.com/react/documentation/api/grid#rowtemplate), you have the flexibility to apply the customized formatting within the template.
+By default, Syncfusion<sup style="font-size:70%">&reg;</sup> Grid provides the [format](https://ej2.syncfusion.com/react/documentation/api/grid/column#format) property to format the values displayed in each column. When the [rowtemplate](https://ej2.syncfusion.com/react/documentation/api/grid#rowtemplate) feature is used, customized formatting can be applied directly within the template.
 
 Format the values within the row template by defining a global function that handles the formatting logic. This function is invoked inside the template to format the corresponding values.
 

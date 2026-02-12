@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Check box Selection in React Grid Component
 
-Checkbox selection provides functionality to select multiple grid records through checkboxes in each row. This selection method allows efficient bulk operations on selected records within the Grid.
+Checkbox selection provides functionality to select multiple grid records through checkboxes in each row. This selection method allows efficient bulk operations on selected records within the grid.
 
-To render checkboxes in each grid row, configure a checkbox column by setting the column [type](https://ej2.syncfusion.com/react/documentation/api/grid/column#type) property to "checkbox".
+To render checkboxes in each grid row, configure a checkbox column by setting the column [type](https://ej2.syncfusion.com/react/documentation/api/grid/column#type) property to `checkbox`.
 
 Here's an example of enabling checkbox selection using the `type` property in the Grid component:
 
@@ -33,7 +33,7 @@ Here's an example of enabling checkbox selection using the `type` property in th
 
  {% previewsample "page.domainurl/code-snippet/grid/selection-cs3" %}
 
-> Selection can be persisted on all the operations using [selectionSettings.persistSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#persistselection) property. For persisting selection on the Grid, any one of the column should be defined as a primary key using [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property.
+> Selection can be persisted on all the operations using [selectionSettings.persistSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#persistselection) property. For persisting selection on the grid, any one of the column should be defined as a primary key using [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property.
 
 ## Checkbox selection mode
 
@@ -123,7 +123,7 @@ export default App;
 
 ## Hide select-all checkbox
 
-When the column type is set to [checkbox](https://ej2.syncfusion.com/react/documentation/api/grid/column#type), a select-all checkbox appears in the column header by default. To hide the select-all checkbox, define an empty [HeaderTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/column#headertemplate) directive in the Grid Column.
+When the column type is set to [checkbox](https://ej2.syncfusion.com/react/documentation/api/grid/column#type), a select-all checkbox appears in the column header by default. To hide the select-all checkbox, define an empty [HeaderTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/column#headertemplate) directive in the grid Column.
 
 Here's an example of hiding selectall checkbox in column header using empty `HeaderTemplate` directive in the Grid component:
 
@@ -146,7 +146,7 @@ Here's an example of hiding selectall checkbox in column header using empty `Hea
 
 ## Conditional row selection
 
-The `isRowSelectable` callback determines which rows can be selected by evaluating each row's data and returning "true" for selectable rows and "false" for those that should not be selectable.
+The `isRowSelectable` callback determines which rows can be selected by evaluating each row's data and returning `true` for selectable rows and `false` for those that should not be selectable.
 
 **Local data:** The callback executes once during grid initialization, evaluating all records because the full dataset is available on the client side.
 
@@ -177,7 +177,7 @@ Single-row selection in checkbox mode ensures that only one row remains selected
 
 To configure single-row selection in checkbox mode, handle the [rowSelecting](https://ej2.syncfusion.com/react/documentation/api/grid#rowselecting) event and use the [clearSelection](https://ej2.syncfusion.com/react/documentation/api/grid#clearselection) method to clear previous selections before selecting a new row.
 
-> When the [checkboxMode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#checkboxmode) property is set to "ResetOnRowClick", clicking a new row automatically resets the previously selected row. This behavior applies to row clicks rather than checkbox clicks and represents the default grid behavior.
+> When the [checkboxMode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#checkboxmode) property is set to `ResetOnRowClick`, clicking a new row automatically resets the previously selected row. This behavior applies to row clicks rather than checkbox clicks and represents the default grid behavior.
 
 Here's an example of selecting a single row in checkbox selection mode using the `clearSelection` method along with the `rowSelecting` event:
 
@@ -200,7 +200,7 @@ Here's an example of selecting a single row in checkbox selection mode using the
 
 ## Checkbox only selection
 
-By default, the Grid component allows selection by clicking either a grid row or the checkbox within that row. To restrict selection to checkbox clicks only, set the [selectionSettings.checkboxOnly](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#checkboxonly) property to "true".
+By default, the Grid component allows selection by clicking either a grid row or the checkbox within that row. To restrict selection to checkbox clicks only, set the [selectionSettings.checkboxOnly](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#checkboxonly) property to `true`.
  
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

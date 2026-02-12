@@ -19,7 +19,7 @@ function App() {
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
-      <ColumnDirective field='OrderDate' headerText='OrderDate' format='yMd' textAlign='Right' width='150' />
+      <ColumnDirective field='OrderDate' headerText='Order Date' format='yMd' textAlign='Right' width='150' />
       <ColumnDirective field='Freight' headerText='Freight' format='C2' textAlign='Right' width='150' />
       <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
     </ColumnsDirective>

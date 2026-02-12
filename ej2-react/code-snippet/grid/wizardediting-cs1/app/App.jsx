@@ -14,16 +14,12 @@ function App() {
     const a = [props, grid]
     return (<DialogFormTemplate {...a} />);
   }
-  const editOption = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Dialog', template: dialogTemplate };
+  const editOptions = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Dialog', template: dialogTemplate };
   const actionComplete = (args) => {
     if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {
       if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {
         args.form .ej2_instances[0] .rules = {}; // Disable deafault valdation.
         args.dialog.element.querySelector('.e-footer-content').classList.add('e-hide');
-        // Set initail Focus
-        if (args.requestType === 'beginEdit') {
-          args.form.elements.namedItem('CustomerID').focus();
-        }
       }
     }
   }

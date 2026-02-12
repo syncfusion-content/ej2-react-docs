@@ -17,8 +17,8 @@ To configure this in the grid, use the following properties on the `AggregateCol
 - [groupFooterTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn#groupfootertemplate): Display aggregate values in the group footer section.
 - [groupCaptionTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn#groupcaptiontemplate): Renders aggregate values in the group caption section.
 
-> - Set [allowGrouping](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowgrouping) to "true" in the grid to enable column grouping.
-> - Set [showGroupedColumn](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings#showgroupedcolumn) to "true" in `groupSettings` to display grouped columns in the grid.
+> - Set [allowGrouping](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowgrouping) to `true` in the grid to enable column grouping.
+> - Set [showGroupedColumn](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings#showgroupedcolumn) to `true` in `groupSettings` to display grouped columns in the grid.
 
 ## Group footer aggregates
 
@@ -68,13 +68,13 @@ The following example displays the max of the "Freight" field in the each group 
 
 {% previewsample "page.domainurl/code-snippet/grid/aggregate-group-cs2" %}
 
-> By default, the group total summary is calculated for the current page records within each group. Set [groupSettings.disablePageWiseAggregates](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings#disablepagewiseaggregates) to "true" to calculate aggregates using all records in the grouped dataset.
+> By default, the group total summary is calculated for the current page records within each group. Set [groupSettings.disablePageWiseAggregates](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings#disablepagewiseaggregates) to `true` to calculate aggregates using all records in the grouped dataset.
 
 ## Disable page wise aggregates for grouping
 
 In some cases, disabling the page-wise aggregates for grouping is necessary. By default, when grouping is enables with pagination, the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid calculates group aggregates only for the current page.
 
-To calculate aggregates across the entire grouped data, set the [groupSettings.disablePageWiseAggregates](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings#disablepagewiseaggregates) property to "true".
+To calculate aggregates across the entire grouped data, set the [groupSettings.disablePageWiseAggregates](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings#disablepagewiseaggregates) property to `true`.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

@@ -10,7 +10,7 @@ function App() {
   let dialog;
   let selectedCellIndexes = [];
   const [dialogVisible, setDialogVisible] = useState(false);
-  const selectionSettings = { mode: 'Cell', type: 'Multiple', persistSelection: true };
+  const selectionSettings = { mode: 'Cell', type: 'Multiple' };
   const pageOptions = { pageSize: 5 };
   const showSelectedRecord = () => {
     selectedCellIndexes = grid.getSelectedRowCellIndexes();

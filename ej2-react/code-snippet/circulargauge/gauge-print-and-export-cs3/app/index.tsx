@@ -1,5 +1,5 @@
 
-{% raw %}
+
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
@@ -22,5 +22,5 @@ function clickHandler(){
 const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
-{% endraw %}
+
 

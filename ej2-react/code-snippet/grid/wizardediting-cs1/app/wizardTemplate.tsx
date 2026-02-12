@@ -12,6 +12,8 @@ export class DialogFormTemplate extends React.Component<{}, {}> {
     private shipCountryDistinctData = DataUtil.distinct(data, 'ShipCountry', true);
     private shipCityDistinctData = DataUtil.distinct(data, 'ShipCity', true);
     private grid: GridComponent | null;
+    private orderIDRef: React.RefObject<HTMLInputElement> = React.createRef<HTMLInputElement>();
+    private customerIdRef: React.RefObject<HTMLInputElement> = React.createRef<HTMLInputElement>();
     constructor(props) {
         super(props);
         this.state = Object.assign({}, props[0]);
@@ -73,7 +75,15 @@ export class DialogFormTemplate extends React.Component<{}, {}> {
         }
     }
 
-
+    public componentDidMount() {
+        const { isAdd } = this.state as { isAdd: boolean };
+        // Set initial Focus
+        if (isAdd) {
+            this.orderIDRef.current?.focus();
+        } else {
+            this.customerIdRef.current?.focus();
+        }
+    }
     public render() {
         this.onChange = this.onChange.bind(this);
         this.previous = this.previous.bind(this);
@@ -85,7 +95,7 @@ export class DialogFormTemplate extends React.Component<{}, {}> {
                 <div className="form-row">
                     <div className="form-group col-md-6">
                         <div className="e-float-input e-control-wrapper">
-                            <input id="OrderID" name="OrderID" type="text" disabled={!data.isAdd} value={data.OrderID} onChange={this.onChange} />
+                            <input ref={this.orderIDRef} id="OrderID" name="OrderID" type="text" disabled={!data.isAdd} value={data.OrderID} onChange={this.onChange} />
                             <span className="e-float-line" />
                             <label className="e-float-text e-label-top"> Order ID</label>
                         </div>
@@ -94,7 +104,7 @@ export class DialogFormTemplate extends React.Component<{}, {}> {
                 <div className="form-row">
                     <div className="form-group col-md-6">
                         <div className="e-float-input e-control-wrapper" >
-                            <input value={data.CustomerID} id="CustomerName" name="CustomerID" type="text" onChange={this.onChange} />
+                            <input ref={this.customerIdRef} value={data.CustomerID} id="CustomerName" name="CustomerID" type="text" onChange={this.onChange} />
                             <span className="e-float-line" />
                             <label className="e-float-text e-label-top">Customer Name</label>
                         </div>

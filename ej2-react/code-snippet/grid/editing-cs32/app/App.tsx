@@ -7,7 +7,7 @@ import { data } from './datasource';
 function App() {
   const editSettings: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
   const toolbarOptions: ToolbarItems[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
-  const gridRef = React.useRef<GridComponent>(null);
+  const gridRef: React.RefObject<GridComponent> = React.useRef<GridComponent>(null);
   const onMouseUp = (e: React.MouseEvent<HTMLElement>): void => {
     if ((e.target as HTMLElement).classList.contains("e-rowcell")) {
       if (gridRef.current?.isEdit)

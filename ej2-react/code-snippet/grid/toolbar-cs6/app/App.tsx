@@ -18,8 +18,8 @@ function App() {
             <ColumnsDirective>
                 <ColumnDirective field='OrderID' headerText='Order ID' textAlign="Right" type='number' isPrimaryKey={true} width='120'/>
                 <ColumnDirective field='CustomerID' headerText='Customer ID' type='string' width='140'/>
-                <ColumnDirective field='Freight' headerText='Freight' type='number' format='C2'  width='120' textAlign="Right"/>
-                <ColumnDirective field='OrderDate' headerText='Order Date' type='date' format='yMd' width='140' textAlign="Right"/>
+                <ColumnDirective field='Freight' headerText='Freight' textAlign="Right" type='number' format='C2'  width='120'/>
+                <ColumnDirective field='OrderDate' headerText='Order Date' textAlign="Right" type='date' format='yMd' width='140'/>
             </ColumnsDirective>
             <Inject services={[ Toolbar ]} />
         </GridComponent>

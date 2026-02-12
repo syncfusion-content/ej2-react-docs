@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print in React Grid component
+# Print in React Grid Component
 
 The printing feature in Syncfusion<sup style="font-size:70%">&reg;</sup> Grid generates a printable representation of the grid for offline access or documentation. Enable printing via the grid's toolbar or by calling the [print](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#print) method.
 
@@ -305,7 +305,7 @@ In the `toolbarClick` event, columns can be shown or hidden by setting the [visi
 
 The `printComplete` event resets column visibility to the original configuration.
 
-Here's a code example that demonstrates how to show a hidden column (CustomerID) and hide a visible column (ShipCity) during printing and then reset their visibility after printing:
+Here's a code example that demonstrates how to show a hidden column (Customer ID) and hide a visible column (Ship City) during printing and then reset their visibility after printing:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -349,7 +349,7 @@ By default, printing includes only the expanded child grids visible on the curre
 
 Add a title to the printed header by utilizing the [beforePrint](https://ej2.syncfusion.com/react/documentation/api/grid#beforeprint) event. This event allows customization of the print layout, including adding a title element to make the printed document informative and visually appealing.
 
-Example: adding a title to the Grid print output:
+Example: adding a title to the grid print output:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -395,7 +395,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a [befo
 
 ## Print grid along with other components
 
-To print the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid together with other components (for example, a **Chart**), use the [beforePrint](https://ej2.syncfusion.com/react/documentation/api/grid#beforeprint) event to append cloned content from those components to the print document.
+To print the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid together with other components (for example, a `Chart`), use the [beforePrint](https://ej2.syncfusion.com/react/documentation/api/grid#beforeprint) event to append cloned content from those components to the print document.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -445,7 +445,7 @@ function App() {
             <ColumnsDirective>
                 <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
                 <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
-                <ColumnDirective field='OrderDate' headerText='OrderDate' format='yMd' width='150' />
+                <ColumnDirective field='OrderDate' headerText='Order Date' format='yMd' width='150' textAlign="Right"/>
                 <ColumnDirective field='Freight' headerText='Freight' format='C' width='150' />
                 <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
                 <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
@@ -513,7 +513,7 @@ function App() {
             <ColumnsDirective>
                 <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
                 <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
-                <ColumnDirective field='OrderDate' headerText='OrderDate' format='yMd' width='150' />
+                <ColumnDirective field='OrderDate' headerText='Order Date' format='yMd' width='150' textAlign="Right"/>
                 <ColumnDirective field='Freight' headerText='Freight' format='C' width='150' />
                 <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
                 <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />

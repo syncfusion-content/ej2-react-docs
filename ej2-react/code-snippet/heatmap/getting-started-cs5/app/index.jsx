@@ -1,4 +1,4 @@
-{% raw %}
+
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
 import { HeatMapComponent, Inject, Legend, Tooltip } from '@syncfusion/ej2-react-heatmap';
@@ -47,4 +47,3 @@ export function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
-{% endraw %}

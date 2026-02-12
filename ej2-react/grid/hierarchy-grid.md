@@ -16,7 +16,7 @@ This structure enhances data readability and navigation, especially when working
 
 To enable the Hierarchy Grid feature:
 
-1. The hierarchy grid feature is enabled by importing the `DetailRow` module from `@syncfusion/ej2-react-grids` and injecting the `DetailRow` service into the grid.
+1. The Hierarchy Grid feature is enabled by importing the `DetailRow` module from `@syncfusion/ej2-react-grids` and injecting the `DetailRow` service into the grid.
 
     ```jsx
     import { GridComponent, Inject, DetailRow } from '@syncfusion/ej2-react-grids';
@@ -154,7 +154,7 @@ To achieve this, use the [load](https://ej2.syncfusion.com/react/documentation/a
 ## Dynamic data binding in Child Grids using parent row values
 A child grid can be bound dynamically to display data that corresponds to its parent row. Instead of relying on the `queryString` property, this can be handled through the  [detailDataBound](https://ej2.syncfusion.com/react/documentation/api/grid#detaildatabound) event, which is triggered whenever a child grid expands.
 
-Within the `detailDataBound` event, the child grid’s dataSource is filtered based on the parent row’s "EmployeeID". The `DataManager` is used to apply the filter, and the filtered result is then assigned to the child grid’s dataSource. This ensures that each child grid shows only the records related to its parent, creating a contextual and flexible hierarchical display.
+Within the `detailDataBound` event, the child grid’s dataSource is filtered based on the parent row’s "Employee ID". The `DataManager` is used to apply the filter, and the filtered result is then assigned to the child grid’s dataSource. This ensures that each child grid shows only the records related to its parent, creating a contextual and flexible hierarchical display.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -370,7 +370,7 @@ To hide the expand/collapse icon in parent row when no records in child grid, fo
         const childrecord: object[] = new DataManager(childData as JSON[]).
             executeLocal(new Query().where('EmployeeID', 'equal', parentData, true));
         if (childrecord.length === 0) {
-            // Here hide which parent row has no child records.
+            // Here hide icon of parent row which has no child records.
             const rowElement = args.row as HTMLTableRowElement;
             const cellElement= rowElement.querySelector('td') as HTMLTableCellElement
             cellElement.innerHTML = ' '; 
@@ -379,7 +379,7 @@ To hide the expand/collapse icon in parent row when no records in child grid, fo
     }
 ```
 
-The following example demonstrates how to hide the expand/collapse icon in the row with "EmployeeID" as "1", which does not have record in child grid.
+The following example demonstrates how to hide the expand/collapse icon in the row with "Employee ID" as "1", which does not have record in child grid.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -435,8 +435,6 @@ In the demo below, the expand/collapse icons have been changed to arrow-down and
 
 ## Child Grid expand and collapse events
 
-The Grid component provides [detailExpand](https://ej2.syncfusion.com/react/documentation/api/grid#detailexpand) and [detailCollapse](https://ej2.syncfusion.com/react/documentation/api/grid#detailcollapse) events, which are triggered before a detail row (parent row) is expanded or collapsed. These events enable control over the expand/collapse behavior by applying conditional logic through event arguments.
-
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component provides [detailExpand](https://ej2.syncfusion.com/react/documentation/api/grid#detailexpand) and [detailCollapse](https://ej2.syncfusion.com/react/documentation/api/grid#detailcollapse) events, triggered before a detail row(parent row) is expanded or collapsed. These events provide control over the expand/collapse behavior by allowing conditional logic through event arguments.
 
 In the example below, expansion is prevented for the "Nancy" row, and collapse is prevented for the "Andrew" row.
@@ -460,7 +458,7 @@ In the example below, expansion is prevented for the "Nancy" row, and collapse i
 
 ## Customize the child grid
 
-The child grid’s appearance within the parent Grid can be customized using CSS. The `.e-detailcell` selector targets the child grid container and enables modification of properties such as background color, borders, and font styles.
+The child grid’s appearance within the parent grid can be customized using CSS. The `.e-detailcell` selector targets the child grid container and enables modification of properties such as background color, borders, and font styles.
 
 ### Header
 
@@ -468,7 +466,7 @@ The appearance of the header elements in the child grid can be customized using 
 
 **Customizing the child grid header**
 
-To modify the header of the child grid, use the following CSS. The `.e-detailcell` class targets the child grid, and `.e-headercontent` selects its header container. Updating the `border` property customizes the line between the header and content.
+To modify the header of the child grid, use the following CSS. The `.e-detailcell` class targets the child grid, and `.e-headercontent` targets the header container. Updating the `border` property customizes the line between the header and content.
 
 ```css
 .e-detailcell .e-grid .e-headercontent{
@@ -524,7 +522,7 @@ To style the child grid's pager root, use the following CSS. The `.e-detailcell`
 
 **Customizing the child grid pager container element**
 
-To style the child grid's pager container, apply the following CSS. The `.e-pagercontainer` selector modifies the `border` and font of the pager section.
+To style the child grid's pager container, apply the following CSS. The `.e-pagercontainer` selector modifies the border and font of the pager section.
 
 ```css
 .e-detailcell .e-grid .e-pagercontainer {
@@ -558,7 +556,7 @@ To style the child grid's pager navigation buttons, apply the following CSS. The
 
 To style the child grid's pager numeric link elements, use the following CSS. The `.e-numericitem` selector targets each page number, allowing customization of `background-color`, `color`, and hover effects.
 
-To customize the appearance of the child grid pager current page numeric link elements, the following CSS code can be used:
+To customize the appearance of the child grid pager page numeric link elements, the following CSS code can be used:
 
 ```css
 .e-detailcell .e-grid .e-gridpager .e-numericitem {
@@ -591,8 +589,6 @@ To customize the appearance of the child grid pager current page numeric element
 ![Child grid pager current page numeric element](images/child-grid-pager-current-page-numeric-element.png)
 
 ### Sorting
-
-The appearance of the sorting icons and multi sorting icons in the child grid can be customized using CSS. The available Syncfusion<sup style="font-size:70%">&reg;</sup> [icons](https://ej2.syncfusion.com/react/documentation/appearance/icons#tailwind-34) can be used based on the theme.
 
 The appearance of sorting icons in the child grid can be customized using CSS. Syncfusion<sup style="font-size:70%">&reg;</sup> provides a set of built-in [icons](https://ej2.syncfusion.com/react/documentation/appearance/icons#tailwind-34) that can be used based on the theme.
 
@@ -629,7 +625,7 @@ To style the multi sorting icon in the child grid header, apply the following CS
 
 ### Filtering
 
-The appearance of filtering elements in the child grid can be customized using CSS. The following examples demonstrate how to style key filtering components, including filter bar cells, filter inputs, focus states, clear icons, filter icons, filter dialog content and footer, dialog input elements, dialog buttons, and Excel filter number options.
+The appearance of filtering elements in the child grid can be customized using CSS. The following examples demonstrate how to style key filtering components, including filter bar cells, filter inputs, focus states, clear icons, filter icons, filter dialog content and footer, dialog input elements, dialog buttons, and excel filter number options.
 
 **Customizing the child grid filter bar cell element**
 
@@ -847,7 +843,7 @@ The appearance of editing-related elements in the child grid can be customized u
 
 **Customizing the child grid edited and added row element**
 
-The edited and added rows in the child grid can be styled by applying a `background-color` to the `.e-editedrow table` and `.e-addedrow table` selectors
+The edited and added rows in the child grid can be styled by applying a `background-color` to the `.e-editedrow table` and `.e-addedrow table` selectors.
 
 ```css
 .e-detailcell .e-grid .e-editedrow table, 

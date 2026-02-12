@@ -152,7 +152,7 @@ function App() {
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='100' textAlign='Right' />
           <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
-          <ColumnDirective field='Freight' headerText='Freight' format='C' width='150' />
+          <ColumnDirective field='Freight' headerText='Freight' format='C' width='150' textAlign='Right' />
           <ColumnDirective field='ShipCity' headerText='Ship City' width='120' />
         </ColumnsDirective>
         <Inject services={[ContextMenu, Page, Edit]} />
@@ -186,7 +186,7 @@ function App() {
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='100' textAlign='Right' />
           <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
-          <ColumnDirective field='Freight' headerText='Freight' format='C' width='150' />
+          <ColumnDirective field='Freight' headerText='Freight' format='C' width='150' textAlign='Right'/>
           <ColumnDirective field='ShipCity' headerText='Ship City' width='120' />
         </ColumnsDirective>
         <Inject services={[ContextMenu, Page, Edit]} />
@@ -241,7 +241,7 @@ function App() {
         <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='100' textAlign='Right' />
           <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
-          <ColumnDirective field='Freight' headerText='Freight' format='C' width='150' />
+          <ColumnDirective field='Freight' headerText='Freight' format='C' width='150' textAlign='Right' />
           <ColumnDirective field='ShipCity' headerText='Ship City' width='120' />
         </ColumnsDirective>
         <Inject services={[ContextMenu, Page, Edit]} />
@@ -279,7 +279,7 @@ function App() {
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='100' textAlign='Right' />
           <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
-          <ColumnDirective field='Freight' headerText='Freight' format='C' width='150' />
+          <ColumnDirective field='Freight' headerText='Freight' format='C' width='150' textAlign='Right' />
           <ColumnDirective field='ShipCity' headerText='Ship City' width='120' />
         </ColumnsDirective>
         <Inject services={[ContextMenu, Page, Edit]} />

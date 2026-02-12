@@ -22,7 +22,7 @@ function App() {
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} />
         <ColumnDirective field='OrderDate' headerText='Order Date' width='100' textAlign="Right" type="datetime" format={formatOptions} />
-        <ColumnDirective field='ShippedDate' headerText='ShippedDate' width='100' textAlign="Right" type="datetime" format={formatOptions} />
+        <ColumnDirective field='ShippedDate' headerText='Shipped Date' width='100' textAlign="Right" type="datetime" format={formatOptions} />
         <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
       </ColumnsDirective>
       <Inject services={[Filter, Page]} />

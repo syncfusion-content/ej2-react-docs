@@ -22,7 +22,7 @@ function App() {
       <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
       <ColumnDirective field='OrderDate' headerText='Order Date' type='date' width='150' textAlign='Right' format='yMd' />
-      <ColumnDirective field='ShippedDate' headerText='ShippedDate' type='date' width='150' textAlign='Right' format='yMd' />
+      <ColumnDirective field='ShippedDate' headerText='Shipped Date' type='date' width='150' textAlign='Right' format='yMd' />
       <ColumnDirective field='Freight' headerText='Freight' width='150' textAlign='Right' format='C2' />
       <ColumnDirective field='isVerified' headerText='Verified' width='150' type='boolean'  displayAsCheckBox="true" />
       <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />

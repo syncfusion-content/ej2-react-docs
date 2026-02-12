@@ -14,7 +14,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provid
 
 When a column header is dragged, a move indicator icon appears to show where the column will be placed. Dropping the header into the new position changes the column’s index, and the grid updates the order seamlessly. This makes it easier to organize and analyze data, especially when working with large datasets.
 
-To enable column reordering in the Grid, set the [allowReordering](https://ej2.syncfusion.com/react/documentation/api/grid#allowreordering) property to "true" and inject the `Reorder` module. Once enabled, columns can be reordered by:
+To enable column reordering in the Grid, set the [allowReordering](https://ej2.syncfusion.com/react/documentation/api/grid#allowreordering) property to `true` and inject the `Reorder` module. Once enabled, columns can be reordered by:
 
 - Selecting a column header.
 - Dragging it to the desired position.
@@ -43,9 +43,9 @@ To enable column reordering in the Grid, set the [allowReordering](https://ej2.s
 
 ## Prevent reordering for specific columns
 
-By default, all columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid can be reordered when the grid-level `allowReordering` property is set to "true". However, there may be specific columns that should remain in a fixed position and not be reordered. To prevent reordering for a particular column, set the [allowReordering](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowreordering) property of that column to "false" in the column definition.
+By default, all columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid can be reordered when the grid-level [allowReordering](https://ej2.syncfusion.com/react/documentation/api/grid#allowreordering) property is set to `true`. However, there may be specific columns that should remain in a fixed position and not be reordered. To prevent reordering for a particular column, set the [allowReordering](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowreordering) property of that column to `false` in the column definition.
 
-In the following example, the "ShipCity" column is prevented from being reordered by setting its `allowReordering` property to "false":
+In the following example, the "ShipCity" column is prevented from being reordered by setting its [`allowReordering`](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowreordering) property to `false`:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -66,7 +66,7 @@ In the following example, the "ShipCity" column is prevented from being reordere
 
 ## Reorder columns programmatically
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides several methods to reorder columns programmatically without interaction. These methods allow to move columns based on their index, target index, or field name, providing flexibility in column arrangement based on application logic or preferences.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides several methods to reorder columns programmatically without interaction. These methods allow moving columns based on their index, target index, or field name, providing flexibility in column arrangement based on application logic or preferences.
 
 The Grid provides the following methods for programmatic column reordering:
 
@@ -77,7 +77,7 @@ The Grid provides the following methods for programmatic column reordering:
 | [reorderColumns](https://ej2.syncfusion.com/react/documentation/api/grid#reordercolumns) | Reorders columns based on their field names. | `fromFName`, `toFName` |
 | [reorderColumnByModel](https://ej2.syncfusion.com/react/documentation/api/grid#reordercolumnbymodel) | Reorders columns using complete column model objects (ideal for stacked headers). | `fromColumn`, `toColumn` |
 
-> Column positions are counted starting from 0. The first column has an index of 0, the second column has an index of 1, and so on.
+> Column positions are counted starting from "0". The first column has an index of "0", the second column has an index of "1", and so on.
 
 ### Reorder columns by index
 
@@ -94,7 +94,7 @@ reorderColumnByIndex(fromIndex: number, toIndex: number): void
 * **toIndex**: The new index where the column should be moved.
 
 
-In this example, The "Customer ID" column, located at index 1, is moved to index 3 when clicking the "Reorder Column by Index" button.
+In this example, the "Customer ID" column, located at index 1, is moved to index 3 when clicking the "Reorder Column by Index" button.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -123,10 +123,10 @@ reorderColumnByTargetIndex(fieldName: string | string[], toIndex: number): void
 ```
 
 **Parameters:**
-* **fieldName**: The field name (or array of field names) of the column(s) to be reordered.
-* **toIndex**: The target index where the column(s) should be moved.
+* **`fieldName`**: The field name (or array of field names) of the column(s) to be reordered.
+* **`toIndex`**: The target index where the column(s) should be moved.
 
-The following example demonstrates how to use the `reorderColumnByTargetIndex` method to reorder both single and multiple columns:
+The following example demonstrates the use of the `reorderColumnByTargetIndex` method to reorder both single and multiple columns:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -155,10 +155,10 @@ reorderColumns(fromFName: string | string[], toFName: string): void
 ```
 
 **Parameters:**
-* **fromFName**: The field name (or array of field names) of the column(s) to be moved.
-* **toFName**: The field name of the target column before which the source column(s) should be placed.
+* **`fromFName*`*: The field name (or array of field names) of the column(s) to be moved.
+* **`toFName`**: The field name of the target column before which the source column(s) should be placed.
 
-The following example demonstrates how to use the `reorderColumns` method to reorder both single and multiple columns based on field names by clicking the respective buttons.
+The following example demonstrates the use of the `reorderColumns` method to reorder both single and multiple columns based on field names by clicking the respective buttons.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -187,8 +187,8 @@ reorderColumnByModel(fromColumn: Column, toColumn: Column): void
 ```
 
 **Parameters:**
-* **fromColumn**: The column object to move.
-* **toColumn**: The target column object before which the **fromColumn** should be placed.
+* **`fromColumn`**: The column object to move.
+* **`toColumn`**: The target column object before which the `fromColumn` should be placed.
 
 **When to use this method:**
 
@@ -201,7 +201,7 @@ In this example:
 - "Order Details" stacked header is moved before "Customer ID".
 - "Ship Country" is moved before "Ship Name" within the "Ship Details" stacked header.
 
-This shows how the method handles reordering of both normal and stacked header columns:
+This shows the method handling reordering of both normal and stacked header columns.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

@@ -1,6 +1,3 @@
-{% raw %}
-
-
 import { enableRipple } from '@syncfusion/ej2-base';
 import { DropDownButtonComponent, ItemModel } from '@syncfusion/ej2-react-splitbuttons';
 import * as React from 'react';
@@ -10,35 +7,31 @@ enableRipple(true);
 
 // To render DropDownButton.
 function App() {
-    let ddb: DropDownButtonComponent;
-    let items: ItemModel[] = [
-      {
-          text: 'Cut'
-      },
-      {
-          text: 'Copy'
-      },
-      {
-          text: 'Paste'
-      }];
-    // To update up arrow with `e-caret-up` class.
-    function beforeOpen () {
-        ddb.cssClass = 'e-caret-up';
-    }
-    // To remove `e-caret-up` class.
-    function beforeClose () {
-        ddb.cssClass = '';
-    }
-  
-    return (
-    <div>
-      <DropDownButtonComponent ref={(scope) => { ddb = scope as DropDownButtonComponent; }} items = {items} beforeOpen={beforeOpen} beforeClose={beforeClose}> Clipboard</DropDownButtonComponent>
-      </div>
-    );
+  let ddb: DropDownButtonComponent;
+  let items: ItemModel[] = [
+    {
+      text: 'Cut'
+    },
+    {
+      text: 'Copy'
+    },
+    {
+      text: 'Paste'
+    }];
+  // To update up arrow with `e-caret-up` class.
+  function beforeOpen() {
+    ddb.cssClass = 'e-caret-up';
   }
+  // To remove `e-caret-up` class.
+  function beforeClose() {
+    ddb.cssClass = '';
+  }
+
+  return (
+    <div>
+      <DropDownButtonComponent ref={(scope) => { ddb = scope as DropDownButtonComponent; }} items={items} beforeOpen={beforeOpen} beforeClose={beforeClose}> Clipboard</DropDownButtonComponent>
+    </div>
+  );
+}
 export default App;
-ReactDom.render(<App />,document.getElementById('button'));
-
-
-
-{% endraw %}
+ReactDom.render(<App />, document.getElementById('button'));

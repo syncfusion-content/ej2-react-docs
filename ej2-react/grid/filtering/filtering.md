@@ -14,7 +14,7 @@ Filtering is a powerful feature in the Syncfusion<sup style="font-size:70%">&reg
 
 ## Set up filtering
 
-Before using filtering in the Grid, understand that the component needs the **Filter module** to unlock all filtering features. 
+Before using filtering in the grid, understand that the component needs the `Filter module` to unlock all filtering features. 
 
 Inject the [Filter](https://ej2.syncfusion.com/react/documentation/api/grid/filter) module into the Grid component's `Inject` services array to enable filtering.
 
@@ -81,7 +81,7 @@ Configure initial filters in [filterSettings.columns](https://ej2.syncfusion.com
 
 ### Initial filter with multiple values for same column
 
-Initial filtering with multiple values allows to preset filter conditions for a specific column using multiple criteria. This displays only records matching any of the specified values when the Grid first renders.
+Initial filtering with multiple values allows to preset filter conditions for a specific column using multiple criteria. This displays only records matching any of the specified values when the grid first renders.
 
 Set multiple [predicate](https://ej2.syncfusion.com/react/documentation/api/grid/predicate) objects in [filterSettings.columns](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettingsModel#columns) for the same field.
 
@@ -106,7 +106,7 @@ The following example filters the "Customer ID" column to show only specific cus
 
 ### Initial filter with multiple values for different columns 
 
-Initial filter configuration with multiple values across different columns sets predefined filter criteria for each column. This configuration displays filtered records immediately when the Grid loads.
+Initial filter configuration with multiple values across different columns sets predefined filter criteria for each column. This configuration displays filtered records immediately when the grid loads.
 
 The following example filters both "Order ID" and "Customer ID" columns simultaneously.
 
@@ -197,7 +197,7 @@ ab% |Returns all values ending with the "ab" character sequence.
 
 ## Diacritics filter
 
-The diacritics filter feature handles text data that includes accented characters. Diacritics are accent marks added to letters (examples: é, ñ, ü, ç). By default, the Grid ignores these characters during filtering.
+The diacritics filter feature handles text data that includes accented characters. Diacritics are accent marks added to letters (examples: é, ñ, ü, ç). By default, the grid ignores these characters during filtering.
 
 This feature is essential for international data where names like "José" and "Jose" should be treated differently (or the same, depending on requirements).
 
@@ -392,7 +392,7 @@ The Grid provides flexibility to change the default filter operator for a partic
 
 Programmatic filtering allows applying filters to specific columns without relying on user interface interactions. This is achieved using the [filterByColumn](https://ej2.syncfusion.com/react/documentation/api/grid#filterbycolumn) method.
 
-The following example demonstrates programmatic filtering using single and multiple values for the "OrderID" and "Customer ID" columns. The `filterByColumn` method is called within an external button click function.
+The following example demonstrates programmatic filtering using single and multiple values for the "Order ID" and "Customer ID" columns. The `filterByColumn` method is called within an external button click function.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -584,7 +584,7 @@ actionComplete(args: FilterEventArgs) {
 
 ## Clear filtering using methods
 
-The Grid provides a [clearFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#clearfiltering) method to clear applied filtering. This method removes filter conditions and resets the Grid to its original state.
+The Grid provides a [clearFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#clearfiltering) method to clear applied filtering. This method removes filter conditions and resets the grid to its original state.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -605,7 +605,7 @@ The Grid provides a [clearFiltering](https://ej2.syncfusion.com/react/documentat
 
 ## Filtering events
 
-Filtering events allow customizing the behavior of the Grid when filtering is applied. Prevent filtering for specific columns, show messages, or perform other actions to suit application needs.
+Filtering events allow customizing the behavior of the grid when filtering is applied. Prevent filtering for specific columns, show messages, or perform other actions to suit application needs.
 
 Implement filtering events using available events such as [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid#actionbegin) and [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete). These events allow intervention in the filtering process and customization as needed.
 

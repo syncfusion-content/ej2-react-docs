@@ -21,7 +21,7 @@ Row spanning merges adjacent cells vertically into a single cell. The feature us
 
 The `queryCellInfo` event enables row spanning by setting the `rowSpan` attribute during cell rendering. The Grid processes this attribute and renders the merged cell across the specified number of rows.
 
-The following demo demonstrates row spanning in action:
+The following example demonstrates row spanning in action:
 
 * "Davolio" cell spans two rows in the "EmployeeName" column.
 * "Lunch Break" cell spans two rows and three columns simultaneously (combined row and column spanning) in the "1:00" column.
@@ -49,7 +49,7 @@ The following demo demonstrates row spanning in action:
 
  {% previewsample "page.domainurl/code-snippet/grid/spanning-cs2" %}
 
->* To disable spanning for a particular Grid page, use the `requestType` value from the `queryCellInfo` event argument.
+>* Spanning can be disabled for a particular Grid page by using the `requestType` value from the `queryCellInfo` event argument.
 >* The `rowSpan` and `colSpan` attributes can be used together to merge cells both vertically and horizontally.
 
 ## Limitations
@@ -96,7 +96,7 @@ This example demonstrates the `enableRowSpan` property for merging cells vertica
 
  {% previewsample "page.domainurl/code-snippet/grid/row-spanning-cs1" %}
 
-> Row spanning can also be controlled at the column level. Set `enableRowSpan` to "false" in a column definition to disable merging for that column.
+> Row spanning can also be controlled at the column level. Set `enableRowSpan` to `false` in a column definition to disable merging for that column.
 
 ## Limitation
 

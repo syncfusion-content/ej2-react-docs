@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Infinite Scroll in React Grid Component
 
-The infinite scrolling feature in the Grid is a powerful tool for seamlessly handling extensive datasets by dynamically loading data as the vertical scrollbar reaches the end of the viewport. In infinite scrolling mode, a new block of data is loaded on-demand each time the scrollbar approaches the end, optimizing rendering performance by fetching only the required data blocks and reducing initial load time and memory usage. In this context, a block refers to the number of rows defined by the [pageSize](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings#pagesize) property, if not explicitly specified, the grid automatically calculates it based on the viewport and row height.
+The infinite scrolling feature in the grid is a powerful tool for seamlessly handling extensive datasets by dynamically loading data as the vertical scrollbar reaches the end of the viewport. In infinite scrolling mode, a new block of data is loaded on-demand each time the scrollbar approaches the end, optimizing rendering performance by fetching only the required data blocks and reducing initial load time and memory usage. In this context, a block refers to the number of rows defined by the [pageSize](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings#pagesize) property, if not explicitly specified, the grid automatically calculates it based on the viewport and row height.
 
 Injecting the `InfiniteScroll` module into the Grid component's `Inject` services array is required to enable infinite scrolling:
 
@@ -22,7 +22,7 @@ import { Inject, InfiniteScroll } from '@syncfusion/ej2-react-grids';
 </GridComponent>
 ```
 
-Infinite scrolling feature can be enabled by setting the [enableInfiniteScrolling](https://ej2.syncfusion.com/react/documentation/api/grid#enableinfinitescrolling) property to `true`. The [height](https://ej2.syncfusion.com/react/documentation/api/grid#height) property must also be specified to define the scrollable area of the grid. Refer to this [section](./scrolling#set-width-and-height) for Grid basic scrolling setup and configurations.
+Infinite scrolling feature can be enabled by setting the [enableInfiniteScrolling](https://ej2.syncfusion.com/react/documentation/api/grid#enableinfinitescrolling) property to `true`. The [height](https://ej2.syncfusion.com/react/documentation/api/grid#height) property must also be specified to define the scrollable area of the grid. Refer to this [section](./scrolling#set-width-and-height) for grid basic scrolling setup and configurations.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -43,7 +43,7 @@ Infinite scrolling feature can be enabled by setting the [enableInfiniteScrollin
 
 ## Number of blocks rendered during initial loading
 
-By default, three blocks are initially rendered when the Grid is loaded. Each block corresponds to a page size of the Grid, resulting in the rendering of a certain number of row elements determined by multiplying the initial block size with the page size.
+By default, three blocks are initially rendered when the grid is loaded. Each block corresponds to a page size of the grid, resulting in the rendering of a certain number of row elements determined by multiplying the initial block size with the page size.
 
 Initial loading pages count configuration is managed through the [infiniteScrollSettings.initialBlocks](https://ej2.syncfusion.com/react/documentation/api/grid/infiniteScrollSettings#initialblocks) property. The default value is "3". Subsequently, additional data is buffered and loaded based on either the page size or the number of rows rendered within the provided height.
 
@@ -156,7 +156,7 @@ export default App;
 
 Cache mode in infinite scrolling improves performance by reusing previously loaded data blocks, minimizing frequent data requests. Enabling cache mode requires setting the [infiniteScrollSettings.enableCache](https://ej2.syncfusion.com/react/documentation/api/grid/infiniteScrollSettings#enablecache) property to `true`.
 
-The [maxBlocks](https://ej2.syncfusion.com/react/documentation/api/grid/infiniteScrollSettings#maxblocks) property defines the maximum number of cached blocks. When this limit is exceeded, the Grid removes the oldest block to manage DOM elements efficiently. The default value is "3".
+The [maxBlocks](https://ej2.syncfusion.com/react/documentation/api/grid/infiniteScrollSettings#maxblocks) property defines the maximum number of cached blocks. When this limit is exceeded, the grid removes the oldest block to manage DOM elements efficiently. The default value is "3".
 
 The example below shows how to toggle cache mode using a [Switch](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component.
 

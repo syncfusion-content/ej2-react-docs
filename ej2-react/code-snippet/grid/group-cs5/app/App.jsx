@@ -10,8 +10,8 @@ function App() {
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right"/>
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'/>
-      <ColumnDirective field='OrderDate' headerText='Order Date' format='yMMM' enableGroupByFormat={true} width='150'/>
-      <ColumnDirective field='Freight' headerText='Freight' format='C2' enableGroupByFormat={true} width='150'/>
+      <ColumnDirective field='OrderDate' headerText='Order Date' format='yMMM' textAlign="Right" enableGroupByFormat={true} width='150'/>
+      <ColumnDirective field='Freight' headerText='Freight' format='C2' textAlign="Right" enableGroupByFormat={true} width='150'/>
     </ColumnsDirective>
     <Inject services={[Group]}/>
   </GridComponent>;

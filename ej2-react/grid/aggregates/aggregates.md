@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 The Aggregates feature in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides built-in calculations such as sum, average, count, minimum, and maximum for specific columns. The results can be displayed in different sections of the grid.
 
-- Footer: overall summary values for the entire grid.
-- Group Footer: aggregate values for each group of records.
-- Group Caption: summary information shown alongside the group title.
+- `Footer`: overall summary values for the entire grid.
+- `Group Footer`: aggregate values for each group of records.
+- `Group Caption`: summary information shown alongside the group title.
 
 The aggregate feature is enabled by importing the `Aggregate` module from `@syncfusion/ej2-react-grids` and injecting the `Aggregate` service into the grid.
 
@@ -30,7 +30,7 @@ Aggregates in the React Grid are linked to columns using a few key properties:
 
 - `field`: Defines the field name of the column on which the aggregation is performed. The value must match the column’s data source field.
 - `type`: Defines the type of aggregate calculation for the column.for example Sum, Average, Min, Max, or Count.
--  Templates: Decide where the result is displayed in the grid in `footerTemplate`, `groupFooterTemplate`, `groupCaptionTemplate`.
+- `Templates`: Decide where the result is displayed in the grid in `footerTemplate`, `groupFooterTemplate`, `groupCaptionTemplate`.
 - `format`: Applies formatting to numeric and date columns when displaying aggregate values.
 
 ```ts

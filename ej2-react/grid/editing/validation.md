@@ -37,7 +37,7 @@ Column validation applies validation rules to individual columns during edit ope
 
 ## Custom validation
 
-Custom validation rules apply specific rules to Grid columns beyond standard built-in validation. The [FormValidator](https://ej2.syncfusion.com/react/documentation/api/form-validator) component applies these rules and displays error messages for invalid fields. Custom validation supports dependent field validation and numeric range validation for various application scenarios.
+Custom validation rules apply specific rules to grid columns beyond standard built-in validation. The [FormValidator](https://ej2.syncfusion.com/react/documentation/api/form-validator) component applies these rules and displays error messages for invalid fields. Custom validation supports dependent field validation and numeric range validation for various application scenarios.
 
 The following example demonstrates custom validation for the "Customer ID" column.
 
@@ -127,7 +127,7 @@ The following example demonstrates dynamic addition or removal of validation rul
 
 ## Validation error message positioning
 
-Error message positioning customizes where validation messages appear in the Grid. By default, messages display below the input field. The [customPlacement](https://ej2.syncfusion.com/react/documentation/api/form-validator#customplacement) event repositions messages to custom locations based on application needs.
+Error message positioning customizes where validation messages appear in the grid. By default, messages display below the input field. The [customPlacement](https://ej2.syncfusion.com/react/documentation/api/form-validator#customplacement) event repositions messages to custom locations based on application needs.
 
 The following example demonstrates moving validation messages to the top of the input field.
 
@@ -150,7 +150,7 @@ The following example demonstrates moving validation messages to the top of the 
 
 ## CRUD error handling with custom error messages
 
-Error handling for CRUD operations in the Grid displays helpful error messages when operations fail. The [actionFailure](https://ej2.syncfusion.com/react/documentation/api/grid#actionfailure) event triggers on operation failures, providing access to error messages from server responses for display.
+Error handling for CRUD operations in the grid displays helpful error messages when operations fail. The [actionFailure](https://ej2.syncfusion.com/react/documentation/api/grid#actionfailure) event triggers on operation failures, providing access to error messages from server responses for display.
  
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -402,7 +402,7 @@ Three configuration steps enable this feature:
 
 1. **Custom Validation Logic**: The "orderIdCustomValidation" function checks whether the entered "Order ID" already exists in the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource). This allows editing existing rows without triggering a duplicate error.
 
-2. **Dynamic Rule Configuration**: The "orderIDRules" object enforces unique "OrderID" values. Add this rule dynamically to the form during the `save` action.
+2. **Dynamic Rule Configuration**: The "orderIDRules" object enforces unique "Order ID" values. Add this rule dynamically to the form during the `save` action.
 
 3. **Event-Based Validation**: The [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid#actionbegin) event triggers validation. When `requestType` equals `save`, validation runs before saving. Set `args.cancel = true` if validation fails.
 

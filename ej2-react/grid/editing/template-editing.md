@@ -10,23 +10,23 @@ domainurl: ##DomainURL##
 
 # Template Editing in React Grid Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component supports template editing, providing a powerful and flexible way to customize the appearance and behavior of cells during editing. React templates enable defining the structure and content of cells within the Grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component supports template editing, providing a powerful and flexible way to customize the appearance and behavior of cells during editing. React templates enable defining the structure and content of cells within the grid.
 
 > For grid basic editing setup and configuration, refer to the [Edit Feature Setup](./edit#set-up-editing).
 
-## Inline or dialog template editing
+## Inline or Dialog template editing
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid provides support for inline and dialog template editing, enabling customization of editing using [Forms](https://legacy.reactjs.org/docs/forms.html). Forms enable adding and updating Grid records through template support in both dialog and inline edit modes.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid provides support for inline and dialog template editing, enabling customization of editing using [Forms](https://legacy.reactjs.org/docs/forms.html). Forms enable adding and updating grid records through template support in both dialog and inline edit modes.
 
 To enable this feature, set the [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) property to either `Normal` or `Dialog` and define grid editors using the `editSettings.template` template variable.
 
 **Using Forms**
 
-Forms provide an approach to create and manipulate form controls for adding and updating Grid records through template support. Setting the [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) to `Normal` or `Dialog` and `editSettings.template` as the template variable enables grid editor definition.
+Forms provide an approach to create and manipulate form controls for adding and updating grid records through template support. Setting the [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) to `Normal` or `Dialog` and `editSettings.template` as the template variable enables grid editor definition.
 
 When new field editors need to be added to the dialog but are not present in the column model, the dialog template enables customization of the default edit dialog.
 
-The following example demonstrates a Grid enabled with dialog template editing.
+The following example demonstrates a grid enabled with dialog template editing.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -173,17 +173,17 @@ export class DialogFormTemplate extends React.Component<{}, {}> {
 
 {% previewsample "page.domainurl/code-snippet/grid/editing-cs28" %}
 
-> The Dialog and Inline template form editors must have **name** attribute.
+> The `Dialog` and `Inline` template form editors must have **name** attribute.
 
 ## Using template context
 
-Template contexts enhance customization of Grid edit forms by enabling access to row details, rendering editors as components, retrieving values from editors, setting focus to specific editors, disabling default form validation, and adding custom validation rules. These features apply to both inline and dialog editing modes.
+Template contexts enhance customization of grid edit forms by enabling access to row details, rendering editors as components, retrieving values from editors, setting focus to specific editors, disabling default form validation, and adding custom validation rules. These features apply to both inline and dialog editing modes.
 
 The following template context topics are demonstrated through a practical example in the [Render tab component inside the dialog template](#render-tab-component-inside-the-dialog-template) section.
 
 ### Access row details inside template using template context
 
-Edit templates in the Grid provide access to crucial row information, enabling dynamic binding of attributes, values, or elements based on the specific row being edited. This approach is particularly useful for conditionally rendering or modifying elements in the edit template based on the row's state.
+Edit templates in the grid provide access to crucial row information, enabling dynamic binding of attributes, values, or elements based on the specific row being edited. This approach is particularly useful for conditionally rendering or modifying elements in the edit template based on the row's state.
 
 The following properties are available at the time of template execution:
 
@@ -191,7 +191,7 @@ The following properties are available at the time of template execution:
 |---|---|
 | `isAdd` | Boolean property indicating whether the current row is a new record |
 
-The following code example demonstrates the usage of the `isAdd` property in an edit template to disable the "OrderID" textbox when editing an existing record.
+The following code example demonstrates the usage of the `isAdd` property in an edit template to disable the "Order ID" textbox when editing an existing record.
 
 ```ts
 <div className="form-group col-md-6">
@@ -209,7 +209,7 @@ The following code example demonstrates the usage of the `isAdd` property in an 
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid provides a powerful feature enabling dynamic rendering of Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 controls as form editors during the editing process. This functionality delivers feature-rich controls for data entry within the edit form.
 
-To achieve this, utilize the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) event of the Grid and specify `requestType` as `beginEdit` or `add`.
+To achieve this, utilize the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) event of the grid and specify `requestType` as `beginEdit` or `add`.
 
 The following code example illustrates rendering the `DropDownList` component in the `actionComplete` event.
 
@@ -244,9 +244,9 @@ const actionBegin = (args: SaveEventArgs) => {
 
 ### Set focus to particular column editor
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid enables control of focus behavior for input elements in edit forms. By default, the first input element in the dialog receives focus when the dialog is opened. However, when the first input element is disabled or hidden, a different valid input element can receive focus. This can be achieved using the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) event of the Grid, where the `requestType` is set to `beginEdit`.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid enables control of focus behavior for input elements in edit forms. By default, the first input element in the dialog receives focus when the dialog is opened. However, when the first input element is disabled or hidden, a different valid input element can receive focus. This can be achieved using the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) event of the grid, where the `requestType` is set to `beginEdit`.
 
-In the following code example, the CustomerID column receives focus.
+In the following code example, the Customer ID column receives focus.
 
 ```typescript
 const actionComplete = (args: DialogEditEventArgs) => {
@@ -259,9 +259,9 @@ const actionComplete = (args: DialogEditEventArgs) => {
 
 ## Disable default form validation
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid provides built-in support for [react form validation](https://react-bootstrap.netlify.app/docs/forms/validation) to ensure data integrity and accuracy during editing. Scenarios may arise where disabling the default form validation rules is necessary. This can be achieved using the [removeRules](https://helpej2.syncfusion.com/documentation/api/form-validator#removerules) method within the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) event of the Grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid provides built-in support for [react form validation](https://react-bootstrap.netlify.app/docs/forms/validation) to ensure data integrity and accuracy during editing. Scenarios may arise where disabling the default form validation rules is necessary. This can be achieved using the [removeRules](https://helpej2.syncfusion.com/documentation/api/form-validator#removerules) method within the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) event of the grid.
 
-To disable default form validation rules in the Grid, use the following approach:
+To disable default form validation rules in the grid, use the following approach:
 
 ```typescript
 const actionComplete = (args: DialogEditEventArgs) => {
@@ -293,9 +293,9 @@ const actionComplete = (args: DialogEditEventArgs) => {
 
 ## Render tab component inside the dialog template
 
-Rendering a [Tab](../../../tab/index.html) component inside the dialog template enhances the Grid editing experience. This feature is especially useful for presenting multiple editing sections or categories in a tabbed layout, ensuring a more intuitive and easily navigable interface for data editing.
+Rendering a [Tab](../../../tab/index.html) component inside the dialog template enhances the grid editing experience. This feature is especially useful for presenting multiple editing sections or categories in a tabbed layout, ensuring a more intuitive and easily navigable interface for data editing.
 
-To enable this functionality, set the [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) property of the Grid to `Dialog`. Additionally, use the [editSettings.template](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#template) property to define a template variable containing the `Tab` component and its corresponding content.
+To enable this functionality, set the [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) property of the grid to `Dialog`. Additionally, use the [editSettings.template](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#template) property to define a template variable containing the `Tab` component and its corresponding content.
 
 The following example renders a tab component inside the edit dialog. The tab component has two tabs. Once fields in the first tab are filled and navigation to the second tab occurs, validation for the first tab is performed before proceeding.
 

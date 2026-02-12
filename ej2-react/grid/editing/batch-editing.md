@@ -31,7 +31,7 @@ To enable batch editing mode, set the [editSettings.mode](https://ej2.syncfusion
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs2" %}
 
-> For Grid editing setup and configuration, refer to the [Edit Feature Setup](./edit#set-up-editing).
+> For grid editing setup and configuration, refer to the [Edit Feature Setup](./edit#set-up-editing).
 
 ## Automatically update the column based on another column edited value
 
@@ -66,9 +66,9 @@ The following table summarizes the events and cancellation methods available for
 
 | Operation | Event | Trigger Point | Cancellation Method |
 |-----------|-------|---------------|---------------------|
-| `Edit` | `cellEdit` | When a cell enters edit mode | Set `args.cancel` to "true" |
-| `Add` | `beforeBatchAdd` | Before a new record is added | Set `args.cancel` to "true" |
-| `Delete` | `beforeBatchDelete` | Before a record is deleted | Set `args.cancel` to "true" |
+| `Edit` | `cellEdit` | When a cell enters edit mode | Set `args.cancel` to `true` |
+| `Add` | `beforeBatchAdd` | Before a new record is added | Set `args.cancel` to `true` |
+| `Delete` | `beforeBatchDelete` | Before a record is deleted | Set `args.cancel` to `true` |
 
 Each event handler receives operation context, allowing condition-based logic to block or permit the action.
 
@@ -190,7 +190,7 @@ export default App;
 
 ## Confirmation dialog
 
-Confirmation dialogs provide an additional layer of protection when performing critical actions in batch editing mode. The grid component offers built-in confirmation dialogs for the following scenarios:
+Confirmation dialogs provide an additional layer of protection when performing critical actions in batch editing mode. The Grid component offers built-in confirmation dialogs for the following scenarios:
 
 | Action | Confirmation Trigger |
 |--------|---------------------|
@@ -198,7 +198,7 @@ Confirmation dialogs provide an additional layer of protection when performing c
 | **Cancel Changes** | Appears when clicking `Cancel` button to discard edits |
 | **Delete Record** | Appears when deleting a row during batch mode |
 
-To enable or disable save confirmation, set the [editSettings.showConfirmDialog](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#showconfirmdialog) property to "true" (default) or "false".
+To enable or disable save confirmation, set the [editSettings.showConfirmDialog](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#showconfirmdialog) property to `true` (default) or `false`.
 
 Here's an example that demonstrates how to enable/disable the confirmation dialog using the `showConfirmDialog` property:
 
@@ -308,9 +308,9 @@ export default App;
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs5" %}
 
 > * `editSettings.showConfirmDialog` requires [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) = `Batch`.
-> * When set to "false", no confirmation dialog displays during batch editing.
+> * When set to `false`, no confirmation dialog displays during batch editing.
 > * Delete operations trigger a separate confirmation dialog when clicking delete or pressing the delete key.
-> * Set `showConfirmDialog` to "false" and use [cellSaved](https://ej2.syncfusion.com/react/documentation/api/grid#cellsaved) with [batchSave](https://ej2.syncfusion.com/react/documentation/api/grid/edit#batchsave) for immediate saves.
+> * Set `showConfirmDialog` to `false` and use [cellSaved](https://ej2.syncfusion.com/react/documentation/api/grid#cellsaved) with [batchSave](https://ej2.syncfusion.com/react/documentation/api/grid/edit#batchsave) for immediate saves.
 
 ## Single-click editing with arrow key navigation
 
@@ -343,9 +343,9 @@ The example below demonstrates both features combined:
 
 The Grid component provides a convenient way to save or update changes immediately in batch mode without the need for a separate Save button. This feature is particularly useful when editing data efficiently without manually triggering a save action.
 
-To achieve immediate saving without confirmation dialogs, utilize the [cellSaved](https://ej2.syncfusion.com/react/documentation/api/grid#cellsaved) event along with the [batchSave](https://ej2.syncfusion.com/react/documentation/api/grid/edit#batchsave) method. First, set `editSettings.showConfirmDialog` to "false" to disable the confirmation dialog. For configuration details, refer to the [Confirmation dialog](#confirmation-dialog) section.
+To achieve immediate saving without confirmation dialogs, utilize the [cellSaved](https://ej2.syncfusion.com/react/documentation/api/grid#cellsaved) event along with the [batchSave](https://ej2.syncfusion.com/react/documentation/api/grid/edit#batchsave) method. First, set `editSettings.showConfirmDialog` to `false` to disable the confirmation dialog. For configuration details, refer to the [Confirmation dialog](#confirmation-dialog) section.
 
-The `cellSaved` event is triggered when a cell is saved in the Grid, allowing custom logic to be executed when a cell is saved or updated. The `batchSave` method is a built-in function that saves multiple changes made to added, edited, and deleted records in batch mode.
+The `cellSaved` event is triggered when a cell is saved in the grid, allowing custom logic to be executed when a cell is saved or updated. The `batchSave` method is a built-in function that saves multiple changes made to added, edited, and deleted records in batch mode.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Define columns manually
 
-Columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid can be manually defined using the [ColumnDirective](https://ej2.syncfusion.com/react/documentation/api/grid/column) element. Each column is configured with properties such as  [field](https://ej2.syncfusion.com/react/documentation/api/grid/column#field), [headerText](https://ej2.syncfusion.com/react/documentation/api/grid/column#headertext), [type](https://ej2.syncfusion.com/react/documentation/api/grid/column#type), and [width](https://ej2.syncfusion.com/react/documentation/api/grid/column#width), allowing precise control over the column’s behavior and appearance to meet specific layout and data requirements.
+Columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid can be manually defined using the [ColumnDirective](https://ej2.syncfusion.com/react/documentation/api/grid/column) element. Each column is configured with properties such as `field`, `headerText`, `type`, and `width`, allowing precise control over the column's behavior and appearance to meet specific layout and data requirements.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -33,7 +33,7 @@ Columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid can b
 
 ## Auto-generated columns
 
-Columns are automatically created when columns is not defined during Grid initialization. In this case, the Grid generates columns based on the fields in the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource). Each field in the data source is displayed as a column, and the field name appears in the column header.
+Columns are automatically created when the `columns` option is not defined during Grid initialization. In this case, the Grid generates columns based on the fields in the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource). Each field in the data source is displayed as a column, and the field name appears in the column header.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -53,11 +53,11 @@ Columns are automatically created when columns is not defined during Grid initia
 {% previewsample "page.domainurl/code-snippet/grid/column-cs2" %}
 
 >* When the columns are auto-generated, the column `type` is determined from the first record of the `dataSource`.
->* Auto-generating columns for large datasets can affect performance. To improve efficiency, columns can be defined manually in the [columns](https://ej2.syncfusion.com/react/documentation/api/grid#columns) during initialization. Alternatively, the column virtualization feature can be enabled by setting [enableColumnVirtualization](https://ej2.syncfusion.com/react/documentation/api/grid#enablecolumnvirtualization) to "true".
+>* Auto-generating columns for large datasets can affect performance. To improve efficiency, columns can be defined manually in the `columns` option during initialization. Alternatively, the column virtualization feature can be enabled by setting [enableColumnVirtualization](https://ej2.syncfusion.com/react/documentation/api/grid#enablecolumnvirtualization) to `true`.
 
 ### Set primary key for auto-generated columns in editing
 
-Primary key configuration for auto-generated columns is necessary when editing is enabled in the Grid to uniquely identify each row for operations such as updating or deleting data. This can be achieved by setting the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property to "true" for the column object through the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid#databound) event.
+Primary key configuration for auto-generated columns is necessary when editing is enabled in the Grid to uniquely identify each row for operations such as updating or deleting data. This can be achieved by setting the `isPrimaryKey` property to `true` for the column object through the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid#databound) event.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -91,7 +91,7 @@ const dataBound = () => {
 
 Auto-generated columns can be customized to meet specific requirements by modifying properties such as `type`, `format`, and `width`. These changes are applied within the `dataBound` event. The event is triggered after data has been loaded into the Grid, ensuring that all columns are created and available. At this point, the necessary options for the auto-generated columns can be configured.
 
-In the below example, `width` is set for "OrderID" column, `type` is set for "OrderDate" column and `format` is set for "Freight" and "OrderDate" columns.
+In the below example, `width` is set for the "OrderID" column, `type` is set for the "OrderDate" column and `format` is set for the "Freight" and "OrderDate" columns.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -116,12 +116,12 @@ The Grid allows dynamic customization of cell display text at runtime. This is p
 
 ### Cell text formatting
 
-In the Grid, the [valueAccessor](https://ej2.syncfusion.com/react/documentation/api/grid/column#valueaccessor) property is used to customize how data is displayed in a column. It allows formatting or transforming the cell content without modifying the original data source.
+In the Grid, the [valueAccessor](https://ej2.syncfusion.com/react/documentation/api/grid/column#valueaccessor) property is used to customize the data displayed in a column. It allows formatting or transforming the cell content without modifying the original data source.
 
 To implement `valueAccessor`, define a function for the column that returns the desired display value. This function receives two parameters:
 
-* **field**: The name of the current column’s field.
-* **data**: The complete data object for the current row.
+* `field`: The name of the current column's field.
+* `data`: The complete data object for the current row.
 
 **Example:**
 

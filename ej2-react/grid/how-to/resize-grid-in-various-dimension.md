@@ -10,15 +10,14 @@ domainurl: ##DomainURL##
 
 # Resize the grid in various dimension in React Grid component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component offers a friendly way to resize the grid, allowing you to adjust its width and height for improved data visualization.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports dynamic resizing to enhance data presentation across different layouts. The grid can be resized by adjusting the dimensions of its parent container.
 
-To resize the grid externally, you can use an external button to modify the width of the parent element that contains the grid. This will effectively resize the grid along with its parent container.
-
-The following example demonstrates how to resize the grid on external button click based on input. 
+To resize the grid externally, modify the width or height of the container element using an input and button. his will effectively resize the grid along with its parent container.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 {% raw %}
+
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Resize } from '@syncfusion/ej2-react-grids';
 import { NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs'
@@ -52,13 +51,18 @@ function App() {
                     <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'></ColumnDirective>
                     <ColumnDirective field='Freight' headerText='Freight' width='120' format='C2' />
                 </ColumnsDirective>
-            </GridComponent></div></div>)
+            </GridComponent>
+        </div>
+    </div>)
 };
 export default App;
+
 {% endraw %}
 {% endhighlight %}
+
 {% highlight ts tabtitle="App.tsx" %}
 {% raw %}
+
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Resize } from '@syncfusion/ej2-react-grids';
 import { NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs'
@@ -92,9 +96,12 @@ function App() {
                     <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'></ColumnDirective>
                     <ColumnDirective field='Freight' headerText='Freight' width='120' format='C2' />
                 </ColumnsDirective>
-            </GridComponent></div></div>)
+            </GridComponent>
+        </div>        
+    </div>)
 };
 export default App;
+
 {% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}

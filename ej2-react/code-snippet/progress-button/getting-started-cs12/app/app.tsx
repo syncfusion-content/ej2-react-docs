@@ -1,7 +1,3 @@
-{% raw %}
-
-
-
 import { ProgressButtonComponent } from '@syncfusion/ej2-react-splitbuttons';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
@@ -15,14 +11,14 @@ function App() {
   });
 
   return (
-    <ProgressButtonComponent content={state.content} enableProgress = {true} duration={4000}
-    iconCss={state.iconCss} end={end} cssClass='e-hide-spinner' onClick={clickHandler} ref={(scope)=>{progressBtn = scope as ProgressButtonComponent;}}/>
+    <ProgressButtonComponent content={state.content} enableProgress={true} duration={4000}
+      iconCss={state.iconCss} end={end} cssClass='e-hide-spinner' onClick={clickHandler} ref={(scope) => { progressBtn = scope as ProgressButtonComponent; }} />
   );
 
   function end(): void {
     setState({ content: 'Download', iconCss: 'e-btn-sb-icon e-download' });
   }
-  
+
   function clickHandler(): void {
     if (state.content === 'Download') {
       setState({ content: 'Pause', iconCss: 'e-btn-sb-icon e-pause' });
@@ -39,7 +35,3 @@ function App() {
 }
 export default App;
 ReactDom.render(<App />, document.getElementById('progress-button'));
-
-
-
-{% endraw %}

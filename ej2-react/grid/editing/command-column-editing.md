@@ -34,10 +34,10 @@ The available built-in command buttons are:
 
 | Command Button | Actions |
 |----------------|---------|
-| Edit | Enables inline editing for the current row |
-| Delete | Removes the current row from the grid |
-| Save | Updates changes made to the edited row |
-| Cancel | Discards changes and exits edit mode |
+| `Edit` | Enables inline editing for the current row |
+| `Delete` | Removes the current row from the grid |
+| `Save` | Updates changes made to the edited row |
+| `Cancel` | Discards changes and exits edit mode |
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -79,4 +79,4 @@ The following code demonstrates how to implement custom command buttons with the
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/editing-cs7" %}
+{% previewsample "page.domainurl/code-snippet/grid/editing-cs7" %}

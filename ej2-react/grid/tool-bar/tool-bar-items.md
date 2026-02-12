@@ -14,21 +14,21 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid includes a custo
 
 ## Built-in toolbar items
 
-Built-in toolbar items in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provide predefined actions to perform standard operations within the Grid. These items can be added by defining the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property as a collection of built-in items. Each item is rendered as a button with an icon and text. The following table lists the built-in toolbar items and their respective actions.
+Built-in toolbar items in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provide predefined actions to perform standard operations within the grid. These items can be added by defining the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property as a collection of built-in items. Each item is rendered as a button with an icon and text. The following table lists the built-in toolbar items and their respective actions.
 
 | Built-in Toolbar Items | Actions |
 |------------------------|---------|
-| Add | Adds a new row to the Grid.|
-| Edit | Enables editing mode for the selected row in the Grid.|
+| Add | Adds a new row to the grid.|
+| Edit | Enables editing mode for the selected row in the grid.|
 | Update | Saves the changes made during the editing mode.|
-| Delete | Deletes the selected record from the Grid.|
+| Delete | Deletes the selected record from the grid.|
 | Cancel | Discards the changes made during the editing mode.|
-| Search | Displays a search box to filter the Grid records.|
-| Print | Prints the Grid content.|
+| Search | Displays a search box to filter the grid records.|
+| Print | Prints the grid content.|
 | ColumnChooser | Displays options to choose column visibility.|
-| PdfExport | Exports the Grid data to a PDF file.|
-| ExcelExport | Exports the Grid data to an Excel file.|
-| CsvExport | Exports the Grid data to a CSV file.|
+| PdfExport | Exports the grid data to a PDF file.|
+| ExcelExport | Exports the grid data to an Excel file.|
+| CsvExport | Exports the grid data to a CSV file.|
 
 The following example demonstrates enabling built-in toolbar items such as `Print` and `Search` in the grid.
 
@@ -51,7 +51,7 @@ The following example demonstrates enabling built-in toolbar items such as `Prin
 
 ### Show only icons in built-in toolbar items
 
-To display only icons in the built-in toolbar items of the Grid, use CSS to hide the text portion of the buttons. Add the following CSS style to the application:
+To display only icons in the built-in toolbar items of the grid, use CSS to hide the text portion of the buttons. Add the following CSS style to the application:
 
 ```css
 .e-grid .e-toolbar .e-tbar-btn-text, 
@@ -196,7 +196,7 @@ export default App;
 
 Custom toolbar items in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid allow addition of personalized functionality to the toolbar. These items can be added by defining the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property as a collection of [ItemModel](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel) objects. These objects define the custom items and their corresponding actions. The actions for customized toolbar items are defined in the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid#toolbarclick) event.
 
-By default, custom toolbar items are positioned on the "left" side of the toolbar. The position can be changed by using the [align](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel#align) property of the `ItemModel`. The following example demonstrates applying the `align` property with the value "Right" for the "Collapse All" toolbar item.
+By default, custom toolbar items are positioned on the left side of the toolbar. The position can be changed by using the [align](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel#align) property of the `ItemModel`. The following example demonstrates applying the `align` property with the value `Right` for the "Collapse All" toolbar item.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -219,7 +219,7 @@ By default, custom toolbar items are positioned on the "left" side of the toolba
 
 The toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports a combination of built-in and custom toolbar items to provide standard and custom actions within the same toolbar.
 
-To use both types of toolbar items, define the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property of the Grid as an array that includes both built-in and custom items. Built-in items are specified as strings, while custom items are defined as objects with properties such as [text](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemmodel#text), [prefixIcon](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemmodel#prefixicon), and [id](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemmodel#id) within the toolbar component.
+To use both types of toolbar items, define the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property of the grid as an array that includes both built-in and custom items. Built-in items are specified as strings, while custom items are defined as objects with properties such as [text](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemmodel#text), [prefixIcon](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemmodel#prefixicon), and [id](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemmodel#id) within the toolbar component.
 
 The following example demonstrates both built-in and custom toolbar items in the grid. The built-in toolbar items include `Add`, `Edit`, `Delete`, `Update`, and `Cancel`, while the custom toolbar item is `Click`.
 
@@ -307,9 +307,9 @@ export default App;
 
 The Syncfusion React Grid provides the flexibility to customize its toolbar by embedding custom components using the [template](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel#template) property of the [ItemModel](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel). Custom UI elements such as buttons, dropdowns, or input controls can be added directly into the toolbar, alongside built-in actions like `Add`, `Edit`, and `Delete` to enhance user interaction and provide seamless integration with Grid operations.
 
-In the following example, an [AutoComplete](https://ej2.syncfusion.com/react/documentation/auto-complete/getting-started) is defined as a custom toolbar item using the `template` property. This property is assigned a function that returns a JSX element. The `AutoComplete` is populated with unique "ShipCity" values from the Grid's data. When a value is selected from the `AutoComplete`, the Grid is filtered to show only the records that match the selected city. Once the Grid is rendered, the custom `AutoComplete` appears as part of the toolbar, allowing interaction with both standard and custom toolbar elements.
+In the following example, an [AutoComplete](https://ej2.syncfusion.com/react/documentation/auto-complete/getting-started) is defined as a custom toolbar item using the `template` property. This property is assigned a function that returns a JSX element. The `AutoComplete` is populated with unique "Ship City" values from the grid's data. When a value is selected from the `AutoComplete`, the Grid is filtered to show only the records that match the selected city. Once the Grid is rendered, the custom `AutoComplete` appears as part of the toolbar, allowing interaction with both standard and custom toolbar elements.
 
-Additionally, the [change](https://ej2.syncfusion.com/react/documentation/api/auto-complete#change) event of the `AutoComplete` is used to trigger a search operation within the Grid. When a value is selected or typed, the event handler invokes the Grid's [search](https://ej2.syncfusion.com/react/documentation/api/grid#search) method, dynamically filtering the displayed records in the "ShipCity" column based on the input.
+Additionally, the [change](https://ej2.syncfusion.com/react/documentation/api/auto-complete#change) event of the `AutoComplete` is used to trigger a search operation within the grid. When a value is selected or typed, the event handler invokes the grid's [search](https://ej2.syncfusion.com/react/documentation/api/grid#search) method, dynamically filtering the displayed records in the "Ship City" column based on the input.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -330,11 +330,11 @@ Additionally, the [change](https://ej2.syncfusion.com/react/documentation/api/au
 
 ## Custom toolbar items in a specific position
 
-Custom toolbar items in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid can be positioned in specific locations by modifying the default placement. This enables precise control of each custom toolbar item's positioning according to specific requirements and desired layout within the Grid.
+Custom toolbar items in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid can be positioned in specific locations by modifying the default placement. This enables precise control of each custom toolbar item's positioning according to specific requirements and desired layout within the grid.
 
 By default, custom toolbar items in the Grid component are aligned on the left side of the toolbar. The position of custom toolbar items can be modified by utilizing the [align](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel#align) property of the [ItemModel](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel).
 
-In the following sample, the "Collapse All" toolbar item is positioned on the "Right", the "Expand All" toolbar item is positioned on the "left", and the `Search` toolbar item is positioned at the "Center".
+In the following sample, the "Collapse All" toolbar item is positioned on the `Right`, the "Expand All" toolbar item is positioned on the left, and the `Search` toolbar item is positioned at the `Center`.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

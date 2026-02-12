@@ -44,13 +44,13 @@ The following example demonstrates how to define the `editType` for grid columns
 
 ## Customize built-in TextBox editor 
 
-Enhance the default [TextBox](../../textbox/getting-started) component in Grid edit form by customizing its properties. This enables configuration of various TextBox features, tailoring its behavior and appearance to match specific requirements within the Grid. Fine-tune the editor component behavior through the [columns->edit->params](https://ej2.syncfusion.com/react/documentation/api/grid/column#edit) property for powerful customization options.
+Enhance the default [TextBox](../../textbox/getting-started) component in grid edit form by customizing its properties. This enables configuration of various TextBox features, tailoring its behavior and appearance to match specific requirements within the grid. Fine-tune the editor component behavior through the [columns->edit->params](https://ej2.syncfusion.com/react/documentation/api/grid/column#edit) property for powerful customization options.
 
 Component|Edit Type |Description|Example Customized edit params
 -----|---|-----|-----|
 [TextBox](../../textbox/getting-started) |stringedit| The `stringedit` type renders a TextBox component for string data type columns. To customize the `TextBox` component, refer to the [TextBox API documentation](https://ej2.syncfusion.com/react/documentation/api/textbox) for detailed information on available properties | params: { showClearButton : true}
 
-The following sample code demonstrates the customization applied to `TextBox` component of "CustomerID" Grid column:
+The following sample code demonstrates the customization applied to `TextBox` component of "Customer ID" grid column:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -71,13 +71,13 @@ The following sample code demonstrates the customization applied to `TextBox` co
 
 ## Customize built-in NumericTextBox editor
 
-Enhance the [NumericTextBox](../../numerictextbox/getting-started) component in Grid edit form by customizing its properties. This enables configuration of various NumericTextBox features, tailoring its behavior and appearance to match specific requirements within the Grid. Fine-tune the editor component behavior through the [columns->edit->params](https://ej2.syncfusion.com/react/documentation/api/grid/column#edit) property for powerful numeric input control.
+Enhance the [NumericTextBox](../../numerictextbox/getting-started) component in grid edit form by customizing its properties. This enables configuration of various NumericTextBox features, tailoring its behavior and appearance to match specific requirements within the grid. Fine-tune the editor component behavior through the [columns->edit->params](https://ej2.syncfusion.com/react/documentation/api/grid/column#edit) property for powerful numeric input control.
 
 Component| Edit Type |Description |Example Customized edit params
 -----|-----|-----|----|
 [NumericTextBox](../../numerictextbox/getting-started)|numericedit| The `numericedit` type renders a NumericTextBox component for integers, double, float, short, byte, long, long double and decimal data types columns. To customize the `NumericTextBox` component, refer to the [NumericTextBox API documentation](https://ej2.syncfusion.com/react/documentation/api/numerictextbox) for detailed information on available properties. | params: { decimals: 2, value: 5 }
 
-The following sample code demonstrates the customization applied to `NumericTextBox` component of "Freight" Grid column:
+The following sample code demonstrates the customization applied to `NumericTextBox` component of "Freight" grid column:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -100,7 +100,7 @@ The following sample code demonstrates the customization applied to `NumericText
 
 By default, the [NumericTextBox](../../numerictextbox/getting-started) component allows entering decimal values with up to two decimal places when editing a numeric column. However, there might be cases where restricting input to whole numbers only (without decimal points) is preferred. In such scenarios, use the [validateDecimalOnType](https://ej2.syncfusion.com/react/documentation/api/numerictextbox#validatedecimalontype) and [decimals](https://ej2.syncfusion.com/react/documentation/api/numerictextbox#decimals) properties provided by Syncfusion's `NumericTextBox` component.
 
-The `validateDecimalOnType` property is used to control whether decimal points are allowed during input in the NumericTextBox. By default, it is set to "false", allowing decimal points to be entered. However, when set to "true", decimal points will be restricted, and only whole numbers can be entered.
+The `validateDecimalOnType` property is used to control whether decimal points are allowed during input in the NumericTextBox. By default, it is set to `false`, allowing decimal points to be entered. However, when set to `true`, decimal points will be restricted, and only whole numbers can be entered.
 
 The `decimals` property specifies the number of decimal places to be displayed in the NumericTextBox. By default, it is set to 2, meaning that two decimal places will be displayed. Modify this value to customize the decimal places according to specific requirements.
 
@@ -125,13 +125,13 @@ In the below demo, while editing the row the decimal point value is restricted t
 
 ## Customize built-in DropDownList editor
 
-Enhance the [DropDownList](../../drop-down-list/getting-started) component in Grid edit form by customizing its properties. This enables configuration of various DropDownList features, tailoring its behavior and appearance to match specific requirements within the Grid. Fine-tune the editor component behavior through the [columns->edit->params](https://ej2.syncfusion.com/react/documentation/api/grid/column#edit) property for flexible selection capabilities. 
+Enhance the [DropDownList](../../drop-down-list/getting-started) component in grid edit form by customizing its properties. This enables configuration of various DropDownList features, tailoring its behavior and appearance to match specific requirements within the grid. Fine-tune the editor component behavior through the [columns->edit->params](https://ej2.syncfusion.com/react/documentation/api/grid/column#edit) property for flexible selection capabilities. 
 
 Component|Edit Type |Description| Example Customized edit params
 -----|-----|-----|----|
 [DropDownList](../../drop-down-list/getting-started)|dropdownedit|  The `dropdownedit` type renders a DropDownList component for string data type columns. To customize the DropDownList component, refer to the [DropDownList API documentation](https://ej2.syncfusion.com/react/documentation/api/drop-down-list) for detailed information on available properties.  | params: { value: 'Germany' }
 
-The following sample code demonstrates the customization applied to `DropDownList` component of "ShipCity" Grid column:
+The following sample code demonstrates the customization applied to `DropDownList` component of "Ship City" grid column:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -158,7 +158,7 @@ To achieve this, utilize the [columns->edit->params](https://ej2.syncfusion.com/
 
 When setting a new data source using the edit params, specify a new [query](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#query) property for the DropDownList. The `query` property allows definition of custom queries for data retrieval and filtering.
 
-In the below demo, DropDownList is rendered with custom data source for the "ShipCountry" column:
+In the below demo, DropDownList is rendered with custom data source for the "Ship Country" column:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -181,9 +181,9 @@ In the below demo, DropDownList is rendered with custom data source for the "Shi
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component provides filtering for the DropDownList within the edit form. This feature enables selection of options from a predefined list and easier search for specific items using the built-in filtering feature.  
 
-Enable filtering by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#allowfiltering) property to "true" within the edit params. This will enable the filtering feature in the DropDownList.
+Enable filtering by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#allowfiltering) property to `true` within the edit params. This will enable the filtering feature in the DropDownList.
 
-In the following demo, filtering is enabled for the "ShipCountry" column:
+In the following demo, filtering is enabled for the "Ship Country" column:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -206,7 +206,7 @@ In the following demo, filtering is enabled for the "ShipCountry" column:
 
 Open the dropdown edit popup with a single click by focusing the dropdown element. This feature enables quick access and interaction with the dropdown options without the need for an additional click.
 
-To achieve this, utilize the [showPopup](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#showpopup) method provided by the EJ2 DropDownList component. This method can be invoked within the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) event of the Grid, which triggers when an action, such as editing, is completed. By calling the `showPopup` method in this event, open the popup for the dropdown edit.
+To achieve this, utilize the [showPopup](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#showpopup) method provided by the EJ2 DropDownList component. This method can be invoked within the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) event of the grid, which triggers when an action, such as editing, is completed. By calling the `showPopup` method in this event, open the popup for the dropdown edit.
 
 To ensure that the dropdown column is the clicked edit target, set a global flag variable in the **mouseup** event along with `load` event. This flag variable determines if the clicked element corresponds to the dropdown column.
 
@@ -231,13 +231,13 @@ The following sample demonstrates how to open the popup when focusing on the edi
 
 ## Customize built-in CheckBox editor
 
-Enhance the [CheckBox](../../check-box/getting-started) component in Grid edit form by customizing its properties. This enables configuration of various CheckBox features, tailoring its behavior and appearance to match specific requirements within the Grid. Fine-tune the editor component behavior through the [columns->edit->params](https://ej2.syncfusion.com/react/documentation/api/grid/column#edit) property for powerful boolean input control.
+Enhance the [CheckBox](../../check-box/getting-started) component in grid edit form by customizing its properties. This enables configuration of various CheckBox features, tailoring its behavior and appearance to match specific requirements within the Grid. Fine-tune the editor component behavior through the [columns->edit->params](https://ej2.syncfusion.com/react/documentation/api/grid/column#edit) property for powerful boolean input control.
 
 Component| Edit Type |Description |Example Customized edit params
 -----|-----|-----|----|
 [CheckBox](../../check-box/getting-started)| booleanedit | The `booleanedit` type renders a `CheckBox` component for boolean data type. To customize the CheckBox component, refer to the [CheckBox API documentation](https://ej2.syncfusion.com/react/documentation/api/check-box) for detailed information on available properties. | params: { checked: true}
 
-The following sample code demonstrates the customization applied to `CheckBox` component of "Verified" Grid column:
+The following sample code demonstrates the customization applied to `CheckBox` component of "Verified" grid column:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -258,13 +258,13 @@ The following sample code demonstrates the customization applied to `CheckBox` c
 
 ## Customize built-in DatePicker editor
 
-Enhance the [DatePicker](../../datepicker/getting-started) component in Grid edit form by customizing its properties. This enables configuration of various DatePicker features, tailoring its behavior and appearance to match specific requirements within the Grid. Fine-tune the editor component behavior through the [columns->edit->params](https://ej2.syncfusion.com/react/documentation/api/grid/column#edit) property for powerful date selection control.
+Enhance the [DatePicker](../../datepicker/getting-started) component in grid edit form by customizing its properties. This enables configuration of various DatePicker features, tailoring its behavior and appearance to match specific requirements within the grid. Fine-tune the editor component behavior through the [columns->edit->params](https://ej2.syncfusion.com/react/documentation/api/grid/column#edit) property for powerful date selection control.
 
 Component| Edit Type |Description|Example Customized edit params
 -----|-----|-----|----|
 [DatePicker](../../datepicker/getting-started)| datepickeredit | The `datepickeredit` type renders a `DatePicker` component for date data type columns. To customize the DatePicker component, refer to the [DatePicker API documentation](https://ej2.syncfusion.com/react/documentation/api/datepicker) for detailed information on available properties. | params: { format:'dd.MM.yyyy' }
  
-The following sample code demonstrates the customization applied to `DatePicker` component of "OrderDate" Grid column:
+The following sample code demonstrates the customization applied to `DatePicker` component of "Order Date" grid column:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -287,7 +287,7 @@ The following sample code demonstrates the customization applied to `DatePicker`
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid allows configuring the [DatePicker](../../datepicker/getting-started) to dynamically set a minimum selectable date. This ensures that only dates falling after a specified minimum date can be selected, based on the data in each row. This feature is particularly useful for maintaining data consistency and preventing selection of inappropriate or illogical dates.
 
-The following example demonstrates configuration of the `DatePicker` within the Grid using the `edit` parameters of a column. This setup dynamically restricts the selection of dates in the DatePicker's calendar based on the data in the current row.
+The following example demonstrates configuration of the `DatePicker` within the grid using the `edit` parameters of a column. This setup dynamically restricts the selection of dates in the DatePicker's calendar based on the data in the current row.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -308,13 +308,13 @@ The following example demonstrates configuration of the `DatePicker` within the 
 
 ## Customize built-in DateTimePicker editor
 
-Enhance the DateTimePicker component in Grid edit form by customizing its properties. This enables configuration of various DateTimePicker features, tailoring its behavior and appearance to match specific requirements within the Grid. Fine-tune the editor component behavior through the [columns->edit->params](https://ej2.syncfusion.com/react/documentation/api/grid/column#edit) property for powerful date-time selection control.
+Enhance the DateTimePicker component in grid edit form by customizing its properties. This enables configuration of various DateTimePicker features, tailoring its behavior and appearance to match specific requirements within the grid. Fine-tune the editor component behavior through the [columns->edit->params](https://ej2.syncfusion.com/react/documentation/api/grid/column#edit) property for powerful date-time selection control.
 
 Component|Edit Type |Description |Example Customized edit params
 -----|-----|-----|----|
 [DateTimePicker](../../datetimepicker/getting-started)| datetimepickeredit | The `datetimepickeredit` type renders a `DateTimePicker` component for date time data type columns. Customize the DateTimePicker component by referring to the [DateTimePicker API documentation](https://ej2.syncfusion.com/react/documentation/api/datetimepicker) for detailed information on available properties. | params: { value: new Date() }
  
-The following sample code demonstrates the customization applied to DateTimePicker component of "OrderDate" Grid column:
+The following sample code demonstrates the customization applied to DateTimePicker component of "Order Date" grid column:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -335,7 +335,7 @@ The following sample code demonstrates the customization applied to DateTimePick
 
 ## Access editor components using instance
 
-Accessing editor components in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid enables seamless interaction with editor instances associated with cells during editing or adding actions. This feature is especially valuable when performing custom actions, retrieving data from the editor, or manipulating its properties during editing or adding operations in the Grid.
+Accessing editor components in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid enables seamless interaction with editor instances associated with cells during editing or adding actions. This feature is especially valuable when performing custom actions, retrieving data from the editor, or manipulating its properties during editing or adding operations in the grid.
 
 Access the component instance from the component element using the `ej2_instances` property. This property provides access to the instance of the editor component associated with a cell.
 
@@ -365,17 +365,17 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid provides seamless supp
 **About editTemplate Setup**:
 
 - The `editTemplate` property specifies the cell edit template used as an editor for a particular column
-- Custom components inside the `editTemplate` must be specified with two-way (`@bind-Value`) binding to reflect changes in the Grid
+- Custom components inside the `editTemplate` must be specified with two-way (`@bind-Value`) binding to reflect changes in the grid
 
 Each subsection below demonstrates rendering a specific component type within the edit template.
 
 ### Render multiline TextBox component in edit form 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows rendering a multiline [TextBox](../../textbox/multiline.md) component within the Grid's edit form for a specific column. This enables editing and displaying multi-line text content, providing an efficient way to manage extensive text data.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows rendering a multiline [TextBox](../../textbox/multiline.md) component within the grid's edit form for a specific column. This enables editing and displaying multi-line text content, providing an efficient way to manage extensive text data.
 
 > When using a multiline textbox, use <kbd>Shift+Enter</kbd> to move to the next line. By default, pressing <kbd>Enter</kbd> will trigger a record update while in edit mode.
 
-The following example demonstrates rendering a textArea component in the "ShipAddress" column of the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid. The [valueAccessor](https://ej2.syncfusion.com/react/documentation/api/grid/valueAccessor) property is utilized to split the text into multiple lines within the grid column:
+The following example demonstrates rendering a textArea component in the "Ship Address" column of the Syncfusion<sup style="font-size:70%">&reg;</sup> grid. The [valueAccessor](https://ej2.syncfusion.com/react/documentation/api/grid/valueAccessor) property is utilized to split the text into multiple lines within the grid column:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -398,9 +398,9 @@ The following example demonstrates rendering a textArea component in the "ShipAd
 
 Edit operation behavior in normal or dialog edit modes causes the current edit to be committed when the <kbd>ENTER</kbd> key is pressed. This behavior also applies to columns rendered with a multiline [TextBox](../../textbox/multiline.md), resulting in the edit operation being saved instead of inserting a new line. In multiline text input scenarios, inserting a line break within the text content is typically the expected behavior.
 
-Support for this behavior requires handling the keyboard event at the TextBox component level and preventing it from propagating to the Grid. This approach allows the multiline TextBox to process the <kbd>ENTER</kbd> key independently of the Grid editing workflow.
+Support for this behavior requires handling the keyboard event at the TextBox component level and preventing it from propagating to the grid. This approach allows the multiline TextBox to process the <kbd>ENTER</kbd> key independently of the grid editing workflow.
 
-The following example demonstrates preventing the <kbd>ENTER</kbd> key action in a multiline TextBox during Grid editing by handling the `keydown` event during the TextBox component’s `created` lifecycle event and stopping event propagation using the `stopPropagation` method.
+The following example demonstrates preventing the <kbd>ENTER</kbd> key action in a multiline TextBox during grid editing by handling the `keydown` event during the TextBox component’s `created` lifecycle event and stopping event propagation using the `stopPropagation` method.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -421,9 +421,9 @@ The following example demonstrates preventing the <kbd>ENTER</kbd> key action in
 
 ### Render AutoComplete component in edit form 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows rendering an [AutoComplete](../../auto-complete/getting-started) component within the Grid's edit form for a specific column. This feature is especially valuable for providing dropdown-like auto-suggestion and input assistance for data entry in the Grid's columns.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows rendering an [AutoComplete](../../auto-complete/getting-started) component within the grid's edit form for a specific column. This feature is especially valuable for providing dropdown-like auto-suggestion and input assistance for data entry in the grid's columns.
 
-The following example demonstrates rendering an `AutoComplete` component in the "CustomerID" column of the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid. The `actionBegin` event is handled to update the edited value in the grid when the save button is clicked:
+The following example demonstrates rendering an `AutoComplete` component in the "Customer ID" column of the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid. The `actionBegin` event is handled to update the edited value in the grid when the save button is clicked:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -444,9 +444,9 @@ The following example demonstrates rendering an `AutoComplete` component in the 
 
 ### Render MaskedTextBox component in edit form 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows rendering a [MaskedTextBox](../../maskedtextbox/getting-started) component within the Grid's edit form for a specific column. This provides masked input fields for specific formats such as phone numbers or postal codes.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows rendering a [MaskedTextBox](../../maskedtextbox/getting-started) component within the grid's edit form for a specific column. This provides masked input fields for specific formats such as phone numbers or postal codes.
 
-The following example demonstrates rendering a `MaskedTextBox` component in the "CustomerNumber" column:
+The following example demonstrates rendering a `MaskedTextBox` component in the "Customer Number" column:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -467,9 +467,9 @@ The following example demonstrates rendering a `MaskedTextBox` component in the 
 
 ### Render DropDownList component in edit form 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows rendering a [DropDownList](../../drop-down-list/getting-started) component within the Grid's edit form for a specific column. This provides convenient selection of options from a predefined list during editing.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows rendering a [DropDownList](../../drop-down-list/getting-started) component within the grid's edit form for a specific column. This provides convenient selection of options from a predefined list during editing.
 
-The following example demonstrates rendering a `DropDownList` component in the "ShipCountry" column:
+The following example demonstrates rendering a `DropDownList` component in the "Ship Country" column:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -494,7 +494,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows rendering image
 
 Use the [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#itemtemplate) property to customize the content of each item in the dropdown list.
 
-The following example demonstrates rendering images in the `DropDownList` editor component using the `itemTemplate` within the "EmployeeName" column of the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid. Additionally, the `actionBegin` event is handled to update the edited value in the grid when the save button is clicked:
+The following example demonstrates rendering images in the `DropDownList` editor component using the `itemTemplate` within the "Employee Name" column of the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid. Additionally, the `actionBegin` event is handled to update the edited value in the grid when the save button is clicked:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -519,7 +519,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows rendering a [Dr
 
 Use the [headerTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#headertemplate) and [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#itemtemplate) properties of the `DropDownList` component to render multiple columns.
 
-The following example demonstrates rendering a `DropDownList` component with multiple columns within the "ShipCountry" column. The `actionBegin` event is handled to update the edited value in the grid when the save button is clicked:
+The following example demonstrates rendering a `DropDownList` component with multiple columns within the "Ship Country" column. The `actionBegin` event is handled to update the edited value in the grid when the save button is clicked:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -540,9 +540,9 @@ The following example demonstrates rendering a `DropDownList` component with mul
 
 ### Render ComboBox component in edit form 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows rendering a [ComboBox](../../combo-box/getting-started) component within the Grid's edit form for a specific column. This provides drop-down selection with auto-suggestions for data entry.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows rendering a [ComboBox](../../combo-box/getting-started) component within the grid's edit form for a specific column. This provides drop-down selection with auto-suggestions for data entry.
 
-The following example demonstrates rendering a `ComboBox` component in the "ShipCountry" column:
+The following example demonstrates rendering a `ComboBox` component in the "Ship Country" column:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -565,7 +565,7 @@ The following example demonstrates rendering a `ComboBox` component in the "Ship
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows rendering a [TimePicker](../../timepicker/getting-started) component within the Grid's edit form for a specific column. This provides time input for appointment times, event schedules, or other time-related data.
 
-The following example demonstrates rendering a `TimePicker` component in the "OrderDate" column:
+The following example demonstrates rendering a `TimePicker` component in the "Order Date" column:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -584,13 +584,13 @@ The following example demonstrates rendering a `TimePicker` component in the "Or
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs10" %}
 
-> The `TimePicker` component displays only the time portion. However, all Grid data operations—including editing, validation, and CRUD actions—are performed using a Date object value. The displayed time format does not change the underlying data type used by the Grid.
+> The `TimePicker` component displays only the time portion. However, all grid data operations—including editing, validation, and CRUD actions—are performed using a Date object value. The displayed time format does not change the underlying data type used by the grid.
 
 ### Render MultiSelect component in edit form 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows rendering a [MultiSelect](../../multi-select/getting-started) component within the Grid's edit form, enabling selection of multiple values from a dropdown list when editing a specific column.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows rendering a [MultiSelect](../../multi-select/getting-started) component within the grid's edit form, enabling selection of multiple values from a dropdown list when editing a specific column.
 
-The following example demonstrates rendering a `MultiSelect` component in the "ShipCity" column:
+The following example demonstrates rendering a `MultiSelect` component in the "Ship City" column:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -609,13 +609,13 @@ The following example demonstrates rendering a `MultiSelect` component in the "S
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs12" %}
 
-> When a `MultiSelect` editor is used, values are stored as a comma‑separated string in the Grid data source. All Grid data operations are performed based on this combined string value, as Grid columns do not support array‑type values
+> When a `MultiSelect` editor is used, values are stored as a comma‑separated string in the grid data source. All grid data operations are performed based on this combined string value, as grid columns do not support array‑type values
 
 ### Render RichTextEditor component in edit form
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows rendering the [RichTextEditor](../../rich-text-editor/getting-started) component within the edit form. This enables formatting and styling text content using bold, italic, underline, bullet lists, numbered lists, and other formatting options.
 
-Set the [allowTextWrap](https://ej2.syncfusion.com/react/documentation/api/grid#allowtextwrap) property of the corresponding grid column to "true" to allow the rich text editor component to automatically adjust its width and wrap text content to fit within column boundaries.
+Set the [allowTextWrap](https://ej2.syncfusion.com/react/documentation/api/grid#allowtextwrap) property of the corresponding grid column to `true` to allow the rich text editor component to automatically adjust its width and wrap text content to fit within column boundaries.
 
 The following example demonstrates rendering a `RichTextEditor` component in the "ShipAddress" column of the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid. The `actionBegin` event is handled to update the edited value in the grid when the save button is clicked:
 
@@ -638,7 +638,7 @@ The following example demonstrates rendering a `RichTextEditor` component in the
 
 ### Render Uploader component in edit form  
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows rendering an [Uploader](../../uploader/getting-started) component within the Grid's edit form. This enables uploading and managing files or images in a specific column during data editing.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows rendering an [Uploader](../../uploader/getting-started) component within the grid's edit form. This enables uploading and managing files or images in a specific column during data editing.
 
 The following example demonstrates rendering an `Uploader` component in the "Order Image" column:
 
@@ -676,11 +676,11 @@ To utilize the custom cell editor template feature, implement these four essenti
 
 ### Render AutoComplete in edit form
 
-The Syncfusion React Grid allows rendering the [AutoComplete](../../auto-complete/getting-started) within the edit form by using the cell edit template feature. This feature enables selection of values from a predefined list during the editing of a specific column. It is especially valuable for providing a dropdown-like auto-suggestion and input assistance for data entry in the Grid's columns.
+The Syncfusion React Grid allows rendering the [AutoComplete](../../auto-complete/getting-started) within the edit form by using the cell edit template feature. This feature enables selection of values from a predefined list during the editing of a specific column. It is especially valuable for providing a dropdown-like auto-suggestion and input assistance for data entry in the grid's columns.
 
 Define the cell edit template for the column using the [edit](https://ej2.syncfusion.com/react/documentation/api/grid/column#edit) property. This property specifies the necessary functions for creating, reading, and writing the AutoComplete into the specific column.
 
-The following example demonstrates how to render a `Autocomplete` in the "CustomerID" column:
+The following example demonstrates how to render a `Autocomplete` in the "Customer ID" column:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -712,7 +712,7 @@ The Syncfusion React Grid allows rendering the cascading [DropDownList](../../dr
 
 Define the cell edit template for the column using the [edit](https://ej2.syncfusion.com/react/documentation/api/grid/column#edit) property. This property specifies the necessary functions for creating, reading, and writing the cascading DropDownList.
 
-In the below demo, cascading `DropDownList` rendered for "ShipCountry" and "ShipState" column.
+In the below demo, cascading `DropDownList` rendered for "Ship Country" and "Ship State" column.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

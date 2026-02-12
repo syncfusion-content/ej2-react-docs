@@ -1,7 +1,3 @@
-{% raw %}
-
-
-
 import { MultiColumnComboBoxComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-multicolumn-combobox';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
@@ -17,7 +13,7 @@ export default class App extends React.Component<{}, {}> {
         { "EmpID": 1006, "Name": "Janet Leverling", "Designation": "Team Lead", "Country": "Africa" },
         { "EmpID": 1007, "Name": "Alice", "Designation": "Product Manager", "Country": "Australia" },
         { "EmpID": 1008, "Name": "Bob", "Designation": "Developer", "Country": "India" },
-        { "EmpID": 1009, "Name": "John", "Designation": "Product Manager", "Country": "Ireland"},
+        { "EmpID": 1009, "Name": "John", "Designation": "Product Manager", "Country": "Ireland" },
         { "EmpID": 1010, "Name": "Mario Pontes", "Designation": "Team Lead", "Country": "South Africa" },
         { "EmpID": 1011, "Name": "Yang Wang", "Designation": "Developer", "Country": "Russia" },
         { "EmpID": 1012, "Name": "David", "Designation": "Product Manager", "Country": "Egypt" },
@@ -50,6 +46,3 @@ export default class App extends React.Component<{}, {}> {
     }
 }
 ReactDOM.render(<App />, document.getElementById('multicolumn'));
-
-
-{% endraw %}

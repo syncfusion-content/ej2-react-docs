@@ -1,4 +1,4 @@
-{% raw %}
+
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { TreeMapComponent, Inject, TreeMapLegend, TreeMapTooltip } from '@syncfusion/ej2-react-treemap';
@@ -77,4 +77,3 @@ const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 
-{% endraw %}

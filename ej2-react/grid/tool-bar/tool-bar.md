@@ -73,7 +73,7 @@ function App() {
                 <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
                 <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />
                 <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
-                <ColumnDirective field='ShipName' headerText='ShipName' width='150' />
+                <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
             </ColumnsDirective>
             <Inject services={[Group, Toolbar]} />
         </GridComponent></div>)
@@ -113,7 +113,7 @@ function App() {
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />
         <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
-        <ColumnDirective field='ShipName' headerText='ShipName' width='150' />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
       </ColumnsDirective>
       <Inject services={[Group, Toolbar]} />
     </GridComponent></div>)
@@ -135,7 +135,7 @@ export default App;
 
 By default, the toolbar is placed at the top of the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid. Adding the toolbar at the bottom of the Grid keeps important actions and functionality consistently visible and easily accessible, eliminating the need for scrolling to locate toolbar operations.
 
-To add the toolbar at the bottom of the Grid, use the [created](https://ej2.syncfusion.com/react/documentation/api/grid#created) event can be utilized. By handling this event, the toolbar items can be dynamically inserted at the desired position in the grid layout.
+To add the toolbar at the bottom of the grid, use the [created](https://ej2.syncfusion.com/react/documentation/api/grid#created) event. By handling this event, the toolbar items can be dynamically inserted at the desired position in the grid layout.
 
 The following example shows adding toolbar items at the bottom using the Grid's `created` event.
  
@@ -169,7 +169,7 @@ The appearance of the built-in toolbar buttons can be modified by applying the f
 }
 ```
 
-The following example demonstrates changing the background color of the `Add`, `Edit`, `Delete`, `Update`, and `Cancel` toolbar buttons by applying CSS styles
+The following example demonstrates changing the background color of the `Add`, `Edit`, `Delete`, `Update`, and `Cancel` toolbar buttons by applying CSS styles.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

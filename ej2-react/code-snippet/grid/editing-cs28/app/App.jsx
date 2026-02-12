@@ -30,7 +30,7 @@ function App() {
     };
     return <GridComponent ref={g => grid = g} dataSource={data} actionComplete={actionComplete} actionBegin={actionBegin} editSettings={editOptions} toolbar={toolbarOptions} height={265}>
     <ColumnsDirective>
-      <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true}/>
+      <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} validationRules={{required: true}}/>
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='120'/>
       <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
     </ColumnsDirective>

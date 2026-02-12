@@ -1,4 +1,4 @@
-{% raw %}
+
 
 
 import * as React from "react";
@@ -79,4 +79,3 @@ const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 
-{% endraw %}

@@ -15,9 +15,9 @@ To configure a custom aggregate, set the [type](https://ej2.syncfusion.com/react
 
 The custom aggregate function in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component is executed differently based on the aggregation context:
 
-- Total Aggregation: The function is executed with the entire dataset and the corresponding aggregate column object.
+- **Total Aggregation:** The function is executed with the entire dataset and the corresponding aggregate column object.
 
-- Group Aggregation: The function is executed with the current group details and the aggregate column object.
+- **Group Aggregation:** The function is executed with the current group details and the aggregate column object.
 
 The following example demonstrates how to implement and use a custom aggregate function in the grid component:
 
@@ -44,7 +44,7 @@ The following example demonstrates how to implement and use a custom aggregate f
 
 To display the count of distinct values in an aggregate row for a column, set the [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn#type) to "Custom" and provide a custom function in the [customAggregate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn#customaggregate) property that returns the number of unique values.
 
-The following example demonstrates how to display the distinct count for the "ShipCountry" column using a custom aggregate.
+The following example demonstrates how to display the distinct count for the "Ship Country" column using a custom aggregate.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

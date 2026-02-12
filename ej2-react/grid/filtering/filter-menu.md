@@ -16,7 +16,7 @@ The filter menu in the React Grid component provides a dialog-based filtering in
 
 ## Enable filter menu
 
-To enable the filter menu, set the [filterSettings.type](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings) property to `Menu`. This property determines the type of filter UI rendered in the Grid. Once enabled, clicking the filter icon in any column header opens the filter menu dialog with operator options and an input field.
+To enable the filter menu, set the [filterSettings.type](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings) property to `Menu`. This property determines the type of filter UI rendered in the grid. Once enabled, clicking the filter icon in any column header opens the filter menu dialog with operator options and an input field.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -214,7 +214,7 @@ Prevent the autofill feature by setting the [autofill](https://ej2.syncfusion.co
 
 When performing filtering programmatically using methods in the Grid component, hiding the default filter icons may be desired to provide a simpler interface. This is useful when building custom filter UIs or applying filters through buttons or other controls outside the Grid.
 
-To hide the filter icon in the Grid, apply the following CSS rule using the `display` property of the filter menu class:
+To hide the filter icon in the grid, apply the following CSS rule using the `display` property of the filter menu class:
 
 ```css
 .e-filtermenudiv.e-icons.e-icon-filter {

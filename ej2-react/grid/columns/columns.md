@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Columns in React Grid Component
 
-In Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, columns are the fundamental building blocks that display data from a data source. Each column corresponds to a specific field in the data source and is responsible for rendering values in the required format. For example, a dataset containing "Customer" details such as "ID", "Name", "Email", "Purchase Date" will represent each of these fields as individual columns within the grid.
+In Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, columns are the fundamental building blocks that display data from a data source. Each column maps to a specific field in the data source and is responsible for rendering values in the required format. For example, a dataset containing customer details such as "ID", "Name", "Email", and "Purchase Date" will present each field as an individual column in the Grid.
 
 A column definition commonly includes the following properties:
 - `field`: The [field](https://ej2.syncfusion.com/react/documentation/api/grid/column#field) property establishes the connection between the dataset and the column by mapping a data source field to a grid column. This property is required for performing data operations between the Grid and the data source.
@@ -28,14 +28,14 @@ import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej
 </GridComponent>
 ```
 
-- **GridComponent**: The main grid container.
-- **ColumnsDirective**: A container component that wraps all individual column definitions.
-- **ColumnDirective**: Defines an individual column.
+- `GridComponent`: The main grid container.
+- `ColumnsDirective`: A container component that wraps all individual column definitions.
+- `ColumnDirective`: Defines an individual column.
 
 
 ## Column types
 
-The [type](https://ej2.syncfusion.com/react/documentation/api/grid/column#type) property defines the data type of the values in a column. Defining the correct column type is important because it determines how the Grid formats, filters, and sorts the data.
+The [type](https://ej2.syncfusion.com/react/documentation/api/grid/column#type) property defines the data type of the values in a column. Defining the correct column type is important because it determines the way the Grid formats, filters, and sorts the data.
 
 The `type` property applies formatting rules, such as number formats or date formats, to ensure proper display of column values. By default, the Grid automatically assigns the column type based on the first value in that column. If the first value is **null**, **undefined**, or **empty**, the type cannot be inferred and must be set manually to ensure correct formatting and data operations.
 
@@ -43,13 +43,12 @@ The `type` property applies formatting rules, such as number formats or date for
 
 The Grid provides column types to represent different data types. Each type ensures that values are displayed accurately and that operations such as sorting and filtering function properly. The supported column types are:
 
-* **string:** Contains text values. This is the default type. If the first value is **null**, **undefined**, or **empty**, and no type is set, the column defaults to string.
-* **number:** Contains numeric values.
-* **boolean:** Represents "true" or "false" values. By default, these values are displayed as text in the grid cell. To show them as checkboxes with checked or unchecked states, set the [displayAsCheckBox](#render-boolean-value-as-checkbox) property for the column.
-* **date:** Represents date values.
-* **datetime:** Represents date and time values.
-* **checkbox:** Provides checkboxes for row selection.
-
+* `string` — Contains text values. This is the default type. If the first value is **null**, **undefined**, or **empty**, and no type is set, the column defaults to `string`.
+* `number` — Contains numeric values.
+* `boolean` — Represents `true` or `false` values. By default, these values are displayed as text in the grid cell. To show them as checkboxes with checked or unchecked states, set the `displayAsCheckBox` property for the column.
+* `date` — Represents date values.
+* `datetime` — Represents date and time values.
+* `checkbox` — Provides checkboxes for row selection.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -70,8 +69,8 @@ The Grid provides column types to represent different data types. Each type ensu
 
 ### Difference between boolean and checkbox types
 
-* **boolean:** Represents "true" or "false" values from the data source. Values can be edited. By default, values are displayed as text, but can be shown as checkboxes by setting the `displayAsCheckBox` property.
-* **checkbox:** When a column type is set to checkbox, it enables row selection. By default, the Grid allows multiple records to be selected, as the selectionSettings automatically defaults to multiple selection.
+* `boolean` — Represents `true` or `false` values from the data source. Values can be edited. By default, values are displayed as text, but can be shown as checkboxes by setting the `displayAsCheckBox` property.
+* `checkbox` — When a column type is set to `checkbox`, it enables row selection. By default, the Grid allows multiple records to be selected, as the `selectionSettings` automatically defaults to multiple selection.
 
 
 ## Column width 
@@ -176,15 +175,15 @@ The [format](https://ej2.syncfusion.com/react/documentation/api/grid/column#form
 
  {% previewsample "page.domainurl/code-snippet/grid/column-cs20" %}
 
-> * The grid uses the [Internalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) library to format values based on the specified format and culture.
+> * The Grid uses the [Internalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) library to format values based on the specified format and culture.
 > * By default, the [number](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#number-formatting) and [date](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#manipulating-datetime) values are formatted in "en-US" locale. Localization of currency, date, number formats, and other culture-specific elements to different locales is supported as explained in the [localization documentation](https://ej2.syncfusion.com/react/documentation/common/globalization/localization).
 > * The available format codes may vary depending on the data type of the column.
 > * Column formatting allows advanced customization by assigning a custom function to the `format` property, rather than using a predefined format string.
-> * Make sure that the format string is valid and compatible with the data type of the column, to avoid unexpected results.
+> * Ensure that the format string is valid and compatible with the data type of the column to avoid unexpected results.
 
 ### Number formatting
 
-Number formatting enables customization of numeric value display in Syncfusion Grid columns. Standard numeric format strings or custom numeric format strings specify the desired presentation. The `format` property of Grid columns can be used to specify the number format for numeric columns.
+Number formatting enables customization of numeric value display in Syncfusion<sup style="font-size:70%">&reg;</sup> Grid columns. Standard numeric format strings or custom numeric format strings specify the desired presentation. The `format` property of Grid columns can be used to specify the number format for numeric columns.
 
 Format |Description |Remarks
 -------|-------|-------
@@ -192,7 +191,7 @@ Format |Description |Remarks
 `C` | Denotes currency type. | The currency format is followed by integer value as `C2`, `C3`, etc., where the number specifies the number of decimal places to display.
 `P` | Denotes percentage type. | The percentage format expects input values in the range of 0 to 1. For example, a cell value of "0.2" is displayed as "20%". The format can include an integer value such as `P2`, `P3`, etc., where the number indicates the number of decimal places to display.
 
-The following example code demonstrates the formatting of data for "Mark 1" and "Mark 2" using the ‘N’ format, "Percentage of Marks" using the ‘P’ format, and "Fees" using the ‘C’ format.
+The following example code demonstrates the formatting of data for "Mark 1" and "Mark 2" using the `N` format, "Percentage of Marks" using the `P` format, and "Fees" using the `C` format.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -215,9 +214,9 @@ The following example code demonstrates the formatting of data for "Mark 1" and 
 
 ### Date formatting
 
-Date formatting customizes how date values are displayed in Grid columns. It supports standard date format strings (such as "d", "D", or "MMM dd, yyyy"), built-in skeletons (such as "yMd"), and custom format strings. The `format` property of Grid columns specifies the desired date format.
+Date formatting customizes the display of date values in Grid columns. It supports standard date format strings (such as "d", "D", or "MMM dd, yyyy"), built-in skeletons (such as "yMd"), and custom format strings. The `format` property of Grid columns specifies the desired date format.
 
-Additionally, custom format strings provide precise control over how date values are displayed, and the table below shows examples of custom formats with their corresponding outputs.
+Additionally, custom format strings provide precise control over the way date values are displayed, and the table below shows examples of custom formats with their corresponding outputs.
 
 Format | Formatted value
 -----|-----
@@ -246,11 +245,11 @@ Format | Formatted value
 
 ### Format the date and currency column based on localization
 
-The Grid columns can be formatted according to the browser’s localization settings by using the `format` property together with the [locale](https://ej2.syncfusion.com/react/documentation/api/grid#locale) property. The `format` property defines how values are displayed, while the locale property applies culture-specific rules for both dates and numbers.
+The Grid columns can be formatted according to the browser’s localization settings by using the `format` property together with the [locale](https://ej2.syncfusion.com/react/documentation/api/grid#locale) property. The `format` property defines the format used to display values, while the `locale` property applies culture-specific rules for both dates and numbers.
 
 For example:
-- Setting format to "yyyy-MMM-dd" and locale to "es-AR" (Spanish, Argentina) displays dates with localized month names and formatting conventions.
-- Applying format as "C2" formats numeric values with the correct currency symbol and separators for the selected culture.
+- Setting `format` to "yyyy-MMM-dd" and `locale` to "es-AR" (Spanish, Argentina) displays dates with localized month names and formatting conventions.
+- Applying `format` as "C2" formats numeric values with the correct currency symbol and separators for the selected culture.
 
 **Install Syncfusion CLDR Data:**
 
@@ -289,7 +288,7 @@ For more details about loading culture files and working with globalization in S
 
 ### Format template column value
 
-Template columns in Syncfusion Grid enable customization of column value appearance through HTML templates. Number formatting can also be applied within template columns to control the display of values. To format values in a column template, use the React pipes and the `format` property.
+Template columns in Syncfusion<sup style="font-size:70%">&reg;</sup> Grid enable customization of column value appearance through HTML templates. Number formatting can also be applied within template columns to control the display of values. To format values in a column template, use the React pipes and the `format` property.
 
 In this example, the date pipe formats the "OrderDate" value as a date in the format "dd/MMM/yyyy".
 
@@ -310,7 +309,7 @@ In this example, the date pipe formats the "OrderDate" value as a date in the fo
 
  {% previewsample "page.domainurl/code-snippet/grid/column-format-cs1" %}
 
-> Other React pipes, such as **currency**, **decimal**, **percent**, and similar utilities, enable formatting of various value types within column template.
+> Other React pipes, such as `currency`, `decimal`, `percent`, and similar utilities, enable formatting of various value types within column templates.
 
 ### Custom formatting
 
@@ -368,12 +367,12 @@ In the below example, the "numberFormatOptions" object is used as the `format` p
 
 ## Text align
 
-The alignment of text within Grid column cells can be controlled using the [textAlign](https://ej2.syncfusion.com/react/documentation/api/grid/column#textalign) property. This property specifies the alignment of text within the cells of a particular column. By default, text is aligned to the "left", but the alignment can be changed by setting the `textAlign` property to one of the following options:
+The alignment of text within Grid column cells can be controlled using the [textAlign](https://ej2.syncfusion.com/react/documentation/api/grid/column#textalign) property. This property specifies the alignment of text within the cells of a particular column. By default, text is aligned to the `left`, but the alignment can be changed by setting the `textAlign` property to one of the following options:
 
-* **Left:** Aligns the text to the left (default).
-* **Center:** Aligns the text to the center.
-* **Right:** Aligns the text to the right.
-* **Justify:** Align the text to the justify.
+* `Left` — Aligns the text to the left (default).
+* `Center` — Aligns the text to the center.
+* `Right` — Aligns the text to the right.
+* `Justify` — Align the text to the justify.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -466,9 +465,9 @@ export default App;
 
 ## Render boolean value as checkbox
 
-The Grid component allows rendering boolean values as checkboxes in columns. This can be achieved using the [displayAsCheckBox](https://ej2.syncfusion.com/react/documentation/api/grid/column#displayascheckbox) property, available in the [ColumnDirective](https://ej2.syncfusion.com/react/documentation/api/grid/column). This property is useful for displaying boolean column values as checkboxes instead of the default text representation of "true" or "false".
+The Grid component allows rendering boolean values as checkboxes in columns. This can be achieved using the [displayAsCheckBox](https://ej2.syncfusion.com/react/documentation/api/grid/column#displayascheckbox) property of the [ColumnDirective](https://ej2.syncfusion.com/react/documentation/api/grid/column). This property is useful for displaying boolean column values as checkboxes instead of the default text representation of `true` or `false`.
 
-To enable the rendering of boolean values as checkboxes, set the `displayAsCheckBox` property of the `ColumnDirective` to "true". This property works only with boolean values in Grid columns.
+To enable the rendering of boolean values as checkboxes, set the `displayAsCheckBox` property of the `ColumnDirective` to `true`. This property works only with boolean values in Grid columns.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -487,9 +486,9 @@ To enable the rendering of boolean values as checkboxes, set the `displayAsCheck
 
  {% previewsample "page.domainurl/code-snippet/grid/column-cs22" %}
 
-### How to prevent checkbox in the blank row
+### Preventing checkbox in blank rows
 
-To prevent the checkbox in the blank row of the Grid, even if the [displayAsCheckBox](https://ej2.syncfusion.com/react/documentation/api/grid/column#displayascheckbox) property is set to "true" for that column, the [rowDataBound](https://ej2.syncfusion.com/react/documentation/api/grid#rowdatabound) event can be used to check for **empty** or **null** values in the row data. If all the values in the row are **empty** or **null**, the inner HTML of the corresponding cell can be set to an **empty** string to hide the checkbox.
+To prevent the checkbox in blank rows of the Grid, even when the [displayAsCheckBox](https://ej2.syncfusion.com/react/documentation/api/grid/column#displayascheckbox) property is set to `true` for that column, use the [rowDataBound](https://ej2.syncfusion.com/react/documentation/api/grid#rowdatabound) event to detect **empty** or **null** values in the row data. If all values in the row are **empty** or **null**, set the inner HTML of the corresponding cell to an empty string to hide the checkbox.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -510,7 +509,7 @@ To prevent the checkbox in the blank row of the Grid, even if the [displayAsChec
 
 ## Lock columns
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows locking columns to prevent reordering and automatically position them first. This can be achieved by setting the [lockColumn](https://ej2.syncfusion.com/react/documentation/api/grid/column#lockcolumn) property to "true".
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows locking columns to prevent reordering and automatically position them first. This can be achieved by setting the [lockColumn](https://ej2.syncfusion.com/react/documentation/api/grid/column#lockcolumn) property to `true`.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -575,9 +574,9 @@ Column visibility in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid c
 
 **Using property**
 
-The [visible](https://ej2.syncfusion.com/react/documentation/api/grid/column#visible) property controls whether columns appear in the React Grid. Setting this property to "true" shows the column, while "false" hides it.
+The [visible](https://ej2.syncfusion.com/react/documentation/api/grid/column#visible) property controls whether columns appear in the React Grid. Setting this property to `true` shows the column, while `false` hides it.
 
-In the below example, the "ShipCity" column is defined with `visible` property set to "false", which will hide the column in the rendered grid.
+In the below example, the "ShipCity" column is defined with `visible` property set to `false`, which will hide the column in the rendered grid.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -596,9 +595,9 @@ In the below example, the "ShipCity" column is defined with `visible` property s
 
  {% previewsample "page.domainurl/code-snippet/grid/column-property-cs1" %}
 
-> * Hiding a column using the `visible` property only affects the UI representation of the grid. The data for hidden columns still exists in the data source and can be accessed or modified through code.
-> * The width of hidden columns is excluded from the total grid width calculation.
-> * Columns can be permanently hidden by setting the visible property to "false" in the column definition, or by removing the column entirely.
+> * Hiding a column using the `visible` property only affects the UI representation of the Grid. The data for hidden columns still exists in the data source and can be accessed or modified through code.
+> * The width of hidden columns is excluded from the total Grid width calculation.
+> * Columns can be permanently hidden by setting the `visible` property to `false` in the column definition, or by removing the column entirely.
 
 **Using methods**
 
@@ -606,7 +605,7 @@ The [showColumns](https://ej2.syncfusion.com/react/documentation/api/grid#showco
 
 **Based on header text**
 
-The `showColumns` and `hideColumns` methods enable dynamic control of column visibility using header text. These methods require an array of column header texts as the first parameter and the value "headerText" as the second parameter to indicate the operation is based on header text.
+The `showColumns` and `hideColumns` methods enable dynamic control of column visibility using header text. These methods require an array of column header texts as the first parameter and the value `headerText` as the second parameter to indicate the operation is based on header text.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -693,7 +692,7 @@ export default App;
 
 **Based on field**
 
-External buttons can control column visibility by field name using the `showColumns` or `hideColumns` methods. These methods require an array of column field names as the first parameter and the value "field" as the second parameter to indicate the operation is based on field names.
+External buttons can control column visibility by field name using the `showColumns` or `hideColumns` methods. These methods require an array of column field names as the first parameter and the value `field` as the second parameter to indicate the operation is based on field names.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -815,7 +814,7 @@ For more information, refer to this [documentation](https://ej2.syncfusion.com/r
 
 ## Manipulating columns
 
-This section shows how to work with columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid for React, including how to access columns, change column settings, and add or remove columns using the Grid's properties, methods, and events.
+This section explains working with columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, including accessing columns, changing column settings, and adding or removing columns using the Grid's properties, methods, and events.
 
 ### Accessing columns
 
@@ -834,7 +833,7 @@ Accessing columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid i
 
 ### Updating column definitions
 
-The [columns](https://helpej2.syncfusion.com/react/documentation/api/grid/column#columns) property enables updating column definitions in the Grid. Column properties like headerText, width, visible, and others can be modified in the columns array to change how columns appear and behave. After making changes, the [refreshColumns](https://ej2.syncfusion.com/react/documentation/api/grid#refreshcolumns) method applies the updates to the grid.
+The [columns](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#columns) property enables updating column definitions in the Grid. Column properties like `headerText`, `width`, `visible`, and others can be modified in the columns array to change the way columns appear and behave. After making changes, the [refreshColumns](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#refreshcolumns) method applies the updates to the Grid.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -855,9 +854,9 @@ The [columns](https://helpej2.syncfusion.com/react/documentation/api/grid/column
 
 ### Adding/Removing Columns
 
-Adding or removing columns dynamically in the Grid component is possible through the [columns](https://helpej2.syncfusion.com/react/documentation/api/grid/column#columns) property, accessible via the Grid instance.
+Adding or removing columns dynamically in the Grid component is possible through the `columns` property, accessible via the Grid instance.
 
-New columns can be added using the `push` method to add the column object to the columns property. Columns can be removed using the `pop` method to delete the last column, or the `splice` method to remove a specific column from the columns array.
+New columns can be added using the `push` method to add the column object to the `columns` property. Columns can be removed using the `pop` method to delete the last column, or the `splice` method to remove a specific column from the columns array.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -876,9 +875,9 @@ New columns can be added using the `push` method to add the column object to the
 
  {% previewsample "page.domainurl/code-snippet/grid/column-cs37" %}
 
-### How to refresh columns
+### Refreshing columns
 
-The [refreshColumns](https://ej2.syncfusion.com/react/documentation/api/grid#refreshcolumns) method of the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid can be used to refresh the columns in the grid. This method is useful when grid columns need to be updated dynamically based on user actions or data changes.
+The [refreshColumns](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#refreshcolumns) method of the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid can be used to refresh the columns in the grid. This method is useful when grid columns need to be updated dynamically based on user actions or data changes.
 
 ```ts
 grid.refreshColumns();

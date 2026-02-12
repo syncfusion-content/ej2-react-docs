@@ -21,22 +21,22 @@ function App() {
       (document.getElementById("GridParent") as HTMLElement).classList.add('wrapper');
     }
   }
-      return (
-      <div>
-        <ButtonComponent cssClass='e-flat e-primary' iconCss='e-icons e-play-icon'
-        isToggle ={true} onClick={ btnClick }>Enable/Disable Grid</ButtonComponent>
-        <div id="GridParent">
-          <GridComponent dataSource={data} editSettings={editOptions} toolbar={toolbarOptions}
-            height={265} ref={(scope) => { grid = scope; }}>
-            <ColumnsDirective>
-              <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true}/>
-              <ColumnDirective field='CustomerID' headerText='Customer ID' width='120'/>
-              <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
-            </ColumnsDirective>
-            <Inject services={[Edit, Toolbar]} />
-          </GridComponent>
-        </div>
-      </div>)
+  return (
+    <div>
+      <ButtonComponent isPrimary={true} isToggle ={true} onClick={ btnClick }>Enable/Disable Grid</ButtonComponent>
+      <div id="GridParent">
+        <GridComponent dataSource={data} editSettings={editOptions} toolbar={toolbarOptions}
+          height={265} ref={(scope) => { grid = scope; }}>
+          <ColumnsDirective>
+            <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true}/>
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='120'/>
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
+          </ColumnsDirective>
+          <Inject services={[Edit, Toolbar]} />
+        </GridComponent>
+      </div>
+    </div>
+  )
 };
 export default App;
 

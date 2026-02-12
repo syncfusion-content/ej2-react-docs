@@ -1,5 +1,5 @@
 
-{% raw %}
+
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
@@ -16,4 +16,3 @@ root.render(<App />);
 
 
 
-{% endraw %}

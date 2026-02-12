@@ -8,7 +8,7 @@ function App() {
     const filterSettings: FilterSettingsModel = { type: 'FilterBar' };
     return <GridComponent dataSource={data} allowFiltering={true} allowPaging={true} pageSettings={pageSettings} filterSettings={filterSettings} height={315}>
         <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='OrderID' width='100' textAlign="Right" />
+            <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
             <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
             <ColumnDirective field='OrderDate' headerText='Order Date' format='yMd' width='100' textAlign="Right" />
             <ColumnDirective field='ShipCity' headerText='Ship City' width='100' textAlign="Right" />

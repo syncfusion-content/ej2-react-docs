@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Detail Template in React Grid Component
 
-The detail template in the Grid component displays additional information about a specific row by expanding or collapsing detail content. This feature proves useful when additional data or custom content specific to each row requires display. The [detailTemplate](https://ej2.syncfusion.com/react/documentation/api/grid#detailtemplate) property defines an HTML template for the detail row. This template can include any HTML element or React component for displaying detail content.
+The detail template in the Grid component displays additional information about a specific row by expanding or collapsing detail content. This feature proves useful when additional data or custom content specific to each row requires display.The [detailTemplate](https://ej2.syncfusion.com/react/documentation/api/grid#detailtemplate) property is used to define the structure of this detailed content. The `detailTemplate` property specifies the HTML template for the detail row. This template can include any HTML element or React component for displaying detail content.
 
 To use detail template feature, inject the [DetailRow](https://ej2.syncfusion.com/angular/documentation/api/grid/detailrow) module to the grid.
 
-Here's an example of using the `detailTemplate` property in the grid component:
+Here's an example of using the `detailTemplate` property in the Grid component:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

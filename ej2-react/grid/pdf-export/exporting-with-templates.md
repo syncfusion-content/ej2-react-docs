@@ -18,7 +18,7 @@ The PDF export functionality allows exporting Grid columns that include images, 
 
 The following sample demonstrates exporting hyperlinks and images to PDF using the [hyperlink](https://ej2.syncfusion.com/react/documentation/api/grid/pdfQueryCellInfoEventArgs#hyperlink) and [image](https://ej2.syncfusion.com/react/documentation/api/grid/pdfQueryCellInfoEventArgs#image) properties in the `pdfQueryCellInfo` event.
 
-> PDF Export supports base64 string to export the images.
+> The PDF export supports base64 strings for images.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -45,9 +45,9 @@ By default, the Grid exports the parent grid with expanded detail rows. Control 
 
 | Mode     | Behavior    |
 |----------|-------------|
-| Expanded | Exports the parent grid with expanded detail rows. |
-| All      | Exports the parent grid with all the detail rows. |
-| None     | Exports the parent grid alone. |
+| `Expanded` | Exports the parent grid with expanded detail rows. |
+| `All`      | Exports the parent grid with all detail rows. |
+| `None`     | Exports the parent grid alone. |
 
 The detail rows in the exported PDF can be customized and formatted using the [exportDetailTemplate](https://ej2.syncfusion.com/react/documentation/api/grid#exportdetailtemplate) event. This event formats detail rows based on parent row data.
 

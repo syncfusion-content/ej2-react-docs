@@ -8,8 +8,8 @@ function App() {
   let grid;
   let dropColumn;
   const columns = [
-    { text: 'CustomerID', value: 'CustomerID' },
-    { text: 'OrderID', value: 'OrderID' },
+    { text: 'Customer ID', value: 'CustomerID' },
+    { text: 'Order ID', value: 'OrderID' },
     { text: 'Ship City', value: 'ShipCity' },
     { text: 'Ship Name', value: 'ShipName' },
   ];

@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component follows major accessibility guidelines and standards, including the [Americans with Disabilities Act (ADA)](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI‑ARIA roles](https://www.w3.org/TR/wai-aria/#roles). These standards ensure the grid is usable with assistive technologies and keyboard‑only navigation. 
 
-The sections below describe the Grid's accessibility compliance and behavior.
+The sections below describe the grid's accessibility compliance and behavior.
 
 ## Accessibility criteria
 
@@ -155,7 +155,7 @@ The Grid provides keyboard navigation and follows WAI‑ARIA [keyboard interacti
 
 **Windows**  | **MAC** | **To do this**
 -----|----- | -----
-<kbd>Ctrl + P</kbd> | <kbd>Command + P</kbd>| Prints the Grid.
+<kbd>Ctrl + P</kbd> | <kbd>Command + P</kbd>| Prints the grid.
 
 ### Clipboard
 
