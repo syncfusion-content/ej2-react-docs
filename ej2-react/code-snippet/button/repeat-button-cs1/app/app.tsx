@@ -1,6 +1,3 @@
-{% raw %}
-
-
 import { enableRipple, EventHandler } from '@syncfusion/ej2-base';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from "react";
@@ -77,7 +74,3 @@ function App() {
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('button'));
-
-
-
-{% endraw %}

@@ -18,7 +18,7 @@ To get started quickly with the React Rich Text Editor, refer to this video tuto
 
 {% youtube "https://www.youtube.com/watch?v=5mLO6_nwzww" %}
 
-### Create a React Application
+## Create a React Application
 
 Run the following commands to set up a React application:
 
@@ -92,7 +92,7 @@ Now, you can start adding React Rich Text Editor component in the application. F
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs7" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs7" %}
 
 ## Configure the toolbar
 
@@ -138,14 +138,14 @@ The output will appear as follows.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/basic-cs7/app/App.jsx %}
+{% include code-snippet/rich-text-editor/basic-cs5/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/basic-cs7/app/App.tsx %}
+{% include code-snippet/rich-text-editor/basic-cs5/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs7" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs5" %}
 
 ## See also
 
