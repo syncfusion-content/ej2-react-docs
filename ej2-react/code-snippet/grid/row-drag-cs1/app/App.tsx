@@ -12,20 +12,20 @@ function App() {
       return (<div>
             <GridComponent id="Grid" dataSource={data} height={315} allowRowDragAndDrop={true} selectionSettings={selectionOptions} rowDropSettings={rowDropOptions}>
                   <ColumnsDirective>
-                        <ColumnDirective field='OrderID' headerText='Order ID' width='140' />
+                        <ColumnDirective field='OrderID' headerText='Order ID' width='140' textAlign='Right' />
                         <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />
-                        <ColumnDirective field='OrderDate' headerText='OrderDate' width='150' format='yMd' />
-                        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C' />
+                        <ColumnDirective field='OrderDate' headerText='OrderDate' width='150' format='yMd' textAlign='Right' />
+                        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C' textAlign='Right' />
                         <ColumnDirective field='ShipCity' headerText='ShipCity' width='150' />
                   </ColumnsDirective>
                   <Inject services={[RowDD]} />
             </GridComponent>
             <GridComponent id="DestGrid" dataSource={destData} allowRowDragAndDrop={true} selectionSettings={selectionOptions} rowDropSettings={destRowDropOptions}>
                   <ColumnsDirective>
-                        <ColumnDirective field='OrderID' headerText='Order ID' width='140' />
+                        <ColumnDirective field='OrderID' headerText='Order ID' width='140' textAlign='Right' />
                         <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />
-                        <ColumnDirective field='OrderDate' headerText='OrderDate' width='150' format='yMd' />
-                        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C' />
+                        <ColumnDirective field='OrderDate' headerText='OrderDate' width='150' format='yMd' textAlign='Right' />
+                        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C' textAlign='Right' />
                         <ColumnDirective field='ShipCity' headerText='ShipCity' width='150' />
                   </ColumnsDirective>
                   <Inject services={[RowDD]} />

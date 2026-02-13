@@ -15,7 +15,7 @@ function App() {
       <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
       <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
-      <ColumnDirective field='Employee.City' headerText='City Name' width='150' />
+      <ColumnDirective field='Employee.City' headerText='City' width='150' />
     </ColumnsDirective>
   </GridComponent>
 };

@@ -8,13 +8,18 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column reorder in React Grid component
+# Column Reorder in React Grid Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component allows to reorder columns by drag and drop of a particular column header from one index to another index within the grid. This feature can be enabled by injecting the **Reorder** module in the grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provides column reordering through drag-and-drop functionality. This feature allows columns to be moved from one position to another within the grid, making it possible to customize the layout according to application requirements.
 
-To reorder the columns, set the [allowReordering](https://ej2.syncfusion.com/react/documentation/api/grid/#allowreordering) property to **true** in the grid.
+When a column header is dragged, a move indicator icon appears to show where the column will be placed. Dropping the header into the new position changes the column’s index, and the grid updates the order seamlessly. This makes it easier to organize and analyze data, especially when working with large datasets.
 
-Here's an example for column reordering in your Grid component:
+To enable column reordering in the Grid, set the [allowReordering](https://ej2.syncfusion.com/react/documentation/api/grid#allowreordering) property to `true` and inject the `Reorder` module. Once enabled, columns can be reordered by:
+
+- Selecting a column header.
+- Dragging it to the desired position.
+- Dropping it at the new position to update the order.
+
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -31,16 +36,16 @@ Here's an example for column reordering in your Grid component:
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/column-cs11" %}
+{% previewsample "page.domainurl/code-snippet/grid/column-cs11" %}
 
->* You can customize the appearance of the column headers during drag and drop by using the [columnDrag](https://ej2.syncfusion.com/react/documentation/api/grid/#columndrag) and [columnDrop](https://ej2.syncfusion.com/react/documentation/api/grid/#columndrop) events.
->* When columns are reordered, the position of the corresponding column data will also be changed. As a result, you should ensure that any additional code or logic that relies on the order of the column data is updated accordingly.
+> * The appearance of column headers during drag-and-drop operations can be customized by using the [columnDrag](https://ej2.syncfusion.com/react/documentation/api/grid#columndrag) and [columnDrop](https://ej2.syncfusion.com/react/documentation/api/grid#columndrop) events.
+> * When columns are reordered, the position of the corresponding column data also changes. Ensure that any additional code or logic that relies on the column order is updated accordingly.
 
-## Prevent reordering for particular column
+## Prevent reordering for specific columns
 
-By default, all columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid can be reordered by dragging and dropping their headers to another location within the grid. However, there may be certain columns that you do not want to be reordered. In such cases, you can set the [allowReordering](https://ej2.syncfusion.com/react/documentation/api/grid/column/#allowreordering) property of that particular column to **false**. Here is an example that demonstrates how to prevent reordering for a specific column:
+By default, all columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid can be reordered when the grid-level [allowReordering](https://ej2.syncfusion.com/react/documentation/api/grid#allowreordering) property is set to `true`. However, there may be specific columns that should remain in a fixed position and not be reordered. To prevent reordering for a particular column, set the [allowReordering](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowreordering) property of that column to `false` in the column definition.
 
-In this example, the **ShipCity** column is prevented from being reordered by setting the `allowReordering` property to **false**.
+In the following example, the "ShipCity" column is prevented from being reordered by setting its [`allowReordering`](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowreordering) property to `false`:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -57,24 +62,39 @@ In this example, the **ShipCity** column is prevented from being reordered by se
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/reorder-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/reorder-cs1" %}
 
-## Reorder columns externally
+## Reorder columns programmatically
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid React allows you to reorder columns externally, which means that using methods you can programmatically move columns around within the grid, based on their index or target index, or by using their field name.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides several methods to reorder columns programmatically without interaction. These methods allow moving columns based on their index, target index, or field name, providing flexibility in column arrangement based on application logic or preferences.
 
-> When reordering columns externally, you must set the [allowReordering](https://ej2.syncfusion.com/react/documentation/api/grid/column/#allowreordering) property of the grid to **true**.
+The Grid provides the following methods for programmatic column reordering:
 
-### Reorder column based on index
+| Method | Description | Parameters |
+|--------|-------------|------------|
+| [reorderColumnByIndex](https://ej2.syncfusion.com/react/documentation/api/grid#reordercolumnbyindex) | Reorders a column based on its current index to a new index position. | `fromIndex`, `toIndex` |
+| [reorderColumnByTargetIndex](https://ej2.syncfusion.com/react/documentation/api/grid#reordercolumnbytargetindex) | Reorders single or multiple columns to a specific target index. | `fieldName`, `toIndex` |
+| [reorderColumns](https://ej2.syncfusion.com/react/documentation/api/grid#reordercolumns) | Reorders columns based on their field names. | `fromFName`, `toFName` |
+| [reorderColumnByModel](https://ej2.syncfusion.com/react/documentation/api/grid#reordercolumnbymodel) | Reorders columns using complete column model objects (ideal for stacked headers). | `fromColumn`, `toColumn` |
 
-You can use the [reorderColumnByIndex](https://ej2.syncfusion.com/react/documentation/api/grid/#reordercolumnbyindex) method to reorder columns based on their current index. This method takes two arguments:
+> Column positions are counted starting from "0". The first column has an index of "0", the second column has an index of "1", and so on.
 
-* **fromIndex** : Current index of the column to be reordered
-* **toIndex** : New index of the column after the reordering
+### Reorder columns by index
 
-Here is an example of how to use the `reorderColumnByIndex` method:
+The [reorderColumnByIndex](https://ej2.syncfusion.com/react/documentation/api/grid#reordercolumnbyindex) method reorders columns by moving them from their current index to a new index. This is useful when the exact positions of the columns are known, as it allows direct control over the column order without using drag-and-drop.
 
-In this example, we are moving the column at index **1** to index **3**.
+**Method signature:**
+```typescript
+reorderColumnByIndex(fromIndex: number, toIndex: number): void
+```
+
+**Parameters:**
+
+* **fromIndex**: The current index of the column to move.
+* **toIndex**: The new index where the column should be moved.
+
+
+In this example, the "Customer ID" column, located at index 1, is moved to index 3 when clicking the "Reorder Column by Index" button.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -91,16 +111,22 @@ In this example, we are moving the column at index **1** to index **3**.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/reorder-cs2" %}
+{% previewsample "page.domainurl/code-snippet/grid/reorder-cs2" %}
 
-### Reorder column based on target index
+### Reorder columns by target index
 
-You can also use the [reorderColumnByTargetIndex](https://ej2.syncfusion.com/react/documentation/api/grid/#reordercolumnbytargetindex) method to reorder single column or multiple columns based on the target index. This method takes two arguments:
+The [reorderColumnByTargetIndex](https://ej2.syncfusion.com/react/documentation/api/grid#reordercolumnbytargetindex) method enables reordering of one or more columns to a specific target index. This method is particularly useful when moving columns based on their field names rather than their current index positions.
 
-* **fieldName**: Field name of the column to be reordered
-* **toIndex**: New index of the column after the reordering
+**Method signature:**
+```typescript
+reorderColumnByTargetIndex(fieldName: string | string[], toIndex: number): void
+```
 
-Here is an example of how to use the `reorderColumnByTargetIndex` method to reorder single column and multiple columns based on target index:
+**Parameters:**
+* **`fieldName`**: The field name (or array of field names) of the column(s) to be reordered.
+* **`toIndex`**: The target index where the column(s) should be moved.
+
+The following example demonstrates the use of the `reorderColumnByTargetIndex` method to reorder both single and multiple columns:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -117,16 +143,22 @@ Here is an example of how to use the `reorderColumnByTargetIndex` method to reor
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/reorder-cs3" %}
+{% previewsample "page.domainurl/code-snippet/grid/reorder-cs3" %}
 
-### Reorder column based on field names
+### Reorder columns by field names
 
-The [reorderColumns](https://ej2.syncfusion.com/react/documentation/api/grid/#reordercolumns) method of the Grid allows you to reorder single column or list of columns based on their field names. This method takes two arguments: 
+The [reorderColumns](https://ej2.syncfusion.com/react/documentation/api/grid#reordercolumns) method provides a way to reorder columns using their field names instead of index positions. This method is particularly useful when the exact column positions are unknown, but the field names are available. By specifying the source column field name and the target column field name, the grid updates the order automatically.
 
-* **fromFName**: The field name of the column you want to move.
-* **toFName**: The field name of the column you want to move the column to.
+**Method signature:**
+```typescript
+reorderColumns(fromFName: string | string[], toFName: string): void
+```
 
-Here is an example of how to use the `reorderColumns` method to reorder single column and multiple columns based on field names:
+**Parameters:**
+* **`fromFName*`*: The field name (or array of field names) of the column(s) to be moved.
+* **`toFName`**: The field name of the target column before which the source column(s) should be placed.
+
+The following example demonstrates the use of the `reorderColumns` method to reorder both single and multiple columns based on field names by clicking the respective buttons.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -143,20 +175,33 @@ Here is an example of how to use the `reorderColumns` method to reorder single c
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/column-cs13" %}
+{% previewsample "page.domainurl/code-snippet/grid/column-cs13" %}
 
-### Reorder columns using the column model (ideal for stacked headers)
+### Reorder columns using column model
 
-Previously, column reordering in the Grid was handled using methods like [reorderColumnByIndex](https://ej2.syncfusion.com/react/documentation/api/grid/#reordercolumnbyindex), [reorderColumns](https://ej2.syncfusion.com/react/documentation/api/grid/#reordercolumns), and [reorderColumnByTargetIndex](https://ej2.syncfusion.com/react/documentation/api/grid/#reordercolumnbytargetindex). These methods allowed reordering based on field names or index positions and were suitable for simple, flat column structures.
+The [reorderColumnByModel](https://ej2.syncfusion.com/react/documentation/api/grid#reordercolumnbymodel) method provides an advanced way to reorder columns by working with complete column model objects. This method is specifically designed to handle complex column structures, particularly [stacked header columns](https://ej2.syncfusion.com/react/documentation/grid/columns/column-headers#stacked-header), but it also works seamlessly with normal column configurations. While methods like `reorderColumnByIndex`, `reorderColumns`, and `reorderColumnByTargetIndex` are suitable for simple, flat column structures, `reorderColumnByModel` is the preferred approach when working with hierarchical column arrangements.
 
-To reorder stacked header columns, use the `reorderByColumnModel` method. It enables reordering by passing complete column model objects. This method is specifically designed to support [stacked header columns](https://ej2.syncfusion.com/react/documentation/grid/columns/column-headers#stacked-header), but it also works with normal column configurations.
+**Method signature:**
+```typescript
+reorderColumnByModel(fromColumn: Column, toColumn: Column): void
+```
 
-The `reorderColumnByModel` method accepts two arguments:
+**Parameters:**
+* **`fromColumn`**: The column object to move.
+* **`toColumn`**: The target column object before which the `fromColumn` should be placed.
 
-* **fromColumn**: The column object that you want to move.
-* **toColumn**: The target column object before which the **fromColumn** should be placed.
+**When to use this method:**
 
-In this example, **Order Details** is moved before **Customer Name**, and **Ship Country** is moved before **Ship Name** within **Ship Details**, showing how `reorderColumnByModel` method reorders both normal and stacked header columns using a button click.
+- Moving entire column groups.
+- Handling complex column hierarchies.
+- Working directly with column objects rather than field names or indices.
+
+In this example:
+
+- "Order Details" stacked header is moved before "Customer ID".
+- "Ship Country" is moved before "Ship Name" within the "Ship Details" stacked header.
+
+This shows the method handling reordering of both normal and stacked header columns.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -173,19 +218,19 @@ In this example, **Order Details** is moved before **Customer Name**, and **Ship
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/reorder-cs4" %}
+{% previewsample "page.domainurl/code-snippet/grid/reorder-cs4" %}
 
-## Reorder events
+## Column reorder events
 
-When reordering columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component, you may want to take some specific action in response to the drag and drop events. To handle these events, you can define event handlers for the following events:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provides events that are triggered during different stages of the column reordering process. These events make it possible to run custom actions or show the current status while columns are being reordered through drag-and-drop.
 
-1.The [columnDragStart](https://ej2.syncfusion.com/react/documentation/api/grid/#columndragstart) event triggers when column header element drag (move) starts.
+The Grid component supports the following column reorder events:
 
-2.The [columnDrag](https://ej2.syncfusion.com/react/documentation/api/grid/#columndrag) event triggers when column header element is dragged (moved) continuously.
-
-3.The [columnDrop](https://ej2.syncfusion.com/react/documentation/api/grid/#columndrop) event triggers when a column header element is dropped on the target column.
-
-In the following example, we have implemented the `columnDragStart`, `columnDrag`, and `columnDrop` events in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component.
+| Event | Description |
+|-------|-------------|
+| [columnDragStart](https://ej2.syncfusion.com/react/documentation/api/grid#columndragstart) | Triggers when column header element drag starts. |
+| [columnDrag](https://ej2.syncfusion.com/react/documentation/api/grid#columndrag) | Triggers continuously while a column header is being dragged. |
+| [columnDrop](https://ej2.syncfusion.com/react/documentation/api/grid#columndrop) | Triggered when a column header is dropped into its new position. |
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -202,4 +247,4 @@ In the following example, we have implemented the `columnDragStart`, `columnDrag
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/column-cs14" %}
+{% previewsample "page.domainurl/code-snippet/grid/column-cs14" %}

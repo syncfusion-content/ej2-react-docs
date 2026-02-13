@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create a routing sample in React Grid component | Syncfusion
+title: React Grid - Create a routing sample | Syncfusion
 description: Learn here all about Creating a Routing sample in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Create a Routing sample
 platform: ej2-react
@@ -8,25 +8,29 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to create a routing sample in React Grid component
+# Routing sample in React Grid Component
 
-[React Router](https://reactrouter.com/en/main) is a popular routing library which is widely used for building single-page applications (SPA's) with React.  It provides a way to handle navigation and routing in your application, allowing you to define different routes and render different components based on the current URL.
+React Router is a popular routing library for building single-page applications (SPAs) in React. It enables seamless navigation between different views or components based on the URL, without requiring full page reloads.
+
+This guide outlines the steps to integrate routing in a React application that uses the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component.
 
 ## Steps to create a routing sample in React Grid component
 
-**1. Creating a React project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component:**
+1. Create a React Application and integrate the Grid component:
 
-A simple React project can be created by following the steps under [getting started](https://ej2.syncfusion.com/react/documentation/grid/getting-started) section of this documentation. Run the following command in the terminal to install React Router.
+Begin by setting up a basic React project and integrating the Syncfusion Grid component. Follow the [getting started](https://ej2.syncfusion.com/react/documentation/grid/getting-started) guide for detailed instructions.
+
+Next, install React Router by running:
 
 ```
 npm install react-router-dom
 ```
 
-To use React routing in your application, you need to create at least two components that can be navigated from one to another.
+To demonstrate routing, at least two components (such as **Home**, **About**, and **Contact**) are required so that navigation can occur between them.
 
-**2. Setting up Router:**
+2. Configure the router:
 
-Import the <BrowserRouter> component from the react-router-dom library and wrap it around your list of <Routes> components
+Import the necessary routing components from `react-router-dom` and wrap your application's route definitions with the `<BrowserRouter>` component:
 
 ```
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -43,9 +47,11 @@ const App = () => {
 export default App;
 ```
 
-**3. Defining Routes:**
+3. Defining routes:
 
- Inside your application, you can define different routes using the <Route> component. Each route represents a URL pattern and the component to render when that pattern matches.
+Use the `<Route>` component to map specific URL paths to corresponding React components:
+
+Inside your application, you can define different routes using the <Route> component. Each route represents a URL pattern and the component to render when that pattern matches.
 
 ```
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -65,9 +71,9 @@ const App = () => {
 export default App;
 ```
 
-**4. Navigation between Routes:**
+4. Navigation between Routes:
 
- You can navigate between routes using the <Link> component. It renders an anchor tag that triggers a route change when clicked, without causing a full page to reload.
+Use the `<Link>` component to create navigation links between routes. This avoids full page reloads and ensures a smooth experience:
 
 ```
 import { Link } from 'react-router-dom';
@@ -88,4 +94,5 @@ const Header = () => {
 
 export default Header;
 ```
-[Here](https://github.com/SyncfusionExamples/DataGrid-routing-react), you can find the React Routing sample with Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid.
+
+A complete working example of React routing with the Syncfusion<sup style="font-size:70%">&reg;</sup> Data Grid can be explored on [GitHub](https://github.com/SyncfusionExamples/DataGrid-routing-react):

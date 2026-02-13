@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Tool bar in React Grid component | Syncfusion
-description: Learn here all about Tool bar in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
-control: Tool bar 
+title: React Grid - Toolbar | Syncfusion
+description: Learn about toolbar in Syncfusion React Grid (EJ2) to add, edit, and delete records, export and import data, and customize toolbar items.
+control: Toolbar
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Toolbar in React Grid component
+# Toolbar in React Grid Component
 
-The toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component offers several general use cases to enhance data manipulation and overall experience. Actions such as adding, editing, and deleting records within the grid can be performed, providing efficient data manipulation capabilities. The toolbar also facilitates data export and import functionality, allowing you to generate downloadable files in formats like Excel, CSV, or PDF. 
+The toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component offers several general use cases to enhance data manipulation and overall experience. Actions such as adding, editing, and deleting records within the grid can be performed, providing efficient data manipulation capabilities. The toolbar also facilitates data export and import functionality, allowing users to generate downloadable files in formats like Excel, CSV, or PDF.
 
-To enable the toolbar functionality, you need to inject the **Toolbar** module in the grid. This service provides the necessary methods to interact with the toolbar items. The toolbar can be customized with built-in toolbar items or custom toolbar items using the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbar) property. The `toolbar` property accepts an array of strings representing the built-in toolbar items or an array of [ItemModel](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel/) objects for custom toolbar items.
+To enable the toolbar functionality, you need to inject the `Toolbar` module in the grid. This service provides the necessary methods to interact with the toolbar items. The toolbar can be customized with built-in toolbar items or custom toolbar items using the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property. The `toolbar` property accepts an array of strings representing the built-in toolbar items or an array of [ItemModel](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel) objects for custom toolbar items.
 
-The following example demonstrates how to enable toolbar items in the grid.
+The following example demonstrates enabling toolbar items in the Grid:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -35,11 +35,11 @@ The following example demonstrates how to enable toolbar items in the grid.
 
 ## Enable or disable toolbar items
 
-Enabling or disabling toolbar items dynamically in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid is to provide control over the availability of specific functionality based on application logic. This feature allows you to customize the toolbar based on various conditions or individuals interactions. 
+Enabling or disabling toolbar items dynamically in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid is to provide control over the availability of specific functionality based on application logic. This powerful capability allows toolbar customization based on various conditions or user interactions.
 
-You can enable or disable toolbar items dynamically by using the [enableToolbarItems](https://ej2.syncfusion.com/react/documentation/api/grid/#enabletoolbaritems) method. This method allows you to control the availability of specific toolbar items based on your application logic.
+Toolbar items can be enabled or disabled dynamically by using the [enableToolbarItems](https://ej2.syncfusion.com/react/documentation/api/grid#enabletoolbaritems) method. This method allows control over the availability of specific toolbar items based on application logic requirements.
 
-In the following example, the [EJ2 Toggle Switch Button component](https://ej2.syncfusion.com/react/documentation/switch/getting-started) is added to enable and disable the toolbar items using `enableToolbarItems` method. When the switch is toggled, the [change](https://ej2.syncfusion.com/react/documentation/api/switch/#change) event is triggered and the toolbar items are updated accordingly.
+In the following example, the [EJ2 Toggle Switch Button component](https://ej2.syncfusion.com/react/documentation/switch/getting-started) is added to enable and disable the toolbar items using `enableToolbarItems` method. When the switch is toggled, the [change](https://ej2.syncfusion.com/react/documentation/api/switch#change) event is triggered and the toolbar items are updated accordingly.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -63,7 +63,7 @@ function App() {
     }
 
     const onChange = (args) => {
-        grid.toolbarModule.enableItems(['Grid_Collapse', 'Grid_Expand'], args.checked); // Enable or Disable toolbar items.
+        grid.toolbarModule.enableItems(['Grid_Collapse', 'Grid_Expand'], args.checked); // Enable or disable toolbar items.
     }
     return (<div>
         <label style={{ padding: "30px 17px 0 0" }}> Enable or disable toolbar items </label>
@@ -73,7 +73,7 @@ function App() {
                 <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
                 <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />
                 <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
-                <ColumnDirective field='ShipName' headerText='ShipName' width='150' />
+                <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
             </ColumnsDirective>
             <Inject services={[Group, Toolbar]} />
         </GridComponent></div>)
@@ -103,7 +103,7 @@ function App() {
   }
 
   const onChange = (args: ChangeEventArgs) => {
-    (grid as GridComponent).toolbarModule.enableItems(['Grid_Collapse', 'Grid_Expand'], !args.checked); // Enable or Disable toolbar items.
+    (grid as GridComponent).toolbarModule.enableItems(['Grid_Collapse', 'Grid_Expand'], !args.checked); // Enable or disable toolbar items.
   }
   return (<div>
     <label style={{ padding: "30px 17px 0 0" }}> Enable or disable toolbar items </label>
@@ -113,7 +113,7 @@ function App() {
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />
         <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
-        <ColumnDirective field='ShipName' headerText='ShipName' width='150' />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
       </ColumnsDirective>
       <Inject services={[Group, Toolbar]} />
     </GridComponent></div>)
@@ -133,11 +133,11 @@ export default App;
 
 ## Add toolbar at the bottom of grid
 
-By adding the toolbar at the bottom of the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, important actions and functionality remain consistently visible and easily accessible, providing easy access to actions and operations without the need for scrolling.
+By default, the toolbar is placed at the top of the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid. Adding the toolbar at the bottom of the Grid keeps important actions and functionality consistently visible and easily accessible, eliminating the need for scrolling to locate toolbar operations.
 
-To add the toolbar at the bottom of the Grid, you can utilize the [created](https://ej2.syncfusion.com/react/documentation/api/grid/#created) event. By handling this event, you can dynamically insert the toolbar items at the desired position in the grid layout.
+To add the toolbar at the bottom of the grid, use the [created](https://ej2.syncfusion.com/react/documentation/api/grid#created) event. By handling this event, the toolbar items can be dynamically inserted at the desired position in the grid layout.
 
-The following example shows how to add the toolbar items at the bootom using `created` event of the grid.
+The following example shows adding toolbar items at the bottom using the Grid's `created` event.
  
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -158,7 +158,7 @@ The following example shows how to add the toolbar items at the bootom using `cr
 
 ## Customize toolbar buttons using CSS
 
-Customizing toolbar buttons in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid using CSS involves modifying the appearance of built-in toolbar buttons by applying CSS styles. This provides a flexible and customizable way to enhance the visual presentation of the toolbar and create a cohesive interface.
+Enhance the visual presentation of toolbar buttons in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid by modifying their appearance with CSS styles. This flexible approach creates a cohesive user interface tailored to application design requirements.
 
 The appearance of the built-in toolbar buttons can be modified by applying the following CSS styles.
 
@@ -169,7 +169,7 @@ The appearance of the built-in toolbar buttons can be modified by applying the f
 }
 ```
 
-The following example demonstrates how to change the background color of the `Add`, `Edit`, `Delete`, `Update` and `Cancel` toolbar buttons by applying CSS styles
+The following example demonstrates changing the background color of the `Add`, `Edit`, `Delete`, `Update`, and `Cancel` toolbar buttons by applying CSS styles.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

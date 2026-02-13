@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Context Menu in React Grid Component | Syncfusion
-description: Learn here all about context menu support in Syncfusion React Grid component, it's elements, and more.
-control: Context menu 
+description: Learn about context menu support in the Syncfusion React Grid component, its items, customization options, and behavior.
+control: Context menu
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,20 +10,19 @@ domainurl: ##DomainURL##
 
 # Context Menu in React Grid Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component comes equipped with a context menu feature, which is triggered when a user right-clicks anywhere within the grid. This feature serves to enrich the user experience by offering immediate access to a variety of supplementary actions and operations that can be executed on the data displayed in the grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component includes a context menu that appears on right-click anywhere within the grid. The context menu provides quick access to actions such as sorting, filtering, and editing without navigating away from the grid.
 
-In essence, the context menu provides a convenient and efficient way for users to interact with and manipulate the grid's content, enabling them to perform tasks such as sorting, filtering, editing, or any other relevant actions without the need for navigating through the grid's interface. This user-friendly feature streamlines the overall usability of the React Grid, making it a powerful tool for data management and manipulation.
+Enable the context menu by configuring the grid's [contextMenuItems](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#contextmenuitems) property. The property accepts the default set of menu items or a custom collection of objects.
 
-To activate the context menu within the grid, you have an option to configure the grid's [contextMenuItems](https://ej2.syncfusion.com/react/documentation/api/grid/#contextmenuitems) property. You can set this property to either include the default context menu items or define your own custom context menu items, tailoring the menu options to suit your specific needs. This customization allows you to enhance the grid's functionality by providing context-sensitive actions for interacting with your data.
-   
-To use the context menu, you need to inject the **ContextMenu** module in the grid.
+The `ContextMenu` module must be injected into the grid for the context menu to function.
 
-The context menu is triggered when you right-click on different areas of the grid, including:
-* Header: When you right-click on the grid's header section.
-* Content: When you right-click on the grid's main content area.
-* Pager: When you right-click on the pager section.
+The context menu appears when right-clicking different areas of the grid, including:
 
-The context menu items that appear vary depending on the area you have clicked. For instance, the items available in the context menu when clicking on the header area differ from those in the content area or pager.
+- **Header**: the grid header section.
+- **Content**: the main grid content area.
+- **Pager**: the pager section.
+
+Context menu items vary by the clicked area; header items differ from content or pager items.
 
 The default context menu items in the header area of the grid are as follows:
 
@@ -58,8 +57,6 @@ Items| Description
 `LastPage` | Navigate to the last page of the grid.
 `NextPage` | Navigate to the next page of the grid.
 
-The following example demonstrates how to enable context menu feature in the grid.
-
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/context-menu-cs1/app/App.jsx %}
@@ -79,13 +76,9 @@ The following example demonstrates how to enable context menu feature in the gri
 
 ## Custom context menu items
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid empowers you to enhance your user experience by incorporating custom context menu items into the default context menu. These customized options enable you to tailor the context menu to meet the unique requirements of your application.
- 
-To incorporate custom context menu items in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, you can achieve this by specifying the [contextMenuItems](https://ej2.syncfusion.com/react/documentation/api/grid/#contextmenuitems) property as a collection of [contextMenuItemModel](https://ej2.syncfusion.com/react/documentation/api/grid/contextMenuItemModel/). This allows you to define and customize the appearance and behavior of these additional context menu items according to your requirements.
- 
-Furthermore, you can assign actions to these custom items by utilizing the [contextMenuClick](https://ej2.syncfusion.com/react/documentation/api/grid/#contextmenuclick) event. This event provides you with the means to handle user interactions with the custom context menu items, enabling you to execute specific actions or operations when these items are clicked.
- 
-The following example demonstrates how to add custom context menu items in the Grid component.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports adding custom context menu items to the default menu.
+
+Custom items are defined by setting the `contextMenuItems` property to a collection of [contextMenuItemModel](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#contextmenumodule) objects. Menu item actions are handled through the [contextMenuClick](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#contextmenuclick) event.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -106,13 +99,9 @@ The following example demonstrates how to add custom context menu items in the G
 
 ## Show context menu on left click
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides the ability to show the context menu items on a left mouse click instead of the default right mouse click action. 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid can display the context menu on a left mouse click instead of the default right-click.
 
-This can be achieved by using the [created](https://ej2.syncfusion.com/react/documentation/api/grid/#created) event and the context menu's `beforeOpen` event of the Grid.
-
-By using the `onclick` event listener of the Grid, you can obtain the clicked position values through the `useEffect` method. The obtained positions are then sent to the `open` method of the context menu within the `onclick` event of the Grid. Additionally, the default action of right-clicking to open the context menu items items is prevented by utilizing the `created` event of the Grid.
-
-The following example demonstrates how to show context menu on left click using `created` event.
+Implementing left-click behaviour typically involves handling the Grid's [created](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#created) event and the context menu's [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#beforeopen) event. Capture the click coordinates via the `onclick` listener and pass them to the context menu's `open` method so the menu opens at the clicked location. Prevent the default right-click behaviour where necessary, for example within the `created` handler.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -131,17 +120,13 @@ The following example demonstrates how to show context menu on left click using 
 
  {% previewsample "page.domainurl/code-snippet/grid/context-menu-cs3" %}
 
-> You can hide or show an item in context menu for specific area inside of grid by defining the [target](https://ej2.syncfusion.com/react/documentation/api/grid/contextMenuItemModel/#target) property.
+> Control the visibility of a context menu item for a particular grid area by setting the `target` property.
 
 ## Enable or disable context menu items
 
-With the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, you have the ability to manage the activation or deactivation of both default and custom context menu items. This feature provides you with the flexibility to tailor the behavior of context menu items to suit specific conditions or individual interactions within your application.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports enabling or disabling default and custom context menu items via the context menu's [enableItems](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#enableitems) method. Call `enableItems` with `true` to enable items or `false` to disable them.
 
-By enabling or disabling context menu items, you can ensure that certain options are available or restricted based on the context of the data or the needs of your users. This level of control allows you to create a more dynamic and user-centric experience with the grid, aligning it with your application's requirements and enhancing usability.
-
-This can be achieved using the [enableItems](https://ej2.syncfusion.com/react/documentation/api/context-menu/#enableitems) method of the context menu. By setting the enable parameter in the enableItems method to **true**, you can enable context menu items, and by setting it to **false**, you can disable them. Based on your specific condition or requirements, you can enable or disable the context menu item using the `enableItems` method.
-
-In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component is added to enable and disable the context menu items using `enableItems` method. When the switch is toggled, the [change](https://ej2.syncfusion.com/react/documentation/api/switch/#change) event is triggered, and the **Copy** items is updated accordingly. 
+The example below uses the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component to toggle a menu item. When the switch changes state, the `change` event updates the `Copy` item by calling `enableItems`.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -167,7 +152,7 @@ function App() {
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='100' textAlign='Right' />
           <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
-          <ColumnDirective field='Freight' headerText='Freight' format='C' width='150' />
+          <ColumnDirective field='Freight' headerText='Freight' format='C' width='150' textAlign='Right' />
           <ColumnDirective field='ShipCity' headerText='Ship City' width='120' />
         </ColumnsDirective>
         <Inject services={[ContextMenu, Page, Edit]} />
@@ -201,7 +186,7 @@ function App() {
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='100' textAlign='Right' />
           <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
-          <ColumnDirective field='Freight' headerText='Freight' format='C' width='150' />
+          <ColumnDirective field='Freight' headerText='Freight' format='C' width='150' textAlign='Right'/>
           <ColumnDirective field='ShipCity' headerText='Ship City' width='120' />
         </ColumnsDirective>
         <Inject services={[ContextMenu, Page, Edit]} />
@@ -224,11 +209,9 @@ export default App;
 
 ## Show or hide context menu items
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides the flexibility to show or hide both default and custom context menu items. This feature allows you to customize the context menu items based on various conditions or individuals interactions.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports showing or hiding default and custom context menu items using the context menu's [showItems](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#showitems) and [hideItems](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#hideitems) methods. Pass the target items as an argument to these methods.
 
-This can be achieved using the [showItems](https://ej2.syncfusion.com/react/documentation/api/context-menu/#showitems) and [hideItems](https://ej2.syncfusion.com/react/documentation/api/context-menu/#hideitems) methods of the context menu by specifying the item you want to show or hide as an argument. 
-
-In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component is added to show or hide the context menu items using `showItems` and `hideItems` methods. When the switch is toggled, the [change](https://ej2.syncfusion.com/react/documentation/api/switch/#change) event is triggered, and the **Copy** items is updated accordingly. 
+The example below demonstrates the use of the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component. Its `change` event triggers either `showItems` or `hideItems` to modify the `Edit Record` and `Delete Record` items accordingly.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -258,7 +241,7 @@ function App() {
         <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='100' textAlign='Right' />
           <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
-          <ColumnDirective field='Freight' headerText='Freight' format='C' width='150' />
+          <ColumnDirective field='Freight' headerText='Freight' format='C' width='150' textAlign='Right' />
           <ColumnDirective field='ShipCity' headerText='Ship City' width='120' />
         </ColumnsDirective>
         <Inject services={[ContextMenu, Page, Edit]} />
@@ -296,7 +279,7 @@ function App() {
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='100' textAlign='Right' />
           <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
-          <ColumnDirective field='Freight' headerText='Freight' format='C' width='150' />
+          <ColumnDirective field='Freight' headerText='Freight' format='C' width='150' textAlign='Right' />
           <ColumnDirective field='ShipCity' headerText='Ship City' width='120' />
         </ColumnsDirective>
         <Inject services={[ContextMenu, Page, Edit]} />

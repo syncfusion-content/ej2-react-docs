@@ -18,8 +18,11 @@ function App() {
     }
   }
   return (
-    <div><label style={{ padding: "10px 10px" }}>Hide or show drop area</label>
-      <SwitchComponent change={onSwitchChange}></SwitchComponent>
+    <div>
+      <div style={{display: "flex", margin: "10px"}}>
+        <label style={{ marginRight: "5px" }}>Hide or show drop area</label>
+        <SwitchComponent change={onSwitchChange}></SwitchComponent>
+      </div>
       <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={315}>
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
@@ -28,6 +31,8 @@ function App() {
           <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
         </ColumnsDirective>
         <Inject services={[Group]} />
-      </GridComponent ></div>)
+      </GridComponent >
+    </div>
+  )
 };
 export default App;

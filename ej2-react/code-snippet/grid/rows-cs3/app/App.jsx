@@ -14,8 +14,8 @@ function App() {
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right'/>
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='140'/>
-        <ColumnDirective field='Freight' headerText='Freight' width='120' format="C"/>
-        <ColumnDirective field='OrderDate' headerText='OrderDate' width='140' format='yMd'/>
+        <ColumnDirective field='Freight' headerText='Freight' width='120' format="C" textAlign="Right"/>
+        <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' textAlign="Right"/>
       </ColumnsDirective>
     </GridComponent>
   </div>);

@@ -13,7 +13,7 @@ function App() {
   }
   return (
     <div>
-      <ButtonComponent onClick={clearGroup}>Clear Grouping</ButtonComponent>
+      <ButtonComponent style={{ marginBottom:"5px" }} onClick={clearGroup}>Clear Grouping</ButtonComponent>
       <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={315}>
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
@@ -22,6 +22,8 @@ function App() {
           <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
         </ColumnsDirective>
         <Inject services={[Group]} />
-      </GridComponent ></div>)
+      </GridComponent >
+    </div>
+  )
 };
 export default App;

@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Exporting templates in React Grid component | Syncfusion
-description: Learn here all about Exporting grids with templates in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Exporting templates | Syncfusion
+description: Learn here all about PDF exporting grid with column, detail and group caption templates in Syncfusion React Grid.
 control: Exporting grid with templates
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Exporting grid with templates in React Grid control
+# Exporting with Templates in React Grid Component
 
-The grid offers the option to export the column, detail, and caption templates to a PDF document. The template contains images, hyperlinks, and customized text.
+The React Grid component allows exporting column, detail, and caption templates to PDF documents. Exported templates can include images, hyperlinks, and customized text formatting.
 
 ## Exporting with column template
 
-The PDF export functionality allows you to export Grid columns that include images, hyperlinks, and custom text to a PDF document.
+The PDF export functionality allows exporting Grid columns that include images, hyperlinks, and custom text to a PDF document. The [pdfQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#pdfquerycellinfo) event enables customization of cell content during export.
 
-In the following sample, the hyperlinks and images are exported to PDF using [hyperlink](https://ej2.syncfusion.com/react/documentation/api/grid/pdfQueryCellInfoEventArgs/#hyperlink) and [image](https://ej2.syncfusion.com/react/documentation/api/grid/pdfQueryCellInfoEventArgs/#image) properties in the [pdfQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/#pdfquerycellinfo) event.
+The following sample demonstrates exporting hyperlinks and images to PDF using the [hyperlink](https://ej2.syncfusion.com/react/documentation/api/grid/pdfQueryCellInfoEventArgs#hyperlink) and [image](https://ej2.syncfusion.com/react/documentation/api/grid/pdfQueryCellInfoEventArgs#image) properties in the `pdfQueryCellInfo` event.
 
-> PDF Export supports base64 string to export the images.
+> The PDF export supports base64 strings for images.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -41,20 +41,20 @@ In the following sample, the hyperlinks and images are exported to PDF using [hy
 
 ## Exporting with detail template
 
-By default, the grid will export the parent grid with expanded detail rows alone. Change the exporting option by using the `PdfExportProperties.hierarchyExportMode` property. The available options are:
+By default, the Grid exports the parent grid with expanded detail rows. Control this behavior by setting the `PdfExportProperties.hierarchyExportMode` property. The available options are:
 
 | Mode     | Behavior    |
 |----------|-------------|
-| Expanded | Exports the parent grid with expanded detail rows. |
-| All      | Exports the parent grid with all the detail rows. |
-| None     | Exports the parent grid alone. |
+| `Expanded` | Exports the parent grid with expanded detail rows. |
+| `All`      | Exports the parent grid with all detail rows. |
+| `None`     | Exports the parent grid alone. |
 
-The detail rows in the exported PDF can be customized or formatted using the [exportDetailTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/#exportdetailtemplate) event. In this event, the detail rows of the PDF document are formatted in accordance with their parent row details.
+The detail rows in the exported PDF can be customized and formatted using the [exportDetailTemplate](https://ej2.syncfusion.com/react/documentation/api/grid#exportdetailtemplate) event. This event formats detail rows based on parent row data.
 
-In the following sample, the detail row content is formatted by specifying the [columnCount](https://ej2.syncfusion.com/react/documentation/api/grid/detailTemplateProperties/#columncount), [columnHeader](https://ej2.syncfusion.com/react/documentation/api/grid/detailTemplateProperties/#columnheader), and [rows](https://ej2.syncfusion.com/react/documentation/api/grid/detailTemplateProperties/#rows) properties using its [parentRow](https://ej2.syncfusion.com/react/documentation/api/grid/exportDetailTemplateEventArgs/#parentrow) details. This allows for the creation of detail rows in the PDF document. Additionally, custom styles can be applied to specific cells using the [style](https://ej2.syncfusion.com/react/documentation/api/grid/detailTemplateCell/#style) property.
+The following sample configures detail row formatting using the [columnCount](https://ej2.syncfusion.com/react/documentation/api/grid/detailTemplateProperties#columncount), [columnHeader](https://ej2.syncfusion.com/react/documentation/api/grid/detailTemplateProperties#columnheader), and [rows](https://ej2.syncfusion.com/react/documentation/api/grid/detailTemplateProperties#rows) properties using its [parentRow](https://ej2.syncfusion.com/react/documentation/api/grid/exportDetailTemplateEventArgs#parentrow) details. This allows for the creation of detail rows in the PDF document. Custom cell styling is applied using the [style](https://ej2.syncfusion.com/react/documentation/api/grid/detailTemplateCell#style) property.
 
-> If `columnCount` is not provided, the columns in the detail row of the PDF grid will be generated based on the count of the `columnHeader`/`rows` first row's [cells](https://ej2.syncfusion.com/react/documentation/api/grid/detailTemplateRow/#cells).
-> When using [rowSpan](https://ej2.syncfusion.com/react/documentation/api/grid/detailTemplateCell/#rowspan), it is Essential<sup style="font-size:70%">&reg;</sup> to provide the cell's [index](https://ej2.syncfusion.com/react/documentation/api/grid/detailTemplateCell/#index) for proper functionality.
+> If `columnCount` is not provided, the columns in the detail row of the PDF grid will be generated based on the count of the `columnHeader`/`rows` first row's [cells](https://ej2.syncfusion.com/react/documentation/api/grid/detailTemplateRow#cells).
+> When using [rowSpan](https://ej2.syncfusion.com/react/documentation/api/grid/detailTemplateCell#rowspan), it is Essential<sup style="font-size:70%">&reg;</sup> to provide the cell's [index](https://ej2.syncfusion.com/react/documentation/api/grid/detailTemplateCell#index) for proper functionality.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -531,9 +531,9 @@ export default App;
 
 ## Exporting with caption template
 
-The PDF export feature enables exporting of Grid with a caption template to an PDF document.
+The PDF export feature enables exporting Grid with caption templates to PDF documents. The [exportGroupCaption](https://ej2.syncfusion.com/react/documentation/api/grid#exportgroupcaption) event allows customization of caption text during export.
 
-In the following sample, the customized caption text is exported to PDF using [captionText](https://ej2.syncfusion.com/react/documentation/api/grid/exportGroupCaptionEventArgs/#captiontext) property in the [exportGroupCaption](https://ej2.syncfusion.com/react/documentation/api/grid/#exportgroupcaption) event.
+The following sample demonstrates exporting customized caption text using the [captionText](https://ej2.syncfusion.com/react/documentation/api/grid/exportGroupCaptionEventArgs#captiontext) property in the `exportGroupCaption` event.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

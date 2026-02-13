@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Excel like filter in React Grid component | Syncfusion
+title: React Grid - Excel like filter | Syncfusion
 description: Learn here all about Excel like filter in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Excel like filter 
 platform: ej2-react
@@ -10,9 +10,15 @@ domainurl: ##DomainURL##
 
 # Excel like filter in React Grid component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component offers an Excel-like filter feature, providing a familiar and user-friendly interface for filtering data within the grid. This feature simplifies complex filtering operations on specific columns, allowing for quick data location and manipulation, similar to Microsoft Excel. Excel like filtering is especially useful when dealing with large datasets and complex filtering requirements.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component offers an Excel-like filter feature, providing a familiar and user-friendly interface for filtering data within the grid. Excel-like filter displays a dialog with a checkbox list, search box, and sorting options, similar to Microsoft Excel's filter. This filtering type simplifies complex filtering operations on specific columns, allowing for quick data location and manipulation. Excel-like filtering is especially useful when dealing with large datasets and columns containing distinct categorical values (such as status, category, country, or department names).
 
-Here is an example that showcasing how to render the excel like filter within the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid:
+The dialog displays all unique values from that column as a checkbox list. Values can be selected or deselected to include or exclude them from the Grid results, then **OK** button can be clicked to filter the data.
+
+> For basic filtering setup and configuration, refer to the [Filter Feature Guide](filtering.md#setup-requirements).
+
+## Enable Excel filtering
+
+To enable the Excel like filtering, set the [filterSettings.type](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings) property to `Excel`. This property determines the type of filter UI rendered in the Grid.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -34,11 +40,11 @@ Here is an example that showcasing how to render the excel like filter within th
 >* The Excel-like filter feature supports various filter conditions, including text-based, number-based, date-based, and boolean-based filters.
 >* The filter dialog provides additional options, such as sorting filter values, searching for specific values, and clearing applied filters.
 
-## Checkbox filtering
+## Enable CheckBox filtering
 
-The checkbox filtering feature in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid enables you to filter data based on checkbox selections within a column. This powerful filtering option simplifies the process of narrowing down data, providing a more efficient and user-friendly experience. The check box filter feature is particularly useful when dealing with columns containing categorical data.
+Checkbox filtering is the core mechanism of Excel-like filter. When the filter dialog opens, all unique values from the selected column appear as a checkbox list. Multiple values can be selected by checking their boxes to include them in the filtered results. Values can be unchecked to exclude them from the results.
 
-Here is an example that showcasing how to render the check box filter within the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid:
+The checkbox list supports search functionality: typing in the search box filters the checkbox list to show only matching values, making it easier to find specific items in long lists.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -59,13 +65,13 @@ Here is an example that showcasing how to render the check box filter within the
 
 ## Customize the filter choice count
 
-By default, the filter choice count is set to 1000, which means that the filter dialog will display a maximum of 1000 distinct values for each column as a checkbox list data. This default value ensures that the filter operation remains efficient, even with large datasets. Additionally, the filter dialog retrieves and displays distinct data from the first 1000 records bind to the Grid to optimize performance, while the remaining records are returned as a result of the search option within the filter dialog.
+By default, the filter choice count is set to 1000, which means the filter dialog displays a maximum of 1000 distinct values for each column as a checkbox list. This default value ensures the filter operation remains efficient, even with large datasets. Remaining records (those beyond the first 1000) are accessible through the search box within the filter dialog.
 
-The Grid component allows you to customize the number of distinct data displayed in the checkbox list of the excel/checkbox type filter dialog. This can be useful when you want to customize the default filter choice count values while using large datasets.
+**Why this limit exists**: Loading all distinct values from a column with tens of thousands of unique entries would cause the filter dialog to open slowly or freeze. The 1000-value limit prevents this performance issue while still providing access to all data via search.
 
-However, you have the flexibility to increase or decrease the filter choice count based on your specific requirements. This can be achieved by adjusting the [filterChoiceCount](https://ej2.syncfusion.com/react/documentation/api/grid/filterSearchBeginEventArgs/#filterchoicecount) value.
+The Grid component allows customization of the number of distinct values displayed in the checkbox list of the Excel/Checkbox filter dialog. The filter choice count can be adjusted by modifying the [filterChoiceCount](https://ej2.syncfusion.com/react/documentation/api/grid/filterSearchBeginEventArgs#filterchoicecount) value. The count can be increased to display more initial options, or decreased to improve dialog opening speed for extremely large datasets.
 
-The following example demonstrates how to customize the filter choice count in the checkbox list of the filter dialog. In the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid/#actionbegin) event, you need to check if the [requestType](https://ej2.syncfusion.com/react/documentation/api/grid/filterEventArgs/#requesttype) is either `filterChoiceRequest` or `filterSearchBegin`, and then you can set the `filterChoiceCount` property to the desired value.
+The following example demonstrates how to customize the filter choice count in the checkbox list of the filter dialog. In the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid#actionbegin) event, the code checks if the [requestType](https://ej2.syncfusion.com/react/documentation/api/grid/filterEventArgs#requesttype) is either `filterChoiceRequest` or `filterSearchBegin`, then sets the `filterChoiceCount` property to the desired value.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -84,23 +90,25 @@ The following example demonstrates how to customize the filter choice count in t
 
  {% previewsample "page.domainurl/code-snippet/grid/excel-like-filter-cs2" %}
 
-> The specified filter choice count value determines the display of unique items as a checkbox list in the Excel/checkbox type filter dialog. This can result in a delay in rendering these checkbox items when opening the filter dialog. Therefore, it is advisable to set a restricted filter choice count value.
+> The specified filter choice count value determines the display of unique items as a checkbox list in the `Excel/Checkbox` filter dialog. Higher values can result in a delay when rendering checkbox items while opening the filter dialog. Therefore, setting a restricted filter choice count value is advisable to maintain optimal performance.
 
-## Add current selection to filter Checkbox/Excel
+## Add current selection to filter checkbox
 
-By default, the CheckBox/Excel filter can only filter the selected items. If filtering is done multiple times on the same column, the previously filtered values in the column will be cleared. Now, it is possible to retain those previous values by using the `Add current selection to filter` CheckBox/Excel filter. This CheckBox/Excel is displayed when data is searched in the search bar of the CheckBox/Excel filter.
+By default, the `Excel/Checkbox` filter replaces previous selections when a new filter is applied to the same column. Applying a filter multiple times on the same column clears the previously filtered values. The "Add current selection to filter" checkbox allows retention of previous filter values by combining new selections with existing ones. This checkbox appears in the filter dialog when data is searched using the search bar of the `Excel/Checkbox` filter.
 
-The following image describes the above mentioned behavior.
+This feature is useful when building cumulative filters across multiple filtering operations without having to re-select previously chosen values each time.
+
+The following image describes the above mentioned behavior:
 
 ![Checkbox filter](../images/checkboxfilter.png)
 
 ## Show customized text in checkbox list data
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provides you with the flexibility to customize the text displayed in the Excel/Checkbox filtering options. This allows you to modify the default text and provide more meaningful and contextual labels for the filtering.
+The Grid component provides flexibility to customize the text displayed in the `Excel/Checkbox` filtering options. This customization allows modification of default text to provide more meaningful and contextual labels for filtering values.
 
-To customize the text in the Excel/Checkbox filter, you can define a `filterItemTemplate` and bind it to the desired column. The `filterItemTemplate` property allows you to create custom templates for filter items. You can use any logic and HTML elements within this template to display the desired text or content.
+To customize the text in the `Excel/Checkbox` filter, a `filterItemTemplate` can be defined and bound to the desired column. The `filterItemTemplate` property allows creation of custom templates for filter items. Any logic and HTML elements can be used within this template to display the desired text or content.
 
-In the example below, you can see how you can customize the text displayed in the filter checkbox list for the **Delivered** column. This is achieved by defining a `filterItemTemplate` within the **ColumnDirective** element for that specific column. Inside the template, you can use React's template syntax to conditionally display **Delivered** if the data value is true and **Not delivered** if the value is false.
+In the example below, the text displayed in the filter checkbox list for the "Delivered" column is customized. This is achieved by defining a `filterItemTemplate` within the `ColumnDirective` element for that specific column. Inside the template, React's template syntax conditionally displays "Delivered" if the data value is `true` and "Not delivered" if the value is `false`.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -121,9 +129,9 @@ In the example below, you can see how you can customize the text displayed in th
 
 ## Show template in checkbox list data
 
-The `filterItemTemplate` property in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid allows you to customize the appearance of filter items in the grid's filter checkbox list for a specific column. This property is useful when you want to provide a custom UI or additional information within the filter checkbox list, such as icons, text, or any HTML elements, alongside the default filter items.
+The `filterItemTemplate` property in the Grid allows customization of the appearance of filter items in the Grid's filter checkbox list for a specific column. This property is useful when providing a custom UI or additional information within the filter checkbox list, such as icons, text, or any HTML elements, alongside the default filter items.
 
-In this example, you can see how to use the `filterItemTemplate` to render icons along with the category names in the filter checkbox list for the **Category Name** column.
+In this example, the `filterItemTemplate` renders icons along with the category names in the filter checkbox list for the "Category Name" column.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -142,45 +150,13 @@ In this example, you can see how to use the `filterItemTemplate` to render icons
 
  {% previewsample "page.domainurl/code-snippet/grid/excel-like-filter-cs5" %}
 
-## Customize the excel filter dialog using CSS
-
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, you have the flexibility to enhance the visual presentation of the excel filter dialog. This can be achieved by utilizing CSS styles to modify the dialog's appearance according to the specific needs and aesthetics of your application.
-
-**Removing context menu option**
-
-The excel filter dialog includes several features such as **context menu**, **search box**, and **checkbox list** that may not be required in some scenarios. You can remove these options using the **className** attribute in the grid component.
-
-```css
-.e-grid .e-excelfilter .e-contextmenu-wrapper 
-{
-    display: none;
-}
-```
-
-The following example demonstrates how to remove the context menu option in the excel filter dialog using above mentioned CSS
-
-{% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/excel-like-filter-cs4/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/excel-like-filter-cs4/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/excel-like-filter-cs4/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/excel-like-filter-cs4/app/datasource.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/grid/excel-like-filter-cs4" %}
-
 ## Bind custom remote datasource for excel/checkbox filtering
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows you to dynamically change the filter data source for the Excel or checkbox filter module using custom remote data as well. This can be done by either assigning a custom remote `DataManager` as the `dataSource` or by fetching the data initially and storing it in a global variable. This data can then be bound directly to the filter module's `dataSource` in the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid/#actionbegin) event for the `filterBeforeOpen` [requestType](https://ej2.syncfusion.com/react/documentation/api/grid/filterEventArgs/#requesttype), as detailed in our [knowledge base](https://support.syncfusion.com/kb/article/10065/how-to-change-the-data-source-for-checkbox-filter-popup-in-grid).
+The Grid allows dynamic change of the filter data source for the Excel or Checkbox filter module using custom remote data. This capability enables the filter dialog to display values from a different data source than the Grid's main data source.
 
-The following example demonstrates how to dynamically change the remote custom data source for all columns in the Excel or checkbox filter dialog using a `DataManager` with `WebApiAdaptor`.
+This can be accomplished by either assigning a custom remote `DataManager` as the `dataSource` or by fetching the data initially and storing it in a global variable. This data can then be bound directly to the filter module's `dataSource` in the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid#actionbegin) event for the `filterBeforeOpen` [requestType](https://ej2.syncfusion.com/react/documentation/api/grid/filterEventArgs#requesttype), as detailed in the [knowledge base article](https://support.syncfusion.com/kb/article/10065/how-to-change-the-data-source-for-checkbox-filter-popup-in-grid).
+
+The following example demonstrates how to dynamically change the remote custom data source for all columns in the Excel or Checkbox filter dialog using a `DataManager` with `WebApiAdaptor`.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -201,17 +177,15 @@ The following example demonstrates how to dynamically change the remote custom d
 
 ## Hide sorting option in filter dialog
 
-The Excel-like filter dialog in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid includes built-in sorting options (ascending and descending) by default. To hide these options, set the **display** property of the following CSS classes to **none**, which will prevent the sorting options from appearing in the filter dialog:
+The Excel-like filter dialog in the Grid includes built-in sorting options (ascending and descending) by default within the context menu. To hide these sorting options, the `display` property of the following CSS classes can be set to `none`.
 
-```
+```css
 .e-excel-ascending,
 .e-excel-descending,
 .e-separator.e-excel-separator {
  display: none;
 }
 ```
-
-Here is a simple example demonstrating how to hide the sorting options in the Excel filter dialog:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -229,42 +203,68 @@ Here is a simple example demonstrating how to hide the sorting options in the Ex
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/grid/excel-like-filter-hide" %}
- 
+
+## Hide search box in filter dialog
+
+The Excel-like filter dialog in the Grid includes a search box by default, which allows users to search for specific values in the filter checkbox list. To hide the search box in the filter dialog for a specific column, set the `hideSearchbox` property to `true` within the [column.filter](https://ej2.syncfusion.com/react/documentation/api/grid/column#filter) configuration.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/excel-like-filter-cs4/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/excel-like-filter-cs4/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/excel-like-filter-cs4/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/excel-like-filter-cs4/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/excel-like-filter-cs4" %}
+
 ## Render checkbox list data in on-demand for excel/checkbox filtering
 
-The Excel/Checkbox filter type of Grid has a restriction where only the first 1000 unique sorted items are accessible to view in the filter dialog checkbox list content by scrolling. This limitation is in place to avoid any rendering delays when opening the filter dialog. However, the searching and filtering processes consider all unique items in that particular column.
+The `Excel/Checkbox` filter type of grid has a restriction where only the first "1000" unique sorted items are accessible to view in the filter dialog checkbox list content by scrolling. This limitation is in place to avoid rendering delays when opening the filter dialog. However, the searching and filtering processes consider all unique items in that particular column.
 
-The Excel/Checkbox filter in the Grid provides an option to load large data sets on-demand during scrolling to improve scrolling limitation functionality. This is achieved by setting the [filterSettings.enableInfiniteScrolling](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings/#enableinfinitescrolling) property to **true**. This feature proves especially beneficial for managing extensive datasets, enhancing data loading performance in the checkbox list, and allowing interactive checkbox selection with persistence for the selection based on filtering criteria.
+**Limitation**: Without on-demand loading, displaying all unique values from a column with "50,000" distinct entries would cause the filter dialog to freeze or take several seconds to open. The 1000-item limit prevents this performance issue by loading only the first batch initially.
 
-The Excel/Checkbox filter retrieves distinct data in ascending order, governed by its [filterSettings.itemsCount](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings/#itemscount) property, with a default value of **50**. As the checkbox list data scroller reaches its end, the next dataset is fetched and displayed, with the notable advantage that this process only requests new checkbox list data without redundantly fetching the existing loaded dataset.
+The `Excel/Checkbox` filter in the grid provides an option to load large data sets on-demand during scrolling to improve the scrolling limitation functionality. This is achieved by setting the [filterSettings.enableInfiniteScrolling](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings#enableinfinitescrolling) property to `true`. This feature proves especially beneficial for managing extensive datasets, enhancing data loading performance in the checkbox list, and allowing interactive checkbox selection with persistence for the selection based on filtering criteria.
+
+**How on-demand loading works**: Similar to infinite scrolling in social media feeds, the filter dialog loads the next batch of values automatically as the scroll position reaches the bottom of the current list. This process repeats until all unique values have been loaded or the search box is used to narrow results.
+
+The `Excel/Checkbox` filter retrieves distinct data in ascending order, governed by its [filterSettings.itemsCount](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings#itemscount) property, with a default value of "50". As the checkbox list data scroller reaches its end, the next dataset is fetched and displayed, with the notable advantage that this process only requests new checkbox list data without redundantly fetching the existing loaded dataset.
 
 ### Customize the items count for initial rendering
 
-Based on the items count value, the Excel/Checkbox filter gets unique data and displayed in Excel/Checkbox filter content dialog. You can customize the count of on-demand data rendering for Excel/Checkbox filter by adjusting the [filterSettings.itemsCount](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings/#itemscount) property. The default value is `50`
+Based on the items count value, the Excel/Checkbox filter retrieves unique data and displays it in the Excel/Checkbox filter content dialog. The count of on-demand data rendering for Excel/Checkbox filter can be customized by adjusting the [filterSettings.itemsCount](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings#itemscount) property. The default value is `50`.
 
 ```ts
-grid.filterSettings = { enableInfiniteScrolling = true, itemsCount = 40 };
+grid.filterSettings = { enableInfiniteScrolling: true, itemsCount: 40 };
 ```
 
-> It is recommended to keep the itemsCount below **300**. Higher values will result in unwanted whitespace because of DOM maintenance performance degradation.
+> It is recommended to keep the itemsCount below "300". Higher values will result in unwanted whitespace and page performance issues due to increased DOM elements.
 
 ### Customize the loading animation effect
 
-A loading effect is presented to signify that loading is in progress when the checkbox list data scroller reaches the end, and there is a delay in receiving the data response from the server. The loading effect during on-demand data retrieval for Excel/Checkbox filter can be customized using the [filterSettings.loadingIndicator](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings/#loadingindicator) property. The default value is `Shimmer`.
+A loading effect is presented to signify that loading is in progress when the checkbox list data scroller reaches the end, and there is a delay in receiving the data response from the server. The loading effect during on-demand data retrieval for Excel/Checkbox filter can be customized using the [filterSettings.loadingIndicator](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings#loadingindicator) property. The default value is `Shimmer`.
+
+**Example configuration**:
 
 ```ts
-grid.filterSettings = { enableInfiniteScrolling = true, loadingIndicator = 'Spinner' };
+grid.filterSettings = { enableInfiniteScrolling: true, loadingIndicator: 'Spinner' };
 ```
-
-In the provided example, On-Demand Excel filter has been enabled for the React Grid
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 {% raw %}
 import { ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-react-grids';
-import { Filter, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import { Filter, GridComponent, Inject, Page, Sort } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { Query, DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
+
 function App() {
     const hostUrl = 'https://services.syncfusion.com/react/production/';
     const data = new DataManager({ url: hostUrl + 'api/UrlDataSource', adaptor: new UrlAdaptor });
@@ -278,12 +278,11 @@ function App() {
         <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign='Right'></ColumnDirective>
         <ColumnDirective field='Employees' headerText='Employee Name' width='150'></ColumnDirective>
         <ColumnDirective field='Designation' headerText='Designation' width='130' textAlign='Right'/>
-        <ColumnDirective field='CurrentSalary' headerText='CurrentSalary' width='120' format='C2' textAlign='Right'/>
+        <ColumnDirective field='CurrentSalary' headerText='Current Salary' width='120' format='C2' textAlign='Right'/>
     </ColumnsDirective>
     <Inject services={[Filter, Page, Sort]}/>
 </GridComponent>;
 }
-;
 export default App;
 {% endraw %}
 {% endhighlight %}
@@ -296,7 +295,7 @@ import { Query, DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 
 function App() {
   const hostUrl: string = 'https://services.syncfusion.com/react/production/';
-  const data: DataManager = new DataManager({ url: hostUrl + 'api/UrlDataSource', adaptor: new UrlAdaptor  });
+  const data: DataManager = new DataManager({ url: hostUrl + 'api/UrlDataSource', adaptor: new UrlAdaptor });
   const query: Query = new Query().addParams('dataCount', '10000');
   let gridInstance: GridComponent;
   const filterSettings: FilterSettingsModel = {

@@ -118,7 +118,7 @@ function App() {
     }
   }
   const actionBegin = (args: EditEventArgs) => {
-    window.role = args.rowData as { Role: string }['Role'];
+    window.role = (args.rowData as { Role: string }).Role;
   }
   const editOptions: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true };
   const toolbarOptions: ToolbarItems[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];

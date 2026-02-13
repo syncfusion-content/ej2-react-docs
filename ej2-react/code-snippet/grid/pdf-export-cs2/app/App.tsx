@@ -26,8 +26,8 @@ function App() {
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
           <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
-          <ColumnDirective field='Freight' headerText='Freight' width='100' />
-          <ColumnDirective field='OrderDate' headerText='Order Date' width='150' format='yMd' type='date' />
+          <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign='Right'/>
+          <ColumnDirective field='OrderDate' headerText='Order Date' width='150' format='yMd' type='date'  textAlign='Right'/>
           <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
         </ColumnsDirective>
         <AggregatesDirective>

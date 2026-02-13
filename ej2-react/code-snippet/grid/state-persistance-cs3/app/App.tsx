@@ -47,8 +47,8 @@ function App() {
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" validationRules={orderidrules} isPrimaryKey={true} />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' validationRules={customeridrules} />
-        <ColumnDirective field='Freight' headerText='Freight' width='100' format='C2' editType="numericedit" validationRules={freightrules} />
-        <ColumnDirective field='OrderDate' headerText='OrderDate' width='100' allowGrouping={false} editType="datetimepickeredit" format={formatoptions} />
+        <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign="Right" format='C2' editType="numericedit" validationRules={freightrules} />
+        <ColumnDirective field='OrderDate' headerText='Order Date' width='100' textAlign="Right" allowGrouping={false} editType="datetimepickeredit" format={formatoptions} />
         <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' editType="dropdownedit" edit={editparams} />
       </ColumnsDirective>
       <Inject services={[Filter, Page, Sort, Group, Edit, Toolbar]} />

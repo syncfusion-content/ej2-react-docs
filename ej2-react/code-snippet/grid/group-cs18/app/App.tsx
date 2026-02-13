@@ -24,6 +24,5 @@ function App() {
     </ColumnsDirective>
     <Inject services={[Group]} />
   </GridComponent>;
-}
-;
+};
 export default App;

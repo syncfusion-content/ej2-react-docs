@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Infinite scroll in React Grid component | Syncfusion
+title: React Grid - Infinite Scroll | Syncfusion
 description: Learn here all about Infinite scroll in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Infinite scroll 
@@ -8,18 +8,21 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Infinite scroll in React Grid component
+# Infinite Scroll in React Grid Component
 
-The infinite scrolling feature in the Grid is a powerful tool for seamlessly handling extensive data sets without compromising grid performance. It operates on a “load-on-demand” concept, ensuring that data is fetched only when needed. In the default infinite scrolling mode, a new block of data is loaded each time the scrollbar reaches the end of the vertical scroller. This approach significantly enhances the user experience when working with large data collections in the React Grid.
+The infinite scrolling feature in the grid is a powerful tool for seamlessly handling extensive datasets by dynamically loading data as the vertical scrollbar reaches the end of the viewport. In infinite scrolling mode, a new block of data is loaded on-demand each time the scrollbar approaches the end, optimizing rendering performance by fetching only the required data blocks and reducing initial load time and memory usage. In this context, a block refers to the number of rows defined by the [pageSize](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings#pagesize) property, if not explicitly specified, the grid automatically calculates it based on the viewport and row height.
 
-In this mode, a block of data accumulates every time the scrollbar reaches the end of the scroller. To clarify, in this context, a **block** represents the [pageSize](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings/#pagesize) of the Grid. If the `pageSize` is not explicitly specified, the Grid will automatically calculate it based on the grid viewport height and row height.
+Injecting the `InfiniteScroll` module into the Grid component's `Inject` services array is required to enable infinite scrolling:
 
-To enable infinite scrolling, you need to define [enableInfiniteScrolling](https://ej2.syncfusion.com/react/documentation/api/grid#enableinfinitescrolling) as **true** and content height by [height](https://ej2.syncfusion.com/react/documentation/api/grid/#height) property.
+```ts
+import { Inject, InfiniteScroll } from '@syncfusion/ej2-react-grids';
 
-> In this feature, the Grid will not initiate a new data request when revisiting the same page.
-> The `height` property must be specified when enabling `enableInfiniteScrolling`.
+<GridComponent>
+  <Inject services={[InfiniteScroll]} />
+</GridComponent>
+```
 
-The following an example that demonstrates how to enable infinite scroll in the Grid:
+Infinite scrolling feature can be enabled by setting the [enableInfiniteScrolling](https://ej2.syncfusion.com/react/documentation/api/grid#enableinfinitescrolling) property to `true`. The [height](https://ej2.syncfusion.com/react/documentation/api/grid#height) property must also be specified to define the scrollable area of the grid. Refer to this [section](./scrolling#set-width-and-height) for grid basic scrolling setup and configurations.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -36,15 +39,15 @@ The following an example that demonstrates how to enable infinite scroll in the 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/virtual-scroll-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/virtual-scroll-cs1" %}
 
 ## Number of blocks rendered during initial loading
 
-The number of blocks to be initially rendered when the Grid is loaded. Each block corresponds to a page size of the Grid, resulting in the rendering of a certain number of row elements determined by multiplying the initial block size with the page size.
+By default, three blocks are initially rendered when the grid is loaded. Each block corresponds to a page size of the grid, resulting in the rendering of a certain number of row elements determined by multiplying the initial block size with the page size.
 
-You can define the initial loading pages count by using [infiniteScrollSettings.initialBlocks](https://ej2.syncfusion.com/react/documentation/api/grid/infiniteScrollSettings/#initialblocks) property . By default, this property loads three pages during the initial rendering. Subsequently, additional data is buffered and loaded based on either the page size or the number of rows rendered within the provided height.
+Initial loading pages count configuration is managed through the [infiniteScrollSettings.initialBlocks](https://ej2.syncfusion.com/react/documentation/api/grid/infiniteScrollSettings#initialblocks) property. The default value is "3". Subsequently, additional data is buffered and loaded based on either the page size or the number of rows rendered within the provided height.
 
-The following an example of how you can use the `initialBlocks` property to set the initial loading pages based on **DropDownList** input:
+The example below demonstrates how to configure initialBlocks using a [DropDownList](https://ej2.syncfusion.com/react/documentation/drop-down-list/getting-started) component.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -74,8 +77,10 @@ function App() {
     grid.refresh();
   }
   return (<div>
-    <label style={{ padding: "30px 20px 0 0" }}>Select initialBlocks count: </label>
-    <DropDownListComponent index={0} width={200} dataSource={dropDownData} change={onChange}></DropDownListComponent>
+    <div style={{ display: "inline-block", marginBottom: "10px" }}>
+      <label style={{ padding: "30px 20px 0 0" }}>Select initialBlocks count: </label>
+      <DropDownListComponent index={0} width={200} dataSource={dropDownData} change={onChange}></DropDownListComponent>
+    </div>
     <GridComponent ref={g => grid = g} dataSource={datas} height={300} enableInfiniteScrolling={true} pageSettings={pageSettings}>
       <Inject services={[InfiniteScroll]} />
       <ColumnsDirective>
@@ -85,7 +90,8 @@ function App() {
         <ColumnDirective field='Estimation' headerText='Estimation' textAlign='Right' width='100' />
         <ColumnDirective field='Status' width='100' />
       </ColumnsDirective>
-    </GridComponent></div>)
+    </GridComponent></div>
+  )
 }
 export default App;
 {% endraw %}
@@ -117,8 +123,10 @@ function App() {
     (grid as GridComponent).refresh();
   }
   return (<div>
-    <label style={{ padding: "30px 20px 0 0" }}>Select initialBlocks count: </label>
-    <DropDownListComponent index={0} width={200} dataSource={dropDownData} change={onChange}></DropDownListComponent>
+    <div style={{ display: "inline-block", marginBottom: "10px" }}>
+      <label style={{ padding: "30px 20px 0 0" }}>Select initialBlocks count: </label>
+      <DropDownListComponent index={0} width={200} dataSource={dropDownData} change={onChange}></DropDownListComponent>
+    </div>    
     <GridComponent ref={g => grid = g} dataSource={datas} height={300} enableInfiniteScrolling={true} pageSettings={pageSettings}>
       <Inject services={[InfiniteScroll]} />
       <ColumnsDirective>
@@ -128,7 +136,8 @@ function App() {
         <ColumnDirective field='Estimation' headerText='Estimation' textAlign='Right' width='100' />
         <ColumnDirective field='Status' width='100' />
       </ColumnsDirective>
-    </GridComponent></div>)
+    </GridComponent></div>
+  )
 }
 export default App;
 {% endraw %}
@@ -141,17 +150,15 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/virtual-scroll-cs2" %}
+{% previewsample "page.domainurl/code-snippet/grid/virtual-scroll-cs2" %}
 
 ## Efficient data caching and DOM management in grid cache mode
 
-In Grid cache mode, cached data blocks are reused when revisiting them, reducing the need for frequent data requests while navigating the same block. This mode also manages DOM row elements based on the [infiniteScrollSettings.maxBlocks](https://ej2.syncfusion.com/react/documentation/api/grid/infiniteScrollSettings/#maxblocks) count value. If this limit is exceeded, it removes a block of row elements to create new rows.
+Cache mode in infinite scrolling improves performance by reusing previously loaded data blocks, minimizing frequent data requests. Enabling cache mode requires setting the [infiniteScrollSettings.enableCache](https://ej2.syncfusion.com/react/documentation/api/grid/infiniteScrollSettings#enablecache) property to `true`.
 
-To enable cache mode, you need to define [enableCache](https://ej2.syncfusion.com/react/documentation/api/grid/infiniteScrollSettings/#enablecache) property of [infiniteScrollSettings](https://ej2.syncfusion.com/react/documentation/api/grid/infinitescrollsettings/) as **true**.
+The [maxBlocks](https://ej2.syncfusion.com/react/documentation/api/grid/infiniteScrollSettings#maxblocks) property defines the maximum number of cached blocks. When this limit is exceeded, the grid removes the oldest block to manage DOM elements efficiently. The default value is "3".
 
-To enable maximum blocks, you need to define `maxBlocks` count of [infiniteScrollSettings](https://ej2.syncfusion.com/react/documentation/api/grid/infiniteScrollSettings), By default this property value is 3.
-
-The following example that demonstrates how to enable/disable cache mode in infinite scrolling of the grid based on a [Switch](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component[change](https://ej2.syncfusion.com/react/documentation/api/switch#change) event :
+The example below shows how to toggle cache mode using a [Switch](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -168,28 +175,28 @@ The following example that demonstrates how to enable/disable cache mode in infi
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/virtual-scroll-cs3" %}
+{% previewsample "page.domainurl/code-snippet/grid/virtual-scroll-cs3" %}
 
-> If [Hierarchy Grid](https://ej2.syncfusion.com/react/documentation/grid/hierarchy-grid) or [Detail Template](https://ej2.syncfusion.com/react/documentation/grid/row/detail-template) feature is enabled along with infinite scrolling without defining the height property, it will take a default height of **300px**. Since the [height](https://ej2.syncfusion.com/react/documentation/api/grid/#height) property is mandatory for the hierarchy grid and detail template features, ensure to define it accordingly. 
+> If [Hierarchy Grid](https://ej2.syncfusion.com/react/documentation/grid/hierarchy-grid) or [Detail Template](https://ej2.syncfusion.com/react/documentation/grid/row/detail-template) feature is enabled along with infinite scrolling without defining the height property, it will take a default height of `300px`. Since the [height](https://ej2.syncfusion.com/react/documentation/api/grid#height) property is mandatory for the hierarchy grid and detail template features, ensure to define it accordingly. 
 
 ## Limitations
 
 * Due to the element height limitation in browsers, the maximum number of records loaded by the grid is limited due to the browser capability.
-* It is necessary to set a static height for the component or its parent container when using infinite scrolling. The 100% height will work only if the component height is set to 100%, and its parent container has a static height.
+* Set a static height for the component or its parent container when using infinite scrolling. The 100% height will work only if the component height is set to 100%, and its parent container has a static height.
 * When infinite scrolling is activated, compatibility for copy-paste and drag-and-drop operations is limited to the data items visible in the current viewport of the grid.
 * Cell selection will not be persisted in cache mode.
-* The group records cannot be collapsed in cache mode.
-* Lazy load grouping with infinite scrolling does not support cache mode, and the infinite scrolling mode is exclusively applicable to parent-level caption rows in this scenario.
-* The aggregated information and total group items are displayed based on the current view items. To get these information regardless of the view items, refer to the [Group with paging](https://ej2.syncfusion.com/react/documentation/grid/grouping/grouping#group-with-paging) topic.
-* Programmatic selection using the [selectRows](https://ej2.syncfusion.com/react/documentation/api/grid/#selectrows) and [selectRow](https://ej2.syncfusion.com/react/documentation/api/grid/#selectrow) method is not supported in infinite scrolling.
+* Group records cannot be collapsed in cache mode.
+* Lazy load grouping with infinite scrolling does not support cache mode, and the infinite scrolling mode is exclusively applicable to parent-level caption rows in the scenario.
+* Aggregated information and total group items are displayed based on the current view items. To get the information regardless of the view items, refer to the [Group with paging](https://ej2.syncfusion.com/react/documentation/grid/grouping/grouping#group-with-paging) topic.
+* Programmatic selection using the [selectRows](https://ej2.syncfusion.com/react/documentation/api/grid#selectrows) and [selectRow](https://ej2.syncfusion.com/react/documentation/api/grid#selectrow) method is not supported in infinite scrolling.
 * Infinite scrolling is not compatible with the following features:
-    1. Batch editing
-    2. Row spanning
-    3. Column spanning
-    4. Row template
-    5. Row virtual scrolling
-    6. Autofill
-* Limitations of row drag and drop with infinite scrolling
-    1. In cache mode, the grid refreshes automatically if the content's **tr** element count exceeds the cache limit of the grid's content after the drop action.
+    1. Batch editing.
+    2. Row spanning.
+    3. Column spanning.
+    4. Row template.
+    5. Row virtual scrolling.
+    6. Autofill.
+* Limitations of row drag and drop with infinite scrolling:
+    1. In cache mode, the grid refreshes automatically if the content's tr element count exceeds the cache limit of the grid's content after the drop action.
     2. When performing row drag and drop with lazy load grouping, the grid will refresh automatically.
-    3. In remote data, changes are applied only in the UI. They will be lost once the grid is refreshed. To restore them, you need to update the changes in your database. By using the [rowDrop](https://ej2.syncfusion.com/react/documentation/api/grid/#rowdrop) event, you can send the request to the server and apply the changes in your database. After this, you need to refresh the grid to show the updated data.
+    3. In remote data, changes are applied only in the UI. They will be lost once the grid is refreshed. To restore them, update the changes in the database. By using the [rowDrop](https://ej2.syncfusion.com/react/documentation/api/grid#rowdrop) event, send the request to the server and apply the changes in the database. After this, refresh the grid to show the updated data.

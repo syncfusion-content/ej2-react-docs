@@ -16,10 +16,10 @@ function App() {
       <ButtonComponent id="big" cssClass="e-small" onClick={changeHeight}>Change height 60px</ButtonComponent>
       <GridComponent dataSource={data} height={315} ref={g => grid = g} rowHeight={42}>
         <ColumnsDirective>
-          <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+          <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
           <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
-          <ColumnDirective field='Freight' headerText='Freight' width='100' />
-          <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' />
+          <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign="Right" />
+          <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' textAlign="Right" />
         </ColumnsDirective>
       </GridComponent></div>)
 }

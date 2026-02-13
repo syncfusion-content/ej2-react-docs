@@ -16,8 +16,8 @@ function App() {
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
-      <ColumnDirective field='Freight' headerText='Freight' format='C2' width='150' />
-      <ColumnDirective field='ShipCountry' headerText='Ship Name' width='150' />
+      <ColumnDirective field='Freight' headerText='Freight' format='C2' textAlign="Right" width='150' />
+      <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
     </ColumnsDirective>
     <AggregatesDirective>
       <AggregateDirective>

@@ -29,8 +29,8 @@ function App() {
                 toolbarClick={toolbarClick} ref={g => grid = g} allowPaging={true} pageSettings={pageOptions}>
                 <ColumnsDirective>
                     <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign='Right' />
-                    <ColumnDirective field='FirstName' headerText='FirstName' width='150' />
-                    <ColumnDirective field='LastName' headerText='LastName' width='150' />
+                    <ColumnDirective field='FirstName' headerText='First Name' width='150' />
+                    <ColumnDirective field='LastName' headerText='Last Name' width='150' />
                     <ColumnDirective field='City' headerText='City' width='150' />
                 </ColumnsDirective>
                 <Inject services={[Toolbar, ExcelExport, Page]} />

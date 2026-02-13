@@ -30,7 +30,7 @@ function App() {
       <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right"/>
       <ColumnDirective field='CustomerID' sortComparer={sortComparer} headerText='Customer ID' width='150'/>
       <ColumnDirective field='Freight' headerText='Freight' width='80' textAlign="Right" format='C2'/>
-      <ColumnDirective field='OrderDate' headerText='Order Date' format='yMd'  sortComparer={sortComparer} width='120' />
+      <ColumnDirective field='OrderDate' headerText='Order Date' format='yMd'  sortComparer={sortComparer} width='120' textAlign="Right"/>
       <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100'/>
     </ColumnsDirective>
     <Inject services={[Sort]}/>

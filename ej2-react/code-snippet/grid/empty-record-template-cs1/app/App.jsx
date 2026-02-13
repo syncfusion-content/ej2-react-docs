@@ -8,7 +8,8 @@ function App() {
         return (<div className='emptyRecordTemplate'>
                 <img src="./emptyRecordTemplate.svg" className="e-emptyRecord" alt="No record"/>
                 <span>There is no data available to display at the moment.</span>
-            </div>);
+            </div>
+        );
     }
     const data = [];
     const template = emptyMessageTemplate;
@@ -20,8 +21,8 @@ function App() {
     const pageSettings = { pageCount: 5 };
     const format = { type: 'dateTime', format: 'M/d/y hh:mm a' };
     return (<div className='control-pane'>
-            <div className='control-section'>
-                <GridComponent dataSource={data} emptyRecordTemplate={template.bind(this)} toolbar={toolbarOptions} allowPaging={true} editSettings={editSettings} pageSettings={pageSettings}>
+        <div className='control-section'>
+            <GridComponent dataSource={data} emptyRecordTemplate={template.bind(this)} toolbar={toolbarOptions} allowPaging={true} editSettings={editSettings} pageSettings={pageSettings}>
                 <ColumnsDirective>
                     <ColumnDirective field='OrderID' headerText='Order ID' width='140' textAlign='Right' validationRules={orderidRules} isPrimaryKey={true}></ColumnDirective>
                     <ColumnDirective field='CustomerName' headerText='Customer Name' width='150' validationRules={validationRule}></ColumnDirective>
@@ -29,9 +30,9 @@ function App() {
                     <ColumnDirective field='OrderDate' headerText='Order Date' editType='datetimepickeredit' format={format} width='160'></ColumnDirective>
                     <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' editType='dropdownedit' edit={editparams}></ColumnDirective>
                 </ColumnsDirective>
-                    <Inject services={[Page, Edit, Toolbar]}/>
-                </GridComponent>
-            </div>
-        </div>);
+                <Inject services={[Page, Edit, Toolbar]}/>
+            </GridComponent>
+        </div>
+    </div>);
 }
 export default App;

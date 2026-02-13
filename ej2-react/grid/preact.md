@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Preact Framework and React Grid Component | Syncfusion
+title: Getting Started with Preact and React Grid Component | Syncfusion
 description: Check out and learn about getting started with the Preact Framework and React Grid Component of Syncfusion Essential JS 2 and more details.
 control: Preact
 platform: ej2-react
@@ -105,20 +105,20 @@ yarn add @syncfusion/ej2-react-grids
 
 You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> React component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) to know more about built-in themes and different ways to refer to theme's in a React project.
 
-In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the Grid component and its dependents were imported into the **src/style.css** file.
+In this article, the `Tailwind 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Tailwind 3` CSS styles for the Grid component and its dependents were imported into the **src/style.css** file.
 
 {% tabs %}
 {% highlight css tabtitle="~/src/style.css" %}
 
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-react-grids/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-react-grids/styles/tailwind3.css";
 
 {% endhighlight %}
 {% endtabs %}

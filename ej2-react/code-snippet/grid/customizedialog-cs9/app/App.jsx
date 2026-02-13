@@ -15,10 +15,10 @@ function App() {
     };
     return <GridComponent id="Grid" ref={g => grid = g} allowRowDragAndDrop={true} dataSource={data} rowDrop={rowDrop} selectionSettings={selectOptions} rowDropSettings={rowDropOptions} height={400}>
     <ColumnsDirective>
-      <ColumnDirective field="OrderID" isPrimaryKey={true} headerText="Order ID" width="120" textAlign="Center"/>
+      <ColumnDirective field="OrderID" isPrimaryKey={true} headerText="Order ID" width="120" textAlign="Right"/>
       <ColumnDirective field="CustomerID" headerText="Customer Name" width="150" textAlign="Center"/>
-      <ColumnDirective field="OrderDate" headerText="Order Date" width="100" format="yMd" textAlign="Center"/>
-      <ColumnDirective field="Freight" headerText="Freight" width="120" format="C2" textAlign="Center"/>
+      <ColumnDirective field="OrderDate" headerText="Order Date" width="100" format="yMd" textAlign="Right"/>
+      <ColumnDirective field="Freight" headerText="Freight" width="120" format="C2" textAlign="Right"/>
       <ColumnDirective field="ShipCity" headerText="Ship City" width="150" textAlign="Center"/>
       <ColumnDirective field="ShipCountry" headerText="Ship Country" width="150" textAlign="Center"/>
     </ColumnsDirective>

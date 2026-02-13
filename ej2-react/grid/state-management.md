@@ -8,17 +8,16 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# State Management in React Grid component
+# State Management in React Grid Component
 
-State management in the React Grid component allows you to maintain the grid's state even after a browser refresh or when navigating to a different page within the same browser session. This feature is particularly useful for retaining the grid's configuration and data even after a page reload.
+State management in the React Grid component enables maintaining the grid's state across browser refreshes and during navigation within the same browser session. This capability helps retain the grid's configuration and data after a page reload.
 
-To enable state persistence in the Grid, you can utilize the [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid/#enablepersistence) property. When this property is set to **true**, the grid will automatically save its state in the browser's [localStorage](https://www.w3schools.com/html/html5_webstorage.asp#), ensuring that the state is preserved across page reloads.
-
+Enable state persistence in the grid using the [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid#enablepersistence) property. When this property is set to `true`, the grid automatically saves its state in the browser's [localStorage](https://www.w3schools.com/html/html5_webstorage.asp#), preserving the state across page reloads.
 ```ts
 <GridComponent dataSource={data} enablePersistence={true}></ejs-GridComponent>
 ```
 
-> The grid will store the state using the combination of the component name and component ID in the storage. For example, if the component name is **grid** and the ID is **OrderDetails**, the state will be stored as **gridOrderDetails**.
+> The Grid stores state using the combination of the component name and component ID in storage. For example, if the component name is "grid" and the ID is "OrderDetails", the state is stored as **gridOrderDetails**.
 
 When enabling state persistence, the following grid settings will persist in the local storage.
 
@@ -36,15 +35,13 @@ The grid will persist only the last selected row index.
 
 ## Restore initial Grid state
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component, you have the capability to restore the grid to its initial state, reverting all changes and configurations made during the interaction. This feature can be particularly useful when you want to reset the grid to its original settings, eliminating any applied filters, sorting, or column reordering.
+In the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component, restoring the grid to its initial state reverts all changes. This is useful for returning the grid to original settings, removing applied filters, sorting, or column reordering.
 
-Here are the steps to reset the grid to its initial state, even when the [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid/#enablepersistence) property is enabled:
+The following steps describe the process of resetting the grid to its initial state, even when the [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid#enablepersistence) property is enabled.
 
 ### Changing component id
 
-If you want to restore the initial state of the grid, consider changing the component ID. This step ensures that the grid is treated as a new instance, effectively reverting to its default settings.
-
-Here is an example code to change the component id dynamically to restore initial grid state.
+Restoring the initial state of the grid can be achieved by changing the component ID. This causes the grid to be treated as a new instance, reverting to default settings.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -63,11 +60,10 @@ Here is an example code to change the component id dynamically to restore initia
 
  {% previewsample "page.domainurl/code-snippet/grid/state-persistance-cs1" %}
 
+
 ### Clearing local storage
 
-Another method to reset the grid is by clearing the local storage associated with the grid component. This action removes any stored state information, allowing the grid to return to its original configuration.
-
-Here is an example code on how to clear local storage to retain its default state.
+Clearing the local storage associated with the grid component resets the grid by removing stored state information and returning the grid to its original configuration.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -88,11 +84,19 @@ Here is an example code on how to clear local storage to retain its default stat
 
 ## Restore to specific state version
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports version-based persistence for easy restoration to a specific state. To enable version based persistence, import `enableVersionBasedPersistence` from `@syncfusion/ej2-base` and set it globally to **true**. Define the grid in the template with properties, bind data, and configure persistence using [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid/#enablepersistence) and [ej2state-persistenceVersion](https://ej2.syncfusion.com/react/documentation/api/grid/#ej2state-persistenceversion). 
+Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports version-based persistence for restoration to a specific state. 
 
-In the below example, the `clickHandler` method is responsible for handling button clicks corresponding to different versions. Inside this method, the targeted version is assigned to the grid's `ej2statepersistenceVersion` dynamically. The code checks if there is already a persisted state for the selected version in the local storage. If found, the grid is updated with the settings retrieved from the local storage, including columns, filter settings, group settings, sort settings, page settings, and selected row index. If no persisted state is found, the current grid state is persisted to the local storage using the [getPersistData](https://ej2.syncfusion.com/react/documentation/api/grid/#getpersistdata) method.
+Steps to enable version-based persistence in the React Grid:
 
-Here is an example of how to integrate version-based persistence into your React component and restore to specific state version:
+1. Import `enableVersionBasedPersistence` from `@syncfusion/ej2-base`.
+2. Call `enableVersionBasedPersistence(true)` to turn on version-based persistence for the application.
+3. Define the grid with the required properties and bind the data source.
+4. Set the [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid#enablepersistence) property on the grid to store and restore its state automatically.
+5. Use the [ej2state-persistenceVersion](https://ej2.syncfusion.com/react/documentation/api/grid#ej2state-persistenceversion) property on the grid to define the version of the persisted state.
+
+The example below assigns the targeted version to the grid's `ej2statepersistenceVersion` dynamically in a `clickHandler` method. The code checks local storage for a persisted state for the selected version; if found, the grid is updated with settings retrieved from local storage (columns, filterSettings, groupSettings, sortSettings, pageSettings, and selectedRowIndex). If no persisted state is found, the current grid state is saved to local storage using the [getPersistData](https://ej2.syncfusion.com/react/documentation/api/grid#getpersistdata) method.
+
+The example below demonstrates integration of version-based persistence and restoration to a specific state version:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -113,11 +117,11 @@ Here is an example of how to integrate version-based persistence into your React
 
 ## Restore to previous state
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component allows you to save and restore its state using local storage. This feature is helpful when you want to preserve the current state of the Grid, such as column order, sorting, and filtering, so that you can return to your previous work or configurations.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component supports saving and restoring state using local storage. This feature preserves the current state of the grid, such as column order, sorting, and filtering, enabling a return to previous configurations.
 
-To implement this functionality, use the `getItem` and `setItem` methods for local storage, along with the Grid component's `setProperties` and [getPersistData](https://ej2.syncfusion.com/react/documentation/api/grid/#getpersistdata) methods.
+Implement this functionality using the `getItem` and `setItem` methods for local storage, along with the Grid component's `setProperties` and [getPersistData](https://ej2.syncfusion.com/react/documentation/api/grid#getpersistdata) methods.
 
-The provided code demonstrates how to save and restore the previous state of a Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component using local storage.
+The code below demonstrates saving and restoring the previous state of a Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component using local storage.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -138,7 +142,7 @@ The provided code demonstrates how to save and restore the previous state of a S
 
 ## Maintaining custom query in a persistent state
 
-When [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid/#enablepersistence) is enabled, the Grid does not automatically maintain custom query parameters after a page load. This is because the Grid refreshes its query params for every page load. You can maintain the custom query params by resetting the [addParams](https://ej2.syncfusion.com/documentation/api/data/query/#addparams) method in the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid/#actionbegin) event.
+When [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid#enablepersistence) is enabled, the grid does not automatically maintain custom query parameters after a page load because the grid refreshes its query params on every load. Maintain custom query params by resetting the [addParams](https://ej2.syncfusion.com/documentation/api/data/query#addparams) method in the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid#actionbegin) event.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -157,19 +161,19 @@ When [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid
 
  {% previewsample "page.domainurl/code-snippet/grid/column-cs35" %}
 
-## Observables binding with state persistence
+## Observable binding with state persistence
 
-The Syncfusion React Grid supports state persistence when using observable binding, ensuring that the Grid retains its state across sessions. This is useful when dealing with real-time data updates or asynchronous data sources while preserving user interactions such as sorting, filtering, paging, and grouping.
+The Syncfusion React Grid supports state persistence with observable binding, ensuring the grid retains state across sessions. This is useful for real-time data updates or asynchronous data sources while preserving interactions such as sorting, filtering, paging, and grouping.
 
-To implement state persistence with observables, the initial query state must be manually handled. This involves:
+Implementing state persistence with observables requires manual handling of the initial query state. This involves:
 
-    * Retrieving the initial query using the Grid’s [getDataModule](https://ej2.syncfusion.com/react/documentation/api/grid/#getdatamodule) method with `generateQuery`.
+* Retrieving the initial query using the grid’s [getDataModule](https://ej2.syncfusion.com/react/documentation/api/grid#getdatamodule) method with `generateQuery`.
+* Obtaining the state from the query via `getStateEventArgument` method.
+* Sending the retrieved state to the service to fetch data accordingly.
 
-    * Obtaining the state from the query via `getStateEventArgument` method.
+Except for the initial render, state persistence retains manually performed actions by storing the state in the browser’s `localStorage`, allowing persistence across page reloads. 
 
-    * Sending the retrieved state to the service to fetch data accordingly.
-
-Except for the initial render, state persistence ensures that manually performed actions are retained by storing the state in the browser’s `localStorage`, allowing it to persist across page reloads. The following example demonstrates how to use the [created](https://ej2.syncfusion.com/react/documentation/api/grid/#created) event to send the persisted state to the service at initial render:
+The following example demonstrates using the [created](https://ej2.syncfusion.com/react/documentation/api/grid#created) event to send the persisted state to the service at initial render:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -193,28 +197,28 @@ Except for the initial render, state persistence ensures that manually performed
 
 ## Get or set local storage value
 
-If the [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid/#enablepersistence) property is set to **true**, the Grid property value is saved in the **window.localStorage** for reference. You can get or set the localStorage value by using the **getItem** and **setItem** methods in **window.localStorage**.
+If the [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid#enablepersistence) property is set to `true`, the grid property value is saved in **window.localStorage** for reference. Get or set the localStorage value using the `getItem` and `setItem` methods in **window.localStorage**.
 
-To retrieve the Grid model from Local Storage, follow these steps:
+Retrieve the grid model from Local Storage as follows:
 
 ```typescript
-//get the Grid model.
-let value: string = window.localStorage.getItem('gridOrders'); //"gridOrders" is component name + component id.
+// get the Grid model.
+let value: string = window.localStorage.getItem('gridOrders'); // "gridOrders" is component name + component id.
 let model: Object = JSON.parse(value);
 
 ```
 
 ```typescript
-//set the Grid model.
-window.localStorage.setItem('gridOrders', JSON.stringify(value)); //"gridOrders" is component name + component id.
+// set the Grid model.
+window.localStorage.setItem('gridOrders', JSON.stringify(value)); // "gridOrders" is component name + component id.
 
 ```
 
 ## Prevent columns from persisting
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component, you may sometimes want to prevent certain settings from being persisted when using the [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid/#enablepersistence) feature. When the `enablePersistence` property is set to **true**, the Grid properties such as [Grouping](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings/), [Paging](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings/), [Filtering](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings/), [Sorting](https://ej2.syncfusion.com/react/documentation/api/grid/sortSettings/), and [Columns](https://ej2.syncfusion.com/react/documentation/api/grid/column/) will persist. You can use the `addOnPersist` method to prevent these Grid properties from persisting.
+In the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component, certain settings may need to be excluded from being saved when the [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid#enablepersistence) feature is turned on. When the `enablePersistence` property is `true`, grid properties such as [Grouping](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings) [Paging](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings), [Filtering](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings), [Sorting](https://ej2.syncfusion.com/react/documentation/api/grid/sortSettings), and [Columns](https://ej2.syncfusion.com/react/documentation/api/grid/column) persist. To prevent specific properties from being persisted, the `addOnPersist` method can be used.
 
-The following example demonstrates how to prevent Grid columns from persisting. In the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid/#databound) event of the Grid, you can override the `addOnPersist` method and remove the columns from the key list given for persistence.
+The following example demonstrates preventing grid columns from persisting. Override the `addOnPersist` method in the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid#databound) event and remove the columns from the key list given for persistence.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -235,13 +239,11 @@ The following example demonstrates how to prevent Grid columns from persisting. 
 
 ## Add to persist
 
-Persistence can be added to a Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component to enhance the user experience. Persistence allows saving and restoring the state of the grid, including column layouts, sorting, filtering, and other user-specific settings. In this documentation, you will explore how to persist column templates, header templates, and header text settings in the React Grid.
+Persistence can be added to a Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component to enhance the application experience. Persistence allows saving and restoring the state of the grid, including column layouts, sorting, filtering, and other settings. This section describes the process of persisting column templates, header templates, and header text settings in the React Grid.
 
 ### Add a new column in persisted columns list
 
-When the [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid/#enablepersistence) property is set to true in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component, column configurations are persisted. If you need to add new columns to the existing persisted state, you can achieve this by using the Grid's built-in methods like `push`, and then call the [refreshColumns](https://ej2.syncfusion.com/react/documentation/api/grid/#refreshcolumns) method to update the UI with the new columns.
-
-Here's an example of how to add a new column to a list of persisted columns:
+When the [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid#enablepersistence) property is set to `true` in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component, column configurations are automatically persisted. To add new columns to an already persisted state, the grid’s built-in methods such as `push` can be used, followed by calling the [refreshColumns](https://ej2.syncfusion.com/react/documentation/api/grid#refreshcolumns) method to update the UI with the newly added columns.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -260,13 +262,13 @@ Here's an example of how to add a new column to a list of persisted columns:
 
  {% previewsample "page.domainurl/code-snippet/grid/column-cs36" %}
 
-> * Adding new columns using `ColumnDirectives` directly in the grid initialization is not recommended if you intend to persist the new columns with the existing columns list 
+> * Adding new columns using `ColumnDirectives` directly in the grid initialization is not recommended when intending to persist new columns with the existing columns list. 
 
 ### Persist the column template, header template and header text
 
-By default, when the [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid/#enablepersistence) property is set to **true** in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component, certain column properties such as column template, header text, header template, column formatter, and value accessor are not persisted. This is because these properties can be customized at the application level.
+By default, when the [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid#enablepersistence) property is `true` in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component, certain column properties such as column template, header text, header template, column formatter, and value accessor are not persisted because these properties can be customized at the application level.
 
-To restore these column properties and achieve persistence, you can follow the approach of cloning the grid's columns property using JavaScript Object's assign method and manually storing it along with the persist data. When restoring the settings, this cloned column object must be assigned to the grid's columns property to restore the column settings. The following sample demonstrates this process:
+Restoring these column properties and achieving persistence requires cloning the grid's columns property using JavaScript Object's assign method and manually storing it along with the persist data. When restoring the settings, assign this cloned column object to the grid's columns property to restore the column settings. The sample below demonstrates this process:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

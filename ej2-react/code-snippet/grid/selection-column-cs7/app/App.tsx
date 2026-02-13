@@ -22,7 +22,7 @@ function App() {
           </ColumnDirective>
           <ColumnDirective field="ShipCountry" headerText="Ship Country" width="120">
           </ColumnDirective>
-          <ColumnDirective field="Freight" headerText="Freight" format='C2' width="100">
+          <ColumnDirective field="Freight" headerText="Freight" format='C2' width="100" textAlign="Right">
           </ColumnDirective>
         </ColumnsDirective>
         <Inject services={[Page]} />

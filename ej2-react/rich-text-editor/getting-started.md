@@ -30,6 +30,7 @@ To set-up a React application in TypeScript environment, run the following comma
 ```bash
 npm create vite@7 my-app -- --template react-ts
 cd my-app
+npm install
 npm run dev
 ```
 
@@ -70,11 +71,9 @@ To create Rich Text Editor with additional features, inject the required modules
 These modules should be injected into the `services` section of the component as shown below:
 
 ```typescript
-
 <RichTextEditorComponent>
       <Inject services={[HtmlEditor,Image, Link, Toolbar, QuickToolbar]} />
 </RichTextEditorComponent>
-
 ```
 
 > Additional feature modules are available [here](./module.md).
@@ -84,11 +83,23 @@ These modules should be injected into the `services` section of the component as
 Now, you can start adding React Rich Text Editor component in the application. For getting started, add the Rich Text Editor component in **src/App.tsx** file using following sample.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/rich-text-editor/basic-cs7/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/rich-text-editor/basic-cs7/app/App.tsx %}
+{% endhighlight %}
+{% highlight css tabtitle="App.css" %}
+
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-richtexteditor/styles/tailwind3.css';
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -101,6 +112,7 @@ Configure the toolbar with the tools using items field of the toolbarSettings pr
 ```typescript
 import { HtmlEditor, Inject, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
 import * as React from 'react';
+import './App.css';
 
 function App() {
   const rteValue: string = "<p>The Syncfusion Rich Text Editor, a WYSIWYG (what you see is what you get) editor, is a user interface that allows you to create, edit, and format rich text content. You can try out a demo of this editor here.</p><p><b>Key features:</b></p><ul><li><p>Provides &lt;IFRAME&gt; and &lt;DIV&gt; modes.</p></li><li><p>Bulleted and numbered lists.</p></li><li><p>Handles images, hyperlinks, videos, hyperlinks, uploads, etc.</p></li><li><p>Contains undo/redo manager. </p></li></ul><div style='display: inline-block; width: 60%; vertical-align: top; cursor: auto;'><img alt='Sky with sun' src='https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Overview.png' width='309' style='min-width: 10px; min-height: 10px; width: 309px; height: 174px;' class='e-rte-image e-imginline e-rte-drag-image' height='174' /></div>";
@@ -137,11 +149,23 @@ npm run dev
 The output will appear as follows.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/rich-text-editor/basic-cs5/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/rich-text-editor/basic-cs5/app/App.tsx %}
+{% endhighlight %}
+{% highlight css tabtitle="App.css" %}
+
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-richtexteditor/styles/tailwind3.css';
+
 {% endhighlight %}
 {% endtabs %}
 

@@ -1,5 +1,3 @@
-{% raw %}
-
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DiagramComponent, Inject, ImportAndExportVisio, VisioExportOptions, IExportingEventArgs, NodeModel, ConnectorModel } from "@syncfusion/ej2-react-diagrams";
@@ -102,4 +100,4 @@ export default function App() {
 const root = ReactDOM.createRoot(document.getElementById("diagram") as HTMLElement);
 root.render(<App />);
 
-{% endraw %}
+

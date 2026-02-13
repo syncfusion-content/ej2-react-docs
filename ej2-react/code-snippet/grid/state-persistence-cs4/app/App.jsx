@@ -21,8 +21,8 @@ function App() {
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true}/>
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='100'/>
-        <ColumnDirective field='Freight' headerText='Freight' width='100' format='C2'/>
-        <ColumnDirective field='OrderDate' headerText='OrderDate' width='100' allowGrouping={false}/>
+        <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign="Right" format='C2'/>
+        <ColumnDirective field='OrderDate' headerText='Order Date' width='100' textAlign="Right" allowGrouping={false}/>
         <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100'/>
       </ColumnsDirective>
       <Inject services={[Page, Sort, Filter, Group]} />

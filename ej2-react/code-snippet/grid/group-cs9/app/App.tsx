@@ -28,5 +28,3 @@ function App() {
   </GridComponent >
 };
 export default App;
-
-

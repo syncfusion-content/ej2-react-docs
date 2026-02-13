@@ -112,12 +112,12 @@ npm install @syncfusion/ej2-react-grids
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> provides various themes for React components. You can import CSS styles for the desired theme into your project.  Refer to the [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a React project.
 
-In this article, the `Fluent` theme is applied using CSS styles, which are available in installed packages. The necessary `Fluent` CSS styles for the Grid component were imported into the `~src/webparts/reactGridComponent/components/ReactGridComponent.tsx` file. 
+In this article, the `Tailwind 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Tailwind 3` CSS styles for the Grid component were imported into the `~src/webparts/reactGridComponent/components/ReactGridComponent.tsx` file. 
 
 To add Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JS 2 style reference from npm packages:
 
 ```bash
-require ('@syncfusion/ej2-react-grids/styles/fluent.css');
+require ('@syncfusion/ej2-react-grids/styles/tailwind3.css');
 ```
 
 or
@@ -125,7 +125,7 @@ or
 To add Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JS 2 style reference from CDN:
 
 ```bash
-<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/25.2.3/fluent.css" /> // use the latest version to refer the css through CDN//
+<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/25.2.3/tailwind3.css" /> // use the latest version to refer the css through CDN//
 ```
 
 ## Adding Grid component with local data
@@ -185,7 +185,7 @@ const ReactGridComponent: React.FC<IReactGridComponentProps> = (props) => {
         <div>
           <h3>Welcome to React Grid component in the SharePoint Framework!</h3>
         </div>
-          <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/25.2.3/fluent.css" />
+          <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/25.2.3/tailwind3.css" />
           <GridComponent id='grid' dataSource={data} >
             <ColumnsDirective>
               <ColumnDirective field='OrderID' isPrimaryKey={true} width='90' />
@@ -437,7 +437,7 @@ const ReactGridComponent: React.FC<IReactGridComponentProps> = (props) => {
         <div>
           <h3>Welcome to React Grid component in the SharePoint Framework!</h3>
         </div>
-        <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/25.2.3/fluent.css" />
+        <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/25.2.3/tailwind3.css" />
         <div>          
           <GridComponent ref={gridInstance} dataStateChange={dataStateChange.bind(this)}>
           <ColumnsDirective>
@@ -1106,7 +1106,7 @@ const ReactGridComponent: React.FC<IReactGridComponentProps> = (props) => {
         <div>
           <h3>Welcome to React Grid component in the SharePoint Framework!</h3>
         </div>
-        <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/25.2.3/fluent.css" />
+        <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/25.2.3/tailwind3.css" />
         <div>          
           <GridComponent id='grid' ref={gridInstance} allowFiltering={true} allowSorting={true} allowPaging={true} pageSettings={GridInitialState.pageSettings} 
           allowGrouping={true} groupSettings={groupSettings} editSettings={editOptions} toolbar={toolbarOptions}

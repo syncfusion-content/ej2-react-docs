@@ -2,7 +2,7 @@ import { ColumnDirective, ColumnsDirective, GridComponent, Group, Inject } from 
 import * as React from 'react';
 import { data } from './datasource';
 function App() {
-    return <GridComponent dataSource={data} allowGrouping={true} height={267}>
+  return <GridComponent dataSource={data} allowGrouping={true} height={267}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right"/>
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'/>

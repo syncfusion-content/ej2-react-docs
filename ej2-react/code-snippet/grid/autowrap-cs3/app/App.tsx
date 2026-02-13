@@ -1,4 +1,3 @@
-
 import { ClipMode, ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import { DropDownListComponent, ChangeEventArgs } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
@@ -23,7 +22,7 @@ function App() {
       <GridComponent dataSource={inventoryData} height={315} ref={g => grid = g} allowPaging={true}>
         <ColumnsDirective>
           <ColumnDirective field='Inventor' headerText='Inventor' width='100' />
-          <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' width='100' />
+          <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' width='100' textAlign='Right'/>
           <ColumnDirective field='Country' headerText='Country' width='100' />
           <ColumnDirective field='Mainfieldsofinvention' headerText='Main fields of invention' width='140' />
         </ColumnsDirective>

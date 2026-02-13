@@ -28,6 +28,7 @@ function App() {
                 <ColumnDirective field='CustomerID' headerText='CustomerID' width='100' />
                 <ColumnDirective field='Rating' headerText='Customer Rating' width='150' template={template}></ColumnDirective>
             </ColumnsDirective>
-        </GridComponent>);
+        </GridComponent>
+    );
 }
 export default App;

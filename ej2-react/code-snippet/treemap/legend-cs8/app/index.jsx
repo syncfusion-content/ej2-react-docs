@@ -1,4 +1,4 @@
-{% raw %}
+
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { TreeMapComponent, Inject, TreeMapLegend } from '@syncfusion/ej2-react-treemap';
@@ -42,4 +42,3 @@ class App extends React.Component {
 const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
-{% endraw %}

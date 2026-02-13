@@ -11,7 +11,7 @@ function App() {
       <ColumnDirective field='EmployeeID' headerText='Employee ID' width='140' textAlign="Right" />
       <ColumnDirective field='Name' headerText='Name' width='140' />
       <ColumnDirective field='ShipName' headerText='Ship Name' width='170' textAlign="Right" />
-      <ColumnDirective field='CustomerID' headerText='CustomerID' width='140' textAlign="Right" />
+      <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' textAlign="Right" />
     </ColumnsDirective>
     <Inject services={[Filter]}/>
   </GridComponent>;

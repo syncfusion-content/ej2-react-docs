@@ -1,4 +1,4 @@
-{% raw %}
+
 import { TreeMapComponent, LevelDirective, LevelsDirective, ILoadedEventArgs, IDrillEndEventArgs } from '@syncfusion/ej2-react-treemap';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
@@ -25,4 +25,3 @@ export function App() {
 const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
-{% endraw %}
