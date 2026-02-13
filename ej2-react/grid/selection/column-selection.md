@@ -1,20 +1,19 @@
 ---
 layout: post
-title: Column selection in React Grid component | Syncfusion
-description: Learn here all about Column selection in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Column selection | Syncfusion
+description: Learn about column selection in Syncfusion React Grid (EJ2) to select single or multiple columns using methods and keyboard interactions.
 control: Column selection 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column Selection in React Grid component
+# Column Selection in React Grid Component
 
-Column selection in grid component allows you to select one or more columns using mouse interactions or arrow keys. This feature is useful when you want to highlight, manipulate, or perform actions on specific columns within the Grid.
+Column selection in the Grid allows selecting one or more columns by clicking the column header or using keyboard navigation. This feature is useful for highlighting, manipulating, or performing actions on specific columns within the Grid. Press <kbd>Esc</kbd> to clear the current column selection.
 
-To enable column selection in the Grid, you need to set the [selectionSettings.allowColumnSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings/#allowcolumnselection) property to **true**. 
+To enable column selection in the grid, set the [selectionSettings.allowColumnSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#allowcolumnselection) property to `true`. 
 
-Here's an example of how to enable column selection using `allowColumnSelection` property in the Grid component:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -85,11 +84,16 @@ export default App;
 
 ## Single column selection 
 
-The React Grid allows you to select a single column within the Grid. This feature is particularly useful when you want to focus on specific columns or perform actions on the data within a particular column.
+Single column selection allows selecting one column at a time within the grid. This capability is particularly useful when focusing on specific columns or performing actions on the data within a particular column.
 
-To enable single column selection, set the [selectionSettings.allowColumnSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings/#allowcolumnselection) property to **true**. This property enables column selection and set the [selectionSettings.type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings/#type) property to **Single**. This configuration allows you to select a single column at a time within the grid.
+To enable single column selection, set the [selectionSettings.allowColumnSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#allowcolumnselection) property to `true`. Additionally, set the [selectionSettings.type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) property to `Single`. This configuration provides single column selection at a time within the grid.
 
-Here's an example of how to enable single column selection using `allowColumnSelection` and `type` property :
+**Mouse interaction:** Click on any column header to select a single column.
+
+**Keyboard navigation:** 
+* Navigate between columns using the <kbd>Left</kbd> and <kbd>Right</kbd> arrow keys when a column header is focused.
+* Press the <kbd>Enter</kbd> key to select the focused column.
+
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -110,11 +114,16 @@ Here's an example of how to enable single column selection using `allowColumnSel
 
 ## Multiple column selection 
 
-The React Grid allows you to select multiple columns within the Grid. This feature is particularly useful when you need to focus on or perform actions on several columns simultaneously.
+Multiple column selection allows selecting several columns simultaneously within the grid. This capability is particularly useful when focusing on or performing actions on multiple columns at once.
 
-To enable multiple column selection, set the [selectionSettings.allowColumnSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings/#allowcolumnselection) property to **true**. This property enables column selection and set the [selectionSettings.type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings/#type) property to **Multiple**. This configuration allows you to select a multiple column at a time within the grid.
+To enable multiple column selection, set the [selectionSettings.allowColumnSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#allowcolumnselection) property to `true`. Additionally, set the [selectionSettings.type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) property to `Multiple`. This configuration provides multiple column selection within the grid.
 
-Here's an example of how to enable multiple column selection using `allowColumnSelection` and `type` property :
+**Mouse interactions:**
+* Hold the <kbd>Ctrl</kbd> key and click on different column headers to select multiple non-consecutive columns.
+* Hold the <kbd>Shift</kbd> key and click on the start column header, then click on the end column header to select a continuous range of columns.
+
+**Keyboard navigation:** Hold the <kbd>Shift</kbd> key and use the <kbd>Left</kbd> or <kbd>Right</kbd> arrow keys to extend the selection to multiple columns.
+
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -133,19 +142,19 @@ Here's an example of how to enable multiple column selection using `allowColumnS
 
  {% previewsample "page.domainurl/code-snippet/grid/selection-column-cs2" %}
 
-## Select columns externally 
+## Select columns programmatically
 
-You can perform single column selection, multiple column selection, and range of column selection externally in a Grid using built-in methods. This feature allows you to interact with specific columns within the Grid. The following topic demonstrates how you can achieve these selections using methods.
+The Grid supports externally performing single column selection, multiple column selection, and range of column selection using built-in methods. This capability allows interaction with specific columns within the grid. The following topic demonstrates how these selections can be achieved using methods.
 
-### Single column selection
+### Selecting single column
 
-The React grid allows you to select a single column within the Grid. This feature is particularly useful when you want to focus on specific columns or perform actions on the data within a particular column.
+Single column selection provides programmatic selection of a single column within the grid. This capability is particularly useful when focusing on specific columns or performing actions on the data within a particular column.
 
-To achieve single column selection, you can use the [selectColumn](https://ej2.syncfusion.com/react/documentation/api/grid/selection/#selectcolumn) method. This method selects the column by passing the column index as a parameter.
+To achieve single column selection, use the [selectColumn](https://ej2.syncfusion.com/react/documentation/api/grid/selection#selectcolumn) method. This method selects the column by passing the column index as a parameter.
 
-> Column selection requires the [selectionSettings.allowColumnSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings/#allowcolumnselection) property to **true** and [type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings/#type) should be **Single**.
+> Column selection requires the [selectionSettings.allowColumnSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#allowcolumnselection) property to `true` and [type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) should be `Single`.
 
-The following example, demonstrates how to select a single column within the Grid by obtaining the selected column index through a textbox component and passing these column index as argument to the `selectColumn` method. When the button event is triggered by clicking the **Select Column** button, a single column is selected within the Grid:
+The following example demonstrates how to select a single column within the grid. The selected column index is obtained through a textbox component and passed as an argument to the `selectColumn` method. When the button event is triggered by clicking the "Select Column" button, a single column is selected within the grid:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -180,7 +189,7 @@ function App() {
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
         <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
-        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' textAlign="Right" />
       </ColumnsDirective>
     </GridComponent></div>)
 };
@@ -219,7 +228,7 @@ function App() {
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
         <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
-        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' textAlign="Right" />
       </ColumnsDirective>
     </GridComponent></div>)
 };
@@ -236,15 +245,15 @@ export default App;
 
  {% previewsample "page.domainurl/code-snippet/grid/selection-column-cs3" %}
 
-### Multiple column selection
+### Selecting multiple columns
 
-The React Grid allows you to select multiple columns within the Grid. This feature is particularly useful when you need to focus on or perform actions on several columns simultaneously.
+Multiple column selection in the grid enables programmatic selection of several columns at once, allowing operations to be performed on multiple columns simultaneously. This capability is particularly useful for scenarios that require highlighting, manipulating, or applying actions across more than one column in the grid.
 
-To achieve multiple column selection, you can use the [selectColumns](https://ej2.syncfusion.com/react/documentation/api/grid/selection/#selectcolumns) method. This method selects the columns by passing an array of column indexes as a parameter.
+To achieve multiple column selection, use the [selectColumns](https://ej2.syncfusion.com/react/documentation/api/grid/selection#selectcolumns) method. This method selects columns by passing an array of column indexes as a parameter.
 
-> Column selection requires the [selectionSettings.allowColumnSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings/#allowcolumnselection) property to **true** and [type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings/#type) should be **Multiple**.
+> Column selection requires the [selectionSettings.allowColumnSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#allowcolumnselection) property to `true` and [type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) should be `Multiple`.
 
-The following example demonstrates how to select multiple columns in the Grid by calling the `selectColumns` method within the button click event and passing an array of column indexes as arguments.
+The following example demonstrates selecting multiple columns in the grid by calling the `selectColumns` method within the button click event and passing an array of column indexes as arguments.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -280,8 +289,8 @@ function App() {
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
         <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
-        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
-        <ColumnDirective field='OrderDate' headerText='Order Date' width='100' format='yMd' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' textAlign="Right" />
+        <ColumnDirective field='OrderDate' headerText='Order Date' width='100' format='yMd' textAlign="Right" />
         <ColumnDirective field='ShipCity' headerText='Ship City' width='100' />
         <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
       </ColumnsDirective>
@@ -323,8 +332,8 @@ function App() {
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
         <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
-        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
-        <ColumnDirective field='OrderDate' headerText='Order Date' width='100' format='yMd' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' textAlign="Right" />
+        <ColumnDirective field='OrderDate' headerText='Order Date' width='100' format='yMd' textAlign="Right" />
         <ColumnDirective field='ShipCity' headerText='Ship City' width='100' />
         <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
       </ColumnsDirective>
@@ -343,13 +352,13 @@ export default App;
 
  {% previewsample "page.domainurl/code-snippet/grid/selection-column-cs4" %}
 
-### Range of column selection 
+### Selecting a range of columns
 
-Range of column selection allows you to select a group of columns within the Grid. This feature is particularly useful when you need to perform actions on a consecutive set of columns or focus on specific column ranges.
+Range of column selection provides selecting a group of consecutive columns within the grid. This capability is particularly useful when performing actions on a consecutive set of columns or focusing on specific column ranges.
 
-To achieve range of column selection, you can use the [selectColumnsByRange](https://ej2.syncfusion.com/react/documentation/api/grid/selection/#selectcolumnsbyrange) method. This method selects the columns by specifying the start and end column indexes.
+To achieve range of column selection, use the [selectColumnsByRange](https://ej2.syncfusion.com/react/documentation/api/grid/selection#selectcolumnsbyrange) method. This method selects columns by specifying the start and end column indexes.
 
-The following example demonstrates how to select a range of columns within the Grid by obtaining the selected column's start index and end index through textbox components. Then, pass these start index and end index as arguments to the `selectColumnsByRange` method. When you trigger the button event by clicking the **Select Columns** button, a range of columns is selected within the Grid.
+The following example demonstrates selecting a range of columns within the grid. The selected column's start index and end index are obtained through textbox components and passed as arguments to the `selectColumnsByRange` method. When the button event is triggered by clicking the "Select Columns" button, a range of columns is selected within the grid.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -392,7 +401,7 @@ function App() {
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
         <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
-        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' textAlign="Right" />
       </ColumnsDirective>
     </GridComponent></div>)
 };
@@ -439,7 +448,7 @@ function App() {
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
         <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
-        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' textAlign="Right" />
       </ColumnsDirective>
     </GridComponent></div>)
 };
@@ -456,13 +465,13 @@ export default App;
 
  {% previewsample "page.domainurl/code-snippet/grid/selection-column-cs5" %}
 
-### Select with existing column 
+### Selecting an existing column
 
-Select with existing column allows you to add a column to the current selection without clearing the existing column selection in the Grid component. This feature is valuable when you want to expand your selection to include additional columns while preserving previously selected columns.
+Select with existing column provides adding a column to the current selection without clearing the existing column selection in the Grid component. This capability is valuable when expanding the selection to include additional columns while preserving previously selected columns.
 
-To achieve this, you can use the [selectColumnWithExisting](https://ej2.syncfusion.com/react/documentation/api/grid/selection/#selectcolumnwithexisting) method. This method selects a column along with an existing column by specifying the column index as a parameter.
+To achieve this, use the [selectColumnWithExisting](https://ej2.syncfusion.com/react/documentation/api/grid/selection#selectcolumnwithexisting) method. This method selects a column along with an existing column by specifying the column index as a parameter.
 
-The following example demonstrates how to select a column with an existing column by obtaining the selected column index through a textbox component and passing this column index as an argument to the `selectColumnWithExisting` method. When you trigger the button event by clicking the **Select Columns** button,  it selects the specified column along with any existing selections within the Grid.
+The following example demonstrates selecting a column with an existing column. The selected column index is obtained through a textbox component and passed as an argument to the `selectColumnWithExisting` method. When the button event is triggered by clicking the "Select Columns" button, the specified column is selected along with any existing selections within the grid.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -497,7 +506,7 @@ function App() {
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
         <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
-        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' textAlign="Right" />
       </ColumnsDirective>
     </GridComponent></div>)
 };
@@ -536,7 +545,7 @@ function App() {
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
         <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
-        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' textAlign="Right" />
       </ColumnsDirective>
     </GridComponent></div>)
 };
@@ -553,13 +562,13 @@ export default App;
 
  {% previewsample "page.domainurl/code-snippet/grid/selection-column-cs6" %}
 
-##  Clear column selection programmatically 
+## Clear column selection programmatically 
 
-Clearing column selection programmatically in the Grid component is a useful feature when you want to remove any existing column selections. To achieve this, you can use the [clearColumnSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selection/#clearcolumnselection) method.
+Clearing column selection programmatically in the Grid component is useful for removing any existing column selections. To achieve this, use the [clearColumnSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selection#clearcolumnselection) method.
 
-> The `clearColumnSelection` method is applicable when the selection [type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings/#type) is set to **Multiple** or **Single**.
+> The `clearColumnSelection` method is applicable when the selection [type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) is set to `Multiple` or `Single`.
 
-In the following example, it demonstrates how to clear column selection by calling the `clearColumnSelection` method in the button click event.
+The following example demonstrates clearing column selection by calling the `clearColumnSelection` method in the button click event.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -581,17 +590,17 @@ In the following example, it demonstrates how to clear column selection by calli
 
 ## Column selection events 
 
-The Grid provides several events related to column selection that allow you to respond to and customize the behavior of column selection. Here are the available column selection events:
+The Grid provides several events related to column selection that allow responding to and customizing the behavior of column selection. The following are the available column selection events:
 
-[columnSelecting](https://ej2.syncfusion.com/react/documentation/api/grid/#columnselecting): This event is triggered before any column selection occurs. It provides an opportunity to implement custom logic or validation before a column is selected, allowing you to control the selection process.
+[columnSelecting](https://ej2.syncfusion.com/react/documentation/api/grid#columnselecting): This event is triggered before any column selection occurs. It provides an opportunity to implement custom logic or validation before a column is selected, allowing control of the selection process.
 
-[columnSelected](https://ej2.syncfusion.com/react/documentation/api/grid/#columnselected): This event is triggered after a column is successfully selected. You can use this event to perform actions or updates when a column is selected.
+[columnSelected](https://ej2.syncfusion.com/react/documentation/api/grid#columnselected): This event is triggered after a column is successfully selected. Use this event to perform actions or updates when a column is selected.
 
-[columnDeselecting](https://ej2.syncfusion.com/react/documentation/api/grid/#columndeselecting): This event is triggered just before a selected column is deselected. It allows you to perform custom logic or validation to decide whether the column should be deselected or not.
+[columnDeselecting](https://ej2.syncfusion.com/react/documentation/api/grid#columndeselecting): This event is triggered just before a selected column is deselected. It allows performing custom logic or validation to decide whether the column should be deselected or not.
 
-[columnDeselected](https://ej2.syncfusion.com/react/documentation/api/grid/#columndeselected): This event is triggered when a particular selected column is deselected. You can use this event to perform actions or validations when a column is no longer selected.
+[columnDeselected](https://ej2.syncfusion.com/react/documentation/api/grid#columndeselected): This event is triggered when a particular selected column is deselected. Use this event to perform actions or validations when a column is no longer selected.
 
-In the following example, column selection is canceled when the value of `field` is equal to **CustomerID** within the `columnSelecting` event. The **headerCell** background color changes to green when the `columnSelected` event is triggered, and it changes to red when the `columnDeselecting` event is triggered. Furthermore, column selection is canceled when the value of `field` is equal to **CustomerID** within the `columnDeselected` event is triggered. A notification message is displayed to indicate which event was triggered whenever a column is selected.
+In the following example, column selection is canceled when the value of `field` is equal to "CustomerID" within the `columnSelecting` event. The "headerCell" background color changes to green when the `columnSelected` event is triggered and changes to red when the `columnDeselecting` event is triggered. A notification message is displayed to indicate which event was triggered whenever a column is selected.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -609,3 +618,10 @@ In the following example, column selection is canceled when the value of `field`
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/grid/selection-column-cs8" %}
+
+## See also
+- [Selection overview](./selection)
+- [Row selection](./row-selection)
+- [Cell selection](./cell-selection)
+- [Checkbox selection](./check-box-selection)
+- [Selection API](https://ej2.syncfusion.com/react/documentation/api/grid/selection)

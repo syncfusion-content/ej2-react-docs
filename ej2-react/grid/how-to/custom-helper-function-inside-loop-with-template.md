@@ -1,39 +1,39 @@
 ---
 layout: post
-title: Use custom helper inside the loop with templates in React Grid component | Syncfusion
-description: Learn here all about Use custom helper inside the loop with templates in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid – Build Dynamic Columns with Custom Templates | Syncfusion
+description: Explore how multiple templates in React Grid create flexible, interactive column layouts with custom content.
 platform: ej2-react
 control: Use custom helper inside the loop with templates 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Use custom helper inside the loop with templates in React Grid component
+# Displaying Custom Templates in React Grid component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid allows you to use custom helpers inside the loop with `template` directive of a column. This feature enables you to create complex templates that can incorporate additional helper functions.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports using custom helper functions inside a column's [template](https://ej2.syncfusion.com/react/documentation/api/grid/columnmodel#template), allowing the creation of complex, dynamic UI elements.
 
-The **Customer Rating** column includes a custom template defined using `template`. Inside this template, iterates through the **item** array and generates `<span>` tag, displayed as stars using the CSS below:
+In the "Customer Rating" column, a custom template loops through the item array and renders `<span>` elements styled as stars using the following CSS:
 
 ```css
 .e-grid .rating .star:before {
     content: '★';
-}
+    }
 
-.e-grid .rating .star {
-    font-size: 132%;
-    color: lightgrey;
-}
-```
+    .e-grid .rating .star {
+        font-size: 132%;
+            color: lightgrey;
+            }
+            ```
 
-The dynamically assigns classes based on the result of the **isRatingGreater** method, highlighting the star using the CSS below:
+            Classes are assigned conditionally based on the "isRatingGreater" helper method, which highlights selected stars using:
 
-```css
-.e-grid .rating .star.checked {
-    color: #ffa600;
-}
-```
+            ```css
+            .e-grid .rating .star.checked {
+                color: #ffa600;
+                }
+                ```
 
-This is demonstrated in the following example.
+The example below demonstrates the complete implementation.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -50,5 +50,4 @@ This is demonstrated in the following example.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/custom-loop-template" %}
-
+{% previewsample "page.domainurl/code-snippet/grid/custom-loop-template" %}

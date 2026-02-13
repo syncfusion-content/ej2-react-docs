@@ -36,7 +36,7 @@ N>To enable Visio import and export functionality, inject the `ImportAndExportVi
 
 ### How Visio import works
 
-A Visio file can be selected from the local file system or retrieved from a server or cloud storage. Once the **.vsdx** file is available, it is passed to the Diagram component as a **File** object using the `importFromVisio` method.
+A Visio file can be selected from the local file system or retrieved from a server or cloud storage. Once the **.vsdx** file is available, it is passed to the Diagram component as a **File** object using the [`importFromVisio`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#importfromvisio) method.
 
 During the import process:
 
@@ -70,7 +70,7 @@ Import behavior can be customized using the `VisioImportOptions` object.
 
 ### Import lifecycle event
 
-The `diagramImporting` event is triggered during the Visio import process. This event provides information about the current import status, available pages, warnings or errors, and supports page selection or cancellation of the import operation.
+The [`diagramImporting`](https://ej2.syncfusion.com/react/documentation/api/diagram/iimportingeventargs) event is triggered during the Visio import process. This event provides information about the current import status, available pages, warnings or errors, and supports page selection or cancellation of the import operation.
 
 **Event arguments:**
 
@@ -114,7 +114,7 @@ diagramImporting: function (args: IImportingEventArgs) {
 
 ### How Visio export works
 
-The Diagram component supports exporting diagrams to Microsoft Visio format using the `exportToVisio` method. This method generates a **.vsdx** file and automatically downloads it through the browser.
+The Diagram component supports exporting diagrams to Microsoft Visio format using the [`exportToVisio`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#exporttovisio) method. This method generates a **.vsdx** file and automatically downloads it through the browser.
 
 ### Exporting a diagram
 
@@ -142,7 +142,7 @@ Export behavior can be controlled using the `VisioExportOptions` object.
 
 ### Export lifecycle event
 
-The `diagramExporting` event provides status updates, reports warnings or errors, and supports cancellation of the export operation.
+The [`diagramExporting`](https://ej2.syncfusion.com/react/documentation/api/diagram/iexportingeventargs) event provides status updates, reports warnings or errors, and supports cancellation of the export operation.
 
 **Event arguments:**
 

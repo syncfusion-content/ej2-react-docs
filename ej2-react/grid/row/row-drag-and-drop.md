@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Row drag and drop in React Grid component | Syncfusion
+title: React Grid - Row Drag and Drop | Syncfusion
 description: Learn here all about Row drag and drop in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Row drag and drop 
 platform: ej2-react
@@ -8,17 +8,18 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row drag and drop in React Grid component
+# Row Drag and Drop in React Grid Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provides built-in support for row drag and drop functionality. This feature allows you to easily rearrange rows within the grid by dragging and dropping them to new positions. Additionally, you can also drag and drop rows from one grid to another grid, as well as drag and drop rows to custom components.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provides built-in support for seamless row drag and drop functionality. This feature enables effortless row rearrangement within the grid by dragging and dropping rows to new positions. Additionally, rows can be transferred between grids, as well as dragged and dropped to custom components, providing powerful flexibility for complex data management scenarios.
 
-To use the row drag and drop feature in Grid component, you need to inject the **RowDD** module in the grid. The **RowDD** is responsible for handling the row drag and drop functionality in the grid component. Once you have injected the **RowDD**, you can then use the [allowRowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/grid/#allowrowdraganddrop) and [targetID](https://ej2.syncfusion.com/react/documentation/api/grid/rowDropSettings/#targetid) properties to enable and configure the row drag and drop feature in the Grid.
+To use the row drag and drop feature in Grid component, inject the `RowDD` module in the grid. The `RowDD` service handles the row drag and drop functionality within the Grid component. Once the `RowDD` service is injected, use the [allowRowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/grid#allowrowdraganddrop) and [targetID](https://ej2.syncfusion.com/react/documentation/api/grid/rowDropSettings#targetid) properties to enable and configure the row drag and drop feature in the Grid.
 
-## Drag and drop within grid 
 
-The drag and drop feature allows you to rearrange rows within the grid by dragging them using a drag icon. This feature can be enabled by setting the [allowRowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/grid/#allowrowdraganddrop) property to **true**. This property is a boolean value that determines whether row drag and drop is enabled or not. By default, it is set to **false**, which means that row drag and drop is disabled.
+## Drag and drop within the grid
 
-Here's an example of how to enable drag and drop within the Grid:
+The drag and drop feature allows rearranging rows within the grid by dragging them using a drag icon. To activate this feature, set the [allowRowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/grid#allowrowdraganddrop) property to `true`.
+
+The following example demonstrates drag and drop within the Grid:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -37,13 +38,16 @@ Here's an example of how to enable drag and drop within the Grid:
 
  {% previewsample "page.domainurl/code-snippet/grid/row-drag-cs2" %}
 
-## Drag and drop to grid 
+> * Selection feature must be enabled in the Grid to allow row selection before drag and drop operations. 
+>* Dragging multiple rows simultaneously requires multiple selection to be active. This is enabled by setting the [type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) property to `Multiple`.
 
-The grid row drag and drop allows you to drag grid rows and drop to another grid. This feature can be enabled by setting the [allowRowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/grid/#allowrowdraganddrop) property to **true** in the Grid component. This property specifies whether to enable or disable the row drag and drop feature in the Grid. By default, this property is set to **false**, which means that row drag and drop functionality is not enabled.
+## Drag and drop to another grid
 
-To specify the target component where the grid rows should be dropped, use the [targetID](https://ej2.syncfusion.com/react/documentation/api/grid/rowDropSettings/#targetid) property of the [rowDropSettings](https://ej2.syncfusion.com/react/documentation/api/grid/rowDropSettings/) object. The `targetID` property takes the ID of the target component as its value.
+The grid row drag and drop allows drag grid rows and drop to another grid. To enable this feature, set the [allowRowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/grid#allowrowdraganddrop) property to `true` in the source Grid component.
 
-Here's an example code snippet that demonstrates how to enable Row drag and drop another Grid component:
+To specify the target Grid component where rows should be dropped, configure the [rowDropSettings.targetID](https://ej2.syncfusion.com/react/documentation/api/grid/rowDropSettings#targetid) property. The `targetID` property references the ID of the destination Grid component.
+
+The following example demonstrates row drag and drop between different Grid components:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -62,14 +66,85 @@ Here's an example code snippet that demonstrates how to enable Row drag and drop
 
  {% previewsample "page.domainurl/code-snippet/grid/row-drag-cs1" %}
 
-> * The row drag and drop feature is not supported in virtual scrolling and frozen rows and columns mode.
-> * In order to use row drag and drop, you need to inject the **RowDD** module in the grid.
+## Drag and drop to custom components
 
-## Drag and drop to custom component 
+The Grid provides the feature to drag and drop grid rows to any custom component. This capability enables seamless data movement between the Grid and external components without manual copy-paste operations. To enable row drag and drop grid rows to custom components, set the `allowRowDragAndDrop` property to `true` and define the custom component ID in the `targetID` property of the `rowDropSettings` object. The ID provided in `targetID` should correspond to the ID of the target component where the rows are to be dropped.
 
-The Grid provides the feature to drag and drop grid rows to any custom component. This feature allows you to easily move rows from one component to another without having to manually copy and paste data. To enable row drag and drop, you need to set the [allowRowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/grid/#allowrowdraganddrop) property to **true** and defining the custom component ID in the [targetID](https://ej2.syncfusion.com/react/documentation/api/grid/rowDropSettings/#targetid) property of the `rowDropSettings` object. The ID provided in `targetID` should correspond to the ID of the target component where the rows are to be dropped.
+Follow these steps to implement row drag and drop from Grid to `TreeGrid` component:
 
-In the below example, the selected grid row is dragged and dropped in to the `TreeView` component by using [rowDrop](https://ej2.syncfusion.com/react/documentation/api/grid/#rowdrop) event. Once the row is dropped into the `TreeView` component, we have removed the corresponding grid row from grid and its data inserted in custom component. 
+**Step 1: Configure grid component**
+
+Import and inject the `RowDD` and `Edit` modules for the Grid, and configure [editSettings](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings) to enable deleting rows from the Grid when dropping to the target component.
+
+```js
+import { GridComponent, Inject, RowDD, Edit } from '@syncfusion/ej2-react-grids';
+
+const gridEditSettings = { allowDeleting: true };
+
+<GridComponent editSettings={gridEditSettings}>
+  <Inject services={[RowDD, Edit]} />
+</GridComponent>
+
+```
+**Step 2: Configure treeview component**
+
+Import and inject the `Edit` module for the TreeGrid, and configure [editSettings](https://ej2.syncfusion.com/react/documentation/api/treegrid/editsettings) to enable adding rows to the TreeGrid.
+
+```js
+import { TreeGridComponent, Edit as TreeEdit } from '@syncfusion/ej2-react-treegrid';
+
+const treeGridEditSettings = { allowAdding: true };
+
+<TreeGridComponent editSettings={treeGridEditSettings}>
+  <Inject services={[TreeEdit]} />
+</TreeGridComponent>
+
+```
+
+**Step 3: Enable drag and drop with target configuration**
+
+Set the [allowRowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/grid#allowrowdraganddrop) property to `true` and specify the target component ID in [rowDropSettings](https://ej2.syncfusion.com/react/documentation/api/grid/rowDropSettings). Configure [selectionSettings](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings) to enable multiple row selection.
+
+```js
+const rowDropOptions = { targetID: 'treeGrid' };
+const selectionOptions = { type: 'Multiple' };
+
+<GridComponent 
+  allowRowDragAndDrop={true}
+  rowDropSettings={rowDropOptions}
+  selectionSettings={selectionOptions}>
+</GridComponent>
+```
+
+**Step 4: Handle the rowDrop event**
+
+Implement the [rowDrop](https://ej2.syncfusion.com/react/documentation/api/grid#rowdrop) event to manage data transfer. Cancel the default behavior, add records to the target component using [addRecord](https://ej2.syncfusion.com/react/documentation/api/treegrid#addrecord), and remove them from the Grid using [deleteRecord](https://ej2.syncfusion.com/react/documentation/api/grid#deleterecord).
+
+```js
+import { isNullOrUndefined } from '@syncfusion/ej2-base';
+
+let grid;
+let treeGrid;
+
+const onRowDrop = (args) => {
+  if (args.target.closest('.e-treegrid')) {
+    args.cancel = true;
+    var rowIndex = !isNullOrUndefined(args.target.closest('.e-row')) 
+      ? args.target.closest('.e-row').rowIndex 
+      : 0;
+    
+    for (var i = 0; i < args.data.length; i++) {
+      treeGrid.addRecord(args.data[i], rowIndex);
+      grid.deleteRecord('taskID', args.data[i]);
+    }
+  }
+}
+
+<GridComponent ref={g => grid = g} rowDrop={onRowDrop}>
+<TreeGridComponent ref={t => treeGrid = t}>
+```
+
+The following example demonstrates transferring selected Grid rows to a `TreeGrid` component. When a row is dropped into the `TreeGrid` component, the corresponding Grid row is removed and its data is inserted into the target component at the specified position. 
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -88,15 +163,15 @@ In the below example, the selected grid row is dragged and dropped in to the `Tr
 
  {% previewsample "page.domainurl/code-snippet/grid/row-drag-cs3" %}
 
-> * The `rowDrop` event is fired when a row is dropped onto a custom component, regardless of whether the drop is successful or not. You can use the `args.cancel` property to prevent the default action.
+> The `rowDrop` event fires when a row is dropped onto a custom component, regardless of drop success. Set the `args.cancel` property to `true` to prevent the default drop action.
 
-## Drag and drop rows without drag icons
+## Hide drag and drop icons
 
-By default, when performing a drag and drop operation in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, drag icons are displayed. However, in some cases, you may want to hide these drag icons. This can be achieved by setting the [targetID](https://ej2.syncfusion.com/react/documentation/api/grid/rowDropSettings/#targetid) property of the [rowDropSettings](https://ej2.syncfusion.com/react/documentation/api/grid/rowDropSettings/) object to the current Grid's ID.
+By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid displays drag icon in each row when enabling the row drag and drop feature. To hide these icons, set the [targetID](https://ej2.syncfusion.com/react/documentation/api/grid/rowDropSettings#targetid) property of the [rowDropSettings](https://ej2.syncfusion.com/react/documentation/api/grid/rowDropSettings) object to the current Grid's ID.
 
-By setting the `targetID`, the Grid will render without a helper icon for row dragging. You can then customize the drag and drop action by binding to the [rowDrop](https://ej2.syncfusion.com/react/documentation/api/grid/#rowdrop) event of the Grid. In the `rowDrop` event, you can prevent the default action by setting `args.cancel` to **true**, and reorder the rows using the [reorderRows](https://ej2.syncfusion.com/react/documentation/api/grid/#reorderrows) method of the Grid.
+When `targetID` references the Grid's own ID, the Grid renders without drag helper icons. Customize drag and drop behavior by binding to the [rowDrop](https://ej2.syncfusion.com/react/documentation/api/grid#rowdrop) event. Within the event handler, prevent the default action by setting `args.cancel` to `true`, then reorder rows using the [reorderRows](https://ej2.syncfusion.com/react/documentation/api/grid#reorderrows) method.
 
-Here's an example of how to hide the drag and drop icon in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid:
+The following example demonstrates hide drag and drop icons in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -115,20 +190,17 @@ Here's an example of how to hide the drag and drop icon in the Syncfusion<sup st
 
  {% previewsample "page.domainurl/code-snippet/grid/customizedialog-cs9" %}
 
-> * The selection feature must be enabled in the Grid to allow users to select rows before performing the drag and drop operation.
-> * Multiple rows can be selected by clicking and dragging inside the grid. For multiple row selection, the [type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings/#type) property must be set to **Multiple**.
-
 ## Drag and drop events
 
-The Grid component provides a set of events that are triggered during drag and drop operations on grid rows. These events allow you to customize the drag element, track the progress of the dragging operation, and perform actions when a row is dropped on a target element. The following events are available:
+The Grid component provides powerful events that trigger during row drag and drop operations. These events enable customization of drag elements, tracking of drag progress, and execution of actions when rows are dropped on target elements. The following events are available:
 
-1. [rowDragStartHelper](https://ej2.syncfusion.com/react/documentation/api/grid/#rowdragstarthelper): This event is triggered when a click occurs on the drag icon or a grid row. It allows you to customize the drag element based on specific criteria.
+1. [rowDragStartHelper](https://ej2.syncfusion.com/react/documentation/api/grid#rowdragstarthelper): Triggered when a click occurs on the drag icon or a Grid row; enables customization of the drag element based on specific criteria.
 
-2. [rowDragStart](https://ej2.syncfusion.com/react/documentation/api/grid/#rowdragstart): This event is triggered when the dragging of a grid row starts.
+2. [rowDragStart](https://ej2.syncfusion.com/react/documentation/api/grid#rowdragstart): Triggered when row dragging begins.
 
-3. [rowDrag](https://ej2.syncfusion.com/react/documentation/api/grid/#rowdrag): This event is triggered continuously while the grid row is being dragged.
+3. [rowDrag](https://ej2.syncfusion.com/react/documentation/api/grid#rowdrag): Triggered continuously while a Grid row is being dragged.
 
-4. [rowDrop](https://ej2.syncfusion.com/react/documentation/api/grid/#rowdrop): This event is triggered when a drag element is dropped onto a target element.
+4. [rowDrop](https://ej2.syncfusion.com/react/documentation/api/grid#rowdrop): Triggered when a drag element is dropped onto a target element.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -172,10 +244,10 @@ function App() {
   </div>
     <GridComponent ref={g => grid = g} dataSource={data} height={315} allowRowDragAndDrop={true} rowDrop={rowDrop} rowDragStartHelper={rowDragStartHelper} rowDrag={rowDrag} rowDragStart={rowDragStart} selectionSettings={selectionOptions}>
       <ColumnsDirective>
-        <ColumnDirective field='OrderID' headerText='Order ID' width='140' />
+        <ColumnDirective field='OrderID' headerText='Order ID' width='140' textAlign='Right' />
         <ColumnDirective field='CustomerID' headerText='Customer Name' width='140' />
-        <ColumnDirective field='Freight' headerText='Freight' width='150' />
-        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' format='yMd' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' textAlign='Right' />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
         <ColumnDirective field='ShipCity' headerText='ShipCity' width='150' />
       </ColumnsDirective>
       <Inject services={[RowDD]} />
@@ -224,16 +296,16 @@ function App() {
       return (<div><div style={{ textAlign: "center" }}>
             <p style={{ color: "red" }} id="message">{message}</p>
       </div>
-            <GridComponent ref={g => grid = g} dataSource={data} height={315} allowRowDragAndDrop={true} rowDrop={rowDrop} rowDragStartHelper={rowDragStartHelper} rowDrag={rowDrag} rowDragStart={rowDragStart} selectionSettings={selectionOptions}>
-                  <ColumnsDirective>
-                        <ColumnDirective field='OrderID' headerText='Order ID' width='140' />
-                        <ColumnDirective field='CustomerID' headerText='Customer Name' width='140' />
-                        <ColumnDirective field='Freight' headerText='Freight' width='150' />
-                        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' format='yMd' />
-                        <ColumnDirective field='ShipCity' headerText='ShipCity' width='150' />
-                  </ColumnsDirective>
-                  <Inject services={[RowDD]} />
-            </GridComponent>
+        <GridComponent ref={g => grid = g} dataSource={data} height={315} allowRowDragAndDrop={true} rowDrop={rowDrop} rowDragStartHelper={rowDragStartHelper} rowDrag={rowDrag} rowDragStart={rowDragStart} selectionSettings={selectionOptions}>
+          <ColumnsDirective>
+            <ColumnDirective field='OrderID' headerText='Order ID' width='140' textAlign='Right' />
+            <ColumnDirective field='CustomerID' headerText='Customer Name' width='140' />
+            <ColumnDirective field='Freight' headerText='Freight' width='150' textAlign='Right' />
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+            <ColumnDirective field='ShipCity' headerText='ShipCity' width='150' />
+          </ColumnsDirective>
+          <Inject services={[RowDD]} />
+        </GridComponent>
       </div>)
 };
 export default App;
@@ -251,10 +323,15 @@ export default App;
 
 ## Limitations
 
-* Single row is able to drag and drop in same grid without enable the row selection.
-* Row drag and drop feature is not having built in support with row template, detail template and hierarchy grid features of grid.
+The row drag and drop feature offers focused functionality, working seamlessly with a curated set of Grid features. The features listed below are not part of its supported set of features:
+
+* Row template
+* Detail template
+* Hierarchy grid
+* Row pinning
+* Virtual scrolling beyond the grid viewport
 
 ## See also
 
-[Sorting data in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid](../sorting)
-[Filtering data in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid](../filtering/filtering)
+* [Sorting data in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid](../sorting)
+* [Filtering data in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid](../filtering/filtering)

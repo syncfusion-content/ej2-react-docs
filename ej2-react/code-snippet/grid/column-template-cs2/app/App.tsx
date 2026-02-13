@@ -21,7 +21,7 @@ function App() {
             <ColumnDirective field='ProductID' headerText='Product ID' width='125' />
             <ColumnDirective field='ProductName' headerText='Product Name' width='120' />
             <ColumnDirective field='SupplierID' headerText='Supplier ID' width='170' />
-            <ColumnDirective field='UnitPrice' headerText='Unit Price' width='135' />
+            <ColumnDirective field='UnitPrice' headerText='Unit Price' width='135' textAlign='Right'/>
         </ColumnsDirective>
     </GridComponent>
 };

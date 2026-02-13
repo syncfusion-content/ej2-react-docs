@@ -28,8 +28,8 @@ function App() {
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='120' textAlign='Right' />
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
-      <ColumnDirective field='OrderDate' headerText='Order Date' width='150' format='yMd' type='date' />
-      <ColumnDirective field='Freight' headerText='Freight' format='C2' edit={numericParams} editType='numericedit' width='150' />
+      <ColumnDirective field='OrderDate' headerText='Order Date' width='150' format='yMd' textAlign='Right'  type='date' />
+      <ColumnDirective field='Freight' headerText='Freight' format='C2' edit={numericParams} editType='numericedit' textAlign='Right'  width='150' />
       <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
       <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
     </ColumnsDirective>

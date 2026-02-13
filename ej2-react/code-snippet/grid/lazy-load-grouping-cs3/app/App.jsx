@@ -1,5 +1,5 @@
 import { ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-react-grids';
-import { GridComponent, Group, VirtualScroll, LazyLoadGroup, GroupSettingsModel, Inject } from '@syncfusion/ej2-react-grids'
+import { GridComponent, Group, VirtualScroll, LazyLoadGroup, Inject } from '@syncfusion/ej2-react-grids'
 import * as React from 'react';
 import { data } from './datasource';
 
@@ -17,6 +17,7 @@ function App() {
         <ColumnDirective field='CustomerName' headerText='Customer Name' width='160' />
       </ColumnsDirective>
       <Inject services={[Group, LazyLoadGroup, VirtualScroll]} />
-    </GridComponent></div>)
+    </GridComponent></div>
+  )
 };
 export default App;

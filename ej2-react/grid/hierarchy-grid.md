@@ -1,28 +1,36 @@
 ---
 layout: post
-title: Hierarchy grid in React Grid component | Syncfusion
-description: Learn here all about Hierarchy grid in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Hierarchy Grid | Syncfusion
+description: Enhance Syncfusion React Grid (EJ2) with advanced hierarchy features, including child grids, dynamic data, aggregate rows, editing, and CSS customization.
 control: Hierarchy grid 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hierarchy grid in React Grid component
+# Hierarchy Grid in React Grid Component
 
-The Hierarchy Grid in an React Grid component is typically used when you need to display hierarchical data in a tabular format with expandable and collapsible rows. It allows you to represent parent and child relationships within the grid, making it easier for you to navigate and understand the data.
+The Hierarchy Grid in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid is designed to display hierarchical or nested data structures within a tabular layout. It enables the representation of parent-child relationships by allowing rows to be expanded or collapsed, revealing related child records beneath their corresponding parent rows.
 
-This feature can be enabled by utilizing the [childGrid](https://ej2.syncfusion.com/react/documentation/api/grid#childgrid) and [childGrid.queryString](https://ej2.syncfusion.com/react/documentation/api/grid#querystring) properties of the grid component.
+This structure enhances data readability and navigation, especially when working with datasets that include multiple levels of related information. Each parent row can be expanded to display its associated child grid, which can itself be configured with columns, templates, and features similar to the main grid.
 
 To enable the Hierarchy Grid feature:
 
-1. Inject the **DetailRow** module in the grid. This module is essential<sup style="font-size:70%">&reg;</sup> for handling the hierarchy grid functionality.
+1. The Hierarchy Grid feature is enabled by importing the `DetailRow` module from `@syncfusion/ej2-react-grids` and injecting the `DetailRow` service into the grid.
 
-2. Define the `childGrid` property within the Grid component configuration. This property describes the options of the child grid.
+    ```js
+    import { GridComponent, Inject, DetailRow } from '@syncfusion/ej2-react-grids';
 
-3. Specify the `childGrid.queryString` property to establish the relation between the parent and child grids and visualizes the data in a hierarchical structure. This property determines how the child records are fetched based on the parent record.
+    <GridComponent>
+    <Inject services={[DetailRow]} />
+    </GridComponent>
+    ```
 
-The following example demonstrates how to enable the hierarchy feature in the grid
+2. Define the [childGrid](https://ej2.syncfusion.com/react/documentation/api/grid#childgrid) property in the Grid configuration. This property contains the settings for the child Grid, such as its columns and data source.
+
+3. Set the [childGrid.queryString](https://ej2.syncfusion.com/react/documentation/api/grid#querystring) property to link the parent and child records using a common field. This defines how child data is retrieved based on the parent row.
+
+The following example demonstrates how to enable the hierarchy feature in grid, which is useful for displaying structured data in a clean and interactive way, allowing better organization and navigation.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -39,18 +47,17 @@ The following example demonstrates how to enable the hierarchy feature in the gr
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid-cs1" %}
 
-> * Grid supports n level of child grids.
+> * The Grid supports n level of child grids.
 > * Hierarchical binding is not supported when [DetailTemplate](https://ej2.syncfusion.com/react/documentation/api/grid#detailtemplate) is enabled.
 
-## Bind hierarchy grid with different field
+## Mapping Parent-Child Grids with different field names
+By default, the Grid uses the same field name in both the parent and child grids to establish a hierarchical relationship through the [queryString](https://ej2.syncfusion.com/react/documentation/api/grid#querystring) property. However, it also supports scenarios where the parent and child data sources use different key fields.
 
-By default, the parent and child grids have the same field name to map and render a hierarchical grid. However, the component supports establishing a parent-child relationship between grids with different field names. This feature is beneficial when you want to create a parent-child relationship between grids but need to use distinct field names for mapping the data. As a result, you can easily establish the desired relationship between the parent and child grids, even with different field names for data mapping.
+When the parent and child data sources use different key fields, this relationship can still be configured by handling the child grid's [load](https://ej2.syncfusion.com/react/documentation/api/grid#load) event. In this event, the required value (e.g., EmployeeID) can be retrieved from `parentDetails.parentRowData` and dynamically assigned to the appropriate field in the child grid's query. This approach enables flexible hierarchical binding even when the key fields differ between parent and child grids.
 
-By default, the parent and child grid relation is maintained using the [queryString](https://ej2.syncfusion.com/react/documentation/api/grid#querystring) property, which requires the same field name for both grids. However, to achieve the parent and child relation with different fields, you need to modify the mapping value in the [load](https://ej2.syncfusion.com/react/documentation/api/grid#load) event of child grid. 
-
-In the following example, the `load` event is utilized to customize the mapping value for the child grid. By accessing the `parentDetails` property and its **parentKeyFieldValue**, you can set the desired mapping value. The `parentRowData` property contains the data of the parent row, and by using the **EmployeeID** field name, you can extract the corresponding value from the parent row data.
+In the following example, the `load` event is used to customize the mapping value for the child grid. The `parentDetails` property provides access to the parent row's data, including the `parentKeyFieldValue`, which can be used to set the appropriate mapping field. By referencing the "EmployeeID" field from the `parentRowData`, the corresponding value is extracted and applied to construct the query for the child grid.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -67,17 +74,17 @@ In the following example, the `load` event is utilized to customize the mapping 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid-cs5" %}
+{% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid-cs5" %}
 
-> Make sure to adjust the field name according to your specific scenario.
+> Make sure to adjust the field name according to the specific scenario.
 
 ## Render aggregates in child grid
 
-The Aggregates feature in the Data Grid component allows you to display aggregate values in the footer, group footer, and group caption of the child grid. With this feature, you can easily perform calculations on specific columns and show summary information. 
+The Grid supports displaying aggregate values such as sum, count, and maximum in the footer, group footer, and group caption of child grids. This functionality is especially useful in hierarchical grids where each child grid presents detailed data that benefits from summarized insights.
 
-Rendering aggregates in a child grid involves displaying summary data at the footer or group caption of the grid. This can be particularly useful in hierarchical grids where each child grid represents detailed data that needs to be summarized.
+The Aggregates feature enables calculations on specific columns and displays the results directly within the child grid. Rendering aggregates in this context involves showing summary data such as totals or maximum values at the footer or group caption level, enhancing the clarity and usefulness of nested data.
 
-The following example demonstrates how to render aggregates in a child grid to display the sum and maximum values of the **Freight** column.
+In the example below, the child grid is configured to display the sum and maximum values of the "Freight" column using the `aggregates` property:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -94,15 +101,13 @@ The following example demonstrates how to render aggregates in a child grid to d
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid-aggregates" %}
+{% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid-aggregates" %}
 
 ## Expand child grid initially
 
-Expanding the child grid initially in the Data Grid component is helpful when you want to display the child rows of the hierarchical grid expanded by default upon grid load. This can be beneficial in scenarios where you want to provide immediate visibility into the hierarchical data without requiring you to manually expand each child row.
+Child rows in a hierarchical grid can be expanded automatically during the initial load by calling the [expand](https://ej2.syncfusion.com/react/documentation/api/grid/detailRow#expand) method within the grid's [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid#databound) event. This ensures that nested data becomes visible when the grid is rendered, without requiring manual interaction.
 
-To achieve this, you can use the [expand](https://ej2.syncfusion.com/react/documentation/api/grid/detailRow#expand) method with the desired target index (number) in the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid#databound) event of the grid. 
-
-In the provided example, expand the third record of the grid by utilizing the `expand` method within the `dataBound` event.
+In the following example, the third record is expanded on load by using the `expand` method inside the `dataBound` event.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -119,17 +124,15 @@ In the provided example, expand the third record of the grid by utilizing the `e
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid-cs3" %}
+{% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid-cs3" %}
 
-> Index values begin with **"0"**, allowing you to provide the desired target index to expand a specific child grid initially.
+> Index values begin with "0", allowing provision of the desired target index to expand a specific child grid initially.
 
 ## Dynamically load child grid data
 
-Dynamically load child grid data in Data Grid helps improve performance, optimize data transmission, and enhance the your experience by providing on-demand access to relevant information. Additionally, it offers flexibility in data presentation, which helps improve the overall efficiency of your application.
+Dynamically loading child grid data improves performance, optimizes data transmission, and enhances the experience by providing on-demand access to relevant information. Additionally, it offers flexibility in data presentation, improving overall application efficiency.
 
-To dynamically load the `dataSource` of a child grid in the Grid, you can utilize the [load](https://ej2.syncfusion.com/react/documentation/api/grid#load) event of parent grid. This event allows you to customize the loading behavior of the child grid based on the data of parent grid.
-
-The following example demonstrates how to dynamically load child grid data using the `load` event.
+To achieve this, use the [load](https://ej2.syncfusion.com/react/documentation/api/grid#load) event of the parent grid. This event allows assigning the `dataSource` for the child grid dynamically based on the parent row's data. The following example demonstrates how to dynamically load child grid data using the `load` event.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -146,15 +149,12 @@ The following example demonstrates how to dynamically load child grid data using
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid-cs4" %}
+{% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid-cs4" %}
 
-## Dynamically bind data to child grid based on parent row data
+## Dynamic data binding in Child Grids using parent row values
+A child grid can be bound dynamically to display data that corresponds to its parent row. Instead of relying on the `queryString` property, this can be handled through the  [detailDataBound](https://ej2.syncfusion.com/react/documentation/api/grid#detaildatabound) event, which is triggered whenever a child grid expands.
 
-Dynamically binding data to a child grid based on the parent row data in the Data Grid component is useful when you want to display child grid data that is specific to each parent row. This feature allows for a dynamic and contextual representation of data within the child grid.
-
-To dynamically bind data to the child grid based on the parent row data instead of using the [queryString](https://ej2.syncfusion.com/react/documentation/api/grid#querystring) property, you can utilize the [detailDataBound](https://ej2.syncfusion.com/react/documentation/api/grid#detaildatabound) event of the grid. This event is triggered when expanding the child grid.
-
-In the `detailDataBound` event handler, you can filter the child grid's dataSource based on the **EmployeeID** column value of the parent row data. This can be achieved by using the `DataManager` plugin and applying a filter to the child grid's dataSource. The filtered data can be assigned as the new dataSource for the child grid. This can be demonstrated by the following sample.
+Within the `detailDataBound` event, the child grid’s dataSource is filtered based on the parent row’s "Employee ID". The `DataManager` is used to apply the filter, and the filtered result is then assigned to the child grid’s dataSource. This ensures that each child grid shows only the records related to its parent, creating a contextual and flexible hierarchical display.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -171,15 +171,13 @@ In the `detailDataBound` event handler, you can filter the child grid's dataSour
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid-cs7" %}
+{% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid-cs7" %}
 
 ## Adding record in child grid
 
-Adding a record in a child grid within the Data Grid component is useful when you want to provide the ability to add new records to the child grid. This feature allows you to input and save additional data specific to each parent row.
+Adding a record to a child grid allows additional data to be maintained for the corresponding parent row. To preserve the parent–child relationship, the appropriate `queryString` value must be included in the new record.
 
-To maintain the parent-child relationship in the Grid when adding a record to the child grid, you need to set the value for the `queryString` in the added data. This can be done using the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid#actionbegin) event.
-
-In the following example, the parent and child grids are related by the **EmployeeID** field. To add a new record in the child grid, the **EmployeeID** field needs to be set with the value of the parent record's `queryString` in the `actionBegin` event. 
+This is accomplished through the grid's [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid#actionbegin) event. In the example, the parent and child grids are related by "EmployeeID", so the child record's "EmployeeID" is assigned the parent row's `queryString` value using the `actionBegin` event to ensure relational consistency.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -196,17 +194,13 @@ In the following example, the parent and child grids are related by the **Employ
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid-cs6" %}
+{% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid-cs6" %}
 
 ## Template column in child grid
 
-A template column in a child grid within the Data Grid component is valuable when you want to customize the appearance and functionality of specific columns in the child grid. It is useful for incorporating interactive elements, custom formatting, or complex data representation within specific columns of the child grid.
+A template column in a child grid allows customization of cell content, enabling the display of interactive elements, formatted values, or complex layouts within specific columns.
 
-To achieve this, you can utilize the [template](https://ej2.syncfusion.com/react/documentation/api/grid/column#template) property of a column to display a custom element instead of a field value in the Grid. Template columns defined in the child grid will be null in the **ngOnInit** method, which means they will not be shown in the UI. They will be rendered after the entire HTML view rendering process, and you can access and utilize them in the **ngAfterViewInit** method to display the template columns in the child grid.
-
-During the [load](https://ej2.syncfusion.com/react/documentation/api/grid#load) event of the child grid, it is necessary to set the 'registeredTemplate' to empty. This action will remove any previously existing templates. By doing so, you gain the flexibility to dynamically apply templates to the grid's cells based on different conditions or requirements.
-
-The following example demonstrates, how to show a custom image in the **Employee Image** column of the child grid by utilizing the `template` property of the column.
+This is achieved using the [template](https://ej2.syncfusion.com/react/documentation/api/grid/column#template) property of the column. In the example below, a custom image is rendered in the "Employee Image" column of the child grid using the `template` property.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -223,15 +217,13 @@ The following example demonstrates, how to show a custom image in the **Employee
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid-cs8" %}
+{% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid-cs8" %}
 
-## How to get parent detail in child grid
+## Getting parent details in the child grid
 
-Getting parent details in a child grid in an React Grid component is useful when you want to display and utilize information from the parent row within the child grid. This can be beneficial in scenarios where you need to provide additional context or perform calculations based on the parent row's data
+Accessing parent row details within a child grid enables contextual data presentation and supports scenarios where parent information is required for calculations or conditional rendering.
 
-To achieve this, you can utilize the [created](https://ej2.syncfusion.com/react/documentation/api/grid#created) event. This event is triggered when the child grid is created and can be used to handle the child grid.
-
-The following example demonstrates how to obtain parent details in a child grid using the `created` event. Within the `created` event, you can access the parent row data using `this.parentDetails.parentRowData` and display the desired details in the message.
+This can be accomplished through the grid's [created](https://ej2.syncfusion.com/react/documentation/api/grid#created) event, which is triggered when the child grid is initialized. Within this event, parent row data can be obtained using `this.parentDetails.parentRowData`. The example below demonstrates how parent details can be accessed and utilized in the child grid.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -243,35 +235,34 @@ import { data, employeeData } from './datasource';
 
 
 function App() {
-  let childGridOptions = {
-    created() {
-      var parentRowData = this.parentDetails.parentRowData;
-      document.getElementById('message').innerHTML = `EmployeeID: ${parentRowData.EmployeeID}, FirstName: ${parentRowData.FirstName}, Title: ${parentRowData.Title}`;
-    },
-    columns: [
-      { field: 'OrderID', headerText: 'Order ID', isPrimaryKey: true, textAlign: 'Right', width: 120 },
-      { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', allowEditing: false, width: 120 },
-      { field: 'ShipCity', headerText: 'Ship City', width: 150 },
-      { field: 'ShipName', headerText: 'Ship Name', width: 150 }
-    ],
-    dataSource: data,
-    editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true },
-    queryString: 'EmployeeID',
-    toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
-  };
-  return (<div>
-    <div style={{ marginLeft: "100px" }}>
-      <p style={{ color: "black", fontSize: "large" }} id="message"></p>
-    </div>
-    <GridComponent dataSource={employeeData} childGrid={childGridOptions} height={315}>
-      <ColumnsDirective>
-        <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign="Right" />
-        <ColumnDirective field='FirstName' headerText='First Name' width='150' />
-        <ColumnDirective field='City' headerText='City' width='150' />
-        <ColumnDirective field='Country' headerText='Country' width='150' />
-      </ColumnsDirective>
-      <Inject services={[DetailRow, Edit, Toolbar]} />
-    </GridComponent ></div>)
+    let childGridOptions = {
+        created() {
+            var parentRowData = this.parentDetails.parentRowData;
+            document.getElementById('message').innerHTML = `EmployeeID: ${parentRowData.EmployeeID}, FirstName: ${parentRowData.FirstName}, Title: ${parentRowData.Title}`;
+        },
+        columns: [
+            { field: 'OrderID', headerText: 'Order ID', isPrimaryKey: true, textAlign: 'Right', width: 120 },
+            { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', allowEditing: false, width: 120 },
+            { field: 'ShipCity', headerText: 'Ship City', width: 150 },
+            { field: 'ShipName', headerText: 'Ship Name', width: 150 }
+        ],
+        dataSource: data,
+        queryString: 'EmployeeID',
+    };
+    return (<div>
+        <div style={{ marginLeft: "100px" }}>
+        <p style={{ color: "black", fontSize: "large" }} id="message"></p>
+        </div>
+        <GridComponent dataSource={employeeData} childGrid={childGridOptions} height={315}>
+            <ColumnsDirective>
+                <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign="Right" />
+                <ColumnDirective field='FirstName' headerText='First Name' width='150' />
+                <ColumnDirective field='City' headerText='City' width='150' />
+                <ColumnDirective field='Country' headerText='Country' width='150' />
+            </ColumnsDirective>
+            <Inject services={[DetailRow, Edit, Toolbar]} />
+        </GridComponent ></div>
+    )
 };
 export default App;
 {% endraw %}
@@ -284,35 +275,34 @@ import * as React from 'react';
 import { data, employeeData, ParentDetailsDataType } from './datasource';
 
 function App() {
-  let childGridOptions: GridModel = {
-    created() {
-      var parentRowData = (this.parentDetails as ParentDetails).parentRowData;
-      (document.getElementById('message') as HTMLElement).innerHTML = `EmployeeID: ${(parentRowData as ParentDetailsDataType).EmployeeID}, FirstName: ${(parentRowData as ParentDetailsDataType).FirstName}, Title: ${(parentRowData as ParentDetailsDataType).Title}`;
-    },
-    columns: [
-      { field: 'OrderID', headerText: 'Order ID', isPrimaryKey: true, textAlign: 'Right', width: 120 },
-      { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', allowEditing: false, width: 120 },
-      { field: 'ShipCity', headerText: 'Ship City', width: 150 },
-      { field: 'ShipName', headerText: 'Ship Name', width: 150 }
-    ],
-    dataSource: data,
-    editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true },
-    queryString: 'EmployeeID',
-    toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
-  };
-  return (<div>
-    <div style={{ marginLeft: "100px" }}>
-      <p style={{ color: "black", fontSize: "large" }} id="message"></p>
-    </div>
-    <GridComponent dataSource={employeeData} childGrid={childGridOptions} height={315}>
-      <ColumnsDirective>
-        <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign="Right" />
-        <ColumnDirective field='FirstName' headerText='First Name' width='150' />
-        <ColumnDirective field='City' headerText='City' width='150' />
-        <ColumnDirective field='Country' headerText='Country' width='150' />
-      </ColumnsDirective>
-      <Inject services={[DetailRow, Edit, Toolbar]} />
-    </GridComponent ></div>)
+    let childGridOptions: GridModel = {
+        created() {
+            var parentRowData = (this.parentDetails as ParentDetails).parentRowData;
+            (document.getElementById('message') as HTMLElement).innerHTML = `EmployeeID: ${(parentRowData as ParentDetailsDataType).EmployeeID}, FirstName: ${(parentRowData as ParentDetailsDataType).FirstName}, Title: ${(parentRowData as ParentDetailsDataType).Title}`;
+        },
+        columns: [
+            { field: 'OrderID', headerText: 'Order ID', isPrimaryKey: true, textAlign: 'Right', width: 120 },
+            { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', allowEditing: false, width: 120 },
+            { field: 'ShipCity', headerText: 'Ship City', width: 150 },
+            { field: 'ShipName', headerText: 'Ship Name', width: 150 }
+        ],
+        dataSource: data,
+        queryString: 'EmployeeID',
+    };
+    return (<div>
+        <div style={{ marginLeft: "100px" }}>
+        <p style={{ color: "black", fontSize: "large" }} id="message"></p>
+        </div>
+        <GridComponent dataSource={employeeData} childGrid={childGridOptions} height={315}>
+            <ColumnsDirective>
+                <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign="Right" />
+                <ColumnDirective field='FirstName' headerText='First Name' width='150' />
+                <ColumnDirective field='City' headerText='City' width='150' />
+                <ColumnDirective field='Country' headerText='Country' width='150' />
+            </ColumnsDirective>
+            <Inject services={[DetailRow, Edit, Toolbar]} />
+        </GridComponent ></div>
+    )
 };
 export default App;
 {% endraw %}
@@ -325,16 +315,13 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid-cs9" %}
+{% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid-cs9" %}
 
-## Expand all by external button
+## Expand and collapse all child grids dynamically
 
-The Hierarchy Grid in the Data Grid component allows you to expand all child grid rows using an external button. This feature provides you with a convenient overview of all the hierarchical data within the grid, eliminating the need to manually expand each row individually.
+The Hierarchy Grid in the Data Grid component supports expanding all child grid rows through an external button, providing a comprehensive view of hierarchical data without requiring manual interaction.
 
-By default, Grid renders all child grid rows in collapsed state. To expand all child grid rows in the Grid using an external button, you can utilize the [expandAll](https://ej2.syncfusion.com/react/documentation/api/grid/detailRow#expandall) method provided by the DetailRow module. Similarly, to collapse all grid rows, you can use the [collapseAll](https://ej2.syncfusion.com/react/documentation/api/grid/detailRow#collapseall) method. 
-
-The following example demonstrates how to expand and collapse the hierarchy grid using an external button click function.
-
+By default, all child grids are rendered in a collapsed state. To programmatically expand or collapse all child rows, use the [expandAll](https://ej2.syncfusion.com/react/documentation/api/grid/detailRow#expandall) and [collapseAll](https://ej2.syncfusion.com/react/documentation/api/grid/detailRow#collapseall) methods provided by the `DetailRow` module. The following example demonstrates how these methods can be triggered via external button clicks.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -351,19 +338,19 @@ The following example demonstrates how to expand and collapse the hierarchy grid
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid-cs2" %}
+{% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid-cs2" %}
 
 > The `expandAll` and `collapseAll` methods are not recommended for large datasets due to the considerable time it takes to update the changes in the UI.
 
 ## Hide the expand/collapse icon in parent row when no record in child grid
 
-The Data Grid allows you to hide the expand/collapse icon in the parent row when there are no records in the child grid. However, in certain scenarios, you may want to hide the expand/collapse icon for parent rows that do not have any child records, providing a cleaner and more intuitive interface by eliminating unnecessary icons in empty parent rows.
+The Data Grid supports hiding the expand/collapse icon in parent rows when there are no child records, providing a cleaner and more intuitive interface.
 
-To achieve this, you can utilize the [rowDataBound](https://ej2.syncfusion.com/react/documentation/api/grid#rowdatabound) event to hide the icon when there are no records in the child grid.
+To achieve this, the [rowDataBound](https://ej2.syncfusion.com/react/documentation/api/grid#rowdatabound) event can be utilized to hide the icon when there are no records in the child grid.
 
 To hide the expand/collapse icon in parent row when no records in child grid, follow the given steps:
 
-1. **Create a CSS Class with Custom Style**: Define a CSS class that overrides the default appearance of the Grid. This class will be used to customize the background color of the parent row when it is selected and when hovering over rows.
+1. Create a CSS class with custom style: Define a CSS class to override the default appearance of the expand/collapse cell. This style is used to adjust the look of the parent row when selected or hovered.
 
 ```css
     .e-row[aria-selected="true"] .e-customizedexpandcell {
@@ -375,7 +362,7 @@ To hide the expand/collapse icon in parent row when no records in child grid, fo
     }
 ```
 
-2. **Implement the rowDataBound Event Handler:** This event is triggered for each row in the grid when data is bound, allowing you to customize the row's appearance and behavior. In the provided code, the handler checks if the current row has any child records associated with it. If not, it hides the content of the first element, which contains the expand/collapse icon, and applies a custom CSS class (e-customizedexpandcell) to modify its appearance.
+2. Implement the `rowDataBound` event handler: The `rowDataBound` event is triggered for each row as data is bound. In this event, verify whether the parent row has any corresponding child records. If no child records are found, clear the cell containing the expand/collapse icon and apply the custom CSS class.
 
 ```typescript
     const rowDataBound = (args: RowDataBoundEventArgs) => {
@@ -383,7 +370,7 @@ To hide the expand/collapse icon in parent row when no records in child grid, fo
         const childrecord: object[] = new DataManager(childData as JSON[]).
             executeLocal(new Query().where('EmployeeID', 'equal', parentData, true));
         if (childrecord.length === 0) {
-            // Here hide which parent row has no child records
+            // Here hide icon of parent row which has no child records.
             const rowElement = args.row as HTMLTableRowElement;
             const cellElement= rowElement.querySelector('td') as HTMLTableCellElement
             cellElement.innerHTML = ' '; 
@@ -392,7 +379,7 @@ To hide the expand/collapse icon in parent row when no records in child grid, fo
     }
 ```
 
-The following example demonstrates how to hide the expand/collapse icon in the row with **EmployeeID** as **1**, which does not have record in child Grid.
+The following example demonstrates how to hide the expand/collapse icon in the row with "Employee ID" as "1", which does not have record in child grid.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -409,20 +396,20 @@ The following example demonstrates how to hide the expand/collapse icon in the r
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/customizedialog-cs7" %}
+{% previewsample "page.domainurl/code-snippet/grid/customizedialog-cs7" %}
 
 ## Change hierarchy grid icon in Grid
 
-You can customize the default expand/collapse icons in the Hierarchy Grid of Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component using custom CSS, allowing you to modify their visual representation. To achieve this, add the following CSS to your index.html file:
+The default expand/collapse icons in the Hierarchy Grid can be customized by applying custom CSS to the expand and collapse icon classes. Add the following styles to the **index.css** file to replace the default icons with custom ones.
 
 ```
     .e-grid .e-icon-grightarrow::before,
     .e-grid-menu .e-icon-grightarrow::before {
-    content: '\e85f';
+        content: '\e7f9';
     }
     .e-grid .e-icon-gdownarrow::before,
     .e-grid-menu .e-icon-gdownarrow::before {
-    content: '\e83f';
+        content: '\e7d8';
     }
 
 ```
@@ -444,11 +431,11 @@ In the demo below, the expand/collapse icons have been changed to arrow-down and
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid-icon" %}
+{% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid-icon" %}
 
-## Detail row events
+## Child Grid expand and collapse events
 
-The Grid control's `detailExpand` and `detailCollapse` events fire before a detail row actually expands or collapses, allowing you a chance to control whether the action should continue. The `detailExpand` event is raised just before a row expands, and `detailCollapse` fires just before a row collapses, with both events providing respective details through their event arguments.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component provides [detailExpand](https://ej2.syncfusion.com/react/documentation/api/grid#detailexpand) and [detailCollapse](https://ej2.syncfusion.com/react/documentation/api/grid#detailcollapse) events, triggered before a detail row(parent row) is expanded or collapsed. These events provide control over the expand/collapse behavior by allowing conditional logic through event arguments.
 
 In the example below, expansion is prevented for the "Nancy" row, and collapse is prevented for the "Andrew" row.
 
@@ -467,32 +454,31 @@ In the example below, expansion is prevented for the "Nancy" row, and collapse i
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/detail-row-events" %}
+{% previewsample "page.domainurl/code-snippet/grid/detail-row-events" %}
 
 ## Customize the child grid
 
-The Data Grid component offers various ways to customize the child grid appearance using both default CSS and custom themes. To access the child grid elements, you can use the **.e-detailcell** class selector, which targets the child grid.
+The child grid’s appearance within the parent grid can be customized using CSS. The `.e-detailcell` selector targets the child grid container and enables modification of properties such as background color, borders, and font styles.
 
 ### Header
 
-You can customize the appearance of the header elements in the child grid using CSS. Here are examples of how to customize the child grid header, header cell, and header cell div element.
+The appearance of the header elements in the child grid can be customized using CSS. Here are examples of how to customize the child grid header, header cell, and header cell div element.
 
 **Customizing the child grid header**
 
-To customize the appearance of the child grid header root element, you can use the following CSS code:
+To modify the header of the child grid, use the following CSS. The `.e-detailcell` class targets the child grid, and `.e-headercontent` targets the header container. Updating the `border` property customizes the line between the header and content.
 
 ```css
 .e-detailcell .e-grid .e-headercontent{
     border: 2px solid green;
 }
 ```
-In this example, the **.e-detailcell** class targets the child grid and **.e-headercontent** targets its header root element. You can modify the `border` property to change the style of the header border. This customization allows you to override the thin line between the header and content of the child grid.
 
 ![Child grid header](images/child-grid-header.png)
 
 **Customizing the child grid header cell**
 
-To customize the appearance of the grid header cell elements, you can use the following CSS code:
+To style the child grid's header cells, use the following CSS. The `.e-headercell` selector targets the header cell, allows to change the text `color` and `background`.
 
 ```css
 .e-detailcell .e-grid .e-headercontent .e-headercell{
@@ -500,13 +486,12 @@ To customize the appearance of the grid header cell elements, you can use the fo
     background-color: #1ea8bd;
 }
 ```
-In this example, the **.e-headercell** class targets the header cell elements. You can modify the `color` and `background-color` properties to change the text color and background of the child grid's header cells.
 
 ![Child grid header cell](images/child-grid-header-cell.png)
 
 **Customizing the child grid header cell div element**
 
-To customize the appearance of the child grid header cell div element, you can use the following CSS code:
+To style the inner `div` of the child grid's header cells, use the following CSS. The `.e-headercelldiv` selector targets the header cell content and allows customization of `font size`, `weight`, and `color`.
 
 ```css
 .e-detailcell .e-grid .e-headercelldiv {
@@ -515,17 +500,16 @@ To customize the appearance of the child grid header cell div element, you can u
     color: darkblue;
 }
 ```
-In this example, the **.e-headercelldiv** class targets the div element within the header cell of the child grid. You can modify the `font-size`, `font-weight`, `color` properties to change the font size, font-weight and color of the header text content.
 
 ![Child grid header cell div element](images/child-grid-header-cell-div-element.png)
 
 ### Paging
 
-You can customize the appearance of the paging elements in the child grid using CSS. Here are examples of how to customize the pager root element, pager container element, pager navigation elements, pager page numeric link elements, and pager current page numeric element of the child grid.
+The paging elements of the child grid can be customized using CSS. The following examples show how to style the pager root, pager container, navigation elements, numeric links, and the current page indicator.
 
 **Customizing the child grid pager root element**
 
-To customize the appearance of the child grid pager root element, you can use the following CSS code:
+To style the child grid's pager root, use the following CSS. The `.e-detailcell` class targets the child grid, and `.e-gridpager` selects the pager container. The `font-family` and `background-color` properties define the font and background styling.
 
 ```css
 .e-detailcell .e-grid  .e-gridpager {
@@ -533,13 +517,12 @@ To customize the appearance of the child grid pager root element, you can use th
     background-color: #deecf9;
 }
 ```
-In this example, the **.e-detailcell** class targets the child grid and the **.e-gridpager** class targets the pager root element. You can modify the `font-family` to change the font family and `background-color` property to change the background color of the pager.
 
 ![Child grid pager root element](images/child-grid-pager-root-element.png)
 
 **Customizing the child grid pager container element**
 
-To customize the appearance of the child grid pager container element, you can use the following CSS code:
+To style the child grid's pager container, apply the following CSS. The `.e-pagercontainer` selector modifies the border and font of the pager section.
 
 ```css
 .e-detailcell .e-grid .e-pagercontainer {
@@ -548,13 +531,11 @@ To customize the appearance of the child grid pager container element, you can u
 }
 ```
 
-In this example, the **.e-pagercontainer** class targets the pager container element. You can modify the `border` property and `font-family` property to change the border color and font family of the pager container.
-
 ![Child grid pager container element](images/child-grid-pager-container-element.png)
 
 **Customizing the child grid pager navigation elements**
 
-To customize the appearance of the child grid pager navigation elements, you can use the following CSS code:
+To style the child grid's pager navigation buttons, apply the following CSS. These selectors target all navigation states, allowing customization of their `background color`.
 
 ```css
 .e-detailcell .e-grid .e-gridpager .e-prevpagedisabled,
@@ -569,13 +550,13 @@ To customize the appearance of the child grid pager navigation elements, you can
 }
 ```
 
-In this example, the classes **.e-prevpagedisabled, .e-prevpage, .e-nextpage, .e-nextpagedisabled, .e-lastpagedisabled, .e-lastpage, .e-firstpage,** and **.e-firstpagedisabled** target the various pager navigation elements of the child grid. You can modify the `background-color` property to change the background color of these elements.
-
 ![Child grid pager navigation elements](images/child-grid-pager-navigation-element.png)
 
 **Customizing the child grid pager page numeric link elements**
 
-To customize the appearance of the child grid pager current page numeric link elements, you can use the following CSS code:
+To style the child grid's pager numeric link elements, use the following CSS. The `.e-numericitem` selector targets each page number, allowing customization of `background-color`, `color`, and hover effects.
+
+To customize the appearance of the child grid pager page numeric link elements, the following CSS code can be used:
 
 ```css
 .e-detailcell .e-grid .e-gridpager .e-numericitem {
@@ -590,13 +571,13 @@ To customize the appearance of the child grid pager current page numeric link el
 }
 ```
 
-In this example, the **.e-numericitem** class targets the page numeric link elements. You can modify the `background-color`, `color` properties to change the background color and text color of these elements.
-
 ![Child grid pager page numeric link elements](images/child-grid-pager-page-numeric-link-elements.png)
 
 **Customizing the child grid pager current page numeric element**
 
-To customize the appearance of the child grid pager current page numeric element, you can use the following CSS code:
+To style the current page number in the child grid pager, use the following CSS. The `.e-currentitem` selector targets the active numeric item and allows customization of its `background-color` and `color`.
+
+To customize the appearance of the child grid pager current page numeric element, the following CSS code can be used:
 
 ```css
 .e-detailcell .e-grid .e-gridpager .e-currentitem {
@@ -605,36 +586,33 @@ To customize the appearance of the child grid pager current page numeric element
 }
 ```
 
-In this example, the **.e-currentitem** class targets the current page numeric item. You can modify the `background-color` property to change the background color of this element and `color` property to change the text color.
-
 ![Child grid pager current page numeric element](images/child-grid-pager-current-page-numeric-element.png)
 
 ### Sorting
 
-You can customize the appearance of the sorting icons and multi sorting icons in the child grid using CSS.You can use the available Syncfusion<sup style="font-size:70%">&reg;</sup> [icons](https://ej2.syncfusion.com/react/documentation/appearance/icons#material) based on your theme. Here's how to do it:
+The appearance of sorting icons in the child grid can be customized using CSS. Syncfusion<sup style="font-size:70%">&reg;</sup> provides a set of built-in [icons](https://ej2.syncfusion.com/react/documentation/appearance/icons#tailwind-34) that can be used based on the theme.
 
 **Customizing the child grid sorting icon**
 
-To customize the sorting icon that appears in the child grid header when sorting is applied, you can use the following CSS code:
+To change the sorting icons in the child grid header, apply the following CSS. The `.e-icon-ascending::before` and `.e-icon-descending::before` selectors target the icons for ascending and descending sort states, allowing custom icon codes.
 
 ```css
 .e-detailcell .e-grid .e-icon-ascending::before {
     content: '\e7a3';
-    /* Icon code for ascending order */
+    /* Icon code for ascending order. */
 }
 
 .e-detailcell .e-grid .e-icon-descending::before {
     content: '\e7b6';
-    /* Icon code for descending order */
+    /* Icon code for descending order. */
 }
 ```
-In this example, the **.e-detailcell** class targets the child grid and the **.e-icon-ascending::before** class targets the sorting icon for ascending order, and the **.e-icon-descending::before** class targets the sorting icon for descending order.
 
 ![Child grid sorting icon](images/child-grid-sorting-icons.png)
 
 **Customizing the child grid multi sorting icon**
 
-To customize the multi sorting icon that appears in the child grid header when multiple columns are sorted, you can use the following CSS code:
+To style the multi sorting icon in the child grid header, apply the following CSS. The `.e-sortnumber` selector targets the icon, allowing customization of its `background-color` and font style.
 
 ```css
 .e-detailcell .e-grid .e-sortnumber {
@@ -643,17 +621,15 @@ To customize the multi sorting icon that appears in the child grid header when m
 }
 ```
 
-In this example, the **.e-sortnumber** class targets the background color and font family of the multi sorting icon. You can modify the `background-color` and `font-family` properties to customize the appearance of the multi sorting icon.
-
 ![Child grid multi sorting icon](images/child-grid-multi-sorting-icon.png)
 
 ### Filtering
 
-You can customize the appearance of filtering elements in the child grid using CSS. Below are examples of how to customize various filtering elements, including filter bar cell elements, filter bar input elements, focus styles, clear icons, filter icons, filter dialog content, filter dialog footer, filter dialog input elements, filter dialog button elements, and Excel filter dialog number filters.
+The appearance of filtering elements in the child grid can be customized using CSS. The following examples demonstrate how to style key filtering components, including filter bar cells, filter inputs, focus states, clear icons, filter icons, filter dialog content and footer, dialog input elements, dialog buttons, and excel filter number options.
 
 **Customizing the child grid filter bar cell element**
 
-To customize the appearance of the filter bar cell element in the child grid header, you can use the following CSS code:
+To style the filter bar cell in the child grid header, apply the following CSS. The `.e-filterbarcell` selector targets the cell, allowing customization of its `background-color`.
 
 ```css
 .e-detailcell .e-grid .e-filterbar .e-filterbarcell {
@@ -661,147 +637,137 @@ To customize the appearance of the filter bar cell element in the child grid hea
 }
 
 ```
-In this example, the **.e-detailcell** class targets the child grid and the **.e-filterbarcell** class targets the filter bar cell element in the child grid header. You can modify the `background-color` property to change the color of the filter bar cell element.
 
 ![Child gird filter bar cell element](images/child-grid-filter-bar-cell-element.png)
 
 **Customizing the child grid filter bar input element**
 
-To customize the appearance of the filter bar input element in the child grid header, you can use the following CSS code:
+To style the input field within the child grid's filter bar, use the following CSS. The `.e-input` selector targets the input element, allowing customization of its font.
 
 ```css
 .e-detailcell .e-grid .e-filterbarcell .e-input-group input.e-input{
     font-family: cursive;
 }
 ```
-In this example, the **.e-filterbarcell** class targets the filter bar cell element, and the **.e-input** class targets the input element within the cell. You can modify the `font-family` property to change the font of the filter bar input element.
 
 ![Child gird filter bar input element](images/child-grid-filter-bar-input-element.png)
 
 **Customizing the child grid filter bar input focus**
 
-To customize the appearance of the child grid's filter bar input element's focus highlight, you can use the following CSS code:
+To style the focus highlight of the filter bar input in the child grid, use the following CSS. The `.e-input-focus` selector targets the input when it's active, allowing customization of its `background-color`.
 
 ```css
 .e-detailcell .e-grid .e-filterbarcell .e-input-group.e-input-focus{
     background-color: #deecf9;
 }
 ```
-In this example, the **.e-filterbarcell** class targets the filter bar cell element, and the **.e-input-group.e-input-focus** class targets the focused input element. You can modify the `background-color` property to change the color of the focus highlight.
 
 ![Child gird filter bar input focus](images/child-grid-filter-bar-input-element-focus.png)
 
 **Customizing the child grid filter bar input clear icon**
 
-To customize the appearance of the child grid's filter bar input element's clear icon, you can use the following CSS code:
+To modify the clear icon in the child grid's filter bar input, apply the following CSS. The `.e-clear-icon::before` selector allows changing the icon using a custom Unicode value.
 
 ```css
 .e-detailcell .e-grid .e-filterbarcell .e-input-group .e-clear-icon::before {
     content: '\e72c';
 }
 ```
-In this example, the **.e-clear-icon** class targets the clear icon element within the input group. You can modify the `content` property to change the icon displayed.
 
 ![Child gird filter bar input clear icon](images/child-grid-filter-bar-input-clear-icon.png)
 
 **Customizing the child grid child grid filtering icon**
 
-To customize the appearance of the filtering icon in the child grid header, you can use the following CSS code:
+To style the filtering icon in the child grid header, use the `.e-icon-filter::before` selector. The `content` property defines the icon and can be updated to display a different symbol.
 
 ```css
 .e-detailcell .e-grid .e-icon-filter::before{
     content: '\e81e';
 }
 ```
-In this example, the **.e-icon-filter** class targets the filtering icon element. You can modify the `content` property to change the icon displayed.
 
 ![Child gird filtering icon](images/child-grid-filtering-icon.png)
 
 **Customizing the child grid filter dialog content**
 
-To customize the appearance of the child grid's filter dialog's content element, you can use the following CSS code:
+To style the content area of the child grid's filter dialog, use the `.e-filter-popup .e-dlg-content` selector with the `background-color` property.
 
 ```css
 .e-detailcell .e-grid .e-filter-popup .e-dlg-content {
     background-color: #deecf9;
 }
 ```
-In this example, the **.e-filter-popup .e-dlg-content** classes target the content element within the filter dialog. You can modify the `background-color` property to change the color of the dialog's content.
 
 ![Child grid filter dialog content](images/child-grid-filter-dialog-content.png)
 
 **Customizing the child grid filter dialog footer**
 
-To customize the appearance of the child grid's filter dialog's footer element, you can use the following CSS code:
+To customize the footer of the child grid's filter dialog, apply the `background-color` property to the .`e-filter-popup .e-footer-content` element using the following CSS.
 
 ```css
 .e-detailcell .e-grid .e-filter-popup .e-footer-content {
     background-color: #deecf9;
 }
 ```
-In this example, the **.e-filter-popup .e-footer-content** classes target the footer element within the filter dialog. You can modify the `background-color` property to change the color of the dialog's footer.
 
 ![Child grid filter dialog footer](images/child-grid-filter-dialog-footer.png)
 
 **Customizing the child grid filter dialog input element**
 
-To customize the appearance of the child grid's filter dialog's input elements, you can use the following CSS code:
+To customize the input elements in the child grid's filter dialog, apply the `font-family` property to the `.e-filter-popup .e-input` selector using the following CSS.
 
 ```css
 .e-detailcell .e-grid .e-filter-popup .e-input-group input.e-input{
     font-family: cursive;
 }
 ```
-In this example, the **.e-filter-popup** class targets the filter dialog, and the **.e-input** class targets the input elements within the dialog. You can modify the `font-family` property to change the font of the input elements.
 
 ![Child grid filter dialog input element](images/child-grid-filter-dialog-input-element.png)
 
 **Customizing the child grid filter dialog button element**
 
-To customize the appearance of the child grid's filter dialog's button elements, you can use the following CSS code:
+The filter dialog's buttons can be styled by targeting `.e-filter-popup` and `.e-btn`, applying a `font-family` to change their font.
 
 ```css
 .e-detailcell .e-grid .e-filter-popup .e-btn{
     font-family: cursive;
 }
 ```
-In this example, the **.e-filter-popup** class targets the filter dialog, and the **.e-btn** class targets the button elements within the dialog. You can modify the `font-family` property to change the font of the button elements.
 
 ![Child grid filter dialog button element](images/child-grid-filter-dialog-button-element.png)
 
 **Customizing the child grid excel filter dialog number filters element**
 
-To customize the appearance of the excel filter dialog's number filters in the child grid, you can use the following CSS code:
+The number filter options in the child grid's excel filter dialog can be styled by applying a `background-color` to the `.e-filter-popup .e-contextmenu-wrapper ul` element as below:
 
 ```css
 .e-detailcell .e-grid .e-filter-popup .e-contextmenu-wrapper ul{
     background-color: #deecf9;
 }
 ```
-In this example, the **.e-filter-popup .e-contextmenu-wrapper** ul classes target the number filter elements within the excel filter dialog. You can modify the `background-color` property to change the color of these elements.
 
 ![Child grid excel filter dialog number filters element](images/child-grid-excel-filter-dialog-number-filters-element.png)
 
 ### Grouping
 
-You can customize the appearance of grouping elements in the child grid using CSS. Here are examples of how to customize the group header, group expand/collapse icons, group caption row, and grouping indent cell.
+The grouping-related elements in the child grid can be styled through CSS. This includes the group header, expand/collapse icons, group caption row, and indent cells:
 
 **Customizing the child grid group header**
 
-To customize the appearance of the child grid's group header element, you can use the following CSS code:
+To customize the appearance of the child grid's group header, target the `.e-groupdroparea` element and apply the desired background-color:
 
 ```css
 .e-detailcell .e-grid .e-groupdroparea {
     background-color: #132f49;
 }
 ```
-In this example, the **.e-detailcell** class targets the child grid and the **.e-groupdroparea** class targets the group header element. You can modify the `background-color` property to change the color of the group header.
 
 ![Child grid group header](images/child-grid-group-header.png)
 
 **Customizing the child grid group expand or collapse icons**
 
-To customize the appearance of the group expand/collapse icons in the child grid, you can use the following CSS code:
+To change the expand and collapse icons in the child grid's group header, use the `content` property on `.e-icon-gdownarrow::before` and `.e-icon-grightarrow::before`:
+
 
 ```css
 .e-detailcell .e-grid .e-icon-gdownarrow::before{
@@ -812,13 +778,11 @@ To customize the appearance of the group expand/collapse icons in the child grid
 }
 ```
 
-In this example, the **.e-icon-gdownarrow** and **.e-icon-grightarrow** classes target the expand and collapse icons, respectively. You can modify the `content` property to change the icon displayed. You can use the available Syncfusion<sup style="font-size:70%">&reg;</sup> icons based on your theme.
-
 ![Child grid group expand or collapse icons](images/child-grid-group-expand-or-collapse-icons.png)
 
 **Customizing the child grid group caption row**
 
-To customize the appearance of the child grid's group caption row and the icons indicating record expansion or collapse, you can use the following CSS code:
+To style the child grid's group caption row and its expand/collapse icons, use the `background-color` property on the following elements:
 
 ```css
 .e-detailcell .e-grid .e-groupcaption {
@@ -831,13 +795,11 @@ To customize the appearance of the child grid's group caption row and the icons 
 }
 ```
 
-In this example, the **.e-groupcaption** class targets the group caption row element, and the **.e-recordplusexpand** and **.e-recordpluscollapse** classes target the icons indicating record expansion or collapse. You can modify the `background-color` property to change the color of these elements.
-
 ![Child grid group caption row](images/child-grid-group-caption-row.png)
 
 **Customizing the child grid grouping indent cell**
 
-To customize the appearance of the child grid's grouping indent cell element, you can use the following CSS code:
+To style the child grid's grouping indent cell, target the `.e-indentcell` element and apply the desired `background-color`:
 
 ```css
 .e-detailcell .e-grid .e-indentcell {
@@ -845,17 +807,15 @@ To customize the appearance of the child grid's grouping indent cell element, yo
 }
 ```
 
-In this example, the **.e-indentcell** class targets the grouping indent cell element. You can modify the `background-color` property to change the color of the indent cell.
-
 ![Child grid grouping indent cell](images/child-grid-indent-cell.png)
 
 ### Toolbar
 
-You can customize the appearance of the toolbar in the child grid using CSS. Here are examples of how to customize the toolbar root element and toolbar button element.
+The toolbar in the child grid can be styled through CSS. The following examples demonstrate customization of the toolbar's root element and its button elements.
 
 **Customizing the child grid toolbar root element**
 
-To customize the appearance of the child grid's toolbar root element, you can use the following CSS code:
+The toolbar's root element in the child grid can be styled by applying a `background-color` to the `.e-toolbar-items` selector.
 
 ```css
 .e-detailcell .e-grid .e-toolbar-items {
@@ -863,13 +823,11 @@ To customize the appearance of the child grid's toolbar root element, you can us
 }
 ```
 
-In this example, the **.e-detailcell** class targets the child grid and the **.e-toolbar-items** class targets the background color of the toolbar root element. You can modify the `background-color` property to change the background color of the toolbar.
-
 ![Child grid toolbar root element](images/child-grid-toolbar-root-element.png)
 
 **Customizing the child grid toolbar button element**
 
-To customize the appearance of the child grid's toolbar buttons, you can use the following CSS code:
+The toolbar buttons in the child grid can be styled by applying a `background-color` to the `.e-toolbar .e-btn` selector.
 
 ```css
 .e-detailcell .e-grid .e-toolbar .e-btn {
@@ -877,17 +835,15 @@ To customize the appearance of the child grid's toolbar buttons, you can use the
 }
 ```
 
-In this example, the **.e-toolbar .e-btn** selector targets the background color of the toolbar button elements. You can modify the `background-color` property to change the background color of the toolbar buttons.
-
 ![Child grid toolbar button element](images/child-grid-toolbar-button-element.png)
 
 ### Editing
 
-You can customize the appearance of editing-related elements in the child grid using CSS. Below are examples of how to customize various editing-related elements.
+The appearance of editing-related elements in the child grid can be customized using CSS. This includes input fields, dialog components, and action buttons.
 
 **Customizing the child grid edited and added row element**
 
-To customize the appearance of edited and added row table elements in the child grid, you can use the following CSS code:
+The edited and added rows in the child grid can be styled by applying a `background-color` to the `.e-editedrow table` and `.e-addedrow table` selectors.
 
 ```css
 .e-detailcell .e-grid .e-editedrow table, 
@@ -895,14 +851,13 @@ To customize the appearance of edited and added row table elements in the child 
 	background-color: #62b2eb;
 }
 ```
-In this example, the **.e-detailcell** class targets the child grid and the .**e-editedrow** class represents the edited row element, and the **.e-addedrow** class represents the added row element. You can modify the `background-color` property to change the color of these row table elements.
 
 ![Child grid customizing the edited row element](images/child-grid-edited-row-element.png)
 ![Child grid customizing the added row element](images/child-grid-added-row-element.png)
 
 **Customizing the child grid edited row input element**
 
-To customize the appearance of edited row input elements in the child grid, you can use the following CSS code:
+To style input fields within edited rows in the child grid, target the `.e-input` elements inside `.e-editedrow` and apply properties like `font-family` and `color`:
 
 ```css
 .e-detailcell .e-grid .e-editedrow .e-input-group input.e-input{
@@ -910,39 +865,36 @@ To customize the appearance of edited row input elements in the child grid, you 
   color:rgb(214, 33, 123)
 }
 ```
-In this example, the **.e-editedrow** class represents the edited row element, and the **.e-input** class represents the input elements within the form. You can modify the `font-family` property to change the font and `color` property  to change text color of the input elements.
 
 ![Child grid customizing the edited row input element](images/child-grid-edited-row-input-element.png)
 
 **Customizing the child grid edit dialog header element**
 
-To customize the appearance of the edit dialog header element in the child grid, you can use the following CSS code:
+The edit dialog's header in the child grid can be styled by applying a `background-color` to the `.e-edit-dialog .e-dlg-header-content` selector.
 
 ```css
 .e-edit-dialog .e-dlg-header-content {
     background-color: #deecf9;
 }
 ```
-In this example, the **.e-edit-dialog** class represents the edit dialog, and the **.e-dlg-header-content** class targets the header content within the dialog. You can modify the `background-color` property to change the color of the header element.
 
 ![Child grid customizing the edit dialog header element](images/child-grid-edit-dialog-header-element.png)
 
 **Customizing the child grid edited row input element in dialog edit mode**
 
-To customize the appearance of the child grid's edited row input elements in dialog edit mode, you can use the following CSS code:
+The input fields in dialog edit mode can be styled by applying a `font-family` to the `.e-gridform .e-float-input .e-field` selector.
 
 ```css
 .e-grid .e-gridform .e-rowcell .e-float-input .e-field {
     font-family: cursive;
 }
 ```
-In this example, the **.e-gridform** class represents the editing form, and the **.e-float-input** class targets the floating input elements within the form. You can modify the `font-family` property to change the font of the input elements.
 
 ![Child grid customizing the edited row input element in dialog](images/child-grid-edited-row-input-element-in-dialog.png)
 
 **Customizing the child grid command column buttons**
 
-To customize the appearance of the child grid's command column buttons such as edit, delete, update, and cancel, you can use the following CSS code:
+To style the command column buttons (edit, delete, update, and cancel) in the child grid, target their respective classes and apply the desired `color`:
 
 ```css
 .e-detailcell .e-grid .e-delete::before ,.e-grid .e-cancel-icon::before{
@@ -952,18 +904,17 @@ To customize the appearance of the child grid's command column buttons such as e
     color: #077005;
 }
 ```
-In this example, the **.e-edit, .e-delete, .e-update, and .e-cancel-icon** classes represent the respective command column buttons. You can modify the `color` property to change the color of these buttons.
 
 ![Child grid customize command column button](images/child-grid-commandbutton-1.png)
 ![Child grid customize command column button](images/child-grid-commandbutton-2.png)
 
 ### Aggregate
 
-You can customize the appearance of aggregate elements in the child grid using CSS. Below are examples of how to customize the aggregate root element and the aggregate cell elements.
+Aggregate elements in the child grid can be styled through CSS. The following examples demonstrate customization options for both the aggregate root element and individual aggregate cells.
 
 **Customizing the child grid aggregate root element**
 
-To customize the appearance of the child grid's aggregate root elements, you can use the following CSS code:
+Styling the child grid's aggregate root element can be achieved by applying CSS properties such as `font-family` to the `.e-gridfooter` selector.
 
 ```css
 .e-detailcell .e-grid .e-gridfooter {
@@ -971,13 +922,11 @@ To customize the appearance of the child grid's aggregate root elements, you can
 }
 ```
 
-In this example, the **.e-detailcell** class targets the child grid and the **e-gridfooter** class represents the root element of the aggregate row in the grid footer. You can modify the `font-family` property to change the font of the aggregate root element.
-
 ![Child grid customize aggregate root element](images/child-grid-aggregate-root-element.png)
 
 **Customizing the child grid aggregate cell elements**
 
-To customize the appearance of the child grid's aggregate cell elements (summary row cell elements), you can use the following CSS code:
+The `.e-summarycell` class within the `.e-summaryrow` of the child grid can be styled using properties like `background-color` to modify the appearance of individual aggregate cells:
 
 ```css
 .e-detailcell .e-grid .e-summaryrow .e-summarycell {
@@ -985,30 +934,27 @@ To customize the appearance of the child grid's aggregate cell elements (summary
 }
 ```
 
-In this example, the **e-summaryrow** class represents the summary row containing aggregate cells, and the **e-summarycell** class targets individual aggregate cells within the summary row. You can modify the `background-color` property to change the `color` of the aggregate cell elements.
-
 ![Child grid customize aggregate cell element](images/child-grid-aggregate-cell-element.png)
 
 ### Selection
 
-You can customize the appearance of the selection in the child grid using CSS. Here are examples of how to customize the row selection background, cell selection background, and column selection background.
+The appearance of selection within the child grid can be customized by applying CSS properties to modify the background of selected rows, cells, or columns.
 
 **Customizing the child grid row selection background**
 
-To customize the appearance of the child grid's row selection, you can use the following CSS code:
+The `.e-selectionbackground` class within the child grid can be styled using `background-color` property to modify the appearance of selected rows:
 
 ```css
 .e-detailcell .e-grid td.e-selectionbackground {
     background-color: #00b7ea;
 }
 ```
-In this example, the **.e-detailcell** class targets the child grid and the **.e-selectionbackground** class targets the background color of the row selection. You can modify the `background-color` property to change the background color of the selected rows.
 
 ![Child grid row selection](images/child-grid-row-selection.png)
 
 **Customizing the child grid cell selection background**
 
-To customize the appearance of the child grid's cell selection, you can use the following CSS code:
+The cell selection background in the child grid can be customized by applying the `background-color` property to the `td.e-cellselectionbackground` selector.
 
 ```css
 .e-detailcell .e-grid td.e-cellselectionbackground {
@@ -1016,19 +962,16 @@ To customize the appearance of the child grid's cell selection, you can use the 
 }
 ```
 
-In this example, the **.e-cellselectionbackground** class targets the background color of the cell selection. You can modify the `background-color` property to change the background color of the selected cells.
-
 ![Child grid cell selection](images/child-grid-cell-selection.png)
 
 **Customizing the child grid column selection background**
 
-To customize the appearance of the child grid's column selection, you can use the following CSS code:
+The column selection background in the child grid can be customized by applying the `background-color` property to the `.e-columnselection` selector.
 
 ```css
 .e-detailcell .e-grid .e-columnselection {
     background-color: #aec2ec;
 }
 ```
-In this example, the **.e-columnselection** class targets the background color of the column selection. You can modify the `background-color` property to change the background color of the selected columns.
 
 ![Child grid cell selection](images/child-grid-column-selection.png)

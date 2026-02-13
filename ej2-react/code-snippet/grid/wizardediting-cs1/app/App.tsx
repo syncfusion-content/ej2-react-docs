@@ -21,10 +21,6 @@ function App() {
       if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {
         args.form.ej2_instances[0].rules = {}; // Disable deafault valdation.
         args.dialog.element.querySelector('.e-footer-content').classList.add('e-hide');
-        // Set initail Focus
-        if (args.requestType === 'beginEdit') {
-          ((args.form as HTMLFormElement).elements.namedItem('CustomerID') as HTMLInputElement).focus();
-        }
       }
     }
   }

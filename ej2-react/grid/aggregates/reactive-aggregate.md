@@ -1,22 +1,20 @@
 ---
 layout: post
-title: Reactive aggregate in React Grid component | Syncfusion
-description: Learn here all about Reactive aggregate in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Reactive Aggregate | Syncfusion
+description: Enable reactive aggregates in Syncfusion React Grid (EJ2) for dynamic updates – auto-refresh in batch editing, manual refresh in inline mode.
 control: Reactive aggregate 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Reactive aggregate in React Grid component
+# Reactive Aggregate in React Grid Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provides support for reactive aggregates, which allow you to update the aggregate values dynamically as the data changes. Reactive aggregates automatically recalculate their values when there are changes in the underlying data, providing real-time updates to the aggregate values in the grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports reactive aggregates, which automatically recalculate and update aggregate values in real time whenever the data changes.
 
-## Auto update aggregate value in batch editing
+## Auto-update aggregate values in Batch editing
 
-When the grid is in batch editing mode, the aggregate values in the footer, group footer, and group caption are automatically refreshed every time a cell is saved. This ensures that the aggregate values accurately reflect the edited data.
-
-Here's an example code snippet demonstrating how to auto update aggregate value in batch editing:
+When the Grid is in batch editing mode, aggregate values in the footer, group footer, and group caption rows are automatically refreshed after every cell save, ensuring the aggregate values always reflect the latest edited data.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -33,15 +31,20 @@ Here's an example code snippet demonstrating how to auto update aggregate value 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/aggregate-cs6" %}
+{% previewsample "page.domainurl/code-snippet/grid/aggregate-cs6" %}
 
 > Adding a new record to the grouped grid will not refresh the aggregate values.
 
-## Refresh aggregate values in inline editing
+## Auto-update aggregate values in Inline and Dialog edit modes
 
-By default, reactive aggregate update is not supported by inline and dialog edit modes as it is not feasible to anticipate the value change event for every editor. But, you can refresh the aggregates manually in the inline edit mode using the refresh method of aggregate module.
+By default, reactive aggregate updates are not supported in Inline and Dialog edit modes because value changes cannot be automatically detected for all editor types.
 
-In the following code, the input event for the Freight column editor has been registered and the aggregate value has been refreshed manually.
+To ensure aggregates are updated correctly, they must be refreshed manually using the `aggregateModule.refresh()` method:
+
+- **Inline Edit Mode:** Register an `input` event on the editor (for example, the Freight column). Whenever the value changes, call `aggregateModule.refresh()` to update the aggregate values.
+- **Dialog Edit Mode:** Since multiple editors are rendered inside a dialog, aggregates are refreshed automatically after the data is saved by clicking the Save button. In special cases where an immediate refresh is required for a particular editor before saving, apply the same approach as in Inline mode: bind an `input` event to that editor and call `aggregateModule.refresh()` to update the aggregate values instantly.
+
+The code below registers an `input` event on the "Freight" column editor and manually refreshes aggregate value after changes.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -58,4 +61,10 @@ In the following code, the input event for the Freight column editor has been re
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/aggregate-cs7" %}
+{% previewsample "page.domainurl/code-snippet/grid/aggregate-cs7" %}
+
+## See also
+- [Aggregates overview](./aggregates)
+- [Batch editing](../editing/batch-editing)
+- [Inline editing](../editing/in-line-editing)
+- [Aggregates API](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn)

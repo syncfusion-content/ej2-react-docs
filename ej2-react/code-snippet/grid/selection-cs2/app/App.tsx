@@ -6,6 +6,7 @@ import { data } from './datasource';
 
 function App() {
   let grid: GridComponent | null;
+  let enableToggle: boolean = true;
   const selectionSettings: SelectionSettingsModel = { type: 'Multiple' };
   const dropdownData: { [key: string]: Object; }[] = [
     { text: 'Row', value: 'Row' },
@@ -17,12 +18,13 @@ function App() {
   }
   const toggleColumnSelection = (args: ChangeEventArgs) => {
     (grid as GridComponent).selectionSettings.enableToggle = args.checked;
+    (enableToggle as boolean) = args.checked;
   }
   return (<div>
-    <label style={{ padding: "30px 17px 0 0" }}>Choose cell selection mode:</label>
+    <label style={{ padding: "30px 17px 0 0" }}>Choose selection mode:</label>
     <DropDownListComponent index={0} width={150} dataSource={dropdownData} change={valueChange}></DropDownListComponent><br />
     <label style={{ padding: "30px 17px 0 0" }}>Enable/Disable Toggle selection</label>
-    <SwitchComponent change={toggleColumnSelection}></SwitchComponent>
+    <SwitchComponent change={toggleColumnSelection} checked={enableToggle}></SwitchComponent>
     <GridComponent ref={g => grid = g} dataSource={data} height={315} selectionSettings={selectionSettings}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' width='120' textAlign="Right" />

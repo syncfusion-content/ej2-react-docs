@@ -13,15 +13,16 @@ function App() {
         dataSource: data,
         queryString: 'EmployeeID'
     };
-    return (<GridComponent dataSource={employeeData} childGrid={childGridOptions} height={315}>
+    return (
+        <GridComponent dataSource={employeeData} childGrid={childGridOptions} height={315}>
             <ColumnsDirective>
-              <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign='Right'/>
-              <ColumnDirective field='FirstName' headerText='First Name' width='150'/>
-              <ColumnDirective field='City' headerText='City' width='150'/>
-              <ColumnDirective field='Country' headerText='Country' width='150'/>
-          </ColumnsDirective>
+                <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign='Right'/>
+                <ColumnDirective field='FirstName' headerText='First Name' width='150'/>
+                <ColumnDirective field='City' headerText='City' width='150'/>
+                <ColumnDirective field='Country' headerText='Country' width='150'/>
+            </ColumnsDirective>
           <Inject services={[DetailRow]}/>
-        </GridComponent>);
-}
-;
+        </GridComponent>
+    );
+};
 export default App;

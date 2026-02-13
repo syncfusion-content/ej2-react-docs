@@ -1,27 +1,9 @@
-.e-grid .custom {
-  background-color: #f48fb1 !important;/* csslint allow: important */
-  color: white;
+#grid{
+  margin-top: 10px;
 }
 
-.e-grid .custom {
-  background-color: #fce4ec;
-  color: white;
-}
-
-.e-pagertemplate {
-  display: inline-block;
-  overflow: hidden;
-}
-
-.control-section {
-  margin-left: 20px;
-  width: 25%
-}
-
-.content-wrapper {
-  width: 25%;
-  margin: 0 auto;
-  min-width: 185px;
+#button{
+  margin-left:5px;
 }
 
 @media (max-width: 1120px) {

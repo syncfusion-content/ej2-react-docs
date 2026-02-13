@@ -1,5 +1,4 @@
 
-
 import { setValue } from '@syncfusion/ej2-base';
 import { ColumnDirective, ColumnsDirective, DialogEditEventArgs, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
 import { Edit, EditSettingsModel, Inject, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
@@ -24,12 +23,6 @@ function App() {
         /** Add Validation Rules */
         args.form.ej2_instances[0].addRules('Freight', { max: 500 });
       }
-      /** Set initial Focus */
-      if (args.requestType === 'beginEdit') {
-        (args.form.elements.namedItem('CustomerID') as HTMLInputElement).focus();
-      } else if (args.requestType === 'add') {
-        (args.form.elements.namedItem('OrderID') as HTMLInputElement).focus();
-      }
     }
   }
   const actionBegin = (args: DialogEditEventArgs) => {
@@ -43,7 +36,7 @@ function App() {
     actionBegin={actionBegin} editSettings={editOptions} toolbar={toolbarOptions}
     height={265}>
     <ColumnsDirective>
-      <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} />
+      <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} validationRules={{required: true}} />
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
       <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
     </ColumnsDirective>

@@ -4,6 +4,7 @@ import { data } from './datasource';
 
 function App() {
   const groupOptions: GroupSettingsModel = {
+    columns: ['CustomerID', 'ShipCity'],
     captionTemplate: '<span class="groupItems"> ${key} - ${count} Records : ${headerText} </span>'
   };
   return <GridComponent dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={267}>

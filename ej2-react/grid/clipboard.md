@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Clipboard in React Grid component | Syncfusion
-description: Learn here all about Clipboard in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+description: Learn about using the clipboard features such as copy, paste, and autoFill within the Syncfusion React Grid component.
 control: Clipboard 
 platform: ej2-react
 documentation: ug
@@ -10,16 +10,14 @@ domainurl: ##DomainURL##
 
 # Clipboard in React Grid component
 
-The clipboard feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides an easy way to copy selected rows or cells data into the clipboard. You can use keyboard shortcuts to perform the copy operation. The following list of keyboard shortcuts is supported in the Grid to copy selected rows or cells data into clipboard.
+The clipboard feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid enables copying selected rows or cells to the system clipboard for use in other applications. The Grid supports keyboard shortcuts for quick copy operations.
 
-Interaction keys |Description
+Interaction keys | Description
 -----|-----
-<kbd>Ctrl + C</kbd> |Copy selected rows or cells data into clipboard.
-<kbd>Ctrl + Shift + H</kbd> |Copy selected rows or cells data with header into clipboard.
+<kbd>Ctrl + C</kbd> | Copy selected rows or cells to the clipboard
+<kbd>Ctrl + Shift + H</kbd> | Copy selected rows or cells with header to the clipboard
 
-By using these keyboard shortcuts, you can quickly copy data from the grid to the clipboard, making it easy to paste the data into other applications or documents.
-
-To enable the clipboard feature, you can use the grid component with your data source and selection property. 
+Examples below show Grid configuration for clipboard operations. Configure the Grid's `dataSource` and `selectionSettings` properties.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -40,9 +38,9 @@ To enable the clipboard feature, you can use the grid component with your data s
 
 ## Copy to clipboard by external buttons
 
-Copying data to the clipboard by using external buttons in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid allows you to programmatically trigger the copy operation, making it more friendly, especially for those who may not be familiar with keyboard shortcuts or manual copying.
+Copying data using external buttons enables programmatic triggering of the copy operation, which can improve accessibility compared with only supporting keyboard shortcuts.
 
-To copy selected rows or cells data into the clipboard with the help of external buttons, you can utilize the [copy](https://ej2.syncfusion.com/react/documentation/api/grid/clipboard/#copy) method available in the grid component. This is demonstrated in the following example,
+Use the Grid's [`copy`](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#copy) method to copy selected rows or cells via external controls.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -63,21 +61,16 @@ To copy selected rows or cells data into the clipboard with the help of external
 
 ## AutoFill
 
-The AutoFill feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid allows you to copy the data of selected cells and paste it into other cells by simply dragging the autofill icon of the selected cells to the desired cells. This feature provides a convenient way to quickly populate data in a grid.
+The AutoFill feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid copies values from a selected cell range into target cells by dragging the AutoFill handle. This provides a fast method for populating repetitive or sequential data.
 
-**how to use the autofill feature**
+Enable AutoFill by setting the [enableAutoFill](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#enableautofill) property to `true`.
 
-1. Select the cells from which you want to copy data.
+Using AutoFill
 
-2. Hover over the bottom-right corner of the selection to reveal the autofill icon.
-
-3. Click and hold the autofill icon, then drag it to the target cells where you want to paste the copied data.
-
-4. Release the mouse to complete the autofill action, and the data from the source cells will be copied and pasted into the target cells.
-
-This feature is enabled by defining [enableAutoFill](https://ej2.syncfusion.com/react/documentation/api/grid/#enableautofill) property as **true**. 
-
-The following example demonstrates, how to enable autofill feature in the grid.
+1. Select the source cells.
+2. Hover over the bottom-right corner of the selection to reveal the AutoFill handle.
+3. Drag the handle to the target cells.
+4. Release the mouse to apply the copied values to the target range.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -96,30 +89,25 @@ The following example demonstrates, how to enable autofill feature in the grid.
 
  {% previewsample "page.domainurl/code-snippet/grid/clipboard-cs3" %}
 
-> * If [enableAutoFill](https://ej2.syncfusion.com/react/documentation/api/grid/#enableautofill) is set to **true**, then the autofill icon will be displayed on cell selection to copy cells.
-> * It requires the selection `mode` to be **Cell**,  `cellSelectionMode` to be **Box** and also `editMode` to be **Batch** .
+
+> * If `enableAutoFill` is `true`, the AutoFill handle appears when cells are selected.
+> * AutoFill requires the selection `mode` to be `Cell`, `cellSelectionMode` to be `Box`, and `editSetttings.mode` to be `Batch`.
 
 ### Limitations
 
-* AutoFill does not automatically convert string values to number or date types. If the selected cells contain string data and are dragged to number-type cells, the target cells will display **NaN**. Similarly, when dragging string-type cells to date-type cells, the target cells will display as an **empty cell**. It is important to ensure data types are compatible before using autofill to avoid unexpected results.
-
-* The AutoFill feature does not support generating non-linear series or sequential data automatically. Cannot create complex series or patterns by simply dragging cells with non-sequential data. The autofill feature is designed for copying and pasting data from a selected range of cells.
-
-* The Auto Fill feature can only be applied to the viewport cell when enabling the features of virtual scrolling, infinite scrolling, or column virtualization in the grid.
+- AutoFill does not convert strings to numeric or date types. Pasting string values into number or date-typed cells can yield **NaN** or empty cells. Ensure data types are compatible before using autoFill.
+- AutoFill does not generate complex or non-linear sequences; it copies values from the selected range and does not infer advanced patterns.
+- When virtual scrolling, infinite scrolling, or column virtualization is enabled, autoFill applies only to cells in the current viewport.
 
 ## Paste
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a paste feature that allows you to copy the content of a cell or a group of cells and paste it into another set of cells. This feature allows you to quickly copy and paste content within the grid, making it convenient for data entry and manipulation.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports pasting clipboard content into selected cells for quick data entry and updates. Standard shortcuts allow copying and pasting between ranges within the Grid or between the Grid and external applications.
 
-Follow the steps below to use the Paste feature in the grid:
+Steps to paste:
 
-1. Select the cells from which you want to copy the content.
-
-2. Press the <kbd>Ctrl + C</kbd> shortcut key to copy the selected cells' content to the clipboard.
-
-3. Select the target cells where you want to paste the copied content.
-
-4. Press the <kbd>Ctrl + V</kbd> shortcut key to paste the copied content into the target cells.
+1. Select the source cells and press <kbd>Ctrl + C</kbd> to copy.
+2. Select the target cells.
+3. Press <kbd>Ctrl + V</kbd> to paste the copied content.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -138,8 +126,9 @@ Follow the steps below to use the Paste feature in the grid:
 
  {% previewsample "page.domainurl/code-snippet/grid/clipboard-cs4" %}
 
-> To perform paste functionality, it requires the selection **mode** to be **Cell**,  **cellSelectionMode** to be **Box** and also Batch Editing should be enabled.
+
+> Paste requires selection `mode` to be `Cell`, `cellSelectionMode` to be `Box`, and Batch editing to be enabled.
 
 ### Limitations
 
-* The Paste feature does not automatically convert string values to number or date types. If the selected cells contain string data and are dragged to number-type cells, the target cells will display **NaN**. Similarly, when dragging string-type cells to date-type cells, the target cells will display as an **empty cell**. It is important to ensure data types are compatible before using AutoFill to avoid unexpected results.
+- Paste does not convert strings to number or date types; incompatible types can yield **NaN** or empty cells.

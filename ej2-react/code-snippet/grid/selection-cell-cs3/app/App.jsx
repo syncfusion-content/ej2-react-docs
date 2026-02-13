@@ -10,7 +10,7 @@ function App() {
   let dialog;
   let selectedCellIndexes = [];
   const [dialogVisible, setDialogVisible] = useState(false);
-  const selectionSettings = { mode: 'Cell', type: 'Multiple', persistSelection: true };
+  const selectionSettings = { mode: 'Cell', type: 'Multiple' };
   const pageOptions = { pageSize: 5 };
   const showSelectedRecord = () => {
     selectedCellIndexes = grid.getSelectedRowCellIndexes();
@@ -33,7 +33,7 @@ function App() {
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
         <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
-        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' textAlign="Right" />
       </ColumnsDirective>
       <Inject services={[Page]} />
     </GridComponent></div>)

@@ -21,7 +21,8 @@ function App() {
         <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
       </ColumnsDirective>
       <Inject services={[Group]} />
-    </GridComponent ></div>)
+    </GridComponent ></div>
+  )
 };
 export default App;
 

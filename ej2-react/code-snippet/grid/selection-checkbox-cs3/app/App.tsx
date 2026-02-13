@@ -10,10 +10,10 @@ function App() {
                 <ColumnDirective type='checkbox' width='50' />
                 <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
                 <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
-                <ColumnDirective field='OrderDate' headerText='Order Date' width='100' format='yMd' />
-                <ColumnDirective field='Freight' headerText='Freight' width='150' />
-                <ColumnDirective field='ShippedDate' headerText='Shipped Date' width='100' format='yMd' />
-                <ColumnDirective field='ShipCountry' headerText='ShipCountry' width='150' />
+                <ColumnDirective field='OrderDate' headerText='Order Date' width='100' format='yMd' textAlign="Right" />
+                <ColumnDirective field='Freight' headerText='Freight' width='150' textAlign="Right" />
+                <ColumnDirective field='ShippedDate' headerText='Shipped Date' width='100' format='yMd' textAlign="Right" />
+                <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
             </ColumnsDirective>
             <Inject services={[Page]} />
         </GridComponent></div>)

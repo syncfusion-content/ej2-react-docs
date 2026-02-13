@@ -1,9 +1,12 @@
-.e-grid .custom {
-  background-color: #f48fb1 !important;/* csslint allow: important */
-  color: white;
+.disablegrid {
+  pointer-events: none;
+  opacity: 0.4;
 }
 
-.e-grid .custom {
-  background-color: #fce4ec;
-  color: white;
+.wrapper {
+  cursor: not-allowed;
+}
+
+#GridParent{
+  margin-top: 5px;
 }

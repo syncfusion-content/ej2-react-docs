@@ -21,7 +21,7 @@ function App() {
         <SwitchComponent id="switch" change={change}></SwitchComponent>
         <GridComponent ref={g => grid = g} dataSource={data} height={315}>
           <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+            <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign='Right'/>
             <ColumnDirective field='CustomerID' headerText='<strong> Customer ID </strong>' width='120' />
             <ColumnDirective field='Freight' headerText='Freight' width='150' textAlign='Right' format='C' />
             <ColumnDirective field='ShipCountry' headerText='Ship Country' width='120' />

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Validation in React Grid component | Syncfusion
+title: React Grid - Validation | Syncfusion
 description: Learn here all about Validation in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Validation 
 platform: ej2-react
@@ -8,15 +8,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Validation in React Grid component
+# Validation in React Grid Component
 
-Validation is a crucial aspect of data integrity in any application. The React Grid component in Syncfusion<sup style="font-size:70%">&reg;</sup> provides built-in support for easy and effective data validation. This feature ensures that the data entered or modified adheres to predefined rules, preventing errors and guaranteeing the accuracy of the displayed information.
+Data validation ensures that information entered or modified in the Grid follows specific validation rules, preventing errors and maintaining accuracy. The React Grid component in Syncfusion<sup style="font-size:70%">&reg;</sup> provides built-in validation support to make this process easy and effective.
+
+> For basic Grid editing setup and configuration, refer to the [Editing Feature Setup](../editing/edit.md#set-up-editing) section first.
 
 ## Column validation
 
-Column validation allows you to validate the edited or added row data before saving it. This feature is particularly useful when you need to enforce specific rules or constraints on individual columns to ensure data integrity. By applying validation rules to columns, you can display error messages for invalid fields and prevent the saving of erroneous data. This feature leverages the **Form Validator** component to perform the validation. You can define validation rules using the [validationRules](https://ej2.syncfusion.com/react/documentation/api/grid/column/#validationrules) property to specify the criteria for validating column values.
-
-The following code example demonstrates how to define a validation rule for grid column:
+Column validation applies validation rules to individual columns during edit operations, ensuring data accuracy before saving. Invalid data displays error messages and prevents saving. The [FormValidator](https://ej2.syncfusion.com/react/documentation/api/form-validator) component validates data using rules defined in the [validationRules](https://ej2.syncfusion.com/react/documentation/api/grid/column#validationrules) property for each column.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -37,9 +37,9 @@ The following code example demonstrates how to define a validation rule for grid
 
 ## Custom validation
 
-The Custom validation feature is used to define and enforce your own validation rules for specific columns in the Grid. This is achieved by leveraging the utilizing the **Form Validator custom rules**, you can enforce your desired validation logic and display error messages for invalid fields.
+Custom validation rules apply specific rules to grid columns beyond standard built-in validation. The [FormValidator](https://ej2.syncfusion.com/react/documentation/api/form-validator) component applies these rules and displays error messages for invalid fields. Custom validation supports dependent field validation and numeric range validation for various application scenarios.
 
-In the below demo, custom validation applied for **CustomerID** column.
+The following example demonstrates custom validation for the "Customer ID" column.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -60,9 +60,7 @@ In the below demo, custom validation applied for **CustomerID** column.
 
 ### Custom validation based on dropdown change
 
-The Custom validation feature in the Grid allows you to apply validation rules and messages to a column based on the value of another column in edit mode. This feature is particularly useful when you need to enforce specific validation criteria that depend on the selection made in a dropdown column.
-
-In the following sample, dropdownlist edit type is used for the **Role** and **Salary** columns. Here, you can apply the custom validation in the **Salary** column based on the value selected in the **Role** column.
+Dependent validation rules adjust based on selections in other columns, enabling linked column validation. The "Salary" column validation adjusts based on the "Role" column selection, ensuring both columns validate correctly together.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -81,11 +79,9 @@ In the following sample, dropdownlist edit type is used for the **Role** and **S
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs31" %}
 
-### Custom validation for numeric column
+### Custom validation for numeric columns
 
-Custom validation for a numeric column Grid is useful when you want to enforce specific validation rules on numeric values in a column. This allows you to define your own validation logic and display custom error messages when the you enters invalid data.
-
-In the following example, custom validation functions, namely **customFn** and **customFn1**, are defined to check the entered numeric value against your validation criteria. Then, the grid column is configured with the appropriate validation settings using the **freightRules** object, specifying the custom validation functions along with corresponding error messages. Additionally, the `change` event of the numeric column is bound to the [validate](https://ej2.syncfusion.com/react/documentation/api/form-validator/#validate) method of the form element through the edit params. This enables you to trigger validation and display error messages whenever the you modifies the value in the **NumericTextBox**.
+Numeric column validation applies rules for numeric data such as positive values, minimum/maximum ranges, or decimal limits. This example uses "customFn" and "customFn1" functions configured through the "freightRules" object to validate numeric values. The numeric columns are bound to the `change` event, which calls the [validate](https://ej2.syncfusion.com/react/documentation/api/form-validator#validate) method to check the value and display error messages whenever the data changes.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -106,11 +102,9 @@ In the following example, custom validation functions, namely **customFn** and *
 
 ## Dynamically add or remove validation rules from the form
 
-You can dynamically add or remove validation rules from input elements within a form. This feature is particularly useful when you need to adjust the validation rules based on different scenarios or dynamically changing data.
+Validation rules can be added or removed from input elements based on application scenarios or data conditions. The [addRules](https://ej2.syncfusion.com/react/documentation/api/form-validator#addrules) method adds validation rules dynamically to input elements using the name attribute.
 
-To add validation rules dynamically to an input element, you can use the [addRules](https://ej2.syncfusion.com/react/documentation/api/form-validator/#addrules) method. This method enables you to add validation rules to the corresponding input element based on the name attribute.
-
-The following example to demonstrates how to dynamically add or remove a required validation rule for an input field based on a **CheckBox** selection:
+The following example demonstrates dynamic addition or removal of validation rules for an input field based on a checkbox selection.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -129,15 +123,13 @@ The following example to demonstrates how to dynamically add or remove a require
 
  {% previewsample "page.domainurl/code-snippet/grid/edit-validation-cs2" %}
 
-> To remove an existing validation rule from an input element, you can use the [removeRules](https://ej2.syncfusion.com/react/documentation/api/form-validator/#removerules) method. 
+> The [removeRules](https://ej2.syncfusion.com/react/documentation/api/form-validator#removerules) method removes existing validation rules from input elements when needed. 
 
-## Change the position of validation error message
+## Validation error message positioning
 
-By default, the validation error message in Grid is displayed below the input field. However, you have an option to customize its position and display it in a different location. This feature is particularly useful when you want to align the error message according to your application's design and layout.
+Error message positioning customizes where validation messages appear in the grid. By default, messages display below the input field. The [customPlacement](https://ej2.syncfusion.com/react/documentation/api/form-validator#customplacement) event repositions messages to custom locations based on application needs.
 
-To change the position of the validation error message in Grid, you can utilize the [customPlacement](https://ej2.syncfusion.com/documentation/api/form-validator/#customplacement) event. This event allows you to define a custom logic to position the error message at the desired location.
-
-Here's an example that demonstrates how to change the position of the validation error message to the top of the input field:
+The following example demonstrates moving validation messages to the top of the input field.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -156,13 +148,9 @@ Here's an example that demonstrates how to change the position of the validation
 
  {% previewsample "page.domainurl/code-snippet/grid/edit-validation-cs3" %}
 
-## Show custom error message while performing CRUD actions
+## CRUD error handling with custom error messages
 
-While performing CRUD actions in the Syncfusion React Grid, errors may occur due to various reasons such as validation failures, network issues, or server-side exceptions. Handling these errors effectively is essential for providing meaningful error messages when an operation fails.
-
-To achieve this, you can use the [actionFailure](https://ej2.syncfusion.com/react/documentation/api/grid/#actionfailure) event. This event is triggered when an action (like update, delete, or insert) fails, allowing you to retrieve the error message from the server response and display it in the UI.  
-
-The following sample demonstrates how to retrieve and display error messages in the Grid:  
+Error handling for CRUD operations in the grid displays helpful error messages when operations fail. The [actionFailure](https://ej2.syncfusion.com/react/documentation/api/grid#actionfailure) event triggers on operation failures, providing access to error messages from server responses for display.
  
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -406,19 +394,17 @@ The following screenshot illustrates how to retrieve and display error messages 
 
 ![custom error message](../images/custom-error-message.png)
 
-## Prevent adding duplicate rows with custom validation
+## Preventing duplicate entries
 
-The Syncfusion React Grid allows you to enforce constraints to prevent duplicate rows by customizing the validation logic within the Grid setup. This ensures data integrity by restricting duplicate entries in the **OrderID** column.
+The Grid supports prevention of duplicate rows through custom validation logic. This ensures data integrity by restricting duplicate values in the specific columns.
 
-To prevent adding duplicate rows in the Grid, follow these steps:
+Three configuration steps enable this feature:
 
-1. Implement Custom Validation: Define the `orderIdCustomValidation` function to check whether the entered **OrderID** already exists in the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource). This allows editing an existing row without triggering a duplicate error.
+1. **Custom Validation Logic**: The "orderIdCustomValidation" function checks whether the entered "Order ID" already exists in the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource). This allows editing existing rows without triggering a duplicate error.
 
-2. Add Dynamic Validation Rules: Create the `orderIDRules` object to enforce unique **OrderID** values. Dynamically add this rule to the form during the **save** action.
+2. **Dynamic Rule Configuration**: The "orderIDRules" object enforces unique "Order ID" values. Add this rule dynamically to the form during the `save` action.
 
-3. Handle Validation in the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid/#actionbegin) event: In the `actionBegin` event, check if the **requestType** is **save**. Apply the validation rule before saving and cancel the action `args.cancel = true` if the validation fails.
-
-For server-side validation to prevent adding duplicate rows, you can refer to the detailed guidance provided in our [knowledge base](https://support.syncfusion.com/kb/article/11608/how-to-do-server-side-validation-for-grid-in-asp-net-mvc-application). If you want to display the Grid's validation tooltip instead of the alert used in our knowledge base, you can call the `grid.editModule.formObj.validate()` method in the `Ajax/Fetch` success function to display the Grid's tooltip validation for the server side.
+3. **Event-Based Validation**: The [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid#actionbegin) event triggers validation. When `requestType` equals `save`, validation runs before saving. Set `args.cancel = true` if validation fails.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -436,3 +422,5 @@ For server-side validation to prevent adding duplicate rows, you can refer to th
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs37" %}
+
+> Server-side validation implementation details are available in the [knowledge base article](https://support.syncfusion.com/kb/article/11608/how-to-do-server-side-validation-for-grid-in-asp-net-mvc-application). To display validation tooltips instead of alerts, call `grid.editModule.formObj.validate()` in the success callback of Ajax/Fetch operations.

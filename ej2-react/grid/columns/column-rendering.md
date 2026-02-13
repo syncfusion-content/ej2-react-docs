@@ -8,13 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column Rendering
+# Column Rendering in React Grid Component
 
 ## Define columns manually
 
-To define columns manually in grid, you can use the `ColumnsDirective` element to define the columns and represent each column with its respective properties such as [field](https://ej2.syncfusion.com/react/documentation/api/grid/column/#field), [headerText](https://ej2.syncfusion.com/react/documentation/api/grid/column/#headertext), [type](https://ej2.syncfusion.com/react/documentation/api/grid/column/#type), and [width](https://ej2.syncfusion.com/react/documentation/api/grid/column/#width) set accordingly. This allows you to customize the column's behavior and appearance based on the requirements.
-
-Here's an example code snippet that demonstrates how to define columns manually in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid:
+Columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid can be manually defined using the [ColumnDirective](https://ej2.syncfusion.com/react/documentation/api/grid/column) element. Each column is configured with properties such as `field`, `headerText`, `type`, and `width`, allowing precise control over the column's behavior and appearance to meet specific layout and data requirements.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -31,13 +29,11 @@ Here's an example code snippet that demonstrates how to define columns manually 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/column-cs42" %}
+{% previewsample "page.domainurl/code-snippet/grid/column-cs42" %}
 
-## Auto generated columns
+## Auto-generated columns
 
-The Grid automatically generates columns when the [ColumnDirective](https://ej2.syncfusion.com/react/documentation/api/grid/column/) declaration is empty or undefined while initializing the grid. All the columns in the **dataSource** are bound as grid columns.
-
-You can use the following code snippet to enable auto-generated columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid:
+Columns are automatically created when the `columns` option is not defined during Grid initialization. In this case, the Grid generates columns based on the fields in the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource). Each field in the data source is displayed as a column, and the field name appears in the column header.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -54,18 +50,14 @@ You can use the following code snippet to enable auto-generated columns in the S
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/column-cs2" %}
+{% previewsample "page.domainurl/code-snippet/grid/column-cs2" %}
 
->* When the columns are auto-generated, the column [type](https://ej2.syncfusion.com/react/documentation/api/grid/column/#type) is determined from the first record of the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource).
->* If you have a large dataset, auto-generating columns can result in performance issues. In this case, it is recommended to specify the columns manually in the columns property during initialization or else use column virtualization feature by setting [enableColumnVirtualization](https://ej2.syncfusion.com/react/documentation/api/grid/#enablecolumnvirtualization) property value as **true**.
+>* When the columns are auto-generated, the column `type` is determined from the first record of the `dataSource`.
+>* Auto-generating columns for large datasets can affect performance. To improve efficiency, columns can be defined manually in the `columns` option during initialization. Alternatively, the column virtualization feature can be enabled by setting [enableColumnVirtualization](https://ej2.syncfusion.com/react/documentation/api/grid#enablecolumnvirtualization) to `true`.
 
-### Set isPrimaryKey for auto generated columns when editing is enabled
+### Set primary key for auto-generated columns in editing
 
-When editing is enabled in the grid, you may need to set a primary key for auto-generated columns to uniquely identify each row for operations such as updating or deleting data. This can be achieved using the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column/#isprimarykey) property of the column object by using the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid/#databound) event.
-
-By setting `isPrimaryKey` to **true** for an auto-generated column in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you can specify it as the primary key column, which uniquely identifies each row when editing is enabled.
-
-Here is an example code snippet that shows how to set a primary key for an auto-generated column when editing is enabled:
+Primary key configuration for auto-generated columns is necessary when editing is enabled in the Grid to uniquely identify each row for operations such as updating or deleting data. This can be achieved by setting the `isPrimaryKey` property to `true` for the column object through the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid#databound) event.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -82,9 +74,9 @@ Here is an example code snippet that shows how to set a primary key for an auto-
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/column-cs3" %}
+{% previewsample "page.domainurl/code-snippet/grid/column-cs3" %}
 
-If the column [field](https://ej2.syncfusion.com/react/documentation/api/grid/column/#field) name is known, the [getColumnByField](https://ej2.syncfusion.com/react/documentation/api/grid/#getcolumnbyfield) method can be used to retrieve the column object. Then, the `isPrimaryKey` property can be set to **true** for that column, as demonstrated in the code snippet below:
+If the column `field` name is known, the [getColumnByField](https://ej2.syncfusion.com/react/documentation/api/grid#getcolumnbyfield) method can be used to retrieve the column object. Then, the `isPrimaryKey` property can be set to "true" for that column, as demonstrated in the code snippet below:
 
 ```typescript
 const dataBound = () => {
@@ -95,13 +87,11 @@ const dataBound = () => {
 }
 ```
 
-### Set column options to auto generated columns
+### Defining column properties for auto-generated columns
 
-To configure column options such as [type](https://ej2.syncfusion.com/react/documentation/api/grid/column/#type), [format](https://ej2.syncfusion.com/react/documentation/api/grid/column/#format) and [width](https://ej2.syncfusion.com/react/documentation/api/grid/column/#width) for auto-generated columns in Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you can use the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid/#databound) event of the Grid component. This event is triggered after the data has been bound to the Grid. By handling this event, you can specify the desired column options for the auto-generated columns.
+Auto-generated columns can be customized to meet specific requirements by modifying properties such as `type`, `format`, and `width`. These changes are applied within the `dataBound` event. The event is triggered after data has been loaded into the Grid, ensuring that all columns are created and available. At this point, the necessary options for the auto-generated columns can be configured.
 
-Here's an example of how you can set column options for auto-generated columns using the `dataBound` event:
-
-In the below example, `width` is set for **OrderID** column, **date** `type` is set for **OrderDate** column and `format` is set for **Freight** and **OrderDate** column.
+In the below example, `width` is set for the "OrderID" column, `type` is set for the "OrderDate" column and `format` is set for the "Freight" and "OrderDate" columns.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -118,21 +108,25 @@ In the below example, `width` is set for **OrderID** column, **date** `type` is 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/column-cs4" %}
+{% previewsample "page.domainurl/code-snippet/grid/column-cs4" %}
 
-## Dynamic column generation 
+## Custom cell display text
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component allows you to dynamically generate columns at runtime, based on the data provided. This feature is useful when you need to display data with varying columns based on user requirements or dynamic data sources.
+The Grid allows dynamic customization of cell display text at runtime. This is particularly useful when column values need to be formatted or combined based on specific requirements.
 
-### Using valueAccessor property
+### Cell text formatting
 
-Dynamic column generation using value accessor allows you to access and manipulate the display data values in a grid column. By using the [valueAccessor](https://ej2.syncfusion.com/react/documentation/api/grid/column/#valueaccessor) property of a grid column, you can customize the display value of the column based on the data.
+In the Grid, the [valueAccessor](https://ej2.syncfusion.com/react/documentation/api/grid/column#valueaccessor) property is used to customize the data displayed in a column. It allows formatting or transforming the cell content without modifying the original data source.
 
-To use `valueAccessor` property, define the column with the property and provide a function that will return the formatted value. The function receives two arguments:
-* **field**: represents the data field of the column.
-* **data**: represents the data record for the corresponding row.
+To implement `valueAccessor`, define a function for the column that returns the desired display value. This function receives two parameters:
 
-In the provided code, the **currencyFormatter** function takes the Freight value of the data object, appends the Euro symbol to it, and returns the formatted string. The **concatenateFields** function concatenates the ShipCity and ShipRegion values of the data object and returns the combined string.
+* `field`: The name of the current column's field.
+* `data`: The complete data object for the current row.
+
+**Example:**
+
+* **Currency Formatting**: A function like "currencyFormatter" can take the "Freight" value from the data object, append a Euro(€) symbol, and return a formatted string such as "€100".
+* **Combining Fields**: A function such as "concatenateFields" can merge the "ShipCity" and "ShipRegion" fields into a single string like "Berlin, BE".
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -149,17 +143,15 @@ In the provided code, the **currencyFormatter** function takes the Freight value
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/column-cs19" %}
+{% previewsample "page.domainurl/code-snippet/grid/column-cs19" %}
 
-> The `valueAccessor` function can have performance implications if it is used to access a large number of data records or to perform complex data manipulations. To avoid performance issues, you can enable the virtualization feature while using the valueAccessor property. This ensures that only the visible rows are rendered, resulting in faster rendering times.
+> It is recommended to enable the [Virtual Scrolling](https://ej2.syncfusion.com/react/documentation/api/grid#enablevirtualization) or [Paging](https://ej2.syncfusion.com/react/documentation/api/grid#allowpaging) feature when binding large datasets to the Grid.
 
 ### Display array type columns
 
-The Grid component allows you to easily bind an array of objects to a column using the [valueAccessor](https://ej2.syncfusion.com/react/documentation/api/grid/column/#valueaccessor) property. This property allows customization of how the data is displayed in the column.
+Array of objects binding to a column in the Grid component can be achieved using the `valueAccessor` property. This allows combining multiple values from an array into a single, readable string for display.
 
-For example, consider a column named **Name** that contains an array of two objects, **FirstName** and **LastName**.  The `valueAccessor` property can be used to join these two objects and bind them to the column.
-
-This will display the concatenated value of **FirstName** and **LastName** in the **Full Name** column of the grid. Here's an example of how this can be achieved:
+For example, consider a column named "Name" that contains an array of two objects, "FirstName" and "LastName". The `valueAccessor` property can be used to join these two objects and bind them to the column.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -176,13 +168,17 @@ This will display the concatenated value of **FirstName** and **LastName** in th
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/array-of-string-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/array-of-string-cs1" %}
 
 ### Expression column
 
-You can achieve an expression column in the Grid by using the [valueAccessor](https://ej2.syncfusion.com/react/documentation/api/grid/column/#valueaccessor) property. The `valueAccessor` property allows you to define a function that calculates the value for the expression column based on the values of other columns.
+An expression column displays a calculated value based on other fields in the same row. This can be implemented using the `valueAccessor` property, which allows defining a custom function to compute the value dynamically.
 
-In this example, we have a grid with columns **Food Name**, **Protein**, **Fat**, and **Carbohydrate**. We want to add an expression column called **Calories Intake** that calculates the total calories for each row based on the values of **Protein**, **Fat**, and **Carbohydrate** columns.
+For example, consider an expression column named "Calories Intake". This column calculates the total calories for each row using values from the "Protein", "Fat", and "Carbohydrate" columns. The `valueAccessor` function can perform the necessary calculation—such as applying a formula like:
+
+```ts
+const Calories = (Protein × 4) + (Fat × 9) + (Carbohydrate × 4);
+```
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -199,15 +195,17 @@ In this example, we have a grid with columns **Food Name**, **Protein**, **Fat**
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/expression-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/expression-cs1" %}
 
 ### Display serial number
 
-To display serial number in the grid for every rows, you can use the [rowDataBound](https://ej2.syncfusion.com/react/documentation/api/grid/#rowdatabound) event. The `rowDataBound` event is triggered for each row in the grid when the data is bound to the grid.
+Serial number display in the Grid for every row can be achieved using the [rowDataBound](https://ej2.syncfusion.com/react/documentation/api/grid#rowdatabound) event. The `rowDataBound` event is triggered for each row in the Grid when the data is bound to the Grid. Inside the `rowDataBound` event handler, a serial number can be calculated using the current page number, page size, and the row's index on that page. These values are available from the Grid's [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid#pagesettings) property:
 
-Within the event handler, the [pagesize](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettingsModel/#pagesize) and [currentPage](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettingsModel/#currentpage) index can be obtained from the grid's [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid/#pagesettings) property. Using these values, the serial number can be calculated based on the page size, current page, and row index. Finally, the calculated serial number can be set as the innerHTML of the corresponding row cell.
+* `pageSize`: Number of rows shown per page.
+* `currentPage`: The current page number.
+* `rowIndex`: The index of the row within the current page.
 
-Here is an example code snippet that demonstrates how to display serial numbers in a Syncfusion<sup style="font-size:70%">&reg;</sup> Grid using `rowDataBound` event:
+This formula ensures that serial numbers continue correctly across pages. Once calculated, the serial number can be set as the content of the desired cell in the row using `innerHTML`.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -224,17 +222,17 @@ Here is an example code snippet that demonstrates how to display serial numbers 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/column-cs38" %}
+{% previewsample "page.domainurl/code-snippet/grid/column-cs38" %}
 
 ## Complex data binding
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component allows you to achieve complex data binding by using the dot (.) operator in the [field](https://ej2.syncfusion.com/react/documentation/api/grid/column/#field). This feature is particularly useful when dealing with nested or complex data structures.
+Complex data binding in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component can be achieved using the dot (.) operator in the `field` property. This feature is particularly useful when dealing with nested or complex data structures.
 
 ### Using local data
 
-To enable complex data binding in the Grid component using local data, use the dot (.) operator in the `field` property of the column. Here is an example of how to achieve complex data binding using local data:
+When binding local data that contains nested objects, the dot (.) operator in the column's `field` property allows access to specific properties within those nested objects.
 
-In the below example, we have bound the nested **Employee** object's **FirstName** and **LastName** properties using the dot (.) operator.
+In the below example, the nested "Employee" object's "FirstName" and "LastName" properties are bound using the dot (.) operator.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -251,13 +249,13 @@ In the below example, we have bound the nested **Employee** object's **FirstName
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/complex-binding-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/complex-binding-cs1" %}
 
 ### Using remote data
 
-To enable complex data binding in the Grid component using remote data, add the [expand](https://ej2.syncfusion.com/documentation/api/data/query/#expand) query to the [query](https://ej2.syncfusion.com/react/documentation/api/grid/#query) property of the Grid, to eager load the complex data. Here is an example of how to achieve complex data binding using remote data:
+To enable complex data binding in the Grid component using remote data, add the [expand](https://ej2.syncfusion.com/documentation/api/data/query#expand) query to the Grid’s [query](https://ej2.syncfusion.com/react/documentation/api/grid#query) property. This ensures that related or nested data is eagerly loaded from the server, allowing direct access to complex fields using dot (.) notation in the column definitions.
 
-In the below example, we have used the `expand` query to load the nested Employee object's **City** property using the dot (.) operator.
+In the below example, the `expand` query loads the nested "Employee" object's "City" property using the dot (.) operator.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -268,13 +266,11 @@ In the below example, we have used the `expand` query to load the nested Employe
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/complex-binding-cs3" %}
+{% previewsample "page.domainurl/code-snippet/grid/complex-binding-cs3" %}
 
 ### Complex data binding with list of array of objects
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid supports complex data binding with lists of arrays of objects. This feature allows you to bind complex data with multiple levels of nested objects and arrays to the Grid.
-
-The following example shows how to set complex field for datasource having array Of objects.
+Complex data binding with lists of arrays of objects is supported in the Grid. This feature allows binding complex data with multiple levels of nested objects and arrays to the Grid.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -291,13 +287,13 @@ The following example shows how to set complex field for datasource having array
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/complex-binding-cs2" %}
+{% previewsample "page.domainurl/code-snippet/grid/complex-binding-cs2" %}
 
-### How to set complex column as foreign key column
+### Setting a complex column as a foreign key column
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component provides the ability to set complex columns as foreign key columns. This allows you to display related data from a foreign data source based on the complex column value.
+The Grid component provides the ability to set complex columns as foreign key columns. This allows related data from a foreign data source to be displayed based on a nested field value.
 
-The following example demonstrates how to set the **Employee.EmployeeID** column as a foreign key column, and display the **FirstName** column from the foreign data.
+The following example demonstrates how to set the "Employee.EmployeeID" column as a foreign key column and display the "FirstName" column from the foreign data.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -314,4 +310,4 @@ The following example demonstrates how to set the **Employee.EmployeeID** column
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/foreign-key-cs6" %}
+{% previewsample "page.domainurl/code-snippet/grid/foreign-key-cs6" %}

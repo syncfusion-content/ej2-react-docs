@@ -22,7 +22,7 @@ function App() {
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
-        <ColumnDirective field='ShipCity' headerText='ShipCity' width='150' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
         <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
       </ColumnsDirective>
       <Inject services={[Page, Group, Sort, Toolbar, Filter, Edit, ColumnChooser, ColumnMenu, Reorder]} />

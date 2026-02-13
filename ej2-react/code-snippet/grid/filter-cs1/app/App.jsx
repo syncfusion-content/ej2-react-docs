@@ -19,7 +19,7 @@ function App() {
     return <GridComponent ref={g => grid = g} dataSource={data} filterSettings={filterOptions} allowFiltering={true}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' width='140' textAlign="Right"/>
-      <ColumnDirective field='EmployeeID' headerText='EmployeeID' width='140' textAlign="Right"/>
+      <ColumnDirective field='EmployeeID' headerText='Employee ID' width='140' textAlign="Right"/>
       <ColumnDirective field='CustomerID' filterTemplate={filterTemplate} width='140'/>
       <ColumnDirective field='ShipName' width='170' textAlign="Right"/>
     </ColumnsDirective>

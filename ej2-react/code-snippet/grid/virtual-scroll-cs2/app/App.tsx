@@ -23,8 +23,10 @@ function App() {
     (grid as GridComponent).refresh();
   }
   return (<div>
-    <label style={{ padding: "30px 20px 0 0" }}>Select initialBlocks count: </label>
-    <DropDownListComponent index={0} width={200} dataSource={dropDownData} change={onChange}></DropDownListComponent>
+    <div style={{ display: "inline-block", marginBottom: "10px" }}>
+      <label style={{ padding: "30px 20px 0 0" }}>Select initialBlocks count: </label>
+      <DropDownListComponent index={0} width={200} dataSource={dropDownData} change={onChange}></DropDownListComponent>
+    </div>
     <GridComponent ref={g => grid = g} dataSource={datas} height={300} enableInfiniteScrolling={true} pageSettings={pageSettings}>
       <Inject services={[InfiniteScroll]} />
       <ColumnsDirective>
@@ -34,6 +36,7 @@ function App() {
         <ColumnDirective field='Estimation' headerText='Estimation' textAlign='Right' width='100' />
         <ColumnDirective field='Status' width='100' />
       </ColumnsDirective>
-    </GridComponent></div>)
+    </GridComponent></div>
+  )
 }
 export default App;

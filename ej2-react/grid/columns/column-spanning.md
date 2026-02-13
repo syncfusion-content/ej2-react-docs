@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Column spanning in React Grid component | Syncfusion
-description: Learn here all about Column spanning in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
-control: Column spanning 
+description: Learn about column spanning feature in the Syncfusion React Grid component of Syncfusion Essential JS 2.
+control: Column spanning
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,9 +10,36 @@ domainurl: ##DomainURL##
 
 # Column spanning in React Grid component
 
-The column spanning feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows you to merge adjacent cells horizontally, creating a visually appealing and informative layout. By defining the [colSpan](https://ej2.syncfusion.com/react/documentation/api/grid/queryCellInfoEventArgs/#colspan) attribute in the [QueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/queryCellInfoEventArgs/) event, you can easily span cells and customize the appearance of the grid.
+Column spanning merges adjacent cells with identical values horizontally, producing a cleaner and more structured layout. This feature reduces duplication in consecutive cells, highlights grouped information, and improves readability by presenting related data in a compact form. Reports and tabular views become easier to interpret when repetitive values are visually combined into a single spanned cell.
 
-In the following demo, Employee **Davolio** doing analysis from 9.00 AM to 10.00 AM, so that cells have spanned.
+The [enableColumnSpan](https://ej2.syncfusion.com/react/documentation/api/grid#enablecolumnspan) property, when set to `true`, activates automatic merging of adjacent cells with identical values. This removes the need for manual configuration and results in a cleaner layout where merged cells highlight patterns and relationships within the data.
+
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/column-spanning-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/column-spanning-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-spanning-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/column-spanning-cs1/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/column-spanning-cs1" %}
+
+> Spanning can also be controlled at the column level by setting `enableColumnSpan` to `false` in the column definition to prevent merging for specific columns.
+
+## Dynamic column spanning
+
+Column spanning in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid merges adjacent cells horizontally to create a cleaner and more structured layout. Spanning can be controlled dynamically by setting the [colSpan](https://ej2.syncfusion.com/react/documentation/api/grid/queryCellInfoEventArgs#colspan) attribute within the [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#querycellinfo) event, based on column values and specific conditions. This approach enables custom logic to span cells, allowing flexible presentation of time ranges, grouped values, or contextual highlights.
+
+The following demo shows employee "Davolio" performing analysis from "9:00 AM to 10:00 AM", with spanned cells representing the time range.
+
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -35,11 +62,11 @@ In the following demo, Employee **Davolio** doing analysis from 9.00 AM to 10.00
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/spanning-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/spanning-cs1" %}
 
 ## Change the border color while column spanning
 
-You can change the border color for the spanned cells by the using [QueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/#querycellinfo) event. This event triggers before the cell element is appended to the Grid element.
+The border color of spanned cells can be customized through the `queryCellInfo` event. This event is triggered before the cell element is appended to the Grid, which makes it possible to apply styles programmatically.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -62,48 +89,14 @@ You can change the border color for the spanned cells by the using [QueryCellInf
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/spanning-cs3" %}
+{% previewsample "page.domainurl/code-snippet/grid/spanning-cs3" %}
 
-## Limitations
 
-* The [updateCell](https://ej2.syncfusion.com/react/documentation/api/grid/#updatecell) method does not support column spanning.
-* Column spanning is not compatible with the following features:
-    1. Virtual scrolling
-    2. Infinite scrolling
-    3. Grouping
-    4. Autofill
-
-## column spanning using enableColumnSpan property    
-
-The Syncfusion React Grid introduces a simplified approach to horizontally merge cells using the `enableColumnSpan` property. 
-
-When the `enableColumnSpan` property is enabled, the Grid automatically merges cells with matching data across adjacent columns without requiring manual span configuration using the [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/queryCellInfoEventArgs) event. These merged cells are visually combined into a single cell, improving readability.
-
-Here is an example of how to use the `enableColumnSpan` property to merge cells horizontally:
-
-{% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/column-spanning-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/column-spanning-cs1/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-spanning-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-spanning-cs1/app/datasource.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/grid/column-spanning-cs1" %}
-
-> You can also control spanning at the column level. To prevent merging for specific columns, set `enableColumnSpan` to **false** in the column definition.
-
-### Limitation
+### Limitations
 
 * Virtualization
 * Infinite Scrolling
+* Grouping
 * Lazy Load Grouping
 * Row Drag and Drop
 * Column Virtualization
@@ -112,3 +105,5 @@ Here is an example of how to use the `enableColumnSpan` property to merge cells 
 * Export
 * Foreign Key
 * Hierarchy Grid
+* [UpdateCell](https://ej2.syncfusion.com/react/documentation/api/grid#updatecell)
+* Autofill

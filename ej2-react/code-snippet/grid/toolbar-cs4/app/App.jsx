@@ -25,7 +25,7 @@ function App() {
             <ColumnDirective field='EmployeeID' headerText='Employee ID' width='100' textAlign="Right" />
             <ColumnDirective field='FirstName' headerText='First Name' width='100' />
             <ColumnDirective field='Country' headerText='Country' width='100'  />
-            <ColumnDirective field='PostalCode' headerText='Postal Code' width='100' />
+            <ColumnDirective field='PostalCode' headerText='Postal Code' width='100' textAlign="Right" />
         </ColumnsDirective>
         <Inject services={[Toolbar, Group]} />
     </GridComponent>);

@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Prevent the grid refresh in react state change in React Grid component
+# Prevent Grid Refresh on State Change in React (Class Component)
 
-By default, React components are automatically re-rendered based on the state value change. In this cause, Grid component is also forced to re-render. So the Grid previous state neglect in this process. But we can prevent this behavior by overriding the `shouldComponentUpdate` method.
+By default, React class components automatically re-render whenever their state changes. This behavior also affects the Grid component, forcing it to refresh and discard its previous state. To prevent unnecessary re-rendering, you can override the `shouldComponentUpdate` method and control when the Grid should update.
 
-In the below code, we have prevented the Grid re-rendering, when we change the state value in [rowSelected](https://ej2.syncfusion.com/react/documentation/api/grid/#rowselected) event.
+In the below code, we have prevented the Grid re-rendering, when we change the state value in [rowSelected](https://ej2.syncfusion.com/react/documentation/api/grid#rowselected) event.
 
 ```ts
 import * as React from 'react';

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: In line editing in React Grid component | Syncfusion
-description: Learn here all about In line editing in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Inline Editing | Syncfusion
+description: Learn about inline editing in the Syncfusion React Grid component for seamless direct cell value modification within the grid.
 control: In line editing 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Inline editing in React grid component
+# Inline Editing in React Grid Component
 
-The React Grid component provides a powerful in-line editing feature that allows you to edit cell values of row directly within the grid. This feature is especially useful when you want to quickly modify data without the need for a separate edit form. In normal edit mode, the selected record is changed to an edit state, and you can modify the cell values and save the edited data to the data source.
+The React Grid component in Syncfusion<sup style="font-size:70%">&reg;</sup> provides a powerful in-line editing feature that enables seamless direct cell value editing within the grid row. This intuitive feature proves especially useful for quickly modifying data without requiring a separate edit form. In normal edit mode, the selected record transitions to an edit state, allowing cell values to be modified and saved to the data source with minimal effort.
 
-To enable in-line editing in the grid component, you need to set the [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) property of the Grid's configuration to **Normal**. This property determines the editing mode of the Grid.
+To enable in-line editing in the grid component, set the [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) property to `Normal`. This property determines the editing mode of the grid.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -31,14 +31,19 @@ To enable in-line editing in the grid component, you need to set the [editSettin
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs20" %}
 
->* Normal edit mode is default mode of editing.
->* When enabling editing, it is necessary to set the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/columnModel/#isprimarykey) property value to **true** for the unique column.
+>* `Normal` edit mode is default mode of editing.
+>* When enabling editing, it is necessary to set the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/columnModel#isprimarykey) property value to `true` for the unique column.
+> For basic editing setup and configuration, refer to the [Edit Feature Setup](./edit#set-up-editing).
 
-## Automatically update a specific column based on another column edited value
+## Update columns automatically based on edited values
 
-You can automatically update the value of a column based on the edited value of another column using Cell Edit Template feature. This feature is useful when you want to dynamically calculate and update a column's value in real-time based on the changes made in another related column. To enable this functionality, define the [editType](https://ej2.syncfusion.com/react/documentation/api/grid/columnModel/#edittype) of the column to specify the type of editor used for editing the column, and provide an object for the [edit](https://ej2.syncfusion.com/react/documentation/api/grid/columnModel/#edit) property to customize the editing behavior. 
+The Cell Edit Template feature enables automatic updating of a column’s value whenever a value in another column is edited. This powerful feature enables dynamic calculations and real-time updates to column values based on changes in related columns, streamlining data entry workflows. 
 
-In the following example, the **TotalCost** column value is updated based on changes to the **UnitPrice** and **UnitInStock** columns during batch editing.
+To enable this functionality:
+- Define the [editType](https://ej2.syncfusion.com/react/documentation/api/grid/columnModel#edittype) property to specify the editor type for editing.
+- Provide an object for the [edit](https://ej2.syncfusion.com/react/documentation/api/grid/columnModel#edit) property to customize editing behavior. 
+
+In the following example, the "Total Cost" column value is updated based on changes to the "Unit Price" and "Unit In Stock" columns during editing.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -59,11 +64,20 @@ In the following example, the **TotalCost** column value is updated based on cha
 
 ## Cancel edit based on condition
 
-The grid provides the ability to cancel the edit operations for particular row or cell based on specific conditions. This feature allows you to control over whether editing should be allowed or prevented for certain rows or cells in the grid. You can achieve this functionality by leveraging the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid/#actionbegin) event of the Grid component. This event is triggered when a CRUD (Create, Read, Update, Delete) operation is initiated in the grid.  
+The Grid provides the ability to cancel the edit operations for particular row or cell based on specific conditions. This feature allows controlling whether editing should be allowed or prevented for certain rows or cells in the grid. This functionality is achieved by leveraging the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid#actionbegin) event of the Grid component. This event is triggered when a CRUD (Create, Read, Update, Delete) operation is initiated in the grid.
 
-To cancel the edit operation based on a specific condition, you can handle the `actionBegin` event of the grid component and check the **requestType** parameter. This parameter indicates the type of action being performed, such as **beginEdit** for editing, **add** for adding, and **delete** for deleting. By applying your desired condition, you can cancel the edit, delete, or add operation by setting the `args.cancel` property to **true**.
+This customization is useful when restricting editing for certain rows, such as read-only data, calculated values, or protected information. It helps maintain data integrity and ensures that only authorized changes can be made in the grid.
 
-In the below demo, prevent the CRUD operation based on the **Role** column value. If the Role Column is **Admin**, then edit/delete action is prevented for that row.
+To cancel the edit operation based on a specific condition, handle the `actionBegin` event of the Grid component and check the `requestType` parameter. This parameter indicates the type of action being performed:
+
+| Request Type | Description |
+|--------------|-------------|
+| `beginEdit` | Editing an existing record |
+| `add` | Creating a new record |
+| `save` | Updating a new or existing record |
+| `delete` | Deleting an existing record |
+
+Apply the desired condition and cancel the operation by setting the `args.cancel` property to `true`.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -84,17 +98,15 @@ In the below demo, prevent the CRUD operation based on the **Role** column value
 
 ## Perform CRUD action programmatically
 
-Performing CRUD actions programmatically refers to the ability to create, read, update, and delete data in a system or application using code instead of manual user interaction.
+Programmatic CRUD operations enable creating, reading, updating, and deleting data through code rather than manual user interaction. This approach provides flexibility for advanced data manipulation workflows. The following table outlines key methods for programmatic CRUD operations:
 
-* To add a new record to the Grid, use the [addRecord](https://ej2.syncfusion.com/react/documentation/api/grid/#addrecord) method. In this method, you can pass the **data** parameter to add a new record to the Grid, and the **index** parameter to add a record at a specific index. If you call this method without any parameters, it will create an empty row in the Grid. If an index is not specified, the newly added record will be displayed at the zeroth index.
-
-* To change the selected row to the edit state, use the [startEdit](https://ej2.syncfusion.com/react/documentation/api/grid/#startedit) method. Before invoking this method, it is necessary to select a row in the grid.
-
-* If you need to update the row data in the Grid’s data source, you can use the [updateRow](https://ej2.syncfusion.com/react/documentation/api/grid/#updaterow) method. In this method, you need to pass the **index** value of the row to be updated along with the updated **data**.
-
-* If you need to update the particular cell in the row, you can use the [setCellValue](https://ej2.syncfusion.com/react/documentation/api/grid/#setcellvalue) method. In this method, you need to pass the primary key value of the data source, field name, and new value for the particular cell. When using this method, any changes made to a cell will only be reflected visually in the UI of Grid alone, not persisted or saved in the underlying data source. This method is commonly employed for unbound columns, such as auto-calculated columns or formula columns, where the values are derived or computed based on other data within the Grid or external calculations. By using this method, you can update the visual representation of these unbound columns without modifying the actual data source.
-
-* To remove a selected row from the Grid, use the [deleteRecord](https://ej2.syncfusion.com/react/documentation/api/grid/#deleterecord) method. For both edit and delete operations, you must select a row first.
+| Method | Description | Usage |
+|--------|-------------|-------|
+| [addRecord](https://ej2.syncfusion.com/react/documentation/api/grid#addrecord) | Add a new record to the grid | Pass the `data` parameter to add a record. Use the `index` parameter for a specific position. Without parameters, creates an empty row at index zero |
+| [startEdit](https://ej2.syncfusion.com/react/documentation/api/grid#startedit) | Change the selected row to edit state | First select the row, then invoke this method. The selected row enters edit mode immediately. Without row selection along with default `showConfirmDialog` enabled state, "No records selected for edit operation" dialog appears |
+| [updateRow](https://ej2.syncfusion.com/react/documentation/api/grid#updaterow) | Update row data in the data source | Provide the row `index` and the updated `data` as parameters. The data source updates accordingly |
+| [setCellValue](https://ej2.syncfusion.com/react/documentation/api/grid#setcellvalue) | Update a particular cell in a row | Provide the primary key value, field name, and new value. Changes appear visually in the UI only (not persisted). Useful for unbound columns, auto-calculated columns, and formula columns |
+| [deleteRecord](https://ej2.syncfusion.com/react/documentation/api/grid#deleterecord) | Remove a selected row from the grid | First select the row, then invoke this method. The selected row is immediately removed. Without row selection along with default `showConfirmDialog` enabled state, "No records selected for delete operation" dialog appears |
 
 > In both normal and dialog editing modes, these methods can be used.
 
@@ -117,9 +129,9 @@ Performing CRUD actions programmatically refers to the ability to create, read, 
 
 ## Show confirmation dialog while deleting
 
-Displaying a confirmation dialog adds an extra layer of confirmation when deleting a record from the grid. This dialog prompts for confirmation before proceeding with the deletion, ensuring that accidental or undesired deletions are avoided. The deletion can proceed only if the decision is certain. The grid component provides a built-in confirmation dialog that can be used to confirm a deleting action.
+Displaying a confirmation dialog adds an extra layer of protection when deleting records from the grid. This intuitive dialog prompts for confirmation before proceeding with deletion, ensuring that accidental or undesired deletions are prevented. The Grid component provides a built-in, easy-to-implement confirmation dialog for confirming delete actions safely.
 
-To enable the confirmation dialog for the delete operation in the Grid, you can set the [showDeleteConfirmDialog](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#showdeleteconfirmdialog) property of the `editSettings` configuration to **true**. By default, this property is set to **false**.
+To enable the confirmation dialog for delete operations, set the [showDeleteConfirmDialog](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#showdeleteconfirmdialog) property of the `editSettings` configuration to `true`. By default, this property is set to `false`.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -212,15 +224,13 @@ export default App;
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs24" %}
 
-> The **showDeleteConfirmDialog** supports all type of edit modes.
+> The [showDeleteConfirmDialog](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#showdeleteconfirmdialog) property supports all editing modes. To customize the built-in delete confirmation dialog, see [here](./edit#customize-delete-confirmation-dialog)
 
-## Display default value for columns while adding
+## Display default values for columns while adding
 
-This feature is useful when you want to pre-fill certain column values with default values to streamline the data entry process. The grid component allows you to set default values for ColumnDirective when adding a new record. 
+This powerful feature proves useful for pre-filling column values with defaults to streamline and accelerate data entry workflows. The Grid component allows setting default values for `ColumnDirective` when adding new records, reducing manual input and improving user experience.
 
-To set a default value for a specific column in the Grid, you can use the [defaultValue](https://ej2.syncfusion.com/react/documentation/api/grid/column/#defaultvalue) property of the `ColumnDirective` configuration. By providing a default value, the grid will automatically populate that value in the corresponding ColumnDirective when a new row is added.
-
-Here's an example of how to set a default value for a ColumnDirective:
+To set a default value for a specific column, use the [defaultValue](https://ej2.syncfusion.com/react/documentation/api/grid/column#defaultvalue) property of the `ColumnDirective` configuration. By providing a default value, the grid automatically populates that value in the corresponding column when a new row is added.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -239,13 +249,11 @@ Here's an example of how to set a default value for a ColumnDirective:
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs25" %}
 
-## Adding a new row at the bottom of the grid
+## Add new rows at the bottom of the grid
 
-The grid component allows you to add a new row at the bottom of the grid, allowing you to insert a new record at the end of the existing data set. This feature is particularly useful when you want to conveniently add new records without the need of scroll up or manually reposition the newly added row.
+The Grid component enables seamless addition of new rows at the bottom of the grid, inserting records at the end of the existing data set. This convenient feature proves particularly useful for intuitive record addition without requiring scroll repositioning, improving workflow efficiency.
 
-By default, when adding a new row in the grid component, the row is inserted at the top of the grid. However, you can change this behavior by setting the [newRowPosition](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#newrowposition) property of the `editSettings` configuration to **Bottom**. This property determines the position where the new row will be inserted.
-
-Here's an example of how to enable adding new rows at the bottom of the grid:
+By default, new row's form is inserted at the top of the grid for data entry. To change this behavior, set the [newRowPosition](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#newrowposition) property in the `editSettings` configuration to `Bottom`. This property controls the position where the new row form is inserted.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -332,14 +340,12 @@ export default App;
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs26" %}
 
->* Add `newRowPosition` is supported for **Normal** and **Batch** editing modes.
->* If you set `newRowPosition` as **Bottom**, the grid will display a blank row form at the bottom by default, allowing you to enter data for the new record. However, when the data is saved or updated, it will be inserted at the top of the grid.
+>* The [newRowPosition](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#newrowposition) property is supported for `Normal` and `Batch` editing modes.
+>* When [newRowPosition](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#newrowposition) is set to `Bottom`, the grid displays a blank row form at the bottom by default for data entry. However, when the data is saved or updated, it is inserted at the top of the grid.
 
 ## Show add new row always in grid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid simplifies the addition of new records by consistently presenting a blank, "add new row" form within the grid. To enable this feature, you can set the `showAddNewRow` property within the `editSettings` configuration to **true**. This allows for continuous addition of new records. You can display the add a new row at either the **top** or **bottom** of the grid content, depending on the [newRowPosition](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#newrowposition) property of `editSettings`. By default, the add new row is displayed at the top row of the grid content.
-
-The following sample demonstrates how to add a new record continuously using `showAddNewRow` property.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid simplifies record addition by consistently presenting a blank "add new row" form within the grid. To enable this feature, set the [showAddNewRow](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#showaddnewrow) property within the `editSettings` configuration to `true`. This enables continuous record addition. The add new row displays at either the `top` or `bottom` of the grid content, depending on the [newRowPosition](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#newrowposition) property of `editSettings`. By default, the add new row displays at the top of the grid content.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -358,23 +364,23 @@ The following sample demonstrates how to add a new record continuously using `sh
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs36" %}
 
-> To save the newly added records, you can either hit the **Enter** key or click on the **Update** button located on the toolbar after filling in the new add form.
+> To save newly added records, press the <kbd>Enter</kbd> key or click the **Update** button on the toolbar after filling the add form.
 
 ### Limitations
 
-* This feature is supported only for Inline/Normal editing mode and is not compatible with other edit modes.
-* The new blank add row form will always be displayed at the top, even if you have set the new row position as the bottom for Virtual Scrolling and Infinite Scrolling enabled grid.
+* This feature is supported only for `Inline`/`Normal` editing mode and is not compatible with other edit modes.
+* The new blank add row form will always be displayed at the top, even when the new row position is set to the bottom for Virtual Scrolling and Infinite Scrolling enabled grids.
 * This feature is not compatible with the column virtualization feature.
 
-## Delete multiple rows
+## Delete multiple rows from the grid
 
-The delete multiple rows feature in the grid component allows you to easily remove multiple rows from the grid at once. This feature is useful when you want to delete multiple records simultaneously. There are two approaches to implement this feature: using the inbuilt toolbar delete option or using a method.
+The delete multiple rows feature enables efficient and easy removal of multiple rows from the grid at once. This powerful feature proves useful for simultaneous deletion of multiple records, saving time in bulk operations. Two flexible approaches enable this feature: using the inbuilt toolbar delete option or using a programmatic method.
 
 **Using the inbuilt toolbar delete option**
 
-The grid component provides a user-friendly interface for performing various actions, including deleting rows using the inbuilt toolbar. To enable the delete multiple rows using the toolbar, you need to configure the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property of the grid and set the [selectionSettings.type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings/#type) property as **multiple** to enable multiple row selection.
+The Grid component provides a user-friendly interface for performing various actions, including row deletion using the inbuilt toolbar. To enable delete multiple rows using the toolbar, configure the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property and set the [selectionSettings.type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) property to `Multiple` to enable multiple row selection.
 
-To delete multiple selected records in the grid, first you need to select multiple rows in the grid by highlighting or checking the corresponding checkboxes. Once the desired rows are selected, you can click on the delete icon located in the toolbar. This action will initiate the deletion process and remove the selected records from the grid.
+To delete multiple selected records, first select multiple rows by highlighting or checking the corresponding checkboxes. Once desired rows are selected, the delete icon on the toolbar initiates deletion and removes the selected records from the grid.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -393,29 +399,19 @@ To delete multiple selected records in the grid, first you need to select multip
 
  {% previewsample "page.domainurl/code-snippet/grid/edit-toolbar-cs1" %}
 
-> Also delete the selected records using keyboard shortcut key **delete**.
+> The <kbd>Delete</kbd> keyboard shortcut key also removes selected records.
 
 **Using method**
 
-You can delete multiple rows programmatically by using following method.
+Delete multiple rows programmatically using the following methods:
 
-1. [deleteRecord](https://ej2.syncfusion.com/react/documentation/api/grid/#deleterecord) - This method allows you to delete a record with the given options. If the **fieldname** (field name of the primary key column) and **data** parameters are not provided, the grid will delete the selected records.
+| Method | Description | Usage |
+|--------|-------------|-------|
+| [deleteRecord](https://ej2.syncfusion.com/react/documentation/api/grid#deleterecord) | Delete a record with given options | When `fieldname` (primary key column field name) and `data` parameters are not provided, the grid deletes selected records. Invoke `grid.deleteRecord()` without parameters to delete the currently selected record |
+| [deleteRow](https://ej2.syncfusion.com/react/documentation/api/grid#deleterow) | Delete any visible row by providing the row element | Selected rows are retrieved using `getSelectedRows()`, then each row is iterated and passed to the `deleteRow()` method as an HTMLRowElement parameter |
 
-    ```ts
-        grid.deleteRecord();
-    ```
-
-2. [deleteRow](https://ej2.syncfusion.com/react/documentation/api/grid/#deleterow) - Using this method, you have the ability to delete any visible row by providing the corresponding <tr> element. To achieve this, you can utilize the `getSelectedRows` method to retrieve the selected rows and then iterate over the rows. For each row, you can pass the <tr> element to the deleteRow method to initiate the deletion process. This approach allows you to selectively delete rows based on the <tr> elements obtained from the `getSelectedRows` method.
-
-    ```ts
-        const selectedRows = grid.getSelectedRows();
-        selectedRows.forEach((row: HTMLTableRowElement) => {
-        grid.deleteRow(row);
-       });
-    ```
-
-> The `selectionSettings.type` property is set to **Multiple** to enable multiple row selection.
-> To prevent accidental or undesired deletions, it is recommended to enable the `showDeleteConfirmDialog` property of the `editSettings` configuration
+> The [selectionSettings.type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) property is set to `Multiple` to enable multiple row selection.
+> To prevent accidental deletions, enable the [showDeleteConfirmDialog](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#showdeleteconfirmdialog) property of the `editSettings` configuration.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -434,13 +430,11 @@ You can delete multiple rows programmatically by using following method.
 
  {% previewsample "page.domainurl/code-snippet/grid/edit-multiple-cs1" %}
  
-## Move the focus to a particular cell instead of first cell while editing a row
+## Move focus to a specific cell while editing a row
 
-The grid component allows you to move the focus to a specific cell when editing a row, rather than the default behavior of focusing on the first cell in the row. This feature can be useful when you want to improve the editing experience by automatically focusing on a particular cell that requires immediate attention.
+The Grid component enables moving focus to a specific cell when editing a row, rather than the default behavior of focusing on the first cell. This feature improves the editing experience by automatically focusing on the cell requiring immediate attention.
 
-To achieve this functionality, you can leverage the [recordDoubleClick](https://ej2.syncfusion.com/react/documentation/api/grid/#recordDoubleClick) event of the Grid component. The `recordDoubleClick` event is triggered when a row in the grid is double-clicked, indicating the intention to edit that row. By handling this event and programmatically moving the focus to the desired cell within the row.
-
-Here's an example of how to use the `recordDoubleClick` event to move the focus to a particular cell:
+To achieve this functionality, leverage the [recordDoubleClick](https://ej2.syncfusion.com/react/documentation/api/grid#recordDoubleClick) event of the Grid component. The `recordDoubleClick` event is triggered when a row is double-clicked, indicating intent to edit. Handle this event and programmatically move focus to the desired cell within the row.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -461,11 +455,11 @@ Here's an example of how to use the `recordDoubleClick` event to move the focus 
 
 ## Enable editing in single click
 
-Enabling single-click editing in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid's **Normal** editing mode is a valuable feature that allows you to make a row editable with just one click.This can be achieved by using the [startEdit](https://ej2.syncfusion.com/react/documentation/api/grid/#startedit) and [endEdit](https://ej2.syncfusion.com/react/documentation/api/grid/#endedit) methods.
+Enabling single-click editing in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid's `Normal` editing mode is a valuable and intuitive feature that makes a row editable with just one click. This seamless experience is achieved by using the [startEdit](https://ej2.syncfusion.com/react/documentation/api/grid#startedit) and [endEdit](https://ej2.syncfusion.com/react/documentation/api/grid#endedit) methods for rapid, efficient data modification.
 
-To implement this feature, you need to bind the `mouseup` event for the Grid and, within the event handler, call the `startEdit` and `endEdit` methods based on the clicked target element. This ensures that the editing mode is triggered when clicking on a specific element within the Grid.
+To implement this feature, bind the `onMouseUp` React event for the grid and, within the event handler, call the `startEdit` and `endEdit` methods based on the clicked target element. This ensures that the editing mode is triggered when clicking on a specific element within the grid.
 
-The following sample demonstrates how to enable editing in a single click using the `mouseup` event along with the `load` event:
+The following sample demonstrates enabling editing in a single click using the `onMouseUp` event with grid methods:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -483,28 +477,3 @@ The following sample demonstrates how to enable editing in a single click using 
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs32" %}
-
-## Disable editing for a particular row
-
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component, you can prevent editing of specific rows based on certain conditions. This feature is useful when you want to restrict editing for certain rows , such as read-only data, calculated values, or protected information. It helps maintain data integrity and ensures that only authorized changes can be made in the grid.
-
-To disable editing for a particular row, use the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid/#actionbegin) event of the grid based on **requestType** as **beginEdit**. You can then set the **args.cancel** property to **true** to prevent editing for that row.
-
-In the below demo, the rows which are having the value for **ShipCountry** column as **France** is prevented from editing.
-
-{% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/customizedialog-cs5/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/customizedialog-cs5/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/customizedialog-cs5/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/customizedialog-cs5/app/datasource.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/grid/customizedialog-cs5" %}

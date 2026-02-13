@@ -16,19 +16,18 @@ function App() {
     allowPaging: true
   };
   const rowDataBound = (args) => {
-      const filter = args.data.EmployeeID;
-      const childrecord = new DataManager(childData)
-        .executeLocal(new Query().where("EmployeeID", "equal", filter, true));
-      if (childrecord.length === 0) {
-        // here hide which parent row has no child records
-        const rowElement = args.row;
-        const cellElement= rowElement.querySelector('td');
-        cellElement.innerHTML = ' '; 
-        cellElement.className = 'e-customizedexpandcell';
-      }
+    const filter = args.data.EmployeeID;
+    const childrecord = new DataManager(childData)
+      .executeLocal(new Query().where("EmployeeID", "equal", filter, true));
+    if (childrecord.length === 0) {
+      // here hide which parent row has no child records
+      const rowElement = args.row;
+      const cellElement= rowElement.querySelector('td');
+      cellElement.innerHTML = ' '; 
+      cellElement.className = 'e-customizedexpandcell';
+    }
   }
-  return <GridComponent dataSource={employeeData} childGrid={childGrid}
-    rowDataBound={rowDataBound}>
+  return <GridComponent dataSource={employeeData} childGrid={childGrid} rowDataBound={rowDataBound}>
     <ColumnsDirective>
       <ColumnDirective field='EmployeeID' headerText='Employee ID' width='100' textAlign="Right" />
       <ColumnDirective field='FirstName' headerText='First Name' width='100' />

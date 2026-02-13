@@ -43,7 +43,7 @@ function App() {
       <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" sortComparer={sortComparer}/>
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' sortComparer={sortComparer}/>
       <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign="Right" format='C2' sortComparer={sortComparer}/>
-      <ColumnDirective field='OrderDate' headerText='Order Date' width='100' format={formatOption} sortComparer={sortComparer}/>
+      <ColumnDirective field='OrderDate' headerText='Order Date' width='100' textAlign="Right" format={formatOption} sortComparer={sortComparer}/>
     </ColumnsDirective>
     <Inject services={[Sort]} />
   </GridComponent>

@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sorting customization in React Grid component
+# Sorting Customization in React Grid Component
 
-You can customize the appearance of the sorting icons and multi sorting icons in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component using CSS. You can use the available Syncfusion<sup style="font-size:70%">&reg;</sup> [icons](https://ej2.syncfusion.com/react/documentation/appearance/icons#material) based on your theme. Here's how to do it:
+The appearance of the sorting icons and multi sorting icons in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component can be customized using CSS. Available Syncfusion<sup style="font-size:70%">&reg;</sup> [icons](https://ej2.syncfusion.com/react/documentation/appearance/icons#material) can be used based on the active theme.
 
 ## Customizing the grid sorting icon
 
-To customize the sorting icon that appears in the Grid header when sorting is applied, you can use the following CSS code:
+The `.e-icon-ascending::before` and `.e-icon-descending::before` classes are used to style the sorting icons for ascending and descending order.
 
 ```css
 .e-grid .e-icon-ascending::before {
@@ -24,13 +24,12 @@ To customize the sorting icon that appears in the Grid header when sorting is ap
     content: '\e7b6'; /* Icon code for descending order */
 }
 ```
-In this example, the **.e-icon-ascending::before** class targets the sorting icon for ascending order, and the **.e-icon-descending::before** class targets the sorting icon for descending order.
 
 ![Grid sorting icon](../images/grid-sorting-icon.png)
 
 ## Customizing the grid multi sorting icon
 
-To customize the multi sorting icon that appears in the grid header when multiple columns are sorted, you can use the following CSS code:
+The `.e-sortnumber` class is used to style the multi sorting icon.
 
 ```css
 .e-grid .e-sortnumber {
@@ -38,7 +37,5 @@ To customize the multi sorting icon that appears in the grid header when multipl
     font-family: cursive;
 }
 ```
-
-In this example, the **.e-sortnumber** class targets the background color and font family of the multi sorting icon. You can modify the `background-color` and `font-family` properties to customize the appearance of the multi sorting icon.
 
 ![Grid multi sorting icon](../images/grid-multi-sorting-icon.png)

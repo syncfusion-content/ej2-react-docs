@@ -19,6 +19,7 @@ function App() {
         <ColumnDirective field='CustomerName' headerText='Customer Name' width='160' />
       </ColumnsDirective>
       <Inject services={[Group, LazyLoadGroup, VirtualScroll]} />
-    </GridComponent></div>)
+    </GridComponent></div>
+  )
 };
 export default App;

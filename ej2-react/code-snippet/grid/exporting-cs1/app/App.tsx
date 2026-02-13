@@ -9,11 +9,11 @@ function App() {
   const toolbar: ToolbarItems[] = ['ExcelExport', 'PdfExport'];
   const toolbarClick = (args: ClickEventArgs) => {
     if (args.item.id === 'Grid_excelexport') {
-      // pass fourth parameter as true to get the blob data of exported grid
+      // Pass fourth parameter as true to get the blob data of exported grid.
       (grid as GridComponent).excelExport(undefined, undefined, undefined, true);
     }
     if (args.item.id === 'Grid_pdfexport') {
-      // pass fourth parameter as true to get the blob data of exported grid
+      // Pass fourth parameter as true to get the blob data of exported grid.
       (grid as GridComponent).pdfExport(undefined, undefined, undefined, true);
     }
   }
@@ -36,11 +36,11 @@ function App() {
     const a: HTMLAnchorElement = document.createElement('a');
     document.body.appendChild(a);
     a.style.display = 'none';
-    const url: string = window.URL.createObjectURL(blob); // Fix typo here
+    const url: string = window.URL.createObjectURL(blob); // Fix typo here.
     a.href = url;
     a.download = 'Export';
     a.click();
-    window.URL.revokeObjectURL(url); // Fix typo here
+    window.URL.revokeObjectURL(url); // Fix typo here.
     document.body.removeChild(a);
   }
 

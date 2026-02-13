@@ -6,7 +6,7 @@ function App() {
     let gridInstance;
     let initialGridLoad = true;
     const pageOptions = {
-        pageSize: 8, pageSizes: true
+        pageSize: 10, pageSizes: true
     };
     const dataBound = () => {
         if (initialGridLoad && gridInstance) {

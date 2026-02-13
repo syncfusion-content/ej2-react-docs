@@ -14,19 +14,19 @@ function App() {
         queryString: 'EmployeeID'
     };
     const onLoad = () => {
-        /** Assigning data source for child Grid */
+        // Assigning data source for child grid.
         childGridOptions.dataSource = data;
     };
     return (<div>
-    <GridComponent dataSource={employeeData} childGrid={childGridOptions} height={265} ref={g => grid = g} load={onLoad}>
-      <ColumnsDirective>
-        <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign="Right"/>
-        <ColumnDirective field='FirstName' headerText='First Name' width='150'/>
-        <ColumnDirective field='City' headerText='City' width='150'/>
-        <ColumnDirective field='Country' headerText='Country' width='150'/>
-      </ColumnsDirective>
-      <Inject services={[DetailRow]}/>
-    </GridComponent></div>);
-}
-;
+        <GridComponent dataSource={employeeData} childGrid={childGridOptions} height={265} ref={g => grid = g} load={onLoad}>
+            <ColumnsDirective>
+                <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign="Right"/>
+                <ColumnDirective field='FirstName' headerText='First Name' width='150'/>
+                <ColumnDirective field='City' headerText='City' width='150'/>
+                <ColumnDirective field='Country' headerText='Country' width='150'/>
+            </ColumnsDirective>
+            <Inject services={[DetailRow]}/>
+        </GridComponent></div>
+    );
+};
 export default App;

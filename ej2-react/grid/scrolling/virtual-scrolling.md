@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Virtual scroll in React Grid component | Syncfusion
+title: React Grid - Virtual Scrolling | Syncfusion
 description: Learn here all about Virtual scroll in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Virtual scroll 
@@ -8,21 +8,27 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Virtual scrolling in React Grid component
+# Virtual Scrolling in React Grid Component
 
-The virtual scrolling feature in the Grid allows you to efficiently handle and display a large amount of data without experiencing any performance degradation. It optimizes the rendering process by loading only the visible rows in the Grid viewport, rather than rendering the entire dataset at once. This is particularly useful when dealing with datasets that contain thousands of records.
+The virtual scrolling feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid seamlessly handles and displays large amounts of data without performance degradation. It improves the rendering process by loading only the visible rows in the Grid viewport, rather than rendering the entire dataset at once. This powerful capability is essential when dealing with datasets that contain thousands of records.
 
-To enable virtualization in the Grid, you need to inject the **VirtualScroll** module. This module is responsible for managing the virtual scrolling behavior and optimizing the rendering of data to enhance performance.
+To use the virtual scrolling feature, inject the `VirtualScroll` module into the Grid component's `Inject` services array as shown below:
+
+```tsx
+import { Inject, VirtualScroll } from '@syncfusion/ej2-react-grids';
+
+<GridComponent>
+  <Inject services={[VirtualScroll]} />
+</GridComponent>
+```
 
 ## Row virtualization
 
-Row virtualization is a feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid that allows you to load and render rows only in the content viewport. It provides an alternative way of paging where data is loaded dynamically while scrolling vertically, rather than loading all the data at once. This is particularly useful when dealing with large datasets, as it improves the performance and reduces the initial load time.
+Row virtualization loads and renders rows only in the content viewport. It provides an effective alternative to traditional paging where data is loaded dynamically while scrolling vertically, rather than loading all the data at once. This approach significantly improves performance and reduces the initial load time when dealing with large datasets.
 
-To set up row virtualization, you need to define the [enableVirtualization](https://ej2.syncfusion.com/react/documentation/api/grid/#enablevirtualization) property as **true** and specify the content height using the [height](https://ej2.syncfusion.com/react/documentation/api/grid/#height) property in the Grid configuration.
+Row virtualization setup requires defining the [enableVirtualization](https://ej2.syncfusion.com/react/documentation/api/grid#enablevirtualization) property to `true` and specifying content height using the [height](https://ej2.syncfusion.com/react/documentation/api/grid#height) property in the Grid configuration.
 
-The number of records displayed in the Grid is implicitly determined by the height of the content area. Additionally, you have an option to explicitly define the visible number of records using the [pageSettings.pageSize](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettingsModel/#pagesize) property. The loaded data will be cached and reused when needed in the future.
-
-The following example enable row virtualization using `enableVirtualization` and `height` property.
+The Grid displays records based on the content area height. The [pageSettings.pageSize](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettingsModel#pagesize) property explicitly defines the visible number of records. The loaded data is cached and reused when needed in the future.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -43,36 +49,36 @@ The following example enable row virtualization using `enableVirtualization` and
 
 ### Limitations 
 
-* Row virtual scrolling is not compatible with the following feature
-	1. Batch editing
-	2. Detail template
-	3. Row template
-	4. Rowspan
-	5. Autofill
-	6. Hierarchy grid
-* When row virtual scrolling is activated, compatibility for copy-paste and drag-and-drop operations is limited to the data items visible in the current viewport of the grid.
-* The cell-based selection is not supported for row virtual scrolling. 
-* Using different row heights with a template column, when the template height differs for each row, is not supported.
-* Group expand and collapse state will not be persisted for remote data.
-* Due to the element height limitation in browsers, the maximum number of records loaded by the Grid is limited by the browser capability.
-* The height of the grid content is calculated using the row height and total number of records in the data source and hence features which changes row height such as text wrapping are not supported.
-* If you want to increase the row height to accommodate the content then you can specify the row height as below to ensure all the table rows are in same height.
+* Row virtual scrolling is not compatible with the following features:
+    1. Batch editing
+    2. Detail template
+    3. Row template
+    4. Rowspan
+    5. Autofill
+    6. Hierarchy grid
+* When row virtual scrolling is activated, copy-paste and drag-and-drop operations are limited to data items visible in the current viewport.
+* Cell-based selection is not supported for row virtual scrolling.
+* Using different row heights with a template column (when template height differs per row) is not supported.
+* Group expand and collapse state is not persisted for remote data.
+* The maximum number of records loaded by the Grid is limited by the browser's height capability.
+* Grid content height is calculated using row height and total record count; features that change row height (such as text wrapping) are not supported.
+* To accommodate content with increased row height, specify the row height as shown below to ensure all table rows maintain the same height:
 
     ```css
     .e-grid .e-row {
         height: 2em;
     }
     ```
-* Since data is virtualized in grid, the aggregated information and total group items are displayed based on the current view items. To get these information regardless of the view items, refer to the [Group with paging](https://ej2.syncfusion.com/react/documentation/grid/grouping/grouping#group-with-paging) topic. 
+* Since data is virtualized in the Grid, aggregated information and total group items display based on current view items. To retrieve this information regardless of view items, refer to the [Group with paging](https://ej2.syncfusion.com/react/documentation/grid/grouping/grouping#group-with-paging) topic. 
 * It is necessary to set a static height for the component or its parent container when using row virtualization. The 100% height will work only if the component height is set to 100%, and its parent container has a static height.
 
 ## Column virtualization
 
-Column virtualization feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid that allows you to optimize the rendering of columns by displaying only the columns that are currently within the viewport. It allows horizontal scrolling to view additional columns. This feature is particularly useful when dealing with grids that have a large number of columns, as it helps to improve the performance and reduce the initial loading time.
+Column virtualization feature in the Grid optimizes the rendering of columns by displaying only the columns that are currently within the viewport. It enables seamless horizontal scrolling to view additional columns. This powerful feature significantly improves performance and reduces the initial loading time when dealing with grids that have a large number of columns.
 
-To enable column virtualization, you need to set the [enableColumnVirtualization](https://ej2.syncfusion.com/react/documentation/api/grid/#enablecolumnvirtualization) property of the Grid to **true**. This configuration instructs the Grid to only render the columns that are currently visible in the viewport. 
+Column virtualization configuration requires setting the [enableColumnVirtualization](https://ej2.syncfusion.com/react/documentation/api/grid#enablecolumnvirtualization) property of the Grid to `true`. This configuration instructs the Grid to render only the columns currently visible in the viewport.
 
-The following example enable/disable using `enableColumnVirtualization` property based on  a [Switch](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component [change](https://ej2.syncfusion.com/react/documentation/api/switch/#change) event:
+The following example demonstrates toggling column virtualization using the `enableColumnVirtualization` property based on a [Switch](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component [change](https://ej2.syncfusion.com/react/documentation/api/switch#change) event:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -189,41 +195,43 @@ export default App;
 
  {% previewsample "page.domainurl/code-snippet/grid/virtual-scroll-cs5" %}
 
-> Column's [width](https://ej2.syncfusion.com/react/documentation/api/grid/column/#width) is required for column virtualization. If column's width is not defined then Grid will consider its value as **200px**.
+> Column's [width](https://ej2.syncfusion.com/react/documentation/api/grid/column#width) is required for column virtualization. If column's width is not defined then Grid will consider its value as "200px".
 
 ### Limitations 
 
-* While using column virtual scrolling, column width should be in pixel. Percentage values are not accepted.
-* Selected column details are only retained within the viewport. When the next set of columns is loaded, the selection for previously visible columns is lost.
-* While using column virtualization, fixed position applied only viewport column. If scroll the next set of column fixed position is removed.
-* The cell selection is not supported for column virtual scrolling.
-* The **Ctrl + Home** and **Ctrl + End** keys are not supported when using column virtual scrolling.
-* The following features are compatible with column virtualization and work within the viewport:
-   1. Column resizing
-   2. Column reordering
-   3. Auto-fit
-   4. Print
-   5. Clipboard
-   6. Column menu - AutofitAll, Grouping
-* Column virtual scrolling is not compatible with the following feature
-    1. Grouping
-    2. Column Spanning
-    3. Batch editing
-    4. Stacked header
-    5. Row template
-    6. Detail template
-    7. Hierarchy grid
-    8. Autofill
+* Column width must be specified in pixels; percentage values are not accepted.
+* Column selection is retained only within the viewport. When new columns load, previously visible column selections are lost.
+* Fixed positioning applies only to viewport columns. When scrolling to new columns, fixed positioning is removed.
+* Cell selection is not supported for column virtual scrolling.
+* <kbd>Ctrl + Home</kbd> and <kbd>Ctrl + End</kbd> keyboard shortcuts are not supported with column virtual scrolling.
+
+**Compatible features** (work within viewport):
+* Column resizing
+* Column reordering
+* Auto-fit
+* Print
+* Clipboard operations
+* Column menu with AutofitAll and Grouping options
+
+**Incompatible features**:
+* Grouping
+* Column spanning
+* Batch editing
+* Stacked header
+* Row template
+* Detail template
+* Hierarchy grid
+* Autofill
         
-## Browser height limitation in virtual scrolling and solution
+## Browser height limitation in virtual scrolling and solutions
 
-You can load millions of records in the Grid by using virtual scrolling, where the grid loads and renders rows on-demand while scrolling vertically. As a result, Grid lightens the browser’s load by minimizing the DOM elements and rendering elements visible in the viewport. The height of the grid is calculated using the Total Records Count * [Row Height](https://ej2.syncfusion.com/react/documentation/api/grid/#rowheight) property.
+Virtual scrolling enables loading millions of records efficiently by rendering rows on-demand while scrolling vertically. The Grid lightens the browser's load by minimizing DOM elements and rendering only visible elements in the viewport. Grid height is calculated using: Total records count × [Row Height](https://ej2.syncfusion.com/react/documentation/api/grid#rowheight).
 
-The browser has some maximum pixel height limitations for the scroll bar element. The content placed above the maximum height can't be scrolled if the element height is greater than the browser's maximum height limit. The browser height limit affects the virtual scrolling of the grid. When a large number of records are bound to the Grid, it can only display the records until the maximum height limit of the browser. Once the browser's height limit is reached while scrolling, the user won't able to scroll further to view the remaining records.
+Browsers enforce maximum pixel height limitations on scroll bar elements. When element height exceeds the browser's maximum limit, content above that threshold cannot be scrolled. This limitation directly affects virtual scrolling: when large datasets bind to the Grid, it displays only records until reaching the browser's height limit, preventing users from scrolling to view remaining records.
 
-For example, if the row height is set as 30px and the total record count is 1000000(1 million), then the height of the grid element will be 30,000,000 pixels. In this case, the browser's maximum height limit for a div is about 22,369,600 (The maximum pixel height limitation differs for different browsers). The records above the maximum height limit of the browser can't be scrolled.
+**Example:** With row height set to 30px and 1,000,000 total records, the Grid element height would be 30,000,000 pixels. However, most browsers have a maximum height limit of approximately 22,369,600 pixels (this varies by browser). Records above this limit cannot be accessed, preventing access to remaining records.
 
-This height limitation is not related to the Grid component. It fully depends on the default behavior of the browser. The same issue is reproduced in the normal HTML table too.
+**Note:** This limitation is built into browser rendering, not Grid-specific. The same constraint applies to standard HTML tables.
 
 The following image illustrates the height limitation issue of a normal HTML table in different browsers (Chrome and Firefox).
 
@@ -235,109 +243,150 @@ Grid component also faced the same issue as mentioned in the below image.
 
 The Grid has an option to overcome this limitation of the browser in the following ways.
 
-### Solution 1: Using external buttons
+### Solution 1: Loading data in segments with external buttons
 
-You can prevent the height limitation problem in the browser when scrolling through millions of records by loading the segment of data through different strategy.
+Data segmentation approach prevents browser height limitations by loading records in manageable chunks. Navigation between segments uses **Load Next Set** and **Load Previous Set** buttons, enabling access to millions of records while staying within browser height limits.
 
-In the following sample, Grid is rendered with a large number of records(nearly 2 million). Here, you can scroll 0.5 million records at a time in Grid. Once you reach the last page of 0.5 million records, the **Load Next Set** button will be shown at the bottom of the Grid. By clicking that button, you can view the next set of 0.5 million records in Grid. Also, the **Load Previous Set** button will be shown at the top of the Grid to load the previous set of 0.5 million records.
+**Example:** Display 2 million records in four 0.5-million-record segments. The Grid scrolls 0.5 million records at a time. Clicking **Load Next Set** loads the next segment, and clicking **Load Previous Set** loads the previous segment.
 
-Let's see the step by step procedure for how we can overcome the limitation in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component.
+**Custom adaptor implementation:**
 
-1. Create a custom adaptor by extending UrlAdaptor and binding it to the grid DataSource property. In the processQuery method of the custom adaptor, we handled the Skip query based on the current page set to perform the data operation with whole records on the server.
+Create a custom adaptor to handle data segments:
 
-    ```typescript
-        export class CustomUrlAdaptor extends UrlAdaptor {
-            processQuery(args) {
-                if (arguments[1].queries) {
-                    for (var i = 0; i < arguments[1].queries.length; i++) {
-                        if (arguments[1].queries[i].fn === 'onPage') {
-                            // pageSet - defines the number of segments that we are going to split the 2million records. In this example we have considered 0.5 million records for each set so the pageSet is 1, 2, 3 and 4.
-                            // maxRecordsPerPageSet – In this example we define the value as 0.5 million.
+- **Extend** `UrlAdaptor` class
+- **Override** the `processQuery` method to handle Skip queries based on current page set  
+- **Ensure** all data operations use the complete 2-million-record dataset on the server
 
-                            // gridPageSize – the pageSize that we have defined in the Grid pageSettings->pageSize property
-
-                            // customize the pageIndex based on the current pageSet (It send the skip query including the previous pageSet ) so that the other operations performed for total 2millions records instead of 0.5 million alone.
-                            arguments[1].queries[i].e.pageIndex = (((pageSet - 1) * maxRecordsPerPageSet) / gridPageSize) + arguments[1].queries[i].e.pageIndex;
-                        }
-                    }
+```typescript
+export class CustomUrlAdaptor extends UrlAdaptor {
+    processQuery(args) {
+        if (arguments[1].queries) {
+            for (var i = 0; i < arguments[1].queries.length; i++) {
+                if (arguments[1].queries[i].fn === 'onPage') {
+                    // pageSet: number of segments dividing 2 million records (values: 1, 2, 3, 4)
+                    // maxRecordsPerPageSet: 0.5 million records per segment
+                    // gridPageSize: pageSize defined in Grid pageSettings
+                    // Customize pageIndex including previous pageSet data
+                    arguments[1].queries[i].e.pageIndex = (((pageSet - 1) * maxRecordsPerPageSet) / gridPageSize) + arguments[1].queries[i].e.pageIndex;
                 }
-                let original = super.processQuery.apply(this, arguments);
-                return original;
             }
         }
-        this.dataManager = new DataManager({
-            adaptor: new CustomUrlAdaptor(),
-            url: "Home/UrlDatasource"
-        });
-    ```
+        let original = super.processQuery.apply(this, arguments);
+        return original;
+    }
+}
+this.dataManager = new DataManager({
+    adaptor: new CustomUrlAdaptor(),
+    url: "Home/UrlDatasource"
+});
+```
 
-2. Render the grid by define the following features.
+**Grid configuration with DataManager:**
 
-    ```typescript
-        <GridComponent id='grid' ref={g => this.grid = g} dataSource={this.dataManager} enableVirtualization={true} pageSettings={this.pageSettings} height={360} beforeDataBound={this.beforeDataBound}>
-            <ColumnsDirective>
-                <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right"/>
-                ......
-                ......
-            </ColumnsDirective>
-        </GridComponent>
-    ```
+The Grid renders with virtualization enabled and the custom DataManager:
 
-3. In the beforeDataBound event, we set the args.count as 0.5 million to perform scrolling with 0.5 million records and all the data operations are performed with whole records which is handled using the custom adaptor. And also particular segment records count is less than 0.5 million means it will directly assigned the original segmented count instead of 0.5 million.
+```typescript
+<GridComponent 
+    id='grid' 
+    ref={g => this.grid = g} 
+    dataSource={this.dataManager} 
+    enableVirtualization={true} 
+    pageSettings={this.pageSettings} 
+    height={360} 
+    beforeDataBound={this.beforeDataBound}
+>
+    <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right"/>
+        {/* Additional columns... */}
+    </ColumnsDirective>
+</GridComponent>
+```
 
-    ```typescript
-        beforeDataBound(args) {
-            // storing the total records count which means 2 million records count
-            totalRecords = args.count;
+**beforeDataBound event handler configuration:**
 
-            // change the count with respect to maxRecordsPerPageSet (maxRecordsPerPageSet = 500000)
-            args.count = args.count - ((pageSet - 1) * maxRecordsPerPageSet) > maxRecordsPerPageSet ?maxRecordsPerPageSet : args.count - ((pageSet - 1) * maxRecordsPerPageSet);
-        }
-    ```
+The `beforeDataBound` event handler sets the `args.count` property to 0.5 million, enabling scrolling within the current segment. All data operations continue using the full dataset through the custom adaptor:
 
-4. Render “Load Next Set” button and “Load Previous Set” button at bottom and top of the grid component.
+```typescript
+beforeDataBound(args) {
+    // Store total records count (2 million)
+    totalRecords = args.count;
 
-    ```typescript
-        <ButtonComponent cssClass='e-info prevbtn' onClick={this.prevBtnClick} style={ width: '100%' }>Load Previous Set...</ButtonComponent>
+    // Adjust count for current segment (maxRecordsPerPageSet = 500000)
+    args.count = args.count - ((pageSet - 1) * maxRecordsPerPageSet) > maxRecordsPerPageSet 
+        ? maxRecordsPerPageSet 
+        : args.count - ((pageSet - 1) * maxRecordsPerPageSet);
+}
+```
 
-        <GridComponent id='grid' ref={g => this.grid = g} dataSource={this.dataManager} enableVirtualization={true} pageSettings={this.pageSettings} height={360} beforeDataBound={this.beforeDataBound} >
-            <ColumnsDirective>
-                <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right"/>
-                ......
-                ......
-            </ColumnsDirective>
-        </GridComponent>
+**Navigation button implementation:**
 
-        <ButtonComponent cssClass='e-info nxtbtn' onClick={this.nxtBtnClick} style={ width: '100%' }>Load Next Set...</ButtonComponent>
-    ```
+The **Load Previous Set** button renders above the Grid and the **Load Next Set** button renders below it:
 
-5. While click on the `Load Next Set` / `Load Previous Set` button corresponding page data set is loaded to view remaining records of total 2 millions records after doing some simple calculation.
+```typescript
+<ButtonComponent 
+    cssClass='e-info prevbtn' 
+    onClick={this.prevBtnClick} 
+    style={{ width: '100%' }}
+>
+    Load Previous Set...
+</ButtonComponent>
 
-    ```typescript
-        // Triggered when clicking the Previous/ Next button.
-        prevNxtBtnClick(args) {
-            if (this.grid.element.querySelector('.e-content') && this.grid.element.querySelector('.e-content').getAttribute('aria-busy') === 'false') {
-                // Increase/decrease the pageSet based on the target element.
-                pageSet = args.target.classList.contains('prevbtn') ? --pageSet : ++pageSet;
-                this.rerenderGrid(); // Re-render the Grid component.
-            }
-        }
-    ```
+<GridComponent 
+    id='grid' 
+    ref={g => this.grid = g} 
+    dataSource={this.dataManager} 
+    enableVirtualization={true} 
+    pageSettings={this.pageSettings} 
+    height={360} 
+    beforeDataBound={this.beforeDataBound}
+>
+    <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right"/>
+        {/* Additional columns... */}
+    </ColumnsDirective>
+</GridComponent>
 
- You can view the hosted link for this sample [here](https://ej2.syncfusion.com/aspnetcore/Load_millions_of_records).
+<ButtonComponent 
+    cssClass='e-info nxtbtn' 
+    onClick={this.nxtBtnClick} 
+    style={{ width: '100%' }}
+>
+    Load Next Set...
+</ButtonComponent>
+```
+
+**Button click event handlers:**
+
+The button click handlers increment or decrement the `pageSet` value and re-render the Grid:
+
+```typescript
+// Triggered when clicking the Previous/Next button
+prevNxtBtnClick(args) {
+    if (this.grid.element.querySelector('.e-content') && 
+        this.grid.element.querySelector('.e-content').getAttribute('aria-busy') === 'false') {
+        // Increase/decrease pageSet based on button clicked
+        pageSet = args.target.classList.contains('prevbtn') ? --pageSet : ++pageSet;
+        this.rerenderGrid(); // Re-render the Grid component
+    }
+}
+```
+
+> Data operations such as filtering and sorting performed after scrolling through segments operate on the entire 2-million-record dataset, not just the current 0.5-million-record segment. This approach ensures data accuracy across all operations.
+
+The hosted link for this sample is available [here](https://ej2.syncfusion.com/aspnetcore/Load_millions_of_records).
 
 ![Prevent browser height limitation](../images/external-button.png)
 
-> If you perform grid actions such as filtering, sorting, etc., after scrolling through the 0.5 million data, the Grid performs those data actions with the whole records, not just the current loaded 0.5 million data.
+### Solution 2: Reducing row height
 
-### Solution 2: Using RowHeight property
+Row height reduction accommodates more records within browser height limits. Use the [rowHeight](https://ej2.syncfusion.com/react/documentation/api/grid#rowheight) property to decrease row height, which reduces the Grid's total height and allows scrolling through more records.
 
-You can reduce the [row height](https://ej2.syncfusion.com/react/documentation/grid/row/row-height) using the [rowHeight](https://ej2.syncfusion.com/react/documentation/api/grid/#rowheight) property of the Grid. It will reduce the overall height to accommodate more rows. But this approach optimizes the limitation, but if the height limit is reached after reducing row height also, you have to opt for the previous solution or use paging.
+> Browser height limits may still apply after reducing row height. In such cases, refer to Solution 1 (data segmentation) or Solution 3 (paging) instead.
 
-In the following image, you can see how many records will be scrollable when setting rowHeight to "36px" and "30px".
+The following image demonstrates how many records are scrollable when setting rowHeight to "36px" and "30px".
 
 ![Row Height](../images/row-height.gif)
 
-### Solution 3: Using paging instead of virtual scrolling
+### Solution 3: Paging as alternative approach
 
-Similar to virtual scrolling, the [paging](https://ej2.syncfusion.com/react/documentation/grid/paging) feature also loads the data in an on-demand concept. Pagination is also compatible with all the other features(Grouping, Editing, etc.) in Grid. So, use the paging feature instead of virtual scrolling to view a large number of records in the Grid without any kind of performance degradation or browser height limitation.
+Paging provides an alternative approach to virtual scrolling for displaying large datasets. Like virtual scrolling, paging loads data on-demand but divides the dataset into fixed-size pages. Paging is compatible with all Grid features including Grouping, Editing, and more, making it ideal for avoiding browser height limitations while maintaining full feature support.

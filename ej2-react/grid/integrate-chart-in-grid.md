@@ -10,17 +10,15 @@ domainurl: ##DomainURL##
 
 # Integrate Chart in Syncfusion React Grid
 
-The Grid and Chart Integration feature in Syncfusion allows users to visualize tabular data in a graphical format by linking the Grid with the Chart.This feature allows seamless integration with Charts to visualize selected data interactively. You can generate various Chart types such as bar, line, or pie directly from Grid data using the [ContextMenu](https://ej2.syncfusion.com/react/documentation/grid/context-menu) feature. This feature is particularly useful in scenarios where tabular data can be better understood through graphical representation.
+Grid and Chart integration in Syncfusion<sup style="font-size:70%">&reg;</sup> enables visualizing tabular data by linking the grid with a chart. Selected data can be rendered interactively as bar, line, or pie charts via the [ContextMenu](https://ej2.syncfusion.com/react/documentation/grid/context-menu) feature. This integration is suitable for dashboards, reporting tools, and other data-driven applications where tabular and visual representations improve analysis and decision making.
 
-This feature is particularly useful in dashboards, reporting tools, and data-driven applications where both tabular and visual representations of data are required.
+## Steps for chart integration
 
-## Steps for Chart integration
-
-To integrate Charts into your Grid, follow these steps:
+Follow these steps to integrate charts into the grid:
 
 ### Dependencies
 
-Below is the list of minimum dependencies required to integrate Chart functionality into the Grid:
+Below is the list of minimum dependencies required to integrate chart functionality into the grid:
 
 ```javascript
 |-- dependencies
@@ -40,7 +38,7 @@ Below is the list of minimum dependencies required to integrate Chart functional
 
 ### Setup for local development
 
-To set-up a React application, choose any of the following ways. The best and easiest way is to use the [create-react-app](https://github.com/facebook/create-react-app). It sets up your development environment in JavaScript and improvise your application for production. Refer to the [installation instructions](https://github.com/facebook/create-react-app#creating-an-app) of `create-react-app`.
+Choose one of the following options to set up a React application. The recommended approach is using [create-react-app](https://github.com/facebook/create-react-app), which prepares a development environment and optimizes the application for production. Refer to the [installation instructions](https://github.com/facebook/create-react-app#creating-an-app).
 
 ```bash
 npx create-react-app my-app
@@ -56,7 +54,7 @@ cd my-app
 yarn start
 ```
 
-To set-up a React application in `TypeScript` environment, run the following command.
+Run the following command to create a React application in a TypeScript environment:
 
 ```bash
 npx create-react-app my-app --template typescript
@@ -64,7 +62,7 @@ cd my-app
 npm start
 ```
 
-Besides using the [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) package runner tool, also create an application from the `npm init`. To begin with the `npm init`, upgrade the `npm` version to `npm 6+`.
+Alternatively, create an application with `npm init`. For `npm init`, ensure `npm` is version 6 or higher.
 
 ```bash
 npm init react-app my-app
@@ -74,9 +72,9 @@ npm start
 
 ### Add Syncfusion React packages
 
-Syncfusion React component packages are available at [npmjs.com](https://www.npmjs.com/~syncfusionorg). To use Syncfusion React components in your project, install the corresponding npm packages.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/~syncfusionorg). Install the corresponding npm packages to use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in a project.
 
-To install the `Grid` and `Grid-Chart` package, use the following command:
+Run the following commands to install the grid and grid-chart packages.
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -89,36 +87,36 @@ npm install @syncfusion/ej2-grid-chart
 
 ### Import the Syncfusion CSS styles
 
-Syncfusion React controls come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It’s easy to adapt the Syncfusion React controls to match the style of your application by referring to one of the built-in themes.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React controls include [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) provided in the installed packages. Apply one of the built-in themes to match the application's visual style.
 
-To apply a theme, you can import the required CSS files from the node_modules directory. For example, to use the  **Material** theme, add the following imports to the **src/App.css** file:
+Import the required CSS files from the **node_modules** directory. For example, to use the "Material 3" theme, add the following imports to the **src/App.css** file.
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-notifications/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-react-grids/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-grid-chart/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-notifications/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-react-grids/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-grid-chart/styles/material3.css';
 
 ```
 
-### Chart integration via Context Menu in Grid
+### Chart integration via context menu in grid
 
-This section explains how to dynamically render Charts based on user interactions within the Syncfusion React Grid using the context menu. Users can **right-click** on selected rows and choose from various Chart types such as bar, pie, line Charts etc to visualize the data instantly. This feature enhances interactivity and provides a seamless analytical experience.
+This section explains how the grid can render charts dynamically based on interactions within the Syncfusion<sup style="font-size:70%">&reg;</sup> React grid using the context menu. **Right-clicking** on selected rows presents chart types such as bar, pie, or line for immediate visualization. This enhances interactivity and provides a quick analytical view.
 
-For example, in a sales dashboard, you can select sales records for specific products and instantly view a comparative bar or pie Chart illustrating online sales versus retail sales or revenue trends over several month. This functionality helps improve decision-making by providing immediate visual feedback.
+For example, in a sales dashboard, selecting records for specific products can display a comparative bar or pie chart that shows online sales versus retail sales or revenue trends across months.
 
-Steps to be followed to integrate Chart into Grid via contextmenu:
+Steps to integrate a chart into the grid via the context menu:
 
 **Step 1. Inject required modules:**
 
-Import the required modules from the `Grid`,`Chart` and `GridChart` packages, and inject the `ContextMenu` module into the Grid:
+Import the required modules from the `Grid`, `GridChart`, and `Chart` packages, then inject the `ContextMenu` module into the grid:
 
 
 {% tabs %}
@@ -170,9 +168,9 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-**Step 2: Define Chart options to Grid Context Menu:**
+**Step 2: Define chart options to grid context menu:**
 
-Add Chart visualization options as context menu items within the Grid configuration using [contextMenuItems](https://ej2.syncfusion.com/react/documentation/api/grid/#contextmenuitems) property. These items allow  you to right-click on selected rows and choose a Chart type to visualize the data.
+Add chart visualization options as context menu items within the grid configuration using the [contextMenuItems](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#contextmenuitems) property. These items allow right-clicking on selected rows to choose a chart type for visualization.
 
 ```ts
 
@@ -185,9 +183,9 @@ contextMenuItems={[
 
 ```
 
-**Step 3: Initialize GridChart instance on Grid creation:**
+**Step 3: Initialize GridChart instance on grid creation:**
 
-Inside the Grid’s [created](https://ej2.syncfusion.com/react/documentation/api/grid/#created) event, instantiate a **GridChart** object. This instance will be used to render Charts dynamically based on the selected Grid data.
+Inside the grid’s [created](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#created) event, instantiate a `GridChart` object. This instance is used to render charts dynamically based on the selected grid data.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -217,30 +215,28 @@ function created() {
 {% endhighlight %}
 {% endtabs %}
 
-This ensures that the Chart instance is ready as soon as the Grid is initialized, allowing seamless interaction through the context menu.
+This ensures the chart instance is ready when the grid initializes, allowing seamless interaction through the context menu.
 
-**Step 4: Handle context menu click to render Chart:**
+**Step 4: Handle context menu click to render chart:**
 
-Use the [contextMenuClick](https://ej2.syncfusion.com/react/documentation/api/grid/#contextmenuclick) event to detect which Chart type was selected and render the Chart accordingly using the `gridChart.render()` method.
+Use the [contextMenuClick](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#contextmenuclick) event to determine the selected chart type and render it with the `gridChart.render` method.
 
-`ContextMenuClick` event passes the below arguments:
+The `contextMenuClick` event provides the following arguments:
 
-  * `args.chartType:` The selected Chart type.
+  * `args.chartType` — selected chart type.
+  * `args.gridInstance` — current grid instance.
+  * `args.records` — selected data records to visualize.
 
-  * `args.gridInstance:` The current Grid instance.
+The `gridChart.render` method accepts three arguments:
 
-  * `args.records:` The selected data records to be visualized in the Chart.
+  * `chartArgs`: Contains the grid instance, [chart type](https://ej2.syncfusion.com/react/documentation/chart/chart-types), and the selected records.
 
-* Use the `gridChart.render` to render the Chart. It accepts three arguments discussed below:
+  * `chartModel`: Specifies chart configuration, including axes, labels, legends, tooltips, and other appearance or behavior settings. See Syncfusion's [Chart Model](https://ej2.syncfusion.com/react/documentation/api/chart/chartmodel) for details.
 
-  * `chartArgs`: Contains Grid instance, [Chart type](https://ej2.syncfusion.com/react/documentation/chart/chart-types), and selected records.
+  * `categorySeries`: Specifies data fields for [categories](https://ej2.syncfusion.com/react/documentation/chart/category-axis) and [series](https://ej2.syncfusion.com/react/documentation/chart/chart-series).
 
-  * `chartModel:` This specifies various Chart configurations related to the appearance and behavior of the Chart. The model allows you to configure axes, labels, legends, tooltips, and other Chart attributes. Refer to Syncfusion's [Chart Model](https://ej2.syncfusion.com/react/documentation/api/chart/chartmodel/) for detailed configurations, options, and customization possibilities.
-
-  * `categorySeries:` This specifies the fields in your data used for [categories](https://ej2.syncfusion.com/react/documentation/chart/category-axis) and [series](https://ej2.syncfusion.com/react/documentation/chart/chart-series) in the Chart.
-
-    * Category fields: Define the grouping axis.
-    * Series fields: Define the actual values plotted on the Chart.
+    * Category fields define the grouping axis.
+    * Series fields define the values plotted on the chart.
 
 
 {% tabs %}
@@ -251,7 +247,7 @@ function contextMenuClick(args)
 {
   if (args.chartType) 
   {
-    // Prepare the Chart arguments including the Grid instance, Chart type, and records to plot.
+    // Prepare the chart arguments including the grid instance, chart type, and records to plot.
     const chartArgs = {
       gridInstance: args.gridInstance,
       chartType: args.chartType,
@@ -278,8 +274,8 @@ function contextMenuClick(args)
       series: ['Online', 'Retail']
     };
 
-    // Render the Chart using the configured arguments and models.
-    // The render function uses the defined chartArgs, model, and categorySeries to display the Chart.
+    // Render the chart using the configured arguments and models.
+    // The render function uses the defined chartArgs, model, and categorySeries to display the chart.
     gridChart.render(chartArgs, model, categorySeries);
   }
 }
@@ -300,7 +296,7 @@ function contextMenuClick(args: ContextMenuClickEventArgs)
       records: (args.records as SalesRecord[])
     };
 
-    // Set up the Chart model configurations.
+    // Set up the chart model configurations.
     const chartModel: ChartModel = {
       primaryXAxis: {
         valueType: 'Category',
@@ -308,20 +304,20 @@ function contextMenuClick(args: ContextMenuClickEventArgs)
       }
     };
 
-    // Combine both Chart models into a single model for rendering.
+    // Combine both chart models into a single model for rendering.
     const model: ChartChanges = {
       chart: chartModel,
       accumulationChart: {}
     };
 
-    // Determine fields for category and series data in the Chart.
+    // Determine fields for category and series data in the chart.
     const categorySeries: CategorySeries = {
       category: ['Product', 'Month'],
       series: ['Online', 'Retail']
     };
 
-    // Render the Chart using the configured arguments and models.
-    // The render function uses the defined chartArgs, model, and categorySeries to display the Chart.
+    // Render the chart using the configured arguments and models.
+    // The render function uses the defined chartArgs, model, and categorySeries to display the chart.
     (gridChart as GridChart).render(chartArgs, model, categorySeries);
   }
 }
@@ -330,7 +326,7 @@ function contextMenuClick(args: ContextMenuClickEventArgs)
 {% endhighlight %}
 {% endtabs %}
 
-The following complete example demonstrates how to integrate Charts into a Grid context menu using the `contextMenuClick` event with `gridChart.render` method:
+The following example demonstrates integrating charts into the grid context menu by using the `contextMenuClick` event and the `gridChart.render` method:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -351,11 +347,9 @@ The following complete example demonstrates how to integrate Charts into a Grid 
 
 ## Enable export functionality in GridChart
 
-The export functionality in GridChart allows Charts to be saved or shared externally in various formats. This is particularly useful for preserving visualized data or including Charts in reports and presentations.
+GridChart export functionality enables saving or sharing charts in multiple formats. This is useful for preserving visualizations or including charts in reports and presentations.
 
-To enable this feature, set the `allowExport` property to true when creating the **GridChart** instance. Once enabled, an export option appears in the Chart popup toolbar, allowing the Chart to be exported in various formats such as PDF, CSV, Print, JPEG, XLSX, SVG, and PNG.
-
-The following code snippet demonstrates how to enable export functionality in **GridChart**:
+Enable export by setting the `allowExport` property to `true` when creating the `GridChart` instance. Once enabled, an export option appears in the chart popup toolbar, allowing export to formats such as PDF, CSV, Print, JPEG, XLSX, SVG, and PNG.
 
 ```ts
 
@@ -365,35 +359,23 @@ gridChart = new GridChart({
 
 ```
 
-## Enable property panel in GridChart
+When enabled, the property panel appears alongside the chart popup and offers three main configuration sections:
 
-The property panel in GridChart provides a built-in interface to modify Chart settings dynamically at runtime. By default, the property panel is disabled. To enable it, set the `enablePropertyPanel` option to true during the instantiation of the **GridChart** object. Here’s how to do it:
-
-```ts
-
-gridChart = new GridChart({
-  enablePropertyPanel: true
-});
-
-```
-
-When enabled, the property panel appears alongside the Chart popup and offers three main configuration sections:
-
-* **Chart Types:** Choose from a variety of Chart types, including Column, Line, Pie, and others.
+* **Chart Types:** Choose from a variety of chart types, including Column, Line, Pie, and others.
 
 * **Chart Data:** Configure the category axis and series fields for data visualization.
 
-* **Formatting Options:** Adjust styling properties such as Chart style, title style, legend appearance, series settings, and axes formatting.
+* **Formatting Options:** Adjust styling properties such as chart style, title style, legend appearance, series settings, and axes formatting.
 
-  * **Chart Style:** 
+  * **Chart Style:**
 
-    * **Margin :** Adjust the [margins](https://ej2.syncfusion.com/react/documentation/api/chart/margin/) around the Chart (top, bottom, left, right) for better layout spacing.
-    * **Color**: Set distinct colors for different Chart elements to improve visual clarity.
+    * **Margin:** Adjust the [margins](https://ej2.syncfusion.com/react/documentation/api/chart/margin) around the chart (top, bottom, left, right) for better layout spacing.
+    * **Color:** Set distinct colors for different chart elements to improve visual clarity.
 
   * **Title Style** 
 
     * **Legend** - Toggle the visibility of the legend and customize its font, size, color, and position.
-    * **Series** - Enable/disable tooltips and customize [Series](https://ej2.syncfusion.com/react/documentation/api/chart/series/) color and data labels based on categories such as online, retail, or revenue.
+    * **Series** - Enable/disable tooltips and customize [Series](https://ej2.syncfusion.com/react/documentation/api/chart/series) color and data labels based on categories such as online, retail, or revenue.
 
   * **Axes:** - Select axes as either category or value type, and customize:
 
@@ -401,13 +383,12 @@ When enabled, the property panel appears alongside the Chart popup and offers th
     * **Title:** Adjust text, font, size, color, and rotation.
     * **Label:** Modify text, font, size, color, and rotation for better label presentation.
 
-**customize the Chart model:**   
 
-You can customize the [Chart](https://ej2.syncfusion.com/react/documentation/chart/getting-started) by defining a [chartModel](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel/) object in the `chart` property of the `model` object within the [contextMenuClick](https://ej2.syncfusion.com/react/documentation/api/grid/#contextmenuclick) event .This allows you to configure various Chart properties such as axes, margins, tooltips, titles, and more. Additionally, you can use the [events](https://ej2.syncfusion.com/react/documentation/api/chart/#events/) of the Chart within the `chartModel` configuration to apply further customizations when the Chart is rendered. 
+**Customize the chart model:**
 
-To customize [Accumulation Charts](https://ej2.syncfusion.com/react/documentation/accumulation-chart/getting-started) (such as Pie), use the `accumulationChart` property of the `model` object. This property allows you to configure Chart options like titles, legends, data labels, and visual styles tailored for accumulation-type visualizations.  You can also use Accumulation Chart [events](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/#events/) to apply additional customizations when the Chart is rendered.
+[Accumulation Charts](https://ej2.syncfusion.com/react/documentation/accumulation-chart/getting-started) (for example, pie charts) can be customized using the `accumulationChart` property of the `model` object. This property configures titles, legends, data labels, and visual styles for accumulation-type visualizations.
 
-The following code snippets demonstrate how to achieve this:
+Additionally, Accumulation chart [events](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/index-default#events) can be used to apply extra customizations during rendering.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -517,9 +498,9 @@ function contextMenuClick(args: ContextMenuClickEventArgs) {
 {% endhighlight %}
 {% endtabs %}
 
-You can also programmatically update the Chart’s appearance using the `updateChartSettings` event provided by the **GridChart** integration. This event is triggered when you modify Chart properties through the Chart popup’s property panel. This is useful for applying custom themes, adjusting axis settings, or modifying series styles.
+Chart appearance can also be updated programmatically using the `updateChartSettings` event provided by the `GridChart` integration. This event triggers when chart properties are modified through the chart popup’s property panel. The event enables applying custom themes, adjusting axis settings, or modifying series styles.
 
-The following code snippet demonstrates how to dynamically customize chart margins and restrict their values to a minimum of 20 using the `updateChartSettings` event.
+The following code snippet demonstrates dynamically customizing chart margins and restricting their values to a minimum of "20" using the `updateChartSettings` event:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -585,7 +566,7 @@ function updateChartSettings(args: UpdateChartArgs)
 {% endhighlight %}
 {% endtabs %}
 
-The following complete example demonstrates how to enable the property panel by setting `enablePropertyPanel` to **true**, customize the chart using the `chartModel` within `contextMenuClick` event, and dynamically control or customize the behavior of the `updateChartSettings` event.
+The following example demonstrates enabling the property panel by setting `enablePropertyPanel` to `true`, customizing the chart using the `chartModel` within `contextMenuClick` event, and dynamically controlling or customizing the behavior of the  `updateChartSettings` event.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

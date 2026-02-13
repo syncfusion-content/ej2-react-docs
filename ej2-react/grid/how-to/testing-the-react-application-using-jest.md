@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Testing the React application using Jest | Syncfusion
+title: React Grid - Jest Unit Testing | Syncfusion
 description: Learn here all about Testing the React application using Jest in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Testing the React application using Jest
 platform: ej2-react
@@ -8,46 +8,46 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Testing the React application using Jest
+# React Grid - Jest Unit Testing
 
-React [Jest](https://jestjs.io/docs/tutorial-react) testing is a popular approach to test React applications using the Jest testing framework. This approach involves the creation and execution of unit tests specifically designed for React components. By conducting unit testing, which focuses on testing isolated units of code like functions, methods, and components to ensure that they behave as expected. This approach validates the individual units of your React components, catch potential bugs early in the development process, and maintains the reliability and stability of your React application. To create a Jest test case for the Grid component, follow the below steps:
+[Jest](https://jestjs.io/docs/tutorial-react) is a widely used testing framework for React applications, enabling the creation and execution of unit tests for components, functions, and methods. Unit testing helps validate individual parts of a React application, detect issues early, and maintain overall reliability. The following steps explain how to create Jest test cases for the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid.
 
-**Step 1: Set up the Jest testing environment**
+Step 1: Set up the Jest testing environment
 
-**I. Check and install the node version:**
+1. Check and install the node version:
 
-You need to verify if the installed version of Node is 14 or higher. If it is below version 14, you must install a version of Node above 14. You can refer the following link to install the [node version](https://nodejs.org/en/download). You can select the any node version is 14 or above and installed.
+Ensure that Node version 14 or higher is installed. If not, install a supported version from the official [Node.js website](https://nodejs.org/en/download).
 
-**II. Create an React application and install the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid package:**
+2. Create a React application and install the Grid package:
 
-To create an React application and install the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid package, you can refer to the [Getting started](https://ej2.syncfusion.com/react/documentation/grid/getting-started) documentation.
+Follow the [Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid Getting Started](https://ej2.syncfusion.com/react/documentation/grid/getting-started) guide to create a React app and install the required Syncfusion<sup style="font-size:70%">&reg;</sup> Grid package.
 
-**III. Install the Jest:**
+3. Install Jest:
 
-When react application is installed, the dependency for Jest should be automatically installed. To verify if the Jest dependency is installed, you can check the **package.json** file. If the Jest dependency is not installed, you can run the following command to install the Jest dependency using npm.
+Jest is typically included by default in React apps created with Create React App. If not present in **package.json**, install it using npm:
 
 ```
 npm install --save-dev jest
 ```
 
-**IV. Install the testing library package:**
+4. Install the testing library package:
 
-Run the following command to install the testing library package using npm.
+Run the following command to install the DOM testing utilities provided by testing library:
 
 ```
 npm install --save-dev @testing-library/jest-dom
 ```
 
-**Step 2: Adding a Grid component**
+Step 2: Adding a Grid component
 
-Refer to the [documentation](https://ej2.syncfusion.com/react/documentation/grid/getting-started#adding-css-reference) to add the styling for the Grid component. The following code is used in this demonstration to create a Grid component. For further information on creating the Grid component, refer to the detailed [documentation](https://ej2.syncfusion.com/react/documentation/grid/getting-started#adding-grid-component).
+Refer to the [documentation](https://ej2.syncfusion.com/react/documentation/grid/getting-started#adding-css-reference) to include necessary styles. Below is a sample implementation of the Grid component:
 
 **App.tsx:**
 
 ```typescript
 import * as React from 'react';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-// import the your datasource instead of this
+// Import your datasource instead of this.
 import { customerData} from './dataSource';
 import './App.css';
 
@@ -66,31 +66,31 @@ function App() {
 export default App;
 ```
 
-**Step 3: To implement the Jest test case.**
+Step 3: Jest test case implementation
 
-You can write the Jest test case in the test.tsx extension file.  You need to import the below required files in your component. You need to import the `render` function from the **@testing-library/react** package. This function is used to render the component for react testing. To test a specific component, you need to import it into your testing environment. In this demo, we have written the grid component in the **App** file. So, you need to import the **App** file in the Jest test case.
+Create a test file with a **.test.tsx** extension (e.g., **App.test.tsx**). Import the necessary modules:
 
 ```typescript
 import { render } from '@testing-library/react';
 import App from './App';
 ```
 
-**I. Define test suite:**
+1. Define test suite:
 
-The `describe` function is utilized to define the test suite. Within the `describe` function, you can use the `beforeEach` function. This function to execute the before each test case. Inside the `beforeEach` function, The Jest mock function is assign to the `windows.crypto`. By using `jest.fn`, we are creating a mock implementation for the crypto object. The another Jest mock function is assign to the `window.crypto.getRandomValues`. This is done to replace the original implementation of the `getRandomValues` method with a mock implementation for testing.
+The `describe` block groups related test cases. If a component relies on browser APIs like `window.crypto` or `window.crypto.getRandomValues`, mock them in a `beforeEach` block:
 
 ```typescript
 window.crypto = jest.fn() as any;
 window.crypto.getRandomValues = jest.fn();
 ```
 
-**II. Types of testing:**
+2. Types of testing:
 
-You need to add the different types of test cases in a `it` block.
+Test case types are added in an `it` block.
 
-**1. Snapshot Testing:**
+1. Snapshot testing:
 
-The Snapshot testing involves capturing a snapshot of the rendered output of a component and comparing it against a previously stored snapshot. If the current output matches the stored snapshot, the test case will be passed successfully.
+Snapshot testing captures the rendered output of a component and compares it to a saved version to detect unexpected changes. If the current output matches the stored snapshot, the test case will be passed successfully.
 
 **Example:**
 
@@ -104,13 +104,15 @@ it('Snapshot testing', () => {
 ```
 ![Snapshot Testing](../images/snapshot_testing.png)
 
-**2. DOM testing:**
+2. DOM testing:
 
-The **DOM** testing involves testing the behavior and interact of React component. This goal is to ensure that the component function correctly and produce the expected output when interacting with the DOM. You can utilize libraries like **react-testing-library**, `Enzyme`, or **React's TestUtils** to manipulate the rendered component in the DOM testing.
+The **DOM** testing involves testing the behavior and interactions of React components. The goal is to ensure that components function correctly and produce the expected output when interacting with the DOM. Libraries such as **react-testing-library**, `Enzyme`, or **React's TestUtils** manipulate the rendered component in DOM testing.
+
+DOM testing verifies the rendered structure and behavior of the component.
 
 **Example:** 
 
-In the below example, the `it` block is used to define a test case for the "Length of the record". Within the test case, render the `<App/>` component in the container object. After, you need to create the instance of grid component. We check that the data grid in the data source has the appropriate number of data records. The [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource) property is employed to retrieve the record of the data. By utilizing this property, we can verify the accurate population of data length in the grid component.
+In the below example, the `it` block is used to define a test case for the "Length of the record". Within the test case, the `<App/>` component is rendered in the container object. After creating a Grid component instance, the appropriate number of data records in the `e-grid` CSS class is verified. The [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource) property is employed to retrieve the record of the data. Using this property, the accurate population of data length in the grid component is verified.
 
 ```typescript
 it('Length of the record', () => {
@@ -119,7 +121,7 @@ it('Length of the record', () => {
     const gridElement = container.getElementsByClassName('e-grid');
     const gridInstance = (gridElement as any)[0].ej2_instances[0];
     expect(gridInstance.dataSource).toHaveLength(5);
-  });
+});
 ```
 
 The following example illustrates how to create the grid sample and how to write the Jest test case.
@@ -151,13 +153,13 @@ The following example illustrates how to create the grid sample and how to write
 {% endhighlight %}
 {% endtabs %}
 
-**Run the Jest test case:**
+Step 4: Run the Jest test case:
 
-Run the following command to execute the Jest test case.
+The Jest test case is executed using the following command:
 
 ```
 npm test
 ```
 
-> * This is only for local data. You can use the [currentViewData](https://ej2.syncfusion.com/react/documentation/api/grid/#currentviewdata) property by rendering the remote data.
-> * You can find the sample of the Unit Jest testing in DataGrid [here](https://github.com/SyncfusionExamples/DataGrid-react-test-case)
+> * This is only for local data. Use the [currentViewData](https://ej2.syncfusion.com/react/documentation/api/grid#currentviewdata) property when rendering remote data.
+> * Find the sample of the Unit Jest testing in DataGrid [here](https://github.com/SyncfusionExamples/DataGrid-react-test-case)

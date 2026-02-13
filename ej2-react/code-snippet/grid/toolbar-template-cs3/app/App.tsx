@@ -37,7 +37,7 @@ function App() {
       <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} />
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
       <ColumnDirective field='ShipCity' headerText='Ship City' width='100' />
-      <ColumnDirective field='ShipName' headerText='ShipName' width='100' />
+      <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
     </ColumnsDirective>
     <Inject services={[Toolbar, Edit]} />
   </GridComponent>)

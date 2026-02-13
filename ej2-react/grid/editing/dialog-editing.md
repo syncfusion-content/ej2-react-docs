@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dialog editing in React Grid component | Syncfusion
+title: React Grid - Dialog Editing | Syncfusion
 description: Learn here all about Dialog editing in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Dialog editing 
 platform: ej2-react
@@ -8,13 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dialog editing in React Grid component
+# Dialog Editing in React Grid Component
 
-Dialog editing is a feature in the Grid component that allows you to edit the data of the currently selected row using a dialog window. With dialog editing, you can easily modify cell values and save the changes back to the data source.This feature is particularly beneficial in scenarios where you need to quickly modify data without navigating to a separate page or view, and it streamlines the process of editing multiple cells.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid Component dialog editing provides a powerful, efficient way to edit row data through a dedicated modal dialog window that focuses attention on the editing form. Instead of editing cells directly in the grid, multiple field values can be entered and modified at once in a clean, organized form. The grid automatically saves all changes to the data source without navigating away from the current page—making data entry faster, more intuitive, and less error-prone, especially when dealing with complex records that span multiple columns.
 
-To enable dialog editing in grid component, you need to set the [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) property to **Dialog**. This property determines the editing mode for the grid, and when set to **Dialog**, it enables the dialog editing feature.
-
-Here's an example how to enable dialog editing in the react grid component:
+To enable dialog editing in the grid component, set the [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) property to `Dialog`. This property determines the editing mode for the grid.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -33,15 +31,27 @@ Here's an example how to enable dialog editing in the react grid component:
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs8" %}
 
+> For basic grid editing setup and configuration, refer to the [Edit Feature Setup](./edit#set-up-editing).
+
 ## Customize edit dialog
 
-The edit dialog in the Grid component allows you to customize its appearance and behavior based on the type of action being performed, such as editing or adding a record. You can modify properties like header text, showCloseIcon, and height to tailor the edit dialog to your specific requirements. Additionally, you can override default localization strings to provide custom text for buttons or other elements within the dialog.
+The edit dialog is a modal window that isolates the editing form and prevents grid interaction until the dialog closes. Customize this dialog to match application needs by handling the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) event.
 
-To customize the edit dialog, you need to handle the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid/#actioncomplete) event of the Grid component and perform the necessary modifications based on the **requestType** parameter. The **requestType** parameter identifies the type of action being performed, such as **beginEdit** for editing a record or **add** for adding a new record.
+**Customizable options**:
+- Header text, close button visibility, and height
+- Button text and localization strings
+- Dialog behavior based on the editing action
 
-> You can refer the Grid [Default text](../global-local/) list for more localization.
+Use the `requestType` parameter to identify which action triggered the event and apply appropriate customizations:
 
-The following example that demonstrates how to customize the edit dialog using the `actionComplete` event:
+| Request Type | Description |
+|--------------|-------------|
+| `beginEdit` | Editing an existing record |
+| `add` | Creating a new record |
+| `save` | Updating a new or existing record |
+| `delete` | Deleting an existing record |
+
+> Refer to the grid [Default text](../global-local) list for localization options.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -64,11 +74,16 @@ The following example that demonstrates how to customize the edit dialog using t
 
 ## Show or hide columns in dialog editing
 
-The show or hide columns in dialog editing feature in the grid allows you to dynamically control the visibility of columns while editing in the dialog edit mode. This feature is useful when you want to display specific columns based on the type of action being performed, such as editing an existing record or adding a new record. To achieve this, you can utilize the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid/#actionbegin) event of the Grid. 
+Column visibility can be dynamically controlled in dialog editing mode. The [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid#actionbegin) event enables showing or hiding specific columns based on whether an existing record is being edited or a new record is being added.
 
-The `actionBegin` event is triggered whenever an action is initiated in the grid, such as editing, adding, or deleting a record. Within the event handler, you can check the **requestType** parameter to determine the type of action being performed. If the **requestType** is `beginEdit` or `add`, you can modify the visibility of columns using the `visible` property. This property is used to determine whether a column should be displayed or hidden. Then, when the **requestType** is `save`, you can reset the column visibility to its initial state using the `column.visible` property.
+The `actionBegin` event is triggered whenever an action is initiated in the grid (editing, adding, or deleting a record). Within the event `requestType` parameter determines how to manage column visibility in the event handler:
 
-In the following example, the **CustomerID** column is rendered as a hidden column, and the **ShipCountry** column is rendered as a visible column. In the edit mode, the **CustomerID** column will be changed to a visible state and the **ShipCountry** column will be changed to a hidden state.
+| Request Type | Action | Column Visibility Control |
+|---|---|---|
+| `beginEdit` or `add` | Editing or creating a record | Modify visibility using the `visible` property |
+| `save` | Saving the record | Reset columns to initial visibility state using `visible` property |
+
+In the following example, the "Customer ID" column is rendered as a hidden column, and the "Ship Country" column is rendered as a visible column. In the edit mode, the "Customer ID" column will be changed to a visible state and the "Ship Country" column will be changed to a hidden state.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -87,13 +102,16 @@ In the following example, the **CustomerID** column is rendered as a hidden colu
 
  {% previewsample "page.domainurl/code-snippet/grid/customizedialog-cs2" %}
 
-## Use wizard like dialog editing
+## Use wizard-like dialog editing
 
-Wizard-like dialog editing is a powerful feature in the Grid component that enables the creation of intuitive step-by-step forms. This feature provides a structured approach to form completion or data entry by breaking down the process into manageable steps.This feature is particularly useful when you have complex forms that need to be broken down into smaller sections to guide you through the data entry process.
+Wizard-like dialog editing divides complex forms into manageable step-by-step sections with efficient navigation. The [editSettings.template](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#template) property enables custom form templates with multiple steps:
 
-To achieve wizard-like dialog editing in the grid component, you can use the dialog template feature. This feature allows you to define your own custom editing template using the [`editSettings.mode`](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) property set to  **Dialog** and the [editSettingsTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#template) property to specify the template variable that defines the editors for each step of the wizard.
+1. Set [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) to `Dialog`.
+2. Define template sections for each form step.
+3. Add navigation buttons (Previous, Next, Save) between steps.
+4. Implement validation for each step.
 
-The following example demonstrate the wizard like editing in the grid with the unobtrusive validation.
+The following example demonstrates the wizard-like editing in the grid with unobtrusive validation:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -420,7 +438,7 @@ export class DialogFormTemplate extends React.Component<{}, {}> {
 
 ## Customize add/edit dialog footer
 
-The Customize add/edit dialog footer feature in the grid allows you to modify the footer section of the dialog that appears when editing the currently selected row or adding a new row. By default, the dialog displays two buttons in the footer section: Save and Cancel, which allow you to save or discard the changes made in the dialog. This feature is particularly helpful when you want to add custom buttons to the dialog's footer, implement specific actions, or customize the appearance of the buttons, such as changing their color or size in the dialog's footer. This can be achieved using the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid/#actioncomplete) event of the Grid component.
+The dialog footer can be customized to add custom buttons or modify button appearance with effortless integration. The default footer displays Save and Cancel buttons. The [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) event enables adding custom buttons, changing button text, or implementing custom button actions in the dialog footer.
 
 In the following sample, using the `dialog` argument of the `actionComplete` event, the action for the custom button can be customized.
 

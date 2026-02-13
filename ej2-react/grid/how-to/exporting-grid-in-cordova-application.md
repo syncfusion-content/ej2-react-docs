@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Exporting grid in cordova application in React Grid component | Syncfusion
+title: React Grid - Export in Cordova Application | Syncfusion
 description: Learn here all about Exporting grid in cordova application in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Exporting grid in cordova application 
@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Exporting grid in cordova application in React Grid component
+# Cordova Grid Export in React Grid component
 
-Exporting the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid in a Cordova application can be beneficial in various scenarios where users need to generate and download reports, share data in Excel or PDF formats, or archive information for offline use. A Cordova application does not support direct file download. To export the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component in a Cordova application, you need to utilize Blob streams. This can be achieved by using the appropriate exporting methods and export complete events to obtain the Blob stream.
+Exporting the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid in a Cordova application is useful when data needs to be generated and saved as Excel or PDF files for reporting or offline access. Since Cordova does not support direct file downloads, exporting must be handled through Blob streams. This is achieved by using the grid's export methods along with the export-complete events to access the generated Blob.
 
-The following example illustrates how to export a Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid in a Cordova application. It utilizes the [excelExportComplete](https://ej2.syncfusion.com/react/documentation/api/grid/#excelexportcomplete) and [pdfExportComplete](https://ej2.syncfusion.com/react/documentation/api/grid/#pdfexportcomplete) events to manage the export process for Excel and PDF formats and obtain the Blob stream. The `exportBlob` function is responsible for creating a downloadable link for the exported file.
+The example below demonstrates how to export the React Grid in a Cordova environment. It uses the [excelExportComplete](https://ej2.syncfusion.com/react/documentation/api/grid#excelexportcomplete) and [pdfExportComplete](https://ej2.syncfusion.com/react/documentation/api/grid#pdfexportcomplete) events to obtain the Blob stream for Excel and PDF exports. The `exportBlob` function then creates a downloadable link for the exported file.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

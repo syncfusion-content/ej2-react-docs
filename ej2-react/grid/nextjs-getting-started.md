@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid getting started with Next.js | Syncfusion
-description: Check out and learn about how to use Syncfusion React UI components in the Next.js project.
+description: Check out and learn effective ways to integrate Syncfusion React UI components into Next.js projects seamlessly.
 control: Next.js
 platform: ej2-react
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# Creating a Next.js Application Using Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
+# Creating a Next.js Application Using Syncfusion React Components
 
 This section provides a step-by-step guide for creating a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component.
 
@@ -111,20 +111,20 @@ yarn add @syncfusion/ej2-react-grids
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
 
-Import the `Material` theme into the **src/app/globals.css** file and remove the existing styles in that file, as shown below:
+Import the `Tailwind 3` theme into the **src/app/globals.css** file and remove the existing styles in that file, as shown below:
 
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
 
-@import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
-@import '../../node_modules/@syncfusion/ej2-calendars/styles/material.css';  
-@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
-@import '../../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
-@import '../../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import "../../node_modules/@syncfusion/ej2-react-grids/styles/material.css";
+@import '../../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';  
+@import '../../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';  
+@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';  
+@import '../../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';  
+@import '../../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import "../../node_modules/@syncfusion/ej2-react-grids/styles/tailwind3.css";
 
 {% endhighlight %}
 {% endtabs %}

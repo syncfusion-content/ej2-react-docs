@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Grid
 
 This section explains the steps required to create a simple React Grid component and demonstrate its basic usage in a React environment.
 
@@ -64,16 +64,16 @@ npm install @syncfusion/ej2-react-grids --save
 The following CSS files are available in the **../node_modules/@syncfusion** package folder. Add these as references in **src/App.css**.
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-notifications/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-react-grids/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';  
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';  
+@import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';  
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';  
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';  
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css';
+@import "../node_modules/@syncfusion/ej2-react-grids/styles/tailwind3.css";
 ```
 
 > To refer **App.css** in the application then import it in the **src/App.tsx** file.
@@ -271,7 +271,7 @@ The output appears as follows.
 
  {% previewsample "page.domainurl/code-snippet/grid/getting-started-cs5" %}
 
-> Refer to the [React Grid](https://www.syncfusion.com/react-components/react-data-grid) feature tour page for its groundbreaking feature representations. You can also explore our [React Grid Component example](https://ej2.syncfusion.com/react/demos/#/material/grid/overview) that shows how to render the Grid in React.
+> Refer to the [React Grid](https://www.syncfusion.com/react-components/react-data-grid) feature tour page for its groundbreaking feature representations. You can also explore our [React Grid Component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/grid/overview) that shows how to render the Grid in React.
 
 ## See also
 
