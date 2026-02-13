@@ -22,7 +22,7 @@ function App() {
           <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
           <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
           <ColumnDirective field='OrderDate' headerText='Order Date' format={formatOptions} width='150' textAlign='Right' />
-          <ColumnDirective field='Freight' headerText='Freight' format='C2' width='150' />
+          <ColumnDirective field='Freight' headerText='Freight' format='C2' width='150' textAlign='Right'/>
           <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
         </ColumnsDirective>
         <Inject services={[Toolbar, Page, ExcelExport]} />

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Aggregate Customization in React Grid component | Syncfusion
-description: Learn here all about Aggregate customization in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Aggregate Style | Syncfusion
+description: React Grid aggregate style explains styling and templates for aggregate rows and cells, customization options to match application design.
 control: Aggregate 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Aggregate Customization in React Grid component
+# Aggregate Customization in React Grid Component
 
 The appearance of aggregate elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component can be customized using CSS. Below are examples for customizing the aggregate root element and the aggregate cell elements.
 

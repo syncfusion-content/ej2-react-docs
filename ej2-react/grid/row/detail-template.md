@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Detail Template | Syncfusion
-description: Learn to display additional row information using detail templates in Syncfusion React Grid and customization.
+description: React Grid detail template supports rendering complex row-level detail content, embedding nested components, and customizing layouts and data presentation.
 control: Detail template 
 platform: ej2-react
 documentation: ug

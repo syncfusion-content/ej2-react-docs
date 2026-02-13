@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Filter customization in React Grid component | Syncfusion
-description: Learn here all about Filter customization in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Filtering Style | Syncfusion
+description: React Grid filtering style customizes filter UI appearance and templates, including filter bars, menus, and Excel-like filtering components.
 control: Filtering 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filter customization in React Grid component
+# Filter Customization in React Grid Component
 
-The appearance of filtering elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component can be customized using CSS. Below are examples for customizing various filtering elements, including filter bar cell elements, filter bar input elements, focus styles, clear icons, filter icons, filter dialog content, filter dialog footer, filter dialog input elements, filter dialog button elements, and Excel filter dialog number filters.
+The appearance of filtering elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component can be customized using CSS. Below are examples for customizing various filtering elements, including filter bar cell elements, filter bar input elements, focus styles, clear icons, filter icons, filter dialog content, filter dialog footer, filter dialog input elements, filter dialog button elements, and excel filter dialog number filters.
 
 ## Customizing the filter bar cell element
 
@@ -123,7 +123,7 @@ The `.e-filter-popup` and `.e-btn` classes are used to style the button elements
 
 ## Customizing the excel filter dialog number filters element
 
-The `.e-filter-popup .e-contextmenu-wrapper ul` classes are used to style the number filter elements within the Excel filter dialog.
+The `.e-filter-popup .e-contextmenu-wrapper ul` classes are used to style the number filter elements within the `Excel` filter dialog.
 
 ```css
 .e-grid .e-filter-popup .e-contextmenu-wrapper ul{

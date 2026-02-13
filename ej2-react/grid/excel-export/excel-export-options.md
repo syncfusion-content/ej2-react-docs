@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Excel Export Options | Syncfusion
-description: Learn here all about Excel export options in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+description: React Grid Excel export supports custom content, record/column selection, styles, themes, grouping, and advanced Excel output customization.
 control: Excel export options 
 platform: ej2-react
 documentation: ug
@@ -61,8 +61,8 @@ function App() {
                 toolbarClick={toolbarClick} ref={g => grid = g} allowPaging={true} pageSettings={pageOptions}>
                 <ColumnsDirective>
                     <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign='Right' />
-                    <ColumnDirective field='FirstName' headerText='FirstName' width='150' />
-                    <ColumnDirective field='LastName' headerText='LastName' width='150' />
+                    <ColumnDirective field='FirstName' headerText='First Name' width='150' />
+                    <ColumnDirective field='LastName' headerText='Last Name' width='150' />
                     <ColumnDirective field='City' headerText='City' width='150' />
                 </ColumnsDirective>
                 <Inject services={[Toolbar, ExcelExport, Page]} />
@@ -107,8 +107,8 @@ function App() {
         toolbarClick={toolbarClick} ref={g => grid = g} allowPaging={true} pageSettings={pageOptions}>
         <ColumnsDirective>
           <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign='Right' />
-          <ColumnDirective field='FirstName' headerText='FirstName' width='150' />
-          <ColumnDirective field='LastName' headerText='LastName' width='150' />
+          <ColumnDirective field='FirstName' headerText='First Name' width='150' />
+          <ColumnDirective field='LastName' headerText='Last Name' width='150' />
           <ColumnDirective field='City' headerText='City' width='150' />
         </ColumnsDirective>
         <Inject services={[Toolbar, ExcelExport, Page]} />
@@ -631,7 +631,7 @@ function App() {
                 <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
                 <ColumnDirective field='CustomerID' headerText='Customer ID' customAttributes={customAttributes} width='100' />
                 <ColumnDirective field='EmployeeID' headerText='Employee ID' width='100' textAlign="Right" />
-                <ColumnDirective field='Freight' headerText='Freight' width='80' format="C2" textAlign="Center" />
+                <ColumnDirective field='Freight' headerText='Freight' width='80' format="C2" textAlign="Right" />
                 <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
             </ColumnsDirective>
             <Inject services={[Toolbar, ExcelExport]} />
@@ -702,7 +702,7 @@ function App() {
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
         <ColumnDirective field='CustomerID' headerText='Customer ID' customAttributes={customAttributes} width='100' />
-        <ColumnDirective field='Freight' headerText='Freight' width='80' format="C2" textAlign="Center" />
+        <ColumnDirective field='Freight' headerText='Freight' width='80' format="C2" textAlign="Right" />
         <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
       </ColumnsDirective>
       <Inject services={[Toolbar, ExcelExport]} />

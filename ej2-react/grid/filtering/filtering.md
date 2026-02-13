@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Filtering | Syncfusion
-description: Learn here all about Filtering in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+description: React Grid filtering provides a comprehensive guide to available filter types, configuration, server filtering, and UI options for data refinement.
 control: Filtering 
 platform: ej2-react
 documentation: ug

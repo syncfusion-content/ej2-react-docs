@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Remote data in React Grid component | Syncfusion
-description: Learn here all about Remote data in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Remote Data | Syncfusion
+description: React Grid provides remote data binding options, adaptor configuration, server operations, and guidance for reliable server‑side data handling.
 control: Remote data 
 platform: ej2-react
 documentation: ug
@@ -10,25 +10,30 @@ domainurl: ##DomainURL##
 
 # Remote Data in React Grid component
 
-In React Grid component, binding remote data is a fundamental aspect that enhances the efficiency of data interaction. This process involves assigning the service data, represented as an instance of `DataManager`, to the `dataSource` property of the React Grid component. By doing so, you enable seamless interaction with a remote data source, and this is achieved by specifying the endpoint URL where the data is hosted.
+In React Grid component, binding remote data is a fundamental aspect that enhances the efficiency of data interaction. This process involves assigning the service data, represented as an instance of `DataManager`, to the `dataSource` property of the React Grid component. By doing so, seamless interaction with a remote data source is enabled, achieved by specifying the endpoint URL where the data is hosted.
 
 Additionally, leverage the power for data retrieval and operations, enhancing event handling, asynchronous programming, and concurrent value management in React applications.
 
 ## Custom binding
 
-The custom binding feature in the React Grid enables you to manage your own custom API for handling data processing externally and then binding the resulting data to the Grid. This allows you to implement your own custom data logic to your application's requirements. When using custom binding, the Grid expects the result of the custom logic to be an object with properties `result` and `count`. The `result` property should contain the data to be displayed in the Grid, while the `count` property indicates the total number of records in the dataset for your application. To utilize custom binding, you can handle the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started). The DataManager integrates seamlessly with the React Grid to manage custom data processing and binding. 
+The custom binding feature in the React Grid enables managing a custom API for handling data processing externally and then binding the resulting data to the Grid.This allows implementing custom data logic tailored to the application's requirements. When using custom binding, the Grid expects the result of the custom logic to be an object with properties `result` and `count`.
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component offers a range of powerful features for handling grid actions such as **paging**, **grouping**, **sorting** and **filtering**. These actions trigger the [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/#datastatechange) event. The feature for CRUD action such as **Create**, **Read**, **Update**, **Delete** operations. This action trigger the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/#datasourcechanged) event. This event provides you with the opportunity to manage and manipulate data according to the individual's interactions. 
+- `result` -  This property should contain the array of records that will be displayed in the Grid. 
+- `count` - This property should indicate the total number of records available in the entire dataset.
+
+To utilize custom binding, the application can handle the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started). The DataManager integrates seamlessly with the React Grid to manage custom data processing and binding. 
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component offers a range of powerful features for handling grid actions such as **paging**, **grouping**, **sorting** and **filtering**. These actions trigger the [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datastatechange) event. The feature for CRUD action such as **Create**, **Read**, **Update**, **Delete** operations. This action trigger the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasourcechanged) event. This event provides the opportunity to manage and manipulate data according to the individual's interactions.
 
 **Using the dataStateChange event**
 
-The `dataStateChange` event is triggered whenever you perform actions that modify the state of the grid's data, such as changing pages, applying sorting, or grouping. This event provides detailed information about the action performed and the current state of the grid, including parameters like page number, sorting details, and filtering criteria.
+The `dataStateChange` event is triggered whenever actions that modify the grid's data state are performed, such as paging, sorting, or grouping. This event provides detailed information about the action performed and the current state of the grid, including parameters like page number, sorting details, and filtering criteria.
 
 To implement the `dataStateChange` event, follow these steps:
 
-1. **Subscribe to the event:** In your component code, subscribe to the `dataStateChange` event using the appropriate event handler function. This function will be executed whenever you interact with the grid.
+1. **Subscribe to the event:** In the component code, subscribe to the `dataStateChange` event using the appropriate event handler function. This function is executed whenever the grid is interacted with.
 
-2. **Handle data state:** Inside the event handler function, you can access the event arguments to determine the individual actions and intentions. The action property of the event arguments indicates the type of action performed (e.g., paging, sorting, grouping).
+2. **Handle data state:** Inside the event handler function, the event arguments can be accessed to determine the specific actions and intentions. The action property of the event arguments indicates the type of action performed (e.g., paging, sorting, grouping).
 
 > The `dataStateChange` event will not be triggered during the initial rendering.
 
@@ -38,7 +43,7 @@ When filtering operation is performed in the grid, the `dataStateChange` event i
 
 ![FilterBar](../images/custom-binding-filterbar.png)
 
-You can change the new grid data state of filter action as follows:
+The filter action's updated data state can be applied as shown below:
 
 ```typescript
 const applyFiltering = (query: Query, filter: any) => {
@@ -87,7 +92,7 @@ const reducer = (state = initialState, action) => {
 
 ![Filtering Multiple Values](../images/custom-binding-multiple-filtering.png)
 
-When filtering multiple values, you can get the predicates as arguments in the `dataStateChange` event. You can create your predicate execution based on the predicates values.
+When filtering multiple values, the predicates are provided as arguments in the `dataStateChange` event. Custom predicate execution can then be implemented based on the predicate values.
 
 ### Handling searching operation
 
@@ -95,7 +100,7 @@ When performing a search operation in the grid, the `dataStateChange` event is t
 
 ![Searching](../images/custom-binding-searching.png)
 
-You can change the new grid data state of search action as follows:
+The grid's data state during a search action can be updated using the following approach:
 
 ```typescript
 const applySearching = (query: Query, search: any) => {
@@ -135,15 +140,15 @@ const reducer = (state = initialState, action: any) => {
 
 ### Handling sorting operation
 
-When sorting operation is performed in the grid, the dataStateChange event is triggered, and within this event, you can access the following referenced arguments.
+When a sorting operation is performed in the grid, the `dataStateChange` event is triggered. Within this event, the following referenced arguments can be accessed.
 
 ![Sorting](../images/custom-binding-sorting.png)
 
-When performing multi-column sorting, you can get the below referred arguments in the `dataStateChange` event.
+When performing multi‑column sorting, the following referenced arguments are available in the `dataStateChange` event
 
 ![Multi Sorting](../images/custom-binding-multi-sorting.png)
 
-You can change the new grid data state of sort action as follows:
+The grid's data state during a sort action can be updated using the following approach:
 
 ```typescript
 const applySorting = (query: Query, sorted: sortInfo[]) => {
@@ -182,11 +187,11 @@ const reducer = (state = initialState, action) => {
 
 ### Handling paging operation
 
-When paging operation is performed in the grid, the `dataStateChange` event is triggered, and within this event, you can access the following referenced arguments.
+When a paging operation is performed in the grid, the `dataStateChange` event is triggered, and the following referenced arguments become available within this event.
 
 ![Paging](../images/custom-binding-paging.png)
 
-You can change the new grid data state of page action as follows:
+The grid's data state for a paging action can then be updated using the following approach:
 
 ```typescript
 const applyPaging = (query, page) => {
@@ -232,7 +237,7 @@ When grouping operation is performed in the grid, the `dataStateChange` event is
 
 ![Grouping](../images/custom-binding-grouping.png)
 
-You can change the new grid data state of group action as follows:
+The grid's data state during a group action can be updated using the following approach:
 
 ```typescript
 const applyGrouping = (query: Query, group: Object[]) => {
@@ -270,24 +275,24 @@ const reducer = (state = initialState, action) => {
 }
 ```
 
-> * In order to utilize group actions, it is necessary to manage the sorting query within your service.
+> To utilize group actions, it is necessary to manage the sorting query within the service.
 
 **Lazy load grouping**
 
-In React, lazy loading refers to the technique of loading data dynamically when they are needed, instead of loading everything upfront. Lazy load grouping allows you to load and display grouped data efficiently by fetching only the required data on demand. 
+In React, lazy loading refers to the technique of loading data dynamically when they are needed, instead of loading everything upfront. Lazy load grouping enables efficient loading and display of grouped data by fetching only the required data on demand.
 
-To enable this feature, you need to set the [groupSettings.enableLazyLoading](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings/#enableLazyLoading) property to **true**. Also, you need to manage the state based on the initial grid action as follows.
+To enable this feature, the [groupSettings.enableLazyLoading](https://ej2.syncfusion.com/react/documentation/api/grid/groupsettings#enableLazyLoading) property must be set to `true`. In addition, the state must be managed based on the initial grid action as follows.
 
 ```typescript
 const groupOptions = { columns: ['ProductName'], enableLazyLoading: true };
 const state = { skip:0, take: 12, group: groupOptions};
 ```
 
-Based on the initial state, you can get the arguments as shown below
+Based on the initial state, the relevant arguments can be accessed as illustrated below:
 
 ![Lazy load group](../images/custom-binding-lazy-load-grouping.png)
 
-You can change the grid state as follows:
+The grid's state can be modified using the following approach:
 
 ```typescript
 const applyGrouping = (query: Query, group: Object[]) => {
@@ -347,19 +352,19 @@ The complete example is available in the [handling CRUD operations topic](#perfo
 
 ### Handling CRUD operations
 
-The Grid component provides powerful options for dynamically inserting, deleting, and updating records, enabling you to modify data directly within the grid. This feature is useful when you want to perform CRUD (**Create**, **Read**, **Update**, **Delete**) operations seamlessly.
+The Grid component provides powerful options for dynamically inserting, deleting, and updating records, enabling data to be modified directly within the grid. This feature is useful for performing CRUD (**Create**, **Read**, **Update**, **Delete**) operations seamlessly.
 
 **Integrating CRUD Operations**
 
 To implement CRUD operations using Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, follow these steps:
 
-1. **Configure grid settings:** Set up the necessary grid settings, such as allowing editing, adding, and deleting records. Define the toolbar options to facilitate your interactions.
+1. **Configure grid settings:** Set up the grid to allow editing, adding, and deleting operations, and specify the `toolbar` options that will provide access to these features.
 
-2. **Handle data state changes:** Utilize the [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/#datastatechange) event to respond to changes in the grid's data state. This event is triggered whenever you interact with the grid, such as paging or sorting.
+2. **Handle data state changes:** Utilize the [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datastatechange) event to respond to changes in the grid's data state. This event is triggered whenever the grid is interacted with, such as during paging or sorting.
 
-3. **Execute CRUD operations:** Within the event handler for [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/#datasourcechanged), implement logic to handle various CRUD actions based on the action or requestType property of the event arguments.
+3. **Execute CRUD operations:** Within the event handler for [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasourcechanged), implement logic to handle various CRUD actions based on the action or requestType property of the event arguments.
 
-4. **Call endEdit method:** After performing CRUD operations (adding, editing, or deleting), call the [endEdit](https://ej2.syncfusion.com/react/documentation/api/grid/#endedit) method to signal the completion of the operation and update the grid accordingly.
+4. **Call endEdit method:** After performing CRUD operations (adding, editing, or deleting), call the [endEdit](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#endedit) method to signal the completion of the operation and update the grid accordingly.
 
 **Insert operation**
 
@@ -449,20 +454,20 @@ const reducer = (state = initialState, action) => {
 
 **Step 1 : Install Dependencies**
 
-In your terminal, navigate to your project directory and run the following command to install the required packages:
+In the terminal, navigate to the project directory and run the following command to install the required packages:
 
-```
+```bash
 npm install --save redux react-redux
 ```
 The above command install the redux package, which is the core Redux library, and the react-redux package, which provides integration between Redux and React.
 
 **Step 2 : Set Up Redux Store**
 
-Once the dependencies are installed, you need to set up a Redux [store](https://redux.js.org/api/store) in your application. Add the following code to the **store.tsx** file.
+Once the dependencies are installed, a Redux [store](https://redux.js.org/api/store) must be set up in the application. Add the following code to the **store.tsx** file.
 
-1. Create a new file called `store.tsx` in your project's directory.
+1. Create a new file called `store.tsx` in the project's directory.
 
-2. In the `store.tsx` file, import the necessary Redux functions and create your store:
+2. In the **store.tsx** file, import the necessary Redux functions and create the store:
 
     ```ts
     import { createStore } from 'redux';
@@ -470,15 +475,15 @@ Once the dependencies are installed, you need to set up a Redux [store](https://
     const store = createStore(reducer);
     export default store;
     ```
-    In the above code, you import the `createStore` function from the `redux` package and your reducer from the appropriate file. Then, you create your Redux `store` using the `createStore` function, passing in your reducer function.
+    In this code, the `createStore` function is imported from the redux package along with the `reducer` from the appropriate file. The Redux `store` is then created using the `createStore` function, with the `reducer` passed as an argument.
 
-3. Now, you have set up your Redux store. You can customize it further by adding middle ware, enhancers, or other configurations as needed.
+3. The Redux store is now set up. It can be further customized by adding middleware, enhancers, or other configurations as needed.
 
 **Step 3 : Connect Redux Provider**
 
-To make the Redux `store` available to your React components, you need to wrap your application with the Redux [Provider](https://react-redux.js.org/api/provider) component. It uses the Redux `store` as a prop and connects all the components in its hierarchy. Follow these steps to connect the Redux provider:
+To make the Redux `store` available to the React components, the application must be wrapped with the Redux [Provider](https://react-redux.js.org/api/provider) component. This component receives the Redux `store` as a prop and connects all components within its hierarchy. Follow the steps below to connect the Redux Provider:
 
-1. Open your root component file (usually index.ts).
+1. Open the root component file (usually **index.ts**).
 
 2. Import the necessary dependencies:
 
@@ -488,7 +493,7 @@ To make the Redux `store` available to your React components, you need to wrap y
     import { Provider } from 'react-redux';
     import store from './store';
     ```
-3. Wrap your application component with the `Provider` component and pass the Redux `store` as a prop:
+3. Wrap the application component with the `Provider` component and pass the Redux `store` as a prop:
 
     ```ts
     ReactDOM.render(
@@ -502,9 +507,9 @@ To make the Redux `store` available to your React components, you need to wrap y
 
 According to Redux documentation, the Redux [actions](https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers#designing-actions) are plain JavaScript objects that describe changes to be made to the application's state. These actions are dispatched to the Redux `store`, and `reducers` handle them to update the state accordingly.
 
-The action type defines the name of the action that will be performed from your application. Each action type is a string that describes the specific operation being performed. 
+The action type defines the name of the action that will be performed from the application. Each action type is a string that describes the specific operation being executed.
 
-Here's an example of a Redux action definition for sort operation . you can add the code in the **action.tsx** file.
+The following example demonstrates a Redux action definition for a sort operation. This code can be added to the **action.tsx** file:
 
 ```ts
 export const Grid_FetchData = "Grid_FetchData";
@@ -518,9 +523,9 @@ export const fetchData = (state: any, query: Query) => ({
 
 **Step 5: Create a Reducer**
 
-According to the Redux documentation, the Redux [reducers](https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers#writing-reducers) are functions responsible for handling actions and updating the state of the application. Reducers specify how the state should change in response to different actions dispatched to the Redux `store`.
+According to the Redux documentation, the Redux [reducers](https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers#writing-reducers) are functions responsible for handling actions and updating the state of the application. Reducers specify the way the state should change in response to different actions dispatched to the Redux store.
 
-Here's an example of a Redux reducer definition for sorting operations. You can add the reducer code in the  **reducer.tsx** file.
+Here is an example of a Redux reducer definition for sorting operations. The reducer code can be added to the **reducer.tsx** file.
 
 ```ts
 const initialState = {
@@ -596,9 +601,10 @@ Add the following code to the **App.tsx** file.
 
 **Step 7: Fetching Grid Data using useEffect**
 
-To fetch grid data and populate the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource) property of the grid, you can use the [useEffect](https://react.dev/reference/react/useEffect) hook in React. The useEffect hook allows you to perform side effects, such as fetching data, after the component has rendered. Here's an example of how to fetch grid data using useEffect:
+To fetch grid data and populate the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasource) property of the grid, the [useEffect](https://react.dev/reference/react/useEffect) hook can be used in React. The `useEffect` hook enables performing side effects such as fetching data after the component has rendered. The following example demonstrates fetching grid data using `useEffect`:
 
 Add the following code to the **App.tsx** file.
+
 ```ts
   useEffect(() => {
     if (gridInstance) {
@@ -607,7 +613,7 @@ Add the following code to the **App.tsx** file.
   },[state.data]) 
 ```
 
-The following example demonstrates how to bind custom data to handle grid actions and CRUD operation. 
+The following example demonstrates the process of binding custom data to handle grid actions and CRUD operations. 
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -643,9 +649,9 @@ The following example demonstrates how to bind custom data to handle grid action
 
 Export all records is especially beneficial when dealing with large datasets that need to be exported for offline analysis or sharing.
 
-By default, the Syncfusion React Grid component exports only the records on the current page. However, the Grid component allows you to export all records, including those from multiple pages, by configuring the [pdfExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties) and [excelExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties).
+By default, the Syncfusion React Grid component exports only the records available on the current page. However, the Grid component also supports exporting all records—including those spanning multiple pages—by configuring the [pdfExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties) and [excelExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties).
 
-To export all records, including those from multiple pages, configure the [pdfExportProperties.dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/#datasource) for PDF exporting and [excelExportProperties.dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties#datasource) for Excel exporting within the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbarclick) event handler. Inside this event, set the `dataSource` property of `pdfExportProperties` and `excelExportProperties` for PDF and Excel exporting to include all records.
+To export all records, including those from multiple pages, configure the [pdfExportProperties.dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/pdfexportproperties#datasource) for PDF exporting and [excelExportProperties.dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/excelexportproperties#datasource) for Excel exporting within the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid#toolbarclick) event handler. Inside this event, set the `dataSource` property of `pdfExportProperties` and `excelExportProperties` for PDF and Excel exporting to include all records.
 
 **Excel Exporting**
 
@@ -710,7 +716,7 @@ To export the complete Grid data to PDF document, utilize the `pdfExportProperti
 
 > For further customization on Grid export, refer to the respective documentation for [PDF exporting](https://ej2.syncfusion.com/react/documentation/grid/pdf-export/pdf-export-options) and [Excel exporting](https://ej2.syncfusion.com/react/documentation/grid/excel-export/excel-export-options)
 
-The following code example shows how to export all records in client side:
+The following code example shows the process of exporting all records on the client side:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -741,9 +747,9 @@ The following code example shows how to export all records in client side:
 
 ## Sending additional parameters to the server
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component allows you to include custom parameters in data requests. This feature is particularly useful when you need to provide additional information to the server enhanced processing.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component allows custom parameters to be included in data requests. This feature is particularly useful when additional information must be provided to the server for enhanced processing.
 
-By utilizing the [query](https://ej2.syncfusion.com/react/documentation/api/grid/#query) property of the grid along with the `addParams` method of the Query class, you can easily incorporate custom parameters into data requests for every grid action.
+By using the [query](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#query) property of the Grid together with the `addParams` method of the Query class, custom parameters can be seamlessly incorporated into data requests for every grid action.
 
 To enable custom parameters in data requests for the grid component, follow these steps:
 
@@ -751,11 +757,11 @@ To enable custom parameters in data requests for the grid component, follow thes
 
 **2. Initialize the Query Object:** Create a new instance of the Query class and use the addParams method to add the custom parameters.
 
-**3. Handle Data State Changes:** If you need to dynamically update the data based on interactions, implement the dataStateChange event handler to execute the query with the updated state.
+**3. Handle Data State Changes:** To dynamically update data based on interactions, implement the `dataStateChange` event handler to execute the query with the updated state.
 
 **4. Execute Data Request:** In the service, execute the data request by combining the custom parameters with other query parameters such as paging and sorting.
 
-The following example demonstrates how to send additional parameters to the server.
+The following example demonstrates the process of sending additional parameters to the server.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -820,11 +826,11 @@ export default App;
 
 ## Fetch result from the DataManager query using external button 
 
-By default, Syncfusion React Grid automatically binds a remote data source using the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started). However, in some scenarios, you may need to fetch data dynamically from the server using a query triggered by an external button. This approach allows greater control over when and how data is loaded into the Grid.
+By default, the Syncfusion React Grid automatically binds a remote data source using the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started). However, in certain scenarios, data may need to be fetched dynamically from the server using a query triggered by an external button. This approach provides greater control over when data is loaded into the Grid.
 
-To achieve this, you can use the `executeQuery` method of `DataManager` with a **Query** object. This method allows you to run a custom query and retrieve results dynamically.
+To achieve this, the `executeQuery` method of `DataManager` can be used along with a query object. This method enables running a custom query and retrieving results dynamically.
 
-The following example demonstrates how to fetch data from the server when an external button is clicked and display a status message indicating the data fetch status:
+The following example demonstrates the process of fetching data from the server when an external button is clicked and displaying a status message indicating the data fetch status.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

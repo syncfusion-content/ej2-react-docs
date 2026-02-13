@@ -37,7 +37,7 @@ function App() {
           <ColumnDirective field='Country' headerText='Country' width='150' />
           <ColumnDirective field='Mainfieldsofinvention' headerText='Main fields of invention' width='150' />
           <ColumnDirective field='Number of INPADOC patents' headerText='Number of INPADOC patents' width='150' />
-          <ColumnDirective field='TotalPatents' headerText='TotalPatents' valueAccessor={valueAccess} width='150' visible={false} />
+          <ColumnDirective field='TotalPatents' headerText='Total Patents' valueAccessor={valueAccess} width='150' visible={false} />
         </ColumnsDirective>
         <Inject services={[Toolbar, ExcelExport, Page]} />
       </GridComponent>

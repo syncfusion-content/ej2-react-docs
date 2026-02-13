@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Custom Aggregate | Syncfusion
-description: Learn to create custom aggregate functions in Syncfusion React Grid (EJ2) for distinct, conditional and advanced summary logic in footer and group sections.
+description: React Grid custom aggregate enables defining custom aggregate functions, applying them to columns, and displaying computed summaries.
 control: Custom aggregate 
 platform: ej2-react
 documentation: ug

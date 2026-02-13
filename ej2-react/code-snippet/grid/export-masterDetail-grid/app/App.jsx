@@ -47,7 +47,7 @@ function App() {
           <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' textAlign='Right' />
           <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
           <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
-          <ColumnDirective field='ShipAddress' headerText='ShipAddress' width='150' />
+          <ColumnDirective field='ShipAddress' headerText='Ship Address' width='150' />
         </ColumnsDirective>
         <Inject services={[ExcelExport, Toolbar]} />
       </GridComponent>

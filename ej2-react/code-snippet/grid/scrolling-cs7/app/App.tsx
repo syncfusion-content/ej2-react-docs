@@ -38,10 +38,10 @@ function App() {
     <GridComponent dataSource={data} height="315" width="100%"
       rowSelected={rowSelected} ref={g => grid = g}>
       <ColumnsDirective>
-        <ColumnDirective field='OrderID' headerText='OrderID' width='120' textAlign='Right' />
-        <ColumnDirective field='CustomerID' headerText='CustomerID' width='150' />
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
         <ColumnDirective field='Freight' headerText='Freight' width='120' format='C2' />
-        <ColumnDirective field='ShipAddress' headerText='ShipAddress' width='150' />
+        <ColumnDirective field='ShipAddress' headerText='Ship Address' width='150' />
       </ColumnsDirective>
     </GridComponent></div>)
 };

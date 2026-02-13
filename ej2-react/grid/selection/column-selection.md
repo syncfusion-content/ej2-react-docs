@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Column selection | Syncfusion
-description: Learn about column selection in Syncfusion React Grid (EJ2) to select single or multiple columns using methods and keyboard interactions.
+description: React Grid column selection supports selecting entire columns, configuration options, and examples for applying operations or styling to selected columns.
 control: Column selection 
 platform: ej2-react
 documentation: ug

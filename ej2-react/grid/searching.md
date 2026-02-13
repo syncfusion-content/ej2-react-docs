@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Searching | Syncfusion
-description: Learn here all about Searching in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+description: React Grid searching covers built‑in search functionality, configuration options, case sensitivity, and examples to find and highlight data across the grid.
 control: Searching 
 platform: ej2-react
 documentation: ug

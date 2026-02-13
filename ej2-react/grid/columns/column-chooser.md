@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column chooser in React Grid component | Syncfusion
-description: Learn here all about Column chooser in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Column Chooser | Syncfusion
+description: React Grid column chooser supports dynamic column visibility, a customizable chooser UI, and options to persist selected visibility preferences.
 control: Column chooser 
 platform: ej2-react
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Inline Editing | Syncfusion
-description: Learn about inline editing in the Syncfusion React Grid component for seamless direct cell value modification within the grid.
+description: React Grid inline editing allows direct row edits, auto field updates, conditional control, CRUD actions, confirmations, and flexible add/delete.
 control: In line editing 
 platform: ej2-react
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Custom Toolbar | Syncfusion
-description: Learn about custom toolbar in Syncfusion React Grid (EJ2) to create a customized toolbar layout and functionality using toolbarTemplate property.
+description: React Grid toolbar items support built-in and custom actions, layout customization, and event handling for an adaptable and effective toolbar.
 control: Custom Toolbar
 platform: ej2-react
 documentation: ug

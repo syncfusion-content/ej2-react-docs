@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React Grid getting started with Next.js | Syncfusion
-description: Check out and learn effective ways to integrate Syncfusion React UI components into Next.js projects seamlessly.
+title: React Grid - Next.js Getting Started | Syncfusion
+description: React Grid Next.js getting started guides server-side rendering, dynamic imports, and setup steps to use the Grid component in Next.js applications.
 control: Next.js
 platform: ej2-react
 documentation: ug

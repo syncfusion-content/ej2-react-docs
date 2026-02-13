@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sorting in React Grid component | Syncfusion
-description: Learn here all about Sorting in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Sorting | Syncfusion
+description: React Grid sorting explains single and multi-column sorting, custom comparers, and UI options to control sort behavior and indicator rendering.
 control: Sorting 
 platform: ej2-react
 documentation: ug
@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
  
 # Sorting in React Grid Component
 
-The Grid component provides built-in support for sorting data-bound columns in ascending or descending order. To enable sorting in the grid, set the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) property to "true".
+The Grid component provides built-in support for sorting data-bound columns in ascending or descending order. To enable sorting in the grid, set the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) property to `true`.
 
-Sorting a particular column is accomplished by clicking on its column header. Each click on the header toggles the sort order between "Ascending" and "Descending".
+Sorting a particular column is accomplished by clicking on its column header. Each click on the header toggles the sort order between `Ascending` and `Descending`.
 
-To use the sorting feature, inject the "Sort" module in the grid.
+To use the sorting feature, inject the `Sort` module in the grid.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -33,9 +33,9 @@ To use the sorting feature, inject the "Sort" module in the grid.
 
  {% previewsample "page.domainurl/code-snippet/grid/sort-cs1" %}
 
-> * Grid column sorted in "Ascending" order. Clicking an already sorted column toggles the sort direction.
+> * Grid column sorted in `Ascending` order. Clicking an already sorted column toggles the sort direction.
 > * Sorting can be applied and cleared using the [sortColumn](https://ej2.syncfusion.com/react/documentation/api/grid#sortcolumn) and [clearSorting](https://ej2.syncfusion.com/react/documentation/api/grid#clearsorting) methods.
-> * To disable sorting for a specific column, set the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowsorting) property to "false".
+> * To disable sorting for a specific column, set the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowsorting) property to `false`.
 
 ## Initial sorting
 
@@ -64,12 +64,12 @@ The following example demonstrates setting [sortSettings.columns](https://ej2.sy
 
 ## Multi-column sorting
 
-The Grid component supports multi-column sorting, allowing multiple columns to be sorted simultaneously. To enable multi-column sorting, set the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) and the [allowMultiSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowmultisorting) properties to "true". This enables sorting of multiple columns by holding the <kbd>CTRL</kbd> key and clicking the column headers. This feature is useful for sorting data based on multiple criteria to analyze it in various ways.
+The Grid component supports multi-column sorting, allowing multiple columns to be sorted simultaneously. To enable multi-column sorting, set the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) and the [allowMultiSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowmultisorting) properties to `true`. This enables sorting of multiple columns by holding the <kbd>CTRL</kbd> key and clicking the column headers. This feature is useful for sorting data based on multiple criteria to analyze it in various ways.
 
 To clear multi-column sorting for a particular column, press <kbd>Shift</kbd> while clicking the column header.
 
-> * The [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) must be "true" while enabling multi-column sort.
-> * Set [allowMultiSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowmultisorting) property as "false" to disable multi-column sorting.
+> * The [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) must be `true` while enabling multi-column sort.
+> * Set [allowMultiSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowmultisorting) property as `false` to disable multi-column sorting.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -92,7 +92,7 @@ To clear multi-column sorting for a particular column, press <kbd>Shift</kbd> wh
 
 The Grid component provides the ability to prevent sorting for a particular column. This is useful when certain columns should not be included in the sorting process. 
 
-This is achieved by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowsorting) property of the particular column to "false". 
+This is achieved by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowsorting) property of the particular column to `false`. 
 
 The following example demonstrates disabling sorting for "CustomerID" column.
 
@@ -121,9 +121,9 @@ The first click on a column header sorts the column in ascending order. A second
 
 ## Custom sorting 
 
-The Grid component supports customizing the default sort action for a column by defining the [sortComparer](https://ej2.syncfusion.com/react/documentation/api/grid/column#sortcomparer) property. The sort comparer function works similarly to the [Array.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) comparer function, allowing custom sorting logic to be defined for a specific column.
+The Grid component supports customizing the default sort action for a column by defining the [sortComparer](https://ej2.syncfusion.com/react/documentation/api/grid/column#sortcomparer) property. The `sortComparer` function works similarly to the [Array.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) comparer function, allowing custom sorting logic to be defined for a specific column.
 
-The following example demonstrates defining a custom sort comparer function for the "Customer ID" column.
+The following example demonstrates defining a custom `sortComparer` function for the "Customer ID" column.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -146,9 +146,9 @@ The following example demonstrates defining a custom sort comparer function for 
 
 ### Display null values always at bottom 
 
-By default, null values in a Syncfusion<sup style="font-size:70%">&reg;</sup> Grid are displayed at the top when sorting in descending order and at the bottom when sorting in ascending order. However, null values can be configured to always display at the bottom of the grid regardless of sort direction. This is achieved by utilizing the [column.sortComparer](https://ej2.syncfusion.com/react/documentation/api/grid/column#sortcomparer) method. This feature is particularly useful when working with data sets where null values need to be clearly separated from actual data entries.
+By default, "null" values in a Syncfusion<sup style="font-size:70%">&reg;</sup> Grid are displayed at the top when sorting in descending order and at the bottom when sorting in ascending order. However, "null" values can be configured to always display at the bottom of the grid regardless of sort direction. This is achieved by utilizing the [column.sortComparer](https://ej2.syncfusion.com/react/documentation/api/grid/column#sortcomparer) method. This feature is particularly useful when working with data sets where "null" values need to be clearly separated from actual data entries.
 
-The example below demonstrates displaying null values at the bottom of the grid while sorting the "OrderDate" column in both ascending and descending order.
+The example below demonstrates displaying "null" values at the bottom of the grid while sorting the "OrderDate" column in both ascending and descending order.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -172,7 +172,7 @@ The example below demonstrates displaying null values at the bottom of the grid 
 
 On touch screen devices, tapping a grid header sorts the selected column and displays a popup ![Sorting](images/sorting.jpg) for multi-column sorting. Tapping the popup enables sorting of multiple columns ![Multi Sorting](images/msorting.jpg). Additional columns can then be sorted by tapping their headers.
 
-> The [allowMultiSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowmultisorting) and [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) properties must be "true" for the popup to display.
+> The [allowMultiSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowmultisorting) and [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) properties must be `true` for the popup to display.
 
 The following screenshot represents a grid touch sorting in the device.
 
@@ -205,7 +205,7 @@ The following example demonstrates sorting with a foreign key column enabled, wh
 
  {% previewsample "page.domainurl/code-snippet/grid/sort-cs7" %}
 
-> The "ForeignKey" module must be injected in the grid to ensure its availability throughout the application.
+> The `ForeignKey` module must be injected in the grid to ensure its availability throughout the application.
 
 **Sort foreign key column based on text for remote data**
 
@@ -289,7 +289,7 @@ public class ItemsController : ODataController
 
 Culture-based sorting in the Grid is achieved by utilizing the [locale](https://ej2.syncfusion.com/react/documentation/api/grid#locale) property. By setting the `locale` property to the desired culture code, sorting is enabled for that specific culture. This applies locale-specific sorting rules and ensures accurate ordering for different languages and regions.
 
-In the following example, sorting is performed based on the ""ar"" locale using the [sortComparer](https://ej2.syncfusion.com/react/documentation/api/grid/column#sortcomparer) property.
+In the following example, sorting is performed based on the "ar" locale using the [sortComparer](https://ej2.syncfusion.com/react/documentation/api/grid/column#sortcomparer) property.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -310,7 +310,7 @@ In the following example, sorting is performed based on the ""ar"" locale using 
 
 ## customizing sort icon
 
-Sort icon customization in the Grid is accomplished by overriding the default grid classes ".e-icon-ascending" and ".e-icon-descending" with custom content using CSS. The desired icons or symbols are specified using the "content" property as shown below:
+Sort icon customization in the Grid is accomplished by overriding the default grid classes `.e-icon-ascending` and `.e-icon-descending` with custom content using CSS. The desired icons or symbols are specified using the `content` property as shown below:
 
 ```css
 .e-grid .e-icon-ascending::before {
@@ -346,9 +346,9 @@ The Grid component provides flexibility in sorting based on external interaction
 
 ### Add sort columns
 
-External column sorting is accomplished using the [sortColumn](https://ej2.syncfusion.com/react/documentation/api/grid#sortcolumn) method with parameters "columnName", "direction", and "isMultiSort". This method enables programmatic sorting of a specific column based on specified requirements.
+External column sorting is accomplished using the [sortColumn](https://ej2.syncfusion.com/react/documentation/api/grid#sortcolumn) method with parameters `columnName`, `direction`, and `isMultiSort`. This method enables programmatic sorting of a specific column based on specified requirements.
 
-The following example demonstrates adding sort columns to a grid. The "DropDownList" component selects the column and sort direction. When an external button is clicked, the [sortColumn](https://ej2.syncfusion.com/react/documentation/api/grid#sortcolumn) method is called with the specified "columnName", "direction", and "isMultiSort" parameters. 
+The following example demonstrates adding sort columns to a grid. The `DropDownList` component selects the column and sort direction. When an external button is clicked, the [sortColumn](https://ej2.syncfusion.com/react/documentation/api/grid#sortcolumn) method is called with the specified `columnName`, `direction`, and `isMultiSort` parameters. 
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -463,7 +463,7 @@ export default App;
 
 External removal of sort columns is accomplished using the `removeSortColumn` method provided by the Grid component. This method removes the sorting applied to a specific column.
 
-The following example demonstrates removing sort columns. The "DropDownList" component selects the column. When an external button is clicked, the `removeSortColumn` method removes the selected sort column.
+The following example demonstrates removing sort columns. The `DropDownList` component selects the column. When an external button is clicked, the `removeSortColumn` method removes the selected sort column.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -641,11 +641,11 @@ export default App;
 
 The Grid component provides two events that are triggered during the sorting action such as [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid#actionbegin) and [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete). These events enable custom actions to be performed before and after the sorting action completes.
 
-1. **actionBegin**: [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid#actionbegin) event is triggered before the sorting action begins. It enables performing necessary operations before the sorting action takes place. This event provides a parameter containing the current grid state, including the current sorting column, direction, and data.
+1. **actionBegin**: `actionBegin` event is triggered before the sorting action begins. It enables performing necessary operations before the sorting action takes place. This event provides a parameter containing the current grid state, including the current sorting column, direction, and data.
 
-2. **actionComplete**: [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) event is triggered after the sorting action completes. It enables performing necessary operations after the sorting action has taken place. This event provides a parameter containing the current grid state, including the sorted data and column information.
+2. **actionComplete**: `actionComplete` event is triggered after the sorting action completes. It enables performing necessary operations after the sorting action has taken place. This event provides a parameter containing the current grid state, including the sorted data and column information.
 
-The following example demonstrates the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid#actionbegin) and [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) events during sorting. The `actionBegin` event cancels sorting of the OrderID column. The `actionComplete` event displays a message.
+The following example demonstrates the `actionBegin` and `actionComplete` events during sorting. The `actionBegin` event cancels sorting of the OrderID column. The `actionComplete` event displays a message.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -728,4 +728,4 @@ export default App;
 
 ## See also
 
-* [How to change loading indicator in React Grid](./data-binding/data-binding#loading-animation)
+[How to change loading indicator in React Grid](./data-binding/data-binding#loading-animation)

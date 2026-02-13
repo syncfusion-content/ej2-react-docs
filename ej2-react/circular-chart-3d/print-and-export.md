@@ -16,14 +16,14 @@ The rendered 3D Circular Chart can be printed directly from the browser by calli
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/print/print-cs1/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/print/print-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/print/print-cs1/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/print/print-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/print/print-cs1" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/print/print-cs1" %}
 
 ## Export
 
@@ -31,11 +31,11 @@ The rendered 3D Circular Chart can be exported to `JPEG`, `PNG`, or `SVG` format
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/print/export/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/print/export/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/print/export/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/print/export/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/print/export" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/print/export" %}

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Persisting Data in Server | Syncfusion
-description: Learn here all about Persisting data in server in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+description: React Grid persisting data in server supports sending CRUD requests, handling server responses, and synchronizing grid updates using various data adaptors.
 control: Persisting data in server 
 platform: ej2-react
 documentation: ug

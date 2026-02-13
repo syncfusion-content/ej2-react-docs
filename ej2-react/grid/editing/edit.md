@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Editing | Syncfusion
-description: Explore Syncfusion React Grid editing features including CRUD operations, edit modes, templates, and external editing options.
+description: React Grid editing enables features, actions, modes, toolbar configs, column rules, templates, confirmations, and external CRUD workflows.
 control: Edit 
 platform: ej2-react
 documentation: ug
@@ -257,8 +257,8 @@ export default App;
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs18" %}
 
-> * To disable editing for a specific row using the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid#actionbegin) event, refer to [Disable editing for a particular row](https://ej2.syncfusion.com/react/documentation/grid/editing/in-line-editing#disable-editing-for-a-particular-row).
-> * To disable editing for a particular cell using the [cellEdit](https://ej2.syncfusion.com/react/documentation/api/grid#celledit) event, refer to [Disable editing for a particular cell](https://ej2.syncfusion.com/react/documentation/grid/editing/batch-editing#disable-editing-for-a-particular-cell).
+> * To disable editing for a specific row using the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid#actionbegin) event, refer to [Disable editing for a particular row](./in-line-editing#cancel-edit-based-on-condition).
+> * To disable editing for a particular cell using the [cellEdit](https://ej2.syncfusion.com/react/documentation/api/grid#celledit) event, refer to [Disable editing for a particular cell](./batch-editing#cancel-edit-based-on-condition).
 
 ## Editing a template column
 
@@ -402,7 +402,7 @@ Use the [editTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/c
 
  {% previewsample "page.domainurl/code-snippet/grid/edit-foreign-key" %}
 
-## How to perform CRUD action externally
+## Perform CRUD action externally
 
 By default, the Grid provides built-in editing through toolbars and inline editing. However, CRUD operations can also be triggered programmatically from external controls (custom buttons, forms, or panels outside the grid). This allows full control over when and how data operations occur.
 

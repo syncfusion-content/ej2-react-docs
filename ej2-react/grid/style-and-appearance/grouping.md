@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Grouping in React Grid component | Syncfusion
-description: Learn here all about Grouping customization in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Grouping Style | Syncfusion
+description: React Grid grouping style covers visual customization of group headers, captions, and aggregates to present grouped data consistently.
 control: Grouping 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Grouping customization in React Grid component
+# Grouping Customization in React Grid Component
 
 The appearance of grouping elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component can be customized using CSS. Here are examples for customizing the group header, group expand/collapse icons, group caption row, and grouping indent cell.
 
@@ -60,7 +60,7 @@ The `.e-groupcaption` class is used to style the group caption row element, and 
 
 ## Customizing the grouping indent cell
 
-The `.e-indentcell` class is used to style the indent cell that appears in grouped Grid rows.
+The `.e-indentcell` class is used to style the indent cell that appears in grouped grid rows.
 
 ```css
 .e-grid .e-indentcell {

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Smart Grid in React Grid component | Syncfusion
-description: Learn here all about Smart Grid in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Smart Grid | Syncfusion
+description: React Grid Smart Grid adds intelligent features that automate tasks, boost efficiency, and offer configuration options for enabling smart behaviors.
 control: Smart Grid 
 platform: ej2-react
 documentation: ug

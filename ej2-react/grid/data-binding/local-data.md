@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Local data in React Grid component | Syncfusion
-description: Learn here all about Local data in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Local Data Binding | Syncfusion
+description: Local data binding enables the React Grid to work with in-memory datasets, as well as fetch and display data from remote services through external requests.
 control: Local data 
 platform: ej2-react
 documentation: ug
@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Local data in React Grid component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid offers a straightforward way to bind local data, such as arrays or JSON objects, to the grid component. This feature allows you to display and manipulate data within the grid without the need for external server calls, making it particularly useful for scenarios where you're working with static or locally stored data.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid provides a straightforward way to bind local data, such as arrays or JSON objects, to the grid component. This feature allows data to be displayed and manipulated within the grid without the need for external server calls, making it particularly useful for scenarios involving static or locally stored data.
 
-To achieve this, you can assign a JavaScript object array to the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource) property. Additionally, you have an option to provide the local data source using an instance of the **DataManager**.
+Assign a JavaScript object array to the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasource) property. Optionally, provide the local data source using an instance of the `DataManager`.
 
-The following example demonstrates how to utilize the local data binding feature in the React Grid component:
+The following example demonstrates utilizing the local data binding feature in the React Grid component:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -33,17 +33,17 @@ The following example demonstrates how to utilize the local data binding feature
 
  {% previewsample "page.domainurl/code-snippet/grid/data-binding-cs3" %}
 
-## Binding data from excel file
+## Binding data from Excel files
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component allows you to import data from Excel files into your web application for display and manipulation within the grid. This feature streamlines the process of transferring Excel data to a web-based environment. This can be achieved by using [Uploader](https://ej2.syncfusion.com/react/documentation/uploader/getting-started) component [change](https://ej2.syncfusion.com/react/documentation/api/uploader#change) event.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid supports importing data from Excel files for display and manipulation within the grid. This streamlines transferring Excel data into a web-based environment. Use the [Uploader](https://ej2.syncfusion.com/react/documentation/uploader/getting-started) component's [change](https://ej2.syncfusion.com/react/documentation/api/uploader#change) event to handle the import.
 
-To import excel data in to grid, you can follow these steps:
+To import Excel data into the grid, follow these steps:
 
-1. Import excel file using Uploader component. 
-2. Parse the excel file data using **XLSX** library.
-3. Bind the JSON to the grid component. 
+1. Import the Excel file using the `Uploader` component.
+2. Parse the Excel file data using `XLSX` library.
+3. Bind the resulting JSON to the grid.
 
-The following example demonstrates how to import Excel data into the grid by utilizing the [Uploader](https://ej2.syncfusion.com/react/documentation/uploader/getting-started) component's `change` event along with the **XLSX** library:
+The following example demonstrates importing Excel data into the grid by utilizing the [Uploader](https://ej2.syncfusion.com/react/documentation/uploader/getting-started) component's `change` event along with the `XLSX` library:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -62,9 +62,9 @@ The following example demonstrates how to import Excel data into the grid by uti
 
  {% previewsample "page.domainurl/code-snippet/grid/imported-data" %}
 
-## Binding data and performing CRUD actions via Fetch request
+## Binding data and performing CRUD actions via Fetch requests
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid provides a seamless way to bind data from external sources using Fetch requests, facilitating CRUD (Create, Read, Update, Delete) operations with data retrieved from a server. This feature is particularly valuable for sending data to a server for database updates and asynchronously retrieving data without refreshing the entire web page.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid provides a seamless way to bind data from external sources using Fetch requests, facilitating CRUD (Create, Read, Update, Delete) operations with data retrieved from a server. This feature is particularly valuable for sending data to a server for database updates and for asynchronously retrieving data without refreshing the entire web page.
 
 To achieve data binding and perform CRUD actions using Ajax requests in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, follow these steps:
 
@@ -84,7 +84,7 @@ To achieve data binding and perform CRUD actions using Ajax requests in the Sync
     </div>
 ```
 
-**Step 2:** To bind data from an external Fetch request, utilize the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource) property of the Grid. Fetch data from the server and provide it to the `dataSource` property using the `onSuccess` event of the Fetch request.
+**Step 2:** To bind data from an external Fetch request, utilize the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasource) property of the Grid. Fetch data from the server and provide it to the `dataSource` property using the `onSuccess` event of the Fetch request.
 
 ```ts
 
@@ -164,7 +164,7 @@ public class HomeController : Controller
 
 ```
 
-**Step 3:** To perform CRUD actions, leverage the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid/#actionbegin) event. You can cancel the default CRUD operations by utilizing the **cancel** argument provided by this event. This allows you to dynamically call your server-side method using Fetch, along with the relevant data received from the `actionBegin` event, to update your server data accordingly.
+**Step 3:** To perform CRUD actions, leverage the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#actionbegin) event. The default CRUD operations can be canceled by utilizing the `cancel` argument provided by this event. This allows dynamic invocation of server-side methods using Fetch, along with the relevant data received from the `actionBegin` event, to update server data accordingly.
 
 A. To add a new record using Fetch requests, follow these steps:
 
@@ -312,7 +312,7 @@ C. To delete a record using an Fetch request, follow these steps:
 
 ```
 
-**Step 4:**  In the Fetch success event, you have the flexibility to utilize the Grid's [endEdit](https://ej2.syncfusion.com/react/documentation/api/grid/#endedit) and [deleteRecord](https://ej2.syncfusion.com/react/documentation/api/grid/#deleterecord) methods to handle the addition, editing, and deletion of corresponding data in the Grid. However, invoking these methods triggers the `actionBegin` event once again to save the changes in the Grid. To prevent this behavior and maintain control over the execution flow, you can employ a flag variable and manage it within the actionComplete and Fetch failure events: The following code snippet demonstrates this approach:
+**Step 4:**  In the Fetch success event, the Grid's [endEdit](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#endedit) and [deleteRecord](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#deleterecord) methods can be utilized to handle the addition, editing, and deletion of corresponding data in the Grid. However, invoking these methods triggers the `actionBegin` event once again to save the changes in the Grid. To prevent this behavior and maintain control over the execution flow, a flag variable can be employed and managed within the `actionComplete` and Fetch failure events. The following code snippet demonstrates this approach:
 
 ```ts
         const actionComplete = (e: EditEventArgs) => {
@@ -328,13 +328,13 @@ The following screenshot represents loading data when the button is clicked and 
 
 ![Fetch](../../grid/images/fetch.gif)
 
-### Display the loading indicator with local data. 
+### Display the loading indicator with local data
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows you to display a loading indicator while loading local data. This feature is useful when there is a delay in loading data from a local source, and you want to inform the you that the data is being fetched.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows the display of a loading indicator while loading local data. This is useful when data loading from a local source is delayed and a visual indication is required to show that data is being fetched.
 
-To display the loading indicator with local data, you need to set the [showSpinner](https://ej2.syncfusion.com/react/documentation/api/grid#showspinner) property to **true**. This property controls the visibility of the loading indicator.
+To display the loading indicator when using local data, set the [showSpinner](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#showspinner) property to `true`. This property controls the visibility of the loading indicator.
 
-The following example demonstrates how to display the loading indicator in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid using the [load](https://ej2.syncfusion.com/react/documentation/api/grid#load) and [created](https://ej2.syncfusion.com/react/documentation/api/grid/#created) events:
+The following example demonstrates displaying the loading indicator in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid using the [load](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#load) and [created](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#created) events:
 
 ```typescript
 
@@ -387,7 +387,7 @@ To achieve data binding and perform CRUD actions using Ajax requests in the Sync
     </div>
 ```
 
-**Step 2:** To bind data from an external AJAX request, utilize the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource) property of the Grid. Fetch data from the server and provide it to the `dataSource` property using the `onSuccess` event of the AJAX request.
+**Step 2:** To bind data from an external AJAX request, utilize the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasource) property of the Grid. Fetch data from the server and provide it to the `dataSource` property using the `onSuccess` event of the AJAX request.
 
 ```ts
    const click = () => {
@@ -465,7 +465,7 @@ public class HomeController : Controller
 
 ```
 
-**Step 3:** To perform CRUD actions, leverage the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid/#actionbegin) event. You can cancel the default CRUD operations by utilizing the **cancel** argument provided by this event. This allows you to dynamically call your server-side method using AJAX, along with the relevant data received from the `actionBegin` event, to update your server data accordingly.
+**Step 3:** To perform CRUD actions, leverage the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#actionbegin) event. The default CRUD operations can be canceled by utilizing the `cancel` argument provided by this event. This allows dynamic invocation of server-side methods using AJAX, along with the relevant data received from the `actionBegin` event, to update server data accordingly.
 
 A. To add a new record using AJAX requests, follow these steps:
 
@@ -620,7 +620,7 @@ C. To delete a record using an AJAX request, follow these steps:
 
 ```
 
-**Step 4:**  In the AJAX success event, you have the flexibility to utilize the Grid's [endEdit](https://ej2.syncfusion.com/react/documentation/api/grid/#endedit) and [deleteRecord](https://ej2.syncfusion.com/react/documentation/api/grid/#deleterecord) methods to handle the addition, editing, and deletion of corresponding data in the Grid. However, invoking these methods triggers the `actionBegin` event once again to save the changes in the Grid. To prevent this behavior and maintain control over the execution flow, you can employ a flag variable and manage it within the actionComplete and AJAX failure events: The following code snippet demonstrates this approach:
+**Step 4:** In the AJAX success event, the Grid's [endEdit](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#endedit) and [deleteRecord](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#deleterecord) methods can be utilized to handle the addition, editing, and deletion of corresponding data in the Grid. However, invoking these methods triggers the `actionBegin` event once again to save the changes in the Grid. To prevent this behavior and maintain control over the execution flow, a flag variable can be employed and managed within the `actionComplete` and AJAX failure events. The following code snippet demonstrates this approach:
 
 ```typescript
         const actionComplete = (e: EditEventArgs) => {
@@ -636,13 +636,13 @@ The following screenshot represents loading data when the button is clicked and 
 
 ![Ajax](../../grid/images/Ajaxreq.gif)
 
-### Display the loading indicator using AJAX. 
+### Display the loading indicator using AJAX
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows you to display a loading indicator while loading data using AJAX. This feature is useful when there is a delay in loading data from data , and you want to inform the you that the data is being fetched. This is particularly beneficial when working with large datasets or under conditions of slower internet connections.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows the display of a loading indicator while loading data using AJAX. This feature is useful when there is a delay in loading data from a data source, and a visual indication is required to show that the data is being fetched. This is particularly beneficial when working with large datasets or under conditions of slower internet connections.
 
-To display the loading indicator with local data, you need to set the [showSpinner](https://ej2.syncfusion.com/react/documentation/api/grid#showspinner) property to **true**. This property controls the visibility of the loading indicator.
+Set the [showSpinner](https://ej2.syncfusion.com/react/documentation/api/grid#showspinner) property to `true` to display the loading indicator. This property controls the spinner visibility.
 
-The following example demonstrates how to display the loading indicator in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid using the [load](https://ej2.syncfusion.com/react/documentation/api/grid#load) and [created](https://ej2.syncfusion.com/react/documentation/api/grid/#created) events:
+The following example demonstrates displaying the loading indicator in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid using the [load](https://ej2.syncfusion.com/react/documentation/api/grid#load) and [created](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#created) events:
 
 ```typescript
 
@@ -687,9 +687,9 @@ export default App;
 
 Showing a spinner during data loading in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid enhances the experience by providing a visual indication of the loading progress. This feature helps to understand that data is being fetched or processed.
 
-To show or hide a spinner during data loading in the grid, you can utilize the [showSpinner](https://ej2.syncfusion.com/react/documentation/api/grid/#showspinner) and [hideSpinner](https://ej2.syncfusion.com/react/documentation/api/grid/#hidespinner) methods provided by the Grid component.
+To show or hide a spinner during data loading in the grid, the [showSpinner](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#showspinner) and [hideSpinner](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#hidespinner) methods provided by the Grid component.
 
-The following example demonstrates how to show and hide the spinner during data loading using external buttons in a grid:
+The following example demonstrates showing and hiding the spinner during data loading using external buttons in a grid:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -788,17 +788,17 @@ export default App;
 
 ## Immutable mode  
 
-Immutable mode in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid is designed to optimize re-rendering performance by utilizing the object reference and [deep compare](https://dmitripavlutin.com/how-to-compare-objects-in-javascript/#4-deep-equality) concept. This mode ensures that when performing Grid actions, only the modified or newly added rows are re-rendered, preventing unnecessary re-rendering of unchanged rows. 
+Immutable mode in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid is designed to optimize re-rendering performance by utilizing the object reference and deep compare concept. This mode ensures that when performing Grid actions, only the modified or newly added rows are re-rendered, preventing unnecessary re-rendering of unchanged rows. 
 
-To enable this feature, you need to set the [enableImmutableMode](https://ej2.syncfusion.com/react/documentation/api/grid/#enableImmutableMode) property as **true**.
+Enable immutable mode by setting [enableImmutableMode](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#enableimmutablemode) to `true`.
 
-If immutable mode is enabled, when the datasource changes, only newly added rows are regenerated or reused. Consequently, the grid's [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/#querycellinfo) and [rowDataBound](https://ej2.syncfusion.com/react/documentation/api/grid/#rowdatabound) events trigger only for newly generated rows, not for existing rows. 
+If immutable mode is enabled, when the datasource changes, only newly added rows are regenerated or reused. Consequently, the grid's [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#querycellinfo) and [rowDataBound](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#rowdatabound) events trigger only for newly generated rows, not for existing rows. 
 
 If immutable mode is not enabled, both newly added rows and existing rows are regenerated or reused when the datasource changes. As a result, the `rowDataBound` and `queryCellInfo` events trigger for both newly added and existing rows. 
 
-> This feature uses the primary key value for data comparison. So, you need to provide the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column/#isprimarykey) column.
+> This feature uses the primary key value for data comparison. Therefore, the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) column must be provided.
 
-The following example demonstrates how to enable immutable mode in an React component. When add, delete, or update actions are performed, existing rows are not regenerated or reused, ensuring efficient rendering of only the modified or newly added rows:
+The following example demonstrates enabling immutable mode in an React component. When add, delete, or update actions are performed, existing rows are not regenerated or reused, ensuring efficient rendering of only the modified or newly added rows:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

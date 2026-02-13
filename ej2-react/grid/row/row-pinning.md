@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Row Pinning | Syncfusion
-description: Learn here all about Row Pinning in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+description: React Grid row pinning supports fixing rows at the top and handling interactions such as paging, selection, filtering, sorting, CRUD operations.
 control: Row Pinning 
 platform: ej2-react
 documentation: ug

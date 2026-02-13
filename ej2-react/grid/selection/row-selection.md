@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Row selection | Syncfusion
-description: Learn about row selection in Syncfusion React Grid (EJ2) to select single or multiple rows using methods and retrieve selected row data.
+description: React Grid row selection explains single and multi-row selection modes, keyboard behaviors, and events to handle selection changes.
 control: Row selection 
 platform: ej2-react
 documentation: ug

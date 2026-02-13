@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Foreign key column in React Grid component | Syncfusion
-description: Learn here all about Foreign key column in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Foreign Key Column | Syncfusion
+description: React Grid foreign key column supports mapping related data and binding local or remote sources to display associated values in grid cells. 
 control: Foreign key column 
 platform: ej2-react
 documentation: ug

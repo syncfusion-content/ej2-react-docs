@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Flask API Backend | Syncfusion.
-description: Learn how to connect Syncfusion React Data Grid to Flask backend for server-side paging, sorting, filtering, searching, and CRUD operations.
+description: Integrate Syncfusion React Data Grid with Flask backend to enable server‑side data operations and seamless CRUD functionality.
 control: Custom Binding
 platform: ej2-react
 documentation: ug
@@ -431,16 +431,16 @@ npm install @syncfusion/ej2-data --save
 Include the required CSS files in the **src/index.css** file:
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/bootstrap5.3.css';  
-@import '../node_modules/@syncfusion/ej2-buttons/styles/bootstrap5.3.css';  
-@import '../node_modules/@syncfusion/ej2-calendars/styles/bootstrap5.3.css';  
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/bootstrap5.3.css';  
-@import '../node_modules/@syncfusion/ej2-inputs/styles/bootstrap5.3.css';  
-@import '../node_modules/@syncfusion/ej2-navigations/styles/bootstrap5.3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/bootstrap5.3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/bootstrap5.3.css';
-@import '../node_modules/@syncfusion/ej2-notifications/styles/bootstrap5.3.css';
-@import '../node_modules/@syncfusion/ej2-react-grids/styles/bootstrap5.3.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';  
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';  
+@import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';  
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';  
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';  
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-react-grids/styles/tailwind3.css';
 ```
 
 For this project, the "Bootstrap 5.3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.

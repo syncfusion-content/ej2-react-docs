@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React Grid - ODataV4 Adaptor | Syncfusion
-description: Bind data and perform CRUD operations with ODataV4 in Syncfusion React Grid, enabling efficient remote filtering, sorting, paging, and data management.
+title: React Grid - OData v4 Adaptor | Syncfusion
+description: React Grid OData v4 adaptor supports integration with OData v4 services, applying query options, and configuring filtering, sorting, and paging operations.
 control: ODataV4 Adaptor
 platform: ej2-react
 documentation: ug

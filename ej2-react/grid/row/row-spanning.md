@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Row Spanning | Syncfusion
-description: Learn here all about Row spanning in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+description: React Grid row spanning describes merging cells across rows, configuration for rowspan behavior, and templates for multi-row presentations.
 control: Row spanning 
 platform: ej2-react
 documentation: ug

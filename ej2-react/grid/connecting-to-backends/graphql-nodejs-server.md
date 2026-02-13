@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Node.js GraphQL Backend | Syncfusion.
-description: Integrate Syncfusion React Grid with Node.js  and GraphQL backend to perform CRUD operations seamlessly.
+description: Integrate Syncfusion React Grid with Node.js and GraphQL backend to perform CRUD operations seamlessly.
 control: GraphQL Adaptor
 platform: ej2-react
 documentation: ug
@@ -24,6 +24,7 @@ domainurl: ##DomainURL##
 [Node.js](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs) is a fast and efficient JavaScript runtime built on Google’s V8 engine. It enables JavaScript to run on the server, making it a popular platform for building web APIs, real‑time applications, and modern backend services. Node.js offers a non‑blocking, event‑driven architecture that supports high performance and scalability.
 
 ## Prerequisites
+
 | Software / Package          | Recommended version          | Purpose                                 |
 |-----------------------------|------------------------------|--------------------------------------   |
 | Node.js                     | 20.x LTS or later            | Runtime                                 |
@@ -289,6 +290,7 @@ Previously, the CRUD mutation types were defined in the **schema.graphql** file.
     }
     ```
     **"createProduct" - code breakdown:**
+
     | Step | Purpose | Implementation |
     |------|---------|-----------------|
     | **1. Receive Input** | Read incoming product details sent from the client. | `value` parameter inside "createProduct" contains all submitted fields. |
@@ -311,6 +313,7 @@ Previously, the CRUD mutation types were defined in the **schema.graphql** file.
       }
     ```
     **"updateProduct" - code breakdown:**
+
     | Step | Purpose | Implementation |
     |------|---------|-----------------|
     | **1. Receive Input** | Accept the `key`, `keyColumn`, and updated field values. | Resolver parameters: `key`, `keyColumn`, and `value`. |
@@ -334,6 +337,7 @@ Previously, the CRUD mutation types were defined in the **schema.graphql** file.
       }
       ```
     **"deleteProduct" - code breakdown:**
+
     | Step | Purpose | Implementation |
     |------|---------|-----------------|
     | **1. Receive Key** | Backend receives only the primary key value from client. | Resolver parameters: `key`, `keyColumn` = '`productId` |
@@ -533,6 +537,7 @@ When the backend executes the query, it returns a JSON response in this exact st
 ```
 
 **Response structure explanation:**
+
 | Part | Purpose | Example |
 |------|---------|---------|
 | `data` | Root object returned for every successful GraphQL query. | Always present in successful response. |
@@ -630,6 +635,7 @@ During pagination, the `GraphQLAdaptor` sends the paging details though "skip" a
     ```
 
     **Page logic breakdown:**
+
     | Part                | Purpose |
     |---------------------|---------|
     | ``datamanager.skip``    | Number of records to `skip` before fetching data (e.g., `(pageIndex - 1) * pageSize`). |
@@ -711,6 +717,7 @@ When a search action is performed in the Grid, the `GraphQLAdaptor` sends the se
     ```
 
     **Search logic breakdown:**
+
     | Part | Purpose |
     |------|---------|
     | ``datamanager.search`` | JSON‑stringified array of search instructions sent by the Grid via `GraphQLAdaptor`. |
@@ -798,6 +805,7 @@ The `GraphQLAdaptor` automatically passes the sorting details to the server thro
     ```
 
     **Sorting logic breakdown:**
+
     | Part | Purpose |
     |------|---------|
     | ``datamanager.sorted`` | Array of sort instructions sent by the Grid via `GraphQLAdaptor`. |
@@ -957,6 +965,7 @@ The `GraphQLAdaptor` automatically passes the filter conditions to the server th
     ```
 
     **Filter logic breakdown:**
+
     | Part | Purpose |
     |------|---------|
     | ``dataManager.Where`` | List of filter conditions from the Grid. |
@@ -973,6 +982,7 @@ The `GraphQLAdaptor` automatically passes the filter conditions to the server th
     |``query.where(combinedPredicate)``| Applies the final merged Predicate to the Syncfusion Query.|
 
 **Supported Filter Operators:**
+
 | Operator | Purpose | Example |
 |----------|---------|---------|
 | ``equal`` | Exact match | "productId" equals PROD-ELC-0001 |
@@ -1202,6 +1212,7 @@ The application now provides a fully integrated "product" management workflow us
 
 ## See also
 
-- [Organizes related records by grouping rows based on column values, offering structured and categorized data views.](https://ej2.syncfusion.com/react/documentation/grid/grouping/grouping)
-- [Exports grid data to Excel format, enabling convenient data sharing and offline analysis.](https://ej2.syncfusion.com/react/documentation/grid/excel-export/excel-exporting)
-- [Integrates seamlessly with various filter UIs, ensuring consistent behavior across all grid configurations.](https://ej2.syncfusion.com/react/documentation/grid/filtering/filter-menu#custom-component-in-filter-menu)
+- [Graphql Adaptor Overview](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/graphql-adaptor)
+- [Types of Editing](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
+- [Excel Export](https://ej2.syncfusion.com/react/documentation/grid/excel-export/excel-exporting)
+- [Integration with Filter UIs](https://ej2.syncfusion.com/react/documentation/grid/filtering/filter-menu#custom-component-in-filter-menu)

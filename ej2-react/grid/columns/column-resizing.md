@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column resizing in React Grid component | Syncfusion
-description: Learn about column resizing feature in the Syncfusion React Grid component of Syncfusion Essential JS 2.
+title: React Grid - Column Resizing | Syncfusion
+description: React Grid column resizing enables manual and automatic width adjustments, multiple resize modes, and control over user or programmatic changes.
 control: Column resizing 
 platform: ej2-react
 documentation: ug

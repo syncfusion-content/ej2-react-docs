@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column template in React Grid component | Syncfusion
-description: Learn here all about Column template in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Column Template | Syncfusion
+description: React Grid column template supports creating custom cell content, editors, and formatting to render complex UI elements within grid columns.
 control: Column template 
 platform: ej2-react
 documentation: ug

@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Style and appearance in React Grid component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Style and Appearance | Syncfusion
+description: React Grid style and appearance provides a consolidated guide to theming, CSS customization, and style tokens to match application design.
 control: Style and appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in React Grid component
+# Style and Appearance in React Grid Component
 
 The Grid component offers various ways to customize its appearance using both default CSS and custom themes. Common approaches:
 
-**Default CSS overrides:**
+**Default CSS override:**
 
-Custom CSS can override the default styles of the Grid component. This allows changes to colors, fonts, paddings, and more. Inspect the generated HTML of the Grid using browser developer tools to identify the relevant CSS classes and styles.
+Custom CSS can override the default styles of the Grid component. This allows changes to colors, fonts, paddings, and more. Inspect the generated HTML of the grid using browser developer tools to identify the relevant CSS classes and styles.
 
-A basic example demonstrates how to override the header background color of the Grid:
+A basic example demonstrates how to override the header background color of the grid:
 
 ```css
 /* In the component's CSS file */
@@ -30,10 +30,10 @@ A basic example demonstrates how to override the header background color of the 
 
 **Using Theme Studio:**
 
-Syncfusion's Theme Studio tool allows creation of custom themes for all controls, including the Grid. This advanced approach defines a comprehensive set of styles to achieve a consistent look and feel across an application.
+Syncfusion's Theme Studio tool allows creation of custom themes for all controls, including the grid. This advanced approach defines a comprehensive set of styles to achieve a consistent look and feel across an application.
 
 1. Visit the [Syncfusion<sup style="font-size:70%">&reg;</sup> Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=material).
-2. Select the Grid control from the left panel.
+2. Select the grid control from the left panel.
 3. Customize various aspects of the control's appearance, such as colors, typography, and spacing.
 4. Download the generated CSS file and include it in the React project.
 

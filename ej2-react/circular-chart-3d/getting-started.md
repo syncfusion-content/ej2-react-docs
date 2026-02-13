@@ -97,14 +97,14 @@ By default, the pie series will be rendered when assigning the JSON data to the 
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/circular-chart/getting-started/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/getting-started/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/circular-chart/getting-started/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/getting-started/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/getting-started" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/getting-started" %}
 
 Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Global local in React Grid component | Syncfusion
-description: Learn here all about Global local in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Global and Local | Syncfusion
+description: React Grid global and local settings define component-level and app-wide configuration, localization, and scope control to ensure consistent grid behavior.
 control: Global local 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in React Grid component
+# Globalization in React Grid Component
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provides a Globalization feature (global and local) that enhances application accessibility for people from different regions and language backgrounds. Data can be displayed in preferred languages and formats, improving the overall user experience.
 
@@ -108,7 +108,7 @@ Locale key words |Text | Example
 `LessThanOrEqual` | Less Than Or Equal | ![Locale less than or equal](images/locale-less-than-or-equal.png)
 `GreaterThan` | Greater Than | ![Locale greater than](images/locale-greater-than.png)
 `GreaterThanOrEqual` | Greater Than Or Equal | ![Locale greater than or equal](images/locale-greater-than-or-equal.png)
-ChooseDate` | Choose a Date | ![Locale choose date](images/locale-choose-date.png)
+`ChooseDate` | Choose a Date | ![Locale choose date](images/locale-choose-date.png)
 `EnterValue` | Enter the value | ![Locale enter value](images/locale-enter-value.png)
 `SelectAll` | Select All | ![Locale select all](images/locale-select-all.png)
 `Blanks` | Blanks | ![Locale blanks](images/locale-blanks.png)
@@ -195,7 +195,7 @@ Locale key words |Text | Example
 `FirstPage` | First Page | ![Locale first page](images/locale-first-page.png)
 `LastPage` | Last Page | ![Locale last page](images/locale-last-page.png)
 `PreviousPage` | Previous Page | ![Locale previous page](images/locale-previous-page.png)
-`NextPage | Next Page | ![Locale next page](images/locale-next-page.png)
+`NextPage` | Next Page | ![Locale next page](images/locale-next-page.png)
 `SortAscending` | Sort Ascending | ![Locale sort ascending](images/locale-sort-ascending.png)
 `SortDescending` | Sort Descending | ![Locale sort descending](images/locale-sort-descending.png)
 `EditRecord` | Edit Record | ![Locale edit record](images/locale-edit-record.png)
@@ -363,7 +363,7 @@ function App() {
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
-        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' textAlign="Right" />
         <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
       </ColumnsDirective>
       <Inject services={[Page]} />
@@ -414,7 +414,7 @@ function App() {
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
-        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' textAlign="Right" />
         <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
       </ColumnsDirective>
       <Inject services={[Page]} />
@@ -501,7 +501,7 @@ This ensures that the Grid component uses the correct format strings for number,
 
 The Right-to-Left (RTL) feature switches text direction and layout from left-to-right to right-to-left. This feature is especially beneficial for interacting with the grid in languages that are written and read from right to left, such as "Arabic", "Farsi", "Urdu", and others. Enabling RTL significantly improves the experience and accessibility for such languages.
 
-Enable RTL by setting the [enableRtl](https://ej2.syncfusion.com/react/documentation/api/grid#enablertl) property to "true". This adjusts the Grid's text direction and layout for right-to-left languages.
+Enable RTL by setting the [enableRtl](https://ej2.syncfusion.com/react/documentation/api/grid#enablertl) property to `true`. This adjusts the Grid's text direction and layout for right-to-left languages.
 
 Please verify that JSON module support is enabled in **tsconfig.json** as mentioned earlier in this [guide](#loading-translations-for-de-culture).
 
@@ -534,7 +534,7 @@ function App() {
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
-        <ColumnDirective field='ShipCity' headerText='ShipCity' width='150' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
         <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
       </ColumnsDirective>
       <Inject services={[Page, Group, Sort, Toolbar, Filter, Edit, ColumnChooser, ColumnMenu, Reorder]} />
@@ -569,7 +569,7 @@ function App() {
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
-        <ColumnDirective field='ShipCity' headerText='ShipCity' width='150' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
         <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
       </ColumnsDirective>
       <Inject services={[Page, Group, Sort, Toolbar, Filter, Edit, ColumnChooser, ColumnMenu, Reorder]} />

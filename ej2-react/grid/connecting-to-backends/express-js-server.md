@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Express.js Backend Server | Syncfusion.
-description: Learn how to connect Syncfusion React Data Grid to Express.js backend for server-side paging, sorting, filtering, searching, and CRUD operations.
+description: Integrate Syncfusion React Data Grid with Express.js backend to enable server‑side data operations and seamless CRUD functionality.
 control: UrlAdaptor
 platform: ej2-react
 documentation: ug
@@ -521,16 +521,16 @@ Once dependencies are installed, include the required CSS files in the **src/ind
 
 ```css
 
-@import '@syncfusion/ej2-base/styles/material3.css';  
-@import '@syncfusion/ej2-buttons/styles/material3.css';  
-@import '@syncfusion/ej2-calendars/styles/material3.css';  
-@import '@syncfusion/ej2-dropdowns/styles/material3.css';  
-@import '@syncfusion/ej2-inputs/styles/material3.css';  
-@import '@syncfusion/ej2-navigations/styles/material3.css';
-@import '@syncfusion/ej2-popups/styles/material3.css';
-@import '@syncfusion/ej2-splitbuttons/styles/material3.css';
-@import '@syncfusion/ej2-notifications/styles/material3.css';
-@import '@syncfusion/ej2-react-grids/styles/material3.css';
+@import '@syncfusion/ej2-base/styles/tailwind3.css';  
+@import '@syncfusion/ej2-buttons/styles/tailwind3.css';  
+@import '@syncfusion/ej2-calendars/styles/tailwind3.css';  
+@import '@syncfusion/ej2-dropdowns/styles/tailwind3.css';  
+@import '@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '@syncfusion/ej2-notifications/styles/tailwind3.css';
+@import '@syncfusion/ej2-react-grids/styles/tailwind3.css';
 ```
 
 For this project, the "Material 3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.

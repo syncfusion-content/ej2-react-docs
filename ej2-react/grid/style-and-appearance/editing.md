@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Editing in React Grid component | Syncfusion
-description: Learn here all about Editing customization in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Editing Style | Syncfusion
+description: React Grid editing style supports customizing editor appearance and adjusting layouts to enhance the overall edit mode experience.
 control: Editing 
 platform: ej2-react
 documentation: ug
@@ -64,7 +64,7 @@ The `.e-gridform` and `.e-float-input` classes are used to customize the input e
 
 ## Customizing the command column buttons
 
-The  `.e-edit`, `.e-delete`, `.e-update`, and `.e-cancel-icon`  classes are used to style the respective command column buttons in the Grid.
+The  `.e-edit`, `.e-delete`, `.e-update`, and `.e-cancel-icon`  classes are used to style the respective command column buttons in the grid.
 
 ```css
 .e-grid .e-delete::before ,.e-grid .e-cancel-icon::before{

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Paging Customization in React Grid component | Syncfusion
-description: Learn here all about Paging customization in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Paging Style | Syncfusion
+description: React Grid paging style supports visual customization and template options for the pager UI, page size controls, and styling to match application themes.
 control: Paging 
 platform: ej2-react
 documentation: ug

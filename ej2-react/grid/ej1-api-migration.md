@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Ej1 api migration in React Grid component | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - EJ1 API Migration | Syncfusion
+description: React Grid EJ1 API migration guides the shift from EJ1 to EJ2 Grid APIs, mapping legacy options to updated patterns and outlining common breaking changes.
 control: Ej1 api migration 
 platform: ej2-react
 documentation: ug

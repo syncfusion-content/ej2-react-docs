@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Command Column Editing | Syncfusion
-description: Learn how to implement command column editing in React Grid for streamlined CRUD operations with built-in and custom command buttons.
+description: React Grid command column editing supports action columns with edit, save, and delete commands, customizable templates, and event handling for data operations.
 control: Command column editing 
 platform: ej2-react
 documentation: ug

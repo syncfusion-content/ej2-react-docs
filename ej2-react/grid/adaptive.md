@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Adaptive in React Grid component | Syncfusion
-description: Learn here all about Adaptive in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Adaptive | Syncfusion
+description: React Grid adaptive explains responsive behavior, layout adjustments, and configuration to optimize grid usability on mobile and small screens with examples.
 control: Adaptive 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adaptive in React Grid component
+# Adaptive in React Grid Component
 
 The Grid user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, column chooser, column menu(supports only when the `rowRenderingMode` as Horizontal) and edit dialogs adaptively and have an option to render the grid row elements in the vertical direction.
 
@@ -39,7 +39,7 @@ Additionally, apply the `e-bigger` class to the grid's parent element to enable 
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid introduces vertical row rendering, which displays row elements in a vertical order. This presentation enhances data visibility in scenarios where a vertical layout is preferable. Set the [rowRenderingMode](https://ej2.syncfusion.com/react/documentation/api/grid#rowrenderingmode) property to `Vertical`.
 
->The default row rendering mode is **Horizontal**.
+>The default row rendering mode is `Horizontal`.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -213,7 +213,7 @@ A snapshot of the adaptive grid displaying enabled paging along with a pager dro
 
 ![AdaptivePagerDropdown](./images/PagerDropdown_Adaptive.gif)
 
-> The Column Menu feature, which includes grouping, sorting, autofit, filter, and column chooser, is exclusively supported for the Grid in **Horizontal** [rowRenderingMode](https://ej2.syncfusion.com/react/documentation/api/grid#rowRenderingMode).
+> The Column Menu feature, which includes grouping, sorting, autofit, filter, and column chooser, is exclusively supported for the grid in `Horizontal` [rowRenderingMode](https://ej2.syncfusion.com/react/documentation/api/grid#rowRenderingMode).
 
 ## Rendering an adaptive layout for smaller screens alone
 

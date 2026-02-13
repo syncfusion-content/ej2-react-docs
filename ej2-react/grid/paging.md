@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Paging | Syncfusion
-description: Enable paging in Syncfusion React Grid (EJ2) with customizable page size, dropdown, pager template, query string support, navigation, and events.
+description: React Grid paging supports client and server paging with options, templates, and performance features to navigate large data sets efficiently.
 control: Paging 
 platform: ej2-react
 documentation: ug
@@ -61,7 +61,7 @@ Customize the pager options in the Syncfusion<sup style="font-size:70%">&reg;</s
 
 The Grid supports adjusting the number of records shown per page for flexible data presentation. The [pageSettings.pageSize](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings#pagesize) property defines the initial number of records shown, replacing the default value of "12".
 
-The following example demonstrates modifing the page size dynamically using a textbox value and an external button click:
+The following example demonstrates modifying the page size dynamically using a textbox value and an external button click:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -151,7 +151,7 @@ export default App;
 
 ### Change page count
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports customizing the number of page links shown in the pager through the [pageSettings.pageCount](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings#pagecount) property. The default value is 8, and it can be adjusted to enhance navigation, especially when handling large datasets.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports customizing the number of page links shown in the pager through the [pageSettings.pageCount](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings#pagecount) property. The default value is "8", and it can be adjusted to enhance navigation, especially when handling large datasets.
 
 The example below demonstrates updating the page count dynamically using a textbox value and an external button click:
 

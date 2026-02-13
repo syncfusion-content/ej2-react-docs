@@ -16,14 +16,14 @@ To render a pie series, inject the `PieSeries3D` into the service.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/pie/pie-cs1/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/pie/pie-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/pie/pie-cs1/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/pie/pie-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/pie/pie-cs1" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/pie/pie-cs1" %}
 
 ## Radius customization
 
@@ -31,14 +31,14 @@ By default, the radius of the pie series will be 80% of the size, which is the m
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/pie/pie-cs2/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/pie/pie-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/pie/pie-cs2/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/pie/pie-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/pie/pie-cs2" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/pie/pie-cs2" %}
 
 ## Various radius pie chart
 
@@ -46,14 +46,14 @@ You can assign different radii to each slice of the pie by fetching the radius f
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/pie/pie-cs3/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/pie/pie-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/pie/pie-cs3/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/pie/pie-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/pie/pie-cs3" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/pie/pie-cs3" %}
 
 ## Donut chart
 
@@ -61,14 +61,14 @@ To achieve a donut in the pie series, customize the `innerRadius` property of th
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/pie/pie-cs4/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/pie/pie-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/pie/pie-cs4/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/pie/pie-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/pie/pie-cs4" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/pie/pie-cs4" %}
 
 ## Text and fill color mapping
 
@@ -76,14 +76,14 @@ The text and the fill color from the data source can be mapped to the 3D Circula
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/pie/pie-cs5/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/pie/pie-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/pie/pie-cs5/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/pie/pie-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/pie/pie-cs5" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/pie/pie-cs5" %}
 
 ## Customization
 
@@ -91,11 +91,11 @@ Individual points in pie chart can be customized using the `pointRender` event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/pie/pie-cs6/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/pie/pie-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/pie/pie-cs6/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/pie/pie-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/pie/pie-cs6" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/pie/pie-cs6" %}

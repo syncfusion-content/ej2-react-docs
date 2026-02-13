@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Columns in React Grid component | Syncfusion
-description: Learn here all about Columns in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Columns | Syncfusion
+description: React Grid columns provides a complete guide to defining columns, types, widths, templates, and behaviors to model tabular data effectively.
 control: Columns 
 platform: ej2-react
 documentation: ug

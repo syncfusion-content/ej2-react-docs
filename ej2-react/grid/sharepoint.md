@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React Grid component in the SharePoint Framework | Syncfusion
-description: Checkout and learn about Getting started with React Grid component in the SharePoint Framework of Syncfusion Essential JS 2 and more details.
+title: React Grid - SharePoint | Syncfusion
+description: React Grid SharePoint integration connects the grid to SharePoint lists, supports auth, and provides data access methods for SharePoint apps.
 control: SharePoint 
 platform: ej2-react
 documentation: ug
@@ -125,7 +125,7 @@ or
 To add Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JS 2 style reference from CDN:
 
 ```bash
-<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/25.2.3/tailwind3.css" /> // use the latest version to refer the css through CDN//
+<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/32.1.19/ej2/tailwind3.css" /> // use the latest version to refer the css through CDN//
 ```
 
 ## Adding Grid component with local data
@@ -185,7 +185,7 @@ const ReactGridComponent: React.FC<IReactGridComponentProps> = (props) => {
         <div>
           <h3>Welcome to React Grid component in the SharePoint Framework!</h3>
         </div>
-          <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/25.2.3/tailwind3.css" />
+          <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/32.1.19/ej2/tailwind3.css" />
           <GridComponent id='grid' dataSource={data} >
             <ColumnsDirective>
               <ColumnDirective field='OrderID' isPrimaryKey={true} width='90' />
@@ -437,7 +437,7 @@ const ReactGridComponent: React.FC<IReactGridComponentProps> = (props) => {
         <div>
           <h3>Welcome to React Grid component in the SharePoint Framework!</h3>
         </div>
-        <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/25.2.3/tailwind3.css" />
+        <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/32.1.19/ej2/tailwind3.css" />
         <div>          
           <GridComponent ref={gridInstance} dataStateChange={dataStateChange.bind(this)}>
           <ColumnsDirective>
@@ -1106,7 +1106,7 @@ const ReactGridComponent: React.FC<IReactGridComponentProps> = (props) => {
         <div>
           <h3>Welcome to React Grid component in the SharePoint Framework!</h3>
         </div>
-        <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/25.2.3/tailwind3.css" />
+        <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/32.1.19/ej2/tailwind3.css" />
         <div>          
           <GridComponent id='grid' ref={gridInstance} allowFiltering={true} allowSorting={true} allowPaging={true} pageSettings={GridInitialState.pageSettings} 
           allowGrouping={true} groupSettings={groupSettings} editSettings={editOptions} toolbar={toolbarOptions}

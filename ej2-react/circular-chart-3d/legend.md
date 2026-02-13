@@ -14,14 +14,14 @@ The legend provides information about the data points rendered in the 3D Circula
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/legend/legend-cs1/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/legend/legend-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/legend/legend-cs1/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/legend/legend-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/legend/legend-cs1" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/legend/legend-cs1" %}
 
 >To use data label feature, we need to inject `CircularChartLegend3D` module into the services.
 
@@ -31,14 +31,14 @@ By using the `position` property, the legend can be positioned at the `left`, `r
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/legend/legend-cs2/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/legend/legend-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/legend/legend-cs2/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/legend/legend-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/legend/legend-cs2" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/legend/legend-cs2" %}
 
 ## Legend reverse
 
@@ -46,14 +46,14 @@ You can reverse the order of the legend items by using the `reverse` property in
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/legend/legend-cs3/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/legend/legend-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/legend/legend-cs3/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/legend/legend-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/legend/legend-cs3" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/legend/legend-cs3" %}
 
 ## Legend shape
 
@@ -61,14 +61,14 @@ To change the legend shape, use the `legendShape` property in the `series`. By d
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/legend/legend-cs4/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/legend/legend-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/legend/legend-cs4/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/legend/legend-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/legend/legend-cs4" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/legend/legend-cs4" %}
 
 ## Legend size
 
@@ -76,14 +76,14 @@ The legend size can be changed by using the `width` and `height` properties in `
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/legend/legend-cs5/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/legend/legend-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/legend/legend-cs5/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/legend/legend-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/legend/legend-cs5" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/legend/legend-cs5" %}
 
 ## Legend item size
 
@@ -91,14 +91,14 @@ The size of the legend items can be customized by using the `shapeHeight` and `s
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/legend/legend-cs6/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/legend/legend-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/legend/legend-cs6/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/legend/legend-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/legend/legend-cs6" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/legend/legend-cs6" %}
 
 ## Legend paging
 
@@ -106,14 +106,14 @@ Paging will be enabled by default when the legend items exceed the legend bounds
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/legend/legend-cs7/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/legend/legend-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/legend/legend-cs7/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/legend/legend-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/legend/legend-cs7" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/legend/legend-cs7" %}
 
 ## Legend text wrap
 
@@ -121,14 +121,14 @@ When the legend text exceeds the container, the text can be wrapped using the `t
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/legend/legend-cs8/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/legend/legend-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/legend/legend-cs8/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/legend/legend-cs8/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/legend/legend-cs8" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/legend/legend-cs8" %}
 
 ## Legend title
 
@@ -136,14 +136,14 @@ You can set a title for the legend using the `title` property in `legendSettings
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/legend/legend-cs9/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/legend/legend-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/legend/legend-cs9/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/legend/legend-cs9/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/legend/legend-cs9" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/legend/legend-cs9" %}
 
 ## Arrow page navigation
 
@@ -151,14 +151,14 @@ The page number will always be visible when using legend paging. However, it is 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/legend/legend-cs10/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/legend/legend-cs10/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/legend/legend-cs10/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/legend/legend-cs10/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/legend/legend-cs10" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/legend/legend-cs10" %}
 
 ## Legend item padding
 
@@ -166,11 +166,11 @@ The `itemPadding` property can be used to adjust the space between the legend it
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/legend/legend-cs11/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/legend/legend-cs11/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/legend/legend-cs11/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/legend/legend-cs11/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/legend/legend-cs11" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/legend/legend-cs11" %}
