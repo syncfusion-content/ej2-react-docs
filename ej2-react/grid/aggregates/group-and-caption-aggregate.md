@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Group and Caption Aggregate | Syncfusion
-description: Display group footer and caption aggregates in Syncfusion React Grid (EJ2) using template, and disable page-wise summaries for full data calculations.
+description: React Grid group and caption aggregate covers computing aggregates for groups, displaying captions, and customizing group summaries and formats.
 control: Group and caption aggregate 
 platform: ej2-react
 documentation: ug

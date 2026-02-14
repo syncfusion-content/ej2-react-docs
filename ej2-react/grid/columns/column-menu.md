@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column menu in React Grid component | Syncfusion
-description: Learn here all about Column menu in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Column Menu | Syncfusion
+description: React Grid column menu describes configuring column menus, adding actions like sorting and filtering, and customizing menu items and icons.
 control: Column menu 
 platform: ej2-react
 documentation: ug
@@ -153,7 +153,7 @@ The column menu icon in Grid can be changed by overriding the default CSS class 
 2. Import the required icon stylesheets (material or bootstrap5 style):
 
 ```html
-<link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/material.css" rel="stylesheet" />
+<link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/tailwind3.css" rel="stylesheet" />
 <link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/bootstrap5.css" rel="stylesheet" />
 ```
 

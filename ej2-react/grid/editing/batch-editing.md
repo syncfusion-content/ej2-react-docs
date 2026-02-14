@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Batch Editing | Syncfusion
-description: Learn here all about Batch editing in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+description: React Grid batch editing provides streamlined edit workflows, server integration examples, and reliable strategies for saving updates.
 control: Batch editing 
 platform: ej2-react
 documentation: ug

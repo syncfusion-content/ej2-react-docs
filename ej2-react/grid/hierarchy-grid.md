@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Hierarchy Grid | Syncfusion
-description: Enhance Syncfusion React Grid (EJ2) with advanced hierarchy features, including child grids, dynamic data, aggregate rows, editing, and CSS customization.
+description: React Grid hierarchy view enables nested grids, parent‑child relationships, and data binding to create structured hierarchical layouts.
 control: Hierarchy grid 
 platform: ej2-react
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Exporting templates | Syncfusion
-description: Learn here all about PDF exporting grid with column, detail and group caption templates in Syncfusion React Grid.
+description: React Grid PDF exporting with templates describes using templates to customize PDF layout, headers, and cell formatting when exporting grid data.
 control: Exporting grid with templates
 platform: ej2-react
 documentation: ug

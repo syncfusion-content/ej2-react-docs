@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Clipboard in React Grid component | Syncfusion
-description: Learn about using the clipboard features such as copy, paste, and autoFill within the Syncfusion React Grid component.
+title: React Grid - Clipboard | Syncfusion
+description: React Grid clipboard supports copying and pasting rows or cells, handling formats, integrating with external apps, and configuring clipboard behavior.
 control: Clipboard 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Clipboard in React Grid component
+# Clipboard in React Grid Component
 
-The clipboard feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid enables copying selected rows or cells to the system clipboard for use in other applications. The Grid supports keyboard shortcuts for quick copy operations.
+The clipboard feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid enables copying selected rows or cells to the system clipboard for use in other applications. The grid supports keyboard shortcuts for quick copy operations.
 
 Interaction keys | Description
 -----|-----
 <kbd>Ctrl + C</kbd> | Copy selected rows or cells to the clipboard
 <kbd>Ctrl + Shift + H</kbd> | Copy selected rows or cells with header to the clipboard
 
-Examples below show Grid configuration for clipboard operations. Configure the Grid's `dataSource` and `selectionSettings` properties.
+Examples below show grid configuration for clipboard operations. Configure the grid's `dataSource` and `selectionSettings` properties.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -40,7 +40,7 @@ Examples below show Grid configuration for clipboard operations. Configure the G
 
 Copying data using external buttons enables programmatic triggering of the copy operation, which can improve accessibility compared with only supporting keyboard shortcuts.
 
-Use the Grid's [`copy`](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#copy) method to copy selected rows or cells via external controls.
+Use the grid's [`copy`](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#copy) method to copy selected rows or cells via external controls.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -95,13 +95,13 @@ Using AutoFill
 
 ### Limitations
 
-- AutoFill does not convert strings to numeric or date types. Pasting string values into number or date-typed cells can yield **NaN** or empty cells. Ensure data types are compatible before using autoFill.
+- AutoFill does not convert strings to numeric or date types. Pasting string values into number or date-typed cells can yield NaN or empty cells. Ensure data types are compatible before using autoFill.
 - AutoFill does not generate complex or non-linear sequences; it copies values from the selected range and does not infer advanced patterns.
 - When virtual scrolling, infinite scrolling, or column virtualization is enabled, autoFill applies only to cells in the current viewport.
 
 ## Paste
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports pasting clipboard content into selected cells for quick data entry and updates. Standard shortcuts allow copying and pasting between ranges within the Grid or between the Grid and external applications.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports pasting clipboard content into selected cells for quick data entry and updates. Standard shortcuts allow copying and pasting between ranges within the grid or between the grid and external applications.
 
 Steps to paste:
 
@@ -127,8 +127,8 @@ Steps to paste:
  {% previewsample "page.domainurl/code-snippet/grid/clipboard-cs4" %}
 
 
-> Paste requires selection `mode` to be `Cell`, `cellSelectionMode` to be `Box`, and Batch editing to be enabled.
+> Paste requires selection `mode` to be `Cell`, `cellSelectionMode` to be `Box`, and `Batch` editing to be enabled.
 
 ### Limitations
 
-- Paste does not convert strings to number or date types; incompatible types can yield **NaN** or empty cells.
+- Paste does not convert strings to number or date types; incompatible types can yield NaN or empty cells.

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Cell in React Grid component | Syncfusion
-description: React Grid cells provide rich customization options for content display, styling, wrapping, clipping, tooltips, and grid line formatting.
+title: React Grid - Cell | Syncfusion
+description: React Grid offers cell rendering, editing options, and APIs to customize content, formatting, and interactive behavior within each cell.
 control: Cell
 platform: ej2-react
 documentation: ug

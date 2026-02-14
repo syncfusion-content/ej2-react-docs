@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Resize the Syncfusion React Grid in various dimensions
-description: Learn here all about Resize the grid in various dimension in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Resize Various Dimensions | Syncfusion
+description: React Grid resize guide explains resizing behavior, responsive sizing strategies, and examples to adjust grid dimensions dynamically.
 platform: ej2-react
 control: Resize the grid in various dimension 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resize the grid in various dimension in React Grid component
+# Resize the grid in various dimension in React Grid Component
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports dynamic resizing to enhance data presentation across different layouts. The grid can be resized by adjusting the dimensions of its parent container.
 
-To resize the grid externally, modify the width or height of the container element using an input and button. his will effectively resize the grid along with its parent container.
+To resize the grid externally, modify the width or height of the container element using an input and button. This will effectively resize the grid along with its parent container.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

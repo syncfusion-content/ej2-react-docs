@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Row Drag and Drop | Syncfusion
-description: Learn here all about Row drag and drop in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+description: React Grid row drag and drop explains enabling row reorder, drag behavior, drop targets, and handling events to update underlying data accordingly.
 control: Row drag and drop 
 platform: ej2-react
 documentation: ug

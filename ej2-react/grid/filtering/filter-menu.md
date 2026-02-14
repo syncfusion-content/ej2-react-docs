@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React Grid - Filter menu | Syncfusion
-description: Learn here all about Filter menu in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Filter Menu | Syncfusion
+description: React Grid filter menu enables column‑specific filter dialogs, custom components, operator customization, multi‑value filtering, and granular filtering control.
 control: Filter menu 
 platform: ej2-react
 documentation: ug

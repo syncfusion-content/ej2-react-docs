@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Jest Unit Testing | Syncfusion
-description: Learn here all about Testing the React application using Jest in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+description: React Grid testing with Jest provides unit and integration test patterns, mocks, and examples to validate grid behavior in React applications.
 control: Testing the React application using Jest
 platform: ej2-react
 documentation: ug
@@ -16,7 +16,7 @@ Step 1: Set up the Jest testing environment
 
 1. Check and install the node version:
 
-Ensure that Node version 14 or higher is installed. If not, install a supported version from the official [Node.js website](https://nodejs.org/en/download).
+Ensure that node version 14 or higher is installed. If not, install a supported version from the official [Node.js website](https://nodejs.org/en/download).
 
 2. Create a React application and install the Grid package:
 
@@ -24,7 +24,7 @@ Follow the [Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid Getting 
 
 3. Install Jest:
 
-Jest is typically included by default in React apps created with Create React App. If not present in **package.json**, install it using npm:
+Jest is typically included by default in React apps created with Create React App. If not present in `package.json`, install it using npm:
 
 ```
 npm install --save-dev jest
@@ -56,7 +56,7 @@ function App() {
         <GridComponent dataSource={customerData.slice(0,5)} height={315}>
             <ColumnsDirective>
                 <ColumnDirective field='CustomerID' headerText='Customer ID' width='100'/>
-                <ColumnDirective field='ContactName' headerText='CustomerName' width='100' textAlign="Right"/>
+                <ColumnDirective field='ContactName' headerText='Customer Name' width='100' textAlign="Right"/>
                 <ColumnDirective field='Address' headerText='Address' width='80' textAlign="Right"/>
                 <ColumnDirective field='Country' headerText='Country' width='100'/>
             </ColumnsDirective>

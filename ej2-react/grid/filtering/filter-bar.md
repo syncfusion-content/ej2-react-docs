@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React Grid - Filter bar | Syncfusion
-description: Learn about filter bar in Syncfusion React Grid (EJ2) to enter filter criteria below column headers with different filter expressions.
+title: React Grid - Filter Bar | Syncfusion
+description: React Grid filter bar enables filtering with expression operators, configurable modes, column settings, custom templates, and active filter status display.
 control: Filter bar 
 platform: ej2-react
 documentation: ug

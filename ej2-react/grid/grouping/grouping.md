@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Grouping | Syncfusion
-description: Enable grouping in Syncfusion React Grid (EJ2) with drag‑drop columns, multi‑level groups, reordered hierarchy, formatted grouping, and events.
+description: React Grid grouping enables configurable settings, initial grouping, aggregates, drop‑area control, reorderable columns, and expand/collapse.
 control: Grouping 
 platform: ej2-react
 documentation: ug

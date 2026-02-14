@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column Rendering in React Grid component | Syncfusion
-description: Learn here all about Column Rendering in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title:  React Grid - Column Rendering | Syncfusion
+description: React Grid column rendering allows custom cell and header layouts, templates, and flexible options for complex content and interactive elements.
 control: Columns
 platform: ej2-react
 documentation: ug

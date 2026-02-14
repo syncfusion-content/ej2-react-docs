@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column pinning (Frozen) in React Grid component | Syncfusion
-description: Learn here all about Column pinning (Frozen) in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Frozen Column | Syncfusion
+description: React Grid frozen column keeps key fields visible while scrolling, offering flexible configuration to sync with scrollable content.
 control: Column pinning (Frozen)
 platform: ej2-react
 documentation: ug

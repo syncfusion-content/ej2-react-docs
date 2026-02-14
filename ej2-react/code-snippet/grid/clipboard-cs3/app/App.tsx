@@ -16,7 +16,7 @@ function App() {
       <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" isPrimaryKey={true} visible={false} />
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
       <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
-      <ColumnDirective field='ShipCountry' headerText='ShipCountry' width='150' />
+      <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
       <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
     </ColumnsDirective>
     <Inject services={[Edit, Toolbar]} />

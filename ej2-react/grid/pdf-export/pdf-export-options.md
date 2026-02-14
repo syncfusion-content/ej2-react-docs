@@ -1,7 +1,7 @@
 ---
 layout: post
-title: PDF export options in React Grid component | Syncfusion
-description: Learn here all about PDF export options in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - PDF Export Options | Syncfusion
+description: React Grid PDF export options support configuring page sizes, margins, styles, and other settings to customize the exported PDF output.
 control: Pdf export options 
 platform: ej2-react
 documentation: ug

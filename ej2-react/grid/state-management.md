@@ -1,7 +1,7 @@
 ---
 layout: post
-title: State management in React Grid component | Syncfusion
-description: Learn here all about State management in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - State Management | Syncfusion
+description: React Grid state management describes preserving grid state, serializing settings, and integrating with external state stores like Redux for consistent UX.
 control: State management 
 platform: ej2-react
 documentation: ug

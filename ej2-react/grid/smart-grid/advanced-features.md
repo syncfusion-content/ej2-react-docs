@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Smart Advanced Features in React Grid component | Syncfusion
-description: Learn here all about Smart Grid with Advanced Features in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Advanced Features | Syncfusion
+description: React Grid advanced features covers enhancements and extensions available in Smart Grid, demonstrating advanced behaviors and integrated features.
 control: Smart Grid 
 platform: ej2-react
 documentation: ug

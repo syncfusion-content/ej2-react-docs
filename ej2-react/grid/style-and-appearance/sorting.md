@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sorting customization in React Grid component | Syncfusion
-description: Learn here all about Sorting customization in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Sorting Style | Syncfusion
+description: React Grid sorting style supports customizing sort icons, templates, and visual indicators to represent sort states and tailor the sorting UI.
 control: Sorting 
 platform: ej2-react
 documentation: ug

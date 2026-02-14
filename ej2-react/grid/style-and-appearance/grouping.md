@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Grouping in React Grid component | Syncfusion
-description: Learn here all about Grouping customization in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Grouping Style | Syncfusion
+description: React Grid grouping style covers visual customization of group headers, captions, and aggregates to present grouped data consistently.
 control: Grouping 
 platform: ej2-react
 documentation: ug

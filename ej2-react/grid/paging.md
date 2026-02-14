@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Paging | Syncfusion
-description: Enable paging in Syncfusion React Grid (EJ2) with customizable page size, dropdown, pager template, query string support, navigation, and events.
+description: React Grid paging supports client and server paging with options, templates, and performance features to navigate large data sets efficiently.
 control: Paging 
 platform: ej2-react
 documentation: ug

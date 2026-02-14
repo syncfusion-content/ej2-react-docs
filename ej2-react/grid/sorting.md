@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sorting in React Grid component | Syncfusion
-description: Learn here all about Sorting in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Sorting | Syncfusion
+description: React Grid sorting explains single and multi-column sorting, custom comparers, and UI options to control sort behavior and indicator rendering.
 control: Sorting 
 platform: ej2-react
 documentation: ug

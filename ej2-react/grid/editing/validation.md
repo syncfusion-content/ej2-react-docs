@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Validation | Syncfusion
-description: Learn here all about Validation in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+description: React Grid validation supports built-in and custom rules, clear error messages, and safeguards that block invalid entries during editing.
 control: Validation 
 platform: ej2-react
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Aggregates | Syncfusion
-description: Explore aggregates in Syncfusion React Grid (EJ2) to show sum, average, min, max, and count in footers, group footers, and captions using built‑in settings.
+description: React Grid provides column aggregate functions, footer and group summaries, custom aggregate calculations, and formatting options.
 control: Aggregates 
 platform: ej2-react
 documentation: ug

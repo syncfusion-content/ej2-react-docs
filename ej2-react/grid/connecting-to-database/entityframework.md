@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bind SQL Server Data in Syncfusion React Grid using Entity Framework
-description: Learn about consume data using Entity Framework from Microsoft SQL Server, bind it to Syncfusion Grid, and performing CRUD operations.
+title: React Grid - Entity Framework | Syncfusion
+description: React Grid Entity Framework guide shows models and example controllers to serve grid data, implement paging, filtering, and CRUD using EF.
 platform: ej2-react
 control: grid
 keywords: adaptors, urladaptor, customadaptor, remotedata, entityframework 
@@ -9,11 +9,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connecting SQL Server data to Syncfusion React Grid using Entity Framework
+# Connect SQL Server to React Grid via Entity Framework
 
-This section describes how to connect and retrieve data from a Microsoft SQL Server database using [Entity Framework](https://learn.microsoft.com/en-us/ef/core/) and bind it to the Syncfusion React Grid.
+This section describes how to connect and retrieve data from a Microsoft SQL Server database using [Entity Framework](https://learn.microsoft.com/en-us/ef/core) and bind it to the Syncfusion React Grid.
 
-Microsoft SQL Server database can be bound to the Grid using **Entity Framework** in different ways (i.e.) using [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource) property, custom adaptor and remote data binding using various adaptors. In this documentation, two approaches will be examined to connect a Microsoft SQL Server database to a Grid using **Entity Framework**. Both the approaches have capability to handle data and CRUD operations with built-in methods as well as can be customized as per your own.
+Microsoft SQL Server database can be bound to the Grid using **Entity Framework** in different ways (i.e.) using [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource) property, custom adaptor and remote data binding using various adaptors. In this documentation, two approaches will be examined to connect a Microsoft SQL Server database to a Grid using **Entity Framework**. Both the approaches have capability to handle data and CRUD operations with built-in methods as well as can be customized as per your own.
 
 **Entity Framework**
 
@@ -21,11 +21,11 @@ Entity Framework is an open-source [ORM framework](https://en.wikipedia.org/wiki
 
 **1. Using UrlAdaptor**
 
-The [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/url-adaptor) serves as the base adaptor for facilitating communication between remote data services and an UI component. It enables the remote binding of data to the Syncfusion React Grid by connecting to an existing pre-configured API service linked to the Microsoft SQL Server database. While the Grid supports various adaptors to fulfill this requirement, including [Web API](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/web-api-adaptor), [ODataV4](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/odatav4-adaptor), [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/url-adaptor), and [GraphQL](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/graphql-adaptor), the `UrlAdaptor` is particularly useful for the scenarios where a custom API service with unique logic for handling data and CRUD operations is in place. This approach allows for custom handling of data and CRUD operations, and the resultant data returned in the `result` and `count` format for display in the Grid.
+The [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/url-adaptor) serves as the base adaptor for facilitating communication between remote data services and an UI component. It enables the remote binding of data to the Syncfusion React Grid by connecting to an existing pre-configured API service linked to the Microsoft SQL Server database. While the Grid supports various adaptors to fulfill this requirement, including [Web API](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/webapi-adaptor), [ODataV4](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/odatav4-adaptor), [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/url-adaptor), and [GraphQL](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/graphql-adaptor), the `UrlAdaptor` is particularly useful for the scenarios where a custom API service with unique logic for handling data and CRUD operations is in place. This approach allows for custom handling of data and CRUD operations, and the resultant data returned in the `result` and `count` format for display in the Grid.
 
 **2. Using CustomAdaptor**
 
-The [CustomAdaptor](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/custom-adaptor) serves as a mediator between the UI component and the database for data binding. While the data source from the database can be directly bound to the Syncfusion React Grid locally using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource) property, the `CustomAdaptor` approach is preferred as it allows for customization of both data operations and CRUD operations according to specific requirements. In this approach, for every action in the Grid, a corresponding request with action details is sent to the `CustomAdaptor`. The Grid provides predefined methods to perform data operations such as **searching**, **filtering**, **sorting**, **aggregation**, **paging** and **grouping**. Alternatively, your own custom methods can be employed to execute operations and return the data in the `result` and `count` format for displaying in the Grid. Additionally, for CRUD operations, predefined methods can be overridden to provide custom functionality. Further details on this can be found in the latter part of the documentation.
+The [CustomAdaptor](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/custom-adaptor) serves as a mediator between the UI component and the database for data binding. While the data source from the database can be directly bound to the Syncfusion React Grid locally using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource) property, the `CustomAdaptor` approach is preferred as it allows for customization of both data operations and CRUD operations according to specific requirements. In this approach, for every action in the Grid, a corresponding request with action details is sent to the `CustomAdaptor`. The Grid provides predefined methods to perform data operations such as **searching**, **filtering**, **sorting**, **aggregation**, **paging** and **grouping**. Alternatively, your own custom methods can be employed to execute operations and return the data in the `result` and `count` format for displaying in the Grid. Additionally, for CRUD operations, predefined methods can be overridden to provide custom functionality. Further details on this can be found in the latter part of the documentation.
 
 ## Binding data using Entity Framework from Microsoft SQL Server via an API service.
 
@@ -601,7 +601,7 @@ CRUD operations within the Grid can be mapped to server-side controller actions 
 3. **updateUrl**: Specifies the URL for updating existing data.
 4. **batchUrl**: Specifies the URL for batch editing.
 
-To enable editing in Grid, refer to the editing [documentation](https://ej2.syncfusion.com/react/documentation/grid/editing/edit). In the below example, the inline edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) is enabled and [toolbar](https://helpej2.syncfusion.com/react/documentation/api/grid/#toolbar) property is configured to display toolbar items for editing purposes.
+To enable editing in Grid, refer to the editing [documentation](https://ej2.syncfusion.com/react/documentation/grid/editing/edit). In the below example, the inline edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) is enabled and [toolbar](https://helpej2.syncfusion.com/react/documentation/api/grid#toolbar) property is configured to display toolbar items for editing purposes.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -641,8 +641,8 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-> * Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) for the Grid. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column/#isprimarykey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
-> * If database has an auto generated column, ensure to define [isIdentity](https://ej2.syncfusion.com/react/documentation/api/grid/column/#isidentity) property of Grid column to disable them during adding or editing operations.
+> * Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) for the Grid. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
+> * If database has an auto generated column, ensure to define [isIdentity](https://ej2.syncfusion.com/react/documentation/api/grid/column#isidentity) property of Grid column to disable them during adding or editing operations.
 
 **Insert Operation:**
 
@@ -856,7 +856,7 @@ public class CRUDModel<T> where T : class
 
 **Batch Operation:**
 
-To perform batch operation, define the edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) as **Batch** and specify the `batchUrl` property in the `DataManager`. Use the **Add** toolbar button to insert new row in batch editing mode. To edit a cell, double-click the desired cell and update the value as required. To delete a record, simply select the record and press the **Delete** toolbar button. Now, all CRUD operations will be executed in batch editing mode. Clicking the **Update** toolbar button will update the newly added, edited, or deleted records from the **Orders** table using a single API **POST** request.
+To perform batch operation, define the edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) as **Batch** and specify the `batchUrl` property in the `DataManager`. Use the **Add** toolbar button to insert new row in batch editing mode. To edit a cell, double-click the desired cell and update the value as required. To delete a record, simply select the record and press the **Delete** toolbar button. Now, all CRUD operations will be executed in batch editing mode. Clicking the **Update** toolbar button will update the newly added, edited, or deleted records from the **Orders** table using a single API **POST** request.
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -957,7 +957,7 @@ When you run the application, the resultant Syncfusion React Grid will look like
 
 ![Syncfusion React Grid bound with Microsoft SQL Server data](../images/connecting-micro-curd.gif)
 
-> Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-react-grid/tree/master/Binding%20PostgreSQL%20database%20using%20UrlAdaptor).
+> Find the sample in this GitHub location.
 
 ## Binding data from Microsoft SQL Server using Entity Framework with CustomAdaptor
 
@@ -1444,9 +1444,9 @@ export class CustomAdaptor extends UrlAdaptor {
 
 ### Handling CRUD operations
 
-To enable editing in the Syncfusion React Grid, utilize the [editSettings](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/) property. The Grid offers multiple edit modes including the **Inline/Normal**, **Dialog** and **Batch** editing. For more details, refer to the Grid [editing](https://ej2.syncfusion.com/react/documentation/grid/editing/edit) documentation.
+To enable editing in the Syncfusion React Grid, utilize the [editSettings](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings) property. The Grid offers multiple edit modes including the **Inline/Normal**, **Dialog** and **Batch** editing. For more details, refer to the Grid [editing](https://ej2.syncfusion.com/react/documentation/grid/editing/edit) documentation.
 
-In this scenario, the inline edit `mode` and [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbar) property configured to display toolbar items for editing purpose.
+In this scenario, the inline edit `mode` and [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property configured to display toolbar items for editing purpose.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -1487,8 +1487,8 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-> * Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) for the Grid. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column/#isprimarykey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
-> * If database has an auto generated column, ensure to define [isIdentity](https://ej2.syncfusion.com/react/documentation/api/grid/column/#isidentity) property of Grid column to disable them during adding or editing operations.
+> * Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) for the Grid. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
+> * If database has an auto generated column, ensure to define [isIdentity](https://ej2.syncfusion.com/react/documentation/api/grid/column#isidentity) property of Grid column to disable them during adding or editing operations.
 
 The CRUD operations can be performed and customized on our own by overriding the following CRUD methods of the `UrlAdaptor` 
 
@@ -1916,4 +1916,4 @@ public class CRUDModel<T> where T : class
 
 ![Syncfusion React Grid bound with Microsoft SQL Server data](../images/connecting-micro-curd.gif)
 
-> Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-react-grid/tree/master/Binding%20SQL%20database%20using%20EF%20and%20CustomAdaptor).
+> Find the sample in this GitHub location.

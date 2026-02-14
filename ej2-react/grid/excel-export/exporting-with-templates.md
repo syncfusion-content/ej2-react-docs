@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Excel Exporting Templates | Syncfusion
-description: Learn here all about Exporting grids with templates in Syncfusion React Grid component of Syncfusion Essential JS 2.
+description: React Grid Excel export with templates customizes cell content and layout using column, detail, and caption templates with images, links, and formatting.
 control: Exporting grid with templates
 platform: ej2-react
 documentation: ug

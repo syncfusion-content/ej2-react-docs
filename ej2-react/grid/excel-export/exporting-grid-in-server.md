@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Server-Side Export | Syncfusion
-description: Learn about server-side Excel and CSV export functionality in the Syncfusion React Grid component, including memory stream operations and worksheet merging.
+description: React Grid server‑side Excel export enables backend workbook generation, endpoint setup, and scalable large‑data exports without blocking clients.
 control: Server-side Export
 platform: ej2-react
 documentation: ug

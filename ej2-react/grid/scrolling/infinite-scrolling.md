@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Infinite Scroll | Syncfusion
-description: Learn here all about Infinite scroll in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+description: React Grid infinite scrolling offers incremental loading, event‑driven data retrieval, and performance‑optimized processing of large datasets.
 platform: ej2-react
 control: Infinite scroll 
 documentation: ug
@@ -177,7 +177,7 @@ The example below shows how to toggle cache mode using a [Switch](https://ej2.sy
 
 {% previewsample "page.domainurl/code-snippet/grid/virtual-scroll-cs3" %}
 
-> If [Hierarchy Grid](https://ej2.syncfusion.com/react/documentation/grid/hierarchy-grid) or [Detail Template](https://ej2.syncfusion.com/react/documentation/grid/row/detail-template) feature is enabled along with infinite scrolling without defining the height property, it will take a default height of `300px`. Since the [height](https://ej2.syncfusion.com/react/documentation/api/grid#height) property is mandatory for the hierarchy grid and detail template features, ensure to define it accordingly. 
+> If [Hierarchy Grid](https://ej2.syncfusion.com/react/documentation/grid/hierarchy-grid) or [Detail Template](https://ej2.syncfusion.com/react/documentation/grid/row/detail-template) feature is enabled along with infinite scrolling without defining the height property, it will take a default height of "300px". Since the [height](https://ej2.syncfusion.com/react/documentation/api/grid#height) property is mandatory for the hierarchy grid and detail template features, ensure to define it accordingly. 
 
 ## Limitations
 
@@ -197,6 +197,6 @@ The example below shows how to toggle cache mode using a [Switch](https://ej2.sy
     5. Row virtual scrolling.
     6. Autofill.
 * Limitations of row drag and drop with infinite scrolling:
-    1. In cache mode, the grid refreshes automatically if the content's tr element count exceeds the cache limit of the grid's content after the drop action.
+    1. In cache mode, the grid refreshes automatically if the content's "tr" element count exceeds the cache limit of the grid's content after the drop action.
     2. When performing row drag and drop with lazy load grouping, the grid will refresh automatically.
     3. In remote data, changes are applied only in the UI. They will be lost once the grid is refreshed. To restore them, update the changes in the database. By using the [rowDrop](https://ej2.syncfusion.com/react/documentation/api/grid#rowdrop) event, send the request to the server and apply the changes in the database. After this, refresh the grid to show the updated data.

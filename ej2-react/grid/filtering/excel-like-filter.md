@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React Grid - Excel like filter | Syncfusion
-description: Learn here all about Excel like filter in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Excel Like Filter | Syncfusion
+description: React Grid Excel-like filter enables multi‑condition filtering, checkbox lists, search, choice limits, remote data binding, and template-based customization.
 control: Excel like filter 
 platform: ej2-react
 documentation: ug

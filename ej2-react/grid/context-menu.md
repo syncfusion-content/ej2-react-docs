@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Context Menu in React Grid Component | Syncfusion
-description: Learn about context menu support in the Syncfusion React Grid component, its items, customization options, and behavior.
+title: React Grid - Context Menu | Syncfusion
+description: React Grid context menu supports, adding custom actions, and managing events to enhance interactions for rows and cells.
 control: Context menu
 platform: ej2-react
 documentation: ug

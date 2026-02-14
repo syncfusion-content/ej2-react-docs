@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Toolbar | Syncfusion
-description: Learn about toolbar in Syncfusion React Grid (EJ2) to add, edit, and delete records, export and import data, and customize toolbar items.
+description: React Grid toolbar provides default buttons, configuration options, and examples for common operations like adding records, exporting data, and searching.
 control: Toolbar
 platform: ej2-react
 documentation: ug

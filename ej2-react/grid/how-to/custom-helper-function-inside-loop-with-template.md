@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React Grid – Build Dynamic Columns with Custom Templates | Syncfusion
-description: Explore how multiple templates in React Grid create flexible, interactive column layouts with custom content.
+title: React Grid – Customizable Column Templates | Syncfusion
+description: React Grid provides template helper usage, rendering examples, and guidance to incorporate helper functions within templates safely and efficiently.
 platform: ej2-react
 control: Use custom helper inside the loop with templates 
 documentation: ug

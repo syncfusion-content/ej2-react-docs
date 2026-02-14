@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Footer Aggregate | Syncfusion
-description: Configure footer aggregates in Syncfusion React Grid (EJ2) using footerTemplate to show sums or averages, apply formatting, and reposition aggregates.
+description: React Grid footer aggregate enables setting footer values, applying formatting, and combining multiple aggregates for each column.
 control: Footer aggregate 
 platform: ej2-react
 documentation: ug
