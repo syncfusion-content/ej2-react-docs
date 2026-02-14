@@ -6,10 +6,10 @@ function App() {
   return (<div style={{ height: '500px', width: '600px' }}>
     <GridComponent dataSource={data} height='100%' width='100%'>
       <ColumnsDirective>
-        <ColumnDirective field='OrderID' headerText='OrderID' width='120' textAlign='Right' />
-        <ColumnDirective field='CustomerID' headerText='CustomerID' width='150' />
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
         <ColumnDirective field='Freight' headerText='Freight' width='120' format='C2' />
-        <ColumnDirective field='ShipAddress' headerText='ShipAddress' width='150' />
+        <ColumnDirective field='ShipAddress' headerText='Ship Address' width='150' />
       </ColumnsDirective>
     </GridComponent>
   </div>)

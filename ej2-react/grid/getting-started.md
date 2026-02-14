@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with React Grid component | Syncfusion
-description:  Checkout and learn about Getting started with React Grid component of Syncfusion Essential JS 2 and more details.
+title: React Grid - Getting Started | Syncfusion
+description: React Grid getting started covers installation, basic setup, and examples to render data, configure columns, and enable common features in new projects.
 control: Getting started 
 platform: ej2-react
 documentation: ug

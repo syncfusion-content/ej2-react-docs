@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filter customization in React Grid component | Syncfusion
-description: Learn here all about Filter customization in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Filtering Style | Syncfusion
+description: React Grid filtering style customizes filter UI appearance and templates, including filter bars, menus, and Excel-like filtering components.
 control: Filtering 
 platform: ej2-react
 documentation: ug

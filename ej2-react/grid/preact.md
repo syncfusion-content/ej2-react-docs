@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Preact and React Grid Component | Syncfusion
-description: Check out and learn about getting started with the Preact Framework and React Grid Component of Syncfusion Essential JS 2 and more details.
+title: React Grid - Preact | Syncfusion
+description: React Grid Preact guide explains notes, setup steps, and adjustments needed to use the Grid with Preact while preserving key features and performance.
 control: Preact
 platform: ej2-react
 documentation: ug

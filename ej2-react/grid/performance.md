@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Performance tips for React Grid Component | Syncfusion
-description: Checkout and learn here all about how to improve the loading performance of React DataGrid even binding large data set.
+title: React Grid - Performance | Syncfusion
+description: React Grid performance covers best practices, virtualization, efficient data operations, and techniques to improve rendering speed with large datasets.
 platform: ej2-react
 control: DataGrid
 documentation: ug
@@ -42,7 +42,7 @@ To tackle this and maintain the integrity of Grid actions despite state updates,
 By incorporating `useMemo`, developers can optimize the rendering process, enhancing the performance of React components. For a more detailed understanding and practical implementation, refer to the [documentation](https://www.syncfusion.com/blogs/post/react-usecallback-vs-usememo-hooks.aspx) link.
 
 ## How to improve loading performance by binding large data by showing custom text or element
-When integrating image or template elements into a column, it's recommended to utilize the [Column Template](https://ej2.syncfusion.com/react/documentation/grid/columns/column-template) feature rather than customizing the data through [rowDataBound](https://ej2.syncfusion.com/react/documentation/api/grid/#rowdatabound) or [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/#querycellinfo) events. These events are triggered for each row and cell rendering, introducing delays in the component's rendering process. Moreover, rendering custom elements using these events may result in the persistence of rendered elements, potentially causing longer rendering times over time. By opting for the column template feature, you can efficiently meet this requirement without experiencing rendering delays and ensure a more streamlined rendering process.
+When integrating image or template elements into a column, it's recommended to utilize the [Column Template](https://ej2.syncfusion.com/react/documentation/grid/columns/column-template) feature rather than customizing the data through [rowDataBound](https://ej2.syncfusion.com/react/documentation/api/grid#rowdatabound) or [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#querycellinfo) events. These events are triggered for each row and cell rendering, introducing delays in the component's rendering process. Moreover, rendering custom elements using these events may result in the persistence of rendered elements, potentially causing longer rendering times over time. By opting for the column template feature, you can efficiently meet this requirement without experiencing rendering delays and ensure a more streamlined rendering process.
 
 ## How to improve loading performance by referring individual script and CSS
 
@@ -54,7 +54,7 @@ So to improve the performance of grid during the initial rendering, suggested yo
 
 ## How to update cell values without frequent server calls 
 
-Efficiently update cell values without the need for frequent server calls, especially beneficial for live update scenarios. Even when the data is initially bound from the server, performing edit operations can be done without triggering a database refresh. Utilize the [setCellValue](https://ej2.syncfusion.com/react/documentation/api/grid/#setcellvalue) method to update the DataGrid without affecting the database and only refresh the UI.
+Efficiently update cell values without the need for frequent server calls, especially beneficial for live update scenarios. Even when the data is initially bound from the server, performing edit operations can be done without triggering a database refresh. Utilize the [setCellValue](https://ej2.syncfusion.com/react/documentation/api/grid#setcellvalue) method to update the DataGrid without affecting the database and only refresh the UI.
 
 ## How to optimize server-side data operations with adaptors
 

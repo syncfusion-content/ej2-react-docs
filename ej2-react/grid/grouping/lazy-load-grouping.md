@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Lazy Load Grouping | Syncfusion
-description: Enable lazy load grouping in Syncfusion React Grid (EJ2) for large data by loading child groups on expand, supporting server‑side group and virtual scrolling.
+description: React Grid lazy load grouping optimizes large datasets by loading grouped records on demand, improving performance with infinite or virtual scrolling.
 control: Lazy load grouping 
 platform: ej2-react
 documentation: ug

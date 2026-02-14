@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React Grid - Row template | Syncfusion
-description: Learn here all about row template in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Row Template | Syncfusion
+description: React Grid row template explains customizing full row rendering with templates, advanced layout options, and examples for complex row UIs.
 control: Row template 
 platform: ej2-react
 documentation: ug

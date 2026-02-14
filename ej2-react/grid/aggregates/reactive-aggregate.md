@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Reactive Aggregate | Syncfusion
-description: Enable reactive aggregates in Syncfusion React Grid (EJ2) for dynamic updates – auto-refresh in batch editing, manual refresh in inline mode.
+description: React Grid reactive aggregate supports live aggregate updates during editing or data changes, ensuring summaries always represent the current grid state.
 control: Reactive aggregate 
 platform: ej2-react
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Header in React Grid component | Syncfusion
-description: Learn here all about Header customization in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Header Style | Syncfusion
+description: React Grid header style supports customizing header appearance, templates, and interactive elements such as icons and menus for column headers.
 control: Header 
 platform: ej2-react
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React Grid - AutoFit Columns | Syncfusion
-description: Learn to AutoFit Syncfusion React Grid columns automatically based on content width, control stretching, handle visibility changes, and fit specific row ranges.
+title: React Grid - Column Autofit | Syncfusion
+description: React Grid column autofit supports automatically sizing columns to content and offers configuration options to improve readability and overall layout.
 control: AutoFit Columns
 platform: ej2-react
 documentation: ug

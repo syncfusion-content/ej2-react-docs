@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column spanning in React Grid component | Syncfusion
-description: Learn about column spanning feature in the Syncfusion React Grid component of Syncfusion Essential JS 2.
+title: React Grid - Column Spanning | Syncfusion
+description: React Grid column spanning supports merging header or cell columns, configuration for colspan behavior, and customization for complex multi-column layouts.
 control: Column spanning
 platform: ej2-react
 documentation: ug

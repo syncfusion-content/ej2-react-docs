@@ -125,10 +125,10 @@ To populate the empty Kanban with cards, define the local JSON data or remote da
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/kanban/getting-started-key-field-cs3/index.html %}
 {% endhighlight %}
-{% highlight tsx tabtitle="datasource.tsx" %}
+{% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/kanban/getting-started-key-field-cs3/app/datasource.tsx %}
 {% endhighlight %}
-{% highlight tsx tabtitle="datasource.jsx" %}
+{% highlight ts tabtitle="datasource.jsx" %}
 {% include code-snippet/kanban/getting-started-key-field-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -149,10 +149,10 @@ To populate the empty Kanban with cards, define the local JSON data or remote da
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/kanban/getting-started-swimlane-cs1/index.html %}
 {% endhighlight %}
-{% highlight tsx tabtitle="datasource.tsx" %}
+{% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/kanban/getting-started-swimlane-cs1/app/datasource.tsx %}
 {% endhighlight %}
-{% highlight tsx tabtitle="datasource.jsx" %}
+{% highlight ts tabtitle="datasource.jsx" %}
 {% include code-snippet/kanban/getting-started-swimlane-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% endtabs %}

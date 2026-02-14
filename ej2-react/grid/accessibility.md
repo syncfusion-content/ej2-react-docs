@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in the React Grid Component | Syncfusion
-description: Learn about accessibility support, standards compliance, keyboard navigation, and WAI‑ARIA integration in the Syncfusion React Grid component.
+title: React Grid - Accessibility | Syncfusion
+description: React Grid accessibility covers keyboard navigation, ARIA roles, and screen reader support to help build inclusive, user‑friendly grids.
 control: Accessibility
 platform: ej2-react
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in the React Grid Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component follows major accessibility guidelines and standards, including the [Americans with Disabilities Act (ADA)](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI‑ARIA roles](https://www.w3.org/TR/wai-aria/#roles). These standards ensure the grid is usable with assistive technologies and keyboard‑only navigation. 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component follows major accessibility guidelines and standards, including the [Americans with Disabilities Act (ADA)](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI‑ARIA roles](https://www.w3.org/TR/wai-aria#roles). These standards ensure the grid is usable with assistive technologies and keyboard‑only navigation. 
 
 The sections below describe the grid's accessibility compliance and behavior.
 
@@ -96,7 +96,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid uses a two‑table str
 
 ## Keyboard interaction
 
-The Grid provides keyboard navigation and follows WAI‑ARIA [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guidelines. Some keyboard behaviors vary depending on which features are enabled; consult the compatibility table above and the examples below for specific behavior.
+The Grid provides keyboard navigation and follows WAI‑ARIA [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert#keyboardinteraction) guidelines. Some keyboard behaviors vary depending on which features are enabled; consult the compatibility table above and the examples below for specific behavior.
 
 ### Pager
 

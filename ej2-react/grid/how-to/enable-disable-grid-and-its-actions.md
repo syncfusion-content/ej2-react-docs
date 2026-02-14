@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React Grid - Enable disable grid and its actions | Syncfusion
-description: Learn here all about Enable disable grid and its actions in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid – Enable or Disable Actions | Syncfusion
+description: React Grid provides options and API examples to enable or disable actions, configure behavior, and control grid interactions.
 control: Enable disable grid and its actions 
 platform: ej2-react
 documentation: ug
@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Enabling or disabling the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid and its actions is essential for managing interaction based on application state. This approach enhances usability and ensures controlled access to grid operations.
 
-To toggle the Grid's interactivity, apply or remove a custom CSS class conditionally. The example below demonstrates how to use the "is-disabled" class to visually and functionally disable the grid:
+To toggle the grid's interactivity, apply or remove a custom CSS class conditionally. The example below demonstrates how to use the "is-disabled" class to visually and functionally disable the grid:
 
 ```css
 .is-disabled {

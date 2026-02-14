@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection Customization in React Grid component | Syncfusion
-description: Learn here all about Selection customization in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Selection Style | Syncfusion
+description: React Grid selection style customizes visuals and templates for selected rows, cells, and columns, ensuring consistent and intuitive selection.
 control: Selection 
 platform: ej2-react
 documentation: ug

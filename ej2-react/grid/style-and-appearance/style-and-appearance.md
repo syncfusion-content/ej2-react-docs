@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and appearance in React Grid component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Style and Appearance | Syncfusion
+description: React Grid style and appearance provides a consolidated guide to theming, CSS customization, and style tokens to match application design.
 control: Style and appearance 
 platform: ej2-react
 documentation: ug

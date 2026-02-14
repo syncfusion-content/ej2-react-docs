@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Selection | Syncfusion
-description: Learn about selection in Syncfusion React Grid (EJ2) to select single or multiple rows, cells, or columns using mouse, keyboard, or touch interactions.
+description: React Grid selection provides a complete overview of selection modes, APIs, and configuration to control selection lifecycle and UI feedback.
 control: Selection 
 platform: ej2-react
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Scrolling | Syncfusion
-description: Learn here all about Scrolling in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+description: React Grid scrolling covers scroll behavior, dimension settings, responsive layouts, sticky headers, auto-scrolling, and dual-scrollbar configuration.
 platform: ej2-react
 control: Scrolling 
 documentation: ug
@@ -20,7 +20,7 @@ Scrollbar behavior:
 
 ## Set width and height
 
-The Grid dimension configuration enables precise control over scrollbar display and grid size. Use pixel values with the [width](https://ej2.syncfusion.com/react/documentation/api/grid#width) and [height](https://ej2.syncfusion.com/react/documentation/api/grid#height) properties to define exact dimensions.
+The grid dimension configuration enables precise control over scrollbar display and grid size. Use pixel values with the [width](https://ej2.syncfusion.com/react/documentation/api/grid#width) and [height](https://ej2.syncfusion.com/react/documentation/api/grid#height) properties to define exact dimensions.
 
 In the following example, the scrollbar is enabled, and the grid's `height` is set to "315" pixels, while the `width` is set to "400" pixels:
 
@@ -45,9 +45,9 @@ In the following example, the scrollbar is enabled, and the grid's `height` is s
 
 Responsive grid sizing enables dynamic adjustment to available space. The [width](https://ej2.syncfusion.com/react/documentation/api/grid#width) and [height](https://ej2.syncfusion.com/react/documentation/api/grid#height) properties accept "100%" values to fill the parent container.
 
-Parent element configuration is required when setting `height` to "100%". The parent container must explicitly define a height value for the Grid's responsive layout to function correctly.
+Parent element configuration is required when setting `height` to "100%". The parent container must explicitly define a height value for the grid's responsive layout to function correctly.
 
-In the following example, the parent container has explicit height and width set, and the Grid container's height and width are both set to "100%":
+In the following example, the parent container has explicit height and width set, and the grid container's height and width are both set to "100%":
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -154,10 +154,10 @@ function App() {
     <SwitchComponent change={onChange}></SwitchComponent>
     <GridComponent ref={g => grid = g} dataSource={data} >
       <ColumnsDirective>
-        <ColumnDirective field='OrderID' headerText='OrderID' width='120' textAlign='Right' />
-        <ColumnDirective field='CustomerID' headerText='CustomerID' width='150' />
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
         <ColumnDirective field='Freight' headerText='Freight' width='120' format='C2' />
-        <ColumnDirective field='ShipAddress' headerText='ShipAddress' width='150' />
+        <ColumnDirective field='ShipAddress' headerText='Ship Address' width='150' />
       </ColumnsDirective>
     </GridComponent>
   </div>)
@@ -224,10 +224,10 @@ function App() {
     <GridComponent dataSource={data} height="315" width="100%"
       rowSelected={rowSelected} ref={g => grid = g}>
       <ColumnsDirective>
-        <ColumnDirective field='OrderID' headerText='OrderID' width='120' textAlign='Right' />
-        <ColumnDirective field='CustomerID' headerText='CustomerID' width='150' />
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
         <ColumnDirective field='Freight' headerText='Freight' width='120' format='C2' />
-        <ColumnDirective field='ShipAddress' headerText='ShipAddress' width='150' />
+        <ColumnDirective field='ShipAddress' headerText='Ship Address' width='150' />
       </ColumnsDirective>
     </GridComponent></div>)
 };
@@ -276,10 +276,10 @@ function App() {
     <GridComponent dataSource={data} height="315" width="100%"
       rowSelected={rowSelected} ref={g => grid = g}>
       <ColumnsDirective>
-        <ColumnDirective field='OrderID' headerText='OrderID' width='120' textAlign='Right' />
-        <ColumnDirective field='CustomerID' headerText='CustomerID' width='150' />
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
         <ColumnDirective field='Freight' headerText='Freight' width='120' format='C2' />
-        <ColumnDirective field='ShipAddress' headerText='ShipAddress' width='150' />
+        <ColumnDirective field='ShipAddress' headerText='Ship Address' width='150' />
       </ColumnsDirective>
     </GridComponent></div>)
 };
@@ -327,12 +327,12 @@ Implementation steps:
 
 | Step | Action | Details |
 |------|--------|---------|
-| 1 | Add HTML Element | Insert `<div id="scroller">` above the Grid to create a top scrollbar. |
-| 2 | Initialize in [created](https://ej2.syncfusion.com/react/documentation/api/grid#created) event | Position the scroller `div` above Grid content dynamically. |
-| 3 | Synchronize Scroll Events | Link `onscroll` events between the scroller and Grid content. |
+| 1 | Add HTML Element | Insert `<div id="scroller">` above the grid to create a top scrollbar. |
+| 2 | Initialize in [created](https://ej2.syncfusion.com/react/documentation/api/grid#created) event | Position the scroller `div` above grid content dynamically. |
+| 3 | Synchronize Scroll Events | Link `onscroll` events between the scroller and grid content. |
 | 4 | Adjust Width and Visibility | Use the `setScroller()` method to match scrollbar width and respond to resize. |
 
-The following example demonstrates how to use the `created` event to insert a scrollbar at the top of the Grid content:
+The following example demonstrates how to use the `created` event to insert a scrollbar at the top of the grid content:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

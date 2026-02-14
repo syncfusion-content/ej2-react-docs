@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Caption Template | Syncfusion
-description: Customize group caption rows in Syncfusion React Grid (EJ2) using captionTemplate to display key, count, custom and localized text, or components.
+description: React Grid caption template explains customizing group captions, templates for group headers, and formatting group display with examples.
 control: Caption template 
 platform: ej2-react
 documentation: ug

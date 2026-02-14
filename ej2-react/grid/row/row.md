@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Row | Syncfusion
-description: Learn how to manage rows in Syncfusion React Grid with conditional styling and adjustable row height for a clear, flexible layout.
+description: React Grid row covers row-level configuration, events, selection, and behaviors to control presentation, styling, interaction, and customization of grid rows.
 control: Row 
 platform: ej2-react
 documentation: ug

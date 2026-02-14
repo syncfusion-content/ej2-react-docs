@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Excel Export Options | Syncfusion
-description: Learn here all about Excel export options in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+description: React Grid Excel export supports custom content, record/column selection, styles, themes, grouping, and advanced Excel output customization.
 control: Excel export options 
 platform: ej2-react
 documentation: ug

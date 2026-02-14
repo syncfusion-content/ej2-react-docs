@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Global local in React Grid component | Syncfusion
-description: Learn here all about Global local in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Global and Local | Syncfusion
+description: React Grid global and local settings define component-level and app-wide configuration, localization, and scope control to ensure consistent grid behavior.
 control: Global local 
 platform: ej2-react
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Cell selection | Syncfusion
-description: Learn about cell selection in Syncfusion React Grid (EJ2) to select single or multiple cells using different selection modes and handle cell selection events.
+description: React Grid cell selection covers selecting single or multiple cells, selection APIs, and keyboard interactions for fine-grained selection control.
 control: Cell selection 
 platform: ej2-react
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column reorder in React Grid component | Syncfusion
-description: Learn here all about Column reorder in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Column Reorder | Syncfusion
+description: React Grid column reorder enables drag‑and‑drop movement, configurable restrictions, and events to track and persist updated column order.
 platform: ej2-react
 control: Column reorder 
 documentation: ug

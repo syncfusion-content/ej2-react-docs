@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Headers in React Grid component | Syncfusion
-description: Learn here all about Headers in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Column Headers | Syncfusion
+description: React Grid column headers support header templates, tooltips, multi-line layouts, and customization options for enhanced header appearance and interactions.
 control: Headers 
 platform: ej2-react
 documentation: ug
@@ -11,8 +11,6 @@ domainurl: ##DomainURL##
 # Headers in React Grid component
 
 Column headers in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid display the titles for each column, making it clear what data is shown. They provide context and make the grid easier to read and navigate. Headers can be customized by adjusting text alignment, applying templates, stacking multiple headers, or updating them dynamically, offering flexibility to design the grid as needed.
-
-
 
 ## Header text
 

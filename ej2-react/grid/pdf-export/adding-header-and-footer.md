@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Adding header and footer in React Grid component | Syncfusion
-description: Learn here all about Adding header and footer in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Adding Header And Footer | Syncfusion
+description: React Grid PDF export header and footer explains adding custom headers/footers to exported PDFs, templates, and styling options for printed output.
 control: Adding header and footer 
 platform: ej2-react
 documentation: ug

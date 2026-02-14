@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Editing | Syncfusion
-description: Explore Syncfusion React Grid editing features including CRUD operations, edit modes, templates, and external editing options.
+description: React Grid editing enables features, actions, modes, toolbar configs, column rules, templates, confirmations, and external CRUD workflows.
 control: Edit 
 platform: ej2-react
 documentation: ug
@@ -402,7 +402,7 @@ Use the [editTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/c
 
  {% previewsample "page.domainurl/code-snippet/grid/edit-foreign-key" %}
 
-## How to perform CRUD action externally
+## Perform CRUD action externally
 
 By default, the Grid provides built-in editing through toolbars and inline editing. However, CRUD operations can also be triggered programmatically from external controls (custom buttons, forms, or panels outside the grid). This allows full control over when and how data operations occur.
 

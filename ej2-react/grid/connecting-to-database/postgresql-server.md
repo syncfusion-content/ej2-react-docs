@@ -1,7 +1,7 @@
 ---
 layout: post
-title: PostgreSQL Server Data Binding Syncfusion React Grid
-description: Learn how to consume data from PostgreSQL Server, bind it to Syncfusion Grid, and perform CRUD operations.
+title: React Grid - PostgreSQL Server | Syncfusion
+description: React Grid PostgreSQL Server integration provides backend connectivity with PostgreSQL for streamlined data retrieval, updates, and full server‑side operations.
 platform: ej2-react
 control: grid
 keywords: adaptors, customadaptor, urladaptor, postgresql, remotedata
@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 
 This section describes how to connect and retrieve data from a PostgreSQL Server database using [Npgsql EntityFrameworkCore PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) and bind it to the Syncfusion React Grid.
 
-PostgreSQL Server database can be bound to the Grid in different ways (i.e.) using [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource) property, custom adaptor and remote data binding using various adaptors. In this documentation, two approaches will be examined to connect a PostgreSQL Server database to a Grid. Both the approaches have capability to handle data and CRUD operations with built-in methods as well as can be customized as per your own.
+PostgreSQL Server database can be bound to the Grid in different ways (i.e.) using [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasource) property, custom adaptor and remote data binding using various adaptors. In this documentation, two approaches will be examined to connect a PostgreSQL Server database to a Grid. Both the approaches have capability to handle data and CRUD operations with built-in methods as well as can be customized as per your own.
 
 **1. Using UrlAdaptor**
 
@@ -21,7 +21,7 @@ The [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/grid/connecting-
 
 **2. Using CustomAdaptor**
 
-The [CustomAdaptor](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/custom-adaptor) serves as a mediator between the UI component and the database for data binding. While the data source from the database can be directly bound to the Syncfusion React Grid locally using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource) property, the `CustomAdaptor` approach is preferred as it allows for customization of both data operations and CRUD operations according to specific requirements. In this approach, for every action in the Grid, a corresponding request with action details is sent to the `CustomAdaptor`. The Grid provides predefined methods to perform data operations such as **searching**, **filtering**, **sorting**, **aggregation**, **paging** and **grouping**. Alternatively, your own custom methods can be employed to execute operations and return the data in the `result` and `count` format for displaying in the Grid. Additionally, for CRUD operations, predefined methods can be overridden to provide custom functionality. Further details on this can be found in the latter part of the documentation.
+The [CustomAdaptor](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/custom-adaptor) serves as a mediator between the UI component and the database for data binding. While the data source from the database can be directly bound to the Syncfusion React Grid locally using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasource) property, the `CustomAdaptor` approach is preferred as it allows for customization of both data operations and CRUD operations according to specific requirements. In this approach, for every action in the Grid, a corresponding request with action details is sent to the `CustomAdaptor`. The Grid provides predefined methods to perform data operations such as **searching**, **filtering**, **sorting**, **aggregation**, **paging** and **grouping**. Alternatively, your own custom methods can be employed to execute operations and return the data in the `result` and `count` format for displaying in the Grid. Additionally, for CRUD operations, predefined methods can be overridden to provide custom functionality. Further details on this can be found in the latter part of the documentation.
 
 ## Binding data from PostgreSQL Server using an API service
 
@@ -159,15 +159,15 @@ Include the necessary CSS files in your `styles.css` file to style the Syncfusio
 {% tabs %}
 {% highlight css tabtitle="styles.css" %}
 
-    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-react-grids/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+    @import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+    @import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';
+    @import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+    @import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+    @import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+    @import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+    @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+    @import '../node_modules/@syncfusion/ej2-react-grids/styles/tailwind3.css';
 
 {% endhighlight %}
 {% endtabs %}
@@ -604,7 +604,7 @@ CRUD operations within the Grid can be mapped to server-side controller actions 
 3. **updateUrl**: Specifies the URL for updating existing data.
 4. **batchUrl**: Specifies the URL for batch editing.
 
-To enable editing in Grid, refer to the editing [documentation](https://ej2.syncfusion.com/react/documentation/grid/editing/edit). In the below example, the inline edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) is enabled and [toolbar](https://helpej2.syncfusion.com/react/documentation/api/grid/#toolbar) property is configured to display toolbar items for editing purposes.
+To enable editing in Grid, refer to the editing [documentation](https://ej2.syncfusion.com/react/documentation/grid/editing/edit). In the below example, the inline edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) is enabled and [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbar) property is configured to display toolbar items for editing purposes.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -640,8 +640,8 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-> * Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) for the Grid. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column/#isprimarykey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
-> * If database has an auto generated column, ensure to define [isIdentity](https://ej2.syncfusion.com/react/documentation/api/grid/column/#isidentity) property of Grid column to disable them during adding or editing operations.
+> * Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) for the Grid. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
+> * If database has an auto generated column, ensure to define [isIdentity](https://ej2.syncfusion.com/react/documentation/api/grid/column#isidentity) property of Grid column to disable them during adding or editing operations.
 
 **Insert Operation:**
 
@@ -801,7 +801,7 @@ public class CRUDModel<T> where T : class
 
 **Batch Operation:**
 
-To perform batch operation, define the edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) as **Batch** and specify the `batchUrl` property in the `DataManager`. Use the **Add** toolbar button to insert new row in batch editing mode. To edit a cell, double-click the desired cell and update the value as required. To delete a record, simply select the record and press the **Delete** toolbar button. Now, all CRUD operations will be executed in batch editing mode. Clicking the **Update** toolbar button will update the newly added, edited, or deleted records from the **Orders** table using a single API **POST** request.
+To perform batch operation, define the edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) as **Batch** and specify the `batchUrl` property in the `DataManager`. Use the **Add** toolbar button to insert new row in batch editing mode. To edit a cell, double-click the desired cell and update the value as required. To delete a record, simply select the record and press the **Delete** toolbar button. Now, all CRUD operations will be executed in batch editing mode. Clicking the **Update** toolbar button will update the newly added, edited, or deleted records from the **Orders** table using a single API **POST** request.
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -912,7 +912,7 @@ When you run the application, the resultant Syncfusion React Grid will look like
 
 ![Grid bound with PostgreSQL Server data](../images/connecting-micro-curd.gif)
 
-> Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-react-grid/tree/master/Binding%20PostgreSQL%20database%20using%20UrlAdaptor).
+> Find the sample in this GitHub location.
 
 ## Binding data from PostgreSQL Server using CustomAdaptor
 
@@ -1407,9 +1407,9 @@ export class CustomAdaptor extends UrlAdaptor {
 
 ### Handling CRUD operations
 
-To enable editing in the Syncfusion React Grid, utilize the [editSettings](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/) property. The Grid offers multiple edit modes including the **Inline/Normal**, **Dialog** and **Batch** editing. For more details, refer to the Grid [editing](https://ej2.syncfusion.com/react/documentation/grid/editing/edit) documentation.
+To enable editing in the Syncfusion React Grid, utilize the [editSettings](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings) property. The Grid offers multiple edit modes including the **Inline/Normal**, **Dialog** and **Batch** editing. For more details, refer to the Grid [editing](https://ej2.syncfusion.com/react/documentation/grid/editing/edit) documentation.
 
-In this scenario, the inline edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) and [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbar) property configured to display toolbar items for editing purpose.
+In this scenario, the inline edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) and [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbar) property configured to display toolbar items for editing purpose.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -1446,8 +1446,8 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-> * Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) for the Grid. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column/#isprimarykey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
-> * If database has an auto generated column, ensure to define [isIdentity](https://ej2.syncfusion.com/react/documentation/api/grid/column/#isidentity) property of Grid column to disable them during adding or editing operations.
+> * Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) for the Grid. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
+> * If database has an auto generated column, ensure to define [isIdentity](https://ej2.syncfusion.com/react/documentation/api/grid/column#isidentity) property of Grid column to disable them during adding or editing operations.
 The CRUD operations can be performed and customized on our own by overriding the following CRUD methods of the `UrlAdaptor` 
 
 * insert
@@ -1831,4 +1831,4 @@ public class CRUDModel<T> where T : class
 
 ![Syncfusion React Grid bound with PostgreSQL Server data](../images/connecting-micro-curd.gif)
 
-> Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-react-grid/tree/master/Binding%20PostgreSQL%20database%20using%20CustomAdaptor).
+> Find the sample in this GitHub location

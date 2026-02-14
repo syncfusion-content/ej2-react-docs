@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Editing in React Grid component | Syncfusion
-description: Learn here all about Editing customization in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Editing Style | Syncfusion
+description: React Grid editing style supports customizing editor appearance and adjusting layouts to enhance the overall edit mode experience.
 control: Editing 
 platform: ej2-react
 documentation: ug

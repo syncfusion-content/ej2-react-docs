@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Print in React Grid component | Syncfusion
-description: Learn here all about Print in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Print | Syncfusion
+description: React Grid print covers preparing grid content for printing, applying print‑specific styles, and configuring options to produce clear, printer‑friendly output.
 control: Print 
 platform: ej2-react
 documentation: ug
