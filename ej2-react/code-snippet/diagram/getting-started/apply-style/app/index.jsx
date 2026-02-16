@@ -17,7 +17,7 @@ export default function App() {
             borderColor:'orange'
         }
     ];
-    return (<DiagramComponent id="container" width={"100%"} height={"350px"} nodes={nodes}/>);
+    return (<DiagramComponent id="container" width={"1000px"} height={"550px"} nodes={nodes}/>);
 }
 const root = ReactDOM.createRoot(document.getElementById("diagram"));
 root.render(<App />);

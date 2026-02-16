@@ -47,7 +47,7 @@ export default function App() {
         dataManager: new DataManager(data)
     };
     const layoutSetting = { type: "OrganizationalChart" };
-    return (<DiagramComponent id="container" width={"100%"} height={"350px"} dataSourceSettings={dataSettings} layout={layoutSetting} getNodeDefaults={(node) => {
+    return (<DiagramComponent id="container" width={"1000px"} height={"550px"} dataSourceSettings={dataSettings} layout={layoutSetting} getNodeDefaults={(node) => {
             node.width = 70;
             node.height = 30;
             return node;

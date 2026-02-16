@@ -109,7 +109,7 @@ export default function App() {
             ]
         }
     ];
-    return (<DiagramComponent id="container" width={"100%"} height={"600px"} nodes={nodes} connectors={connectors} getNodeDefaults={(node) => {
+    return (<DiagramComponent id="container" width={"1000px"} height={"600px"} nodes={nodes} connectors={connectors} getNodeDefaults={(node) => {
             node.height = 50;
             node.width = 140;
             if(node.id === "node1" || node.id === "node4"){
