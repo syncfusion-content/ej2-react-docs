@@ -118,7 +118,7 @@ export default function App() {
   return (
     <DiagramComponent
       id="container"
-      width={"100%"}
+      width={"1000px"}
       height={"600px"}
       nodes={nodes}
       connectors={connectors}

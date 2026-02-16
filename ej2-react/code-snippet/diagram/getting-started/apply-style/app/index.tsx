@@ -20,7 +20,7 @@ export default function App() {
   }
   ]
   return (
-    <DiagramComponent id="container" width={"100%"} height={"350px"} nodes={nodes} />
+    <DiagramComponent id="container" width={"1000px"} height={"550px"} nodes={nodes} />
   );
 }
 const root = ReactDOM.createRoot(document.getElementById("diagram") as HTMLElement);

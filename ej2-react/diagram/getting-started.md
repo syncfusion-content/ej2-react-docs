@@ -272,7 +272,7 @@ export default function App() {
             style:{fill:'skyblue',strokeColor:'skyblue',},
         }
     ];
-    return (<DiagramComponent id="container" width={"700px"} height={"350px"} nodes={nodes}/>);
+    return (<DiagramComponent id="container" width={"1000px"} height={"550px"} nodes={nodes}/>);
 }
 
 
@@ -473,8 +473,8 @@ export default function App() {
   return (
     <DiagramComponent
       id="container"
-      width={"700px"}
-      height={"350px"}
+      width={"1000px"}
+      height={"550px"}
       dataSourceSettings={dataSettings}
       layout={layoutSetting}
        getConnectorDefaults={(connector) => {
