@@ -36,7 +36,7 @@ The [enableColumnSpan](https://ej2.syncfusion.com/react/documentation/api/grid#e
 
 ## Dynamic column spanning
 
-Column spanning in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid merges adjacent cells horizontally to create a cleaner and more structured layout. Spanning can be controlled dynamically by setting the [colSpan](https://ej2.syncfusion.com/react/documentation/api/grid/queryCellInfoEventArgs#colspan) attribute within the [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#querycellinfo) event, based on column values and specific conditions. This approach enables custom logic to span cells, allowing flexible presentation of time ranges, grouped values, or contextual highlights.
+Column spanning in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid merges adjacent cells horizontally to create a cleaner and more structured layout. Spanning can be controlled dynamically by setting the [colSpan](https://ej2.syncfusion.com/react/documentation/api/grid/queryCellInfoEventArgs#colspan) attribute within the [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#querycellinfo) event, based on column values and specific conditions. This approach enables custom logic to span cells, allowing flexible presentation of time ranges, grouped values, or contextual highlights.
 
 The following demo shows employee "Davolio" performing analysis from "9:00 AM to 10:00 AM", with spanned cells representing the time range.
 

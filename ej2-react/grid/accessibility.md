@@ -70,7 +70,7 @@ The React Grid follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/g
 | `aria-labelledby` | Provides an accessible name for specific elements such as filter dialog items. |
 | `aria-describedby` | Provides descriptive help text for focused header cells. |
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid uses a two‑table structure for header and content rendering. This improves screen reader interpretation but may trigger warnings in automated accessibility tools. These warnings do not necessarily affect actual assistive-technology usability. Known checker tool warnings include:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid uses a two‑table structure for header and content rendering. This improves screen reader interpretation but may trigger warnings in automated accessibility tools. These warnings do not necessarily affect actual assistive-technology usability. Known checker tool warnings include:
 
 * aria-required-children: This warning can occur when the grid renders certain feature elements (for example, textarea or toolbar content). It may be reported when toolbar or grouping features are enabled.
 
@@ -197,7 +197,7 @@ The Grid provides keyboard navigation and follows WAI‑ARIA [keyboard interacti
 <kbd>Enter</kbd> | <kbd>Enter</kbd> | Executes sorting (ascending or descending) on a column when its header element is focused.
 <kbd>Ctrl + Enter</kbd> | <kbd>Command + Enter</kbd> | Executes multi-sorting on a column when its header element is focused.
 <kbd>Shift + Enter</kbd> | <kbd>Shift + Enter</kbd> | Removes sorting from the currently focused header column.
-<br>
+
 
 > * The <kbd>Command</kbd> and <kbd>Control</kbd> keys on Mac devices can be swapped. When this swap is made, use the <kbd>Command</kbd> key instead of the <kbd>Control</kbd> key, and the <kbd>Control</kbd> key instead of the <kbd>Command</kbd> key for the key interactions mentioned above with Mac devices.
 > * For instance, after swapping the keys, to group the columns when the header element is focused, use <kbd>Command + Space</kbd>, and to expand the visible groups, use <kbd>Ctrl + Down Arrow</kbd>.

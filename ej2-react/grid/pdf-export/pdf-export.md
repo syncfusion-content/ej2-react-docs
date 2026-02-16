@@ -145,7 +145,7 @@ The following example demonstrates export with cell and row spanning using `quer
 
 ## Merge duplicate cells in specific column and export in Grid
 
-Duplicate cells (based on their values) in a specific column of the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid can be merged. This is achieved by utilizing the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid#databound) event. Additionally, merge duplicate cells in the specified column during export using the [pdfQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#pdfquerycellinfo) event for PDF format. This functionality improves data readability and provides a clearer visual representation.
+Duplicate cells (based on their values) in a specific column of the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid can be merged. This is achieved by utilizing the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid#databound) event. Additionally, merge duplicate cells in the specified column during export using the [pdfQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#pdfquerycellinfo) event for PDF format. This functionality improves data readability and provides a clearer visual representation.
 
 The following example demonstrates merging duplicate cells in the "OrderID" column in both Grid view and export:
 

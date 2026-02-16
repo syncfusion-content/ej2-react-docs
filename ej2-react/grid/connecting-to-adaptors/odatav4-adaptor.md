@@ -20,7 +20,7 @@ With the OData service operational, the next phase involves configuring the Reac
 
 ### Syncfusion package installation
 
-Open a terminal inside the **ClientApp** (React project) folder and ensure **package.json** is present, then run:s
+Open a terminal inside the **ClientApp** (React project) folder and ensure **package.json** is present, then run:
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
@@ -418,7 +418,7 @@ The following screenshot illustrates the ODataV4Adaptor with paging query.
 
 > For more information about paging, refer to the [Paging](https://ej2.syncfusion.com/react/documentation/grid/paging) documentation.
 
-### CRUD operations
+## CRUD operations
 
 CRUD refers to the four essential data operations: **Create** (add records), **Read** (view records), **Update** (modify records), and **Delete** (remove records).
 

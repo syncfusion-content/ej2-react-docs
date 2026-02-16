@@ -243,7 +243,7 @@ Persistence can be added to a Syncfusion<sup style="font-size:70%">&reg;</sup> R
 
 ### Add a new column in persisted columns list
 
-When the [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid#enablepersistence) property is set to `true` in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component, column configurations are automatically persisted. To add new columns to an already persisted state, the grid’s built-in methods such as `push` can be used, followed by calling the [refreshColumns](https://ej2.syncfusion.com/react/documentation/api/grid#refreshcolumns) method to update the UI with the newly added columns.
+When the [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid#enablepersistence) property is set to `true` in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component, column configurations are automatically persisted. To add new columns to an already persisted state, the grid’s built-in methods such as `push` can be used, followed by calling the [refreshColumns](https://ej2.syncfusion.com/react/documentation/api/grid#refreshcolumns) method to update the UI with the newly added columns.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -266,7 +266,7 @@ When the [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/
 
 ### Persist the column template, header template and header text
 
-By default, when the [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid#enablepersistence) property is `true` in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component, certain column properties such as column template, header text, header template, column formatter, and value accessor are not persisted because these properties can be customized at the application level.
+By default, when the [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid#enablepersistence) property is `true` in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component, certain column properties such as column template, header text, header template, column formatter, and value accessor are not persisted because these properties can be customized at the application level.
 
 Restoring these column properties and achieving persistence requires cloning the grid's columns property using JavaScript Object's assign method and manually storing it along with the persist data. When restoring the settings, assign this cloned column object to the grid's columns property to restore the column settings. The sample below demonstrates this process:
 

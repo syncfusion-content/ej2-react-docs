@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 React Router is a popular routing library for building single-page applications (SPAs) in React. It enables seamless navigation between different views or components based on the URL, without requiring full page reloads.
 
-This guide outlines the steps to integrate routing in a React application that uses the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component.
+This guide outlines the steps to integrate routing in a React application that uses the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component.
 
 ## Steps to create a routing sample in React Grid component
 

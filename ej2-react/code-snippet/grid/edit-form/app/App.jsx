@@ -9,7 +9,7 @@ import { data } from './datasource';
 function App() {
   let grid;
   const editOptions = { allowEditing: true };
-  const [selectedProduct, setSelectedProduct] = useState(new Order());
+  const [selectedProduct, setSelectedProduct] = useState([]);
 
   const dropdown= [
     { shipCountry: 'Germany' },

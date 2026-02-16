@@ -10,6 +10,8 @@ domainurl: ##DomainURL##
 
 # Column Rendering in React Grid Component
 
+Columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid define the structure and presentation of data. This section outlines manual, automatic, and dynamic rendering approaches to ensure clarity and flexibility in grid design.
+
 ## Define columns manually
 
 Columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid can be manually defined using the [ColumnDirective](https://ej2.syncfusion.com/react/documentation/api/grid/column) element. Each column is configured with properties such as `field`, `headerText`, `type`, and `width`, allowing precise control over the column's behavior and appearance to meet specific layout and data requirements.
@@ -174,7 +176,7 @@ For example, consider a column named "Name" that contains an array of two object
 
 An expression column displays a calculated value based on other fields in the same row. This can be implemented using the `valueAccessor` property, which allows defining a custom function to compute the value dynamically.
 
-For example, consider an expression column named "Calories Intake". This column calculates the total calories for each row using values from the "Protein", "Fat", and "Carbohydrate" columns. The `valueAccessor` function can perform the necessary calculation—such as applying a formula like:
+For example, consider an expression column named "Calories Intake". This column calculates the total calories for each row using values from the "Protein", "Fat", and "Carbohydrate" columns. The `valueAccessor` function can perform the necessary calculation, including formulas or other custom logic.
 
 ```ts
 const Calories = (Protein × 4) + (Fat × 9) + (Carbohydrate × 4);
@@ -226,7 +228,7 @@ This formula ensures that serial numbers continue correctly across pages. Once c
 
 ## Complex data binding
 
-Complex data binding in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component can be achieved using the dot (.) operator in the `field` property. This feature is particularly useful when dealing with nested or complex data structures.
+Complex data binding in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component can be achieved using the dot (.) operator in the `field` property. This feature is particularly useful when dealing with nested or complex data structures.
 
 ### Using local data
 

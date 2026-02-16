@@ -214,13 +214,13 @@ The output will appear as follows:
 
 ## Adding Grid component with custom binding 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component provides support for integrating data from a Redux service using the observable binding feature. This allows you to connect the grid component to your Redux store and perform various data operations such as sorting, filtering, paging, and CRUD actions. 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provides support for integrating data from a Redux service using the observable binding feature. This allows you to connect the grid component to your Redux store and perform various data operations such as sorting, filtering, paging, and CRUD actions. 
 
 When using custom binding, the Grid expects the result of the custom logic to be an object with properties `result` and `count`. The result property should contain the data to be displayed in the Grid, while the `count` property indicates the total number of records in the dataset for your application. To utilize custom binding, you can handle the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started). The DataManager integrates seamlessly with the React Grid to manage custom data processing and binding.
 
 The Grid component offers various powerful features for managing grid actions such as **paging**, **grouping**, **sorting**, and **filtering**. These actions trigger the [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid#datastatechange) event. For CRUD operations, including **Create**, **Read**, **Update**, and **Delete**, the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid#datasourcechanged) event is triggered. This event allows you to handle and manipulate data based on user interactions.
 
-### Integrating the redux service with the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid
+### Integrating the redux service with the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid
 
 Follow these steps to integrate the Redux service into the grid component with SharePoint Framework for your project:
 
@@ -926,11 +926,11 @@ const gridReducer = (state = initialState, action: any) => {
 
 ### Handling CRUD operations
 
-To perform CRUD (Create, Read, Update, Delete) operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component, you can utilize the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid#datasourcechanged) event. This event is triggered when a CRUD action is performed in the grid, allowing you to capture the changes and update the Redux `store` or perform any other necessary operations.
+To perform CRUD (Create, Read, Update, Delete) operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component, you can utilize the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid#datasourcechanged) event. This event is triggered when a CRUD action is performed in the grid, allowing you to capture the changes and update the Redux `store` or perform any other necessary operations.
 
 **Integrating CRUD Operations**
 
-To implement CRUD operations using Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, follow these steps:
+To implement CRUD operations using Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, follow these steps:
 
 1. **Configure grid settings:** Set up the necessary grid settings, such as allowing editing, adding, and deleting records. Define the toolbar options to facilitate your interactions.
 

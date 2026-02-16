@@ -25,8 +25,8 @@ The Grid supports two selection types, configurable via the [selectionSettings.t
 
 **Multi-selection controls**
 
-* **CTRL + Click:** Select or deselect separate rows ,cells or columns.
-* **SHIFT + Click:** Select a range of rows, cells, or columns between two points.
+* <kbd>CTRL</kbd> **+ Click:** Select or deselect separate rows, cells or columns.
+* <kbd>SHIFT</kbd> **+ Click:** Select a range of rows, cells or columns between two points.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Virtual Scrolling in React Grid Component
 
-The virtual scrolling feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid seamlessly handles and displays large amounts of data without performance degradation. It improves the rendering process by loading only the visible rows in the grid viewport, rather than rendering the entire dataset at once. This powerful capability is essential when dealing with datasets that contain thousands of records.
+The virtual scrolling feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid seamlessly handles and displays large amounts of data without performance degradation. It improves the rendering process by loading only the visible rows in the grid viewport, rather than rendering the entire dataset at once. This powerful capability is essential when dealing with datasets that contain thousands of records.
 
 To use the virtual scrolling feature, inject the `VirtualScroll` module into the Grid component's `Inject` services array as shown below:
 
-```tsx
+```ts
 import { Inject, VirtualScroll } from '@syncfusion/ej2-react-grids';
 
 <GridComponent>
@@ -257,7 +257,7 @@ Create a custom adaptor to handle data segments:
 - **Override** the `processQuery` method to handle Skip queries based on current page set  
 - **Ensure** all data operations use the complete 2-million-record dataset on the server
 
-```typescript
+```ts
 export class CustomUrlAdaptor extends UrlAdaptor {
     processQuery(args) {
         if (arguments[1].queries) {
@@ -285,7 +285,7 @@ this.dataManager = new DataManager({
 
 The grid renders with virtualization enabled and the custom DataManager:
 
-```typescript
+```ts
 <GridComponent 
     id='grid' 
     ref={g => this.grid = g} 
@@ -306,7 +306,7 @@ The grid renders with virtualization enabled and the custom DataManager:
 
 The `beforeDataBound` event handler sets the `args.count` property to 0.5 million, enabling scrolling within the current segment. All data operations continue using the full dataset through the custom adaptor:
 
-```typescript
+```ts
 beforeDataBound(args) {
     // Store total records count (2 million)
     totalRecords = args.count;
@@ -322,7 +322,7 @@ beforeDataBound(args) {
 
 The **Load Previous Set** button renders above the grid and the **Load Next Set** button renders below it:
 
-```typescript
+```ts
 <ButtonComponent 
     cssClass='e-info prevbtn' 
     onClick={this.prevBtnClick} 
@@ -359,7 +359,7 @@ The **Load Previous Set** button renders above the grid and the **Load Next Set*
 
 The button click handlers increment or decrement the `pageSet` value and re-render the grid:
 
-```typescript
+```ts
 // Triggered when clicking the Previous/Next button
 prevNxtBtnClick(args) {
     if (this.grid.element.querySelector('.e-content') && 

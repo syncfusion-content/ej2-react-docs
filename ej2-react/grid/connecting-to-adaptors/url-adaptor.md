@@ -10,427 +10,15 @@ domainurl: ##DomainURL##
 
 # Remote data binding with custom REST API using UrlAdaptor
 
-The `UrlAdaptor` enables the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid to communicate with any custom REST API service. It converts grid operations (filtering, sorting, paging, CRUD) into `HTTP POST` requests and processes `JSON` responses.
+The `UrlAdaptor` enables the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid to communicate with any custom REST API service. It converts grid operations (filtering, sorting, paging, CRUD) into HTTP POST requests and processes JSON responses.
 
-This documentation outlines the complete process for setting up `UrlAdaptor` with the React Grid, from backend API creation to frontend integration and CRUD operations.
+For details on configuring the backend (expected request/response format, server‑side processing), refer to the [UrlAdaptor backend setup documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors#url-adaptor).
 
-## Why use UrlAdaptor?
+This documentation outlines the complete process for configuring the `UrlAdaptor` with the React Grid, covering frontend integration, data binding, and performing CRUD operations.
 
-The [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#url-adaptor) works with **any custom REST API**—no OData or GraphQL required.
+## Frontend setup (React with UrlAdaptor)
 
-**Key benefits:**
-1. **Backend agnostic**: Works with backend server technology.
-2. **Server-side processing**: Handles large datasets (100K+ records) efficiently on the server.
-3. **Automatic requests**: Grid operations generate structured `HTTP` requests automatically.
-4. **Full CRUD support**: Manages insert, update, delete operations seamlessly.
-5. **Extensible**: Add authentication, caching, or custom transformations easily.
-
-**When to use UrlAdaptor:**
-- Custom REST API implementations.
-- Server-side operations for large datasets (100K+ records).
-- Integration with existing backend services.
-- CRUD operations requiring custom validation.
-
-**How it works:**
-- Compatibility exists with any backend (ASP.NET Core, Node.js, PHP, Java, Python).
-- Filtering, sorting, paging, searching, grouping, and CRUD operations are supported.
-- Grid actions convert into structured parameters.
-- `HTTP POST` requests transmit to the backend API.
-- `JSON` responses with data and count process automatically.
-
-## Understanding the required response format
-
-Before choosing a backend technology (ASP.NET Core, Node.js, PHP, Java, Python, or any other), understand that every API endpoint used with `UrlAdaptor` must return data in exactly this `JSON` structure:
-
-```json
-{
-  "result": [
-    { "OrderID": 10001, "CustomerID": "ALFKI", "ShipCity": "Berlin" },
-    { "OrderID": 10002, "CustomerID": "ANATR", "ShipCity": "Madrid" },
-    ...
-  ],
-  "count": 45
-}
-```
-
-**Field Descriptions:**
-- **result** (required): Array containing data records for current page/request.
-- **count** (required): Total number of records in the dataset (not just current page).
-
-**Why this format?**
-
-- **result**: Contains the actual data to display in the grid
-- **count**: Enables paging calculations (e.g., "Page 2 of 10")
-
-> * Without the `count` field, paging and virtual scrolling cannot function correctly.
-> * APIs returning just an array `[{...}, {...}]` instead of `{result: [...], count: ...}` will prevent proper Grid data display. Responses must wrap in the required structure.
-
-## Supported databases and technologies
-
-The `UrlAdaptor` is **completely backend-agnostic**. It connects to any database through a REST API that returns the required `JSON` format.
-
-**Common Database Integrations:**
-
-| Database | Use Case | Notes |
-|----------|----------|-------|
-| **SQL Server** | Enterprise applications | Robust querying, stored procedures support |
-| **MySQL** | Web applications | Open-source, high performance |
-| **PostgreSQL** | Complex data models | Advanced features, `JSON` support |
-| **SQLite** | Embedded applications | Lightweight, serverless |
-| **MongoDB** | Document databases | NoSQL, flexible schema |
-| **Oracle** | Enterprise systems | High scalability, reliability |
-| **Azure SQL Database** | Cloud applications | Managed service, auto-scaling |
-
-> **Key Point**: `UrlAdaptor` is **backend-agnostic**. Compatibility exists with any technology stack that:
-> 1. Accepts `HTTP POST` requests with `JSON` body.
-> 2. Parses request parameters (filters, sorts, page info).
-> 3. Returns data in the required `{result, count}` format.
-
-## Part 1: Backend setup (ASP.NET Core API)
-
-**Why choose ASP.NET Core:**
-- Syncfusion provides `Syncfusion.EJ2.AspNet.Core` NuGet package with built-in helper methods.
-- `DataManagerRequest` class for easy parameter parsing.
-- `QueryableOperation` class for filtering, sorting, paging.
-- Strong typing and performance.
-
-### Step 1: Create project
-
-**Option 1: Visual Studio (Recommended for this guide)**
-
-1. Open **Visual Studio 2022**
-2. Select **Create a new project**
-3. Search for "**ASP.NET Core with React.js**" template
-4. Name the project: **UrlAdaptorDemo**
-5. Choose framework: **.NET 6.0 or later**
-6. Click **Create**
-
-For detailed setup instructions, see [Microsoft's official documentation](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-react?view=vs-2022).
-
-**Option 2: Command Line**
-
-```bash
-dotnet new react -n UrlAdaptorDemo
-cd UrlAdaptorDemo
-```
-
-**Project Structure After Creation:**
-```
-UrlAdaptorDemo/
-├── ClientApp/           # React frontend
-│   ├── src/
-│   │   ├── App.jsx
-│   │   └── index.css
-│   └── package.json
-├── Controllers/         # API controllers (will be created here)
-├── Models/              # Data models (will be created here)
-└── Program.cs           # Server configuration
-```
-
-### Step 2: Install required NuGet package
-
-The `Syncfusion.EJ2.AspNet.Core` package provides server-side data operation methods (`PerformFiltering`, `PerformSorting`, etc.) for `UrlAdaptor` functionality. This package is required for the guide examples.
-
-**Installation via NuGet Package Manager:**
-1. In Visual Studio, navigate to **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
-2. Search for **Syncfusion.EJ2.AspNet.Core**
-3. Select the package and click **Install**
-
-**Or via Package Manager Console:**
-```bash
-Install-Package Syncfusion.EJ2.AspNet.Core
-```
-
-**Or via .NET CLI:**
-```bash
-dotnet add package Syncfusion.EJ2.AspNet.Core
-```
-
-> **Note:** Without this package, manual implementation of filtering, sorting, and paging logic is required instead of using the built-in helper methods shown in this guide.
-
-### Step 3: Create data model
-
-Create a **Models** folder in the project root (if it doesn't exist), then add **OrdersDetails.cs**:
-
-{% tabs %}
-{% highlight cs tabtitle="OrdersDetails.cs" %}
-
-using System.ComponentModel.DataAnnotations;
-
-namespace UrlAdaptorDemo.Models
-{
-    public class OrdersDetails
-    {
-        // Static in-memory data store (replace with database in production)
-        public static List<OrdersDetails> order = new List<OrdersDetails>();
-
-        // Default constructor
-        public OrdersDetails()
-        {
-        }
-
-        // Parameterized constructor for easy object creation
-        public OrdersDetails(int OrderID, string CustomerId, int EmployeeId, double Freight, 
-            bool Verified, DateTime OrderDate, string ShipCity, string ShipName, 
-            string ShipCountry, DateTime ShippedDate, string ShipAddress)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerId;
-            this.EmployeeID = EmployeeId;
-            this.Freight = Freight;
-            this.ShipCity = ShipCity;
-            this.Verified = Verified;
-            this.OrderDate = OrderDate;
-            this.ShipName = ShipName;
-            this.ShipCountry = ShipCountry;
-            this.ShippedDate = ShippedDate;
-            this.ShipAddress = ShipAddress;
-        }
-
-        /// <summary>
-        /// Generates sample order data. In production, replace with database query.
-        /// </summary>
-        public static List<OrdersDetails> GetAllRecords()
-        {
-            if (order.Count() == 0)
-            {
-                int code = 10000;
-                for (int i = 1; i < 10; i++)
-                {
-                    order.Add(new OrdersDetails(code + 1, "ALFKI", i + 0, 2.3 * i, false, 
-                        new DateTime(1991, 05, 15), "Berlin", "Simons bistro", "Denmark", 
-                        new DateTime(1996, 7, 16), "Kirchgasse 6"));
-                    order.Add(new OrdersDetails(code + 2, "ANATR", i + 2, 3.3 * i, true, 
-                        new DateTime(1990, 04, 04), "Madrid", "Queen Cozinha", "Brazil", 
-                        new DateTime(1996, 9, 11), "Avda. Azteca 123"));
-                    order.Add(new OrdersDetails(code + 3, "ANTON", i + 1, 4.3 * i, true, 
-                        new DateTime(1957, 11, 30), "Cholchester", "Frankenversand", "Germany", 
-                        new DateTime(1996, 10, 7), "Carrera 52 con Ave. Bolívar #65-98 Llano Largo"));
-                    order.Add(new OrdersDetails(code + 4, "BLONP", i + 3, 5.3 * i, false, 
-                        new DateTime(1930, 10, 22), "Marseille", "Ernst Handel", "Austria", 
-                        new DateTime(1996, 12, 30), "Magazinweg 7"));
-                    order.Add(new OrdersDetails(code + 5, "BOLID", i + 4, 6.3 * i, true, 
-                        new DateTime(1953, 02, 18), "Tsawassen", "Hanari Carnes", "Switzerland", 
-                        new DateTime(1997, 12, 3), "1029 - 12th Ave. S."));
-                    code += 5;
-                }
-            }
-            return order;
-        }
-
-        // Properties with validation attributes
-        [Key]
-        public int? OrderID { get; set; }
-        
-        public string? CustomerID { get; set; }
-        
-        public int? EmployeeID { get; set; }
-        
-        public double? Freight { get; set; }
-        
-        public string? ShipCity { get; set; }
-        
-        public bool? Verified { get; set; }
-        
-        public DateTime OrderDate { get; set; }
-        
-        public string? ShipName { get; set; }
-        
-        public string? ShipCountry { get; set; }
-        
-        public DateTime ShippedDate { get; set; }
-        
-        public string? ShipAddress { get; set; }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-> **Production Note:** This example uses a static in-memory list (`order`) for simplicity. In real applications, replace `GetAllRecords()` with database queries using Entity Framework Core, Dapper, or the preferred data access layer.
-
-### Step 4: Create API controller
-
-Create **GridController.cs** in the **Controllers** folder. This controller handles all data requests from the Grid.
-
-{% tabs %}
-{% highlight cs tabtitle="GridController.cs" %}
-
-using Microsoft.AspNetCore.Mvc;
-using UrlAdaptorDemo.Models;
-using Syncfusion.EJ2.Base;
-
-namespace UrlAdaptorDemo.Controllers
-{
-    [Route("api/[controller]")]
-    [ApiController]
-    public class GridController : ControllerBase
-    {
-        /// <summary>
-        /// Main endpoint for Grid data requests.
-        /// Handles initial load and all grid operations (paging, filtering, sorting, etc.)
-        /// </summary>
-        [HttpPost]
-        public object Post([FromBody] DataManagerRequest dm)
-        {
-            // Retrieve data from data source (replace with the database query)
-            IQueryable<OrdersDetails> DataSource = GetOrderData().AsQueryable();
-
-            // Get total records count BEFORE paging
-            int totalRecordsCount = DataSource.Count();
-
-            // Apply server-side operations here (will be added later)
-            // For now, return all data with count
-
-            // CRITICAL: Return in {result, count} format
-            return new { result = DataSource, count = totalRecordsCount };
-        }
-
-        /// <summary>
-        /// Helper method to retrieve order data.
-        /// In production, replace with database query:
-        /// return _dbContext.Orders.ToList();
-        /// </summary>
-        [HttpGet]
-        public List<OrdersDetails> GetOrderData()
-        {
-            return OrdersDetails.GetAllRecords().ToList();
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-**Key Points:**
-- **[FromBody] DataManagerRequest**: This parameter receives all grid operation details (filters, sorts, page info).
-- **IQueryable<OrdersDetails>**: Use `IQueryable` for efficient database queries.
-- **count**: Must be total count before paging (not just current page count).
-- **HttpPost**: Grid sends `POST` requests by default for data operations.
-
-### Step 5: Configure CORS (Cross-Origin Resource Sharing)
-
-**Why CORS is needed:**
-When React frontend (e.g., `https://localhost:3000`) and ASP.NET Core backend (e.g., `https://localhost:5001`) run on different ports, browsers block requests by default for security. CORS configuration allows these cross-origin requests.
-
-**Common error without CORS:**
-```
-Access to XMLHttpRequest at 'https://localhost:5001/api/grid' from origin 
-'https://localhost:3000' has been blocked by CORS policy.
-```
-
-**Configure CORS in Program.cs:**
-
-{% tabs %}
-{% highlight cs tabtitle="Program.cs" %}
-
-using Newtonsoft.Json.Serialization;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add CORS policy to allow frontend access
-builder.Services.AddCors(options =>
-{
-    options.AddDefaultPolicy(policy =>
-    {
-        policy.AllowAnyOrigin()      // Allow requests from any origin
-              .AllowAnyMethod()       // Allow GET, POST, PUT, DELETE, etc.
-              .AllowAnyHeader();      // Allow any request headers
-    });
-});
-
-// Add controllers to the service collection
-builder.Services.AddControllers();
-
-// Configure JSON serialization (preserves property casing)
-builder.Services.AddMvc().AddNewtonsoftJson(options =>
-{
-    options.SerializerSettings.ContractResolver = new DefaultContractResolver();
-});
-
-var app = builder.Build();
-
-// Enable CORS middleware (must be before UseRouting)
-app.UseCors();
-
-// Map controller routes
-app.MapControllers();
-
-app.Run();
-
-{% endhighlight %}
-{% endtabs %}
-
-**Production CORS configuration:**
-For production, restrict CORS to specific origins:
-
-```csharp
-builder.Services.AddCors(options =>
-{
-    options.AddDefaultPolicy(policy =>
-    {
-        policy.WithOrigins("https://yourdomain.com")  // Specific frontend URL
-              .AllowAnyMethod()
-              .AllowAnyHeader();
-    });
-});
-```
-
-> **Security Note:** `AllowAnyOrigin()` provides convenience for development but production environments require restriction to specific trusted domains.
-
-### Step 6: Test the backend API
-
-**Run the application:**
-
-1. In Visual Studio, press **F5** or click the **Run** button.
-2. The application starts on a URL like **https://localhost:5001** (port may vary).
-3. Record the exact port number for frontend configuration.
-
-**Verify API endpoint:**
-
-**Method 1: Using browser**
-- Navigate to: `https://localhost:5001/api/grid` (replace 5001 with the actual port).
-- Empty results display since `GET` requests are used (Grid uses `POST`).
-
-**Method 2: Using Postman or Thunder Client**
-- **Method**: `POST`
-- **URL**: `https://localhost:5001/api/grid`
-- **Body**: `{}`
-- **Expected Response**:
-```json
-{
-  "result": [
-    {
-      "orderID": 10001,
-      "customerID": "ALFKI",
-      "employeeID": 1,
-      "freight": 2.3,
-      "shipCity": "Berlin",
-      "verified": false,
-      "orderDate": "1991-05-15T00:00:00",
-      "shipName": "Simons bistro",
-      "shipCountry": "Denmark",
-      "shippedDate": "1996-07-16T00:00:00",
-      "shipAddress": "Kirchgasse 6"
-    },
-    // ... more records
-  ],
-  "count": 45
-}
-```
-
-**Troubleshooting:**
--  **Empty response**: Check if `GetAllRecords()` is populating data.
--  **404 Error**: Verify controller route is `[Route("api/[controller]")]`.
--  **500 Error**: Check server logs in Visual Studio Output window.
--  **CORS Error**: Ensure CORS is configured in Program.cs.
-
-> **Note:** Keep the backend server running during React frontend setup.
-
-
-## Part 2: Frontend setup (React with UrlAdaptor)
-
-With backend API ready (either ASP.NET Core or Node.js), Syncfusion React Grid integration with `UrlAdaptor` enables data display and interaction. Frontend setup remains identical regardless of backend choice (ASP.NET Core or Node.js). `UrlAdaptor` works with any backend returning data in the correct `JSON` format.
+With backend API ready (either ASP.NET Core or Node.js), Syncfusion React Grid integration with `UrlAdaptor` enables data display and interaction. Frontend setup remains identical regardless of backend choice (ASP.NET Core or Node.js). `UrlAdaptor` works with any backend returning data in the correct JSON format.
 
 ### Step 1: Install Syncfusion packages
 
@@ -439,20 +27,6 @@ Open a terminal in the **ClientApp** folder (or project root) and install the re
 ```bash
 npm install @syncfusion/ej2-react-grids --save
 npm install @syncfusion/ej2-data --save
-```
-
-**Package purposes:**
-- **@syncfusion/ej2-react-grids**: React Grid component with all features.
-- **@syncfusion/ej2-data**: `DataManager` and adaptors (including `UrlAdaptor`).
-
-**Verify installation:**
-Check `package.json` to ensure both packages appear in dependencies:
-```json
-"dependencies": {
-  "@syncfusion/ej2-react-grids": "^27.x.x",
-  "@syncfusion/ej2-data": "^27.x.x",
-  ...
-}
 ```
 
 ### Step 2: Add CSS styles
@@ -503,9 +77,6 @@ To use a different theme, replace `material` with the preferred theme name in al
 
 Grid creation and backend API connection uses `UrlAdaptor`.
 
-**Update App.jsx:**
-
-```ts
 {% tabs %}
 {% highlight ts tabtitle="App.jsx" %}
 {% raw %}
@@ -514,10 +85,10 @@ import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 
 function App() {
-  // Configure DataManager with UrlAdaptor
+  // Configure DataManager with UrlAdaptor.
   const data = new DataManager({ 
-    url: 'https://localhost:5001/api/grid',  // Replace 5001 with the backend port
-    adaptor: new UrlAdaptor()                // Specify UrlAdaptor for custom REST API
+    url: 'https://localhost:5001/api/grid',  // Replace 5001 with the backend port.
+    adaptor: new UrlAdaptor()                // Specify UrlAdaptor for custom REST API.
   });
 
   return (
@@ -558,51 +129,18 @@ export default App;
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-```
-
-**Key configuration elements:**
-
-1. **DataManager**: Manages data source and operations.
-   ```javascript
-   const data = new DataManager({ 
-     url: 'https://localhost:5001/api/grid',
-     adaptor: new UrlAdaptor()
-   });
-   ```
-
-2. **`url` property**: The backend API endpoint (replace port number).
-3. **`adaptor` property**: Set to `new UrlAdaptor()` for custom REST APIs.
-4. **`isPrimaryKey` property**: Set to `true` on OrderID for CRUD operations.
-
-**Replace port number:**
-Make sure to replace `5001` with the actual backend port number. Visual Studio output window shows the exact URL when the backend starts.
-
-**Common ports:**
-- ASP.NET Core: typically 5001, 7001, or random port
-- Node.js: typically 3001, 5000, 8080
-- Can be found in: `Properties/launchSettings.json`
 
 ### Step 4: Run the application
 
-**Start backend (if not already running):**
-1. Press **F5** in Visual Studio to start the ASP.NET Core server.
-2. Record the port number (e.g., `https://localhost:5001`).
-
-**Start frontend:**
-1. Open terminal in **ClientApp** folder.
-2. Run: `npm start`.
-3. React app will open at `https://localhost:3000` (or similar).
-
-**Expected result:**
-Grid displays order data fetched from the backend API:
+Run the application in Visual Studio, accessible on a URL like **https://localhost:xxxx**. Verify the API returns order data at **https://localhost:xxxx/api/grid**, where **xxxx** is the port. Grid displays order data fetched from the backend API:
 
 ![UrlAdaptor](../images/adaptor.gif)
 
 **Troubleshooting:**
 -  **Empty Grid**: Check browser console for errors and verify API URL correctness.
--  **CORS Error**: Backend **Program.cs** must contain CORS configuration.
--  **Network Error**: Verify backend accessibility and status.
--  **Wrong Data Format**: API responses must return `{result: [...], count: number}` in `JSON` format.
+-  **CORS error**: Backend **Program.cs** must contain CORS configuration.
+-  **Network error**: Verify backend accessibility and status.
+-  **Wrong data format**: API responses must return `{result: [...], count: number}` in JSON format.
 
 > **Developer Tools**: Browser DevTools (F12) → Network tab displays actual requests and responses between Grid and API.
 
@@ -649,7 +187,6 @@ Paging implementation uses `PerformTake` and `PerformSkip` from `QueryableOperat
 
 ![UrlAdaptor paging](../images/url-adaptor-paging.png)
 
-```cs
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
 
@@ -680,8 +217,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 }
 
 {% endhighlight %}
-```
-```ts
+
 {% highlight ts tabtitle="App.jsx" %}
 
 import { ColumnDirective, ColumnsDirective, GridComponent, Page, Inject } from '@syncfusion/ej2-react-grids';
@@ -708,7 +244,6 @@ export default App;
 
 {% endhighlight %}
 {% endtabs %}
-```
 
 ### Filtering
 
@@ -720,7 +255,6 @@ API endpoints supporting custom filtering criteria use `PerformFiltering` from `
 **Multi column filtering**
 ![Multi column filtering](../images/url-adaptor-multi-filtering.png)
 
-```cs
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
 
@@ -746,8 +280,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 }
 
 {% endhighlight %}
-```
-```ts
+
 {% highlight ts tabtitle="App.jsx" %}
 
 import { ColumnDirective, ColumnsDirective, GridComponent, Filter, Inject } from '@syncfusion/ej2-react-grids';
@@ -774,7 +307,6 @@ export default App;
 
 {% endhighlight %}
 {% endtabs %}
-```
 
 ### Searching
 
@@ -782,7 +314,6 @@ export default App;
 
 ![UrlAdaptor searching](../images/url-adaptor-searching.png)
 
-```cs
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
 
@@ -809,8 +340,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 }
 
 {% endhighlight %}
-```
-```ts
+
 {% highlight ts tabtitle="App.jsx" %}
 
 import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems, Toolbar, Inject } from '@syncfusion/ej2-react-grids';
@@ -838,7 +368,6 @@ export default App;
 
 {% endhighlight %}
 {% endtabs %}
-```
 
 ### Sorting
 
@@ -850,7 +379,6 @@ export default App;
 **Multi column sorting**
 ![Multi column sorting](../images/url-adaptor-multi-sorting.png)
 
-```cs
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
 
@@ -877,8 +405,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 }
 
 {% endhighlight %}
-```
-```ts
+
 {% highlight ts tabtitle="App.jsx" %}
 
 import { ColumnDirective, ColumnsDirective, GridComponent, Sort, Inject } from '@syncfusion/ej2-react-grids';
@@ -905,13 +432,11 @@ export default App;
 
 {% endhighlight %}
 {% endtabs %}
-```
 
 ### Grouping and aggregates
 
 Server processing of group and aggregate details from the `DataManagerRequest` computes aggregates on the full dataset and applies grouping with `PerformGrouping`.
 
-```cs
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
 
@@ -951,8 +476,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 }
 
 {% endhighlight %}
-```
-```ts
+
 {% highlight ts tabtitle="App.jsx" %}
 
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
@@ -994,7 +518,6 @@ export default App;
 
 {% endhighlight %}
 {% endtabs %}
-```
 
 ## CRUD operations
 
@@ -1015,9 +538,8 @@ CRUD operations map to server-side controller actions through specific propertie
 - **Single endpoint** (`crudUrl`): Simpler for backend that route by action type
 - **Batch URL** (`batchUrl`): Best for bulk operations (multiple changes in one request)
 
-For detailed editing setup, refer to the [editing documentation](https://ej2.syncfusion.com/react/documentation/grid/editing/edit). The following example demonstrates inline edit [`mode`](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) with a [`toolbar`](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) for action buttons.
+For detailed editing setup, refer to the [editing documentation](https://ej2.syncfusion.com/react/documentation/grid/editing/edit). The following example demonstrates inline edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) with a [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) for action buttons.
 
-```ts
 {% tabs %}
 {% highlight ts tabtitle="App.jsx" %}
 
@@ -1052,10 +574,9 @@ export default App;
 
 {% endhighlight %}
 {% endtabs %}
-```
 
-> * Normal or inline editing represents the default [`mode`](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode).
-> * CRUD operations require [`isPrimaryKey`](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property set to `true` on a unique column.
+> * Normal or inline editing represents the default [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode).
+> * CRUD operations require [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property set to `true` on a unique column.
 
 The below class is used to structure data sent during CRUD operations.
 
@@ -1156,7 +677,7 @@ public void Remove([FromBody] CRUDModel<OrdersDetails> value)
 
 ### Batch CRUD
 
-Batch operations require edit [`mode`](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) set to `Batch` with `batchUrl` property in the DataManager. Add rows with the **Add** button, edit cells by double-clicking, and delete rows with the **Delete** button. The **Update** button submits all changes in one `POST` request.
+Batch operations require edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) set to `Batch` with `batchUrl` property in the DataManager. Add rows with the **Add** button, edit cells by double-clicking, and delete rows with the **Delete** button. The **Update** button submits all changes in one `POST` request.
 
 ```ts
 // App.jsx
@@ -1225,6 +746,7 @@ public IActionResult BatchUpdate([FromBody] CRUDModel<OrdersDetails> batchOperat
   return Json(batchOperation);
 }
 ```
+
 ![UrlAdaptor Batch Editing](../images/url-adaptor-batch-editing.gif)
 
 ### Single endpoint for all CRUD actions

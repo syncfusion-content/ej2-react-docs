@@ -12,806 +12,495 @@ domainurl: ##DomainURL##
 
 The `CustomAdaptor` in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid is a powerful extension mechanism that **customizes any existing adaptor** ([UrlAdaptor](./url-adaptor), [WebApiAdaptor](./webapi-adaptor), [ODataV4Adaptor](./odatav4-adaptor), [GraphQLAdaptor](./graphql-adaptor)) to meet specific application requirements. Instead of creating an entirely new adaptor from scratch, `CustomAdaptor` extends and modifies the behavior of existing adaptors by intercepting and customizing HTTP requests and responses.
 
-## What is CustomAdaptor?
+For comprehensive guidance on server‑side configuration and implementation, refer to the [DataManager CustomAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors) documentation. It provides detailed information on setting up endpoints, processing queries, and following best practices for integrating backend services.
 
-`CustomAdaptor` is not a standalone adaptor, it's a way to extend and customize existing Syncfusion<sup style="font-size:70%">&reg;</sup> adaptors (`UrlAdaptor`, `ODataV4Adaptor`, `WebApiAdaptor`, `GraphQLAdaptor`) by overriding their default behavior. Think of it as a "wrapper" or "middleware" that sits between the Grid and the existing adaptor, intercepting and modifying data flow at critical points.
+## React Grid setup and client-side configuration
 
-**How it works:**
+To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component into a React and ASP.NET Core project using Visual Studio, follow the below steps:
 
-The CustomAdaptor intercepts the data flow at key points between the Grid and the base adaptor.
+### Syncfusion package installation
 
-![Custom Adaptor Flowchart](../images/custom-adaptor-flowchart.jpeg)
+Open a terminal inside the **ClientApp** (React project) folder and ensure **package.json** is present, then run:s
 
->  Regardless of customization, the Grid always expects the final response to contains:
-> - This `{ result:[], count:100 }` shape is required by most adaptors (`UrlAdaptor`, `ODataV4Adaptor`, `GraphQLAdaptor`, and any custom adaptor extending them).
-> - The `WebApiAdaptor` is an exception on the server/response side: it expects the raw server response to use `{ items:[], count:100 }`. 
+```bash
+npm install @syncfusion/ej2-react-grids --save
+npm install @syncfusion/ej2-data --save
+```
+- `@syncfusion/ej2-react-grids`: Complete React Grid component library with comprehensive UI features.
+- `@syncfusion/ej2-data`: Data management library containing `DataManager` and adaptors including `CustomAdaptor`.
 
-## Why use CustomAdaptor?
+### Syncfusion stylesheet integration
 
-`CustomAdaptor` solves real-world scenarios where standard adaptors need modification without rewriting entire adaptor logic.
+Navigate to the **src** folder and open (or create) the stylesheet such as **styles.css** or **App.css**, then add the required CSS import statements to apply the Grid's styling.
 
-When standard adaptors are almost perfect, but require:
-
-- API requires authentication headers that change dynamically.
-- API endpoint URLs need modification based on roles or environments.
-- Response data needs transformation before displaying in Grid.
-- Need to add calculated fields (serial numbers, computed values).
-- API returns data in non-standard format that needs conversion.
-- Multiple API environments (dev/staging/prod) with different URLs.
-- Need to log requests/responses for debugging.
-- Custom error handling beyond standard adaptor capabilities.
-
-## Real-world scenarios
-
-### Scenario 1: Multi-tenant application
-
-Problem: Same application serves multiple clients, each with different API endpoints. Since the tenant value changes dynamically, the URL needs to be constructed at runtime based on that tenant.
-
-```ts
-public processQuery(requestContext: DataManager, query: Query): Object {
-    // Dynamically set API endpoint based on logged-in tenant.
-    const tenantId = getCurrentTenant();
-    requestContext.dataSource.url = `https://api.${tenantId}.company.com/orders`;
-    return super.processQuery.apply(this, arguments as any);
-}
+```css
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-react-grids/styles/tailwind3.css';
 ```
 
-### Scenario 2: Secure enterprise application
+> **Theme customization**: Alternative themes available include `bootstrap5.css`, `fluent.css`, `tailwind.css`, and others. All theme files maintain consistent path structure with only the filename varying.
 
-Problem: The APIs require JWT token authentication, which expires and must be refreshed. For applications with strict security requirements, authentication headers must be attached to every request before it is sent to the server.
+Import the stylesheet in the **main.jsx** or **index.jsx** application entry point:
 
-```ts
-public beforeSend(requestContext: DataManager, request: Request, settings?: any) {
-    // Add fresh authentication token before each request.
-    const token = getAuthToken(); // Retrieve current valid token.
-    request.headers.set('Authorization', `Bearer ${token}`);
-    request.headers.set('X-API-Key', process.env.API_KEY);
-    super.beforeSend(requestContext, request, settings);
-}
+```js
+import './styles.css';
 ```
 
-### Scenario 3: Legacy API integration
+### Basic Grid component implementation
 
-Problem: The API returns data in the format "{data: [...], total: 100}", but the Grid expects "{result: [...], count: 100}". After the server returns the response, it must be dynamically transformed to match the required structure.
+To integrate a `CustomAdaptor` with the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, the `DataManager` is configured as the communication layer between the Grid and the underlying data source. The `CustomAdaptor` provides complete control over data operations, including filtering, sorting, paging, and querying, as well as their processing and transmission to the server.
 
-```ts
-public processResponse(): Object {
-    const original: any = super.processResponse.apply(this, arguments as any);
-    // Transform legacy API response to Grid-expected format.
-    return {
-        result: original.data,      // Rename 'data' to 'result'.
-        count: original.total       // Rename 'total' to 'count'.
-    };
-}
-```
+**Custom Adaptor with Extended ODataV4Adaptor:**
 
-### Scenario 4: Adding calculated fields
+A `CustomAdaptor` can be created by adding a new component file, such as **CustomAdaptor.ts**. The `DataManager` and `ODataV4Adaptor` modules are imported from `@syncfusion/ej2-data`, and a new adaptor class is defined by extending the `ODataV4Adaptor` base class to provide full customization of data request generation and processing.
 
-Problem: Need to display row numbers (serial numbers) that aren't in the database.
+The extended adaptor typically overrides three primary methods:
 
-```ts
-public processResponse(): Object {
-    let serialNumber = 0;
-    const original: any = super.processResponse.apply(this, arguments as any);
-    // Add serial number to each record.
-    if (original.result) {
-        original.result.forEach((item: any) => {
-            setValue('SNo', ++serialNumber, item);
-        });
-    }
-    return original;
-}
-```
+- **`processQuery`** – The `processQuery` method is used to modify the API endpoint URL and configure additional parameters required to execute the query.
+- **`beforeSend`** – The `beforeSend` method is used to send the custom header for `Authorization` in the request header.
+- **`processResponse`** – Interprets and transforms the server response to a structure suitable for binding within the React Grid.
 
-### Scenario 5: Environment-based configuration
-
-Problem: The application must handle different API URLs for development, staging, and production environments, requiring dynamic selection of the correct endpoint at runtime.
-
-```ts
-public processQuery(requestContext: DataManager, query: Query): Object {
-    const environment = process.env.NODE_ENV;
-    const baseUrls = {
-        development: 'http://localhost:5001',
-        staging: 'https://staging-api.company.com',
-        production: 'https://api.company.com'
-    };
-    requestContext.dataSource.url = `${baseUrls[environment]}/api/orders`;
-    return super.processQuery.apply(this, arguments as any);
-}
-```
-
-### Scenario 6: Request logging and monitoring
-
-Problem: API calls need to be tracked for debugging and analytics. Before the server request is sent, each call must be logged and monitored.
-
-```ts
-public beforeSend(requestContext: DataManager, request: Request, settings?: any) {
-    // Log request details for monitoring.
-    console.log(`[API Request] ${request.url}`, {
-        method: request.method,
-        timestamp: new Date().toISOString(),
-        params: requestContext.dataSource.url
-    });
-    super.beforeSend(requestContext, request, settings);
-}
-```
-
-## CustomAdaptor methods
-
-`CustomAdaptor` provides three powerful methods to intercept and customize data flow at different stages of the request-response cycle.
-
-### processQuery method
-
-The `processQuery` method runs before the HTTP request is constructed and sent to the server, enabling modification of query parameters, adjustment of API endpoints, or addition of custom parameters to meet application needs.
-
-```ts
-public processQuery(requestContext: DataManager, query: Query): Object{
-    ...
-    ...
-}
-```
-
-Parameters:
-
-1. DataManager (requestContext): 
-   - Contains data source configuration.
-   - Key property: `requestContext.dataSource.url` - The API endpoint URL.
-   - Can be modified to change where requests are sent.
-   
-2. Query (query): 
-   - Contains all Grid operation parameters.
-   - Includes: filters, sorts, grouping, paging info.
-   - Methods: `addParams()`, `where()`, `sortBy()`, `skip()`, `take()`.
-   
-**Common use cases**:
-- Change API endpoint URLs dynamically.
-- Add custom query parameters.
-- Modify filter/sort/page parameters.
-- Route requests based on environment or tenant.
-
-The following example dynamically constructs the URL and appends custom parameters.
-
-```ts
-public processQuery(requestContext: DataManager, query: Query): Object {
-    // Use Case 1: Change API endpoint based on environment.
-    const isProduction = window.location.hostname === 'app.example.com';
-    requestContext.dataSource.url = isProduction 
-        ? 'https://api.company.com/odata/orders'
-        : 'https://localhost:5001/odata/orders';
-    
-    // Use Case 2: Add custom parameters (e.g., tenant ID).
-    query.addParams('tenantId', getCurrentTenant());
-    query.addParams('apiVersion', 'v2');
-    
-    // Use Case 3: Add tracking parameter.
-    query.addParams('requestId', generateUniqueId());
-    
-    // Always call super to maintain base adaptor functionality.
-    const result = super.processQuery.apply(this, arguments as any);
-    return result;
-}
-```
-
-The following snippet dynamically constructs a multi‑region URL based on the runtime region:
-
-```ts
-public processQuery(requestContext: DataManager, query: Query): Object {
-    // Route requests to region-specific endpoints.
-    const userRegion = getUserRegion(); // 'us', 'eu', 'asia'.
-    const regionEndpoints = {
-        us: 'https://us-api.example.com/orders',
-        eu: 'https://eu-api.example.com/orders',
-        asia: 'https://asia-api.example.com/orders'
-    };
-    requestContext.dataSource.url = regionEndpoints[userRegion];
-    return super.processQuery.apply(this, arguments as any);
-}
-```
-
-### beforeSend method
-
-The `beforeSend` method modifies the HTTP request immediately before it is sent to the server, allowing authentication headers, custom headers, and request logging to be added.
-
-```ts
-public beforeSend(requestContext: DataManager, request: Request, settings?: any): void{
-    ...
-    ...
-}
-```
-
-Parameters:
-
-1. DataManager (requestContext): 
-   - Same as processQuery.
-   - Access to data source configuration.
-
-2. Request (request): 
-   - The actual HTTP request object.
-   - Key property: `request.headers` - Where headers are added/modified.
-   - Methods: `headers.set()`, `headers.append()`, `headers.delete()`.
-  
-3. Settings (optional): 
-   - Fetch API or XMLHttpRequest configuration.
-   - Can modify timeout, credentials, etc.,.
-
-
-**Common use cases**:
-- Add authentication headers (JWT tokens, API keys).
-- Set custom HTTP headers.
-- Modify request configuration.
-- Log outgoing requests for debugging.
-
-The following code adds an HTTP header before sending the request to the server.
-
-```ts
-public beforeSend(requestContext: DataManager, request: Request, settings?: any) {
-    // Use Case 1: Add JWT authentication.
-    const token = localStorage.getItem('authToken');
-    if (token) {
-        request.headers.set('Authorization', `Bearer ${token}`);
-    }
-    
-    // Use Case 2: Add API key.
-    request.headers.set('X-API-Key', process.env.REACT_APP_API_KEY);
-    
-    // Use Case 3: Add custom headers.
-    request.headers.set('X-Client-Version', '2.0.1');
-    request.headers.set('X-Request-Source', 'React-Grid');
-    
-    // Use Case 4: Set content type.
-    request.headers.set('Content-Type', 'application/json');
-    
-    // Use Case 5: Log request (debugging).
-    console.log(`[API Call] ${request.method} ${request.url}`, {
-        headers: Array.from(request.headers.entries()),
-        timestamp: new Date().toISOString()
-    });
-    
-    // Always call super to maintain base adaptor functionality.
-    super.beforeSend(requestContext, request, settings);
-}
-```
-
-The following example applies token refresh logic before sending the request to the server.
-
-```ts
-public async beforeSend(requestContext: DataManager, request: Request, settings?: any) {
-    // Check if token is expired and refresh if needed.
-    const token = getAuthToken();
-    const isExpired = isTokenExpired(token);
-    
-    if (isExpired) {
-        const newToken = await refreshAuthToken(); // Async token refresh.
-        localStorage.setItem('authToken', newToken);
-        request.headers.set('Authorization', `Bearer ${newToken}`);
-    } else {
-        request.headers.set('Authorization', `Bearer ${token}`);
-    }
-    
-    // Add correlation ID for request tracking.
-    request.headers.set('X-Correlation-ID', generateCorrelationId());
-    
-    super.beforeSend(requestContext, request, settings);
-}
-```
-
-The following code adds an HTTP header with the multi-tenant value before sending the request to the server.
-
-```ts
-public beforeSend(requestContext: DataManager, request: Request, settings?: any) {
-    // Add tenant-specific headers.
-    const user = getCurrentUser();
-    request.headers.set('X-Tenant-ID', user.tenantId);
-    request.headers.set('X-User-ID', user.userId);
-    request.headers.set('X-User-Role', user.role);
-    
-    super.beforeSend(requestContext, request, settings);
-}
-```
-
-### processResponse method
-
-The `processResponse` method transforms the server response after it is received but before the Grid processes it, enabling data transformation, calculated fields, and custom error handling.
-
-```ts
-public processResponse(): Object{
-    ...
-    ...
-}
-```
-
-Parameters:
-- Receives response data via `super.processResponse()` call.
-- Arguments are automatically passed from base adaptor.
-
-> The Grid always expects the final response to have:
-> - `result`: Array of data records.
-> - `count`: Total number of records (for paging).
-
-**Common use cases**:
-
-- Server returns non-standard format (not `{result, count}`).
-- Need to add calculated/derived fields to data.
-- Want to transform data structure.
-- Need custom error handling.
-- Want to add metadata (serial numbers, computed values).
-
-The following snippet appends a serial number after receiving the response from the server, because the database does not store serial numbers while the Grid's Serial Number column requires them for display.
-
-```ts
-public processResponse(): Object {
-    // Get original response from base adaptor.
-    const original: any = super.processResponse.apply(this, arguments as any);
-    
-    // Use Case 1: Add serial numbers to records.
-    let serialNumber = 0;
-    if (original.result) {
-        original.result.forEach((item: any) => {
-            setValue('SNo', ++serialNumber, item);
-        });
-    }
-    
-    // Use Case 2: Add calculated field (e.g., full name).
-    if (original.result) {
-        original.result.forEach((item: any) => {
-            setValue('FullName', `${item.FirstName} ${item.LastName}`, item);
-        });
-    }
-    
-    // Use Case 3: Format dates.
-    if (original.result) {
-        original.result.forEach((item: any) => {
-            if (item.OrderDate) {
-                item.OrderDate = new Date(item.OrderDate).toLocaleDateString();
-            }
-        });
-    }
-    
-    // MUST return object with 'result' and 'count'.
-    return original;
-}
-```
-
-The following code dynamically converts the API response into the format required by the Grid, even when the server returns a different structure.
-
-```ts
-public processResponse(): Object {
-    const original: any = super.processResponse.apply(this, arguments as any);
-    
-    // Legacy API returns: { data: [...], total: 100, status: 'success' }.
-    // Grid expects: { result: [...], count: 100 }.
-    
-    if (original.data) {
-        return {
-            result: original.data,      // Rename 'data' to 'result'.
-            count: original.total || 0  // Rename 'total' to 'count'.
-        };
-    }
-    
-    return original;
-}
-```
-
-The following code applies business logic calculations after receiving the server response and before binding the data to the Grid.
-
-```ts
-public processResponse(): Object {
-    const original: any = super.processResponse.apply(this, arguments as any);
-    
-    if (original.result) {
-        original.result.forEach((order: any) => {
-            // Calculate discount amount.
-            order.DiscountAmount = (order.Total * order.DiscountPercent) / 100;
-            
-            // Calculate final amount.
-            order.FinalAmount = order.Total - order.DiscountAmount;
-            
-            // Add status badge.
-            order.StatusBadge = order.Amount > 1000 ? 'High Value' : 'Standard';
-            
-            // Format currency.
-            order.TotalFormatted = `$${order.Total.toFixed(2)}`;
-        });
-    }
-    
-    return original;
-}
-```
-
-The following code demonstrates error handling after receiving the server response.
-
-```ts
-public processResponse(): Object {
-    try {
-        const original: any = super.processResponse.apply(this, arguments as any);
-        
-        // Check for custom error format from server.
-        if (original.error || original.status === 'error') {
-            console.error('API Error:', original.message);
-            // Return empty result to prevent Grid errors.
-            return { result: [], count: 0 };
-        }
-        
-        return original;
-    } catch (error) {
-        console.error('Response processing error:', error);
-        // Return safe empty response.
-        return { result: [], count: 0 };
-    }
-}
-```
-
-## Extending different adaptors using CustomAdaptor
-
-This section demonstrates how to extend different Syncfusion<sup style="font-size:70%">&reg;</sup> adaptors (`ODataV4Adaptor`, `UrlAdaptor`, `WebApiAdaptor`, `GraphQLAdaptor`) using `CustomAdaptor` for various real-world scenarios.
-
-### Extending ODataV4Adaptor with authentication and serial numbers
-
-Why extend `ODataV4Adaptor`:
-- OData services often require authentication (JWT tokens, API keys).
-- Need to add client-side calculated fields (serial numbers, computed values).
-- API endpoints may change based on environment (dev/staging/prod).
-- Want to add custom query parameters or headers.
-
-When to use this approach:
-- Working with Microsoft OData services (ASP.NET Core OData).
-- Need standard OData query support ($filter, $orderby, $top, $skip).
-- API requires authentication on every request.
-- Want to enhance data with calculated fields before Grid displays it.
-
-Extend the `ODataV4Adaptor` to add authentication headers, modify API endpoints, and add calculated fields like serial numbers.
-
-Use case: OData service requiring authentication and client-side serial number generation.
-
-```ts
-
+{% tabs %}
+{% highlight js tabtitle="CustomAdaptor.ts" %}
 import { setValue } from '@syncfusion/ej2-base';
-import { DataManager, ODataV4Adaptor, Query } from '@syncfusion/ej2-data';
-
-export class CustomODataAdaptor extends ODataV4Adaptor {
-    // Add serial numbers to response data.
+import { DataManager, ODataV4Adaptor, Query, } from '@syncfusion/ej2-data';
+export class SerialNoAdaptor extends ODataV4Adaptor {
     public processResponse() {
         let i = 0;
         const original: any = super.processResponse.apply(this, arguments as any);
-        
-        // Adding serial number to each record.
+        /* Adding serial number */
         if (original.result) {
             original.result.forEach((item: any) => setValue('SNo', ++i, item));
         }
         return original;
     }
 
-    public processQuery(requestContext: DataManager, query: Query): Object {
-        // Change endpoint based on environment.
-        const environment = process.env.NODE_ENV;
-        requestContext.dataSource.url = environment === 'production' 
-            ? 'https://api.company.com/odata/orders'
-            : 'https://localhost:5001/odata/orders';
-        
-        // Add custom query parameters.
-        query.addParams('source', 'React-Grid');
-        query.addParams('version', 'v2');
-        
+    public processQuery(dm: DataManager, query: Query): Object {
+        dm.dataSource.url = 'https://localhost:xxxx/odata/orders';
+        query.addParams('Syncfusion in React Grid', 'true');
         const result = super.processQuery.apply(this, arguments as any);
         return result;
     }
 
-    // Add authentication headers.
-    public beforeSend(requestContext: any, request: any, settings: any) {
-        const token = localStorage.getItem('authToken');
-        if (token) {
-            request.headers.set('Authorization', `Bearer ${token}`);
-        }
-        request.headers.set('X-Client-Id', 'react-grid-app');
-        super.beforeSend(requestContext, request, settings);
+    public beforeSend(dm: any, request: any, settings: any) {
+        request.headers.set('Authorization', `Bearer${(window as any).token}`);
+        super.beforeSend(dm, request, settings);
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
-### Extending UrlAdaptor with custom response transformation
+### Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Grid Component
 
-Why extend `UrlAdaptor`:
-- Custom REST APIs often return data in non-standard formats.
-- Legacy APIs may use different property names (data/items instead of result).
-- Multi-tenant applications need dynamic URL routing.
-- Need to add correlation IDs or tracking headers for monitoring.
+In the component file (for example, **App.tsx**), the DataManager module is imported from `@syncfusion/ej2-data`, and the `CustomAdaptor` class is imported from the local **./CustomAdaptor** file. A `DataManager` instance is then created by assigning the API endpoint URL (e.g., `https://localhost:xxxx/odata/Orders`) to the `url` property and specifying `CustomAdaptor` as the adaptor for handling data operations.
 
-When to use this approach:
-- Working with custom REST APIs (non-OData, non-GraphQL).
-- API returns `{data: [], total: 100}` instead of `{result: [], count: 100}`.
-- Need tenant-specific or region-specific URL routing.
-- Want to add API keys, correlation IDs, or tracking headers.
+{% tabs %}
+{% highlight js tabtitle="App.tsx" %}
+import { DataManager } from '@syncfusion/ej2-data';
+import {CustomAdaptor} from './CustomAdaptor';
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 
-Extend the `UrlAdaptor` to transform non-standard API responses and add authentication.
+function App() {
+    const data = new DataManager({ 
+      url:'https://localhost:xxxx/odata/Orders', // Here xxxx represents the port number
+      adaptor: new CustomAdaptor()
+    });
+    return <GridComponent dataSource={data} >
+        <ColumnsDirective>
+            <ColumnDirective field='SNo' headerText='SNO' width='150'/>
+            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150'textAlign='Right'></ColumnDirective>
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
+            <ColumnDirective field='EmployeeID' headerText='Employee ID' width='150'/>
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
+        </ColumnsDirective>
+    </GridComponent>
+};
+export default App;
 
-Use case: Custom REST API returning `{data: [], total: 100}` instead of `{result: [], count: 100}`.
+{% endhighlight %}
+{% endtabs %}
 
-```ts
+> Replace `https://localhost:xxxx/odata/Orders` with the actual URL of the API endpoint that provides data in a consumable format (e.g., JSON).
 
-import { setValue } from '@syncfusion/ej2-base';
-import { DataManager, UrlAdaptor, Query } from '@syncfusion/ej2-data';
+### Application execution and verification
 
-export class CustomUrlAdaptor extends UrlAdaptor {
-    // Transform legacy API response format.
-    public processResponse(): Object {
-        const original: any = super.processResponse.apply(this, arguments as any);
-        
-        // Handle legacy response format: {data: [], total: 100}.
-        // Transform to Grid format: {result: [], count: 100}.
-        if (original.data !== undefined) {
-            return {
-                result: original.data,
-                count: original.total || original.data.length
-            };
-        }
-        
-        // Add serial numbers.
-        let serialNumber = 0;
-        if (original.result) {
-            original.result.forEach((item: any) => {
-                setValue('SNo', ++serialNumber, item);
-            });
-        }
-        
-        return original;
-    }
+**Starting the application:** Start the application by pressing **F5** in Visual Studio, which opens it in the browser, and the Grid should load all "45" orders from the OData service.
 
-    // Add tenant-specific routing.
-    public processQuery(requestContext: DataManager, query: Query): Object {
-        // Multi-tenant URL routing.
-        const tenantId = localStorage.getItem('tenantId') || 'default';
-        requestContext.dataSource.url = `https://api.company.com/${tenantId}/api/orders`;
-        
-        // Add pagination metadata.
-        query.addParams('includeMetadata', 'true');
-        
-        const result = super.processQuery.apply(this, arguments as any);
-        return result;
-    }
+**Connection verification:** Use the browser **Developer Tools (F12)** and check the **Network** tab after refreshing the page to confirm a request to `https://localhost:xxxx/odata/Orders` and verify that its response contains JSON data.
 
-    // Add API key and correlation ID.
-    public beforeSend(requestContext: DataManager, request: any, settings?: any) {
-        // Add API key authentication.
-        request.headers.set('X-API-Key', process.env.REACT_APP_API_KEY || '');
-        
-        // Add correlation ID for tracking.
-        const correlationId = `req-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
-        request.headers.set('X-Correlation-ID', correlationId);
-        
-        // Log request for debugging.
-        console.log(`[API Request] ${request.url}`, { correlationId });
-        
-        super.beforeSend(requestContext, request, settings);
-    }
-}
+> **Notes**:
+> - Verify in the Network tab that the GET request to the Orders OData endpoint returns a "200" response with valid JSON data.
+> - CORS configuration is included in the **Complete Program.cs Implementation** section during server setup. Refer to that section for detailed CORS implementation and security considerations for production environments.
 
-```
+## Performing data operations
 
-### Extending WebApiAdaptor with custom error handling
+This section covers implementation of advanced Grid features including filtering, sorting, pagination, and complete CRUD operations.
 
-Why extend `WebApiAdaptor`:
-- ASP.NET Core Web APIs may have custom error response formats.
-- Need to handle token expiration and refresh logic.
-- Want to add computed fields or format data before display.
-- Need environment-based endpoint configuration (dev/staging/prod).
+### Filtering
 
-When to use this approach:
-- Working with ASP.NET Core Web API backend.
-- API uses custom error response format (not standard HTTP errors).
-- Need JWT token refresh logic.
-- Want to add row numbers, full names, or formatted dates.
-- Need to log requests for debugging or monitoring.
+To enable filter operations when working with a custom adaptor, the configuration begins by extending OData support within the service collection. As part of this setup, the `Filter` method is included in the OData configuration, allowing the service to interpret filtering criteria. With this configuration in place, clients can make use of the `$filter` query option in their requests to retrieve data entries that match specific conditions.
 
-Extend the `WebApiAdaptor` to handle custom error responses and add request logging.
+{% tabs %}
+{% highlight cs tabtitle="Program.cs" %}
+// Create a new instance of the web application builder
+var builder = WebApplication.CreateBuilder(args);
 
-Use case: ASP.NET Core Web API with custom error format and authentication requirements.
+// Create an ODataConventionModelBuilder to build the OData model
+var modelBuilder = new ODataConventionModelBuilder();
 
-```ts
+// Register the "Orders" entity set with the OData model builder
+modelBuilder.EntitySet<OrdersDetails>("Orders");
 
-import { setValue } from '@syncfusion/ej2-base';
-import { DataManager, WebApiAdaptor, Query } from '@syncfusion/ej2-data';
+// Add services to the container.
 
-export class CustomWebApiAdaptor extends WebApiAdaptor {
-    // Handle custom error responses.
-    public processResponse(): Object {
-        try {
-            const original: any = super.processResponse.apply(this, arguments as any);
-            
-            // Check for custom error format.
-            if (original.error || original.success === false) {
-                console.error('API Error:', original.message || 'Unknown error');
-                // Return empty result to prevent Grid errors.
-                return { result: [], count: 0 };
-            }
-            
-            // Add computed fields.
-            if (original.result) {
-                original.result.forEach((item: any, index: number) => {
-                    // Add row number.
-                    setValue('RowNumber', index + 1, item);
-                    
-                    // Add computed field (example: full name).
-                    if (item.FirstName && item.LastName) {
-                        setValue('FullName', `${item.FirstName} ${item.LastName}`, item);
-                    }
-                    
-                    // Format dates.
-                    if (item.OrderDate) {
-                        setValue('OrderDateFormatted', 
-                            new Date(item.OrderDate).toLocaleDateString(), item);
-                    }
-                });
-            }
-            
-            return original;
-        } catch (error) {
-            console.error('Response processing error:', error);
-            return { result: [], count: 0 };
-        }
-    }
+// Add controllers with OData support to the service collection
+builder.Services.AddControllers().AddOData(
+    options => options
+        .Count()
+        .Filter() //filtering
+        .AddRouteComponents("odata", modelBuilder.GetEdmModel()));
 
-    // Add environment-based routing.
-    public processQuery(requestContext: DataManager, query: Query): Object {
-        // Environment-based endpoint configuration.
-        const environment = process.env.NODE_ENV;
-        const baseUrls: Record<string, string> = {
-            development: 'http://localhost:5001',
-            staging: 'https://staging-api.company.com',
-            production: 'https://api.company.com'
-        };
-        
-        requestContext.dataSource.url = `${baseUrls[environment] || baseUrls.development}/api/grid`;
-        
-        // Add request metadata.
-        query.addParams('clientVersion', '2.0.1');
-        query.addParams('timestamp', Date.now().toString());
-        
-        const result = super.processQuery.apply(this, arguments as any);
-        return result;
-    }
-
-    // Add JWT authentication with refresh logic.
-    public beforeSend(requestContext: DataManager, request: any, settings?: any) {
-        // Get authentication token.
-        const token = localStorage.getItem('authToken');
-        
-        // Check token expiry (basic check).
-        const tokenExpiry = localStorage.getItem('tokenExpiry');
-        const isExpired = tokenExpiry && Date.now() > parseInt(tokenExpiry);
-        
-        if (isExpired) {
-            console.warn('Token expired, please refresh');
-            // In production, trigger token refresh here.
-        }
-        
-        if (token) {
-            request.headers.set('Authorization', `Bearer ${token}`);
-        }
-        
-        // Add custom headers.
-        request.headers.set('X-Client-Platform', 'React-Web');
-        request.headers.set('X-Request-Time', new Date().toISOString());
-        
-        super.beforeSend(requestContext, request, settings);
-    }
-}
-
-```
-
-### Extending GraphQLAdaptor with query customization
-
-Why extend `GraphQLAdaptor`:
-- GraphQL servers require authentication tokens in headers.
-- Need region-specific GraphQL endpoint routing.
-- Want to add custom variables based on role or permissions.
-- Need to transform GraphQL response data or add calculated fields.
-
-When to use this approach:
-- Working with GraphQL backend (Apollo Server, GraphQL).
-- API requires authentication headers for every request.
-- Need multi-region endpoint support (US, EU, Asia).
-- Want to add serial numbers or computed fields.
-- Need to pass custom variables based on context.
-
-Extend the `GraphQLAdaptor` to add authentication and modify GraphQL queries dynamically.
-
-Use case: GraphQL server requiring authentication and custom query fields based on permissions.
-
-```ts
-
-import { setValue } from '@syncfusion/ej2-base';
-import { DataManager, GraphQLAdaptor, Query } from '@syncfusion/ej2-data';
-
-export class CustomGraphQLAdaptor extends GraphQLAdaptor {
-    // Add serial numbers and transform GraphQL response.
-    public processResponse(): Object {
-        const original: any = super.processResponse.apply(this, arguments as any);
-        
-        // Add serial numbers to records.
-        let serialNumber = 0;
-        if (original.result) {
-            original.result.forEach((item: any) => {
-                setValue('SNo', ++serialNumber, item);
-                
-                // Add computed fields.
-                if (item.freight) {
-                    setValue('FreightFormatted', `$${item.freight.toFixed(2)}`, item);
-                }
-            });
-        }
-        
-        return original;
-    }
-
-    // Modify GraphQL endpoint and query.
-    public processQuery(requestContext: DataManager, query: Query): Object {
-        // Dynamic GraphQL endpoint based on region.
-        const userRegion = localStorage.getItem('region') || 'us';
-        const endpoints: Record<string, string> = {
-            us: 'https://us-graphql.company.com/graphql',
-            eu: 'https://eu-graphql.company.com/graphql',
-            asia: 'https://asia-graphql.company.com/graphql'
-        };
-        
-        requestContext.dataSource.url = endpoints[userRegion] || endpoints.us;
-        
-        // Add custom parameters for GraphQL variables.
-        query.addParams('includeArchived', 'false');
-        query.addParams('userRole', localStorage.getItem('userRole') || 'viewer');
-        
-        const result = super.processQuery.apply(this, arguments as any);
-        return result;
-    }
-
-    // Add authentication and custom GraphQL headers.
-    public beforeSend(requestContext: DataManager, request: any, settings?: any) {
-        // Add JWT token for GraphQL authentication
-        const token = localStorage.getItem('authToken');
-        if (token) {
-            request.headers.set('Authorization', `Bearer ${token}`);
-        }
-        
-        // Add GraphQL-specific headers.
-        request.headers.set('Content-Type', 'application/json');
-        request.headers.set('X-GraphQL-Client', 'Syncfusion-React-Grid');
-        
-        // Add operation name for monitoring.
-        request.headers.set('X-Operation', 'GridDataQuery');
-        
-        // Log GraphQL requests.
-        console.log('[GraphQL Request]', {
-            url: request.url,
-            timestamp: new Date().toISOString()
-        });
-        
-        super.beforeSend(requestContext, request, settings);
-    }
-}
-
-```
-
-## Connect CustomAdaptor to React Grid
-
-After creating a custom adaptor, connect it to the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid using the `DataManager` component. The `DataManager` acts as a bridge between the Grid and the data source, utilizing the custom adaptor to handle all data operations.
-
-The fundamental pattern for connecting a custom adaptor to the Grid:
-
-```ts
+{% endhighlight %}
+{% highlight js tabtitle="App.jsx" %}
 
 import { DataManager } from '@syncfusion/ej2-data';
-import { CustomODataAdaptor } from './CustomODataAdaptor';
+import {CustomAdaptor} from './CustomAdaptor';
+import { ColumnDirective, ColumnsDirective, GridComponent, Filter } from '@syncfusion/ej2-react-grids';
 
-// Create DataManager with custom adaptor.
-const dataManager = new DataManager({ 
-    url: 'https://api.company.com/odata/orders',
-    adaptor: new CustomODataAdaptor()
-});
+function App() {
+    const data = new DataManager({ 
+      url:'https://localhost:xxxx/odata/Orders', // Here xxxx represents the port number.
+      adaptor: new CustomAdaptor()
+    });
+    return <GridComponent dataSource={data} allowFiltering={true}>
+        <ColumnsDirective>
+            <ColumnDirective field='SNo' headerText='SNO' width='150'/>
+            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150'textAlign='Right'></ColumnDirective>
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
+            <ColumnDirective field='EmployeeID' headerText='Employee ID' width='150'/>
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
+        </ColumnsDirective>
+         <Inject services={[Filter]} />
+    </GridComponent>
+};
+export default App;
 
-// Use in Grid component.
-<GridComponent dataSource={dataManager} ... />
+{% endhighlight %}
+{% endtabs %}
 
+**Single column filtering:**
+
+![Filtering query](../images/custom-adaptor-filtering.png)
+
+
+**Multi-column filtering:**
+
+Multiple columns can be filtered simultaneously. Example: Apply filter criteria ShipCountry = "Denmark" AND OrderID > 10005.
+
+![Filtering query](../images/custom-adaptor-multifiltering.png)
+
+### Searching
+
+To enable search operations when working with a custom adaptor, the configuration begins by extending OData support within the service collection. As part of this setup, the `Filter` method is included in the OData configuration, allowing the service to interpret search‑related criteria. With this configuration in place, clients can use the $filter query option in their requests to search for data entries that match specific conditions.
+
+{% tabs %}
+{% highlight cs tabtitle="Program.cs" %}
+// Create a new instance of the web application builder
+var builder = WebApplication.CreateBuilder(args);
+
+// Create an ODataConventionModelBuilder to build the OData model
+var modelBuilder = new ODataConventionModelBuilder();
+
+// Register the "Orders" entity set with the OData model builder
+modelBuilder.EntitySet<OrdersDetails>("Orders");
+
+// Add services to the container.
+
+// Add controllers with OData support to the service collection
+builder.Services.AddControllers().AddOData(
+    options => options
+        .Count()
+        .Filter() // searching
+        .AddRouteComponents("odata", modelBuilder.GetEdmModel()));
+
+{% endhighlight %}
+{% highlight js tabtitle="App.jsx" %}
+import { DataManager } from '@syncfusion/ej2-data';
+import {CustomAdaptor} from './CustomAdaptor';
+import { ColumnDirective, ColumnsDirective, GridComponent, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
+
+function App() {
+    const data = new DataManager({ 
+      url:'https://localhost:xxxx/odata/Orders', // Here xxxx represents the port number.
+      adaptor: new CustomAdaptor()
+    });
+    const toolbar: ToolbarItems[] = ['Search'];
+    return <GridComponent dataSource={data} toolbar={toolbar}>
+        <ColumnsDirective>
+            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150'textAlign='Right'></ColumnDirective>
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
+            <ColumnDirective field='EmployeeID' headerText='Employee ID' width='150'/>
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
+        </ColumnsDirective>
+        <Inject services={[Toolbar]} />
+    </GridComponent>
+};
+export default App;
+
+{% endhighlight %}
+{% endtabs %}
+
+**Search usage:**
+
+Use the search box in the Grid's top‑right corner to enter any keyword, and matching records from all columns will be shown instantly. Clear the search input to return to the full data set.
+
+![Searching query](../images/custom-adaptor-searching.png)
+
+### Sorting 
+
+To enable sorting operations when working with a custom adaptor, the configuration begins by extending OData support within the service collection. As part of this setup, the `OrderBy` method is included in the OData configuration, allowing the service to interpret sorting criteria. With this configuration in place, clients can use the `$orderby` query option in their requests to sort data entries based on the required attributes.
+
+{% tabs %}
+{% highlight cs tabtitle="Program.cs" %}
+// Create a new instance of the web application builder 
+var builder = WebApplication.CreateBuilder(args);
+
+// Create an ODataConventionModelBuilder to build the OData model
+var modelBuilder = new ODataConventionModelBuilder();
+
+// Register the "Orders" entity set with the OData model builder
+modelBuilder.EntitySet<OrdersDetails>("Orders");
+
+// Add services to the container.
+
+// Add controllers with OData support to the service collection
+builder.Services.AddControllers().AddOData(
+    options => options
+        .Count()
+        .OrderBy() // sorting
+        .AddRouteComponents("odata", modelBuilder.GetEdmModel()));
+
+{% endhighlight %}
+{% highlight js tabtitle="App.jsx" %}
+import { DataManager } from '@syncfusion/ej2-data';
+import {CustomAdaptor} from './CustomAdaptor';
+import { ColumnDirective, ColumnsDirective, GridComponent, Sort } from '@syncfusion/ej2-react-grids';
+
+function App() {
+    const data = new DataManager({ 
+      url:'https://localhost:xxxx/odata/Orders', // Here xxxx represents the port number.
+      adaptor: new CustomAdaptor()
+    });
+    return <GridComponent dataSource={data} allowSorting={true}>
+        <ColumnsDirective>
+            <ColumnDirective field='SNo' headerText='SNO' width='150'/>
+            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150'textAlign='Right'></ColumnDirective>
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
+            <ColumnDirective field='EmployeeID' headerText='Employee ID' width='150'/>
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
+        </ColumnsDirective>
+        <Inject services={[Sort]} />
+    </GridComponent>
+};
+export default App;
+{% endhighlight %}
+{% endtabs %}
+
+**Single column sorting:**
+
+Click "Customer ID" column header to sort by OrderID field.
+
+![Single column sorting query](../images/custom-adaptor-sorting.png)
+
+**Multi-column sorting:**
+
+Hold Ctrl key and click "Employee ID" followed by "Customer ID" to establish hierarchical sort (primary sort by country, secondary sort by ID within each country group).
+
+![Multi column sorting query](../images/custom-adaptor-multisorting.png)
+
+### Pagination
+
+Paging operations with a `CustomAdaptor` extended from OData are supported through the inclusion of the `SetMaxTop` method in the OData configuration. This method defines the maximum number of records that can be returned in a single response. After this configuration is in place, clients make use of the `$skip` and `$top` query options in their requests to indicate the number of records to omit and the number of records to retrieve. This setup establishes predictable paging behavior within the application’s data handling process.
+
+{% tabs %}
+{% highlight cs tabtitle="Program.cs" %}
+// Create a new instance of the web application builder
+var builder = WebApplication.CreateBuilder(args);
+
+// Create an ODataConventionModelBuilder to build the OData model
+var modelBuilder = new ODataConventionModelBuilder();
+
+// Register the "Orders" entity set with the OData model builder
+modelBuilder.EntitySet<OrdersDetails>("Orders");
+
+// Add services to the container.
+
+// Add controllers with OData support to the service collection
+builder.Services.AddControllers().AddOData(
+    options => options
+        .Count()
+        .SetMaxTop(null)
+        .AddRouteComponents("odata", modelBuilder.GetEdmModel()));
+
+{% endhighlight %}
+{% highlight js tabtitle="App.jsx" %}
+import { DataManager } from '@syncfusion/ej2-data';
+import {CustomAdaptor} from './CustomAdaptor';
+import { ColumnDirective, ColumnsDirective, GridComponent, Page } from '@syncfusion/ej2-react-grids';
+
+function App() {
+    const data = new DataManager({ 
+      url: 'https://localhost:xxxx/odata/Orders', // Here xxxx represents the port number.
+      adaptor: new CustomAdaptor()
+    });
+    return <GridComponent dataSource={data} allowPaging={true}>
+        <ColumnsDirective>
+            <ColumnDirective field='SNo' headerText='SNO' width='150'/>
+            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150'textAlign='Right'></ColumnDirective>
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
+            <ColumnDirective field='EmployeeID' headerText='Employee ID' width='150'/>
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
+        </ColumnsDirective>
+        <Inject services={[Page]} />
+    </GridComponent>
+};
+export default App;
+
+{% endhighlight %}
+{% endtabs %}
+
+The following screenshot illustrates the custom adaptor extending OData V4 with a paging query in operation.
+
+![paging query](../images/custom-adaptor-paging.png)
+
+## CRUD Operations
+
+CRUD (Create, Read, Update, Delete) operations with a `CustomAdaptor` are managed by configuring the Grid for editing and by using the sample **OrdersController** implementation in the server application. The controller processes standard HTTP requests, including `GET`, `POST`, `PATCH`, and `DELETE`, to support complete data modification workflows.
+
+To enable CRUD operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component within a React application, the following steps outline the required setup:
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems, EditSettingsModel, Toolbar, Edit, Inject } from '@syncfusion/ej2-react-grids';
+import { DataManager } from '@syncfusion/ej2-data';
+import {CustomAdaptor} from './CustomAdaptor';
+
+function App() {
+    const data = new DataManager({ 
+      url: 'https://localhost:xxxx/odata/Orders', // Here xxxx represents the port number.
+      adaptor: new CustomAdaptor()
+    });
+    const editSettings: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
+    const toolbar: ToolbarItems[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
+    const orderIDRules: object = {required: true};
+    const customerIDRules: object = {required: true, minLength: 3};
+    return <GridComponent dataSource={data} editSettings={editSettings} toolbar={toolbar} height={320}>
+        <ColumnsDirective>
+            <ColumnDirective field='SNo' headerText='SNO' width='150'/>
+            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150' textAlign='Right' validationRules={orderIDRules}></ColumnDirective>
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' validationRules={customerIDRules}></ColumnDirective>
+            <ColumnDirective field='EmployeeID' headerText='Employee ID' width='150'/>
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
+        </ColumnsDirective>
+        <Inject services={[Toolbar, Edit]} />
+    </GridComponent>
+};
+export default App;
+
+{% endhighlight %}
+{% endtabs %}
+
+> Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#mode) for the Grid component. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property is set to true for a specific Grid column, ensuring that its value is unique.
+
+**Insert Record:**
+
+Insertion of a new record in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid is handled through the `HttpPost` method in the server application. The following example demonstrates the OrdersController processing an insert operation:
+
+```cs
+/// <summary>
+/// Inserts a new order to the collection.
+/// </summary>
+/// <param name="addRecord">The order to be inserted.</param>
+/// <returns>It returns the newly inserted record detail.</returns>
+[HttpPost]
+[EnableQuery]
+public IActionResult Post([FromBody] OrdersDetails addRecord)
+{
+    if (order == null)
+    {
+        return BadRequest("Null order");
+    }
+
+    OrdersDetails.GetAllRecords().Insert(0, addRecord);
+    return Ok(addRecord);
+}
 ```
+
+![CustomAdaptor-Insert-record](../images/custom-adaptor-insert-record.png)
+
+**Update Record:**
+
+Updating an existing record in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid is handled through the HttpPatch method within the controller. The following example illustrates the way the OrdersController processes an update operation:
+
+```cs
+/// <summary>
+/// Updates an existing order.
+/// </summary>
+/// <param name="key">The ID of the order to update.</param>
+/// <param name="updateRecord">The updated order details.</param>
+/// <returns>It returns the updated order details.</returns>
+[HttpPatch("{key}")]
+public IActionResult Patch(int key, [FromBody] OrdersDetails updatedOrder)
+{
+    if (updatedOrder == null)
+    {
+        return BadRequest("No records");
+    }
+    var existingOrder = OrdersDetails.GetAllRecords().FirstOrDefault(o => o.OrderID == key);
+    if (existingOrder != null)
+    {
+        // If the order exists, update its properties
+        existingOrder.CustomerID = updatedOrder.CustomerID ?? existingOrder.CustomerID;
+        existingOrder.EmployeeID = updatedOrder.EmployeeID ?? existingOrder.EmployeeID;
+        existingOrder.ShipCountry = updatedOrder.ShipCountry ?? existingOrder.ShipCountry;
+    }
+    return Ok(existingOrder);
+}
+```
+
+![CustomAdaptor-Update-record](../images/custom-adaptor-update-record.png)
+
+**Delete Record:**
+
+Deletion of a record from the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid is handled through the HttpDelete method in the controller. The following example demonstrates the delete operation in the OrdersController:
+
+```cs
+/// <summary>
+/// Deletes an order.
+/// </summary>
+/// <param name="key">The key of the order to be deleted.</param>
+/// <returns>The deleted order.</returns>
+[HttpDelete("{key}")]
+public IActionResult Delete(int key)
+{
+    var order = OrdersDetails.GetAllRecords().FirstOrDefault(o => o.OrderID == key);
+    if (order != null)
+    {
+        OrdersDetails.GetAllRecords().Remove(order);
+    }
+    return Ok(order);
+}
+```
+
+![CustomAdaptor-delete-record](../images/custom-adaptor-delete-record.png)
 
 ## Troubleshooting
 

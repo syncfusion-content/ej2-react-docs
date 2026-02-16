@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Filtering in React Grid component
 
-Filtering is a powerful feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component that enables selective viewing of data based on specific criteria. It allows narrowing down large datasets to focus on relevant information, thereby enhancing data analysis and decision-making.
+Filtering is a powerful feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component that enables selective viewing of data based on specific criteria. It allows narrowing down large datasets to focus on relevant information, thereby enhancing data analysis and decision-making.
 
 ## Set up filtering
 
@@ -18,7 +18,7 @@ Before using filtering in the grid, understand that the component needs the `Fil
 
 Inject the [Filter](https://ej2.syncfusion.com/react/documentation/api/grid/filter) module into the Grid component's `Inject` services array to enable filtering.
 
-```jsx
+```js
 import { Inject, Filter } from '@syncfusion/ej2-react-grids';
 
 <GridComponent>
@@ -574,7 +574,7 @@ Alternatively, use properties available in the [FilterEventArgs](https://ej2.syn
 
 Access these properties using the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) event handler:
 
-```typescript
+```ts
 actionComplete(args: FilterEventArgs) {
     let column = args.columns;
     let object = args.currentFilterObject;

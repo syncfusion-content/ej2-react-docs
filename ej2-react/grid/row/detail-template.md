@@ -212,7 +212,7 @@ For example, to render a grid inside the detail row, place an HTML div element a
 
 The Grid provides a feature that enables expanding the detail row using an external button. By default, detail rows render in a collapsed state with an icon in each row to expand or collapse the detail view.
 
-To expand the grid detail row using an external button, invoke the [expand](https://ej2.syncfusion.com/react/documentation/api/grid/detailRow#expand) method provided by the **detailRowModule** of the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid library. This method expands the detail row of a specific grid row.
+To expand the grid detail row using an external button, invoke the [expand](https://ej2.syncfusion.com/react/documentation/api/grid/detailRow#expand) method provided by the `detailRowModule` of the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid library. This method expands the detail row of a specific grid row.
 
 Here is an example of using the `expand` method to expand a detail row:
 
@@ -407,7 +407,7 @@ export default App;
 
 ## Customize detail template icon
 
-The detail template icon in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid expands or collapses the detail content of a row. By default, the icon represents a right arrow for the collapsed state and a down arrow for the expanded state. To customize this icon, override the following CSS styles:
+The detail template icon in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid expands or collapses the detail content of a row. By default, the icon represents a right arrow for the collapsed state and a down arrow for the expanded state. To customize this icon, override the following CSS styles:
 
 ```css
 

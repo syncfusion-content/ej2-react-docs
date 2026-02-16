@@ -14,7 +14,7 @@ The infinite scrolling feature in the grid is a powerful tool for seamlessly han
 
 Injecting the `InfiniteScroll` module into the Grid component's `Inject` services array is required to enable infinite scrolling:
 
-```tsx
+```ts
 import { Inject, InfiniteScroll } from '@syncfusion/ej2-react-grids';
 
 <GridComponent>

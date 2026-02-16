@@ -18,7 +18,7 @@ To enable the Hierarchy Grid feature:
 
 1. The Hierarchy Grid feature is enabled by importing the `DetailRow` module from `@syncfusion/ej2-react-grids` and injecting the `DetailRow` service into the grid.
 
-    ```jsx
+    ```js
     import { GridComponent, Inject, DetailRow } from '@syncfusion/ej2-react-grids';
 
     <GridComponent>
@@ -435,7 +435,7 @@ In the demo below, the expand/collapse icons have been changed to arrow-down and
 
 ## Child Grid expand and collapse events
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component provides [detailExpand](https://ej2.syncfusion.com/react/documentation/api/grid#detailexpand) and [detailCollapse](https://ej2.syncfusion.com/react/documentation/api/grid#detailcollapse) events, triggered before a detail row(parent row) is expanded or collapsed. These events provide control over the expand/collapse behavior by allowing conditional logic through event arguments.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provides [detailExpand](https://ej2.syncfusion.com/react/documentation/api/grid#detailexpand) and [detailCollapse](https://ej2.syncfusion.com/react/documentation/api/grid#detailcollapse) events, triggered before a detail row(parent row) is expanded or collapsed. These events provide control over the expand/collapse behavior by allowing conditional logic through event arguments.
 
 In the example below, expansion is prevented for the "Nancy" row, and collapse is prevented for the "Andrew" row.
 

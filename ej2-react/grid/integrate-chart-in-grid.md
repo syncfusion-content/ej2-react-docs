@@ -114,7 +114,7 @@ For example, in a sales dashboard, selecting records for specific products can d
 
 Steps to integrate a chart into the grid via the context menu:
 
-**Step 1. Inject required modules:**
+**Step 1: Inject required modules:**
 
 Import the required modules from the `Grid`, `GridChart`, and `Chart` packages, then inject the `ContextMenu` module into the grid:
 
@@ -223,9 +223,9 @@ Use the [contextMenuClick](https://ej2.syncfusion.com/react/documentation/api/gr
 
 The `contextMenuClick` event provides the following arguments:
 
-  * `args.chartType` — selected chart type.
-  * `args.gridInstance` — current grid instance.
-  * `args.records` — selected data records to visualize.
+  * `args.chartType`: selected chart type.
+  * `args.gridInstance`: current grid instance.
+  * `args.records`: selected data records to visualize.
 
 The `gridChart.render` method accepts three arguments:
 

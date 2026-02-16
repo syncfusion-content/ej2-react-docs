@@ -1,24 +1,7 @@
 import { TextBoxComponent } from '@syncfusion/ej2-react-inputs'
 import { ColumnDirective, ColumnsDirective, EditSettingsModel, GridComponent, Inject, SaveEventArgs } from '@syncfusion/ej2-react-grids';
 import { Edit, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
-import * as React from 'react';
 import { data } from './datasource';
-export interface columnDataType {
-  OrderID: number,
-  CustomerID: string,
-  Role: string,
-  Freight: number,
-  ShipCity: string,
-  EmployeeID: number,
-  ShipCountry: string,
-  ShipAddress: string,
-  OrderDate: Date,
-  ShipName: string,
-  ShipRegion: string,
-  ShipPostalCode: string,
-  Verified: Boolean
-
-}
 
 function App() {
   let orderData;

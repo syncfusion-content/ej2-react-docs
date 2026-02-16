@@ -23,7 +23,7 @@ The custom binding feature in the React Grid enables managing a custom API for h
 
 To utilize custom binding, the application can handle the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started). The DataManager integrates seamlessly with the React Grid to manage custom data processing and binding. 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component offers a range of powerful features for handling grid actions such as **paging**, **grouping**, **sorting** and **filtering**. These actions trigger the [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datastatechange) event. The feature for CRUD action such as **Create**, **Read**, **Update**, **Delete** operations. This action trigger the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasourcechanged) event. This event provides the opportunity to manage and manipulate data according to the individual's interactions.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component offers a range of powerful features for handling grid actions such as **paging**, **grouping**, **sorting** and **filtering**. These actions trigger the [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datastatechange) event. The feature for CRUD action such as **Create**, **Read**, **Update**, **Delete** operations. This action trigger the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasourcechanged) event. This event provides the opportunity to manage and manipulate data according to the individual's interactions.
 
 **Using the dataStateChange event**
 
@@ -356,7 +356,7 @@ The Grid component provides powerful options for dynamically inserting, deleting
 
 **Integrating CRUD Operations**
 
-To implement CRUD operations using Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, follow these steps:
+To implement CRUD operations using Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, follow these steps:
 
 1. **Configure grid settings:** Set up the grid to allow editing, adding, and deleting operations, and specify the `toolbar` options that will provide access to these features.
 
@@ -747,13 +747,13 @@ The following code example shows the process of exporting all records on the cli
 
 ## Sending additional parameters to the server
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component allows custom parameters to be included in data requests. This feature is particularly useful when additional information must be provided to the server for enhanced processing.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component allows custom parameters to be included in data requests. This feature is particularly useful when additional information must be provided to the server for enhanced processing.
 
 By using the [query](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#query) property of the Grid together with the `addParams` method of the Query class, custom parameters can be seamlessly incorporated into data requests for every grid action.
 
 To enable custom parameters in data requests for the grid component, follow these steps:
 
-**1. Bind the Query Object to the Grid**: Assign the initialized query object to the query property of the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component.
+**1. Bind the Query Object to the Grid**: Assign the initialized query object to the query property of the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component.
 
 **2. Initialize the Query Object:** Create a new instance of the Query class and use the addParams method to add the custom parameters.
 

@@ -18,7 +18,7 @@ Before using editing in the grid, understand that the component needs the [Edit]
 
 Inject the `Edit` module into the Grid component's `Inject` services array to enable editing:
 
-```tsx
+```ts
 import { Inject, Edit } from '@syncfusion/ej2-react-grids';
 
 <GridComponent>
@@ -466,7 +466,7 @@ If editing or deleting only works for the first row in the grid, the [isPrimaryK
 
 **Solution**: Set [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) to `true` on the column that contains unique identifiers:
 
-```tsx
+```ts
 <ColumnDirective field='OrderID' headerText='Order ID' width='100' isPrimaryKey={true} />
 ```
 

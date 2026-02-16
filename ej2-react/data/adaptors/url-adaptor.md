@@ -128,9 +128,9 @@ UrlAdaptorDemo/
 
 ### Step 2: Install required NuGet package
 
-Syncfusion.EJ2.AspNet.Core package is required to use DataManager operations in ASP.NET Core.  It provides essential server‑side helpers and classes—such as `DataManagerRequest` and `QueryableOperation`—that handle parameter parsing, filtering, sorting, and paging with strong typing and optimized performance.
+**Syncfusion.EJ2.AspNet.Core** package is required to use `DataManager` operations in ASP.NET Core.  It provides essential server‑side helpers and classes—such as `DataManagerRequest` and `QueryableOperation`—that handle parameter parsing, filtering, sorting, and paging with strong typing and optimized performance. The **Microsoft.AspNetCore.Mvc.NewtonsoftJson** package provides ASP.NET Core MVC input and output formatters that use **Newtonsoft.Json** for JSON serialization, deserialization, and JSON Patch support.
 
-In Visual Studio, navigate to **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**, search for **Syncfusion.EJ2.AspNet.Core** and **Microsoft.AspNetCore.Mvc.NewtonsoftJson**, select it, and click **Install**.
+In Visual Studio, navigate to **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**, search for **Syncfusion.EJ2.AspNet.Core** and **Microsoft.AspNetCore.Mvc.NewtonsoftJson**, select it, and click **Install**. Make sure to install these packages into the **UrlAdaptorDemo.Server** project.
 
 **Or via package manager console:**
 
@@ -146,18 +146,18 @@ dotnet add package Syncfusion.EJ2.AspNet.Core
 dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson
 ```
 
-> **Note:** Without this package, manual implementation of filtering, sorting, and paging logic is required instead of using the built-in helper methods shown in this guide.
+> **Note:** Without **Syncfusion.EJ2.AspNet.Core** package, manual implementation of filtering, sorting, and paging logic is required instead of using the built-in helper methods shown in this guide.
 
 ### Step 3: Create data model
 
-Create a **Models** folder in the project root (if it doesn't exist), then add **OrdersDetails.cs**:
+Create a **Models** folder in the **UrlAdaptorDemo.Server** project, then add **OrdersDetails.cs** class file.
 
 {% tabs %}
 {% highlight cs tabtitle="OrdersDetails.cs" %}
 
 using System.ComponentModel.DataAnnotations;
 
-namespace UrlAdaptorDemo.Models
+namespace UrlAdaptorDemo.Server.Models
 {
   public class OrdersDetails
   {
@@ -233,20 +233,20 @@ namespace UrlAdaptorDemo.Models
 
 ### Step 4: Create API controller
 
-Create **DataController.cs** in the **Controllers** folder. This controller handles all data requests from the React component.
+Create **DataController.cs** file using **MVC Controller - Empty** template in the **Controllers** folder. This controller handles all data requests from the React component.
 
 {% tabs %}
 {% highlight cs tabtitle="DataController.cs" %}
 
 using Microsoft.AspNetCore.Mvc;
-using UrlAdaptorDemo.Models;
+using UrlAdaptorDemo.Server.Models;
 using Syncfusion.EJ2.Base;
 
-namespace UrlAdaptorDemo.Controllers
+namespace UrlAdaptorDemo.Server.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
-  public class React component : ControllerBase
+  public class DataController : ControllerBase
   {
     /// <summary>
     /// Main endpoint for data requests.
@@ -290,9 +290,38 @@ namespace UrlAdaptorDemo.Controllers
 - **count**: Must be total count before paging (not just current page count).
 - **HttpPost**: Client sends `POST` requests by default for data operations.
 
-### Step 5: Configure CORS (Cross-Origin Resource Sharing)
+### Step 5: Configure NewtonsoftJson and CORS (Cross-Origin Resource Sharing)
+
+In ASP.NET Core, JSON results are returned in camelCase format by default, which also converts field names to camelCase. To prevent this behavior, add **DefaultContractResolver**.
+
+```csharp
+// Configure JSON serialization (preserves property casing).
+builder.Services.AddMvc().AddNewtonsoftJson(options =>
+{
+  options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+});
+```
 
 When React frontend (e.g., `https://localhost:3000`) and ASP.NET Core backend (e.g., `https://localhost:5001`) run on different ports, browsers block requests by default for security. CORS configuration allows these cross-origin requests.
+
+```csharp
+// Add CORS policy to allow frontend access.
+builder.Services.AddCors(options =>
+{
+  options.AddDefaultPolicy(policy =>
+  {
+    policy.AllowAnyOrigin()      // Allow requests from any origin.
+          .AllowAnyMethod()       // Allow GET, POST, PUT, DELETE, etc.
+          .AllowAnyHeader();      // Allow any request headers.
+  });
+});
+
+...
+
+// Enable CORS middleware (must be before UseRouting).
+app.UseCors();
+
+```
 
 Below is the common error without CORS:
 
@@ -302,7 +331,7 @@ Access to XMLHttpRequest at 'https://localhost:5001/api/data' from origin
 
 ```
 
-**Configure CORS in Program.cs:**
+Both configurations must be set up in the **Program.cs** file.
 
 {% tabs %}
 {% highlight cs tabtitle="Program.cs" %}
@@ -346,7 +375,7 @@ app.Run();
 
 **Production CORS configuration:**
 
-For production, restrict CORS to specific origins:
+`AllowAnyOrigin()` provides convenience for development but production environments require restriction to specific trusted domains. For production, restrict CORS to specific origins:
 
 ```csharp
 builder.Services.AddCors(options =>
@@ -360,19 +389,17 @@ builder.Services.AddCors(options =>
 });
 ```
 
-> **Security Note:** `AllowAnyOrigin()` provides convenience for development but production environments require restriction to specific trusted domains.
-
 ### Step 6: Test the backend API
 
 **Run the application:**
 
-Run the application in Visual Studio, accessible on a URL like **https://localhost:xxxx**. Verify the API returns order data at **https://localhost:xxxx/api/data**, where **xxxx** is the port.
+Run the application in Visual Studio, accessible on a URL like **https://localhost:xxxx**. Verify the API returns order data at **https://localhost:xxxx/api/data**, where **xxxx** is the port. For more details on port verification, see the [Verify ports](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-react?view=vs-2022#verify-ports) documentation.
 
 **Troubleshooting:**
 -  **Empty response**: Check if `GetAllRecords()` is populating data.
 -  **404 Error**: Verify controller route is `[Route("api/[controller]")]`.
 -  **500 Error**: Check server logs in Visual Studio Output window.
--  **CORS Error**: Ensure CORS is configured in Program.cs.
+-  **CORS Error**: Ensure CORS is configured in **Program.cs**.
 
 > **Note:** Keep the backend server running during React frontend setup.
 
