@@ -431,16 +431,16 @@ npm install @syncfusion/ej2-data --save
 Include the required CSS files in the **src/index.css** file:
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';  
-@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';  
-@import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';  
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';  
-@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';  
-@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-react-grids/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';  
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';  
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material3.css';  
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css';  
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';  
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-notifications/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-react-grids/styles/material3.css';
 ```
 
 For this project, the "Bootstrap 5.3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.

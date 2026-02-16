@@ -381,16 +381,16 @@ Once the dependencies are installed, the required CSS files are made available i
 ```css
 [index.css]
 
-@import '@syncfusion/ej2-base/styles/tailwind3.css';  
-@import '@syncfusion/ej2-buttons/styles/tailwind3.css';  
-@import '@syncfusion/ej2-calendars/styles/tailwind3.css';  
-@import '@syncfusion/ej2-dropdowns/styles/tailwind3.css';  
-@import '@syncfusion/ej2-inputs/styles/tailwind3.css';  
-@import '@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import '@syncfusion/ej2-notifications/styles/tailwind3.css';
-@import '@syncfusion/ej2-react-grids/styles/tailwind3.css';
+@import '@syncfusion/ej2-base/styles/material3.css';  
+@import '@syncfusion/ej2-buttons/styles/material3.css';  
+@import '@syncfusion/ej2-calendars/styles/material3.css';  
+@import '@syncfusion/ej2-dropdowns/styles/material3.css';  
+@import '@syncfusion/ej2-inputs/styles/material3.css';  
+@import '@syncfusion/ej2-navigations/styles/material3.css';
+@import '@syncfusion/ej2-popups/styles/material3.css';
+@import '@syncfusion/ej2-splitbuttons/styles/material3.css';
+@import '@syncfusion/ej2-notifications/styles/material3.css';
+@import '@syncfusion/ej2-react-grids/styles/material3.css';
 ```
 
 For this project, the `Tailwind3` theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation to learn more about theming and customization options.
