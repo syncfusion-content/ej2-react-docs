@@ -10,7 +10,7 @@ documentation: ug
 
 # PostgreSQL in EJ2 React Pivot Table Component
 
-This guide explains how to retrieve data from a PostgreSQL database using the [Microsoft Npgsql](https://www.npgsql.org/doc/index.html) library and bind it to the Pivot Table through a Web API controller.
+This guide demonstrates how to retrieve data from a PostgreSQL database using the [Npgsql.EntityFrameworkCore.PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) library and bind it to the Pivot Table component through an ASP.NET Core Web API.
 
 ## Creating a Web API Service to Fetch PostgreSQL Data
 
@@ -36,13 +36,12 @@ To enable PostgreSQL database connectivity:
 ### Step 4: Connect to PostgreSQL and Retrieve Data
 In the **PivotController.cs** file, use the [Npgsql](https://www.npgsql.org/doc/index.html) library to connect to a PostgreSQL database and retrieve data for the Pivot Table.
 
-1. **Establish Connection**: Use **NpgsqlConnection** with a valid connection string (e.g., `Server=localhost;Database=mydb;User Id=myuser;Password=mypassword;`) to connect to the PostgreSQL database.
+1. **Establish Connection**: Use **NpgsqlConnection** with a valid connection string (e.g., `Server=localhost;Port=myport;Database=mydb;User Id=myuser;Password=mypassword;`) to connect to the PostgreSQL database.
 2. **Query and Fetch Data**: Execute a SQL query (e.g., `SELECT * FROM tablename`) using **NpgsqlCommand** to retrieve data for the Pivot Table.
 3. **Structure the Data**: Use **NpgsqlDataAdapter**'s **Fill** method to populate query results into a **DataTable** for JSON serialization.
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 using System.Data;
 using Npgsql;
 
@@ -109,13 +108,74 @@ namespace MyWebService.Controllers
 
 ### Step 6: Run the Web API Service
 1. Build and run the application.
-2. The application will be hosted at `https://localhost:44378/` (the port number may vary based on your configuration).
+2. The application will be hosted at `https://localhost:44356/` (the port number may vary based on your configuration).
 
 ### Step 7: Access the JSON Data
-1. Access the Web API endpoint at `https://localhost:44378/Pivot` to view the JSON data retrieved from the PostgreSQL database.
+1. Access the Web API endpoint at `https://localhost:44356/Pivot` to view the JSON data retrieved from the PostgreSQL database.
 2. The browser will display the JSON data, as shown below.
 
 ![JSON data from the Web API endpoint](../images/postgresql_data.png)
+
+### Step 8: Configure CORS Policy in Program.cs
+To enable the React Pivot Table application to communicate with the Web API service, you need to configure Cross-Origin Resource Sharing (CORS) in the **Program.cs** file. This allows requests from different origins to access the Web API.
+
+1. Open the **Program.cs** file in your ASP.NET Core project.
+2. Add the CORS policy configuration before building the application by adding the following code:
+
+```csharp
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy",
+        builder => builder.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+});
+```
+
+3. Enable CORS middleware in the HTTP request pipeline by adding the following code after building the application:
+
+```csharp
+app.UseCors("CorsPolicy");
+```
+
+Here's the complete **Program.cs** file with CORS configuration:
+
+```csharp
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+
+builder.Services.AddControllers();
+// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+builder.Services.AddOpenApi();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy",
+        builder => builder.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+});
+
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi();
+}
+
+app.UseCors("CorsPolicy");
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
+```
 
 ## Connecting the Pivot Table to a PostgreSQL Database Using the Web API Service
 
@@ -126,7 +186,7 @@ This section explains how to connect the Pivot Table component to a PostgreSQL d
 2. Ensure your React project is configured with the necessary EJ2 Pivot Table dependencies.
 
 ### Step 2: Configure the Web API URL in the Pivot Table
-1. In the **App.tsx** (or **App.jsx**) file, map the Web API URL (`https://localhost:44378/Pivot`) to the Pivot Table using the [url](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#url) property within the [dataSourceSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/).
+1. In the **App.tsx** (or **App.jsx**) file, map the Web API URL (`https://localhost:44356/Pivot`) to the Pivot Table using the [url](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#url) property within the [dataSourceSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings).
 2. Below is the sample code to configure the Pivot Table to fetch data from the Web API:
 
 ```typescript
@@ -136,7 +196,7 @@ import './App.css';
 
 function App() {
     let dataSourceSettings = {
-        url: 'https://localhost:44378/Pivot'
+        url: 'https://localhost:44356/Pivot'
         // Additional configuration will be added in the next step
     };
 
@@ -149,8 +209,8 @@ export default App;
 
 ### Step 3: Define the Pivot Table Report
 1. Configure the Pivot Table report in the **App.tsx** (or **App.jsx**) file to structure the data retrieved from the PostgreSQL database.
-2. Add fields to the [rows](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#rows), [columns](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#columns), [values](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#values), and [filters](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#filters) properties of [dataSourceSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/) to define the report structure, specifying how data fields are organized and aggregated in the Pivot Table.
-3. Enable the field list by setting the [showFieldList](https://ej2.syncfusion.com/react/documentation/api/pivotview/#showfieldlist) property to **true** and including the `FieldList` module in the services section. This allows users to dynamically add or rearrange fields across the columns, rows, and values axes using an interactive user interface.
+2. Add fields to the [rows](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#rows), [columns](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#columns), [values](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#values), and [filters](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#filters) properties of [dataSourceSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings) to define the report structure, specifying how data fields are organized and aggregated in the Pivot Table.
+3. Enable the field list by setting the [showFieldList](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#showfieldlist) property to **true** and including the `FieldList` module in the services section. This allows users to dynamically add or rearrange fields across the columns, rows, and values axes using an interactive user interface.
 
 Here’s the updated sample code for **App.tsx** (or **App.jsx**) with the report configuration and field list support:
 
@@ -161,7 +221,7 @@ import './App.css';
 
 function App() {
     let dataSourceSettings = {
-        url: 'https://localhost:44378/Pivot',
+        url: 'https://localhost:44356/Pivot',
         enableSorting: true,
         columns: [{ name: 'openinghours_practice' }, { name: 'closinghours_practice' }],
         values: [{ name: 'revenue' }],

@@ -62,7 +62,7 @@ npm install @syncfusion/ej2-react-grids --save
  Add Pager component's styles as given below in `src/App.css`.
 
 ```css
-@import "../node_modules/@syncfusion/ej2-react-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-grids/styles/material3.css";
 ```
 
 > To refer `App.css` in the application then import it in the `src/App.tsx` file.
