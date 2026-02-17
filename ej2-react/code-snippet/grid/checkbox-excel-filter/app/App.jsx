@@ -1,5 +1,5 @@
 import { ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-react-grids';
-import { Filter, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import { Filter, GridComponent, Inject,  Page, Sort } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { Query, DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 function App() {

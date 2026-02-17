@@ -52,7 +52,7 @@ function App() {
   return (<div>
     <label>Select a degree: </label>
     <DropDownListComponent style={{ marginLeft: "10px" }} placeholder="Select a degree" id="ddlelement" dataSource={degree} ref={(scope) => { dropDownListObject = scope; }} width={150}></DropDownListComponent>
-    <GridComponent id='grid' dataSource={data} height={260} created={setHeaderHeight} allowExcelExport={true} excelQueryCellInfo={excelQueryCellInfo} excelHeaderQueryCellInfo={excelHeaderQueryCellInfo} toolbar={toolbar} toolbarClick={toolbarClick} ref={g => grid = g}>
+    <GridComponent id='grid' dataSource={data} height={120} created={setHeaderHeight} allowExcelExport={true} excelQueryCellInfo={excelQueryCellInfo} excelHeaderQueryCellInfo={excelHeaderQueryCellInfo} toolbar={toolbar} toolbarClick={toolbarClick} ref={g => grid = g}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
         <ColumnDirective field='CustomerID' headerText='Customer ID' customAttributes={customAttributes} width='100' />

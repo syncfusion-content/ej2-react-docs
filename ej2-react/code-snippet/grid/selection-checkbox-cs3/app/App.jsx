@@ -5,7 +5,7 @@ import { data } from './datasource';
 function App() {
     const selectionSettings = { checkboxOnly: true };
     return (<div>
-        <GridComponent dataSource={data} height={315} selectionSettings={selectionSettings} allowPaging={true} >
+        <GridComponent dataSource={data} height={300} selectionSettings={selectionSettings} allowPaging={true} >
             <ColumnsDirective>
                 <ColumnDirective type='checkbox' width='50' />
                 <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />

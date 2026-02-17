@@ -70,9 +70,9 @@ The cell selection mode allows interactive selection of specific cells or ranges
 
 The Grid supports three types of cell selection mode which can be configured using [selectionSettings.cellSelectionMode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#cellselectionmode). These modes are:
 
-* `Flow` - This is the default mode. It allows selection of a range of cells between the start index and end index, including all cells in between the rows. It provides a continuous flow of cell selection.
-* `Box` - In this mode, selection of a range of cells is possible within the start and end column indexes, including all cells in between the rows within the specified range. This mode is useful for selecting cells within specific columns.
-* `BoxWithBorder` - This mode is similar to the `Box` mode, but it adds borders to the selected range of cells. This visual distinction makes it easy to identify the selected cells within the grid.
+* `Flow`: This is the default mode. It allows selection of a range of cells between the start index and end index, including all cells in between the rows. It provides a continuous flow of cell selection.
+* `Box`: In this mode, selection of a range of cells is possible within the start and end column indexes, including all cells in between the rows within the specified range. This mode is useful for selecting cells within specific columns.
+* `BoxWithBorder`: This mode is similar to the `Box` mode, but it adds borders to the selected range of cells. This visual distinction makes it easy to identify the selected cells within the grid.
 
 > Cell Selection requires the `selectionSettings.mode` to be `Cell` or  `Both` and [type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) should be `Multiple`.
 

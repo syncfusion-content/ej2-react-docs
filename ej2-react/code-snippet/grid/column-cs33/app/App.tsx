@@ -24,7 +24,7 @@ function App() {
   }
     return( <div> <ButtonComponent onClick= { addColumn }>Add Columns</ButtonComponent>
     <ButtonComponent onClick= { removeColumn }>Remove Columns</ButtonComponent>
-    <GridComponent id="Grid" dataSource={data} allowPaging={true} enablePersistence={true} dataBound={dataBound} height={315}
+    <GridComponent id="Grid" dataSource={data} allowPaging={true} enablePersistence={true} dataBound={dataBound} height={280}
     ref={g => grid = g}>
         <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right"/>

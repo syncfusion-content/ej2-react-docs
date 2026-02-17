@@ -11,7 +11,7 @@ function App() {
         }
     }
     return (<div>
-        <GridComponent ref={g => grid = g} dataSource={data} height={315} selectionSettings={selectionSettings} allowPaging={true} rowSelecting={rowSelecting}>
+        <GridComponent ref={g => grid = g} dataSource={data} height={300} selectionSettings={selectionSettings} allowPaging={true} rowSelecting={rowSelecting}>
             <ColumnsDirective>
                 <ColumnDirective type='checkbox' width='50' />
                 <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />

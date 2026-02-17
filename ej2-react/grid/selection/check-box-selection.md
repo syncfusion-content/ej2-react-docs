@@ -40,7 +40,7 @@ Here's an example of enabling checkbox selection using the `type` property in th
 The checkbox selection mode provides two options that can be configured through the [selectionSettings.checkboxMode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#checkboxmode) property:
 
 * `Default`: This mode allows multiple row selection by clicking rows sequentially. When a row is clicked, the associated checkbox switches to the "checked" state.
-* `ResetOnRowClick`: This mode resets previously selected rows when a new row is clicked. Multiple selections remain possible using <kbd>CTRL+Click<kbd> for individual rows or <kbd>SHIFT+Click</kbd> for row ranges.
+* `ResetOnRowClick`: This mode resets previously selected rows when a new row is clicked. Multiple selections remain possible using <kbd>CTRL</kbd> **+ Click** for individual rows or <kbd>SHIFT</kbd> **+ Click** for row ranges.
 
 In the following example, it demonstrates dynamically configuring the `checkboxMode` using the `DropDownList` component:
 
@@ -123,7 +123,7 @@ export default App;
 
 ## Hide select-all checkbox
 
-When the column type is set to [checkbox](https://ej2.syncfusion.com/react/documentation/api/grid/column#type), a select-all checkbox appears in the column header by default. To hide the select-all checkbox, define an empty [HeaderTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/column#headertemplate) directive in the grid Column.
+When the column type is set to [checkbox](https://ej2.syncfusion.com/react/documentation/api/grid/column#type), a select-all checkbox appears in the column header by default. To hide the select-all checkbox, define an empty [HeaderTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/column#headertemplate) directive in the grid column.
 
 Here's an example of hiding selectall checkbox in column header using empty `HeaderTemplate` directive in the Grid component:
 

@@ -34,7 +34,7 @@ export class DialogFormTemplate extends React.Component {
         let valid = true;
         [].slice
             .call(
-                (document.getElementById('tab' + this.currentTab) as any).querySelectorAll('[name]')
+                (document.getElementById('tab' + this.currentTab)).querySelectorAll('[name]')
             )
             .forEach((element) => {
                 element.form.ej2_instances[0].validate(element.name);

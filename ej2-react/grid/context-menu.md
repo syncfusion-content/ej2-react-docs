@@ -211,7 +211,7 @@ export default App;
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports showing or hiding default and custom context menu items using the context menu's [showItems](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#showitems) and [hideItems](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#hideitems) methods. Pass the target items as an argument to these methods.
 
-The example below demonstrates the use of the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component. Its `change` event triggers either `showItems` or `hideItems` to modify the `Edit Record` and `Delete Record` items accordingly.
+The example below demonstrates the use of the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component. Its `change` event triggers either "showItems" or "hideItems" to modify the "Edit Record" and "Delete Record" items accordingly.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

@@ -11,7 +11,7 @@ function App() {
     columns: ['ProductName', 'CustomerName']
   }
   return (<div>
-    <GridComponent dataSource={data} allowPaging={true} allowGrouping={true} groupSettings={groupOptions}>
+    <GridComponent dataSource={data} allowPaging={true} allowGrouping={true} groupSettings={groupOptions} height={268}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' textAlign="Right" width='120' />
         <ColumnDirective field='ProductName' headerText='Product Name' width='160' />

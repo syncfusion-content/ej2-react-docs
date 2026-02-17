@@ -70,7 +70,7 @@ The React Grid follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/g
 | `aria-labelledby` | Provides an accessible name for specific elements such as filter dialog items. |
 | `aria-describedby` | Provides descriptive help text for focused header cells. |
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid uses a two‑table structure for header and content rendering. This improves screen reader interpretation but may trigger warnings in automated accessibility tools. These warnings do not necessarily affect actual assistive-technology usability. Known checker tool warnings include:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid uses a two‑table structure for header and content rendering. This improves screen reader interpretation but may trigger warnings in automated accessibility tools. These warnings do not necessarily affect actual assistive-technology usability. Known checker tool warnings include:
 
 * aria-required-children: This warning can occur when the grid renders certain feature elements (for example, textarea or toolbar content). It may be reported when toolbar or grouping features are enabled.
 
@@ -110,7 +110,7 @@ The Grid provides keyboard navigation and follows WAI‑ARIA [keyboard interacti
 <kbd>Home / Ctrl + Alt + PageUp</kbd> | <kbd>Fn + Left Arrow</kbd> | Navigate to the first page.
 <kbd>End / Ctrl + Alt + PageDown</kbd> | <kbd>Fn + Right Arrow</kbd> | Navigate to the last page.
 
-### Focus Elements
+### Focus elements
 
 **Windows**  | **MAC** | **To do this**
 -----|----- | -----
@@ -182,7 +182,7 @@ The Grid provides keyboard navigation and follows WAI‑ARIA [keyboard interacti
 -----|----- | -----
 <kbd>Alt + Down arrow</kbd> | <kbd>Alt + Down arrow</kbd> | Opens the filter menu (Excel, menu, and checkbox filter) when the header element is focused.
 
-### Column Menu
+### Column menu
 
 **Windows**  | **MAC** | **To do this**
 -----|----- | -----
@@ -197,19 +197,19 @@ The Grid provides keyboard navigation and follows WAI‑ARIA [keyboard interacti
 <kbd>Enter</kbd> | <kbd>Enter</kbd> | Executes sorting (ascending or descending) on a column when its header element is focused.
 <kbd>Ctrl + Enter</kbd> | <kbd>Command + Enter</kbd> | Executes multi-sorting on a column when its header element is focused.
 <kbd>Shift + Enter</kbd> | <kbd>Shift + Enter</kbd> | Removes sorting from the currently focused header column.
-<br>
 
 > * The <kbd>Command</kbd> and <kbd>Control</kbd> keys on Mac devices can be swapped. When this swap is made, use the <kbd>Command</kbd> key instead of the <kbd>Control</kbd> key, and the <kbd>Control</kbd> key instead of the <kbd>Command</kbd> key for the key interactions mentioned above with Mac devices.
 > * For instance, after swapping the keys, to group the columns when the header element is focused, use <kbd>Command + Space</kbd>, and to expand the visible groups, use <kbd>Ctrl + Down Arrow</kbd>.
 
-### Preventing Default Key Actions
+### Preventing default key actions
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides the capability to disable the default key action behavior according to your needs.
 
-This allows you to intercept and modify the response when certain keys are pressed within a web application.
+This allows the application to intercept and modify the response when specific keys are pressed within the web interface.
 
-To disable the default key action in the grid, you can use the [keyPressed](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#keypressed) event.
+To disable the default key action in the grid, use the [keyPressed](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#keypressed) event.
 
+This allows the application to intercept and modify the response when specific keys are pressed within the web interface.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -251,7 +251,7 @@ Additionally, the default actions for these keyboard shortcuts related to groupi
 * Delete
 * Enter
 
-You can add further custom shortcuts and actions as required to enhance the capabilities of your Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component.
+Additional custom shortcuts and actions can be added as needed to enhance the capabilities of the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

@@ -30,7 +30,7 @@ For further details on configuration, refer to the [OData v4 adaptor Documentati
 
 ## Web API adaptor
 
-The [WebApiAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#web-api-adaptor) extends the capabilities of the ODataAdaptor and is designed to interact with Web APIs created with OData endpoints. This adaptor ensures seamless communication between the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid and OData-based Web APIs, enabling efficient data retrieval and manipulation.
+The [WebApiAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#web-api-adaptor) extends the capabilities of the ODataAdaptor and is designed to interact with Web APIs created with OData endpoints. This adaptor ensures seamless communication between the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid and OData-based Web APIs, enabling efficient data retrieval and manipulation.
 
 For further details on configuration, refer to the [Web API Adaptor documentation](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/webapi-adaptor).
 
@@ -50,6 +50,6 @@ For further details on configuration, refer to the [Web Method Adaptor documenta
 
 GraphQL is a powerful query language for APIs designed to provide a more efficient alternative to traditional REST APIs. It allows precise data fetching, reducing over-fetching and under-fetching of data. GraphQL offers a flexible and expressive syntax for querying, enabling clients to request only the specific data they require.
 
-The [GraphQLAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#graphql-adaptor) simplifies the interaction between the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid and GraphQL servers, allowing for efficient data retrieval with support for various operations such as CRUD (Create, Read, Update, Delete).
+The [GraphQLAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#graphql-adaptor) simplifies the interaction between the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid and GraphQL servers, allowing for efficient data retrieval with support for various operations such as CRUD (Create, Read, Update, Delete).
 
 For further details on configuration, refer to the [GraphQL adaptor documentation](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/graphql-adaptor)

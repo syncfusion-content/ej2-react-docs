@@ -61,7 +61,7 @@ The following table illustrates the behavior of columns when different freeze di
 | **Left + Right freeze** | Left columns fixed on left, right columns fixed on right; middle columns scroll |
 | **Left + Fixed + Right** | Creates three sections: left-frozen, middle-frozen (fixed), and right-frozen, with scrollable areas between them |
 
-The following example demonstrates multiple freeze directions in action. The "ShipCountry" column is frozen on the left side by default. The example allows dynamically changing the freeze direction of any column using a DropDownList component. Select a column and choose a freeze direction (`Left`, `Right`, or `Fixed`) to observe the effect on column positioning.
+The following example demonstrates multiple freeze directions in action. The "Ship Country" column is frozen on the left side by default. The example allows dynamically changing the freeze direction of any column using a DropDownList component. Select a column and choose a freeze direction (`Left`, `Right`, or `Fixed`) to observe the effect on column positioning.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -78,14 +78,14 @@ function App() {
   let directionDropDown;
   const field = { text: 'name', value: 'id' };
   const columnData = [
-    { id: 'OrderID', name: 'OrderID' },
-    { id: 'CustomerID', name: 'CustomerID' },
-    { id: 'OrderDate', name: 'OrderDate' },
-    { id: 'ShipName', name: 'ShipName' },
-    { id: 'ShipCity', name: 'ShipCity' },
-    { id: 'ShipCountry', name: 'ShipCountry' },
-    { id: 'ShipRegion', name: 'ShipRegion' },
-    { id: 'ShipAddress', name: 'ShipAddress' },
+    { id: 'OrderID', name: 'Order ID' },
+    { id: 'CustomerID', name: 'Customer ID' },
+    { id: 'OrderDate', name: 'Order Date' },
+    { id: 'ShipName', name: 'Ship Name' },
+    { id: 'ShipCity', name: 'Ship City' },
+    { id: 'ShipCountry', name: 'Ship Country' },
+    { id: 'ShipRegion', name: 'Ship Region' },
+    { id: 'ShipAddress', name: 'Ship Address' },
     { id: 'Freight', name: 'Freight' },
   ]
   const directionData = [
@@ -136,14 +136,14 @@ function App() {
   let directionDropDown: DropDownListComponent | null;
   const field: object = { text: 'name', value: 'id' };
   const columnData: any = [
-    { id: 'OrderID', name: 'OrderID' },
-    { id: 'CustomerID', name: 'CustomerID' },
-    { id: 'OrderDate', name: 'OrderDate' },
-    { id: 'ShipName', name: 'ShipName' },
-    { id: 'ShipCity', name: 'ShipCity' },
-    { id: 'ShipCountry', name: 'ShipCountry' },
-    { id: 'ShipRegion', name: 'ShipRegion' },
-    { id: 'ShipAddress', name: 'ShipAddress' },
+    { id: 'OrderID', name: 'Order ID' },
+    { id: 'CustomerID', name: 'Customer ID' },
+    { id: 'OrderDate', name: 'Order Date' },
+    { id: 'ShipName', name: 'Ship Name' },
+    { id: 'ShipCity', name: 'Ship City' },
+    { id: 'ShipCountry', name: 'Ship Country' },
+    { id: 'ShipRegion', name: 'Ship Region' },
+    { id: 'ShipAddress', name: 'Ship Address' },
     { id: 'Freight', name: 'Freight' },
   ]
   const directionData: any = [
@@ -212,14 +212,14 @@ function App() {
     let grid;
     const field = { text: 'text', value: 'value' };
     const ddlData = [
-        { text: 'OrderID', value: 'OrderID' },
-        { text: 'CustomerID', value: 'CustomerID' },
-        { text: 'OrderDate', value: 'OrderDate' },
-        { text: 'ShipName', value: 'ShipName' },
-        { text: 'ShipCity', value: 'ShipCity' },
-        { text: 'ShipCountry', value: 'ShipCountry' },
-        { text: 'ShipRegion', value: 'ShipRegion' },
-        { text: 'ShipAddress', value: 'ShipAddress' },
+        { text: 'OrderID', value: 'Order ID' },
+        { text: 'CustomerID', value: 'Customer ID' },
+        { text: 'OrderDate', value: 'Order Date' },
+        { text: 'ShipName', value: 'Ship Name' },
+        { text: 'ShipCity', value: 'Ship City' },
+        { text: 'ShipCountry', value: 'Ship Country' },
+        { text: 'ShipRegion', value: 'Ship Region' },
+        { text: 'ShipAddress', value: 'Ship Address' },
         { text: 'Freight', value: 'Freight' },
     ]
     const columnChange = ((args) => {
@@ -270,14 +270,14 @@ function App() {
     let grid: Grid | null;
     const field: any = { text: 'text', value: 'value' };
     const ddlData: any = [
-        { text: 'OrderID', value: 'OrderID' },
-        { text: 'CustomerID', value: 'CustomerID' },
-        { text: 'OrderDate', value: 'OrderDate' },
-        { text: 'ShipName', value: 'ShipName' },
-        { text: 'ShipCity', value: 'ShipCity' },
-        { text: 'ShipCountry', value: 'ShipCountry' },
-        { text: 'ShipRegion', value: 'ShipRegion' },
-        { text: 'ShipAddress', value: 'ShipAddress' },
+        { text: 'OrderID', value: 'Order ID' },
+        { text: 'CustomerID', value: 'Customer ID' },
+        { text: 'OrderDate', value: 'Order Date' },
+        { text: 'ShipName', value: 'Ship Name' },
+        { text: 'ShipCity', value: 'Ship City' },
+        { text: 'ShipCountry', value: 'Ship Country' },
+        { text: 'ShipRegion', value: 'Ship Region' },
+        { text: 'ShipAddress', value: 'Ship Address' },
         { text: 'Freight', value: 'Freight' },
     ]
     const columnChange = ((args: ChangeEventArgs) => {
@@ -435,7 +435,6 @@ This is achieved using the [`edit`](https://ej2.syncfusion.com/react/documentati
 
 The visual separator between frozen and scrollable columns (the "frozen line") can be customized to match application design requirements. Custom CSS styles can be applied to change the border color for left, right, and fixed frozen columns. The Grid applies specific CSS classes to frozen column borders based on their freeze direction. These classes can be targeted to customize the frozen line appearance.
 
-**For left frozen columns:**
 **For left frozen columns:**
 
 ```css

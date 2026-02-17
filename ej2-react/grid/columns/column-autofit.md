@@ -113,7 +113,7 @@ This feature can be enabled by setting the [autoFit](https://ej2.syncfusion.com/
 
 ## AutoFit columns when changing column visibility using column chooser
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, columns can be auto-fitted when their visibility is changed through the column chooser UI. This can be done by calling the `autoFitColumns` method inside the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) event. The event arguments include a property called `requestType`, which indicates the type of action performed. When the `requestType` is `columnState`, the `autoFitColumns` method can be invoked to resize the affected columns automatically.
+In the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, columns can be auto-fitted when their visibility is changed through the column chooser UI. This can be done by calling the `autoFitColumns` method inside the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) event. The event arguments include a property called `requestType`, which indicates the type of action performed. When the `requestType` is `columnState`, the `autoFitColumns` method can be invoked to resize the affected columns automatically.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

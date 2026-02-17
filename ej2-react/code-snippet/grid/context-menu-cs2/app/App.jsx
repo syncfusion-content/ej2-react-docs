@@ -1,7 +1,7 @@
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import { ContextMenu, Inject, Page } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
-import { data } from './datasource';
+import { employeeData } from './datasource';
 function App() {
     let grid;
     const contextMenuItems = [
@@ -13,7 +13,7 @@ function App() {
         }
     };
     return (<div>
-      <GridComponent dataSource={data} allowPaging={true} contextMenuItems={contextMenuItems} ref={g => grid = g} contextMenuClick={contextMenuClick}>
+      <GridComponent dataSource={employeeData} allowPaging={true} contextMenuItems={contextMenuItems} ref={g => grid = g} contextMenuClick={contextMenuClick}>
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' width='140' textAlign='Right'/>
           <ColumnDirective field='CustomerID' headerText='Customer ID' width='140'/>

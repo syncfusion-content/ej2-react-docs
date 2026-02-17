@@ -79,9 +79,9 @@ export class DialogFormTemplate extends React.Component<{}, {}> {
         const { isAdd } = this.state as { isAdd: boolean };
         // Set initial Focus
         if (isAdd) {
-            this.orderIDRef.current?.focus();
+            this.orderIDRef.current.focus();
         } else {
-            this.customerIdRef.current?.focus();
+            this.customerIdRef.current.focus();
         }
     }
     public render() {

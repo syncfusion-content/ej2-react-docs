@@ -47,7 +47,7 @@ function App() {
     
     return (
         <GridComponent id="ColumnTemplateGrid" ref={(g) => (grid = g)} dataSource={employeeData} toolbar={toolbar}
-        allowExcelExport={true} toolbarClick={toolbarClick} excelQueryCellInfo={excelQueryCellInfo} height="315">
+        allowExcelExport={true} toolbarClick={toolbarClick} excelQueryCellInfo={excelQueryCellInfo} height="260">
             <ColumnsDirective>
                 <ColumnDirective headerText="Employee Image" width="180" template={imageTemplate} textAlign="Center" />
                 <ColumnDirective field="EmployeeID" headerText="Employee ID" width="125" />

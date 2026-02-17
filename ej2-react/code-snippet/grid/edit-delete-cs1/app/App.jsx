@@ -25,7 +25,7 @@ function App() {
     }
   }
   return (<div>
-    <GridComponent ref={g => grid = g} dataSource={data} editSettings={editOptions} toolbar={toolbar} height={315} toolbarClick={toolbarClick}>
+    <GridComponent ref={g => grid = g} dataSource={data} editSettings={editOptions} toolbar={toolbar} height={268} toolbarClick={toolbarClick}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />

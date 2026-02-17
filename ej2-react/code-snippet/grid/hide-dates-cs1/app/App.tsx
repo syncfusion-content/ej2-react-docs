@@ -17,7 +17,7 @@ function App() {
     }
   }
   return <div>
-    <GridComponent dataSource={data} height={280} ref={g => grid = g} toolbar={toolbarOptions} editSettings={editSettings} allowPaging={true} pageSettings={{ pageCount: 5 }} actionBegin={actionBegin.bind(this)}>
+    <GridComponent dataSource={data} height={260} ref={g => grid = g} toolbar={toolbarOptions} editSettings={editSettings} allowPaging={true} pageSettings={{ pageCount: 5 }} actionBegin={actionBegin.bind(this)}>
       <ColumnsDirective>
         <ColumnDirective field="OrderID" headerText="Order ID" width="120" isPrimaryKey={true} textAlign="Right"></ColumnDirective>
         <ColumnDirective field="CustomerID" headerText="Customer Name" width="150"></ColumnDirective>

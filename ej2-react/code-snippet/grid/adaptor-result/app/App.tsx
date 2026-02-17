@@ -26,7 +26,7 @@ function App() {
         <ButtonComponent onClick={executeQuery}>Execute Query</ButtonComponent>
       </div>
       <p style={{ textAlign: "center", color: "red" }}>{statusMessage}</p>
-      <GridComponent dataSource={setData} allowPaging={true} height={315}>
+      <GridComponent dataSource={setData} allowPaging={true} height={260}>
         <ColumnsDirective>
           <ColumnDirective field="OrderID" headerText="Order ID" width="120" textAlign="Right" />
           <ColumnDirective field="CustomerID" headerText="Customer ID" width="160" />

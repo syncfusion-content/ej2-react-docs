@@ -32,7 +32,7 @@ function App() {
       dropdownObj.showPopup();
     }
   }
-  return <GridComponent ref={g => grid = g} dataSource={data} editSettings={editOptions} toolbar={toolbarOptions} height={273} allowPaging={true} created={created} actionComplete={onActionComplete}>
+  return <GridComponent ref={g => grid = g} dataSource={data} editSettings={editOptions} toolbar={toolbarOptions} height={260} allowPaging={true} created={created} actionComplete={onActionComplete}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign='Right' isPrimaryKey={true} />
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />

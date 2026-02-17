@@ -291,7 +291,7 @@ def apply_paging(rows, skip, take):
 
 ### GET request endpoint
 
-The Flask `GET` endpoint retrieves task data with applied filtering, searching, sorting, and paging operations. The endpoint accepts a grid state parameter containing all operation details and returns the result in the standardized format.
+The Flask GET endpoint retrieves task data with applied filtering, searching, sorting, and paging operations. The endpoint accepts a grid state parameter containing all operation details and returns the result in the standardized format.
 
 Ensure the response follows a structured format that includes both the current view dataset and the total data count. This approach supports on-demand data loading and enables the client to handle operations such as paging or filtering effectively when using Syncfusion custom binding.
 
@@ -536,7 +536,7 @@ export default function App() {
 }
 ```
 
-This component includes the `useEffect` hook that loads the initial data when the component mounts. The "initialState" object defines the starting grid state with default values for skip (0), take (12), and empty arrays for sorting, filtering, and searching. The "fetchData" function sends the grid state to the Flask API via a `GET` request and retrieves the data in the required format.
+This component includes the `useEffect` hook that loads the initial data when the component mounts. The "initialState" object defines the starting grid state with default values for skip (0), take (12), and empty arrays for sorting, filtering, and searching. The "fetchData" function sends the grid state to the Flask API via a GET request and retrieves the data in the required format.
 
 **API response format:**
 The Grid custom binding feature expects the following response from the backend:
@@ -553,7 +553,7 @@ The `dataStateChange` event is the primary mechanism for handling Grid state cha
 
 The event handler is responsible for:
 1. Collecting the current grid state (skip, take, sorted, where, search)
-2. Sending this state to the Flask API via a `GET` request
+2. Sending this state to the Flask API via a GET request
 3. Processing the response and binding data to the Grid
 4. Handling special cases like filter dropdown requests
 
@@ -618,7 +618,7 @@ The `dataSourceChanged` event is triggered when users perform CRUD operations. T
 The event handler is responsible for:
 1. Identifying the type of operation (add, edit, or delete)
 2. Extracting the record data from the event arguments
-3. Sending the appropriate HTTP request (`POST` for insert, `PUT` for update, `DELETE` for delete)
+3. Sending the appropriate HTTP request (POST for insert, PUT for update, DELETE for delete)
 4. Calling `endEdit()` to notify the Grid that the operation is complete
 
 Configure the Grid to use the `dataSourceChanged` event handler by adding it as a property:
@@ -693,11 +693,11 @@ export default function App() {
 }
 ```
 
-The `dataSourceChanged` event handler checks the action type from the event arguments to determine whether a create, update, or delete operation is being performed. For insert operations, a `POST` request is sent to the "/tasks" endpoint with the new record data. For update operations, a `PUT` request is sent to "/tasks/{id}" with the modified data. For delete operations, a `DELETE` request is sent to "/tasks/{id}" to remove the record. After each operation completes successfully, the `endEdit()` method is called to notify the Grid that the operation is complete.
+The `dataSourceChanged` event handler checks the action type from the event arguments to determine whether a create, update, or delete operation is being performed. For insert operations, a POST request is sent to the "/tasks" endpoint with the new record data. For update operations, a PUT request is sent to "/tasks/{id}" with the modified data. For delete operations, a DELETE request is sent to "/tasks/{id}" to remove the record. After each operation completes successfully, the `endEdit()` method is called to notify the Grid that the operation is complete.
 
 ### Step 8: Enable Paging
 
-The paging feature divides Grid records into multiple pages, improving performance and usability when handling large datasets. Enable paging by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid#allowpaging) property to `true` and injecting the `Page` module. Customize pager behavior using the [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid#pagesettings) property.
+The paging feature divides Grid records into multiple pages, improving performance and usability when handling large datasets. Enable paging by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid#allowpaging) property to "true" and injecting the `Page` module. Customize pager behavior using the [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid#pagesettings) property.
 
 ```ts
 import { GridComponent, Page, Inject } from '@syncfusion/ej2-react-grids';
@@ -727,7 +727,7 @@ The image illustrates how the page state is passed to the `skip` and `take` prop
 
 ### Step 9: Enable Filtering
 
-The filtering feature enables searching and refining Grid records based on column values. Enable filtering by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) property to `true` and injecting the `Filter` module. Customize filtering options using the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid#filtersettings) property.
+The filtering feature enables searching and refining Grid records based on column values. Enable filtering by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) property to "true" and injecting the `Filter` module. Customize filtering options using the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid#filtersettings) property.
 
 ```ts
 import { GridComponent, Filter, Inject, type FilterSettingsModel } from '@syncfusion/ej2-react-grids';
@@ -780,7 +780,7 @@ The image illustrates how the search state is passed to the `search` property of
 
 ### Step 11: Enable Sorting
 
-The sorting feature allows ordering Grid records by clicking column headers. Enable sorting by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) property to `true` and injecting the `Sort` module.
+The sorting feature allows ordering Grid records by clicking column headers. Enable sorting by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) property to "true" and injecting the `Sort` module.
 
 ```ts
 import { GridComponent, Sort, Inject } from '@syncfusion/ej2-react-grids';

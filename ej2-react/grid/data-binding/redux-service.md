@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Redux service in React Grid Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component provides support for integrating data from a Redux service using the [observable binding](https://ej2.syncfusion.com/react/documentation/grid/data-binding/data-binding#custom-binding) feature. This allows the grid component to connect to the [Redux](https://react-redux.js.org/introduction/getting-started) store and perform various data operations such as sorting, filtering, paging, and CRUD actions. This section explains the process of enabling and integrating the Redux service with the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provides support for integrating data from a Redux service using the [observable binding](https://ej2.syncfusion.com/react/documentation/grid/data-binding/data-binding#custom-binding) feature. This allows the grid component to connect to the [Redux](https://react-redux.js.org/introduction/getting-started) store and perform various data operations such as sorting, filtering, paging, and CRUD actions. This section explains the process of enabling and integrating the Redux service with the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid.
 
 ## Steps to create a Redux service.
 
-**Step 1 : Install Dependencies**
+**Step 1: Install Dependencies**
 
 In a terminal, navigate to the project directory and run the following command to install the required packages:
 
@@ -23,13 +23,13 @@ npm install --save redux react-redux
 ```
 The above command installs the redux package, which is the core Redux library, and the react-redux package, which provides integration between Redux and React.
 
-**Step 2 : Set Up Redux Store**
+**Step 2: Set Up Redux Store**
 
 Once the dependencies are installed, set up a Redux [store](https://redux.js.org/api/store) in the application. Add the following code to the **store.tsx** file.
 
-1. Create a new file called store.tsx in your project's directory.
+1. Create a new file called **store.tsx** in your project's directory.
 
-2. In the store.tsx file, import the necessary Redux functions and create your store:
+2. In the **store.tsx** file, import the necessary Redux functions and create your store:
     ```ts
     import { createStore } from 'redux';
     import reducer from "../reducer";
@@ -40,7 +40,7 @@ Once the dependencies are installed, set up a Redux [store](https://redux.js.org
 
   3. The Redux store is now set up. It can be customized by adding middleware, enhancers, or other configurations as needed.
 
-**Step 3 : Connect Redux Provider**
+**Step 3: Connect Redux Provider**
 
 To make the Redux `store` available to React components, wrap the application with the Redux [Provider](https://react-redux.js.org/api/provider) component. It accepts the Redux `store` as a prop and connects the components in its hierarchy. Follow these steps to connect the Redux provider:
 
@@ -158,6 +158,7 @@ Add the following code to **App.tsx** file.
 To fetch grid data and populate the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasource) property of the grid, the [useEffect](https://react.dev/reference/react/useEffect) hook in React can be used. The `useEffect` hook allows side effects, such as fetching data, to be performed after the component has rendered. The following example demonstrates fetching grid data using useEffect:
 
 Add the following code to the **App.tsx** file.
+
 ```js
   useEffect(() => {
     if (gridInstance) {
@@ -169,8 +170,6 @@ Add the following code to the **App.tsx** file.
 ## Handling Paging, Filtering, and Sorting
 
 The [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datastatechange) event is triggered when performing Grid actions such as sorting, paging, or grouping. The query associated with the Grid action can be obtained in the `dataStateChange` event. The following example shows Redux `action` and `reducer` code for handling data operations. Add the following code to **App.tsx** file.
-
-**App.tsx**
 
 ```ts
   const dataStateChange = (args: DataStateChangeEventArgs) => {
@@ -201,7 +200,7 @@ The `payload` property contains the Grid data associated with the action, such a
 
 The `gridQuery` property is sent along with the data request for each Grid action.
 
-**action.tsx**
+Add the following code to **action.tsx** file. 
 
 ```ts
 export const Grid_Paging = "Grid_Paging";
@@ -238,7 +237,7 @@ The default value for the Grid's `pageSize` parameter (skip: 0, take: 12) is use
 
 Fetch the current page records and the total number of records from the `dataSource` using the properties `result` and `count`. 
 
-**reducer.tsx**
+Add the following code to **reducer.tsx** file. 
 
 ```ts
 const initialPage = { skip: 0, take: 12 }
@@ -304,11 +303,9 @@ export default reducer;
 
 ## Performing CRUD operations
 
-To perform CRUD (Create, Read, Update, Delete) operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component, utilize the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasourcechanged) event. This event is triggered when a CRUD action is performed in the Grid, allowing capture of the changes and updating of the Redux `store` or performing other necessary operations.
+To perform CRUD (Create, Read, Update, Delete) operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component, utilize the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasourcechanged) event. This event is triggered when a CRUD action is performed in the Grid, allowing capture of the changes and updating of the Redux `store` or performing other necessary operations.
 
 The following example shows Redux `action` and `reducer` code for handling CRUD operations. Add the following code to **App.tsx** file.
-
-**App.tsx**
 
 ```ts
   const dataSourceChanged = (state: DataSourceChangedEventArgs) => {
@@ -331,7 +328,7 @@ The following example shows Redux `action` and `reducer` code for handling CRUD 
   }
 ```
 
-**action.tsx**
+Add the following code to **action.tsx** file.
 
 ```ts
 export const Grid_Add = "Grid_Add";
@@ -362,8 +359,7 @@ export const updateRow = (state: any , query: any) => ({
 
 The `insert`, `update` and `delete` methods should be used to add, update, and delete. Then we can fetch the current page records and the total number of records from your `dataSource` using the `result` and `count` formats. 
 
-
-**reducer.tsx**
+Add the following code to **reducer.tsx** file.
 
 ```ts
 const initialPage = { skip: 0, take: 12 }
@@ -438,7 +434,7 @@ const reducer = (state = initialState, action: any) => {
 export default reducer;
 ```
 
-**index.tsx**
+Add the following code to **index.tsx** file.
 
 ```ts
 import React from 'react';

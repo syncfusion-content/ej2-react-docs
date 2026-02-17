@@ -19,7 +19,7 @@ function App() {
   }
   return (<GridComponent dataSource={data} allowPaging={true}
     allowGrouping={true} groupSettings={groupOptions}
-    toolbar={toolbarOptions} editSettings={editOption} height={268}>
+    toolbar={toolbarOptions} editSettings={editOption} height={200}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='120' textAlign='Right' />
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />

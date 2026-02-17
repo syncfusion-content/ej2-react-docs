@@ -39,7 +39,7 @@ function App() {
   }
   return (<div>
     <GridComponent id='Grid' dataSource={details} editSettings={editOptions}
-      toolbar={toolbarOptions} height={315} actionBegin={actionBegin}>
+      toolbar={toolbarOptions} height={268} actionBegin={actionBegin}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' validationRules={orderIDRules} width='100' textAlign="Right" isPrimaryKey={true} />
         <ColumnDirective field='CustomerID' headerText='Employee Name' width='120' />

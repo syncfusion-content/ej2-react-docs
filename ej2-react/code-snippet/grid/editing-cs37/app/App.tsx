@@ -31,7 +31,7 @@ function App() {
     }
   }
   return <GridComponent ref={(g) => grid = g } dataSource={data} editSettings={editOptions}
-    toolbar={toolbarOptions} height={315} actionBegin={actionBegin}>
+    toolbar={toolbarOptions} height={268} actionBegin={actionBegin}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} />
       <ColumnDirective field='CustomerID' validationRules={customerIDRules} headerText='Customer ID' width='120' />

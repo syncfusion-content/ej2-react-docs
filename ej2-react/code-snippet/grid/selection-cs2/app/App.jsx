@@ -25,7 +25,7 @@ function App() {
         <DropDownListComponent index={0} width={150} dataSource={dropdownData} change={valueChange}></DropDownListComponent><br />
         <label style={{ padding: "30px 17px 0 0" }}>Enable/Disable Toggle selection</label>
         <SwitchComponent change={toggleColumnSelection} checked={enableToggle}></SwitchComponent>
-        <GridComponent ref={g => grid = g} dataSource={data} height={315} selectionSettings={selectionSettings}>
+        <GridComponent ref={g => grid = g} dataSource={data} height={240} selectionSettings={selectionSettings}>
             <ColumnsDirective>
                 <ColumnDirective field='OrderID' width='120' textAlign="Right" />
                 <ColumnDirective field='CustomerID' width='150' />

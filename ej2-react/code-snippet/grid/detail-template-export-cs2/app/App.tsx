@@ -214,7 +214,7 @@ function App() {
     <div>
       <GridComponent id="DetailTemplateGrid" ref={(g) => (grid = g)} dataSource={employeeData}
         detailTemplate={gridTemplate} toolbar={toolbar} allowExcelExport={true}
-        toolbarClick={toolbarClick} exportDetailTemplate={exportDetailTemplate} height="315">
+        toolbarClick={toolbarClick} exportDetailTemplate={exportDetailTemplate} height="268">
         <ColumnsDirective>
           <ColumnDirective field="Category" headerText="Category" width="140" />
           <ColumnDirective field="ProductID" headerText="Product ID" width="120"/>

@@ -345,7 +345,7 @@ export default App;
 
 ## Show add new row always in grid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid simplifies record addition by consistently presenting a blank "add new row" form within the grid. To enable this feature, set the [showAddNewRow](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#showaddnewrow) property within the `editSettings` configuration to `true`. This enables continuous record addition. The add new row displays at either the `top` or `bottom` of the grid content, depending on the [newRowPosition](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#newrowposition) property of `editSettings`. By default, the add new row displays at the top of the grid content.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid simplifies record addition by consistently presenting a blank "add new row" form within the grid. To enable this feature, set the [showAddNewRow](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#showaddnewrow) property within the `editSettings` configuration to `true`. This enables continuous record addition. The add new row displays at either the `top` or `bottom` of the grid content, depending on the [newRowPosition](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#newrowposition) property of `editSettings`. By default, the add new row displays at the top of the grid content.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -455,7 +455,7 @@ To achieve this functionality, leverage the [recordDoubleClick](https://ej2.sync
 
 ## Enable editing in single click
 
-Enabling single-click editing in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid's `Normal` editing mode is a valuable and intuitive feature that makes a row editable with just one click. This seamless experience is achieved by using the [startEdit](https://ej2.syncfusion.com/react/documentation/api/grid#startedit) and [endEdit](https://ej2.syncfusion.com/react/documentation/api/grid#endedit) methods for rapid, efficient data modification.
+Enabling single-click editing in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid's `Normal` editing mode is a valuable and intuitive feature that makes a row editable with just one click. This seamless experience is achieved by using the [startEdit](https://ej2.syncfusion.com/react/documentation/api/grid#startedit) and [endEdit](https://ej2.syncfusion.com/react/documentation/api/grid#endedit) methods for rapid, efficient data modification.
 
 To implement this feature, bind the `onMouseUp` React event for the grid and, within the event handler, call the `startEdit` and `endEdit` methods based on the clicked target element. This ensures that the editing mode is triggered when clicking on a specific element within the grid.
 

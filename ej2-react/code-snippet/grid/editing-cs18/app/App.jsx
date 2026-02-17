@@ -34,7 +34,7 @@ function App() {
   return (<div>
     <label style={{ padding: "30px 17px 0 0" }}> Select column to disable editing:</label>
     <DropDownListComponent index={0} width={150} dataSource={alignmentData} fields={dropdownFields} change={changeAlignment}></DropDownListComponent>
-    <GridComponent ref={g => grid = g} dataSource={data} editSettings={editOptions} toolbar={toolbar} height={315} allowPaging={true} pageSettings={pageSettings}>
+    <GridComponent ref={g => grid = g} dataSource={data} editSettings={editOptions} toolbar={toolbar} height={200} allowPaging={true} pageSettings={pageSettings}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} validationRules={orderIDRules} />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' validationRules={customerIDRules} />

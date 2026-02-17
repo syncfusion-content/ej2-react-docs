@@ -2,7 +2,7 @@ import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej
 import { Inject, Page, Toolbar, DetailRow, getPrintGridModel } from '@syncfusion/ej2-react-grids';
 import React, { useEffect, useRef, useState } from 'react';
 import { extend } from '@syncfusion/ej2-base';
-import { employeeData, data, customerData } from './data';
+import { employeeData, data, customerData } from './datasource';
 
 function App() {
     let grid = useRef(null);

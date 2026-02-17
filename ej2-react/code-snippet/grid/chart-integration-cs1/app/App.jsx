@@ -87,7 +87,7 @@ function App() {
 
   return (
     <div>
-      <GridComponent dataSource={salesDatas} height={420} ref={g => grid = g}  created={created}
+      <GridComponent dataSource={salesDatas} height={340} ref={g => grid = g}  created={created}
         contextMenuClick={contextMenuClick}
         allowSelection={true}
         contextMenuItems={[

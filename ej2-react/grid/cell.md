@@ -121,7 +121,7 @@ const change = ((args:ChangeEventArgs) {
 
 ## Autowrap the grid content
 
-The auto wrap feature allows cell content in the grid to wrap to the next line when it exceeds the boundary of the specified cell width. Cell content wrapping works based on the position of white space between words. To support the Autowrap functionality in Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, an appropriate [width](https://ej2.syncfusion.com/react/documentation/api/grid/column#width) must be set for the columns. The column `width` defines the maximum width of a column and helps wrap content automatically.
+The auto wrap feature allows cell content in the grid to wrap to the next line when it exceeds the boundary of the specified cell width. Cell content wrapping works based on the position of white space between words. To support the Autowrap functionality in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, an appropriate [width](https://ej2.syncfusion.com/react/documentation/api/grid/column#width) must be set for the columns. The column `width` defines the maximum width of a column and helps wrap content automatically.
 
 To enable auto wrap, set the [allowTextWrap](https://ej2.syncfusion.com/react/documentation/api/grid#allowtextwrap) property to `true`. The wrap mode can also be configured by setting the [textWrapSettings.wrapMode](https://ej2.syncfusion.com/react/documentation/api/grid/textWrapSettings#wrapmode) property.
 
@@ -277,10 +277,10 @@ function App() {
       <div style={{ padding: '40px 0 0 0' }}>
         <GridComponent dataSource={data} height={315} selectionSettings={selectOptions}>
           <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='OrderID' width='100' textAlign='Right' />
-            <ColumnDirective field='CustomerID' headerText='CustomerID' width='100' />
+            <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign='Right' />
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
             <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign='Right' />
-            <ColumnDirective field='ShipCountry' headerText='ShipCountry' width='140' />
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='140' />
           </ColumnsDirective>
         </GridComponent></div></div>)
 }
@@ -304,10 +304,10 @@ function App() {
       <div style={{ padding: '40px 0 0 0' }}>
         <GridComponent dataSource={data} height={315} selectionSettings={selectOptions}>
           <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='OrderID' width='100' textAlign="Right"/>
-            <ColumnDirective field='CustomerID' headerText='CustomerID' width='100' />
+            <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right"/>
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
             <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign="Right"/>
-            <ColumnDirective field='ShipCountry' headerText='ShipCountry' width='140' />
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='140' />
           </ColumnsDirective>
         </GridComponent></div></div>)
 }
@@ -335,12 +335,12 @@ To customize the style of grid cells, define the [customAttributes](https://ej2.
   color:navy
 }
 ```
-Here, the `customAttributes` property of the "ShipCity" column is set to an object that contains the CSS class "custom-css". This CSS class is applied to all cells in the "ShipCity" column of the grid.
+Here, the `customAttributes` property of the "Ship City" column is set to an object that contains the CSS class "custom-css". This CSS class is applied to all cells in the "Ship City" column of the grid.
 
 ```typescript
     <ColumnDirective field="OrderID" headerText="Order ID" customAttributes={class: 'custom-css'} width="100" textAlign="Right" />
 ```
-The following example demonstrates customizing the appearance of the "OrderID" and "ShipCity" columns using custom attributes. 
+The following example demonstrates customizing the appearance of the "Order ID" and "Ship City" columns using custom attributes. 
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -432,10 +432,10 @@ function App() {
       <div style={{ padding: '40px 0 0 0' }}>
         <GridComponent dataSource={data} height={315} ref={g => grid = g} dataBound={dataBound}>
           <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='OrderID' width='100' textAlign="Right"/>
-            <ColumnDirective field='CustomerID' headerText='CustomerID' width='100' />
+            <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right"/>
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
             <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign="Right"/>
-            <ColumnDirective field='ShipCountry' headerText='ShipCountry' width='140' />
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='140' />
           </ColumnsDirective>
         </GridComponent></div></div>)
 }
@@ -463,10 +463,10 @@ function App() {
       <div style={{ padding: '40px 0 0 0' }}>
         <GridComponent dataSource={data} height={315} ref={g => grid = g} dataBound={dataBound}>
           <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='OrderID' width='100' textAlign="Right"/>
-            <ColumnDirective field='CustomerID' headerText='CustomerID' width='100' />
+            <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right"/>
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
             <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign="Right"/>
-            <ColumnDirective field='ShipCountry' headerText='ShipCountry' width='140' />
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='140' />
           </ColumnsDirective>
         </GridComponent></div></div>)
 }
@@ -587,7 +587,7 @@ export default App;
 
 ## Tooltip
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid displays information about grid columns when the user hovers over them with the mouse.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid displays information about grid columns when the user hovers over them with the mouse.
 
 ### Render bootstrap tooltip in grid cells
 
@@ -640,10 +640,10 @@ function App() {
     <div>
       <GridComponent dataSource={data} height={315}>
         <ColumnsDirective>
-          <ColumnDirective field='OrderID' headerText='OrderID' width='100' textAlign="Right"/>
-          <ColumnDirective field='CustomerID' headerText='CustomerID' width='100' template={customerIDTemplate} />
+          <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right"/>
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' template={customerIDTemplate} />
           <ColumnDirective field='Freight' headerText='Freight' width='100' format='C' textAlign="Right"/>
-          <ColumnDirective field='ShipCountry' headerText='ShipCountry' width='140' />
+          <ColumnDirective field='ShipCountry' headerText='Ship Country' width='140' />
         </ColumnsDirective>
       </GridComponent>
     </div>

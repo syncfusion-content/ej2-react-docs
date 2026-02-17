@@ -11,6 +11,7 @@ domainurl: ##DomainURL##
 # Custom Aggregate in React Grid Component
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports custom aggregate functions for scenarios where built-in options do not meet specific requirements. This allows for tailored logic to compute aggregate values.
+
 To configure a custom aggregate, set the [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn#type) property to "Custom" in the `AggregateColumnDirective` and provide the custom aggregation logic using the [customAggregate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn#customaggregate) property.
 
 The custom aggregate function in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component is executed differently based on the aggregation context:
