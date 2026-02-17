@@ -24,7 +24,7 @@ function App() {
     <ButtonComponent id='loadButton' cssClass='e-outline' onClick={loadData}>Load Data</ButtonComponent>
     <ButtonComponent id='showButton' cssClass='e-outline' style={{ marginLeft: "5px" }} onClick={showhideSpinner}>Show Spinner</ButtonComponent>
     <ButtonComponent id='hideButton' cssClass='e-outline' style={{ marginLeft: "5px" }} onClick={showhideSpinner}>Hide Spinner</ButtonComponent>
-    <GridComponent ref={g => { grid = g }} height='320' allowPaging={true}>
+    <GridComponent ref={g => { grid = g }} height='280' allowPaging={true}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='120' textAlign='Right'></ColumnDirective>
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='160'></ColumnDirective>

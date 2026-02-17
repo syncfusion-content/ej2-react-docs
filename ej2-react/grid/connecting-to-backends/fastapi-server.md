@@ -22,6 +22,17 @@ domainurl: ##DomainURL##
 | Node.js            | 20.x LTS or later   | React tooling and runtime |
 | npm                | 10.x+               | Package manager |
 
+## Key topics
+
+| # | Topics | Link |
+|---|---------|-------|
+| 1 | Configure a FastAPI REST backend that implements the Syncfusion DataManager POST contract | [View](#setting-up-the-fastapi-backend) |
+| 2 | Implement server‑side data operations—including paging, sorting, searching, filtering | [View](#perform-server-side-data-operations) |
+| 3 | Add full CRUD support with insert, update, and delete operations persisted on the server | [View](#perform-server-side-crud-operations) |
+| 4 | Integrate the Syncfusion React Grid with the backend using DataManager and the UrlAdaptor | [View](#integrating-syncfusion-react-grid-with-fastapi) |
+| 5 | Run the FastAPI and React applications locally for development | [View](#running-the-application) |
+| 6 | Explore a complete working sample available on GitHub | [View](#complete-sample-repository) |
+
 ## Setting up the FastAPI backend
 
 The FastAPI backend serves as the central data service for the React Grid. It receives every grid action through a single transport contract, performs validation and server‑side processing, and returns compact JSON responses that the Grid can render immediately.
@@ -59,7 +70,7 @@ The backend workspace has been successfully initialized, and the core runtime is
 
 ### Step 2: Create sample datasource 
 
-This step initializes the application with a dataset. Create a new file named "server/products_data.json" and paste the following JSON. This file will be used by the API to load and persist product data:
+This step initializes the application with a dataset. Create a new file named **server/products_data.json** and paste the following JSON. This file will be used by the API to load and persist product data:
 
 ```json
 [
@@ -729,16 +740,16 @@ Open **client/src/index.css** file and import the "Bootstrap v5.3" theme along w
 
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';  
-@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';  
-@import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';  
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';  
-@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';  
-@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-react-grids/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/bootstrap5.3.css';  
+@import '../node_modules/@syncfusion/ej2-buttons/styles/bootstrap5.3.css';  
+@import '../node_modules/@syncfusion/ej2-calendars/styles/bootstrap5.3.css';  
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/bootstrap5.3.css';  
+@import '../node_modules/@syncfusion/ej2-inputs/styles/bootstrap5.3.css';  
+@import '../node_modules/@syncfusion/ej2-navigations/styles/bootstrap5.3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/bootstrap5.3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/bootstrap5.3.css';
+@import '../node_modules/@syncfusion/ej2-notifications/styles/bootstrap5.3.css';
+@import '../node_modules/@syncfusion/ej2-react-grids/styles/bootstrap5.3.css';
 ```
 
 For this project, the "Bootstrap v5.3" theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation to learn more about theming and customization options.
@@ -800,7 +811,7 @@ export default function App() {
 ```
 
 **Explanations:**
-- The DataManager converts Grid actions—such as paging, filtering, sorting, searching, and editing—into a single POST request directed to the /"products/" endpoint.
+- The DataManager converts Grid actions—such as paging, filtering, sorting, searching, and editing—into a single POST request directed to the "/products" endpoint.
 - The injected services enable features like Page, Sort, Filter, Edit, and Toolbar on the client, while the server performs the corresponding operations.
 - A primary key is enabled for the "ID" column to support CRUD operations, and this configuration is mandatory.
 
@@ -809,7 +820,7 @@ The Grid client is now ready, and every interaction flows seamlessly to the Fast
 
 ### Step 4: Enable paging feature
 
-The paging feature allows efficient loading of large data sets through on‑demand loading. Paging in the Grid is enabled by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowpaging) property to "true" and injecting the `Page` module. This sends parameters to fetch only the data required for the current viewport.
+The paging feature allows efficient loading of large data sets through on‑demand loading. Paging in the Grid is enabled by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowpaging) property to `true` and injecting the `Page` module. This sends parameters to fetch only the data required for the current viewport.
 
 ```ts
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page } from '@syncfusion/ej2-react-grids';
@@ -832,7 +843,7 @@ The image illustrates the paging details (`skip` and `take`) included in the ser
 
 ### Step 5: Enable sorting feature
 
-The sorting feature in the Grid allows users to organize records in ascending or descending order based on one or more columns. The sorting feature in the Grid is enabled by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to "true" and injecting the `Sort` module.
+The sorting feature in the Grid allows users to organize records in ascending or descending order based on one or more columns. The sorting feature in the Grid is enabled by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to `true` and injecting the `Sort` module.
 
 ```ts
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Sort } from '@syncfusion/ej2-react-grids';
@@ -849,7 +860,7 @@ import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Sort } from '
 
 **Sorting details included in request payload:**
 
-The image below shows the values passed to the "sorted" parameter.
+The image below shows the values passed to the `sorted` parameter.
 
 ![FastAPI-Sorting](../images/FastAPI-Sorting.png)
 
@@ -868,13 +879,13 @@ import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Toolbar } fro
 
 **Searching details included in request payload:**
 
-The image below displays the "search" parameter values.
+The image below displays the `search` parameter values.
 
 ![FastAPI-Searching](../images/FastAPI-Searching.png)
 
 ### Step 7: Enable filtering feature
 
-The Grid supports filtering through a menu interface that restricts data based on column values. Filtering is enabled by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowfiltering) property to "true" and injecting the `Filter` module.
+The Grid supports filtering through a menu interface that restricts data based on column values. Filtering is enabled by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowfiltering) property to `true` and injecting the `Filter` module.
 
 ```ts
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Filter } from '@syncfusion/ej2-react-grids';
@@ -893,7 +904,7 @@ const filterSettings: FilterSettingsModel = { type: 'Excel' };
 
 **Filtering details included in request payload:**
 
-The image illustrates the serialized "where" condition passed from the DataManager.
+The image illustrates the serialized `where` condition passed from the DataManager.
 
 ![FastAPI-Filtering](../images/FastAPI-Filtering.png)
 
@@ -901,7 +912,7 @@ The image illustrates the serialized "where" condition passed from the DataManag
 
 CRUD operations allow users to add new products, modify existing records, and remove items that are no longer relevant. The DataManager posts a specific action for each operation so that the server can route to the appropriate handler.
 
-Editing operations in the Grid are enabled through configuring the [Edit Settings](https://ej2.syncfusion.com/react/documentation/api/grid#editsettings) properties ([allowEditing](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#allowediting), [allowAdding](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#allowadding), and [allowDeleting](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#allowdeleting)) to "true" and injecting the `Edit` module.
+Editing operations in the Grid are enabled through configuring the [Edit Settings](https://ej2.syncfusion.com/react/documentation/api/grid#editsettings) properties ([allowEditing](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#allowediting), [allowAdding](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#allowadding), and [allowDeleting](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#allowdeleting)) to `true` and injecting the `Edit` module.
 
 ```ts
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Edit, Toolbar, EditSettingsModel } from '@syncfusion/ej2-react-grids';
@@ -961,16 +972,7 @@ Open the URL shown in the terminal which is typically http://localhost:5173/.
 
 ## Complete Sample Repository
 
-For a complete working implementation of this example, refer to the following GitHub repository.
-
-[Syncfusion Grid with FastAPI Sample](https://github.com/SyncfusionExamples/syncfusion-react-grid-with-fastapi-server)
-
-## Summary
-
-1. Configured a FastAPI REST backend that implements the Syncfusion DataManager POST contract. [🔗](#setting-up-the-fastapi-backend)
-2. Implemented server‑side data operations—including paging, sorting, searching, filtering, and selecting—via dedicated helper pipelines. [🔗](#perform-data-operations)
-3. Added full CRUD support with insert, update, and delete operations persisted on the server. [🔗](#perform-crud-operations)
-4. Integrated the Syncfusion React Grid with the backend using DataManager and the UrlAdaptor. [🔗](#integrating-syncfusion-react-grid-with-fastapi)
+For a complete working implementation of this example, refer to the following [GitHub](https://github.com/SyncfusionExamples/syncfusion-react-grid-with-fastapi-server) repository.
 
 The application demonstrates a complete product management workflow with a Syncfusion React Grid connected to a Python FastAPI REST backend through a single, predictable transport.
 

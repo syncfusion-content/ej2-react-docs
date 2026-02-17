@@ -12,7 +12,7 @@ function App() {
     grid.refreshColumns();
   }
   return (<div> <ButtonComponent onClick={addColumn}>Add Columns</ButtonComponent>
-    <GridComponent id="Grid" dataSource={data} allowPaging={true} enablePersistence={true} height={315}
+    <GridComponent id="Grid" dataSource={data} allowPaging={true} enablePersistence={true} height={280}
       ref={g => grid = g}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />

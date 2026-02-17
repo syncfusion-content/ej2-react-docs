@@ -92,17 +92,17 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> React controls include [built-i
 Import the required CSS files from the **node_modules** directory. For example, to use the "Material 3" theme, add the following imports to the **src/App.css** file.
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-react-grids/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-grid-chart/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-notifications/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-react-grids/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-grid-chart/styles/material3.css';
 
 ```
 
@@ -114,7 +114,7 @@ For example, in a sales dashboard, selecting records for specific products can d
 
 Steps to integrate a chart into the grid via the context menu:
 
-**Step 1: Inject required modules:**
+**Step 1. Inject required modules:**
 
 Import the required modules from the `Grid`, `GridChart`, and `Chart` packages, then inject the `ContextMenu` module into the grid:
 
@@ -223,9 +223,9 @@ Use the [contextMenuClick](https://ej2.syncfusion.com/react/documentation/api/gr
 
 The `contextMenuClick` event provides the following arguments:
 
-  * `args.chartType`: selected chart type.
-  * `args.gridInstance`: current grid instance.
-  * `args.records`: selected data records to visualize.
+  * `args.chartType`: Selected chart type.
+  * `args.gridInstance`: Current grid instance.
+  * `args.records`: Selected data records to visualize.
 
 The `gridChart.render` method accepts three arguments:
 
@@ -374,10 +374,10 @@ When enabled, the property panel appears alongside the chart popup and offers th
 
   * **Title Style** 
 
-    * **Legend** - Toggle the visibility of the legend and customize its font, size, color, and position.
-    * **Series** - Enable/disable tooltips and customize [Series](https://ej2.syncfusion.com/react/documentation/api/chart/series) color and data labels based on categories such as online, retail, or revenue.
+    * **Legend:** Toggle the visibility of the legend and customize its font, size, color, and position.
+    * **Series:** Enable/disable tooltips and customize [Series](https://ej2.syncfusion.com/react/documentation/api/chart/series) color and data labels based on categories such as online, retail, or revenue.
 
-  * **Axes:** - Select axes as either category or value type, and customize:
+  * **Axes:** Select axes as either category or value type, and customize:
 
     * Reverse Order to change the data sequence.
     * **Title:** Adjust text, font, size, color, and rotation.

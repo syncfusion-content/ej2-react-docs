@@ -15,7 +15,7 @@ function App() {
     )
   }
   return (<div>
-    <GridComponent dataSource={data} editSettings={editOptions} toolbar={toolbar} height={315}>
+    <GridComponent dataSource={data} editSettings={editOptions} toolbar={toolbar} height={268}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} validationRules={orderIDRules} />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' validationRules={customerIDRules} />

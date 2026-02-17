@@ -93,7 +93,7 @@ const dataBound = () => {
 
 Auto-generated columns can be customized to meet specific requirements by modifying properties such as `type`, `format`, and `width`. These changes are applied within the `dataBound` event. The event is triggered after data has been loaded into the Grid, ensuring that all columns are created and available. At this point, the necessary options for the auto-generated columns can be configured.
 
-In the below example, `width` is set for the "OrderID" column, `type` is set for the "OrderDate" column and `format` is set for the "Freight" and "OrderDate" columns.
+In the below example, `width` is set for the "OrderID" column, `type` is set for the "Order Date" column and `format` is set for the "Freight" and "Order Date" columns.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -128,7 +128,7 @@ To implement `valueAccessor`, define a function for the column that returns the 
 **Example:**
 
 * **Currency Formatting**: A function like "currencyFormatter" can take the "Freight" value from the data object, append a Euro(€) symbol, and return a formatted string such as "€100".
-* **Combining Fields**: A function such as "concatenateFields" can merge the "ShipCity" and "ShipRegion" fields into a single string like "Berlin, BE".
+* **Combining Fields**: A function such as "concatenateFields" can merge the "Ship City" and "Ship Region" fields into a single string like "Berlin, BE".
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

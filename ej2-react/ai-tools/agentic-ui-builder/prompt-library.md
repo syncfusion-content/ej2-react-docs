@@ -91,7 +91,7 @@ The Component Tool implements specific Syncfusion React components with configur
 
 ### Styling Tool
 
-The Styling Tool applies custom themes, color schemes, and visual treatments across your application. Use #sf_react_style for branding and aesthetic customization.
+The Styling Tool applies custom themes, color schemes, visual treatments, and iconography across your application. Use #sf_react_style for branding, aesthetic customization, and icon integration.
 
 {% promptcards %}
 {% promptcard Tailwind3 Dark Mode Setup %}
@@ -106,24 +106,14 @@ The Styling Tool applies custom themes, color schemes, and visual treatments acr
 {% promptcard Material3 CSS Variables %}
 #sf_react_style Configure the Syncfusion Material 3 theme CSS variables for a custom color palette, elevation shadows, border radius, and component-specific styling properties.
 {% endpromptcard %}
-{% endpromptcards %}
-
-### Icon Tool
-
-The Icon Tool identifies and implements appropriate iconography from Syncfusion's icon library. Use #sf_react_icon to enhance visual communication and user interface clarity.
-
-{% promptcards %}
 {% promptcard User Actions & Navigation %}
-#sf_react_icon Add appropriate icons for common user interactions in the application toolbar, including editing capabilities, navigation controls, and accessing various options.
+#sf_react_style Add appropriate icons for common user interactions in the application toolbar, including editing capabilities, navigation controls, and accessing various options.
 {% endpromptcard %}
 {% promptcard Content Editor Toolbar %}
-#sf_react_icon Implement icons for text formatting operations, table manipulation, and image editing tools in the Rich Text Editor.
-{% endpromptcard %}
-{% promptcard Analytics Dashboard %}
-#sf_react_icon Update icons for data visualization elements, chart representations, and trend indicators in the analytics dashboard.
+#sf_react_style Implement icons for text formatting operations, table manipulation, and image editing tools in the Rich Text Editor.
 {% endpromptcard %}
 {% promptcard Document Management %}
-#sf_react_icon Find icons for file operations, document processing, printing capabilities, and export functionality in the File Manager toolbar.
+#sf_react_style Find icons for file operations, document processing, printing capabilities, and export functionality in the File Manager toolbar.
 {% endpromptcard %}
 {% endpromptcards %}
 

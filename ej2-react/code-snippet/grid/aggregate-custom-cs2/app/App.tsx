@@ -12,7 +12,7 @@ function App() {
     const distinct = DataUtil.distinct(data, 'ShipCountry', true);
     return distinct.length;
   };
-  return (<GridComponent dataSource={data} height={268}>
+  return (<GridComponent dataSource={data} height={260}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />

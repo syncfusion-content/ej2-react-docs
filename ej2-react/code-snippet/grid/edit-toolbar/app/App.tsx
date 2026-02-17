@@ -45,7 +45,7 @@ function App() {
       </ToolbarComponent>
     </div>
     <GridComponent id='Grid' ref={g => grid = g} dataSource={data} editSettings={editOptions}
-      height={315} allowPaging={true} pageSettings={pageSettings}>
+      height={268} allowPaging={true} pageSettings={pageSettings}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' validationRules={orderIDRules} width='100' textAlign="Right" isPrimaryKey={true} />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' validationRules={customerIDRules} />

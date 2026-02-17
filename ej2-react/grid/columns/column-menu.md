@@ -153,7 +153,7 @@ The column menu icon in Grid can be changed by overriding the default CSS class 
 2. Import the required icon stylesheets (material or bootstrap5 style):
 
 ```html
-<link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/tailwind3.css" rel="stylesheet" />
+<link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/material3.css" rel="stylesheet" />
 <link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/bootstrap5.css" rel="stylesheet" />
 ```
 

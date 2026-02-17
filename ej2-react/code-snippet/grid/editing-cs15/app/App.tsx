@@ -59,7 +59,7 @@ function App() {
     return (strm as string);
   }
 
-  return <GridComponent dataSource={employeeData} editSettings={editOptions} allowPaging={true} toolbar={toolbarOptions} height={265} actionBegin={actionBegin}>
+  return <GridComponent dataSource={employeeData} editSettings={editOptions} allowPaging={true} toolbar={toolbarOptions} height={260} actionBegin={actionBegin}>
     <ColumnsDirective>
       <ColumnDirective field='EmployeeID' headerText='EmployeeID' width='100' textAlign="Right" isPrimaryKey={true} />
       <ColumnDirective field='FirstName' headerText='First Name' width='120' />

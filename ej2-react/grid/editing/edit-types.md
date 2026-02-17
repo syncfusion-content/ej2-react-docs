@@ -152,7 +152,7 @@ The following sample code demonstrates the customization applied to `DropDownLis
 
 ### Provide custom data source for DropDownList editor
 
-In Syncfusion's Grid component, provide a custom data source for the [DropDownList](../../drop-down-list/getting-started) component in the edit form. This feature allows definition of a specific set of values for the DropDownList.
+In Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component, provide a custom data source for the [DropDownList](../../drop-down-list/getting-started) component in the edit form. This feature allows definition of a specific set of values for the DropDownList.
 
 To achieve this, utilize the [columns->edit->params](https://ej2.syncfusion.com/react/documentation/api/grid/column#edit) property. This property allows definition of the edit params for the column within the grid.
 
@@ -617,7 +617,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid allows rendering
 
 Set the [allowTextWrap](https://ej2.syncfusion.com/react/documentation/api/grid#allowtextwrap) property of the corresponding grid column to `true` to allow the rich text editor component to automatically adjust its width and wrap text content to fit within column boundaries.
 
-The following example demonstrates rendering a `RichTextEditor` component in the "ShipAddress" column of the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid. The `actionBegin` event is handled to update the edited value in the grid when the save button is clicked:
+The following example demonstrates rendering a `RichTextEditor` component in the "Ship Address" column of the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid. The `actionBegin` event is handled to update the edited value in the grid when the save button is clicked:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -708,7 +708,7 @@ The following example demonstrates how to render a `Autocomplete` in the "Custom
 
 ### Render cascading DropDownList in edit form 
 
-The Syncfusion React Grid allows rendering the cascading [DropDownList](../../drop-down-list/getting-started) within the edit form by using the cell edit template feature. This feature is especially useful for establishing a hierarchy of options, such as choosing a country and then selecting a state based on the chosen country.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid allows rendering the cascading [DropDownList](../../drop-down-list/getting-started) within the edit form by using the cell edit template feature. This feature is especially useful for establishing a hierarchy of options, such as choosing a country and then selecting a state based on the chosen country.
 
 Define the cell edit template for the column using the [edit](https://ej2.syncfusion.com/react/documentation/api/grid/column#edit) property. This property specifies the necessary functions for creating, reading, and writing the cascading DropDownList.
 

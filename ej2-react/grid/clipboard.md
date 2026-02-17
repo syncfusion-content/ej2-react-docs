@@ -40,7 +40,7 @@ Examples below show grid configuration for clipboard operations. Configure the g
 
 Copying data using external buttons enables programmatic triggering of the copy operation, which can improve accessibility compared with only supporting keyboard shortcuts.
 
-Use the grid's [`copy`](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#copy) method to copy selected rows or cells via external controls.
+Use the grid's [copy](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#copy) method to copy selected rows or cells via external controls.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

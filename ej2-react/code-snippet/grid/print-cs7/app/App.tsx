@@ -34,9 +34,9 @@ function MasterDetail() {
                     </ColumnsDirective>
                     <Inject services={[Selection, Toolbar, Print]} />
                 </GridComponent>
-
+                <br/>
                 <div className='e-statustext'> Showing orders of Customer:  <b></b></div>
-
+                <br/>
                 <GridComponent allowSelection={false} ref={grid => detailGrid = grid}>
                     <ColumnsDirective>
                         <ColumnDirective field='OrderID' headerText='Order ID' width='100' ></ColumnDirective>

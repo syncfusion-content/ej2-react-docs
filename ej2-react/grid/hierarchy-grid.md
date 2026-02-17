@@ -55,9 +55,9 @@ The following example demonstrates how to enable the hierarchy feature in grid, 
 ## Mapping Parent-Child Grids with different field names
 By default, the Grid uses the same field name in both the parent and child grids to establish a hierarchical relationship through the [queryString](https://ej2.syncfusion.com/react/documentation/api/grid#querystring) property. However, it also supports scenarios where the parent and child data sources use different key fields.
 
-When the parent and child data sources use different key fields, this relationship can still be configured by handling the child grid's [load](https://ej2.syncfusion.com/react/documentation/api/grid#load) event. In this event, the required value (e.g., EmployeeID) can be retrieved from `parentDetails.parentRowData` and dynamically assigned to the appropriate field in the child grid's query. This approach enables flexible hierarchical binding even when the key fields differ between parent and child grids.
+When the parent and child data sources use different key fields, this relationship can still be configured by handling the child grid's [load](https://ej2.syncfusion.com/react/documentation/api/grid#load) event. In this event, the required value (e.g., Employee ID) can be retrieved from `parentDetails.parentRowData` and dynamically assigned to the appropriate field in the child grid's query. This approach enables flexible hierarchical binding even when the key fields differ between parent and child grids.
 
-In the following example, the `load` event is used to customize the mapping value for the child grid. The `parentDetails` property provides access to the parent row's data, including the `parentKeyFieldValue`, which can be used to set the appropriate mapping field. By referencing the "EmployeeID" field from the `parentRowData`, the corresponding value is extracted and applied to construct the query for the child grid.
+In the following example, the `load` event is used to customize the mapping value for the child grid. The `parentDetails` property provides access to the parent row's data, including the `parentKeyFieldValue`, which can be used to set the appropriate mapping field. By referencing the "Employee ID" field from the `parentRowData`, the corresponding value is extracted and applied to construct the query for the child grid.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -152,9 +152,10 @@ To achieve this, use the [load](https://ej2.syncfusion.com/react/documentation/a
 {% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid-cs4" %}
 
 ## Dynamic data binding in Child Grids using parent row values
+
 A child grid can be bound dynamically to display data that corresponds to its parent row. Instead of relying on the `queryString` property, this can be handled through the  [detailDataBound](https://ej2.syncfusion.com/react/documentation/api/grid#detaildatabound) event, which is triggered whenever a child grid expands.
 
-Within the `detailDataBound` event, the child grid’s dataSource is filtered based on the parent row’s "Employee ID". The `DataManager` is used to apply the filter, and the filtered result is then assigned to the child grid’s dataSource. This ensures that each child grid shows only the records related to its parent, creating a contextual and flexible hierarchical display.
+Within the `detailDataBound` event, the child grid’s [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasource) is filtered based on the parent row’s "Employee ID". The `DataManager` is used to apply the filter, and the filtered result is then assigned to the child grid’s `dataSource`. This ensures that each child grid shows only the records related to its parent, creating a contextual and flexible hierarchical display.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -177,7 +178,7 @@ Within the `detailDataBound` event, the child grid’s dataSource is filtered ba
 
 Adding a record to a child grid allows additional data to be maintained for the corresponding parent row. To preserve the parent–child relationship, the appropriate `queryString` value must be included in the new record.
 
-This is accomplished through the grid's [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid#actionbegin) event. In the example, the parent and child grids are related by "EmployeeID", so the child record's "EmployeeID" is assigned the parent row's `queryString` value using the `actionBegin` event to ensure relational consistency.
+This is accomplished through the grid's [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid#actionbegin) event. In the example, the parent and child grids are related by "Employee ID", so the child record's "Employee ID" is assigned the parent row's `queryString` value using the `actionBegin` event to ensure relational consistency.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

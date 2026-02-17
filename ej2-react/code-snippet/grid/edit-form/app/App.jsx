@@ -78,12 +78,12 @@ function App() {
     </div>
     <div className="col-xs-6 col-md-9">
       <GridComponent id='Grid' ref={g => grid = g} dataSource={data} editSettings={editOptions}
-        height={315} rowSelected={rowSelected}>
+        height={315} rowSelected={rowSelected} width={830}>
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} />
           <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
           <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
-          <ColumnDirective field='ShipCountry' headerText='Order Date' width='150' />
+          <ColumnDirective field='ShipCountry' headerText='ShipCountry' width='150' />
         </ColumnsDirective>
         <Inject services={[Edit, Toolbar, ForeignKey]} />
       </GridComponent></div ></div>)

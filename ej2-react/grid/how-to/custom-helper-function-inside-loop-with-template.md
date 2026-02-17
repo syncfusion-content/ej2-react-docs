@@ -17,21 +17,21 @@ In the "Customer Rating" column, a custom template loops through the item array 
 ```css
 .e-grid .rating .star:before {
     content: '★';
+}
+
+.e-grid .rating .star {
+    font-size: 132%;
+    color: lightgrey;
+}
+```
+
+Classes are assigned conditionally based on the "isRatingGreater" helper method, which highlights selected stars using:
+
+```css
+.e-grid .rating .star.checked {
+    color: #ffa600;
     }
-
-    .e-grid .rating .star {
-        font-size: 132%;
-            color: lightgrey;
-            }
-            ```
-
-            Classes are assigned conditionally based on the "isRatingGreater" helper method, which highlights selected stars using:
-
-            ```css
-            .e-grid .rating .star.checked {
-                color: #ffa600;
-                }
-                ```
+```
 
 The example below demonstrates the complete implementation.
 

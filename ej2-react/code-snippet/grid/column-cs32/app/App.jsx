@@ -38,7 +38,7 @@ function App() {
   return (<div><p id='message'>{message}</p>
     <ButtonComponent onClick={saveBtn}>Save column settings</ButtonComponent>
     <ButtonComponent onClick={restoreBtn}>Restore column settings</ButtonComponent>
-    <GridComponent id='Orders' dataSource={data} allowFiltering={true} allowPaging={true} enablePersistence={true} height={230}
+    <GridComponent id='Orders' dataSource={data} allowFiltering={true} allowPaging={true} enablePersistence={true} height={220}
       ref={g => grid = g}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />

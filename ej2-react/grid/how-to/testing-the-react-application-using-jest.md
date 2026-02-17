@@ -14,15 +14,15 @@ domainurl: ##DomainURL##
 
 Step 1: Set up the Jest testing environment
 
-1. Check and install the node version:
+- Check and install the node version:
 
 Ensure that node version 14 or higher is installed. If not, install a supported version from the official [Node.js website](https://nodejs.org/en/download).
 
-2. Create a React application and install the Grid package:
+- Create a React application and install the Grid package:
 
 Follow the [Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid Getting Started](https://ej2.syncfusion.com/react/documentation/grid/getting-started) guide to create a React app and install the required Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid package.
 
-3. Install Jest:
+- Install Jest:
 
 Jest is typically included by default in React apps created with Create React App. If not present in `package.json`, install it using npm:
 
@@ -30,7 +30,7 @@ Jest is typically included by default in React apps created with Create React Ap
 npm install --save-dev jest
 ```
 
-4. Install the testing library package:
+- Install the testing library package:
 
 Run the following command to install the DOM testing utilities provided by testing library:
 
@@ -75,7 +75,7 @@ import { render } from '@testing-library/react';
 import App from './App';
 ```
 
-1. Define test suite:
+- Define test suite:
 
 The `describe` block groups related test cases. If a component relies on browser APIs like `window.crypto` or `window.crypto.getRandomValues`, mock them in a `beforeEach` block:
 
@@ -84,11 +84,11 @@ window.crypto = jest.fn() as any;
 window.crypto.getRandomValues = jest.fn();
 ```
 
-2. Types of testing:
+- Types of testing:
 
 Test case types are added in an `it` block.
 
-1. Snapshot testing:
+a. Snapshot testing:
 
 Snapshot testing captures the rendered output of a component and compares it to a saved version to detect unexpected changes. If the current output matches the stored snapshot, the test case will be passed successfully.
 
@@ -104,7 +104,7 @@ it('Snapshot testing', () => {
 ```
 ![Snapshot Testing](../images/snapshot_testing.png)
 
-2. DOM testing:
+b. DOM testing:
 
 The **DOM** testing involves testing the behavior and interactions of React components. The goal is to ensure that components function correctly and produce the expected output when interacting with the DOM. Libraries such as **react-testing-library**, `Enzyme`, or **React's TestUtils** manipulate the rendered component in DOM testing.
 

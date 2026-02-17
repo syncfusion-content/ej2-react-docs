@@ -103,7 +103,7 @@ In order to utilize custom aggregation, specify the [type](https://ej2.syncfusio
 
 Within the `customAggregate` function, the argument contains the data that has a result property. The function calculates the count of objects in this data where the "Ship Country" field value is equal to "Brazil" and returns the count with a descriptive label.
 
-The following example shows exporting the grid with a custom aggregate that shows the calculation of the Brazil count of the "Ship Country" column:
+The following example shows exporting the grid with a custom aggregate that shows the calculation of the "Brazil" count of the "Ship Country" column:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

@@ -62,7 +62,7 @@ function App() {
   }
   
   return (
-    <GridComponent id='Grid' dataSource={data} toolbar={toolbar} allowExcelExport={true} toolbarClick={toolbarClick} excelExportComplete={excelExportComplete} ref={g => grid = g} height={315}>
+    <GridComponent id='Grid' dataSource={data} toolbar={toolbar} allowExcelExport={true} toolbarClick={toolbarClick} excelExportComplete={excelExportComplete} ref={g => grid = g} height={260}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
         <ColumnDirective headerText='Order Details' columns={orderColumns} textAlign="Center" width='150' />

@@ -290,7 +290,7 @@ For more details about loading culture files and working with globalization in S
 
 Template columns in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid enable customization of column value appearance through HTML templates. Number formatting can also be applied within template columns to control the display of values. To format values in a column template, use the React pipes and the `format` property.
 
-In this example, the date pipe formats the "OrderDate" value as a date in the format "dd/MMM/yyyy".
+In this example, the date pipe formats the "Order Date" value as a date in the format "dd/MMM/yyyy".
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -344,7 +344,7 @@ The custom format specifiers listed in the table below can be used to create cus
 | ;         | Separates formats for positive, negative, and zero. | `{ format: '###.##;(###.00);-0' }` | (120.00) |
 | 'String' (single Quotes)  | Displays literal text in output. | `{ format: "####.## '@'" }` | 123.44 @ |
 
-In the below example, the "numberFormatOptions" object is used as the `format` property for the "Freight" column to apply a custom numeric format with four decimal places. Similarly, the "dateFormatOptions" object is used as the `format` property for the "OrderDate" column to apply a custom date format displaying the date in the format of day-of-the-week, month abbreviation, day, and 2-digit year (e.g. Sun, May 8, ‘23).
+In the below example, the "numberFormatOptions" object is used as the `format` property for the "Freight" column to apply a custom numeric format with four decimal places. Similarly, the "dateFormatOptions" object is used as the `format` property for the "Order Date" column to apply a custom date format displaying the date in the format of day-of-the-week, month abbreviation, day, and 2-digit year (e.g. Sun, May 8, ‘23).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -576,7 +576,7 @@ Column visibility in the Syncfusion<sup style="font-size:70%">&reg;</sup> React 
 
 The [visible](https://ej2.syncfusion.com/react/documentation/api/grid/column#visible) property controls whether columns appear in the React Grid. Setting this property to `true` shows the column, while `false` hides it.
 
-In the below example, the "ShipCity" column is defined with `visible` property set to `false`, which will hide the column in the rendered grid.
+In the below example, the "Ship City" column is defined with `visible` property set to `false`, which will hide the column in the rendered grid.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

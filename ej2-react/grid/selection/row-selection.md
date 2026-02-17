@@ -240,7 +240,7 @@ export default App;
 
 ## Multiple row selection by single click 
 
-The Grid component allows multiple row selection by simply clicking on rows one by one without pressing CTRL or SHIFT keys. When clicking on a row, it becomes selected, and clicking on another row adds it to the selection without deselecting the previously selected rows. To deselect a previously selected row, click on the row again.
+The Grid component allows multiple row selection by simply clicking on rows one by one without pressing <kbd>CTRL</kbd> or <kbd>SHIFT</kbd> keys. When clicking on a row, it becomes selected, and clicking on another row adds it to the selection without deselecting the previously selected rows. To deselect a previously selected row, click on the row again.
 
 To configure simple multiple row selection, set the [selectionSettings.enableSimpleMultiRowSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#enablesimplemultirowselection) property to `true`. 
 

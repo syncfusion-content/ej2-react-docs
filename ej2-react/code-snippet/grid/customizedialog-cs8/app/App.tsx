@@ -66,7 +66,7 @@ function App() {
     }
   }
   return <GridComponent ref={g => grid = g} dataSource={data} keyPressed={keyPressed} allowGrouping={true}
-    editSettings={editOptions} toolbar={toolbarOptions} height={315} selectionSettings={selectionSettings}>
+    editSettings={editOptions} toolbar={toolbarOptions} height={265} selectionSettings={selectionSettings}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} />
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />

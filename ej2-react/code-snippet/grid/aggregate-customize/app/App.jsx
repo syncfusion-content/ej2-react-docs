@@ -9,7 +9,7 @@ function App() {
     const style = { color: value > 1000 ? 'green' : 'red' }; 
     return <span style={style}>Total Freight: ${value.toFixed(2)}</span>;
   };
-  return (<GridComponent dataSource={data} allowPaging={true} height={268}>
+  return (<GridComponent dataSource={data} allowPaging={true} height={260}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />

@@ -21,7 +21,7 @@ function App() {
     <div>
       <label style={{ padding: "30px 17px 0 0" }}>Enter file name: </label>
       <TextBoxComponent ref={t => textBox = t} placeholder="Enter file name" width="120"></TextBoxComponent>
-      <GridComponent id='Grid' dataSource={data} height={270} toolbar={toolbar}
+      <GridComponent id='Grid' dataSource={data} height={250} toolbar={toolbar}
         allowExcelExport={true} toolbarClick={toolbarClick} ref={g => grid = g}>
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />

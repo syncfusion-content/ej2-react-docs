@@ -29,7 +29,7 @@ To export grid data to a PDF document on the server side, perform the following 
 
 2. Define a controller action that handles server-side PDF export. This action receives Grid properties from the client-side and initiates the PDF export operation on the server.
 
-3. Use the `serverPdfExport` method to pass Grid properties to the server exporting action. This method specifies the server action URL and other export options.
+3. Use the [serverPdfExport](https://ej2.syncfusion.com/react/documentation/api/grid#serverpdfexport) method to pass Grid properties to the server exporting action. This method specifies the server action URL and other export options.
 
 The following code snippet shows server configuration using ASP.NET Core Controller Action.
 
@@ -103,7 +103,7 @@ export default App;
 
 ## Export grid as memory stream
 
-The Grid provides the ability to export data as a memory stream instead of downloading it as a file in the browser. To obtain the memory stream of the exported Grid, set the `AsMemoryStream` parameter to `true` in the `PdfExport` method.
+The Grid provides the ability to export data as a memory stream instead of downloading it as a file in the browser. To obtain the memory stream of the exported Grid, set the `AsMemoryStream` parameter to `true` in the [PdfExport](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#pdfexport) method.
 
 The following code demonstrates getting the memory stream of exported grid.
 
@@ -248,7 +248,7 @@ public ActionResult PdfExport(string gridModel)
 
 The Grid provides the ability to rotate the header text while exporting the grid on the server side.
 
-1. The server-side event `PdfHeaderQueryCellInfo` is triggered when creating a column header for the PDF document to be exported. In this event, column header details can be collected and customizations can be handled.
+1. The server-side event [PdfHeaderQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#pdfheaderquerycellinfo) is triggered when creating a column header for the PDF document to be exported. In this event, column header details can be collected and customizations can be handled.
 
 2. In the `BeginCellLayout` event handler, the `Graphics.DrawString` method can be used to rotate the header text to the desired degree. This event is triggered when creating a column header for the PDF document to be exported, and column header details are collected in this event with custom handling done in the `BeginCellLayout` event handler.
 

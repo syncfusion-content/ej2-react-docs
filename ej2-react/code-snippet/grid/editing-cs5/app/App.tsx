@@ -23,13 +23,13 @@ function App() {
     setEnableShowConfirmDialog((grid as GridComponent).editSettings.showConfirmDialog = !enableShowConfirmDialog);
   }
   const toolbarOptions: ToolbarItems[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
-  return (<div><div style={{ padding: "20px" }}>
+  return (<div><div style={{ padding: "5px" }}>
     <label>Enable/Disable show confirmation dialog</label>
     <SwitchComponent checked={enableShowConfirmDialog} change={toggleShowConfirmDialog}></SwitchComponent></div>
-    <div style={{ padding: "20px" }}>
+    <div style={{ padding: "5px" }}>
       <label>Enable/Disable show delete confirmation dialog</label>
       <SwitchComponent checked={enableShowDeleteConfirmDialog} change={toggleShowDeleteConfirmDialog}></SwitchComponent></div>
-    <GridComponent ref={g => grid = g} dataSource={data} editSettings={editOptions} toolbar={toolbarOptions} height={265}>
+    <GridComponent ref={g => grid = g} dataSource={data} editSettings={editOptions} toolbar={toolbarOptions} height={200}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} validationRules={orderidrules} />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' validationRules={customeridrules} />

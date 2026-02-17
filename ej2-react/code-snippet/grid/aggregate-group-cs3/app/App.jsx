@@ -21,7 +21,7 @@ function App() {
     return (<span>Sum: {props.Sum}</span>)
   }
   return (<GridComponent dataSource={data} allowPaging={true} pageSettings={pageOptions} allowGrouping={true}
-    groupSettings={groupOptions} height={315}>
+    groupSettings={groupOptions} height={260}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />

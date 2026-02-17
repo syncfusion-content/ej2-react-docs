@@ -277,10 +277,10 @@ function App() {
       <div style={{ padding: '40px 0 0 0' }}>
         <GridComponent dataSource={data} height={315} selectionSettings={selectOptions}>
           <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='OrderID' width='100' textAlign='Right' />
-            <ColumnDirective field='CustomerID' headerText='CustomerID' width='100' />
+            <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign='Right' />
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
             <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign='Right' />
-            <ColumnDirective field='ShipCountry' headerText='ShipCountry' width='140' />
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='140' />
           </ColumnsDirective>
         </GridComponent></div></div>)
 }
@@ -304,10 +304,10 @@ function App() {
       <div style={{ padding: '40px 0 0 0' }}>
         <GridComponent dataSource={data} height={315} selectionSettings={selectOptions}>
           <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='OrderID' width='100' textAlign="Right"/>
-            <ColumnDirective field='CustomerID' headerText='CustomerID' width='100' />
+            <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right"/>
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
             <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign="Right"/>
-            <ColumnDirective field='ShipCountry' headerText='ShipCountry' width='140' />
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='140' />
           </ColumnsDirective>
         </GridComponent></div></div>)
 }
@@ -432,10 +432,10 @@ function App() {
       <div style={{ padding: '40px 0 0 0' }}>
         <GridComponent dataSource={data} height={315} ref={g => grid = g} dataBound={dataBound}>
           <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='OrderID' width='100' textAlign="Right"/>
-            <ColumnDirective field='CustomerID' headerText='CustomerID' width='100' />
+            <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right"/>
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
             <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign="Right"/>
-            <ColumnDirective field='ShipCountry' headerText='ShipCountry' width='140' />
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='140' />
           </ColumnsDirective>
         </GridComponent></div></div>)
 }
@@ -463,10 +463,10 @@ function App() {
       <div style={{ padding: '40px 0 0 0' }}>
         <GridComponent dataSource={data} height={315} ref={g => grid = g} dataBound={dataBound}>
           <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='OrderID' width='100' textAlign="Right"/>
-            <ColumnDirective field='CustomerID' headerText='CustomerID' width='100' />
+            <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right"/>
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
             <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign="Right"/>
-            <ColumnDirective field='ShipCountry' headerText='ShipCountry' width='140' />
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='140' />
           </ColumnsDirective>
         </GridComponent></div></div>)
 }
@@ -640,10 +640,10 @@ function App() {
     <div>
       <GridComponent dataSource={data} height={315}>
         <ColumnsDirective>
-          <ColumnDirective field='OrderID' headerText='OrderID' width='100' textAlign="Right"/>
-          <ColumnDirective field='CustomerID' headerText='CustomerID' width='100' template={customerIDTemplate} />
+          <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right"/>
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' template={customerIDTemplate} />
           <ColumnDirective field='Freight' headerText='Freight' width='100' format='C' textAlign="Right"/>
-          <ColumnDirective field='ShipCountry' headerText='ShipCountry' width='140' />
+          <ColumnDirective field='ShipCountry' headerText='Ship Country' width='140' />
         </ColumnsDirective>
       </GridComponent>
     </div>

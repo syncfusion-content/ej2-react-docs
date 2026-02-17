@@ -38,19 +38,19 @@ Syncfusion Grid requires CSS for proper rendering. Add these imports to `index.c
 {% highlight css tabtitle="index.css" %}
 
 /* Base styles - Required for all Syncfusion components */
-@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
 
 /* Component-specific styles */
-@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css';
 
 /* Grid component styles - Required */
-@import '../node_modules/@syncfusion/ej2-react-grids/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-react-grids/styles/material3.css';
 
 {% endhighlight %}
 {% endtabs %}
@@ -83,6 +83,7 @@ Grid creation and backend API connection uses `UrlAdaptor`.
 import React from 'react';
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import './App.css';
 
 function App() {
   // Configure DataManager with UrlAdaptor.
@@ -144,7 +145,7 @@ Run the application in Visual Studio, accessible on a URL like **https://localho
 
 > **Developer Tools**: Browser DevTools (F12) → Network tab displays actual requests and responses between Grid and API.
 
-## Part 3: Server-side data operations
+## Server-side data operations
 
 Large dataset optimization requires server-side data operations (filtering, sorting, paging) rather than browser-based processing. The `Syncfusion.EJ2.AspNet.Core` package provides built-in methods for efficient operation handling.
 
@@ -179,11 +180,11 @@ The `Syncfusion.EJ2.Base` namespace provides these methods:
 using Syncfusion.EJ2.Base;  // DataManagerRequest, QueryableOperation, DataOperations
 ```
 
-> **Note:** It must have `Syncfusion.EJ2.AspNet.Core` NuGet package installed (covered in [Step 2](#step-2-install-required-nuget-package)).
+> **Note:** It must have **Syncfusion.EJ2.AspNet.Core** NuGet package installed (covered in [UrlAdaptor backend setup documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors#url-adaptor)).
 
-### Paging and virtual scrolling (remote)
+### Paging
 
-Paging implementation uses `PerformTake` and `PerformSkip` from `QueryableOperation` on the server to apply paging from the `DataManagerRequest`. Virtual scrolling requires `enableVirtualization` in the grid with server-side large skip handling.
+Paging implementation uses `PerformTake` and `PerformSkip` from `QueryableOperation` on the server to apply paging from the `DataManagerRequest`. The paging feature is enabled by setting the `allowPaging` property to `true` and injecting the **Page** module from **@syncfusion/ej2-react-grids** into the grid.
 
 ![UrlAdaptor paging](../images/url-adaptor-paging.png)
 
@@ -222,6 +223,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 import { ColumnDirective, ColumnsDirective, GridComponent, Page, Inject } from '@syncfusion/ej2-react-grids';
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
+import './App.css';
 
 function App() {
   const data = new DataManager({ 
@@ -247,7 +249,7 @@ export default App;
 
 ### Filtering
 
-API endpoints supporting custom filtering criteria use `PerformFiltering` from `QueryableOperation` to apply filters from the `DataManagerRequest`. Complex predicates require iteration through nested conditions.
+API endpoints supporting custom filtering criteria use `PerformFiltering` from `QueryableOperation` to apply filters from the `DataManagerRequest`. Complex predicates require iteration through nested conditions. The filtering feature is enabled by setting the `allowFiltering` property to `true` and injecting the **Filter** module from **@syncfusion/ej2-react-grids** into the grid.
 
 **Single column filtering**
 ![Single column filtering](../images/url-adaptor-filtering.png)
@@ -258,6 +260,7 @@ API endpoints supporting custom filtering criteria use `PerformFiltering` from `
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
 
+[HttpPost]
 public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {
   // Retrieve data from the data source (e.g., database).
@@ -269,7 +272,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
   if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0)
   {
     // Handling filtering operation.
-    DataSource = queryableOperation.PerformFiltering(DataSource, DataManagerRequest.Where);
+    DataSource = queryableOperation.PerformFiltering(DataSource, DataManagerRequest.Where, DataManagerRequest.Where[0].Condition);
   }
 
   // Get the total records count.
@@ -285,6 +288,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 import { ColumnDirective, ColumnsDirective, GridComponent, Filter, Inject } from '@syncfusion/ej2-react-grids';
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
+import './App.css';
 
 function App() {
   const data = new DataManager({ 
@@ -310,7 +314,7 @@ export default App;
 
 ### Searching
 
-`PerformSearching` from `QueryableOperation` processes search criteria from the `DataManagerRequest`.
+`PerformSearching` from `QueryableOperation` processes search criteria from the `DataManagerRequest`. The searching feature is enabled by configuring the `toolbar` property with `Search` item and injecting the **Toolbar** and **Search** modules from **@syncfusion/ej2-react-grids** into the grid.
 
 ![UrlAdaptor searching](../images/url-adaptor-searching.png)
 
@@ -343,8 +347,9 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 {% highlight ts tabtitle="App.jsx" %}
 
-import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems, Toolbar, Inject } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, GridComponent, Toolbar, Search, Inject } from '@syncfusion/ej2-react-grids';
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
+import './App.css';
 
 function App() {
   const data = new DataManager({ 
@@ -360,7 +365,7 @@ function App() {
         <ColumnDirective field='ShipCity' headerText='Ship City' width='150'/>
         <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
       </ColumnsDirective>
-      <Inject services={[Toolbar]} />
+      <Inject services={[Toolbar, Search]} />
     </GridComponent>
   );
 };
@@ -371,7 +376,7 @@ export default App;
 
 ### Sorting
 
-`PerformSorting` from `QueryableOperation` applies sorting from the `DataManagerRequest`.
+`PerformSorting` from `QueryableOperation` applies sorting from the `DataManagerRequest`. The sorting feature is enabled by setting the `allowSorting` property to `true` and injecting the **Sort** module from **@syncfusion/ej2-react-grids** into the grid.
 
 **Single column sorting**
 ![Single column sorting](../images/url-adaptor-sorting.png)
@@ -410,6 +415,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 import { ColumnDirective, ColumnsDirective, GridComponent, Sort, Inject } from '@syncfusion/ej2-react-grids';
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
+import './App.css';
 
 function App() {
   const data = new DataManager({ 
@@ -435,7 +441,7 @@ export default App;
 
 ### Grouping and aggregates
 
-Server processing of group and aggregate details from the `DataManagerRequest` computes aggregates on the full dataset and applies grouping with `PerformGrouping`.
+Server processing of group and aggregate details from the `DataManagerRequest` computes aggregates on the full dataset and applies grouping with `PerformGrouping`. The grouping and aggregates feature is enabled by setting the `allowGrouping` property to `true` and injecting the **Group** and **Aggregate** modules from **@syncfusion/ej2-react-grids** into the grid.
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -481,6 +487,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, AggregatesDirective, AggregateDirective, AggregateColumnsDirective, AggregateColumnDirective, GridComponent, Inject, Group, Aggregate } from '@syncfusion/ej2-react-grids';
+import './App.css';
 
 function App() {
   const groupSettings = {
@@ -545,6 +552,7 @@ For detailed editing setup, refer to the [editing documentation](https://ej2.syn
 
 import { ColumnDirective, ColumnsDirective, GridComponent, Toolbar, Edit, Inject } from '@syncfusion/ej2-react-grids';
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
+import './App.css';
 
 function App() {
   const data = new DataManager({ 
@@ -607,7 +615,7 @@ The `insertUrl` property specifies the controller action mapping URL for insert 
 /// <param name="newRecord">It contains the new record detail that needs to be inserted.</param>
 /// <returns>Returns void</returns>
 [HttpPost]
-[Route("api/[controller]/Insert")]
+[Route("Insert")]
 public void Insert([FromBody] CRUDModel<OrdersDetails> newRecord)
 {
   if (newRecord.value != null)
@@ -627,13 +635,13 @@ The `updateUrl` property specifies the controller action mapping URL for update 
 /// <summary>
 /// Update an existing data item from the data collection.
 /// </summary>
-/// <param name="Order">It contains the updated record detail that needs to be updated.</param>
+/// <param name="updatedRecord">It contains the updated record detail that needs to be updated.</param>
 /// <returns>Returns void</returns>
 [HttpPost]
-[Route("api/[controller]/Update")]
-public void Update([FromBody] CRUDModel<OrdersDetails> Order)
+[Route("Update")]
+public void Update([FromBody] CRUDModel<OrdersDetails> updatedRecord)
 {
-  var updatedOrder = Order.value;
+  var updatedOrder = updatedRecord.value;
   var data = OrdersDetails.GetAllRecords().FirstOrDefault(existingOrder => existingOrder.OrderID == updatedOrder.OrderID);
   if (data != null)
   {
@@ -657,13 +665,13 @@ The `removeUrl` property specifies the controller action mapping URL for delete 
 /// <summary>
 /// Remove a specific data item from the data collection.
 /// </summary>
-/// <param name="value">It contains the specific record detail that needs to be removed.</param>
+/// <param name="deletedRecord">It contains the specific record detail that needs to be removed.</param>
 /// <returns>Returns void</returns>
 [HttpPost]
-[Route("api/[controller]/Remove")]
-public void Remove([FromBody] CRUDModel<OrdersDetails> value)
+[Route("Remove")]
+public void Remove([FromBody] CRUDModel<OrdersDetails> deletedRecord)
 {
-  int orderId = int.Parse(value.key.ToString());
+  int orderId = int.Parse(deletedRecord.key.ToString());
   var data = OrdersDetails.GetAllRecords().FirstOrDefault(orderData => orderData.OrderID == orderId);
   if (data != null)
   {
@@ -677,12 +685,13 @@ public void Remove([FromBody] CRUDModel<OrdersDetails> value)
 
 ### Batch CRUD
 
-Batch operations require edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) set to `Batch` with `batchUrl` property in the DataManager. Add rows with the **Add** button, edit cells by double-clicking, and delete rows with the **Delete** button. The **Update** button submits all changes in one `POST` request.
+Batch operations require edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) set to `Batch` with `batchUrl` property in the `DataManager`. Add rows with the **Add** button, edit cells by double-clicking, and delete rows with the **Delete** button. The **Update** button submits all changes in one `POST` request.
 
 ```ts
 // App.jsx
 import { ColumnDirective, ColumnsDirective, GridComponent, Toolbar, Edit, Inject } from '@syncfusion/ej2-react-grids';
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
+import './App.css';
 
 function App() {
   const data = new DataManager({ 
@@ -710,6 +719,8 @@ export default App;
 ```
 
 ```cs
+[HttpPost]
+[Route("BatchUpdate")]
 public IActionResult BatchUpdate([FromBody] CRUDModel<OrdersDetails> batchOperation)
 {
   if (batchOperation.added != null)
@@ -743,7 +754,7 @@ public IActionResult BatchUpdate([FromBody] CRUDModel<OrdersDetails> batchOperat
       }
     }
   }
-  return Json(batchOperation);
+  return new JsonResult(batchOperation);
 }
 ```
 
@@ -756,6 +767,7 @@ The `crudUrl` property specifies the controller action mapping URL for all CRUD 
 ```ts
 import { ColumnDirective, ColumnsDirective, GridComponent, Toolbar, Edit, Inject } from '@syncfusion/ej2-react-grids';
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
+import './App.css';
 
 function App() {
   const data = new DataManager({ 
@@ -784,7 +796,7 @@ export default App;
 
 ```cs
 [HttpPost]
-[Route("api/[controller]/CrudUpdate")]
+[Route("CrudUpdate")]
 public void CrudUpdate([FromBody] CRUDModel<OrdersDetails> request)
 {
   if (request.action == "update")
@@ -811,13 +823,11 @@ public void CrudUpdate([FromBody] CRUDModel<OrdersDetails> request)
 Foreign key column configuration with remote data using `UrlAdaptor` requires assigning the `DataManager` instance with endpoint URL to the column data source along with foreign key field and value properties. When both grid and foreign key column use `UrlAdaptor`, grid data and foreign key data are fetched separately from respective remote endpoints. Filtering and sorting operations trigger server requests based on the foreign key field and corresponding value.
 
 ```ts
-[App.jsx]
-import {  GridComponent, ColumnsDirective, ColumnDirective, Page, Filter, Inject, Sort, ForeignKey, Toolbar } from '@syncfusion/ej2-react-grids';
+import { GridComponent, ColumnsDirective, ColumnDirective, Filter, Inject, Sort, ForeignKey } from '@syncfusion/ej2-react-grids';
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
+import './App.css';
 
 function ForeignKeyColumn() {
-  let gridInstance;
-  const toolbarOptions = ['Search'];
   // Grid data source.
   let orders = new DataManager({
     url: 'http://localhost:xxxx/api/grid',
@@ -832,13 +842,13 @@ function ForeignKeyColumn() {
   return (
     <div className="control-pane">
       <div className="control-section">
-        <GridComponent dataSource={orders} allowPaging={true} ref={(grid) => (gridInstance = grid)} allowFiltering={true} allowSorting={true} filterSettings={{ type: 'Menu' }} toolbar={toolbarOptions} >
+        <GridComponent dataSource={orders} allowFiltering={true} allowSorting={true}>
           <ColumnsDirective>
             <ColumnDirective field="OrderID" headerText="Order ID" width="120" textAlign="Right" isPrimaryKey={true} ></ColumnDirective>
             <ColumnDirective field="CustomerID" headerText="Customer Name" width="150" foreignKeyValue="CustomerName" foreignKeyField="CustomerID" dataSource={customers}></ColumnDirective>
             <ColumnDirective field="Freight" headerText="Freight" width="150" format="C2" textAlign="Right" editType="numericedit"></ColumnDirective>
           </ColumnsDirective>
-          <Inject services={[Filter, Page, Sort, ForeignKey, Toolbar]} />
+          <Inject services={[Filter, Sort, ForeignKey]} />
         </GridComponent>
       </div>
     </div>
@@ -847,13 +857,14 @@ function ForeignKeyColumn() {
 export default ForeignKeyColumn;
 ```
 
-### Filter and search operation
+### Filter operation
 
 Filtering foreign-key columns automatically displays related text values via the `foreignKeyValue` property, while actual filtering uses the `foreignKeyField` property.
 
 ![ForeignKey column filtering](../images/foreign-key-filter.png)
 
 ```cs
+// orders data
 [HttpPost]
 public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {
@@ -866,7 +877,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
   // Handling filtering operation.
   if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0)
   {
-   DataSource = operation.PerformFiltering(DataSource, DataManagerRequest.Where, DataManagerRequest.Where[0].Operator);
+   DataSource = queryableOperation.PerformFiltering(DataSource, DataManagerRequest.Where, DataManagerRequest.Where[0].Condition);
   }
 
   // Get the total count of records.
@@ -874,6 +885,29 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
   // Return data based on the request.
   return new { result = DataSource, count = totalRecordsCount };
+}
+
+// customers data
+[HttpPost]
+public object Post([FromBody] DataManagerRequest DataManagerRequest)
+{
+  // Retrieve data from the data source.
+  IQueryable<CustomerInfo> DataSource = customers.AsQueryable();
+
+  // Initialize QueryableOperation instance.
+  QueryableOperation queryableOperation = new QueryableOperation(); 
+
+  // Handling filtering operation.
+  if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0)
+  {
+   DataSource = queryableOperation.PerformFiltering(DataSource, DataManagerRequest.Where, DataManagerRequest.Where[0].Condition);
+  }
+
+  // Get the total count of records.
+  int totalRecordsCount = DataSource.Count();
+
+  // Return data based on the request.
+  return DataManagerRequest.RequiresCounts ? new { result = DataSource, count = totalRecordsCount } : DataSource;
 }
 ```
 > Grid search with foreign key columns creates a filter query for each column. Foreign key columns query the associated data source to retrieve the underlying field value matching the search term.
@@ -904,7 +938,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
         DataManagerRequest.Sorted[i].ForeignKeyDataSource = GetCustomerData().AsQueryable();
       }
     }
-    DataSource = operation.PerformSorting(DataSource, DataManagerRequest.Sorted);
+    DataSource = queryableOperation.PerformSorting(DataSource, DataManagerRequest.Sorted);
   }
   // Get the total count of records.
   int totalRecordsCount = DataSource.Count();

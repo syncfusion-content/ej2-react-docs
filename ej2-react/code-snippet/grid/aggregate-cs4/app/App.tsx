@@ -14,7 +14,7 @@ function App() {
   const dataBound = () => {
     (grid as GridComponent).getHeaderContent().append((grid as GridComponent).getFooterContent());
   }
-  return <GridComponent ref={g => grid = g} dataSource={data} height={315} dataBound={dataBound}>
+  return <GridComponent ref={g => grid = g} dataSource={data} height={260} dataBound={dataBound}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />

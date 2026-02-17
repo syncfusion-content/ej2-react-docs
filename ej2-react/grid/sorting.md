@@ -41,7 +41,7 @@ To use the sorting feature, inject the `Sort` module in the grid.
 
 The Grid component provided option to apply initial sorting by setting the [sortSettings.columns](https://ej2.syncfusion.com/react/documentation/api/grid/sortSettings#columns) property to the desired [field](https://ej2.syncfusion.com/react/documentation/api/grid/sortDescriptorModel#field) and sort [direction](https://ej2.syncfusion.com/react/documentation/api/grid/sortDescriptorModel#direction). This feature is useful for displaying data in a specific order when the grid initially loads.
 
-The following example demonstrates setting [sortSettings.columns](https://ej2.syncfusion.com/react/documentation/api/grid/sortSettings#columns) for "OrderID" and "ShipCity" columns with a specified [direction](https://ej2.syncfusion.com/react/documentation/api/grid/sortDescriptorModel#direction).
+The following example demonstrates setting [sortSettings.columns](https://ej2.syncfusion.com/react/documentation/api/grid/sortSettings#columns) for "Order ID" and "Ship City" columns with a specified [direction](https://ej2.syncfusion.com/react/documentation/api/grid/sortDescriptorModel#direction).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -94,7 +94,7 @@ The Grid component provides the ability to prevent sorting for a particular colu
 
 This is achieved by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowsorting) property of the particular column to `false`. 
 
-The following example demonstrates disabling sorting for "CustomerID" column.
+The following example demonstrates disabling sorting for "Customer ID" column.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -148,7 +148,7 @@ The following example demonstrates defining a custom `sortComparer` function for
 
 By default, "null" values in a Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid are displayed at the top when sorting in descending order and at the bottom when sorting in ascending order. However, "null" values can be configured to always display at the bottom of the grid regardless of sort direction. This is achieved by utilizing the [column.sortComparer](https://ej2.syncfusion.com/react/documentation/api/grid/column#sortcomparer) method. This feature is particularly useful when working with data sets where "null" values need to be clearly separated from actual data entries.
 
-The example below demonstrates displaying "null" values at the bottom of the grid while sorting the "OrderDate" column in both ascending and descending order.
+The example below demonstrates displaying "null" values at the bottom of the grid while sorting the "Order Date" column in both ascending and descending order.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -186,7 +186,7 @@ Sorting based on a foreign key column is enabled by configuring the [dataSource]
 
 In the case of local data in the grid, the sorting operation is performed based on the [foreignKeyValue](https://ej2.syncfusion.com/react/documentation/api/grid/column#foreignkeyvalue) property of the column. The `foreignKeyValue` property should be defined in the column definition with the corresponding foreign key value for each row. The grid sorts the foreign key column based on the text representation of the `foreignKeyValue` property.
 
-The following example demonstrates sorting with a foreign key column enabled, where the "CustomerID" column acts as a foreign column displaying the "ContactName" column from foreign data.
+The following example demonstrates sorting with a foreign key column enabled, where the "Customer ID" column acts as a foreign column displaying the "Contact Name" column from foreign data.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

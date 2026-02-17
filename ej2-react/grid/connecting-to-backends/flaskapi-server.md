@@ -29,6 +29,18 @@ domainurl: ##DomainURL##
 | TypeScript                  | 5.x or later                 | Client-side type safety                 |
 | Vite                        | 7.3.1 or later               | React build tool                        |
 
+## Key topics
+
+| # | Topics | Link |
+|---|---------|-------|
+| 1 | Prerequisites for building the application with required tools, frameworks, and versions | [View](#prerequisites) |
+| 2 | Setting up and configuring the Flask backend using Python | [View](#setting-up-the-flask-backend-using-python) |
+| 3 | Performing data operations in server with filtering, searching, sorting, and paging for efficient data processing | [View](#perform-data-operations-in-server) |
+| 4 | Performing CRUD operations in server with REST endpoints | [View](#perform-crud-operations-in-server) |
+| 5 | Connecting Syncfusion React Grid with Flask API and configuring Syncfusion Grid with custom binding | [View](#connecting-syncfusion-react-grid-with-flask-api) |
+| 6 | Running the application by starting servers locally and accessing the frontend | [View](#run-the-application) |
+| 7 | Exploring a complete working sample in the complete sample repository on GitHub | [View](#complete-sample-repository) |
+
 ## Setting up the Flask backend using Python
 
 The Flask backend acts as the central REST API service, handling HTTP requests and responses that power the Syncfusion React Grid.
@@ -329,11 +341,11 @@ def list_tasks():
 ```
 
 This endpoint processes all Grid operations in sequence:
-1. **Filter**: Apply filter predicates to exclude non-matching records
-2. **Search**: Apply search queries across specified fields
-3. **Count**: Calculate total count before paging (for pagination info)
-4. **Sort**: Arrange records by sort descriptors
-5. **Page**: Extract the specific page using skip and take parameters
+1. **Filter**: Apply filter predicates to exclude non-matching records.
+2. **Search**: Apply search queries across specified fields.
+3. **Count**: Calculate total count before paging (for pagination info).
+4. **Sort**: Arrange records by sort descriptors.
+5. **Page**: Extract the specific page using skip and take parameters.
 
 ## Perform CRUD operations in server
 
@@ -431,16 +443,16 @@ npm install @syncfusion/ej2-data --save
 Include the required CSS files in the **src/index.css** file:
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';  
-@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';  
-@import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';  
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';  
-@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';  
-@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-react-grids/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/bootstrap5.3.css';  
+@import '../node_modules/@syncfusion/ej2-buttons/styles/bootstrap5.3.css';  
+@import '../node_modules/@syncfusion/ej2-calendars/styles/bootstrap5.3.css';  
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/bootstrap5.3.css';  
+@import '../node_modules/@syncfusion/ej2-inputs/styles/bootstrap5.3.css';  
+@import '../node_modules/@syncfusion/ej2-navigations/styles/bootstrap5.3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/bootstrap5.3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/bootstrap5.3.css';
+@import '../node_modules/@syncfusion/ej2-notifications/styles/bootstrap5.3.css';
+@import '../node_modules/@syncfusion/ej2-react-grids/styles/bootstrap5.3.css';
 ```
 
 For this project, the "Bootstrap 5.3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.
@@ -552,10 +564,10 @@ This format has already been implemented in the Flask server during the backend 
 The `dataStateChange` event is the primary mechanism for handling Grid state changes like paging, sorting, filtering, and searching. This event is triggered whenever the Grid state changes and provides the current state details that need to be sent to the server.
 
 The event handler is responsible for:
-1. Collecting the current grid state (skip, take, sorted, where, search)
-2. Sending this state to the Flask API via a GET request
-3. Processing the response and binding data to the Grid
-4. Handling special cases like filter dropdown requests
+1. Collecting the current grid state (skip, take, sorted, where, search).
+2. Sending this state to the Flask API via a GET request.
+3. Processing the response and binding data to the Grid.
+4. Handling special cases like filter dropdown requests.
 
 Configure the Grid to use the `dataStateChange` event handler by adding it as a property:
 
@@ -616,10 +628,10 @@ The `dataStateChange` event handler collects the current grid state parameters (
 The `dataSourceChanged` event is triggered when users perform CRUD operations. This event provides the affected record along with the action type, which is sent to the Flask API to execute the corresponding operation.
 
 The event handler is responsible for:
-1. Identifying the type of operation (add, edit, or delete)
-2. Extracting the record data from the event arguments
-3. Sending the appropriate HTTP request (POST for insert, PUT for update, DELETE for delete)
-4. Calling `endEdit()` to notify the Grid that the operation is complete
+1. Identifying the type of operation (add, edit, or delete).
+2. Extracting the record data from the event arguments.
+3. Sending the appropriate HTTP request (POST for insert, PUT for update, DELETE for delete).
+4. Calling `endEdit()` to notify the Grid that the operation is complete.
 
 Configure the Grid to use the `dataSourceChanged` event handler by adding it as a property:
 
@@ -697,7 +709,7 @@ The `dataSourceChanged` event handler checks the action type from the event argu
 
 ### Step 8: Enable Paging
 
-The paging feature divides Grid records into multiple pages, improving performance and usability when handling large datasets. Enable paging by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid#allowpaging) property to "true" and injecting the `Page` module. Customize pager behavior using the [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid#pagesettings) property.
+The paging feature divides Grid records into multiple pages, improving performance and usability when handling large datasets. Enable paging by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid#allowpaging) property to `true` and injecting the `Page` module. Customize pager behavior using the [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid#pagesettings) property.
 
 ```ts
 import { GridComponent, Page, Inject } from '@syncfusion/ej2-react-grids';
@@ -727,7 +739,7 @@ The image illustrates how the page state is passed to the `skip` and `take` prop
 
 ### Step 9: Enable Filtering
 
-The filtering feature enables searching and refining Grid records based on column values. Enable filtering by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) property to "true" and injecting the `Filter` module. Customize filtering options using the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid#filtersettings) property.
+The filtering feature enables searching and refining Grid records based on column values. Enable filtering by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) property to `true` and injecting the `Filter` module. Customize filtering options using the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid#filtersettings) property.
 
 ```ts
 import { GridComponent, Filter, Inject, type FilterSettingsModel } from '@syncfusion/ej2-react-grids';
@@ -780,7 +792,7 @@ The image illustrates how the search state is passed to the `search` property of
 
 ### Step 11: Enable Sorting
 
-The sorting feature allows ordering Grid records by clicking column headers. Enable sorting by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) property to "true" and injecting the `Sort` module.
+The sorting feature allows ordering Grid records by clicking column headers. Enable sorting by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) property to `true` and injecting the `Sort` module.
 
 ```ts
 import { GridComponent, Sort, Inject } from '@syncfusion/ej2-react-grids';
@@ -912,24 +924,9 @@ react-grid-flask-api/
 
 ## Complete sample repository
 
-For a complete working implementation, refer to the GitHub repository:
-[Syncfusion React Grid with Flask API Backend Sample](https://github.com/SyncfusionExamples/syncfusion-react-grid-with-flaskapi-server)
+For a complete working implementation, refer to the [GitHub](https://github.com/SyncfusionExamples/syncfusion-react-grid-with-flaskapi-server) repository.
 
 The repository contains the complete Flask backend implementation with all API endpoints, business logic, data models, and a ready-to-run React frontend application.
-
-## Summary
-
-This guide demonstrates:
-
-1. Prerequisites for building the application with required tools, frameworks, and versions. [🔗](#prerequisites)
-2. Setting up and configuring the Flask backend using Python. [🔗](#setting-up-the-flask-backend-using-python)
-3. Performing data operations in server with filtering, searching, sorting, and paging for efficient data processing. [🔗](#perform-data-operations-in-server)
-4. Performing CRUD operations in server with REST endpoints. [🔗](#perform-crud-operations-in-server)
-5. Connecting Syncfusion React Grid with Flask API and configuring Syncfusion Grid with custom binding. [🔗](#connecting-syncfusion-react-grid-with-flask-api)
-6. Running the application by starting servers locally and accessing the frontend. [🔗](#run-the-application)
-7. Exploring a complete working sample in the complete sample repository on GitHub. [🔗](#complete-sample-repository)
-
-The application now provides a complete solution for integrating the Syncfusion React Grid with Flask API backend, enabling seamless data operations with a modern, user-friendly interface.
 
 ## See also
 

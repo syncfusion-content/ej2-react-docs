@@ -21,7 +21,7 @@ function App() {
   }
   return (<div>
     <GridComponent id='Grid' dataSource={complexData} editSettings={editOptions}
-      toolbar={toolbarOptions} height={315} >
+      toolbar={toolbarOptions} height={268} >
       <ColumnsDirective>
         <ColumnDirective field='EmployeeID' headerText='Employee ID' width='100' textAlign="Right" isPrimaryKey={true} />
         <ColumnDirective field='Name.FirstName' headerText='First Name' width='120' editTemplate={firstNameTemplate} />

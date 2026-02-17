@@ -14,7 +14,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provid
 
 ## Steps to create a Redux service.
 
-**Step 1 : Install Dependencies**
+**Step 1: Install Dependencies**
 
 In a terminal, navigate to the project directory and run the following command to install the required packages:
 
@@ -23,7 +23,7 @@ npm install --save redux react-redux
 ```
 The above command installs the redux package, which is the core Redux library, and the react-redux package, which provides integration between Redux and React.
 
-**Step 2 : Set Up Redux Store**
+**Step 2: Set Up Redux Store**
 
 Once the dependencies are installed, set up a Redux [store](https://redux.js.org/api/store) in the application. Add the following code to the **store.tsx** file.
 
@@ -40,7 +40,7 @@ Once the dependencies are installed, set up a Redux [store](https://redux.js.org
 
   3. The Redux store is now set up. It can be customized by adding middleware, enhancers, or other configurations as needed.
 
-**Step 3 : Connect Redux Provider**
+**Step 3: Connect Redux Provider**
 
 To make the Redux `store` available to React components, wrap the application with the Redux [Provider](https://react-redux.js.org/api/provider) component. It accepts the Redux `store` as a prop and connects the components in its hierarchy. Follow these steps to connect the Redux provider:
 

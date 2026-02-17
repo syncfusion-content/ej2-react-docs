@@ -25,7 +25,7 @@ To utilize custom binding, the application can handle the [DataManager](https://
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component offers a range of powerful features for handling grid actions such as **paging**, **grouping**, **sorting** and **filtering**. These actions trigger the [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datastatechange) event. The feature for CRUD action such as **Create**, **Read**, **Update**, **Delete** operations. This action trigger the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasourcechanged) event. This event provides the opportunity to manage and manipulate data according to the individual's interactions.
 
-**Using the dataStateChange event**
+**Using the `dataStateChange` event**
 
 The `dataStateChange` event is triggered whenever actions that modify the grid's data state are performed, such as paging, sorting, or grouping. This event provides detailed information about the action performed and the current state of the grid, including parameters like page number, sorting details, and filtering criteria.
 

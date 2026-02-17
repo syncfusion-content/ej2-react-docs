@@ -20,8 +20,8 @@ To disable selection in the grid, set the [allowSelection](https://ej2.syncfusio
 
 The Grid supports two selection types, configurable via the [selectionSettings.type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) property:
 
-* `Single` - Enables selection of only one row, cell, or column at a time.
-* `Multiple` - Enables selection of multiple rows, cells, or columns.
+* `Single`: Enables selection of only one row, cell, or column at a time.
+* `Multiple`: Enables selection of multiple rows, cells, or columns.
 
 **Multi-selection controls**
 
@@ -106,11 +106,12 @@ export default App;
 ## Selection mode
 
 The selection mode feature allows switching between different modes for selecting rows, cells, or both within the grid based on specific requirements. This feature highlights and manipulates specific rows or cells in the grid.
+
 To configure selection mode, set the [selectionSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#mode) property. The Grid component supports three types of selection modes:
 
-* `Row` - Enables row selection only (default mode).
-* `Cell` - Enables cell selection only.
-* `Both` - Enables simultaneous row and cell selection.
+* `Row`: Enables row selection only (default mode).
+* `Cell`: Enables cell selection only.
+* `Both`: Enables simultaneous row and cell selection.
 
 The following example demonstrates dynamically enabling and changing the `selectionSettings.mode` using the `DropDownList` component:
 
@@ -342,8 +343,8 @@ The following example demonstrates clearing selection by calling the `clearSelec
 
  {% previewsample "page.domainurl/code-snippet/grid/selection-cs15" %}
 
-> In `Both` mode, if calling [clearCellSelection](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#clearcellselection) first, it will clear cell selections, and then if calling [clearRowSelection](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#clearrowselection), it will clear row selections. The order of method calls determines which type of selection is cleared first.
-> To remove a specific selection in a row, cell, or column, utilize the following methods: `clearRowSelection` for clearing row selections, `clearCellSelection` for clearing cell selections, and [clearColumnSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selection#clearcolumnselection) for clearing column selections.
+> - In `Both` mode, if calling [clearCellSelection](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#clearcellselection) first, it will clear cell selections, and then if calling [clearRowSelection](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#clearrowselection), it will clear row selections. The order of method calls determines which type of selection is cleared first.
+> - To remove a specific selection in a row, cell, or column, utilize the following methods: `clearRowSelection` for clearing row selections, `clearCellSelection` for clearing cell selections, and [clearColumnSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selection#clearcolumnselection) for clearing column selections.
 
 ## Persist selection
 
