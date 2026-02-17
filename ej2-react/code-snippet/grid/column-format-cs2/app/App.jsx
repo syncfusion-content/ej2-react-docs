@@ -9,7 +9,7 @@ function App() {
     }
     var dateFormatOptions = {
         // Custom format for date columns
-        type: 'Date',
+        type: 'date',
         format: "EEE, MMM d, ''yy",
     }
     return <GridComponent dataSource={data} height={315}>

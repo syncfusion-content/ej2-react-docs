@@ -15,7 +15,7 @@ function App() {
       <label style={{ padding: "10px 10px 26px 0" }}> Change the frozen rows: </label>
       <NumericTextBoxComponent ref={t => textBox = t} id='frozenrows' min={0} max={5} validateDecimalOnType={true} decimals={0} value={2} format='n' width='150'></NumericTextBoxComponent>
       <ButtonComponent style={{ marginLeft: "5px" }} onClick={frozenRows}>UPDATE</ButtonComponent>
-      <GridComponent ref={g => grid = g} dataSource={data} height={315} frozenRows={2}>
+      <GridComponent ref={g => grid = g} dataSource={data} height={268} frozenRows={2}>
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' width='150' textAlign='Right' />
           <ColumnDirective field='CustomerID' headerText='Customer ID' width='180' />

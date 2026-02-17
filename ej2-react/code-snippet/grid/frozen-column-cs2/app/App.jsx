@@ -36,7 +36,7 @@ function App() {
         <div>
             <label style={{ padding: '30px 17px 0 0' }}>Change the frozen column:</label>
             <DropDownListComponent id='dropdown' index={0} width={150} fields={field} dataSource={ddlData} change={columnChange}></DropDownListComponent>
-            <GridComponent dataSource={data} height={315} ref={g => grid = g} >
+            <GridComponent dataSource={data} height={268} ref={g => grid = g} >
                 <ColumnsDirective>
                     <ColumnDirective field='OrderID' headerText='Order ID' width='150' isFrozen={true} />
                     <ColumnDirective field='CustomerID' headerText='Customer ID' width='180' />

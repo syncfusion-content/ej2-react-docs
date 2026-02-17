@@ -6,7 +6,7 @@ function App() {
     const imageTemplateOptions = { enableAriaLabel: true };
     const nameTemplateOptions = { enableAriaLabel: false };
     const imageTemplate = (props) => {
-        const src = props.EmployeeID + '.png';
+        const src = 'https://ej2.syncfusion.com/react/demos/src/grid/images/' + props.EmployeeID + '.png';
         return (<div className='image'>
             <img src={src} alt={props.EmployeeID}/>
         </div>);

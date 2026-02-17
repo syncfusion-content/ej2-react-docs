@@ -22,7 +22,7 @@ function App() {
     }
   })
   return (<div>
-    <GridComponent id="Grid" ref={g => grid = g} dataSource={sampleGridData} height={315} allowRowDragAndDrop={true} rowDrop={onRowDrop} editSettings={gridEditSettings} selectionSettings={selectionOptions} rowDropSettings={rowDropOptions}>
+    <GridComponent id="Grid" ref={g => grid = g} dataSource={sampleGridData} height={268} allowRowDragAndDrop={true} rowDrop={onRowDrop} editSettings={gridEditSettings} selectionSettings={selectionOptions} rowDropSettings={rowDropOptions}>
       <ColumnsDirective>
         <ColumnDirective field='taskID' isPrimaryKey={true} headerText='Task ID' width='140' textAlign='Right' />
         <ColumnDirective field='taskName' headerText='Task Name' width='140' />

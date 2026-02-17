@@ -33,7 +33,7 @@ function App() {
   };
   return (
     <div>
-      <GridComponent dataSource={data} height={315} toolbar={toolbarOptions} editSettings={editSettings} frozenColumns={2} allowPaging={true} pageSettings={pageSettings}>
+      <GridComponent dataSource={data} height={260} toolbar={toolbarOptions} editSettings={editSettings} frozenColumns={2} allowPaging={true} pageSettings={pageSettings}>
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' width='150' textAlign='Right' isPrimaryKey={true}/>
           <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' edit={datePickerParams} />

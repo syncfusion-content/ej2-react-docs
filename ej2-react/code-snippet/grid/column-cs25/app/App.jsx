@@ -5,7 +5,7 @@ import { data } from './datasource';
 
 function App() {
   const toolbarOptions = ['Search'];
-  return <GridComponent dataSource={data} allowSorting={true} allowPaging={true} allowResizing={true} toolbar={toolbarOptions} allowFiltering={true} allowReordering={true} allowGrouping={true} height={230}>
+  return <GridComponent dataSource={data} allowSorting={true} allowPaging={true} allowResizing={true} toolbar={toolbarOptions} allowFiltering={true} allowReordering={true} allowGrouping={true} height={185}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} allowGrouping={false} allowResizing={false}/>
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' allowSorting={false}/>

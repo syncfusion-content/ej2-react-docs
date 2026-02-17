@@ -1,6 +1,6 @@
 import { ColumnDirective, ColumnsDirective, GridComponent, ForeignKey, Inject } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
-import { data } from './datasource';
+import { data, customerData } from './datasource';
 
 function App() {
   const navToAccount = (id, event) => {

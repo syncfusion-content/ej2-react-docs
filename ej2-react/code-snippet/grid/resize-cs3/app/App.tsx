@@ -24,13 +24,35 @@ function App() {
     })
     return (
         <div>
-            <label style={{ padding: '10px 10px 26px 0' }}>Change the resize mode:</label>
-            <DropDownListComponent dataSource={alignmentData} ref={d => dropDown = d} index={0} width="100" fields={field}></DropDownListComponent><br />
-            <label style={{ padding: '30px 17px 0 0' }}>Enter the width:</label>
-            <TextBoxComponent ref={t => textBox = t} placeholder="Enter the width" width='200' /><br/>
-            <label style={{ padding: '30px 17px 0 0' }}>Click the change button :</label>
-            <ButtonComponent id="button" cssClass="e-outline" onClick={onExternalResize}>Resize</ButtonComponent>
-            <div style={{ padding: '40px 0 0 0' }}>
+            <div>
+             <label style={{ padding: '5px 5px 5px 0', display: 'inline-block' }}>Change the resize mode: </label>
+            <DropDownListComponent style={{ padding: '5px 0 0 0', display: 'inline-block' }}
+                dataSource={alignmentData}
+                ref={(d) => (dropDown = d)}
+                index={0}
+                width="100"
+                fields={field}
+                ></DropDownListComponent>
+
+            <label style={{ padding: '5px 5px 0 5px', display: 'inline-block' }}>
+            Enter the width:
+            </label>
+            <TextBoxComponent
+                ref={(t) => (textBox = t)}
+                placeholder="Enter the width"
+                width="200"
+                style={{ display: 'inline-block' }} />
+
+            <label style={{ padding: '5px 5px 0 5px', display: 'inline-block' }}> Click the change button: </label>
+            <ButtonComponent
+                id="button"
+                cssClass="e-outline"
+                onClick={onExternalResize}
+                style={{ display: 'inline-block' }}
+                >
+                Resize
+                </ButtonComponent>
+                </div>
                 <GridComponent dataSource={data} height={315} ref={g => grid = g} allowResizing={true}>
                     <ColumnsDirective>
                         <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
@@ -38,6 +60,6 @@ function App() {
                         <ColumnDirective field='Freight' headerText='Freight' format='C' width='80' />
                         <ColumnDirective field='OrderDate' headerText='Order Date' format='yMd' width='120' />
                     </ColumnsDirective>
-                </GridComponent></div></div>)
+                </GridComponent></div>)
 }
 export default App;

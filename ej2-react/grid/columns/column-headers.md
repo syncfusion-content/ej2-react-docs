@@ -199,7 +199,7 @@ function App() {
       <label style={{ padding: '30px 17px 0 0' }}>Align the text for columns :</label>
       <DropDownListComponent dataSource={alignmentData} index={0} width="100" change={changeAlignment}></DropDownListComponent>
       <div style={{ padding: '40px 0 0 0' }}>
-        <GridComponent dataSource={data} height={315} ref={g => grid = g}>
+        <GridComponent dataSource={data} height={260} ref={g => grid = g}>
           <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
             <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
@@ -237,7 +237,7 @@ function App() {
       <label style={{ padding: '30px 17px 0 0' }}>Align the text for columns :</label>
       <DropDownListComponent dataSource={alignmentData} index={0} width="100" change={changeAlignment}></DropDownListComponent>
       <div style={{ padding: '40px 0 0 0' }}>
-        <GridComponent dataSource={data} height={315} ref={g => grid = g}>
+        <GridComponent dataSource={data} height={260} ref={g => grid = g}>
           <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
             <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
@@ -301,7 +301,7 @@ function App() {
       <label style={{ padding: '30px 17px 0 0' }}>Autowrap for header column :</label>
       <DropDownListComponent dataSource={dropDownData} index={0} width="100" change={valueChange}></DropDownListComponent>
       <div style={{ padding: '40px 0 0 0' }}>
-        <GridComponent dataSource={inventoryData} height={315} ref={g => grid = g} allowPaging={true} allowTextWrap={true} textWrapSettings={wrapSettings}>
+        <GridComponent dataSource={inventoryData} height={250} ref={g => grid = g} allowPaging={true} allowTextWrap={true} textWrapSettings={wrapSettings}>
           <ColumnsDirective>
             <ColumnDirective field='Inventor' headerText='Inventor' width='100' />
             <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' width='100' />
@@ -335,7 +335,7 @@ function App() {
       <label style={{ padding: '30px 17px 0 0' }}>Autowrap for header column :</label>
       <DropDownListComponent dataSource={dropDownData} index={0} width="100" change={valueChange}></DropDownListComponent>
       <div style={{ padding: '40px 0 0 0' }}>
-        <GridComponent dataSource={inventoryData} height={315} ref={g => grid = g} allowPaging={true} allowTextWrap={true} textWrapSettings={wrapSettings}>
+        <GridComponent dataSource={inventoryData} height={250} ref={g => grid = g} allowPaging={true} allowTextWrap={true} textWrapSettings={wrapSettings}>
           <ColumnsDirective>
             <ColumnDirective field='Inventor' headerText='Inventor' width='100' />
             <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' width='100' />
@@ -458,13 +458,13 @@ function App() {
     })
     return (
         <div>
-            <label style={{ padding: '10px 10px 26px 0' }}>Select column name  :</label>
+            <label style={{ padding: '10px 10px 10px 0' }}>Select column name  :</label>
             <DropDownListComponent dataSource={alignmentData} ref={d => dropDown = d} index={0} width="100" fields={field}></DropDownListComponent><br/>
-            <label style={{ padding: '30px 17px 0 0' }}>Enter new header text :</label>
+            <label style={{ padding: '10px 17px 0 0' }}>Enter new header text :</label>
             <TextBoxComponent ref={t => textBox = t} placeholder="Enter new header text" width='200' />
-            <label style={{ padding: '30px 17px 0 0' }}>Click the change button :</label>
+            <label style={{ padding: '10px 17px 0 0' }}>Click the change button :</label>
             <ButtonComponent id="button" cssClass="e-outline" onClick={changeHeaderText}>Change</ButtonComponent>
-            <div style={{ padding: '40px 0 0 0' }}>
+            <div style={{ padding: '20px 0 0 0' }}>
                 <GridComponent dataSource={data} height={315} ref={g => grid = g}>
                     <ColumnsDirective>
                         <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
@@ -507,13 +507,13 @@ function App() {
     })
     return (
         <div>
-            <label style={{ padding: '10px 10px 26px 0' }}>Select column name  :</label>
+            <label style={{ padding: '10px 10px 10px 0' }}>Select column name  :</label>
             <DropDownListComponent dataSource={alignmentData} ref={d => dropDown = d} index={0} width="100" fields={field}></DropDownListComponent><br/>
-            <label style={{ padding: '30px 17px 0 0' }}>Enter new header text :</label>
+            <label style={{ padding: '10px 17px 0 0' }}>Enter new header text :</label>
             <TextBoxComponent ref={t => textBox = t} placeholder="Enter new header text" width='200' />
-            <label style={{ padding: '30px 17px 0 0' }}>Click the change button :</label>
+            <label style={{ padding: '10px 17px 0 0' }}>Click the change button :</label>
             <ButtonComponent id="button" cssClass="e-outline" onClick={changeHeaderText}>Change</ButtonComponent>
-            <div style={{ padding: '40px 0 0 0' }}>
+            <div style={{ padding: '20px 0 0 0' }}>
                 <GridComponent dataSource={data} height={315} ref={g => grid = g}>
                     <ColumnsDirective>
                         <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
@@ -582,14 +582,14 @@ function App() {
 
   return (
     <div>
-      <label style={{ padding: '10px 10px 26px 0' }}>Select column name  :</label>
+      <label style={{ padding: '10px 10px 10px 0' }}>Select column name  :</label>
       <DropDownListComponent dataSource={alignmentData} ref={d => dropDown = d} index={0} width="100" fields={field}></DropDownListComponent><br/>
-      <label style={{ padding: '30px 17px 0 0' }}>Enter new header text :</label>
+      <label style={{ padding: '10px 17px 0 0' }}>Enter new header text :</label>
       <TextBoxComponent ref={t => textBox = t} placeholder="Enter new header text" width='200' />
-      <label style={{ padding: '30px 17px 0 0' }}>Click the change button :</label>
+      <label style={{ padding: '10px 17px 0 0' }}>Click the change button :</label>
       <ButtonComponent id="button" cssClass="e-outline" onClick={changeHeaderText}>Change</ButtonComponent>
-      <div style={{ padding: '40px 0 0 0' }}>
-        <GridComponent dataSource={data} height={315} ref={g => grid = g} >
+      <div style={{ padding: '20px 0 0 0' }}>
+        <GridComponent dataSource={data} height={250} ref={g => grid = g} >
           <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
             <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
@@ -634,14 +634,14 @@ function App() {
 
   return (
     <div>
-      <label style={{ padding: '10px 10px 26px 0' }}>Select column name  :</label>
+      <label style={{ padding: '10px 10px 10px 0' }}>Select column name  :</label>
       <DropDownListComponent dataSource={alignmentData} ref={d => dropDown = d} index={0} width="100" fields={field}></DropDownListComponent><br/>
-      <label style={{ padding: '30px 17px 0 0' }}>Enter new header text :</label>
+      <label style={{ padding: '10px 17px 0 0' }}>Enter new header text :</label>
       <TextBoxComponent ref={t => textBox = t} placeholder="Enter new header text" width='200' />
-      <label style={{ padding: '30px 17px 0 0' }}>Click the change button :</label>
+      <label style={{ padding: '10px 17px 0 0' }}>Click the change button :</label>
       <ButtonComponent id="button" cssClass="e-outline" onClick={changeHeaderText}>Change</ButtonComponent>
-      <div style={{ padding: '40px 0 0 0' }}>
-        <GridComponent dataSource={data} height={315} ref={g => grid = g} >
+      <div style={{ padding: '20px 0 0 0' }}>
+        <GridComponent dataSource={data} height={250} ref={g => grid = g} >
           <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
             <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
@@ -694,8 +694,8 @@ function App() {
   return (
     <div>
       <ButtonComponent cssClass="e-success" onClick={changeHeaderText}>Change Header Text</ButtonComponent>
-      <div style={{ padding: '40px 0 0 0' }}>
-        <GridComponent dataSource={data} height={315} ref={g => grid = g} >
+      <div style={{ padding: '20px 0 0 0' }}>
+        <GridComponent dataSource={data} height={300} ref={g => grid = g} >
           <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='OrderID' width='100' />
             <ColumnDirective field='CustomerID' headerText='CustomerID' width='120' />
@@ -733,8 +733,8 @@ function App() {
   return (
     <div>
       <ButtonComponent cssClass="e-success" onClick={changeHeaderText}>Change Header Text</ButtonComponent>
-      <div style={{ padding: '40px 0 0 0' }}>
-        <GridComponent dataSource={data} height={315} ref={g => grid = g} >
+      <div style={{ padding: '20px 0 0 0' }}>
+        <GridComponent dataSource={data} height={300} ref={g => grid = g} >
           <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='OrderID' width='100' />
             <ColumnDirective field='CustomerID' headerText='CustomerID' width='120' />
@@ -1020,8 +1020,8 @@ function App() {
     return (
         <div>
             <ButtonComponent onClick={refreshHeader}>Refresh Header</ButtonComponent>
-            <div style={{ padding: '40px 0 0 0' }}>
-                <GridComponent ref={g => grid = g} dataSource={data} height={315} >
+            <div style={{ padding: '20px 0 0 0' }}>
+                <GridComponent ref={g => grid = g} dataSource={data} height={300} >
                     <ColumnsDirective>
                         <ColumnDirective field='OrderID' headerText='OrderID' width='100' />
                         <ColumnDirective field='CustomerID' headerText='CustomerID' width='120' />
@@ -1051,8 +1051,8 @@ function App() {
     return (
         <div>
             <ButtonComponent onClick={refreshHeader}>Refresh Header</ButtonComponent>
-            <div style={{ padding: '40px 0 0 0' }}>
-                <GridComponent ref={g => grid = g} dataSource={data} height={315} >
+            <div style={{ padding: '20px 0 0 0' }}>
+                <GridComponent ref={g => grid = g} dataSource={data} height={300} >
                     <ColumnsDirective>
                         <ColumnDirective field='OrderID' headerText='OrderID' width='100' />
                         <ColumnDirective field='CustomerID' headerText='CustomerID' width='120' />

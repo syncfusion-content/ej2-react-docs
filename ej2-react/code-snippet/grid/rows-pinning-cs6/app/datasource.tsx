@@ -1,4 +1,4 @@
-export const data:object[] = [
+export const taskData:object[] = [
   {
     "TaskID": "TASK-001",
     "Title": "Optimize accessControl process",
