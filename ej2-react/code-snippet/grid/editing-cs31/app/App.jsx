@@ -135,7 +135,7 @@ function App() {
   };
   return (<div>
     <GridComponent id='grid' ref={g => grid = g} dataSource={employeeDetails} editSettings={editOptions}
-      toolbar={toolbarOptions} created={create} actionBegin={actionBegin}>
+      toolbar={toolbarOptions} created={create} actionBegin={actionBegin} height={268}>
       <ColumnsDirective>
         <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign="Right" isPrimaryKey={true} />
         <ColumnDirective field='Role' headerText='Role' width='160' editType='dropdownedit' edit={roleParams} />

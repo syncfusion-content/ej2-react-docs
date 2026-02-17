@@ -97,9 +97,9 @@ Custom aggregates in the Syncfusion<sup style="font-size:70%">&reg;</sup> React 
 
 To utilize custom aggregation, specify the [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn#type) property as `Custom` and provide the `customAggregate` function in the [customAggregate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn#customaggregate) property.
 
-Within the `customAggregateFn` function, receive input data containing a `result` property. The function calculates the count of objects where the "ShipCountry" field equals "Brazil" and returns the count with a descriptive label.
+Within the `customAggregateFn` function, receive input data containing a `result` property. The function calculates the count of objects where the "Ship Country" field equals "Brazil" and returns the count with a descriptive label.
 
-The following example shows exporting the Grid with a custom aggregate that calculates the "Brazil" count in the "ShipCountry" column.
+The following example shows exporting the Grid with a custom aggregate that calculates the "Brazil" count in the "Ship Country" column.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -145,9 +145,9 @@ The following example demonstrates export with cell and row spanning using `quer
 
 ## Merge duplicate cells in specific column and export in Grid
 
-Duplicate cells (based on their values) in a specific column of the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid can be merged. This is achieved by utilizing the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid#databound) event. Additionally, merge duplicate cells in the specified column during export using the [pdfQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#pdfquerycellinfo) event for PDF format. This functionality improves data readability and provides a clearer visual representation.
+Duplicate cells (based on their values) in a specific column of the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid can be merged. This is achieved by utilizing the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid#databound) event. Additionally, merge duplicate cells in the specified column during export using the [pdfQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#pdfquerycellinfo) event for PDF format. This functionality improves data readability and provides a clearer visual representation.
 
-The following example demonstrates merging duplicate cells in the "OrderID" column in both Grid view and export:
+The following example demonstrates merging duplicate cells in the "Order ID" column in both Grid view and export:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -172,7 +172,7 @@ The exporting functionality in the Syncfusion<sup style="font-size:70%">&reg;</s
 
 To apply a custom date format to Grid columns during export, use the [format](https://ej2.syncfusion.com/react/documentation/api/grid/column#format) property. This property allows definition of a custom format using format options.
 
-The following example demonstrates exporting Grid data with a custom date format. In this example, the formatOptions object is used as the `format` property for the "OrderDate" column. This custom date format displays the date in the format of day-of-the-week, month abbreviation, day, and 2-digit year (e.g., Thu, Jul 4, '96).
+The following example demonstrates exporting Grid data with a custom date format. In this example, the formatOptions object is used as the `format` property for the "Order Date" column. This custom date format displays the date in the format of day-of-the-week, month abbreviation, day, and 2-digit year (e.g., Thu, Jul 4, '96).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -398,7 +398,7 @@ export default App;
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid allows customization of the child Grid's PDF export options, enabling precise control over data formatting before export. This functionality is achieved using the [exportDetailDataBound](https://ej2.syncfusion.com/react/documentation/api/grid#exportdetaildatabound) event, which triggers for each child Grid during the export process. This event provides access to the child Grid instance, allowing modifications to its column formatting before generating the PDF document.
 
-In the following example, the `exportDetailDataBound` event modifies the "OrderDate" column of the child Grid. By setting the column's [format](https://ej2.syncfusion.com/react/documentation/api/grid/column#format) property, the date values display as `dd/MM/yyyy` when exported to PDF document.
+In the following example, the `exportDetailDataBound` event modifies the "Order Date" column of the child Grid. By setting the column's [format](https://ej2.syncfusion.com/react/documentation/api/grid/column#format) property, the date values display as `dd/MM/yyyy` when exported to PDF document.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

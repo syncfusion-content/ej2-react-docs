@@ -20,7 +20,7 @@ function App() {
   return (<div>
     <label style={{ padding: "30px 17px 0 0" }}> Select new row position:</label>
     <DropDownListComponent index={0} width="100" dataSource={positionData} change={changePosition}></DropDownListComponent>
-    <GridComponent ref={g => grid = g} dataSource={data} editSettings={editOptions} toolbar={toolbar} height={300}>
+    <GridComponent ref={g => grid = g} dataSource={data} editSettings={editOptions} toolbar={toolbar} height={250}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' validationRules={orderIDRules} width='100' textAlign="Right" isPrimaryKey={true} />
         <ColumnDirective field='CustomerID' validationRules={customerIDRules} headerText='Customer ID' width='120' />

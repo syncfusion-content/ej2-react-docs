@@ -5,7 +5,7 @@ import * as React from 'react';
 import { data } from './datasource';
 
 function App() {
-    let grid:;
+    let grid;
     const clickHandler = () => {
         grid.enablePersistence = false;
         window.localStorage.setItem("gridGrid", "");

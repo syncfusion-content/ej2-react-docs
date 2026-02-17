@@ -18,8 +18,8 @@ System.config({
     },
     map: {
         app: 'app',
-        ts: "https://unpkg.com/plugin-typescript@4.0.10/lib/plugin.js",
-        typescript: "https://unpkg.com/typescript@2.2.2/lib/typescript.js",
+        ts: "https://unpkg.com/plugin-typescript@8.0.0/lib/plugin.js",
+        typescript: "https://unpkg.com/typescript@5.9.3/lib/typescript.js",
         "@syncfusion/ej2-inputs": "syncfusion:ej2-inputs/dist/ej2-inputs.umd.min.js",
         "@syncfusion/ej2-calendars": "syncfusion:ej2-calendars/dist/ej2-calendars.umd.min.js",
         "@syncfusion/ej2-lists": "syncfusion:ej2-lists/dist/ej2-lists.umd.min.js",

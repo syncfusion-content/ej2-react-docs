@@ -90,8 +90,8 @@ reorderColumnByIndex(fromIndex: number, toIndex: number): void
 
 **Parameters:**
 
-* **fromIndex**: The current index of the column to move.
-* **toIndex**: The new index where the column should be moved.
+* `fromIndex`: The current index of the column to move.
+* `toIndex`: The new index where the column should be moved.
 
 
 In this example, the "Customer ID" column, located at index 1, is moved to index 3 when clicking the "Reorder Column by Index" button.
@@ -123,8 +123,8 @@ reorderColumnByTargetIndex(fieldName: string | string[], toIndex: number): void
 ```
 
 **Parameters:**
-* **`fieldName`**: The field name (or array of field names) of the column(s) to be reordered.
-* **`toIndex`**: The target index where the column(s) should be moved.
+* `fieldName`: The field name (or array of field names) of the column(s) to be reordered.
+* `toIndex`: The target index where the column(s) should be moved.
 
 The following example demonstrates the use of the `reorderColumnByTargetIndex` method to reorder both single and multiple columns:
 
@@ -155,8 +155,8 @@ reorderColumns(fromFName: string | string[], toFName: string): void
 ```
 
 **Parameters:**
-* **`fromFName*`*: The field name (or array of field names) of the column(s) to be moved.
-* **`toFName`**: The field name of the target column before which the source column(s) should be placed.
+* `fromFName`: The field name (or array of field names) of the column(s) to be moved.
+* `toFName`: The field name of the target column before which the source column(s) should be placed.
 
 The following example demonstrates the use of the `reorderColumns` method to reorder both single and multiple columns based on field names by clicking the respective buttons.
 
@@ -187,8 +187,8 @@ reorderColumnByModel(fromColumn: Column, toColumn: Column): void
 ```
 
 **Parameters:**
-* **`fromColumn`**: The column object to move.
-* **`toColumn`**: The target column object before which the `fromColumn` should be placed.
+* `fromColumn`: The column object to move.
+* `toColumn`: The target column object before which the `fromColumn` should be placed.
 
 **When to use this method:**
 

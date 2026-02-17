@@ -17,7 +17,7 @@ function App() {
   const verifiedTemplate = (props) => {
     return (<span>TrueCount: {props.TrueCount}</span>)
   }
-  return (<GridComponent dataSource={data} height={315} allowGrouping={true} groupSettings={groupSettings}>
+  return (<GridComponent dataSource={data} height={268} allowGrouping={true} groupSettings={groupSettings}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />

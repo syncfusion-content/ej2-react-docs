@@ -22,7 +22,7 @@ function App() {
   return (
     <GridComponent id="CaptionTemplateGrid" ref={(g) => (grid = g)} dataSource={employeeData} toolbar={toolbar}
       allowGrouping={true} groupSettings={groupOptions} allowExcelExport={true} toolbarClick={toolbarClick}
-      exportGroupCaption={exportGroupCaption} height={315}>
+      exportGroupCaption={exportGroupCaption} height={260}>
       <ColumnsDirective>
         <ColumnDirective field="EmployeeID" headerText="Employee ID" width="120" textAlign="Right" />
         <ColumnDirective field="FirstName" headerText="First Name" width="120" />

@@ -46,7 +46,7 @@ The default column menu items are displayed in the following table.
 
 The column menu in Grid can be controlled at both the Grid level and the column level. When the Grid's `showColumnMenu` property is enabled, every column displays its menu by default. To prevent the menu from appearing for a particular column, the column definition itself must explicitly set the `showColumnMenu` property to `false`.
 
-The following example demonstrates disabling the column menu for the "OrderID" column by setting the `showColumnMenu` property to `false`.
+The following example demonstrates disabling the column menu for the "Order ID" column by setting the `showColumnMenu` property to `false`.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -67,7 +67,7 @@ The following example demonstrates disabling the column menu for the "OrderID" c
 
 ## Adding custom column menu items
 
-The custom column menu item feature in Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows extending the default column menu with additional options or replacing it entirely with custom items, depending on requirements. These items are defined using the [columnMenuItems](https://ej2.syncfusion.com/react/documentation/api/grid#columnmenuitems) property, which accepts a collection of [columnMenuItemModel](https://ej2.syncfusion.com/react/documentation/api/grid/columnMenuItemModel) objects. Each object specifies attributes such as `text`, `id`, and `iconCss` to represent the custom menu item.
+The custom column menu item feature in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid allows extending the default column menu with additional options or replacing it entirely with custom items, depending on requirements. These items are defined using the [columnMenuItems](https://ej2.syncfusion.com/react/documentation/api/grid#columnmenuitems) property, which accepts a collection of [columnMenuItemModel](https://ej2.syncfusion.com/react/documentation/api/grid/columnMenuItemModel) objects. Each object specifies attributes such as `text`, `id`, and `iconCss` to represent the custom menu item.
 
 The functionality of these items is implemented through the [columnMenuClick](https://ej2.syncfusion.com/react/documentation/api/grid#columnmenuclick) event. This event is triggered whenever a menu item is selected, enabling identification of the item by its `id` and execution of the corresponding action.
 
@@ -115,7 +115,7 @@ The following example demonstrates hiding the `Filter` item in the column menu f
 
 ## Render nested column menu
 
-Nested column menus in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid provide an organized way to display extended options within column headers. Instead of listing all actions at the same level, items can be grouped into sub-menus, making the menu easier to navigate and more structured. This feature is enabled through the `columnMenuItems` property, which accepts an array of built-in menu item strings or custom menu item objects. By defining items with nested structures, additional actions related to a column can be grouped logically under sub-menus.
+Nested column menus in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provide an organized way to display extended options within column headers. Instead of listing all actions at the same level, items can be grouped into sub-menus, making the menu easier to navigate and more structured. This feature is enabled through the `columnMenuItems` property, which accepts an array of built-in menu item strings or custom menu item objects. By defining items with nested structures, additional actions related to a column can be grouped logically under sub-menus.
 
 The `columnMenuItems` property can be set up to include a nested menu, such as "Sub Menu", alongside the existing default column menu items. This allows the column menu to display both the standard options and additional grouped actions within a structured sub-menu.
 
@@ -176,7 +176,7 @@ The column menu icon in Grid can be changed by overriding the default CSS class 
 
 ## Column menu events
 
-Column menu events in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid provide ways to customize behavior when the menu is opened or when an item is clicked. These events make it possible to extend functionality or apply specific logic based on user interactions.
+Column menu events in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provide ways to customize behavior when the menu is opened or when an item is clicked. These events make it possible to extend functionality or apply specific logic based on user interactions.
 
 | Event | Description |
 |-------|-------------|

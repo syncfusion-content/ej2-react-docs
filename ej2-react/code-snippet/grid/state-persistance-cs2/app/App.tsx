@@ -30,7 +30,7 @@ function App() {
       </div>
       
     <GridComponent id="Grid" dataSource={data} allowPaging={true} allowFiltering={true} allowSorting={true} allowReordering={true}
-    allowGrouping={true} enablePersistence={true} ej2StatePersistenceVersion={gridVersion}  height={315}
+    allowGrouping={true} enablePersistence={true} ej2StatePersistenceVersion={gridVersion}  height={180}
     ref={g => grid = g}>
         <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right"/>

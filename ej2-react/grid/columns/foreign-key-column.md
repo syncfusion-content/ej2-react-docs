@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Foreign key column in React Grid component
 
-The foreign key column in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component displays related data from a foreign key data source. This feature enables representation of foreign key relationships between data sources, displaying meaningful values instead of raw key identifiers.
+The foreign key column in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component displays related data from a foreign key data source. This feature enables representation of foreign key relationships between data sources, displaying meaningful values instead of raw key identifiers.
 
 **Example:**
 

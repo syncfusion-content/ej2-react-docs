@@ -517,7 +517,7 @@ export default App;
 Paging divides large datasets into smaller pages to improve performance and usability.
 
 **Instructions:**
-1. Enable paging by setting [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid#allowpaging) to `true` on the Grid so that paging requests include the required `skip` and `take` parameters.
+1. Enable paging by setting [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid#allowpaging) to "true" on the Grid so that paging requests include the required `skip` and `take` parameters.
 
 2. Configure **pageSettings** to define the page size and any additional paging options needed for the intended layout and interaction design.
 
@@ -688,7 +688,7 @@ Searching allows users to locate rows by supplying a term that can be checked ag
 Sorting allows records to be organized by clicking on column headers to arrange data in ascending or descending order.
 
 **Instructions:**
-1. Enable sorting by setting [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) to `true` on the Grid so that sort changes are emitted.
+1. Enable sorting by setting [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) to "true" on the Grid so that sort changes are emitted.
 
     ```ts
         <GridComponent
@@ -749,7 +749,7 @@ Sorting allows records to be organized by clicking on column headers to arrange 
 Filtering helps refine records by applying conditions on column values. It allows selecting specific values or using simple comparison options such as equals, greater than, or less than to display only the matching data.
 
 **Instructions:**
-1. Enable filtering by setting [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) to `true` on the Grid so that filter interactions are sent to the server.
+1. Enable filtering by setting [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) to "true" on the Grid so that filter interactions are sent to the server.
 2. Optionally configure the filtering user interface (for example, Menu, CheckBox, or Excel style) by setting the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid#filtersettings) property.
 
     ```ts
@@ -1005,7 +1005,7 @@ def _handle_remove(viewset, payload) -> Response:
 
 ![Delete_Payload](../images/grid-django-crud-delete.png)
 
-> Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#mode) for the Grid component. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property is set to `true` for a specific Grid Column which has unique values.
+> Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#mode) for the Grid component. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property is set to "true" for a specific Grid Column which has unique values.
 
 ## Running the application
 

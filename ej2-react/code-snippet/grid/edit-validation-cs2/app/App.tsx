@@ -55,12 +55,12 @@ function App() {
       }
     }
   }
-  return (<div>
+  return (<div style={{ padding: '10px'}}>
     <div>
       <CheckBoxComponent ref={c => checkBox = c} label='Enable/Disable validation rule for customerID column' checked={true} change={checkboxChange}></CheckBoxComponent>
     </div>
     <GridComponent ref={g => grid = g} dataSource={data} editSettings={editOptions}
-      toolbar={toolbarOptions} height={315} actionComplete={onActionComplete}>
+      toolbar={toolbarOptions} height={265} actionComplete={onActionComplete}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' validationRules={orderIDRules} width='100' textAlign="Right" isPrimaryKey={true} />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />

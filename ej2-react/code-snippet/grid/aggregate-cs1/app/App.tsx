@@ -13,7 +13,7 @@ function App() {
   const footerMin = (props) => {
     return (<span>Min: {props.Min}</span>)
   }
-  return (<GridComponent dataSource={data} allowPaging={true} height={315}>
+  return (<GridComponent dataSource={data} allowPaging={true} height={170}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />

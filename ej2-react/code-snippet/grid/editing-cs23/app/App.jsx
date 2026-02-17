@@ -52,7 +52,7 @@ function App() {
       grid.updateRow(0, { OrderID: 10248, CustomerID: 'RTER', ShipCity: 'America', ShipName: 'Hanari' });
     }
     else {
-      grid.setCellValue((grid.currentViewData[0] as any).OrderID, 'CustomerID', 'Value Changed');
+      grid.setCellValue((grid.currentViewData[0]).OrderID, 'CustomerID', 'Value Changed');
     }
   }
   return (<div> <ButtonComponent id='edit' onClick={clickEvents}>Edit</ButtonComponent>

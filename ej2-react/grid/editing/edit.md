@@ -80,6 +80,8 @@ For a comprehensive overview of edit modes and [edit types](./edit-types.md) ava
 
 {% youtube "https://www.youtube.com/watch?v=vedri_WN0ug" %}
 
+<br>
+
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/editing-cs16/app/App.jsx %}
@@ -381,9 +383,9 @@ The following example demonstrates how to edit complex nested data. The "FirstNa
 
 ## Edit foreign key column
 
-Foreign key columns display values from a related table. By default, the Grid renders a `DropDownList` editor for foreign key columns. However, this can be customized to use other components like `ComboBox` to enable search and filtering capabilities (e.g., for enhanced data discovery).
+Foreign key columns display values from a related table. By default, the Grid renders a `DropDownList` component editor for foreign key columns. However, this can be customized to use other components like `ComboBox` to enable search and filtering capabilities (e.g., for enhanced data discovery).
 
-Use the [editTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/column#edittemplate) property to customize the editor component for foreign key columns. The following example demonstrates how to render a `ComboBox` component instead of `DropDownList` for the "Employee Name" foreign key column.
+Use the [editTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/column#edittemplate) property to customize the editor component for foreign key columns. The following example demonstrates how to render a `ComboBox` component instead of `DropDownList` component for the "Employee Name" foreign key column.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

@@ -14,7 +14,7 @@ Each row typically represents a single record or item from a data source. Rows i
 
 ## Styling rows 
 
-Customizing the styles of rows in a Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows modification of row appearance to meet specific design requirements. This feature is useful when highlighting certain rows or changing the font style, background color, and other properties of the row to enhance the visual appeal of the grid. To customize the row styles in the grid, the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provides CSS, properties, methods, and event support.
+Customizing the styles of rows in a Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid allows modification of row appearance to meet specific design requirements. This feature is useful when highlighting certain rows or changing the font style, background color, and other properties of the row to enhance the visual appeal of the grid. To customize the row styles in the grid, the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provides CSS, properties, methods, and event support.
 
 ### Using event
 
@@ -47,7 +47,7 @@ Row styles can be applied using CSS selectors. The Grid provides a class name fo
 
 **Customize alternate rows**
 
-The appearance of alternate rows can be customized using CSS. This can be useful for improving the readability of the data and making it easier to distinguish between rows. By default, Syncfusion<sup style="font-size:70%">&reg;</sup> Grid provides the CSS class `.e-altrow` to style the alternate rows. This default style can be customized by overriding the `.e-altrow` class with custom CSS styles. 
+The appearance of alternate rows can be customized using CSS. This can be useful for improving the readability of the data and making it easier to distinguish between rows. By default, The Grid provides the CSS class `.e-altrow` to style the alternate rows. This default style can be customized by overriding the `.e-altrow` class with custom CSS styles. 
 
 To change the background color of the alternate rows, add the following CSS code to the application's stylesheet:
 
@@ -141,7 +141,7 @@ The following example demonstrates customizing the appearance of the row using t
 
 ## Row height
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows customization of the height of rows based on needs. This feature is useful when displaying more content in a row or when reducing the height of rows to fit content. This can be achieved by using the [rowHeight](https://ej2.syncfusion.com/react/documentation/api/grid#rowheight) property of the Grid component. This property allows changing the height of the entire grid row to a desired value.
+The Grid allows customization of the height of rows based on needs. This feature is useful when displaying more content in a row or when reducing the height of rows to fit content. This can be achieved by using the [rowHeight](https://ej2.syncfusion.com/react/documentation/api/grid#rowheight) property of the Grid component. This property allows changing the height of the entire grid row to a desired value.
 
 The following example demonstrates dynamically changing the height of the rows using the `rowHeight` property.
 
@@ -489,7 +489,7 @@ export default App;
 
 ### Change default frozen rows line color
 
-The frozen line background color of frozen rows in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component can be customized by applying custom CSS styles to the specific frozen row. This allows changing the background color of frozen rows to match the application's design and theme.
+The frozen line background color of frozen rows in the Grid component can be customized by applying custom CSS styles to the specific frozen row. This allows changing the background color of frozen rows to match the application's design and theme.
 
 To change the default frozen rows line color, use the following CSS class:
 
@@ -537,7 +537,7 @@ The autofill feature is not compatible with frozen rows.
 
 ## Add a new row programmatically
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid provides a way to add a new row to the grid programmatically. This feature is useful when adding a new record to the grid without manually entering data in the grid. This can be done using the [addRecord](https://ej2.syncfusion.com/react/documentation/api/grid#addrecord) method of the Grid.
+The Grid provides a way to add a new row to the grid programmatically. This feature is useful when adding a new record to the grid without manually entering data in the grid. This can be done using the [addRecord](https://ej2.syncfusion.com/react/documentation/api/grid#addrecord) method of the Grid.
 
 The addRecord method takes two parameters:
 
@@ -569,7 +569,7 @@ Here’s an example that demonstrates adding a new row using the addRecord metho
 
 ## Show or hide a row using external actions
 
-In a Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, rows can be shown or hidden based on some external action, such as a checkbox click. This can be useful in scenarios where certain rows should be hidden from the grid temporarily without removing them from the underlying data source. This can be achieved by using the [getRowByIndex](https://ej2.syncfusion.com/react/documentation/api/grid#getrowbyindex) and [getRowsObject](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#getrowsobject) methods of the grid along with the [change](https://ej2.syncfusion.com/react/documentation/api/check-box#change) event of the checkbox.
+In the Grid, rows can be shown or hidden based on some external action, such as a checkbox click. This can be useful in scenarios where certain rows should be hidden from the grid temporarily without removing them from the underlying data source. This can be achieved by using the [getRowByIndex](https://ej2.syncfusion.com/react/documentation/api/grid#getrowbyindex) and [getRowsObject](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#getrowsobject) methods of the grid along with the [change](https://ej2.syncfusion.com/react/documentation/api/check-box#change) event of the checkbox.
 
 The `getRowsObject` method returns an array of row objects that represents all the rows in the grid. This method allows iteration through all the rows and access to their data and index.
 

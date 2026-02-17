@@ -39,13 +39,13 @@ The following example demonstrates drag and drop within the Grid:
  {% previewsample "page.domainurl/code-snippet/grid/row-drag-cs2" %}
 
 > * Selection feature must be enabled in the Grid to allow row selection before drag and drop operations. 
->* Dragging multiple rows simultaneously requires multiple selection to be active. This is enabled by setting the [type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) property to `Multiple`.
+> * Dragging multiple rows simultaneously requires multiple selection to be active. This is enabled by setting the [type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#type) property to `Multiple`.
 
 ## Drag and drop to another grid
 
 The grid row drag and drop allows drag grid rows and drop to another grid. To enable this feature, set the [allowRowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/grid#allowrowdraganddrop) property to `true` in the source Grid component.
 
-To specify the target Grid component where rows should be dropped, configure the [rowDropSettings.targetID](https://ej2.syncfusion.com/react/documentation/api/grid/rowDropSettings#targetid) property. The `targetID` property references the ID of the destination Grid component.
+To specify the target Grid component where rows should be dropped, configure the [rowDropSettings.targetID](https://ej2.syncfusion.com/react/documentation/api/grid/rowDropSettings#targetid) property. The `targetID` property references the "ID" of the destination Grid component.
 
 The following example demonstrates row drag and drop between different Grid components:
 
@@ -67,8 +67,8 @@ The following example demonstrates row drag and drop between different Grid comp
  {% previewsample "page.domainurl/code-snippet/grid/row-drag-cs1" %}
 
 ## Drag and drop to custom components
-
-The Grid provides the feature to drag and drop grid rows to any custom component. This capability enables seamless data movement between the Grid and external components without manual copy-paste operations. To enable row drag and drop grid rows to custom components, set the `allowRowDragAndDrop` property to `true` and define the custom component ID in the `targetID` property of the `rowDropSettings` object. The ID provided in `targetID` should correspond to the ID of the target component where the rows are to be dropped.
+ 
+The Grid supports row drag-and-drop into custom components, enabling seamless data transfer without manual copy-paste. To enable this feature, set the `allowRowDragAndDrop` property to `true` and specify the target component's "ID" in the `targetID` property of the `rowDropSettings` object.
 
 Follow these steps to implement row drag and drop from Grid to `TreeGrid` component:
 
@@ -88,7 +88,7 @@ const gridEditSettings = { allowDeleting: true };
 ```
 **Step 2: Configure treeview component**
 
-Import and inject the `Edit` module for the TreeGrid, and configure [editSettings](https://ej2.syncfusion.com/react/documentation/api/treegrid/editsettings) to enable adding rows to the TreeGrid.
+The import and injection of the `Edit` module, together with the configuration of [editSettings](https://ej2.syncfusion.com/react/documentation/api/treegrid/editsettings), enable the addition of rows in the `TreeGrid` component.
 
 ```js
 import { TreeGridComponent, Edit as TreeEdit } from '@syncfusion/ej2-react-treegrid';
@@ -116,7 +116,7 @@ const selectionOptions = { type: 'Multiple' };
 </GridComponent>
 ```
 
-**Step 4: Handle the rowDrop event**
+**Step 4: Handle the `rowDrop` event**
 
 Implement the [rowDrop](https://ej2.syncfusion.com/react/documentation/api/grid#rowdrop) event to manage data transfer. Cancel the default behavior, add records to the target component using [addRecord](https://ej2.syncfusion.com/react/documentation/api/treegrid#addrecord), and remove them from the Grid using [deleteRecord](https://ej2.syncfusion.com/react/documentation/api/grid#deleterecord).
 
@@ -167,11 +167,11 @@ The following example demonstrates transferring selected Grid rows to a `TreeGri
 
 ## Hide drag and drop icons
 
-By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid displays drag icon in each row when enabling the row drag and drop feature. To hide these icons, set the [targetID](https://ej2.syncfusion.com/react/documentation/api/grid/rowDropSettings#targetid) property of the [rowDropSettings](https://ej2.syncfusion.com/react/documentation/api/grid/rowDropSettings) object to the current Grid's ID.
+By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid displays drag icon in each row when enabling the row drag and drop feature. To hide these icons, set the [targetID](https://ej2.syncfusion.com/react/documentation/api/grid/rowDropSettings#targetid) property of the [rowDropSettings](https://ej2.syncfusion.com/react/documentation/api/grid/rowDropSettings) object to the current Grid's ID.
 
 When `targetID` references the Grid's own ID, the Grid renders without drag helper icons. Customize drag and drop behavior by binding to the [rowDrop](https://ej2.syncfusion.com/react/documentation/api/grid#rowdrop) event. Within the event handler, prevent the default action by setting `args.cancel` to `true`, then reorder rows using the [reorderRows](https://ej2.syncfusion.com/react/documentation/api/grid#reorderrows) method.
 
-The following example demonstrates hide drag and drop icons in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid:
+The following example demonstrates hide drag and drop icons in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -333,5 +333,5 @@ The row drag and drop feature offers focused functionality, working seamlessly w
 
 ## See also
 
-* [Sorting data in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid](../sorting)
-* [Filtering data in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid](../filtering/filtering)
+* [Sorting data in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid](../sorting)
+* [Filtering data in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid](../filtering/filtering)

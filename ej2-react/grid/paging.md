@@ -662,7 +662,7 @@ export default App;
 
 ## How to get the pager element
 
-The pager element in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid can be obtained using the [getPager](https://ej2.syncfusion.com/react/documentation/api/grid#getpager) method which returns an HTML element representing the pager. This enables customizing the pager's appearance or behavior to meet application requirements.
+The pager element in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid can be obtained using the [getPager](https://ej2.syncfusion.com/react/documentation/api/grid#getpager) method which returns an HTML element representing the pager. This enables customizing the pager's appearance or behavior to meet application requirements.
 
 ```ts
   grid.getPager()
@@ -785,7 +785,7 @@ By default, pager displayed at the bottom of the grid. It is also possible to di
 
 ## Pager events 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component provides two primary events for handling paging operations:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provides two primary events for handling paging operations:
 
 - [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid#actionbegin): Triggered before a paging action occurs, such as changing the page or page size. Use this event to customize or control the behavior of paging actions.
 

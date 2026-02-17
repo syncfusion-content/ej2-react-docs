@@ -5,7 +5,7 @@ import { getData } from './order-service';
 
 function App() {
   let grid: GridComponent | null;
-  const groupSettings: GroupSettingsModel = {columns: ['ShipCity']};
+  const groupSettings: GroupSettingsModel = {columns: ['ShipCountry']};
   const filterSettings: FilterSettingsModel = { columns: [{ field: 'CustomerID', matchCase: false, operator: 'startswith', predicate: 'and', value: 'A' }]};
   const pageSettings: PageSettingsModel = { pageSize: 12, currentPage: 2 };
   const sortSettings: SortSettingsModel = { columns: [{ field: 'OrderID', direction: 'Descending' }] };

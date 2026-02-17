@@ -16,7 +16,7 @@ function App() {
   return (<div>
     <label style={{ padding: "30px 17px 0 0" }} >Choose checkbox selection mode:</label>
     <DropDownListComponent index={0} width={150} dataSource={dropdownData} change={valueChange}></DropDownListComponent>
-    <GridComponent ref={g => grid = g} dataSource={data} height={315}>
+    <GridComponent ref={g => grid = g} dataSource={data} height={300}>
       <ColumnsDirective>
         <ColumnDirective type='checkbox' width='50' />
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />

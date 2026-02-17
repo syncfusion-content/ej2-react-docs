@@ -244,11 +244,7 @@ export default App;
 
 ### Render ColorPicker component in a column
 
-<<<<<<< HEAD
 The Syncfusion<sup style="font-size:70%">&reg;</sup> [ColorPicker](https://ej2.syncfusion.com/react/documentation/color-picker/getting-started) component provides an intuitive method to select colors from a predefined color palette or custom colors. This component is suitable for scenarios such as picking a theme color or changing element colors on a page.
-=======
-The Syncfusion<sup style="font-size:70%">&reg;</sup> [ColorPicker](https://ej2.syncfusion.com/react/documentation/color-picker/getting-started) component provides a user-friendly way to select colors from a pre-defined color palette or custom colors. This component is useful for scenarios such as picking a theme color or changing element colors on a page.
->>>>>>> 872db1b5d2947e36facb9c247fbf32aae106285e
 
 ```
 <div>
@@ -444,7 +440,7 @@ The following example demonstrates a button element rendered in the "Employee Da
 {% previewsample "page.domainurl/code-snippet/grid/template-cs7" %}
 
 ## Use custom helper inside the template
-The Grid supports custom helper functions inside the `template` property of a column. These functions are JavaScript methods that perform specific operations—such as formatting, calculations, or transformations—on row data.
+The Grid allows custom helper functions within a column's `template` property. These JavaScript methods enable formatting, calculations, or transformations on row data.
 
 To use a helper function:
 

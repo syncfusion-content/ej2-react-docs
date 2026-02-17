@@ -27,7 +27,7 @@ function App() {
   }
   return (
     <div>
-      <GridComponent id='Grid' dataSource={inventoryData} height={270} allowPaging={true} toolbar={toolbar} allowExcelExport={true} toolbarClick={toolbarClick} ref={g => grid = g} excelQueryCellInfo={excelQueryCellInfo}>
+      <GridComponent id='Grid' dataSource={inventoryData} height={250} allowPaging={true} toolbar={toolbar} allowExcelExport={true} toolbarClick={toolbarClick} ref={g => grid = g} excelQueryCellInfo={excelQueryCellInfo}>
         <ColumnsDirective>
           <ColumnDirective field='Inventor' headerText='Inventor Name' width='120' textAlign='Right' />
           <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' width='150' />

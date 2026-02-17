@@ -48,7 +48,7 @@ cd my-app
 npm run dev
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Grid packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid packages
 
 All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 To install the Grid component, use the following command

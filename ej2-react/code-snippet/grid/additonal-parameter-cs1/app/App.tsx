@@ -4,7 +4,7 @@ import { Query } from "@syncfusion/ej2-data";
 import { data } from "./datasource";
 
 function App() {
-  const gridRef = useRef(null);
+  const gridRef = useRef<GridComponent>(null);
   const [message, setMessage] = useState("");
   const toolbarOptions: ToolbarItems[] = ["ExcelExport"];
   const toolbarClick  = (args: ToolbarClickEventArgs) => {

@@ -54,7 +54,7 @@ function App() {
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' validationRules={customerIDRules} />
       <ColumnDirective field='Freight' headerText='Freight' width='120' textAlign="Right" editType='numericedit' validationRules={freightRules} />
       <ColumnDirective field='OrderDate' headerText='OrderDate' width='150' format={formatOptions} editType='datepickeredit' />
-      <ColumnDirective field='ShipAddress' headerText='Ship Address' width='150' editType="textarea" disableHtmlEncode={false} editTemplate={editTemplate} />
+      <ColumnDirective field='ShipAddress' headerText='Ship Address' width='150' editType="textarea" disableHtmlEncode={false} />
     </ColumnsDirective>
     <Inject services={[Edit, Toolbar, Page]} />
   </GridComponent>

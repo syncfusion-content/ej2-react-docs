@@ -7,7 +7,7 @@ function App() {
   const pageSettings = { pageSize: 12, currentPage: 2 };
   const sortSettings = { columns: [{ field: 'OrderID', direction: 'Descending' }] };
   const filterSettings = { columns: [{ field: 'CustomerID', matchCase: false, operator: 'startswith', predicate: 'and', value: 'A' }] };
-  const groupSettings = { columns: ['ShipCity'] };
+  const groupSettings = { columns: ['ShipCountry'] };
   const created = () => {
     const query = grid.getDataModule().generateQuery(); // Generate the initial query state from the Grid's data module.
     const state = getStateEventArgument(query); // Retrieve the Grid's current state based on the generated query.

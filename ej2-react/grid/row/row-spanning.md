@@ -23,7 +23,7 @@ The `queryCellInfo` event enables row spanning by setting the `rowSpan` attribut
 
 The following example demonstrates row spanning in action:
 
-* "Davolio" cell spans two rows in the "EmployeeName" column.
+* "Davolio" cell spans two rows in the "Employee Name" column.
 * "Lunch Break" cell spans two rows and three columns simultaneously (combined row and column spanning) in the "1:00" column.
 
 {% tabs %}

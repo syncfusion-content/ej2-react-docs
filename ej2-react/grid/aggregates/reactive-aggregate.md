@@ -41,8 +41,8 @@ By default, reactive aggregate updates are not supported in Inline and Dialog ed
 
 To ensure aggregates are updated correctly, they must be refreshed manually using the `aggregateModule.refresh()` method:
 
-- **Inline Edit Mode:** Register an `input` event on the editor (for example, the Freight column). Whenever the value changes, call `aggregateModule.refresh()` to update the aggregate values.
-- **Dialog Edit Mode:** Since multiple editors are rendered inside a dialog, aggregates are refreshed automatically after the data is saved by clicking the Save button. In special cases where an immediate refresh is required for a particular editor before saving, apply the same approach as in Inline mode: bind an `input` event to that editor and call `aggregateModule.refresh()` to update the aggregate values instantly.
+- **Inline edit mode:** Register an `input` event on the editor (for example, the Freight column). Whenever the value changes, call `aggregateModule.refresh()` to update the aggregate values.
+- **Dialog edit mode:** Since multiple editors are rendered inside a dialog, aggregates are refreshed automatically after the data is saved by clicking the Save button. In special cases where an immediate refresh is required for a particular editor before saving, apply the same approach as in Inline mode: bind an `input` event to that editor and call `aggregateModule.refresh()` to update the aggregate values instantly.
 
 The code below registers an `input` event on the "Freight" column editor and manually refreshes aggregate value after changes.
 

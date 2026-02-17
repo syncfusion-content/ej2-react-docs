@@ -265,11 +265,11 @@ The real-time search feature enables searching as each keystroke is entered into
 
 Implementation of real-time search:
 
-1. Bind the `keyup` event to the search input element inside the grid's `created` event.
+1. Bind the `keyup` event to the search input element inside the grid's [created](https://ej2.syncfusion.com/react/documentation/api/grid#created) event.
 2. The `keyup` event triggers the search method on each keystroke.
 3. The grid results update in real-time as typing occurs.
 
-In the following example, the `created` event of the grid binds the `keyup` event to the search input element. When typing occurs, the `keyup` event fires, retrieves the current search text from the input, and calls the grid's `search` method with the new text. This produces real-time filtering as typing happens.
+In the following example, the `created` event of the grid binds the `keyup` event to the search input element. When typing occurs, the `keyup` event fires, retrieves the current search text from the input, and calls the grid's [search](https://ej2.syncfusion.com/react/documentation/api/grid#search) method with the new text. This produces real-time filtering as typing happens.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

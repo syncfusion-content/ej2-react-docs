@@ -115,7 +115,7 @@ Exporting hidden columns in the Syncfusion<sup style="font-size:70%">&reg;</sup>
 
 To export hidden columns of the grid to a PDF file, set the [includeHiddenColumn](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties#includehiddencolumn) property to `true` in the [pdfExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties) property.
 
-The following example demonstrates exporting hidden columns to a PDF file. In this example, the "ShipCity" column, which is not visible in the UI, is exported to the PDF document. The grid can be exported by changing the `pdfExportProperties.includeHiddenColumn` property based on the switch toggle using the [checked](https://ej2.syncfusion.com/react/documentation/api/switch#checked) property of the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component.
+The following example demonstrates exporting hidden columns to a PDF file. In this example, the "Ship City" column, which is not visible in the UI, is exported to the PDF document. The grid can be exported by changing the `pdfExportProperties.includeHiddenColumn` property based on the switch toggle using the [checked](https://ej2.syncfusion.com/react/documentation/api/switch#checked) property of the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -217,7 +217,7 @@ To show or hide columns based on user interaction during the export process, fol
 
 4. Handle the [pdfExportComplete](https://ej2.syncfusion.com/react/documentation/api/grid#pdfexportcomplete) event to restore the column visibility to its original state.
 
-In the following example, the "CustomerID" is initially a hidden column in the grid. However, during the export process, the "CustomerID" column is made visible, while the "ShipCity" column is hidden.
+In the following example, the "Customer ID" is initially a hidden column in the grid. However, during the export process, the "Customer ID" column is made visible, while the "Ship City" column is hidden.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -250,7 +250,7 @@ To implement the show or hide columns feature during PDF export in the Grid, fol
 
 4. Handle the [pdfExportComplete](https://ej2.syncfusion.com/react/documentation/api/grid#pdfexportcomplete) event to restore the column visibility to its original state.
 
-In the following example, the "ShipName" is initially a hidden column in the Grid. However, during the PDF export process, the "ShipName" column is made visible, while the "OrderDate" column is hidden:
+In the following example, the "Ship Name" is initially a hidden column in the Grid. However, during the PDF export process, the "Ship Name" column is made visible, while the "Order Date" column is hidden:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -810,7 +810,7 @@ To customize the grid columns, follow these steps:
 
 3. Trigger the PDF export operation to apply the customized column settings.
 
-The following example demonstrates customizing the grid columns when exporting a document. In this scenario, the attributes for different columns have been customized: "OrderID" with `textAlign` set to `Right`, "CustomerID" with `headerText` as "Customer Name", and "Freight" with `textAlign` set to `Center`, which is not rendered in the grid columns.
+The following example demonstrates customizing the grid columns when exporting a document. In this scenario, the attributes for different columns have been customized: "Order ID" with `textAlign` set to `Right`, "Customer ID" with `headerText` as "Customer Name", and "Freight" with `textAlign` set to `Center`, which is not rendered in the grid columns.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

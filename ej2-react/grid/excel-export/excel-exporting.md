@@ -103,7 +103,7 @@ In order to utilize custom aggregation, specify the [type](https://ej2.syncfusio
 
 Within the `customAggregate` function, the argument contains the data that has a result property. The function calculates the count of objects in this data where the "Ship Country" field value is equal to "Brazil" and returns the count with a descriptive label.
 
-The following example shows exporting the grid with a custom aggregate that shows the calculation of the Brazil count of the "Ship Country" column:
+The following example shows exporting the grid with a custom aggregate that shows the calculation of the "Brazil" count of the "Ship Country" column:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -174,7 +174,7 @@ The following example demonstrates exporting the grid with custom date format. I
 
 ## Merge duplicate cells on export
 
-Duplicate cells (based on their values) in a specific column of the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid can be merged. This can be achieved by utilizing the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid#databound) event. Additionally, duplicate cells in the specified column can be merged during export by using the [excelQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#excelquerycellinfo) event for Excel and CSV formats. This functionality is useful for improving the readability of data and providing a clearer visual representation.
+Duplicate cells (based on their values) in a specific column of the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid can be merged. This can be achieved by utilizing the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid#databound) event. Additionally, duplicate cells in the specified column can be merged during export by using the [excelQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#excelquerycellinfo) event for Excel and CSV formats. This functionality is useful for improving the readability of data and providing a clearer visual representation.
 
 The following example demonstrates merging duplicate cells in the "Order ID" column in both Grid view and export:
 

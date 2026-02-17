@@ -32,7 +32,7 @@ function App() {
     }
   }
   return <GridComponent dataSource={data} editSettings={editOptions}
-    toolbar={toolbarOptions} height={315} actionComplete={onActionComplete}>
+    toolbar={toolbarOptions} height={260} actionComplete={onActionComplete}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' validationRules={orderIDRules} width='100' textAlign="Right" isPrimaryKey={true} />
       <ColumnDirective field='CustomerID' validationRules={customerIDRules} headerText='Customer ID' width='120' />

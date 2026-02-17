@@ -238,7 +238,7 @@ Template columns can be used to render images, action buttons, or other custom c
 
 The [filterBarTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/column#filterbartemplate) property replaces the default text input with a custom component in the filter bar. This allows using specialized input controls like date pickers, dropdowns, or numeric inputs that provide a better filtering experience for specific data types.
 
-Use custom components when the default text input doesn't provide an optimal experience. For example, use a `DatePicker` for date columns instead of typing dates manually, or use a `DropDownList` for status columns with limited options.
+Use custom components when the default text input doesn't provide an optimal experience. For example, use a `DatePicker` component for date columns instead of typing dates manually, or use a `DropDownList` component for status columns with limited options.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

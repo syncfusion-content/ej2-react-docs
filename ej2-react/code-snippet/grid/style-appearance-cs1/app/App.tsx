@@ -10,7 +10,7 @@ function App() {
     pageSize: 8
   };
   const settings: SelectionSettingsModel = { type: 'Multiple' };
-  return <GridComponent dataSource={data} allowPaging={true} pageSettings={pageOptions} selectionSettings={settings} height={315}>
+  return <GridComponent dataSource={data} allowPaging={true} pageSettings={pageOptions} selectionSettings={settings} height={310}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' type='number' isPrimaryKey={true} textAlign="Right" width='100' />
       <ColumnDirective field='CustomerID' headerText='Customer ID' type='string' width='120' />

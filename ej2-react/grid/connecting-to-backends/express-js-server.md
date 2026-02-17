@@ -539,7 +539,7 @@ For this project, the "Material 3" theme is applied. Other themes can be selecte
 
 The Syncfusion [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) acts as a communication layer between the React Grid and backend services. It sends all Grid operations such as reading data, sorting, filtering, searching, paging, and performing CRUD actions—to the server in a standardized format.
  
-The [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#url-adaptor) is a built‑in adaptor that formats requests for REST-style endpoints, like the Express.js REST Framework API. It defines how requests are formatted and how responses are processed. The `UrlAdaptor` converts Grid actions into HTTP `POST` requests and handles the JSON responses returned by the server, allowing the Grid to display and manage data seamlessly.
+The [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#url-adaptor) is a built‑in adaptor that formats requests for REST-style endpoints, like the Express.js REST Framework API. It defines how requests are formatted and how responses are processed. The `UrlAdaptor` converts Grid actions into HTTP POST requests and handles the JSON responses returned by the server, allowing the Grid to display and manage data seamlessly.
  
 When using `DataManager` with `UrlAdaptor`, the server is expected to return a specific response structure:
  
@@ -598,7 +598,7 @@ export default PatientsGrid;
 
 ### Enable paging
 
-The paging feature divides Grid records into multiple pages, improving performance and usability when handling large datasets. Enable paging by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid#allowpaging) property to `true` and injecting the `Page` module. Without the `Page` module, the pager will not render. Customize pager behavior using the [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid#pagesettings) property.
+The paging feature divides Grid records into multiple pages, improving performance and usability when handling large datasets. Enable paging by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid#allowpaging) property to "true" and injecting the `Page` module. Without the `Page` module, the pager will not render. Customize pager behavior using the [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid#pagesettings) property.
 
 ```ts
 
@@ -626,7 +626,7 @@ When paging is performed in the Grid, a request is sent to the server with the f
 
 ### Enable filtering
 
-The filtering feature enables searching and refining Grid records based on column values. Enable filtering by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) property to `true` and injecting the `Filter` module. Without the `Filter` module, the filter bar will not render. Customize filtering options using the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid#filtersettings) property.
+The filtering feature enables searching and refining Grid records based on column values. Enable filtering by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) property to "true" and injecting the `Filter` module. Without the `Filter` module, the filter bar will not render. Customize filtering options using the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid#filtersettings) property.
 
 ```ts
 import React from 'react';
@@ -683,7 +683,7 @@ When searching is performed in the Grid, a request is sent to the server with th
 
 ### Enable sorting
 
-The sorting feature allows ordering Grid records by clicking column headers. Enable sorting by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) property to `true` and injecting the `Sort` module. Without the `Sort` module, clicking headers will not sort the data. Customize sorting behavior using the [sortSettings](https://ej2.syncfusion.com/react/documentation/api/grid#sortsettings) property.
+The sorting feature allows ordering Grid records by clicking column headers. Enable sorting by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) property to "true" and injecting the `Sort` module. Without the `Sort` module, clicking headers will not sort the data. Customize sorting behavior using the [sortSettings](https://ej2.syncfusion.com/react/documentation/api/grid#sortsettings) property.
 
 
 ```ts
@@ -712,9 +712,9 @@ When sorting is performed in the Grid, a request is sent to the server with the 
 
 ### Enable CRUD actions
 
-To enable editing functionality directly within the grid, you need to configure the [allowEditing](https://ej2.syncfusion.com/react/documentation/api/grid/editSettingsModel#allowediting), [allowAdding](https://ej2.syncfusion.com/react/documentation/api/grid/editSettingsModel#allowadding), and [allowDeleting](https://ej2.syncfusion.com/react/documentation/api/grid/editSettingsModel#allowdeleting) properties within the [editSettings](https://ej2.syncfusion.com/react/documentation/api/grid#editsettings)  to `true`.
+To enable editing functionality directly within the grid, you need to configure the [allowEditing](https://ej2.syncfusion.com/react/documentation/api/grid/editSettingsModel#allowediting), [allowAdding](https://ej2.syncfusion.com/react/documentation/api/grid/editSettingsModel#allowadding), and [allowDeleting](https://ej2.syncfusion.com/react/documentation/api/grid/editSettingsModel#allowdeleting) properties within the [editSettings](https://ej2.syncfusion.com/react/documentation/api/grid#editsettings)  to "true".
 
-Editing feature requires a primary key column for CRUD operations. To define the primary key, set [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) to `true` in particular column.
+Editing feature requires a primary key column for CRUD operations. To define the primary key, set [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) to "true" in particular column.
 
 The [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property of the Grid component allows you to define the items that will be displayed in the grid toolbar. By including the relevant items like `Edit`, `Add`, `Delete`, `Update`, and `Cancel` within the `toolbar` property, you can enable the edit options in the toolbar.
 

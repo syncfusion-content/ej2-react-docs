@@ -67,7 +67,6 @@ function App() {
           change={onTimezoneChange}
           fields={field}
           index={0}
-          ref = {dropdown=> timezoneDropdownRef = dropdown}
         />
       </div>
       <div style={{ marginBottom: "10px" }}>
@@ -77,7 +76,7 @@ function App() {
           change={onCheckboxChange}
         />
       </div>
-      <GridComponent ref={g => grid = g} dataSource={data} load={load} height={315}>
+      <GridComponent ref={g => grid = g} dataSource={data} load={load} height={280}>
         <ColumnsDirective>
           <ColumnDirective field="OrderID" headerText="Order ID" textAlign="Right" width={120} />
           <ColumnDirective field="CustomerID" headerText="Customer ID" width={140} />

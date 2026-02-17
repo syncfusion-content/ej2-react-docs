@@ -19,7 +19,7 @@ function App() {
     }
     return <div>
         <ButtonComponent onClick={onClick}>Click Button</ButtonComponent>
-        <GridComponent dataSource={data} height={315} ref={g => grid = g} allowPaging={true} pageSettings={pageSettings}>
+        <GridComponent dataSource={data} height={280} ref={g => grid = g} allowPaging={true} pageSettings={pageSettings}>
             <ColumnsDirective>
                 <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
                 <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />

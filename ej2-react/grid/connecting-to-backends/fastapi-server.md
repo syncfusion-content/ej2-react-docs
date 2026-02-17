@@ -217,7 +217,7 @@ The router centralizes data loading, read pipelines for grid operations, and mut
         return any(k in payload for k in DM_READ_KEYS)
     ```
 
-7. Implement a `GET` guard and a unified `POST` handler so that the endpoint accepts only `UrlAdaptor` HTTP `POST` calls, routing them through the appropriate pipeline for either read or CRUD operations.
+7. Implement a "GET" guard and a unified "POST" handler so that the endpoint accepts only `UrlAdaptor` HTTP POST calls, routing them through the appropriate pipeline for either read or CRUD operations.
 
     ```python
     @router.get('/')
@@ -274,7 +274,7 @@ The router centralizes data loading, read pipelines for grid operations, and mut
 - The handler executes a clear sequence for reads that applies searching, filtering, sorting, projection, and paging in an intuitive order.  
 - The CRUD branch delegates to focused helpers that update the in‑memory list and then persist the change to disk.  
 - The design keeps the controller thin while allowing the data operation modules to remain reusable and independently testable.  
-- The explicit `GET` guard protects the endpoint from unsupported transports so that all interactions pass through the single `POST` contract.  
+- The explicit "GET" guard protects the endpoint from unsupported transports so that all interactions pass through the single "POST" contract.  
 
 The handlers in the "data_actions" and "crud_actions" modules are explained in detail in the integration section below.
 
@@ -282,7 +282,7 @@ The handlers in the "data_actions" and "crud_actions" modules are explained in d
 
 | Parameters       | Description |
 |------------------|-------------|
-| `requiresCounts` | When this value is `true` the response must include a total count for the current query. |
+| `requiresCounts` | When this value is true the response must include a total count for the current query. |
 | `skip`           | This value specifies the number of records that should be skipped from the beginning of the dataset. |
 | `take`           | This value instructs the server to return only the specified number of records after the skipped segment. |
 | `sorted`         | This array contains one or more sort descriptors that specify field names and directions. |
@@ -695,7 +695,7 @@ At this point, the server configuration supports all Grid data operations, inclu
 
 ## Integrating Syncfusion React Grid with FastAPI
 
-This section demonstrates how to bind the Syncfusion React Grid to a FastAPI endpoint using the DataManager and the `UrlAdaptor`. The DataManager standardizes how the Grid serializes its actions into a request body, and the `UrlAdaptor` formats the transport to align with a RESTful endpoint that accepts `POST` requests for both reads and mutations.
+This section demonstrates how to bind the Syncfusion React Grid to a FastAPI endpoint using the DataManager and the `UrlAdaptor`. The DataManager standardizes how the Grid serializes its actions into a request body, and the `UrlAdaptor` formats the transport to align with a RESTful endpoint that accepts POST requests for both reads and mutations.
 
 [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) is a data layer that sends all Grid actions (read, sort, filter, search, paging, CRUD) to the backend. It standardizes how components communicate with remote services and handles query serialization.
 
@@ -800,7 +800,7 @@ export default function App() {
 ```
 
 **Explanations:**
-- The DataManager converts Grid actions—such as paging, filtering, sorting, searching, and editing—into a single `POST` request directed to the /"products/" endpoint.
+- The DataManager converts Grid actions—such as paging, filtering, sorting, searching, and editing—into a single POST request directed to the /"products/" endpoint.
 - The injected services enable features like Page, Sort, Filter, Edit, and Toolbar on the client, while the server performs the corresponding operations.
 - A primary key is enabled for the "ID" column to support CRUD operations, and this configuration is mandatory.
 
@@ -809,7 +809,7 @@ The Grid client is now ready, and every interaction flows seamlessly to the Fast
 
 ### Step 4: Enable paging feature
 
-The paging feature allows efficient loading of large data sets through on‑demand loading. Paging in the Grid is enabled by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowpaging) property to `true` and injecting the `Page` module. This sends parameters to fetch only the data required for the current viewport.
+The paging feature allows efficient loading of large data sets through on‑demand loading. Paging in the Grid is enabled by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowpaging) property to "true" and injecting the `Page` module. This sends parameters to fetch only the data required for the current viewport.
 
 ```ts
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page } from '@syncfusion/ej2-react-grids';
@@ -832,7 +832,7 @@ The image illustrates the paging details (`skip` and `take`) included in the ser
 
 ### Step 5: Enable sorting feature
 
-The sorting feature in the Grid allows users to organize records in ascending or descending order based on one or more columns. The sorting feature in the Grid is enabled by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to `true` and injecting the `Sort` module.
+The sorting feature in the Grid allows users to organize records in ascending or descending order based on one or more columns. The sorting feature in the Grid is enabled by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to "true" and injecting the `Sort` module.
 
 ```ts
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Sort } from '@syncfusion/ej2-react-grids';
@@ -874,7 +874,7 @@ The image below displays the "search" parameter values.
 
 ### Step 7: Enable filtering feature
 
-The Grid supports filtering through a menu interface that restricts data based on column values. Filtering is enabled by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowfiltering) property to `true` and injecting the `Filter` module.
+The Grid supports filtering through a menu interface that restricts data based on column values. Filtering is enabled by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowfiltering) property to "true" and injecting the `Filter` module.
 
 ```ts
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Filter } from '@syncfusion/ej2-react-grids';
@@ -901,7 +901,7 @@ The image illustrates the serialized "where" condition passed from the DataManag
 
 CRUD operations allow users to add new products, modify existing records, and remove items that are no longer relevant. The DataManager posts a specific action for each operation so that the server can route to the appropriate handler.
 
-Editing operations in the Grid are enabled through configuring the [Edit Settings](https://ej2.syncfusion.com/react/documentation/api/grid#editsettings) properties ([allowEditing](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#allowediting), [allowAdding](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#allowadding), and [allowDeleting](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#allowdeleting)) to `true` and injecting the `Edit` module.
+Editing operations in the Grid are enabled through configuring the [Edit Settings](https://ej2.syncfusion.com/react/documentation/api/grid#editsettings) properties ([allowEditing](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#allowediting), [allowAdding](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#allowadding), and [allowDeleting](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#allowdeleting)) to "true" and injecting the `Edit` module.
 
 ```ts
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Edit, Toolbar, EditSettingsModel } from '@syncfusion/ej2-react-grids';
@@ -967,7 +967,7 @@ For a complete working implementation of this example, refer to the following Gi
 
 ## Summary
 
-1. Configured a FastAPI REST backend that implements the Syncfusion DataManager `POST` contract. [🔗](#setting-up-the-fastapi-backend)
+1. Configured a FastAPI REST backend that implements the Syncfusion DataManager POST contract. [🔗](#setting-up-the-fastapi-backend)
 2. Implemented server‑side data operations—including paging, sorting, searching, filtering, and selecting—via dedicated helper pipelines. [🔗](#perform-data-operations)
 3. Added full CRUD support with insert, update, and delete operations persisted on the server. [🔗](#perform-crud-operations)
 4. Integrated the Syncfusion React Grid with the backend using DataManager and the UrlAdaptor. [🔗](#integrating-syncfusion-react-grid-with-fastapi)

@@ -14,7 +14,7 @@ function App() {
   return (
     <div>
       <ButtonComponent style={{ marginBottom:"5px" }} onClick={clearGroup}>Clear Grouping</ButtonComponent>
-      <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={315}>
+      <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={268}>
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
           <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
