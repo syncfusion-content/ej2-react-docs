@@ -3,7 +3,7 @@ import * as React from 'react';
 import { employeeData } from './datasource';
 function App() {
     const gridTemplate = (props) => {
-        const src = props.EmployeeID + ".png";
+        const src = 'https://ej2.syncfusion.com/react/demos/src/grid/images/' + props.EmployeeID +'.png';
         return (<table className="detailtable" width="100%">
         <colgroup>
           <col style={{ width: "35%" }}/>

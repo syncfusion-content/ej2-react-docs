@@ -10,7 +10,7 @@ function App() {
       const destRowDropOptions: RowDropSettingsModel = { targetID: 'Grid' };
       const selectionOptions: SelectionSettingsModel = { type: 'Multiple' };
       return (<div>
-            <GridComponent id="Grid" dataSource={data} height={315} allowRowDragAndDrop={true} selectionSettings={selectionOptions} rowDropSettings={rowDropOptions}>
+            <GridComponent id="Grid" dataSource={data} height={268} allowRowDragAndDrop={true} selectionSettings={selectionOptions} rowDropSettings={rowDropOptions}>
                   <ColumnsDirective>
                         <ColumnDirective field='OrderID' headerText='Order ID' width='140' textAlign='Right' />
                         <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />

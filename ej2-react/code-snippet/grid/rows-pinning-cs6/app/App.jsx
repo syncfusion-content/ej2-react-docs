@@ -13,7 +13,7 @@ function App() {
     const contextMenuItems= ['PinRow', 'UnpinRow'];
     return (<div className='control-pane'>
       <div className='control-section'>
-        <GridComponent dataSource={taskData} allowPaging={true} contextMenuItems={contextMenuItems} height='315' isRowPinned={isRowPinned}>
+        <GridComponent dataSource={taskData} allowPaging={true} contextMenuItems={contextMenuItems} height='230' isRowPinned={isRowPinned}>
           <ColumnsDirective>
             <ColumnDirective field='TaskID' headerText='Task ID' width={100} textAlign='Right' isPrimaryKey={true} />
             <ColumnDirective field='Title' headerText='Title' width={100} />

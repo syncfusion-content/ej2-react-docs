@@ -101,7 +101,7 @@ function App() {
   return (
     <div className='control-pane'>
       <div className='control-section'>
-        <GridComponent dataSource={columnSpanData} ref={g => grid = g} queryCellInfo={queryCellInfoEvent} allowTextWrap={true} height='auto' width='auto' gridLines='Both' >
+        <GridComponent dataSource={columnSpanData} ref={g => grid = g} queryCellInfo={queryCellInfoEvent} allowTextWrap={true} height='315' width='auto' gridLines='Both' >
           <ColumnsDirective>
             <ColumnDirective field='EmployeeID' headerText='Employee ID' width='150' textAlign='Right' />
             <ColumnDirective field='EmployeeName' headerText='Employee Name' width='200' />

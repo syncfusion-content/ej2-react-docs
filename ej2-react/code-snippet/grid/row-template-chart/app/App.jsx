@@ -1,7 +1,7 @@
 import React from 'react';
 import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-grids';
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ColumnSeries, Category } from '@syncfusion/ej2-react-charts';
-import { employeeData, employeePerformanceData } from './datasource.jsx';
+import { employeeData, employeePerformanceData } from './datasource.js';
 
 function App() {
     function GridRowTemplate(props) {

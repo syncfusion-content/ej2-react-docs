@@ -14,8 +14,8 @@ function App() {
     return (
         <div>
             <ButtonComponent onClick={refreshHeader}>Refresh Header</ButtonComponent>
-            <div style={{ padding: '40px 0 0 0' }}>
-                <GridComponent ref={g => grid = g} dataSource={data} height={315} >
+            <div style={{ padding: '20px 0 0 0' }}>
+                <GridComponent ref={g => grid = g} dataSource={data} height={300} >
                     <ColumnsDirective>
                         <ColumnDirective field='OrderID' headerText='OrderID' width='100' />
                         <ColumnDirective field='CustomerID' headerText='CustomerID' width='120' />

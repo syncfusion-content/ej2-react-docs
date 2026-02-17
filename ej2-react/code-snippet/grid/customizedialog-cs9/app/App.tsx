@@ -14,7 +14,7 @@ function App() {
     }
     grid.reorderRows(value, args.dropIndex);
   }
-  return <GridComponent id="Grid" ref={g => grid = g} allowRowDragAndDrop={true} dataSource={data} rowDrop={rowDrop} selectionSettings={selectOptions} rowDropSettings={rowDropOptions} height={400}>
+  return <GridComponent id="Grid" ref={g => grid = g} allowRowDragAndDrop={true} dataSource={data} rowDrop={rowDrop} selectionSettings={selectOptions} rowDropSettings={rowDropOptions} height={315}>
     <ColumnsDirective>
       <ColumnDirective field="OrderID" isPrimaryKey={true} headerText="Order ID" width="120" textAlign="Right" />
       <ColumnDirective field="CustomerID" headerText="Customer Name" width="150" textAlign="Center" />

@@ -14,7 +14,7 @@ function App() {
     const editSettings: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true };
     return (<div className='control-pane'>
       <div className='control-section'>
-        <GridComponent dataSource={data} editSettings={editSettings} toolbar={toolbarOptions} height='315' isRowPinned={isRowPinned}>
+        <GridComponent dataSource={data} editSettings={editSettings} toolbar={toolbarOptions} height='230' isRowPinned={isRowPinned}>
           <ColumnsDirective>
             <ColumnDirective type= "checkbox" width="70" textAlign="Right" />
             <ColumnDirective field='TaskID' headerText='Task ID' width={100} textAlign='Right' isPrimaryKey={true} />

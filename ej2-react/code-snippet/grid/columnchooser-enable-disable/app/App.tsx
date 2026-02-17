@@ -17,7 +17,7 @@ function App() {
         <div>
             <label style={{ padding: "30px 17px 0 0" }}>Enable and disable search option</label>
             <SwitchComponent checked={true} change={toggleColumnSelection}></SwitchComponent>
-            <GridComponent dataSource={data} toolbar={toolbarOptions} height={272} showColumnChooser={true} >
+            <GridComponent dataSource={data} toolbar={toolbarOptions} height={260} showColumnChooser={true} >
                 <ColumnsDirective>
                     <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' showInColumnChooser={false} />
                     <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />

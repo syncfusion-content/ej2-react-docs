@@ -36,7 +36,7 @@ function App() {
       <label style={{ padding: "10px 10px 26px 0", marginLeft: "5px" }}>Change freeze direction:</label>
       <DropDownListComponent id='directionData' ref={c => directionDropDown = c} index={0} width={100} fields={field} dataSource={directionData}></DropDownListComponent>
       <ButtonComponent style={{ marginLeft: '5px' }} onClick={freezeColumnfn}>Update</ButtonComponent>
-      <GridComponent dataSource={data} height={315} ref={g => grid = g} >
+      <GridComponent dataSource={data} height={268} ref={g => grid = g} >
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' width='150' />
           <ColumnDirective field='CustomerID' headerText='Customer ID' width='180' />

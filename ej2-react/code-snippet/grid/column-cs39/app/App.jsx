@@ -22,7 +22,7 @@ function App() {
       <label style={{ padding: '30px 17px 0 0' }}>Align the text for columns :</label>
       <DropDownListComponent dataSource={alignmentData} index={0} width="100" change={changeAlignment}></DropDownListComponent>
       <div style={{ padding: '40px 0 0 0' }}>
-        <GridComponent dataSource={data} height={315} ref={g => grid = g}>
+        <GridComponent dataSource={data} height={260} ref={g => grid = g}>
           <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
             <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />

@@ -31,6 +31,18 @@ The Syncfusion [React Grid](https://ej2.syncfusion.com/react/documentation/grid/
 - **Django** 5.2+, **Django REST Framework**.
 - **Microsoft SQL Server** (or adapt to Postgre/MySQL/SQLite).
 
+
+## Key topics
+
+| # | Topics | Link |
+|---|---------|-------|
+| 1 | Set up Django REST Framework and connect it to a Microsoft SQL Server database | [View](#setting-up-the-django-rest-framework-for-microsoft-sql-database) |
+| 2 | Create and configure the React application with the Syncfusion React Grid | [View](#integrate-syncfusion-react-grid-with-django-rest-framework) |
+| 3 | Handle server‑side data operations such as filtering, searching, sorting, and paging | [View](#perform-data-operations) |
+| 4 | Enable create, update, and delete operations from the Grid using DRF | [View](#performing-crud-operations) |
+| 5 | Run the Django and React applications locally for development | [View](#running-the-application) |
+| 6 | Explore a complete working sample available on GitHub | [View](#complete-sample-repository) |
+
 ## Setting up the Django REST Framework for Microsoft SQL database
 
 The Django REST Framework backend serves as the core data service, managing API requests that provide the data powering the Syncfusion React Grid.
@@ -68,7 +80,7 @@ The **django_server** folder is now created. This initializes the project struct
 
 ### Step 2: Configure Django settings
 
-The file **django_server/settings.py** is automatically generated when a Django project is created.
+The file (**django_server/settings.py**) is automatically generated when a Django project is created.
 
 This step updates the file to establish the SQL Server connection and enable essential Django REST Framework features such as CORS, filtering, and pagination.
 
@@ -95,7 +107,7 @@ This step updates the file to establish the SQL Server connection and enable ess
     }
     ```
     **Line breakdown:**
-    - **ENGINE**: Database backend; for SQL Server via `mssql-django`, set to `"mssql"`.
+    - **ENGINE**: Database backend; for SQL Server via `mssql-django`, set to `mssql`.
     - **NAME**: Database name to connect to (e.g., **LibraryDB**).
     - **USER**: SQL Server login used by `Django`.
     - **PASSWORD**: Password for the above user.
@@ -403,23 +415,23 @@ Once the dependencies are installed, the required CSS files are made available i
 ```css
 [src/index.css]
 
-@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';  
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';  
-@import '../node_modules/@syncfusion/ej2-calendars/styles/material3.css';  
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css';  
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';  
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-notifications/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-react-grids/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/bootstrap5.3.css';  
+@import '../node_modules/@syncfusion/ej2-buttons/styles/bootstrap5.3.css';  
+@import '../node_modules/@syncfusion/ej2-calendars/styles/bootstrap5.3.css';  
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/bootstrap5.3.css';  
+@import '../node_modules/@syncfusion/ej2-inputs/styles/bootstrap5.3.css';  
+@import '../node_modules/@syncfusion/ej2-navigations/styles/bootstrap5.3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/bootstrap5.3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/bootstrap5.3.css';
+@import '../node_modules/@syncfusion/ej2-notifications/styles/bootstrap5.3.css';
+@import '../node_modules/@syncfusion/ej2-react-grids/styles/bootstrap5.3.css';
 ```
 
 For this project, the `Bootstrap 5.3` theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation to learn more about theming and customization options.
 
 ### Step 4: Configure DataManager with Django REST Framework (DRF)
 
-The Syncfusion [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) acts as a communication layer between the React Grid and backend services. It sends all Grid operations—such as reading data, sorting, filtering, searching, paging, and performing CRUD actions—to the server in a standardized format.
+The Syncfusion [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) acts as a communication layer between the React Grid and backend services. It sends all Grid operations such as reading data, sorting, filtering, searching, paging, and performing CRUD actions to the server in a standardized format.
 
 The [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#url-adaptor) is a built‑in adaptor that formats requests for REST-style endpoints, like the Django REST Framework API. It serializes all Grid actions and posts them to the DRF API endpoint, then processes the JSON responses returned by the server.
 
@@ -517,7 +529,7 @@ export default App;
 Paging divides large datasets into smaller pages to improve performance and usability.
 
 **Instructions:**
-1. Enable paging by setting [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid#allowpaging) to "true" on the Grid so that paging requests include the required `skip` and `take` parameters.
+1. Enable paging by setting [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid#allowpaging) to `true` on the Grid so that paging requests include the required `skip` and `take` parameters.
 
 2. Configure **pageSettings** to define the page size and any additional paging options needed for the intended layout and interaction design.
 
@@ -583,7 +595,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
             return 'rows', paged_queryset, total_count, requires_counts
     ```
 
-    > All `DataManager` operations searching, filtering, sorting, and paging are invoked through the `read()` method of the `DataManagerEngine` class in (**library/services/datamanager/engine.py**) file.
+    > All `DataManager` operations searching, filtering, sorting, and paging are invoked through the "read()" method of the "DataManagerEngine" class in (**library/services/datamanager/engine.py**) file.
 
     **Explanation:**
     - The **read()** method calculates the total number of matching records after applying search, filters, and sorting.
@@ -673,7 +685,7 @@ Searching allows users to locate rows by supplying a term that can be checked ag
             return queryset.filter(combined_and_q) if combined_and_q else queryset
         ```
         **Explanation:**
-        - The ViewSet passes the request payload to `DataManagerEngine.read()`.
+        - The ViewSet passes the request payload to "DataManagerEngine.read()".
         - The read engine calls "apply_search()" before filtering, sorting, or paging.
         - Each search block creates a set of **OR** conditions for its fields.
         - Multiple blocks are combined using **AND**.
@@ -688,7 +700,7 @@ Searching allows users to locate rows by supplying a term that can be checked ag
 Sorting allows records to be organized by clicking on column headers to arrange data in ascending or descending order.
 
 **Instructions:**
-1. Enable sorting by setting [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) to "true" on the Grid so that sort changes are emitted.
+1. Enable sorting by setting [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) to `true` on the Grid so that sort changes are emitted.
 
     ```ts
         <GridComponent
@@ -735,7 +747,7 @@ Sorting allows records to be organized by clicking on column headers to arrange 
     ```
 
     **Explanation:**
-    - `DataManagerEngine.read()` invokes "apply_sorting()" after searching and filtering.
+    - "DataManagerEngine.read()" invokes "apply_sorting()" after searching and filtering.
     - "apply_sorting()" builds an `order_by()` list and orders the query set prior to paging.
 
 **Below image shows the "sort" query passed to the DRF:**
@@ -749,7 +761,7 @@ Sorting allows records to be organized by clicking on column headers to arrange 
 Filtering helps refine records by applying conditions on column values. It allows selecting specific values or using simple comparison options such as equals, greater than, or less than to display only the matching data.
 
 **Instructions:**
-1. Enable filtering by setting [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) to "true" on the Grid so that filter interactions are sent to the server.
+1. Enable filtering by setting [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) to `true` on the Grid so that filter interactions are sent to the server.
 2. Optionally configure the filtering user interface (for example, Menu, CheckBox, or Excel style) by setting the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid#filtersettings) property.
 
     ```ts
@@ -842,7 +854,7 @@ Filtering helps refine records by applying conditions on column values. It allow
         ```
 
         **Explanation:**
-        - The view set detects `DataManager` request and forwards the payload to `DataManagerEngine.read()`.
+        - The view set detects `DataManager` request and forwards the payload to "DataManagerEngine.read()".
         - Inside "read()", the function "build_q_from_where()" converts the tree into Django `Q` predicates, and the query set is filtered before sorting and paging.
 
 **Below image shows the "filter" query passed to the DRF:**
@@ -928,8 +940,8 @@ def _handle_insert(viewset, payload) -> Response:
 
 **Explanation:**
 - When a user creates a new record in the Grid, the Grid posts a payload that includes `action: 'insert'` and a `value` object that contains the new field values to be saved.
-- The insert action calls the `_handle_insert()` function, which validates the values with the serializer and writes the record inside a database transaction to ensure consistency.
-- After the record is created, `_handle_insert()` refreshes the instance from the database, serializes the completed row, and returns it so that the Grid can immediately display the new record with any server‑side defaults applied.
+- The insert action calls the "_handle_insert()" function, which validates the values with the serializer and writes the record inside a database transaction to ensure consistency.
+- After the record is created, "_handle_insert()" refreshes the instance from the database, serializes the completed row, and returns it so that the Grid can immediately display the new record with any server‑side defaults applied.
 
 **Below image shows the added data passed to the DRF:**
 
@@ -965,8 +977,8 @@ def _handle_update(viewset, payload) -> Response:
 
 **Explanation:**
 - When a user edits a record and saves the changes in the Grid, the Grid posts a payload that contains `action: 'update'`, the primary key in `key`, and the changed fields in `value`.
-- The update action calls the `_handle_update()` function, which loads the targeted instance, validates the new values with the serializer, and persists the changes inside a transaction.
-- After the update, `_handle_update()` refreshes the instance from the database, serializes the updated row, and returns it so that the Grid remains synchronized with the authoritative values stored on the server.
+- The update action calls the "_handle_update()" function, which loads the targeted instance, validates the new values with the serializer, and persists the changes inside a transaction.
+- After the update, "_handle_update()" refreshes the instance from the database, serializes the updated row, and returns it so that the Grid remains synchronized with the authoritative values stored on the server.
 
 **Below image shows the updated data passed to the DRF:**
 
@@ -998,14 +1010,14 @@ def _handle_remove(viewset, payload) -> Response:
 
 **Explanation:**
 - When a user deletes a record in the Grid, the Grid posts a payload that specifies `action: 'remove'` together with the primary key that identifies the record to be deleted.
-- The delete action calls the `_handle_remove()` function, which serializes the target instance, deletes it inside a transaction, and prepares a confirmation payload.
-- The `_handle_remove()` function returns the confirmation payload to the client so that the Grid can remove the row from the UI and the user can see that the deletion has been completed successfully.
+- The delete action calls the "_handle_remove()" function, which serializes the target instance, deletes it inside a transaction, and prepares a confirmation payload.
+- The "_handle_remove()" function returns the confirmation payload to the client so that the Grid can remove the row from the UI and the user can see that the deletion has been completed successfully.
 
 **Below image shows the deleted key passed to the DRF:**
 
 ![Delete_Payload](../images/grid-django-crud-delete.png)
 
-> Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#mode) for the Grid component. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property is set to "true" for a specific Grid Column which has unique values.
+> Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#mode) for the Grid component. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property is set to `true` for a specific Grid Column which has unique values.
 
 ## Running the application
 
@@ -1031,25 +1043,11 @@ npm run dev
 
 ## Complete Sample Repository
 
-For a complete working implementation of this example, refer to the following GitHub repository:
-
-[Syncfusion DataGrid with DRF Sample](https://github.com/SyncfusionExamples/syncfusion-react-grid-component-with-django-server)
-
-## Summary
-
-This guide walks through the following key areas:
-
-1. Prerequisites. [🔗](#prerequisites) 
-2. Set up Django REST Framework and connect it to a Microsoft SQL Server database. [🔗](#setting-up-the-django-rest-framework-for-microsoft-sql-database) 
-3. Create and configure the React application with the Syncfusion React Grid. [🔗](#integrate-syncfusion-react-grid-with-django-rest-framework)
-4. Handle server‑side data operations such as filtering, searching, sorting, and paging. [🔗](#perform-data-operations) 
-5. Enable create, update, and delete operations from the Grid using DRF. [🔗](#performing-crud-operations)
-6. Run the Django and React applications locally for development. [🔗](#running-the-application) 
-7. Explore a complete working sample available on GitHub. [🔗](#complete-sample-repository) 
+For a complete working implementation of this example, refer to the following [GitHub](https://github.com/SyncfusionExamples/syncfusion-react-grid-component-with-django-server) repository:
 
 The application now offers a reliable, scalable solution for managing book lending records with a robust Django REST API on Microsoft SQL Server and a Syncfusion React Grid front end.
 
 ## See also
-- [Enables customization of Grid cell appearance with templates for text, images, icons, and advanced UI elements.](https://ej2.syncfusion.com/react/documentation/grid/columns/column-template)
-- [Optimizes performance by rendering only the visible rows or columns instead of the entire dataset.](https://ej2.syncfusion.com/react/documentation/grid/scrolling/virtual-scrolling)
-- [Facilitates bulk data modifications by allowing multiple records to be edited and saved in a single batch update.](https://ej2.syncfusion.com/react/documentation/grid/editing/batch-editing)
+- [Types of Edit](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
+- [Customizable Grid cells with text, images, icons, and UI templates.](https://ej2.syncfusion.com/react/documentation/grid/columns/column-template)
+- [Boosts speed by rendering visible rows and columns](https://ej2.syncfusion.com/react/documentation/grid/scrolling/virtual-scrolling)

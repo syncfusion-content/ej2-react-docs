@@ -3,8 +3,8 @@ import * as React from 'react';
 import { data } from './datasource';
 
 function App() {
-    const dateTemplate = ((props: any) => {
-        const date: Date = new Date(props.OrderDate);
+    const dateTemplate = ((props) => {
+        const date = new Date(props.OrderDate);
         const day = date.getDate();
         const month = date.toLocaleDateString('default', { month: 'short' });
         const year = date.getFullYear();

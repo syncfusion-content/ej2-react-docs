@@ -6,10 +6,10 @@ function App() {
   const data = new DataManager({
     adaptor: new ODataV4Adaptor(),
     crossDomain: true,
-    url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/s'
+    url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/'
   });
   const query = new Query().expand('Employee');
-  return <GridComponent dataSource={data} query={query} height={315} allowPaging={true}>
+  return <GridComponent dataSource={data} query={query} height={310} allowPaging={true}>
     <Inject services={[Page]} />
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
