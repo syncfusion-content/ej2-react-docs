@@ -22,8 +22,8 @@ function App() {
   return (
     <div>
       <ButtonComponent cssClass="e-success" onClick={changeHeaderText}>Change Header Text</ButtonComponent>
-      <div style={{ padding: '40px 0 0 0' }}>
-        <GridComponent dataSource={data} height={315} ref={g => grid = g} >
+      <div style={{ padding: '20px 0 0 0' }}>
+        <GridComponent dataSource={data} height={300} ref={g => grid = g} >
           <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='OrderID' width='100' />
             <ColumnDirective field='CustomerID' headerText='CustomerID' width='120' />

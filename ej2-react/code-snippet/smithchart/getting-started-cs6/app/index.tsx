@@ -2,7 +2,7 @@
 
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { SmithchartComponent, SmithchartSeriesCollectionDirective, SmithchartSeriesDirective, Inject, SmithchartLegend} from '@syncfusion/ej2-react-charts';
 
 function App() {
@@ -44,7 +44,8 @@ function App() {
 
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById('smithchart'));
+const root = createRoot(document.getElementById("smithchart"));
+root.render(<App />);
 
 
 

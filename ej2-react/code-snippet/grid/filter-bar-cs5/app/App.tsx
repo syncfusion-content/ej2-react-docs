@@ -17,7 +17,7 @@ function App() {
         )
     }
     return (<div>
-        <GridComponent dataSource={data} allowFiltering={true} allowPaging={true} height={315} >
+        <GridComponent dataSource={data} allowFiltering={true} allowPaging={true} height={268} >
             <ColumnsDirective>
                 <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
                 <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />

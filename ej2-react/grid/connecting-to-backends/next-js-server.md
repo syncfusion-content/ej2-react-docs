@@ -30,6 +30,7 @@ domainurl: ##DomainURL##
 | 5    | Implement CRUD operations (Create, Read, Update, Delete) using POST, GET, PUT, and DELETE methods   | [View](#step-8-implement-crud-operations)         |
 | 6    | Set up navigation to other pages using the Next.js routing feature                                   | [View](#routing)                                  |
 | 7    | Deploy and run the application to manage and display data efficiently in the Grid                   | [View](#running-the-application) |  
+| 8 | Explore a complete working sample available on GitHub | [View](#complete-sample-repository) |
 
 ## Building the Next.js application
 
@@ -44,7 +45,7 @@ Start the development server by running the below command:
 ```bash 
 npm run dev
 ```
-Now the project has been successfully launched, and the application is available at `http://localhost:3000`.
+Now the project has been successfully launched, and the application is available at **http://localhost:3000**.
 
 ## Configuring Next.js server
 
@@ -171,7 +172,7 @@ The Syncfusion Angular Grid supports custom data binding, enabling seamless inte
 
   - [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datastatechange): Triggered when the Grid performs actions such as paging, sorting, or filtering. It provides the current state details, which are sent to the API so the request can be processed and data returned in the required "{ result:[], count:100 }" format.
 
- - [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasourcechanged): Triggered when users perform CRUD operations (Create, Update, Delete). It provides the affected record along with the action type, which is sent to the API to execute the corresponding insert, update, or delete operation.
+ - [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasourcechanged): Triggered during CRUD operations(Create, Update, Delete). It provides the affected record along with the action type, which is sent to the API to execute the corresponding insert, update, or delete operation.
 
 Since the `dataStateChange` event does not fire on the first render, use the React `useEffect` hook to load the initial dataset when the component mounts. In **page.tsx**, define a "fetchData" function to send the grid state to the Next.js API and bind the returned data.
 
@@ -358,7 +359,7 @@ Complex filter conditions, where multiple predicates are combined with logical o
   
 ### Step 5: Implement searching feature 
 
-The search feature in the Grid allows users to quickly find and filter records by entering keywords. It scans all visible columns and displays only the matching rows, making it easier to locate specific information within large datasets. The searching feature in the Grid is enabled by adding `Search` to the Grid’s [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbar) items and injecting the `Toolbar` module.
+The search feature in the Grid allows records to be located and filtered using keywords. It scans all visible columns and displays only the matching rows, making it easier to locate specific information within large datasets. The searching feature in the Grid is enabled by adding `Search` to the Grid’s [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbar) items and injecting the `Toolbar` module.
 
 ```ts
   [app/page.tsx]
@@ -424,7 +425,7 @@ The following code example demonstrates handling the search action inside the se
 
 ### Step 6: Implement sorting feature
 
-The sorting feature in the Grid allows users to organize records in ascending or descending order based on one or more columns. The sorting feature in the Grid is enabled by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to `true` and injecting the `Sort` module.
+The sorting feature in the Grid allows records to be organized in ascending or descending order based on one or more columns. The sorting feature in the Grid is enabled by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to `true` and injecting the `Sort` module.
 
 ```ts
   [app/page.tsx]
@@ -829,11 +830,11 @@ Use the below command to run the application.
 ```bash
 npm run dev
 ```
-Open `http://localhost:3000` in the browser.
+Open **http://localhost:3000** in the browser.
   
 ## Complete sample repository
 
-A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-grid-component-in-nextjs/tree/master).               
+A complete, working sample implementation is available in the [GitHub](https://github.com/SyncfusionExamples/syncfusion-react-grid-component-in-nextjs/tree/master) repository.               
   
 The application now provides a complete solution for integrating the Syncfusion React Grid with Next.js server, enabling seamless data operations with a modern, user-friendly interface.
 

@@ -1,6 +1,6 @@
 import { Chart3DComponent, Chart3DSeriesCollectionDirective, Chart3DSeriesDirective, Inject, Legend3D, DataLabel3D, Category3D, ColumnSeries3D, Highlight3D } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 
 export let data = [
     { x: 'Tesla', y: 137429 },
@@ -25,11 +25,11 @@ function App() {
         }} enableRotation={true} rotation={7} tilt={10} depth={100} legendSettings={{ enableHighlight: true, visible: true }}>
         <Inject services={[ColumnSeries3D, Legend3D, Category3D, DataLabel3D, Highlight3D]} />
         <Chart3DSeriesCollectionDirective >
-            <Chart3DSeriesDirective dataSource={data} dataLabel={{ visible: true}} xName='x' name='Sales' yName='y' type='Column'>
+            <Chart3DSeriesDirective dataSource={data} dataLabel={{ visible: true }} xName='x' name='Sales' yName='y' type='Column'>
             </Chart3DSeriesDirective>
         </Chart3DSeriesCollectionDirective>
     </Chart3DComponent>);
 }
 ;
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+createRoot(document.getElementById('charts')).render(<App />);

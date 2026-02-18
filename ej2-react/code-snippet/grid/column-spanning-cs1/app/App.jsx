@@ -12,7 +12,7 @@ function App() {
   );
 
   return (
-    <GridComponent dataSource={shiftPlanData} gridLines="Both" allowSorting={true} enableColumnSpan={true} allowTextWrap={true} textWrapSettings={{ wrapMode: 'Content' }} height={450} width="auto" >
+    <GridComponent dataSource={shiftPlanData} gridLines="Both" allowSorting={true} enableColumnSpan={true} allowTextWrap={true} textWrapSettings={{ wrapMode: 'Content' }} height={315} width="auto" >
       <ColumnsDirective>
         <ColumnDirective field="Name" headerText="Doctor Name" width={170} textAlign="Center" freeze="Left" template={doctorTemplate} />
         <ColumnDirective field="Time9AM" headerText="9:00 AM" width={120} textAlign="Center" allowSorting={false} />

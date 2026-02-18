@@ -1,10 +1,11 @@
-{% raw %}
+
 
 
 import { AreaSeries, DateTime, Inject, RangeNavigatorComponent, RangenavigatorSeriesCollectionDirective, RangenavigatorSeriesDirective, RangeTooltip } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { bitCoinData } from 'default-data.ts';
+import { createRoot } from "react-dom/client";
+import { bitCoinData } from '../default-data';
+
 function App() {
   const data = bitCoinData;
 
@@ -14,9 +15,9 @@ function App() {
       <RangenavigatorSeriesDirective dataSource={data} xName='x' yName='y' type='Area' width={2} />
     </RangenavigatorSeriesCollectionDirective>
   </RangeNavigatorComponent>;
-};
-export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+}
+
+const root = createRoot(document.getElementById("charts"));
+root.render(<App />);
 
 
-{% endraw %}

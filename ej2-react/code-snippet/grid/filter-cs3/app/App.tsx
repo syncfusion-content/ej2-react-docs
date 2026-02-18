@@ -135,7 +135,7 @@ function App() {
   }
 
   return (<div>
-    <GridComponent ref={g => grid = g} dataSource={data} allowFiltering={true} allowPaging={true} pageSettings={pageSettings} height={315} >
+    <GridComponent ref={g => grid = g} dataSource={data} allowFiltering={true} allowPaging={true} pageSettings={pageSettings} height={268} >
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} validationRules={orderidrules} />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' filterBarTemplate={templateOptionsDropDown} />

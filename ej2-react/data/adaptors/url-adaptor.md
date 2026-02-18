@@ -8,17 +8,17 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Remote Data Binding with Custom REST API using UrlAdaptor
+# Custom REST API Remote Data Binding in Syncfusion React Components
 
-The `UrlAdaptor` enables the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to communicate with any custom REST API service. It converts operations (filtering, sorting, paging, CRUD) into HTTP POST requests and processes JSON responses.
+The `UrlAdaptor` in Syncfusion<sup style="font-size:70%">&reg;</sup> React DataManager provides a straightforward way to connect React components to REST API endpoints. It serves as a communication layer that manages how requests are sent and how responses are received. By organizing this interaction, it ensures reliable and efficient data handling across different Syncfusion React components, regardless of the server setup.
+
+It automatically transforms component actions such as filtering, sorting, paging, and CRUD into HTTP POST requests. The server returns JSON data, which DataManager processes and supplies back to the component. This mechanism enables smooth and efficient remote data binding without custom request handling.
 
 This documentation outlines the complete process for configuring the `UrlAdaptor` by detailing the backend API setup and the server‑side endpoints required to support data operations.
 
 ## Why use UrlAdaptor?
 
-The `UrlAdaptor` works with **any custom REST API**—no OData or GraphQL required.
-
-**Key benefits:**
+The `UrlAdaptor` works with **any custom REST API** no OData or GraphQL required. The benefits include:
 
 1. **Backend agnostic**: Works with backend server technology.
 2. **Server-side processing**: Handles large datasets (100K+ records) efficiently on the server.
@@ -26,11 +26,22 @@ The `UrlAdaptor` works with **any custom REST API**—no OData or GraphQL requir
 4. **Full CRUD support**: Manages insert, update, delete operations seamlessly.
 5. **Extensible**: Add authentication, caching, or custom transformations easily.
 
-## Supported databases and technologies
 
-The `UrlAdaptor` is **completely backend-agnostic**. It connects to any database through a REST API that returns the required JSON format.
+## Who should use UrlAdaptor?
+The `UrlAdaptor` is designed for projects that rely on custom REST APIs and need flexible communication between Syncfusion<sup style="font-size:70%">&reg;</sup> React components and backend services. It is most relevant for applications where standard protocols like OData or GraphQL are not part of the design, and where direct control over request and response handling is required.
 
-**Common database integrations:**
+It is particularly useful in scenarios such as:
+
+- Custom REST API implementations that expose endpoints in JSON format.
+- Large-scale datasets (100K+ records) requiring server-side execution of operations like filtering, sorting, and paging for performance and scalability.
+- Integration with existing backend services where APIs are already defined and must be connected without redesign.
+- CRUD operations with custom validation involving business rules, authentication, or transformation logic.
+- Extensible architectures that need additional features such as caching, security headers, or custom request/response transformations.
+
+
+## Supported Databases
+
+The `UrlAdaptor` is **completely backend-agnostic**. It connects to any database through a REST API that returns the required JSON format. Commonly integrated databases include:
 
 | Database | Use Case | Notes |
 |----------|----------|-------|
@@ -42,61 +53,26 @@ The `UrlAdaptor` is **completely backend-agnostic**. It connects to any database
 | **Oracle** | Enterprise systems | High scalability, reliability |
 | **Azure SQL Database** | Cloud applications | Managed service, auto-scaling |
 
-> **Key point**: `UrlAdaptor` is **backend-agnostic**. Compatibility exists with any technology stack that:
+> The `UrlAdaptor` is **backend-agnostic**. Compatibility exists with any technology stack that:
 > 1. Accepts HTTP POST requests with JSON body.
 > 2. Parses request parameters (filters, sorts, page info).
 > 3. Returns data in the required `{result, count}` format.
 
-## Configuring UrlAdaptor
+## Prerequisites and System Requirements
 
-Install the Syncfusion data package to use the `DataManager` and `UrlAdaptor`.
-
-```bash
-npm install @syncfusion/ej2-data --save
-```
-
-Here is the basic configuration of the `DataManager` with `UrlAdaptor` to fetch data from custom API using:
-
-```ts
-import { DataManager, Query, ReturnOption, UrlAdaptor } from '@syncfusion/ej2-data';
-
-new DataManager({
-  adaptor: new UrlAdaptor(),
-  url: 'https://localhost:xxxx/api/data',  // Replace xxxx with actual port number.
-}).executeQuery(
-  new Query()).then((
-    e: ReturnOption) => { //
-    // e.result will contain the records.
-    }
-  );
-```
-
-## Understanding the required response format
-
-Before choosing a backend technology (ASP.NET Core, Node.js, PHP, Python, or any other), understand that every API endpoint used with `UrlAdaptor` must return data in exactly this JSON structure:
-
-```json
-{
-  "result": [
-    { "OrderID": 10001, "CustomerID": "ALFKI", "ShipCity": "Berlin" },
-    { "OrderID": 10002, "CustomerID": "ANATR", "ShipCity": "Madrid" },
-    ...
-  ],
-  "count": 45
-}
-```
-
-- **result**: Returns the data records for the current page/request displayed in the UI.
-- **count**: Indicates the total number of records in the dataset, enabling accurate pagination.
-
-> * Without the `count` field, paging and virtual scrolling cannot function correctly.
-> * APIs returning just an array `[{...}, {...}]` instead of `{result: [...], count: ...}` will prevent proper data display. Responses must wrap in the required structure.
+| Requirement           | Details                                                      | Download / Command                 |
+|----------------------|--------------------------------------------------------------|------------------------------------|
+| **Visual Studio**  | Community, Professional, or Enterprise edition               | https://visualstudio.microsoft.com/ |
+| **Node.js**           | Version 14.0 or later                                         | https://nodejs.org/                |
+| **Verify Node.js**    | Check installed version                                        | `node --version`                   |
 
 ## Backend setup (ASP.NET Core API)
 
 ASP.NET Core is a powerful backend framework that offers cross‑platform support, high performance, and built‑in dependency injection. It integrates seamlessly with Syncfusion's `DataManagerRequest` and `QueryableOperation`, enabling efficient parameter parsing, filtering, sorting, and paging with strong typing. This combination ensures scalable APIs that deliver optimized query handling and a smooth experience.
 
 ### Step 1: Create project
+
+New projects can be created in several ways depending on the platform.
 
 **Option 1: Visual Studio**
 
@@ -105,6 +81,18 @@ Open **Visual Studio 2022 or later**, create a new project, search for the **ASP
 For detailed setup instructions, see [Microsoft's official documentation](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-react?view=vs-2022).
 
 **Option 2: Using terminal**
+
+Windows (PowerShell):
+
+Press the <kbd>Windows</kbd> key, type PowerShell, and press <kbd>Enter</kbd>. A terminal window opens for running commands.
+
+Visual Studio Code:
+
+Open VS Code, then from the top menu select **View → Terminal**. The integrated terminal appears at the bottom of the editor.
+
+macOS (Terminal):
+
+Press <kbd>Command</kbd> + <kbd>Space</kbd> to open Spotlight Search, type Terminal, and press <kbd>Enter</kbd>.
 
 ```bash
 dotnet new react -n UrlAdaptorDemo
@@ -128,9 +116,9 @@ UrlAdaptorDemo/
 
 ### Step 2: Install required NuGet package
 
-**Syncfusion.EJ2.AspNet.Core** package is required to use `DataManager` operations in ASP.NET Core.  It provides essential server‑side helpers and classes—such as `DataManagerRequest` and `QueryableOperation`—that handle parameter parsing, filtering, sorting, and paging with strong typing and optimized performance. The **Microsoft.AspNetCore.Mvc.NewtonsoftJson** package provides ASP.NET Core MVC input and output formatters that use **Newtonsoft.Json** for JSON serialization, deserialization, and JSON Patch support.
+`Syncfusion.EJ2.AspNet.Core` package is required to use `DataManager` operations in ASP.NET Core.  It provides essential server‑side helpers and classes such as `DataManagerRequest` and `QueryableOperation` that handle parameter parsing, filtering, sorting, and paging with strong typing and optimized performance. The `Microsoft.AspNetCore.Mvc.Newtonsoft.Json` package provides ASP.NET Core MVC input and output formatters that use `Newtonsoft.Json` for JSON serialization, deserialization, and JSON Patch support.
 
-In Visual Studio, navigate to **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**, search for **Syncfusion.EJ2.AspNet.Core** and **Microsoft.AspNetCore.Mvc.NewtonsoftJson**, select it, and click **Install**. Make sure to install these packages into the **UrlAdaptorDemo.Server** project.
+In Visual Studio, navigate to **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**, search for `Syncfusion.EJ2.AspNet.Core` and `Microsoft.AspNetCore.Mvc.NewtonsoftJson`, select it, and click **Install**. Make sure to install these packages into the **UrlAdaptorDemo.Server** project.
 
 **Or via package manager console:**
 
@@ -146,12 +134,13 @@ dotnet add package Syncfusion.EJ2.AspNet.Core
 dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson
 ```
 
-> **Note:** Without **Syncfusion.EJ2.AspNet.Core** package, manual implementation of filtering, sorting, and paging logic is required instead of using the built-in helper methods shown in this guide.
+> **Note:** Without `Syncfusion.EJ2.AspNet.Core` package, manual implementation of filtering, sorting, and paging logic is required instead of using the built-in helper methods shown in this guide.
 
 ### Step 3: Create data model
 
 Create a **Models** folder in the **UrlAdaptorDemo.Server** project, then add **OrdersDetails.cs** class file.
 
+```cs
 {% tabs %}
 {% highlight cs tabtitle="OrdersDetails.cs" %}
 
@@ -228,13 +217,14 @@ namespace UrlAdaptorDemo.Server.Models
 
 {% endhighlight %}
 {% endtabs %}
-
-> **Production Note:** This example uses a static in-memory list (`order`) for simplicity. In real applications, replace `GetAllRecords()` with database queries using Entity Framework Core, Dapper, or the preferred data access layer.
+```
+>  This example uses a static in-memory list (`order`) for simplicity. In real applications, replace `GetAllRecords()` with database queries using Entity Framework Core, Dapper, or the preferred data access layer.
 
 ### Step 4: Create API controller
 
 Create **DataController.cs** file using **MVC Controller - Empty** template in the **Controllers** folder. This controller handles all data requests from the React component.
 
+```cs
 {% tabs %}
 {% highlight cs tabtitle="DataController.cs" %}
 
@@ -264,7 +254,7 @@ namespace UrlAdaptorDemo.Server.Controllers
       // Apply server-side operations here (will be added later).
       // For now, return all data with count.
 
-      // CRITICAL: Return in {result, count} format.
+      // Return in {result, count} format (see Step 7 for details).
       return new { result = DataSource, count = totalRecordsCount };
     }
 
@@ -283,28 +273,51 @@ namespace UrlAdaptorDemo.Server.Controllers
 
 {% endhighlight %}
 {% endtabs %}
+```
+
+The server response must include `result` for the current data and `count` for the total records to enable proper pagination.
 
 **Key Points:**
 - **[FromBody] DataManagerRequest**: This parameter receives all operation details (filters, sorts, page info).
 - **IQueryable<OrdersDetails>**: Use `IQueryable` for efficient database queries.
+-  **result**: Returns the data records for the current page/request displayed in the UI.
 - **count**: Must be total count before paging (not just current page count).
 - **HttpPost**: Client sends `POST` requests by default for data operations.
 
 ### Step 5: Configure NewtonsoftJson and CORS (Cross-Origin Resource Sharing)
 
-In ASP.NET Core, JSON results are returned in camelCase format by default, which also converts field names to camelCase. To prevent this behavior, add **DefaultContractResolver**.
+In ASP.NET Core, JSON results are returned in camelCase format by default, which also converts field names to camelCase. To prevent this behavior, add `DefaultContractResolver` in **Program.cs**.
 
-```csharp
+```cs
+using Newtonsoft.Json.Serialization;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+...
+...
 // Configure JSON serialization (preserves property casing).
 builder.Services.AddMvc().AddNewtonsoftJson(options =>
 {
   options.SerializerSettings.ContractResolver = new DefaultContractResolver();
 });
+
+...
+...
+app.Run();
+
 ```
 
 When React frontend (e.g., `https://localhost:3000`) and ASP.NET Core backend (e.g., `https://localhost:5001`) run on different ports, browsers block requests by default for security. CORS configuration allows these cross-origin requests.
 
-```csharp
+```cs
+using Newtonsoft.Json.Serialization;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+...
+...
 // Add CORS policy to allow frontend access.
 builder.Services.AddCors(options =>
 {
@@ -315,12 +328,12 @@ builder.Services.AddCors(options =>
           .AllowAnyHeader();      // Allow any request headers.
   });
 });
-
+...
 ...
 
 // Enable CORS middleware (must be before UseRouting).
 app.UseCors();
-
+app.Run();
 ```
 
 Below is the common error without CORS:
@@ -373,11 +386,17 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
 
-**Production CORS configuration:**
 
-`AllowAnyOrigin()` provides convenience for development but production environments require restriction to specific trusted domains. For production, restrict CORS to specific origins:
+>`AllowAnyOrigin()` provides convenience for development but production environments require restriction to specific trusted domains. For production, restrict CORS to specific origins:
 
-```csharp
+```cs
+using Newtonsoft.Json.Serialization;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+...
+...
 builder.Services.AddCors(options =>
 {
   options.AddDefaultPolicy(policy =>
@@ -387,20 +406,49 @@ builder.Services.AddCors(options =>
           .AllowAnyHeader();
   });
 });
+...
+...
+app.Run();
 ```
 
 ### Step 6: Test the backend API
 
-**Run the application:**
+Run the application in Visual Studio, accessible on a URL like **https://localhost:xxxx**. Verify the API returns order data at **https://localhost:xxxx/api/data**, where **xxxx** is the port. For more details on port verification, see the [verify ports](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-react?view=vs-2022#verify-ports) documentation.
 
-Run the application in Visual Studio, accessible on a URL like **https://localhost:xxxx**. Verify the API returns order data at **https://localhost:xxxx/api/data**, where **xxxx** is the port. For more details on port verification, see the [Verify ports](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-react?view=vs-2022#verify-ports) documentation.
+### Step 7: Understanding the required response format
 
-**Troubleshooting:**
--  **Empty response**: Check if `GetAllRecords()` is populating data.
--  **404 Error**: Verify controller route is `[Route("api/[controller]")]`.
--  **500 Error**: Check server logs in Visual Studio Output window.
--  **CORS Error**: Ensure CORS is configured in **Program.cs**.
+When using the `UrlAdaptor`, every backend API endpoint must return data in a specific JSON structure. This ensures that Syncfusion<sup style="font-size:70%">&reg;</sup> React DataManager can correctly interpret the response and bind it to the component. The expected format is:
 
-> **Note:** Keep the backend server running during React frontend setup.
+```json
+{
+  "result": [
+    { "OrderID": 10001, "CustomerID": "ALFKI", "ShipCity": "Berlin" },
+    { "OrderID": 10002, "CustomerID": "ANATR", "ShipCity": "Madrid" },
+    ...
+    ...
+  ],
+  "count": 45
+}
+```
 
-To integrate the Syncfusion React Grid with the UrlAdaptor, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/url-adaptor).
+- **result**: Returns the data records for the current page/request displayed in the UI.
+- **count**: Indicates the total number of records in the dataset, enabling accurate pagination.
+
+> * Without the `count` field, paging and virtual scrolling cannot function correctly.
+> * APIs returning just an array `[{...}, {...}]` instead of `{result: [...], count: ...}` will prevent proper data display. Responses must wrap in the required structure.
+
+## Troubleshooting
+
+| Issue             | Resolution                                                                 |
+|-------------------|-----------------------------------------------------------------------------|
+| **Empty response** | Check if "GetAllRecords()" is populating data.                             |
+| **404 Error**      | Verify controller route is `[Route("api/[controller]")]`.                  |
+| **500 Error**      | Check server logs in the Visual Studio Output window.                      |
+| **CORS Error**     | Ensure CORS is configured properly in **Program.cs**.                        |
+
+
+## Integration with Syncfusion<sup style="font-size:70%">&reg;</sup> React components
+
+To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React components with the `UrlAdaptor`, refer to the documentation below:
+
+- [Grid](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/url-adaptor)

@@ -21,7 +21,7 @@ A quick video overview of the React Stock Charts setup is available:
 
 Below is the list of minimum dependencies required to use the Stock Chart component.
 
-```javascript
+```
 
 |-- @syncfusion/ej2-react-charts
     |-- @syncfusion/ej2-base
@@ -44,23 +44,27 @@ Below is the list of minimum dependencies required to use the Stock Chart compon
 
 ## Installation and configuration
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To easily set up a React application, use the Vite CLI (`npm create vite`), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+> **Note:** To create a React application using `create-react-app` instead, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
 To create a new React application, run the following command.
 
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
+
+![Initial_setup](../images/Initial-setup.jpg)
+
+To set up a React application in TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -68,13 +72,17 @@ cd my-app
 npm run dev
 ```
 
-* Install the Syncfusion<sup style="font-size:70%">&reg;</sup> packages using the command below.
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Stock Chart Package
 
-   ```
-    npm install @syncfusion/ej2-react-charts --save
-   ```
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+To install the Syncfusion<sup style="font-size:70%">&reg;</sup> Stock Chart package, use the following command
 
-## Add stock chart to the project
+```
+npm install @syncfusion/ej2-react-charts --save
+```
+> The –save will instruct NPM to include the Stock Chart package inside of the dependencies section of the package.json.
+
+## Add Stock Chart to the project
 
 Add the Stock Chart component to `src/App.tsx` using the following code.
 
@@ -84,21 +92,27 @@ Add the Stock Chart component to `src/App.tsx` using the following code.
 
 import {StockChartComponent} from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
+import { createRoot } from "react-dom/client";
 
 function App()  {
     return  (<StockChartComponent />);
 }
 export  default  App;
+const root = createRoot(document.getElementById("root"));
+root.render(<App />);
 
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 
 import { StockChartComponent } from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
+import { createRoot } from "react-dom/client";
 function App() {
     return (<StockChartComponent />);
 }
 export default App;
+const root = createRoot(document.getElementById("root"));
+root.render(<App />);
 
 {% endhighlight %}
 {% endtabs %}
@@ -138,31 +152,38 @@ Import the above-mentioned modules from the chart package and inject them into t
 
 import { StockChartComponent, CandleSeries, Tooltip, DataLabel, DateTime, Inject } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
 function App() {
-
-    return <StockChartComponent id='stockcharts'>
-      <Inject services={[CandleSeries, Tooltip, DataLabel, DateTime]} />
-    </StockChartComponent>
-  
-};
+    return (
+        <StockChartComponent id='stockcharts'>
+            <Inject services={[CandleSeries, Tooltip, DataLabel, DateTime]} />
+        </StockChartComponent>
+    );
+}
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+
+const root = createRoot(document.getElementById("charts"));
+root.render(<App />);
 
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 
 import { StockChartComponent, CandleSeries, Tooltip, DataLabel, DateTime, Inject } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
+
 function App() {
-    return <StockChartComponent id='stockcharts'>
-      <Inject services={[CandleSeries, Tooltip, DataLabel, DateTime]}/>
-    </StockChartComponent>;
-};
+    return (
+        <StockChartComponent id='stockcharts'>
+            <Inject services={[CandleSeries, Tooltip, DataLabel, DateTime]} />
+        </StockChartComponent>
+    );
+}
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+
+const root = createRoot(document.getElementById("charts")!);
+root.render(<App />);
 
 {% endhighlight %}
 {% endtabs %}
@@ -265,7 +286,7 @@ Since the JSON contains DateTime data, set the [`valueType`](https://ej2.syncfus
 
 {% previewsample "page.domainurl/code-snippet/stock-chart/getting-started/datasource-cs1" %}
 
-## Add stock chart title
+## Add Stock Chart title
 
 You can add a title using the [`title`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockChartModel#title) property to the Stock Chart to provide quick information to the user about the data plotted in the Chart.
 

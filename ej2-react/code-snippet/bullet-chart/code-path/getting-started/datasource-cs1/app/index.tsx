@@ -1,34 +1,34 @@
-{% raw %}
 
 
 
-import { BulletChartComponent, Inject } from '@syncfusion/ej2-react-charts';
+
+import { BulletChartComponent, Inject} from '@syncfusion/ej2-react-charts';
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
 function App() {
 
   const data: any[] = [
-    { value: 100, target: 80 },
-    { value: 200, target: 180 },
-    { value: 300, target: 280 },
-    { value: 400, target: 380 },
-    { value: 500, target: 480 },
+       { value: 100, target: 80 },
+       { value: 200, target: 180 },
+       { value: 300, target: 280 },
+       { value: 400, target: 380 },
+       { value: 500, target: 480 },
   ];
 
-  return (<BulletChartComponent id='Revenue'
-    style={{ textAlign: "center" }}
-    animation={{ enable: false }}
-    valueField='value'
-    targetField='target'
-    minimum={0}
-    maximum={500}
-    interval={50}
-    dataSource={data}>
-  </BulletChartComponent>);
+    return (<BulletChartComponent id='Revenue'
+                        style={{ textAlign: "center" }}
+                        animation={{ enable: false }}
+                        valueField='value'
+                        targetField='target'
+                        minimum={0}
+                        maximum={500}
+                        interval={50}
+                        dataSource={data}>
+            </BulletChartComponent>);
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
 
+const root = createRoot(document.getElementById("charts")!);
+root.render(<App />);
 
-{% endraw %}

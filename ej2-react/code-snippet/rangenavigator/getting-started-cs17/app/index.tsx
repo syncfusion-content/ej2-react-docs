@@ -1,18 +1,15 @@
 
 
-import { RangeNavigatorComponent} from '@syncfusion/ej2-react-charts';
+import { RangeNavigatorComponent } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
-class  App  extends  React.Component  {
+function App() {
+  return <RangeNavigatorComponent id="charts" />
+}
 
-  render() {
-    return <RangeNavigatorComponent id="charts" />
-  }
-
-};
-export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+const root = createRoot(document.getElementById("charts")!);
+root.render(<App />);
 
 
 

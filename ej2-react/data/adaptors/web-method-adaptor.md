@@ -8,15 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Remote Data Binding with Custom REST API using WebMethodAdaptor
+# Remote Data Binding with Custom REST API using WebMethod
 
 The `WebMethodAdaptor` enables the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to communicate with remote services using web methods. It functions similarly to `UrlAdaptor` but with a key difference: it wraps all operation parameters (filtering, sorting, paging, CRUD) inside a special `value` object before sending them to the server.
 
 ## Why use WebMethodAdaptor?
 
-The `WebMethodAdaptor` works with **custom REST APIs that expect nested parameter structures**—particularly useful for certain backend frameworks.
-
-**Key benefits:**
+The `WebMethodAdaptor` works with **custom REST APIs that expect nested parameter structures**—particularly useful for certain backend frameworks. The benefits include:
 
 1. **Backend compatibility**: Works with APIs expecting nested `value` object pattern.
 2. **Server-side processing**: Handles large datasets (100K+ records) efficiently on the server.
@@ -45,97 +43,31 @@ The `WebMethodAdaptor` works with **custom REST APIs that expect nested paramete
   } 
 }
 ```
+## Who should use WebMethodAdaptor?
 
-## When to use WebMethodAdaptor
+The WebMethodAdaptor is typically used in scenarios where client-side components need to communicate directly with server-side methods exposed via web services. It helps in binding data from remote services into  Syncfusion<sup style="font-size:70%">&reg;</sup> React components components seamlessly.
 
-**Best use cases:**
-
+The `WebMethodAdaptor` used the following scenarios only.
 - Backend API expects nested parameter structure with `value` wrapper.
 - Working with ASP.NET Web Services (.asmx endpoints).
 - API requires parameters inside a `value` wrapper object.
 - Need compatibility with legacy web method patterns.
 - Backend framework expects specific nested request format.
 
-**When to use `UrlAdaptor` instead:**
+The following scenario uses `UrlAdaptor` directly instead of `WebMethodAdaptor`:
 
 - Standard REST APIs with flat parameter structure.
 - Modern ASP.NET Core APIs without nested requirements.
 - APIs expecting direct parameter access.
 - No specific `value` object requirement.
 
-## Configuring WebMethodAdaptor
+## Prerequisites and system requirements
 
-Install the Syncfusion data package to use the `DataManager` and `WebMethodAdaptor`.
-
-```bash
-npm install @syncfusion/ej2-data --save
-```
-
-Here is the basic configuration of the `DataManager` with `WebMethodAdaptor` to fetch data from custom API:
-
-```ts
-import { DataManager, Query, ReturnOption, WebMethodAdaptor } from '@syncfusion/ej2-data';
-
-new DataManager({
-  adaptor: new WebMethodAdaptor(),
-  url: 'https://localhost:xxxx/api/grid',  // Replace xxxx with actual port number.
-}).executeQuery(
-  new Query()).then((
-    e: ReturnOption) => {
-    // e.result will contain the records.
-    }
-  );
-```
-
-## Understanding the required response format
-
-Before choosing a backend technology (ASP.NET Core, Node.js, PHP, Python, or any other), understand that every API endpoint used with `WebMethodAdaptor` must return data in exactly this JSON structure:
-
-```json
-{
-  "result": [
-    { "OrderID": 10001, "CustomerID": "ALFKI", "ShipCity": "Berlin" },
-    { "OrderID": 10002, "CustomerID": "ANATR", "ShipCity": "Madrid" },
-    ...
-  ],
-  "count": 45
-}
-```
-
-- **result**: Returns the data records for the current page/request displayed in the UI.
-- **count**: Indicates the total number of records in the dataset, enabling accurate pagination.
-
-> - Without the `count` field, paging and virtual scrolling cannot function correctly.
-> - APIs returning just an array `[{...}, {...}]` instead of `{result: [...], count: ...}` will prevent proper data display. Responses must wrap in the required structure.
-
-## Understanding the value object pattern
-
-The key difference between `WebMethodAdaptor` and `UrlAdaptor` is how request parameters are structured.
-
-Every request from `WebMethodAdaptor` wraps DataManager parameters inside a `value` object:
-
-```json
-{
-  "value": {
-    "skip": 0,
-    "take": 10,
-    "requiresCounts": true,
-    "sorted": [{ "name": "OrderID", "direction": "ascending" }],
-    "where": [{ "field": "CustomerID", "operator": "equal", "value": "ALFKI" }]
-  }
-}
-```
-
-A server-side wrapper class is required to access these parameters:
-
-```csharp
-public class DataManager
-{
-    public required DataManagerRequest Value { get; set; }
-}
-```
-
-This model extracts the nested `value` object, providing access to all DataManager properties like `skip`, `take`, `sorted`, `where`, etc.
+| Requirement           | Details                                                      | Download / Command                 |
+|----------------------|--------------------------------------------------------------|------------------------------------|
+| **Visual Studio**  | Community, Professional, or Enterprise edition               | https://visualstudio.microsoft.com/ |
+| **Node.js**           | Version 14.0 or later                                         | https://nodejs.org/                |
+| **Verify Node.js**    | Check installed version                                        | `node --version`  
 
 ## Backend setup (ASP.NET Core API)
 
@@ -143,13 +75,24 @@ ASP.NET Core is a powerful backend framework that offers cross‑platform suppor
 
 ### Step 1: Create project
 
-**Option 1: Visual Studio:**
+New projects can be created in several ways depending on the platform.
+
+**Option 1: Visual Studio**
 
 Open **Visual Studio 2022 or later**, create a new project, search for the **ASP.NET Core with React.js** template, name the project **WebMethodAdaptorDemo**, select **.NET 8.0 or later**, and click **Create**.
 
 For detailed setup instructions, see [Microsoft's official documentation](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-react?view=vs-2022).
 
-**Option 2: Using terminal:**
+**Option 2: Using terminal**
+
+Windows (PowerShell):  
+Press the <kbd>Windows</kbd> key, type PowerShell, and press <kbd>Enter</kbd>. A terminal window opens for running commands.
+
+Visual Studio Code:  
+Open VS Code, then from the top menu select **View → Terminal**. The integrated terminal appears at the bottom of the editor.
+
+macOS (Terminal):  
+Press <kbd>Command</kbd> + <kbd>Space</kbd> to open Spotlight Search, type Terminal, and press <kbd>Enter</kbd>.
 
 ```bash
 dotnet new react -n WebMethodAdaptorDemo
@@ -173,9 +116,9 @@ WebMethodAdaptorDemo/
 
 ### Step 2: Install required NuGet packages
 
-Syncfusion.EJ2.AspNet.Core package is required to use DataManager operations in ASP.NET Core. It provides essential server‑side helpers and classes—such as `DataManagerRequest` and `QueryableOperation`—that handle parameter parsing, filtering, sorting, and paging with strong typing and optimized performance.
+`Syncfusion.EJ2.AspNet.Core` is the NuGet package required to enable DataManager operations in ASP.NET Core. It provides essential server‑side helpers and classes such as `DataManagerRequest` and `QueryableOperation`, which handle parameter parsing, filtering, sorting, and paging. These classes ensure strong typing, optimized performance, and seamless communication between the backend and Syncfusion<sup style="font-size:70%">&reg;</sup> React components
 
-In Visual Studio, navigate to **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**, search for **Syncfusion.EJ2.AspNet.Core** and **Microsoft.AspNetCore.Mvc.NewtonsoftJson**, select it, and click **Install**.
+In Visual Studio, navigate to **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**, search for `Syncfusion.EJ2.AspNet.Core` and `Microsoft.AspNetCore.Mvc.NewtonsoftJson`, select it, and click **Install**.
 
 **Or via package manager console:**
 
@@ -191,12 +134,13 @@ dotnet add package Syncfusion.EJ2.AspNet.Core
 dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson
 ```
 
-> **Note:** Without this package, manual implementation of filtering, sorting, and paging logic is required instead of using the built-in helper methods shown in this guide.
+>  Without this package, manual implementation of filtering, sorting, and paging logic is required instead of using the built-in helper methods shown in this guide.
 
 ### Step 3: Create data model
 
 Create a **Models** folder in the project root (if it doesn't exist), then add **OrdersDetails.cs**:
 
+```cs
 {% tabs %}
 {% highlight cs tabtitle="OrdersDetails.cs" %}
 
@@ -224,12 +168,9 @@ namespace WebMethodAdaptorDemo.Models
       this.EmployeeID = EmployeeId;
       this.Freight = Freight;
       this.ShipCity = ShipCity;
-      this.Verified = Verified;
-      this.OrderDate = OrderDate;
-      this.ShipName = ShipName;
-      this.ShipCountry = ShipCountry;
-      this.ShippedDate = ShippedDate;
-      this.ShipAddress = ShipAddress;
+    . . .
+    . . .
+    . . .
     }
 
     /// <summary>
@@ -248,15 +189,9 @@ namespace WebMethodAdaptorDemo.Models
           order.Add(new OrdersDetails(code + 2, "ANATR", i + 2, 3.3 * i, true, 
               new DateTime(1990, 04, 04), "Madrid", "Queen Cozinha", "Brazil", 
               new DateTime(1996, 9, 11), "Avda. Azteca 123"));
-          order.Add(new OrdersDetails(code + 3, "ANTON", i + 1, 4.3 * i, true, 
-              new DateTime(1957, 11, 30), "Cholchester", "Frankenversand", "Germany", 
-              new DateTime(1996, 10, 7), "Carrera 52 con Ave. Bolívar #65-98 Llano Largo"));
-          order.Add(new OrdersDetails(code + 4, "BLONP", i + 3, 5.3 * i, false, 
-              new DateTime(1930, 10, 22), "Marseille", "Ernst Handel", "Austria", 
-              new DateTime(1996, 12, 30), "Magazinweg 7"));
-          order.Add(new OrdersDetails(code + 5, "BOLID", i + 4, 6.3 * i, true, 
-              new DateTime(1953, 02, 18), "Tsawassen", "Hanari Carnes", "Switzerland", 
-              new DateTime(1997, 12, 3), "1029 - 12th Ave. S."));
+          . . .
+          . . . 
+          . . .
           code += 5;
         }
       }
@@ -282,12 +217,15 @@ namespace WebMethodAdaptorDemo.Models
 
 {% endhighlight %}
 {% endtabs %}
+```
 
-> **Production Note:** This example uses a static in-memory list (`order`) for simplicity. In real applications, replace `GetAllRecords()` with database queries using Entity Framework Core, Dapper, or the preferred data access layer.
+> This example uses a static in-memory list (`order`) for simplicity. In real applications, replace "GetAllRecords()" method with database queries using Entity Framework Core, Dapper, or the preferred data access layer.
 
 ### Step 4: Create API controller
 
 Create **DataController.cs** in the **Controllers** folder. This controller handles all data requests from the React component.
+
+```cs
 {% tabs %}
 {% highlight cs tabtitle="DataController.cs" %}
 
@@ -350,6 +288,9 @@ namespace WebMethodAdaptorDemo.Controllers
 
 {% endhighlight %}
 {% endtabs %}
+```
+
+The server response must include `result` for the current data and `count` for the total records to enable proper pagination.
 
 **Key Points:**
 
@@ -361,7 +302,7 @@ namespace WebMethodAdaptorDemo.Controllers
 
 ### Step 5: Configure CORS (Cross-Origin Resource Sharing)
 
-When React frontend (e.g., `https://localhost:3000`) and ASP.NET Core backend (e.g., `https://localhost:5001`) run on different ports, browsers block requests by default for security. CORS configuration allows these cross-origin requests.
+When React frontend (e.g., **https://localhost:3000**) and ASP.NET Core backend (e.g., **https://localhost:5001**) run on different ports, browsers block requests by default for security. CORS configuration allows these cross-origin requests.
 
 Below is the common error without CORS:
 
@@ -370,7 +311,7 @@ Access to XMLHttpRequest at 'https://localhost:5001/api/grid' from origin
 'https://localhost:3000' has been blocked by CORS policy.
 ```
 
-**Configure CORS in Program.cs:**
+The following example shows how to configure CORS **Program.cs:**
 
 {% tabs %}
 {% highlight cs tabtitle="Program.cs" %}
@@ -412,11 +353,16 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
 
-**Production CORS configuration:**
+Production CORS configuration:
 
 For production, restrict CORS to specific origins:
 
 ```csharp
+using Newtonsoft.Json.Serialization;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add CORS policy to allow frontend access.
 builder.Services.AddCors(options =>
 {
   options.AddDefaultPolicy(policy =>
@@ -426,23 +372,88 @@ builder.Services.AddCors(options =>
           .AllowAnyHeader();
   });
 });
+...
+...
+app.Run();
 ```
 
-> **Security Note:** `AllowAnyOrigin()` provides convenience for development but production environments require restriction to specific trusted domains.
+> `AllowAnyOrigin()` provides convenience for development but production environments require restriction to specific trusted domains.
 
 ### Step 6: Test the backend API
 
-**Run the application:**
-
 Run the application in Visual Studio, accessible on a URL like **https://localhost:xxxx**. Verify the API returns order data at **https://localhost:xxxx/api/grid**, where **xxxx** is the port.
 
-**Troubleshooting:**
 
-- **Empty response**: Check if `GetAllRecords()` is populating data.
-- **404 Error**: Verify controller route is `[Route("api/[controller]")]`.
-- **500 Error**: Check server logs in Visual Studio Output window.
-- **CORS Error**: Ensure CORS is configured in Program.cs.
+### Step 7: Understanding the sending requst value object pattern
 
-> **Note:** Keep the backend server running during React frontend setup.
+When using `WebMethodAdaptor`, request parameters are encapsulated inside a value object. This wrapping changes how the server processes incoming data and requires an additional model to extract the parameters.  Below is an example of a request payload demonstrating paging, sorting, and filtering operations.
 
-To integrate the Syncfusion React DataManager with the WebMethodAdaptor, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/web-method-adaptor).
+
+
+```json
+{
+  "value": {
+    "skip": 0,
+    "take": 10,
+    "requiresCounts": true,
+    "sorted": [{ "name": "OrderID", "direction": "ascending" }],
+    "where": [{ "field": "CustomerID", "operator": "equal", "value": "ALFKI" }]
+  }
+}
+```
+
+A server-side wrapper class is required to access these parameters:
+
+```csharp
+public class DataManager
+{
+  public required DataManagerRequest Value { get; set; }
+  ...
+  ... 
+}
+```
+
+This model extracts the nested `value` object, providing access to all DataManager properties like `skip`, `take`, `sorted`, `where`, etc.
+
+> The key difference between `WebMethodAdaptor` and `UrlAdaptor` is how request parameters are structured.
+
+### Step 8: Understanding the required response format
+
+When using the `WebMethodAdaptor`, every backend API endpoint must return data in a specific JSON structure. This ensures that Syncfusion<sup style="font-size:70%">&reg;</sup> React DataManager can correctly interpret the response and bind it to the component. The expected format is:
+
+```json
+{
+  "result": [
+    { "OrderID": 10001, "CustomerID": "ALFKI", "ShipCity": "Berlin" },
+    { "OrderID": 10002, "CustomerID": "ANATR", "ShipCity": "Madrid" },
+    ...
+    ...
+  ],
+  "count": 45
+}
+```
+
+- **result**: Returns the data records for the current page/request displayed in the UI.
+- **count**: Indicates the total number of records in the dataset, enabling accurate pagination.
+
+> - Without the `count` field, paging and virtual scrolling cannot function correctly.
+> - APIs returning just an array `[{...}, {...}]` instead of `{result: [...], count: ...}` will prevent proper data display. Responses must wrap in the required structure.
+
+
+
+## Troubleshooting: 
+
+| Issue            | Resolution                                                                 |
+|------------------|-----------------------------------------------------------------------------|
+| **Empty response** | Check if "GetAllRecords()" is populating data.                             |
+| **404 Error**      | Verify controller route is `[Route("api/[controller]")]`.                  |
+| **500 Error**      | Check server logs in the Visual Studio Output window.                      |
+| **CORS Error**     | Ensure CORS is configured properly in **Program.cs**.                        |
+
+>  Keep the backend server running during React frontend setup.
+
+## Integration with Syncfusion<sup style="font-size:70%">&reg;</sup> React components
+
+To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React component with the `WebMethodAdaptor`, refer to the documentation below:
+
+- [Grid](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/web-method-adaptor)

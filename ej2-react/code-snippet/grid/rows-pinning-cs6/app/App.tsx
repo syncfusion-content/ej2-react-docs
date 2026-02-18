@@ -1,5 +1,5 @@
 import { GridComponent, ColumnsDirective, ColumnDirective, ContextMenu, ContextMenuItem, Inject, Page} from '@syncfusion/ej2-react-grids';
-import { data } from './datasource';
+import { taskData } from './datasource';
 import * as React from 'react';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
     const contextMenuItems: ContextMenuItem[] = ['PinRow', 'UnpinRow'];
     return (<div className='control-pane'>
       <div className='control-section'>
-        <GridComponent dataSource={data} allowPaging={true} contextMenuItems={contextMenuItems} height='315' isRowPinned={isRowPinned}>
+        <GridComponent dataSource={taskData} allowPaging={true} contextMenuItems={contextMenuItems} height='230' isRowPinned={isRowPinned}>
           <ColumnsDirective>
             <ColumnDirective field='TaskID' headerText='Task ID' width={100} textAlign='Right' isPrimaryKey={true} />
             <ColumnDirective field='Title' headerText='Title' width={100} />

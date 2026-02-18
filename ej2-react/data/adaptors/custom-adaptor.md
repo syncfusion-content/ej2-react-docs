@@ -8,30 +8,23 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Extending Adaptors with CustomAdaptor in React DataManager
+#  Custom Remote Data Binding in Syncfusion React Components
 
 The `CustomAdaptor` is a powerful extension mechanism that **customizes any existing adaptor** ([UrlAdaptor](./url-adaptor), [WebApiAdaptor](./webapi-adaptor), [ODataV4Adaptor](./odatav4-adaptor), [GraphQLAdaptor](./graphql-adaptor)) to meet specific application requirements. Instead of creating an entirely new adaptor from scratch, `CustomAdaptor` extends and modifies the behavior of existing adaptors by intercepting and customizing HTTP requests and responses.
 
 ## What is CustomAdaptor?
 
-`CustomAdaptor` is not a standalone adaptor, it's a way to extend and customize existing Syncfusion<sup style="font-size:70%">&reg;</sup> adaptors (`UrlAdaptor`, `ODataV4Adaptor`, `WebApiAdaptor`, `GraphQLAdaptor`) by overriding their default behavior. Think of it as a "wrapper" or "middleware" that sits between the UI compoenents and the existing adaptor, intercepting and modifying data flow at critical points.
+`CustomAdaptor` is not a standalone adaptor, it's a way to extend and customize existing Syncfusion<sup style="font-size:70%">&reg;</sup> adaptors (`UrlAdaptor`, `ODataV4Adaptor`, `WebApiAdaptor`, `GraphQLAdaptor`) by overriding their default behavior. 
 
-**How it works:**
-
-The CustomAdaptor intercepts the data flow at key points between the Grid and the base adaptor.
+The `CustomAdaptor` acts as a middleware layer between Syncfusion<sup style="font-size:70%">&reg;</sup> React components and the chosen adaptor (such as `UrlAdaptor`, `ODataV4Adaptor`, `WebApiAdaptor`, or `GraphQLAdaptor`). Its purpose is to customize the default HTTP request and response handling with custom logic. By intercepting the data flow, it allows overriding, adjusting, or extending behavior at specific points. This design makes it possible to control how data is fetched, processed, and returned while continuing to use the built‑in features of existing adaptors, avoiding the need to create a new adaptor from scratch.
 
 ![Custom Adaptor Flowchart](../images/custom-adaptor-flowchart.jpeg)
 
->  Regardless of customization, the Grid always expects the final response to contains:
-> - This `{ result:[], count:100 }` shape is required by most adaptors (`UrlAdaptor`, `ODataV4Adaptor`, `GraphQLAdaptor`, and any custom adaptor extending them).
-> - The `WebApiAdaptor` is an exception on the server/response side: it expects the raw server response to use `{ items:[], count:100 }`. 
-
 ## Why use CustomAdaptor?
 
-`CustomAdaptor` solves real-world scenarios where standard adaptors need modification without rewriting entire adaptor logic.
+`CustomAdaptor` is designed for scenarios where the built‑in DataManager adaptors are almost sufficient but require specific adjustments. It provides a way to extend existing adaptor logic without rewriting it entirely.
 
-When standard adaptors are almost perfect, but require:
-
+Typical use cases include:
 - API requires authentication headers that change dynamically.
 - API endpoint URLs need modification based on roles or environments.
 - Response data needs transformation before displaying in Grid.
@@ -40,6 +33,12 @@ When standard adaptors are almost perfect, but require:
 - Multiple API environments (dev/staging/prod) with different URLs.
 - Need to log requests/responses for debugging.
 - Custom error handling beyond standard adaptor capabilities.
+
+> Regardless of customization, Syncfusion<sup style="font-size:70%">&reg;</sup> React components that load data on-demand always expect the final response to include:
+> - **Default Response Format**: `{ result: [], count: 100 }`  
+> Required by most adaptors (`UrlAdaptor`, `ODataV4Adaptor`, `GraphQLAdaptor`, and any custom adaptor extending them).  
+> - **WebApiAdaptor Exception**: `{ items: [], count: 100 }`  
+> Unlike other adaptors, `WebApiAdaptor` expects the raw server response to use `items` instead of `result`.  
 
 ## Real-world scenarios
 
@@ -153,17 +152,12 @@ public processQuery(requestContext: DataManager, query: Query): Object{
 
 Parameters:
 
-1. DataManager (requestContext): 
-   - Contains data source configuration.
-   - Key property: `requestContext.dataSource.url` - The API endpoint URL.
-   - Can be modified to change where requests are sent.
+| Parameter | Purpose | Key Details |
+|-----------|--------------|-------------|
+| **DataManager (requestContext)** | Contains data source configuration | Key property: `requestContext.dataSource.url` defines the API endpoint URL. Can be modified to change where requests are sent. |
+| **Query (query)** | Holds all Grid operation parameters | Includes filters, sorts, grouping, and paging information. Methods available: `addParams()`, `where()`, `sortBy()`, `skip()`, `take()`. |
    
-2. Query (query): 
-   - Contains all Grid operation parameters.
-   - Includes: filters, sorts, grouping, paging info.
-   - Methods: `addParams()`, `where()`, `sortBy()`, `skip()`, `take()`.
-   
-**Common use cases**:
+This method is typically used in scenarios such as:
 - Change API endpoint URLs dynamically.
 - Add custom query parameters.
 - Modify filter/sort/page parameters.
@@ -221,21 +215,14 @@ public beforeSend(requestContext: DataManager, request: Request, settings?: any)
 
 Parameters:
 
-1. DataManager (requestContext): 
-   - Same as processQuery.
-   - Access to data source configuration.
+| Object                        | Purpose                               | Key Details                                                                 |
+|-------------------------------|---------------------------------------------|------------------------------------------------------------------------------|
+| **DataManager (requestContext)** | Provides access to the data source configuration | Same as `processQuery`; used to read or modify DataManager settings. |
+| **Request (request)**         | Represents the actual HTTP request object    | Main property: `request.headers` for adding or modifying headers. Methods include `headers.set()`, `headers.append()`, `headers.delete()`. |
+| **Settings (optional)**       | Defines request configuration options        | Can include Fetch API or XMLHttpRequest settings such as timeout, credentials, and other parameters. |
 
-2. Request (request): 
-   - The actual HTTP request object.
-   - Key property: `request.headers` - Where headers are added/modified.
-   - Methods: `headers.set()`, `headers.append()`, `headers.delete()`.
-  
-3. Settings (optional): 
-   - Fetch API or XMLHttpRequest configuration.
-   - Can modify timeout, credentials, etc.,.
+This method is typically used in scenarios such as:
 
-
-**Common use cases**:
 - Add authentication headers (JWT tokens, API keys).
 - Set custom HTTP headers.
 - Modify request configuration.
@@ -320,15 +307,12 @@ public processResponse(): Object{
 }
 ```
 
-Parameters:
-- Receives response data via `super.processResponse()` call.
-- Arguments are automatically passed from base adaptor.
 
-> The Grid always expects the final response to have:
-> - `result`: Array of data records.
-> - `count`: Total number of records (for paging).
+> Syncfusion<sup style="font-size:70%">&reg;</sup> React components that load data on-demand always require the final response to include:
+> - `result`: An array of data records to be displayed.
+> - `count`: The total number of records available in the data source, used for paging or virtualization.
 
-**Common use cases**:
+This method is typically used in scenarios such as:
 
 - Server returns non-standard format (not `{result, count}`).
 - Need to add calculated/derived fields to data.
@@ -788,29 +772,6 @@ export class CustomGraphQLAdaptor extends GraphQLAdaptor {
         super.beforeSend(requestContext, request, settings);
     }
 }
-
-```
-
-## Connect CustomAdaptor to React Grid
-
-After creating a custom adaptor, connect it to the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid using the `DataManager` component. The `DataManager` acts as a bridge between the Grid and the data source, utilizing the custom adaptor to handle all data operations.
-
-The fundamental pattern for connecting a custom adaptor to the Grid:
-
-```ts
-
-import { DataManager } from '@syncfusion/ej2-data';
-import { CustomODataAdaptor } from './CustomODataAdaptor';
-
-// Create DataManager with custom adaptor.
-const dataManager = new DataManager({ 
-    url: 'https://api.company.com/odata/orders',
-    adaptor: new CustomODataAdaptor()
-});
-
-// Use in Grid component.
-<GridComponent dataSource={dataManager} ... />
-
 ```
 
 ## Troubleshooting
@@ -824,10 +785,16 @@ const dataManager = new DataManager({
 | CRUD operations fail | URLs not configured | Set `insertUrl`, `updateUrl`, `removeUrl` in DataManager |
 | API called twice | Calling super twice | Call `super.methodName()` only once per method |
 
-## Method override summary
+## CustomAdaptor methods summary
 
 | Method | When to override | Common use cases |
 |--------|------------------|------------------|
 | `processQuery` | Need to modify request before it's built | • Change API endpoints<br>• Add query parameters<br>• Route by environment |
 | `beforeSend` | Need to modify request just before sending | • Add auth headers<br>• Add API keys<br>• Log requests |
 | `processResponse` | Need to transform incoming response | • Transform data format<br>• Add calculated fields<br>• Handle errors |
+
+## Integration with Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
+
+To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React components with the `CustomAdaptor`, refer to the documentation below:
+
+- [Grid](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/custom-adaptor)

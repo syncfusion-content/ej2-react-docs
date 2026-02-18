@@ -406,13 +406,13 @@ For this project, the `Tailwind3` theme is used. A different theme can be select
 
 ### Step 3: Configure GraphQL Adaptor
 
-To integrate the Grid component with the GraphQL server, datamanager provides a built‑in [GraphQLAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#graphql-adaptor) that translates the user interaction into GraphQL requests, enabling efficient communication with GraphQL servers.
+Syncfusion provides a built‑in [GraphQLAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#graphql-adaptor) that translates Grid interactions into GraphQL requests, enabling efficient communication with GraphQL servers and helping integrate the Grid component with the `GraphQL` server.
 
 **What is a GraphQL Adaptor?**
 
 An adaptor is a translator between two different systems. The `GraphQLAdaptor` specifically:
 
-- Receives interaction events from the Grid (user clicks Add, Edit, Delete, sorts, filters, etc).
+- Receives interaction events from the Grid (such as Add, Edit, Delete, sorting, filtering, etc.).
 - Converts these actions into GraphQL query or mutation syntax.
 - Sends the GraphQL request to the backend GraphQL endpoint.
 - Receives the response data from the backend.
@@ -429,7 +429,7 @@ The required response format includes:
   - **result**: The list of data to be displayed in the current Grid view.
   - **count**: The total number of records available in the dataset.
 
-The `GraphQLAdaptor` needs to be configured to the Syncfusion `DataManager` to convert the user interaction into GraphQL‑compatible requests. To enable this setup, configure the `DataManager` with the `GraphQLAdaptor`, specify the GraphQL server’s response format, and define the query. Finally, assign this `DataManager` instance to the Grid component.
+The `GraphQLAdaptor` needs to be configured to the Syncfusion `DataManager` to convert Grid interaction into GraphQL‑compatible requests. To enable this setup, configure the `DataManager` with the `GraphQLAdaptor`, specify the GraphQL server’s response format, and define the query. Finally, assign this `DataManager` instance to the Grid component.
 
 **Instructions:**
 1. Create a new (**src/ProductGrid.tsx**) in the ReactClient folder.
@@ -743,7 +743,7 @@ The resolver applies the search query parameters received from the Grid and retu
 
 ### Step 7: Implement sorting feature
 
-Sorting allows the user to organize records by clicking on column headers to arrange data in ascending or descending order.
+The sorting feature in the Grid allows records to be organized in ascending or descending order based on one or more columns.
 
 The `GraphQLAdaptor` automatically passes the sorting details to the server through the "sorted" parameter of the "DataManagerInput" and the details are converted to the [sorting query](https://ej2.syncfusion.com/react/documentation/data/querying#sorting) and executed through the `DataManager` to get the sorted data.
 
@@ -832,7 +832,7 @@ The resolver processes the sorting parameters and returns the result in the requ
 
 ### Step 8: Implement filtering feature
 
-Filtering allows the user to narrow down records by specifying conditions on column values. Users can filter by selecting checkbox filters or using comparison operators like equals, greater than, less than, etc.
+Filtering narrows down records by specifying conditions on column values. Records can be filtered by selecting checkbox filters or using comparison operators such as equals, greater than, or less than.
 
 The `GraphQLAdaptor` automatically passes the filter conditions to the server through the "where" parameter of the "DataManagerInput". In the server, the filter parameters are converted to the Syncfusion [filter query](https://ej2.syncfusion.com/react/documentation/data/querying#filtering) and executed through the `DataManager` to get the filtered data.
 
@@ -1011,7 +1011,7 @@ The image illustrates the serialized "where" condition passed from the DataManag
 
 **Filter logic with multiple checkbox selections:**
 
-When a user selects multiple checkbox values for the same column (e.g., (category = "Electronics" OR category = "Accessories")), the Grid sends a nested predicate block where all selected values are combined using OR logic.
+When multiple checkbox values are selected for the same column (e.g., category = "Electronics" OR category = "Accessories"), the Grid sends a nested predicate block where all selected values are combined using OR logic.
 
 - Top‑level predicates across different fields are combined using **AND** logic.
 - Nested predicates within the same field are combined using **OR** logic.
@@ -1021,7 +1021,7 @@ The resolver handles the filter conditions passed from the Grid and returns the 
 
 ### Step 9: Perform CRUD operations
 
-CRUD operations (Create, Read, Update, Delete) allow users to manage data through the Grid. The Grid provides built-in dialogs and buttons to perform these operations, while the backend resolvers handle the actual data modifications.
+CRUD operations (Create, Read, Update, Delete) are supported in the Grid for managing data. The Grid provides built-in dialogs and buttons to perform these operations, while the backend resolvers handle the actual data modifications.
 
 Enable editing operations in the Grid by configuring `editSettings` and setting `allowEditing`, `allowAdding`, and `allowDeleting` to `true`.
 
@@ -1190,7 +1190,7 @@ Open a terminal or Command Prompt. Run the server application first, then start 
   cd GraphQLServer
   npm start
 ```
-- The server is now running at http://localhost:4205/.
+- The server is now running at **http://localhost:4205/**.
 
 ### Run the client
  - Execute the below commands to run the client application:
@@ -1199,7 +1199,7 @@ Open a terminal or Command Prompt. Run the server application first, then start 
     cd GridClient
     npm run dev
 ```
-- Open http://localhost:4200/ in the browser.
+- Open **http://localhost:4200/** in the browser.
 
 ## Complete Sample Repository
 

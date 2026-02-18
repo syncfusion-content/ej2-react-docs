@@ -612,7 +612,7 @@ Paging feature is now active with "12" records per page.
 
 ### Step 3: Implement searching feature
 
-Searching allows users to locate rows by supplying a term that can be checked against one or more fields, making it easy to find relevant records quickly.
+Searching allows locating rows by supplying a term that can be checked against one or more fields, making it easy to find relevant records quickly.
 
 **Instructions:**
 1. Ensure the `toolbar` includes the "Search" item.
@@ -685,7 +685,7 @@ Searching allows users to locate rows by supplying a term that can be checked ag
             return queryset.filter(combined_and_q) if combined_and_q else queryset
         ```
         **Explanation:**
-        - The ViewSet passes the request payload to `DataManagerEngine.read()`.
+        - The ViewSet passes the request payload to "DataManagerEngine.read()".
         - The read engine calls "apply_search()" before filtering, sorting, or paging.
         - Each search block creates a set of **OR** conditions for its fields.
         - Multiple blocks are combined using **AND**.
@@ -747,7 +747,7 @@ Sorting allows records to be organized by clicking on column headers to arrange 
     ```
 
     **Explanation:**
-    - `DataManagerEngine.read()` invokes "apply_sorting()" after searching and filtering.
+    - "DataManagerEngine.read()" invokes "apply_sorting()" after searching and filtering.
     - "apply_sorting()" builds an `order_by()` list and orders the query set prior to paging.
 
 **Below image shows the "sort" query passed to the DRF:**
@@ -854,7 +854,7 @@ Filtering helps refine records by applying conditions on column values. It allow
         ```
 
         **Explanation:**
-        - The view set detects `DataManager` request and forwards the payload to `DataManagerEngine.read()`.
+        - The view set detects `DataManager` request and forwards the payload to "DataManagerEngine.read()".
         - Inside "read()", the function "build_q_from_where()" converts the tree into Django `Q` predicates, and the query set is filtered before sorting and paging.
 
 **Below image shows the "filter" query passed to the DRF:**
@@ -863,7 +863,7 @@ Filtering helps refine records by applying conditions on column values. It allow
 
 **Filter logic with multiple checkbox selections:**
 
-When a user selects multiple checkbox values for the same column (e.g., (book-title = "Verdant Gold" OR author_name = "Mia Lee")), the Grid sends a nested predicate block where all selected values are combined using OR logic.
+When multiple checkbox values are selected for the same column (e.g., (book-title = "Verdant Gold" OR author_name = "Mia Lee")), the Grid sends a nested predicate block where all selected values are combined using OR logic.
 
 - Top‑level predicates across different fields are combined using AND logic.
 - Nested predicates within the same field are combined using OR logic.
@@ -939,7 +939,8 @@ def _handle_insert(viewset, payload) -> Response:
 ```
 
 **Explanation:**
-- When a user creates a new record in the Grid, the Grid posts a payload that includes `action: 'insert'` and a `value` object that contains the new field values to be saved.
+
+- When a new record is created in the Grid, the Grid posts a payload that includes `action: 'insert'` and a `value` object that contains the new field values to be saved.
 - The insert action calls the `_handle_insert()` function, which validates the values with the serializer and writes the record inside a database transaction to ensure consistency.
 - After the record is created, `_handle_insert()` refreshes the instance from the database, serializes the completed row, and returns it so that the Grid can immediately display the new record with any server‑side defaults applied.
 
@@ -976,7 +977,8 @@ def _handle_update(viewset, payload) -> Response:
 ```
 
 **Explanation:**
-- When a user edits a record and saves the changes in the Grid, the Grid posts a payload that contains `action: 'update'`, the primary key in `key`, and the changed fields in `value`.
+
+- When a record is edited and saved in the Grid, the Grid posts a payload that contains `action: 'update'`, the primary key in `key`, and the changed fields in `value`.
 - The update action calls the `_handle_update()` function, which loads the targeted instance, validates the new values with the serializer, and persists the changes inside a transaction.
 - After the update, `_handle_update()` refreshes the instance from the database, serializes the updated row, and returns it so that the Grid remains synchronized with the authoritative values stored on the server.
 
@@ -1009,9 +1011,10 @@ def _handle_remove(viewset, payload) -> Response:
 ```
 
 **Explanation:**
-- When a user deletes a record in the Grid, the Grid posts a payload that specifies `action: 'remove'` together with the primary key that identifies the record to be deleted.
-- The delete action calls the `_handle_remove()` function, which serializes the target instance, deletes it inside a transaction, and prepares a confirmation payload.
-- The `_handle_remove()` function returns the confirmation payload to the client so that the Grid can remove the row from the UI and the user can see that the deletion has been completed successfully.
+
+- When a record is deleted in the Grid, the Grid posts a payload that specifies `action: 'remove'` together with the primary key that identifies the record to be deleted.
+- The delete action calls the "_handle_remove()" function, which serializes the target instance, deletes it inside a transaction, and prepares a confirmation payload.
+- The "_handle_remove()" function returns the confirmation payload to the client so that the Grid can remove the row from the UI and confirm that the deletion has been completed successfully.
 
 **Below image shows the deleted key passed to the DRF:**
 
@@ -1043,7 +1046,7 @@ npm run dev
 
 ## Complete Sample Repository
 
-For a complete working implementation of this example, refer to the following [GitHub](https://github.com/SyncfusionExamples/syncfusion-react-grid-component-with-django-server) repository:
+For a complete working implementation of this example, refer the [GitHub](https://github.com/SyncfusionExamples/syncfusion-react-grid-component-with-django-server) repository.
 
 The application now offers a reliable, scalable solution for managing book lending records with a robust Django REST API on Microsoft SQL Server and a Syncfusion React Grid front end.
 

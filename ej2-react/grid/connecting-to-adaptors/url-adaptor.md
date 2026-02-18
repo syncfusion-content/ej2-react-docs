@@ -10,19 +10,19 @@ domainurl: ##DomainURL##
 
 # Remote data binding with custom REST API using UrlAdaptor
 
-The `UrlAdaptor` enables the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid to communicate with any custom REST API service. It converts grid operations (filtering, sorting, paging, CRUD) into HTTP POST requests and processes JSON responses.
+The `UrlAdaptor` in the Syncfusion<sup style="font-size:70%">&reg;</sup> React DataManager streamlines connecting the React Grid to REST API endpoints by managing request and response handling for remote data operations. It automatically converts Grid actions such as filtering, sorting, paging, and CRUD into HTTP POST requests and processes the server’s JSON response, enabling smooth remote data binding without custom request logic.
 
 For details on configuring the backend (expected request/response format, server‑side processing), refer to the [UrlAdaptor backend setup documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors#url-adaptor).
 
-This documentation outlines the complete process for configuring the `UrlAdaptor` with the React Grid, covering frontend integration, data binding, and performing CRUD operations.
+Once the project creation and backend setup are complete, the next step is to render the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid Component on the client side.
 
-## Frontend setup (React with UrlAdaptor)
+## React Grid Frontend Setup using Syncfusion UrlAdaptor
 
-With backend API ready (either ASP.NET Core or Node.js), Syncfusion React Grid integration with `UrlAdaptor` enables data display and interaction. Frontend setup remains identical regardless of backend choice (ASP.NET Core or Node.js). `UrlAdaptor` works with any backend returning data in the correct JSON format.
+After finishing the backend setup for the **UrlAdaptorDemo** ASP.NET Core project, next step is to integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid on the client side by following these instructions.
 
 ### Step 1: Install Syncfusion packages
 
-Open a terminal in the **ClientApp** folder (or project root) and install the required packages:
+Right‑click the **Urladaptordemo.client** folder in **Solution Explorer** and select **Open in Terminal** (available in newer Visual Studio versions), or open a Developer Command prompt/PowerShell from the Start menu and navigate manually to the **Urladaptordemo.client directory**. Once inside the folder, confirm that **package.json** is present, then run the following commands to install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages:
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
@@ -31,7 +31,7 @@ npm install @syncfusion/ej2-data --save
 
 ### Step 2: Add CSS styles
 
-Syncfusion Grid requires CSS for proper rendering. Add these imports to `index.css` or `App.css`:
+Syncfusion Grid requires CSS for proper rendering. Add these imports to **index.css** or **App.css**:
 
 ```ts
 {% tabs %}
@@ -56,26 +56,20 @@ Syncfusion Grid requires CSS for proper rendering. Add these imports to `index.c
 {% endtabs %}
 ```
 
-**Available themes:**
-- `material3.css` - Material Design (Google)
-- `bootstrap5.css` - Bootstrap 5 theme
-- `fluent.css` - Microsoft Fluent Design
-- `tailwind.css` - Tailwind CSS theme
-- `fabric.css` - Microsoft Fabric Design
+Import the **App.css** in the application entry point(**App.jsx**).
 
-To use a different theme, replace `material` with the preferred theme name in all imports.
+```js
+import "./App.css";
+...
+...
 
-**Minimal CSS (if file size is a concern):**
-```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-react-grids/styles/material3.css';
 ```
 
-> **Note:** Additional CSS files are needed when enabling features like filtering, editing, or paging that use dropdowns, buttons, or date pickers.
+### Step 3: Create React Grid component with UrlAdaptor
 
-### Step 3: Create Grid component with UrlAdaptor
+Grid integration with backend APIs is enabled through the `UrlAdaptor`, which serves as a connector between the Syncfusion DataManager and RESTful services. It automatically converts Grid actions such as paging, sorting, filtering, searching, and grouping into structured HTTP requests that the server can interpret. This design is particularly effective for large datasets where server‑side processing is essential.
 
-Grid creation and backend API connection uses `UrlAdaptor`.
+By delegating these operations to the server rather than executing them in the browser, the Grid ensures that only the required data is retrieved for each request. 
 
 {% tabs %}
 {% highlight ts tabtitle="App.jsx" %}
@@ -88,7 +82,7 @@ import './App.css';
 function App() {
   // Configure DataManager with UrlAdaptor.
   const data = new DataManager({ 
-    url: 'https://localhost:5001/api/grid',  // Replace 5001 with the backend port.
+    url: 'https://localhost:5001/api/data',  // Replace 5001 with the backend port.
     adaptor: new UrlAdaptor()                // Specify UrlAdaptor for custom REST API.
   });
 
@@ -131,37 +125,16 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-### Step 4: Run the application
-
-Run the application in Visual Studio, accessible on a URL like **https://localhost:xxxx**. Verify the API returns order data at **https://localhost:xxxx/api/grid**, where **xxxx** is the port. Grid displays order data fetched from the backend API:
-
-![UrlAdaptor](../images/adaptor.gif)
-
-**Troubleshooting:**
--  **Empty Grid**: Check browser console for errors and verify API URL correctness.
--  **CORS error**: Backend **Program.cs** must contain CORS configuration.
--  **Network error**: Verify backend accessibility and status.
--  **Wrong data format**: API responses must return `{result: [...], count: number}` in JSON format.
-
-> **Developer Tools**: Browser DevTools (F12) → Network tab displays actual requests and responses between Grid and API.
+> **Note:** The Grid sends a `DataManagerRequest` (typically via POST), and the server must return JSON in the format { result: [...], count: N } for proper data binding and paging.
 
 ## Server-side data operations
 
-Large dataset optimization requires server-side data operations (filtering, sorting, paging) rather than browser-based processing. The `Syncfusion.EJ2.AspNet.Core` package provides built-in methods for efficient operation handling.
+React Grid optimizes large datasets by relying on server‑side data operations such as filtering, sorting, and paging rather than processing everything in the browser. The `Syncfusion.EJ2.AspNet.Core` package supports this approach by providing built‑in methods that efficiently handle these operations on the server, ensuring smooth performance even with heavy data loads. Advantages of server‑side processing:
 
-### Understanding server-side operations
-
-**Why server-side processing?**
 - **Performance**: Process 100K+ records without client slowdown.
 - **Scalability**: Server handles heavy lifting, not browser.
 - **Bandwidth**: Transfer only needed data (e.g., 10 records instead of 10,000).
 - **Security**: Sensitive filtering logic stays on server.
-
-**How it works:**
-1. Grid action execution (e.g., sorting by "CustomerID").
-2. `POST` request transmission with operation details to backend.
-3. Backend processes request and returns filtered/sorted data.
-4. Grid data display with processed results.
 
 ### Server-side operation methods
 
@@ -175,42 +148,64 @@ The `Syncfusion.EJ2.Base` namespace provides these methods:
 | **Sorting** | `PerformSorting` | Sort by one/multiple columns | Order by CustomerID ascending |
 | **Grouping** | `PerformGrouping` | Group data with aggregates | Group by ShipCountry with totals |
 
-**Required imports:**
+Add the following package import to enable server‑side DataManager operations:
+
 ```csharp
-using Syncfusion.EJ2.Base;  // DataManagerRequest, QueryableOperation, DataOperations
+using Syncfusion.EJ2.Base; // DataManagerRequest, QueryableOperation, DataOperations
+using System.Collections;
+using UrlAdaptorDemo.Server.Models;
+
+namespace UrlAdaptorDemo.Server.Controllers
+{
+  .  .  .
+  .  .  .
+}
 ```
 
-> **Note:** It must have **Syncfusion.EJ2.AspNet.Core** NuGet package installed (covered in [UrlAdaptor backend setup documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors#url-adaptor)).
+> **Note:** It must have `Syncfusion.EJ2.AspNet.Core` NuGet package installed (covered in [UrlAdaptor backend setup documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors#url-adaptor)).
 
 ### Paging
 
-Paging implementation uses `PerformTake` and `PerformSkip` from `QueryableOperation` on the server to apply paging from the `DataManagerRequest`. The paging feature is enabled by setting the `allowPaging` property to `true` and injecting the **Page** module from **@syncfusion/ej2-react-grids** into the grid.
+The paging feature is enabled by setting the `allowPaging` property to `true` and injecting the `Page` module from `@syncfusion/ej2-react-grids` into the grid.
+
+```js
+  <GridComponent dataSource={data} allowPaging={true}>
+    . . .
+    . . .
+    . . .
+    <Inject services={[Page]}/>
+  </GridComponent>
+```
+
+After enabling paging on the client side, the server processes the incoming page requests using the `PerformSkip` and `PerformTake` methods. These methods, provided by the `DataOperations` class, apply paging based on the values received in the `DataManagerRequest`. 
+
+The following example demonstrates the server’s handling of paging requests sent from the client.
 
 ![UrlAdaptor paging](../images/url-adaptor-paging.png)
 
 {% tabs %}
-{% highlight cs tabtitle="GridController.cs" %}
+{% highlight cs tabtitle="DataController.cs" %}
 
 [HttpPost]
 public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {
   // Retrieve data from the data source (e.g., database).
-  IQueryable<OrdersDetails> DataSource = GetOrderData().AsQueryable();
+   IEnumerable<OrdersDetails> DataSource = GetOrderData().AsEnumerable();
 
   // Get the total records count.
   int totalRecordsCount = DataSource.Count();
 
-  // Initialize QueryableOperation instance.
-  QueryableOperation queryableOperation = new QueryableOperation(); 
+  // Initialize DataOperation instance.
+   DataOperations operation = new DataOperations(); 
 
   // Handling paging operation.
   if (DataManagerRequest.Skip != 0)
   {
-    DataSource = queryableOperation.PerformSkip(DataSource, DataManagerRequest.Skip);
+    DataSource = operation.PerformSkip(DataSource, DataManagerRequest.Skip);
   }
   if (DataManagerRequest.Take != 0)
   {
-    DataSource = queryableOperation.PerformTake(DataSource, DataManagerRequest.Take);
+    DataSource = operation.PerformTake(DataSource, DataManagerRequest.Take);
   }
 
   // Return data based on the request.
@@ -227,7 +222,7 @@ import './App.css';
 
 function App() {
   const data = new DataManager({ 
-    url: 'https://localhost:xxxx/api/grid', // Replace with the hosted link.
+    url: 'https://localhost:xxxx/api/data', // Replace with the hosted link.
     adaptor: new UrlAdaptor()
   });
   return (
@@ -249,7 +244,20 @@ export default App;
 
 ### Filtering
 
-API endpoints supporting custom filtering criteria use `PerformFiltering` from `QueryableOperation` to apply filters from the `DataManagerRequest`. Complex predicates require iteration through nested conditions. The filtering feature is enabled by setting the `allowFiltering` property to `true` and injecting the **Filter** module from **@syncfusion/ej2-react-grids** into the grid.
+The filtering feature is enabled by setting the `allowFiltering` property to `true` and injecting the `Filter` module from `@syncfusion/ej2-react-grids` into the grid.
+
+```js
+  <GridComponent dataSource={data} allowFiltering={true}>
+    . . .
+    . . .
+    . . .
+    <Inject services={[Filter]}/>
+  </GridComponent>
+```
+
+After enabling filtering on the client side, the server processes incoming filter requests using the `PerformFiltering` method. This method, provided by the `DataOperations` class, applies filtering based on the conditions received in the `DataManagerRequest`. 
+
+The following example demonstrates the server’s handling of filtering requests sent from the client.
 
 **Single column filtering**
 ![Single column filtering](../images/url-adaptor-filtering.png)
@@ -258,21 +266,21 @@ API endpoints supporting custom filtering criteria use `PerformFiltering` from `
 ![Multi column filtering](../images/url-adaptor-multi-filtering.png)
 
 {% tabs %}
-{% highlight cs tabtitle="GridController.cs" %}
+{% highlight cs tabtitle="DataController.cs" %}
 
 [HttpPost]
 public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {
   // Retrieve data from the data source (e.g., database).
-  IQueryable<OrdersDetails> DataSource = GetOrderData().AsQueryable();
+  IEnumerable<OrdersDetails> DataSource = GetOrderData().AsEnumerable();
 
-  // Initialize QueryableOperation instance.
-  QueryableOperation queryableOperation = new QueryableOperation(); 
+  // Initialize DataOperation instance.
+  DataOperations operation = new DataOperations();
 
   if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0)
   {
     // Handling filtering operation.
-    DataSource = queryableOperation.PerformFiltering(DataSource, DataManagerRequest.Where, DataManagerRequest.Where[0].Condition);
+    DataSource = operation.PerformFiltering(DataSource, DataManagerRequest.Where, DataManagerRequest.Where[0].Condition);
   }
 
   // Get the total records count.
@@ -292,7 +300,7 @@ import './App.css';
 
 function App() {
   const data = new DataManager({ 
-    url: 'https://localhost:xxxx/api/grid', // Replace with the hosted link.
+    url: 'https://localhost:xxxx/api/data', // Replace with the hosted link.
     adaptor: new UrlAdaptor()
   });
   return (
@@ -314,26 +322,39 @@ export default App;
 
 ### Searching
 
-`PerformSearching` from `QueryableOperation` processes search criteria from the `DataManagerRequest`. The searching feature is enabled by configuring the `toolbar` property with `Search` item and injecting the **Toolbar** and **Search** modules from **@syncfusion/ej2-react-grids** into the grid.
+The searching feature is enabled by configuring the `toolbar` property with `Search` item and injecting the `Toolbar` and `Search` modules from `@syncfusion/ej2-react-grids` into the grid.
+
+```js
+  <GridComponent dataSource={data} toolbar={['Search']}>
+    . . .
+    . . .
+    . . .
+    <Inject services={[Search,Toolbar]}/>
+  </GridComponent>
+```
+
+After enabling the search feature on the client side, the server processes incoming search requests using the `PerformSearching` method. This method, provided by the `DataOperations` class, applies search criteria based on the values received in the `DataManagerRequest`. 
+
+The following example demonstrates the server’s handling of search requests sent from the client.
 
 ![UrlAdaptor searching](../images/url-adaptor-searching.png)
 
 {% tabs %}
-{% highlight cs tabtitle="GridController.cs" %}
+{% highlight cs tabtitle="DataController.cs" %}
 
 [HttpPost]
 public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {
   // Retrieve data from the data source (e.g., database).
-  IQueryable<OrdersDetails> DataSource = GetOrderData().AsQueryable();
+  IEnumerable<OrdersDetails> DataSource = GetOrderData().AsEnumerable();
 
-  // Initialize QueryableOperation instance.
-  QueryableOperation queryableOperation = new QueryableOperation(); 
+  // Initialize DataOperation instance.
+  DataOperations operation = new DataOperations();
 
   // Handling searching operation.
   if (DataManagerRequest.Search != null && DataManagerRequest.Search.Count > 0)
   {
-    DataSource = queryableOperation.PerformSearching(DataSource, DataManagerRequest.Search);
+    DataSource = operation.PerformSearching(DataSource, DataManagerRequest.Search);
   }
 
   // Get the total records count.
@@ -353,7 +374,7 @@ import './App.css';
 
 function App() {
   const data = new DataManager({ 
-    url: 'https://localhost:xxxx/api/grid', // Replace with the hosted link.
+    url: 'https://localhost:xxxx/api/data', // Replace with the hosted link.
     adaptor: new UrlAdaptor()
   });
   const toolbar = ['Search'];
@@ -376,7 +397,20 @@ export default App;
 
 ### Sorting
 
-`PerformSorting` from `QueryableOperation` applies sorting from the `DataManagerRequest`. The sorting feature is enabled by setting the `allowSorting` property to `true` and injecting the **Sort** module from **@syncfusion/ej2-react-grids** into the grid.
+The sorting feature is enabled by setting the `allowSorting` property to `true` and injecting the `Sort` module from `@syncfusion/ej2-react-grids` into the grid.
+
+```js
+  <GridComponent dataSource={data} allowSorting={true}>
+    . . .
+    . . .
+    . . .
+    <Inject services={[Sort]}/>
+  </GridComponent>
+```
+
+After enabling sorting on the client side, the server processes incoming sort requests using the `PerformSorting` method. This method, provided by the `DataOperations` class, applies the sorting rules received in the `DataManagerRequest`.  
+
+The following example illustrates the server’s handling of sorting requests sent from the client.
 
 **Single column sorting**
 ![Single column sorting](../images/url-adaptor-sorting.png)
@@ -385,21 +419,21 @@ export default App;
 ![Multi column sorting](../images/url-adaptor-multi-sorting.png)
 
 {% tabs %}
-{% highlight cs tabtitle="GridController.cs" %}
+{% highlight cs tabtitle="DataController.cs" %}
 
 [HttpPost]
 public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {
   // Retrieve data from the data source (e.g., database).
-  IQueryable<OrdersDetails> DataSource = GetOrderData().AsQueryable();
+  IEnumerable<OrdersDetails> DataSource = GetOrderData().AsEnumerable();
 
-  // Initialize QueryableOperation instance.
-  QueryableOperation queryableOperation = new QueryableOperation(); 
+  // Initialize DataOperation instance.
+  DataOperations operation = new DataOperations();
 
   // Handling sorting operation.
   if (DataManagerRequest.Sorted != null && DataManagerRequest.Sorted.Count > 0)
   {
-    DataSource = queryableOperation.PerformSorting(DataSource, DataManagerRequest.Sorted);
+    DataSource = operation.PerformSorting(DataSource, DataManagerRequest.Sorted);
   }
 
   // Get the total count of records.
@@ -419,7 +453,7 @@ import './App.css';
 
 function App() {
   const data = new DataManager({ 
-    url: 'https://localhost:xxxx/api/grid', // Replace with the hosted link.
+    url: 'https://localhost:xxxx/api/data', // Replace with the hosted link.
     adaptor: new UrlAdaptor()
   });
   return (
@@ -441,10 +475,25 @@ export default App;
 
 ### Grouping and aggregates
 
-Server processing of group and aggregate details from the `DataManagerRequest` computes aggregates on the full dataset and applies grouping with `PerformGrouping`. The grouping and aggregates feature is enabled by setting the `allowGrouping` property to `true` and injecting the **Group** and **Aggregate** modules from **@syncfusion/ej2-react-grids** into the grid.
+The grouping and aggregates feature is enabled by setting the `allowGrouping` property to `true` and injecting the `Group` and `Aggregate` modules from `@syncfusion/ej2-react-grids` into the grid.
+
+```ts
+  <GridComponent dataSource={data} allowGrouping={true}>
+    . . .
+    . . .
+    . . .
+    <Inject services={[Group, Aggregate]}/>
+  </GridComponent>
+```
+
+After enabling grouping and aggregates on the client side, the server processes incoming group requests using the `PerformGrouping` method. This operation, provided by the `DataOperations` class, applies grouping rules and computes aggregate values using the details received in the `DataManagerRequest`. 
+
+The following example illustrates the server’s handling of sorting requests sent from the client.
+
+![UrlAdaptor grouping](../images/url-adaptor-grouping.png)
 
 {% tabs %}
-{% highlight cs tabtitle="GridController.cs" %}
+{% highlight cs tabtitle="DataController.cs" %}
 
 [HttpPost]
 public object Post([FromBody] DataManagerRequest DataManagerRequest)
@@ -453,7 +502,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
   IEnumerable<OrdersDetails> DataSource = GetOrderData().AsEnumerable();
 
   // Initialize DataOperation instance.
-  DataOperations operation = new DataOperations(); 
+  DataOperations operation = new DataOperations();
 
   int totalRecordsCount = DataSource.Count();
 
@@ -498,7 +547,7 @@ function App() {
     return (<span>Max: {props.Max}</span>);
   };
   const data = new DataManager({
-    url: 'https://localhost:xxxx/api/grid', // Replace with the hosted link.
+    url: 'https://localhost:xxxx/api/data', // Replace with the hosted link.
     adaptor: new UrlAdaptor()
   });
   return (
@@ -526,6 +575,8 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
+The Grid has now been successfully created with including paging, sorting, filtering. the next step is to enabling CRUD operations.
+
 ## CRUD operations
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid integrates CRUD (Create, Read, Update, Delete) operations with server-side controller actions through `insertUrl`, `removeUrl`, `updateUrl`, `crudUrl`, and `batchUrl` properties.
@@ -540,11 +591,6 @@ CRUD operations map to server-side controller actions through specific propertie
 4. **crudUrl**: Specifies a single URL for all CRUD operations (alternative to individual URLs).
 5. **batchUrl**: Specifies the URL for batch editing (multiple changes in one request).
 
-**When to use each approach**:
-- **Individual URLs** (`insertUrl`, `updateUrl`, `removeUrl`): Best for APIs with separate endpoints
-- **Single endpoint** (`crudUrl`): Simpler for backend that route by action type
-- **Batch URL** (`batchUrl`): Best for bulk operations (multiple changes in one request)
-
 For detailed editing setup, refer to the [editing documentation](https://ej2.syncfusion.com/react/documentation/grid/editing/edit). The following example demonstrates inline edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) with a [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) for action buttons.
 
 {% tabs %}
@@ -556,10 +602,10 @@ import './App.css';
 
 function App() {
   const data = new DataManager({ 
-    url: 'https://localhost:xxxx/api/grid', // Replace with the hosted link.
-    insertUrl: 'https://localhost:xxxx/api/grid/Insert',
-    updateUrl: 'https://localhost:xxxx/api/grid/Update',
-    removeUrl: 'https://localhost:xxxx/api/grid/Remove',
+    url: 'https://localhost:xxxx/api/data', // Replace with the hosted link.
+    insertUrl: 'https://localhost:xxxx/api/data/Insert',
+    updateUrl: 'https://localhost:xxxx/api/data/Update',
+    removeUrl: 'https://localhost:xxxx/api/data/Remove',
     adaptor: new UrlAdaptor()
   });
   const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true };
@@ -586,7 +632,7 @@ export default App;
 > * Normal or inline editing represents the default [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode).
 > * CRUD operations require [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property set to `true` on a unique column.
 
-The below class is used to structure data sent during CRUD operations.
+The following class on the server side defines the structure of data exchanged during CRUD operations:
 
 ```cs
 public class CRUDModel<T> where T : class
@@ -695,8 +741,8 @@ import './App.css';
 
 function App() {
   const data = new DataManager({ 
-    url: 'https://localhost:xxxx/api/grid', // Replace with the hosted link.
-    batchUrl: 'https://localhost:xxxx/api/grid/BatchUpdate',
+    url: 'https://localhost:xxxx/api/data', // Replace with the hosted link.
+    batchUrl: 'https://localhost:xxxx/api/data/BatchUpdate',
     adaptor: new UrlAdaptor()
   });
   const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Batch' };
@@ -771,8 +817,8 @@ import './App.css';
 
 function App() {
   const data = new DataManager({ 
-    url: 'https://localhost:xxxx/api/grid', // Replace with the hosted link.
-    crudUrl: 'https://localhost:xxxx/api/grid/CrudUpdate',
+    url: 'https://localhost:xxxx/api/data', // Replace with the hosted link.
+    crudUrl: 'https://localhost:xxxx/api/data/CrudUpdate',
     adaptor: new UrlAdaptor()
   });
   const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
@@ -830,7 +876,7 @@ import './App.css';
 function ForeignKeyColumn() {
   // Grid data source.
   let orders = new DataManager({
-    url: 'http://localhost:xxxx/api/grid',
+    url: 'http://localhost:xxxx/api/data',
     adaptor: new UrlAdaptor(),
   });
   // Foreign key data source.
@@ -857,7 +903,7 @@ function ForeignKeyColumn() {
 export default ForeignKeyColumn;
 ```
 
-### Filter operation
+### Filter Operation for Foreign Key Columns
 
 Filtering foreign-key columns automatically displays related text values via the `foreignKeyValue` property, while actual filtering uses the `foreignKeyField` property.
 
@@ -869,15 +915,15 @@ Filtering foreign-key columns automatically displays related text values via the
 public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {
   // Retrieve data from the data source.
-  IQueryable<OrdersDetails> DataSource = GetOrderData().AsQueryable();
+  IEnumerable<OrdersDetails> DataSource = GetOrderData().AsEnumerable();
 
-  // Initialize QueryableOperation instance.
-  QueryableOperation queryableOperation = new QueryableOperation(); 
+  // Initialize DataOperation instance.
+  DataOperations operation = new DataOperations(); 
 
   // Handling filtering operation.
   if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0)
   {
-   DataSource = queryableOperation.PerformFiltering(DataSource, DataManagerRequest.Where, DataManagerRequest.Where[0].Condition);
+   DataSource = operation.PerformFiltering(DataSource, DataManagerRequest.Where, DataManagerRequest.Where[0].Condition);
   }
 
   // Get the total count of records.
@@ -892,15 +938,15 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {
   // Retrieve data from the data source.
-  IQueryable<CustomerInfo> DataSource = customers.AsQueryable();
+  IEnumerable<OrdersDetails> DataSource = customers.AsEnumerable();
 
-  // Initialize QueryableOperation instance.
-  QueryableOperation queryableOperation = new QueryableOperation(); 
+  // Initialize DataOperation instance.
+  DataOperations operation = new DataOperations();
 
   // Handling filtering operation.
   if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0)
   {
-   DataSource = queryableOperation.PerformFiltering(DataSource, DataManagerRequest.Where, DataManagerRequest.Where[0].Condition);
+   DataSource = operation.PerformFiltering(DataSource, DataManagerRequest.Where, DataManagerRequest.Where[0].Condition);
   }
 
   // Get the total count of records.
@@ -912,7 +958,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 ```
 > Grid search with foreign key columns creates a filter query for each column. Foreign key columns query the associated data source to retrieve the underlying field value matching the search term.
 
-### Sort operation
+### Sort Operation for Foreign Key Columns
 
 Foreign key column sorting orders records based on the underlying "CustomerID" field value. Foreign key value sorting requires supplying the foreign key's data source to the sorted query within the `PerformSorting` method.
 
@@ -923,10 +969,10 @@ Foreign key column sorting orders records based on the underlying "CustomerID" f
 public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {
   // Retrieve data from the data source (e.g., database).
-  IQueryable<OrdersDetails> DataSource = GetOrderData().AsQueryable();
+  IEnumerable<OrdersDetails> DataSource = GetOrderData().AsEnumerable();
 
-  // Initialize QueryableOperation instance.
-  QueryableOperation queryableOperation = new QueryableOperation(); 
+  // Initialize DataOperation instance.
+  DataOperations operation = new DataOperations();
 
   // Handling sorting operation.
   if (DataManagerRequest.Sorted != null && DataManagerRequest.Sorted.Count > 0) 
@@ -935,10 +981,10 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
     {
       if (DataManagerRequest.Sorted[i].ForeignKeyValue == "CustomerName")
       {
-        DataManagerRequest.Sorted[i].ForeignKeyDataSource = GetCustomerData().AsQueryable();
+        DataManagerRequest.Sorted[i].ForeignKeyDataSource = GetCustomerData().AsEnumerable();
       }
     }
-    DataSource = queryableOperation.PerformSorting(DataSource, DataManagerRequest.Sorted);
+    DataSource = operation.PerformSorting(DataSource, DataManagerRequest.Sorted);
   }
   // Get the total count of records.
   int totalRecordsCount = DataSource.Count();
@@ -948,3 +994,22 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 }
 ```
 > Foreign key column sorting based on foreign key value requires including the foreign key data source in the sorted query of the `DataManager` request on the server. Without the foreign key data source, sorting performs based on the column field.
+
+## Run the application
+
+Run the application in Visual Studio, accessible on a URL like **https://localhost:xxxx**. Verify the API returns order data at **https://localhost:xxxx/api/data**, where **xxxx** is the port. Grid displays order data fetched from the backend API:
+
+![UrlAdaptor](../images/adaptor.gif)
+
+
+## Troubleshooting
+
+| Issue             | Resolution                                                                 |
+|-------------------|-----------------------------------------------------------------------------|
+| **Empty response** | Check if "GetAllRecords()" is populating data.                             |
+| **404 Error**      | Verify controller route is `[Route("api/[controller]")]`.                  |
+| **500 Error**      | Check server logs in the Visual Studio Output window.                      |
+| **CORS Error**     | Ensure CORS is configured properly in **Program.cs**.                      |
+
+## Complete sample repository
+For a complete working implementation of this example, refer to the following GitHub repository.

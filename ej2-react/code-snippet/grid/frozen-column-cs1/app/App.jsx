@@ -16,7 +16,7 @@ function App() {
             <NumericTextBoxComponent id='frozencolums' ref={t => textBox = t} min={0} max={3} validateDecimalOnType={true} decimals={0} format='n' value={2} width={100}></NumericTextBoxComponent>
             <ButtonComponent style={{ marginLeft: '5px' }} onClick={frozenColumn}>UPDATE</ButtonComponent>
             <div style={{ padding: '40px 0 0 0' }}>
-                <GridComponent dataSource={data} height={315} ref={g => grid = g} frozenColumns={2}>
+                <GridComponent dataSource={data} height={260} ref={g => grid = g} frozenColumns={2}>
                     <ColumnsDirective>
                         <ColumnDirective field='OrderID' headerText='Order ID' width='150' />
                         <ColumnDirective field='CustomerID' headerText='Customer ID' width='180' />

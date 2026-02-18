@@ -32,7 +32,7 @@ function App() {
         <div>
             <ButtonComponent id='reorderColumn' cssClass="e-info" onClick={reorderColumnUsingColumnModel}>Reorder Column</ButtonComponent>
             <ButtonComponent id='reorderChildColumn' cssClass="e-info" onClick={reorderChildColumnUsingColumnModel}>Reorder Stacked ChildColumn</ButtonComponent>
-            <GridComponent dataSource={data} height={315} ref={g => grid = g} allowReordering={true} >
+            <GridComponent dataSource={data} height={268} ref={g => grid = g} allowReordering={true} >
                 <ColumnsDirective>
                     <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign='Right' />
                     <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
