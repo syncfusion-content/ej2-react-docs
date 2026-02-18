@@ -710,7 +710,7 @@ This section demonstrates how to bind the Syncfusion React Grid to a FastAPI end
 
 [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) is a data layer that sends all Grid actions (read, sort, filter, search, paging, CRUD) to the backend. It standardizes how components communicate with remote services and handles query serialization.
 
-Before you configure the Grid component, confirm that the React application has been created and the required Syncfusion packages are installed.
+Before configure the Grid component, confirm that the React application has been created and the required Syncfusion packages are installed.
 
 ### Step 1: Create React application and install dependencies
 
@@ -843,7 +843,7 @@ The image illustrates the paging details (`skip` and `take`) included in the ser
 
 ### Step 5: Enable sorting feature
 
-The sorting feature in the Grid allows users to organize records in ascending or descending order based on one or more columns. The sorting feature in the Grid is enabled by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to `true` and injecting the `Sort` module.
+The sorting feature in the Grid allows records to be organized in ascending or descending order based on one or more columns. The sorting feature in the Grid is enabled by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to `true` and injecting the `Sort` module.
 
 ```ts
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Sort } from '@syncfusion/ej2-react-grids';
@@ -866,7 +866,7 @@ The image below shows the values passed to the `sorted` parameter.
 
 ### Step 6: Enable searching feature
 
-The search feature in the Grid allows users to quickly find and filter records by entering keywords. It scans all visible columns and displays only the matching rows, making it easier to locate specific information within large datasets. The searching feature in the Grid is enabled by adding `Search` to the Grid’s [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbar) items and injecting the `Toolbar` module.
+Enhancing the search functionality involves integrating a search text box directly into the grid's toolbar. This allows entering search criteria conveniently within the grid interface. It scans all visible columns and displays only the matching rows, making it easier to locate specific information within large datasets. The searching feature in the Grid is enabled by adding `Search` to the Grid’s [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbar) items and injecting the `Toolbar` module.
 
 ```ts
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
@@ -910,7 +910,7 @@ The image illustrates the serialized `where` condition passed from the DataManag
 
 ### Step 8: Enable CRUD operations
 
-CRUD operations allow users to add new products, modify existing records, and remove items that are no longer relevant. The DataManager posts a specific action for each operation so that the server can route to the appropriate handler.
+CRUD operations allow adding new products, modifying existing records, and removing items that are no longer relevant. The DataManager posts a specific action for each operation so that the server can route to the appropriate handler.
 
 Editing operations in the Grid are enabled through configuring the [Edit Settings](https://ej2.syncfusion.com/react/documentation/api/grid#editsettings) properties ([allowEditing](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#allowediting), [allowAdding](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#allowadding), and [allowDeleting](https://ej2.syncfusion.com/react/documentation/api/grid/editsettings#allowdeleting)) to `true` and injecting the `Edit` module.
 
@@ -959,7 +959,7 @@ cd server
 uvicorn main:app --reload --port 8000
 ```
 
-The server is now running at http://localhost:8000/.
+The server is now running at **http://localhost:8000/**.
 
 Execute the below commands to run the client application:
 
@@ -968,7 +968,7 @@ cd client
 npm run dev
 ```
 
-Open the URL shown in the terminal which is typically http://localhost:5173/.
+Open the URL shown in the terminal which is typically **http://localhost:5173/**.
 
 ## Complete Sample Repository
 

@@ -1,9 +1,9 @@
-{% raw %}
+
 
 
 import { ProgressBarComponent } from '@syncfusion/ej2-react-progressbar';
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 
 function App() {
   return(<ProgressBarComponent id="linear"
@@ -19,7 +19,8 @@ function App() {
         )
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById("container"));
+
+const root = createRoot(document.getElementById('container')!);
+root.render(<App />);
 
 
-{% endraw %}

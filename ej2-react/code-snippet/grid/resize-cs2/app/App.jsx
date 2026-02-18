@@ -15,7 +15,7 @@ function App() {
     return (
         <div>
             <label style={{ padding: '10px 10px 0 0' }}>Change the resize mode:</label>
-            <DropDownListComponent style={{ padding: "10px 0 0 0" }} dataSource={alignmentData} index={0} width="100" change={changeValue}></DropDownListComponent>
+            <DropDownListComponent style={{ padding: "20px 0 0 0" }} dataSource={alignmentData} index={0} width="100" change={changeValue}></DropDownListComponent>
             <div style={{ padding: '10px 0 0 0' }}>
                 <GridComponent dataSource={data} height={268} ref={g => grid = g} allowResizing={true}>
                     <ColumnsDirective>

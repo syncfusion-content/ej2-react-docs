@@ -6,7 +6,7 @@ import { data } from './datasource';
 function App() {
     const pageSettings = { pageSize: 5 };
     const filterSettings = { type: 'FilterBar' };
-    return <GridComponent dataSource={data} allowFiltering={true} allowPaging={true} pageSettings={pageSettings} filterSettings={filterSettings} height={315}>
+    return <GridComponent dataSource={data} allowFiltering={true} allowPaging={true} pageSettings={pageSettings} filterSettings={filterSettings} height={268}>
         <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
             <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />

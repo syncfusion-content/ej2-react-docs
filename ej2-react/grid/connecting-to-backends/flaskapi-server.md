@@ -117,7 +117,7 @@ if __name__ == "__main__":
     app.run(host="localhost", port=5000, debug=True)
 ```
 
-The Flask server will start on `http://localhost:5000`.
+The Flask server will start on **http://localhost:5000**.
 
 ### Step 3: Create sample data file
 
@@ -412,7 +412,7 @@ To run the Flask application, execute the following command in the **server** di
 python app.py
 ```
 
-The server will start on `http://localhost:5000` and the tasks endpoint is `http://localhost:5000/tasks`.
+The server will start on **http://localhost:5000** and the tasks endpoint is **http://localhost:5000/tasks**.
 
 ## Connecting Syncfusion React Grid with Flask API
 
@@ -880,7 +880,7 @@ cd react-grid-flask-api/server
 python app.py
 ```
 
-The server will start on `http://localhost:5000` and the tasks endpoint is `http://localhost:5000/tasks`.
+The server will start on **http://localhost:5000** and the tasks endpoint is **http://localhost:5000/tasks**.
 
 ### Step 2: Start the React frontend application
 
@@ -891,7 +891,7 @@ cd react-grid-flask-api/client
 npm run dev
 ```
 
-The React application will start on `http://localhost:5173`.
+The React application will start on **http://localhost:5173**.
 
 The complete folder structure look like below.
 
