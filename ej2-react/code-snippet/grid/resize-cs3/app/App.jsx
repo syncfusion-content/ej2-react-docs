@@ -24,7 +24,6 @@ function App() {
     })
     return (
         <div>
-            <div>
              <label style={{ padding: '5px 5px 5px 0', display: 'inline-block' }}>
           Change the resize mode:
         </label>
@@ -59,8 +58,8 @@ function App() {
           Resize
         </ButtonComponent>
       </div>
-            <div style={{ padding: '40px 0 0 0' }}>
-                <GridComponent dataSource={data} height={315} ref={g => grid = g} allowResizing={true}>
+      <div style={{ padding: '10px 0 0 0' }}>
+                <GridComponent dataSource={data} height={268} ref={g => grid = g} allowResizing={true}>
                     <ColumnsDirective>
                         <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
                         <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />

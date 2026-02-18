@@ -107,7 +107,7 @@ This step updates the file to establish the SQL Server connection and enable ess
     }
     ```
     **Line breakdown:**
-    - **ENGINE**: Database backend; for SQL Server via `mssql-django`, set to `mssql`.
+    - **ENGINE**: Database backend; for SQL Server via `mssql-django`, set to `"mssql"`.
     - **NAME**: Database name to connect to (e.g., **LibraryDB**).
     - **USER**: SQL Server login used by `Django`.
     - **PASSWORD**: Password for the above user.
@@ -612,7 +612,7 @@ Paging feature is now active with "12" records per page.
 
 ### Step 3: Implement searching feature
 
-Searching allows users to locate rows by supplying a term that can be checked against one or more fields, making it easy to find relevant records quickly.
+Searching allows locating rows by supplying a term that can be checked against one or more fields, making it easy to find relevant records quickly.
 
 **Instructions:**
 1. Ensure the `toolbar` includes the "Search" item.
@@ -863,7 +863,7 @@ Filtering helps refine records by applying conditions on column values. It allow
 
 **Filter logic with multiple checkbox selections:**
 
-When a user selects multiple checkbox values for the same column (e.g., (book-title = "Verdant Gold" OR author_name = "Mia Lee")), the Grid sends a nested predicate block where all selected values are combined using OR logic.
+When multiple checkbox values are selected for the same column (e.g., (book-title = "Verdant Gold" OR author_name = "Mia Lee")), the Grid sends a nested predicate block where all selected values are combined using OR logic.
 
 - Top‑level predicates across different fields are combined using AND logic.
 - Nested predicates within the same field are combined using OR logic.
@@ -939,9 +939,10 @@ def _handle_insert(viewset, payload) -> Response:
 ```
 
 **Explanation:**
-- When a user creates a new record in the Grid, the Grid posts a payload that includes `action: 'insert'` and a `value` object that contains the new field values to be saved.
-- The insert action calls the "_handle_insert()" function, which validates the values with the serializer and writes the record inside a database transaction to ensure consistency.
-- After the record is created, "_handle_insert()" refreshes the instance from the database, serializes the completed row, and returns it so that the Grid can immediately display the new record with any server‑side defaults applied.
+
+- When a new record is created in the Grid, the Grid posts a payload that includes `action: 'insert'` and a `value` object that contains the new field values to be saved.
+- The insert action calls the `_handle_insert()` function, which validates the values with the serializer and writes the record inside a database transaction to ensure consistency.
+- After the record is created, `_handle_insert()` refreshes the instance from the database, serializes the completed row, and returns it so that the Grid can immediately display the new record with any server‑side defaults applied.
 
 **Below image shows the added data passed to the DRF:**
 
@@ -976,9 +977,10 @@ def _handle_update(viewset, payload) -> Response:
 ```
 
 **Explanation:**
-- When a user edits a record and saves the changes in the Grid, the Grid posts a payload that contains `action: 'update'`, the primary key in `key`, and the changed fields in `value`.
-- The update action calls the "_handle_update()" function, which loads the targeted instance, validates the new values with the serializer, and persists the changes inside a transaction.
-- After the update, "_handle_update()" refreshes the instance from the database, serializes the updated row, and returns it so that the Grid remains synchronized with the authoritative values stored on the server.
+
+- When a record is edited and saved in the Grid, the Grid posts a payload that contains `action: 'update'`, the primary key in `key`, and the changed fields in `value`.
+- The update action calls the `_handle_update()` function, which loads the targeted instance, validates the new values with the serializer, and persists the changes inside a transaction.
+- After the update, `_handle_update()` refreshes the instance from the database, serializes the updated row, and returns it so that the Grid remains synchronized with the authoritative values stored on the server.
 
 **Below image shows the updated data passed to the DRF:**
 
@@ -1009,9 +1011,10 @@ def _handle_remove(viewset, payload) -> Response:
 ```
 
 **Explanation:**
-- When a user deletes a record in the Grid, the Grid posts a payload that specifies `action: 'remove'` together with the primary key that identifies the record to be deleted.
+
+- When a record is deleted in the Grid, the Grid posts a payload that specifies `action: 'remove'` together with the primary key that identifies the record to be deleted.
 - The delete action calls the "_handle_remove()" function, which serializes the target instance, deletes it inside a transaction, and prepares a confirmation payload.
-- The "_handle_remove()" function returns the confirmation payload to the client so that the Grid can remove the row from the UI and the user can see that the deletion has been completed successfully.
+- The "_handle_remove()" function returns the confirmation payload to the client so that the Grid can remove the row from the UI and confirm that the deletion has been completed successfully.
 
 **Below image shows the deleted key passed to the DRF:**
 

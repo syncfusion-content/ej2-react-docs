@@ -1,8 +1,9 @@
-{% raw %}
+
 import { BulletChartComponent } from '@syncfusion/ej2-react-charts';
 import { BulletRangeCollectionDirective, BulletRangeDirective } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
+
 function App() {
     return (<BulletChartComponent id='ranges' style={{ textAlign: "center" }} animation={{ enable: false }} valueField='value' targetField='target' title='Revenue' minimum={0} maximum={300} interval={50} dataSource={[{ value: 270, target: 250 }]}>
                         <BulletRangeCollectionDirective>
@@ -13,7 +14,7 @@ function App() {
 
             </BulletChartComponent>);
 }
-;
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
-{% endraw %}
+
+const root = createRoot(document.getElementById("charts"));
+root.render(<App />);

@@ -18,7 +18,7 @@ function App() {
     }
   }
   return (<div>
-    <GridComponent ref={g => grid = g} dataSource={data} allowFiltering={true} allowPaging={true} pageSettings={pageSettings} height={315} filterSettings={filterSettings} actionComplete={actionComplete}>
+    <GridComponent ref={g => grid = g} dataSource={data} allowFiltering={true} allowPaging={true} pageSettings={pageSettings} height={268} filterSettings={filterSettings} actionComplete={actionComplete}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} />
         <ColumnDirective field='OrderDate' headerText='Order Date' width='100' textAlign="Right" type="datetime" format={formatOptions} />
