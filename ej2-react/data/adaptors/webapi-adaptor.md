@@ -26,12 +26,12 @@ While both adaptors work with OData-style queries, they have distinct use cases:
 
 `WebApiAdaptor` is compatible with existing ASP.NET Web API projects, provides full control over server‑side query processing, allows flexible response formatting and custom business logic implementation, and supports OData‑style query syntax without requiring the full OData infrastructure.
 
-## Prerequisites and system requirements
+## Prerequisites
 
-| Software | Recommended version | Download |
+| Software | Recommended version | Download / Command |
 |--------------------|---------------------|---------|
-| Visual Studio  | Community, Professional, or Enterprise | https://visualstudio.microsoft.com |
-| Node.js            | 14.0 or later                          | https://nodejs.org |
+| **Visual Studio**  | Community, Professional, or Enterprise | [Visual Studio](https://visualstudio.microsoft.com) |
+| **Node.js**            | 14.0 or later                          | [Node.js](https://nodejs.org) |
 
 ## Configure Web API service in ASP.NET Core (server-side)
 
@@ -53,13 +53,13 @@ To create the project, launch **Visual Studio** or later, select **Create** a ne
 
 **Option 2: Using terminal**
 
-Windows (PowerShell):  
+**Windows (PowerShell):**  
 Press the <kbd>Windows</kbd> key, type PowerShell, and press <kbd>Enter</kbd>. A terminal window opens for running commands.
 
-Visual Studio Code:  
+**Visual Studio Code:**  
 Open VS Code, then from the top menu select **View → Terminal**. The integrated terminal appears at the bottom of the editor.
 
-macOS (Terminal):  
+**macOS (Terminal):**  
 Press <kbd>Command</kbd> + <kbd>Space</kbd> to open Spotlight Search, type Terminal, and press <kbd>Enter</kbd>.
 
 ```bash
@@ -91,17 +91,16 @@ The `Microsoft.AspNetCore.Mvc.NewtonsoftJson` package provides essential JSON se
 - Enabling the `Newtonsoft.Json` serializer instead of the default `System.Text.Json`.
 - Support for **property casing**, **contract resolution**, and **custom naming strategies**.
 - Configuration options for **reference loop handling**, **null value handling**, and **date formatting**.
-- Backward compatibility for applications previously relying on Newtonsoft.Json behavior
+- Backward compatibility for applications previously relying on `Newtonsoft.Json` behavior
 
 > This package is required when applying JSON **casing** in Syncfusion ASP.NET Core Grid. Refer to the [troubleshooting guide](https://ej2.syncfusion.com/aspnetcore/documentation/grid/data-binding/data-binding#troubleshoot-syncfusion-aspnet-core-grid-render-rows-without-data) for more details.
 
-### Data model definition
+**Data model definition**
 
 1. In Solution Explorer, right-click the **Server** project, choose **Add** → **New Folder**, and name it **Models**.
 
 2. Right-click the **Models** folder, select **Add → Class**, name it **OrdersDetails.cs**, and replace its default content with the provided implementation.
 
-```cs
 {% tabs %}
 {% highlight cs tabtitle="OrdersDetails.cs" %}
 
@@ -163,8 +162,6 @@ namespace WebApiAdaptor.Server.Models
 {% endhighlight %}
 {% endtabs %}
 
-```
-
 Model components explained:
 - **Static list**: In-memory data storage for demonstration purposes.
 - **Constructor**: Initializes order properties with sample data.
@@ -180,7 +177,6 @@ Model components explained:
 
 This initial implementation returns all data in the format required by `WebApiAdaptor`: `{ Items: [], Count: number }`
 
-```cs
 {% tabs %}
 {% highlight cs tabtitle="OrdersController.cs" %}
 
@@ -210,7 +206,6 @@ namespace WebApiAdaptor.Server.Controllers
 
 {% endhighlight %}
 {% endtabs %}
-```
 
 Controller implementation analysis:
 

@@ -52,6 +52,9 @@ In the below example, a set of prompts and texts are configured to demonstrate t
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/rich-text-editor/ai-assistant/commands-cs1/app/App.tsx %}
 {% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/rich-text-editor/ai-assistant/commands-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/commands-cs1" %}
@@ -64,6 +67,9 @@ In the below example, a set of prompts and texts are configured to demonstrate t
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/rich-text-editor/ai-assistant/commands-cs2/app/App.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/rich-text-editor/ai-assistant/commands-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -86,6 +92,9 @@ In the below sample, the `prompts` and `suggestions` properties of the `aiAssist
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/rich-text-editor/ai-assistant/prompts-cs1/app/App.tsx %}
 {% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/rich-text-editor/ai-assistant/prompts-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/prompts-cs1" %}
@@ -98,6 +107,9 @@ In the below sample, the `prompts` and `suggestions` properties of the `aiAssist
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/rich-text-editor/ai-assistant/prompts-cs2/app/App.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/rich-text-editor/ai-assistant/prompts-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -138,6 +150,9 @@ In the below sample, the toolbar settings are configured to modify the order and
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/rich-text-editor/ai-assistant/toolbar-settings-cs1/app/App.tsx %}
 {% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/rich-text-editor/ai-assistant/toolbar-settings-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/toolbar-settings-cs1" %}
@@ -150,6 +165,9 @@ In the below sample, the toolbar settings are configured to modify the order and
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/rich-text-editor/ai-assistant/toolbar-settings-cs2/app/App.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/rich-text-editor/ai-assistant/toolbar-settings-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -172,6 +190,9 @@ In the below sample, the popup width and maximum height are configured.
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/rich-text-editor/ai-assistant/popup-dimensions-cs1/app/App.tsx %}
 {% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/rich-text-editor/ai-assistant/popup-dimensions-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/popup-dimensions-cs1" %}
@@ -184,6 +205,9 @@ In the below sample, the popup width and maximum height are configured.
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/rich-text-editor/ai-assistant/popup-dimensions-cs2/app/App.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/rich-text-editor/ai-assistant/popup-dimensions-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -206,6 +230,9 @@ In the below sample, the maximum prompt history is configured to `30`, and when 
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/rich-text-editor/ai-assistant/prompt-history-cs1/app/App.tsx %}
 {% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/rich-text-editor/ai-assistant/prompt-history-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/prompt-history-cs1" %}
@@ -218,6 +245,9 @@ In the below sample, the maximum prompt history is configured to `30`, and when 
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/rich-text-editor/ai-assistant/prompt-history-cs2/app/App.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/rich-text-editor/ai-assistant/prompt-history-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -240,6 +270,9 @@ In the below sample, a custom banner template is applied to the AI Assistant.
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/rich-text-editor/ai-assistant/banner-cs1/app/App.tsx %}
 {% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/rich-text-editor/ai-assistant/banner-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/banner-cs1" %}
@@ -252,6 +285,9 @@ In the below sample, a custom banner template is applied to the AI Assistant.
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/rich-text-editor/ai-assistant/banner-cs2/app/App.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/rich-text-editor/ai-assistant/banner-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -136,7 +136,7 @@ function App() {
         <label style={{ marginRight: "5px" }}>Hide or show drop area</label>
         <SwitchComponent change={onSwitchChange}></SwitchComponent>
       </div>
-      <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={315}>
+      <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={300}>
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
           <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
@@ -181,7 +181,7 @@ function App() {
         <label style={{ marginRight: "5px" }}>Hide or show drop area</label>
         <SwitchComponent change={onSwitchChange}></SwitchComponent>
       </div>
-      <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={315}>
+      <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={300}>
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
           <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
@@ -734,7 +734,7 @@ function App() {
         <ButtonComponent style={{marginLeft: "5px"}} onClick={onExpandCollapseButtonClick}>Collapse or Expand Row</ButtonComponent>
       </div>
       <p style={{ color: "red" }}>{message}</p>
-      <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={315}>
+      <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={300}>
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
           <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
@@ -786,7 +786,7 @@ function App() {
         <ButtonComponent style={{marginLeft: "5px"}} onClick={onExpandCollapseButtonClick}>Collapse or Expand Row</ButtonComponent>
       </div>
       <p style={{ color: "red" }}>{message}</p>
-      <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={315}>
+      <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={300}>
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
           <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
@@ -871,7 +871,7 @@ function App() {
   }
   return (<div>
     <div style={{ marginLeft: "100px" }}><p style={{ color: "red" }} id="message">{message}</p></div>
-    <GridComponent dataSource={data} allowGrouping={true} height={315} actionBegin={actionBegin} actionComplete={actionComplete}>
+    <GridComponent dataSource={data} allowGrouping={true} height={300} actionBegin={actionBegin} actionComplete={actionComplete}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
@@ -913,7 +913,7 @@ function App() {
   }
   return (<div>
     <div style={{ marginLeft: "100px" }}><p style={{ color: "red" }} id="message">{message}</p></div>
-    <GridComponent dataSource={data} allowGrouping={true} height={315} actionBegin={actionBegin} actionComplete={actionComplete}>
+    <GridComponent dataSource={data} allowGrouping={true} height={300} actionBegin={actionBegin} actionComplete={actionComplete}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />

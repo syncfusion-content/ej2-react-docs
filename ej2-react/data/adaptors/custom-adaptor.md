@@ -10,19 +10,19 @@ domainurl: ##DomainURL##
 
 #  Custom Remote Data Binding in Syncfusion React Components
 
-The `CustomAdaptor` is a powerful extension mechanism that **customizes any existing adaptor** ([UrlAdaptor](./url-adaptor), [WebApiAdaptor](./webapi-adaptor), [ODataV4Adaptor](./odatav4-adaptor), [GraphQLAdaptor](./graphql-adaptor)) to meet specific application requirements. Instead of creating an entirely new adaptor from scratch, `CustomAdaptor` extends and modifies the behavior of existing adaptors by intercepting and customizing HTTP requests and responses.
+The Custom Adaptor is a powerful extension mechanism that **customizes any existing adaptor** ([UrlAdaptor](./url-adaptor), [WebApiAdaptor](./webapi-adaptor), [ODataV4Adaptor](./odatav4-adaptor), [GraphQLAdaptor](./graphql-adaptor)) to meet specific application requirements. Instead of creating an entirely new adaptor from scratch, Custom Adaptor extends and modifies the behavior of existing adaptors by intercepting and customizing HTTP requests and responses.
 
-## What is CustomAdaptor?
+## What is Custom Adaptor?
 
-`CustomAdaptor` is not a standalone adaptor, it's a way to extend and customize existing Syncfusion<sup style="font-size:70%">&reg;</sup> adaptors (`UrlAdaptor`, `ODataV4Adaptor`, `WebApiAdaptor`, `GraphQLAdaptor`) by overriding their default behavior. 
+Custom Adaptor is not a standalone adaptor, it's a way to extend and customize existing Syncfusion<sup style="font-size:70%">&reg;</sup> adaptors (`UrlAdaptor`, `ODataV4Adaptor`, `WebApiAdaptor`, `GraphQLAdaptor`) by overriding their default behavior. 
 
-The `CustomAdaptor` acts as a middleware layer between Syncfusion<sup style="font-size:70%">&reg;</sup> React components and the chosen adaptor (such as `UrlAdaptor`, `ODataV4Adaptor`, `WebApiAdaptor`, or `GraphQLAdaptor`). Its purpose is to customize the default HTTP request and response handling with custom logic. By intercepting the data flow, it allows overriding, adjusting, or extending behavior at specific points. This design makes it possible to control how data is fetched, processed, and returned while continuing to use the built‑in features of existing adaptors, avoiding the need to create a new adaptor from scratch.
+The Custom Adaptor acts as a middleware layer between Syncfusion<sup style="font-size:70%">&reg;</sup> React components and the chosen adaptor (such as `UrlAdaptor`, `ODataV4Adaptor`, `WebApiAdaptor`, or `GraphQLAdaptor`). Its purpose is to customize the default HTTP request and response handling with custom logic. By intercepting the data flow, it allows overriding, adjusting, or extending behavior at specific points. This design makes it possible to control how data is fetched, processed, and returned while continuing to use the built‑in features of existing adaptors, avoiding the need to create a new adaptor from scratch.
 
 ![Custom Adaptor Flowchart](../images/custom-adaptor-flowchart.jpeg)
 
-## Why use CustomAdaptor?
+## Why use Custom Adaptor?
 
-`CustomAdaptor` is designed for scenarios where the built‑in DataManager adaptors are almost sufficient but require specific adjustments. It provides a way to extend existing adaptor logic without rewriting it entirely.
+Custom Adaptor is designed for scenarios where the built‑in DataManager adaptors are almost sufficient but require specific adjustments. It provides a way to extend existing adaptor logic without rewriting it entirely.
 
 Typical use cases include:
 - API requires authentication headers that change dynamically.
@@ -34,11 +34,10 @@ Typical use cases include:
 - Need to log requests/responses for debugging.
 - Custom error handling beyond standard adaptor capabilities.
 
-> Regardless of customization, Syncfusion<sup style="font-size:70%">&reg;</sup> React components that load data on-demand always expect the final response to include:
-> - **Default Response Format**: `{ result: [], count: 100 }`  
-> Required by most adaptors (`UrlAdaptor`, `ODataV4Adaptor`, `GraphQLAdaptor`, and any custom adaptor extending them).  
-> - **WebApiAdaptor Exception**: `{ items: [], count: 100 }`  
-> Unlike other adaptors, `WebApiAdaptor` expects the raw server response to use `items` instead of `result`.  
+> The Custom adaptor response must be returned in the following formats when extending from default adaptors:
+- `UrlAdaptor` / `GraphQLAdaptor`: { result: [], count: 100 }
+- `WebApiAdaptor `: { items: [], count: 100 } (uses items instead of result)
+- `ODataV4Adaptor`: { "@odata.count": 100, "value": [] }
 
 ## Real-world scenarios
 
@@ -135,9 +134,9 @@ public beforeSend(requestContext: DataManager, request: Request, settings?: any)
 }
 ```
 
-## CustomAdaptor methods
+## Custom Adaptor methods
 
-`CustomAdaptor` provides three powerful methods to intercept and customize data flow at different stages of the request-response cycle.
+Custom Adaptor provides three powerful methods to intercept and customize data flow at different stages of the request-response cycle.
 
 ### processQuery method
 
@@ -425,9 +424,9 @@ public processResponse(): Object {
 }
 ```
 
-## Extending different adaptors using CustomAdaptor
+## Extending different adaptors using Custom Adaptor
 
-This section demonstrates how to extend different Syncfusion<sup style="font-size:70%">&reg;</sup> adaptors (`ODataV4Adaptor`, `UrlAdaptor`, `WebApiAdaptor`, `GraphQLAdaptor`) using `CustomAdaptor` for various real-world scenarios.
+This section demonstrates how to extend different Syncfusion<sup style="font-size:70%">&reg;</sup> adaptors (`ODataV4Adaptor`, `UrlAdaptor`, `WebApiAdaptor`, `GraphQLAdaptor`) using Custom Adaptor for various real-world scenarios.
 
 ### Extending ODataV4Adaptor with authentication and serial numbers
 
@@ -785,7 +784,7 @@ export class CustomGraphQLAdaptor extends GraphQLAdaptor {
 | CRUD operations fail | URLs not configured | Set `insertUrl`, `updateUrl`, `removeUrl` in DataManager |
 | API called twice | Calling super twice | Call `super.methodName()` only once per method |
 
-## CustomAdaptor methods summary
+## Custom Adaptor methods summary
 
 | Method | When to override | Common use cases |
 |--------|------------------|------------------|
@@ -795,6 +794,6 @@ export class CustomGraphQLAdaptor extends GraphQLAdaptor {
 
 ## Integration with Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
 
-To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React components with the `CustomAdaptor`, refer to the documentation below:
+To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React components with the Custom Adaptor, refer to the documentation below:
 
 - [Grid](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/custom-adaptor)

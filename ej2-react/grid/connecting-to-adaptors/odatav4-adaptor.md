@@ -10,19 +10,34 @@ domainurl: ##DomainURL##
 
 # ODataV4 in Syncfusion React Grid Component
 
-The `ODataV4Adaptor` in the Syncfusion<sup style="font-size:70%">&reg;</sup> React DataManager enables seamless integration between the React Grid and OData V4 services by handling OData‑formatted request and response processing. It automatically converts Grid actions such as filtering, sorting, paging, grouping, and CRUD into OData V4 compliant query options (like $filter, $orderby, $top, $skip) and sends them to the server. The adaptor also parses the structured OData V4 JSON response, extracting the result set and count values, ensuring smooth remote data binding without custom query or response logic.
+The `ODataV4Adaptor` in the Syncfusion<sup style="font-size:70%">&reg;</sup> React DataManager enables seamless integration between the React Grid and OData V4 services by handling OData‑formatted request and response processing. It automatically converts Grid actions such as filtering, sorting, paging, grouping, and CRUD into OData V4 compliant query options (like `$filter`, `$orderby`, `$top`, `$skip`) and sends them to the server. The adaptor also parses the structured OData V4 JSON response, extracting the result set and count values, ensuring smooth remote data binding without custom query or response logic.
 
-For complete server‑side configuration and additional implementation details, refer to the [DataManager ODataV4Adaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors) documentation, which covers endpoint setup, query processing, and best practices for integrating OData V4 services.
+For complete server‑side configuration and additional implementation details, refer to the DataManager ODataV4Adaptor documentation, which covers endpoint setup, query processing, and best practices for integrating OData V4 services.
 
 Once the project creation and backend setup are complete, the next step is to render the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid Component on the client side.
 
-## React Grid Frontend Setup using Syncfusion OdataV4Adaptor
+**Project structure:**
 
-After finishing the backend setup for the **OdataV4AdaptorDemo** ASP.NET Core project, next step is to integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid on the client side by following these instructions.
+```
+ODataV4Adaptor/
+├── OdataV4Adaptor.client/       # React frontend (Vite/React project).
+│   ├── src/
+│   │   ├── App.css
+│   │   └── App.jsx                  # Add odatav4 adaptor here.
+│   └── package.json
+└── ODataV4Adaptor.Server/      # ASP.NET Core backend (API).
+    ├── Controllers/                 # API controllers (will be created here).
+    ├── Models/                      # Data models (will be created here).
+    └── Program.cs                   # Server configuration.
+```
+
+## React Grid frontend setup using Syncfusion OdataV4Adaptor
+
+After finishing the backend setup for the **OdataV4Adaptor** ASP.NET Core project, next step is to integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid on the client side by following these instructions.
 
 ### Step 1: Install Syncfusion packages
 
-Right‑click the **Odatav4adaptor.client** folder in **Solution Explorer** and select **Open in Terminal** (available in newer Visual Studio versions), or open a Developer Command prompt/PowerShell from the Start menu and navigate manually to the **Odatav4adaptor.client directory**. Once inside the folder, confirm that **package.json** is present, then run the following commands to install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages:
+Right‑click the **OdataV4Adaptor.client** folder in **Solution Explorer** and select **Open in Terminal** (available in newer Visual Studio versions), or open a Developer Command prompt/PowerShell from the Start menu and navigate manually to the **OdataV4Adaptor.client directory**. Once inside the folder, confirm that **package.json** is present, then run the following commands to install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages:
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
@@ -104,7 +119,7 @@ export default App;
 
 React Grid optimizes large datasets by relying on server‑side data operations such as filtering, sorting, and paging rather than processing everything in the browser. The `Syncfusion.EJ2.AspNet.Core` package supports this approach by providing built‑in methods that efficiently handle these operations on the server, ensuring smooth performance even with heavy data loads.
 
-### Pagination
+### Paging
 
 The paging feature is enabled by setting the `allowPaging` property to `true` and injecting the `Page` module from `@syncfusion/ej2-react-grids` into the grid.
 
@@ -239,7 +254,7 @@ export default App;
 
 **Multi-column filtering:**
 
-Multiple columns can be filtered simultaneously. Example: Apply filter criteria ShipCountry = "Denmark" AND OrderID > 10005.
+Multiple columns can be filtered simultaneously.
 
 ![Filtering query](../images/odatav4-adaptor-multi-column-filtering.png)
 
@@ -258,7 +273,7 @@ The searching feature is enabled by configuring the `toolbar` property with `Sea
 
 After enabling the search feature on the client side, the `ODataV4Adaptor` generates an OData‑compliant `$filter` expression that performs a composite search across all searchable columns. The adaptor builds a combined OR‑based filter condition using the search term, and the server returns all records that match the term in any column. The Grid then displays the resulting search output.
 
-Search functionality requires `Filter()` method support (previously configured in Program.cs during OData setup).
+Search functionality requires `Filter()` method support (previously configured in **Program.cs** during OData setup).
 
 {% tabs %}
 {% highlight cs tabtitle="Program.cs" %}
@@ -376,13 +391,13 @@ export default App;
 
 **Single column sorting:**
 
-Click "Order ID" column header to sort by OrderID field.
+Click "Customer ID" column header to sort by CustomerID field.
 
 ![Single column sorting query](../images/odatav4-adaptor-sorting.png)
 
 **Multi-column sorting:**
 
-Hold Ctrl key and click "Ship Country" followed by "Order ID" to establish hierarchical sort (primary sort by country, secondary sort by ID within each country group).
+Hold Ctrl key and click "CustomerID" followed by "Employee ID" to establish hierarchical sort (primary sort by country, secondary sort by ID within each country group).
 
 ![Multi column sorting query](../images/odatav4-adaptor-multi-column-sorting.png)
 
@@ -406,7 +421,6 @@ CRUD refers to the four essential data operations: **Create** (add records), **R
 | **Update** | PATCH | `/odata/Orders(10001)` | Update record with key 10001 |
 | **Delete** | DELETE | `/odata/Orders(10001)` | Delete record with key 10001 |
 
-**Implementation steps:**
 
 ### Step 1: Complete server-Side controller
 
@@ -513,7 +527,7 @@ namespace ODataV4Adaptor.Server.Controllers
 - **Patch()**: Updates existing order; only changes specified fields.
 - **Delete()**: Removes order; `NoContent()` returns 204 status.
 
-### Step 2: client-side grid configuration
+### Step 2: Client-side grid configuration
 
 React Grid enables full CRUD functionality by configuring the required `toolbar` buttons (`Add`, `Edit`, `Update`, `Delete`, and `Cancel`) and enabling adding, editing, updating, and deleting through the `editSettings` property. This setup allows the Grid to handle all basic data operations directly from the UI.
 
@@ -659,22 +673,20 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** Ensure the backend defines routes that correspond to these custom URLs.
+> Ensure the backend defines routes that correspond to these custom URLs.
 
 ## Run the application
 
-Run the application in Visual Studio, accessible on a URL like **https://localhost:xxxx**. Verify the API returns order data at **https://localhost:xxxx/odata/Orders**, where **xxxx** is the port. Grid displays order data fetched from the backend API:
-
-## Troubleshooting common issues
+Run the application in Visual Studio, accessible on a URL like **https://localhost:xxxx**. Verify the API returns order data at **https://localhost:xxxx/odata/Orders**, where **xxxx** is the port. Grid displays order data fetched from the backend API.
 
 ## Troubleshooting
 
 | Issue               | Resolution                                                                                           |
 |---------------------|-------------------------------------------------------------------------------------------------------|
-| **Empty Grid**      | Ensure the API returns data, verify `GetAllRecords()` provides results, and check the browser console. |
-| **CRUD Not Working**| Confirm the primary key is configured and the controller supports POST, PATCH, and DELETE methods.     |
+| **Empty Grid**      | Ensure the API returns data, verify "GetAllRecords()" provides results, and check the browser console. |
+| **CRUD Not Working**| Confirm the primary key is configured and the controller supports `POST`, `PATCH`, and `DELETE` methods.     |
 | **Styles Missing**  | Verify that Syncfusion CSS files are correctly referenced and fix any missing file errors in console.  |
 
 ## Complete sample repository
 
-For the complete working implementation of this example, refer to the GitHub repository.
+For the complete working implementation of this example, refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-adaptors/OdataV4Adaptor) repository.

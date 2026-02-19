@@ -13,17 +13,32 @@ domainurl: ##DomainURL##
 
 The `RemoteSaveAdaptor` in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a hybrid approach to data management that combines the best of both client-side and server-side processing. The adaptor fetches the complete dataset from the server once, and then executes operations such as filtering, sorting, paging, searching, and grouping locally in the browser without additional server requests. Only CRUD operations (Create, Update, Delete) communicate with the server to persist data changes. It reduces server load and network latency while keeping data persistence secure.
 
-For complete server‑side configuration and additional implementation details, refer to the [DataManager RemoteSaveAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors) documentation, which explains endpoint setup, request handling, and best practices for synchronizing CRUD operations with remote services.
+For complete server‑side configuration and additional implementation details, refer to the DataManager RemoteSaveAdaptor documentation, which explains endpoint setup, request handling, and best practices for synchronizing CRUD operations with remote services.
 
 Once the project creation and backend setup are complete, the next step is to render the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component on the client side.
 
+**Project Structure:**
+
+```
+RemoteSaveAdaptor/
+├── RemoteSaveAdaptor.client/        # React frontend (Vite/React project).
+│   ├── src/
+│   │   ├── App.css
+│   │   └── App.jsx                  # Add RemoteSaveAdaptor here.
+│   └── package.json
+└── RemoteSaveAdaptor.Server/        # ASP.NET Core backend (API).
+    ├── Controllers/                 # API controllers (will be created here).
+    ├── Models/                      # Data models (will be created here).
+    └── Program.cs                   # Server configuration.
+```
+
 ## React Grid setup and client-side configuration
 
-After finishing the backend setup for the **RemoteSaveAdaptorDemo** ASP.NET Core project, next step is to integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid on the client side by following these instructions.
+After finishing the backend setup for the **RemoteSaveAdaptor** ASP.NET Core project, next step is to integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid on the client side by following these instructions.
 
 ### Step 1: Installing Syncfusion packages
 
-Right‑click the **Remote-save-adaptor-demo.client** folder in **Solution Explorer** and select **Open in Terminal** (available in newer Visual Studio versions), or open a Developer Command Prompt/PowerShell from the Start menu and navigate manually to the **Remote-save-adaptor-demo.client** directory. Once inside the folder, confirm that **package.json** is present, then run the following commands to install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages:
+Right‑click the **RemoteSaveAdaptor.client** folder in **Solution Explorer** and select **Open in Terminal** (available in newer Visual Studio versions), or open a Developer Command Prompt/PowerShell from the Start menu and navigate manually to the **RemoteSaveAdaptor.client** directory. Once inside the folder, confirm that **package.json** is present, then run the following commands to install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages:
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
@@ -124,18 +139,10 @@ const App = () => {
       .catch((error) => console.error("Error fetching data:", error));
     }, 
   []);
-  const editSettings = {
-    allowEditing: true,
-    allowAdding: true,
-    allowDeleting: true,
-    newRowPosition: "Top",
-  };
-  const toolbarOptions = ["Add", "Edit", "Delete", "Update", "Cancel", "Search"];
-
   return (
     <div>
       {data && (
-        <GridComponent id="grid" dataSource={data} editSettings={editSettings} toolbar={toolbarOptions} allowSorting={true} allowPaging={true} allowFiltering={true}>
+        <GridComponent id="grid" dataSource={data} allowSorting={true} allowPaging={true} allowFiltering={true}>
           <ColumnsDirective>
             <ColumnDirective field="OrderID" headerText="Order ID" textAlign="Right" width="120" isPrimaryKey={true} />
             <ColumnDirective field="CustomerID" headerText="Customer ID" width="150" />
@@ -158,13 +165,54 @@ The Grid has now been successfully created with full functionality, including pa
 
 > Replace **https://localhost:xxxx/api/Orders** with the actual API endpoint that returns data in JSON format.
 
-## CRUD Operations:
+## CRUD operations
 
-CRUD refers to the four fundamental data operations: **Create** (add records), **Read** (view records), **Update** (modify records), and **Delete** (remove records). Backend configuration for handling these operations is detailed in the Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager [RemoteSaveAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors) documentation, which covers endpoint setup, request handling, and best practices for synchronizing CRUD actions with remote services.
+CRUD refers to the four fundamental data operations: **Create** (add records), **Read** (view records), **Update** (modify records), and **Delete** (remove records). Backend configuration for handling these operations is detailed in the Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager `RemoteSaveAdaptor` documentation, which covers endpoint setup, request handling, and best practices for synchronizing CRUD actions with remote services.
 
 In this project, the "Order ID" column has already been designated as the primary key, which is essential for performing CRUD operations in the Grid. The following sections illustrate both the client‑side and server‑side code required to implement complete CRUD functionality.
 
-### CRUD model structure
+```ts
+import { GridComponent, ColumnsDirective, ColumnDirective, Inject, Toolbar, Edit } from "@syncfusion/ej2-react-grids";
+
+const serviceUrl = "https://localhost:xxxx/api/Orders"; // Replace with actual backend URL.
+
+const App = () => {
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    fetch(serviceUrl)
+      .then((response) => response.json())
+      .then((result) => {
+        setData(new DataManager({
+          json: result,
+          adaptor: new RemoteSaveAdaptor(),
+          updateUrl: `${serviceUrl}/Update`,
+          insertUrl: `${serviceUrl}/Insert`,
+          removeUrl: `${serviceUrl}/Remove`,
+        }));
+      })
+      .catch((error) => console.error("Error fetching data:", error));
+    }, 
+  []);
+  const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true, newRowPosition: "Top" };
+  const toolbarOptions = ["Add", "Edit", "Delete", "Update", "Cancel", "Search"];
+  return (
+    <div>
+      {data && (
+        <GridComponent id="grid" dataSource={data} editSettings={editSettings} toolbar={toolbarOptions}>
+          <ColumnsDirective>
+            <ColumnDirective field="OrderID" headerText="Order ID" textAlign="Right" width="120" isPrimaryKey={true} />
+            {/* Include additional columns here */}
+          </ColumnsDirective>
+          <Inject services={[Toolbar, Edit]} />
+        </GridComponent>
+      )}
+    </div>
+  );
+};
+export default App;
+```
+
+**CRUD model structure**
 
 The following class on the server side defines the structure of data exchanged during CRUD operations:
 
@@ -293,7 +341,6 @@ namespace RemoteSaveAdaptorDemo.Controllers
     public class OrdersController : ControllerBase
     {
         /// <summary>
-        /// <summary>
         /// Deletes an order.
         /// </summary>
         /// <param name="deletedRecord">It contains the specific record detail which is need to be removed.</param>
@@ -336,3 +383,7 @@ namespace RemoteSaveAdaptorDemo.Controllers
 | Grid shows no data | Fetch error or wrong data format | Check browser console for errors, verify API response format |
 | Memory issues | Dataset too large | Reduce dataset size or switch to `UrlAdaptor` |
 | Sorting/filtering slow | Too many records | Consider using `UrlAdaptor` for server-side operations |
+
+## Complete sample repository
+
+A complete, working sample implementation is available in the [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-adaptors/RemoteSaveAdaptor) repository.

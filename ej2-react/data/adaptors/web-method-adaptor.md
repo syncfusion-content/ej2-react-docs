@@ -14,7 +14,7 @@ The `WebMethodAdaptor` enables the Syncfusion<sup style="font-size:70%">&reg;</s
 
 ## Why use WebMethodAdaptor?
 
-The `WebMethodAdaptor` works with **custom REST APIs that expect nested parameter structures**—particularly useful for certain backend frameworks. The benefits include:
+The `WebMethodAdaptor` works with **custom REST APIs that expect nested parameter structures** particularly useful for certain backend frameworks. The benefits include:
 
 1. **Backend compatibility**: Works with APIs expecting nested `value` object pattern.
 2. **Server-side processing**: Handles large datasets (100K+ records) efficiently on the server.
@@ -47,7 +47,8 @@ The `WebMethodAdaptor` works with **custom REST APIs that expect nested paramete
 
 The WebMethodAdaptor is typically used in scenarios where client-side components need to communicate directly with server-side methods exposed via web services. It helps in binding data from remote services into  Syncfusion<sup style="font-size:70%">&reg;</sup> React components components seamlessly.
 
-The `WebMethodAdaptor` used the following scenarios only.
+The `WebMethodAdaptor` used the following scenarios only:
+
 - Backend API expects nested parameter structure with `value` wrapper.
 - Working with ASP.NET Web Services (.asmx endpoints).
 - API requires parameters inside a `value` wrapper object.
@@ -61,12 +62,12 @@ The following scenario uses `UrlAdaptor` directly instead of `WebMethodAdaptor`:
 - APIs expecting direct parameter access.
 - No specific `value` object requirement.
 
-## Prerequisites and system requirements
+## Prerequisites
 
 | Requirement           | Details                                                      | Download / Command                 |
 |----------------------|--------------------------------------------------------------|------------------------------------|
-| **Visual Studio**  | Community, Professional, or Enterprise edition               | https://visualstudio.microsoft.com/ |
-| **Node.js**           | Version 14.0 or later                                         | https://nodejs.org/                |
+| **Visual Studio**  | Community, Professional, or Enterprise edition               | [Visual Studio](https://visualstudio.microsoft.com/) |
+| **Node.js**           | Version 14.0 or later                                         | [Node.js](https://nodejs.org/)                |
 | **Verify Node.js**    | Check installed version                                        | `node --version`  
 
 ## Backend setup (ASP.NET Core API)
@@ -79,36 +80,36 @@ New projects can be created in several ways depending on the platform.
 
 **Option 1: Visual Studio**
 
-Open **Visual Studio 2022 or later**, create a new project, search for the **ASP.NET Core with React.js** template, name the project **WebMethodAdaptorDemo**, select **.NET 8.0 or later**, and click **Create**.
+Open **Visual Studio 2022 or later**, create a new project, search for the **ASP.NET Core with React.js** template, name the project **WebMethodAdaptor**, select **.NET 8.0 or later**, and click **Create**.
 
 For detailed setup instructions, see [Microsoft's official documentation](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-react?view=vs-2022).
 
 **Option 2: Using terminal**
 
-Windows (PowerShell):  
+**Windows (PowerShell):**  
 Press the <kbd>Windows</kbd> key, type PowerShell, and press <kbd>Enter</kbd>. A terminal window opens for running commands.
 
-Visual Studio Code:  
+**Visual Studio Code:**  
 Open VS Code, then from the top menu select **View → Terminal**. The integrated terminal appears at the bottom of the editor.
 
-macOS (Terminal):  
+**macOS (Terminal):**  
 Press <kbd>Command</kbd> + <kbd>Space</kbd> to open Spotlight Search, type Terminal, and press <kbd>Enter</kbd>.
 
 ```bash
-dotnet new react -n WebMethodAdaptorDemo
-cd WebMethodAdaptorDemo
+dotnet new react -n WebMethodAdaptor
+cd WebMethodAdaptor
 ```
 
 After project creation, the folder structure will appear as follows:
 
 ```
-WebMethodAdaptorDemo/
-├── webmethodadaptordemo.client/     # React frontend (Vite/React project).
+WebMethodAdaptor/
+├── WebMethodAdaptor.client/     # React frontend (Vite/React project).
 │   ├── src/
 │   │   ├── App.css
 │   │   └── App.jsx                  # Add WebMethodAdaptor here.
 │   └── package.json
-└── WebMethodAdaptorDemo.Server/     # ASP.NET Core backend (API).
+└── WebMethodAdaptor.Server/     # ASP.NET Core backend (API).
     ├── Controllers/                 # API controllers (will be created here).
     ├── Models/                      # Data models (will be created here).
     └── Program.cs                   # Server configuration.
@@ -140,13 +141,12 @@ dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson
 
 Create a **Models** folder in the project root (if it doesn't exist), then add **OrdersDetails.cs**:
 
-```cs
 {% tabs %}
 {% highlight cs tabtitle="OrdersDetails.cs" %}
 
 using System.ComponentModel.DataAnnotations;
 
-namespace WebMethodAdaptorDemo.Models
+namespace WebMethodAdaptor.Models
 {
   public class OrdersDetails
   {
@@ -217,7 +217,6 @@ namespace WebMethodAdaptorDemo.Models
 
 {% endhighlight %}
 {% endtabs %}
-```
 
 > This example uses a static in-memory list (`order`) for simplicity. In real applications, replace "GetAllRecords()" method with database queries using Entity Framework Core, Dapper, or the preferred data access layer.
 
@@ -225,15 +224,14 @@ namespace WebMethodAdaptorDemo.Models
 
 Create **DataController.cs** in the **Controllers** folder. This controller handles all data requests from the React component.
 
-```cs
 {% tabs %}
 {% highlight cs tabtitle="DataController.cs" %}
 
 using Microsoft.AspNetCore.Mvc;
-using WebMethodAdaptorDemo.Models;
+using WebMethodAdaptor.Models;
 using Syncfusion.EJ2.Base;
 
-namespace WebMethodAdaptorDemo.Controllers
+namespace WebMethodAdaptor.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
@@ -288,7 +286,6 @@ namespace WebMethodAdaptorDemo.Controllers
 
 {% endhighlight %}
 {% endtabs %}
-```
 
 The server response must include `result` for the current data and `count` for the total records to enable proper pagination.
 
@@ -296,7 +293,7 @@ The server response must include `result` for the current data and `count` for t
 
 - **[FromBody] DataManager**: This parameter receives the wrapped request with `value` object containing all operation details (filters, sorts, page info).
 - **DataManager.Value**: Access the actual `DataManagerRequest` from the nested `value` object.
-- **IQueryable<OrdersDetails>**: Use `IQueryable` for efficient database queries.
+- **IQueryable&lt;OrdersDetails&gt;**: Use `IQueryable` for efficient database queries.
 - **count**: Must be total count before paging (not just current page count).
 - **HttpPost**: Client sends `POST` requests by default for data operations.
 
@@ -388,8 +385,6 @@ Run the application in Visual Studio, accessible on a URL like **https://localho
 
 When using `WebMethodAdaptor`, request parameters are encapsulated inside a value object. This wrapping changes how the server processes incoming data and requires an additional model to extract the parameters.  Below is an example of a request payload demonstrating paging, sorting, and filtering operations.
 
-
-
 ```json
 {
   "value": {
@@ -439,9 +434,7 @@ When using the `WebMethodAdaptor`, every backend API endpoint must return data i
 > - Without the `count` field, paging and virtual scrolling cannot function correctly.
 > - APIs returning just an array `[{...}, {...}]` instead of `{result: [...], count: ...}` will prevent proper data display. Responses must wrap in the required structure.
 
-
-
-## Troubleshooting: 
+## Troubleshooting 
 
 | Issue            | Resolution                                                                 |
 |------------------|-----------------------------------------------------------------------------|

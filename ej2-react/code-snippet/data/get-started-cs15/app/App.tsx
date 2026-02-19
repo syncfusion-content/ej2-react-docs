@@ -22,10 +22,10 @@ export default class App extends React.Component<{}, {}>{
         ))
       });
     });
-    this.insertUpdate = this.insertUpdate.bind(this)
+    this.removeRecord = this.removeRecord.bind(this)
   }
 
-  public insertUpdate() {
+  public removeRecord() {
     const orderid: HTMLInputElement = document.getElementById('OrderID') as HTMLInputElement;
     const rowdata: { OrderID: number } = {
       OrderID: +orderid.value,
@@ -47,7 +47,7 @@ export default class App extends React.Component<{}, {}>{
       <div>
         <div style={this.style}>
           <input type="number" id='OrderID' placeholder="Order ID"/>
-          <input type="button" value="Remove" id="manipulate" onClick={this.insertUpdate} />
+          <input type="button" value="Remove" id="manipulate" onClick={this.removeRecord} />
         </div>
         <table id='datatable' className='e-table'>
           <thead>

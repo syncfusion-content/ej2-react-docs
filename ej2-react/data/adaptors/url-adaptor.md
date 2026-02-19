@@ -58,12 +58,12 @@ The `UrlAdaptor` is **completely backend-agnostic**. It connects to any database
 > 2. Parses request parameters (filters, sorts, page info).
 > 3. Returns data in the required `{result, count}` format.
 
-## Prerequisites and System Requirements
+## Prerequisites
 
 | Requirement           | Details                                                      | Download / Command                 |
 |----------------------|--------------------------------------------------------------|------------------------------------|
-| **Visual Studio**  | Community, Professional, or Enterprise edition               | https://visualstudio.microsoft.com/ |
-| **Node.js**           | Version 14.0 or later                                         | https://nodejs.org/                |
+| **Visual Studio**  | Community, Professional, or Enterprise edition               | [Visual Studio](https://visualstudio.microsoft.com/) |
+| **Node.js**           | Version 14.0 or later                                         | [Node.js](https://nodejs.org/)                |
 | **Verify Node.js**    | Check installed version                                        | `node --version`                   |
 
 ## Backend setup (ASP.NET Core API)
@@ -76,39 +76,39 @@ New projects can be created in several ways depending on the platform.
 
 **Option 1: Visual Studio**
 
-Open **Visual Studio 2022 or later**, create a new project, search for the **ASP.NET Core with React.js** template, name the project **UrlAdaptorDemo**, select **.NET 8.0 or later**, and click **Create**.
+Open **Visual Studio 2022 or later**, create a new project, search for the **ASP.NET Core with React.js** template, name the project **UrlAdaptor**, select **.NET 8.0 or later**, and click **Create**.
 
 For detailed setup instructions, see [Microsoft's official documentation](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-react?view=vs-2022).
 
 **Option 2: Using terminal**
 
-Windows (PowerShell):
+**Windows (PowerShell):**
 
 Press the <kbd>Windows</kbd> key, type PowerShell, and press <kbd>Enter</kbd>. A terminal window opens for running commands.
 
-Visual Studio Code:
+**Visual Studio Code:**
 
 Open VS Code, then from the top menu select **View → Terminal**. The integrated terminal appears at the bottom of the editor.
 
-macOS (Terminal):
+**macOS (Terminal):**
 
 Press <kbd>Command</kbd> + <kbd>Space</kbd> to open Spotlight Search, type Terminal, and press <kbd>Enter</kbd>.
 
 ```bash
-dotnet new react -n UrlAdaptorDemo
-cd UrlAdaptorDemo
+dotnet new react -n UrlAdaptor
+cd UrlAdaptor
 ```
 
 **Project structure after creation:**
 
 ```
-UrlAdaptorDemo/
-├── urladaptordemo.client/           # React frontend (Vite/React project).
+UrlAdaptor/
+├── UrlAdaptor.client/           # React frontend (Vite/React project).
 │   ├── src/
 │   │   ├── App.css
 │   │   └── App.jsx                  # Add url adaptor here.
 │   └── package.json
-└── UrlAdaptorDemo.Server/           # ASP.NET Core backend (API).
+└── UrlAdaptor.Server/           # ASP.NET Core backend (API).
     ├── Controllers/                 # API controllers (will be created here).
     ├── Models/                      # Data models (will be created here).
     └── Program.cs                   # Server configuration.
@@ -118,7 +118,7 @@ UrlAdaptorDemo/
 
 `Syncfusion.EJ2.AspNet.Core` package is required to use `DataManager` operations in ASP.NET Core.  It provides essential server‑side helpers and classes such as `DataManagerRequest` and `QueryableOperation` that handle parameter parsing, filtering, sorting, and paging with strong typing and optimized performance. The `Microsoft.AspNetCore.Mvc.Newtonsoft.Json` package provides ASP.NET Core MVC input and output formatters that use `Newtonsoft.Json` for JSON serialization, deserialization, and JSON Patch support.
 
-In Visual Studio, navigate to **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**, search for `Syncfusion.EJ2.AspNet.Core` and `Microsoft.AspNetCore.Mvc.NewtonsoftJson`, select it, and click **Install**. Make sure to install these packages into the **UrlAdaptorDemo.Server** project.
+In Visual Studio, navigate to **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**, search for `Syncfusion.EJ2.AspNet.Core` and `Microsoft.AspNetCore.Mvc.NewtonsoftJson`, select it, and click **Install**. Make sure to install these packages into the **UrlAdaptor.Server** project.
 
 **Or via package manager console:**
 
@@ -138,15 +138,14 @@ dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson
 
 ### Step 3: Create data model
 
-Create a **Models** folder in the **UrlAdaptorDemo.Server** project, then add **OrdersDetails.cs** class file.
+Create a **Models** folder in the **UrlAdaptor.Server** project, then add **OrdersDetails.cs** class file.
 
-```cs
 {% tabs %}
 {% highlight cs tabtitle="OrdersDetails.cs" %}
 
 using System.ComponentModel.DataAnnotations;
 
-namespace UrlAdaptorDemo.Server.Models
+namespace UrlAdaptor.Server.Models
 {
   public class OrdersDetails
   {
@@ -217,22 +216,21 @@ namespace UrlAdaptorDemo.Server.Models
 
 {% endhighlight %}
 {% endtabs %}
-```
+
 >  This example uses a static in-memory list (`order`) for simplicity. In real applications, replace `GetAllRecords()` with database queries using Entity Framework Core, Dapper, or the preferred data access layer.
 
 ### Step 4: Create API controller
 
 Create **DataController.cs** file using **MVC Controller - Empty** template in the **Controllers** folder. This controller handles all data requests from the React component.
 
-```cs
 {% tabs %}
 {% highlight cs tabtitle="DataController.cs" %}
 
 using Microsoft.AspNetCore.Mvc;
-using UrlAdaptorDemo.Server.Models;
+using UrlAdaptor.Server.Models;
 using Syncfusion.EJ2.Base;
 
-namespace UrlAdaptorDemo.Server.Controllers
+namespace UrlAdaptor.Server.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
@@ -273,13 +271,12 @@ namespace UrlAdaptorDemo.Server.Controllers
 
 {% endhighlight %}
 {% endtabs %}
-```
 
 The server response must include `result` for the current data and `count` for the total records to enable proper pagination.
 
 **Key Points:**
 - **[FromBody] DataManagerRequest**: This parameter receives all operation details (filters, sorts, page info).
-- **IQueryable<OrdersDetails>**: Use `IQueryable` for efficient database queries.
+- **IQueryable&lt;OrdersDetails&gt;**: Use `IQueryable` for efficient database queries.
 -  **result**: Returns the data records for the current page/request displayed in the UI.
 - **count**: Must be total count before paging (not just current page count).
 - **HttpPost**: Client sends `POST` requests by default for data operations.

@@ -93,8 +93,8 @@ The following integration benefits are gained when using GraphQL:
 
 | Software | Recommended version | Download |
 |--------------------|---------------------|---------|
-| Visual Studio  | Community, Professional, or Enterprise | https://visualstudio.microsoft.com |
-| Node.js            | 14.0 or later                          | https://nodejs.org |
+| **Visual Studio**  | Community, Professional, or Enterprise | [Visual Studio](https://visualstudio.microsoft.com) |
+| **Node.js**            | 14.0 or later                          | [Node.js](https://nodejs.org) |
 
 ## Backend setup (ASP.NET Core GraphQL)
 
@@ -112,18 +112,18 @@ To create the project, launch **Visual Studio** or later, select **Create** a ne
 
 **Option 2: Using terminal**
 
-Windows (PowerShell):  
+**Windows (PowerShell):** 
 Press the <kbd>Windows</kbd> key, type PowerShell, and press <kbd>Enter</kbd>. A terminal window opens for running commands.
 
-Visual Studio Code:  
+**Visual Studio Code:** 
 Open VS Code, then from the top menu select **View → Terminal**. The integrated terminal appears at the bottom of the editor.
 
-macOS (Terminal):  
+**macOS (Terminal):**  
 Press <kbd>Command</kbd> + <kbd>Space</kbd> to open Spotlight Search, type Terminal, and press <kbd>Enter</kbd>.
 
 ```bash
-dotnet new react -n GraphQLAdaptorDemo
-cd GraphQLAdaptorDemo
+dotnet new react -n GraphQLAdaptor
+cd GraphQLAdaptor
 ```
 
 **Project structure after creation:**
@@ -157,11 +157,10 @@ In Visual Studio, navigate to **Tools** → **NuGet Package Manager** → **Mana
 
 > The HotChocolate packages are required for GraphQL functionality. Refer to the [HotChocolate documentation](https://chillicream.com/docs/hotchocolate/v13) for more details.
 
-### Data model definition
+**Data model definition**
 
 In Solution Explorer, right-click the **Server** project, choose **Add** → **New Folder**, and name it **Models**. Then, right-click the **Models** folder, select **Add** → **Class**, name the file **OrdersDetails.cs**, and replace the default content with the provided implementation.
 
-```cs
 {% tabs %}
 {% highlight cs tabtitle="OrdersDetails.cs" %}
 
@@ -222,7 +221,6 @@ namespace GraphQLAdaptor.Server.Models
 
 {% endhighlight %}
 {% endtabs %}
-```
 
 Model components explained:
 - **Static list**: In-memory data storage for demonstration purposes.
@@ -233,9 +231,8 @@ Model components explained:
 
 ### Step 3: GraphQL schema and resolver configuration
 
-1. Create a **GraphQL** folder in the **Server** project, then add a new class named **Query.cs** inside it and replace its content with the GraphQL query resolver implementation
+- Create a **GraphQL** folder in the **Server** project, then add a new class named **Query.cs** inside it and replace its content with the GraphQL query resolver implementation
 
-```cs
 {% tabs %}
 {% highlight cs tabtitle="Query.cs" %}
 
@@ -264,11 +261,9 @@ namespace GraphQLAdaptor.Server.GraphQL
 
 {% endhighlight %}
 {% endtabs %}
-```
 
-2. Right-click the **GraphQL** folder, choose **Add → Class**, name it **Mutation.cs**, and add the mutation resolver for CRUD operations.
+- Right-click the **GraphQL** folder, choose **Add → Class**, name it **Mutation.cs**, and add the mutation resolver for CRUD operations.
 
-```cs
 {% tabs %}
 {% highlight cs tabtitle="Mutation.cs" %}
 
@@ -330,7 +325,6 @@ namespace GraphQLAdaptor.Server.GraphQL
 
 {% endhighlight %}
 {% endtabs %}
-```
 
 GraphQL resolver implementation analysis:
 
@@ -411,8 +405,8 @@ app.Run();
 Configuration breakdown:
 
 - **AddGraphQLServer()**: Registers HotChocolate GraphQL server.
-- **AddQueryType<Query>()**: Registers query resolver for read operations.
-- **AddMutationType<Mutation>()**: Registers mutation resolver for write operations.
+- **AddQueryType&lt;Query&gt;()  &lt;OrdersDetails&gt;**: Registers query resolver for read operations.
+- **AddMutationType&lt;Mutation&gt;()**: Registers mutation resolver for write operations.
 - **AddFiltering()**: Enables automatic filter parameter handling.
 - **AddSorting()**: Enables automatic sort parameter handling.
 - **AddProjections()**: Enables field selection optimization.
@@ -428,7 +422,7 @@ Run the application in Visual Studio by pressing **F5** or clicking the **Run** 
 
 Navigate to **https://localhost:xxxx/graphql** to access the Banana Cake Pop GraphQL IDE (built-in HotChocolate GraphQL playground).
 
-**Test Query Example:**
+**Test query example:**
 
 ```text
 query {
@@ -471,7 +465,7 @@ When using the `GraphQLAdaptor`, every backend API endpoint must return data in 
 }
 ```
 
-**Test Filtering Example:**
+**Test filtering example:**
 
 ```text
 query {
@@ -486,7 +480,7 @@ query {
 }
 ```
 
-**Test Sorting Example:**
+**Test sorting example:**
 
 ```text
 query {
@@ -499,7 +493,7 @@ query {
 }
 ```
 
-**Test Pagination Example:**
+**Test pagination example:**
 
 ```text
 query {

@@ -10,13 +10,28 @@ domainurl: ##DomainURL##
 
 # WebApiAdaptor in Syncfusion React Grid 
 
-The [WebApiAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#web-api-adaptor) integrates the React Grid with Web API endpoints that support OData‑style querying. It is derived from the `ODataAdaptor`, meaning the target Web API must accept OData‑formatted query parameters for operations such as filtering, sorting, paging, and searching. When the React Grid performs any data action, the `WebApiAdaptor` generates OData‑compliant query strings, sends them to the Web API endpoint, and processes the returned JSON to populate the Grid. This ensures seamless remote data binding with OData-capable Web API services.
+The `WebApiAdaptor` integrates the React Grid with Web API endpoints that support OData‑style querying. It is derived from the `ODataAdaptor`, meaning the target Web API must accept OData‑formatted query parameters for operations such as filtering, sorting, paging, and searching. When the React Grid performs any data action, the `WebApiAdaptor` generates OData‑compliant query strings, sends them to the Web API endpoint, and processes the returned JSON to populate the Grid. This ensures seamless remote data binding with OData-capable Web API services.
 
-For details on configuring the backend (expected request/response format, server‑side processing), refer to the [WebApiAdaptor backend setup documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors#web-api-adaptor).
+For details on configuring the backend (expected request/response format, server‑side processing), refer to the WebApiAdaptor backend setup documentation.
 
 Once the project creation and backend setup are complete, the next step is to render the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid Component on the client side.
 
-## React Grid Frontend Setup using Syncfusion WebAPIAdaptor
+**Project structure:**
+
+```
+WebApiAdaptor/
+├── WebApiAdaptor.client/           # React frontend (Vite/React project).
+│   ├── src/
+│   │   ├── App.css
+│   │   └── App.jsx                  # Add WebApiAdaptor here.
+│   └── package.json
+└── WebApiAdaptor.Server/            # ASP.NET Core backend (API).
+    ├── Controllers/                 # API controllers (will be created here).
+    ├── Models/                      # Data models (will be created here).
+    └── Program.cs                   # Server configuration.
+```
+
+## React Grid frontend setup using Syncfusion WebAPIAdaptor
 
 After finishing the backend setup for the **WebApiAdaptorDemo** ASP.NET Core project, next step is to integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid on the client side by following these instructions.
 
@@ -335,12 +350,11 @@ export default App;
 ![Filtering query](../images/webapiadaptor-filtering.png)
 
 > **Key difference from OData:**
-> - **OData:** Framework automatically handles filtering with `[EnableQuery]`
-> - **WebApi:** Manual parsing and filtering logic required in controller
+> - **OData:** Framework automatically handles filtering with `[EnableQuery]`.
+> - **WebApi:** Manual parsing and filtering logic required in controller.
 
 ### Searching
 
-The search feature provides a global search interface that queries across all columns simultaneously. Unlike column specific filtering, searching performs keyword matching across the entire data set.
 The searching feature is enabled by configuring the `toolbar` property with `Search` item and injecting the `Toolbar` and `Search` modules from `@syncfusion/ej2-react-grids` into the grid.
 
 ```ts
@@ -596,7 +610,7 @@ The Grid has now been successfully created with including paging, sorting, filte
 
 CRUD refers to the four essential data operations: **Create** (add records), **Read** (view records), **Update** (modify records), and **Delete** (remove records).
 
-To manage CRUD (Create, Read, Update, Delete) operations using the WebApiAdaptor, follow the provided guide for configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid for [editing](https://ej2.syncfusion.com/react/documentation/grid/editing/edit) and utilize the sample implementation of the `OrdersController` in the server application. This controller handles HTTP requests for CRUD operations such as `GET`, `POST`, `PUT`, and `DELETE`.
+To manage CRUD (Create, Read, Update, Delete) operations using the `WebApiAdaptor`, follow the provided guide for configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid for [editing](https://ej2.syncfusion.com/react/documentation/grid/editing/edit) and utilize the sample implementation of the **OrdersController** in the server application. This controller handles HTTP requests for CRUD operations such as `GET`, `POST`, `PUT`, and `DELETE`.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -633,7 +647,7 @@ export default App;
 
 **Insert record**
 
-To insert a new record into the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, utilize the `HttpPost` method in the server application. Below is a sample implementation of inserting a record using the OrdersController:
+To insert a new record into the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, utilize the `HttpPost` method in the server application. Below is a sample implementation of inserting a record using the **OrdersController**:
 
 ![WebApiAdaptor-Insert-record](../images/webapiadaptor-insert-record.png)
 
@@ -727,5 +741,5 @@ Run the application in Visual Studio, accessible on a URL like **https://localho
 
 ## Complete sample repository
 
-For the complete working implementation of this example, refer to the GitHub repository.
+For the complete working implementation of this example, refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-adaptors/WebApiAdaptor) repository.
 

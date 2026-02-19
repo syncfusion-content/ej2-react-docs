@@ -18,17 +18,24 @@ function App() {
     topTier: {
       unit: 'Month',
       count: 3,
-      formatter: (date) => {
-        const month = date.getMonth();
-        if (month >= 0 && month <= 2) return 'Q1';
-        else if (month >= 3 && month <= 5) return 'Q2';
-        else if (month >= 6 && month <= 8) return 'Q3';
-        else return 'Q4';
+      formatter: (date, format, tier, mode) => {
+        // Determine quarter based on month.
+        const quarter = "Q" + (Math.floor(date.getMonth() / 3) + 1);
+
+        // Use `tier` to differentiate top/bottom tiers.
+        const prefix = tier === "topTier" ? "T-" : "B-";
+
+        // Use `mode` to adjust style depending on timeline zoom level.
+        const suffix = mode === "Month" ? "-M" : "";
+
+        console.log(format);
+       
+        return `${prefix}${quarter}${suffix}`;
       }
     },
     bottomTier: {
       unit: 'Month',
-      format: 'MMM'
+      format: 'MMM',
     }
   };
 

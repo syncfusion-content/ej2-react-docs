@@ -12,17 +12,32 @@ domainurl: ##DomainURL##
 
 The `UrlAdaptor` in the Syncfusion<sup style="font-size:70%">&reg;</sup> React DataManager streamlines connecting the React Grid to REST API endpoints by managing request and response handling for remote data operations. It automatically converts Grid actions such as filtering, sorting, paging, and CRUD into HTTP POST requests and processes the server’s JSON response, enabling smooth remote data binding without custom request logic.
 
-For details on configuring the backend (expected request/response format, server‑side processing), refer to the [UrlAdaptor backend setup documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors#url-adaptor).
+For details on configuring the backend (expected request/response format, server‑side processing), refer to the UrlAdaptor backend setup documentation.
 
 Once the project creation and backend setup are complete, the next step is to render the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid Component on the client side.
 
-## React Grid Frontend Setup using Syncfusion UrlAdaptor
+**Project structure:**
 
-After finishing the backend setup for the **UrlAdaptorDemo** ASP.NET Core project, next step is to integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid on the client side by following these instructions.
+```
+UrlAdaptor/
+├── UrlAdaptor.client/           # React frontend (Vite/React project).
+│   ├── src/
+│   │   ├── App.css
+│   │   └── App.jsx                  # Add url adaptor here.
+│   └── package.json
+└── UrlAdaptor.Server/           # ASP.NET Core backend (API).
+    ├── Controllers/                 # API controllers (will be created here).
+    ├── Models/                      # Data models (will be created here).
+    └── Program.cs                   # Server configuration.
+```
+
+## React Grid frontend setup using Syncfusion UrlAdaptor
+
+After finishing the backend setup for the **UrlAdaptor** ASP.NET Core project, next step is to integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid on the client side by following these instructions.
 
 ### Step 1: Install Syncfusion packages
 
-Right‑click the **Urladaptordemo.client** folder in **Solution Explorer** and select **Open in Terminal** (available in newer Visual Studio versions), or open a Developer Command prompt/PowerShell from the Start menu and navigate manually to the **Urladaptordemo.client directory**. Once inside the folder, confirm that **package.json** is present, then run the following commands to install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages:
+Right‑click the **UrlAdaptor.client** folder in **Solution Explorer** and select **Open in Terminal** (available in newer Visual Studio versions), or open a Developer Command prompt/PowerShell from the Start menu and navigate manually to the **UrlAdaptor.client directory**. Once inside the folder, confirm that **package.json** is present, then run the following commands to install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages:
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
@@ -34,12 +49,6 @@ npm install @syncfusion/ej2-data --save
 Syncfusion Grid requires CSS for proper rendering. Add these imports to **index.css** or **App.css**:
 
 ```ts
-{% tabs %}
-{% highlight css tabtitle="index.css" %}
-
-/* Base styles - Required for all Syncfusion components */
-@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
-
 /* Component-specific styles */
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
 @import '../node_modules/@syncfusion/ej2-calendars/styles/material3.css';
@@ -51,9 +60,6 @@ Syncfusion Grid requires CSS for proper rendering. Add these imports to **index.
 
 /* Grid component styles - Required */
 @import '../node_modules/@syncfusion/ej2-react-grids/styles/material3.css';
-
-{% endhighlight %}
-{% endtabs %}
 ```
 
 Import the **App.css** in the application entry point(**App.jsx**).
@@ -125,7 +131,7 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** The Grid sends a `DataManagerRequest` (typically via POST), and the server must return JSON in the format { result: [...], count: N } for proper data binding and paging.
+> The Grid sends a `DataManagerRequest` (typically via POST), and the server must return JSON in the format { result: [...], count: N } for proper data binding and paging.
 
 ## Server-side data operations
 
@@ -142,11 +148,11 @@ The `Syncfusion.EJ2.Base` namespace provides these methods:
 
 | Operation | Method(s) | Purpose | Use Case |
 |-----------|-----------|---------|----------|
-| **Paging** | `PerformSkip`, `PerformTake` | Load specific page of data | Show 10 records at a time from 100K records |
-| **Filtering** | `PerformFiltering` | Apply filter conditions | Show only orders from "Germany" |
-| **Searching** | `PerformSearching` | Search across columns | Find all records containing "ALFKI" |
-| **Sorting** | `PerformSorting` | Sort by one/multiple columns | Order by CustomerID ascending |
-| **Grouping** | `PerformGrouping` | Group data with aggregates | Group by ShipCountry with totals |
+| **Paging** | `PerformSkip`, `PerformTake` | Load specific page of data. | Show 10 records at a time from "100K" records. |
+| **Filtering** | `PerformFiltering` | Apply filter conditions. | Show only orders from "Germany". |
+| **Searching** | `PerformSearching` | Search across columns. | Find all records containing "ALFKI". |
+| **Sorting** | `PerformSorting` | Sort by one/multiple columns. | Order by "CustomerID" ascending. |
+| **Grouping** | `PerformGrouping` | Group data with aggregates | Group by "ShipCountry" with totals. |
 
 Add the following package import to enable server‑side DataManager operations:
 
@@ -162,7 +168,7 @@ namespace UrlAdaptorDemo.Server.Controllers
 }
 ```
 
-> **Note:** It must have `Syncfusion.EJ2.AspNet.Core` NuGet package installed (covered in [UrlAdaptor backend setup documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors#url-adaptor)).
+> It must have `Syncfusion.EJ2.AspNet.Core` NuGet package installed (covered in UrlAdaptor backend setup documentation).
 
 ### Paging
 
@@ -727,8 +733,6 @@ public void Remove([FromBody] CRUDModel<OrdersDetails> deletedRecord)
 }
 ```
 
-![UrlAdaptor CRUD operations](../images/adaptor-crud-operation.gif)
-
 ### Batch CRUD
 
 Batch operations require edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) set to `Batch` with `batchUrl` property in the `DataManager`. Add rows with the **Add** button, edit cells by double-clicking, and delete rows with the **Delete** button. The **Update** button submits all changes in one `POST` request.
@@ -803,8 +807,6 @@ public IActionResult BatchUpdate([FromBody] CRUDModel<OrdersDetails> batchOperat
   return new JsonResult(batchOperation);
 }
 ```
-
-![UrlAdaptor Batch Editing](../images/url-adaptor-batch-editing.gif)
 
 ### Single endpoint for all CRUD actions
 
@@ -903,7 +905,7 @@ function ForeignKeyColumn() {
 export default ForeignKeyColumn;
 ```
 
-### Filter Operation for Foreign Key Columns
+### Filter operation for Foreign Key Columns
 
 Filtering foreign-key columns automatically displays related text values via the `foreignKeyValue` property, while actual filtering uses the `foreignKeyField` property.
 
@@ -958,7 +960,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 ```
 > Grid search with foreign key columns creates a filter query for each column. Foreign key columns query the associated data source to retrieve the underlying field value matching the search term.
 
-### Sort Operation for Foreign Key Columns
+### Sort operation for Foreign Key Columns
 
 Foreign key column sorting orders records based on the underlying "CustomerID" field value. Foreign key value sorting requires supplying the foreign key's data source to the sorted query within the `PerformSorting` method.
 
@@ -1012,4 +1014,5 @@ Run the application in Visual Studio, accessible on a URL like **https://localho
 | **CORS Error**     | Ensure CORS is configured properly in **Program.cs**.                      |
 
 ## Complete sample repository
-For a complete working implementation of this example, refer to the following GitHub repository.
+
+For a complete working implementation of this example, refer to the following [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-adaptors/UrlAdaptor) repository.

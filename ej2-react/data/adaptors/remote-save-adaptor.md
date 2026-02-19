@@ -13,11 +13,11 @@ domainurl: ##DomainURL##
 
 The `RemoteSaveAdaptor` provides a hybrid approach to data management that combines the best of both client-side and server-side processing. It loads all data once from the server, then performs filtering, sorting, and paging , searching, grouping operations locally in the browser without additional server requests. Only CRUD operations (Create, Update, Delete) communicate with the server to persist data changes.
 
-## What is RemoteSaveAdaptor
+## What is RemoteSaveAdaptor?
 
 `RemoteSaveAdaptor` is a specialized adaptor that splits data operations into two categories based on whether they modify data or simply read it.
 
-Client-side operations (fast, no server requests):
+**Client-side operations (fast, no server requests):**
 
 - Filtering
 - Sorting
@@ -25,20 +25,20 @@ Client-side operations (fast, no server requests):
 - Paging
 - Grouping
 
-Server-side operations (requires server requests):
+**Server-side operations (requires server requests):**
 
 - Create (Insert)
 - Update (Edit)
 - Delete (Remove)
 
-Data flow:
+**Data flow:**
 
 1. Initial load: Fetches all data from server once.
 2. User interactions: Filtering, sorting, and paging happen instantly in browser (no server calls).
 3. Data changes: Only CRUD operations (add, edit, and delete) send requests to server.
 4. Result: Fast UI with secure data persistence.
 
-Visual comparison:
+**Visual comparison:**
 
 | Operation   | UrlAdaptor | RemoteSaveAdaptor |
 |-------------|------------|-------------------|
@@ -48,7 +48,7 @@ Visual comparison:
 | Edit        | Server     | Server            |
 | Total       | 4          | 1                 |
 
-## When to use RemoteSaveAdaptor
+## When to use RemoteSaveAdaptor?
 
 - Medium-sized datasets (1K-50K records that fit in browser memory).
 - Need instant filtering, sorting without server delay.
@@ -67,12 +67,12 @@ The hybrid data binding concept is not suitable for the following scenarios:
 
 This guide demonstrates setting up `RemoteSaveAdaptor` with ASP.NET Core backend, including the implementation of complete CRUD operations.
 
-## Prerequisites and System Requirements
+## Prerequisites
 
 | Requirement           | Details                                                      | Download / Command                 |
 |----------------------|--------------------------------------------------------------|------------------------------------|
-| **Visual Studio**  | Community, Professional, or Enterprise edition               | https://visualstudio.microsoft.com/ |
-| **Node.js**           | Version 14.0 or later                                         | https://nodejs.org/                |
+| **Visual Studio**  | Community, Professional, or Enterprise edition               | [Visual Studio](https://visualstudio.microsoft.com/) |
+| **Node.js**           | Version 14.0 or later                                         | [Node.js](https://nodejs.org/)                |
 | **Verify Node.js**    | Check installed version                                        | `node --version`  |
 
 ## Backend setup (ASP.NET Core API)
@@ -88,24 +88,24 @@ New projects can be created in several ways depending on the platform.
 
 **Option 1: Visual Studio**
 
-Open **Visual Studio 2022 or later**, create a new project, search for the **ASP.NET Core with React.js** template, name the project **RemoteSaveAdaptorDemo**, select **.NET 8.0 or later**, and click **Create**.
+Open **Visual Studio 2022 or later**, create a new project, search for the **ASP.NET Core with React.js** template, name the project **RemoteSaveAdaptor**, select **.NET 8.0 or later**, and click **Create**.
 
 For detailed instructions, see [Microsoft's documentation](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-react?view=vs-2022).
 
 **Option 2: Using terminal**
 
-Windows (PowerShell):  
+**Windows (PowerShell):** 
 Press the <kbd>Windows</kbd> key, type PowerShell, and press <kbd>Enter</kbd>. A terminal window opens for running commands.
 
-Visual Studio Code:  
+**Visual Studio Code:**  
 Open VS Code, then from the top menu select **View → Terminal**. The integrated terminal appears at the bottom of the editor.
 
-macOS (Terminal):  
+**macOS (Terminal):**  
 Press <kbd>Command</kbd> + <kbd>Space</kbd> to open Spotlight Search, type Terminal, and press <kbd>Enter</kbd>.
 
 ```bash
-dotnet new react -n RemoteSaveAdaptorDemo
-cd RemoteSaveAdaptorDemo
+dotnet new react -n RemoteSaveAdaptor
+cd RemoteSaveAdaptor
 ```
 
 After project creation, the folder structure will appear as follows:
@@ -125,15 +125,14 @@ RemoteSaveAdaptor/
 
 ### Step 2: Create data model
 
-Create a **Models** folder in the **RemoteSaveAdaptorDemo.Server** project, then add **OrdersDetails.cs** class file. Replace default content with the implementation below:
+Create a **Models** folder in the **RemoteSaveAdaptor.Server** project, then add **OrdersDetails.cs** class file. Replace default content with the implementation below:
 
-```cs
 {% tabs %}
 {% highlight cs tabtitle="OrdersDetails.cs" %}
 
 using System.ComponentModel.DataAnnotations;
 
-namespace RemoteSaveAdaptorDemo.Models
+namespace RemoteSaveAdaptor.Models
 {
   public class OrdersDetails
   {
@@ -206,21 +205,20 @@ namespace RemoteSaveAdaptorDemo.Models
 
 {% endhighlight %}
 {% endtabs %}
-```
+
 > This example generates "10,000" records. `RemoteSaveAdaptor` loads all records at once, so consider dataset size. For 100K+ records, use `UrlAdaptor` or `ODataV4Adaptor` instead.
 
 ### Step 3: Create API controller
 
 Create `OrdersController.cs` in the controllers folder. With `RemoteSaveAdaptor`, the controller only needs to return all data on initial load and handle basic CRUD operations.
 
-```cs
 {% tabs %}
 {% highlight cs tabtitle="OrdersController.cs" %}
 
 using Microsoft.AspNetCore.Mvc;
-using RemoteSaveAdaptorDemo.Models;
+using RemoteSaveAdaptor.Models;
 
-namespace RemoteSaveAdaptorDemo.Controllers
+namespace RemoteSaveAdaptor.Controllers
 {
   [ApiController]
   public class OrdersController : ControllerBase
@@ -261,13 +259,11 @@ namespace RemoteSaveAdaptorDemo.Controllers
 
 {% endhighlight %}
 {% endtabs %}
-```
 
 ### Step 4: CRUD model structure
 
 The below class is used to structure data sent during CRUD operations:
 
-```cs
 {% tabs %}
 {% highlight cs tabtitle="CRUDModel.cs" %}
 
@@ -285,12 +281,11 @@ public class CRUDModel<T> where T : class
 
 {% endhighlight %}
 {% endtabs %}
-```
+
 ### Step 5: Insert operation
 
 To insert a new record, utilize the `insertUrl` property to specify the controller action mapping URL for the insert operation. Implement the "Insert" method in the API controller to handle the addition of new records. The details of the newly added record are bound to the "newRecord" parameter.
 
-```cs
 {% tabs %}
 {% highlight cs tabtitle="OrdersController.cs" %}
 
@@ -313,13 +308,10 @@ public ActionResult Insert([FromBody] CRUDModel<OrdersDetails> newRecord)
 {% endhighlight %}
 {% endtabs %}
 
-```
-
 ### Step 6: Update operation
 
 For updating existing records, use the `updateUrl` property to specify the controller action mapping URL for the update operation. Implement the "Update" method in the API controller to handle record updates. The updated record details are bound to the "updatedRecord" parameter.
 
-```cs
 {% tabs %}
 {% highlight cs tabtitle="OrdersController.cs" %}
 
@@ -353,13 +345,11 @@ public object Update([FromBody] CRUDModel<OrdersDetails> updatedRecord)
 
 {% endhighlight %}
 {% endtabs %}
-```
 
 ### Step 7: Delete operation
 
 To delete existing records, use the `removeUrl` property to specify the controller action mapping URL for the delete operation. The primary key value of the deleted record is bound to the "deletedRecord" parameter.
 
-```cs
 {% tabs %}
 {% highlight cs tabtitle="OrdersController.cs" %}
 
@@ -385,9 +375,8 @@ public object Remove([FromBody] CRUDModel<OrdersDetails> deletedRecord)
 
 {% endhighlight %}
 {% endtabs %}
-```
 
-## Step 8: CORS configuration
+### Step 8: CORS configuration
 
 Ensure API service is configured to handle CORS (Cross-Origin Resource Sharing) in **Program.cs** if necessary:
 

@@ -22,10 +22,10 @@ export default class App extends React.Component<{}, {}>{
         ))
       });
     });
-    this.insertUpdate = this.insertUpdate.bind(this);
+    this.updateRecord = this.updateRecord.bind(this);
   }
 
-  public insertUpdate() {
+  public updateRecord() {
     const orderid: HTMLInputElement = document.getElementById('OrderID') as HTMLInputElement;
     const cusid: HTMLInputElement = document.getElementById('CustomerID') as HTMLInputElement;
     const empid: HTMLInputElement = document.getElementById('EmployeeID') as HTMLInputElement;
@@ -53,7 +53,7 @@ export default class App extends React.Component<{}, {}>{
           <input type="number" id='OrderID' placeholder="Order ID" />
           <input type="text" id="CustomerID" placeholder="Customer ID" />
           <input type="number" id="EmployeeID" placeholder="Employee ID" />
-          <input type="button" value="Update" id="manipulate" onClick={this.insertUpdate} />
+          <input type="button" value="Update" id="manipulate" onClick={this.updateRecord} />
         </div>
         <div>
           <table id='datatable' className='e-table'>

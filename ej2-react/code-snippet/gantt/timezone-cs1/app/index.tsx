@@ -1,45 +1,54 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { GanttComponent, Inject,Edit, Selection } from '@syncfusion/ej2-react-gantt';
-import { timezoneData } from './datasource';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Selection, TaskFieldsModel, TimelineSettingsModel } from "@syncfusion/ej2-react-gantt";
+import { data } from "./datasource";
 
-function App(){
-  const taskFields: any = {
-    id: 'taskID',
-    name: 'taskName',
-    startDate: 'startDate',
-    duration: 'duration',
-    progress: 'progress',
-    dependency: 'predecessor',
-    parentID: 'parentID'
+function App() {
+  let ganttInstance: GanttComponent = null;
+
+  const taskSettings: TaskFieldsModel = {
+    id: "TaskID",
+    name: "TaskName",
+    startDate: "StartDate",
+    duration: "Duration",
+    progress: "Progress",
+    dependency: "Predecessor",
+    parentID: "ParentID"
   };
-  const timelineSettings: any = {
+
+  const timelineSettings: TimelineSettingsModel = {
     timelineUnitSize: 65,
-    topTier: {
-        unit: 'Day',
-        format: 'MMM dd, yyyy'
-    },
-    bottomTier: {
-        unit: 'Hour',
-        format: 'hh:mm a'
-    }
+    topTier: { unit: "Day", format: "MMM dd, yyyy" },
+    bottomTier: { unit: "Hour", format: "hh:mm a" }
   };
-  let  dayWorkingTime: any = [{ from: 0, to: 24 }];
+  
+  const dayWorkingTime: object = [{ from: 0, to: 24 }];
+
   return (
-    <GanttComponent 
-      dataSource={timezoneData} 
-      taskFields={taskFields}
-      timelineSettings={timelineSettings} 
-      allowSelection={true}
-      timezone='UTC' 
-      height='450px' 
-      dateFormat='hh:mm a'
-      dayWorkingTime={dayWorkingTime} 
-      durationUnit='Hour' 
+    <GanttComponent
+      id="ganttDefault"
+      height="450px"
+      dataSource={data}
+      taskFields={taskSettings}
+      timelineSettings={timelineSettings}
+      dayWorkingTime={dayWorkingTime}
+      timezone="UTC"
+      durationUnit="Hour"
+      dateFormat="hh:mm a"
       includeWeekend={true}
+      ref={(g) => (ganttInstance = g)}
     >
-      <Inject services={[Edit, Selection]} />
+      <ColumnsDirective>
+        <ColumnDirective field="TaskID" headerText="Task ID" width="100" />
+        <ColumnDirective field="TaskName" headerText="Task Name" width="250" />
+        <ColumnDirective field="StartDate" headerText="Start Date" width="150" />
+        <ColumnDirective field="Duration" headerText="Duration" width="150" />
+        <ColumnDirective field="Progress" headerText="Progress" width="150" />
+      </ColumnsDirective>
+
+      <Inject services={[Selection]} />
     </GanttComponent>
-  ); 
-};
-ReactDOM.render(<App />, document.getElementById('root'));
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));

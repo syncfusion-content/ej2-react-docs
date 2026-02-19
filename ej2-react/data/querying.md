@@ -301,33 +301,3 @@ The built-in aggregate types are,
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/data/get-started-cs24" %}
-
-## Hierarchical query
-
-The `hierarchy` method in the `Query` class constructs nested queries to represent multi‑level data relationships. This is essential for scenarios involving related datasets, where parent‑child structures need to be expressed. When combined with the `foreignKey` method, it establishes links between parent and child records, enabling complex relational operations and efficient hierarchical data retrieval.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/data/child-data-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/data/child-data-cs1/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="childtemplate.jsx" %}
-{% include code-snippet/data/child-data-cs1/app/childTemplate.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="childtemplate.tsx" %}
-{% include code-snippet/data/child-data-cs1/app/childTemplate.tsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="orders.tsx" %}
-{% include code-snippet/data/child-data-cs1/app/orders.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="rowtemplate.jsx" %}
-{% include code-snippet/data/child-data-cs1/app/rowTemplate.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="rowtemplate.tsx" %}
-{% include code-snippet/data/child-data-cs1/app/rowTemplate.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/data/child-data-cs1" %}

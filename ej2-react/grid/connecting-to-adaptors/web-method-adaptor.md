@@ -10,21 +10,36 @@ domainurl: ##DomainURL##
 
 # WebMethodAdaptor in Syncfusion React Grid Component
 
-The [WebMethodAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#webmethod-adaptor) in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid facilitates data binding from remote services using web methods. This powerful feature enables efficient communication between the client-side application and the server. The `WebMethodAdaptor`, like the `URLAdaptor`, sends query parameters encapsulated within an object named `value`. Within this `value` object, various datamanager properties such as `requiresCounts`, `skip`, `take`, `sorted`, and `where` queries are included.
+The `WebMethodAdaptor` in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid facilitates data binding from remote services using web methods. This powerful feature enables efficient communication between the client-side application and the server. The `WebMethodAdaptor`, like the `URLAdaptor`, sends query parameters encapsulated within an object named `value`. Within this `value` object, various datamanager properties such as `requiresCounts`, `skip`, `take`, `sorted`, and `where` queries are included.
  
 ![Webmethod Adaptor](../images/web-method-adaptor-value.png)
 
-For complete server‑side configuration and additional implementation details, refer to the [DataManager Webmethod Adaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors) documentation, which covers endpoint setup, query processing, and best practices for integrating WebMethod‑based services.
+For complete server‑side configuration and additional implementation details, refer to the DataManager Webmethod Adaptor documentation, which covers endpoint setup, query processing, and best practices for integrating WebMethod‑based services.
 
 Once the project creation and backend setup are complete, the next step is to render the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid Component on the client side.
 
-## React Grid Frontend Setup using Syncfusion WebMethodAdaptor
+**Project structure:**
 
-After finishing the backend setup for the **WebMethodAdaptorDemo** ASP.NET Core project, next step is to integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid on the client side by following these instructions.
+```
+WebMethodAdaptor/
+├── WebmethodAdaptor.client/     # React frontend (Vite/React project).
+│   ├── src/
+│   │   ├── App.css
+│   │   └── App.jsx                  # Add WebMethodAdaptor here.
+│   └── package.json
+└── WebMethodAdaptor.Server/     # ASP.NET Core backend (API).
+    ├── Controllers/                 # API controllers (will be created here).
+    ├── Models/                      # Data models (will be created here).
+    └── Program.cs                   # Server configuration.
+```
+
+## React Grid frontend setup using Syncfusion WebMethodAdaptor
+
+After finishing the backend setup for the **WebMethodAdaptor** ASP.NET Core project, next step is to integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid on the client side by following these instructions.
 
 ### Step 1: Install Syncfusion packages
 
-Right‑click the **WebMethodAdaptorDemo.client** folder in **Solution Explorer** and select **Open in Terminal** (available in newer Visual Studio versions), or open a Developer Command prompt/PowerShell from the Start menu and navigate manually to the **WebMethodAdaptorDemo.client**. Once inside the folder, confirm that **package.json** is present, then run the following commands to install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages:
+Right‑click the **WebMethodAdaptor.client** folder in **Solution Explorer** and select **Open in Terminal** (available in newer Visual Studio versions), or open a Developer Command prompt/PowerShell from the Start menu and navigate manually to the **WebMethodAdaptor.client**. Once inside the folder, confirm that **package.json** is present, then run the following commands to install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages:
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
@@ -90,7 +105,7 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-**Note:** The Grid sends a `DataManagerRequest` via POST to a Web Method, and the server returns JSON in the format { result: [...], count: N } for proper data binding and paging.
+> The Grid sends a `DataManagerRequest` via POST to a Web Method, and the server returns JSON in the format { result: [...], count: N } for proper data binding and paging.
 
 ## Server-side data operations
 
@@ -102,11 +117,11 @@ The `Syncfusion.EJ2.Base` namespace provides these methods:
 
 | Operation | Method(s) | Purpose | Use Case |
 |-----------|-----------|---------|----------|
-| **Paging** | `PerformSkip`, `PerformTake` | Load specific page of data | Show 10 records at a time from 100K records |
-| **Filtering** | `PerformFiltering` | Apply filter conditions | Show only orders from "Germany" |
-| **Searching** | `PerformSearching` | Search across columns | Find all records containing "ALFKI" |
-| **Sorting** | `PerformSorting` | Sort by one/multiple columns | Order by CustomerID ascending |
-| **Grouping** | `PerformGrouping` | Group data with aggregates | Group by ShipCountry with totals |
+| **Paging** | `PerformSkip`, `PerformTake` | Load specific page of data. | Show 10 records at a time from "100K" records. |
+| **Filtering** | `PerformFiltering` | Apply filter conditions. | Show only orders from "Germany". |
+| **Searching** | `PerformSearching` | Search across columns | Find all records containing "ALFKI". |
+| **Sorting** | `PerformSorting` | Sort by one/multiple columns. | Order by "CustomerID" ascending. |
+| **Grouping** | `PerformGrouping` | Group data with aggregates. | Group by "ShipCountry" with totals. |
 
 Add the following package import to enable server‑side `DataManager` operations:
 
@@ -124,7 +139,7 @@ namespace WebMethodAdaptorDemo.Controllers
 }
 ```
 
-> **Note:** It must have `Syncfusion.EJ2.AspNet.Core` NuGet package installed (covered in [WebMethod backend setup documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors)).
+> It must have `Syncfusion.EJ2.AspNet.Core` NuGet package installed (covered in WebMethod backend setup documentation).
 
 
 In the `WebMethodAdaptor` configuration, the `DataManager` request payload is wrapped inside a value object. To properly access the `DataManagerRequest` on the server, a dedicated class is defined to represent this value wrapper. This ensures that the server can deserialize the incoming request and retrieve the `DataManagerRequest` details correctly.
@@ -613,8 +628,6 @@ public void Remove([FromBody] CRUDModel<OrdersDetails> deletedRecord)
 }
 ```
 
-![WebMethodAdaptor CRUD operations](../images/adaptor-crud-operation.gif)
-
 **Single method for performing all CRUD operations**
 
 Using the `crudUrl` property, the controller action mapping URL can be specified to perform all the CRUD operation at server-side using a single method instead of specifying separate controller action method for CRUD (insert, update and delete) operations.
@@ -679,7 +692,7 @@ public void CrudUpdate([FromBody] CRUDModel<OrdersDetails> request)
 
 **Batch operation**
 
-To perform batch operation, define the edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) as `Batch` and specify the `batchUrl` property in the DataManager. Use the `Add` toolbar button to insert new row in batch editing mode. To edit a cell, double-click the desired cell and update the value as required. To delete a record, simply select the record and press the `Delete` toolbar button. Now, all CRUD operations will be executed in single request. Clicking the `Update` toolbar button will update the newly added, edited, or deleted records from the OrdersDetails table using a single API POST request.
+To perform batch operation, define the edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) as `Batch` and specify the `batchUrl` property in the DataManager. Use the `Add` toolbar button to insert new row in batch editing mode. To edit a cell, double-click the desired cell and update the value as required. To delete a record, simply select the record and press the `Delete` toolbar button. Now, all CRUD operations will be executed in single request. Clicking the `Update` toolbar button will update the newly added, edited, or deleted records from the "OrdersDetails" table using a single API POST request.
 
 ```ts
 [App.tsx]
@@ -746,7 +759,6 @@ if (batchOperation.deleted != null)
   return Json(batchOperation);
 }
 ```
-![WebMethodAdaptor Batch Editing](../images/url-adaptor-batch-editing.gif)
 
 ## Run the application
 
@@ -765,4 +777,4 @@ Run the application in Visual Studio, accessible on a URL like **https://localho
 
 ## Complete sample repository
 
-For the complete working implementation of this example, refer to the GitHub repository.
+For the complete working implementation of this example, refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-adaptors/WebMethodAdaptor) repository.

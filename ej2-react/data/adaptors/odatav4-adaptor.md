@@ -48,7 +48,7 @@ When exposing data through APIs, two common styles are used:
 | All together                  | `/api/orders?country=Denmark&sort=-id&page=2&size=10`       | `/odata/Orders?$filter=ShipCountry eq 'Denmark'&$orderby=OrderID desc&$skip=10&$top=10` |
 
 The following benefits apply when using OData protocol:
-**OData protocol benefits:**
+
 - **Standardization**: Uniform query syntax across all OData services.
 - **Reduced complexity**: Eliminates need for custom filtering and sorting logic.
 - **Client flexibility**: Clients control data retrieval requirements.
@@ -58,18 +58,9 @@ The following benefits apply when using OData protocol:
 
 | Requirement           | Details                                                      | Download / Command                 |
 |----------------------|--------------------------------------------------------------|------------------------------------|
-| **Visual Studio**  | Community, Professional, or Enterprise edition               | https://visualstudio.microsoft.com/ |
-| **Node.js**           | Version 14.0 or later                                         | https://nodejs.org/                |
+| **Visual Studio**  | Community, Professional, or Enterprise edition               | [Visual Studio](https://visualstudio.microsoft.com) |
+| **Node.js**           | Version 14.0 or later                                         | [Node.js](https://nodejs.org)                |
 | **Verify Node.js**    | Check installed version                                        | `node --version`                   |
-
-## Workflow of ODataV4Adaptor:
-
-`ODataV4Adaptor` translation of Grid actions into OData queries:
-
-1. Filter operation triggered from Grid → Adaptor generates: `GET /Orders?$filter=ShipCountry eq 'Denmark'`.
-2. Pagination requested → Adaptor generates: `GET /Orders?$skip=20&$top=20`.
-3. Record edit initiated → Adaptor generates: `PATCH /Orders/10001` with modified data.
-4. Record deletion triggered → Adaptor generates: `DELETE /Orders/10001`.
 
 ## Backend setup (ASP.NET Core API)
 
@@ -89,30 +80,30 @@ When prompted, select .NET 8.0 or later as the framework and finalize the setup 
 
 **Option 2: Using terminal**
 
-Windows (PowerShell):  
+**Windows (PowerShell):**  
 Press the <kbd>Windows</kbd> key, type PowerShell, and press <kbd>Enter</kbd>. A terminal window opens for running commands.
 
-Visual Studio Code:  
+**Visual Studio Code:**  
 Open VS Code, then from the top menu select **View → Terminal**. The integrated terminal appears at the bottom of the editor.
 
-macOS (Terminal):  
+**macOS (Terminal):**  
 Press <kbd>Command</kbd> + <kbd>Space</kbd> to open Spotlight Search, type Terminal, and press <kbd>Enter</kbd>.
 
 ```bash
-dotnet new react -n OdataV4AdaptorDemo
-cd OdataV4AdaptorDemo
+dotnet new react -n ODataV4Adaptor
+cd ODataV4Adaptor
 ```
 
 **Project structure after creation:**
 
 ```
-OdataV4AdaptorDemo/
-├── odatav4adaptordemo.client/       # React frontend (Vite/React project).
+ODataV4Adaptor/
+├── ODataV4Adaptor.client/       # React frontend (Vite/React project).
 │   ├── src/
 │   │   ├── App.css
-│   │   └── App.jsx                  # Add url adaptor here.
+│   │   └── App.jsx                  # Add odatav4 adaptor here.
 │   └── package.json
-└── odatav4adaptordemo..Server/      # ASP.NET Core backend (API).
+└── odatav4adaptor.Server/      # ASP.NET Core backend (API).
     ├── Controllers/                 # API controllers (will be created here).
     ├── Models/                      # Data models (will be created here).
     └── Program.cs                   # Server configuration.
@@ -186,7 +177,7 @@ namespace ODataV4Adaptor.Server.Models
 - `[Key]` attribute: Designates **OrderID** as the primary key, required for OData entity identification and CRUD operations.
 - "GetAllRecords()": Static method generating 45 sample order records across multiple countries for demonstration purposes.
 - Nullable properties (`?`): Enable optional field values, allowing null assignments.
-- **Production implementation**: Replace in-memory data store with actual database integration using Entity Framework Core or similar ORM.
+- Production implementation: Replace in-memory data store with actual database integration using Entity Framework Core or similar ORM.
 
 ### Step 4: OData service configuration
 
@@ -209,7 +200,7 @@ The EDM serves as a metadata blueprint describing the data structure exposed by 
 var modelBuilder = new ODataConventionModelBuilder();
 
 // Register the "Orders" entity set with the OData model builder.
-// "Orders" will be the name used in URLs (e.g., /odata/Orders)
+// "Orders" will be the name used in URLs (e.g., /odata/Orders).
 modelBuilder.EntitySet<OrdersDetails>("Orders");
 ```
 
@@ -377,7 +368,7 @@ OData filter operator query reference:
 - `and` - logical AND: `ShipCountry eq 'Denmark' and OrderID gt 10005`
 - `or` - logical OR: `ShipCountry eq 'Denmark' or ShipCountry eq 'Germany'`
 
-## Step 7: Test the backend API
+### Step 7: Test the backend API
 
 Run the application in Visual Studio, accessible on a URL like **https://localhost:xxxx**. Verify the API returns order data at **https://localhost:xxxx/api/data**, where **xxxx** is the port.
 

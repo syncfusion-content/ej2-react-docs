@@ -64,7 +64,7 @@ query {
 - **Rapid development**: Faster iteration with flexible queries.
 - **Reduced over-fetching**: Eliminates unnecessary data transfer.
  
-### Integrating Syncfusion Grid with GraphQLAdaptor
+### Integrating Syncfusion React Grid with GraphQLAdaptor
  
 The `GraphQLAdaptor` is a specialized adaptor in Syncfusion<sup style="font-size:70%">&reg;</sup> `DataManager` that facilitates communication between the React Grid and GraphQL servers. It automatically transforms Grid operations into GraphQL queries and mutations.
  

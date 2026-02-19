@@ -33,9 +33,6 @@ The following example demonstrates how to bind JSON data using the [executeLocal
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/data/get-started-cs4/app/App.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="orders.jsx" %}
-{% include code-snippet/data/get-started-cs4/app/orders.jsx %}
-{% endhighlight %}
 {% highlight ts tabtitle="orders.tsx" %}
 {% include code-snippet/data/get-started-cs4/app/orders.tsx %}
 {% endhighlight %}
@@ -69,9 +66,6 @@ The following example demonstrates how to bind JSON data using the `executeQuery
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/data/get-started-cs5/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="orders.jsx" %}
-{% include code-snippet/data/get-started-cs5/app/orders.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="orders.tsx" %}
 {% include code-snippet/data/get-started-cs5/app/orders.tsx %}

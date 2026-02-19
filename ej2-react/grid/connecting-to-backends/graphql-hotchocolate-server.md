@@ -1061,7 +1061,7 @@ This tells the adaptor where to find the result data and count in the GraphQL re
 
 Defines the GraphQL query for fetching data with all data operations:
 
-```graphql
+```ts
 query GetOrders($datamanager: DataManagerInput) {
   orders(datamanager: $datamanager) {
     result {
@@ -1600,7 +1600,7 @@ Navigate to `https://localhost:****/graphql` in your browser.
 
 Try executing the following query in the GraphQL IDE:
 
-```graphql
+```ts
 query GetOrders {
   orders(datamanager: { skip: 0, take: 10 }) {
     result {
@@ -1618,7 +1618,7 @@ query GetOrders {
 
 Try creating a new order:
 
-```graphql
+```ts
 mutation CreateOrder {
   addOrder(input: {
     orderID: 10999
