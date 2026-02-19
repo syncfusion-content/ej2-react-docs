@@ -1,57 +1,62 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { GanttComponent, Inject, Selection, Edit } from '@syncfusion/ej2-react-gantt';
-import { timezoneData } from './datasource';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { GanttComponent, Inject, Edit, Selection, ActionCompleteArgs, TaskFieldsModel, EditSettingsModel, TimelineSettingsModel } from "@syncfusion/ej2-react-gantt";
+import { data } from "./datasource";
 
-function App(){
-  const taskFields: any = {
-    id: 'taskID',
-    name: 'taskName',
-    startDate: 'startDate',
-    duration: 'duration',
-    progress: 'progress',
-    dependency: 'predecessor',
-    parentID: 'parentId'
+function App() {
+
+  let ganttInstance = null;
+
+  const taskSettings: TaskFieldsModel = {
+    id: "TaskID",
+    name: "TaskName",
+    startDate: "StartDate",
+    duration: "Duration",
+    progress: "Progress",
+    dependency: "Predecessor",
+    parentID: "ParentID"
   };
-  const editSettings: any = {
+
+  const editSettings: EditSettingsModel = {
     allowAdding: true,
     allowEditing: true,
     allowDeleting: true,
     allowTaskbarEditing: true,
     showDeleteConfirmDialog: true
   };
-  const timelineSettings: any = {
+
+  const timelineSettings: TimelineSettingsModel = {
     timelineUnitSize: 65,
-    topTier: {
-      unit: 'Day',
-      format: 'MMM dd, yyyy'
-    },
-    bottomTier: {
-      unit: 'Hour',
-      format: 'hh:mm a'
-    }
+    topTier: { unit: "Day", format: "MMM dd, yyyy" },
+    bottomTier: { unit: "Hour", format: "hh:mm a" }
   };
-  function actionComplete(args: any) {
-    if(args.action == "TaskbarEditing") {
-      console.log(args.data.ganttProperties.endDate);
+
+  const dayWorkingTime: object = [{ from: 0, to: 24 }];
+
+  function actionComplete(args: ActionCompleteArgs) {
+    if (args.action === "TaskbarEditing") {
+      console.log(args.data.ganttProperties.startDate);
     }
   }
-  let dayWorkingTime: any = [{ from: 0, to: 24 }];
+
   return (
-    <GanttComponent 
-      dataSource={timezoneData} 
-      taskFields={taskFields} 
-      editSettings={editSettings} 
-      allowSelection={true} 
-      durationUnit='Hour' 
-      actionComplete={actionComplete}  
-      height = '450px' 
-      includeWeekend={true} 
-      dayWorkingTime={dayWorkingTime} 
-      timelineSettings={timelineSettings} 
+    <GanttComponent
+      height="450px"
+      dataSource={data}
+      taskFields={taskSettings}
+      editSettings={editSettings}
+      dayWorkingTime={dayWorkingTime}
+      timelineSettings={timelineSettings}
+      timezone="America/New_York"
+      durationUnit="Hour"
+      dateFormat="hh:mm a"
+      includeWeekend={true}
+      actionComplete={actionComplete}
+      ref={(g) => (ganttInstance = g)}
     >
       <Inject services={[Edit, Selection]} />
     </GanttComponent>
   );
-};
-ReactDOM.render(<App />, document.getElementById('root'));
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));

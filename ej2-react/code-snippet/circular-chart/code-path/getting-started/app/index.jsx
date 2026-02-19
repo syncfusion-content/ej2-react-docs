@@ -4,7 +4,7 @@
 
 import { CircularChart3DComponent, CircularChart3DSeriesCollectionDirective, CircularChart3DSeriesDirective, PieSeries3D, CircularChartDataLabel3D, CircularChartLegend3D, Inject } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 function App() {
     const circularData = [
         { x: 'Chrome', y: 62.92 },
@@ -15,16 +15,15 @@ function App() {
         { x: 'Others', y: 2.34 }
     ];
     return <CircularChart3DComponent id='charts' title='Browser Market Shares in November 2023' tilt={-45} legendSettings={{ visible: true, position: 'Right' }}>
-    <Inject services={[PieSeries3D, CircularChartDataLabel3D, CircularChartLegend3D]}/>
-      <CircularChart3DSeriesCollectionDirective>
-          <CircularChart3DSeriesDirective dataSource={circularData} xName='x' yName='y' dataLabel={{ visible: true, position: 'Outside', name: 'x', font: { fontWeight: '600' }, connectorStyle: { length: '40px' } }}>
-          </CircularChart3DSeriesDirective>
-      </CircularChart3DSeriesCollectionDirective>
-  </CircularChart3DComponent>;
+        <Inject services={[PieSeries3D, CircularChartDataLabel3D, CircularChartLegend3D]} />
+        <CircularChart3DSeriesCollectionDirective>
+            <CircularChart3DSeriesDirective dataSource={circularData} xName='x' yName='y' dataLabel={{ visible: true, position: 'Outside', name: 'x', font: { fontWeight: '600' }, connectorStyle: { length: '40px' } }}>
+            </CircularChart3DSeriesDirective>
+        </CircularChart3DSeriesCollectionDirective>
+    </CircularChart3DComponent>;
 }
-;
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+createRoot(document.getElementById('charts')).render(<App />);
 
 
 

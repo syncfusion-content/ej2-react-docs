@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Creating a Next.js Application Using Syncfusion<sup style="font-size:70%">&reg;</sup> React Components 
+# Creating a Next.js Application Using Syncfusion React Components
 
 This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Chart component.
 
@@ -108,7 +108,7 @@ Follow the below steps to add the React Chart component to the Next.js project:
 1.Before adding the Chart component to your markup, import the Chart component in the **src/app/page.tsx** file.
 
 {% tabs %}
-{% highlight js tabtitle="page.tsx" %}
+{% highlight ts tabtitle="page.tsx" %}
 
 'use client'
 import {
@@ -127,11 +127,11 @@ import {
 'use client'
 import {
   AxisModel, Category, ChartComponent, ColumnSeries, DataLabel, Inject,
-  Legend, LegendSeriesModel, LineSeries, SeriesCollectionDirective, SeriesDirective, Tooltip, TooltipSettingsModel
+  Legend, LegendSeriesModel, LineSeries, SeriesCollectionDirective, SeriesDirective, Tooltip, TooltipSettingsModel, MarkerSettingsModel
 } from '@syncfusion/ej2-react-charts';
 
 export default function Home() {
-  const data: any[] = [
+  const data: Object[] = [
     { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
     { month: 'Mar', sales: 34 }, { month: 'Apr', sales: 32 },
     { month: 'May', sales: 40 }, { month: 'Jun', sales: 32 },
@@ -139,17 +139,17 @@ export default function Home() {
     { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
     { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
   ];
-  const tooltip: TooltipSettingsModel = { enable: true, shared: false }
-  const primaryyAxis: AxisModel = { labelFormat: '${value}K' }
-  const primarxyAxis: AxisModel = { valueType: 'Category' }
-  const legendSettings: LegendSeriesModel = { visible: true }
-  const marker = { dataLabel: { visible: true } };
+  const tooltip: TooltipSettingsModel = { enable: true, shared: false };
+  const primaryYAxis: AxisModel = { labelFormat: '${value}K' };
+  const primaryXAxis: AxisModel = { valueType: 'Category' };
+  const legendSettings: LegendSeriesModel = { visible: true };
+  const marker: MarkerSettingsModel = { dataLabel: { visible: true } };
 
   return (
     <>
       <h2>Syncfusion React Chart Component</h2>
-      <ChartComponent id="charts" primaryXAxis={primarxyAxis} legendSettings={legendSettings}
-        primaryYAxis={primaryyAxis} tooltip={tooltip}>
+      <ChartComponent id="charts" primaryXAxis={primaryXAxis} legendSettings={legendSettings}
+        primaryYAxis={primaryYAxis} tooltip={tooltip}>
         <Inject services={[ColumnSeries, DataLabel, Tooltip, Legend, LineSeries, Category]} />
         <SeriesCollectionDirective>
           <SeriesDirective dataSource={data} xName='month' yName='sales' name='Sales' marker={marker} />

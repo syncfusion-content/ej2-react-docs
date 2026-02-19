@@ -21,6 +21,7 @@ function App() {
             height="430px"
             dataSource={data}
             taskFields={taskSettings}
+            allowParentDependency={true}
         >
             <ColumnsDirective>
                 <ColumnDirective field="TaskID" headerText="Task ID" width="100" />
