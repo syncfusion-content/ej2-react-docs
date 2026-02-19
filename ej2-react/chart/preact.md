@@ -73,7 +73,7 @@ T  Preact - Fast 3kB alternative to React with the same modern API
 —
 ```
 
-5\. Upon completing the aforementioned steps to create `my-project`, run the following command to jump into the project directory:
+4\. Upon completing the aforementioned steps to create `my-project`, run the following command to jump into the project directory:
 
 ```bash
 cd my-project
@@ -99,7 +99,7 @@ yarn add @syncfusion/ej2-react-charts
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
-Follow the below steps to add the React Chart component to the Vite project:
+Follow the below steps to add the React Chart component to the Preact project:
 
 1\. Before adding the Chart component to your markup, import the Chart component in the **src/index.jsx** file.
 
@@ -130,10 +130,10 @@ export function App() {
     { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
     { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
   ];
-  const primaryxAxis = { valueType: 'Category' };
+  const primaryXAxis = { valueType: 'Category' };
 
   return (
-    <ChartComponent id="charts" primaryXAxis={primaryxAxis}>
+    <ChartComponent id="charts" primaryXAxis={primaryXAxis}>
       <Inject services={[ColumnSeries, Tooltip, LineSeries, Category]}/>
       <SeriesCollectionDirective>
       <SeriesDirective dataSource={data} xName='month' yName='sales' name='Sales'/>

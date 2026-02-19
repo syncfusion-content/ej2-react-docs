@@ -1,6 +1,6 @@
 import { Chart3DComponent, Chart3DSeriesCollectionDirective, Chart3DSeriesDirective, Inject, Category3D, ColumnSeries3D } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 
 export let data = [
     { x: 'Tesla', y: 137429 },
@@ -32,4 +32,4 @@ function App() {
 }
 ;
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+createRoot(document.getElementById('charts')).render(<App />);

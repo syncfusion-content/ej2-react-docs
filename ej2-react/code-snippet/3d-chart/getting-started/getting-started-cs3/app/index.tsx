@@ -2,7 +2,7 @@
 
 import { Category3D, Chart3DComponent, Chart3DSeriesCollectionDirective, Chart3DSeriesDirective, ColumnSeries3D, Inject } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 
 export let data: any[] = [
   { x: 'Tesla', y: 137429 },
@@ -21,20 +21,20 @@ function App() {
     valueType: 'Category',
     labelRotation: -45,
     labelPlacement: 'BetweenTicks'
-}}
+  }}
     wallColor='transparent'
     primaryYAxis={{
-        maximum: 150000, interval: 50000
+      maximum: 150000, interval: 50000
     }} enableRotation={true} rotation={7} tilt={10} depth={100} title='Top Selling Electric Cars in China'>
     <Inject services={[ColumnSeries3D, Category3D]} />
     <Chart3DSeriesCollectionDirective >
-        <Chart3DSeriesDirective dataSource={data} xName='x' yName='y' type='Column'>
-        </Chart3DSeriesDirective>
+      <Chart3DSeriesDirective dataSource={data} xName='x' yName='y' type='Column'>
+      </Chart3DSeriesDirective>
     </Chart3DSeriesCollectionDirective>
-</Chart3DComponent>)
+  </Chart3DComponent>)
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+createRoot(document.getElementById('charts')).render(<App />);
 
 
 

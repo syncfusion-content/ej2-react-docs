@@ -14,7 +14,7 @@ function App() {
         }
     };
     return (<div>
-        <GridComponent id='Grid' dataSource={data} height={270} toolbar={toolbar} allowPaging={true} allowGrouping={true} allowExcelExport={true} toolbarClick={toolbarClick} ref={g => grid = g} groupSettings={groupOptions}>
+        <GridComponent id='Grid' dataSource={data} height={215} toolbar={toolbar} allowPaging={true} allowGrouping={true} allowExcelExport={true} toolbarClick={toolbarClick} ref={g => grid = g} groupSettings={groupOptions}>
         <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right'/>
             <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'/>

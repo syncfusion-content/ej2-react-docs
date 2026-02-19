@@ -1,11 +1,14 @@
 export const data = [
-    { TaskID: 1, TaskName: 'Project Initiation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-    { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 2, Progress: 50, ParentID: 1 },
-    { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50, ParentID: 1 },
-    { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Predecessor: '2FS,3FS', Progress: 50, ParentID: 1 },
-
-    { TaskID: 5, TaskName: 'Project Estimation', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'), ParentID: null },
-    { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
-    { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50, ParentID: 5 },
-    { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 0, Predecessor: '6SS', Progress: 50, ParentID: 5 }
+    { TaskID: 1, TaskName: 'Planning Phase', StartDate: new Date('04/01/2024'), ParentID: null },
+    { TaskID: 2, TaskName: 'Collect Requirements', StartDate: new Date('04/01/2024'), Duration: 3, ParentID: 1 },
+    { TaskID: 3, TaskName: 'Analyze Requirements', StartDate: new Date('04/03/2024'), Duration: 2, ParentID: 1 },
+    { TaskID: 4, TaskName: 'Finalize Planning Report', StartDate: new Date('04/05/2024'), Duration: 1, Predecessor: '2FS,3FS', ParentID: 1 },
+    { TaskID: 10, TaskName: 'Execution Phase', StartDate: new Date('04/01/2024'), ParentID: null },
+    { TaskID: 11, TaskName: 'Prepare Work Breakdown Structure', StartDate: new Date('04/02/2024'), Duration: 3, ParentID: 10 },
+    { TaskID: 12, TaskName: 'Assign Resources', StartDate: new Date('04/04/2024'), Duration: 2, ParentID: 10 },
+    // Difference shown here: 4FS → 13
+    { TaskID: 13, TaskName: 'Execution Start Approval', StartDate: new Date('04/06/2024'), Duration: 2, Predecessor: '4FS', ParentID: 10 },
+    // Invalid dependency examples
+    { TaskID: 20, TaskName: 'Invalid: Child Depends on Planning Phase', StartDate: new Date('04/07/2024'), Duration: 1, Predecessor: '1FS', ParentID: 10 },
+    { TaskID: 21, TaskName: 'Invalid: Execution Phase Depends on Task 11', StartDate: new Date('04/08/2024'), Duration: 1, Predecessor: '11FS', ParentID: null }
 ];

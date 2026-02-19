@@ -7,7 +7,6 @@ platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-<!-- markdownlint-disable MD036 -->
 
 # Getting started with React 3D Chart component
 
@@ -21,12 +20,9 @@ A quick video overview of the React 3D Charts setup is available:
 
 Below is the list of minimum dependencies required to use the 3D Chart component.
 
-```javascript
-
+```
 |-- @syncfusion/ej2-react-charts
-    |-- @syncfusion/ej2-base
     |-- @syncfusion/ej2-data
-    |-- @syncfusion/ej2-charts
     |-- @syncfusion/ej2-react-base
     |-- @syncfusion/ej2-pdf-export
     |-- @syncfusion/ej2-file-utils
@@ -34,25 +30,35 @@ Below is the list of minimum dependencies required to use the 3D Chart component
     |-- @syncfusion/ej2-svg-base
 ```
 
+Once you install `@syncfusion/ej2-react-charts`, the other required dependencies will be installed automatically along with the main package.
+
 ## Installation and configuration
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+### Create a React application
 
-> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+To easily set up a React application, use the Vite CLI (`npm create vite`), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like [`create-react-app`](https://github.com/facebook/create-react-app). For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+
+> **Note:** To create a React application using [`create-react-app`](https://github.com/facebook/create-react-app) instead, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
 To create a new React application, run the following command.
 
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+
+This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
+
+![Initial_setup](./images/Initial-setup.jpg)
+
+To set up a React application in TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+
+To set up a React application in JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -60,13 +66,19 @@ cd my-app
 npm run dev
 ```
 
-* Install the Syncfusion<sup style="font-size:70%">&reg;</sup> packages using the command below.
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> 3D Chart package
 
-   ```
-    npm install @syncfusion/ej2-react-charts --save
-   ```
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 
-## Add 3D chart to the project
+To install the Syncfusion<sup style="font-size:70%">&reg;</sup> 3D Chart package, use the following command
+
+```bash
+npm install @syncfusion/ej2-react-charts --save
+```
+
+> The –save will instruct NPM to include the 3D Chart package inside of the **dependencies** section of the package.json.
+
+## Add 3D Chart to the project
 
 Add the 3D Chart component to `src/App.tsx` using the following code.
 
@@ -75,7 +87,6 @@ Add the 3D Chart component to `src/App.tsx` using the following code.
 
 import { Chart3DComponent } from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
-
 function App() {
   return (<Chart3DComponent />);
 }
@@ -115,7 +126,7 @@ The below example shows a basic 3D Chart.
 
 ## Module injection
 
-3D Chart component are segregated into individual feature-wise modules. In order to use a particular feature, you need to inject its feature service in the AppModule. In the current application, we are going to modify the above basic 3D Chart to visualize sales data for a particular year. For this application we are going to use column series, tooltip, data label, category axis and legend feature of the 3D Chart. Please find relevant feature service name and description as follows.
+3D Chart components are segregated into individual feature-wise modules. In order to use a particular feature, you need to inject its feature service in the 3D Chart component. In the current application, we are going to modify the above basic 3D Chart to visualize sales data for a particular year. For this application we are going to use column series, tooltip, data label, category axis and legend feature of the 3D Chart. Please find relevant feature service name and description as follows.
 
 * `ColumnSeries3D` - Inject this module in to `services` to use column series.
 * `Legend3D` - Inject this module in to `services` to use legend feature.
@@ -130,7 +141,6 @@ Import the above-mentioned modules from the chart package and inject them into t
 
 import { Chart3DComponent, ColumnSeries3D, Legend3D, Tooltip3D, DataLabel3D, Category3D, Inject } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
-import * as ReactDOM from "react-dom";
 
 function App() {
   return <Chart3DComponent id='charts'>
@@ -138,26 +148,23 @@ function App() {
   </Chart3DComponent>;
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
 
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 
 import { Chart3DComponent, ColumnSeries3D, Legend3D, Tooltip3D, DataLabel3D, Category3D, Inject } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
-import * as ReactDOM from "react-dom";
 function App() {
     return <Chart3DComponent id='charts'>
     <Inject services={[ColumnSeries3D, Legend3D, Tooltip3D, DataLabel3D, Category3D]}/>
   </Chart3DComponent>;
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
 
 {% endhighlight %}
 {% endtabs %}
 
-## Populate 3D chart with data
+## Populate 3D Chart with data
 
 This section explains how to plot the following JSON data to the 3D Chart.
 
@@ -192,7 +199,7 @@ export let data: Object[] = [
 {% endhighlight %}
 {% endtabs %}
 
-Add a series object to the 3D Chart by using the [`series`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3dseriesmodel) property. Map the JSON fields `x` and `y` to the series [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3dseriesmodel#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3dseriesmodel#yname) properties, and set the JSON array as the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3dseriesmodel#datasource) property.
+Add [`series`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3dseriesmodel) to the 3D Chart using the `<Chart3DSeriesCollectionDirective>` and `<Chart3DSeriesDirective>` components. Map the JSON fields `x` and `y` to the series [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3dseriesmodel#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3dseriesmodel#yname) properties, and set the JSON array as the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3dseriesmodel#datasource) property.
 
 Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3daxismodel#valuetype) for the horizontal axis (primaryXAxis) to `Category`. By default, the axis valueType is `Numeric`.
 
@@ -207,7 +214,7 @@ Since the JSON contains category data, set the [`valueType`](https://ej2.syncfus
 
 {% previewsample "page.domainurl/code-snippet/3d-chart/getting-started/getting-started-cs2" %}
 
-## Add 3D chart title
+## Add 3D Chart title
 
 You can add a title using the [`title`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel#title) property to the 3D Chart to provide quick information to the user about the data plotted in the 3D Chart.
 

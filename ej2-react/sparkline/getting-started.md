@@ -16,11 +16,9 @@ This section describes the steps to create a simple Sparkline and demonstrates t
 
 Below is the list of minimum dependencies required to use the Sparkline component.
 
-```ts
+```
 |-- @syncfusion/ej2-react-charts
-    |-- @syncfusion/ej2-base
     |-- @syncfusion/ej2-data
-    |-- @syncfusion/ej2-charts
     |-- @syncfusion/ej2-svg-base
     |-- @syncfusion/ej2-react-base
     |-- @syncfusion/ej2-pdf-export
@@ -28,25 +26,35 @@ Below is the list of minimum dependencies required to use the Sparkline componen
     |-- @syncfusion/ej2-compression
 ```
 
+Once you install `@syncfusion/ej2-react-charts`, the other required dependencies will be installed automatically along with the main package.
+
 ## Installation and configuration
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+### Create a React application
 
-> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+To easily set up a React application, use the Vite CLI (`npm create vite`), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like [`create-react-app`](https://github.com/facebook/create-react-app). For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+
+> **Note:** To create a React application using [`create-react-app`](https://github.com/facebook/create-react-app) instead, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
 To create a new React application, run the following command.
 
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+
+This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
+
+![Initial_setup](./images/Initial-setup.jpg)
+
+To set up a React application in TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+
+To set up a React application in JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -54,30 +62,44 @@ cd my-app
 npm run dev
 ```
 
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Sparkline package
 
-* Install the Syncfusion<sup style="font-size:70%">&reg;</sup> packages using the command below.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 
-```
+To install the Syncfusion<sup style="font-size:70%">&reg;</sup> Sparkline package, use the following command
+
+```bash
 npm install @syncfusion/ej2-react-charts --save
 ```
 
-## Add sparkline to the project
+> The –save will instruct NPM to include the Sparkline package inside of the **dependencies** section of the package.json.
+
+## Add Sparkline to the project
 
 Add the Sparkline component to `src/App.tsx` using the following code.
 
-```ts
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
 
-import * as React from 'react';
 import { SparklineComponent } from '@syncfusion/ej2-react-charts';
-
-class App extends React.Component {
-render() {
-  return ( <SparklineComponent></SparklineComponent> );
- }
+import * as React from 'react';
+function App() {
+  return (<SparklineComponent></SparklineComponent>);
 }
-export default App;
+export default App;
 
-```
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+
+import { SparklineComponent } from '@syncfusion/ej2-react-charts';
+import * as React from 'react';
+function App() {
+    return (<SparklineComponent></SparklineComponent>);
+}
+export default App;
+
+{% endhighlight %}
+{% endtabs %}
 
 Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
@@ -85,33 +107,47 @@ Now run the `npm run dev` command in the console to start the development server
 npm run dev
 ```
 
-Since the data source has not been specified to the sparkline, no shapes will be rendered. Only an empty SVG element is appended to the sparkline container.
+Since the data source has not been specified to the Sparkline, no shapes will be rendered. Only an empty SVG element is appended to the Sparkline container.
 
 ## Module injection
 
-Sparkline component are segregated into individual feature-wise modules. In order to use a particular feature, you need to inject its feature service in the AppModule. Please find relevant feature service name and description as follows.
+Sparkline components are segregated into individual feature-wise modules. In order to use a particular feature, you need to inject its feature service in the Sparkline component. Please find relevant feature service name and description as follows.
 
-* SparklineTooltip - Inject this module in to `services` to use tooltip feature.
+* `SparklineTooltip` - Inject this module in to `services` to use tooltip feature.
 
 Import the above-mentioned module from the chart package and inject them into the `services` section of the Sparkline component as follows.
 
-```ts
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
 
-import * as React from 'react';
-import { SparklineComponent } from '@syncfusion/ej2-react-charts';
+import { SparklineComponent, Inject, SparklineTooltip } from '@syncfusion/ej2-react-charts';
+import * as React from "react";
 
-class App extends React.Component {
-render() {
-  return ( <SparklineComponent><Inject services={[SparklineTooltip]} /></SparklineComponent> );
- }
+function App() {
+  return (<SparklineComponent>
+            <Inject services={[SparklineTooltip]} />
+          </SparklineComponent>);
 }
-export default App;
+export default App;
 
-```
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
 
-## Bind data source to sparkline
+import { SparklineComponent, Inject, SparklineTooltip } from '@syncfusion/ej2-react-charts';
+import * as React from "react";
+function App() {
+    return (<SparklineComponent>
+            <Inject services={[SparklineTooltip]} />
+          </SparklineComponent>);
+}
+export default App;
 
-The [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/sparkline/sparklinemodel#datasource) property enables data binding for the sparkline. It accepts a collection of values as input, such as a list of objects.
+{% endhighlight %}
+{% endtabs %}
+
+## Bind data source to Sparkline
+
+The [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/sparkline/sparklinemodel#datasource) property enables data binding for the Sparkline. It accepts a collection of values as input, such as a list of objects.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -124,9 +160,9 @@ The [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/sparkline/
 
 {% previewsample "page.domainurl/code-snippet/sparkline/getting-started-cs1" %}
 
-## Change the type of sparkline
+## Change the type of Sparkline
 
-The sparkline type can be configured using the [`type`](https://ej2.syncfusion.com/react/documentation/api/sparkline/sparklinemodel#type) property, which supports `Line`, `Column`, `WinLoss`, `Pie`, and `Area`. Here, the `area` type is applied.
+The Sparkline type can be configured using the [`type`](https://ej2.syncfusion.com/react/documentation/api/sparkline/sparklinemodel#type) property, which supports `Line`, `Column`, `WinLoss`, `Pie`, and `Area`. Here, the `Area` type is applied.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -139,9 +175,9 @@ The sparkline type can be configured using the [`type`](https://ej2.syncfusion.c
 
 {% previewsample "page.domainurl/code-snippet/sparkline/getting-started-cs2" %}
 
-## Enable tooltip for sparkline
+## Enable tooltip for Sparkline
 
-The sparkline provides additional information through a tooltip that appears when the mouse pointer hovers over the chart. You can enable tooltip by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/sparkline/sparklinetooltipsettingsmodel#visible) property to `true` in [`tooltipSettings`](https://ej2.syncfusion.com/react/documentation/api/sparkline/sparklinemodel#tooltipsettings) and injecting `SparklineTooltip` module into the `services`.
+The Sparkline provides additional information through a tooltip that appears when the mouse pointer hovers over the chart. You can enable tooltip by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/sparkline/sparklinetooltipsettingsmodel#visible) property to `true` in [`tooltipSettings`](https://ej2.syncfusion.com/react/documentation/api/sparkline/sparklinemodel#tooltipsettings) and injecting `SparklineTooltip` module into the `services`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

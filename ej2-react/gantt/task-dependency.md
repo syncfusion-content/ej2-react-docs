@@ -38,7 +38,8 @@ The following example establishes dependencies:
         
 {% previewsample "page.domainurl/code-snippet/gantt/predecessor-cs1" %}
 
-This code renders connector lines for dependencies like '2FS', updating taskbars on changes.
+> * Dependencies between tasks under the same parent are not supported.
+> * Dependencies between tasks in different parent groups are supported when the `allowParentDependency` property is enabled.
 
 ## Understand task relationship types
 

@@ -30,7 +30,7 @@ function App() {
         <ButtonComponent style={{marginLeft: "5px"}} onClick={onExpandCollapseButtonClick}>Collapse or Expand Row</ButtonComponent>
       </div>
       <p style={{ color: "red" }}>{message}</p>
-      <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={315}>
+      <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={300}>
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
           <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />

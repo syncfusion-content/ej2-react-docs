@@ -1,17 +1,16 @@
 ---
 layout: post
-title: Getting started with React Accumulation chart component | Syncfusion
-description:  Checkout and learn about Getting started with React Accumulation chart component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React Accumulation Chart component | Syncfusion
+description:  Checkout and learn about Getting started with React Accumulation Chart component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-<!-- markdownlint-disable MD036 -->
 
-# Getting started with React Accumulation charts of Syncfusion
+# Getting started with React Accumulation Charts of Syncfusion
 
-This section describes the steps to create a simple Accumulation Chart and demonstrates the basic usage of the Accumulation Chart component. The dependencies for accumulation chart is same as chart control.
+This section describes the steps to create a simple Accumulation Chart and demonstrates the basic usage of the Accumulation Chart component. The dependencies for Accumulation Chart is same as chart control.
 
 A quick video overview of the React Accumulation Charts setup is available:
 
@@ -21,12 +20,9 @@ A quick video overview of the React Accumulation Charts setup is available:
 
 Below is the list of minimum dependencies required to use the Accumulation Chart component.
 
-```javascript
-
+```
 |-- @syncfusion/ej2-react-charts
-    |-- @syncfusion/ej2-base
     |-- @syncfusion/ej2-data
-    |-- @syncfusion/ej2-charts
     |-- @syncfusion/ej2-pdf-export
     |-- @syncfusion/ej2-file-utils
     |-- @syncfusion/ej2-compression
@@ -35,25 +31,35 @@ Below is the list of minimum dependencies required to use the Accumulation Chart
     |-- @syncfusion/ej2-react-base
 ```
 
+Once you install `@syncfusion/ej2-react-charts`, the other required dependencies will be installed automatically along with the main package.
+
 ## Installation and configuration
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+### Create a React application
 
-> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+To easily set up a React application, use the Vite CLI (`npm create vite`), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like [`create-react-app`](https://github.com/facebook/create-react-app). For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+
+> **Note:** To create a React application using [`create-react-app`](https://github.com/facebook/create-react-app) instead, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
 To create a new React application, run the following command.
 
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+
+This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
+
+![Initial_setup](./images/Initial-setup.jpg)
+
+To set up a React application in TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+
+To set up a React application in JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -61,13 +67,19 @@ cd my-app
 npm run dev
 ```
 
-* Install the Syncfusion<sup style="font-size:70%">&reg;</sup> packages using the command below.
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Accumulation Chart package
 
-   ```
-    npm install @syncfusion/ej2-react-charts --save
-   ```
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 
-## Add accumulation chart to the project
+To install the Syncfusion<sup style="font-size:70%">&reg;</sup> Accumulation Chart package, use the following command
+
+```bash
+npm install @syncfusion/ej2-react-charts --save
+```
+
+> The –save will instruct NPM to include the Accumulation Chart package inside of the **dependencies** section of the package.json.
+
+## Add Accumulation Chart to the project
 
 Add the Accumulation Chart component to `src/App.tsx` using the following code.
 
@@ -76,9 +88,8 @@ Add the Accumulation Chart component to `src/App.tsx` using the following code.
 
 import {AccumulationChartComponent} from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
-
 function App() {
-    return  (<AccumulationChartComponent />);
+    return (<AccumulationChartComponent />);
 }
 export default App;
 
@@ -95,8 +106,13 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-**Pie series**
+```
+npm run dev
+```
+
+## Pie series
 
 By default, a pie series is rendered when JSON data is assigned to the series [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationSeriesModel#datasource) property. Map JSON fields to the series [`xName`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationSeriesModel#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationSeriesModel#yname) properties to bind data correctly.
 
@@ -110,9 +126,3 @@ By default, a pie series is rendered when JSON data is assigned to the series [`
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/series/pie-cs4" %}
-
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
-
-```
-npm run dev
-```

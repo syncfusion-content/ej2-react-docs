@@ -1,17 +1,16 @@
-import { Category, ChartComponent, ColumnSeries, Inject, Legend, LineSeries, SeriesCollectionDirective, SeriesDirective, Tooltip } from '@syncfusion/ej2-react-charts';
+import { Category, ChartComponent, Inject, Legend, LineSeries, SeriesCollectionDirective, SeriesDirective } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 import { data } from './datasource';
 function App() {
-    const legendSettings = { visible: true };
-    const primaryxAxis = { valueType: 'Category' };
-    return <ChartComponent id="charts" primaryXAxis={primaryxAxis} legendSettings={legendSettings}>
-    <Inject services={[ColumnSeries, Tooltip, Legend, LineSeries, Category]}/>
+  const legendSettings = { visible: true };
+  const primaryXAxis = { valueType: 'Category' };
+  return <ChartComponent id="charts" primaryXAxis={primaryXAxis} legendSettings={legendSettings}>
+    <Inject services={[Legend, LineSeries, Category]} />
     <SeriesCollectionDirective>
-      <SeriesDirective dataSource={data} xName='month' yName='sales' name='Sales'/>
+      <SeriesDirective dataSource={data} xName='month' yName='sales' name='Sales' type='Line'/>
     </SeriesCollectionDirective>
   </ChartComponent>;
 }
-;
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+createRoot(document.getElementById('charts')).render(<App />);

@@ -14,7 +14,9 @@ The timeline in the React Gantt Chart component represents project durations as 
 
 ## Configure timeline view modes
 
-Set the timeline view mode using the [timelineViewMode](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineViewMode/) property, with top tier displaying broader units (e.g., weeks) and bottom tier finer ones (e.g., days), ideal for project schedules.
+Set the timeline view mode using the [timelineViewMode](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineViewMode/) property. This property allows you to switch the timeline between different units such as **Day**, **Week**, **Month**, and **Year**, where the top tier displays a broader unit and the bottom tier displays a finer one.
+
+When both the `topTier` and `bottomTier` settings are defined, they take precedence over the `timelineViewMode` property. In this case, the `timelineViewMode` value will be ignored. To apply the `timelineViewMode` setting, ensure that `topTier` and `bottomTier` are assigned a null value or not configured.
 
 ### Week timeline mode
 
@@ -126,7 +128,9 @@ In Minutes timeline mode, the tier displays minute-level intervals, ideal for tr
 
 ## Customize week start day
 
-In the Gantt Chart component, you can customize the week start day using the [weekStartDay](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings#weekstartday) property. By default, the [weekStartDay](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings#weekstartday) is set to **0**, which specifies the **Sunday** as a start day of the week. But, you can customize the week start day by using the following code example.
+In the Gantt Chart component, you can customize the starting day of the week using the [weekStartDay](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings#weekstartday) property. By default, the `weekStartDay` value is set to **0**, which specifies **Sunday** as the first day of the week. You can change this value to any number from **0 to 6** to set a different start day.
+
+The `weekStartDay` property will take effect only when the timeline displays weeks. To enable this, set the [timelineViewMode](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineviewmode) to **Week**, or configure `topTier.unit` as **Week** and `bottomTier.unit` as **Day**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

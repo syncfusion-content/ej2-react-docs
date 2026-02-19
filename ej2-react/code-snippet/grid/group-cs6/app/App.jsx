@@ -21,7 +21,7 @@ function App() {
   }
   return (<div>
     <div style={{ marginLeft: "100px" }}><p style={{ color: "red" }} id="message">{message}</p></div>
-    <GridComponent dataSource={data} allowGrouping={true} height={315} actionBegin={actionBegin} actionComplete={actionComplete}>
+    <GridComponent dataSource={data} allowGrouping={true} height={300} actionBegin={actionBegin} actionComplete={actionComplete}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
