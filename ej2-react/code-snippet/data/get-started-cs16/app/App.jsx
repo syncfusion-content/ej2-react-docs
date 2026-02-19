@@ -4,7 +4,7 @@ import * as React from 'react';
 import { data } from './datasource';
 import { Row } from './rowTemplate';
 export default class App extends React.Component {
-    dm;
+    dataManager;
     style;
     changes;
     constructor(props) {
@@ -12,8 +12,8 @@ export default class App extends React.Component {
         this.state = { items: [] };
         this.style = { class: 'e-form' };
         this.changes = { changedRecords: [], addedRecords: [], deletedRecords: [] };
-        this.dm = new DataManager(data.slice(0, 5));
-        this.dm.executeQuery(new Query())
+        this.dataManager = new DataManager(data.slice(0, 5));
+        this.dataManager.executeQuery(new Query())
         .then((e) => {
             this.setState({
                 items: e.result.map((row) => (
@@ -42,8 +42,8 @@ export default class App extends React.Component {
         orderid.value = cusid.value = empid.value = '';
     }
     saveChanges() {
-        this.dm.saveChanges(this.changes);
-        this.dm.executeQuery(new Query())
+        this.dataManager.saveChanges(this.changes);
+        this.dataManager.executeQuery(new Query())
             .then((e) => {
             this.setState({
                 items: e.result.map((row) => (

@@ -4,14 +4,14 @@ import * as React from 'react';
 import { data } from './datasource';
 import { Row } from './rowTemplate';
 export default class App extends React.Component {
-    dm;
+    dataManager;
     style;
     constructor(props) {
         super(props);
         this.state = { items: [] };
         this.style = { class: 'e-form' };
-        this.dm = new DataManager(data.slice(0, 5));
-        this.dm.executeQuery(new Query())
+        this.dataManager = new DataManager(data.slice(0, 5));
+        this.dataManager.executeQuery(new Query())
             .then((e) => {
                 this.setState({
                     items: e.result.map((row,index) => (
@@ -33,8 +33,8 @@ export default class App extends React.Component {
         if (!rowdata.OrderID) {
             return;
         }
-        this.dm.insert(rowdata);
-        this.dm.executeQuery(new Query())
+        this.dataManager.insert(rowdata);
+        this.dataManager.executeQuery(new Query())
             .then((e) => {
             this.setState({
                 items: e.result.map((row) => (
@@ -55,6 +55,7 @@ export default class App extends React.Component {
                 </thead>
                 <tbody>{getValue('items', this.state)}</tbody>
             </table>
-            </div></div>);
+            </div></div>
+        );
     }
 }

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Syncfusion AI Tools Overview
 
-Syncfusion's AI-powered development tools accelerate React application development by providing deep context-aware knowledge directly in your AI-powered IDE. Through Model Context Protocol (MCP) integration, you get instant access to component APIs, pre-built UI blocks, styling configurations, icon libraries, and intelligent code generation - all without leaving your development environment.
+Syncfusion's AI-powered development tools accelerate React application development by providing deep knowledge directly in your AI-powered IDE. Through Model Context Protocol (MCP) integration, you get instant access to component APIs, pre-built UI blocks, styling configurations, icon libraries, and intelligent code generation - all without leaving your development environment.
 
 These tools act as your expert companion, reducing research time and ensuring best practices, whether you're building dashboards, designing interfaces, or integrating complex features.
 
@@ -30,13 +30,13 @@ Syncfusion AI Tools are delivered as an npm-based Model Context Protocol (MCP) s
 **Agentic UI Builder** (`#sf_react_ui_builder`)  
 Build complete UIs with coordinated tools for layout, components, styling, and icons. Perfect for creating pages, dashboards, and complex sections from scratch.
 
-**AI Coding Assistant** (`#SyncfusionReactAssistant`)  
+**AI Coding Assistant** (`#sf_react_assistant`)  
 Implement individual components with focused API guidance. Ideal for adding components to existing projects and troubleshooting integration issues.
 
 ## Getting Started
 
 1. **Install** the MCP server package in your AI-powered IDE.
-2. **Choose your mode** - `#sf_react_ui_builder` for complete UIs or `#SyncfusionReactAssistant` for component-specific tasks.
+2. **Choose your mode** - `#sf_react_ui_builder` for complete UIs or `#sf_react_assistant` for component-specific tasks.
 3. **Describe** what you want to build - the AI generates production-ready code that follows best practices.
 
 For detailed setup instructions, see the [Installation Guide](installation.md).
@@ -78,7 +78,7 @@ The Syncfusion AI Tools are designed with privacy considerations:
 
 The MCP server acts purely as a knowledge bridge, connecting your AI model with Syncfusion-specific expertise while respecting your privacy and maintaining security.
 
-## See Also
+## See also
 
 * [Installation](./installation)
 * [Agentic UI Builder - Getting Started](./agentic-ui-builder/getting-started)

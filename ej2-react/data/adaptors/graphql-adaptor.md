@@ -41,7 +41,7 @@ Understanding the key differences between GraphQL and REST helps appreciate the 
 | **Real-time** | Requires separate solution. | Built-in subscriptions support. |
  
 **GraphQL Query example:**
-```graphql
+```text
 query {
   getOrders {
     result {
@@ -430,7 +430,7 @@ Navigate to **https://localhost:xxxx/graphql** to access the Banana Cake Pop Gra
 
 **Test Query Example:**
 
-```graphql
+```text
 query {
   orders {
     items {
@@ -473,7 +473,7 @@ When using the `GraphQLAdaptor`, every backend API endpoint must return data in 
 
 **Test Filtering Example:**
 
-```graphql
+```text
 query {
   orders(where: { shipCity: { eq: "Berlin" } }) {
     items {
@@ -488,7 +488,7 @@ query {
 
 **Test Sorting Example:**
 
-```graphql
+```text
 query {
   orders(order: { freight: DESC }) {
     items {
@@ -501,7 +501,7 @@ query {
 
 **Test Pagination Example:**
 
-```graphql
+```text
 query {
   orders(skip: 0, take: 10) {
     items {

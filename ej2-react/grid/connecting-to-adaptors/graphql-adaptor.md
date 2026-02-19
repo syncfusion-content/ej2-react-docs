@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
  
-# GraphQL in React Grid
+# GraphQL in Syncfusion React Grid
  
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides seamless integration with GraphQL services, enabling modern, efficient data operations through a flexible query language. This comprehensive guide demonstrates how to configure and use the GraphQL with the Syncfusion React Grid to perform server-side operations including querying, mutations, filtering, sorting, paging, and complete CRUD functionality.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides seamless integration with GraphQL services, enabling modern, efficient data operations through a flexible query language. This comprehensive guide demonstrates configuring and using GraphQL with the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid to perform server-side operations including querying, mutations, filtering, sorting, paging, and complete CRUD functionality.
  
 ## Understanding GraphQL
  
@@ -27,7 +27,7 @@ Traditional REST APIs and GraphQL differ mainly in the way data is requested and
  
 ### GraphQL vs REST comparison
  
-Understanding the key differences between GraphQL and REST helps appreciate the benefits of using GraphQL with Syncfusion Grid:
+Understanding the key differences between GraphQL and REST helps appreciate the benefits of using GraphQL with Syncfusion<sup style="font-size:70%">&reg;</sup> Grid:
  
 | Aspect | REST API | GraphQL |
 |--------|----------|---------|
@@ -41,7 +41,8 @@ Understanding the key differences between GraphQL and REST helps appreciate the 
 | **Real-time** | Requires separate solution. | Built-in subscriptions support. |
  
 **GraphQL Query example:**
-```graphql
+
+```ts
 query {
   getOrders {
     result {
@@ -54,7 +55,7 @@ query {
 }
 ```
 
-**GraphQL Protocol benefits:**
+**Benefits of GraphQL for Grid integration:**
 
 - **Precise data retrieval**: Request only the fields needed, reducing bandwidth.
 - **Single request**: Fetch related data in one query instead of multiple REST calls.
@@ -63,32 +64,28 @@ query {
 - **Rapid development**: Faster iteration with flexible queries.
 - **Reduced over-fetching**: Eliminates unnecessary data transfer.
  
-### GraphQLAdaptor overview
+### Integrating Syncfusion Grid with GraphQLAdaptor
  
-The `GraphQLAdaptor` is a specialized adaptor in Syncfusion's DataManager that facilitates communication between the React Grid and GraphQL servers. It automatically transforms Grid operations into GraphQL queries and mutations.
+The `GraphQLAdaptor` is a specialized adaptor in Syncfusion<sup style="font-size:70%">&reg;</sup> `DataManager` that facilitates communication between the React Grid and GraphQL servers. It automatically transforms Grid operations into GraphQL queries and mutations.
  
-**How GraphQLAdaptor works:**
+**Workflow:**
  
-1. **Grid action**: User performs operation (filter, sort, page, edit, etc.).
-2. **Query construction**: GraphQLAdaptor builds GraphQL query with variables.
-3. **Server request**: POST request sent to GraphQL endpoint.
-4. **Query execution**: GraphQL server processes query and executes resolvers.
-5. **Response processing**: GraphQLAdaptor extracts data from response.
-6. **Grid rendering**: Grid displays updated data.
+1. **Grid action**: A data operation (filter, sort, page, edit, etc.) is triggered in the Grid.
+2. **Query construction**: `GraphQLAdaptor` builds a GraphQL query with variables.
+3. **Server request**: A POST request is sent to the GraphQL endpoint.
+4. **Query execution**: The GraphQL server processes the query and executes resolvers.
+5. **Response processing**: `GraphQLAdaptor` extracts data from the response.
+6. **Grid rendering**: The Grid displays the updated data.
  
-**Adaptor workflow example:**
+**Data operations:**
 
-- **Filter**: Sends `datamanager.where` variable with filter predicates.
-- **Sort**: Sends `datamanager.sorted` variable with field and direction.
-- **Page**: Sends `datamanager.skip` and `datamanager.take` variables.
+- **Filtering**: Sends `datamanager.where` variable with filter predicates.
+- **Sorting**: Sends `datamanager.sorted` variable with field and direction.
+- **Paging**: Sends `datamanager.skip` and `datamanager.take` variables.
 - **CRUD**: Executes mutations (createOrder, updateOrder, deleteOrder).
- 
-**Integration benefits:**
 
-- Automatic query variable management.
-- Built-in support for filtering, sorting, and paging.
-- Simplified CRUD operations through mutations.
-- Flexible response mapping.
-- Reduced boilerplate code.
+For complete integration of the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid with GraphQL, including support for data operations such as paging, sorting, filtering, and full CRUD functionality, refer to the following official guides:
 
-For full integration of the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid with GraphQL including support for data operations (paging, sorting, filtering) and CRUD actions refer to the official [GraphQLAdaptor integration](../connecting-to-backends/graphql-nodejs-server#prerequisites) guide.
+- [Syncfusion React Grid with GraphQL backend in Node.js](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-backends/graphql-nodejs-server)
+
+- [Syncfusion React Grid with Hot Chocolate GraphQL backend in ASP.NET Core]()

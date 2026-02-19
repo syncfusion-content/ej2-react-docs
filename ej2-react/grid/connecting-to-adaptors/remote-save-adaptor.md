@@ -11,28 +11,28 @@ domainurl: ##DomainURL##
 
 # RemoteSaveAdaptor in Syncfusion React Grid
 
-The `RemoteSaveAdaptor` in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a hybrid approach to data management that combines the best of both client-side and server-side processing. It loads all data once from the server, then performs filtering, sorting, and paging operations locally in the browser without additional server requests. Only CRUD operations (Create, Update, Delete) communicate with the server to persist data changes.
+The `RemoteSaveAdaptor` in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a hybrid approach to data management that combines the best of both client-side and server-side processing. The adaptor fetches the complete dataset from the server once, and then executes operations such as filtering, sorting, paging, searching, and grouping locally in the browser without additional server requests. Only CRUD operations (Create, Update, Delete) communicate with the server to persist data changes. It reduces server load and network latency while keeping data persistence secure.
 
-For complete server‑side configuration and additional implementation details, refer to the [DataManager RemoteSaveAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors) documentation, which covers endpoint setup, query processing, and best practices for integrating OData V4 services
+For complete server‑side configuration and additional implementation details, refer to the [DataManager RemoteSaveAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors) documentation, which explains endpoint setup, request handling, and best practices for synchronizing CRUD operations with remote services.
+
+Once the project creation and backend setup are complete, the next step is to render the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component on the client side.
 
 ## React Grid setup and client-side configuration
 
-To integrate the Syncfusion Grid into the React and ASP.NET Core project using Visual Studio, follow the below steps:
+After finishing the backend setup for the **RemoteSaveAdaptorDemo** ASP.NET Core project, next step is to integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid on the client side by following these instructions.
 
-### Install Syncfusion<sup style="font-size:70%">&reg;</sup> packages
+### Step 1: Installing Syncfusion packages
 
-Open a terminal inside the **ClientApp** (React project) folder and ensure **package.json** is present, then run:
+Right‑click the **Remote-save-adaptor-demo.client** folder in **Solution Explorer** and select **Open in Terminal** (available in newer Visual Studio versions), or open a Developer Command Prompt/PowerShell from the Start menu and navigate manually to the **Remote-save-adaptor-demo.client** directory. Once inside the folder, confirm that **package.json** is present, then run the following commands to install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages:
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
 npm install @syncfusion/ej2-data --save
 ```
-- `@syncfusion/ej2-react-grids`: Complete React Grid component library with comprehensive UI features.
-- `@syncfusion/ej2-data`: Data management library containing `DataManager` and adaptors including `RemoteSaveAdaptor`.
 
-### Syncfusion stylesheet integration 
+### Step 2: Integrating Syncfusion stylesheet
 
-Navigate to the **src** folder and open (or create) the stylesheet such as **styles.css** or **App.css**, then add the required CSS import statements to apply the Grid's styling.
+Navigate to the **src** folder and open the **App.css** stylesheet file. Add the required CSS import statements to include the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid styles.
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -50,30 +50,49 @@ Navigate to the **src** folder and open (or create) the stylesheet such as **sty
 {% endhighlight %}
 {% endtabs %}
 
-> **Theme customization**: Alternative themes available include `bootstrap5.css`, `fluent.css`, `tailwind.css`, and others. All theme files maintain consistent path structure with only the filename varying.
-
-Import the stylesheet in the **main.jsx** or **index.jsx** application entry point:
+Import the **App.css** in the application entry point(**App.jsx**).
 
 ```js
-import './styles.css';
+import "./App.css";
+...
+...
+
 ```
 
-### Basic Grid component implementation
+For this project, the "Material 3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
 
-In the React component file (e.g., **App.jsx**), import `DataManager` and `RemoteSaveAdaptor` from `@syncfusion/ej2-data`. The `DataManager` serves as an abstraction layer that manages the data source configuration and coordinates data operations with the Grid.
+### Step 3: Implementing basic Grid component
 
-Create a `DataManager` instance by following these steps:
+In the React component file **App.jsx**, import `DataManager` and `RemoteSaveAdaptor` from `@syncfusion/ej2-data`. The `DataManager` serves as an abstraction layer that manages the data source configuration and coordinates data operations with the Grid.
 
-1. Assign RemoteSaveAdaptor: Set the `adaptor` property within the `dataSource` configuration to `new RemoteSaveAdaptor()`. This enables local filtering, sorting, and paging with server-side CRUD operations.
+**Configure the DataManager**
 
-2. Set `dataSource` property: Configure the `dataSource` property of Syncfusion React Grid with a JSON object.
+1. **Assign RemoteSaveAdaptor:** Set the `adaptor` property within the `dataSource` configuration to `new RemoteSaveAdaptor()`. This enables local filtering, sorting, and paging with server-side CRUD operations.
 
-3. CRUD operations mapping: CRUD operations within the Grid can be mapped to server-side controller actions using specific properties:
+2. **Map CRUD operations**: CRUD operations within the Grid can be mapped to server-side controller actions using specific properties:
    - `insertUrl`: Specifies the URL for inserting new data
    - `removeUrl`: Specifies the URL for removing existing data
    - `updateUrl`: Specifies the URL for updating existing data
    - `crudUrl`: Specifies a single URL for all CRUD operations
    - `batchUrl`: Specifies the URL for batch editing
+
+3. **Load JSON data**: Fetch initial data from the server that contains all records.
+
+**Configure the Grid**
+
+1. **Set dataSource:** Configure the `dataSource` property of Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid with a JSON object.
+
+2. **Enable editing:** Use [editSettings](https://ej2.syncfusion.com/react/documentation/api/grid#editsettings) to allow CRUD actions (allowEditing, allowAdding, allowDeleting).
+
+3. **Add toolbar:** Configure [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) with items such as Add, Edit, Delete, Update, Cancel, and Search.
+
+4. **Enable client-side features:**
+
+    - [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting): Enables sorting.
+
+    - [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid#allowpaging): Enables paging.
+
+    - [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering): Enables filtering.
 
 In this example, data is fetched from the server using the `fetch` method and assigned to the Grid's [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource) property through the `DataManager` instance.
 
@@ -135,117 +154,39 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-> Replace `https://localhost:xxxx/api/Orders` with the actual URL of API endpoint that provides the data in a consumable format (e.g., JSON).
+The Grid has now been successfully created with full functionality, including paging, sorting, filtering, and CRUD features.
 
----
-
-## Configuration summary
-
-**DataManager configuration for `RemoteSaveAdaptor`:**
-
-| Property | Type | Description |
-|----------|------|-------------|
-| `json` | Array | Initial data loaded from server (all records). |
-| `adaptor` | RemoteSaveAdaptor | Enables client-side operations with server-side CRUD. |
-| `insertUrl` | string | Server endpoint for insert operation. |
-| `updateUrl` | string | Server endpoint for update operation. |
-| `removeUrl` | string | Server endpoint for delete operation. |
-
-**Grid configuration properties:**
-
-| Property | Type | Description |
-|----------|------|-------------|
-| [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource) | DataManager | DataManager instance with RemoteSaveAdaptor. |
-| [editSettings](https://ej2.syncfusion.com/react/documentation/api/grid#editsettings) | EditSettingsModel | Configure CRUD operations (allowEditing, allowAdding, allowDeleting). |
-| [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) | string[] | Toolbar items (Add, Edit, Delete, Update, Cancel, Search). |
-| [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) | boolean | Enable sorting (happens client-side). |
-| [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid#allowpaging) | boolean | Enable paging (happens client-side). |
-| [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) | boolean | Enable filtering (happens client-side). |
-
-## Application execution and verification
-
-**Starting the application:** Start the application by pressing **F5** in Visual Studio, which opens it in the browser, and the Grid should load all orders from the service.
-
-**Connection verification:** Use the browser **Developer Tools (F12)** and check the **Network** tab after refreshing the page to confirm a request to `https://localhost:xxxx` and verify that its response contains JSON data.
-
-> **Notes**: CORS configuration is included in the **Complete Program.cs Implementation** section during server setup. Refer to that section for detailed CORS implementation and security considerations for production environments.
-
+> Replace **https://localhost:xxxx/api/Orders** with the actual API endpoint that returns data in JSON format.
 
 ## CRUD Operations:
 
-CRUD refers to the four essential data operations: **Create** (add records), **Read** (view records), **Update** (modify records), and **Delete** (remove records).
+CRUD refers to the four fundamental data operations: **Create** (add records), **Read** (view records), **Update** (modify records), and **Delete** (remove records). Backend configuration for handling these operations is detailed in the Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager [RemoteSaveAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors) documentation, which covers endpoint setup, request handling, and best practices for synchronizing CRUD actions with remote services.
 
-### Create API controller
+In this project, the "Order ID" column has already been designated as the primary key, which is essential for performing CRUD operations in the Grid. The following sections illustrate both the client‑side and server‑side code required to implement complete CRUD functionality.
 
-Create `OrdersController.cs` in the Controllers folder. With `RemoteSaveAdaptor`, this controller only needs to:
-1. Return all data on initial load (no filtering/paging logic needed)
-2. Handle CRUD operations
+### CRUD model structure
+
+The following class on the server side defines the structure of data exchanged during CRUD operations:
 
 {% tabs %}
-{% highlight cs tabtitle="OrdersController.cs" %}
+{% highlight cs tabtitle="CRUDModel.cs" %}
 
 using Microsoft.AspNetCore.Mvc;
 using RemoteSaveAdaptorDemo.Models;
 
 namespace RemoteSaveAdaptorDemo.Controllers
 {
-  [ApiController]
-  public class OrdersController : ControllerBase
-  {
-    /// <summary>
-    /// GET endpoint - Returns all records.
-    /// Optional: Can be used for initial data load.
-    /// </summary>
-    [HttpGet]
-    [Route("api/[controller]")]
-    public List<OrdersDetails> GetOrderData()
+    public class CRUDModel<T> where T : class
     {
-      // Return ALL records - RemoteSaveAdaptor handles filtering/paging on client.
-      return OrdersDetails.GetAllRecords().ToList();
+        public string? action { get; set; }
+        public string? keyColumn { get; set; }
+        public object? key { get; set; }
+        public T? value { get; set; }
+        public List<T>? added { get; set; }
+        public List<T>? changed { get; set; }
+        public List<T>? deleted { get; set; }
+        public IDictionary<string, object>? @params { get; set; }
     }
-
-    /// <summary>
-    /// POST endpoint - Returns all records with count.
-    /// RemoteSaveAdaptor loads ALL data once, then handles.
-    /// filtering, sorting, and paging on client-side.
-    /// </summary>
-    [HttpPost]
-    [Route("api/[controller]")]
-    public object Post()
-    {
-      // Retrieve ALL data from data source.
-      var DataSource = GetOrderData();
-
-      // Get total records count.
-      int totalRecordsCount = DataSource.Count();
-
-      // CRITICAL: Return ALL records (no server-side filtering/paging).
-      // Client will handle these operations.
-      return new { result = DataSource, count = totalRecordsCount };
-    }
-  }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-### CRUD model structure
-
-The below class is used to structure data sent during CRUD operations:
-
-{% tabs %}
-{% highlight cs tabtitle="CRUDModel.cs" %}
-
-public class CRUDModel<T> where T : class
-{
-  public string? action { get; set; }
-  public string? keyColumn { get; set; }
-  public object? key { get; set; }
-  public T? value { get; set; }
-  public List<T>? added { get; set; }
-  public List<T>? changed { get; set; }
-  public List<T>? deleted { get; set; }
-  public IDictionary<string, object>? @params { get; set; }
 }
 
 {% endhighlight %}
@@ -258,22 +199,32 @@ To insert a new record, utilize the `insertUrl` property to specify the controll
 {% tabs %}
 {% highlight cs tabtitle="OrdersController.cs" %}
 
-/// <summary>
-/// Inserts a new data item into the data collection.
-/// </summary>
-/// <param name="newRecord">The order to be inserted.</param>
-/// <returns>It returns the newly inserted record detail.</returns>
-[HttpPost]
-[Route("api/Orders/Insert")]
-public ActionResult Insert([FromBody] CRUDModel<OrdersDetails> newRecord)
-{
-  if (newRecord.value !=null)
-  {
-    OrdersDetails.GetAllRecords().Insert(0, newRecord.value);
-  }  
-  return Json(newRecord.value);
-}
+using Microsoft.AspNetCore.Mvc;
+using RemoteSaveAdaptorDemo.Models;
 
+namespace RemoteSaveAdaptorDemo.Controllers
+{
+    
+    [ApiController]
+    public class OrdersController : ControllerBase
+    {
+        /// <summary>
+        /// Inserts a new data item into the data collection.
+        /// </summary>
+        /// <param name="newRecord">The order to be inserted.</param>
+        /// <returns>It returns the newly inserted record detail.</returns>
+        [HttpPost]
+        [Route("api/Orders/Insert")]
+        public ActionResult Insert([FromBody] CRUDModel<OrdersDetails> newRecord)
+        {
+            if (newRecord.value != null)
+            {
+                OrdersDetails.GetAllRecords().Insert(0, newRecord.value);
+            }
+
+            return new JsonResult(newRecord.value);
+        }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -284,32 +235,42 @@ For updating existing records, use the `updateUrl` property to specify the contr
 {% tabs %}
 {% highlight cs tabtitle="OrdersController.cs" %}
 
-/// <summary>
-/// Updates an existing order.
-/// </summary>
-/// <param name="updateRecord">The updated order details.</param>
-/// <returns>It returns the updated order details.</returns>
-[HttpPost]
-[Route("api/Orders/Update")]
-public object Update([FromBody] CRUDModel<OrdersDetails> updatedRecord)
+using Microsoft.AspNetCore.Mvc;
+using RemoteSaveAdaptorDemo.Models;
+
+namespace RemoteSaveAdaptorDemo.Controllers
 {
-  var updatedOrder = updatedRecord.value;
-  if (updatedOrder != null)
-  {
-    var data = OrdersDetails.GetAllRecords().FirstOrDefault(or => or.OrderID == updatedOrder.OrderID);
-    if (data != null)
+    
+    [ApiController]
+    public class OrdersController : ControllerBase
     {
-      // Update the existing record.
-      data.OrderID = updatedOrder.OrderID;
-      data.CustomerID = updatedOrder.CustomerID;
-      data.Freight = updatedOrder.Freight;
-      data.ShipCity = updatedOrder.ShipCity;
-      data.ShipCountry = updatedOrder.ShipCountry;
-      data.Verified = updatedOrder.Verified;
-      // Update other properties similarly.
-    }
-  }
-  return updatedRecord;
+        /// <summary>
+        /// Updates an existing order.
+        /// </summary>
+        /// <param name="updateRecord">The updated order details.</param>
+        /// <returns>It returns the updated order details.</returns>
+        [HttpPost]
+        [Route("api/Orders/Update")]
+        public object Update([FromBody] CRUDModel<OrdersDetails> updatedRecord)
+        {
+            var updatedOrder = updatedRecord.value;
+            if (updatedOrder != null)
+            {
+                var data = OrdersDetails.GetAllRecords().FirstOrDefault(or => or.OrderID == updatedOrder.OrderID);
+                if (data != null)
+                {
+                    // Update the existing record.
+                    data.OrderID = updatedOrder.OrderID;
+                    data.CustomerID = updatedOrder.CustomerID;
+                    data.Freight = updatedOrder.Freight;
+                    data.ShipCity = updatedOrder.ShipCity;
+                    data.ShipCountry = updatedOrder.ShipCountry;
+                    data.Verified = updatedOrder.Verified;
+                    // Update other properties similarly.
+                }
+            }
+            return updatedRecord;
+        }
 }
 
 {% endhighlight %}
@@ -319,33 +280,51 @@ public object Update([FromBody] CRUDModel<OrdersDetails> updatedRecord)
 
 To delete existing records, use the `removeUrl` property to specify the controller action mapping URL for the delete operation. The primary key value of the deleted record is bound to the `deletedRecord` parameter.
 
-
 {% tabs %}
 {% highlight cs tabtitle="OrdersController.cs" %}
 
-/// <summary>
-/// Deletes an order.
-/// </summary>
-/// <param name="deletedRecord">It contains the specific record detail which is need to be removed.</param>
-/// <returns>It returns the deleted record detail.</returns>
-[HttpPost]
-[Route("api/Orders/Remove")]
-public object Remove([FromBody] CRUDModel<OrdersDetails> deletedRecord)
+using Microsoft.AspNetCore.Mvc;
+using RemoteSaveAdaptorDemo.Models;
+
+namespace RemoteSaveAdaptorDemo.Controllers
 {
-  // Get key value from the deletedRecord.
-  int orderId = int.Parse(deletedRecord.key.ToString()); 
-  var data = OrdersDetails.GetAllRecords().FirstOrDefault(orderData => orderData.OrderID == orderId);
-  if (data != null)
-  {
-    // Remove the record from the data collection.
-    OrdersDetails.GetAllRecords().Remove(data);
-  }
-  return deletedRecord;
+    
+    [ApiController]
+    public class OrdersController : ControllerBase
+    {
+        /// <summary>
+        /// <summary>
+        /// Deletes an order.
+        /// </summary>
+        /// <param name="deletedRecord">It contains the specific record detail which is need to be removed.</param>
+        /// <returns>It returns the deleted record detail.</returns>
+        [HttpPost]
+        [Route("api/Orders/Remove")]
+        public object Remove([FromBody] CRUDModel<OrdersDetails> deletedRecord)
+        {
+            // Get key value from the deletedRecord.
+            int orderId = int.Parse(deletedRecord.key.ToString());
+            var data = OrdersDetails.GetAllRecords().FirstOrDefault(orderData => orderData.OrderID == orderId);
+            if (data != null)
+            {
+                // Remove the record from the data collection.
+                OrdersDetails.GetAllRecords().Remove(data);
+            }
+            return deletedRecord;
+        }
+    }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
+## Application execution and verification
+
+**Starting the application:** Run the application by pressing <kbd>F5</kbd> in Visual Studio. The browser opens and the Grid loads all orders from the service.
+
+**Connection verification:** Open the browser Developer Tools (<kbd>F12</kbd>) and select the "Network" tab. Refresh the page to confirm a request to **https://localhost:xxxx** and verify that the response contains JSON data.
+
+> CORS configuration is included in the [server setup](). Refer to that section for detailed CORS implementation and security considerations for production environments.
 
 ## Troubleshooting
 

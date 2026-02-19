@@ -9,12 +9,14 @@ export default class App extends React.Component {
         <Row key={index} {...row} />
     ));
     render() {
-        return (<table id='datatable' className='e-table'>
-            <thead>
-             <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th></tr>
-            </thead>
-            <tbody>{this.items}</tbody>
-           </table>);
+        return (
+            <table id='datatable' className='e-table'>
+                <thead>
+                    <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th></tr>
+                </thead>
+                <tbody>{this.items}</tbody>
+           </table>
+        );
     }
 }
 

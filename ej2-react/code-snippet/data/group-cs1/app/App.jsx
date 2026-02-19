@@ -12,7 +12,7 @@ export default class App extends React.Component {
     }
     componentDidMount() {
         new DataManager({ url: SERVICE_URI, adaptor: new ODataV4Adaptor() })
-            .executeQuery(new Query().group('CustomerID').take(20))
+            .executeQuery(new Query().group('CustomerID').take(12))
             .then((e) => {
                 const res = e.result.map((row, index) => (
                     <GroupRow key={index} {...row} />
@@ -20,7 +20,8 @@ export default class App extends React.Component {
                 this.setState({
                     items: res
                 });
-            });
+            }
+        );
     }
 
     render() {

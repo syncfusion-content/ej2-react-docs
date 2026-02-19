@@ -7,7 +7,7 @@ import { data } from './datasource';
 import { Row } from './rowTemplate';
 
 export default class App extends React.Component<{}, {}>{
-    public dm: DataManager;
+    public dataManager: DataManager;
     public style: { [x: string]: string };
     public changes: {
         addedRecords: object[],
@@ -19,21 +19,15 @@ export default class App extends React.Component<{}, {}>{
         this.state = { items: [] };
         this.style = { class: 'e-form' };
         this.changes = { changedRecords: [], addedRecords: [], deletedRecords: [] };
-        this.dm = new DataManager(data.slice(0, 5));
-        this.dm.executeQuery(new Query())
-      .then((e: ReturnOption) => {
-        this.setState({
-          items: (e.result as object[]).map((row: object) => (
-            <Row key={row.OrderID} {...row} />
-          ))
+        this.dataManager = new DataManager(data.slice(0, 5));
+        this.dataManager.executeQuery(new Query())
+        .then((e: ReturnOption) => {
+            this.setState({
+            items: (e.result as object[]).map((row: object) => (
+                <Row key={row.OrderID} {...row} />
+            ))
+            });
         });
-      });
-        // this.dm.executeQuery(new Query())
-        //     .then((e: ReturnOption) => {
-        //         this.setState({
-        //             items: (e.result as object[]).map((row: object) => (<Row {...row}/>))
-        //         });
-        //     });
         this.action = this.action.bind(this);
         this.saveChanges = this.saveChanges.bind(this);
     }
@@ -55,8 +49,8 @@ export default class App extends React.Component<{}, {}>{
     }
 
     public saveChanges(): void {
-        this.dm.saveChanges(this.changes);
-        this.dm.executeQuery(new Query())
+        this.dataManager.saveChanges(this.changes);
+        this.dataManager.executeQuery(new Query())
             .then((e: ReturnOption) => {
                 this.setState({
                     items: (e.result as object[]).map((row: object) => (
@@ -83,7 +77,8 @@ export default class App extends React.Component<{}, {}>{
                     <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th></tr>
                 </thead>
                 <tbody>{getValue('items', this.state)}</tbody>
-            </table></div></div>)
+            </table></div></div>
+        )
     }
 }
 

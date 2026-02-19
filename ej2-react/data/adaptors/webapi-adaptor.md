@@ -63,8 +63,8 @@ macOS (Terminal):
 Press <kbd>Command</kbd> + <kbd>Space</kbd> to open Spotlight Search, type Terminal, and press <kbd>Enter</kbd>.
 
 ```bash
-dotnet new react -n OdataV4AdaptorDemo
-cd OdataV4AdaptorDemo
+dotnet new react -n WebApiAdaptor
+cd WebApiAdaptor
 ```
 
 **Project structure after creation:**

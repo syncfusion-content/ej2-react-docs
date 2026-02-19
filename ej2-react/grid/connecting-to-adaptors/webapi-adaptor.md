@@ -8,33 +8,36 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# WebApiAdaptor in Syncfusion React Grid
+# WebApiAdaptor in Syncfusion React Grid 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid integrates with Web API services for efficient data retrieval and manipulation through RESTful APIs. This guide provides a complete step-by-step process for configuring and using the `WebApiAdaptor` with the Syncfusion React Grid to perform server-side operations such as paging, sorting, filtering, and CRUD.
+The [WebApiAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#web-api-adaptor) integrates the React Grid with Web API endpoints that support OData‑style querying. It is derived from the `ODataAdaptor`, meaning the target Web API must accept OData‑formatted query parameters for operations such as filtering, sorting, paging, and searching. When the React Grid performs any data action, the `WebApiAdaptor` generates OData‑compliant query strings, sends them to the Web API endpoint, and processes the returned JSON to populate the Grid. This ensures seamless remote data binding with OData-capable Web API services.
 
 For details on configuring the backend (expected request/response format, server‑side processing), refer to the [WebApiAdaptor backend setup documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors#web-api-adaptor).
 
-## React Grid setup (client-side configuration)
+Once the project creation and backend setup are complete, the next step is to render the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid Component on the client side.
 
-With the Web API service operational, the next phase involves configuring the React Grid component to consume and display data from the service.
+## React Grid Frontend Setup using Syncfusion WebAPIAdaptor
 
-### Syncfusion package installation
+After finishing the backend setup for the **WebApiAdaptorDemo** ASP.NET Core project, next step is to integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid on the client side by following these instructions.
 
-Right‑click **ClientApp** in **Solution Explorer**, open a terminal, then run the following npm commands in the terminal:
+### Step 1: Install Syncfusion packages
+
+Right‑click the **Webapiadaptor.client** folder in **Solution Explorer** and select **Open in Terminal** (available in newer Visual Studio versions), or open a Developer Command prompt/PowerShell from the Start menu and navigate manually to the **Webapiadaptor.client directory**. Once inside the folder, confirm that **package.json** is present, then run the following commands to install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages:
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
 npm install @syncfusion/ej2-data --save
 ```
 
-### Add CSS styles
+### Step 2: Add CSS styles
 
-Syncfusion Grid requires CSS for proper rendering. Add these imports to `index.css` or `App.css`:
+Syncfusion Grid requires CSS for proper rendering. Add these imports to **index.css** or **App.css**:
 
-{% tabs %}
-{% highlight css tabtitle="index.css" %}
-
+```css
+/* Base styles - Required for all Syncfusion components */
 @import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
+
+/* Component-specific styles */
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
 @import '../node_modules/@syncfusion/ej2-calendars/styles/material3.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css';
@@ -42,19 +45,25 @@ Syncfusion Grid requires CSS for proper rendering. Add these imports to `index.c
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material3.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css';
+
+/* Grid component styles - Required */
 @import '../node_modules/@syncfusion/ej2-react-grids/styles/material3.css';
+```
 
-{% endhighlight %}
-{% endtabs %}
+Import the **App.css** in the application entry point(**App.jsx**).
 
-> - **Theme customization**: Alternative themes available include `bootstrap5.css`, `fluent.css`, `tailwind.css`, and others. All theme files maintain consistent path structure with only the filename varying.
-> - Ensure the stylesheet is imported in the entry file (**main.jsx** or **index.jsx**).
+```js
+import "./App.css";
+...
+...
 
-### Basic Grid component implementation
+```
 
-This section demonstrates creating a React Grid component with Web API service integration.
+### Step 3: Create React Grid component with WebAPIAdaptor
 
-Open the **src** folder, access or create the **App.jsx** file, and replace its existing content with the grid implementation shown below.
+Grid integration with backend APIs is enabled through the `WebApiAdaptor`, which acts as a bridge between the Syncfusion `DataManager` and RESTful Web API endpoints. It converts Grid actions into OData‑compliant query parameters and is well‑suited for APIs that follow OData conventions, providing server‑side paging, filtering, sorting, and searching without the need for custom request logic.
+
+By delegating these operations to the server rather than executing them in the browser, the Grid ensures that only the required data is retrieved for each request.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -108,37 +117,84 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-### Run the application
+> When using the `WebApiAdaptor`, the server must return a JSON response containing both the data collection (`Items`) and the total record count (`Count`) so the React `DataManager` can correctly process paging and data binding.
 
-Run the application in Visual Studio, accessible on a URL like **https://localhost:xxxx**. Verify the API returns order data at **https://localhost:xxxx/api/Orders**, where **xxxx** is the port. Grid displays order data fetched from the backend API:
+## Server-side data operations
 
-![WebApiAdaptor](../images/adaptor.gif)
+React Grid optimizes large datasets by relying on server‑side data operations such as filtering, sorting, and paging rather than processing everything in the browser. The `Syncfusion.EJ2.AspNet.Core` package supports this approach by providing built‑in methods that efficiently handle these operations on the server, ensuring smooth performance even with heavy data loads.
 
-**Common issues and resolutions:**
+### Paging
 
-| Issue | Resolution |
-|-------|----------|
-| **CORS error** | Verify CORS configuration in **Program.cs** (already covered above). |
-| **404 not found** | Confirm URL and port number match server configuration. |
-| **Empty Grid** | Inspect browser console for errors; verify server data response format. |
-| **Styles missing** | Confirm styles.css import in main application file. |
-| **Incorrect response format** | Ensure server returns `{ Items: [], Count: number }` format. |
+The paging feature is enabled by setting the `allowPaging` property to `true` and injecting the `Page` module from `@syncfusion/ej2-react-grids` into the grid.
 
----
+```ts
+  <GridComponent dataSource={data} allowPaging={true}>
+    . . .
+    . . .
+    . . .
+    <Inject services={[Page]}/>
+  </GridComponent>
+```
 
-## Performing data operations
+After enabling paging, the `WebApiAdaptor` includes OData‑style paging parameters `$skip` and `$top` in each request based on the Grid's current page and page size. These parameters allow the server to return only the required subset of data, enabling efficient server‑side paging. The Grid then renders the corresponding page using the paged dataset and the total record count provided by the API.
 
-This section covers implementation of advanced Grid features including filtering, sorting, pagination, and global search with custom server-side handling.
+{% tabs %}
+{% highlight cs tabtitle="OrdersController.cs" %}
+
+[HttpGet]
+
+public object Get()
+{
+    var queryString = Request.Query;
+    var data = Orders.GetAllRecords().ToList();
+    int skip = Convert.ToInt32(queryString["$skip"]);
+    int take = Convert.ToInt32(queryString["$top"]);
+    return take != 0 ? new { Items = data.Skip(skip).Take(take).ToList(), Count = data.Count() } : new { Items = data, Count = data.Count() };
+}
+
+{% endhighlight %}
+
+{% highlight js tabtitle="App.jsx" %}
+
+import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
+import { GridComponent, ColumnsDirective, ColumnDirective, Page, Inject } from '@syncfusion/ej2-react-grids';
+
+function App() {
+    const data = new DataManager({ 
+        url: 'https://localhost:xxxx/api/Orders', // Replace with the actual endpoint URL.
+        adaptor: new WebApiAdaptor()
+    });
+    return <GridComponent dataSource={data} allowPaging={true} height={320}>
+        <ColumnsDirective>
+            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150' textAlign='Right'></ColumnDirective>
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
+            <ColumnDirective field='ShipCity' headerText='Ship City' width='150'/>
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
+        </ColumnsDirective>
+        <Inject services={[Page]} />
+    </GridComponent>
+};
+export default App;
+
+{% endhighlight %}
+{% endtabs %}
+
+![paging query](../images/webapiadaptor-paging.png)
 
 ### Filtering
 
-The filtering feature enables data refinement by applying conditional criteria. With WebApiAdaptor, the Grid sends OData-style filter queries that must be manually processed on the server side.
+The filtering feature is enabled by setting the `allowFiltering` property to `true` and injecting the `Filter` module from `@syncfusion/ej2-react-grids` into the grid.
 
-**Key difference from OData:**
-- OData: Framework automatically handles filtering with `[EnableQuery]`
-- WebApi: Manual parsing and filtering logic required in controller
+```js
+  <GridComponent dataSource={data} allowFiltering={true}>
+    . . .
+    . . .
+    . . .
+    <Inject services={[Filter]}/>
+  </GridComponent>
+```
 
-Update the **OrdersController.cs** `Get()` method to handle filter query parameters:
+After enabling filtering on the client side, the `WebApiAdaptor` translates the Grid's filter conditions into OData‑style `$filter` query parameters. It builds a filter expression based on the selected field, operator, and value, and sends it to the server. The backend processes this `$filter` expression, applies the corresponding filtering logic, and returns only the records that match the criteria for the Grid to display.
 
 {% tabs %}
 {% highlight cs tabtitle="OrdersController.cs" %}
@@ -278,13 +334,25 @@ export default App;
 
 ![Filtering query](../images/webapiadaptor-filtering.png)
 
-> Available filter operators include string‑based (Contains, Equals, Starts With, Ends With) and number‑based (Equals, Greater Than, Less Than).
+> **Key difference from OData:**
+> - **OData:** Framework automatically handles filtering with `[EnableQuery]`
+> - **WebApi:** Manual parsing and filtering logic required in controller
 
 ### Searching
 
-The search feature provides a global search interface that queries across all columns simultaneously. Unlike column-specific filtering, searching performs keyword matching across the entire dataset. Filtering is column‑specific, while searching matches keywords across all columns.
+The search feature provides a global search interface that queries across all columns simultaneously. Unlike column specific filtering, searching performs keyword matching across the entire data set.
+The searching feature is enabled by configuring the `toolbar` property with `Search` item and injecting the `Toolbar` and `Search` modules from `@syncfusion/ej2-react-grids` into the grid.
 
-Update the **OrdersController.cs** to handle search operations within the filter logic:
+```ts
+  <GridComponent dataSource={data} toolbar={['Search']}>
+    . . .
+    . . .
+    . . .
+    <Inject services={[Search,Toolbar]}/>
+  </GridComponent>
+```
+
+After enabling the search feature, the `WebApiAdaptor` generates an OData‑style `$filter` expression that performs a keyword search across all searchable fields. It builds a combined OR‑based condition using the search term and sends it to the server. 
 
 {% tabs %}
 {% highlight cs tabtitle="OrdersController.cs - With Search Support" %}
@@ -437,17 +505,20 @@ export default App;
 
 ![Searching query](../images/webapiadaptor-searching.png)
 
-**Search behavior characteristics:**
-- Searches multiple columns simultaneously
-- Case-insensitive matching
-- Partial string matching
-- Real-time result updates during input
-
 ### Sorting
 
-Record sorting provides organization of data in ascending or descending order based on column values. Both single-column and multi-column sorting are supported.
+The sorting feature is enabled by setting the `allowSorting` property to `true` and injecting the `Sort` module from `@syncfusion/ej2-react-grids` into the grid.
 
-Update the **OrdersController.cs** `Get()` method to handle sort query parameters:
+```ts
+  <GridComponent dataSource={data} allowSorting={true}>
+    . . .
+    . . .
+    . . .
+    <Inject services={[Sort]}/>
+  </GridComponent>
+```
+
+After enabling sorting on the client side, the `WebApiAdaptor` generates an OData‑style `$orderby` expression based on the selected column and sort direction. This expression is sent to the server, which applies the sorting logic and returns the ordered data. The Grid then renders the sorted result set returned by the API.
 
 {% tabs %}
 {% highlight cs tabtitle="OrdersController.cs" %}
@@ -519,59 +590,13 @@ export default App;
 
 ![Sorting query](../images/webapiadaptor-sorting-asc.png)
 
-### Paging
+The Grid has now been successfully created with including paging, sorting, filtering. the next step is to enabling CRUD operations.
 
-Record pagination provides navigation through large datasets by dividing records into manageable pages. Implement paging logic on the server-side according to the received OData-formatted query parameters.
+### CRUD operations
 
-{% tabs %}
-{% highlight cs tabtitle="OrdersController.cs" %}
+CRUD refers to the four essential data operations: **Create** (add records), **Read** (view records), **Update** (modify records), and **Delete** (remove records).
 
-// GET: api/Orders.
-[HttpGet]
-
-public object Get()
-{
-    var queryString = Request.Query;
-    var data = Orders.GetAllRecords().ToList();
-    int skip = Convert.ToInt32(queryString["$skip"]);
-    int take = Convert.ToInt32(queryString["$top"]);
-    return take != 0 ? new { Items = data.Skip(skip).Take(take).ToList(), Count = data.Count() } : new { Items = data, Count = data.Count() };
-}
-
-{% endhighlight %}
-
-{% highlight js tabtitle="App.jsx" %}
-
-import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
-import { GridComponent, ColumnsDirective, ColumnDirective, Page, Inject } from '@syncfusion/ej2-react-grids';
-
-function App() {
-    const data = new DataManager({ 
-        url: 'https://localhost:xxxx/api/Orders', // Replace with the actual endpoint URL.
-        adaptor: new WebApiAdaptor()
-    });
-    return <GridComponent dataSource={data} allowPaging={true} height={320}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='ShipCity' headerText='Ship City' width='150'/>
-            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
-        </ColumnsDirective>
-        <Inject services={[Page]} />
-    </GridComponent>
-};
-export default App;
-
-{% endhighlight %}
-{% endtabs %}
-
-![paging query](../images/webapiadaptor-paging.png)
-
-### Handling CRUD operations
-
-To manage CRUD (Create, Read, Update, Delete) operations using the WebApiAdaptor, follow the provided guide for configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid for [editing](https://ej2.syncfusion.com/react/documentation/grid/editing/edit) and utilize the sample implementation of the `OrdersController` in the server application. This controller handles HTTP requests for CRUD operations such as GET, POST, PUT, and DELETE.
-
-To enable CRUD operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component within an React application, follow these steps:
+To manage CRUD (Create, Read, Update, Delete) operations using the WebApiAdaptor, follow the provided guide for configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid for [editing](https://ej2.syncfusion.com/react/documentation/grid/editing/edit) and utilize the sample implementation of the `OrdersController` in the server application. This controller handles HTTP requests for CRUD operations such as `GET`, `POST`, `PUT`, and `DELETE`.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -682,3 +707,25 @@ public void Delete(int key)
   }
 }
 ```
+
+## Troubleshooting
+
+| Issue | Resolution |
+|-------|----------|
+| **CORS error** | Verify CORS configuration in **Program.cs** (already covered above). |
+| **404 not found** | Confirm URL and port number match server configuration. |
+| **Empty Grid** | Inspect browser console for errors; verify server data response format. |
+| **Styles missing** | Confirm styles.css import in main application file. |
+| **Incorrect response format** | Ensure server returns `{ Items: [], Count: number }` format. |
+
+
+## Run the application
+
+Run the application in Visual Studio, accessible on a URL like **https://localhost:xxxx**. Verify the API returns order data at **https://localhost:xxxx/api/Orders**, where **xxxx** is the port. Grid displays order data fetched from the backend API:
+
+![WebApiAdaptor](../images/adaptor.gif)
+
+## Complete sample repository
+
+For the complete working implementation of this example, refer to the GitHub repository.
+

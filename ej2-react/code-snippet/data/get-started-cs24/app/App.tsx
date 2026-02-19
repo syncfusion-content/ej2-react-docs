@@ -27,7 +27,8 @@ export default class App extends React.Component<{}, {}> {
           aggregates: [ret],
           items: res,
         });
-      });
+      }
+    );
   }
 
   public render() {

@@ -10,31 +10,36 @@ domainurl: ##DomainURL##
 
 # WebMethodAdaptor in Syncfusion React Grid Component
 
-The [WebMethodAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#webmethod-adaptor) in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid facilitates data binding from remote services using web methods. This powerful feature enables efficient communication between the client-side application and the server. The WebMethodAdaptor, like the URL adaptor, sends query parameters encapsulated within an object named **value**. Within this **value** object, various datamanager properties such as **requiresCounts**, **skip**, **take**, **sorted**, and **where** queries are included.
+The [WebMethodAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#webmethod-adaptor) in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid facilitates data binding from remote services using web methods. This powerful feature enables efficient communication between the client-side application and the server. The `WebMethodAdaptor`, like the `URLAdaptor`, sends query parameters encapsulated within an object named `value`. Within this `value` object, various datamanager properties such as `requiresCounts`, `skip`, `take`, `sorted`, and `where` queries are included.
  
 ![Webmethod Adaptor](../images/web-method-adaptor-value.png)
 
 For complete server‑side configuration and additional implementation details, refer to the [DataManager Webmethod Adaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors) documentation, which covers endpoint setup, query processing, and best practices for integrating WebMethod‑based services.
 
-## React Grid setup and client-side configuration
+Once the project creation and backend setup are complete, the next step is to render the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid Component on the client side.
 
-To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component into the React and ASP.NET Core project using Visual Studio, follow the below steps:
+## React Grid Frontend Setup using Syncfusion WebMethodAdaptor
 
-### Syncfusion package installation
+After finishing the backend setup for the **WebMethodAdaptorDemo** ASP.NET Core project, next step is to integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid on the client side by following these instructions.
 
-Open a terminal inside the **ClientApp** (React project) folder and ensure **package.json** is present, then run:
+### Step 1: Install Syncfusion packages
+
+Right‑click the **WebMethodAdaptorDemo.client** folder in **Solution Explorer** and select **Open in Terminal** (available in newer Visual Studio versions), or open a Developer Command prompt/PowerShell from the Start menu and navigate manually to the **WebMethodAdaptorDemo.client**. Once inside the folder, confirm that **package.json** is present, then run the following commands to install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages:
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
 npm install @syncfusion/ej2-data --save
 ```
 
-### Syncfusion stylesheet integration
+### Step 2: Add CSS styles
 
 Navigate to the **src** folder and open (or create) the stylesheet such as **styles.css** or **App.css**, then add the required CSS import statements to apply the Grid's styling.
 
 ```css
+/* Base styles - Required for all Syncfusion components */
 @import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
+
+/* Component-specific styles */
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
 @import '../node_modules/@syncfusion/ej2-calendars/styles/material3.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css';
@@ -42,25 +47,27 @@ Navigate to the **src** folder and open (or create) the stylesheet such as **sty
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material3.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css';
+
+/* Grid component styles - Required */
 @import '../node_modules/@syncfusion/ej2-react-grids/styles/material3.css';
 ```
 
-> **Theme customization**: Alternative themes available include `bootstrap5.css`, `fluent.css`, `tailwind.css`, and others. All theme files maintain consistent path structure with only the filename varying.
-
-Import the stylesheet in the **main.jsx** or **index.jsx** application entry point:
+Import the **App.css** in the application entry point(**App.jsx**).
 
 ```js
-import './styles.css';
+import "./App.css";
+...
+...
+
 ```
+### Step 3: Create React Grid component with WebMethodAdaptor
 
-### Basic Grid component implementation
+Grid integration with server‑side Web Methods is enabled through the `WebMethodAdaptor`, which acts as a bridge between the Syncfusion `DataManager` and Web Forms based endpoints such as ASMX services and Page Methods. It automatically converts Grid actions such as paging, sorting, filtering, searching, and grouping into structured `POST` requests that the server can process. 
 
-Navigate to the **src** folder and open **App.jsx**, then set up the React Grid component and integrate it with the OData service.
-
-Import `DataManager` and `WebMethodAdaptor` from @syncfusion/ej2-data. Create a `DataManager` instance by specifying the API endpoint URL (`https://localhost:xxxx/api/Grid`) using the `url` property and setting the adaptor to `WebMethodAdaptor`.
+By delegating these operations to the server rather than executing them in the browser, the Grid ensures that only the required data is retrieved for each request.
 
 {% tabs %}
-{% highlight ts tabtitle="App.tsx" %}
+{% highlight ts tabtitle="App.jsx" %}
 import { DataManager, WebMethodAdaptor } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 
@@ -83,49 +90,154 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-**DataManager configuration:**
-- `url`: Specifies WebMethod service endpoint URL.
-- `adaptor: new WebMethodAdaptor()`: Configures the `DataManager` to communicate using the WebMethod protocol.
-- `crossDomain: true`: Enables cross-origin requests.
+**Note:** The Grid sends a `DataManagerRequest` via POST to a Web Method, and the server returns JSON in the format { result: [...], count: N } for proper data binding and paging.
 
-### Application execution and verification
+## Server-side data operations
 
-**Starting the application:** Start the application by pressing **F5** in Visual Studio, which opens it in the browser, and the Grid should load all "45" orders from the OData service.
+React Grid optimizes large datasets by relying on server‑side data operations such as filtering, sorting, and paging rather than processing everything in the browser. The `Syncfusion.EJ2.AspNet.Core` package supports this approach by providing built‑in methods that efficiently handle these operations on the server, ensuring smooth performance even with heavy data loads.
 
-**Connection verification:** Use the browser **Developer Tools (F12)** and check the **Network** tab after refreshing the page to confirm a request to `https://localhost:xxxx/api/grid` and verify that its response contains JSON data.
+### Server-side operation methods
 
-> **Notes**: CORS configuration is included in the **Complete Program.cs Implementation** section during server setup. Refer to that section for detailed CORS implementation and security considerations for production environments.
+The `Syncfusion.EJ2.Base` namespace provides these methods:
 
-![WebMethodAdaptor](../images/adaptor.gif)
+| Operation | Method(s) | Purpose | Use Case |
+|-----------|-----------|---------|----------|
+| **Paging** | `PerformSkip`, `PerformTake` | Load specific page of data | Show 10 records at a time from 100K records |
+| **Filtering** | `PerformFiltering` | Apply filter conditions | Show only orders from "Germany" |
+| **Searching** | `PerformSearching` | Search across columns | Find all records containing "ALFKI" |
+| **Sorting** | `PerformSorting` | Sort by one/multiple columns | Order by CustomerID ascending |
+| **Grouping** | `PerformGrouping` | Group data with aggregates | Group by ShipCountry with totals |
 
-## Performing data operations
+Add the following package import to enable server‑side `DataManager` operations:
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component provides built-in support for handling various data operations such as searching, sorting, filtering, aggregate and paging on the server-side. These operations can be handled using following methods available in the `Syncfusion.EJ2.AspNet.Core` package.
+```csharp
+[GridController.cs]
 
-| Method Name       | Usage (Short Description) |
-|-------------------|----------------------------|
-| [PerformSearching](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Base.QueryableOperation.html#Syncfusion_EJ2_Base_QueryableOperation_PerformSearching__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_EJ2_Base_SearchFilter__)  | Applies search filters to the IQueryable data based on search keywords. |
-| [PerformFiltering]((https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Base.QueryableOperation.html#Syncfusion_EJ2_Base_QueryableOperation_PerformFiltering__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_EJ2_Base_WhereFilter__System_String_))  | Filters data using complex where conditions or column-based filters. |
-| [PerformSorting]((https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Base.QueryableOperation.html#Syncfusion_EJ2_Base_QueryableOperation_PerformSorting__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_EJ2_Base_Sort__))   | Sorts the IQueryable data by one or more fields in ascending or descending order. |
-| [PerformTake]((https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Base.QueryableOperation.html#Syncfusion_EJ2_Base_QueryableOperation_PerformTake__1_System_Linq_IQueryable___0__System_Int32_))      | Takes the specified number of records (used for paging). |
-| [PerformSkip]((https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Base.QueryableOperation.html#Syncfusion_EJ2_Base_QueryableOperation_PerformSkip__1_System_Linq_IQueryable___0__System_Int32_))       | Skips the specified number of records from the start (used for paging). |
+using Syncfusion.EJ2.Base; // DataManagerRequest, QueryableOperation, DataOperations
+using Microsoft.AspNetCore.Mvc;
+using WebMethodAdaptorDemo.Server.Models;
 
-In an API service project, add `Syncfusion.EJ2.AspNet.Core` by opening the NuGet package manager in Visual Studio (**Tools → NuGet Package Manager → Manage NuGet Packages for Solution**), search and install it.
-To access [DataManagerRequest](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Base.DataManagerRequest.html) and [QueryableOperation](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Base.QueryableOperation.html), import `Syncfusion.EJ2.Base` in **GridController.cs** file.
+namespace WebMethodAdaptorDemo.Controllers
+{
+  .  .  .
+  .  .  .
+}
+```
 
-In the WebMethodAdaptor configuration, the properties of the DataManager object are encapsulated within an object named **value**. To access the DataManager properties, a dedicated class is created, representing the **value** object.
+> **Note:** It must have `Syncfusion.EJ2.AspNet.Core` NuGet package installed (covered in [WebMethod backend setup documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors)).
 
-    ```cs
+
+In the `WebMethodAdaptor` configuration, the `DataManager` request payload is wrapped inside a value object. To properly access the `DataManagerRequest` on the server, a dedicated class is defined to represent this value wrapper. This ensures that the server can deserialize the incoming request and retrieve the `DataManagerRequest` details correctly.
+
+```cs
+[GridController.cs]
+
+using Syncfusion.EJ2.Base; // DataManagerRequest, QueryableOperation, DataOperations
+using Microsoft.AspNetCore.Mvc;
+using WebMethodAdaptorDemo.Server.Models;
+
+namespace WebMethodAdaptorDemo.Controllers
+{
     // Model for handling data manager requests
     public class DataManager
     {
         public required DataManagerRequest Value { get; set; }
     }
-    ```
+}
+```
+
+### Paging
+
+The paging feature is enabled by setting the `allowPaging` property to `true` and injecting the `Page` module from `@syncfusion/ej2-react-grids` into the grid.
+
+```ts
+  <GridComponent dataSource={data} allowPaging={true}>
+    . . .
+    . . .
+    . . .
+    <Inject services={[Page]}/>
+  </GridComponent>
+```
+
+After enabling paging on the client side, the server processes the incoming page requests using the `PerformSkip` and `PerformTake` methods. These methods, provided by the `QueryableOperation` class, apply paging based on the values received in the `DataManagerRequest`. 
+
+{% tabs %}
+{% highlight cs tabtitle="GridController.cs" %}
+[HttpPost]
+public object Post([FromBody] DataManager DataManagerRequest)
+{
+    // Retrieve data from the data source (e.g., database)
+    IQueryable<OrdersDetails> DataSource = GetOrderData().AsQueryable();
+
+    // Get the total records count
+    int totalRecordsCount = DataSource.Count();
+
+    QueryableOperation queryableOperation = new QueryableOperation(); // Initialize QueryableOperation instance
+
+    // Retrieve data manager value
+    DataManagerRequest DataManagerParams = DataManagerRequest.Value;
+
+    // Handling paging operation.
+    if (DataManagerParams.Skip != 0)
+    {
+        // Paging
+        DataSource = queryableOperation.PerformSkip(DataSource, DataManagerParams.Skip);
+    }
+    if (DataManagerParams.Take != 0)
+    {
+        DataSource = queryableOperation.PerformTake(DataSource, DataManagerParams.Take);
+    }
+
+    // Return data based on the request
+    return new { result = DataSource, count = totalRecordsCount };
+}
+
+// Model for handling data manager requests
+public class DataManager
+{
+    public required DataManagerRequest Value { get; set; }
+}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+import { DataManager, WebMethodAdaptor } from '@syncfusion/ej2-data';
+import { ColumnDirective, ColumnsDirective, GridComponent, Page, Inject } from '@syncfusion/ej2-react-grids';
+
+function App() {
+    const data = new DataManager({ 
+      url:'https://localhost:xxxx/api/grid', // Here xxxx represents the port number.
+      adaptor: new WebMethodAdaptor()
+    });
+    return <GridComponent dataSource={data} allowPaging={true} height={320}>
+        <ColumnsDirective>
+            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150'textAlign='Right'></ColumnDirective>
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
+            <ColumnDirective field='ShipCity' headerText='Ship City' width='150'/>
+        </ColumnsDirective>
+        <Inject services={[Page]} />
+    </GridComponent>
+};
+export default App;
+{% endhighlight %}
+{% endtabs %}
+
+The following example demonstrates the server’s handling of paging requests sent from the client.
+
+![WebMethodAdaptor paging](../images/web-method-adaptor-paging.png)
 
 ### Filtering
 
-To handle filtering operations, the API endpoint needs to support custom filter criteria. Implement the filtering logic on the server-side using the [PerformFiltering](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Base.QueryableOperation.html#Syncfusion_EJ2_Base_QueryableOperation_PerformFiltering__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_EJ2_Base_WhereFilter__System_String_) method from the [QueryableOperation](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Base.QueryableOperation.html) class. This allows the custom data source to undergo filtering based on the criteria specified in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Base.DataManagerRequest.html) object.
+The filtering feature is enabled by setting the `allowFiltering` property to `true` and injecting the `Filter` module from `@syncfusion/ej2-react-grids` into the grid.
+
+```ts
+  <GridComponent dataSource={data} allowFiltering={true}>
+    . . .
+    . . .
+    . . .
+    <Inject services={[Filter]}/>
+  </GridComponent>
+```
+
+After enabling filtering on the client side, the server processes incoming filter requests using the `PerformFiltering` method. This method, provided by the `QueryableOperation` class, applies filtering based on the conditions received in the `DataManagerRequest`.
 
 **Single column filtering**
 
@@ -178,7 +290,7 @@ import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Filter } from
 
 function App() {
     const data = new DataManager({ 
-      url:'https://localhost:xxxx/api/Grid', // Here xxxx represents the port number.
+      url:'https://localhost:xxxx/api/grid', // Here xxxx represents the port number.
       adaptor: new WebMethodAdaptor()
     });
     return <GridComponent dataSource={data} allowFiltering={true}>
@@ -196,9 +308,18 @@ export default App;
 
 ### Searching
 
-To handle filtering operations, the API endpoint needs to support custom search criteria. Implement the searching logic on the server-side using the [PerformSearching](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Base.QueryableOperation.html#Syncfusion_EJ2_Base_QueryableOperation_PerformSearching__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_EJ2_Base_SearchFilter__) method from the [QueryableOperation](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Base.QueryableOperation.html) class. This allows the custom data source to undergo searching based on the criteria specified in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Base.DataManagerRequest.html) object
+The searching feature is enabled by configuring the `toolbar` property with `Search` item and injecting the `Toolbar` and `Search` modules from `@syncfusion/ej2-react-grids` into the grid.
 
-![WebMethodAdaptor searching](../images/web-method-adaptor-searching.png)
+```ts
+  <GridComponent dataSource={data} toolbar={['Search']}>
+    . . .
+    . . .
+    . . .
+    <Inject services={[Search,Toolbar]}/>
+  </GridComponent>
+```
+
+After enabling the search feature on the client side, the server processes incoming search requests using the `PerformSearching` method. This method, provided by the `QueryableOperation` class, applies search criteria based on the values received in the `DataManagerRequest`. 
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -237,7 +358,7 @@ import { ColumnDirective, ColumnsDirective, GridComponent, Toolbar, ToolbarItems
 
 function App() {
     const data = new DataManager({ 
-      url:'https://localhost:xxxx/api/Grid', // Here xxxx represents the port number.
+      url:'https://localhost:xxxx/api/grid', // Here xxxx represents the port number.
       adaptor: new WebMethodAdaptor()
     });
     const toolbar: ToolbarItems[] = ['Search'];
@@ -254,17 +375,22 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
+![WebMethodAdaptor searching](../images/web-method-adaptor-searching.png)
+
 ### Sorting
 
-To handle sorting operations, the API endpoint needs to support custom sorting criteria. Implement the sorting logic on the server-side using the [PerformSorting](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Base.QueryableOperation.html#Syncfusion_EJ2_Base_QueryableOperation_PerformSorting__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_EJ2_Base_Sort__) method from the [QueryableOperation](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Base.QueryableOperation.html) class. This allows the custom data source to undergo sorting based on the criteria specified in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Base.DataManagerRequest.html) object.
+The sorting feature is enabled by setting the `allowSorting` property to `true` and injecting the `Sort` module from `@syncfusion/ej2-react-grids` into the grid.
 
-**Single column sorting**
+```ts
+  <GridComponent dataSource={data} allowSorting={true}>
+    . . .
+    . . .
+    . . .
+    <Inject services={[Sort]}/>
+  </GridComponent>
+```
 
-![Single column sorting](../images/web-method-adaptor-sorting.png)
-
-**Multi column sorting**
-
-![Multi column sorting](../images/web-method-adaptor-multi-sorting.png)
+After enabling sorting on the client side, the server processes incoming sort requests using the `PerformSorting` method. This method, provided by the `QueryableOperation` class, applies the sorting rules received in the `DataManagerRequest`.  
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -320,75 +446,20 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
+**Single column sorting**
+
+![Single column sorting](../images/web-method-adaptor-sorting.png)
+
+**Multi column sorting**
+
+![Multi column sorting](../images/web-method-adaptor-multi-sorting.png)
+
 **Sort indicator legend:**
-- ↑ (Up arrow): Indicates ascending sort direction
-- ↓ (Down arrow): Indicates descending sort direction
-- Numeric indicator (1, 2, 3): Displays sort priority in multi-column sorting scenarios
+- ↑ (Up arrow): Indicates ascending sort direction.
+- ↓ (Down arrow): Indicates descending sort direction.
+- Numeric indicator (1, 2, 3): Displays sort priority in multi-column sorting scenarios.
 
-### Paging
-
-To handle paging operations, the API endpoint needs to support custom paging criteria. Implement the paging logic on the server-side using the [PerformTake](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Base.QueryableOperation.html#Syncfusion_EJ2_Base_QueryableOperation_PerformTake__1_System_Linq_IQueryable___0__System_Int32_) and [PerformSkip](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Base.QueryableOperation.html#Syncfusion_EJ2_Base_QueryableOperation_PerformSkip__1_System_Linq_IQueryable___0__System_Int32_) method from the [QueryableOperation](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Base.QueryableOperation.html) class. This allows the custom data source to undergo paging based on the criteria specified in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Base.DataManagerRequest.html) object.
-
-![WebMethodAdaptor paging](../images/web-method-adaptor-paging.png)
-
-{% tabs %}
-{% highlight cs tabtitle="GridController.cs" %}
-[HttpPost]
-public object Post([FromBody] DataManager DataManagerRequest)
-{
-    // Retrieve data from the data source (e.g., database)
-    IQueryable<OrdersDetails> DataSource = GetOrderData().AsQueryable();
-
-    // Get the total records count
-    int totalRecordsCount = DataSource.Count();
-
-    QueryableOperation queryableOperation = new QueryableOperation(); // Initialize QueryableOperation instance
-
-    // Retrieve data manager value
-    DataManagerRequest DataManagerParams = DataManagerRequest.Value;
-
-    // Handling paging operation.
-    if (DataManagerParams.Skip != 0)
-    {
-        // Paging
-        DataSource = queryableOperation.PerformSkip(DataSource, DataManagerParams.Skip);
-    }
-    if (DataManagerParams.Take != 0)
-    {
-        DataSource = queryableOperation.PerformTake(DataSource, DataManagerParams.Take);
-    }
-
-    // Return data based on the request
-    return new { result = DataSource, count = totalRecordsCount };
-}
-
-// Model for handling data manager requests
-public class DataManager
-{
-    public required DataManagerRequest Value { get; set; }
-}
-{% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-import { DataManager, WebMethodAdaptor } from '@syncfusion/ej2-data';
-import { ColumnDirective, ColumnsDirective, GridComponent, Page, Inject } from '@syncfusion/ej2-react-grids';
-
-function App() {
-    const data = new DataManager({ 
-      url:'https://localhost:xxxx/odata/Orders', // Here xxxx represents the port number.
-      adaptor: new WebMethodAdaptor()
-    });
-    return <GridComponent dataSource={data} allowPaging={true} height={320}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150'textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='ShipCity' headerText='Ship City' width='150'/>
-        </ColumnsDirective>
-        <Inject services={[Page]} />
-    </GridComponent>
-};
-export default App;
-{% endhighlight %}
-{% endtabs %}
+The Grid has now been successfully created with including paging, sorting, filtering. the next step is to enabling CRUD operations.
 
 ## CRUD operations
 
@@ -437,6 +508,8 @@ export default App;
 
 > Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) for the Grid component. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property is set to `true` for a specific Grid column, ensuring that its value is unique.
 The below class is used to structure data sent during CRUD operations.
+
+The following class on the server side defines the structure of data exchanged during CRUD operations:
 
 ```cs
 public class CRUDModel<T> where T : class
@@ -548,7 +621,9 @@ Using the `crudUrl` property, the controller action mapping URL can be specified
 
 The following code example describes the above behavior.
 
-```ts
+```js
+[src/app.jsx]
+
 import { DataManager, WebMethodAdaptor } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems, EditSettingsModel, Toolbar, Edit, Inject } from '@syncfusion/ej2-react-grids';
 
@@ -574,6 +649,7 @@ export default App;
 ```
 
 ```cs
+[Controller/GridController.cs]
 
 [HttpPost]
 [Route("api/[controller]/CrudUpdate")]
@@ -603,7 +679,7 @@ public void CrudUpdate([FromBody] CRUDModel<OrdersDetails> request)
 
 **Batch operation**
 
-To perform batch operation, define the edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) as **Batch** and specify the `batchUrl` property in the DataManager. Use the **Add** toolbar button to insert new row in batch editing mode. To edit a cell, double-click the desired cell and update the value as required. To delete a record, simply select the record and press the **Delete** toolbar button. Now, all CRUD operations will be executed in single request. Clicking the **Update** toolbar button will update the newly added, edited, or deleted records from the OrdersDetails table using a single API POST request.
+To perform batch operation, define the edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) as `Batch` and specify the `batchUrl` property in the DataManager. Use the `Add` toolbar button to insert new row in batch editing mode. To edit a cell, double-click the desired cell and update the value as required. To delete a record, simply select the record and press the `Delete` toolbar button. Now, all CRUD operations will be executed in single request. Clicking the `Update` toolbar button will update the newly added, edited, or deleted records from the OrdersDetails table using a single API POST request.
 
 ```ts
 [App.tsx]
@@ -671,3 +747,22 @@ if (batchOperation.deleted != null)
 }
 ```
 ![WebMethodAdaptor Batch Editing](../images/url-adaptor-batch-editing.gif)
+
+## Run the application
+
+Run the application in Visual Studio, accessible on a URL like **https://localhost:xxxx**. Verify the API returns order data at **https://localhost:xxxx/api/grid**, where **xxxx** is the port. Grid displays order data fetched from the backend API:
+
+![WebMethodAdaptor](../images/adaptor.gif)
+
+## Troubleshooting
+
+| Issue               | Resolution                                                                                     |
+|---------------------|-------------------------------------------------------------------------------------------------|
+| **Empty Grid**      | Check the browser console for errors and verify that the API URL is correct.                   |
+| **CORS Error**      | Ensure the backend has proper CORS configuration in **Program.cs**.                             |
+| **Network Error**   | Confirm the backend service is running and accessible.                                          |
+| **Wrong Data Format** | API responses must return JSON in the format `{ result: [...], count: number }`.              |
+
+## Complete sample repository
+
+For the complete working implementation of this example, refer to the GitHub repository.
