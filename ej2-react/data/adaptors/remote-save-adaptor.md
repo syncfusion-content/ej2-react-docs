@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hybrid Data Binding in Syncfusion React Components with Client‑Side Operations and Server‑Side CRUD
+# Hybrid Data Binding in Syncfusion React with Client and Server Operations
 
 The `RemoteSaveAdaptor` provides a hybrid approach to data management that combines the best of both client-side and server-side processing. It loads all data once from the server, then performs filtering, sorting, and paging , searching, grouping operations locally in the browser without additional server requests. Only CRUD operations (Create, Update, Delete) communicate with the server to persist data changes.
 
@@ -445,3 +445,14 @@ After running the application, verify that the server-side API controller is suc
 To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React component with the `RemoteSaveAdaptor`, refer to the documentation below:
 
 - [Grid](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/remote-save-adaptor)
+
+## See also
+
+- [Customize data handling](./custom-adaptor) 
+- [Connect to custom REST APIs](./url-adaptor)
+- [Bind local JSON data](./json-adaptor)
+- [Connect to GraphQL services](./graphql-adaptor)
+- [Connect to OData v4 services](./odatav4-adaptor)
+- [Connect to Web Method services](./web-method-adaptor)
+- [Connect to ASP.NET Web API](./webapi-adaptor)
+- [Adding custom headers](../how-to/adding-custom-headers)

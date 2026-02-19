@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# ODataV4 in Syncfusion React Grid Component
+# OData Remote Data Binding in Syncfusion React Components
 
 The `ODataV4Adaptor` in the Syncfusion<sup style="font-size:70%">&reg;</sup> React DataManager enables seamless integration between the React Grid and OData V4 services by handling OData‑formatted request and response processing. It automatically converts Grid actions such as filtering, sorting, paging, grouping, and CRUD into OData V4 compliant query options (like `$filter`, `$orderby`, `$top`, `$skip`) and sends them to the server. The adaptor also parses the structured OData V4 JSON response, extracting the result set and count values, ensuring smooth remote data binding without custom query or response logic.
 
@@ -690,3 +690,11 @@ Run the application in Visual Studio, accessible on a URL like **https://localho
 ## Complete sample repository
 
 For the complete working implementation of this example, refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-adaptors/OdataV4Adaptor) repository.
+
+## See also
+- [Using Remote Data Binding in ASP.NET Web APIs](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/webapi-adaptor)
+- [Connect to custom REST APIs](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/url-adaptor)
+- [Hybrid data binding](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/remote-save-adaptor)
+- [RESTful CRUD Operations in ASP.NET WebForms](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/web-method-adaptor)
+- [Custom Remote Binding](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/custom-adaptor)
+- [GraphQL Integration for Syncfusion React Grids](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/graphql-adaptor)

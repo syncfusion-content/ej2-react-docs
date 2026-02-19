@@ -2,6 +2,7 @@ import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej
 import { ChipListComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
 import { employeeData } from './datasource';
+
 function App() {
     const imageTemplateOptions = { enableAriaLabel: true };
     const nameTemplateOptions = { enableAriaLabel: false };
@@ -26,6 +27,5 @@ function App() {
             <ColumnDirective field='City' headerText='City' width='120'/>
         </ColumnsDirective>
     </GridComponent>;
-}
-;
+};
 export default App;

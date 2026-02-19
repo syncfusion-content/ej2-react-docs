@@ -22,7 +22,7 @@ function App() {
     }
   })
   return (<div>
-    <GridComponent id="Grid" ref={g => grid = g} dataSource={sampleGridData} height={268} allowRowDragAndDrop={true} rowDrop={onRowDrop} editSettings={gridEditSettings} selectionSettings={selectionOptions} rowDropSettings={rowDropOptions}>
+    <GridComponent id="Grid" ref={g => grid = g} dataSource={sampleGridData} height={150} allowRowDragAndDrop={true} rowDrop={onRowDrop} editSettings={gridEditSettings} selectionSettings={selectionOptions} rowDropSettings={rowDropOptions}>
       <ColumnsDirective>
         <ColumnDirective field='taskID' isPrimaryKey={true} headerText='Task ID' width='140' textAlign='Right' />
         <ColumnDirective field='taskName' headerText='Task Name' width='140' />
@@ -32,7 +32,7 @@ function App() {
       </ColumnsDirective>
       <Inject services={[RowDD, Edit]} />
     </GridComponent>
-    <TreeGridComponent id="treeGrid" ref={t => treeGrid = t} childMapping='subtasks' editSettings={treeGridEditSettings}>
+    <TreeGridComponent id="treeGrid" ref={t => treeGrid = t} childMapping='subtasks' height={150} editSettings={treeGridEditSettings}>
       <ColumnsDirective>
         <ColumnDirective field='taskID' isPrimaryKey={true} headerText='Task ID' width='140' textAlign='Right' />
         <ColumnDirective field='taskName' headerText='Task Name' width='140' />

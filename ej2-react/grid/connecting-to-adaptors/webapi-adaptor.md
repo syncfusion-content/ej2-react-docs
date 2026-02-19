@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# WebApiAdaptor in Syncfusion React Grid 
+# ASP.NET Web API Remote Data Binding in Syncfusion React Components
 
 The `WebApiAdaptor` integrates the React Grid with Web API endpoints that support OData‑style querying. It is derived from the `ODataAdaptor`, meaning the target Web API must accept OData‑formatted query parameters for operations such as filtering, sorting, paging, and searching. When the React Grid performs any data action, the `WebApiAdaptor` generates OData‑compliant query strings, sends them to the Web API endpoint, and processes the returned JSON to populate the Grid. This ensures seamless remote data binding with OData-capable Web API services.
 
@@ -743,3 +743,10 @@ Run the application in Visual Studio, accessible on a URL like **https://localho
 
 For the complete working implementation of this example, refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-adaptors/WebApiAdaptor) repository.
 
+## See also
+- [Custom Remote Binding](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/custom-adaptor)
+- [Connect to custom REST APIs](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/url-adaptor)
+- [Hybrid data binding](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/remote-save-adaptor)
+- [RESTful CRUD Operations in ASP.NET WebForms](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/web-method-adaptor)
+- [Connect to OdataV4 services](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/odatav4-adaptor)
+- [GraphQL Integration for Syncfusion React Grids](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/graphql-adaptor)

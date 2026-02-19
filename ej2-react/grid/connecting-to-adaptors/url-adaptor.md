@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Remote data binding with custom REST API using UrlAdaptor
+# Custom REST API Remote Data Binding in Syncfusion React Components
 
 The `UrlAdaptor` in the Syncfusion<sup style="font-size:70%">&reg;</sup> React DataManager streamlines connecting the React Grid to REST API endpoints by managing request and response handling for remote data operations. It automatically converts Grid actions such as filtering, sorting, paging, and CRUD into HTTP POST requests and processes the server’s JSON response, enabling smooth remote data binding without custom request logic.
 
@@ -1016,3 +1016,11 @@ Run the application in Visual Studio, accessible on a URL like **https://localho
 ## Complete sample repository
 
 For a complete working implementation of this example, refer to the following [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-adaptors/UrlAdaptor) repository.
+
+## See also
+- [Using Remote Data Binding in ASP.NET Web APIs](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/webapi-adaptor)
+- [Custom Remote Binding](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/custom-adaptor)
+- [Hybrid data binding](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/remote-save-adaptor)
+- [RESTful CRUD Operations in ASP.NET WebForms](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/web-method-adaptor)
+- [Connect to OdataV4 services](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/odatav4-adaptor)
+- [GraphQL Integration for Syncfusion React Grids](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/graphql-adaptor)

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# WebMethodAdaptor in Syncfusion React Grid Component
+# Remote Data Binding with Custom REST API using WebMethod
 
 The `WebMethodAdaptor` in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid facilitates data binding from remote services using web methods. This powerful feature enables efficient communication between the client-side application and the server. The `WebMethodAdaptor`, like the `URLAdaptor`, sends query parameters encapsulated within an object named `value`. Within this `value` object, various datamanager properties such as `requiresCounts`, `skip`, `take`, `sorted`, and `where` queries are included.
  
@@ -778,3 +778,11 @@ Run the application in Visual Studio, accessible on a URL like **https://localho
 ## Complete sample repository
 
 For the complete working implementation of this example, refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-adaptors/WebMethodAdaptor) repository.
+
+## See also
+- [Using Remote Data Binding in ASP.NET Web APIs](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/webapi-adaptor)
+- [Connect to custom REST APIs](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/url-adaptor)
+- [Hybrid data binding](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/remote-save-adaptor)
+- [Custom Remote Binding](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/custom-adaptor)
+- [Connect to OdataV4 services](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/odatav4-adaptor)
+- [GraphQL Integration for Syncfusion React Grids](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/graphql-adaptor)

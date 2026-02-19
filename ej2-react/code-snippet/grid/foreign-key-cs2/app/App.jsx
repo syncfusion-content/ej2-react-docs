@@ -5,6 +5,7 @@ import { ColumnDirective, ColumnsDirective, GridComponent, Inject } from '@syncf
 import { Filter, ForeignKey } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data, employeeData } from './datasource';
+
 function App() {
     let dropInstance;
     const filterOption = { type: 'Menu' };
@@ -38,6 +39,5 @@ function App() {
     </ColumnsDirective>
     <Inject services={[ForeignKey, Filter]}/>
   </GridComponent>;
-}
-;
+};
 export default App;

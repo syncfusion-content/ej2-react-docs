@@ -329,3 +329,14 @@ When using the `WebApiAdaptor`, every backend API endpoint must return data in a
 To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React component with the `WebApiAdaptor`, refer to the documentation below:
 
 - [Grid](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/webapi-adaptor)
+
+## See also
+
+- [Customize data handling](./custom-adaptor) 
+- [Connect to custom REST APIs](./url-adaptor)
+- [Bind local JSON data](./json-adaptor)
+- [Connect to GraphQL services](./graphql-adaptor)
+- [Connect to OData v4 services](./odatav4-adaptor)
+- [Hybrid data binding](./remote-save-adaptor)
+- [Connect to Web Method services](./web-method-adaptor)
+- [Adding custom headers](../how-to/adding-custom-headers)

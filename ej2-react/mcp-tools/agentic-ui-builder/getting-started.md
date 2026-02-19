@@ -10,13 +10,11 @@ domainurl: ##DomainURL##
 
 # Getting Started with Agentic UI Builder
 
-Build professional React applications faster with AI-powered assistance. The Syncfusion React UI Builder uses natural language to help you create complete user interfaces with Syncfusion components—no need to memorize complex APIs or search through documentation.
-
-This guide will help you install and start using the UI Builder in your development workflow.
+The **Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Builder** uses AI to help you build React applications with natural language commands. Simply describe what you want to create, and it generates complete UI implementations with Syncfusion components.
 
 ## Installation
 
-Follow the [Installation Guide](../installation) to set up the AI Tools in your development environment.
+Follow the [Installation Guide](../installation) to set up the MCP Tools in your development environment.
 
 ## Usage
 
@@ -34,31 +32,50 @@ The UI Builder generates complete implementations including layout, components, 
 
 For targeted assistance, you can call individual tools directly using their specific tool names. This is useful when you need specialized help from a particular tool.
 
-| Tool Handle | Purpose | Example Query |
-|--------------|---------|---------------|
-| `#sf_react_layout` | Provides UI block patterns and layout structures from the catalog. Generates up to 3 relevant code snippets based on your layout requirements. Use this tool when you need page structures, responsive layouts, or pre-built UI patterns. | #sf_react_layout Create a responsive card layout for product listings. |
-| `#sf_react_component` | Answers questions and provides metadata about Syncfusion React components. Delivers component APIs, props, methods, and configuration options. Use this tool when you need to implement or configure specific components like DataGrid, Scheduler, Charts, etc. | #sf_react_component How do I implement data binding with Syncfusion React Scheduler? |
-| `#sf_react_style` | Generates theme configurations, icons and styling guidance for your application. Provides Syncfusion theme customization using third-party CSS frameworks: Tailwind CSS utilities (Tailwind 3, Fluent 2, Material 3 themes) or Bootstrap CSS utilities (Bootstrap 5.3 theme). Use this tool when you need to apply themes, customize colors, or modify the visual design of components, or integrate icons into your UI. | #sf_react_style How do I apply the Syncfusion Tailwind 3 dark theme and add a communication icon inside a button? |
+### Layout Tool (`#sf_react_layout`)
 
-## Custom Design
+Provides a catalog of pre-built, responsive UI layout templates and blocks for common page sections and design patterns.
 
-When writing your query, simply add `skip the layout` to take full control over your custom design in your project. Adding this instruction tells the AI to bypass the Layout Tool and avoid using any pre‑built layout patterns. As a result, the system produces only Syncfusion component implementations, allowing you complete freedom to design and structure the page exactly the way you want.
+**When to use:** Page structures, responsive layouts, or pre-built UI patterns.
 
+**Example:**
 ```
-#sf_react_ui_builder Create a dashboard with sales revenue attached to the custom design image. Skip the layout.
+#sf_react_layout Create a responsive card layout for product listings.
+```
+
+### Component Tool (`#sf_react_component`)
+
+Provides quick reference guidelines for Syncfusion React components, including properties, event handlers, methods, and usage examples.
+
+**When to use:** To get basic component API information and structure details for implementing specific components correctly.
+
+**Example:**
+```
+#sf_react_component How do I integrate a data table?
+```
+
+### Style Tool (`#sf_react_style`)
+
+Provides theme configuration, styling setup, and icon integration for Syncfusion React components. Supports multiple themes (Tailwind3 CSS, Bootstrap 5.3, Material 3, Fluent 2), light/dark mode implementation, and icon patterns for consistent UI styling.
+
+**When to use:** To apply themes, customize colors, modify the visual design of components, or integrate icons into your UI.
+
+**Example:**
+```
+#sf_react_style How do I apply the Syncfusion Tailwind 3 dark theme and add a communication icon inside a button?
 ```
 
 ## Best Practices
 
 To maximize the effectiveness of the Agentic UI Builder and achieve optimal results:
 
-- **Minimize Active Tools:** Limit the number of active MCP tools in your IDE to prevent tool-selection ambiguity and improve response accuracy.
-- **Start Simple:** Begin with straightforward prompts and progressively add complexity as needed.
-- **Be Specific:** Provide clear, specific descriptions of your layout requirements, component behavior, and design preferences.
-- **Reference Patterns:** Mention existing design systems, component libraries, or specific patterns you want to replicate.
-- **Stay Consistent:** Maintain consistent file organization, naming conventions, and coding standards throughout your React project.
-- **Generate One Block at a Time:** For better control and precision—break down complex layouts into individual sections rather than requesting multiple blocks simultaneously.
-- **Use Advanced AI Models:** For best results, use **Claude Sonnet 4.5 or higher** models. Other compatible models include **GPT-5 and Gemini 3 Pro**. Higher-capability models produce better code quality and more accurate component implementations.
+- **Minimize active tools:** Limit the number of active MCP tools in your IDE to prevent tool-selection ambiguity and improve response accuracy.
+- **Start simple:** Begin with straightforward prompts and progressively add complexity as needed.
+- **Be specific:** Provide clear, specific descriptions of your layout requirements, component behavior, and design preferences.
+- **Reference patterns:** Mention existing design systems, component libraries, or specific patterns you want to replicate.
+- **Stay consistent:** Maintain consistent file organization, naming conventions, and coding standards throughout your React project.
+- **Work incrementally:** For better control and precision—break down complex layouts into individual sections rather than requesting multiple blocks simultaneously.
+- **Use advanced AI models:** For best results, use **Claude Sonnet 4.5 or higher** models. Other compatible models include **GPT-5 and Gemini 3 Pro**. Higher-capability models produce better code quality and more accurate component implementations.
 
 > Always review AI-generated code before using it in production.
 
@@ -69,8 +86,3 @@ Now that you've set up the Agentic UI Builder, explore these resources:
 * **[Prompt Library](./prompt-library)** - Ready-to-use prompts for common scenarios
 * **[Showcase Sample Projects](https://www.syncfusion.com/showcase-apps/react)** - Full application examples
 * **[Component Examples](https://ej2.syncfusion.com/react/demos/#/tailwind3/grid/overview)** - Interactive demos of all Syncfusion React components
-
-## See also
-
-* [Prompt Library](./prompt-library)
-* [Syncfusion<sup style="font-size:70%">&reg;</sup> React Documentation](https://ej2.syncfusion.com/react/documentation)

@@ -60,3 +60,14 @@ Use `JsonAdaptor` when the application:
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/data/get-started-cs1" %}
+
+## See also
+
+- [Customize data handling](./custom-adaptor) 
+- [Connect to custom REST APIs](./url-adaptor)
+- [Connect to GraphQL services](./graphql-adaptor)
+- [Connect to OData v4 services](./odatav4-adaptor)
+- [Hybrid data binding](./remote-save-adaptor)
+- [Connect to Web Method services](./web-method-adaptor)
+- [Connect to ASP.NET Web API](./webapi-adaptor)
+- [Adding custom headers](../how-to/adding-custom-headers)

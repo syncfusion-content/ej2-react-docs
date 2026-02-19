@@ -1,5 +1,3 @@
-
-
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { employeeData } from './datasource';
@@ -21,8 +19,5 @@ function App() {
             <ColumnDirective field='ReportsTo' headerText='Reports To' width='120' textAlign='Right' />
         </ColumnsDirective>
     </GridComponent>
-
 };
 export default App;
-
-

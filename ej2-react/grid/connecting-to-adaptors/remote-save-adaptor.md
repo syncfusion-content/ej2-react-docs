@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# RemoteSaveAdaptor in Syncfusion React Grid
+# Hybrid Data Binding in Syncfusion React Grid
 
 The `RemoteSaveAdaptor` in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a hybrid approach to data management that combines the best of both client-side and server-side processing. The adaptor fetches the complete dataset from the server once, and then executes operations such as filtering, sorting, paging, searching, and grouping locally in the browser without additional server requests. Only CRUD operations (Create, Update, Delete) communicate with the server to persist data changes. It reduces server load and network latency while keeping data persistence secure.
 
@@ -387,3 +387,11 @@ namespace RemoteSaveAdaptorDemo.Controllers
 ## Complete sample repository
 
 A complete, working sample implementation is available in the [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-adaptors/RemoteSaveAdaptor) repository.
+
+## See also
+- [Using Remote Data Binding in ASP.NET Web APIs](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/webapi-adaptor)
+- [Connect to custom REST APIs](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/url-adaptor)
+- [Custom Remote Binding](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/custom-adaptor)
+- [RESTful CRUD Operations in ASP.NET WebForms](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/web-method-adaptor)
+- [Connect to OdataV4 services](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/odatav4-adaptor)
+- [GraphQL Integration for Syncfusion React Grids](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/graphql-adaptor)

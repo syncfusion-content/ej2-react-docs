@@ -37,6 +37,7 @@ System.config({
         "@syncfusion/ej2-notifications":"syncfusion:ej2-notifications/dist/ej2-notifications.umd.min.js",
         "@syncfusion/ej2-splitbuttons": "syncfusion:ej2-splitbuttons/dist/ej2-splitbuttons.umd.min.js",
         "@syncfusion/ej2-richtexteditor": "syncfusion:ej2-richtexteditor/dist/ej2-richtexteditor.umd.min.js",
+        "@syncfusion/ej2-markdown-converter": "syncfusion:ej2-markdown-converter/dist/ej2-markdown-converter.umd.min.js",
         "@syncfusion/ej2-filemanager": "syncfusion:ej2-filemanager/dist/ej2-filemanager.umd.min.js",
         "@syncfusion/ej2-layouts": "syncfusion:ej2-layouts/dist/ej2-layouts.umd.min.js",
         "@syncfusion/ej2-interactive-chat": "syncfusion:ej2-interactive-chat/dist/ej2-interactive-chat.umd.min.js",

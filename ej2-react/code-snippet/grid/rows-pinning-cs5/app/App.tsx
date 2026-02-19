@@ -1,4 +1,4 @@
-import { GridComponent, ColumnsDirective, ColumnDirective, Inject, Filter, Sort, Page, Edit, ToolbarItems, EditSettingsModel, Toolbar} from '@syncfusion/ej2-react-grids';
+import { GridComponent, ColumnsDirective, ColumnDirective, Inject, Filter, Sort, Page, Edit, Toolbar, ToolbarItems, EditSettingsModel } from '@syncfusion/ej2-react-grids';
 import { data } from './datasource';
 import * as React from 'react';
 

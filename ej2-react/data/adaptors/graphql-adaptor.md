@@ -515,3 +515,14 @@ query {
 To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React component with the `GraphQLAdaptor`, refer to the documentation below:
 
 - [Grid](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-backends/graphql-nodejs-server#prerequisites)
+
+## See also
+
+- [Customize data handling](./custom-adaptor) 
+- [Connect to custom REST APIs](./url-adaptor)
+- [Bind local JSON data](./json-adaptor)
+- [Connect to OData v4 services](./odatav4-adaptor)
+- [Hybrid data binding](./remote-save-adaptor)
+- [Connect to Web Method services](./web-method-adaptor)
+- [Connect to ASP.NET Web API](./webapi-adaptor)
+- [Adding custom headers](../how-to/adding-custom-headers)

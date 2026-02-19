@@ -1,11 +1,10 @@
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
+
 function App() {
-  const gridRef = React.useRef(null);
-  const rowDataBound = (args) => { 
-    const gridInstance = gridRef.current;
-    if (!gridInstance) return;
+  let gridInstance;
+  const rowDataBound = (args) => {
     let count = 0;
     let keys = Object.keys(args.data);
     for (let i = 0; i < keys.length; i++) {
@@ -26,7 +25,7 @@ function App() {
     }
   };
 
-  return <GridComponent ref={gridRef} dataSource={data} height={315} rowDataBound={rowDataBound}>
+  return <GridComponent ref={(grid) => (gridInstance = grid)} dataSource={data} height={315} rowDataBound={rowDataBound}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' type="number" textAlign="Right" headerTextAlign="Right" width='120' />
       <ColumnDirective field='CustomerID' type="string" textAlign="Left" headerTextAlign="Left" width='90' />
