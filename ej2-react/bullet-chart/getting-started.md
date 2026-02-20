@@ -117,14 +117,14 @@ The below example shows a basic Bullet Chart.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/bullet-chart/getting-started/initialize-cs1/app/index.jsx %}
+{% include code-snippet/bullet-chart/code-path/getting-started/initialize-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/bullet-chart/getting-started/initialize-cs1/app/index.tsx %}
+{% include code-snippet/bullet-chart/code-path/getting-started/initialize-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/bullet-chart/getting-started/initialize-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/bullet-chart/preview-sample/getting-started/initialize-cs1" %}
 
 ## Module injection
 
@@ -213,14 +213,14 @@ Now assign the local data to `dataSource` property. `value` and `target` values 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/bullet-chart/getting-started/datasource-cs1/app/index.jsx %}
+{% include code-snippet/bullet-chart/code-path/getting-started/datasource-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/bullet-chart/getting-started/datasource-cs1/app/index.tsx %}
+{% include code-snippet/bullet-chart/code-path/getting-started/datasource-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/bullet-chart/getting-started/datasource-cs1" %}
+{% previewsample "page.domainurl/code-snippet/bullet-chart/preview-sample/getting-started/datasource-cs1" %}
 
 ## Add Bullet Chart title
 
@@ -228,14 +228,14 @@ You can add a title using the [`title`](https://ej2.syncfusion.com/react/documen
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/bullet-chart/getting-started/title-cs1/app/index.jsx %}
+{% include code-snippet/bullet-chart/code-path/getting-started/title-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/bullet-chart/getting-started/title-cs1/app/index.tsx %}
+{% include code-snippet/bullet-chart/code-path/getting-started/title-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/bullet-chart/getting-started/title-cs1" %}
+{% previewsample "page.domainurl/code-snippet/bullet-chart/preview-sample/getting-started/title-cs1" %}
 
 ## Ranges
 
@@ -243,14 +243,14 @@ You can add ranges to the Bullet Chart using the `BulletRangeCollectionDirective
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/bullet-chart/getting-started/ranges-cs1/app/index.jsx %}
+{% include code-snippet/bullet-chart/code-path/getting-started/ranges-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/bullet-chart/getting-started/ranges-cs1/app/index.tsx %}
+{% include code-snippet/bullet-chart/code-path/getting-started/ranges-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/bullet-chart/getting-started/ranges-cs1" %}
+{% previewsample "page.domainurl/code-snippet/bullet-chart/preview-sample/getting-started/ranges-cs1" %}
 
 ## Tooltip
 
@@ -258,11 +258,11 @@ You can use tooltip for the Bullet Chart by setting the [`enable`](https://ej2.s
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/bullet-chart/getting-started/tooltip-cs1/app/index.jsx %}
+{% include code-snippet/bullet-chart/code-path/getting-started/tooltip-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/bullet-chart/getting-started/tooltip-cs1/app/index.tsx %}
+{% include code-snippet/bullet-chart/code-path/getting-started/tooltip-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/bullet-chart/getting-started/tooltip-cs1" %}
+{% previewsample "page.domainurl/code-snippet/bullet-chart/preview-sample/getting-started/tooltip-cs1" %}

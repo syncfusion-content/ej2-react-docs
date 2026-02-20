@@ -198,10 +198,10 @@ The following example shows how to use marker drag events to customize the data 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs104/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs104/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs104/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs104/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

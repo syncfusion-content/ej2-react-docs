@@ -2,25 +2,29 @@
 layout: post
 title: Timeout in React Toast component | Syncfusion
 description: Learn here all about Timeout in Syncfusion React Toast component of Syncfusion Essential JS 2 and more.
-control: Timeout 
+control: Toast
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Timeout in React Toast component
+# Toast timeout and dismissal
 
-The [`timeOut`](https://ej2.syncfusion.com/react/documentation/api/toast/#timeout) property helps to change the default value of toast expire time. By default, the set timeOut value will be `5000` milliseconds. React Toast will live till the timeOut reaches without user interaction, the timeOut value will be taken in milliseconds. Once the toast reached a given timeOut it will expire automatically.
+Control how long toasts remain visible before automatic dismissal using timeout properties. The Toast component provides flexible timeout configuration for different notification scenarios and user interactions.
 
-## Visual representation of timeOut
+## Automatic dismissal timeout
 
-The toast component's `expire time` can be visually shown using a [Progress Bar](./config#progress-bar). To show progress bar you must set showProgressbar api as true.
+The [`timeOut`](https://ej2.syncfusion.com/react/documentation/api/toast/#timeout) property specifies how long a toast displays in milliseconds before automatically disappearing. The default timeout is 5000 milliseconds (5 seconds). Once the timeout expires, the toast is automatically removed from the screen.
 
-## How long the toast displayed in page
+> **Accessibility note:** Consider users with vision or motor impairments who may need more time to read and interact with notifications. Provide manual close buttons or longer timeouts for critical information.
 
-The [`extendedTimeOut`](https://ej2.syncfusion.com/react/documentation/api/toast/#extendedtimeout) property is used to decide how long the toast to be displayed after the user hovers on it.
+## Visual timeout indication
 
-> You can destroy toast at any time by clicking on the close button. The close button can be enabled by `showCloseButton` property as true.
+Display a progress bar indicating remaining toast display time using the [Progress Bar](./config#progress-bar) feature. Enable the progress bar by setting `showProgressbar` to `true`. This provides users with clear visual feedback about when the toast will automatically dismiss.
+
+## Extended timeout on hover
+
+The [`extendedTimeOut`](https://ej2.syncfusion.com/react/documentation/api/toast/#extendedtimeout) property extends the display duration when users hover over a toast, giving them additional time to read or interact with content. This prevents accidental dismissal of important notifications.
 
 `[Class-component]`
 
@@ -48,9 +52,9 @@ The [`extendedTimeOut`](https://ej2.syncfusion.com/react/documentation/api/toast
 
  {% previewsample "page.domainurl/code-snippet/toast/toast-cs42" %}
 
-## Static toast
+## Static toasts
 
-You can prevent auto-hiding of React toast by set timeOut value of timeOut property as zero (0).
+Create persistent toasts that do not automatically dismiss by setting the `timeOut` property to `0` (zero). Static toasts require explicit user action (close button click or programmatic removal) to dismiss. This pattern is ideal for critical alerts or action-required notifications where automatic dismissal would be inappropriate.
 
 `[Class-component]`
 

@@ -13,6 +13,7 @@ export default class App extends React.Component {
              <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th></tr>
             </thead>
             <tbody>{this.items}</tbody>
-           </table>);
+           </table>
+        );
     }
 }

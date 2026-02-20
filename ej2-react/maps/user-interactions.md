@@ -279,10 +279,10 @@ The zoom toolbar can be customized by using the [toolbarSettings](https://ej2.sy
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs105/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs105/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs105/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs105/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

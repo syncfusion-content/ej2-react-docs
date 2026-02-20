@@ -23,7 +23,7 @@ The following options are used as an argument on calling the utility functions:
 | cancelButton | Configures the `Cancel button` that contains button properties with the click events. `cancelButton:{ icon:'prefix icon to the button', cssClass:'custom class to the button', click: 'action for ‘Cancel’ button click', text: 'No' // <-- Default value is 'Cancel'}`|
 |isDraggable|Specifies the value whether the alert or confirm dialog can be dragged by the user.|
 | showCloseIcon | When set to true, the close icon is shown in the dialog component. |
-|closeOnEscape|When set to true, you can close the dialog by pressing ESC key.|
+|closeOnEscape|When set to `true`, the dialog can be closed by pressing the ESC key.|
 | animationSettings |Specifies the animation settings of the dialog component. |
 | cssClass |Specifies the CSS class name that can be appended to the dialog. |
 | zIndex |Specifies the order of the dialog, that is displayed in front or behind of another component. |

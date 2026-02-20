@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Display a dialog with custom position in React Dialog component
 
-By default, the dialog is displayed in the center of the target container. The dialog position can be set using the position property by providing custom X and Y coordinates.
-The dialog can be positioned inside the target based on the given X and Y values.
+By default, the dialog is displayed in the center of the target container. The dialog position can be customized using the position property by providing X and Y coordinate values (in pixels). The dialog is positioned inside the target container based on the specified X and Y offset values.
 
 `[Class-component]`
 

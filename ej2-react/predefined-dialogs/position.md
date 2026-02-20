@@ -10,10 +10,10 @@ domainurl: ##DomainURL##
 
 # Position in React Predefined dialogs component
 
-Customize the dialog position by using the `position` property. The position can be represented with specific `X` and `Y` values.
+The dialog position can be customized using the `position` property. Positioning is defined using `X` and `Y` coordinate values that control horizontal and vertical placement.
 
-* The `PositionDataModel.X` can be configured with a left, center, right, or offset value. By default, the value is set as `center`.
-* The `PositionDataModel.Y` can be configured with a top, center, bottom, or offset value. By default, the value is set as `center`.
+* The `PositionDataModel.X` can be configured with alignment values (`left`, `center`, `right`) or a numeric offset. The default value is `center`.
+* The `PositionDataModel.Y` can be configured with alignment values (`top`, `center`, `bottom`) or a numeric offset. The default value is `center`.
 
 ## Alert position
 

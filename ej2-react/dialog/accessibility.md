@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Dialog component
 
-The Dialog component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Dialog component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Dialog component is outlined below.
 
@@ -40,9 +40,9 @@ The accessibility compliance for the Dialog component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Dialog characterized with complete ARIA Accessibility support which helps to accessible by on-screen readers and other assistive technology devices. This component designed with the reference of the guidelines document given in [WAI ARAI Accessibility Practices](https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal).
+The Dialog features complete ARIA accessibility support, enabling access for screen readers and other assistive technology devices. The component is designed based on the guidelines provided in [WAI ARAI Accessibility Practices](https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal).
 
-The Dialog component uses the `Dialog` role and following ARIA properties to its element based on its state.
+The Dialog component uses the `Dialog` role and the following ARIA properties on its elements based on their state.
 
 | **Property** | **Functionalities** |
 | --- | --- |

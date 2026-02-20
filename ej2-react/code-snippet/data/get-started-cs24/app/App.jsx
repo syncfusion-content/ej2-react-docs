@@ -22,7 +22,8 @@ export default class App extends React.Component {
                     aggregates: [ret],
                     items: res
                 });
-            });
+            }
+        );
     }
     render() {
         return (<table id='datatable' className='e-table'>
@@ -31,6 +32,7 @@ export default class App extends React.Component {
                 </thead>
                 <tbody>{getValue('items', this.state)}</tbody>
                 <tfoot>{getValue('aggregates', this.state)}</tfoot>
-            </table>);
+            </table>
+        );
     }
 }

@@ -2,21 +2,19 @@
 layout: post
 title: Config in React Toast component | Syncfusion
 description: Learn here all about Config in Syncfusion React Toast component of Syncfusion Essential JS 2 and more.
-control: Config 
+control: Toast
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Config in React Toast component
+# Toast configuration
 
-This section explains on customizing the Toast appearance using built-in APIs.
+This section explains how to customize Toast appearance, layout, and behavior using built-in properties and events. Configure titles, content, positioning, progress display, and stacking order to match your application's notification requirements.
 
-## Title and content template
+## Title and content
 
-Toast can be created with the notification message. The message contains [`title`](https://ej2.syncfusion.com/react/documentation/api/toast/#title) and [`content`](https://ej2.syncfusion.com/react/documentation/api/toast/#content) of the Toasts. Title and contents are adaptable in any resolution.
-
-> Title or Content property can be given as HTML element/element ID as a string that can be displayed as a Toast.
+Toast notifications display messages using the [`title`](https://ej2.syncfusion.com/react/documentation/api/toast/#title) property for headlines and the [`content`](https://ej2.syncfusion.com/react/documentation/api/toast/#content) property for message body. Both properties are responsive and adapt to various screen sizes and orientations. You can provide titles and content as plain text, HTML strings, or element references for flexible content presentation.
 
 `[Class-component]`
 
@@ -44,25 +42,21 @@ Toast can be created with the notification message. The message contains [`title
 
  {% previewsample "page.domainurl/code-snippet/toast/toast-cs8" %}
 
-## Specifying custom target
+## Custom target container
 
-By default toast can be rendered in the document body, we can change the target position for toast rendering using [`target`](https://ej2.syncfusion.com/react/documentation/api/toast/#target) property. Based on the target [`position`](https://ej2.syncfusion.com/react/documentation/api/toast/#position) will update.
+By default, toasts render within the document body. Render toasts within a specific container element using the [`target`](https://ej2.syncfusion.com/react/documentation/api/toast/#target) property. Specifying a custom target enables scoped notifications within modal dialogs, panels, or specific application regions. Toast [`position`](https://ej2.syncfusion.com/react/documentation/api/toast/#position) is calculated relative to the target container.
 
-## Close Button
+## Close button
 
-By default [`showCloseButton`](https://ej2.syncfusion.com/react/documentation/api/toast/#showclosebutton) will not enabled. We can enable it by setting true value. Before expiring toast we can use to close or destroy toasts manually.
+Enable manual toast dismissal by setting [`showCloseButton`](https://ej2.syncfusion.com/react/documentation/api/toast/#showclosebutton) to `true`. This adds a close button allowing users to dismiss toasts before automatic timeout expiration. Close buttons are particularly useful for persistent notifications or static toasts where manual dismissal is the primary interaction method.
 
 ## Progress bar
 
-By default [`showProgressBar`](https://ej2.syncfusion.com/react/documentation/api/toast/#showprogressbar) will not enabled. If we enabled it can visually indicate how long time to get toast expires. Based on the `timeOut` property Progress bar will appear.
+Display visual timeout feedback using the [`showProgressBar`](https://ej2.syncfusion.com/react/documentation/api/toast/#showprogressbar) property. When enabled, a progress bar appears indicating remaining toast display time, helping users anticipate dismissal. Configure progress bar direction using [`progressDirection`](https://ej2.syncfusion.com/react/documentation/api/toast/#progressDirection) to display from right-to-left (RTL, default) or left-to-right (LTR).
 
-### Progress bar direction
+## Stacking order
 
-By default, the [progressDirection](https://ej2.syncfusion.com/react/documentation/api/toast/#progressDirection) is set to "Rtl" and it will appear from right to left direction. You can change the progressDirection to "Ltr" to make it appear from left to right direction.
-
-## Newest on top
-
-In default, newly created toasts will append next with existing toast. We can change the Sequence like inserting before the toast, by enabling the [`newestOnTop`](https://ej2.syncfusion.com/react/documentation/api/toast/#newestontop).
+Control the order toasts appear on screen using the [`newestOnTop`](https://ej2.syncfusion.com/react/documentation/api/toast/#newestontop) property. When enabled, new toasts appear above existing ones. When disabled (default), new toasts append below existing notifications, creating a growing stack.
 
 Here below sample demonstrates the combination of `target`, `showCloseButton`, `showProgressBar` and `newestOnTop` properties in toast.
 

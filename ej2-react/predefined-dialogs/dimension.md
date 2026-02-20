@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Dimension in React Predefined dialogs component
 
-Customize the predefined dialogs dimensions using the `height` and `width` properties. You can specify the dimension values in both pixels and percentage format to change the default dialog width and height values.
+The dimensions of predefined dialogs can be customized using the `height` and `width` properties. Dimension values can be specified in pixels or percentage format to change the default dialog width and height.
 
 ## Alert dimension
 
@@ -98,9 +98,9 @@ Customize the predefined dialogs dimensions using the `height` and `width` prope
 
 ## Max-width and max-height
 
-To have a restricted max-width and max-height dialog dimension, you need to specify the max-width, max-height CSS properties for the component’s container element by using the `cssClass` property. The max-height value is calculated in source level and set to the dialog. so, need to override the max-height property.
+To restrict the maximum dialog dimensions, specify the `max-width` and `max-height` CSS properties for the component's container element using the `cssClass` property. The `max-height` value is calculated at the source level and applied to the dialog, so the `max-height` property may need to be overridden.
 
-Use the following code to customize the max-width and max-height for alert dialog:
+The following code demonstrates how to customize the max-width and max-height for the alert dialog:
 
 `[Class-component]`
 
@@ -130,11 +130,11 @@ Use the following code to customize the max-width and max-height for alert dialo
 
 ## Min-width and min-height
 
-To have a restricted min-width and min-height dialog dimension, you need to specify the min-width, min-height CSS properties for the component’s container element by using the `cssClass` property.
+To restrict the minimum dialog dimensions, specify the `min-width` and `min-height` CSS properties for the component's container element using the `cssClass` property.
 
-Use the following code to customize the min-width and min-height for alert dialog:
+The following code demonstrates how to customize the min-width and min-height for the alert dialog:
 
-`[Class-Component]`
+`[Class-component]`
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -147,7 +147,7 @@ Use the following code to customize the min-width and min-height for alert dialo
 
  {% previewsample "page.domainurl/code-snippet/predefined-dialogs/min-width-height-cs1" %}
 
-`[Functional-Component]`
+`[Functional-component]`
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

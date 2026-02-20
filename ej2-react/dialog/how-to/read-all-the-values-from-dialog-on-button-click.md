@@ -10,8 +10,9 @@ domainurl: ##DomainURL##
 
 # Read all the values from dialog on button click in React Dialog component
 
-You can read the dialog element values by binding the action handler to the footer buttons. The buttons property provides the options to bind events to the action buttons. For detailed information about buttons, refer to the [footer](../template/#footer) section.
-In the below sample, value of input elements within the dialog has been checked in the footer button click event and send the values as the content of confirmation dialog.
+Dialog element values can be read by binding an action handler to the footer buttons. The `buttons` property provides options to bind events to action buttons. For detailed information, refer to the [footer](../template/#footer) section.
+
+The following sample demonstrates how to retrieve input element values from the dialog in the footer button click event and display them in a confirmation dialog.
 
 `[Class-component]`
 

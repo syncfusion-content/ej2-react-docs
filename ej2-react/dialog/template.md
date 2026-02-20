@@ -10,12 +10,11 @@ domainurl: ##DomainURL##
 
 # Template in React Dialog component
 
-In Dialog the template support is provided to header, content and footer sections. So any text or HTML content can be appending in these sections.
+The Dialog supports templating for the header, content, and footer sections. Text and HTML content can be appended to these sections through template properties.
 
 ## Header
 
-The Dialog header content can be provided through the [`header`](https://ej2.syncfusion.com/react/documentation/api/dialog/#header) property, and it will allow both text and any HTML content as a string.
-Also in header, close button is provided as built-in support, and this can be enabled through the [`showCloseIcon`](https://ej2.syncfusion.com/react/documentation/api/dialog/#showcloseicon) property.
+The Dialog header content is provided through the [`header`](https://ej2.syncfusion.com/react/documentation/api/dialog/#header) property, which accepts both text and HTML content as a string. A close button is also provided as built-in support and can be enabled through the [`showCloseIcon`](https://ej2.syncfusion.com/react/documentation/api/dialog/#showcloseicon) property.
 
 ## Footer
 
@@ -25,9 +24,9 @@ The Dialog footer can be enabled by adding built-in [`buttons`](https://ej2.sync
 
 ## Content
 
-The Dialog content can be provided through the [`content`](https://ej2.syncfusion.com/react/documentation/api/dialog/#content) property, and it accepts both text and HTML string as content.
+The Dialog content is provided through the [`content`](https://ej2.syncfusion.com/react/documentation/api/dialog/#content) property, which accepts both text and HTML strings.
 
-The below example demonstrates the usage of header, footer and content template in the Dialog.
+The following example demonstrates the usage of header, footer, and content templates in the Dialog.
 
 `[Class-component]`
 

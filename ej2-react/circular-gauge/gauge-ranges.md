@@ -11,11 +11,11 @@ domainurl: ##DomainURL##
 
 # Gauge ranges in React Circular gauge component
 
-You can categories certain interval on gauge axis using [`ranges`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/range/#properties) property.
+You can categories certain interval on gauge axis using [`ranges`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/range#properties) property.
 
 ## Start and End
 
-Start and end value of a range in an axis can be customized by using [`start`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/range/#start-number) and [`end`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/range/#end-number) properties.
+Start and end value of a range in an axis can be customized by using [`start`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/range#start-number) and [`end`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/range#end-number) properties.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -30,8 +30,8 @@ Start and end value of a range in an axis can be customized by using [`start`](h
 
 ## Customization
 
-Color and thickness of the range can be customized by using [`color`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/range/#color-string),
-[`startWidth`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/range/#startwidth-number) and [`endWidth`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/range/#endwidth-number) property.
+Color and thickness of the range can be customized by using [`color`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/range#color-string),
+[`startWidth`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/range#startwidth-number) and [`endWidth`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/range#endwidth-number) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -48,7 +48,7 @@ Color and thickness of the range can be customized by using [`color`](https://ej
 
 ## Radius
 
-You can place the range inside or outside of the axis by using [`radius`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/range/#radius-string) property. The radius of the range can takes value either in percentage or in pixels. By default, ranges take 100% of the axis radius.
+You can place the range inside or outside of the axis by using [`radius`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/range#radius-string) property. The radius of the range can takes value either in percentage or in pixels. By default, ranges take 100% of the axis radius.
 
 **In Pixel**
 
@@ -84,7 +84,7 @@ By setting value in percentage, range gets its dimension with respect to its axi
 
 ## Dragging range
 
-The ranges can be dragged on the axis values by clicking and dragging the same. To enable or disable the range drag, use the [`enableRangeDrag`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/circularGaugeModel/#enablerangedrag) property.
+The ranges can be dragged on the axis values by clicking and dragging the same. To enable or disable the range drag, use the [`enableRangeDrag`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/circularGaugeModel#enablerangedrag) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -101,7 +101,7 @@ The ranges can be dragged on the axis values by clicking and dragging the same. 
 
 You can add multiple ranges to an axis with the above customization as demonstrated below.
 
-*Note: You can set the range color to axis ticks and labels by enabling `useRangeColor` property in [`majorTicks`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/tick/), [`minorTicks`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/tick/) and [`labelStyle`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/label/) object.*
+*Note: You can set the range color to axis ticks and labels by enabling `useRangeColor` property in [`majorTicks`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/tick), [`minorTicks`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/tick) and [`labelStyle`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/label) object.*
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -138,16 +138,16 @@ Gradient support allows to add multiple colors in the ranges and pointers of the
 
 ### Linear Gradient
 
-Using linear gradient, colors will be applied in a linear progression. The start value of the linear gradient can be set using the [`startValue`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/linearGradient/#startvalue) property. The end value of the linear gradient will be set using the [`endValue`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/linearGradient/#endvalue) property. The color stop values such as color, opacity and offset are set using [`colorStop`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/linearGradient/#colorstop) property.
+Using linear gradient, colors will be applied in a linear progression. The start value of the linear gradient can be set using the [`startValue`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/linearGradient#startvalue) property. The end value of the linear gradient will be set using the [`endValue`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/linearGradient#endvalue) property. The color stop values such as color, opacity and offset are set using [`colorStop`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/linearGradient#colorstop) property.
 
 To apply linear gradient to the range, follow the below code sample.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-ranges-cs7/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-ranges-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-ranges-cs7/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-ranges-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -155,7 +155,7 @@ To apply linear gradient to the range, follow the below code sample.
 
 ### Radial Gradient
 
-Using radial gradient, colors will be applied in circular progression. The inner circle position of the radial gradient will be set using the [`innerPosition`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/radialGradient/#innerposition) property. The outer circle position of the radial gradient can be set using the [`outerPosition`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/radialGradient/#outerposition) property. The color stop values such as color, opacity and offset are set using [`colorStop`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/radialGradient/#colorstop) property.
+Using radial gradient, colors will be applied in circular progression. The inner circle position of the radial gradient will be set using the [`innerPosition`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/radialGradient#innerposition) property. The outer circle position of the radial gradient can be set using the [`outerPosition`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/radialGradient#outerposition) property. The color stop values such as color, opacity and offset are set using [`colorStop`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/radialGradient#colorstop) property.
 
 To apply radial gradient to the range, follow the below code sample.
 

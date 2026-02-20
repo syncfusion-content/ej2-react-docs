@@ -20,10 +20,10 @@ The animation of the Linear Gauge is demonstrated in the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/animation-cs1/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/animation-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/animation-cs1/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/animation-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

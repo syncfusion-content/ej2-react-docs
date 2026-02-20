@@ -10,9 +10,11 @@ domainurl: ##DomainURL##
 
 # Resize in React Dialog component
 
-The Dialog supports resizing feature. To resize the dialog, we have to select and resize it by using its handle (grip) or hovering on any of the edges or borders of the dialog within the sample container.
+The Dialog supports resizing functionality. To resize the dialog, select and drag it using the resize handle (grip) or hover on any of the edges or borders of the dialog within the sample container.
 
-The resizable dialog can be created by setting the [enableResize](https://ej2.syncfusion.com/react/documentation/api/dialog/#enableresize) property to true, which is used to change the size of a dialog dynamically and view its content with expanded mode. The [resizeHandles](https://ej2.syncfusion.com/react/documentation/api/dialog/#resizehandles) property can also be configured for all the which directions in which the dialog should be resized. When you configure the target property along with the [enableResize](https://ej2.syncfusion.com/react/documentation/api/dialog/#enableresize) property, the dialog can be resized within its specified target container.
+A resizable dialog can be created by setting the [enableResize](https://ej2.syncfusion.com/react/documentation/api/dialog/#enableresize) property to `true`. This allows the dialog size to be changed dynamically, enabling users to view content in expanded mode. The [resizeHandles](https://ej2.syncfusion.com/react/documentation/api/dialog/#resizehandles) property can be configured to specify all directions in which the dialog can be resized. When the target property is configured along with [enableResize](https://ej2.syncfusion.com/react/documentation/api/dialog/#enableresize), the dialog can be resized only within its specified target container.
+
+`[Class-component]`
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

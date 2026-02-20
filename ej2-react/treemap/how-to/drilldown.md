@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Drilldown in React Treemap component | Syncfusion
-description: Learn here all about Drilldown in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
+title: Drilldown customization in React Treemap component | Syncfusion
+description: Learn here all about Drilldown customization in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
 control: Drilldown 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drilldown in React Treemap component
+# Drilldown customization in React Treemap component
 
 ## Customize the header for treemap drilldown
 

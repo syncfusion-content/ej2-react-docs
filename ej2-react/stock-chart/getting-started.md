@@ -127,10 +127,10 @@ The below example shows a basic Stock Chart.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/stock-chart/getting-started/initialize-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/getting-started/initialize-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/stock-chart/getting-started/initialize-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/getting-started/initialize-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

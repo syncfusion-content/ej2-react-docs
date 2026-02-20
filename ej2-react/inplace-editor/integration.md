@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Integration in React Inplace editor component
 
-The In-place Editor supports adding HTML5 input components using the [template](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#template) property. The Template property can be given as either a `string` or a `query selector`.
+The In-place Editor supports integrating custom HTML5 input components using the [template](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#template) property. The template can be specified as either a `string` or a CSS `query selector`.
 
 ## As a string
 
-The HTML element tag can be given as a string for the template property. Here, the input is rendered as an HTML template.
+Provide the template as an HTML string. The input is rendered as an HTML template.
 
 ```ts
 template: "<div><input type='text' id='name'></input></div>"
@@ -23,14 +23,14 @@ template: "<div><input type='text' id='name'></input></div>"
 
 ## As a selector
 
-The template property also allows getting template content through query `selector`. Here, the input wrapper element 'ID' attribute is specified in the template.
+Provide the template as a CSS query selector that references an element ID. The selector retrieves the template content from the corresponding DOM element.
 
 ```ts
 template: "#date"
 
 ```
 
-Template mode, the `value` property not handled by the In-place Editor component. So, before sending a value to the server, you need to modify at [actionBegin](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#actionbegin) event, otherwise, an empty string will pass. In the following template sample, before submitting a data to the server, event argument and [value](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#value) property content updated in the `actionBegin` event handler.
+In template mode, the In-place Editor does not automatically handle the `value` property. Before submitting data to the server, manually update the [value](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#value) property in the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#actionbegin) event handler; otherwise, an empty string will be sent. The following sample demonstrates how to update the value before server submission.
 
 `[Class-component]`
 

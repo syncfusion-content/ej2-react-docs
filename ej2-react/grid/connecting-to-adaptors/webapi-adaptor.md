@@ -1,156 +1,58 @@
 ---
 layout: post
-title: Bind and perform CRUD action with WebApiAdaptor in Syncfusion Grid
-description: Learn here all about how to bind data and perform CRUD action using WebApiAdaptor in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - Web API Adaptor | Syncfusion
+description: React Grid Web API adaptor supports integration with ASP.NET Web API endpoints, mapping request parameters, and handling server operations for grid data.
 control: WebApi Adaptor
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# WebApiAdaptor in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid Component
+# ASP.NET Web API Remote Data Binding in Syncfusion React Components
 
-The `WebApiAdaptor` is an extension of the `ODataAdaptor`, designed to interact with Web APIs created with OData endpoints. This adaptor ensures seamless communication between Syncfusion<sup style="font-size:70%">&reg;</sup> Grid and OData-endpoint based Web APIs, enabling efficient data retrieval and manipulation. For successful integration, the endpoint must be capable of understanding OData-formatted queries sent along with the request.
+The `WebApiAdaptor` integrates the React Grid with Web API endpoints that support OData‑style querying. It is derived from the `ODataAdaptor`, meaning the target Web API must accept OData‑formatted query parameters for operations such as filtering, sorting, paging, and searching. When the React Grid performs any data action, the `WebApiAdaptor` generates OData‑compliant query strings, sends them to the Web API endpoint, and processes the returned JSON to populate the Grid. This ensures seamless remote data binding with OData-capable Web API services.
 
-To enable the OData query option for a Web API, please refer to the corresponding [documentation](https://learn.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options), which provides detailed instructions on configuring the endpoint to understand OData-formatted queries.
+For details on configuring the backend (expected request/response format, server‑side processing), refer to the WebApiAdaptor backend setup documentation.
 
-This section describes a step-by-step process for retrieving data service using `WebApiAdaptor`, then binding it to the React Grid component to facilitate data and CRUD operations.
+Once the project creation and backend setup are complete, the next step is to render the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid Component on the client side.
 
-## Creating a Web API service
+**Project structure:**
 
-To configure a server for use with Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, you need to follow the below steps:
+```
+WebApiAdaptor/
+├── WebApiAdaptor.client/           # React frontend (Vite/React project).
+│   ├── src/
+│   │   ├── App.css
+│   │   └── App.jsx                  # Add WebApiAdaptor here.
+│   └── package.json
+└── WebApiAdaptor.Server/            # ASP.NET Core backend (API).
+    ├── Controllers/                 # API controllers (will be created here).
+    ├── Models/                      # Data models (will be created here).
+    └── Program.cs                   # Server configuration.
+```
 
-**1. Project Creation:**
+## React Grid frontend setup using Syncfusion WebAPIAdaptor
 
-Open Visual Studio and create an React and ASP.NET Core project named **WebApiAdaptor**. To create an React and ASP.NET Core application, follow the documentation [link](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-react?view=vs-2022) for detailed steps.
+After finishing the backend setup for the **WebApiAdaptorDemo** ASP.NET Core project, next step is to integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid on the client side by following these instructions.
 
-**2. Model Class Creation:**
+### Step 1: Install Syncfusion packages
 
-Create a model class named `OrdersDetails.cs` in the server-side **Models** folder to represent the order data.
-
-{% tabs %}
-{% highlight cs tabtitle="OrdersDetails.cs" %}
-
- namespace WebApiAdaptor.Server.Models
- {
- public class OrdersDetails
- {
-    public static List<OrdersDetails> order = new List<OrdersDetails>();
-    public OrdersDetails()
-    {
-
-    }
-    public OrdersDetails(
-    int OrderID, string CustomerId, int EmployeeId, double Freight, bool Verified,
-    DateTime OrderDate, string ShipCity, string ShipName, string ShipCountry,
-    DateTime ShippedDate, string ShipAddress)
-    {
-    this.OrderID = OrderID;
-    this.CustomerID = CustomerId;
-    this.EmployeeID = EmployeeId;
-    this.Freight = Freight;
-    this.ShipCity = ShipCity;
-    this.Verified = Verified;
-    this.OrderDate = OrderDate;
-    this.ShipName = ShipName;
-    this.ShipCountry = ShipCountry;
-    this.ShippedDate = ShippedDate;
-    this.ShipAddress = ShipAddress;
-    }
-
-    public static List<OrdersDetails> GetAllRecords()
-    {
-    if (order.Count() == 0)
-    {
-        int code = 10000;
-        for (int i = 1; i < 10; i++)
-        {
-        order.Add(new OrdersDetails(code + 1, "ALFKI", i + 0, 2.3 * i, false, new DateTime(1991, 05, 15), "Berlin", "Simons bistro", "Denmark", new DateTime(1996, 7, 16), "Kirchgasse 6"));
-        order.Add(new OrdersDetails(code + 2, "ANATR", i + 2, 3.3 * i, true, new DateTime(1990, 04, 04), "Madrid", "Queen Cozinha", "Brazil", new DateTime(1996, 9, 11), "Avda. Azteca 123"));
-        order.Add(new OrdersDetails(code + 3, "ANTON", i + 1, 4.3 * i, true, new DateTime(1957, 11, 30), "Cholchester", "Frankenversand", "Germany", new DateTime(1996, 10, 7), "Carrera 52 con Ave. Bolívar #65-98 Llano Largo"));
-        order.Add(new OrdersDetails(code + 4, "BLONP", i + 3, 5.3 * i, false, new DateTime(1930, 10, 22), "Marseille", "Ernst Handel", "Austria", new DateTime(1996, 12, 30), "Magazinweg 7"));
-        order.Add(new OrdersDetails(code + 5, "BOLID", i + 4, 6.3 * i, true, new DateTime(1953, 02, 18), "Tsawassen", "Hanari Carnes", "Switzerland", new DateTime(1997, 12, 3), "1029 - 12th Ave. S."));
-        code += 5;
-        }
-    }
-    return order;
-    }
-
-    public int? OrderID { get; set; }
-    public string? CustomerID { get; set; }
-    public int? EmployeeID { get; set; }
-    public double? Freight { get; set; }
-    public string? ShipCity { get; set; }
-    public bool? Verified { get; set; }
-    public DateTime OrderDate { get; set; }
-    public string? ShipName { get; set; }
-    public string? ShipCountry { get; set; }
-    public DateTime ShippedDate { get; set; }
-    public string? ShipAddress { get; set; }
- }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-**3. API Controller Creation:**
-
-Create a file named `OrdersController.cs` under the **Controllers** folder. This controller will handle data communication with the React Grid component. Implement the **Get** method in the controller to return the data in JSON format, including the **Items** and **Count** properties as required by `WebApiAdaptor`.
-
-{% tabs %}
-{% highlight cs tabtitle="OrdersController.cs" %}
-
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using WebApiAdaptor.Server.Models;
-
-namespace WebApiAdaptor.Server.Controllers
-{
-  [Route("api/[controller]")]
-  [ApiController]
-  public class OrdersController : ControllerBase
-  {
-    [HttpGet]
-    public object Get()
-    {
-    var data = OrdersDetails.GetAllRecords().ToList();
-    return  new { Items = data, Count = data.Count() };
-    }
-  }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-**4. Run the Application:**
-
-Run the application in Visual Studio. It will be accessible on a URL like **https://localhost:xxxx**. 
-
-After running the application, you can verify that the server-side API controller is successfully returning the order data in the URL(https://localhost:xxxx/api/Orders). Here **xxxx** denotes the port number.
-
-![WebApiAdaptor-data](../images/webapi-adaptor-data.png)
-
-## Connecting Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid to an API service
-
-To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component into your React and ASP.NET Core project using Visual Studio, follow the below steps:
-
-**Step 1: Install syncfusion<sup style="font-size:70%">&reg;</sup> package**
-
-Open your terminal in the project's root directory of client folder and install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages using npm:
+Right‑click the **Webapiadaptor.client** folder in **Solution Explorer** and select **Open in Terminal** (available in newer Visual Studio versions), or open a Developer Command prompt/PowerShell from the Start menu and navigate manually to the **Webapiadaptor.client directory**. Once inside the folder, confirm that **package.json** is present, then run the following commands to install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages:
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
 npm install @syncfusion/ej2-data --save
 ```
 
-**Step 2: Adding CSS reference**
+### Step 2: Add CSS styles
 
-Include the necessary CSS files in your `styles.css` file to style the Syncfusion<sup style="font-size:70%">&reg;</sup> React components:
+Syncfusion Grid requires CSS for proper rendering. Add these imports to **index.css** or **App.css**:
 
-{% tabs %}
-{% highlight css tabtitle="styles.css" %}
-
+```css
+/* Base styles - Required for all Syncfusion components */
 @import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
+
+/* Component-specific styles */
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
 @import '../node_modules/@syncfusion/ej2-calendars/styles/material3.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css';
@@ -158,236 +60,494 @@ Include the necessary CSS files in your `styles.css` file to style the Syncfusio
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material3.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css';
+
+/* Grid component styles - Required */
 @import '../node_modules/@syncfusion/ej2-react-grids/styles/material3.css';
+```
 
-{% endhighlight %}
-{% endtabs %}
+Import the **App.css** in the application entry point(**App.jsx**).
 
-**Step 3: Adding Syncfusion<sup style="font-size:70%">&reg;</sup> component**
+```js
+import "./App.css";
+...
+...
 
-In your component file (e.g., App.ts), import `DataManager` and `WebApiAdaptor` from `@syncfusion/ej2-data`. Create a `DataManager` instance specifying the URL of your API endpoint(https:localhost:xxxx/api/Orders) using the `url` property and set the adaptor `WebApiAdaptor`.
+```
+
+### Step 3: Create React Grid component with WebAPIAdaptor
+
+Grid integration with backend APIs is enabled through the `WebApiAdaptor`, which acts as a bridge between the Syncfusion `DataManager` and RESTful Web API endpoints. It converts Grid actions into OData‑compliant query parameters and is well‑suited for APIs that follow OData conventions, providing server‑side paging, filtering, sorting, and searching without the need for custom request logic.
+
+By delegating these operations to the server rather than executing them in the browser, the Grid ensures that only the required data is retrieved for each request.
 
 {% tabs %}
-{% highlight ts tabtitle="App.tsx" %}
+{% highlight js tabtitle="App.jsx" %}
+
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-grids';
 
 function App() {
-  const data = new DataManager({ 
-    url:'https://localhost:xxxx/api/Orders', // Here xxxx represents the port number
-    adaptor: new WebApiAdaptor()
-  });
-  return <GridComponent dataSource={data} height={320}>
-      <ColumnsDirective>
-          <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150'textAlign='Right'></ColumnDirective>
-          <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-          <ColumnDirective field='ShipCity' headerText='Ship City' width='150'/>
-          <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
-      </ColumnsDirective>
-  </GridComponent>
-};
+    // Create DataManager with WebApiAdaptor
+    const data = new DataManager({ 
+        url: 'https://localhost:xxxx/api/Orders', // Replace xxxx with your port number.
+        adaptor: new WebApiAdaptor(), // This handles Web API communication.
+        crossDomain: true // Allow cross-domain requests.
+    });
+    
+    return (
+        <div style={{ margin: '20px' }}>
+            <h2>Orders Grid</h2>
+            <GridComponent dataSource={data} height={320}>
+                <ColumnsDirective>
+                    <ColumnDirective 
+                        field='OrderID' 
+                        headerText='Order ID' 
+                        isPrimaryKey={true} 
+                        width='150' 
+                        textAlign='Right'>
+                    </ColumnDirective>
+                    <ColumnDirective 
+                        field='CustomerID' 
+                        headerText='Customer ID' 
+                        width='150'>
+                    </ColumnDirective>
+                    <ColumnDirective 
+                        field='ShipCity' 
+                        headerText='Ship City' 
+                        width='150'>
+                    </ColumnDirective>
+                    <ColumnDirective 
+                        field='ShipCountry' 
+                        headerText='Ship Country' 
+                        width='150'>
+                    </ColumnDirective>
+                </ColumnsDirective>
+            </GridComponent>
+        </div>
+    );
+}
+
 export default App;
+
 {% endhighlight %}
 {% endtabs %}
 
-> Replace https://localhost:xxxx/api/Orders with the actual URL of your API endpoint that provides the data in a consumable format (e.g., JSON).
-Run the application in Visual Studio. It will be accessible on a URL like **https://localhost:xxxx**.
+> When using the `WebApiAdaptor`, the server must return a JSON response containing both the data collection (`Items`) and the total record count (`Count`) so the React `DataManager` can correctly process paging and data binding.
 
-> Ensure your API service is configured to handle CORS (Cross-Origin Resource Sharing) if necessary.
+## Server-side data operations
 
-```cs
-[program.cs]
-builder.Services.AddCors(options =>
-{
-  options.AddDefaultPolicy(builder =>
-  {
-    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
-  });
-});
-var app = builder.Build();
-app.UseCors();
+React Grid optimizes large datasets by relying on server‑side data operations such as filtering, sorting, and paging rather than processing everything in the browser. The `Syncfusion.EJ2.AspNet.Core` package supports this approach by providing built‑in methods that efficiently handle these operations on the server, ensuring smooth performance even with heavy data loads.
+
+### Paging
+
+The paging feature is enabled by setting the `allowPaging` property to `true` and injecting the `Page` module from `@syncfusion/ej2-react-grids` into the grid.
+
+```ts
+  <GridComponent dataSource={data} allowPaging={true}>
+    . . .
+    . . .
+    . . .
+    <Inject services={[Page]}/>
+  </GridComponent>
 ```
 
-![WebApiAdaptor](../images/adaptor.gif)
-
-### Handling filtering operation
-
-To handle filter operations, ensure that your Web API endpoint supports filtering based on OData-formatted queries. Implement the filtering logic on the server-side as shown in the provided code snippet.
-
-![Filtering query](../images/webapiadaptor-filtering.png)
+After enabling paging, the `WebApiAdaptor` includes OData‑style paging parameters `$skip` and `$top` in each request based on the Grid's current page and page size. These parameters allow the server to return only the required subset of data, enabling efficient server‑side paging. The Grid then renders the corresponding page using the paged dataset and the total record count provided by the API.
 
 {% tabs %}
 {% highlight cs tabtitle="OrdersController.cs" %}
 
-// GET: api/Orders
 [HttpGet]
 
 public object Get()
 {
-  var queryString = Request.Query;
-  var data = Orders.GetAllRecords().ToList();
-  string filter = queryString["$filter"];
-
-  if (filter != null)
-  {
-    var filters = filter.Split(new string[] { " and " }, StringSplitOptions.RemoveEmptyEntries);
-    foreach (var filterItem in filters)
-    {
-      var filterfield = "";
-      var filtervalue = "";
-      var filterParts = filterItem.Split('(', ')', '\'');
-      if (filterParts.Length != 9)
-      {
-        var filterValueParts = filterParts[1].Split();
-        filterfield = filterValueParts[0];
-        filtervalue = filterValueParts[2];
-      }
-      else
-      {
-        filterfield = filterParts[3];
-        filtervalue = filterParts[5];
-      }
-      switch (filterfield)
-      {
-        case "OrderID":
-          data = (from cust in data
-                where cust.OrderID.ToString() == filtervalue.ToString()
-                select cust).ToList();
-        break;
-        case "CustomerID":
-          data = (from cust in data
-                where cust.CustomerID.ToLower().StartsWith(filtervalue.ToString())
-                select cust).ToList();
-        break;
-        case "ShipCity":
-          data = (from cust in data
-                where cust.ShipCity.ToLower().StartsWith(filtervalue.ToString())
-                select cust).ToList();
-        break;
-      }
-    }
-    return new { Items = data, Count = data.Count() };
-  }
+    var queryString = Request.Query;
+    var data = Orders.GetAllRecords().ToList();
+    int skip = Convert.ToInt32(queryString["$skip"]);
+    int take = Convert.ToInt32(queryString["$top"]);
+    return take != 0 ? new { Items = data.Skip(skip).Take(take).ToList(), Count = data.Count() } : new { Items = data, Count = data.Count() };
 }
+
 {% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
+
+{% highlight js tabtitle="App.jsx" %}
+
+import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
+import { GridComponent, ColumnsDirective, ColumnDirective, Page, Inject } from '@syncfusion/ej2-react-grids';
+
+function App() {
+    const data = new DataManager({ 
+        url: 'https://localhost:xxxx/api/Orders', // Replace with the actual endpoint URL.
+        adaptor: new WebApiAdaptor()
+    });
+    return <GridComponent dataSource={data} allowPaging={true} height={320}>
+        <ColumnsDirective>
+            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150' textAlign='Right'></ColumnDirective>
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
+            <ColumnDirective field='ShipCity' headerText='Ship City' width='150'/>
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
+        </ColumnsDirective>
+        <Inject services={[Page]} />
+    </GridComponent>
+};
+export default App;
+
+{% endhighlight %}
+{% endtabs %}
+
+![paging query](../images/webapiadaptor-paging.png)
+
+### Filtering
+
+The filtering feature is enabled by setting the `allowFiltering` property to `true` and injecting the `Filter` module from `@syncfusion/ej2-react-grids` into the grid.
+
+```js
+  <GridComponent dataSource={data} allowFiltering={true}>
+    . . .
+    . . .
+    . . .
+    <Inject services={[Filter]}/>
+  </GridComponent>
+```
+
+After enabling filtering on the client side, the `WebApiAdaptor` translates the Grid's filter conditions into OData‑style `$filter` query parameters. It builds a filter expression based on the selected field, operator, and value, and sends it to the server. The backend processes this `$filter` expression, applies the corresponding filtering logic, and returns only the records that match the criteria for the Grid to display.
+
+{% tabs %}
+{% highlight cs tabtitle="OrdersController.cs" %}
+
+using Microsoft.AspNetCore.Mvc;
+using WebApiAdaptor.Server.Models;
+
+namespace WebApiAdaptor.Server.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class OrdersController : ControllerBase
+    {
+        /// <summary>
+        /// Retrieves orders with filtering support.
+        /// Handles OData-style $filter query parameter.
+        /// </summary>
+        [HttpGet]
+        public object Get()
+        {
+            var queryString = Request.Query;
+            var data = OrdersDetails.GetAllRecords().ToList();
+            string filter = queryString["$filter"];
+
+            if (!string.IsNullOrEmpty(filter))
+            {
+                filter = filter.Trim();
+                
+                // Remove one level of outer parentheses if present.
+                if (filter.StartsWith("(") && filter.EndsWith(")"))
+                {
+                    int openCount = filter.Count(c => c == '(');
+                    int closeCount = filter.Count(c => c == ')');
+
+                    if (openCount == closeCount && openCount > 0)
+                    {
+                        filter = filter.Substring(1, filter.Length - 2).Trim();
+                    }
+                }
+                
+                // Split multiple filter conditions (AND logic).
+                var filters = filter.Split(new string[] { " and " }, StringSplitOptions.RemoveEmptyEntries);
+                
+                foreach (var filterItem in filters)
+                {
+                    var filterfield = "";
+                    var filtervalue = "";
+                    
+                    // Parse filter expression.
+                    var filterParts = filterItem.Split('(', ')', '\'');
+                    
+                    if (filterParts.Length != 9)
+                    {
+                        // Simple filter: field eq 'value'.
+                        var filterValueParts = filterParts[1].Split();
+                        filterfield = filterValueParts[0];
+                        filtervalue = filterValueParts[2];
+                    }
+                    else
+                    {
+                        // Function filter: substringof('value', field).
+                        filterfield = filterParts[3];
+                        filtervalue = filterParts[5];
+                    }
+                    
+                    // Apply filter based on field.
+                    switch (filterfield)
+                    {
+                        case "OrderID":
+                            data = data.Where(x => x.OrderID.ToString() == filtervalue).ToList();
+                            break;
+                        case "CustomerID":
+                            data = data.Where(x => x.CustomerID.ToLower().Contains(filtervalue.ToLower())).ToList();
+                            break;
+                        case "ShipCity":
+                            data = data.Where(x => x.ShipCity.ToLower().Contains(filtervalue.ToLower())).ToList();
+                            break;
+                        case "ShipCountry":
+                            data = data.Where(x => x.ShipCountry.ToLower().Contains(filtervalue.ToLower())).ToList();
+                            break;
+                        // Add more cases for other filterable fields.
+                    }
+                }
+            }
+            
+            return new { Items = data, Count = data.Count() };
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight js tabtitle="App.jsx" %}
+
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 import { GridComponent, ColumnsDirective, ColumnDirective, Filter, Inject } from '@syncfusion/ej2-react-grids';
 
 function App() {
     const data = new DataManager({ 
-        url: 'https://localhost:xxxx/api/Orders', // Replace your hosted link
-        adaptor: new WebApiAdaptor()
+        url: 'https://localhost:xxxx/api/Orders', // Replace with actual endpoint URL.
+        adaptor: new WebApiAdaptor(),
+        crossDomain: true
     });
+    
     return <GridComponent dataSource={data} allowFiltering={true} height={320}>
         <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150'textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='ShipCity' headerText='Ship City' width='150'/>
+            <ColumnDirective 
+                field='OrderID' 
+                headerText='Order ID' 
+                isPrimaryKey={true} 
+                width='150' 
+                textAlign='Right'>
+            </ColumnDirective>
+            <ColumnDirective 
+                field='CustomerID' 
+                headerText='Customer ID' 
+                width='150'>
+            </ColumnDirective>
+            <ColumnDirective 
+                field='ShipCity' 
+                headerText='Ship City' 
+                width='150'>
+            </ColumnDirective>
+            <ColumnDirective 
+                field='ShipCountry' 
+                headerText='Ship Country' 
+                width='150'>
+            </ColumnDirective>
         </ColumnsDirective>
         <Inject services={[Filter]} />
     </GridComponent>
 };
 export default App;
+
 {% endhighlight %}
 {% endtabs %}
 
+![Filtering query](../images/webapiadaptor-filtering.png)
 
-### Handling searching operation
+> **Key difference from OData:**
+> - **OData:** Framework automatically handles filtering with `[EnableQuery]`.
+> - **WebApi:** Manual parsing and filtering logic required in controller.
 
-To handle search operation, implement search logic on the server side according to the received OData-formatted query.
+### Searching
 
-![Searching query](../images/webapiadaptor-searching.png)
+The searching feature is enabled by configuring the `toolbar` property with `Search` item and injecting the `Toolbar` and `Search` modules from `@syncfusion/ej2-react-grids` into the grid.
+
+```ts
+  <GridComponent dataSource={data} toolbar={['Search']}>
+    . . .
+    . . .
+    . . .
+    <Inject services={[Search,Toolbar]}/>
+  </GridComponent>
+```
+
+After enabling the search feature, the `WebApiAdaptor` generates an OData‑style `$filter` expression that performs a keyword search across all searchable fields. It builds a combined OR‑based condition using the search term and sends it to the server. 
 
 {% tabs %}
-{% highlight cs tabtitle="OrdersController.cs" %}
-// GET: api/Orders
-[HttpGet]
+{% highlight cs tabtitle="OrdersController.cs - With Search Support" %}
 
-public object Get()
+using Microsoft.AspNetCore.Mvc;
+using WebApiAdaptor.Server.Models;
+
+namespace WebApiAdaptor.Server.Controllers
 {
-  var queryString = Request.Query;
-  var data = Orders.GetAllRecords().ToList();
-  string filter = queryString["$filter"];
-
-  if (filter != null)
-  {
-    var filters = filter.Split(new string[] { " and " }, StringSplitOptions.RemoveEmptyEntries);
-
-    foreach (var filterItem in filters)
+    [Route("api/[controller]")]
+    [ApiController]
+    public class OrdersController : ControllerBase
     {
-      if (filterItem.Contains("substringof")){
-        // Perform Searching
-        var searchParts = filterItem.Split('(', ')', '\'');
-        var searchValue = searchParts[3];
+        /// <summary>
+        /// Retrieves orders with filtering and searching support.
+        /// </summary>
+        [HttpGet]
+        public object Get()
+        {
+            var queryString = Request.Query;
+            var data = OrdersDetails.GetAllRecords().ToList();
+            string filter = queryString["$filter"];
 
-        // Apply the search value to all searchable fields
-        data = data.Where(cust =>
-            cust.OrderID.ToString().Contains(searchValue) ||
-            cust.CustomerID.ToLower().Contains(searchValue) ||
-            cust.ShipCity.ToLower().Contains(searchValue)
-        // Add conditions for other searchable fields as needed
-        ).ToList();
-      } 
-      else
-      {
-        // Perform filtering
-      }
+            if (!string.IsNullOrEmpty(filter))
+            {
+                filter = filter.Trim();
+                
+                // Remove outer parentheses.
+                if (filter.StartsWith("(") && filter.EndsWith(")"))
+                {
+                    int openCount = filter.Count(c => c == '(');
+                    int closeCount = filter.Count(c => c == ')');
+
+                    if (openCount == closeCount && openCount > 0)
+                    {
+                        filter = filter.Substring(1, filter.Length - 2).Trim();
+                    }
+                }
+                
+                var filters = filter.Split(new string[] { " and " }, StringSplitOptions.RemoveEmptyEntries);
+
+                foreach (var filterItem in filters)
+                {
+                    if (filterItem.Contains("substringof"))
+                    {
+                        // Handle SEARCH operation (global search across all columns).
+                        var searchParts = filterItem.Split('(', ')', '\'');
+                        var searchValue = searchParts[3].ToLower();
+
+                        // Search across all searchable fields.
+                        data = data.Where(x =>
+                            (x.OrderID?.ToString().Contains(searchValue) ?? false) ||
+                            (x.CustomerID?.ToLower().Contains(searchValue) ?? false) ||
+                            (x.ShipCountry?.ToLower().Contains(searchValue) ?? false) ||
+                            (x.ShipCity?.ToLower().Contains(searchValue) ?? false) ||
+                            (x.ShipName?.ToLower().Contains(searchValue) ?? false)
+                        ).ToList();
+                    }
+                    else
+                    {
+                        // Handle FILTER operation (column-specific filtering).
+                        var filterfield = "";
+                        var filtervalue = "";
+                        var filterParts = filterItem.Split('(', ')', '\'');
+                        
+                        if (filterParts.Length != 9)
+                        {
+                            var filterValueParts = filterParts[1].Split();
+                            filterfield = filterValueParts[0];
+                            filtervalue = filterValueParts[2];
+                        }
+                        else
+                        {
+                            filterfield = filterParts[3];
+                            filtervalue = filterParts[5];
+                        }
+                        
+                        switch (filterfield)
+                        {
+                            case "OrderID":
+                                data = data.Where(x => x.OrderID.ToString() == filtervalue).ToList();
+                                break;
+                            case "CustomerID":
+                                data = data.Where(x => x.CustomerID.ToLower().Contains(filtervalue.ToLower())).ToList();
+                                break;
+                            case "ShipCity":
+                                data = data.Where(x => x.ShipCity.ToLower().Contains(filtervalue.ToLower())).ToList();
+                                break;
+                            case "ShipCountry":
+                                data = data.Where(x => x.ShipCountry.ToLower().Contains(filtervalue.ToLower())).ToList();
+                                break;
+                        }
+                    }
+                }
+            }
+            
+            return new { Items = data, Count = data.Count() };
+        }
     }
-  }
-  return new { Items = data, Count = data.Count() };
 }
+
 {% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
+
+{% highlight js tabtitle="App.jsx" %}
+
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 import { GridComponent, ColumnsDirective, ColumnDirective, Toolbar, ToolbarItems, Inject } from '@syncfusion/ej2-react-grids';
 
 function App() {
     const data = new DataManager({ 
-        url: 'api/Orders',
-        adaptor: new WebApiAdaptor()
+        url: 'https://localhost:xxxx/api/Orders', // Replace with actual endpoint URL
+        adaptor: new WebApiAdaptor(),
+        crossDomain: true
     });
-    const toolbar: ToolbarItems[] = ['Search'];
+    
+    const toolbar = ['Search'];
+    
     return <GridComponent dataSource={data} height={320} toolbar={toolbar}>
         <ColumnsDirective>
-          <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150'textAlign='Right'></ColumnDirective>
-          <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-          <ColumnDirective field='ShipCity' headerText='Ship City' width='150'/>
-          <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
+            <ColumnDirective 
+                field='OrderID' 
+                headerText='Order ID' 
+                isPrimaryKey={true} 
+                width='150' 
+                textAlign='Right'>
+            </ColumnDirective>
+            <ColumnDirective 
+                field='CustomerID' 
+                headerText='Customer ID' 
+                width='150'>
+            </ColumnDirective>
+            <ColumnDirective 
+                field='ShipCity' 
+                headerText='Ship City' 
+                width='150'>
+            </ColumnDirective>
+            <ColumnDirective 
+                field='ShipCountry' 
+                headerText='Ship Country' 
+                width='150'>
+            </ColumnDirective>
         </ColumnsDirective>
         <Inject services={[Toolbar]} />
     </GridComponent>
 };
 export default App;
+
 {% endhighlight %}
 {% endtabs %}
 
-### Handling sorting operation
+![Searching query](../images/webapiadaptor-searching.png)
 
-To handle sorting actions, implement sorting logic on the server-side according to the received OData-formatted query.
+### Sorting
 
-***Ascending Sorting***
+The sorting feature is enabled by setting the `allowSorting` property to `true` and injecting the `Sort` module from `@syncfusion/ej2-react-grids` into the grid.
 
-![Sorting Ascending query](../images/webapiadaptor-sorting-asc.png)
+```ts
+  <GridComponent dataSource={data} allowSorting={true}>
+    . . .
+    . . .
+    . . .
+    <Inject services={[Sort]}/>
+  </GridComponent>
+```
 
-***Descending Sorting***
-
-![Sorting Descending query](../images/webapiadaptor-sorting-desc.png)
+After enabling sorting on the client side, the `WebApiAdaptor` generates an OData‑style `$orderby` expression based on the selected column and sort direction. This expression is sent to the server, which applies the sorting logic and returns the ordered data. The Grid then renders the sorted result set returned by the API.
 
 {% tabs %}
 {% highlight cs tabtitle="OrdersController.cs" %}
-  // GET: api/Orders
+  // GET: api/Orders.
   [HttpGet]
 
   public object Get()
   {
     var queryString = Request.Query;
     var data = Orders.GetAllRecords().ToList();
-    string sort = queryString["$orderby"];   //sorting     
+    string sort = queryString["$orderby"];     
     if (!string.IsNullOrEmpty(sort))
     {
       var sortConditions = sort.Split(',');
-      var orderedData = data.OrderBy(x => 0); // Start with a stable sort
+      var orderedData = data.OrderBy(x => 0); // Start with a stable sort.
       foreach (var sortCondition in sortConditions)
       {
         var sortParts = sortCondition.Trim().Split(' ');
@@ -404,25 +564,32 @@ To handle sorting actions, implement sorting logic on the server-side according 
           case "ShipCity":
               orderedData = sortOrder ? orderedData.ThenByDescending(x => x.ShipCity) : orderedData.ThenBy(x => x.ShipCity);
               break;
+          case "ShipCountry":
+              orderedData = sortOrder ? orderedData.ThenByDescending(x => x.ShipCountry) : orderedData.ThenBy(x => x.ShipCountry);
+              break;
+          // Add more cases for other sort fields if needed.
         }
       }
       data = orderedData.ToList();
     }
     return new { Items = data, Count = data.Count() };
   }
+
 {% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
+
+{% highlight js tabtitle="App.jsx" %}
+
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 import { GridComponent, ColumnsDirective, ColumnDirective, Sort, Inject } from '@syncfusion/ej2-react-grids';
 
 function App() {
     const data = new DataManager({ 
-        url: 'https://localhost:xxxx/api/Orders', // Replace your hosted link
+        url: 'https://localhost:xxxx/api/Orders', // Replace with the actual endpoint URL.
         adaptor: new WebApiAdaptor()
     });
     return <GridComponent dataSource={data} allowSorting={true} height={320}>
         <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150'textAlign='Right'></ColumnDirective>
+            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
             <ColumnDirective field='ShipCity' headerText='Ship City' width='150'/>
             <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
@@ -431,73 +598,35 @@ function App() {
     </GridComponent>
 };
 export default App;
+
 {% endhighlight %}
 {% endtabs %}
 
-### Handling paging operation
+![Sorting query](../images/webapiadaptor-sorting-asc.png)
 
-Implement paging logic on the server-side according to the received OData-formatted query. Ensure that the endpoint supports sorting based on the specified criteria.
+The Grid has now been successfully created with including paging, sorting, filtering. the next step is to enabling CRUD operations.
 
-![paging query](../images/webapiadaptor-paging.png)
+### CRUD operations
 
-{% tabs %}
-{% highlight cs tabtitle="OrdersController.cs" %}
+CRUD refers to the four essential data operations: **Create** (add records), **Read** (view records), **Update** (modify records), and **Delete** (remove records).
 
-// GET: api/Orders
-[HttpGet]
-
-public object Get()
-{
-    var queryString = Request.Query;
-    var data = Orders.GetAllRecords().ToList();
-    int skip = Convert.ToInt32(queryString["$skip"]);
-    int take = Convert.ToInt32(queryString["$top"]);
-    return take != 0 ? new { Items = data.Skip(skip).Take(take).ToList(), Count = data.Count() } : new { Items = data, Count = data.Count() };
-}
-{% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
-import { GridComponent, ColumnsDirective, ColumnDirective, Page, Inject } from '@syncfusion/ej2-react-grids';
-
-function App() {
-    const data = new DataManager({ 
-        url: 'https://localhost:xxxx/api/Orders', // Replace your hosted link
-        adaptor: new WebApiAdaptor()
-    });
-    return <GridComponent dataSource={data} allowPaging={true} height={320}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150'textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='ShipCity' headerText='Ship City' width='150'/>
-            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
-        </ColumnsDirective>
-        <Inject services={[Page]} />
-    </GridComponent>
-};
-export default App;
-{% endhighlight %}
-{% endtabs %}
-
-### Handling CRUD operations
-
-To manage CRUD (Create, Read, Update, Delete) operations using the WebApiAdaptor, follow the provided guide for configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid for [editing](https://ej2.syncfusion.com/react/documentation/grid/editing/edit) and utilize the sample implementation of the `OrdersController` in your server application. This controller handles HTTP requests for CRUD operations such as GET, POST, PUT, and DELETE.
-
-To enable CRUD operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component within an React application, follow these steps:
+To manage CRUD (Create, Read, Update, Delete) operations using the `WebApiAdaptor`, follow the provided guide for configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid for [editing](https://ej2.syncfusion.com/react/documentation/grid/editing/edit) and utilize the sample implementation of the **OrdersController** in the server application. This controller handles HTTP requests for CRUD operations such as `GET`, `POST`, `PUT`, and `DELETE`.
 
 {% tabs %}
-{% highlight ts tabtitle="App.tsx" %}
+{% highlight js tabtitle="App.jsx" %}
+
 import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems, EditSettingsModel, Toolbar, Edit, Inject } from '@syncfusion/ej2-react-grids';
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 
 function App() {
     const data = new DataManager({ 
-      url: 'https://localhost:xxxx/api/Orders', // Replace your hosted link
+      url: 'https://localhost:xxxx/api/Orders', // Replace with the actual endpoint URL.
       adaptor: new WebApiAdaptor()
     });
-    const editSettings: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
-    const toolbar: ToolbarItems[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'];
-    const orderIDRules: object = {required: true};
-    const customerIDRules: object = {required: true, minLength: 3};
+    const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
+    const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'];
+    const orderIDRules = {required: true};
+    const customerIDRules = {required: true, minLength: 3};
     return <GridComponent dataSource={data} editSettings={editSettings} toolbar={toolbar} height={320}>
         <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150' textAlign='Right' validationRules={orderIDRules}></ColumnDirective>
@@ -508,15 +637,17 @@ function App() {
         <Inject services={[Toolbar, Edit]} />
     </GridComponent>
 };
+
 export default App;
+
 {% endhighlight %}
 {% endtabs %}
 
-> Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) for the Grid component. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column/#isprimarykey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
+> Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) for the Grid component. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
 
-**Insert Record**
+**Insert record**
 
-To insert a new record into your Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you can utilize the `HttpPost` method in your server application. Below is a sample implementation of inserting a record using the OrdersController:
+To insert a new record into the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, utilize the `HttpPost` method in the server application. Below is a sample implementation of inserting a record using the **OrdersController**:
 
 ![WebApiAdaptor-Insert-record](../images/webapiadaptor-insert-record.png)
 
@@ -530,49 +661,50 @@ To insert a new record into your Syncfusion<sup style="font-size:70%">&reg;</sup
 /// <returns>Returns void</returns>
 public void Post([FromBody] OrdersDetails newRecord)
 {
-  // Insert a new record into the OrdersDetails model
+  // Insert a new record into the OrdersDetails model.
   OrdersDetails.GetAllRecords().Insert(0, newRecord);
 }
 ```
 
-**Update Record**
+**Update record**
 
-Updating a record in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid can be achieved by utilizing the `HttpPut` method in your controller. Here's a sample implementation of updating a record:
+To update a record in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, utilize the `HttpPut` method in the controller. Below is a sample implementation:
 
 ![WebApiAdaptor-Update-record](../images/webapiadaptor-update-record.png)
 
 ```cs
-// PUT: api/Orders/5
+// PUT: api/Orders
 [HttpPut]
 /// <summary>
 /// Update a existing data item from the data collection.
 /// </summary>
 /// <param name="updatedOrder">It holds updated record detail which is need to be updated.</param>
 /// <returns>Returns void</returns>
-public void Put(int id, [FromBody] OrdersDetails updatedOrder)
+public void Put([FromBody] OrdersDetails updatedOrder)
 {
   // Find the existing order by ID
-  var existingOrder = OrdersDetails.GetAllRecords().FirstOrDefault(o => o.OrderID == id);
+  var existingOrder = OrdersDetails.GetAllRecords().FirstOrDefault(o => o.OrderID == updatedOrder.OrderID);
   if (existingOrder != null)
   {
-    // If the order exists, update its properties
+    // If the order exists, update its properties.
     existingOrder.OrderID = updatedOrder.OrderID;
     existingOrder.CustomerID = updatedOrder.CustomerID;
     existingOrder.ShipCity = updatedOrder.ShipCity;
     existingOrder.ShipCountry = updatedOrder.ShipCountry;
+    // Update other properties similarly.
   }
 }
 ```
 
-**Delete Record**
+**Delete record**
 
-To delete a record from your Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you can utilize the `HttpDelete` method in your controller. Below is a sample implementation:
+To delete a record from the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, utilize the `HttpDelete` method in the controller. Below is a sample implementation:
 
 ![WebApiAdaptor-Delete-record](../images/webapiadaptor-delete-record.png)
 
 ```cs
 // DELETE: api/5
-[HttpDelete("{id}")]
+[HttpDelete("{key}")]
 /// <summary>
 /// Remove a specific data item from the data collection.
 /// </summary>
@@ -580,9 +712,9 @@ To delete a record from your Syncfusion<sup style="font-size:70%">&reg;</sup> Gr
 /// <returns>Returns void</returns>
 public void Delete(int key)
 {
-  // Find the order to remove by ID
+  // Find the order to remove by ID.
   var orderToRemove = OrdersDetails.GetAllRecords().FirstOrDefault(order => order.OrderID == key);
-  // If the order exists, remove it
+  // If the order exists, remove it.
   if (orderToRemove != null)
   {
     OrdersDetails.GetAllRecords().Remove(orderToRemove);
@@ -590,4 +722,31 @@ public void Delete(int key)
 }
 ```
 
-![WebApiAdaptor CRUD operations](../images/adaptor-crud-operation.gif)
+## Troubleshooting
+
+| Issue | Resolution |
+|-------|----------|
+| **CORS error** | Verify CORS configuration in **Program.cs** (already covered above). |
+| **404 not found** | Confirm URL and port number match server configuration. |
+| **Empty Grid** | Inspect browser console for errors; verify server data response format. |
+| **Styles missing** | Confirm styles.css import in main application file. |
+| **Incorrect response format** | Ensure server returns `{ Items: [], Count: number }` format. |
+
+
+## Run the application
+
+Run the application in Visual Studio, accessible on a URL like **https://localhost:xxxx**. Verify the API returns order data at **https://localhost:xxxx/api/Orders**, where **xxxx** is the port. Grid displays order data fetched from the backend API:
+
+![WebApiAdaptor](../images/adaptor.gif)
+
+## Complete sample repository
+
+For the complete working implementation of this example, refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-adaptors/WebApiAdaptor) repository.
+
+## See also
+- [Custom Remote Binding](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/custom-adaptor)
+- [Connect to custom REST APIs](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/url-adaptor)
+- [Hybrid data binding](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/remote-save-adaptor)
+- [RESTful CRUD Operations in ASP.NET WebForms](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/web-method-adaptor)
+- [Connect to OdataV4 services](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/odatav4-adaptor)
+- [GraphQL Integration for Syncfusion React Grids](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/graphql-adaptor)

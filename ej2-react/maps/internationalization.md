@@ -31,10 +31,10 @@ The numeric formats such as currency, percentage and so on can be displayed in t
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs46/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs46/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs46/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs46/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

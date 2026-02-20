@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Fancy Tooltip customization in React Tooltip component
 
-The arrow of the Tooltip can be customized as needed by customizing CSS on the sample side.
+The Tooltip arrow can be customized by modifying CSS at the sample level.
 
 The React Tooltip component is styled using CSS3 and positions the tip arrow according to the Tooltip positions such as `TopCenter`, `BottomLeft`, `RightTop`, and more.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Api Tooltip in React Tooltip component | Syncfusion
-description: Learn here all about Api Tooltip in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
-control: Api Tooltip 
+title: API Tooltip in React Tooltip component | Syncfusion
+description: Learn here all about API Tooltip in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
+control: API Tooltip 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Api Tooltip in React Tooltip component
+# API Tooltip in React Tooltip component
 
 Represents the Tooltip component that displays a piece of information about the target element on mouse hover.
 ```

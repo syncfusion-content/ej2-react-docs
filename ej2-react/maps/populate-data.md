@@ -144,10 +144,10 @@ Data from a data source can be bound to the Maps in two different ways.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs78/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs78/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs78/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs78/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

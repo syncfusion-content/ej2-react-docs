@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Position the dialog on center of the page on scrolling in React Dialog component
 
-By default, when scroll the page/container Dialog also scrolled along with the page/container. When a user expects to display the Dialog in the same position without scrolling achieving this in sample level as like below. Here added 'e-fixed' class to Dialog element and prevent the scrolling.
+By default, the Dialog scrolls along with the page or container. To keep the Dialog fixed in the center of the viewport while the page scrolls, apply the `e-fixed` class to the Dialog element. This prevents the Dialog from moving when the user scrolls the page, maintaining its centered position in the current view.
 
 `[Class-component]`
 

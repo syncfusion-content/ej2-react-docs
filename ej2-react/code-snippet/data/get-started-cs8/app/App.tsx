@@ -4,6 +4,7 @@ import * as React from 'react';
 import { data } from './datasource';
 import { IOrders } from './orders';
 import { Row } from './rowTemplate';
+import './App.css';
 
 export default class App extends React.Component<{}, {}>{
 

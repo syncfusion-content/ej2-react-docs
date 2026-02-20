@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Api in React Tooltip component | Syncfusion
-description: Learn here all about Api in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
-control: Api 
+title: API reference in React Tooltip component | Syncfusion
+description: Learn here all about the API reference in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
+control: API reference 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Api in React Tooltip component
+# API reference in React Tooltip component
 
 ## Components
 

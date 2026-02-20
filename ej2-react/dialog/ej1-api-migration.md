@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ej1 api migration in React Dialog component | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
-control: Ej1 api migration 
+title: EJ1 API migration in React Dialog component | Syncfusion
+description: Learn here all about EJ1 API migration in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
+control: EJ1 API migration 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ej1 api migration in React Dialog component
+# EJ1 API migration in React Dialog component
 
 This article describes the API migration process of Dialog component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 

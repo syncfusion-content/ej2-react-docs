@@ -102,10 +102,10 @@ The following code example shows how to add legend in the gauge.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-legend-cs1/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-legend-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-legend-cs1/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-legend-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -2,7 +2,7 @@
 layout: post
 title: Customize progress bar theme and sizing in React Toast component | Syncfusion
 description: Learn here all about Customize progress bar theme and sizing in Syncfusion React Toast component of Syncfusion Essential JS 2 and more.
-control: Customize progress bar theme and sizing 
+control: Toast
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Customize progress bar theme and sizing in React Toast component
 
-In default, the Progress bar will appear based on the theme stylings and dimensions. You can customize progress bar stylings through custom CSS or Event functions.
+By default, the Toast progress bar uses theme-defined styling and dimensions. Customize progress bar appearance including color, height, and animation speed using either custom CSS classes or the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/toast/#beforeopen) event. Event-based customization enables dynamic styling based on toast content or application state, while CSS approaches provide consistent styling across all toasts.
 
-Here below sample demonstrates customize the progress bar Stylings using [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/toast/#beforeopen) Event.
+The following example demonstrates progress bar customization using the `beforeOpen` event:
 
 `[Class-component]`
 

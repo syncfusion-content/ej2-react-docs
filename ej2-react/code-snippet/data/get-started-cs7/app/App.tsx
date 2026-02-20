@@ -3,6 +3,7 @@ import { DataManager, Query, ReturnOption,ODataV4Adaptor } from '@syncfusion/ej2
 import * as React from 'react';
 import { IOrders } from './orders';
 import { Row } from './rowTemplate';
+import './App.css';
 
 const SERVICE_URI: string = 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/';
 

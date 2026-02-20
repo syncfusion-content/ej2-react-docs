@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open mode in React Tooltip component
 
-You can specify the mode in which the Tooltip opens on a page, i.e., on hovering, focusing, or clicking on the target elements.
+The mode in which the Tooltip opens on a page can be specified by setting the open mode to hovering, focusing, or clicking on target elements.
 
 > On mobile devices, Tooltips appear when you tap and hold the element, even if the [`opensOn`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#openson) option is assigned with `Hover`.
 > Tooltips are also displayed as long as you continue to tap and hold the element. When you release your finger, it disappears after 1.5 seconds.

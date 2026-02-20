@@ -19,11 +19,13 @@ export default class App extends React.Component {
         });
     }
     render() {
-        return (<table id='datatable' className='e-table'>
+        return (
+            <table id='datatable' className='e-table'>
                 <thead>
                     <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th></tr>
                 </thead>
                 <tbody>{getValue('items', this.state)}</tbody>
-            </table>);
+            </table>
+        );
     }
 }

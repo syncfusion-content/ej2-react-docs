@@ -2,7 +2,7 @@
 layout: post
 title: Animation in React Toast component | Syncfusion
 description: Learn here all about Animation in Syncfusion React Toast component of Syncfusion Essential JS 2 and more.
-control: Animation 
+control: Toast
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,11 +10,9 @@ domainurl: ##DomainURL##
 
 # Animation in React Toast component
 
-[React Toasts](https://www.syncfusion.com/react-components/react-toast) support custom animations for both shows and hide actions from the provided animation option of `Animation` library.
+The Toast component supports customizable animations for display and dismissal, enhancing the visual feedback of notification appearance and removal. Configure enter and exit animations using standard animation library options. By default, toasts use `FadeIn` animation when appearing and `FadeOut` animation when disappearing. Custom animations create smoother user experience and draw attention to important notifications.
 
-Default animation is given as `FadeIn` for showing the toast and `FadeOut` for hiding the toast.
-
-The sample demonstrates some types of animation that suits Toast. You can check all the animation effects here.
+> **Accessibility note:** Consider users who prefer reduced motion. Toasts respecting the `prefers-reduced-motion` media query will minimize or disable animations for accessibility compliance.
 
 `[Class-component]`
 

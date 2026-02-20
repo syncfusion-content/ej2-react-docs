@@ -2,7 +2,7 @@
 layout: post
 title: Prevent duplicate toast display in React Toast component | Syncfusion
 description: Learn here all about Prevent duplicate toast display in Syncfusion React Toast component of Syncfusion Essential JS 2 and more.
-control: Prevent duplicate toast display 
+control: Toast
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Prevent duplicate toast display in React Toast component
 
-You can prevent identical same Toast displaying in a screen by event function. You can terminate the Toast displaying process by setting cancel event property in [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/toast/#beforeopen) Event.
+Prevent duplicate toast notifications by detecting matching toasts and canceling display of redundant messages. Implement duplicate prevention using the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/toast/#beforeopen) event callback to check existing toast content and set the `cancel` property to `true` to stop display. This pattern improves user experience by eliminating notification fatigue and reducing screen clutter from repeated messages.
 
-Here below sample demonstrates preventing duplicate title Toast element displaying, with custom code blocks.
+The following example demonstrates preventing duplicate toasts based on matching titles:
 
 `[Class-component]`
 

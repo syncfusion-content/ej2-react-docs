@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # React hooks dialog in React Dialog component
 
-You can show the Dialog by using the React state change hook with Visible property. In the below example, we have rendered the React JSX component as content of Dialog component.
+The Dialog can be shown by using the React state change hook with the `visible` property. The following example renders a React JSX component as the content of the Dialog component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

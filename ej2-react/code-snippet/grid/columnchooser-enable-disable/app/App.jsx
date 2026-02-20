@@ -1,5 +1,3 @@
-
-
 import { ColumnChooser, ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import { Inject, Toolbar } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
@@ -31,5 +29,3 @@ function App() {
     )
 };
 export default App;
-
-

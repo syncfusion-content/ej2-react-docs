@@ -2,6 +2,8 @@ import { getValue } from '@syncfusion/ej2-base';
 import { DataManager, Query ,ODataV4Adaptor} from '@syncfusion/ej2-data';
 import * as React from 'react';
 import { Row } from './rowTemplate';
+import './App.css';
+
 const SERVICE_URI = 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/';
 export default class App extends React.Component {
     constructor(props) {

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Animation in React Tooltip component
 
-The Tooltip can be animated using a set of specific animation effects, which can be controlled using the [`animation`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#animation) property.
+The Tooltip can be animated using specific animation effects controlled through the [`animation`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#animation) property.
 
 The animation property also allows you to set delay, duration, and various other effects of your choice.
 

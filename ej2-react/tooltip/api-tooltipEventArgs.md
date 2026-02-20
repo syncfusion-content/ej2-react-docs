@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Api tooltipEventArgs in React Tooltip component | Syncfusion
-description: Learn here all about Api tooltipEventArgs in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
-control: Api tooltipEventArgs 
+title: API TooltipEventArgs in React Tooltip component | Syncfusion
+description: Learn here all about API TooltipEventArgs in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
+control: API TooltipEventArgs 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Api tooltipEventArgs in React Tooltip component
+# API TooltipEventArgs in React Tooltip component
 
 Interface for Tooltip event arguments.
 

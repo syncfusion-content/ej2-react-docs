@@ -18,7 +18,7 @@ function App() {
       <label style={{ padding: '30px 17px 0 0' }}>Autowrap for header column :</label>
       <DropDownListComponent dataSource={dropDownData} index={0} width="100" change={valueChange}></DropDownListComponent>
       <div style={{ padding: '40px 0 0 0' }}>
-        <GridComponent dataSource={inventoryData} height={250} ref={g => grid = g} allowPaging={true} allowTextWrap={true} textWrapSettings={wrapSettings}>
+        <GridComponent dataSource={inventoryData} height={230} ref={g => grid = g} allowPaging={true} allowTextWrap={true} textWrapSettings={wrapSettings}>
           <ColumnsDirective>
             <ColumnDirective field='Inventor' headerText='Inventor' width='100' />
             <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' width='100' />

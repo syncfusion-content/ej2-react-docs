@@ -21,6 +21,31 @@ To enable the AI Assistant:
 1. Add the `AIAssistantService` to the **providers** section.
 2. Include `AICommands` and `AIQuery` in the `toolbarSettings.items` property.
 
+## Importing Styles
+
+The Rich Text Editor **AI Assistant** is provided as an injectable module and requires additional style references to render the AI Assistant as expected.
+
+Along with the default Rich Text Editor styles, the **Interactive Chat** and **Notifications** styles are necessary for the proper rendering of the AI AssistView.
+
+Add the following style references to the **src/App.css** file:
+ 
+```css
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-richtexteditor/styles/tailwind3.css';
+ 
+/* Required for AI Assistant */
+@import '../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css';
+```
+
+Once these styles are included, the **AI Assistant** will render as expected.
+
 ## Accessing the AI Assistant Popup
 
 The AI Assistant interface can be opened through the following options:

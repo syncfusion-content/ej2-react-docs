@@ -23,7 +23,8 @@ export default class App extends React.Component<{}, {}>{
                 this.setState({
                     items: res
                 });
-            });
+            }
+        );
      }
 
     public render() {
@@ -32,7 +33,8 @@ export default class App extends React.Component<{}, {}>{
                     <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th></tr>
                 </thead>
                 <tbody>{ getValue('items', this.state) }</tbody>
-            </table>)
+            </table>
+        )
     }
 
 }

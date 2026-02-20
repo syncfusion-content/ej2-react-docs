@@ -14,24 +14,26 @@ export default class App extends React.Component<{}, {}>{
     }
     componentDidMount() { 
         new DataManager({ url: SERVICE_URI, adaptor: new ODataV4Adaptor() })
-            .executeQuery(new Query().addParams('$top', '8'))
-            .then((e: ReturnOption) => {
-                const res = (e.result as IOrders[]).map((row: IOrders, index: number) => (
-                    <Row key={row.OrderID} {...row} />
-                  ));
-                  this.setState({
-                    items: res
-                  });
-            });
+        .executeQuery(new Query().addParams('$top', '8'))
+        .then((e: ReturnOption) => {
+            const res = (e.result as IOrders[]).map((row: IOrders, index: number) => (
+                <Row key={row.OrderID} {...row} />
+                ));
+                this.setState({
+                items: res
+                });
+        });
      }
 
     public render() {
-        return (<table id='datatable' className='e-table'>
+        return (
+            <table id='datatable' className='e-table'>
                 <thead>
                     <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th></tr>
                 </thead>
                 <tbody>{ getValue('items', this.state) }</tbody>
-            </table>)
+            </table>
+        )
     }
 
 }

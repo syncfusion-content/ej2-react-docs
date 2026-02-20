@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Show dialog with full screen in React Dialog component
 
-You can show the dialog in fullscreen by passing `true` as argument to the dialog [show](https://ej2.syncfusion.com/react/documentation/api/dialog/#show) method.
+The dialog can be displayed in fullscreen mode by passing `true` as an argument to the dialog [show](https://ej2.syncfusion.com/react/documentation/api/dialog/#show) method.
 
 `[Class-component]`
 

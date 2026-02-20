@@ -2,7 +2,7 @@
 layout: post
 title: Shimmer effect in React Skeleton component | Syncfusion
 description: Learn here all about Shimmer effect in Syncfusion React Skeleton component of Syncfusion Essential JS 2 and more.
-control: Shimmer effect 
+control: Skeleton
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,21 +10,19 @@ domainurl: ##DomainURL##
 
 # Shimmer effect in React Skeleton component
 
-You can use the [`shimmerEffect`](https://ej2.syncfusion.com/react/documentation/api/skeleton/#shimmereffect) property to change animation effect in the skeleton control. Skeleton supports `Wave`, `Pulse` and `Fade` effects and by default, the `shimmerEffect` is set to `Wave` effect.
+Shimmer effects provide animated visual feedback during content loading, signaling to users that the application is actively retrieving content. Configure the animation style using the [`shimmerEffect`](https://ej2.syncfusion.com/react/documentation/api/skeleton/#shimmereffect) property. The Skeleton component supports three shimmer effect types: Wave (default), Pulse, and Fade. Each effect creates a different visual impression while conveying the same "loading" message.
 
-```ts
-import { SkeletonComponent } from '@syncfusion/ej2-react-notifications';
-import * as React from "react";
+## Effect types
 
-function App() {
+The Skeleton component supports the following shimmer effects:
 
-  return (
-    <SkeletonComponent shape= 'Circle' width= "60px" shimmerEffect= 'Pulse'></SkeletonComponent>);
-}
-export default App;
-```
+* **Wave** (default) - Creates a flowing wave animation across the skeleton, mimicking scanning motion
+* **Pulse** - Creates a uniform fading in and out animation, simulating breathing or pulsing content
+* **Fade** - Creates a gradual fade animation, providing subtle visual feedback
 
-Below example demonstrates a list with pulse effect skeleton.
+## Example
+
+The following example demonstrates a list with pulse effect skeleton:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

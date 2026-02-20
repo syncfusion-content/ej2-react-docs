@@ -17,7 +17,7 @@ The available types are:
 * Fabric
 * Bootstrap
 
-You can change the Essential<sup style="font-size:70%">&reg;</sup> JS 2 component spinner type by passing the type of the spinner as parameter to the `setSpinner` method like as below.
+The Essential<sup style="font-size:70%">&reg;</sup> JS 2 component Spinner type can be changed by passing the type as a parameter to the `setSpinner` method as shown below.
 
 ```ts
 // Specify the type of the Spinner to be displayed
@@ -25,7 +25,7 @@ You can change the Essential<sup style="font-size:70%">&reg;</sup> JS 2 componen
 setSpinner({ type: 'Bootstrap'});
 ```
 
-> After Essential<sup style="font-size:70%">&reg;</sup> JS 2 component creation only, you can change the Essential<sup style="font-size:70%">&reg;</sup> JS 2 component spinner type.
+> The Spinner type can only be changed after the Essential<sup style="font-size:70%">&reg;</sup> JS 2 component is created.
 
 `[Class-component]`
 

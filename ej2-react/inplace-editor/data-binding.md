@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Data binding in React Inplace editor component
 
-The Essential<sup style="font-size:70%">&reg;</sup> JS2 React In-place Editor component can load the data either from local data sources or remote data services using the `dataSource` property and it supports the data type of an array or `DataManager`. Also supports different kind of data services such as OData, OData V4, Web API and data formats such as XML, JSON, JSONP with the help of `DataManager` adaptors.
+The Essential<sup style="font-size:70%">&reg;</sup> JS 2 React In-place Editor component supports data binding from local data sources or remote data services using the `dataSource` property. It accepts an array or `DataManager` instance and supports various data services such as OData, OData V4, and Web API with data formats including XML, JSON, and JSONP through `DataManager` adaptors.
 
 ## Local
 
-To bind local data to the Essential<sup style="font-size:70%">&reg;</sup> JS2 React In-place Editor component, you have to assign a JavaScript array of object or string to the `dataSource` property. The local data source can also be provided as an instance of the `DataManager`.
+Bind local data to the In-place Editor by assigning a JavaScript array of objects or strings to the `dataSource` property. You can also provide the local data source as a `DataManager` instance.
 
 `[Class-component]`
 
@@ -44,13 +44,13 @@ To bind local data to the Essential<sup style="font-size:70%">&reg;</sup> JS2 Re
 
 ## Remote
 
-To bind remote data to the Essential<sup style="font-size:70%">&reg;</sup> JS2 React In-place Editor component, assign service data as an instance of `DataManager` to the `dataSource` property. To interact with remote data source, provide the endpoint URL.
+Bind remote data to the In-place Editor by assigning a `DataManager` instance to the `dataSource` property. Provide the endpoint URL to enable communication with the remote data source.
 
 ### OData V4
 
-The OData V4 is an improved version of OData protocols, and the [DataManager](../data/getting-started/) can also retrieve and consume OData V4 services. To fetch data from the server by using `DataManager` with the adaptor property configure as [ODataV4Adaptor](../data/adaptors/#odatav4-adaptor).
+OData V4 is an improved version of the OData protocol. The [DataManager](../data/getting-started/) can retrieve and consume OData V4 services by configuring the adaptor property to [ODataV4Adaptor](../data/adaptors/#odatav4-adaptor).
 
-In the following sample, In-place Editor renders a `DropDownList` component and its `dataSource` property configured for fetching a data from the server by using `ODataV4Adaptor` with `DataManager`.
+In the following sample, the In-place Editor renders a `DropDownList` component with its `dataSource` property configured to fetch data from the server using `ODataV4Adaptor` and `DataManager`.
 
 `[Class-component]`
 
@@ -80,9 +80,9 @@ In the following sample, In-place Editor renders a `DropDownList` component and 
 
 ### Web API
 
-Data can fetch from the server by using [DataManager](../data/getting-started/) with the adaptor property configure as [WebApiAdaptor](../data/adaptors/#web-api-adaptor).
+Fetch data from the server by using [DataManager](../data/getting-started/) with the adaptor property configured as [WebApiAdaptor](../data/adaptors/#web-api-adaptor).
 
-In the following sample, In-place Editor render a `DropDownList` component and its `dataSource` property configured for fetching a data from the server by using `WebApiAdaptor` with `DataManager`.
+In the following sample, the In-place Editor renders a `DropDownList` component with its `dataSource` property configured to fetch data from the server using `WebApiAdaptor` and `DataManager`.
 
 `[Class-component]`
 

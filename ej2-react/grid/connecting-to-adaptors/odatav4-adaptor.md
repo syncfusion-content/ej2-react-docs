@@ -1,165 +1,58 @@
 ---
 layout: post
-title: Bind & perform CRUD action with ODataV4Adaptor in Syncfusion Grid
-description: Learn here all about how to bind data and perform CRUD action using ODataV4Adaptor in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid - OData v4 Adaptor | Syncfusion
+description: React Grid OData v4 adaptor supports integration with OData v4 services, applying query options, and configuring filtering, sorting, and paging operations.
 control: ODataV4 Adaptor
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# ODataV4Adaptor in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid Component
+# OData Remote Data Binding in Syncfusion React Components
 
-The `ODataV4Adaptor` in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid Component allows seamless integration of the React Grid with OData V4 services, enabling efficient data fetching and manipulation. This guide provides detailed instructions on binding data and performing CRUD (Create, Read, Update, Delete) actions using the `ODataV4Adaptor` in your Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid Component.
- 
-## Creating an OData service
+The `ODataV4Adaptor` in the Syncfusion<sup style="font-size:70%">&reg;</sup> React DataManager enables seamless integration between the React Grid and OData V4 services by handling OData‑formatted request and response processing. It automatically converts Grid actions such as filtering, sorting, paging, grouping, and CRUD into OData V4 compliant query options (like `$filter`, `$orderby`, `$top`, `$skip`) and sends them to the server. The adaptor also parses the structured OData V4 JSON response, extracting the result set and count values, ensuring smooth remote data binding without custom query or response logic.
 
-To configure a server with Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, you need to follow the below steps:
+For complete server‑side configuration and additional implementation details, refer to the DataManager ODataV4Adaptor documentation, which covers endpoint setup, query processing, and best practices for integrating OData V4 services.
 
-**1. Project Creation:**
+Once the project creation and backend setup are complete, the next step is to render the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid Component on the client side.
 
-Open Visual Studio and create an React and ASP.NET Core project named **ODataV4Adaptor**. To create an React and ASP.NET Core application, follow the documentation [link](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-react?view=vs-2022) for detailed steps.
+**Project structure:**
 
-**2. Install NuGet Packages**
-
-Using the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), install the `Microsoft.AspNetCore.OData` NuGet package.
-
-**3. Model Class Creation:**
-
-Create a model class named **OrdersDetails.cs** in the server-side **Models** folder to represent the order data.
-
-{% tabs %}
-{% highlight cs tabtitle="OrdersDetails.cs" %}
-
-using System.ComponentModel.DataAnnotations;
-
-namespace ODataV4Adaptor.Server.Models
-{
-    public class OrdersDetails
-    {
-        public static List<OrdersDetails> order = new List<OrdersDetails>();
-        public OrdersDetails()
-        {
-
-        }
-        public OrdersDetails(
-        int OrderID, string CustomerId, int EmployeeId, string ShipCountry)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerId;
-            this.EmployeeID = EmployeeId;
-            this.ShipCountry = ShipCountry;
-        }   
-
-        public static List<OrdersDetails> GetAllRecords()
-        {
-            if (order.Count() == 0)
-            {
-                int code = 10000;
-                for (int i = 1; i < 10; i++)
-                {
-                    order.Add(new OrdersDetails(code + 1, "ALFKI", i + 0, "Denmark"));
-                    order.Add(new OrdersDetails(code + 2, "ANATR", i + 2, "Brazil"));
-                    order.Add(new OrdersDetails(code + 3, "ANTON", i + 1, "Germany"));
-                    order.Add(new OrdersDetails(code + 4, "BLONP", i + 3, "Austria"));
-                    order.Add(new OrdersDetails(code + 5, "BOLID", i + 4, "Switzerland"));
-                    code += 5;
-                }
-            }
-            return order;
-        }
-        [Key]
-        public int? OrderID { get; set; }
-        public string? CustomerID { get; set; }
-        public int? EmployeeID { get; set; }
-        public string? ShipCountry { get; set; }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-**4. Build the Entity Data Model**
-
-To construct the Entity Data Model for your OData service, utilize the `ODataConventionModelBuilder` to define the model's structure. Start by creating an instance of the `ODataConventionModelBuilder`, then register the entity set **Orders** using the `EntitySet<T>` method, where `OrdersDetails` represents the CLR type containing order details. 
-
-```cs
-// Create an ODataConventionModelBuilder to build the OData model
-var modelBuilder = new ODataConventionModelBuilder();
-
-// Register the "Orders" entity set with the OData model builder
-modelBuilder.EntitySet<OrdersDetails>("Orders");
+```
+ODataV4Adaptor/
+├── OdataV4Adaptor.client/       # React frontend (Vite/React project).
+│   ├── src/
+│   │   ├── App.css
+│   │   └── App.jsx                  # Add odatav4 adaptor here.
+│   └── package.json
+└── ODataV4Adaptor.Server/      # ASP.NET Core backend (API).
+    ├── Controllers/                 # API controllers (will be created here).
+    ├── Models/                      # Data models (will be created here).
+    └── Program.cs                   # Server configuration.
 ```
 
-**5. Register the OData Services**
+## React Grid frontend setup using Syncfusion OdataV4Adaptor
 
-Once the Entity Data Model is built, you need to register the OData services in your ASP.NET Core application. Here's how:
+After finishing the backend setup for the **OdataV4Adaptor** ASP.NET Core project, next step is to integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid on the client side by following these instructions.
 
-```cs
-// Add controllers with OData support to the service collection
-builder.Services.AddControllers().AddOData(
-    options => options
-        .Count()
-        .AddRouteComponents("odata", modelBuilder.GetEdmModel()));
-```
+### Step 1: Install Syncfusion packages
 
-**6. Add controllers**
-
-Finally, add controllers to expose the OData endpoints. Here's an example:
-
-```cs
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.OData.Query;
-using ODataV4Adaptor.Server.Models;
-
-namespace ODataV4Adaptor.Server.Controllers
-{
-    [Route("[controller]")]
-    [ApiController]
-    public class OrdersController : ControllerBase
-    {
-        /// <summary>
-        /// Retrieves all orders.
-        /// </summary>
-        /// <returns>The collection of orders.</returns>
-        [HttpGet]
-        [EnableQuery]
-        public IActionResult Get()
-        {
-            var data = OrdersDetails.GetAllRecords().AsQueryable();
-            return Ok(data);
-        }
-    }
-}
-```
-
-**7. Run the Application:**
-
-Run the application in Visual Studio. It will be accessible on a URL like **https://localhost:xxxx**. 
-
-After running the application, you can verify that the server-side API controller is successfully returning the order data in the URL(https://localhost:xxxx/odata/Orders). Here **xxxx** denotes the port number.
-
-## Connecting Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid to an OData service
-
-To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component into your React and ASP.NET Core project using Visual Studio, follow the below steps:
-
-**Step 1: Install Syncfusion<sup style="font-size:70%">&reg;</sup> Package**
-
-Open your terminal in the project's client folder and install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages using npm:
+Right‑click the **OdataV4Adaptor.client** folder in **Solution Explorer** and select **Open in Terminal** (available in newer Visual Studio versions), or open a Developer Command prompt/PowerShell from the Start menu and navigate manually to the **OdataV4Adaptor.client directory**. Once inside the folder, confirm that **package.json** is present, then run the following commands to install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages:
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
 npm install @syncfusion/ej2-data --save
 ```
 
-**Step 2: Adding CSS reference**
+### Step 2: Add CSS styles
 
-Include the necessary CSS files in your `styles.css` file to style the Syncfusion<sup style="font-size:70%">&reg;</sup> React component:
+Navigate to the **src** folder and open (or create) the stylesheet such as **styles.css** or **App.css**, then add the required CSS import statements to apply the Grid's styling.
 
-{% tabs %}
-{% highlight css tabtitle="styles.css" %}
-
+```css
+/* Base styles - Required for all Syncfusion components */
 @import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
+
+/* Component-specific styles */
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
 @import '../node_modules/@syncfusion/ej2-calendars/styles/material3.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css';
@@ -167,292 +60,608 @@ Include the necessary CSS files in your `styles.css` file to style the Syncfusio
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material3.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css';
+
+/* Grid component styles - Required */
 @import '../node_modules/@syncfusion/ej2-react-grids/styles/material3.css';
+```
 
-{% endhighlight %}
-{% endtabs %}
+Import the **App.css** in the application entry point(**App.jsx**).
 
-**Step 4: Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Component**
+```js
+import "./App.css";
+...
+...
 
-In your component file (e.g., App.tsx), import `DataManager` and `ODataV4Adaptor` from `@syncfusion/ej2-data`. Create a `DataManager` instance specifying the URL of your API endpoint(https:localhost:xxxx/odata/Orders) using the `url` property and set the adaptor `ODataV4Adaptor`.
+```
+
+### Step 3: Create React Grid component with OdatV4Adaptor
+
+Grid integration with OData‑based backend services is enabled through the `ODataV4Adaptor`, which connects the Syncfusion `DataManager` to OData V4 REST endpoints. It automatically converts Grid actions such as paging, sorting, filtering, searching, and grouping into OData‑compliant query parameters that the server can process. This makes it ideal for applications built on OData V4, offering seamless server‑side data operations without the need for custom request or response handling.
+
+By delegating these operations to the server rather than executing them in the browser, the Grid ensures that only the required data is retrieved for each request. 
 
 {% tabs %}
-{% highlight ts tabtitle="App.tsx" %}
+{% highlight js tabtitle="App.jsx" %}
 import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 
 function App() {
+    // Create DataManager with ODataV4Adaptor
     const data = new DataManager({ 
-      url:'https://localhost:xx/odata/Orders', // Here xx represents the port number
-      adaptor: new ODataV4Adaptor()
+      url: 'https://localhost:xxxx/odata/Orders', // Replace xxxx with actual port number
+      adaptor: new ODataV4Adaptor(), // Handles all OData communication
+      crossDomain: true // Enables cross-domain requests
     });
-    return <GridComponent dataSource={data} >
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150'textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='Employee ID' width='150'/>
-            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
-        </ColumnsDirective>
-    </GridComponent>
-};
+    
+    return (
+      <div style={{ margin: '20px' }}>
+        <h2>Orders Grid</h2>
+        <GridComponent dataSource={data}>
+          <ColumnsDirective>
+            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150' textAlign='Right' /> 
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+            <ColumnDirective field='EmployeeID' headerText='Employee ID' width='150' />
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+          </ColumnsDirective>
+        </GridComponent>
+      </div>
+    );
+}
+
 export default App;
+
 {% endhighlight %}
 {% endtabs %}
 
-> Replace https://localhost:xxxx/odata/Orders with the actual **URL** of your API endpoint that provides the data in a consumable format (e.g., JSON).
+> The Grid sends GET requests with OData V4 query options such as `$filter`, `$orderby`, `$top`, and `$skip`, and the server is expected to return an OData‑compliant JSON response containing the total record count (`@odata.count`) and the data collection (`value`) for proper data binding and paging.
 
-Run the application in Visual Studio. It will be accessible on a URL like **https://localhost:xxxx**.
+## Server-side data operations
 
-> Ensure your API service is configured to handle CORS (Cross-Origin Resource Sharing) if necessary.
+React Grid optimizes large datasets by relying on server‑side data operations such as filtering, sorting, and paging rather than processing everything in the browser. The `Syncfusion.EJ2.AspNet.Core` package supports this approach by providing built‑in methods that efficiently handle these operations on the server, ensuring smooth performance even with heavy data loads.
 
-  ```cs
-  [program.cs]
-  builder.Services.AddCors(options =>
-  {
-    options.AddDefaultPolicy(builder =>
-    {
-      builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
-    });
-  });
-  var app = builder.Build();
-  app.UseCors();
-  ```
+### Paging
 
-## Handling filtering operation
+The paging feature is enabled by setting the `allowPaging` property to `true` and injecting the `Page` module from `@syncfusion/ej2-react-grids` into the grid.
 
-To enable filter operations in your web application using OData, you first need to configure the OData support in your service collection. This involves adding the `Filter` method within the OData setup, allowing you to filter data based on specified criteria. Once enabled, clients can utilize the **$filter** query option in your requests to filter for specific data entries.
+```ts
+  <GridComponent dataSource={data} allowPaging={true}>
+    . . .
+    . . .
+    . . .
+    <Inject services={[Page]}/>
+  </GridComponent>
+```
 
-{% tabs %}
-{% highlight cs tabtitle="Program.cs" %}
-// Create a new instance of the web application builder
-var builder = WebApplication.CreateBuilder(args);
+After enabling paging on the client side, the `ODataV4Adaptor` generates OData‑compliant paging parameters in the outgoing request. It applies paging by adding `$skip` and `$top` values based on the Grid’s current page and page size. When the server receives these parameters, it returns only the required page data, and the Grid renders the requested page.
 
-// Create an ODataConventionModelBuilder to build the OData model
-var modelBuilder = new ODataConventionModelBuilder();
-
-// Register the "Orders" entity set with the OData model builder
-modelBuilder.EntitySet<OrdersDetails>("Orders");
-
-// Add services to the container.
-
-// Add controllers with OData support to the service collection
-builder.Services.AddControllers().AddOData(
-    options => options
-        .Count()
-        .Filter() //filtering
-        .AddRouteComponents("odata", modelBuilder.GetEdmModel()));
-{% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
-import { ColumnDirective, ColumnsDirective, GridComponent, Filter } from '@syncfusion/ej2-react-grids';
-
-function App() {
-    const data = new DataManager({ 
-      url:'https://localhost:xxxx/odata/Orders', // Replace your hosted link
-      adaptor: new ODataV4Adaptor()
-    });
-    return <GridComponent dataSource={data} allowFiltering={true}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150'textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='Employee ID' width='150'/>
-            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
-        </ColumnsDirective>
-         <Inject services={[Filter]} />
-    </GridComponent>
-};
-export default App;
-{% endhighlight %}
-{% endtabs %}
-
-**Single column filtering**
-
-![Filtering query](../images/odatav4-adaptor-filtering.png)
-
-**Multi column filtering**
-
-![Filtering query](../images/odatav4-adaptor-multi-column-filtering.png)
-
-## Handling searching operation
-
-To enable search operations in your web application using OData, you first need to configure the OData support in your service collection. This involves adding the `Filter` method within the OData setup, allowing you to filter data based on specified criteria. Once enabled, clients can utilize the **$filter** query option in their requests to search for specific data entries.
-
-{% tabs %}
-{% highlight cs tabtitle="program.cs" %}
-// Create a new instance of the web application builder
-var builder = WebApplication.CreateBuilder(args);
-
-// Create an ODataConventionModelBuilder to build the OData model
-var modelBuilder = new ODataConventionModelBuilder();
-
-// Register the "Orders" entity set with the OData model builder
-modelBuilder.EntitySet<OrdersDetails>("Orders");
-
-// Add services to the container.
-
-// Add controllers with OData support to the service collection
-builder.Services.AddControllers().AddOData(
-    options => options
-        .Count()
-        .Filter() // searching
-        .AddRouteComponents("odata", modelBuilder.GetEdmModel()));
-{% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
-import { ColumnDirective, ColumnsDirective, GridComponent, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
-
-function App() {
-    const data = new DataManager({ 
-      url:'https://localhost:xxxx/odata/Orders', // Replace your hosted link
-      adaptor: new ODataV4Adaptor()
-    });
-    const toolbar: ToolbarItems[] = ['Search'];
-    return <GridComponent dataSource={data} toolbar={toolbar}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150'textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='Employee ID' width='150'/>
-            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
-        </ColumnsDirective>
-        <Inject services={[Toolbar]} />
-    </GridComponent>
-};
-export default App;
-{% endhighlight %}
-{% endtabs %}
-
-![Searching query](../images/odatav4-adaptor-searching.png)
-
-## Handling sorting operation
-
-To enable sorting operations in your web application using OData, you first need to configure the OData support in your service collection. This involves adding the `OrderBy` method within the OData setup, allowing you to sort data based on specified criteria. Once enabled, clients can utilize the **$orderby** query option in their requests to sort data entries according to desired attributes.
-
-{% tabs %}
-{% highlight cs tabtitle="program.cs" %}
-// Create a new instance of the web application builder 
-var builder = WebApplication.CreateBuilder(args);
-
-// Create an ODataConventionModelBuilder to build the OData model
-var modelBuilder = new ODataConventionModelBuilder();
-
-// Register the "Orders" entity set with the OData model builder
-modelBuilder.EntitySet<OrdersDetails>("Orders");
-
-// Add services to the container.
-
-// Add controllers with OData support to the service collection
-builder.Services.AddControllers().AddOData(
-    options => options
-        .Count()
-        .OrderBy() // sorting
-        .AddRouteComponents("odata", modelBuilder.GetEdmModel()));
-{% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
-import { ColumnDirective, ColumnsDirective, GridComponent, Sort } from '@syncfusion/ej2-react-grids';
-
-function App() {
-    const data = new DataManager({ 
-      url:'https://localhost:xxxx/odata/Orders', // Replace your hosted link
-      adaptor: new ODataV4Adaptor()
-    });
-    return <GridComponent dataSource={data} allowSorting={true}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150'textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='Employee ID' width='150'/>
-            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
-        </ColumnsDirective>
-        <Inject services={[Sort]} />
-    </GridComponent>
-};
-export default App;
-{% endhighlight %}
-{% endtabs %}
-
-**Single column sorting**
-
-![Single column sorting query](../images/odatav4-adaptor-sorting.png)
-
-**Multi column sorting**
-
-![Multi column sorting query](../images/odatav4-adaptor-multi-column-sorting.png)
-
-## Handling paging operation
-
-To implement paging operations in your web application using OData, you can utilize the `SetMaxTop` method within your OData setup to limit the maximum number of records that can be returned per request. While you configure the maximum limit, clients can utilize the **$skip** and **$top** query options in their requests to specify the number of records to skip and the number of records to take, respectively. 
+Utilize `SetMaxTop()` method in **Program.cs** to establish maximum records per request limit (previously configured with `SetMaxTop(100)`). 
 
 {% tabs %}
 {% highlight cs tabtitle="Program.cs" %}
 
-// Create a new instance of the web application builder
-var builder = WebApplication.CreateBuilder(args);
-
-// Create an ODataConventionModelBuilder to build the OData model
-var modelBuilder = new ODataConventionModelBuilder();
-
-// Register the "Orders" entity set with the OData model builder
-modelBuilder.EntitySet<OrdersDetails>("Orders");
-
-// Add services to the container.
-
-// Add controllers with OData support to the service collection
+// Paging is already configured in Program.cs with:
 builder.Services.AddControllers().AddOData(
     options => options
-        .Count()
-        .SetMaxTop(null)
+        .Select()
+        .Filter()
+        .OrderBy()
+        .Expand()
+        .Count()           // Required for paging to show total count
+        .SetMaxTop(100)    // Maximum 100 records per page
         .AddRouteComponents("odata", modelBuilder.GetEdmModel()));
 
 {% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
+{% highlight js tabtitle="App.jsx" %}
+
 import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
-import { ColumnDirective, ColumnsDirective, GridComponent, Page } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, GridComponent, Page, Inject } from '@syncfusion/ej2-react-grids';
 
 function App() {
     const data = new DataManager({ 
-      url: 'https://localhost:xxxx/odata/Orders', // Replace your hosted link
-      adaptor: new ODataV4Adaptor()
+      url: 'https://localhost:xxxx/odata/Orders', // Replace with the actual API endpoint URL.
+      adaptor: new ODataV4Adaptor(),
+      crossDomain: true
     });
-    return <GridComponent dataSource={data} allowPaging={true}>
+    const pageSettings = { pageSize: 10, pageSizes: true };
+    return <GridComponent dataSource={data} allowPaging={true} pageSettings={pageSettings}>
         <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150'textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='Employee ID' width='150'/>
+            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150' textAlign='Right' />
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+            <ColumnDirective field='EmployeeID' headerText='Employee ID' width='150' textAlign='Right'/>
             <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
         </ColumnsDirective>
         <Inject services={[Page]} />
     </GridComponent>
 };
 export default App;
+
 {% endhighlight %}
 {% endtabs %}
 
+The following screenshot illustrates the ODataV4Adaptor with paging query.
+
 ![paging query](../images/odatav4-adaptor-paging.png)
 
-## Handling CRUD operations
+> For more information about paging, refer to the [Paging](https://ej2.syncfusion.com/react/documentation/grid/paging) documentation.
 
-To manage CRUD (Create, Read, Update, Delete) operations using the ODataV4Adaptor, follow the provided guide for configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid for [editing](https://ej2.syncfusion.com/react/documentation/grid/editing/edit) and utilize the sample implementation of the `OrdersController` in your server application. This controller handles HTTP requests for CRUD operations such as GET, POST, PATCH, and DELETE.
+### Filtering
 
-To enable CRUD operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component within an React application, follow the below steps:
+The filtering feature is enabled by setting the `allowFiltering` property to `true` and injecting the `Filter` module from `@syncfusion/ej2-react-grids` into the grid.
+
+```ts
+  <GridComponent dataSource={data} allowFiltering={true}>
+    . . .
+    . . .
+    . . .
+    <Inject services={[Filter]}/>
+  </GridComponent>
+```
+
+After enabling filtering on the client side, the `ODataV4Adaptor` converts the applied filter conditions into OData‑compliant query parameters. It generates a `$filter` expression based on the field, operator, and value selected in the Grid. The server receives this OData filter query, executes the filtering operation, and returns only the matching records, which the Grid then renders.
+
+Verify **Program.cs** includes `.Filter()` method in OData configuration (configured in previous steps):
 
 {% tabs %}
-{% highlight ts tabtitle="App.tsx" %}
-import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems, EditSettingsModel, Toolbar, Edit, Inject } from '@syncfusion/ej2-react-grids';
+{% highlight cs tabtitle="Program.cs" %}
+// Create a new instance of the web application builder.
+var builder = WebApplication.CreateBuilder(args);
+
+// Create an ODataConventionModelBuilder to build the OData model.
+var modelBuilder = new ODataConventionModelBuilder();
+
+// Register the "Orders" entity set with the OData model builder.
+modelBuilder.EntitySet<OrdersDetails>("Orders");
+
+// Add services to the container.
+
+// Add controllers with OData support to the service collection.
+builder.Services.AddControllers().AddOData(
+    options => options
+        .Count()
+        .Filter() // Enable filtering support.
+        .AddRouteComponents("odata", modelBuilder.GetEdmModel()));
+
+{% endhighlight %}
+{% highlight js tabtitle="App.jsx" %}
+
+import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
+import { ColumnDirective, ColumnsDirective, GridComponent, Filter, Inject } from '@syncfusion/ej2-react-grids';
+
+function App() {
+    const data = new DataManager({ 
+      url:'https://localhost:xxxx/odata/Orders', // Replace with the actual API endpoint URL.
+      adaptor: new ODataV4Adaptor(),
+      crossDomain: true
+    });
+    return <GridComponent dataSource={data} allowFiltering={true}>
+        <ColumnsDirective>
+            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150' textAlign='Right' />
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+            <ColumnDirective field='EmployeeID' headerText='Employee ID' width='150' textAlign='Right' />
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
+        </ColumnsDirective>
+        <Inject services={[Filter]} />
+    </GridComponent>
+};
+export default App;
+
+{% endhighlight %}
+{% endtabs %}
+
+**Single column filtering:**
+
+![Filtering query](../images/odatav4-adaptor-filtering.png)
+
+**Multi-column filtering:**
+
+Multiple columns can be filtered simultaneously.
+
+![Filtering query](../images/odatav4-adaptor-multi-column-filtering.png)
+
+### Searching
+
+The searching feature is enabled by configuring the `toolbar` property with `Search` item and injecting the `Toolbar` and `Search` modules from `@syncfusion/ej2-react-grids` into the grid.
+
+```ts
+  <GridComponent dataSource={data} toolbar={['Search']}>
+    . . .
+    . . .
+    . . .
+    <Inject services={[Search,Toolbar]}/>
+  </GridComponent>
+```
+
+After enabling the search feature on the client side, the `ODataV4Adaptor` generates an OData‑compliant `$filter` expression that performs a composite search across all searchable columns. The adaptor builds a combined OR‑based filter condition using the search term, and the server returns all records that match the term in any column. The Grid then displays the resulting search output.
+
+Search functionality requires `Filter()` method support (previously configured in **Program.cs** during OData setup).
+
+{% tabs %}
+{% highlight cs tabtitle="Program.cs" %}
+
+// Create a new instance of the web application builder.
+var builder = WebApplication.CreateBuilder(args);
+
+// Create an ODataConventionModelBuilder to build the OData model.
+var modelBuilder = new ODataConventionModelBuilder();
+
+// Register the "Orders" entity set with the OData model builder.
+modelBuilder.EntitySet<OrdersDetails>("Orders");
+
+// Add services to the container.
+
+// Add controllers with OData support to the service collection.
+builder.Services.AddControllers().AddOData(
+    options => options
+        .Count()
+        .Filter() // Enable filter for search functionality.
+        .AddRouteComponents("odata", modelBuilder.GetEdmModel()));
+
+{% endhighlight %}
+{% highlight js tabtitle="App.jsx" %}
+
+import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
+import { ColumnDirective, ColumnsDirective, GridComponent, Toolbar, Inject } from '@syncfusion/ej2-react-grids';
+
+function App() {
+    const data = new DataManager({ 
+      url:'https://localhost:xxxx/odata/Orders', // Replace with the actual API endpoint URL.
+      adaptor: new ODataV4Adaptor(),
+      crossDomain: true
+    });
+    const toolbar = ['Search'];
+    return <GridComponent dataSource={data} toolbar={toolbar}>
+        <ColumnsDirective>
+            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150' textAlign='Right' />
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+            <ColumnDirective field='EmployeeID' headerText='Employee ID' width='150' textAlign='Right'/>
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
+        </ColumnsDirective>
+        <Inject services={[Toolbar]} />
+    </GridComponent>
+};
+export default App;
+
+{% endhighlight %}
+{% endtabs %}
+
+![Searching query](../images/odatav4-adaptor-searching.png)
+
+### Sorting 
+
+The sorting feature is enabled by setting the `allowSorting` property to `true` and injecting the `Sort` module from `@syncfusion/ej2-react-grids` into the grid.
+
+```ts
+  <GridComponent dataSource={data} allowSorting={true}>
+    . . .
+    . . .
+    . . .
+    <Inject services={[Sort]}/>
+  </GridComponent>
+```
+
+After enabling sorting on the client side, the `ODataV4Adaptor` generates an OData‑compliant `$orderby` expression based on the column and sort direction selected by the user. The adaptor builds the appropriate ascending or descending order clause, and the server returns data sorted according to these parameters. The Grid then displays the sorted result set.
+
+Verify **Program.cs** includes `.OrderBy()` method in OData configuration (configured in previous steps).
+
+{% tabs %}
+{% highlight cs tabtitle="Program.cs" %}
+
+// Create a new instance of the web application builder .
+var builder = WebApplication.CreateBuilder(args);
+
+// Create an ODataConventionModelBuilder to build the OData model.
+var modelBuilder = new ODataConventionModelBuilder();
+
+// Register the "Orders" entity set with the OData model builder.
+modelBuilder.EntitySet<OrdersDetails>("Orders");
+
+// Add controllers with OData support to the service collection.
+builder.Services.AddControllers().AddOData(
+    options => options
+        .Count()
+        .OrderBy() // Enable sorting support.
+        .AddRouteComponents("odata", modelBuilder.GetEdmModel()));
+
+{% endhighlight %}
+{% highlight js tabtitle="App.jsx" %}
+
+import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
+import { ColumnDirective, ColumnsDirective, GridComponent, Sort, Inject } from '@syncfusion/ej2-react-grids';
+
+function App() {
+    const data = new DataManager({ 
+      url:'https://localhost:xxxx/odata/Orders', // Replace with the actual API endpoint URL.
+      adaptor: new ODataV4Adaptor(),
+      crossDomain: true
+    });
+    return <GridComponent dataSource={data} allowSorting={true}>
+        <ColumnsDirective>
+            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150' textAlign='Right' />
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+            <ColumnDirective field='EmployeeID' headerText='Employee ID' width='150' textAlign='Right'/>
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
+        </ColumnsDirective>
+        <Inject services={[Sort]} />
+    </GridComponent>
+};
+export default App;
+
+{% endhighlight %}
+{% endtabs %}
+
+**Single column sorting:**
+
+Click "Customer ID" column header to sort by CustomerID field.
+
+![Single column sorting query](../images/odatav4-adaptor-sorting.png)
+
+**Multi-column sorting:**
+
+Hold Ctrl key and click "CustomerID" followed by "Employee ID" to establish hierarchical sort (primary sort by country, secondary sort by ID within each country group).
+
+![Multi column sorting query](../images/odatav4-adaptor-multi-column-sorting.png)
+
+**Sort indicator legend:**
+- ↑ (Up arrow): Indicates ascending sort direction
+- ↓ (Down arrow): Indicates descending sort direction
+- Numeric indicator (1, 2, 3): Displays sort priority in multi-column sorting scenarios
+
+The Grid has now been successfully created with including paging, sorting, filtering. the next step is to enabling CRUD operations.
+
+## CRUD operations
+
+CRUD refers to the four essential data operations: **Create** (add records), **Read** (view records), **Update** (modify records), and **Delete** (remove records).
+
+**CRUD works with OData:**
+
+| Operation | HTTP Method | URL Example | Description |
+|-----------|-------------|-------------|-------------|
+| **Read** | GET | `/odata/Orders` | Get all records |
+| **Create** | POST | `/odata/Orders` | Add a new record |
+| **Update** | PATCH | `/odata/Orders(10001)` | Update record with key 10001 |
+| **Delete** | DELETE | `/odata/Orders(10001)` | Delete record with key 10001 |
+
+
+### Step 1: Complete server-Side controller
+
+Add all CRUD methods to the **OrdersController.cs**. Replace the entire controller with this complete version:
+
+{% tabs %}
+{% highlight cs tabtitle="OrdersController.cs - Complete CRUD Implementation" %}
+
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
+using Microsoft.AspNetCore.OData.Routing.Controllers;
+using ODataV4Adaptor.Server.Models;
+
+namespace ODataV4Adaptor.Server.Controllers
+{
+    [Route("[controller]")]
+    [ApiController]
+    public class OrdersController : ODataController
+    {
+        // READ: Get all orders
+        [HttpGet]
+        [EnableQuery]
+        public IActionResult Get()
+        {
+            var data = OrdersDetails.GetAllRecords().AsQueryable();
+            return Ok(data);
+        }
+
+        // READ: Get single order by key
+        [HttpGet("{key}")]
+        [EnableQuery]
+        public IActionResult Get(int key)
+        {
+            var order = OrdersDetails.GetAllRecords().FirstOrDefault(o => o.OrderID == key);
+            if (order == null)
+            {
+                return NotFound();
+            }
+            return Ok(order);
+        }
+
+        // CREATE: Insert new order
+        [HttpPost]
+        [EnableQuery]
+        public IActionResult Post([FromBody] OrdersDetails addRecord)
+        {
+            if (addRecord == null)
+            {
+                return BadRequest("Order cannot be null");
+            }
+
+            // Add to the beginning of the list
+            OrdersDetails.GetAllRecords().Insert(0, addRecord);
+            return Created(addRecord);
+        }
+
+        // UPDATE: Modify existing order
+        [HttpPatch("{key}")]
+        public IActionResult Patch(int key, [FromBody] OrdersDetails updatedOrder)
+        {
+            if (updatedOrder == null)
+            {
+                return BadRequest("Order data cannot be null");
+            }
+
+            var existingOrder = OrdersDetails.GetAllRecords().FirstOrDefault(o => o.OrderID == key);
+            if (existingOrder == null)
+            {
+                return NotFound();
+            }
+
+            // Update properties (null-coalescing handles partial updates)
+            existingOrder.CustomerID = updatedOrder.CustomerID ?? existingOrder.CustomerID;
+            existingOrder.EmployeeID = updatedOrder.EmployeeID ?? existingOrder.EmployeeID;
+            existingOrder.ShipCountry = updatedOrder.ShipCountry ?? existingOrder.ShipCountry;
+
+            return Ok(existingOrder);
+        }
+
+        // DELETE: Remove order
+        [HttpDelete("{key}")]
+        public IActionResult Delete(int key)
+        {
+            var order = OrdersDetails.GetAllRecords().FirstOrDefault(o => o.OrderID == key);
+            if (order == null)
+            {
+                return NotFound();
+            }
+
+            OrdersDetails.GetAllRecords().Remove(order);
+            return NoContent(); // 204 No Content is standard for successful DELETE
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**Controller method breakdown:**
+
+- **Get()**: Returns all orders; `[EnableQuery]` allows OData filtering/sorting.
+- **Get(int key)**: Returns specific order by ID.
+- **Post()**: Creates new order; `Created()` returns 201 status with new record.
+- **Patch()**: Updates existing order; only changes specified fields.
+- **Delete()**: Removes order; `NoContent()` returns 204 status.
+
+### Step 2: Client-side grid configuration
+
+React Grid enables full CRUD functionality by configuring the required `toolbar` buttons (`Add`, `Edit`, `Update`, `Delete`, and `Cancel`) and enabling adding, editing, updating, and deleting through the `editSettings` property. This setup allows the Grid to handle all basic data operations directly from the UI.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+import { ColumnDirective, ColumnsDirective, GridComponent, Toolbar, Edit, Inject } from '@syncfusion/ej2-react-grids';
 import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
 
 function App() {
     const data = new DataManager({ 
-      url: 'https://localhost:xxxx/odata/Orders', // xxxx denotes port number
-      adaptor: new ODataV4Adaptor()
+      url: 'https://localhost:xxxx/odata/Orders', // Here xxxx represents the port number.
+      adaptor: new ODataV4Adaptor(),
+      crossDomain: true
     });
-    const editSettings: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
-    const toolbar: ToolbarItems[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'];
-    const orderIDRules: object = {required: true};
-    const customerIDRules: object = {required: true, minLength: 3};
+    
+    // Configure editing options
+    const editSettings = { 
+      allowEditing: true,   // Enable edit button
+      allowAdding: true,    // Enable add button
+      allowDeleting: true,  // Enable delete button
+      mode: 'Normal',       // Inline editing mode
+      showDeleteConfirmDialog: true  // Enable confirmation dialog
+    };
+    
+    // Configure toolbar buttons
+    const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'];
+    
+    // Validation rules
+    const orderIDRules = { required: true };
+    const customerIDRules = { required: true, minLength: 3 };
+    
+    return <GridComponent 
+      dataSource={data} 
+      editSettings={editSettings} 
+      toolbar={toolbar} 
+      height={320}>
+        <ColumnsDirective>
+            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150' textAlign='Right' validationRules={orderIDRules} />
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' validationRules={customerIDRules} />
+            <ColumnDirective field='EmployeeID' headerText='Employee ID' width='150' textAlign='Right' />
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+        <Inject services={[Toolbar, Edit]} />
+    </GridComponent>
+};
+export default App;
+
+{% endhighlight %}
+{% endtabs %}
+
+> * The OrderID field must have `isPrimaryKey={true}` for CRUD operations to function correctly.
+> * For detailed editing setup, refer to the [editing documentation](https://ej2.syncfusion.com/react/documentation/grid/editing/edit). The following example demonstrates inline edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) with a [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) for action buttons.
+
+### Step 3: Using CRUD features
+
+**Adding a new record:**
+
+Click Add to create a new row, fill in the details, save with Update (or cancel), and the grid then sends a `POST` request to the server.
+
+![ODataV4Adaptor-Insert-record](../images/odatav4-adaptor-insert-record.png)
+
+**Editing an existing record:**
+
+Select the record, click Edit, modify the fields, save with Update (or cancel), and the grid sends a `PATCH` request to the server.
+
+![ODataV4Adaptor-Update-record](../images/odatav4-adaptor-update-record.png)
+
+**Deleting a record:**
+
+Select the record, click Delete, confirm in the dialog, and the grid sends a `DELETE` request to the server.
+
+![ODataV4Adaptor-Delete-record](../images/odatav4-adaptor-delete-record.png)
+
+### Custom URLs for CRUD operations
+
+By default, `ODataV4Adaptor` uses standard OData conventions:
+- Create: `POST /odata/Orders`.
+- Update: `PATCH /odata/Orders(10001)`.
+- Delete: `DELETE /odata/Orders(10001)`.
+
+Custom URLs become necessary in these scenarios:
+- Existing non-OData endpoints cannot be modified.
+- CRUD operations must route to different controllers.
+- Custom business logic requires special routing.
+- Third-party API integration is required.
+
+**Custom URL implementation:**
+
+Explicitly specify which URL `DataManager` uses for each operation instead of relying on OData routing conventions.
+
+**Configuring custom URLs:**
+
+`DataManager` supports these custom URL properties:
+
+| Property | Purpose | Default Behavior |
+|----------|---------|------------------|
+| `url` | Read (GET) operations. | `/odata/Orders` |
+| `insertUrl` | Create (POST) operations. | Uses `url`. |
+| `updateUrl` | Update (PATCH/PUT) operations. | Uses `url/{key}`. |
+| `removeUrl` | Delete (DELETE) operations. | Uses `url/{key}`. |
+| `batchUrl` | Batch operations. | Uses `url/$batch`. |
+
+### Separate URLs for each operation
+
+Use this approach when different API endpoints are assigned to handle specific CRUD or data operations.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx - Custom URLs" %}
+import { ColumnDirective, ColumnsDirective, GridComponent, Toolbar, Edit, Inject } from '@syncfusion/ej2-react-grids';
+import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
+
+function App() {
+    const data = new DataManager({ 
+      url: 'https://localhost:xxxx/odata/Orders',              // GET: Read operations
+      insertUrl: 'https://localhost:xxxx/odata/Orders/Insert', // POST: Create operations
+      updateUrl: 'https://localhost:xxxx/odata/Orders/Update', // PATCH: Update operations
+      removeUrl: 'https://localhost:xxxx/odata/Orders/Delete', // DELETE: Delete operations
+      adaptor: new ODataV4Adaptor(),
+      crossDomain: true
+    });
+    
+    const editSettings = { 
+      allowEditing: true, 
+      allowAdding: true, 
+      allowDeleting: true, 
+      mode: 'Normal' 
+    };
+    const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'];
+    const orderIDRules = { required: true };
+    const customerIDRules = { required: true, minLength: 3 };
+    
     return <GridComponent dataSource={data} editSettings={editSettings} toolbar={toolbar} height={320}>
         <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150' textAlign='Right' validationRules={orderIDRules}></ColumnDirective>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' validationRules={customerIDRules}></ColumnDirective>
+            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150' textAlign='Right' validationRules={orderIDRules} />
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' validationRules={customerIDRules} />
             <ColumnDirective field='EmployeeID' headerText='Employee ID' width='150'/>
             <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
         </ColumnsDirective>
@@ -460,167 +669,32 @@ function App() {
     </GridComponent>
 };
 export default App;
+
 {% endhighlight %}
 {% endtabs %}
 
-> Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) for the Grid component. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column/#isprimarykey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
+> Ensure the backend defines routes that correspond to these custom URLs.
 
-**Insert Record**
+## Run the application
 
-To insert a new record into your Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you can utilize the `HttpPost` method in your server application. Below is a sample implementation of inserting a record using the **OrdersController**:
+Run the application in Visual Studio, accessible on a URL like **https://localhost:xxxx**. Verify the API returns order data at **https://localhost:xxxx/odata/Orders**, where **xxxx** is the port. Grid displays order data fetched from the backend API.
 
-```cs
-/// <summary>
-/// Inserts a new order to the collection.
-/// </summary>
-/// <param name="addRecord">The order to be inserted.</param>
-/// <returns>It returns the newly inserted record detail.</returns>
-[HttpPost]
-[EnableQuery]
-public IActionResult Post([FromBody] OrdersDetails addRecord)
-{
-    if (order == null)
-    {
-        return BadRequest("Null order");
-    }
+## Troubleshooting
 
-    OrdersDetails.GetAllRecords().Insert(0, addRecord);
-    return Ok(addRecord);
-}
-```
+| Issue               | Resolution                                                                                           |
+|---------------------|-------------------------------------------------------------------------------------------------------|
+| **Empty Grid**      | Ensure the API returns data, verify "GetAllRecords()" provides results, and check the browser console. |
+| **CRUD Not Working**| Confirm the primary key is configured and the controller supports `POST`, `PATCH`, and `DELETE` methods.     |
+| **Styles Missing**  | Verify that Syncfusion CSS files are correctly referenced and fix any missing file errors in console.  |
 
-![ODataV4Adaptor-Insert-record](../images/odatav4-adaptor-insert-record.png)
+## Complete sample repository
 
-**Update Record**
+For the complete working implementation of this example, refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-adaptors/OdataV4Adaptor) repository.
 
-Updating a record in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid can be achieved by utilizing the `HttpPatch` method in your controller. Here's a sample implementation of updating a record:
-
-```cs
-/// <summary>
-/// Updates an existing order.
-/// </summary>
-/// <param name="key">The ID of the order to update.</param>
-/// <param name="updateRecord">The updated order details.</param>
-/// <returns>It returns the updated order details.</returns>
-[HttpPatch("{key}")]
-public IActionResult Patch(int key, [FromBody] OrdersDetails updatedOrder)
-{
-    if (updatedOrder == null)
-    {
-        return BadRequest("No records");
-    }
-    var existingOrder = OrdersDetails.GetAllRecords().FirstOrDefault(o => o.OrderID == key);
-    if (existingOrder != null)
-    {
-        // If the order exists, update its properties
-        existingOrder.CustomerID = updatedOrder.CustomerID ?? existingOrder.CustomerID;
-        existingOrder.EmployeeID = updatedOrder.EmployeeID ?? existingOrder.EmployeeID;
-        existingOrder.ShipCountry = updatedOrder.ShipCountry ?? existingOrder.ShipCountry;
-    }
-    return Ok(existingOrder);
-}
-```
-![ODataV4Adaptor-Update-record](../images/odatav4-adaptor-update-record.png)
-
-**Delete Record**
-
-To delete a record from your Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you can utilize the `HttpDelete` method in your controller. Below is a sample implementation:
-
-```cs
-/// <summary>
-/// Deletes an order.
-/// </summary>
-/// <param name="key">The key of the order to be deleted.</param>
-/// <returns>The deleted order.</returns>
-[HttpDelete("{key}")]
-public IActionResult Delete(int key)
-{
-    var order = OrdersDetails.GetAllRecords().FirstOrDefault(o => o.OrderID == key);
-    if (order != null)
-    {
-        OrdersDetails.GetAllRecords().Remove(order);
-    }
-    return Ok(order);
-}
-```
-
-![ODataV4Adaptor-Delete-record](../images/odatav4-adaptor-delete-record.png)
-
-## Odata with custom url
-
-The Syncfusion<sup style="font-size:70%">&reg;</sup> ODataV4 adaptor extends support for calling customized URLs to accommodate data retrieval and CRUD actions as per your application's requirements. However, when utilizing a custom URL with the ODataV4 adaptor, it's Essential<sup style="font-size:70%">&reg;</sup> to modify the routing configurations in your application's route configuration file to align with your custom URL. You can invoke the custom URL by the following methods in the Datamanager
-
-**Configuring Custom URLs**
-
-To work with custom URLs for CRUD operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you can use the following properties:
-
-* insertUrl: Specifies the custom URL for inserting new records.
-* removeUrl: Specifies the custom URL for deleting records.
-* updateUrl: Specifies the custom URL for updating records.
-* batchUrl: Specifies the custom URL for batch editing operations.
-
-> Ensure that the routing configurations on the server-side are properly updated to handle these custom URLs.
-
-The following code example describes the above behavior.
-
-{% tabs %}
-{% highlight ts tabtitle="App.tsx" %}
-import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems, EditSettingsModel, Toolbar, Edit, Inject } from '@syncfusion/ej2-react-grids';
-import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
-
-function App() {
-    const data = new DataManager({ 
-      url: 'https://localhost:xxxx/odata/Orders', // xxxx denotes port number
-      updateUrl: 'https://localhost:xxxx/odata/Orders/Update', // custom URL to update the record
-      insertUrl: 'https://localhost:xxxx/odata/Orders/Insert', // custom URL to insert new record
-      removeUrl: 'https://localhost:xxxx/odata/Orders/Delete', // custom URL to delete the record
-      adaptor: new ODataV4Adaptor()
-    });
-    const editSettings: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
-    const toolbar: ToolbarItems[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'];
-    const orderIDRules: object = {required: true};
-    const customerIDRules: object = {required: true, minLength: 3};
-    return <GridComponent dataSource={data} editSettings={editSettings} toolbar={toolbar} height={320}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150' textAlign='Right' validationRules={orderIDRules}></ColumnDirective>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' validationRules={customerIDRules}></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='Employee ID' width='150'/>
-            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
-        </ColumnsDirective>
-        <Inject services={[Toolbar,Edit]} />
-    </GridComponent>
-};
-export default App;
-{% endhighlight %}
-{% endtabs %}
-
-For batch editing, you can specify a custom batch URL as follows:
-
-{% tabs %}
-{% highlight ts tabtitle="App.tsx" %}
-import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems, EditSettingsModel, Toolbar, Edit, Inject } from '@syncfusion/ej2-react-grids';
-import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
-
-function App() {
-    const data = new DataManager({ 
-      url: 'https://localhost:xxxx/odata/Orders', // xxxx denotes port number
-      BatchUrl: 'https://localhost:xxxx/odata/Orders/BatchUpdate', // custom URL for batch update
-      adaptor: new ODataV4Adaptor()
-    });
-    const editSettings: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Batch' };
-    const toolbar: ToolbarItems[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'];
-    const orderIDRules: object = {required: true};
-    const customerIDRules: object = {required: true, minLength: 3};
-    return <GridComponent dataSource={data} editSettings={editSettings} toolbar={toolbar} height={320}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='150' textAlign='Right' validationRules={orderIDRules}></ColumnDirective>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' validationRules={customerIDRules}></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='Employee ID' width='150'/>
-            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
-        </ColumnsDirective>
-        <Inject services={[Toolbar,Edit]} />
-    </GridComponent>
-};
-export default App;
-{% endhighlight %}
-{% endtabs %}
+## See also
+- [Using Remote Data Binding in ASP.NET Web APIs](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/webapi-adaptor)
+- [Connect to custom REST APIs](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/url-adaptor)
+- [Hybrid data binding](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/remote-save-adaptor)
+- [RESTful CRUD Operations in ASP.NET WebForms](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/web-method-adaptor)
+- [Custom Remote Binding](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/custom-adaptor)
+- [GraphQL Integration for Syncfusion React Grids](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/graphql-adaptor)

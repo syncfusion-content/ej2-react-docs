@@ -1,4 +1,4 @@
-import { GridComponent, ColumnsDirective, ColumnDirective, ContextMenu, Inject, Page} from '@syncfusion/ej2-react-grids';
+import { GridComponent, ColumnsDirective, ColumnDirective, ContextMenu, Inject, Page } from '@syncfusion/ej2-react-grids';
 import { taskData } from './datasource';
 import * as React from 'react';
 
