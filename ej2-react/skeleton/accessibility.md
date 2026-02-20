@@ -2,7 +2,7 @@
 layout: post
 title: Accessibility in React Skeleton component | Syncfusion
 description: Learn here all about Accessibility in Syncfusion React Skeleton component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+control: Skeleton
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Skeleton component
 
-The Skeleton component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Skeleton component follows WCAG 2.2, Section 508, and ADA accessibility standards to ensure all users, including those using assistive technologies, receive meaningful feedback during content loading periods. The component provides semantic markup and ARIA attributes that communicate loading state to screen readers and assistive devices.
 
-The accessibility compliance for the Skeleton component is outlined below.
+The accessibility compliance levels for the Skeleton component are outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,20 +40,24 @@ The accessibility compliance for the Skeleton component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Skeleton component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Skeleton component:
+The Skeleton component implements [WAI-ARIA status pattern](https://www.w3.org/WAI/ARIA/apg/patterns/status/) semantics to communicate loading state to assistive technologies. The following ARIA attributes are applied in the Skeleton component:
 
-| Properties | Functionality |
-| ------------ | ----------------------- |
-| `role=alert` | Used to convey important, time-sensitive or contextual message to the user. |
-| `aria-label` | Attribute provides the text label for the Skeleton. |
-| `aria-live` | Attributes which indicates the content changes which are not interactable are live regions. |
-| `aria-busy` | Set to true until loading is complete, then set to false. |
+| Attribute | Purpose |
+| --- | --- |
+| `role="status"` | Identifies the Skeleton as a status region where loading state is communicated. |
+| `aria-label` | Provides an accessible label describing the Skeleton's purpose or the content being loaded. |
+| `aria-live="polite"` | Announces content updates to screen readers when the skeleton is replaced with actual content. |
+| `aria-busy="true/false"` | Set to `true` during loading to indicate pending content; changed to `false` when content loads or the skeleton is removed. |
+
+## Motion and animation accessibility
+
+The Skeleton component supports shimmer effects that include animations. Users who prefer reduced motion can configure their operating system or browser settings, and the component respects the `prefers-reduced-motion` media query to minimize animations for accessibility compliance.
 
 ## Ensuring accessibility
 
-The Skeleton component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+Syncfusion validates the Skeleton component's accessibility compliance using industry-standard tools including [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) during continuous automated testing.
 
-The accessibility compliance of the Skeleton component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/skeleton.html) in a new window to evaluate the accessibility of the Skeleton component with accessibility tools.
+The following sample demonstrates the accessibility features of the Skeleton component. Open the [sample](https://ej2.syncfusion.com/accessibility/skeleton.html) in a new window to evaluate the component's accessibility using your preferred accessibility testing tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/skeleton.html" %}
 

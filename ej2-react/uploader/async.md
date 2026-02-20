@@ -19,8 +19,7 @@ The File can be upload automatically or manually. For more information, you can 
 
 ## Multiple file upload
 
-By Default, the uploader component allows you to select and upload multiple files simultaneously.
-The selected files are organized in a list for every file selection until you clear it by clicking clear button that is shown in footer. You can add the multiple attributes to original input element of file by enabling the `multiple` file selection.
+By default, the Uploader component enables simultaneous selection and upload of multiple files. Selected files display in a list that persists until cleared using the clear button in the footer. Enable the `multiple` file selection property to allow users to select multiple files at once.
 
 The following example explains about multiple file upload settings.
 
@@ -52,8 +51,7 @@ The following example explains about multiple file upload settings.
 
 ## Single file upload
 
-You can select and upload a single file by disabling the multiple file selection property.
-The file list item is removed for every selection and it always maintain a single file to upload.You can remove the multiple attributes form the original input element of file by enabling the single file upload property.
+Upload one file at a time by disabling the `multiple` property. When this mode is active, the file list resets with each new selection, maintaining only the most recent file for upload.
 
 The following example explains about single file upload settings.
 
@@ -85,8 +83,7 @@ The following example explains about single file upload settings.
 
 ## Save action
 
-The save action handler upload the files that needs to be specified in the [saveUrl](https://ej2.syncfusion.com/react/documentation/api/uploader/asyncSettingsModel/#saveurl) property.
-The save handler receives the submitted files and manages the save process in server. After uploading the files to server location, the color of the selected file name changes to green and the remove icon is changed as bin icon.
+Configure the [saveUrl](https://ej2.syncfusion.com/react/documentation/api/uploader/asyncSettingsModel/#saveurl) property to specify the server endpoint that handles file uploads. The save handler receives submitted files and manages the server-side save process. Upon successful upload, the file name displays in green and the remove icon changes to a delete icon.
 
     *   When the file is uploaded successfully, the event “success” triggers to handle the
         operation after upload.

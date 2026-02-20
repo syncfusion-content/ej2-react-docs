@@ -2,35 +2,36 @@
 layout: post
 title: Position in React Toast component | Syncfusion
 description: Learn here all about Position in Syncfusion React Toast component of Syncfusion Essential JS 2 and more.
-control: Position 
+control: Toast
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Position in React Toast component
+# Toast position
 
-Toast position can be updated based on predefined positions or user customizable positions. Predefined position combinations are updated in [`X`](https://ej2.syncfusion.com/react/documentation/api/toast/toastPositionModel/#x) and [`Y`](https://ej2.syncfusion.com/react/documentation/api/toast/toastPositionModel/#y) position properties.
+Configure where toasts appear on the screen using predefined positions or custom coordinate values. Position settings determine toast placement relative to the viewport or target container, affecting user attention and notification visibility.
 
-## Predefined
+## Predefined positions
 
-`X` Positions
+Toast supports nine predefined position combinations using the [`position`](https://ej2.syncfusion.com/react/documentation/api/toast/toastPositionModel/) property:
 
-* Left
-* Center
-* Right
+**Horizontal alignment (X):**
+* **Left** - Aligns toast to the left edge
+* **Center** - Centers toast horizontally
+* **Right** - Aligns toast to the right edge
 
-`Y` Positions
+**Vertical alignment (Y):**
+* **Top** - Positions toast at the top
+* **Bottom** - Positions toast at the bottom
 
-* Top
-* Bottom
+Combine X and Y values to create position combinations (e.g., Top-Left, Center-Bottom).
 
-> In the case of multiple Toast display, new Toast position will not update on dynamic change of property values, until the old Toast messages removed.
-> Toast occupies full width when we set width as '100%', so X positions won't affect changes when '100%' width.
+> **Note:** When multiple toasts display simultaneously, position changes only apply to newly displayed toasts. Existing toasts retain their original positions until dismissed. If toast width is set to 100%, X position values have no effect.
 
-## Custom
+## Custom positions
 
-Custom `X` and `Y` Position can be given as pixels/numbers/percentage. The number value is considered as pixels. based value top and left value updated in the toast.
+For non-standard positioning, specify custom X and Y coordinates using pixels, numbers, or percentages. Numeric values are interpreted as pixels, while percentage values calculate relative to the container. Custom positioning provides precise control over toast placement for specialized layouts or responsive requirements.
 
 `[Class-component]`
 

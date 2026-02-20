@@ -2,7 +2,7 @@
 layout: post
 title: Badge customization in React Badge component | Syncfusion
 description: Learn here all about Badge customization in Syncfusion React Badge component of Syncfusion Essential JS 2 and more.
-control: Badge customization 
+control: Badge
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,9 +10,11 @@ domainurl: ##DomainURL##
 
 # Badge customization in React Badge component
 
+The Badge component offers multiple customization options to match application design requirements. This guide covers color, size, and position customization techniques to help you create badges that integrate seamlessly with your UI.
+
 ## Color customization
 
-Even though badges come with `8 pre-defined colors`, you can also customize the color of the badge as desired.
+The Badge component includes eight predefined color variants. Beyond these preset options, you can customize the badge color to match your specific branding or design needs by applying custom CSS classes.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -33,7 +35,7 @@ Even though badges come with `8 pre-defined colors`, you can also customize the 
 
 ## Customize badge size
 
-Badges are designed to adjust their size based on the content. To change the size of a badge, adjust the `font-size` of the badge.
+The Badge component automatically scales based on its content. To adjust the badge size, modify the `font-size` CSS property of the badge element. This allows the badge dimensions to respond proportionally to different text sizes.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -54,7 +56,7 @@ Badges are designed to adjust their size based on the content. To change the siz
 
 ## Custom position
 
-Even though the badges support the conventional `top` and `bottom` positions, the position of the badges can be changed as desired.This can be achieved by adding a custom class to the badge element to override the default position applied from the source.
+The Badge component provides built-in support for standard positioning (`top` and `bottom`). For more flexible positioning requirements, apply a custom CSS class to the badge element to override the default positioning styles and achieve your desired layout.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

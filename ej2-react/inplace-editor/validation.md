@@ -14,7 +14,7 @@ In-place Editor component supports validation and it can be achieved by adding r
 
 ## Validation Rules
 
-In-place Editor has following validation rules, which are used to perform validation.
+The In-place Editor supports the following validation rules:
 
 | Rules | Description | Example |
 |------|------|------|
@@ -25,20 +25,20 @@ In-place Editor has following validation rules, which are used to perform valida
 | `dateIso` | The  input element must have valid `dateIso` format values | 2019-12-25 |
 | `number` | The  input element must have valid `number` format values | 1.0 or 1 |
 | `maxLength` | Input value must have less than or equal to `maxLength` character length | if `maxLength: 5`, [check] is valid and [checking] is invalid |
-| `minLength` | Input value must have less than or equal to `minLength` character length | if `minLength: 5`, [testing] is valid and [test] is invalid |
-| `rangeLength` | Input value must have value between `rangeLength` character length | if `rangeLength: [4,5]`, [test] is valid and [key] is invalid
-| `range` | Input value must have value between `range` number | if `range: [4,5]`, [4] is valid and [6] is invalid |
+| `minLength` | Input value must have at least `minLength` characters | if `minLength: 5`, [testing] is valid and [test] is invalid |
+| `rangeLength` | Input value must be between the specified `rangeLength` character length range | if `rangeLength: [4,5]`, [test] is valid and [key] is invalid
+| `range` | Input value must be within the specified `range` | if `range: [4,5]`, [4] is valid and [6] is invalid |
 | `max` | Input value must have less than or equal to `max` number | if `max: 3`, [3] is valid and [4] is invalid |
 | `min` | Input value must have less than or equal to `min` number | if `min: 4`, [5] is valid and [2] is invalid |
 | `regex` | Input value must have valid `regex` format | if `regex: '^[A-z]+$'`, [a] is valid and [1] is invalid |
 
-## Step by Step validation configuration
+## Step by step validation configuration
 
-The following steps are used to configure validation in In-place Editor.
+Configure validation in the In-place Editor by following these steps:
 
-Step 1: To perform default validation in In-place Editor the `name` property is mandatory. And the specified name must be the same as the key name.
+**Step 1:** The `name` property is mandatory for validation to work. The specified name must match the corresponding key in the `validationRules` property.
 
-Step 2:  The corresponding name specified in the name property should bind with the `validationRules` property. For example, in the below code snippet, the `Number`  in the name property is bind with the `maxLength`  of validationRules.  Likewise, you can bind with the in-build validation configurations in the above table.
+**Step 2:** Bind the `name` property value to the `validationRules` property. For example, if the `name` property is `Number`, create a corresponding `Number` key in `validationRules` and assign validation rules such as `maxLength`. You can apply any of the built-in validation rules listed in the table above.
 
 `[Class-component]`
 
@@ -66,7 +66,7 @@ Step 2:  The corresponding name specified in the name property should bind with 
 
  {% previewsample "page.domainurl/code-snippet/in-place-editor/validation-sample-cs2" %}
 
-In the following sample, first editor value submitted without select any date, so the default error message will be displayed below the `DatePicker` element. Second editor configured with the [validating](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#validating) event with the handler. In handler event [errorMessage](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/validateEventArgs/#errormessage) argument value modified and it will show below the `DatePicker` element.
+In the following sample, the first editor displays a validation error when submitted without a date selection. The second editor is configured with the [validating](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#validating) event. In the event handler, the [errorMessage](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/validateEventArgs/#errormessage) is customized and displayed below the `DatePicker` element.
 
 `[Class-component]`
 

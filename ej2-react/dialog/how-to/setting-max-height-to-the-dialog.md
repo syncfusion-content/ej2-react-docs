@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Setting max height to the dialog in React Dialog component
 
-By default, the maxHeight for the Dialog is calculated based on the target. If the target is not specified externally, the Dialog consider the body as target and will calculate the maxHeight based on it. We have an option to set the maxHeight of the Dialog in the [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/dialog/#beforeOpen) event.
+By default, the `maxHeight` of the Dialog is calculated based on the target container. If the target is not specified, the Dialog uses the body as the target and calculates `maxHeight` accordingly. The `maxHeight` can be customized in the [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/dialog/#beforeOpen) event for more control over the dialog's maximum height.
 
 `[Class-component]`
 

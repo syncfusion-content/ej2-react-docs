@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Autofill in React Auto complete component | Syncfusion
-description: Learn here all about Autofill in Syncfusion React Auto complete component of Syncfusion Essential JS 2 and more.
+title: Autofill in React AutoComplete component | Syncfusion
+description: Learn here all about Autofill in Syncfusion React AutoComplete component of Syncfusion Essential JS 2 and more.
 control: Autofill 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Autofill in React Auto complete component
+# Autofill in React AutoComplete component
 
-The React AutoComplete supports the autofill behavior with the help of [`autofill`](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#autofill) property. Whenever you change the input value and press the down key, the AutoComplete will autocomplete your data by matching the typed character. Suppose, if no matches found then, AutoComplete doesn't suggest any item.
+The React AutoComplete supports autofill behavior with the help of the [`autofill`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#autofill) property. Whenever you change the input value and press the down arrow key, the AutoComplete will autocomplete your data by matching the typed character. If no matches are found, the AutoComplete does not suggest any item.
 
-In the below sample, showcase that how to work `autofill` with AutoComplete.
+In the following sample, the `autofill` feature is demonstrated with the AutoComplete.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

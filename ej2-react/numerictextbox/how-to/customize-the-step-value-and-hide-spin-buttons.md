@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the step value and hide spin buttons in React Numerictextbox component
+# Customize the step value and hide spin buttons in React NumericTextBox component
 
-The spin buttons allow you to increase or decrease the value with the predefined [`step`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/#step-number) value. The visibility of spin buttons can be set using the[`showSpinButton`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/#showspinbutton-boolean) property.
+Control the increment/decrement behavior of the NumericTextBox by customizing the step value and controlling the visibility of spin buttons. Use the [`step`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/#step-number) property to define the increment value, and the [`showSpinButton`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/#showspinbutton-boolean) property to show or hide the spin buttons.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

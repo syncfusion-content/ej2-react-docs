@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to Filter ListBox Data Using TextBox Component
 
-This example demonstrates how to filter Syncfusion<sup style="font-size:70%">&reg;</sup> ListBox data based on input from a TextBox. Bind an input event listener to the TextBox to capture user input and filter the items in the ListBox. Within the event handler, use the [`filter`](https://ej2.syncfusion.com/react/documentation/api/list-box/#filter) method to update the ListBox items, ensuring that only those matching the input text are included.
+This example demonstrates filtering Syncfusion<sup style="font-size:70%">&reg;</sup> ListBox data based on user input in a TextBox. Attach an input event handler to the TextBox to capture user input, then use the [`filter`](https://ej2.syncfusion.com/react/documentation/api/list-box/#filter) method to display only items matching the search text.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

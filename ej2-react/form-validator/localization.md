@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Localization in React Form validator component
 
-The [`Localization`](../common/localization/) library allows users to localize the default error message contents of the `formValidator` to different cultures using the `locale` property.
+The [`Localization`](../common/localization/) library allows you to localize the FormValidator's default error messages to different cultures using the `locale` property.
 
-The FormValidator provides default error messages for all default validation rules. It is tabulated as follows:
+The FormValidator provides default error messages for all validation rules. The following table lists these messages:
 
 | Rules | message |
 | ------------- | ------------- |
@@ -33,9 +33,9 @@ The FormValidator provides default error messages for all default validation rul
 
 ## Loading translations
 
-To load translation object in your application use `load` function of `L10n` class.
+To load a translation object in your application, use the `load` function of the `L10n` class.
 
-The following example demonstrates the FormValidator in `Arabic` culture with error message for email.
+The following example demonstrates the FormValidator in Arabic with an error message for the email field.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

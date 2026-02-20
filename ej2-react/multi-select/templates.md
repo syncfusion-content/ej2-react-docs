@@ -10,14 +10,13 @@ domainurl: ##DomainURL##
 
 # Templates in React Multi select component
 
-The MultiSelect has been provided with several options to customize each list item, group title, selected value, header, and footer elements.
+The MultiSelect provides comprehensive template support to customize list items, group titles, selected values, headers, and footer elements.
 
 ## Item template
 
-The content of each list item within the MultiSelect can be customized with the help of [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/#itemtemplate)
-property.
+Customize the content of each list item using the [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/#itemtemplate) property. This allows you to create custom layouts for displaying data in each item.
 
-In the following sample, each list item is split into two columns to display relevant data's.
+In the following example, each list item displays data in a two-column layout.
 
 `[Class-component]`
 
@@ -47,9 +46,9 @@ In the following sample, each list item is split into two columns to display rel
 
 ## Value template
 
-The currently selected value that is displayed by default on the MultiSelect input element can be customized using the [valueTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/#valuetemplate) property.
+Customize how selected values appear in the MultiSelect input using the [valueTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/#valuetemplate) property. This controls the display format of selected items.
 
-In the following sample, the selected value is displayed as a combined text of both `FirstName` and `City` in the MultiSelect input, which is separated by a hyphen.
+In the following example, the selected value combines `FirstName` and `City` fields, separated by a hyphen.
 
 `[Class-component]`
 
@@ -79,9 +78,9 @@ In the following sample, the selected value is displayed as a combined text of b
 
 ## Group template
 
-The group header title under which appropriate sub-items are categorized can also be customize with the help of [groupTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/#grouptemplate) property. This template is common for both inline and floating group header template.
+Customize group header titles using the [groupTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/#grouptemplate) property. This template applies to both inline and floating group headers, allowing consistent group header styling.
 
-In the following sample, employees are grouped according to their city.
+In the following example, employees are grouped by their city.
 
 `[Class-component]`
 
@@ -111,10 +110,9 @@ In the following sample, employees are grouped according to their city.
 
 ## Header template
 
-The header element is shown statically at the top of the popup list items within the MultiSelect, and any custom element can be placed as a header element using the
-[headerTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/#headertemplate) property.
+Add a static header to the top of the popup list using the [headerTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/#headertemplate) property. This allows you to place custom elements such as titles, filters, or other controls in the header area.
 
-In the following sample, the list items and its headers are designed and displayed as two columns similar to multiple columns of the grid.
+In the following example, list items and their headers display in a two-column layout similar to a data grid.
 
 `[Class-component]`
 

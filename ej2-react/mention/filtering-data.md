@@ -14,9 +14,9 @@ The Mention component has built-in support to filter data items. The filter oper
 
 ## Limit the minimum filter character
 
-You can control the minimum length of user input to initiate the search action using [minLength](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.DropDowns.Mention.html#Syncfusion_EJ2_DropDowns_Mention_MinLength) property. This can be useful if you have a very large list of data. The default value is 0, where suggestion the list opened as soon as the user inputs the mention character.
+Control the minimum number of characters required to initiate search using the [minLength](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.DropDowns.Mention.html#Syncfusion_EJ2_DropDowns_Mention_MinLength) property. This is useful for large datasets. The default value is 0, where the suggestion list opens immediately when the mention character is typed.
 
-The remote request does not fetch the search data until the search key contains three characters as shown in the following example.
+The following example delays the remote request until three characters are entered:
 
 `[Class-component]`
 
@@ -80,9 +80,9 @@ While filtering, you can change the filter type to `Contains`, `StartsWith`, or 
 
 ## Allow spacing between search
 
-While filtering the data in the data source, you can allow the space in the middle of the mention by using the [allowSpaces](https://ej2.syncfusion.com/react/documentation/api/mention/#allowspaces) property. If the data source does not match with the mentioned element data, the popup will be hidden on the space key press. The default value of `allowSpaces` is `false`.
+Enable spaces within mention text by setting the [allowSpaces](https://ej2.syncfusion.com/react/documentation/api/mention/#allowspaces) property. When disabled, pressing space closes the popup if the text doesn't match the data source. The default value is `false`.
 
-> By default, the `allowSpaces` property is disabled, and the space ends the mention component search.
+> By default, the `allowSpaces` property is disabled, and space terminates the mention search.
 
 `[Class-component]`
 

@@ -8,11 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the spin buttons up and down arrow in React Numerictextbox component
+# Customize the spin buttons up and down arrow in React NumericTextBox component
 
-This section explains about how to change/customize spin up and down icons. You can customize spin button icons using `e-spin-up` and `e-spin-down` classes of those buttons.
+Replace the default increment and decrement icons with custom icons to match your application's design. The spin button icons are controlled by the `e-spin-up` and `e-spin-down` CSS classes, which you can override with custom styling.
 
-You can override the default icons of `e-spin-up` and `e-spin-down` classes using the following CSS code snippets.
+## Customizing the spin button icons
+
+Override the default icons of the `e-spin-up` and `e-spin-down` classes using the following CSS code snippets. Replace the content values with your desired Unicode icon codes:
 
 ```css
   .e-numeric .e-input-group-icon.e-spin-up:before {

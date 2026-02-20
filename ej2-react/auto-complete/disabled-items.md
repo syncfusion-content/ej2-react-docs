@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Disabled Items in React AutoComplete component
 
-The AutoComplete provides options for individual items to be either in an enabled or disabled state for specific scenarios. The category of each list item can be mapped through the [disabled](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#fields) field in the data table. Once an item is disabled, it cannot be selected as a value for the component. To configure the disabled item columns, use the `fields.disabled` property.
+The AutoComplete provides options for individual items to be either in an enabled or disabled state for specific scenarios. The category of each list item can be mapped through the [disabled](https://ej2.syncfusion.com/react/documentation/api/auto-complete#fields) field in the data table. Once an item is disabled, it cannot be selected as a value for the component. To configure the disabled item columns, use the `fields.disabled` property.
 
-In the following sample, State are grouped according on its category using `disabled` field.
+In the following sample, states are grouped according to their category using the `disabled` field.
 
 `[Class-component]`
 
@@ -42,7 +42,7 @@ In the following sample, State are grouped according on its category using `disa
 
 ## Disable Item Method
 
-The [disableItem](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#disableItem) method can be used to handle dynamic changing in disable state of a specific item. Only one item can be disabled in this method. To disable multiple items, this method can be iterated with the items list or array. The disabled field state will to be updated in the [dataSource](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#datasource), when the item is disabled using this method. If the selected item is disabled dynamically, then the selection will be cleared.
+The [disableItem](https://ej2.syncfusion.com/react/documentation/api/auto-complete#disableItem) method can be used to handle dynamic changes in the disable state of a specific item. Only one item can be disabled in this method. To disable multiple items, this method can be iterated with the items list or array. The disabled field state will be updated in the [dataSource](https://ej2.syncfusion.com/react/documentation/api/auto-complete#datasource) when the item is disabled using this method. If the selected item is disabled dynamically, then the selection will be cleared.
 
 | Parameter | Type | Description |
 |------|------|------|
@@ -52,6 +52,6 @@ The [disableItem](https://ej2.syncfusion.com/react/documentation/api/auto-comple
 
 ## Enabled
 
-If you want to disabled the overall component to set the [enabled](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#enabled) property to false.
+To disable the overall component, set the [enabled](https://ej2.syncfusion.com/react/documentation/api/auto-complete#enabled) property to false.
 
 ![Disabled AutoComplete Component](../images/autocomplete-disable.png)

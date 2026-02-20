@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Enable scroller in React List box component
 
-The ListBox supports scrolling and it can be achieved by restricting the height of the list box using [`height`](https://ej2.syncfusion.com/react/documentation/api/list-box/#height) property.
+Enable scrolling in the ListBox by restricting its height using the [`height`](https://ej2.syncfusion.com/react/documentation/api/list-box/#height) property.
 
-In the following sample, `height` of the list box is restricted to `290px`.
+In the following example, the ListBox height is set to `290px`:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

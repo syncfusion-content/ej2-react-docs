@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize progressbar in React Uploader component
+# Customize progress bar in React Uploader component
 
-You can customize the progress bar’s size, color, and background by overriding the styles in uploader component. Refer to the following example.
+Customize the progress bar appearance—including size, color, and background—by overriding the default Uploader component styles. The following example demonstrates how to apply custom CSS to match your application theme.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

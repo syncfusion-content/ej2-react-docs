@@ -18,9 +18,9 @@ To sort a particular column in the MultiColumn ComboBox, click on the grid colum
 
 You can use the [sortOrder](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/#sortorder) property to set the order of the column. It supports three types of sorting [None](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/sortOrder/), [Ascending](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/sortOrder/) and [Descending](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/sortOrder/).
 
-When you click on a column header for the first time, it sorts the column in ascending order. Clicking the same column header again will sort the column in descending order. A repetitive third click on the same column header will clear the sorting.
+Click a column header to sort in ascending order. Click again to sort in descending order. Click a third time to clear the sorting.
 
-In the following examples, data sorting is done with `Descending` order.
+The following examples demonstrate sorting in `Descending` order:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -35,11 +35,11 @@ In the following examples, data sorting is done with `Descending` order.
 
 ## Sort type
 
-You can use the [sortType](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/#sorttype) property to set the type of sorting applied to the columns. It supports tow types [OneColumn](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/sortType/) and [MultipleColumns](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/sortType/). By default the `sortType` is oneColumn.
+Use the [sortType](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/#sorttype) property to set the sorting type for columns. It supports two types: [OneColumn](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/sortType/) and [MultipleColumns](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/sortType/). By default, `sortType` is `OneColumn`.
 
-To sort multiple columns press and hold the CTRL key and click on the column headers. This feature is useful when you want to sort your data based on multiple criteria to analyze it in various ways.
+Sort multiple columns by holding CTRL and clicking column headers. This feature is useful for sorting data based on multiple criteria.
 
-In the following examples, data sorting type is set with `MultipleColumns`.
+The following examples demonstrate sorting with `MultipleColumns`:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

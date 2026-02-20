@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Api in React Dialog component | Syncfusion
-description: Learn here all about Api in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
-control: Api 
+title: API reference in React Dialog component | Syncfusion
+description: Learn here all about the API reference in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
+control: API reference 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Api in React Dialog component
+# API reference in React Dialog component
 
 ## Components
 

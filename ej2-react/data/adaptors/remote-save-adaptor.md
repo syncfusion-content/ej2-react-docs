@@ -442,7 +442,7 @@ After running the application, verify that the server-side API controller is suc
 
 ## Integration with Syncfusion<sup style="font-size:70%">&reg;</sup> React components
 
-To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React component with the `RemoteSaveAdaptor`, refer to the documentation below:
+To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React components with the `RemoteSaveAdaptor`, refer to the documentation below:
 
 - [Grid](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/remote-save-adaptor)
 

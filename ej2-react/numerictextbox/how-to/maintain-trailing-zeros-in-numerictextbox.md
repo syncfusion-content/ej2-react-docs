@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Maintain trailing zeros in numerictextbox in React Numerictextbox component
+# Maintain trailing zeros in NumericTextBox in React
 
-By default, trailing zeros disappear when the NumericTextBox gets focus. However, you can use the following sample to maintain the trailing zeros while focusing the NumericTextBox.
+By default, the NumericTextBox removes trailing zeros when the component receives focus (to allow easy editing of numeric values). However, when you need to preserve trailing zeros for currency formatting or precision display, use the following sample to maintain trailing zeros while focusing the NumericTextBox.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

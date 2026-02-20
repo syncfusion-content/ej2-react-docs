@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Api tooltipAnimationSettings in React Tooltip component | Syncfusion
-description: Learn here all about Api tooltipAnimationSettings in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
-control: Api tooltipAnimationSettings 
+title: API TooltipAnimationSettings in React Tooltip component | Syncfusion
+description: Learn here all about API TooltipAnimationSettings in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
+control: API TooltipAnimationSettings 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Api tooltipAnimationSettings in React Tooltip component
+# API TooltipAnimationSettings in React Tooltip component
 
 Animation options that are common for both open and close actions of the Tooltip.
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Draggable in React Predefined dialogs component
 
-The predefined dialogs supports dragging within its target container by grabbing the dialog header, which allows the user to reposition the dialog dynamically by using `isDraggable` property.
+The predefined dialogs support dragging within their target container by grabbing the dialog header. This enables users to reposition dialogs dynamically using the `isDraggable` property.
 
 ## Alert dragging
 
@@ -55,7 +55,7 @@ The predefined dialogs supports dragging within its target container by grabbing
 
  {% previewsample "page.domainurl/code-snippet/predefined-dialogs/confirm-drag-cs1" %}
 
-`[functional-component]`
+`[Functional-component]`
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

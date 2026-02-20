@@ -95,12 +95,6 @@ Add scheduler component's styles as given below in `src/App.css`.
 ```
 >To refer `App.css` in the application then import it in the `src/App.tsx` file.
 
-In case, if you want to make use of the combined CSS files of entire components, then you can avail it from the root folder of Essential<sup style="font-size:70%">&reg;</sup> JS 2 package and reference it with the code shown below.
-
-```css
-@import '../../node_modules/@syncfusion/ej2/tailwind3.css';
-```
-
 ## Module injection
 
 Each view types available in scheduler are maintained as individual modules and to work with those views, it is necessary to inject the required modules. The following modules are available in scheduler namely,

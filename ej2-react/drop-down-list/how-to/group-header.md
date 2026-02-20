@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Group header in React Drop down list component
 
-The following example demonstrate about how to disable the Fixed group header in DropDownList through CSS by using `visibility` attribute.
+The following example demonstrates how to disable the fixed group header in DropDownList using CSS with the `visibility` attribute:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Time range Slider in React Range Slider component
 
-Time formatting can be achieved in the same way as date formatting using [`renderingTicks`](https://ej2.syncfusion.com/react/documentation/api/slider/#renderingticks) and [`change`](https://ej2.syncfusion.com/react/documentation/api/slider/#change) events. The process of time formatting is demonstrated in the example below.
+Time formatting can be achieved similarly to date formatting using the [`renderingTicks`](https://ej2.syncfusion.com/react/documentation/api/slider/#renderingticks) and [`change`](https://ej2.syncfusion.com/react/documentation/api/slider/#change) events. The following example demonstrates time formatting.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -31,7 +31,7 @@ The floating label functionality in the TextArea component allows the placeholde
 
 ## Placeholder with localization
 
-Localization library allows to localize the placeholder text of the TextArea to different cultures using the `locale` property.
+Use the localization library to localize placeholder text to different cultures by setting the `locale` property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

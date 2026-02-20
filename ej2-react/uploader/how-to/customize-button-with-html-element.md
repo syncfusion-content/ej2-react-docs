@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize button with html element in React Uploader component
+# Customize button with HTML element in React Uploader component
 
-The uploader component allows you to customize the action buttons by using the[buttons](https://ej2.syncfusion.com/react/documentation/api/uploader/#buttons) &nbsp;property. Refer to the following example.
+Customize the Uploader action buttons (Browse, Upload, Clear) with custom HTML content using the [buttons](https://ej2.syncfusion.com/react/documentation/api/uploader/#buttons) property. This enables you to create branded or themed button styles that match your application design. Refer to the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

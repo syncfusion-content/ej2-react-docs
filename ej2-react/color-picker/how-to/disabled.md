@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Disabled in React Color picker component
 
-To achieve disabled state in ColorPicker, set the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#disabled) property to `true`. The ColorPicker pop-up cannot be accessed in disabled state.
+To disable the ColorPicker, set the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#disabled) property to `true`. When disabled, the ColorPicker popup cannot be accessed.
 
-The following example shows the `disabled` state of ColorPicker component.
+The following example shows the ColorPicker in a disabled state.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

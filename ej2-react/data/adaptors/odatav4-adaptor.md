@@ -442,7 +442,7 @@ If errors occur, verify the following:
 
 ## Integration with Syncfusion<sup style="font-size:70%">&reg;</sup> React components
 
-To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React component with the `ODataV4Adaptor`, refer to the documentation below:
+To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React components with the `ODataV4Adaptor`, refer to the documentation below:
 
 - [Grid](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/odatav4-adaptor)
 

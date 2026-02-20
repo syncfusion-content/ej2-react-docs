@@ -8,18 +8,18 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# React functional component in React Numerictextbox component
+# React functional component in React NumericTextBox component
 
-This section explains how to render the numeric textbox component in the functional component with react hooks methods. Please find the list of basic hook methods in the following table.
+Implement the NumericTextBox component using React functional components and hooks for a modern, state-management approach. The following table describes the essential React hooks used to manage NumericTextBox behavior and state:
 
-| Hooks | Description |
+| Hook | Purpose |
 | ------------- | ------------- |
-| `useState` | useState is a Hook that allows you to define the state in the functional components. If you pass the initial state to this function, then it will return a state variable with value and function to update this state value. Here, useState is used to store the value of total amount field. |
-| `useEffect` | useEffect is a Hook that allows you to execute code after rendering and re-rendering the component. Here, defined the set of rules for the price of the item, number of items, and total amount fields and initiated the form validation to those fields. |
-| `useRef` | useRef is a Hook function that allows to directly create a reference to the DOM element in the functional component. Here, assigned the price of the item field reference for updating the predefined price on initial loading. |
-| `useReducer` | useReducer is a Hook function that accepts a reducer function and an initial state as argument. It returns a state value and another function to dispatch an action. Here, dispatched the update action to update the price and count state values. |
+| `useState` | Manages local state in functional components. Returns a state variable and a setter function. Used here to track the total amount field value. |
+| `useEffect` | Executes side effects after component rendering. Used here to initialize validation rules and form validation for price, quantity, and amount fields. |
+| `useRef` | Creates direct DOM element references without triggering re-renders. Used here to focus or preset the price field on component load. |
+| `useReducer` | Manages complex state logic by dispatching actions to a reducer function. Used here to centralize updates for price and quantity values. |
 
-The following example shows how to render a simple numeric textbox with react hooks.
+The following example demonstrates how to implement a NumericTextBox component using React hooks in a functional component:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

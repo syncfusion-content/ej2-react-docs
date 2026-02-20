@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Icons support in React Drop down list component
 
-You can render **icons** to the list items by mapping the [iconCss](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#fields) &nbsp;field. This `iconCss` field create a span in the list item with mapped class name to allow styling as per your need.
+Render **icons** to list items by mapping the [iconCss](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#fields) &nbsp;field. The `iconCss` field creates a span element in each list item with the mapped class name for custom styling.
 
 In the following sample, icon classes are mapped with `iconCss` field.
 

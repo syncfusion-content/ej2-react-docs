@@ -10,18 +10,18 @@ domainurl: ##DomainURL##
 
 # Buttons in React Inplace editor component
 
-The In-place Editor has an action for save and cancel using buttons. The [saveButton](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#savebutton) and [cancelButton](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#cancelbutton) properties accepts the [ButtonModel](https://ej2.syncfusion.com/react/documentation/api/button/buttonModel/) objects for customizing the save and cancel button properties.
+The In-place Editor provides save and cancel actions through customizable buttons. The [saveButton](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#savebutton) and [cancelButton](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#cancelbutton) properties accept [ButtonModel](https://ej2.syncfusion.com/react/documentation/api/button/buttonModel/) objects for customizing button appearance and behavior.
 
-Buttons can be show or hide by setting a boolean value to the [showButtons](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#showbuttons) property.
+Control button visibility by setting the [showButtons](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#showbuttons) property to `true` or `false`.
 
-> Without buttons value actions will be performed by the following way.
+> When buttons are hidden, value submission is handled through alternative methods:
 
-* **[actionOnBlur](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#actiononblur)**: By clicking out-side of the editor component it will get focus out and perform action based on this property value.
-* **[submitOnEnter](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#submitonenter)**: Pressing `Enter` key it performs the submit action, when this property set to `true`.
+* **[actionOnBlur](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#actiononblur)**: Clicking outside the editor triggers the submit action based on this property's configuration.
+* **[submitOnEnter](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#submitonenter)**: Pressing the `Enter` key triggers the submit action when this property is set to `true`.
 
-In the following sample, the [content](https://ej2.syncfusion.com/react/documentation/api/button/#content) and [cssClass](https://ej2.syncfusion.com/react/documentation/api/button/#cssclass) properties of `Button` value assigned to the [saveButton](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#savebutton) and [cancelButton](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#cancelbutton) properties to customize its appearance. Also check or uncheck a checkbox buttons render or removed from the editor.
+In the following sample, the [content](https://ej2.syncfusion.com/react/documentation/api/button/#content) and [cssClass](https://ej2.syncfusion.com/react/documentation/api/button/#cssclass) properties are assigned to the [saveButton](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#savebutton) and [cancelButton](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#cancelbutton) properties to customize button appearance. Use the checkbox to dynamically show or hide the buttons.
 
-To restrict either save or cancel button rendering into a DOM, simply pass empty object `{}` in the  `saveButton` or `cancelButton` properties.
+To prevent a button from rendering in the DOM, pass an empty object `{}` to the `saveButton` or `cancelButton` property.
 
 > For more details about buttons, refer this documentation [section](../button/).
 

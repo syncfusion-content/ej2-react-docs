@@ -10,7 +10,9 @@ domainurl: ##DomainURL##
 
 # Preview images before uploading in React Uploader component
 
-The uploader component allows to create preview images before uploading. The preview images can be created by reading the file using selected event. Also, the user can create preview images after uploading to server using success event. Refer to the following link to learn about how to create image preview.
+Display image previews before upload to allow users to verify their selection, or after successful server upload for confirmation. Create previews by reading file data using the selected event (client-side preview) or the success event (post-upload preview). This improves user experience by providing visual feedback during the upload workflow.
+
+Refer to the following link to explore a complete image preview implementation:
 
 [Image Preview](https://ej2.syncfusion.com/react/demos/#/material/uploader/image-preview)
 

@@ -10,16 +10,16 @@ domainurl: ##DomainURL##
 
 # Selection in React List box component
 
-The ListBox provides support to select an item or a group of item by mouse or keyboard action. There are two selection modes available in list box,
+The ListBox supports selecting items using mouse or keyboard actions. Two selection modes are available:
 
-* Single -  To select single item in the list box.
-* Multiple -  To select multiple items in the list box.
+* Single - Select a single item in the list box.
+* Multiple - Select multiple items in the list box.
 
-On selection of each list box item, [`change`](https://ej2.syncfusion.com/react/documentation/api/list-box/#change) event is triggered.
+The [`change`](https://ej2.syncfusion.com/react/documentation/api/list-box/#change) event is triggered when a list box item is selected.
 
 ## Single selection
 
-To enable single selection in the list box, [`mode`](https://ej2.syncfusion.com/react/documentation/api/list-box/selectionSettingsModel/#mode) should be set as `single` in [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/list-box/#selectionsettings) property.
+Enable single selection by setting the [`mode`](https://ej2.syncfusion.com/react/documentation/api/list-box/selectionSettingsModel/#mode) property to `single` in the [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/list-box/#selectionsettings) configuration:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -34,11 +34,11 @@ To enable single selection in the list box, [`mode`](https://ej2.syncfusion.com/
 
 ## Multiple selection
 
-To enable multiple selection in the list box, `mode` should be set as `Multiple` in `selectionSettings` property.
+Enable multiple selection by setting the `mode` property to `Multiple` in the `selectionSettings` configuration.
 
-To select multiple items, use the SHIFT, CTRL, and arrow keys to make selections.
+Use SHIFT, CTRL, and arrow keys to select multiple items.
 
-> By default, the selection mode is set as `Multiple`.
+> By default, the selection mode is set to `Multiple`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -53,11 +53,11 @@ To select multiple items, use the SHIFT, CTRL, and arrow keys to make selections
 
 ## Checkbox selection
 
-The ListBox supports checkbox in default and grouped list box which is used to select multiple items. CheckBox selection can be enabled by injecting `CheckBoxSelection` module and also [`showCheckBox`](https://ej2.syncfusion.com/react/documentation/api/list-box/selectionSettingsModel/#showcheckbox) property should be set as `true`.
+The ListBox supports checkboxes in default and grouped list boxes for multiple item selection. Enable checkbox selection by injecting the `CheckBoxSelection` module and setting the [`showCheckBox`](https://ej2.syncfusion.com/react/documentation/api/list-box/selectionSettingsModel/#showcheckbox) property to `true`.
 
 ### Select All
 
-To select all the items in the list box, [`showSelectAll`](https://ej2.syncfusion.com/react/documentation/api/list-box/selectionSettingsModel/#showselectall) should be set as `true`.
+Enable the Select All option by setting the [`showSelectAll`](https://ej2.syncfusion.com/react/documentation/api/list-box/selectionSettingsModel/#showselectall) property to `true`:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

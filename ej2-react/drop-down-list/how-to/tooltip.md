@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Tooltip in React Drop down list component
 
-You can achieve this behavior by using `ej2-tooltip` component. When the mouse hover on the DropDownList option that tooltip display some details related to hovered list item.
+Achieve this behavior using the `ej2-tooltip` component. When you hover the mouse over a DropDownList option, the tooltip displays details related to that list item.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

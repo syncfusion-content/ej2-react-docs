@@ -1,19 +1,22 @@
 ---
 layout: post
-title: Data binding in React Auto complete component | Syncfusion
-description: Learn here all about Data binding in Syncfusion React Auto complete component of Syncfusion Essential JS 2 and more.
+title: Data Binding in React AutoComplete component | Syncfusion
+description: Learn here all about Data Binding in Syncfusion React AutoComplete component of Syncfusion Essential JS 2 and more.
 control: Data binding 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in React Auto complete component
+# Data Binding in React AutoComplete component
 
-The AutoComplete loads the data either from local data sources or remote data services using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#datasource) property .
-It supports the data type of array or `DataManager`.
+The AutoComplete component loads data either from local data sources or remote data services using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#datasource) property. It supports the data type of array or `DataManager`.
 
-The AutoComplete also supports different kinds of data services such as OData, OData V4, and Web API, and data formats such as XML, JSON, and JSONP with the help of DataManager Adaptors.
+The AutoComplete also supports different kinds of data services such as OData, OData V4, and Web API, and data formats such as XML, JSON, and JSONP with the help of DataManager adaptors.
+
+## Field mapping
+
+When binding data to the AutoComplete, map the appropriate columns to the component's fields to ensure proper display and functionality. The following table describes the available field properties:
 
 | Fields | Type | Description |
 |------|------|-------------|
@@ -59,7 +62,7 @@ The AutoComplete has support to load array of primitive data such as strings and
 
 ### Array of object
 
-The AutoComplete can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [`fields`](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#fields) property.
+The AutoComplete can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [`fields`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#fields) property.
 
 In the following example, `sports` column from complex data have been mapped to the `value` field.
 
@@ -91,7 +94,7 @@ In the following example, `sports` column from complex data have been mapped t
 
 ### Array of Complex object
 
-The AutoComplete can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [`fields`](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#fields) property.
+The AutoComplete can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [`fields`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#fields) property.
 
 In the following example, `Country.Name` column from complex data have been mapped to the `value` field.
 
@@ -123,7 +126,7 @@ In the following example, `Country.Name` column from complex data have been ma
 
 ## Binding remote data
 
-The AutoComplete supports retrieval of data from remote data services with the help of `DataManager` component. The [`Query`](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#query) property is used to fetch data from the database and bind it to the AutoComplete.
+The AutoComplete supports retrieval of data from remote data services with the help of `DataManager` component. The [`Query`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#query) property is used to fetch data from the database and bind it to the AutoComplete.
 
 The below sample displays the first 6 contacts from the `Customers` table of the `Northwind` data service.
 

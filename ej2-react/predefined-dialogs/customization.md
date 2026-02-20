@@ -10,17 +10,18 @@ domainurl: ##DomainURL##
 
 # Customization in React Predefined dialogs component
 
-You can customize the predefined dialogs buttons by using below properties.
-* `okButton` - Use this property to customize **OK** button text.
-* `cancelButton` - Use this property to customize **Cancel** button text.
+The buttons of predefined dialogs can be customized using the following properties:
 
-Use the following code snippet for **alert**, **confirm**  and **prompt** to customize the predefined dialogs action buttons.
+* `okButton` - Customizes the **OK** button text
+* `cancelButton` - Customizes the **Cancel** button text
 
-For alert dialog , customized the default dialog button content as `Dismiss` by using the `text` property.
+The following code snippet demonstrates how to customize action buttons for **alert**, **confirm**, and **prompt** dialogs.
 
-For confirm dialog, customized the default dialog buttons content as `Yes` and `No` by using the `text` property and also customized the dialog button icons by using `icon` property.
+**Alert dialog**: The default button content is customized to `Dismiss` using the `text` property.
 
-For prompt dialog , customized the default dialog buttons content as `Connect` and `Close` by using `text` property.
+**Confirm dialog**: The default button contents are customized to `Yes` and `No` using the `text` property. Additionally, button icons are customized using the `icon` property.
+
+**Prompt dialog**: The default button contents are customized to `Connect` and `Close` using the `text` property.
 
 ## Alert action button
 
@@ -203,9 +204,9 @@ Use the following code for **alert**, **confirm** and **prompt** to demonstrates
 
 ## Customize dialog content
 
-You can load custom content in predefined dialogs using the `content` property.
+Custom content can be loaded in predefined dialogs using the `content` property.
 
-Use the following code to customize the dialog content to render the custom TextBox component inside the prompt dialog to get the username from the user.
+The following code demonstrates how to customize the prompt dialog by rendering a custom TextBox component to capture username input from the user.
 
 `[Class-component]`
 

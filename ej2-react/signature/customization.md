@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Customization in React Signature component
 
-The Signature component draws stroke/path using moveTo() and lineTo() methods to connect one or more points while drawing in canvas. The stroke width can be modified by using its color and width. And the background can be modified by using its background color and background image.
+The Signature component draws strokes using moveTo() and lineTo() methods to create smooth paths on the canvas. You can customize the stroke width, color, and background color or image.
 
 ## Stroke Width
 
-The variable stroke width is based on the values of [`maxStrokeWidth`](https://ej2.syncfusion.com/react/documentation/api/signature/#maxstrokewidth), [`minStrokeWidth`](https://ej2.syncfusion.com/documentation/react/api/signature/#minstrokewidth) and [`velocity`](https://ej2.syncfusion.com/react/documentation/api/signature/#velocity) for smoother and realistic signature. The default value of minimum stroke width is set as 0.5, maximum stroke width is set as 2.5 and velocity is set as 0.7.
+The variable stroke width is based on [`maxStrokeWidth`](https://ej2.syncfusion.com/react/documentation/api/signature/#maxstrokewidth), [`minStrokeWidth`](https://ej2.syncfusion.com/documentation/react/api/signature/#minstrokewidth), and [`velocity`](https://ej2.syncfusion.com/react/documentation/api/signature/#velocity) for a smoother and more realistic signature. Default values: minimum width is 0.5, maximum width is 2.5, and velocity is 0.7.
 
-In the following example, minimum stroke width is set as 0.5, maximum stroke width is set as 3 and velocity is set as 0.7.
+The following example sets minimum stroke width to 0.5, maximum width to 3, and velocity to 0.7.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -31,7 +31,7 @@ In the following example, minimum stroke width is set as 0.5, maximum stroke wid
 
 ## Stroke Color
 
-Color of the stroke can be specified by using [`strokeColor`](https://ej2.syncfusion.com/react/documentation/api/signature/#strokecolor) property and it accepts hexadecimal code, RGB, and text. The default value of this property is “#000000”.
+Specify the stroke color using the [`strokeColor`](https://ej2.syncfusion.com/react/documentation/api/signature/#strokecolor) property, which accepts hexadecimal code, RGB, or text values. The default value is "#000000".
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -46,7 +46,7 @@ Color of the stroke can be specified by using [`strokeColor`](https://ej2.syncfu
 
 ## Background Color
 
-Background color of a signature can be specified by using [`backgroundColor`](https://ej2.syncfusion.com/react/documentation/api/signature/#backgroundcolor) property and it accepts hexadecimal code, RGB, and text. The default value of this property is “#ffffff”.
+Specify the background color using the [`backgroundColor`](https://ej2.syncfusion.com/react/documentation/api/signature/#backgroundcolor) property, which accepts hexadecimal code, RGB, or text values. The default value is "#ffffff".
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -61,7 +61,7 @@ Background color of a signature can be specified by using [`backgroundColor`](ht
 
 ## Background Image
 
-Background image of a signature can be specified by using [`backgroundImage`](https://ej2.syncfusion.com/documentation/api/signature/#backgroundimage) property. The background image can be set by either hosting the image in our local IIS or online image.
+Specify the background image using the [`backgroundImage`](https://ej2.syncfusion.com/documentation/api/signature/#backgroundimage) property. The image can be hosted locally or accessed from an online URL.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

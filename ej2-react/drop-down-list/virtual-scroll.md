@@ -22,9 +22,9 @@ When the enableVirtualization property is enabled, the `skip` and `take` propert
 
 ## Binding local data
 
-The DropDownList can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [fields](../api/drop-down-list/#fields) property. When using virtual scrolling, the list updates based on the scroll offset value, triggering a request to fetch more data from the server. As the data is being fetched, the `actionBegin` event occurs before the data retrieval starts. Once the data retrieval is successful, the `actionComplete` event is triggered, indicating that the data fetch process is complete.
+The DropDownList generates list items from an array of complex data by mapping appropriate columns to the [fields](../api/drop-down-list/#fields) property. With virtual scrolling, the list updates based on scroll offset, triggering data requests from the server. The `actionBegin` event fires before data retrieval begins, and the `actionComplete` event fires when data retrieval completes.
 
-In the following example, `id` column and `text` column from complex data have been mapped to the `value` field and `text` field, respectively.
+In the following example, the `id` and `text` columns are mapped to the `value` and `text` fields respectively.
 
 `[Class-component]`
 
@@ -61,9 +61,9 @@ The following sample displays the OrderId from the `Orders` Data Service.
 
 ## Customizing items count in virtualization 
 
-When the `enableVirtualization` property is enabled, the `take` property provided by the user within the Query parameter at the initial state or during the `actionBegin` event will be considered. Internally, it calculates the items that fit onto the current page (i.e., probably twice the amount of the popup's height). If the user-provided take value is less than the minimum number of items that fit into the popup, the user-provided take value will not be considered.
+When the `enableVirtualization` property is enabled, the `take` property in the Query parameter at initialization or during the `actionBegin` event is respected. Internally, the component calculates the number of items that fit on the current viewport based on popup height. If the specified take value is less than the minimum items required to fill the viewport, the internal calculation takes precedence.
 
-The following sample shows the example for Customizing items count in virtualization.
+The following example demonstrates customizing items count in virtualization:
 
 `[Class-component]`
 
@@ -79,9 +79,9 @@ The following sample shows the example for Customizing items count in virtualiza
 
 ## Grouping
 
-The DropDownList component supports grouping with Virtualization. It allows you to organize elements into groups based on different categories. Each item in the list can be classified using the [groupBy](../api/drop-down-list/#fields) field in the data table. After grouping, virtualization works similarly to local data binding, providing a seamless user experience. When the data source is bound to remote data, an initial request is made to retrieve all data for the purpose of grouping. Subsequently, the grouped data works in the same way as local data binding on virtualization. 
+The DropDownList component supports grouping with virtualization. Organize elements into groups based on categories using the [groupBy](../api/drop-down-list/#fields) field in the data table. After grouping, virtualization functions like local data binding. When binding to remote data, an initial request retrieves all data for grouping purposes. Subsequently, the grouped data works the same way as virtualized local data.
 
-The following sample shows the example for Grouping with Virtualization. 
+The following example demonstrates grouping with virtualization: 
 
 `[Class-component]`
 
@@ -98,9 +98,9 @@ The following sample shows the example for Grouping with Virtualization.
 
 ## Filtering with Virtualization
 
-The DropDownList component supports Filtering with Virtualization. The DropDownList includes a built-in feature that enables data filtering when the [`allowFiltering`](../api/drop-down-list/#allowfiltering) option is enabled. In the context of Virtual Scrolling, the filtering process operates in response to the typed characters. Specifically, the DropDownList sends a request to the server, utilizing the full data source, to achieve filtering. Before initiating the request, an action event is triggered. Upon successful retrieval of data from the server, an action complete event is triggered. The initial data is loaded when the popup is opened. Whether the filter list has a selection or not, the popup closes.
+The DropDownList component supports filtering with virtualization. When [`allowFiltering`](../api/drop-down-list/#allowfiltering) is enabled, the component filters data based on typed characters. The DropDownList sends requests to the server using the full data source for filtering. The `actionBegin` event fires before the request, and the `actionComplete` event fires after successful data retrieval. Initial data loads when the popup opens, and the popup closes after selection or filtering completion.
 
-The following sample shows the example for Filtering with Virtualization.
+The following example demonstrates filtering with virtualization:
 
 `[Class-component]`
 

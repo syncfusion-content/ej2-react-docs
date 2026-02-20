@@ -40,17 +40,17 @@ The accessibility compliance for the DateRangePicker component is outlined below
 
 ## WAI-ARIA attributes
 
-The web accessibility makes web content and web applications more accessible for disabled people. It especially helps in dynamic content change and development of advanced user interface controls  with AJAX, HTML, JavaScript, and related technologies.
-DateRangePicker provides built-in compliance with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/datepicker-dialog/) specifications. WAI-ARIA supports is achieved through the attributes like `aria-expanded`, `aria-disabled`, `aria-activedescendant` applied to the input element.
+Web accessibility standards define practices to make web content and applications more accessible to users with disabilities. WAI-ARIA attributes are particularly valuable for dynamic content and advanced user interface controls built with AJAX, HTML, JavaScript, and related technologies.
 
-To know about the accessibility of Calendar refer to the [Accessibility](../calendar/accessibility/) section of Calendar.
+The DateRangePicker component provides built-in compliance with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/datepicker-dialog/) specifications through attributes applied to the input element: `aria-expanded`, `aria-disabled`, and `aria-activedescendant`. The component also includes grid role and grid cell attributes for each day cell to enhance semantic meaning.
 
-It helps disabled persons by providing information about the widget for assistive technology  in the screen readers.
-DateRangePicker component contains grid role and grid cell for each day cell.
+For related information, refer to the Calendar component's [Accessibility](../calendar/accessibility/) section.
 
-* **Aria-expanded**: Indicates the currently selected date of the DateRangePicker component.
+These attributes enable users with disabilities to interact effectively with the DateRangePicker through assistive technologies such as screen readers.
 
-* **Aria-disabled**:  Indicates the disabled state of the DateRangePicker component.
+* **aria-expanded**: Indicates whether the DateRangePicker popup is expanded or collapsed.
+
+* **aria-disabled**: Indicates the disabled state of the DateRangePicker component.
 
 ## Keyboard Interaction
 
@@ -74,7 +74,7 @@ Use the following list of keys to navigate the currently focused Calendar after 
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Upper Arrow</kbd>  | Focuses the same day of the previous week. |
+| <kbd>Up Arrow</kbd>  | Focuses the same day of the previous week. |
 | <kbd>Down Arrow</kbd>  | Focuses the same day of the next week. |
 | <kbd>Left Arrow</kbd>  | Focuses the day before. |
 | <kbd>Right Arrow</kbd>  | Focuses the next day. |

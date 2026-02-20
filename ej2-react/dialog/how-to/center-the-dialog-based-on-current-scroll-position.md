@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Center the dialog based on current scroll position in React Dialog component
 
-The dialog is always centered based on the target container. If the target is not specified, then the dialog will be rendered based on its body and centered in the position of the current viewpoint.
+By default, the dialog is centered based on the target container. If the target is not specified, the dialog is rendered in the body and centered according to the current viewport. 
 
-In the following sample, the model dialog is centered based on its current scroll position of the page.
+In the following sample, the modal dialog is centered based on the page's current scroll position, ensuring it remains visible as the user scrolls the page content.
 
 `[Class-component]`
 

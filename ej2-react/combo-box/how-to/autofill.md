@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Autofill in React Combo box component
 
-The ComboBox supports the `autofill` behaviour with the help of [autofill](https://ej2.syncfusion.com/react/documentation/api/combo-box/#autofill) property. Whenever you change the input value, the ComboBox will autocomplete your data by matching the typed character. Suppose, if no matches found then, ComboBox doesn't suggest any item.
+The ComboBox supports autofill functionality through the [autofill](https://ej2.syncfusion.com/react/documentation/api/combo-box/#autofill) property. As you type, the ComboBox automatically completes your input by matching typed characters against available options. If no matches are found, the ComboBox does not suggest any item.
 
-The following examples, showcase that how to work autofill with ComboBox.
+The following examples demonstrate how autofill works with the ComboBox.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

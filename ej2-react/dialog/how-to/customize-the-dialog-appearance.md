@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize the dialog appearance in React Dialog component
 
-You can customize the dialog appearance by providing dialog template as string or HTML element to the [content](https://ej2.syncfusion.com/react/documentation/api/dialog/#content) property. In the following sample, dialog is customized as error window appearance.
+You can customize the dialog appearance by providing a dialog template as a string or HTML element to the [content](https://ej2.syncfusion.com/react/documentation/api/dialog/#content) property. In the following sample, the dialog is customized to appear as an error window.
 
 `[Class-component]`
 

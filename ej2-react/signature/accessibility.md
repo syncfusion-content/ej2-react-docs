@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Signature component
 
-The Signature component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Signature component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Signature component is outlined below.
 
@@ -40,7 +40,7 @@ The accessibility compliance for the Signature component is outlined below.
 
 ## Keyboard interaction
 
-The Signature component followed the [keyboard interaction] guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Signature component.
+The Signature component follows keyboard interaction guidelines to assist people who use assistive technologies (AT) and keyboard navigation. The following keyboard shortcuts are supported.
 
 | **Press** | **To do this** |
 | --- | --- |
@@ -51,9 +51,9 @@ The Signature component followed the [keyboard interaction] guideline, making it
 
 ## Ensuring accessibility
 
-The Signature component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+Accessibility compliance is ensured through [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Signature component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/signature.html) in a new window to evaluate the accessibility of the Signature component with accessibility tools.
+The following sample demonstrates the Signature component's accessibility compliance. Open the [sample](https://ej2.syncfusion.com/accessibility/signature.html) in a new window to evaluate accessibility with these tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/signature.html" %}
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Sizing in React TextArea Component
 
-you can adjust the size of the TextArea by applying specific classes:
+You can adjust the TextArea size by applying specific classes:
 
 | Property  | Description |
 | -- | -- |
@@ -32,8 +32,7 @@ By applying these classes, users can easily customize the appearance of the Text
 
 ## Filled and outline mode
 
-The Filled and Outline modes can be enabled in the TextArea component by adding the `e-outline` or `e-filled` class to the [cssClass](https://ej2.syncfusion.com/react/documentation/api/textarea/#cssClass) API.
-By adding these classes, users can choose between a filled or outline appearance for the TextArea component, aligning with the design aesthetics of their application.
+Enable Filled or Outline modes by adding the `e-outline` or `e-filled` class to the [cssClass](https://ej2.syncfusion.com/react/documentation/api/textarea/#cssClass) API. This allows you to choose between filled or outline appearance, aligning with your application's design.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -50,9 +49,7 @@ By adding these classes, users can choose between a filled or outline appearance
 
 ## Custom styling with cssClass API in TextArea
 
-The `cssClass` Api provides a powerful way to apply custom styling to the TextArea component, allowing users to customize its appearance and layout according to their design requirements.
-
-By utilizing the `cssClass` API, users can apply custom CSS classes to the TextArea component's container, enabling control over its styling properties such as color, padding, margins, borders, and more.
+The `cssClass` API provides a powerful way to apply custom styling to the TextArea component. Apply custom CSS classes to control styling properties such as color, padding, margins, borders, and more according to your design requirements.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

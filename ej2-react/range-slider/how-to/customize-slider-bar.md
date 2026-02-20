@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize Slider bar in React Range Slider component
 
-The Slider appearance can be customized through CSS. You can customize the Slider bar by overriding the Slider CSS classes.
-The Slider bar can be customized with different themes. By default, the Slider has the class name `e-slider-track` for the bar. You can override this class with custom color values as shown in the following code snippet.
+The Slider appearance can be customized through CSS by overriding Slider CSS classes. By default, the Slider uses the `e-slider-track` class for the bar. You can override this class with custom color values as shown below.
 
 ```css
 .e-control.e-slider .e-slider-track .e-range {

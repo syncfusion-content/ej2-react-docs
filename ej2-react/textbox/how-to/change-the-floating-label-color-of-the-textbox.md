@@ -10,24 +10,22 @@ domainurl: ##DomainURL##
 
 # Change the floating label color of the TextBox in React
 
-You can change the floating label color of the TextBox for both `success` and `warning` validation states by applying the following CSS styles.
+Customize the floating label color for different validation states (success and warning) to provide visual feedback about input validity. Apply the following CSS rules to style the label based on the TextBox state:
 
 ```css
+/* Success state - green label */
+.e-float-input.e-input-group.e-success label.e-float-text,
+.e-float-input.e-input-group.e-success input:focus ~ label.e-float-text,
+.e-float-input.e-input-group.e-success input:valid ~ label.e-float-text {
+  color: #22b24b;
+}
 
-    /* For Success state */
-    .e-float-input.e-input-group.e-success label.e-float-text,
-    .e-float-input.e-input-group.e-success input:focus ~ label.e-float-text,
-    .e-float-input.e-input-group.e-success input:valid ~ label.e-float-text {
-      color: #22b24b;
-    }
-
-    /* For Warning state */
-    .e-float-input.e-input-group.e-warning label.e-float-text,
-    .e-float-input.e-input-group.e-warning input:focus ~ label.e-float-text,
-    .e-float-input.e-input-group.e-warning input:valid ~ label.e-float-text {
-      color: #ffca1c;
-    }
-
+/* Warning state - yellow/amber label */
+.e-float-input.e-input-group.e-warning label.e-float-text,
+.e-float-input.e-input-group.e-warning input:focus ~ label.e-float-text,
+.e-float-input.e-input-group.e-warning input:valid ~ label.e-float-text {
+  color: #ffca1c;
+}
 ```
 
 {% tabs %}

@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Handle no color support in React Color picker component
 
-The ColorPicker component supports no color functionality. By clicking the no color tile from palette, the selected color becomes `empty` and considered as no color has been selected from color picker.
+The ColorPicker component supports a no-color feature. When you click the no-color tile in the palette, the selected color becomes empty, indicating that no color has been selected.
 
 ## Default no color
 
-To achieve this, set [`noColor`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#nocolor) property as `true`.
+To enable this feature, set the [`noColor`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#nocolor) property to `true`.
 
-In the following sample, the first tile of the color palette represents the no color tile. By clicking the no color tile you can achieve the above functionalities.
+In the following sample, the first tile of the palette represents the no-color option. Click it to clear the color selection.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -29,11 +29,11 @@ In the following sample, the first tile of the color palette represents the no c
 
  {% previewsample "page.domainurl/code-snippet/colorpicker/no-color/default-cs1" %}
 
->If the [`noColor`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#nocolor) property is enabled, make sure to disable the [`modeswitcher`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#modeswitcher) property.
+>When the [`noColor`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#nocolor) property is enabled, ensure that the [`modeSwitcher`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#modeswitcher) property is disabled.
 
 ## Custom no color
 
-The following sample show the color palette with custom no color option.
+The following sample shows the palette with a custom no-color option.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

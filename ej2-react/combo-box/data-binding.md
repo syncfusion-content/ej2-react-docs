@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Data binding in React Combo box component
 
-The ComboBox loads the data either from local data sources or remote data services using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/combo-box/#datasource) property. It supports the data type of `array` or `DataManager`.
+The ComboBox loads data from local sources or remote services using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/combo-box/#datasource) property. It supports both `array` and `DataManager` data types.
 
-The ComboBox also supports different kinds of data services such as OData, OData V4, and Web API, and data formats such as XML, JSON, and JSONP with the help of `DataManager` adaptors.
+The component also supports various data services including OData, OData V4, and Web API, with support for XML, JSON, and JSONP formats through `DataManager` adaptors.
 
 | Fields | Type | Description |
 |------|------|-------------|
@@ -29,7 +29,7 @@ Local data can be represented in two ways as described below.
 
 ### 1. Array of simple data
 
-The ComboBox has support to load array of primitive data such as strings and numbers. Here, both value and text field act the same.
+The ComboBox supports loading arrays of primitive data such as strings and numbers. In this case, the value and text fields represent the same data.
 
 `[Class-component]`
 
@@ -59,9 +59,9 @@ The ComboBox has support to load array of primitive data such as strings and num
 
 ### 2. Array of JSON data
 
-The ComboBox can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [fields](https://ej2.syncfusion.com/react/documentation/api/combo-box/#fields) property.
+The ComboBox generates list items from arrays of objects. Map the appropriate columns to the [fields](https://ej2.syncfusion.com/react/documentation/api/combo-box/#fields) property.
 
-In the following example, `Id` column and `Game` column from complex data have been mapped to the `value` field and `text` field, respectively.
+In the following example, the `Id` column is mapped to the `value` field and the `Game` column is mapped to the `text` field.
 
 `[Class-component]`
 
@@ -91,10 +91,9 @@ In the following example, `Id` column and `Game` column from complex data have b
 
 ### 3. Array of Complex data
 
-The ComboBox can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the
-[fields](https://ej2.syncfusion.com/react/documentation/api/combo-box/#fields) property.
+The ComboBox generates list items from arrays of complex objects by mapping nested properties to the [fields](https://ej2.syncfusion.com/react/documentation/api/combo-box/#fields) property.
 
-In the following example, `Code.Id` column and `Country.Name` column from complex data have been mapped to the `value` field and `text` field, respectively.
+In the following example, `Code.Id` is mapped to the `value` field and `Country.Name` is mapped to the `text` field.
 
 `[Class-component]`
 

@@ -10,25 +10,25 @@ domainurl: ##DomainURL##
 
 # React functional component in React Form validator component
 
-This article provides a step-by-step instructions on using the React functional Hooks in a simple HTML form with the FormValidator component.
+This article provides step-by-step instructions on using React Hooks in an HTML form with the FormValidator component.
 
 The following is a list of React Hooks methods to utilize while performing form validation.
 
 | Hooks | Description |
 | ------------- | ------------- |
-| `useState` | The useState is a Hook that allows the state to be defined in the functional components. If the initial state is passed to this function, then it will return a state variable with a value and a function to update this state value. |
-| `useEffect` | The useEffect is a Hook that executes code after rendering and re-rendering the component. |
-| `useRef` | The useRef is a Hook function that allows the functional component to create a direct reference to the DOM element. |
-| `useReducer` | The useReducer is a Hook function that accepts a reducer function and an initial state as arguments. It returns a state value and another function to dispatch an action. |
+| `useState` | A Hook that allows you to define state in functional components. Returns a state variable and a function to update it. |
+| `useEffect` | A Hook that executes code after the component renders and re-renders. |
+| `useRef` | A Hook that creates a direct reference to a DOM element within the functional component. |
+| `useReducer` | A Hook that accepts a reducer function and initial state, returning a state value and a dispatch function for actions. |
 
 ## Create a React form with Syncfusion<sup style="font-size:70%">&reg;</sup> form components
 
-To create a React application with Syncfusion<sup style="font-size:70%">&reg;</sup> components, refer to the [`Getting Started`](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start/#create-the-react-application) section. Once the application is set up, replace the components with React form and Syncfusion<sup style="font-size:70%">&reg;</sup> form components to create a simple form.
+To create a React application with Syncfusion<sup style="font-size:70%">&reg;</sup> components, refer to the [`Getting Started`](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start/#create-the-react-application) section. Once the application is set up, add Syncfusion<sup style="font-size:70%">&reg;</sup> form components to create a simple form.
 
-In the following example, a login form is created with Syncfusion<sup style="font-size:70%">&reg;</sup> components such as TextBox, DatePicker, and Button. This form is validated using the React FormValidator component.
+In the following example, a login form is created using Syncfusion<sup style="font-size:70%">&reg;</sup> components such as TextBox, DatePicker, and Button, and validated with the FormValidator component.
 
-* [`TextBox`](https://ej2.syncfusion.com/react/documentation/textbox/getting-started/) - To get the user's email and password
-* [`DatePicker`](https://ej2.syncfusion.com/react/documentation/datepicker/getting-started/) - To get the user's date of birth
+* [`TextBox`](https://ej2.syncfusion.com/react/documentation/textbox/getting-started/) - Collects the user's email and password
+* [`DatePicker`](https://ej2.syncfusion.com/react/documentation/datepicker/getting-started/) - Collects the user's date of birth
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -43,7 +43,7 @@ In the following example, a login form is created with Syncfusion<sup style="fon
 
 ## Perform validation
 
-For the input validation, specify rules for the email, password, and date of birth fields. The form validation will be initiated using the `useEffect` Hook.
+To validate the input, specify rules for the email, password, and date of birth fields. Form validation is initiated using the `useEffect` Hook.
 
 ```javascript
     useEffect(() => {
@@ -68,13 +68,13 @@ For the input validation, specify rules for the email, password, and date of bir
 
 Check out the [`validation rules`](https://ej2.syncfusion.com/react/documentation/form-validator/validation-rules/#validation-rules) section to learn more about the validation rules.
 
-Here, the `useState` Hook is used to store the value of the date of birth field.
+The `useState` Hook stores the value of the date of birth field.
 
 ```javascript
 const [dateOfBirth, setDateOfBirth] = useState('');
 ```
 
-The `useReducer` Hook is used to update the email and password state values.
+The `useReducer` Hook updates the email and password state values.
 
 ```javascript
     const initialState = { email: '', password: '' };
@@ -91,7 +91,7 @@ The `useReducer` Hook is used to update the email and password state values.
     const [state, dispatch] = useReducer(reducer, initialState);
 ```
 
-Here, the `useRef` Hook is used to focus the username field at initial loading.
+The `useRef` Hook focuses the username field on initial load.
 
 ```javascript
     const userNameRef = useRef(null);

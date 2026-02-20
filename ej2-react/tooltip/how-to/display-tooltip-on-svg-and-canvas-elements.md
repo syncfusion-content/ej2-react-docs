@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Display Tooltip on svg and canvas elements in React Tooltip component
 
-Tooltip can be displayed on both SVG and Canvas elements. You can attach tooltips directly to `<svg>` or `<canvas>` elements to display them on data visualization elements.
+Tooltips can be displayed on both SVG and Canvas elements. Tooltips can be attached directly to `<svg>` or `<canvas>` elements to display them on data visualization elements.
 
 ## SVG
 

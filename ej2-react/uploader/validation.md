@@ -10,13 +10,11 @@ domainurl: ##DomainURL##
 
 # Validation in React Uploader component
 
-The uploader component validate the selected files size and extension using the **allowedExtensions**, **minFileSize** and **maxFileSize** properties.
-The files can be validated before uploading to the server and can be ignored on uploading. Also, you can validate the files by setting the HTML attributes to the original input element. The validation process occurs on drag-and-drop the files also.
+The Uploader component validates selected files by size and extension using the **allowedExtensions**, **minFileSize**, and **maxFileSize** properties. Files are validated before uploading to the server, allowing invalid files to be excluded from the upload process. Validation can also be configured using HTML attributes on the input element. The validation process runs automatically when files are selected, dropped, or pasted.
 
 ## File type
 
-You can allow the specific files alone to upload using the **allowedExtensions** property. The extension can be represented as collection by comma separators.
-The uploader component filters the selected or dropped files to match against the specified file types and processes the upload operation. The validation happens when you specify value to inline attribute to accept the original input element.
+The **allowedExtensions** property restricts uploads to specific file types by comma-separated extensions. The Uploader component filters selected or dropped files against the specified file types and processes only matching files. Validation also occurs when the `accept` attribute is set on the input element.
 
 `[Class-component]`
 
@@ -46,8 +44,7 @@ The uploader component filters the selected or dropped files to match against th
 
 ## File size
 
-The uploader component allows you to validate the files based on its size. The validation helps to restrict uploading large files or empty files to the server.
-The size can be represented in bytes. By default, the uploader component allows to upload minimum file size as **0 byte** and maximum file size as **28.4 MB** using `minFileSize` and `maxFileSize` properties.
+The Uploader component validates file size to prevent uploading files that are too large or empty. File sizes are specified in bytes. By default, the component allows a minimum file size of **0 bytes** and a maximum file size of **28.4 MB**, configurable using the `minFileSize` and `maxFileSize` properties respectively.
 
 `[Class-component]`
 
@@ -77,7 +74,7 @@ The size can be represented in bytes. By default, the uploader component allows 
 
 ## Maximum files count
 
-You can restrict the maximum number of files on uploading using the selected event. In the selected event arguments, you can get the currently selected files details using **getFilesData()**. You can modify the files details and assign the modified file list to **eventArgs.modifiedFilesData**.
+Limit the number of files uploaded simultaneously by using the `selected` event. The event provides access to currently selected file details via **getFilesData()**. Modify the file list as needed and assign it to **eventArgs.modifiedFilesData** to control which files proceed to upload.
 
 `[Class-component]`
 
@@ -107,7 +104,7 @@ You can restrict the maximum number of files on uploading using the selected eve
 
 ## Duplicate files
 
-You can validate the duplicate files before uploading to server using the selected event. Compare the selected files with the existing files data and filter the file list by removing the duplicate files.
+Prevent duplicate file uploads by using the `selected` event to compare new selections against existing files. Filter the file list to exclude duplicates before the upload process begins.
 
 `[Class-component]`
 

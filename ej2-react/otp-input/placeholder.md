@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Placeholder in React OTP Input component
 
-The placeholder in OTP Input specifies the text that is shown as a hint or placeholder until the user enters a value in the input field. It acts as a guidance for the users regarding the expected input format or purpose of the input field.
+The placeholder in OTP Input displays text as a hint until the user enters a value. It provides guidance regarding the expected input format or purpose.
 
-You can set the placeholder text by using the [placeholder](https://ej2.syncfusion.com/react/documentation/api/otp-input/#placeholder) property. Additionally, when providing a single character as the placeholder value all input fields within the OTP Input component will display the same character.
+You can set the placeholder text using the [placeholder](https://ej2.syncfusion.com/react/documentation/api/otp-input/#placeholder) property. When providing a single character, all OTP input fields display that same character.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -25,7 +25,7 @@ You can set the placeholder text by using the [placeholder](https://ej2.syncfusi
 
 {% previewsample "page.domainurl/code-snippet/otp-input/placeholder/placeholder_char" %}
 
-When a placeholder with multiple placeholder characters is provided each input field will display characters from the placeholder string in sequence based on the available OTP input length.
+When multiple placeholder characters are provided, each OTP input field displays characters from the placeholder string sequentially based on the OTP length.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

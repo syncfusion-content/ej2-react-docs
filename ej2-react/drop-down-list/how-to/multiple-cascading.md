@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Multiple cascading in React Drop down list component
 
-The following example demonstrate about how to preselect the list items in multiple cascading DropDownList.
+The following example demonstrates how to preselect list items in multiple cascading DropDownLists:
 
 `[Class-component]`
 

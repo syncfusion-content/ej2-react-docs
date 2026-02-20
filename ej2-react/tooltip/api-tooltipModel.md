@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Api tooltipModel in React Tooltip component | Syncfusion
-description: Learn here all about Api tooltipModel in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
-control: Api tooltipModel 
+title: API TooltipModel in React Tooltip component | Syncfusion
+description: Learn here all about API TooltipModel in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
+control: API TooltipModel 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Api tooltipModel in React Tooltip component
+# API TooltipModel in React Tooltip component
 
 Interface for a class Tooltip
 

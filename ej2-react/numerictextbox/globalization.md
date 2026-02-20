@@ -12,8 +12,7 @@ domainurl: ##DomainURL##
 
 ## Localization
 
-[`Localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) library allows users to localize the default text contents of the NumericTextBox to different cultures using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/#locale) property.
-In NumericTextBox, spin buttons title for the tooltip will be localized based on the culture.
+Adapt the NumericTextBox component to different languages and regions using the [`Localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) library. Set the [`locale`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/#locale) property to display UI text in the user's language. The spin button tooltips automatically localize based on the specified culture.
 
 | Locale key | en-US (default)  |
 |------|------|
@@ -39,21 +38,19 @@ The below example demonstrates the NumericTextBox in `German` culture with the s
 
 ## Internationalization
 
-Internationalization library provides support for formatting and parsing the number by using the official [Unicode CLDR](http://cldr.unicode.org/) JSON data and also provides the `loadCldr` method to load the culture specific CLDR JSON data. The NumericTextBox comes with built-in internationalization support to adapt based on culture. For more information about internationalization, refer to this `link`.
+Implement culture-specific number formatting and parsing using the [Internationalization library](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization), which leverages official [Unicode CLDR](http://cldr.unicode.org/) JSON data. The NumericTextBox includes built-in internationalization support through the `loadCldr` method for loading culture-specific CLDR data.
 
-By default, all the Essential<sup style="font-size:70%">&reg;</sup> JS 2  component are specific to English culture ('en-US'). If you want to go with the different culture other than `English`, follow the below steps.
+By default, all Essential<sup style="font-size:70%">&reg;</sup> JS 2 components use English culture ('en-US'). To support additional cultures, follow these steps:
 
-* Install the `CLDR-Data` package by using the below command (it installs the CLDR JSON data). For more information about CLDR-Data, refer to this `link`.
+1. **Install CLDR data** using the package manager:
 
+    ```bash
+    npm install cldr-data --save
     ```
-      npm install cldr-data --save
-    ```
 
-    Once the package installed, you can find the culture specific JSON data under the location `\node_modules\cldr-data`.
+    This installs Unicode CLDR JSON data. After installation, culture-specific data is available at `\node_modules\cldr-data`.
 
-* Now import the installed CLDR JSON data into the `app.tsx` file.
-
-* Now import the required culture from the installed location to `app.tsx` file as like the below code snippets.
+2. **Import CLDR data** for your target culture into the `app.tsx` file:
 
     ```ts
      import * as currencies from 'cldr-data/main/de/currencies.json';
@@ -77,7 +74,7 @@ By default, all the Essential<sup style="font-size:70%">&reg;</sup> JS 2  compon
 
   ```
 
-* Set the culture by using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/#locale) property.
+3. **Set the locale** using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/#locale) property on the NumericTextBox component.
 
 The below example demonstrates the NumericTextBox in `German` culture with the `EUR` currency format.
 

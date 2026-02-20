@@ -2,7 +2,7 @@
 layout: post
 title: Shapes in React Skeleton component | Syncfusion
 description: Learn here all about Shapes in Syncfusion React Skeleton component of Syncfusion Essential JS 2 and more.
-control: Shapes 
+control: Skeleton
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,67 +10,31 @@ domainurl: ##DomainURL##
 
 # Shapes in React Skeleton component
 
-The Skeleton control support various built-in shape variants to design layout of the page. You can use the [`shape`](https://ej2.syncfusion.com/react/documentation/api/skeleton/#shape) property to create a preview of any layout.
+The Skeleton component supports multiple shape variants that enable you to create skeletal previews matching your content layout. Use the [`shape`](https://ej2.syncfusion.com/react/documentation/api/skeleton/#shape) property to display placeholder loading states for different content types. Shape selection affects both visual appearance and perceived loading context, helping users understand what content is loading.
 
-The Skeleton component supports the following content shapes:
+## Available skeleton shapes
 
-## Circle skeleton shape
+The Skeleton component supports four shape types:
 
-```ts
-import { SkeletonComponent } from '@syncfusion/ej2-react-notifications';
-import * as React from "react";
+### Circle
 
-function App() {
-    return (
-      <SkeletonComponent shape= 'Circle' width= "48px"></SkeletonComponent>
-      );
-}
-export default App;
-```
+Circular shapes are ideal for avatar placeholders, profile images, or circular icon areas. Use circle skeletons to represent round content containers or profile photos loading.
 
-## Square skeleton shape
+### Square
 
-```ts
-import { SkeletonComponent } from '@syncfusion/ej2-react-notifications';
-import * as React from "react";
+Square shapes work well for small icon placeholders, thumbnails, or uniform grid items. Square skeletons provide balanced proportions for compact content areas.
 
-function App() {
+### Rectangle
 
-  return (
-    <SkeletonComponent shape= 'Square' width= "48px"></SkeletonComponent>);
-}
-export default App;
-```
+Rectangular shapes accommodate standard content areas such as images, cards, or text blocks. Rectangles are the most versatile shape for various layout patterns and content sizes.
 
-## Rectangle skeleton shape
+### Text
 
-```ts
-import { SkeletonComponent } from '@syncfusion/ej2-react-notifications';
-import * as React from "react";
+Text shapes create horizontal line placeholders representing text content or headlines. Text skeletons help users anticipate paragraph or heading loading, providing clear visual indication of text-based content flow.
 
-function App() {
+## Shape usage examples
 
-  return (
-    <SkeletonComponent shape= 'Rectangle' width= "50px" height='32px'></SkeletonComponent>);
-}
-export default App;
-```
-
-## Text skeleton shape
-
-```ts
-import { SkeletonComponent } from '@syncfusion/ej2-react-notifications';
-import * as React from "react";
-
-function App() {
-
-  return (
-    <SkeletonComponent shape= 'Text' width= "50%" height="15px"></SkeletonComponent>);
-}
-export default App;
-```
-
-Below example demonstrates the above functionalities of a Skeleton component.
+The following example demonstrates implementing various skeleton shapes:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

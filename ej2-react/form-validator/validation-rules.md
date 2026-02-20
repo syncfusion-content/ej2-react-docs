@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Default Rules
 
-The `FormValidator` has following default validation rules, which are used to validate the form.
+The `FormValidator` provides the following default validation rules for form validation:
 
 | Rules | Description | Example |
 | ------------- | ------------- | ------------- |
@@ -31,14 +31,14 @@ The `FormValidator` has following default validation rules, which are used to va
 | `min` | Input value must have greater than or equal to `min` number | if `min: 4`, **5** is valid and **2** is invalid |
 | `regex` | Input value must have valid `regex` format | if `regex: '^[A-z]+$'`, **a** is valid and **1** is invalid |
 
-> The [`rules`](https://ej2.syncfusion.com/documentation/api/form-validator/#rules) option should map the input element's `name` attribute.
-> The `FormValidator` library only validates the mapped input elements.
+> The [`rules`](https://ej2.syncfusion.com/documentation/api/form-validator/#rules) option must map the input element's `name` attribute.
+> The `FormValidator` validates only the mapped input elements.
 
 ## Defining Custom Rules
 
-You can also define custom rules in the [`rules`](https://ej2.syncfusion.com/documentation/api/form-validator/#rules) property and validate the form with custom logics.
+You can define custom rules in the [`rules`](https://ej2.syncfusion.com/documentation/api/form-validator/#rules) property to validate the form with custom logic.
 
-The custom validation method need to return the boolean value for validating an input.
+The custom validation method must return a boolean value to indicate validation success or failure.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -53,7 +53,7 @@ The custom validation method need to return the boolean value for validating an 
 
 ## Adding or Removing Rules
 
-After creating `FormValidator` object, you can add more rules to an input element by using [`addRules`](https://ej2.syncfusion.com/documentation/api/form-validator/#addrules) method and you can also remove an existing rule from the input element by using [`removeRules`](https://ej2.syncfusion.com/documentation/api/form-validator/#removerules) method.
+After creating a `FormValidator` instance, you can add rules to an input element using the [`addRules`](https://ej2.syncfusion.com/documentation/api/form-validator/#addrules) method, or remove existing rules using the [`removeRules`](https://ej2.syncfusion.com/documentation/api/form-validator/#removerules) method.
 
 ```ts
 
@@ -105,7 +105,7 @@ public componentDidMount(): void {
 
 ## Validating a single Element
 
-The validate method have an optional argument, where you can pass an input element's name attribute to validate its value against the defined rule.
+The `validate` method accepts an optional argument where you can pass an input element's name attribute to validate its value against the defined rules.
 
 ```ts
 

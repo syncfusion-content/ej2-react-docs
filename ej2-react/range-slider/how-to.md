@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 ### Date Format
 
-The Date formatting can be achieved in `ticks` and `tooltip` using `renderingTicks` and `tooltipChange` events respectively. The process of formatting is explained in the below sample.
+Achieve date formatting in `ticks` and `tooltip` using the `renderingTicks` and `tooltipChange` events. The following sample demonstrates this process.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -29,7 +29,7 @@ The Date formatting can be achieved in `ticks` and `tooltip` using `renderingTic
 
 ### Time Format
 
-The time formatting can be achieved same as the date formatting using `renderingTicks` and `change` events. The process of time formatting is explained in the below sample.
+Apply time formatting similarly to date formatting using the `renderingTicks` and `change` events. The following sample demonstrates time formatting.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -44,7 +44,7 @@ The time formatting can be achieved same as the date formatting using `rendering
 
 ### Numeric Value Customization
 
-The numeric values can be formatted into different decimal digits or fixed number of whole numbers or to represent the units. The Numeric processing is demonstrated below.
+Format numeric values with different decimal digits, fixed whole numbers, or unit representations. The following sample demonstrates numeric value customization.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -59,9 +59,7 @@ The numeric values can be formatted into different decimal digits or fixed numbe
 
 ### Customize the bar
 
-Slider appearance can be customized through CSS. By overriding the Slider CSS classes, you can customize the Slider bar.
-The Slider bar can be customized with different themes. By default, Slider have class name e-slider-track for bar. The
-class can be overridden with our own color values like the following code snippet.
+Customize the Slider appearance by overriding Slider CSS classes. By default, the Slider uses the `e-slider-track` class for the bar. You can override this class with your own color values as shown in the following snippet.
 
 ```css
 .e-control.e-slider .e-slider-track .e-range {
@@ -91,7 +89,7 @@ function change(args: SliderChangeEventArgs) {
 }
 ```
 
-You can also apply background color for a certain range depending upon Slider values, using change event.
+You can also apply background color to a specific range based on Slider values using the change event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -106,7 +104,7 @@ You can also apply background color for a certain range depending upon Slider va
 
 ## Customize the limits
 
-Slider appearance can be customized via CSS. By overriding the Slider CSS classes, the Slider limit bar can be customized.
+Customize the limit bar by overriding Slider CSS classes. By default, the Slider uses the `e-limits` class for the limits bar. You can override this class with your own color values.
 
 ```css
 .e-slider-container.e-horizontal .e-limits {
@@ -114,8 +112,7 @@ Slider appearance can be customized via CSS. By overriding the Slider CSS classe
 }
 ```
 
-Here, the limit bar is customized with different background color. By default, the Slider has class `e-limits` for limits bar.
-You can override the class with our own color values as given in the following code snippet.
+The following example shows how to customize the limit bar with a different background color.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -130,7 +127,7 @@ You can override the class with our own color values as given in the following c
 
 ## Customize the ticks
 
-Slider view can be customized via CSS. By overriding the Slider CSS classes, you can customize the ticks. The ticks in Slider allows you to easily identify the current value/values of the slider. It contains [`smallStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript#smallstep) and [`largeStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript#largestep). By default, Slider has class `e-tick` for Slider ticks. You can override the class as per your requirement. Refer to the following code snippet to render ticks.
+Customize the Slider ticks by overriding the Slider CSS classes. Ticks help identify the current value in the Slider and support [`smallStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript#smallstep) and [`largeStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript#largestep). By default, the Slider uses the `e-tick` class for ticks.
 
 ```css
 .e-scale .e-tick.e-custom::before {
@@ -145,7 +142,7 @@ Slider view can be customized via CSS. By overriding the Slider CSS classes, you
 }
 ```
 
-Here, the color for rendered ticks has been applied through nth-child(`child_number`). The color is applied to the value of the `child_number` in the slider.
+The color is applied to rendered ticks using the nth-child selector. The `child_number` value determines which tick receives the specified color.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -160,7 +157,7 @@ Here, the color for rendered ticks has been applied through nth-child(`child_num
 
 ## Customize the thumb
 
-Slider appearance can be customized through CSS. By overriding the Slider CSS classes, you can customize the thumb. By default, Slider has unique class `e-handle` for Slider thumb. You can override the following class as per your requirement.
+Customize the Slider thumb by overriding the Slider CSS classes. By default, the Slider uses the `e-handle` class for the thumb.
 
 ```css
 .e-control.e-slider .e-handle {
@@ -188,7 +185,7 @@ Slider appearance can be customized through CSS. By overriding the Slider CSS cl
 }
 ```
 
-Here, in the sample, the Slider thumb has been customized to square, circle, oval shapes, and background image has also been customized.
+The following sample shows how to customize the Slider thumb to different shapes (square, circle, oval) and apply custom background images.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -203,11 +200,11 @@ Here, in the sample, the Slider thumb has been customized to square, circle, ova
 
 ## Validate the Slider using FormValidator
 
-The Slider component can be validated using our [FormValidator](https://ej2.syncfusion.com/documentation/form-validator/?lang=typescript). The following steps walk-through Slider validation.
+Validate the Slider component using the [FormValidator](https://ej2.syncfusion.com/documentation/form-validator/?lang=typescript). Follow these steps to set up Slider validation.
 
-* Render Slider component inside a form.
-* Bind [changed](https://ej2.syncfusion.com/react/documentation/slider/api-sliderComponent.html/#changed) event in the Slider component to validate the Slider value when the value changes.
-* Initialize and render FormValidator for the form using form ID.
+* Render the Slider component inside a form.
+* Bind the [changed](https://ej2.syncfusion.com/react/documentation/slider/api-sliderComponent.html/#changed) event to validate the Slider value when it changes.
+* Initialize the FormValidator for the form using the form ID.
 
 ```ts
 
@@ -217,7 +214,7 @@ formObj = new FormValidator("#formId", options);
 
 ```
 
-* Set the required property in the FormValidator [rules](https://ej2.syncfusion.com/documentation/form-validator/api-formValidator.html?lang=typescript/#rules) collection. Here, the [min](https://ej2.syncfusion.com/react/documentation/slider/api-sliderComponent.html/#min) property of Slider that sets the minimum value in the Slider component is set, and it has hidden input as enable `validateHidden` property is set to true.
+* Set the required property in the FormValidator [rules](https://ej2.syncfusion.com/documentation/form-validator/api-formValidator.html?lang=typescript/#rules) collection. The [min](https://ej2.syncfusion.com/react/documentation/slider/api-sliderComponent.html/#min) property sets the minimum value for the Slider component. Enable the `validateHidden` property to validate hidden inputs.
 
 ```ts
 
@@ -238,7 +235,7 @@ let options: FormValidatorModel = {
 
 > Form validation is done either by ID or name value of the Slider component. Above ID of the Slider is used to validate it.
 
-Using Slider name: Render Slider with name attribute. In the following code snippet, name attribute value of Slider is used for form validation.
+Using Slider name: Render the Slider with a name attribute. In the following code snippet, the Slider's name attribute value is used for form validation.
 
 ```ts
 
@@ -257,7 +254,7 @@ let options: FormValidatorModel = {
 
 ```
 
-* Validate the form using [validate](https://ej2.syncfusion.com/documentation/form-validator/api-formValidator.html?lang=typescript/#validate) method, and it validates the Slider value with the defined rules collection and returns the result. If user selects the value less than the minimum value, form will not submit.
+* Validate the form using the [validate](https://ej2.syncfusion.com/documentation/form-validator/api-formValidator.html?lang=typescript/#validate) method. This validates the Slider value against the defined rules and returns the result. If the user selects a value less than the minimum, the form will not submit.
 
 ```ts
 
@@ -265,7 +262,7 @@ formObj.validate();
 
 ```
 
-* Slider validation can be done during value changes in slider. Refer to the following code snippet.
+* Validate the Slider during value changes. Refer to the following code snippet.
 
 ```ts
 
@@ -276,7 +273,7 @@ function onChanged(args: any) {
 
 ```
 
-The `FormValidator` has following default validation rules, which are used to validate the Slider component.
+The `FormValidator` provides the following default validation rules for the Slider component.
 
 | Rules | Description | Example |
 | ------------- | ------------- | ------------- |

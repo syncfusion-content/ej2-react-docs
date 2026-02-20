@@ -8,10 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Perform custom validation using form validator in React Numerictextbox component
+# Perform custom validation using form validator in React NumericTextBox component
 
-This section explains how to perform custom validation on the NumericTextBox using FormValidator. The NumericTextBox will be validated when the value changes or the user clicks the submit button.
-Validation can be performed by adding custom validation in the rules collection of the FormValidator.
+Implement custom validation logic for the NumericTextBox using the FormValidator component. Define custom validation rules that trigger on value changes or form submission. The following example demonstrates how to add custom validation rules to the FormValidator's rules collection to validate NumericTextBox input.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Uploader component.
 
-`Preact` is a fast and lightweight JavaScript library for building user interfaces. It's often used as an alternative to larger frameworks like React. The key difference is that Preact is designed to be smaller in size and faster in performance, making it a good choice for projects where file size and load times are critical factors. 
+Preact is a fast, lightweight JavaScript library for building user interfaces, serving as an alternative to React. Preact's smaller bundle size (approximately 3KB vs. React's 40KB) and optimized performance make it ideal for performance-critical projects and environments with bandwidth constraints. 
 
 ## Prerequisites
 
@@ -116,9 +116,9 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 > The order of importing CSS styles should be in line with its dependency graph.
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
-Follow the below steps to add the React Uploader component to the Vite project:
+Follow these steps to add the React Uploader component to the Preact project:
 
-1\. Before adding the Uploader component to your markup, import the Uploader component in the **src/index.jsx** file.
+1. Import the Uploader component in the **src/index.jsx** file before adding it to the markup.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
@@ -128,7 +128,7 @@ import { UploaderComponent } from '@syncfusion/ej2-react-inputs';
 {% endhighlight %}
 {% endtabs %}
 
-2\. Then, add the Uploader component in the **src/index.jsx** file.
+2. Add the Uploader component in the **src/index.jsx** file.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
@@ -146,7 +146,7 @@ render(<App />, document.querySelector('#app'));
 
 ## Run the project
 
-To run the project, use the following command:
+Run the development server using one of the following commands:
 
 ```bash
 npm run dev

@@ -10,9 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Uploader component
 
-The Uploader component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
-
-The accessibility compliance for the Uploader component is outlined below.
+The Uploader component adheres to industry accessibility standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles). The following table summarizes the component's accessibility compliance across all features and interaction modes.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -44,10 +42,10 @@ The following are the standard keys that works on uploader component.
 
 | **Keyboard shortcuts** | **Actions** |
 | --- | --- |
-| <kbd>Tab</kbd> | Move focus to next element. |
-| <kbd>Shift + Tab</kbd> | Move focus to previous element. |
-| <kbd>Enter</kbd> | Triggers corresponding action to button element. |
-| <kbd>Esc</kbd> | Close the file browser dialog alone and cancels the upload on drop the file. |
+| <kbd>Tab</kbd> | Move focus to the next element. |
+| <kbd>Shift + Tab</kbd> | Move focus to the previous element. |
+| <kbd>Enter</kbd> | Activate the focused button element. |
+| <kbd>Esc</kbd> | Close the file browser dialog and cancel any pending file upload. |
 
 `[Class-component]`
 

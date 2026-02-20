@@ -10,17 +10,17 @@ domainurl: ##DomainURL##
 
 # Customization in React Calendar component
 
-Calendar allows you to customize the entire appearance by using the custom CSS and [`renderDayCell`](https://ej2.syncfusion.com/react/documentation/api/calendar/renderDayCellEventArgs#renderdaycelleventargs) event to customize the each day cell.
+The Calendar allows customization of the appearance using custom CSS and the [`renderDayCell`](https://ej2.syncfusion.com/react/documentation/api/calendar/renderDayCellEventArgs#renderdaycelleventargs) event to modify each day cell.
 
-This following section demonstrates how to disable, highlights the specific dates in the Calendar.
+This section demonstrates how to disable dates and highlight specific dates in the Calendar.
 
 ## Disable Weekends
 
 You can disable the weekends of every month in a Calendar by using the [`renderDayCell`](https://ej2.syncfusion.com/react/documentation/api/calendar/renderDayCellEventArgs#renderdaycelleventargs) event. The `isDisabled` argument from this event allows you to define whether the date to be disabled or not.
 
-> Set [`isDisabled`](https://ej2.syncfusion.com/react/documentation/api/calendar/renderDayCellEventArgs#renderdaycelleventargs) to true to disable the date value.
+> Set [`isDisabled`](https://ej2.syncfusion.com/react/documentation/api/calendar/renderDayCellEventArgs#renderdaycelleventargs) to `true` to disable a date.
 
-The following example demonstrates how to disable weekends of every month.
+The following example demonstrates how to disable weekends for every month.
 
 `[Class-component]`
 
@@ -50,7 +50,7 @@ The following example demonstrates how to disable weekends of every month.
 
 ## Day Cell Format
 
-You can highlight the specific dates by adding the custom CSS or element to the day cell by using [`renderDayCell`](https://ej2.syncfusion.com/react/documentation/api/calendar/renderDayCellEventArgs#renderdaycelleventargs).
+You can highlight specific dates by adding custom CSS or elements to the day cell using the [`renderDayCell`](https://ej2.syncfusion.com/react/documentation/api/calendar/renderDayCellEventArgs#renderdaycelleventargs) event.
 
 Below is the list of classes that provides the flexible way to customize the Calendar component.
 

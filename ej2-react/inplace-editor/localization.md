@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Localization
 
-Localization library allows you to localize the default text content of the In-place Editor for different cultures using the [locale](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#locale) property. In  In-place Editor following keys will be localize based on culture.
+Localize the default text content of the In-place Editor for different cultures by setting the [locale](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#locale) property. The following keys are localized based on the specified culture.
 
 | Locale key | en-US (default) |
 |------|------|
@@ -23,7 +23,7 @@ Localization library allows you to localize the default text content of the In-p
 | editAreaClick | Click to edit |
 | editAreaDoubleClick | Double click to edit |
 
-To load translation object in an application use `load` function of `L10n` class. In the following sample, `French` culture is set to In-place Editor and change the tooltip text.
+Load translation objects in your application using the `load` function of the `L10n` class. In the following sample, the In-place Editor is configured with the `French` culture and customized tooltip text.
 
 `[Class-component]`
 
@@ -53,9 +53,9 @@ To load translation object in an application use `load` function of `L10n` class
 
 ## Right to left
 
-Specifies the direction of the In-place Editor component using the enableRtl property. For writing systems that require it like Arabic, Hebrew, etc., the direction can be switched to right-to-left.
+Control the text direction of the In-place Editor using the `enableRtl` property. For languages and writing systems that require right-to-left (RTL) orientation, such as Arabic and Hebrew, enable this property.
 
-> It will not change based on the locale property.
+> The RTL direction is not automatically determined by the locale property and must be set explicitly.
 
 `[Class-component]`
 
@@ -85,7 +85,7 @@ Specifies the direction of the In-place Editor component using the enableRtl pro
 
 ## Format
 
-Formatting is a way of representing the value in different format. You can format the following mentioned controls with its `format` property, when it passed through the In-place Editor [model](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#model) property.
+Format the displayed values by configuring the `format` property of the In-place Editor's child component through the [model](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#model) property. The following components support format customization:
 
 * [DatePicker](../datepicker/date-format/)
 * [DateRangePicker](../daterangepicker/globalization/#customize-the-date-format)

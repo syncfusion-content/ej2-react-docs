@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Style appearance in React Maskedtextbox component
 
-The following content provides the exact CSS structure that can be used to modify the control’s appearance based on the user preference.
+The following content provides the CSS structure that can be used to modify the component's appearance based on your preferences.
 
 ## Customizing the appearance of MaskedTextBox wrapper element
 
-Use the following CSS to customize the appearance of wrapper element.
+Use the following CSS to customize the appearance of the wrapper element.
 
 ```css
 /* To specify height, font size, and border */
@@ -28,7 +28,7 @@ Use the following CSS to customize the appearance of wrapper element.
 
 ## Customizing the MaskedTextBox element on hovering
 
-Use the following CSS to customize the Input Mask element on hovering
+Use the following CSS to customize the MaskedTextBox element on hover:
 
 ```css
 /* To specify border */

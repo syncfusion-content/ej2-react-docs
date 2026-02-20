@@ -95,7 +95,7 @@ ReactDom.render(<App />,document.getElementById('element'));
 
 ## valueChanged
 
-The rating component triggers the [`valueChanged`](https://ej2.syncfusion.com/react/documentation/api/rating/#valuechanged) event when the value of the rating is changed. The [`RatingChangedEventArgs`](https://ej2.syncfusion.com/react/documentation/api/rating/ratingChangedEventArgs/) passed as an event argument provides the details when value is changed.
+The rating component triggers the [`valueChanged`](https://ej2.syncfusion.com/react/documentation/api/rating/#valuechanged) event when the rating value changes. The [`RatingChangedEventArgs`](https://ej2.syncfusion.com/react/documentation/api/rating/ratingChangedEventArgs/) passed as an event argument provides the change details.
 
 ```ts
 {/* Import the Rating. */}
@@ -120,7 +120,7 @@ export default App;
 ReactDom.render(<App />,document.getElementById('element'));
 ```
 
-Below example demonstrates the valueChanged event of the Rating component.
+The following example demonstrates the valueChanged event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -1,41 +1,34 @@
 ---
 layout: post
-title: Adornments in ##Platform_Name## Textbox control | Syncfusion
-description: Learn here all about Adornments in Syncfusion ##Platform_Name## Textbox control of Syncfusion Essential JS 2 and more.
+title: Adornments in React TextBox component | Syncfusion
+description: Learn here all about adornments in Syncfusion React TextBox component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Adornments
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adornments in ##Platform_Name## TextBox control
+# Adornments in React TextBox component
 
-Adornments allow you to add custom elements before or after the TextBox using `prependTemplate` and `appendTemplate`. These elements can include icons, text labels, or action buttons to improve usability and provide visual context.
+Enhance the TextBox component with prepended or appended visual elements using `prependTemplate` and `appendTemplate` properties. Adornments include icons, text labels, or interactive buttons that provide visual context and improve the user input experience.
 
-## Overview
+## Overview and Use Cases
 
-Adornments are useful for:
-- **Visual Context**: Adding icons that indicate the expected input type (e.g., user icon for username, envelope icon for email)
-- **Functional Enhancement**: Including action buttons such as password visibility toggles or clear buttons
-- **Input Validation**: Displaying validation status icons or error indicators
-- **Unit Indicators**: Showing currency symbols, temperature units, domain extensions, or measurement units
-- **Accessibility**: Providing visual and interactive guidance to help users input and improve discoverability
+Adornments serve multiple purposes in modern form design:
 
-## Common Use Cases
-
-- **Visual Indicators**: Icons for expected input type (e.g., user icon for username, envelope icon for email).
-- **Functional Enhancements**: Buttons for password visibility toggle or clear input.
-- **Validation Status**: Icons for error or success indicators.
-- **Unit Indicators**: Currency symbols, measurement units, or domain extensions.
+- **Visual Indicators**: Icons that clarify the expected input type (e.g., user icon for username, envelope icon for email)
+- **Functional Enhancement**: Action buttons such as password visibility toggles or clear input buttons
+- **Validation Feedback**: Icons indicating input validity or error states
+- **Unit Display**: Currency symbols, measurement units, or domain extensions (e.g., "@domain.com" for email fields)
+- **Accessibility Support**: Visual and interactive cues that enhance discoverability and usability for all users
 
 
 ## Adding Adornments to TextBox
 
-Use `prependTemplate` and `appendTemplate` properties to add custom HTML content before and after the TextBox.
+Use the `prependTemplate` and `appendTemplate` properties to insert custom HTML elements before or after the TextBox input field:
 
-- **`prependTemplate`**: Renders elements before the TextBox.
-- **`appendTemplate`**: Renders elements after the TextBox.
+- **`prependTemplate`**: Renders content before (to the left of) the TextBox input
+- **`appendTemplate`**: Renders content after (to the right of) the TextBox input
 
 The following example demonstrates how to add adornments in the TextBox control.
 

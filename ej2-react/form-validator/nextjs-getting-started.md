@@ -111,12 +111,12 @@ Import the `Material` theme into the **src/app/globals.css** file and removed th
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
 
-@import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import "../../node_modules/@syncfusion/ej2-react-buttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-react-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-react-calendars/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-react-dropdowns/styles/material.css";
+@import '../../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import "../../node_modules/@syncfusion/ej2-react-buttons/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-react-inputs/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-react-calendars/styles/tailwind3.css";
+@import "../../node_modules/@syncfusion/ej2-react-dropdowns/styles/tailwind3.css";
 
 .control_wrapper.textbox-form {
   max-width: 400px;

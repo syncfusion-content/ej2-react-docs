@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Multiline in React TextBox component
 
-This feature allows the TextBox to accept one or more lines of text like address, description, comments, and more.
+Transform the TextBox into a multiline input control to capture multi-line text content such as addresses, descriptions, comments, or longer-form user feedback.
 
 ## Create multiline TextBox
 
@@ -106,7 +106,7 @@ By default, you can manually resize the multiline TextBox. But you can also crea
 
 ## Disable resizing
 
-By default, the multiline TextBox is rendered with resizable. You can disable the resize of the multiline TextBox by applying the following CSS styles.
+By default, the multiline TextBox includes resize functionality. Disable resizing by applying the following CSS styles to prevent users from manually adjusting dimensions:
 
 ```css
     textarea.e-input,
@@ -147,7 +147,7 @@ By default, the multiline TextBox is rendered with resizable. You can disable th
 
 ## Limit the text length
 
-By default, the text length of the multiline TextBox is unlimited. You can limit the text length by setting the `maxLength` attribute using the `addAttribute` method.
+By default, the multiline TextBox accepts unlimited text. Restrict input length by applying the `maxLength` property using the `addAttribute` method to enforce character limits.
 
 `[Class-component]`
 

@@ -10,16 +10,16 @@ domainurl: ##DomainURL##
 
 # React functional component in React Maskedtextbox component
 
-This section explains how to render the masked textbox component in the functional component with react hooks methods. Please find the list of basic hook methods in the following table.
+This section explains how to render the MaskedTextBox component in a functional component using React Hooks. The following table lists the basic Hook methods:
 
 | Hooks | Description |
 | ------------- | ------------- |
-| `useState` | useState is a Hook that allows you to define the state in the functional components. If you pass the initial state to this function, then it will return a state variable with value and function to update this state value. Here, useState is used to store the value of product key field. |
-| `useEffect` | useEffect is a Hook that allows you to execute code after rendering and re-rendering the component. Here, focusing the product key field on initial loading. |
-| `useRef` | useRef is a Hook function that allows to directly create a reference to the DOM element in the functional component. Here, assigned the product key field reference for focusing the field on initial loading. |
-| `useReducer` | useReducer is a Hook function that accepts a reducer function and an initial state as argument. It returns a state value and another function to dispatch an action. Here, dispatched the update action to update the mobile number and postal code state values. |
+| `useState` | A Hook that allows you to define state in functional components. Returns a state variable and a function to update it. Used here to store the product key value. |
+| `useEffect` | A Hook that executes code after the component renders and re-renders. Used here to focus the product key field on initial load. |
+| `useRef` | A Hook that creates a direct reference to a DOM element in a functional component. Used here to reference the product key field for focusing. |
+| `useReducer` | A Hook that accepts a reducer function and initial state, returning a state value and a dispatch function. Used here to update mobile number and postal code state values. |
 
-The following example shows how to render a simple masked textbox with react hooks.
+The following example shows how to render a simple MaskedTextBox with React Hooks.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

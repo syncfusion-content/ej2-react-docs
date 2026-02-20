@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Convert image into binary format after uploading in React Uploader component
 
-By default, the file upload component saves the uploaded image files in physical directories. Also, you can convert the images into binary format at server-side before saving the uploaded images. To retrieve binary format of image files, convert the posted file’s input stream into binary reader and read as bytes using ReadBytes method.
+By default, the Uploader component saves uploaded image files to physical directories on the server. For advanced scenarios requiring binary data manipulation, convert images to binary format server-side before storage. This approach enables scenarios such as database storage, image processing, or custom validation.
 
-Refer to the below server-side code snippet
+To retrieve the binary format of uploaded image files, convert the posted file's input stream into a binary reader and read the data as bytes using the ReadBytes method. The following code snippet demonstrates this server-side implementation:
 
 ```csharp
 

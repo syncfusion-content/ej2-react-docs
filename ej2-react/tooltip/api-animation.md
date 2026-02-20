@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Api animation in React Tooltip component | Syncfusion
-description: Learn here all about Api animation in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
-control: Api animation 
+title: API animation in React Tooltip component | Syncfusion
+description: Learn here all about API animation in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
+control: API animation 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Api animation in React Tooltip component
+# API animation in React Tooltip component
 
 ## Properties
 

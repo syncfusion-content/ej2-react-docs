@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in React ListBox component
 
-The ListBox component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The ListBox component adheres to established accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
 
 The accessibility compliance for the ListBox component is outlined below.
 
@@ -40,7 +40,7 @@ The accessibility compliance for the ListBox component is outlined below.
 
 ## WAI-ARIA attributes
 
-The ListBox component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/) patterns to meet the accessibility. The following ARIA attributes are used in the ListBox component:
+The ListBox component implements [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/) patterns to ensure accessibility compliance. The following ARIA attributes are used in the ListBox component:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -51,7 +51,7 @@ The ListBox component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/pa
 
 ## Keyboard interaction
 
-The ListBox component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the ListBox component.
+The ListBox component follows [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboardinteraction) guidelines, enabling seamless navigation for users with assistive technologies and keyboard-only users. The following keyboard shortcuts are supported:
 
 | **Press** | **To do this** |
 | --- | --- |

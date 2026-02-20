@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Style and appearance in React List box component
 
-To modify the ListBox appearance, you need to override the default CSS of ListBox component. Please find the list of CSS classes and its corresponding section in ListBox component. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
+Modify the ListBox appearance by overriding the default CSS of the ListBox component. Refer to the CSS class table below for customization options. You can also create custom themes using [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 
 CSS Class | Purpose of Class
 -----|-----
@@ -24,7 +24,7 @@ CSS Class | Purpose of Class
 
 ## Horizontal ListBox
 
-You can use [cssClass](https://ej2.syncfusion.com/react/documentation/api/list-box/#cssClass) property to display the Listbox horizontally.
+Display the ListBox horizontally using the [cssClass](https://ej2.syncfusion.com/react/documentation/api/list-box/#cssClass) property:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

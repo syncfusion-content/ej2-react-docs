@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Template in React Mention component
 
-The Mention has been provided with several options to customize each suggestion list item, display item, and data loading indication.
+The Mention provides several options to customize suggestion list items, display values, and data loading indicators.
 
 ## Item template
 
-The content of each list item in Mention can be customized using [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/mention/#itemtemplate) property.
+Customize the content of each list item using the [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/mention/#itemtemplate) property.
 
-In the following sample, each list item is split into two columns to display relevant data using `itemTemplate`.
+In the following example, list items are divided into two columns to display relevant data:
 
 `[Class-component]`
 
@@ -46,9 +46,9 @@ In the following sample, each list item is split into two columns to display rel
 
 ## Display template
 
-You can customize the mentioned value's display appearance using the [displayTemplate](https://ej2.syncfusion.com/react/documentation/api/mention/#displaytemplate) property.
+Customize the display appearance of selected mention values using the [displayTemplate](https://ej2.syncfusion.com/react/documentation/api/mention/#displaytemplate) property.
 
-In the following sample, the selected value is displayed as a combined text of both FirstName and City in the mention element, which is separated by a hyphen.
+In the following example, the selected value displays combined text from FirstName and City fields, separated by a hyphen:
 
 `[Class-component]`
 
@@ -78,7 +78,7 @@ In the following sample, the selected value is displayed as a combined text of b
 
 ## No records template
 
-You can show the custom design of the popup list content when no data is found and no matches are found on search with the help of [noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/mention/#norecordstemplate) property.
+Customize the popup list content when no data is found or no search matches exist using the [noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/mention/#norecordstemplate) property.
 
 `[Class-component]`
 
@@ -108,7 +108,7 @@ You can show the custom design of the popup list content when no data is found a
 
 ## Spinner template
 
-Display the customized waiting spinner, when data fetching takes time to load in the suggestion list by using the [spinnerTemplate](https://ej2.syncfusion.com/react/documentation/api/mention/#spinnertemplate) property.
+Display a custom loading spinner while data fetches for the suggestion list using the [spinnerTemplate](https://ej2.syncfusion.com/react/documentation/api/mention/#spinnertemplate) property:
 
 `[Class-component]`
 

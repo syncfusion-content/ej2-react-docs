@@ -10,10 +10,9 @@ domainurl: ##DomainURL##
 
 # Dual list box in React List box component
 
-The dual list box allows the user to move items between two list boxes by clicking the toolbar buttons. Dual list box can be created by listing items in the
-[`toolbarSettings`](https://ej2.syncfusion.com/react/documentation/api/list-box/#toolbarsettings) along with the `scope` property.
+The dual list box enables users to move items between two list boxes using toolbar buttons. Create a dual list box by configuring items in the [`toolbarSettings`](https://ej2.syncfusion.com/react/documentation/api/list-box/#toolbarsettings) property along with the `scope` property.
 
-The following operations can be performed in dual list box,
+The following operations are available in dual list box:
 
 | Options | Description |
 |------|-------------|

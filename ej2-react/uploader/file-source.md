@@ -12,10 +12,9 @@ domainurl: ##DomainURL##
 
 ## Paste to upload
 
-The uploader component allows you to upload the files using the select or drop files option from the file explorer.  It also supports pasting to upload the image files. You can upload any currently copied images in the clipboard.
+In addition to selecting or dragging files, the Uploader component supports uploading image files directly from the clipboard using paste operations. Any image copied to the clipboard can be uploaded immediately.
 
-> When you paste the image, it will be saved in the server with the filename as `image.png`. The file name can be renamed in the server end. You can generate a random name for the file name using `getUniqueID` method.
-Refer to the following example.
+> When an image is pasted, it is saved on the server with the default filename `image.png`. Rename the file on the server-side using custom logic or the `getUniqueID` method to generate unique filenames. Refer to the following example.
 
 `[class-component]`
 
@@ -69,9 +68,9 @@ public void Save()
 
 ## Directory upload
 
-The uploader component allows you to upload all files in the folders to server by using the [directoryUpload](https://ej2.syncfusion.com/react/documentation/api/uploader/#directoryupload) property. When this property is enabled, the uploader component processes the files by iterating through the files and sub-directories in a directory. It allows you to select only folders instead of files to upload.
+Upload entire folders with the [directoryUpload](https://ej2.syncfusion.com/react/documentation/api/uploader/#directoryupload) property enabled. The Uploader processes all files and subdirectories within the selected folder, allowing folder selection instead of individual file selection.
 
-> The directory upload is available only in browsers that supports **HTML5 directory**. The uploader will process directory upload by dragging and dropping in the Edge browser. Refer to the following example to upload files to the server.
+> Directory upload is supported in browsers with **HTML5 directory** capability. Edge browser supports directory upload via drag-and-drop. Refer to the following example for implementation details.
 
 `[Class-component]`
 
@@ -139,11 +138,11 @@ public void Save() {
 
 ## Drag and drop
 
-The uploader component allows you to drag and drop the files to upload. You can drag the files from file explorer and drop into the drop area. By default, the uploader component act as drop area element. The drop area gets highlighted when you drag the files over drop area.
+Drag files from the file explorer and drop them into the designated drop area to initiate upload. By default, the Uploader component itself serves as the drop target. The drop area visually highlights when files are dragged over it.
 
 ### Custom drop area
 
-The uploader component allows you to set external target element as drop area using the **dropArea** property. The element can be represented as HTML element or element’s id.
+Configure a custom external element as the drop target using the **dropArea** property, specified as an HTML element or element ID.
 
 `[Class-component]`
 
@@ -173,7 +172,7 @@ The uploader component allows you to set external target element as drop area us
 
 ### Customize drop area
 
-You can customize the appearance of drop area by overriding the default drop area styles. The class **e-upload-drag-hover** is available to handle this customization.
+Customize the drop area appearance by overriding default styles. The **e-upload-drag-hover** class is applied when files are dragged over the drop area, enabling visual feedback customization.
 
 `[Class-component]`
 
