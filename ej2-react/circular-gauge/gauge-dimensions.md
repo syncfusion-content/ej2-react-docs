@@ -37,7 +37,7 @@ Circular gauge can render to its container size. You can set the size via inline
 
 <!-- markdownlint-disable MD036 -->
 
-You can also set size for the gauge directly through [`width`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/#width-string) and [`height`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/#height-string) properties.
+You can also set size for the gauge directly through [`width`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge#width-string) and [`height`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge#height-string) properties.
 
 **In Pixel**
 

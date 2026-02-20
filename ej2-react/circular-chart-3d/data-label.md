@@ -14,14 +14,14 @@ A data label refers to a label associated with specific data points. It can be a
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/data-label/data-label-cs1/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/data-label/data-label-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/data-label/data-label-cs1/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/data-label/data-label-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/data-label/data-label-cs1" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/data-label/data-label-cs1" %}
 
 >To use the data label feature, inject the `CircularChartDataLabel3D` module into the services.
 
@@ -31,14 +31,14 @@ Using the `position` property, we can place the data label either `inside` or `o
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/data-label/data-label-cs2/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/data-label/data-label-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/data-label/data-label-cs2/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/data-label/data-label-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/data-label/data-label-cs2" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/data-label/data-label-cs2" %}
 
 ## Data label template
 
@@ -46,14 +46,14 @@ The label content can be formatted using the template option. Inside the templat
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/data-label/data-label-cs3/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/data-label/data-label-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/data-label/data-label-cs3/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/data-label/data-label-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/data-label/data-label-cs3" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/data-label/data-label-cs3" %}
 
 ## Connector line
 
@@ -61,14 +61,14 @@ The connector line will be visible when the data label is placed `outside` the c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/data-label/data-label-cs4/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/data-label/data-label-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/data-label/data-label-cs4/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/data-label/data-label-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/data-label/data-label-cs4" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/data-label/data-label-cs4" %}
 
 ## Text mapping
 
@@ -76,14 +76,14 @@ Text from the data source can be mapped using the `name` property within the dat
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/data-label/data-label-cs5/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/data-label/data-label-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/data-label/data-label-cs5/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/data-label/data-label-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/data-label/data-label-cs5" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/data-label/data-label-cs5" %}
 
 ## Format
 
@@ -91,14 +91,14 @@ The data label for the 3D Circular Chart can be formatted using the `format` pro
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/data-label/data-label-cs6/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/data-label/data-label-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/data-label/data-label-cs6/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/data-label/data-label-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/data-label/data-label-cs6" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/data-label/data-label-cs6" %}
 
 <table>
   <tr>
@@ -163,14 +163,14 @@ Individual text for the data points in the 3D Circular Chart can be customized u
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/data-label/data-label-cs7/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/data-label/data-label-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/data-label/data-label-cs7/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/data-label/data-label-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/data-label/data-label-cs7" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/data-label/data-label-cs7" %}
 
 ## Using textRender event
 
@@ -178,14 +178,14 @@ You can customize the data label of a pie chart using the `textRender` event as 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/data-label/data-label-cs8/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/data-label/data-label-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/data-label/data-label-cs8/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/data-label/data-label-cs8/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/data-label/data-label-cs8" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/data-label/data-label-cs8" %}
 
 ## Using template
 
@@ -193,11 +193,11 @@ You can display the percentage values in the data label of a pie chart using the
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/data-label/data-label-cs9/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/data-label/data-label-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/data-label/data-label-cs9/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/data-label/data-label-cs9/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/data-label/data-label-cs9" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/data-label/data-label-cs9" %}

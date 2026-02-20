@@ -14,14 +14,14 @@ Data points containing `null` or `undefined` values are considered empty points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/empty-point/empty-point-cs1/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/empty-point/empty-point-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/empty-point/empty-point-cs1/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/empty-point/empty-point-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/empty-point/empty-point-cs1" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/empty-point/empty-point-cs1" %}
 
 ## Customization
 
@@ -29,11 +29,11 @@ A specific color for an empty point can be set by using the `fill` property in `
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/empty-point/empty-point-cs2/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/empty-point/empty-point-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/empty-point/empty-point-cs2/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/empty-point/empty-point-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/empty-point/empty-point-cs2" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/empty-point/empty-point-cs2" %}

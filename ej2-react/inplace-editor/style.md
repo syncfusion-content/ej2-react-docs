@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Style in React Inplace editor component
 
-The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
+Use the following CSS classes and selectors to customize the In-place Editor's appearance based on specific requirements.
 
 ## Customizing the In-place Editor text
 
-Use the following CSS to customize the default In-place Editor's text content properties like font-family, font-size, color and border bottom.
+Customize the In-place Editor's text appearance, including font family, font size, text color, and border styling, using the following CSS:
 
 ```css
 /* To change color, font family and font size */
@@ -28,7 +28,7 @@ Use the following CSS to customize the default In-place Editor's text content pr
 
 ## Customizing the In-place Editor action buttons
 
-Use the following CSS to customize the default In-place Editor's action buttons.
+Customize the save and cancel button styling, including icon colors and background colors, using the following CSS:
 
 ```css
 /* To change icon color for save button */

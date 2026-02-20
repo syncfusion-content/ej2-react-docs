@@ -14,14 +14,14 @@ A leaf item defines a visualized data element and does not contain child nodes b
 
 ## Leaf label
 
-Label is represented by item name or value. Label will be appeared by specifying the [`labelPath`](https://ej2.syncfusion.com/react/documentation/api/treemap/leafItemSettingsModel/#labelpath) property and customize the label style using the [`labelStyle`](https://ej2.syncfusion.com/react/documentation/api/treemap/leafItemSettingsModel/#labelstyle) property.
+Label is represented by item name or value. Label will be appeared by specifying the [`labelPath`](https://ej2.syncfusion.com/react/documentation/api/treemap/leafItemSettingsModel#labelpath) property and customize the label style using the [`labelStyle`](https://ej2.syncfusion.com/react/documentation/api/treemap/leafItemSettingsModel#labelstyle) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/leafitem-cs1/app/index.jsx %}
+{% include code-snippet/treemap/code-path/leafitem-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/leafitem-cs1/app/index.tsx %}
+{% include code-snippet/treemap/code-path/leafitem-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -31,7 +31,7 @@ Label is represented by item name or value. Label will be appeared by specifying
 
 ### Label position and format
 
-Positioning the leaf item label using the [`labelPosition`](https://ej2.syncfusion.com/react/documentation/api/treemap/leafItemSettingsModel/#labelposition) property and the text format can be customized by specifying data source properties name in the [`labelFormat`](https://ej2.syncfusion.com/react/documentation/api/treemap/leafItemSettingsModel/#labelformat) property.
+Positioning the leaf item label using the [`labelPosition`](https://ej2.syncfusion.com/react/documentation/api/treemap/leafItemSettingsModel#labelposition) property and the text format can be customized by specifying data source properties name in the [`labelFormat`](https://ej2.syncfusion.com/react/documentation/api/treemap/leafItemSettingsModel#labelformat) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -48,7 +48,7 @@ Positioning the leaf item label using the [`labelPosition`](https://ej2.syncfusi
 
 ### Label template and position
 
-Specifies the template of leaf item label and position of the template to be customized using [`labelTemplate`](https://ej2.syncfusion.com/react/documentation/api/treemap/leafItemSettingsModel/#labeltemplate) and [`templatePosition`](https://ej2.syncfusion.com/react/documentation/api/treemap/leafItemSettingsModel/#templateposition) properties.
+Specifies the template of leaf item label and position of the template to be customized using [`labelTemplate`](https://ej2.syncfusion.com/react/documentation/api/treemap/leafItemSettingsModel#labeltemplate) and [`templatePosition`](https://ej2.syncfusion.com/react/documentation/api/treemap/leafItemSettingsModel#templateposition) properties.
 
 {% raw %}
 
@@ -92,7 +92,7 @@ root.render(<App />);
 
 ## Item gap
 
-The [`gap`](https://ej2.syncfusion.com/react/documentation/api/treemap/leafItemSettingsModel/#gap) property is used to separate an item from another item. Each item rectangle is split into equal space with specified gap.
+The [`gap`](https://ej2.syncfusion.com/react/documentation/api/treemap/leafItemSettingsModel#gap) property is used to separate an item from another item. Each item rectangle is split into equal space with specified gap.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

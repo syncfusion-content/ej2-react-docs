@@ -2,7 +2,7 @@
 layout: post
 title: Customization in React Message component | Syncfusion
 description: Learn here all about Customization in Syncfusion React Message component of Syncfusion Essential JS 2 and more.
-control: Customization 
+control: Message
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Customization in React Message component
 
-The Message component allows the user to customize the content display positions and appearance. This section explains the details about changing the content alignments and border styles for messages.
+The Message component provides multiple customization options to match your application's design and layout requirements. This guide covers content alignment, visual styling approaches, and CSS-based customization techniques for creating messages that integrate seamlessly with your UI.
 
-## Content Alignment
+## Content alignment
 
-Normally, the message content is aligned to the **left**. The Message component allows the user to align the message content in the **center** or **right** through the built-in classes `e-content-center` and `e-content-right`.
+By default, message content aligns to the left. The Message component supports alternative alignments using built-in CSS classes: use `e-content-center` to center-align content, or `e-content-right` to right-align content. Content alignment is useful for creating varied layouts, such as centered validation messages or right-aligned status notifications.
 
 The following example demonstrates the message with different content alignments.
 
@@ -32,11 +32,11 @@ The following example demonstrates the message with different content alignments
         
 {% previewsample "page.domainurl/code-snippet/message/content-alignment-cs1" %}
 
-## Rounded and Square
+## Custom appearance
 
-To customize the Message component's appearance, add the custom class to the message through the [cssClass](https://ej2.syncfusion.com/react/documentation/api/message/#cssclass) property. This custom class will be added to the root element. Based on this custom class, the user can override the message styles at the application level.
+Customize the Message component's visual styling by applying a custom CSS class through the [cssClass](https://ej2.syncfusion.com/react/documentation/api/message/#cssclass) property. The specified class is applied to the root message element, allowing you to override default styles and implement custom designs at the application level.
 
-The following example shows the rounded and squared appearance of the message, which can be achieved by adding the `cssClass` property.
+The following example demonstrates rounded and squared message appearance variations achieved through the `cssClass` property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -52,9 +52,9 @@ The following example shows the rounded and squared appearance of the message, w
         
 {% previewsample "page.domainurl/code-snippet/message/custom-appearance-cs1" %}
 
-## CSS Message
+## CSS-based messages
 
-The Essential<sup style="font-size:70%">&reg;</sup> JS 2 Message has predefined CSS classes that can be defined in the HTML elements, which renders the message without any script reference. This can display a simple message with content and make the code lighter.
+The Syncfusion Message component supports rendering via predefined CSS classes without requiring JavaScript initialization. This approach is useful for lightweight implementations where you render messages using pure HTML and CSS. CSS-based messages are ideal for static content or server-rendered scenarios.
 
 The following DOM structure is required to display the simple message with the content.
 
@@ -92,7 +92,7 @@ The following is the available list of predefined CSS classes to make the appear
 | e-content-center | Aligns the message content to the center. |
 | e-content-right | Aligns the message content to the right. |
 
-The following example shows the message which renders without any script reference.
+The following example demonstrates CSS-based message rendering using predefined classes.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

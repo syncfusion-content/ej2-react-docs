@@ -73,17 +73,17 @@ The above package installs [In-place Editor dependencies](#dependencies) which a
 * In-place Editor CSS files are available in the `ej2-react-inplace-editor` package folder. Import the In-place Editor component's required CSS references as follows in `src/App.css`.
 
     ```css
-    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-react-inplace-editor/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+    @import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+    @import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';
+    @import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+    @import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+    @import '../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
+    @import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+    @import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+    @import '../node_modules/@syncfusion/ej2-richtexteditor/styles/tailwind3.css';
+    @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+    @import '../node_modules/@syncfusion/ej2-react-inplace-editor/styles/tailwind3.css';
     ```
 
 ## Add the In-place Editor with Textbox

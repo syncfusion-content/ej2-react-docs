@@ -5,7 +5,7 @@ import { telecastData } from './datasource';
 
 function App() {
   return (
-    <GridComponent dataSource={telecastData} gridLines="Both" enableHover={false} allowSelection={false} allowSorting={true} enableRowSpan={true} allowTextWrap={true} textWrapSettings={{ wrapMode: 'Content' }} height={450} width="auto" >
+    <GridComponent dataSource={telecastData} gridLines="Both" enableHover={false} allowSelection={false} allowSorting={true} enableRowSpan={true} allowTextWrap={true} textWrapSettings={{ wrapMode: 'Content' }} height={355} width="auto" >
       <ColumnsDirective>
         <ColumnDirective field="Channel" headerText="Channel" width={150} freeze="Left" isPrimaryKey={true} />
         <ColumnDirective field="Genre" headerText="Genre" width={120} freeze="Left" />

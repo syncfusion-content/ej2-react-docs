@@ -1,8 +1,6 @@
-
-
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import * as React from 'react';
 import { ChipListComponent } from '@syncfusion/ej2-react-buttons';
+import * as React from 'react';
 import { employeeData } from './datasource';
 
 function App() {
@@ -32,5 +30,3 @@ function App() {
 
 };
 export default App;
-
-

@@ -176,10 +176,10 @@ You can add and customize the markers in the Smith Chart. This can be achieved b
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs4/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs4/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

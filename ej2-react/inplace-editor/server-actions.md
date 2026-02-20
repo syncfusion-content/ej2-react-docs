@@ -10,17 +10,17 @@ domainurl: ##DomainURL##
 
 # Server actions in React Inplace editor component
 
-By passing In-place Editor component value to the server, the [primaryKey](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#primarykey) property value must required otherwise action not performed for remote data.
+When submitting In-place Editor values to the server, the [primaryKey](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#primarykey) property is required for remote data operations; otherwise, the action will not be performed.
 
-If the [URL](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#url) property value is empty, data passing will handled at local and also the [actionSuccess](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#actionsuccess) event will trigger with `null` as argument value.
+If the [URL](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#url) property is empty, data submission is handled locally and the [actionSuccess](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#actionsuccess) event triggers with `null` as the argument value.
 
-> The following arguments are passed to the server when submit actions perform.
+> The following arguments are passed to the server when submit actions are performed.
 
-| Arguments  | Explanations                                              |
+| Arguments  | Description                                              |
 |------------|-----------------------------------------------------------|
-| value      | For processing edited value, like DB value updating.      |
-| primaryKey | For value mapping to the server, like selecting DB.            |
-| name       | For field mapping to the server, like DB column field mapping. |
+| value      | The edited value to be processed, such as database updates.      |
+| primaryKey | The identifier for mapping the value on the server, such as the record ID.            |
+| name       | The field name for server-side mapping, such as database column names. |
 
 Find the following sample server codes for defining models and controller functions to configure processing data.
 
@@ -41,11 +41,11 @@ public IEnumerable<SubmitModel> UpdateData([FromBody]SubmitModel value) {
 
 ```
 
-* When Server actions successfully done, the [actionSuccess](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#actionsuccess) event will be fired with returned server data.
+* When server submission is successful, the [actionSuccess](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#actionsuccess) event is triggered with the returned server data.
 
-* If the server is not responding, the [actionFailure](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#actionfailure) event will be fired with data, but value not updated in the Editor.
+* If the server does not respond or an error occurs, the [actionFailure](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#actionfailure) event is triggered and the value is not updated in the Editor.
 
-In the following sample, the `actionSuccess` event will trigger once the value submitted successfully into the server. In this sample, both `actionSuccess` and `actionFailure` were configured and resulted value will be converted to chips.
+In the following sample, both `actionSuccess` and `actionFailure` events are configured. The `actionSuccess` event triggers when the value is successfully submitted to the server, and the returned value is converted to chips.
 
 `[Class-component]`
 

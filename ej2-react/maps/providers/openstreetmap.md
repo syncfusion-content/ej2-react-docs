@@ -43,10 +43,10 @@ The OSM layer supports zooming and panning interactions for enhanced map explora
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs85/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs85/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs85/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs85/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

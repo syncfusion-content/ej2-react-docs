@@ -61,6 +61,9 @@ In the following example, **custom toolbar items** are added to the **Header**, 
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/rich-text-editor/ai-assistant/custom-toolbar-items-cs1/app/App.tsx %}
 {% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/rich-text-editor/ai-assistant/custom-toolbar-items-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/custom-toolbar-items-cs1" %}
@@ -73,6 +76,9 @@ In the following example, **custom toolbar items** are added to the **Header**, 
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/rich-text-editor/ai-assistant/custom-toolbar-items-cs2/app/App.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/rich-text-editor/ai-assistant/custom-toolbar-items-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -112,6 +118,9 @@ In the following example, a CSS animation is applied to the popup while the requ
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/rich-text-editor/ai-assistant/popup-styling-cs1/app/App.tsx %}
 {% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/rich-text-editor/ai-assistant/popup-styling-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/popup-styling-cs1" %}
@@ -124,6 +133,9 @@ In the following example, a CSS animation is applied to the popup while the requ
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/rich-text-editor/ai-assistant/popup-styling-cs2/app/App.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/rich-text-editor/ai-assistant/popup-styling-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -158,6 +170,9 @@ The following example demonstrates a Proofread use case by rendering a button ou
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/rich-text-editor/ai-assistant/usecase-cs1/app/App.tsx %}
 {% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/rich-text-editor/ai-assistant/usecase-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/ai-assistant/usecase-cs1" %}
@@ -170,6 +185,9 @@ The following example demonstrates a Proofread use case by rendering a button ou
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/rich-text-editor/ai-assistant/usecase-cs2/app/App.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/rich-text-editor/ai-assistant/usecase-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

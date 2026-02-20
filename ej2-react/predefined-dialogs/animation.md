@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Animation in React Predefined dialogs component
 
-The predefined dialogs can be animated during the open and close actions. Also, user can customize animation's `delay`, `duration` and `effect` of animation by using the `animationSettings` property.
+The predefined dialogs can be animated during the open and close actions. Animation properties such as `delay`, `duration`, and `effect` can be customized using the `animationSettings` property.
 
-In the below sample, `Zoom` effect is enabled. So, The Dialog will open with `ZoomIn` and close with `ZoomOut` effects.
+In the following sample, the `Zoom` effect is enabled. The Dialog will open with `ZoomIn` and close with `ZoomOut` effects.
 
 ## Alert animation
 
@@ -57,7 +57,7 @@ In the below sample, `Zoom` effect is enabled. So, The Dialog will open with `Zo
 
  {% previewsample "page.domainurl/code-snippet/predefined-dialogs/confirm-animation-cs1" %}
 
-`[Functionla-component]`
+`[Functional-component]`
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

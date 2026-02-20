@@ -4,14 +4,14 @@ import * as React from 'react';
 import { data } from './datasource';
 import { Row } from './rowTemplate';
 export default class App extends React.Component {
-    dm;
+    dataManager;
     style;
     constructor(props) {
         super(props);
         this.state = { items: [] };
         this.style = { class: 'e-form' };
-        this.dm = new DataManager(data.slice(0, 5));
-        this.dm.executeQuery(new Query())
+        this.dataManager = new DataManager(data.slice(0, 5));
+        this.dataManager.executeQuery(new Query())
         .then((e) => {
             this.setState({
                 items: e.result.map((row,index) => (
@@ -19,9 +19,9 @@ export default class App extends React.Component {
                 ))
             });
         });
-        this.insertUpdate = this.insertUpdate.bind(this);
+        this.removeRecord = this.removeRecord.bind(this);
     }
-    insertUpdate() {
+    removeRecord() {
         const orderid = document.getElementById('OrderID');
         const rowdata = {
             OrderID: +orderid.value,
@@ -29,8 +29,8 @@ export default class App extends React.Component {
         if (!rowdata.OrderID) {
             return;
         }
-        this.dm.remove('OrderID', rowdata);
-        this.dm.executeQuery(new Query())
+        this.dataManager.remove('OrderID', rowdata);
+        this.dataManager.executeQuery(new Query())
             .then((e) => {
             this.setState({
                 items: e.result.map((row,index) => (
@@ -42,13 +42,14 @@ export default class App extends React.Component {
     render() {
         return (<div><div style={this.style}>
             <input type="number" id='OrderID' placeholder="Order ID"/>
-            <input type="button" value="Remove" id="manipulate" onClick={this.insertUpdate}/></div>
+            <input type="button" value="Remove" id="manipulate" onClick={this.removeRecord}/></div>
             <table id='datatable' className='e-table'>
                 <thead>
                     <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th></tr>
                 </thead>
                 <tbody>{getValue('items', this.state)}</tbody>
             </table>
-            </div>);
+            </div>
+        );
     }
 }

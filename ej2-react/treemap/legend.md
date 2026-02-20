@@ -26,10 +26,10 @@ The following options are available to customize the legend position:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/legend-cs1/app/index.jsx %}
+{% include code-snippet/treemap/code-path/legend-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/legend-cs1/app/index.tsx %}
+{% include code-snippet/treemap/code-path/legend-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -77,7 +77,7 @@ In default mode, the legends have symbols with legend labels that are used to id
 
 ### Interactive mode
 
-The legends can be made interactive with an arrow mark that indicates exact range color in the legend when the mouse hovers on the TreeMap item. Enable this option by setting the [`mode`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings/#mode) property in the [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings/) to **Interactive**.
+The legends can be made interactive with an arrow mark that indicates exact range color in the legend when the mouse hovers on the TreeMap item. Enable this option by setting the [`mode`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings#mode) property in the [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings) to **Interactive**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -92,7 +92,7 @@ The legends can be made interactive with an arrow mark that indicates exact rang
 
 ## Legend size
 
-Customize the legend size by modifying the [`height`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings/#height) and [`width`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings/#width) properties in the [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings/). It accepts values in both percentage and pixel.
+Customize the legend size by modifying the [`height`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings#height) and [`width`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings#width) properties in the [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings). It accepts values in both percentage and pixel.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -107,7 +107,7 @@ Customize the legend size by modifying the [`height`](https://ej2.syncfusion.com
 
 ### Paging support
 
-TreeMap support legend paging, if the legend items cannot be placed within the provided [`height`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings/#height) and [`width`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings/#width) of the legend.
+TreeMap support legend paging, if the legend items cannot be placed within the provided [`height`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings#height) and [`width`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings#width) of the legend.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -137,7 +137,7 @@ Based on the mapping ranges in the data source, get the excluded ranges from the
 
 ## Hide desired legend items
 
-To enable or disable the desired legend item for each color mapping, set the [`showLegend`](https://ej2.syncfusion.com/react/documentation/api/treemap/colorMapping/#showlegend) property to **true** in the [`colorMapping`](https://ej2.syncfusion.com/react/documentation/api/treemap/colorMapping/).
+To enable or disable the desired legend item for each color mapping, set the [`showLegend`](https://ej2.syncfusion.com/react/documentation/api/treemap/colorMapping#showlegend) property to **true** in the [`colorMapping`](https://ej2.syncfusion.com/react/documentation/api/treemap/colorMapping).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -152,7 +152,7 @@ To enable or disable the desired legend item for each color mapping, set the [`s
 
 ## Hide legend items based data source value
 
-To enable or disable the legend visibility for each item through the data source, bind the appropriate data source field name to [`showLegendPath`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings/#showlegendpath) property in the [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings/).
+To enable or disable the legend visibility for each item through the data source, bind the appropriate data source field name to [`showLegendPath`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings#showlegendpath) property in the [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -167,7 +167,7 @@ To enable or disable the legend visibility for each item through the data source
 
 ## Bind legend item text from data source
 
-To show the legend item text from the data source, bind the property name from data source to the [`valuePath`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings/#valuepath) property in the [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings/).
+To show the legend item text from the data source, bind the property name from data source to the [`valuePath`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings#valuepath) property in the [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -182,7 +182,7 @@ To show the legend item text from the data source, bind the property name from d
 
 ## Hide duplicate legend items
 
-To enable or disable the duplicate legend items, set the [`removeDuplicateLegend`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings/#removeduplicatelegend) property to **true** in the [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings/).
+To enable or disable the duplicate legend items, set the [`removeDuplicateLegend`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings#removeduplicatelegend) property to **true** in the [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/treemap/legendSettings).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

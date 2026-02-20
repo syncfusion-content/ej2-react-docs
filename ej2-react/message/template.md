@@ -2,17 +2,17 @@
 layout: post
 title: Template in React Message component | Syncfusion
 description: Learn here all about Template in Syncfusion React Message component of Syncfusion Essential JS 2 and more.
-control: Template 
+control: Message
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template in React Message component
+# Custom message templates
 
-The message supports templates that allows the user to customize the content with a custom structure. The content can be a string, paragraph, or any other HTML element. The template can be rendered through the [content](https://ej2.syncfusion.com/react/documentation/api/message/#content) property or added directly to the HTML element.
+The Message component supports custom templates, enabling you to render complex or interactive message content beyond simple text. Templates allow you to embed HTML elements, React components, or dynamic content within the message body using the [content](https://ej2.syncfusion.com/react/documentation/api/message/#content) property or by adding content directly to the component's children.
 
-In the following sample, the Message component content is customized with HTML elements and React Button components, which are directly added to the HTML element.
+The following example demonstrates a custom message template that combines HTML elements with React Button components for interactive messaging.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

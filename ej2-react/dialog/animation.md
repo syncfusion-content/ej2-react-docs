@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Animation in React Dialog component
 
-The Dialog can be animated during the open and close actions. Also, user can customize animation's [`delay`](https://ej2.syncfusion.com/react/documentation/api/dialog/animationSettings/#delay), [`duration`](https://ej2.syncfusion.com/react/documentation/api/dialog/animationSettings/#duration) and [`effect`](https://ej2.syncfusion.com/react/documentation/api/dialog/animationSettings/#effect) by using [animationSettings](https://ej2.syncfusion.com/react/documentation/api/dialog/#animationsettings) property.
+The Dialog can be animated during the open and close actions. Animation properties such as [`delay`](https://ej2.syncfusion.com/react/documentation/api/dialog/animationSettings/#delay), [`duration`](https://ej2.syncfusion.com/react/documentation/api/dialog/animationSettings/#duration), and [`effect`](https://ej2.syncfusion.com/react/documentation/api/dialog/animationSettings/#effect) can be customized using the [animationSettings](https://ej2.syncfusion.com/react/documentation/api/dialog/#animationsettings) property.
 
 <!-- markdownlint-disable MD033 -->
 <table>
@@ -37,7 +37,7 @@ If the user sets ‘Fade’ effect, then the Dialog will open with ‘FadeIn’ 
 </td></tr>
 </table>
 
-In the below sample, `Zoom` effect is enabled. So, The Dialog will open with `ZoomIn` and close with `ZoomOut` effects.
+In the following sample, the `Zoom` effect is enabled. The Dialog will open with `ZoomIn` and close with `ZoomOut` effects.
 
 `[Class-component]`
 

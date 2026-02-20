@@ -2,27 +2,31 @@
 layout: post
 title: Template in React Toast component | Syncfusion
 description: Learn here all about Template in Syncfusion React Toast component of Syncfusion Essential JS 2 and more.
-control: Template 
+control: Toast
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template in React Toast component
+# Custom toast templates
 
-Template property can be given as the `HTML element` that is either a `string`  or a `query selector`.
+Create custom toast layouts using HTML templates rather than relying on predefined title and content properties. Templates enable rendering of complex content structures, custom styling, and interactive elements within toasts. Specify templates as HTML strings or query selectors referencing existing DOM elements.
 
-The HTML element tag can be given as a string for the template property.
+## Template string
 
-   ```ts
-     template: "<div>Toast Content</div>"
-    ```
+Provide HTML content directly as a string to the `template` property:
 
-The template property also allows getting template content through query `selector`. Here, element 'ID' attribute is specified in the template.
+```ts
+template: "<div class='custom-toast'><h4>Custom Title</h4><p>Custom content here</p></div>"
+```
 
-    ``` 
-    template: "#Template"
-    ```
+## Template selector
+
+Reference an existing DOM element by its ID using a query selector:
+
+```ts
+template: "#templateId"
+```
 
 `[Class-component]`
 

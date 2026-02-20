@@ -2,15 +2,15 @@
 layout: post
 title: Style in React Toast component | Syncfusion
 description: Learn here all about Style in Syncfusion React Toast component of Syncfusion Essential JS 2 and more.
-control: Style 
+control: Toast
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in React Toast component
+# Toast styling
 
-The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
+Customize the appearance of Toast components using CSS to match your application's design system. The following CSS selectors target specific Toast elements for theming and branding purposes.
 
 ## Customizing the toast title
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Inplace editor component
 
-The Inplace editor component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The In-place Editor component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Inplace editor component is outlined below.
 
@@ -40,18 +40,18 @@ The accessibility compliance for the Inplace editor component is outlined below.
 
 ## Keyboard interaction
 
-You can use the following key shortcuts to access the Inplace editor without interruptions:
+Use the following keyboard shortcuts to interact with the In-place Editor:
 
 | **Keyboard shortcuts** | **Actions** |
 | --- | --- |
-| <kbd>Tab</kbd> | Helps in focusing the Inplace editor on the page and switching between the consecutive Inplace editor bars. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | Helps in focusing the previous Inplace editor bar element on the Inplace editor. |
+| <kbd>Tab</kbd> | Focuses the In-place Editor and switches between consecutive In-place Editor instances. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | Focuses the previous In-place Editor instance. |
 
 ## Ensuring accessibility
 
-The Inplace editor component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The In-place Editor component's accessibility is verified through [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) automated testing tools.
 
-The accessibility compliance of the Inplace editor component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/inplace-editor.html) in a new window to evaluate the accessibility of the Inplace editor component with accessibility tools.
+The accessibility compliance of the In-place Editor component is demonstrated in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/inplace-editor.html) in a new window to evaluate the component's accessibility using accessibility validation tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/inplace-editor.html" %}
 

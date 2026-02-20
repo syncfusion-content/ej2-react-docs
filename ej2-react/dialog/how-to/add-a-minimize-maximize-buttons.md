@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add a minimize maximize buttons in React Dialog component | Syncfusion
-description: Learn here all about Add a minimize maximize buttons in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
-control: Add a minimize maximize buttons 
+title: Add minimize and maximize buttons in React Dialog component | Syncfusion
+description: Learn here all about adding minimize and maximize buttons in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
+control: Add minimize and maximize buttons 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add a minimize maximize buttons in React Dialog component
+# Add minimize and maximize buttons in React Dialog component
 
 React Dialog allows end users to either minimize or maximize the Dialog component. You can add minimize and maximize custom buttons near the close icon in the Dialog header using the [headerTemplate](https://ej2.syncfusion.com/react/documentation/api/dialog/#headertemplate) property and handle the actions in the button click events, as shown in the following sample.
 

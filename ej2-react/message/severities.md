@@ -2,19 +2,19 @@
 layout: post
 title: Severities in React Message component | Syncfusion
 description: Learn here all about Severities in Syncfusion React Message component of Syncfusion Essential JS 2 and more.
-control: Severities 
+control: Message
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Severities in React Message component
+# Message severity levels
 
-The severity denotes the importance and context of the message to the user. The message contains different severity types. Use the [severity](https://ej2.syncfusion.com/react/documentation/api/message/#severity) property to display the messages with different severity levels.
+Message severity communicates the importance and type of information being conveyed to users. Different severity levels use distinct visual styling and icons to help users quickly understand the message context. Use the [severity](https://ej2.syncfusion.com/react/documentation/api/message/#severity) property to specify the message type.
 
-The available severity types are **Normal**, **Success**, **Info**, **Warning** and **Error**. The default severity type for messages is **Normal**.
+The Message component supports five severity levels: **Normal** (default), **Success** (confirmation or positive outcomes), **Info** (informational content), **Warning** (caution or potential issues), and **Error** (critical issues or failures).
 
-The following example demonstrates the severity of the messages.
+The following example demonstrates all available severity levels and their visual representations.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

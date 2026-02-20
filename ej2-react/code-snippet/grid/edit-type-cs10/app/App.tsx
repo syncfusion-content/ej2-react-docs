@@ -49,11 +49,13 @@ function App() {
     }
   }
   const created = () => {
-    (textbox.current?.['textarea'] as HTMLTextAreaElement).addEventListener('keydown', (e) => { // bind multi line textbox, textarea element keydown event to prevent enter key action in grid
-      if ((e as KeyboardEvent).key === 'Enter') {
-        e.stopPropagation();
-      }
-    });
+    if (textbox.current) {
+      (textbox.current.textarea as HTMLTextAreaElement).addEventListener('keydown', (e) => { // bind multi line textbox, textarea element keydown event to prevent enter key action in grid
+        if ((e as KeyboardEvent).key === 'Enter') {
+          e.stopPropagation();
+        }
+      });
+    }
   }
 
   return <GridComponent dataSource={data} editSettings={editOptions} toolbar={toolbarOptions} height={265} actionBegin={actionBegin}>

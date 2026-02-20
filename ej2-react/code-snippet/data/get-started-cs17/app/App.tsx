@@ -10,11 +10,10 @@ export default class App extends React.Component<{}, {}>{
     constructor(props: object) {
         super(props);
         this.state = { items: [] };
-
     }
     componentDidMount() {
         new DataManager({ url: SERVICE_URI, adaptor: new ODataV4Adaptor() })
-    .executeQuery(new Query().from('Orders').take(8))
+        .executeQuery(new Query().from('Orders').take(8))
         .then((e: ReturnOption) => {
             const res = (e.result as IOrders[]).map((row: IOrders,index: number) => (
                 <Row key={row.OrderID} {...row} />
@@ -23,7 +22,7 @@ export default class App extends React.Component<{}, {}>{
                 items: res
             });
         });
-     }
+    }
 
     public render() {
         return (<table id='datatable' className='e-table'>
@@ -31,7 +30,8 @@ export default class App extends React.Component<{}, {}>{
                     <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th></tr>
                 </thead>
                 <tbody>{ getValue('items', this.state) }</tbody>
-            </table>)
+            </table>
+        )
     }
 
 }

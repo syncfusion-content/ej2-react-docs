@@ -2,7 +2,7 @@
 layout: post
 title: Accessibility in React Toast component | Syncfusion
 description: Learn here all about Accessibility in Syncfusion React Toast component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+control: Toast
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Toast component
 
-The Toast component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Toast component follows WCAG 2.2, Section 508, and ADA accessibility standards to ensure notifications are accessible to all users, including those using assistive technologies. Toast notifications are announced to screen readers as live regions, enabling users to receive important updates without requiring focus or interaction.
 
 The accessibility compliance for the Toast component is outlined below.
 
@@ -40,13 +40,15 @@ The accessibility compliance for the Toast component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Toast component has been designed keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) specifications, by applying the prompt WAI-ARIA roles, states, and properties along with the keyboard support. Thus, making it usable for people who use assistive WAI-ARIA Accessibility supports that is achieved through the attributes. It helps to provides information about the elements in a document for assistive technology. The component implements the keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/) and tested in major screen readers.
+The Toast component implements the [WAI-ARIA alert pattern](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) to provide semantic meaning and accessibility features for screen readers and assistive technologies. The component applies proper ARIA roles and states to communicate notification importance and content changes to users with assistive devices.
 
-<!-- markdownlint-disable MD033 -->
+| Attribute | Purpose |
+| --- | --- |
+| `role="alert"` | Identifies the Toast as an alert region, signaling important, time-sensitive information to screen readers |
+| `aria-live="assertive"` | Announces toast content immediately when displayed, interrupting other announcements |
+| `aria-label` | Provides an accessible name describing the toast content or purpose |
 
-| Class | Description |
-| -------- | -------- |
-| role | <b>alert:</b> <br/>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Identifies the element as the container where alert content will be added or updated. |
+The Toast component has been tested with major screen readers including JAWS, NVDA, and VoiceOver to ensure compatibility and proper announcement of toast notifications.
 
 `[Class-component]`
 

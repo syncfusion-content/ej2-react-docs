@@ -10,17 +10,17 @@ domainurl: ##DomainURL##
 
 # Template in React Spinner component
 
-You can use custom templates on the Spinner instead of the default Spinner by specifying the template in the `setSpinner` method.
+Custom templates can be used on the Spinner instead of the default Spinner by specifying the template in the `setSpinner` method.
 
-The following steps explains you on how to define template for Spinner.
+The following steps explain how to define a template for the Spinner:
 
-*Import the `setSpinner` method from `ej2-react-popups` library into your `index.tsx` as shown in below.
+* Import the `setSpinner` method from the `ej2-react-popups` library into your `index.tsx` as shown below:
 
     ```
      import { setSpinner } from '@syncfusion/ej2-react-popups';
     ```
 
-*Pass your custom template to the `setSpinner` method like as below.
+* Pass your custom template to the `setSpinner` method as shown below:
 
      ```ts
      // Specify the template content to be displayed in the Spinner
@@ -28,13 +28,13 @@ The following steps explains you on how to define template for Spinner.
        setSpinner({ template: '<div style="width:100%;height:100%" class="custom-rolling"><div></div></div>'});
      ```
 
-> You should set the template to the Spinner before creating the respective Essential<sup style="font-size:70%">&reg;</sup> JS 2 component.
-> Also,until we replace `setSpinner` template, the further Essential<sup style="font-size:70%">&reg;</sup> JS 2 component rendering is created with given template only.
+> The template must be set before creating the respective Essential<sup style="font-size:70%">&reg;</sup> JS 2 component.
+> Additionally, until the `setSpinner` template is replaced, all subsequent Essential<sup style="font-size:70%">&reg;</sup> JS 2 component rendering will use the specified template.
 
-* Now, render the Essential<sup style="font-size:70%">&reg;</sup> JS 2 component. It's render the Spinner with the template specified in the `setSpinner` method.
+* Render the Essential<sup style="font-size:70%">&reg;</sup> JS 2 component. The Spinner will render with the template specified in the `setSpinner` method.
 
-> In the below sample, we have rendered the Grid component with custom Spinner using `setSpinner` method.
-> You have to define the styles for the template in `index.html`.
+> The following sample demonstrates rendering a Grid component with a custom Spinner using the `setSpinner` method.
+> Define the styles for the template in the `index.html` file.
 
 `[Class-component]`
 

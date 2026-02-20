@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 
 ## Tooltip for pointers
 
-Circular gauge will displays the pointer details through [tooltip](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/tooltipSettings/), when the mouse is moved over the pointer.
+Circular gauge will displays the pointer details through [tooltip](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/tooltipSettings), when the mouse is moved over the pointer.
 
 <!-- markdownlint-disable MD036 -->
 
@@ -63,10 +63,10 @@ The following code example shows the tooltip for the pointers, ranges and annota
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-user-interaction-cs1/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-user-interaction-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-user-interaction-cs1/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-user-interaction-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -76,7 +76,7 @@ The following code example shows the tooltip for the pointers, ranges and annota
 
 **Template**
 
-Any HTML elements can be displayed in the tooltip by using the [`template`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/tooltipSettings/#template-string) property of the tooltip.
+Any HTML elements can be displayed in the tooltip by using the [`template`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/tooltipSettings#template-string) property of the tooltip.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -91,7 +91,7 @@ Any HTML elements can be displayed in the tooltip by using the [`template`](http
 
 ## Pointer Drag
 
-Pointers can be dragged over the axis value. This can be achieved by clicking and dragging the pointer. To enable or disable the pointer drag, you can use [`enablePointerDrag`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/#enablepointerdrag-boolean) property.
+Pointers can be dragged over the axis value. This can be achieved by clicking and dragging the pointer. To enable or disable the pointer drag, you can use [`enablePointerDrag`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge#enablepointerdrag-boolean) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

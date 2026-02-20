@@ -41,10 +41,10 @@ The [`titleSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/ti
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs19/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs19/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs19/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs19/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

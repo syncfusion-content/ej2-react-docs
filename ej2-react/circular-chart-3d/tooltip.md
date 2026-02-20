@@ -14,14 +14,14 @@ The 3D Circular Chart will display details about the points through a tooltip, w
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/tooltip/tooltip-cs1/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/tooltip/tooltip-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/tooltip/tooltip-cs1/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/tooltip/tooltip-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/tooltip/tooltip-cs1" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/tooltip/tooltip-cs1" %}
 
 >To use data label feature, we need to inject `CircularChartTooltip3D` module into the services.
 
@@ -31,14 +31,14 @@ You can specify a header for the tooltip by using the `header` property in `tool
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/tooltip/tooltip-cs2/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/tooltip/tooltip-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/tooltip/tooltip-cs2/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/tooltip/tooltip-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/tooltip/tooltip-cs2" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/tooltip/tooltip-cs2" %}
 
 ## Format
 
@@ -46,14 +46,14 @@ By default, the tooltip shows information about the x and y values in points. Ad
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/tooltip/tooltip-cs3/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/tooltip/tooltip-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/tooltip/tooltip-cs3/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/tooltip/tooltip-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/tooltip/tooltip-cs3" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/tooltip/tooltip-cs3" %}
 
 ## Tooltip template
 
@@ -61,14 +61,14 @@ Any HTML elements can be displayed in the tooltip by using the `template` proper
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/tooltip/tooltip-cs4/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/tooltip/tooltip-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/tooltip/tooltip-cs4/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/tooltip/tooltip-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/tooltip/tooltip-cs4" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/tooltip/tooltip-cs4" %}
 
 ## Fixed tooltip
 
@@ -76,14 +76,14 @@ By default, the tooltip tracks the mouse movement, but it can be set to a fixed 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/tooltip/tooltip-cs5/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/tooltip/tooltip-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/tooltip/tooltip-cs5/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/tooltip/tooltip-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/tooltip/tooltip-cs5" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/tooltip/tooltip-cs5" %}
 
 ## Customization
 
@@ -91,14 +91,14 @@ The `fill` and `border` properties are used to customize the background color an
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/tooltip/tooltip-cs6/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/tooltip/tooltip-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/tooltip/tooltip-cs6/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/tooltip/tooltip-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/tooltip/tooltip-cs6" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/tooltip/tooltip-cs6" %}
 
 ## Customization of individual tooltip
 
@@ -106,11 +106,11 @@ Using the `tooltipRender` event, you can customize tooltip values for a particul
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/tooltip/tooltip-cs7/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/tooltip/tooltip-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/tooltip/tooltip-cs7/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/tooltip/tooltip-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/tooltip/tooltip-cs7" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/tooltip/tooltip-cs7" %}

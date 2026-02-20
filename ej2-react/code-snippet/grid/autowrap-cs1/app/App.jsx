@@ -17,7 +17,7 @@ function App() {
     <div>
       <label style={{ padding: '30px 17px 0 0' }}>Change the wrapmode of auto wrap feature:</label>
       <DropDownListComponent dataSource={dropDownData} index={0} width="100" change={valueChange}></DropDownListComponent>
-      <GridComponent dataSource={inventoryData} height={315} allowPaging={true} allowTextWrap={true} textWrapSettings={wrapSettings}>
+      <GridComponent dataSource={inventoryData} height={280} allowPaging={true} allowTextWrap={true} textWrapSettings={wrapSettings}>
         <ColumnsDirective>
           <ColumnDirective field='Inventor' headerText='Inventor' width='100' />
           <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' textAlign='Right' width='100' />

@@ -9,8 +9,8 @@ function App() {
   }
   return (
     <div>
-      <div style={{ padding: '40px 0 0 0' }}>
-        <GridComponent dataSource={data} height={315} selectionSettings={selectOptions}>
+      <div>
+        <GridComponent dataSource={data} height={355} selectionSettings={selectOptions}>
           <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='OrderID' width='100' textAlign='Right'/>
             <ColumnDirective field='CustomerID' headerText='CustomerID' width='100' />

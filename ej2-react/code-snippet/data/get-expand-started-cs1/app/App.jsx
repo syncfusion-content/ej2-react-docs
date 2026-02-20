@@ -19,14 +19,16 @@ export default class App extends React.Component {
                 this.setState({
                     items: res,
                 });
-            });
-        }
+            }
+        );
+    }
     render() {
         return (<table id='datatable' className='e-table'>
                 <thead>
                     <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th></tr>
                 </thead>
                 <tbody>{getValue('items', this.state)}</tbody>
-            </table>);
+            </table>
+        );
     }
 }

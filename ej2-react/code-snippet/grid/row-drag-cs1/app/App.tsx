@@ -10,7 +10,7 @@ function App() {
       const destRowDropOptions: RowDropSettingsModel = { targetID: 'Grid' };
       const selectionOptions: SelectionSettingsModel = { type: 'Multiple' };
       return (<div>
-            <GridComponent id="Grid" dataSource={data} height={268} allowRowDragAndDrop={true} selectionSettings={selectionOptions} rowDropSettings={rowDropOptions}>
+            <GridComponent id="Grid" dataSource={data} height={150} allowRowDragAndDrop={true} selectionSettings={selectionOptions} rowDropSettings={rowDropOptions}>
                   <ColumnsDirective>
                         <ColumnDirective field='OrderID' headerText='Order ID' width='140' textAlign='Right' />
                         <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />
@@ -20,7 +20,7 @@ function App() {
                   </ColumnsDirective>
                   <Inject services={[RowDD]} />
             </GridComponent>
-            <GridComponent id="DestGrid" dataSource={destData} allowRowDragAndDrop={true} selectionSettings={selectionOptions} rowDropSettings={destRowDropOptions}>
+            <GridComponent id="DestGrid" dataSource={destData} height={150} allowRowDragAndDrop={true} selectionSettings={selectionOptions} rowDropSettings={destRowDropOptions}>
                   <ColumnsDirective>
                         <ColumnDirective field='OrderID' headerText='Order ID' width='140' textAlign='Right' />
                         <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />

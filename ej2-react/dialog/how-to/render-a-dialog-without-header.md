@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Render a dialog without header in React Dialog component
 
-The dialog can be rendered without header by setting the header property value as empty string or null.  By default, dialog is rendered without header.
+The dialog can be rendered without a header by setting the `header` property to an empty string or `null`. This allows for header-only dialogs when the header property is not specified.
 
 `[Class-component]`
 

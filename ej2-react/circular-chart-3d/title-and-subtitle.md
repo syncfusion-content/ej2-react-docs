@@ -16,14 +16,14 @@ The 3D Circular Chart can be given a title by using the `title` property to disp
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/title/title-cs1/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/title/title-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/title/title-cs1/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/title/title-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/title/title-cs1" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/title/title-cs1" %}
 
 ## Title customization
 
@@ -31,14 +31,14 @@ The title of the 3D Circular Chart can be customized using the `titleStyle` prop
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/title/title-cs2/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/title/title-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/title/title-cs2/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/title/title-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/title/title-cs2" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/title/title-cs2" %}
 
 ## Subtitle
 
@@ -46,14 +46,14 @@ The 3D Circular Chart can be given a subtitle by using the `subTitle` property t
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/title/title-cs3/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/title/title-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/title/title-cs3/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/title/title-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/title/title-cs3" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/title/title-cs3" %}
 
 ## Subtitle customization
 
@@ -61,11 +61,11 @@ The subtitle of the 3D Circular Chart can be customized using the `subTitleStyle
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circular-chart/title/title-cs4/app/index.jsx %}
+{% include code-snippet/circular-chart/code-path/title/title-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circular-chart/title/title-cs4/app/index.tsx %}
+{% include code-snippet/circular-chart/code-path/title/title-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/circular-chart/title/title-cs4" %}
+{% previewsample "page.domainurl/code-snippet/circular-chart/preview-sample/title/title-cs4" %}

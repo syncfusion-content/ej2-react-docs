@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Create nested dialog in React Dialog component
 
-A Dialog can be nested within another Dialog. The below sample contains parent and child Dialog (inner Dialog).
+A Dialog can be nested within another Dialog. The following sample contains parent and child Dialog (inner Dialog).
 
 **Step 1**:
 

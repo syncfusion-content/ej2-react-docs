@@ -12,18 +12,18 @@ domainurl: ##DomainURL##
 
 ## Rendering modes
 
-This section explains the rendering modes supported by the In-place Editor. Possible rendering modes are given in below.
+The In-place Editor supports two rendering modes:
 
 * Popup
 * Inline
 
-> By default, component will be rendered with `Popup` mode, when opening an editor.
+> By default, the component renders in `Popup` mode when opening the editor.
 
-* For `Popup` mode, editable container displays as like tooltip or popover above the element.
+* **Popup mode**: The editable container displays as a tooltip or popover above the element.
 
-* For `Inline` mode, editable container will be displayed instead of the popup element. To render `Inline` mode while opening the editor, specify `mode` as `Inline`.
+* **Inline mode**: The editable container replaces the element directly, without a popup. Specify `mode` as `Inline` to enable this mode.
 
-In the following sample, the In-place Editor renders with `Inline` mode. You can dynamically switch to another mode by changing the drop-down item value.
+In the following sample, the In-place Editor renders in `Inline` mode. Dynamically switch modes by changing the dropdown selection.
 
 `[Class-component]`
 
@@ -53,13 +53,13 @@ In the following sample, the In-place Editor renders with `Inline` mode. You can
 
 ### Pop-up customization
 
-In-place Editor popup mode can be customized by using the [title](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/popupSettings/#title) and [model](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/popupSettings/#model) properties in [popupSettings](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/popupSettings/) API.
+Customize the popup mode by using the [title](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/popupSettings/#title) and [model](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/popupSettings/#model) properties in the [popupSettings](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/popupSettings/) API.
 
-Popup mode rendered by using the Essential<sup style="font-size:70%">&reg;</sup> JS2 React Tooltip component, so you can use tooltip properties and events to customize the behavior of popup via the [model](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/popupSettings/#model) property of [popupSettings](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/popupSettings/) API.
+The popup is rendered using the Essential<sup style="font-size:70%">&reg;</sup> JS 2 React Tooltip component. Customize popup behavior by configuring tooltip properties and events through the [model](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/popupSettings/#model) property of [popupSettings](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/popupSettings/).
 
-> For more details, refer the tooltip documentation [section](../tooltip/).
+> For more details, refer to the Tooltip documentation [section](../tooltip/).
 
-In the following sample, popup [title](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/popupSettings/#title) and [position](https://ej2.syncfusion.com/react/documentation/api/tooltip/#position) customized using the [popupSettings](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/popupSettings/) property. All possible tooltip position data configured in the drop-down, if we change drop down item, selected value bound to [model](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/popupSettings/#model) property and applied it to [Tooltip](../tooltip/) component. `Tooltip` have following position options.
+In the following sample, the popup [title](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/popupSettings/#title) and [position](https://ej2.syncfusion.com/react/documentation/api/tooltip/#position) are customized using the [popupSettings](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/popupSettings/) property. The dropdown lists all available tooltip positions. When a dropdown item is selected, the corresponding position value is bound to the [model](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/popupSettings/#model) property and applied to the [Tooltip](../tooltip/) component. Available position options include:
 
 * TopLeft
 * TopCenter
@@ -102,7 +102,7 @@ In the following sample, popup [title](https://ej2.syncfusion.com/react/document
 
 ## Event actions for editing
 
-The event action of the editor that enable in the edit mode based on the [editableOn](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#editableon) property, by default `Click` is assigned, the following options are also supported.
+Control when the In-place Editor enters edit mode by configuring the [editableOn](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#editableon) property. By default, `Click` is assigned. The following options are also supported:
 
 * **[Click](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/editableType/)**:  The editor will be opened as single click actions.
 * **[DblClick](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/editableType/)**: The editor will be opened as double-click actions and it is not applicable for edit icon.

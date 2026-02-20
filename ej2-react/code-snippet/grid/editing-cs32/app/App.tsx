@@ -10,11 +10,14 @@ function App() {
   const gridRef: React.RefObject<GridComponent> = React.useRef<GridComponent>(null);
   const onMouseUp = (e: React.MouseEvent<HTMLElement>): void => {
     if ((e.target as HTMLElement).classList.contains("e-rowcell")) {
-      if (gridRef.current?.isEdit)
-        gridRef.current?.endEdit();
+      if (gridRef.current && gridRef.current.isEdit) {
+        gridRef.current.endEdit();
+      }
       let index: number = parseInt((e.target as HTMLElement).getAttribute("data-index") as string, 10);
-      gridRef.current?.selectRow(index);
-      gridRef.current?.startEdit();
+      if (gridRef.current) {
+        gridRef.current.selectRow(index);
+        gridRef.current.startEdit();
+      }
     };
   }
   return <GridComponent ref={gridRef} dataSource={data} id="Grid" toolbar={toolbarOptions} allowPaging={true} editSettings={editSettings} onMouseUp={onMouseUp}>

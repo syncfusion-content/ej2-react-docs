@@ -24,42 +24,14 @@ function App() {
     })
     return (
         <div>
-        <label style={{ padding: '5px 5px 5px 0', display: 'inline-block' }}>
-          Change the resize mode:
-        </label>
-        <DropDownListComponent
-          style={{ padding: '5px 0 0 0', display: 'inline-block' }}
-          dataSource={alignmentData}
-          ref={(d) => (dropDown = d)}
-          index={0}
-          width="100"
-          fields={field}
-        ></DropDownListComponent>
-
-        <label style={{ padding: '5px 5px 0 5px', display: 'inline-block' }}>
-          Enter the width:
-        </label>
-        <TextBoxComponent
-          ref={(t) => (textBox = t)}
-          placeholder="Enter the width"
-          width="200"
-          style={{ display: 'inline-block' }}
-        />
-
-        <label style={{ padding: '5px 5px 0 5px', display: 'inline-block' }}>
-          Click the change button:
-        </label>
-        <ButtonComponent
-          id="button"
-          cssClass="e-outline"
-          onClick={onExternalResize}
-          style={{ display: 'inline-block' }}
-        >
-          Resize
-        </ButtonComponent>
-      </div>
-      <div style={{ padding: '10px 0 0 0' }}>
-                <GridComponent dataSource={data} height={268} ref={g => grid = g} allowResizing={true}>
+            <label style={{ padding: '10px 10px 0 0' }}>Change the resize mode:</label>
+            <DropDownListComponent style={{ padding: "0 0 0 0" }} dataSource={alignmentData} ref={d => dropDown = d} index={0} width="100" fields={field}></DropDownListComponent><br />
+            <label style={{ padding: '10px 17px 0 0' }}>Enter the width:</label>
+            <TextBoxComponent ref={t => textBox = t} placeholder="Enter the width" width='200' />
+            <label style={{ padding: '10px 17px 0 0' }}>Click the change button :</label>
+            <ButtonComponent id="button" cssClass="e-outline" onClick={onExternalResize}>Resize</ButtonComponent>
+            <div style={{ padding: '20px 0 0 0' }}>
+                <GridComponent dataSource={data} height={200} ref={g => grid = g} allowResizing={true}>
                     <ColumnsDirective>
                         <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
                         <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />

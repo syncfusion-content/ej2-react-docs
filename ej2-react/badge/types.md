@@ -2,7 +2,7 @@
 layout: post
 title: Types in React Badge component | Syncfusion
 description: Learn here all about Types in Syncfusion React Badge component of Syncfusion Essential JS 2 and more.
-control: Types 
+control: Badge
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,22 +10,22 @@ domainurl: ##DomainURL##
 
 # Types in React Badge component
 
-This section explains different styles and types of the badges.
+This section details the predefined style variants and shape types available in the Badge component. Understanding these options helps you select the appropriate badge for your use case and ensures consistent UI patterns throughout your application.
 
-## Badge styles
+## Badge style variants
 
-The Essential<sup style="font-size:70%">&reg;</sup> JS 2 Badge component offers the following predefined styles that can be used with the `.e-badge` class to change the appearance of a badge.
+The Syncfusion Badge component provides eight predefined color variants using the `.e-badge` class. Each variant serves a specific semantic purpose and can be applied to communicate different states or message types to users.
 
 | Class Name        | Description
 | :-------------    |:-------------
-| e-badge-primary   | Represents a primary notification.
-| e-badge-secondary | Represents a secondary notification.
-| e-badge-success   | Represents a positive notification.
-| e-badge-danger    | Represents a negative notification.
-| e-badge-warning   | Represents notification with caution.
-| e-badge-info      | Represents an informative notification.
-| e-badge-light     | Represents notification in light variant.
-| e-badge-dark      | Represents notification in dark variant.
+| e-badge-primary   | Indicates primary or default state; use for general notifications.
+| e-badge-secondary | Indicates secondary actions or supplementary information.
+| e-badge-success   | Indicates successful completion, confirmation, or positive outcomes.
+| e-badge-danger    | Indicates errors, warnings, or critical issues requiring immediate attention.
+| e-badge-warning   | Indicates caution or potential issues that need review.
+| e-badge-info      | Indicates informational messages or helpful guidance.
+| e-badge-light     | Represents a light theme variant for subtle notifications on dark backgrounds.
+| e-badge-dark      | Represents a dark theme variant for prominent notifications on light backgrounds.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -44,16 +44,16 @@ The Essential<sup style="font-size:70%">&reg;</sup> JS 2 Badge component offers 
         
 {% previewsample "page.domainurl/code-snippet/badge/types-cs1" %}
 
-## Badge types
+## Badge shape types
 
-The types of Essential<sup style="font-size:70%">&reg;</sup> JS 2 Badge component are as follows:
+The Syncfusion Badge component supports the following shape and layout types to suit different design patterns and use cases:
 
 * Circle
 * Pill
 * Link
 * Notification
-* Overlap
 * Dot
+* Overlap
 * Position
 
 ### Circle
@@ -121,7 +121,7 @@ When badge modifier classes are applied to an anchor tag, the badge's appearance
 
 ### Notification
 
-The notification badge style can be applied by adding the modifier class `.e-badge-notification` to the target element. Notification badges are used when a content or a context needs special attention. While using the notification badge, set the parent element to `position: relative`.
+Apply the `.e-badge-notification` modifier class to create a notification badge. Notification badges are used to highlight important content or contexts that require immediate attention—such as alert counts or status changes. When using notification badges, ensure the parent element has `position: relative` to maintain proper positioning.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -142,7 +142,7 @@ The notification badge style can be applied by adding the modifier class `.e-bad
 
 ### Dot
 
-Dot can be applied by adding the modifier class `.e-badge-dot` to the target element. Dot badges are similar to notification badges, but in a minimalistic way. While using the dot badge, set the parent element to `position:relative` .
+Create a minimalist dot badge by adding the `.e-badge-dot` modifier class. Dot badges convey status or presence information in a compact, non-intrusive manner—ideal for showing online status, activity indicators, or subtle alerts. Like notification badges, set the parent element to `position: relative` for proper positioning.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -163,7 +163,7 @@ Dot can be applied by adding the modifier class `.e-badge-dot` to the target ele
 
 ### Overlap
 
-The overlap badge can be used with `notification` or `dot` badge, which overlaps with the target element by adding the modifier class `.e-badge-overlap`. While using the overlap badge, set the parent element to `position: relative`.
+Combine the `.e-badge-overlap` modifier class with notification or dot badges to create an overlapping effect on the target element. This pattern is useful for positioning badges on the edges of avatars, icons, or other UI components while maintaining visual hierarchy. Ensure the parent element has `position: relative` for correct badge positioning.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -184,7 +184,7 @@ The overlap badge can be used with `notification` or `dot` badge, which overlaps
 
 ### Position
 
-The default position of the `notification` or `dot` badge is top. But, the position can be changed to `bottom` using the modifier class `.e-badge-bottom`. For example, the bottom class modifier is used with dot badge to display the status in the avatar as shown in the following sample.
+Notification and dot badges default to top positioning. Change the badge position to the bottom by applying the `.e-badge-bottom` modifier class. This is particularly useful for avatar components where a bottom position communicates status or availability information more intuitively, as shown in the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

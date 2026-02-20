@@ -9,8 +9,8 @@ export default class App extends React.Component {
         this.state = { items: [] };
     }
     componentDidMount() {
-        const dm = new DataManager({ url: SERVICE_URI, adaptor: new ODataV4Adaptor(), offline: true }, new Query().take(8));
-        dm.ready.then((e) => {
+        const dataManager = new DataManager({ url: SERVICE_URI, adaptor: new ODataV4Adaptor(), offline: true }, new Query().take(8));
+        dataManager.ready.then((e) => {
             const res = e.result.map((row) => <Row key={row.OrderID} {...row} />);
             this.setState({
                 items: res,
@@ -23,6 +23,7 @@ export default class App extends React.Component {
                     <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th></tr>
                 </thead>
                 <tbody>{getValue('items', this.state)}</tbody>
-            </table>);
+            </table>
+        );
     }
 }

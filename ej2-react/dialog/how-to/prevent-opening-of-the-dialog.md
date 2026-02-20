@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Prevent opening of the dialog in React Dialog component
 
-You can prevent opening of the dialog by setting the [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/dialog/#beforeopen) event argument cancel value to true. In the following sample, the success dialog is opened when you enter the username value with minimum 4 characters. Otherwise, it will not be opened.
+You can prevent the dialog from opening by setting the [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/dialog/#beforeopen) event argument cancel value to `true`. In the following sample, the success dialog opens only when a username with a minimum of 4 characters is entered. Otherwise, the dialog will not open.
 
 `[Class-component]`
 

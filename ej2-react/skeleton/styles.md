@@ -2,19 +2,19 @@
 layout: post
 title: Styles in React Skeleton component | Syncfusion
 description: Learn here all about Styles in Syncfusion React Skeleton component of Syncfusion Essential JS 2 and more.
-control: Styles 
+control: Skeleton
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Styles in React Skeleton component
+# Skeleton styling and customization
 
-You can customize skeleton control in the below ways.
+The Skeleton component provides flexible styling options to match your application's design requirements. Customize the visual appearance of skeleton placeholders to align with your brand colors, layout patterns, and component hierarchy.
 
-## cssClass
+## Custom styling with cssClass
 
-You can customize the style of a Skeleton control by using [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/skeleton/#cssclass). The appearance of React Skeleton can be customized by changing the wave color, background color, width, and height. For detailed information, refer `index.css` file below.
+Apply custom CSS styling to Skeleton components using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/skeleton/#cssclass) property. This approach enables you to modify visual properties such as shimmer wave color, background color, dimensions, and animation speed. CSS customization provides fine-grained control over skeleton appearance across your application.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -30,18 +30,6 @@ You can customize the style of a Skeleton control by using [`cssClass`](https://
 
  {% previewsample "page.domainurl/code-snippet/skeleton/styles-cs1" %}
 
-## Visible
+## Visibility control
 
-You can use the [`visible`](https://ej2.syncfusion.com/react/documentation/api/skeleton/#visible) property which defines the visible state of Skeleton.
-
-```ts
-import { SkeletonComponent } from '@syncfusion/ej2-react-notifications';
-import * as React from "react";
-
-function App() {
-
-  return (
-    <SkeletonComponent shape= 'Circle' width= "60px" visible={false}></SkeletonComponent>);
-}
-export default App;
-```
+Control the display state of Skeleton components using the [`visible`](https://ej2.syncfusion.com/react/documentation/api/skeleton/#visible) property. Set `visible` to `true` to display the skeleton placeholder during loading, and change to `false` when content finishes loading and should be displayed. This property enables dynamic skeleton toggling based on content loading state, allowing you to seamlessly transition from placeholder to actual content without requiring component replacement.

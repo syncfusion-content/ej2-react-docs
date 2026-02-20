@@ -1,10 +1,7 @@
-import { ColumnDirective, ColumnsDirective, ForeignKey, Grid, GridComponent, Inject, ColumnModel } from '@syncfusion/ej2-react-grids';
-import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
-import React, { useState } from 'react';
-import { data, employeeData } from './datasource';
-import { ButtonComponent, SwitchComponent } from '@syncfusion/ej2-react-buttons';
-import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+import React from 'react';
+import { data } from './datasource';
 
 function App() {
   const dropDownData = ['Order Details', 'Order Information'];

@@ -14,7 +14,7 @@ Annotations are used to mark a specific area of interest in the gauge with texts
 
 ## Content
 
-You can place any custom element on the axis area by assigning the id of the element to [`content`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/annotation/#content-string) property of [`annotation`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/annotation/) object.
+You can place any custom element on the axis area by assigning the id of the element to [`content`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/annotation#content-string) property of [`annotation`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/annotation) object.
 
 *Note: To use annotation feature, we need to inject `Annotations` module into the `services`.*
 
@@ -31,8 +31,8 @@ You can place any custom element on the axis area by assigning the id of the ele
 
 ## Position
 
-Annotation can be placed around the axis by using [`radius`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/annotation/#radius-string)
-and [`angle`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/annotation/#angle-number) property. For example, if the angle is 90 degree and the radius is 110%, then the annotation, will be placed at the right side of the axis.
+Annotation can be placed around the axis by using [`radius`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/annotation#radius-string)
+and [`angle`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/annotation#angle-number) property. For example, if the angle is 90 degree and the radius is 110%, then the annotation, will be placed at the right side of the axis.
 
 Radius of the annotation takes value either in pixel or percentage. By setting value in percentage, annotation gets its position with respect to its axis radius.
 
@@ -53,10 +53,10 @@ As the annotation allows you to place any custom element, we can initialize a ga
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-annotations-cs3/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-annotations-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-annotations-cs3/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-annotations-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -13,7 +13,7 @@ function App() {
     const filterSettings = {type: 'Excel'};
     return (<div className='control-pane'>
       <div className='control-section'>
-        <GridComponent dataSource={data} allowFiltering={true} allowSorting={true} filterSettings={{ type: 'Menu' }} allowPaging={true} height='200' isRowPinned={isRowPinned}>
+        <GridComponent dataSource={data} allowFiltering={true} allowSorting={true} filterSettings={{ type: 'Menu' }} allowPaging={true} height='220' isRowPinned={isRowPinned}>
           <ColumnsDirective>
             <ColumnDirective field='TaskID' headerText='Task ID' width={100} textAlign='Right' isPrimaryKey={true} />
             <ColumnDirective field='Title' headerText='Title' width={100} />

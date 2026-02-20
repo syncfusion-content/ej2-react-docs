@@ -2,7 +2,7 @@
 layout: post
 title: Close the toast with click tap in React Toast component | Syncfusion
 description: Learn here all about Close the toast with click tap in Syncfusion React Toast component of Syncfusion Essential JS 2 and more.
-control: Close the toast with click tap 
+control: Toast
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Close the toast with click tap in React Toast component
 
-By default, Toast gets expired based on timeOut value. You can customize Toast hide with click/tap action by setting boolean value to [clickToClose](https://ej2.syncfusion.com/react/documentation/api/toast/toastClickEventArgs/#clicktoclose) in `click` callback function with [static Toast](../timeout#static-toast).
+By default, toasts automatically dismiss after the configured timeout period. To enable immediate dismissal on user interaction, set the [clickToClose](https://ej2.syncfusion.com/react/documentation/api/toast/toastClickEventArgs/#clicktoclose) property to `true` in the `click` event callback. This approach works best with static toasts (timeOut set to 0) that remain visible until explicitly closed. Click-to-close behavior enhances user control and is particularly useful for action-based notifications.
 
 `[Class-component]`
 

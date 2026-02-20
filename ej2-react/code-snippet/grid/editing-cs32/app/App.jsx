@@ -7,11 +7,14 @@ function App() {
     const gridRef = useRef();
     const onMouseUp = (e) => {
         if (e.target.classList.contains("e-rowcell")) {
-            if (gridRef.current?.isEdit)
-                gridRef.current?.endEdit();
+            if (gridRef.current && gridRef.current.isEdit) {
+                gridRef.current.endEdit();
+            }
             let index = parseInt(e.target.getAttribute("data-index"));
-            gridRef.current?.selectRow(index);
-            gridRef.current?.startEdit();
+            if (gridRef.current) {
+                gridRef.current.selectRow(index);
+                gridRef.current.startEdit();
+            }
         }
     };
     return <GridComponent ref={gridRef} dataSource={data} id="Grid" toolbar={toolbarOptions} allowPaging={true} editSettings={editSettings} onMouseUp={onMouseUp}>
