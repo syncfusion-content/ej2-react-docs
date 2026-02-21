@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Reversible Range Slider in React
 
-You can create a Range Slider with values in reverse order by setting the [min](https://ej2.syncfusion.com/react/documentation/api/slider/#min) property to the maximum value and the [max](https://ej2.syncfusion.com/react/documentation/api/slider/#max) property to the minimum value. An example of how to achieve a reversible Range Slider is shown below.
+You can create a Range Slider with values in reverse order by setting the [min](https://ej2.syncfusion.com/react/documentation/api/slider/#min) property to the maximum value and the [max](https://ej2.syncfusion.com/react/documentation/api/slider/#max) property to the minimum value. The following example shows how to achieve this.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -30,4 +30,4 @@ You can create a Range Slider with values in reverse order by setting the [min](
  {% previewsample "page.domainurl/code-snippet/slider/getting-started-cs13" %}
 
 
-> Reversible order can also be achieved with a [Horizontal](https://helpej2.syncfusion.com/react/documentation/api/slider/sliderOrientation/) orientation Slider by setting [enableRtl](https://ej2.syncfusion.com/react/documentation/api/slider/#enablertl) to true.
+> Reversible order can also be achieved with a [Horizontal](https://ej2.syncfusion.com/react/documentation/api/slider/sliderOrientation/) orientation Slider by setting [enableRtl](https://ej2.syncfusion.com/react/documentation/api/slider/#enablertl) to `true`.

@@ -1,28 +1,28 @@
 ---
 layout: post
-title: Filtering in React Auto complete component | Syncfusion
-description: Learn here all about Filtering in Syncfusion React Auto complete component of Syncfusion Essential JS 2 and more.
+title: Filtering in React AutoComplete component | Syncfusion
+description: Learn here all about Filtering in Syncfusion React AutoComplete component of Syncfusion Essential JS 2 and more.
 control: Filtering 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering in React Auto complete component
+# Filtering in React AutoComplete component
 
-The AutoComplete has built-in support for filtering the data items when [`allowFiltering`](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#allowfiltering) is enabled. The filter operation starts as soon as you start typing characters in the component.
+The AutoComplete has built-in support for filtering the data items when [`allowFiltering`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#allowfiltering) is enabled. The filter operation starts as soon as you start typing characters in the component.
 
 ## Change the filter type
 
-Determines on which filter type, the component needs to be considered on search action. The available [`filterType`](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#filtertype) and its supported data types are
+The component allows you to specify which filter type should be used for the search action. The available [`filterType`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#filtertype) options and their supported data types are:
 
 | **Filter Type** | **Description** | **Supported Types** |
-| --- | --- |
+| --- | --- | --- |
 | StartsWith | Checks whether a value begins with the specified value. | String |
-| EndsWith | Checks whether a value ends with specified value. | String |
-| Contains | Checks whether a value contains with specified value. | String |
+| EndsWith | Checks whether a value ends with the specified value. | String |
+| Contains | Checks whether a value contains the specified value. | String |
 
-The following examples, data filtering is done with `StartsWith` type.
+In the following example, data filtering is done with the `StartsWith` type.
 
 `[Class-component]`
 
@@ -52,9 +52,9 @@ The following examples, data filtering is done with `StartsWith` type.
 
 ## Filter item count
 
-You can specify the filter suggestion item count through [`suggestionCount`](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#suggestioncount) property of AutoComplete.
+You can specify the filter suggestion item count through the [`suggestionCount`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#suggestioncount) property of AutoComplete.
 
-The following examples, to restrict the suggestion list item counts as 2.
+In the following example, the suggestion list item count is restricted to 2.
 
 `[Class-component]`
 
@@ -90,7 +90,7 @@ The following examples, to restrict the suggestion list item counts as 2.
 
 ## Limit the minimum filter character
 
-You can set the limit for the character count to filter the data on the AutoComplete. This can be done by set the [`minLength`](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#minlength) property to AutoComplete.
+You can set the limit for the character count to filter the data on the AutoComplete. This can be done by setting the [`minLength`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#minlength) property of the AutoComplete.
 
 In the following example, the remote request does not fetch the search data, until the search key contains three characters.
 
@@ -122,9 +122,9 @@ In the following example, the remote request does not fetch the search data, unt
 
 ## Case sensitive filtering
 
-Data items can be filtered either with or without case sensitivity using the DataManager. This can be done by set the [`ignoreCase`](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#ignorecase) property of AutoComplete.
+Data items can be filtered either with or without case sensitivity using the DataManager. This can be done by setting the [`ignoreCase`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#ignorecase) property of the AutoComplete.
 
-The below sample depicts how to filter the data with case-sensitive.
+The following sample depicts how to filter the data with case-sensitive mode.
 
 `[Class-component]`
 
@@ -154,9 +154,9 @@ The below sample depicts how to filter the data with case-sensitive.
 
 ## Diacritics Filtering
 
-An AutoComplete supports diacritics filtering which will ignore the [diacritics](https://en.wikipedia.org/wiki/Diacritic) and makes it easier to filter the results in international characters lists when the [ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#ignoreaccent) is enabled.
+The AutoComplete supports diacritics filtering which will ignore the [diacritics](https://en.wikipedia.org/wiki/Diacritic) and makes it easier to filter the results in international character lists when the [ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/auto-complete#ignoreaccent) property is enabled.
 
-In the following sample,data with diacritics are bound as dataSource for AutoComplete.
+In the following sample, data with diacritics are bound as the dataSource for the AutoComplete.
 
 `[Class-component]`
 
@@ -186,7 +186,7 @@ In the following sample,data with diacritics are bound as dataSource for AutoCom
 
 ## Debounce delay
 
-You can use the [debounceDelay](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#debouncedelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience.By default, a DebounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
+You can use the [debounceDelay](https://ej2.syncfusion.com/react/documentation/api/auto-complete#debouncedelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience. By default, a debounce delay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
 
 `[Class-component]`
 

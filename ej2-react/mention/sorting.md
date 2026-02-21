@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Sorting in React Mention component
 
-You can display the suggestion list items in a specific order. It has possible types as `Ascending`, `Descending`, and `None` in the [sortOrder](https://ej2.syncfusion.com/react/documentation/api/mention/#sortorder) property.
+Sort the suggestion list items in a specific order using the [sortOrder](https://ej2.syncfusion.com/react/documentation/api/mention/#sortorder) property. Available options include `Ascending`, `Descending`, and `None`:
 
-* `None` - The data source is not sorted.
-* `Ascending` - The data source is sorted in ascending order.
-* `Descending` - The data source is sorted in descending order.
+* `None` - Data source is not sorted.
+* `Ascending` - Data source is sorted in ascending order.
+* `Descending` - Data source is sorted in descending order.
 
-In the following sample, the popup list data is rendered in `Descending` order.
+The following example displays the popup list in `Descending` order:
 
 `[Class-component]`
 

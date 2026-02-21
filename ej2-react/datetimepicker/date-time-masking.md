@@ -38,7 +38,7 @@ DateTimePicker has `enableMask` property that provides the option to enable the 
 
  {% previewsample "page.domainurl/code-snippet/datetimepicker/mask-module-cs2" %}
 
-The mask pattern is defined based on the provided date format to the component. If the format is not specified, the mask pattern is formed based on the default format of the current culture.
+The mask pattern follows the provided date-time format. When no format is specified, the mask pattern is generated based on the current culture's default date-time format.
 
 | **Keys** | **Actions** |
 | --- | --- |
@@ -75,7 +75,7 @@ The following example demonstrates default and custom format of DateTimePicker c
 
 ## Configure Mask Placeholder
 
-You can change mask placeholder value through property `maskPlaceholder`. By default , it takes the full name of date and time co-ordinates such as `day`, `month`, `year`, `hour` etc.
+The mask placeholder value can be customized using the `maskPlaceholder` property. By default, it displays the full names of date and time coordinates such as `day`, `month`, `year`, and `hour`.
 
 While changing to a culture other than `English`, ensure that locale text for the concerned culture is loaded through load method of L10n class for mask placeholder values like below.
 

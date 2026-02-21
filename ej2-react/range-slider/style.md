@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Style in React Range Slider component
 
-The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
+This content provides the exact CSS structure you can use to modify the component's appearance based on your preferences.
 
 ## Customizing the Slider track
 
-Use the following CSS to customize the Slider track.
+The following CSS customizes the Slider track.
 
 ```css
 .e-control-wrapper.e-slider-container.e-horizontal .e-slider-track {
@@ -25,7 +25,7 @@ Use the following CSS to customize the Slider track.
 
 ## Customizing the Slider handle
 
-Use the following CSS to customize the Slider handle properties.
+The following CSS customizes the Slider handle properties.
 
 ```css
 .e-control-wrapper.e-slider-container .e-slider .e-handle {
@@ -37,7 +37,7 @@ Use the following CSS to customize the Slider handle properties.
 
 ## Customizing the Slider limits
 
-Use the following CSS to customize the Slider limits.
+The following CSS customizes the Slider limits.
 
 ```css
 .e-control-wrapper.e-slider-container.e-horizontal .e-limits {
@@ -47,7 +47,7 @@ Use the following CSS to customize the Slider limits.
 
 ## Customizing the Slider ticks
 
-Use the following CSS to customize the Slider ticks.
+The following CSS customizes the Slider ticks.
 
 ```css
 .e-scale .e-tick.e-custom::before {
@@ -58,7 +58,7 @@ Use the following CSS to customize the Slider ticks.
 
 ## Customizing the Slider buttons
 
-Use the following CSS to customize the Slider buttons.
+The following CSS customizes the Slider buttons.
 
 ```css
 .e-control-wrapper.e-slider-container .e-slider-button {

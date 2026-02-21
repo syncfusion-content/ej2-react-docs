@@ -29,7 +29,7 @@ You can specify the number of rating items using the [`itemsCount`](https://ej2.
 
 ## Disabled
 
-You can disable the rating component by using the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/rating/#disabled) property. When the `disabled` property is set to `true`, the rating component will be disabled and the user will not be able to interact with it and a disabled rating component may have a different visual appearance than an enabled one.
+Disable the rating component by setting the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/rating/#disabled) property to `true`. When disabled, the rating component prevents user interaction and may display a different visual appearance than an enabled component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -44,7 +44,7 @@ You can disable the rating component by using the [`disabled`](https://ej2.syncf
 
 ## Visible
 
-You can use the [`visible`](https://ej2.syncfusion.com/react/documentation/api/rating/#visible) property of the rating component to component the visibility of the component. When the `visible` property is set to `true`, the rating component will be visible on the page. When it is set to `false`, the component will be hidden.
+Use the [`visible`](https://ej2.syncfusion.com/react/documentation/api/rating/#visible) property to control the visibility of the rating component. When set to `true`, the component is visible on the page. When set to `false`, the component is hidden.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -78,7 +78,7 @@ You can customize the appearance of the rating component, such as by changing it
 
 ### Changing rating symbol border color
 
-You can change the rating icon border color in rating component, you can use the `cssClass` property and set the `text-stroke` CSS property of `.e-rating-icon` to your desired border color.
+Change the rating icon border color by using the `cssClass` property and setting the `text-stroke` CSS property of `.e-rating-icon` to your desired color.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -116,7 +116,7 @@ This will customize the rated fill color to `#ffe814` and un-rated fill color to
 
 ### Changing the item spacing
 
-You can change the space between the rating items in rating component, by using the `cssClass` property and setting the `margin` / `padding` CSS property of `.e-rating-item-container` to your desired size.
+Change the spacing between rating items by using the `cssClass` property and setting the `margin`/`padding` CSS property of `.e-rating-item-container` to your desired size.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -134,7 +134,7 @@ You can change the space between the rating items in rating component, by using 
 
 ## Changing icon using CssClass
 
-You can change the rating item icon in rating component, you can use the `cssClass` property and set the `content` CSS property of `.e-icons.e-star-filled:before` to your desired font icon.
+Change the rating item icon by using the `cssClass` property and setting the `content` CSS property of `.e-icons.e-star-filled:before` to your desired font icon.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

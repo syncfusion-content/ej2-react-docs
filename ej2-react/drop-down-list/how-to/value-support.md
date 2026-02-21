@@ -10,4 +10,4 @@ domainurl: ##DomainURL##
 
 # Value support in React Drop down list component
 
-yes, value for each list items should be unique.
+Yes, the value for each list item must be unique.

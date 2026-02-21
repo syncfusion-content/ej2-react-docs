@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Validation in React TextBox component
 
-The TextBox supports three types of validation styles namely `error`, `warning`, and `success`. These states are enabled by adding corresponding classes `.e-error`, `.e-warning`, or `.e-success` to the [cssClass](https://ej2.syncfusion.com/react/documentation/api/textbox/#cssclass) property.
+Provide visual feedback for form validation using three predefined validation states: `error`, `warning`, and `success`. Apply these states by adding the corresponding CSS classes (`.e-error`, `.e-warning`, or `.e-success`) to the [cssClass](https://ej2.syncfusion.com/react/documentation/api/textbox/#cssclass) property.
 
 `[Class-component]`
 

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Perform custom validation using form validator in React Maskedtextbox component
 
-To perform custom validation on the MaskedTextBox use the FormValidator along with custom validation rules.
+To perform custom validation on the MaskedTextBox, use the FormValidator component with custom validation rules.
 
-In the following example, the MaskedTextBox is validated for invalid mobile number by adding custom validation in the rules collection of the FormValidator.
+In the following example, the MaskedTextBox validates a mobile number by adding custom validation to the FormValidator's rules collection.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

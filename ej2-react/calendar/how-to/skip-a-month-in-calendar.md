@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Skip a month in calendar in React Calendar component
 
-The following example demonstrates how to skip a month in a Calendar while clicking the previous and next icon. Here we have used the [`navigated`](https://ej2.syncfusion.com/react/documentation/api/calendar#navigated) event to skip a month using [`NavigateTo`](https://ej2.syncfusion.com/react/documentation/api/calendar#navigateto) method.
+The following example demonstrates how to skip a month in the Calendar when clicking the previous or next icon. This sample uses the [`navigated`](https://ej2.syncfusion.com/react/documentation/api/calendar#navigated) event and the [`NavigateTo`](https://ej2.syncfusion.com/react/documentation/api/calendar#navigateto) method.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

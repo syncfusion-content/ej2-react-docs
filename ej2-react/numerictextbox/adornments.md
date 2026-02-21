@@ -1,31 +1,34 @@
 ---
 layout: post
-title: Adornments in ##Platform_Name## NumericTextBox control | Syncfusion
-description: Learn here all about Adornments in Syncfusion ##Platform_Name## NumericTextBox control of Syncfusion Essential JS 2 and more.
+title: Adornments in React NumericTextBox component | Syncfusion
+description: Learn here all about adornments in Syncfusion React NumericTextBox component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Adornments
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adornments in ##Platform_Name## NumericTextBox control
+# Adornments in React NumericTextBox component
 
-Adornments allow you to add custom elements before or after the numeric textbox using the `prependTemplate` and `appendTemplate` properties. These elements can include currency symbols, unit labels, or action icons to provide context and quick actions without affecting numeric behavior or float label functionality.
+Enhance the NumericTextBox component with prepended or appended visual elements using `prependTemplate` and `appendTemplate` properties. Adornments include currency symbols, unit labels, or action icons that provide context and improve the user input experience without affecting numeric validation or behavior.
 
-## Common Use Cases
+## Overview and Use Cases
 
-- **Currency Symbols**: Add indicators like $, €, ¥ for monetary inputs.
-- **Unit Labels**: Show measurement units (kg, cm, km).
-- **Action Icons**: Include buttons for clear, reset, or custom actions.
-- **Visual Context**: Display icons for input type or status.
+Adornments serve multiple purposes in numeric input design:
+
+- **Currency Symbols**: Display monetary indicators such as $, €, ¥ to clarify input type
+- **Unit Labels**: Show measurement units (kg, cm, km, mph) to provide context
+- **Action Icons**: Include interactive buttons for clear, reset, or custom operations
+- **Visual Context**: Display status indicators or icons that describe the input purpose
 
 ## Adding Adornments to NumericTextBox
 
-Use `prependTemplate` and `appendTemplate` to inject HTML content before and after the masked input respectively. These templates do not alter mask behavior and support any inline HTML or icon.
+Use `prependTemplate` and `appendTemplate` to insert custom HTML elements before or after the NumericTextBox input field:
 
-**prependTemplate**: Renders elements before the numeric textbox.
-**appendTemplate**: Renders elements after the numeric textbox.
+- **`prependTemplate`**: Renders content before (to the left of) the numeric input
+- **`appendTemplate`**: Renders content after (to the right of) the numeric input
+
+These templates do not affect numeric validation and support any inline HTML or icon.
 
 The following example demonstrates how to add adornments in the NumericTextBox control.
 

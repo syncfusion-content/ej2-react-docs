@@ -10,18 +10,17 @@ domainurl: ##DomainURL##
 
 # Templates in React Combo box component
 
-The ComboBox has been provided with several options to customize each list items, group title, header, and footer elements.
+The ComboBox provides comprehensive template support to customize list items, group titles, headers, and footer elements.
 
-To get started with React ComboBox templates, you can check on this video:
+To get started with React ComboBox templates, you can check this video:
 
 {% youtube "https://www.youtube.com/watch?v=WWCHely4Ucs" %}
 
 ## Item template
 
-The content of each list item within the ComboBox can be customized with the help of [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box/#itemtemplate)
-property.
+Customize the content of each list item using the [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box/#itemtemplate) property. This allows you to create custom layouts for displaying data in each item.
 
-In the following sample, each list item is split into two columns to display relevant data's.
+In the following example, each list item displays data in a two-column layout.
 
 `[Class-component]`
 
@@ -51,9 +50,9 @@ In the following sample, each list item is split into two columns to display rel
 
 ## Group template
 
-The group header title under which appropriate sub-items are categorized can also be customize with the help of [groupTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box/#grouptemplate) property. This template is common for both inline and floating group header template.
+Customize group header titles using the [groupTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box/#grouptemplate) property. This template applies to both inline and floating group headers, allowing consistent group header styling.
 
-In the following sample, employees are grouped according to their city.
+In the following example, employees are grouped by their city.
 
 `[Class-component]`
 
@@ -83,10 +82,9 @@ In the following sample, employees are grouped according to their city.
 
 ## Header template
 
-The header element is shown statically at the top of the popup list items within the ComboBox, and any custom element can be placed as a header element using the
-[headerTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box/#headertemplate) property.
+Add a static header to the top of the popup list using the [headerTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box/#headertemplate) property. This allows you to place custom elements such as titles, filters, or other controls in the header area.
 
-In the following sample, the list items and its headers are designed and displayed as two columns similar to multiple columns of the grid.
+In the following example, list items and their headers display in a two-column layout similar to a data grid.
 
 `[Class-component]`
 
@@ -116,9 +114,9 @@ In the following sample, the list items and its headers are designed and display
 
 ## Footer template
 
-The ComboBox has options to show a footer element at the bottom of the list items in the popup list. Here, you can place any custom element as a footer element using the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box/#footertemplate) property.
+Add a footer element at the bottom of the popup list using the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box/#footertemplate) property. This allows you to place custom elements such as summaries, totals, or action buttons.
 
-In the following sample, footer element displays the total number of list items present in the ComboBox.
+In the following example, the footer displays the total number of list items in the ComboBox.
 
 `[Class-component]`
 

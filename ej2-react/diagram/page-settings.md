@@ -65,10 +65,10 @@ The following example demonstrates how orientation affects page dimensions by sw
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/pagesettings/es5pagesettings-cs2/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/es5pagesettings-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/pagesettings/es5pagesettings-cs2/app/index.tsx %}
+{% include code-snippet/diagram/reactCurlyExamples/es5pagesettings-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -10,18 +10,17 @@ domainurl: ##DomainURL##
 
 # Templates in React Rating Component
 
-The rating component allows you to customize the appearance of the rating items using templates. You can use templates to specify a custom layout for the rating items, which can include any content you want. This allows you to create a more customized and interactive rating experience for the user.
+Customize the appearance of rating items using templates. Templates allow you to specify a custom layout for rating items with any content, creating a personalized rating experience.
 
-The rating component supports below templates for item customization.
+The Rating component supports the following templates for item customization:
 
 * [`emptyTemplate`](https://ej2.syncfusion.com/react/documentation/api/rating/#emptytemplate)
 * [`fullTemplate`](https://ej2.syncfusion.com/react/documentation/api/rating/#fulltemplate)
 
 ## Empty (unrated) symbol template
 
-To customize the appearance of **unrated** items, you can use the `emptyTemplate` tag directive. It allows you to specify the desired custom content for the unrated items.
-The `value` and `index` are available in the template context for accessing information about the un-rated item.
-If the `fullTemplate` is not defined, the `emptyTemplate` will be used as the default for both rated and unrated items. You can apply custom styles to differentiate between the rated and unrated states of the items.
+Customize unrated items using the `emptyTemplate` tag directive. The `value` and `index` are available in the template context for accessing unrated item information.
+If `fullTemplate` is not defined, `emptyTemplate` is used for both rated and unrated items. Apply custom styles to differentiate between rated and unrated states.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -41,8 +40,8 @@ If the `fullTemplate` is not defined, the `emptyTemplate` will be used as the de
 
 ## Full (rated) symbol template
 
-To customize the appearance of **rated** items in the rating component, you can use the `fullTemplate` tag directive. This directive allows you to specify a custom layout for the rated items, which can include any content you desire.
-The `value` and `index` are available in the template context for accessing information about the rated item.
+Customize rated items using the `fullTemplate` tag directive. This allows you to specify a custom layout for rated items with any content you desire.
+The `value` and `index` are available in the template context for accessing rated item information.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -60,7 +59,7 @@ The `value` and `index` are available in the template context for accessing info
 
 ## Using Emoji icon as rating symbol
 
-You can use emojis of your choice as rating symbol by specifying them as template content within the `emptyTemplate` tag directive.
+Use emojis as rating symbols by specifying them as template content within the `emptyTemplate` tag directive.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -78,7 +77,7 @@ You can use emojis of your choice as rating symbol by specifying them as templat
 
 ## Using SVG icon as rating symbol
 
-You can use SVG icons of your choice as rating symbol by specifying them as template content within the `emptyTemplate` and `fullTemplate` tag directive.
+Use SVG icons as rating symbols by specifying them as template content within the `emptyTemplate` and `fullTemplate` tag directives.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -96,7 +95,7 @@ You can use SVG icons of your choice as rating symbol by specifying them as temp
 
 ## Using PNG image as rating symbol
 
-You can use PNG images of your choice as rating symbol by specifying them as template content within the `emptyTemplate` and `fullTemplate` tag directives.
+Use PNG images as rating symbols by specifying them as template content within the `emptyTemplate` and `fullTemplate` tag directives.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

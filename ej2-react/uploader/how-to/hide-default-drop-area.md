@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Hide default drop area in React Uploader component
 
-You can achieve this behavior by overriding the corresponding uploader styles. Override the following styles to hide the default drop area behavior.
+Hide the default drag-and-drop area by overriding the corresponding Uploader styles. This is useful when you want to create a custom drop area or use the Uploader with alternative UI patterns. Override the following styles to hide the default drop area:
 
     * .e-upload.e-control
     * .e-upload .e-file-select

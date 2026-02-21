@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Format in React Range Slider component
 
-The [`format`](https://ej2.syncfusion.com/react/documentation/api/slider/ticksDataModel/#format) feature is used to customize the units of Slider values to desired format. The formatted values will also be applied to the ARIA attributes of the slider. There are two ways to achieve formatting in the slider.
+The [`format`](https://ej2.syncfusion.com/react/documentation/api/slider/ticksDataModel/#format) feature customizes the units of Slider values to your desired format. Formatted values are also applied to the ARIA attributes. There are two ways to achieve formatting:
 
-* Use the [`format`](https://ej2.syncfusion.com/react/documentation/api/slider/ticksDataModel/#format) API of the Slider which utilizes our `Internationalization` to format values.
+* Use the [`format`](https://ej2.syncfusion.com/react/documentation/api/slider/ticksDataModel/#format) API, which uses our `Internationalization` feature to format values.
 
-* Customize using events namely [`renderingTicks`](https://ej2.syncfusion.com/react/documentation/api/slider/#renderingticks) and [`tooltipChange`](https://ej2.syncfusion.com/react/documentation/api/slider/#tooltipchange).
+* Customize using the [`renderingTicks`](https://ej2.syncfusion.com/react/documentation/api/slider/#renderingticks) and [`tooltipChange`](https://ej2.syncfusion.com/react/documentation/api/slider/#tooltipchange) events.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -35,7 +35,7 @@ The [`format`](https://ej2.syncfusion.com/react/documentation/api/slider/ticksDa
 
 ## Using format API
 
-In this method, we have different predefined formatting styles like Numeric (N), Percentage (P), Currency (C) and `#` specifiers. In the example below, we have formatted the [`ticks`](https://ej2.syncfusion.com/react/documentation/api/slider/#ticks) and [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/slider/#tooltip) values into percentage.
+This method provides predefined formatting styles such as Numeric (N), Percentage (P), Currency (C), and `#` specifiers. The following example formats the [`ticks`](https://ej2.syncfusion.com/react/documentation/api/slider/#ticks) and [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/slider/#tooltip) values as percentages.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Css customization in React Timepicker component
+# CSS customization in React Timepicker component
 
-TimePicker allows you to customize the textbox and popup list appearance to suit for your application by using [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/timepicker#cssclass) property.
+The TimePicker component provides extensive CSS customization through the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/timepicker#cssclass) property. Use this property to apply custom CSS classes that control the textbox, popup button, and popup list appearance.
 
-The below sample demonstrates customization of the text appearance in a textbox, popup button, and popup list along with hover and active state by using `e-custom-style` class. Following is the list of available classes used to customize the entire TimePicker component.
+The following sample demonstrates customization of text appearance, hover states, and active states using the `e-custom-style` class. Below is the complete list of CSS classes available for customizing the TimePicker component:
 
 | **Class Name** | **Description** |
 | --- | --- |

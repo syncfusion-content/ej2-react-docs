@@ -14,16 +14,16 @@ Value binding in the DropDown List control allows you to associate data values w
 
 ## Primitive Data Types
 
-The DropDown List control provides flexible binding capabilities for primitive data types like strings and numbers. You can effortlessly bind local primitive data arrays, fetch and bind data from remote sources, and even custom data binding to suit specific requirements. Bind the value of primitive data to the [value](../api/drop-down-list/#value) property of the DropDown List.
+The DropDown List control provides flexible binding for primitive data types such as strings and numbers. Bind local primitive data arrays, remote data sources, or custom data to the [value](../api/drop-down-list/#value) property of the DropDown List.
 
-Primitive data types include:
+Supported primitive data types include:
 
 * String
 * Number
 * Boolean
 * Null
 
-The following sample shows the example for preselect values for primitive data type
+The following example demonstrates preselecting values for primitive data types:
 
 `[Class-component]`
 
@@ -41,9 +41,9 @@ The following sample shows the example for preselect values for primitive data t
 
 ## Object Data Types
 
-In the DropDown List control, object binding allows you to bind to a dataset of objects. When [`allowObjectBinding`](../api/drop-down-list/#allowobjectbinding) is enabled, the value of the control will be an object of the same type as the selected item in the [value](../api/drop-down-list/#value) property. This feature seamlessly binds arrays of objects, whether sourced locally, retrieved from remote endpoints, or customized to suit specific application needs.
+Object binding in the DropDown List control enables you to bind datasets of objects. When [`allowObjectBinding`](../api/drop-down-list/#allowobjectbinding) is enabled, the control's value is an object of the same type as the selected item in the [value](../api/drop-down-list/#value) property. Bind local object arrays, remote endpoints, or custom data sources.
 
-The following sample shows the example for preselect values for object data type
+The following example demonstrates preselecting values for object data types:
 
 `[Class-component]`
 

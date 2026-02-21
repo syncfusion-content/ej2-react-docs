@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Templates in React MultiColumn ComboBox component
 
-The MultiColumn ComboBox provides several template options to customize each items, groups, header and footer elements.
+The MultiColumn ComboBox provides several template options to customize list items, groups, headers, and footers.
 
 ## Item template
 
@@ -89,7 +89,7 @@ You can customize the popup list for when no data is found or no matches are fou
 
 ## Action failure template
 
-There is also an option to custom design the popup list content when the data fetch request fails at the remote server. This can be achieved using the [actionFailureTemplate](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/#actionfailuretemplate) property.
+Customize the popup list content when a data fetch request fails at the remote server using the [actionFailureTemplate](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/#actionfailuretemplate) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

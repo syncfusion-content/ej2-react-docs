@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React DropDownList component.
 
-`Preact` is a fast and lightweight JavaScript library for building user interfaces. It's often used as an alternative to larger frameworks like React. The key difference is that Preact is designed to be smaller in size and faster in performance, making it a good choice for projects where file size and load times are critical factors. 
+`Preact` is a fast and lightweight JavaScript library for building user interfaces, often used as an alternative to larger frameworks like React. Preact is designed for smaller file sizes and faster performance, making it ideal for projects where load times and bundle size are critical. 
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ or
 yarn init preact
 ```
 
-Using one of the above commands will lead you to set up additional configurations for the project, as below:
+Using one of the above commands starts the project setup process with the following configuration steps:
 
 1\. Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
 
@@ -44,7 +44,7 @@ T  Preact - Fast 3kB alternative to React with the same modern API
 —      
 ```
 
-2\. Choose `JavaScript` as the framework variant to build this Preact project using JavaScript and React.
+2\. Select `JavaScript` as the framework variant for the Preact project.
 
 ```bash
 T  Preact - Fast 3kB alternative to React with the same modern API
@@ -73,7 +73,7 @@ T  Preact - Fast 3kB alternative to React with the same modern API
 —
 ```
 
-5\. Upon completing the aforementioned steps to create `my-project`, run the following command to jump into the project directory:
+5\. After completing the setup steps for `my-project`, run the following command to navigate to the project directory:
 
 ```bash
 cd my-project
@@ -99,7 +99,7 @@ yarn add @syncfusion/ej2-react-dropdowns
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> React component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to theme's in a React project.
+Import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> React component using CSS or SASS styles from npm packages, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme/) for information about built-in themes and ways to reference themes in your React project.
 
 In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the DropDownList component and its dependents were imported into the **src/style.css** file.
 
@@ -116,7 +116,7 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 > The order of importing CSS styles should be in line with its dependency graph.
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
-Follow the below steps to add the React DropDownList component to the Vite project:
+Follow the steps below to add the React DropDownList component to the Preact project:
 
 1\. Before adding the DropDownList component to your markup, import the DropDownList component in the **src/index.jsx** file.
 

@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Show or hide mention character
 
-By default, the `showMentionChar` which does not display the text content with the mentioned character is disabled. If the property [showMentionChar](https://ej2.syncfusion.com/react/documentation/api/mention/#showmentionchar) is enabled, it allows the respective [mentionChar](https://ej2.syncfusion.com/react/documentation/api/mention/#mentionchar) configured along with the text content opted from the suggested list to display.
+By default, the `showMentionChar` property is disabled and does not display the mention character with the selected text. Enable the [showMentionChar](https://ej2.syncfusion.com/react/documentation/api/mention/#showmentionchar) property to display the configured [mentionChar](https://ej2.syncfusion.com/react/documentation/api/mention/#mentionchar) along with the selected text content.
 
 `[Class-component]`
 
@@ -72,9 +72,9 @@ The Mention has provided support to specify the custom suffix to append alongsid
 
 ## Configure the popup list
 
-You can customize the suggestion list width and height using the [popupHeight](https://ej2.syncfusion.com/react/documentation/api/mention/#popupheight) and [popupWidth](https://ej2.syncfusion.com/react/documentation/api/mention/#popupwidth) properties.
+Customize the suggestion list width and height using the [popupHeight](https://ej2.syncfusion.com/react/documentation/api/mention/#popupheight) and [popupWidth](https://ej2.syncfusion.com/react/documentation/api/mention/#popupwidth) properties.
 
-By default, the popup list width value is set as `auto`. Depending on the mentioned suggestion data list, the width value is automatically adjusted. The popup list height value is set as `300px`.
+By default, the popup list width is set to `auto` and automatically adjusts based on the suggestion data. The popup list height is set to `300px`.
 
 `[Class-component]`
 

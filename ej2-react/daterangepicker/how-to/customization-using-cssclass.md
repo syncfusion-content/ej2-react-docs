@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Customization using cssclass in React Daterangepicker component
 
-To customize UI, you can make use of [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker#cssclass) which will be added to DateRangePicker component as the root CSS class. With this CSS class, you can override existing styles of DateRangePicker.
+The [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker#cssclass) property enables UI customization by adding a custom CSS class to the DateRangePicker root element. This allows you to override default component styles with custom styling rules.
 
-Following is the list of classes that provides flexible way to customize the DateRangePicker component.
+The following classes provide flexible customization options for the DateRangePicker component:
 
 | **Class Name** | **Description** |
 | --- | --- |

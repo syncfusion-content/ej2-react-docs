@@ -12,13 +12,13 @@ domainurl: ##DomainURL##
 
 ## DateTime Restriction
 
-DateTimePicker provides an option to select a date and time value within a specified range by using the [`min`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker/#min) and [`max`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker/#max) properties. Always the min value has to be lesser than the max value.
+The DateTimePicker component restricts date and time selection to a specified range using the [`min`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker/#min) and [`max`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker/#max) properties. The `min` value must be less than the `max` value.
 
-When the min and max properties are configured and the selected datetime value is out-of-range or invalid, then the model value will be set to `out of range` datetime value or `null` respectively with highlighted `error` class to indicates the datetime is out of range or invalid.
+When a selected date-time is out-of-range or invalid, the model value is set to the out-of-range value or `null` respectively, and the input is highlighted with an `error` class to indicate the date-time validation failure.
 
-The value property depends on the min/max with respect to [`strictMode`](./strict-mode) property.
+The value property behavior depends on both the min/max range and the [`strictMode`](./strict-mode) property. With `strictMode` enabled, out-of-range values are automatically adjusted; when disabled, invalid or out-of-range values are flagged but allowed.
 
-The below example allows selecting a date within the range from 7th to 27th day in a month.
+The following example demonstrates selecting a date and time within the range from the 7th to the 27th of a month:
 
 `[Class-component]`
 
@@ -50,7 +50,7 @@ The below example allows selecting a date within the range from 7th to 27th day 
 
 ## Time Restriction
 
-DateTimePicker provides an option to select a time value within a specified range by using the [`minTime`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker/#minTime) and [`maxTime`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker/#maxTime) properties. Always the minTime value has to be lesser than the maxTime value.
+Time selection can be restricted to a specified range using the [`minTime`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker/#minTime) and [`maxTime`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker/#maxTime) properties. The `minTime` value must be less than the `maxTime` value.
 
 When minTime and maxTime are set, the component will prioritize min if minTime is less than the current min time, and max if maxTime is greater than the current max time. Conversely, it will prioritize minTime if it is greater than the current min time, and maxTime if it is less than the current max time. These behaviors apply only when min and max Dates are selected or pre-bounded, with minTime and maxTime values set for all other dates apart from min and max dates.
 

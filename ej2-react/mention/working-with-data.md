@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Working with data in React Mention component
 
-The Mention loads the data either from local data sources or remote data services using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/mention/#datasource) property. It supports the data type of either `array` or `DataManager`.
+The Mention loads data from local or remote sources using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/mention/#datasource) property. It supports both `array` and `DataManager` data types.
 
 The Mention also supports different kinds of data services such as OData V4 and Web API, and data formats such as XML, JSON, and JSONP with the help of `DataManager` adaptors.
 
@@ -29,7 +29,7 @@ Local data can be represented in three ways as described in the following.
 
 ### Array of simple data
 
-The Mention has provided support to load an array of primitive data such as strings and numbers. Here, both the value and text fields act the same.
+The Mention supports loading primitive data arrays such as strings and numbers. For primitive data, both the value and text fields represent the same data.
 
 `[Class-component]`
 
@@ -59,9 +59,9 @@ The Mention has provided support to load an array of primitive data such as stri
 
 ### Array of JSON data
 
-The Mention can generate its list of items through an array of JSON data. Therefore the appropriate columns should be mapped to the [fields](https://ej2.syncfusion.com/react/documentation/api/mention/#fields) property.
+The Mention generates list items from JSON data arrays. Map the appropriate columns to the [fields](https://ej2.syncfusion.com/react/documentation/api/mention/#fields) property.
 
-In the following example, `ID` column and `Game` column from complex data have been mapped to the `value` field and `text` field, respectively.
+In the following example, the `ID` and `Game` columns are mapped to the `value` and `text` fields respectively:
 
 `[Class-component]`
 
@@ -91,9 +91,9 @@ In the following example, `ID` column and `Game` column from complex data have b
 
 ### Array of Complex data
 
-The Mention can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [fields](https://ej2.syncfusion.com/react/documentation/api/mention/#fields) property.
+The Mention generates list items from complex nested data. Map the appropriate nested columns to the [fields](https://ej2.syncfusion.com/react/documentation/api/mention/#fields) property.
 
-In the following example, `Code.ID` column and `Country.Name` column from complex data have been mapped to the `value` field and `text` field, respectively.
+In the following example, the `Code.ID` and `Country.Name` columns are mapped to the `value` and `text` fields respectively:
 
 `[Class-component]`
 
@@ -123,7 +123,7 @@ In the following example, `Code.ID` column and `Country.Name` column from comple
 
 ## Binding remote data
 
-The Mention supports retrieval of data from remote data services with the help of `DataManager` component. The [query](https://ej2.syncfusion.com/react/documentation/api/mention/#query) property is used to fetch the data from the database and bind it to the Mention component.
+The Mention retrieves data from remote services using the `DataManager` component. Use the [query](https://ej2.syncfusion.com/react/documentation/api/mention/#query) property to fetch data from the database and bind it to the Mention.
 
 ### OData v4 adaptor - Binding OData v4 service
 

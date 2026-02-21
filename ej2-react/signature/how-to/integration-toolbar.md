@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Integration toolbar in React Signature component
 
-The Signature component integrates with the toolbar and the interaction performed using the `change` event of the toolbar.
-In that, [`canUndo`](https://ej2.syncfusion.com/react/documentation/api/signature/#canundo), [`canRedo`](https://ej2.syncfusion.com/react/documentation/api/signature/#canredo) and [`isEmpty`](https://ej2.syncfusion.com/react/documentation/api/signature/#isempty) methods were used to enable/disable undo, redo, and clear buttons.
+Integrate the Signature component with a toolbar by using the toolbar's `change` event. The [`canUndo`](https://ej2.syncfusion.com/react/documentation/api/signature/#canundo), [`canRedo`](https://ej2.syncfusion.com/react/documentation/api/signature/#canredo), and [`isEmpty`](https://ej2.syncfusion.com/react/documentation/api/signature/#isempty) methods enable or disable the undo, redo, and clear buttons based on state.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

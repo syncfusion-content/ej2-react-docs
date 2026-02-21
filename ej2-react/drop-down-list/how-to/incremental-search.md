@@ -10,6 +10,6 @@ domainurl: ##DomainURL##
 
 # Incremental search in React Drop down list component
 
-DropDownList supports incremental search, by default. You can search the list item by focusing the DropDownList and typing the characters in it. The closely matched items are selected sequentially.
+DropDownList supports incremental search by default. Focus the DropDownList and type characters to search for list items. Closely matched items are selected sequentially.
 
 > If the same key is searched once again, the next matched item is selected.

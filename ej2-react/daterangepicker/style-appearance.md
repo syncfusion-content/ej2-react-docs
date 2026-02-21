@@ -14,7 +14,7 @@ The following content provides the exact CSS structure that can be used to modif
 
 ## Customizing the appearance of DateRangePicker wrapper element
 
-Use the following CSS to customize the appearance like height and font size of the wrapper element.
+Use the following CSS selectors to customize the appearance of the wrapper element. Apply these styles with appropriate specificity to override default component styles.
 
 ```css
 /* To specify height and font size */
@@ -26,7 +26,7 @@ Use the following CSS to customize the appearance like height and font size of t
 
 ## Customizing the DateRangePicker icon element
 
-Use the following CSS to customize the DateRangePicker icon element
+Use the following CSS to customize the DateRangePicker icon appearance:
 
 ```css
 /* To specify background color and font size */

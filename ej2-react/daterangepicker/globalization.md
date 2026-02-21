@@ -10,11 +10,23 @@ domainurl: ##DomainURL##
 
 # Globalization in React Daterangepicker component
 
-Globalization is the combination of internalization and localization. You can adapt the component to various languages by parsing and formatting the date or number [`Internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) and also add culture specific customization and translation to the text [`localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization).
+Globalization enables components to support multiple languages and regional formats. This combines [`Internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) (parsing and formatting dates according to regional standards) with [`localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) (translating text and applying culture-specific customizations).
 
-By default, DateRangePicker date format and meridian names are specific to the `American English` culture. It utilizes the [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Internationalization](http://ej2.syncfusion.com/documentation/common/internationalization) package to parse and format the date object based on the culture by using the official [`UNICODE CLDR`](https://cldr.unicode.org/) JSON data. It provides the `loadCldr` method to load the culture specific CLDR JSON data. To go with the different culture other than `English`, follow the below steps.
+By default, the DateRangePicker uses `American English` culture for date format and meridian names. It leverages the [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Internationalization](http://ej2.syncfusion.com/documentation/common/internationalization) package with official [`UNICODE CLDR`](https://cldr.unicode.org/) JSON data to parse and format dates according to the selected culture.
 
-* Install the `CLDR-Data` package by using the below command (it installs all the CLDR JSON data). To known about CLDR-Data refer the [`CLDR-Data`](https://cldr.unicode.org/index/cldr-spec/cldr-json-bindings) link.
+### **Quick Start: Enable a Different Culture**
+
+To display the DateRangePicker in a culture other than English, follow these steps:
+
+1. **Install CLDR-Data Package**
+
+Install the `CLDR-Data` package using the following command:
+
+```bash
+npm install cldr-data
+```
+
+This package contains all required CLDR JSON data. For more information, refer to [`CLDR-Data`](https://cldr.unicode.org/index/cldr-spec/cldr-json-bindings).
 
     ```
       npm install cldr-data --save
@@ -76,7 +88,7 @@ selectedDays | Text to represent selected days.
 days | Text represents days.
 customRange | Text present in the custom range button in presets container.
 
-* Before changing to a culture other than `English`, ensure that locale text for the concerned culture is loaded through `load` method of `L10n` class.
+* Before changing to a culture other than `English`, ensure that locale text for the target culture is loaded through the `load` method of the `L10n` class.
 
      ```ts
        //Load the L10n from ej2-base

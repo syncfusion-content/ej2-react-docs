@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Get the total size of selected files in React Uploader component
 
-You can get the total size of selected files before uploading it to the designated server. This can be achieved by using the selected event. Refer to the following example to calculate the total file size.
+Calculate the total size of all selected files before upload using the selected event. This enables you to validate cumulative file size against server limits or display storage information to the user. Refer to the following example to implement total file size calculation.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

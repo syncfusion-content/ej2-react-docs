@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Tooltip in React Rating Component
 
-The rating component supports tooltip to show additional information in rating items by setting the [`showTooltip`](https://ej2.syncfusion.com/react/documentation/api/rating/#showtooltip) property. If enabled, the tooltip appears when the user hovers over a rating item.
+Display tooltips in rating items by setting the [`showTooltip`](https://ej2.syncfusion.com/react/documentation/api/rating/#showtooltip) property to `true`. When enabled, tooltips appear when users hover over rating items.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -26,7 +26,7 @@ The rating component supports tooltip to show additional information in rating i
 
 ## Tooltip template
 
-You can use the [`tooltipTemplate`](https://ej2.syncfusion.com/react/documentation/api/rating/#tooltiptemplate) tag directive to specify a custom template for the `tooltip` of the rating. The current value of the rating will be passed as the `value` property in the template context when building the content of the tooltip. This allows you to include dynamic information about the rating in the template.
+Customize the Rating tooltip using the [`tooltipTemplate`](https://ej2.syncfusion.com/react/documentation/api/rating/#tooltiptemplate) tag directive. The current rating value is passed as the `value` property in the template context, allowing you to display dynamic information about the rating.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -41,9 +41,9 @@ You can use the [`tooltipTemplate`](https://ej2.syncfusion.com/react/documentati
 
 ## Tooltip customization
 
-You can customize the appearance of the tooltips using the `cssClass` property of the rating component and by defining the custom styles for tooltip elements like the below example.
+Customize tooltip appearance using the `cssClass` property and defining custom styles for tooltip elements.
 
-> You can find more information about customizing the appearance of the tooltip in the [Tooltip Customization](https://ej2.syncfusion.com/react/documentation/tooltip/style/) documentation.
+> For more information about customizing tooltip appearance, refer to the [Tooltip Customization](https://ej2.syncfusion.com/react/documentation/tooltip/style/) documentation.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

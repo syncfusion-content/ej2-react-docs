@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Calendar component
 
-The Calendar component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Calendar component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and related WAI-ARIA roles used to evaluate accessibility.
 
 The accessibility compliance for the Calendar component is outlined below.
 
@@ -40,11 +40,11 @@ The accessibility compliance for the Calendar component is outlined below.
 
 ## WAI-ARIA attributes 
 
-The Web accessibility defines a way to make web content and web applications more accessible to disabled people. It especially helps the dynamic content change and advanced user interface controls developed with Ajax, HTML, JavaScript, and related technologies.
+Web accessibility defines how to make web content and applications more accessible to people with disabilities. It especially addresses dynamic content changes and advanced UI controls developed with Ajax, HTML, JavaScript, and related technologies.
 
-Calendar provides built-in compliance with the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/datepicker-dialog/) specifications. WAI-ARIA supports is achieved through the attributes like `aria-label`,`aria-selected`, `aria-disabled`, `aria-activedescendant` applied for navigation buttons, disable and active day cells.
+The Calendar provides built-in compliance with the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/datepicker-dialog/) specifications. WAI-ARIA support is provided through attributes such as `aria-label`, `aria-selected`, `aria-disabled`, and `aria-activedescendant` applied to navigation buttons and day cells.
 
-It helps to provides information about the widget for assistive technology to the disabled person in the screen reader. Calendar component contains grid as role and grid cell for each day cell
+This provides assistive technologies with information about the widget for screen reader users. The Calendar component uses the `grid` role with each day represented as a `gridcell`.
 
 * **Aria-label** : attribute provides the text label for an object for the previous and next month element. It helps the screen reader object to read for the assistive purpose.
 
@@ -52,7 +52,7 @@ It helps to provides information about the widget for assistive technology to th
 
 * **Aria-disabled** : attribute indicates the disabled state of this Calendar component.
 
-* **Aria-activedescendent** : attribute helps in managing the current active child of the Calendar component.
+* **Aria-activedescendant** : attribute helps in managing the current active child of the Calendar component.
 
 * **Role** : attributes gives assistive technologies information about how to handle each element in a widget.
 

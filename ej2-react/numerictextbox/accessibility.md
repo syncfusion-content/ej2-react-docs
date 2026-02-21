@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Numerictextbox component
+# Accessibility in React NumericTextBox component
 
-The Numerictextbox component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The NumericTextBox component adheres to the highest accessibility standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WAI-ARIA roles](https://www.w3.org/TR/wai-aria/#roles). These standards ensure the component is accessible to all users, including those using assistive technologies.
 
-The accessibility compliance for the Numerictextbox component is outlined below.
+The accessibility compliance for the NumericTextBox component is outlined in the table below. A checkmark (✓) indicates full feature compliance, while partial or absent support is noted accordingly.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,7 +40,7 @@ The accessibility compliance for the Numerictextbox component is outlined below.
 
 ## WAI-ARIA attributes
 
-The NumericTextBox characterized with complete ARIA Accessibility support which helps to accessible by on-screen readers and other assistive technology devices. This component designed with the reference of the guidelines document given in [WAI ARAI Accessibility practices](https://www.w3.org/TR/wai-aria/#spinbutton).
+The NumericTextBox features comprehensive ARIA accessibility support, enabling seamless interaction with screen readers and other assistive technologies. This component implements the practices outlined in [WAI-ARIA Spinbutton specifications](https://www.w3.org/TR/wai-aria/#spinbutton), ensuring users with disabilities can access all functionality.
 
 The NumericTextBox uses the `spinbutton` role and following ARIA properties to its element based on its state.
 
@@ -57,14 +57,14 @@ The NumericTextBox uses the `spinbutton` role and following ARIA properties to i
 
 ## Keyboard interaction
 
-Keyboard interaction of the NumericTextBox component has been designed based on [WAI-ARIA Practices](https://www.w3.org/TR/wai-aria/#spinbutton) described for the NumericTextBox and it is an alternative to mouse actions to interact with the NumericTextBox.
+The NumericTextBox keyboard interactions follow [WAI-ARIA Spinbutton practices](https://www.w3.org/TR/wai-aria/#spinbutton), providing full accessibility via keyboard without requiring a mouse. Users can navigate and control the component entirely through keyboard input.
 
-The below table shows shortcut keys and its corresponding usage.
+The following table describes the keyboard shortcuts and their corresponding actions:
 
-| **Keyboard shortcuts** | **Actions** |
+| Keyboard Shortcut | Action |
 | --- | --- |
-| <kbd>Arrow Down</kbd> | Increments the value. |
-| <kbd>Arrow Up</kbd> | Decrements the value |
+| <kbd>Arrow Up</kbd> | Increments the numeric value |
+| <kbd>Arrow Down</kbd> | Decrements the numeric value |
 
 `[Class-component]`
 

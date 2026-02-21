@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Close popup in React Drop down list component
 
-By using the `hidePopup` method in DropDownList, you can close the popup on scroll when triggered the windows scroll event.
+Use the `hidePopup` method in DropDownList to close the popup when the window scroll event is triggered.
 
-The following example demonstrate about how to close the popup on scroll.
+The following example demonstrates how to close the popup on scroll:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

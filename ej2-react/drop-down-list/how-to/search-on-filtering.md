@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Search on filtering in React Drop down list component
 
-The following example demonstrates about how to set limit the search result on filtering.
+The following example demonstrates how to limit search results during filtering:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

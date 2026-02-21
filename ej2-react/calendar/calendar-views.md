@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Calendar views in React Calendar component
 
-The Calendar has the following predefined views that provides a flexible way to navigate back and forth to select the date. Use the [`start`](https://ej2.syncfusion.com/react/documentation/api/calendar#start) property to change the default view of the Calendar.
+The Calendar provides predefined views that give a flexible way to navigate and select dates. Use the [`start`](https://ej2.syncfusion.com/react/documentation/api/calendar#start) property to change the default view of the Calendar.
 
 | **View** | **Description** |
 | --- | --- |
@@ -46,13 +46,13 @@ The following example demonstrates how to set the `year` as the start view of th
 
  {% previewsample "page.domainurl/code-snippet/calendar/default-cs4" %}
 
-## View Restriction
+## ## View Restriction
 
-Calendar view can be restricted by defining the [`start`](https://ej2.syncfusion.com/react/documentation/api/calendar#start) and [`depth`](https://ej2.syncfusion.com/react/documentation/api/calendar#depth)
+You can restrict Calendar navigation by setting the [`start`](https://ej2.syncfusion.com/react/documentation/api/calendar#start) and [`depth`](https://ej2.syncfusion.com/react/documentation/api/calendar#depth) properties.
 
-By defining the start and depth property with the different view, drill-down and drill-up views navigation can be limited to the user. Calendar views will be drill-down up to the view which is set in `depth` property and drill-up up to the view which is set in `start` property.
+Setting `start` and `depth` limits how far users can drill down or up. The Calendar will drill down to the view specified by `depth` and drill up to the view specified by `start`.
 
-> Always the depth view has to be smaller than the start view.
+> The `depth` view must be lower (less granular) than the `start` view.
 
 `[Class-component]`
 

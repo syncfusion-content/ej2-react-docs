@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React TextBox component
 
-The TextBox component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The TextBox component is built to meet the highest accessibility standards, ensuring that all users—including those using assistive technologies—can interact with the component effectively. It complies with [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WAI-ARIA roles](https://www.w3.org/TR/wai-aria/#roles) that are essential for evaluating digital accessibility.
 
-The accessibility compliance for the TextBox component is outlined below.
+The accessibility compliance for the TextBox component is outlined in the table below. A checkmark (✓) indicates full feature compliance, while partial or absent support is noted accordingly.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,7 +40,7 @@ The accessibility compliance for the TextBox component is outlined below.
 
 ## WAI-ARIA attributes
 
-The TextBox is characterized with complete ARIA Accessibility support that helps to access through the on-screen readers and other assistive technology devices. This component is designed with the reference of the guidelines document given in [WAI ARAI Accessibility practices](https://www.w3.org/TR/wai-aria/#textbox).
+The TextBox includes comprehensive ARIA accessibility support to enable seamless interaction with screen readers and other assistive technologies. This component implements the practices outlined in [WAI-ARIA Textbox specifications](https://www.w3.org/TR/wai-aria/#textbox), ensuring users with disabilities can access all functionality.
 
 The TextBox uses the `textbox` role and following ARIA properties for its element based on its state.
 

@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Filtering in React MultiColumn ComboBox component
 
-The MultiColumn ComboBox has built-in support to filter the data items, which allows users to filter the list of items based on their input. The filter operation starts as soon as you start typing characters in the component. The filtering can be disabled by setting the [allowFiltering](https://j2.syncfusion.com/react/documentation/api/multicolumn-combobox#allowfiltering) to `false`. By default the value is `true`.
+The MultiColumn ComboBox includes built-in filtering support, enabling users to filter items based on their input. Filter operations start automatically when typing characters in the component. Disable filtering by setting the [allowFiltering](https://j2.syncfusion.com/react/documentation/api/multicolumn-combobox#allowfiltering) property to `false`. By default, the value is `true`.
 
 ## Change the filter type
 
-You can change the filter type by using the [filterType](https://j2.syncfusion.com/react/documentation/api/multicolumn-combobox#filtertype) property. The `filterType` supports filtering options such as [StartsWith](https://j2.syncfusion.com/react/documentation/api/multicolumn-combobox/filterType/), [EndsWith](https://j2.syncfusion.com/react/documentation/api/multicolumn-combobox/filterType/) and [Contains](https://j2.syncfusion.com/react/documentation/api/multicolumn-combobox/filterType/).
+Change the filter type using the [filterType](https://j2.syncfusion.com/react/documentation/api/multicolumn-combobox#filtertype) property. The `filterType` supports [StartsWith](https://j2.syncfusion.com/react/documentation/api/multicolumn-combobox/filterType/), [EndsWith](https://j2.syncfusion.com/react/documentation/api/multicolumn-combobox/filterType/), and [Contains](https://j2.syncfusion.com/react/documentation/api/multicolumn-combobox/filterType/) options.
 
-In the following example, data filtering is done with `EndsWith` type.
+The following example demonstrates filtering with the `EndsWith` type:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

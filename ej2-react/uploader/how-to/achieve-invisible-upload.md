@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Achieve invisible upload in React Uploader component
 
-You can achieve the invisible upload feature by using the selected event in uploader component. Refer to the following example.
+Invisible upload automatically initiates file upload immediately after file selection, without requiring a separate upload action. Enable this behavior by handling the selected event in the Uploader component. Refer to the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

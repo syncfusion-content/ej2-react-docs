@@ -8,10 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the ui appearance of the control in React Maskedtextbox component
+# Customize the UI appearance of the control in React Maskedtextbox component
 
-The appearance of the MaskedTextBox can be changed by adding custom `cssClass` to the component and enabling styles.
-Refer to the following example to change the appearance of the MaskedTextBox.
+The MaskedTextBox appearance can be customized by adding a custom `cssClass` and enabling corresponding styles. The following example shows how to change the MaskedTextBox appearance.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

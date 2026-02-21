@@ -83,11 +83,11 @@ The following example demonstrates how to bind JSON data using the `executeQuery
 > - The queried data will not be cached locally unless offline mode is enabled.
 > - DataManager is directly bound to Syncfusion components such as the Grid through the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource) property rather than using `executeQuery`. Refer to the Grid data‑binding [documentation](https://ej2.syncfusion.com/react/documentation/grid/data-binding/data-binding).
 
-## See Also
+## See also
 
 * [Binding with ODataV4 service](./adaptors/odatav4-adaptor)
 * [Binding with Web API](./adaptors/web-api-adaptor)
-* [How to write custom adaptor](./adaptors/adaptors#writing-custom-adaptor)
-* [How to work in offline mode](./how-to#work-in-offline-mode)
-* [How to send additional parameters](./how-to#sending-additional-parameters-to-server)
-* [How to add custom request headers](./how-to#adding-custom-headers)
+* [How to write custom adaptor](./adaptors/adaptors/)
+* [How to work in offline mode](./how-to/working-in-offline-mode)
+* [How to send additional parameters](./how-to/sending-additional-parameters)
+* [How to add custom request headers](./how-to/adding-custom-headers)

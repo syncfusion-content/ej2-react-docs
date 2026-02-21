@@ -52,9 +52,9 @@ The following example demonstrates how to create a DatePicker with [`decade`](ht
 
 ## Depth view
 
-Define the [`depth`](https://ej2.syncfusion.com/react/documentation/api/datepicker#depth) property to control the view navigation.
+The [`depth`](https://ej2.syncfusion.com/react/documentation/api/datepicker#depth) property restricts the deepest view level that users can navigate to within the calendar.
 
-> Always the depth view has to be smaller than the start view, otherwise the view restriction will be not restricted.
+> The depth value must be smaller than the start value; otherwise, the view restriction will not apply as intended.
 
 The following example demonstrates how to create a DatePicker that allows users to select a month.
 

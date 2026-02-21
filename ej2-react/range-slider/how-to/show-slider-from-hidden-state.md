@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Show Slider from hidden state in React Range Slider component
 
-This section demonstrates how to render the Slider component in a hidden state and make it visible on button click. We can initialize the Slider in a hidden state by setting its display property to `none`.
+This section demonstrates how to render the Slider component in a hidden state and make it visible on button click. You can initialize the Slider in a hidden state by setting its display property to `none`.
 
-In the sample, by clicking the button, we can make the Slider visible from its hidden state, and we must also call the [`refresh`](https://ej2.syncfusion.com/javascript/documentation/api/base/component/#refresh) method of the Slider to render it properly based on its original dimensions.
+When you click the button, the Slider becomes visible. You must also call the [`refresh`](https://ej2.syncfusion.com/javascript/documentation/api/base/component/#refresh) method to render it properly based on its original dimensions.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

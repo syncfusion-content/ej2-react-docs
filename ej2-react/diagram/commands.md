@@ -471,10 +471,10 @@ The following code example illustrates how to disable the default cut and delete
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/commands/modifyCommand-cs1/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/modifyCommand-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/commands/modifyCommand-cs1/app/index.tsx %}
+{% include code-snippet/diagram/reactCurlyExamples/modifyCommand-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

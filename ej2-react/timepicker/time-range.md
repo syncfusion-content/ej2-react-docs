@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Time range in React Timepicker component
 
-TimePicker provides an option to select a time value within a specified range by using the [`min`](https://ej2.syncfusion.com/react/documentation/api/timepicker/#min) and [`max`](https://ej2.syncfusion.com/react/documentation/api/timepicker/#max) properties.  The min value should always be lesser than the max value.
+The [`min`](https://ej2.syncfusion.com/react/documentation/api/timepicker/#min) and [`max`](https://ej2.syncfusion.com/react/documentation/api/timepicker/#max) properties define the valid time selection range in the TimePicker. The minimum value must be less than the maximum value.
 
 When the min and max properties are configured and the selected time value is out-of-range or invalid, then the model value will be set to `out of range` time value or `null` respectively with highlighted `error` class to indicates the time is out of range or invalid.
 

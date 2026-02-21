@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Show dates of other months in React Calendar component
 
-The following example demonstrates how to show dates in other months.
+The following example demonstrates how to show dates from other months.
 
-The below styles show the Calendar's other month dates to visibility from its hidden state.
+The styles below make other-month dates visible when they are hidden by default.
 
 ```css
 .e-calendar .e-content tr.e-month-hide,

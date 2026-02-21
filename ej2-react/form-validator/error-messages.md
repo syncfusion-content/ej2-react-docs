@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Error messages in React Form validator component
 
-The `FormValidator` provides default error messages for all default validation rules.
-It is tabulated as follows
+The `FormValidator` provides default error messages for all validation rules. The following table lists these messages:
 
 | Rules | message |
 | ------------- | ------------- |
@@ -32,7 +31,7 @@ It is tabulated as follows
 
 ## Customizing Error Messages
 
-The default error message for a rule can be customizable by defining it along with concern rule object as follows.
+You can customize the default error message for a rule by defining it along with the corresponding rule object as follows:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

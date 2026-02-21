@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # File Upload Using JWT Authentication
 
-JSON Web Token (JWT) is an open standard for securely transmitting information between parties as a JSON object. JWTs are commonly used for authorization, where the client includes a JWT in the request header for the server to validate before processing the request. This approach adds an extra layer of security, ensuring only authenticated users can upload or remove files.
+JSON Web Token (JWT) is an open standard for securely transmitting information between parties as a JSON object. JWTs are commonly used for authorization, where the client includes a JWT in the request header and the server validates it before processing the request. This approach ensures that only authenticated users can upload or remove files.
 
-This guide covers how to implement JWT authentication in a file upload scenario using the `Uploader` component in a React app. The server is set up in .NET Core to validate the JWT token before saving or removing files.
+This guide demonstrates implementing JWT authentication with the Uploader component in a React application. The server-side implementation uses .NET Core to validate JWT tokens before handling save or remove operations.
 
 ## Client-Side Setup
 
-To set up the file uploader with JWT authentication, we'll use the `uploading` and `removing` events of the uploader component. The `asyncSettings` is used to configure the URLs for saving and removing files on the server. A property named `token` stores the JWT.
+Configure JWT authentication using the `uploading` and `removing` events of the Uploader component. Set the **asyncSettings** property to configure server endpoints for save and remove operations. Store the JWT in a property or variable for access during upload.
 
-Using the `uploading` and `removing` event argument's, `currentRequest` property and `setRequestHeader` method, the JWT token is added to the request header during the save and remove actions.
+The `uploading` and `removing` events provide access to the `currentRequest` object. Use the `setRequestHeader` method to inject the JWT token into the request header for both save and remove actions.
 
 The following code snippet provides the client-side logic for adding a JWT token during the save and remove actions.
 
@@ -39,7 +39,7 @@ const Default = () => {
   const onRemoveFile = (args) => {
     // Add JWT to request header before file removal
     args.postRawFile = false;
-    args.currentRequest.setRequestHeader('Authorization',`Bearer ${this.token}`);
+    args.currentRequest.setRequestHeader('Authorization', `Bearer ${token}`);
   };
   
   return (
@@ -55,15 +55,13 @@ const Default = () => {
 };
 export default Default;
 ```
-> Replace `Your.JWT.Token` with a valid JWT issued by your authentication system for production use.
+> Replace `Your.JWT.Token` with a valid JWT issued by your authentication system. For production, implement a token generation and refresh mechanism rather than hardcoding tokens.
 
 ## Server-Side Controller (ASP.NET Core)
 
-The server-side controller receives and validates the JWT from the request headers. If valid, the server saves or removes the file; otherwise, it returns an unauthorized response.
+The server-side controller receives and validates the JWT from request headers. If the token is valid, the server processes the save or remove operation; otherwise, it returns an unauthorized response.
 
-The `Save` method checks JWT authorization before saving files. If authorized, the file is saved in the `Uploaded Files` directory. The `Remove` method verifies the JWT authorization before attempting to delete a file.
-
-The `IsAuthorized` method extracts and validates the JWT from the `Authorization` header. You can replace `Your.JWT.Token` with a method that verifies tokens. The `SaveFileAsync` method handles file saving, with support for appending data when dealing with chunked uploads.
+The `Save` method validates JWT authorization before saving files to the `Uploaded Files` directory. The `Remove` method similarly verifies authorization before file deletion. The `IsAuthorized` helper method extracts the JWT from the `Authorization` header and validates it. Replace the validation logic with your actual token verification mechanism. The `SaveFileAsync` method handles file persistence, supporting chunked uploads with append functionality.
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;

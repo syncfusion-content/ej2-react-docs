@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 ## Inline
 
-By default, the ColorPicker will be rendered using SplitButton and open the pop-up to access the ColorPicker. To render the ColorPicker container alone and to access it directly, render it as inline. It can be achieved by setting the [`inline`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#inline) property to `true`.
+By default, the ColorPicker renders as a SplitButton and opens a popup to access the ColorPicker. To render the ColorPicker container alone and access it directly, set the [`inline`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#inline) property to `true`.
 
-The following sample shows the inline type rendering of ColorPicker.
+The following sample shows inline rendering of the ColorPicker.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,13 +27,13 @@ The following sample shows the inline type rendering of ColorPicker.
 
  {% previewsample "page.domainurl/code-snippet/colorpicker/getting-started-cs3" %}
 
->> The `showButtons` property is disabled in this sample because the control buttons are not needed for inline type. To know about the control buttons functionality, refer to the [`showButtons`](./how-to/hide-control-buttons) sample.
+>> The `showButtons` property is disabled in this sample because the control buttons are not needed for inline rendering. To learn about the control buttons' functionality, refer to the [`showButtons`](./how-to/hide-control-buttons) sample.
 
 ## Rendering palette at initial load
 
-By default, the `Picker` area will be rendered at initial load. To render the Palette area while opening the ColorPicker pop-up, and specify the [`mode`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#mode) property as `Palette`.
+By default, the `Picker` area is rendered initially. To open the ColorPicker popup with the `Palette` area rendered, set the [`mode`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#mode) property to `Palette`.
 
-In the following sample, it will render the `Palette` at initial load.
+In the following sample, the ColorPicker opens with the `Palette` rendered initially.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -48,9 +48,9 @@ In the following sample, it will render the `Palette` at initial load.
 
 ## Color value
 
-The [`value`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#value) property can be used to specify the color value to the ColorPicker. It supports either `three` or `six` digit hex codes. To include `opacity`, set the color value as `four` or `eight` digit hex code.
+The [`value`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#value) property specifies the ColorPicker's color value. It supports three- or six-digit hex codes. To include opacity, use four- or eight-digit hex codes.
 
-In the following sample, the color value sets as `four` digit hex code, the last digit represents the `opacity` value.
+In the following sample, the color value is set as a four-digit hex code; the last digit represents the `opacity` value.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

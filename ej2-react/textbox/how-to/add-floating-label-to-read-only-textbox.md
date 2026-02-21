@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add or Remove the value programatically on read only TextBox in React TextBox component
+# Add or remove value programmatically in a read-only TextBox in React TextBox component
 
-You can programatically add or remove the value to the [readonly](https://ej2.syncfusion.com/react/documentation/api/textbox/#readonly) TextBox.
+While a read-only TextBox prevents direct user input, you can still update its value programmatically using code. This is useful for displaying dynamic data or status information that users should not edit. The following example demonstrates how to update a read-only TextBox value and trigger the floating label behavior.
 
-In this sample, click the update value button to fill the read-only TextBox with value and float a label.
+In this sample, click the update value button to populate the read-only TextBox with a value and animate the floating label.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Style appearance in React Timepicker component
 
-The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
+The following CSS structure enables you to customize the TimePicker component's appearance. Apply these styles with appropriate specificity to override default styles for your use case.
 
 ## Customizing the appearance of TimePicker wrapper element
 
@@ -61,7 +61,9 @@ Use the following CSS to customize the TimePicker popup content
 
 ## Full screen mode support in mobiles and tablets
 
-The TimePicker component's full-screen mode feature enables users to view the component popup element in full-screen mode on mobile devices with improved visibility and a better user experience. It is important to mention that this feature is exclusively available for mobile and tablet devices in both landscape and portrait orientations. To activate the full screen mode within the TimePicker component, simply set the [fullScreenMode](https://ej2.syncfusion.com/react/documentation/api/timepicker#fullScreenMode) API value to `true`. This action will extend the popup element to occupy the entire screen on mobile devices.
+The full-screen mode feature optimizes the TimePicker for mobile and tablet devices by expanding the popup to occupy the entire screen. This provides improved visibility and touch-friendliness in both landscape and portrait orientations.
+
+To enable full-screen mode, set the [`fullScreenMode`](https://ej2.syncfusion.com/react/documentation/api/timepicker#fullScreenMode) property to `true`:
 
 ```typescript
 // import the ripple effect

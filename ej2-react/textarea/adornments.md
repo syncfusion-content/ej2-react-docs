@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Adornments in ##Platform_Name## TextArea control
 
-Adornments allow you to add custom elements before or after the TextArea using the `prependTemplate` and `appendTemplate` properties. These elements can include icons, text labels, or action buttons for formatting and content management. With orientation support, you can arrange adornments horizontally or vertically using `adornmentFlow` and `adornmentOrientation` for flexible layouts.
+Adornments enable custom elements (icons, text labels, or action buttons) to be added before or after the TextArea using the `prependTemplate` and `appendTemplate` properties. Use `adornmentFlow` and `adornmentOrientation` to arrange adornments horizontally or vertically for flexible layouts.
 
 ## Common Use Cases
 

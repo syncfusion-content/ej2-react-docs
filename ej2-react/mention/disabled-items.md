@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Disabled Items in React Mention component
 
-The Mention provides options for individual items to be either in an enabled or disabled state for specific scenarios. The category of each list item can be mapped through the [disabled](https://ej2.syncfusion.com/react/documentation/api/mention/#fields) field in the data table. Once an item is disabled, it cannot be selected as a value for the component. To configure the disabled item columns, use the `fields.disabled` property.
+The Mention supports enabling or disabling individual items as needed. Map the disabled state through the [disabled](https://ej2.syncfusion.com/react/documentation/api/mention/#fields) field in the data table. Disabled items cannot be selected. Configure disabled item behavior using the `fields.disabled` property.
 
-In the following sample, State are grouped according on its category using `disabled` field.
+In the following example, states are grouped by category using the `disabled` field:
 
 `[Class-component]`
 
@@ -42,7 +42,7 @@ In the following sample, State are grouped according on its category using `disa
 
 ## Disable Item Method
 
-The [disableItem](https://ej2.syncfusion.com/react/documentation/api/mention/#disableItem) method can be used to handle dynamic changing in disable state of a specific item. Only one item can be disabled in this method. To disable multiple items, this method can be iterated with the items list or array. The disabled field state will to be updated in the [dataSource](https://ej2.syncfusion.com/react/documentation/api/mention/#datasource), when the item is disabled using this method.
+Use the [disableItem](https://ej2.syncfusion.com/react/documentation/api/mention/#disableItem) method to dynamically disable individual items. This method disables one item at a time. To disable multiple items, iterate through the items list. The disabled state updates in the [dataSource](https://ej2.syncfusion.com/react/documentation/api/mention/#datasource) when items are disabled using this method.
 
 | Parameter | Type | Description |
 |------|------|------|

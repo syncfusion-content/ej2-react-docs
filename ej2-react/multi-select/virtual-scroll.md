@@ -58,7 +58,7 @@ The following sample displays the OrderId from the `Orders` Data Service.
 
 ## Customizing items count in virtualization 
 
-When the `enableVirtualization` property is enabled, the `take` property provided by the user within the Query parameter at the initial state or during the `actionBegin` event will be considered. Internally, it calculates the items that fit onto the current page (i.e., probably twice the amount of the popup's height). If the user-provided take value is less than the minimum number of items that fit into the popup, the user-provided take value will not be considered.
+When the `enableVirtualization` property is enabled, the `take` property specified in the Query parameter at initialization or during the `actionBegin` event determines the number of items loaded. The component internally calculates the optimal item count based on the popup height. If the specified `take` value is less than the minimum number of items that fit within the popup, the component uses the calculated minimum value instead.
 
 The following sample shows the example for Customizing items count in virtualization.
 
@@ -76,7 +76,7 @@ The following sample shows the example for Customizing items count in virtualiza
 
 ## Grouping with virtualization
 
-The MultiSelect component supports grouping with Virtualization. It allows you to organize elements into groups based on different categories. Each item in the list can be classified using the [groupBy](../api/multi-select/#fields) field in the data table. After grouping, virtualization works similarly to local data binding, providing a seamless user experience. When the data source is bound to remote data, an initial request is made to retrieve all data for the purpose of grouping. Subsequently, the grouped data works in the same way as local data binding on virtualization. 
+The MultiSelect component combines grouping with virtualization to efficiently organize and render large categorized datasets. Organize items into groups using the [groupBy](../api/multi-select/#fields) field from your data source. Virtual scrolling works seamlessly with grouped data for local sources. When using remote data, the component retrieves all data initially for grouping purposes, then applies virtualization to the grouped results, delivering optimal performance with organized content. 
 
 The following sample shows the example for Grouping with Virtualization. 
 
@@ -95,7 +95,7 @@ The following sample shows the example for Grouping with Virtualization.
 
 ## Filtering with virtualization
 
-The MultiSelect component supports Filtering with Virtualization. The MultiSelect includes a built-in feature that enables data filtering when the [`allowFiltering`](../api/multi-select/#allowfiltering) option is enabled. In the context of Virtual Scrolling, the filtering process operates in response to the typed characters. Specifically, the MultiSelect sends a request to the server, utilizing the full data source, to achieve filtering. Before initiating the request, an action event is triggered. Upon successful retrieval of data from the server, an action complete event is triggered. The initial data is loaded when the popup is opened. Whether the filter list has a selection or not, the popup closes.
+The MultiSelect component supports filtering with virtualization, combining search capabilities with efficient rendering. When [`allowFiltering`](../api/multi-select/#allowfiltering) is enabled, typing characters filters the data in real time. The component sends filter requests to the server using the complete data source, triggering the action event before the request and the action complete event after data retrieval. Initial data loads when the popup opens. The popup closes after filter selection or when no matches are found.
 
 The following sample shows the example for Filtering with Virtualization.
 
@@ -114,7 +114,7 @@ The following sample shows the example for Filtering with Virtualization.
 
 ## Checkbox with virtualization
 
-The MultiSelect component supports CheckBox selection with Virtualization. The MultiSelect comes with integrated functionality that allows for the selection of multiple values using checkboxes when the [`mode`](../api/multi-select/#mode) property is configured to `CheckBox`. In the context of Virtual Scrolling, the checkbox render with each list element. based on the checkbox selection and unselection, component value property updated with respective values.
+The MultiSelect component supports checkbox selection with virtualization, allowing users to select multiple items efficiently. When the [`mode`](../api/multi-select/#mode) property is set to `CheckBox`, checkboxes appear alongside each item in the virtualized list. The component's value property updates automatically as items are selected or deselected through their checkboxes.
 
 The following sample shows the example for checkbox with Virtualization.
 
@@ -133,7 +133,7 @@ The following sample shows the example for checkbox with Virtualization.
 
 ## Custom value with virtualization
 
-The MultiSelect component supports custom value with Virtualization. When the [`allowCustomValue`](../api/multi-select/#allowcustomvalue) property is enabled, the MultiSelect enables users to include a new option not currently available in the component value. Upon selecting this newly added custom value, the MultiSelect triggers the [`customValueSelection`](../api/multi-select/#customvalueselection) event and also custom value will be added to the end of the complete list.
+The MultiSelect component supports adding custom values with virtualization. When [`allowCustomValue`](../api/multi-select/#allowcustomvalue) is enabled, users can enter and add new options not present in the original dataset. Upon selecting a custom value, the component triggers the [`customValueSelection`](../api/multi-select/#customvalueselection) event and appends the custom value to the end of the complete list.
 
 The following sample shows the example for custom value with Virtualization.
 
@@ -152,7 +152,7 @@ The following sample shows the example for custom value with Virtualization.
 
 ## Preselect values with virtualization
 
-The MultiSelect component extends its support for preselected values with Virtualization. When binding values from local or remote data to the MultiSelect component, the corresponding data value is fetched from the server and promptly updated within the component. Moreover, when binding a custom value to the component, the value is updated within the component, and the bound custom value is seamlessly appended to the end of the complete list.
+The MultiSelect component supports preselecting values with virtualization for both local and remote data sources. When preselected values are bound to the component, the corresponding data is fetched from the server and displayed immediately. For custom values, the component updates its value and appends the custom value to the end of the complete list.
 
 The following sample shows the example for Preselect value with Virtualization.
 

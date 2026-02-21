@@ -14,14 +14,14 @@ The DropDownList component contains a list of predefined values from which a sin
 
 ## Key features
 
-* **[Data binding](../drop-down-list/data-binding)** - Allows binding and accessing the list of items from local or server-side data source.
+* **[Data binding](../drop-down-list/data-binding)** - Bind data from local or server-side data sources and access the list of items.
 
-* **[Grouping](../drop-down-list/grouping)** -  Supports grouping of logically related items under a single or specific category.
+* **[Grouping](../drop-down-list/grouping)** - Group logically related items under a single or specific category.
 
-* **[Sorting](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#sortorder)** - Supports sorting of list items in an alphabetical order (either ascending or descending).
+* **[Sorting](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#sortorder)** - Sort list items in alphabetical order (ascending or descending).
 
-* **[Filtering](../drop-down-list/filtering)** - Allows filtering of list items based on a character typed into the search box.
+* **[Filtering](../drop-down-list/filtering)** - Filter list items based on characters typed into the search box.
 
-* **[Templates](../drop-down-list/templates)** - Allows customizing the list items, selected value, header, footer, category group header, and no records content.
+* **[Templates](../drop-down-list/templates)** - Customize list items, selected value, header, footer, category group header, and no records content.
 
-* **[Accessibility](../drop-down-list/accessibility)** - Provided with built-in accessibility support that helps to access all the DropDownList component features through the keyboard, screen readers, or other assistive technology devices.
+* **[Accessibility](../drop-down-list/accessibility)** - Built-in accessibility support enables access to all DropDownList component features through keyboard, screen readers, and assistive technology devices.

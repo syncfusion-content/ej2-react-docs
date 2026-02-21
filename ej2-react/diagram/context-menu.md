@@ -166,10 +166,10 @@ The following example renders menu items with shortcut key codes for specific ac
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/contextmenu/es5menutemplate-cs1/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/es5menutemplate-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/contextmenu/es5menutemplate-cs1/app/index.tsx %}
+{% include code-snippet/diagram/reactCurlyExamples/es5menutemplate-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

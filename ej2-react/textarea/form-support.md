@@ -10,9 +10,7 @@ domainurl: ##DomainURL##
 
 # Form Support in React TextArea Component
 
-The TextArea component seamlessly integrates with HTML forms, enabling efficient submission of longer text data. By including TextArea inputs within HTML forms, users can conveniently input multiline text content and submit it as part of form submissions.
-
-This integration enhances the usability of forms, allowing users to provide detailed feedback, enter lengthy descriptions, or input other multiline text data seamlessly.
+The TextArea component seamlessly integrates with HTML forms, enabling efficient submission of multiline text data. This integration allows users to provide detailed feedback, enter lengthy descriptions, or submit other multiline text content as part of form submissions.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

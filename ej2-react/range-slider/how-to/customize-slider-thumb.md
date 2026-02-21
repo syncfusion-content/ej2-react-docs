@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize Slider thumb in React Range Slider component
 
-The Slider appearance can be customized using CSS. By overriding the Slider CSS classes, you can customize the thumb's appearance. By default, the Slider has a unique class `e-handle` for the Slider thumb. You can override the following class as per your requirement.
+The Slider appearance can be customized using CSS by overriding Slider CSS classes. By default, the Slider uses the `e-handle` class for the Slider thumb. You can override this class as needed.
 
 ```css
 .e-control.e-slider .e-handle {

@@ -447,7 +447,7 @@ When using the `WebMethodAdaptor`, every backend API endpoint must return data i
 
 ## Integration with Syncfusion<sup style="font-size:70%">&reg;</sup> React components
 
-To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React component with the `WebMethodAdaptor`, refer to the documentation below:
+To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React components with the `WebMethodAdaptor`, refer to the documentation below:
 
 - [Grid](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/web-method-adaptor)
 

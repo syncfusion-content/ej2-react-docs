@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Adornments in ##Platform_Name## MaskedTextBox control
 
-Adornments in the MaskedTextBox control allow you to add custom elements before or after the masked input using the `prependTemplate` and `appendTemplate` properties. These elements can include prefixes, suffix labels, or action icons to provide context, guide user input, and offer quick actions while preserving mask validation and float label behavior.
+Adornments in the MaskedTextBox allow you to add custom elements before or after the masked input using the `prependTemplate` and `appendTemplate` properties. These elements can include prefixes, suffixes, labels, or action icons to provide context, guide input, and enable quick actions while preserving mask validation and float label behavior.
 
 ## Common Use Cases
 
@@ -22,12 +22,12 @@ Adornments in the MaskedTextBox control allow you to add custom elements before 
 
 ## Adding Adornments to MaskedTextBox
 
-Use `prependTemplate` and `appendTemplate` to inject HTML content before and after the masked input respectively. These templates do not alter mask behavior and support any inline HTML or icon.
+Use `prependTemplate` and `appendTemplate` to inject HTML content before and after the masked input. These templates do not alter mask behavior and support any inline HTML or icon.
 
-- **prependTemplate**: Renders elements before the masked input.
-- **appendTemplate**: Renders elements after the masked input.
+- **prependTemplate**: Renders elements before the input.
+- **appendTemplate**: Renders elements after the input.
 
-The following example demonstrates how to add adornments in the MaskedTextBox control.
+The following example demonstrates how to add adornments to the MaskedTextBox.
 
 `[Class-component]`
 

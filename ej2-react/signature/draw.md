@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Draw
 
-The [`draw`](https://ej2.syncfusion.com/react/documentation/api/signature/#draw) method is used to drawn a text as signature with different font families like Arial, Serif, with different font sizes. It accepts text, font family, font size as its parameters. The default font family is “Arial”, and the default font size is “30”.
+The [`draw`](https://ej2.syncfusion.com/react/documentation/api/signature/#draw) method draws text as a signature with customizable font families (Arial, Serif, etc.) and sizes. It accepts text, font family, and font size as parameters. Default values are "Arial" for font family and "30" for font size.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -14,7 +14,7 @@ The following content provides the exact CSS structure that can be used to modif
 
 ## Customizing the appearance of DatePicker wrapper element
 
-Use the following CSS to customize the appearance of wrapper element.
+Use the following CSS selectors to customize the appearance of the wrapper element. Apply these styles with appropriate specificity to override default component styles.
 
 ```css
 /* To specify height and font size */
@@ -26,7 +26,7 @@ Use the following CSS to customize the appearance of wrapper element.
 
 ## Customizing the DatePicker icon element
 
-Use the following CSS to customize the DatePicker icon element
+Use the following CSS to customize the DatePicker icon appearance:
 
 ```css
 /* To specify background color and font size */
@@ -44,7 +44,7 @@ Please check the below section, to customize the style and appearance of the Cal
 
 ## Full screen mode support in mobiles and tablets
 
-The DatePicker component's full-screen mode feature enables users to view the component popup element in full-screen mode on mobile devices with improved visibility and a better user experience. It is important to mention that this feature is exclusively available for mobile and tablet devices in both landscape and portrait orientations. To activate the full screen mode within the DatePicker component, simply set the [fullScreenMode](https://ej2.syncfusion.com/react/documentation/api/datepicker/#fullScreenMode) API value to `true`. This action will extend the calendar element to occupy the entire screen on mobile devices.
+The DatePicker's full-screen mode feature enhances visibility and usability on mobile and tablet devices by expanding the calendar popup to occupy the full screen in both landscape and portrait orientations. To enable full-screen mode, set the [fullScreenMode](https://ej2.syncfusion.com/react/documentation/api/datepicker/#fullScreenMode) property to `true`. The calendar will then automatically expand to full-screen on mobile devices, providing a more immersive date selection experience.
 
 ```typescript
 import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';

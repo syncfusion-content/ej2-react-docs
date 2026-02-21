@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the ui appearance of the control in React Numerictextbox component
+# Customize the UI appearance of the NumericTextBox component in React
 
-You can change the appearance of the NumericTextBox by adding custom `cssClass` to the component and enabling styles. Refer to the following example to change the appearance of the NumericTextBox.
+Apply custom styling to the NumericTextBox by adding a custom CSS class using the `cssClass` property. This allows you to override default styles and match your application's design system. The following example demonstrates how to customize the NumericTextBox appearance with custom CSS.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

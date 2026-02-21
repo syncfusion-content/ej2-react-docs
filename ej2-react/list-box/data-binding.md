@@ -10,10 +10,9 @@ domainurl: ##DomainURL##
 
 # Data binding in React List box component
 
-The ListBox loads the data either from local data sources or remote data services using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/list-box/#datasource) property. It supports
-the data type of `array` or `DataManager`.
+The ListBox loads data from local or remote sources using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/list-box/#datasource) property. It supports both `array` and `DataManager` data types.
 
-To get start quickly with Data Binding, you can check on this video:
+To get started quickly with Data Binding, watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=AZPWB2o_cdI" %}
 
@@ -33,7 +32,7 @@ Local data can be represented by the following ways as described below.
 
 ### Array of string
 
-The ListBox has support to load array of primitive data such as strings or numbers. Here, both value and text field acts as same.
+The ListBox supports loading primitive data arrays such as strings or numbers. For primitive data, both the value and text fields represent the same data.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -48,9 +47,9 @@ The ListBox has support to load array of primitive data such as strings or numbe
 
 ### Array of object
 
-The ListBox can generate its list items through an array of object data. For this, the appropriate columns should be mapped to the [`fields`](https://ej2.syncfusion.com/react/documentation/api/list-box/#fields) property.
+The ListBox generates list items from an array of object data. Map the appropriate columns to the [`fields`](https://ej2.syncfusion.com/react/documentation/api/list-box/#fields) property.
 
-In the following example, `id` and `sports` column from complex data have been mapped to the `value` field and `text` field, respectively.
+In the following example, the `id` and `sports` columns are mapped to the `value` and `text` fields respectively.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -65,9 +64,9 @@ In the following example, `id` and `sports` column from complex data have been m
 
 ### Array of complex object
 
-The ListBox can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [`fields`](https://ej2.syncfusion.com/react/documentation/api/list-box/#fields) property.
+The ListBox generates list items from complex nested data. Map the appropriate nested columns to the [`fields`](https://ej2.syncfusion.com/react/documentation/api/list-box/#fields) property.
 
-In the following example, `sports.Name` column from complex data have been mapped to the `text` field.
+In the following example, the `sports.Name` column is mapped to the `text` field.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

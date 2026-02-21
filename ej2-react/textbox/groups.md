@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Groups in React TextBox component
 
-The following section explains you the steps required to create TextBox with `icon` and `floating label`.
+Create an enhanced TextBox with floating labels and icons to improve the visual clarity and user experience of your form inputs. The following sections explain the steps to implement these features.
 
-Floating label:
+## Floating label
 
-To add the Floating label by using [FloatLabelType](https://ej2.syncfusion.com/react/documentation/api/textbox/#floatlabeltype) property. Specifies the floating label behavior of the TextBox that the placeholder text floats above the TextBox based on the below values. Possible values are:
+Add floating labels to your TextBox using the [FloatLabelType](https://ej2.syncfusion.com/react/documentation/api/textbox/#floatlabeltype) property. This property controls how the placeholder text animates when the input is focused or contains a value. Supported values include:
 
 * Never - The placeholder text should not be float ever.
 * Always - The placeholder text floats above the TextBox always.

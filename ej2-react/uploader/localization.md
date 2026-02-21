@@ -10,32 +10,32 @@ domainurl: ##DomainURL##
 
 # Localization in React Uploader component
 
-The Localization library allows you to localize static text content of the uploader. The static text contains default text content of action buttons, file status, clear icon title, tooltips, and text content of drag area. Define the locale object for a culture and assign it to L10n load method.
+The localization library enables customization of the Uploader's static text content, including action button labels, file status messages, icon titles, tooltips, and drop area text. Define locale-specific text by creating a locale object and registering it with the L10n (localization) service.
 
-The following list of keys and its values which are used in the uploader component:
+The following keys customize the Uploader's text content:
 
 | Key | Description |
 |------------------------|---------|
-| Browse | To customize the browse button text.|
-| Clear | To customize the clear button text.|
-| Upload | To customize the upload button text. |
-| dropFilesHint | To customize the drop area text. |
-| uploadFailedMessage | To customize the status text when  the file is failed to upload.|
-| uploadSuccessMessage | To customize the status text when  the file is uploaded successfully.|
-| removedSuccessMessage | To customize the status text when  the file is removed the successfully from the serve.|
-| removedFailedMessage | To customize the status text while the file is failed to remove.|
-| inProgress | To customize the status text while the upload is in progress.|
-| pauseUpload | To customize the status text while the uploading is paused.|
-| fileUploadCancel | To customize the status text when uploading is cancelled.|
-| readyToUploadMessage | To customize the status text when the file is selected and ready to upload.|
-| invalidMaxFileSize | To customize the status text when the file size is greater than the maximum file size.|
-| invalidFileType | To customize the status text when the file type is invalid.|
-| invalidMinFileSize | To customize the status text when the file size is less than the minimum file size. |
-| remove | To customize tooltip text for remove icon. |
-| cancel | To customize tooltip text for cancel icon. |
-| delete | To customize tooltip text for delete icon. |
-| totalFiles | To customize tooltip text for total files. |
-| size | To customize tooltip text for size. |
+| Browse | Browse button label |
+| Clear | Clear button label |
+| Upload | Upload button label |
+| dropFilesHint | Drop area placeholder text |
+| uploadFailedMessage | File upload failure message |
+| uploadSuccessMessage | File upload success message |
+| removedSuccessMessage | File removal success message |
+| removedFailedMessage | File removal failure message |
+| inProgress | Upload in-progress status message |
+| pauseUpload | Upload paused status message |
+| fileUploadCancel | Upload cancellation message |
+| readyToUploadMessage | File selected and ready status message |
+| invalidMaxFileSize | File exceeds maximum size message |
+| invalidFileType | Invalid file type message |
+| invalidMinFileSize | File below minimum size message |
+| remove | Remove icon tooltip |
+| cancel | Cancel icon tooltip |
+| delete | Delete icon tooltip |
+| totalFiles | Total files tooltip |
+| size | File size tooltip |
 
 `[Class-component]`
 

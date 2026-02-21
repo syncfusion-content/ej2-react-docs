@@ -31,7 +31,7 @@ The MultiColumn Combobox can generate its list items through an object of arrays
 
 ## Binding remote data
 
-The MultiColumn Combobox supports retrieval of data from remote data services with the  of `DataManager` component. When using remote data, it initially fetches all the data from the server and then stores the data locally. During virtual scrolling, additional data is retrieved from the locally stored data.
+The MultiColumn ComboBox retrieves data from remote services using the `DataManager` component. When binding remote data, the component fetches all data from the server and stores it locally. During virtual scrolling, additional data is retrieved from the locally stored data.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

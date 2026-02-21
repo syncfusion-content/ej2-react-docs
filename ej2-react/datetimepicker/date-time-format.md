@@ -10,12 +10,9 @@ domainurl: ##DomainURL##
 
 # Date time format in React Datetimepicker component
 
-Date time format is a way of representing the date and time value in different string format in the textbox.
+Date-time format defines how date and time values are displayed in the input field. By default, the DateTimePicker format is based on the current culture. You can set a custom format using the [`format`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker/#format) property.
 
-By default, the DateTimePicker's format is based on the culture. You can also set the own custom format by using the
-[`format`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker/#format) property.
-
-> Once the date format property has been defined it will be common to all the cultures.
+> When the date-time format is set, it applies uniformly across all cultures and overrides the culture-specific default format.
 
 To know more about the date format standards, refer to the [Internationalization Date Time Format](http://ej2.syncfusion.com/documentation/base/internationalization) section.
 

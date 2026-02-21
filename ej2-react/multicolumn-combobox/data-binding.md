@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Data binding in React MultiColumn ComboBox component
 
-The MultiColumn ComboBox loads the data either from local data sources or remote data services using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox#datasource) property. It supports the data type of `object arrays` or `DataManager`.
+The MultiColumn ComboBox loads data from local or remote sources using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox#datasource) property. It supports both `object arrays` and `DataManager` data types.
 
 The MultiColumn ComboBox also supports different kinds of data services such as OData, OData V4, and Web API, and data formats such as XML, JSON, and JSONP with the help of `DataManager` adaptors.
 

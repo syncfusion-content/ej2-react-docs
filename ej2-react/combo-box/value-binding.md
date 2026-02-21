@@ -14,16 +14,16 @@ Value binding in the ComboBox control allows you to associate data values with e
 
 ## Primitive Data Types
 
-The ComboBox control provides flexible binding capabilities for primitive data types like strings and numbers. You can effortlessly bind local primitive data arrays, fetch and bind data from remote sources, and even custom data binding to suit specific requirements. Bind the value of primitive data to the [value](../api/combo-box/#value) property of the ComboBox.
+The ComboBox provides flexible binding for primitive data types such as strings and numbers. Bind local arrays, remote data sources, or customize binding to meet specific requirements. Set the value of primitive data using the [value](../api/combo-box/#value) property.
 
-Primitive data types include:
+Supported primitive data types:
 
 * String
 * Number
 * Boolean
 * Null
 
-The following sample shows the example for preselect values for primitive data type
+The following example demonstrates preselecting values with primitive data types.
 
 `[Class-component]`
 
@@ -40,9 +40,9 @@ The following sample shows the example for preselect values for primitive data t
 
 ## Object Data Types
 
-In the ComboBox control, object binding allows you to bind to a dataset of objects. When [`allowObjectBinding`](../api/combo-box/#allowobjectbinding) is enabled, the value of the control will be an object of the same type as the selected item in the [value](../api/combo-box/#value) property. This feature seamlessly binds arrays of objects, whether sourced locally, retrieved from remote endpoints, or customized to suit specific application needs.
+Object binding in the ComboBox allows you to bind a dataset of objects. When [`allowObjectBinding`](../api/combo-box/#allowobjectbinding) is enabled, the component's value becomes an object of the same type as the selected item in the [value](../api/combo-box/#value) property. This seamlessly binds object arrays from local sources, remote endpoints, or custom implementations.
 
-The following sample shows the example for preselect values for object data type
+The following example demonstrates preselecting values with object data types.
 
 `[Class-component]`
 

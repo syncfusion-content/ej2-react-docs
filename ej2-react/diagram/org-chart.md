@@ -137,11 +137,11 @@ The following code example illustrates how to add assistants to layout.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/AutomaticLayout/organizationalchart-cs5/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/organizationalchart-cs5/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/AutomaticLayout/organizationalchart-cs5/app/index.tsx %}
+{% include code-snippet/diagram/reactCurlyExamples/organizationalchart-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
