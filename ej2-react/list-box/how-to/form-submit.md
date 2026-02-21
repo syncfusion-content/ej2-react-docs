@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Form submit in React List box component
 
-In the following code snippet, the value that is in selected state will be sent on form submit.
+The following example demonstrates how selected values are submitted with a form:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

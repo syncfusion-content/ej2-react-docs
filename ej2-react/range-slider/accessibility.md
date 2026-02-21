@@ -54,7 +54,7 @@ The Range Slider component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/ap
 
 ## Keyboard interaction
 
-The Range Slider component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Range Slider component.
+The Range Slider component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline to assist people who use assistive technologies (AT) and keyboard navigation. The following keyboard shortcuts are supported.
 
 | **Press** | **To do this** |
 | --- | --- |
@@ -67,9 +67,9 @@ The Range Slider component follows the [keyboard interaction](https://www.w3.org
 
 ## Ensuring accessibility
 
-The Range Slider component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+Accessibility compliance is ensured through [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Range Slider component is demonstrated in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/slider.html) in a new window to evaluate the accessibility of the Range Slider component with accessibility tools.
+The following sample demonstrates the Range Slider component's accessibility compliance. Open the [sample](https://ej2.syncfusion.com/accessibility/slider.html) in a new window to evaluate accessibility with these tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/slider.html" %}
 

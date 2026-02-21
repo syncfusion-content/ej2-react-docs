@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Change the color of the TextBox based on its value in React TextBox component
 
-You can change the color of the TextBox by validating its value using regular expression in the `keyup` event for predicting the numeric values as demonstrated in the following code sample.
+Dynamically update the TextBox appearance based on user input by validating the value using regular expressions in the `keyup` event. This provides immediate visual feedback about input validity. The following example demonstrates changing the TextBox color when numeric values are detected.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

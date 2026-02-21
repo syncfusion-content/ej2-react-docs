@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Filtering in React Combo box component
 
-The ComboBox has built-in support to filter data items when `allowFiltering` is enabled. The filter operation starts as soon as you start typing characters in the component.
+The ComboBox includes built-in filtering support when `allowFiltering` is enabled. Filtering begins immediately as you type characters in the input field.
 
-To display filtered items in the popup, filter the required data and return it to the ComboBox via [updateData](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/filteringEventArgs/#updatedata) method by using the [filtering](https://ej2.syncfusion.com/react/documentation/api/combo-box/#filtering--emittypefilteringeventargs) event.
+To display filtered items in the popup, handle the [filtering](https://ej2.syncfusion.com/react/documentation/api/combo-box/#filtering--emittypefilteringeventargs) event to filter your data source and return results using the [updateData](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/filteringEventArgs/#updatedata) method.
 
-The following sample illustrates how to query the data source and pass the data to the ComboBox through the `updateData` method in `filtering` event.
+The following example shows how to filter the data source and display results through the `updateData` method in the `filtering` event.
 
 `[Class-component]`
 
@@ -44,9 +44,9 @@ The following sample illustrates how to query the data source and pass the data 
 
 ## Limit the minimum filter character
 
-When filtering the list items, you can set the limit for character count to raise remote request and fetch filtered data on the ComboBox. This can be done by manual validation within the filter event handler.
+Control filtering performance by setting a minimum character count before issuing remote requests. Use manual validation in the filter event handler to enforce this limit.
 
-In the following example, the remote request does not fetch the search data until the search key contains three characters.
+In the following example, the component does not fetch data until at least three characters are typed.
 
 `[Class-component]`
 
@@ -76,9 +76,9 @@ In the following example, the remote request does not fetch the search data unti
 
 ## Change the filter type
 
-While filtering, you can change the filter type to `contains`, `startsWith`, or `endsWith` for string type within the filter event handler.
+Customize filter behavior by changing the filter type to `contains`, `startsWith`, or `endsWith` within the filter event handler.
 
-In the following examples, data filtering is done with `endsWith` type.
+The following examples demonstrate filtering with the `endsWith` type.
 
 `[Class-component]`
 
@@ -140,9 +140,9 @@ The following example shows how to perform case-sensitive filter.
 
 ## Diacritics Filtering
 
-ComboBox supports diacritics filtering which will ignore the [diacritics](https://en.wikipedia.org/wiki/Diacritic) and makes it easier to filter the results in international characters lists when the [ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/combo-box/#ignoreaccent) is enabled.
+The ComboBox supports diacritics filtering, which ignores [diacritics](https://en.wikipedia.org/wiki/Diacritic) to simplify filtering international character lists when the [ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/combo-box/#ignoreaccent) property is enabled.
 
-In the following sample,data with diacritics are bound as dataSource for ComboBox.
+In the following example, data with diacritics is bound as the dataSource for the ComboBox.
 
 `[Class-component]`
 

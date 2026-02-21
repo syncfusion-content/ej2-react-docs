@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Date range Slider in React Range Slider component
 
-Date formatting can be achieved in [`ticks`](https://ej2.syncfusion.com/react/documentation/api/slider/#ticks) and [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/slider/#tooltip) using [`renderingTicks`](https://ej2.syncfusion.com/react/documentation/api/slider/#renderingticks) and [`tooltipChange`](https://ej2.syncfusion.com/react/documentation/api/slider/#tooltipchange) events respectively. The process of formatting is demonstrated in the example below.
+Date formatting can be achieved in [`ticks`](https://ej2.syncfusion.com/react/documentation/api/slider/#ticks) and [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/slider/#tooltip) using the [`renderingTicks`](https://ej2.syncfusion.com/react/documentation/api/slider/#renderingticks) and [`tooltipChange`](https://ej2.syncfusion.com/react/documentation/api/slider/#tooltipchange) events. The following example demonstrates date formatting.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

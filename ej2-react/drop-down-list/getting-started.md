@@ -20,7 +20,7 @@ To get started quickly with React DropDownList, you can watch this video:
 
 ## Setup for local development
 
-Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
+Set up a React application using `create-vite-app`, which offers a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide).
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -29,7 +29,7 @@ To create a new React application, run the following command.
 ```bash
 npm create vite@latest my-app
 ```
-This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
+This command prompts you to configure settings for the new project, including the framework and variant selection.
 
 ![Initial_setup](images/Initial-setup.jpg)
 
@@ -50,8 +50,7 @@ npm run dev
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> DropDownList packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
-To install the DropDownList component, use the following command
+All available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. To install the DropDownList component, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-dropdowns --save
@@ -111,7 +110,7 @@ export default function App() {
 
 ## Binding data source
 
-After initialization, populate the DropDownList with data using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/index-default#datasource) &nbsp;property. Here, an array of string values is passed to the DropDownList component.
+After initialization, populate the DropDownList with data using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/index-default#datasource) &nbsp;property. In the following example, an array of string values is bound to the DropDownList component.
 
 `[Class-component]`
 
@@ -187,9 +186,9 @@ The output appears as follows.
 
 ## Configure the Popup List
 
-By default, the width of the popup list automatically adjusts according to the DropDownList input element's width, and the height of the popup list has '300px'.
+By default, the popup list width adjusts automatically to match the DropDownList input element's width, and the height is set to 300px.
 
-The height and width of the popup list can also be customized using the [popupHeight](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/index-default#popupheight) &nbsp;and [popupWidth](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/index-default#popupwidth) properties respectively.
+Customize the popup list height and width using the [popupHeight](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/index-default#popupheight) &nbsp;and [popupWidth](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/index-default#popupwidth) properties respectively.
 
 In the following sample, popup list's width and height are configured.
 

@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Grouping in React MultiColumn ComboBox component
 
-The MultiColumn ComboBox supports wrapping nested elements into a group based on different categories by using the [groupBy](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/fieldSettingsModel/#groupby) property. The category of each list item can be mapped through the groupBy field in the data table. The group header are displayed as fixed headers. The fixed group header content is updated dynamically on scrolling the popup list with its category value.
+The MultiColumn ComboBox supports grouping nested elements by category using the [groupBy](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/fieldSettingsModel/#groupby) property. Map the category for each list item using the groupBy field in the data table. Group headers display as fixed headers and update dynamically as you scroll through the popup list.
 
 ## Group By
 
-In the following sample, countries are grouped according on its category using [groupBy](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/fieldSettingsModel/#groupby) field.
+In the following example, countries are grouped by category using the [groupBy](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/fieldSettingsModel/#groupby) field:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

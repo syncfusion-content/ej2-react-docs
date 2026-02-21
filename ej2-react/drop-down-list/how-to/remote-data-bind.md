@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Remote data bind in React Drop down list component
 
-Before component rendering, you can get the total items count by using [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#actioncomplete) &nbsp;event with its result arguments.
+Before component rendering, retrieve the total items count using the [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#actioncomplete) &nbsp;event and its result arguments.
 
-After rendering this component, you can get the total items count by using [`getItems`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#getitems) method.
+After rendering the component, retrieve the total items count using the [`getItems`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#getitems) method.
 
-The following example demonstrate how to get the total items count.
+The following example demonstrates how to retrieve the total items count:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

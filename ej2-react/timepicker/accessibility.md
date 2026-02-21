@@ -47,13 +47,13 @@ TimePicker component has covered the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-pr
 
 Here, the `combobox` as a role for input element and `listbox` as a role for popup element in the TimePicker.
 
-* **Aria-haspopup** : Provides the information about whether this element display a pop-up window or not.
+* **Aria-haspopup** : Indicates whether this element displays a pop-up window.
 
-* **Aria-selected** : Indicates the current selected value of the TimePicker component.
+* **Aria-selected** : Indicates the currently selected time value.
 
-* **Aria-disabled** : Indicates disabled state of the TimePicker component.
+* **Aria-disabled** : Indicates the disabled state of the TimePicker component.
 
-* **Aria-expanded** : Indicates expanded state of the popup.
+* **Aria-expanded** : Indicates the expanded or collapsed state of the popup.
 
 * **Aria-autocomplete** : Indicates whether user input completion suggestions are provided or not.
 
@@ -74,7 +74,7 @@ The TimePicker component has built-in keyboard accessibility support by followin
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Upper Arrow</kbd> | Navigate and select the previous item. |
+| <kbd>Up Arrow</kbd> | Navigate and select the previous item. |
 | <kbd>Down Arrow</kbd> | Navigate and select the next item. |
 | <kbd>Left Arrow</kbd> | Move the cursor towards arrow key pressed direction. |
 | <kbd>Right Arrow</kbd> | Move the cursor towards arrow key pressed direction. |

@@ -10,11 +10,9 @@ domainurl: ##DomainURL##
 
 # Rows and Columns in React TextArea Component
 
-Two Essential<sup style="font-size:70%">&reg;</sup> attributes, `rows` and `columns`, play a pivotal role in customizing the TextArea's appearance and layout.
-The `rows`attribute determines the initial visible number of lines within the TextArea, controlling its vertical size. Conversely, the `columns` attribute specifies the visible width of the TextArea in characters per line, determining its initial width.
+The Essential<sup style="font-size:70%">&reg;</sup> `rows` and `cols` attributes control TextArea dimensions. The `rows` attribute sets the initial visible number of lines (vertical size), while the `cols` attribute specifies the visible width in characters per line (horizontal size).
 
-
-* You can customize the TextArea component by setting the number of rows using the [rows](https://ej2.syncfusion.com/react/documentation/api/textarea/#rows) property and the number of columns using the [cols](https://ej2.syncfusion.com/react/documentation/api/textarea/#cols) property. These properties allow precise control over the dimensions of the TextArea, ensuring it fits seamlessly within the layout of the application.
+Customize TextArea dimensions using the [rows](https://ej2.syncfusion.com/react/documentation/api/textarea/#rows) and [cols](https://ej2.syncfusion.com/react/documentation/api/textarea/#cols) properties for precise control that fits your application layout.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

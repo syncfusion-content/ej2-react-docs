@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 ## Custom palette
 
-By default, the Palette will be rendered with default colors. To load custom colors in the palette, specify the colors in the [`presetColors`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#presetcolors) property. To customize the color palette, add a custom class to palette tiles using [`BeforeTileRender`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#beforetilerender) event.
+By default, the palette is rendered with default colors. To load custom colors, specify them in the [`presetColors`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#presetcolors) property. To customize palette tiles, add a custom class using the [`BeforeTileRender`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#beforetilerender) event.
 
-The following sample demonstrates the above functionalities.
+The following sample demonstrates these features.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -29,9 +29,9 @@ The following sample demonstrates the above functionalities.
 
 ## Hide input area from picker
 
-By default, the input area will be rendered in ColorPicker. To hide the input area from it, add `e-hide-value` class to ColorPicker using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#cssclass) property.
+By default, the input area is rendered in the ColorPicker. To hide it, add the `e-hide-value` class using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#cssclass) property.
 
-In the following sample, the ColorPicker is rendered without input area.
+In the following sample, the ColorPicker renders without an input area.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -46,9 +46,9 @@ In the following sample, the ColorPicker is rendered without input area.
 
 ## Custom handle
 
-Color picker handle shape and UI can be customized. Here, we have customized the handle as `svg icon`. The same way you can customize the handle based on your requirement.
+The ColorPicker handle shape and UI can be customized. In the following example, the handle is customized as an SVG icon; you can customize it based on your requirements.
 
-The following sample show the customized color picker handle.
+The following sample shows the customized ColorPicker handle.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -63,9 +63,9 @@ The following sample show the customized color picker handle.
 
 ## Custom primary button
 
-By default, the applied color will be updated in primary button of the color picker. You can customize that as `icon`.
+By default, the applied color is displayed in the primary button. You can customize it to show an icon instead.
 
-In the following sample, the `picker` icon is added to primary button and using [`change`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#change) event the selected color will be updated in bottom portion of the icon.
+In the following sample, the `picker` icon is added to the primary button, and the [`change`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#change) event updates the selected color in the bottom portion of the icon.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -82,9 +82,9 @@ In the following sample, the `picker` icon is added to primary button and using 
 
 ## Display hex code in input
 
-The color picker input element can be showcased in the place of primary button. The applied color hex code will be updated in the primary button input.
+The ColorPicker input element can be displayed in place of the primary button. The applied color hex code is updated in the input.
 
-The following sample shows the color picker with input.
+The following sample shows the ColorPicker with an input displaying the hex code.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -99,7 +99,7 @@ The following sample shows the color picker with input.
 
 ## Custom UI
 
-The color picker UI can be customized in all possible ways. The following sample shows the excel like UI customization with help of SplitButton and Dialog component. In that by clicking the more colors option from color palette, the dialog contains color picker will open.
+The ColorPicker UI can be customized in various ways. The following sample shows an Excel-like UI customization using the SplitButton and Dialog components. When you click the "more colors" option from the palette, a dialog containing the ColorPicker opens.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

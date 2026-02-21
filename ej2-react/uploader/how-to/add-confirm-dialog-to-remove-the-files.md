@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Add confirm dialog to remove the files in React Uploader component
 
-You can customize the uploader component using confirm dialog before removing the files. Here, ej2 dialog is used as confirm dialog. Refer to the following example.
+Prevent accidental file deletion by displaying a confirmation dialog before removing files from the Uploader. This example uses the EJ2 Dialog component to create a confirmation prompt that validates the user's intent before proceeding with file removal.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

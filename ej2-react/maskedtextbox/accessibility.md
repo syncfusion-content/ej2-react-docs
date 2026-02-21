@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Maskedtextbox component
 
-The Maskedtextbox component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The MaskedTextBox component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and common WAI-ARIA roles used to evaluate accessibility.
 
-The accessibility compliance for the Maskedtextbox component is outlined below.
+The accessibility compliance for the MaskedTextBox component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,9 +40,9 @@ The accessibility compliance for the Maskedtextbox component is outlined below.
 
 ## WAI-ARIA attributes
 
-The MaskedTextBox is characterized with complete ARIA Accessibility support that helps to access through the on-screen readers and other assistive technology devices. This component is designed with the reference of the guidelines document given in [WAI ARAI Accessibility practices](https://www.w3.org/TR/wai-aria/#textbox).
+The MaskedTextBox provides complete ARIA accessibility support, enabling access through screen readers and other assistive technologies. This component follows the guidelines in [WAI-ARIA Accessibility practices](https://www.w3.org/TR/wai-aria/#textbox).
 
-The MaskedTextBox uses the `textbox` role and following ARIA properties for its element based on its state.
+The MaskedTextBox uses the `textbox` role and the following ARIA properties based on its state:
 
 | **Property** | **Functionality** |
 | --- | --- |
@@ -55,9 +55,9 @@ The MaskedTextBox uses the `textbox` role and following ARIA properties for its 
 
 ## Ensuring accessibility
 
-The MaskedTextBox component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The MaskedTextBox component's accessibility is validated using the [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) tools during automated testing.
 
-The accessibility compliance of the MaskedTextBox component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/masked-textbox.html) in a new window to evaluate the accessibility of the MaskedTextBox component with accessibility tools.
+The accessibility compliance of the MaskedTextBox is demonstrated in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/masked-textbox.html) in a new window to evaluate the MaskedTextBox with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/masked-textbox.html" %}
 

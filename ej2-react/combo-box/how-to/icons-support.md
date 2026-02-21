@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Icons support in React Combo box component
 
-You can render **icons** to the list items by mapping the the [iconCss](https://ej2.syncfusion.com/react/documentation/api/combo-box/#fields) &nbsp;fields. This `iconCss` field create a span in the list item with mapped class name to allow styling as per your need.
+Display icons in list items by mapping the [iconCss](https://ej2.syncfusion.com/react/documentation/api/combo-box/#fields) field. The `iconCss` field creates a span element in each list item with the mapped class name, allowing you to apply custom styling as needed.
 
 In the following sample, icon classes are mapped with `iconCss` field.
 

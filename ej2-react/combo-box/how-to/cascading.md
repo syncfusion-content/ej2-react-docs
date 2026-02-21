@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Cascading in React Combo box component
 
-The cascading ComboBox is a series of ComboBox, where the value of one ComboBox depends upon  another's value. This can be configured by using the [`change`](https://ej2.syncfusion.com/react/documentation/api/combo-box/#change) event of the parent ComboBox. Within that change event handler, data has to be loaded to the child ComboBox based on the selected value of the parent ComboBox.
+Cascading ComboBox creates a series of dependent dropdowns, where the value of one ComboBox depends on another's selection. Configure this using the [`change`](https://ej2.syncfusion.com/react/documentation/api/combo-box/#change) event of the parent ComboBox. In the change event handler, load data into the child ComboBox based on the parent's selected value.
 
-The following example, shows the cascade behavior of country, state, and city ComboBox. Here, the [`dataBind`](https://ej2.syncfusion.com/react/documentation/api/combo-box/#databind) method is used to reflect the property changes immediately to the ComboBox.
+The following example demonstrates cascading behavior with country, state, and city ComboBox components. The [`dataBind`](https://ej2.syncfusion.com/react/documentation/api/combo-box/#databind) method is used to immediately reflect property changes in the ComboBox.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

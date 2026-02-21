@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Chip customization in React Multi select component
 
-The MultiSelect allows the user to customize the selected chip element through the [`tagging`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#tagging) event. In that event, you can set the custom classes to chip element via that event argument of `setClass` method.
+The MultiSelect provides chip customization through the [`tagging`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#tagging) event. Within this event, apply custom CSS classes to chip elements using the `setClass` method provided in the event arguments.
 
 The following sample demonstrates chip-customization with the MultiSelect component.
 

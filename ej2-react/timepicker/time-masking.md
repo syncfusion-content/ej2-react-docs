@@ -75,7 +75,7 @@ The following example demonstrates default and custom format of TimePicker compo
 
 ## Configure Mask Placeholder
 
-You can change mask placeholder value through property `maskPlaceholder`. By default , it takes the full name of  time co-ordinates such as `hour`, `minute` and `second`.
+You can change the mask placeholder value through the `maskPlaceholder` property. By default, it displays the full names of time coordinates such as `hour`, `minute`, and `second`.
 
 While changing to a culture other than `English`, ensure that locale text for the concerned culture is loaded through load method of L10n class for mask placeholder values like below.
 

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Open and edit the uploaded files in React Uploader component
 
-The uploader component allows you to modify the file after uploading to the server, which can be achieved using success event of the uploader.
+Enable post-upload file operations by retrieving the saved file path from the server and allowing users to open or edit files directly from the uploaded file list. This workflow captures the file path during the success event and uses HTTP headers to communicate with the server for file operations.
 
-You can retrieve the saved file path in the uploader success event and assign it to custom attribute (data-file-name) value of the respective file list element to open the uploaded file. Click the respective file element to create a new request along with saved file path using http header. In the server-side, get the file path from the header and open the file using `process.start` method.
+Use the success event to capture the uploaded file path and assign it to a custom data attribute. When users click a file in the list, send the file path via an HTTP header to trigger server-side operations such as opening or editing the file using the `process.start` method.
 
 ```ts
 import { UploaderComponent } from '@syncfusion/ej2-react-inputs';

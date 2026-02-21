@@ -91,9 +91,9 @@ Use the following CSS to customize the text color of placeholder.
 }
 ```
 
-## Customizing the background color of focus, hover, and active item's
+## Customizing the background color of focus, hover, and active items
 
-Use the following CSS to customize the background color of focus, hover and active item's.
+Use the following CSS to customize the background color of focused, hovered, and active items.
 
 ```css
 .e-dropdownbase .e-list-item.e-item-focus, .e-dropdownbase .e-list-item.e-active, .e-dropdownbase .e-list-item.e-active.e-hover, .e-dropdownbase .e-list-item.e-hover {
@@ -117,7 +117,7 @@ Use the following CSS to customize the appearance of popup element.
 
 ## Adding mandatory asterisk to placeholder and float label
 
-You can add a mandatory `asterisk(*)` to placeholder and float label using <b>.e-input-group.e-control-wrapper.e-float-input .e-float-text::after</b> class.
+Add a mandatory asterisk `(*)` to the placeholder and float label using the <b>.e-input-group.e-control-wrapper.e-float-input .e-float-text::after</b> CSS class.
 
 `[Class-component]`
 

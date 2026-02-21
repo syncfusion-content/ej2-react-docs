@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Add additional data on upload in React Uploader component
 
-The uploader component allows you to add additional data on file upload, which is used to get in the server-side. By using the [uploading](https://ej2.syncfusion.com/react/documentation/api/uploader/#uploading) event and its customFormData argument, you can achieve this behavior. Refer to the following example.
+The Uploader component allows you to send additional metadata along with file uploads to the server. Use the [uploading](https://ej2.syncfusion.com/react/documentation/api/uploader/#uploading) event and its customFormData argument to attach custom key-value pairs to the upload request.
 
-In the following code snippet, explains about how to add additional data on file upload.
+The following code snippet demonstrates how to add additional data during file upload.
 
 ```ts
 import { UploaderComponent, UploadingEventArgs } from '@syncfusion/ej2-react-inputs';

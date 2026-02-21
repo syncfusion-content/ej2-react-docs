@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Custom value in React Multi select component
 
-The MultiSelect allows user to add a new non-present option to the component value when [`allowCustomValue`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#allowcustomvalue) is enabled.
-while selecting the new custom value `customValueSelection` event will be triggered.
+The MultiSelect enables users to add new custom options not present in the original dataset when [`allowCustomValue`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#allowcustomvalue) is enabled. When a custom value is selected, the `customValueSelection` event is triggered.
 
 The following sample demonstrates configuration of custom value support with the MultiSelect component.
 

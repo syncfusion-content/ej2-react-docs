@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Styling Modes in React OTP Input component
 
-Styling modes specify the style variants for the input fields in the OTP Input component. These modes allows you to customize the appearance of the OTP input fields.
+Styling modes specify the visual variants for the OTP input fields. These modes allow you to customize the appearance of the OTP Input.
 
 ## Outline mode
 
-You can use the outline style by setting the [stylingMode](https://ej2.syncfusion.com/react/documentation/api/otp-input/#stylingmode) property to [outlined](https://ej2.syncfusion.com/react/documentation/api/otp-input/otpInputStyle/). The default styling mode is `outlined`.
+Set the [stylingMode](https://ej2.syncfusion.com/react/documentation/api/otp-input/#stylingmode) property to [outlined](https://ej2.syncfusion.com/react/documentation/api/otp-input/otpInputStyle/) to use the outline style. This is the default styling mode.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -29,7 +29,7 @@ You can use the outline style by setting the [stylingMode](https://ej2.syncfusio
 
 ## Filled mode
 
-You can use the filled style by setting the [stylingMode](https://ej2.syncfusion.com/react/documentation/api/otp-input/#stylingmode) property to [filled](https://ej2.syncfusion.com/react/documentation/api/otp-input/otpInputStyle/).
+Set the [stylingMode](https://ej2.syncfusion.com/react/documentation/api/otp-input/#stylingmode) property to [filled](https://ej2.syncfusion.com/react/documentation/api/otp-input/otpInputStyle/) to use the filled style.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -44,7 +44,7 @@ You can use the filled style by setting the [stylingMode](https://ej2.syncfusion
 
 ## Underline mode
 
-You can use the underline style by setting the [stylingMode](https://ej2.syncfusion.com/react/documentation/api/otp-input/#stylingmode) property to [underlined](https://ej2.syncfusion.com/react/documentation/api/otp-input/otpInputStyle/).
+Set the [stylingMode](https://ej2.syncfusion.com/react/documentation/api/otp-input/#stylingmode) property to [underlined](https://ej2.syncfusion.com/react/documentation/api/otp-input/otpInputStyle/) to use the underline style.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

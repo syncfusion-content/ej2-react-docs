@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Value change in React Drop down list component
 
-You can check about whether value change happened by manual or programmatic by using [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#change) event argument that argument name is `isInteracted`.
+Determine whether a value change was triggered manually or programmatically using the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#change) event. The `isInteracted` argument indicates the change source.
 
-The following example demonstrate, how to check whether value change happened by manual or programmatic.
+The following example demonstrates how to detect whether the value change was manual or programmatic:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

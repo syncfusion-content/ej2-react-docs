@@ -10,10 +10,9 @@ domainurl: ##DomainURL##
 
 # Grouping in React Drop down list component
 
-The DropDownList supports wrapping nested elements into a group based on different categories. The category of each list item can be mapped through the [groupBy](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#fields) field in the data table. The group header is displayed both as inline and fixed headers. The fixed group header content
-is updated dynamically on scrolling the popup list with its category value.
+The DropDownList supports grouping nested elements based on different categories. The category of each list item can be mapped through the [groupBy](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#fields) field in the data table. The group header is displayed both as inline and fixed headers. The fixed group header content updates dynamically as you scroll through the popup list, displaying the category value for each group.
 
-In the following sample, vegetables are grouped according on its category using `groupBy` field.
+In the following example, vegetables are grouped according to their category using the `groupBy` field.
 
 `[Class-component]`
 
@@ -43,7 +42,7 @@ In the following sample, vegetables are grouped according on its category using 
 
 ## Customization
 
-The grouping header is also provided with customization option. This allows custom designing using the [`groupTemplate`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#grouptemplate) property for both inline and fixed headers as referred here: [Group Template support to DropDownList](./templates#group-template).
+The grouping header can be customized using the [`groupTemplate`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#grouptemplate) property. This allows you to design custom headers for both inline and fixed group display modes. Refer to [Group Template support to DropDownList](./templates#group-template) for detailed implementation.
 
 To get started with grouping, grouping templates and adding icons in React DropDownList, you can check on this video:
 

@@ -10,10 +10,13 @@ domainurl: ##DomainURL##
 
 # Strict mode in React Datetimepicker component
 
-The [`strictMode`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker#strictmode) is an act, that allows the user to enter only the valid date and time within the specified min/max range in textbox. If the input entered is invalid, then the component will stay with the previous value. Else, if the date and time is out of range, then the component will set the date to the min/max value.
+When [`strictMode`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker#strictmode) is enabled, the DateTimePicker validates user input against specified min/max constraints. The following behaviors apply:
 
-The following example demonstrates the DateTimePicker in `strictMode` with min/max range of `5/5/2019 2:00 AM` to
-`5/25/2019 2:00 AM`. Here, it allows to enter only the valid date and time within the specified range. If you are trying to enter the out-of-range value as like `5/28/2019`, then the value will set to the `max` value as `5/25/2019 2:00 AM`. Since the value 28 is greater than to `max` value of 25. Or else if you are trying to enter the invalid date, then the value will stay with the previous value.
+- **Valid date-times within range**: Accepted and applied
+- **Out-of-range date-times**: Automatically adjusted to the nearest boundary (min or max)
+- **Invalid date-times**: Rejected; the component retains the previous value
+
+The following example demonstrates the DateTimePicker in `strictMode` with a range from `5/5/2019 2:00 AM` to `5/25/2019 2:00 AM`. When attempting to enter `5/28/2019` (exceeding the maximum), the component sets the value to the maximum date-time (`5/25/2019 2:00 AM`). If an invalid date-time is entered, the component preserves the previous selection.
 
 `[Class-component]`
 
@@ -41,11 +44,12 @@ The following example demonstrates the DateTimePicker in `strictMode` with min/m
 
  {% previewsample "page.domainurl/code-snippet/datetimepicker/default-cs14" %}
 
-By default, the DateTimePicker act in strictMode `false` state, that allows to enter the invalid or out-of-range datetime in textbox.
+By default, `strictMode` is disabled (`false`), allowing users to enter invalid or out-of-range date-times in the input field. When an invalid or out-of-range date-time is entered:
 
-If the datetime is out-of-range or invalid, then the model value will be set to `out of range` datetime value or `null` respectively with highlighted `error` class to indicates the datetime is out of range or invalid.
+- The model value is set to the out-of-range value or `null` respectively
+- The input is highlighted with an `error` class to indicate the validation failure
 
-The following example demonstrates the `strictMode` as `false`. Here, it allows to enter the valid or invalid value in textbox. If you are entering the out-of-range or invalid datetime value, then the model value will be set to `out of range` datetime value or `null` respectively with highlighted `error` class to indicates the datetime is out of range or invalid.
+The following example demonstrates `strictMode` as `false`, where out-of-range or invalid date-times are flagged with the error class but allowed:
 
 `[Class-component]`
 

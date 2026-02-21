@@ -10,9 +10,7 @@ domainurl: ##DomainURL##
 
 # Sort the selected files in React Uploader component
 
-You can sort the selected files in an uploader component by using the [selected](https://ej2.syncfusion.com/react/documentation/api/uploader/#selected) event. Refer to the following example.
-
-In the following example, explains about how to sort the file list in uploader component.
+Sort the selected file list in a custom order using the [selected](https://ej2.syncfusion.com/react/documentation/api/uploader/#selected) event. The following example demonstrates how to implement custom sorting for the file list in the Uploader component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

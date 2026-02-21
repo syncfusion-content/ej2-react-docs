@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Customize the TextBox background color and text color in React TextBox component
 
-You can customize the React TextBox styles such as background-color, text-color and border-color by overriding its default styles.
+Apply custom styling to the TextBox by overriding its default CSS properties for background color, text color, and border color. This allows you to match your application's design system and visual branding.
 
-> To change the styles of the `floating label`, you must override the style to the input element.
+> **Note:** To customize the floating label styles, apply CSS rules directly to the input element or its parent container.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

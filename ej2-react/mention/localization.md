@@ -18,9 +18,9 @@ The Localization library allows you to localize static text content of the [noRe
 
 ## Loading translations
 
-To load the translation object to your application, use the load function of the **L10n** class.
+Load translation objects into your application using the load function of the **L10n** class.
 
-In the following sample, French culture is set to the mention component and no data is loaded. Hence, the [noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/mention/#norecordstemplate) property displays its text in French culture initially.
+In the following example, the Mention component is configured for French culture with no data loaded. The [noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/mention/#norecordstemplate) displays text in French culture initially:
 
 `[Class-component]`
 

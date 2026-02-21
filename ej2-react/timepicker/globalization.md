@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Globalization in React Timepicker component
 
-Globalization is the combination of internationalization and localization. You can adapt the component to various languages by means of parsing and formatting the date or number [`internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) , and also add culture specific customization and translation to the text [`localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization).
+Globalization combines [`internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) (date and number parsing/formatting) with [`localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) (language-specific text and formatting). The TimePicker component adapts to different languages and cultures through these mechanisms.
 
 By default, TimePicker time format and meridian names are specific to the `American English` culture. It utilizes the
 [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Internationalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) package to parse and format the date object based on the culture by using the official [`UNICODE CLDR`](http://cldr.unicode.org/) JSON data. It provides the `loadCldr` method to load culture specific CLDR JSON data. To go with the different culture other than `English`, follow the steps below.
@@ -54,7 +54,7 @@ By default, TimePicker time format and meridian names are specific to the `Ameri
      }
    ```
 
-* Before changing to a culture other than `English`, ensure that locale text for the concerned culture is loaded through `load` method of `L10n` class.
+* Before changing to a culture other than `English`, ensure that locale text for the target culture is loaded through the `load` method of the `L10n` class.
 
     ```ts
 
@@ -69,7 +69,7 @@ By default, TimePicker time format and meridian names are specific to the `Ameri
      });
    ```
 
-* Set the culture by using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/timepicker#locale) property. In the following code example, the DateTimePicker is initialized in `German` culture with corresponding localized text.
+* Set the culture by using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/timepicker#locale) property. In the following code example, the TimePicker is initialized in `German` culture with corresponding localized text.
 
 The following example demonstrates the TimePicker in `German` culture.
 

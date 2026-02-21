@@ -107,10 +107,10 @@ The diagram can simultaneously read from two data sources: one for nodes and ano
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/dataBinding/es5connectionDataSource-cs1/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/es5connectionDataSource-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/dataBinding/es5connectionDataSource-cs1/app/index.tsx %}
+{% include code-snippet/diagram/reactCurlyExamples/es5connectionDataSource-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

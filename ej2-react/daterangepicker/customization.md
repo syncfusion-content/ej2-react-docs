@@ -10,12 +10,13 @@ domainurl: ##DomainURL##
 
 # Customization in React Daterangepicker component
 
-DateRangePicker makes available for the UI customization which can be achieved with events, properties that are available with this component.
+The DateRangePicker component offers extensive UI customization through events and properties that enable flexible design adaptation to specific application needs.
 
 ## Day cell format
 
-[`renderDayCell`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/renderDayCellEventArgs#renderdaycelleventargs) is a event which provides the option to customize each day cell while rendering itself.
-The following example disables the weekends of every month using `renderDayCell` event. Here we have used the `e-disabled` class to highlight the disabled date
+The [`renderDayCell`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/renderDayCellEventArgs#renderdaycelleventargs) event provides an option to customize the appearance of each day cell during rendering. This allows for applying custom styles or disabling specific dates based on application logic.
+
+The following example demonstrates disabling weekends in every month using the `renderDayCell` event and the `e-disabled` class:
 
 `[Class-component]`
 
@@ -45,9 +46,9 @@ The following example disables the weekends of every month using `renderDayCell`
 
 ## First day of week
 
-Start day in a week will differ based on culture. But, you can customize this based on application needs also. For this, you can make use of `firstDayOfWeek` property. By default, first day of week in en-US is a Sunday.
+The starting day of the week varies by culture; by default, it is Sunday in the en-US culture. The `firstDayOfWeek` property allows customization of the week's starting day to match application requirements or cultural preferences.
 
-In following sample, it customized to Monday with help of this property.
+The following example demonstrates customizing the first day of week to Monday:
 
 `[Class-component]`
 
@@ -77,9 +78,9 @@ In following sample, it customized to Monday with help of this property.
 
 ## Preset ranges
 
-DateRangePicker provides an option to set the predefined ranges in a DateRangePicker via [`presets`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker#presets) properties with the corresponding label. This property will accept the values in the order of label, start date (date object), end date (date object) and append these ranges in a component for quick selection.
+The [`presets`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker#presets) property enables predefined date ranges to be displayed in the DateRangePicker, allowing users to quickly select common ranges such as "Last 7 Days" or "This Month" without manual selection. Each preset consists of a label and corresponding start and end dates.
 
-In following sample, you can choose the frequently using ranges options from the list of ranges itself easily.
+The following example demonstrates preset ranges for quick selection:
 
 `[Class-component]`
 

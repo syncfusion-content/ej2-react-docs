@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Multi select in React Calendar component
 
-Calendar provides an option to select **single** or **multiple dates** by using `isMultiSelection` and `values` properties. By default, `isMultiSelection` property will be in disabled state.
+The Calendar provides options for single or multiple date selection using the `isMultiSelection` and `values` properties. By default, `isMultiSelection` is disabled.
 
 | API | Type | Description |
 |------|------|----------------------|

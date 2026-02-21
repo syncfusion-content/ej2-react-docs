@@ -14,7 +14,7 @@ The Signature component supports to open the signature by using hosted/online UR
 
 ## Open Signature
 
-The signature component opens a pre-drawn signature as either base64 or hosted/ online URL using the [`load`](https://ej2.syncfusion.com/react/documentation/api/signature/#load) method. It supports the PNG, JPEG, and SVG image’s base64.
+The Signature component opens pre-drawn signatures using the [`load`](https://ej2.syncfusion.com/react/documentation/api/signature/#load) method. It supports PNG, JPEG, and SVG images as base64 strings or hosted/online URLs.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -29,11 +29,11 @@ The signature component opens a pre-drawn signature as either base64 or hosted/ 
 
 ## Save Signature
 
-The Signature component saves the signature as base64, blob, and image like PNG, JPEG, and SVG.
+The Signature component supports saving signatures in multiple formats: base64, blob, and image formats (PNG, JPEG, SVG).
 
 ### Save as Base64
 
-The `getSignature` method is used to get the signature as base64 with the PNG, JPEG, and SVG type. This can be loaded to signature using [`load`](https://ej2.syncfusion.com/react/documentation/api/signature/#load) method.
+The `getSignature` method saves the signature as base64 in PNG, JPEG, or SVG format. The base64 output can be loaded back using the [`load`](https://ej2.syncfusion.com/react/documentation/api/signature/#load) method.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -48,11 +48,11 @@ The `getSignature` method is used to get the signature as base64 with the PNG, J
 
 ### Save as Blob
 
-The [`saveAsBlob`](https://ej2.syncfusion.com/react/documentation/api/signature/#saveasblob) method is used to saves the signature as Blob. It is defined as the chunk of binary data stored as a single entity in a database system.
+The [`saveAsBlob`](https://ej2.syncfusion.com/react/documentation/api/signature/#saveasblob) method saves the signature as a Blob (binary data object) for storage in databases or transmission.
 
 ### Save as Image
 
-The [`save`](https://ej2.syncfusion.com/react/documentation/api/signature/#save) method is used to saves the signature as an image. And it accepts file name and file type as parameter. The file type parameter supports PNG, JPEG, and SVG and the default file type is PNG.
+The [`save`](https://ej2.syncfusion.com/react/documentation/api/signature/#save) method saves the signature as an image file. It accepts filename and file type (PNG, JPEG, or SVG) as parameters. The default file type is PNG.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -67,9 +67,9 @@ The [`save`](https://ej2.syncfusion.com/react/documentation/api/signature/#save)
 
 ## Save with Background
 
-The [`saveWithBackground`](https://ej2.syncfusion.com/react/documentation/api/signature/#savewithbackground) property is used to saves the signature with its background and its default value is true. So, by default the signature is saved with its background.
+The [`saveWithBackground`](https://ej2.syncfusion.com/react/documentation/api/signature/#savewithbackground) property controls whether the signature is saved with its background. The default value is `true`, so signatures are saved with their background by default.
 
-In the following sample, the background color is set as ‘rgb(103 58 183)’ and save with background as true.
+The following example sets the background color to 'rgb(103 58 183)' with save-with-background enabled.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -10,10 +10,7 @@ domainurl: ##DomainURL##
 
 # Maximum Length in React TextArea Component
 
-You can enforce a maximum length limit for the text input in the TextArea using the [maxLength](https://ej2.syncfusion.com/react/documentation/api/textarea/#maxLength) property. This property allows to define the maximum number of characters that users can input into the TextArea.
-
-
-* By setting the `maxLength` property, you can control the length of text input, preventing users from exceeding a specified character limit.
+Enforce a maximum length limit using the [maxLength](https://ej2.syncfusion.com/react/documentation/api/textarea/#maxLength) property, which defines the maximum number of characters users can input. By setting this property, you control text length and prevent users from exceeding the specified limit.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

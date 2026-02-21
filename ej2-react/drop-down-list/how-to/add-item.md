@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Add item in React Drop down list component
 
-You can add item in between based on item [index](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#index). If you add new item without item index, item will be added as last item in list.
+Add items at a specific position using the item [index](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#index) property. When you add an item without specifying an index, it is added as the last item in the list.
 
-The following example demonstrate how to add item in between in DropDownList.
+The following example demonstrates how to add an item at a specific position in the DropDownList:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

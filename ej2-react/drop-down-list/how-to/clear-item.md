@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Clear item in React Drop down list component
 
-You can clear the selected item in the below two different ways.
+Clear the selected item using one of two methods:
 
-By clicking on the `clear icon` which is shown in DropDownList element, you can clear the selected item in DropDownList through **interaction**. By using[`showClearButton`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#showclearbutton) property, you can enable the clear icon in DropDownList element.
+**Through interaction:** Click the clear icon in the DropDownList element to clear the selected item. Enable the clear icon using the [`showClearButton`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#showclearbutton) property.
 
-Through **programmatic** you can set `null` value to anyone of the index, text or value property to clear the selected item in DropDownList.
+**Programmatically:** Set the `index`, `text`, or `value` property to `null` to clear the selected item.
 
 The following example demonstrate about how to clear the selected item in DropDownList.
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Ticks in React Range Slider component
 
-The Ticks in Slider help you to easily identify the current value/values of the Slider. It includes [`smallStep`](https://ej2.syncfusion.com/react/documentation/api/slider/ticksDataModel/#smallstep) and [`largeStep`](https://ej2.syncfusion.com/react/documentation/api/slider/ticksDataModel/#largestep). The value of the major ticks alone will be displayed in the slider. To enable or disable the small ticks, use the [`showSmallTicks`](https://ej2.syncfusion.com/react/documentation/api/slider/ticksDataModel/#showsmallticks) property.
+Ticks in the Slider help identify the current value or values. The slider supports [`smallStep`](https://ej2.syncfusion.com/react/documentation/api/slider/ticksDataModel/#smallstep) and [`largeStep`](https://ej2.syncfusion.com/react/documentation/api/slider/ticksDataModel/#largestep), with only major tick values displayed by default. Use the [`showSmallTicks`](https://ej2.syncfusion.com/react/documentation/api/slider/ticksDataModel/#showsmallticks) property to enable or disable small ticks.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -31,7 +31,7 @@ The Ticks in Slider help you to easily identify the current value/values of the 
 
 ## Step
 
-When the Slider is moved, it increases or decreases the value based on the step value. By default, the value changes by 1. Use the [`step`](https://ej2.syncfusion.com/react/documentation/api/slider/#step) property to change the increment step value.
+The Slider increases or decreases the value based on the step value. By default, the value changes by 1. Use the [`step`](https://ej2.syncfusion.com/react/documentation/api/slider/#step) property to change the increment step value.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -52,7 +52,7 @@ When the Slider is moved, it increases or decreases the value based on the step 
 
 ## Min and Max
 
-Sets the minimum (starting) and maximum (ending) values of the Slider, by using the [`min`](https://ej2.syncfusion.com/react/documentation/api/slider/#min) and [`max`](https://ej2.syncfusion.com/react/documentation/api/slider/#max) property. By default, the minimum value is 1 and the maximum value is 100. In the following example, the Slider is rendered with the min value as 100 and max value as 1000.
+Set the minimum and maximum values of the Slider using the [`min`](https://ej2.syncfusion.com/react/documentation/api/slider/#min) and [`max`](https://ej2.syncfusion.com/react/documentation/api/slider/#max) properties. By default, the minimum value is 1 and the maximum value is 100. The following example renders the Slider with minimum value 100 and maximum value 1000.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Resizing in React DropDownList component
 
-You can dynamically adjust the size of the popup in the DropDownList component by using the [AllowResize](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#allowresize) property. When enabled, users can resize the popup, improving visibility and control, with the resized dimensions being retained across sessions for a consistent user experience.
+Enable dynamic popup resizing in the DropDownList component using the [AllowResize](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#allowresize) property. When enabled, users can resize the popup to improve visibility and control. The resized dimensions persist across sessions for a consistent user experience.
 
 `[Class-component]`
 

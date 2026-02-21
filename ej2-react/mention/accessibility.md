@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Web accessibility makes web content and web applications more accessible for people with disabilities. Mention component provides built-in compliance with `WAI-ARIA` specifications. The `WAI-ARIA` support is achieved using the attributes such as `aria-selected` and `aria-activedescendent`.
 
-The Mention component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Mention component adheres to established accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
 
 The accessibility compliance for the Mention component is outlined below.
 
@@ -42,7 +42,7 @@ The accessibility compliance for the Mention component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Mention component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-select-only/) patterns to meet the accessibility. The following ARIA attributes are used in the Mention component:
+The Mention component implements [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-select-only/) patterns to ensure accessibility compliance. The following ARIA attributes are used in the Mention component:
 
 | **Properties** | **Functionalities** |
 | --- | --- |

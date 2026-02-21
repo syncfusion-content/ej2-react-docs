@@ -8,15 +8,16 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
+
 # Localization in React Color picker component
 
 ## Localization
 
-The `Localization` library allows you to localize default text content of the ColorPicker. The ColorPicker component has static text for `control buttons (apply / cancel)` and `mode switcher` that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#locale) value and translation object.
+The `Localization` library allows you to localize the ColorPicker's default text. The ColorPicker includes static text for control buttons (apply/cancel) and the mode switcher; these can be localized by defining the [`locale`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#locale) value and providing a translation object.
 
-The following list of properties and its values are used in the ColorPicker.
+The following lists locale keys and their default text values used by the ColorPicker.
 
-Locale key words |Text
+Locale keywords | Text
 -----|-----
 Apply |Apply
 Cancel |Cancel
@@ -39,12 +40,12 @@ The below example demonstrates the ColorPicker in `Deutsch` culture.
 
  {% previewsample "page.domainurl/code-snippet/colorpicker/how-to-cs5" %}
 
+
 ## Right to Left - RTL
 
-ColorPicker component has `RTL` support. It helps to render the ColorPicker from right-to-left direction.
-It improves the user experiences and accessibility for users who use right-to-left languages(Arabic, Farsi, Urdu, etc). This can be achieved by setting the [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#enablertl) property to `true`.
+The ColorPicker supports RTL rendering. It improves the user experience and accessibility for right-to-left languages (Arabic, Farsi, Urdu, etc.). This can be enabled by setting the [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#enablertl) property to `true`.
 
-The following example illustrates how to enable right-to-left support in ColorPicker component.
+The following example illustrates how to enable right-to-left support in the ColorPicker component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

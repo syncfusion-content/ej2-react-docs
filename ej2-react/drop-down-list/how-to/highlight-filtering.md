@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Highlight filtering in React Drop down list component
 
-By using the `highlightSearch` method, you can highlight the matched character in DropDownList filtering.
+Use the `highlightSearch` method to highlight matching characters in DropDownList filtering.
 
-The following example demonstrates about how to highlight the matched character in filtering.
+The following example demonstrates how to highlight matched characters during filtering:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

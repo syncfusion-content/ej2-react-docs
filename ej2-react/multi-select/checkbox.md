@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Checkbox in React Multi select component
 
-The MultiSelect has built-in support to select multiple values through checkbox, when [`mode`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#mode) property set as `CheckBox`.
+The MultiSelect includes built-in checkbox support to select multiple values. Enable this feature by setting the [`mode`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#mode) property to `CheckBox`.
 
 To use checkbox, inject the `CheckBoxSelection` module in the MultiSelect.
 
@@ -42,11 +42,11 @@ To use checkbox, inject the `CheckBoxSelection` module in the MultiSelect.
 
 ## Select All
 
-The MultiSelect component has in-built support to select the all list items using `Select All` options in the header.
+The MultiSelect component includes a `Select All` option in the header to select all list items at once.
 
-When the [`showSelectAll`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#showselectall) property is set to true, by default Select All text will show. You can customize the name attribute of the Select All option by using [`selectAllText`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#selectalltext).
+When the [`showSelectAll`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#showselectall) property is set to **true**, the Select All option is displayed by default. Customize the label text using the [`selectAllText`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#selectalltext) property.
 
-For the unSelect All option, by default unSelect All text will show. You can customize the name attribute of the unSelect All option by using [`unSelectAllText`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#unselectalltext).
+Similarly, you can customize the unselect all label using the [`unSelectAllText`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#unselectalltext) property.
 
 `[Class-component]`
 
@@ -76,7 +76,7 @@ For the unSelect All option, by default unSelect All text will show. You can cus
 
 ## Selection Limit
 
-Defines the limit of the selected items using [`maximumSelectionLength`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#maximumselectionlength).
+Restrict the number of items that can be selected by setting the [`maximumSelectionLength`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#maximumselectionlength) property. This prevents users from selecting more items than the specified limit.
 
 `[Class-component]`
 
@@ -106,7 +106,7 @@ Defines the limit of the selected items using [`maximumSelectionLength`](https:/
 
 ## Selection Reordering
 
-Using [`enableSelectionOrder`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#enableselectionorder) to Reorder the selected items in popup visibility state.
+Enable the [`enableSelectionOrder`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#enableselectionorder) property to automatically reorder selected items within the popup list, displaying them in the order they were selected.
 
 `[Class-component]`
 

@@ -18,9 +18,9 @@ The Localization library allows you to localize static text content of the [noRe
 
 ## Loading translations
 
-To load translation object to your application, use `load` function of **L10n** class.
+Load translation objects into your application using the `load` function of the **L10n** class.
 
-In the following sample, French culture is set to the MultiColumn ComboBox and no data is loaded. Hence, the noRecordsTemplate property displays its text in French culture.
+In the following example, the MultiColumn ComboBox is configured for French culture with no data loaded. The noRecordsTemplate property displays text in French culture:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

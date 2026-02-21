@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Validation events in React Form validator component
 
-Validation events have two types of events. These are
+The FormValidator supports two types of validation events:
 
 * validationBegin
 * validationComplete
 
 ## Validation Begin
 
-`validationBegin` event triggers before the validation starts and also it invoke for each rules in validation process. Please find the below code snippet.
+The `validationBegin` event triggers before validation starts and is invoked for each rule in the validation process. The following code snippet shows the event:
 
 ```ts
 
@@ -37,7 +37,7 @@ The following values are passed in `args`. You can use this values in event vali
 
 ## Validation Complete
 
-`validationComplete` event triggered after validation is completed and also it invoke  for each rules in validation process. Please find the below code snippet.
+The `validationComplete` event is triggered after validation completes and is invoked for each rule in the validation process. The following code snippet shows the event:
 
 ```ts
 
@@ -57,7 +57,7 @@ The following values are passed in `args`. You can use this values in event vali
 |`status` | Specifies the status (success/failure) |
 |`inputName` | Specifies the type of input  |
 
-Please find the simple sample for validation events.
+The following sample demonstrates validation events:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -10,29 +10,27 @@ domainurl: ##DomainURL##
 
 # Add floating label to TextBox programmatically in React TextBox component
 
-The `Floating Label TextBox` floats label above the TextBox after focusing, or entering a value in the TextBox.
+The floating label automatically floats above the TextBox input field when the user focuses on it or enters a value. This behavior enhances the visual hierarchy and provides clear input context. Configure the floating label behavior using the `floatLabelType` property with the following options:
 
-Floating label supports the types of actions as given below.
+| Type | Description |
+|------|-------------|
+| Auto | The label floats above the input when focused or when a value is entered |
+| Always | The label always remains floating above the input |
+| Never | The label never floats; placeholder text is displayed instead (default behavior) |
 
-Type     | Description
------------- | -------------
-  Auto       | The floating label will float above the input after focusing, or entering a value in the input.
-  Always     | The floating label will always float above the input.
-  Never      | By default, never float the label in the input when the placeholder is available.
+## Implementation steps
 
-* Create a TypeScript file and import the `Input` modules from `ej2-inputs` library as shown below.
+1. **Import the Input module** from the `ej2-inputs` library:
 
    ```ts
     import {Input} from '@syncfusion/ej2-inputs';
    ```
 
-* Pass the `HTML Input` element and `floatLabelType` property as `Auto` to the `createInput` method.
+2. **Configure the floating label** by passing the HTML input element and `floatLabelType` property set to `Auto` (or another value) to the `createInput` method.
 
-* Set the `placeholder` value to the input element via `element attribute` or pass the parameter to the `createInput` method.
+3. **Set the placeholder** for the input element either via the `placeholder` attribute or as a parameter to `createInput`. The placeholder text serves as the floating label content.
 
-    The `watermark label` will be updated based on the specified `placeholder` value of the `Floating Label TextBox`.
-
-* You can add the `icons` on the input by passing `buttons` property value with the class name `e-input-group-icon` as parameter to the `createInput` method.
+4. **Optional: Add icons** to enhance the input by passing the `buttons` property with the `e-input-group-icon` class to the `createInput` method.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

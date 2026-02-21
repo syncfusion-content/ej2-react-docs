@@ -11,9 +11,9 @@ domainurl: ##DomainURL##
 
 # Precision Modes in React Rating Component
 
-You can use the [`precision`](https://ej2.syncfusion.com/react/documentation/api/rating/#precision) property of the rating component to provide ratings with varying levels of precision.
+Set the [`precision`](https://ej2.syncfusion.com/react/documentation/api/rating/#precision) property to provide ratings with varying levels of precision.
 
-The precision types of Rating are as follows:
+The Rating component supports the following precision types:
 
 * Full: The rating is increased in whole number increments. For example, if the current rating is 2, the next possible ratings are 3, 4, and so on.
 * Half: The rating is increased in increments of 0.5 (half). For example, if the current rating is 2.5, the next possible ratings are 3, 3.5, 4, and so on.

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Set the placeholder in React Daterangepicker component
 
-The following example demonstrates how to set [`placeholder`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker#placeholder) in the DateRangePicker control.
+The [`placeholder`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker#placeholder) property displays hint text in the DateRangePicker input field when it is empty. This helps guide users on the expected date range format or input requirement.
 
-Using `placeholder` you can display a short hint in the input element.
+The following example demonstrates how to set a custom placeholder in the DateRangePicker component:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

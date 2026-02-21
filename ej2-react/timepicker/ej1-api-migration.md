@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Ej1 api migration in React Timepicker component | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion React Timepicker component of Syncfusion Essential JS 2 and more.
-control: Ej1 api migration 
+title: EJ1 API Migration in React Timepicker component | Syncfusion
+description: Learn here all about EJ1 API Migration in Syncfusion React Timepicker component of Syncfusion Essential JS 2 and more.
+control: EJ1 API Migration 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ej1 api migration in React Timepicker component
+# EJ1 API Migration in React Timepicker component
 
-This article describes the API migration process of TimePicker component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
+This article describes the API migration process of the TimePicker component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## Time Selection
 

@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Customization in React Datetimepicker component
 
-The DateTimePicker is available for UI customization that can be achieved by using available properties and events in the component.
+The DateTimePicker component offers extensive UI customization through properties and events that enable flexible design adaptation to specific application needs.
 
-## Day and Time Cell format
+## Day and Time Cell Format
 
-The DateTimePicker is available for UI customization based on your application requirements. It can be achieved by using [`renderDayCell`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker/renderDayCellEventArgs/#renderdaycelleventargs) event that provides an option to customize each day cell on rendering.
+The [`renderDayCell`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker/renderDayCellEventArgs/#renderdaycelleventargs) event provides an option to customize the appearance of each day cell during rendering. This allows for applying custom styles or disabling specific dates based on application logic.
 
-The following example disables the weekends of every month by using `renderDayCell` event.
+The following example demonstrates disabling weekends in every month using the `renderDayCell` event:
 
 `[Class-component]`
 

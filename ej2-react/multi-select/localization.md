@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Localization in React Multi select component
 
-The Localization library allows you to localize static text content of the [noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/#norecordstemplate)
- and [actionFailureTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/#actionfailuretemplate) &nbsp;properties according to the culture currently assigned to the MultiSelect.
+The Localization library enables you to translate static text content in the [noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/#norecordstemplate) and [actionFailureTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/#actionfailuretemplate) properties based on the MultiSelect's assigned culture.
 
 | Locale key | en-US (default)  |
 |------|------|
@@ -20,9 +19,9 @@ The Localization library allows you to localize static text content of the [noRe
 
 ## Loading translations
 
-To load translation object to your application, use load function of the **L10n** class.
+Use the **L10n** class's load function to register translation objects in your application.
 
-In the following sample, French culture is set to the MultiSelect and no data is loaded. Hence, the `noRecordsTemplate` property displays its text in French culture initially, and if the sample is run offline, the `actionFailureTemplate` property displays its text appropriately.
+In the following example, French culture is applied to the MultiSelect. With no data loaded, the `noRecordsTemplate` displays French text. If run offline, the `actionFailureTemplate` also displays in the configured culture.
 
 `[Class-component]`
 

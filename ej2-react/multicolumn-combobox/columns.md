@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Columns in React MultiColumn ComboBox component
 
-The [columns](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox#columns) property allows to define what data fields is to be displayed in the MultiColumn Combobox.
+The [columns](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox#columns) property specifies which data fields are displayed in the MultiColumn ComboBox.
 
-You can customize the column by using [ColumnModel](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/columnModel/), which provides options such as `field`, `header`, `width`, `format`, `template` and more.
+Customize columns using [ColumnModel](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/columnModel/), which provides options such as `field`, `header`, `width`, `format`, `template`, and more.
 
-* [field](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/columnModel/#field) - Specifies the fields to be displayed in each column, mapped from the data source to the multicolumn combobox.
+* [field](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/columnModel/#field) - Specifies the data source fields to display in each column.
 
-* [header](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/columnModel/#header) - Specifes the data to be displayed in the column header.
+* [header](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/columnModel/#header) - Specifies the text to display in the column header.
 
-* [width](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/columnModel/#width) - Specifes the column width.
+* [width](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/columnModel/#width) - Specifies the column width.
 
 In the following example, the column is customized with `field`, `header` and `width` properties.
 

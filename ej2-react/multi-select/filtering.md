@@ -10,12 +10,11 @@ domainurl: ##DomainURL##
 
 # Filtering in React Multi select component
 
-The MultiSelect has built-in support to filter data items when `allowFiltering` is enabled. The filter operation starts as soon as you start typing characters in the MultiSelect input.
+The MultiSelect includes built-in filtering support when `allowFiltering` is enabled. Filtering begins immediately as you type characters in the input field.
 
-To display filtered items in the popup, filter the required data and return it to the MultiSelect
-via [updateData](https://ej2.syncfusion.com/angular/documentation/api/drop-down-list/filteringEventArgs/#updatedata) method by using the [filtering](https://ej2.syncfusion.com/react/documentation/api/multi-select/#filtering) event.
+To display filtered items in the popup, handle the [filtering](https://ej2.syncfusion.com/react/documentation/api/multi-select/#filtering) event to filter your data source and return results using the [updateData](https://ej2.syncfusion.com/angular/documentation/api/drop-down-list/filteringEventArgs/#updatedata) method.
 
-The following sample illustrates how to query the data source and pass the data to the MultiSelect through the `updateData` method in `filtering` event.
+The following example shows how to filter the data source and display results through the `updateData` method in the `filtering` event.
 
 `[Class-component]`
 
@@ -45,9 +44,9 @@ The following sample illustrates how to query the data source and pass the data 
 
 ## Limit the minimum filter character
 
-When filtering the list items, you can set the limit for character count to raise remote request and fetch filtered data on the MultiSelect. This can be done by manual validation within the filter event handler.
+Control filtering performance by setting a minimum character count before issuing remote requests. Use manual validation in the filter event handler to enforce this limit.
 
-In the following example, the remote request does not fetch the search data until the search key contains three characters.
+In the following example, the component does not fetch data until at least three characters are typed.
 
 `[Class-component]`
 
@@ -77,9 +76,9 @@ In the following example, the remote request does not fetch the search data unti
 
 ## Change the filter type
 
-While filtering, you can change the filter type to `contains`, `startsWith`, or `endsWith` for string type within the filter event handler.
+Customize filter behavior by changing the filter type to `contains`, `startsWith`, or `endsWith` within the filter event handler.
 
-In the following examples, data filtering is done with `endsWith` type.
+The following examples demonstrate filtering with the `endsWith` type.
 
 `[Class-component]`
 

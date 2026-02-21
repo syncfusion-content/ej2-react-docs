@@ -8,10 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resize images before uploading it to the server in Uploader component
+# Resize images before uploading in React Uploader component
 
-You can customize the dimension of the images before uploading it to the server.
-By using selected event, you can get the selected file information as type of an object. From the obtained image file information, create a new canvas and render an image with the custom dimensions. Refer the corresponding code snippet as follows.
+Optimize upload performance and bandwidth usage by resizing images to specific dimensions before server transmission. Use the selected event to capture image file information and create a resized version with custom dimensions using an HTML5 canvas element. This approach enables client-side image optimization while maintaining quality.
+
+The following code snippet demonstrates how to intercept selected image files, resize them to maximum dimensions, and upload the resized version:
 
 ```ts
 import { Browser, createElement, detach, EventHandler, isNullOrUndefined } from '@syncfusion/ej2-base';

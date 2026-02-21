@@ -12,11 +12,11 @@ domainurl: ##DomainURL##
 
 ## Types
 
-This section explains the the various types of OTP (One-Time Password) input controls, explaining their default behaviors and appropriate use cases.
+This section explains the various OTP (One-Time Password) input types, their default behaviors, and appropriate use cases.
 
 ### Number type
 
-You can set the [type](https://ej2.syncfusion.com/react/documentation/api/otp-input/#type) property to [number](https://ej2.syncfusion.com/react/documentation/api/otp-input/otpInputType/) to use this input type as number. This is ideal for OTP input scenarios with numeric-only codes. By default `type` property is `number`.
+Set the [type](https://ej2.syncfusion.com/react/documentation/api/otp-input/#type) property to [number](https://ej2.syncfusion.com/react/documentation/api/otp-input/otpInputType/) to use numeric input. This is ideal for OTP codes containing only digits. The default value is `number`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -31,7 +31,7 @@ You can set the [type](https://ej2.syncfusion.com/react/documentation/api/otp-in
 
 ### Text type
 
-You can set the [type](https://ej2.syncfusion.com/react/documentation/api/otp-input/#type) property to [text](https://ej2.syncfusion.com/react/documentation/api/otp-input/otpInputType/) to use this input type as text. This is suitable when the OTP input need to include both letters and numbers.
+Set the [type](https://ej2.syncfusion.com/react/documentation/api/otp-input/#type) property to [text](https://ej2.syncfusion.com/react/documentation/api/otp-input/otpInputType/) to use text input. This is suitable when the OTP includes both letters and numbers.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -46,7 +46,7 @@ You can set the [type](https://ej2.syncfusion.com/react/documentation/api/otp-in
 
 ### Password type
 
-You can set the [type](https://ej2.syncfusion.com/react/documentation/api/otp-input/#type) property to [password](https://ej2.syncfusion.com/react/documentation/api/otp-input/otpInputType/) to use this input type as password in the OTP Input.
+Set the [type](https://ej2.syncfusion.com/react/documentation/api/otp-input/#type) property to [password](https://ej2.syncfusion.com/react/documentation/api/otp-input/otpInputType/) to mask the OTP values for security purposes.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

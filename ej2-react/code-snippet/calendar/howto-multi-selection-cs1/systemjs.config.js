@@ -14,7 +14,7 @@ System.config({
         }
     },
     paths: {
-        "syncfusion:": "https://cdn.syncfusion.com/ej2/20.3.56/",
+        "syncfusion:": "https://cdn.syncfusion.com/ej2/32.2.5/",
         "moment": "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.js"
     },
     map: {

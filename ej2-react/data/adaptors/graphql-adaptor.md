@@ -512,7 +512,7 @@ query {
 
 ## Integration with Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
 
-To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React component with the `GraphQLAdaptor`, refer to the documentation below:
+To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React components with the `GraphQLAdaptor`, refer to the documentation below:
 
 - [Grid](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-backends/graphql-nodejs-server#prerequisites)
 

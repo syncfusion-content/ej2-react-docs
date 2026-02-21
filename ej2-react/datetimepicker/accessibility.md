@@ -40,20 +40,17 @@ The accessibility compliance for the DateTimePicker component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Web accessibility defines a way to make web content and web applications more accessible to disabled people. It especially helps the dynamic content change and advanced user interface controls developed with Ajax, HTML, JavaScript, and related technologies.
+Web accessibility standards define practices to make web content and applications more accessible to users with disabilities. WAI-ARIA attributes are particularly valuable for dynamic content and advanced user interface controls built with Ajax, HTML, JavaScript, and related technologies.
 
-DateTimePicker provides built-in compliance with the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/datepicker-dialog/) specifications. WAI-ARIA supports is achieved through the attributes like `aria-expanded`, `aria-disabled`, `aria-activedescendant` applied to the input element.
+The DateTimePicker component provides built-in compliance with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/datepicker-dialog/) specifications through attributes applied to the input element: `aria-expanded`, `aria-disabled`, and `aria-activedescendant`. These attributes communicate the component's state and properties to assistive technologies, enabling disabled users to interact effectively with the DateTimePicker.
 
-To know about the accessibility of Calendar refer to the Calendar's [Accessibility](../calendar/accessibility/)
-section.
+For related information, refer to the Calendar component's [Accessibility](../calendar/accessibility/) section.
 
-It helps to provide information about the widget for assistive technology to the disabled person in screen reader.
+* **aria-expanded**: Indicates whether the DateTimePicker popup is expanded or collapsed.
 
-* **Aria-expanded**: attributes indicates the state of a collapsible element.
+* **aria-disabled**: Indicates the disabled state of the DateTimePicker component.
 
-* **Aria-disabled**: attribute indicates the disabled state of this DateTimePicker component.
-
-* **Aria-activedescendent**: attribute helps in managing the current active child of the DateTimePicker component.
+* **aria-activedescendant**: Helps manage the currently active descendant within the DateTimePicker component.
 
 ## Keyboard Interaction
 
@@ -76,7 +73,7 @@ Use the below list of keys to interact with the Calendar after the DatePicker po
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Upper Arrow</kbd>  | Focus the previous week date. |
+| <kbd>Up Arrow</kbd>  | Focus the previous week date. |
 | <kbd>Down Arrow</kbd>  | Focus the next week date. |
 | <kbd>Left Arrow</kbd>  | Focus the previous date. |
 | <kbd>Right Arrow</kbd>  | Focus the next date. |

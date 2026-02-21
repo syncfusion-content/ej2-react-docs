@@ -10,11 +10,23 @@ domainurl: ##DomainURL##
 
 # Globalization in React Datepicker component
 
-Globalization is the combination of internalization and localization. You can adapt the component to various languages by parsing and formatting the date or number [`Internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) and also add culture specific customization and translation to the text [`localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization).
+Globalization enables components to support multiple languages and regional formats. This combines [`Internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) (parsing and formatting dates according to regional standards) with [`localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) (translating text and applying culture-specific customizations).
 
-By default, DatePicker date format, week, and month names are specific to the `American English` culture. It utilizes the [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Internationalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) package to parse and format the date object based on the culture by using the official [`UNICODE CLDR`](http://cldr.unicode.org/) JSON data. It provides the `loadCldr` method to load culture specific CLDR JSON data. To use a different culture other than `English`, follow the steps below:
+By default, the DatePicker uses `American English` culture for date format, week names, and month names. It leverages the [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Internationalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) package with official [`UNICODE CLDR`](http://cldr.unicode.org/) JSON data to parse and format dates according to the selected culture.
 
-* Install the `CLDR-Data` package by using the following command (installs all the CLDR JSON data). To know more about CLDR-Data refer to the [`CLDR-Data`](https://cldr.unicode.org/index/cldr-spec/cldr-json-bindings)link.
+### **Quick Start: Enable a Different Culture**
+
+To display the DatePicker in a culture other than English, follow these steps:
+
+1. **Install CLDR-Data Package**
+
+Install the `CLDR-Data` package using the following command:
+
+```bash
+npm install cldr-data
+```
+
+This package contains all required CLDR JSON data. For more information, refer to [`CLDR-Data`](https://cldr.unicode.org/index/cldr-spec/cldr-json-bindings).
 
     ```
      npm install cldr-data --save
@@ -60,7 +72,7 @@ Locale keywords |Text
 today | Name of the button to choose Today date.
 placeholder | Hint to describe expected value in input element.
 
-* Before changing to a culture other than `English`, ensure that locale text for the concerned culture is loaded through `load` method of `L10n` class.
+* Before changing to a culture other than `English`, ensure that locale text for the target culture is loaded through the `load` method of the `L10n` class.
 
     ```ts
       //Load the L10n from ej2-base

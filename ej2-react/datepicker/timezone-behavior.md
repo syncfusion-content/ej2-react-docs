@@ -10,25 +10,29 @@ domainurl: ##DomainURL##
 
 # Timezone Behavior in DatePicker Control
 
-The DatePicker component displays and maintains the selected date value based on the client system’s current time zone. When a user selects a value, it is stored and rendered using the local time zone of the system at the time of selection. This ensures that the value remains consistent and predictable during user interaction.
+The DatePicker component displays and maintains date values based on the client system's local time zone. When a user selects a date, it is stored using the system's time zone at the time of selection, ensuring consistent and predictable behavior.
 
-N> if the system time zone is changed dynamically after a value is selected, the DatePicker will **not update or shift** the selected value. The component preserves the original selection, ensuring a stable and reliable user experience.
+**Important**: If the system time zone changes after a date is selected, the DatePicker **does not automatically update** the displayed value. The component preserves the original selection, maintaining a stable user experience.
 
 ## serverTimezoneOffset
 
-The `serverTimezoneOffset` property allows you to specify the server's time zone offset from UTC in **hours** or **fractional hours**. This is useful when binding values from the server to ensure they are interpreted correctly on the client side.
+The `serverTimezoneOffset` property specifies the server's time zone offset from UTC in **hours** or **fractional hours**, enabling correct interpretation of server-provided date values on the client.
 
-### Key Points
+| Scenario | UTC Offset | Example |
+| --- | --- | --- |
+| Eastern Standard Time | `-5` | `serverTimezoneOffset={-5}` |
+| Fractional offset | `-4.5` | `serverTimezoneOffset={-4.5}` (UTC-4:30) |
+| India Standard Time | `5.5` | `serverTimezoneOffset={5.5}` (UTC+5:30) |
 
-- The value should be a number representing the offset from UTC.
-- Examples:
-  - `-5` → UTC-5 (Eastern Standard Time)
-  - `-4.5` → UTC-4:30 (Afghanistan Time)
-  - `5.5` → UTC+5:30 (India Standard Time)
+**Scope**: The `serverTimezoneOffset` property applies **only to pre-bound values** during initialization or data binding. It **does not affect** dates selected by the user during runtime or dates entered directly in the input field.
 
-N> The `serverTimezoneOffset` property is applicable **only for pre-bound values** (i.e., values set during initialization or data binding). It does **not affect** values selected by the user during runtime.
+### Edge Cases & Considerations
 
-The below examples shows the basic DatePicker component.
+- **Daylight Saving Time (DST)**: The component uses the system's DST information; no manual DST adjustment is required. However, when migrating across DST boundaries, ensure server times are correctly UTC-adjusted.
+- **UTC±0 (GMT/UTC)**: Specify `serverTimezoneOffset={0}` when the server operates in UTC.
+- **Dynamic timezone changes**: System time zone changes after date selection do not affect already-selected values; users must re-select dates to reflect the new time zone.
+
+The following examples demonstrate DatePicker timezone handling:
 
 `[Class-component]`
 

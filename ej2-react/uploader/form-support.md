@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Form support in React Uploader component
 
-The uploader component works with HTML form like default file input. The following configuration must to make the uploader works inside form.
+The Uploader component integrates with HTML forms like standard file input elements. To use the Uploader within a form, set the following configuration:
 
-    *   `saveUrl` and `removeUrl` must be null.
-    *   `autoUpload` must be disabled.
-    *   `name` attribute must be added in input element.
+* **saveUrl** and **removeUrl** must be `null`
+* **autoUpload** must be `false`
+* **name** attribute must be set on the input element
 
-The selected or dropped files are received as a collection in form action when the form is submitted. The form action handles the server-side operations that manage the file upload process. When you reset the form, the file list and data will be cleared.
+When the form is submitted, selected or dropped files are sent as a collection to the form action. The form action handles server-side upload processing. Resetting the form clears both the file list and associated data.
 
 `[Class-component]`
 

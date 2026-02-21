@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Select items in React List box component
 
-In the following example, `Bugatti Chiron` is selected using [`selectItems`](https://ej2.syncfusion.com/react/documentation/api/list-box/#selectitems) method.
+Use the [`selectItems`](https://ej2.syncfusion.com/react/documentation/api/list-box/#selectitems) method to select items in the ListBox. In the following example, `Bugatti Chiron` is selected:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Style appearance in React Calendar component
 
-The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
+The following CSS examples show how to modify the Calendar control's appearance to match user preferences. Apply these rules with appropriate specificity to override default styles.
 
 ## Customizing the background color for the Calendar
 

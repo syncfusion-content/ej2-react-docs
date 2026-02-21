@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize Slider ticks label in React Range Slider component
 
-The Slider view can be customized using CSS. By overriding the Slider CSS classes, you can customize the ticks appearance. The ticks in Slider allows you to easily identify the current value/values of the slider. It contains [`smallStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript/#smallstep) and [`largeStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript/#largestep). By default, Slider has the class `e-tick` for Slider ticks. You can override the class as per your requirement. Refer to the following code snippet to render ticks.
+The Slider ticks can be customized using CSS by overriding Slider CSS classes. Ticks help identify the current value(s) of the Slider and include [`smallStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript/#smallstep) and [`largeStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript/#largestep). By default, the Slider uses the `e-tick` class. You can override this class as needed to render customized ticks.
 
 ```css
 .e-scale .e-tick.e-custom::before {

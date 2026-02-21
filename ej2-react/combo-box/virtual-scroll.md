@@ -62,7 +62,7 @@ The following sample displays the OrderId from the `Orders` Data Service.
 
 ## Customizing items count in virtualization 
 
-When the `enableVirtualization` property is enabled, the `take` property provided by the user within the Query parameter at the initial state or during the `actionBegin` event will be considered. Internally, it calculates the items that fit onto the current page (i.e., probably twice the amount of the popup's height). If the user-provided take value is less than the minimum number of items that fit into the popup, the user-provided take value will not be considered.
+When the `enableVirtualization` property is enabled, the `take` property specified in the Query parameter at initialization or during the `actionBegin` event determines the number of items loaded. The component internally calculates the optimal item count based on the popup height. If the specified `take` value is less than the minimum number of items that fit within the popup, the component uses the calculated minimum value instead.
 
 The following sample shows the example for Customizing items count in virtualization.
 

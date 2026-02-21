@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Prevent nullable input in numerictextbox in React Numerictextbox component
+# Prevent nullable input in NumericTextBox in React
 
-By default, the value of the NumericTextBox sets to null. In some applications, the value of the NumericTextBox should not be null at any instance. In such cases, following sample can be used to prevent nullable input in NumericTextBox.
+By default, the NumericTextBox value can be set to null when the input is cleared. For applications requiring a value to always be present, use the following sample to enforce a non-null value and prevent users from creating empty NumericTextBox inputs.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

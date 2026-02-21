@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Display numeric keypad when focus on mobile devices in React Maskedtextbox component
 
-By default, on focusing the MaskedTextBox, alphanumeric keypad will be displayed on mobile devices. Sometimes only numeric keypad for number values is needed, and this can be achieved by setting "type" property to `tel`.
-Refer to the following example to enable numeric keypad in MaskedTextBox.
+By default, when the MaskedTextBox is focused, an alphanumeric keypad is displayed on mobile devices. To display only a numeric keypad, set the `type` property to `tel`. The following example shows how to enable the numeric keypad in the MaskedTextBox.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
