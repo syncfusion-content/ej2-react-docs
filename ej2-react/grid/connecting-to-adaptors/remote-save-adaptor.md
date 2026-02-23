@@ -11,9 +11,9 @@ domainurl: ##DomainURL##
 
 # Hybrid Data Binding in Syncfusion React Grid
 
-The `RemoteSaveAdaptor` in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a hybrid approach to data management that combines the best of both client-side and server-side processing. The adaptor fetches the complete dataset from the server once, and then executes operations such as filtering, sorting, paging, searching, and grouping locally in the browser without additional server requests. Only CRUD operations (Create, Update, Delete) communicate with the server to persist data changes. It reduces server load and network latency while keeping data persistence secure.
+The [RemoteSaveAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/remote-save-adaptor) in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a hybrid approach to data management that combines the best of both client-side and server-side processing. The adaptor fetches the complete dataset from the server once, and then executes operations such as filtering, sorting, paging, searching, and grouping locally in the browser without additional server requests. Only CRUD operations (Create, Update, Delete) communicate with the server to persist data changes. It reduces server load and network latency while keeping data persistence secure.
 
-For complete server‑side configuration and additional implementation details, refer to the DataManager RemoteSaveAdaptor documentation, which explains endpoint setup, request handling, and best practices for synchronizing CRUD operations with remote services.
+For complete server‑side configuration and additional implementation details, refer to the [DataManager RemoteSaveAdaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/remote-save-adaptor), which explains endpoint setup, request handling, and best practices for synchronizing CRUD operations with remote services.
 
 Once the project creation and backend setup are complete, the next step is to render the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component on the client side.
 
@@ -167,7 +167,7 @@ The Grid has now been successfully created with full functionality, including pa
 
 ## CRUD operations
 
-CRUD refers to the four fundamental data operations: **Create** (add records), **Read** (view records), **Update** (modify records), and **Delete** (remove records). Backend configuration for handling these operations is detailed in the Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager `RemoteSaveAdaptor` documentation, which covers endpoint setup, request handling, and best practices for synchronizing CRUD actions with remote services.
+CRUD refers to the four fundamental data operations: **Create** (add records), **Read** (view records), **Update** (modify records), and **Delete** (remove records). Backend configuration for handling these operations is detailed in the Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager [RemoteSaveAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/remote-save-adaptor) documentation, which covers endpoint setup, request handling, and best practices for synchronizing CRUD actions with remote services.
 
 In this project, the "Order ID" column has already been designated as the primary key, which is essential for performing CRUD operations in the Grid. The following sections illustrate both the client‑side and server‑side code required to implement complete CRUD functionality.
 
@@ -369,9 +369,9 @@ namespace RemoteSaveAdaptorDemo.Controllers
 
 **Starting the application:** Run the application by pressing <kbd>F5</kbd> in Visual Studio. The browser opens and the Grid loads all orders from the service.
 
-**Connection verification:** Open the browser Developer Tools (<kbd>F12</kbd>) and select the "Network" tab. Refresh the page to confirm a request to **https://localhost:xxxx** and verify that the response contains JSON data.
+**Connection verification:** Open the browser Developer Tools <kbd>F12</kbd> sand select the "Network" tab. Refresh the page to confirm a request to **https://localhost:xxxx** and verify that the response contains JSON data.
 
-> CORS configuration is included in the [server setup](). Refer to that section for detailed CORS implementation and security considerations for production environments.
+> CORS configuration is included in the [server setup](https://ej2.syncfusion.com/react/documentation/data/adaptors/remote-save-adaptor#step-8-cors-configuration). Refer to that section for detailed CORS implementation and security considerations for production environments.
 
 ## Troubleshooting
 

@@ -874,7 +874,7 @@ Syncfusion components require specific CSS files to render properly. Add the CSS
 
 Open **src/main.jsx** and add the following CSS imports at the top:
 
-```jsx
+```js
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
@@ -908,7 +908,7 @@ The **GraphQLAdaptor** is a built-in Syncfusion adaptor specifically designed fo
 
 Replace the content of **src/App.jsx** with the following code:
 
-```jsx
+```js
 import { DataManager, GraphQLAdaptor } from '@syncfusion/ej2-data';
 import { 
     ColumnDirective, 
@@ -1048,7 +1048,7 @@ The `GraphQLAdaptor` configuration consists of three main parts:
 
 Specifies the way to extract data from the GraphQL response:
 
-```javascript
+```js
 response: {
   result: 'orders.result',  // Path to the data array
   count: 'orders.count'     // Path to the total count
@@ -1061,7 +1061,7 @@ This tells the adaptor where to find the result data and count in the GraphQL re
 
 Defines the GraphQL query for fetching data with all data operations:
 
-```ts
+```text
 query GetOrders($datamanager: DataManagerInput) {
   orders(datamanager: $datamanager) {
     result {
@@ -1093,7 +1093,7 @@ The Grid component is configured with various features to enable data operations
 
 **Editing configuration:**
 
-```javascript
+```js
 const editSettings = { 
   allowEditing: true,
   allowAdding: true,
@@ -1105,13 +1105,13 @@ const editSettings = {
 
 **Toolbar buttons:**
 
-```javascript
+```js
 const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'];
 ```
 
 **Column configuration:**
 
-```jsx
+```js
 <ColumnDirective 
   field='orderID' 
   headerText='Order ID' 
@@ -1124,7 +1124,7 @@ const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'];
 
 **Inject services:**
 
-```jsx
+```js
 <Inject services={[Toolbar, Sort, Filter, Page, Edit]} />
 ```
 
@@ -1138,7 +1138,7 @@ Paging divides large datasets into smaller, manageable pages based on offset and
 
 Set the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowpaging) property to `true` and configure page size using [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#pagesettings).
 
-```jsx
+```js
 import { DataManager, GraphQLAdaptor } from '@syncfusion/ej2-data';
 import { 
     ColumnDirective, 
@@ -1193,7 +1193,7 @@ Searching provides the capability to find specific records by entering keywords 
 
 Add the `Search` item to the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbar) property and inject the `Toolbar` service.
 
-```jsx
+```js
 import { DataManager, GraphQLAdaptor } from '@syncfusion/ej2-data';
 import { 
     ColumnDirective, 
@@ -1245,7 +1245,7 @@ The sorting feature in the Grid allows records to be organized in ascending or d
 
 Set the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to `true`.
 
-```jsx
+```js
 import { DataManager, GraphQLAdaptor } from '@syncfusion/ej2-data';
 import { 
     ColumnDirective, 
@@ -1299,7 +1299,7 @@ Filtering narrows down records by specifying conditions on column values. Record
 
 Set the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowfiltering) property to `true`. Optionally configure the filter type using [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#filtersettings).
 
-```jsx
+```js
 import { DataManager, GraphQLAdaptor } from '@syncfusion/ej2-data';
 import { 
     ColumnDirective, 
@@ -1354,7 +1354,7 @@ CRUD operations (Create, Read, Update, Delete) are supported in the Grid for man
 
 Configure the [editSettings](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#editsettings) with `allowAdding: true`. Add the `Add` button to the toolbar and configure the GraphQL insert mutation using `getMutation`.
 
-```jsx
+```js
 import { DataManager, GraphQLAdaptor } from '@syncfusion/ej2-data';
 import { 
     ColumnDirective, 
@@ -1436,7 +1436,7 @@ The image illustrates the added record passed from the DataManager.
 
 Configure the [editSettings](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#editsettings) with `allowEditing: true`. Add the `Edit`, `Update`, and `Cancel` buttons to the toolbar and configure the GraphQL update mutation.
 
-```jsx
+```js
 const data = new DataManager({ 
     url: '/graphql',
     adaptor: new GraphQLAdaptor({
@@ -1506,7 +1506,7 @@ The image illustrates the edited record passed from the DataManager.
 
 Configure the [editSettings](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#editsettings) with `allowDeleting: true`. Add the `Delete` button to the toolbar and configure the GraphQL delete mutation.
 
-```jsx
+```js
 const data = new DataManager({ 
     url: '/graphql',
     adaptor: new GraphQLAdaptor({
@@ -1600,7 +1600,7 @@ Navigate to `https://localhost:****/graphql` in your browser.
 
 Try executing the following query in the GraphQL IDE:
 
-```ts
+```text
 query GetOrders {
   orders(datamanager: { skip: 0, take: 10 }) {
     result {
@@ -1618,7 +1618,7 @@ query GetOrders {
 
 Try creating a new order:
 
-```ts
+```text
 mutation CreateOrder {
   addOrder(input: {
     orderID: 10999
