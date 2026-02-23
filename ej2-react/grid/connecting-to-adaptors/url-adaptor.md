@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Custom REST API Remote Data Binding in Syncfusion React Components
 
-The `UrlAdaptor` in the Syncfusion<sup style="font-size:70%">&reg;</sup> React DataManager streamlines connecting the React Grid to REST API endpoints by managing request and response handling for remote data operations. It automatically converts Grid actions such as filtering, sorting, paging, and CRUD into HTTP POST requests and processes the server’s JSON response, enabling smooth remote data binding without custom request logic.
+The [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/url-adaptor) in the Syncfusion<sup style="font-size:70%">&reg;</sup> React DataManager streamlines connecting the React Grid to REST API endpoints by managing request and response handling for remote data operations. It automatically converts Grid actions such as filtering, sorting, paging, and CRUD into HTTP POST requests and processes the server’s JSON response, enabling smooth remote data binding without custom request logic.
 
-For details on configuring the backend (expected request/response format, server‑side processing), refer to the UrlAdaptor backend setup documentation.
+For details on configuring the backend (expected request/response format, server‑side processing), refer to the [UrlAdaptor backend setup documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/url-adaptor).
 
 Once the project creation and backend setup are complete, the next step is to render the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid Component on the client side.
 
@@ -148,7 +148,7 @@ The `Syncfusion.EJ2.Base` namespace provides these methods:
 
 | Operation | Method(s) | Purpose | Use Case |
 |-----------|-----------|---------|----------|
-| **Paging** | `PerformSkip`, `PerformTake` | Load specific page of data. | Show 10 records at a time from "100K" records. |
+| **Paging** | `PerformSkip`, `PerformTake` | Load specific page of data. | Show "10" records at a time from "100K" records. |
 | **Filtering** | `PerformFiltering` | Apply filter conditions. | Show only orders from "Germany". |
 | **Searching** | `PerformSearching` | Search across columns. | Find all records containing "ALFKI". |
 | **Sorting** | `PerformSorting` | Sort by one/multiple columns. | Order by "CustomerID" ascending. |
@@ -172,7 +172,7 @@ namespace UrlAdaptorDemo.Server.Controllers
 
 ### Paging
 
-The paging feature is enabled by setting the `allowPaging` property to `true` and injecting the `Page` module from `@syncfusion/ej2-react-grids` into the grid.
+The paging feature is enabled by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowpaging) property to `true` and injecting the `Page` module from `@syncfusion/ej2-react-grids` into the grid.
 
 ```js
   <GridComponent dataSource={data} allowPaging={true}>
@@ -250,7 +250,7 @@ export default App;
 
 ### Filtering
 
-The filtering feature is enabled by setting the `allowFiltering` property to `true` and injecting the `Filter` module from `@syncfusion/ej2-react-grids` into the grid.
+The filtering feature is enabled by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowfiltering) property to `true` and injecting the `Filter` module from `@syncfusion/ej2-react-grids` into the grid.
 
 ```js
   <GridComponent dataSource={data} allowFiltering={true}>
@@ -328,7 +328,7 @@ export default App;
 
 ### Searching
 
-The searching feature is enabled by configuring the `toolbar` property with `Search` item and injecting the `Toolbar` and `Search` modules from `@syncfusion/ej2-react-grids` into the grid.
+The searching feature is enabled by configuring the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbar) property with `Search` item and injecting the `Toolbar` and `Search` modules from `@syncfusion/ej2-react-grids` into the grid.
 
 ```js
   <GridComponent dataSource={data} toolbar={['Search']}>
@@ -403,7 +403,7 @@ export default App;
 
 ### Sorting
 
-The sorting feature is enabled by setting the `allowSorting` property to `true` and injecting the `Sort` module from `@syncfusion/ej2-react-grids` into the grid.
+The sorting feature is enabled by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to `true` and injecting the `Sort` module from `@syncfusion/ej2-react-grids` into the grid.
 
 ```js
   <GridComponent dataSource={data} allowSorting={true}>
@@ -481,7 +481,7 @@ export default App;
 
 ### Grouping and aggregates
 
-The grouping and aggregates feature is enabled by setting the `allowGrouping` property to `true` and injecting the `Group` and `Aggregate` modules from `@syncfusion/ej2-react-grids` into the grid.
+The grouping and aggregates feature is enabled by setting the [allowGrouping](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowgrouping) property to `true` and injecting the `Group` and `Aggregate` modules from `@syncfusion/ej2-react-grids` into the grid.
 
 ```ts
   <GridComponent dataSource={data} allowGrouping={true}>
@@ -871,6 +871,8 @@ public void CrudUpdate([FromBody] CRUDModel<OrdersDetails> request)
 Foreign key column configuration with remote data using `UrlAdaptor` requires assigning the `DataManager` instance with endpoint URL to the column data source along with foreign key field and value properties. When both grid and foreign key column use `UrlAdaptor`, grid data and foreign key data are fetched separately from respective remote endpoints. Filtering and sorting operations trigger server requests based on the foreign key field and corresponding value.
 
 ```ts
+[App.jsx]
+
 import { GridComponent, ColumnsDirective, ColumnDirective, Filter, Inject, Sort, ForeignKey } from '@syncfusion/ej2-react-grids';
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 import './App.css';
@@ -907,7 +909,7 @@ export default ForeignKeyColumn;
 
 ### Filter operation for Foreign Key Columns
 
-Filtering foreign-key columns automatically displays related text values via the `foreignKeyValue` property, while actual filtering uses the `foreignKeyField` property.
+Filtering foreign-key columns automatically displays related text values via the [foreignKeyValue](https://ej2.syncfusion.com/react/documentation/api/grid/column#foreignkeyvalue) property, while actual filtering uses the [foreignKeyField](https://ej2.syncfusion.com/react/documentation/api/grid/column#foreignkeyfield) property.
 
 ![ForeignKey column filtering](../images/foreign-key-filter.png)
 

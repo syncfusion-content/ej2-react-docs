@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # ASP.NET Web API Remote Data Binding in Syncfusion React Components
 
-The `WebApiAdaptor` integrates the React Grid with Web API endpoints that support OData‑style querying. It is derived from the `ODataAdaptor`, meaning the target Web API must accept OData‑formatted query parameters for operations such as filtering, sorting, paging, and searching. When the React Grid performs any data action, the `WebApiAdaptor` generates OData‑compliant query strings, sends them to the Web API endpoint, and processes the returned JSON to populate the Grid. This ensures seamless remote data binding with OData-capable Web API services.
+The [WebApiAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/webapi-adaptor) integrates the React Grid with Web API endpoints that support OData‑style querying. It is derived from the `ODataAdaptor`, meaning the target Web API must accept OData‑formatted query parameters for operations such as filtering, sorting, paging, and searching. When the React Grid performs any data action, the `WebApiAdaptor` generates OData‑compliant query strings, sends them to the Web API endpoint, and processes the returned JSON to populate the Grid. This ensures seamless remote data binding with OData-capable Web API services.
 
-For details on configuring the backend (expected request/response format, server‑side processing), refer to the WebApiAdaptor backend setup documentation.
+For details on configuring the backend (expected request/response format, server‑side processing), refer to the [WebApiAdaptor backend setup documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/webapi-adaptor).
 
 Once the project creation and backend setup are complete, the next step is to render the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid Component on the client side.
 
@@ -140,7 +140,7 @@ React Grid optimizes large datasets by relying on server‑side data operations 
 
 ### Paging
 
-The paging feature is enabled by setting the `allowPaging` property to `true` and injecting the `Page` module from `@syncfusion/ej2-react-grids` into the grid.
+The paging feature is enabled by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowpaging) property to `true` and injecting the `Page` module from `@syncfusion/ej2-react-grids` into the grid.
 
 ```ts
   <GridComponent dataSource={data} allowPaging={true}>
@@ -198,7 +198,7 @@ export default App;
 
 ### Filtering
 
-The filtering feature is enabled by setting the `allowFiltering` property to `true` and injecting the `Filter` module from `@syncfusion/ej2-react-grids` into the grid.
+The filtering feature is enabled by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowfiltering) property to `true` and injecting the `Filter` module from `@syncfusion/ej2-react-grids` into the grid.
 
 ```js
   <GridComponent dataSource={data} allowFiltering={true}>
@@ -355,7 +355,7 @@ export default App;
 
 ### Searching
 
-The searching feature is enabled by configuring the `toolbar` property with `Search` item and injecting the `Toolbar` and `Search` modules from `@syncfusion/ej2-react-grids` into the grid.
+The searching feature is enabled by configuring the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbar) property with `Search` item and injecting the `Toolbar` and `Search` modules from `@syncfusion/ej2-react-grids` into the grid.
 
 ```ts
   <GridComponent dataSource={data} toolbar={['Search']}>
@@ -521,7 +521,7 @@ export default App;
 
 ### Sorting
 
-The sorting feature is enabled by setting the `allowSorting` property to `true` and injecting the `Sort` module from `@syncfusion/ej2-react-grids` into the grid.
+The sorting feature is enabled by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting)  property to `true` and injecting the `Sort` module from `@syncfusion/ej2-react-grids` into the grid.
 
 ```ts
   <GridComponent dataSource={data} allowSorting={true}>
@@ -606,7 +606,7 @@ export default App;
 
 The Grid has now been successfully created with including paging, sorting, filtering. the next step is to enabling CRUD operations.
 
-### CRUD operations
+## CRUD operations
 
 CRUD refers to the four essential data operations: **Create** (add records), **Read** (view records), **Update** (modify records), and **Delete** (remove records).
 
