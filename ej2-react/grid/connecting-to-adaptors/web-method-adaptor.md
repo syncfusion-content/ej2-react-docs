@@ -14,7 +14,7 @@ The `WebMethodAdaptor` in Syncfusion<sup style="font-size:70%">&reg;</sup> React
  
 ![Webmethod Adaptor](../images/web-method-adaptor-value.png)
 
-For complete server‑side configuration and additional implementation details, refer to the DataManager Webmethod Adaptor documentation, which covers endpoint setup, query processing, and best practices for integrating WebMethod‑based services.
+For complete server‑side configuration and additional implementation details, refer to the [DataManager Webmethod Adaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/web-method-adaptor), which covers endpoint setup, query processing, and best practices for integrating WebMethod‑based services.
 
 Once the project creation and backend setup are complete, the next step is to render the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid Component on the client side.
 
@@ -22,7 +22,7 @@ Once the project creation and backend setup are complete, the next step is to re
 
 ```
 WebMethodAdaptor/
-├── WebmethodAdaptor.client/     # React frontend (Vite/React project).
+├── WebMethodAdaptor.client/     # React frontend (Vite/React project).
 │   ├── src/
 │   │   ├── App.css
 │   │   └── App.jsx                  # Add WebMethodAdaptor here.
@@ -117,7 +117,7 @@ The `Syncfusion.EJ2.Base` namespace provides these methods:
 
 | Operation | Method(s) | Purpose | Use Case |
 |-----------|-----------|---------|----------|
-| **Paging** | `PerformSkip`, `PerformTake` | Load specific page of data. | Show 10 records at a time from "100K" records. |
+| **Paging** | `PerformSkip`, `PerformTake` | Load specific page of data. | Show "10" records at a time from "100K" records. |
 | **Filtering** | `PerformFiltering` | Apply filter conditions. | Show only orders from "Germany". |
 | **Searching** | `PerformSearching` | Search across columns | Find all records containing "ALFKI". |
 | **Sorting** | `PerformSorting` | Sort by one/multiple columns. | Order by "CustomerID" ascending. |
@@ -163,7 +163,7 @@ namespace WebMethodAdaptorDemo.Controllers
 
 ### Paging
 
-The paging feature is enabled by setting the `allowPaging` property to `true` and injecting the `Page` module from `@syncfusion/ej2-react-grids` into the grid.
+The paging feature is enabled by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowpaging) property to `true` and injecting the `Page` module from `@syncfusion/ej2-react-grids` into the grid.
 
 ```ts
   <GridComponent dataSource={data} allowPaging={true}>
@@ -241,7 +241,7 @@ The following example demonstrates the server’s handling of paging requests se
 
 ### Filtering
 
-The filtering feature is enabled by setting the `allowFiltering` property to `true` and injecting the `Filter` module from `@syncfusion/ej2-react-grids` into the grid.
+The filtering feature is enabled by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowfiltering) property to `true` and injecting the `Filter` module from `@syncfusion/ej2-react-grids` into the grid.
 
 ```ts
   <GridComponent dataSource={data} allowFiltering={true}>
@@ -323,7 +323,7 @@ export default App;
 
 ### Searching
 
-The searching feature is enabled by configuring the `toolbar` property with `Search` item and injecting the `Toolbar` and `Search` modules from `@syncfusion/ej2-react-grids` into the grid.
+The searching feature is enabled by configuring the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbar) property with `Search` item and injecting the `Toolbar` and `Search` modules from `@syncfusion/ej2-react-grids` into the grid.
 
 ```ts
   <GridComponent dataSource={data} toolbar={['Search']}>
@@ -394,7 +394,7 @@ export default App;
 
 ### Sorting
 
-The sorting feature is enabled by setting the `allowSorting` property to `true` and injecting the `Sort` module from `@syncfusion/ej2-react-grids` into the grid.
+The sorting feature is enabled by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to `true` and injecting the `Sort` module from `@syncfusion/ej2-react-grids` into the grid.
 
 ```ts
   <GridComponent dataSource={data} allowSorting={true}>

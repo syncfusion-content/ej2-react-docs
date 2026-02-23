@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # OData Remote Data Binding in Syncfusion React Components
 
-The `ODataV4Adaptor` in the Syncfusion<sup style="font-size:70%">&reg;</sup> React DataManager enables seamless integration between the React Grid and OData V4 services by handling OData‑formatted request and response processing. It automatically converts Grid actions such as filtering, sorting, paging, grouping, and CRUD into OData V4 compliant query options (like `$filter`, `$orderby`, `$top`, `$skip`) and sends them to the server. The adaptor also parses the structured OData V4 JSON response, extracting the result set and count values, ensuring smooth remote data binding without custom query or response logic.
+The [ODataV4Adaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/odatav4-adaptor) in the Syncfusion<sup style="font-size:70%">&reg;</sup> React DataManager enables seamless integration between the React Grid and OData V4 services by handling OData‑formatted request and response processing. It automatically converts Grid actions such as filtering, sorting, paging, grouping, and CRUD into OData V4 compliant query options (like `$filter`, `$orderby`, `$top`, `$skip`) and sends them to the server. The adaptor also parses the structured OData V4 JSON response, extracting the result set and count values, ensuring smooth remote data binding without custom query or response logic.
 
-For complete server‑side configuration and additional implementation details, refer to the DataManager ODataV4Adaptor documentation, which covers endpoint setup, query processing, and best practices for integrating OData V4 services.
+For complete server‑side configuration and additional implementation details, refer to the [DataManager ODataV4Adaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/odatav4-adaptor), which covers endpoint setup, query processing, and best practices for integrating OData V4 services.
 
 Once the project creation and backend setup are complete, the next step is to render the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid Component on the client side.
 
@@ -121,7 +121,7 @@ React Grid optimizes large datasets by relying on server‑side data operations 
 
 ### Paging
 
-The paging feature is enabled by setting the `allowPaging` property to `true` and injecting the `Page` module from `@syncfusion/ej2-react-grids` into the grid.
+The paging feature is enabled by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowpaging) property to `true` and injecting the `Page` module from `@syncfusion/ej2-react-grids` into the grid.
 
 ```ts
   <GridComponent dataSource={data} allowPaging={true}>
@@ -134,7 +134,7 @@ The paging feature is enabled by setting the `allowPaging` property to `true` an
 
 After enabling paging on the client side, the `ODataV4Adaptor` generates OData‑compliant paging parameters in the outgoing request. It applies paging by adding `$skip` and `$top` values based on the Grid’s current page and page size. When the server receives these parameters, it returns only the required page data, and the Grid renders the requested page.
 
-Utilize `SetMaxTop()` method in **Program.cs** to establish maximum records per request limit (previously configured with `SetMaxTop(100)`). 
+Utilize `SetMaxTop()` method in **Program.cs** to establish maximum records per request limit. 
 
 {% tabs %}
 {% highlight cs tabtitle="Program.cs" %}
@@ -186,7 +186,7 @@ The following screenshot illustrates the ODataV4Adaptor with paging query.
 
 ### Filtering
 
-The filtering feature is enabled by setting the `allowFiltering` property to `true` and injecting the `Filter` module from `@syncfusion/ej2-react-grids` into the grid.
+The filtering feature is enabled by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowfiltering) property to `true` and injecting the `Filter` module from `@syncfusion/ej2-react-grids` into the grid.
 
 ```ts
   <GridComponent dataSource={data} allowFiltering={true}>
@@ -199,7 +199,7 @@ The filtering feature is enabled by setting the `allowFiltering` property to `tr
 
 After enabling filtering on the client side, the `ODataV4Adaptor` converts the applied filter conditions into OData‑compliant query parameters. It generates a `$filter` expression based on the field, operator, and value selected in the Grid. The server receives this OData filter query, executes the filtering operation, and returns only the matching records, which the Grid then renders.
 
-Verify **Program.cs** includes `.Filter()` method in OData configuration (configured in previous steps):
+Verify **Program.cs** includes `.Filter()` method in OData configuration.
 
 {% tabs %}
 {% highlight cs tabtitle="Program.cs" %}
@@ -260,7 +260,7 @@ Multiple columns can be filtered simultaneously.
 
 ### Searching
 
-The searching feature is enabled by configuring the `toolbar` property with `Search` item and injecting the `Toolbar` and `Search` modules from `@syncfusion/ej2-react-grids` into the grid.
+The searching feature is enabled by configuring the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbar) property with `Search` item and injecting the `Toolbar` and `Search` modules from `@syncfusion/ej2-react-grids` into the grid.
 
 ```ts
   <GridComponent dataSource={data} toolbar={['Search']}>
@@ -328,7 +328,7 @@ export default App;
 
 ### Sorting 
 
-The sorting feature is enabled by setting the `allowSorting` property to `true` and injecting the `Sort` module from `@syncfusion/ej2-react-grids` into the grid.
+The sorting feature is enabled by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to `true` and injecting the `Sort` module from `@syncfusion/ej2-react-grids` into the grid.
 
 ```ts
   <GridComponent dataSource={data} allowSorting={true}>
@@ -391,13 +391,13 @@ export default App;
 
 **Single column sorting:**
 
-Click "Customer ID" column header to sort by CustomerID field.
+Click "Customer ID" column header to sort by "CustomerID" field.
 
 ![Single column sorting query](../images/odatav4-adaptor-sorting.png)
 
 **Multi-column sorting:**
 
-Hold Ctrl key and click "CustomerID" followed by "Employee ID" to establish hierarchical sort (primary sort by country, secondary sort by ID within each country group).
+Hold the <kbd>Ctrl</kbd> key and click "Employee ID" followed by "Customer ID" to establish hierarchical sort (primary sort by "Customer ID", secondary sort by "Employee ID" within each "Customer ID" group).
 
 ![Multi column sorting query](../images/odatav4-adaptor-multi-column-sorting.png)
 
@@ -416,13 +416,13 @@ CRUD refers to the four essential data operations: **Create** (add records), **R
 
 | Operation | HTTP Method | URL Example | Description |
 |-----------|-------------|-------------|-------------|
-| **Read** | GET | `/odata/Orders` | Get all records |
-| **Create** | POST | `/odata/Orders` | Add a new record |
-| **Update** | PATCH | `/odata/Orders(10001)` | Update record with key 10001 |
-| **Delete** | DELETE | `/odata/Orders(10001)` | Delete record with key 10001 |
+| **Read** | GET | `/odata/Orders` | Get all records. |
+| **Create** | POST | `/odata/Orders` | Add a new record. |
+| **Update** | PATCH | `/odata/Orders(10001)` | Update record with key "10001". |
+| **Delete** | DELETE | `/odata/Orders(10001)` | Delete record with key "10001". |
 
 
-### Step 1: Complete server-Side controller
+### Step 1: Complete server-side controller
 
 Add all CRUD methods to the **OrdersController.cs**. Replace the entire controller with this complete version:
 
@@ -529,7 +529,7 @@ namespace ODataV4Adaptor.Server.Controllers
 
 ### Step 2: Client-side grid configuration
 
-React Grid enables full CRUD functionality by configuring the required `toolbar` buttons (`Add`, `Edit`, `Update`, `Delete`, and `Cancel`) and enabling adding, editing, updating, and deleting through the `editSettings` property. This setup allows the Grid to handle all basic data operations directly from the UI.
+React Grid enables full CRUD functionality by configuring the required [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbar) buttons (`Add`, `Edit`, `Update`, `Delete`, and `Cancel`) and enabling adding, editing, updating, and deleting through the `editSettings` property. This setup allows the Grid to handle all basic data operations directly from the UI.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
