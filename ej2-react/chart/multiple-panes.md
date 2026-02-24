@@ -22,39 +22,39 @@ To split the chart area vertically into multiple rows, use the [`rows`](https://
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/multiple-panes-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-panes-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/multiple-panes-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-panes-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/multiple-panes-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-panes-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/multiple-panes-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-panes-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-panes-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/multiple-panes-cs1" %}
 
 To span a vertical axis across multiple rows, use the [`span`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#span) property of the axis.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/multiple-panes-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-panes-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/multiple-panes-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-panes-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/multiple-panes-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-panes-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/multiple-panes-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-panes-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-panes-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/multiple-panes-cs2" %}
 
 ## Columns
 
@@ -67,36 +67,36 @@ To split the chart area horizontally into multiple columns, use the [`columns`](
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/multiple-panes-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-panes-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/multiple-panes-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-panes-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/multiple-panes-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-panes-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/multiple-panes-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-panes-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-panes-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/multiple-panes-cs3" %}
 
 To span a horizontal axis across multiple columns, use the [`span`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#span) property of the axis.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/multiple-panes-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-panes-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/multiple-panes-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-panes-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/multiple-panes-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-panes-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/multiple-panes-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-panes-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-panes-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/multiple-panes-cs4" %}

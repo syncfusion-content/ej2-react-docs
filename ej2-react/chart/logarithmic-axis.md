@@ -20,20 +20,20 @@ To get start quickly with React Logarithmic Axis, you can check out this video:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/log-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/log-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/log-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/log-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/log-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/log-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/log-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/log-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/log-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/log-cs1" %}
 
 > Note: To use the logarithmic axis, inject `Logarithmic` into the `provide` option and set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#valuetype) property of the axis to `Logarithmic`.
 
@@ -43,20 +43,20 @@ The range of the logarithmic axis is calculated automatically based on the provi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/log-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/log-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/log-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/log-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/log-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/log-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/log-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/log-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/log-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/log-cs2" %}
 
 ## Logarithmic base
 
@@ -65,20 +65,20 @@ For example, when the logarithmic base is set to `5`, the axis values follow the
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/log-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/log-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/log-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/log-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/log-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/log-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/log-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/log-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/log-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/log-cs3" %}
 
 ## Logarithmic interval
 
@@ -87,17 +87,17 @@ For example, when the logarithmic base is `10` and the interval is set to `2`, t
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/log-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/log-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/log-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/log-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/log-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/log-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/log-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/log-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/log-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/log-cs4" %}

@@ -23,20 +23,20 @@ To render a [`candle`](https://www.syncfusion.com/react-components/react-charts/
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/candle-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/candle-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/candle-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/candle-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/candle-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/candle-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/candle-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/candle-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/candle-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/candle-cs1" %}
 
 ## Binding data with series
 
@@ -44,20 +44,20 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/candle-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/candle-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/candle-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/candle-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/candle-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/candle-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/candle-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/candle-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/candle-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/candle-cs1" %}
 
 ## Hollow candles
 
@@ -93,20 +93,20 @@ The [`enableSolidCandles`](https://ej2.syncfusion.com/react/documentation/api/ch
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/candle-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/candle-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/candle-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/candle-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/candle-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/candle-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/candle-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/candle-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/candle-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/candle-cs2" %}
 
 ## Empty points
 
@@ -118,20 +118,20 @@ Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/candle-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/candle-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/candle-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/candle-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/candle-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/candle-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/candle-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/candle-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/candle-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/candle-cs3" %}
 
 **Fill**
 
@@ -139,20 +139,20 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/candle-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/candle-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/candle-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/candle-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/candle-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/candle-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/candle-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/candle-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/candle-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/candle-cs4" %}
 
 ## Events
 
@@ -162,20 +162,20 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/candle-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/candle-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/candle-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/candle-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/candle-cs5/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/candle-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/candle-cs5/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/candle-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/candle-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/candle-cs5" %}
 
 ### Point render
 
@@ -183,20 +183,20 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/candle-cs6/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/candle-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/candle-cs6/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/candle-cs6/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/candle-cs6/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/candle-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/candle-cs6/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/candle-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/candle-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/candle-cs6" %}
 
 ## See Also
 

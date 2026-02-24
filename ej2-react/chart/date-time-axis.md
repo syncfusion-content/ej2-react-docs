@@ -16,20 +16,20 @@ The DateTime axis uses a date-time scale and displays date-time values as axis l
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/datetime-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/datetime-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/datetime-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/datetime-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/datetime-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/datetime-cs2" %}
 
 > Note: To use the DateTime axis, inject `DateTime` into the `services` option and set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#valuetype) property of the axis to `DateTime`.
 
@@ -39,20 +39,20 @@ The DateTimeCategory axis is used to render date-time values with non-linear int
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/datetime-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/datetime-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/datetime-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/datetime-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/datetime-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/datetime-cs3" %}
 
 > Note: To use the DateTimeCategory axis, inject `DateTimeCategory` into the `services` option and set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#valuetype) property of the axis to `DateTimeCategory`. The axis range can be controlled using the [`minimum`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#minimum), [`maximum`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#maximum), and [`interval`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#interval) properties.
 
@@ -62,24 +62,24 @@ Range for an axis, will be calculated automatically based on the provided data, 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/datetime-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/datetime-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/datetime-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/datetime-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/datetime-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/datetime-cs4" %}
 
 ### Interval customization
 
-	Date-time intervals can be customized using the [`interval`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#interval) and [`intervalType`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#intervaltype) properties of the axis. For example, when the interval is set to `2` and the interval type is set to `Years`, the axis displays labels at two-year intervals.
+Date-time intervals can be customized using the [`interval`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#interval) and [`intervalType`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#intervaltype) properties of the axis. For example, when the interval is set to `2` and the interval type is set to `Years`, the axis displays labels at two-year intervals.
 
 The DateTime axis supports the following interval types:
 - Auto
@@ -92,20 +92,20 @@ The DateTime axis supports the following interval types:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/datetime-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/datetime-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/datetime-cs5/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/datetime-cs5/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/datetime-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/datetime-cs5" %}
 
 **Applying padding to the range**
 
@@ -120,20 +120,20 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/cha
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/datetime-cs6/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/datetime-cs6/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs6/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/datetime-cs6/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/datetime-cs6/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/datetime-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/datetime-cs6" %}
 
 **DateTime – Round**
 
@@ -141,20 +141,20 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/cha
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/datetime-cs7/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/datetime-cs7/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs7/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/datetime-cs7/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/datetime-cs7/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/datetime-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/datetime-cs7" %}
 
 **DateTime – Additional**
 
@@ -162,20 +162,20 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/cha
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/datetime-cs8/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/datetime-cs8/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs8/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/datetime-cs8/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs8/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/datetime-cs8/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/datetime-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/datetime-cs8" %}
 
 ## Label format
 
@@ -183,20 +183,20 @@ Date values displayed on the DateTime axis can be formatted using the [`labelFor
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/datetime-cs9/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/datetime-cs9/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs9/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/datetime-cs9/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs9/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/datetime-cs9/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/datetime-cs9/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/datetime-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/datetime-cs9" %}
 
 The following table illustrates the output produced by applying commonly used date-time format strings to the `labelFormat` property.
 

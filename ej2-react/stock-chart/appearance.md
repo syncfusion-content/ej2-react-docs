@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Stock Chart Title
 
-Stock Chart can be given a title using [`title`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockChartModel/#title) property, to show the information about the data plotted.
+Stock Chart can be given a title using [`title`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockChartModel#title) property, to show the information about the data plotted.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -46,7 +46,7 @@ The `textStyle` property of chart title provides options to customize the `size`
 
 Changing Stock Chart theme will affect background color, grid lines, tooltip colors and appearance.
 
-[`theme`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockChartModel/#theme) property of Stock chart is shipped with several built-in themes such as `Material`, `Fabric`, `Bootstrap` , `HighContrastLight`, `MaterialDark`, `FabricDark`, `FabricDark`, `HighContrast` and `BootstrapDark`.
+[`theme`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockChartModel#theme) property of Stock chart is shipped with several built-in themes such as `Material`, `Fabric`, `Bootstrap` , `HighContrastLight`, `MaterialDark`, `FabricDark`, `FabricDark`, `HighContrast` and `BootstrapDark`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -61,4 +61,4 @@ Changing Stock Chart theme will affect background color, grid lines, tooltip col
 
 ## See Also
 
-* [Axis Customization](./axis-customization/)
+* [Axis Customization](./axis-customization)

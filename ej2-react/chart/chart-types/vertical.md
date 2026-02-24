@@ -16,20 +16,20 @@ To draw a chart in a vertical manner, change the orientation of the axis using t
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/line-cs35/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs35/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/line-cs35/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs35/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/line-cs35/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs35/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/line-cs35/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs35/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/line-cs35" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs35" %}
 
 ## Binding data with series
 
@@ -37,20 +37,20 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/line-cs35/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs35/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/line-cs35/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs35/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/line-cs35/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs35/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/line-cs35/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs35/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/line-cs35" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs35" %}
 
 
 ## Empty points
@@ -63,20 +63,20 @@ Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/vertical-cs/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/vertical-cs/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/vertical-cs/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/vertical-cs/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/vertical-cs/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/vertical-cs/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/vertical-cs/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/vertical-cs/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/vertical-cs" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/vertical-cs" %}
 
 **Fill**
 
@@ -84,20 +84,20 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/vertical-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/vertical-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/vertical-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/vertical-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/vertical-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/vertical-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/vertical-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/vertical-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/vertical-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/vertical-cs1" %}
 
 **Border**
 
@@ -105,20 +105,20 @@ Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulati
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/vertical-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/vertical-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/vertical-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/vertical-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/vertical-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/vertical-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/vertical-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/vertical-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/vertical-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/vertical-cs2" %}
 
 ## Events
 
@@ -128,20 +128,20 @@ The [`seriesRender`]([../../api/chart#seriesrender](https://ej2.syncfusion.com/r
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/vertical-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/vertical-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/vertical-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/vertical-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/vertical-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/vertical-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/vertical-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/vertical-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/vertical-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/vertical-cs3" %}
 
 ### Point render
 
@@ -149,20 +149,20 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/vertical-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/vertical-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/vertical-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/vertical-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/vertical-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/vertical-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/vertical-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/vertical-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/vertical-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/vertical-cs4" %}
 
 ## See Also
 

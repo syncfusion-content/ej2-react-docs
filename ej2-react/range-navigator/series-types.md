@@ -18,7 +18,7 @@ To render the data, the Range Selector supports three types of series.
 
 <!-- markdownlint-disable MD036 -->
 
-To render a line series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/rangeNavigatorSeriesModel/#type) as **Line**  and inject the `LineSeries` module using `RangeNavigator.Inject(LineSeries)` method. By default, the line series is rendered in the Range Selector.
+To render a line series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/rangeNavigatorSeriesModel#type) as **Line**  and inject the `LineSeries` module using `RangeNavigator.Inject(LineSeries)` method. By default, the line series is rendered in the Range Selector.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -33,7 +33,7 @@ To render a line series, use series [`type`](https://ej2.syncfusion.com/react/do
 
 ## Area
 
-To render an area series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/rangeNavigatorSeriesModel/#type) as **Area** and inject `AreaSeries` module using `RangeNavigator.Inject(AreaSeries)` method.
+To render an area series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/rangeNavigatorSeriesModel#type) as **Area** and inject `AreaSeries` module using `RangeNavigator.Inject(AreaSeries)` method.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -48,7 +48,7 @@ To render an area series, use series [`type`](https://ej2.syncfusion.com/react/d
 
 ## StepLine
 
-To render a Step line series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/rangeNavigatorSeriesModel/#type) as **Step Line** and inject `StepLineSeries` module using `RangeNavigator.Inject(StepLineSeries)` method.
+To render a Step line series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/rangeNavigatorSeriesModel#type) as **Step Line** and inject `StepLineSeries` module using `RangeNavigator.Inject(StepLineSeries)` method.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

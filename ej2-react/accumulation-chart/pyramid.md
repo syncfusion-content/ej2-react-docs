@@ -10,21 +10,21 @@ domainurl: ##DomainURL##
 
 # Pyramid in React Accumulation chart component
 
-To render a pyramid series, use the series [`type`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationSeriesModel/#type) as `Pyramid` and inject `PyramidSeries` module into the `services`.
+To render a pyramid series, use the series [`type`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationSeriesModel#type) as `Pyramid` and inject `PyramidSeries` module into the `services`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/pyramid-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/pyramid-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/pyramid-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/pyramid-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/chart/series/pyramid-cs1/index.html %}
+{% include code-snippet/chart/code-path/series/pyramid-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart/series/pyramid-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/pyramid-cs1" %}
 
 ## Mode
 
@@ -32,17 +32,17 @@ The Pyramid chart supports linear and surface modes of rendering. The default ty
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/pyramid-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/pyramid-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/pyramid-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/pyramid-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/chart/series/pyramid-cs2/index.html %}
+{% include code-snippet/chart/code-path/series/pyramid-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart/series/pyramid-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/pyramid-cs2" %}
 
 ## Size
 
@@ -50,17 +50,17 @@ The size of the pyramid chart can be customized by using the  `width` and `heigh
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/pyramid-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/pyramid-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/pyramid-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/pyramid-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/chart/series/pyramid-cs3/index.html %}
+{% include code-snippet/chart/code-path/series/pyramid-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart/series/pyramid-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/pyramid-cs3" %}
 
 ## Gap between the segments
 
@@ -68,17 +68,17 @@ Pyramid chart provides options to customize the space between the segments by us
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/pyramid-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/pyramid-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/pyramid-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/pyramid-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/chart/series/pyramid-cs4/index.html %}
+{% include code-snippet/chart/code-path/series/pyramid-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart/series/pyramid-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/pyramid-cs4" %}
 
 ## Explode
 
@@ -86,17 +86,17 @@ Points can be exploded on mouse click by setting the `explode` property to true.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/pyramid-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/pyramid-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/pyramid-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/pyramid-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/chart/series/pyramid-cs5/index.html %}
+{% include code-snippet/chart/code-path/series/pyramid-cs5/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart/series/pyramid-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/pyramid-cs5" %}
 
 ## Customization
 
@@ -104,19 +104,19 @@ Individual points can be customized using the `pointRender` event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/pyramid-cs6/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/pyramid-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/pyramid-cs6/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/pyramid-cs6/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/chart/series/pyramid-cs6/index.html %}
+{% include code-snippet/chart/code-path/series/pyramid-cs6/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart/series/pyramid-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/pyramid-cs6" %}
 
 ## See also
 
-* [Data label](./data-label/)
-* [Grouping](./grouping/)
+* [Data label](./data-label)
+* [Grouping](./grouping)

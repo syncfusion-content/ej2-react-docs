@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## 100% Stacked column chart
 
-To render a `100% stacked column` series, use series [`type`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#type) as `StackingColumn100` and inject `StackingColumnSeries3D` module into the services.
+To render a `100% stacked column` series, use series [`type`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel#type) as `StackingColumn100` and inject `StackingColumnSeries3D` module into the services.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +27,7 @@ To render a `100% stacked column` series, use series [`type`](https://helpej2.sy
 
 ## 100% Cylindrical stacked column chart
 
-To render a 100% cylindrical stacked column chart, set the [`columnFacet`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#columnfacet) property to `Cylinder` in the chart series.
+To render a 100% cylindrical stacked column chart, set the [`columnFacet`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel#columnfacet) property to `Cylinder` in the chart series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -44,8 +44,8 @@ To render a 100% cylindrical stacked column chart, set the [`columnFacet`](https
 
 The following properties can be used to customize the `100% stacked column` series.
 
-* [fill](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#fill) – Specifies the color of the series.
-* [opacity](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#opacity) – Specifies the opacity of the [fill](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#fill) color.
+* [fill](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel#fill) – Specifies the color of the series.
+* [opacity](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel#opacity) – Specifies the opacity of the [fill](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel#fill) color.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

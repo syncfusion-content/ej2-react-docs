@@ -30,20 +30,20 @@ Bind simple JSON data to the chart using the [`dataSource`](https://ej2.syncfusi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/column-cs8/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/column-cs8/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs8/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/column-cs8/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs8/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/column-cs8/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/column-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/column-cs8" %}
 
 ## Lazy loading
 
@@ -58,14 +58,14 @@ Lazy loading enables on-demand data retrieval, loading only the data required fo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/column-cs9/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/column-cs9/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs9/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/column-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/column-cs9" %}
 
 ### Common datasource
 
@@ -73,20 +73,20 @@ Bind the same JSON data to all series by setting the [`dataSource`](https://ej2.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/column-cs10/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs10/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/column-cs10/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs10/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/column-cs10/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs10/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/column-cs10/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs10/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/column-cs10" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/column-cs10" %}
 
 ## Remote data
 
@@ -94,14 +94,14 @@ Bind remote data from a web service by using the `DataManager` class. The DataMa
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/column-cs11/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs11/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/column-cs11/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs11/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/column-cs11" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/column-cs11" %}
 
 ## Binding data using ODataAdaptor
 
@@ -111,14 +111,14 @@ Bind remote data from a web service by using the `DataManager` class. The DataMa
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/column-cs14/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs14/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/column-cs14/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs14/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/column-cs14" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/column-cs14" %}
 
 ## Binding data using ODataV4Adaptor
 
@@ -128,14 +128,14 @@ ODataV4 is an improved and more standardized version of the OData protocol, with
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/column-cs15/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs15/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/column-cs15/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs15/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/column-cs15" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/column-cs15" %}
 
 ## Web API adaptor
 
@@ -149,14 +149,14 @@ The Web API must return a JSON object with two properties:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/column-cs16/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs16/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/column-cs16/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs16/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/column-cs16" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/column-cs16" %}
 
 **Example response:**
 
@@ -175,20 +175,20 @@ Create a custom adaptor by extending one of the built-in adaptors (typically ODa
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/column-cs17/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs17/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/column-cs17/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs17/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="serialnoadaptor.jsx" %}
-{% include code-snippet/chart/series/column-cs17/app/serialNoAdaptor.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs17/app/serialNoAdaptor.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="serialnoadaptor.tsx" %}
-{% include code-snippet/chart/series/column-cs17/app/serialNoAdaptor.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs17/app/serialNoAdaptor.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/column-cs17" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/column-cs17" %}
 
 ## Offline mode
 
@@ -204,14 +204,14 @@ When using remote data binding, all filtering, sorting, and pagination normally 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/column-cs18/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs18/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/column-cs18/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs18/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/column-cs18" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/column-cs18" %}
 
 ## Empty points
 
@@ -221,20 +221,20 @@ Data points with `null` or `undefined` values are treated as empty points. Empty
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/column-cs12/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs12/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/column-cs12/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs12/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/column-cs12/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs12/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/column-cs12/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs12/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/column-cs12" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/column-cs12" %}
 
 **Empty point color**
 
@@ -242,20 +242,20 @@ Assign a specific color to empty points by setting the `fill` property in the `e
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/column-cs13/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs13/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/column-cs13/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs13/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/column-cs13/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs13/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/column-cs13/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs13/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/column-cs13" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/column-cs13" %}
 
 ## Handling no data
 
@@ -263,17 +263,17 @@ When the chart has no data available to render, use the `noDataTemplate` propert
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/column-cs20/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs20/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/column-cs20/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs20/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/column-cs20/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs20/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/column-cs20/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs20/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/column-cs20" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/column-cs20" %}

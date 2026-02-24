@@ -24,11 +24,11 @@ Update the data to series using set interval, and shift the data in the series t
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/how-to-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/how-to-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/how-to-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/how-to-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/how-to-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/how-to-cs5" %}

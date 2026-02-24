@@ -15,20 +15,20 @@ The numeric axis is used to represent numeric values in a chart. By default, the
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/double-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/double-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/double-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/double-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/double-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/double-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/double-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/double-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/double-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/double-cs3" %}
 
 ## Range
 
@@ -36,20 +36,20 @@ The range of the axis is calculated automatically based on the provided data. Yo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/double-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/double-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/double-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/double-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/double-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/double-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/double-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/double-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/double-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/double-cs4" %}
 
 ## Range Padding
 
@@ -67,20 +67,20 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/cha
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/double-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/double-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/double-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/double-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/double-cs5/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/double-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/double-cs5/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/double-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/double-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/double-cs5" %}
 
 **Numeric - Round**
 
@@ -88,20 +88,20 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/cha
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/double-cs6/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/double-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/double-cs6/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/double-cs6/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/double-cs6/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/double-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/double-cs6/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/double-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/double-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/double-cs6" %}
 
 **Numeric - Additional**
 
@@ -109,20 +109,20 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/cha
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/double-cs7/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/double-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/double-cs7/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/double-cs7/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/double-cs7/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/double-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/double-cs7/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/double-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/double-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/double-cs7" %}
 
 **Numeric - Normal**
 
@@ -130,20 +130,20 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/cha
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/double-cs8/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/double-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/double-cs8/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/double-cs8/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/double-cs8/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/double-cs8/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/double-cs8/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/double-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/double-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/double-cs8" %}
 
 **Numeric - Auto**
 
@@ -151,20 +151,20 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/cha
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/double-cs9/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/double-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/double-cs9/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/double-cs9/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/double-cs9/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/double-cs9/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/double-cs9/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/double-cs9/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/double-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/double-cs9" %}
 
 ## Label Format
 
@@ -174,20 +174,20 @@ Numeric axis labels can be formatted by using the [`labelFormat`](https://ej2.sy
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/double-cs10/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/double-cs10/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/double-cs10/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/double-cs10/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/double-cs10/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/double-cs10/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/double-cs10/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/double-cs10/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/double-cs10" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/double-cs10" %}
 
 The following table shows examples of commonly used numeric label formats and their corresponding outputs.
 
@@ -256,20 +256,20 @@ To separate groups of thousands in numeric labels, enable the [`useGroupingSepar
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/double-cs11/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/double-cs11/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/double-cs11/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/double-cs11/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/double-cs11/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/double-cs11/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/double-cs11/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/double-cs11/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/double-cs11" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/double-cs11" %}
 
 ## Custom Label Format
 
@@ -277,17 +277,17 @@ The numeric axis also supports custom label formats by using placeholders such a
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/double-cs12/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/double-cs12/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/double-cs12/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/double-cs12/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/double-cs12/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/double-cs12/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/double-cs12/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/double-cs12/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/double-cs12" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/double-cs12" %}

@@ -22,17 +22,17 @@ To remove the new series from chart dynamically, pass the series index to the `r
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/add-series-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/add-series-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/add-series-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/add-series-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/add-series-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/add-series-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/add-series-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/add-series-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/add-series-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/add-series-cs1" %}

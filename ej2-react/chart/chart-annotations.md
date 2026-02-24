@@ -16,20 +16,20 @@ Annotations are added using the `annotations` option. Set the [`content`](https:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/line-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/line-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/line-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/line-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/line-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs3" %}
 
 > Note: To use the annotation feature, inject the `ChartAnnotation` module into the `services`.
 
@@ -39,20 +39,20 @@ Annotations can be positioned relative to either the overall `Chart` area or a s
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/line-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/line-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/line-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/line-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/line-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs4" %}
 
 ## Coordinate Units
 
@@ -63,20 +63,20 @@ Use the `coordinateUnits` property to define how annotation coordinates are inte
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/line-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/line-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/line-cs5/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/line-cs5/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/line-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs5" %}
 
 ## See Also
 

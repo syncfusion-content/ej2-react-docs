@@ -23,11 +23,11 @@ Logarithmic axis uses logarithmic scale and it is very useful in visualizing dat
 
 {% previewsample "page.domainurl/code-snippet/3d-chart/logarithmic-axis/logarithmic-axis-cs1" %}
 
->Note: To use logarithmic axis, we need to inject `Logarithmic3D` module into the services and set the [`valueType`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#valuetype) of the axis to **Logarithmic**.
+>Note: To use logarithmic axis, we need to inject `Logarithmic3D` module into the services and set the [`valueType`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#valuetype) of the axis to **Logarithmic**.
 
 ## Range
 
-The range of an axis will be calculated automatically based on the provided data and it can also be customized by using the [`minimum`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#minimum), [`maximum`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#maximum) and [`interval`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#interval) properties of the axis.
+The range of an axis will be calculated automatically based on the provided data and it can also be customized by using the [`minimum`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#minimum), [`maximum`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#maximum) and [`interval`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#interval) properties of the axis.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -42,7 +42,7 @@ The range of an axis will be calculated automatically based on the provided data
 
 ## Logarithmic base
 
-Logarithmic base can be customized by using the [`logBase`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#logbase) property of the axis. For example when the `logBase` is **5**, the axis values follows 5<sup>-2</sup>, 5<sup>-1</sup>, 5<sup>0</sup>, 5<sup>1</sup>, 5<sup>2</sup> etc.
+Logarithmic base can be customized by using the [`logBase`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#logbase) property of the axis. For example when the `logBase` is **5**, the axis values follows 5<sup>-2</sup>, 5<sup>-1</sup>, 5<sup>0</sup>, 5<sup>1</sup>, 5<sup>2</sup> etc.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -57,7 +57,7 @@ Logarithmic base can be customized by using the [`logBase`](https://helpej2.syn
 
 ## Logarithmic interval
 
-The interval of the logarithmic axis can be customized by using the [`interval`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#interval) property in the axis. When the logarithmic base is 10 and logarithmic **interval** is 2, then the axis labels are placed at an interval of 10<sup>2</sup>. The default value of the [`interval`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#interval) is **1**.
+The interval of the logarithmic axis can be customized by using the [`interval`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#interval) property in the axis. When the logarithmic base is 10 and logarithmic **interval** is 2, then the axis labels are placed at an interval of 10<sup>2</sup>. The default value of the [`interval`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#interval) is **1**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Stacked column chart
 
-To render a stacked column series, use series [`type`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#type) as `StackingColumn` and inject `StackingColumnSeries3D` module into the services.
+To render a stacked column series, use series [`type`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel#type) as `StackingColumn` and inject `StackingColumnSeries3D` module into the services.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +27,7 @@ To render a stacked column series, use series [`type`](https://helpej2.syncfusio
 
 ## Stacking group
 
-To group the stacked column, the [`stackingGroup`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#stackinggroup) property can be used. The columns with same group name are stacked on top of each other.
+To group the stacked column, the [`stackingGroup`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel#stackinggroup) property can be used. The columns with same group name are stacked on top of each other.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -42,7 +42,7 @@ To group the stacked column, the [`stackingGroup`](https://helpej2.syncfusion.co
 
 ## Cylindrical stacked column chart
 
-To render a cylindrical stacked column chart, set the [`columnFacet`](../../api/chart3d/series3DModel/#columnfacet) property to `Cylinder` in the chart series.
+To render a cylindrical stacked column chart, set the [`columnFacet`](../../api/chart3d/series3DModel#columnfacet) property to `Cylinder` in the chart series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -59,8 +59,8 @@ To render a cylindrical stacked column chart, set the [`columnFacet`](../../api/
 
 The following properties can be used to customize the `stacked column` series.
 
-* [fill](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#fill) – Specifies the color of the series.
-* [opacity](../../api/chart3d/series3DModel/#opacity) – Specifies the opacity of the [fill](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#fill) color.
+* [fill](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel#fill) – Specifies the color of the series.
+* [opacity](../../api/chart3d/series3DModel#opacity) – Specifies the opacity of the [fill](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel#fill) color.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

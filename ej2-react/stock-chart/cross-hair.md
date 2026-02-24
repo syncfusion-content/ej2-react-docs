@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Crosshair has a vertical and horizontal line to view the value of the axis at mouse or touch position.
 
-Crosshair lines can be enabled by using [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettings/#enable) property in the `crosshair`.
+Crosshair lines can be enabled by using [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettings#enable) property in the `crosshair`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +27,7 @@ Crosshair lines can be enabled by using [`enable`](https://ej2.syncfusion.com/r
 
 ## Tooltip for axis
 
-Tooltip label for an axis can be enabled by using [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairTooltipModel/#enable)property of `crosshairTooltip` in the corresponding axis.
+Tooltip label for an axis can be enabled by using [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairTooltipModel#enable)property of `crosshairTooltip` in the corresponding axis.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -42,7 +42,7 @@ Tooltip label for an axis can be enabled by using [`enable`](https://ej2.syncfu
 
 ## Customization
 
-The [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairTooltip/#fill) and [`textStyle`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairTooltip/#textstyle)property of the `crosshairTooltip` is used to customize the background color and font style of the crosshair label respectively. Color and width of the crosshair line can be customized by using the [`line`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettings/#line) property in the crosshair.
+The [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairTooltip#fill) and [`textStyle`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairTooltip#textstyle)property of the `crosshairTooltip` is used to customize the background color and font style of the crosshair label respectively. Color and width of the crosshair line can be customized by using the [`line`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettings#line) property in the crosshair.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -57,7 +57,7 @@ The [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairT
 
 **Snap to data**
 
-Enabling the [`snapToData`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettingsModel/#snaptodata) property in the crosshair aligns it with the nearest data point instead of following the exact mouse position.
+Enabling the [`snapToData`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettingsModel#snaptodata) property in the crosshair aligns it with the nearest data point instead of following the exact mouse position.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

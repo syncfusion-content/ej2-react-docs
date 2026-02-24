@@ -24,20 +24,20 @@ To get start quickly with React Polar and Radar Charts, you can check on this vi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs1" %}
 
 ## Binding data with series
 
@@ -45,20 +45,20 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs1" %}
 
 ## Draw Types
 
@@ -76,20 +76,20 @@ The [`isClosed`](https://ej2.syncfusion.com/react/documentation/api/chart/series
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs1" %}
 
 ### Spline
 
@@ -101,20 +101,20 @@ To render a spline draw type, you need to follow a few steps to configure it cor
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs2" %}
 
 ### Area
 
@@ -126,20 +126,20 @@ To render an area draw type, you need to follow a few steps to configure it corr
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs3" %}
 
 ### Stacked Area
 
@@ -151,20 +151,20 @@ To render a stacked area draw type, you need to follow a few steps to configure 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs4" %}
 
 ### Column
 
@@ -176,20 +176,20 @@ To render a column draw type, you need to follow a few steps to configure it cor
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs5/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs5/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs5" %}
 
 ### Stacked Column
 
@@ -201,20 +201,20 @@ To render a stacked column draw type, you need to follow a few steps to configur
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs6/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs6/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs6/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs6/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs6/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs6" %}
 
 ### Range Column
 
@@ -226,20 +226,20 @@ To render a range column draw type, you need to follow a few steps to configure 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs7/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs7/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs7/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs7/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs7/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs7" %}
 
 ### Scatter
 
@@ -251,20 +251,20 @@ To render a scatter draw type, you need to follow a few steps to configure it co
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs8/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs8/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs8/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs8/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs8/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs8/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs8" %}
 
 ### Spline area
 
@@ -276,20 +276,20 @@ To render an spline area draw type, you need to follow a few steps to configure 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs12/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs12/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs12/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs12/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs12/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs12/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs12/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs12/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs12" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs12" %}
 
 ## Series customization
 
@@ -299,20 +299,20 @@ You can customize the start angle of the polar series using [`startAngle`](https
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs02/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs02/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs02/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs02/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs02/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs02/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs02/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs02/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs02" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs02" %}
 
 ### Radius
 
@@ -320,20 +320,20 @@ You can customize the radius of the polar series using [`coefficient`](https://e
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs01/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs01/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs01/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs01/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs01/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs01/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs01/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs01/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs01" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs01" %}
 
 ## Empty points
 
@@ -345,20 +345,20 @@ Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/chart/axisMo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs13/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs13/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs13/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs13/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs13/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs13/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs13/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs13/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs13" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs13" %}
 
 **Fill**
 
@@ -366,20 +366,20 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs14/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs14/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs14/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs14/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs14/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs14/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs14/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs14/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs14" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs14" %}
 
 **Border**
 
@@ -387,20 +387,20 @@ Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulati
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs15/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs15/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs15/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs15/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs15/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs15/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs15/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs15/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs15" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs15" %}
 
 ## Events
 
@@ -410,20 +410,20 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs16/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs16/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs16/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs16/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs16/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs16/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs16/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs16/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs16" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs16" %}
 
 ### Point render
 
@@ -431,20 +431,20 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs17/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs17/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs17/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs17/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs17/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs17/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs17/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs17/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs17" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs17" %}
 
 ## See Also
 

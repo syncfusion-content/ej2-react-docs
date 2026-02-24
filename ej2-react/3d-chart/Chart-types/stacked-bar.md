@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## 100% Stacked bar chart
 
-To render a `100% stacked bar` series, use series [`type`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#type) as `StackingBar100` and inject `StackingBarSeries3D` module into the services.
+To render a `100% stacked bar` series, use series [`type`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel#type) as `StackingBar100` and inject `StackingBarSeries3D` module into the services.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +27,7 @@ To render a `100% stacked bar` series, use series [`type`](https://helpej2.syncf
 
 ## 100% Cylindrical stacked bar chart
 
-To render a cylindrical 100% stacked bar chart, set the [`columnFacet`](../../api/chart3d/series3DModel/#columnfacet) property to `Cylinder` in the chart series.
+To render a cylindrical 100% stacked bar chart, set the [`columnFacet`](../../api/chart3d/series3DModel#columnfacet) property to `Cylinder` in the chart series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -44,8 +44,8 @@ To render a cylindrical 100% stacked bar chart, set the [`columnFacet`](../../ap
 
 The following properties can be used to customize the `100% stacked bar` series.
 
-* [fill](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#fill) – Specifies the color of the series.
-* [opacity](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#opacity) – Specifies the opacity of the [fill](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#fill) color.
+* [fill](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel#fill) – Specifies the color of the series.
+* [opacity](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel#opacity) – Specifies the opacity of the [fill](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel#fill) color.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

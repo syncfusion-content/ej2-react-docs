@@ -27,7 +27,7 @@ The numeric axis can be used to represent the numeric values of data in 3D chart
 
 ## Range
 
-The range of an axis, will be calculated automatically based on the provided data, and it can also be customized by using the [`minimum`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#minimum), [`maximum`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#maximum) and [`interval`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#interval) properties of the axis.
+The range of an axis, will be calculated automatically based on the provided data, and it can also be customized by using the [`minimum`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#minimum), [`maximum`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#maximum) and [`interval`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#interval) properties of the axis.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -42,7 +42,7 @@ The range of an axis, will be calculated automatically based on the provided dat
 
 ## Range padding
 
-Padding can be applied to the minimum and maximum extremes of an axis range by using the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#rangepadding) property. Numeric axis supports the following types of padding.
+Padding can be applied to the minimum and maximum extremes of an axis range by using the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#rangepadding) property. Numeric axis supports the following types of padding.
 
 * None
 * Round
@@ -52,7 +52,7 @@ Padding can be applied to the minimum and maximum extremes of an axis range by u
 
 **Numeric - None**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#rangepadding) is set to `None`, minimum and maximum of the axis is based on the data.
+When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#rangepadding) is set to `None`, minimum and maximum of the axis is based on the data.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -67,7 +67,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/cha
 
 **Numeric - Round**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#rangepadding) is set to **Round**, minimum and maximum will be rounded to the nearest possible value, which is divisible by interval. For example, when the [`minimum`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#minimum) is **3.5** and the [`interval`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#interval) is **1**, then the minimum will be rounded to **3**.
+When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#rangepadding) is set to **Round**, minimum and maximum will be rounded to the nearest possible value, which is divisible by interval. For example, when the [`minimum`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#minimum) is **3.5** and the [`interval`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#interval) is **1**, then the minimum will be rounded to **3**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -82,7 +82,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/cha
 
 **Numeric - Additional**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#rangepadding) is set to **Additional**, interval of an axis will be added to the minimum and maximum of the axis.
+When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#rangepadding) is set to **Additional**, interval of an axis will be added to the minimum and maximum of the axis.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -97,7 +97,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/cha
 
 **Numeric - Normal**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#rangepadding) is set to **Normal**, padding is applied to the axis based on default range calculation.
+When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#rangepadding) is set to **Normal**, padding is applied to the axis based on default range calculation.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -112,7 +112,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/cha
 
 **Numeric - Auto**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#rangepadding) is set to **Auto**, horizontal numeric axis takes **None** as padding calculation, while the vertical numeric axis takes **Normal** as padding calculation.
+When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#rangepadding) is set to **Auto**, horizontal numeric axis takes **None** as padding calculation, while the vertical numeric axis takes **Normal** as padding calculation.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -129,7 +129,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/cha
 
 **Numeric label format**
 
-Numeric labels can be formatted by using the [`labelFormat`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#labelformat) property. Also, it supports all globalize format.
+Numeric labels can be formatted by using the [`labelFormat`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#labelformat) property. Also, it supports all globalize format.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -204,7 +204,7 @@ The following table describes the result of applying some commonly used label fo
 
 ## Grouping separator
 
-To separate the y-axis labels to groups of thousands, set the [`useGroupingSeparator`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#usegroupingseparator) property to **true** in the 3D chart.
+To separate the y-axis labels to groups of thousands, set the [`useGroupingSeparator`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel#usegroupingseparator) property to **true** in the 3D chart.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Print
 
-The rendered 3D chart can be printed directly from the browser by calling the public method [`print`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/printUtils/#print). The ID of the 3D chart's div element must be passed as the input parameter to that method.
+The rendered 3D chart can be printed directly from the browser by calling the public method [`print`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/printUtils#print). The ID of the 3D chart's div element must be passed as the input parameter to that method.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +27,7 @@ The rendered 3D chart can be printed directly from the browser by calling the pu
 
 ## Export
 
-The rendered 3D chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` format using the [`export`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/exportUtils/#export) method. The input parameters for this method are: `type` for format and `fileName` for result.
+The rendered 3D chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` format using the [`export`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/exportUtils#export) method. The input parameters for this method are: `type` for format and `fileName` for result.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

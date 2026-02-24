@@ -52,20 +52,20 @@ ReactDOM.render(<App />, document.getElementById("charts"));
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/dimensions/style-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/dimensions/style-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/dimensions/style-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/dimensions/style-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/dimensions/style-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/dimensions/style-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/dimensions/style-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/dimensions/style-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/dimensions/style-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/dimensions/style-cs1" %}
 
 ## Size for Chart
 
@@ -80,20 +80,20 @@ You can set the size of chart in pixel as demonstrated below.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/getting-started/datasource-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/getting-started/datasource-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/getting-started/datasource-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/getting-started/datasource-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/getting-started/datasource-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/getting-started/datasource-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/getting-started/datasource-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/getting-started/datasource-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/getting-started/datasource-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/getting-started/datasource-cs1" %}
 
 **In Percentage**
 
@@ -101,19 +101,19 @@ When percentage values are used, the chart dimensions are relative to the contai
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/getting-started/datasource-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/getting-started/datasource-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/getting-started/datasource-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/getting-started/datasource-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/getting-started/datasource-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/getting-started/datasource-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/getting-started/datasource-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/getting-started/datasource-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/getting-started/datasource-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/getting-started/datasource-cs2" %}
 
 > Note:  When you do not specify the size, it takes `450px` as the height and window size as its width.

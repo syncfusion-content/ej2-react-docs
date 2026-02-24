@@ -25,17 +25,17 @@ By using the grid’s `databound` event, you can update the current page records
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/grid-visual-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/grid-visual-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/grid-visual-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/grid-visual-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/grid-visual-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/grid-visual-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/grid-visual-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/grid-visual-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/grid-visual-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/grid-visual-cs2" %}

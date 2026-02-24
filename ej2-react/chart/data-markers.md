@@ -22,20 +22,20 @@ Enable markers for data points by setting the [`visible`](https://ej2.syncfusion
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/data-marker/datalabel-cs7/app/index.jsx %}
+{% include code-snippet/chart/code-path/data-marker/datalabel-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/data-marker/datalabel-cs7/app/index.tsx %}
+{% include code-snippet/chart/code-path/data-marker/datalabel-cs7/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/data-marker/datalabel-cs7/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/data-marker/datalabel-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/data-marker/datalabel-cs7/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/data-marker/datalabel-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/data-marker/datalabel-cs7" %}
 
 ## Shape
 
@@ -43,20 +43,20 @@ Assign different shapes to markers such as Rectangle, Circle, Diamond, Triangle,
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/data-marker/datalabel-cs8/app/index.jsx %}
+{% include code-snippet/chart/code-path/data-marker/datalabel-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/data-marker/datalabel-cs8/app/index.tsx %}
+{% include code-snippet/chart/code-path/data-marker/datalabel-cs8/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/data-marker/datalabel-cs8/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/data-marker/datalabel-cs8/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/data-marker/datalabel-cs8/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/data-marker/datalabel-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/data-marker/datalabel-cs8" %}
 
 >Note : To know more about the marker shape type refer the [`shape`](https://ej2.syncfusion.com/react/documentation/api/chart/markerSettings#shape).
 
@@ -66,20 +66,20 @@ Use custom images as markers instead of predefined shapes by setting the [`image
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/data-marker/marker-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/data-marker/marker-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/data-marker/marker-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/data-marker/marker-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/data-marker/marker-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/data-marker/marker-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/data-marker/marker-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/data-marker/marker-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/data-marker/marker-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/data-marker/marker-cs2" %}
 
 ## Customization
 
@@ -87,20 +87,20 @@ Customize marker appearance by modifying the `fill` (background color) and `bord
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/data-marker/datalabel-cs9/app/index.jsx %}
+{% include code-snippet/chart/code-path/data-marker/datalabel-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/data-marker/datalabel-cs9/app/index.tsx %}
+{% include code-snippet/chart/code-path/data-marker/datalabel-cs9/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/data-marker/datalabel-cs9/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/data-marker/datalabel-cs9/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/data-marker/datalabel-cs9/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/data-marker/datalabel-cs9/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/data-marker/datalabel-cs9" %}
 
 ## Customizing specific point
 
@@ -108,20 +108,20 @@ Use the [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/data-marker/datalabel-cs10/app/index.jsx %}
+{% include code-snippet/chart/code-path/data-marker/datalabel-cs10/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/data-marker/datalabel-cs10/app/index.tsx %}
+{% include code-snippet/chart/code-path/data-marker/datalabel-cs10/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/data-marker/datalabel-cs10/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/data-marker/datalabel-cs10/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/data-marker/datalabel-cs10/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/data-marker/datalabel-cs10/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs10" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/data-marker/datalabel-cs10" %}
 
 ## Fill marker with series color
 
@@ -129,20 +129,20 @@ Fill markers with the series color by enabling the [`isFilled`](https://ej2.sync
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/data-marker/datalabel-cs11/app/index.jsx %}
+{% include code-snippet/chart/code-path/data-marker/datalabel-cs11/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/data-marker/datalabel-cs11/app/index.tsx %}
+{% include code-snippet/chart/code-path/data-marker/datalabel-cs11/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/data-marker/datalabel-cs11/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/data-marker/datalabel-cs11/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/data-marker/datalabel-cs11/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/data-marker/datalabel-cs11/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs11" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/data-marker/datalabel-cs11" %}
 
 ## See Also
 

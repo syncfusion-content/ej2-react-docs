@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # R t l in React Range navigator component
 
-The Range Selector supports right-to-left (RTL), which can be enabled with the [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#enablertl) property.
+The Range Selector supports right-to-left (RTL), which can be enabled with the [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#enablertl) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

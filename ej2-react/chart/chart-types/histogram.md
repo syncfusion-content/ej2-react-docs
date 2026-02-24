@@ -20,20 +20,20 @@ To render a [histogram](https://www.syncfusion.com/react-components/react-charts
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/waterfall-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/waterfall-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/waterfall-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/waterfall-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/waterfall-cs3" %}
 
 ## Events
 
@@ -43,20 +43,20 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/waterfall-cs6/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/waterfall-cs6/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs6/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/waterfall-cs6/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/waterfall-cs6/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/waterfall-cs6" %}
 
 ### Point render
 
@@ -64,20 +64,20 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/waterfall-cs7/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/waterfall-cs7/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs7/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/waterfall-cs7/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/waterfall-cs7/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/waterfall-cs7" %}
 
 ## See Also
 
