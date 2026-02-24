@@ -1,0 +1,42 @@
+{% raw %}
+
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ColumnSeries, Legend, Category, Tooltip, DataLabel } from '@syncfusion/ej2-react-charts';
+import { categoryData } from './datasource';
+function App() {
+    const primaryxAxis = {
+        valueType: 'Category',
+        majorGridLines: {
+            color: 'blue',
+            width: 1
+        },
+        minorGridLines: {
+            color: 'red',
+            width: 0
+        }
+    };
+    const primaryyAxis = {
+        title: 'Temperature (Fahrenheit)',
+        majorGridLines: {
+            color: 'blue',
+            width: 1
+        },
+        minorGridLines: {
+            color: 'red',
+            width: 0
+        }
+    };
+    return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} title='Temperature flow over months'>
+      <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, Category]}/>
+      <SeriesCollectionDirective>
+        <SeriesDirective dataSource={categoryData} xName='country' yName='gold' name='Sales' type='Column'>
+        </SeriesDirective>
+      </SeriesCollectionDirective>
+    </ChartComponent>;
+}
+;
+export default App;
+ReactDOM.render(<App />, document.getElementById("charts"));
+
+{% endraw %}

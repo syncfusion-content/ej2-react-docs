@@ -10,30 +10,30 @@ domainurl: ##DomainURL##
 
 # Selected data grid in React Chart component
 
-By using the [`dragComplete`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel/#dragcomplete), you can get the selected data values for range selection.
+By using the [`dragComplete`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#dragcomplete), you can get the selected data values for range selection.
 
 To display the selected data value, follow the given steps:
 
 **Step 1**:
 
-Get the selected data point values and display the values through grid component by using the [`dragComplete`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel/#dragcomplete) event.
+Get the selected data point values and display the values through grid component by using the [`dragComplete`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#dragcomplete) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/how-to-cs9/app/index.jsx %}
+{% include code-snippet/chart/code-path/how-to-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/how-to-cs9/app/index.tsx %}
+{% include code-snippet/chart/code-path/how-to-cs9/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/chart/how-to-cs9/index.html %}
+{% include code-snippet/chart/code-path/how-to-cs9/index.html %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/how-to-cs9/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/how-to-cs9/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/how-to-cs9/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/how-to-cs9/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart/how-to-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/how-to-cs9" %}

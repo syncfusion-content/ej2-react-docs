@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Custom color palette
 
-The default color of series or points can be customized by providing a custom color palette of your choice by using the [`palettes`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#palettes) property.
+The default color of series or points can be customized by providing a custom color palette of your choice by using the [`palettes`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel#palettes) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -31,7 +31,7 @@ The color of an individual data point can be customized using the below options.
 
 ### Point color mapping
 
-The color for the points can be bound from the [`dataSource`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#datasource) for the series by utilizing the [`pointColorMapping`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#pointcolormapping) property.
+The color for the points can be bound from the [`dataSource`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel#datasource) for the series by utilizing the [`pointColorMapping`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel#pointcolormapping) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -46,7 +46,7 @@ The color for the points can be bound from the [`dataSource`](https://helpej2.sy
 
 ## Point level customization
 
-The data label and fill color of each data point can be customized using the [`pointRender`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/i3DPointRenderEventArgs/) and [`textRender`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/i3DTextRenderEventArgs/) events.
+The data label and fill color of each data point can be customized using the [`pointRender`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/i3DPointRenderEventArgs) and [`textRender`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/i3DTextRenderEventArgs) events.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -67,7 +67,7 @@ The data label and fill color of each data point can be customized using the [`p
 
 **Customize the chart background**
 
-The background color and border of the 3D chart can be customized using the [`background`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#background) and [`border`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#border) properties.
+The background color and border of the 3D chart can be customized using the [`background`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel#background) and [`border`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel#border) properties.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -82,7 +82,7 @@ The background color and border of the 3D chart can be customized using the [`ba
 
 **Chart margin**
 
-The 3D chart's margin can be set from its container using the [`margin`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#margin) property.
+The 3D chart's margin can be set from its container using the [`margin`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel#margin) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -97,7 +97,7 @@ The 3D chart's margin can be set from its container using the [`margin`](https:/
 
 ## Animation
 
-To customize the animation for a particular series, the [`animation`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#animation) property can be used. It can be enabled or disabled by using the [`enable`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/animationModel/#enable) property. The [`duration`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/animationModel/#duration) property specifies the duration of an animation and the [`delay`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/animationModel/#delay) property allows us to start the animation at desire time.
+To customize the animation for a particular series, the [`animation`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel#animation) property can be used. It can be enabled or disabled by using the [`enable`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/animationModel#enable) property. The [`duration`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/animationModel#duration) property specifies the duration of an animation and the [`delay`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/animationModel#delay) property allows us to start the animation at desire time.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -112,7 +112,7 @@ To customize the animation for a particular series, the [`animation`](https://he
 
 ## Chart rotation
 
-The 3D chart can be rotated by using the [`enableRotation`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#enablerotation) property in the chart.
+The 3D chart can be rotated by using the [`enableRotation`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel#enablerotation) property in the chart.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -127,7 +127,7 @@ The 3D chart can be rotated by using the [`enableRotation`](https://helpej2.sync
 
 ## Title
 
-The 3D chart can be given a title by using [`title`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#title) property, to show the information about the data plotted.
+The 3D chart can be given a title by using [`title`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel#title) property, to show the information about the data plotted.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -142,7 +142,7 @@ The 3D chart can be given a title by using [`title`](https://helpej2.syncfusion.
 
 ### Title position
 
-By using the [`position`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel/#position) property in [`titleStyle`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#titlestyle), the [`title`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#title) can be positioned at left, right, top or bottom of the 3D chart. The title is positioned at the top of the 3D chart, by default.
+By using the [`position`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel#position) property in [`titleStyle`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel#titlestyle), the [`title`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel#title) can be positioned at left, right, top or bottom of the 3D chart. The title is positioned at the top of the 3D chart, by default.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -155,7 +155,7 @@ By using the [`position`](https://helpej2.syncfusion.com/react/documentation/ap
 
 {% previewsample "page.domainurl/code-snippet/3d-chart/appearance/appearance-cs9" %}
 
-The custom option is used to position the title anywhere in the 3D chart using [`x`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel/#x) and [`y`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel/#y) coordinates.
+The custom option is used to position the title anywhere in the 3D chart using [`x`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel#x) and [`y`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel#y) coordinates.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -170,7 +170,7 @@ The custom option is used to position the title anywhere in the 3D chart using [
 
 ### Title alignment
 
-The title can be aligned to the near, far, or center of the 3D chart by using the [`textAlignment`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel/#textalignment) property.
+The title can be aligned to the near, far, or center of the 3D chart by using the [`textAlignment`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel#textalignment) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -185,16 +185,16 @@ The title can be aligned to the near, far, or center of the 3D chart by using th
 
 ### Title customization
 
-The [`titleStyle`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#titlestyle) property of the 3D chart title provides options to customize the title by using the following properties.
+The [`titleStyle`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel#titlestyle) property of the 3D chart title provides options to customize the title by using the following properties.
 
-* [`size`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel/#size) - Specifies the size of the title.
-* [`color`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel/#color) - Specifies the color for the title. 
-* [`fontFamily`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel/#fontfamily) - Specifies the font family for the title.
-* [`fontWeight`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel/#fontweight) - Specifies the font weight of the title.
-* [`fontStyle`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel/#fontstyle) - Specifies the font style for the title.
-* [`opacity`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel/#opacity) - Specifies the opacity for the color of the title.
-* [`textAlignment`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel/#textalignment) - Specifies the alignment of the title.
-* [`textOverflow`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel/#textoverflow) - Specifies the overflow of the title.
+* [`size`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel#size) - Specifies the size of the title.
+* [`color`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel#color) - Specifies the color for the title. 
+* [`fontFamily`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel#fontfamily) - Specifies the font family for the title.
+* [`fontWeight`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel#fontweight) - Specifies the font weight of the title.
+* [`fontStyle`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel#fontstyle) - Specifies the font style for the title.
+* [`opacity`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel#opacity) - Specifies the opacity for the color of the title.
+* [`textAlignment`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel#textalignment) - Specifies the alignment of the title.
+* [`textOverflow`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel#textoverflow) - Specifies the overflow of the title.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

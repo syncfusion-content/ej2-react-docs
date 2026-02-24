@@ -25,7 +25,7 @@ DateTime axis uses date time scale and displays the date time values as axis lab
 
 {% previewsample "page.domainurl/code-snippet/3d-chart/date-time-axis/date-time-axis-cs1" %}
 
->Note: To use datetime axis, we need to inject the `DateTime3D` module into the services and set the [`valueType`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#valuetype) of axis to **DateTime**.
+>Note: To use datetime axis, we need to inject the `DateTime3D` module into the services and set the [`valueType`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#valuetype) of axis to **DateTime**.
 
 ## DateTime category axis
 
@@ -42,11 +42,11 @@ DateTime category axis is used to display the date time values with non-linear i
 
 {% previewsample "page.domainurl/code-snippet/3d-chart/date-time-axis/date-time-axis-cs2" %}
 
->Note: To use datetime category axis, we need to inject `DateTimeCategory3D` module into the services and set the [`valueType`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#valuetype) of axis to **DateTimeCategory**.
+>Note: To use datetime category axis, we need to inject `DateTimeCategory3D` module into the services and set the [`valueType`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#valuetype) of axis to **DateTimeCategory**.
 
 ### Range
 
-Range of an axis will be calculated automatically based on the provided data. You can also customize the range of an axis using [`minimum`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#minimum), [`maximum`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#maximum) and [`interval`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#interval) properties.
+Range of an axis will be calculated automatically based on the provided data. You can also customize the range of an axis using [`minimum`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#minimum), [`maximum`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#maximum) and [`interval`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#interval) properties.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -61,7 +61,7 @@ Range of an axis will be calculated automatically based on the provided data. Yo
 
 ### Interval customization
 
-Date time intervals can be customized by using the [`interval`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#interval) and [`intervalType`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#intervaltype) properties of the axis. For example, when you set `interval` as **2** and `intervalType` as **Years**, it considers 2 years as interval. Datetime axis supports following interval types,
+Date time intervals can be customized by using the [`interval`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#interval) and [`intervalType`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#intervaltype) properties of the axis. For example, when you set `interval` as **2** and `intervalType` as **Years**, it considers 2 years as interval. Datetime axis supports following interval types,
 
 * Auto
 * Years
@@ -84,7 +84,7 @@ Date time intervals can be customized by using the [`interval`](https://helpej2.
 
 **Applying padding to the range**
 
-Padding can be applied to the minimum and maximum extremes of the range by using the [`rangePadding`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#rangepadding) property. Date time axis supports the following types of padding,
+Padding can be applied to the minimum and maximum extremes of the range by using the [`rangePadding`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#rangepadding) property. Date time axis supports the following types of padding,
 
 * None
 * Round
@@ -92,7 +92,7 @@ Padding can be applied to the minimum and maximum extremes of the range by using
 
 **DateTime - None**
 
-When the [`rangePadding`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#rangepadding) is set to `None`, minimum and maximum of an axis is based on the data.
+When the [`rangePadding`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#rangepadding) is set to `None`, minimum and maximum of an axis is based on the data.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -107,7 +107,7 @@ When the [`rangePadding`](https://helpej2.syncfusion.com/react/documentation/api
 
 **DateTime - Round**
 
-When the [`rangePadding`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#rangepadding) is set to `Round`, minimum and maximum will be rounded to the nearest possible value, which is divisible by interval. For example, when the minimum is **15th Jan**, interval is **1** and interval type is **Month**, then the axis minimum will be **Jan 1st**.
+When the [`rangePadding`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#rangepadding) is set to `Round`, minimum and maximum will be rounded to the nearest possible value, which is divisible by interval. For example, when the minimum is **15th Jan**, interval is **1** and interval type is **Month**, then the axis minimum will be **Jan 1st**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -122,7 +122,7 @@ When the [`rangePadding`](https://helpej2.syncfusion.com/react/documentation/api
 
 **DateTime - Additional**
 
-When the [`rangePadding`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#rangepadding) is set to `Additional`, interval of an axis will be padded to the minimum and maximum of the axis.
+When the [`rangePadding`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#rangepadding) is set to `Additional`, interval of an axis will be padded to the minimum and maximum of the axis.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -137,7 +137,7 @@ When the [`rangePadding`](https://helpej2.syncfusion.com/react/documentation/api
 
 ## Label format
 
-The date can be formatted and parsed to all globalize format using the [`labelFormat`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#labelformat) property in an axis.
+The date can be formatted and parsed to all globalize format using the [`labelFormat`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel#labelformat) property in an axis.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

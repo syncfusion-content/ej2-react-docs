@@ -37,7 +37,7 @@ Once you install `@syncfusion/ej2-react-charts`, the other required dependencies
 
 ### Create a React application
 
-To easily set up a React application, use the Vite CLI (`npm create vite`), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like [`create-react-app`](https://github.com/facebook/create-react-app). For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To easily set up a React application, use the Vite CLI (`npm create vite`), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like [`create-react-app`](https://github.com/facebook/create-react-app). For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:** To create a React application using [`create-react-app`](https://github.com/facebook/create-react-app) instead, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -118,11 +118,11 @@ By default, a pie series is rendered when JSON data is assigned to the series [`
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/chart/series/pie-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/pie-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/chart/series/pie-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/pie-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/pie-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/pie-cs4" %}

@@ -14,7 +14,7 @@ The Range Selector's left and right thumbs are used to indicate the selected ran
 
 * By dragging the thumbs.
 * By tapping on the labels.
-* By setting the start and the end through the [`value`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#value) property.
+* By setting the start and the end through the [`value`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#value) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -17,20 +17,20 @@ The series are rendered in the same order in which they are defined in the `seri
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/category-cs12/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/category-cs12/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/category-cs12/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/category-cs12/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/category-cs12/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/category-cs12/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/category-cs12/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/category-cs12/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/category-cs12" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/category-cs12" %}
 
 ## Combination Series
 
@@ -38,19 +38,19 @@ A combination chart allows different series types, such as Line and Column, to b
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/combination-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/combination-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/combination-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/combination-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/combination-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/combination-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/combination-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/combination-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/combination-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/combination-cs1" %}
 
 > Note: Bar series cannot be combined with other series types because their axis orientation differs from other series.

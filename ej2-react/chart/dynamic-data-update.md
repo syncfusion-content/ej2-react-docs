@@ -21,20 +21,20 @@ Use the `addPoint` method to dynamically append a new data point to a series. Th
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/dynamic-update/add-point/app/index.jsx %}
+{% include code-snippet/chart/code-path/dynamic-update/add-point/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/dynamic-update/add-point/app/index.tsx %}
+{% include code-snippet/chart/code-path/dynamic-update/add-point/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/dynamic-update/add-point/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/dynamic-update/add-point/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/dynamic-update/add-point/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/dynamic-update/add-point/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/dynamic-update/add-point" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/dynamic-update/add-point" %}
 
 ## Removing an existing data point
 
@@ -45,20 +45,20 @@ Use the `removePoint` method to dynamically delete a data point from a series by
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/dynamic-update/remove-point/app/index.jsx %}
+{% include code-snippet/chart/code-path/dynamic-update/remove-point/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/dynamic-update/remove-point/app/index.tsx %}
+{% include code-snippet/chart/code-path/dynamic-update/remove-point/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/dynamic-update/remove-point/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/dynamic-update/remove-point/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/dynamic-update/remove-point/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/dynamic-update/remove-point/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/dynamic-update/remove-point" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/dynamic-update/remove-point" %}
 
 ## Replacing entire data points
 
@@ -69,20 +69,20 @@ Use the `setData` method to replace all data points in a series with a new datas
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/dynamic-update/set-data/app/index.jsx %}
+{% include code-snippet/chart/code-path/dynamic-update/set-data/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/dynamic-update/set-data/app/index.tsx %}
+{% include code-snippet/chart/code-path/dynamic-update/set-data/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/dynamic-update/set-data/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/dynamic-update/set-data/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/dynamic-update/set-data/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/dynamic-update/set-data/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/dynamic-update/set-data" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/dynamic-update/set-data" %}
 
 ## Click to add or remove a data point
 
@@ -90,17 +90,17 @@ Enable users to add or remove data points by clicking on the chart. Listen to th
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/dynamic-update/click-add-point/app/index.jsx %}
+{% include code-snippet/chart/code-path/dynamic-update/click-add-point/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/dynamic-update/click-add-point/app/index.tsx %}
+{% include code-snippet/chart/code-path/dynamic-update/click-add-point/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/dynamic-update/click-add-point/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/dynamic-update/click-add-point/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/dynamic-update/click-add-point/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/dynamic-update/click-add-point/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/dynamic-update/click-add-point" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/dynamic-update/click-add-point" %}

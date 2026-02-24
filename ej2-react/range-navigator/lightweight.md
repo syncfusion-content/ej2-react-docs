@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Lightweight in React Range navigator component
 
-By default, when the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#datasource) for [`series`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#series) is empty, a lightweight Range Selector will be shown without Chart.
+By default, when the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#datasource) for [`series`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#series) is empty, a lightweight Range Selector will be shown without Chart.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -25,4 +25,4 @@ By default, when the [`dataSource`](https://ej2.syncfusion.com/react/documentati
 
 ## See Also
 
-* [Period Selector](./period-selector/)
+* [Period Selector](./period-selector)

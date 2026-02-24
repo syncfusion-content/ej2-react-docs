@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Syncfusion React Grid with HotChocolate GraphQL Backend
 
-[GraphQL](https://graphql.org/learn/introduction/) is a query language that allows applications to request exactly the data needed, nothing more and nothing less. Unlike traditional REST APIs that return fixed data structures, GraphQL enables the client to specify the shape and content of the response.
+[GraphQL](https://graphql.org/learn/introduction) is a query language that allows applications to request exactly the data needed, nothing more and nothing less. Unlike traditional REST APIs that return fixed data structures, GraphQL enables the client to specify the shape and content of the response.
 
 **Traditional REST APIs** and **GraphQL** differ mainly in the way data is requested and returned: **REST APIs expose** multiple endpoints that return fixed data structures, often including unnecessary fields and requiring several requests to fetch related data, while **GraphQL** uses a single endpoint where queries define the exact fields needed, enabling precise responses and allowing related data to be retrieved efficiently in one request. This makes **GraphQL** especially useful for **React Grid integration**, the **reason** is data‑centric UI components require well‑structured and selective datasets to support efficient filtering, reduce network calls, and improve overall performance.
 
@@ -843,7 +843,7 @@ The backend configuration is now complete. The next step is to create the React 
 
 ## Integrating Syncfusion React Grid with HotChocolate GraphQL
 
-After configuring the HotChocolate GraphQL backend, the next step is to set up the React frontend and integrate it with the Syncfusion Grid component using the **GraphQLAdaptor**.
+After configuring the HotChocolate GraphQL backend, the next step is to set up the React frontend and integrate it with the Syncfusion Grid component using the `GraphQLAdaptor`.
 
 ### Step 1: Install Syncfusion packages in React project
 
@@ -864,7 +864,7 @@ npm install @syncfusion/ej2-react-grids @syncfusion/ej2-data --save
 **Package descriptions:**
 
 - **@syncfusion/ej2-react-grids**: Provides the Grid component with all features including editing, filtering, sorting, and paging.
-- **@syncfusion/ej2-data**: Provides data management utilities and adaptors including GraphQLAdaptor.
+- **@syncfusion/ej2-data**: Provides data management utilities and adaptors including `GraphQLAdaptor`.
 
 ### Step 2: Add Syncfusion CSS references
 
@@ -902,7 +902,7 @@ For this project, the "tailwind3" theme is used. A different theme can be select
 
 ### Step 3: Configure GraphQLAdaptor with DataManager
 
-The **GraphQLAdaptor** is a built-in Syncfusion adaptor specifically designed for GraphQL APIs. It handles data operations by generating appropriate GraphQL queries and mutations based on Grid actions.
+The `GraphQLAdaptor` is a built-in Syncfusion adaptor specifically designed for GraphQL APIs. It handles data operations by generating appropriate GraphQL queries and mutations based on Grid actions.
 
 **Update App.jsx:**
 
@@ -1676,7 +1676,7 @@ A complete working sample of the React Grid with HotChocolate GraphQL backend is
 **Repository contents:**
 
 - Complete ASP.NET Core backend with HotChocolate GraphQL configuration
-- React frontend with Syncfusion Grid and GraphQLAdaptor setup
+- React frontend with Syncfusion Grid and `GraphQLAdaptor` setup
 - Sample data models and in-memory data source
 - GraphQL queries and mutations for all CRUD operations
 - Data operation implementations (filtering, sorting, paging, searching)

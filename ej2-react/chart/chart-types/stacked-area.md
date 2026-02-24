@@ -19,20 +19,20 @@ To render a [100% stacked area](https://www.syncfusion.com/react-components/reac
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/line-cs16/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs16/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/line-cs16/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs16/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/line-cs16/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs16/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/line-cs16/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs16/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/line-cs16" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs16" %}
 
 ## Binding data with series
 
@@ -40,20 +40,20 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/line-cs16/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs16/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/line-cs16/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs16/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/line-cs16/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs16/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/line-cs16/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs16/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/line-cs16" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs16" %}
 
 ## Series customization
 
@@ -65,39 +65,39 @@ The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/100-stackedarea-cs" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/100-stackedarea-cs" %}
 
 The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#fill) property can be used to apply a gradient color to the 100% stacked area series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
  
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/100-stackedarea-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/100-stackedarea-cs1" %}
 
 **Opacity**
 
@@ -105,20 +105,20 @@ The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesMod
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/100-stackedarea-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/100-stackedarea-cs2" %}
 
 **Border**
 
@@ -126,20 +126,20 @@ Use the [border](https://ej2.syncfusion.com/react/documentation/api/chart/series
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/100-stackedarea-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/100-stackedarea-cs3" %}
 
 ## Empty points
 
@@ -151,20 +151,20 @@ Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/100-stackedarea-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/100-stackedarea-cs4" %}
 
 **Fill**
 
@@ -172,20 +172,20 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs5/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs5/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/100-stackedarea-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/100-stackedarea-cs5" %}
 
 **Border**
 
@@ -193,20 +193,20 @@ Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulati
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs6/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs6/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs6/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs6/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs6/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/100-stackedarea-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/100-stackedarea-cs6" %}
 
 ## Events
 
@@ -216,20 +216,20 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs7/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs7/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs7/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs7/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs7/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/100-stackedarea-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/100-stackedarea-cs7" %}
 
 ### Point render
 
@@ -237,20 +237,20 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs8/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs8/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs8/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs8/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs8/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/100-stackedarea-cs8/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/100-stackedarea-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/100-stackedarea-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/100-stackedarea-cs8" %}
 
 ## See Also
 

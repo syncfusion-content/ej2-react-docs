@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Grid line customization
 
-The gridlines indicate axis divisions by drawing the chart plot. Gridlines include helpful cues to the user, particularly for large or complicated charts. The `width`, `color`, and `dashArray` of the major gridlines can be customized by using the [`majorGridLines`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#majorgridlines) setting.
+The gridlines indicate axis divisions by drawing the chart plot. Gridlines include helpful cues to the user, particularly for large or complicated charts. The `width`, `color`, and `dashArray` of the major gridlines can be customized by using the [`majorGridLines`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#majorgridlines) setting.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +27,7 @@ The gridlines indicate axis divisions by drawing the chart plot. Gridlines inclu
 
 ## Tick line customization
 
-Ticklines are the small lines which is drawn on the axis line representing the axis labels. Ticklines will be drawn outside the axis by default. The `width`, `color`, and `dashArray` of the major ticklines can be customized by using the [`majorTickLines`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#majorticklines) setting.
+Ticklines are the small lines which is drawn on the axis line representing the axis labels. Ticklines will be drawn outside the axis by default. The `width`, `color`, and `dashArray` of the major ticklines can be customized by using the [`majorTickLines`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#majorticklines) setting.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

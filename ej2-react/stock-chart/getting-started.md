@@ -44,7 +44,7 @@ Below is the list of minimum dependencies required to use the Stock Chart compon
 
 ## Installation and configuration
 
-To easily set up a React application, use the Vite CLI (`npm create vite`), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To easily set up a React application, use the Vite CLI (`npm create vite`), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:** To create a React application using `create-react-app` instead, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -127,10 +127,10 @@ The below example shows a basic Stock Chart.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/stock-chart/code-path/getting-started/initialize-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/getting-started/initialize-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/stock-chart/code-path/getting-started/initialize-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/getting-started/initialize-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -335,4 +335,4 @@ Trackball can be enabled by setting the [`enable`](https://ej2.syncfusion.com/re
 
 {% previewsample "page.domainurl/code-snippet/stock-chart/getting-started/trackball-cs1" %}
 
-> You can refer to our [React Stock Chart](https://www.syncfusion.com/react-components/react-stock-chart) feature tour page for its groundbreaking feature representations. You can also explore our [React Stock Chart example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/stock-chart/default) that shows you how to present and manipulate data.
+> You can refer to our [React Stock Chart](https://www.syncfusion.com/react-components/react-stock-chart) feature tour page for its groundbreaking feature representations. You can also explore our [React Stock Chart example](https://ej2.syncfusion.com/react/demos#/bootstrap5/stock-chart/default) that shows you how to present and manipulate data.

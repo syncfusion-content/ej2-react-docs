@@ -16,23 +16,23 @@ The rendered chart can be printed directly from the browser by calling the publi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/print-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/print-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/print-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/print-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/chart/print-cs3/index.html %}
+{% include code-snippet/chart/code-path/print-cs3/index.html %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/print-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/print-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/print-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/print-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart/print-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/print-cs3" %}
 
 ## Export
 
@@ -46,23 +46,23 @@ Optional parameters include:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/print-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/print-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/print-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/print-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/chart/print-cs4/index.html %}
+{% include code-snippet/chart/code-path/print-cs4/index.html %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/print-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/print-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/print-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/print-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart/print-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/print-cs4" %}
 
 ### Adding header and footer in PDF export
 
@@ -73,23 +73,23 @@ In the export method, specify the following parameters to add a header and foote
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/print-cs6/app/index.jsx %}
+{% include code-snippet/chart/code-path/print-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/print-cs6/app/index.tsx %}
+{% include code-snippet/chart/code-path/print-cs6/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/chart/print-cs6/index.html %}
+{% include code-snippet/chart/code-path/print-cs6/index.html %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/print-cs6/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/print-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/print-cs6/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/print-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart/print-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/print-cs6" %}
 
 ### Exporting charts into separate page during the PDF export
 
@@ -97,23 +97,23 @@ During PDF export, set the `exportToMultiplePage` parameter to **true** to expor
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/print-cs7/app/index.jsx %}
+{% include code-snippet/chart/code-path/print-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/print-cs7/app/index.tsx %}
+{% include code-snippet/chart/code-path/print-cs7/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/chart/print-cs7/index.html %}
+{% include code-snippet/chart/code-path/print-cs7/index.html %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/print-cs7/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/print-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/print-cs7/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/print-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart/print-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/print-cs7" %}
 
 ## Multiple chart export
 
@@ -123,23 +123,23 @@ Initially, render more than one chart to export, and then add button to export t
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/print-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/print-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/print-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/print-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/chart/print-cs5/index.html %}
+{% include code-snippet/chart/code-path/print-cs5/index.html %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/print-cs5/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/print-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/print-cs5/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/print-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart/print-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/print-cs5" %}
 
 ## Exporting chart using base64 string
 
@@ -147,23 +147,23 @@ The chart can be exported as an image in the form of a base64 string by utilizin
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/print-cs8/app/index.jsx %}
+{% include code-snippet/chart/code-path/print-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/print-cs8/app/index.tsx %}
+{% include code-snippet/chart/code-path/print-cs8/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/chart/print-cs8/index.html %}
+{% include code-snippet/chart/code-path/print-cs8/index.html %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/print-cs8/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/print-cs8/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/print-cs8/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/print-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart/print-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/print-cs8" %}
 
 ## Excel export
 
@@ -171,20 +171,20 @@ You can export the rendered chart data to Excel in either `XLSX` or `CSV` format
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/print-cs9/app/index.jsx %}
+{% include code-snippet/chart/code-path/print-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/print-cs9/app/index.tsx %}
+{% include code-snippet/chart/code-path/print-cs9/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/chart/print-cs9/index.html %}
+{% include code-snippet/chart/code-path/print-cs9/index.html %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/print-cs9/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/print-cs9/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/print-cs9/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/print-cs9/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart/print-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/print-cs9" %}

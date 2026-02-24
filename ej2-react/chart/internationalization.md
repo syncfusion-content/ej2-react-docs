@@ -29,17 +29,17 @@ The example below globalizes axis, point, and tooltip labels to the EUR currency
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/double-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/double-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/double-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/double-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/double-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/double-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/double-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/double-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/double-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/double-cs2" %}

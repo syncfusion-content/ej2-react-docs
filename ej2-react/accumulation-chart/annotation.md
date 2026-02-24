@@ -18,14 +18,14 @@ By using the <code>content</code> option of annotation property, you can specify
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/accumulation-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/accumulation-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/accumulation-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/accumulation-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/accumulation-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/accumulation-cs1" %}
 
 *Note: To use annotation feature in accumulation chart, we need to inject `AccumulationAnnotation` module into the `services`
 
@@ -35,14 +35,14 @@ The annotation can be placed with respect to either `Series` or `Chart`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/accumulation-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/accumulation-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/accumulation-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/accumulation-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/accumulation-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/accumulation-cs2" %}
 
 ## Co-ordinate Units
 
@@ -50,14 +50,14 @@ Specifies the coordinate units of an annotation either in `Pixel` or `Point`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/accumulation-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/accumulation-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/accumulation-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/accumulation-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/accumulation-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/accumulation-cs3" %}
 
 ## Alignment
 
@@ -65,11 +65,11 @@ The annotations can be moved vertically and horizontally from its default positi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/accumulation-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/accumulation-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/accumulation-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/accumulation-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/accumulation-cs4" %}
+ {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/accumulation-cs4" %}

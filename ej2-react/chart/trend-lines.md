@@ -21,14 +21,14 @@ A linear trendline is a straight, best‑fit line used to describe data with a c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/trendlines-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/trendlines-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/trendlines-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/trendlines-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/trendlines-cs1" %}
 
 ## Exponential
 
@@ -38,14 +38,14 @@ Set the trendline [`type`](https://ej2.syncfusion.com/react/documentation/api/ch
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/trendlines-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/trendlines-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/trendlines-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/trendlines-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/trendlines-cs2" %}
 
 ## Logarithmic
 
@@ -55,14 +55,14 @@ Set [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineM
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/trendlines-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/trendlines-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/trendlines-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/trendlines-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/trendlines-cs3" %}
 
 ## Polynomial
 
@@ -72,14 +72,14 @@ Set [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineM
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/trendlines-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/trendlines-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/trendlines-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/trendlines-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/trendlines-cs4" %}
 
 ## Power
 
@@ -89,20 +89,20 @@ Set [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineM
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/trendlines-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/trendlines-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/trendlines-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/trendlines-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/trendlines-cs5/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/trendlines-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/trendlines-cs5/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/trendlines-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/trendlines-cs5" %}
 
 ## Moving Average
 
@@ -112,14 +112,14 @@ Set [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineM
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/trendlines-cs6/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/trendlines-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/trendlines-cs6/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/trendlines-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/trendlines-cs6" %}
 
 **Customization of Trendline**
 
@@ -127,14 +127,14 @@ Customize trendline appearance using the [`fill`](https://ej2.syncfusion.com/rea
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/trendlines-cs7/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/trendlines-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/trendlines-cs7/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/trendlines-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/trendlines-cs7" %}
 
 ## Forecasting
 
@@ -146,14 +146,14 @@ Use the [`forwardForecast`](https://ej2.syncfusion.com/react/documentation/api/c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/trendlines-cs8/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/trendlines-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/trendlines-cs8/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/trendlines-cs8/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/trendlines-cs8" %}
 
 ## Backward Forecasting
 
@@ -161,14 +161,14 @@ Use the [`backwardForecast`](https://ej2.syncfusion.com/react/documentation/api/
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/trendlines-cs9/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/trendlines-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/trendlines-cs9/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/trendlines-cs9/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/trendlines-cs9" %}
 
 ## Show or hide a trendline
 
@@ -176,11 +176,11 @@ Control visibility using the [`visible`](https://ej2.syncfusion.com/react/docume
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/trendlines-cs10/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/trendlines-cs10/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/trendlines-cs10/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/trendlines-cs10/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs10" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/trendlines-cs10" %}

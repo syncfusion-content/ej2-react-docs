@@ -22,20 +22,20 @@ To render a `waterfall` series in your chart, you need to follow a few steps to 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/waterfall-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/waterfall-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/waterfall-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/waterfall-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/waterfall-cs1" %}
 
 ## Binding data with series
 
@@ -43,20 +43,20 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/waterfall-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/waterfall-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/waterfall-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/waterfall-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/waterfall-cs1" %}
 
 ## Series customization
 
@@ -64,20 +64,20 @@ In waterfall charts, you can customize the appearance of different types of data
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/waterfall-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/waterfall-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/waterfall-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/waterfall-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/waterfall-cs2" %}
 
 ## Empty points
 
@@ -89,20 +89,20 @@ Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/waterfall-cs17/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs17/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/waterfall-cs17/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs17/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/waterfall-cs17/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs17/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/waterfall-cs17/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs17/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs17" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/waterfall-cs17" %}
 
 **Fill**
 
@@ -110,20 +110,20 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/waterfall-cs18/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs18/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/waterfall-cs18/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs18/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/waterfall-cs18/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs18/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/waterfall-cs18/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs18/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs18" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/waterfall-cs18" %}
 
 **Border**
 
@@ -131,20 +131,20 @@ Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulati
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/waterfall-cs19/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs19/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/waterfall-cs19/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs19/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/waterfall-cs19/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs19/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/waterfall-cs19/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs19/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs19" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/waterfall-cs19" %}
 
 ## Events
 
@@ -154,20 +154,20 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/waterfall-cs20/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs20/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/waterfall-cs20/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs20/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/waterfall-cs20/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs20/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/waterfall-cs20/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs20/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs20" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/waterfall-cs20" %}
 
 ### Point render
 
@@ -175,20 +175,20 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/waterfall-cs21/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs21/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/waterfall-cs21/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs21/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/waterfall-cs21/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs21/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/waterfall-cs21/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/waterfall-cs21/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs21" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/waterfall-cs21" %}
 
 
 ## See Also

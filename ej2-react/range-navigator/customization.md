@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Navigator appearance
 
-The Range Selector can be customized by using the [`navigatorStyleSettings`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#navigatorstylesettings). The [`selectedRegionColor`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/styleSettingsModel/#selectedregioncolor) property is used to specify the color for the selected region, whereas the [`unselectedRegionColor`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/styleSettingsModel/#unselectedregioncolor) property is used to specify the color for the unselected region.
+The Range Selector can be customized by using the [`navigatorStyleSettings`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#navigatorstylesettings). The [`selectedRegionColor`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/styleSettingsModel#selectedregioncolor) property is used to specify the color for the selected region, whereas the [`unselectedRegionColor`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/styleSettingsModel#unselectedregioncolor) property is used to specify the color for the unselected region.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -42,7 +42,7 @@ The thumb property allows to customize the border, fill color, size, and type of
 
 ## Border customization
 
-Using the [`navigatorBorder`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/thumbSettingsModel/#border), the [`width`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/borderModel/#width) and [`color`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/borderModel/#color) of the Range Selector border can be customized.
+Using the [`navigatorBorder`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/thumbSettingsModel#border), the [`width`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/borderModel#width) and [`color`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/borderModel#color) of the Range Selector border can be customized.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -57,7 +57,7 @@ Using the [`navigatorBorder`](https://ej2.syncfusion.com/react/documentation/api
 
 ## Deferred update
 
-If the [`enableDeferredUpdate`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#enabledeferredupdate) property is set to **true**, then the changed event will be triggered after dragging the slider. If the [`enableDeferredUpdate`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#enabledeferredupdate) is **false**, then the changed event will be triggered when dragging the slider. By default, the [`enableDeferredUpdate`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#enabledeferredupdate) is set to **false**.
+If the [`enableDeferredUpdate`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#enabledeferredupdate) property is set to **true**, then the changed event will be triggered after dragging the slider. If the [`enableDeferredUpdate`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#enabledeferredupdate) is **false**, then the changed event will be triggered when dragging the slider. By default, the [`enableDeferredUpdate`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#enabledeferredupdate) is set to **false**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -72,7 +72,7 @@ If the [`enableDeferredUpdate`](https://ej2.syncfusion.com/react/documentation/a
 
 ## Allow snapping
 
-The [`allowSnapping`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#allowsnapping) property toggles the placement of the slider exactly to the left or on the nearest interval.
+The [`allowSnapping`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#allowsnapping) property toggles the placement of the slider exactly to the left or on the nearest interval.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -87,7 +87,7 @@ The [`allowSnapping`](https://ej2.syncfusion.com/react/documentation/api/range-n
 
 ## Animation
 
-The speed of the animation can be controlled using the [`animationDuration`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#animationduration) property. The default value of the [`animationDuration`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#animationduration) property is **500** milliseconds.
+The speed of the animation can be controlled using the [`animationDuration`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#animationduration) property. The default value of the [`animationDuration`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#animationduration) property is **500** milliseconds.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -102,5 +102,5 @@ The speed of the animation can be controlled using the [`animationDuration`](htt
 
 ## See Also
 
-* [Grid and Tick Lines](./grid-tick/)
-* [Labels](./labels/)
+* [Grid and Tick Lines](./grid-tick)
+* [Labels](./labels)

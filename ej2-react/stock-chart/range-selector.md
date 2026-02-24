@@ -16,7 +16,7 @@ The left and right thumb of RangeNavigator are used to indicate the selected ran
 * By tapping on the labels.
 * By setting the start and end through Date Range button.
 
-Following code example shows the [`enableSelector`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockChartModel/#enableselector) property allows users to toggle the visibility of range selector.
+Following code example shows the [`enableSelector`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockChartModel#enableselector) property allows users to toggle the visibility of range selector.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

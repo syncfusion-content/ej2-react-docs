@@ -14,14 +14,14 @@ The data points those uses the `null` or `undefined` as value are considered as 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/pie-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/pie-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/pie-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/pie-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/pie-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/pie-cs2" %}
 
 ## Customization
 
@@ -29,14 +29,14 @@ Specific color for an empty point can be set by using the `fill` property in `em
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/pie-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/pie-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/pie-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/pie-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/pie-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/pie-cs3" %}
 
 ## Handling No Data
 
@@ -44,11 +44,11 @@ When no data is available to render in the accumulation chart, the `noDataTempla
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/pie-cs46/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/pie-cs46/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/pie-cs46/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/pie-cs46/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/pie-cs46" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/pie-cs46" %}

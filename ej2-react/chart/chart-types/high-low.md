@@ -22,20 +22,20 @@ To render a `hilo` series in your chart, you need to follow a few steps to confi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/hilo-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/hilo-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/hilo-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/hilo-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/hilo-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/hilo-cs1" %}
 
 ## Binding data with series
 
@@ -43,20 +43,20 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/hilo-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/hilo-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/hilo-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/hilo-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/hilo-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/hilo-cs1" %}
 
 ## Series customization
 
@@ -68,39 +68,39 @@ The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/hilo-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/hilo-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/hilo-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/hilo-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/hilo-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/hilo-cs2" %}
 
 The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#fill) property can be used to apply a gradient color to the hilo series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/hilo-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/hilo-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/hilo-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/hilo-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/hilo-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/hilo-cs3" %}
 
 **Opacity**
 
@@ -108,20 +108,20 @@ The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesMod
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/hilo-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/hilo-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/hilo-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/hilo-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/hilo-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/hilo-cs4" %}
 
 ## Empty points
 
@@ -133,20 +133,20 @@ Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/hilo-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/hilo-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/hilo-cs5/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/hilo-cs5/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/hilo-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/hilo-cs5" %}
 
 **Fill**
 
@@ -154,20 +154,20 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/hilo-cs6/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/hilo-cs6/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs6/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/hilo-cs6/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/hilo-cs6/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/hilo-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/hilo-cs6" %}
 
 ## Events
 
@@ -177,20 +177,20 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/hilo-cs7/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/hilo-cs7/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs7/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/hilo-cs7/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/hilo-cs7/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/hilo-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/hilo-cs7" %}
 
 ### Point render
 
@@ -198,20 +198,20 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/hilo-cs8/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/hilo-cs8/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs8/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/hilo-cs8/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs8/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/hilo-cs8/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/hilo-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/hilo-cs8" %}
 
 ## See Also
 

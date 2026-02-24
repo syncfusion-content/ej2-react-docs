@@ -18,20 +18,20 @@ To get start quickly with React Category Axis, you can check out this video:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/category-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/category-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/category-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/category-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/category-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/category-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/category-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/category-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/category-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/category-cs1" %}
 
 > Note: To use category axis, we need to inject `Category` module into the `services` and
 set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel#valuetype) of axis to Category.
@@ -42,20 +42,20 @@ By default, category labels are positioned between the axis tick marks. They can
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/category-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/category-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/category-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/category-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/category-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/category-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/category-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/category-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/category-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/category-cs2" %}
 
 ## Range
 
@@ -63,20 +63,20 @@ The visible range of the category axis can be customized by using the  [`minimum
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/category-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/category-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/category-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/category-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/category-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/category-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/category-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/category-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/category-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/category-cs3" %}
 
 ## Indexed category axis
 
@@ -84,17 +84,17 @@ The category axis can also be rendered based on the index values of the data sou
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs22/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs22/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs22/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs22/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs22/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs22/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs22/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs22/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs22" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/multiple-cs22" %}

@@ -20,20 +20,20 @@ By default, the tooltip is not visible. You can enable the tooltip by setting th
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/tooltip-cs1" %}
 
 ## Fixed tooltip
 
@@ -41,20 +41,20 @@ By default, the tooltip tracks the mouse movement. You can render the tooltip at
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs11/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs11/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs11/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs11/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs11/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs11/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs11/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs11/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs11" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/tooltip-cs11" %}
 
 ## Format the tooltip
 
@@ -62,20 +62,20 @@ By default, the tooltip displays the x- and y-values of a data point. Additional
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/tooltip-cs2" %}
 
 <!-- markdownlint-disable MD013 -->
 
@@ -87,20 +87,20 @@ Each series tooltip can be formatted separately by using the series [`tooltipFor
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/tooltip-cs3" %}
 
 <!-- markdownlint-disable MD013 -->
 
@@ -110,20 +110,20 @@ Custom HTML content can be rendered in the tooltip by using the [`template`](htt
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/tooltip-cs4" %}
 
 ## Enable highlight
 
@@ -131,20 +131,20 @@ By setting the [`enableHighlight`](https://ej2.syncfusion.com/react/documentatio
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs12/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs12/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs12/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs12/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs12/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs12/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs12/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs12/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs12" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/tooltip-cs12" %}
 
 ## Tooltip mapping name
 
@@ -152,20 +152,20 @@ By default, the tooltip displays only the x- and y-values of a data point. Addit
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs5/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs5/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/tooltip-cs5" %}
 
 ## Customize the appearance of tooltip
 
@@ -177,20 +177,20 @@ The [`highlightColor`](https://ej2.syncfusion.com/react/documentation/api/chart#
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs6/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs6/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs6/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs6/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs6/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/tooltip-cs6" %}
 
 ## Closest tooltip
 
@@ -198,20 +198,20 @@ The [`showNearestTooltip`](https://ej2.syncfusion.com/react/documentation/api/ch
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs13/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs13/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs13/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs13/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs13/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs13/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/tooltip-cs13/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-cs13/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs13" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/tooltip-cs13" %}
 
 ## See also
 

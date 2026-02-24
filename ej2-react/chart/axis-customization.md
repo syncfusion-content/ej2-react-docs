@@ -16,20 +16,20 @@ An axis can be positioned dynamically within the chart area using the [`crossesA
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/multiple-cs1" %}
 
 ## Title
 
@@ -37,20 +37,20 @@ A title can be added to an axis using the [`title`](https://ej2.syncfusion.com/r
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/multiple-cs2" %}
 
 ## Title Rotation
 
@@ -58,20 +58,20 @@ The orientation of the axis title can be adjusted using the [`titleRotation`](ht
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/multiple-cs3" %}
 
 ## Tick Lines Customization
 
@@ -79,20 +79,20 @@ The appearance of both major and minor tick lines can be customized using the [`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/multiple-cs4" %}
 
 ## Grid Lines Customization
 
@@ -100,20 +100,20 @@ Grid lines can be styled using the [`majorGridLines`](https://ej2.syncfusion.com
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/line-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/line-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/line-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/line-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/line-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs1" %}
 
 ## Multiple Axis
 
@@ -121,20 +121,20 @@ In addition to the primary X and Y axes, multiple additional axes can be added t
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs5/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs5/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/multiple-cs5" %}
 
 ## Inversed Axis
 
@@ -142,37 +142,37 @@ When an axis is inversed, the highest value is displayed closer to the origin, a
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs6/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs6/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs6/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs6/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs6/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/multiple-cs6" %}
 
 ## Opposed Position
 
 An axis can be placed on the opposite side of its default position by setting the [`opposedPosition`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#opposedposition) property to `true`. This option is useful when displaying multiple axes or when optimizing space usage in complex chart layouts.
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/line-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/line-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/line-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/line-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/line-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs2" %}

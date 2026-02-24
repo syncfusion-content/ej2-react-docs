@@ -19,20 +19,20 @@ To render a [stacked column](https://www.syncfusion.com/react-components/react-c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/line-cs23/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs23/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/line-cs23/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs23/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/line-cs23/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs23/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/line-cs23/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs23/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/line-cs23" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs23" %}
 
 ## Binding data with series
 
@@ -40,20 +40,20 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/line-cs23/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs23/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/line-cs23/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs23/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/line-cs23/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs23/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/line-cs23/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs23/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/line-cs23" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs23" %}
 
 ## Series customization
 
@@ -65,39 +65,39 @@ The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/stackedcolumn-cs" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/stackedcolumn-cs" %}
 
 The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#fill) property can be used to apply a gradient color to the stacked column series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/stackedcolumn-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/stackedcolumn-cs1" %}
 
 **Opacity**
 
@@ -105,20 +105,20 @@ The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesMod
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/stackedcolumn-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/stackedcolumn-cs2" %}
 
 **Border**
 
@@ -126,20 +126,20 @@ Use the [border](https://ej2.syncfusion.com/react/documentation/api/chart/series
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/stackedcolumn-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/stackedcolumn-cs4" %}
 
 ## Empty points
 
@@ -151,20 +151,20 @@ Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs5/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs5/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/stackedcolumn-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/stackedcolumn-cs5" %}
 
 **Fill**
 
@@ -172,20 +172,20 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs6/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs6/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs6/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs6/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs6/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/stackedcolumn-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/stackedcolumn-cs6" %}
 
 **Border**
 
@@ -193,20 +193,20 @@ Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulati
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs7/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs7/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs7/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs7/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs7/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/stackedcolumn-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/stackedcolumn-cs7" %}
 
 ## Cylindrical stacked column chart
 
@@ -214,20 +214,20 @@ To render a cylindrical stacked column chart, set the [`columnFacet`](https://ej
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/line-cs42/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs42/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/line-cs42/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs42/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/line-cs42/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs42/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/line-cs42/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs42/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/line-cs42" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs42" %}
 
 ## Stacking group
 
@@ -235,20 +235,20 @@ Use the [`stackingGroup`](../../api/chart/series#stackinggroup) property to grou
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs10/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs10/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs10/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs10/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs10/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs10/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs10/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs10/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/stackedcolumn-cs10" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/stackedcolumn-cs10" %}
 
 ## Stack labels
 
@@ -257,20 +257,20 @@ The stack labels in stacked charts display cumulative total values for stack seg
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/line-cs82/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs82/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/line-cs82/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs82/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/line-cs82/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs82/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/line-cs82/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs82/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/line-cs82" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs82" %}
 
 ### Stack labels customization
 
@@ -288,20 +288,20 @@ Stack labels have various properties for customization to enhance the visual bas
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/line-cs82A/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs82A/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/line-cs82A/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs82A/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/line-cs82A/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs82A/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/line-cs82A/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs82A/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/line-cs82A" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs82A" %}
 
 ## Corner radius
 
@@ -309,20 +309,20 @@ The [`cornerRadius`](https://ej2.syncfusion.com/react/documentation/api/chart/se
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs9A/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs9A/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs9A/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs9A/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs9A/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs9A/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs9A/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs9A/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/stackedcolumn-cs9A" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/stackedcolumn-cs9A" %}
 
 ### Point corner radius
 
@@ -330,20 +330,20 @@ You can customize the corner radius for individual points in the chart series us
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs9B/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs9B/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs9B/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs9B/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs9B/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs9B/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs9B/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs9B/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/stackedcolumn-cs9B" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/stackedcolumn-cs9B" %}
 
 
 ## Events
@@ -354,20 +354,20 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs8/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs8/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs8/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs8/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs8/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs8/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/stackedcolumn-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/stackedcolumn-cs8" %}
 
 ### Point render
 
@@ -375,20 +375,20 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs9/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs9/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs9/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs9/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs9/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs9/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/stackedcolumn-cs9/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/stackedcolumn-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/stackedcolumn-cs9" %}
 
 
 ## See also
