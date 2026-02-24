@@ -17,7 +17,7 @@ Speed up React development using these ready-made prompts for popular Syncfusion
 Before starting, make sure your MCP server is set up and running.
 
 * Choose a prompt that fits your needs.
-* Copy the full prompt, including the #sf_react_assistant / #sf_react_component tool.
+* Copy the full prompt, including the `#sf_react_assistant` tool.
 * Customize the prompt for your specific use case.
 * Execute the prompt via the MCP Server.
 * Always review and test the generated code before adding it to your project.
