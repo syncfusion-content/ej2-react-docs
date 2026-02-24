@@ -20,20 +20,20 @@ To render a [radar](https://www.syncfusion.com/react-components/react-charts/cha
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs9/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs9/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs9/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs9/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs9/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs9/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs9/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs9" %}
 
 ### Draw Type
 
@@ -41,20 +41,20 @@ Similar to the polar chart, use the [`drawType`](https://ej2.syncfusion.com/reac
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs9/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs9/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs9/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs9/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs9/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs9/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs9/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs9" %}
 
 ## Binding data with series
 
@@ -62,20 +62,20 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs9/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs9/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs9/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs9/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs9/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs9/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs9/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs9" %}
 
 ## Series customization
 
@@ -85,20 +85,20 @@ You can customize the start angle of the radar series using [`startAngle`](https
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs10/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs10/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs10/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs10/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs10/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs10/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs10/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs10/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs10" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs10" %}
 
 ### Radius
 
@@ -106,20 +106,20 @@ You can customize the radius of the radar series using [`coefficient`](https://e
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs11/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs11/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs11/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs11/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs11/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs11/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs11/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs11/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs11" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs11" %}
 
 ## Empty points
 
@@ -131,20 +131,20 @@ Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs18/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs18/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs18/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs18/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs18/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs18/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs18/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs18/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs18" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs18" %}
 
 **Fill**
 
@@ -152,20 +152,20 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs19/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs19/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs19/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs19/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs19/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs19/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs19/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs19/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs19" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs19" %}
 
 **Border**
 
@@ -173,20 +173,20 @@ Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulati
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs20/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs20/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs20/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs20/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs20/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs20/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs20/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs20/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs20" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs20" %}
 
 ## Events
 
@@ -196,20 +196,20 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs21/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs21/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs21/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs21/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs21/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs21/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs21/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs21/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs21" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs21" %}
 
 ### Point render
 
@@ -217,20 +217,20 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs22/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs22/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs22/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs22/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/polar-cs22/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/polar-cs22/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/polar-cs22/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/polar-cs22/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs22" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs22" %}
 
 ## See Also
 

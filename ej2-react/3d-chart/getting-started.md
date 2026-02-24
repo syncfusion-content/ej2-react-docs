@@ -36,7 +36,7 @@ Once you install `@syncfusion/ej2-react-charts`, the other required dependencies
 
 ### Create a React application
 
-To easily set up a React application, use the Vite CLI (`npm create vite`), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like [`create-react-app`](https://github.com/facebook/create-react-app). For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To easily set up a React application, use the Vite CLI (`npm create vite`), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like [`create-react-app`](https://github.com/facebook/create-react-app). For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:** To create a React application using [`create-react-app`](https://github.com/facebook/create-react-app) instead, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -274,4 +274,4 @@ The tooltip is useful when you cannot display information by using the data labe
 
 {% previewsample "page.domainurl/code-snippet/3d-chart/getting-started/getting-started-cs6" %}
 
-> You can refer to our [React 3D Charts](https://www.syncfusion.com/react-components/react-3d-chart) feature tour page for its groundbreaking feature representations. You can also explore our [React 3D Charts example](https://ej2.syncfusion.com/react/demos/#/material3/three-dimension-chart/column) that shows various 3D Chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> You can refer to our [React 3D Charts](https://www.syncfusion.com/react-components/react-3d-chart) feature tour page for its groundbreaking feature representations. You can also explore our [React 3D Charts example](https://ej2.syncfusion.com/react/demos/#tailwind3/three-dimension-chart/column) that shows various 3D Chart types and how to represent time-dependent data, showing trends in data at equal intervals.

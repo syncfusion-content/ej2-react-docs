@@ -20,20 +20,20 @@ To render a [scatter](https://www.syncfusion.com/react-components/react-charts/c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/line-cs32/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs32/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/line-cs32/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs32/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/line-cs32/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs32/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/line-cs32/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs32/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/line-cs32" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs32" %}
 
 ## Binding data with series
 
@@ -41,20 +41,20 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/line-cs32/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs32/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/line-cs32/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs32/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/line-cs32/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs32/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/line-cs32/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs32/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/line-cs32" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs32" %}
 
 ## Series customization
 
@@ -66,20 +66,20 @@ The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/scatter-cs/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/scatter-cs/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/scatter-cs/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/scatter-cs/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/scatter-cs" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/scatter-cs" %}
 
 **Opacity**
 
@@ -87,20 +87,20 @@ The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesMod
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/scatter-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/scatter-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/scatter-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/scatter-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/scatter-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/scatter-cs1" %}
 
 **Shape**
 
@@ -108,20 +108,20 @@ The [shape](https://ej2.syncfusion.com/react/documentation/api/chart/markerSetti
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/scatter-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/scatter-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/scatter-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/scatter-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/scatter-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/scatter-cs2" %}
 
 ## Empty points
 
@@ -133,20 +133,20 @@ Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/scatter-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/scatter-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/scatter-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/scatter-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/scatter-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/scatter-cs3" %}
 
 **Fill**
 
@@ -154,20 +154,20 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/scatter-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/scatter-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/scatter-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/scatter-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/scatter-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/scatter-cs4" %}
 
 **Border**
 
@@ -175,20 +175,20 @@ Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulati
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/scatter-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/scatter-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/scatter-cs5/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/scatter-cs5/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/scatter-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/scatter-cs5" %}
 
 ## Events
 
@@ -198,20 +198,20 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/scatter-cs6/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/scatter-cs6/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs6/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/scatter-cs6/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/scatter-cs6/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/scatter-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/scatter-cs6" %}
 
 ### Point render
 
@@ -219,20 +219,20 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/scatter-cs7/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/scatter-cs7/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs7/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/scatter-cs7/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/scatter-cs7/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/scatter-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/scatter-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/scatter-cs7" %}
 
 ## See Also
 

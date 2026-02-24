@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Data labels in React 3D Chart control
 
-Data labels are fields that includes information about the sample point connected to an output. It can be added to a chart series by enabling the [`visible`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/dataLabelStyleModel/#visible) option in the dataLabel. By default, the labels will arrange smartly without overlapping.
+Data labels are fields that includes information about the sample point connected to an output. It can be added to a chart series by enabling the [`visible`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/dataLabelStyleModel#visible) option in the dataLabel. By default, the labels will arrange smartly without overlapping.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +27,7 @@ Data labels are fields that includes information about the sample point connecte
 
 ## Position
 
-The [`position`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/dataLabelStyleModel/#position) property is used to place the label either on `Top`, `Middle`, or `Bottom`.
+The [`position`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/dataLabelStyleModel#position) property is used to place the label either on `Top`, `Middle`, or `Bottom`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -42,7 +42,7 @@ The [`position`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/
 
 ## Template
 
-Label content can be formatted by using the template option. Inside the template, the placeholder text `${point.x}` and `${point.y}` can be added to display corresponding data points x & y value. Using [`template`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/dataLabelStyleModel/#template) property, the data label template can be set.
+Label content can be formatted by using the template option. Inside the template, the placeholder text `${point.x}` and `${point.y}` can be added to display corresponding data points x & y value. Using [`template`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/dataLabelStyleModel#template) property, the data label template can be set.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -57,7 +57,7 @@ Label content can be formatted by using the template option. Inside the template
 
 ## Text mapping
 
-Text from the data source can be mapped using the [`name`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/dataLabelStyleModel/#name) property.
+Text from the data source can be mapped using the [`name`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/dataLabelStyleModel#name) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -72,7 +72,7 @@ Text from the data source can be mapped using the [`name`](https://helpej2.syncf
 
 ## Format
 
-Data label for the chart can be formatted using the [`format`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/dataLabelStyleModel/#format) property. The global formatting options can be used as 'n', 'p', and 'c'.
+Data label for the chart can be formatted using the [`format`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/dataLabelStyleModel#format) property. The global formatting options can be used as 'n', 'p', and 'c'.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -144,7 +144,7 @@ Data label for the chart can be formatted using the [`format`](https://helpej2.s
 
 ## Margin
 
-The [`margin`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/dataLabelStyleModel/#margin) for data label can be applied by using [`left`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/marginModel/#left), [`right`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/marginModel/#right), [`bottom`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/marginModel/#bottom) and [`top`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/marginModel/#top) properties.
+The [`margin`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/dataLabelStyleModel#margin) for data label can be applied by using [`left`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/marginModel#left), [`right`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/marginModel#right), [`bottom`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/marginModel#bottom) and [`top`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/marginModel#top) properties.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -159,7 +159,7 @@ The [`margin`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/da
 
 ## Customization
 
-The `stroke` and `border` of data label can be customized using [`fill`](../api/chart3d/dataLabelStyleModel/#fill) and [`border`](../api/chart3d/dataLabelStyleModel/#border) properties.
+The `stroke` and `border` of data label can be customized using [`fill`](../api/chart3d/dataLabelStyleModel#fill) and [`border`](../api/chart3d/dataLabelStyleModel#border) properties.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -174,7 +174,7 @@ The `stroke` and `border` of data label can be customized using [`fill`](../api/
 
 ## Customizing specific label
 
-A specific label can be customized by using the [`textRender`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/i3DTextRenderEventArgs/) event.  The `textRender` event allows you to change the label text for the point.
+A specific label can be customized by using the [`textRender`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/i3DTextRenderEventArgs) event.  The `textRender` event allows you to change the label text for the point.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

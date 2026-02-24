@@ -38,7 +38,7 @@ Once you install `@syncfusion/ej2-react-charts`, the other required dependencies
 
 ### Create a React application
 
-To easily set up a React application, use the Vite CLI (`npm create vite`), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like [`create-react-app`](https://github.com/facebook/create-react-app). For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To easily set up a React application, use the Vite CLI (`npm create vite`), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like [`create-react-app`](https://github.com/facebook/create-react-app). For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:** To create a React application using [`create-react-app`](https://github.com/facebook/create-react-app) instead, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -117,14 +117,14 @@ The below example shows a basic Chart.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/chart/getting-started/initialize-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/getting-started/initialize-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/chart/getting-started/initialize-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/getting-started/initialize-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/getting-started/initialize-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/getting-started/initialize-cs1" %}
 
 ## Module injection
 
@@ -203,39 +203,39 @@ Since the JSON contains category data, set the [`valueType`](https://ej2.syncfus
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/chart/getting-started/datasource-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/getting-started/datasource-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/chart/getting-started/datasource-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/getting-started/datasource-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/getting-started/datasource-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/getting-started/datasource-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/getting-started/datasource-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/getting-started/datasource-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/getting-started/datasource-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/getting-started/datasource-cs3" %}
 
 The sales data are in thousands, so format the vertical axis label by adding `$` as a prefix and `K` as a suffix to each label. This can be achieved by setting the `${value}K` to the [`labelFormat`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel#labelformat) property of axis. Here, `{value}` act as a placeholder for each axis label.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/chart/getting-started/datasource-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/getting-started/datasource-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/chart/getting-started/datasource-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/getting-started/datasource-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/getting-started/datasource-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/getting-started/datasource-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/getting-started/datasource-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/getting-started/datasource-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/getting-started/datasource-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/getting-started/datasource-cs4" %}
 
 ## Add Chart title
 
@@ -243,20 +243,20 @@ You can add a title using the [`title`](https://ej2.syncfusion.com/react/documen
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/chart/getting-started/title-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/getting-started/title-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/chart/getting-started/title-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/getting-started/title-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/getting-started/title-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/getting-started/title-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/getting-started/title-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/getting-started/title-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/getting-started/title-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/getting-started/title-cs1" %}
 
 ## Enable legend
 
@@ -264,20 +264,20 @@ You can use legend for the Chart by setting the [`visible`](https://ej2.syncfusi
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/chart/getting-started/legend-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/getting-started/legend-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/chart/getting-started/legend-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/getting-started/legend-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/getting-started/legend-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/getting-started/legend-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/getting-started/legend-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/getting-started/legend-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/getting-started/legend-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/getting-started/legend-cs1" %}
 
 ## Add data label
 
@@ -285,20 +285,20 @@ You can add data labels to improve the readability of the Chart. This can be ach
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/chart/getting-started/datalabel-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/getting-started/datalabel-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/chart/getting-started/datalabel-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/getting-started/datalabel-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/getting-started/datalabel-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/getting-started/datalabel-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/getting-started/datalabel-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/getting-started/datalabel-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/getting-started/datalabel-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/getting-started/datalabel-cs1" %}
 
 ## Enable tooltip
 
@@ -306,19 +306,19 @@ The tooltip is useful when you cannot display information by using the data labe
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/chart/getting-started/tooltip-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/getting-started/tooltip-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/chart/getting-started/tooltip-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/getting-started/tooltip-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/getting-started/tooltip-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/getting-started/tooltip-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/getting-started/tooltip-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/getting-started/tooltip-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/getting-started/tooltip-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/getting-started/tooltip-cs2" %}
 
-> You can refer to our [React Charts](https://www.syncfusion.com/react-components/react-charts) feature tour page for its groundbreaking feature representations. You can also explore our [React Charts example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/chart/line) that shows various Chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> You can refer to our [React Charts](https://www.syncfusion.com/react-components/react-charts) feature tour page for its groundbreaking feature representations. You can also explore our [React Charts example](https://ej2.syncfusion.com/react/demos#/bootstrap5/chart/line) that shows various Chart types and how to represent time-dependent data, showing trends in data at equal intervals.

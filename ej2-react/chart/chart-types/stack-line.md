@@ -19,20 +19,20 @@ To render a [stacked line](https://www.syncfusion.com/react-components/react-cha
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/line-cs8/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/line-cs8/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs8/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/line-cs8/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs8/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/line-cs8/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/line-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs8" %}
 
 ## Binding data with series
 
@@ -40,20 +40,20 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/line-cs8/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/line-cs8/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs8/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/line-cs8/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs8/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/line-cs8/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/line-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs8" %}
 
 ## Series customization
 
@@ -65,20 +65,20 @@ The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/stackedline-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/stackedline-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/stackedline-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/stackedline-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/stackedline-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/stackedline-cs1" %}
 
 **Fill**
 
@@ -86,20 +86,20 @@ The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/stackedline-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/stackedline-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/stackedline-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/stackedline-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/stackedline-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/stackedline-cs2" %}
 
 **Opacity**
 
@@ -107,20 +107,20 @@ The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesMod
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/stackedline-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/stackedline-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/stackedline-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/stackedline-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/stackedline-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/stackedline-cs3" %}
 
 **Dash array**
 
@@ -128,20 +128,20 @@ The [dashArray](https://ej2.syncfusion.com/react/documentation/api/chart/seriesM
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/stackedline-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/stackedline-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/stackedline-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/stackedline-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/stackedline-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/stackedline-cs4" %}
 
 **Width**
 
@@ -149,20 +149,20 @@ The [width](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/stackedline-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/stackedline-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/stackedline-cs5/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/stackedline-cs5/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/stackedline-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/stackedline-cs5" %}
 
 ## Empty points
 
@@ -174,20 +174,20 @@ Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/stackedline-cs6/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/stackedline-cs6/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs6/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/stackedline-cs6/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/stackedline-cs6/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/stackedline-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/stackedline-cs6" %}
 
 **Fill**
 
@@ -195,20 +195,20 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/stackedline-cs7/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/stackedline-cs7/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs7/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/stackedline-cs7/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/stackedline-cs7/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/stackedline-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/stackedline-cs7" %}
 
 **Border**
 
@@ -216,20 +216,20 @@ Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulati
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/stackedline-cs8/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/stackedline-cs8/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs8/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/stackedline-cs8/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs8/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/stackedline-cs8/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/stackedline-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/stackedline-cs8" %}
 
 ## Stack labels
 
@@ -238,20 +238,20 @@ The stack labels in stacked charts display cumulative total values for stack seg
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/line-cs83/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs83/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/line-cs83/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs83/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/line-cs83/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs83/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/line-cs83/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs83/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/line-cs83" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs83" %}
 
 ### Stack labels customization
 
@@ -269,20 +269,20 @@ Stack labels have various properties for customization to enhance the visual bas
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/line-cs83A/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs83A/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/line-cs83A/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs83A/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/line-cs83A/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/line-cs83A/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/line-cs83A/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/line-cs83A/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/line-cs83A" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs83A" %}
 
 ## Events
 
@@ -292,20 +292,20 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/stackedline-cs9/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/stackedline-cs9/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs9/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/stackedline-cs9/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs9/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/stackedline-cs9/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs9/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/stackedline-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/stackedline-cs9" %}
 
 ### Point render
 
@@ -313,20 +313,20 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/stackedline-cs10/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs10/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/stackedline-cs10/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs10/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/stackedline-cs10/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs10/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/stackedline-cs10/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/stackedline-cs10/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/stackedline-cs10" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/stackedline-cs10" %}
 
 
 ## See Also

@@ -22,20 +22,20 @@ To render error bars for the series in your chart, you need to follow a few step
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/errorbar-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/errorbar-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/errorbar-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/errorbar-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/errorbar-cs1" %}
 
 ## Error Bar Type
 
@@ -43,20 +43,20 @@ To change the error bar rendering type using [`type`](https://ej2.syncfusion.com
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/errorbar-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/errorbar-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/errorbar-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/errorbar-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/errorbar-cs2" %}
 
 ## Customizing error bar type
 
@@ -64,20 +64,20 @@ To customize the error bar type, set the error bar [`type`](https://ej2.syncfusi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/errorbar-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/errorbar-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/errorbar-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/errorbar-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/errorbar-cs3" %}
 
 ## Error bar mode
 
@@ -85,20 +85,20 @@ The error bar mode is used to define whether the error bar line is drawn horizon
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/errorbar-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/errorbar-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/errorbar-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/errorbar-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/errorbar-cs4" %}
 
 ## Error bar direction
 
@@ -106,20 +106,20 @@ To change the direction of the error bars to plus, minus, or both sides, use the
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/errorbar-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/errorbar-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/errorbar-cs5/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/errorbar-cs5/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/errorbar-cs5" %}
 
 ## Customizing error bar cap
 
@@ -127,20 +127,20 @@ To customize the length, width, opacity, and fill color of the error bar caps, y
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/errorbar-cs6/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/errorbar-cs6/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs6/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/errorbar-cs6/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/errorbar-cs6/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/errorbar-cs6" %}
 
 ## Customizing error bar color
 
@@ -148,20 +148,20 @@ To customize the error bar color for individual errors, use the [`errorBarColorM
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/errorbar-cs7/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/errorbar-cs7/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs7/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/errorbar-cs7/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/errorbar-cs7/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/errorbar-cs7" %}
 
 ## Events
 
@@ -171,20 +171,20 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/errorbar-cs8/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/errorbar-cs8/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs8/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/errorbar-cs8/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs8/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/errorbar-cs8/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/errorbar-cs8" %}
 
 ### Point render
 
@@ -192,20 +192,20 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/errorbar-cs9/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/errorbar-cs9/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs9/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/errorbar-cs9/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs9/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/errorbar-cs9/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/errorbar-cs9/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/errorbar-cs9" %}
 
 ## See Also
 

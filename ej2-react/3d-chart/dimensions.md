@@ -37,7 +37,7 @@ The 3D chart can be rendered to its container size and it can be set via inline 
 
 <!-- markdownlint-disable MD036 -->
 
-The size of the 3D chart can be set directly through [`width`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/#width) and [`height`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/#height) properties.
+The size of the 3D chart can be set directly through [`width`](https://helpej2.syncfusion.com/react/documentation/api/chart3d#width) and [`height`](https://helpej2.syncfusion.com/react/documentation/api/chart3d#height) properties.
 
 **In Pixel**
 

@@ -22,20 +22,20 @@ To render a [range column](https://www.syncfusion.com/react-components/react-cha
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/rangecolumn-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/rangecolumn-cs1" %}
 
 ## Binding data with series
 
@@ -43,20 +43,20 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/rangecolumn-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/rangecolumn-cs1" %}
 
 ## Series customization
 
@@ -68,39 +68,39 @@ The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/rangecolumn-cs" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/rangecolumn-cs" %}
 
 The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#fill) property can be used to apply a gradient color to the range column series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/rangecolumn-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/rangecolumn-cs2" %}
 
 **Opacity**
 
@@ -108,20 +108,20 @@ The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesMod
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/rangecolumn-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/rangecolumn-cs3" %}
 
 **Border**
 
@@ -129,20 +129,20 @@ Use the [border](https://ej2.syncfusion.com/react/documentation/api/chart/series
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs5/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs5/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/rangecolumn-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/rangecolumn-cs5" %}
 
 
 ## Empty points
@@ -155,20 +155,20 @@ Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs6/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs6/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs6/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs6/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs6/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/rangecolumn-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/rangecolumn-cs6" %}
 
 **Fill**
 
@@ -176,20 +176,20 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs7/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs7/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs7/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs7/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs7/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/rangecolumn-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/rangecolumn-cs7" %}
 
 **Border**
 
@@ -197,20 +197,20 @@ Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulati
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs8/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs8/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs8/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs8/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs8/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs8/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/rangecolumn-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/rangecolumn-cs8" %}
 
 ## Corner radius
 
@@ -218,20 +218,20 @@ The [`cornerRadius`](https://ej2.syncfusion.com/react/documentation/api/chart/se
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs10A/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs10A/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs10A/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs10A/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs10A/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs10A/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs10A/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs10A/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/rangecolumn-cs10A" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/rangecolumn-cs10A" %}
 
 ### Point corner radius
 
@@ -239,20 +239,20 @@ You can customize the corner radius for individual points in the chart series us
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs10B/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs10B/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs10B/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs10B/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs10B/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs10B/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs10B/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs10B/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/rangecolumn-cs10B" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/rangecolumn-cs10B" %}
 
 
 ## Events
@@ -263,20 +263,20 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs9/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs9/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs9/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs9/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs9/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs9/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs9/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/rangecolumn-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/rangecolumn-cs9" %}
 
 ### Point render
 
@@ -284,20 +284,20 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs10/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs10/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs10/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs10/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs10/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs10/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs10/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/rangecolumn-cs10/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/rangecolumn-cs10" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/rangecolumn-cs10" %}
 
 
 ## See Also

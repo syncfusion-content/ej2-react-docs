@@ -26,14 +26,14 @@ To render a Hilo series, use series [`type`](https://ej2.syncfusion.com/react/do
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/hilo-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/hilo-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/hilo-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/hilo-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/hilo-cs1" %}
 
 ## High Low Open Close
 
@@ -41,14 +41,14 @@ To render a HiloOpenClose series, use series [`type`](https://ej2.syncfusion.com
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/hiloOpenClose-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/hiloOpenClose-cs1" %}
 
 ## Customization of HiloOpenClose Series
 
@@ -56,14 +56,14 @@ In HiloOpenClose series, [`bullFillColor`](https://ej2.syncfusion.com/react/docu
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/hiloOpenClose-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/hiloOpenClose-cs2" %}
 
 ## Candle
 
@@ -71,14 +71,14 @@ To render a Candle series, use series [`type`](https://ej2.syncfusion.com/react/
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/candle-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/candle-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/candle-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/candle-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/candle-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/candle-cs1" %}
 
 ### Hollow Candles
 
@@ -115,11 +115,11 @@ By default, bullFillColor is set as red and bearFillColor is set as green.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/candle-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/candle-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/candle-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/candle-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/candle-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/candle-cs2" %}

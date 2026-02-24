@@ -1,1919 +1,1554 @@
 ---
 layout: post
-title: React Grid - Entity Framework | Syncfusion
-description: React Grid Entity Framework guide shows models and example controllers to serve grid data, implement paging, filtering, and CRUD using EF.
+title: React Grid - SQL Server via EF Core | Syncfusion
+description: Bind SQL Server data to Syncfusion React Grid using Entity Framework Core with complete CRUD and data operations using UrlAdaptor and CustomAdaptor patterns.
 platform: ej2-react
 control: grid
-keywords: adaptors, urladaptor, customadaptor, remotedata, entityframework 
+keywords: adaptors, urladaptor, customadaptor, remotedata, entityframework, sql
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connect SQL Server to React Grid via Entity Framework
+# Connecting SQL Server to Syncfusion React Grid Using Entity Framework
 
-This section describes how to connect and retrieve data from a Microsoft SQL Server database using [Entity Framework](https://learn.microsoft.com/en-us/ef/core) and bind it to the Syncfusion React Grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports binding data from a SQL Server database. This documentation demonstrates integrating SQL Server with Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid using **Entity Framework Core (EF Core)** for data operations with both `UrlAdaptor` and `CustomAdaptor` approaches.
 
-Microsoft SQL Server database can be bound to the Grid using **Entity Framework** in different ways (i.e.) using [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource) property, custom adaptor and remote data binding using various adaptors. In this documentation, two approaches will be examined to connect a Microsoft SQL Server database to a Grid using **Entity Framework**. Both the approaches have capability to handle data and CRUD operations with built-in methods as well as can be customized as per your own.
+**What is Entity Framework Core?**
 
-**Entity Framework**
+Entity Framework Core (EF Core) is a lightweight, extensible, open-source, and cross-platform object-relational mapper (ORM) for .NET. It serves as a bridge between C# code and SQL Server, eliminating the need for raw SQL queries and providing a modern, code-first approach to database management.
 
-Entity Framework is an open-source [ORM framework](https://en.wikipedia.org/wiki/Object-relational_mapping) for .NET applications supported by Microsoft. It enables developers to work with data using objects of domain specific classes without focusing on the underlying database tables and columns where this data is stored. With the Entity Framework, developers can work at a higher level of abstraction when they deal with data, and can create and maintain data-oriented applications with less code compared with traditional applications.
+**Key Benefits of Entity Framework for Syncfusion React Grid Integration**
 
-**1. Using UrlAdaptor**
+- **Change Tracking**: Automatically detects and tracks changes to entities for persistence, simplifying CRUD operations.
+- **LINQ Support**: Use familiar LINQ syntax for type-safe database queries.
+- **Built-in Security**: Automatic parameterization prevents SQL injection attacks.
+- **Database Migrations**: Manage schema changes version-by-version without manual SQL scripts.
+- **Lazy Loading & Eager Loading**: Control entity relationship loading for optimized performance.
+- **Fluent Configuration**: Fine-grained entity mapping configuration in code.
+- **Compatibility with Syncfusion DataManager**: Works seamlessly with Syncfusion EJ2 Grid's `DataOperations` for filtering, sorting, paging, and searching.
 
-The [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/url-adaptor) serves as the base adaptor for facilitating communication between remote data services and an UI component. It enables the remote binding of data to the Syncfusion React Grid by connecting to an existing pre-configured API service linked to the Microsoft SQL Server database. While the Grid supports various adaptors to fulfill this requirement, including [Web API](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/webapi-adaptor), [ODataV4](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/odatav4-adaptor), [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/url-adaptor), and [GraphQL](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/graphql-adaptor), the `UrlAdaptor` is particularly useful for the scenarios where a custom API service with unique logic for handling data and CRUD operations is in place. This approach allows for custom handling of data and CRUD operations, and the resultant data returned in the `result` and `count` format for display in the Grid.
+**Entity Framework Core vs LINQ2DB**
 
-**2. Using CustomAdaptor**
+| Aspect | Entity Framework Core | LINQ2DB |
+|--------|---|---|
+| **Learning Curve** | Moderate (more complex abstractions) | Lower (closer to LINQ) |
+| **Performance** | Excellent (significantly improved in EF Core 6+) | Very fast (minimal overhead) |
+| **Features** | Comprehensive (migrations, lazy loading, change tracking, tracking vs no-tracking queries) | Basic (simple CRUD, data operations) |
+| **Configuration** | Moderate (DbContext, OnModelCreating, migrations, dependency injection) | Simple (connection string only) |
+| **Async/Await Support** | Native async throughout (async by default) | Full async support |
+| **Database Migrations** | Built-in with EF Core Migrations | Manual SQL scripts required |
+| **Cross-Platform** | Yes (runs on Windows, Linux, macOS) | Yes (cross-platform) |
+| **Use Case** | Complex business logic, enterprise apps, long-term projects, microservices | Simple CRUD, web grids, lightweight scenarios |
+| **Syncfusion Integration** | Excellent (modern, optimized for .NET Core/5+) | Excellent (lightweight alternative) |
 
-The [CustomAdaptor](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/custom-adaptor) serves as a mediator between the UI component and the database for data binding. While the data source from the database can be directly bound to the Syncfusion React Grid locally using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource) property, the `CustomAdaptor` approach is preferred as it allows for customization of both data operations and CRUD operations according to specific requirements. In this approach, for every action in the Grid, a corresponding request with action details is sent to the `CustomAdaptor`. The Grid provides predefined methods to perform data operations such as **searching**, **filtering**, **sorting**, **aggregation**, **paging** and **grouping**. Alternatively, your own custom methods can be employed to execute operations and return the data in the `result` and `count` format for displaying in the Grid. Additionally, for CRUD operations, predefined methods can be overridden to provide custom functionality. Further details on this can be found in the latter part of the documentation.
+**Recommendation:**
+- **Use Entity Framework Core**: If the application requires complex business logic, multiple related entities, database migrations, dependency injection, and long-term maintainability.
+- **Use LINQ2DB**: If the project requires lightweight, fast performance for simple CRUD operations with minimal configuration overhead.
 
-## Binding data using Entity Framework from Microsoft SQL Server via an API service.
+**What is the difference between UrlAdaptor and CustomAdaptor?**
 
-This section describes step by step process how to use Entity Framework to retrieve data from a Microsoft SQL Server using an API service and bind it to the Syncfusion React Grid.
+| Aspect | UrlAdaptor | CustomAdaptor |
+|--------|-----------|---------------|
+| **Data Processing** | Server-side via controller action | Custom server-side logic |
+| **HTTP Method** | POST requests to controller actions | POST/GET custom methods |
+| **Use Case** | Standard CRUD operations | Complex business logic, custom validation |
+| **Built-in DataManager** | Uses Syncfusion's QueryableOperation for filtering/sorting/paging | Manual implementation of data operations |
+| **Configuration** | Simple URL mapping in Grid configuration | Custom ActionResult methods |
 
-### Creating an API service
+## Prerequisites
 
-**1.** Open Visual Studio and create an React and ASP.NET Core project named **Grid_EntityFramework**. To create an React and ASP.NET Core application, follow the documentation [link](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-react?view=vs-2022) for detailed steps.
+Ensure the following software and packages are installed before proceeding:
 
-**2.** To use Entity Framework and access the Microsoft SQL Server database in our React application, need to install the [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/) and [Microsoft.EntityFrameworkCore](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore) NuGet packages. To add **Microsoft.EntityFrameworkCore** and **Microsoft.EntityFrameworkCore.SqlServer** in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
+| Software/Package | Version | Purpose |
+|-----------------|---------|---------|
+| Visual Studio 2022 | 17.0 or later | Development IDE with ASP.NET Core workload |
+| .NET SDK | 8.0 or later | Runtime and SDK for ASP.NET Core applications |
+| Node.js | 18.0 or later | JavaScript runtime for React development |
+| npm | 9.0 or later | Package manager for JavaScript (included with Node.js) |
+| SQL Server | 2019 or later | Database server (Express edition acceptable) |
+| Microsoft.EntityFrameworkCore | 9.0.0 or later | Modern Object-Relational Mapper for .NET Core |
+| Microsoft.EntityFrameworkCore.SqlServer | 9.0.0 or later | SQL Server provider for Entity Framework Core |
+| Microsoft.AspNetCore.Mvc.NewtonsoftJson | 9.0.0 or later | JSON serialization library for proper null handling with Syncfusion Grid |
+| Syncfusion.EJ2.Base | 28.1.33 or later | Syncfusion DataManager and Grid operations |
 
-**3.** Create an API controller (aka, GridController.cs) file under **Controllers** folder that helps to establish data communication with the Syncfusion React Grid.
+## Key topics
 
-**4** In the API controller (aka, GridController), a connection is established to Microsoft SQL Server within the **GetOrderData()** method using **OrderDbContext**. This class extends **DbContext** and is configured to connect to a Microsoft SQL Server database using the provided connection string. It includes a **DbSet<Orders>** property, enabling interaction with the **Orders** table in the database. The method retrieves all orders from the database asynchronously and returns them as a list of `Orders` objects as shown in the following code snippet.
+| # | Topics | Link |
+|---|---------|-------|
+| 1 | Create a SQL database with ticket records | [View](#step-1-create-the-database-and-table-in-sql-server) |
+| 2 | Install necessary NuGet packages for ASP.NET Core and Syncfusion | [View](#step-3-install-required-nuget-packages) |
+| 3 | Create data models and DbContext for database communication | [View](#step-4-create-the-data-model) |
+| 4 | Configure connection strings and register services | [View](#step-6-configure-connection-string-in-appsettingsjson) |
+| 5 | Create a Grid component that supports searching, filtering, sorting, paging, and CRUD operations | [View](#integrating-syncfusion-react-grid) |
+| 6 | Handle bulk operations and batch updates | [View](#step-10-perform-crud-operations) |
 
-{% tabs %}
-{% highlight cs tabtitle="GridController.cs" %}
 
-using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
+## Setting Up the SQL Server Environment
+
+Ensure the SQL Server is running. Use SSMS or another client to run the script below to create the "TicketsDb" database and the "Tickets" table.
+
+### Step 1: Create the Database and Table in SQL Server
+
+First, the **SQL Server database** structure must be created to store ticket records.
+
+**Instructions:**
+1. Open SQL Server Management Studio (SSMS) or any SQL Server client.
+2. Create a new database named "TicketsDb".
+3. Define a "Tickets" table with the specified schema.
+4. Insert sample data for testing.
+
+Run the following SQL script:
+
+```sql
+-- Create Database
+IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'TicketsDb')
+BEGIN
+    CREATE DATABASE TicketsDb;
+END
+GO
+
+USE TicketsDb;
+GO
+
+-- Create Tickets Table
+IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Tickets')
+BEGIN
+    CREATE TABLE dbo.Tickets (
+        TicketId INT PRIMARY KEY IDENTITY(1,1),
+        PublicTicketId VARCHAR(50) NOT NULL UNIQUE,
+        Title VARCHAR(200) NULL,
+        Description TEXT NULL,
+        Category VARCHAR(100) NULL,
+        Department VARCHAR(100) NULL,
+        Assignee VARCHAR(100) NULL,
+        CreatedBy VARCHAR(100) NULL,
+        Status VARCHAR(50) NOT NULL DEFAULT 'Open',
+        Priority VARCHAR(50) NOT NULL DEFAULT 'Medium',
+        ResponseDue DATETIME2 NULL,
+        DueDate DATETIME2 NULL,
+        CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
+        UpdatedAt DATETIME2 NOT NULL DEFAULT GETDATE()
+    );
+END
+GO
+
+-- Insert Sample Data (Optional)
+INSERT INTO dbo.Tickets (PublicTicketId, Title, Description, Category, Department, Assignee, CreatedBy, Status, Priority, ResponseDue, DueDate, CreatedAt, UpdatedAt)
+VALUES
+('NET-1001', 'Network Connectivity Issue', 'Users unable to connect to the VPN', 'Network Issue', 'Network Ops', 'John Doe', 'Alice Smith', 'Open', 'High', '2026-01-14 10:00:00', '2026-01-15 17:00:00', '2026-01-13 10:15:30', '2026-01-13 10:15:30'),
+('NET-1002', 'Server Performance Degradation', 'Email server responding slowly', 'Performance', 'Infrastructure', 'Emily White', 'Bob Johnson', 'InProgress', 'Critical', '2026-01-13 15:00:00', '2026-01-14 17:00:00', '2026-01-13 11:20:10', '2026-01-13 11:20:10');
+GO
+```
+
+After executing this script, the ticket records are stored in the "Tickets" table within the "TicketsDb" database. The database is now ready for integration with the ASP.NET Core Web application.
+
+
+### Step 2: Create a New ASP.NET Core Project
+
+Before installing NuGet packages, a new ASP.NET Core Web Application must be created.
+
+**Instructions:**
+
+1. Open **Visual Studio 2022**.
+2. Click **Create a new project**.
+3. Search for **ASP.NET Core Web API**.
+4. Select the template and click **Next**.
+5. Configure the project:
+  - **Project name**: **Grid_EntityFramework.Server** (or a preferred name)
+  - **Location**: Choose the desired folder
+   - **Framework**: Select .NET 8.0 (or latest available)
+6. Click **Create**.
+
+Visual Studio will create the project with the default structure, including folders like **Controllers**, **Models**, **Views**, and configuration files.
+
+### Step 3: Install Required NuGet Packages
+
+NuGet packages are software libraries that add functionality to the application. These packages enable Entity Framework Core, SQL Server connectivity, and Syncfusion Grid integration.
+
+**Method 1: Using .NET CLI (Recommended)**
+
+1. Open a terminal in Visual Studio 2022 (View → Terminal).
+2. Navigate to your project directory.
+3. Run the following commands in sequence:
+
+```bash
+dotnet add package Microsoft.EntityFrameworkCore --version 9.0.0
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 9.0.0
+dotnet add package Microsoft.EntityFrameworkCore.Tools --version 9.0.0
+dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson --version 9.0.0
+dotnet add package Syncfusion.EJ2.Base --version 28.1.33
+```
+
+**Method 2: Using Package Manager Console**
+
+1. Open Visual Studio 2022.
+2. Navigate to **Tools → NuGet Package Manager → Package Manager Console**.
+3. Run the following commands:
+
+```powershell
+Install-Package Microsoft.EntityFrameworkCore -Version 9.0.0
+Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 9.0.0
+Install-Package Microsoft.EntityFrameworkCore.Tools -Version 9.0.0
+Install-Package Microsoft.AspNetCore.Mvc.NewtonsoftJson -Version 9.0.0
+Install-Package Syncfusion.EJ2.Base -Version 28.1.33
+```
+
+**Method 3: Using NuGet Package Manager UI**
+
+1. Open **Visual Studio 2022 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
+2. Search for and install each package individually:
+   - **Microsoft.EntityFrameworkCore** (version 9.0.0)
+   - **Microsoft.EntityFrameworkCore.SqlServer** (version 9.0.0)
+   - **Microsoft.EntityFrameworkCore.Tools** (version 9.0.0)
+   - **Microsoft.AspNetCore.Mvc.NewtonsoftJson** (version 9.0.0)
+   - **Syncfusion.EJ2.Base** (version 28.1.33)
+
+All required packages are now installed. Verify the installation by checking the project's **.csproj** file or using `dotnet list package` command.
+
+
+### Step 4: Create the Data Model
+
+A data model is a C# class that represents the structure of a database table. This model defines the properties that correspond to the columns in the "Tickets" table.
+
+**Instructions:**
+
+1. In the **Solution Explorer**, right-click on the **Models** folder.
+2. Select **Add → New Item**.
+3. Choose **Class** and name it **Ticket.cs**.
+4. Replace the default code with the following:
+
+```csharp
+// File: Models/Ticket.cs
+using System;
 using System.ComponentModel.DataAnnotations;
-using System.Data;
-using Syncfusion.EJ2.Base;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Newtonsoft.Json.Linq;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Grid_EntityFramework.Server.Controllers
+namespace Grid_EntityFramework.Server.Models
 {
-  [ApiController]
-  public class GridController : ControllerBase
-  {
-    string ConnectionString = @"<Enter a valid connection string>";
-
-    /// <summary>
-    /// Processes the DataManager request to perform searching, filtering, sorting, and paging operations.
-    /// </summary>
-    /// <param name="DataManagerRequest">Contains the details of the data operation requested.</param>
-    /// <returns>Returns a JSON object along with the total record count.</returns>
-    [HttpPost]
-    [Route("api/[controller]")]
-    public object Post([FromBody] DataManagerRequest DataManagerRequest)
+    [Table("Tickets", Schema = "dbo")]
+    public class Ticket
     {
-      // Retrieve data from the data source (e.g., database).
-      IQueryable<Orders> DataSource = GetOrderData().AsQueryable();
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int TicketId { get; set; }
 
-      // Get the total count of records.
-      int totalRecordsCount = DataSource.Count();
+        [Required, MaxLength(50)]
+        public string PublicTicketId { get; set; }
 
-      // Return data based on the request.
-      return new { result = DataSource, count = totalRecordsCount };
+        [MaxLength(200)]
+        public string Title { get; set; }
+
+        // EF Core: prefer NVARCHAR(MAX) instead of deprecated TEXT.
+        // We'll keep column type from your EF6 note if you must match legacy schema:
+        [Column(TypeName = "text")] // Consider changing to nvarchar(max) for modern SQL Server
+        public string Description { get; set; }
+
+        [MaxLength(100)]
+        public string Category { get; set; }
+
+        [MaxLength(100)]
+        public string Department { get; set; }
+
+        [MaxLength(100)]
+        public string Assignee { get; set; }
+
+        [MaxLength(100)]
+        public string CreatedBy { get; set; }
+
+        [Required, MaxLength(50)]
+        public string Status { get; set; } = "Open";
+
+        [Required, MaxLength(50)]
+        public string Priority { get; set; } = "Medium";
+
+        [Column(TypeName = "datetime2")]
+        public DateTime? ResponseDue { get; set; }
+
+        [Column(TypeName = "datetime2")]
+        public DateTime? DueDate { get; set; }
+
+        [Required, Column(TypeName = "datetime2")]
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+        [Required, Column(TypeName = "datetime2")]
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
     }
+}
+```
+**Explanation:**
 
-    /// <summary>
-    /// Retrieves the order data from the database.
-    /// </summary>
-    /// <returns>Returns a list of orders fetched from the database.</returns>
-    [HttpGet]
-    [Route("api/[controller]")]
-    public List<Orders> GetOrderData()
+- **`[Table("Tickets", Schema = "dbo")]`**: Maps the class to the `dbo.Tickets` table in the database.
+- **`[Key]`**: Marks `TicketId` as the primary key.
+- **`[DatabaseGenerated(DatabaseGeneratedOption.Identity)]`**: Indicates auto-increment behavior via IDENTITY(1,1).
+- **`[Required]`**: Indicates that a column does not allow NULL values.
+- **`[MaxLength(n)]`**: Specifies the maximum length of a VARCHAR column.
+- **`[Column(TypeName = "text")]`**: Explicitly specifies the SQL Server column type as TEXT.
+-  In EF Core, unique indexes are typically created using Fluent API in `OnModelCreating` rather than attributes.
+
+The data model has been successfully created.
+
+### Step 5: Create the DbContext Class
+
+The `DbContext` is a special class that manages the connection between the application and the SQL Server database. It handles all database operations such as saving, updating, deleting, and retrieving data.
+
+**Instructions:**
+
+1. In the **Solution Explorer**, right-click on the **Models** folder.
+2. Select **Add → New Item**.
+3. Choose **Class** and name it **TicketsDbContext.cs**.
+4. Replace the default code with the following:
+
+```csharp
+// File: Data/TicketsDbContext.cs
+using Grid_EntityFramework.Server.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace Grid_EntityFramework.Server.Data
+{
+    public class TicketsDbContext(DbContextOptions<TicketsDbContext> options) : DbContext(options)
     {
-      using (OrderDbContext Context = new OrderDbContext(ConnectionString))
-      {
-        // Retrieve orders from the orders DbSet and convert to list asynchronously.
-        List<Orders> orders = Context.Orders.ToList();
-        return orders;
-      }
-    }
+        public DbSet<Ticket> Tickets => Set<Ticket>();
 
-    // Create a class that inherits from DbContext(Entity Framework Core).
-    public class OrderDbContext : DbContext
-    {
-      //Declare a private variable to store the connection string.
-      private readonly string _ConnectionString;
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            var entity = modelBuilder.Entity<Ticket>();
 
-      //Define a constructor that accepts a connection string.
-      public OrderDbContext(string ConnectionString)
-      {
-        //Store the provided connection string.
-        _ConnectionString = ConnectionString;
-      }
+            // Table and Schema
+            entity.ToTable("Tickets", "dbo");
 
-      //Override the onConfiguring method to tell EF Core to use SQL server.
-      protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-      {
-        // Use the connection string to configure the database connection.
-        optionsBuilder.UseSqlServer(_ConnectionString);
-      }
-      
-      // Define a DbSet to represent the orders table in the database.
-      public DbSet<Orders> Orders { get; set; }
+            // PK
+            entity.HasKey(e => e.TicketId);
+
+            // Identity (handled by [DatabaseGenerated] attribute, but we can be explicit)
+            entity.Property(e => e.TicketId).ValueGeneratedOnAdd();
+
+            // Column configs (equivalent to your EF6 constraints)
+            entity.Property(e => e.PublicTicketId).HasMaxLength(50).IsRequired();
+            entity.HasIndex(e => e.PublicTicketId).IsUnique(); // matches your EF6 unique index
+
+            entity.Property(e => e.Title).HasMaxLength(200);
+            entity.Property(e => e.Description).HasColumnType("text"); // or nvarchar(max)
+            entity.Property(e => e.Category).HasMaxLength(100);
+            entity.Property(e => e.Department).HasMaxLength(100);
+            entity.Property(e => e.Assignee).HasMaxLength(100);
+            entity.Property(e => e.CreatedBy).HasMaxLength(100);
+            entity.Property(e => e.Status).HasMaxLength(50).IsRequired();
+            entity.Property(e => e.Priority).HasMaxLength(50).IsRequired();
+
+            entity.Property(e => e.ResponseDue).HasColumnType("datetime2");
+            entity.Property(e => e.DueDate).HasColumnType("datetime2");
+            entity.Property(e => e.CreatedAt).HasColumnType("datetime2").IsRequired();
+            entity.Property(e => e.UpdatedAt).HasColumnType("datetime2").IsRequired();
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
-        
-    public class Orders
-    {
-      [Key]
-      public int? OrderID { get; set; }
-      public string? CustomerID { get; set; }
-      public int? EmployeeID { get; set; }
-      public decimal Freight { get; set; }
-      public string? ShipCity { get; set; }
-    }
-  }
 }
 
-{% endhighlight %}
-{% endtabs %}
+```
 
-**5.** Run the application and it will be hosted within the URL `https://localhost:xxxx`.
+**Explanation:**
 
-**6.** Finally, the retrieved data from Microsoft SQL Server database using Entity Framework which is in the form of list  can be found in an API controller available in the URL link `https://localhost:xxxx/api/Grid`, as shown in the browser page below.
+- **`DbContext` Class**: Inherits from Entity Framework Core's `DbContext` base class, managing the database connection and entity tracking.
+- **Primary Constructor**: EF Core uses primary constructors (C# 12+) with `DbContextOptions<TicketsDbContext>` for dependency injection configuration.
+- **`DbSet<Ticket>` Property**: Provides access to Ticket records for querying and persistence operations.
+- **`OnModelCreating`**: Configures entity mappings using Fluent API, such as primary keys, maximum lengths, required fields, unique indexes, and data types.
+- **Fluent API Configuration**: EF Core prefers Fluent API in `OnModelCreating` over data annotations for complex configurations like unique indexes.
 
-![Hosted API URL](../images/Ms-Sql-data.png)
+The **TicketsDbContext** class is essential because:
 
-### Connecting Syncfusion React Grid to an API service
+- It **connects** the application to the SQL Server database through dependency injection.
+- It **manages** the entity lifecycle (Add, Update, Delete, SaveChanges, SaveChangesAsync).
+- It **maps** C# models to actual database tables and columns.
+- It **configures** the expected shape of data inside the database using Fluent API.
+- It **enables** SQL Server-specific features like identity columns, datetime2 types, and unique constraints.
+- It **supports** both tracking and no-tracking queries for optimal performance.
 
-To integrate the Syncfusion React Grid into your React and ASP.NET Core project using Visual Studio, follow the below steps:
+Without this class, Entity Framework Core cannot manage database operations. The DbContext has been successfully configured.
 
-**Step 1: Install Syncfusion Package**
+### Step 6: Configure Connection String in appsettings.json
 
-Open your terminal in the project client folder and install the required Syncfusion packages using npm:
+A connection string contains the information needed to connect the application to the SQL database, including the server address, database name, authentication method, and additional parameters.
+
+**Instructions:**
+
+1. Open the **appsettings.json** file in the project root.
+2. Add or update the **ConnectionStrings** section with the SQL connection details:
+
+```json
+{
+  "ConnectionStrings": {
+    "TicketsDb": "Server=localhost;Database=TicketsDb;Trusted_Connection=True;TrustServerCertificate=True;"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}
+```
+
+**Connection String Components:**
+
+| Component | Description |
+| ----------- | ------------- |
+| **Server** | The address of the SQL Server (use "localhost" for local development) |
+| **Port** | The SQL Server port number (default is 1433) |
+| **Database** | The database name |
+| **User Id** | The SQL Server username (default is "sa") |
+| **Password** | The SQL Server password |
+
+The connection string has been successfully configured.
+
+---
+
+### Step 7: Register Services
+
+The **Program.cs** file is the entry point for configuring and bootstrapping the ASP.NET Core application. This is where all required services and middleware are registered, including CORS (Cross-Origin Resource Sharing), Entity Framework Core DbContext, JSON serialization, and controllers.
+
+**Instructions:**
+
+1. Open the **Program.cs** file in the project root.
+2. Replace the existing content with the following configuration:
+
+```csharp
+// File: Program.cs
+using Grid_EntityFramework.Server.Data;
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder
+    .Services.AddControllers()
+    .AddNewtonsoftJson(o =>
+    {
+        // Key setting: do not try to set null into value types (int)
+        o.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+        // Optional hardening:
+        // o.SerializerSettings.MissingMemberHandling = MissingMemberHandling.Ignore;
+    });
+
+// EF Core SQL Server
+builder.Services.AddDbContext<TicketsDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("TicketsDb"))
+);
+
+// CORS if you call from React dev server
+builder.Services.AddCors(opts =>
+{
+    opts.AddPolicy("dev", p => p.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+});
+
+var app = builder.Build();
+app.UseCors("dev");
+app.MapControllers();
+app.Run();
+
+```
+
+**Explanation:**
+
+- **AddControllers().AddNewtonsoftJson()**: Registers MVC controllers with Newtonsoft.Json serialization support instead of System.Text.Json. This is important for Syncfusion Grid compatibility.
+- **NullValueHandling.Ignore**: Critical setting that prevents null values from being serialized to value types (like `int`), avoiding deserialization errors. This prevents issues when the Grid sends partial data updates.
+- **AddDbContext<TicketsDbContext>()**: Registers the Entity Framework Core DbContext with dependency injection, making it available for controllers via constructor injection.
+- **UseSqlServer()**: Specifies SQL Server as the database provider and retrieves the connection string from **appsettings.json**.
+- **AddCors("dev")**: Configures CORS policy with `AllowAnyOrigin()`, `AllowAnyHeader()`, and `AllowAnyMethod()` for development purposes. This allows the React app to make HTTP requests to the API from any port.
+- **UseCors("dev")**: Applies the CORS policy to the middleware pipeline. **Must be called before MapControllers()**.
+- **MapControllers()**: Maps controller action methods to HTTP endpoints.
+- **app.Run()**: Starts the Kestrel web server and listens for incoming HTTP requests.
+
+The Program.cs configuration is now complete and Entity Framework Core is properly registered.
+
+## Integrating Syncfusion React Grid
+
+The Syncfusion React Grid is a robust, high‑performance component built to efficiently display, manage, and manipulate large datasets. It provides advanced features such as sorting, filtering, and paging. Follow these steps to render the grid and integrate it with a SQL Server database.
+
+### Step 1: Creating the React client application
+
+Open a Visual Studio Code terminal or Command prompt and run the below command to create a React application:
+
+```bash
+npm create vite@latest grid_entityframework.client
+cd grid_entityframework.client
+```
+
+### Step 2: Adding Syncfusion packages
+
+Install the necessary Syncfusion packages using the below command in Visual Studio Code terminal or Command prompt.
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
 npm install @syncfusion/ej2-data --save
 ```
 
-**Step 2: Adding CSS reference**
+After installation, the necessary CSS files are available in the (**../node_modules/@syncfusion**) directory. Add the required CSS references to the **src/index.css** file to ensure proper styling of the Grid component.
 
-Include the necessary CSS files in your `styles.css` file to style the Syncfusion React Grid:
+```css
+@import '../node_modules/@syncfusion/ej2-base/styles/bootstrap5.3.css';  
+@import '../node_modules/@syncfusion/ej2-buttons/styles/bootstrap5.3.css';  
+@import '../node_modules/@syncfusion/ej2-calendars/styles/bootstrap5.3.css';  
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/bootstrap5.3.css';  
+@import '../node_modules/@syncfusion/ej2-inputs/styles/bootstrap5.3.css';  
+@import '../node_modules/@syncfusion/ej2-navigations/styles/bootstrap5.3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/bootstrap5.3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/bootstrap5.3.css';
+@import '../node_modules/@syncfusion/ej2-notifications/styles/bootstrap5.3.css';
+@import '../node_modules/@syncfusion/ej2-react-grids/styles/bootstrap5.3.css';
 
-{% tabs %}
-{% highlight css tabtitle="styles.css" %}
-
-  @import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-calendars/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-navigations/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-react-grids/styles/material3.css';
-
-{% endhighlight %}
-{% endtabs %}
-
-**2.** In your component file (e.g., **app.ts**), import `DataManager` and `UrlAdaptor` from `@syncfusion/ej2-data`. Create a [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) instance specifying the URL of your API endpoint(https:localhost:xxxx/api/grid) using the `url` property and set the adaptor `UrlAdaptor`.
-
-**3.** The `DataManager` offers multiple adaptor options to connect with remote database based on an API service. Below is an example of the `UrlAdaptor` configuration where an API service are set up to return the resulting data in the `result` and `count` format.
-
-**4.** The `UrlAdaptor` acts as the base adaptor for interacting with remote data service. Most of the built-in adaptors are derived from the `UrlAdaptor`.
-
-{% tabs %}
-{% highlight ts tabtitle="app.ts" %}
-
-import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-react-grids";
-import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
-
-function App() {
-  const data = new DataManager({
-    url: 'https://localhost:xxxx/api/grid' // Replace your hosted link.
-    adaptor: new UrlAdaptor()
-  });
-  return <GridComponent dataSource={data} height={320}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' width='150' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='EmployeeID' textAlign='Right' width='160'></ColumnDirective>
-            <ColumnDirective field='Freight' headerText='Freight' format='C2' width='160' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
-        </ColumnsDirective>
-  </GridComponent>
-};
-export default App;
-
-{% endhighlight %}
-
-{% highlight cs tabtitle="GridController.cs" %}
-
-using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Data;
-using Syncfusion.EJ2.Base;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Newtonsoft.Json.Linq;
-
-namespace Grid_EntityFramework.Server.Controllers
-{
-  [ApiController]
-  public class GridController : ControllerBase
-  {
-    string ConnectionString = @"<Enter a valid connection string>";
-
-    /// <summary>
-    /// Processes the DataManager request to perform searching, filtering, sorting, and paging operations.
-    /// </summary>
-    /// <param name="DataManagerRequest">Contains the details of the data operation requested.</param>
-    /// <returns>Returns a JSON object along with the total record count.</returns>
-    [HttpPost]
-    [Route("api/[controller]")]
-    public object Post([FromBody] DataManagerRequest DataManagerRequest)
-    {
-      // Retrieve data from the data source (e.g., database).
-      IQueryable<Orders> DataSource = GetOrderData().AsQueryable();
-
-      // Get the total count of records.
-      int totalRecordsCount = DataSource.Count();
-
-      // Return data based on the request.
-      return new { result = DataSource, count = totalRecordsCount };
-    }
-
-    /// <summary>
-    /// Retrieves the order data from the database.
-    /// </summary>
-    /// <returns>Returns a list of orders fetched from the database.</returns>
-    [HttpGet]
-    [Route("api/[controller]")]
-    public List<Orders> GetOrderData()
-    {
-      using (OrderDbContext Context = new OrderDbContext(ConnectionString))
-      {
-        // Retrieve orders from the Orders DbSet and convert to list asynchronously.
-        List<Orders> orders = Context.Orders.ToList();
-        return orders;
-      }
-    }
-
-    // Create a class that inherits from DbContext(Entity Framework Core).
-    public class OrderDbContext : DbContext
-    {
-      //Declare a private variable to store the connection string.
-      private readonly string _ConnectionString;
-
-      //Define a constructor that accepts a connection string.
-      public OrderDbContext(string ConnectionString)
-      {
-        //Store the provided connection string.
-        _ConnectionString = ConnectionString;
-      }
-
-      //Override the onConfiguring method to tell EF Core to use SQL server.
-      protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-      {
-        // Use the connection string to configure the database connection.
-        optionsBuilder.UseSqlServer(_ConnectionString);
-      }
-      
-      // Define a DbSet to represent the orders table in the database.
-      public DbSet<Orders> Orders { get; set; }
-    }
-        
-    public class Orders
-    {
-      [Key]
-      public int? OrderID { get; set; }
-      public string? CustomerID { get; set; }
-      public int? EmployeeID { get; set; }
-      public decimal Freight { get; set; }
-      public string? ShipCity { get; set; }
-    }
-  }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-> Replace https://localhost:xxxx/api/Grid with the actual **URL** of your API endpoint that provides the data in a consumable format (e.g., JSON).
-
-**5.** Run the application in Visual Studio. It will be accessible via a URL like **https://localhost:xxxx**.
-
-> Ensure your API service is configured to handle CORS (Cross-Origin Resource Sharing), if necessary.
-```cs
-[program.cs]
-builder.Services.AddCors(options =>
-{
-  options.AddDefaultPolicy(builder =>
-  {
-    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
-  });
-});
-var app = builder.Build();
-app.UseCors();
 ```
 
-> * The Syncfusion React Grid provides built-in support for handling various data operations such as searching, sorting, filtering, aggregate and paging on the server-side. These operations can be handled using methods such as `PerformSearching`, `PerformFiltering`, `PerformSorting`, `PerformTake` and `PerformSkip` available in the [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core) package. Let’s explore how to manage these data operations using the `UrlAdaptor`.
-> * In an API service project, add `Syncfusion.EJ2.AspNet.Core` by opening the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
-> * To access `DataManagerRequest` and `QueryableOperation`, import [Syncfusion.EJ2.Base](https://www.npmjs.com/package/@syncfusion/ej2-base) in `GridController.cs` file.
- 
-### Handling searching operation
+For this project, the "Bootstrap 5" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.
 
-To handle searching operation, ensure that your API endpoint supports custom searching criteria. Implement the searching logic on the server-side using the `PerformSearching` method from the `QueryableOperation` class. This allows the custom data source to undergo searching based on the criteria specified in the incoming `DataManagerRequest` object.
+### Step 3: Add Syncfusion React Grid
 
-{% tabs %}
-{% highlight cs tabtitle="GridController.cs" %}
+The React Grid component can be added to the application by following these steps. To get started, add the Grid component to the (**src/App.tsx**) file using the following code.
 
-/// <summary>
-/// Processes the DataManager request to perform searching operation.
-/// </summary>
-/// <param name="DataManagerRequest">Contains the details of the data operation requested.</param>
-/// <returns>Returns a JSON object with the searched data along with the total record count.</returns>
-[HttpPost]
-[Route("api/[controller]")]
-public object Post([FromBody] DataManagerRequest DataManagerRequest) 
-{
-  // Retrieve data from the data source (e.g., database).
-  IQueryable<Orders> DataSource = GetOrderData().AsQueryable();
-
-  // Initialize QueryableOperation instance.
-  QueryableOperation queryableOperation = new QueryableOperation();
-
-  // Handling searching operation.
-  if(DataManagerRequest.Search != null && DataManagerRequest.Search.Count > 0) 
-  {
-    DataSource = queryableOperation.PerformSearching(DataSource, DataManagerRequest.Search);
-    //Add custom logic here if needed and remove above method.
-  }
-
-  // Get the total count of records.
-  int totalRecordsCount = DataSource.Count();
-
-  // Return data based on the request.
-  return new { result = DataSource, count = totalRecordsCount };
-}
-
-{% endhighlight %}
-
-{% highlight ts tabtitle="app.ts" %}
-
-import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems, Toolbar, Inject } from '@syncfusion/ej2-react-grids';
-import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
-
-function App() {
-    const data = new DataManager({ 
-        url: 'https://localhost:xxxx/api/grid', // Replace your hosted link.
-        adaptor: new UrlAdaptor()
-    });
-    const toolbar: ToolbarItems[] = ['Search'];
-    return <GridComponent dataSource={data} toolbar={toolbar} height={320}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' width='150' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='EmployeeID' textAlign='Right' width='160'></ColumnDirective>
-            <ColumnDirective field='Freight' headerText='Freight' format='C2' width='160' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
-        </ColumnsDirective>
-        <Inject services={[Toolbar]} />
-    </GridComponent>
-};
-export default App;
-
-{% endhighlight %}
-{% endtabs %}
-
-### Handling filtering operation
-
-To handle filtering operation, ensure that your API endpoint supports custom filtering criteria. Implement the filtering logic on the server-side using the `PerformFiltering` method from the `QueryableOperation` class. This allows the custom data source to undergo filtering based on the criteria specified in the incoming `DataManagerRequest` object.
-
-{% tabs %}
-{% highlight cs tabtitle="GridController.cs" %}
-
-/// <summary>
-/// Processes the DataManager request to perform filtering operation.
-/// </summary>
-/// <param name="DataManagerRequest">Contains the details of the data operation requested.</param>
-/// <returns>Returns a JSON object with the filtered data along with the total record count.</returns>
-[HttpPost]
-[Route("api/[controller]")]
-public object Post([FromBody] DataManagerRequest DataManagerRequest) 
-{
-  // Retrieve data from the data source (e.g., database).
-  IQueryable<Orders> DataSource = GetOrderData().AsQueryable();
-
-  // Initialize QueryableOperation instance.
-  QueryableOperation queryableOperation = new QueryableOperation();
-
-  // Handling filtering operation.
-  if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0) 
-  {
-    foreach (WhereFilter condition in DataManagerRequest.Where) 
-    {
-      foreach (WhereFilter predicate in condition.predicates) 
-      {
-        DataSource = queryableOperation.PerformFiltering(DataSource, DataManagerRequest.Where, predicate.Operator);
-        //Add custom logic here if needed and remove above method.
-      }
-    }
-  }
-
-  // Get the total count of records.
-  int totalRecordsCount = DataSource.Count();
-
-  // Return data based on the request.
-  return new { result = DataSource, count = totalRecordsCount };
-}
-
-{% endhighlight %}
-
-{% highlight ts tabtitle="app.ts" %}
-
-import { ColumnDirective, ColumnsDirective, GridComponent, Filter, Inject } from '@syncfusion/ej2-react-grids';
-import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
-
-function App() {
-    const data = new DataManager({ 
-        url: 'https://localhost:xxxx/api/grid', // Replace your hosted link.
-        adaptor: new UrlAdaptor()
-    });
-    return <GridComponent dataSource={data} allowFiltering={true} height={320}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' width='150' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='EmployeeID' textAlign='Right' width='160'></ColumnDirective>
-            <ColumnDirective field='Freight' headerText='Freight' format='C2' width='160' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
-        </ColumnsDirective>
-        <Inject services={[Filter]} />
-    </GridComponent>
-};
-export default App;
-
-{% endhighlight %}
-{% endtabs %}
-
-### Handling sorting operation
-
-To handle sorting operation, ensure that your API endpoint supports custom sorting criteria. Implement the sorting logic on the server-side using the `PerformSorting` method from the `QueryableOperation` class. This allows the custom data source to undergo sorting based on the criteria specified in the incoming `DataManagerRequest` object.
-
-{% tabs %}
-{% highlight cs tabtitle="GridController.cs" %}
-
-/// <summary>
-/// Processes the DataManager request to perform sorting operation.
-/// </summary>
-/// <param name="DataManagerRequest">Contains the details of the data operation requested.</param>
-/// <returns>Returns a JSON object with the sorted data along with the total record count.</returns>
-[HttpPost]
-[Route("api/[controller]")]
-public object Post([FromBody] DataManagerRequest DataManagerRequest) 
-{
-  // Retrieve data from the data source (e.g., database).
-  IQueryable<Orders> DataSource = GetOrderData().AsQueryable();
-
-  // Initialize QueryableOperation instance.
-  QueryableOperation queryableOperation = new QueryableOperation(); 
-
-  // Handling sorting operation.
-  if(DataManagerRequest.Sorted != null && DataManagerRequest.Sorted.Count > 0) 
-  {
-    DataSource = queryableOperation.PerformSorting(DataSource, DataManagerRequest.Sorted);
-    //Add custom logic here if needed and remove above method.
-  }
-
-  // Get the total count of records.
-  int totalRecordsCount = DataSource.Count();
-
-  // Return data based on the request.
-  return new { result = DataSource, count = totalRecordsCount };
-}
-
-{% endhighlight %}
-
-{% highlight ts tabtitle="app.ts" %}
-
-import { ColumnDirective, ColumnsDirective, GridComponent, Sort, Inject } from '@syncfusion/ej2-react-grids';
-import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
-
-function App() {
-    const data = new DataManager({ 
-        url: 'https://localhost:xxxx/api/grid', // Replace your hosted link.
-        adaptor: new UrlAdaptor()
-    });
-    return <GridComponent dataSource={data} allowSorting={true} height={320}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' width='150' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='EmployeeID' textAlign='Right' width='160'></ColumnDirective>
-            <ColumnDirective field='Freight' headerText='Freight' format='C2' width='160' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
-        </ColumnsDirective>
-        <Inject services={[Sort]} />
-    </GridComponent>
-};
-export default App;
-
-{% endhighlight %}
-{% endtabs %}
-
-### Handling paging operation
-
-To handle paging operation, ensure that your API endpoint supports custom paging criteria. Implement the paging logic on the server-side using the `PerformTake` and `PerformSkip` method from the `QueryableOperation` class. This allows the custom data source to undergo paging based on the criteria specified in the incoming `DataManagerRequest` object.
-
-{% tabs %}
-{% highlight cs tabtitle="GridController.cs" %}
-
-/// <summary>
-/// Processes the DataManager request to perform paging operation.
-/// </summary>
-/// <param name="DataManagerRequest">Contains the details of the data operation requested.</param>
-/// <returns>Returns a JSON object with the paginated data along with the total record count.</returns>
-[HttpPost]
-[Route("api/[controller]")]
-public object Post([FromBody] DataManagerRequest DataManagerRequest) 
-{
-  // Retrieve data from the data source (e.g., database).
-  IQueryable<Orders> DataSource = GetOrderData().AsQueryable();
-
-  // Initialize QueryableOperation instance.
-  QueryableOperation queryableOperation = new QueryableOperation();
-
-  // Get the total count of records.
-  int totalRecordsCount = DataSource.Count();
-
-  // Handling paging operation.
-  if (DataManagerRequest.Skip != 0) 
-  {
-    DataSource = queryableOperation.PerformSkip(DataSource, DataManagerRequest.Skip);
-    //Add custom logic here if needed and remove above method.
-  }
-  if (DataManagerRequest.Take != 0) 
-  {
-    DataSource = queryableOperation.PerformTake(DataSource, DataManagerRequest.Take);
-    //Add custom logic here if needed and remove above method.
-  }
-
-  // Return data based on the request.
-  return new { result = DataSource, count = totalRecordsCount };
-}
-
-{% endhighlight %}
-
-{% highlight ts tabtitle="app.ts" %}
-
-import { ColumnDirective, ColumnsDirective, GridComponent, Page, Inject } from '@syncfusion/ej2-react-grids';
-import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
-
-function App() {
-    const data = new DataManager({ 
-        url: 'https://localhost:xxxx/api/grid', // Replace your hosted link.
-        adaptor: new UrlAdaptor()
-    });
-    return <GridComponent dataSource={data} allowPaging={true} height={320}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' width='150' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='EmployeeID' textAlign='Right' width='160'></ColumnDirective>
-            <ColumnDirective field='Freight' headerText='Freight' format='C2' width='160' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
-        </ColumnsDirective>
-        <Inject services={[Page]} />
-    </GridComponent>
-};
-export default App;
-
-{% endhighlight %}
-{% endtabs %}
-
-### Handling CRUD operations
-
-The Syncfusion React Grid seamlessly integrates CRUD (Create, Read, Update, and Delete) operations with server-side controller actions through specific properties: `insertUrl`, `removeUrl`, `updateUrl` and `batchUrl`. These properties enable the Grid to communicate with the data service for every Grid action, facilitating server-side operations.
-
-**CRUD Operations Mapping**
-
-CRUD operations within the Grid can be mapped to server-side controller actions using specific properties:
-
-1. **insertUrl**: Specifies the URL for inserting new data.
-2. **removeUrl**: Specifies the URL for removing existing data.
-3. **updateUrl**: Specifies the URL for updating existing data.
-4. **batchUrl**: Specifies the URL for batch editing.
-
-To enable editing in Grid, refer to the editing [documentation](https://ej2.syncfusion.com/react/documentation/grid/editing/edit). In the below example, the inline edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) is enabled and [toolbar](https://helpej2.syncfusion.com/react/documentation/api/grid#toolbar) property is configured to display toolbar items for editing purposes.
-
-{% tabs %}
-{% highlight ts tabtitle="app.ts" %}
-
-import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems, EditSettingsModel, Toolbar, Edit, Inject } from '@syncfusion/ej2-react-grids';
-import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
-
-function App() {
-    const data = new DataManager({ 
-      url: 'https://localhost:xxxx/api/grid', // Replace your hosted link.
-      insertUrl: 'https://localhost:xxxx/api/grid/Insert',
-      updateUrl: 'https://localhost:xxxx/api/grid/Update',
-      removeUrl: 'https://localhost:xxxx/api/grid/Remove',
-      // Enable batch URL when batch editing is enabled.
-      //batchUrl: 'https://localhost:xxxx/api/grid/BatchUpdate', 
-      adaptor: new UrlAdaptor()
-    });
-    const employeeIDRules = { required: true, number: true };
-    const customerIDRules = { required: true };
-    const freightRules = { required: true, min: 1, max: 1000 };
-    const shipCityRules = { required: true };
-    const editSettings: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
-    const toolbar: ToolbarItems[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'];
-    return <GridComponent dataSource={data} editSettings={editSettings} toolbar={toolbar} height={320}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' isIdentity={true} isPrimaryKey={true} width='150' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' validationRules={customerIDRules} width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='EmployeeID' textAlign='Right' validationRules={employeeIDRules} width='160'></ColumnDirective>
-            <ColumnDirective field='Freight' headerText='Freight' format='C2' validationRules={freightRules} width='160' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='ShipCity' headerText='Ship City' validationRules={shipCityRules} width='150' />
-        </ColumnsDirective>
-        <Inject services={[Toolbar, Edit]} />
-    </GridComponent>
-};
-export default App;
-
-{% endhighlight %}
-{% endtabs %}
-
-> * Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) for the Grid. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
-> * If database has an auto generated column, ensure to define [isIdentity](https://ej2.syncfusion.com/react/documentation/api/grid/column#isidentity) property of Grid column to disable them during adding or editing operations.
-
-**Insert Operation:**
-
-To insert a new row, simply click the **Add** toolbar button. The new record edit form will be displayed as shown below. Upon clicking the **Update** toolbar button, record will inserted into the **Orders** table by calling the following **POST** method of an API. Utilizing `Entity Framework` simplifies database tasks by managing database connections and queries through object-oriented programming, making it easier to work with databases in C# code, as shown in the following code snippet.
-
-{% tabs %}
-{% highlight cs tabtitle="GridController.cs" %}
-
-/// <summary>
-/// Inserts a new data item into the data collection.
-/// </summary>
-/// <param name="value">It contains the new record detail which is need to be inserted.</param>
-/// <returns>Returns void.</returns>
-[HttpPost]
-[Route("api/[controller]/Insert")]
-public void Insert([FromBody] CRUDModel<Orders> value) 
-{
-  using (OrderDbContext Context = new OrderDbContext(ConnectionString))
-  {
-    // Add the provided order to the orders DbSet.
-    Context.Orders.Add(value.value);
-
-    // Save changes to the database.
-    Context.SaveChanges();
-  }
-
-  //Add custom logic here if needed and remove above method.
-}
-
-// Create a class that inherits from DbContext(Entity Framework Core).
-public class OrderDbContext : DbContext
-{
-  //Declare a private variable to store the connection string.
-  private readonly string _ConnectionString;
-
-  //Define a constructor that accepts a connection string.
-  public OrderDbContext(string ConnectionString)
-  {
-    //Store the provided connection string.
-    _ConnectionString = ConnectionString;
-  }
-
-  //Override the onConfiguring method to tell EF Core to use SQL server.
-  protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-  {
-    // Use the connection string to configure the database connection.
-    optionsBuilder.UseSqlServer(_ConnectionString);
-  }
-
-  // Define a DbSet to represent the orders table in the database.
-  public DbSet<Orders> Orders { get; set; }
-}
-
-public class CRUDModel<T> where T : class
-{
-  public string? action { get; set; }
-  public string? keyColumn { get; set; }
-  public object? key { get; set; }
-  public T? value { get; set; }
-  public List<T>? added { get; set; }
-  public List<T>? changed { get; set; }
-  public List<T>? deleted { get; set; }
-  public IDictionary<string, object>? @params { get; set; }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-**Update Operation:**
-
-To edit a row, first select desired row and click the **Edit** toolbar button. The edit form will be displayed and proceed to modify any column value as per your requirement. Clicking the **Update** toolbar button will update the edit record in the **Orders** table by involving the following **Post** method of an API. Utilizing `Entity Framework` simplifies database tasks by managing database connections and queries through object-oriented programming, making it easier to work with databases in C# code, as shown in the following code snippet.
-
-{% tabs %}
-{% highlight cs tabtitle="GridController.cs" %}
-
-/// <summary>
-/// Update a existing data item from the data collection.
-/// </summary>
-/// <param name="value">It contains the updated record detail which is need to be updated.</param>
-/// <returns>Returns void.</returns>
-[HttpPost]
-[Route("api/[controller]/Update")]
-public void Update([FromBody] CRUDModel<Orders> value) 
-{
-  using (OrderDbContext Context = new OrderDbContext(ConnectionString))
-  {
-    Orders existingOrder = Context.Orders.Find(value.value.OrderID);
-    if (existingOrder != null)
-    {
-      // Update the existing order with the new values.
-      Context.Entry(existingOrder).CurrentValues.SetValues(value.value);
-
-      // Save changes to the database.
-      Context.SaveChanges();
-    }
-  }
-
-  //Add custom logic here if needed and remove above method.
-}
-
-// Create a class that inherits from DbContext(Entity Framework Core).
-public class OrderDbContext : DbContext
-{
-  //Declare a private variable to store the connection string.
-  private readonly string _ConnectionString;
-
-  //Define a constructor that accepts a connection string.
-  public OrderDbContext(string ConnectionString)
-  {
-    //Store the provided connection string.
-    _ConnectionString = ConnectionString;
-  }
-
-  //Override the onConfiguring method to tell EF Core to use SQL server.
-  protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-  {
-    // Use the connection string to configure the database connection.
-    optionsBuilder.UseSqlServer(_ConnectionString);
-  }
-
-  // Define a DbSet to represent the orders table in the database.
-  public DbSet<Orders> Orders { get; set; }
-}
-
-public class CRUDModel<T> where T : class
-{
-  public string? action { get; set; }
-  public string? keyColumn { get; set; }
-  public object? key { get; set; }
-  public T? value { get; set; }
-  public List<T>? added { get; set; }
-  public List<T>? changed { get; set; }
-  public List<T>? deleted { get; set; }
-  public IDictionary<string, object>? @params { get; set; }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-**Delete Operation:**
-
-To delete a row, simply select the desired row and click the **Delete** toolbar button. This action will trigger a **DELETE** request to an API, containing the primary key value of the selected record. As a result corresponding record will be removed from the **Orders** table. Utilizing `Entity Framework` simplifies database tasks by managing database connections and queries through object-oriented programming, making it easier to work with databases in C# code, as shown in the following code snippet.
-
-{% tabs %}
-{% highlight cs tabtitle="GridController.cs" %}
-
-/// <summary>
-/// Remove a specific data item from the data collection.
-/// </summary>
-/// <param name="value">It contains the specific record detail which is need to be removed.</param>
-/// <return>Returns void.</return>
-[HttpPost]
-[Route("api/[controller]/Remove")]
-public void Remove([FromBody] CRUDModel<Orders> value) 
-{
-  int OrderId = Convert.ToInt32(value.key.ToString());
-  using (OrderDbContext Context = new OrderDbContext(ConnectionString))
-  {
-    Orders Order = Context.Orders.Find(OrderId);
-    if (Order != null)
-    {
-      // Remove the order from the Orders DbSet.
-      Context.Orders.Remove(Order);
-
-      // Save changes to the database.
-      Context.SaveChanges();
-    }
-  }
-
-  //Add custom logic here if needed and remove above method.
-}
-
-// Create a class that inherits from DbContext(Entity Framework Core).
-public class OrderDbContext : DbContext
-{
-  //Declare a private variable to store the connection string.
-  private readonly string _ConnectionString;
-
-  //Define a constructor that accepts a connection string.
-  public OrderDbContext(string ConnectionString)
-  {
-    //Store the provided connection string.
-    _ConnectionString = ConnectionString;
-  }
-
-  //Override the onConfiguring method to tell EF Core to use SQL server.
-  protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-  {
-    // Use the connection string to configure the database connection.
-    optionsBuilder.UseSqlServer(_ConnectionString);
-  }
-
-  // Define a DbSet to represent the orders table in the database.
-  public DbSet<Orders> Orders { get; set; }
-}
-
-public class CRUDModel<T> where T : class
-{
-  public string? action { get; set; }
-  public string? keyColumn { get; set; }
-  public object? key { get; set; }
-  public T? value { get; set; }
-  public List<T>? added { get; set; }
-  public List<T>? changed { get; set; }
-  public List<T>? deleted { get; set; }
-  public IDictionary<string, object>? @params { get; set; }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-**Batch Operation:**
-
-To perform batch operation, define the edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) as **Batch** and specify the `batchUrl` property in the `DataManager`. Use the **Add** toolbar button to insert new row in batch editing mode. To edit a cell, double-click the desired cell and update the value as required. To delete a record, simply select the record and press the **Delete** toolbar button. Now, all CRUD operations will be executed in batch editing mode. Clicking the **Update** toolbar button will update the newly added, edited, or deleted records from the **Orders** table using a single API **POST** request.
-
-{% tabs %}
-{% highlight cs tabtitle="GridController.cs" %}
-
-/// <summary>
-/// Batch update (Insert, Update, and Delete) a collection of data items from the data collection.
-/// </summary>
-/// <param name="value">The set of information along with details about the CRUD actions to be executed from the database.</param>
-/// <returns>Returns void.</returns>
-[HttpPost]
-[Route("api/[controller]/BatchUpdate")]
-public IActionResult BatchUpdate([FromBody] CRUDModel<Orders> value) 
-{
-  using (OrderDbContext Context = new OrderDbContext(ConnectionString))
-  {
-    if (value.changed != null && value.changed.Count > 0)
-    {
-      foreach (Orders Record in (IEnumerable<Orders>)value.changed)
-      {
-        // Update the changed records.
-        Context.Orders.UpdateRange(Record);
-      }
-    }
-
-    if (value.added != null && value.added.Count > 0)
-    {
-      foreach (Orders Record in (IEnumerable<Orders>)value.added)
-      {
-        foreach (Orders order in value.added)
-        {
-          // This ensures EF does not try to insert OrderID.
-          order.OrderID = default; 
-        }
-        // Add new records.
-        Context.Orders.AddRange(value.added);
-      }
-    }
-
-    if (value.deleted != null && value.deleted.Count > 0)
-    {
-      foreach (Orders Record in (IEnumerable<Orders>)value.deleted)
-      {
-        // Find and delete the records.
-        Orders ExistingOrder = Context.Orders.Find(Record.OrderID);
-        if (ExistingOrder != null)
-        {
-          Context.Orders.Remove(ExistingOrder);
-        }
-      }
-    }
-
-    // Save changes to the database.
-    Context.SaveChanges();
-  }
-  return new JsonResult(value);
-}
-
-// Create a class that inherits from DbContext(Entity Framework Core).
-public class OrderDbContext : DbContext
-{
-  //Declare a private variable to store the connection string.
-  private readonly string _ConnectionString;
-
-  //Define a constructor that accepts a connection string.
-  public OrderDbContext(string ConnectionString)
-  {
-    //Store the provided connection string.
-    _ConnectionString = ConnectionString;
-  }
-
-  //Override the onConfiguring method to tell EF Core to use SQL server.
-  protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-  {
-    // Use the connection string to configure the database connection.
-    optionsBuilder.UseSqlServer(_ConnectionString);
-  }
-
-  // Define a DbSet to represent the orders table in the database.
-  public DbSet<Orders> Orders { get; set; }
-}
-
-public class CRUDModel<T> where T : class
-{
-  public string? action { get; set; }
-  public string? keyColumn { get; set; }
-  public object? key { get; set; }
-  public T? value { get; set; }
-  public List<T>? added { get; set; }
-  public List<T>? changed { get; set; }
-  public List<T>? deleted { get; set; }
-  public IDictionary<string, object>? @params { get; set; }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-When you run the application, the resultant Syncfusion React Grid will look like this
-
-![Syncfusion React Grid bound with Microsoft SQL Server data](../images/connecting-micro-curd.gif)
-
-> Find the sample in this GitHub location.
-
-## Binding data from Microsoft SQL Server using Entity Framework with CustomAdaptor
-
-This section describes step by step process how to use Entity Framework to retrieve data from a Microsoft SQL Server using [CustomAdaptor](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/custom-adaptor) and bind it to the Syncfusion React Grid.
-
-**1.** To create a simple Grid, the procedure is explained in the above-mentioned topic on [Connecting Syncfusion React Grid to an API service](#connecting-syncfusion-react-grid-to-an-api-service)
-
-**2.** To use `Entity Framework` and access the Microsoft SQL Server database in our React application, we need to install the [Microsoft.EntityFrameworkCore](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore) and [Microsoft.EntityFrameworkCore.SqlServer ](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/) NuGet packages. To add **Microsoft.EntityFrameworkCore** and **Microsoft.EntityFrameworkCore.SqlServer** in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
-
-**3.** If you intend to inject your own service into the `CustomAdaptor` and utilize it, you can achieve this as follows:
-
-  * Create a `CustomAdaptor` that extends the `UrlAdaptor` class.
-  * Override the `processResponse` method to process server responses.
-
-**4.** Within the `processResponse` method of `CustomAdaptor`, fetch data by calling the **GetOrderData** method.
-
-  * In this **GetOrderData** method, a connection is established to Microsoft SQL Server using **OrderDbContext**. This class extends **DbContext** and is configured to connect to a SQL Server database using the provided connection string. It includes a **DbSet&lt;Orders&gt;** property, enabling interaction with the **Orders** table in the database. The method retrieves all orders from the database asynchronously and returns them as a list of `Orders` objects.
-
-  * Finally, return the response as a `result` and `count` pair object in the `processResponse` method to bind the data to the Grid.
-
-{% tabs %}
-{% highlight ts tabtitle="app.ts" %}
-
-import { DataManager } from '@syncfusion/ej2-data';
-import { CustomAdaptor } from './CustomAdaptor';
-import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-
-function App() {
-   const data = new DataManager({ 
-      url:'https://localhost:xxxx/api/grid', // Here xxxx represents the port number.
-      adaptor: new CustomAdaptor()
-   });
-    return <GridComponent dataSource={data} height={320}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' width='150' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='EmployeeID' textAlign='Right' width='160'></ColumnDirective>
-            <ColumnDirective field='Freight' headerText='Freight' format='C2' width='160' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
-        </ColumnsDirective>
-    </GridComponent>
-};
-export default App;
-
-{% endhighlight %}
-
-{% highlight ts tabtitle="CustomAdaptor.ts" %}
-
-import { UrlAdaptor } from '@syncfusion/ej2-data';
-export class CustomAdaptor extends UrlAdaptor {
-  public override processResponse(): any {
-    // Calling base class processResponse function.
-    const original: any = super.processResponse.apply(this, arguments as any);
-    return original;
-  }
-}
-
-{% endhighlight %}
-
-{% highlight cs tabtitle="GridController.cs" %}
-
-using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Data;
-using Syncfusion.EJ2.Base;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Newtonsoft.Json.Linq;
-
-namespace Grid_EntityFramework.Server.Controllers
-{
-  [ApiController]
-  public class GridController : ControllerBase
-  {
-    string ConnectionString = @"<Enter a valid connection string>";
-
-    /// <summary>
-    /// Processes the DataManager request to perform searching, filtering, sorting, and paging operations.
-    /// </summary>
-    /// <param name="DataManagerRequest">Contains the details of the data operation requested.</param>
-    /// <returns>Returns a JSON object along with the total record count.</returns>
-    [HttpPost]
-    [Route("api/[controller]")]
-    public object Post([FromBody] DataManagerRequest DataManagerRequest)
-    {
-      // Retrieve data from the data source (e.g., database).
-      IQueryable<Orders> DataSource = GetOrderData().AsQueryable();
-
-      // Get the total count of records.
-      int totalRecordsCount = DataSource.Count();
-
-      // Return data based on the request.
-      return new { result = DataSource, count = totalRecordsCount };
-    }
-
-    /// <summary>
-    /// Retrieves the order data from the database.
-    /// </summary>
-    /// <returns>Returns a list of orders fetched from the database.</returns>
-    [HttpGet]
-    [Route("api/[controller]")]
-    public List<Orders> GetOrderData()
-    {
-      using (OrderDbContext Context = new OrderDbContext(ConnectionString))
-      {
-        // Retrieve orders from the orders DbSet and convert to list asynchronously.
-        List<Orders> orders = Context.Orders.ToList();
-        return orders;
-      }
-    }
-
-    // Create a class that inherits from DbContext(Entity Framework Core).
-    public class OrderDbContext : DbContext
-    {
-      //Declare a private variable to store the connection string.
-      private readonly string _ConnectionString;
-
-      //Define a constructor that accepts a connection string.
-      public OrderDbContext(string ConnectionString)
-      {
-        //Store the provided connection string.
-        _ConnectionString = ConnectionString;
-      }
-
-      //Override the onConfiguring method to tell EF Core to use SQL server.
-      protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-      {
-        // Use the connection string to configure the database connection.
-        optionsBuilder.UseSqlServer(_ConnectionString);
-      }
-      
-      // Define a DbSet to represent the orders table in the database.
-      public DbSet<Orders> Orders { get; set; }
-    }
-        
-    public class Orders
-    {
-      [Key]
-      public int? OrderID { get; set; }
-      public string? CustomerID { get; set; }
-      public int? EmployeeID { get; set; }
-      public decimal Freight { get; set; }
-      public string? ShipCity { get; set; }
-    }
-  }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-> * The `DataManagerRequest` encompasses details about the Grid actions such as searching, filtering, sorting, aggregate, paging and grouping.
-
-### Handling searching operation
-
-When utilizing the `CustomAdaptor` in React, managing the searching operation involves overriding the `processResponse` method of the `UrlAdaptor` class. 
-
-In the code example below, searching a custom data source can be accomplished by employing the built-in `PerformSearching` method of the `QueryableOperation` class. Alternatively, you can implement your own method for searching operation and bind the resultant data to the Syncfusion React Grid.
-
-{% tabs %}
-{% highlight cs tabtitle="GridController.cs" %}
-
-/// <summary>
-/// Processes the DataManager request to perform searching operation.
-/// </summary>
-/// <param name="DataManagerRequest">Contains the details of the data operation requested.</param>
-/// <returns>Returns a JSON object with the searched data along with the total record count.</returns>
-[HttpPost]
-[Route("api/[controller]")]
-public object Post([FromBody] DataManagerRequest DataManagerRequest) 
-{
-  // Retrieve data from the data source (e.g., database).
-  IQueryable<Orders> DataSource = GetOrderData().AsQueryable();
-
-  // Initialize QueryableOperation instance.
-  QueryableOperation queryableOperation = new QueryableOperation();   
-
-  // Handling searching operation.                                     
-  if (DataManagerRequest.Search != null && DataManagerRequest.Search.Count > 0) 
-  {
-    DataSource = queryableOperation.PerformSearching(DataSource, DataManagerRequest.Search);
-    //Add custom logic here if needed and remove above method.
-  }
-
-  // Get the total count of records.
-  int totalRecordsCount = DataSource.Count();
-
-  // Return data based on the request.
-  return new { result = DataSource, count = totalRecordsCount };
-}
-
-{% endhighlight %}
-
-{% highlight ts tabtitle="app.ts" %}
-
-import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems, Toolbar, Inject } from '@syncfusion/ej2-react-grids';
+```ts
+import React, { useMemo } from 'react';
+import {GridComponent, ColumnsDirective, ColumnDirective, Inject} from '@syncfusion/ej2-react-grids';
 import { DataManager } from '@syncfusion/ej2-data';
 import { CustomAdaptor } from './CustomAdaptor';
 
-function App() {
-    const data = new DataManager({ 
-        url: 'https://localhost:xxxx/api/grid', // Replace your hosted link.
-        adaptor: new CustomAdaptor()
-    });
-    const toolbar: ToolbarItems[] = ['Search'];
-    return <GridComponent dataSource={data} toolbar={toolbar} height={320}>
+const App: React.FC = () => {
+  const dataManager = useMemo(() => new DataManager({
+    url: 'http://localhost:5018/api/tickets/url',
+    insertUrl: 'http://localhost:5018/api/tickets/insert',
+    updateUrl: 'http://localhost:5018/api/tickets/update',
+    removeUrl: 'http://localhost:5018/api/tickets/remove',
+    batchUrl: 'http://localhost:5018/api/tickets/batch',
+    adaptor: new CustomAdaptor(),
+  }), []);
+
+  return (
+    <div>
+      <GridComponent
+        dataSource={dataManager}
+      >
         <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' width='150' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='EmployeeID' textAlign='Right' width='160'></ColumnDirective>
-            <ColumnDirective field='Freight' headerText='Freight' format='C2' width='160' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+          <ColumnDirective field="SNo" headerText="S.No" width={70} textAlign="Right" />
+          {/* Include additional columns here */}
         </ColumnsDirective>
-        <Inject services={[Toolbar]} />
-    </GridComponent>
+      </GridComponent>
+    </div>
+  );
 };
+
 export default App;
+```
 
-{% endhighlight %}
+### Step 4: Implement the CustomAdaptor
 
-{% highlight ts tabtitle="customAdaptor.ts" %}
+The Syncfusion React Grid can bind data from a **SQL Server** database using [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) and set the `adaptor` property to `CustomAdaptor` for scenarios that require full control over data operations.
 
-  import { UrlAdaptor } from '@syncfusion/ej2-data';
-  export class CustomAdaptor extends UrlAdaptor {
-    public override processResponse(): any {
-      // Calling base class processResponse function.
-      const original: any = super.processResponse.apply(this, arguments as any);
-      return original;
-    }
-  }
+The `CustomAdaptor` (client-side) is a bridge between the React Grid and the ASP.NET Core backend. It extends the `UrlAdaptor` and handles all data operation requests by constructing HTTP POST calls to corresponding server endpoints. When the Grid performs operations like reading, searching, filtering, sorting, paging, and CRUD operations, the CustomAdaptor intercepts these actions and formats them into HTTP requests. These requests are sent to the ASP.NET Core Web API controller on the server, which processes the `DataManagerRequest` using Entity Framework Core to query the SQL Server database and return the results.
 
-{% endhighlight %}
-{% endtabs %}
+**Instructions:**
 
-### Handling filtering operation
+1. Create a new **CustomAdaptor.ts** file in the (**src**) folder.
+2. Add the following code inside this file:
 
-When utilizing the `CustomAdaptor` in React, managing the filtering operation involves overriding the `processResponse` method of the `UrlAdaptor` class.
-
-In the code example below, filtering a custom data source can be achieved by utilizing the built-in `PerformFiltering` method of the `QueryableOperation` class. Alternatively, you can implement your own method for filtering operation and bind the resulting data to the Syncfusion React Grid.
-
-{% tabs %}
-{% highlight cs tabtitle="GridController.cs" %}
-
-/// <summary>
-/// Processes the DataManager request to perform filtering operation.
-/// </summary>
-/// <param name="DataManagerRequest">Contains the details of the data operation requested.</param>
-/// <returns>Returns a JSON object with the filtered data along with the total record count.</returns>
-[HttpPost]
-[Route("api/[controller]")]
-public object Post([FromBody] DataManagerRequest DataManagerRequest) 
-{
-  // Retrieve data from the data source (e.g., database).
-  IQueryable<Orders> DataSource = GetOrderData().AsQueryable();
-
-  // Initialize QueryableOperation instance.
-  QueryableOperation queryableOperation = new QueryableOperation();
-
-  // Handling filtering operation.
-  if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0) 
-  {
-    foreach (WhereFilter condition in DataManagerRequest.Where) 
-    {
-      foreach (WhereFilter predicate in condition.predicates) 
-      {
-        DataSource = queryableOperation.PerformFiltering(DataSource, DataManagerRequest.Where, predicate.Operator);
-        //Add custom logic here if needed and remove above method.
-      }
-    }
-  }
-
-  // Get the total count of records.
-  int totalRecordsCount = DataSource.Count();
-
-  // Return data based on the request.
-  return new { result = DataSource, count = totalRecordsCount };
-}
-
-{% endhighlight %}
-
-{% highlight ts tabtitle="app.ts" %}
-
-import { ColumnDirective, ColumnsDirective, GridComponent, Filter, Inject } from '@syncfusion/ej2-react-grids';
-import { DataManager } from '@syncfusion/ej2-data';
-import { CustomAdaptor } from './CustomAdaptor';
-
-function App() {
-    const data = new DataManager({ 
-        url: 'https://localhost:xxxx/api/grid', // Replace your hosted link.
-        adaptor: new CustomAdaptor()
-    });
-    return <GridComponent dataSource={data} allowFiltering={true} height={320}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' width='150' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='EmployeeID' textAlign='Right' width='160'></ColumnDirective>
-            <ColumnDirective field='Freight' headerText='Freight' format='C2' width='160' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
-        </ColumnsDirective>
-        <Inject services={[Filter]} />
-    </GridComponent>
-};
-export default App;
-
-{% endhighlight %}
-
-{% highlight ts tabtitle="customAdaptor.ts" %}
-
-import { UrlAdaptor } from '@syncfusion/ej2-data';
-export class CustomAdaptor extends UrlAdaptor {
-  public override processResponse(): any {
-    // Calling base class processResponse function.
-    const original: any = super.processResponse.apply(this, arguments as any);
-    return original;
-  }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-### Handling sorting operation
-
-When utilizing the `CustomAdaptor` in React, managing the sorting operation involves overriding the `processResponse` method of the `UrlAdaptor` class.
-
-In the code example below, sorting a custom data source can be accomplished by employing the built-in `PerformSorting` method of the `QueryableOperation` class. Alternatively, you can implement your own method for sorting operation and bind the resulting data to the Syncfusion React Grid.
-
-{% tabs %}
-{% highlight cs tabtitle="GridController.cs" %}
-
-/// <summary>
-/// Processes the DataManager request to perform sorting operation.
-/// </summary>
-/// <param name="DataManagerRequest">Contains the details of the data operation requested.</param>
-/// <returns>Returns a JSON object with the sorted data along with the total record count.</returns>
-[HttpPost]
-[Route("api/[controller]")]
-public object Post([FromBody] DataManagerRequest DataManagerRequest) 
-{
-  // Retrieve data from the data source (e.g., database).
-  IQueryable<Orders> DataSource = GetOrderData().AsQueryable();
-
-  // Initialize QueryableOperation instance.
-  QueryableOperation queryableOperation = new QueryableOperation();      
-
-  // Handling sorting operation.
-  if (DataManagerRequest.Sorted != null && DataManagerRequest.Sorted.Count > 0) 
-  {
-    DataSource = queryableOperation.PerformSorting(DataSource, DataManagerRequest.Sorted);
-    //Add custom logic here if needed and remove above method.
-  }
-
-  // Get the total count of records.
-  int totalRecordsCount = DataSource.Count();
-
-  // Return data based on the request.
-  return new { result = DataSource, count = totalRecordsCount };
-}
-
-{% endhighlight %}
-
-{% highlight ts tabtitle="app.ts" %}
-
-import { ColumnDirective, ColumnsDirective, GridComponent, Sort, Inject } from '@syncfusion/ej2-react-grids';
-import { DataManager } from '@syncfusion/ej2-data';
-import { CustomAdaptor } from './CustomAdaptor';
-
-function App() {
-    const data = new DataManager({ 
-        url: 'https://localhost:xxxx/api/grid', // Replace your hosted link.
-        adaptor: new CustomAdaptor()
-    });
-    return <GridComponent dataSource={data} allowSorting={true} height={320}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' width='150' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='EmployeeID' textAlign='Right' width='160'></ColumnDirective>
-            <ColumnDirective field='Freight' headerText='Freight' format='C2' width='160' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
-        </ColumnsDirective>
-        <Inject services={[Sort]} />
-    </GridComponent>
-};
-export default App;
-
-{% endhighlight %}
-
-{% highlight ts tabtitle="customAdaptor.ts" %}
-
-import { UrlAdaptor } from '@syncfusion/ej2-data';
-export class CustomAdaptor extends UrlAdaptor {
-  public override processResponse(): any {
-    // Calling base class processResponse function.
-    const original: any = super.processResponse.apply(this, arguments as any);
-    return original;
-  }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-### Handling paging operation
-
-When utilizing the `CustomAdaptor` in React, managing the paging operation involves overriding the `processResponse` method of the `UrlAdaptor` class.
-
-In the code example below, paging a custom data source can be achieved by utilizing the built-in `PerformTake` and `PerformSkip` method of the `QueryableOperation` class. Alternatively, you can use your own method for paging operation and bind the resulting data to the Syncfusion React Grid.
-
-{% tabs %}
-{% highlight cs tabtitle="GridController.cs" %}
-
-/// <summary>
-/// Processes the DataManager request to perform paging operation.
-/// </summary>
-/// <param name="DataManagerRequest">Contains the details of the data operation requested.</param>
-/// <returns>Returns a JSON object with the paginated data along with the total record count.</returns>
-[HttpPost]
-[Route("api/[controller]")]
-public object Post([FromBody] DataManagerRequest DataManagerRequest) 
-{
-  // Retrieve data from the data source (e.g., database).
-  IQueryable<Orders> DataSource = GetOrderData().AsQueryable();
-  QueryableOperation queryableOperation = new QueryableOperation();
-
-  // Get the total count of records.
-  int totalRecordsCount = DataSource.Count();
-
-  // Handling paging operation.
-  if (DataManagerRequest.Skip != 0) 
-  {
-    DataSource = queryableOperation.PerformSkip(DataSource, DataManagerRequest.Skip);
-    //Add custom logic here if needed and remove above method.
-  }
-  if (DataManagerRequest.Take != 0) 
-  {
-    DataSource = queryableOperation.PerformTake(DataSource, DataManagerRequest.Take);
-    //Add custom logic here if needed and remove above method.
-  }
-
-  // Return data based on the request.
-  return new { result = DataSource, count = totalRecordsCount };
-}
-
-{% endhighlight %}
-
-{% highlight ts tabtitle="app.ts" %}
-
-import { ColumnDirective, ColumnsDirective, GridComponent, Page, Inject } from '@syncfusion/ej2-react-grids';
-import { DataManager } from '@syncfusion/ej2-data';
-import { CustomAdaptor } from './CustomAdaptor';
-
-function App() {
-    const data = new DataManager({ 
-        url: 'https://localhost:xxxx/api/grid', // Replace your hosted link.
-        adaptor: new CustomAdaptor()
-    });
-    return <GridComponent dataSource={data} allowPaging={true} height={320}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' width='150' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='EmployeeID' textAlign='Right' width='160'></ColumnDirective>
-            <ColumnDirective field='Freight' headerText='Freight' format='C2' width='160' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
-        </ColumnsDirective>
-        <Inject services={[Page]} />
-    </GridComponent>
-};
-export default App;
-
-{% endhighlight %}
-
-{% highlight ts tabtitle="customAdaptor.ts" %}
-
-import { UrlAdaptor } from '@syncfusion/ej2-data';
-export class CustomAdaptor extends UrlAdaptor {
-  public override processResponse(): any {
-    // Calling base class processResponse function.
-    const original: any = super.processResponse.apply(this, arguments as any);
-    return original;
-  }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-### Handling CRUD operations
-
-To enable editing in the Syncfusion React Grid, utilize the [editSettings](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings) property. The Grid offers multiple edit modes including the **Inline/Normal**, **Dialog** and **Batch** editing. For more details, refer to the Grid [editing](https://ej2.syncfusion.com/react/documentation/grid/editing/edit) documentation.
-
-In this scenario, the inline edit `mode` and [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property configured to display toolbar items for editing purpose.
-
-{% tabs %}
-{% highlight ts tabtitle="app.ts" %}
-
-import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems, EditSettingsModel, Toolbar, Edit, Inject } from '@syncfusion/ej2-react-grids';
-import { DataManager } from '@syncfusion/ej2-data';
-import { CustomAdaptor } from './CustomAdaptor';
-
-function App() {
-    const data = new DataManager({ 
-        url: 'https://localhost:****/api/grid',
-        insertUrl: 'https://localhost:****/api/grid/Insert',
-        updateUrl: 'https://localhost:****/api/grid/Update',
-        removeUrl: 'https://localhost:****/api/grid/Remove',
-        // Enable batch URL when batch editing is enabled.
-        //batchUrl: 'https://localhost:xxxx/api/grid/BatchUpdate', 
-        adaptor: new CustomAdaptor()
-    });
-    const editSettings: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
-    const toolbar: ToolbarItems[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
-    const employeeIDRules = { required: true, number: true };
-    const customerIDRules = { required: true };
-    const freightRules = { required: true, min: 1, max: 1000 };
-    const shipCityRules = { required: true };
-    return <GridComponent dataSource={data} editSettings={editSettings} toolbar={toolbar} height={320}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' isIdentity={true} isPrimaryKey={true} width='150' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' validationRules={customerIDRules} width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='EmployeeID' textAlign='Right' validationRules={employeeIDRules} width='160'></ColumnDirective>
-            <ColumnDirective field='Freight' headerText='Freight' format='C2' validationRules={freightRules} width='160' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='ShipCity' headerText='Ship City' validationRules={shipCityRules} width='150' />
-        </ColumnsDirective>
-        <Inject services={[Toolbar, Edit]} />
-    </GridComponent>
-};
-export default App;
-
-{% endhighlight %}
-{% endtabs %}
-
-> * Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) for the Grid. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
-> * If database has an auto generated column, ensure to define [isIdentity](https://ej2.syncfusion.com/react/documentation/api/grid/column#isidentity) property of Grid column to disable them during adding or editing operations.
-
-The CRUD operations can be performed and customized on our own by overriding the following CRUD methods of the `UrlAdaptor` 
-
-* insert
-* remove
-* update
-* batchRequest
-
-Let’s see how to perform CRUD operations using Entity Framework in Microsoft SQL Server data with Syncfusion React Grid.
-
-**Insert Operation:**
-
-To execute the insert operation, you will need to override the `insert` method of the `CustomAdaptor`. Then, integrate the following code snippet into the `CustomAdaptor` class. The below code snippet demonstrated how to handle the insertion of new records within the `insert` method of `CustomAdaptor` . Modify the logic within this method according to the requirements of your application. Utilizing `Entity Framework` simplifies database tasks by managing database connections and queries through object-oriented programming, making it easier to work with databases in C# code, as shown in the following code snippet.
-
-{% tabs %}
-{% highlight ts tabtitle="CustomAdaptor.ts" %}
-
-import { UrlAdaptor } from '@syncfusion/ej2-data';
+```ts
+// File: src/CustomAdaptor.ts
+import { type BatchChanges } from "@syncfusion/ej2-react-grids";
+import {
+  DataManager,
+  UrlAdaptor,
+  type ReturnOption,
+  type DataResult,
+} from "@syncfusion/ej2-data";
 
 export class CustomAdaptor extends UrlAdaptor {
-  public override processResponse(): any {
-    const original: any = super.processResponse.apply(this, arguments as any);
+  public override processResponse(data: DataResult): ReturnOption {
+    const original = data as any;
+    if (original && original.result) {
+      let i = 0;
+      original.result.forEach((item: any) => (item.SNo = ++i));
+    }
     return original;
   }
 
-  public override insert(dm: any, data: any): any {
+  public override beforeSend(
+    dm: DataManager,
+    request: Request,
+    settings?: any,
+  ): void {
+    super.beforeSend(dm, request, settings);
+  }
+
+  public override insert(dm: DataManager, data: DataResult) {
     return {
-      url: dm.dataSource.insertUrl || dm.dataSource.url,
-      data: JSON.stringify({
-        __RequestVerificationToken: "Syncfusion",
-        value: data,
-        action: 'insert'
-      }),
-      type: 'POST'
+      url: `${dm.dataSource["insertUrl"]}`,
+      type: "POST",
+      contentType: "application/json; charset=utf-8",
+      data: JSON.stringify({ value: data }),
     };
   }
-}
-{% endhighlight %}
 
-{% highlight cs tabtitle="GridController.cs" %}
-
-/// <summary>
-/// Inserts a new data item into the data collection.
-/// </summary>
-/// <param name="value">It contains the new record detail which is need to be inserted.</param>
-/// <returns>Returns void.</returns>
-[HttpPost]
-[Route("api/[controller]/Insert")]
-public void Insert([FromBody] CRUDModel<Orders> value) 
-{
-  using (OrderDbContext Context = new OrderDbContext(ConnectionString))
-  {
-    // Add the provided order to the orders DbSet.
-    Context.Orders.Add(value.value);
-
-    // Save changes to the database.
-    Context.SaveChanges();
-  }
-
-  //Add custom logic here if needed and remove above method.
-}
-
-// Create a class that inherits from DbContext(Entity Framework Core).
-public class OrderDbContext : DbContext
-{
-  //Declare a private variable to store the connection string.
-  private readonly string _ConnectionString;
-
-  //Define a constructor that accepts a connection string.
-  public OrderDbContext(string ConnectionString)
-  {
-    //Store the provided connection string.
-    _ConnectionString = ConnectionString;
-  }
-
-  //Override the onConfiguring method to tell EF Core to use SQL server.
-  protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-  {
-    // Use the connection string to configure the database connection.
-    optionsBuilder.UseSqlServer(_ConnectionString);
-  }
-
-  // Define a DbSet to represent the orders table in the database.
-  public DbSet<Orders> Orders { get; set; }
-}
-
-public class CRUDModel<T> where T : class
-{
-  public string? action { get; set; }
-  public string? keyColumn { get; set; }
-  public object? key { get; set; }
-  public T? value { get; set; }
-  public List<T>? added { get; set; }
-  public List<T>? changed { get; set; }
-  public List<T>? deleted { get; set; }
-  public IDictionary<string, object>? @params { get; set; }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-**Update Operation:**
-
-To execute the update operation, override the `update` method of the `CustomAdaptor`. Then, integrate the following code snippet into the `CustomAdaptor` class. The below code snippet demonstrated how to handle the updating of existing records within the `update` method of the `CustomAdaptor`. Modify the logic within this method according to the requirements of your application. Utilizing `Entity Framework` simplifies database tasks by managing database connections and queries through object-oriented programming, making it easier to work with databases in C# code, as shown in the following code snippet.
-
-{% tabs %}
-{% highlight ts tabtitle="CustomAdaptor.ts" %}
-
-import { UrlAdaptor } from '@syncfusion/ej2-data';
-
-export class CustomAdaptor extends UrlAdaptor {
-  public override processResponse(): any {
-    // Calling base class processResponse function.
-    const original: any = super.processResponse.apply(this, arguments as any);
-    return original;
-  }
-
-  public override update(dm: any, keyField: string, value: any): any {
+  public override update(dm: DataManager, _keyField: string, value: any) {
     return {
-      url: dm.dataSource.updateUrl || dm.dataSource.url,
-      data: JSON.stringify({
-        __RequestVerificationToken: "Syncfusion",
-        value: value,
-        action: 'update'
-      }),
-      type: 'POST'
+      url: `${dm.dataSource["updateUrl"]}`,
+      type: "POST",
+      contentType: "application/json; charset=utf-8",
+      data: JSON.stringify({ value }),
     };
   }
-}
 
-{% endhighlight %}
-
-{% highlight cs tabtitle="GridController.cs" %}
-
-/// <summary>
-/// Update a existing data item from the data collection.
-/// </summary>
-/// <param name="value">It contains the updated record detail which is need to be updated.</param>
-/// <returns>Returns void.</returns>
-[HttpPost]
-[Route("api/[controller]/Update")]
-public void Update([FromBody] CRUDModel<Orders> value) 
-{
-  using (OrderDbContext Context = new OrderDbContext(ConnectionString))
-  {
-    Orders existingOrder = Context.Orders.Find(value.value.OrderID);
-    if (existingOrder != null)
-    {
-      // Update the existing order with the new values.
-      Context.Entry(existingOrder).CurrentValues.SetValues(value.value);
-
-      // Save changes to the database.
-      Context.SaveChanges();
-    }
-  }
-
-  //Add custom logic here if needed and remove above method.
-}
-
-//Create a class that inherits from DbContext(Entity Framework Core).
-public class OrderDbContext : DbContext
-{
-  //Declare a private variable to store the connection string.
-  private readonly string _ConnectionString;
-
-  //Define a constructor that accepts a connection string.
-  public OrderDbContext(string ConnectionString)
-  {
-    //Store the provided connection string.
-    _ConnectionString = ConnectionString;
-  }
-
-  //Override the onConfiguring method to tell EF Core to use SQL server.
-  protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-  {
-    // Use the connection string to configure the database connection.
-    optionsBuilder.UseSqlServer(_ConnectionString);
-  }
-
-  // Define a DbSet to represent the orders table in the database.
-  public DbSet<Orders> Orders { get; set; }
-}
-
-public class CRUDModel<T> where T : class
-{
-  public string? action { get; set; }
-  public string? keyColumn { get; set; }
-  public object? key { get; set; }
-  public T? value { get; set; }
-  public List<T>? added { get; set; }
-  public List<T>? changed { get; set; }
-  public List<T>? deleted { get; set; }
-  public IDictionary<string, object>? @params { get; set; }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-**Delete Operation:**
-
-To perform the delete operation, you need to override the `remove` method of the `CustomAdaptor`. Below is the code snippet that you can add to `CustomAdaptor` class. The below code snippet demonstrated how to handle the deletion of existing records within the `remove` method of `CustomAdaptor`. Modify the logic within this method according to the requirements of your application. Utilizing `Entity Framework` simplifies database tasks by managing database connections and queries through object-oriented programming, making it easier to work with databases in C# code, as shown in the following code snippet.
-
-{% tabs %}
-{% highlight ts tabtitle="CustomAdaptor.ts" %}
-
-import { UrlAdaptor } from '@syncfusion/ej2-data';
-
-export class CustomAdaptor extends UrlAdaptor {
-  public override processResponse(): any {
-    // Calling base class processResponse function.
-    const original: any = super.processResponse.apply(this, arguments as any);
-    return original;
-  }
-
-  public override remove(dm: any, keyField: string, value: any): any {
+  public override remove(dm: DataManager, keyField: string, value: any) {
+    const keyValue =
+      value && typeof value === "object" ? value[keyField] : value;
     return {
-      url: dm.dataSource.removeUrl || dm.dataSource.url,
-      data: JSON.stringify({
-        __RequestVerificationToken: "Syncfusion",
-        key: value,
-        keyColumn: keyField,
-        action: 'remove'
-      }),
-      type: 'POST'
+      url: `${dm.dataSource["removeUrl"]}`,
+      type: "POST",
+      contentType: "application/json; charset=utf-8",
+      data: JSON.stringify({ key: keyValue }),
     };
   }
-}
 
-{% endhighlight %}
-
-{% highlight ts tabtitle="GridController.cs" %}
-
-/// <summary>
-/// Remove a specific data item from the data collection.
-/// </summary>
-/// <param name="value">It contains the specific record detail which is need to be removed.</param>
-/// <return>Returns void.</return>
-[HttpPost]
-[Route("api/[controller]/Remove")]
-public void Remove([FromBody] CRUDModel<Orders> value) 
-{
-  int OrderId = Convert.ToInt32(value.key.ToString());
-  using (OrderDbContext Context = new OrderDbContext(ConnectionString))
-  {
-    Orders Order = Context.Orders.Find(OrderId);
-    if (Order != null)
-    {
-      // Remove the order from the orders DbSet.
-      Context.Orders.Remove(Order);
-
-      // Save changes to the database.
-      Context.SaveChanges();
-    }
-  }
-
-  //Add custom logic here if needed and remove above method.
-}
-
-// Create a class that inherits from DbContext(Entity Framework Core).
-public class OrderDbContext : DbContext
-{
-  //Declare a private variable to store the connection string.
-  private readonly string _ConnectionString;
-
-  //Define a constructor that accepts a connection string.
-  public OrderDbContext(string ConnectionString)
-  {
-    //Store the provided connection string.
-    _ConnectionString = ConnectionString;
-  }
-
-  //Override the onConfiguring method to tell EF Core to use SQL server.
-  protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-  {
-    // Use the connection string to configure the database connection.
-    optionsBuilder.UseSqlServer(_ConnectionString);
-  }
-
-  // Define a DbSet to represent the orders table in the database.
-  public DbSet<Orders> Orders { get; set; }
-}
-
-public class CRUDModel<T> where T : class
-{
-  public string? action { get; set; }
-  public string? keyColumn { get; set; }
-  public object? key { get; set; }
-  public T? value { get; set; }
-  public List<T>? added { get; set; }
-  public List<T>? changed { get; set; }
-  public List<T>? deleted { get; set; }
-  public IDictionary<string, object>? @params { get; set; }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-**Batch Operation:**
-
-To perform the batch operation, override the `batchRequest` method of the `CustomAdaptor` and add the following code in the `CustomAdaptor`. The below code snippet demonstrated how to handle the batch update request within the `batchRequest` method of `CustomAdaptor`. Modify the logic within this method according to the requirements of your application.
-
-{% tabs %}
-{% highlight ts tabtitle="CustomAdaptor.ts" %}
-
-import { UrlAdaptor } from '@syncfusion/ej2-data';
-
-export class CustomAdaptor extends UrlAdaptor {
-  public override processResponse(): any {
-    // Calling base class processResponse function.
-    const original: any = super.processResponse.apply(this, arguments as any);
-    return original;
-  }
-
-  public override batchRequest(dm:any, changes: any, e:any, query: any, original?: Object): Object {
+  public override batchRequest(dm: DataManager, changes: BatchChanges) {
     return {
-      url: dm.dataSource.batchUrl || dm.dataSource.url,
+      url: `${dm.dataSource["batchUrl"]}`,
+      type: "POST",
+      contentType: "application/json; charset=utf-8",
       data: JSON.stringify({
-        __RequestVerificationToken: "Syncfusion",
         added: changes.addedRecords,
         changed: changes.changedRecords,
         deleted: changes.deletedRecords,
-        key: e.key,
-        action: 'batch'
       }),
-      type: 'POST'
     };
   }
 }
+```
 
-{% endhighlight %}
+The `CustomAdaptor` class has been successfully implemented with all data operations.
 
-{% highlight cs tabtitle="GridController.cs" %}
+### Step 5: Add Toolbar with CRUD and search options
 
-/// <summary>
-/// Batch update (Insert, Update, and Delete) a collection of data items from the data collection.
-/// </summary>
-/// <param name="value">The set of information along with details about the CRUD actions to be executed from the database.</param>
-/// <returns>Returns void.</returns>
-[HttpPost]
-[Route("api/[controller]/BatchUpdate")]
-public IActionResult BatchUpdate([FromBody] CRUDModel<Orders> value) 
+The toolbar provides buttons for adding, editing, deleting records, and searching the data.
+
+**Instructions:**
+
+1. Open the (**src/App.tsx**) file.
+2. Inject the `Toolbar` modules in the Grid component.
+3. Update the Grid component to include the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbar) property with CRUD and search options:
+
+```ts
+import React, { useMemo } from 'react';
+import { GridComponent, ColumnsDirective, ColumnDirective, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
+import { DataManager } from '@syncfusion/ej2-data';
+import { CustomAdaptor } from './CustomAdaptor';
+
+const App: React.FC = () => {
+  const dataManager = useMemo(() => new DataManager({
+    url: 'http://localhost:5018/api/tickets/url',
+    adaptor: new CustomAdaptor(),
+  }), []);
+
+  const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'];
+
+  return (
+    <GridComponent
+      dataSource={dataManager}
+      toolbar={toolbar}
+    >
+      <ColumnsDirective>
+        <ColumnDirective field="SNo" headerText="S.No" width={70} textAlign="Right" />
+        {/* Include additional columns here */}
+      </ColumnsDirective>
+      <Inject services={[Toolbar]} />
+    </GridComponent>
+  );
+};
+
+export default App;
+```
+
+**Toolbar Items Explanation:**
+
+| Item | Function |
+| ------ | ---------- |
+| `Add` | Opens a form to add a new ticket record. |
+| `Edit` | Enables editing of the selected record. |
+| `Delete` | Deletes the selected record from the database. |
+| `Update` | Saves changes made to the selected record. |
+| `Cancel` | Cancels the current edit or add operation. |
+| `Search` | Displays a search box to find records. |
+
+The toolbar has been successfully added.
+
+### Step 6: Implement Paging Feature
+
+The paging feature allows efficient loading of large data sets through on‑demand loading.
+
+**Instructions:**
+
+1. Paging in the Grid is enabled by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowpaging) property to `true`.
+2. And injecting the `Page` module in the Grid component.
+
+```ts
+import React, { useMemo } from 'react';
+import { GridComponent, ColumnsDirective, ColumnDirective, Inject, Page } from '@syncfusion/ej2-react-grids';
+import { DataManager } from '@syncfusion/ej2-data';
+import { CustomAdaptor } from './CustomAdaptor';
+
+const App: React.FC = () => {
+  const dataManager = useMemo(() => new DataManager({
+    url: 'http://localhost:5018/api/tickets/url',
+    adaptor: new CustomAdaptor(),
+  }), []);
+
+  return (
+    <GridComponent
+        dataSource={dataManager}
+        allowPaging={true}
+    >
+      <ColumnsDirective>
+        <ColumnDirective field="SNo" headerText="S.No" width={70} textAlign="Right" />
+        {/* Include additional columns here */}
+      </ColumnsDirective>
+      <Inject services={[Page]} />
+    </GridComponent>
+  );
+};
+
+export default App;
+```
+
+On the server side create a file **TicketsController.cs** and add the "UrlDataSource" method provided below:
+
+```csharp
+using Grid_EntityFramework.Server.Data;
+using Grid_EntityFramework.Server.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Syncfusion.EJ2.Base;
+
+namespace Grid_EntityFramework.Server.Controllers
 {
-  using (OrderDbContext Context = new OrderDbContext(ConnectionString))
-  {
-    if (value.changed != null && value.changed.Count > 0)
+    [Route("api/[controller]")]
+    public class TicketsController : ControllerBase
     {
-      foreach (Orders Record in (IEnumerable<Orders>)value.changed)
-      {
-        // Update the changed records.
-        Context.Orders.UpdateRange(Record);
-      }
-    }
+        private readonly TicketsDbContext _db;
 
-    if (value.added != null && value.added.Count > 0)
-    {
-      foreach (Orders Record in (IEnumerable<Orders>)value.added)
-      {
-        foreach (Orders order in value.added)
+        public TicketsController(TicketsDbContext db)
         {
-          // This ensures EF does not try to insert OrderID.
-          order.OrderID = default; 
+            _db = db;
         }
-        // Add new records.
-        Context.Orders.AddRange(value.added);
-      }
-    }
 
-    if (value.deleted != null && value.deleted.Count > 0)
-    {
-      foreach (Orders Record in (IEnumerable<Orders>)value.deleted)
-      {
-        // Find and delete the records.
-        Orders ExistingOrder = Context.Orders.Find(Record.OrderID);
-        if (ExistingOrder != null)
+        // READ
+        [HttpPost("url")]
+        public IActionResult UrlDataSource([FromBody] DataManagerRequest dm)
         {
-          Context.Orders.Remove(ExistingOrder);
+            IQueryable<Ticket> query = _db.Tickets.AsNoTracking();
+            var op = new DataOperations();
+
+            if (dm.Search?.Count > 0)
+                query = op.PerformSearching(query, dm.Search).Cast<Ticket>().AsQueryable();
+
+            if (dm.Where?.Count > 0)
+                query = op.PerformFiltering(query, dm.Where, dm.Where[0].Operator)
+                    .Cast<Ticket>()
+                    .AsQueryable();
+
+            if (dm.Sorted?.Count > 0)
+                query = op.PerformSorting(query, dm.Sorted).Cast<Ticket>().AsQueryable();
+            else
+                query = query.OrderBy(t => t.TicketId);
+
+            var count = query.Count();
+
+            if (dm.Skip > 0)
+                query = query.Skip(dm.Skip);
+
+            if (dm.Take > 0)
+                query = query.Take(dm.Take);
+
+            return dm.RequiresCounts
+                ? Ok(new { result = query.ToList(), count })
+                : Ok(query.ToList());
         }
-      }
     }
-
-    // Save changes to the database.
-    Context.SaveChanges();
-  }
-  return new JsonResult(value);
 }
 
-// Create a class that inherits from DbContext(Entity Framework Core).
-public class OrderDbContext : DbContext
+```
+
+**Paging Details:**
+
+- The Grid sends page size `Take` and skip count `Skip` parameters to the server.
+- The `operation.PerformSkip()` method skips the specified number of records.
+- The `operation.PerformTake()` method retrieves only the required number of records for the current page.
+- The total count is calculated before paging to display the total number of records.
+- Results are returned and displayed in the Grid with pagination controls.
+
+Paging feature is now active.
+
+### Step 7: Implement Searching feature
+
+Searching allows finding records by entering keywords in the search box.
+
+**Instructions:**
+
+1. Ensure the toolbar includes the `Search` item.
+2. Inject the `Toolbar` module in the Grid component.
+
+```ts
+import React, { useMemo } from 'react';
+import { GridComponent, ColumnsDirective, ColumnDirective, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
+import { DataManager } from '@syncfusion/ej2-data';
+import { CustomAdaptor } from './CustomAdaptor';
+
+const App: React.FC = () => {
+  const dataManager = useMemo(() => new DataManager({
+    url: 'http://localhost:5018/api/tickets/url',
+    adaptor: new CustomAdaptor(),
+  }), []);
+  const toolbar = ['Search'];
+  return (
+    <GridComponent
+        dataSource={dataManager}
+        toolbar={toolbar}
+    >
+      <ColumnsDirective>
+        <ColumnDirective field="SNo" headerText="S.No" width={70} textAlign="Right" />
+        {/* Include additional columns here */}
+      </ColumnsDirective>
+      <Inject services={[Toolbar]} />
+    </GridComponent>
+  );
+};
+
+export default App;
+```
+
+Update the "UrlDataSource" method in the **TicketsController.cs** file to handle searching:
+
+```csharp
+  using Grid_EntityFramework.Server.Data;
+using Grid_EntityFramework.Server.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Syncfusion.EJ2.Base;
+
+namespace Grid_EntityFramework.Server.Controllers
 {
-  //Declare a private variable to store the connection string.
-  private readonly string _ConnectionString;
+    [Route("api/[controller]")]
+    public class TicketsController : ControllerBase
+    {
+        private readonly TicketsDbContext _db;
 
-  //Define a constructor that accepts a connection string.
-  public OrderDbContext(string ConnectionString)
-  {
-    //Store the provided connection string.
-    _ConnectionString = ConnectionString;
-  }
+        public TicketsController(TicketsDbContext db)
+        {
+            _db = db;
+        }
 
-  //Override the onConfiguring method to tell EF Core to use SQL server.
-  protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-  {
-    // Use the connection string to configure the database connection.
-    optionsBuilder.UseSqlServer(_ConnectionString);
-  }
+        // READ
+        [HttpPost("url")]
+        public IActionResult UrlDataSource([FromBody] DataManagerRequest dm)
+        {
+            IQueryable<Ticket> query = _db.Tickets.AsNoTracking();
+            var op = new DataOperations();
 
-  // Define a DbSet to represent the orders table in the database.
-  public DbSet<Orders> Orders { get; set; }
+            if (dm.Search?.Count > 0)
+                query = op.PerformSearching(query, dm.Search).Cast<Ticket>().AsQueryable();
+
+            // Other action code goes here
+
+            var count = query.Count();
+
+            return dm.RequiresCounts
+                ? Ok(new { result = query.ToList(), count })
+                : Ok(query.ToList());
+        }
+    }
 }
 
-public class CRUDModel<T> where T : class
+```
+
+**Searching:**
+
+-- When text is entered in the search box and Enter is pressed, the Grid sends a search request to the server.
+- The "UrlDataSource" method receives the search criteria in `Search` parameter.
+- The `operation.PerformSearching()` method filters the data based on the search term.
+- Results are returned and displayed in the Grid.
+
+Searching feature is now active.
+
+### Step 8: Implement Filtering feature
+
+Filtering allows restricting data based on column values using a menu interface.
+
+**Instructions:**
+
+1. Filtering is enabled by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowfiltering) property to `true`.
+2. Inject the `Filter` module in the Grid component.
+
+```ts
+
+import React, { useMemo } from 'react';
+import { GridComponent, ColumnsDirective, ColumnDirective, Inject, Filter } from '@syncfusion/ej2-react-grids';
+import { DataManager } from '@syncfusion/ej2-data';
+import { CustomAdaptor } from './CustomAdaptor';
+
+const App: React.FC = () => {
+  return (
+    <GridComponent
+        dataSource={dataManager}
+        allowFiltering={true}
+    >
+      <ColumnsDirective>
+        <ColumnDirective field="SNo" headerText="S.No" width={70} textAlign="Right" />
+        {/* Include additional columns here */}
+      </ColumnsDirective>
+        <Inject services={[Filter]} />
+    </GridComponent>
+  );
+};
+
+export default App;
+
+```
+
+Update the "UrlDataSource" method in the **TicketsController.cs** file to handle filtering:
+
+```csharp
+using Grid_EntityFramework.Server.Data;
+using Grid_EntityFramework.Server.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Syncfusion.EJ2.Base;
+
+namespace Grid_EntityFramework.Server.Controllers
 {
-  public string? action { get; set; }
-  public string? keyColumn { get; set; }
-  public object? key { get; set; }
-  public T? value { get; set; }
-  public List<T>? added { get; set; }
-  public List<T>? changed { get; set; }
-  public List<T>? deleted { get; set; }
-  public IDictionary<string, object>? @params { get; set; }
+    [Route("api/[controller]")]
+    public class TicketsController : ControllerBase
+    {
+        private readonly TicketsDbContext _db;
+
+        public TicketsController(TicketsDbContext db)
+        {
+            _db = db;
+        }
+
+        // READ
+        [HttpPost("url")]
+        public IActionResult UrlDataSource([FromBody] DataManagerRequest dm)
+        {
+            IQueryable<Ticket> query = _db.Tickets.AsNoTracking();
+            var op = new DataOperations();
+
+            if (dm.Where?.Count > 0)
+                query = op.PerformFiltering(query, dm.Where, dm.Where[0].Operator)
+                    .Cast<Ticket>()
+                    .AsQueryable();
+
+         // Other action code goes here
+            var count = query.Count();
+
+            return dm.RequiresCounts
+                ? Ok(new { result = query.ToList(), count })
+                : Ok(query.ToList());
+        }
+    }
+}
+```
+
+**Filtering:**
+
+- Open the filter menu from any of the column header.
+- Select filtering criteria (equals, contains, greater than, less than, etc.).
+- Click the "Filter" button to apply the filter.
+- The "UrlDataSource" method receives the filter criteria in `Where` property.
+- Results are filtered accordingly and displayed in the DataGrid.
+
+Filtering feature is now active.
+
+### Step 9: Implement Sorting feature
+
+Sorting enables arranging records in ascending or descending order based on column values.
+
+**Instructions:**
+
+1. Sorting can be enabled by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to `true`.
+2. Inject the `Sort` module in the Grid component.
+
+```ts
+import React, { useMemo } from 'react';
+import { GridComponent, ColumnsDirective, ColumnDirective, Inject, Sort } from '@syncfusion/ej2-react-grids';
+import { DataManager } from '@syncfusion/ej2-data';
+import { CustomAdaptor } from './CustomAdaptor';
+
+const App: React.FC = () => {
+  return (
+    <GridComponent
+        dataSource={dataManager}
+        allowSorting={true}
+    >
+      <ColumnsDirective>
+        <ColumnDirective field="SNo" headerText="S.No" width={70} textAlign="Right" />
+        {/* Include additional columns here */}
+      </ColumnsDirective>
+        <Inject services={[Sort]} />
+    </GridComponent>
+  );
+};
+
+export default App;
+```
+
+Update the "UrlDataSource" method in the **TicketsController.cs** file to handle sorting:
+
+```csharp
+using Grid_EntityFramework.Server.Data;
+using Grid_EntityFramework.Server.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Syncfusion.EJ2.Base;
+
+namespace Grid_EntityFramework.Server.Controllers
+{
+    [Route("api/[controller]")]
+    public class TicketsController : ControllerBase
+    {
+        private readonly TicketsDbContext _db;
+
+        public TicketsController(TicketsDbContext db)
+        {
+            _db = db;
+        }
+
+        // READ
+        [HttpPost("url")]
+        public IActionResult UrlDataSource([FromBody] DataManagerRequest dm)
+        {
+            IQueryable<Ticket> query = _db.Tickets.AsNoTracking();
+            var op = new DataOperations();
+
+            if (dm.Sorted?.Count > 0)
+                query = op.PerformSorting(query, dm.Sorted).Cast<Ticket>().AsQueryable();
+            else
+                query = query.OrderBy(t => t.TicketId);
+
+                // Other action code goes here
+
+            var count = query.Count();
+
+            return dm.RequiresCounts
+                ? Ok(new { result = query.ToList(), count })
+                : Ok(query.ToList());
+        }
+    }
 }
 
-{% endhighlight %}
-{% endtabs %}
+```
 
-![Syncfusion React Grid bound with Microsoft SQL Server data](../images/connecting-micro-curd.gif)
+**Sorting Details:**
 
-> Find the sample in this GitHub location.
+- Click on the column header to sort in ascending order.
+- Click again to sort in descending order.
+- The "UrlDataSource" method receives the sort criteria in `Sorted`.
+- Records are sorted accordingly and displayed in the DataGrid.
+
+Sorting feature is now active.
+
+### Step 10: Perform CRUD operations
+
+CRUD operations allow adding new records, modifying existing records, and removing items that are no longer relevant. The `DataManager` posts a specific action for each operation so that the server can route to the appropriate handler.
+
+Editing operations in the Grid are enabled through configuring the [editSettings](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#editsettings) properties ([allowEditing](https://ej2.syncfusion.com/react/documentation/api/grid/gridModel#allowediting), [allowAdding](https://ej2.syncfusion.com/react/documentation/api/grid/editSettingsModel#allowadding), and [allowDeleting](https://ej2.syncfusion.com/react/documentation/api/grid/editSettingsModel#allowdeleting)) to `true`. Inject the `Edit` and `Toolbar` modules in the Grid component.
+
+```ts
+import React, { useMemo } from 'react';
+import { GridComponent, ColumnsDirective, ColumnDirective, Inject, Toolbar, Edit, Sort, Filter, Page, type EditSettingsModel } from '@syncfusion/ej2-react-grids';
+import { DataManager } from '@syncfusion/ej2-data';
+import { CustomAdaptor } from './CustomAdaptor';
+
+const App: React.FC = () => {
+  const dataManager = useMemo(() => new DataManager({
+    url: 'http://localhost:5018/api/tickets/url',
+    insertUrl: 'http://localhost:5018/api/tickets/insert',
+    updateUrl: 'http://localhost:5018/api/tickets/update',
+    removeUrl: 'http://localhost:5018/api/tickets/remove',
+    adaptor: new CustomAdaptor(),
+  }), []);
+
+  const editSettings = { allowAdding: true, allowEditing: true, allowDeleting: true };
+
+  const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'];
+
+  return (
+    <GridComponent
+      dataSource={dataManager}
+      editSettings={editSettings}
+      toolbar={toolbar}
+    >
+      <ColumnsDirective>
+        <ColumnDirective field="SNo" headerText="S.No" width={70} textAlign="Right" />
+        {/* Include additional columns here */}
+      </ColumnsDirective>
+      <Inject services={[Toolbar, Edit, Sort, Filter, Page]} />
+    </GridComponent>
+  );
+};
+
+export default App;
+```
+
+**Insert:**
+
+Record insertion allows new tickets to be added directly through the Grid component. The adaptor processes the insertion request, performs any required business‑logic validation, and saves the newly created record to the SQL database.
+
+Implement the `insert` method in (**src/CustomAdaptor.ts**) to handle record insertion within the `CustomAdaptor` class:
+
+```ts
+  public override insert(dm: DataManager, data: DataResult) {
+    return {
+      url: `${dm.dataSource["insertUrl"]}`,
+      type: "POST",
+      contentType: "application/json; charset=utf-8",
+      data: JSON.stringify({ value: data }),
+    };
+  }
+```
+
+In **TicketsController.cs**, implement the "Insert" method:
+
+```csharp
+        // CREATE
+        [HttpPost("insert")]
+        public IActionResult Insert([FromBody] CRUDModel<Ticket> value)
+        {
+            var ticket = value.Value;
+
+            ticket.TicketId = 0;
+
+            _db.Tickets.Add(ticket);
+            _db.SaveChanges();
+
+            return Ok(ticket);
+        }
+```
+
+**What happens behind the scenes:**
+
+1. The form data is collected and validated in the CustomAdaptor's `insert` method.
+2. The `Insert` method in **TicketsController.cs** file is called.
+3. The new record is added to the "Ticket" collection.
+4. The DataGrid automatically refreshes to display the new record.
+
+Now the new ticket is persisted to the database and reflected in the grid.
+
+**Update:**
+
+Record modification allows ticket details to be updated directly within the Grid. The adaptor processes the edited row, validates the updated values, and applies the changes to the SQL database while ensuring data integrity is preserved.
+
+Implement the `update` method in (**src/CustomAdaptor.ts**) to handle record update within the `CustomAdaptor` class:
+
+```ts
+  public override update(dm: DataManager, _keyField: string, value: any) {
+    return {
+      url: `${dm.dataSource["updateUrl"]}`,
+      type: "POST",
+      contentType: "application/json; charset=utf-8",
+      data: JSON.stringify({ value }),
+    };
+  }
+```
+
+In **TicketsController.cs**, implement the update method:
+
+```csharp
+        // UPDATE
+        [HttpPost("update")]
+        public IActionResult Update([FromBody] CRUDModel<Ticket> value)
+        {
+            var ticket = value.Value;
+
+            _db.Entry(ticket).State = EntityState.Modified;
+            _db.SaveChanges();
+
+            return Ok(ticket);
+        }
+```
+
+**What happens behind the scenes:**
+
+1. The modified data is collected and validated in the CustomAdaptor's `update` method.
+2. The `Update` method in **TicketsController.cs** file is called.
+3. The existing record is retrieved from the database by "ID".
+4. All properties are updated with the new values.
+5. The DataGrid refreshes to display the updated record.
+
+Now modifications are synchronized to the database and reflected in the grid UI.
+
+**Delete:**
+
+Record deletion allows tickets to be removed directly from the DataGrid. The adaptor captures the delete request, executes the corresponding SQL DELETE operation, and updates both the database and the grid to reflect the removal.
+
+Implement the `remove` method in (**src/CustomAdaptor.ts**) to handle record deletion within the `CustomAdaptor` class:
+
+```ts
+  public override remove(dm: DataManager, keyField: string, value: any) {
+    const keyValue =
+      value && typeof value === "object" ? value[keyField] : value;
+    return {
+      url: `${dm.dataSource["removeUrl"]}`,
+      type: "POST",
+      contentType: "application/json; charset=utf-8",
+      data: JSON.stringify({ key: keyValue }),
+    };
+  }
+```
+
+In **TicketsController.cs**, implement the delete method:
+
+```csharp
+        [HttpPost("remove")]
+        public IActionResult Remove([FromBody] CRUDModel<Ticket> value)
+        {
+            var key = Convert.ToInt32(value.Key);
+            var ticket = _db.Tickets.First(t => t.TicketId == key);
+
+            _db.Tickets.Remove(ticket);
+            _db.SaveChanges();
+
+            return Ok(value);
+        }
+```
+
+**What happens behind the scenes:**
+
+1. A record is selected and "Delete" is clicked.
+2. The CustomAdaptor's `remove` method is called.
+3. The `Remove` method in **GridController.cs** file is called.
+4. The record is located in the database by its ID.
+5. The record is removed from the `_db.Tickets` collection.
+6. The Grid refreshes to remove the deleted record from the UI.
+
+Now tickets are removed from the database and the grid UI reflects the changes immediately.
+
+**Batch update:**
+
+Batch operations combine multiple insert, update, and delete actions into a single request, minimizing network overhead by applying all changes atomically to the SQL database.
+
+Implement the `batchRequest` method in (**src/CustomAdaptor.ts**) to handle multiple record updates in a single request within the `CustomAdaptor` class:
+
+```ts
+  public override batchRequest(dm: DataManager, changes: BatchChanges) {
+    return {
+      url: `${dm.dataSource["batchUrl"]}`,
+      type: "POST",
+      contentType: "application/json; charset=utf-8",
+      data: JSON.stringify({
+        added: changes.addedRecords,
+        changed: changes.changedRecords,
+        deleted: changes.deletedRecords,
+      }),
+    };
+  }
+```
+
+In **TicketsController.cs**, implement the batch method:
+
+```csharp
+ // BATCH
+        [HttpPost("batch")]
+        public IActionResult Batch([FromBody] CRUDModel<Ticket> value)
+        {
+            if (value.Changed != null)
+            {
+                foreach (var ticket in value.Changed)
+                {
+                    _db.Tickets.Attach(ticket);
+                    _db.Entry(ticket).State = EntityState.Modified;
+                }
+            }
+
+            if (value.Added != null)
+            {
+                foreach (var ticket in value.Added)
+                {
+                    ticket.TicketId = 0;
+                    _db.Tickets.Add(ticket);
+                }
+            }
+
+            if (value.Deleted != null)
+            {
+                foreach (var ticket in value.Deleted)
+                {
+                    var existing = _db.Tickets.Find(ticket.TicketId);
+                    if (existing != null)
+                        _db.Tickets.Remove(existing);
+                }
+            }
+
+            _db.SaveChanges();
+            return Ok(value);
+        }
+```
+
+> This method is triggered when the Grid is operating in [Batch](https://ej2.syncfusion.com/react/documentation/grid/editing/batch-editing) Edit mode.
+
+**What happens behind the scenes:**
+
+- The Grid collects all added, edited, and deleted records in Batch Edit mode.
+- The combined batch request is passed to the CustomAdaptor’s `batchRequest` method.
+- Each modified record, added and deleted records are processed using `BatchUpdate` method in **TicketsController.cs** file.
+- All repository operations persist changes to the SQL database.
+- The DataGrid refreshes to display the updated, added, and removed records in a single response.
+
+Now the adaptor supports bulk modifications with atomic database synchronization. All CRUD operations are now fully implemented, enabling comprehensive data management capabilities within the Grid.
+
+### Step 11: Complete code
+
+Here is the complete and final (**src/App.tsx**) component with all features integrated:
+
+```ts
+// File: src/App.tsx
+import React, { useMemo } from 'react';
+import { GridComponent, ColumnsDirective, ColumnDirective, Inject, Toolbar, Edit, Sort, Filter, Page, type EditSettingsModel } from '@syncfusion/ej2-react-grids';
+import { DataManager } from '@syncfusion/ej2-data';
+import { CustomAdaptor } from './CustomAdaptor';
+
+const App: React.FC = () => {
+  const dataManager = useMemo(() => new DataManager({
+    url: 'http://localhost:5018/api/tickets/url',
+    insertUrl: 'http://localhost:5018/api/tickets/insert',
+    updateUrl: 'http://localhost:5018/api/tickets/update',
+    removeUrl: 'http://localhost:5018/api/tickets/remove',
+    batchUrl: 'http://localhost:5018/api/tickets/batch',
+    adaptor: new CustomAdaptor(),
+  }), []);
+  const toolbar: string[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'];
+  const editSettings: EditSettingsModel = {
+    allowAdding: true,
+    allowEditing: true,
+    allowDeleting: true,
+  };
+  return (
+    <GridComponent
+      dataSource={dataManager}
+      allowSorting={true}
+      allowFiltering={true}
+      allowPaging={true}
+      editSettings={editSettings}
+      toolbar={toolbar}
+      height={400}
+    >
+      <ColumnsDirective>
+        <ColumnDirective field="SNo" headerText="S.No" width={70} textAlign="Right" />
+        <ColumnDirective field="TicketId" headerText="ID" width={50} isPrimaryKey={true} isIdentity={true} />
+        <ColumnDirective field="PublicTicketId" headerText="Ticket ID" width={120} textAlign="Right" validationRules={{ required: true }} />
+        <ColumnDirective field="Title" headerText="Title" width={150} />
+        <ColumnDirective field="Department" headerText="Department" width={110} />
+        <ColumnDirective field="Assignee" headerText="Assignee" width={150} />
+        <ColumnDirective field="Status" headerText="Status" width={120} defaultValue={'Open'} validationRules={{ required: true }} />
+        <ColumnDirective field="Priority" headerText="Priority" width={120} defaultValue={'Medium'} validationRules={{ required: true }} />
+        <ColumnDirective field="CreatedAt" headerText="Created At" editType="datetimepickeredit" type="datetime" width={180} format="dd/MM/yyyy hh:mm:ss a" validationRules={{ required: true }} />
+        <ColumnDirective field="UpdatedAt" headerText="Updated At" editType="datetimepickeredit" type="datetime" width={180} format="dd/MM/yyyy hh:mm:ss a" validationRules={{ required: true }} />
+      </ColumnsDirective>
+      <Inject services={[Toolbar, Edit, Sort, Filter, Page]} />
+    </GridComponent>
+  );
+};
+export default App;
+```
+
+> - Set [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) to `true` for a column that contains unique values.
+> - The [editType](https://ej2.syncfusion.com/react/documentation/api/grid/column#edittype) property can be used to specify the desired editor for each column. [🔗](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
+> - [type](https://ej2.syncfusion.com/react/documentation/api/grid/columnmodel#type) property of the Grid columns specifies the data type of a grid column.
+
+Here is the complete Controller (**TicketsController.cs**) file:
+
+```csharp
+using Grid_EntityFramework.Server.Data;
+using Grid_EntityFramework.Server.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Syncfusion.EJ2.Base;
+
+namespace Grid_EntityFramework.Server.Controllers
+{
+    [Route("api/[controller]")]
+    public class TicketsController : ControllerBase
+    {
+        private readonly TicketsDbContext _db;
+
+        public TicketsController(TicketsDbContext db)
+        {
+            _db = db;
+        }
+
+        // READ
+        [HttpPost("url")]
+        public IActionResult UrlDataSource([FromBody] DataManagerRequest dm)
+        {
+            IQueryable<Ticket> query = _db.Tickets.AsNoTracking();
+            var op = new DataOperations();
+
+            if (dm.Search?.Count > 0)
+                query = op.PerformSearching(query, dm.Search).Cast<Ticket>().AsQueryable();
+
+            if (dm.Where?.Count > 0)
+                query = op.PerformFiltering(query, dm.Where, dm.Where[0].Operator)
+                    .Cast<Ticket>()
+                    .AsQueryable();
+
+            if (dm.Sorted?.Count > 0)
+                query = op.PerformSorting(query, dm.Sorted).Cast<Ticket>().AsQueryable();
+            else
+                query = query.OrderBy(t => t.TicketId);
+
+            var count = query.Count();
+
+            if (dm.Skip > 0)
+                query = query.Skip(dm.Skip);
+
+            if (dm.Take > 0)
+                query = query.Take(dm.Take);
+
+            return dm.RequiresCounts
+                ? Ok(new { result = query.ToList(), count })
+                : Ok(query.ToList());
+        }
+
+        // CREATE
+        [HttpPost("insert")]
+        public IActionResult Insert([FromBody] CRUDModel<Ticket> value)
+        {
+            var ticket = value.Value;
+
+            ticket.TicketId = 0;
+
+            _db.Tickets.Add(ticket);
+            _db.SaveChanges();
+
+            return Ok(ticket);
+        }
+
+        // UPDATE
+        [HttpPost("update")]
+        public IActionResult Update([FromBody] CRUDModel<Ticket> value)
+        {
+            var ticket = value.Value;
+
+            _db.Entry(ticket).State = EntityState.Modified;
+            _db.SaveChanges();
+
+            return Ok(ticket);
+        }
+
+        // DELETE
+        [HttpPost("remove")]
+        public IActionResult Remove([FromBody] CRUDModel<Ticket> value)
+        {
+            var key = Convert.ToInt32(value.Key);
+            var ticket = _db.Tickets.First(t => t.TicketId == key);
+
+            _db.Tickets.Remove(ticket);
+            _db.SaveChanges();
+
+            return Ok(value);
+        }
+
+        // BATCH
+        [HttpPost("batch")]
+        public IActionResult Batch([FromBody] CRUDModel<Ticket> value)
+        {
+            if (value.Changed != null)
+            {
+                foreach (var ticket in value.Changed)
+                {
+                    _db.Tickets.Attach(ticket);
+                    _db.Entry(ticket).State = EntityState.Modified;
+                }
+            }
+
+            if (value.Added != null)
+            {
+                foreach (var ticket in value.Added)
+                {
+                    ticket.TicketId = 0;
+                    _db.Tickets.Add(ticket);
+                }
+            }
+
+            if (value.Deleted != null)
+            {
+                foreach (var ticket in value.Deleted)
+                {
+                    var existing = _db.Tickets.Find(ticket.TicketId);
+                    if (existing != null)
+                        _db.Tickets.Remove(existing);
+                }
+            }
+
+            _db.SaveChanges();
+            return Ok(value);
+        }
+    }
+}
+
+```
+
+## Running the Application
+
+### Running the ASP.NET Core Backend Server
+
+**Step 1: Build the Backend:**
+
+1. Open the terminal or Package Manager Console.
+2. Navigate to the **Grid_EntityFramework.Server** project directory.
+3. Run the following command:
+
+```powershell
+dotnet build
+```
+
+**Step 2: Run the Backend Server:**
+
+Execute the following command:
+
+```powershell
+dotnet run
+```
+
+**Step 3: Verify Backend is Running:**
+
+- The backend server should start and listen on **http://localhost:5018** (or the port shown in the terminal).
+- Test the API endpoint: **http://localhost:5018/api/tickets/url**
+
+### Running the React Frontend Client
+
+1. Open a new terminal.
+2. Navigate to the **grid_entityframework.client** directory.
+3. Run the following command:
+
+
+```bash
+npm run dev
+```
+
+**Step 3: Access the Application:**
+
+1. Open a web browser.
+2. Navigate to **http://localhost:5173** (Vite default) or the port shown in the terminal.
+3. The application will automatically connect to the backend API at **http://localhost:5018/api/tickets/url**.
+4. The ticket management application is now running and ready to use.
+
+**Available Features:**
+
+- **View Data**: All tickets from the SQL database are displayed in the Grid.
+- **Search**: Use the search box to find tickets by any field.
+- **Filter**: Click on column headers to apply filters.
+- **Sort**: Click on column headers to sort data in ascending or descending order.
+- **Pagination**: Navigate through records using page numbers.
+- **Add**: Click the "Add" button to create a new ticket.
+- **Edit**: Click the "Edit" button to modify existing tickets.
+- **Delete**: Click the "Delete" button to remove tickets.
+
+## Complete Sample Repository
+
+A complete, working sample implementation is available in the [GitHub repository]().

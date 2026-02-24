@@ -12,18 +12,18 @@ domainurl: ##DomainURL##
 
 ## Custom Color Palette
 
-You can customize the default color of series or points by providing a custom color palette of your choice by using the [`palettes`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationSeries/#palettes) property.
+You can customize the default color of series or points by providing a custom color palette of your choice by using the [`palettes`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationSeries#palettes) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/pie-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/pie-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/pie-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/pie-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/pie-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/pie-cs1" %}
 
 ## Animation
 
@@ -33,11 +33,11 @@ Fluid animation used to animate series with updated dataSource continues animati
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/legend-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/legend-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/legend-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/legend-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/legend-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/legend-cs1" %}

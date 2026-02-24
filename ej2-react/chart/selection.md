@@ -31,20 +31,20 @@ A single data point can be selected by setting the `selectionMode` property to `
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/selection-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/selection-cs1" %}
 
 ## Series
 
@@ -52,20 +52,20 @@ An entire series can be selected by setting the `selectionMode` property to `Ser
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/selection-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/selection-cs2" %}
 
 ## Cluster
 
@@ -73,20 +73,20 @@ Cluster selection allows selection of data points that share the same index acro
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/selection-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/selection-cs3" %}
 
 ## Rectangular selection
 
@@ -102,20 +102,20 @@ The selected data points are returned as an array collection through the [`dragC
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/drag-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/drag-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/drag-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/drag-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/drag-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/drag-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/drag-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/drag-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/drag-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/drag-cs1" %}
 
 ## Lasso selection
 
@@ -123,20 +123,20 @@ Lasso selection allows users to draw a freehand shape on the chart to select dat
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/drag-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/drag-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/drag-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/drag-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/drag-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/drag-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/drag-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/drag-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/drag-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/drag-cs2" %}
 
 ## Multi-region selection
 
@@ -144,20 +144,20 @@ Multiple regions can be selected on the chart by setting the `allowMultiSelectio
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/drag-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/drag-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/drag-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/drag-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/drag-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/drag-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/drag-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/drag-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/drag-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/drag-cs3" %}
 
 ## Selection Type
 
@@ -165,20 +165,20 @@ Multiple data points or series can be selected simultaneously by enabling the [`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/selection-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/selection-cs4" %}
 
 ## Selection on Load
 
@@ -186,20 +186,20 @@ Data points or series can be selected programmatically when the chart is loaded 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs5/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs5/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/selection-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/selection-cs5" %}
 
 ## Selection through on legend
 
@@ -210,20 +210,20 @@ To visually emphasize the selected series, use the [`enableHighlight`](https://e
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs6/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs6/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs6/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs6/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs6/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/selection-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/selection-cs6" %}
 
 ## Customization for selection
 
@@ -231,20 +231,20 @@ Custom styles can be applied to selected points or series by using the [`selecti
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs7/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs7/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs7/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs7/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/selection-cs7/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/selection-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/selection-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/selection-cs7" %}
 
 >Note: To use select feature, we need to Inject `Selection` module into the `services`.
 

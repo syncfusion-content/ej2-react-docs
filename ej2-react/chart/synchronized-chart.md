@@ -23,20 +23,20 @@ In the `showTooltip` method, specify the following parameters programmatically t
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/synchronized-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/synchronized-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/synchronized-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/synchronized-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/synchronized-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/synchronized-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/synchronized-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/synchronized-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/synchronized-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/synchronized-cs1" %}
 
 ## Crosshair synchronization
 
@@ -49,20 +49,20 @@ In the `showCrosshair` method, specify the following parameters to render the cr
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/synchronized-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/synchronized-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/synchronized-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/synchronized-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/synchronized-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/synchronized-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/synchronized-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/synchronized-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/synchronized-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/synchronized-cs2" %}
 
 ## Zooming synchronization
 
@@ -71,20 +71,20 @@ These values can then be applied to the other charts to ensure that all synchron
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/synchronized-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/synchronized-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/synchronized-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/synchronized-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/synchronized-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/synchronized-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/synchronized-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/synchronized-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/synchronized-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/synchronized-cs3" %}
 
 ## Selection synchronization
 
@@ -93,17 +93,17 @@ This ensures consistent selection behavior across all connected charts and helps
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/synchronized-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/synchronized-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/synchronized-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/synchronized-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/synchronized-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/synchronized-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/synchronized-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/synchronized-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/synchronized-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/synchronized-cs4" %}

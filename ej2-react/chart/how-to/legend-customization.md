@@ -10,28 +10,28 @@ domainurl: ##DomainURL##
 
 # Legend customization in React Chart component
 
-By using the [`legendRender`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel/#legendrender), you can customize the legend shape.
+By using the [`legendRender`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#legendrender), you can customize the legend shape.
 
 To Customize the legend shape, follow the given steps:
 
 **Step 1**:
 
 Set the shape value for each legend using `args.shape` in
-[`legendRender`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel/#legendrender) event.
+[`legendRender`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#legendrender) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/how-to-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/how-to-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/how-to-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/how-to-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/how-to-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/how-to-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/how-to-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/how-to-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/how-to-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/how-to-cs4" %}

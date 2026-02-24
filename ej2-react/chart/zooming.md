@@ -26,20 +26,20 @@ The chart supports zooming through the following three interaction methods:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/zoom-cs4" %}
 
 After zooming, a toolbar is displayed that includes **zoom**, **zoomin**, **zoomout**, **pan**, and **reset** buttons.  
 Selecting **Pan** allows the chart to be panned, and selecting **Reset** restores the chart to its original zoom state.
@@ -56,20 +56,20 @@ The supported zooming modes are:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs5/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs5/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/zoom-cs5" %}
 
 ## Toolbar
 
@@ -78,20 +78,20 @@ Additionally, the zooming toolbar can be displayed during initial rendering by s
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs6/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs6/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs6/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs6/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs6/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/zoom-cs6" %}
 
 ### Toolbar customization
 
@@ -101,20 +101,20 @@ Enabling the [`draggable`](https://ej2.syncfusion.com/react/documentation/api/ch
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs11/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs11/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs11/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs11/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs11/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs11/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs11/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs11/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs11" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/zoom-cs11" %}
 
 ## Enable scrollbar
 
@@ -127,20 +127,20 @@ Scrollbar appearance can be customized using properties within [`scrollbarSettin
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs7/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs7/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs7/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs7/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs7/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/zoom-cs7" %}
 
 ### Position
 The [`position`](https://ej2.syncfusion.com/react/documentation/api/chart/scrollbarSettings#position) property specifies where the scrollbar is rendered. By default, both vertical and horizontal scrollbars are placed near their respective axes.
@@ -151,20 +151,20 @@ The available positions are:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs12/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs12/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs12/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs12/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs12/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs12/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs12/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs12/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs12" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/zoom-cs12" %}
 
 ## Enable animation
 
@@ -172,15 +172,15 @@ Use the [`enableAnimation`](https://ej2.syncfusion.com/react/documentation/api/c
 
 {% tabs %}
 {% highlight ts tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs10/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs10/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs10/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs10/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs10" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/zoom-cs10" %}
 
 ## Enable pan
 
@@ -188,20 +188,20 @@ By using the [`enablePan`](https://ej2.syncfusion.com/react/documentation/api/ch
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs8/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs8/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs8/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs8/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs8/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs8/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/zoom-cs8" %}
 
 ## Auto interval on zooming
 
@@ -209,19 +209,19 @@ By using the [`enableAutoIntervalOnZooming`](https://ej2.syncfusion.com/react/do
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs9/app/index.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs9/app/index.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs9/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs9/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs9/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/user-interaction/zoom-cs9/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/user-interaction/zoom-cs9/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/zoom-cs9" %}
 
 >Note: To use zooming feature, we need to inject `Zoom` module into the `services`.

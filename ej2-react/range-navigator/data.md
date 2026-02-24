@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 
 ## Numeric
 
-The numeric scale is used to represent the numeric values of data in a Range Selector. By default, the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#valuetype) of a Range Selector is **Double**.
+The numeric scale is used to represent the numeric values of data in a Range Selector. By default, the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#valuetype) of a Range Selector is **Double**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -28,7 +28,7 @@ The numeric scale is used to represent the numeric values of data in a Range Sel
 
 ### Range
 
-The minimum and the maximum of the scale will be calculated automatically based on the provided data. It can be customized by using the [`minimum`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#minimum), [`maximum`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#maximum), and [`interval`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#interval) properties.
+The minimum and the maximum of the scale will be calculated automatically based on the provided data. It can be customized by using the [`minimum`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#minimum), [`maximum`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#maximum), and [`interval`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#interval) properties.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -43,7 +43,7 @@ The minimum and the maximum of the scale will be calculated automatically based 
 
 ### Label Format
 
-The numeric labels can be formatted using the [`labelFormat`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#labelformat) property and it supports all the globalized formats.
+The numeric labels can be formatted using the [`labelFormat`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#labelformat) property and it supports all the globalized formats.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -153,7 +153,7 @@ method, and then set the `valueType` to `Logarithmic`.
 
 ### Range
 
-The minimum and the maximum of the Range Selector will be calculated automatically based on the provided data. It can be customized by using the [`minimum`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#minimum), [`maximum`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#maximum), and [`interval`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#interval) properties.
+The minimum and the maximum of the Range Selector will be calculated automatically based on the provided data. It can be customized by using the [`minimum`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#minimum), [`maximum`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#maximum), and [`interval`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#interval) properties.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -168,7 +168,7 @@ The minimum and the maximum of the Range Selector will be calculated automatical
 
 ### Logarithmic Base
 
-The Logarithmic Base can be customized using the [`logBase`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#logbase) property. The default value of this property is **10**.
+The Logarithmic Base can be customized using the [`logBase`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#logbase) property. The default value of this property is **10**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -200,7 +200,7 @@ The Range Selector supports the DateTime scale and displays the DateTime values 
 
 ### Interval Customization
 
-The DateTime intervals can be customized using the [`interval`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#interval) and the [`intervalType`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#intervaltype) properties of the Range Selector. For example, if the [`interval`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#interval) is set to 2 and the [`intervalType`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#intervaltype) is set to years, the interval will be considered to be 2 years.
+The DateTime intervals can be customized using the [`interval`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#interval) and the [`intervalType`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#intervaltype) properties of the Range Selector. For example, if the [`interval`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#interval) is set to 2 and the [`intervalType`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#intervaltype) is set to years, the interval will be considered to be 2 years.
 
 DateTime supports the following interval types:
 * Auto
@@ -225,7 +225,7 @@ DateTime supports the following interval types:
 
 ### Label Format
 
-The [`labelFormat`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#labelformat) property is used to format and parse the date to all globalize format.
+The [`labelFormat`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#labelformat) property is used to format and parse the date to all globalize format.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -238,7 +238,7 @@ The [`labelFormat`](https://ej2.syncfusion.com/react/documentation/api/range-nav
 
  {% previewsample "page.domainurl/code-snippet/rangenavigator/getting-started-cs16" %}
 
-The following table shows the results of applying some common DateTime formats to the [`labelFormat`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/#labelformat) property.
+The following table shows the results of applying some common DateTime formats to the [`labelFormat`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#labelformat) property.
 
 <!-- markdownlint-disable MD033 -->
 <table>

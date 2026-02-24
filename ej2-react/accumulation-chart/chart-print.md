@@ -16,17 +16,17 @@ The rendered chart can be printed directly from the browser by calling the publi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/print-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/print-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/print-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/print-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/chart/print-cs1/index.html %}
+{% include code-snippet/chart/code-path/print-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart/print-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/print-cs1" %}
 
 ## Export
 
@@ -34,14 +34,14 @@ The rendered chart can be exported to `Image`(jpeg or png) or `SVG` or `PDF` for
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/print-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/print-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/print-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/print-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/chart/print-cs2/index.html %}
+{% include code-snippet/chart/code-path/print-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart/print-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/print-cs2" %}

@@ -514,7 +514,7 @@ query {
 
 To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React components with the `GraphQLAdaptor`, refer to the documentation below:
 
-- [Grid](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-backends/graphql-nodejs-server#prerequisites)
+- [Grid](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-backends/graphql-hotchocolate-server#perform-data-operations-in-server)
 
 ## See also
 

@@ -51,17 +51,17 @@ For more information about localization, see the localization guide:  [`localiza
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/getting-started/localization-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/getting-started/localization-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/getting-started/localization-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/getting-started/localization-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/getting-started/localization-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/getting-started/localization-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/getting-started/localization-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/getting-started/localization-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/getting-started/localization-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/getting-started/localization-cs1" %}

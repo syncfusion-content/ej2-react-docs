@@ -21,20 +21,20 @@ To render a `box and whisker` series in your chart, you need to follow a few ste
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/box-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/box-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/box-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/box-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/box-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/box-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/box-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/box-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/box-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/box-cs1" %}
 
 ## Binding data with series
 
@@ -42,20 +42,20 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/box-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/box-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/box-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/box-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/box-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/box-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/box-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/box-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/box-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/box-cs1" %}
 
 ## Series customization
 
@@ -67,39 +67,39 @@ The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/box-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/box-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/box-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/box-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/box-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/box-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/box-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/box-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/box-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/box-cs4" %}
 
 The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#fill) property can be used to apply a gradient color to the box and whisker series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/box-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/box-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/box-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/box-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/box-cs5/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/box-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/box-cs5/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/box-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/box-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/box-cs5" %}
 
 **Opacity**
 
@@ -107,20 +107,20 @@ The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesMod
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/box-cs6/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/box-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/box-cs6/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/box-cs6/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/box-cs6/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/box-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/box-cs6/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/box-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/box-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/box-cs6" %}
 
 **Border**
 
@@ -128,20 +128,20 @@ Use the [border](https://ej2.syncfusion.com/react/documentation/api/chart/series
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/box-cs8/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/box-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/box-cs8/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/box-cs8/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/box-cs8/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/box-cs8/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/box-cs8/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/box-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/box-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/box-cs8" %}
 
 ## Box plot
 
@@ -150,20 +150,20 @@ The default boxPlotMode is `exclusive`.The other boxPlotMode available are `incl
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/box-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/box-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/box-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/box-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/box-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/box-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/box-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/box-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/box-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/box-cs2" %}
 
 ## Show mean
 
@@ -171,20 +171,20 @@ In the box and whisker series, the [`showMean`](https://ej2.syncfusion.com/react
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/box-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/box-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/box-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/box-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/box-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/box-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/box-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/box-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/box-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/box-cs3" %}
 
 ## Events
 
@@ -194,20 +194,20 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/box-cs9/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/box-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/box-cs9/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/box-cs9/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/box-cs9/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/box-cs9/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/box-cs9/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/box-cs9/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/box-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/box-cs9" %}
 
 ### Point render
 
@@ -215,20 +215,20 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/box-cs10/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/box-cs10/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/box-cs10/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/box-cs10/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/box-cs10/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/box-cs10/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/box-cs10/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/box-cs10/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/box-cs10" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/box-cs10" %}
 
 ## See Also
 

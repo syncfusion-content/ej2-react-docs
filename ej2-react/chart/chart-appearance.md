@@ -16,20 +16,20 @@ Customize the default color of series or points by providing a custom color pale
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/category-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/category-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/category-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/category-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/category-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/category-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/category-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/category-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/category-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/category-cs4" %}
 
 ## Data point customization
 
@@ -41,20 +41,20 @@ You can bind the color for the points from [`dataSource`](https://ej2.syncfusion
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/category-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/category-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/category-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/category-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/category-cs5/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/category-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/category-cs5/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/category-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/category-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/category-cs5" %}
 
 ### Range color mapping
 
@@ -62,20 +62,20 @@ You can differentiate data points based on their y values using [`rangeColorSett
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/category-cs6/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/category-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/category-cs6/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/category-cs6/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/category-cs6/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/category-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/category-cs6/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/category-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/category-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/category-cs6" %}
 
 ## Point level customization
 
@@ -83,20 +83,20 @@ Marker, data label, and fill color of individual data points can be customized u
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/column-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/column-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/column-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/column-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/column-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/column-cs1" %}
 
 <!-- markdownlint-disable MD036 -->
 
@@ -111,20 +111,20 @@ Use the [`background`](https://ej2.syncfusion.com/react/documentation/api/chart/
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/column-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/column-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/column-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/column-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/column-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/column-cs2" %}
 
 **Chart margin**
 
@@ -132,20 +132,20 @@ Set the chart margin relative to its container using the [`margin`](https://ej2.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/column-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/column-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/column-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/column-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/column-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/column-cs3" %}
 
 **Chart area customization**
 
@@ -153,20 +153,20 @@ To customize the plotting region (chart area), use the `chartArea` properties: [
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/column-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/column-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/column-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/column-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/column-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/column-cs4" %}
 
 **Chart area margin**
 
@@ -174,20 +174,20 @@ You can customize the space between the chart area from its chart container thro
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/column-cs19/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs19/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/column-cs19/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs19/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/column-cs19/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs19/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/column-cs19/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs19/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/column-cs19" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/column-cs19" %}
 
 ## Animation
 
@@ -195,20 +195,20 @@ Customize animation for a series using the [`animation`](https://ej2.syncfusion.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/column-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/column-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/column-cs5/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/column-cs5/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/column-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/column-cs5" %}
 
 ### Fluid animation
 
@@ -216,20 +216,20 @@ Fluid animation used to animate series with updated dataSource continues animati
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/column-cs6/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/column-cs6/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs6/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/column-cs6/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/column-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/column-cs6/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/column-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/column-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/column-cs6" %}
 
 
 ## See also

@@ -16,27 +16,27 @@ Essential<sup style="font-size:70%">&reg;</sup> JS 2 StockChart supports 6 major
 
 ## Line
 
-To render a line series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockSeriesModel/#type) as `Line` and inject `LineSeries` module using `<Inject services={[LineSeries]}>` method.
+To render a line series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockSeriesModel#type) as `Line` and inject `LineSeries` module using `<Inject services={[LineSeries]}>` method.
 
 ## Spline
 
-To render a spline series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockSeriesModel/#type) as `Spline` and inject `SplineSeries` module using `<Inject services={[SplineSeries]}>` method.
+To render a spline series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockSeriesModel#type) as `Spline` and inject `SplineSeries` module using `<Inject services={[SplineSeries]}>` method.
 
 ## Hilo
 
-To render a hilo series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockSeriesModel/#type) as `Hilo` and inject `HiloSeries` module using `<Inject services={[HiloSeries]}>` method.
+To render a hilo series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockSeriesModel#type) as `Hilo` and inject `HiloSeries` module using `<Inject services={[HiloSeries]}>` method.
 
 ## HiloOpenClose
 
-To render a hiloOpenClose series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockSeriesModel/#type) as `HiloOpenClose` and inject `HiloOpenCloseSeries` module using `<Inject services={[HiloOpenCloseSeries]}>` method.
+To render a hiloOpenClose series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockSeriesModel#type) as `HiloOpenClose` and inject `HiloOpenCloseSeries` module using `<Inject services={[HiloOpenCloseSeries]}>` method.
 
 ## HollowCandle
 
-To render a hollowcandle series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockSeriesModel/#type) as `Candle` and set `enableSolidCandle` as false. Now inject `CandleSeries` module using `<Inject services={[CandleSeries]}>` method.
+To render a hollowcandle series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockSeriesModel#type) as `Candle` and set `enableSolidCandle` as false. Now inject `CandleSeries` module using `<Inject services={[CandleSeries]}>` method.
 
 ## Candle
 
-To render a candle series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockSeriesModel/#type) as `Candle` and inject `CandleSeries` module using `<Inject services={[CandleSeries]}>` method.
+To render a candle series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockSeriesModel#type) as `Candle` and inject `CandleSeries` module using `<Inject services={[CandleSeries]}>` method.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

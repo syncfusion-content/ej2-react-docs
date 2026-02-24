@@ -24,20 +24,20 @@ The chart component exposes attributes that enable accessibility customization, 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/accessibility-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/accessibility-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/accessibility-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/accessibility-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/accessibility-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/accessibility-cs1" %}
 
 ## Series
 
@@ -51,20 +51,20 @@ The [`series`](https://ej2.syncfusion.com/react/documentation/api/chart#series) 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/accessibility-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/accessibility-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/accessibility-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/accessibility-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/accessibility-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/accessibility-cs2" %}
 
 ## Title and subtitle
 
@@ -77,20 +77,20 @@ In the React chart control, the [`titleStyle`](https://ej2.syncfusion.com/react/
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/accessibility-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/accessibility-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/accessibility-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/accessibility-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/accessibility-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/accessibility-cs3" %}
 
 ## Annotations
 
@@ -103,20 +103,20 @@ The [`annotations`](https://ej2.syncfusion.com/react/documentation/api/chart#ann
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/accessibility-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/accessibility-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/accessibility-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/accessibility-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/accessibility-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/accessibility-cs4" %}
 
 ## Trendline
 
@@ -129,14 +129,14 @@ The [`trendlines`](https://ej2.syncfusion.com/react/documentation/api/chart#tren
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/accessibility-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/accessibility-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/accessibility-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/accessibility-cs5" %}
 
 ## Zooming
 
@@ -149,14 +149,14 @@ The [`zoomSettings`](https://ej2.syncfusion.com/react/documentation/api/chart#zo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/accessibility-cs6/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/accessibility-cs6/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/accessibility-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/accessibility-cs6" %}
 
 ## Technical indicators
 
@@ -169,20 +169,20 @@ The [`indicators`](https://ej2.syncfusion.com/react/documentation/api/chart#indi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/accessibility-cs7/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/accessibility-cs7/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs7/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/accessibility-cs7/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/accessibility-cs7/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/accessibility-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/accessibility-cs7" %}
 
 ## Legend
 
@@ -195,17 +195,17 @@ The [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/chart#
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/accessibility-cs8/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/accessibility-cs8/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs8/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/accessibility-cs8/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs8/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/accessibility-cs8/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/accessibility-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/accessibility-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/accessibility-cs8" %}

@@ -20,20 +20,20 @@ Horizontal strip lines are created by adding the `stripline` configuration to th
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs23/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs23/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs23/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs23/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs23/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs23/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs23/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs23/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs23" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/multiple-cs23" %}
 
 ## Vertical striplines
 
@@ -41,20 +41,20 @@ Vertical strip lines are created by adding the `stripline` configuration to the 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs24/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs24/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs24/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs24/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs24/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs24/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs24/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs24/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs24" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/multiple-cs24" %}
 
 ## Customize the strip line
 
@@ -69,20 +69,20 @@ Strip lines can be customized to highlight specific regions more effectively:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs25/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs25/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs25/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs25/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs25/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs25/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs25/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs25/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs25" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/multiple-cs25" %}
 
 ## Customize the stripline text
 
@@ -94,20 +94,20 @@ Strip line text labels can be customized for readability and visual presentation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs26/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs26/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs26/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs26/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs26/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs26/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs26/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs26/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs26" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/multiple-cs26" %}
 
 ## Dash array
 
@@ -115,20 +115,20 @@ Dashed strip lines can be rendered using the `dashArray` property. The dash patt
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs27/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs27/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs27/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs27/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs27/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs27/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs27/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs27/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs27" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/multiple-cs27" %}
 
 ## Recurrence stripline
 
@@ -140,20 +140,20 @@ Recurring strip lines help mark repeating events across the chart axis. The foll
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs28/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs28/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs28/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs28/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs28/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs28/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs28/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs28/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs28" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/multiple-cs28" %}
 
 ## Size type
 
@@ -170,20 +170,20 @@ The `sizeType` property determines how strip line size is interpreted. Supported
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs29/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs29/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs29/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs29/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs29/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs29/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs29/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs29/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs29" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/multiple-cs29" %}
 
 ## Segment stripline
 
@@ -198,20 +198,20 @@ Key properties:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs30/app/index.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs30/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs30/app/index.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs30/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/axis/multiple-cs30/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs30/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/axis/multiple-cs30/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/axis/multiple-cs30/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs30" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/multiple-cs30" %}
 
 ## See also
 

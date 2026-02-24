@@ -21,20 +21,20 @@ To render an [`hiloOpenClose`](https://www.syncfusion.com/react-components/react
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/hiloOpenClose-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/hiloOpenClose-cs1" %}
 
 
 ## Binding data with series
@@ -43,20 +43,20 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/hiloOpenClose-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/hiloOpenClose-cs1" %}
 
 ## Series customization
 
@@ -64,20 +64,20 @@ In the `hiloOpenClose` series, the `bullFillColor` property is used to fill the 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/hiloOpenClose-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/hiloOpenClose-cs2" %}
 
 ## Empty points
 
@@ -89,20 +89,20 @@ Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs3/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs3/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs3/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs3/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/hiloOpenClose-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/hiloOpenClose-cs3" %}
 
 **Fill**
 
@@ -110,20 +110,20 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs4/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs4/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs4/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs4/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/hiloOpenClose-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/hiloOpenClose-cs4" %}
 
 ## Events
 
@@ -133,20 +133,20 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs5/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs5/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/hiloOpenClose-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/hiloOpenClose-cs5" %}
 
 ### Point render
 
@@ -154,20 +154,20 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs6/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs6/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs6/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs6/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/hiloOpenClose-cs6/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/series/hiloOpenClose-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/hiloOpenClose-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/hiloOpenClose-cs6" %}
 
 ## See Also
 

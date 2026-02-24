@@ -62,7 +62,7 @@ ReactDOM.render(<App />, document.getElementById("stockcharts"));
 
 ## Size for Stock Chart
 
-You can also set size for stock chart directly through [`width`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockChartModel/#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockChartModel/#height) properties.
+You can also set size for stock chart directly through [`width`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockChartModel#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockChartModel#height) properties.
 
 <!-- markdownlint-disable MD036 -->
 **In Pixel**
