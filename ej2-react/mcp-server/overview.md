@@ -39,7 +39,7 @@ Implement individual components with focused API guidance. Ideal for adding comp
 2. **Choose your mode** - `#sf_react_ui_builder` for complete UIs or `#sf_react_assistant` for component-specific tasks.
 3. **Describe** what you want to build - the AI generates production-ready code that follows best practices.
 
-For detailed setup instructions, see the [Installation Guide](installation.md).
+For detailed setup instructions, see the [Installation Guide](./installation).
 
 ## Available Tools
 
