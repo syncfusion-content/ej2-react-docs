@@ -90,8 +90,7 @@ The following sections provide detailed setup instructions for popular developme
 
 Configure the Syncfusion MCP Server globally to make it available across all workspaces in your IDE.
 
-{% tabs %}
-{% highlight bash tabtitle="VS Code" %}
+#### VS Code
 
 1. Click <a target="_blank" href="https://insiders.vscode.dev/redirect/mcp/install?name=sf-react-mcp&config=%7B%22type%22%3A%22stdio%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22%40syncfusion%2Freact-assistant%40latest%22%5D%2C%22env%22%3A%7B%22Syncfusion_API_Key%22%3A%22YOUR_API_KEY%22%7D%7D">here</a> to open the installation link.
 2. Replace `YOUR_API_KEY` with your actual Syncfusion API key.
@@ -99,8 +98,7 @@ Configure the Syncfusion MCP Server globally to make it available across all wor
 
 For more information, see the [VS Code MCP documentation](https://code.visualstudio.com/docs/copilot/customization/mcp-servers).
 
-{% endhighlight %}
-{% highlight bash tabtitle="Cursor" %}
+#### Cursor
 
 1. Click <a target="_blank" href="https://cursor.com/en/install-mcp?name=sf-react-mcp&config=eyJ0eXBlIjoic3RkaW8iLCJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIkBzeW5jZnVzaW9uL3JlYWN0LWFzc2lzdGFudEBsYXRlc3QiXSwiZW52Ijp7IlN5bmNmdXNpb25fQVBJX0tleV9QYXRoIjoiWU9VUl9BUElfS0VZX0ZJTEVfUEFUSCJ9fQ==">here</a> to open the installation link.
 2. Update the `YOUR_API_KEY_FILE_PATH` with the path to your API key file.
@@ -108,8 +106,7 @@ For more information, see the [VS Code MCP documentation](https://code.visualstu
 
 For more information, see the [Cursor MCP documentation](https://cursor.com/docs/context/mcp).
 
-{% endhighlight %}
-{% highlight bash tabtitle="Code Studio" %}
+#### Code Studio
 
 1. Open the [MCP Marketplace](https://www.syncfusion.com/code-studio/) in Code Studio.
 2. Search for `Syncfusion React Assistant` and click **Install**.
@@ -117,9 +114,6 @@ For more information, see the [Cursor MCP documentation](https://cursor.com/docs
 4. The server installs and appears in the Installed list.
 
 For more information, see the [Code Studio MCP documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/mcp/marketplace).
-
-{% endhighlight %}
-{% endtabs %}
 
 ### Workspace Configuration
 

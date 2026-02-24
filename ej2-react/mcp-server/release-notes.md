@@ -1,3 +1,13 @@
+---
+layout: post
+title: Release Notes - Syncfusion React MCP Server | Syncfusion
+description: Explore the release notes for Syncfusion React MCP Server, featuring Agentic UI Builder, 145+ components, theme integration, and AI-powered React development tools.
+control: Syncfusion MCP Server Release Notes
+platform: ej2-react
+documentation: ug
+domainurl: ##DomainURL##
+---
+
 # Syncfusion React MCP Server Release Notes
 
 This document provides information about the changes and new features included in each version of the [@syncfusion/react-assistant](https://www.npmjs.com/package/@syncfusion/react-assistant) MCP server package.
