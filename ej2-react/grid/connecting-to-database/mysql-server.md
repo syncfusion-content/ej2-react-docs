@@ -17,7 +17,7 @@ The [Syncfusion React Grid](https://ej2.syncfusion.com/react/documentation/grid/
 
 [LINQ2DB](https://linq2db.github.io/) is a lightweight Object-Relational Mapping (ORM) library for .NET that simplifies database operations. It provides a bridge between C# code and databases like MySQL, enabling type-safe queries without the overhead of heavier frameworks.
 
-**Key Benefits of LINQ2DB for MySQL and Syncfusion React Grid Integration:**
+**Key benefits of LINQ2DB for MySQL and Syncfusion React Grid integration:**
 
 - **Lightweight Performance**: Minimal overhead compared to Entity Framework, ideal for web applications requiring fast database access.
 - **LINQ Support**: Use familiar LINQ syntax for database queries instead of raw SQL strings.
@@ -53,7 +53,7 @@ Ensure the following software and packages are installed before proceeding:
 | 5 | Create a Grid component that supports searching, filtering, sorting, paging, and CRUD operations | [View](#integrating-syncfusion-react-grid) |
 | 6 | Handle bulk operations and batch updates | [View](#step-10-perform-crud-operations) |
 
-## Setting Up the MySQL Environment
+## Setting up the MySQL environment
 
 ### Step 1: Create the Database and Table in MySQL
 
@@ -63,7 +63,7 @@ First, the **MySQL database** structure must be created to store transaction rec
 
 1. Open MySQL Workbench, MySQL Command Line Client, or any MySQL client.
 2. Create a new database.
-3. Define a transactions table with the specified schema.
+3. Define a "transactions" table with the specified schema.
 4. Insert sample data for testing.
 
 Run the following SQL script:
@@ -105,7 +105,7 @@ VALUES
 
 After executing this script, the transaction records are stored in the "transactions" table within the database. The database is now ready for integration with the ASP.NET Core application.
 
-### Step 2: Create a New ASP.NET Core Project
+### Step 2: Create a new ASP.NET Core project
 
 Before installing NuGet packages, a new ASP.NET Core Web Application must be created.
 
@@ -116,14 +116,14 @@ Before installing NuGet packages, a new ASP.NET Core Web Application must be cre
 3. Search for **ASP.NET Core Web API**.
 4. Select the template and click **Next**.
 5. Configure the project:
-   - **Project name**: "Grid_MySQL.Server" (or your preferred name)
-   - **Location**: Choose your desired folder
+   - **Project name**: **Grid_MySQL.Server** (or a preferred name)
+   - **Location**: Choose the desired folder
    - **Framework**: Select .NET 8.0 (or latest available)
 6. Click **Create**.
 
-Visual Studio will create the project with the default structure, including folders like **Controllers**, **Models**, **Views**, and configuration files. The ASP.NET Core project is now ready for integration with LINQ2DB and Syncfusion components.
+Visual Studio will create the project with the default structure, including folders like **Controllers**, **Models** and **configuration** files. The ASP.NET Core project is now ready for integration with LINQ2DB and Syncfusion components.
 
-### Step 3: Install Required NuGet Packages
+### Step 3: Install required NuGet packages
 
 NuGet packages are software libraries that add functionality to the application. These packages enable LINQ2DB, MySQL connectivity, and Syncfusion Grid integration.
 
@@ -138,7 +138,7 @@ Install-Package linq2db -Version 6.1.0
 Install-Package linq2db.MySql -Version 6.1.0
 Install-Package MySqlConnector -Version 2.5.0
 dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson --version 9.0.0
-dotnet add package Syncfusion.EJ2.Base
+dotnet add package Syncfusion.EJ2.Base --version 32.2.3
 ```
 
 **Method 2: Using NuGet Package Manager UI:**
@@ -148,10 +148,12 @@ dotnet add package Syncfusion.EJ2.Base
    - **linq2db** (version 6.1.0)
    - **linq2db.MySql** (version 6.1.0)
    - **MySqlConnector** (version 2.5.0)
+   - **Microsoft.AspNetCore.Mvc.NewtonsoftJson** (version 9.0.0)
+   - **Syncfusion.EJ2.Base** (version 32.2.3)
 
 All required packages are now installed.
 
-### Step 4: Create the Data Model
+### Step 4: Create the data model
 
 A data model is a C# class that represents the structure of a database table. This model defines the properties that correspond to the columns in the "transactions" table.
 
@@ -222,7 +224,7 @@ namespace Grid_MySQL.Server.Models
 
 The data model has been successfully created.
 
-### Step 5: Configure the DataConnection
+### Step 5: Configure the data connection
 
 In LINQ2DB, `DataConnection` is the primary class that represents a connection to a database. It manages all direct communication with the MySQL database.
 
@@ -266,12 +268,12 @@ namespace Grid_MySQL.Server.Data
 - **MySqlVersion.MySql80**: Specifies MySQL 8.0+ compatibility. Use **MySql57** for MySQL 5.7.
 - **MySqlProvider.MySqlConnector**: Uses the modern MySqlConnector library instead of the legacy MySql.Data.
 - **InlineParameters**: When set to `true`, enables inline parameter logging, making SQL debugging easier.
-- **Transactions Property**: Returns an **ITable<Transactions>** interface that allows LINQ queries against the transactions table.
+- **Transactions Property**: Returns an `ITable<Transactions>` interface that allows LINQ queries against the transactions table.
 - **Connection String**: Retrieved from the **MySqlConn** entry in **appsettings.json** configured in Step 6.
 
 The AppDataConnection class is now ready for use in controllers.
 
-### Step 6: Configure the Connection String
+### Step 6: Configure the connection string
 
 A connection string contains the information needed to connect the application to the MySQL database, including the server address, port, database name, and credentials.
 
@@ -307,7 +309,7 @@ A connection string contains the information needed to connect the application t
 
 The connection string has been successfully configured.
 
-### Step 7: Register Services
+### Step 7: Register services
 
 The **Program.cs** file is the entry point for configuring and bootstrapping the ASP.NET Core application. This is where all required services and middleware are registered, including CORS (Cross-Origin Resource Sharing), LINQ2DB, and the **AppDataConnection**.
 
@@ -355,13 +357,13 @@ app.Run();
 
 **Explanation:**
 
-- **AddControllers().AddNewtonsoftJson()**: Registers MVC controllers for handling HTTP requests and enables JSON serialization using Newtonsoft.Json.
-- **AddCors("cors")**: Configures CORS policy with **AllowAnyOrigin()**, **AllowAnyHeader()**, and **AllowAnyMethod()** to permit requests from any domain (suitable for development).
-- **AddLinqToDB()**: Registers the LINQ2DB engine configured with MySQL provider, connection string from **appsettings.json**, and MySqlConnector.
-- **AddScoped<AppDataConnection>()**: Registers **AppDataConnection** as a scoped service for dependency injection, creating a new instance per HTTP request.
-- **app.UseCors("cors")**: Applies the registered CORS policy to the middleware pipeline.
-- **app.MapControllers()**: Maps controller action methods to HTTP endpoints.
-- **app.Run()**: Starts the Kestrel web server and listens for incoming requests.
+- `AddControllers().AddNewtonsoftJson()`: Registers MVC controllers for handling HTTP requests and enables JSON serialization using Newtonsoft.Json.
+- `AddCors("cors")`: Configures CORS policy with `AllowAnyOrigin()`, `AllowAnyHeader()`, and `AllowAnyMethod()` to permit requests from any domain (suitable for development).
+- `AddLinqToDB()`: Registers the LINQ2DB engine configured with MySQL provider, connection string from **appsettings.json**, and MySqlConnector.
+- `AddScoped<AppDataConnection>()`: Registers `AppDataConnection` as a scoped service for dependency injection, creating a new instance per HTTP request.
+- `app.UseCors("cors")`: Applies the registered CORS policy to the middleware pipeline.
+- `app.MapControllers()`: Maps controller action methods to HTTP endpoints.
+- `app.Run()`: Starts the Kestrel web server and listens for incoming requests.
 
 The services are now successfully registered and the application is ready to handle requests.
 
@@ -387,7 +389,7 @@ npm install @syncfusion/ej2-react-grids --save
 npm install @syncfusion/ej2-data --save
 ```
 
-After installation, the necessary CSS files are available in the (**../node_modules/@syncfusion**) directory. Add the required CSS references to the **src/index.css** file to ensure proper styling of the Grid component.
+After installation, the necessary CSS files are available in the (**../node_modules/@syncfusion**) directory. Add the required CSS references to the (**src/index.css**) file to ensure proper styling of the Grid component.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/bootstrap5.3.css';  
@@ -561,7 +563,7 @@ const App: React.FC = () => {
 export default App;
 ```
 
-**Toolbar Items Explanation:**
+**Toolbar items explanation:**
 
 | Item | Function |
 | ------ | ---------- |
@@ -574,7 +576,7 @@ export default App;
 
 The toolbar has been successfully added.
 
-### Step 6: Implement Paging Feature
+### Step 6: Implement paging feature
 
 The paging feature allows efficient loading of large data sets through on‑demand loading.
 
@@ -615,7 +617,7 @@ const App: React.FC = () => {
 export default App;
 ```
 
-On the server side create a file **GridController.cs** and add the **UrlDatasource** method provided below:
+On the server side create a file **GridController.cs** and add the "UrlDatasource" method provided below:
 
 ```csharp
     public class GridController(AppDataConnection db) : ControllerBase
@@ -660,7 +662,7 @@ On the server side create a file **GridController.cs** and add the **UrlDatasour
     }
 ```
 
-**Paging Details:**
+**Paging details:**
 
 - The Grid sends page size `Take` and skip count `Skip` parameters to the server.
 - The `operation.PerformSkip()` method skips the specified number of records.
@@ -672,7 +674,7 @@ When paging is performed in the Grid, a request is sent to the server with the f
 
 ![Paging Operation Payload](../images/mysql-grid-paging.png)
 
-### Step 7: Implement Searching feature
+### Step 7: Implement searching feature
 
 Searching allows finding records by entering keywords in the search box.
 
@@ -715,7 +717,7 @@ const App: React.FC = () => {
 export default App;
 ```
 
-Update the `UrlDatasource` method in the **GridController.cs** file to handle searching:
+Update the "UrlDatasource" method in the **GridController.cs** file to handle searching:
 
 ```csharp
     public class GridController(AppDataConnection db) : ControllerBase
@@ -761,10 +763,10 @@ Update the `UrlDatasource` method in the **GridController.cs** file to handle se
     }
 ```
 
-**Searching Details:**
+**Searching details:**
 
-- When text is entered in the search box and <kbd>Enter<kbd> is pressed, the Grid sends a search request to the server.
-- The `UrlDatasource` method receives the search criteria in `Search` parameter.
+- When text is entered in the search box and <kbd>Enter</kbd> is pressed, the Grid sends a search request to the server.
+- The "UrlDatasource" method receives the search criteria in `Search` parameter.
 - The `operation.PerformSearching()` method filters the data based on the search term.
 - Results are returned and displayed in the Grid.
 
@@ -772,7 +774,7 @@ When searching is performed in the Grid, a request is sent to the server with th
 
 ![Searching Operation Payload](../images/mysql-grid-searching.png)
 
-### Step 8: Implement Filtering feature
+### Step 8: Implement filtering feature
 
 Filtering allows restricting data based on column values using a menu interface.
 
@@ -813,7 +815,7 @@ const App: React.FC = () => {
 export default App;
 ```
 
-Update the `UrlDatasource` method in the **GridController.cs** file to handle filtering:
+Update the "UrlDatasource" method in the **GridController.cs** file to handle filtering:
 
 ```csharp
     public class GridController(AppDataConnection db) : ControllerBase
@@ -858,19 +860,19 @@ Update the `UrlDatasource` method in the **GridController.cs** file to handle fi
     }
 ```
 
-**Filtering Details:**
+**Filtering details:**
 
 - Open the filter menu from any of the column header.
 - Select filtering criteria (equals, contains, greater than, less than, etc.).
 - Click the "Filter" button to apply the filter.
-- The `UrlDatasource` method receives the filter criteria in `Where` property.
+- The "UrlDatasource" method receives the filter criteria in `Where` property.
 - Results are filtered accordingly and displayed in the Grid.
 
 When filtering is performed in the Grid, a request is sent to the server with the following payload.
 
 ![Filtering Operation Payload](../images/mysql-grid-filtering.png)
 
-### Step 9: Implement Sorting feature
+### Step 9: Implement sorting feature
 
 Sorting enables arranging records in ascending or descending order based on column values.
 
@@ -911,7 +913,7 @@ const App: React.FC = () => {
 export default App;
 ```
 
-Update the `UrlDatasource` method in the **GridController.cs** file to handle sorting:
+Update the "UrlDatasource" method in the **GridController.cs** file to handle sorting:
 
 ```csharp
     public class GridController(AppDataConnection db) : ControllerBase
@@ -957,11 +959,11 @@ Update the `UrlDatasource` method in the **GridController.cs** file to handle so
     }
 ```
 
-**Sorting Works:**
+**Sorting details:**
 
 - Click on the column header to sort in ascending order.
 - Click again to sort in descending order.
-- The `UrlDatasource` method receives the sort criteria in `Sorted`.
+- The "UrlDatasource" method receives the sort criteria in `Sorted`.
 - Records are sorted accordingly and displayed in the Grid.
 
 When sorting is performed in the Grid, a request is sent to the server with the following payload.
@@ -1283,11 +1285,11 @@ const App: React.FC = () => {
 export default App;
 ```
 
-> - Set [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) to **true** for a column that contains unique values.
-> - The [editType](https://ej2.syncfusion.com/react/documentation/api/grid/column#edittype) property can be used to specify the desired editor for each column. [🔗](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
+> - Set [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) to `true` for a column that contains unique values.
+> - The [editType](https://ej2.syncfusion.com/react/documentation/api/grid/column#edittype) property can be used to specify the desired editor for each column.(https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
 > - [type](https://ej2.syncfusion.com/react/documentation/api/grid/columnmodel#type) property of the Grid columns specifies the data type of a grid column.
 
-Here is the complete Controller (**GridController.cs**) file:
+Here is the complete Controller **GridController.cs** file:
 
 ```csharp
 using Grid_MySQL.Server.Data;
@@ -1457,11 +1459,11 @@ namespace Grid_MySQL.Server.Controllers
 }
 ```
 
-## Running the Application
+## Running the application
 
-### Running the ASP.NET Core Backend Server
+### Running the ASP.NET Core backend server
 
-**Step 1: Build the Backend:**
+**Step 1: Build the backend:**
 
 1. Open the terminal or Package Manager Console.
 2. Navigate to the **Grid_MySQL.Server** project directory.
@@ -1471,7 +1473,7 @@ namespace Grid_MySQL.Server.Controllers
 dotnet build
 ```
 
-**Step 2: Run the Backend Server:**
+**Step 2: Run the backend server:**
 
 Execute the following command:
 
@@ -1479,14 +1481,14 @@ Execute the following command:
 dotnet run
 ```
 
-**Step 3: Verify Backend is Running:**
+**Step 3: Verify backend is running:**
 
 - The backend server should start and listen on **https://localhost:5283** (or the port shown in the terminal).
 - You can test the API endpoint: **https://localhost:5283/api/grid/url**.
 
-### Running the React Frontend Client
+### Running the React frontend client
 
-**Step 1: Install Frontend Dependencies:**
+**Step 1: Install frontend dependencies:**
 
 1. Open a new terminal.
 2. Navigate to the **grid_mysql.client** (or your React client folder) directory.
@@ -1496,7 +1498,7 @@ dotnet run
 npm install
 ```
 
-**Step 2: Start the React Development Server:**
+**Step 2: Start the React Development server:**
 
 Execute the following command:
 
@@ -1504,27 +1506,27 @@ Execute the following command:
 npm run dev
 ```
 
-**Step 3: Access the Application:**
+**Step 3: Access the application:**
 
 1. Open a web browser.
 2. Navigate to **http://localhost:5173** (Vite default) or the port shown in the terminal.
 3. The application will automatically connect to the backend API at **http://localhost:5283/api/grid**.
 4. The transaction management application is now running and ready to use.
 
-**Available Features:**
+**Available features:**
 
 - **View Data**: All transactions from the MySQL database are displayed in the Grid.
 - **Search**: Use the search box to find transactions by any field.
 - **Filter**: Click on column headers to apply filters.
 - **Sort**: Click on column headers to sort data in ascending or descending order.
 - **Pagination**: Navigate through records using page numbers.
-- **Add**: Click the "Add" button to create a new transaction.
-- **Edit**: Click the "Edit" button to modify existing transactions.
-- **Delete**: Click the "Delete" button to remove transactions.
+- **Add**: Click the `Add` button to create a new transaction.
+- **Edit**: Click the `Edit` button to modify existing transactions.
+- **Delete**: Click the `Delete` button to remove transactions.
 
-## Complete Sample Repository
+## Complete sample repository
 
-A complete, working sample implementation is available in the [GitHub repository]().
+A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-database/syncfusion-react-grid-MySQL).
 
 
 The application now provides a complete solution for managing transaction data with a modern, user-friendly interface.

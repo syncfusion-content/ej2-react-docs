@@ -17,7 +17,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports binding
 
 Entity Framework Core (EF Core) is a lightweight, extensible, open-source, and cross-platform object-relational mapper (ORM) for .NET. It serves as a bridge between C# code and SQL Server, eliminating the need for raw SQL queries and providing a modern, code-first approach to database management.
 
-**Key Benefits of Entity Framework for Syncfusion React Grid Integration**
+**Key Benefits of Entity Framework Core**
 
 - **Change Tracking**: Automatically detects and tracks changes to entities for persistence, simplifying CRUD operations.
 - **LINQ Support**: Use familiar LINQ syntax for type-safe database queries.
@@ -42,18 +42,9 @@ Entity Framework Core (EF Core) is a lightweight, extensible, open-source, and c
 | **Syncfusion Integration** | Excellent (modern, optimized for .NET Core/5+) | Excellent (lightweight alternative) |
 
 **Recommendation:**
+
 - **Use Entity Framework Core**: If the application requires complex business logic, multiple related entities, database migrations, dependency injection, and long-term maintainability.
 - **Use LINQ2DB**: If the project requires lightweight, fast performance for simple CRUD operations with minimal configuration overhead.
-
-**What is the difference between UrlAdaptor and CustomAdaptor?**
-
-| Aspect | UrlAdaptor | CustomAdaptor |
-|--------|-----------|---------------|
-| **Data Processing** | Server-side via controller action | Custom server-side logic |
-| **HTTP Method** | POST requests to controller actions | POST/GET custom methods |
-| **Use Case** | Standard CRUD operations | Complex business logic, custom validation |
-| **Built-in DataManager** | Uses Syncfusion's QueryableOperation for filtering/sorting/paging | Manual implementation of data operations |
-| **Configuration** | Simple URL mapping in Grid configuration | Custom ActionResult methods |
 
 ## Prerequisites
 
@@ -69,7 +60,7 @@ Ensure the following software and packages are installed before proceeding:
 | Microsoft.EntityFrameworkCore | 9.0.0 or later | Modern Object-Relational Mapper for .NET Core |
 | Microsoft.EntityFrameworkCore.SqlServer | 9.0.0 or later | SQL Server provider for Entity Framework Core |
 | Microsoft.AspNetCore.Mvc.NewtonsoftJson | 9.0.0 or later | JSON serialization library for proper null handling with Syncfusion Grid |
-| Syncfusion.EJ2.Base | 28.1.33 or later | Syncfusion DataManager and Grid operations |
+| Syncfusion.EJ2.Base | 32.2.3 or later | Syncfusion DataManager and Grid operations |
 
 ## Key topics
 
@@ -83,7 +74,7 @@ Ensure the following software and packages are installed before proceeding:
 | 6 | Handle bulk operations and batch updates | [View](#step-10-perform-crud-operations) |
 
 
-## Setting Up the SQL Server Environment
+## Setting Up the SQL Server Environment for Entity Framework Core
 
 Ensure the SQL Server is running. Use SSMS or another client to run the script below to create the "TicketsDb" database and the "Tickets" table.
 
@@ -143,7 +134,7 @@ GO
 After executing this script, the ticket records are stored in the "Tickets" table within the "TicketsDb" database. The database is now ready for integration with the ASP.NET Core Web application.
 
 
-### Step 2: Create a New ASP.NET Core Project
+### Step 2: Create a New ASP.NET Core project
 
 Before installing NuGet packages, a new ASP.NET Core Web Application must be created.
 
@@ -159,9 +150,9 @@ Before installing NuGet packages, a new ASP.NET Core Web Application must be cre
    - **Framework**: Select .NET 8.0 (or latest available)
 6. Click **Create**.
 
-Visual Studio will create the project with the default structure, including folders like **Controllers**, **Models**, **Views**, and configuration files.
+Visual Studio will create the project with the default structure, including folders like **Controllers**, **Models** and **configuration** files.
 
-### Step 3: Install Required NuGet Packages
+### Step 3: Install required NuGet packages
 
 NuGet packages are software libraries that add functionality to the application. These packages enable Entity Framework Core, SQL Server connectivity, and Syncfusion Grid integration.
 
@@ -176,7 +167,7 @@ dotnet add package Microsoft.EntityFrameworkCore --version 9.0.0
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 9.0.0
 dotnet add package Microsoft.EntityFrameworkCore.Tools --version 9.0.0
 dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson --version 9.0.0
-dotnet add package Syncfusion.EJ2.Base --version 28.1.33
+dotnet add package Syncfusion.EJ2.Base --version 32.2.3
 ```
 
 **Method 2: Using Package Manager Console**
@@ -190,7 +181,7 @@ Install-Package Microsoft.EntityFrameworkCore -Version 9.0.0
 Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 9.0.0
 Install-Package Microsoft.EntityFrameworkCore.Tools -Version 9.0.0
 Install-Package Microsoft.AspNetCore.Mvc.NewtonsoftJson -Version 9.0.0
-Install-Package Syncfusion.EJ2.Base -Version 28.1.33
+Install-Package Syncfusion.EJ2.Base -Version 32.2.3
 ```
 
 **Method 3: Using NuGet Package Manager UI**
@@ -201,12 +192,12 @@ Install-Package Syncfusion.EJ2.Base -Version 28.1.33
    - **Microsoft.EntityFrameworkCore.SqlServer** (version 9.0.0)
    - **Microsoft.EntityFrameworkCore.Tools** (version 9.0.0)
    - **Microsoft.AspNetCore.Mvc.NewtonsoftJson** (version 9.0.0)
-   - **Syncfusion.EJ2.Base** (version 28.1.33)
+   - **Syncfusion.EJ2.Base** (version 32.2.3)
 
 All required packages are now installed. Verify the installation by checking the project's **.csproj** file or using `dotnet list package` command.
 
 
-### Step 4: Create the Data Model
+### Step 4: Create the data model
 
 A data model is a C# class that represents the structure of a database table. This model defines the properties that correspond to the columns in the "Tickets" table.
 
@@ -287,7 +278,7 @@ namespace Grid_EntityFramework.Server.Models
 
 The data model has been successfully created.
 
-### Step 5: Create the DbContext Class
+### Step 5: Create the DbContext class
 
 The `DbContext` is a special class that manages the connection between the application and the SQL Server database. It handles all database operations such as saving, updating, deleting, and retrieving data.
 
@@ -366,7 +357,7 @@ The **TicketsDbContext** class is essential because:
 
 Without this class, Entity Framework Core cannot manage database operations. The DbContext has been successfully configured.
 
-### Step 6: Configure Connection String in appsettings.json
+### Step 6: Configure connection string in appsettings.json
 
 A connection string contains the information needed to connect the application to the SQL database, including the server address, database name, authentication method, and additional parameters.
 
@@ -397,14 +388,13 @@ A connection string contains the information needed to connect the application t
 | **Server** | The address of the SQL Server (use "localhost" for local development) |
 | **Port** | The SQL Server port number (default is 1433) |
 | **Database** | The database name |
-| **User Id** | The SQL Server username (default is "sa") |
+| **User Id** | The SQL Server username |
 | **Password** | The SQL Server password |
 
 The connection string has been successfully configured.
 
----
 
-### Step 7: Register Services
+### Step 7: Register services in Program.cs file
 
 The **Program.cs** file is the entry point for configuring and bootstrapping the ASP.NET Core application. This is where all required services and middleware are registered, including CORS (Cross-Origin Resource Sharing), Entity Framework Core DbContext, JSON serialization, and controllers.
 
@@ -451,14 +441,14 @@ app.Run();
 
 **Explanation:**
 
-- **AddControllers().AddNewtonsoftJson()**: Registers MVC controllers with Newtonsoft.Json serialization support instead of System.Text.Json. This is important for Syncfusion Grid compatibility.
-- **NullValueHandling.Ignore**: Critical setting that prevents null values from being serialized to value types (like `int`), avoiding deserialization errors. This prevents issues when the Grid sends partial data updates.
-- **AddDbContext<TicketsDbContext>()**: Registers the Entity Framework Core DbContext with dependency injection, making it available for controllers via constructor injection.
-- **UseSqlServer()**: Specifies SQL Server as the database provider and retrieves the connection string from **appsettings.json**.
-- **AddCors("dev")**: Configures CORS policy with `AllowAnyOrigin()`, `AllowAnyHeader()`, and `AllowAnyMethod()` for development purposes. This allows the React app to make HTTP requests to the API from any port.
-- **UseCors("dev")**: Applies the CORS policy to the middleware pipeline. **Must be called before MapControllers()**.
-- **MapControllers()**: Maps controller action methods to HTTP endpoints.
-- **app.Run()**: Starts the Kestrel web server and listens for incoming HTTP requests.
+- `AddControllers().AddNewtonsoftJson()`: Registers MVC controllers with Newtonsoft.Json serialization support instead of System.Text.Json. This is important for Syncfusion Grid compatibility.
+- `NullValueHandling.Ignore`: Critical setting that prevents null values from being serialized to value types (like `int`), avoiding deserialization errors. This prevents issues when the Grid sends partial data updates.
+- `AddDbContext<TicketsDbContext>()`: Registers the Entity Framework Core DbContext with dependency injection, making it available for controllers via constructor injection.
+- `UseSqlServer()`: Specifies SQL Server as the database provider and retrieves the connection string from **appsettings.json**.
+- `AddCors("dev")`: Configures CORS policy with `AllowAnyOrigin()`, `AllowAnyHeader()`, and `AllowAnyMethod()` for development purposes. This allows the React app to make HTTP requests to the API from any port.
+- `UseCors("dev")`: Applies the CORS policy to the middleware pipeline. **Must be called before MapControllers()**.
+- `MapControllers()`: Maps controller action methods to HTTP endpoints.
+- `app.Run()`: Starts the Kestrel web server and listens for incoming HTTP requests.
 
 The Program.cs configuration is now complete and Entity Framework Core is properly registered.
 
@@ -484,7 +474,7 @@ npm install @syncfusion/ej2-react-grids --save
 npm install @syncfusion/ej2-data --save
 ```
 
-After installation, the necessary CSS files are available in the (**../node_modules/@syncfusion**) directory. Add the required CSS references to the **src/index.css** file to ensure proper styling of the Grid component.
+After installation, the necessary CSS files are available in the (**../node_modules/@syncfusion**) directory. Add the required CSS references to the (**src/index.css**) file to ensure proper styling of the Grid component.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/bootstrap5.3.css';  
@@ -665,7 +655,7 @@ const App: React.FC = () => {
 export default App;
 ```
 
-**Toolbar Items Explanation:**
+**Toolbar items explanation:**
 
 | Item | Function |
 | ------ | ---------- |
@@ -678,7 +668,7 @@ export default App;
 
 The toolbar has been successfully added.
 
-### Step 6: Implement Paging Feature
+### Step 6: Implement paging feature
 
 The paging feature allows efficient loading of large data sets through on‑demand loading.
 
@@ -774,7 +764,7 @@ namespace Grid_EntityFramework.Server.Controllers
 
 ```
 
-**Paging Details:**
+**Paging details:**
 
 - The Grid sends page size `Take` and skip count `Skip` parameters to the server.
 - The `operation.PerformSkip()` method skips the specified number of records.
@@ -782,9 +772,11 @@ namespace Grid_EntityFramework.Server.Controllers
 - The total count is calculated before paging to display the total number of records.
 - Results are returned and displayed in the Grid with pagination controls.
 
-Paging feature is now active.
+When paging is performed in the Grid, a request is sent to the server with the following payload.
 
-### Step 7: Implement Searching feature
+![Paging Operation Payload](../images/entityframework-paging.png)
+
+### Step 7: Implement searching feature
 
 Searching allows finding records by entering keywords in the search box.
 
@@ -866,16 +858,18 @@ namespace Grid_EntityFramework.Server.Controllers
 
 ```
 
-**Searching:**
+**Searching details:**
 
--- When text is entered in the search box and Enter is pressed, the Grid sends a search request to the server.
+- When text is entered in the search box and Enter is pressed, the Grid sends a search request to the server.
 - The "UrlDataSource" method receives the search criteria in `Search` parameter.
 - The `operation.PerformSearching()` method filters the data based on the search term.
 - Results are returned and displayed in the Grid.
 
-Searching feature is now active.
+When searching is performed in the Grid, a request is sent to the server with the following payload.
 
-### Step 8: Implement Filtering feature
+![Searching Operation Payload](../images/entityframework-searching.png)
+
+### Step 8: Implement filtering feature
 
 Filtering allows restricting data based on column values using a menu interface.
 
@@ -954,7 +948,7 @@ namespace Grid_EntityFramework.Server.Controllers
 }
 ```
 
-**Filtering:**
+**Filtering details:**
 
 - Open the filter menu from any of the column header.
 - Select filtering criteria (equals, contains, greater than, less than, etc.).
@@ -962,9 +956,11 @@ namespace Grid_EntityFramework.Server.Controllers
 - The "UrlDataSource" method receives the filter criteria in `Where` property.
 - Results are filtered accordingly and displayed in the DataGrid.
 
-Filtering feature is now active.
+When filtering is performed in the Grid, a request is sent to the server with the following payload.
 
-### Step 9: Implement Sorting feature
+![Filtering Operation Payload](../images/entityframework-filtering.png)
+
+### Step 9: Implement sorting feature
 
 Sorting enables arranging records in ascending or descending order based on column values.
 
@@ -1043,14 +1039,16 @@ namespace Grid_EntityFramework.Server.Controllers
 
 ```
 
-**Sorting Details:**
+**Sorting details:**
 
 - Click on the column header to sort in ascending order.
 - Click again to sort in descending order.
 - The "UrlDataSource" method receives the sort criteria in `Sorted`.
 - Records are sorted accordingly and displayed in the DataGrid.
 
-Sorting feature is now active.
+When sorting is performed in the Grid, a request is sent to the server with the following payload.
+
+![Sorting Operation Payload](../images/entityframework-sorting.png)
 
 ### Step 10: Perform CRUD operations
 
@@ -1137,7 +1135,9 @@ In **TicketsController.cs**, implement the "Insert" method:
 3. The new record is added to the "Ticket" collection.
 4. The DataGrid automatically refreshes to display the new record.
 
-Now the new ticket is persisted to the database and reflected in the grid.
+When a new record added in the Grid, a request is sent to the server with the following payload.
+
+![Insert Operation Payload](../images/entityframework-adding.png)
 
 **Update:**
 
@@ -1180,7 +1180,9 @@ In **TicketsController.cs**, implement the update method:
 4. All properties are updated with the new values.
 5. The DataGrid refreshes to display the updated record.
 
-Now modifications are synchronized to the database and reflected in the grid UI.
+When a record updated is in the Grid, a request is sent to the server with the following payload.
+
+![Update Operation Payload](../images/entityframework-editing.png)
 
 **Delete:**
 
@@ -1219,14 +1221,16 @@ In **TicketsController.cs**, implement the delete method:
 
 **What happens behind the scenes:**
 
-1. A record is selected and "Delete" is clicked.
+1. A record is selected and `Delete` button is clicked.
 2. The CustomAdaptor's `remove` method is called.
 3. The `Remove` method in **GridController.cs** file is called.
 4. The record is located in the database by its ID.
 5. The record is removed from the `_db.Tickets` collection.
 6. The Grid refreshes to remove the deleted record from the UI.
 
-Now tickets are removed from the database and the grid UI reflects the changes immediately.
+When a record is deleted in the Grid, a request is sent to the server with the following payload.
+
+![Delete Operation Payload](../images/entityframework-deleting.png)
 
 **Batch update:**
 
@@ -1299,7 +1303,11 @@ In **TicketsController.cs**, implement the batch method:
 - All repository operations persist changes to the SQL database.
 - The DataGrid refreshes to display the updated, added, and removed records in a single response.
 
-Now the adaptor supports bulk modifications with atomic database synchronization. All CRUD operations are now fully implemented, enabling comprehensive data management capabilities within the Grid.
+When a batch update is performed in the Grid, a request is sent to the server with the following payload.
+
+![Update Operation Payload](../images/entityframework-batch.png)
+
+Now the adaptor supports bulk modifications with atomic database synchronization. All CRUD operations are now fully implemented, enabling comprehensive data management capabilities within the Blazor DataGrid.
 
 ### Step 11: Complete code
 
@@ -1357,10 +1365,10 @@ export default App;
 ```
 
 > - Set [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) to `true` for a column that contains unique values.
-> - The [editType](https://ej2.syncfusion.com/react/documentation/api/grid/column#edittype) property can be used to specify the desired editor for each column. [🔗](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
+> - The [editType](https://ej2.syncfusion.com/react/documentation/api/grid/column#edittype) property can be used to specify the desired editor for each column.(https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
 > - [type](https://ej2.syncfusion.com/react/documentation/api/grid/columnmodel#type) property of the Grid columns specifies the data type of a grid column.
 
-Here is the complete Controller (**TicketsController.cs**) file:
+Here is the complete Controller **TicketsController.cs** file:
 
 ```csharp
 using Grid_EntityFramework.Server.Data;
@@ -1493,11 +1501,13 @@ namespace Grid_EntityFramework.Server.Controllers
 
 ```
 
-## Running the Application
+## Running the application
 
-### Running the ASP.NET Core Backend Server
+Follow the steps below to set up and run both the backend server and the React frontend client.
 
-**Step 1: Build the Backend:**
+### Running the ASP.NET Core backend server
+
+**Step 1: Build the backend:**
 
 1. Open the terminal or Package Manager Console.
 2. Navigate to the **Grid_EntityFramework.Server** project directory.
@@ -1507,7 +1517,7 @@ namespace Grid_EntityFramework.Server.Controllers
 dotnet build
 ```
 
-**Step 2: Run the Backend Server:**
+**Step 2: Run the backend server:**
 
 Execute the following command:
 
@@ -1515,15 +1525,15 @@ Execute the following command:
 dotnet run
 ```
 
-**Step 3: Verify Backend is Running:**
+**Step 3: Verify backend is Running:**
 
 - The backend server should start and listen on **http://localhost:5018** (or the port shown in the terminal).
 - Test the API endpoint: **http://localhost:5018/api/tickets/url**
 
-### Running the React Frontend Client
+### Running the React frontend client
 
 1. Open a new terminal.
-2. Navigate to the **grid_entityframework.client** directory.
+2. Navigate to the **grid_EntityFramework.client** directory.
 3. Run the following command:
 
 
@@ -1551,4 +1561,4 @@ npm run dev
 
 ## Complete Sample Repository
 
-A complete, working sample implementation is available in the [GitHub repository]().
+A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-database/syncfusion-react-grid-EntityFrameWork).
