@@ -191,10 +191,10 @@ You can add data labels to improve the readability of the Smith Chart. This can 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs5/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs5/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

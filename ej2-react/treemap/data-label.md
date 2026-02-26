@@ -48,10 +48,10 @@ When the label size in each item exceeds the actual size, use the [`interSectAct
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/datalabel-cs3/app/index.jsx %}
+{% include code-snippet/treemap/code-path/datalabel-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/datalabel-cs3/app/index.tsx %}
+{% include code-snippet/treemap/code-path/datalabel-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

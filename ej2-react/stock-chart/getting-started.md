@@ -277,10 +277,10 @@ Since the JSON contains DateTime data, set the [`valueType`](https://ej2.syncfus
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/stock-chart/getting-started/datasource-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/getting-started/datasource-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/stock-chart/getting-started/datasource-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/getting-started/datasource-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -335,4 +335,4 @@ Trackball can be enabled by setting the [`enable`](https://ej2.syncfusion.com/re
 
 {% previewsample "page.domainurl/code-snippet/stock-chart/getting-started/trackball-cs1" %}
 
-> You can refer to our [React Stock Chart](https://www.syncfusion.com/react-components/react-stock-chart) feature tour page for its groundbreaking feature representations. You can also explore our [React Stock Chart example](https://ej2.syncfusion.com/react/demos#/bootstrap5/stock-chart/default) that shows you how to present and manipulate data.
+> You can refer to our [React Stock Chart](https://www.syncfusion.com/react-components/react-stock-chart) feature tour page for its groundbreaking feature representations. You can also explore our [React Stock Chart example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/stock-chart/default) that shows you how to present and manipulate data.

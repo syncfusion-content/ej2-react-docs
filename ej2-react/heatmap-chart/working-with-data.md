@@ -48,10 +48,10 @@ This data type is a collection of array objects that contain information about t
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/working-with-data-cs2/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/working-with-data-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/working-with-data-cs2/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/working-with-data-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

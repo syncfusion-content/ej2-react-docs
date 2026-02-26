@@ -103,10 +103,10 @@ The Maps area has a default background color of **white**. To change the backgro
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs22/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs22/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs22/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs22/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

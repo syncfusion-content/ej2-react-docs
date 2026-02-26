@@ -104,10 +104,10 @@ Using radial gradient, colors will be applied in circular progression. The inner
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/ranges-cs6/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/ranges-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/ranges-cs6/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/ranges-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

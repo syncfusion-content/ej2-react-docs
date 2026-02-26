@@ -88,10 +88,10 @@ A legend can be displayed with OSM maps to provide visual context for markers, s
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs88/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs88/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs88/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs88/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
