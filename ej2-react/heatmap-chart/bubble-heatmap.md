@@ -50,10 +50,10 @@ To represent the data points with variations in bubble colors, set the [bubbleTy
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs2/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/bubble-heatmap-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs2/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/bubble-heatmap-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

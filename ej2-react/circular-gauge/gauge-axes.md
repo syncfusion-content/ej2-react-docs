@@ -285,10 +285,10 @@ Axis labels support custom label format using placeholder like {value}°C, in 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs13/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs13/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs13/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs13/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

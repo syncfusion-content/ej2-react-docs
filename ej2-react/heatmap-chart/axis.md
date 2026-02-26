@@ -144,10 +144,10 @@ The below example demonstrates to trim the axis labels by using the `labelInters
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/axis-cs12/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/axis-cs12/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/axis-cs12/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/axis-cs12/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

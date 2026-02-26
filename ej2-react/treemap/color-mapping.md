@@ -21,7 +21,7 @@ Range color mapping is used to apply color to the items by giving specific range
 {% include code-snippet/treemap/code-path/colormapping-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/colormapping-cs1/app/index.tsx %}
+{% include code-snippet/treemap/code-path/colormapping-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -35,10 +35,10 @@ Positioning the leaf item label using the [`labelPosition`](https://ej2.syncfusi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/leafitem-cs2/app/index.jsx %}
+{% include code-snippet/treemap/code-path/leafitem-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/leafitem-cs2/app/index.tsx %}
+{% include code-snippet/treemap/code-path/leafitem-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

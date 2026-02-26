@@ -213,10 +213,10 @@ The Maps can be initially scaled to fit all markers within the visible area. Thi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs70/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs70/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs70/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs70/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -133,10 +133,10 @@ The label displayed in the HeatMap cell can be changed using the [cellRender](ht
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/appearance-cs8/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/appearance-cs8/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs8/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

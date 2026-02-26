@@ -33,10 +33,10 @@ When you double click on a HeatMap cell, the [cellDoubleClick](https://ej2.syncf
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/events-cs2/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/events-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/events-cs2/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/events-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

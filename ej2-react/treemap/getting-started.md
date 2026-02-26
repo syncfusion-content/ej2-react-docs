@@ -148,10 +148,10 @@ You can show legend for the TreeMap by setting the visible property to true in l
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/treemap/getting-started-cs3/app/index.jsx %}
+{% include code-snippet/treemap/code-path/getting-started-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/treemap/getting-started-cs3/app/index.tsx %}
+{% include code-snippet/treemap/code-path/getting-started-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

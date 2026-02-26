@@ -80,10 +80,10 @@ Any HTML elements can be displayed in the tooltip by using the [`template`](http
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-user-interaction-cs2/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-user-interaction-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-user-interaction-cs2/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-user-interaction-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -161,10 +161,10 @@ To apply radial gradient to the range, follow the below code sample.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-ranges-cs8/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-ranges-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-ranges-cs8/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-ranges-cs8/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

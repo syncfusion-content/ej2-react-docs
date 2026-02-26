@@ -48,10 +48,10 @@ The  [fill](https://ej2.syncfusion.com/react/documentation/api/heatmap/tooltipSe
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/tooltip-cs3/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/tooltip-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/tooltip-cs3/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/tooltip-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

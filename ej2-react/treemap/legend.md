@@ -43,10 +43,10 @@ Legend Alignment is used to align the legend items in specific location. The fol
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/legend-cs2/app/index.jsx %}
+{% include code-snippet/treemap/code-path/legend-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/legend-cs2/app/index.tsx %}
+{% include code-snippet/treemap/code-path/legend-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
