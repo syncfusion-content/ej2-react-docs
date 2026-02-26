@@ -20,7 +20,7 @@ This article provides a step-by-step guide for setting up a [Preact](https://pre
 
 ## Set up the Preact project
 
-To create a new `Preact` project, use one of the commands that are specific to either NPM or Yarn.
+Create a new Preact project using the initialization command:
 
 ```bash
 npm init preact
@@ -34,7 +34,9 @@ yarn init preact
 
 Using one of the above commands will lead you to set up additional configurations for the project, as below:
 
-1\. Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+### Project name
+
+Specify the project name as `my-project`.
 
 ```bash
 T  Preact - Fast 3kB alternative to React with the same modern API
@@ -44,7 +46,9 @@ T  Preact - Fast 3kB alternative to React with the same modern API
 —      
 ```
 
-2\. Choose `JavaScript` as the framework variant to build this Preact project using JavaScript and React.
+### Project language
+
+Choose `JavaScript` as the framework variant to build this Preact project using JavaScript and React.
 
 ```bash
 T  Preact - Fast 3kB alternative to React with the same modern API
@@ -55,7 +59,9 @@ T  Preact - Fast 3kB alternative to React with the same modern API
 —
 ```
 
-3\. Then configure the project as below for this article.
+### Configuration options
+
+Respond to the following prompts with the default selections:
 
 ```bash
 T  Preact - Fast 3kB alternative to React with the same modern API
@@ -73,7 +79,9 @@ T  Preact - Fast 3kB alternative to React with the same modern API
 —
 ```
 
-5\. Upon completing the aforementioned steps to create `my-project`, run the following command to jump into the project directory:
+### Navigate to project
+
+Once setup is complete, navigate to your project directory:
 
 ```bash
 cd my-project
@@ -83,7 +91,7 @@ Now that `my-project` is ready to run with default settings, let's add Syncfusio
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). 
 
 This article uses the [React Schedule component](https://www.syncfusion.com/react-components/react-scheduler) as an example. To use the React Schedule component in the project, the `@syncfusion/ej2-react-schedule` package needs to be installed using the following command:
 
@@ -125,9 +133,11 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
-Follow the below steps to add the React Schedule component to the Vite project:
+Follow the below steps to add the React Schedule component to your Preact project:
 
-1\. Before adding the Schedule component to your markup, import the Schedule component in the **src/index.jsx** file.
+### Step 1: Import Schedule components
+
+In the src/index.jsx file, import the necessary Schedule components:
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
@@ -137,7 +147,9 @@ import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@
 {% endhighlight %}
 {% endtabs %}
 
-2\. Then, define the Schedule component in the **src/index.jsx** file, as shown below:
+### Step 2: Define and render the Schedule
+
+Create the Schedule component and inject the required view services.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}

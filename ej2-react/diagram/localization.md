@@ -14,18 +14,13 @@ The EJ2 React Diagram component supports localization functionality, allowing de
 
 ## Localize Diagram Context Menu
 
-To localize the diagram context menu, we need to define the [`locale`](https://ej2.syncfusion.com/react/documentation/api/diagram/#locale) property of the diagram with our preferred culture. In the example below, we use **'de-DE**', which is the locale code for German as used in Germany.
+To localize the diagram context menu, we need to define the [`locale`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#locale) property of the diagram with our preferred culture. In the example below, we use **'de-DE**', which is the locale code for German as used in Germany.
 
-```javascript
-<DiagramComponent id="container" width={'100%'} height={'600px'} 
-    //Set locale
-    locale='de-DE'
-     //Enables the context menu
-     contextMenuSettings={{
-        show: true
-    }}
-    nodes={node}/>
-```
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/reactCurlyExamples/localization-cs1/app/index.jsx %}
+{% endhighlight %}
+{% endtabs %}
 
 Next, call the `setCulture('de')` function to set the default culture for all EJ2 components. This method accepts one parameter, cultureName, which specifies the culture name to be set as the default.
 
@@ -75,9 +70,9 @@ The following code example demonstrates the complete locale settings for the con
 
 ## Localize Symbol Palette
 
-Enable the search functionality in the symbol palette using the [`enableSearch`](../api/diagram/symbolPaletteModel/#enablesearch) property. The search box supports localization to match the application's target language.
+Enable the search functionality in the symbol palette using the [`enableSearch`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolpalettemodel#enablesearch) property. The search box supports localization to match the application's target language.
 
-To localize the symbol palette search box, define the [`locale`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolPaletteModel/#locale) property of the symbol palette with the preferred culture. The example below uses 'de-DE' for German localization.
+To localize the symbol palette search box, define the [`locale`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolpalettemodel#locale) property of the symbol palette with the preferred culture. The example below uses 'de-DE' for German localization.
 
 The following code demonstrates symbol palette localization:
 

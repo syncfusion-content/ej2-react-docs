@@ -27,7 +27,7 @@ To save and load the diagram in React, refer to the below video link.
 
 ### Basic Save Operation
 
-The [`saveDiagram`](https://ej2.syncfusion.com/react/documentation/api/diagram/#savediagram) method serializes the entire diagram configuration into a JSON string. This method captures all diagram elements, their properties, and the current state.
+The [`saveDiagram`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#savediagram) method serializes the entire diagram configuration into a JSON string. This method captures all diagram elements, their properties, and the current state.
 
 The following code illustrates how to save the diagram:
 
@@ -58,7 +58,7 @@ The diagram can also be saved as raster or vector image files. For more informat
 
 ### Basic Load Operation
 
-The [`loadDiagram`](https://ej2.syncfusion.com/react/documentation/api/diagram/#loaddiagram) method recreates the diagram from serialized JSON data. This method accepts the previously saved JSON string as a parameter.
+The [`loadDiagram`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#loaddiagram) method recreates the diagram from serialized JSON data. This method accepts the previously saved JSON string as a parameter.
 
 ```ts
 
@@ -75,7 +75,7 @@ diagramInstance.loadDiagram(saveData);
 
 ### Handling Load Completion
 
-The [`loaded`](https://ej2.syncfusion.com/react/documentation/api/diagram/#loaded) event triggers when all diagram elements finish loading through the [`loadDiagram`](https://ej2.syncfusion.com/react/documentation/api/diagram/#loaddiagram) method. Use this event to perform post-load customizations or validations.
+The [`loaded`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#loaded) event triggers when all diagram elements finish loading through the [`loadDiagram`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#loaddiagram) method. Use this event to perform post-load customizations or validations.
 
 ```ts
   return (
@@ -106,22 +106,17 @@ Users can perform customizations or modifications to the diagram elements once t
 
 ## Prevent Default Values
 
-The [`preventDefaults`](https://ej2.syncfusion.com/react/documentation/api/diagram/serializationSettingsModel/#preventdefaults) property of [`serializationSettings`](https://ej2.syncfusion.com/react/documentation/api/diagram/serializationSettingsModel/) reduces the size of serialized data by excluding default properties. This optimization improves performance when handling large diagrams or frequent save operations.
+The [`preventDefaults`](https://ej2.syncfusion.com/react/documentation/api/diagram/serializationsettingsmodel#preventdefaults) property of [`serializationSettings`](https://ej2.syncfusion.com/react/documentation/api/diagram/serializationsettingsmodel) reduces the size of serialized data by excluding default properties. This optimization improves performance when handling large diagrams or frequent save operations.
 
 When enabled, only explicitly set properties are included in the JSON output, significantly reducing file size and improving load times.
 
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/reactCurlyExamples/serialization-cs1/app/index.jsx %}
+{% endhighlight %}
+{% endtabs %}
 
-```ts
-  return (
-    <div>
-      <DiagramComponent
-        serializationSettings = {{ preventDefaults: true }}
-      ></DiagramComponent>
-    </div>
-  )
-
-```
-# File-Based Save and Load Operations
+## File-Based Save and Load Operations
 
 ### Using Uploader Component
 
@@ -148,7 +143,7 @@ The uploader requires:
 
 ### Overview
 
-The [`Diagram`](https://ej2.syncfusion.com/react/documentation/api/diagram/) component supports importing and exporting diagrams using Mermaid syntax. Mermaid is a markdown-inspired syntax for creating diagrams programmatically, enabling easy diagram creation and sharing across different platforms.
+The [`Diagram`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default) component supports importing and exporting diagrams using Mermaid syntax. Mermaid is a markdown-inspired syntax for creating diagrams programmatically, enabling easy diagram creation and sharing across different platforms.
 
 This functionality supports:
 - Mind maps
@@ -157,7 +152,7 @@ This functionality supports:
 
 ### Saving Diagrams as Mermaid Syntax
 
-The [`saveDiagramAsMermaid`](https://ej2.syncfusion.com/react/documentation/api/diagram/#savediagramasmermaid) method converts compatible diagrams into Mermaid syntax format. This method works specifically with Flowchart and Mind map layouts.
+The [`saveDiagramAsMermaid`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#savediagramasmermaid) method converts compatible diagrams into Mermaid syntax format. This method works specifically with Flowchart and Mind map layouts.
 
  ```javascript
 //returns the serialized Mermaid string of the Diagram
@@ -167,7 +162,7 @@ let data = diagramInstance.saveDiagramAsMermaid();
 
 ### Load Diagram from Mermaid Syntax
 
-The [`loadDiagramFromMermaid`](https://ej2.syncfusion.com/react/documentation/api/diagram/#loaddiagramfrommermaid) method creates diagrams from Mermaid syntax data, automatically generating the appropriate layout and styling.
+The [`loadDiagramFromMermaid`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#loaddiagramfrommermaid) method creates diagrams from Mermaid syntax data, automatically generating the appropriate layout and styling.
 data.
 
 #### Load Flowchart Layout

@@ -15,34 +15,21 @@ The diagram component supports several layout-specific events that fire during d
 
 ## DataLoaded Event
 
-The [`dataLoaded`](https://ej2.syncfusion.com/react/documentation/api/diagram/idataloadedeventargs/) event triggers after the diagram successfully populates from an external data source. This event provides access to the loaded data and diagram instance, making it ideal for performing post-load customizations such as applying custom styling, setting initial node states, or configuring layout-specific properties.
+The [`dataLoaded`](https://ej2.syncfusion.com/react/documentation/api/diagram/idataloadedeventargs) event triggers after the diagram successfully populates from an external data source. This event provides access to the loaded data and diagram instance, making it ideal for performing post-load customizations such as applying custom styling, setting initial node states, or configuring layout-specific properties.
 
 The event fires once the data binding process completes but before the initial layout calculation begins, providing an opportunity to modify nodes or connectors before they are positioned.
 
 The following code example explains the data loaded event in the diagram.
 
-```javascript
-  function dataLoaded(args) {
-    //we can get diagram instance in args.
-    console.log(args);
-  }
-  <DiagramComponent id="diagram" width={'100%'} height={'600px'}
-      nodes={nodes} connectors={connectors}
-      // Event Triggers when the state of the layout rendering changes
-      dataLoaded={dataLoaded}
-      //Uses layout to auto-arrange nodes on the diagram page
-      layout={{
-          //Sets layout type
-          type: 'HierarchicalTree',
-      }}>
-      {/* Inject necessary services for the diagram */}
-      <Inject services={[HierarchicalTree]} />
-  </DiagramComponent>
-```
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/reactCurlyExamples/layout-event-cs1/app/index.jsx %}
+{% endhighlight %}
+{% endtabs %}
 
 ## ExpandStateChange Event
 
-The [`expandStateChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExpandStateChangeEventArgs/) event fires when a user clicks the expand or collapse icon of a node in a hierarchical layout. This event occurs before the layout update begins, allowing developers to prevent the state change, modify the expansion behavior, or trigger custom actions based on the node's new state.
+The [`expandStateChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/iexpandstatechangeeventargs) event fires when a user clicks the expand or collapse icon of a node in a hierarchical layout. This event occurs before the layout update begins, allowing developers to prevent the state change, modify the expansion behavior, or trigger custom actions based on the node's new state.
 
 The event provides information about the affected node, its current state, and whether the operation can be canceled. This makes it valuable for implementing conditional expansion, loading child data on-demand, or applying custom animations.
 
@@ -61,7 +48,7 @@ The event provides information about the affected node, its current state, and w
 
 ## Animation Complete Event
 
-The [`animationComplete`](https://ej2.syncfusion.com/react/documentation/api/diagram/#animationcomplete) event triggers after the diagram finishes animating layout changes, particularly during expand and collapse operations. This event is essential for detecting when visual transitions have completed, enabling developers to perform follow-up actions such as scrolling to specific nodes, updating UI indicators, or triggering additional layout adjustments.
+The [`animationComplete`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#animationcomplete) event triggers after the diagram finishes animating layout changes, particularly during expand and collapse operations. This event is essential for detecting when visual transitions have completed, enabling developers to perform follow-up actions such as scrolling to specific nodes, updating UI indicators, or triggering additional layout adjustments.
 
 The event fires at the end of the animation cycle, ensuring that all visual updates are complete before any subsequent operations begin.
 
@@ -79,24 +66,14 @@ The event fires at the end of the animation cycle, ensuring that all visual upda
 
 ## Layout Updated Event
 
-The [`layoutUpdated`](https://ej2.syncfusion.com/react/documentation/api/diagram/#layoutupdated) event fires at both the beginning and completion of the layout rendering process. This event enables tracking of layout calculation progress and provides timing information for performance monitoring or progress indication purposes.
+The [`layoutUpdated`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#layoutupdated) event fires at both the beginning and completion of the layout rendering process. This event enables tracking of layout calculation progress and provides timing information for performance monitoring or progress indication purposes.
 
 The event includes a state parameter that indicates whether the layout process is starting or finishing, allowing developers to implement loading indicators, measure layout performance, or coordinate with other application components that depend on layout completion.
 
-```javascript
-function handleLayoutUpdated(args){
-        if (args.state === 'Started') {
-            console.log('Layout started rendering');
-        }
-}
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/reactCurlyExamples/layout-event-cs2/app/index.jsx %}
+{% endhighlight %}
+{% endtabs %}
 
-<DiagramComponent id="diagram" width={'100%'} height={'550px'}
-    nodes={nodes} connectors={connectors}
-    layout={{ type: 'HierarchicalTree'}}
-    // Event Triggers when the state of the layout rendering changes
-    layoutUpdated={handleLayoutUpdated}>
-    {/* Inject necessary services for the diagram */}
-    <Inject services={[HierarchicalTree]} />
-</DiagramComponent>
-```
 These layout events work together to provide comprehensive control over the automatic layout life cycle, from initial data loading through final rendering completion. They enable developers to create responsive, interactive diagram experiences with proper feedback and customization capabilities.
