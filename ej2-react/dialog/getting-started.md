@@ -104,7 +104,7 @@ export default class App extends Component<{}, AppState> {
 
   render() {
     return (
-      <div className="App" id="dialog-target" style={{ height: '400px' }}>
+      <div className="App" id="dialog-target">
         <button className="e-control e-btn" id="targetButton1" role="button" onClick={this.handleClick} > Open </button>
         <DialogComponent width="250px" content="This is a Dialog with content" target="#dialog-target" visible={this.state.hideDialog} showCloseIcon={true} close={this.handleClose} />
       </div>
@@ -129,7 +129,7 @@ export default function App() {
     setStatus({ hideDialog: true })
   }
   return (
-    <div className="App" id='dialog-target' style={{ height: '400px' }}>
+    <div className="App" id='dialog-target'>
       <button className='e-control e-btn' id='targetButton1' role='button' onClick={handleClick} >Open</button>
       <DialogComponent width='250px' content='This is a Dialog with content' target='#dialog-target' visible={status.hideDialog} showCloseIcon={true} onClick={handleClose} />
     </div>

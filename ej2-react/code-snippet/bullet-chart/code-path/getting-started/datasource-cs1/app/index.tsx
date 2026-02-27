@@ -1,4 +1,4 @@
-
+{% raw %}
 
 
 
@@ -32,3 +32,4 @@ export default App;
 const root = createRoot(document.getElementById("charts")!);
 root.render(<App />);
 
+{% endraw %}

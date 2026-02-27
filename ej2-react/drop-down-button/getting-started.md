@@ -84,7 +84,7 @@ enableRipple(true);
 
 function App() {
   return (
-    <div style={{marginTop: '150px'}}>
+    <div>
       <DropDownButtonComponent id="element" />
     </div>
   );
@@ -116,7 +116,7 @@ function App() {
       text: 'Paste',
     }];
     return (
-      <div style={{marginTop: '150px'}}>
+      <div>
         <DropDownButtonComponent id="element" items={items}> Clipboard </DropDownButtonComponent>
       </div>
     );

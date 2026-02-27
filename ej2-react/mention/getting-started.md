@@ -95,8 +95,8 @@ export default class App extends React.Component<{}, {}> {
         <table>
             <tr>
                 <td>
-                  <label style={{ fontSize: "15px", fontWeight: 600 }}>Comments</label>
-                  <div id="mentionElement" style={{minHeight: 100, border: "1px solid #D7D7D7", borderRadius: 4, padding: 8, fontSize: 14, width: 600}}></div>
+                  <label>Comments</label>
+                  <div id="mentionElement" placeholder='Type @ and tag user'></div>
                 </td>
             </tr>
         </table>
@@ -123,8 +123,8 @@ function App (){
         <table>
             <tr>
                 <td>
-                    <label style={{ fontSize: "15px", fontWeight: 600 }}>Comments</label>
-                    <div id="mentionElement" style={{minHeight: 100, border: "1px solid #D7D7D7", borderRadius: 4, padding: 8, fontSize: 14, width: 600}}></div>
+                    <label>Comments</label>
+                    <div id="mentionElement" placeholder='Type @ and tag user'></div>
                 </td>
             </tr>
         </table>
@@ -161,8 +161,8 @@ export default class App extends React.Component<{}, {}> {
         <table>
             <tr>
                 <td>
-                    <label style={{ fontSize: "15px", fontWeight: 600 }}>Comments</label>
-                    <div id="mentionElement" style={{minHeight: 100, border: "1px solid #D7D7D7", borderRadius: 4, padding: 8, fontSize: 14, width: 600}}></div>
+                    <label>Comments</label>
+                    <div id="mentionElement" placeholder='Type @ and tag user'></div>
                 </td>
             </tr>
         </table>
@@ -192,8 +192,8 @@ function App () {
         <table>
             <tr>
                 <td>
-                    <label style={{ fontSize: "15px", fontWeight: 600 }}>Comments</label>
-                    <div id="mentionElement" style={{minHeight: 100, border: "1px solid #D7D7D7", borderRadius: 4, padding: 8, fontSize: 14, width: 600}}></div>
+                    <label>Comments</label>
+                    <div id="mentionElement" placeholder='Type @ and tag user'></div>
                 </td>
             </tr>
         </table>
@@ -203,6 +203,19 @@ function App () {
   );
 }
 export default App;
+```
+
+Add the following CSS to your project's stylesheet:
+
+```css
+#mentionElement {
+  min-height: 100px;
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 14px;
+  width: 600px;
+}
 ```
 
 ## Run the application
