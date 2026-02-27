@@ -84,7 +84,7 @@ enableRipple(true);
 
 function App() {
   return (
-    <div style={{marginTop: '150px'}}>
+    <div>
       <SplitButtonComponent id="element"/>
     </div>
   );
@@ -116,7 +116,7 @@ function App() {
       text: 'Paste',
     }];
   return (
-    <div style={{marginTop: '150px'}}>
+    <div>
       <SplitButtonComponent  id="element" items = {items}> Paste </SplitButtonComponent>
     </div>
   );

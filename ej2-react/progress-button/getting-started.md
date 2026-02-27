@@ -80,7 +80,7 @@ import * as React from 'react';
 import './App.css';
 
 function App() {
-  return (<div style={{marginTop: '150px'}}>
+  return (<div>
       <ProgressButtonComponent content='Spin Left'/>
     </div>
   );

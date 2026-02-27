@@ -81,7 +81,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className='e-btn-group' style={{marginTop: '150px'}}>
+    <div className='e-btn-group'>
       <ButtonComponent>HTML</ButtonComponent>
       <ButtonComponent>CSS</ButtonComponent>
       <ButtonComponent>Javascript</ButtonComponent>

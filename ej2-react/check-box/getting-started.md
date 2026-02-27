@@ -79,7 +79,7 @@ import './App.css';
 
 function App() {
   return (
-    <div style={{ marginTop: '150px' }}>
+    <div>
       <CheckBoxComponent label="Default" />
     </div>
   );
