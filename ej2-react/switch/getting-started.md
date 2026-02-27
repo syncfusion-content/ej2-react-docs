@@ -78,7 +78,7 @@ import * as React from 'react';
 import './App.css';
 
 function App() {
-    return ( <div style={{marginTop: '150px'}}><SwitchComponent /></div>);
+    return ( <div><SwitchComponent /></div>);
 }
 export default App;
 ```

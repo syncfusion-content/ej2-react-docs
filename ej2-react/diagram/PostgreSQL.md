@@ -249,7 +249,7 @@ This section explains the automated database initialization and seeding process 
 
 Create a **server/src/data/layoutSeed.json** file with the organizational chart data:
 
-```json
+```javascript
 [
   { "id": "parent", "parent_id": null, "role": "Board" },
   { "id": "1", "parent_id": "parent", "role": "General Manager" },
@@ -352,7 +352,7 @@ seedDatabase();
 
 Add the seed script to your **server/package.json** file:
 
-```json
+```javascript
 {
   "scripts": {
     "build": "tsc",
@@ -614,7 +614,7 @@ The Diagram component fetches data on mount, binds it to the **DataManager**, an
 
 Add the `OrganizationalLayout` component to `App.tsx` as shown below.
 
-```tsx
+```javascript
 import './App.css';
 import OrganizationalLayout from './components/OrganizationalLayout';
 
@@ -737,7 +737,7 @@ An empty diagram (no nodes visible) can result from API failures, empty database
 
 4. **Check component state**:
    - Add console logs in `OrganizationalLayout.tsx`:
-     ```ts
+     ```javascript
      useEffect(() => {
        const loadData = async () => {
          const layoutData = await fetchLayoutData();

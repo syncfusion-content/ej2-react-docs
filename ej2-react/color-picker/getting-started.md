@@ -81,7 +81,7 @@ import * as React from "react";
 import './App.css';
 
 function App() {
-  return (<div style={{ marginTop: '150px' }}>
+  return (<div>
     <div id='container'>
       <div className='wrap'>
         <h4>Choose Color</h4>
