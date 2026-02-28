@@ -2,7 +2,7 @@
 
 import { BulletChartComponent } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
-import { createRoot } from "react-dom/client";
+import * as ReactDOM from "react-dom";
 
 function App() {
     const data = [
@@ -17,7 +17,7 @@ function App() {
 }
 export default App;
 
-const root = createRoot(document.getElementById("charts"));
+const root = ReactDOM.createRoot(document.getElementById('charts'));
 root.render(<App />);
 
 {% endraw %}

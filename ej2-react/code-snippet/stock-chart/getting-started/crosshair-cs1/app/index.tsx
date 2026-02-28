@@ -1,7 +1,7 @@
 
 
 import * as React from "react";
-import { createRoot } from "react-dom/client";
+import * as ReactDOM from "react-dom";
 import {
     StockChartComponent, StockChartSeriesCollectionDirective, StockChartSeriesDirective, Inject, ITooltipRenderEventArgs, IStockChartEventArgs, ChartTheme,
     DateTime, Tooltip, RangeTooltip, Crosshair, LineSeries, SplineSeries, CandleSeries, HiloOpenCloseSeries, HiloSeries, RangeAreaSeries, Trendlines
@@ -42,6 +42,6 @@ function App() {
 };
 export default App;
 
-const root = createRoot(document.getElementById("charts")!);
+const root = ReactDOM.createRoot(document.getElementById('charts'));
 root.render(<App />);
 

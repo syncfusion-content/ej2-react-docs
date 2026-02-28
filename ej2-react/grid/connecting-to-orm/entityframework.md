@@ -734,19 +734,6 @@ namespace Grid_EntityFramework.Server.Controllers
             IQueryable<Ticket> query = _db.Tickets.AsNoTracking();
             var op = new DataOperations();
 
-            if (dm.Search?.Count > 0)
-                query = op.PerformSearching(query, dm.Search).Cast<Ticket>().AsQueryable();
-
-            if (dm.Where?.Count > 0)
-                query = op.PerformFiltering(query, dm.Where, dm.Where[0].Operator)
-                    .Cast<Ticket>()
-                    .AsQueryable();
-
-            if (dm.Sorted?.Count > 0)
-                query = op.PerformSorting(query, dm.Sorted).Cast<Ticket>().AsQueryable();
-            else
-                query = query.OrderBy(t => t.TicketId);
-
             var count = query.Count();
 
             if (dm.Skip > 0)

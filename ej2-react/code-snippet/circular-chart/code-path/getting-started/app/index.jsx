@@ -4,7 +4,7 @@
 
 import { CircularChart3DComponent, CircularChart3DSeriesCollectionDirective, CircularChart3DSeriesDirective, PieSeries3D, CircularChartDataLabel3D, CircularChartLegend3D, Inject } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
-import { createRoot } from 'react-dom/client';
+import * as ReactDOM from "react-dom";
 function App() {
     const circularData = [
         { x: 'Chrome', y: 62.92 },
@@ -23,7 +23,8 @@ function App() {
     </CircularChart3DComponent>;
 }
 export default App;
-createRoot(document.getElementById('charts')).render(<App />);
+const root = ReactDOM.createRoot(document.getElementById('charts'));
+root.render(<App />);
 
 
 

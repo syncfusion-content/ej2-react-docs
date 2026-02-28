@@ -2,7 +2,7 @@
 
 
 import * as React from "react";
-import { createRoot } from "react-dom/client";
+import * as ReactDOM from "react-dom";
 import { SmithchartComponent } from '@syncfusion/ej2-react-charts';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
 
 }
 export default App;
-const root = createRoot(document.getElementById("smithchart"));
+const root = ReactDOM.createRoot(document.getElementById('smithchart'));
 root.render(<App />);
 
 
