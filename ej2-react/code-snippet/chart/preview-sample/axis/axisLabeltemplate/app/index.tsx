@@ -18,7 +18,7 @@ function App() {
   return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} title='Olympic Medals' width='70%'>
       <Inject services={[ColumnSeries, Category]} />
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={chartData} xName='country' yName='gold' type='Column' marker={marker}>
+        <SeriesDirective dataSource={chartData} xName='Country' yName='Count' type='Column' marker={marker}>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>

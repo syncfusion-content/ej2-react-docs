@@ -9,7 +9,7 @@ import {chartData} from './datasource';
 
 function App() {
 
-  const primaryxAxis: AxisModel = { valueType: 'DateTime' };
+  const primaryxAxis: AxisModel = { valueType: 'Category' };
   const tooltip: TooltipSettingsModel = {enable: true, format: '${point.tooltip}'};
   const legendSettings: LegendSettingsModel = { visible: false};
 

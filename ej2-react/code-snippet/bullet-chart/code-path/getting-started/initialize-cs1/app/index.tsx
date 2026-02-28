@@ -8,7 +8,8 @@ function App() {
     return <BulletChartComponent id="bulletChart" />;
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+const root = ReactDOM.createRoot(document.getElementById('charts'));
+root.render(<App />);
 
 
 {% endraw %}

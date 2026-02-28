@@ -92,13 +92,13 @@ Add the Stock Chart component to `src/App.tsx` using the following code.
 
 import {StockChartComponent} from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
-import { createRoot } from "react-dom/client";
+import * as ReactDOM from "react-dom";
 
 function App()  {
     return  (<StockChartComponent />);
 }
 export  default  App;
-const root = createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
 
 {% endhighlight %}
@@ -106,12 +106,12 @@ root.render(<App />);
 
 import { StockChartComponent } from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
-import { createRoot } from "react-dom/client";
+import * as ReactDOM from "react-dom";
 function App() {
     return (<StockChartComponent />);
 }
 export default App;
-const root = createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
 
 {% endhighlight %}
@@ -152,7 +152,7 @@ Import the above-mentioned modules from the chart package and inject them into t
 
 import { StockChartComponent, CandleSeries, Tooltip, DataLabel, DateTime, Inject } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
-import { createRoot } from "react-dom/client";
+import * as ReactDOM from "react-dom";
 
 function App() {
     return (
@@ -163,7 +163,7 @@ function App() {
 }
 export default App;
 
-const root = createRoot(document.getElementById("charts"));
+const root = ReactDOM.createRoot(document.getElementById('charts'));
 root.render(<App />);
 
 {% endhighlight %}
@@ -171,7 +171,7 @@ root.render(<App />);
 
 import { StockChartComponent, CandleSeries, Tooltip, DataLabel, DateTime, Inject } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
-import { createRoot } from "react-dom/client";
+import * as ReactDOM from "react-dom";
 
 function App() {
     return (
@@ -182,7 +182,7 @@ function App() {
 }
 export default App;
 
-const root = createRoot(document.getElementById("charts")!);
+const root = ReactDOM.createRoot(document.getElementById('charts'));
 root.render(<App />);
 
 {% endhighlight %}

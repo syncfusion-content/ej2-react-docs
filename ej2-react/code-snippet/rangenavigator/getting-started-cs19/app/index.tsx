@@ -6,7 +6,7 @@ import {
   RangenavigatorSeriesDirective, RangeTooltip, RangeTooltipSettingsModel
 } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
-import { createRoot } from "react-dom/client";
+import * as ReactDOM from "react-dom";
 import { bitCoinData } from '../default-data';
 
 function App() {
@@ -25,7 +25,9 @@ function App() {
 
 }
 
-const root = createRoot(document.getElementById("charts")!);
+export default App;
+
+const root = ReactDOM.createRoot(document.getElementById('charts'));
 root.render(<App />);
 
 

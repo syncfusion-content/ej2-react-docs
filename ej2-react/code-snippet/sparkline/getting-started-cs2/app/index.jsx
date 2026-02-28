@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createRoot } from 'react-dom/client';
+import * as ReactDOM from "react-dom";
 import { SparklineComponent } from '@syncfusion/ej2-react-charts';
 
 function App() {
@@ -18,4 +18,5 @@ function App() {
     </SparklineComponent>);
 }
 export default App;
-createRoot(document.getElementById('sparkline')).render(<App />);
+const root = ReactDOM.createRoot(document.getElementById('sparkline'));
+root.render(<App />);

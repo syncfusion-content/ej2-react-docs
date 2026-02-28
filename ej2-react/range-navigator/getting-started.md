@@ -133,7 +133,7 @@ Import the above-mentioned modules from the chart package and inject them into t
  ```javascript
 import { RangeNavigatorComponent, AreaSeries, DateTime, RangeTooltip, Inject } from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
-import { createRoot } from 'react-dom/client';
+import * as ReactDOM from "react-dom";
 
 function App() {
     return (
@@ -143,7 +143,8 @@ function App() {
     );
 }
 
-const root = createRoot(document.getElementById("charts"));
+export default App;
+const root = ReactDOM.createRoot(document.getElementById('charts'));
 root.render(<App />);
  ```
 

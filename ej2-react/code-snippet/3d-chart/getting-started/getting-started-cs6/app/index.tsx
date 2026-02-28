@@ -2,7 +2,7 @@
 
 import { Category3D, Chart3DComponent, Chart3DSeriesCollectionDirective, Chart3DSeriesDirective, DataLabel3D, Highlight3D, ColumnSeries3D, Legend3D, Tooltip3D, Inject } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
-import { createRoot } from 'react-dom/client';
+import * as ReactDOM from "react-dom";
 
 export let data: Object[] = [
   { x: 'Tesla', y: 137429 },
@@ -34,7 +34,8 @@ function App() {
   </Chart3DComponent>)
 };
 export default App;
-createRoot(document.getElementById('charts')).render(<App />);
 
+const root = ReactDOM.createRoot(document.getElementById('charts'));
+root.render(<App />);
 
 
