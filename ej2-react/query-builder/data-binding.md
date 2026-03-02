@@ -2,22 +2,22 @@
 layout: post
 title: Data binding in React Query builder component | Syncfusion
 description: Learn here all about Data binding in Syncfusion React Query builder component of Syncfusion Essential JS 2 and more.
-control: Data binding 
+control: QueryBuilder 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in React Query builder component
+# Data binding in React Query Builder component
 
-The Query Builder uses `DataManager`, which supports both RESTful JSON data services binding and local JavaScript object array binding. The `dataSource` property can be assigned either with the instance of `DataManager` or JavaScript object array collection. It supports two kind of databinding method:
+The Query Builder uses DataManager to support both local JavaScript arrays and remote RESTful JSON services. Bind data using the `dataSource` property with either a DataManager instance or a JavaScript object array. Two binding methods are available:
 
 * Local data
 * Remote data
 
 ## Local data
 
-To bind local data to the query builder, you can assign the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#datasource) property  with a JavaScript object array. The local data source can also be provided as an instance of the `DataManager`.
+To bind local data to the Query Builder, assign a JavaScript object array to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#datasource) property. You can also provide local data as a DataManager instance.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -30,11 +30,11 @@ To bind local data to the query builder, you can assign the [`dataSource`](https
 
  {% previewsample "page.domainurl/code-snippet/query-builder/default-cs4" %}
 
-> By default, `DataManager` uses `JsonAdaptor` for local data-binding.
+> By default, DataManager uses JsonAdaptor for local data binding.
 
 ## Remote data
 
-To bind remote  data to the query builder, assign service data as an instance of  `DataManager` to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#datasource) property. To interact with remote data source, provide the endpoint `url`.
+To bind remote data to the Query Builder, assign service data as a DataManager instance to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#datasource) property, specifying the service endpoint URL.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -47,11 +47,11 @@ To bind remote  data to the query builder, assign service data as an instance of
 
  {% previewsample "page.domainurl/code-snippet/query-builder/default-cs5" %}
 
-> By default, `DataManager` uses `ODataAdaptor` for remote data-binding.
+> By default, DataManager uses ODataAdaptor for remote data binding.
 
 ### Binding with OData services
 
-[`OData`](https://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. You can retrieve data from OData service using the DataManager. Refer to the following code example for remote Data binding using OData service.
+[OData](https://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data APIs. Retrieve data from OData services using DataManager. Refer to the following example for remote data binding with OData:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -66,7 +66,7 @@ To bind remote  data to the query builder, assign service data as an instance of
 
 ### Binding with OData v4 services
 
-The ODataV4 is an improved version of OData protocols, and the `DataManager` can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [`odata documentation`](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData v4 service, use the `ODataV4Adaptor`.
+OData v4 is an improved version of the OData protocol. DataManager supports OData v4 service consumption. For more details, refer to the [OData v4 specification](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData v4 services, use ODataV4Adaptor.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Speed dial component
 
-The Speed Dial component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Speed Dial component adheres to accessibility standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles). These standards ensure the component is usable by all users, including those using assistive technologies.
 
-The accessibility compliance for the Speed Dial component is outlined below.
+The following table outlines the accessibility compliance for the Speed Dial component.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -41,32 +41,36 @@ The accessibility compliance for the Speed Dial component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Speed Dial component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/) patterns to meet the accessibility. The following ARIA attributes are used in the Speed Dial component:
+Legend:
+<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - Fully supported
 
-| Attributes | Purpose  |
-| ------------ | ----------------------- |
-| `role=menu` | Specifies that the SpeedDial item has a submenu.|
-| `role=menuitem` | Indicates an actionable item within the SpeedDial submenu. |
-| `aria-label` | Indicates the SpeedDial Popup item text. |
-| `aria-expanded` | It indicates whether the SpeedDial current state is expanded or collapsed. |
-| `aria-haspopup` | It indicates whether the SpeedDial has popup items or not. |
-| `aria-controls` | Attribute is set to the SpeedDial button and it points to the corresponding content. |
-| `aria-disabled` | Indicates the state of menu item whether it is disabled. |
+The Speed Dial component follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/) patterns to ensure accessibility. The following ARIA attributes are implemented in the Speed Dial component:
+
+| Attributes | Purpose | Support |
+| ------------ | ----------------------- | --- |
+| `role="menu"` | Defines the menu semantic role for the SpeedDial popup container. | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| `role="menuitem"` | Defines the menu item semantic role for individual SpeedDial action items. | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| `aria-label` | Provides an accessible name for the SpeedDial button or action items. | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| `aria-expanded` | Indicates whether the SpeedDial popup is currently open (true) or closed (false). | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| `aria-haspopup` | Indicates that the SpeedDial button has an associated popup menu. | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| `aria-controls` | References the popup element controlled by the SpeedDial button for screen readers. | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| `aria-disabled` | Indicates whether a SpeedDial action item is disabled and cannot be activated. | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 
 ## Keyboard interaction
 
-The Speed Dial component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Speed Dial component.
+The Speed Dial component implements [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction) guidelines to support users relying on keyboard navigation or assistive technologies. The following keyboard shortcuts are supported:
 
 | **Press** | **To do this** |
 |------------|-------------------|
-| <kbd>Enter</kbd> | Open/close the menu. |
-| <kbd>Up-arrow </kbd> | Focuses the next menu item. |
-| <kbd>Left-Arrow</kbd> | Focuses the previous menu item. |
-| <kbd>Down-Arrow</kbd> | Focuses the previous menu item. |
-| <kbd>Right-Arrow</kbd> | Focuses the next menu item. |
-| <kbd>Home</kbd> | Focuses the first menu item. |
-| <kbd>End</kbd> | Focuses the last menu item. |
-| <kbd>Esc</kbd> | Closes the menu. |
+| <kbd>Enter</kbd> | Opens or closes the SpeedDial popup menu. |
+| <kbd>Space</kbd> | Opens or closes the SpeedDial popup menu. |
+| <kbd>Up Arrow</kbd> | Moves focus to the previous action item in the menu. |
+| <kbd>Down Arrow</kbd> | Moves focus to the next action item in the menu. |
+| <kbd>Left Arrow</kbd> | Moves focus to the previous action item in the menu. |
+| <kbd>Right Arrow</kbd> | Moves focus to the next action item in the menu. |
+| <kbd>Home</kbd> | Moves focus to the first action item in the menu. |
+| <kbd>End</kbd> | Moves focus to the last action item in the menu. |
+| <kbd>Escape</kbd> | Closes the SpeedDial popup menu. |
 
 ## Ensuring accessibility
 

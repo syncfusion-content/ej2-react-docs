@@ -2,15 +2,15 @@
 layout: post
 title: Summary view in React Query builder component | Syncfusion
 description: Learn here all about Summary view in Syncfusion React Query builder component of Syncfusion Essential JS 2 and more.
-control: Summary view 
+control: QueryBuilder 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Summary view in React Query builder component
+# Summary view in React Query Builder component
 
-Summary view allows you to show or hide the filtered query. By default, the value is false. You can enable by setting the [`summaryView`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#summaryview) property to true.
+The summary view displays a human-readable representation of the applied filter rules. Enable this feature by setting the [`summaryView`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#summaryview) property to true. By default, the summary view is disabled.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

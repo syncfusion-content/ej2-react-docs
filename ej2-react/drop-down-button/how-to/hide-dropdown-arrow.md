@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Hide dropdown arrow in React Drop down button component
 
-You can hide the dropdown arrow from the DropDownButton by adding class `e-caret-hide` to DropDownButton element using [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#cssclass)property.
+Remove the dropdown caret icon from the DropDownButton by adding the `e-caret-hide` class using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#cssclass) property. This is useful for creating icon-only buttons or buttons with custom styling where the caret is not needed.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

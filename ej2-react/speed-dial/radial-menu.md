@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Radial menu in React Speed dial component
 
-The React Speed Dial action items can be displayed in a circular patter like a radial menu by setting [`mode`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/#mode) property. You can customize the `direction`, `startAngle`, `endAngle` and `offset` by setting [`radialSettings`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#radialsettings) property.
+Display SpeedDial action items in a circular pattern around the button by setting the [`mode`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/#mode) property to `Radial`. Customize the radial layout using the [`radialSettings`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#radialsettings) property to control `direction`, `startAngle`, `endAngle`, and `offset` values. This creates an elegant radial menu ideal for displaying multiple related actions.
 
 ## Radial menu direction
 
-You can open the action items in either clockwise or anticlockwise by setting [`direction`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/radialSettingsModel/#direction) property. The default value is [`Auto`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/radialDirection/) where the action items are displayed based on the `position` property of the Speed Dial.
+Control the direction in which items are arranged around the button by setting the [`direction`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/radialSettingsModel/#direction) property to either `Clockwise` or `AntiClockwise`. The default value is [`Auto`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/radialDirection/), which automatically determines the direction based on the SpeedDial's `position` property.
 
 ```ts
 {/* Import the Speed Dial. */}
@@ -44,7 +44,7 @@ export default App;
 
 ## Radial menu start and end angle
 
-You can modify the start and end angle of action items by setting [`startAngle`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/radialSettingsModel/#startangle) and [`endAngle`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/radialSettingsModel/#endangle) properties. If the angle is not defined, the action items are displayed based on the `position` property of the Speed Dial.
+Control the angular span of the radial menu by setting the [`startAngle`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/radialSettingsModel/#startangle) and [`endAngle`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/radialSettingsModel/#endangle) properties. These angles determine where items begin and end around the circle (0-360 degrees). If angles are not defined, items automatically distribute based on the SpeedDial's `position` property. Use custom angles to create partial arcs or specific patterns.
 
 ```ts
 {/* Import the Speed Dial. */}
@@ -75,7 +75,7 @@ ReactDom.render(<App />,document.getElementById('button'));
 
 ## Offset
 
-You can modify the offset distance between action items and Speed Dial button using [`offset`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/radialSettingsModel/#offset) property.
+Control the distance between action items and the SpeedDial button using the [`offset`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/radialSettingsModel/#offset) property. A larger offset pushes items further from the center button, while smaller values bring them closer. Adjust this to optimize layout spacing based on your design needs.
 
 ```ts
 {/* Import the Speed Dial. */}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create buttongroup with rounded corner in React Button group component | Syncfusion
+title: Create buttongroup with rounded corner | Syncfusion
 description: Learn here all about Create buttongroup with rounded corner in Syncfusion React Button group component of Syncfusion Essential JS 2 and more.
 control: Create buttongroup with rounded corner 
 platform: ej2-react
@@ -10,10 +10,9 @@ domainurl: ##DomainURL##
 
 # Create buttongroup with rounded corner in React Button group component
 
-The ButtonGroup with rounded corner has round edges on both side. In the ButtonGroup with rounded corner, `e-round-corner` class is to be
-added to the target element.
+Create a ButtonGroup with rounded corners by applying the `e-round-corner` class to the target element. This styling adds smooth, rounded edges to all buttons in the group.
 
-The following example illustrates how to create ButtonGroup with rounded corner.
+The following example demonstrates how to create a ButtonGroup with rounded corners:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

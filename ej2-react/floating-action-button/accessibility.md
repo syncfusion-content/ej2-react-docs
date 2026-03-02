@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Floating action button component
 
-The Floating action button component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Floating Action Button component adheres to accessibility standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles). These standards ensure the component is usable by all users, including those using assistive technologies.
 
-The accessibility compliance for the Floating action button component is outlined below.
+The following table outlines the accessibility compliance for the Floating Action Button component.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,19 +40,27 @@ The accessibility compliance for the Floating action button component is outline
 
 ## WAI-ARIA attributes
 
-The Floating action button component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/button/) patterns to meet the accessibility. The following ARIA attributes are used in the Floating action button component:
+Legend:
+<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - Fully supported
 
-| Attributes | Purpose |
-| --- | --- |
-| `aria-label` | Provides an accessible name for the icon only floating action button. |
+The Floating Action Button component follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/button/) patterns to ensure accessibility. The following ARIA attributes are implemented in the Floating Action Button component:
+
+| Attributes | Purpose | Support |
+| --- | --- | --- |
+| `aria-label` | Provides an accessible name for the icon-only Floating Action Button, essential for screen reader users. | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| `aria-disabled` | Indicates the disabled state of the Floating Action Button to assistive technologies. | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| `role="button"` | Defines the button semantic role for assistive technologies. | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 
 ## Keyboard interaction
 
-The Floating action button component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/button/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Floating action button component.
+The Floating Action Button component implements [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/button/#keyboardinteraction) guidelines to support users relying on keyboard navigation or assistive technologies. The following keyboard shortcuts are supported:
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Space</kbd> | When the floating action button has focus, pressing the space key changes the state of the floating action button. |
+| <kbd>Enter</kbd> | Activates the Floating Action Button when it has focus. |
+| <kbd>Space</kbd> | Activates the Floating Action Button when it has focus. |
+| <kbd>Tab</kbd> | Moves focus to the next focusable element; shift+Tab moves to previous element. |
+| <kbd>Escape</kbd> | Closes any open tooltip or popup associated with the Floating Action Button. |
 
 ## Ensuring accessibility
 

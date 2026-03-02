@@ -2,7 +2,7 @@
 layout: post
 title: Accessibility in React Image Editor component | Syncfusion
 description: Learn here all about Accessibility in Syncfusion React Image Editor component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+control: Accessibility
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##

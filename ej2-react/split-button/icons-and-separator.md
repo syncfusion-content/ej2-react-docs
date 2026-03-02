@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 ## SplitButton icons
 
-SplitButton can have an icon to provide the visual representation of the action. To place the icon on a SplitButton, set the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/split-button#iconcss) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the SplitButton. You can customize the icon's position by using the [`iconPosition`](https://ej2.syncfusion.com/react/documentation/api/split-button#iconposition) property
+Display visual icons in SplitButton to enhance action recognition and improve user experience. Set the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/split-button#iconcss) property with `e-icons` class and appropriate icon CSS to render icons from Syncfusion's built-in icon library. By default, icons appear on the left side of the button text; use the [`iconPosition`](https://ej2.syncfusion.com/react/documentation/api/split-button#iconposition) property to position icons to the right, top, or bottom.
 
-The following example illustrates how to place icon in SplitButton component.
+The following example demonstrates how to add icons to the SplitButton component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -32,9 +32,9 @@ You can also use third party icons on the SplitButton using the [`iconCss`](http
 
 ### Vertical button
 
-Vertical Button in SplitButton can be achieved by adding `e-vertical` class using [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/split-button#cssclass) property.
+Create a vertical button layout in SplitButton by applying the `e-vertical` class through the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/split-button#cssclass) property. This orientation stacks the icon and text vertically, useful for compact toolbar layouts or custom UI designs requiring vertical button arrangements.
 
-The following example illustrates how to vertical support in SplitButton component.
+The following example demonstrates how to enable vertical button support in the SplitButton component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -52,9 +52,9 @@ You can also use third party icons on the SplitButton using the [`iconCss`](http
 
 ## Separator
 
-SplitButton component has Separator support. This can be achieved by setting `separator` as `true`.
+Add visual separators between popup menu items to group related actions and improve readability. Enable separators by setting the `separator` property to `true` on individual menu items, creating visual dividers that organize popup content hierarchically.
 
-The following example illustrates how to enable separator support in SplitButton component.
+The following example demonstrates how to enable separators in SplitButton popup items.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

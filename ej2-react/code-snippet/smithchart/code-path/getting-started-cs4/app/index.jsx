@@ -1,7 +1,7 @@
 {% raw %}
 
 import * as React from "react";
-import { createRoot } from "react-dom/client";
+import * as ReactDOM from "react-dom";
 import { SmithchartComponent, SmithchartSeriesCollectionDirective, SmithchartSeriesDirective } from '@syncfusion/ej2-react-charts';
 function App() {
     return (<SmithchartComponent id='smithchart' title={{
@@ -34,7 +34,7 @@ function App() {
 }
 ;
 export default App;
-const root = createRoot(document.getElementById("smithchart"));
+const root = ReactDOM.createRoot(document.getElementById('smithchart'));
 root.render(<App />);
 
 {% endraw %}

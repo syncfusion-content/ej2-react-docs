@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React ProgressButton component
 
-The ProgressButton component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The ProgressButton component adheres to accessibility standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles). These standards ensure the component is usable by all users, including those using assistive technologies.
 
-The accessibility compliance for the ProgressButton component is outlined below.
+The following table outlines the accessibility compliance for the ProgressButton component.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,20 +40,29 @@ The accessibility compliance for the ProgressButton component is outlined below.
 
 ## WAI-ARIA attributes
 
-The ProgressButton component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the ProgressButton component:
+Legend:
+<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - Fully supported
 
-| Attributes | Purpose |
-| --- | --- |
-| `aria-label` | Provides an accessible name for the icon only ProgressButton. |
-| `aria-disabled` | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable. |
+The ProgressButton component follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to ensure accessibility. The following ARIA attributes are implemented in the ProgressButton component:
+
+| Attributes | Purpose | Support |
+| --- | --- | --- |
+| `aria-label` | Provides an accessible name for the icon-only ProgressButton, essential for screen reader users. | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| `aria-disabled` | Indicates the disabled state of the button to assistive technologies. | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| `aria-valuemin` | Specifies the minimum value for progress (0) to assistive technologies. | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| `aria-valuemax` | Specifies the maximum value for progress (100) to assistive technologies. | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| `aria-valuenow` | Indicates the current progress percentage to screen readers. | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 
 ## Keyboard interaction
 
-The ProgressButton component followed the [keyboard interaction] guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the ProgressButton component.
+The ProgressButton component implements keyboard interaction guidelines to support users relying on keyboard navigation or assistive technologies. The following keyboard shortcuts are supported:
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Enter / Space</kbd> | Starts the progress. |
+| <kbd>Enter</kbd> | Starts the progress when the button has focus. |
+| <kbd>Space</kbd> | Starts the progress when the button has focus. |
+| <kbd>Tab</kbd> | Moves focus to the next focusable element; shift+Tab moves to previous element. |
+| <kbd>Escape</kbd> | Stops or cancels the progress operation. |
 
 ## Ensuring accessibility
 

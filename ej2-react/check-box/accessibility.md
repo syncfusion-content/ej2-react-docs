@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React CheckBox component
 
-The CheckBox component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The CheckBox component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the CheckBox component is outlined below.
+The following table outlines the accessibility compliance of the CheckBox component:
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -32,6 +32,8 @@ The accessibility compliance for the CheckBox component is outlined below.
         margin: 0.5em 0;
     }
 </style>
+**Legend:**
+
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
@@ -40,25 +42,25 @@ The accessibility compliance for the CheckBox component is outlined below.
 
 ## WAI-ARIA attributes
 
-The CheckBox component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/) patterns to meet the accessibility. The following ARIA attributes are used in the CheckBox component:
+The CheckBox component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/) patterns to meet accessibility requirements. The following ARIA attributes are used in the CheckBox component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `aria-disabled` | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable. |
+| `aria-disabled` | Indicates that the CheckBox element is perceived but disabled, so it is not editable or operable by the user. |
 
 ## Keyboard interaction
 
-The CheckBox component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the CheckBox component.
+The CheckBox component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/#keyboardinteraction) guideline, making it accessible for people who use assistive technologies and those who rely entirely on keyboard navigation. The following keyboard shortcut is supported:
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Space</kbd> | When the CheckBox has focus, pressing the Space key changes the state of the CheckBox. |
+| <kbd>Space</kbd> | When the CheckBox has focus, pressing the Space key toggles the checkbox between checked and unchecked states. |
 
 ## Ensuring accessibility
 
-The CheckBox component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The CheckBox component's accessibility is validated using [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the CheckBox component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/checkbox.html) in a new window to evaluate the accessibility of the CheckBox component with accessibility tools.
+The accessibility compliance of the CheckBox component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/checkbox.html) in a new window to evaluate the CheckBox component's accessibility with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/checkbox.html" %}
 

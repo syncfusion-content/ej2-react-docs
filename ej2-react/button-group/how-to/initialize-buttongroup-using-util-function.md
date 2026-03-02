@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Initialize buttongroup using util function in React Button group component | Syncfusion
+title: Initialize buttongroup | Syncfusion
 description: Learn here all about Initialize buttongroup using util function in Syncfusion React Button group component of Syncfusion Essential JS 2 and more.
 control: Initialize buttongroup using util function 
 platform: ej2-react
@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Initialize buttongroup using util function in React Button group component
+# Initialize ButtonGroup using util function
 
-Though, it is a CSS component for easy initialization of ButtonGroup `createButtonGroup` util function can be used.
+The `createButtonGroup` utility function provides an alternative approach to initialize ButtonGroup components with minimal setup. This function automatically applies ButtonGroup styling and behavior to elements.
 
-To use `createButtonGroup` util function, [`SplitButton dependencies`](./../../split-button/getting-started#dependencies) should be configured and it should be added in `system.config.js`.
+To use the `createButtonGroup` utility function, configure the [`SplitButton dependencies`](./../../split-button/getting-started#dependencies) in `system.config.js`.
 
-Using `createButtonGroup` method, the Button options, selector, and cssClass is passed and the corresponding classes is added to the elements.
+The `createButtonGroup` method accepts Button options, element selectors, and CSS classes, then applies the corresponding styling to the elements.
 
 ## Create basic ButtonGroup
 

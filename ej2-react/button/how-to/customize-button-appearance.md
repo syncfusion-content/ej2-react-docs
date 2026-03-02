@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize button appearance in React Button component
 
-You can customize the appearance of the Button by using the Cascading Style Sheets (CSS). Define the CSS according to your requirement, and assign the class name to the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/button/#cssclass) property.In the following code snippet the background color, text color, height, width, and sharp corner of the Button can be customized through the `e-custom` class for all states (hover, focus, and active).
+Customize the Button appearance using Cascading Style Sheets (CSS). Define custom CSS styles according to your requirements and assign the class name to the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/button#cssclass) property. The following example demonstrates how to customize the background color, text color, height, width, and corner styling through the `e-custom` class for all Button states including hover, focus, and active.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

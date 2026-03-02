@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Submit name and value in form in React Switch component
 
-The name attribute of the Switch is used to group Switches. When the Switches are grouped in form, the checked items value attribute will post to the server on form submit. The disabled and unchecked Switch values will not be sent to the server on form submit.
+Use the name attribute to group Switches for form submission. When a form containing grouped Switches is submitted, only checked and enabled Switch values are sent to the server. Disabled and unchecked Switches are excluded from form data, allowing conditional data submission based on user selections.
 
-In the following code snippet, USB and Wi-Fi in the checked state, and Bluetooth is in disabled state.Values that are in checked state only be sent on form submit.
+In the following example, USB and Wi-Fi Switches are in the checked state, while Bluetooth is disabled. Only the values of checked Switches will be submitted with the form.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

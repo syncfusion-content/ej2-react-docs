@@ -11,17 +11,21 @@ domainurl: ##DomainURL##
 <!-- markdownlint-disable MD002 MD022 -->
 # Spinner and progress in React Progress button component
 
+## Spinner
+
+Control the appearance and behavior of the animated spinner indicator shown during progress operations.
+
 ### Change spinner position
 
-Spinner position can be changed by modifying the [`position`](https://ej2.syncfusion.com/react/documentation/api/progress-button/spinSettingsModel/#position) property of [`spinSettingsModel`](https://ej2.syncfusion.com/react/documentation/api/progress-button/spinSettingsModel). By default, the spinner is positioned at the left of the ProgressButton. You can position it at the `left`, `right`, `top`, `bottom`, or `center` of the text content.
+Customize the spinner's location relative to button content by modifying the [`position`](https://ej2.syncfusion.com/react/documentation/api/progress-button/spinSettingsModel/#position) property in [`spinSettingsModel`](https://ej2.syncfusion.com/react/documentation/api/progress-button/spinSettingsModel). By default, the spinner appears on the left side of the button text. Reposition it to `left`, `right`, `top`, `bottom`, or `center` based on your layout preferences.
 
 ### Change spinner size
 
-Spinner size can be changed by modifying the [`width`](https://ej2.syncfusion.com/react/documentation/api/progress-button/spinSettingsModel/#width) property of [`spinSettingsModel`](https://ej2.syncfusion.com/react/documentation/api/progress-button/spinSettingsModel). In this demo, the `width` is set to `20` to change the spinner size.
+Adjust the spinner dimensions by modifying the [`width`](https://ej2.syncfusion.com/react/documentation/api/progress-button/spinSettingsModel/#width) property in [`spinSettingsModel`](https://ej2.syncfusion.com/react/documentation/api/progress-button/spinSettingsModel). This allows you to scale the spinner icon up or down to match your button size and visual hierarchy. In the demo below, the `width` is set to `20` pixels to create a smaller spinner.
 
 ### Spinner template
 
-You can use custom spinner by specifying the [`template`](https://ej2.syncfusion.com/react/documentation/api/progress-button/spinSettingsModel/#template) property of [`spinSettingsModel`](https://ej2.syncfusion.com/react/documentation/api/progress-button/spinSettingsModel) with custom styles.
+Create a custom spinner design by specifying the [`template`](https://ej2.syncfusion.com/react/documentation/api/progress-button/spinSettingsModel/#template) property in [`spinSettingsModel`](https://ej2.syncfusion.com/react/documentation/api/progress-button/spinSettingsModel). Use HTML or SVG markup with custom CSS styles to replace the default animated spinner with your own branded animation or icon.
 
 The following sample demonstrates the above functionalities of the spinner.
 
@@ -38,9 +42,20 @@ The following sample demonstrates the above functionalities of the spinner.
 
 ## Progress
 
+Visual progress indicators and animations provide feedback during long-running operations.
+
 ### Content animation
 
-The [`content`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#content) of the ProgressButton can be animated during progress using the [`effect`](https://ej2.syncfusion.com/react/documentation/api/progress-button/animationSettingsModel/#effect) property of [`animationSettingsModel`](https://ej2.syncfusion.com/react/documentation/api/progress-button/animationSettingsModel). You can also set custom duration and timing function using the [`duration`](https://ej2.syncfusion.com/react/documentation/api/progress-button/animationSettingsModel/#duration) and [`easing`](https://ej2.syncfusion.com/react/documentation/api/progress-button/animationSettingsModel/#easing) properties. The possible `effect` values are `None`, `SlideLeft`, `SlideRight`, `SlideUp`, `SlideDown`, `ZoomIn`, and `ZoomOut`.
+Animate the ProgressButton text or content during progress operations using the [`effect`](https://ej2.syncfusion.com/react/documentation/api/progress-button/animationSettingsModel/#effect) property in [`animationSettingsModel`](https://ej2.syncfusion.com/react/documentation/api/progress-button/animationSettingsModel). Control animation timing with the [`duration`](https://ej2.syncfusion.com/react/documentation/api/progress-button/animationSettingsModel/#duration) and [`easing`](https://ej2.syncfusion.com/react/documentation/api/progress-button/animationSettingsModel/#easing) properties. 
+
+Available animation effects are:
+* **None** - No animation
+* **SlideLeft** - Content slides from right to left
+* **SlideRight** - Content slides from left to right
+* **SlideUp** - Content slides upward
+* **SlideDown** - Content slides downward
+* **ZoomIn** - Content scales up (zooms in)
+* **ZoomOut** - Content scales down (zooms out)
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -55,7 +70,7 @@ The [`content`](https://ej2.syncfusion.com/react/documentation/api/progress-butt
 
 ### Change step of the ProgressButton
 
-The progress can be visualized at the specified interval by changing the [`step`](https://ej2.syncfusion.com/react/documentation/api/progress-button/progressEventArgs/#step) property in the [`begin`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#begin) event of the ProgressButton. In this demo, the `step` property is set to `20` to show progress at every 20% increment.
+Control the granularity of progress visualization by modifying the [`step`](https://ej2.syncfusion.com/react/documentation/api/progress-button/progressEventArgs/#step) property in the [`begin`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#begin) event. The step value determines how much the progress bar advances on each update. For example, setting `step` to `20` displays progress in 5% increments (100 ÷ 20), creating a smooth visual progression for the user.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -72,7 +87,7 @@ The progress can be visualized at the specified interval by changing the [`step`
 
 ### Change progress dynamically
 
-The progress can be changed dynamically by modifying the [`percent`](https://ej2.syncfusion.com/react/documentation/api/progress-button/progressEventArgs/#percent) property in the ProgressButton events. In this demo, on 40% completion of progress, the `percent` property is set to `90` to show dynamic change of the progress.
+Update the progress percentage in real-time by modifying the [`percent`](https://ej2.syncfusion.com/react/documentation/api/progress-button/progressEventArgs/#percent) property during ProgressButton events. This technique enables conditional progress adjustments based on application logic. For example, you can jump the progress to 90% when a particular milestone is reached at 40% completion, allowing for non-linear progress visualization.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -89,7 +104,7 @@ The progress can be changed dynamically by modifying the [`percent`](https://ej2
 
 ### Start and stop methods
 
-You can pause and resume the progress using the [`stop`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#start) and [`start`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#stop) methods, respectively. In this demo, clicking the ProgressButton will pause and resume the progress.
+Control progress playback by invoking the [`start`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#start) and [`stop`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#stop) methods. Use these methods to pause long-running operations or allow users to resume interrupted tasks. In the example below, clicking the ProgressButton toggles between paused and active states.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

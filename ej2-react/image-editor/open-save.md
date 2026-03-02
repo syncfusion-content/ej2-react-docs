@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Open save in React Image editor component | Syncfusion
-description: Learn here all about Open save in Syncfusion React Image editor component of Syncfusion Essential JS 2 and more.
-control: Open save 
+title: Open and Save in React Image Editor component | Syncfusion
+description: Learn here all about Open and Save in Syncfusion React Image Editor component of Syncfusion Essential JS 2 and more.
+control: Open and Save
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##

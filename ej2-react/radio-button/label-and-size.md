@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Label and size in React Radio button component
 
-This section explains the different sizes and labels.
+This section explains the different sizes and label configurations available in the RadioButton component.
 
 ## Label
 
-RadioButton caption can be defined by using the [`label`](https://ej2.syncfusion.com/react/documentation/api/radio-button#label) property. This reduces the manual addition of label for RadioButton. You can customize the label position before or after the RadioButton through the [`labelPosition`](https://ej2.syncfusion.com/react/documentation/api/radio-button#labelposition) property.
+Use the [`label`](https://ej2.syncfusion.com/react/documentation/api/radio-button#label) property to add a caption for the RadioButton without manually creating a separate HTML label element. Control label positioning relative to the RadioButton using the [`labelPosition`](https://ej2.syncfusion.com/react/documentation/api/radio-button#labelposition) property, allowing the label to appear before or after the RadioButton indicator.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -29,7 +29,7 @@ RadioButton caption can be defined by using the [`label`](https://ej2.syncfusion
 
 ## Size
 
-The different RadioButton sizes available are default and small. To reduce the size of the default RadioButton to small, set the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/radio-button#cssclass) property to `e-small`.
+The RadioButton component supports two size variants: default (standard size) and small (compact size). Apply the `e-small` CSS class through the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/radio-button#cssclass) property to create a smaller, more compact RadioButton suitable for dense layouts or space-constrained interfaces.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

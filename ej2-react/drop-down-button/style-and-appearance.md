@@ -14,9 +14,23 @@ To modify the DropDownButton appearance, you need to override the default CSS of
 
 CSS Class | Purpose of Class
 -----|-----
-|.e-dropdown-btn|To customize the dropdown button
-|.e-dropdown-btn:hover|To customize the dropdown button on hover
-|.e-dropdown-btn.e-active|To customize the dropdown button on active
-|.e-dropdown-popup|To customize the dropdown button pop up
-|.e-dropdown-popup ul .e-item:hover|To customize the dropdown button pop up items on hover
-|.e-dropdown-popup ul .e-item:active|To customize the dropdown button pop up items on active
+|.e-dropdown-btn|Container for the DropDownButton component
+|.e-dropdown-btn.e-primary|Applies primary styling to the dropdown button
+|.e-dropdown-btn.e-success|Applies success styling to the dropdown button
+|.e-dropdown-btn.e-info|Applies info styling to the dropdown button
+|.e-dropdown-btn.e-warning|Applies warning styling to the dropdown button
+|.e-dropdown-btn.e-danger|Applies danger styling to the dropdown button
+|.e-dropdown-btn.e-outline|Applies outline styling to the dropdown button
+|.e-dropdown-btn.e-flat|Applies flat styling to the dropdown button
+|.e-dropdown-btn:hover|Customizes the dropdown button on hover
+|.e-dropdown-btn.e-active|Customizes the dropdown button on active/pressed state
+|.e-dropdown-btn:disabled|Customizes the disabled dropdown button
+|.e-dropdown-btn.e-small|Applies small size styling to the dropdown button
+|.e-dropdown-btn.e-large|Applies large size styling to the dropdown button
+|.e-dropdown-popup|Container for the dropdown popup menu
+|.e-dropdown-popup .e-item|Individual dropdown menu item
+|.e-dropdown-popup .e-item:hover|Customizes the dropdown menu item on hover
+|.e-dropdown-popup .e-item.e-selected|Customizes the selected dropdown menu item
+|.e-dropdown-popup .e-item.e-disabled|Customizes the disabled dropdown menu item
+|.e-dropdown-popup .e-separator|Visual separator between dropdown menu items
+|.e-dropdown-popup .e-icons|Icon styling within dropdown menu items

@@ -10,17 +10,23 @@ domainurl: ##DomainURL##
 
 # Drag and drop in React Chips component
 
-The Chips component enables drag and drop functionality for any chip when [allowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/chips/#allowdraganddrop) is set to **true**. Chips can be dragged and dropped within the same or across external ChipList containers.
+Enable drag and drop functionality for chips by setting the [allowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/chips/#allowdraganddrop) property to **true**. Users can drag and drop chips within the same ChipList or across multiple ChipList containers to reorder or reorganize them.
 
-When dragging a chip, an indicator line appears between chips, showing the exact position where the chip will be dropped. This visual indicator helps users place chips precisely at the desired location.
+When dragging a chip, a visual indicator line appears between chips, showing exactly where the chip will be placed upon drop. This feedback helps users place chips at the desired position with precision.
 
-* To prevent the dragging action for a specific chip, use the [`dragStart`](https://ej2.syncfusion.com/react/documentation/api/chips/#dragstart) event, which triggers when chip dragging begins. Similarly, to prevent dropping action for a specific chip, use the [`dragStop`](https://ej2.syncfusion.com/react/documentation/api/chips/#dragstop) event, which triggers when dragging ends.
+## Drag and drop events
 
-* The [`dragging`](https://ej2.syncfusion.com/react/documentation/api/chips/#dragging) event triggers while a chip is being dragged. You can customize the appearance of the cloned chip element during this event.
+The following events allow you to control and customize the drag and drop behavior:
 
-* You can set the drag area for the chips using the [`dragArea`](https://ej2.syncfusion.com/react/documentation/api/chips/#dragarea) property which allows the dragging of cloned chip only within the specified element. It accepts an element Id or class as a string and defaults to `null`.
+* [`dragStart`](https://ej2.syncfusion.com/react/documentation/api/chips/#dragstart) - Fired when the user starts dragging a chip. Use this event to prevent dragging for specific chips.
+* [`dragging`](https://ej2.syncfusion.com/react/documentation/api/chips/#dragging) - Fired continuously while a chip is being dragged. Use this event to customize the appearance of the cloned chip during the drag operation.
+* [`dragStop`](https://ej2.syncfusion.com/react/documentation/api/chips/#dragstop) - Fired when the drag operation ends. Use this event to prevent dropping or perform cleanup actions.
 
-In the following sample, the [allowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/chips/#allowdraganddrop) property is enabled.
+## Drag area
+
+Restrict the dragging area using the [`dragArea`](https://ej2.syncfusion.com/react/documentation/api/chips/#dragarea) property. This property accepts an element ID or CSS class as a string and limits chip dragging only within the specified container. By default, it is set to `null`, allowing chips to be dragged anywhere.
+
+The following example demonstrates drag and drop functionality with the [allowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/chips/#allowdraganddrop) property enabled:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

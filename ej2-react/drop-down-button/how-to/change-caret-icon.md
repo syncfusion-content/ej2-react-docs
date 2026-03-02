@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Change caret icon in React Drop down button component
 
-Dropdown arrow can be customized on popup open and close. It can be handled in [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#beforeopen) and [`beforeClose`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#beforeclose) event.
+Customize the dropdown caret icon based on the popup state using the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#beforeopen) and [`beforeClose`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#beforeclose) events. These events allow you to change the icon appearance when the popup opens or closes.
 
-In the following example, the up arrow is updated on popup close and down arrow is updated on popup open using `beforeOpen` and `beforeClose` event by adding and removing `e-caret-up` class.
+The following example demonstrates how to update the caret icon dynamically by adding or removing the `e-caret-up` class in the `beforeOpen` and `beforeClose` events:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

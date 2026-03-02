@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React RadioButton component
 
-The RadioButton component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The RadioButton component adheres to accessibility standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles). These standards ensure the component is usable by all users, including those using assistive technologies.
 
-The accessibility compliance for the RadioButton component is outlined below.
+The following table outlines the accessibility compliance for the RadioButton component.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,24 +40,32 @@ The accessibility compliance for the RadioButton component is outlined below.
 
 ## WAI-ARIA attributes
 
-The RadioButton component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/radio/) patterns to meet the accessibility. The following ARIA attributes are used in the RadioButton component:
+Legend:
+<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - Fully supported
 
-| Attributes | Purpose |
-| --- | --- |
-| `aria-disabled` | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable. |
+The RadioButton component follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/radio/) patterns to ensure accessibility. The following ARIA attributes are implemented in the RadioButton component:
+
+| Attributes | Purpose | Support |
+| --- | --- | --- |
+| `role="radio"` | Defines the radio button semantic role for assistive technologies. | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| `aria-checked` | Indicates the checked state of the RadioButton to screen readers. | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| `aria-disabled` | Indicates the disabled state to assistive technologies. | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| `aria-label` | Provides an accessible name for the RadioButton when no visible label is present. | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 
 ## Keyboard interaction
 
-The RadioButton component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/radio/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the RadioButton component.
+The RadioButton component implements [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/radio/#keyboardinteraction) guidelines to support users relying on keyboard navigation or assistive technologies. The following keyboard shortcuts are supported:
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>UP/Left arrow</kbd> | Move and select the previous options. |
-| <kbd>Down/Right arrow</kbd> | Move and select the next options. |
+| <kbd>Tab</kbd> | Moves focus to the next RadioButton group or focusable element. |
+| <kbd>Shift + Tab</kbd> | Moves focus to the previous focusable element. |
+| <kbd>Up Arrow / Left Arrow</kbd> | Selects the previous RadioButton option in the group. |
+| <kbd>Down Arrow / Right Arrow</kbd> | Selects the next RadioButton option in the group. |
 
 ## Ensuring accessibility
 
-The RadioButton component component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The RadioButton component's accessibility levels are ensured through [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
 The accessibility compliance of the RadioButton component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/radiobutton.html) in a new window to evaluate the accessibility of the RadioButton component with accessibility tools.
 

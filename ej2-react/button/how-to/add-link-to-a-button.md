@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Add link to a button in React Button component
 
-The appearance of the Button can be changed like a link by `e-link` class using [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/button/#cssclass) property and link navigation can be handled in Button click.
+The Button can be styled to appear as a link by using the `e-link` class through the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/button#cssclass) property. Link navigation is handled in the Button's click event using `window.open()` method.
 
-In the following example, link is added in Button click by using `window.open()` method.
+The following example demonstrates how to add navigation functionality to a Button:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

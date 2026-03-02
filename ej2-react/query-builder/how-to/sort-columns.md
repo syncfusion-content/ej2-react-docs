@@ -2,15 +2,15 @@
 layout: post
 title: Sort columns in React Query builder component | Syncfusion
 description: Learn here all about Sort columns in Syncfusion React Query builder component of Syncfusion Essential JS 2 and more.
-control: Sort columns 
+control: QueryBuilder 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sort columns in React Query builder component
+# Sort columns in React Query Builder component
 
-SortDirection allows you to sort the columns bounded to the Query Builder to view the columns by ascending or descending order. You should set the [`sortDirection`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#sortdirection) property to sort the fields.
+The [`sortDirection`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#sortdirection) property enables you to sort the fields displayed in the Query Builder in ascending or descending order. This improves discoverability and field selection efficiency.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

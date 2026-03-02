@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Position popup open in React Drop down button component
 
-Popup open position can be changed according to the requirement. Popup open position can be changed in [`open`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#open) event by setting `top` and `left` for the popup element.
+Control the popup position by adjusting the `top` and `left` coordinates in the [`open`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#open) event. This allows you to position the dropdown popup at custom locations relative to the button or viewport.
 
-In the following example, the `top` position of the popup element is changed in `open` event.
+The following example demonstrates how to reposition the popup by modifying its `top` position in the `open` event:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

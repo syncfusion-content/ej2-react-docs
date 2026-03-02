@@ -109,10 +109,10 @@ The following example shows how to configure boundary constraints to restrict el
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/pagesettings/es5boundaryconstraints-cs1/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/es5boundaryconstraints-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/pagesettings/es5boundaryconstraints-cs1/app/index.tsx %}
+{% include code-snippet/diagram/reactCurlyExamples/es5boundaryconstraints-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -126,10 +126,10 @@ The following example demonstrates the configuration and usage of fit options fo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/pagesettings/es5FitOption-cs1/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/es5FitOption-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/pagesettings/es5FitOption-cs1/app/index.tsx %}
+{% include code-snippet/diagram/reactCurlyExamples/es5FitOption-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

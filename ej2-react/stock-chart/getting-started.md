@@ -127,14 +127,14 @@ The below example shows a basic Stock Chart.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/stock-chart/getting-started/initialize-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/getting-started/initialize-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/stock-chart/getting-started/initialize-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/getting-started/initialize-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/stock-chart/getting-started/initialize-cs1" %}
+{% previewsample "page.domainurl/code-snippet/stock-chart/preview-sample/getting-started/initialize-cs1" %}
 
 ## Module injection
 
@@ -284,7 +284,7 @@ Since the JSON contains DateTime data, set the [`valueType`](https://ej2.syncfus
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/stock-chart/getting-started/datasource-cs1" %}
+{% previewsample "page.domainurl/code-snippet/stock-chart/preview-sample/getting-started/datasource-cs1" %}
 
 ## Add Stock Chart title
 

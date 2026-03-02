@@ -2,15 +2,15 @@
 layout: post
 title:  Drag and drop in React Query builder component | Syncfusion
 description: Learn here all about Drag and drop in Syncfusion React Query builder component of Syncfusion Essential JS 2 and more.
-control: Drag and drop
+control: QueryBuilder
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drag and drop in React Query builder component
+# Drag and drop in React Query Builder component
 
-The Query Builder provides the functionality to reposition rules or groups within the component effortlessly. This enhancement provides a more intuitive and flexible way to construct and modify queries. You can use [`allowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#allowDragAndDrop) to perform drag and drop functionality. And we have events support for drag and drop features that, indicates the [`dragStart`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#dragStart), [`drag`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#drag) and [`drop`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#drop) actions.
+Reposition rules or groups within the Query Builder using drag-and-drop interactions for intuitive query construction. Enable this feature with the [`allowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#allowDragAndDrop) property. The component provides events to monitor drag operations: [`dragStart`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#dragStart), [`drag`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#drag), and [`drop`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#drop).
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

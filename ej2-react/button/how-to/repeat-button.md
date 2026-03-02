@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Repeat button in React Button component
 
-The Repeat button is a type of Button in that the click event is triggered at regular time interval from the pressed state till the released state.
+A repeat button triggers its click event repeatedly at regular intervals while the button is pressed, remaining active until released. This behavior is useful for continuous actions such as incrementing/decrementing values or volume control.
 
-The following example explains about how to achieve Repeat Button in mouse and touch events.
+The following example demonstrates how to implement repeat button functionality using mouse and touch events:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

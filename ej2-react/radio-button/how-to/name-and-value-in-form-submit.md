@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Name and value in form submit in React Radio button component
 
-The [`name`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#name) attribute of the RadioButton is used to group RadioButton. When the RadioButton are grouped in form, the checked items [`value`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#value) attribute will be post to server on form submit that can be retrieved through the name. The disabled and unchecked RadioButton value will not be sent to the server on form submit.
+Use the [`name`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#name) attribute to group RadioButton components as mutually exclusive options. When grouped RadioButtons are submitted with a form, only the [`value`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#value) attribute of the checked RadioButton is sent to the server—retrieved using the shared `name` attribute. RadioButtons that are disabled or unchecked do not submit their values.
 
-In the following code snippet, Credit / Debit card is in checked state.Now, the value that is in checked state will be sent on form submit.
+In the example below, the payment method "Credit / Debit Card" is in the checked state. When the form is submitted, only this checked RadioButton's value will be sent to the server.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

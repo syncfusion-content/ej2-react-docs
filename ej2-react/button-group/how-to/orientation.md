@@ -9,13 +9,13 @@ domainurl: ##DomainURL##
 ---
 # Orientation in React Button group component
 
-ButtonGroup can be arranged in a vertical and horizontal orientation. By default, it is horizontally aligned.
+Arrange ButtonGroup buttons in vertical or horizontal orientation. By default, ButtonGroup displays buttons horizontally.
 
-## Vertical Orientation
+## Vertical orientation
 
-ButtonGroup can be aligned vertically by using the built-in CSS class `e-vertical` to the target element.
+Display buttons vertically by applying the `e-vertical` CSS class to the ButtonGroup target element. Vertical orientation is useful for sidebar navigation and stacked button layouts.
 
-The following example illustrates how to achieve vertical orientation in ButtonGroup.
+The following example demonstrates how to create a ButtonGroup with vertical orientation:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

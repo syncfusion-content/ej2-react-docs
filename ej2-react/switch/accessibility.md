@@ -40,7 +40,7 @@ The accessibility compliance for the Switch component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Switch component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/switch/) patterns to meet the accessibility. The following ARIA attributes are used in the Switch component:
+The Switch component implements [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/switch/) patterns to provide comprehensive accessibility support. The following ARIA attributes are used in the Switch component:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -49,11 +49,13 @@ The Switch component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/pat
 
 ## Keyboard interaction
 
-The Switch component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/switch/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Switch component.
+The Switch component supports comprehensive keyboard navigation following [WAI-ARIA keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/switch/#keyboardinteraction) guidelines, enabling users with assistive technologies and keyboard-only navigation to interact effectively. The following keyboard shortcuts are supported by the Switch component.
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Space</kbd> | When the switch has focus, pressing the Space key changes the state of the switch. |
+| <kbd>Tab</kbd> | Moves focus to the Switch component. |
+| <kbd>Shift + Tab</kbd> | Moves focus away from the Switch component. |
+| <kbd>Space</kbd> | Toggles the Switch state between on and off when the Switch has focus. |
 
 ## Ensuring accessibility
 
