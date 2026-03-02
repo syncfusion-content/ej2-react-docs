@@ -37,14 +37,14 @@ To use the image export functionality, we should inject the `ImageExport` module
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/printAndExport-cs2/app/index.jsx %}
+{% include code-snippet/treemap/code-path/printAndExport-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/printAndExport-cs2/app/index.tsx %}
+{% include code-snippet/treemap/code-path/printAndExport-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/treemap/printAndExport-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/treemap/preview-sample/printAndExport-cs2" %}
 
 We can get the image file as base64 string for the JPEG and PNG formats. The treemap can be exported to image as a base64 string using the [`export`](https://ej2.syncfusion.com/react/documentation/api/treemap#export) method. There are four parameters required: image type, file name, orientation of the exported PDF document which must be set as **null** for image export and finally **allowDownload** which should be set as **false** to return base64 string.
 

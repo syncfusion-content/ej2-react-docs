@@ -33,14 +33,14 @@ Equal color mapping is used to fill colors to each item by specifying equal valu
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/colormapping-cs2/app/index.jsx %}
+{% include code-snippet/treemap/code-path/colormapping-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/colormapping-cs2/app/index.tsx %}
+{% include code-snippet/treemap/code-path/colormapping-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/treemap/colormapping-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/treemap/preview-sample/colormapping-cs2" %}
 
 ## Desaturation color mapping
 

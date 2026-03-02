@@ -208,14 +208,14 @@ Using linear gradient, colors will be applied in a linear progression. The start
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/pointers-cs7/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/pointers-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/pointers-cs7/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/pointers-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/linear-gauge/pointers-cs7" %}
+ {% previewsample "page.domainurl/code-snippet/linear-gauge/preview-sample/pointers-cs7" %}
 
 ### Radial Gradient
 

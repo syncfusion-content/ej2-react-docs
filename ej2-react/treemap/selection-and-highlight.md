@@ -35,11 +35,11 @@ The [`fill`](https://ej2.syncfusion.com/react/documentation/api/treemap/highligh
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/selectionAndHighlight-cs2/app/index.jsx %}
+{% include code-snippet/treemap/code-path/selectionAndHighlight-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/selectionAndHighlight-cs2/app/index.tsx %}
+{% include code-snippet/treemap/code-path/selectionAndHighlight-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/treemap/selectionAndHighlight-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/treemap/preview-sample/selectionAndHighlight-cs2" %}

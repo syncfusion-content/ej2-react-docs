@@ -63,14 +63,14 @@ In JSON table data binding, each JSON object contains an X-axis data point as ro
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/working-with-data-cs3/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/working-with-data-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/working-with-data-cs3/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/working-with-data-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/heatmap/working-with-data-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/heatmap/preview-sample/working-with-data-cs3" %}
 
 ### JSON data - Cell binding
 

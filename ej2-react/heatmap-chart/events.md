@@ -48,14 +48,14 @@ The [cellRender](https://ej2.syncfusion.com/react/documentation/api/heatmap#cell
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/events-cs3/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/events-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/events-cs3/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/events-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/heatmap/events-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/heatmap/preview-sample/events-cs3" %}
 
 ## cellSelected
 

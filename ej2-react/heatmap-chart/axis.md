@@ -159,14 +159,14 @@ The axis labels can be rotated to the desired angles by using the [labelRotation
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/axis-cs13/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/axis-cs13/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/axis-cs13/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/axis-cs13/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/heatmap/axis-cs13" %}
+ {% previewsample "page.domainurl/code-snippet/heatmap/preview-sample/axis-cs13" %}
 
 ### Label formatting
 

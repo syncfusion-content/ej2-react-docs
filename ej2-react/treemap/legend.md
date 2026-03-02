@@ -64,14 +64,14 @@ In default mode, the legends have symbols with legend labels that are used to id
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/legend-cs3/app/index.jsx %}
+{% include code-snippet/treemap/code-path/legend-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/legend-cs3/app/index.tsx %}
+{% include code-snippet/treemap/code-path/legend-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/treemap/legend-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/treemap/preview-sample/legend-cs3" %}
 
 <!-- markdownlint-disable MD036 -->
 
