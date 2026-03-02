@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Change size in React Switch component
 
-The different Switch sizes available are default and small. To reduce the size of default Switch to small, set the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/switch/#cssclass) property to `e-small`.
+Switch components are available in two size variants: default and small. Render a compact Switch by setting the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/switch/#cssclass) property to `e-small`, useful for space-constrained layouts or mobile interfaces where smaller controls improve usability.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

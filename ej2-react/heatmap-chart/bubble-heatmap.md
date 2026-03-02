@@ -67,14 +67,14 @@ To render the data points with bubble sector, set the [bubbleType](https://ej2.s
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs3/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/bubble-heatmap-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs3/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/bubble-heatmap-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/heatmap/bubble-heatmap-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/heatmap/preview-sample/bubble-heatmap-cs3" %}
 
 ### Combining size and color bubble types
 

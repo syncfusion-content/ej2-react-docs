@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Styles in React Speed dial component
 
-This section briefs different ways to style SpeedDial component.
+Customize the SpeedDial component's appearance using various styling options and CSS classes. This section covers button customization, predefined styles, and advanced visual effects.
 
 ## SpeedDial button
 
-You can customize the icon and text of React Speed Dial button using [`openIconCss`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#openiconcss), [`closeIconCss`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#closeiconcss) and [`content`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#content) properties.
+Customize the SpeedDial button's appearance using the [`openIconCss`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#openiconcss), [`closeIconCss`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#closeiconcss), and [`content`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#content) properties. These properties control what the button displays when the menu is closed and when it's open.
 
 ### Icon only
 
-You can use the [`openIconCss`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#openiconcss) and [`closeIconCss`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#closeiconcss) properties to show icons in speed dial button. You can also show tooltip on hover to show additional details to end-user by setting `title` attribute.
+Display only icons in the SpeedDial button using the [`openIconCss`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#openiconcss) and [`closeIconCss`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#closeiconcss) properties. These show different icons depending on whether the popup is open or closed. Add a `title` attribute to display a tooltip on hover, providing users with context about the button's purpose.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -33,7 +33,7 @@ You can use the [`openIconCss`](https://ej2.syncfusion.com/react/documentation/a
 
 ### Text only
 
-You can show only text in Speed Dial button by setting [`content`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#content) property  without setting icon properties..
+Display only text in the SpeedDial button by setting the [`content`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#content) property without specifying icon properties. This creates a text-based button suitable for clear, label-based interactions.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -48,7 +48,7 @@ You can show only text in Speed Dial button by setting [`content`](https://ej2.s
 
 ### Icon with text
 
-You show icon and text in SpeedDial button using [`openIconCss`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#openiconcss), [`closeIconCss`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#closeiconcss) and [`content`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#content) properties together.
+Display both icon and text in the SpeedDial button by using the [`openIconCss`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#openiconcss), [`closeIconCss`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#closeiconcss), and [`content`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#content) properties together. This combination provides clear visual and textual identification.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -63,7 +63,7 @@ You show icon and text in SpeedDial button using [`openIconCss`](https://ej2.syn
 
 ## Disabled
 
-You can enable or disable the SpeedDial component using [`disabled`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#disabled) property.
+Prevent user interaction with the SpeedDial component by setting the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#disabled) property to `true`. When disabled, the button appears grayed out and cannot be clicked.
 
 ```ts
 {/* Import the Speed Dial. */}
@@ -83,16 +83,16 @@ export default App;
 
 ## cssClass
 
-The React Speed Dial supports the following predefined styles that can be defined using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#cssclass) property. You can customize by setting the `cssClass` property with the below defined class.
+Apply predefined semantic styles to the SpeedDial button using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#cssclass) property. These styles provide visual indicators for different action types and priorities.
 
-| cssClass | Description |
-| -------- | -------- |
-| e-primary | Used to represent a primary action. |
-| e-outline |  Used to represent an appearance of button with outline. |
-| e-info |  Used to represent an informative action. |
-| e-success | Used to represent a positive action. |
-| e-warning | Used to represent an action with caution. |
-| e-danger | Used to represent a negative action. |
+| cssClass | Description | Use Case |
+| -------- | ----------- | -------- |
+| e-primary | Primary action styling (default appearance). | Use for main user actions. |
+| e-outline | Button with outline appearance instead of solid fill. | Use for secondary actions. |
+| e-info | Informative action styling. | Use for help or information actions. |
+| e-success | Positive action styling indicating completion. | Use for confirm or success actions. |
+| e-warning | Cautionary action styling for warnings. | Use for warning or alert actions. |
+| e-danger | Negative action styling for destructive actions. | Use for delete or destructive actions. |
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -107,7 +107,7 @@ The React Speed Dial supports the following predefined styles that can be define
 
 ## Visible
 
-You can set the Speed Dial button to visible/hidden state using [`visible`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#visible) property.
+Control the visibility of the SpeedDial button using the [`visible`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#visible) property. Set it to `true` to show the button or `false` to hide it. This is useful for conditionally displaying the SpeedDial based on user permissions or context.
 
 ```ts
 {/* Import the Speed Dial. */}
@@ -127,7 +127,7 @@ export default App;
 
 ## Tooltip
 
-You can show tooltip on hover to show additional details to end-user by setting [`title`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialItemModel/#title) to Speed Dial button.
+Display a tooltip on hover over the SpeedDial button by setting the `title` attribute. Tooltips provide helpful context about the button's purpose without cluttering the UI, improving user experience.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -142,7 +142,7 @@ You can show tooltip on hover to show additional details to end-user by setting 
 
 ## Opens on hover
 
-You can use [`opensOnHover`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#opensonhover) property to open actions items on hover itself. By default action items displayed only when clicking the speed dial button.
+Enable the [`opensOnHover`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#opensonhover) property to automatically open action items when the user hovers over the SpeedDial button. By default, items only display on click. Enabling hover opening creates a more fluid interaction pattern.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -155,9 +155,9 @@ You can use [`opensOnHover`](https://ej2.syncfusion.com/react/documentation/api/
 
  {% previewsample "page.domainurl/code-snippet/speed-dial/styles-cs6" %}
 
- ## Customized icon
+## Customized icon
 
-You can use the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#cssclass) property to customize the appearance of the speedDial component in its default primary state. Below example demonstrates the `cssClass` property usage in speedDial.
+Create custom button appearances by using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#cssclass) property to apply custom CSS styles. Define your own CSS rules to customize colors, sizes, borders, and other visual properties. The following example demonstrates how to apply custom styling to the SpeedDial button.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

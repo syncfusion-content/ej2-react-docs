@@ -21,28 +21,11 @@ The event fires once the data binding process completes but before the initial l
 
 The following code example explains the data loaded event in the diagram.
 
-{% raw %}
-
-```javascript
-  function dataLoaded(args) {
-    //we can get diagram instance in args.
-    console.log(args);
-  }
-  <DiagramComponent id="diagram" width={'100%'} height={'600px'}
-      nodes={nodes} connectors={connectors}
-      // Event Triggers when the state of the layout rendering changes
-      dataLoaded={dataLoaded}
-      //Uses layout to auto-arrange nodes on the diagram page
-      layout={{
-          //Sets layout type
-          type: 'HierarchicalTree',
-      }}>
-      {/* Inject necessary services for the diagram */}
-      <Inject services={[HierarchicalTree]} />
-  </DiagramComponent>
-```
-
-{% endraw %}
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/reactCurlyExamples/data-loaded-cs1/app/index.jsx %}
+{% endhighlight %}
+{% endtabs %}
 
 ## ExpandStateChange Event
 
@@ -87,25 +70,10 @@ The [`layoutUpdated`](https://ej2.syncfusion.com/react/documentation/api/diagram
 
 The event includes a state parameter that indicates whether the layout process is starting or finishing, allowing developers to implement loading indicators, measure layout performance, or coordinate with other application components that depend on layout completion.
 
-{% raw %}
-
-```javascript
-function handleLayoutUpdated(args){
-        if (args.state === 'Started') {
-            console.log('Layout started rendering');
-        }
-}
-
-<DiagramComponent id="diagram" width={'100%'} height={'550px'}
-    nodes={nodes} connectors={connectors}
-    layout={{ type: 'HierarchicalTree'}}
-    // Event Triggers when the state of the layout rendering changes
-    layoutUpdated={handleLayoutUpdated}>
-    {/* Inject necessary services for the diagram */}
-    <Inject services={[HierarchicalTree]} />
-</DiagramComponent>
-```
-
-{% endraw %}
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/reactCurlyExamples/layout-update/app/index.jsx %}
+{% endhighlight %}
+{% endtabs %}
 
 These layout events work together to provide comprehensive control over the automatic layout life cycle, from initial data loading through final rendering completion. They enable developers to create responsive, interactive diagram experiences with proper feedback and customization capabilities.

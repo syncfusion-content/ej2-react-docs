@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React Check box component
 
-This article describes the API migration process of Checkbox component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
+This article describes the API migration process of the CheckBox component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## Properties
 
@@ -18,7 +18,7 @@ This article describes the API migration process of Checkbox component from Esse
 
 | Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
-| Checkbox label | **Property:** *text* <br/><br/> `<EJ.CheckBox id="checkbox" text="Checkbox"></EJ.CheckBox>` | **Property:** *label* <br/><br/> `<CheckBoxComponent id="checkbox" label="Checkbox"></CheckBoxComponent>` |
+| CheckBox label | **Property:** *text* <br/><br/> `<EJ.CheckBox id="checkbox" text="Checkbox"></EJ.CheckBox>` | **Property:** *label* <br/><br/> `<CheckBoxComponent id="checkbox" label="Checkbox"></CheckBoxComponent>` |
 | Checked state | **Property:** *enableTriState and checkState* <br/><br/> `<EJ.CheckBox id="checkbox" enableTriState={true} text="Checked state" checkState="check"></EJ.CheckBox>` | **Property:** *checked* <br/><br/> `<CheckBoxComponent id="checkbox" checked={true} label="Checked state"></CheckBoxComponent>` |
 | Indeterminate state | **Property:** *enableTriState and checkState* <br/><br/> `<EJ.CheckBox id="checkbox" text="Indeterminate state" enableTriState={true} checkState="indeterminate"></EJ.CheckBox>` | **Property:** *indeterminate* <br/><br/> `<CheckBoxComponent id="indeterminate" indeterminate={true} label="Intermediate state"></CheckBoxComponent>` |
 | Adding custom css class | **Property:** *cssClass* <br/><br/> `<EJ.CheckBox id="checkbox" text="Checkbox" cssClass="custom-class"></EJ.CheckBox>` | **Property:** *cssClass* <br/><br/> `<CheckBoxComponent id="checkbox" cssClass="custom-class" label="Checkbox"></CheckBoxComponent>` |

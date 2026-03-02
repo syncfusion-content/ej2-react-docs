@@ -109,7 +109,7 @@ The following code example shows how to add legend in the gauge.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/circulargauge/gauge-legend-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/circulargauge/preview-sample/gauge-legend-cs1" %}
 
 ## Toggle option in legend
 

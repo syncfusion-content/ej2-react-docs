@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Chips component
 
-The Chips component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Chips component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Chips component is outlined below.
+The following table outlines the accessibility compliance of the Chips component:
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -32,6 +32,8 @@ The accessibility compliance for the Chips component is outlined below.
         margin: 0.5em 0;
     }
 </style>
+**Legend:**
+
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
@@ -40,32 +42,32 @@ The accessibility compliance for the Chips component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Chips component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following ARIA attributes are used in the Chips component:
+The Chips component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet accessibility requirements. The following ARIA attributes are used in the Chips component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `role=listbox` | Indicates the ChipList component wrapper element as `listbox`. |
-| `role=option` | Used to convey a significant and contextual message to the user(ChipList). |
-| `role=button` | Used to convey a significant and contextual message to the user(Single Chip). |
-| `aria-label` | Provides an accessible name for the Chip. |
-| `aria-selected` | Indicates the element is selected. |
-| `aria-disabled` | Indicates element is perceivable but disabled. |
-| `aria-multiselectable` | Indicates multiple items to be selected. |
+| `role=listbox` | Marks the ChipList wrapper element as a listbox for screen readers. |
+| `role=option` | Identifies selectable chips within the ChipList (for multiple selection). |
+| `role=button` | Identifies a single chip that triggers actions or events. |
+| `aria-label` | Provides an accessible name for the chip. |
+| `aria-selected` | Indicates whether a chip is currently selected. |
+| `aria-disabled` | Indicates that a chip is perceivable but disabled and not operable. |
+| `aria-multiselectable` | Indicates that multiple chips can be selected from the list. |
 
 ## Keyboard interaction
 
-The Chips component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/button/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely entirely on keyboard navigation. The following keyboard shortcuts are supported by the Chips component.
+The Chips component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/button/#keyboardinteraction) guideline, making it accessible for people who use assistive technologies and those who rely entirely on keyboard navigation. The following keyboard shortcuts are supported:
 
-| Keyboard shortcuts | Actions |
-|------------|-------------------|
-| <kbd>Enter / Space</kbd> | Selects the targeted chip from the ChipList/ChipCollection. |
-| <kbd>Delete / Backspace </kbd> | Deletes the targeted chip from the ChipList/ChipCollection. |
+| Keyboard shortcut | Action |
+| --- | --- |
+| <kbd>Enter / Space</kbd> | Selects the focused chip in the ChipList or ChipCollection. |
+| <kbd>Delete / Backspace</kbd> | Deletes the focused chip from the ChipList or ChipCollection. |
 
 ## Ensuring accessibility
 
-The Chips component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools, during automated testing.
+The Chips component's accessibility is validated using [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Chips component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/chips.html) in a new window to evaluate the accessibility of the Chips component with accessibility tools.
+The accessibility compliance of the Chips component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/chips.html) in a new window to evaluate the Chips component's accessibility with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/chips.html" %}
 

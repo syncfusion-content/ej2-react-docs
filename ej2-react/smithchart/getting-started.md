@@ -183,7 +183,7 @@ You can add and customize the markers in the Smith Chart. This can be achieved b
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs4" %}
+{% previewsample "page.domainurl/code-snippet/smithchart/preview-sample/getting-started-cs4" %}
 
 ## Enable dataLabel to Smith Chart marker
 
@@ -198,7 +198,7 @@ You can add data labels to improve the readability of the Smith Chart. This can 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs5" %}
+{% previewsample "page.domainurl/code-snippet/smithchart/preview-sample/getting-started-cs5" %}
 
 ## Enable legend for Smith Chart
 
@@ -206,14 +206,14 @@ You can use legend for the Smith Chart by setting the [`visible`](https://ej2.sy
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs6/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs6/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs6" %}
+{% previewsample "page.domainurl/code-snippet/smithchart/preview-sample/getting-started-cs6" %}
 
 ## Enable tooltip for Smith Chart series
 

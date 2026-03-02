@@ -81,7 +81,7 @@ Now you can add the Progress Bar component to your application. Update the `src/
 ```ts
 import {ProgressBarComponent} from '@syncfusion/ej2-react-progressbar';
 import * as React from 'react';
-import { createRoot } from 'react-dom/client';
+import * as ReactDOM from "react-dom";
 
 function App() {
   return (
@@ -90,7 +90,8 @@ function App() {
   )
 };
 export default App;
-createRoot(document.getElementById('root')).render(<App />);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
 ```
 
 ## Run the Application

@@ -2,15 +2,15 @@
 layout: post
 title: Model binding in React Query builder component | Syncfusion
 description: Learn here all about Model binding in Syncfusion React Query builder component of Syncfusion Essential JS 2 and more.
-control: Model binding 
+control: QueryBuilder 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Model binding in React Query builder component
+# Model binding in React Query Builder component
 
-Model binding allows to bind properties for the components used in field, operator, and value columns. To implement model binding, assign fieldModel, operatorModel, and valueModel properties in QueryBuilder.
+Model binding allows you to configure properties for components used in the field, operator, and value columns. Implement model binding by assigning the `fieldModel`, `operatorModel`, and `valueModel` properties in the Query Builder configuration.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

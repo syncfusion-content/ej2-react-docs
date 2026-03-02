@@ -48,11 +48,11 @@ Tooltip can be rendered as a custom component using the [`template`](https://ej2
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/tooltip-cs3/app/index.jsx %}
+{% include code-snippet/treemap/code-path/tooltip-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/tooltip-cs3/app/index.tsx %}
+{% include code-snippet/treemap/code-path/tooltip-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/treemap/tooltip-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/treemap/preview-sample/tooltip-cs3" %}

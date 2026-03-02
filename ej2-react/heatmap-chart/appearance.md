@@ -188,14 +188,14 @@ The following example demonstrates how to add a data label template for array ta
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/appearance-cs11/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs11/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/appearance-cs11/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs11/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/heatmap/appearance-cs11" %}
+ {% previewsample "page.domainurl/code-snippet/heatmap/preview-sample/appearance-cs11" %}
 
 **Cell**
 

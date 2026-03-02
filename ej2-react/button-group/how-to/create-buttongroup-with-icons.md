@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create buttongroup with icons in React Button group component | Syncfusion
+title: Create buttongroup with icons | Syncfusion
 description: Learn here all about Create buttongroup with icons in Syncfusion React Button group component of Syncfusion Essential JS 2 and more.
 control: Create buttongroup with icons 
 platform: ej2-react
@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Create buttongroup with icons in React Button group component
 
-ButtonGroup with icons can be achieved by using `iconCss` property of the Button component.
+Display icons in a ButtonGroup by using the `iconCss` property of the Button component. Icons enhance visual recognition and improve user experience in button groups.
 
-The following example illustrates how to create ButtonGroup with icons.
+The following example demonstrates how to create a ButtonGroup with icons:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

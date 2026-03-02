@@ -187,10 +187,10 @@ The following example shows how to get these events.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/contextmenu/es5events-cs1/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/es5events-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/contextmenu/es5events-cs1/app/index.tsx %}
+{% include code-snippet/diagram/reactCurlyExamples/es5events-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

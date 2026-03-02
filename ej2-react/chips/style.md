@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Style in React Chips component
 
-The following content provides the exact CSS structure that can be used to modify the component's appearance based on user preferences.
+Customize the Chips component's appearance by overriding default CSS styles. The following examples demonstrate common styling patterns. Use these CSS structures as a foundation and adapt them according to your design requirements.
 
-## Customizing the Chip text
+## Chip text styling
 
-Use the following CSS to customize the Chip text properties.
+Use the following CSS to customize chip text properties such as font size, color, and weight:
 
 ```css
 .e-chip .e-chip-text {
@@ -24,9 +24,9 @@ Use the following CSS to customize the Chip text properties.
 }
 ```
 
-## Customizing the Chip icon
+## Chip icon styling
 
-Use the following CSS to customize the Chip icon properties.
+Use the following CSS to customize chip icon properties such as background image and opacity:
 
 ```css
 .e-chip .e-icon {
@@ -35,9 +35,9 @@ Use the following CSS to customize the Chip icon properties.
 }
 ```
 
-## Customizing the Chip delete button
+## Chip delete button styling
 
-Use the following CSS to customize the Chip delete button appearance.
+Use the following CSS to customize the delete button appearance, including color and font size:
 
 ```css
 .e-chip-list .e-chip .e-chip-delete.e-dlt-btn {
@@ -46,9 +46,9 @@ Use the following CSS to customize the Chip delete button appearance.
 }
 ```
 
-## Customizing the Chip outline
+## Outline chip styling
 
-Use the following CSS to customize the Chip outline.
+Use the following CSS to customize the outline chip border appearance:
 
 ```css
 .e-chip-list .e-chip.e-outline {
@@ -57,9 +57,9 @@ Use the following CSS to customize the Chip outline.
 }
 ```
 
-## Customizing the Chip on selection
+## Chip selection styling
 
-Use the following CSS to customize the Chip on selection.
+Use the following CSS to customize chip appearance when selected. Single and multiple selection styles can be defined separately:
 
 ```css
 /* To customize single Chip on selection */
@@ -75,9 +75,9 @@ Use the following CSS to customize the Chip on selection.
 }
 ```
 
-## Customizing the Chip avatar text
+## Chip avatar text styling
 
-Use the following CSS to customize the Chip avatar text properties.
+Use the following CSS to customize avatar text properties such as background color and text color:
 
 ```css
 .e-chip-list .e-chip .e-chip-avatar {
@@ -86,9 +86,9 @@ Use the following CSS to customize the Chip avatar text properties.
 }
 ```
 
-## Customizing the Chips height
+## Chip height sizing
 
-Use the following CSS to customize the Chips height.
+Use the following CSS to customize the height of chips in a ChipList:
 
 ```css
 .e-chip-list.e-chip {

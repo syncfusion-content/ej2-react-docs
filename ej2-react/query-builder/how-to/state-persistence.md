@@ -2,15 +2,15 @@
 layout: post
 title: State persistence in React Query builder component | Syncfusion
 description: Learn here all about State persistence in Syncfusion React Query builder component of Syncfusion Essential JS 2 and more.
-control: State persistence 
+control: QueryBuilder 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# State persistence in React Query builder component
+# State persistence in React Query Builder component
 
-State persistence allows you to maintain the current state in the browser’s `localStorage` even if the browser is refreshed or if you move to the next page within the browser. State persistence stores the Query Builder’s [`rule`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#rule) object in the local storage when the [`enablePersistence`](https://ej2.syncfusion.com/react/documentation/state-persistence/) is defined to true.
+State persistence automatically saves the Query Builder's configuration in the browser's local storage, preserving the [`rule`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#rule) object across page refreshes and navigation. Enable this feature by setting [`enablePersistence`](https://ej2.syncfusion.com/react/documentation/state-persistence/) to true. This is particularly useful for long-form queries or multi-step workflows where users should not lose their progress.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

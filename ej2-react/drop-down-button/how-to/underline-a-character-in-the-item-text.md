@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Underline a character in the item text in React Drop down button component
 
-Underline a particular character in a text can be handled in [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#beforeitemrender)event by adding `<u>` tag in between the text and given as innerHTML in `li` rendering.
+Highlight specific characters in dropdown items by adding underline formatting using the [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#beforeitemrender) event. Insert HTML `<u>` tags around the desired text and set it as the item's innerHTML to create underlined characters.
 
-In the following example, `C` is underlined in the text `Copy`.
+The following example demonstrates how to underline the character `C` in the text `Copy`:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

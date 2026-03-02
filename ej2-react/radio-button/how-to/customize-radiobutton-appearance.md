@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Customize radiobutton appearance in React Radio button component
 
-You can customize the appearance of the RadioButton component by using the CSS rules. Define own CSS rules according to your requirement and assign the class name to the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#cssclass) property.
+Customize the RadioButton's visual appearance by applying custom CSS rules through the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#cssclass) property. Define CSS classes targeting the RadioButton element, then apply them to change styling attributes like background color, border color, and size.
 
-The background and border color of the RadioButton is customized through the custom classes to create the primary, success, warning, danger, and info type of radio button.
+Create semantic style variants (primary, success, warning, danger, info) by defining custom CSS classes that override the default RadioButton colors and borders. This approach allows you to match your application's design system and provide visual feedback for different states or categories.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

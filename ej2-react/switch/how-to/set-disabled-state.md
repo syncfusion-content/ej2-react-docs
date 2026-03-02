@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Set disabled state in React Switch component
 
-Switch can be disabled by setting the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/switch/#disabled) property to true.
+Prevent user interaction with the Switch component by setting the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/switch/#disabled) property to `true`. Disabled Switches appear grayed out and cannot be toggled, used for read-only states or when the option is temporarily unavailable.
 
-The following example illustrates how to disable support in Switch component.
+The following example demonstrates how to disable the Switch component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

@@ -66,14 +66,14 @@ The appearance of the needle pointer can be customized by using [`needleStartWid
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs4/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs4/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/circulargauge/gauge-pointers-cs4" %}
+ {% previewsample "page.domainurl/code-snippet/circulargauge/preview-sample/gauge-pointers-cs4" %}
 
 ## RangeBar Pointer
 

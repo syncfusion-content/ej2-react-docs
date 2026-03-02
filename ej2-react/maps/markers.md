@@ -230,14 +230,14 @@ To enable clustering for markers, set the [`allowClustering`](https://ej2.syncfu
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs71/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs71/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs71/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs71/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/maps/default-map-cs71" %}
+ {% previewsample "page.domainurl/code-snippet/maps/preview-sample/default-map-cs71" %}
 
 ### Customization of marker cluster
 

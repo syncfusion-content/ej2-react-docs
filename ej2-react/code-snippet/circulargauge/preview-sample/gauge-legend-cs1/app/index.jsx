@@ -1,8 +1,6 @@
 
-
-
 import * as React from "react";
-import { createRoot } from "react-dom/client";
+import * as ReactDOM from "react-dom";
 import { CircularGaugeComponent, Legend, AxesDirective, AxisDirective, RangesDirective, RangeDirective, Inject } from '@syncfusion/ej2-react-circulargauge';
 
 function App() {
@@ -38,7 +36,5 @@ function App() {
   );
 }
 
-const root = createRoot(document.getElementById('container')!);
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
-
-

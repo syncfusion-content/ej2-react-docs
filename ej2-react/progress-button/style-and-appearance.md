@@ -14,10 +14,21 @@ To modify the ProgressButton appearance, you need to override the default CSS of
 
 CSS Class | Purpose of Class
 -----|-----
-|.e-progress-btn|To customize the progress button
-|.e-progress-btn:hover|To customize the progress button on hover
-|.e-progress-btn:focus|To customize the progress button on focus
-|.e-progress-btn .e-spinner-pane .e-spinner-inner svg .e-path-circle|To customize the progress button spinner
+|.e-progress-btn|Container for the ProgressButton component
+|.e-progress-btn.e-primary|Applies primary styling to the progress button
+|.e-progress-btn.e-success|Applies success styling to the progress button
+|.e-progress-btn.e-info|Applies info styling to the progress button
+|.e-progress-btn.e-warning|Applies warning styling to the progress button
+|.e-progress-btn.e-danger|Applies danger styling to the progress button
+|.e-progress-btn.e-outline|Applies outline styling to the progress button
+|.e-progress-btn.e-flat|Applies flat styling to the progress button
+|.e-progress-btn:hover|Progress button styling on mouse hover
+|.e-progress-btn:focus|Progress button styling when focused via keyboard
+|.e-progress-btn:active|Progress button styling when pressed or active
+|.e-progress-btn:disabled|Styling for disabled progress button state
+|.e-progress-btn .e-progress-wrapper|Container for the progress bar fill
+|.e-progress-btn .e-spinner-pane|Container for the spinner animation
+|.e-progress-btn .e-spinner-pane .e-spinner-inner svg .e-path-circle|SVG circle element styling for the spinner animation
 
 ## See also
 

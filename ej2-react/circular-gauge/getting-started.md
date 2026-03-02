@@ -171,14 +171,14 @@ Legends provide information about the ranges displayed in the circular gauge. En
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-legend-cs1/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-legend-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-legend-cs1/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-legend-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/circulargauge/gauge-legend-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/circulargauge/preview-sample/gauge-legend-cs1" %}
 
 ## Run the application
 
@@ -192,14 +192,14 @@ The output appears as follows.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-legend-cs1/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-legend-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-legend-cs1/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-legend-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/circulargauge/gauge-legend-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/circulargauge/preview-sample/gauge-legend-cs1" %}
 
 > Refer to the [React Circular Gauge](https://www.syncfusion.com/react-components/react-circular-gauge) feature tour page for its groundbreaking feature representations. You can also explore our [React Circular Gauge Component example](https://ej2.syncfusion.com/react/demos/#/material3/circular-gauge/default) that shows how to render the Circular Gauge in React.
 

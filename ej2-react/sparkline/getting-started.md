@@ -44,7 +44,7 @@ npm create vite@latest my-app
 
 This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
 
-![Initial_setup](./images/Initial-setup.jpg)
+![Initial_setup](../images/Initial-setup.jpg)
 
 To set up a React application in TypeScript environment, run the following command.
 
@@ -181,11 +181,11 @@ The Sparkline provides additional information through a tooltip that appears whe
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/sparkline/getting-started-cs3/app/index.jsx %}
+{% include code-snippet/sparkline/code-path/getting-started-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/sparkline/getting-started-cs3/app/index.tsx %}
+{% include code-snippet/sparkline/code-path/getting-started-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/sparkline/getting-started-cs3" %}
+{% previewsample "page.domainurl/code-snippet/sparkline/preview-sample/getting-started-cs3" %}

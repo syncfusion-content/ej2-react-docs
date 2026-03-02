@@ -10,7 +10,9 @@ domainurl: ##DomainURL##
 
 # Set text in React Switch component
 
-This section explains how to set [`onLabel`](https://ej2.syncfusion.com/react/documentation/api/switch/#onlabel) and [`offLabel`](https://ej2.syncfusion.com/react/documentation/api/switch/#offlabel) texts on Switch. In the following example, `onLabel` is set as `ON` and `offLabel` is set as `OFF`.
+Display custom text labels on Switch states by setting the [`onLabel`](https://ej2.syncfusion.com/react/documentation/api/switch/#onlabel) and [`offLabel`](https://ej2.syncfusion.com/react/documentation/api/switch/#offlabel) properties. These labels clarify the Switch function or state, improving accessibility and usability in interfaces where the toggle purpose is not immediately obvious.
+
+In the following example, `onLabel` displays "ON" and `offLabel` displays "OFF".
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

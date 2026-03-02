@@ -10,15 +10,17 @@ domainurl: ##DomainURL##
 
 # Disable in React Button group component
 
-## Particular button
+Disable buttons in a ButtonGroup to prevent user interaction. You can disable individual buttons or the entire ButtonGroup.
 
-To disable a particular button in a ButtonGroup, [`disabled`](https://ej2.syncfusion.com/react/documentation/api/button/#disabled) attribute should be added to corresponding button element.
+## Disable a particular button
 
-## Whole ButtonGroup
+Add the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/button#disabled) attribute to a specific button element to disable only that button within the ButtonGroup.
 
-To disable whole ButtonGroup, `disabled` attribute should be added to all the button elements.
+## Disable the entire ButtonGroup
 
-The following example illustrates how to disable the particular and the whole ButtonGroup.
+Add the `disabled` attribute to all button elements to disable the entire ButtonGroup.
+
+The following example demonstrates how to disable individual buttons and the entire ButtonGroup:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

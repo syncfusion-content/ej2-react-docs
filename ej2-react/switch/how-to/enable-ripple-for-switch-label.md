@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Enable ripple for switch label in React Switch component
 
-By default, label with ripple effect is not available in Switch. You can achieve this by using `rippleMouseHandler` method.
+Add Material Design ripple animations to Switch labels by implementing the `rippleMouseHandler` method. Ripple effects provide visual feedback when users interact with labels, enhancing the tactile response and improving perceived interactivity in your user interface.
 
-The following example illustrates how to enable ripple effect for labels in Switch component.
+The following example demonstrates how to add ripple effects to Switch labels.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

@@ -3,7 +3,7 @@ layout: post
 title: Finetune in ##Platform_Name## Image Editor component | Syncfusion
 description: Learn here all about Finetune in Syncfusion React Image editor component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
-control: Finetune 
+control: Finetune
 publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##

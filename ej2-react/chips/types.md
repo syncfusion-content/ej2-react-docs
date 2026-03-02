@@ -10,16 +10,18 @@ domainurl: ##DomainURL##
 
 # Types in React Chips component
 
-The ChipList component has the following types.
+The Chips component supports four primary types, each serving a different functional purpose. Choose the appropriate type based on the interaction pattern and use case.
 
-* Input Chip
-* Choice Chip
-* Filter Chip
-* Action Chip
+* **Input Chip** - For collecting and organizing user-provided values
+* **Choice Chip** - For single selection from a set of options
+* **Filter Chip** - For multi-selection from a set of options
+* **Action Chip** - For triggering actions or displaying interactive content
 
-## Input Chip
+## Input chip
 
-Input Chip holds information in compact form. It allows converting user input into chips.
+Input chips hold user-generated information in a compact form. They allow users to enter, tag, or organize data efficiently. This type is ideal for search tags, email recipients, or categorization.
+
+The following example demonstrates how to create input chips:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -38,9 +40,11 @@ Input Chip holds information in compact form. It allows converting user input in
 
  {% previewsample "page.domainurl/code-snippet/chips/default-cs3" %}
 
-## Choice Chip
+## Choice chip
 
-Choice Chip allows you to select a single chip from a set of ChipList/ChipCollection items. This can be enabled by setting the [selection](https://ej2.syncfusion.com/react/documentation/api/chips/selection/) property to `Single`.
+Allow users to select a single chip from a set of options by setting the [selection](https://ej2.syncfusion.com/react/documentation/api/chips/selection/) property to `Single`. Choice chips are ideal for radio-button-like selection patterns where only one option can be active at a time. Common use cases include view options, sorting preferences, or theme selection.
+
+The following example demonstrates single selection with choice chips:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -59,9 +63,11 @@ Choice Chip allows you to select a single chip from a set of ChipList/ChipCollec
 
  {% previewsample "page.domainurl/code-snippet/chips/default-cs4" %}
 
-## Filter Chip
+## Filter chip
 
-Filter Chip allows you to select multiple chip from a set of ChipList/ChipCollection items. This can be enabled by setting the [selection](https://ej2.syncfusion.com/react/documentation/api/chips/selection/) property to `Multiple`.
+Enable users to select multiple chips from a set of options by setting the [selection](https://ej2.syncfusion.com/react/documentation/api/chips/selection/) property to `Multiple`. Filter chips are ideal for checkbox-like selection patterns where multiple options can be active simultaneously. Use cases include category filtering, skill selection, or preference checkboxes.
+
+The following example demonstrates multiple selection with filter chips:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -80,9 +86,9 @@ Filter Chip allows you to select multiple chip from a set of ChipList/ChipCollec
 
  {% previewsample "page.domainurl/code-snippet/chips/default-cs5" %}
 
-## Action Chip
+## Action chip
 
-The Action Chip triggers events like click or delete, allowing actions to be performed based on these events.
+Action chips trigger specific events or actions when interacted with. Unlike selection-focused chips, action chips are designed to perform operations such as opening dialogs, submitting forms, or executing commands. Use action chips for buttons, calls-to-action, or interactive content.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -101,9 +107,11 @@ The Action Chip triggers events like click or delete, allowing actions to be per
 
  {% previewsample "page.domainurl/code-snippet/chips/default-cs6" %}
 
-### Deletable Chip
+### Deletable chip
 
-Deletable Chip allows users to delete a chip from ChipList/ChipCollection. This feature can be enabled by setting the [enableDelete](https://ej2.syncfusion.com/react/documentation/api/chips/#enabledelete) property to `true`.
+Enable users to remove chips from the list by setting the [enableDelete](https://ej2.syncfusion.com/react/documentation/api/chips/#enabledelete) property to `true`. A delete icon appears on each chip, allowing users to remove items by clicking it. This feature works with input chips and filter chips to provide a dismissible, user-controlled list.
+
+The following example demonstrates deletable chips:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

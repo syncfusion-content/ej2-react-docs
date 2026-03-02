@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Types and styles in React Button group component
 
-This section explains about different types and styles of ButtonGroup.
+This section explains the different types and styles available in the Syncfusion ButtonGroup component.
 
 ## ButtonGroup types
 
 ### Outline ButtonGroup
 
-An Outline ButtonGroup has a border with transparent background. To create Outline ButtonGroup, `e-outline` class should be added to the target element and to the button element using `cssClass` property.
+An outline ButtonGroup displays buttons with borders and transparent backgrounds. To create an outline ButtonGroup, add the `e-outline` class to the target element and to individual button elements using the `cssClass` property.
 
-The following sample illustrates how to achieve an Outline ButtonGroup,
+The following example demonstrates how to create an outline ButtonGroup:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -31,21 +31,21 @@ The following sample illustrates how to achieve an Outline ButtonGroup,
 
  {% previewsample "page.domainurl/code-snippet/button-group/default-cs10" %}
 
-> ButtonGroup does not have support for `flat` and `round` types.
+> The ButtonGroup component does not support `flat` and `round` button types. Use predefined styles for visual customization.
 
 ## ButtonGroup styles
 
-The Essential<sup style="font-size:70%">&reg;</sup> JS 2 ButtonGroup has the following predefined styles. This can be achieved by adding corresponding class name in each button elements using `cssClass` property.
+The ButtonGroup component provides predefined styles to convey different actions and meanings. Apply these styles by adding the corresponding class name to each button element using the `cssClass` property.
 
 | Class | Description |
 | -------- | -------- |
-| e-primary | Used to represent a primary action. |
-| e-success | Used to represent a positive action. |
-| e-info |  Used to represent an informative action. |
-| e-warning | Used to represent an action with caution. |
-| e-danger | Used to represent a negative action. |
+| e-primary | Represents a primary action. |
+| e-success | Represents a positive action. |
+| e-info | Represents an informative action. |
+| e-warning | Represents an action requiring caution. |
+| e-danger | Represents a negative action. |
 
-The following example illustrates how to achieve predefined styles in ButtonGroup.
+The following example demonstrates how to apply predefined styles to a ButtonGroup:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -58,7 +58,7 @@ The following example illustrates how to achieve predefined styles in ButtonGrou
 
  {% previewsample "page.domainurl/code-snippet/button-group/default-cs11" %}
 
-> Predefined ButtonGroup styles provide only the visual indication. So, ButtonGroup content should define the ButtonGroup style for the users of assistive technologies such as screen readers.
+> Predefined ButtonGroup styles provide visual indication only. Ensure button content clearly describes the button's purpose for users of assistive technologies such as screen readers.
 
 ## See Also
 

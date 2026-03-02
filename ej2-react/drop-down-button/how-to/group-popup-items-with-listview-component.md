@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Group popup items with listview component in React Drop down button component
 
-Header in popup items is possible in DropdownButton by templating entire popup with ListView. Create ListView with id `#listview` and provide it as a [`target`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#target) for DropDownButton.
+Create grouped popup items with headers by integrating the ListView component with DropDownButton. Set the ListView element as the [`target`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#target) property and enable grouping using the [`groupBy`](https://ej2.syncfusion.com/react/documentation/api/list-view/fieldSettings/#groupby) property.
 
-In the following example, ListView element is given as `target` to DropDownButton and header can be achieved by [`groupBy`](https://ej2.syncfusion.com/react/documentation/api/list-view/fieldSettings/#groupby) property.
+The following example demonstrates how to create a grouped dropdown with item headers using ListView:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

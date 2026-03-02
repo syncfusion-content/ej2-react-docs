@@ -14,7 +14,7 @@ You can customize the icon and text of React Floating Action Button(FAB) using [
 
 ## FAB with icon
 
-You can show icon only in Floating Action Button by setting [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/floating-action-button/fab/#iconcss) property. You can show tooltip on hover to show additional details to end-user by setting `title` attribute.
+Display an icon-only Floating Action Button by setting the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/floating-action-button/fab/#iconcss) property. Add the `title` attribute to show a tooltip on hover, providing users with additional context about the button's purpose.
 
 ```ts
 import { FabComponent } from '@syncfusion/ej2-react-buttons';
@@ -48,7 +48,7 @@ export default App;
 
 ### Icon position
 
-You can change the position of icon when showing along with content by setting [`iconPosition`](https://ej2.syncfusion.com/react/documentation/api/floating-action-button/fab/#iconposition) property. By default, the icon is positioned on the left side together with text.
+Control the placement of the icon relative to text by setting the [`iconPosition`](https://ej2.syncfusion.com/react/documentation/api/floating-action-button/fab/#iconposition) property. By default, the icon displays on the left side of the text. Use the `Right` position to place the icon on the right side for alternative visual layouts.
 
 ```ts
 import { FabComponent } from '@syncfusion/ej2-react-buttons';

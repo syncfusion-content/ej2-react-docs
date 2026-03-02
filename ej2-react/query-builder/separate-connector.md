@@ -2,15 +2,15 @@
 layout: post
 title:  Separate Connector in React Query builder component | Syncfusion
 description: Learn here all about Separate Connector in Syncfusion React Query builder component of Syncfusion Essential JS 2 and more.
-control: Separate Connector
+control: QueryBuilder
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Separate Connector in React Query builder component
+# Separate Connector in React Query Builder component
 
-The Query Builder provides the functionality to integrate standalone connectors between rules or groups within the same group. This allows for greater flexibility, as users can connect rules or groups using different connectors, enhancing the complexity and precision of query construction. You can use [`enableSeparateConnector`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#enableSeparateConnector) to perform separate connector functionality.
+Apply individual connectors between rules or groups within the same group using standalone connector dropdowns. This enhancement provides greater flexibility by allowing different connector types (AND/OR) for adjacent rules, enabling more complex and precise query logic. Enable this functionality with the [`enableSeparateConnector`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#enableSeparateConnector) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

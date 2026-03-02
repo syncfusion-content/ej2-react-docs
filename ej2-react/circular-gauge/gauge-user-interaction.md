@@ -95,11 +95,11 @@ Pointers can be dragged over the axis value. This can be achieved by clicking an
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-user-interaction-cs3/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-user-interaction-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-user-interaction-cs3/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-user-interaction-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/circulargauge/gauge-user-interaction-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/circulargauge/preview-sample/gauge-user-interaction-cs3" %}
