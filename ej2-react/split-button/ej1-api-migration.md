@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React Split button component
 
-This article describes the API migration process of SplitButton component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
+Migrate SplitButton implementations from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2 by updating property names, event handlers, and method signatures as outlined in the following reference tables. This guide helps developers transition legacy SplitButton code to leverage the improved React component API with enhanced functionality and simplified configuration.
 
 ## Properties
 

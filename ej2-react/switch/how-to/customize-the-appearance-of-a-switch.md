@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Customize the appearance of a switch in React Switch component
 
-You can customize the appearance of the Switch component using the CSS rules. Define your own CSS rules according to your requirement and assign the class name to the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/switch/#cssClass) property.
+Apply custom CSS styling to Switch components by defining CSS rules and assigning them via the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/switch/#cssClass) property. This approach enables complete visual control over Switch appearance without modifying component functionality.
 
 ## Customize Switch bar and handle
 
-Switch bar and handle can be customized as per requirement using CSS rules. Switch bar and handle customized using `cssClass` property. In the following sample, the `border-radius` CSS property for the Switch bar (`e-switch-inner`) and handle (`e-switch-handle`) elements was changed border radius circle to square shape.
+Reshape and restyle the Switch track (bar) and thumb (handle) elements by applying custom CSS through the `cssClass` property. In the following example, the `border-radius` CSS property transforms the Switch bar (`e-switch-inner`) and handle (`e-switch-handle`) from circular to square appearance, demonstrating corner radius customization.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -29,7 +29,7 @@ Switch bar and handle can be customized as per requirement using CSS rules. Swit
 
 ## Color the Switch
 
-Switch colors can be customized as per the requirement using CSS rules. Switch bar and handle colors customized using `cssClass` property. In the following sample, the Switch bar (`e-switch-inner`) element background and border colors were changed from default colors.
+Customize Switch colors by modifying the background and border properties of the track and handle elements through the `cssClass` property. In the following example, the Switch bar (`e-switch-inner`) element receives custom background and border colors, overriding the default color scheme for branded styling.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

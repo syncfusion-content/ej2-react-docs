@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Quick Access Toolbar in React Image editor component | Syncfusion
-description: Learn here all about Quick Access Toolbar in Syncfusion React Image editor component of Syncfusion Essential JS 2 and more.
+title: Quick Access Toolbar in React Image Editor component | Syncfusion
+description: Learn here all about Quick Access Toolbar in Syncfusion React Image Editor component of Syncfusion Essential JS 2 and more.
 control: Quick Access
 platform: ej2-react
 documentation: ug
@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The quick access toolbars in the Image Editor play a vital role in facilitating interactions with annotations like Rectangle, Ellipse, Line, Arrow, and Path. These toolbars offer a diverse array of tools and options that can be tailored to match the specific requirements and preferences associated with each annotation type. The toolbar is only displayed when an annotation is selected, ensuring a focused and contextual user experience.
 
-The [`showQuickAccessToolbar`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#showquickaccesstoolbar) property controls the visibility of the quick access toolbar. Users have the flexibility to enable or disable this toolbar, add or remove items, and create a personalized set of tools.
+The [`showQuickAccessToolbar`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#showquickaccesstoolbar) property controls the visibility of the quick access toolbar. You can enable or disable this toolbar, add or remove items, and create a personalized set of tools.
 
 ## Add a custom toolbar item
 

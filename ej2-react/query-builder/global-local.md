@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Global local in React Query builder component | Syncfusion
-description: Learn here all about Global local in Syncfusion React Query builder component of Syncfusion Essential JS 2 and more.
-control: Global local 
+title: Globalization and localization in React Query builder component | Syncfusion
+description: Learn here all about Globalization and localization in Syncfusion React Query builder component of Syncfusion Essential JS 2 and more.
+control: QueryBuilder 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Global local in React Query builder component
+# Globalization and localization in React Query Builder component
 
-The `Localization` library allows you to localize default text content of the Query Builder. The Query Builder component has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object.
+The localization library enables you to translate the Query Builder's default text content into other languages and cultures (Arabic, German, French, etc.). Define the locale value and provide a translation object to customize component labels and messages across different regions.
 
-The following list of properties and its values are used in the Query Builder.
+The following table lists the localizable properties and their default English values:
 
 | Locale key words | Text |
 | ------------ | ----------------------- |

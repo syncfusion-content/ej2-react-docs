@@ -10,19 +10,19 @@ domainurl: ##DomainURL##
 
 # Customization in React Chips component
 
-This section explains how to customize styles, leading icons, avatar, and trailing icons in the Chip component.
+This section explains how to customize chip styles, icons, avatars, and other visual elements to match your design requirements.
 
-## Styles
+## Predefined styles
 
-The Chip component has the following predefined styles that can be defined using the [cssClass](https://ej2.syncfusion.com/react/documentation/api/chips/#cssclass) property.
+Apply predefined styles to chips using the [cssClass](https://ej2.syncfusion.com/react/documentation/api/chips/#cssclass) property. These styles convey different semantic meanings and help users understand the chip's purpose at a glance.
 
 | Class | Description |
 | -------- | -------- |
-| e-primary | Represents a primary chip. |
-| e-success | Represents a positive chip. |
-| e-info |  Represents an informative chip. |
-| e-warning | Represents a chip with caution. |
-| e-danger | Represents a negative chip. |
+| e-primary | Represents a primary action or important chip. |
+| e-success | Represents a positive or successful status. |
+| e-info | Represents informational or neutral content. |
+| e-warning | Represents a cautionary or warning status. |
+| e-danger | Represents a negative, error, or destructive action. |
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -41,9 +41,9 @@ The Chip component has the following predefined styles that can be defined using
 
  {% previewsample "page.domainurl/code-snippet/chips/default-cs1" %}
 
-## Leading Icon
+## Leading icon
 
-You can add and customize the leading icon of a chip using the [leadingIconCss](https://ej2.syncfusion.com/react/documentation/api/chips/#leadingiconcss) property.
+Add a leading icon to the left of chip text using the [leadingIconCss](https://ej2.syncfusion.com/react/documentation/api/chips/#leadingiconcss) property. Leading icons provide visual context and help identify chip types or categories at a glance.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -64,7 +64,7 @@ You can add and customize the leading icon of a chip using the [leadingIconCss](
 
 ## Avatar
 
-You can add and customize the avatar of a chip using the [avatarIconCss](https://ej2.syncfusion.com/react/documentation/api/chips/#avatariconcss) property.
+Display an avatar image on the chip using the [avatarIconCss](https://ej2.syncfusion.com/react/documentation/api/chips/#avatariconcss) property. Avatars can represent users, profiles, or entities associated with the chip.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -83,9 +83,9 @@ You can add and customize the avatar of a chip using the [avatarIconCss](https:/
 
  {% previewsample "page.domainurl/code-snippet/chips/avatar-cs3" %}
 
-## Avatar Content
+## Avatar text
 
-You can add and customize the avatar content of a chip using the [avatarText](https://ej2.syncfusion.com/react/documentation/api/chips/#avatartext) property.
+Display text inside the avatar area using the [avatarText](https://ej2.syncfusion.com/react/documentation/api/chips/#avatartext) property. This is useful for initials, numbers, or short labels when displaying avatar images is not feasible.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -104,9 +104,9 @@ You can add and customize the avatar content of a chip using the [avatarText](ht
 
  {% previewsample "page.domainurl/code-snippet/chips/avatar-cs4" %}
 
-## Trailing Icon
+## Trailing icon
 
-You can add and customize the trailing icon of a chip using the [trailingIconCss](https://ej2.syncfusion.com/react/documentation/api/chips/#trailingiconcss) property.
+Add an icon to the right of chip text using the [trailingIconCss](https://ej2.syncfusion.com/react/documentation/api/chips/#trailingiconcss) property. Trailing icons typically represent actions like close/delete or indicate interactive states.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -125,9 +125,9 @@ You can add and customize the trailing icon of a chip using the [trailingIconCss
 
  {% previewsample "page.domainurl/code-snippet/chips/avatar-cs5" %}
 
-## Outline Chip
+## Outline chip
 
-An outline chip has a border with a transparent background. It can be set using the [cssClass](https://ej2.syncfusion.com/react/documentation/api/chips/#cssclass) property.
+Create a chip with a visible border and transparent background using the [cssClass](https://ej2.syncfusion.com/react/documentation/api/chips/#cssclass) property. Outline chips provide a lighter visual weight and are useful for secondary or alternative options.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -148,7 +148,7 @@ An outline chip has a border with a transparent background. It can be set using 
 
 ## Template
 
-The [`template`](https://helpej2.syncfusion.com/react/documentation/api/chips/#template) property of the Chips component allows users to fully customize the layout and design of each chip. By using the `template` property, users can include custom HTML elements, such as links, icons, or additional content.
+The [`template`](https://ej2.syncfusion.com/react/documentation/api/chips/#template) property enables complete customization of chip layout and design. Use templates to include custom HTML elements, nested components, icons, or additional content within each chip for advanced use cases.
 
 
 {% tabs %}

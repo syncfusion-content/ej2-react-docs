@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Toolbar in React Image editor component | Syncfusion
-description: Learn here all about Toolbar in Syncfusion React Image editor component of Syncfusion Essential JS 2 and more.
+title: Toolbar in React Image Editor component | Syncfusion
+description: Learn here all about Toolbar in Syncfusion React Image Editor component of Syncfusion Essential JS 2 and more.
 control: Toolbar 
 platform: ej2-react
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Toolbar in the React Image Editor component
 
-The toolbars in the Image Editor are a key component for interacting with and editing images. They provide a range of tools and options that can be customized to suit the needs and preferences. Add or remove items from the toolbar to create a personalized set of tools, or they can even create their own custom toolbar from scratch. This flexibility and customization allow them to create a unique image editing experience that is tailored to their specific needs and workflow. 
+The toolbars in the Image Editor are a key component for interacting with and editing images. They provide a range of tools and options that can be customized to suit specific needs and preferences. You can add or remove items from the toolbar to create a personalized set of tools, or even create a custom toolbar from scratch. This flexibility and customization enable a unique image editing experience tailored to specific needs and workflows. 
 
 In the Image Editor, the [`toolbar`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#toolbar) property provides the ability to customize the toolbar by adding or removing items, as well as defining a completely custom toolbar. This feature is valuable for creating a personalized image editing experience that aligns with specific requirements and workflows. 
 

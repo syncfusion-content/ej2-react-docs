@@ -10,23 +10,23 @@ domainurl: ##DomainURL##
 
 # Display modes in React Speed dial component
 
-The action items in React Speed Dial can be displayed in `Linear` and `Radial` display modes by setting [`mode`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#mode) property.
+Choose between two layout modes to display SpeedDial action items using the [`mode`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#mode) property: Linear (list-based) and Radial (circular). Select the mode based on your UI design needs and available screen space.
 
 ## Linear display mode
 
-In `Linear` display mode, Speed Dial action items are displayed in a list-like format either horizontally or vertically. By default, Speed Dial items are displayed in `Linear` mode.
+In `Linear` mode, SpeedDial action items are displayed in a straight line format—either horizontally or vertically. This layout is ideal for straightforward action lists. By default, SpeedDial items display in `Linear` mode.
 
 ### Direction
 
-You can open the action items on the top, left, up, and down side of the Speed Dial button by setting [`direction`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#direction) property. The default value is `Auto` where the action items are displayed based on the [`position`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#position)of the Speed Dial.
+Control the direction in which action items extend from the SpeedDial button by setting the [`direction`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#direction) property. The `direction` determines whether items flow left, right, up, or down from the button. By default, the direction is set to `Auto`, where the layout automatically adjusts based on the SpeedDial's [`position`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#position) on the screen to avoid viewport edges.
 
-The `Linear` directions of Speed Dial are as follows:
+The available Linear directions are:
 
-* Left - Action items are displayed on the left side of the button.
-* Right - Action items are displayed on the right side of the button.
-* Up - Action items are displayed on the top of the button.
-* Down - Action items are displayed on the bottom of the button.
-* Auto - Action items display direction auto calculated based on `position` of the Speed Dial. If Speed Dial is position at bottom right, then action items displayed at top.
+* **Left** - Action items extend leftward from the SpeedDial button
+* **Right** - Action items extend rightward from the SpeedDial button
+* **Up** - Action items extend upward from the SpeedDial button
+* **Down** - Action items extend downward from the SpeedDial button
+* **Auto** - Direction auto-calculates based on the SpeedDial's position to keep items visible. For example, if SpeedDial is at bottom-right, items display at top.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -41,4 +41,4 @@ The `Linear` directions of Speed Dial are as follows:
 
 ## Radial display mode (Radial Menu)
 
-In `Radial` mode, Speed Dial action items are displayed in a circular pattern like a radial menu. For more details about radial mode, check out the link [here](https://ej2.syncfusion.com/react/documentation/speed-dial/radial-menu/).
+Display action items in a circular pattern around the SpeedDial button using `Radial` mode. This creates a radial menu layout ideal for presenting multiple options in an organized, visually distinctive way. For comprehensive radial mode customization options including direction, angles, and offset, see the [Radial Menu documentation](https://ej2.syncfusion.com/react/documentation/speed-dial/radial-menu/).

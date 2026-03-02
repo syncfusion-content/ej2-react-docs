@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Annotation in React Image editor component | Syncfusion
-description: Learn here all about Annotation in Syncfusion React Image editor component of Syncfusion Essential JS 2 and more.
-control: Annotation 
+title: Annotation in React Image Editor component | Syncfusion
+description: Learn here all about Annotation in Syncfusion React Image Editor component of Syncfusion Essential JS 2 and more.
+control: Annotation
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##

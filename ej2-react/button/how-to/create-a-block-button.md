@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Create a block button in React Button component
 
-You can customize a Button into a Block Button that will span the entire width of its parent element. To create a Block Button, set the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/button/#cssclass) property to `e-block`.
+A block button spans the entire width of its parent element. To create a block button, set the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/button#cssclass) property to `e-block`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React Button component
 
-This article describes the API migration process of Button component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
+This article describes the API migration process of the Button component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## Properties
 
@@ -26,14 +26,14 @@ This article describes the API migration process of Button component from Essent
 | Adding custom class | **Property:** *cssClass* <br/><br/> `<EJ.Button id="btn" text="Button" cssClass="custom-class"></EJ.Button>` | **Property:** *cssClass* <br/><br/> `<ButtonComponent id="btn" cssClass="custom-class" content="Button"></ButtonComponent>` |
 | Specifies the size of the button | **Property:** *size* <br/><br/> `<EJ.Button id="btn" text="Button" size="small"></EJ.Button>` | **Property:** *cssClass* <br/><br/> `<ButtonComponent id="btn" cssClass="e-small" content="Button"></ButtonComponent>` |
 | Triggers click event repeatedly while pressing the button | **Property:** *repeatButton* <br/><br/> `<EJ.Button id="btn" text="Click" repeatButton={true}></EJ.Button>` | Not applicable |
-| Sets time interval between two consecutive click event on the repeat button | **Property:** *timeInterval* <br/><br/> `<EJ.Button id="btn" text="Click" repeatButton={true} timeInterval="100"></EJ.Button>` | Not applicable |
+| Sets time interval between two consecutive click events on the repeat button | **Property:** *timeInterval* <br/><br/> `<EJ.Button id="btn" text="Click" repeatButton={true} timeInterval="100"></EJ.Button>` | Not applicable |
 | Specifies the type of the button | **Property:** *type* <br/><br/> `<EJ.Button id="btn" text="Submit" buttonType="submit"></EJ.Button>` | Not applicable |
 | Changes normal button into rounded corner | **Property:** *showRoundedCorner* <br/><br/>  `<EJ.Button id="btn" text="Button" showRoundedCorner={true}></EJ.Button>` | Not applicable |
 | Specifies the width of the button | **Property:** *width* <br/><br/> `<EJ.Button id="btn" text="Button" width="150px"></EJ.Button>` | Not applicable |
 | Specifies the height of the button | **Property:** *height* <br/><br/> `<EJ.Button id="btn" text="Button" height="50px"></EJ.Button>` | Not applicable |
 | Adds HTML attributes to the button | **Property:** *htmlAttributes* <br/><br/> var attributes = { disabled: "disabled" }; <br/> `<EJ.Button id="btn" text="Button" htmlAttributes={attributes}></EJ.Button>` | Not applicable |
 | Allows the appearance of the Button to be enhanced and visually appealing | Not applicable | **Property:** *isPrimary* <br/><br/> `<ButtonComponent id="btn" isPrimary={true} content="Button"></ButtonComponent>` |
-| Makes the button toggle from normal to active state | **Property:** *isToggle* <br/><br/> Not applicable | **Property:** *isToggle* <br/><br/> `<ButtonComponent id="btn" isToggle={true} content="Play"></ButtonComponent>`  |
+| Makes the button toggle between normal and active state | **Property:** *isToggle* <br/><br/> Not applicable | **Property:** *isToggle* <br/><br/> `<ButtonComponent id="btn" isToggle={true} content="Play"></ButtonComponent>`  |
 | Specifies the disabled state of the button | **Property:** *enabled* <br/><br/> `<EJ.Button id="btn" text="Button" enabled={false}></EJ.Button>` | **Property:** *disabled* <br/><br/> `<ButtonComponent id="btn" disabled={true} content="Button"></ButtonComponent>` |
 | Enable or disable rendering component in right to left direction | **Property:** *enableRTL* <br/><br/>  `<EJ.Button id="btn" contentType="textandimage" text="Save" prefixIcon="e-icon e-save" enableRTL={true}></EJ.Button>` | **Property:** *enableRtl* <br/><br/> `<ButtonComponent id="btn" enableRtl={true} content="Save" iconCss="e-icons e-save"></ButtonComponent>` |
 

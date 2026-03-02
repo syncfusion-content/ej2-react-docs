@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Open a dialog on popup item click in React Split button component
 
-This section explains about how to open a dialog on SplitButton popup item click. This can be achieved by handling dialog open in [`select`](https://ej2.syncfusion.com/react/documentation/api/split-button#select) event of the SplitButton.
+Display a dialog box when users select items from the SplitButton popup menu. Handle the [`select`](https://ej2.syncfusion.com/react/documentation/api/split-button#select) event to trigger dialog opening with item-specific content or actions, creating a responsive workflow for popup item interactions.
 
-In the following example, Dialog will open while selecting `Update...` item.
+In the following example, a dialog opens when selecting the `Update...` item.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

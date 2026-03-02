@@ -2,21 +2,21 @@
 layout: post
 title: Columns in React Query builder component | Syncfusion
 description: Learn here all about Columns in Syncfusion React Query builder component of Syncfusion Essential JS 2 and more.
-control: Columns 
+control: QueryBuilder 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Columns in React Query builder component
+# Columns in React Query Builder component
 
-The column definitions are used as the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#datasource) schema in the Query Builder. This plays a vital role in rendering column values. The query builder operations such as create or delete conditions and create or delete group they are performed based on the column definitions. The [`field`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel/#field) property of the columns is necessary to map the data source values in the query builder columns.
+Column definitions define the schema for the Query Builder, controlling how fields appear and behave. These definitions map to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#datasource) and directly influence all query operations, including rule and group creation and deletion. The [`field`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel/#field) property is essential for binding data source values to query builder columns.
 
-> If the column field is not specified in the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#datasource), the column values will be empty.
+> If the column field is not specified in the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#datasource), the column values will remain empty.
 
 ## Auto generation
 
-The [`columns`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#columns) are automatically generated when the [`columns`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#columns) declaration is empty or undefined while initializing the query builder. All the columns in the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#datasource) are bound as the query builder columns.
+When the [`columns`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#columns) property is empty or undefined during initialization, the Query Builder automatically generates columns from all fields in the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#datasource).
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -29,24 +29,23 @@ The [`columns`](https://ej2.syncfusion.com/react/documentation/api/query-builder
 
  {% previewsample "page.domainurl/code-snippet/query-builder/default-cs1" %}
 
-> When columns are auto-generated, the column type will be determined from the first record of the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#datasource).
+> When columns are auto-generated, the column type is inferred from the first record in the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#datasource).
 
 ## Labels
 
-By default, the column label is displayed from the column [`field`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel/#field) value. To override the default label, you have to define the [`label`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel/#label) value.
+By default, the column label is derived from the column [`field`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel/#field) name. To customize the label, define the [`label`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel/#label) property.
 
 ## Operators
 
-The operator for a column can be defined in the [`operators`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel/#operators) property.
-The available operators and its supported data types are:
+Define the available operators for each column using the [`operators`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel/#operators) property. The following operators are supported based on data type:
 
 | Operators | Description | Supported Types |
 | ------------ | ----------------------- | ------------------ |
-| startswith  | Checks whether the value begins with the specified value. | String |
-| endswith  | Checks whether the value ends with the specified value. | String |
-| contains | Checks whether the value contains the specified value. | String |
-| equal | Checks whether the value is equal to the specified value. | String Number Date Boolean |
-| notequal | Checks whether the value is not equal to the specified value. | String Number Date Boolean |
+| startswith  | Checks whether the value begins with the specified string. | String |
+| endswith  | Checks whether the value ends with the specified string. | String |
+| contains | Checks whether the value contains the specified string. | String |
+| equal | Checks whether the value equals the specified value. | String, Number, Date, Boolean |
+| notequal | Checks whether the value does not equal the specified value. | String, Number, Date, Boolean |
 | greaterthan | Checks whether the value is greater than the specified value. | Date Number |
 | greaterthanorequal | Checks whether a value is greater than or equal to the specified value. | Date Number |
 | lessthan | Checks whether the value is less than the specified value.| Date Number |

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React ButtonGroup component
 
-The ButtonGroup component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The ButtonGroup component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the ButtonGroup component is outlined below.
+The following table outlines the accessibility compliance of the ButtonGroup component:
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -32,6 +32,8 @@ The accessibility compliance for the ButtonGroup component is outlined below.
         margin: 0.5em 0;
     }
 </style>
+**Legend:**
+
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
@@ -40,7 +42,7 @@ The accessibility compliance for the ButtonGroup component is outlined below.
 
 ## Keyboard interaction
 
-The ButtonGroup component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/button/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the ButtonGroup component.
+The ButtonGroup component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/button/#keyboardinteraction) guideline, making it accessible for people who use assistive technologies and those who rely entirely on keyboard navigation. The following keyboard shortcuts are supported:
 
 ### Normal behavior
 
@@ -54,20 +56,20 @@ The ButtonGroup component followed the [keyboard interaction](https://www.w3.org
 | **Press** | **To do this** |
 | --- | --- |
 | <kbd>Tab</kbd> | Focuses the next button in the ButtonGroup. |
-| <kbd>Space</kbd> | Activates the focussed button in the ButtonGroup. |
+| <kbd>Space</kbd> | Activates the focused button in the ButtonGroup. |
 
-### Radiobutton behavior
+### Radio button behavior
 
 | **Press** | **To do this** |
 | --- | --- |
 | <kbd>Tab</kbd> | Focuses the active button in the ButtonGroup. |
-| <kbd>Right</kbd> | Activates next/previous button in the ButtonGroup. |
+| <kbd>Right/Left</kbd> | Activates the next or previous button in the ButtonGroup. |
 
 ## Ensuring accessibility
 
-The ButtonGroup component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The ButtonGroup component's accessibility is validated using [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the ButtonGroup component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/button-group.html) in a new window to evaluate the accessibility of the ButtonGroup component with accessibility tools.
+The accessibility compliance of the ButtonGroup component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/button-group.html) in a new window to evaluate the ButtonGroup component's accessibility with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/button-group.html" %}
 

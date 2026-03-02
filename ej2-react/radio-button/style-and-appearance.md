@@ -10,11 +10,19 @@ domainurl: ##DomainURL##
 
 # Style and appearance in React Radio button component
 
-To modify the RadioButton appearance, you need to override the default CSS of RadioButton component. Please find the list of CSS classes and its corresponding section in RadioButton. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
+Customize the RadioButton's appearance by overriding default CSS classes. Create your own custom theme using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material) or apply targeted CSS rules to individual components.
 
 CSS Class | Purpose of Class
 -----|-----
-|.e-radio-wrapper|To customize the radio button wrapper
-|.e-radio + label:hover::before|To customize the radiobutton on hover
-|.e-radio:checked + label::after, e-radio:checked + label::before |To customize the checked radiobutton
-|.e-radio:checked:focus + label::before, .e-radio:checked + label:hover::before |To customize the checked radiobutton on hover
+|.e-radio-wrapper|Container wrapper for the RadioButton component
+|.e-radio|Input element for the RadioButton
+|.e-radio + label|Label text associated with the RadioButton
+|.e-radio + label::before|RadioButton indicator circle styling
+|.e-radio + label::after|Inner circle styling when RadioButton is checked
+|.e-radio:hover + label::before|RadioButton indicator on mouse hover
+|.e-radio:checked + label::before|RadioButton indicator styling when checked
+|.e-radio:checked + label::after|Inner circle styling when checked
+|.e-radio:focus + label::before|RadioButton indicator styling when focused via keyboard
+|.e-radio:disabled + label|Label styling when RadioButton is disabled
+|.e-radio:disabled + label::before|RadioButton indicator styling when disabled
+|.e-small|Applies small size variant to the RadioButton|

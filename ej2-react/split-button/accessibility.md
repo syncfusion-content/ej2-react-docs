@@ -40,7 +40,7 @@ The accessibility compliance for the SplitButton component is outlined below.
 
 ## WAI-ARIA attributes
 
-The SplitButton component followed the [WAI-ARIA] patterns to meet the accessibility. The following ARIA attributes are used in the SplitButton component:
+The SplitButton component implements [WAI-ARIA](https://www.w3.org/TR/wai-aria/) patterns to provide comprehensive accessibility support. The following ARIA attributes are used in the SplitButton component:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -52,17 +52,21 @@ The SplitButton component followed the [WAI-ARIA] patterns to meet the accessibi
 
 ## Keyboard interaction
 
-The SplitButton component followed the [keyboard interaction] guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the SplitButton component.
+The SplitButton component supports comprehensive keyboard navigation following WAI-ARIA guidelines, making it accessible to users who rely on assistive technologies and keyboard-only navigation. The following keyboard shortcuts are supported by the SplitButton component.
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Esc</kbd> | Closes the opened popup. |
+| <kbd>Tab</kbd> | Moves focus to the SplitButton component. |
+| <kbd>Shift + Tab</kbd> | Moves focus away from the SplitButton component. |
 | <kbd>Enter</kbd> | Opens the popup, or activates the highlighted item and closes the popup. |
-| <kbd>Spacer</kbd> | Opens the popup. |
-| <kbd>Up</kbd> | Navigates up or to the previous action item. |
-| <kbd>Down</kbd> | Navigates down or to the next action item. |
-| <kbd>Alt + Up Arrow</kbd> | Closes the popup. |
+| <kbd>Space</kbd> | Opens the popup. |
+| <kbd>Up Arrow</kbd> | Navigates to the previous action item. |
+| <kbd>Down Arrow</kbd> | Navigates to the next action item. |
+| <kbd>Home</kbd> | Navigates to the first item in the popup. |
+| <kbd>End</kbd> | Navigates to the last item in the popup. |
+| <kbd>Esc</kbd> | Closes the opened popup. |
 | <kbd>Alt + Down Arrow</kbd> | Opens the popup. |
+| <kbd>Alt + Up Arrow</kbd> | Closes the popup. |
 
 ## Ensuring accessibility
 

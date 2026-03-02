@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable rtl in React Button group component
+# Enable RTL in React Button group component
 
-ButtonGroup supports RTL functionality. This can be achieved by adding `e-rtl` class to the target element.
+The ButtonGroup component supports right-to-left (RTL) display for languages and locales that use RTL scripts. Enable RTL support by adding the `e-rtl` class to the target element.
 
-The following example illustrates how to create ButtonGroup with RTL support.
+The following example demonstrates how to create a ButtonGroup with RTL support:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

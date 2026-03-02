@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Create right to left splitbutton in React Split button component
 
-SplitButton component has RTL support. This can be achieved by setting [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/split-button#enablertl) as `true`.
+Enable right-to-left (RTL) layout support in the SplitButton component by setting the [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/split-button#enablertl) property to `true`. RTL support flips the component layout and text direction, making it suitable for languages that read from right to left, such as Arabic, Hebrew, and Persian.
 
-The following example illustrates how to enable right-to-left support in SplitButton component.
+The following example demonstrates how to implement RTL support in the SplitButton component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

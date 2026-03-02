@@ -10,16 +10,18 @@ domainurl: ##DomainURL##
 
 # Animation in React Drop down button component
 
-The [`animationSettings`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#animationsettings) property is used to customize the animation of the DropDownButton popup. The supported effects for DropDownButton are,
+Customize the DropDownButton popup animation using the [`animationSettings`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#animationsettings) property. Choose from various animation effects to provide visual feedback when the popup opens and closes.
 
-| Effect | Functionality |
+The following animation effects are supported:
+
+| Effect | Description |
 | ------------ | ----------------------- |
-| None | Specifies the Dropdown popup transform with no animation effect. |
-| SlideDown | Specifies the Dropdown popup transform with slide down effect. |
-| ZoomIn | Specifies the Dropdown popup transform with zoom in effect. |
-| FadeIn | Specifies the Dropdown popup transform with fade in effect. |
+| None | No animation; popup appears instantly. |
+| SlideDown | Popup slides down smoothly when opening. |
+| ZoomIn | Popup zooms in with a scaling effect. |
+| FadeIn | Popup fades in gradually when opening. |
 
-In this sample, three different DropDownButtons are rendered, each showcasing a unique animation effect for the dropdown menu:
+The following example demonstrates three DropDownButtons, each with a different animation effect:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

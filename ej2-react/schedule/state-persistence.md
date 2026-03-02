@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 State persistence allows the Scheduler to retain the [`currentView`](https://ej2.syncfusion.com/react/documentation/api/schedule#currentview), [`selectedDate`](https://ej2.syncfusion.com/react/documentation/api/schedule#selecteddate) and scroll position values in the [`localStorage`](https://www.w3schools.com/html/html5_webstorage.asp#) for state maintenance even if the browser is refreshed or you navigate to another page. This behavior is enabled through the [`enablePersistence`](https://ej2.syncfusion.com/react/documentation/api/schedule#enablepersistence) property, which is disabled by default. When set to `true`, the Scheduler’s `currentView`, `selectedDate` and scroll position values are preserved after a page refresh.
 
-> **Note**: Scheduler `id` is Essential<sup style="font-size:70%">&reg;</sup> to set state persistence.
+> **Note**: The Scheduler `id` is required to enable state persistence.
 
 The following sample demonstrates how to set state persistence of the Scheduler component.
 

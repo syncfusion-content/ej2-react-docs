@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Image Restrictions in React Image editor component | Syncfusion
-description: Learn here all about Image Restrictions in Syncfusion React Image editor component of Syncfusion Essential JS 2 and more.
+title: Image Restrictions in React Image Editor component | Syncfusion
+description: Learn here all about Image Restrictions in Syncfusion React Image Editor component of Syncfusion Essential JS 2 and more.
 control: Image Restrictions
 platform: ej2-react
 documentation: ug

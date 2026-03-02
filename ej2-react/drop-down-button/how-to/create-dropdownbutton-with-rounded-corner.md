@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Create dropdownbutton with rounded corner in React Drop down button component
 
-DropDownButton with rounded corner can be achieved by adding `border-radius` CSS property to button element.
+Create a DropDownButton with rounded corners by adding the `border-radius` CSS property. Apply the `e-round-corner` class using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#cssclass) property to achieve a 5px border radius.
 
-In the following example, `e-round-corner` class is defined with `5px` `border-radius` property and added that class to button element using [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#cssclass) property.
+The following example demonstrates how to add rounded corners to a DropDownButton:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

@@ -10,9 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize icon and width in React Drop down button component
 
-Width of the DropDownButton can be customized by setting required width to the dropdown element.
-
-The following UI can be achieved by setting [`iconPosition`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#iconposition) as `Top`, width as `85px` and size of the font icon as `40px` by adding `e-custom` class.
+Customize the width and icon positioning of the DropDownButton by applying CSS classes and properties. The following example demonstrates how to set the icon position to `Top`, button width to `85px`, and icon size to `40px` using the `e-custom` class with the [`iconPosition`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#iconposition) property:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

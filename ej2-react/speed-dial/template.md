@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Template in React Speed dial component
 
-This section explains available templates in SpeedDial component and its usage.
+SpeedDial provides powerful templating capabilities to customize both individual action items and the entire popup container. Use templates to create complex layouts with custom HTML, styling, and interactive elements beyond the standard text and icon configurations.
 
 ## Item template
 
-You can use the [`itemTemplate`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#itemtemplate) property to set a template content for the SpeedDial items. The template content is defined as a child content of `itemTemplate` tag directive.
+Customize the appearance and content of individual action items using the [`itemTemplate`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#itemtemplate) property. Define custom HTML markup as child content within the `itemTemplate` directive to create rich, interactive item layouts with images, badges, custom styling, or nested components.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -32,7 +32,7 @@ You can use the [`itemTemplate`](https://ej2.syncfusion.com/react/documentation/
 
 ## Popup template
 
-You can use the [`popupTemplate`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#popuptemplate) property to set a template content for popup of  SpeedDial component. The template content is defined as a child content of `popupTemplate` tag directive.
+Customize the entire popup container using the [`popupTemplate`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#popuptemplate) property. Define custom HTML markup as child content within the `popupTemplate` directive to create completely custom popup layouts, including custom item lists, headers, footers, or alternative content structures.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

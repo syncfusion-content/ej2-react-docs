@@ -2,27 +2,27 @@
 layout: post
 title: Import export in React Query builder component | Syncfusion
 description: Learn here all about Import export in Syncfusion React Query builder component of Syncfusion Essential JS 2 and more.
-control: Import export 
+control: QueryBuilder 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Importing and Exporting in React Query builder component
+# Importing and Exporting in React Query Builder component
 
-Importing facilitates the viewing or editing of predefined conditions available in JSON, SQL, and MongoDB query formats, while exporting enables obtaining the created rules in the query builder as JSON, SQL, and MongoDB queries.
+The Query Builder supports importing predefined query conditions and exporting created rules in multiple formats for seamless integration with external systems. Import conditions from JSON, SQL, or MongoDB query formats, and export your constructed queries in the same formats for data interoperability.
 
 ## Importing
 
-Importing enables users to bring predefined conditions into the system for viewing or editing, available in formats such as JSON, SQL, and MongoDB query. It facilitates the quick incorporation of pre-defined rules or parameters into workflows, streamlining the setup process by importing directly from external sources or saved configurations.
+Import predefined conditions from external sources in JSON, SQL, or MongoDB query formats to populate the Query Builder with saved or template-based rules. This streamlines workflow setup by eliminating manual rule recreation.
 
 ### Importing from JSON Object
 
-Importing from JSON enables users to bring predefined conditions encoded in JSON format into the system. This feature streamlines the process by providing a standardized format for importing data, ensuring compatibility, and ease of use.
+Import predefined conditions encoded in JSON format provides a standardized, easy-to-use approach for loading query configurations.
 
 #### Initial rendering
 
-To initially apply conditions, you can establish the [`rule`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#rule) by importing a structured JSON object and defining its properties.
+To apply conditions during component initialization, define the [`rule`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#rule) property with a structured JSON object containing your query conditions.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -37,7 +37,7 @@ To initially apply conditions, you can establish the [`rule`](https://ej2.syncfu
 
 #### Post rendering
 
-You can set the conditions from structured JSON object through the [`setRules`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#setrules) method.
+Apply conditions after component initialization using the [`setRules`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#setrules) method with a structured JSON object.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -52,7 +52,7 @@ You can set the conditions from structured JSON object through the [`setRules`](
 
 ### Importing from SQL Query
 
-Importing from SQL involves integrating predefined conditions or data stored in a SQL database into the Query Builder. This enables the direct integration of SQL queries, thereby improving workflow efficiency and data accuracy within the application. SQL importing supports various types, including Inline SQL, Parameter SQL, and Named Parameter SQL.
+Import SQL queries directly into the Query Builder to load predefined database filtering conditions. SQL importing supports multiple formats: Inline SQL, Parameter SQL, and Named Parameter SQL, enabling flexible query integration from various sources.
 
 #### Importing from Inline SQL Query
 

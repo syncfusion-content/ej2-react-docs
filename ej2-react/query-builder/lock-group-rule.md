@@ -2,20 +2,20 @@
 layout: post
 title:  Lock Group/Rule in React Query builder component | Syncfusion
 description: Learn here all about Lock Group/Rule in Syncfusion React Query builder component of Syncfusion Essential JS 2 and more.
-control: Lock Group/Rule
+control: QueryBuilder
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Lock Group/Rule in React Query builder component
+# Lock Group/Rule in React Query Builder component
 
-The Query Builder provides the functionality to lock individual rules or entire groups. When a rule is locked, it prevents users from modifying its field, operator, and value, effectively disabling these components. Similarly, locking a group disables all elements contained within it. This feature offers users greater control over their query configurations, ensuring that specific rules or groups remain unchanged. Additionally, users can manage the visibility of locking buttons through the [`showButtons`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#showbuttons) function, allowing for seamless control over the locking mechanism.
+Prevent modification of specific rules or groups by locking them. When a rule is locked, its field, operator, and value cannot be edited. Locking a group disables all contained elements. This feature provides precise control over query components, ensuring critical conditions remain unchanged. Manage lock button visibility through the [`showButtons`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#showbuttons) property.
 
-You can lock groups and rules by interacting through the user interface and methods.
+Lock groups and rules through the user interface or programmatically:
 
-* Use the [`lockGroup`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#lockgroup) method to lock group.
-* Use [`lockRule`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#lockrule) method to lock rule.
+* Use the [`lockGroup`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#lockgroup) method to lock a group.
+* Use the [`lockRule`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#lockrule) method to lock a rule.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

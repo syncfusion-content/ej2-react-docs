@@ -10,15 +10,21 @@ domainurl: ##DomainURL##
 
 # Style and appearance in React Switch component
 
-To modify the Switch appearance, you need to override the default CSS of Switch component. Please find the list of CSS classes and its corresponding section in Switch. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/theme=material).
+Customize Switch styling by overriding its default CSS classes. The following table lists the CSS classes available for styling different Switch elements. Additionally, use the [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material) to create and preview custom themes for all Syncfusion components.
 
-CSS Class | Purpose of Class
+CSS Class | Purpose
 -----|-----
-|.e-switch-wrapper .e-switch-inner|To customize the line of the switch in off mode
-|.e-switch-wrapper .e-switch-handle|To customize the handle of the switch in off mode
-|.e-switch-wrapper:not(.e-switch-disabled):hover .e-switch-handle:not(.e-switch-active)|To customize the handle of the switch in off mode when hover
-|.e-switch-wrapper:not(.e-switch-disabled):hover .e-switch-inner:not(.e-switch-active)|To customize the line of the switch in off mode when hover
-|.e-switch-wrapper .e-switch-handle.e-switch-active|To customize the handle of the switch in on mode
-|.e-switch-wrapper .e-switch-on|To customize the line of the switch in on mode
-|.e-switch-wrapper:hover .e-switch-handle.e-switch-active|To customize the handle of the switch in on mode when hover
-|.e-switch-wrapper:hover .e-switch-inner.e-switch-active .e-switch-on|To customize the line of the switch in on mode when hover
+.e-switch-wrapper | Main Switch component container
+.e-switch | Core Switch element
+.e-switch-inner | Switch track (bar) in off mode
+.e-switch-inner.e-switch-active | Switch track (bar) in on mode
+.e-switch-on | On state label and styling
+.e-switch-handle | Switch thumb (handle) in off mode
+.e-switch-handle.e-switch-active | Switch thumb (handle) in on mode
+.e-switch-wrapper:hover .e-switch-inner | Track hover state styling
+.e-switch-wrapper:hover .e-switch-handle | Handle hover state styling
+.e-switch-wrapper.e-switch-disabled | Disabled state styling
+.e-switch-wrapper.e-disabled | Alternative disabled state class
+.e-switch-label | Label text styling
+.e-switch-wrapper.e-small | Small size variant
+.e-switch-wrapper.e-large | Large size variant

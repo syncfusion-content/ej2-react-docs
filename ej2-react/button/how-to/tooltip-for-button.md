@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Tooltip for button in React Button component
 
-Tooltip can be shown on Button hover and it can be achieved by setting `title` attribute.
+Display a tooltip on Button hover by setting the `title` attribute. The browser displays the tooltip text as a native browser tooltip.
 
-The following snippets illustrates how to show tooltip on Button hover.
+The following example demonstrates how to add a tooltip to a Button:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

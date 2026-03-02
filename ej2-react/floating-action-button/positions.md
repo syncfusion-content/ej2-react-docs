@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Positions in React Floating action button component
 
-The floating action button can be positioned anywhere on the [`target`](https://ej2.syncfusion.com/react/documentation/api/floating-action-button/fab/#target) using the [`position`](https://ej2.syncfusion.com/react/documentation/api/floating-action-button/fab/#position) property. If the `target` is not defined, then FAB is positioned based on the browser viewport.
+Position the Floating Action Button anywhere on the page using the [`position`](https://ej2.syncfusion.com/react/documentation/api/floating-action-button/fab/#position) property. When paired with the [`target`](https://ej2.syncfusion.com/react/documentation/api/floating-action-button/fab/#target) property, the FAB positions itself relative to the specified container. Without a target, the FAB positions itself relative to the browser viewport.
 
-The position values of Floating Action Button are as follows:
+Use predefined positions to quickly deploy the FAB to common locations (corners and center points). The available position values are:
 * TopLeft
 * TopCenter
 * TopRight
@@ -54,7 +54,7 @@ Below example demonstrates different supported positions of FAB.
 
 ## Custom position
 
-You can define the custom position of the Floating Action Button by override the `top`, `left`, `right`, and `bottom` CSS properties using [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/floating-action-button/fab/#cssclass). For detailed information, refer `index.css` file below.
+Define a custom position for the Floating Action Button by overriding the `top`, `left`, `right`, and `bottom` CSS properties using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/floating-action-button/fab/#cssclass) property. This approach allows precise control over FAB placement for specialized layouts. Refer to the `index.css` file in the example below for implementation details.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

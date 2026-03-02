@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Open a dialog on popup item click in React Drop down button component
 
-This section explains about how to open a dialog on DropdownButton popup item click. This can be achieved by handling dialog open in [`select`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#select) event of the DropdownButton.
+Open a dialog when a user selects an item from the DropDownButton popup by handling the [`select`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#select) event. This allows you to trigger custom actions or modals based on user selection.
 
-In the following example, Dialog will open while selecting `Other Folder...` item.
+The following example demonstrates opening a dialog when the `Other Folder...` item is selected:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

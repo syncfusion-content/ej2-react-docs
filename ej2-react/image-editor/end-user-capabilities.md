@@ -1,9 +1,9 @@
 ---
 layout: post
-title: End user in ##Platform_Name## Image Editor component | Syncfusion
+title: End user Capabilities in ##Platform_Name## Image Editor component | Syncfusion
 description: Learn here all about End user Capabilities in Syncfusion ##Platform_Name## Image Editor component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
-control: End user Capabilities 
+control: End user Capabilities
 publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Right to left in React Button component
 
-Button component has RTL support. This can be achieved by setting [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/button/#enablertl) as `true`.
+The Button component supports right-to-left (RTL) display for languages and locales that use RTL scripts. Enable RTL support by setting the [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/button#enablertl) property to `true`.
 
-The following example illustrates how to enable right-to-left support in Button component.
+The following example demonstrates how to enable RTL support in the Button component:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

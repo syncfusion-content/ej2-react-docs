@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Name and value in form submit in React Check box component | Syncfusion
+title: React Check box component | Syncfusion
 description: Learn here all about Name and value in form submit in Syncfusion React Check box component of Syncfusion Essential JS 2 and more.
 control: Name and value in form submit 
 platform: ej2-react
@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Name and value in form submit in React Check box component
 
-The [`name`](https://ej2.syncfusion.com/react/documentation/api/check-box/#name) attribute of the CheckBox is used to group Checkboxes. When the Checkboxes are grouped in form, the checked items [`value`](https://ej2.syncfusion.com/react/documentation/api/check-box/#value) attribute will post to the server on form submit which can be retrieved through the name. The disabled and unchecked CheckBox value will not be sent to the server on form submit.
+The [`name`](https://ej2.syncfusion.com/react/documentation/api/check-box#name) attribute groups CheckBoxes in a form. When the form submits, only the values of checked CheckBoxes are sent to the server and can be retrieved using the `name` attribute. Disabled and unchecked CheckBox values are not sent on form submission.
 
-In the following code snippet, Cricket and Hockey are in the checked state, Tennis is in [`disabled`](https://ej2.syncfusion.com/react/documentation/api/check-box/#disabled) state and Basketball is in unchecked state. Now, the value that is in checked state only be sent on form submit.
+The following example demonstrates form submission with CheckBox values. Cricket and Hockey are checked, Tennis is disabled, and Basketball is unchecked. Only the checked values are sent on form submit:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

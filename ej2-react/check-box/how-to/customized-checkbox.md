@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Customized checkbox in React Check box component
 
-## Customize CheckBox Appearance
+## Customize checkbox appearance
 
-You can customize the appearance of the CheckBox component using the CSS rules. Define own CSS rules according to your requirement and assign the class name to the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/check-box/#cssclass) property.
+Customize the CheckBox component's appearance by defining CSS rules and assigning the class name to the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/check-box#cssclass) property. Custom CSS allows you to modify colors, borders, and visual styles for different checkbox variants.
 
-The background and border color of the CheckBox is customized through custom classes to create primary, success, warning, danger, and info type of checkbox.
+The following example demonstrates how to create CheckBox variants by customizing the background and border colors to represent primary, success, warning, danger, and informational states:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -27,11 +27,9 @@ The background and border color of the CheckBox is customized through custom cla
 
  {% previewsample "page.domainurl/code-snippet/check-box/howto-cs1" %}
 
-## Custom Frame
+## Custom frame
 
-CheckBox frame can be customized as per the requirement by adding CSS rules.
-
-In the following example, to-do list is displayed with round checkbox by changing `border-radius` as `100%` by adding `e-custom` class.
+Customize the CheckBox frame by adding CSS rules to modify its shape and appearance. The following example demonstrates how to create round checkboxes by setting the `border-radius` to `100%` using the `e-custom` class:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -44,11 +42,9 @@ In the following example, to-do list is displayed with round checkbox by changin
 
  {% previewsample "page.domainurl/code-snippet/check-box/custom-frame-cs1" %}
 
-## Custom Check Icon
+## Custom check icon
 
-CheckBox check icon can be customized as per the requirement by adding CSS rules.
-
-In the following example, the check icon can be customized by changing check icon content, background and border color in focus and hovered states by adding `e-checkicon` class.
+Customize the CheckBox check icon by adding CSS rules to modify the icon content, background, and border colors. The following example demonstrates how to customize the check icon appearance in focus and hovered states using the `e-checkicon` class:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

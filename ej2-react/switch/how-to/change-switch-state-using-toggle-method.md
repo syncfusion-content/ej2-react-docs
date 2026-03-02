@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Change switch state using toggle method in React Switch component
 
-This section explains about how to toggle between the switch states using [`toggle`](https://ej2.syncfusion.com/react/documentation/api/switch/#toggle) method.
+Programmatically switch between on and off states using the [`toggle`](https://ej2.syncfusion.com/react/documentation/api/switch/#toggle) method. This approach enables external controls to change Switch state without direct user interaction, supporting workflows like keyboard shortcuts, remote commands, or state synchronization with external data.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

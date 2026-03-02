@@ -8,14 +8,14 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize progress using cssclass in React Progress button component
+# Customize progress using cssClass in React Progress button component
 
-You can customize the background filler UI using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#cssClass) property.
+Customize the progress bar appearance by applying CSS classes through the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#cssClass) property. These built-in classes modify how the progress fills and displays within the button.
 
-* Adding `e-vertical` to `cssClass` shows vertical progress.
-* Adding `e-progress-top` to `cssClass` shows progress at the top.
+* **`e-vertical`** - Displays the progress fill vertically (top-to-bottom) instead of horizontally.
+* **`e-progress-top`** - Positions the progress fill at the top edge of the button instead of bottom.
 
-You can also show reverse progress by adding custom class to the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#cssClass) property.
+You can also create a reverse progress effect (right-to-left fill) by adding a custom CSS class to the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#cssClass) property with appropriate CSS rules that override the default fill direction.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

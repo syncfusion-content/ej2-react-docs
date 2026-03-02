@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Underline a character in a text in React Split button component
 
-Underline a particular character in a text can be handled in [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/split-button#beforeitemrender)  event by adding `<u>` tag in between the text and given as innerHTML in `li` rendering.
+Emphasize keyboard shortcuts or specific characters in popup items by underlining them during rendering. Use the [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/split-button#beforeitemrender) event to inject HTML `<u>` tags around the target character, setting the content as innerHTML in the `li` element to display formatted text.
 
-In the following example, `C` is underlined in the text `Copy`.
+In the following example, the `C` character is underlined in the `Copy` item to indicate a keyboard shortcut.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
