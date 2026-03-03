@@ -18,7 +18,7 @@ The `delayUpdate` property delays the component's re-rendering until after the t
 
 When `delayUpdate` is set to `true`, the component waits for template compilation to complete before re-rendering. This ensures that template-related issues are resolved and the component updates correctly.
 
-```tsx
+```ts
 <ScheduleComponent width="100%" height="650px" delayUpdate={true}>
   {/* Template content goes here */}
 </ScheduleComponent>

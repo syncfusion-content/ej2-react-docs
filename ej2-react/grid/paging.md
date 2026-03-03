@@ -74,17 +74,17 @@ import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 
 function App() {
-  const [pageSettings, setPageSettings] = useState();
+  const pageSettings = { pageSize: 12 };
+  const gridRef = React.useRef(null);
   let textbox;
   const click = () => {
-    const pageSize = { pageSize: textbox.value };
-    setPageSettings(pageSize);
+    gridRef.current.pageSettings.pageSize = parseInt(textbox.value);
   }
   return (<div>
     <label style={{ padding: "30px 17px 0 0" }}>Enter page size:</label>
     <TextBoxComponent ref={t => textbox = t} width={120}></TextBoxComponent>
     <ButtonComponent id="button" onClick={click}>Click button</ButtonComponent>
-    <GridComponent id="grid" dataSource={data} height={265} allowPaging={true} pageSettings={pageSettings}>
+    <GridComponent id="grid"  ref={gridRef} dataSource={data} height={265} allowPaging={true} pageSettings={pageSettings}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" isPrimaryKey={true} />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />
@@ -112,17 +112,19 @@ import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 
 function App() {
-  const [pageSettings, setPageSettings] = useState<PageSettingsModel>();
+   const pageSettings: PageSettingsModel = { pageSize: 12 };
+  const gridRef = React.useRef<GridComponent>(null);
   let textbox: TextBoxComponent | null;
   const click = () => {
-    const pageSize: PageSettingsModel = { pageSize: (textbox as TextBoxComponent).value };
+    const pageSize: PageSettingsModel = { pageSize: parseInt((textbox as TextBoxComponent).value) };
     setPageSettings(pageSize);
+    
   }
   return (<div>
     <label style={{ padding: "30px 17px 0 0" }}>Enter page size:</label>
     <TextBoxComponent ref={t => textbox = t} width={120}></TextBoxComponent>
     <ButtonComponent id="button" onClick={click}>Click button</ButtonComponent>
-    <GridComponent id="grid" dataSource={data} height={265} allowPaging={true} pageSettings={pageSettings}>
+    <GridComponent id="grid"  ref={gridRef} dataSource={data} height={265} allowPaging={true} pageSettings={pageSettings}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" isPrimaryKey={true} />
         <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />

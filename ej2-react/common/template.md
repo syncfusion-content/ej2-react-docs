@@ -14,7 +14,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> React components support templa
 
 Templates are implemented as React functions that receive a `props` object and return a React Element. The exact shape of `props` depends on the control and template type: for Grid or TreeGrid column templates `props` is the current row's data object; for TreeView `nodeTemplate` it is the node data; for ListView templates it is the item data; for charts it can be a point or series object. Templates should return valid React elements, avoid side effects, and sanitize any raw HTML (or enable `enableHtmlSanitizer`) to prevent XSS. The following example demonstrates a simple custom template function:
 
-```jsx
+```js
 function gridTemplate(props) {
   return (
     <div className='custom'>
@@ -26,7 +26,7 @@ function gridTemplate(props) {
 
 In this example, the `gridTemplate` function is assigned to the `template` property of a Grid component:
 
-```jsx
+```js
 import './App.css';
 import * as React from 'react';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
@@ -66,13 +66,13 @@ In React, component state drives updates and causes re-rendering. Templates that
 
 The `statelessTemplates` property accepts an array of strings. Provide the exact template property names (for example, `['nodeTemplate']` for a TreeView) to exclude those templates from React state updates:
 
-```jsx
+```js
 <TreeViewComponent fields={fields} statelessTemplates={['nodeTemplate']} nodeTemplate={nodeTemplate} />
 ```
 
 When templates are declared inside nested directives (for example, `ColumnDirective` within a `GridComponent`), use the reserved token `'directiveTemplates'` to prevent updates for all directive-based templates in that control:
 
-```jsx
+```js
 <GridComponent dataSource={siteCedarData} statelessTemplates={['directiveTemplates']}>
   <ColumnsDirective>
     <ColumnDirective field="name" headerText="Asset" textAlign="Left" />

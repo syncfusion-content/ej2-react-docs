@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion React Scheduler With ASP.NET Core API Using Axios
+# Syncfusion React Scheduler with ASP.NET Core API using Axios
 
 This section provides a step‑by‑step guide for setting up a React application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Scheduler component with an ASP.NET Core Web API backend (using EF Core and SQL Server) through Axios.
 
@@ -164,7 +164,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
 {% endhighlight %}
 {% endtabs %}
 
-### 1.4  Configure CORS, Swagger, and controllers in `Program.cs`
+### 1.4 Configure CORS, Swagger, and controllers in `Program.cs`
 
 Configures the application pipeline by enabling CORS, registering Swagger for development, and mapping controllers.
 
@@ -287,7 +287,7 @@ dotnet ef migrations script --idempotent -o migrate.sql
 {% endhighlight %}
 {% endtabs %}
 
-## 2. Frontend – React + Syncfusion Scheduler + Axios
+## 2. Frontend – React + Syncfusion React Scheduler + Axios
 
 Implements the React frontend that uses the Syncfusion Scheduler component and Axios to communicate with the ASP.NET Core Web API for managing event data.
 
@@ -350,7 +350,7 @@ createRoot(document.getElementById('root')).render(
 
 `createRoot` is the React 18 API for mounting.
 
-### 2.4 Connect the Syncfusion Scheduler to the API using Axios
+### 2.4 Connect the Syncfusion React Scheduler to the API using Axios
 
 Hooks the Scheduler’s eventCreate, eventChange, and eventRemove via actionBegin to send Axios POST/PUT/DELETE requests and refresh the local event data from the API.
 
@@ -441,10 +441,10 @@ export default function App() {
     }
   };
 
-  if (loading) return <div style={{padding:16}}>Loading…</div>;
+  if (loading) return <div>Loading…</div>;
 
   return (
-    <div style={{ padding: 16 }}>
+    <div>
       <ScheduleComponent
         height="650px"
         ref={scheduleRef}
@@ -471,7 +471,7 @@ export default function App() {
 {% endhighlight %}
 {% endtabs %}
 
-## 3. Run the application
+## 3. Run the Application
 
 Starts the ASP.NET Core backend and the React application so the Syncfusion Scheduler can communicate with the API in real time.
 
@@ -493,13 +493,13 @@ Keep Swagger UI enabled only in Development; this is the recommended pattern.
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
-cd react-scheduler-axios
+cd react-scheduler-axios   
 npm run dev
 
 {% endhighlight %}
 {% endtabs %}
 
-React application started running on http://localhost:5173/
+React application started running on `http://localhost:5173/`
 
 ## Output Preview
 
