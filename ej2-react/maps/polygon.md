@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Polygon in React Maps component | Syncfusion
 description: Learn here all about Polygon in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
@@ -30,10 +30,10 @@ The following example demonstrates how to add and customize a polygon shape on a
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/polygon-cs1/app/index.jsx %}
+{% include code-snippet/maps/code-path/polygon-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/polygon-cs1/app/index.tsx %}
+{% include code-snippet/maps/code-path/polygon-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -54,10 +54,10 @@ The following properties are available in the [tooltipSettings](https://ej2.sync
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/polygon-cs4/app/index.jsx %}
+{% include code-snippet/maps/code-path/polygon-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/polygon-cs4/app/index.tsx %}
+{% include code-snippet/maps/code-path/polygon-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -69,10 +69,10 @@ Any HTML element can be rendered in the tooltip of the polygon shapes using the 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/polygon-cs5/app/index.jsx %}
+{% include code-snippet/maps/code-path/polygon-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/polygon-cs5/app/index.tsx %}
+{% include code-snippet/maps/code-path/polygon-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

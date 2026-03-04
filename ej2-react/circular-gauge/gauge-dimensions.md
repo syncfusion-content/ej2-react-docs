@@ -23,10 +23,10 @@ Circular gauge can render to its container size. You can set the size via inline
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-dimensions-cs1/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-dimensions-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-dimensions-cs1/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-dimensions-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -46,10 +46,10 @@ You can set the size of the gauge in pixel as demonstrated below.
 <<
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-dimensions-cs2/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-dimensions-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-dimensions-cs2/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-dimensions-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -61,10 +61,10 @@ By setting value in percentage, gauge gets its dimension with respect to its con
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-dimensions-cs3/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-dimensions-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-dimensions-cs3/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-dimensions-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

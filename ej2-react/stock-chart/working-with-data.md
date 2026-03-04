@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Working with data in React Stock chart component | Syncfusion
 description: Learn here all about Working with data in Syncfusion React Stock chart component of Syncfusion Essential JS 2 and more.
@@ -19,10 +19,10 @@ You can bind a simple JSON data to the chart using [`dataSource`](https://ej2.sy
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/working-with-data-cs3/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/working-with-data-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/working-with-data-cs3/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/working-with-data-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -34,10 +34,10 @@ When no data is available to render in the stock chart, the `noDataTemplate` pro
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/working-with-data-cs4/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/working-with-data-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/working-with-data-cs4/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/working-with-data-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

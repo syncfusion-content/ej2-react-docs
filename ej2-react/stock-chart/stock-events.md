@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Stock events in React Stock chart component | Syncfusion
 description: Learn here all about Stock events in Syncfusion React Stock chart component of Syncfusion Essential JS 2 and more.
@@ -15,10 +15,10 @@ Stock Events visualizes stock events in stock chart. 'SplineSeries' is used to r
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/working-with-data-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/working-with-data-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/working-with-data-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/working-with-data-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -30,10 +30,10 @@ By default, stock events will be showed for all series. Now, you can set the sto
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/working-with-data-cs2/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/working-with-data-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/working-with-data-cs2/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/working-with-data-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

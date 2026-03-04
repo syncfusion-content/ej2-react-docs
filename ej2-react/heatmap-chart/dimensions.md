@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Dimensions in React Heatmap chart component | Syncfusion
 description: Learn here all about Dimensions in Syncfusion React Heatmap chart component of Syncfusion Essential JS 2 and more.
@@ -30,10 +30,10 @@ You can set the size for heat map in a pixel.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/dimensions-cs1/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/dimensions-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/dimensions-cs1/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/dimensions-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -45,10 +45,10 @@ By setting value in percentage, heat map gets its dimension with respect to its 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/dimensions-cs2/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/dimensions-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/dimensions-cs2/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/dimensions-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Events in React Linear gauge component | Syncfusion
 description: Learn here all about Events in Syncfusion React Linear gauge component of Syncfusion Essential JS 2 and more.
@@ -18,10 +18,10 @@ When the pointer animation is completed, the [`animationComplete`](https://ej2.s
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs14/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs14/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs14/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs14/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -33,10 +33,10 @@ Before the annotation is rendered in the Linear Gauge, the [`annotationRender`](
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs15/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs15/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs15/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs15/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -48,10 +48,10 @@ Before each axis label is rendered in the Linear Gauge, the [`axisLabelRender`](
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs16/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs16/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs16/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs16/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -63,10 +63,10 @@ The [`beforePrint`](https://ej2.syncfusion.com/react/documentation/api/linear-ga
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs17/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs17/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs17/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs17/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -78,10 +78,10 @@ The [`dragEnd`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs18/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs18/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs18/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs18/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -93,10 +93,10 @@ The [`dragMove`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs19/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs19/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs19/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs19/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -108,10 +108,10 @@ When the pointer drag begins, the [`dragStart`](https://ej2.syncfusion.com/react
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs20/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs20/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs20/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs20/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -123,10 +123,10 @@ When mouse is pressed down on the gauge, the [`gaugeMouseDown`](https://ej2.sync
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs21/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs21/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs21/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs21/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -138,10 +138,10 @@ When mouse pointer moves over the gauge, the [`gaugemouseleave`](https://ej2.syn
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs22/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs22/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs22/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs22/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -153,10 +153,10 @@ When mouse pointer leaves the gauge, the [`gaugeMouseMove`](https://ej2.syncfusi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs23/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs23/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs23/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs23/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -168,10 +168,10 @@ When the mouse pointer is released over the Linear Gauge, the [`gaugeMouseUp`](h
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs24/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs24/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs24/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs24/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -183,10 +183,10 @@ Before the Linear Gauge is loaded, the [`load`](https://ej2.syncfusion.com/react
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs25/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs25/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs25/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs25/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -198,10 +198,10 @@ After the Linear Gauge has been loaded, the [`loaded`](https://ej2.syncfusion.co
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs26/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs26/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs26/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs26/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -213,10 +213,10 @@ After the window resizing, the [`resized`](https://ej2.syncfusion.com/react/docu
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs27/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs27/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs27/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs27/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -228,10 +228,10 @@ The [`tooltipRender`](https://ej2.syncfusion.com/react/documentation/api/linear-
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs28/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs28/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs28/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs28/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -243,10 +243,10 @@ The [`valueChange`](https://ej2.syncfusion.com/react/documentation/api/linear-ga
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs29/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs29/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs29/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs29/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

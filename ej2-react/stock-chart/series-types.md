@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Series types in React Stock chart component | Syncfusion
 description: Learn here all about Series types in Syncfusion React Stock chart component of Syncfusion Essential JS 2 and more.
@@ -40,10 +40,10 @@ To render a candle series, use series [`type`](https://ej2.syncfusion.com/react/
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/series-types-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/series-types-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/series-types-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/series-types-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

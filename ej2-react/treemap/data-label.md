@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Data label in React Treemap component | Syncfusion
 description: Learn here all about Data label in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
@@ -33,10 +33,10 @@ The template supports customizing labels of each leaf node using the [`labelTemp
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/datalabel-cs2/app/index.jsx %}
+{% include code-snippet/treemap/code-path/datalabel-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/datalabel-cs2/app/index.tsx %}
+{% include code-snippet/treemap/code-path/datalabel-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

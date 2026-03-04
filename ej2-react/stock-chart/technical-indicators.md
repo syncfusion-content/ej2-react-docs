@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Technical indicators in React Stock chart component | Syncfusion
 description: Learn here all about Technical indicators in Syncfusion React Stock chart component of Syncfusion Essential JS 2 and more.
@@ -58,10 +58,10 @@ A StockChart overlay that shows the upper and lower limits of normal price movem
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/technical-indicators-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/technical-indicators-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/technical-indicators-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/technical-indicators-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

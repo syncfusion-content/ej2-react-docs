@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Legend in React Stock chart component | Syncfusion
 description: Learn here all about Legend in Syncfusion React Stock chart component of Syncfusion Essential JS 2 and more.
@@ -18,10 +18,10 @@ By using the [`position`](https://ej2.syncfusion.com/react/documentation/api/sto
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/legend-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/legend-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/legend-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/legend-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -31,10 +31,10 @@ By using the [`position`](https://ej2.syncfusion.com/react/documentation/api/sto
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/legend-cs2/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/legend-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/legend-cs2/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/legend-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -50,10 +50,10 @@ The legend can be align as `Center`, `Far` or `Near` to the Stock Chart using [`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/legend-cs3/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/legend-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/legend-cs3/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/legend-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -65,10 +65,10 @@ To change the legend icon shape, [`legendShape`](https://ej2.syncfusion.com/reac
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/legend-cs4/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/legend-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/legend-cs4/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/legend-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -80,10 +80,10 @@ By default, legend takes 20% - 25% of the Stock Chart's height horizontally, whe
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/legend-cs5/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/legend-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/legend-cs5/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/legend-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -95,10 +95,10 @@ The size of the legend items can customized by using the [`shapeHeight`](https:/
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/legend-cs6/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/legend-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/legend-cs6/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/legend-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -110,10 +110,10 @@ By default, series name will be displayed as legend. To skip the legend for a pa
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/legend-cs7/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/legend-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/legend-cs7/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/legend-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -125,10 +125,10 @@ The title for legend can be set using [`title`](https://ej2.syncfusion.com/react
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/legend-cs8/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/legend-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/legend-cs8/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/legend-cs8/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

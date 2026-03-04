@@ -98,10 +98,10 @@ The below example shows a basic Smith Chart.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs1/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs1/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -146,10 +146,10 @@ Below sample demonstrate adding two series to Smith Chart both ways.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs2/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs2/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -161,10 +161,10 @@ You can add a title using the [`title`](https://ej2.syncfusion.com/react/documen
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs3/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs3/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -221,10 +221,10 @@ The tooltip is useful when you cannot display information by using the data labe
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs7/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs7/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

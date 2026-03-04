@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: User interaction in React Linear gauge component | Syncfusion
 description: Learn here all about User interaction in Syncfusion React Linear gauge component of Syncfusion Essential JS 2 and more.
@@ -20,10 +20,10 @@ Linear Gauge displays the details about a pointer value through [`tooltip`](http
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/user-interaction-cs1/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/user-interaction-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/user-interaction-cs1/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/user-interaction-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -38,10 +38,10 @@ Tooltip in the Linear Gauge control can be formatted using the [`format`](https:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/user-interaction-cs2/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/user-interaction-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/user-interaction-cs2/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/user-interaction-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -53,10 +53,10 @@ The HTML elements rendered in the tooltip of the Linear Gauge using the [`templa
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/user-interaction-cs3/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/user-interaction-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/user-interaction-cs3/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/user-interaction-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -74,10 +74,10 @@ The tooltip can be customized using the following properties in [`tooltip`](http
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/user-interaction-cs4/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/user-interaction-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/user-interaction-cs4/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/user-interaction-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -89,10 +89,10 @@ The tooltip is positioned at the **End** of the pointer. To change the position 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/user-interaction-cs5/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/user-interaction-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/user-interaction-cs5/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/user-interaction-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -104,10 +104,10 @@ To drag either marker or bar pointer to the desired axis value, set the [`enable
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/user-interaction-cs6/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/user-interaction-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/user-interaction-cs6/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/user-interaction-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

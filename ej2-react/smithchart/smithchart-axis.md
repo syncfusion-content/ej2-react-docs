@@ -25,10 +25,10 @@ Axis labels are used to denote the kind of data that is bound to Smith chart. Us
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs8/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs8/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs8/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -49,10 +49,10 @@ You can customize the major and minor gridlines using the following properties:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs9/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs9/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs9/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -70,10 +70,10 @@ By default, visibility of the axis line is true. You can customize its visibilit
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs10/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs10/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs10/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs10/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

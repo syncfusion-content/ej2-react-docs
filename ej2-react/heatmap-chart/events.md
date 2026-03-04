@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Events in React HeatMap chart component | Syncfusion
 description: Learn here all about Events in Syncfusion React HeatMap chart component of Syncfusion Essential JS 2 and more.
@@ -63,10 +63,10 @@ When single or multiple cells in the HeatMap are selected, the [cellSelected](ht
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/events-cs4/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/events-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/events-cs4/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/events-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -78,10 +78,10 @@ Once HeatMap has been completely rendered, the [created](https://ej2.syncfusion.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/events-cs5/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/events-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/events-cs5/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/events-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -94,10 +94,10 @@ The [legendRender](https://ej2.syncfusion.com/react/documentation/api/heatmap#le
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/events-cs6/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/events-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/events-cs6/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/events-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -109,10 +109,10 @@ The [load](https://ej2.syncfusion.com/react/documentation/api/heatmap#load) even
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/events-cs7/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/events-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/events-cs7/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/events-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -124,10 +124,10 @@ Once HeatMap is loaded, the [loaded](https://ej2.syncfusion.com/react/documentat
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/events-cs8/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/events-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/events-cs8/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/events-cs8/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -139,10 +139,10 @@ When the window is resized, the [resized](https://ej2.syncfusion.com/react/docum
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/events-cs9/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/events-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/events-cs9/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/events-cs9/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -154,10 +154,10 @@ The [tooltipRender](https://ej2.syncfusion.com/react/documentation/api/heatmap#t
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/events-cs10/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/events-cs10/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/events-cs10/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/events-cs10/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

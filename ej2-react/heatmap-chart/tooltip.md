@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Tooltip in React Heatmap chart component | Syncfusion
 description: Learn here all about Tooltip in Syncfusion React Heatmap chart component of Syncfusion Essential JS 2 and more.
@@ -18,10 +18,10 @@ You can enable the tooltip by setting the [showTooltip](https://ej2.syncfusion.c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/tooltip-cs1/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/tooltip-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/tooltip-cs1/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/tooltip-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

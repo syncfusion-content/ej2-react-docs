@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Print and export in React Linear gauge component | Syncfusion
 description: Learn here all about Print and export in Syncfusion React Linear gauge component of Syncfusion Essential JS 2 and more.
@@ -16,10 +16,10 @@ The rendered Linear Gauge can be printed directly from the browser by calling th
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/print-and-export-cs1/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/print-and-export-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/print-and-export-cs1/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/print-and-export-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -37,10 +37,10 @@ To use the image export functionality, set the [`allowImageExport`](https://ej2.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/print-and-export-cs2/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/print-and-export-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/print-and-export-cs2/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/print-and-export-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -52,10 +52,10 @@ To use the PDF export functionality, set the [`allowPdfExport`](https://ej2.sync
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/print-and-export-cs3/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/print-and-export-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/print-and-export-cs3/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/print-and-export-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -67,10 +67,10 @@ The Linear Gauge can be exported as base64 string for the JPEG, PNG and PDF form
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/print-and-export-cs4/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/print-and-export-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/print-and-export-cs4/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/print-and-export-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

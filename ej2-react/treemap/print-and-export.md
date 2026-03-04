@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Print and export in React Treemap component | Syncfusion
 description: Learn here all about Print and export in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
@@ -50,10 +50,10 @@ We can get the image file as base64 string for the JPEG and PNG formats. The tre
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/printAndExport-cs3/app/index.jsx %}
+{% include code-snippet/treemap/code-path/printAndExport-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/printAndExport-cs3/app/index.tsx %}
+{% include code-snippet/treemap/code-path/printAndExport-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -65,10 +65,10 @@ To use the PDF export functionality, we should inject the `PdfExport` module int
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/printAndExport-cs4/app/index.jsx %}
+{% include code-snippet/treemap/code-path/printAndExport-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/printAndExport-cs4/app/index.tsx %}
+{% include code-snippet/treemap/code-path/printAndExport-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

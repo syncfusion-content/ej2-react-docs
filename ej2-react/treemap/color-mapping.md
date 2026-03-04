@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Color mapping in React Treemap component | Syncfusion
 description: Learn here all about Color mapping in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
@@ -48,10 +48,10 @@ Desaturation color mapping is used to apply colors to the items based on the [`m
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/colormapping-cs3/app/index.jsx %}
+{% include code-snippet/treemap/code-path/colormapping-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/colormapping-cs3/app/index.tsx %}
+{% include code-snippet/treemap/code-path/colormapping-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -63,10 +63,10 @@ The palette color mapping is used to fill the color to each group or leaf item b
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/colormapping-cs4/app/index.jsx %}
+{% include code-snippet/treemap/code-path/colormapping-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/colormapping-cs4/app/index.tsx %}
+{% include code-snippet/treemap/code-path/colormapping-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -78,10 +78,10 @@ Multiple colors are used as gradient effect to specific shapes based on the rang
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/colormapping-cs5/app/index.jsx %}
+{% include code-snippet/treemap/code-path/colormapping-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/colormapping-cs5/app/index.tsx %}
+{% include code-snippet/treemap/code-path/colormapping-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -93,10 +93,10 @@ Get the excluded ranges from data source using the color mapping and apply the s
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/colormapping-cs6/app/index.jsx %}
+{% include code-snippet/treemap/code-path/colormapping-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/colormapping-cs6/app/index.tsx %}
+{% include code-snippet/treemap/code-path/colormapping-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -98,10 +98,10 @@ The below example shows the basic Circular Gauge.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/getting-started-cs1/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/getting-started-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/getting-started-cs1/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/getting-started-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -126,10 +126,10 @@ You can change the pointer value in the above sample using the [value](https://e
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/getting-started-cs2/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/getting-started-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/getting-started-cs2/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/getting-started-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -141,10 +141,10 @@ Ranges are used to categorize the axis values into different sections with disti
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-ranges-cs1/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-ranges-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-ranges-cs1/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-ranges-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -156,10 +156,10 @@ Annotations provide the ability to add custom HTML content at specific locations
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-annotations-cs1/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-annotations-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-annotations-cs1/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-annotations-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

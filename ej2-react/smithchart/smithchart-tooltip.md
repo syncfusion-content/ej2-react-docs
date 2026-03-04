@@ -14,10 +14,10 @@ The Smith chart displays details about the points using tooltip when the mouse i
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs27/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs27/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs27/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs27/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

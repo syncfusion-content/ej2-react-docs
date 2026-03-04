@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Period selector in React Stock chart component | Syncfusion
 description: Learn here all about Period selector in Syncfusion React Stock chart component of Syncfusion Essential JS 2 and more.
@@ -28,10 +28,10 @@ Periods is an array of objects that allows users to specify the range of `period
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/period-selector-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/period-selector-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/period-selector-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/period-selector-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -43,10 +43,10 @@ The [`enablePeriodSelector`](https://ej2.syncfusion.com/react/documentation/api/
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/period-selector-cs2/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/period-selector-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/period-selector-cs2/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/period-selector-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

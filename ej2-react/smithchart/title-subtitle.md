@@ -16,10 +16,10 @@ The title and subtitle are used to describe the information about the data being
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs28/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs28/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs28/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs28/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -31,10 +31,10 @@ Both the title and subtitle of the Smith chart can be trimmed if they exceed the
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs29/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs29/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs29/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs29/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

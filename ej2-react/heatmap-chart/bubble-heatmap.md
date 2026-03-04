@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Bubble heatmap in React Heatmap chart component | Syncfusion
 description: Learn here all about Bubble heatmap in Syncfusion React Heatmap chart component of Syncfusion Essential JS 2 and more.
@@ -94,10 +94,10 @@ The following example illustrates how to render a bubble HeatMap with different 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs4/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/bubble-heatmap-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs4/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/bubble-heatmap-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -110,10 +110,10 @@ The following example illustrates how to render a bubble HeatMap with different 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs5/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/bubble-heatmap-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs5/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/bubble-heatmap-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -131,10 +131,10 @@ The following example illustrates how to render a bubble HeatMap with different 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs6/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/bubble-heatmap-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs6/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/bubble-heatmap-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -147,10 +147,10 @@ The following example illustrates how to render a bubble HeatMap with different 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs7/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/bubble-heatmap-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs7/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/bubble-heatmap-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -165,10 +165,10 @@ The size and color of the bubbles in the **SizeAndColor** bubble HeatMap type ca
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs8/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/bubble-heatmap-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs8/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/bubble-heatmap-cs8/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

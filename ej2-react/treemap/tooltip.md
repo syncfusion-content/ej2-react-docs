@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Tooltip in React Treemap component | Syncfusion
 description: Learn here all about Tooltip in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
@@ -18,10 +18,10 @@ The tooltip is not visible by default, to make it visible, set the [`visible`](h
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/tooltip-cs1/app/index.jsx %}
+{% include code-snippet/treemap/code-path/tooltip-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/tooltip-cs1/app/index.tsx %}
+{% include code-snippet/treemap/code-path/tooltip-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

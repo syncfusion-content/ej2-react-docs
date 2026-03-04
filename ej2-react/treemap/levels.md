@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Levels in React Treemap component | Syncfusion
 description: Learn here all about Levels in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
@@ -22,10 +22,10 @@ In the following example, three levels are added and each level is configured us
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/levels-cs1/app/index.jsx %}
+{% include code-snippet/treemap/code-path/levels-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/levels-cs1/app/index.tsx %}
+{% include code-snippet/treemap/code-path/levels-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -39,10 +39,10 @@ The [`groupGap`](https://ej2.syncfusion.com/react/documentation/api/treemap/leve
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/levels-cs2/app/index.jsx %}
+{% include code-snippet/treemap/code-path/levels-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/levels-cs2/app/index.tsx %}
+{% include code-snippet/treemap/code-path/levels-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -56,10 +56,10 @@ Customize header using the [`headerFormat`](https://ej2.syncfusion.com/react/doc
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/levels-cs3/app/index.jsx %}
+{% include code-snippet/treemap/code-path/levels-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/levels-cs3/app/index.tsx %}
+{% include code-snippet/treemap/code-path/levels-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -71,10 +71,10 @@ Customize the font color, family, weight, opacity and size using the [`headerSty
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/levels-cs4/app/index.jsx %}
+{% include code-snippet/treemap/code-path/levels-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/levels-cs4/app/index.tsx %}
+{% include code-snippet/treemap/code-path/levels-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -86,10 +86,10 @@ The TreeMap header supports to customize header of each item using the [`headerT
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/levels-cs5/app/index.jsx %}
+{% include code-snippet/treemap/code-path/levels-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/levels-cs5/app/index.tsx %}
+{% include code-snippet/treemap/code-path/levels-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

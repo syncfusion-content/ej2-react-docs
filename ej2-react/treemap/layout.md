@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Layout in React Treemap component | Syncfusion
 description: Learn here all about Layout in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
@@ -27,10 +27,10 @@ The `Squarified` layout displays the nested rectangles based on aspect ratio in 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/layout-cs1/app/index.jsx %}
+{% include code-snippet/treemap/code-path/layout-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/layout-cs1/app/index.tsx %}
+{% include code-snippet/treemap/code-path/layout-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -42,10 +42,10 @@ The `SliceAndDiceVertical` layout creates rectangles with high aspect ratio and 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/layout-cs2/app/index.jsx %}
+{% include code-snippet/treemap/code-path/layout-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/layout-cs2/app/index.tsx %}
+{% include code-snippet/treemap/code-path/layout-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -57,10 +57,10 @@ The `SliceAndDiceHorizontal` layout creates rectangles with high aspect ratio an
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/layout-cs3/app/index.jsx %}
+{% include code-snippet/treemap/code-path/layout-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/layout-cs3/app/index.tsx %}
+{% include code-snippet/treemap/code-path/layout-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -72,10 +72,10 @@ The `SliceAndDiceAuto` layout creates rectangles with high aspect ratio and disp
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/layout-cs4/app/index.jsx %}
+{% include code-snippet/treemap/code-path/layout-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/layout-cs4/app/index.tsx %}
+{% include code-snippet/treemap/code-path/layout-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

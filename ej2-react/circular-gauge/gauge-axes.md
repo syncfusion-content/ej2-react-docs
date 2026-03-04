@@ -25,10 +25,10 @@ Background for an axis can be customized by using [`background`](https://ej2.syn
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs1/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs1/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -41,10 +41,10 @@ Circular gauge axis can sweep from 0 to 360 degrees. By default start angle of a
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs2/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs2/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -55,10 +55,10 @@ The [`direction`](https://ej2.syncfusion.com/react/documentation/api/circular-ga
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs3/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs3/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -75,10 +75,10 @@ You can set the radius of the gauge in pixel as demonstrated below,
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs4/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs4/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -91,10 +91,10 @@ By setting value in percentage, gauge gets its dimension with respect to its ava
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs5/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs5/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -109,10 +109,10 @@ By default, [`interval`](https://ej2.syncfusion.com/react/documentation/api/circ
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs6/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs6/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -128,10 +128,10 @@ By default, ticks will be placed `inside` the axis.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs7/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs7/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -162,10 +162,10 @@ The [`position`](https://ej2.syncfusion.com/react/documentation/api/circular-gau
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs9/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs9/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs9/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -177,10 +177,10 @@ Labels can be swept along the axis angle by enabling [`autoAngle`](https://ej2.s
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs10/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs10/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs10/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs10/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -195,10 +195,10 @@ then the last label will be hidden.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs11/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs11/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs11/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs11/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -210,10 +210,10 @@ Axis labels can be formatted by using [`format`](https://ej2.syncfusion.com/reac
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs12/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs12/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs12/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs12/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -300,10 +300,10 @@ When the axis labels overlap with each other, you can hide the intersected lab
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs14/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs14/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs14/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs14/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -315,10 +315,10 @@ The [`minimum`](https://ej2.syncfusion.com/react/documentation/api/circular-gaug
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs15/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs15/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs15/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs15/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -330,10 +330,10 @@ In addition to the default axis, you can add n number of axis to a gauge. Each a
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs16/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs16/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-axes-cs16/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-axes-cs16/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

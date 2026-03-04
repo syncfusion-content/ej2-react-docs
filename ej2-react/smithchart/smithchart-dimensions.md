@@ -24,10 +24,10 @@ To render the Smith chart to its container size, specify the width and height of
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs11/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs11/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs11/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs11/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -45,10 +45,10 @@ In the width and height properties of Smith chart, directly set the values in pi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs12/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs12/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs12/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs12/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -60,10 +60,10 @@ You can also specify the width and height properties of the Smith chart in perce
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs13/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs13/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs13/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs13/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

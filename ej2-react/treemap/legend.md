@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Legend in React Treemap component | Syncfusion
 description: Learn here all about Legend in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
@@ -81,10 +81,10 @@ The legends can be made interactive with an arrow mark that indicates exact rang
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/legend-cs4/app/index.jsx %}
+{% include code-snippet/treemap/code-path/legend-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/legend-cs4/app/index.tsx %}
+{% include code-snippet/treemap/code-path/legend-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -96,10 +96,10 @@ Customize the legend size by modifying the [`height`](https://ej2.syncfusion.com
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/legend-cs5/app/index.jsx %}
+{% include code-snippet/treemap/code-path/legend-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/legend-cs5/app/index.tsx %}
+{% include code-snippet/treemap/code-path/legend-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -111,10 +111,10 @@ TreeMap support legend paging, if the legend items cannot be placed within the p
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/legend-cs6/app/index.jsx %}
+{% include code-snippet/treemap/code-path/legend-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/legend-cs6/app/index.tsx %}
+{% include code-snippet/treemap/code-path/legend-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -126,10 +126,10 @@ Based on the mapping ranges in the data source, get the excluded ranges from the
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/legend-cs7/app/index.jsx %}
+{% include code-snippet/treemap/code-path/legend-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/legend-cs7/app/index.tsx %}
+{% include code-snippet/treemap/code-path/legend-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -141,10 +141,10 @@ To enable or disable the desired legend item for each color mapping, set the [`s
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/legend-cs8/app/index.jsx %}
+{% include code-snippet/treemap/code-path/legend-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/legend-cs8/app/index.tsx %}
+{% include code-snippet/treemap/code-path/legend-cs8/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -156,10 +156,10 @@ To enable or disable the legend visibility for each item through the data source
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/legend-cs9/app/index.jsx %}
+{% include code-snippet/treemap/code-path/legend-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/legend-cs9/app/index.tsx %}
+{% include code-snippet/treemap/code-path/legend-cs9/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -171,10 +171,10 @@ To show the legend item text from the data source, bind the property name from d
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/legend-cs10/app/index.jsx %}
+{% include code-snippet/treemap/code-path/legend-cs10/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/legend-cs10/app/index.tsx %}
+{% include code-snippet/treemap/code-path/legend-cs10/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -186,10 +186,10 @@ To enable or disable the duplicate legend items, set the [`removeDuplicateLegend
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/legend-cs11/app/index.jsx %}
+{% include code-snippet/treemap/code-path/legend-cs11/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/legend-cs11/app/index.tsx %}
+{% include code-snippet/treemap/code-path/legend-cs11/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

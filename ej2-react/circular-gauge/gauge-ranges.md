@@ -19,10 +19,10 @@ Start and end value of a range in an axis can be customized by using [`start`](h
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-ranges-cs1/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-ranges-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-ranges-cs1/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-ranges-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -35,10 +35,10 @@ Color and thickness of the range can be customized by using [`color`](https://ej
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-ranges-cs2/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-ranges-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-ranges-cs2/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-ranges-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -56,10 +56,10 @@ You can set the radius of the range in pixel as demonstrated below,
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-ranges-cs3/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-ranges-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-ranges-cs3/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-ranges-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -73,10 +73,10 @@ By setting value in percentage, range gets its dimension with respect to its axi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-ranges-cs4/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-ranges-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-ranges-cs4/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-ranges-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -88,10 +88,10 @@ The ranges can be dragged on the axis values by clicking and dragging the same. 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs15/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs15/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs15/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs15/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -105,10 +105,10 @@ You can add multiple ranges to an axis with the above customization as demonstra
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-ranges-cs5/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-ranges-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-ranges-cs5/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-ranges-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -120,10 +120,10 @@ You can customize the corner radius using the `roundedCornerRadius` property in 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-ranges-cs6/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-ranges-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-ranges-cs6/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-ranges-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
