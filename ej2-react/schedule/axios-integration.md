@@ -45,7 +45,7 @@ Required for storing and retrieving event data. LocalDB is recommended during de
 * **Axios ≥ 1.x (Installed in React)**  
 Required for making REST API calls between the React front end and the ASP.NET Core 10 Web API backend.
 
-## Architecture overview
+## Architecture Overview
 
 Below is the architecture that explains how all parts communicate with each other:
 
@@ -471,7 +471,7 @@ export default function App() {
 {% endhighlight %}
 {% endtabs %}
 
-## 3. Run the application
+## 3. Run the Application
 
 Starts the ASP.NET Core backend and the React application so the Syncfusion Scheduler can communicate with the API in real time.
 
@@ -501,7 +501,7 @@ npm run dev
 
 React application started running on `http://localhost:5173/`
 
-## Output preview
+## Output Preview
 
 **DotNet Application**
 ![DotNet Application](./images/react-axios-dotnet-output.png)

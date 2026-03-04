@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Legend in React Maps component | Syncfusion
 description: Learn here all about Legend in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
@@ -40,10 +40,10 @@ Each of these four positions can be further aligned using **Near**, **Center**, 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs50/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs50/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs50/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs50/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -63,10 +63,10 @@ Interactive mode enhances user experience by displaying an arrow pointer that in
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs49/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs49/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs49/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs49/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -80,10 +80,10 @@ The following code snippet demonstrates how to configure equal color mapping leg
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs51/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs51/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs51/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs51/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -129,10 +129,10 @@ The legend appearance and behavior can be extensively customized using the follo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs52/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs52/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs52/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs52/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -174,10 +174,10 @@ The following example demonstrates how to display legends for items excluded fro
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs53/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs53/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs53/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs53/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -189,10 +189,10 @@ Control the visibility of individual legend items using the [`showLegend`](https
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs54/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs54/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs54/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs54/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -204,10 +204,10 @@ Legend item visibility can be controlled dynamically based on values in the data
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs55/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs55/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs55/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs55/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -219,10 +219,10 @@ Display dynamic legend text based on data source values using the [`valuePath`](
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs56/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs56/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs56/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs56/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -234,10 +234,10 @@ To hide the duplicate legend items in Maps, set the [`removeDuplicateLegend`](ht
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs57/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs57/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs57/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs57/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -256,10 +256,10 @@ The following properties customize the appearance of toggled Maps elements:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs58/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs58/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs58/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs58/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -271,10 +271,10 @@ Display a legend for bubble visualizations by setting the [`visible`](https://ej
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs59/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs59/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs59/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs59/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -286,10 +286,10 @@ Enable marker legends by setting the [`visible`](https://ej2.syncfusion.com/reac
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs60/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs60/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs60/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs60/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

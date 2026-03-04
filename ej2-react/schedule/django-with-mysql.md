@@ -285,6 +285,7 @@ A Django REST Framework router automatically generates RESTful routes for the sc
             model = ScheduleEvents
             fields = '__all__'
     ```
+ 
 ### Step 6: View implementation
 
 The final part is the Views, which receives all incoming requests and routes them to the appropriate custom services. Update (**schedulerCrud/views.py**) with the following code to properly wire all services to the views:
@@ -442,6 +443,7 @@ This response format ensures seamless interaction between the React Scheduler an
 
     export default App;
     ```
+    
 ## Performing CRUD operations
 
 The Scheduler Application provides full CRUD (Create, Read, Update, Delete) capabilities for managing scheduling data. Users can create new schedule entries, modify existing records, or remove events. All operations are processed through the application’s interface and are reliably persisted to the backend database via Django REST Framework (DRF), ensuring accurate and up‑to‑date scheduling information across the system.
@@ -514,7 +516,7 @@ def UpdateData(request):
 
 ![Update_Payload](./images/scheduler-django-crud-changed.png)
 
-### Delete:
+### Delete
 
 **Delete** removes an existing **schedule event** identified by its primary key sent by the Scheduler.
 

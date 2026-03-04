@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Dimensions in React Linear gauge component | Syncfusion
 description: Learn here all about Dimensions in Syncfusion React Linear gauge component of Syncfusion Essential JS 2 and more.
@@ -24,10 +24,10 @@ The size of the Linear Gauge can be set in pixel as demonstrated below.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/dimensions-cs1/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/dimensions-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/dimensions-cs1/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/dimensions-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -45,10 +45,10 @@ By setting value in percentage, Linear Gauge receives its dimension matching to 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/dimensions-cs2/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/dimensions-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/dimensions-cs2/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/dimensions-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

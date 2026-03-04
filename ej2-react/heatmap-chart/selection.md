@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Selection in React HeatMap chart component | Syncfusion
 description: Learn here all about Selection in Syncfusion React HeatMap chart component of Syncfusion Essential JS 2 and more.
@@ -22,10 +22,10 @@ The HeatMap cells can be selected using the following interactions, as shown in 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/selection-cs1/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/selection-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/selection-cs1/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/selection-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -37,10 +37,10 @@ In the HeatMap, the [enableMultiSelect](https://ej2.syncfusion.com/react/documen
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/selection-cs2/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/selection-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/selection-cs2/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/selection-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

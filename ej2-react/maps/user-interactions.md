@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: User interactions in React Maps component | Syncfusion
 description: Learn here all about User interactions in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
@@ -24,10 +24,10 @@ To enable the panning feature, set the [`enablePanning`](https://ej2.syncfusion.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs89/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs89/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs89/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs89/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -51,10 +51,10 @@ The following options are available in the toolbar.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs90/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs90/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs90/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs90/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -359,10 +359,10 @@ By tapping on a specific legend, the shapes that are bound to the selected legen
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs91/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs91/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs91/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs91/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -376,10 +376,10 @@ To enable the selection for bubbles in Maps, set the [`selectionSettings`](https
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs92/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs92/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs92/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs92/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -393,10 +393,10 @@ To enable the selection for markers in Maps, set the [`selectionSettings`](https
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs93/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs93/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs93/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs93/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -417,10 +417,10 @@ The following example shows how to select the polygon shape in the geometry map.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/polygon-cs2/app/index.jsx %}
+{% include code-snippet/maps/code-path/polygon-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/polygon-cs2/app/index.tsx %}
+{% include code-snippet/maps/code-path/polygon-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -432,10 +432,10 @@ The [`shapeSelection`](https://ej2.syncfusion.com/react/documentation/api/maps#s
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs94/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs94/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs94/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs94/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -449,10 +449,10 @@ Shapes can be initially selected when the Maps loads using the [`initialShapeSel
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs95/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs95/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs95/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs95/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -466,10 +466,10 @@ Using the [`initialMarkerSelection`](https://ej2.syncfusion.com/react/documentat
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs96/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs96/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs96/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs96/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -489,10 +489,10 @@ When hovering on a specific legend, the shapes that are bound to the selected le
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs97/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs97/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs97/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs97/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -506,10 +506,10 @@ To enable the highlight for bubbles in Maps, set the [`highlightSettings`](https
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs98/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs98/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs98/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs98/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -523,10 +523,10 @@ To enable the highlight for markers in Maps, set the [`highlightSettings`](https
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs99/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs99/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs99/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs99/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -546,10 +546,10 @@ The following example shows how to highlight a polygon shape on a geometry map.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/polygon-cs3/app/index.jsx %}
+{% include code-snippet/maps/code-path/polygon-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/polygon-cs3/app/index.tsx %}
+{% include code-snippet/maps/code-path/polygon-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -565,10 +565,10 @@ On mouse over or touch end event, the tooltip is used to display additional info
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs100/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs100/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs100/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs100/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -585,10 +585,10 @@ The following properties are available in the [`tooltipSettings`](https://ej2.sy
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs101/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs101/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs101/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs101/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -600,10 +600,10 @@ The HTML element can be rendered in the tooltip of the Maps using the [`template
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs102/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs102/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs102/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs102/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -615,10 +615,10 @@ To change the duration of the tooltips and tooltip templates in mobile devices, 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs110/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs110/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs110/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs110/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

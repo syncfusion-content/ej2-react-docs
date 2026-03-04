@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Axis in React HeatMap chart component | Syncfusion
 description: Learn here all about axis in Syncfusion React HeatMap chart component of Syncfusion Essential JS 2 and more.
@@ -22,10 +22,10 @@ Category axis type is used to represent the string values in axis labels.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/axis-cs1/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/axis-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/axis-cs1/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/axis-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -37,10 +37,10 @@ Numeric axis type is used to represent the numeric values in axis labels.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/axis-cs2/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/axis-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/axis-cs2/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/axis-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -52,10 +52,10 @@ Date-time axis type is used to represent the date-time values in axis labels wit
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/axis-cs3/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/axis-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/axis-cs3/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/axis-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -67,10 +67,10 @@ HeatMap supports inversing the axis origin for both axes, where the axis labels 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/axis-cs4/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/axis-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/axis-cs4/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/axis-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -82,10 +82,10 @@ In HeatMap, you can place the axis label in an opposite position of its default 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/axis-cs5/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/axis-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/axis-cs5/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/axis-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -122,10 +122,10 @@ Axis labels with line breaks improve the readability of the HeatMap by splitting
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/axis-cs14/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/axis-cs14/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/axis-cs14/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/axis-cs14/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -174,10 +174,10 @@ HeatMap supports formatting the axis labels by using the [labelFormat](https://e
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/axis-cs6/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/axis-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/axis-cs6/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/axis-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -195,10 +195,10 @@ In HeatMap, you can define an interval between the axis labels using the [interv
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/axis-cs7/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/axis-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/axis-cs7/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/axis-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -210,10 +210,10 @@ Axis label increment in the HeatMap is used to display the axis labels with regu
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/axis-cs8/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/axis-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/axis-cs8/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/axis-cs8/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -231,10 +231,10 @@ You can display the axis labels at specific time intervals along with the date-t
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/axis-cs9/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/axis-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/axis-cs9/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/axis-cs9/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -256,10 +256,10 @@ The multilevel labels can be customized by using the following properties.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/axis-cs10/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/axis-cs10/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/axis-cs10/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/axis-cs10/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

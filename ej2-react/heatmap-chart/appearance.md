@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Appearance in React Heatmap chart component | Syncfusion
 description: Learn here all about Appearance in Syncfusion React Heatmap chart component of Syncfusion Essential JS 2 and more.
@@ -20,10 +20,10 @@ Change the width, color, and radius of the heat map cells by using the [border](
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/appearance-cs1/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/appearance-cs1/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -37,10 +37,10 @@ Enable or disable the cell highlighting while hovering over the heat map cells b
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/appearance-cs2/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/appearance-cs2/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -58,10 +58,10 @@ The [colorGradientMode](https://ej2.syncfusion.com/react/documentation/api/heatm
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/appearance-cs3/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/appearance-cs3/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -88,10 +88,10 @@ Set the margin for the heatmap from its container by using the [margin](https://
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/appearance-cs5/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/appearance-cs5/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -103,10 +103,10 @@ The title is used to provide a quick information about the data plotted in heatm
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/appearance-cs6/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/appearance-cs6/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -118,10 +118,10 @@ The visibility of data labels can be toggled using the [showLabel](https://ej2.s
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/appearance-cs7/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/appearance-cs7/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -148,10 +148,10 @@ The text attributes of the data label such as font-family, font-size, and color 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/appearance-cs9/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/appearance-cs9/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs9/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -163,10 +163,10 @@ The format of the data label, such as currency, decimal, percent etc. can be cha
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/appearance-cs10/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs10/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/appearance-cs10/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs10/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -203,10 +203,10 @@ The following example demonstrates how to add a data label template for array ce
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/appearance-cs12/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs12/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/appearance-cs12/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs12/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -222,10 +222,10 @@ The following example demonstrates how to add a data label template for JSON tab
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/appearance-cs13/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs13/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/appearance-cs13/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs13/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -237,10 +237,10 @@ The following example demonstrates how to add a data label template for JSON cel
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/appearance-cs14/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs14/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/appearance-cs14/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/appearance-cs14/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

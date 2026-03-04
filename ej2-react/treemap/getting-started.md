@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Getting started with React TreeMap component | Syncfusion
 description:  Checkout and learn about Getting started with React TreeMap component of Syncfusion Essential JS 2 and more details.
@@ -116,10 +116,10 @@ This section shows how to render a TreeMap using a bound data source. The exampl
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/getting-started-cs1/app/index.jsx %}
+{% include code-snippet/treemap/code-path/getting-started-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/getting-started-cs1/app/index.tsx %}
+{% include code-snippet/treemap/code-path/getting-started-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -163,10 +163,10 @@ The labels are added to show additional information of the items in TreeMap. By 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/treemap/getting-started-cs4/app/index.jsx %}
+{% include code-snippet/treemap/code-path/getting-started-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/treemap/getting-started-cs4/app/index.tsx %}
+{% include code-snippet/treemap/code-path/getting-started-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -178,10 +178,10 @@ The tooltips are used when labels cannot display information due to space constr
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/treemap/getting-started-cs5/app/index.jsx %}
+{% include code-snippet/treemap/code-path/getting-started-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/treemap/getting-started-cs5/app/index.tsx %}
+{% include code-snippet/treemap/code-path/getting-started-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

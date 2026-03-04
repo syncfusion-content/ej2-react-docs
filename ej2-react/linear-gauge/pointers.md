@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Pointers in React Linear Gauge Component | Syncfusion
 description: Learn here all about pointers in Syncfusion Essential React Linear Gauge component, its elements and more.
@@ -16,10 +16,10 @@ Pointers are used to indicate values on an axis. The value of the pointer can be
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/pointers-cs1/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/pointers-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/pointers-cs1/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/pointers-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -52,10 +52,10 @@ By default, the marker shape for the pointer is **InvertedTriangle**. To change 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/pointers-cs2/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/pointers-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/pointers-cs2/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/pointers-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -65,10 +65,10 @@ Image can be rendered instead of rendering a shape as a pointer. It can be achie
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/pointers-cs9/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/pointers-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/pointers-cs9/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/pointers-cs9/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -114,10 +114,10 @@ The marker pointer can be customized using the following properties.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/pointers-cs3/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/pointers-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/pointers-cs3/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/pointers-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -129,10 +129,10 @@ The bar pointer is used to track the axis value. The bar pointer starts from the
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/pointers-cs4/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/pointers-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/pointers-cs4/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/pointers-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -156,10 +156,10 @@ The bar pointer can be customized using following properties.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/pointers-cs5/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/pointers-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/pointers-cs5/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/pointers-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -171,10 +171,10 @@ Multiple pointers can be added to the Linear Gauge by adding multiple [PointerDi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/pointers-cs6/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/pointers-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/pointers-cs6/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/pointers-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -186,10 +186,10 @@ Pointer is animated on loading the gauge. This can be handled using the [animati
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/getting-started-cs5/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/getting-started-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/getting-started-cs5/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/getting-started-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -223,10 +223,10 @@ Using radial gradient, colors will be applied in circular progression. The inner
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/pointers-cs8/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/pointers-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/pointers-cs8/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/pointers-cs8/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

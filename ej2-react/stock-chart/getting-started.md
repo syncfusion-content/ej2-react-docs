@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Getting Started with React Stock Chart Component | Syncfusion
 description: Checkout and learn about getting started with Syncfusion Essentiall React Stock Chart component, it's elements, and more details.
@@ -292,10 +292,10 @@ You can add a title using the [`title`](https://ej2.syncfusion.com/react/documen
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/stock-chart/getting-started/datasource-cs2/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/getting-started/datasource-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/stock-chart/getting-started/datasource-cs2/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/getting-started/datasource-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -309,10 +309,10 @@ Crosshair lines can be enabled by using the [`enable`](https://ej2.syncfusion.c
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/stock-chart/getting-started/crosshair-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/getting-started/crosshair-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/stock-chart/getting-started/crosshair-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/getting-started/crosshair-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -326,10 +326,10 @@ Trackball can be enabled by setting the [`enable`](https://ej2.syncfusion.com/re
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/stock-chart/getting-started/trackball-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/getting-started/trackball-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/stock-chart/getting-started/trackball-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/getting-started/trackball-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

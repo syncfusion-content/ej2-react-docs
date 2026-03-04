@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Axis customization in React Stock chart component | Syncfusion
 description: Learn here all about Axis customization in Syncfusion React Stock chart component of Syncfusion Essential JS 2 and more.
@@ -16,10 +16,10 @@ An axis can be positioned in the Stock Chart area using [`crossesAt`](https://ej
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/axis-customization-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/axis-customization-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/axis-customization-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/axis-customization-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -31,10 +31,10 @@ You can add a title to the axis using [`title`](https://ej2.syncfusion.com/react
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/axis-customization-cs2/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/axis-customization-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/axis-customization-cs2/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/axis-customization-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -46,10 +46,10 @@ You can customize the  `width`, `color` and `size` of the minor and major 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/axis-customization-cs3/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/axis-customization-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/axis-customization-cs3/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/axis-customization-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -61,10 +61,10 @@ You can customize the `width`, `color` and `dashArray` of the minor and maj
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/axis-customization-cs4/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/axis-customization-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/axis-customization-cs4/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/axis-customization-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -76,10 +76,10 @@ In addition to primary X and Y axis, we can add n number of axis to the Stock Ch
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/axis-customization-cs5/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/axis-customization-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/axis-customization-cs5/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/axis-customization-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -91,10 +91,10 @@ When an axis is inversed, highest value of the axis comes closer to origin and v
 
  {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/axis-customization-cs6/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/axis-customization-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/axis-customization-cs6/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/axis-customization-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -106,10 +106,10 @@ To place an axis opposite from its original position, set [`opposedPosition`](ht
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/axis-customization-cs7/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/axis-customization-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/axis-customization-cs7/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/axis-customization-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

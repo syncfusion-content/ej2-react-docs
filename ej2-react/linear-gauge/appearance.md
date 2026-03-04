@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Appearance in React Linear gauge component | Syncfusion
 description: Learn here all about Appearance in Syncfusion React Linear gauge component of Syncfusion Essential JS 2 and more.
@@ -22,10 +22,10 @@ The following properties are available in the [`LinearGaugeComponent`](https://e
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/appearance-cs1/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/appearance-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/appearance-cs1/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/appearance-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -44,10 +44,10 @@ The title for the Linear Gauge can be set using [`title`](https://ej2.syncfusion
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/appearance-cs2/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/appearance-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/appearance-cs2/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/appearance-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -75,10 +75,10 @@ The **Normal** type will render the container as a rectangle and this is the def
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/appearance-cs3/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/appearance-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/appearance-cs3/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/appearance-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -90,10 +90,10 @@ The **RoundedRectangle** type will render the container as a rectangle with roun
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/appearance-cs4/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/appearance-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/appearance-cs4/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/appearance-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -105,10 +105,10 @@ The **Thermometer** type will render the container similar to the appearance of 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/appearance-cs5/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/appearance-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/appearance-cs5/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/appearance-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -120,10 +120,10 @@ The Linear Gauge component is rendered with margin by default. To remove the mar
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/appearance-cs6/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/appearance-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/appearance-cs6/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/appearance-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

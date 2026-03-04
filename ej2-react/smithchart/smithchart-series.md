@@ -18,10 +18,10 @@ For adding values in the Smith chart, you can use either points or data source i
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs25/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs25/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs25/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs25/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -39,10 +39,10 @@ Using the following options in series settings, you can customize the each serie
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs26/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs26/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs26/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs26/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

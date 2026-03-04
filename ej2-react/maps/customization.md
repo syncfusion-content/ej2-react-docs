@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Customization in React Maps component | Syncfusion
 description: Learn here all about Customization in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
@@ -18,10 +18,10 @@ The width and height of the Maps can be set using the [`width`](https://ej2.sync
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs18/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs18/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs18/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs18/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -69,10 +69,10 @@ By default, the Maps are rendered by the **Material** theme. The theme of the Ma
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs20/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs20/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs20/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs20/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -88,10 +88,10 @@ The following properties are available to customize the container in the Maps.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs21/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs21/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs21/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs21/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -125,10 +125,10 @@ The following properties are available in [`shapeSettings`](https://ej2.syncfusi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs23/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs23/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs23/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs23/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -140,10 +140,10 @@ The color for each shape in the Maps can be set using the [`colorValuePath`](htt
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs24/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs24/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs24/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs24/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -155,10 +155,10 @@ The border of each shape in the Maps can be customized using the [`borderColorVa
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs25/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs25/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs25/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs25/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -181,10 +181,10 @@ The default projection is **Mercator**, which renders the map based on coordinat
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs26/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs26/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs26/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs26/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

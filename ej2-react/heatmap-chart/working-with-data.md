@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Working with data in React HeatMap chart component | Syncfusion
 description: Learn here all about Working with data in Syncfusion React HeatMap chart component of Syncfusion Essential JS 2 and more.
@@ -78,10 +78,10 @@ In JSON cell data binding, each JSON object consists a value for each cell along
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/working-with-data-cs4/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/working-with-data-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/working-with-data-cs4/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/working-with-data-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -93,10 +93,10 @@ The data points that use the **null** or **undefined** or empty string as value 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/working-with-data-cs5/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/working-with-data-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/working-with-data-cs5/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/working-with-data-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -108,10 +108,10 @@ In complex data binding, you can bind the nested JSON data to the data points in
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/working-with-data-cs6/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/working-with-data-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/working-with-data-cs6/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/working-with-data-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

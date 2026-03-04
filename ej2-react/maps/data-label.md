@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Data label in React Maps component | Syncfusion
 description: Learn here all about Data label in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
@@ -20,10 +20,10 @@ The following example sets [labelPath](https://ej2.syncfusion.com/react/document
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs27/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs27/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs27/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs27/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -33,10 +33,10 @@ In the following example, the value of [labelPath](https://ej2.syncfusion.com/re
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs28/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs28/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs28/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs28/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -53,10 +53,10 @@ Customize data label appearance using the following properties in [dataLabelSett
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs29/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs29/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs29/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs29/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -68,10 +68,10 @@ Animate data labels during initial rendering by setting the [animationDuration](
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs108/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs108/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs108/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs108/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -89,10 +89,10 @@ The following modes are available:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs30/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs30/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs30/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs30/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -108,10 +108,10 @@ Control label behavior when labels overlap with other labels using the [intersec
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs31/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs31/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs31/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs31/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -125,10 +125,10 @@ Add custom HTML elements as data label templates using the [template](https://ej
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs32/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs32/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs32/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs32/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

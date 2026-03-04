@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Appearance in React Stock chart component | Syncfusion
 description: Learn here all about Appearance in Syncfusion React Stock chart component of Syncfusion Essential JS 2 and more.
@@ -16,10 +16,10 @@ Stock Chart can be given a title using [`title`](https://ej2.syncfusion.com/reac
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/appearance/title-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/appearance/title-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/appearance/title-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/appearance/title-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -33,10 +33,10 @@ The `textStyle` property of chart title provides options to customize the `size`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/appearance/title-cs2/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/appearance/title-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/appearance/title-cs2/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/appearance/title-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -50,10 +50,10 @@ Changing Stock Chart theme will affect background color, grid lines, tooltip col
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/appearance/theme-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/appearance/theme-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/appearance/theme-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/appearance/theme-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

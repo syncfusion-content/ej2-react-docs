@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Chart dimensions in React Stock chart component | Syncfusion
 description: Learn here all about Chart dimensions in Syncfusion React Stock chart component of Syncfusion Essential JS 2 and more.
@@ -51,10 +51,10 @@ ReactDOM.render(<App />, document.getElementById("stockcharts"));
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/chart-dimensions-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/chart-dimensions-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/chart-dimensions-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/chart-dimensions-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -72,10 +72,10 @@ You can set the size of chart in pixel as demonstrated below.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/chart-dimensions-cs2/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/chart-dimensions-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/chart-dimensions-cs2/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/chart-dimensions-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -87,10 +87,10 @@ By setting value in percentage, Stock Chart gets its dimension with respect to i
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/chart-dimensions-cs3/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/chart-dimensions-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/chart-dimensions-cs3/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/chart-dimensions-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Ranges in React Linear gauge component | Syncfusion
 description: Learn here all about Ranges in Syncfusion React Linear gauge component of Syncfusion Essential JS 2 and more.
@@ -15,10 +15,10 @@ Range is the set of values in the axis. The range can be defined using the [`sta
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/ranges-cs1/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/ranges-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/ranges-cs1/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/ranges-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -37,10 +37,10 @@ Ranges can be customized using the following properties in [`RangeDirective`](ht
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/ranges-cs2/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/ranges-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/ranges-cs2/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/ranges-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -52,10 +52,10 @@ To set the color of the labels like the range color, set the [`useRangeColor`](h
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/ranges-cs3/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/ranges-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/ranges-cs3/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/ranges-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -67,10 +67,10 @@ Multiple ranges can be added to the Linear Gauge by adding collections of [`Rang
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/ranges-cs4/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/ranges-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/ranges-cs4/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/ranges-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

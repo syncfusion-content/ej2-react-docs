@@ -15,10 +15,10 @@ Pointers are used to indicate values on the axis. Value of the pointer can be mo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs1/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs1/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -35,10 +35,10 @@ in cap object. The needle and tail length takes value either in `percentage` o
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs2/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs2/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -81,10 +81,10 @@ RangeBar pointer is like ranges in an axis, that can be placed on gauge to mark 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs5/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs5/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -96,10 +96,10 @@ RangeBar can be customized in terms of color, border and thickness by using [`co
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs6/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs6/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -111,10 +111,10 @@ The start and end pointers of range bar in the circular gauge are rounded to for
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs7/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs7/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -128,10 +128,10 @@ We can use image instead of rendering marker shape to denote the pointer value. 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs8/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs8/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs8/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -143,10 +143,10 @@ The marker can be customized in terms of color, border, width and height by usin
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs9/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs9/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs9/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -158,10 +158,10 @@ The pointers can be dragged along the axis line by clicking and dragging them. T
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs10/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs10/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs10/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs10/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -177,10 +177,10 @@ The following example demonstrates how to enable the drag functionality for mult
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-drag-cs1/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-drag-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-drag-cs1/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-drag-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -192,10 +192,10 @@ In addition to the default pointer, you can add n number of pointer to an axis b
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs11/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs11/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs11/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs11/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -209,10 +209,10 @@ The [`duration`](https://ej2.syncfusion.com/react/documentation/api/circular-gau
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs12/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs12/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs12/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs12/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -233,10 +233,10 @@ The linear gradient can be applied to all pointer types like marker, range bar a
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs13/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs13/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs13/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs13/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -250,10 +250,10 @@ The radial gradient can be applied to all pointer types like marker, range bar a
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs14/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs14/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-pointers-cs14/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-pointers-cs14/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

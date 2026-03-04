@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Axis types in React Stock chart component | Syncfusion
 description: Learn here all about Axis types in Syncfusion React Stock chart component of Syncfusion Essential JS 2 and more.
@@ -17,10 +17,10 @@ DateTime axis uses date time scale and displays the date time values as axis lab
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/appearance/title-cs3/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/appearance/title-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/appearance/title-cs3/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/appearance/title-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -34,10 +34,10 @@ DateTimeCategory axis in the stock chart is used to display only business days. 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/axis-types-cs2/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/axis-types-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/axis-types-cs2/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/axis-types-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -53,10 +53,10 @@ Logarithmic axis uses logarithmic scale and it is very useful in visualizing dat
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/axis-types-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/axis-types-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/axis-types-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/axis-types-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

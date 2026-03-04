@@ -80,7 +80,7 @@ yarn create vite
 
 Running one of the above commands will prompt you to configure the project as shown below.
 
-### Step 1: Define the project name:
+### Step 1: Define the project name
 For example, let us name the project `react-app`.
 
 {% tabs %}
@@ -91,7 +91,7 @@ For example, let us name the project `react-app`.
 {% endhighlight %}
 {% endtabs %}
 
-### Step 2: Select the required configurations:
+### Step 2: Select the required configurations
 
 Choose React as the framework and TypeScript as the variant for better type safety and maintainability.
 
@@ -120,7 +120,7 @@ yarn create vite react-app --template react-ts
 {% endhighlight %}
 {% endtabs %}
 
-### Step 3: Confirm additional Vite options:
+### Step 3: Confirm additional Vite options
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -136,7 +136,7 @@ After executing the above commands, the application will be available at: `http:
 The React application is now created and running with default settings.
 Next, we will proceed with integrating Syncfusion® React Scheduler component into the project after setting up the server.
 
-### Step 4: Terminate & navigate to the project directory:
+### Step 4: Terminate & navigate to the project directory
 Once the project is created successfully, stop the running state of the application and move into the application folder using the following command.
 
 {% tabs %}
@@ -150,7 +150,7 @@ cd react-app
 
 ## Create a Server Application
 
-### Step 1: Install required libraries:
+### Step 1: Install required libraries
 To set up the backend for the application, Install the required packages and make a new directory for server in the React project folder `react-app/` itself.
 
 {% tabs %}
@@ -173,7 +173,7 @@ mkdir server
 {% endhighlight %}
 {% endtabs %}
 
-### Step 2: Create a file **server.js**:
+### Step 2: Create a file **server.js**
 Create a new file named `server.js` inside the directory `server` created above and add the following code to set up the server. 
 
 {% tabs %}
@@ -268,7 +268,7 @@ app.post('/BatchData', async (req, res) => {
 
 Here database name is `mydb` and collection name is `ScheduleData`, both were previously created during the database setup process 
 
-### Step 3: Add **server script** to `package.json`:
+### Step 3: Add server script to package.json
 To enable running the Node.js backend directly from the React project’s root, add the following script inside your root `package.json` under the "scripts" section.
     
 {% tabs %}
@@ -284,7 +284,7 @@ To enable running the Node.js backend directly from the React project’s root, 
 ## Integrating Syncfusion React Scheduler
 This section integrates [Syncfusion React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) to the above created application.
 
-### Step 1: Install required libraries:
+### Step 1: Install required libraries
 Install the required [Syncfusion React Scheduler package](https://www.npmjs.com/package/@syncfusion/ej2-react-schedule) by the following command.
     
 {% tabs %}
@@ -300,7 +300,7 @@ yarn add @syncfusion/ej2-react-schedule
 {% endhighlight %}
 {% endtabs %}
 
-### Step 2: Add CSS references:
+### Step 2: Add CSS references
 Add CSS references for the Scheduler in `src/App.css`.
    
 {% tabs %}
@@ -318,7 +318,7 @@ Add CSS references for the Scheduler in `src/App.css`.
 {% endhighlight %}
 {% endtabs %}
 
-### Step 3: Add the Schedule component:
+### Step 3: Add the Schedule component
 In the `src/App.tsx` file, use the following code snippet to render the Syncfusion React Schedule component and import `App.css` to apply styles to the scheduler.
     
 {% tabs %}
@@ -364,7 +364,7 @@ export default class App extends React.Component<{}, {}> {
 {% endhighlight %}
 {% endtabs %}
 
-### Step 4: Perform CRUD operations using Syncfusion's DataManager URL Adaptor:
+### Step 4: Perform CRUD operations using Syncfusion's DataManager URL Adaptor
 This connects the scheduler to your backend through REST endpoints and enables create, read, update, and delete from the UI.
 
 {% tabs %}
@@ -430,7 +430,7 @@ export default class App extends React.Component<{}, {}> {
 If your project’s package.json contains **"type": "module"**, remove it before running the server.  
 This project uses CommonJS (require), not ES modules—keeping "type": "module" will cause Node.js to throw a “require is not defined in ES module scope” error.
 
-### Step 1: Start the Backend Server:
+### Step 1: Start the backend server
 From the project directory `react-app/`, start the backend server.
     
 {% tabs %}
@@ -446,10 +446,9 @@ yarn server
 {% endhighlight %}
 {% endtabs %}
 
-Once started, the Node.js backend will be available at:
-http://localhost:5000/
+Once started, the Node.js backend will be available at: `http://localhost:5000/`
 
-### Step 2: Start the React Application:
+### Step 2: Start the React application
 Open a new terminal window from the same `react-app/` directory and run the React application.
     
 {% tabs %}
@@ -465,8 +464,7 @@ yarn run dev
 {% endhighlight %}
 {% endtabs %}
 
-After the build completes, the React application will run at:
-http://localhost:4200/
+After the build completes, the React application will run at: `http://localhost:5173/`
 
 You can now create, read, update, and delete events directly in the **Syncfusion React Scheduler**.
 All changes will be reflected in the connected **MongoDB** database in real time.

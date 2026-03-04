@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Annotations in React Maps component | Syncfusion
 description: Learn here all about Annotations in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
@@ -62,10 +62,10 @@ The [`zIndex`](https://ej2.syncfusion.com/react/documentation/api/maps/annotatio
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs1/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs1/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -79,10 +79,10 @@ Annotations can be placed anywhere in the Maps by specifying pixel or percentage
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs2/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs2/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -96,10 +96,10 @@ Annotations can be aligned using the [`horizontalAlignment`](https://ej2.syncfus
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs3/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs3/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -111,10 +111,10 @@ Multiple annotations can be added to the Maps component by defining an array of 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs4/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs4/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -131,10 +131,10 @@ const logo = require('./compass.png');
 [`app.tsx`]		
 {% tabs %}		
 {% highlight js tabtitle="index.jsx" %}		
-{% include code-snippet/maps/default-map-cs40/app/index.jsx %}		
+{% include code-snippet/maps/code-path/default-map-cs40/app/index.jsx %}		
 {% endhighlight %}		
 {% highlight ts tabtitle="index.tsx" %}		
-{% include code-snippet/maps/default-map-cs40/app/index.tsx %}		
+{% include code-snippet/maps/code-path/default-map-cs40/app/index.tsx %}		
 {% endhighlight %}		
 {% endtabs %}		
  {% previewsample "page.domainurl/code-snippet/maps/default-map-cs40" %}

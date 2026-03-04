@@ -20,10 +20,10 @@ You can place any custom element on the axis area by assigning the id of the ele
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-annotations-cs1/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-annotations-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-annotations-cs1/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-annotations-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -38,10 +38,10 @@ Radius of the annotation takes value either in pixel or percentage. By setting v
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-annotations-cs2/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-annotations-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-annotations-cs2/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-annotations-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

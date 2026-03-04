@@ -16,10 +16,10 @@ To use the print functionality, we should inject the `Print` module into `servic
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-print-and-export-cs1/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-print-and-export-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-print-and-export-cs1/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-print-and-export-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -37,10 +37,10 @@ To use the image export functionality, we should inject the `ImageExport` module
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-print-and-export-cs2/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-print-and-export-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-print-and-export-cs2/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-print-and-export-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -50,10 +50,10 @@ We can get the image file as base64 string for the JPEG and PNG formats. The cir
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-print-and-export-cs3/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-print-and-export-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-print-and-export-cs3/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-print-and-export-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -65,10 +65,10 @@ To use the PDF export functionality, we should inject the `PdfExport` module int
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-print-and-export-cs4/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-print-and-export-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-print-and-export-cs4/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-print-and-export-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

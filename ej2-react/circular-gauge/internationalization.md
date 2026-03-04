@@ -29,10 +29,10 @@ In the below example, axis labels are globalized to **EUR**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/getting-started-cs3/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/getting-started-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/getting-started-cs3/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/getting-started-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

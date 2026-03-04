@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Getting started with React HeatMap chart component | Syncfusion
 description:  Checkout and learn about Getting started with React HeatMap chart component of Syncfusion Essential JS 2 and more details.
@@ -100,10 +100,10 @@ The application compiles and serves locally in the browser. The following exampl
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/getting-started-cs1/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/getting-started-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/getting-started-cs1/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/getting-started-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -143,10 +143,10 @@ This section shows how to populate a two-dimensional array of values into the he
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/getting-started-cs2/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/getting-started-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/getting-started-cs2/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/getting-started-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -158,10 +158,10 @@ Axis labels can be added and formatted using the [xAxis](https://ej2.syncfusion.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/getting-started-cs3/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/getting-started-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/getting-started-cs3/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/getting-started-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -173,10 +173,10 @@ Add a title using the [titleSettings](https://ej2.syncfusion.com/react/documenta
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/getting-started-cs4/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/getting-started-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/getting-started-cs4/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/getting-started-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -188,10 +188,10 @@ Enable a legend through the [legendSettings](https://ej2.syncfusion.com/react/do
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/getting-started-cs5/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/getting-started-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/getting-started-cs5/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/getting-started-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -203,10 +203,10 @@ Add data labels to improve the readability of the heat map. This can be achieved
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/getting-started-cs6/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/getting-started-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/getting-started-cs6/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/getting-started-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -218,10 +218,10 @@ The default palette settings of the heat map cells can be customized by using th
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/getting-started-cs7/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/getting-started-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/getting-started-cs7/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/getting-started-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -233,10 +233,10 @@ The tooltip is used when you cannot display information by using the data labels
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/getting-started-cs8/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/getting-started-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/getting-started-cs8/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/getting-started-cs8/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

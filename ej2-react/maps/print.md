@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Print in React Maps component | Syncfusion
 description: Learn here all about Print in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
@@ -22,10 +22,10 @@ The rendered map can be printed directly from the browser by calling the [`print
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs79/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs79/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs79/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs79/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -51,10 +51,10 @@ The rendered Maps can be exported as an image using the [`export`](https://ej2.s
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs80/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs80/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs80/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs80/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -66,10 +66,10 @@ The map can be exported as a base64 string for the JPEG and PNG formats. The ren
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs81/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs81/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs81/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs81/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -89,10 +89,10 @@ The rendered map can be exported as a PDF using the [`export`](https://ej2.syncf
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs82/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs82/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs82/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs82/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -110,10 +110,10 @@ The rendered map with providers such as OSM, Bing, and Google static Maps can be
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs83/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs83/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs83/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs83/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

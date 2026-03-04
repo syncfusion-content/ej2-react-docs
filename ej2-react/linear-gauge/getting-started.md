@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Getting started with React Linear Gauge component | Syncfusion
 description:  Checkout and learn about Getting started with React Linear Gauge component of Syncfusion Essential JS 2 and more details.
@@ -117,10 +117,10 @@ The title can be added to the Linear Gauge component using the [`title`](https:/
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/linear-gauge/getting-started-cs1/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/getting-started-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/linear-gauge/getting-started-cs1/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/getting-started-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -132,10 +132,10 @@ The range of the axis can be set using the [`minimum`](https://ej2.syncfusion.co
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/linear-gauge/getting-started-cs2/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/getting-started-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/linear-gauge/getting-started-cs2/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/getting-started-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -149,10 +149,10 @@ To change the pointer value from the default value of the gauge, set the [`value
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/linear-gauge/getting-started-cs3/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/getting-started-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/linear-gauge/getting-started-cs3/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/getting-started-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -164,10 +164,10 @@ The pointer value is changed in the below sample using the [`value`](https://ej2
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/linear-gauge/getting-started-cs4/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/getting-started-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/linear-gauge/getting-started-cs4/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/getting-started-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -185,10 +185,10 @@ The output appears as follows.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/linear-gauge/getting-started-cs4/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/getting-started-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/linear-gauge/getting-started-cs4/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/getting-started-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

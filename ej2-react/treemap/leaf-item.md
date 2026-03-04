@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Leaf item in React Treemap component | Syncfusion
 description: Learn here all about Leaf item in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
@@ -96,10 +96,10 @@ The [`gap`](https://ej2.syncfusion.com/react/documentation/api/treemap/leafItemS
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/leafitem-cs3/app/index.jsx %}
+{% include code-snippet/treemap/code-path/leafitem-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/leafitem-cs3/app/index.tsx %}
+{% include code-snippet/treemap/code-path/leafitem-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

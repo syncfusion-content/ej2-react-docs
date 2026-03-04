@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Cross hair in React Stock chart component | Syncfusion
 description: Learn here all about Cross hair in Syncfusion React Stock chart component of Syncfusion Essential JS 2 and more.
@@ -16,10 +16,10 @@ Crosshair lines can be enabled by using [`enable`](https://ej2.syncfusion.com/r
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/cross-hair-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/cross-hair-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/cross-hair-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/cross-hair-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -31,10 +31,10 @@ Tooltip label for an axis can be enabled by using [`enable`](https://ej2.syncfu
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/cross-hair-cs2/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/cross-hair-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/cross-hair-cs2/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/cross-hair-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -46,10 +46,10 @@ The [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairT
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/cross-hair-cs3/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/cross-hair-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/cross-hair-cs3/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/cross-hair-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -61,10 +61,10 @@ Enabling the [`snapToData`](https://ej2.syncfusion.com/react/documentation/api/c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/cross-hair-cs4/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/cross-hair-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/cross-hair-cs4/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/cross-hair-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

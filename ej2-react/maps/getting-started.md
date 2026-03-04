@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Getting started with React Maps component | Syncfusion
 description: Check out and learn about Getting started with React Maps component of Syncfusion Essential JS 2 and more details.
@@ -177,10 +177,10 @@ Map elements are rendered within layers. Add a layer collection to the Maps usin
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/maps/default-map-cs33/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs33/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/maps/default-map-cs33/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs33/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -202,10 +202,10 @@ The JSON object "uncountries" is used as data source below.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/maps/default-map-cs34/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs34/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/maps/default-map-cs34/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs34/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -222,10 +222,10 @@ Specify color and value in [`colorMapping`](https://ej2.syncfusion.com/react/doc
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/maps/default-map-cs35/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs35/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/maps/default-map-cs35/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs35/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -239,10 +239,10 @@ You can add a title using [`titleSettings`](https://ej2.syncfusion.com/react/doc
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/maps/default-map-cs36/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs36/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/maps/default-map-cs36/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs36/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -256,10 +256,10 @@ You can show a legend for the maps by setting the [`visible`](https://ej2.syncfu
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/maps/default-map-cs37/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs37/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/maps/default-map-cs37/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs37/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -273,10 +273,10 @@ You can add data labels to show additional information of the shapes in the map.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/maps/default-map-cs38/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs38/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/maps/default-map-cs38/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs38/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -289,10 +289,10 @@ You can enable tooltip by setting the [`visible`](https://ej2.syncfusion.com/rea
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/maps/default-map-cs39/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs39/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/maps/default-map-cs39/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs39/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
