@@ -20,10 +20,10 @@ By default, the visibility of marker is false. You can enable marker by setting 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs21/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs21/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs21/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs21/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -42,10 +42,10 @@ Using marker settings in series, you can customize the marker for each series di
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs22/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs22/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs22/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs22/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -57,10 +57,10 @@ By default, the data labels are disabled. You can enable the data labels by sett
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs23/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs23/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs23/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs23/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -77,10 +77,10 @@ Using data label settings in marker, you can customize the data label for each s
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs24/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs24/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs24/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs24/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

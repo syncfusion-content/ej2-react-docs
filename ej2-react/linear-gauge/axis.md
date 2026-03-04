@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Axis in React Linear gauge component | Syncfusion
 description: Learn here all about Axis in Syncfusion React Linear gauge component of Syncfusion Essential JS 2 and more.
@@ -20,10 +20,10 @@ The start value and end value for the Linear Gauge can be set using the [`minimu
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs1/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs1/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -40,10 +40,10 @@ The following properties in the [`line`](https://ej2.syncfusion.com/react/docume
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs2/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs2/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -62,10 +62,10 @@ Ticks are used to specify the interval in the axis. Ticks are of two types, majo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs3/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs3/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -77,10 +77,10 @@ The minor and major ticks can be positioned by using the [`offset`](https://ej2.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs4/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs4/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -101,10 +101,10 @@ The style of the labels can be customized using the following properties in the 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs5/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs5/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -116,10 +116,10 @@ Labels can be positioned by using [`offset`](https://ej2.syncfusion.com/react/do
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs6/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs6/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -131,10 +131,10 @@ If the last label is not in the visible range, it will be hidden by default. The
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs7/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs7/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -148,10 +148,10 @@ Axis labels in the Linear Gauge control can be formatted using the [`format`](ht
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs8/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs8/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs8/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -221,10 +221,10 @@ The numeric formats such as currency, percentage, and so on can be displayed in 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs9/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs9/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs9/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -236,10 +236,10 @@ By default, the Linear Gauge is rendered vertically. To change its orientation, 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs10/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs10/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs10/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs10/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -251,10 +251,10 @@ The axis of the Linear Gauge component can be inversed by setting the [`isInvers
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs11/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs11/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs11/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs11/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -266,10 +266,10 @@ To place an axis opposite from its original position, [`opposedPosition`](https:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs12/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs12/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs12/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs12/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -281,10 +281,10 @@ Multiple axes can be added to the Linear Gauge by adding multiple [`AxisDirectiv
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs13/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs13/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs13/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs13/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

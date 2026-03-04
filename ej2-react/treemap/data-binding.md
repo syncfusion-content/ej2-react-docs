@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Data binding in React Treemap component | Syncfusion
 description: Learn here all about Data binding in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
@@ -24,10 +24,10 @@ The following code shows, how to bind a flat collection as data source to the Tr
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/databind-cs1/app/index.jsx %}
+{% include code-snippet/treemap/code-path/databind-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/databind-cs1/app/index.tsx %}
+{% include code-snippet/treemap/code-path/databind-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

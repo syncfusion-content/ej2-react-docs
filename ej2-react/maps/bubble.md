@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Bubble in React Maps component | Syncfusion
 description: Learn here all about Bubble in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
@@ -22,10 +22,10 @@ export let world_map = // paste the World map from World.json GeoJSON file.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs5/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs5/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -42,10 +42,10 @@ By default, bubbles render as **Circle**. To display square-shaped bubbles, set 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs6/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs6/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -63,10 +63,10 @@ The [`BubbleDirective`](https://ej2.syncfusion.com/react/documentation/api/maps/
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs7/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs7/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -78,10 +78,10 @@ The color for each bubble in the Maps can be set using the [`colorValuePath`](ht
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs8/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs8/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs8/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -93,10 +93,10 @@ The size of the bubbles is calculated from the values got from the [`valuePath`]
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs9/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs9/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs9/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -108,10 +108,10 @@ Multiple bubble groups can be added to the Maps component by defining an array o
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs10/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs10/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs10/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs10/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -123,10 +123,10 @@ To enable tooltips for bubbles, set the [`visible`](https://ej2.syncfusion.com/r
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs11/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs11/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs11/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs11/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

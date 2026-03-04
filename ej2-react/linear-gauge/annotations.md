@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Annotations in React Linear gauge component | Syncfusion
 description: Learn here all about Annotations in Syncfusion React Linear gauge component of Syncfusion Essential JS 2 and more.
@@ -67,10 +67,10 @@ To change the stack order of an annotation element, the [`zIndex`](https://ej2.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/annotations-cs1/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/annotations-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/annotations-cs1/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/annotations-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -82,10 +82,10 @@ The annotation can be placed anywhere in the Linear Gauge by setting the pixel v
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/annotations-cs2/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/annotations-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/annotations-cs2/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/annotations-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -99,10 +99,10 @@ The annotation can be aligned horizontally and vertically by using the [`horizon
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/annotations-cs3/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/annotations-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/annotations-cs3/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/annotations-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -114,10 +114,10 @@ Multiple annotations can be added to the Linear Gauge component by adding the mu
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/annotations-cs4/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/annotations-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/annotations-cs4/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/annotations-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

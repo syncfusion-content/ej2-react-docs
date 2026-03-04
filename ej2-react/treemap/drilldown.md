@@ -14,14 +14,14 @@ The TreeMap supports drill-down to expose the hierarchy, achieved by clicking a 
 
 ## Perform drill-down action
 
-The TreeMap items can be drilled by setting the [`enableDrillDown`](https://ej2.syncfusion.com/react/documentation/api/treemap/#enabledrilldown) property to **true**.
+The TreeMap items can be drilled by setting the [`enableDrillDown`](https://ej2.syncfusion.com/react/documentation/api/treemap#enabledrilldown) property to **true**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/drilldown-cs1/app/index.jsx %}
+{% include code-snippet/treemap/code-path/drilldown-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/drilldown-cs1/app/index.tsx %}
+{% include code-snippet/treemap/code-path/drilldown-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

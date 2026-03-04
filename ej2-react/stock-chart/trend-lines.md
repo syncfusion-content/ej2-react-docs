@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Trend lines in React Stock chart component | Syncfusion
 description: Learn here all about Trend lines in Syncfusion React Stock chart component of Syncfusion Essential JS 2 and more.
@@ -56,10 +56,10 @@ To render a moving average trendline, use trendline [`type`](https://ej2.syncfus
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/trend-lines-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/trend-lines-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/trend-lines-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/trend-lines-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

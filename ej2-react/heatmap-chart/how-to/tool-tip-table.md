@@ -35,10 +35,10 @@ Set the element id to the `template` property in `tooltipSettings` to show the t
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/how-to-cs2/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/how-to-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/how-to-cs2/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/how-to-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Tool tip in React Stock chart component | Syncfusion
 description: Learn here all about Tool tip in Syncfusion React Stock chart component of Syncfusion Essential JS 2 and more.
@@ -20,10 +20,10 @@ By default, tooltip is not visible. Enable the tooltip by setting [`enable`](htt
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/tool-tip-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/tool-tip-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/tool-tip-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/tool-tip-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -35,10 +35,10 @@ By default, tooltip shows information of x and y value in points. In addition to
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/tool-tip-cs2/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/tool-tip-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/tool-tip-cs2/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/tool-tip-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -50,10 +50,10 @@ By default, the tooltip is positioned at the left side of the stock chart. You c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/tool-tip-cs4/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/tool-tip-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/tool-tip-cs4/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/tool-tip-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -65,10 +65,10 @@ The [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSet
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/tool-tip-cs3/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/tool-tip-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/tool-tip-cs3/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/tool-tip-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

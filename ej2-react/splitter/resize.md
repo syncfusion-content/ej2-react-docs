@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Resizing panes in React Splitter component
 
-By default, pane resizing is enabled in the React Splitter component. A gripper element is added to the separator to make resizing intuitive and user-friendly.
+The React Splitter component enables pane resizing by default. A gripper element is added to the separator to provide an intuitive pointer-based resize handle.
 
 > The horizontal Splitter allows resizing in horizontal directions.  
 > The vertical Splitter allows resizing in vertical directions.
@@ -19,7 +19,7 @@ During resizing, the adjacent panes automatically adjust their dimensions to acc
 
 ## Minimum and Maximum size constraints
 
-You can define minimum and maximum sizes for each pane. Resizing is restricted within these boundaries to maintain layout integrity.
+Define minimum and maximum sizes for each pane. Resizing is restricted within these boundaries to maintain layout integrity.
 
 `[Class-component]`
 
@@ -49,7 +49,7 @@ You can define minimum and maximum sizes for each pane. Resizing is restricted w
 
 ## Disabling pane resizing
 
-You can disable the resizing for the pane by setting `false` to the [resizable](https://ej2.syncfusion.com/react/documentation/api/splitter/panePropertiesModel/#resizable) property within paneSettings.
+Set the [resizable](https://ej2.syncfusion.com/react/documentation/api/splitter/panePropertiesModel#resizable) property to `false` to disable resizing for that specific pane.
 
 `[Class-component]`
 
@@ -79,15 +79,15 @@ You can disable the resizing for the pane by setting `false` to the [resizable](
 
 ## Refreshing content during resize
 
-You can refresh pane content dynamically during resizing by using the following events:
+Use the following events to refresh pane content dynamically during resize:
 
-- [`resizeStart`](https://ej2.syncfusion.com/react/documentation/api/splitter/#resizestart)
-- [`resizing`](https://ej2.syncfusion.com/react/documentation/api/splitter/#resizing)
-- [`resizeStop`](https://ej2.syncfusion.com/react/documentation/api/splitter/#resizestop)
+- [`resizeStart`](https://ej2.syncfusion.com/react/documentation/api/splitter#resizestart)
+- [`resizing`](https://ej2.syncfusion.com/react/documentation/api/splitter#resizing)
+- [`resizeStop`](https://ej2.syncfusion.com/react/documentation/api/splitter#resizestop)
 
 ## Customizing Resize-gripper and Cursor
 
-You can style the resize gripper icon and cursor using CSS to match your application's design.
+Style the resize gripper icon and cursor via CSS to match the application's design system. 
 
 `[Class-component]`
 

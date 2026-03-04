@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 
 # Customize the card image title position in React Card component
 
-By default, card image titles are positioned in the bottom-left corner with an overlay effect. You can customize the title placement to any position over the image by applying custom CSS styles to override the default positioning.
+By default, image titles in the Card component appear in the bottom-left corner with an overlay effect. To place the title at a different location on the image, apply custom CSS to override the default position styles.
 
 `[Class-component]`
 

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Getting Started with React Stock Chart Component | Syncfusion
 description: Checkout and learn about getting started with Syncfusion Essentiall React Stock Chart component, it's elements, and more details.
@@ -92,13 +92,13 @@ Add the Stock Chart component to `src/App.tsx` using the following code.
 
 import {StockChartComponent} from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
-import { createRoot } from "react-dom/client";
+import * as ReactDOM from "react-dom";
 
 function App()  {
     return  (<StockChartComponent />);
 }
 export  default  App;
-const root = createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
 
 {% endhighlight %}
@@ -106,12 +106,12 @@ root.render(<App />);
 
 import { StockChartComponent } from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
-import { createRoot } from "react-dom/client";
+import * as ReactDOM from "react-dom";
 function App() {
     return (<StockChartComponent />);
 }
 export default App;
-const root = createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
 
 {% endhighlight %}
@@ -127,14 +127,14 @@ The below example shows a basic Stock Chart.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/stock-chart/getting-started/initialize-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/getting-started/initialize-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/stock-chart/getting-started/initialize-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/getting-started/initialize-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/stock-chart/getting-started/initialize-cs1" %}
+{% previewsample "page.domainurl/code-snippet/stock-chart/preview-sample/getting-started/initialize-cs1" %}
 
 ## Module injection
 
@@ -152,7 +152,7 @@ Import the above-mentioned modules from the chart package and inject them into t
 
 import { StockChartComponent, CandleSeries, Tooltip, DataLabel, DateTime, Inject } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
-import { createRoot } from "react-dom/client";
+import * as ReactDOM from "react-dom";
 
 function App() {
     return (
@@ -163,7 +163,7 @@ function App() {
 }
 export default App;
 
-const root = createRoot(document.getElementById("charts"));
+const root = ReactDOM.createRoot(document.getElementById('charts'));
 root.render(<App />);
 
 {% endhighlight %}
@@ -171,7 +171,7 @@ root.render(<App />);
 
 import { StockChartComponent, CandleSeries, Tooltip, DataLabel, DateTime, Inject } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
-import { createRoot } from "react-dom/client";
+import * as ReactDOM from "react-dom";
 
 function App() {
     return (
@@ -182,7 +182,7 @@ function App() {
 }
 export default App;
 
-const root = createRoot(document.getElementById("charts")!);
+const root = ReactDOM.createRoot(document.getElementById('charts'));
 root.render(<App />);
 
 {% endhighlight %}
@@ -277,14 +277,14 @@ Since the JSON contains DateTime data, set the [`valueType`](https://ej2.syncfus
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/stock-chart/getting-started/datasource-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/getting-started/datasource-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/stock-chart/getting-started/datasource-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/getting-started/datasource-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/stock-chart/getting-started/datasource-cs1" %}
+{% previewsample "page.domainurl/code-snippet/stock-chart/preview-sample/getting-started/datasource-cs1" %}
 
 ## Add Stock Chart title
 
@@ -292,10 +292,10 @@ You can add a title using the [`title`](https://ej2.syncfusion.com/react/documen
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/stock-chart/getting-started/datasource-cs2/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/getting-started/datasource-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/stock-chart/getting-started/datasource-cs2/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/getting-started/datasource-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -309,10 +309,10 @@ Crosshair lines can be enabled by using the [`enable`](https://ej2.syncfusion.c
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/stock-chart/getting-started/crosshair-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/getting-started/crosshair-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/stock-chart/getting-started/crosshair-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/getting-started/crosshair-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -326,13 +326,13 @@ Trackball can be enabled by setting the [`enable`](https://ej2.syncfusion.com/re
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/stock-chart/getting-started/trackball-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/getting-started/trackball-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/stock-chart/getting-started/trackball-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/getting-started/trackball-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/stock-chart/getting-started/trackball-cs1" %}
 
-> You can refer to our [React Stock Chart](https://www.syncfusion.com/react-components/react-stock-chart) feature tour page for its groundbreaking feature representations. You can also explore our [React Stock Chart example](https://ej2.syncfusion.com/react/demos#/bootstrap5/stock-chart/default) that shows you how to present and manipulate data.
+> You can refer to our [React Stock Chart](https://www.syncfusion.com/react-components/react-stock-chart) feature tour page for its groundbreaking feature representations. You can also explore our [React Stock Chart example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/stock-chart/default) that shows you how to present and manipulate data.

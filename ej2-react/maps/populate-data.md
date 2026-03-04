@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Populate data in React Maps component | Syncfusion
 description: Learn here all about Populate data in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
@@ -121,10 +121,10 @@ In the following example, both **name** fields contain the same value **Afghanis
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs77/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs77/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs77/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs77/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -144,10 +144,10 @@ Data from a data source can be bound to the Maps in two different ways.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs78/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs78/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs78/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs78/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

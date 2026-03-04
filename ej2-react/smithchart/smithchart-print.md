@@ -16,10 +16,10 @@ The rendered Smith chart can be printed directly from browser by calling the pub
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/smithchart-print-cs1/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/smithchart-print-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/smithchart-print-cs1/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/smithchart-print-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -31,10 +31,10 @@ The rendered Smith chart can be exported to JPEG, PNG, SVG, or PDF format using 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/smithchart-print-cs2/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/smithchart-print-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/smithchart-print-cs2/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/smithchart-print-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

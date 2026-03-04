@@ -1,14 +1,14 @@
----
+﻿---
 layout: post
-title: Drilldown in React Treemap component | Syncfusion
-description: Learn here all about Drilldown in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
+title: Drilldown customization in React Treemap component | Syncfusion
+description: Learn here all about Drilldown customization in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
 control: Drilldown 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drilldown in React Treemap component
+# Drilldown customization in React Treemap component
 
 ## Customize the header for treemap drilldown
 
@@ -72,16 +72,16 @@ Customize the population for drilled countries or states in the header element w
 
 {% tabs %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/treemap/how-to/header-template-cs1/app/datasource.jsx %}
+{% include code-snippet/treemap/code-path/how-to/header-template-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/treemap/how-to/header-template-cs1/app/datasource.tsx %}
+{% include code-snippet/treemap/code-path/how-to/header-template-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/how-to/header-template-cs1/app/index.jsx %}
+{% include code-snippet/treemap/code-path/how-to/header-template-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/how-to/header-template-cs1/app/index.tsx %}
+{% include code-snippet/treemap/code-path/how-to/header-template-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

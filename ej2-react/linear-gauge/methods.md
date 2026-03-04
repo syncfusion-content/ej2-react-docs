@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Methods in React Linear gauge component | Syncfusion
 description: Learn here all about Methods in Syncfusion React Linear gauge component of Syncfusion Essential JS 2 and more.
@@ -23,10 +23,10 @@ To change the pointer value dynamically, use the [`setPointerValue`](https://ej2
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs30/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs30/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs30/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs30/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -44,10 +44,10 @@ To change the annotation content dynamically, use the [`setAnnotationValue`](htt
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs31/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs31/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs31/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs31/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -59,10 +59,10 @@ The [`refresh`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs32/app/index.jsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs32/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs32/app/index.tsx %}
+{% include code-snippet/linear-gauge/code-path/axis-cs32/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

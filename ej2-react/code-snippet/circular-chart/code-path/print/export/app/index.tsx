@@ -1,6 +1,6 @@
 {% raw %}
 
-import { createRoot } from 'react-dom/client';
+import * as ReactDOM from "react-dom";
 
 /**
  * Sample for Chart print
@@ -27,7 +27,7 @@ export let circularData: any[] = [
   { x: 'Mary', y: 9.7, dataLabelMappingName: '$9.7k' },
 ];
 
-const Print = () => {
+function Print() {
   useEffect(() => {
     const button = document.getElementById('chart-print');
     button.addEventListener('click', onClick);
@@ -87,5 +87,6 @@ const Print = () => {
   );
 };
 export default Print;
-createRoot(document.getElementById('charts')).render(<Print />);
+const root = ReactDOM.createRoot(document.getElementById('charts'));
+root.render(<Print />);
 {% endraw %}

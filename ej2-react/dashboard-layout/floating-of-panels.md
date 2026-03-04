@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Floating of panels in React Dashboard Layout component
 
-The floating functionality enables panels to move upward automatically to fill empty spaces left by panels in previous rows, maximizing space utilization within the dashboard layout. When floating is enabled, panels dynamically reposition themselves to eliminate gaps and create a more compact layout arrangement.
+The floating functionality enables panels to move upward automatically to fill empty spaces in previous rows, maximizing space utilization within the dashboard layout. When floating is enabled, the layout automatically recalculates panel positions to eliminate gaps and maintain a compact arrangement.
 
-This behavior can be controlled using the [`allowFloating`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/#allowfloating) property, which accepts a boolean value (default: `true`).
+This behavior can be controlled using the [`allowFloating`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#allowfloating) property, which accepts a boolean value (default: `true`).
 
 ## How floating works
 
@@ -22,7 +22,7 @@ When `allowFloating` is set to `true`:
 - The layout maintains a compact appearance without gaps between rows
 
 When `allowFloating` is set to `false`:
-- Panels remain in their designated row positions
+- Panels remain anchored to their designated row positions regardless of available space above them
 - Empty spaces remain unfilled, preserving the original grid structure
 - Panels maintain their exact row and column positions
 
@@ -52,4 +52,4 @@ The following sample demonstrates how to enable or disable the floating of panel
 
  {% previewsample "page.domainurl/code-snippet/dashboard-layout/floating-cs1" %}
 
-> You can refer to our [React Dashboard Layout](https://www.syncfusion.com/react-ui-components/react-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [React Dashboard Layout example](https://ej2.syncfusion.com/react/demos/#/material/dashboard-layout/default) to know how to present and manipulate data.
+> Refer to the [React Dashboard Layout](https://www.syncfusion.com/react-ui-components/react-dashboard-layout) feature tour page for its groundbreaking feature representations. Also explore the [React Dashboard Layout example](https://ej2.syncfusion.com/react/demos/#/tailwind3/dashboard-layout/default) to know how to present and manipulate data.

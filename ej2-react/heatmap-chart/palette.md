@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Palette in React Heatmap chart component | Syncfusion
 description: Learn here all about Palette in Syncfusion React Heatmap chart component of Syncfusion Essential JS 2 and more.
@@ -22,10 +22,10 @@ The smooth transition between the given palette colors can be applied for the he
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/palette-cs1/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/palette-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/palette-cs1/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/palette-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -37,10 +37,10 @@ In fixed palette type, solid colors are applied to the heat map cells. The data 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/palette-cs2/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/palette-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/palette-cs2/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/palette-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -52,10 +52,10 @@ You can define the colors ranges or color stops for data values in both gradient
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/palette-cs3/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/palette-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/palette-cs3/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/palette-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -69,10 +69,10 @@ The color range support is used to provide a specific color for specific range i
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/palette-cs4/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/palette-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/palette-cs4/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/palette-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

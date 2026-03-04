@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Internationalization in React Treemap component | Syncfusion
 description: Learn here all about Internationalization in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
@@ -29,10 +29,10 @@ In the following code example, tooltip is globalized to Deutsch culture.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/internationalization-cs1/app/index.jsx %}
+{% include code-snippet/treemap/code-path/internationalization-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/internationalization-cs1/app/index.tsx %}
+{% include code-snippet/treemap/code-path/internationalization-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -22,10 +22,10 @@ By default, the visibility of the legend is false. To enable the legend, set the
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs14/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs14/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs14/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs14/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -37,10 +37,10 @@ The legends are not limited to place at the default positions only. You can plac
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs15/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs15/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs15/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs15/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -52,10 +52,10 @@ By default, the legends are aligned in center position. Using the [`alignment`] 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs16/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs16/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs16/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs16/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -69,10 +69,10 @@ By default, the legends are rendered in a circle shape. The color of the shape w
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs17/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs17/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs17/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs17/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -84,10 +84,10 @@ By default, a legend takes 20 to 25% of the chart's height horizontally when it 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs18/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs18/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs18/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs18/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -99,10 +99,10 @@ You can customize the space between two legend items and space between legend sh
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs19/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs19/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs19/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs19/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -114,10 +114,10 @@ By default, the series name is displayed in the legend. You can collapse the vis
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/getting-started-cs20/app/index.jsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs20/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/getting-started-cs20/app/index.tsx %}
+{% include code-snippet/smithchart/code-path/getting-started-cs20/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Color mapping in React Maps component | Syncfusion
 description: Learn here all about Color mapping in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
@@ -54,10 +54,10 @@ Set the **population_density** data as the [`dataSource`](https://ej2.syncfusion
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs12/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs12/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs12/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs12/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -93,10 +93,10 @@ Set **unCountries** as the [`dataSource`](https://ej2.syncfusion.com/react/docum
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs13/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs13/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs13/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs13/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -112,10 +112,10 @@ Bind the **population_density** data to the [`dataSource`](https://ej2.syncfusio
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs14/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs14/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs14/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs14/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -131,10 +131,10 @@ Bind the **population_density** data to the [`dataSource`](../api/maps/layerSett
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs15/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs15/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs15/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs15/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -150,10 +150,10 @@ In the following example, color mapping is added for the ranges from 0 to 200. I
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs16/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs16/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs16/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs16/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -165,10 +165,10 @@ Range, equal, and desaturation color mapping apply to bubble layers as well. Con
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs17/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs17/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs17/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs17/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

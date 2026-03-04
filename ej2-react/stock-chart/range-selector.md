@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Range selector in React Stock chart component | Syncfusion
 description: Learn here all about Range selector in Syncfusion React Stock chart component of Syncfusion Essential JS 2 and more.
@@ -20,10 +20,10 @@ Following code example shows the [`enableSelector`](https://ej2.syncfusion.com/r
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/range-selector-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/range-selector-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/range-selector-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/range-selector-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

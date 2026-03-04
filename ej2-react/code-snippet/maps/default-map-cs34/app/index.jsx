@@ -1,7 +1,7 @@
 
 
-import { world_map } from 'world-map.ts';
-import { uncountries } from 'data.ts'
+import { world_map } from '../world-map';
+import { uncountries } from '../data';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective } from '@syncfusion/ej2-react-maps';

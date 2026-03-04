@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Export print in React Stock chart component | Syncfusion
 description: Learn here all about Export print in Syncfusion React Stock chart component of Syncfusion Essential JS 2 and more.
@@ -16,10 +16,10 @@ The rendered stock chart can be printed directly using print button in period se
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/export-print-cs1/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/export-print-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/export-print-cs1/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/export-print-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -31,10 +31,10 @@ To empty the value of `exportType` to disable the Export button.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/export-print-cs2/app/index.jsx %}
+{% include code-snippet/stock-chart/code-path/export-print-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/export-print-cs2/app/index.tsx %}
+{% include code-snippet/stock-chart/code-path/export-print-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

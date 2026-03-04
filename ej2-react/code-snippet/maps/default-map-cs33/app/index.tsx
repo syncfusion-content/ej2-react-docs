@@ -1,10 +1,11 @@
 
 
 
-import { world_map } from 'world-map.ts';
+import { world_map } from '../world-map';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective } from '@syncfusion/ej2-react-maps';
+
 export function App() {
     return (<MapsComponent id="maps">
             <LayersDirective>
@@ -13,6 +14,7 @@ export function App() {
             </LayersDirective>
         </MapsComponent>);
 }
+
 const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 

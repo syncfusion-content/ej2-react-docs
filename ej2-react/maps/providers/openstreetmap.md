@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Openstreetmap in React Maps component | Syncfusion
 description: Learn here all about Openstreetmap in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
@@ -24,10 +24,10 @@ OSM Maps can be rendered using the [urlTemplate](https://ej2.syncfusion.com/reac
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs84/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs84/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs84/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs84/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -43,10 +43,10 @@ The OSM layer supports zooming and panning interactions for enhanced map explora
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs85/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs85/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs85/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs85/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -58,10 +58,10 @@ Markers can be added to OSM layers to highlight specific locations by setting th
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs86/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs86/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs86/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs86/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -73,10 +73,10 @@ GeoJSON shapes can be rendered as a sublayer on top of the OSM base layer to hig
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs87/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs87/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs87/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs87/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -88,10 +88,10 @@ A legend can be displayed with OSM maps to provide visual context for markers, s
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs88/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs88/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs88/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs88/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

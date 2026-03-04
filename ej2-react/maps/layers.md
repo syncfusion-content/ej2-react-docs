@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Layers in React Maps component | Syncfusion
 description: Learn here all about Layers in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
@@ -24,10 +24,10 @@ In the following example, the United States map shape from the **usa.ts** file s
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs47/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs47/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs47/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs47/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -39,10 +39,10 @@ Multiple shape files and map providers can be loaded simultaneously in Maps. The
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs48/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs48/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs48/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs48/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

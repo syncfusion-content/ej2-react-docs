@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Getting started with React TreeMap component | Syncfusion
 description:  Checkout and learn about Getting started with React TreeMap component of Syncfusion Essential JS 2 and more details.
@@ -28,7 +28,7 @@ The following list of minimum dependencies are required to use the TreeMap compo
 
 ## Installation and configuration
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -116,10 +116,10 @@ This section shows how to render a TreeMap using a bound data source. The exampl
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/treemap/getting-started-cs1/app/index.jsx %}
+{% include code-snippet/treemap/code-path/getting-started-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/treemap/getting-started-cs1/app/index.tsx %}
+{% include code-snippet/treemap/code-path/getting-started-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -133,10 +133,10 @@ The color mapping feature supports customization of item colors based on the und
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/treemap/getting-started-cs2/app/index.jsx %}
+{% include code-snippet/treemap/code-path/getting-started-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/treemap/getting-started-cs2/app/index.tsx %}
+{% include code-snippet/treemap/code-path/getting-started-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -148,10 +148,10 @@ You can show legend for the TreeMap by setting the visible property to true in l
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/treemap/getting-started-cs3/app/index.jsx %}
+{% include code-snippet/treemap/code-path/getting-started-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/treemap/getting-started-cs3/app/index.tsx %}
+{% include code-snippet/treemap/code-path/getting-started-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -163,10 +163,10 @@ The labels are added to show additional information of the items in TreeMap. By 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/treemap/getting-started-cs4/app/index.jsx %}
+{% include code-snippet/treemap/code-path/getting-started-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/treemap/getting-started-cs4/app/index.tsx %}
+{% include code-snippet/treemap/code-path/getting-started-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -178,10 +178,10 @@ The tooltips are used when labels cannot display information due to space constr
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/treemap/getting-started-cs5/app/index.jsx %}
+{% include code-snippet/treemap/code-path/getting-started-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/treemap/getting-started-cs5/app/index.tsx %}
+{% include code-snippet/treemap/code-path/getting-started-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

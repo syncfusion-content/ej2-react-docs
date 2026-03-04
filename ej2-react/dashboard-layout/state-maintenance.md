@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Save and Restore Layout State in React Dashboard Layout Component
 
-The Dashboard Layout component provides the ability to save the current layout configuration and restore it later, enabling users to persist their preferred panel arrangements across sessions or create reusable dashboard templates.
+The Dashboard Layout component provides the ability to save the current layout configuration and restore it later, enabling users to persist preferred panel arrangements across sessions or create reusable dashboard templates.
 
 ## Save Layout State
 
-The current layout structure of the Dashboard Layout component can be obtained and saved using the [`serialize`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/#serialize) public method of the component. This can be used to construct another dashboard with the same panel structure. This method returns the component's current panel settings which can be used to construct a dashboard with the same layout settings.
+The current layout structure of the Dashboard Layout component can be obtained and saved using the [`serialize`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#serialize) public method of the component. This method returns the component's current panel settings, which can be stored and later used to reconstruct a dashboard with the same layout configuration.
 
 ## Implementation Example
 
@@ -43,4 +43,4 @@ The following sample demonstrates how to save and restore panel states using the
 
  {% previewsample "page.domainurl/code-snippet/dashboard-layout/state-maintenance-cs1" %}
 
-> You can refer to our [React Dashboard Layout](https://www.syncfusion.com/react-ui-components/react-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [React Dashboard Layout example](https://ej2.syncfusion.com/react/demos/#/material/dashboard-layout/default) to knows how to present and manipulate data.
+> Refer to the [React Dashboard Layout](https://www.syncfusion.com/react-ui-components/react-dashboard-layout) feature tour page for feature highlights. Also explore the [React Dashboard Layout example](https://ej2.syncfusion.com/react/demos/#/tailwind3/dashboard-layout/default) to know how to display and manipulate data.

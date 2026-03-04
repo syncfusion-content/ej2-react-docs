@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Drilldown in React Maps component | Syncfusion
 description: Learn here all about Drilldown in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
@@ -14,10 +14,10 @@ By clicking a continent, all the countries available in that continent can be vi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs41/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs41/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs41/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs41/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

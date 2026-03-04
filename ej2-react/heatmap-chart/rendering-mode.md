@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Rendering mode in React Heatmap chart component | Syncfusion
 description: Learn here all about Rendering mode in Syncfusion React Heatmap chart component of Syncfusion Essential JS 2 and more.
@@ -16,10 +16,10 @@ Heat map can be displayed using **Canvas** or **Scalable Vector Graphics (SVG)**
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/rendering-mode-cs1/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/rendering-mode-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/rendering-mode-cs1/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/rendering-mode-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

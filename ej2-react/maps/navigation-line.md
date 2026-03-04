@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Navigation line in React Maps component | Syncfusion
 description: Learn here all about Navigation line in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
@@ -27,10 +27,10 @@ To draw a navigation line between two cities on the world map, the [`latitude`](
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs75/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs75/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs75/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs75/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -47,10 +47,10 @@ To enable the arrow in the navigation line, set the [`showArrow`](https://ej2.sy
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs76/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs76/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs76/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs76/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

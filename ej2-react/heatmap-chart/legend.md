@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Legend in React Heatmap chart component | Syncfusion
 description: Learn here all about Legend in Syncfusion React Heatmap chart component of Syncfusion Essential JS 2 and more.
@@ -14,10 +14,10 @@ The legend is used to provide the information about the heat map cell. You can e
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/legend-cs1/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/legend-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/legend-cs1/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/legend-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -34,10 +34,10 @@ You can change the legend type by using the [type](https://ej2.syncfusion.com/re
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/legend-cs2/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/legend-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/legend-cs2/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/legend-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -49,10 +49,10 @@ You can place the legend at left, right, top, or bottom to the heat map layout b
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/legend-cs3/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/legend-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/legend-cs3/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/legend-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -64,10 +64,10 @@ You can align the legend as center, far, or near to the heat map using the [alig
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/legend-cs4/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/legend-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/legend-cs4/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/legend-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -79,10 +79,10 @@ You can change the legend dimensions with values in pixels or percentage by usin
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/legend-cs5/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/legend-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/legend-cs5/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/legend-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -94,10 +94,10 @@ Paging is available only for the list type legend in the heat map, and it can be
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/legend-cs6/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/legend-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/legend-cs6/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/legend-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -116,10 +116,10 @@ The following are the legend label display types:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/legend-cs7/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/legend-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/legend-cs7/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/legend-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -131,10 +131,10 @@ In the HeatMap, the legend selection is used to toggle the visibility of cell fo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/legend-cs8/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/legend-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/legend-cs8/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/legend-cs8/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -146,10 +146,10 @@ The legend title displays a specific information about the legend. You can enabl
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/legend-cs9/app/index.jsx %}
+{% include code-snippet/heatmap/code-path/legend-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/legend-cs9/app/index.tsx %}
+{% include code-snippet/heatmap/code-path/legend-cs9/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

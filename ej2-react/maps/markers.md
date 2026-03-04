@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Markers in React Maps component | Syncfusion
 description: Learn here all about Markers in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
@@ -25,10 +25,10 @@ To add the markers, the [`dataSource`](https://ej2.syncfusion.com/react/document
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs63/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs63/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs63/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs63/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -40,10 +40,10 @@ The Marker can be added as a template in the Maps component. The [`template`](ht
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs64/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs64/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs64/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs64/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -65,10 +65,10 @@ The following properties are available in [`markerSettings`](https://ej2.syncfus
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs65/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs65/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs65/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs65/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -95,10 +95,10 @@ To render a marker as an image in Maps, set the [`shape`](https://ej2.syncfusion
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs66/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs66/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs66/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs66/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -110,10 +110,10 @@ Multiple groups of markers can be added to the Maps by providing an array of mar
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs67/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs67/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs67/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs67/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -127,10 +127,10 @@ Using the [`shapeValuePath`](https://ej2.syncfusion.com/react/documentation/api/
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs68/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs68/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs68/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs68/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -142,10 +142,10 @@ The latitude and longitude values are used to determine the location of each mar
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs69/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs69/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs69/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs69/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -157,10 +157,10 @@ The size of the markers in a marker group can be customized using the [widthValu
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/marker-size-customization-cs1/app/index.jsx %}
+{% include code-snippet/maps/code-path/marker-size-customization-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/marker-size-customization-cs1/app/index.tsx %}
+{% include code-snippet/maps/code-path/marker-size-customization-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -172,10 +172,10 @@ The markers on the map can be dragged and dropped to change their position. To e
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs103/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs103/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs103/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs103/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -198,10 +198,10 @@ The following example shows how to use marker drag events to customize the data 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs104/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs104/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs104/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs104/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -213,10 +213,10 @@ The Maps can be initially scaled to fit all markers within the visible area. Thi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs70/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs70/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs70/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs70/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -230,14 +230,14 @@ To enable clustering for markers, set the [`allowClustering`](https://ej2.syncfu
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs71/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs71/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs71/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs71/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/maps/default-map-cs71" %}
+ {% previewsample "page.domainurl/code-snippet/maps/preview-sample/default-map-cs71" %}
 
 ### Customization of marker cluster
 
@@ -257,10 +257,10 @@ The following properties are available to customize the marker clustering in the
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs72/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs72/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs72/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs72/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -272,10 +272,10 @@ The cluster is formed by grouping an identical and non-identical marker from the
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs73/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs73/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs73/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs73/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -289,10 +289,10 @@ Marker clustering can be enabled for each marker group in the map by using the [
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/marker-clusters-cs1/app/index.jsx %}
+{% include code-snippet/maps/code-path/marker-clusters-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/marker-clusters-cs1/app/index.tsx %}
+{% include code-snippet/maps/code-path/marker-clusters-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -304,10 +304,10 @@ Tooltips are used to display additional information about a marker on mouse hove
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs74/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs74/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs74/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs74/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

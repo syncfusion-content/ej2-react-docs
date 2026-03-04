@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Collapsible panes
 
-The React Splitter component supports built-in expand and collapse functionality for its panes. By default, this behavior is disabled. To enable it, set the [collapsible](https://ej2.syncfusion.com/react/documentation/api/splitter/panePropertiesModel/#collapsible) property within `paneSettings`. This displays expand and collapse icons in the panes. You can dynamically expand and collapse the panes by clicking on the corresponding icons
+The React Splitter component supports built-in expand and collapse functionality for panes. By default, pane expand/collapse is disabled. To enable it, set the [collapsible](https://ej2.syncfusion.com/react/documentation/api/splitter/panePropertiesModel#collapsible) property within `paneSettings`; this displays expand and collapse icons for the pane. Click the icons to toggle pane visibility.
 
 The following example demonstrates how to enable collapsible behavior:
 
@@ -44,7 +44,7 @@ The following example demonstrates how to enable collapsible behavior:
 
 ## Programmatically control the expand and collapse action
 
-You can also control pane visibility programmatically using the Splitter’s public methods: [expand](https://ej2.syncfusion.com/react/documentation/api/splitter/#expand) and [collapse](https://ej2.syncfusion.com/react/documentation/api/splitter/#collapse). These methods allow you to dynamically toggle panes based on application logic.
+You can also control pane visibility programmatically using the Splitter’s public methods: [expand](https://ej2.syncfusion.com/react/documentation/api/splitter#expand) and [collapse](https://ej2.syncfusion.com/react/documentation/api/splitter#collapse). These methods let applications toggle panes based on logic or user actions.
 
 Here’s an example of using these methods:
 
@@ -76,7 +76,7 @@ Here’s an example of using these methods:
 
 ## Set initial collapsed state
 
-To render a pane in a collapsed state on initial load, set the [collapsed](https://ej2.syncfusion.com/react/documentation/api/splitter/#collapsed) property to `true`. This is useful for customizing the default layout based on user preferences or screen size.
+To render a pane in a collapsed state on initial load, set the [collapsed](https://ej2.syncfusion.com/react/documentation/api/splitter#collapsed) property to `true`. This is useful to customize the default layout based on user preference or screen size.
 
 `[Class-component]`
 

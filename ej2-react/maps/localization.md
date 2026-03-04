@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Localization in React Maps component | Syncfusion
 description: Learn here all about Localization in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
@@ -44,10 +44,10 @@ To load translation object in the application, use `load` function of **L10n** c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/maps/default-map-cs62/app/index.jsx %}
+{% include code-snippet/maps/code-path/default-map-cs62/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/maps/default-map-cs62/app/index.tsx %}
+{% include code-snippet/maps/code-path/default-map-cs62/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

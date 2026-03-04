@@ -102,14 +102,14 @@ The following code example shows how to add legend in the gauge.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-legend-cs1/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-legend-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-legend-cs1/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-legend-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/circulargauge/gauge-legend-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/circulargauge/preview-sample/gauge-legend-cs1" %}
 
 ## Toggle option in legend
 
@@ -117,10 +117,10 @@ The toggle option has been provided for legend. So, if you toggle the legend, th
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-legend-cs2/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-legend-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-legend-cs2/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-legend-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -132,10 +132,10 @@ By default, paging will be enabled if the legend items exceed the legend bounds.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-legend-cs3/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-legend-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-legend-cs3/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-legend-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -147,10 +147,10 @@ You can customize the legend text using `legendText` property in `ranges`.
  
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/gauge-legend-cs4/app/index.jsx %}
+{% include code-snippet/circulargauge/code-path/gauge-legend-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/gauge-legend-cs4/app/index.tsx %}
+{% include code-snippet/circulargauge/code-path/gauge-legend-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
