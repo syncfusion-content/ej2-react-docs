@@ -114,16 +114,16 @@ import '@syncfusion/ej2-react-schedule/styles/tailwind3.css';
       }
       render() {
         const { gisReady, token, events } = this.state;
+        const eventSettings = { dataSource: events };
 
         return (
           <div className="schedule-control-section">
             <div className="col-lg-12 control-section">
               <div className="control-wrapper drag-sample-wrapper">
-                <div style={{ marginBottom: 12 }}>
+                <div>
                   <button
                     onClick={this.signIn}
                     disabled={!gisReady}
-                    style={{ marginRight: 8 }}
                   >
                     {gisReady ? 'Authorize & Load' : 'Loading Google…'}
                   </button>
@@ -139,7 +139,7 @@ import '@syncfusion/ej2-react-schedule/styles/tailwind3.css';
                     width="100%"
                     height="650px"
                     selectedDate={new Date()}
-                    eventSettings={{ dataSource: events }}
+                    eventSettings={ dataSource: eventSettings }
                     actionBegin={this.onActionBegin}
                   >
                     <ViewsDirective>
@@ -424,11 +424,3 @@ npm start
 
 - Use `npm start` to run locally: `http://localhost:3000`.
 - Verify OAuth consent and that `http://localhost:3000` appears in Authorized JavaScript origins.
-
-
-
-
-
-
-
-
