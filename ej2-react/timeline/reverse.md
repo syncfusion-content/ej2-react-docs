@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Reverse in React Timeline component
 
-The Timeline component allows you to display items in revers order by setting the [reverse](https://ej2.syncfusion.com/react/documentation/api/timeline/#reverse) property to `true`. This boolean property reverses the sequence of timeline items, making the most recent events appear first, which is particularly useful for activity feeds, news timelines, or any scenario where the latest information should be displayed.
+Use the [reverse](https://ej2.syncfusion.com/react/documentation/api/timeline#reverse) property to invert the display order of Timeline items. Setting `reverse` to `true` makes the most recent or last item in the data source appear first, which is useful for activity feeds, audit logs, or any timeline where newest items should be prominent.
 
 When the reverse property is enabled, it works seamlessly with all alignment options (`Before`, `After`, `Alternate`, `AlternateReverse`) and orientations (`Horizontal`, `Vertical`).
 

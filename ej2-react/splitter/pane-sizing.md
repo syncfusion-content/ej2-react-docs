@@ -11,11 +11,11 @@ domainurl: ##DomainURL##
 # Pane sizing in React Splitter component
 
 
-The React Splitter component allows you to define pane sizes using pixel values, percentage values, or automatic sizing based on layout behavior.
+The React Splitter component lets you define pane sizes using pixel values, percentage values, or automatic sizing driven by layout behavior.
 
 ## Set pane size in pixels
 
-To assign fixed pixel values to panes, use the `size` property in `paneSettings`. This ensures consistent pane dimensions regardless of container size.
+To assign fixed pixel values to panes, use the `size` property in `paneSettings`. This produces consistent pane dimensions regardless of container size.
 
 `[Class-component]`
 
@@ -45,7 +45,7 @@ To assign fixed pixel values to panes, use the `size` property in `paneSettings`
 
 ## Set pane size in percentage
 
-You can also define pane sizes as percentages. This approach ensures responsive behavior across different screen sizes.
+Define pane sizes as percentages to ensure responsive behavior across different screen sizes.
 
 `[Class-component]`
 
@@ -74,7 +74,7 @@ You can also define pane sizes as percentages. This approach ensures responsive 
  {% previewsample "page.domainurl/code-snippet/splitter/pane-sizes-cs4" %}
 
 ## Auto-size panes
-When no explicit size is provided, panes automatically adjust based on available space. This behavior is powered by the default flex layout, allowing dynamic resizing when panes are added, removed, shown, or hidden.
+When no explicit size is provided, panes automatically adjust to available space. The component uses a flex-based layout to enable dynamic resizing when panes are added, removed, shown, or hidden.
 
 `[Class-component]`
 
@@ -104,7 +104,7 @@ When no explicit size is provided, panes automatically adjust based on available
 
 ## Fixed pane
 
-You can configure panes with fixed sizes in both horizontal and vertical orientations. However, even when all panes are assigned fixed sizes, the Splitter treats the last pane as flexible to ensure layout adaptability. At least one pane must remain flexible to accommodate container changes.
+Panes can be configured with fixed sizes in both horizontal and vertical orientations. Even when all panes have fixed sizes, the Splitter treats the last pane as flexible to preserve layout adaptability. Ensure at least one pane remains flexible to accommodate container size changes.
 
 `[Class-component]`
 

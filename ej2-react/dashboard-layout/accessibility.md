@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Dashboard Layout component
 
-The Dashboard Layout component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Dashboard Layout component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov), [Section 508](https://www.section508.gov), [WCAG 2.2](https://www.w3.org/TR/WCAG22) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) and WAI-ARIA patterns that are commonly used to evaluate accessibility.
 
-The Dashboard Layout component provides an accessible interface for organizing and managing dashboard panels, ensuring that users with disabilities can effectively interact with and navigate the layout structure.
+The Dashboard Layout component provides an accessible interface for organizing and managing dashboard panels, ensuring that users with disabilities can interact with and navigate the layout structure.
 
 ## Accessibility compliance
 
@@ -33,8 +33,8 @@ The accessibility compliance for the Dashboard Layout component is outlined belo
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
-| [WCAG 2.2](https://www.w3.org/TR/WCAG22/) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
-| [Section 508](https://www.section508.gov/) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
+| [WCAG 2.2](https://www.w3.org/TR/WCAG22) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
+| [Section 508](https://www.section508.gov) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
 | Screen Reader Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | Right-To-Left Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | Color Contrast | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
@@ -45,7 +45,7 @@ The accessibility compliance for the Dashboard Layout component is outlined belo
 
 ## WAI-ARIA attributes
 
-The Dashboard Layout component follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) patterns to meet accessibility standards. The following ARIA attributes are used in the Dashboard Layout component:
+The Dashboard Layout component applies [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg) attributes to ensure proper communication with assistive technologies. The following attributes are applied to dashboard elements:
 
 | **Attributes** | **Purpose** |
 | --- | --- |
@@ -60,9 +60,9 @@ Keyboard support is not applicable for the Dashboard Layout.
 
 ## Accessibility testing
 
-The Dashboard Layout component's accessibility levels are validated through automated testing using [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+Accessibility levels for the Dashboard Layout component are validated using automated tools such as [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core).
 
-The accessibility compliance of the Dashboard Layout component is demonstrated in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/dashboard-layout.html) in a new window to evaluate the accessibility of the Dashboard Layout component with accessibility tools.
+Evaluate the component's accessibility using the following sample: open the [sample](https://ej2.syncfusion.com/accessibility/dashboard-layout.html) in a new window and run accessibility tools against it.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/dashboard-layout.html" %}
 

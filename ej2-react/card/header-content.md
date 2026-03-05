@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 The Card component can be created with header title, subtitle, and images. To add a header, create a `div` element with the class `e-card-header`.
 
-The Card provides the following elements and corresponding class definitions to include header content:
+The Card provides the following elements and class definitions for header content:
 
 Elements   | Description
 ------------ | -------------
@@ -39,7 +39,7 @@ To add a header to the Card component, create a wrapper `div` element with the `
 
 ### Header Image
 
-The Card header provides an option for adding images within the header section. Images are positioned either before or after the header caption based on the HTML element's position in the header structure.
+The Card header supports adding images within the header section. Images are positioned either before or after the header caption based on the HTML element's position in the header structure.
 
 * Add a header image by creating a `div` element with the `e-card-header-image` class, which can be placed before or after the header caption wrapper element.
 
@@ -77,7 +77,7 @@ The Card header provides an option for adding images within the header section. 
 
 ## Content
 
-The content section in Card components holds text, images, links, and all possible HTML elements. Content is adaptable within the Card root element and provides flexibility for various content types.
+Following the header, the content section holds the main body of the card, including text, images, links, and any HTML elements. The content section provides flexibility for various content types and can be positioned within the Card root element or inside other Card inner elements.
 
 * Create a `div` element with the class `e-card-content`.
 * Place the content `div` element within the Card root element or inside any Card inner elements.

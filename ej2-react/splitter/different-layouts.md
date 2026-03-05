@@ -10,12 +10,11 @@ domainurl: ##DomainURL##
 
 # Different layouts in React Splitter component
 
-Using the React Splitter component, you can create complex layouts with multiple and nested panes.
+Using the React Splitter component, create complex layouts with multiple and nested panes.
 
 ## Code editor style layout
 
-Create an element with two child panes to render the outer Splitter. Then, create an inner Splitter inside the first pane of the vertical Splitter.
-
+Create an element with two child panes to render the outer Splitter. Then create an inner Splitter inside the first pane of the vertical Splitter.
 
 `[Class-component]`
 
@@ -175,7 +174,7 @@ export default App;
 
 ```
 
-Once the above configurations has been completed, you will get the output like [this](https://ej2.syncfusion.com/react/demos/#/material/splitter/code-editor-layout)
+Once the above configurations have been completed, you will see output like [this](https://ej2.syncfusion.com/react/demos/#/tailwind3/splitter/code-editor-layout).
 
 ## Outlook style layout
 
@@ -423,7 +422,7 @@ function App () {
 export default App;
 ```
 
-Refer below dependent styles in top of your App.css file.
+Include the following dependent styles at the top of your App.css file.
 
 ```css
 
@@ -437,7 +436,7 @@ Refer below dependent styles in top of your App.css file.
 
 ```
 
-Once the above configurations has been completed, you will get the output like [this](https://ej2.syncfusion.com/react/demos/#/material/splitter/outlook-style-layout).
+Once the above configurations have been completed, you will see output like [this](https://ej2.syncfusion.com/react/demos/#/tailwind3/splitter/outlook-style-layout).
 
 ## See Also
 

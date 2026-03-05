@@ -1,4 +1,3 @@
-{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
@@ -47,6 +46,3 @@ function ReactApp() {
 }
 export default ReactApp;
 ReactDOM.render(<ReactApp />, document.getElementById("element"));
-
-
-{% endraw %}

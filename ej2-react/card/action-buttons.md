@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Action buttons in React Card component
 
-You can include Action buttons within the Card and customize them. Action buttons are contained within a `div` element with `e-card-actions` class, which holds button or anchor elements within the card root element.
+Action buttons can be included within the Card and customize them. Action buttons are contained within a `div` element with the `e-card-actions` class, which holds button or anchor elements within the card root element.
 
-* For adding action buttons, create button or anchor tag with `e-card-btn` class within the card action container element.
+* To add action buttons, create button or anchor tag elements with the`e-card-btn` class inside the card action container element.
 
 ```
     <div className = "e-card">

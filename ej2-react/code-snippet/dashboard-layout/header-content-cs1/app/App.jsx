@@ -1,4 +1,3 @@
-{% raw %}
 import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, AccumulationTooltip, Category, ChartComponent, ColumnSeries, DataLabel, Inject, Legend, LineSeries, SeriesCollectionDirective, SeriesDirective, Tooltip } from "@syncfusion/ej2-react-charts";
 import { DashboardLayoutComponent, PanelDirective, PanelsDirective } from '@syncfusion/ej2-react-layouts';
 import * as React from 'react';
@@ -88,4 +87,3 @@ function App() {
     </div>);
 }
 export default App;
-{% endraw %}

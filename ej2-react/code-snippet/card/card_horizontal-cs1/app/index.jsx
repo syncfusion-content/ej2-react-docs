@@ -1,4 +1,3 @@
-{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 export default class ReactApp extends React.Component {
@@ -22,4 +21,3 @@ export default class ReactApp extends React.Component {
     }
 }
 ReactDOM.render(<ReactApp />, document.getElementById("element"));
-{% endraw %}

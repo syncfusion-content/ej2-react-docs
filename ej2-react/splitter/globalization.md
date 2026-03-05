@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Globalization in React Splitter component
 
-The React Splitter component supports globalization features, including right-to-left (RTL) rendering for languages such as Arabic and Hebrew.
+The React Splitter component supports globalization features, including right-to-left (RTL) rendering needed for languages such as Arabic and Hebrew.
 
 ## Right-to-Left (RTL) support
 
-To enable RTL layout, set the [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/splitter/#enablertl) property to `true`. This adjusts the direction of the Splitter panes and split bars to accommodate RTL writing systems.
+Enable RTL layout by setting the [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/splitter#enablertl) property to `true`. This adjusts the direction of panes and split bars to match RTL writing systems.
 
 The following code shows how to enable RTL behavior.
 

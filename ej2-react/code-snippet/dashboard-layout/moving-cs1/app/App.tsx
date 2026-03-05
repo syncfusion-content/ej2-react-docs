@@ -1,4 +1,3 @@
-{% raw %}
 import {  DashboardLayoutComponent } from '@syncfusion/ej2-react-layouts';
 import * as React from 'react';
 
@@ -33,4 +32,3 @@ function App() {
   );
 }
 export default App;
-{% endraw %}
