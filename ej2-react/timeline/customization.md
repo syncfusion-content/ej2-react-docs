@@ -15,7 +15,7 @@ The Timeline component offers extensive customization options for visual styling
 ## Connector styling
 ### Common styling
 
-Define styles that apply to all Timeline item connectors for consistent visual presentation across the entire Timeline.
+Define styles that apply uniformly to all Timeline item connectors to maintain consistent visual presentation throughout the Timeline.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -36,7 +36,7 @@ Define styles that apply to all Timeline item connectors for consistent visual p
 
 ### Individual styling
 
-Apply unique styles to specific connectors to differentiate particular items within the Timeline sequence.
+Apply unique styles to individual connectors to visually differentiate particular Timeline sequence.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -58,7 +58,7 @@ Apply unique styles to specific connectors to differentiate particular items wit
 ## Dot styling
 ### Dot color
 
-You can modify the color of the dots to highlight the specific Timeline items.
+Modify the color of Timeline dots to highlight specific items or differentiate event types.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -79,7 +79,7 @@ You can modify the color of the dots to highlight the specific Timeline items.
 
 ### Dot size
 
-Adjust dot dimensions using the `--dot-size` CSS custom property to create visual emphasis or maintain design consistency with different Timeline layouts.
+Adjust dot dimensions using the `--dot-size` CSS custom property to create visual emphasis, indicate importance levels, or maintain design consistency across different Timeline layouts and orientations.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -142,7 +142,7 @@ Create different dot appearances by customizing border, outline, and background 
 
 ### Dot outline
 
-Apply the `e-outline` class to the Timeline [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/timeline/#cssclass) property to enable outline-style dots to have an outline state.
+Apply the `e-outline` class to the Timeline [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/timeline#cssclass) property to render dots with an outline state.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

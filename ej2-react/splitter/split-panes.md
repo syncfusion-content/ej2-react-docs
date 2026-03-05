@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Split panes in React Splitter component
 
-This section explains the behavior of split panes in the React Splitter component.
+This section explains split pane behavior and shows examples for common layouts using the React Splitter component.
 
 ## Horizontal layout
 
@@ -44,7 +44,7 @@ By default, the Splitter renders in horizontal orientation, dividing the contain
 
 ## Vertical layout
 
-Set the [orientation](https://ej2.syncfusion.com/react/documentation/api/splitter/#orientation) property to `Vertical` to render the Splitter in vertical orientation, dividing the container into panes with a horizontal separator.
+Set the [orientation](https://ej2.syncfusion.com/react/documentation/api/splitter#orientation) property to `Vertical` to render the Splitter in vertical orientation, dividing the container into panes with a horizontal separator.
 
 `[Class-component]`
 
@@ -104,7 +104,7 @@ You can render multiple panes in both `Horizontal` and `Vertical` orientations.
 
 ## Separator
 
-By default, the pane separator is rendered with a `1px` width/height. You can customize the separator size using the [separatorSize](https://ej2.syncfusion.com/react/documentation/api/splitter/#separatorsize) property.
+By default, the pane separator is rendered with a `1px` width/height. You can customize the separator size using the [separatorSize](https://ej2.syncfusion.com/react/documentation/api/splitter#separatorsize) property.
 
 - For horizontal orientation, this defines the separator’s width.
 - For vertical orientation, this defines the separator’s height.
@@ -139,7 +139,7 @@ By default, the pane separator is rendered with a `1px` width/height. You can cu
 
 Splitter supports nested panes for complex layouts. You can use the same `<div>` element for both the parent pane and the nested Splitter.
 
-> Also you can render the nested splitter using direct child of the splitter pane. For this, nested splitter should have `100%` width and height to match with the parent pane dimensions.
+> Nested splitter can be rendered using direct child of the splitter pane. For this, nested splitter should have `100%` width and height to match with the parent pane dimensions.
 
 `[Class-component]`
 
@@ -169,11 +169,11 @@ Splitter supports nested panes for complex layouts. You can use the same `<div>`
 
 ## Add or remove pane
 
-You can add or remove panes programmatically using the [addPane](https://ej2.syncfusion.com/react/documentation/api/splitter/#addpane) and [removePane](https://ej2.syncfusion.com/react/documentation/api/splitter/#removepane) methods.
+You can add or remove panes programmatically using the [addPane](https://ej2.syncfusion.com/react/documentation/api/splitter#addpane) and [removePane](https://ej2.syncfusion.com/react/documentation/api/splitter#removepane) methods.
 
 ### Add pane
 
-You can add the panes dynamically in the splitter by passing [pane properties](https://ej2.syncfusion.com/documentation/api/splitter/panePropertiesModel/) along with index to the addPane method.
+Add panes dynamically by passing [pane properties](https://ej2.syncfusion.com/documentation/api/splitter/panePropertiesModel) along with an index to the addPane method.
 
 `[Class-component]`
 
@@ -203,7 +203,7 @@ You can add the panes dynamically in the splitter by passing [pane properties](h
 
 ### Remove pane
 
-You can remove the split panes dynamically by passing the pane index to [removePane](https://ej2.syncfusion.com/react/documentation/api/splitter/#removepane) method.
+Remove split panes dynamically by passing the pane index to the [removePane](https://ej2.syncfusion.com/react/documentation/api/splitter#removepane) method.
 
 `[Class-component]`
 

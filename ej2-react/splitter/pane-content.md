@@ -14,7 +14,7 @@ This guide explains how to use plain text, HTML markup, templates, or React UI c
 
 ## Template
 
-You can render the HTML element directly to the splitter pane content using [content](https://ej2.syncfusion.com/react/documentation/api/splitter/panePropertiesModel/#content) template property.
+Render an HTML element directly into a splitter pane using the [content](https://ej2.syncfusion.com/react/documentation/api/splitter/panePropertiesModel#content) property.
 
 `[Class-component]`
 
@@ -44,13 +44,13 @@ You can render the HTML element directly to the splitter pane content using [con
 
 ## React UI components
 
-React UI components can be embedded within Splitter panes, supporting their native behaviors and event bindings.
+React UI components can be embedded within Splitter panes and will retain their native behavior and event bindings.
 
-You can refer [Accordion within splitter](https://ej2.syncfusion.com/react/demos/#/material/splitter/accordion-navigation-menu) and [Listview within splitter](https://ej2.syncfusion.com/react/demos/#/material/splitter/details-view) samples.
+See the [Accordion within splitter](https://ej2.syncfusion.com/react/demos/#/tailwind3/splitter/accordion-navigation-menu) and [Listview within splitter](https://ej2.syncfusion.com/react/demos/#/tailwind3/splitter/details-view) samplesfor examples.
 
 ## Plain content
 
-You can insert plain text into a pane using either inner HTML or the [content](https://ej2.syncfusion.com/react/documentation/api/splitter/panePropertiesModel/#content) property.
+Insert plain text into a pane using inner HTML or the [content](https://ej2.syncfusion.com/react/documentation/api/splitter/panePropertiesModel#content) property.
 
 `[Class-component]`
 
@@ -80,7 +80,7 @@ You can insert plain text into a pane using either inner HTML or the [content](h
 
 ## HTML Markup
 
-Splitter is a layout-based container component. You can dynamically populate pane content using existing HTML markup, making it easy to update content without modifying component logic.
+Splitter is a layout container; pane content can be populated dynamically using existing HTML markup so content can be updated without changing component logic.
 
 `[Class-component]`
 
@@ -110,7 +110,7 @@ Splitter is a layout-based container component. You can dynamically populate pan
 
 ## Pane content using selector
 
-You can assign pane [content](https://ej2.syncfusion.com/react/documentation/api/splitter/panePropertiesModel/#content) using query selectors such as element IDs or CSS class names. The example below demonstrates how to load an element into a pane using its ID.
+Assign pane [content](https://ej2.syncfusion.com/react/documentation/api/splitter/panePropertiesModel#content) using query selectors such as element IDs or CSS class names. The example below demonstrates loading an existing element into a pane using its ID.
 
 `[Class-component]`
 

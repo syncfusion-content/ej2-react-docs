@@ -1,7 +1,3 @@
-{% raw %}
-
-
-
 import { PaneDirective, PanePropertiesModel, PanesDirective, SplitterComponent } from '@syncfusion/ej2-react-layouts';
 import * as React from "react";
 
@@ -49,6 +45,3 @@ class App extends React.Component {
   }
 }
 export default App;
-
-
-{% endraw %}

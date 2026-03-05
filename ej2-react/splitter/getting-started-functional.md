@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Splitter
+# Getting Started with React Splitter component
 
 The following section explains the steps required to build the Splitter component with a step-by-step procedure.
 
@@ -118,7 +118,7 @@ Output will be as follows:
 
 ## Orientation
 
-Splitter supports both `Horizontal` and `Vertical` pane layouts. By default, it renders in `Horizontal` orientation. Change it using the [orientation](https://ej2.syncfusion.com/react/documentation/api/splitter/#orientation) property.
+Splitter supports both `Horizontal` and `Vertical` pane layouts. By default, it renders in `Horizontal` orientation. Change it using the [orientation](https://ej2.syncfusion.com/react/documentation/api/splitter#orientation) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -133,7 +133,7 @@ Splitter supports both `Horizontal` and `Vertical` pane layouts. By default, it 
 
 ## Load Content into Panes
 
-Load pane content as an HTML element or string using the [content](https://ej2.syncfusion.com/react/documentation/api/splitter/panePropertiesModel/#content) property.
+Load pane content as an HTML element or string using the [content](https://ej2.syncfusion.com/react/documentation/api/splitter/panePropertiesModel#content) property.
 
 For detailed information, refer to the [Pane Content](./pane-content) section.
 

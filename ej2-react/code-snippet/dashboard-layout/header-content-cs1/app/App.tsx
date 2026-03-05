@@ -1,4 +1,3 @@
-{% raw %}
 import {
     AccumulationChartComponent, AccumulationSeriesCollectionDirective,
     AccumulationSeriesDirective, AccumulationTooltip, Category, ChartComponent, ColumnSeries, DataLabel, Inject, Legend, LineSeries,
@@ -105,4 +104,3 @@ function App() {
     );
 }
 export default App;
-{% endraw %}
