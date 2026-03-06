@@ -1671,7 +1671,7 @@ A complete working sample of the React Grid with HotChocolate GraphQL backend is
 
 **GitHub repository:**
 
-[Syncfusion React Grid with HotChocolate GraphQL Sample](https://github.com/SyncfusionExamples/syncfusion-react-grid-component-with-hotchocolate-graphql-server)
+[Syncfusion React Grid with HotChocolate GraphQL Sample](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-backends/syncfusion-reactgrid-with-hotchocolate-graphQL-server)
 
 **Repository contents:**
 

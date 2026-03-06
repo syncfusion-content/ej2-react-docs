@@ -834,7 +834,7 @@ Open **http://localhost:3000** in the browser.
   
 ## Complete sample repository
 
-A complete, working sample implementation is available in the [GitHub](https://github.com/SyncfusionExamples/syncfusion-react-grid-component-in-nextjs/tree/master) repository.               
+A complete, working sample implementation is available in the [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-backends/syncfusion-reactgrid-with-nextjs-server/Connecting_to_Next_js_server) repository.               
   
 The application now provides a complete solution for integrating the Syncfusion React Grid with Next.js server, enabling seamless data operations with a modern, user-friendly interface.
 

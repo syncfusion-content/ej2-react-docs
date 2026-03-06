@@ -972,7 +972,7 @@ Open the URL shown in the terminal which is typically **http://localhost:5173/**
 
 ## Complete Sample Repository
 
-For a complete working implementation of this example, refer to the following [GitHub](https://github.com/SyncfusionExamples/syncfusion-react-grid-with-fastapi-server) repository.
+For a complete working implementation of this example, refer to the following [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-backends/syncfusion-reactgrid-with-fastapi-server) repository.
 
 The application demonstrates a complete product management workflow with a Syncfusion React Grid connected to a Python FastAPI REST backend through a single, predictable transport.
 
