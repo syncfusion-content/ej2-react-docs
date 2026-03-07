@@ -143,7 +143,7 @@ Create a new file at **server/task_data.json** with sample task data. This file 
     "Status": "Open",
     "Priority": "Critical",
     "EstimatedHours": 16,
-    "IsActive": true
+    "IsActive": true 
   },
   . . . 
   . . .
@@ -923,7 +923,7 @@ react-grid-flask-api/
 
 ## Complete sample repository
 
-For a complete working implementation, refer to the [GitHub](https://github.com/SyncfusionExamples/syncfusion-react-grid-with-flaskapi-server) repository.
+For a complete working implementation, refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-backends/syncfusion-reactgrid-with-flaskapi-server) repository.
 
 The repository contains the complete Flask backend implementation with all API endpoints, business logic, data models, and a ready-to-run React frontend application.
 

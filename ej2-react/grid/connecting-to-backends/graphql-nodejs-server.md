@@ -1203,7 +1203,7 @@ Open a terminal or Command Prompt. Run the server application first, then start 
 
 ## Complete Sample Repository
 
-For a complete working implementation of this example, refer to the following [GitHub](https://github.com/SyncfusionExamples/Performing-data-and-CRUD-operations-in-ej2-react-grid-using-GraphQLAdaptor) repository.
+For a complete working implementation of this example, refer to the following [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-backends/syncfusion-reactgrid-with-graphql-server) repository.
 
 The application now provides a fully integrated "product" management workflow using the Syncfusion React Grid connected to a Node.js GraphQL backend.
 

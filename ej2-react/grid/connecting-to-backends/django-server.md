@@ -1046,7 +1046,7 @@ npm run dev
 
 ## Complete Sample Repository
 
-For a complete working implementation of this example, refer to the following [GitHub](https://github.com/SyncfusionExamples/syncfusion-react-grid-component-with-django-server) repository:
+For a complete working implementation of this example, refer the [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-backends/syncfusion-reactgrid-with-django-server) repository.
 
 The application now offers a reliable, scalable solution for managing book lending records with a robust Django REST API on Microsoft SQL Server and a Syncfusion React Grid front end.
 
