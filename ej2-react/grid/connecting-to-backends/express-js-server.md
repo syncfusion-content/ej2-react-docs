@@ -838,8 +838,7 @@ ej2-react-grid-with-express-js/
 
 ## Complete sample repository
 
-For a complete working implementation, refer to the GitHub repository:
-[Syncfusion React Grid with Express.js Server Sample](https://github.com/SyncfusionExamples/syncfusion-react-grid-component-with-expressjs-server)
+For a complete working implementation, refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-backends/syncfusion-reactgrid-with-express-server) repository.
 
 The repository contains the complete Express.js backend implementation with all controller methods, API routes, TypeScript interfaces, and data models, plus a ready-to-run React frontend application.
 Run the server application.

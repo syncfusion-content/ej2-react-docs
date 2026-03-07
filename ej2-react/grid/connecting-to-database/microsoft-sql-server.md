@@ -49,6 +49,7 @@ Ensure the following software and packages are installed before proceeding:
 | 2 | Integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid with the ASP.NET Core Web API using DataManager and CustomAdaptor | [View](#integrating-syncfusion-react-grid) |
 | 3 | Implementing server‑side data operations including paging, searching, filtering, and sorting | [View](#step-6-implement-paging-feature) |
 | 4 | Performing full CRUD and batch operations from the React Grid against the SQL Server database | [View](#step-10-perform-crud-operations) |
+| 5 | Explore a complete working sample available on GitHub | [View](#complete-sample-repository) |
 
 
 ## Setting up the SQL server environment for SqlClient
@@ -107,7 +108,7 @@ GO
 
 After executing this script, the ticket records are stored in the "Tickets" table within the "NetworkSupportDB" database. The database is now ready for integration with the application.
 
-## Step 1: Create the ASP.NET Core web api project
+### Step 1: Create the ASP.NET Core web api project
 
 To connect the Syncfusion<sup style="font-size:70%">&reg;</sup>  React Grid to Microsoft SQL Server, the **ASP.NET Core Web API server** must be configured with the required NuGet packages. The server application is responsible for handling HTTP requests from the Grid and accessing data from SQL Server.
 
@@ -639,7 +640,7 @@ After installation, the necessary CSS files are available in the (**../node_modu
 @import '../node_modules/@syncfusion/ej2-react-grids/styles/bootstrap5.3.css';
 ```
 
-For this project, the "Bootstrap 5" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.
+For this project, the "Bootstrap 5.3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.
 
 ### Step 3: Add Syncfusion React Grid
 
@@ -991,7 +992,7 @@ Searching allows finding records by entering keywords in the search box.
 
 **Searching details**
 
-- Entering a term and pressing <kbd>Enter</kbd> sends search descriptors in the `Search` property.
+- Entering a term and pressing <kbd>Enter</kbd> sends search descriptors in the `search` property.
 - `DataOperations.PerformSearching()` applies the search term across all searchable fields.
 - Filtered data is counted and then paged; the shaped response is returned to the client.
 
@@ -1132,7 +1133,7 @@ Sorting enables arranging records in ascending or descending order based on colu
     export default App;
     ```
 
-2. Apply `PerformSorting` using the `Sorted` property on the server.
+2. Apply `PerformSorting` using the `sorted` property on the server.
 
     ```csharp
     using Microsoft.AspNetCore.Mvc;
@@ -1171,7 +1172,7 @@ Sorting enables arranging records in ascending or descending order based on colu
 
 **Sorting details:**
 
-- Clicking a column header creates sort descriptors that arrive in the `Sorted` property.
+- Clicking a column header creates sort descriptors that arrive in the `sorted` property.
 - `DataOperations.PerformSorting()` orders the sequence based on field name and sort direction.
 - Sorting executes before count and paging to return correct page slices.
 
@@ -1545,10 +1546,10 @@ export interface TicketRow {
 
 > - Set [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) to `true` for a column that contains unique values.
 > - Set [IsIdentity](https://ej2.syncfusion.com/react/documentation/api/grid/column#isidentity) to `true` for auto-generated columns to disable editing during add or update operations.
-> - The [EditType](https://ej2.syncfusion.com/react/documentation/api/grid/column#edittype) property can be used to specify the desired editor for each column. (https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
-> - The behavior of default editors can be customized using the [edit.params](https://ej2.syncfusion.com/react/documentation/api/grid/column#edit) property of the Grid column.(https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types#customizing-the-textbox-component-for-stringedit-type)
+> - The [EditType](https://ej2.syncfusion.com/react/documentation/api/grid/column#edittype) property can be used to specify the desired editor for each column. 
+> - The behavior of default editors can be customized using the [edit.params](https://ej2.syncfusion.com/react/documentation/api/grid/column#edit) property of the Grid column.
 > - [Type](https://ej2.syncfusion.com/react/documentation/api/grid/column#type) property specifies the data type of a Grid column.
-> - The [Template](https://ej2.syncfusion.com/react/documentation/api/grid/column#template) property that allows rendering custom elements in a column instead of the default field value.(https://ej2.syncfusion.com/react/documentation/grid/columns/column-template)
+> - The [Template](https://ej2.syncfusion.com/react/documentation/api/grid/column#template) property that allows rendering custom elements in a column instead of the default field value.
 
 Here is the complete Controller **TicketsController.cs** file:
 
@@ -1699,10 +1700,9 @@ dotnet run
 
 **Step 2: Run the React client:**
 
-1. From the client folder, install dependencies and start the React dev server:
+From the client folder, install dependencies and start the React dev server:
 
 ```bash
-npm install
 npm run dev
 ```
 
@@ -1719,12 +1719,17 @@ npm run dev
 - **Filter**: Click on column headers to apply filters.
 - **Sort**: Click on column headers to sort data in ascending or descending order.
 - **Pagination**: Navigate through records using page numbers.
-- **Add**: Click the "Add" button to create a new ticket.
-- **Edit**: Click the "Edit" button to modify existing tickets.
-- **Delete**: Click the "Delete" button to remove tickets.
+- **Add**: Click the `Add` button to create a new ticket.
+- **Edit**: Click the `Edit` button to modify existing tickets.
+- **Delete**: Click the `Delete` button to remove tickets.
 
 ## Complete sample repository
 
 A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-database/syncfusion-react-grid-MSSQL).
 
 The application now provides a complete end‑to‑end ticket management workflow using the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid with server‑side processing and direct integration with Microsoft SQL Server.
+
+## See also
+- [Types of Edit](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
+- [Customizable Grid cells with text, images, icons, and UI templates.](https://ej2.syncfusion.com/react/documentation/grid/columns/column-template)
+- [Boosts speed by rendering visible rows and columns](https://ej2.syncfusion.com/react/documentation/grid/scrolling/virtual-scrolling)

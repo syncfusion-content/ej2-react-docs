@@ -52,6 +52,7 @@ Ensure the following software and packages are installed before proceeding:
 | 4 | Configure connection strings and register services | [View](#step-5-configure-the-dataconnection) |
 | 5 | Create a Grid component that supports searching, filtering, sorting, paging, and CRUD operations | [View](#integrating-syncfusion-react-grid) |
 | 6 | Handle bulk operations and batch updates | [View](#step-10-perform-crud-operations) |
+| 7 | Explore a complete working sample available on GitHub | [View](#complete-sample-repository) |
 
 ## Setting up the MySQL environment
 
@@ -280,7 +281,7 @@ A connection string contains the information needed to connect the application t
 **Instructions:**
 
 1. Open the **appsettings.json** file in the project root.
-2. Add or update the **ConnectionStrings** section with the MySQL connection details:
+2. Add or update the `ConnectionStrings` section with the MySQL connection details:
 
 ```json
 {
@@ -405,7 +406,7 @@ After installation, the necessary CSS files are available in the (**../node_modu
 
 ```
 
-For this project, the "Bootstrap 5" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.
+For this project, the "Bootstrap 5.3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.
 
 ### Step 3: Add Syncfusion React Grid
 
@@ -664,7 +665,7 @@ On the server side create a file **GridController.cs** and add the "UrlDatasourc
 
 **Paging details:**
 
-- The Grid sends page size `Take` and skip count `Skip` parameters to the server.
+- The Grid sends page size `take` and skip count `skip` parameters to the server.
 - The `operation.PerformSkip()` method skips the specified number of records.
 - The `operation.PerformTake()` method retrieves only the required number of records for the current page.
 - The total count is calculated before paging to display the total number of records.
@@ -766,7 +767,7 @@ Update the "UrlDatasource" method in the **GridController.cs** file to handle se
 **Searching details:**
 
 - When text is entered in the search box and <kbd>Enter</kbd> is pressed, the Grid sends a search request to the server.
-- The "UrlDatasource" method receives the search criteria in `Search` parameter.
+- The "UrlDatasource" method receives the search criteria in `search` parameter.
 - The `operation.PerformSearching()` method filters the data based on the search term.
 - Results are returned and displayed in the Grid.
 
@@ -865,7 +866,7 @@ Update the "UrlDatasource" method in the **GridController.cs** file to handle fi
 - Open the filter menu from any of the column header.
 - Select filtering criteria (equals, contains, greater than, less than, etc.).
 - Click the "Filter" button to apply the filter.
-- The "UrlDatasource" method receives the filter criteria in `Where` property.
+- The "UrlDatasource" method receives the filter criteria in `where` property.
 - Results are filtered accordingly and displayed in the Grid.
 
 When filtering is performed in the Grid, a request is sent to the server with the following payload.
@@ -963,7 +964,7 @@ Update the "UrlDatasource" method in the **GridController.cs** file to handle so
 
 - Click on the column header to sort in ascending order.
 - Click again to sort in descending order.
-- The "UrlDatasource" method receives the sort criteria in `Sorted`.
+- The "UrlDatasource" method receives the sort criteria in `sorted`.
 - Records are sorted accordingly and displayed in the Grid.
 
 When sorting is performed in the Grid, a request is sent to the server with the following payload.
@@ -1286,7 +1287,7 @@ export default App;
 ```
 
 > - Set [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) to `true` for a column that contains unique values.
-> - The [editType](https://ej2.syncfusion.com/react/documentation/api/grid/column#edittype) property can be used to specify the desired editor for each column.(https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
+> - The [editType](https://ej2.syncfusion.com/react/documentation/api/grid/column#edittype) property can be used to specify the desired editor for each column.
 > - [type](https://ej2.syncfusion.com/react/documentation/api/grid/columnmodel#type) property of the Grid columns specifies the data type of a grid column.
 
 Here is the complete Controller **GridController.cs** file:
@@ -1461,57 +1462,30 @@ namespace Grid_MySQL.Server.Controllers
 
 ## Running the application
 
+Open a terminal and follow the instructions below to build and run both the backend and frontend of the application.
+
 ### Running the ASP.NET Core backend server
 
-**Step 1: Build the backend:**
-
-1. Open the terminal or Package Manager Console.
-2. Navigate to the **Grid_MySQL.Server** project directory.
-3. Run the following command:
+Navigate to the **Grid_MySQL.Server** project directory and run:
 
 ```powershell
-dotnet build
+    dotnet build
+    dotnet run
 ```
-
-**Step 2: Run the backend server:**
-
-Execute the following command:
-
-```powershell
-dotnet run
-```
-
-**Step 3: Verify backend is running:**
 
 - The backend server should start and listen on **https://localhost:5283** (or the port shown in the terminal).
-- You can test the API endpoint: **https://localhost:5283/api/grid/url**.
+- Test the API endpoint at: **https://localhost:5283/api/grid/url**.
 
 ### Running the React frontend client
 
-**Step 1: Install frontend dependencies:**
-
-1. Open a new terminal.
-2. Navigate to the **grid_mysql.client** (or your React client folder) directory.
-3. Run the following command:
-
-```bash
-npm install
-```
-
-**Step 2: Start the React Development server:**
-
-Execute the following command:
+Navigate to the **grid_mysql.client** directory and execute:
 
 ```bash
 npm run dev
 ```
 
-**Step 3: Access the application:**
-
-1. Open a web browser.
-2. Navigate to **http://localhost:5173** (Vite default) or the port shown in the terminal.
-3. The application will automatically connect to the backend API at **http://localhost:5283/api/grid**.
-4. The transaction management application is now running and ready to use.
+- The application will automatically connect to the backend API at **http://localhost:5283/api/grid**.
+- The transaction management application is now running and ready to use.
 
 **Available features:**
 
@@ -1530,3 +1504,8 @@ A complete, working sample implementation is available in the [GitHub repository
 
 
 The application now provides a complete solution for managing transaction data with a modern, user-friendly interface.
+
+## See also
+- [Types of Edit](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
+- [Customizable Grid cells with text, images, icons, and UI templates.](https://ej2.syncfusion.com/react/documentation/grid/columns/column-template)
+- [Boosts speed by rendering visible rows and columns](https://ej2.syncfusion.com/react/documentation/grid/scrolling/virtual-scrolling)
