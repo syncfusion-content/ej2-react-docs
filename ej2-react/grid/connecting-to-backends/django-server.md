@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion React Grid with Django REST Framework (DRF)
+# Syncfusion React Grid with Django REST Binding POST Request Data
 
 The Syncfusion [React Grid](https://ej2.syncfusion.com/react/documentation/grid/getting-started) combined with Django REST Framework and Microsoft SQL Server provides a robust, scalable data‑driven application architecture. The Syncfusion React Grid delivers a rich, high‑performance client‑side experience with advanced features like paging, sorting, filtering, searching and CRUD operations.
 
