@@ -27,7 +27,7 @@ const StyledButton = styled(ButtonComponent)`
 
 The following example demonstrates rendering a styled Syncfusion Button:
 
-```tsx
+```ts
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import styled from 'styled-components';
@@ -72,7 +72,7 @@ const StyledButton = styled(ButtonComponent)`
 
 Example usage in the application:
 
-```tsx
+```ts
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import styled, { css } from 'styled-components';

@@ -18,7 +18,7 @@ The `immediateRender` property disables the delay on the initial rendering of th
 
 In cases where no template is available, setting the `immediateRender` property to `true` will render the component immediately.
 
-```tsx
+```ts
 <ButtonComponent immediateRender={true} onClick={() => this.setState({ hideButton: true })}>
   Click to hide
 </ButtonComponent>
