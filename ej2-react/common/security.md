@@ -80,7 +80,7 @@ let sanitizedHtml = SanitizeHtmlHelper.sanitize(html);
 
 The following example demonstrates sanitizing template content in a React component:
 
-```tsx
+```ts
 import { DialogComponent } from '@syncfusion/ej2-react-popups';
 import * as React from 'react';
 import { SanitizeHtmlHelper } from '@syncfusion/ej2-base';
