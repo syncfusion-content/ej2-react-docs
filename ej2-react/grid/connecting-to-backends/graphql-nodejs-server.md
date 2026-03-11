@@ -47,7 +47,7 @@ domainurl: ##DomainURL##
 
 The GraphQL backend acts as the central data service, handling queries and mutations that power the Syncfusion React Grid.
 
-### Step 1: Create the GraphQL server and Install required packages
+### Step 1: Create the GraphQL server and install required packages
 
 Before configuring the GraphQL API, a new folder must be created to host the GraphQL server. This folder will contain the server configuration, required dependencies, and sample data used for processing GraphQL queries.
 
@@ -356,7 +356,7 @@ Previously, the CRUD mutation types were defined in the **schema.graphql** file.
     | **4. Remove record** | Delete the record from the data source at the located index. | `const [deleted] = productDetails.splice(idx, 1)` |
     | **5.  Return deleted** | Provide the removed record back to the client. | return `deleted` |
 
-Now all required `GraphQL` types, queries, and mutations have now been fully added.
+Now all required GraphQL types, queries, and mutations have now been fully added.
 
 ## Integrating Syncfusion React Grid with GraphQL
 
@@ -402,11 +402,11 @@ Once the dependencies are installed, the required CSS files are made available i
 @import '@syncfusion/ej2-react-grids/styles/tailwind3.css';
 ```
 
-For this project, the `Tailwind3` theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation to learn more about theming and customization options.
+For this project, the "Tailwind3" theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation to learn more about theming and customization options.
 
 ### Step 3: Configure GraphQL Adaptor
 
-Syncfusion provides a built‑in [GraphQLAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#graphql-adaptor) that translates Grid interactions into GraphQL requests, enabling efficient communication with GraphQL servers and helping integrate the Grid component with the `GraphQL` server.
+Syncfusion provides a built‑in [GraphQLAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#graphql-adaptor) that translates Grid interactions into GraphQL requests, enabling efficient communication with GraphQL servers and helping integrate the Grid component with the GraphQL server.
 
 **What is a GraphQL Adaptor?**
 
@@ -435,7 +435,7 @@ The `GraphQLAdaptor` needs to be configured to the Syncfusion `DataManager` to c
 1. Create a new (**src/ProductGrid.tsx**) in the ReactClient folder.
 2. Configure `DataManager` with `GraphQLAdaptor` and map the response (result, count).
 3. Ensure the GraphQL schema exposes "getProducts(datamanager: DataManagerInput)" and `returns { count, result }`.
-4. Render GridComponent with dataSource and define columns matching the fields returned by the query.
+4. Render the Grid component with dataSource and define columns matching the fields returned by the query.
 
     ```ts
     [ProductGrid.tsx]
@@ -561,7 +561,7 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
 
 **Instructions:**
 1. Open the **ProductGrid.tsx** file.
-2. Update the `Grid` component to include the [Toolbar]((https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbar)) property with CRUD and search options.
+2. Update the Grid component to include the [Toolbar]((https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbar)) property with CRUD and search options.
 
   ```ts
   const toolbar = ["Add", "Edit", "Delete", "Search"];
@@ -584,7 +584,7 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
 
 Paging divides large datasets into smaller pages to improve performance and usability.
 
-During pagination, the `GraphQLAdaptor` sends the paging details though "skip" and "take" parameters of the "DataManagerInput". These details are converted to the [paging query](https://ej2.syncfusion.com/react/documentation/data/querying#paging) and passed to the `DataManager` ensuring that data is returned in paged segments and allowing smooth navigation through large datasets.
+During pagination, the `GraphQLAdaptor` sends the paging details though `skip` and `take` parameters of the "DataManagerInput". These details are converted to the [paging query](https://ej2.syncfusion.com/react/documentation/data/querying#paging) and passed to the `DataManager` ensuring that data is returned in paged segments and allowing smooth navigation through large datasets.
 
 **Instructions:**
 1. Set the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowpaging) property `true` to enable paging in the Grid.
@@ -659,16 +659,16 @@ The image illustrates the paging details (`skip` and `take`) included in the ser
  
 The resolver processes the Grid’s `skip` and `take` parameters and returns the total count along with the paged result. Paging feature is now active with "10" records per page.
 
-> To use [Row Virtualization](https://ej2.syncfusion.com/react/documentation/grid/scrolling/virtual-scrolling), inject the `VirtualScroll` service and set [enableVirtualization](https://ej2.syncfusion.com/react/documentation/grid/scrolling/virtual-scrolling) property to `true`. When virtualization is enabled, the grid automatically sends the correct "skip" and "take" values to the server.The resolver does not require any additional modifications. The Grid inherently handles all virtual block requests, ensuring the expected behavior without additional configuration.
+> To use [Row Virtualization](https://ej2.syncfusion.com/react/documentation/grid/scrolling/virtual-scrolling), inject the `VirtualScroll` service and set [enableVirtualization](https://ej2.syncfusion.com/react/documentation/grid/scrolling/virtual-scrolling) property to `true`. When virtualization is enabled, the grid automatically sends the correct `skip` and `take` values to the server.The resolver does not require any additional modifications. The Grid inherently handles all virtual block requests, ensuring the expected behavior without additional configuration.
 
 ### Step 6: Implement searching feature
 
 Searching provides the capability to find specific records by entering keywords into the search box.
 
-When a search action is performed in the Grid, the `GraphQLAdaptor` sends the search key and the target fields through the "search" parameter of the "DataManagerInput". These values are converted as the [search query](https://ej2.syncfusion.com/react/documentation/data/querying#searching) and processed through the `DataManager`.
+When a search action is performed in the Grid, the `GraphQLAdaptor` sends the search key and the target fields through the `search` parameter of the "DataManagerInput". These values are converted as the [search query](https://ej2.syncfusion.com/react/documentation/data/querying#searching) and processed through the `DataManager`.
 
 **Instructions**
-1. Ensure the toolbar includes the "Search" item.
+1. Ensure the toolbar includes the `Search` item.
 
     ```ts
       const toolbar = ['Search'];
@@ -735,7 +735,7 @@ When a search action is performed in the Grid, the `GraphQLAdaptor` sends the se
  
 **Searching details included in request payloads:**
 
-The image below displays the "search" parameter values.
+The image below displays the `search` parameter values.
 
 ![GraphQLAdaptor-NodeJs-Searching](../images/GraphQLAdaptor-NodeJs-Searching.png)
 
@@ -745,7 +745,7 @@ The resolver applies the search query parameters received from the Grid and retu
 
 The sorting feature in the Grid allows records to be organized in ascending or descending order based on one or more columns.
 
-The `GraphQLAdaptor` automatically passes the sorting details to the server through the "sorted" parameter of the "DataManagerInput" and the details are converted to the [sorting query](https://ej2.syncfusion.com/react/documentation/data/querying#sorting) and executed through the `DataManager` to get the sorted data.
+The `GraphQLAdaptor` automatically passes the sorting details to the server through the `sorted` parameter of the "DataManagerInput" and the details are converted to the [sorting query](https://ej2.syncfusion.com/react/documentation/data/querying#sorting) and executed through the `DataManager` to get the sorted data.
 
 **Instructions:**
 1. Set the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to `true`.
@@ -822,7 +822,7 @@ The `GraphQLAdaptor` automatically passes the sorting details to the server thro
 
 **Sorting details included in request payloads:**
 
-The image below shows the values passed to the "sorted" parameter.
+The image below shows the values passed to the `sorted` parameter.
 
 ![GraphQLAdaptor-NodeJs-Sorting](../images/GraphQLAdaptor-NodeJs-Sorting.png)
 
@@ -834,7 +834,7 @@ The resolver processes the sorting parameters and returns the result in the requ
 
 Filtering narrows down records by specifying conditions on column values. Records can be filtered by selecting checkbox filters or using comparison operators such as equals, greater than, or less than.
 
-The `GraphQLAdaptor` automatically passes the filter conditions to the server through the "where" parameter of the "DataManagerInput". In the server, the filter parameters are converted to the Syncfusion [filter query](https://ej2.syncfusion.com/react/documentation/data/querying#filtering) and executed through the `DataManager` to get the filtered data.
+The `GraphQLAdaptor` automatically passes the filter conditions to the server through the `where` parameter of the "DataManagerInput". In the server, the filter parameters are converted to the Syncfusion [filter query](https://ej2.syncfusion.com/react/documentation/data/querying#filtering) and executed through the `DataManager` to get the filtered data.
 
  **Instructions:**
 1. Set the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowfiltering) property to `true`.
@@ -1005,7 +1005,7 @@ The `GraphQLAdaptor` automatically passes the filter conditions to the server th
 
 **Filtering details included in request payloads:**
 
-The image illustrates the serialized "where" condition passed from the DataManager.
+The image illustrates the serialized `where` condition passed from the DataManager.
 
 ![GraphQLAdaptor-NodeJs-Filtering](../images/GraphQLAdaptor-NodeJs-Filtering.png)
 
@@ -1201,7 +1201,7 @@ Open a terminal or Command Prompt. Run the server application first, then start 
 ```
 - Open **http://localhost:4200/** in the browser.
 
-## Complete Sample Repository
+## Complete sample repository
 
 For a complete working implementation of this example, refer to the following [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-backends/syncfusion-reactgrid-with-graphql-server) repository.
 

@@ -293,7 +293,7 @@ The Grid supports filtering through a menu interface that restricts data based o
   }
 ```
 
-The [Implement data operations](#step-3-implement-data-operations-on-server-side) section already includes a code example that sends filter parameters from the Grid to the Next.js server using the `dataStateChange` event handler. When filtering is applied in the Grid, the `dataStateChange` event provides the current filter details through its `where` parameter. The image below illustrates how the filter state is passed to the `where` property of the `dataStateChange` event arguments.
+The [implement data operations](#step-3-implement-data-operations-on-server-side) section already includes a code example that sends filter parameters from the Grid to the Next.js server using the `dataStateChange` event handler. When filtering is applied in the Grid, the `dataStateChange` event provides the current filter details through its `where` parameter. The image below illustrates how the filter state is passed to the `where` property of the `dataStateChange` event arguments.
 
 ![next_js_filter](../images/next_js_filter.png)
 
@@ -385,7 +385,7 @@ The search feature in the Grid allows records to be located and filtered using k
   }
 ```
 
-The [Implement data operations](#step-3-implement-data-operations-on-server-side) section already includes a code example that sends search parameters from the Grid to the Next.js server using the `dataStateChange` event handler. When searching is applied in the Grid, the `dataStateChange` event provides the current search details through its `search` parameter. The image illustrates how the search state is passed to the `search` property of the `dataStateChange` event arguments.
+The [implement data operations](#step-3-implement-data-operations-on-server-side) section already includes a code example that sends search parameters from the Grid to the Next.js server using the `dataStateChange` event handler. When searching is applied in the Grid, the `dataStateChange` event provides the current search details through its `search` parameter. The image illustrates how the search state is passed to the `search` property of the `dataStateChange` event arguments.
 
 ![next_js_search](../images/next_js_search.png)
 
@@ -450,7 +450,7 @@ The sorting feature in the Grid allows records to be organized in ascending or d
     );
   }
 ```
-The [Implement data operations](#step-3-implement-data-operations-on-server-side) section already includes a code example that sends sort parameters from the Grid to the Next.js server using the `dataStateChange` event handler. When sorting is applied in the Grid, the `dataStateChange` event provides the current sort details through its `sorted` parameter. The image illustrates how the sort state is passed to the `sorted` property of the `dataStateChange` event arguments.
+The [implement data operations](#step-3-implement-data-operations-on-server-side) section already includes a code example that sends sort parameters from the Grid to the Next.js server using the `dataStateChange` event handler. When sorting is applied in the Grid, the `dataStateChange` event provides the current sort details through its `sorted` parameter. The image illustrates how the sort state is passed to the `sorted` property of the `dataStateChange` event arguments.
 
 ![next_js_sort](../images/next_js_sort.png)
 
@@ -517,7 +517,7 @@ The paging feature allows efficient loading of large data sets through on‑dema
   }
 ```
 
-The [Implement data operations](#step-3-implement-data-operations-on-server-side) section already includes a code example that sends page parameters from the Grid to the Next.js server using the `dataStateChange` event handler. When paging is applied in the Grid, the `dataStateChange` event provides the current page details through its `skip` and `take` parameter. The image illustrates how the page state is passed to the `skip` and `take` property of the `dataStateChange` event arguments.
+The [implement data operations](#step-3-implement-data-operations-on-server-side) section already includes a code example that sends page parameters from the Grid to the Next.js server using the `dataStateChange` event handler. When paging is applied in the Grid, the `dataStateChange` event provides the current page details through its `skip` and `take` parameter. The image illustrates how the page state is passed to the `skip` and `take` property of the `dataStateChange` event arguments.
 
 ![next_js_page](../images/next_js_page.png)
 
@@ -592,7 +592,7 @@ Grid data requires a primary key to modify row data based on the database’s un
  
 **Server‑side insert operation handling**:
 
-In the **route.ts** file, define the "POST" method to manage the creation of new records. This method accepts the new data provided by the Grid and performs the insertion into the database.
+In the **route.ts** file, define the `POST` method to manage the creation of new records. This method accepts the new data provided by the Grid and performs the insertion into the database.
 
 ```ts
   // POST - Create a new data
@@ -614,7 +614,7 @@ In the **route.ts** file, define the "POST" method to manage the creation of new
   }
 ```
 
-The `dataSourceChanged` event handler in the **page.tsx** file is responsible for sending an asynchronous request to the server based on the Grid’s add record details provided in the event arguments. Once the server ("POST") method response is received, the `endEdit` method is invoked within the `dataSourceChanged` event to complete the Grid operation.
+The `dataSourceChanged` event handler in the **page.tsx** file is responsible for sending an asynchronous request to the server based on the Grid’s add record details provided in the event arguments. Once the server (`POST`) method response is received, the `endEdit` method is invoked within the `dataSourceChanged` event to complete the Grid operation.
 
 The image illustrates the newly inserted data passed to the server through the `dataSourceChanged` event arguments in the Grid:
 

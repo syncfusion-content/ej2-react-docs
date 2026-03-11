@@ -706,7 +706,7 @@ export default function App() {
 
 The `dataSourceChanged` event handler checks the action type from the event arguments to determine whether a create, update, or delete operation is being performed. For insert operations, a POST request is sent to the "/tasks" endpoint with the new record data. For update operations, a PUT request is sent to "/tasks/{id}" with the modified data. For delete operations, a DELETE request is sent to "/tasks/{id}" to remove the record. After each operation completes successfully, the `endEdit()` method is called to notify the Grid that the operation is complete.
 
-### Step 8: Enable Paging
+### Step 8: Enable paging
 
 The paging feature divides Grid records into multiple pages, improving performance and usability when handling large datasets. Enable paging by setting the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid#allowpaging) property to `true` and injecting the `Page` module. Customize pager behavior using the [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid#pagesettings) property.
 
@@ -736,7 +736,7 @@ The image illustrates how the page state is passed to the `skip` and `take` prop
 
 ![flaskapi_page](../images/flaskapi_page.png)
 
-### Step 9: Enable Filtering
+### Step 9: Enable filtering
 
 The filtering feature enables searching and refining Grid records based on column values. Enable filtering by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid#allowfiltering) property to `true` and injecting the `Filter` module. Customize filtering options using the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid#filtersettings) property.
 
@@ -763,7 +763,7 @@ The image below illustrates how the filter state is passed to the `where` proper
 
 ![flaskapi_filter](../images/flaskapi_filter.png)
 
-### Step 10: Enable Searching
+### Step 10: Enable searching
 
 The search feature in the Grid allows records to be located and filtered using keywords. Enable searching by adding `Search` to the Grid's [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) items and injecting the `Toolbar` module.
 
@@ -789,7 +789,7 @@ The image illustrates how the search state is passed to the `search` property of
 
 ![flaskapi_search](../images/flaskapi_search.png)
 
-### Step 11: Enable Sorting
+### Step 11: Enable sorting
 
 The sorting feature allows ordering Grid records by clicking column headers. Enable sorting by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) property to `true` and injecting the `Sort` module.
 

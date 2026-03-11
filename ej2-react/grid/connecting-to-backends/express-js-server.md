@@ -277,7 +277,7 @@ export default router;
 
 Create a new controller file at (**server/src/controllers/patients.controller.ts**) to handle all server request operations for data actions. 
 
-Inside this file, add a `getPatients` method to return the data to the client when a request is sent. Ensure the response follows a structured format that includes both the current view dataset and the total data count. This approach supports on‑demand data loading and enables the client to handle operations such as paging or filtering effectively when using Syncfusion data binding approaches.
+Inside this file, add a "getPatients" method to return the data to the client when a request is sent. Ensure the response follows a structured format that includes both the current view dataset and the total data count. This approach supports on‑demand data loading and enables the client to handle operations such as paging or filtering effectively when using Syncfusion data binding approaches.
 
 The required response format includes:
 
@@ -365,7 +365,7 @@ const take = dm.take as number;
 result = result.slice(skip, skip + take);
 ```
 
-find the complete code of the `getPatients` method below:
+find the complete code of the "getPatients" method below:
 
 ```typescript
 export const getPatients = (req: Request, res: Response) => {

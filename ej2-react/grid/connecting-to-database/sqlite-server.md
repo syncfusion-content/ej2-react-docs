@@ -1,6 +1,6 @@
 ---
 layout: post
-title: React Grid connected to SQLite Database | Syncfusion
+title: React Grid connected to SQLite Data | Syncfusion
 description: Bind SQLite data to Syncfusion React Grid using Entity Framework with complete CRUD, filtering, sorting and advanced data operations.
 platform: ej2-react
 control: grid
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connecting SQLite database to React Grid Using Entity Framework
+# Connecting SQLite Data to React Grid using EF Core
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports binding data from a SQLite database using Entity Framework Core (EF Core). This approach provides a lightweight, server less database solution ideal for mobile applications, desktop applications, and small-to-medium scale web applications.
 
@@ -17,7 +17,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports binding
 
 Entity Framework Core (EF Core) is a software tool that simplifies database operations in .NET applications. It serves as a bridge between C# code and databases like SQLite.
 
-**Key Benefits of Entity Framework Core**
+**Key benefits of Entity Framework Core**
 
 - **Automatic SQL Generation**: Entity Framework Core generates optimized SQL queries automatically, eliminating the need to write raw SQL code.
 - **Type Safety**: Work with strongly-typed objects instead of raw SQL strings, reducing errors.
@@ -54,7 +54,7 @@ Ensure the following software and packages are installed before proceeding:
 | 6 | Create a React Grid component that supports searching, filtering, sorting, paging, and CRUD operations | [View](#integrating-syncfusion-react-grid) |
 | 7 | Handle bulk operations and batch updates | [View](#step-9-perform-crud-operations) |
 
-## Setting Up the SQLite Environment for Entity Framework Core
+## Setting up the SQLite Environment for Entity Framework Core
 
 ### Step 1: Create the database and table in SQLite
 
@@ -96,9 +96,9 @@ INSERT INTO asset (Id, AssetID, AssetName, AssetType, Model, SerialNumber, Invoi
 ('2', 'AST-002', 'HP ProBook Laptop', 'Laptop', 'ProBook 450 G8', 'SN-HP-2024-002', 'INV-2023-0042', 'Sarah Johnson', 'Finance', '2023-03-20', 1100.00, '2026-03-20', 'Good', '2024-05-15', 'Active'),
 ```
 
-After executing this script, the asset records are stored in the "asset" table within the **asset.db** database. The database is now ready for integration with the Syncfusion components.
+After executing this script, the asset records are stored in the "asset" table within the **asset.db** database. The database is now ready for integration with the Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
-### Step 2: Create a New ASP.NET Core with React project
+### Step 2: Create a new ASP.NET Core with React project
 
 Before installing NuGet packages, a new ASP.NET Core Web Application with React must be created. This template creates a full-stack application with both the ASP.NET Core backend server and React frontend client in a single solution.
 
@@ -120,12 +120,12 @@ Before installing NuGet packages, a new ASP.NET Core Web Application with React 
 8. Click **Create**.
 
 Visual Studio will create a solution with two projects:
-- **Grid_SQLite.Server**: The ASP.NET Core backend with Controllers, Data folders, and configuration files
+- **Grid_SQLite.Server**: The ASP.NET Core backend with Controllers and configuration files
 - **grid_sqlite.client**: The React + Vite frontend client application
 
 ### Step 3: Install required NuGet packages
 
-NuGet packages are software libraries that add functionality to the application. These packages enable Entity Framework Core, SQLite connectivity, and Syncfusion Grid integration.
+NuGet packages are software libraries that add functionality to the application. These packages enable Entity Framework Core, SQLite connectivity, and Syncfusion<sup style="font-size:70%">&reg;</sup> Grid integration.
 
 **Method 1: Using .NET CLI (Recommended)**
 
@@ -393,16 +393,16 @@ namespace Grid_SQLite.Server.Data
 
 - The `DbContext` class inherits from Entity Framework's `DbContext` base class.
 - The `Assets` property represents the "asset" table in the database.
-- The `OnModelCreating` method configures how the database columns should behave (maximum length, required/optional, default values, etc.).
+- The `OnModelCreating` method configures the behavior of database columns (maximum length, required/optional, default values, etc.).
 
 The **AssetDbContext** class is required because:
 
 - It **connects** the application to the database.
 - It **manages** all database operations.
 - It **maps** C# models to actual database tables.
-- It **configures** how data should look inside the database.
+- It **configures** the structure of data inside the database.
 
-Without this class, Entity Framework Core will not know where to save data or how to create the assets table. The `DbContext` has been successfully configured.
+Without this class, Entity Framework Core will not know where to save data or to create the assets table. The `DbContext` has been successfully configured.
 
 ### Step 6: Configure connection string in appsettings.json
 
@@ -508,29 +508,29 @@ app.Run();
 
 ## Integrating Syncfusion React Grid
 
-The Syncfusion React Grid is a robust, high‑performance component built to efficiently display, manage, and manipulate large datasets. It provides advanced features such as sorting, filtering, and paging. Follow these steps to render the grid and integrate it with a SQLite database.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid is a robust, high‑performance component built to efficiently display, manage, and manipulate large datasets. It provides advanced features such as sorting, filtering, and paging. Follow these steps to render the grid and integrate it with a SQLite database.
 
 > The React client application **grid_sqlite.client** is already created as part of the ASP.NET Core with React template.
 
 ### Step 1: Adding Syncfusion packages
 
-Install the necessary Syncfusion packages in the React client project.
+Install the necessary Syncfusion<sup style="font-size:70%">&reg;</sup> packages in the React client project.
 
 **Instructions:**
 
 1. Open a terminal in Visual Studio 2022 (View → Terminal).
 2. Navigate to the **grid_sqlite.client** directory:
 
-```bash
-cd grid_sqlite.client
-```
+    ```bash
+    cd grid_sqlite.client
+    ```
 
-3. Install the Syncfusion packages:
+3. Install the Syncfusion<sup style="font-size:70%">&reg;</sup> packages:
 
-```bash
-npm install @syncfusion/ej2-react-grids --save
-npm install @syncfusion/ej2-data --save
-```
+    ```bash
+    npm install @syncfusion/ej2-react-grids --save
+    npm install @syncfusion/ej2-data --save
+    ```
 
 After installation, the necessary CSS files are available in the (**../node_modules/@syncfusion**) directory. Add the required CSS references to the (**src/index.css**) file to ensure proper styling of the Grid component.
 
@@ -545,7 +545,6 @@ After installation, the necessary CSS files are available in the (**../node_modu
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/bootstrap5.3.css';
 @import '../node_modules/@syncfusion/ej2-notifications/styles/bootstrap5.3.css';
 @import '../node_modules/@syncfusion/ej2-react-grids/styles/bootstrap5.3.css';
-
 ```
 
 For this project, the "Bootstrap 5" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.
@@ -589,7 +588,7 @@ export default App;
 
 ### Step 3: Implement the CustomAdaptor
 
-The Syncfusion React Grid can bind data from a **SQLite database** using [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) and set the `adaptor` property to `CustomAdaptor` for scenarios that require full control over data operations.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid can bind data from a **SQLite database** using [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) and set the `adaptor` property to `CustomAdaptor` for scenarios that require full control over data operations.
 
 The `CustomAdaptor` (client-side) is a bridge between the React Grid and the ASP.NET Core backend. It extends the `UrlAdaptor` and handles all data operation requests by constructing HTTP POST calls to corresponding server endpoints. When the Grid performs operations like reading, searching, filtering, sorting, paging, and CRUD operations, the CustomAdaptor intercepts these actions and formats them into HTTP requests. These requests are sent to the ASP.NET Core Web API controller on the server, which processes the `DataManagerRequest` using Entity Framework Core to query the SQLite database and return the results.
 
@@ -666,7 +665,7 @@ export class CustomAdaptor extends UrlAdaptor {
 
 The `CustomAdaptor` class has been successfully implemented with all data operations.
 
-### Step 4: Add Toolbar with CRUD and search options
+### Step 4: Add toolbar with CRUD and search options
 
 The toolbar provides buttons for adding, editing, deleting records, and searching the data.
 
@@ -987,7 +986,7 @@ namespace Grid_SQLite.Server.Controllers
 - Open the filter menu from any of the column header.
 - Select filtering criteria (equals, contains, greater than, less than, etc.).
 - Click the "Filter" button to apply the filter.
-- The "UrlDatasource" method receives the filter criteria in `Where` property.
+- The "UrlDatasource" method receives the filter criteria in `where` property.
 - Results are filtered accordingly and displayed in the Grid.
 
 When filtering is performed in the Grid, a request is sent to the server with the following payload.
@@ -1077,7 +1076,7 @@ namespace Grid_SQLite.Server.Controllers
 
 - Click on the column header to sort in ascending order.
 - Click again to sort in descending order.
-- The "UrlDatasource" method receives the sort criteria in `Sorted`.
+- The "UrlDatasource" method receives the sort criteria in `sorted`.
 - Records are sorted accordingly and displayed in the Grid.
 
 When sorting is performed in the Grid, a request is sent to the server with the following payload.
@@ -1132,7 +1131,7 @@ export default App;
 
 Record insertion allows new record to be added directly through the Grid component. The adaptor processes the insertion request, performs any required business‑logic validation, and saves the newly created record to the SQLite database.
 
-Implement the `insert` method in (**grid_sqlite.client/src/CustomAdaptor.ts**) to handle record insertion within the `CustomAdaptor` class:
+Implement the "insert" method in (**grid_sqlite.client/src/CustomAdaptor.ts**) to handle record insertion within the `CustomAdaptor` class:
 
 ```ts
   public override insert(dm: DataManager, data: DataResult) {
@@ -1166,12 +1165,12 @@ In (**Grid_SQLite.Server/Controllers/AssetController.cs**), implement the "Inser
 
 **What happens behind the scenes:**
 
-1. The form data is collected and validated in the CustomAdaptor's `insert` method.
-2. The `Insert` method in **AssetController.cs** file is called.
+1. The form data is collected and validated in the CustomAdaptor's "insert" method.
+2. The "Insert" method in **AssetController.cs** file is called.
 3. The new record is added to the "Asset" collection.
 4. The Grid automatically refreshes to display the new record.
 
-When a new record added in the Grid, a request is sent to the server with the following payload.
+When a new record is added in the Grid, a request is sent to the server with the following payload.
 
 ![Insert Operation Payload](../images/sqlite_add.png)
 
@@ -1179,7 +1178,7 @@ When a new record added in the Grid, a request is sent to the server with the fo
 
 Record modification allows asset details to be updated directly within the Grid. The adaptor processes the edited row, validates the updated values, and applies the changes to the SQLite database while ensuring data integrity is preserved.
 
-Implement the `update` method in (**grid_sqlite.client/src/CustomAdaptor.ts**) to handle record update within the `CustomAdaptor` class:
+Implement the "update" method in (**grid_sqlite.client/src/CustomAdaptor.ts**) to handle record update within the `CustomAdaptor` class:
 
 ```ts
   public override update(dm: DataManager, _keyField: string, value: any) {
@@ -1210,13 +1209,13 @@ In (**Grid_SQLite.Server/Controllers/AssetController.cs**), implement the update
 
 **What happens behind the scenes:**
 
-1. The modified data is collected and validated in the CustomAdaptor's `update` method.
-2. The `Update` method in **AssetController.cs** file is called.
+1. The modified data is collected and validated in the CustomAdaptor's "update" method.
+2. The "Update" method in **AssetController.cs** file is called.
 3. The existing record is retrieved from the database by "ID".
 4. All properties are updated with the new values.
 5. The Grid refreshes to display the updated record.
 
-When a record updated is in the Grid, a request is sent to the server with the following payload.
+When a record is updated in the Grid, a request is sent to the server with the following payload.
 
 ![Update Operation Payload](../images/sqlite_edit.png)
 
@@ -1224,7 +1223,7 @@ When a record updated is in the Grid, a request is sent to the server with the f
 
 Record deletion allows assets to be removed directly from the Grid. The adaptor captures the delete request, executes the corresponding SQL DELETE operation, and updates both the database and the grid to reflect the removal.
 
-Implement the `remove` method in (**grid_sqlite.client/src/CustomAdaptor.ts**) to handle record deletion within the `CustomAdaptor` class:
+Implement the "remove" method in (**grid_sqlite.client/src/CustomAdaptor.ts**) to handle record deletion within the `CustomAdaptor` class:
 
 ```ts
   public override remove(dm: DataManager, keyField: string, value: any) {
@@ -1267,8 +1266,8 @@ In (**Grid_SQLite.Server/Controllers/AssetController.cs**), implement the delete
 **What happens behind the scenes:**
 
 1. A record is selected and `Delete` button is clicked.
-2. The CustomAdaptor's `remove` method is called.
-3. The `Remove` method in **AssetController.cs** file is called.
+2. The CustomAdaptor's "remove" method is called.
+3. The "Remove" method in **AssetController.cs** file is called.
 4. The record is located in the database by its ID.
 5. The record is removed from the `_db.Assets` collection.
 6. The Grid refreshes to remove the deleted record from the UI.
@@ -1342,7 +1341,7 @@ public IActionResult Batch([FromBody] CRUDModel<Asset> value)
 
 **What happens behind the scenes:**
 
-- The Grid collects all added, edited, and deleted records in Batch Edit mode.
+- The Grid collects all added, edited, and deleted records in `Batch` edit mode.
 - The combined batch request is passed to the CustomAdaptor’s `batchRequest` method.
 - Each modified record, added and deleted records are processed using `BatchUpdate` method in **AssetController.cs** file.
 - All repository operations persist changes to the SQLite database.
@@ -1609,8 +1608,8 @@ export default App;
 ```
 
 > - Set [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) to `true` for a column that contains unique values.
-> - The [editType](https://ej2.syncfusion.com/react/documentation/api/grid/column#edittype) property can be used to specify the desired editor for each column.(https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
-> - [type](https://ej2.syncfusion.com/react/documentation/api/grid/columnmodel#type) property of the Grid columns specifies the data type of a grid column.
+> - The [editType](https://ej2.syncfusion.com/react/documentation/api/grid/column#edittype) property can be used to specify the desired editor for each column.
+> - The [type](https://ej2.syncfusion.com/react/documentation/api/grid/columnmodel#type) property of the Grid columns specifies the data type of a grid column.
 
 Here is the complete Controller (**Grid_SQLite.Server/Controllers/AssetController.cs**) file:
 
@@ -1756,17 +1755,17 @@ namespace Grid_SQLite.Server.Controllers
 
 Since the project is created using the ASP.NET Core with React template, both the backend and frontend are configured to run together automatically. Visual Studio handles the build and launch process for both projects.
 
-**Step 1: Open the solution:**
+**Step 1: Open the solution**
 
 1. Open **Visual Studio 2022**.
 2. Open the **Grid_SQLite.slnx** file.
 
-**Step 2: Set startup project:**
+**Step 2: Set startup project**
 
 1. Ensure **Grid_SQLite.Server** is set as the startup project (it should be by default).
 2. The solution is configured to automatically launch both the backend server and the React development server.
 
-**Step 3: Run the application:**
+**Step 3: Run the application**
 
 1. Press <kbd>F5</kbd> or click the **Start** button in Visual Studio.
 2. Visual Studio will:
@@ -1775,11 +1774,11 @@ Since the project is created using the ASP.NET Core with React template, both th
    - Automatically start the React development server in the background
    - Open a browser window with the application
 
-**Step 4: Verify the application is running:**
+**Step 4: Verify the application is running**
 
 - The application should open automatically in your default browser
 - The React frontend will be served through the ASP.NET Core server
-- All API calls to **https://localhost:7116/api/asset/** will be handled by the backend
+- All API calls to **https://localhost:7116/api/asset** will be handled by the backend
 
 The asset management application is now running and ready to use.
 
@@ -1790,9 +1789,9 @@ The asset management application is now running and ready to use.
 - **Filter**: Click on column headers to apply filters.
 - **Sort**: Click on column headers to sort data in ascending or descending order.
 - **Pagination**: Navigate through records using page numbers.
-- **Add**: Click the "Add" button to create a new asset.
-- **Edit**: Click the "Edit" button to modify existing assets.
-- **Delete**: Click the "Delete" button to remove assets.
+- **Add**: Click the `Add` button to create a new asset.
+- **Edit**: Click the `Edit` button to modify existing assets.
+- **Delete**: Click the `Delete` button to remove assets.
 
 ## Complete sample repository
 
