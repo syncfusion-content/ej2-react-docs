@@ -70,7 +70,7 @@ The backend workspace has been successfully initialized, and the core runtime is
 
 ### Step 2: Create sample datasource 
 
-This step initializes the application with a dataset. Create a new file named **server/products_data.json** and paste the following JSON. This file will be used by the API to load and persist product data:
+This step initializes the application with a dataset. Create a new file named (**server/products_data.json**) and paste the following JSON. This file will be used by the API to load and persist product data:
 
 ```json
 [
@@ -228,7 +228,7 @@ The router centralizes data loading, read pipelines for grid operations, and mut
         return any(k in payload for k in DM_READ_KEYS)
     ```
 
-7. Implement a "GET" guard and a unified "POST" handler so that the endpoint accepts only `UrlAdaptor` HTTP POST calls, routing them through the appropriate pipeline for either read or CRUD operations.
+7. Implement a `GET` guard and a unified `POST` handler so that the endpoint accepts only `UrlAdaptor` HTTP POST calls, routing them through the appropriate pipeline for either read or CRUD operations.
 
     ```python
     @router.get('/')
@@ -285,7 +285,7 @@ The router centralizes data loading, read pipelines for grid operations, and mut
 - The handler executes a clear sequence for reads that applies searching, filtering, sorting, projection, and paging in an intuitive order.  
 - The CRUD branch delegates to focused helpers that update the in‑memory list and then persist the change to disk.  
 - The design keeps the controller thin while allowing the data operation modules to remain reusable and independently testable.  
-- The explicit "GET" guard protects the endpoint from unsupported transports so that all interactions pass through the single "POST" contract.  
+- The explicit `GET` guard protects the endpoint from unsupported transports so that all interactions pass through the single `POST` contract.  
 
 The handlers in the "data_actions" and "crud_actions" modules are explained in detail in the integration section below.
 
@@ -306,7 +306,7 @@ The handlers in the "data_actions" and "crud_actions" modules are explained in d
 
 At this stage, the server configuration for the dataset, application, and routing has been completed. The following sections explain how to apply server‑side data operations within the application.
 
-As part of the earlier backend configuration, all data action function files were imported into the router and defined in **routers/products.py** file. 
+As part of the earlier backend configuration, all data action function files were imported into the router and defined in (**routers/products.py**) file. 
 
 ```python
 . . .
@@ -330,7 +330,7 @@ Next, insert the following code into the step-by-step process of creating the ex
 
 The paging function slices the dataset based on `skip` and `take` values to return the requested page segment.
 
-Open the file **server/routers/services/data_actions/page.py** and add the following code, which demonstrates how to handle paging actions on the server based on the Grid request.
+Open the file (**server/routers/services/data_actions/page.py**) and add the following code, which demonstrates how to handle paging actions on the server based on the Grid request.
 
 ```python
 from typing import Any, Dict, List
@@ -344,7 +344,7 @@ def apply_paging(items: List[Dict[str, Any]], skip: int, take: int) -> List[Dict
 
 The sorting function orders the dataset by the specified `field` and `direction` using sort descriptors.
 
-Open the file **server/routers/services/data_actions/sort.py** and include following code demonstrates handling the sorting action inside the server based on the Grid request.
+Open the file (**server/routers/services/data_actions/sort.py**) and include following code demonstrates handling the sorting action inside the server based on the Grid request.
 
 ```python
 from typing import Any, Dict, List
@@ -370,7 +370,7 @@ def apply_sorting(items: List[Dict[str, Any]], sort_descriptors: Any) -> List[Di
 
 The searching function filters the dataset by applying search blocks across the provided fields with the requested operator.
 
-Open the file **server/routers/services/data_actions/search.py** and include following code demonstrates handling the searching action inside the server based on the Grid request:
+Open the file (**server/routers/services/data_actions/search.py**) and include following code demonstrates handling the searching action inside the server based on the Grid request:
 
 ```python
 from typing import Any, Dict, List
@@ -409,7 +409,7 @@ def apply_search(items: List[Dict[str, Any]], payload: Dict[str, Any]) -> List[D
 
 The filtering module interprets DataManager predicates (simple and complex), normalizes operators, coerces field types, and evaluates conditions to return only records that satisfy the specified criteria.
 
-Open the file **server/routers/services/data_actions/filter.py** and include following code demonstrates handling the filtering action inside the server based on the Grid request.
+Open the file (**server/routers/services/data_actions/filter.py**) and include following code demonstrates handling the filtering action inside the server based on the Grid request.
 
 The following code block provides filter helpers and operator normalization.
 
@@ -590,7 +590,7 @@ def apply_where(items: List[Dict[str, Any]], where_clause: Any) -> List[Dict[str
 
 The selection routine projects specified fields, applies distinct semantics, and returns the paged subset together with the total distinct count.
 
-Open the file **server/routers/services/data_actions/select.py** and include following code demonstrates handling the selecting action inside the server based on the Grid request.
+Open the file (**server/routers/services/data_actions/select.py**) and include following code demonstrates handling the selecting action inside the server based on the Grid request.
 
 ```python
 from typing import Any, Dict, List, Tuple
@@ -625,7 +625,7 @@ This section focuses on the server-side CRUD implementation of create, update an
 
 The insert handler creates a new record with a generated key, initializes missing fields, appends the record to the collection, and persists the updated dataset.
 
-Open the file **server/routers/services/crud_actions/insert.py** and include following code demonstrates handling the insert operation inside the server based on the Grid request.
+Open the file (**server/routers/services/crud_actions/insert.py**) and include following code demonstrates handling the insert operation inside the server based on the Grid request.
 
 ```python
 from typing import Any, Callable, Dict, List
@@ -650,7 +650,7 @@ def handle_insert(payload: Dict[str, Any], products: List[Dict[str, Any]], save_
 
 The update handler locates the target record by key, merges incoming changes while preserving the key, writes the result back to the collection, and persists the modification.
 
-Open the file **server/routers/services/crud_actions/update.py** and include following code demonstrates handling the update operation inside the server based on the Grid request.
+Open the file (**server/routers/services/crud_actions/update.py**) and include following code demonstrates handling the update operation inside the server based on the Grid request.
 
 ```python
 from typing import Any, Callable, Dict, List
@@ -679,7 +679,7 @@ def handle_update(payload: Dict[str, Any], products: List[Dict[str, Any]], save_
 
 The delete handler resolves the key from the payload, removes the matching record from the collection, and persists the dataset after deletion.
 
-Open the file **server/routers/services/crud_actions/remove.py** and include following code demonstrates handling the delete operation inside the server based on the Grid request.
+Open the file (**server/routers/services/crud_actions/remove.py**) and include following code demonstrates handling the delete operation inside the server based on the Grid request.
 
 ```python
 from typing import Any, Callable, Dict, List
@@ -736,7 +736,7 @@ The client application is now prepared to reference the Grid component and the d
 
 Once the dependencies are installed, the required CSS files are made available in the (**../node_modules/@syncfusion**) package directory, These styles must be referenced globally so the Grid renders with its complete visual system.
 
-Open **client/src/index.css** file and import the "Bootstrap v5.3" theme along with the dependent Syncfusion styles:
+Open (**client/src/index.css**) file and import the "Bootstrap v5.3" theme along with the dependent Syncfusion styles:
 
 
 ```css
@@ -758,7 +758,7 @@ For this project, the "Bootstrap v5.3" theme is used. A different theme can be s
 
 This step renders the Grid and binds it to a DataManager instance. The DataManager uses the `UrlAdaptor` transport to post every Grid action to the FastAPI endpoint.
 
-Open **client/src/App.tsx** file and render the Grid with paging, sorting, searching, editing, and filtering enabled. Configure it with a DataManager that points to the FastAPI products endpoint, ensuring all operations post to a single URL.
+Open (**client/src/App.tsx**) file and render the Grid with paging, sorting, searching, editing, and filtering enabled. Configure it with a DataManager that points to the FastAPI products endpoint, ensuring all operations post to a single URL.
 
 ```ts
 import {
@@ -970,7 +970,7 @@ npm run dev
 
 Open the URL shown in the terminal which is typically **http://localhost:5173/**.
 
-## Complete Sample Repository
+## Complete sample repository
 
 For a complete working implementation of this example, refer to the following [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-backends/syncfusion-reactgrid-with-fastapi-server) repository.
 

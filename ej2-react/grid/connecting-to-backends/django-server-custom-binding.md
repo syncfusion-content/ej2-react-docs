@@ -51,7 +51,7 @@ The DRF backend exposes REST endpoints the Grid calls from client-side event han
 
 1. Open a terminal ( for example, an integrated terminal in Visual Studio Code or Windows Command prompt opened with <kbd>Win+R</kbd>, or macOS Terminal launched with <kbd>Cmd+Space</kbd> ).
 
-2. Before creating the `Django` project, set up a virtual environment. A virtual environment keeps project dependencies isolated, ensuring that package installations do not affect other projects.
+2. Before creating the Django project, set up a virtual environment. A virtual environment keeps project dependencies isolated, ensuring that package installations do not affect other projects.
 
     The following commands create and activate the environment:
 
@@ -66,12 +66,12 @@ The DRF backend exposes REST endpoints the Grid calls from client-side event han
     pip install django djangorestframework django-filter django-cors-headers mssql-django pyodbc
     ```
 
-    - `mssql-django` enables `Django` to connect to SQL Server through `pyodbc`.
-    - For `Django` settings reference, see [databases](https://docs.djangoproject.com/en/6.0/ref/settings/#databases).
+    - `mssql-django` enables Django to connect to SQL Server through `pyodbc`.
+    - For Django settings reference, see [databases](https://docs.djangoproject.com/en/6.0/ref/settings/#databases).
 
-4. Initialize the `Django` project and Application:
+4. Initialize the Django project and Application:
 
-    For this guide, a `Django` project named **django_server** is created, along with a new application module, using the following commands:
+    For this guide, a Django project named **django_server** is created, along with a new application module, using the following commands:
 
     ```bash
     django-admin startproject django_server .
@@ -112,7 +112,7 @@ This step updates the file to establish the SQL Server connection and enable ess
     **Line breakdown:**
     - **ENGINE**: Database backend; for SQL Server via `mssql-django`, set to `"mssql"`.
     - **NAME**: Database name to connect to (e.g., **LibraryDB**).
-    - **USER**: SQL Server login used by `Django`.
+    - **USER**: SQL Server login used by Django.
     - **PASSWORD**: Password for the above user.
     - **HOST**: Server/instance name or address (e.g., **(localdb)\MSSQLLocalDB** or a hostname).
     - **OPTIONS.driver**: ODBC driver to use (e.g., **ODBC Driver 18 for SQL Server**). Must be installed on the machine.
@@ -795,7 +795,7 @@ The Syncfusion React Grid custom databinding feature integrates with the Django 
 2. Paste the code below. It wires `dataStateChange` to `fetchLendings(state)` and `dataSourceChanged` to `createLending` / `updateLending` / `deleteLending`, and binds the `{ result, count }` payload to the Grid.
 3. Ensure (**client/src/services/apiClient.ts**) is configured as in [Step 5](#step-5-create-a-client-api-service-for-drf-query-string-model).
 
-```tsx
+```ts
 // client/src/components/OrdersGrid.tsx
 import React, { useEffect, useRef } from 'react';
 import { GridComponent, ColumnsDirective, ColumnDirective, type DataSourceChangedEventArgs, type DataStateChangeEventArgs } from '@syncfusion/ej2-react-grids';
@@ -1123,7 +1123,7 @@ The complete folder structure look like below.
 └── django-rest-custom-binding.md
 ```
 
-## Complete Sample Repository
+## Complete sample repository
 
 For a complete working implementation of this example, refer the [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-backends/syncfusion-react-grid-custom-binding-with-django-server) repository.
 

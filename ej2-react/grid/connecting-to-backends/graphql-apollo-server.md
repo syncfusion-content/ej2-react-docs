@@ -50,7 +50,7 @@ domainurl: ##DomainURL##
 
 The Apollo GraphQL backend acts as the primary data layer, handling all queries and mutations required by the Syncfusion React Grid.
 
-### Step 1: Create the GraphQL server and Install required packages
+### Step 1: Create the GraphQL server and install required packages
 
 Before configuring the GraphQL API, a new folder must be created to host the GraphQL server. This folder will contain the server configuration, required dependencies, and sample data used for processing GraphQL queries.
 
@@ -115,7 +115,7 @@ Replace (**GridServer/tsconfig.json**) file content with the following configura
 
 **Install required packages:**
 
-The GraphQL server is set up using `Apollo`, Server packages, along with **TypeScript** development tools, using the following commands.
+The GraphQL server is set up using Apollo, Server packages, along with TypeScript development tools, using the following commands.
 
 Run the following commands to install the required packages:
 
@@ -125,7 +125,7 @@ npm install -D typescript ts-node @types/node
 npm install @syncfusion/ej2-data --save
 ```
 - `graphql` – Core GraphQL library used for defining schemas, types, and executing GraphQL operations.
-- `@apollo/server` – The official `Apollo` Server package used to create and run a standalone GraphQL server.
+- `@apollo/server` – The official Apollo Server package used to create and run a standalone GraphQL server.
 - `@graphql-tools/schema` – Helps build executable GraphQL schemas by combining type definitions and resolvers.
 - `graphql-type-json` - Adds support for JSON scalar types in GraphQL schemas, enabling structured JSON fields.
 - `typescript, ts-node, @types/node` - Enables TypeScript development, type checking, and running TypeScript files.
@@ -432,8 +432,8 @@ Previously, the CRUD mutation types were defined in the **schema.graphql** file.
 
 **Instructions:**
 
-1. Create a new (**src/server.ts**) file. This file serves as the main entry point for the GraphQL backend when using `Apollo` Server.
-    - It initializes and configures the GraphQL backend by loading the schema and resolvers, combining them into an executable schema, and starting the `Apollo` Server. 
+1. Create a new (**src/server.ts**) file. This file serves as the main entry point for the GraphQL backend when using Apollo Server.
+    - It initializes and configures the GraphQL backend by loading the schema and resolvers, combining them into an executable schema, and starting the Apollo Server. 
     - This file acts as the central entry point that sets up the entire GraphQL application. It ensures the server runs, listens on a port, and exposes the GraphQL API endpoint.
 
 2. Follow the steps below to implement the server:
@@ -441,7 +441,7 @@ Previously, the CRUD mutation types were defined in the **schema.graphql** file.
     - **Load the GraphQL schema:** Import the **schema.graphql** schema file and load its type definitions.
     - **Load the resolvers:** Bring in the resolver functions that implement the behavior for each field in the schema.
     - **Create an executable GraphQL schema**: Combine the schema and resolvers using the predefined makeExecutableSchema function from GraphQL Tools.
-    - **Start the Apollo GraphQL server:** Initialize `Apollo` Server, configure it, start it on a port, and expose the GraphQL endpoint URL.
+    - **Start the Apollo GraphQL server:** Initialize Apollo Server, configure it, start it on a port, and expose the GraphQL endpoint URL.
 
       ```ts
       [src/server.ts]
@@ -485,7 +485,7 @@ Previously, the CRUD mutation types were defined in the **schema.graphql** file.
       });
       ```
 
-3. Update (**package.json**) Scripts:
+3. Update **package.json** Scripts:
 
     ```JSON
     {
@@ -497,7 +497,7 @@ Previously, the CRUD mutation types were defined in the **schema.graphql** file.
     > **server.ts** is added to the start script so the command launches the GraphQL server entry point. This triggers schema loading, resolver binding, and Apollo Server startup.
 
 
-Now all required GraphQL types, queries, mutations and `Apollo` Server configuration is now fully implemented.
+Now all required GraphQL types, queries, mutations and Apollo Server configuration is now fully implemented.
 
 
 ## Integrating Syncfusion React Grid with Apollo GraphQL
@@ -561,7 +561,7 @@ An adaptor is a translator between two different systems. The `GraphQLAdaptor` s
 - Formats the response back into a structure the Grid understands.
 - Updates the grid display with the new data.
 
-The adaptor enables bi-directional communication between the frontend Grid and backend `Apollo` GraphQL server.
+The adaptor enables bi-directional communication between the frontend Grid and backend Apollo GraphQL server.
 
 ![GraphQL-Apollo-DataFlow-Diagram](../images/GraphQL-Apollo-DataFlowDiagram.png)
 
@@ -706,7 +706,7 @@ The [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/index-defa
 **Instructions:**
 
 1. Open the **ExpenseGrid.tsx** file.
-2. Update the `Grid` component to include the `toolbar` property with CRUD and search options.
+2. Update the Grid component to include the `toolbar` property with CRUD and search options.
 
     ```ts
     const toolbar = ["Add", "Edit", "Delete", "Search"];
@@ -823,11 +823,11 @@ The resolver processes the Grid’s `skip` and `take` parameters and returns the
 
 Searching provides the capability to find specific records by entering keywords into the search box.
 
-When a search action is performed in the Grid, the `GraphQLAdaptor` sends the search key and the target fields through the "search" parameter of the **DataManagerInput**. These values are converted as the [search query](https://ej2.syncfusion.com/react/documentation/data/querying#searching) and processed through the `DataManager`.
+When a search action is performed in the Grid, the `GraphQLAdaptor` sends the search key and the target fields through the `search` parameter of the **DataManagerInput**. These values are converted as the [search query](https://ej2.syncfusion.com/react/documentation/data/querying#searching) and processed through the `DataManager`.
 
 **Instructions:**
 
-1. Ensure the toolbar includes the "Search" item.
+1. Ensure the toolbar includes the `Search` item.
 
     ```ts
     const toolbar = ['Search'];
@@ -902,17 +902,17 @@ When a search action is performed in the Grid, the `GraphQLAdaptor` sends the se
  
 **Searching details included in request payloads:**
 
-The image below displays the "search" parameter values.
+The image below displays the `search` parameter values.
 
 ![GraphQLAdaptor-Apollo-Searching](../images/GraphQL-Apollo-Search.png)
 
-The resolver applies the "search" query parameters received from the Grid and returns the search filtered result along with the total count. Searching feature is now active.
+The resolver applies the `search` query parameters received from the Grid and returns the search filtered result along with the total count. Searching feature is now active.
 
 ### Step 7: Implement sorting feature
 
 Sorting allows the user to organize records by clicking on column headers to arrange data in ascending or descending order.
 
-The `GraphQLAdaptor` automatically passes the sorting details to the server through the "sorted" parameter of the **DataManagerInput** and the details are converted to the [sorting query](https://ej2.syncfusion.com/react/documentation/data/querying#sorting) and executed through the `DataManager` to get the sorted data.
+The `GraphQLAdaptor` automatically passes the sorting details to the server through the `sorted` parameter of the **DataManagerInput** and the details are converted to the [sorting query](https://ej2.syncfusion.com/react/documentation/data/querying#sorting) and executed through the `DataManager` to get the sorted data.
 
 **Instructions:**
 
@@ -981,7 +981,7 @@ The `GraphQLAdaptor` automatically passes the sorting details to the server thro
 
 **Sorting details included in request payloads:**
 
-The image below shows the values passed to the "sorted" parameter.
+The image below shows the values passed to the `sorted` parameter.
 
 ![GraphQLAdaptor-apollo-Sorting](../images/GraphQL-Apollo-Sort.png)
 
@@ -993,7 +993,7 @@ The resolver processes the sorting parameters and returns the result in the requ
 
 Filtering allows the user to narrow down records by specifying conditions on column values. Users can filter by selecting checkbox filters or using comparison operators like equals, greater than, less than, etc.
 
-The `GraphQLAdaptor` automatically passes the filter conditions to the server through the "where" parameter of the **DataManagerInput**. In the server, the filter parameters are converted to the Syncfusion [filter query](https://ej2.syncfusion.com/react/documentation/data/querying#filtering) and executed through the `DataManager` to get the filtered data.
+The `GraphQLAdaptor` automatically passes the filter conditions to the server through the `where` parameter of the **DataManagerInput**. In the server, the filter parameters are converted to the Syncfusion [filter query](https://ej2.syncfusion.com/react/documentation/data/querying#filtering) and executed through the `DataManager` to get the filtered data.
 
  **Instructions:**
 
@@ -1071,7 +1071,7 @@ The `GraphQLAdaptor` automatically passes the filter conditions to the server th
       /* -------------------------------------------------------------
         * performFiltering()
         * -------------------------------------------------------------
-        * Reads the "where" filter argument (string or object),
+        * Reads the `where` filter argument (string or object),
         * parses it, builds Syncfusion Predicate objects, and applies
         */
         function performFiltering(query: Query, datamanager: DataManagerInput) {
@@ -1151,7 +1151,7 @@ The `GraphQLAdaptor` automatically passes the filter conditions to the server th
 
 **Filtering details included in request payloads:**
 
-The image illustrates the serialized "where" condition passed from the DataManager.
+The image illustrates the serialized `where` condition passed from the DataManager.
 
 ![GraphQLAdaptor-apollo-Filtering](../images/GraphQL-Apollo-Filter.png)
 
@@ -1417,7 +1417,7 @@ syncfusion-react-grid-with-apollo-server
 │
 └── README.md
 ```
-## Complete Sample Repository
+## Complete sample repository
 
 For a complete working implementation of this example, refer to the following [GitHub](https://github.com/SyncfusionExamples/syncfusion-react-grid-with-apollo-server) repository.
 

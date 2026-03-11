@@ -181,7 +181,7 @@ namespace ReactApp1.Server.Models
 }
 ```
 
-**Purpose**: This model class defines the structure of order records and provides an in-memory data source through the `GetAllRecords()` method. This eliminates the need for a database during development and testing.
+**Purpose**: This model class defines the structure of order records and provides an in-memory data source through the "GetAllRecords()" method. This eliminates the need for a database during development and testing.
 
 ### Step 4: Configure HotChocolate GraphQL in Program.cs
 
@@ -254,12 +254,12 @@ app.Run();
 
 **Configuration details:**
 
-- **AddGraphQLServer()**: Registers the HotChocolate GraphQL server with dependency injection.
-- **AddQueryType<Query>()**: Registers the Query type that handles all read operations.
-- **AddMutationType<Mutation>()**: Registers the Mutation type that handles all write operations (create, update, delete).
-- **AddFiltering()**, **AddSorting()**, **AddProjections()**: Adds support for filtering, sorting, and field selection capabilities.
-- **MapGraphQL("/graphql")**: Maps the GraphQL endpoint to `/graphql`.
-- **AddCors**: Enables cross-origin requests from the React client running on Vite dev server.
+- `AddGraphQLServer()`: Registers the HotChocolate GraphQL server with dependency injection.
+- `AddQueryType<Query>()`: Registers the Query type that handles all read operations.
+- `AddMutationType<Mutation>()`: Registers the Mutation type that handles all write operations (create, update, delete).
+- `AddFiltering()`, `AddSorting()`, `AddProjections()`: Adds support for filtering, sorting, and field selection capabilities.
+- `MapGraphQL("/graphql")`: Maps the GraphQL endpoint to `/graphql`.
+- `AddCors`: Enables cross-origin requests from the React client running on Vite dev server.
 
 ### Step 5: Configure Syncfusion DataManagerInput types
 
@@ -271,7 +271,7 @@ Create a new folder named **GraphQL** in the **ReactApp1.Server** project.
 
 **Create DataManagerInput.cs:**
 
-Create a new file **GraphQL/DataManagerInput.cs** with the following content:
+Create a new file (**GraphQL/DataManagerInput.cs**) with the following content:
 
 ```csharp
 using System.Collections.Generic;
@@ -350,11 +350,11 @@ This format ensures the Grid can properly handle paging, display total record co
 
 ## Perform data operations in server
 
-The HotChocolate GraphQL backend handles all data operations such as filtering, searching, sorting, and paging. These operations are applied to the dataset based on the grid state received from the client through the `DataManagerInput` parameter.
+The HotChocolate GraphQL backend handles all data operations such as filtering, searching, sorting, and paging. These operations are applied to the dataset based on the grid state received from the client through the "DataManagerInput" parameter.
 
-### Step 7: Create GraphQL Query resolver
+**Create GraphQL Query resolver**
 
-A query resolver in HotChocolate is a method that handles data retrieval requests. The query resolver receives the `DataManagerInput` parameter, applies the requested operations, and returns data in the format expected by Syncfusion Grid.
+A query resolver in HotChocolate is a method that handles data retrieval requests. The query resolver receives the "DataManagerInput" parameter, applies the requested operations, and returns data in the format expected by Syncfusion Grid.
 
 **Create Query.cs:**
 
@@ -699,7 +699,7 @@ if (datamanager?.Take.HasValue == true)
 
 CRUD operations are handled by GraphQL mutations. Mutations are special GraphQL operations that modify data on the server, such as creating, updating, or deleting records.
 
-### Step 8: Create GraphQL Mutation resolver
+**Create GraphQL Mutation resolver**
 
 A mutation resolver in HotChocolate is a method that handles data modification requests. Each CRUD operation (Create, Update, Delete) is implemented as a separate mutation method.
 
@@ -1132,7 +1132,7 @@ This injects the required services for toolbar, sorting, filtering, paging, and 
 
 ### Step 6: Enable paging feature
 
-Paging divides large datasets into smaller, manageable pages based on offset and page size. When paging is performed in the Grid, the `skip` and `take` values are sent to the server through the `DataManagerInput` parameter.
+Paging divides large datasets into smaller, manageable pages based on offset and page size. When paging is performed in the Grid, the `skip` and `take` values are sent to the server through the "DataManagerInput" parameter.
 
 **Enable paging in the Grid:**
 
@@ -1187,7 +1187,7 @@ The image illustrates the paging details (`skip` and `take`) included in the ser
 
 ### Step 7: Enable searching feature
 
-Searching provides the capability to find specific records by entering keywords into the search box. When a search action is performed in the Grid, the `GraphQLAdaptor` sends the search key and the target fields through the "search" parameter of the "DataManagerInput".
+Searching provides the capability to find specific records by entering keywords into the search box. When a search action is performed in the Grid, the `GraphQLAdaptor` sends the search key and the target fields through the `search` parameter of the "DataManagerInput".
 
 **Enable searching in the Grid:**
 
@@ -1233,13 +1233,13 @@ function App() {
 
 **Searching details included in request payload:**
 
-The image below displays the "search" parameter values.
+The image below displays the `search` parameter values.
 
 ![GraphQL-HotChocolate-Searching](../images/GraphQL-HotChocolate-Searching.png)
 
 ### Step 8: Enable sorting feature
 
-The sorting feature in the Grid allows records to be organized in ascending or descending order based on one or more columns. The `GraphQLAdaptor` automatically passes the sorting details to the server through the "sorted" parameter of the "DataManagerInput".
+The sorting feature in the Grid allows records to be organized in ascending or descending order based on one or more columns. The `GraphQLAdaptor` automatically passes the sorting details to the server through the `sorted` parameter of the "DataManagerInput".
 
 **Enable sorting in the Grid:**
 
@@ -1287,13 +1287,13 @@ function App() {
 
 **Sorting details included in request payload:**
 
-The image below shows the values passed to the "sorted" parameter.
+The image below shows the values passed to the `sorted` parameter.
 
 ![GraphQL-HotChocolate-Sorting](../images/GraphQL-HotChocolate-Sorting.png)
 
 ### Step 9: Enable filtering feature
 
-Filtering narrows down records by specifying conditions on column values. Records can be filtered by selecting checkbox filters or using comparison operators such as equals, greater than, or less than. The `GraphQLAdaptor` automatically passes the filter conditions to the server through the "where" parameter of the "DataManagerInput".
+Filtering narrows down records by specifying conditions on column values. Records can be filtered by selecting checkbox filters or using comparison operators such as equals, greater than, or less than. The `GraphQLAdaptor` automatically passes the filter conditions to the server through the `where` parameter of the "DataManagerInput".
 
 **Enable filtering in the Grid:**
 
@@ -1342,7 +1342,7 @@ function App() {
 
 **Filtering details included in request payload:**
 
-The image illustrates the serialized "where" condition passed from the DataManager.
+The image illustrates the serialized `where` condition passed from the DataManager.
 
 ![GraphQL-HotChocolate-Filtering](../images/GraphQL-HotChocolate-Filtering.png)
 
