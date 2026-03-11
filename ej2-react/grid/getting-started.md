@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React Grid - Getting Started | Syncfusion
-description: React Grid getting started covers installation, basic setup, and examples to render data, configure columns, and enable common features in new projects.
+title: React Grid Getting Started (Quick Setup Guide) | Syncfusion
+description: Learn how to install and configure the Syncfusion React Grid. Set up a new React app and enable paging, sorting, filtering, and grouping.
 control: Getting started 
 platform: ej2-react
 documentation: ug
@@ -16,7 +16,7 @@ This section explains the steps required to create a simple React Grid component
 
 To get started quickly with React Grid, you can watch this video:
 
-{% youtube "https://www.youtube.com/watch?v=QNwcXokKc70" %}
+{% youtube "https://www.youtube.com/watch?v=IGLlZiuFdbA" %}
 
 ## Setup for local development
 

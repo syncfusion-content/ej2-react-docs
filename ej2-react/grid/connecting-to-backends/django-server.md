@@ -52,7 +52,7 @@ The Django REST Framework backend serves as the core data service, managing API 
 **Instructions:**
 1. Open a terminal ( for example, an integrated terminal in Visual Studio Code or Windows Command prompt opened with <kbd>Win+R</kbd>, or macOS Terminal launched with <kbd>Cmd+Space</kbd> ).
 
-2. Before creating the `Django` project, set up a virtual environment. A virtual environment keeps project dependencies isolated, ensuring that package installations do not affect other projects.
+2. Before creating the Django project, set up a virtual environment. A virtual environment keeps project dependencies isolated, ensuring that package installations do not affect other projects.
 
     The following commands create and activate the environment:
 
@@ -65,12 +65,12 @@ The Django REST Framework backend serves as the core data service, managing API 
     ```bash
     pip install django djangorestframework django-filter django-cors-headers mssql-django pyodbc
     ```
-    - `mssql-django` enables `Django` to connect to SQL Server through `pyodbc`.
-    - For `Django` settings reference, see [databases](https://docs.djangoproject.com/en/6.0/ref/settings/#databases).
+    - `mssql-django` enables Django to connect to SQL Server through `pyodbc`.
+    - For Django settings reference, see [databases](https://docs.djangoproject.com/en/6.0/ref/settings/#databases).
 
-4. Initialize the `Django` project and Application:
+4. Initialize the Django project and Application:
 
-    For this guide, a `Django` project named **django_server** is created, along with a new application module, using the following commands:
+    For this guide, a Django project named **django_server** is created, along with a new application module, using the following commands:
 
     ```bash
     django-admin startproject django_server .
@@ -109,7 +109,7 @@ This step updates the file to establish the SQL Server connection and enable ess
     **Line breakdown:**
     - **ENGINE**: Database backend; for SQL Server via `mssql-django`, set to `"mssql"`.
     - **NAME**: Database name to connect to (e.g., **LibraryDB**).
-    - **USER**: SQL Server login used by `Django`.
+    - **USER**: SQL Server login used by Django.
     - **PASSWORD**: Password for the above user.
     - **HOST**: Server/instance name or address (e.g., **(localdb)\MSSQLLocalDB** or a hostname).
     - **OPTIONS.driver**: ODBC driver to use (e.g., **ODBC Driver 18 for SQL Server**). Must be installed on the machine.
@@ -277,11 +277,12 @@ A Django model defines the way data is stored and accessed in the database. Each
 
     - **Purpose of migrations:**
         
-        Migrations act as a bridge between the `Python` models and the SQL Server database.
+        Migrations act as a bridge between the Python models and the SQL Server database.
         - Every change in a model (new field, renamed field, removed field, new model) is recorded as a migration.
         - These changes are applied safely without writing SQL manually.
         - The database structure remains consistent across all environments (development, staging, production).
         - Whenever a model is modified in the future:
+        
             ```bash
                 makemigrations → migrate
             ```
@@ -457,7 +458,7 @@ const data = new DataManager({
 
 ```
 **Explanation:**
-- **url** - Base API endpoint exposed by the `Django` router.
+- **url** - Base API endpoint exposed by the Django router.
 - **adaptor** - Converts Grid operations into standard REST requests.
 - **crossDomain** - Enables communication with a backend running on a different port.
 
@@ -1044,7 +1045,7 @@ Execute the below commands to run the client application:
 npm run dev
 ```
 
-## Complete Sample Repository
+## Complete sample repository
 
 For a complete working implementation of this example, refer the [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-backends/syncfusion-reactgrid-with-django-server) repository.
 
