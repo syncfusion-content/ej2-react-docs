@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Copy Paste Records in React Gantt Chart Component | Syncfusion
-description: Learn here all about Copy paste records in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
-control: Copy paste records 
+title: Copy and Paste Records in React Gantt Chart Component | Syncfusion
+description: Learn how to programmatically copy and paste records in the Syncfusion React Gantt Chart component using context menus for efficient task duplication.
 platform: ej2-react
+control: Copy paste records
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Copy Paste Records in React Gantt Chart Component
+# Copy and Paste Records in React Gantt Chart Component
 
-You can copy and paste a record in the Gantt chart by using the `addRecord` method and `custom context menu`. It is also possible to copy and paste the parent record with multiple hierarchical child records on the required position.
+The copy and paste functionality in the React Gantt Chart component enables efficient task duplication, allowing you to replicate tasks or entire task hierarchies using the [addRecord](https://ej2.syncfusion.com/react/documentation/api/gantt#addrecord) method and a custom context menu configured via [contextMenuItems](https://ej2.syncfusion.com/react/documentation/api/gantt#contextmenuitems). For example, right-clicking a parent task to copy and paste it with its child tasks at a specified position streamlines project management workflows. Inject `Edit` service and enable `editSettings.allowAdding` to support adding copied records. Define valid [taskFields](https://ej2.syncfusion.com/react/documentation/api/gantt#taskfields) mappings (e.g., id, name, startDate) to ensure task data is correctly replicated, including hierarchical structures with child tasks. Use the [contextMenuClick](https://ej2.syncfusion.com/react/documentation/api/gantt#contextmenuclick) event to handle custom copy-paste actions, specifying the paste position (e.g., child, above, below) via `addRecord` parameters. This feature integrates with dependencies, critical path, and virtual scrolling, ensuring duplicated tasks align with the project structure for seamless schedule management.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -25,3 +25,8 @@ You can copy and paste a record in the Gantt chart by using the `addRecord` meth
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/gantt/how-to-copypaste-cs1" %}
+
+## See also
+- [How to configure context menu?](https://ej2.syncfusion.com/react/documentation/gantt/context-menu)
+- [How to manage task dependencies?](https://ej2.syncfusion.com/react/documentation/gantt/task-dependency)
+- [How to configure critical path?](https://ej2.syncfusion.com/react/documentation/gantt/critical-path)

@@ -144,3 +144,27 @@ By setting the [`enableHighlight`](https://ej2.syncfusion.com/react/documentatio
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/pie-cs41" %}
+
+## Follow pointer
+
+The follow pointer feature enables the tooltip to follow the mouse cursor or touch pointer as users interact with the accumulation chart. This provides a more dynamic and intuitive experience by keeping the tooltip close to the user's point of interaction.
+
+Enable this feature by setting the [`followPointer`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/tooltipSettingsModel#followpointer) property to **true**:
+
+```jsx
+tooltip: { 
+    enable: true, 
+    followPointer: true 
+}
+```
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/code-path/user-interaction/follow-pointer-accumulation/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/code-path/user-interaction/follow-pointer-accumulation/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/follow-pointer-accumulation" %}

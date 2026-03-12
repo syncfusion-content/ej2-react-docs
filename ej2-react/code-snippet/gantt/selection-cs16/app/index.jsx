@@ -17,7 +17,7 @@ function App() {
             mode: 'Row',
             type: 'Multiple'
       };
-     
+
       return <GanttComponent dataSource={data} allowSelection={true} enableHover={true} taskFields={taskFields}
             selectionSettings={settings} height='450px' ref={gantt => ganttInstance = gantt}>
             <Inject services={[Selection]} />

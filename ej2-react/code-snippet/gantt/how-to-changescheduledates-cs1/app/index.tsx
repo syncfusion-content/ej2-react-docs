@@ -1,39 +1,39 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import { GanttComponent } from '@syncfusion/ej2-react-gantt';
-import { taskData } from './datasource';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { GanttComponent, Inject, Selection, TaskFieldsModel } from "@syncfusion/ej2-react-gantt";
+import { taskData } from "./datasource";
 
 function App() {
-  let ganttInstance: GanttComponent | null = null;  // Type as GanttComponent or null initially
-  
-  const taskFields: any = {
-    id: 'TaskID',
-    name: 'TaskName',
-    startDate: 'StartDate',
-    duration: 'Duration',
-    progress: 'Progress',
-    parentID: 'ParentId'
+  let ganttInstance: GanttComponent | null = null;
+  const taskSettings: TaskFieldsModel = {
+    id: "TaskID",
+    name: "TaskName",
+    startDate: "StartDate",
+    duration: "Duration",
+    progress: "Progress",
+    parentID: "ParentID"
   };
-
-  // Button click handler to update the project dates
-  function clickHandler() {
-    if (ganttInstance) {
-      ganttInstance.updateProjectDates(new Date('01/10/2019'), new Date('06/20/2019'), true);
-    }
+  function change(): void {
+    ganttInstance!.updateProjectDates(
+      new Date("04/10/2019"),
+      new Date("06/20/2019"),
+      true
+    );
   }
-
   return (
     <div>
-      <ButtonComponent onClick={clickHandler}>Update ScheduleDates</ButtonComponent>
+      <button id="changedate" onClick={change}>Change Date</button>
+      <br /><br />
       <GanttComponent
+        height="430px"
         dataSource={taskData}
-        taskFields={taskFields}
-        height='450px'
-        ref={(gantt) => (ganttInstance = gantt)}  // Set ganttInstance to the GanttComponent instance
-      />
+        taskFields={taskSettings}
+        ref={(g) => (ganttInstance = g)}
+      >
+        <Inject services={[Selection]} />
+      </GanttComponent>
     </div>
   );
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));

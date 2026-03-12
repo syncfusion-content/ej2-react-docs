@@ -1,59 +1,70 @@
-import { GanttComponent,ColumnsDirective,ColumnDirective } from '@syncfusion/ej2-react-gantt';
-import { Gantt} from '@syncfusion/ej2-react-gantt';
-import * as ReactDOM from 'react-dom';
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { GanttComponent, } from '@syncfusion/ej2-react-gantt';
+import { TaskFieldsModel, ColumnModel } from '@syncfusion/ej2-react-gantt';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { data } from './datasource';
 
-function App (){
-  let ganttInstance: any;
-
-  function dataBound(){
-    let cloned =  ganttInstance.addOnPersist;
-    ganttInstance.addOnPersist = function (key: any) 
-    {
-      key = key.filter((item: string)  => item !== "columns");
-      return cloned.call(this, key);
-    };
-  }
-
-  function addColumn(){
-    let obj = { field: "Progress", headerText: 'Progress', width: 100 };
-    ganttInstance.columns.push(obj as any); //you can add the columns by using the Gantt columns method
-    ganttInstance.treeGrid.refreshColumns();
-  }
-
-  function removeColumn(){
-    ganttInstance.columns.pop();
-    ganttInstance.treeGrid.refreshColumns();
-  }
-
-  const taskFields: any = {
-    id: 'TaskId',
+function App() {
+  const taskSettings: TaskFieldsModel = {
+    id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    parentID: 'parentId'
+    parentID: 'ParentID'
   };
-  return( <div> 
-    <ButtonComponent onClick= { addColumn }>Add Columns</ButtonComponent>
-    <ButtonComponent onClick= { removeColumn }>Remove Columns</ButtonComponent>
-    <GanttComponent 
-      id="Gantt" 
-      dataSource={data} 
-      enablePersistence={true} 
-      dataBound={dataBound} 
-      height={430} 
-      taskFields={taskFields}
-      ref={gantt => ganttInstance = gantt}>
-      <ColumnsDirective>
-        <ColumnDirective field='TaskId' width='100'/>
-        <ColumnDirective field='TaskName' width='100'/>
-        <ColumnDirective field='StartDate' width='100'/>
-        <ColumnDirective field='Duration' width='100'/>
-      </ColumnsDirective>
-    </GanttComponent></div>
-  )
-};
+  const columns: ColumnModel[] = [
+    { field: 'TaskID', headerText: 'Task ID', textAlign: 'Right', width: 120 },
+    { field: 'TaskName', headerText: 'Task Name', width: 150 },
+    { field: 'StartDate', headerText: 'Start Date', width: 150 },
+    { field: 'Duration', headerText: 'Duration', width: 150 },
+    { field: 'Progress', headerText: 'Progress', width: 150 }
+  ];
+  function onDataBound() {
+    const ganttObj: any = (document.querySelector('#ganttDefault') as any).ej2_instances[0];
+    const originalPersist = ganttObj.addOnPersist;
+    ganttObj.addOnPersist = (keys: string[]) => {
+      const filtered = keys.filter(k => k !== 'columns');
+      return originalPersist.call(ganttObj, filtered);
+    };
+  }
+
+  function addColumn() {
+    const ganttObj: any = (document.querySelector('#ganttDefault') as any).ej2_instances[0];
+    const newColumn: ColumnModel = {
+      field: 'Progress',
+      headerText: 'Progress',
+      width: 100
+    };
+    ganttObj.columns.push(newColumn);
+    ganttObj.refresh();
+  }
+
+  function removeColumn() {
+    const ganttObj: any = (document.querySelector('#ganttDefault') as any).ej2_instances[0];
+    ganttObj.columns.pop();
+    ganttObj.refresh();
+  }
+
+  return (
+    <div>
+      <div style={{ marginBottom: "16px" }}>
+        <ButtonComponent onClick={addColumn}>Add Columns</ButtonComponent>
+        <ButtonComponent onClick={removeColumn}>Remove Columns</ButtonComponent>
+      </div>
+      <GanttComponent
+        id="ganttDefault"
+        height="430px"
+        dataSource={data}
+        taskFields={taskSettings}
+        columns={columns}
+        enablePersistence={true}
+        dataBound={onDataBound}
+      >
+      </GanttComponent>
+    </div>
+  );
+}
+
 ReactDOM.render(<App />, document.getElementById('root'));

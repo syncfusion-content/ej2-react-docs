@@ -1,16 +1,18 @@
 ---
 layout: post
-title: Open Add Edit Dialog in React Gantt Chart Component | Syncfusion
-description: Learn here all about Open add edit dialog in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
-control: Open add edit dialog 
+title: Open Add and Edit Dialogs in React Gantt Chart Component | Syncfusion
+description: Learn how to open add and edit dialogs programmatically in the Syncfusion React Gantt Chart component for efficient task creation and modification.
 platform: ej2-react
+control: Add edit dialog
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open add edit dialog in React Gantt Chart Component
+# Open Add and Edit Dialogs in React Gantt Chart Component
 
-Gantt add and edit dialogs can be opened dynamically by using [openAddDialog](https://ej2.syncfusion.com/react/documentation/api/gantt#openadddialog) and [openEditDialog](https://ej2.syncfusion.com/react/documentation/api/gantt#openeditdialog) methods. The following code example shows how to open add and dialog on separate button click actions.
+The add and edit dialogs in the React Gantt Chart component enable efficient task creation and modification, streamlining project management workflows. The [openAddDialog](https://ej2.syncfusion.com/react/documentation/api/gantt#openadddialog) method opens a dialog to add a new task, populating fields like id, name, or startDate based on [taskFields](https://ej2.syncfusion.com/react/documentation/api/gantt#taskfields) mappings. The [openEditDialog](https://ej2.syncfusion.com/react/documentation/api/gantt#openeditdialog) method opens a dialog to modify the currently selected task, ideal for updating task details like duration or dependencies. For example, clicking a button to open the add dialog allows users to create a new task, while selecting a task and opening the edit dialog enables quick updates. These dialogs, requiring `EditService` injection and `editSettings.allowAdding` and `editSettings.allowEditing` enabled, integrate with resources, dependencies, and critical path calculations, supporting validation and events like `actionBegin` for customized workflows. To use `openEditDialog` effectively, select a row through user interaction or by setting [selectedRowIndex](https://ej2.syncfusion.com/react/documentation/api/gantt#selectedrowindex), ensuring the dialog opens with the correct task data. Configure valid `taskFields` mappings to ensure dialog fields display and save data accurately, and enhance dialogs with custom fields using events like `actionBegin` or `actionComplete` for tailored workflows.
+
+The following code example shows how to open add and dialog on separate button click actions.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -26,4 +28,7 @@ Gantt add and edit dialogs can be opened dynamically by using [openAddDialog](ht
         
 {% previewsample "page.domainurl/code-snippet/gantt/openEditAddDialog-cs1" %}
 
->NOTE: We should select any one of the row in Gantt to open the edit dialog.
+## See also
+- [How to configure task editing?](https://ej2.syncfusion.com/react/documentation/gantt/managing-tasks/task-bar-editing)
+- [How to manage task dependencies?](https://ej2.syncfusion.com/react/documentation/gantt/taskdependency)
+- [How to configure critical path?](https://ej2.syncfusion.com/react/documentation/gantt/critical-path)

@@ -55,6 +55,31 @@ The [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairT
 
 {% previewsample "page.domainurl/code-snippet/stock-chart/cross-hair-cs3" %}
 
+## Crosshair label customization
+
+The [`crosshairLabelRender`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockChartModel#crosshairlabelrender) event is triggered before each crosshair axis label is rendered in the stock chart. This event provides the ability to customize the appearance and content of crosshair labels, or to conditionally prevent specific labels from being displayed.
+
+The event arguments include:
+
+* `text` – The default text for the crosshair label. You can modify this value to display custom content.
+* `value` – The actual data value at the crosshair position.
+* `axisName` – The name of the axis associated with the label.
+* `axisOrientation` – The orientation of the axis, either `Horizontal` or `Vertical`.
+* `textStyle` – Font properties for the label text, allowing customization of font family, size, weight, and color.
+* `fill` – The background color of the crosshair label.
+* `cancel` – Set this to **true** to prevent the label from being rendered.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/stock-chart/code-path/cross-hair-label-render/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/stock-chart/code-path/cross-hair-label-render/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/stock-chart/preview-sample/cross-hair-label-render" %}
+
 **Snap to data**
 
 Enabling the [`snapToData`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettingsModel#snaptodata) property in the crosshair aligns it with the nearest data point instead of following the exact mouse position.

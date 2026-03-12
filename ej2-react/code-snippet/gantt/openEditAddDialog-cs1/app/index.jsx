@@ -1,50 +1,79 @@
-import React, { useRef } from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import {
+    GanttComponent,
+    Inject,
+    Toolbar,
+    Edit,
+    Selection,
+} from '@syncfusion/ej2-react-gantt';
+
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import { GanttComponent, Inject, Edit, Selection } from '@syncfusion/ej2-react-gantt';
-import { taskData } from './datasource';
+import { editingData, editingResources } from './datasource';
 
-const App = () => {
-    const ganttRef = useRef(null);
+function App() {
 
-    const taskFields = {
+    let ganttInstance = null;
+    const data = editingData;
+    const taskSettings = {
         id: 'TaskID',
         name: 'TaskName',
         startDate: 'StartDate',
+        endDate: 'EndDate',
         duration: 'Duration',
         progress: 'Progress',
-        parentID: 'ParentId'
+        dependency: 'Predecessor',
+        parentID: 'ParentID',
+        notes: 'info',
+        resourceInfo: 'resources'
     };
 
-    const editOptions = {
-        allowEditing: true,
+    const editDialogFields = [
+        { type: 'General', headerText: 'General' },
+        { type: 'Dependency' },
+        { type: 'Resources' },
+        { type: 'Notes' }
+    ];
+
+    const resourceNameMapping = 'resourceName';
+    const resourceIdMapping = 'resourceId';
+    const resources = editingResources;
+
+    const editSettings = {
         allowAdding: true,
+        allowEditing: true,
+        allowTaskbarEditing: true
     };
 
-    const openAddDialog = () => {
-        ganttRef.current.editModule.dialogModule.openAddDialog();
-    };
+    function edit() {
+        ganttInstance.editModule.dialogModule.openEditDialog(ganttInstance.selectedRowIndex);
+    }
 
-    const openEditDialog = () => {
-        ganttRef.current.editModule.dialogModule.openEditDialog();
-    };
+    function add() {
+        ganttInstance.editModule.dialogModule.openAddDialog();
+    }
 
     return (
         <div>
-            <ButtonComponent onClick={openAddDialog}>Open Add Dialog</ButtonComponent>
-            <ButtonComponent onClick={openEditDialog}>Open Edit Dialog</ButtonComponent>
+            <ButtonComponent id="editDialog" onClick={edit}>Edit Dialog</ButtonComponent>
+            <ButtonComponent id="addDialog" onClick={add}>Add Dialog</ButtonComponent>
+
             <GanttComponent
-                dataSource={taskData}
-                ref={ganttRef}
-                taskFields={taskFields}
-                allowSelection={true}
-                editSettings={editOptions}
-                height="450px"
+                id="ganttDefault"
+                height="430px"
+                dataSource={data}
+                taskFields={taskSettings}
+                editDialogFields={editDialogFields}
+                editSettings={editSettings}
+                resourceNameMapping={resourceNameMapping}
+                resourceIDMapping={resourceIdMapping}
+                resources={resources}
+                ref={(g) => { ganttInstance = g; }}
             >
-                <Inject services={[Edit, Selection]} />
+                <Inject services={[Edit, Selection, Toolbar]} />
             </GanttComponent>
         </div>
     );
-};
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));
