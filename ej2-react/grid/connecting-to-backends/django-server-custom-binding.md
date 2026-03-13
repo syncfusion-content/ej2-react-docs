@@ -1086,7 +1086,7 @@ The React application will start on **http://localhost:5173**.
 
 The complete folder structure look like below.
 
-```txt
+```
 ├── client
 │   ├── public
 │   │   └── vite.svg
