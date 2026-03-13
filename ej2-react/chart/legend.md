@@ -396,6 +396,29 @@ The [`layout`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSe
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/legend-cs6" %}
 
+## Legend template
+
+Legend templates allow you to replace default legend icons and text with custom HTML for each series. This enables branded styles, richer content (icons, multi-line text, badges), improved readability, and localization.
+
+You can customize the legend items by using the [`template`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel) property of [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel). Legend interactions (click to toggle series) remain unless [`ToggleVisibility`] (https://ej2.syncfusion.com/react/documentation/api/chart/legendsettings#togglevisibility) is set to false. Templates work with all legend positions, alignments, and paging.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/code-path/axis/legend-cs7/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/code-path/axis/legend-cs7/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/code-path/axis/legend-cs7/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/code-path/axis/legend-cs7/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/legend-cs7" %}
+
 > Note: To use legend features, inject the `Legend` module into the `services`.
 
 ## See Also

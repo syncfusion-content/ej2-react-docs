@@ -1,0 +1,75 @@
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import {
+    SankeyComponent,
+    Inject,
+    SankeyTooltip,
+    SankeyLegend,
+    SankeyExport,
+    SankeyNodeDirective,
+    SankeyNodesCollectionDirective,
+    SankeyLinkDirective,
+    SankeyLinksCollectionDirective
+} from '@syncfusion/ej2-react-charts';
+import { SankeyNodeModel, SankeyLinkModel } from '@syncfusion/ej2-react-charts';
+
+function App() {
+    const nodes: SankeyNodeModel[] = [
+        { id: 'Agricultural Waste' },
+        { id: 'Bio-conversion' },
+        { id: 'Liquid Biofuel' },
+        { id: 'Electricity' },
+        { id: 'Heat' }
+    ];
+
+    const links: SankeyLinkModel[] = [
+        { sourceId: 'Agricultural Waste', targetId: 'Bio-conversion', value: 124.729 },
+        { sourceId: 'Bio-conversion', targetId: 'Liquid Biofuel', value: 0.597 },
+        { sourceId: 'Bio-conversion', targetId: 'Electricity', value: 26.862 },
+        { sourceId: 'Bio-conversion', targetId: 'Heat', value: 280.845 }
+    ];
+
+    return (
+        <div className="control-pane">
+            <div className="control-section">
+                <SankeyComponent
+                    id="sankey-container"
+                    width="90%"
+                    height="450px"
+                    tooltip={{
+                        enable: true,
+                        textStyle: {
+                            fontFamily: 'Arial',
+                            fontStyle: 'normal',
+                            fontWeight: '500',
+                            fontSize: '14px',
+                            color: '#000'
+                        },
+                        fill: '#F3F3F3'
+                    }}
+                >
+                    <SankeyNodesCollectionDirective>
+                        <SankeyNodeDirective id="Agricultural Waste" />
+                        <SankeyNodeDirective id="Biomass Residues" />
+                        <SankeyNodeDirective id="Bio-conversion" />
+                        <SankeyNodeDirective id="Liquid Biofuel" />
+                        <SankeyNodeDirective id="Electricity" />
+                        <SankeyNodeDirective id="Heat" />
+                    </SankeyNodesCollectionDirective>
+                    <SankeyLinksCollectionDirective>
+                        <SankeyLinkDirective sourceId="Agricultural Waste" targetId="Bio-conversion" value={84.152} />
+                        <SankeyLinkDirective sourceId="Biomass Residues" targetId="Bio-conversion" value={24.152} />
+                        <SankeyLinkDirective sourceId="Bio-conversion" targetId="Liquid Biofuel" value={10.597} />
+                        <SankeyLinkDirective sourceId="Bio-conversion" targetId="Electricity" value={36.862} />
+                        <SankeyLinkDirective sourceId="Bio-conversion" targetId="Heat" value={60.845} />
+                    </SankeyLinksCollectionDirective>
+                    <Inject services={[SankeyTooltip, SankeyLegend, SankeyExport]} />
+                </SankeyComponent>
+            </div>
+        </div>
+    );
+}
+
+export default App;
+ReactDOM.render(<App />, document.getElementById('sankey'));
+

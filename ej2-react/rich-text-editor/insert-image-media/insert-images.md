@@ -479,9 +479,9 @@ The [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ri
 * Image Caption
 * Alternative Text
 
-Through the Alternative Text option, set the alternative text for the image, when the image is not upload successfully into the Rich Text Editor.
+Selecting `Image Caption` wraps the image in a caption container where you can enter caption text directly within the editor. When the caption option is toggled, any caption text you have added is preserved so you can continue editing without losing content.
 
-By clicking the Image Caption, the image will get wrapped in an image element with a caption. Then, you can type caption content inside the Rich Text Editor.
+The `Alternative Text` option lets you provide descriptive text that appears when an image cannot be displayed in the Rich Text Editor.
 
 ## Configuring image display position
 
@@ -512,6 +512,66 @@ Sets the default display for an image when it is inserted in the Rich Text Edito
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/display-position-cs2" %}
 
+## Configuring image alignment
+
+Images in the Rich Text Editor can be aligned using the alignment options in the image quick toolbar. To enable alignment, the `Align` item needs to be added to the image `quickToolbarSettings`. When an alignment option is applied, the editor sets the image's `display` style to `block`. This allows the image to behave as a block-level element within the content layout and align based on the selected option (`left`, `center`, or `right`).
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/rich-text-editor/image-alignment-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/rich-text-editor/image-alignment-cs1/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/image-alignment-cs1" %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/rich-text-editor/image-alignment-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/rich-text-editor/image-alignment-cs2/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/image-alignment-cs2" %}
+
+## Text wrapping around images
+
+The Rich Text Editor provides control over how text flows around images using the `WrapText` options available in the image quick toolbar. To enable these options, the `WrapText` item needs to be added to the image `quickToolbarSettings`. The `WrapText` item provides options to float an image to the `left` or `right`, letting adjacent text flow alongside the image for more compact and flexible layouts.
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/rich-text-editor/image-wrap-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/rich-text-editor/image-wrap-cs1/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/image-wrap-cs1" %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/rich-text-editor/image-wrap-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/rich-text-editor/image-wrap-cs2/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/image-wrap-cs2" %}
+
 ## Hyperlinking images
 
 Images can serve as hyperlinks. The quick toolbar provides options to edit, remove, or open the link. For further details about link, see the [link documentation](../link) documentation.
@@ -534,6 +594,9 @@ The [insertImageSettings.allowedTypes](https://ej2.syncfusion.com/react/document
     }
 
 ```
+## Paste images into the editor
+
+The Rich Text Editor supports pasting images directly into the editor content. You can paste single or multiple images from your file system directly into the editor.
 
 ## Drag and drop image insertion
 

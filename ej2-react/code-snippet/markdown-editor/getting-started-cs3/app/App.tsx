@@ -2,7 +2,7 @@ import { MarkdownEditor, Inject, RichTextEditorComponent, Toolbar, Link, Image, 
 import * as React from 'react';
 
 function App() {
-  return (<RichTextEditorComponent value={rteValue} editorMode={'Markdown'}>
+  return (<RichTextEditorComponent editorMode={'Markdown'}>
     <Inject services={[Toolbar, MarkdownEditor, Link, Image, Table]} />
   </RichTextEditorComponent>
   );
