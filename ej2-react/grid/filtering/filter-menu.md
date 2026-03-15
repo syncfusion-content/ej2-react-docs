@@ -93,7 +93,7 @@ By default, the filter dialog displays time in 12-hour format (AM/PM) for date o
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/filter-cs6" %}
+{% previewsample "page.domainurl/code-snippet/grid/filter-cs6" %}
 
 ## Customize filter menu operators
 

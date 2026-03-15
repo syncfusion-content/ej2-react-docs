@@ -134,4 +134,21 @@ The title for legend can be set using [`title`](https://ej2.syncfusion.com/react
 
  {% previewsample "page.domainurl/code-snippet/stock-chart/legend-cs8" %}
 
+ ## Legend Template
+
+Legend templates allow you to replace default legend icons and text with custom HTML.This enables branded styles, richer content (icons, multi-line text, badges), improved readability, and localization.The rendered content becomes the legend item and can be styled with CSS.
+
+You can customize the legend items by using the [`template`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/legendSettingsModel) property of [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/legendSettingsModel). Legend interactions (click to toggle series) remain unless [`ToggleVisibility`] (https://ej2.syncfusion.com/react/documentation/api/stock-chart/legendsettings#togglevisibility) is set to false. Templates work with all legend positions, alignments, and paging.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/stock-chart/code-path/legend-cs9/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/stock-chart/code-path/legend-cs9/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/stock-chart/legend-cs9" %}
+
 >Note: To use legend feature, we need to inject `StockLegend` module into the `services`.

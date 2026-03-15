@@ -129,6 +129,8 @@ npm start
 
 {% previewsample "page.domainurl/code-snippet/ai-assistview/getting-started" %}
 
+> **Note:** Starting from version 33.1x, when a user submits a prompt to the AI AssistView, the component automatically scrolls and focuses on the latest prompt and response. This behavior eliminates the need for users to manually scroll down to see the new response, ensuring they always view the most recent AI response without interruption. Prior to version 33.1x, the previous responses remained visible when new responses were added.
+
 ## Configure Suggestions and Asynchronous Responses
 
 The AI AssistView component can be configured to guide user interactions and provide dynamic content from an AI backend.

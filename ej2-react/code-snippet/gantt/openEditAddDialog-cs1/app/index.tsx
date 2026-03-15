@@ -1,42 +1,82 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import {
+    GanttComponent,
+    EditSettingsModel,
+    Inject,
+    Toolbar,
+    Edit,
+    Selection,
+    TaskFieldsModel,
+    EditDialogFieldsModel
+} from '@syncfusion/ej2-react-gantt';
+
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import { GanttComponent, Inject, Edit, EditSettingsModel, Selection } from '@syncfusion/ej2-react-gantt';
-import { taskData } from './datasource';
-class App extends React.Component<{}, {}>{
-    public taskFields: any = {
+import { editingData, editingResources } from './datasource';
+
+function App() {
+
+    let ganttInstance: any = null;
+    const data: object[] = editingData;
+    const taskSettings: TaskFieldsModel = {
         id: 'TaskID',
         name: 'TaskName',
         startDate: 'StartDate',
+        endDate: 'EndDate',
         duration: 'Duration',
         progress: 'Progress',
-        parentID: 'ParentId'
+        dependency: 'Predecessor',
+        parentID: 'ParentID',
+        notes: 'info',
+        resourceInfo: 'resources'
     };
-    public ganttInstance:any;
-    public editOptions: EditSettingsModel = {
+
+    const editDialogFields: EditDialogFieldsModel[] = [
+        { type: 'General', headerText: 'General' },
+        { type: 'Dependency' },
+        { type: 'Resources' },
+        { type: 'Notes' }
+    ];
+
+    const resourceNameMapping: string = 'resourceName';
+    const resourceIdMapping: string = 'resourceId';
+    const resources: object[] = editingResources;
+
+    const editSettings: EditSettingsModel = {
+        allowAdding: true,
         allowEditing: true,
-        allowAdding:true
+        allowTaskbarEditing: true
     };
-    public editHandler(){
-        this.ganttInstance.editModule.dialogModule.openEditDialog();
+
+    function edit() {
+        ganttInstance.editModule.dialogModule.openEditDialog(ganttInstance.selectedRowIndex);
     }
-    public addHandler(){
-        this.ganttInstance.editModule.dialogModule.openAddDialog();
+
+    function add() {
+        ganttInstance.editModule.dialogModule.openAddDialog();
     }
-    render() {
-        return (<div>
-        <ButtonComponent  onClick= { this.addHandler.bind(this)}>Open Add Dialog</ButtonComponent>
-        <ButtonComponent  onClick= { this.editHandler.bind(this)}>Open Edit Dialog</ButtonComponent>
-        <GanttComponent 
-            dataSource={taskData} 
-            ref={gantt => this.ganttInstance = gantt} 
-            taskFields={this.taskFields} 
-            allowSelection={true}
-            editSettings={this.editOptions} 
-            height = '450px'
-        >
-            <Inject services={[Edit, Selection]} />
-        </GanttComponent></div>)
-    }
-};
+
+    return (
+        <div>
+            <ButtonComponent id="editDialog" onClick={edit}>Edit Dialog</ButtonComponent>
+            <ButtonComponent id="addDialog" onClick={add}>Add Dialog</ButtonComponent>
+
+            <GanttComponent
+                id="ganttDefault"
+                height="430px"
+                dataSource={data}
+                taskFields={taskSettings}
+                editDialogFields={editDialogFields}
+                editSettings={editSettings}
+                resourceNameMapping={resourceNameMapping}
+                resourceIDMapping={resourceIdMapping}
+                resources={resources}
+                ref={(g) => { ganttInstance = g; }}
+            >
+                <Inject services={[Edit, Selection, Toolbar]} />
+            </GanttComponent>
+        </div>
+    );
+}
+
 ReactDOM.render(<App />, document.getElementById('root'));

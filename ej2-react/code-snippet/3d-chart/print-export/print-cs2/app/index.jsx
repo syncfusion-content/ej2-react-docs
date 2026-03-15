@@ -24,6 +24,7 @@ function App() {
             valueType: "Category",
         }}
             wallColor='transparent'
+            enableExport={true}
             enableRotation={true} rotation={7} tilt={10} depth={100}>
             <Inject services={[ColumnSeries3D, Export3D, Category3D, Legend3D, Tooltip3D, DataLabel3D, Highlight3D]} />
             <Chart3DSeriesCollectionDirective >

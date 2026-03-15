@@ -112,7 +112,7 @@ When enabled, only explicitly set properties are included in the JSON output, si
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/reactCurlyExamples/prevent-default/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/serialization-cs1/app/index.jsx %}
 {% endhighlight %}
 {% endtabs %}
 

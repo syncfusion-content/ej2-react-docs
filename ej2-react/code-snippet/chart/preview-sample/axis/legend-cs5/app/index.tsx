@@ -1,3 +1,5 @@
+
+
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,LegendSettingsModel,
@@ -5,19 +7,19 @@ import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, 
 from'@syncfusion/ej2-react-charts';
 import { data } from './datasource';
 
-function App() {
+class App extends React.Component<{}, {}> {
 
-  const primaryxAxis: AxisModel = {
+  public primaryxAxis: AxisModel = {
     valueType: 'Category', title: 'Countries'
   };
-  const primaryyAxis: AxisModel = {
+  public primaryyAxis: AxisModel = {
     minimum: 0, maximum: 80, interval: 20, title: 'Medals'
   };
-  const legendSettings: LegendSettingsModel = {
+  public legendSettings: LegendSettingsModel = {
     visible: true, textStyle: { color: "red" }
   };
-
-    return (<ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} legendSettings={legendSettings} title='Olympic Medals'>
+  render() {
+    return <ChartComponent id='charts' primaryXAxis={this.primaryxAxis} primaryYAxis={this.primaryyAxis} legendSettings={legendSettings}  title='Olympic Medals'>
     <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, Category]}/>
     <SeriesCollectionDirective>
       <SeriesDirective dataSource={data} xName='country' yName='gold' name='Gold' type='Column'>
@@ -27,7 +29,10 @@ function App() {
       <SeriesDirective dataSource={data} xName='country' yName='bronze' name='Bronze' type='Column'>
       </SeriesDirective>
     </SeriesCollectionDirective>
-  </ChartComponent>)
+  </ChartComponent>
+  }
 };
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
+
+

@@ -1,24 +1,45 @@
 ---
 layout: post
-title: Resource Multi Taskbar in React Gantt Chart component | Syncfusion
-description: Learn here all about Resource Multi Taskbar in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
-control: Resource Multi Taskbar 
+title: Resource Multi Taskbar in React Gantt Chart Component | Syncfusion
+description: Learn how to configure the resource multi taskbar in the Syncfusion React Gantt Chart component to visualize multiple tasks per resource in resource view.
 platform: ej2-react
+control: Resource multi taskbar
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resource Multi Taskbar in React Gantt Chart component
+# Resource Multi Taskbar in React Gantt Chart Component
 
-## Resource Multi Taskbar
+The resource multi taskbar feature in the React Gantt Chart component visualizes multiple tasks assigned to a single resource in one row when collapsed in resource view, enabled by setting [enableMultiTaskbar](https://ej2.syncfusion.com/react/documentation/api/gantt#enablemultitaskbar) to **true** and `viewType` to **ResourceView**. This displays workloads, such as concurrent tasks assigned to a resource, like coding activities, in a compact timeline, highlighting overallocation or scheduling conflicts. Taskbars maintain individual properties (e.g., duration, progress) and support editing in collapsed rows, with expand/collapse controlled via grid-side arrows for visual consistency. The feature requires valid [resourceInfo](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#resourceinfo) mappings in `taskFields` to associate tasks with resources. Taskbars include ARIA labels for accessibility and adapt to responsive designs, though narrow screens may clip labels for short tasks. By default, `enableMultiTaskbar` is **false**, requiring explicit activation.
 
-To visualize multiple tasks assigned to each resource in a row when the records are in the collapsed state. It can be enabled by settings the [enableMultiTaskbar](https://ej2.syncfusion.com/react/documentation/api/gantt#enablemultitaskbar) property value as `true`.
+## Configure multi taskbar
 
-The collapse or expand action of a resource record can be achieved only by using the tree grid side arrow icon. Because it will be disabled on chart side action for this support.
+Enable the multi taskbar feature by setting [enableMultiTaskbar](https://ej2.syncfusion.com/react/documentation/api/gantt#enablemultitaskbar) to **true** and `viewType` to **ResourceView**, with `taskFields.resourceInfo` mapping to a resource ID field. Resources are collapsed or expanded using grid-side arrows, and tasks are displayed in a single row when collapsed.
 
-When a resource has multiple tasks scheduled on the same date, then the tasks will be overlapped one another. Taskbar editing is also possible to change the task scheduling on the collapsed state.
+```typescript
+function App() {
+    const enableMultiTaskbar: boolean = true;
+    const viewType: string = 'ResourceView';
+    const taskSettings: TaskFieldsModel = {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        endDate: 'EndDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        resourceInfo: 'Resources'
+    };
+    return (
+        <GanttComponent
+            enableMultiTaskbar={enableMultiTaskbar}
+            viewType={viewType}
+            taskFields={taskSettings}
+        />
+    );
+}
+```
 
->Note: By default, the `enableMultiTaskbar` property value is `false`.
+The following example demonstrates multi taskbar configuration:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -34,14 +55,41 @@ When a resource has multiple tasks scheduled on the same date, then the tasks wi
         
 {% previewsample "page.domainurl/code-snippet/gantt/resource-view-cs3" %}
 
+## Configure taskbar overlap
 
-## Disable taskbar overlap
+The [allowTaskbarOverlap](https://ej2.syncfusion.com/react/documentation/api/gantt#allowtaskbaroverlap) property controls how multiple taskbars are displayed in a resource row:
+- **Overlapping mode (true, default)**: Taskbars overlap within standard row height, supporting full dependency connections, including between tasks of the same resource. Suitable for compact views with many tasks.
+- **Non-overlapping mode (false)**: Taskbars are vertically arranged in an extended row height, preventing overlap for clearer visibility of overallocation. Dependencies between tasks of the same resource are not supported due to vertical stacking, though inter-resource dependencies work.
 
-In Gantt, you can disable taskbar overlap between resource tasks using the [allowTaskbarOverlap](https://ej2.syncfusion.com/react/documentation/api/gantt#allowtaskbaroverlap) property. This prevents the taskbars for different tasks from overlapping on the same row, making it easier to distinguish between the different tasks and manage resources effectively.
+The following example disables taskbar overlap:
 
-When `allowTaskbarOverlap` is set to false, the resources are displayed in a single row and the row height will be extended to occupy the tasks of the resource when it is in a collapsed state. This view allows you to easily identify any overallocation of tasks for a resource in a project.
+```typescript
+function App() {
+    const enableMultiTaskbar: boolean = true;
+    const viewType: string = 'ResourceView';
+    const allowTaskbarOverlap: boolean = false;
 
-It's important to note that when `allowTaskbarOverlap` is disabled, task dependencies or relationships cannot be established between tasks that are rendered in multiple lines for the same resource. If you need to establish dependencies between tasks for the same resource, you may want to consider enabling taskbar overlap.
+    const taskSettings: TaskFieldsModel = {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        endDate: 'EndDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        resourceInfo: 'Resources'
+    };
+    return (
+        <GanttComponent
+            enableMultiTaskbar={enableMultiTaskbar}
+            allowTaskbarOverlap={allowTaskbarOverlap}
+            viewType={viewType}
+            taskFields={taskSettings}
+        />
+    );
+}
+```
+
+The following example demonstrates non-overlapping multi taskbar:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -56,3 +104,10 @@ It's important to note that when `allowTaskbarOverlap` is disabled, task depende
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/gantt/resource-view-cs5" %}
+
+This configuration extends row height for clear task separation, ideal for identifying conflicts in small teams, but limits same-resource dependencies. Use overlapping mode for projects requiring extensive dependency mapping.
+
+## See also
+- [How to configure resource view?](https://ej2.syncfusion.com/react/documentation/gantt/resource-view)
+- [How to manage task dependencies?](https://ej2.syncfusion.com/react/documentation/gantt/task-dependency)
+- [How to allocate resources?](https://ej2.syncfusion.com/react/documentation/gantt/resources)

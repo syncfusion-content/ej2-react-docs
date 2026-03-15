@@ -18,7 +18,7 @@ To localize the diagram context menu, we need to define the [`locale`](https://e
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/reactCurlyExamples/localize-context-menu/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/localization-cs1/app/index.jsx %}
 {% endhighlight %}
 {% endtabs %}
 

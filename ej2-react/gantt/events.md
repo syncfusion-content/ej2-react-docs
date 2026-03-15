@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events in React Gantt Component | Syncfusion
+title: Events in React Gantt Chart Component | Syncfusion
 description: Learn here all about events in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Events
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in React Gantt Component
+# Events in React Gantt Chart Component
 
 The Syncfusion React Gantt Chart component offers comprehensive support for visualizing project schedules, task management, and timeline tracking through interactive charts. This documentation provides insights into leveraging the component's rich event-driven architecture to customize and control Gantt operations effectively. Events in the Gantt Chart enable you to execute custom logic and integrations, offering flexibility for both simple and complex scenarios.
 

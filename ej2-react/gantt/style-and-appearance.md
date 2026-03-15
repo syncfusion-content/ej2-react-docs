@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Style and appearance in React Gantt Chart Component | Syncfusion
+title: Style and Appearance in React Gantt Chart Component | Syncfusion
 description: Learn how to customize the style and appearance of the Syncfusion React Gantt Chart component with CSS overrides and grid line configurations.
 platform: ej2-react
 control: Style and appearance
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Style and Appearance in React Gantt Chart Component
 
-The React Gantt Chart component’s appearance is customized by overriding default CSS styles to align with application designs, using classes for taskbars, milestones, and grid elements. The [queryTaskbarInfo](https://ej2.syncfusion.com/react/documentation/gantt/events#querytaskbarinfo) event modifies taskbar styles dynamically, while grid lines are configured with [gridLines](https://ej2.syncfusion.com/react/documentation/api/gantt#gridlines) for horizontal, vertical, or both. Custom themes are created via [Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=material). Styles include ARIA labels for accessibility, ensuring screen reader compatibility, and adapt to responsive designs, though narrow screens may require adjustments for taskbar visibility.
+The React Gantt Chart component’s appearance is customized by overriding default CSS styles to align with application designs, using classes for taskbars, milestones, and grid elements. The [queryTaskbarInfo](https://ej2.syncfusion.com/react/documentation/gantt/events#querytaskbarinfo) event modifies taskbar styles dynamically, while grid lines are configured with [gridLines](https://ej2.syncfusion.com/react/documentation/api/gantt#gridlines) for horizontal, vertical, or both. Custom themes are created via [Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=tailwind3). Styles include ARIA labels for accessibility, ensuring screen reader compatibility, and adapt to responsive designs, though narrow screens may require adjustments for taskbar visibility.
 
 ## CSS class reference
 
@@ -107,7 +107,6 @@ The following example overrides taskbar and milestone styles:
 ```
 
 ## Customize the taskbar
-
 To customize the appearance of child taskbars in the Gantt Chart, apply the following CSS.
 ```css
 .e-gantt-child-taskbar{

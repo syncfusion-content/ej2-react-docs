@@ -61,16 +61,16 @@ npm install @syncfusion/ej2-react-treegrid --save
 Add component styles to your application. TreeGrid requires CSS imports from multiple Syncfusion packages, depending on which features you use. Add the following imports to your **src/App.css** file:
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-react-treegrid/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';  
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';  
+@import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';  
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';  
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';  
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-react-treegrid/styles/tailwind3.css";
 ```
 
 > Import **App.css** in the **src/App.tsx** file.

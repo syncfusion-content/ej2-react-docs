@@ -27,13 +27,15 @@ function App() {
                     lineStyle: { width: 0 }, rangePadding: 'None',
                     majorTickLines: { width: 0 }
                 }}
+                title= 'Sales Analysis'
                 height='350'
+                width='650'
             >
                 <Inject services={[DateTime, Tooltip, RangeTooltip, Crosshair, LineSeries, SplineSeries, CandleSeries, HiloOpenCloseSeries, HiloSeries, RangeAreaSeries, Trendlines,
                     EmaIndicator, RsiIndicator, BollingerBands, TmaIndicator, MomentumIndicator, SmaIndicator, AtrIndicator, Export,
                     AccumulationDistributionIndicator, MacdIndicator, StochasticIndicator]} />
                 <StockChartSeriesCollectionDirective>
-                    <StockChartSeriesDirective dataSource={chartData} type='Candle'>
+                    <StockChartSeriesDirective dataSource={chartData} type='Candle' animation={{ enable: true }}>
                     </StockChartSeriesDirective>
                 </StockChartSeriesCollectionDirective>
             </StockChartComponent>

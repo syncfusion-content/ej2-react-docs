@@ -1,35 +1,37 @@
 ---
 layout: post
-title: Selection in React Gantt Chart component | Syncfusion
+title: Selection in React Gantt Chart Component | Syncfusion
 description: Learn here all about Selection in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
-control: Selection 
 platform: ej2-react
+control: Selection 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Selection in React Gantt Chart component
+# Selection in React Gantt Chart Component
 
-Selection provides an option to highlight a row or a cell. It can be done using arrow keys or by scrolling down the mouse. To disable selection in the Gantt Chart component, set the [allowSelection](https://ej2.syncfusion.com/react/documentation/api/gantt#allowselection) to `false`.
+The Selection feature provides the ability to highlight a row or cell in the Gantt Chart component. Selection can be performed using arrow keys or mouse clicks.
 
-To select data, inject the [Selection](https://ej2.syncfusion.com/react/documentation/api/gantt#selectionmodule) module into the Gantt control.
+To disable selection, set the [allowSelection](https://ej2.syncfusion.com/react/documentation/api/gantt#allowselection) property to **false**.
+
+To enable selection functionality, inject the [Selection](https://ej2.syncfusion.com/react/documentation/api/gantt#selectionmodule) module in the `providers` section of your React application.
 
 The Gantt Chart component supports two types of selection that can be set by using the [selectionSettings.type](https://ej2.syncfusion.com/react/documentation/api/gantt/selectionSettings#type) property. They are:
 
-* `Single`: Sets a single value by default and allows only selection of a single row or a cell.
-* `Multiple`: Allows you to select multiple rows or cells. To perform the multi-selection, press and hold the CTRL key and click the desired rows or cells.
+* **Single:** Allows selection of only one row or cell at a time. This is the default behavior.
+* **Multiple:** Enables selection of multiple rows or cells. To perform multi-selection, press and hold the **Ctrl** key (on Windows/Linux) or **Cmd** key (on macOS) while clicking the desired rows or cells.
 
-To get start quickly with Selection and to know its type and behaviors, you can check on this video
+The following video demonstrates how selection works in the React Gantt Chart:
 
-{% youtube "https://www.youtube.com/watch?v=a-5EU7KxzhQ" %}
+{% youtube "https://www.youtube.com/watch?v=XqhZdDal93g" %}
 
 ## Selection mode
 
-The Gantt Chart component supports three types of selection modes that can be set by using the [selectionSettings.mode](https://ej2.syncfusion.com/react/documentation/api/gantt/selectionSettings#mode). They are:
+The Gantt Chart component supports three types of selection modes, which can be set using the [selectionSettings.mode](https://ej2.syncfusion.com/react/documentation/api/gantt/selectionSettings#mode) property: 
 
-* `Row`: Allows you to select only rows, and the row value is set by default.
-* `Cell`: Allows you to select only cells.
-* `Both`: Allows you to select rows and cells at the same time.
+* **Row:** Allows selection of rows only. This is the default mode.
+* **Cell:** Allows selection of cells only.
+* **Both:** Allows selection of both rows and cells at the same time.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -47,8 +49,9 @@ The Gantt Chart component supports three types of selection modes that can be se
 
 ## Toggle selection
 
-The toggle selection allows you to select and deselect a specific row or cell. To enable toggle selection, set the `enableToggle` property of the selectionSettings to `true`. If you click the selected row or cell, then it will be deselected and vice versa.
-By default, the `enableToggle` property is set to `false`.
+Toggle selection allows you to select or deselect a specific row or cell with repeated clicks. To enable this feature, set the [enableToggle](https://ej2.syncfusion.com/react/documentation/api/gantt/selectionSettings#enabletoggle) property of `selectionSettings` to **true**.
+
+When enabled, clicking a selected row or cell will deselect it, and clicking it again will reselect it. By default, the `enableToggle` property is set to **false**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -64,10 +67,31 @@ By default, the `enableToggle` property is set to `false`.
         
 {% previewsample "page.domainurl/code-snippet/gantt/selection-cs12" %}
 
+## Persist selection
+
+Persist Selection retains selected tasks even after performing actions such as sorting, filtering, or refreshing the data. To enable this, set `selectionSettings.persistSelection` to **true**.  
+
+> Cell selection is not supported by the persistence feature.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/selection-cs23/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/selection-cs23/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/selection-cs23/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/selection-cs23" %}
 
 ## Hover highlighting
 
-The hover highlighting feature in the Syncfusion React Gantt Chart enhances user interaction by highlighting **tree grid rows, chart task bars, header cells, and timeline cells** when hovered, making it easier to track tasks in complex project timelines. Enable it by setting the [enableHover](../../api/gantt#enablehover) property to **true** in the component.
+The hover highlighting feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart enhances usability by visually highlighting **tree grid rows**, **chart task bars**, **header cells**, and **timeline cells** on hover. This makes it easier to follow tasks in complex project timelines.
+
+To enable this feature, set the `enableHover` property to **true** in the component. By default, this property is set to **false**.
 
 The following code example shows how to enable the hover highlighting in Gantt.
 
@@ -87,7 +111,7 @@ The following code example shows how to enable the hover highlighting in Gantt.
 
 ## Clear selection
 
-You can clear the selected cells and selected rows by using a method called [clearSelection](https://ej2.syncfusion.com/react/documentation/api/gantt#clearselection). The following code example demonstrates how to clear the selected rows in Gantt Chart.
+To clear selected rows and cells in the Gantt Chart component, use the [clearSelection](https://ej2.syncfusion.com/react/documentation/api/gantt#clearselection) method.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -103,50 +127,12 @@ You can clear the selected cells and selected rows by using a method called [cle
         
 {% previewsample "page.domainurl/code-snippet/gantt/selection-cs13" %}
 
-## Get selected row indexes and records
-
-You can get the selected row indexes by using the [getSelectedRowIndexes](https://ej2.syncfusion.com/react/documentation/api/gantt#getselectedrowindexes) method. And by using [getSelectedRecords](https://ej2.syncfusion.com/react/documentation/api/gantt#getSelectedRecords) method, you can get the selected record details.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/selection-cs14/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/selection-cs14/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/selection-cs14/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/gantt/selection-cs14" %}
-
-## Multiple Selection based on condition
-
-You can select multiple rows based on condition by using the [selectRows](https://ej2.syncfusion.com/react/documentation/api/grid#selectrows) method.
-
-In the following code, the rows which contains `TaskId` value as 3 and 4 are selected at initial rendering.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/selection-cs15/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/selection-cs15/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/selection-cs15/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/gantt/selection-cs15" %}
-
 ## Touch interaction
 
-The touch interaction feature in the Gantt Chart component allows you to easily interact with the Gantt chart on touch screen devices. This feature is particularly useful for enhancing usability on mobile devices and tablets, making it easier to navigate and interact with the Gantt chart's content using touch gestures.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component supports touch interaction, allowing you to intuitively navigate and interact with chart elements on touch-enabled devices like smart phones and tablets. This feature enhances usability by allowing intuitive gestures for selecting and managing tasks.
 
-[Single Row Selection](selection#selection-mode) : When you tap on a row using a touch screen, the tapped row is automatically selected. This offers a straightforward way to select single rows with a touch interface.
+[Single Row selection](https://ej2.syncfusion.com/react/documentation/gantt/selection/row-selection#single-row-selection): Tapping a row on a touch screen automatically selects it, offering a straightforward way to interact with the chart.
 
-[Multiple Row Selection](selection#multiple-row-selection) : To select multiple rows, you can utilize the multi-row selection feature. When you tap on a row, a popup is displayed, indicating the option for multi-row selection. Tap on the popup, and then proceed to tap on the desired rows you want to select. This allows you to select and interact with multiple rows simultaneously, as shown in the following image:
+[Multiple Row selection](https://ej2.syncfusion.com/react/documentation/gantt/selection/row-selection#multiple-row-selection): To select multiple rows, tap a row to display a popup that activates multi-selection mode. After tapping the popup, continue tapping the desired rows to select them. This allows users to select multiple rows simultaneously, as illustrated below:
 
 ![Multiple selection](../images/multiple-selection.PNG)

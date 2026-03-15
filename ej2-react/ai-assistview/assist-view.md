@@ -57,6 +57,12 @@ The [prompts](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#
 
 {% previewsample "page.domainurl/code-snippet/ai-assistview/assist-view/prompts" %}
 
+### Update response as markdown
+
+The AI AssistView supports rendering responses as **Markdown** content, which is automatically converted to HTML using the built-in [Markdown Converter](https://ej2.syncfusion.com/react/documentation/markdown-editor/markdown-preview). When you pass markdown-formatted text in the response, it will be displayed as formatted HTML in the AI AssistView. The streaming of markdown content happens seamlessly with built-in support for dynamic rendering.
+
+You can use markdown syntax like **bold**, *italic*, headings, lists, code blocks, and links to format your responses.
+
 ## Configuring prompt suggestions
 
 The [promptSuggestions](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptsuggestions) property provides users with helpful suggestions that can appear initially or on-demand. These suggestions help users formulate better prompts and discover available functionality, enhancing the overall user experience.
@@ -131,3 +137,7 @@ The [showClearButton](https://ej2.syncfusion.com/react/documentation/api/ai-assi
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/ai-assistview/assist-view/clearbtn" %}
+
+## Enable scroll to bottom icon
+
+You can use the [enableScrollToBottom](../api/ai-assistview#enablescrolltobottom) property to show or hide the scroll-to-bottom indicator. By default, this property is `true`. When enabled, a floating icon/button appears when the user scrolls away from the bottom of the conversation. Clicking this icon smoothly scrolls the view to the bottom to display the latest response.

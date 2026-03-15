@@ -2,7 +2,7 @@
 
 import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 
 function App() {
 
@@ -21,7 +21,10 @@ function App() {
 
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('charts'));
-root.render(<App />);
+<<<<<<< HEAD:ej2-react/code-snippet/chart/preview-sample/series/pie-cs4/app/index.tsx
+ReactDOM.render(<App />, document.getElementById("charts"));
+=======
+createRoot(document.getElementById('charts')).render(<App />);
+>>>>>>> dd502e05398ce4127fe3ab0c24ab8dec115c7c6e:ej2-react/code-snippet/chart/series/pie-cs4/app/index.tsx
 
 

@@ -76,6 +76,37 @@ The color and width of the crosshair lines can be customized by using the [`line
 
 > Note: To use crosshair feature, we need to inject `Crosshair` module into the `services`.
 
+## Crosshair label customization
+
+The [`crosshairLabelRender`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#crosshairlabelrender) event fires before each crosshair axis label is rendered, allowing you to customize the label's appearance or content, or to prevent it from being displayed.
+
+Event arguments:
+
+* `text` – The label text that can be modified.
+* `value` – The data value at the crosshair position.
+* `axisName` – The axis identifier (e.g., `primaryXAxis`).
+* `axisOrientation` – Either `Horizontal` or `Vertical`.
+* `textStyle` – Font properties for customization.
+* `fill` – Background color of the label.
+* `cancel` – Set to **true** to skip rendering the label.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/code-path/user-interaction/crosshair-label-render/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/code-path/user-interaction/crosshair-label-render/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/code-path/user-interaction/crosshair-label-render/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/code-path/user-interaction/crosshair-label-render/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/crosshair-label-render" %}
+
 ## Snap to data
 Enabling the [`snapToData`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettingsModel#snaptodata) property in the crosshair aligns it with the nearest data point instead of following the exact mouse position.
 By enabling the [`snapToData`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettingsModel#snaptodata) property, the crosshair snaps to the nearest data point instead of following the exact mouse position. This improves accuracy when inspecting values.

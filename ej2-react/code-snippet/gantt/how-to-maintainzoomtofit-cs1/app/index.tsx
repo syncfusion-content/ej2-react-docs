@@ -1,52 +1,60 @@
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, Inject, Toolbar, Edit, Selection, ToolbarItem }from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, Inject, Edit, Selection, Toolbar, ActionCompleteArgs, ITaskbarEditedEventArgs, EditSettingsModel, ToolbarItem, TaskFieldsModel } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-function App (){
-    let  ganttInstance: any;
-   const  taskFields: any = {
+
+function App() {
+
+  const taskFields: TaskFieldsModel = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
+    endDate: 'EndDate',
     duration: 'Duration',
     progress: 'Progress',
     dependency: 'Predecessor',
-    parentID: 'ParentId'
+    parentID: 'ParentID'
   };
-  const editSettings: any = {
+
+  const toolbar: ToolbarItem[] = ['Edit', 'ZoomToFit'];
+
+  const editSettings: EditSettingsModel = {
     allowEditing: true,
     allowTaskbarEditing: true
   };
-  const toolbarOptions: ToolbarItem[] = ['Edit','ZoomToFit'];
-  function actionComplete(args) {
-    if ((args.action === "CellEditing" || args.action === "DialogEditing") && args.requestType === "save") {
+
+  let ganttInstance: GanttComponent | null;
+
+  function actionComplete(args: ActionCompleteArgs): void {
+    if ((args.action === 'CellEditing' || args.action === 'DialogEditing') && args.requestType === 'save') {
+      if (ganttInstance) {
         ganttInstance.dataSource = data;
         ganttInstance.fitToProject();
       }
-  };
-  function taskbarEdited(args) {
-      if (args) {
-        ganttInstance.dataSource = data;
-        ganttInstance.fitToProject();
-      }
-  };
-      return (
-        <GanttComponent 
-        dataSource={data} 
-        taskFields={taskFields}
-        toolbar={toolbarOptions} 
-        editSettings={editSettings} 
-        actionComplete={actionComplete} 
-        taskbarEdited={taskbarEdited} 
-        height = '450px' 
-        ref={gantt => ganttInstance = gantt}
-        >
-           <Inject services={[Toolbar, Edit, Selection]} />
-        </GanttComponent>
-      );
-};
+    }
+  }
+
+  function taskbarEdited(args: ITaskbarEditedEventArgs): void {
+    if (args && ganttInstance) {
+      ganttInstance.dataSource = data;
+      ganttInstance.fitToProject();
+    }
+  }
+
+  return (
+    <GanttComponent
+      ref={g => ganttInstance = g}
+      id="ganttDefault"
+      height="430px"
+      dataSource={data}
+      taskFields={taskFields}
+      toolbar={toolbar}
+      editSettings={editSettings}
+      actionComplete={actionComplete}
+      taskbarEdited={taskbarEdited}>
+      <Inject services={[Edit, Selection, Toolbar]} />
+    </GanttComponent>
+  );
+}
+
 ReactDOM.render(<App />, document.getElementById('root'));
-
-

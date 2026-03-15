@@ -23,13 +23,13 @@ The following code example explains the data loaded event in the diagram.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/reactCurlyExamples/data-loaded-cs1/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/layout-event-cs1/app/index.jsx %}
 {% endhighlight %}
 {% endtabs %}
 
 ## ExpandStateChange Event
 
-The [`expandStateChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExpandStateChangeEventArgs) event fires when a user clicks the expand or collapse icon of a node in a hierarchical layout. This event occurs before the layout update begins, allowing developers to prevent the state change, modify the expansion behavior, or trigger custom actions based on the node's new state.
+The [`expandStateChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/iexpandstatechangeeventargs) event fires when a user clicks the expand or collapse icon of a node in a hierarchical layout. This event occurs before the layout update begins, allowing developers to prevent the state change, modify the expansion behavior, or trigger custom actions based on the node's new state.
 
 The event provides information about the affected node, its current state, and whether the operation can be canceled. This makes it valuable for implementing conditional expansion, loading child data on-demand, or applying custom animations.
 
@@ -48,7 +48,7 @@ The event provides information about the affected node, its current state, and w
 
 ## Animation Complete Event
 
-The [`animationComplete`](https://ej2.syncfusion.com/react/documentation/api/diagram#animationcomplete) event triggers after the diagram finishes animating layout changes, particularly during expand and collapse operations. This event is essential for detecting when visual transitions have completed, enabling developers to perform follow-up actions such as scrolling to specific nodes, updating UI indicators, or triggering additional layout adjustments.
+The [`animationComplete`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#animationcomplete) event triggers after the diagram finishes animating layout changes, particularly during expand and collapse operations. This event is essential for detecting when visual transitions have completed, enabling developers to perform follow-up actions such as scrolling to specific nodes, updating UI indicators, or triggering additional layout adjustments.
 
 The event fires at the end of the animation cycle, ensuring that all visual updates are complete before any subsequent operations begin.
 
@@ -66,13 +66,13 @@ The event fires at the end of the animation cycle, ensuring that all visual upda
 
 ## Layout Updated Event
 
-The [`layoutUpdated`](https://ej2.syncfusion.com/react/documentation/api/diagram#layoutupdated) event fires at both the beginning and completion of the layout rendering process. This event enables tracking of layout calculation progress and provides timing information for performance monitoring or progress indication purposes.
+The [`layoutUpdated`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#layoutupdated) event fires at both the beginning and completion of the layout rendering process. This event enables tracking of layout calculation progress and provides timing information for performance monitoring or progress indication purposes.
 
 The event includes a state parameter that indicates whether the layout process is starting or finishing, allowing developers to implement loading indicators, measure layout performance, or coordinate with other application components that depend on layout completion.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/reactCurlyExamples/layout-update/app/index.jsx %}
+{% include code-snippet/diagram/reactCurlyExamples/layout-event-cs2/app/index.jsx %}
 {% endhighlight %}
 {% endtabs %}
 

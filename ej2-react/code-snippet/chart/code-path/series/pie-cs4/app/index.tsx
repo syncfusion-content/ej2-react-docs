@@ -6,7 +6,7 @@ import * as ReactDOM from "react-dom";
 
 function App() {
 
-  const data: any[] = [
+  const data: Object[] = [
     { x: 'Jan', y: 3, text: 'Jan: 3' }, { x: 'Feb', y: 3.5, text: 'Feb: 3.5' },
     { x: 'Mar', y: 7, text: 'Mar: 7' }, { x: 'Apr', y: 13.5, text: 'Apr: 13.5' },
     { x: 'May', y: 19, text: 'May: 19' }, { x: 'Jun', y: 23.5, text: 'Jun: 23.5' },
@@ -14,14 +14,18 @@ function App() {
     { x: 'Sep', y: 21, text: 'Sep: 21' }, { x: 'Oct', y: 15, text: 'Oct: 15' }];
 
   return <AccumulationChartComponent id="charts">
-      <AccumulationSeriesCollectionDirective>
-        <AccumulationSeriesDirective dataSource={data} xName='x' yName='y' radius='90%' />
-      </AccumulationSeriesCollectionDirective>
-    </AccumulationChartComponent>
+    <AccumulationSeriesCollectionDirective>
+      <AccumulationSeriesDirective dataSource={data} xName='x' yName='y' radius='90%' type='Pie'/>
+    </AccumulationSeriesCollectionDirective>
+  </AccumulationChartComponent>
 
-};
+}
 export default App;
+<<<<<<<< HEAD:ej2-react/code-snippet/chart/series/pie-cs4/app/index.tsx
 const root = ReactDOM.createRoot(document.getElementById('charts'));
 root.render(<App />);
+========
+ReactDOM.render(<App />, document.getElementById("charts"));
+>>>>>>>> remotes/origin/Resolve-2026-vol1-Main-release-dev-to-master-branch-merging-conflicts:ej2-react/code-snippet/chart/code-path/series/pie-cs4/app/index.tsx
 
 {% endraw %}
