@@ -76,7 +76,7 @@ The `Image` block [properties](../../api/blockeditor/blockModel) property suppor
 | height | Specifies the display height of the image. | `''` |
 | altText | Specifies the alternative text to display when the image cannot be loaded. | `''` |
 
-### BlockType & Properties
+### Block type & properties
 
 The following example demonstrates how to pre-configure an `Image` block in the editor.
 
