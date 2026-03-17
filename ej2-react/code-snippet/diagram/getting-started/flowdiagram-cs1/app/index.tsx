@@ -1,3 +1,5 @@
+{% raw %}
+
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
@@ -118,7 +120,7 @@ export default function App() {
   return (
     <DiagramComponent
       id="container"
-      width={"1000px"}
+      width={"100%"}
       height={"600px"}
       nodes={nodes}
       connectors={connectors}
@@ -147,3 +149,6 @@ export default function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById("diagram") as HTMLElement);
 root.render(<App />);
+
+
+{% endraw %}

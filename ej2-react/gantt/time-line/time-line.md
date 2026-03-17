@@ -126,6 +126,38 @@ In Minutes timeline mode, the tier displays minute-level intervals, ideal for tr
         
 {% previewsample "page.domainurl/code-snippet/gantt/minutetimeline-cs1" %}
 
+## Timeline view dates
+
+The Gantt Chart control supports rendering a fixed timeline range using the [viewStartDate](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings#viewStartDate) and [viewEndDate](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings#viewEndDate) properties. These properties allow the visible portion of the timeline to be explicitly defined and locked within the Gantt chart UI, independent of the project's overall scheduling boundaries defined by [projectStartDate](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#projectstartdate) and [projectEndDate](https://ej2.syncfusion.com/react/documentation/api/index-default#projectenddate). The `projectStartDate` and `projectEndDate` values represent the full scheduling window for the project and are used for baseline processing, critical-path calculations, and project-level reporting. By default, both `viewStartDate` and `viewEndDate` are set to **auto**. The following example demonstrates how to configure a custom timeline view range.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/view-dates-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/view-dates-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/view-dates-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/view-dates-cs1" %}
+
+**Key behaviors**
+
+When `viewStartDate` and `viewEndDate` are set to concrete Date values, the timeline rendering is restricted to the inclusive range [viewStartDate, viewEndDate].
+
+* When `viewStartDate` is set to **auto**:
+  * If `projectStartDate` is defined, the timeline begins at `projectStartDate`.
+  * If `projectStartDate` is not defined, the earliest task start date is used as the beginning of the visible range.
+
+* When `viewEndDate` is set to **auto**: 
+  * If `projectEndDate` is defined, the timeline ends at `projectEndDate`.
+  * If `projectEndDate` is not defined, the maximum task end date is used. If this end date leaves visible white‑space in the timeline area, the end date is automatically extended to fill the chart width.
+
+> Note: The `ZoomToFit` feature uses `projectStartDate` and `projectEndDate` to fit the entire project within the available timeline viewport.
+
 ## Customize week start day
 
 In the Gantt Chart component, you can customize the starting day of the week using the [weekStartDay](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings#weekstartday) property. By default, the `weekStartDay` value is set to **0**, which specifies **Sunday** as the first day of the week. You can change this value to any number from **0 to 6** to set a different start day.
@@ -164,7 +196,7 @@ In the Gantt Chart component, the schedule timeline will be automatically update
         
 {% previewsample "page.domainurl/code-snippet/gantt/updatetimescale-cs1" %}
 
-## Dynmically change timeline mode
+## Dynamically change timeline mode
 
 You can dynamically change the timeline mode in the Gantt Chart by updating the [timelineSettings.timelineViewMode](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineViewMode/) property using the [change](https://ej2.syncfusion.com/react/documentation/api/combo-box/index-default#change) event of the [ComboBox](https://ej2.syncfusion.com/react/documentation/combo-box/getting-started) component.
 

@@ -155,6 +155,74 @@ The Inline Toolbar includes the following built-in formatting options:
 -   **Text Color**: Change the color of the selected text.
 -   **Background Color**: Change the background color of the selected text.
 
+### Optional items
+
+The inline toolbar can handle custom items like `Transform`, `InlineCode`, `Link` by passing array of string values in `items` property in [inlineToolbarSettings](../api/blockeditor#inlinetoolbarsettings).
+
+#### Transform block options
+
+The inline toolbar now includes `transform` options to quickly convert blocks between different types. You can use the [transformSettings](../api/blockeditor#transformSettings) property to handle customization of the transform menu in the inline toolbar. This allows you to configure available block transformations, define custom menu items with text and icons, and control their behavior.
+
+#### Built-in default transform block options
+
+Below are the built-in tranform block options available:
+
+| Built-in transform Block Types          |
+|-----------------------------------------|
+| Paragraph                               |
+| Heading1 to Heading4                    |
+| Checklist                               |
+| BulletList                              |
+| NumberedList                            |
+
+> For blocks such as `code`, `callout`, `quote`, `divider`, `image`, `table` and `collapsible` transform options not available. Instead they will be added as a new block.
+
+#### Events
+
+The following events are available for the transform toolbar item menu:
+
+|Name|Args|Description|
+|---|---|---|
+|[itemSelect](../api/blockeditor/transformSettingsModel#itemselect)|TransformItemSelectEventArgs|Triggers when a command item is clicked.|
+
+#### Inline code support
+
+Added inline code formatting in the toolbar, with light syntax highlighting and seamless integration with other text formatting options.
+
+#### Inline link support
+
+Added inline link formatting in the toolbar, by link item click, link dialog opens and with proper value updation, link can be inserted on text.
+
+The following example demonstrates how to customize the transform, inline code, link items.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/editor-menus/inline-toolbar/transform-item/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/editor-menus/inline-toolbar/transform-item/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/editor-menus/inline-toolbar/transform-item" %}
+
+#### Font and background color support
+
+Enhanced font and background color options in the inline toolbar with integrated ColorPicker. You can use the [fontColorSettings](../api/blockeditor#fontColorSettings), [backgroundColorSettings](../api/blockeditor#backgroundColorSettings) properties to handle for text customization, highlighting, predefined palettes, custom inputs, and quick previews.
+
+The following example demonstrates how to customize the font and background color toolbar items.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/editor-menus/inline-toolbar/color-item/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/editor-menus/inline-toolbar/color-item/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/editor-menus/inline-toolbar/color-item" %}
+
 ### Customize Inline Toolbar
 
 You can use the [inlineToolbarSettings](../api/blockeditor#inlinetoolbarsettings) property to customize the Inline Toolbar by adding or removing formatting options based on your application's needs.

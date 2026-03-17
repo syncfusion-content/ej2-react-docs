@@ -1,4 +1,4 @@
-
+{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DiagramComponent } from "@syncfusion/ej2-react-diagrams";
@@ -47,7 +47,7 @@ export default function App() {
         dataManager: new DataManager(data)
     };
     const layoutSetting = { type: "OrganizationalChart" };
-    return (<DiagramComponent id="container" width={"1000px"} height={"550px"} dataSourceSettings={dataSettings} layout={layoutSetting} getNodeDefaults={(node) => {
+    return (<DiagramComponent id="container" width={"100%"} height={"350px"} dataSourceSettings={dataSettings} layout={layoutSetting} getNodeDefaults={(node) => {
             let codes = {
                 Director: "rgb(0, 139,139)",
                 Manager: "rgb(30, 30,113)",
@@ -70,3 +70,4 @@ export default function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById("diagram"));
 root.render(<App />);
+{% endraw %}

@@ -17,8 +17,8 @@ export default function App() {
   return (
     <DiagramComponent
       id="container"
-      width={"1000px"}
-      height={"550px"}
+      width={"100%"}
+      height={"350px"}
       nodes={nodes}
     />
   );

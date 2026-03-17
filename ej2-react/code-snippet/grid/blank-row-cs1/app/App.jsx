@@ -25,7 +25,7 @@ function App() {
     }
   };
 
-  return <GridComponent ref={gridRef} dataSource={data} height={315} rowDataBound={rowDataBound}>
+  return <GridComponent ref={(grid) => (gridInstance = grid)} dataSource={data} height={315} rowDataBound={rowDataBound}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' type="number" textAlign="Right" headerTextAlign="Right" width='120' />
       <ColumnDirective field='CustomerID' type="string" textAlign="Left" headerTextAlign="Left" width='90' />

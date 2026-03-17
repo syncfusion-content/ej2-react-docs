@@ -11,7 +11,7 @@ import {
     EmaIndicator, RsiIndicator, BollingerBands, TmaIndicator, MomentumIndicator, SmaIndicator, AtrIndicator,
     AccumulationDistributionIndicator, MacdIndicator, StochasticIndicator, Export
 } from '@syncfusion/ej2-react-charts';
-import { chartData } from '../datasource';
+import { chartData } from 'datasource.ts';
 
 function App() {
 
@@ -42,9 +42,7 @@ function App() {
         )
 };
 export default App;
-
-const root = ReactDOM.createRoot(document.getElementById('charts'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById("charts"));
 
 
 {% endraw %}

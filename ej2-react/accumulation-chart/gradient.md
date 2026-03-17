@@ -43,10 +43,10 @@ A linear gradient may be applied directly at the series level. The same gradient
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/preview-sample/series/chart-gradient-cs5/app/index.jsx %}
+{% include code-snippet/chart/code-path/series/chart-gradient-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/preview-sample/series/chart-gradient-cs5/app/index.tsx %}
+{% include code-snippet/chart/code-path/series/chart-gradient-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
