@@ -747,14 +747,14 @@ export default App;
 {% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/change-headerText-cs3/app/datasource.jsx %}
+{% include code-snippet/grid/change-headertext-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/change-headerText-cs3/app/datasource.tsx %}
+{% include code-snippet/grid/change-headertext-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/change-headerText-cs3" %}
+{% previewsample "page.domainurl/code-snippet/grid/change-headertext-cs3" %}
 
 ## Change the orientation of header text
 

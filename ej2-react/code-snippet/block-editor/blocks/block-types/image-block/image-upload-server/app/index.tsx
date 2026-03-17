@@ -1,0 +1,33 @@
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { BlockEditorComponent, BlockModel, ContentType } from '@syncfusion/ej2-react-blockeditor';
+
+function App() {
+    const blocksData: BlockModel[] = [
+    {
+      blockType: 'Image',
+      properties: {
+        src: 'https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Overview.png',
+        altText: 'Sample image'
+      }
+    },
+    {
+      blockType: 'Paragraph',
+      content: [
+        {
+          contentType: ContentType.Text,
+          content:
+            'You can customize images further by configuring properties like allowedTypes for file upload restrictions, saveFormat for storage preferences, and cssClass for custom styling.'
+        }
+      ]
+    }
+  ];
+
+  return <BlockEditorComponent id="block-editor" blocks={blocksData} imageBlockSettings={{
+    saveUrl: "[SERVICE_HOSTED_PATH]/api/Home/SaveImage",
+    path: "[SERVICE_HOSTED_PATH]/Uploads/"
+  }}></BlockEditorComponent>;
+}
+
+export default App;
+ReactDOM.render(<App />, document.getElementById('container'));
