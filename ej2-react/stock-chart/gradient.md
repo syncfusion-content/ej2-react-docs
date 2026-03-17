@@ -20,12 +20,11 @@ Gradients add depth and modern styling to charts by smoothly blending multiple c
 
 Gradients can be applied to:
 - Series
-- Trendlines
 - Technical Indicators
 
 ## Linear gradient
 
-A linear gradient blends color along side a straight path from a defined start point to an end point. Configure it by adding `linearGradient` inside the target element (Series, Trendlines or Indicators) and define one or more color stops that control how colors transition across the gradient. Set the start and end positions of the gradient using `x1`, `y1`, `x2` and `y2` properties. The gradient color stop values such as `offset`, `color`, `opacity`, `lighten` and `brighten` are set using the `gradientColorStop` property.
+A linear gradient blends color along side a straight path from a defined start point to an end point. Configure it by adding `linearGradient` inside the target element (Series or Indicators) and define one or more color stops that control how colors transition across the gradient. Set the start and end positions of the gradient using `x1`, `y1`, `x2` and `y2` properties. The gradient color stop values such as `offset`, `color`, `opacity`, `lighten` and `brighten` are set using the `gradientColorStop` property.
 
 In the `linearGradient`:
 - `x1` - Sets the horizontal start position of the gradient (0 to 1).
@@ -46,10 +45,10 @@ Apply a linear gradient to a series by adding `linearGradient` inside the target
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/chart-gradient-cs1/index.jsx %}
+{% include code-snippet/stock-chart/code-path/chart-gradient-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/chart-gradient-cs1/index.tsx %}
+{% include code-snippet/stock-chart/code-path/chart-gradient-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -61,10 +60,10 @@ Apply a linear gradient to a technical indicator by adding `linearGradient` insi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/code-path/chart-gradient-cs3/index.jsx %}
+{% include code-snippet/stock-chart/code-path/chart-gradient-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/code-path/chart-gradient-cs3/index.tsx %}
+{% include code-snippet/stock-chart/code-path/chart-gradient-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -96,10 +95,10 @@ Apply a radial gradient to a series by adding `radialGradient` inside the target
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/code-path/chart-gradient-cs4/index.jsx %}
+{% include code-snippet/stock-chart/code-path/chart-gradient-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/code-path/chart-gradient-cs4/index.tsx %}
+{% include code-snippet/stock-chart/code-path/chart-gradient-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -111,10 +110,10 @@ Apply a linear gradient to a technical indicator by adding `linearGradient` insi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stock-chart/code-path/chart-gradient-cs5/index.jsx %}
+{% include code-snippet/stock-chart/code-path/chart-gradient-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stock-chart/code-path/chart-gradient-cs5/index.tsx %}
+{% include code-snippet/stock-chart/code-path/chart-gradient-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
