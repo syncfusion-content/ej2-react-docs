@@ -1,11 +1,9 @@
 
 import * as React from "react";
-import { createRoot } from "react-dom/client";
+import * as ReactDOM from "react-dom";
 import { CircularGaugeComponent } from '@syncfusion/ej2-react-circulargauge';
-
-function App() {
-  return <CircularGaugeComponent />;
+export function App(){
+  return(<CircularGaugeComponent ></CircularGaugeComponent>);
 }
-
-const root = createRoot(document.getElementById('container')!);
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);

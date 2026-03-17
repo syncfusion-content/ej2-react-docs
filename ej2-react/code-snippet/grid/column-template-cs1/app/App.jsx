@@ -7,7 +7,6 @@ function App() {
         var src = 'https://ej2.syncfusion.com/react/demos/src/grid/images/' + props.EmployeeID + '.png';
         return (<div className='image'>
             <img src={src} alt={props.EmployeeID}/>
-             
         </div>);
     };
     return <GridComponent dataSource={employeeData} height={315}>

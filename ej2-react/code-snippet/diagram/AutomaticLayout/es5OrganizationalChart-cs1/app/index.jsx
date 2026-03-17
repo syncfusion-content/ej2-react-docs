@@ -1,4 +1,4 @@
-
+{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DiagramComponent, Inject, DataBinding, HierarchicalTree, } from "@syncfusion/ej2-react-diagrams";
@@ -185,3 +185,4 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById("diagram"));
 root.render(<App />);
+{% endraw %}

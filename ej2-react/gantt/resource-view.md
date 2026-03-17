@@ -107,17 +107,18 @@ You can customize the taskbar appearance based on resource view using the [query
 To hide a column in the Gantt Chart's resource view, handle the [actionBegin](https://ej2.syncfusion.com/react/documentation/gantt/events#actionbegin) event and set the `visible` property of the target column to **false** when the `requestType` is `beforeOpenAddDialog` or `beforeOpenEditDialog`.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/gantt/resourceview/resource-tab/src/app.component.ts %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/resource-view-cs7/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/gantt/resourceview/resource-tab/src/main.ts %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/resource-view-cs7/app/index.tsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.ts" %}
-{% include code-snippet/gantt/resourceview/resource-tab/src/data.ts %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/resource-view-cs7/index.html %}
 {% endhighlight %}
 {% endtabs %}
-{% previewsample "page.domainurl/samples/gantt/resourceview/resource-tab" %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/resource-view-cs7" %}
 
 ## Limitations
 

@@ -18,16 +18,29 @@ function App() {
         lineStyle: { color: 'transparent' },
         majorTickLines: { color: 'transparent', width: 0 }
     };
+
+    const LegendTemplate = (props) => {
+        const seriesName = props.series.name;
+        const icon = iconMap[seriesName] || '';
+        return (
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: 5, cursor: 'pointer' }}>
+                <img
+                    src={icon}
+                    width={24}
+                    height={24}
+                    style={{ objectFit: 'contain', borderRadius: 2 }}
+                    alt={seriesName}
+                />
+                <span style={{ fontSize: 13, fontWeight: 500 }}>{seriesName}</span>
+            </div>
+        );
+    };
+
     const legendSettings = {
         visible: true,
-        template: (data) => {
-            const icon = iconMap[data.series.name] || '';
-            return '<div style="display:flex;align-items:center;gap:4px;">' +
-                '<img src="' + icon + '" width="30" height="30"/>' +
-                '<span>' + data.series.name + '</span>' +
-                '</div>';
-        }
+        template: LegendTemplate
     };
+
     return <StockChartComponent id='stockcharts' height='455px' primaryXAxis={primaryXAxis} primaryYAxis={primaryYAxis} legendSettings={legendSettings} indicatorType={[]} trendlineType={[]} title='AAPL Stock Price'>
         <Inject services={[DateTime, Tooltip, RangeTooltip, Crosshair, LineSeries, SplineSeries, CandleSeries, HiloOpenCloseSeries, HiloSeries, RangeAreaSeries, Trendlines, EmaIndicator, RsiIndicator, BollingerBands, TmaIndicator, MomentumIndicator, SmaIndicator, AtrIndicator, Export, StockLegend, AccumulationDistributionIndicator, MacdIndicator, StochasticIndicator]} />
         <StockChartSeriesCollectionDirective>
