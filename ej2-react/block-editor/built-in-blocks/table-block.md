@@ -25,7 +25,7 @@ For Table blocks, you can configure layout and structure using the [properties](
 | columns | Defines the columns of the table, including their types and headers. | `[]` |
 | rows | Defines the rows of the table, each containing cells tied to columns. | `[]` |
 
-### BlockType & Properties
+### Block type & properties
 
 The following example demonstrates how to pre-configure a `Table` block in the editor.
 

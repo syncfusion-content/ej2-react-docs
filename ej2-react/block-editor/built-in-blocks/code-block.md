@@ -27,9 +27,9 @@ The `codeBlockSettings` property supports the following options:
 
 For Code blocks, you can specify the language for syntax highlighting using the [properties](../../api/blockeditor/blockModel) property. This property supports the following options:
 
-- [language](../../api/blockeditor/codeLanguageModel#language): The language value used for syntax highlighting.
+- [language](../../api/blockeditor/codeLanguageModel#language): The default language value used for syntax highlighting.
 
-### BlockType & Properties
+### Block type & properties
 ```typescript
 // Adding Code block
 {
@@ -40,13 +40,7 @@ For Code blocks, you can specify the language for syntax highlighting using the 
         }
     ],
     properties: {
-        defaultLanguage: 'javascript',
-        languages: [
-        { language: 'javascript', label: 'JavaScript' },
-        { language: 'typescript', label: 'TypeScript' },
-        { language: 'html', label: 'HTML' },
-        { language: 'css', label: 'CSS' }
-        ]
+        language: 'javascript'
     }
     }
 ```
