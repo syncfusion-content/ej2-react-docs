@@ -267,7 +267,7 @@ The tooltip distance property controls the spacing between the tooltip and the m
 
 Set the [`distance`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#distance) property to specify the gap in pixels:
 
-```jsx
+```js
 tooltip: { 
     enable: true, 
     distance: 25 

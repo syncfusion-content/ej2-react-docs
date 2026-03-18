@@ -2,7 +2,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, Inject, AccumulationLegend, FunnelSeries, AccumulationTooltip, AccumulationDataLabel } from '@syncfusion/ej2-react-charts';
-import { funnelData } from 'datasource.ts';
+import { funnelData } from '../datasource.ts';
 function App() {
     function onLoad(args) {
         if (args.accumulation.availableSize) {
