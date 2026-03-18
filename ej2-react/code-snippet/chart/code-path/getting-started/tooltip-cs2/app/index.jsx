@@ -2,7 +2,7 @@
 
 import { Category, ChartComponent, DataLabel, Inject, Legend, LineSeries, SeriesCollectionDirective, SeriesDirective, Tooltip } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
-import { createRoot } from 'react-dom/client';
+import * as ReactDOM from "react-dom";
 import { data } from './datasource';
 function App() {
   const tooltip = { enable: true, shared: false };
@@ -18,6 +18,7 @@ function App() {
   </ChartComponent>;
 }
 export default App;
-createRoot(document.getElementById('charts')).render(<App />);
+const root = ReactDOM.createRoot(document.getElementById('charts'));
+root.render(<App />);
 
 {% endraw %}

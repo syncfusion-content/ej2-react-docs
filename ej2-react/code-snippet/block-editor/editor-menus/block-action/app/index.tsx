@@ -16,12 +16,17 @@ function App() {
   },
   {
     blockType: 'Quote',
-    content: [
-      {
-        contentType: ContentType.Text,
-        content: 'Hover over any block and click the drag handle icon to see custom actions.'
-      }
-    ]
+    properties:{
+      children:[{
+          blockType: 'Paragraph',
+          content: [
+            {
+              contentType: ContentType.Text,
+              content: 'Hover over any block and click the drag handle icon to see custom actions.'
+            }
+          ]
+      }]
+    }
   }
 ];
 

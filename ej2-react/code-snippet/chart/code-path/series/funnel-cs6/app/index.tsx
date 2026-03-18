@@ -9,7 +9,7 @@ import {
   Inject, AccumulationLegend, FunnelSeries, AccumulationTooltip, IAccLoadedEventArgs,
   AccumulationDataLabel, IAccResizeEventArgs
 } from '@syncfusion/ej2-react-charts';
-import { funnelData } from './datasource.ts';
+import { funnelData } from '../datasource.ts';
 
 function App() {
 

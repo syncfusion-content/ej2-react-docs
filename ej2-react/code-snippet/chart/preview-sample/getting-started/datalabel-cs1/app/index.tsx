@@ -6,7 +6,7 @@ import {
   LegendSeriesModel, LineSeries, SeriesCollectionDirective, SeriesDirective, MarkerSettingsModel
 } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
-import { createRoot } from 'react-dom/client';
+import * as ReactDOM from "react-dom";
 import { data } from './datasource';
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
   </ChartComponent>
 }
 export default App;
-createRoot(document.getElementById('charts')).render(<App />);
+const root = ReactDOM.createRoot(document.getElementById('charts'));
+root.render(<App />);
 
 
