@@ -55,3 +55,19 @@ component the popup height with `popupHeight` property in the commandSettings. U
 ## Configure item select
 
 The [itemSelect](../api/inline-ai-assist/commandSettingsModel#itemselect) event is triggered when a command item is selected from the command popup in the Inline AI Assist component.
+
+Below sample demonstrates the usage of command settings in Inline Assist component
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/inline-ai-assist/command-settings/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/inline-ai-assist/command-settings/app/index.tsx %}
+{% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/inline-ai-assist/command-settings/index.css %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/inline-ai-assist/command-settings" %}

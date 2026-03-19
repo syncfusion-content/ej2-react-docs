@@ -1,3 +1,5 @@
+{% raw %}
+
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
@@ -12,21 +14,6 @@ import {
 } from '@syncfusion/ej2-react-charts';
 
 function App() {
-    const nodes = [
-        { id: 'Agricultural Waste' },
-        { id: 'Bio-conversion' },
-        { id: 'Liquid Biofuel' },
-        { id: 'Electricity' },
-        { id: 'Heat' }
-    ];
-
-    const links = [
-        { sourceId: 'Agricultural Waste', targetId: 'Bio-conversion', value: 124.729 },
-        { sourceId: 'Bio-conversion', targetId: 'Liquid Biofuel', value: 0.597 },
-        { sourceId: 'Bio-conversion', targetId: 'Electricity', value: 26.862 },
-        { sourceId: 'Bio-conversion', targetId: 'Heat', value: 280.845 }
-    ];
-
     return (
         <div className="control-pane">
             <div className="control-section">
@@ -67,3 +54,5 @@ function App() {
 
 export default App;
 ReactDOM.render(<App />, document.getElementById('sankey'));
+
+{% endraw %}

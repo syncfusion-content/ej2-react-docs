@@ -27,14 +27,10 @@ Control the size of the Sankey Chart using the `width` and `height` properties. 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/appearance/dimensions-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/appearance/dimensions-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -46,14 +42,10 @@ Use percentage-based dimensions for responsive layouts that adapt to container s
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/appearance/responsive-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/appearance/responsive-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -72,14 +64,10 @@ Customize the background of the Sankey Chart with solid colors or background ima
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/appearance/background-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/appearance/background-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -100,14 +88,10 @@ Customize the border of the Sankey Chart container.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/appearance/border-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/appearance/border-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -128,14 +112,10 @@ Control the spacing around the chart content using margins.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/appearance/margin-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/appearance/margin-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -149,14 +129,10 @@ The Sankey Chart provides multiple built-in themes to customize the visual appea
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/appearance/theme-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/appearance/theme-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 

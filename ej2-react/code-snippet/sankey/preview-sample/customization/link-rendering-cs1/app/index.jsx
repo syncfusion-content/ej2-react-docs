@@ -13,8 +13,6 @@ import {
 } from '@syncfusion/ej2-react-charts';
 
 function App() {
-
-
     const onLinkRendering = (args) => {
         // Customize link appearance during rendering
         if (args.link.value > 50) {

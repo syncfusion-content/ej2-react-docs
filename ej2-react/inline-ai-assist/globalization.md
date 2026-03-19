@@ -21,8 +21,22 @@ The Inline AI Assist can be localized to any culture by defining the text of the
 |thinkingIndicator|Thinking|
 |editingIndicator|Editing|
 
-The below example shows adding the German culture locale(`de-DE`)
-
 ## RTL
 
 RTL provides an option to switch the text direction and layout of the Inline AI Assist component from right to left by setting the [enableRtl](../api/inline-ai-assist#enablertl) property to `true`.
+
+Below sample demonstrates the usage of globalization in Inline Assist component
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/inline-ai-assist/globalization/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/inline-ai-assist/globalization/app/index.tsx %}
+{% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/inline-ai-assist/globalization/index.css %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/inline-ai-assist/globalization" %}

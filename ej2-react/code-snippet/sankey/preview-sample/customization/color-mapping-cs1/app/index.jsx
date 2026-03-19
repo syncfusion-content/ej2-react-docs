@@ -38,4 +38,4 @@ function App() {
 }
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('charts'));
+ReactDOM.render(<App />, document.getElementById('sankey'));

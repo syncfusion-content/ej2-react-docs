@@ -1,3 +1,5 @@
+{% raw %}
+
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
@@ -40,3 +42,5 @@ function App() {
 
 export default App;
 ReactDOM.render(<App />, document.getElementById('sankey'));
+
+{% endraw %}

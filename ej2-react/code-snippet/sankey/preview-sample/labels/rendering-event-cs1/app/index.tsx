@@ -13,21 +13,6 @@ import {
 import { SankeyNodeModel, SankeyLinkModel, SankeyLabelRenderEventArgs } from '@syncfusion/ej2-react-charts';
 
 function App() {
-    const nodes: SankeyNodeModel[] = [
-        { id: 'Agricultural Waste' },
-        { id: 'Bio-conversion' },
-        { id: 'Liquid Biofuel' },
-        { id: 'Electricity' },
-        { id: 'Heat' }
-    ];
-
-    const links: SankeyLinkModel[] = [
-        { sourceId: 'Agricultural Waste', targetId: 'Bio-conversion', value: 124.729 },
-        { sourceId: 'Bio-conversion', targetId: 'Liquid Biofuel', value: 0.597 },
-        { sourceId: 'Bio-conversion', targetId: 'Electricity', value: 26.862 },
-        { sourceId: 'Bio-conversion', targetId: 'Heat', value: 280.845 }
-    ];
-
     const onLabelRendering = (args: SankeyLabelRenderEventArgs) => {
         // Customize label rendering based on node name
         if (args.text === 'Agricultural Waste') {

@@ -31,14 +31,10 @@ Apply consistent styling to all nodes using the `nodeStyle` property:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/customization/node-styling-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/customization/node-styling-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -50,14 +46,10 @@ Configure link appearance using the `linkStyle` property:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/customization/link-styling-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/customization/link-styling-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -71,14 +63,10 @@ Customize individual nodes by setting properties on each node object:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/customization/individual-nodes-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/customization/individual-nodes-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -90,14 +78,10 @@ Customize individual node labels with specific text, styling, and positioning:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/customization/individual-labels-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/customization/individual-labels-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -123,14 +107,10 @@ Map colors to specific categories or value ranges:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/customization/color-mapping-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/customization/color-mapping-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -156,14 +136,10 @@ return (
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/customization/custom-theme-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/customization/custom-theme-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -177,14 +153,10 @@ Create custom tooltip templates for rich content:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/customization/tooltip-template-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/customization/tooltip-template-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -288,14 +260,10 @@ For charts with many nodes and links, optimize rendering performance:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/customization/comprehensive-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/customization/comprehensive-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 

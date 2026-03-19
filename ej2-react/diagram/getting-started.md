@@ -174,9 +174,9 @@ Create and add a `node` (JSON data) with specific position, size, label, and sha
 ### Apply Shape and Style to Node
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> diagram control provides support to render many built-in shapes in diagrams.
-Please refer to [`Shapes`](https://helpej2.syncfusion.com/react/documentation/api/diagram/shapes/) to know about built-in shapes.
+Please refer to [`Shapes`](https://helpej2.syncfusion.com/react/documentation/api/diagram/shapes) to know about built-in shapes.
 
-The appearance of a node can be customized by changing its [`fill`](../api/diagram/shapeStyleModel/#fill-string) color, [`strokeColor`](../api/diagram/shapeStyleModel/#strokecolor-string), [`strokeWidth`](../api/diagram/shapeStyleModel/#strokewidth-number), [`borderColor`](../api/diagram/node/#borderColor-string), [`borderWidth`](../api/diagram/node/#borderWidth-number), [`strokeDashArray`](../api/diagram/shapeStyleModel/#strokeDashArray-number), [`opacity`](../api/diagram/shapeStyleModel/#opacity-number), and [`shadow`](../api/diagram/shapeStyleModel/#shadow-number).
+The appearance of a node can be customized by changing its [`fill`](../api/diagram/shapeStyleModel#fill-string) color, [`strokeColor`](../api/diagram/shapeStyleModel#strokecolor-string), [`strokeWidth`](../api/diagram/shapeStyleModel#strokewidth-number), [`borderColor`](../api/diagram/node#borderColor-string), [`borderWidth`](../api/diagram/node#borderWidth-number), [`strokeDashArray`](../api/diagram/shapeStyleModel#strokeDashArray-number), [`opacity`](../api/diagram/shapeStyleModel#opacity-number), and [`shadow`](../api/diagram/shapeStyleModel#shadow-number).
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -240,7 +240,7 @@ root.render(<App />);
 
 ### Connect Flow Chart Nodes
 
-Connect these nodes by adding a connector using the [`connectors`](../api/diagram/connectorModel/) property of the diagram and refer to the source and target end by using the [`sourceID`](../api/diagram/connectorModel/#sourceid) and [`targetID`](../api/diagram/connectorModel/#targetid) properties.
+Connect these nodes by adding a connector using the [`connectors`](../api/diagram/connectorModel) property of the diagram and refer to the source and target end by using the [`sourceID`](../api/diagram/connectorModel#sourceid) and [`targetID`](../api/diagram/connectorModel#targetid) properties.
 The required nodes and connectors can be added to form a complete flow diagram.
 
 {% tabs %}
@@ -257,7 +257,7 @@ The required nodes and connectors can be added to form a complete flow diagram.
 
  {% previewsample "page.domainurl/code-snippet/diagram/getting-started/flowdiagram-cs1" %}
  
-Default values for all [`nodes`](../api/diagram/nodemodel/) and [`connectors`](../api/diagram/connectorModel/) can be set using the [`getNodeDefaults`](../api/diagram/#getnodedefaults) and [`getConnectorDefaults`](../api/diagram/#getconnectordefaults) properties, respectively. For example, if all nodes have the same width and height, such properties can be moved into `getNodeDefaults`.
+Default values for all [`nodes`](../api/diagram/nodemodel) and [`connectors`](../api/diagram/connectorModel) can be set using the [`getNodeDefaults`](../api/diagram/index_default#getnodedefaults) and [`getConnectorDefaults`](../api/diagram/index_default#getconnectordefaults) properties, respectively. For example, if all nodes have the same width and height, such properties can be moved into `getNodeDefaults`.
 
 
 ## Module Injection
@@ -269,6 +269,7 @@ The diagram component is divided into individual feature-wise modules. To use a 
 * `ConnectorEditing` - Inject this provider to edit the segments for connectors.
 * `ComplexHierarchicalTree` - Inject this provider to use complex hierarchical tree-like structures.
 * `DataBinding` - Inject this provider to populate nodes from given data source.
+* `DiagramCollaboration` - Inject this provider to enable real-time collaborative editing in diagrams.
 * `DiagramContextMenu` - Inject this provider to manipulate context menu.
 * `HierarchicalTree` - Inject this provider to use hierarchical tree-like structures.
 * `LayoutAnimation` - Inject this provider to add animation to layouts.
@@ -291,6 +292,7 @@ import {
   MindMap,
   RadialTree,
   ComplexHierarchicalTree,
+  DiagramCollaboration,
   DataBinding,
   Snapping,
   PrintAndExport,
@@ -316,6 +318,7 @@ export default function App() {
           ComplexHierarchicalTree,
           DataBinding,
           Snapping,
+          DiagramCollaboration,
           PrintAndExport,
           BpmnDiagrams,
           SymmetricLayout,
@@ -382,7 +385,7 @@ Define Employee Information as JSON data. The following code example shows an em
 
 ### Map Data Source
 
-You can configure the above "Employee Information" with the diagram, so that the nodes and connectors are automatically generated using the mapping properties. The following code example demonstrates how to use [`dataSourceSettings`](../api/diagram/datasourcemodel/) to map [`id`](../api/diagram/dataSourceModel/#id) and [`parentId`](../api/diagram/dataSourceModel/#parentid) with the corresponding property names of employee information.
+You can configure the above "Employee Information" with the diagram, so that the nodes and connectors are automatically generated using the mapping properties. The following code example demonstrates how to use [`dataSourceSettings`](../api/diagram/datasourcemodel) to map [`id`](../api/diagram/dataSourceModel#id) and [`parentId`](../api/diagram/dataSourceModel#parentid) with the corresponding property names of employee information.
 
 ```ts
 import { DataManager } from "@syncfusion/ej2-data";
@@ -446,7 +449,7 @@ root.render(<App />);
 
 ### Rendering Layout with Data Source
 
-To create an organizational chart, the [`type`](../api/diagram/layoutType/) of layout should be set as an `OrganizationalChart`. The following code example shows how DataManager is used to generate layouts based on the DataSourceSettings of the Diagram.
+To create an organizational chart, the [`type`](../api/diagram/layoutType) of layout should be set as an `OrganizationalChart`. The following code example shows how DataManager is used to generate layouts based on the DataSourceSettings of the Diagram.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -464,7 +467,7 @@ To create an organizational chart, the [`type`](../api/diagram/layoutType/) of l
 
 ### Customize Employee Appearance
 
-The following code examples indicate how to define the default appearance of nodes and connectors. The [`setNodeTemplate`](../api/diagram/#setnodetemplate) is used to update each node based on employee data.
+The following code examples indicate how to define the default appearance of nodes and connectors. The [`setNodeTemplate`](../api/diagram/index_default#setnodetemplate) is used to update each node based on employee data.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

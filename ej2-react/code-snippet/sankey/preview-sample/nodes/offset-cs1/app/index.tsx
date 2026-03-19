@@ -10,23 +10,9 @@ import {
     SankeyLinkDirective,
     SankeyLinksCollectionDirective
 } from '@syncfusion/ej2-react-charts';
-import { SankeyNodeModel, SankeyLinkModel } from '@syncfusion/ej2-react-charts';
+
 
 function App() {
-    const nodes: SankeyNodeModel[] = [
-        { id: 'Agricultural Waste', offset: -50 },
-        { id: 'Bio-conversion' },
-        { id: 'Liquid Biofuel', offset: 50 },
-        { id: 'Electricity', offset: -30 },
-        { id: 'Heat', offset: 30 }
-    ];
-
-    const links: SankeyLinkModel[] = [
-        { sourceId: 'Agricultural Waste', targetId: 'Bio-conversion', value: 124.729 },
-        { sourceId: 'Bio-conversion', targetId: 'Liquid Biofuel', value: 0.597 },
-        { sourceId: 'Bio-conversion', targetId: 'Electricity', value: 26.862 },
-        { sourceId: 'Bio-conversion', targetId: 'Heat', value: 280.845 }
-    ];
 
     return (
         <div className="control-pane">

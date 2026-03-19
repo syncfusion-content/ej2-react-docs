@@ -97,14 +97,10 @@ Add the Sankey Chart component to `src/App.tsx` using the following code.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/getting-started/initialize-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/getting-started/initialize-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -124,14 +120,10 @@ Now you can add data to the Sankey Chart component by defining nodes and links. 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/getting-started/data-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/getting-started/data-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -148,14 +140,10 @@ Import the above-mentioned modules from the chart package and inject them into t
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/getting-started/tooltip-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/getting-started/tooltip-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -151,7 +151,7 @@ The follow pointer feature enables the tooltip to follow the mouse cursor or tou
 
 Enable this feature by setting the [`followPointer`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/tooltipSettingsModel#followpointer) property to **true**:
 
-```jsx
+```js
 tooltip: { 
     enable: true, 
     followPointer: true 
