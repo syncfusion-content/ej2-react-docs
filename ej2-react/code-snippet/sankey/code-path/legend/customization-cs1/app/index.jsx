@@ -1,8 +1,10 @@
+{% raw %}
+
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
   SankeyComponent,
-  Inject, SankeyExport,
+  Inject, SankeyTooltip, SankeyExport,
   SankeyLegend,
   SankeyNodeDirective,
   SankeyNodesCollectionDirective,
@@ -55,4 +57,6 @@ function App() {
 
 export default App;
 ReactDOM.render(<App />, document.getElementById('sankey'));
+
+{% endraw %}
 

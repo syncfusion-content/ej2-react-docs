@@ -1,0 +1,33 @@
+#loader {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+
+#container {
+    margin: 20px auto;
+}
+
+#editableText {
+    width: 100%;
+    min-height: 120px;
+    max-height: 300px;
+    overflow-y: auto;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid;
+}
+
+.e-inlineaiassist.custom-container {
+    border-color: #e0e0e0;
+    background-color: #f4f4f4;
+    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.e-inlineaiassist.custom-container .e-footer .e-toolbar {
+    background: #d5d5d5;
+}

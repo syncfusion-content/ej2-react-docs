@@ -2,7 +2,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
   SankeyComponent,
-  Inject,
+  Inject, SankeyTooltip,
   SankeyExport,
   SankeyLegend,
   SankeyNodeDirective,
