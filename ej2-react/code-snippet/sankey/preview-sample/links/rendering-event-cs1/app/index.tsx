@@ -13,21 +13,6 @@ import {
 import { SankeyNodeModel, SankeyLinkModel, SankeyLinkRenderEventArgs } from '@syncfusion/ej2-react-charts';
 
 function App() {
-    const nodes: SankeyNodeModel[] = [
-        { id: 'Agricultural Waste' },
-        { id: 'Bio-conversion' },
-        { id: 'Liquid Biofuel' },
-        { id: 'Electricity' },
-        { id: 'Heat' }
-    ];
-
-    const links: SankeyLinkModel[] = [
-        { sourceId: 'Agricultural Waste', targetId: 'Bio-conversion', value: 124.729 },
-        { sourceId: 'Bio-conversion', targetId: 'Liquid Biofuel', value: 0.597 },
-        { sourceId: 'Bio-conversion', targetId: 'Electricity', value: 26.862 },
-        { sourceId: 'Bio-conversion', targetId: 'Heat', value: 280.845 }
-    ];
-
     const linkRendering = (args: SankeyLinkRenderEventArgs) => {
         if (args.link.sourceId === 'Bio-conversion' && args.link.targetId === 'Heat') {
             args.fill = '#FF6B6B';

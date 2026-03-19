@@ -34,14 +34,10 @@ Customize the appearance of all links using the `linkStyle` property to set glob
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/links/customization-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/links/customization-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -59,14 +55,10 @@ Choose curvature values based on your data density and aesthetic preferences:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/links/curvature-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/links/curvature-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -84,14 +76,10 @@ The color type you choose affects how users perceive flow relationships in the d
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/links/colortype-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/links/colortype-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -109,14 +97,10 @@ The thickness visualization makes it easy to understand relative flow quantities
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/links/thickness-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/links/thickness-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -130,14 +114,10 @@ Use the `linkRendering` event to customize link appearance dynamically during th
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/links/rendering-event-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/links/rendering-event-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -16,13 +16,9 @@ You can render the inline toolbar items by using the `items` property in the [in
 
 By default, the inline toolbar renders the `send` item which allows users to send the prompt text.
 
-In the following example, Inline AI Assist component rendered with footer toolbar items such as `send` icon.
-
 ## Adding custom items
 
-You can use the [inlineToolbarSettings](../api/inline-ai-assist#inlinetoolbarsettings) property to add custom items for the inline toolbar in the Inline AI Assist. The custom items will be added with the existing built-in items in the inline toolbar.
-
-> To know more about the items, please refer to the [items](#items) section.
+You can use the [inlineToolbarSettings](../api/inline-ai-assist#inlinetoolbarsettings) property to add custom items for the inline toolbar in the Inline AI Assist. The custom items will be added along with the existing built-in items in the inline toolbar.
 
 ## Items
 
@@ -35,8 +31,6 @@ You can customize the toolbar icons by using the `iconCss` property.
 ### Setting item type
 
 You can change the toolbar item type by using the `type` property. The `type` supports three types of items such as `Button`, `Separator` and `Input`. By default, the type is `Button`.
-
-In the following example, toolbar item type is set as `Button`.
 
 ### Setting text
 
@@ -62,7 +56,21 @@ You can use the `cssClass` property to customize the toolbar item.
 
 You can change the alignment of toolbar item by using the `align` property. It supports three types of alignments such as `Left`, `Center` and `Right`. By default, the value is `Left`.
 
-In the following example, toolbar item type is set with `Right`.
+Below sample demonstrates the usage of custom toolbar items in Inline Assist component
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/inline-ai-assist/inline-toolbar/props/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/inline-ai-assist/inline-toolbar/props/app/index.tsx %}
+{% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/inline-ai-assist/inline-toolbar/props/index.css %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/inline-ai-assist/inline-toolbar/props" %}
 
 ### Enabling tab key navigation in toolbar
 
@@ -73,7 +81,7 @@ To use the `tabIndex` property, set it for each Toolbar item which you want to e
 For example, to enable tab key navigation for two Toolbar items you can use the following code:
 
 {% raw %}
-```ts
+```tsx
 import { InlineAIAssistComponent, InlineToolbarSettingsModel } from '@syncfusion/ej2-react-interactive-chat';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
@@ -103,7 +111,7 @@ With the above code, the user can switch between the two Toolbar items using the
 If you set the `tabIndex` value to 0 for all Toolbar items, tab key navigation will be based on the element order rather than the `tabIndex` values. For example:
 
 {% raw %}
-```ts
+```tsx
 import { InlineAIAssistComponent, InlineToolbarSettingsModel } from '@syncfusion/ej2-react-interactive-chat';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
@@ -134,12 +142,54 @@ In this case, the user can switch between the two Toolbar items using the Tab an
 
 You can use the `template` property to add custom toolbar item in the Inline AI Assist.
 
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/inline-ai-assist/inline-toolbar/template/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/inline-ai-assist/inline-toolbar/template/app/index.tsx %}
+{% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/inline-ai-assist/inline-toolbar/template/index.css %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/inline-ai-assist/inline-toolbar/template" %}
+
 ## Toolbar positioning
 
 You can use the [toolbarPosition](../api/inline-ai-assist/inlineToolbarSettingsModel#toolbarPosition) property to customize footer toolbar position. It has two modes such as `Inline`, and `Bottom`. By default, the toolbarPosition is `Inline`.
 
 By settings toolbarPosition as `Bottom`, footer items will be rendered at the bottom with a dedicated footer area.
 
+Below sample demonstrates the usage of toolbar settings in Inline Assist component
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/inline-ai-assist/inline-toolbar/toolbar-position/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/inline-ai-assist/inline-toolbar/toolbar-position/app/index.tsx %}
+{% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/inline-ai-assist/inline-toolbar/toolbar-position/index.css %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/inline-ai-assist/inline-toolbar/toolbar-position" %}
+
 ## Item click
 
 The [itemClick](../api/inline-ai-assist/inlineToolbarSettingsModel#itemclick) event is triggered when the inline toolbar item is clicked.
+
+{% raw %}
+```tsx
+const inlineToolbarSettings: InlineToolbarSettingsModel = {
+    itemClick: (args: ToolbarItemClickEventArgs) => {
+        // Your actions here
+    }
+}
+
+<InlineAIAssistComponent inlineToolbarSettings={inlineToolbarSettings}/>
+```
+{% endraw %}

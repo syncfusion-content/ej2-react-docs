@@ -45,14 +45,10 @@ The `load` event triggers before the Sankey Chart begins rendering. Use this eve
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/events/load-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/events/load-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -62,14 +58,10 @@ The `loaded` event triggers after the Sankey Chart is completely rendered and re
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/events/loaded-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/events/loaded-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -83,14 +75,10 @@ Handle node click and hover events to respond to user actions and provide intera
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/events/node-interaction-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/events/node-interaction-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -102,14 +90,10 @@ Handle link click and hover events:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/events/link-interaction-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/events/link-interaction-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -125,14 +109,10 @@ The `nodeRendering` event triggers before each node is rendered, allowing dynami
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/customization/node-rendering-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/customization/node-rendering-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -144,14 +124,10 @@ The `linkRendering` event triggers before each link is rendered, allowing dynami
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/customization/link-rendering-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/customization/link-rendering-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -163,14 +139,10 @@ The `labelRendering` event triggers before each label is rendered, allowing dyna
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/customization/label-rendering-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/customization/label-rendering-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -182,14 +154,10 @@ The `legendItemRendering` event triggers before a legend item is rendered, allow
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/customization/legend-rendering-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/customization/legend-rendering-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -201,14 +169,10 @@ Respond when the chart size changes (e.g., window resize):
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/events/size-changed-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/events/size-changed-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -220,14 +184,10 @@ Combine multiple events for comprehensive handling:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/events/complete-handler-cs1/app/index.jsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% raw %}
 {% include code-snippet/sankey/code-path/events/complete-handler-cs1/app/index.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 

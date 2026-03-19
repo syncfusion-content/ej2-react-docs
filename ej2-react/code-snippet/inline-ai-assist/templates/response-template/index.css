@@ -1,0 +1,44 @@
+#loader {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+
+#container {
+    margin: 20px auto;
+}
+
+#editableText {
+    width: 100%;
+    min-height: 120px;
+    max-height: 300px;
+    overflow-y: auto;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid;
+}
+
+.responseItemContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.responseItemContent .response-header {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.responseItemContent .responseContent {
+    margin-left: 35px;
+}
+.responseItemContent .response-header .e-assistview-icon:before {
+    margin-right: 10px;
+}
+#response-item .e-response-item-template .e-toolbar-items {
+    margin-left: 35px;
+}

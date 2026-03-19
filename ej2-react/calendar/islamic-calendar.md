@@ -16,7 +16,7 @@ The Calendar supports Gregorian features such as min/max date, week numbers, sta
 
 By default, the calendar uses **Gregorian** mode. Enable Islamic mode by setting the `calendarMode` property to `Islamic` and injecting the `Islamic` module into the Calendar using the `Inject` directive from `@syncfusion/ej2-react-calendars` as shown below.
 
-```jsx
+```js
 import { Islamic } from '@syncfusion/ej2-react-calendars';
 ```
 

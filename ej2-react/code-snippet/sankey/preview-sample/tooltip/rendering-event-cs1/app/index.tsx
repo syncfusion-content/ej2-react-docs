@@ -11,30 +11,15 @@ import {
     SankeyLinkDirective,
     SankeyLinksCollectionDirective
 } from '@syncfusion/ej2-react-charts';
-import { SankeyNodeModel, SankeyLinkModel, TooltipRenderingEventArgs } from '@syncfusion/ej2-react-charts';
+import { SankeyNodeModel, SankeyLinkModel, SankeyTooltipRenderEventArgs } from '@syncfusion/ej2-react-charts';
 
 function App() {
-    const nodes: SankeyNodeModel[] = [
-        { id: 'Agricultural Waste' },
-        { id: 'Bio-conversion' },
-        { id: 'Liquid Biofuel' },
-        { id: 'Electricity' },
-        { id: 'Heat' }
-    ];
-
-    const links: SankeyLinkModel[] = [
-        { sourceId: 'Agricultural Waste', targetId: 'Bio-conversion', value: 124.729 },
-        { sourceId: 'Bio-conversion', targetId: 'Liquid Biofuel', value: 0.597 },
-        { sourceId: 'Bio-conversion', targetId: 'Electricity', value: 26.862 },
-        { sourceId: 'Bio-conversion', targetId: 'Heat', value: 280.845 }
-    ];
-
-    const onTooltipRendering = (args: TooltipRenderingEventArgs) => {
+    const onTooltipRendering = (args: SankeyTooltipRenderEventArgs) => {
         // Customize tooltip content dynamically
-        if (args.data.name === 'link') {
-            args.content = `Flow: ${args.data.sourceNodeName} → ${args.data.targetNodeName} (${args.data.value})`;
+        if (args.link) {
+            args.text = `Flow: ${args.link.sourceId} → ${args.link.targetId} (${args.link.value})`;
         } else {
-            args.content = `Node: ${args.data.name}`;
+            args.text = `Node: ${args.node.label}`;
         }
     };
 
