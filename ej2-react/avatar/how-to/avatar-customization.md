@@ -14,7 +14,7 @@ The Syncfusion React Avatar component provides a wide range of customization opt
 
 ## Color customization
 
-By default, the Avatar displays with a grey background color. To apply a custom color, add a custom CSS class or directly target the avatar class in your stylesheet.
+By default, the Avatar displays with a Grey background color. To apply a custom color, add a custom CSS class or directly target the avatar class in your stylesheet.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -80,9 +80,11 @@ Avatars can be used with a wide variety of media formats like SVG, font-icons, i
 Render the Avatar component dynamically from a data-source. In this sample we have rendered the Avatar component using a data-source which contains the image source in different sizes dynamically. This is applicable also for data-source from the server or remote data or AJAX. We have also rendered the Avatar using `CSS` property `background-image` and using image tag.
 
 {% tabs %}
+{% raw %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/avatar/react-avatar-cs1/app/index.jsx %}
 {% endhighlight %}
+{% endraw %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/avatar/react-avatar-cs1/app/index.tsx %}
 {% endhighlight %}
