@@ -219,7 +219,7 @@ The split tooltip displays a separate tooltip for each series at the same data p
 
 Enable this feature by setting the [`split`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#split) property to **true**:
 
-```jsx
+```js
 tooltip: { 
     enable: true, 
     split: true 
@@ -243,7 +243,7 @@ The follow pointer feature enables the tooltip to follow the mouse cursor or tou
 
 Enable this feature by setting the [`followPointer`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#followpointer) property to **true**:
 
-```jsx
+```js
 tooltip: { 
     enable: true, 
     followPointer: true 
