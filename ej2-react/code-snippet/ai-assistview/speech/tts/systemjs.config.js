@@ -36,13 +36,17 @@ System.config({
         "@syncfusion/ej2-react-inputs": "syncfusion:ej2-react-inputs/dist/ej2-react-inputs.umd.min.js",
         "@syncfusion/ej2-react-navigations": "syncfusion:ej2-react-navigations/dist/ej2-react-navigations.umd.min.js",
         "@syncfusion/ej2-react-notifications": "syncfusion:ej2-react-notifications/dist/ej2-react-notifications.umd.min.js",
+        "@syncfusion/ej2-markdown-converter": "syncfusion:ej2-markdown-converter/dist/ej2-markdown-converter.umd.min.js",
         "react-dom": "https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js",
         "react": "https://unpkg.com/react@18.2.0/umd/react.production.min.js",
         "marked": "https://cdn.jsdelivr.net/npm/marked/marked.min.js",
         "@google/generative-ai": "https://cdn.jsdelivr.net/npm/@google/generative-ai@0.24.1/dist/index.min.js"
     },
     packages: {
-        'app': { main: 'index', defaultExtension: 'tsx' },
+        'app': {
+            main: 'index',
+            defaultExtension: 'tsx'
+        },
     }
 });
 

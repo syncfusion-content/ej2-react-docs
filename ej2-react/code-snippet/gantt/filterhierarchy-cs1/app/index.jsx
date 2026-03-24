@@ -1,35 +1,72 @@
-let DropData =  [
-    { text: 'Parent', value: 'Parent' },
-    { text: 'Child', value: 'Child' },
-    { text: 'Both', value: 'Both' },
-    { text: 'None', value: 'None' },
-  ];
-  import * as React from 'react';
-  import * as ReactDOM from 'react-dom';
-  import { DropDownListComponent } from "@syncfusion/ej2-react-dropdowns";
-  import { GanttComponent, Inject, Filter } from '@syncfusion/ej2-react-gantt';
-  import { data } from './datasource';
-  function App(){
-      let ganttInstance;
-      const taskFields = {
-      id: 'TaskID',
-      name: 'TaskName',
-      startDate: 'StartDate',
-      duration: 'Duration',
-      progress: 'Progress',
-      parentID: 'ParentID'
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { GanttComponent, Inject, Filter, Toolbar, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { data } from './datasource';
+
+function App() {
+
+    let ganttInstance = null;
+
+    const taskFields = {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        parentID: 'ParentID'
     };
-    function onChange(sel) {
-          let mode= sel.value.toString();
-          ganttInstance.filterSettings.hierarchyMode = mode;
-          ganttInstance.clearFiltering();
-      }
-      return(<div>
-          <DropDownListComponent dataSource={DropData}
-          change={onChange} width= {150} value="Parent"></DropDownListComponent>
-          <GanttComponent dataSource={data} taskFields={taskFields}
-           allowFiltering={true} height = '450px' ref={gantt => ganttInstance = gantt}>
-            <Inject services={[Filter]} />
-          </GanttComponent></div>)
-      };
-  ReactDOM.render(<App />, document.getElementById('root'));
+
+    const splitterSettings = {
+        columnIndex: 3
+    };
+
+    const toolbar = ['Search'];
+
+    const dropData = [
+        { id: 'Parent', mode: 'Parent' },
+        { id: 'Child', mode: 'Child' },
+        { id: 'Both', mode: 'Both' },
+        { id: 'None', mode: 'None' }
+    ];
+
+    const fields = { text: 'mode', value: 'id' };
+
+    function onChange(e) {
+        const mode = e.value;
+        ganttInstance.filterSettings.hierarchyMode = mode;
+        ganttInstance.searchSettings.hierarchyMode = mode;
+        ganttInstance.clearFiltering();
+    }
+
+    return (
+        <div>
+            <div style={{ paddingTop: '7px', paddingBottom: '20px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <label style={{ fontWeight: 'bold' }}>Hierarchy Mode:</label>
+                <DropDownListComponent change={onChange} dataSource={dropData} fields={fields} value="Parent" width="200px" />
+            </div>
+
+            <GanttComponent
+                ref={(g) => (ganttInstance = g)}
+                height="370px"
+                allowFiltering={true}
+                dataSource={data}
+                taskFields={taskFields}
+                toolbar={toolbar}
+                splitterSettings={splitterSettings}
+            >
+                <ColumnsDirective>
+                    <ColumnDirective field="TaskID" headerText="Task ID" textAlign="Left" width="100" />
+                    <ColumnDirective field="TaskName" headerText="Task Name" width="250" />
+                    <ColumnDirective field="StartDate" headerText="Start Date" width="150" />
+                    <ColumnDirective field="Duration" headerText="Duration" width="150" />
+                    <ColumnDirective field="Progress" headerText="Progress" width="150" />
+                </ColumnsDirective>
+
+                <Inject services={[Filter, Toolbar]} />
+            </GanttComponent>
+        </div>
+    );
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));

@@ -1,38 +1,67 @@
-
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent } from '@syncfusion/ej2-react-gantt';
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import { Ajax } from '@syncfusion/ej2-base';
-function App (){
-    const taskFields= {
-    id: 'TaskId',
-    name: 'TaskName',
-    startDate: 'StartDate',
-    duration: 'Duration',
-    dependency: 'Predecessor',
-    parentID: 'parentID',
-  };
-  let ganttInstance;
-   function clickHandler() {
-        let ajax = new Ajax("https://services.syncfusion.com/react/production/api/GanttData","GET");
-        ganttInstance.showSpinner();
-        ajax.send();
-        ajax.onSuccess = function (data) {
-        ganttInstance.hideSpinner();
-        ganttInstance.dataSource = (JSON.parse(data)).Items;
-        ganttInstance.refresh();
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject } from '@syncfusion/ej2-react-gantt';
+import { Toolbar, ExcelExport, Selection } from '@syncfusion/ej2-react-gantt';
+import { Fetch } from '@syncfusion/ej2-base';
+
+function App() {
+
+    let ganttRef = null;
+
+    const data = [];
+
+    const taskFields = {
+        id: 'TaskId',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        child: 'SubTasks'
     };
+
+    const projectStartDate = new Date('02/24/2021');
+    const projectEndDate = new Date('07/20/2021');
+
+    function bind() {
+        const temp = ganttRef;
+        const fetchInst = new Fetch("https://services.syncfusion.com/angular/production/api/GanttData", "GET");
+
+        temp.showSpinner();
+        fetchInst.send();
+
+        fetchInst.onSuccess = function (data) {
+            temp.hideSpinner();
+            temp.dataSource = data.Items;
+            temp.refresh();
+        };
     }
-    return <div>
-        <ButtonComponent onClick={clickHandler}>Bind Data</ButtonComponent>
-        <GanttComponent taskFields={taskFields} projectStartDate='02/24/2019' projectEndDate='07/20/2019'  height = '450px' ref={gantt => ganttInstance = gantt}>
-        </GanttComponent>
+
+    return (
+        <div>
+            <button onClick={bind}>Bind Data</button>
+            <br /><br />
+
+            <GanttComponent
+                id="ganttDefault"
+                height="430px"
+                dataSource={data}
+                taskFields={taskFields}
+                projectStartDate={projectStartDate}
+                projectEndDate={projectEndDate}
+                ref={(g) => { ganttRef = g; }}
+            >
+                <ColumnsDirective>
+                    <ColumnDirective field="TaskId" headerText="Task ID" width="100" />
+                    <ColumnDirective field="TaskName" headerText="Task Name" width="150" />
+                    <ColumnDirective field="StartDate" headerText="Start Date" width="150" />
+                    <ColumnDirective field="Duration" headerText="Duration" width="150" />
+                    <ColumnDirective field="Progress" headerText="Progress" width="150" />
+                </ColumnsDirective>
+
+                <Inject services={[Toolbar, ExcelExport, Selection]} />
+            </GanttComponent>
         </div>
-    };
-ReactDOM.render(<App />, document.getElementById('root'));;
+    );
+}
 
-
-
+ReactDOM.render(<App />, document.getElementById('root'));

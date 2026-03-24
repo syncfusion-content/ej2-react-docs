@@ -1,9 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { ClickEventArgs } from '@syncfusion/ej2-navigations';
-import { GanttComponent, Inject, Toolbar, ToolbarItem, ExcelExport, ColumnsDirective,ColumnDirective, Selection } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, Inject, Toolbar, ExcelExport, ColumnsDirective, ColumnDirective, Selection } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-function App (){
+function App() {
     let ganttInstance;
     const taskFields = {
         id: 'TaskId',
@@ -11,32 +10,32 @@ function App (){
         startDate: 'StartDate',
         duration: 'Duration',
         progress: 'Progress',
-        parentID: 'parentId'
+        parentID: 'parentID'
     };
     const toolbarOptions = ['ExcelExport', 'CsvExport'];
     function toolbarClick(args) {
-       if (args.item.id === 'GanttExport_excelexport') {
-           const excelExportProperties = {
+        if (args.item.id === 'GanttExport_excelexport') {
+            const excelExportProperties = {
                 includeHiddenColumn: true
             };
-           ganttInstance.excelExport(excelExportProperties);
+            ganttInstance.excelExport(excelExportProperties);
         } else if (args.item.id === 'GanttExport_csvexport') {
-            const excelExportProperties= {
+            const excelExportProperties = {
                 includeHiddenColumn: true
             };
-          ganttInstance.csvExport(excelExportProperties);
+            ganttInstance.csvExport(excelExportProperties);
         }
     };
     return (
-        <GanttComponent 
-            id='GanttExport' 
-            dataSource={data} 
-            taskFields={taskFields} 
+        <GanttComponent
+            id='GanttExport'
+            dataSource={data}
+            taskFields={taskFields}
             toolbar={toolbarOptions}
-            toolbarClick={toolbarClick} 
-            allowExcelExport={true} 
-            height='400px' 
-            ref={gantt => ganttInstance = gantt} 
+            toolbarClick={toolbarClick}
+            allowExcelExport={true}
+            height='400px'
+            ref={gantt => ganttInstance = gantt}
             treeColumnIndex={1}
         >
             <ColumnsDirective>

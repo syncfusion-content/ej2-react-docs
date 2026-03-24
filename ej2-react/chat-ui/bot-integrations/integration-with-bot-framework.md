@@ -18,7 +18,7 @@ Before starting, ensure you have the following:
 
 * **Node.js**: Version 16 or higher with npm.
 
-* [Microsoft Azure Account](https://portal.azure.com/#home) : Required to create and host the bot.
+* [Microsoft Azure Account](https://portal.azure.com#home) : Required to create and host the bot.
 
 * **Syncfusion Chat UI**: Package [@syncfusion/ej2-react-interactive-chat](https://www.npmjs.com/package/@syncfusion/ej2-react-interactive-chat) installed.
 
@@ -50,7 +50,7 @@ npm install express axios cors dotenv
 
 ## Configure the Azure Bot
 
-1. In the [Azure Portal](https://portal.azure.com/#home), navigate to your bot resource.
+1. In the [Azure Portal](https://portal.azure.com#home), navigate to your bot resource.
 
 2. Enable the direct line channel:
     * Go to `Channels` > `Direct Line` > `Default-Site`.

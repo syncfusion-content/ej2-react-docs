@@ -10,22 +10,91 @@ domainurl: ##DomainURL##
 
 # Syncfusion React Agent Skills for AI Assistants
 
-This guide introduces **Syncfusion React Skills**, a knowledge package that enables AI assistants (VS Code, Cursor, CodeStudio, etc.) to understand and generate accurate Syncfusion<sup style="font-size:70%">&reg;</sup> React code using official APIs, patterns, and theming guidelines.
+This guide introduces **Syncfusion React Skills**, a knowledge package that enables AI assistants (VS Code, Cursor, CodeStudio, etc.) to understand and generate accurate Syncfusion<sup style="font-size:70%">&reg;</sup> React code using official APIs, patterns, and theming guidelines.
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Skills eliminate common issues with generic AI suggestions by grounding the assistant in accurate Syncfusion<sup style="font-size:70%">&reg;</sup> component usage patterns, API structures, supported features, and project‑specific configuration.
 
+## Key Benefits
+
+1. **Component Usage & API Knowledge** — Curated, Skill‑based guidance that captures how to add, configure, and compose Syncfusion® React components, including key props, events, services/modules to inject (where applicable), and common integration patterns.
+2. **Patterns & Best Practices** — Practical recommendations for API structures, state‑handling approaches, and feature‑injection workflows (for example, paging, sorting, and filtering for data components). All guidance is authored directly within the Skill file rather than being fetched from documentation.
+3. **Design‑System Guidance** — Includes information related to themes, dark/light variants, and icon usage patterns across Syncfusion® React components.
+
 ## Installation
 
-Choose one of the following commands to install [Syncfusion<sup style="font-size:70%">&reg;</sup> React components skills](https://github.com/syncfusion.com/react-ui-components-skills.git) based on your preference. Users can also explore Syncfusion skills from the [marketplace](https://skills.sh/syncfusion/).
+Choose one of the following commands to install [Syncfusion<sup style="font-size:70%">&reg;</sup> React components skills](https://github.com/syncfusion/react-ui-components-skills.git) based on your preference. Users can also explore Syncfusion skills from the [marketplace](https://skills.sh/syncfusion/).
+
+Install all component skills at once (installs to `.agents/skills` directory):
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
 
-// Install all component skills at once
 npx skills add syncfusion/react-ui-components-skills -y
 
-// Choose and install skills interactively from the terminal
+{% endhighlight %}
+{% endtabs %}
+
+Choose and install skills interactively from the terminal:
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npx skills add syncfusion/react-ui-components-skills
+
+{% endhighlight %}
+{% endtabs %}
+
+The terminal will show a list of available skills. Use the arrow keys to navigate, space bar to select the skills you want, and Enter to confirm.
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+ Select skills to install (space to toggle)
+│  ◻ syncfusion-react-3d-chart (Implement Syncfusion React 3D Chart component from the @s...)
+│  ◻ syncfusion-react-3d-circular-chart
+│  ◻ syncfusion-react-accordion
+│  ◻ syncfusion-react-accumulation-chart
+│  ◻ syncfusion-react-ai-assistview
+│  ◻ syncfusion-react-appbar
+│  ◻ syncfusion-react-avatar
+│  ◻ syncfusion-react-barcode
+│  ◻ syncfusion-react-blockeditor
+|  .....
+
+{% endhighlight %}
+{% endtabs %}
+
+Next, select which AI agent you're using and where to store the skills.
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+│  ── Additional agents ─────────────────────────────
+│  Search:  
+│  ↑↓ move, space select, enter confirm
+│
+│ ❯ ○ Augment (.augment/skills)
+│   ○ Claude Code (.claude/skills)
+│   ○ OpenClaw (skills)
+│   ○ CodeBuddy (.codebuddy/skills)
+│   ○ Command Code (.commandcode/skills)
+│   ○ Continue (.continue/skills)
+│   ○ Cortex Code (.cortex/skills)
+│   ○ Crush (.crush/skills)
+|   ....
+
+{% endhighlight %}
+{% endtabs %}
+
+Choose your installation scope (project-level or global), then confirm to complete the installation.
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+◆  Installation scope
+│  ● Project (Install in current directory (committed with your project))
+│  ○ Global
+
+◆  Proceed with installation?
+│  ● Yes / ○ No
 
 {% endhighlight %}
 {% endtabs %}
@@ -34,21 +103,15 @@ This registers the Syncfusion<sup style="font-size:70%">&reg;</sup> skill pack s
 
 To learn more about the Skills CLI, refer [here](https://skills.sh/docs). 
 
-## What’s included
-
-1. **Component Usage & API Knowledge** — Curated, Skill‑based guidance that captures how to add, configure, and compose Syncfusion® React components, including key props, events, services/modules to inject (where applicable), and common integration patterns.
-2. **Patterns & Best Practices** — Practical recommendations for API structures, state‑handling approaches, and feature‑injection workflows (for example, paging, sorting, and filtering for data components). All guidance is authored directly within the Skill file rather than being fetched from documentation.
-3. **Design‑System Guidance** — Includes information related to themes, dark/light variants, and icon usage patterns across Syncfusion® React components.
-
 ## How Syncfusion<sup style="font-size:70%">&reg;</sup> Agent Skills Work
 
-1. **Reads the relevant Skill files based on the user’s query**, with the assistant retrieving component usage patterns, APIs, and best‑practice guidance from the installed Syncfusion® Skills.
+1. **Reads relevant Skill files based on the user’s query**, retrieving component usage patterns, APIs, and best‑practice guidance from installed Syncfusion<sup style="font-size:70%">&reg;</sup> Skills. The assistant initially loads only skill names and descriptions, then dynamically loads the required skill and reference files as needed to provide accurate Syncfusion guidance.
 2. **Enforces Syncfusion<sup style="font-size:70%">&reg;</sup> best practices**, including:
 
    - Using the required feature modules for each component.
    - Injecting applicable component modules (for example, paging, sorting, filtering, and other feature modules).
    - Adding the correct theme and style imports.
-3. **Generates component‑accurate code**, avoiding invalid props or unsupported patterns
+3. **Generates component‑accurate code**, avoiding invalid props or unsupported patterns.
 
 ### Using the AI Assistant
 
@@ -61,4 +124,4 @@ Once skills are installed, the assistant can be used to generate and update Sync
 ## See also
 
 - [Agent Skills Standards](https://agentskills.io/home)
-- [SKills CLI](https://skills.sh/docs)
+- [Skills CLI](https://skills.sh/docs)

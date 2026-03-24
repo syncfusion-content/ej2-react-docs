@@ -1,10 +1,7 @@
-
-
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Toolbar, PdfExport, Selection, PdfQueryCellInfoEventArgs,pdfColumnHeaderQueryCellInfo } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Toolbar, PdfExport, Selection } from '@syncfusion/ej2-react-gantt';
+import { base64Data, editingResources } from './datasource';
 
 function App() {
     const taskFields = {
@@ -26,6 +23,7 @@ function App() {
             ganttChart.pdfExport(exportProperties);
         }
     };
+    let i = 0;
     function pdfColumnHeaderQueryCellInfo(args) {
         let base64Array = [
             { 'TaskName': '/9j/4AAQSkZJRgABAQIAHAAcAAD/4QBiRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAMAAAITAAMAAAABAAEAAAAAAAAAAAAcAAAAAQAAABwAAAAB/9sAQwADAgICAgIDAgICAwMDAwQGBAQEBAQIBgYFBgkICgoJCAkJCgwPDAoLDgsJCQ0RDQ4PEBAREAoMEhMSEBMPEBAQ/9sAQwEDAwMEAwQIBAQIEAsJCxAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQ/8AAEQgAIAAgAwERAAIRAQMRAf/EABgAAQEBAQEAAAAAAAAAAAAAAAYIAAcF/8QALBAAAQQCAgEDAwIHAAAAAAAAAQIDBAUGBxESAAgTIRQVQRYxFzhXdpa01f/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwB7gessOlaiw2zpdS4Ld2cqngOyl2rLbHcqjpLiy6IzylL7/gp/J+RxwQQt68w6mewu7XrfEKC+azXGuiqiO2r2ybqKnhD3stLVy2TyOg/cj5A5IXr4G8Cf9+aD0XT6K2Nb1GlsEgz4OJW8mLKjY5DaeYdRDdUhxC0thSVJUAQoEEEAjwNW2XoFprGLb1E/QEGdBeRJiyoztK08w6hQUhxC0kFKkqAIUCCCAR4CDD9sbV2RWSso19r3BrDGza2NfWWEnOH21T2Yst2MJKUs1ryAhwslSeHFfBHyRwSHnW26tv12qpO5Ier8GtMdYoVZI2qJm01L0iCGPfC0IeqEcKLfyErKT+DwfjwFvqO/l62h/Zl3/oveB0TwJTe2FRYxX5RqrLrj065HUuZRdzXIOQ7GRHc6yLV+YlmVDcgPJS6044AQVHhTY/I58Ao3lmJUeibfRWBZH6bKCFbUL1K7PTtRpTrzjsQRlzJCWqxoPyFISkqWepUQOfj48Ctdj4j/ABA15lGB/cPoP1JSzaj6v2vd+n+oYW17nTsnv1789ew5445H7+Ad+x+oX+qGu/8AA53/AGPA5drHb+D4rru/xSy3nrPG86i5hkwnOXDjbTIkG9lrU4qCqY271W0R0BfJSFI5UvqQQKWW5cOT6NMhxTZO+9d5Fl72ByIYjQrmM9LMo1oQll0iXIMuSH+3Z9BSlaiFBCeOSH//2Q==' },
@@ -44,6 +42,7 @@ function App() {
             i++;
         }
     }
+
     const splitterSettings = {
         columnIndex: 2
     };
@@ -53,9 +52,13 @@ function App() {
     };
     const projectStartDate = new Date('03/24/2019');
     const projectEndDate = new Date('04/30/2019');
-    return <GanttComponent dataSource={base64Data} rowHeight={60} taskFields={taskFields} toolbar={toolbarOptions} pdfColumnHeaderQueryCellInfo={pdfColumnHeaderQueryCellInfo} toolbarClick={toolbarClick} allowPdfExport={true} ref={gantt => ganttChart = gantt}
-        splitterSettings={splitterSettings} labelSettings={labelSettings} resourceFields={resourceFields} resources={editingResources} projectStartDate={projectStartDate} projectEndDate={projectEndDate} height='450px'>
-         <ColumnsDirective>
+
+    return (
+        <div className='control-pane'>
+            <div className='control-section'>
+                <GanttComponent dataSource={base64Data} rowHeight={60} taskFields={taskFields} pdfColumnHeaderQueryCellInfo={pdfColumnHeaderQueryCellInfo} toolbar={toolbarOptions} toolbarClick={toolbarClick} allowPdfExport={true} ref={gantt => ganttChart = gantt}
+                    splitterSettings={splitterSettings} resourceFields={resourceFields} resources={editingResources} projectStartDate={projectStartDate} projectEndDate={projectEndDate} height='450px'>
+                    <ColumnsDirective>
                         <ColumnDirective field='TaskName' headerText='TaskName' headerTemplate={() => {
                             return (<div><img className="image" src="https://ej2.syncfusion.com/angular/demos/assets/gantt/images/Task name.png" width="20" height="20" />
                                 <b className='e-header'>Task Name</b></div>);
@@ -65,7 +68,12 @@ function App() {
                                 <b className='e-header'>Start Date</b></div>);
                         }}></ColumnDirective>
                     </ColumnsDirective>
-        <Inject services={[Toolbar, PdfExport, Selection]} />
-    </GanttComponent>
+                    <Inject services={[Toolbar, PdfExport, Selection]} />
+                </GanttComponent>
+            </div>
+
+        </div>
+    )
+
 };
 ReactDOM.render(<App />, document.getElementById('root'));

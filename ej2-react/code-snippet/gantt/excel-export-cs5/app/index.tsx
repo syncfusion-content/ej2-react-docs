@@ -1,44 +1,44 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
-import { GanttComponent, Inject, Toolbar, ToolbarItem, ExcelExport, ColumnsDirective,ColumnDirective, Selection } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, Inject, Toolbar, ToolbarItem, ExcelExport, ColumnsDirective, ColumnDirective, Selection, ExcelExportProperties, TaskFieldsModel } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-function App (){
-    let ganttInstance: any;
-    const taskFields: any = {
+function App() {
+    let ganttInstance: GanttComponent;
+    const taskFields: TaskFieldsModel = {
         id: 'TaskId',
         name: 'TaskName',
         startDate: 'StartDate',
         duration: 'Duration',
         progress: 'Progress',
-        parentID: 'parentId'
+        parentID: 'parentID'
     };
     const toolbarOptions: ToolbarItem[] = ['ExcelExport', 'CsvExport'];
     function toolbarClick(args: ClickEventArgs): void {
-       if (args.item.id === 'GanttExport_excelexport') {
-           const excelExportProperties: ExcelExportProperties = {
+        if (args.item.id === 'GanttExport_excelexport') {
+            const excelExportProperties: ExcelExportProperties = {
                 includeHiddenColumn: true
             };
-           ganttInstance.excelExport(excelExportProperties);
+            ganttInstance.excelExport(excelExportProperties);
         } else if (args.item.id === 'GanttExport_csvexport') {
             const excelExportProperties: ExcelExportProperties = {
                 includeHiddenColumn: true
             };
-          ganttInstance.csvExport(excelExportProperties);
+            ganttInstance.csvExport(excelExportProperties);
         }
     };
     return (
-        <GanttComponent 
-            id='GanttExport' 
-            dataSource={data} 
-            taskFields={taskFields} 
+        <GanttComponent
+            id='GanttExport'
+            dataSource={data}
+            taskFields={taskFields}
             toolbar={toolbarOptions}
-            toolbarClick={toolbarClick} 
-            allowExcelExport={true} 
-            height='400px' 
-            ref={gantt => ganttInstance = gantt} 
+            toolbarClick={toolbarClick}
+            allowExcelExport={true}
+            height='400px'
+            ref={gantt => ganttInstance = gantt}
             treeColumnIndex={1}
-            >
+        >
             <ColumnsDirective>
                 <ColumnDirective field='TaskId' headerText='Task ID' textAlign='Left' width='100' ></ColumnDirective>
                 <ColumnDirective field='TaskName' headerText='Task Name' width='150'></ColumnDirective>

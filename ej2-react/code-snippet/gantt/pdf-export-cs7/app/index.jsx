@@ -1,35 +1,56 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, Inject, Toolbar, PdfExport, Selection,ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Toolbar, PdfExport, Selection } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
+
 function App() {
-        const taskFields = {
-            id: 'TaskID',
-            name: 'TaskName',
-            startDate: 'StartDate',
-            duration: 'Duration',
-            progress: 'Progress',
-            child: 'subtasks'
-        };
-        let ganttChart;
-        const toolbarOptions = ['PdfExport'];
-   function toolbarClick(args) {
-        if (args.item.text === 'PDF export') {
-        let exportProperties= {
-            showPredecessorLines: true
-        };
-        ganttChart.pdfExport(exportProperties);
-        }
+
+    let ganttChart = null;
+
+    const taskFields = {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        dependency: 'Predecessor',
+        parentID: 'ParentID'
     };
-       return <GanttComponent id='root' dataSource={data} taskFields={taskFields} toolbar={toolbarOptions} toolbarClick={toolbarClick} allowPdfExport={true} height='400px' ref={gantt => ganttChart = gantt}>
-              <ColumnsDirective>
-                    <ColumnDirective field='TaskID' width='50'></ColumnDirective>
-                    <ColumnDirective field='TaskName' headerText='Job Name'></ColumnDirective>
-                    <ColumnDirective field='StartDate'></ColumnDirective>
-                    <ColumnDirective field='Duration' visible={false}></ColumnDirective>
-                    <ColumnDirective field='Progress'></ColumnDirective>
-                </ColumnsDirective>
-            <Inject services={[Toolbar, PdfExport, Selection]}/>
+
+    const toolbar = ['PdfExport'];
+
+    function toolbarClick(args) {
+        if (args.item.id === 'ganttDefault_pdfexport' && ganttChart) {
+            const exportProps = {
+                showPredecessorLines: true
+            };
+            ganttChart.pdfExport(exportProps);
+        }
+    }
+
+    return (
+        <GanttComponent
+            ref={(g) => ganttChart = g}
+            id="ganttDefault"
+            height="430px"
+            dataSource={data}
+            taskFields={taskFields}
+            toolbar={toolbar}
+            toolbarClick={toolbarClick}
+            allowPdfExport={true}
+            treeColumnIndex={1}
+        >
+            <ColumnsDirective>
+                <ColumnDirective field="TaskID" headerText="Task ID" textAlign="Left" width="100" />
+                <ColumnDirective field="TaskName" headerText="Task Name" width="150" />
+                <ColumnDirective field="StartDate" headerText="Start Date" width="150" />
+                <ColumnDirective field="Duration" headerText="Duration" width="150" />
+                <ColumnDirective field="Progress" headerText="Progress" width="150" />
+            </ColumnsDirective>
+
+            <Inject services={[Toolbar, PdfExport, Selection]} />
         </GanttComponent>
-};
+    );
+}
+
 ReactDOM.render(<App />, document.getElementById('root'));

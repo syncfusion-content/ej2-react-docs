@@ -1,29 +1,47 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, Inject, Toolbar, PdfExport, Selection } from '@syncfusion/ej2-react-gantt';
-import { ClickEventArgs } from '@syncfusion/ej2-navigations/src/toolbar/toolbar';
-import { data } from './datasource';
-function App () {
-        const taskFields = {
-            id: 'TaskID',
-            name: 'TaskName',
-            startDate: 'StartDate',
-            duration: 'Duration',
-            progress: 'Progress',
-            child: 'subtasks'
-        };
-        let ganttChart;
-        const toolbarOptions = ['PdfExport'];
-    function toolbarClick(args) {
-        if (args.item.text === 'PDF export') {
-        let exportProperties = {
-           theme:"Fabric"
-        };
-        ganttChart.pdfExport(exportProperties);
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Toolbar, PdfExport, Selection } from '@syncfusion/ej2-react-gantt';
+import { editingData } from './datasource';
+
+function App() {
+
+    const taskFields = {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        parentID: 'ParentID'
+    };
+
+    const toolbar = ['PdfExport'];
+
+    let ganttRef = null;
+
+    const toolbarClick = (args) => {
+        if (args.item.id === 'ganttDefault_pdfexport') {
+            const exportProperties = {
+                theme: 'Fabric'
+            };
+            ganttRef.pdfExport(exportProperties);
         }
     };
-        return <GanttComponent id='root' dataSource={data} taskFields={taskFields} toolbar={toolbarOptions} toolbarClick={toolbarClick} allowPdfExport={true} height='400px' ref={gantt => ganttChart = gantt}>
-            <Inject services={[Toolbar, PdfExport, Selection]}/>
+
+    return (
+        <GanttComponent
+            id="ganttDefault"
+            dataSource={editingData}
+            taskFields={taskFields}
+            toolbar={toolbar}
+            height="430px"
+            treeColumnIndex={1}
+            allowPdfExport={true}
+            toolbarClick={toolbarClick}
+            ref={(g) => (ganttRef = g)}
+        >
+            <Inject services={[Toolbar, PdfExport, Selection]} />
         </GanttComponent>
-};
+    );
+}
+
 ReactDOM.render(<App />, document.getElementById('root'));

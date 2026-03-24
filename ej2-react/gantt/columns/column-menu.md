@@ -16,14 +16,14 @@ To activate the column menu feature, set the [showColumnMenu](https://ej2.syncfu
 
 The following built-in column menu items are available:
 
-| Item            | Description                                 |
-|-----------------|---------------------------------------------|
-| SortAscending   | Sorts the column in ascending order.         |
-| SortDescending  | Sorts the column in descending order.        |
-| AutoFit         | Adjusts the width of the current column.     |
-| AutoFitAll      | Adjusts the width of all columns.            |
-| ColumnChooser   | Allows toggling column visibility .          |
-| Filter          | Displays filter options based on [filterSettings.type](https://ej2.syncfusion.com/react/documentation/api/gantt/filterSettings#type).  |
+| Item           | Description                                                                                                                           |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| SortAscending  | Sorts the column in ascending order.                                                                                                  |
+| SortDescending | Sorts the column in descending order.                                                                                                 |
+| AutoFit        | Adjusts the width of the current column.                                                                                              |
+| AutoFitAll     | Adjusts the width of all columns.                                                                                                     |
+| ColumnChooser  | Allows toggling column visibility .                                                                                                   |
+| Filter         | Displays filter options based on [filterSettings.type](https://ej2.syncfusion.com/react/documentation/api/gantt/filterSettings#type). |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

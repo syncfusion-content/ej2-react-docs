@@ -14,7 +14,7 @@ The footer of the Syncfusion React Chat UI component is the area at the bottom t
 
 ## Show or hide footer
 
-You can control the visibility of the footer using the [showFooter](../api/chat-ui/#showfooter) property. By default, this property is set to `true`.
+You can control the visibility of the footer using the [showFooter](../api/chat-ui#showfooter) property. By default, this property is set to `true`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -53,7 +53,7 @@ cd my-app
 npm start
 ```
 
-Besides using the [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) package runner tool, also create an application from the `npm init`. To begin with the `npm init`, upgrade the `npm` version to `npm 6+`.
+Besides using the [npx](https://docs.npmjs.com/cli/v9/commands/npx?v=true) package runner tool, also create an application from the `npm init`. To begin with the `npm init`, upgrade the `npm` version to `npm 6+`.
 
 ```bash
 npm init react-app my-app
@@ -135,8 +135,8 @@ npm start
 
 The AI AssistView component can be configured to guide user interactions and provide dynamic content from an AI backend.
 
-*   **[promptSuggestions](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptsuggestions)**: Use this property to display a list of predefined suggestion chips that users can click to submit a prompt.
-*   **[promptRequest](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptrequest)**: This event is triggered when a user sends a prompt. You can use its event handler to make an asynchronous API call to an AI service and stream the response back to the component.
+*   **[promptSuggestions](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#promptsuggestions)**: Use this property to display a list of predefined suggestion chips that users can click to submit a prompt.
+*   **[promptRequest](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#promptrequest)**: This event is triggered when a user sends a prompt. You can use its event handler to make an asynchronous API call to an AI service and stream the response back to the component.
 
 The following example demonstrates how to define prompt suggestions and handle the `promptRequest` event to simulate fetching a response from a backend.
 

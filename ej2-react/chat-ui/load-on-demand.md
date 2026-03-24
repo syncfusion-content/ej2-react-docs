@@ -14,7 +14,7 @@ Load on-demand functionality allows messages to be loaded dynamically when users
 
 ## Enabling load on-demand
 
-Use the [loadOnDemand](https://ej2.syncfusion.com/react/documentation/api/chat-ui/#loadondemand) property to enable dynamic message loading. When enabled, the component triggers a loading event when the user scrolls to the top of the message list, allowing implementation of custom data fetching logic.
+Use the [loadOnDemand](https://ej2.syncfusion.com/react/documentation/api/chat-ui#loadondemand) property to enable dynamic message loading. When enabled, the component triggers a loading event when the user scrolls to the top of the message list, allowing implementation of custom data fetching logic.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

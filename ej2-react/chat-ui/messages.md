@@ -14,7 +14,7 @@ The Chat UI allows to add messages using the `MessagesDirective` tag. The messag
 
 ## Basic Message Configuration
 
-You can use the [text](../api/chat-ui/messageModel/#text) property to add message content for the user.  Each message can be configured with options such as id, text, author, timestamp, and more.
+You can use the [text](../api/chat-ui/messageModel#text) property to add message content for the user.  Each message can be configured with options such as id, text, author, timestamp, and more.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -29,7 +29,7 @@ You can use the [text](../api/chat-ui/messageModel/#text) property to add messag
 
 ### Setting pinned
 
-You can use the [isPinned](../api/chat-ui/message/#ispinned) property to highlight the important message in the chat. Once a message is pinned, you can access the options menu to continue the chat or unpin it.
+You can use the [isPinned](../api/chat-ui/message#ispinned) property to highlight the important message in the chat. Once a message is pinned, you can access the options menu to continue the chat or unpin it.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -44,7 +44,7 @@ You can use the [isPinned](../api/chat-ui/message/#ispinned) property to highlig
 
 ### Setting reply to
 
-You can use the [replyTo](../api/chat-ui/message/#replyto) property to respond to the original message preserving context and creating a threaded conversation.
+You can use the [replyTo](../api/chat-ui/message#replyto) property to respond to the original message preserving context and creating a threaded conversation.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -59,7 +59,7 @@ You can use the [replyTo](../api/chat-ui/message/#replyto) property to respond t
 
 ### Setting forward
 
-You can use the [isForwarded](../api/chat-ui/message/#isforwarded) property to specify the user when the message is forwarded.
+You can use the [isForwarded](../api/chat-ui/message#isforwarded) property to specify the user when the message is forwarded.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -89,9 +89,9 @@ You can use the `enableCompactMode` property to align all messages to the left i
 
 ### Define current user
 
-You can use the [author](../api/chat-ui/messageModel/#author) property to identify the current user of the chat. Each user can be configured with options such as id, user, avatarUrl, and more.
+You can use the [author](../api/chat-ui/messageModel#author) property to identify the current user of the chat. Each user can be configured with options such as id, user, avatarUrl, and more.
 
-> The [user](../api/chat-ui/userModel/#user) property displays the user's name, while the [id](../api/chat-ui/userModel/#id) property is necessary to differentiate between multiple users.
+> The [user](../api/chat-ui/userModel#user) property displays the user's name, while the [id](../api/chat-ui/userModel#id) property is necessary to differentiate between multiple users.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -106,7 +106,7 @@ You can use the [author](../api/chat-ui/messageModel/#author) property to identi
 
 #### Setting avatar URL
 
-The [avatarUrl](../api/chat-ui/userModel/#avatarurl) property defines the image URL for the user's avatar. If no URL is provided, the fallback initials from the user’s name will be displayed.
+The [avatarUrl](../api/chat-ui/userModel#avatarurl) property defines the image URL for the user's avatar. If no URL is provided, the fallback initials from the user’s name will be displayed.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -121,7 +121,7 @@ The [avatarUrl](../api/chat-ui/userModel/#avatarurl) property defines the image 
 
 #### Setting avatar background color
 
-The [avatarBgColor](../api/chat-ui/userModel/#avatarbgcolor) property sets a specific background color for user avatars using hexadecimal values. If no color is set, a default background color is applied based on the current theme.
+The [avatarBgColor](../api/chat-ui/userModel#avatarbgcolor) property sets a specific background color for user avatars using hexadecimal values. If no color is set, a default background color is applied based on the current theme.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -136,7 +136,7 @@ The [avatarBgColor](../api/chat-ui/userModel/#avatarbgcolor) property sets a spe
 
 ### Custom CSS Class
 
-The [cssClass](../api/chat-ui/userModel/#cssclass) property allows for custom styling of a chat user's messages and avatar.
+The [cssClass](../api/chat-ui/userModel#cssclass) property allows for custom styling of a chat user's messages and avatar.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -151,7 +151,7 @@ The [cssClass](../api/chat-ui/userModel/#cssclass) property allows for custom st
 
 ### User Presence Status
 
-Use the [statusIconCss](../api/chat-ui/message/#statusiconcss) property to indicate a user's presence status, such as `online`, `offline`, `busy`, or `away`.
+Use the [statusIconCss](../api/chat-ui/message#statusiconcss) property to indicate a user's presence status, such as `online`, `offline`, `busy`, or `away`.
 
 The following predefined classes can be assigned to the `statusIconCss` property:
 
@@ -175,7 +175,7 @@ The following predefined classes can be assigned to the `statusIconCss` property
 
 ## Define timestamp
 
-You can use the [timeStamp](../api/chat-ui/messageModel/#timestamp) property to indicate the date and time of each message being sent. By default it is set to the current date and time when the message is sent.
+You can use the [timeStamp](../api/chat-ui/messageModel#timestamp) property to indicate the date and time of each message being sent. By default it is set to the current date and time when the message is sent.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -190,7 +190,7 @@ You can use the [timeStamp](../api/chat-ui/messageModel/#timestamp) property to 
 
 ### Timestamp Format
 
-The [timeStampFormat](../api/chat-ui/messageModel/#timestampformat) property provides control over the timestamp's display format. The default format is `dd/MM/yyyy hh:mm a`.
+The [timeStampFormat](../api/chat-ui/messageModel#timestampformat) property provides control over the timestamp's display format. The default format is `dd/MM/yyyy hh:mm a`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -205,11 +205,11 @@ The [timeStampFormat](../api/chat-ui/messageModel/#timestampformat) property pro
 
 ## Message Status
 
-The [status](../api/chat-ui/messageModel/#status) property tracks the delivery state of a message (e.g., sent, delivered, read) to manage delivery and read receipts.
+The [status](../api/chat-ui/messageModel#status) property tracks the delivery state of a message (e.g., sent, delivered, read) to manage delivery and read receipts.
 
 ### Setting icon CSS
 
-The [iconCss](../api/chat-ui/messageStatusModel/#iconcss) property customizes the styling of status icons, which helps in visually differentiating between various message statuses.
+The [iconCss](../api/chat-ui/messageStatusModel#iconcss) property customizes the styling of status icons, which helps in visually differentiating between various message statuses.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -224,7 +224,7 @@ The [iconCss](../api/chat-ui/messageStatusModel/#iconcss) property customizes th
 
 ### Setting text
 
-The [text](../api/chat-ui/messageStatusModel/#text) property provides a descriptive text label for the message status, giving users clear context about the message's state.
+The [text](../api/chat-ui/messageStatusModel#text) property provides a descriptive text label for the message status, giving users clear context about the message's state.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -239,7 +239,7 @@ The [text](../api/chat-ui/messageStatusModel/#text) property provides a descript
 
 ### Setting tooltip
 
-The [tooltip](../api/chat-ui/messageStatusModel/#tooltip) property provides additional details about a message's status when a user hovers over the status icon.
+The [tooltip](../api/chat-ui/messageStatusModel#tooltip) property provides additional details about a message's status when a user hovers over the status icon.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -254,7 +254,7 @@ The [tooltip](../api/chat-ui/messageStatusModel/#tooltip) property provides addi
 
 ## Setting auto scroll
 
-You can use the [autoScrollToBottom](../api/chat-ui/#autoscrolltobottom) property to automatically scroll the chats when a new message is received in a conversation. By default, the value is false, requires manual scrolling or the FAB button to quick access to the bottom of the view.
+You can use the [autoScrollToBottom](../api/chat-ui#autoscrolltobottom) property to automatically scroll the chats when a new message is received in a conversation. By default, the value is false, requires manual scrolling or the FAB button to quick access to the bottom of the view.
 
 - By default, it scrolls to bottom for each message being sent or when the scroll is maintained at the bottom in the chat, in order to prevent the automatic scroll for different user messages you can use the `autoScrollToBottom` property.
 
@@ -271,7 +271,7 @@ You can use the [autoScrollToBottom](../api/chat-ui/#autoscrolltobottom) propert
 
 ## Setting suggestions
 
-You can use the [suggestions](../api/chat-ui/#suggestions) property, to add the suggestions in both initial and on-demand which help users to quick-reply options above the input field.
+You can use the [suggestions](../api/chat-ui#suggestions) property, to add the suggestions in both initial and on-demand which help users to quick-reply options above the input field.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -378,7 +378,7 @@ For a full list of supported syntax, refer to the [marked documentation](https:/
 
 ### Configuring Markdown Rendering
 
-By integrating a library like [marked](https://github.com/markedjs/marked), you can parse Markdown content before passing it to the [text](../api/chat-ui/messageModel/#text) property of a message object. This allows for richly formatted text to be displayed in the chat.
+By integrating a library like [marked](https://github.com/markedjs/marked), you can parse Markdown content before passing it to the [text](../api/chat-ui/messageModel#text) property of a message object. This allows for richly formatted text to be displayed in the chat.
 
 > To prevent cross-site scripting (XSS) attacks, always sanitize Markdown output using a library like `DOMPurify` before rendering it as HTML.
 

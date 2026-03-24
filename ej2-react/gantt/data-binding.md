@@ -1,39 +1,44 @@
 ---
 layout: post
-title: Data binding in React Gantt Chart component | Syncfusion
-description: Learn here all about Data binding in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
-control: Data binding 
+title: Data Binding in React Gantt Chart Component | Syncfusion
+description: Learn here all about data binding in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
+control: Data binding 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in React Gantt Chart component
+# Data Binding in React Gantt Chart Component
 
-The Gantt Chart component uses `DataManager` for binding the data source, which supports both RESTful JSON data services and local JavaScript object array. The [dataSource](https://ej2.syncfusion.com/react/documentation/api/gantt#datasource) property can be assigned either with the instance of DataManager or JavaScript object array collection. The Gantt Chart component supports binding two types of data:
-* Local data
-* Remote data
+Data binding connects the React Gantt Chart component to project data sources, enabling dynamic visualization and management of project information. The component supports both local JavaScript arrays and remote server data through the [dataSource](https://ej2.syncfusion.com/react/documentation/api/gantt#datasource) property, which accepts either a `DataManager` instance or JavaScript object array collection.
 
-The following video explains about the types of data binding and how to use it on the Gantt Chart component:
+Understanding data binding implementation ensures the Gantt chart accurately represents and interacts with project data across different scenarios and data structures.
+
+The following video explains data binding in Gantt chart:
 
 {% youtube "https://www.youtube.com/watch?v=MlKuX7TeMtw" %}
 
-## Local data
+## Understanding data binding approaches
 
-To bind local data to Gantt, you can assign a JavaScript object array to the [dataSource](https://ej2.syncfusion.com/react/documentation/api/gantt#datasource) property. The local data source can also be provided as an instance of the `DataManager`.
+The Gantt Chart component uses `DataManager` to support both RESTful JSON data services and local JavaScript object array binding. This flexibility allows you to choose the most appropriate data source method based on project requirements and data architecture.
 
-In local data binding, the data source for rendering the Gantt Chart component is retrieved from the same application locally.
+**Local Data Binding**: Local data binding retrieves project information from the same application environment. This approach provides faster rendering and reduced network dependency, making it ideal for applications with static or cached project data.
 
-The following are the two types of data binding possible with the Gantt Chart component:
+**Remote Data Binding**: Remote data binding connects to external servers or databases to fetch project information dynamically. This method supports real-time data synchronization and scalable data management for enterprise-level applications.
 
-* Hierarchical data binding.
-* Self-referential data binding (Flat data).
+The component supports two primary data structure types for organizing project hierarchies:
+• **Hierarchical data binding**: Uses nested object structures where parent tasks contain child arrays
+• **Self-referential data binding**: Uses flat data structures with ID fields to establish parent-child relationships
 
-### Hierarchical data binding
+## Local data binding implementation
 
-The [child](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#child) property is used to map the child records in hierarchical data.
+Local data binding assigns JavaScript object arrays directly to the [dataSource](https://ej2.syncfusion.com/react/documentation/api/gantt#datasource) property. The data source can be provided as a raw array or wrapped in a DataManager instance for consistent data operations.
 
-The following code example shows how to bind the hierarchical local data into the Gantt Chart component.
+### Hierarchical data structure
+
+Hierarchical data binding organizes complex parent-child relationships through nested object structures. Each parent task contains multiple child tasks through the [child](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#child) field mapping, creating natural tree structures that represent project hierarchies.
+
+This approach works well for data sources that maintain inherent parent-child relationships in their structure, such as JSON responses from APIs that provide nested task collections.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -49,12 +54,11 @@ The following code example shows how to bind the hierarchical local data into th
         
 {% previewsample "page.domainurl/code-snippet/gantt/databinding-cs1" %}
 
-### Self-referential data binding (Flat data)
+### Self-referential data structure
 
-The Gantt Chart component can be bound with self-referential data by mapping the data source field values to the [id](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#id) and [parentID](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#parentid) properties.
+Self-referential data binding uses flat data structures where tasks reference their relationships through ID fields. Map unique task identifiers to the [id](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#id) field and parent identifiers to the [parentID](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#parentid) field to establish task hierarchies without nested objects.
 
-* ID field: This field contains unique values used to identify each individual task and it is mapped to the [id](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#id) property.
-* Parent ID field: This field contains values that indicate parent tasks and it is mapped to the [parentID](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#parentid) property.
+This approach enables the component to reconstruct hierarchical tree structures from relational data, making it ideal for database-driven applications where parent-child relationships are maintained through foreign key references.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -70,9 +74,11 @@ The Gantt Chart component can be bound with self-referential data by mapping the
         
 {% previewsample "page.domainurl/code-snippet/gantt/databinding-cs2" %}
 
-## Remote data
+**Data structure requirements**: When using hierarchical data, link child records to their parent using the `child` property mapping. For self-referential data, ensure each task's parent-child relationship is properly defined by mapping `id` and `parentID` fields correctly to enable proper hierarchy reconstruction.
 
-To bind remote data to the Gantt Chart component, assign service data as an instance of `DataManager` to the [dataSource](https://ej2.syncfusion.com/react/documentation/api/gantt#datasource) property.
+## Remote data binding implementation
+
+Remote data binding assigns service endpoints as `DataManager` instances to the [dataSource](https://ej2.syncfusion.com/react/documentation/api/gantt#datasource) property. This enables real-time data synchronization with external servers, databases, or web services.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -88,43 +94,49 @@ To bind remote data to the Gantt Chart component, assign service data as an inst
         
 {% previewsample "page.domainurl/code-snippet/gantt/databinding-cs3" %}
 
-### URL Adaptor
+**Server Communication**: DataManager connects to various backend services including RESTful endpoints, OData services, and custom web APIs. Configure the appropriate URL and adaptor type based on the target server architecture and data format requirements.
 
-In Gantt, we can fetch data from SQL database using `ADO.NET` Entity Data Model and update the changes on CRUD action to the server by using `DataManager` support. To communicate with the remote data we are using `UrlAdaptor` of DataManager property to call the server method and get back resultant data in JSON format. We can know more about `UrlAdaptor` from [here](https://ej2.syncfusion.com/react/documentation/data/adaptors?no-cache=1).
+### URL Adaptor implementation
 
-> Please refer the [link](https://learn.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/models-data/creating-model-classes-with-the-entity-framework-cs) to create the `ADO.NET` Entity Data Model in Visual Studio,
+URL Adaptor enables communication with SQL databases through ADO.NET Entity Data Model, supporting CRUD operations through server method calls that return JSON formatted data. This adaptor facilitates seamless data exchange between the Gantt Chart component and server-side data management systems.
 
-We can define data source for Gantt as instance of DataManager using `url` property of DataManager. Please Check the below code snippet to assign data source to Gantt.
+The URL Adaptor handles data requests by calling configured server endpoints and processing responses in standardized JSON formats. This approach supports comprehensive data operations including create, read, update, and delete functionalities.
 
-```ts
-
+```typescript
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent } from '@syncfusion/ej2-react-gantt';
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
-class App extends React.Component<{}, {}>{
-    public taskFields: any = {
-    id: 'TaskId',
-    name: 'TaskName',
-    startDate: 'StartDate',
-    duration: 'Duration',
-    dependency: 'Predecessor',
-    child: 'SubTasks'
-  };
-  public dataSource: DataManager = new DataManager({
-    url: '/Home/UrlDatasource',
-    adaptor: new UrlAdaptor
-  });
-    render() {
-        return <GanttComponent dataSource={this.dataSource} taskFields={this.taskFields} height = '450px'>
-        </GanttComponent>
-    }
+
+function App(){
+    const taskFields = {
+        id: 'TaskId',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        dependency: 'Predecessor',
+        parentID: 'ParentID'
+    };
+    const dataSource = new DataManager({
+        url: '/Home/UrlDatasource',
+        adaptor: new UrlAdaptor
+    });
+    const columns = [
+        { field: 'TaskName', headerText: 'Task Name', width: '250', clipMode: 'EllipsisWithTooltip' },
+        { field: 'StartDate' },
+        { field: 'Duration' }
+    ];
+    return <GanttComponent dataSource={dataSource} taskFields={taskFields} columns={columns} 
+            height='430px'>
+           </GanttComponent>
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
 ```
 
-```ts
+**Server-side endpoint implementation**:
+
+```typescript
 GanttDataSourceEntities db = new GanttDataSourceEntities();
 public ActionResult UrlDatasource(DataManagerRequest dm)
 {
@@ -132,520 +144,347 @@ public ActionResult UrlDatasource(DataManagerRequest dm)
     var count = DataList.Count();
     return Json(new { result = DataList, count = count });
 }
-
 ```
 
-### Remote Save Adaptor
+**Server integration**: URL Adaptor requires proper ADO.NET Entity Data Model configuration to establish database connections and entity mappings for seamless data operations.
 
-You may need to perform all Gantt Actions on the client-side except the CRUD operations, which should be interacted with the server-side to persist data. It can be achieved in Gantt by using **RemoteSaveAdaptor**.
+### Load-on-demand implementation
 
-Datasource must be set to the **json** property and set **RemoteSaveAdaptor** to the **adaptor** property. CRUD operations can be mapped to the server-side using the **batchUrl** properties.
+Load-on-demand rendering displays child records dynamically when parent nodes expand, optimizing performance for large hierarchical datasets. Configure a remote service URL in the DataManager instance and define the [hasChildMapping](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#hasChildMapping) property in taskFields to enable this functionality.
 
-You can use the following code example to use **RemoteSaveAdaptor** in Gantt.
+**Core concept**: The `hasChildMapping` property maps data source field names that indicate whether records contain child elements. This enables the component to display expand icons and manage dynamic loading without pre-loading entire hierarchical structures.
 
-```ts
+**Loading behavior**: When [loadChildOnDemand](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#loadchildondemand) is enabled, root nodes render in collapsed state initially. Expanding root nodes triggers child data loading from remote servers, with subsequent expand/collapse actions using locally cached data for improved performance.
 
+**Virtualization integration**: Combined `enableVirtualization` and `loadChildOnDemand` settings render only current viewport root nodes in collapsed state, further optimizing memory usage and rendering performance for large datasets.
+
+```typescript
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent } from '@syncfusion/ej2-react-gantt';
-import { DataManager, RemoteSaveAdaptor } from '@syncfusion/ej2-data';
+import { GanttComponent, Inject, VirtualScroll, Selection } from '@syncfusion/ej2-react-gantt';
+import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 
-class App extends React.Component<{}, {}>{
-    public taskFields: any = {
+function App(){
+    const taskFields = {
         id: 'taskId',
         name: 'taskName',
         startDate: 'startDate',
+        endDate: 'endDate',
         duration: 'duration',
         progress: 'progress',
-        parentID: 'parentID',
-        dependency: 'predecessor',
-    },
-   toolbar: ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll', 'Indent', 'Outdent'],
-   editSettings: {
-        allowAdding: true,
-        allowEditing: true,
-        allowDeleting: true,
-        allowTaskbarEditing: true,
-        showDeleteConfirmDialog: true
-    },
-  public dataSource: DataManager = new DataManager({
-    batchUrl: '/Home/BatchUpdate',
-    adaptor: new RemoteSaveAdaptor
-  });
-    render() {
-        return <GanttComponent dataSource={this.dataSource} taskFields={this.taskFields} height = '450px'>
-        </GanttComponent>
-    }
+        hasChildMapping: "isParent",
+        parentID: "parentID"
+    };
+    const dataManager = new DataManager({
+        url: 'https://services.syncfusion.com/react/production/api/GanttLoadOnDemand',
+        adaptor: new WebApiAdaptor,
+        crossDomain: true
+    });
+    const tooltipSettings = {
+        showTooltip: true
+    };
+    const splitterSettings = {
+        columnIndex: 3
+    };
+    const columns = [
+        { field: 'taskId', width: 80 },
+        { field: 'taskName', headerText: 'Name', width: '200', clipMode: 'EllipsisWithTooltip' },
+        { field: 'startDate' },
+        { field: 'duration' },
+        { field: 'progress' },
+    ];
+    const projectStartDate = new Date('01/02/2000');
+    const projectEndDate = new Date('01/06/2002');
+
+    return <GanttComponent dataSource={dataManager} taskFields={taskFields} 
+            loadChildOnDemand={true} enableVirtualization={true} allowSelection={true}
+            columns={columns} treeColumnIndex={1} height='450px' 
+            projectStartDate={projectStartDate} projectEndDate={projectEndDate}
+            highlightWeekends={true} taskbarHeight={20} rowHeight={40} 
+            tooltipSettings={tooltipSettings} splitterSettings={splitterSettings}>
+            <Inject services={[VirtualScroll, Selection]} />
+           </GanttComponent>
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
 ```
 
-The following code example describes the CRUD operations handled at server-side.
+**Server-side data model implementation**:
 
-```
-    public IActionResult BatchUpdate([FromBody] CRUDModel batchmodel)
+```typescript
+// TreeData.cs
+public class TreeData
+{
+    [System.ComponentModel.DataAnnotations.Key]
+    public int taskId { get; set; }
+    public string taskName { get; set; }
+    public DateTime startDate { get; set; }
+    public DateTime endDate { get; set; }
+    public string duration { get; set; }
+    public int progress { get; set; }
+    public int? parentID { get; set; }
+    public string predecessor { get; set; }
+    public bool? isParent { get; set; }
+    public bool? IsExpanded { get; set; }
+
+    public static List<TreeData> tree = new List<TreeData>();
+
+    public static List<TreeData> GetTree()
     {
-        public class CRUDModel
+        if (tree.Count == 0)
         {
-            public List<GanttDataSource> added { get; set; }
-            public List<GanttDataSource> changed { get; set; }
-            public List<GanttDataSource> deleted { get; set; }
-            public object key { get; set; }
-            public string action { get; set; }
-            public string table { get; set; }
+            Random rand = new Random();
+            var x = 0;
+            int duration = 0;
+            DateTime startDate = new DateTime(2000, 1, 3, 8, 0, 0);
+            for (var i = 1; i <= 50; i++)
+            {
+                startDate = startDate.AddDays(i == 1 ? 0 : 7);
+                DateTime childStartDate = startDate;
+                TreeData Parent = new TreeData()
+                {
+                    taskId = ++x,
+                    taskName = "Task " + x,
+                    startDate = startDate,
+                    endDate = childStartDate.AddDays(26),
+                    duration = "20",
+                    progress = rand.Next(100),
+                    predecessor = null,
+                    isParent = true,
+                    parentID = null,
+                    IsExpanded = false
+                };
+                tree.Add(Parent);
+                for (var j = 1; j <= 4; j++)
+                {
+                    childStartDate = childStartDate.AddDays(j == 1 ? 0 : duration + 2);
+                    duration = 5;
+                    tree.Add(new TreeData()
+                    {
+                        taskId = ++x,
+                        taskName = "Task " + x,
+                        startDate = childStartDate,
+                        endDate = childStartDate.AddDays(5),
+                        duration = duration.ToString(),
+                        progress = rand.Next(100),
+                        parentID = Parent.taskId,
+                        predecessor = (j > 1 ? (x - 1) + "FS" : ""),
+                        isParent = false,
+                        IsExpanded = false
+                    });
+                }
+            }
         }
+        return tree;
+    }
+}
+```
 
-        public IActionResult BatchUpdate([FromBody] CRUDModel batchmodel)
-        {
-            if (batchmodel.changed != null)
-            {
-                for (var i = 0; i < batchmodel.changed.Count(); i++)
-                {
-                    var value = batchmodel.changed[i];
-                    GanttDataSource result = DataList.Where(or => or.taskId == value.taskId).FirstOrDefault();
-                    result.taskId = value.taskId;
-                    result.taskName = value.taskName;
-                    result.startDate = value.startDate;
-                    result.endDate = value.endDate;
-                    result.duration = value.duration;
-                    result.progress = value.progress;
-                    result.parentID = value.parentID;
-                }
-            }
-            if (batchmodel.deleted != null)
-            {
-                for (var i = 0; i < batchmodel.deleted.Count(); i++)
-                {
-                    DataList.Remove(DataList.Where(or => or.taskId.Equals(batchmodel.deleted[i].taskId)).FirstOrDefault());
-                    RemoveChildRecords(batchmodel.deleted[i].taskId);
-                }
-            }
-            if (batchmodel.added != null)
-            {
-                for (var i = 0; i < batchmodel.added.Count(); i++)
-                {
-                    DataList.Add(batchmodel.added[i]);
-                }
-            }
-            return Json(new { addedRecords = batchmodel.added, changedRecords = batchmodel.changed, deletedRecords = batchmodel.deleted });
-        }
+**Server API endpoint for load-on-demand**:
 
-       public void RemoveChildRecords(int key)
-        {
-            var childList = DataList.Where(x => x.parentID == key).ToList();
-            foreach (var item in childList)
-            {
-                DataList.Remove(item);
-                RemoveChildRecords(item.taskId);
-            }
-        }
-        return Json(new { addedRecords = batchmodel.added, changedRecords = batchmodel.changed, deletedRecords = batchmodel.deleted });
+```typescript
+// GanttController.cs
+public object Get()
+{
+    DataOperations operation = new DataOperations();
+    var queryString = Request.Query;
+    if (TreeData.tree.Count == 0)
+        TreeData.tree = TreeData.GetTree();
+
+    if (queryString.Keys.Contains("$filter") && !queryString.Keys.Contains("$top"))
+    {
+        StringValues filter;
+        queryString.TryGetValue("$filter", out filter);
+        int? fltr = (filter[0].ToString().Split("eq")[1] == " null") ?
+            null : Int32.Parse(filter[0].ToString().Split("eq")[1]);
+        IQueryable<TreeData> data1 = TreeData.tree.Where(f => f.parentID == fltr).AsQueryable();
+        return new { result = data1.ToList(), count = data1.Count() };
     }
 
+    StringValues expandVal;
+    queryString.TryGetValue("$expand", out expandVal);
+    if (queryString.Keys.Contains("$expand") && expandVal.Count > 0)
+    {
+        var state = expandVal[0].ToString().Split(",")[0];
+        var taskId = int.Parse(expandVal[0].ToString().Split(",")[1]);
+        var task = TreeData.tree.FirstOrDefault(ds => ds.taskId == taskId);
+        if (state == "ExpandingAction") task.IsExpanded = true;
+        else if (state == "CollapsingAction") task.IsExpanded = false;
+    }
+
+    List<TreeData> data = TreeData.tree.ToList();
+    data = data.Where(p => p.parentID == null).ToList();
+    return new { result = data, count = data.Count };
+}
+```
+**Recursive children handling**
+
+```typescript
+private void AppendChildren(List<TreeData> ChildRecords, TreeData ParentItem,
+        Dictionary<string, List<TreeData>> GroupData, List<TreeData> data)
+{
+    string TaskId = ParentItem.taskId.ToString();
+    var index = data.IndexOf(ParentItem);
+    foreach (var Child in ChildRecords)
+    {
+        string ParentId = Child.parentID.ToString();
+        if (TaskId == ParentId && (bool)ParentItem.IsExpanded)
+        {
+            if (data.IndexOf(Child) == -1)
+                ((IList)data).Insert(++index, Child);
+            if (GroupData.ContainsKey(Child.taskId.ToString()))
+            {
+                var DeepChildRecords = GroupData[Child.taskId.ToString()];
+                if (DeepChildRecords?.Count > 0)
+                    AppendChildren(DeepChildRecords, Child, GroupData, data);
+            }
+        }
+    }
+}
 ```
 
-### Load child on demand
+**CRUD operations implementation**:
 
-To render child records on demand, assign a remote service URL in the instance of DataManager to the Url property. To interact with the remote data source, provide the endpoint URL and also define the [hasChildMapping](https://ej2.syncfusion.com/react/documentation/api/gantt/taskfields#haschildmapping) property in taskFields of Gantt Chart.
+```typescript
+[HttpPost]
+public object Post([FromBody] TreeData[] value)
+{
+    for (var i = 0; i < value.Length; i++)
+    {
+        TreeData.tree.Insert(0, value[i]);
+    }
+    return value;
+}
 
-The <code>hasChildMapping</code> property maps the field name in the data source, which denotes whether the current record holds any child records. This is useful internally to show expand icon while binding child data on demand.
+[HttpPut]
+public object Put([FromBody] TreeData[] value)
+{
+    if (value.Length == 1 && value[0].isParent == true)
+    {
+        UpdateDependentRecords(value[0]);
+    }
+    for (var i = 0; i < value.Length; i++)
+    {
+        var ord = value[i];
+        TreeData val = TreeData.tree.FirstOrDefault(or => or.taskId == ord.taskId);
+        if (val != null)
+        {
+            val.taskId = ord.taskId;
+            val.taskName = ord.taskName;
+            val.endDate = ord.endDate;
+            val.startDate = ord.startDate;
+            val.duration = ord.duration;
+            val.predecessor = ord.predecessor;
+        }
+    }
+    return value;
+}
 
-When [loadChildOnDemand](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#loadchildondemand) is disabled, all the root nodes are rendered in a collapsed state at initial load. On expanding the root node, the child nodes will be loaded from the remote server.
-
-When <code>enableVirtualization</code> is enabled and <code>loadChildOnDemand</code> is disabled, only the current viewport root nodes are rendered in a collapsed state.
-
-When a root node is expanded, its child nodes are rendered and maintained in a collection locally, such that on consecutive expand/collapse actions on the root node, the child nodes are loaded locally instead of from the remote server.
-
-When the <code>loadChildOnDemand</code> is enabled, parent records are rendered in an expanded state.
-
-```ts
-
-import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
-import { Selection, VirtualScroll } from '@syncfusion/ej2-react-gantt';
-import * as React from 'react';
-
-
-function App() {
-
-    const dataSource: DataManager = new DataManager({
-    url: 'https://services.syncfusion.com/react/production/api/GanttLoadOnDemand',
-    adaptor: new WebApiAdaptor,
-    crossDomain: true
-  });
-  const taskFields: any = {
-    id: 'taskId',
-    name: 'taskName',
-    startDate: 'startDate',
-    endDate: 'endDate',
-    duration: 'duration',
-    progress: 'progress',
-    hasChildMapping: 'isParent',
-    parentID: 'parentID',
-    expandState:'IsExpanded'
-  };
-  const projectStartDate: Date = new Date('01/02/2000');
-  const projectEndDate: Date = new Date('12/01/2002');
-    return <GanttComponent id='LoadOnDemand' dataSource={dataSource} treeColumnIndex={1}
-          taskFields={taskFields} enableVirtualization={true} loadChildOnDemand={false} height='460px'
-          projectStartDate={projectStartDate} projectEndDate={projectEndDate}>
-          <ColumnsDirective>
-            <ColumnDirective field='taskId' width='80' ></ColumnDirective>
-            <ColumnDirective field='taskName' headerText='Job Name' width='250' clipMode='EllipsisWithTooltip'></ColumnDirective>
-            <ColumnDirective field='startDate'></ColumnDirective>
-            <ColumnDirective field='duration'></ColumnDirective>
-            <ColumnDirective field='progress'></ColumnDirective>
-          </ColumnsDirective>
-          <Inject services={[Selection, VirtualScroll]} />
-        </GanttComponent>
-};
-export default App;
-
+[HttpDelete("{id:int}")]
+[Route("Orders/{id:int}")]
+public object Delete(int id)
+{
+    TreeData.tree.Remove(TreeData.tree.FirstOrDefault(or => or.taskId == id));
+    return Json(id);
+}
 ```
 
-The following code example describes handling of Load on demand at server end.
+**Hierarchical update utility methods**:
 
-```ts
+```typescript
+private void UpdateDependentRecords(TreeData ParentItem)
+{
+    var data = TreeData.tree.Where(p => p.parentID == ParentItem.taskId).ToList();
+    var previousData = TreeData.tree.Where(p => p.taskId == ParentItem.taskId).ToList();
+    var previousStartDate = previousData[0].startDate;
+    var previousEndDate = previousData[0].endDate;
+    double sdiff = (double)GetTimeDifference((DateTime)previousStartDate, (DateTime)ParentItem.startDate);
+    double ediff = (double)GetTimeDifference((DateTime)previousEndDate, (DateTime)ParentItem.endDate);
+    GetRootChildRecords(ParentItem);
+    for(var i=0; i<ChildRecords.Count;i++)
+    {
+        ChildRecords[i].startDate = ((DateTime)ChildRecords[i].startDate).AddSeconds(sdiff);
+        ChildRecords[i].endDate = ((DateTime)ChildRecords[i].endDate).AddSeconds(ediff);
+    }
+}
 
-    public object Get()
+private void GetRootChildRecords(TreeData ParentItem)
+{
+    var currentchildRecords = TreeData.tree.Where(p => p.parentID == ParentItem.taskId).ToList();
+    for (var i = 0; i < currentchildRecords.Count; i++) {
+        var currentRecord = currentchildRecords[i];
+        ChildRecords.Add(currentRecord);
+        if (currentRecord.isParent == true)
         {
-            DataOperations operation = new DataOperations();
-            var queryString = Request.Query;
-            if (tree.Count == 0)
-                tree = TreeData.GetTree();
-            if (queryString.Keys.Contains("$filter") && !queryString.Keys.Contains("$top"))
-            {
-                StringValues filter;
-                queryString.TryGetValue("$filter", out filter);
-                int? fltr;
-                if (filter[0].ToString().Split("eq")[1] == " null")
-                {
-                    fltr = null;
-                }
-                else
-                {
-                    fltr = Int32.Parse(filter[0].ToString().Split("eq")[1]);
-                }
-                IQueryable<TreeData> data1 = tree.Where(f => f.parentID == fltr).AsQueryable();
-                return new { result = data1.ToList(), count = data1.Count() };
-            }
-            StringValues expand;
-            queryString.TryGetValue("$expand", out expand);
-            if (queryString.Keys.Contains("$expand")) // setting the ExpandStateMapping property whether is true or false
-            {
-                if (expand[0].ToString().Split(",")[0] == "ExpandingAction")
-                {
-                    var val = TreeData.GetTree().Where(ds => ds.taskId == int.Parse(expand[0].ToString().Split(",")[1])).FirstOrDefault();
-                    val.IsExpanded = true;
-                }
-                else if (expand[0].ToString().Split(",")[0] == "CollapsingAction")
-                {
-                    var val = TreeData.GetTree().Where(ds => ds.taskId == int.Parse(expand[0].ToString().Split(",")[1])).FirstOrDefault();
-                    val.IsExpanded = false;
-                }
-            }
-            List<TreeData> data = tree.ToList();
-            if (queryString.Keys.Contains("$select"))
-            {
-                data = (from ord in tree
-                        select new TreeData
-                        {
-                            parentID = ord.parentID
-                        }
-                        ).ToList();
-                return data;
-            }
-            data = data.Where(p => p.parentID == null).ToList();
-            int count = data.Count;
-
-            if (queryString.Keys.Contains("$inlinecount"))
-            {
-                StringValues Skip;
-                StringValues Take;
-                StringValues loadchild;
-
-                int skip = (queryString.TryGetValue("$skip", out Skip)) ? Convert.ToInt32(Skip[0]) : 0;
-                int top = (queryString.TryGetValue("$top", out Take)) ? Convert.ToInt32(Take[0]) : data.Count();
-
-                var GroupData = TreeData.GetTree().ToList().GroupBy(rec => rec.parentID)
-                           .Where(g => g.Key != null).ToDictionary(g => g.Key?.ToString(), g => g.ToList());
-                foreach (var Record in data.ToList())
-                {
-                    if (GroupData.ContainsKey(Record.taskId.ToString()))
-                    {
-                        var ChildGroup = GroupData[Record.taskId.ToString()];
-                        if (ChildGroup?.Count > 0)
-                            AppendChildren(ChildGroup, Record, GroupData, data);
-                    }
-                }
-                if (expand.Count > 0 && expand[0].ToString().Split(",")[0] == "CollapsingAction")
-                {
-                    string IdMapping = "taskId";
-                    List<WhereFilter> CollapseFilter = new List<WhereFilter>();
-                    CollapseFilter.Add(new WhereFilter() { Field = IdMapping, value = expand[0].ToString().Split(",")[1], Operator = "equal" });
-                    var CollapsedParentRecord = operation.PerformFiltering(data, CollapseFilter, "and");
-                    var index = data.Cast<object>().ToList().IndexOf(CollapsedParentRecord.Cast<object>().ToList()[0]);
-                    skip = index;
-                }
-                else if (expand.Count > 0 && expand[0].ToString().Split(",")[0] == "ExpandingAction")
-                {
-                    string IdMapping = "taskId";
-                    List<WhereFilter> ExpandFilter = new List<WhereFilter>();
-                    ExpandFilter.Add(new WhereFilter() { Field = IdMapping, value = expand[0].ToString().Split(",")[1], Operator = "equal" });
-                    var ExpandedParentRecord = operation.PerformFiltering(data, ExpandFilter, "and");
-                    var index = data.Cast<object>().ToList().IndexOf(ExpandedParentRecord.Cast<object>().ToList()[0]);
-                    skip = index;
-                }
-                return new { result = data.Skip(skip).Take(top), count = data.Count };
-            }
-            else
-            {
-                return TreeData.GetTree();
-            }
+            GetRootChildRecords(currentRecord);
         }
-        private void AppendChildren(List<TreeData> ChildRecords, TreeData ParentItem, Dictionary<string, List<TreeData>> GroupData, List<TreeData> data)
-        {
+    }
+}
 
-            var queryString = Request.Query;
-            string TaskId = ParentItem.taskId.ToString();
-
-            var index = data.IndexOf(ParentItem);
-            foreach (var Child in ChildRecords)
-            {
-                string ParentId = Child.parentID.ToString();
-                if (TaskId == ParentId && (bool)ParentItem.IsExpanded)
-                {
-                    if (data.IndexOf(Child) == -1)
-                        ((IList)data).Insert(++index, Child);
-                    if (GroupData.ContainsKey(Child.taskId.ToString()))
-                    {
-                        var DeepChildRecords = GroupData[Child.taskId.ToString()];
-                        if (DeepChildRecords?.Count > 0)
-                            AppendChildren(DeepChildRecords, Child, GroupData, data);
-                    }
-                }
-            }
-        }
-
-        // GET: api/Orders/
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        [HttpPost]
-        public object Post([FromBody] TreeData[] value)
-        {
-            //handle insert action
-            for (var i = 0; i < value.Length; i++)
-            {
-                tree.Insert(0, value[i]);
-            }
-            return value;
-        }
-
-        //// PUT: api/Orders
-        [HttpPut]
-
-        public object Put([FromBody] TreeData[] value)
-        {
-            //handle edit action
-            if (value.Length == 1 && value[0].isParent == true)
-            {
-                UpdateDependentRecords(value[0]);
-            }
-            for (var i = 0; i < value.Length; i++) {
-                var ord = value[i];
-                TreeData val = tree.Where(or => or.taskId == ord.taskId).FirstOrDefault();
-                val.taskId = ord.taskId;
-                val.taskName = ord.taskName;
-                val.endDate = ord.endDate;
-                val.startDate = ord.startDate;
-                val.duration = ord.duration;
-                val.predecessor = ord.predecessor;
-            }
-            
-            return value;
-        }
-
-        private void UpdateDependentRecords(TreeData ParentItem)
-        {
-            var data = tree.Where(p => p.parentID == ParentItem.taskId).ToList();
-            var previousData = tree.Where(p => p.taskId == ParentItem.taskId).ToList();
-            var previousStartDate = previousData[0].startDate;
-            var previousEndDate = previousData[0].endDate;
-            double sdiff = (double)GetTimeDifference((DateTime)previousStartDate, (DateTime)ParentItem.startDate);
-            double ediff = (double)GetTimeDifference((DateTime)previousEndDate, (DateTime)ParentItem.endDate);
-            GetRootChildRecords(ParentItem);
-            for(var i=0; i<ChildRecords.Count;i++)
-            {
-                ChildRecords[i].startDate = ((DateTime)ChildRecords[i].startDate).AddSeconds(sdiff);
-                ChildRecords[i].endDate = ((DateTime)ChildRecords[i].endDate).AddSeconds(ediff);
-            }
-        }
-
-        private void GetRootChildRecords(TreeData ParentItem)
-        {
-            var currentchildRecords = tree.Where(p => p.parentID == ParentItem.taskId).ToList();
-            for (var i = 0; i < currentchildRecords.Count; i++) {
-                var currentRecord = currentchildRecords[i];
-                ChildRecords.Add(currentRecord);
-                if (currentRecord.isParent == true)
-                {
-                    GetRootChildRecords(currentRecord);
-                }
-            }
-        }
-
-        public object GetTimeDifference(DateTime sdate, DateTime edate)
-        {
-            return new DateTime(edate.Year, edate.Month, edate.Day, edate.Hour, edate.Minute, edate.Second, DateTimeKind.Utc).Subtract(new DateTime(sdate.Year, sdate.Month, sdate.Day, sdate.Hour, sdate.Minute, sdate.Second, DateTimeKind.Utc)).TotalSeconds;
-        }
-
-
-        // DELETE: api/ApiWithActions
-        [HttpDelete("{id:int}")]
-        [Route("Orders/{id:int}")]
-        public object Delete(int id)
-        {
-            //handle delete action
-            tree.Remove(tree.Where(or => or.taskId == id).FirstOrDefault());
-            return Json(id);
-        }
-        public class CRUDModel<T> where T : class
-        {
-
-            public TreeData Value;
-            public int Key { get; set; }
-            public int RelationalKey { get; set; }
-            public List<TreeData> added { get; set; }
-            public List<TreeData> changed { get; set; }
-            public List<TreeData> deleted { get; set; }
-        }
-        public class TreeData
-        {
-            public static List<TreeData> tree = new List<TreeData>();
-            [System.ComponentModel.DataAnnotations.Key]
-            public int taskId { get; set; }
-            public string taskName { get; set; }
-            public DateTime startDate { get; set; }
-            public DateTime endDate { get; set; }
-            public string duration { get; set; }
-            public int progress { get; set; }
-            public int? parentID { get; set; }
-            public string predecessor { get; set; }
-            public bool? isParent { get; set; }
-            public bool? IsExpanded { get; set; }
-            public static List<TreeData> GetTree()
-            {
-                if (tree.Count == 0)
-                {
-                    Random rand = new Random();
-                    var x = 0;
-                    int duration = 0;
-                    DateTime startDate = new DateTime(2000, 1, 3, 08, 00, 00);
-                    for (var i = 1; i <= 50; i++)
-                    {
-                        startDate = startDate.AddDays(i == 1 ? 0 : 7);
-                        DateTime childStartDate = startDate;
-                        TreeData Parent = new TreeData()
-                        {
-                            taskId = ++x,
-                            taskName = "Task " + x,
-                            startDate = startDate,
-                            endDate = childStartDate.AddDays(26),
-                            duration = "20",
-                            progress = rand.Next(100),
-                            predecessor = null,
-                            isParent = true,
-                            parentID = null,
-                            IsExpanded = false
-                        };
-                        tree.Add(Parent);
-                        for (var j = 1; j <= 4; j++)
-                        {
-                            childStartDate = childStartDate.AddDays(j == 1 ? 0 : duration + 2);
-                            duration = 5;
-                            tree.Add(new TreeData()
-                            {
-                                taskId = ++x,
-                                taskName = "Task " + x,
-                                startDate = childStartDate,
-                                endDate = childStartDate.AddDays(5),
-                                duration = duration.ToString(),
-                                progress = rand.Next(100),
-                                parentID = Parent.taskId,
-                                predecessor = (j > 1 ? (x - 1) + "FS" : ""),
-                                isParent = false,
-                                IsExpanded = false
-                            });
-                        }
-                    }
-                }
-                return tree;
-            }
-        }
-
+public object GetTimeDifference(DateTime sdate, DateTime edate)
+{
+    return new DateTime(edate.Year, edate.Month, edate.Day, edate.Hour, edate.Minute, edate.Second, DateTimeKind.Utc)
+        .Subtract(new DateTime(sdate.Year, sdate.Month, sdate.Day, sdate.Hour, sdate.Minute, sdate.Second, DateTimeKind.Utc)).TotalSeconds;
+}
 ```
 
-### Limitations
+**Load-on-demand limitations**:
+- Filtering, sorting, and searching operations are not supported in load-on-demand mode.
+- Only self-referential data types are supported with remote data binding.
+- Load-on-demand requires validated data source structures.
 
-* Filtering, sorting  and searching are not supported in load on demand.
-* Only Self-Referential type data is supported with remote data binding in Gantt Chart.
-* Load-on-demand supports only the validated data source.
+### Advanced server communication
 
-### Sending additional parameters to the server
+**Additional parameter transmission**: Pass extra parameters to server endpoints using the [addParams](https://ej2.syncfusion.com/documentation/api/data/query#addparams) method of the [Query](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#query) class. Server-side implementations inherit these parameters through DataManager class extensions, enabling custom data filtering and processing logic.
 
-We can pass additional parameters using `addParams` method of [Query](https://ej2.syncfusion.com/react/documentation/api/gantt#query) class. In server side we have inherited and shown the additional parameter value in Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager class itself. We pass an additional parameter in load time using [load](https://ej2.syncfusion.com/react/documentation/api/gantt#load) event. We can also pass additional parameter to the CRUD model. Please Check the below code snippet to send additional parameter to Gantt.
-
-```ts
-
+```typescript
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, Edit, Toolbar } from '@syncfusion/ej2-react-gantt';
 import { DataManager, UrlAdaptor, Query } from '@syncfusion/ej2-data';
-class App extends React.Component<{}, {}>{
-    public taskFields: any = {
-    id: 'TaskId',
-    name: 'TaskName',
-    startDate: 'StartDate',
-    duration: 'Duration',
-    dependency: 'Predecessor',
-    parentID: 'parentID',
-  };
-    this.editOptions = {
-    allowAdding: true,
-    allowEditing: true,
-    allowDeleting: true
-   };
-    this.toolbarOptions = ['Add', 'Edit', 'Delete', 'Cancel', 'Update', 'ExpandAll', 'CollapseAll'];
-  public dataSource: DataManager = new DataManager({
-    url: 'http://localhost:50039/Home/UrlDatasource',
-    adaptor: new UrlAdaptor,
-    batchUrl: 'http://localhost:50039/Home/BatchSave',
-  });
-  load(args) {
-      this.ganttInstance.query = new Query().addParams('ej2Gantt', "test");
-    }
-    render() {
-        return <GanttComponent dataSource={this.dataSource} taskFields={this.taskFields} editSettings={this.editOptions} toolbar={this.toolbarOptions} load={this.load.bind(this)} height = '450px' ref={gantt => this.ganttInstance = gantt}>
-         <Inject services={[Edit, Toolbar]}/>
-        </GanttComponent>
-    }
+
+function App(){
+    let ganttInstance;
+    const taskFields = {
+        id: 'TaskId',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        dependency: 'Predecessor',
+        child: 'SubTasks'
+    };
+    const dataSource = new DataManager({
+        url: 'http://localhost:50039/Home/UrlDatasource',
+        adaptor: new UrlAdaptor,
+        batchUrl: 'http://localhost:50039/Home/BatchSave',
+    });
+    const editSettings = {
+        allowAdding: true,
+        allowEditing: true,
+        allowDeleting: true
+    };
+    const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'ExpandAll', 'CollapseAll'];
+    
+    const load = (args) => {
+        ganttInstance.query = new Query().addParams('ej2Gantt', "test");
+    };
+    
+    return <GanttComponent dataSource={dataSource} taskFields={taskFields} 
+            editSettings={editSettings} toolbar={toolbar} load={load}
+            height='430px' ref={gantt => ganttInstance = gantt}>
+            <Inject services={[Edit, Toolbar]} />
+           </GanttComponent>
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
 ```
 
-```ts
+**Server-side parameter handling**:
 
+```typescript
 namespace URLAdaptor.Controllers
 {
     public class HomeController : Controller
     {
-        ...///
-        //inherit the class to show age as property of DataManager
         public class Test : DataManagerRequest
         {
             public string ej2Gantt { get; set; }
@@ -662,37 +501,25 @@ namespace URLAdaptor.Controllers
             return Json(new { result = DataList, count = count }, JsonRequestBehavior.AllowGet);
         }
 
-        ...///
-
         public class ICRUDModel<T> where T : class
         {
-
             public object key { get; set; }
-
             public T value { get; set; }
-
             public List<T> added { get; set; }
-
             public List<T> changed { get; set; }
-
             public List<T> deleted { get; set; }
-
             public IDictionary<string, object> @params { get; set; }
-
         }
-        ...///
     }
 }
-
 ```
 
-You can find the full sample from here.
+**HTTP error handling**: Server-side exceptions during data operations can be captured client-side through the [actionFailure](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#actionfailure) event. This enables proper error messaging and graceful degradation when server communication fails.
 
-#### Handling HTTP error
-
-During server interaction from the Gantt, some server-side exceptions may occur, and you can acquire those error messages or exception details in client-side using the [actionFailure](https://ej2.syncfusion.com/react/documentation/api/gantt#actionfailure) event.
-
-The argument passed to the `actionFailure` event contains the error details returned from the server.
+**Data validation considerations**:
+- **Missing parentID validation**: Tasks without valid parentID references may display incorrectly or appear as root tasks unexpectedly
+- **Duplicate task ID prevention**: Ensure unique taskID values to prevent data operation failures or rendering issues
+- **Date format validation**: Task dates must follow supported formats (ISO or configured formats) to prevent parsing errors
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -708,9 +535,9 @@ The argument passed to the `actionFailure` event contains the error details retu
         
 {% previewsample "page.domainurl/code-snippet/gantt/databinding-cs4" %}
 
-#### Binding with Ajax
+**Fetch API integration**: Use Gantt [dataSource](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#datasource) property to bind data from external Fetch requests. This approach benefits scenarios requiring asynchronous server data retrieval, utilizing the `onSuccess` event for effective data loading management.
 
-You can use Gantt [dataSource](https://ej2.syncfusion.com/react/documentation/api/gantt#datasource) property to bind the data source to Gantt from external Ajax request. In the below code we have fetched the data source from the server with the help of Ajax request and provided that to `dataSource` property by using `onSuccess` event of the Ajax.
+To show or hide the loading indicator during fetch, call [showSpinner](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#showspinner) method before sending the request and [hideSpinner](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#hidespinner) method after receiving the data.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -726,19 +553,17 @@ You can use Gantt [dataSource](https://ej2.syncfusion.com/react/documentation/ap
         
 {% previewsample "page.domainurl/code-snippet/gantt/databinding-cs5" %}
 
->Note: If you bind the dataSource from this way, then it acts like a local dataSource. So you cannot perform any server side crud actions.
+**Fetch binding limitation**: Data sources bound through Fetch requests act as local data sources, preventing server-side CRUD operations. This approach suits read-only scenarios or applications with separate data modification workflows.
 
-## Split task
+## Split task implementation
 
-The `Split-task` feature allows you to split a task or interrupt the work during planned or unforeseen circumstances.
-We can split the task either in load time or dynamically, by defining the segments either in hierarchical or self-referential way.
+Split task functionality allows task interruption during planned or unforeseen circumstances, enabling work discontinuation and resumption scenarios. Tasks can be split during load time or dynamically through segment definitions in hierarchical or self-referential approaches.
 
-### Hierarchical
+### Hierarchical split task configuration
 
-To split a task at load time in hierarchical way, we need to define the segment details in datasource and this field should be mapped by using the [taskFields.segments](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#segments) property.
+Split tasks at load time using hierarchical structures by defining segment details in the data source and mapping through the [taskFields.segments](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#segments) property. Each task contains segment arrays specifying split periods and durations.
 
-```ts
-
+```typescript
 [
     {
         TaskID: 1, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50,
@@ -748,7 +573,6 @@ To split a task at load time in hierarchical way, we need to define the segment 
         ]
     }
 ]
-
 ```
 
 {% tabs %}
@@ -765,22 +589,20 @@ To split a task at load time in hierarchical way, we need to define the segment 
         
 {% previewsample "page.domainurl/code-snippet/gantt/databinding-cs6" %}
 
-### Self-referential
+### Self-referential split task configuration
 
-We can also define segment details as a flat data and this collection can be mapped by using [segmentData](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#segmentdata) property. The segment id field of this collection is mapped by using the [taskFields.segmentId](https://ej2.syncfusion.com/react/documentation/api/gantt/taskfields#segmentid) property.
+Define segment details as flat data collections mapped through the [segmentData](https://ej2.syncfusion.com/react/documentation/api/gantt#segmentdata) property. The segment ID field connects segments to their parent tasks through the [taskFields.segmentId](https://ej2.syncfusion.com/react/documentation/api/gantt/taskfields#segmentid) property mapping.
 
-```ts
-
-  taskFields: {
+```typescript
+taskFields: {
     segmentId: "segmentId"
-  },
-  segmentData: [
+},
+segmentData: [
     { segmentId: 1, StartDate: new Date("02/04/2019"), Duration: 2 },
     { segmentId: 1, StartDate: new Date("02/05/2019"), Duration: 5 },
     { segmentId: 4, StartDate: new Date("04/02/2019"), Duration: 2 },
     { segmentId: 4, StartDate: new Date("04/04/2019"), Duration: 2 }
-  ],
-
+],
 ```
 
 {% tabs %}
@@ -797,26 +619,68 @@ We can also define segment details as a flat data and this collection can be map
         
 {% previewsample "page.domainurl/code-snippet/gantt/databinding-cs7" %}
 
->Note: Segment id field contains id of a task which should be split at load time.
+**Segment ID mapping**: The segment ID field contains references to tasks that should be split at load time, enabling the component to associate segment collections with their corresponding parent tasks.
 
-## Improve performance by disabling validations
+## Expand state management
 
-The [autoCalculateDateScheduling](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#autocalculatedatescheduling) property can help you reduce the time taken for the Gantt chart to render on the initial load. When this API is enabled, parent-child validation, data validation, and predecessor validation are restricted, allowing the Gantt chart to load more quickly. Since we are disabling the validations, data source provided to gantt should have all data such as start date, end date, duration, as proper data.
+Control parent task expand status in the Gantt chart by defining the [expandStateMapping](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields#expandstate) property. This property maps to data source field names indicating whether parent tasks should render in expanded or collapsed states based on mapped boolean values.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/virtualscroll-cs2/app/index.jsx %}
+{% include code-snippet/gantt/databinding-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/virtualscroll-cs2/app/index.tsx %}
+{% include code-snippet/gantt/databinding-cs8/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/virtualscroll-cs2/index.html %}
+{% include code-snippet/gantt/databinding-cs8/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/gantt/virtualscroll-cs2" %}
+{% previewsample "page.domainurl/code-snippet/gantt/databinding-cs8" %}
 
-## Limitations
+**State persistence**: ExpandStateMapping ensures parent tasks maintain their intended expanded or collapsed states across data operations, providing consistent user experience and preserving intended data visualization structures.
 
-Gantt has the support for both Hierarchical and Self-Referential data binding. When rendering the Gantt control with SQL database, we suggest you to use the Self-Referential data binding to maintain the parent-child relation. Because the complex json structure is very difficult to manage it in SQL tables, we need to write a complex queries and we have to write a complex algorithm to find out the proper record details while updating/deleting the inner level task in Gantt data source. We cannot implement both data binding for Gantt control and this is not a recommended way. If  both child and parentID are mapped, the records will not render properly because, when task id of a record defined in the hierarchy structure is assigned to parent id of another record, in such case the records will not properly render. As the self-referential will search the record with particular id in flat data only, not in the inner level of records. If we map the parentID field,  it will be prioritized and Gantt will be rendered based on the parentID values.
+## programmatically update datasource
+
+You can programmatically update the Gantt chart data source using the [updateDataSource](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#updatedatasource) method which takes two arguments where the first argument is the new `dataSource` and the second argument is an optional configuration object with `projectStartDate` and `projectEndDate` to define the project timeline.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/databinding-cs9/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/databinding-cs9/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/databinding-cs9/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+## Display custom message for empty records
+
+You can display a custom message when no data is available by defining an empty record template using `<ng-template>` and assigning it to `treeGrid.grid.emptyRecordTemplate` during the `load` event in the component.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/databinding-cs10/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/databinding-cs10/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/databinding-cs10/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+## Data binding limitations
+
+**Simultaneous binding restrictions**: Gantt supports either hierarchical or self-referential data binding approaches, but implementing both simultaneously in SQL database contexts creates architectural conflicts and rendering inconsistencies.
+
+**Complex JSON management**: Complex JSON structures in SQL tables require intricate query algorithms for accurate task updates or deletions within nested hierarchical levels, potentially impacting performance and data integrity.
+
+**Dual mapping rendering issues**: Mapping both child and parentID fields simultaneously can cause rendering conflicts, particularly when hierarchy structure task IDs link as parent IDs to other records, resulting in display inconsistencies.
+
+**Self-referential search limitations**: Self-referential search functions operate only within self-referential data collections for specific IDs, without searching nested hierarchical levels, limiting search scope and effectiveness.
+
+**Parent ID field precedence**: When parentID fields are mapped, they take rendering precedence over other relationship definitions, potentially affecting Gantt chart display based on parent-child data prioritization.

@@ -1,8 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, ColumnsDirective, ColumnDirective, PdfQueryCellInfoEventArgs, pdfColumnHeaderQueryCellInfo, Inject, Toolbar, PdfExport, Selection } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, ColumnsDirective, ColumnDirective, PdfExportProperties, pdfColumnHeaderQueryCellInfo, Inject, Toolbar, PdfExport, Selection } from '@syncfusion/ej2-react-gantt';
 import { base64Data, editingResources } from './datasource';
-import { PdfColor } from '@syncfusion/ej2-pdf-export';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 
 
