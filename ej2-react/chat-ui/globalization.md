@@ -38,7 +38,7 @@ The following example demonstrates how to load the German (`de`) culture and app
 
 ## RTL
 
-Right-to-Left (RTL) support provides an option to render the Chat UI component with a right-to-left layout and text direction. This is essential for users of languages such as Arabic, Hebrew, and Persian. You can enable this feature by setting the [enableRtl](../api/chat-ui/#enablertl) property to `true`.
+Right-to-Left (RTL) support provides an option to render the Chat UI component with a right-to-left layout and text direction. This is essential for users of languages such as Arabic, Hebrew, and Persian. You can enable this feature by setting the [enableRtl](../api/chat-ui#enablertl) property to `true`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Integrate Azure OpenAI with React AI AssistView Component
 
-The AI AssistView component integrates with [Azure OpenAI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai) to enable advanced conversational AI features in your React applications. The component acts as a user interface, where user prompts are sent to the Azure OpenAI service via API calls, providing natural language understanding and context-aware responses.
+The AI AssistView component integrates with [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai) to enable advanced conversational AI features in your React applications. The component acts as a user interface, where user prompts are sent to the Azure OpenAI service via API calls, providing natural language understanding and context-aware responses.
 
 ## Prerequisites
 
@@ -34,7 +34,7 @@ To install the marked library, run `npm install marked --save` in your project d
 
 ## Configure Azure OpenAI
 
-1. Log in to the [Azure Portal](https://portal.azure.com/#home) and navigate to your Azure OpenAI resource. 
+1. Log in to the [Azure Portal](https://portal.azure.com#home) and navigate to your Azure OpenAI resource. 
 
 2. Under resource Management, select keys and endpoint to retrieve your API key and endpoint URL.
 

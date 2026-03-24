@@ -14,7 +14,7 @@ The Syncfusion AI AssistView for React allows for customization of its dimension
 
 ## Setting Component Width
 
-The [width](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#width) property allows you to define the width of the AI AssistView container. You can set this value as a string, using either pixels (e.g., `"500px"`) or a percentage (e.g., `"50%"`). By default, the width is set to `100%`, allowing it to fill its parent container.
+The [width](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#width) property allows you to define the width of the AI AssistView container. You can set this value as a string, using either pixels (e.g., `"500px"`) or a percentage (e.g., `"50%"`). By default, the width is set to `100%`, allowing it to fill its parent container.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -29,7 +29,7 @@ The [width](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#wi
 
 ## Setting Component Height
 
-The [height](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#height) property allows you to define the height of the AI AssistView container. This value can be a string, specified in pixels (e.g., `"600px"`) or as a percentage (e.g., `"100%"`). The default value is `100%`.
+The [height](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#height) property allows you to define the height of the AI AssistView container. This value can be a string, specified in pixels (e.g., `"600px"`) or as a percentage (e.g., `"100%"`). The default value is `100%`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -44,7 +44,7 @@ The [height](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#h
 
 ## Applying Custom CSS Styles
 
-For more advanced style customizations, you can use the [cssClass](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#cssclass)  property to apply one or more custom CSS classes to the AI AssistView component's root element.
+For more advanced style customizations, you can use the [cssClass](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#cssclass)  property to apply one or more custom CSS classes to the AI AssistView component's root element.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

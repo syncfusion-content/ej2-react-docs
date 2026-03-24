@@ -80,13 +80,15 @@ Avatars can be used with a wide variety of media formats like SVG, font-icons, i
 Render the Avatar component dynamically from a data-source. In this sample we have rendered the Avatar component using a data-source which contains the image source in different sizes dynamically. This is applicable also for data-source from the server or remote data or AJAX. We have also rendered the Avatar using `CSS` property `background-image` and using image tag.
 
 {% tabs %}
-{% raw %}
 {% highlight js tabtitle="index.jsx" %}
+{% raw %}
 {% include code-snippet/avatar/react-avatar-cs1/app/index.jsx %}
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
+{% raw %}
 {% include code-snippet/avatar/react-avatar-cs1/app/index.tsx %}
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/avatar/react-avatar-cs1/index.html %}

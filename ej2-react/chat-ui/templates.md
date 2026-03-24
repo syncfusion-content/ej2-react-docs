@@ -14,7 +14,7 @@ Elevate the user experience by fully customizing the Syncfusion React Chat UI co
 
 ## Empty chat template
 
-The [emptyChatTemplate](../api/chat-ui/#emptychattemplate) property allows you to define custom content for the chat interface when it is empty. Use this template to display welcome messages, branding, or helpful instructions, creating an engaging starting point for users.
+The [emptyChatTemplate](../api/chat-ui#emptychattemplate) property allows you to define custom content for the chat interface when it is empty. Use this template to display welcome messages, branding, or helpful instructions, creating an engaging starting point for users.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -29,7 +29,7 @@ The [emptyChatTemplate](../api/chat-ui/#emptychattemplate) property allows you t
 
 ## Message template
 
-Customize the appearance of every chat message with the [messageTemplate](../api/chat-ui/#messagetemplate) property. This template gives you full control over the layout, styling, and design of messages. The template context provides the `message` object and its `index`, allowing you to apply conditional styling or logic based on message content or position.
+Customize the appearance of every chat message with the [messageTemplate](../api/chat-ui#messagetemplate) property. This template gives you full control over the layout, styling, and design of messages. The template context provides the `message` object and its `index`, allowing you to apply conditional styling or logic based on message content or position.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -44,7 +44,7 @@ Customize the appearance of every chat message with the [messageTemplate](../api
 
 ## Time break template
 
-Improve conversation organization with the [timeBreakTemplate](../api/chat-ui/#timebreaktemplate) property. This template lets you customize the time-based separators that appear between messages, such as "Today," "Yesterday," or specific dates, enhancing readability. The context includes the `messageDate` for precise formatting.
+Improve conversation organization with the [timeBreakTemplate](../api/chat-ui#timebreaktemplate) property. This template lets you customize the time-based separators that appear between messages, such as "Today," "Yesterday," or specific dates, enhancing readability. The context includes the `messageDate` for precise formatting.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -59,7 +59,7 @@ Improve conversation organization with the [timeBreakTemplate](../api/chat-ui/#t
 
 ## Typing users template
 
-Enhance user experience by customizing the typing indicator with the [typingUsersTemplate](../api/chat-ui/#typinguserstemplate) property. You can modify its appearance and positioning to provide clear, real-time feedback. The template's context includes a list of `users`, so you can display who is currently typing.
+Enhance user experience by customizing the typing indicator with the [typingUsersTemplate](../api/chat-ui#typinguserstemplate) property. You can modify its appearance and positioning to provide clear, real-time feedback. The template's context includes a list of `users`, so you can display who is currently typing.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -74,7 +74,7 @@ Enhance user experience by customizing the typing indicator with the [typingUser
 
 ## Suggestion template
 
-Create visually engaging and functional quick replies using the [suggestionTemplate](../api/chat-ui/#suggestiontemplate) property. This template allows you to customize the layout and styling of suggestion items. The context includes the `suggestion` data and its `index`, enabling you to create dynamic and interactive suggestion buttons.
+Create visually engaging and functional quick replies using the [suggestionTemplate](../api/chat-ui#suggestiontemplate) property. This template allows you to customize the layout and styling of suggestion items. The context includes the `suggestion` data and its `index`, enabling you to create dynamic and interactive suggestion buttons.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -89,7 +89,7 @@ Create visually engaging and functional quick replies using the [suggestionTempl
 
 ## Footer template
 
-Take control of the chat input area by defining a custom [footerTemplate](../api/chat-ui/#footertemplate). This allows you to replace the default footer, giving you the flexibility to add custom buttons, integrate additional functionality, and manage message sending actions with a personalized design.
+Take control of the chat input area by defining a custom [footerTemplate](../api/chat-ui#footertemplate). This allows you to replace the default footer, giving you the flexibility to add custom buttons, integrate additional functionality, and manage message sending actions with a personalized design.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
