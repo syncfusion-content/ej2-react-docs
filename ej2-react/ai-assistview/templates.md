@@ -14,7 +14,7 @@ The AI AssistView component offers several template options to customize the ban
 
 ## Banner template
 
-The [bannerTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#bannertemplate) property allows for the display of custom content, such as a welcome note or introductory instructions, at the top of the AI AssistView's conversation area.
+The [bannerTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#bannertemplate) property allows for the display of custom content, such as a welcome note or introductory instructions, at the top of the AI AssistView's conversation area.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -32,7 +32,7 @@ The [bannerTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assis
 
 ## Prompt item template
 
-To customize the appearance of prompt items, use the [promptItemTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptitemtemplate). The template's context provides:
+To customize the appearance of prompt items, use the [promptItemTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#promptitemtemplate). The template's context provides:
 - `prompt`: The text content of the user's message
 - `toolbarItems`: Available toolbar actions for this prompt
 - `index`: The numerical position of this prompt in the conversation sequence
@@ -53,7 +53,7 @@ To customize the appearance of prompt items, use the [promptItemTemplate](https:
 
 ## Response item template
 
-The [responseItemTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#responseitemtemplate) can be utilized to modify the layout of response items. The available context includes :
+The [responseItemTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#responseitemtemplate) can be utilized to modify the layout of response items. The available context includes :
 - `prompt`: The original user prompt that triggered this response
 - `response`: The text content of the AI's response
 - `index`: The numerical position in the conversation
@@ -76,7 +76,7 @@ The [responseItemTemplate](https://ej2.syncfusion.com/react/documentation/api/ai
 
 ## Prompt suggestion item template
 
-For customizing the prompt suggestion items, the [promptSuggestionItemTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptsuggestionitemtemplate) property can be implemented. The context for this template includes :
+For customizing the prompt suggestion items, the [promptSuggestionItemTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#promptsuggestionitemtemplate) property can be implemented. The context for this template includes :
 - `index`: The position of this suggestion in the suggestions list
 - `promptSuggestion`: The suggestion object containing text and other properties
 
@@ -96,7 +96,7 @@ For customizing the prompt suggestion items, the [promptSuggestionItemTemplate](
 
 ## Footer template
 
-The [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#footertemplate) property offers a way to replace the default footer and manage prompt request actions. This enables the creation of unique footers that can include custom functionalities, such as a character counter or a button to clear the conversation.
+The [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#footertemplate) property offers a way to replace the default footer and manage prompt request actions. This enables the creation of unique footers that can include custom functionalities, such as a character counter or a button to clear the conversation.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

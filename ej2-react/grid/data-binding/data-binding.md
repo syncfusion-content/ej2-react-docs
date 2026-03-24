@@ -21,7 +21,7 @@ It supports two kinds of data binding methods:
 
 To learn about binding local or remote data to the React Grid, refer to this video:
 
-{% youtube "https://www.youtube.com/watch?v=UgeX6JMoqfs" %}
+{% youtube "https://www.youtube.com/watch?v=R2wPzeRxT2k" %}
 
 ## Loading indicator
 

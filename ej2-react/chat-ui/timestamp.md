@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Show or Hide Timestamp
 
-The [showTimeStamp](../api/chat-ui/#showtimestamp) property is used to enable or disable timestamps for all messages. Timestamps display the exact date and time that a message was sent. By default, this property is set to `true`.
+The [showTimeStamp](../api/chat-ui#showtimestamp) property is used to enable or disable timestamps for all messages. Timestamps display the exact date and time that a message was sent. By default, this property is set to `true`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +27,7 @@ The [showTimeStamp](../api/chat-ui/#showtimestamp) property is used to enable or
 
 ## Setting the Timestamp Format
 
-The [timeStampFormat](../api/chat-ui/#timestampformat) property defines the display format for timestamps that appear with each message. The default format is `dd/MM/yyyy hh:mm a`. The format string conforms to the standard date and time formatting rules.
+The [timeStampFormat](../api/chat-ui#timestampformat) property defines the display format for timestamps that appear with each message. The default format is `dd/MM/yyyy hh:mm a`. The format string conforms to the standard date and time formatting rules.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

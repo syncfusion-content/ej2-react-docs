@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Show or hide time breaks
 
-The Syncfusion React Chat UI component allows you to display date-wise separators between messages using the [showTimeBreak](../api/chat-ui/#showtimebreak) property. This feature enhances readability and improves message organization. By default, this property is `false`.
+The Syncfusion React Chat UI component allows you to display date-wise separators between messages using the [showTimeBreak](../api/chat-ui#showtimebreak) property. This feature enhances readability and improves message organization. By default, this property is `false`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

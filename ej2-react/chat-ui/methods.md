@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Add message
 
-The [addMessage](../api/chat-ui/#addmessage) method programmatically adds a new message to the chat. You can provide the new message as either a `string` or a `MessageModel` object.
+The [addMessage](../api/chat-ui#addmessage) method programmatically adds a new message to the chat. You can provide the new message as either a `string` or a `MessageModel` object.
 
 The following sample demonstrates how to add a new message using both a `string` and a `MessageModel` object.
 
@@ -40,7 +40,7 @@ The following sample demonstrates how to add a new message using both a `string`
 
 ## Update message
 
-The [updateMessage](../api/chat-ui/#updatemessage) method modifies an existing message in the Chat UI, which is useful for editing or correcting previously sent messages.
+The [updateMessage](../api/chat-ui#updatemessage) method modifies an existing message in the Chat UI, which is useful for editing or correcting previously sent messages.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -55,7 +55,7 @@ The [updateMessage](../api/chat-ui/#updatemessage) method modifies an existing m
 
 ## Scroll to the bottom
 
-The [scrollToBottom](../api/chat-ui/#scrolltobottom) method scrolls the chat view to the most recent message, ensuring that the latest content is visible to the user.
+The [scrollToBottom](../api/chat-ui#scrolltobottom) method scrolls the chat view to the most recent message, ensuring that the latest content is visible to the user.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

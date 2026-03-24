@@ -53,7 +53,7 @@ cd my-app
 npm start
 ```
 
-Besides using the [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) package runner tool, also create an application from the `npm init`. To begin with the `npm init`, upgrade the `npm` version to `npm 6+`.
+Besides using the [npx](https://docs.npmjs.com/cli/v9/commands/npx?v=true) package runner tool, also create an application from the `npm init`. To begin with the `npm init`, upgrade the `npm` version to `npm 6+`.
 
 ```bash
 npm init react-app my-app
@@ -133,7 +133,7 @@ npm start
 
 ## Configure messages and user
 
-Enhance your Chat UI by configuring messages and users. Use the `MessagesDirective` to group all messages and `MessageDirective` to define individual messages. The [user](../api/chat-ui/#user) property configures the current user for the chat interface.
+Enhance your Chat UI by configuring messages and users. Use the `MessagesDirective` to group all messages and `MessageDirective` to define individual messages. The [user](../api/chat-ui#user) property configures the current user for the chat interface.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
