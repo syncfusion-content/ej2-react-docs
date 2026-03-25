@@ -52,7 +52,7 @@ const DiagramComponent = () => {
       if (connectionRef.current === null) {
         // Create connection
         const connection = new signalR.HubConnectionBuilder()
-          .withUrl('http://localhost:5000/diagramHub', {
+          .withUrl('<<Your ServiceURL>>', {
             skipNegotiation: true,
             transport: signalR.HttpTransportType.WebSockets
           })
