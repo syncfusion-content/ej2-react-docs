@@ -271,7 +271,6 @@ You can render the groupbutton items by using [items](https://ej2.syncfusion.com
 
 You can use the [content](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroupButtonItemModel/#content) property to define the text content for the groupbutton.
 
-{% raw %}
 ```ts
 
 import * as React from "react";
@@ -314,7 +313,6 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
-{% endraw %}
 
 #### Icon only
 
@@ -439,7 +437,6 @@ Use the [displayOptions](https://ej2.syncfusion.com/react/documentation/api/ribb
 
 To display the items only in the classic layout group, set the mode as `DisplayMode.Classic` in the [displayOptions](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonItem/#displayoptions) property.
 
-{% raw %}
 ```ts
 
 import * as React from "react";
@@ -471,13 +468,11 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
-{% endraw %}
 
 ### Display items in Simplified only
 
 To display the items only in the simplified layout group, set the mode as `DisplayMode.Simplified` in the [displayOptions](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonItem/#displayoptions) property.
 
-{% raw %}
 ```ts
 
 import * as React from "react";
@@ -509,13 +504,11 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
-{% endraw %}
 
 ### Display items in Overflow popup only
 
 To display the items only in the overflow, set the mode as `DisplayMode.Overflow` in the [displayOptions](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonItem/#displayoptions) property.
 
-{% raw %}
 ```ts
 
 import * as React from "react";
@@ -547,7 +540,6 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
-{% endraw %}
 
 ## Enable or Disable Items
 
