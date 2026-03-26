@@ -659,7 +659,7 @@ You can programmatically update the Gantt chart data source using the [updateDat
 
 ## Display custom message for empty records
 
-You can display a custom message when no data is available by defining an empty record template using `<ng-template>` and assigning it to `treeGrid.grid.emptyRecordTemplate` during the `load` event in the component.
+You can display a custom message when no data is available by defining an empty record template and assigning it to `treeGrid.grid.emptyRecordTemplate` during the `load` event in the component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

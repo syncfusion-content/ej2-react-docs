@@ -72,5 +72,5 @@ Work and task types have the following constraints:
 
 ## See also
 - [How to configure resources?](https://ej2.syncfusion.com/react/documentation/gantt/resources)
-- [How to manage task dependencies?](https://ej2.syncfusion.com/react/documentation/gantt/taskdependency)
+- [How to manage task dependencies?](https://ej2.syncfusion.com/react/documentation/gantt/task-dependency)
 - [How to configure critical path?](https://ej2.syncfusion.com/react/documentation/gantt/critical-path)

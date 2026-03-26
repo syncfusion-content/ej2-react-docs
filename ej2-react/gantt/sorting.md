@@ -132,7 +132,7 @@ You can customize the sort icons in the Syncfusion<sup style="font-size:70%">&re
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/sorting-6/app/index.jsx %}
+{% include code-snippet/gantt/sorting-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/gantt/sorting-cs6/app/index.tsx %}

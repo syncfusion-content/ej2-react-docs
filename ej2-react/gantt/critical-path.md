@@ -82,6 +82,6 @@ The event handler checks the `isCritical` flag and applies custom colors to task
 
 ## See also
 
-- [How to configure task dependencies?](https://ej2.syncfusion.com/react/documentation/gantt/taskdependency)
+- [How to configure task dependencies?](https://ej2.syncfusion.com/react/documentation/gantt/task-dependency)
 - [How to enable virtual scrolling?](https://ej2.syncfusion.com/react/documentation/gantt/virtual-scroll)
 - [How to customize taskbars?](https://ej2.syncfusion.com/react/documentation/gantt/taskbar)

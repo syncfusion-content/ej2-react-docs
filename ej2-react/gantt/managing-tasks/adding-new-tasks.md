@@ -68,5 +68,5 @@ Add tasks programmatically using the [addRecord](https://ej2.syncfusion.com/reac
 
 ## See also
 - [How to configure task editing?](https://ej2.syncfusion.com/react/documentation/gantt/managing-tasks/editing-tasks)
-- [How to manage task dependencies?](https://ej2.syncfusion.com/react/documentation/gantt/taskdependency)
+- [How to manage task dependencies?](https://ej2.syncfusion.com/react/documentation/gantt/task-dependency)
 - [How to configure critical path?](https://ej2.syncfusion.com/react/documentation/gantt/critical-path)
