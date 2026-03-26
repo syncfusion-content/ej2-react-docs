@@ -1,5 +1,3 @@
-{% raw %}
-
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective, RibbonColorPicker, Inject } from "@syncfusion/ej2-react-ribbon";
@@ -28,5 +26,3 @@ function App() {
 }
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
-
-{% endraw %}

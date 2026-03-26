@@ -89,8 +89,6 @@ To apply the necessary styling for the Ribbon, import the component's CSS files 
 
 Now, you can add the Ribbon component to your application. Open the `src/App.tsx` file and use the following code snippet to render a basic Ribbon.
 
-{% raw %}
-
 ```ts
 import { RibbonComponent } from "@syncfusion/ej2-react-ribbon";
 import * as React from "react";
@@ -106,13 +104,10 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById("element"));
 root.render(<App />);
 ```
-{% endraw %}
 
 ### Injecting required modules
 
 Inject the Ribbon required modules in your `src/App.tsx` file using the following code snippet.
-
-{% raw %}
 
 ```ts
 import { RibbonComponent, RibbonFileMenu, Inject, RibbonColorPicker } from "@syncfusion/ej2-react-ribbon";
@@ -131,13 +126,10 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById("element"));
 root.render(<App />);
 ```
-{% endraw %}
 
 ## Defining Ribbon Tabs
 
 In the Ribbon, commands are organized into tabs for easy access. Use the `RibbonTabDirective` to define each tab.
-
-{% raw %}
 
 ```ts
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective } from "@syncfusion/ej2-react-ribbon";
@@ -158,13 +150,10 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById("element"));
 root.render(<App />);
 ```
-{% endraw %}
 
 ## Defining Ribbon Groups
 
 Each tab can contain one or more groups, which are defined using the `RibbonGroupDirective`. The `orientation` property specifies whether the items within the group are arranged in a row or a column.
-
-{% raw %}
 
 ```ts
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonGroupsDirective, RibbonGroupDirective } from "@syncfusion/ej2-react-ribbon";
@@ -189,13 +178,10 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById("element"));
 root.render(<App />);
 ```
-{% endraw %}
 
 ## Defining Ribbon Items
 
 Use the `RibbonItemDirective` to add commands like buttons, combo boxes, and other controls to a group. Items are placed within a `RibbonCollectionDirective`. The `type` property of an item specifies which component to render.
-
-{% raw %}
 
 ```ts
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonItemsDirective, RibbonItemDirective, RibbonItemSize } from "@syncfusion/ej2-react-ribbon";
@@ -238,7 +224,6 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById("element"));
 root.render(<App />);
 ```
-{% endraw %}
 
 ## Run the application
 

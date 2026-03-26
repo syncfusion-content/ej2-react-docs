@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Introduction to Syncfusion React UI Components (Essential JS 2) | Syncfusion
+title: Introduction to Syncfusion React UI Components (Essential JS 2)
 description: Learn about Syncfusion React UI components (Essential JS 2), a modern library of responsive, modular, and touch-friendly components.
 control: Introduction 
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Components (Essential<sup style="font-size:70%">&reg;</sup> JS 2)
+# Syncfusion® React UI Components (Essential® JS 2)
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React (Essential<sup style="font-size:70%">&reg;</sup> JS 2) is a modern UI components library built to be lightweight, responsive, modular, and touch-friendly.
 
@@ -85,6 +85,7 @@ td { border:0 !important; vertical-align: top; }
   <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/treemap/getting-started/">TreeMap</a></div>
   <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/bullet-chart/getting-started/">Bullet Chart</a></div>
   <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/kanban/getting-started/">Kanban</a></div>
+    <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/sankey/getting-started/">Sankey</a></div>
 
   <div><p class="controlcategory">BUTTONS</p></div>
   <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/button/getting-started/">Button</a></div>
@@ -195,7 +196,7 @@ ticket in our support site or ask your query in StackOverflow with tag `syncfusi
 
 ## See also
 
-* [Product Development Life Cycle](https://www.syncfusion.com/support/product-lifecycle/)
-* [Getting Started with Syncfusion React UI Components](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start/)
-* [Project Setup with Visual Studio Code](https://ej2.syncfusion.com/react/documentation/visual-studio-code-integration/create-project/)
-* [Project Setup with Visual Studio](https://ej2.syncfusion.com/react/documentation/visual-studio-integration/overview/)
+* [Product Development Life Cycle](https://www.syncfusion.com/support/product-lifecycle)
+* [Getting Started with Syncfusion React UI Components](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start)
+* [Project Setup with Visual Studio Code](https://ej2.syncfusion.com/react/documentation/visual-studio-code-integration/create-project)
+* [Project Setup with Visual Studio](https://ej2.syncfusion.com/react/documentation/visual-studio-integration/overview)
