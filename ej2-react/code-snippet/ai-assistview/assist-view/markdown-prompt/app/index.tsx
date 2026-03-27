@@ -47,12 +47,12 @@ function App() {
             const defaultResponse = 
                 'For real-time Markdown help or more advanced questions, connect this component to an actual AI model (OpenAI, Gemini, Claude, etc.).';
 
-            assistInstance.current?.addPromptResponse(
+            assistInstance.current.addPromptResponse(
                 found ? found.response : defaultResponse
             );
 
-            assistInstance.current!.promptSuggestions = 
-                found?.suggestions || defaultSuggestions;
+            assistInstance.current.promptSuggestions = 
+                found && found.suggestions ? found.suggestions : defaultSuggestions;
         }, 1200);
     };
 

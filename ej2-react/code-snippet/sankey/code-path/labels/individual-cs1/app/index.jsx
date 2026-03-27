@@ -27,12 +27,12 @@ function App() {
                     }}
                 >
                     <SankeyNodesCollectionDirective>
-                        <SankeyNodeDirective id="Agricultural Waste" />
-                        <SankeyNodeDirective id="Biomass Residues" />
-                        <SankeyNodeDirective id="Bio-conversion" />
-                        <SankeyNodeDirective id="Liquid Biofuel" />
-                        <SankeyNodeDirective id="Electricity" />
-                        <SankeyNodeDirective id="Heat" />
+                        <SankeyNodeDirective id="Agricultural Waste" label={{text: 'Agri Waste', padding : 0}} />
+                        <SankeyNodeDirective id="Biomass Residues" label={{text: 'Biomass', padding : 10}} />
+                        <SankeyNodeDirective id="Bio-conversion" label={{text: 'Bio', padding : 0}} />
+                        <SankeyNodeDirective id="Liquid Biofuel" label={{text: 'Liquid', padding : 10}} />
+                        <SankeyNodeDirective id="Electricity" label={{text: 'Electricity', padding : 0}} />
+                        <SankeyNodeDirective id="Heat" label={{text: 'Heat', padding : 10}} />
                     </SankeyNodesCollectionDirective>
                     <SankeyLinksCollectionDirective>
                         <SankeyLinkDirective sourceId="Agricultural Waste" targetId="Bio-conversion" value={84.152} />

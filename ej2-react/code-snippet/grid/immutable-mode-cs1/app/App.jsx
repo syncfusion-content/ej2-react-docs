@@ -49,7 +49,7 @@ function App() {
   const updateEvent =() => {
     let count = 0;
     let newRowData = rowData.map((row) => {
-      if (row.ShipName === 'Bueno Foods') {
+      if (row.ShipName === 'Hanari Carnes') {
         count++;
         return { ...row, 'ShipName': "Gems Chevalier" };
       } else {
@@ -84,7 +84,7 @@ function App() {
   }
 
   const generateShipName =() => {
-    const names = ['Que Delícia', 'Bueno Foods', 'Island Trading', 'Laughing Bacchus Winecellars'];
+    const names = ['Que Delícia','Hanari Carnes','Tortuga Restaurante','Ricardo Adocicados'];
     return names[Math.floor(Math.random() * names.length)];
   }
   return <div>

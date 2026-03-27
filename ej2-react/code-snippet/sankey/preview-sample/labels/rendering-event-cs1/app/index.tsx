@@ -15,7 +15,7 @@ import { SankeyNodeModel, SankeyLinkModel, SankeyLabelRenderEventArgs } from '@s
 function App() {
     const onLabelRendering = (args: SankeyLabelRenderEventArgs) => {
         // Customize label rendering based on node name
-        if (args.text === 'Agricultural Waste') {
+        if (args.text === 'Agricultural Waste 84.152') {
             args.labelStyle = { fontWeight: 'bold', color: '#FF6B6B', fontSize: '14px', fontFamily: 'Arial', fontStyle: 'normal' };
         }
     };

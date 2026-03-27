@@ -36,6 +36,7 @@ The `legendSettings` property provides comprehensive options to configure legend
 | title | string | null | Title text for the legend. |
 | enableHighlight | boolean | true | Enables highlighting of related nodes/links when legend item is clicked. |
 | isInversed | boolean | false | Inverts the legend layout. |
+
 Enable the legend and configure its basic properties such as visibility, position, and sizing. By default, the legend is automatically positioned based on available space.
 
 ## Basic Legend Configuration

@@ -23,12 +23,12 @@ function App() {
                     height="450px"
                 >
                     <SankeyNodesCollectionDirective>
-                        <SankeyNodeDirective id="Agricultural Waste" />
-                        <SankeyNodeDirective id="Biomass Residues" />
-                        <SankeyNodeDirective id="Bio-conversion" />
-                        <SankeyNodeDirective id="Liquid Biofuel" />
-                        <SankeyNodeDirective id="Electricity" />
-                        <SankeyNodeDirective id="Heat" />
+                        <SankeyNodeDirective id="Agricultural Waste" offset={-11} />
+                        <SankeyNodeDirective id="Biomass Residues" offset={-20} />
+                        <SankeyNodeDirective id="Bio-conversion" offset={-20} />
+                        <SankeyNodeDirective id="Liquid Biofuel" offset={17} />
+                        <SankeyNodeDirective id="Electricity" offset={8} />
+                        <SankeyNodeDirective id="Heat"/>
                     </SankeyNodesCollectionDirective>
                     <SankeyLinksCollectionDirective>
                         <SankeyLinkDirective sourceId="Agricultural Waste" targetId="Bio-conversion" value={84.152} />

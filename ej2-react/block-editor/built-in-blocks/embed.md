@@ -18,7 +18,7 @@ You can use the `Image` block to showcase an image content within your editor.
 
 ### Configure image block
 
-You can render an `Image` block by setting the [blockType](../../api/blockeditor/blockModel#blockType) property to `Image` in the block model. The `properties` property allows you to configure the image source, allowed file types, display dimensions, and more.
+You can render an `Image` block by setting the [blockType](../../api/blockeditor/blockModel#blocktype) property to `Image` in the block model. The `properties` property allows you to configure the image source, allowed file types, display dimensions, and more.
 
 #### Global image settings
 
@@ -67,7 +67,7 @@ You can allow the specific images alone to be uploaded using the the allowedType
 
 #### Configure image block properties
 
-The `Image` block [properties](../../api/blockeditor/blockModel) property supports the following options:
+The `Image` block [properties](../../api/blockeditor/blockmodel) property supports the following options:
 
 | Property | Description | Default Value |
 |----------|-------------|---------------|

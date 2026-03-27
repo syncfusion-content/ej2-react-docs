@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Code Blocks in React Block Editor component
 
-The Syncfusion Block Editor allows you to render code snippets with syntax highlighting by setting the block's [blockType](../../api/blockeditor/blockModel#blockType) property to `Code`. You can customize the available programming languages and set a default language using the `properties` property.
+The Syncfusion Block Editor allows you to render code snippets with syntax highlighting by setting the block's [blockType](../../api/blockeditor/blockModel#blocktype) property to `Code`. You can customize the available programming languages and set a default language using the `properties` property.
 
 ## Global Code Settings
 
