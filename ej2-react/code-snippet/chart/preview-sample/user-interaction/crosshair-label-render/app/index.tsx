@@ -1,9 +1,9 @@
-{% raw %}
-
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Crosshair, LineSeries, Category, type ICrosshairLabelRenderEventArgs } from '@syncfusion/ej2-react-charts';
 import { data } from './datasource';
+import ReactDOM from 'react-dom';
 
-function App(): JSX.Element {
+function App() {
+
     const crosshairLabelRender = (args: ICrosshairLabelRenderEventArgs) => {
         if (args.axisName === 'primaryYAxis' && typeof args.value === 'number') {
             if (args.value > 1000) {
@@ -29,10 +29,7 @@ function App(): JSX.Element {
             <SeriesDirective dataSource={data} xName='x' yName='y' type='Line' name='Series'></SeriesDirective>
         </SeriesCollectionDirective>
     </ChartComponent>;
-}
 
+};
 export default App;
-
 ReactDOM.render(<App />, document.getElementById("charts"));
-
-{% endraw %}

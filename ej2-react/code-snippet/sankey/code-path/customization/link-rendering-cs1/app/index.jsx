@@ -14,10 +14,7 @@ import {
     SankeyLinksCollectionDirective
 } from '@syncfusion/ej2-react-charts';
 
-function App() {
-
-
-    const onLinkRendering = (args) => {
+function App() {    const onLinkRendering = (args) => {
         // Customize link appearance during rendering
         if (args.link.value > 50) {
             args.fill = '#FF6B6B'

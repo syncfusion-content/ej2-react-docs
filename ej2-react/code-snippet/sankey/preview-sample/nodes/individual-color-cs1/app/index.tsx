@@ -21,12 +21,12 @@ function App() {
                     height="450px"
                 >
                     <SankeyNodesCollectionDirective>
-                        <SankeyNodeDirective id="Agricultural Waste" />
-                        <SankeyNodeDirective id="Biomass Residues" />
-                        <SankeyNodeDirective id="Bio-conversion" />
-                        <SankeyNodeDirective id="Liquid Biofuel" />
-                        <SankeyNodeDirective id="Electricity" />
-                        <SankeyNodeDirective id="Heat" />
+                        <SankeyNodeDirective id="Agricultural Waste" color="#f41212" />
+                        <SankeyNodeDirective id="Biomass Residues" color="#aed62c" />
+                        <SankeyNodeDirective id="Bio-conversion" color="#259bc3" />
+                        <SankeyNodeDirective id="Liquid Biofuel" color="#0e11af" />
+                        <SankeyNodeDirective id="Electricity" color="#7a0e92" />
+                        <SankeyNodeDirective id="Heat" color="#c5b9bb" />
                     </SankeyNodesCollectionDirective>
                     <SankeyLinksCollectionDirective>
                         <SankeyLinkDirective sourceId="Agricultural Waste" targetId="Bio-conversion" value={84.152} />

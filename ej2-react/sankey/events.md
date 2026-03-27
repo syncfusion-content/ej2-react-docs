@@ -52,6 +52,8 @@ The `load` event triggers before the Sankey Chart begins rendering. Use this eve
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "page.domainurl/code-snippet/sankey/preview-sample/events/load-cs1" %}
+
 ### Loaded Event
 
 The `loaded` event triggers after the Sankey Chart is completely rendered and ready for interaction. Use this event to initialize calculations, perform analytics, or trigger dependent components:

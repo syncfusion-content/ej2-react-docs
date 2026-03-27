@@ -32,8 +32,6 @@ function App() {
                     id="sankey-container"
                     width="90%"
                     height="450px"
-                    nodes={nodes}
-                    links={links}
                     tooltip={{ enable: true }}
                     tooltipRendering={onTooltipRendering}
                 >
