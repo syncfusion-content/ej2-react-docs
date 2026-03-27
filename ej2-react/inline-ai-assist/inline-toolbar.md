@@ -80,7 +80,6 @@ To use the `tabIndex` property, set it for each Toolbar item which you want to e
 
 For example, to enable tab key navigation for two Toolbar items you can use the following code:
 
-{% raw %}
 ```tsx
 import { InlineAIAssistComponent, InlineToolbarSettingsModel } from '@syncfusion/ej2-react-interactive-chat';
 import * as React from 'react';
@@ -104,13 +103,11 @@ function App() {
 
 ReactDOM.render(<App />, document.getElementById('container'));
 ```
-{% endraw %}
 
 With the above code, the user can switch between the two Toolbar items using the Tab and Shift+Tab keys, in addition to using the arrow keys. The items will be navigated in the order specified by the `tabIndex` values.
 
 If you set the `tabIndex` value to 0 for all Toolbar items, tab key navigation will be based on the element order rather than the `tabIndex` values. For example:
 
-{% raw %}
 ```tsx
 import { InlineAIAssistComponent, InlineToolbarSettingsModel } from '@syncfusion/ej2-react-interactive-chat';
 import * as React from 'react';
@@ -134,7 +131,6 @@ function App() {
 
 ReactDOM.render(<App />, document.getElementById('container'));
 ```
-{% endraw %}
 
 In this case, the user can switch between the two Toolbar items using the Tab and Shift+Tab keys, and the items will be navigated in the order in which they appear in the DOM.
 
@@ -182,7 +178,6 @@ Below sample demonstrates the usage of toolbar settings in Inline Assist compone
 
 The [itemClick](../api/inline-ai-assist/inlineToolbarSettingsModel#itemclick) event is triggered when the inline toolbar item is clicked.
 
-{% raw %}
 ```tsx
 const inlineToolbarSettings: InlineToolbarSettingsModel = {
     itemClick: (args: ToolbarItemClickEventArgs) => {
@@ -192,4 +187,3 @@ const inlineToolbarSettings: InlineToolbarSettingsModel = {
 
 <InlineAIAssistComponent inlineToolbarSettings={inlineToolbarSettings}/>
 ```
-{% endraw %}

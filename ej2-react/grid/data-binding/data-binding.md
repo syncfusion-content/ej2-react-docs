@@ -32,7 +32,7 @@ To achieve this, the [loadingIndicator.indicatorType](https://ej2.syncfusion.com
 - `Spinner` (default)
 - `Shimmer`
 
-The following example demonstrates setting the [loadingIndicator.indicatorType](https://ej2.syncfusion.com/javascript/documentation/api/grid/loadingindicatormodel#indicatortype) property based on changing the dropdown value using the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/index-default#change) event of the `DropDownList` component. The [refreshColumns](https://ej2.syncfusion.com/react/documentation/api/grid#refreshcolumns) method is used to apply the changes and display the updated loading indicator type.
+The following example demonstrates setting the [loadingIndicator.indicatorType](https://ej2.syncfusion.com/react/documentation/api/grid/loadingindicatormodel#indicatortype) property based on changing the dropdown value using the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/index-default#change) event of the `DropDownList` component. The [refreshColumns](https://ej2.syncfusion.com/react/documentation/api/grid#refreshcolumns) method is used to apply the changes and display the updated loading indicator type.
 
 
 {% tabs %}
@@ -47,7 +47,7 @@ function App() {
   let grid;
   let dropDown;
   const data = new DataManager({
-    url: 'https://services.syncfusion.com/react/production/api/Orders',
+    url: 'https://services.syncfusion.com/react/production/api/UrlDataSource',
     adaptor: new UrlAdaptor
   });
   const pageOptions = { pageSize: 5, pageCount: 5 };
@@ -93,7 +93,7 @@ function App() {
   let grid: GridComponent | null;
   let dropDown: DropDownListComponent | null;
   const data: DataManager = new DataManager({
-    url: 'https://services.syncfusion.com/react/production/api/Orders',
+    url: 'https://services.syncfusion.com/react/production/api/UrlDataSource',
     adaptor: new UrlAdaptor
   });
   const pageOptions: PageSettingsModel = { pageSize: 5, pageCount: 5 };
@@ -134,9 +134,9 @@ export default App;
 
 ## Refresh the datasource using property
 
-Refreshing the data shown in a Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid involves updating the data that the grid displays dynamically. This operation reflects changes in the underlying data without reloading the entire page or component.
+Refreshing the data source in a Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid involves updating the data that the grid displays dynamically. This operation reflects changes in the underlying data without reloading the entire page or component.
 
-To achieve this, use the [datasource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasource) property in conjunction with the [setProperties] method. This ensures the grid reflects changes in the `dataSource` without requiring a complete page or component reload.
+To achieve this, use the [datasource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasource) property in conjunction with the `setProperties` method. This ensures the grid reflects changes in the `dataSource` without requiring a complete page or component reload.
 
 For example, when adding or deleting data source records, follow these steps:
 
@@ -176,38 +176,37 @@ The following example demonstrates adding a new record to the data source throug
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component supports dynamic modification of the data source, columns, or both. This feature refreshes the grid's content and structure without requiring a complete page reload.
 
-To achieve dynamic changes, the [changeDataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#changedatasource) method can be utilized. This method enables updating the data source, columns, or both, based on application requirements. However, it is important to note that during the changing process for the data source and columns, the grid's existing actions such as sorting, filtering, grouping, aggregation, and searching will be reset. The `changeDataSource` method has two optional arguments: the first argument represents the data source, and the second argument represents the columns. The various uses of the `changeDataSource` method are explained in the following topic.
+To achieve dynamic changes, the [changeDataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#changedatasource) method allows updating the grid's data source dynamically. This method enables updating the data source, columns, or both, based on application requirements. However, it is important to note that during the changing process for the data source and columns, the grid's existing actions such as sorting, filtering, grouping, aggregation, and searching will be reset. The `changeDataSource` method has two optional arguments: the first argument represents the data source, and the second argument represents the columns. The various uses of the `changeDataSource` method are explained in the following topic.
 
 **1. Change both data source and columns:**
 
 To modify both the existing columns and the data source, pass both arguments to the `changeDataSource` method. The following example demonstrates changing both the data source and columns.
 
-Assign a JavaScript object array to the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource) property to bind local data to the grid. The code below provides an example creating a data source for the grid.
-You can assign a JavaScript object array to the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasource) property to bind local data to the grid. The code below provides an example of how to create a data source for the grid.
+Assign a JavaScript object array to the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource) property to bind local data to the grid. The code below provides an example of creating a data source for the grid.
 
 ```ts
-    export let data: Object[] = [
-    {
-        OrderID: 10248, CustomerID: 'VINET', Freight: 32.38,
-        ShipCity: 'Reims'
-    },
-    {
-        OrderID: 10249, CustomerID: 'TOMSP', Freight: 11.61,
-        ShipCity: 'Münster'
-    },
-    {
-        OrderID: 10250, CustomerID: 'HANAR', Freight: 61.34,
-        ShipCity: 'Rio de Janeiro'
-    }];
+export let data: Object[] = [
+{
+    OrderID: 10248, CustomerID: 'VINET', Freight: 32.38,
+    ShipCity: 'Reims'
+},
+{
+    OrderID: 10249, CustomerID: 'TOMSP', Freight: 11.61,
+    ShipCity: 'Münster'
+},
+{
+    OrderID: 10250, CustomerID: 'HANAR', Freight: 61.34,
+    ShipCity: 'Rio de Janeiro'
+}];
 ```
 
 The following code demonstrates creating the [columns](https://ej2.syncfusion.com/react/documentation/grid/columns/columns) for the grid, which are based on the provided grid data source.
 
 ```ts
-    const newColumn: ColumnModel[] = [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 125 },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 125 },
-    ];
+const newColumn: ColumnModel[] = [
+    { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 125 },
+    { field: 'CustomerID', headerText: 'Customer ID', width: 125 },
+];
 ```
 
 The following code demonstrates updating the data source and columns defined above using the `changeDataSource` method.
@@ -218,46 +217,45 @@ The following code demonstrates updating the data source and columns defined abo
 
 **2. Modify only the existing columns:**
 
-To modify existing columns in a grid, add or remove columns or replace the entire set of columns using the [changeDataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#changedatasource) method. To use this method, set the first parameter to `null` and provide the new columns as the second parameter. Note that if a column field is not specified in the `dataSource`, its corresponding column values will be empty. The following example illustrates modifying existing columns.
+To modify existing columns in a grid, add or remove columns or replace the entire set of columns using the [changeDataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#changedatasource) method. To use this method, set the first parameter to "null" and provide the new columns as the second parameter. Note that if a column field is not specified in the `dataSource`, its corresponding column values will be empty. The following example illustrates modifying existing columns.
 
 The following code demonstrates adding new columns to existing grid columns "newColumn" by using the `changeDataSource` method.
 
 ```ts
-    const newColumn: ColumnModel[] = [
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 125 },
-        { field: 'ShipCity', headerText: 'ShipCity', width: 125 },
-    ];
-    let column: any = newColumn.push(...newColumn);
-    gridInstance.changeDataSource(null, column);
+const newColumn: ColumnModel[] = [
+    { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 125 },
+    { field: 'ShipCity', headerText: 'ShipCity', width: 125 },
+];
+let column: any = newColumn.push(...newColumn);
+gridInstance.changeDataSource(null, column);
 ```
 
 **3. Modify only the data source:**
 
-
-Change the entire data source in the grid using the `changeDataSource` method. Provide the data source as the first argument; the optional second argument can specify new columns for the grid. If columns are not specified, the grid auto-generates columns based on the data source. The following example demonstrates modifying the data source.
+The `changeDataSource` method provides option to change the entire data source in the grid by passing the new data source as the first argument. Provide the data source as the first argument; the optional second argument can specify new columns for the grid. If columns are not specified, the grid auto-generates columns based on the data source. The following example demonstrates modifying the data source.
 
 Assign a JavaScript object array to the `dataSource` property to bind local data to the grid. The code below provides an example of creating a new data source for the grid.
 
 ```ts
-     export let employeeData: Object[] = [
-    {
-        FirstName: 'Nancy', City: 'Seattle', Region: 'WA',
-        Country: 'USA'
-    },
-    {
-        FirstName: 'Andrew', City: 'London', Region: null,
-        Country: 'UK',
-    },
-    {
-        FirstName: 'Janet', City: 'Kirkland', Region: 'WA',
-        Country: 'USA'
-    }];
+export let employeeData: Object[] = [
+{
+    FirstName: 'Nancy', City: 'Seattle', Region: 'WA',
+    Country: 'USA'
+},
+{
+    FirstName: 'Andrew', City: 'London', Region: null,
+    Country: 'UK',
+},
+{
+    FirstName: 'Janet', City: 'Kirkland', Region: 'WA',
+    Country: 'USA'
+}];
 ```
 
-The following code demonstrates the use of `changeDataSource` method to bind the new **employeeData** to the grid.
+The following code demonstrates the use of `changeDataSource` method to bind the new "employeeData" to the grid.
 
 ```ts
-    gridInstance.changeDataSource(employeeData);
+gridInstance.changeDataSource(employeeData);
 ```
 
 {% tabs %}

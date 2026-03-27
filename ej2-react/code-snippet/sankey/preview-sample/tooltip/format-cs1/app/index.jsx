@@ -22,7 +22,8 @@ function App() {
           height="450px"
           tooltip={{
             enable: true,
-            nodeFormat: '<b>${sourceNodeName} to ${targetNodeName}</b><br/>Value: <b>${value}</b>'
+            nodeTemplate: '${name}: ${value} TBtu',
+            linkTemplate: '${start.name}: ${start.out} TBtu → ${target.name}: ${target.in} TBtu'
           }}
         >
           <SankeyNodesCollectionDirective>

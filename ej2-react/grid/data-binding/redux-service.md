@@ -27,9 +27,9 @@ The above command installs the redux package, which is the core Redux library, a
 
 Once the dependencies are installed, set up a Redux [store](https://redux.js.org/api/store) in the application. Add the following code to the **store.tsx** file.
 
-1. Create a new file called **store.tsx** in your project's directory.
+1. Create a new file called **store.tsx** in the project's directory.
 
-2. In the **store.tsx** file, import the necessary Redux functions and create your store:
+2. In the **store.tsx** file, import the necessary Redux functions and create the store:
     ```ts
     import { createStore } from 'redux';
     import reducer from "../reducer";
@@ -44,7 +44,7 @@ Once the dependencies are installed, set up a Redux [store](https://redux.js.org
 
 To make the Redux `store` available to React components, wrap the application with the Redux [Provider](https://react-redux.js.org/api/provider) component. It accepts the Redux `store` as a prop and connects the components in its hierarchy. Follow these steps to connect the Redux provider:
 
-1. Open your root component file (usually index.tsx).
+1. Open the root component file (usually **index.tsx**).
 
 2. Import the necessary dependencies:
 
@@ -88,10 +88,10 @@ Here's an example of a Redux action definition for the sort operation. Add the c
 
 According to Redux documentation, Redux [reducers](https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers#writing-reducers) are functions responsible for handling actions and updating the application's state. Reducers specify the way the state changes in response to actions dispatched to the Redux `store`.
 
-Here's an example of a Redux reducer definition for sorting operations. You can add the reducer code in the  **reducer.tsx** file.
+The following example demonstrates a Redux reducer definition for sorting operations. The reducer code can be added to the **reducer.tsx** file.
 
 ```ts
-//You can also set the page size based on your application.
+// The page size can also be configured based on application requirements.
 const initialPage = { skip: 0, take: 12 }
 const initialState: any = {
   data: data,
@@ -108,7 +108,7 @@ const reducer = (state = initialState, action) => {
     case Grid_Sorting: {
       // we have executed grid query using DataManager.
       const sortData = gridData.executeLocal(action.gridQuery);
-      // Execute the Grid page query... based on your skip and take values.
+      //Execute the grid page query based on the configured skip and take values.
       const currentPageData = new DataManager(sortData).executeLocal(new Query().skip(action.payload.skip).take(action.payload.take));
       // The grid data should be returned as the result and count with the object type.
       return ({
@@ -261,7 +261,7 @@ const reducer = (state = initialState, action: any) => {
     case Grid_Filtering: {
       // Here, we have executed the grid query by using the DataManager.
       const filterData = gridData.executeLocal(action.gridQuery);
-      // Execute the grid page query... based on your skip and take values.
+      // Execute the grid page query based on the configured skip and take values.
       const currentPageData = new DataManager(filterData).executeLocal(new Query().skip(action.payload.skip).take(action.payload.take))
       // We need to return the Grid data as result and count with object type.
       return ({
@@ -271,7 +271,7 @@ const reducer = (state = initialState, action: any) => {
     case Grid_Sorting: {
       // Execute the grid sort query...
       const sortData = gridData.executeLocal(action.gridQuery);
-      // Execute the grid page query... based on your skip and take values.
+      // Execute the grid page query based on the configured skip and take values.
       const currentPageData = new DataManager(sortData).executeLocal(new Query().skip(action.payload.skip).take(action.payload.take));
       // We need to return the Grid data as result and count with object type.
       return ({
@@ -283,7 +283,7 @@ const reducer = (state = initialState, action: any) => {
       const pageData = gridData.executeLocal(new Query());
       // Execute the grid query except pagination....
       const result = action.gridQuery !== undefined ? new DataManager(pageData).executeLocal(action.gridQuery) : pageData;
-      // Execute the grid page query... based on your skip and take values.
+      // Execute the grid page query based on the configured skip and take values.
       const currentPageData = new DataManager(result).executeLocal(new Query().skip(action.payload.skip).take(action.payload.take));
       // We need to return the Grid data as result and count with object type.
       return ({
@@ -357,7 +357,7 @@ export const updateRow = (state: any , query: any) => ({
 });
 ```
 
-The `insert`, `update` and `delete` methods should be used to add, update, and delete. Then we can fetch the current page records and the total number of records from your `dataSource` using the `result` and `count` formats. 
+The "insert", "update", and "delete" methods should be used to add, update, and remove records. The current page records and the total record count can then be retrieved from the dataSource using the result and count formats.
 
 Add the following code to **reducer.tsx** file.
 
@@ -388,7 +388,7 @@ const reducer = (state = initialState, action: any) => {
       initialState.data = [...addedData];
       const count = addedData.length;
       const result = new DataManager(addedData).executeLocal(action.gridQuery);
-      // Execute the grid page query... based on your skip and take values.
+      // Execute the grid page query based on the configured skip and take values.
       const currentPageData = new DataManager(result).executeLocal(new Query().skip(action.payload.state.skip).take(action.payload.state.take));
       // We need to return the grid data as result and count with object type.
       return ({
@@ -402,7 +402,7 @@ const reducer = (state = initialState, action: any) => {
       initialState.data = [...updatedData];
       const count = updatedData.length;
       const result = new DataManager(updatedData).executeLocal(action.gridQuery);
-      // Execute the grid page query... based on your skip and take values.
+      // Execute the grid page query based on the configured skip and take values.
       const currentPageData = new DataManager(result).executeLocal(new Query().skip(action.payload.state.skip).take(action.payload.state.take));
       // We need to return the grid data as result and count with object type.
       return ({
@@ -416,7 +416,7 @@ const reducer = (state = initialState, action: any) => {
       initialState.data = [...updatedData];
       const count = updatedData.length;
       const result = new DataManager(updatedData).executeLocal(action.gridQuery);
-      // Execute the grid page query... based on your skip and take values.
+      // Execute the grid page query based on the configured skip and take values.
       const currentPageData = new DataManager(result).executeLocal(new Query().skip(action.payload.state.skip).take(action.payload.state.take));
       // We need to return the grid data as result and count with object type.
       return ({
@@ -454,4 +454,4 @@ root.render(
 );
 ```
 
-> You can find the sample of the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid with Redux [here](https://github.com/SyncfusionExamples/DataGrid-React-Redux/).
+> A sample demonstrating the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid with Redux [here](https://github.com/SyncfusionExamples/DataGrid-React-Redux/).

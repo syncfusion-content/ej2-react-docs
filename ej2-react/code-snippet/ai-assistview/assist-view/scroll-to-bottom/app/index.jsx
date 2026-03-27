@@ -41,7 +41,7 @@ function App() {
         setTimeout(() => {
             const foundPrompt = prompts.find((promptObj) => promptObj.prompt === args.prompt);
             const defaultResponse = 'For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.';
-            assistInstance.current?.addPromptResponse(foundPrompt ? foundPrompt.response : defaultResponse);
+            assistInstance.current.addPromptResponse(foundPrompt ? foundPrompt.response : defaultResponse);
         }, 1000);
     };
 

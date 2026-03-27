@@ -14,7 +14,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a strai
 
 Assign a JavaScript object array to the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasource) property. Optionally, provide the local data source using an instance of the `DataManager`.
 
-The following example demonstrates utilizing the local data binding feature in the React Grid component:
+The following example demonstrates the local data binding feature in the React Grid component:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -43,7 +43,7 @@ To import Excel data into the grid, follow these steps:
 2. Parse the Excel file data using `XLSX` library.
 3. Bind the resulting JSON to the grid.
 
-The following example demonstrates importing Excel data into the grid by utilizing the [Uploader](https://ej2.syncfusion.com/react/documentation/uploader/getting-started) component's `change` event along with the `XLSX` library:
+The following example demonstrates importing Excel data into the grid by utilizing the `Uploader` component's `change` event along with the `XLSX` library:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -68,7 +68,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a seaml
 
 To achieve data binding and perform CRUD actions using Ajax requests in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, follow these steps:
 
-**Step 1:** Include the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid in your HTML with necessary configurations:
+**Step 1:** Include the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid in the HTML file with the necessary configurations:
 
 ```ts
     <div>
@@ -87,18 +87,16 @@ To achieve data binding and perform CRUD actions using Ajax requests in the Sync
 **Step 2:** To bind data from an external Fetch request, utilize the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasource) property of the Grid. Fetch data from the server and provide it to the `dataSource` property using the `onSuccess` event of the Fetch request.
 
 ```ts
-
-   const click = () => {
-      const fetch= new Fetch("https://localhost:****/Home/Getdata", 'POST');//Use remote server host number instead ****
-      fetch.send();
-      fetch.onSuccess = (data: string) => {
+const click = () => {
+    const fetch= new Fetch("https://localhost:****/Home/Getdata", 'POST');//Use remote server host number instead ****
+    fetch.send();
+    fetch.onSuccess = (data: string) => {
         grid.dataSource = JSON.parse(data);
     };
-    }
-
+}
 ```
 
-On the server side, there is a method named **GetData** within the HomeController that contains the grid's data source. When the button is clicked, an Fetch request is sent to fetch the data from the server and bind it to the Grid component.
+On the server side, there is a method named "GetData" within the **HomeController** that contains the grid's data source. When the button is clicked, a Fetch request is sent to fetch the data from the server and bind it to the Grid component.
 
 ```cs
 
@@ -169,150 +167,148 @@ public class HomeController : Controller
 A. To add a new record using Fetch requests, follow these steps:
 
 ```ts
-       let flag = false;
+let flag = false;
 
-        const actionBegin = (e: EditEventArgs) => {
-            // Initially flag needs to be false in order to enter this condition
-            if (!flag) {
-                // Add and edit operations
-                if (e.requestType == 'save' && ((e as any).action == 'add')) {
-                    var editedData = (e as any).data;
-                    // The default edit operation is cancelled
-                    e.cancel = true;
-                    // Here you can send the updated data to your server using fetch call
-                    var fetch = new Fetch({
-                        url: 'https://localhost:****/Home/Insert',
-                        type: 'POST',
-                        contentType: 'application/json; charset=utf-8',
-                        data: JSON.stringify({ value: editedData })
-                    }); //Use remote server host number instead ****
-                    fetch.onSuccess = () => {
-                        // flag is enabled to skip this execution when grid ends add/edit
-                        flag = true;
-                        // The added/edited data will be saved in the Grid
-                        grid.endEdit();
-                    }
-                    fetch.onFailure = () => {
-                        // Add/edit failed
-                        // The flag is disabled if operation is failed so that it can enter the condition on next execution
-                        flag = false;
-                    }
-                    fetch.send();
-                }
+const actionBegin = (e: EditEventArgs) => {
+    // Initially flag needs to be false in order to enter this condition
+    if (!flag) {
+        // Add and edit operations
+        if (e.requestType == 'save' && ((e as any).action == 'add')) {
+            var editedData = (e as any).data;
+            // The default edit operation is cancelled
+            e.cancel = true;
+            // The updated data can be sent to the server using a Fetch request.
+            var fetch = new Fetch({
+                url: 'https://localhost:****/Home/Insert',
+                type: 'POST',
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify({ value: editedData })
+            }); //Use remote server host number instead ****
+            fetch.onSuccess = () => {
+                // flag is enabled to skip this execution when grid ends add/edit
+                flag = true;
+                // The added/edited data will be saved in the Grid
+                grid.endEdit();
+            }
+            fetch.onFailure = () => {
+                // Add/edit failed
+                // The flag is disabled if operation is failed so that it can enter the condition on next execution
+                flag = false;
+            }
+            fetch.send();
         }
+}
 ```
 
 ```ts
 //insert the record
-    public ActionResult Insert(OrdersDetails value)
-        {
-            OrdersDetails.GetAllRecords().Insert(0, value);
-            return Json(value);
-        }
+public ActionResult Insert(OrdersDetails value)
+{
+    OrdersDetails.GetAllRecords().Insert(0, value);
+    return Json(value);
+}
 
 ```
 
-B. To edit and save a record using an Fetch request, follow these steps:
+B. To edit and save a record using a Fetch request, follow these steps:
 
 ```ts
+let flag = false;
 
-        let flag = false;
-
-        const actionBegin = (e: EditEventArgs) => {
-            // Initially flag needs to be false in order to enter this condition
-            if (!flag) {
-                if (e.requestType == 'save' && ((e as any).action == "edit")) {
-                    var editedData = (e as any).data;
-                    // The default edit operation is cancelled
-                    e.cancel = true;
-                    // Here you can send the updated data to your server using fetch call
-                    var fetch= new Fetch({
-                        url: 'https://localhost:****/Home/Update',
-                        type: 'POST',
-                        contentType: 'application/json; charset=utf-8',
-                        data: JSON.stringify({ value: editedData })
-                    });//Use remote server host number instead ****
-                    fetch.onSuccess = () => {
-                        // flag is enabled to skip this execution when grid ends add/edit
-                        flag = true;
-                        // The added/edited data will be saved in the Grid
-                        grid.endEdit();
-                    }
-                    fetch.onFailure = () => {
-                        // Add/edit failed
-                        // The flag is disabled if operation is failed so that it can enter the condition on next execution
-                        flag = false;
-                    }
-                    fetch.send();
-                }        
+const actionBegin = (e: EditEventArgs) => {
+    // Initially flag needs to be false in order to enter this condition
+    if (!flag) {
+        if (e.requestType == 'save' && ((e as any).action == "edit")) {
+            var editedData = (e as any).data;
+            // The default edit operation is cancelled
+            e.cancel = true;
+            // The updated data can be sent to the server using a Fetch call.
+            var fetch= new Fetch({
+                url: 'https://localhost:****/Home/Update',
+                type: 'POST',
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify({ value: editedData })
+            });//Use remote server host number instead ****
+            fetch.onSuccess = () => {
+                // flag is enabled to skip this execution when grid ends add/edit
+                flag = true;
+                // The added/edited data will be saved in the Grid
+                grid.endEdit();
             }
-        }
-
+            fetch.onFailure = () => {
+                // Add/edit failed
+                // The flag is disabled if operation is failed so that it can enter the condition on next execution
+                flag = false;
+            }
+            fetch.send();
+        }        
+    }
+}
 ```
 
 ```cs
 //update the record
 public ActionResult Update(OrdersDetails value)
-        {
-            var ord = value;
-            OrdersDetails val = OrdersDetails.GetAllRecords().Where(or => or.OrderID == ord.OrderID).FirstOrDefault();
-            val.OrderID = ord.OrderID;
-            val.EmployeeID = ord.EmployeeID;
-            val.CustomerID = ord.CustomerID;
-            return Json(value);
-        }
+{
+    var ord = value;
+    OrdersDetails val = OrdersDetails.GetAllRecords().Where(or => or.OrderID == ord.OrderID).FirstOrDefault();
+    val.OrderID = ord.OrderID;
+    val.EmployeeID = ord.EmployeeID;
+    val.CustomerID = ord.CustomerID;
+    return Json(value);
+}
 
 ```
 
-C. To delete a record using an Fetch request, follow these steps:
+C. To delete a record using a Fetch request, follow these steps:
 
 ```ts
-        let flag = false;
+let flag = false;
 
-        const actionBegin = (e: EditEventArgs) => {
-            // Initially flag needs to be false in order to enter this condition
-            if (!flag) {
-                if (e.requestType == 'delete') {
-                    var editedData = (e as any).data;
-                    // The default delete operation is cancelled
-                    e.cancel = true;
-                    // Here you can send the deleted data to your server using fetch call
-                    var fetch = new Fetch({
-                        url: 'https://localhost:****/Home/Delete',
-                        type: 'POST',
-                        contentType: 'application/json; charset=utf-8',
-                        data: JSON.stringify({ key: editedData[0][grid.getPrimaryKeyFieldNames()[0]] })
-                    }) //Use remote server host number instead ****
-                    fetch.onSuccess = () => {
-                        // flag is enabled to skip this execution when grid deletes record
-                        flag = true;
-                        // The deleted data will be removed in the Grid
-                        grid.deleteRecord();
-                    }
-                    fetch.onFailure = () => {
-                        // Delete failed
-                        // The flag is disabled if operation is failed so that it can enter the condition on next execution
-                        flag = false;
-                    }
-                    fetch.send();
-                }
+const actionBegin = (e: EditEventArgs) => {
+    // Initially flag needs to be false in order to enter this condition
+    if (!flag) {
+        if (e.requestType == 'delete') {
+            var editedData = (e as any).data;
+            // The default delete operation is cancelled
+            e.cancel = true;
+            // The deleted data can be sent to the server using a Fetch call.
+            var fetch = new Fetch({
+                url: 'https://localhost:****/Home/Delete',
+                type: 'POST',
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify({ key: editedData[0][grid.getPrimaryKeyFieldNames()[0]] })
+            }) //Use remote server host number instead ****
+            fetch.onSuccess = () => {
+                // flag is enabled to skip this execution when grid deletes record
+                flag = true;
+                // The deleted data will be removed in the Grid
+                grid.deleteRecord();
             }
+            fetch.onFailure = () => {
+                // Delete failed
+                // The flag is disabled if operation is failed so that it can enter the condition on next execution
+                flag = false;
+            }
+            fetch.send();
+        }
     }
+}
 
 ```
 
 ```cs
 //Delete the record
-  public ActionResult Delete(int key)
-        {
-            OrdersDetails.GetAllRecords().Remove(OrdersDetails.GetAllRecords().Where(or => or.OrderID == key).FirstOrDefault());
-            var data = OrdersDetails.GetAllRecords();
-            return Json(data);
-        }
+public ActionResult Delete(int key)
+{
+    OrdersDetails.GetAllRecords().Remove(OrdersDetails.GetAllRecords().Where(or => or.OrderID == key).FirstOrDefault());
+    var data = OrdersDetails.GetAllRecords();
+    return Json(data);
+}
 
 ```
 
-**Step 4:**  In the Fetch success event, the Grid's [endEdit](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#endedit) and [deleteRecord](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#deleterecord) methods can be utilized to handle the addition, editing, and deletion of corresponding data in the Grid. However, invoking these methods triggers the `actionBegin` event once again to save the changes in the Grid. To prevent this behavior and maintain control over the execution flow, a flag variable can be employed and managed within the `actionComplete` and Fetch failure events. The following code snippet demonstrates this approach:
+**Step 4:** In the Fetch success event, the Grid's [endEdit](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#endedit) and [deleteRecord](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#deleterecord) methods can be utilized to handle the addition, editing, and deletion of corresponding data in the Grid. However, invoking these methods triggers the `actionBegin` event once again to save the changes in the Grid. To prevent this behavior and maintain control over the execution flow, a flag variable can be employed and managed within the `actionComplete` and Fetch failure events. The following code snippet demonstrates this approach:
 
 ```ts
         const actionComplete = (e: EditEventArgs) => {
@@ -367,11 +363,11 @@ export default App;
 ```
 ## Binding data and performing CRUD actions via AJAX request
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a seamless way to bind data from external sources using AJAX requests, facilitating CRUD (Create, Read, Update, Delete) operations with data retrieved from a server. This feature is particularly valuable for sending data to a server for database updates and asynchronously retrieving data without refreshing the entire web page
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a seamless way to bind data from external sources using AJAX requests, facilitating CRUD (Create, Read, Update, Delete) operations with data retrieved from a server. This feature is particularly valuable for sending data to a server for database updates and asynchronously retrieving data without refreshing the entire web page.
 
 To achieve data binding and perform CRUD actions using Ajax requests in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, follow these steps:
 
-**Step 1:** Include the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid in your HTML with necessary configurations:
+**Step 1:** Include the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid in the HTML file with the necessary configurations:
 
 ```ts
     <div>
@@ -399,25 +395,23 @@ To achieve data binding and perform CRUD actions using Ajax requests in the Sync
     }  
 
 ```
-On the server side, there is a method named **GetData** within the HomeController that contains the grid's data source. When the button is clicked, an AJAX request is sent to fetch the data from the server and bind it to the Grid component.
+On the server side, there is a method named "GetData" within the **HomeController** that contains the grid's data source. When the button is clicked, an AJAX request is sent to fetch the data from the server and bind it to the Grid component.
 
 ```cs
 
-public class HomeController : Controller
-    {        
-        public ActionResult Getdata()
+public class HomeController : Controller{        
+    public ActionResult Getdata()
+    {
+        var DataSource = OrdersDetails.GetAllRecords();
+        return Json(DataSource);
+    } 
+
+    //create model class define the properties
+    public class OrdersDetails {
+        public OrdersDetails()
         {
-            var DataSource = OrdersDetails.GetAllRecords();
-            return Json(DataSource);
-        } 
 
-        //create model class define the properties
-        public class OrdersDetails
-           {
-             public OrdersDetails()
-             {
-
-             }
+        }
         public OrdersDetails(int OrderID, string CustomerId, int EmployeeId, double Freight, bool Verified, DateTime OrderDate, string ShipCity, string ShipName, string ShipCountry, DateTime ShippedDate, string ShipAddress)
         {
             this.OrderID = OrderID;
@@ -471,48 +465,48 @@ A. To add a new record using AJAX requests, follow these steps:
 
 
 ```typescript
-       let flag = false;
+let flag = false;
 
-        const actionBegin = (e: EditEventArgs) => {
-            // Initially flag needs to be false in order to enter this condition
-            if (!flag) {
-                // Add and edit operations
-                if (e.requestType == 'save' && ((e as any).action == 'add')) {
-                    var editedData = (e as any).data;
-                    // The default edit operation is cancelled
-                    e.cancel = true;
-                    // Here you can send the updated data to your server using AJAX call
-                    var ajax = new Ajax({
-                        url: 'https://localhost:****/Home/Insert',
-                        type: 'POST',
-                        contentType: 'application/json; charset=utf-8',
-                        data: JSON.stringify({ value: editedData })
-                    });  //Use remote server host number instead ****
-                    ajax.onSuccess = () => {
-                        // flag is enabled to skip this execution when grid ends add/edit
-                        flag = true;
-                        // The added/edited data will be saved in the Grid
-                        grid.endEdit();
-                    }
-                    ajax.onFailure = () => {
-                        // Add/edit failed
-                        // The flag is disabled if operation is failed so that it can enter the condition on next execution
-                        flag = false;
-                    }
-                    ajax.send();
-                }
+const actionBegin = (e: EditEventArgs) => {
+    // Initially flag needs to be false in order to enter this condition
+    if (!flag) {
+        // Add and edit operations
+        if (e.requestType == 'save' && ((e as any).action == 'add')) {
+            var editedData = (e as any).data;
+            // The default edit operation is cancelled
+            e.cancel = true;
+            // The updated data can be sent to the server using an AJAX call.
+            var ajax = new Ajax({
+                url: 'https://localhost:****/Home/Insert',
+                type: 'POST',
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify({ value: editedData })
+            });  //Use remote server host number instead ****
+            ajax.onSuccess = () => {
+                // flag is enabled to skip this execution when grid ends add/edit
+                flag = true;
+                // The added/edited data will be saved in the Grid
+                grid.endEdit();
+            }
+            ajax.onFailure = () => {
+                // Add/edit failed
+                // The flag is disabled if operation is failed so that it can enter the condition on next execution
+                flag = false;
+            }
+            ajax.send();
         }
+}
 
 ```
 
 ```cs
 //insert the record
-       public ActionResult Insert([FromBody] CRUDModel<OrdersDetails> value)
-       {
+public ActionResult Insert([FromBody] CRUDModel<OrdersDetails> value)
+{
 
-           OrdersDetails.GetAllRecords().Insert(0, value.value);
-           return Json(value.value);
-       }
+    OrdersDetails.GetAllRecords().Insert(0, value.value);
+    return Json(value.value);
+}
 
 ```
 
@@ -528,7 +522,7 @@ B. To edit and save a record using an AJAX request, follow these steps:
                     var editedData = (e as any).data;
                     // The default edit operation is cancelled
                     e.cancel = true;
-                    // Here you can send the updated data to your server using ajax call
+                    // The updated data can be sent to the server using an AJAX call.
                     var ajax = new Ajax({
                         url: 'https://localhost:****/Home/Update',
                         type: 'POST',
@@ -584,7 +578,7 @@ C. To delete a record using an AJAX request, follow these steps:
                     var editedData = (e as any).data;
                     // The default delete operation is cancelled
                     e.cancel = true;
-                    // Here you can send the deleted data to your server using ajax call
+                    // The deleted data can be sent to the server using a Ajax call.
                     var ajax = new Ajax({
                         url: 'https://localhost:****/Home/Delete',
                         type: 'POST',
