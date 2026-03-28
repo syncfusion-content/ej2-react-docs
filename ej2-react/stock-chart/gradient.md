@@ -24,7 +24,7 @@ Gradients can be applied to:
 
 ## Linear gradient
 
-A linear gradient blends color along side a straight path from a defined start point to an end point. Configure it by adding `linearGradient` inside the target element (Series, Trendlines or Indicators) and define one or more color stops that control how colors transition across the gradient. Set the start and end positions of the gradient using `x1`, `y1`, `x2` and `y2` properties. The gradient color stop values such as `offset`, `color`, `opacity`, `lighten` and `brighten` are set using the `gradientColorStop` property.
+A linear gradient blends color along side a straight path from a defined start point to an end point. Configure it by adding `linearGradient` inside the target element (Series or Indicators) and define one or more color stops that control how colors transition across the gradient. Set the start and end positions of the gradient using `x1`, `y1`, `x2` and `y2` properties. The gradient color stop values such as `offset`, `color`, `opacity`, `lighten` and `brighten` are set using the `gradientColorStop` property.
 
 In the `linearGradient`:
 - `x1` - Sets the horizontal start position of the gradient (0 to 1).
