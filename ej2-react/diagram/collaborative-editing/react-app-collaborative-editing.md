@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Overview
 
-This guide explains how to configure SignalR Hub in a React application for real-time collaborative diagram editing.
+This guide explains how to configure SignalR Hub in a React application for real-time collaborative diagram editing. 
 
 ## Prerequisites
 
@@ -116,10 +116,10 @@ export default DiagramComponent;
 ## Sending and applying real-time diagram changes
 
 * The React Diagram component triggers the [historyChange](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#historychange) event whenever the diagram is modified (e.g., add, delete, move, resize, or edit nodes/connectors).
-* Use `getDiagramUpdates` to produce a compact set of incremental updates (JSON-formatted changes) representing just the changes, not the entire diagram.
+* Use [getDiagramUpdates](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#getdiagramupdates) to produce a compact set of incremental updates (JSON-formatted changes) representing just the changes, not the entire diagram.
 * Send these changes to the hub method `BroadcastToOtherUsers`, which relays them to all users joined to the same SignalR group (room).
-* Each remote user listens for ReceiveData and applies the incoming changes with `setDiagramUpdates`, keeping their view synchronized without reloading the full diagram.
-* Enable the `enableCollaborativeEditing` property on the diagram to treat multi-step edits (like drag/resize sequences or batch changes) as a single operation.
+* Each remote user listens for ReceiveData and applies the incoming changes with [setDiagramUpdates](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#setdiagramupdates), keeping their view synchronized without reloading the full diagram.
+* Enable the [enableCollaborativeEditing](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#enablecollaborativeediting) property on the diagram to treat multi-step edits (like drag/resize sequences or batch changes) as a single operation.
 
 ```typescript
 import React, { useEffect, useRef, useState } from 'react';
@@ -211,7 +211,7 @@ export default DiagramCollaborativeComponent;
 
 ## Conflict policy (optimistic concurrency) in React application
 
-To maintain consistency during collaborative editing, each user applies incoming changes using `setDiagramUpdates`. After applying changes, the React sample synchronizes its `userVersion` with the `serverVersion` through the `UpdateVersion` event. This version-based approach ensures conflicts are resolved without locking, allowing real-time responsiveness while preserving data integrity.
+To maintain consistency during collaborative editing, each user applies incoming changes using [setDiagramUpdates](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#setdiagramupdates). After applying changes, the React sample synchronizes its `userVersion` with the `serverVersion` through the `UpdateVersion` event. This version-based approach ensures conflicts are resolved without locking, allowing real-time responsiveness while preserving data integrity.
 
 Add the following code in the React sample application:
 ```typescript

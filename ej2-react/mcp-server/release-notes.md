@@ -12,6 +12,12 @@ domainurl: ##DomainURL##
 
 This document provides information about the changes and new features included in each version of the [@syncfusion/react-assistant](https://www.npmjs.com/package/@syncfusion/react-assistant) MCP server package.
 
+## (v2.0.1) – March 27, 2026
+
+### Features
+
+- Updated package dependencies to resolve security vulnerabilities and enhance stability.
+
 ## (v2.0.0) – February 23, 2026
 
 ### Features
