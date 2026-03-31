@@ -8,11 +8,11 @@ import { SankeyComponent, Inject, SankeyTooltip, SankeyLegend, SankeyExport,
 } from '@syncfusion/ej2-react-charts';
 
 function App() {
-  const sankeyRef = React.useRef(null);
+  let sankeyInstance = null;
 
   const handleCustomExport = () => {
-    if (sankeyRef.current) {
-      sankeyRef.current.export('PNG', 'CustomSankey');
+    if (sankeyInstance) {
+      sankeyInstance.export('PNG', 'CustomSankey');
     }
   };
 
@@ -23,7 +23,7 @@ function App() {
           Export with Custom Options
         </button>
         <SankeyComponent
-          ref={sankeyRef}
+          ref={(sankey) => (sankeyInstance = sankey)}
           id="sankey-container"
           width="90%"
           height="450px"

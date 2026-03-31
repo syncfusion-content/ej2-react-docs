@@ -10,11 +10,11 @@ import { SankeyComponent, Inject, SankeyTooltip, SankeyLegend, SankeyExport,
 } from '@syncfusion/ej2-react-charts';
 
 function App() {
-  const sankeyRef = React.useRef(null);
+  let sankeyInstance = null;
 
   const handlePrint = () => {
-    if (sankeyRef.current) {
-      sankeyRef.current.print();
+    if (sankeyInstance) {
+      sankeyInstance.print();
     }
   };
 
@@ -25,7 +25,7 @@ function App() {
           Print
         </button>
         <SankeyComponent
-          ref={sankeyRef}
+          ref={(sankey) => (sankeyInstance = sankey)}
           id="sankey-container"
           width="90%"
           height="450px"
