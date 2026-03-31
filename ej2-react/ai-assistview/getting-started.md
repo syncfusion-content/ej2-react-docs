@@ -25,6 +25,7 @@ The following list of dependencies is required to use the React `AI AssistView` 
     |-- @syncfusion/ej2-base
     |-- @syncfusion/ej2-navigations
     |-- @syncfusion/ej2-inputs
+    |-- @syncfusion/ej2-buttons
 ```
 
 ## Setup for Local Development
@@ -102,6 +103,7 @@ To apply styling to the AI AssistView component, import the required CSS theme f
 
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-react-interactive-chat/styles/material.css";

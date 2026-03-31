@@ -10,23 +10,23 @@ import { SankeyComponent, Inject, SankeyTooltip, SankeyLegend, SankeyExport,
 } from '@syncfusion/ej2-react-charts';
 
 function App() {
-  const sankeyRef = React.useRef(null);
+  let sankeyInstance = null;
 
   const handleExportPNG = () => {
-    if (sankeyRef.current) {
-      sankeyRef.current.export('PNG', 'Sankey');
+    if (sankeyInstance) {
+      sankeyInstance.export('PNG', 'Sankey');
     }
   };
 
   const handleExportPDF = () => {
-    if (sankeyRef.current) {
-      sankeyRef.current.export('PDF', 'Sankey');
+    if (sankeyInstance) {
+      sankeyInstance.export('PDF', 'Sankey');
     }
   };
 
   const handleExportSVG = () => {
-    if (sankeyRef.current) {
-      sankeyRef.current.export('SVG', 'Sankey');
+    if (sankeyInstance) {
+      sankeyInstance.export('SVG', 'Sankey');
     }
   };
 
@@ -43,7 +43,7 @@ function App() {
           Export SVG
         </button>
         <SankeyComponent
-          ref={sankeyRef}
+          ref={(sankey) => (sankeyInstance = sankey)}
           id="sankey-container"
           width="90%"
           height="450px"

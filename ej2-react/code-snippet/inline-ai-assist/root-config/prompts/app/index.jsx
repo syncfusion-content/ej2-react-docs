@@ -19,7 +19,7 @@ function App() {
         }
     };
 
-    const handlePromptRequest = () => {
+    const handlePromptRequest = (args) => {
         setTimeout(() => {
             const foundPrompt = promptsData.find((promptObj) => promptObj.prompt === args.prompt);
             const defaultResponse = 'For real-time prompt processing, connect the Inline AI Assist component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.';

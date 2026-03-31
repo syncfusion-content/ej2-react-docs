@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { SankeyComponent, Inject, SankeyTooltip, SankeyLegend, SankeyExport,
+import {
+  SankeyComponent, Inject, SankeyTooltip, SankeyLegend, SankeyExport,
   SankeyNodeDirective,
   SankeyNodesCollectionDirective,
   SankeyLinkDirective,
@@ -9,15 +10,15 @@ import { SankeyComponent, Inject, SankeyTooltip, SankeyLegend, SankeyExport,
 } from '@syncfusion/ej2-react-charts';
 
 function App() {
-  const sankeyRef = React.useRef<SankeyComponent>(null);
+  let sankeyInstance: SankeyComponent | null = null;
 
   const exportComplete = (args: SankeyExportEventArgs) => {
     console.log('Export completed successfully');
   };
 
   const handleExport = () => {
-    if (sankeyRef.current) {
-      sankeyRef.current.export('PNG', 'Sankey');
+    if (sankeyInstance) {
+      sankeyInstance.export('PNG', 'Sankey');
     }
   };
 
@@ -28,7 +29,7 @@ function App() {
           Export PNG
         </button>
         <SankeyComponent
-          ref={sankeyRef}
+          ref={(sankey) => (sankeyInstance = sankey)}
           id="sankey-container"
           width="90%"
           height="450px"
@@ -37,7 +38,7 @@ function App() {
           <SankeyNodesCollectionDirective>
             <SankeyNodeDirective id="Agricultural Waste" />
             <SankeyNodeDirective id="Biomass Residues" />
-<SankeyNodeDirective id="Bio-conversion" />
+            <SankeyNodeDirective id="Bio-conversion" />
             <SankeyNodeDirective id="Liquid Biofuel" />
             <SankeyNodeDirective id="Electricity" />
             <SankeyNodeDirective id="Heat" />
@@ -45,7 +46,7 @@ function App() {
           <SankeyLinksCollectionDirective>
             <SankeyLinkDirective sourceId="Agricultural Waste" targetId="Bio-conversion" value={84.152} />
             <SankeyLinkDirective sourceId="Biomass Residues" targetId="Bio-conversion" value={24.152} />
-              <SankeyLinkDirective sourceId="Bio-conversion" targetId="Liquid Biofuel" value={10.597} />
+            <SankeyLinkDirective sourceId="Bio-conversion" targetId="Liquid Biofuel" value={10.597} />
             <SankeyLinkDirective sourceId="Bio-conversion" targetId="Electricity" value={36.862} />
             <SankeyLinkDirective sourceId="Bio-conversion" targetId="Heat" value={60.845} />
           </SankeyLinksCollectionDirective>
