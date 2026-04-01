@@ -4,7 +4,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { AxisModel, StockChartComponent, StockChartSeriesCollectionDirective, StockChartSeriesDirective, Inject, DateTime, EmaIndicator, Tooltip, RangeTooltip, Crosshair, CandleSeries, StockChartIndicatorsDirective, StockChartIndicatorDirective, LineSeries, SplineSeries, HiloOpenCloseSeries, HiloSeries, RangeAreaSeries } from '@syncfusion/ej2-react-charts';
-import { chartData } from './datasource';
+import { chartData } from '../datasource';
 
 function App() {
   const primaryXAxis: AxisModel = { majorGridLines: { color: 'transparent' }, crosshairTooltip: { enable: true } };

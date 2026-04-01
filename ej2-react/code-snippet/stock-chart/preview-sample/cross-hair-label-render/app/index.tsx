@@ -1,4 +1,4 @@
-{% raw %}
+
 
 import { StockChartComponent, Inject, LineSeries, Crosshair, DateTime, type ICrosshairLabelRenderEventArgs, AccumulationDistributionIndicator, AtrIndicator, BollingerBands, CandleSeries, EmaIndicator, Export, HiloOpenCloseSeries, HiloSeries, load, MacdIndicator, MomentumIndicator, RangeAreaSeries, RangeTooltip, RsiIndicator, SmaIndicator, SplineAreaSeries, SplineSeries, StochasticIndicator, StockChartSeriesCollectionDirective, StockChartSeriesDirective, TmaIndicator, Trendlines } from '@syncfusion/ej2-react-charts';
 import { stockData1 } from './datasource';
@@ -36,4 +36,3 @@ export default App;
 
 ReactDOM.render(<App />, document.getElementById("charts"));
 
-{% endraw %}

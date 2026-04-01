@@ -11,8 +11,7 @@ import {
     EmaIndicator, RsiIndicator, BollingerBands, TmaIndicator, MomentumIndicator, SmaIndicator, AtrIndicator,
     AccumulationDistributionIndicator, MacdIndicator, StochasticIndicator, Export
 } from '@syncfusion/ej2-react-charts';
-import { aapl } from 'datasource.ts';
-
+import { aapl } from '../datasource';
 function App() {
     const primaryxAxis: AxisModel = {
         valueType: 'DateTime', majorGridLines: { color: 'transparent' },

@@ -1,9 +1,9 @@
-{% raw %}
+
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { StockChartComponent, StockChartSeriesCollectionDirective, StockChartSeriesDirective, Inject, DateTimeCategory, Tooltip, RangeTooltip, Crosshair, LineSeries, SplineSeries, CandleSeries, HiloOpenCloseSeries, HiloSeries, RangeAreaSeries, Trendlines, Logarithmic } from '@syncfusion/ej2-react-charts';
 import { EmaIndicator, RsiIndicator, BollingerBands, TmaIndicator, MomentumIndicator, SmaIndicator, AtrIndicator, AccumulationDistributionIndicator, MacdIndicator, StochasticIndicator, Export } from '@syncfusion/ej2-react-charts';
-import { series2 } from 'datasource.ts';
+import { series2 } from '../datasource';
 function App() {
     const primaryxAxis = {
         valueType: 'DateTimeCategory',
@@ -32,4 +32,3 @@ function App() {
 ;
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
-{% endraw %}

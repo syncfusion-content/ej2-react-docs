@@ -108,35 +108,20 @@ npm start
 
 {% previewsample "page.domainurl/code-snippet/inline-ai-assist/getting-started" %}
 
-## Configure relateTo property
+## RelateTo and target configuration
 
-You can use the `relateTo` property to position the Inline AI Assist relative to a specific DOM element. It accepts either a CSS selector string (e.g., '.container' or '#id') or an HTMLElement.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/inline-ai-assist/relateTo/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/inline-ai-assist/relateTo/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/inline-ai-assist/relateTo" %}
-
-## Configure target property
-
-The `target` property specifies the element or CSS selector where the Inline AI Assist will be appended. It accepts either a CSS selector string (e.g., '.container' or '#id') or an HTMLElement.
+You can use the `relateTo` property to position the Inline AI Assist relative to a specific DOM element. It accepts either a CSS selector string (e.g., '.container' or '#id') or an HTMLElement. The `target` property specifies the element or CSS selector where the Inline AI Assist will be appended. It accepts either a CSS selector string (e.g., '.container' or '#id') or an HTMLElement.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/inline-ai-assist/target/app/index.jsx %}
+{% include code-snippet/inline-ai-assist/relateTo-target/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/inline-ai-assist/target/app/index.tsx %}
+{% include code-snippet/inline-ai-assist/relateTo-target/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/inline-ai-assist/target" %}
+{% previewsample "page.domainurl/code-snippet/inline-ai-assist/relateTo-target" %}
 
 ## Response display modes
 

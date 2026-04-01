@@ -190,6 +190,7 @@ import * as ReactDOM from "react-dom";
 import "./App.css";
 
 function App() {
+  const splitbuttonModel = { iconCss: "e-icons e-paste", items: [{ text: "Keep Source Format" }, { text: "Merge format" }, { text: "Keep text only" }], content: "Paste" };
   return (
     <RibbonComponent id="ribbon">
       <RibbonTabsDirective>
@@ -200,7 +201,7 @@ function App() {
                   <RibbonCollectionDirective id="paste-collection">
                       <RibbonItemsDirective>
                         <RibbonItemDirective type="SplitButton" allowedSizes={RibbonItemSize.Large}
-                            splitButtonSettings={{ iconCss: "e-icons e-paste", items: [{ text: "Keep Source Format" }, { text: "Merge format" }, { text: "Keep text only" }], content: "Paste" }}>
+                            splitButtonSettings={splitbuttonModel}>
                         </RibbonItemDirective>
                       </RibbonItemsDirective>
                   </RibbonCollectionDirective>

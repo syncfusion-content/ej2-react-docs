@@ -1,4 +1,3 @@
-{% raw %}
 
 
 import * as React from "react";
@@ -11,8 +10,7 @@ import {
     EmaIndicator, RsiIndicator, BollingerBands, TmaIndicator, MomentumIndicator, SmaIndicator, AtrIndicator,
     AccumulationDistributionIndicator, MacdIndicator, StochasticIndicator, Export
 } from '@syncfusion/ej2-react-charts';
-import { chartData } from 'datasource.ts';
-
+import { chartData } from '../datasource';
 function App() {
 
         return (
@@ -44,5 +42,3 @@ function App() {
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
 
-
-{% endraw %}
