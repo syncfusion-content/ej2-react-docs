@@ -62,8 +62,8 @@ function App() {
             <InlineAIAssistComponent
                 id="defaultInlineAssist"
                 ref={assistRef}
-                target="#container"
                 relateTo="#summarizeBtn"
+                target="#container"
                 promptRequest={handlePromptRequest}
                 responseSettings={{
                     itemSelect: handleResponseItemSelect

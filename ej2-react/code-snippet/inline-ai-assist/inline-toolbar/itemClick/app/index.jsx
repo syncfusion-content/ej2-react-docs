@@ -1,0 +1,20 @@
+import { InlineAIAssistComponent } from '@syncfusion/ej2-react-interactive-chat';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+
+function App() {
+
+    const inlineToolbarSettings = {
+        itemClick: (args) => {
+            // Your actions here
+        }
+    };
+
+    return (
+        <InlineAIAssistComponent 
+            inlineToolbarSettings={inlineToolbarSettings}
+        />
+    );
+}
+
+ReactDOM.render(<App />, document.getElementById('container'));

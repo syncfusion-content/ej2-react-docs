@@ -37,7 +37,7 @@ function App() {
   const pasteOptions = [{ text: "Keep Source Format" }, { text: "Merge Format" }, { text: "Keep Text Only" }];
   const fontSize = ["8", "9", "10", "11", "12", "14", "16", "18", "20", "22", "24", "26", "28", "36", "48", "72", "96"];
   const fontStyle = ["Algerian", "Arial", "Calibri", "Cambria", "Cambria Math", "Courier New", "Candara", "Georgia", "Impact", "Segoe Print", "Segoe Script", "Segoe UI", "Symbol", "Times New Roman", "Verdana", "Windings"];
-  
+  const groupButton = [{iconCss: 'e-icons e-bold', keyTip: '1', content: 'Bold', selected: true}, {iconCss: 'e-icons e-italic', keyTip: '2', content: 'Italic'}, {iconCss: 'e-icons e-underline', keyTip: '3', content: 'Underline'}, {iconCss: 'e-icons e-strikethrough', keyTip: '4', content: 'Strikethrough'},{iconCss: 'e-icons e-change-case', keyTip: '5', content: 'Change Case'}];
   return (
       <div>
           <RibbonComponent id='ribbon' ref={ribbonObj} enableKeyTips={true} created={ribbonCreated}>
@@ -77,7 +77,7 @@ function App() {
                                 </RibbonCollectionDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="GroupButton" keyTip='GB' allowedSizes={RibbonItemSize.Small} groupButtonSettings={{selection: RibbonGroupButtonSelection.Single, items: [{iconCss: 'e-icons e-bold', keyTip: '1', content: 'Bold', selected: true}, {iconCss: 'e-icons e-italic', keyTip: '2', content: 'Italic'}, {iconCss: 'e-icons e-underline', keyTip: '3', content: 'Underline'}, {iconCss: 'e-icons e-strikethrough', keyTip: '4', content: 'Strikethrough'},{iconCss: 'e-icons e-change-case', keyTip: '5', content: 'Change Case'}]}}>
+                                        <RibbonItemDirective type="GroupButton" keyTip='GB' allowedSizes={RibbonItemSize.Small} groupButtonSettings={{selection: RibbonGroupButtonSelection.Single, items: groupButton}}>
                                         </RibbonItemDirective>
                                         <RibbonItemDirective type="ColorPicker" keyTip='CP' allowedSizes={RibbonItemSize.Small} colorPickerSettings={{value: '#123456'}}>
                                         </RibbonItemDirective>

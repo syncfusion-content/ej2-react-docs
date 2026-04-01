@@ -16,47 +16,35 @@ You can render and use the command action popup by using the `commands` property
 
 You can use the [commandSettings](../api/inline-ai-assist#commandsettings) property to add commands that populate the command popup. Each command item can perform a quick request based on the configured `prompt`.
 
-### Setting id
+Each command item object can include the following properties:
 
-You can use the `id` property to assign a unique identifier to each command item; detect the selected command and perform the corresponding action.
+| Property    | Type    | Default | Description                                                  |
+|-------------|---------|---------|--------------------------------------------------------------|
+| label       | string  | ''      | Specifies the display label of the command item.             |
+| prompt      | string  | ''      | Specifies the prompt text executed when the item is selected.|
+| iconCss     | string  | ''      | Specifies the CSS class for the item's icon.                 |
+| disabled    | boolean | false   | Specifies whether the command is disabled and unselectable.  |
+| groupBy     | string  | ''      | Specifies the group category for organizing related commands.|
+| id          | string  | ''      | Specifies a unique identifier for the command item.          |
+| tooltip     | string  | ''      | Specifies the tooltip text displayed on hover.               |
 
-### Adding iconCss
+## Command interactions
 
-Include icons by using `iconCss` property on a command item to show an icon alongside the label.
+The [itemSelect](../api/inline-ai-assist/commandSettingsModel#itemselect) event is triggered when a command item is selected from the command popup in the Inline AI Assist component. This event allows developers to handle custom actions based on user selections.
 
-### Setting disabled
+## Customization of AI commands popup 
 
-You can use the `disabled` property to disable a command, preventing it from being selected. By default, its value is `false`.
+### Setting popup width
 
-### Configure prompt
+Configure the popup width using the `popupWidth` property in the commandSettings. This property accepts CSS values such as '300px', '50%', or numeric values in pixels.
 
-You can use the `prompt` property to execute a prompt when the command is selected in the command action popup.
+### Setting popup height
 
-### Setting label
+Configure the popup height using the `popupHeight` property in the commandSettings. Use fixed height values to enable vertical scrolling when displaying large command lists.
 
-You can use the `label` property to specify the visible text for a command; this text appears in the command popup and describes the action that will be performed when selected.
+## Code Example
 
-### Configure groupBy
-
-To visually group commands, use the `groupBy` property on command items. The popup will group items by the `groupBy` value and render group headers.
-
-### Setting tooltip text
-
-You can use the `tooltip` property to specify the tooltip text to be displayed on hovering the command item in the popup.
-
-## Setting popup width
-
-component the popup width with `popupWidth` property in the commandSettings. Accepts CSS values or number (px).
-
-## Setting popup height
-
-component the popup height with `popupHeight` property in the commandSettings. Use this to enable scrollable lists when many commands exist.
-
-## Configure item select
-
-The [itemSelect](../api/inline-ai-assist/commandSettingsModel#itemselect) event is triggered when a command item is selected from the command popup in the Inline AI Assist component.
-
-Below sample demonstrates the usage of command settings in Inline Assist component
+Below sample demonstrates the usage of command settings in the Inline AI Assist component:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -71,3 +59,9 @@ Below sample demonstrates the usage of command settings in Inline Assist compone
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/inline-ai-assist/command-settings" %}
+
+## See Also
+
+- [Response Settings](./response-settings.md)
+- [Inline Toolbar](./inline-toolbar.md)
+- [Events Documentation](./events.md)
