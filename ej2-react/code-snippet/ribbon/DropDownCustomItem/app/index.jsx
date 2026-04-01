@@ -3,6 +3,11 @@ import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
 function App() {
     const tableOptions = [{ text: "Insert Table" }, { text: "This device" }, { text: "Convert Table" }, { text: "Excel SpreadSheet" }];
+    const dropDownSettingModel = { iconCss: "e-icons e-table", items: tableOptions, content: "Table", beforeItemRender: function (args) { 
+                                                    if (args.item.text === 'Insert Table') {
+                                                        args.element.classList.add("e-custom-class");
+                                                    }
+                                                } };
     return (
         <div>
             <RibbonComponent id="ribbon">
@@ -13,11 +18,7 @@ function App() {
                                 <RibbonCollectionsDirective>
                                     <RibbonCollectionDirective>
                                         <RibbonItemsDirective>
-                                            <RibbonItemDirective type="DropDown" dropDownSettings={{ iconCss: "e-icons e-table", items: tableOptions, content: "Table", beforeItemRender: function (args) { 
-                                                    if (args.item.text === 'Insert Table') {
-                                                        args.element.classList.add("e-custom-class");
-                                                    }
-                                                } }}>
+                                            <RibbonItemDirective type="DropDown" dropDownSettings={dropDownSettingModel}>
                                             </RibbonItemDirective>
                                         </RibbonItemsDirective>
                                     </RibbonCollectionDirective>

@@ -8,151 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Inline toolbar configuration in React Inline AI Assist component
+# Toolbar configuration in React Inline AI Assist component
 
-You can render the inline toolbar items by using the `items` property in the [inlineToolbarSettings](../api/inline-ai-assist#inlinetoolbarsettings) property.
+The inline toolbar provides a customizable interface for users to interact with the Inline AI Assist component. You can render inline toolbar items by using the `items` property in the [inlineToolbarSettings](../api/inline-ai-assist#inlinetoolbarsettings) property.
 
-## Built-in toolbar items
-
-By default, the inline toolbar renders the `send` item which allows users to send the prompt text.
-
-## Adding custom items
-
-You can use the [inlineToolbarSettings](../api/inline-ai-assist#inlinetoolbarsettings) property to add custom items for the inline toolbar in the Inline AI Assist. The custom items will be added along with the existing built-in items in the inline toolbar.
-
-## Items
-
-The Inline AI Assist toolbar can be rendered by defining an array of items. Items can be constructed with the following built-in command types or item template.
-
-### Adding iconCss
-
-You can customize the toolbar icons by using the `iconCss` property.
-
-### Setting item type
-
-You can change the toolbar item type by using the `type` property. The `type` supports three types of items such as `Button`, `Separator` and `Input`. By default, the type is `Button`.
-
-### Setting text
-
-You can use the `text` property to set the text for toolbar item.
-
-### Show or hide toolbar item
-
-You can use the `visible` property to specify whether to show or hide the toolbar item. By default, its value is `true`.
-
-### Setting disabled
-
-You can use the `disabled` property to disable the toolbar item. By default, its value is `false`.
-
-### Setting tooltip text
-
-You can use the `tooltip` property to specify the tooltip text to be displayed on hovering the toolbar item.
-
-### Setting cssClass
-
-You can use the `cssClass` property to customize the toolbar item.
-
-### Setting alignment
-
-You can change the alignment of toolbar item by using the `align` property. It supports three types of alignments such as `Left`, `Center` and `Right`. By default, the value is `Left`.
-
-Below sample demonstrates the usage of custom toolbar items in Inline Assist component
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/inline-ai-assist/inline-toolbar/props/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/inline-ai-assist/inline-toolbar/props/app/index.tsx %}
-{% endhighlight %}
-{% highlight css tabtitle="index.css" %}
-{% include code-snippet/inline-ai-assist/inline-toolbar/props/index.css %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/inline-ai-assist/inline-toolbar/props" %}
-
-### Enabling tab key navigation in toolbar
-
-You can use the `tabIndex` property of a Toolbar item to enable tab key navigation for the item. By default, the user can switch between items using the arrow keys, but the `tabIndex` property allows you to switch between items using the `Tab` and `Shift+Tab` keys as well.
-
-To use the `tabIndex` property, set it for each Toolbar item which you want to enable tab key navigation. The `tabIndex` property should be set to a positive integer value. A value of `0` or a negative value will disable tab key navigation for the item.
-
-For example, to enable tab key navigation for two Toolbar items you can use the following code:
-
-```tsx
-import { InlineAIAssistComponent, InlineToolbarSettingsModel } from '@syncfusion/ej2-react-interactive-chat';
-import * as React from 'react';
-import * as ReactDOM from "react-dom";
-
-function App() {
-
-    const inlineToolbarSettings: InlineToolbarSettingsModel = {
-        items: [
-            { text: "Item 1", tabIndex: 1 },
-            { text: "Item 2", tabIndex: 2 }
-        ]
-    }
-
-    return (
-        // specifies the tag for render the Inline AI Assist component
-        <InlineAIAssistComponent inlineToolbarSettings={inlineToolbarSettings}>
-        </InlineAIAssistComponent>
-    );
-}
-
-ReactDOM.render(<App />, document.getElementById('container'));
-```
-
-With the above code, the user can switch between the two Toolbar items using the Tab and Shift+Tab keys, in addition to using the arrow keys. The items will be navigated in the order specified by the `tabIndex` values.
-
-If you set the `tabIndex` value to 0 for all Toolbar items, tab key navigation will be based on the element order rather than the `tabIndex` values. For example:
-
-```tsx
-import { InlineAIAssistComponent, InlineToolbarSettingsModel } from '@syncfusion/ej2-react-interactive-chat';
-import * as React from 'react';
-import * as ReactDOM from "react-dom";
-
-function App() {
-
-    const inlineToolbarSettings: InlineToolbarSettingsModel = {
-        items: [
-            { text: "Item 1", tabIndex: 0 },
-            { text: "Item 2", tabIndex: 0 }
-        ]
-    }
-
-    return (
-        // specifies the tag for render the Inline AI Assist component
-        <InlineAIAssistComponent inlineToolbarSettings={inlineToolbarSettings}>
-        </InlineAIAssistComponent>
-    );
-}
-
-ReactDOM.render(<App />, document.getElementById('container'));
-```
-
-In this case, the user can switch between the two Toolbar items using the Tab and Shift+Tab keys, and the items will be navigated in the order in which they appear in the DOM.
-
-### Setting template
-
-You can use the `template` property to add custom toolbar item in the Inline AI Assist.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/inline-ai-assist/inline-toolbar/template/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/inline-ai-assist/inline-toolbar/template/app/index.tsx %}
-{% endhighlight %}
-{% highlight css tabtitle="index.css" %}
-{% include code-snippet/inline-ai-assist/inline-toolbar/template/index.css %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/inline-ai-assist/inline-toolbar/template" %}
-
-## Toolbar positioning
+## Configure the toolbar and positioning
 
 You can use the [toolbarPosition](../api/inline-ai-assist/inlineToolbarSettingsModel#toolbarPosition) property to customize footer toolbar position. It has two modes such as `Inline`, and `Bottom`. By default, the toolbarPosition is `Inline`.
 
@@ -174,16 +34,55 @@ Below sample demonstrates the usage of toolbar settings in Inline Assist compone
 
 {% previewsample "page.domainurl/code-snippet/inline-ai-assist/inline-toolbar/toolbar-position" %}
 
-## Item click
+## Built-in toolbar items
+
+By default, the inline toolbar renders the `send` item which allows users to send the prompt text.
+
+## Adding custom toolbar items
+
+You can use the [inlineToolbarSettings](../api/inline-ai-assist#inlinetoolbarsettings) property to add custom items for the inline toolbar in the Inline AI Assist. The custom items will be added along with the existing built-in items in the inline toolbar.
+
+Each toolbar item object can include the following properties:
+
+| Property    | Type    | Default  | Description                                                        |
+|-------------|---------|----------|--------------------------------------------------------------------|
+| `iconCss`   | string  | ''       | Specifies the CSS class for the item's icon.                       |
+| `type`      | string  | 'Button' | Supports three types of items: `Button`, `Separator`, and `Input`. |
+| `text`      | string  | ''       | Specifies the text label for the toolbar item.                     |
+| `template`  | string  | ''       | Specifies a custom template for the toolbar item.                  |
+| `visible`   | boolean | true     | Specifies whether to show or hide the toolbar item.                |
+| `id`        | string  | ''       | Specifies a unique identifier for the toolbar item.                |
+| `disabled`  | boolean | false    | Specifies whether the toolbar item is disabled and unselectable.   |
+| `tooltip`   | string  | ''       | Specifies the tooltip text displayed on hover.                     |
+| `cssClass`  | string  | ''       | Specifies custom CSS classes for styling the toolbar item.         |
+| `align`     | string  | 'Left'   | Specifies the alignment of the toolbar item (Left, Center, Right). |
+| `tabIndex`  | number  | -1       | Specifies the tab order for keyboard navigation.                   | 
+
+Below sample demonstrates the usage of custom toolbar items in Inline Assist component
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/inline-ai-assist/inline-toolbar/props/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/inline-ai-assist/inline-toolbar/props/app/index.tsx %}
+{% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/inline-ai-assist/inline-toolbar/props/index.css %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/inline-ai-assist/inline-toolbar/props" %}
+
+## Toolbar itemClick event
 
 The [itemClick](../api/inline-ai-assist/inlineToolbarSettingsModel#itemclick) event is triggered when the inline toolbar item is clicked.
 
-```tsx
-const inlineToolbarSettings: InlineToolbarSettingsModel = {
-    itemClick: (args: ToolbarItemClickEventArgs) => {
-        // Your actions here
-    }
-}
-
-<InlineAIAssistComponent inlineToolbarSettings={inlineToolbarSettings}/>
-```
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/inline-ai-assist/inline-toolbar/itemClick/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/inline-ai-assist/inline-toolbar/itemClick/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}

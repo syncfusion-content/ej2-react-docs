@@ -43,39 +43,27 @@ const App: React.FC = () => {
 
     return (
         <div>
-            <div id="container">
-                <button 
-                    id="summarizeBtn" 
-                    className="e-btn e-primary" 
-                    style={{ marginBottom: '10px' }}
-                    onClick={handleSummarizeBtnClick}
-                >
-                    Content Summarize
-                </button>
-                <div 
-                    id="editableText" 
-                    contentEditable="true" 
-                    style={{
-                        width: '100%',
-                        minHeight: '120px',
-                        maxHeight: '300px',
-                        overflowY: 'auto',
-                        fontSize: '16px',
-                        padding: '12px',
-                        borderRadius: '4px',
-                        border: '1px solid'
-                    }}
-                    ref={editableRef}
-                >
-                    <p>Inline AI Assist component provides intelligent text processing capabilities that enhance user productivity. It leverages advanced natural language processing to understand context and deliver precise suggestions. Users can seamlessly integrate AI-powered features into their applications.</p>
-                    <p>With real-time response streaming and customizable prompts, developers can create interactive experiences. The component supports multiple response modes including inline editing and popup-based interactions.</p>
-                </div>
+            <button 
+                id="summarizeBtn" 
+                className="e-btn e-primary" 
+                style={{ marginBottom: '10px' }}
+                onClick={handleSummarizeBtnClick}
+            >
+                Content Summarize
+            </button>
+            <div 
+                id="editableText" 
+                contentEditable="true" 
+                ref={editableRef}
+            >
+                <p>Inline AI Assist component provides intelligent text processing capabilities that enhance user productivity. It leverages advanced natural language processing to understand context and deliver precise suggestions. Users can seamlessly integrate AI-powered features into their applications.</p>
+                <p>With real-time response streaming and customizable prompts, developers can create interactive experiences. The component supports multiple response modes including inline editing and popup-based interactions.</p>
             </div>
             <InlineAIAssistComponent
                 id="defaultInlineAssist"
                 ref={assistRef}
-                target="#container"
                 relateTo="#summarizeBtn"
+                target="#container"
                 promptRequest={handlePromptRequest}
                 responseSettings={{
                     itemSelect: handleResponseItemSelect

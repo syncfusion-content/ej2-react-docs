@@ -1,4 +1,3 @@
-{% raw %}
 
 
 import * as React from "react";
@@ -11,7 +10,7 @@ import {
     EmaIndicator, RsiIndicator, BollingerBands, TmaIndicator, MomentumIndicator, SmaIndicator, AtrIndicator,
     AccumulationDistributionIndicator, MacdIndicator, StochasticIndicator, Export
 } from '@syncfusion/ej2-react-charts';
-import { series2 } from 'datasource.ts';
+import { series2 } from '../datasource';
 
 function App() {
     const primaryxAxis: AxisModel = {
@@ -44,5 +43,3 @@ function App() {
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
 
-
-{% endraw %}

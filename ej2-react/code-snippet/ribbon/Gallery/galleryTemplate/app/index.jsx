@@ -90,6 +90,8 @@ function App() {
       ]
     }]
   });
+
+  const splitbuttonModel = { iconCss: 'e-icons e-paste',items: [{ text: 'Keep Source Format' }, { text: 'Merge Format' }, { text: 'Keep Text Only' }], content: 'Paste' };
   return (
     <RibbonComponent id='ribbon'>
       <RibbonTabsDirective>
@@ -99,7 +101,7 @@ function App() {
               <RibbonCollectionsDirective>
                 <RibbonCollectionDirective>
                   <RibbonItemsDirective>
-                    <RibbonItemDirective type='SplitButton' splitButtonSettings={{ iconCss: 'e-icons e-paste',items: [{ text: 'Keep Source Format' }, { text: 'Merge Format' }, { text: 'Keep Text Only' }], content: 'Paste' }}>
+                    <RibbonItemDirective type='SplitButton' splitButtonSettings={splitbuttonModel}>
                     </RibbonItemDirective>
                   </RibbonItemsDirective>
                 </RibbonCollectionDirective>

@@ -1,4 +1,4 @@
-{% raw %}
+
 
 
 import * as React from "react";
@@ -7,7 +7,7 @@ import { AxisModel } from'@syncfusion/ej2-react-charts';
 import { StockChartComponent, StockChartSeriesCollectionDirective, StockChartSeriesDirective, Inject, DateTime, RangeTooltip, Crosshair, LineSeries, SplineSeries, CandleSeries, HiloOpenCloseSeries, HiloSeries, RangeAreaSeries, Trendlines, Tooltip, AxesDirective, AxisDirective } from '@syncfusion/ej2-react-charts';
 import { EmaIndicator, RsiIndicator, BollingerBands, TmaIndicator, MomentumIndicator, SmaIndicator, AtrIndicator, AccumulationDistributionIndicator, MacdIndicator, StochasticIndicator, Export,
 StockChartAxesDirective, StockChartAxisDirective } from '@syncfusion/ej2-react-charts';
-import { chartData } from 'datasource.ts';
+import { chartData } from '../datasource';
 
 function App() {
 
@@ -41,5 +41,3 @@ function App() {
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
 
-
-{% endraw %}

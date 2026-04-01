@@ -1,9 +1,9 @@
-{% raw %}
+
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { StockChartComponent, StockChartSeriesCollectionDirective, StockChartSeriesDirective, Inject, DateTime, Tooltip, RangeTooltip, Crosshair, CandleSeries, StockChartIndicatorsDirective, StockChartIndicatorDirective, LineSeries, SplineSeries, HiloOpenCloseSeries, HiloSeries, RangeAreaSeries } from '@syncfusion/ej2-react-charts';
 import { BollingerBands } from '@syncfusion/ej2-react-charts';
-import { chartData } from 'datasource.ts';
+import { chartData } from '../datasource';
 function App() {
     const upperline = { color: '#ffb735', width: 1 };
     const lowerline = { color: '#f2ec2f', width: 1 };
@@ -28,4 +28,3 @@ function App() {
 ;
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
-{% endraw %}

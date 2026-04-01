@@ -14,7 +14,7 @@ The React Ribbon component triggers a variety of events in response to user inte
 
 ## tabSelected
 
-The [tabSelected](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel/#tabselected) event is triggered after a tab is successfully selected, allowing you to execute logic based on the newly active tab.
+The [tabSelected](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel#tabselected) event is triggered after a tab is successfully selected, allowing you to execute logic based on the newly active tab.
 
 ```ts
 
@@ -53,7 +53,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ## tabSelecting
 
-The [tabSelecting](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel/#tabselecting) event is triggered before a tab is selected. This event can be canceled to prevent the tab selection.
+The [tabSelecting](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel#tabselecting) event is triggered before a tab is selected. This event can be canceled to prevent the tab selection.
 
 ```ts
 
@@ -92,7 +92,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ## ribbonCollapsing
 
-The [ribbonCollapsing](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel/#ribboncollapsing) event is triggered before the ribbon is collapsed. This action can be canceled.
+The [ribbonCollapsing](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel#ribboncollapsing) event is triggered before the ribbon is collapsed. This action can be canceled.
 
 ```ts
 
@@ -131,7 +131,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ## ribbonExpanding
 
-The [ribbonExpanding](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel/#ribbonexpanding) event is triggered before is expanded. This action can be canceled.
+The [ribbonExpanding](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel#ribbonexpanding) event is triggered before is expanded. This action can be canceled.
 
 ```ts
 import * as React from "react";
@@ -169,7 +169,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ## launcherIconClick
 
-The [launcherIconClick](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel/#launchericonclick) event is triggered when a launcher icon of the group is clicked. This is useful for opening dialogs or performing group-specific actions.
+The [launcherIconClick](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel#launchericonclick) event is triggered when a launcher icon of the group is clicked. This is useful for opening dialogs or performing group-specific actions.
 
 ```ts
 import * as React from "react";
@@ -206,11 +206,11 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ## overflowPopupOpen
 
-The [overflowPopupOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/#overflowpopupopen) event is triggered while the overflow popup is opening.
+The [overflowPopupOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon#overflowpopupopen) event is triggered while the overflow popup is opening.
 
 ## overflowPopupClose
 
-The [overflowPopupClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/#overflowpopupclose) event is triggered while the overflow popup is closing.
+The [overflowPopupClose](https://ej2.syncfusion.com/react/documentation/api/ribbon#overflowpopupclose) event is triggered while the overflow popup is closing.
 
 The following code example demonstrates the ribbon rendered with `overflowPopupOpen` and `overflowPopupClose` events.
 
@@ -254,7 +254,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### clicked
 
-The [clicked](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonButtonSettings/#clicked) event is triggered when a ribbon button is clicked.
+The [clicked](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonButtonSettings#clicked) event is triggered when a ribbon button is clicked.
 
 ```ts
 import * as React from "react";
@@ -290,7 +290,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### created
 
-The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonButtonSettings/#created) event is triggered when a ribbon button is created.
+The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonButtonSettings#created) event is triggered when a ribbon button is created.
 
 ```ts
 import * as React from "react";
@@ -328,13 +328,20 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### change
 
-The [change](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonCheckBoxSettings/#change) event is triggered when the state of the Checkbox is changed.
+The [change](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonCheckBoxSettings#change) event is triggered when the state of the Checkbox is changed.
 
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
 function App() {
+    const checkBoxProps = {
+        label: "Ruler",
+        checked: false,
+        change: () => {
+            // Your required actions here
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -344,9 +351,9 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="CheckBox" checkBoxSettings={{ label: "Ruler", checked: false, change: function () { 
-                                            // Your required actions here
-                                        } }}>
+                                        <RibbonItemDirective
+                                          type="CheckBox"
+                                          checkBoxSettings={checkBoxProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -364,7 +371,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### created
 
-The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonCheckBoxSettings/#created) event is triggered once the Checkbox is created.
+The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonCheckBoxSettings#created) event is triggered once the Checkbox is created.
 
 ```ts
 import * as React from "react";
@@ -402,7 +409,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### change
 
-The [change](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#change)  event is triggered when changing the color value.
+The [change](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings#change)  event is triggered when changing the color value.
 
 ```ts
 import * as React from "react";
@@ -440,7 +447,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### created
 
-The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#created) event is triggered once the ColorPicker is created.
+The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings#created) event is triggered once the ColorPicker is created.
 
 ```ts
 import * as React from "react";
@@ -478,7 +485,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### open
 
-The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#open) event is triggered while the ColorPicker popup is opening.
+The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings#open) event is triggered while the ColorPicker popup is opening.
 
 ```ts
 import * as React from "react";
@@ -516,7 +523,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### select
 
-The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#select) event is triggered when selecting a color from the picker or palette, particularly when the `showButtons` property is enabled.
+The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings#select) event is triggered when selecting a color from the picker or palette, particularly when the `showButtons` property is enabled.
 
 ```ts
 import * as React from "react";
@@ -554,7 +561,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeClose
 
-The [beforeClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#beforeclose)  event is triggered before the ColorPicker popup closes.
+The [beforeClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings#beforeclose)  event is triggered before the ColorPicker popup closes.
 
 ```ts
 import * as React from "react";
@@ -592,7 +599,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeOpen
 
-The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#beforeopen) event is triggered before the ColorPicker popup opens.
+The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings#beforeopen) event is triggered before the ColorPicker popup opens.
 
 ```ts
 import * as React from "react";
@@ -629,7 +636,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 ```
 ### beforeTileRender
 
-The [beforeTileRender](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#beforetilerender) event is triggered while rendering each palette tile, allowing for customization.
+The [beforeTileRender](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings#beforetilerender) event is triggered while rendering each palette tile, allowing for customization.
 
 ```ts
 import * as React from "react";
@@ -669,7 +676,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### change
 
-The [change](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings/#change) event is triggered when an item in a popup is selected or the model value is changed by the user.
+The [change](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings#change) event is triggered when an item in a popup is selected or the model value is changed by the user.
 
 ```ts
 import * as React from "react";
@@ -706,7 +713,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### close
 
-The [close](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings/#close) event is triggered when the popup is closed.
+The [close](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings#close) event is triggered when the popup is closed.
 
 ```ts
 import * as React from "react";
@@ -743,7 +750,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### open
 
-The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings/#open) event is triggered when the popup is opened.
+The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings#open) event is triggered when the popup is opened.
 
 ```ts
 import * as React from "react";
@@ -780,7 +787,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### created
 
-The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings/#created) event is triggered when the ComboBox is created.
+The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings#created) event is triggered when the ComboBox is created.
 
 ```ts
 import * as React from "react";
@@ -817,7 +824,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### filtering
 
-The [filtering](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings/#filtering) event triggers when typing a character in the ComboBox.
+The [filtering](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings#filtering) event triggers when typing a character in the ComboBox.
 
 ```ts
 import * as React from "react";
@@ -854,7 +861,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### select
 
-The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings/#select) event is triggered when an item in the popup is selected.
+The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings#select) event is triggered when an item in the popup is selected.
 
 ```ts
 import * as React from "react";
@@ -891,7 +898,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeOpen
 
-The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings/#beforeopen) event triggers before the popup opens.
+The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings#beforeopen) event triggers before the popup opens.
 
 ```ts
 import * as React from "react";
@@ -930,7 +937,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeClose
 
-The [beforeClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#beforeclose) event is triggered before the DropdownButton popup closes.
+The [beforeClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings#beforeclose) event is triggered before the DropdownButton popup closes.
 
 ```ts
 import * as React from "react";
@@ -969,7 +976,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeOpen
 
-The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#beforeopen) event is triggered before the Dropdown button popup opens.
+The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings#beforeopen) event is triggered before the Dropdown button popup opens.
 
 ```ts
 import * as React from "react";
@@ -1008,7 +1015,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeItemRender
 
-The [beforeItemRender](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#beforeitemrender) event is triggered while rendering each popup item of the Dropdown button.
+The [beforeItemRender](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings#beforeitemrender) event is triggered while rendering each popup item of the Dropdown button.
 
 ```ts
 import * as React from "react";
@@ -1047,7 +1054,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### open
 
-The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#open) event is triggered when the DropDownButton popup opens.
+The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings#open) event is triggered when the DropDownButton popup opens.
 
 ```ts
 import * as React from "react";
@@ -1086,7 +1093,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### close
 
-The [close](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#close) event is triggered when the DropDownButton popup closes.
+The [close](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings#close) event is triggered when the DropDownButton popup closes.
 
 ```ts
 import * as React from "react";
@@ -1125,7 +1132,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### created
 
-The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#created) event is triggered when the DropDownButton is created.
+The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings#created) event is triggered when the DropDownButton is created.
 
 ```ts
 import * as React from "react";
@@ -1164,7 +1171,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### select
 
-The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#select) event is triggered when an action item is selected in the DropDownButton popup.
+The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings#select) event is triggered when an action item is selected in the DropDownButton popup.
 
 ```ts
 import * as React from "react";
@@ -1205,7 +1212,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeClose
 
-The [beforeClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#beforeclose) event is triggered before the SplitButton popup closes.
+The [beforeClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings#beforeclose) event is triggered before the SplitButton popup closes.
 
 ```ts
 import * as React from "react";
@@ -1244,7 +1251,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeOpen
 
-The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#beforeopen) event is triggered before the SplitButton popup opens.
+The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings#beforeopen) event is triggered before the SplitButton popup opens.
 
 ```ts
 import * as React from "react";
@@ -1283,7 +1290,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeItemRender
 
-The [beforeItemRender](../api/ribbon/ribbonSplitButtonSettings/#beforeitemrender) event is triggered while rendering each popup item of the SplitButton.
+The [beforeItemRender](../api/ribbon/ribbonSplitButtonSettings#beforeitemrender) event is triggered while rendering each popup item of the SplitButton.
 
 ```ts
 import * as React from "react";
@@ -1322,7 +1329,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### open
 
-The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#open) event is triggered when the SplitButton popup opens.
+The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings#open) event is triggered when the SplitButton popup opens.
 
 ```ts
 import * as React from "react";
@@ -1361,7 +1368,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### close
 
-The [close](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#close) event is triggered when the SplitButton popup closes.
+The [close](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings#close) event is triggered when the SplitButton popup closes.
 
 ```ts
 import * as React from "react";
@@ -1400,7 +1407,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### created
 
-The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#created) event is triggered when the SplitButton is created.
+The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings#created) event is triggered when the SplitButton is created.
 
 ```ts
 import * as React from "react";
@@ -1439,7 +1446,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### select
 
-The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#select) event is triggered when an action item is selected in the SplitButton popup.
+The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings#select) event is triggered when an action item is selected in the SplitButton popup.
 
 ```ts
 import * as React from "react";
@@ -1478,7 +1485,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### click
 
-The [click](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#click) event is triggered when clicking the primary button in the SplitButton.
+The [click](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings#click) event is triggered when clicking the primary button in the SplitButton.
 
 ```ts
 import * as React from "react";
@@ -1519,7 +1526,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeClick
 
-The [beforeClick](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroupButtonItem/#beforeclick) event is triggered before a button is selected from the GroupButton items.
+The [beforeClick](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroupButtonItem#beforeclick) event is triggered before a button is selected from the GroupButton items.
 
 ```ts
 
@@ -1578,7 +1585,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### click
 
-The [click](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroupButtonItem/#click) event is triggered when a button is selected from the GroupButton items.
+The [click](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroupButtonItem#click) event is triggered when a button is selected from the GroupButton items.
 
 ```ts
 
@@ -1636,7 +1643,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeClose
 
-The [beforeClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#beforeclose) event is triggered before the File Menu popup closes.
+The [beforeClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings#beforeclose) event is triggered before the File Menu popup closes.
 
 ```ts
 import * as React from "react";
@@ -1686,7 +1693,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeOpen
 
-The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#beforeopen) event is triggered before the File Menu popup opens.
+The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings#beforeopen) event is triggered before the File Menu popup opens.
 
 ```ts
 import * as React from "react";
@@ -1736,7 +1743,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeItemRender
 
-The [beforeItemRender](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#beforeitemrender) event is triggered while rendering each ribbon File Menu item.
+The [beforeItemRender](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings#beforeitemrender) event is triggered while rendering each ribbon File Menu item.
 
 ```ts
 import * as React from "react";
@@ -1786,7 +1793,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### open
 
-The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#open) event is triggered when the File Menu popup opens.
+The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings#open) event is triggered when the File Menu popup opens.
 
 ```ts
 import * as React from "react";
@@ -1836,7 +1843,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### close
 
-The [close](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#close) event is triggered when the File Menu popup closes.
+The [close](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings#close) event is triggered when the File Menu popup closes.
 
 ```ts
 import * as React from "react";
@@ -1886,7 +1893,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### select
 
-The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#select) event is triggered when an item is selected in the ribbon File Menu.
+The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings#select) event is triggered when an item is selected in the ribbon File Menu.
 
 ```ts
 import * as React from "react";
@@ -1938,7 +1945,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### backStageItemClick
 
-The [backStageItemClick](https://ej2.syncfusion.com/react/documentation/api/ribbon/backstageItemClickArgs/) event is triggered when a backstage item is selected.
+The [backStageItemClick](https://ej2.syncfusion.com/react/documentation/api/ribbon/backstageItemClickArgs) event is triggered when a backstage item is selected.
 
 ```ts 
 import * as React from "react";
@@ -1992,7 +1999,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### popupOpen
 
-The [popupOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings/#popupopen) event is triggered when the gallery popup opens.
+The [popupOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings#popupopen) event is triggered when the gallery popup opens.
 
 ```ts
 import * as React from "react";
@@ -2052,7 +2059,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### popupClose
 
-The [popupClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings/#popupclose) event is triggered when the gallery popup closes.
+The [popupClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings#popupclose) event is triggered when the gallery popup closes.
 
 ```ts
 import * as React from "react";
@@ -2112,7 +2119,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### itemHover
 
-The [itemHover](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings/#itemhover) event is triggered when hovering over a gallery item.
+The [itemHover](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings#itemhover) event is triggered when hovering over a gallery item.
 
 ```ts
 import * as React from "react";
@@ -2172,7 +2179,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeItemRender
 
-The [beforeItemRender](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings/#beforeitemrender) event is triggered before each gallery item is rendered.
+The [beforeItemRender](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings#beforeitemrender) event is triggered before each gallery item is rendered.
 
 ```ts
 import * as React from "react";
@@ -2232,7 +2239,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeSelect
 
-The [beforeSelect](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings/#beforeselect) event is triggered before an item is selected in the Ribbon gallery.
+The [beforeSelect](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings#beforeselect) event is triggered before an item is selected in the Ribbon gallery.
 
 ```ts
 import * as React from "react";
@@ -2292,7 +2299,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### select
 
-The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings/#select) event is triggered when an item is selected in the Ribbon Gallery.
+The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings#select) event is triggered when an item is selected in the Ribbon Gallery.
 
 ```ts
 import * as React from "react";

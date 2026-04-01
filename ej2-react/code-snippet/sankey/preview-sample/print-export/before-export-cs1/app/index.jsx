@@ -8,15 +8,15 @@ import { SankeyComponent, Inject, SankeyTooltip, SankeyLegend, SankeyExport,
 } from '@syncfusion/ej2-react-charts';
 
 function App() {
-  const sankeyRef = React.useRef(null);
+  let sankeyInstance = null;
 
   const beforeExport = (args) => {
     args.cancel = false;
   };
 
   const handleExport = () => {
-    if (sankeyRef.current) {
-      sankeyRef.current.export('PNG', 'Sankey');
+    if (sankeyInstance) {
+      sankeyInstance.export('PNG', 'Sankey');
     }
   };
 
@@ -27,7 +27,7 @@ function App() {
           Export PNG
         </button>
         <SankeyComponent
-          ref={sankeyRef}
+          ref={(sankey) => (sankeyInstance = sankey)}
           id="sankey-container"
           width="90%"
           height="450px"
