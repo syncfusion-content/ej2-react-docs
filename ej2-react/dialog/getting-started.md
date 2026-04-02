@@ -182,6 +182,8 @@ html, body {
 }
 ```
 
+> **Note - Target Property in Dialog:** In React applications, it is important to set the [`target`](https://ej2.syncfusion.com/react/documentation/api/dialog/index-default#target) property of the Dialog component. When the Dialog component is rendered without a `target` property, it defaults to appending itself to `document.body`, which places the Dialog outside the React component tree. This prevents React's event delegation system from properly handling events and may cause styling issues. Always set the `target` property to ensure proper integration with your React component tree, or use the [`content`](https://ej2.syncfusion.com/react/documentation/api/dialog/index-default#content) template property to render Dialog content.
+
 ## Modal Dialog
 
 A [modal](https://ej2.syncfusion.com/react/documentation/api/dialog/index-default#ismodal) shows an overlay behind the Dialog. The user must interact with the Dialog before interacting with the remaining content in the application.
