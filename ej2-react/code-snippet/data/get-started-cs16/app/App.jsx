@@ -42,7 +42,7 @@ export default class App extends React.Component {
         orderid.value = cusid.value = empid.value = '';
     }
     saveChanges() {
-        this.dataManager.saveChanges(this.changes);
+        this.dataManager.saveChanges(this.changes, 'OrderID');
         this.dataManager.executeQuery(new Query())
             .then((e) => {
             this.setState({

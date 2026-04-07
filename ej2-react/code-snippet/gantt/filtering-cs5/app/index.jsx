@@ -1,57 +1,70 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Filter } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, ColumnsDirective, ColumnDirective, Filter, Inject } from '@syncfusion/ej2-react-gantt';
+import { DropDownList } from '@syncfusion/ej2-dropdowns';
+import { createElement } from '@syncfusion/ej2-base';
+import { DataManager } from '@syncfusion/ej2-data';
 import { data } from './datasource';
 
 function App() {
-  let ganttInstance;
-  const taskSettings = {
+  let gantt;
+  let dropInstance;
+
+  const taskFields = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
-    endDate: 'EndDate',
     duration: 'Duration',
     progress: 'Progress',
     parentID: 'ParentID'
   };
-  const filterSettings = {
-    type: 'Menu'
-  };
+
   const splitterSettings = {
     columnIndex: 2
   };
-  function filterAction(e) {
-    const id = e.target.id;
-    if (id === 'performFilter') {
-      ganttInstance.filterByColumn('TaskName', 'startswith', 'Project');
-    } else {
-      ganttInstance.clearFiltering();
+
+  const filterSettings = {};
+
+  const filter = {
+    ui: {
+      create: (args) => {
+        const input = createElement('input', { className: 'flm-input' });
+        args.target.appendChild(input);
+        dropInstance = new DropDownList({
+          dataSource: new DataManager(data),
+          fields: { text: 'TaskName', value: 'TaskName' },
+          placeholder: 'Select a value',
+          popupHeight: '200px'
+        });
+        dropInstance.appendTo(input);
+      },
+      write: (args) => {
+        dropInstance.value = args.filteredValue;
+      },
+      read: (args) => {
+        args.fltrObj.filterByColumn(args.column.field, args.operator, dropInstance.value);
+      }
     }
-  }
+  };
+
   return (
-    <div>
-      <div style={{ marginBottom: '10px', display: 'flex', gap: '20px' }}>
-        <button id="performFilter" onClick={filterAction}>Filter Task Name Column</button>
-        <button id="clearFilter" onClick={filterAction}>Clear Filter</button>
-      </div>
-      <GanttComponent
-        height="370px"
-        allowFiltering={true}
-        dataSource={data}
-        taskFields={taskSettings}
-        splitterSettings={splitterSettings}
-        filterSettings={filterSettings}
-        ref={(g) => (ganttInstance = g)}
-      >
-        <ColumnsDirective>
-          <ColumnDirective field="TaskID" headerText="Task ID" width="120" />
-          <ColumnDirective field="TaskName" headerText="Task Name" width="250" />
-          <ColumnDirective field="StartDate" headerText="Start Date" width="150" />
-          <ColumnDirective field="Progress" headerText="Progress" width="150" />
-        </ColumnsDirective>
-        <Inject services={[Filter]} />
-      </GanttComponent>
-    </div>
+    <GanttComponent
+      ref={(g) => gantt = g}
+      dataSource={data}
+      taskFields={taskFields}
+      splitterSettings={splitterSettings}
+      filterSettings={filterSettings}
+      allowFiltering={true}
+      height="370px"
+    >
+      <ColumnsDirective>
+        <ColumnDirective field="TaskID" headerText="Task ID" width="120" />
+        <ColumnDirective field="TaskName" headerText="Task Name" width="250" filter={filter} />
+        <ColumnDirective field="StartDate" headerText="Start Date" width="150" />
+        <ColumnDirective field="Progress" headerText="Progress" width="150" />
+      </ColumnsDirective>
+      <Inject services={[Filter]} />
+    </GanttComponent>
   );
 }
 

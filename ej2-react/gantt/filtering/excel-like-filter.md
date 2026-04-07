@@ -109,14 +109,14 @@ You can dynamically bind a custom remote data source to the Excel filter in the 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/excel-filter-cs3/app/index.jsx %}
+{% include code-snippet/gantt/excel-filter-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/excel-filter-cs3/app/index.tsx %}
+{% include code-snippet/gantt/excel-filter-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/excel-filter-cs3/index.html %}
+{% include code-snippet/gantt/excel-filter-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/gantt/excel-filter-cs3" %}
+{% previewsample "page.domainurl/code-snippet/gantt/excel-filter-cs4" %}

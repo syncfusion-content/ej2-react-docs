@@ -85,26 +85,6 @@ The React Gantt Chart component supports multiple filtering modes, which can be 
         
 {% previewsample "page.domainurl/code-snippet/gantt/filterhierarchy-cs1" %}
 
-## Filter operators
-
-The filter operator for a column can be defined in the `filterSettings.columns.operator` property.
-
-The available operators and their supported data types are:
-
-| Operator           | Description                                                               | Supported Types                                 |
-| ------------------ | ------------------------------------------------------------------------- | ----------------------------------------------- |
-| startswith         | Checks whether the value begins with the specified value.                 | String                                          |
-| endswith           | Checks whether the value ends with the specified value.                   | String                                          |
-| contains           | Checks whether the value contains the specified value.                    | String                                          |
-| equal              | Checks whether the value is equal to the specified value.                 | String &#124; Number &#124; Boolean &#124; Date |
-| notequal           | Checks for the values that are not equal to the specified value.          | String &#124; Number &#124; Boolean &#124; Date |
-| greaterthan        | Checks whether the value is greater than the specified value.             | Number &#124; Date                              |
-| greaterthanorequal | Checks whether the value is greater than or equal to the specified value. | Number &#124; Date                              |
-| lessthan           | Checks whether the value is less than the specified value.                | Number &#124; Date                              |
-| lessthanorequal    | Checks whether the value is less than or equal to the specified value.    | Number &#124; Date                              |
-
-> By default, the `filterSettings.columns.operator` value is `equal`
-
 ## Enable diacritic-sensitive filtering
 
 By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component ignores diacritic characters during filtering. To enable filtering with diacritic sensitivity, set the [filterSettings.ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/gantt/filterSettings#ignoreaccent) property to **true**.
@@ -169,17 +149,17 @@ You can enable different filter types for individual columns in the Gantt Chart 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/clearfilter-cs1/app/index.jsx %}
+{% include code-snippet/gantt/filtering-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/clearfilter-cs1/app/index.tsx %}
+{% include code-snippet/gantt/filtering-cs6/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/clearfilter-cs1/index.html %}
+{% include code-snippet/gantt/filtering-cs6/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/gantt/clearfilter-cs1" %}
+{% previewsample "page.domainurl/code-snippet/gantt/filtering-cs6" %}
 
 ## Customize filtering behavior using events
 

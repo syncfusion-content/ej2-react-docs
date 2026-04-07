@@ -49,7 +49,7 @@ export default class App extends React.Component<{}, {}>{
     }
 
     public saveChanges(): void {
-        this.dataManager.saveChanges(this.changes);
+        this.dataManager.saveChanges(this.changes, 'OrderID');
         this.dataManager.executeQuery(new Query())
             .then((e: ReturnOption) => {
                 this.setState({
