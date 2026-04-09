@@ -19,15 +19,15 @@ Entity Framework Core (EF Core) is a software tool that simplifies database oper
 
 **Key benefits of Entity Framework Core**
 
-- **Automatic SQL Generation**: Entity Framework Core generates optimized SQL queries automatically, eliminating the need to write raw SQL code.
-- **Type Safety**: Work with strongly-typed objects instead of raw SQL strings, reducing errors.
-- **Built-in Security**: Automatic parameterization prevents SQL injection attacks.
-- **Version Control for Databases**: Manage database schema changes version-by-version through migrations.
-- **Familiar Syntax**: Use LINQ (Language Integrated Query) syntax, which is more intuitive than raw SQL strings.
+- **Automatic SQL generation**: Entity Framework Core generates optimized SQL queries automatically, eliminating the need to write raw SQL code.
+- **Type safety**: Work with strongly-typed objects instead of raw SQL strings, reducing errors.
+- **Built-in security**: Automatic parameterization prevents SQL injection attacks.
+- **Version control for databases**: Manage database schema changes version-by-version through migrations.
+- **Familiar syntax**: Use LINQ (Language Integrated Query) syntax, which is more intuitive than raw SQL strings.
 
 **What is SQLite?**
 
-**SQLite** is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine. Unlike other database management systems, SQLite is not a client-server database engine. Rather, it is embedded into the end program.
+[SQLite](https://www.sqlite.org/docs.html) is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine. Unlike other database management systems, SQLite is not a client-server database engine. Rather, it is embedded into the end program.
 
 ## Prerequisites
 
@@ -52,17 +52,17 @@ Ensure the following software and packages are installed before proceeding:
 | 4 | Create data models and DbContext for database communication | [View](#step-4-create-the-data-model) |
 | 5 | Configure connection strings and register services | [View](#step-6-configure-connection-string-in-appsettingsjson) |
 | 6 | Create a React Grid component that supports searching, filtering, sorting, paging, and CRUD operations | [View](#integrating-syncfusion-react-grid) |
-| 7 | Handle bulk operations and batch updates | [View](#step-9-perform-crud-operations) |
+| 7 | Explore a complete working sample available on GitHub | [View](#complete-sample-repository) |
 
 ## Setting up the SQLite Environment for Entity Framework Core
 
-### Step 1: Create the database and table in SQLite
+### Step 1: Create the Database and Table in SQLite
 
 First, the **SQLite database** structure must be created to store asset records. Unlike server-based databases, a SQLite database is a single file on disk.
 
 **Instructions:**
 
-1. To view or edit the database, use **DB Browser for SQLite** or the `sqlite3` command-line tool.
+1. To view or edit the database, use **DB Browser for SQLite** or the **sqlite3** command-line tool.
 2. Create a new database file named **asset.db**.
 3. Define an "asset" table with the specified schema.
 4. Insert sample data for testing.
@@ -120,8 +120,8 @@ Before installing NuGet packages, a new ASP.NET Core Web Application with React 
 8. Click **Create**.
 
 Visual Studio will create a solution with two projects:
-- **Grid_SQLite.Server**: The ASP.NET Core backend with Controllers and configuration files
-- **grid_sqlite.client**: The React + Vite frontend client application
+- **Grid_SQLite.Server**: The ASP.NET Core backend with Controllers and configuration files.
+- **grid_sqlite.client**: The React + Vite frontend client application.
 
 ### Step 3: Install required NuGet packages
 
@@ -130,7 +130,7 @@ NuGet packages are software libraries that add functionality to the application.
 **Method 1: Using .NET CLI (Recommended)**
 
 1. Open a terminal in Visual Studio 2022 (View → Terminal).
-2. Navigate to your project directory.
+2. Navigate to the project directory.
 3. Run the following commands in sequence:
 
 ```bash
@@ -410,7 +410,7 @@ A connection string contains the information needed to connect the application t
 
 **Instructions:**
 
-1. Open the `appsettings.json` file in the project root.
+1. Open the **appsettings.json** file in the project root.
 2. Add or update the `ConnectionStrings` section with the SQLite connection details:
 
 ```json
@@ -547,7 +547,7 @@ After installation, the necessary CSS files are available in the (**../node_modu
 @import '../node_modules/@syncfusion/ej2-react-grids/styles/bootstrap5.3.css';
 ```
 
-For this project, the "Bootstrap 5" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.
+For this project, the "Bootstrap 5.3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion<sup style="font-size:70%">&reg;</sup> React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.
 
 ### Step 2: Add Syncfusion React Grid
 
@@ -717,8 +717,6 @@ export default App;
 | `Cancel` | Cancels the current edit or add operation. |
 | `Search` | Displays a search box to find records. |
 
-The toolbar has been successfully added.
-
 ### Step 5: Implement paging feature
 
 The paging feature allows efficient loading of large data sets through on‑demand loading.
@@ -803,8 +801,8 @@ namespace Grid_SQLite.Server.Controllers
 **Paging details:**
 
 - The Grid sends page size `take` and skip count `skip` parameters to the server.
-- The `operation.PerformSkip()` method skips the specified number of records.
-- The `operation.PerformTake()` method retrieves only the required number of records for the current page.
+- The `Skip()` method skips the specified number of records.
+- The `Take()` method retrieves only the required number of records for the current page.
 - The total count is calculated before paging to display the total number of records.
 - Results are returned and displayed in the Grid with pagination controls.
 
@@ -892,9 +890,9 @@ namespace Grid_SQLite.Server.Controllers
 
 **Searching details:**
 
-- When text is entered in the search box and Enter is pressed, the Grid sends a search request to the server.
+- When text is entered in the search box and <kbd>Enter</kbd> key is pressed, the Grid sends a search request to the server.
 - The "UrlDatasource" method receives the search criteria in `search` parameter.
-- The `operation.PerformSearching()` method filters the data based on the search term.
+- The `PerformSearching()` method filters the data based on the search term.
 - Results are returned and displayed in the Grid.
 
 When searching is performed in the Grid, a request is sent to the server with the following payload.
@@ -1268,7 +1266,7 @@ In (**Grid_SQLite.Server/Controllers/AssetController.cs**), implement the delete
 1. A record is selected and `Delete` button is clicked.
 2. The CustomAdaptor's "remove" method is called.
 3. The "Remove" method in **AssetController.cs** file is called.
-4. The record is located in the database by its ID.
+4. The record is located in the database by its "ID".
 5. The record is removed from the `_db.Assets` collection.
 6. The Grid refreshes to remove the deleted record from the UI.
 
@@ -1776,7 +1774,7 @@ Since the project is created using the ASP.NET Core with React template, both th
 
 **Step 4: Verify the application is running**
 
-- The application should open automatically in your default browser
+- The application should open automatically in the default browser
 - The React frontend will be served through the ASP.NET Core server
 - All API calls to **https://localhost:7116/api/asset** will be handled by the backend
 
@@ -1799,5 +1797,6 @@ A complete, working sample implementation is available in the [GitHub repository
 
 ## See also
 
-- [Types of Edit](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
-- [Validation Rules](https://ej2.syncfusion.com/react/documentation/grid/editing/validation)
+  - [Dynamic data loading](https://ej2.syncfusion.com/react/documentation/grid/scrolling/infinite-scrolling)
+  - [Validation rules](https://ej2.syncfusion.com/react/documentation/grid/editing/validation)
+  - [Filter menu](https://ej2.syncfusion.com/react/documentation/grid/filtering/filter-menu)

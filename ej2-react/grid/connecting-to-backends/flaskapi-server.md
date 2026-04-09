@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Grid - Flask API Backend | Syncfusion.
-description: Integrate Syncfusion React Data Grid with Flask backend to enable server‑side data operations and seamless CRUD functionality.
+description: Integrate Syncfusion React Grid with Flask backend to enable server‑side data operations and seamless CRUD functionality.
 control: Custom Binding
 platform: ej2-react
 documentation: ug
@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 **Application architecture:**
 - **Backend**: Flask server (Python) - Handles REST API endpoints, task data CRUD operations, and business logic.
-- **Frontend**: React application - Displays the Syncfusion DataGrid UI with **custom binding** for seamless data binding.
+- **Frontend**: React application - Displays the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid UI with **custom binding** for seamless data binding.
 - **Data Model**: Task Management System with comprehensive task information.
 
 ## Prerequisites
@@ -36,13 +36,13 @@ domainurl: ##DomainURL##
 | 1 | Setting up and configuring the Flask backend using Python | [View](#setting-up-the-flask-backend-using-python) |
 | 2 | Performing data operations in server with filtering, searching, sorting, and paging for efficient data processing | [View](#perform-data-operations-in-server) |
 | 3 | Performing CRUD operations in server with REST endpoints | [View](#perform-crud-operations-in-server) |
-| 4 | Connecting Syncfusion React Grid with Flask API and configuring Syncfusion Grid with custom binding | [View](#connecting-syncfusion-react-grid-with-flask-api) |
+| 4 | Connecting Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid with Flask API and configuring Syncfusion<sup style="font-size:70%">&reg;</sup> Grid with custom binding | [View](#connecting-syncfusion-react-grid-with-flask-api) |
 | 5 | Running the application by starting servers locally and accessing the frontend | [View](#run-the-application) |
 | 6 | Exploring a complete working sample in the complete sample repository on GitHub | [View](#complete-sample-repository) |
 
 ## Setting up the Flask backend using Python
 
-The Flask backend acts as the central REST API service, handling HTTP requests and responses that power the Syncfusion React Grid.
+The Flask backend acts as the central REST API service, handling HTTP requests and responses that power the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid.
 
 ### Step 1: Create the Flask server and install required packages
 
@@ -52,7 +52,7 @@ For this implementation, a Flask server is created to manage a **Task Management
 
 **Create project root folder:**
 
-Open a terminal (for example, an integrated terminal in Visual Studio Code, Windows Command Prompt opened with <kbd>Win+R</kbd>, or macOS Terminal launched with <kbd>Cmd+Space</kbd>) and run the following commands.
+Open a terminal (for example, an integrated terminal in Visual Studio Code, Windows Command Prompt opened with <kbd>Win+R</kbd> or macOS Terminal launched with <kbd>Cmd+Space</kbd>) and run the following commands.
 
 ```bash
 mkdir react-grid-flask-api
@@ -102,7 +102,7 @@ react-grid-flask-api/
 
 ### Step 2: Create the Flask application configuration
 
-Create a new Flask application file at **server/app.py** that initializes Flask, sets up middleware, and defines routes.
+Create a new Flask application file at (**server/app.py**) that initializes Flask, sets up middleware, and defines routes.
 
 ```python
 from flask import Flask, request, jsonify
@@ -121,7 +121,7 @@ The Flask server will start on **http://localhost:5000**.
 
 ### Step 3: Create sample data file
 
-Create a new file at **server/task_data.json** with sample task data. This file stores task records in JSON format.
+Create a new file at (**server/task_data.json**) with sample task data. This file stores task records in JSON format.
 
 ```json
 [
@@ -300,11 +300,11 @@ def apply_paging(rows, skip, take):
     return rows[skip: skip + int(take)]
 ```
 
-### GET request endpoint
+**GET request endpoint:**
 
 The Flask GET endpoint retrieves task data with applied filtering, searching, sorting, and paging operations. The endpoint accepts a grid state parameter containing all operation details and returns the result in the standardized format.
 
-Ensure the response follows a structured format that includes both the current view dataset and the total data count. This approach supports on-demand data loading and enables the client to handle operations such as paging or filtering effectively when using Syncfusion custom binding.
+Ensure the response follows a structured format that includes both the current view dataset and the total data count. This approach supports on-demand data loading and enables the client to handle operations such as paging or filtering effectively when using Syncfusion<sup style="font-size:70%">&reg;</sup> custom binding.
 
 The required response format includes:
 
@@ -385,7 +385,7 @@ def update_task(item_id: int):
     return jsonify({"message": "not found"}), 404
 ```
 
-The "update_task" function locates the existing record by its primary key, replaces it with the updated data, persists the changes to the JSON file, and returns the updated record. If the record is not found, it returns a 404 error.
+The "update_task" function locates the existing record by its primary key, replaces it with the updated data, persists the changes to the JSON file, and returns the updated record. If the record is not found, it returns a "404" error.
 
 ### Delete
 
@@ -404,7 +404,7 @@ def delete_task(item_id: int):
 
 The "delete_task" function finds the record by its primary key, removes it from the tasks list, persists the changes to the JSON file, and returns the deleted record. If the record is not found, it returns a 404 error.
 
-### Running the Flask server
+**Running the Flask server**
 
 To run the Flask application, execute the following command in the **server** directory:
 
@@ -430,7 +430,7 @@ npm install
 
 ### Step 2: Install Syncfusion packages
 
-Install the Syncfusion React Grid and DataManager packages:
+Install the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid and DataManager packages:
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
@@ -458,7 +458,7 @@ For this project, the "Bootstrap 5.3" theme is applied. Other themes can be sele
 
 ### Step 4: Create the Grid component
 
-Create a new React component in **client/src/App.tsx** that renders the Syncfusion Grid. This component will serve as the base for integrating custom binding and data operations.
+Create a new React component in **client/src/App.tsx** that renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid. This component will serve as the base for integrating custom binding and data operations.
 
 ```ts
 import { useEffect, useRef } from 'react';
@@ -486,7 +486,7 @@ export default function App() {
 
 ### Step 5: Integrate Syncfusion React Grid with custom binding
 
-The Syncfusion React Grid custom databinding feature seamlessly integrates with external API services. When Grid actions such as paging, sorting, filtering, or CRUD operations are performed, requests are sent to the API. The API processes these operations and returns the results in the required format, giving complete control over application-specific workflows and enabling efficient handling of large datasets. The custom databinding feature interacts with backend APIs through two key events.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid custom databinding feature seamlessly integrates with external API services. When Grid actions such as paging, sorting, filtering, or CRUD operations are performed, requests are sent to the API. The API processes these operations and returns the results in the required format, giving complete control over application-specific workflows and enabling efficient handling of large datasets. The custom databinding feature interacts with backend APIs through two key events.
 
 - **[dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datastatechange)**: Triggered when the Grid performs actions such as paging, sorting, or filtering. It provides the current state details (skip, take, sorted, where, search), which are sent to the API so the request can be processed and data returned in the required `{ result:[], count:100 }` format.
 
@@ -863,7 +863,7 @@ Deleted data passed to the server through the `dataSourceChanged` event argument
 
 Both the backend Flask server and the frontend React application need to run simultaneously for the Grid to function properly.
 
-### Prerequisites for running
+**Prerequisites for running**
 
 Before starting the servers, the following must be available:
 - Two terminal windows or tabs open (one for backend, one for frontend).
@@ -927,10 +927,10 @@ For a complete working implementation, refer to the [GitHub](https://github.com/
 
 The repository contains the complete Flask backend implementation with all API endpoints, business logic, data models, and a ready-to-run React frontend application.
 
-The application now provides a complete solution for integrating the Syncfusion React Grid with Flask API backend, enabling seamless data operations with a modern, user-friendly interface.
+The application now provides a complete solution for integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid with Flask API backend, enabling seamless data operations with a modern, user-friendly interface.
 
 ## See also
 
-  - [Types of Edit](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
-  - [Validation Rules](https://ej2.syncfusion.com/react/documentation/grid/editing/validation)
-  - [Filter Menu](https://ej2.syncfusion.com/react/documentation/grid/filtering/filter-menu)
+  - [Types of edit](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
+  - [Validation rules](https://ej2.syncfusion.com/react/documentation/grid/editing/validation)
+  - [Filter menu](https://ej2.syncfusion.com/react/documentation/grid/filtering/filter-menu)

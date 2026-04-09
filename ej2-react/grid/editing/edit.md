@@ -78,7 +78,7 @@ The Grid component supports multiple editing modes through the [editSettings.mod
 
 For a comprehensive overview of edit modes and [edit types](./edit-types.md) available in React Grid, refer to the following video:
 
-{% youtube "https://www.youtube.com/watch?v=vedri_WN0ug" %}
+{% youtube "https://www.youtube.com/watch?v=ZFSd0f2C4Fw" %}
 
 <br>
 
