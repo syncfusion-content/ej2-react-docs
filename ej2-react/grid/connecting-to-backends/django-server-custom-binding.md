@@ -11,13 +11,13 @@ domainurl: ##DomainURL##
 
 # Syncfusion React Grid with Django REST Framework
 
-This guide explains connecting the Syncfusion Angular Grid to a **Django REST Framework (DRF)** backend with **Custom Binding**. Custom Binding provides full control over the Grid’s communication with the server: the Grid raises events for data operations (paging, sorting, filtering, searching) and CRUD,  client code calls DRF endpoints, and DRF returns standardized results.
+This guide explains connecting the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid to a **Django REST Framework (DRF)** backend with **Custom Binding**. Custom Binding provides full control over the Grid’s communication with the server: the Grid raises events for data operations (paging, sorting, filtering, searching) and CRUD,  client code calls DRF endpoints, and DRF returns standardized results.
 
 **Difference between Custom Binding and UrlAdaptor:**
 
-With `UrlAdaptor`, the Syncfusion DataManager serializes all Grid actions into a single, framework‑specific payload posted to one endpoint.  
+With [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/url-adaptor), the Syncfusion DataManager serializes all Grid actions into a single, framework‑specific payload posted to one endpoint.  
 
-**Custom Binding** provides full, manual control over request design. The Grid raises events (`dataStateChange`, `dataSourceChanged`), and the client code shapes the request (query string, body, headers) and targets specific RESTful endpoints.  
+**Custom Binding** provides full, manual control over request design. The Grid raises events ([dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datastatechange), [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasourcechanged)), and the client code shapes the request (query string, body, headers) and targets specific RESTful endpoints.  
 
 Since Django REST Framework expects standard REST patterns, calls can be designed to match DRF conventions, for example, `GET` for actions like paging, filtering, sorting, searching, and `POST/PUT/DELETE` for CRUD, while responses return the simple `{ result, count }` structure that the Grid can bind to.
 
@@ -49,7 +49,7 @@ The DRF backend exposes REST endpoints the Grid calls from client-side event han
 
 **Instructions:**
 
-1. Open a terminal ( for example, an integrated terminal in Visual Studio Code or Windows Command prompt opened with <kbd>Win+R</kbd>, or macOS Terminal launched with <kbd>Cmd+Space</kbd> ).
+1. Open a terminal ( for example, an integrated terminal in Visual Studio Code or Windows Command Prompt opened with <kbd>Win+R</kbd> or macOS Terminal launched with <kbd>Cmd+Space</kbd> ).
 
 2. Before creating the Django project, set up a virtual environment. A virtual environment keeps project dependencies isolated, ensuring that package installations do not affect other projects.
 
@@ -69,12 +69,12 @@ The DRF backend exposes REST endpoints the Grid calls from client-side event han
     - `mssql-django` enables Django to connect to SQL Server through `pyodbc`.
     - For Django settings reference, see [databases](https://docs.djangoproject.com/en/6.0/ref/settings/#databases).
 
-4. Initialize the Django project and Application:
+4. Initialize the Django project and application:
 
     For this guide, a Django project named **django_server** is created, along with a new application module, using the following commands:
 
     ```bash
-    django-admin startproject django_server .
+    django-admin startproject django_server
     python manage.py startapp library
     ```
 
@@ -110,7 +110,7 @@ This step updates the file to establish the SQL Server connection and enable ess
     ```
 
     **Line breakdown:**
-    - **ENGINE**: Database backend; for SQL Server via `mssql-django`, set to `"mssql"`.
+    - **ENGINE**: Database backend; for SQL Server via `mssql-django`, set to "mssql".
     - **NAME**: Database name to connect to (e.g., **LibraryDB**).
     - **USER**: SQL Server login used by Django.
     - **PASSWORD**: Password for the above user.
@@ -287,7 +287,7 @@ A Django model defines the way data is stored and accessed in the database. Each
 
     - **Purpose of migrations:**
 
-        Migrations act as a bridge between the `Python` models and the SQL Server database.
+        Migrations act as a bridge between the Python models and the SQL Server database.
         - Every change in a model (new field, renamed field, removed field, new model) is recorded as a migration.
         - These changes are applied safely without writing SQL manually.
         - The database structure remains consistent across all environments (development, staging, production).
@@ -350,7 +350,7 @@ A Django REST Framework router automatically generates RESTful routes for the "B
 
 2. Register the "BookLendingViewSet" with a DRF router:
 
-    Add the following code to define the "api/lendings" route.
+    Add the following code to define the `api/lendings` route.
 
     ```python
     [django_server/urls.py]
@@ -483,13 +483,13 @@ ViewSet configured for RESTful reads and writes aligned with Custom Binding.
 
 ## Integrate Syncfusion React Grid with Django REST Framework (Custom Binding)
 
-The Syncfusion React Grid is a robust, high‑performance component built to efficiently display, manage, and manipulate large datasets. It provides advanced features such as sorting, filtering, and paging. Follow these steps to render the grid and integrate it with a Django backend.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid is a robust, high‑performance component built to efficiently display, manage, and manipulate large datasets. It provides advanced features such as sorting, filtering, and paging. Follow these steps to render the grid and integrate it with a Django backend.
 
 ### Step 1 : Creating the React client application
 
 Create a new React application using `create vite@latest`, which provides a faster development environment, smaller bundle sizes, and optimized builds.
 
-Open a Visual Studio Code terminal or Command prompt and run the below command:
+Open a Visual Studio Code terminal or Command Prompt and run the below command:
 
 ```bash
 npm create vite@latest client -- --template react-ts
@@ -498,18 +498,18 @@ cd client
 
 This command creates a React application named **client** with the essential folder structure and files required to begin development immediately.
 
-The integration process begins by installing the required Syncfusion React Grid packages before establishing the DRF API.
+The integration process begins by installing the required Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid packages before establishing the DRF API.
 
 ### Step 2: Install Syncfusion Grid packages
 
-Install the necessary Syncfusion packages using the below command in Visual Studio Code terminal or Command prompt:
+Install the necessary Syncfusion<sup style="font-size:70%">&reg;</sup> packages using the below command in Visual Studio Code terminal or Command Prompt:
 
 ```bash
 npm install @syncfusion/ej2-react-grids @syncfusion/ej2-data --save
 ```
 
-- **@syncfusion/ej2-react-grids** – Required package for integrating the Syncfusion Grid component in React.
-- **@syncfusion/ej2-data** – Provides data utilities for binding and manipulating Grid data.
+- `@syncfusion/ej2-react-grids` – Required package for integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component in React.
+- `@syncfusion/ej2-data` – Provides data utilities for binding and manipulating Grid data.
 
 ### Step 3: Including required Syncfusion stylesheets
 
@@ -530,11 +530,11 @@ Once the dependencies are installed, the required CSS files are made available i
 @import '../node_modules/@syncfusion/ej2-react-grids/styles/bootstrap5.3.css';
 ```
 
-For this project, the `Bootstrap 5.3` theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation to learn more about theming and customization options.
+For this project, the "Bootstrap 5.3" theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion<sup style="font-size:70%">&reg;</sup> React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation to learn more about theming and customization options.
 
 ### Step 4: Create the Grid component
 
-Create a new component file (**client/src/components/OrdersGrid.tsx**) and include the below code to render the Syncfusion Grid. This component will serve as the base for integrating custom binding and data operations.
+Create a new component file (**client/src/components/OrdersGrid.tsx**) and include the below code to render the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid. This component will serve as the base for integrating custom binding and data operations.
 
 ```ts
 import { useRef } from 'react';
@@ -565,7 +565,7 @@ export default function OrdersGrid() {
 
 ### Step 5: Create a client API service for DRF query-string model
 
-This step builds a lightweight client service that translates Syncfusion Grid state (paging, sorting, filtering, searching) into **Django REST Framework (DRF)** query parameters and calls REST endpoints for **read** and **CRUD**. The service centralizes request/response handling so components stay small and focused on UI.
+This step builds a lightweight client service that translates Syncfusion<sup style="font-size:70%">&reg;</sup> Grid state (paging, sorting, filtering, searching) into **Django REST Framework (DRF)** query parameters and calls REST endpoints for **read** and **CRUD**. The service centralizes request/response handling so components stay small and focused on UI.
 
 **Instructions:**
 
@@ -573,8 +573,8 @@ This step builds a lightweight client service that translates Syncfusion Grid st
 2. Copy the code below. It includes:
    - A `request` helper for JSON GET/POST/PUT/DELETE.
    - `buildQueryParams()` to convert Grid state into DRF query params (`page`, `page_size`, `ordering`, `search`, field filters with `__in`, `__icontains`, etc.).
-   - `fetchLendings()` for server-side data operations returning `{ result, count }`.
-   - `createLending`, `updateLending`, `deleteLending` for CRUD.
+   - "fetchLendings" for server-side data operations returning `{ result, count }`.
+   - "createLending", "updateLending", "deleteLending" for CRUD.
 3. Update `API_BASE_URL` if the backend runs on a different host/port.
 
 ```ts
@@ -775,24 +775,24 @@ interface Predicate {
 - **Single service boundary:** Centralizes HTTP logic (base URL, headers, verbs) so components stay UI‑focused and Custom Binding calls remain consistent.
 - **State → DRF params:** `buildQueryParams()` converts Grid state into DRF‑friendly query parameters:
   - Paging → `page`, `page_size` derived from `skip`/`take`.
-  - Sorting → `ordering` list (e.g., `author_name,-borrowed_date`).
+  - Sorting → `ordering` list (e.g., "author_name", "borrowed_date").
   - Search → `search` space‑separated terms for DRF `SearchFilter`.
   - Filters → field operators (`__icontains`, `__istartswith`, `__lte`, etc.) and list filters via `__in`.
 - **Date multi‑select:** Date columns are normalized to `YYYY‑MM‑DD` (UTC) and merged as `<date_field>__in=…`, matching Excel‑style multi‑select in the Grid while avoiding timezone shifts.
-- **Read shape for Custom Binding:** `fetchLendings()` returns `{ result, count }`. `result` binds to Grid rows; `count` drives the pager without extra round trips.
-- **CRUD alignment:** `createLending` (POST), `updateLending` (PUT), and `deleteLending` (DELETE) match DRF endpoints expected by `ModelViewSet`, enabling `dataSourceChanged` to complete edits with `endEdit()`.
+- **Read shape for Custom Binding:** "fetchLendings" returns `{ result, count }`. `result` binds to Grid rows; `count` drives the pager without extra round trips.
+- **CRUD alignment:** "createLending" (POST), "updateLending" (PUT), and "deleteLending" (DELETE) match DRF endpoints expected by `ModelViewSet`, enabling `dataSourceChanged` to complete edits with `endEdit()`.
 - **Resilience & clarity:** `request()` handles JSON and `204 No Content`. `keepColonsReadable()` preserves legibility in DevTools, and helper mappers keep filter translation explicit and maintainable.
 
-The client service bridges Syncfusion Grid Custom Binding with DRF’s REST API and query parameter conventions.
+The client service bridges Syncfusion<sup style="font-size:70%">&reg;</sup> Grid Custom Binding with DRF’s REST API and query parameter conventions.
 
 ### Step 6: Integrate Syncfusion React Grid with custom binding
 
-The Syncfusion React Grid custom databinding feature integrates with the Django REST API through event-driven calls. Grid actions (paging, sorting, filtering, searching) are sent via **dataStateChange**, and CRUD is sent via **dataSourceChanged**. The client uses the shared `apiClient` service (created in the previous step) to translate Grid state into DRF query parameters and to call REST endpoints.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid custom databinding feature integrates with the Django REST API through event-driven calls. Grid actions (paging, sorting, filtering, searching) are sent via **dataStateChange**, and CRUD is sent via **dataSourceChanged**. The client uses the shared **apiClient** service (created in the previous step) to translate Grid state into DRF query parameters and to call REST endpoints.
 
 **Instructions:**
 
 1. Open (**client/src/components/OrdersGrid.tsx**).
-2. Paste the code below. It wires `dataStateChange` to `fetchLendings(state)` and `dataSourceChanged` to `createLending` / `updateLending` / `deleteLending`, and binds the `{ result, count }` payload to the Grid.
+2. Paste the code below. It wires `dataStateChange` to "fetchLendings(state)" and `dataSourceChanged` to "createLending" / "updateLending" / "deleteLending", and binds the `{ result, count }` payload to the Grid.
 3. Ensure (**client/src/services/apiClient.ts**) is configured as in [Step 5](#step-5-create-a-client-api-service-for-drf-query-string-model).
 
 ```ts
@@ -876,9 +876,9 @@ export default OrdersGrid;
 **Explanation:**
 
 - **Initial load:** `useEffect` triggers at initial render, calling `handleDataStateChange` with `{ skip: 0, take: 10 }`.
-- **Reads:** `dataStateChange` maps Grid state to DRF query params via `fetchLendings` and binds `{ result, count }` to the Grid.
+- **Reads:** `dataStateChange` maps Grid state to DRF query params via "fetchLendings" and binds `{ result, count }` to the Grid.
 - **Excel filter UI:** For filter-choice/data requests, feeds `res.result` back to the filter popup using `args.dataSource(...)`.
-- **CRUD:** `dataSourceChanged` invokes `createLending`, `updateLending`, or `deleteLending` and finishes with `endEdit()`.
+- **CRUD:** `dataSourceChanged` invokes "createLending", "updateLending", or "deleteLending" and finishes with `endEdit()`.
 
 ## Perform data operations
 
@@ -1059,7 +1059,7 @@ Deleted data passed to the server through the `dataSourceChanged` event argument
 
 ## Running the application
 
-Open a terminal or Command prompt. Start the Django server first, and then run the React client.
+Open a terminal or Command Prompt. Start the Django server first, and then run the React client.
 
 ### Run the Django server
 
@@ -1127,10 +1127,10 @@ The complete folder structure look like below.
 
 For a complete working implementation of this example, refer the [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-backends/syncfusion-react-grid-custom-binding-with-django-server) repository.
 
-The application now offers a reliable, scalable solution for managing book lending records with a robust Django REST API on Microsoft SQL Server and a Syncfusion React Grid front end.
+The application now offers a reliable, scalable solution for managing book lending records with a robust Django REST API on Microsoft SQL Server and a Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid front end.
 
 ## See also
 
-- [Types of Edit](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
-- [Validation Rules](https://ej2.syncfusion.com/react/documentation/grid/editing/validation)
-- [Filter Menu](https://ej2.syncfusion.com/react/documentation/grid/filtering/filter-menu)
+- [Types of edit](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
+- [Validation rules](https://ej2.syncfusion.com/react/documentation/grid/editing/validation)
+- [Filter menu](https://ej2.syncfusion.com/react/documentation/grid/filtering/filter-menu)

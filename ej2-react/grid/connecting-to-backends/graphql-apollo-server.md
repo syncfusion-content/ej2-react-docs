@@ -40,7 +40,7 @@ domainurl: ##DomainURL##
 |---|---------|-------|
 | 1 | Setting up and configuring the GraphQL backend using Apollo | [View](#setting-up-the-graphql-backend-using-apollo) |
 | 2 | Set up the Apollo Server | [View](#step-6-setting-up-the-apollo-server) |
-| 3 | Integrating Syncfusion React Grid with Apollo GraphQL | [View](#integrating-syncfusion-react-grid-with-apollo-graphql) |
+| 3 | Integrating Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid with Apollo GraphQL | [View](#integrating-syncfusion-react-grid-with-apollo-graphql) |
 | 4 | Perform data operations including filtering, sorting, searching, and paging | [View](#step-4-add-toolbar-with-crud-and-search-options) |
 | 5 | Perform CRUD operations | [View](#perform-crud-operations) |
 | 6 | Run the GraphQL application | [View](#running-the-application) |
@@ -48,7 +48,7 @@ domainurl: ##DomainURL##
 
 ## Setting up the GraphQL backend using Apollo
 
-The Apollo GraphQL backend acts as the primary data layer, handling all queries and mutations required by the Syncfusion React Grid.
+The Apollo GraphQL backend acts as the primary data layer, handling all queries and mutations required by the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid.
 
 ### Step 1: Create the GraphQL server and install required packages
 
@@ -58,7 +58,7 @@ For this guide, a GraphQL server named **GridServer** is created using Node.js a
 
 **Create project folder:**
 
-Open a terminal ( for example, an integrated terminal in Visual Studio Code or Windows Command Prompt opened with <kbd>Win+R</kbd>, or macOS terminal launched with <kbd>Cmd+Space</kbd> ) and run the following command to create and navigate into the project folder:
+Open a terminal ( for example, an integrated terminal in Visual Studio Code or Windows Command Prompt opened with <kbd>Win+R</kbd> or macOS terminal launched with <kbd>Cmd+Space</kbd> ) and run the following command to create and navigate into the project folder:
 
 ```bash
 mkdir GridServer
@@ -234,7 +234,7 @@ The GraphQL schema defines the structure of the "expense" data model and the ser
       params: JSON
     }
     ```
-    > For detailed information about **DataManagerInput** type refer to [Configuring Syncfusion DataManagerInput schema](#step-3-configuring-syncfusion-datamanagerinput-schema)
+    > For detailed information about **DataManagerInput** type refer to [Configuring Syncfusion<sup style="font-size:70%">&reg;</sup> DataManagerInput schema](#step-3-configuring-syncfusion-datamanagerinput-schema)
 
 8. Define the `Query` type to expose the "getExpenses" operation that returns the list of "expenses":
 
@@ -259,7 +259,7 @@ The GraphQL schema defines the structure of the "expense" data model and the ser
 
 ### Step 3: Configuring Syncfusion DataManagerInput schema
 
-Syncfusion Grid sends all operation details paging, sorting, filtering, and searching as a single request object. GraphQL requires a clear, typed structure to understand these values. 
+Syncfusion<sup style="font-size:70%">&reg;</sup> Grid sends all operation details paging, sorting, filtering, and searching as a single request object. GraphQL requires a clear, typed structure to understand these values. 
 
 Syncfusion's [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) follows a fixed schema when sending operation details from the client. To ensure seamless integration, the GraphQL backend defines a corresponding input type that mirrors this structure.
 
@@ -504,7 +504,7 @@ Now all required GraphQL types, queries, mutations and Apollo Server configurati
 
 Create a new React application using `create vite@latest`, which provides a faster development environment, smaller bundle sizes, and optimized builds.
 
-Open the Visual Studio Code terminal or Command prompt and run the below command.
+Open the Visual Studio Code terminal or Command Prompt and run the below command.
 
 ```bash
 npm create vite@latest GridClient
@@ -512,17 +512,17 @@ cd GridClient
 ```
 This command creates a React application named **GridClient** with the essential folder structure and files required to begin development immediately.
 
-The integration process begins by installing the required Syncfusion React Grid packages before establishing the GraphQL connection.
+The integration process begins by installing the required Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid packages before establishing the GraphQL connection.
 
 ### Step 1: Adding Syncfusion packages
 
-Install the necessary Syncfusion packages using the below command.
+Install the necessary Syncfusion<sup style="font-size:70%">&reg;</sup> packages using the below command.
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
 npm install @syncfusion/ej2-data --save
 ```
-- `@syncfusion/ej2-react-grids` – required to use the Syncfusion React Grid component.
+- `@syncfusion/ej2-react-grids` – required to use the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component.
 - `@syncfusion/ej2-data` – Provides data utilities for binding and manipulating Grid data.
 
 ### Step 2: Including required Syncfusion stylesheets
@@ -544,7 +544,7 @@ Once the dependencies are installed, the required CSS files are made available i
 @import '@syncfusion/ej2-react-grids/styles/material3.css';
 ```
 
-For this project, the "Material3" theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation to learn more about theming and customization options.
+For this project, the "Material3" theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion<sup style="font-size:70%">&reg;</sup> React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation to learn more about theming and customization options.
 
 ### Step 3: Configure GraphQLAdaptor
 
@@ -571,7 +571,7 @@ The required response format includes:
   - **result**: The list of data to be displayed in the current Grid view.
   - **count**: The total number of records available in the dataset.
 
-The `GraphQLAdaptor` needs to be configured to the Syncfusion `DataManager` to convert the user interaction into GraphQL‑compatible requests. To enable this setup, configure the `DataManager` with the `GraphQLAdaptor`, specify the GraphQL server’s response format, and define the query. Finally, assign this `DataManager` instance to the Grid component.
+The `GraphQLAdaptor` needs to be configured to the Syncfusion<sup style="font-size:70%">&reg;</sup> `DataManager` to convert the user interaction into GraphQL‑compatible requests. To enable this setup, configure the `DataManager` with the `GraphQLAdaptor`, specify the GraphQL server’s response format, and define the query. Finally, assign this `DataManager` instance to the Grid component.
 
 **Instructions:**
 
@@ -630,7 +630,7 @@ query getExpenses($datamanager: DataManagerInput) {}
   - `getExpenses` - Name of the query (must match resolver name with camelCase).
   - `($datamanager: DataManagerInput)` - Parameter declaration.
     - `$datamanager` - Variable name (referenced as $datamanager throughout the query).
-    - `: DataManagerInput` - Type specification.
+    - `DataManagerInput` - Type specification.
 
 ```
 getExpenses(datamanager: $datamanager) {}
@@ -806,7 +806,7 @@ During pagination, the `GraphQLAdaptor` sends the paging details though `skip` a
     |---------------------|---------|
     | `datamanager.skip`    | Number of records to `skip` before fetching data. |
     | `datamanager.take`    | Number of records to return (page size). |
-    | `performPaging(data, datamanager)` | Applies paging to the Syncfusion query instance. |
+    | `performPaging(data, datamanager)` | Applies paging to the Syncfusion<sup style="font-size:70%">&reg;</sup> query instance. |
     | `executeLocal(query)` | Executes the query on the in‑memory dataset and returns paged results. |
 
 **Paging details included in request payloads:**
@@ -916,7 +916,7 @@ The `GraphQLAdaptor` automatically passes the sorting details to the server thro
 
 **Instructions:**
 
-1. Set the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to "true".
+1. Set the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#allowsorting) property to `true`.
 
     ```ts
     <GridComponent
@@ -993,7 +993,7 @@ The resolver processes the sorting parameters and returns the result in the requ
 
 Filtering allows the user to narrow down records by specifying conditions on column values. Users can filter by selecting checkbox filters or using comparison operators like equals, greater than, less than, etc.
 
-The `GraphQLAdaptor` automatically passes the filter conditions to the server through the `where` parameter of the **DataManagerInput**. In the server, the filter parameters are converted to the Syncfusion [filter query](https://ej2.syncfusion.com/react/documentation/data/querying#filtering) and executed through the `DataManager` to get the filtered data.
+The `GraphQLAdaptor` automatically passes the filter conditions to the server through the `where` parameter of the **DataManagerInput**. In the server, the filter parameters are converted to the Syncfusion<sup style="font-size:70%">&reg;</sup> [filter query](https://ej2.syncfusion.com/react/documentation/data/querying#filtering) and executed through the `DataManager` to get the filtered data.
 
  **Instructions:**
 
@@ -1125,14 +1125,14 @@ The `GraphQLAdaptor` automatically passes the filter conditions to the server th
     | `dataManager.Where` | List of filter conditions from the Grid. |
     | `parseArgs(datamanager?.where)` | Safely parses **where** into an object/array; returns it as‑is if already an object; returns undefined on invalid JSON.|
     | `whereArgs` | The parsed value from "parseArgs"; expected to be an array of filter blocks. |
-    | `buildPredicate(predicate)` | Recursively converts the filter block/tree into a Syncfusion Predicate. |
+    | `buildPredicate(predicate)` | Recursively converts the filter block/tree into a Syncfusion<sup style="font-size:70%">&reg;</sup> Predicate. |
     | `predicate.isComplex` | Indicates a predicate that contains nested predicates which must be processed recursively. |
     | `predicate.predicates[]` | Children of a complex predicate; each element is either another group (complex) or a simple predicate. |
     | `predicate.conditions` | Logical combiner for children: **AND** or **OR**. |
     | `predicate.field` | Column/field name to filter (e.g., "employeeName", "category", "employeeEmail"). |
     | `predicate.operator`| Operator string (equal, contains, greaterthan, etc.) passed into new Predicate(...). |
     | `performFiltering(filterString)`| Parses the where string, builds a combined Predicate chain (AND/OR), and applies it to query via query.where(combinedPredicate).|
-    |`query.where(rootPredicate)`| Applies the final (combined) Predicate to the Syncfusion Query when a root predicate exists.|
+    |`query.where(rootPredicate)`| Applies the final (combined) Predicate to the Syncfusion<sup style="font-size:70%">&reg;</sup> Query when a root predicate exists.|
 
 
  **Supported filter operators:**
@@ -1165,7 +1165,7 @@ When a user selects multiple checkbox values for the same column (e.g., (categor
 
 The resolver handles the filter conditions passed from the Grid and returns the filtered data along with the updated count. Filtering is now enabled.
 
-### Perform CRUD operations
+### Step 9: Perform CRUD operations
 
 CRUD operations (Create, Read, Update, Delete) allow users to manage data through the Grid. The Grid provides built-in dialogs and buttons to perform these operations, while the backend resolvers handle the actual data modifications.
 
@@ -1201,17 +1201,17 @@ Enable editing operations in the Grid by configuring `editSettings` and setting 
     </GridComponent> 
       
 ```
-The `getMutation` function in the `GraphQLAdaptor` handles the Grid CRUD actions by sending the appropriate mutation for each action (insert, update, or delete) to the GraphQL server.
+The "getMutation" function in the `GraphQLAdaptor` handles the Grid CRUD actions by sending the appropriate mutation for each action (insert, update, or delete) to the GraphQL server.
 
-> Previously, the required mutation definitions and schema for CRUD operations were created in the **resolver.ts** and **schema.graphql** files. The next step is to enable CRUD actions in the client Data Grid by using the `GraphQLAdaptor`.
+> Previously, the required mutation definitions and schema for CRUD operations were created in the **resolver.ts** and **schema.graphql** files. The next step is to enable CRUD actions in the client Grid by using the `GraphQLAdaptor`.
 
 **Insert:**
 
-The Insert operation enables adding new "expense" records to the existing list. When the Add button in the `toolbar` is selected, the Grid opens a dialog that displays input fields for entering "expense" details. 
+The Insert operation enables adding new "expense" records to the existing list. When the `Add` button in the `toolbar` is selected, the Grid opens a dialog that displays input fields for entering "expense" details. 
 
 After the required data is submitted, the GraphQL mutation sends the new "expense" record to the backend for processing and storage.
 
-Open the **ExpenseGrid.tsx** and Configure the `getMutation` function in the `GraphQLAdaptor` to return the GraphQL mutation for the insert action.
+Open the **ExpenseGrid.tsx** and Configure the "getMutation" function in the `GraphQLAdaptor` to return the GraphQL mutation for the insert action.
 
   ```ts
   [ExpenseGrid.tsx]
@@ -1256,11 +1256,11 @@ When the `Add` button is clicked, the dialog is filled, and the data is submitte
 
 **Update:**
 
-The Update operation enables editing of existing "expense" records. When the Edit option in the toolbar is selected and a row is chosen, the Grid opens a dialog displaying the current values of the selected record. 
+The Update operation enables editing of existing "expense" records. When the `Edit` option in the toolbar is selected and a row is chosen, the Grid opens a dialog displaying the current values of the selected record. 
 
 After the required modifications are submitted, a GraphQL mutation sends the updated record to the backend for processing.
 
-Open the **ExpenseGrid.tsx** and Configure the `getMutation` function in the `GraphQLAdaptor` to return the appropriate GraphQL mutation based on the update action, which reference the "updateExpense" mutation defined in the schema.
+Open the **ExpenseGrid.tsx** and Configure the "getMutation" function in the `GraphQLAdaptor` to return the appropriate GraphQL mutation based on the update action, which reference the "updateExpense" mutation defined in the schema.
 
 ```ts
   [ExpenseGrid.tsx]
@@ -1298,7 +1298,7 @@ Open the **ExpenseGrid.tsx** and Configure the `getMutation` function in the `Gr
   ```
 **Update mutation request parameters:**
 
-When the user clicks the Edit button, modifies the dialog, and submits, the `GraphQLAdaptor` constructs the mutation with these parameters:
+When the user clicks the `Edit` button, modifies the dialog, and submits, the `GraphQLAdaptor` constructs the mutation with these parameters:
 
 ![GraphQL-apollo-updateRecord](../images/GraphQL-Apollo-Update.png)
 
@@ -1307,7 +1307,7 @@ When the user clicks the Edit button, modifies the dialog, and submits, the `Gra
 
 The Delete operation enables removal of "expense" records from the application. When the `Delete` option in the `toolbar` is selected and a row is marked for removal, a confirmation prompt appears. After confirmation, a GraphQL mutation sends a delete request to the backend containing only the primary key value.
 
-Open the **ExpenseGrid.tsx** and Configure the `getMutation` function in the `GraphQLAdaptor` to return the delete mutation that matches the "deleteExpense" mutation defined in the schema.
+Open the **ExpenseGrid.tsx** and configure the "getMutation" function in the `GraphQLAdaptor` to return the delete mutation that matches the "deleteExpense" mutation defined in the schema.
 
   ```ts
   [ExpenseGrid.tsx]
@@ -1344,7 +1344,7 @@ Open the **ExpenseGrid.tsx** and Configure the `getMutation` function in the `Gr
   ```
 **Delete mutation request parameters:**
 
-When the user clicks the Delete button, selects a row to delete, and confirms the deletion, the `GraphQLAdaptor` constructs the mutation with minimal parameters:
+When the user clicks the `Delete` button, selects a row to delete, and confirms the deletion, the `GraphQLAdaptor` constructs the mutation with minimal parameters:
 
 ![GraphQL-apollo-deleteRecord](../images/GraphQL-Apollo-Delete.png)
 
@@ -1421,10 +1421,10 @@ syncfusion-react-grid-with-apollo-server
 
 For a complete working implementation of this example, refer to the following [GitHub](https://github.com/SyncfusionExamples/syncfusion-react-grid-with-apollo-server) repository.
 
-This guide provides a modern, high‑performance architecture in which the Syncfusion React Grid integrates seamlessly with an Apollo‑powered GraphQL backend.
+This guide provides a modern, high‑performance architecture in which the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid integrates seamlessly with an Apollo‑powered GraphQL backend.
 
 ## See also
 
-- [Types of Edit](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
+- [Types of edit](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
 - [Customizable Grid cells with text, images, icons, and UI templates.](https://ej2.syncfusion.com/react/documentation/grid/columns/column-template)
 - [Boosts speed by rendering visible rows and columns](https://ej2.syncfusion.com/react/documentation/grid/scrolling/virtual-scrolling)
