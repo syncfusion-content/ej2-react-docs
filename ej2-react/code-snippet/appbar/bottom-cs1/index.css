@@ -1,9 +1,0 @@
-.control-container {
-	height: 300px;
-	width: 500px;
-	margin: 0 auto;
-	position: relative;
-}
-.control-container .e-btn.e-inherit {
-	margin: 0 3px;
-}
