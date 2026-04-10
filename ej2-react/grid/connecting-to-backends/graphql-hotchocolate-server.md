@@ -41,7 +41,7 @@ domainurl: ##DomainURL##
 | # | Topics | Link |
 |---|---------|-------|
 | 1 | Set up and configure the HotChocolate GraphQL backend using ASP.NET Core | [View](#setting-up-the-hotchocolate-graphql-backend-using-aspnet-core) |
-| 2 | Integrate the Syncfusion React Grid with HotChocolate GraphQL API | [View](#integrating-syncfusion-react-grid-with-hotchocolate-graphql) |
+| 2 | Integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid with HotChocolate GraphQL API | [View](#integrating-syncfusion-react-grid-with-hotchocolate-graphql) |
 | 3 | Implement data operations including filtering, searching, sorting, and paging | [View](#perform-data-operations-in-server) |
 | 4 | Perform CRUD operations | [View](#perform-crud-operations-in-server) |
 | 5 | Run the HotChocolate GraphQL application | [View](#running-the-application) |
@@ -49,7 +49,7 @@ domainurl: ##DomainURL##
 
 ## Setting up the HotChocolate GraphQL backend using ASP.NET Core
 
-The HotChocolate GraphQL backend acts as the central data service, handling queries and mutations that power the Syncfusion React Grid.
+The HotChocolate GraphQL backend acts as the central data service, handling queries and mutations that power the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid.
 
 ### Step 1: Create the ASP.NET Core project with React template
 
@@ -263,15 +263,9 @@ app.Run();
 
 ### Step 5: Configure Syncfusion DataManagerInput types
 
-Syncfusion Data Grid sends all operation details (paging, sorting, filtering, and searching) as a single request object. HotChocolate GraphQL requires a clear, typed structure to understand these values.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Grid sends all operation details (paging, sorting, filtering, and searching) as a single request object. HotChocolate GraphQL requires a clear, typed structure to understand these values.
 
-**Create GraphQL folder:**
-
-Create a new folder named **GraphQL** in the **ReactApp1.Server** project.
-
-**Create DataManagerInput.cs:**
-
-Create a new file (**GraphQL/DataManagerInput.cs**) with the following content:
+Create a new folder named **GraphQL** in the **ReactApp1.Server** project and create a new file (**GraphQL/DataManagerInput.cs**) with the following content:
 
 ```csharp
 using System.Collections.Generic;
@@ -317,7 +311,7 @@ Here are the details of DataManagerInput parameter type:
 
 ### Step 6: Create the return type for GraphQL queries
 
-Syncfusion Grid expects the server response to follow a specific structure that includes both the data array and the total count of records. This structure is essential for enabling features like paging, filtering, and data binding.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Grid expects the server response to follow a specific structure that includes both the data array and the total count of records. This structure is essential for enabling features like paging, filtering, and data binding.
 
 **Create OrdersReturnType.cs:**
 
@@ -341,7 +335,7 @@ namespace ReactApp1.Server.GraphQL
 
 **Required response format:**
 
-The response must follow this structure to work with Syncfusion Grid:
+The response must follow this structure to work with Syncfusion<sup style="font-size:70%">&reg;</sup> Grid:
 
 - **Result**: The list of data displayed in the current view, supporting on-demand loading for large datasets.
 - **Count**: The total count of records in the dataset before paging is applied.
@@ -350,11 +344,11 @@ This format ensures the Grid can properly handle paging, display total record co
 
 ## Perform data operations in server
 
-The HotChocolate GraphQL backend handles all data operations such as filtering, searching, sorting, and paging. These operations are applied to the dataset based on the grid state received from the client through the "DataManagerInput" parameter.
+The HotChocolate GraphQL backend handles all data operations such as filtering, searching, sorting, and paging. These operations are applied to the dataset based on the grid state received from the client through the **DataManagerInput** parameter.
 
 **Create GraphQL Query resolver**
 
-A query resolver in HotChocolate is a method that handles data retrieval requests. The query resolver receives the "DataManagerInput" parameter, applies the requested operations, and returns data in the format expected by Syncfusion Grid.
+A query resolver in HotChocolate is a method that handles data retrieval requests. The query resolver receives the **DataManagerInput** parameter, applies the requested operations, and returns data in the format expected by Syncfusion<sup style="font-size:70%">&reg;</sup> Grid.
 
 **Create Query.cs:**
 
@@ -768,7 +762,7 @@ namespace ReactApp1.Server.GraphQL
 
 Insert operation creates a new order record in the dataset. When the `Add` button is clicked and submits the new record, this mutation receives the data and persists it.
 
-The `AddOrder` mutation method:
+The "AddOrder" mutation method:
 
 1. Receives the new order data through the `OrdersDetailsInput` parameter.
 2. Creates a new `OrdersDetails` instance with the provided values.
@@ -794,7 +788,7 @@ public OrdersDetails AddOrder(OrdersDetailsInput input)
 
 Update operation modifies an existing order record. When a row is edited and changes are saved, this mutation receives the modified data and updates the record.
 
-The `UpdateOrder` mutation method:
+The "UpdateOrder" mutation method:
 
 1. Receives the primary key (`key`), key column name, and updated values (`input`).
 2. Finds the existing record using the primary key.
@@ -822,7 +816,7 @@ public OrdersDetails? UpdateOrder(int key, string? keyColumn, OrdersDetailsInput
 
 Delete operation removes an order record from the dataset. When the delete button is clicked and confirmed, this mutation removes the record from the data source.
 
-The `DeleteOrder` mutation method:
+The "DeleteOrder" mutation method:
 
 1. Receives the primary key (`orderID`) of the record to delete.
 2. Finds the existing record using the primary key.
@@ -843,11 +837,11 @@ The backend configuration is now complete. The next step is to create the React 
 
 ## Integrating Syncfusion React Grid with HotChocolate GraphQL
 
-After configuring the HotChocolate GraphQL backend, the next step is to set up the React frontend and integrate it with the Syncfusion Grid component using the `GraphQLAdaptor`.
+After configuring the HotChocolate GraphQL backend, the next step is to set up the React frontend and integrate it with the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component using the `GraphQLAdaptor`.
 
 ### Step 1: Install Syncfusion packages in React project
 
-Navigate to the React client project and install the required Syncfusion packages.
+Navigate to the React client project and install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages.
 
 **Navigate to client folder:**
 
@@ -863,16 +857,16 @@ npm install @syncfusion/ej2-react-grids @syncfusion/ej2-data --save
 
 **Package descriptions:**
 
-- **@syncfusion/ej2-react-grids**: Provides the Grid component with all features including editing, filtering, sorting, and paging.
-- **@syncfusion/ej2-data**: Provides data management utilities and adaptors including `GraphQLAdaptor`.
+- `@syncfusion/ej2-react-grids`: Provides the Grid component with all features including editing, filtering, sorting, and paging.
+- `@syncfusion/ej2-data`: Provides data management utilities and adaptors including `GraphQLAdaptor`.
 
 ### Step 2: Add Syncfusion CSS references
 
-Syncfusion components require specific CSS files to render properly. Add the CSS references to the main entry file.
+Syncfusion<sup style="font-size:70%">&reg;</sup> components require specific CSS files to render properly. Add the CSS references to the main entry file.
 
 **Update main.jsx:**
 
-Open **src/main.jsx** and add the following CSS imports at the top:
+Open (**src/main.jsx**) and add the following CSS imports at the top:
 
 ```js
 import { StrictMode } from 'react'
@@ -898,11 +892,11 @@ createRoot(document.getElementById('root')).render(
 )
 ```
 
-For this project, the "tailwind3" theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation to learn more about theming and customization options.
+For this project, the "tailwind3" theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion<sup style="font-size:70%">&reg;</sup> React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation to learn more about theming and customization options.
 
 ### Step 3: Configure GraphQLAdaptor with DataManager
 
-The `GraphQLAdaptor` is a built-in Syncfusion adaptor specifically designed for GraphQL APIs. It handles data operations by generating appropriate GraphQL queries and mutations based on Grid actions.
+The `GraphQLAdaptor` is a built-in Syncfusion<sup style="font-size:70%">&reg;</sup> adaptor specifically designed for GraphQL APIs. It handles data operations by generating appropriate GraphQL queries and mutations based on Grid actions.
 
 **Update App.jsx:**
 
@@ -1079,7 +1073,7 @@ The `$datamanager` variable contains all operation details (paging, sorting, fil
 
 **3. Mutation definitions:**
 
-Defines GraphQL mutations for CRUD operations using the `getMutation` function:
+Defines GraphQL mutations for CRUD operations using the "getMutation" function:
 
 - **Insert mutation**: Creates new records
 - **Update mutation**: Modifies existing records
@@ -1132,7 +1126,7 @@ This injects the required services for toolbar, sorting, filtering, paging, and 
 
 ### Step 6: Enable paging feature
 
-Paging divides large datasets into smaller, manageable pages based on offset and page size. When paging is performed in the Grid, the `skip` and `take` values are sent to the server through the "DataManagerInput" parameter.
+Paging divides large datasets into smaller, manageable pages based on offset and page size. When paging is performed in the Grid, the `skip` and `take` values are sent to the server through the **DataManagerInput** parameter.
 
 **Enable paging in the Grid:**
 
@@ -1187,7 +1181,7 @@ The image illustrates the paging details (`skip` and `take`) included in the ser
 
 ### Step 7: Enable searching feature
 
-Searching provides the capability to find specific records by entering keywords into the search box. When a search action is performed in the Grid, the `GraphQLAdaptor` sends the search key and the target fields through the `search` parameter of the "DataManagerInput".
+Searching provides the capability to find specific records by entering keywords into the search box. When a search action is performed in the Grid, the `GraphQLAdaptor` sends the search key and the target fields through the `search` parameter of the **DataManagerInput**.
 
 **Enable searching in the Grid:**
 
@@ -1239,7 +1233,7 @@ The image below displays the `search` parameter values.
 
 ### Step 8: Enable sorting feature
 
-The sorting feature in the Grid allows records to be organized in ascending or descending order based on one or more columns. The `GraphQLAdaptor` automatically passes the sorting details to the server through the `sorted` parameter of the "DataManagerInput".
+The sorting feature in the Grid allows records to be organized in ascending or descending order based on one or more columns. The `GraphQLAdaptor` automatically passes the sorting details to the server through the `sorted` parameter of the **DataManagerInput**.
 
 **Enable sorting in the Grid:**
 
@@ -1293,7 +1287,7 @@ The image below shows the values passed to the `sorted` parameter.
 
 ### Step 9: Enable filtering feature
 
-Filtering narrows down records by specifying conditions on column values. Records can be filtered by selecting checkbox filters or using comparison operators such as equals, greater than, or less than. The `GraphQLAdaptor` automatically passes the filter conditions to the server through the `where` parameter of the "DataManagerInput".
+Filtering narrows down records by specifying conditions on column values. Records can be filtered by selecting checkbox filters or using comparison operators such as equals, greater than, or less than. The `GraphQLAdaptor` automatically passes the filter conditions to the server through the `where` parameter of the **DataManagerInput**.
 
 **Enable filtering in the Grid:**
 
@@ -1348,11 +1342,11 @@ The image illustrates the serialized `where` condition passed from the DataManag
 
 ### Step 10: Enable CRUD operations with getMutation
 
-CRUD operations (Create, Read, Update, Delete) are supported in the Grid for managing data. The `getMutation` function in the `GraphQLAdaptor` handles the Grid CRUD actions by sending the appropriate mutation for each action (insert, update, or delete) to the GraphQL server.
+CRUD operations (Create, Read, Update, Delete) are supported in the Grid for managing data. The "getMutation" function in the `GraphQLAdaptor` handles the Grid CRUD actions by sending the appropriate mutation for each action (insert, update, or delete) to the GraphQL server.
 
 **Enable insert operation:**
 
-Configure the [editSettings](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#editsettings) with `allowAdding: true`. Add the `Add` button to the toolbar and configure the GraphQL insert mutation using `getMutation`.
+Configure the [editSettings](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#editsettings) with `allowAdding: true`. Add the `Add` button to the toolbar and configure the GraphQL insert mutation using "getMutation".
 
 ```js
 import { DataManager, GraphQLAdaptor } from '@syncfusion/ej2-data';
@@ -1585,7 +1579,7 @@ The backend server will start on `https://localhost:****` (or the port specified
 Once the application starts:
 
 1. The browser will automatically open at `https://localhost:****` (Vite dev server).
-2. The React application will load with the Syncfusion Grid component.
+2. The React application will load with the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component.
 3. The Grid will automatically fetch data from the HotChocolate GraphQL API.
 
 ### Step 3: Test GraphQL endpoint
@@ -1640,30 +1634,30 @@ Test the following Grid operations in the React application:
 
 **Paging:**
 
-- Click on page numbers or use page size dropdown
-- Verify that data loads correctly for each page
+- Click on page numbers or use page size dropdown.
+- Verify that data loads correctly for each page.
 
 **Sorting:**
 
-- Click on column headers to sort
-- Verify ascending and descending sort orders
+- Click on column headers to sort.
+- Verify ascending and descending sort orders.
 
 **Filtering:**
 
-- Click the filter icon in any column header
-- Apply filter conditions and verify results
+- Click the filter icon in any column header.
+- Apply filter conditions and verify results.
 
 **Searching:**
 
-- Use the search box in the toolbar
-- Verify that search works across all columns
+- Use the search box in the toolbar.
+- Verify that search works across all columns.
 
 **CRUD operations:**
 
-- Click **Add** to create new records
-- Click **Edit** to modify existing records
-- Click **Delete** to remove records
-- Verify that changes are reflected immediately
+- Click **Add** to create new records.
+- Click **Edit** to modify existing records.
+- Click **Delete** to remove records.
+- Verify that changes are reflected immediately.
 
 ## Complete sample repository
 
@@ -1671,16 +1665,16 @@ A complete working sample of the React Grid with HotChocolate GraphQL backend is
 
 **GitHub repository:**
 
-[Syncfusion React Grid with HotChocolate GraphQL Sample](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-backends/syncfusion-reactgrid-with-hotchocolate-graphQL-server)
+[Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid with HotChocolate GraphQL Sample](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-backends/syncfusion-reactgrid-with-hotchocolate-graphQL-server)
 
 **Repository contents:**
 
-- Complete ASP.NET Core backend with HotChocolate GraphQL configuration
-- React frontend with Syncfusion Grid and `GraphQLAdaptor` setup
-- Sample data models and in-memory data source
-- GraphQL queries and mutations for all CRUD operations
-- Data operation implementations (filtering, sorting, paging, searching)
-- Ready-to-run Visual Studio solution
+- Complete ASP.NET Core backend with HotChocolate GraphQL configuration.
+- React frontend with Syncfusion<sup style="font-size:70%">&reg;</sup> Grid and `GraphQLAdaptor` setup.
+- Sample data models and in-memory data source.
+- GraphQL queries and mutations for all CRUD operations.
+- Data operation implementations (filtering, sorting, paging, searching).
+- Ready-to-run Visual Studio solution.
 
 **Clone and run:**
 
@@ -1692,8 +1686,8 @@ dotnet run --project ReactApp1.Server
 
 ## See also
 
-* [Getting Started with Syncfusion React Grid](../getting-started)
-* [HotChocolate Documentation](https://chillicream.com/docs/hotchocolate/v13)
-* [GraphQL Official Documentation](https://graphql.org/learn/)
-* [Syncfusion GraphQLAdaptor Documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors#graphql-adaptor)
-* [ASP.NET Core Documentation](https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-10.0)
+* [Getting started with Syncfusion React Grid](../getting-started)
+* [HotChocolate documentation](https://chillicream.com/docs/hotchocolate/v13)
+* [GraphQL official documentation](https://graphql.org/learn/)
+* [Syncfusion GraphQLAdaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors#graphql-adaptor)
+* [ASP.NET Core documentation](https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-10.0)

@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Connecting MySQL server to Syncfusion React Grid Using LINQ2DB
 
-The [Syncfusion React Grid](https://ej2.syncfusion.com/react/documentation/grid/getting-started) supports binding data from a MySQL database. This documentation demonstrates integrating MySQL with Syncfusion React Grid using LINQ2DB (Light-weight ORM) for data operations with the use of `CustomAdaptor` to build a Transaction Management Application.
+The [Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid](https://ej2.syncfusion.com/react/documentation/grid/getting-started) supports binding data from a MySQL database. This documentation demonstrates integrating MySQL with Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid using LINQ2DB (Light-weight ORM) for data operations with the use of `CustomAdaptor` to build a Transaction Management Application.
 
 **What is LINQ2DB?**
 
@@ -25,7 +25,7 @@ The [Syncfusion React Grid](https://ej2.syncfusion.com/react/documentation/grid/
 - **Built-in Security**: Automatic parameterization prevents SQL injection attacks.
 - **MySQL-Specific**: Full support for MySQL 5.7+ and MySQL 8.0+ with proper collation and character encoding handling.
 - **Minimal Configuration**: Simple setup with straightforward connection string management.
-- **Compatibility with Syncfusion DataManager**: Works seamlessly with Syncfusion Grid's built-in data operations (filtering, sorting, paging, searching).
+- **Compatibility with Syncfusion DataManager**: Works seamlessly with Syncfusion<sup style="font-size:70%">&reg;</sup> Grid's built-in data operations (filtering, sorting, paging, searching).
 
 ## Prerequisites
 
@@ -122,11 +122,11 @@ Before installing NuGet packages, a new ASP.NET Core Web Application must be cre
    - **Framework**: Select .NET 8.0 (or latest available)
 6. Click **Create**.
 
-Visual Studio will create the project with the default structure, including folders like **Controllers**, **Models** and **configuration** files. The ASP.NET Core project is now ready for integration with LINQ2DB and Syncfusion components.
+Visual Studio will create the project with the default structure, including folders like **Controllers**, **Models** and **configuration** files. The ASP.NET Core project is now ready for integration with LINQ2DB and Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
 ### Step 3: Install required NuGet packages
 
-NuGet packages are software libraries that add functionality to the application. These packages enable LINQ2DB, MySQL connectivity, and Syncfusion Grid integration.
+NuGet packages are software libraries that add functionality to the application. These packages enable LINQ2DB, MySQL connectivity, and Syncfusion<sup style="font-size:70%">&reg;</sup> Grid integration.
 
 **Method 1: Using Package Manager Console:**
 
@@ -139,7 +139,7 @@ Install-Package linq2db -Version 6.1.0
 Install-Package linq2db.MySql -Version 6.1.0
 Install-Package MySqlConnector -Version 2.5.0
 dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson --version 9.0.0
-dotnet add package Syncfusion.EJ2.Base --version 32.2.3
+dotnet add package Syncfusion.EJ2.AspNet.Core --version 32.2.3
 ```
 
 **Method 2: Using NuGet Package Manager UI:**
@@ -150,7 +150,7 @@ dotnet add package Syncfusion.EJ2.Base --version 32.2.3
    - **linq2db.MySql** (version 6.1.0)
    - **MySqlConnector** (version 2.5.0)
    - **Microsoft.AspNetCore.Mvc.NewtonsoftJson** (version 9.0.0)
-   - **Syncfusion.EJ2.Base** (version 32.2.3)
+   - **Syncfusion.EJ2.AspNet.Core** (version 32.2.3)
 
 All required packages are now installed.
 
@@ -303,7 +303,7 @@ A connection string contains the information needed to connect the application t
 | Component | Description |
 | ----------- | ------------- |
 | **Server** | The address of the MySQL server (use "localhost" for local development) |
-| **Port** | The MySQL port number (default is 3306) |
+| **Port** | The MySQL port number (default is "3306") |
 | **Database** | The database name |
 | **User Id** | The MySQL username (default is "root") |
 | **Password** | The MySQL password |
@@ -374,7 +374,7 @@ The Syncfusion React Grid is a robust, high‑performance component built to eff
 
 ### Step 1: Creating the React client application
 
-Open a Visual Studio Code terminal or Command prompt and run the below command to create a React application:
+Open a Visual Studio Code terminal or Command Prompt and run the below command to create a React application:
 
 ```bash
 npm create vite@latest grid_mysql.client
@@ -383,7 +383,7 @@ cd grid_mysql.client
 
 ### Step 2: Adding Syncfusion packages
 
-Install the necessary Syncfusion packages using the below command in Visual Studio Code terminal or Command prompt.
+Install the necessary Syncfusion packages using the below command in Visual Studio Code terminal or Command Prompt.
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
@@ -574,8 +574,6 @@ export default App;
 | `Update` | Saves changes made to the selected record. |
 | `Cancel` | Cancels the current edit or add operation. |
 | `Search` | Displays a search box to find records. |
-
-The toolbar has been successfully added.
 
 ### Step 6: Implement paging feature
 
@@ -1202,7 +1200,7 @@ Implement the `batchRequest` method in (**src/CustomAdaptor.ts**) to handle mult
 
 - The Grid collects all added, edited, and deleted records in `Batch` edit mode.
 - The combined batch request is passed to the CustomAdaptor’s `batchRequest` method.
-- Each modified record, added and deleted records are processed using `BatchUpdate` method in **GridController.cs** file.
+- Each modified record, added and deleted records are processed using "BatchUpdate" method in **GridController.cs** file.
 - All repository operations persist changes to the MySQL database.
 - The Grid refreshes to display the updated, added, and removed records in a single response.
 
@@ -1506,6 +1504,6 @@ A complete, working sample implementation is available in the [GitHub repository
 The application now provides a complete solution for managing transaction data with a modern, user-friendly interface.
 
 ## See also
-- [Types of Edit](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
+- [Types of edit](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
 - [Customizable Grid cells with text, images, icons, and UI templates.](https://ej2.syncfusion.com/react/documentation/grid/columns/column-template)
 - [Boosts speed by rendering visible rows and columns](https://ej2.syncfusion.com/react/documentation/grid/scrolling/virtual-scrolling)

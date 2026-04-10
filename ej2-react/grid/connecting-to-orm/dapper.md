@@ -48,7 +48,8 @@ Ensure the following software and packages are installed before proceeding:
 | 5 | Implement the repository pattern with Dapper for efficient data access | [View](#step-6-create-the-repository-class) |
 | 6 | Create a React Grid component that supports searching, filtering, sorting, paging, and CRUD operations | [View](#integrating-syncfusion-react-grid) |
 | 7 | Handle bulk operations and batch updates | [View](#step-10-perform-crud-operations) |
-| 8 | Complete end‑to‑end reservation management workflow using the Syncfusion React Grid with server‑side processing and SQL Server integration | [View](#step-11-complete-code)  |
+| 8 | Complete end‑to‑end reservation management workflow using the Syncfusio<sup style="font-size:70%">&reg;</sup>n React Grid with server‑side processing and SQL Server integration | [View](#step-11-complete-code)  |
+| 9 | Explore a complete working sample available on GitHub | [View](#complete-sample-repository) |
 
 
 ## Setting up the SQL Server environment with Dapper
@@ -130,7 +131,7 @@ Before installing NuGet packages, a new ASP.NET Core Web Application must be cre
    - **Framework**: Select .NET 10.0 (or latest available)
 6. Click **Create**.
 
-Visual Studio will create the project with the default structure, including folders like **Controllers** and configuration files. The ASP.NET Core project is now ready for integration with Dapper and Syncfusion components.
+Visual Studio will create the project with the default structure, including folders like **Controllers** and configuration files. The ASP.NET Core project is now ready for integration with Dapper and Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
 ### Step 3: Install required NuGet packages
 
@@ -166,7 +167,7 @@ A data model is a C# class that represents the structure of a database table. Th
 
 1. Create a new folder named **Data** in the ASP.NET Core project.
 2. Inside the **Data** folder, create a new file named **Reservation.cs**.
-3. Define the **Reservation** class with the following code:
+3. Define the "Reservation" class with the following code:
 
 ```csharp
 using System.ComponentModel.DataAnnotations;
@@ -299,7 +300,7 @@ A repository class is an intermediary layer that handles all database operations
 **Instructions:**
 
 1. Inside the **Data** folder, create a new file named **ReservationRepository.cs**.
-2. Define the **ReservationRepository** class with the following code: 
+2. Define the "ReservationRepository" class with the following code: 
 
 ```csharp
 using Dapper;
@@ -520,11 +521,11 @@ The service registration has been completed successfully.
 
 ## Integrating Syncfusion React Grid
 
-The Syncfusion React Grid is a robust, high‑performance component built to efficiently display, manage, and manipulate large datasets. It provides advanced features such as sorting, filtering, and paging. Follow these steps to render the grid and integrate it with a SQL Server database using Dapper.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid is a robust, high‑performance component built to efficiently display, manage, and manipulate large datasets. It provides advanced features such as sorting, filtering, and paging. Follow these steps to render the grid and integrate it with a SQL Server database using Dapper.
 
 ### Step 1: Creating the React client application
 
-Open a Visual Studio Code terminal or Command prompt and run the below command to create a React application:
+Open a Visual Studio Code terminal or Command Prompt and run the below command to create a React application:
 
 ```bash
 npm create vite@latest grid_dapper.client
@@ -533,7 +534,7 @@ cd grid_dapper.client
 
 ### Step 2: Adding Syncfusion packages
 
-Install the necessary Syncfusion packages using the below command in Visual Studio Code terminal or Command prompt.
+Install the necessary Syncfusion<sup style="font-size:70%">&reg;</sup> packages using the below command in Visual Studio Code terminal or Command Prompt.
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
@@ -556,7 +557,7 @@ After installation, the necessary CSS files are available in the (**../node_modu
 
 ```
 
-For this project, the "Bootstrap 5" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.
+For this project, the "Bootstrap 5" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion<sup style="font-size:70%">&reg;</sup> React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.
 
 ### Step 3: Add Syncfusion React Grid
 
@@ -613,7 +614,7 @@ export default App;
 
 ### Step 4: Implement the CustomAdaptor
 
-The Syncfusion React Grid can bind data from a **SQL Server** database using [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) and set the `adaptor` property to `CustomAdaptor` for scenarios that require full control over data operations.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid can bind data from a **SQL Server** database using [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) and set the `adaptor` property to `CustomAdaptor` for scenarios that require full control over data operations.
 
 The `CustomAdaptor` (client-side) is a bridge between the React Grid and the ASP.NET Core backend. It extends the `UrlAdaptor` and handles all data operation requests by constructing HTTP POST calls to corresponding server endpoints. When the Grid performs operations like reading, searching, filtering, sorting, paging, and CRUD operations, the CustomAdaptor intercepts these actions and formats them into HTTP requests. These requests are sent to the ASP.NET Core Web API controller on the server, which processes the `DataManagerRequest` using Dapper to query the SQL Server database and return the results.
 
@@ -749,8 +750,6 @@ export default App;
 | `Update` | Saves changes made to the selected record. |
 | `Cancel` | Cancels the current edit or add operation. |
 | `Search` | Displays a search box to find records. |
-
-The toolbar has been successfully added.
 
 ### Step 6: Implement paging feature
 
@@ -938,7 +937,7 @@ namespace Grid_Dapper.Server.Controllers
 
 **Searching details:**
 
-- When text is entered in the search box and Enter is pressed, the Grid sends a search request to the server.
+- When text is entered in the search box and <kbd>Enter</kbd> key is pressed, the Grid sends a search request to the server.
 - The "List" method receives the search criteria in `search` parameter.
 - The `operation.PerformSearching()` method filters the data based on the search term.
 - Results are returned and displayed in the Grid.
@@ -1781,6 +1780,6 @@ A complete, working sample implementation is available in the [GitHub repository
 
 ## See also
 
-- [Types of Edit](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
+- [Types of edit](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
 - [Customizable Grid cells with text, images, icons, and UI templates.](https://ej2.syncfusion.com/react/documentation/grid/columns/column-template)
-- [Validation Rules](https://ej2.syncfusion.com/react/documentation/grid/editing/validation)
+- [Validation rules](https://ej2.syncfusion.com/react/documentation/grid/editing/validation)

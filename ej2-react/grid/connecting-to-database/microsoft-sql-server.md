@@ -19,11 +19,11 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports binding
 
 **Key benefits of SqlClient:**
 
-- **Secure by Design**: Supports parameterized queries to help prevent SQL injection attacks.
-- **High Performance**: Provides efficient, low‑level access to SQL Server with minimal overhead.
-- **Asynchronous Support**: Supports async database operations for better scalability in web APIs.
-- **Full SQL Control**: Allows precise control over SQL queries, stored procedures, and transactions.
-- **Official Microsoft Provider**: Maintained and supported by Microsoft for long‑term compatibility with SQL Server.
+- **Secure by design**: Enforces parameterized queries to help prevent SQL injection attacks.
+- **High performance**: Provides efficient, low‑level access to SQL Server with minimal overhead.
+- **Asynchronous support**: Supports async database operations for better scalability in web APIs.
+- **Full SQL control**: Allows precise control over SQL queries, stored procedures, and transactions.
+- **Official Microsoft provider**: Maintained and supported by Microsoft for long‑term compatibility with SQL Server.
 
 ## Prerequisites
 
@@ -35,10 +35,10 @@ Ensure the following software and packages are installed before proceeding:
 | React | 18.x or later | Create and run React apps |
 | .NET SDK | 8.0 or later | Build and run ASP.NET Core Web API |
 | SQL Server | 2019 or later | Database server |
-| @syncfusion/ej2-react-grids | Latest | React Grid component |
-| @syncfusion/ej2-data | Latest | DataManager and adaptors |
+| @syncfusion/ej2-react-grids | 33.1.45 or later | React Grid component |
+| @syncfusion/ej2-data | 33.1.45 or later | DataManager and adaptors |
 | Microsoft.Data.SqlClient (NuGet) | Latest | SQL Server connectivity |
-| Syncfusion.EJ2 (NuGet) | Latest | Server helpers (DataManagerRequest, DataOperations) |
+| Syncfusion.EJ2.AspNet.Core | 33.1.45 or later | Server helpers (DataManagerRequest, DataOperations) |
 
 
 ## Key topics
@@ -54,7 +54,7 @@ Ensure the following software and packages are installed before proceeding:
 
 ## Setting up the SQL server environment for SqlClient
 
-First, the **SQL Server database** structure must be created to store ticket records.
+First, create the **SQL Server database** structure required to store ticket records.
 
 **Instructions:**
 
@@ -127,7 +127,7 @@ Add the SQL Server client library and Syncfusion<sup style="font-size:70%">&reg;
 
 ```bash
 dotnet add package Microsoft.Data.SqlClient
-dotnet add package Syncfusion.EJ2
+dotnet add package Syncfusion.EJ2.AspNet.Core
 ```
 
 The Web API exposes HTTP endpoints that are used by the Grid to perform read and data modification operations. The Syncfusion<sup style="font-size:70%">&reg;</sup> server helper package provides the required types for processing grid requests and applying data operations on the server.
@@ -229,9 +229,9 @@ namespace Grid_MSSQL.Server.Data
 
 **Explanation:**
 
-- The "[Key]" attribute marks the "TicketId" property as the primary key (a unique identifier for each record).
+- The `[Key]` attribute marks the "TicketId" property as the primary key (a unique identifier for each record).
 - Each property represents a column in the database table.
-- The "?" symbol indicates that a property is nullable (can be empty).
+- The `?` symbol indicates that a property is nullable (can be empty).
 - The model includes comprehensive XML documentation for each property.
 
 The data model has been successfully created.
@@ -515,12 +515,12 @@ A connection string contains the information needed to connect the application t
 | ----------- | ------------- |
 | Data Source | The address of the SQL Server instance (server name, IP address, or localhost) |
 | Initial Catalog | The database name (in this case, "NetworkSupportDB") |
-| Integrated Security | Set to "True" for Windows Authentication; use "False" with Username/Password for SQL Authentication |
+| Integrated Security | Set to `True` for Windows Authentication; use `False` with Username/Password for SQL Authentication |
 | Connect Timeout | Connection timeout in seconds (default is 15) |
-| Encrypt | Enables encryption for the connection (set to "True" for production environments) |
-| Trust Server Certificate | Whether to trust the server certificate (set to "False" for security) |
+| Encrypt | Enables encryption for the connection (set to `True` for production environments) |
+| Trust Server Certificate | Whether to trust the server certificate (set to `False` for security) |
 | Application Intent | Set to "ReadWrite" for normal operations or "ReadOnly" for read-only scenarios |
-| Multi Subnet Failover | Used in failover clustering scenarios (typically "False") |
+| Multi Subnet Failover | Used in failover clustering scenarios (typically `False`) |
 
 The database connection string has been configured successfully.
 
@@ -609,7 +609,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid is a robust, hig
 
 ### Step 1: Creating the React client application
 
-Open a Visual Studio Code terminal or Command prompt and run the below command to create a React application:
+Open a Visual Studio Code terminal or Command Prompt and run the below command to create a React application:
 
 ```bash
 npm create vite@latest grid_mssql.client
@@ -618,7 +618,7 @@ cd grid_mssql.client
 
 ### Step 2: Adding Syncfusion packages
 
-Install the necessary Syncfusion<sup style="font-size:70%">&reg;</sup> packages using the below command in Visual Studio Code terminal or Command prompt.
+Install the necessary Syncfusion<sup style="font-size:70%">&reg;</sup> packages using the below command in Visual Studio Code terminal or Command Prompt.
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
@@ -640,7 +640,7 @@ After installation, the necessary CSS files are available in the (**../node_modu
 @import '../node_modules/@syncfusion/ej2-react-grids/styles/bootstrap5.3.css';
 ```
 
-For this project, the "Bootstrap 5.3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.
+For this project, the "Bootstrap 5.3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion<sup style="font-size:70%">&reg;</sup> React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.
 
 ### Step 3: Add Syncfusion React Grid
 
@@ -692,7 +692,7 @@ The `CustomAdaptor` (client-side) is a bridge between the React Grid and the ASP
 
 **Instructions:**
 
-1. Create a new **CustomAdaptor.ts** file in the (**src**) folder.
+1. Create a new **CustomAdaptor.ts** file in the **src** folder.
 2. Add the following code inside this file:
 
 ```ts
@@ -868,7 +868,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
     export default App;
     ```
 
-2. On the API controller create a file **TicketsController.cs** and add the "List" method provided below and handle paging using `DataOperations.PerformSkip` and `DataOperations.PerformTake`.
+2. On the API controller create a file **TicketsController.cs** and add the "List" method provided below and handle paging using `PerformSkip` and `PerformTake`.
 
     ```csharp
     using Microsoft.AspNetCore.Mvc;
@@ -992,8 +992,8 @@ Searching allows finding records by entering keywords in the search box.
 
 **Searching details**
 
-- Entering a term and pressing <kbd>Enter</kbd> sends search descriptors in the `search` property.
-- `DataOperations.PerformSearching()` applies the search term across all searchable fields.
+- Entering a term and pressing the <kbd>Enter</kbd> key sends search descriptors in the `search` property.
+- `PerformSearching()` applies the search term across all searchable fields.
 - Filtered data is counted and then paged; the shaped response is returned to the client.
 
 When searching is performed in the Grid, a request is sent to the server with the following payload.
@@ -1082,8 +1082,8 @@ Filtering allows restricting data based on column values using the Excel filter 
 
 **Filtering details**
 
-- The Excel filter UI builds filter predicates on the client and sends them in the `Where` property.
-- `DataOperations.PerformFiltering()` applies predicates against the in-memory data set.
+- The Excel filter UI builds filter predicates on the client and sends them in the `where` property.
+- `PerformFiltering()` applies predicates against the in-memory data set.
 - Filtering executes before count and paging to ensure accurate total counts.
 
 When filtering is performed in the Grid, a request is sent to the server with the following payload.
@@ -1173,7 +1173,7 @@ Sorting enables arranging records in ascending or descending order based on colu
 **Sorting details:**
 
 - Clicking a column header creates sort descriptors that arrive in the `sorted` property.
-- `DataOperations.PerformSorting()` orders the sequence based on field name and sort direction.
+- `PerformSorting()` orders the sequence based on field name and sort direction.
 - Sorting executes before count and paging to return correct page slices.
 
 When sorting is performed in the Grid, a request is sent to the server with the following payload.
@@ -1254,7 +1254,7 @@ public async Task<IActionResult> Insert([FromBody] CRUDModel<Tickets> args)
 **Insert action details:**
 
 1. The Grid collects row values and posts a `CRUDModel<Tickets>` payload to `/insert`.
-2. The controller validates the payload and calls `InsertAsync`.
+2. The controller validates the payload and calls "InsertAsync".
 3. The repository generates `PublicTicketId` when missing and sets timestamps.
 4. ADO.NET executes the `INSERT` statement and returns the new "TicketId".
 5. The API returns the created record; the Grid refreshes and displays the new row.
@@ -1316,7 +1316,7 @@ public async Task<IActionResult> Remove([FromBody] CRUDModel<Tickets> args)
 
 1. A record is selected and the `Delete` button is clicked
 2. The Grid posts the key to `/remove` using `CRUDModel`.
-3. The controller parses the key and calls `DeleteAsync`.
+3. The controller parses the key and calls "DeleteAsync".
 4. ADO.NET executes the `DELETE` statement.
 5. The API returns acknowledgment; the Grid removes the row.
 
@@ -1466,7 +1466,7 @@ const statusTemplate = (data: TicketRow) => (
 
 const priorityTemplate = (data: TicketRow) => (
   <span className={`priority-pill ${getPriorityClass(data)}`} title={getPriorityDescription(data)}>
-    <span className="priority-icon" aria-hidden="true" />
+    <span className="priority-icon" aria-hidden=`True` />
     {data.Priority}
   </span>
 );
@@ -1688,10 +1688,10 @@ namespace Grid_MSSQL.Server.Controllers
 1. Configure the "TicketDb" connection string in **appsettings.json**.
 2. From the server project folder, run the following command in a terminal:
 
-```bash
-dotnet build
-dotnet run
-```
+    ```bash
+    dotnet build
+    dotnet run
+    ```
 
 **Explanation:**
 
@@ -1702,9 +1702,9 @@ dotnet run
 
 From the client folder, install dependencies and start the React dev server:
 
-```bash
-npm run dev
-```
+    ```bash
+    npm run dev
+    ```
 
 **Step 3: Access the application:**
 
@@ -1730,6 +1730,6 @@ A complete, working sample implementation is available in the [GitHub repository
 The application now provides a complete end‑to‑end ticket management workflow using the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid with server‑side processing and direct integration with Microsoft SQL Server.
 
 ## See also
-- [Types of Edit](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
+- [Types of edit](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)
 - [Customizable Grid cells with text, images, icons, and UI templates.](https://ej2.syncfusion.com/react/documentation/grid/columns/column-template)
 - [Boosts speed by rendering visible rows and columns](https://ej2.syncfusion.com/react/documentation/grid/scrolling/virtual-scrolling)
