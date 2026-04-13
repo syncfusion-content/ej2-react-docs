@@ -1,0 +1,32 @@
+#container {
+    width: 500px;
+    margin: auto;
+    transform: translateX(10%);
+}
+
+#loader {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+
+#details table th,
+#details table td {
+    padding: 20px 10px;
+    text-align: left;
+}
+
+#details .info {
+    font-size: 14px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.center {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}

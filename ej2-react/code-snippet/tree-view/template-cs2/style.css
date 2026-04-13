@@ -1,0 +1,35 @@
+#loader {
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+
+#treeparent {
+  display: block;
+  max-width: 350px;
+  max-height: 350px;
+  margin: auto;
+  overflow: auto;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+
+.custom .e-list-text {
+  width: 100%;
+}
+
+.custom .textcontent {
+  float: left;
+}
+
+.custom .countcontainer {
+  float: right;
+  margin-right: 5px !important;
+}
+
+.custom.e-interaction.e-fullrow-wrap .e-text-content {
+  pointer-events: none;
+}

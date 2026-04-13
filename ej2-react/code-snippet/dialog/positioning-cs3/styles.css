@@ -1,0 +1,46 @@
+#loader {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+
+html,
+body,    
+#container,
+#dialog-target {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+/* csslint ignore:start */
+.e-dialog .e-dlgcontent{
+    padding: 10px 16px 10px;
+}     
+
+.e-radio +label .e-label {
+  line-height: 18px;
+}
+
+#poschange td {
+  padding: 6px;
+}
+
+#poschange {
+    width: 405px;
+}
+
+div#target.control-section.dialog-position {
+    overflow: visible;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+#posvalue {
+    float:left;
+    padding-left:10px;
+    font-weight: bold;
+}
+/* csslint ignore:end */

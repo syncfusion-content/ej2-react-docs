@@ -1,0 +1,14 @@
+.schedule-control-section .control-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 540px) {
+    .schedule-control-section .control-wrapper {
+        flex-direction: column;
+    }
+
+    .e-grid {
+        width: 100% !important;
+    }
+}
