@@ -1,0 +1,48 @@
+#PivotViewFieldList {
+  width: 58%;
+  height: 100%;
+  float: left;
+}
+
+.e-pivotfieldlist {
+  width: 42%;
+  height: 100%;
+  float: right;
+}
+
+/* csslint ignore:start */
+
+.e-pivotfieldlist .e-static {
+  width: 100% !important;
+}
+
+#PivotView_PivotFieldList_Wrapper .e-pivot-button .e-icons.e-dropdown-icon::before,
+#PivotView .e-pivot-button .e-icons.e-dropdown-icon::before {
+      content: "\e941";
+}
+
+#PivotView_PivotFieldList_Wrapper .e-pivot-button .e-icons.e-pv-filtered::before,
+#PivotView .e-pivot-button .e-icons.e-pv-filtered::before {
+    content: "\e974";
+}
+
+#PivotView_PivotFieldList_Wrapper .e-pivot-button .e-icons.e-pv-filter::before,
+#PivotView .e-pivot-button .e-icons.e-pv-filter::before {
+    content: '\e202';
+}
+
+#PivotView_PivotFieldList .e-icons.e-toggle-field-list::before {
+    content: '\e337';
+}
+
+#PivotView_PivotFieldList_Wrapper .e-pivot-button .e-icons.e-sort::before,
+#PivotView .e-pivot-button .e-icons.e-sort::before {
+    content: '\e306';
+}
+
+#PivotView_PivotFieldList_Wrapper .e-pivot-button .e-icons.e-remove::before,
+#PivotView .e-pivot-button .e-icons.e-remove::before {
+    content: '\e201';
+}
+
+/* csslint ignore:end */

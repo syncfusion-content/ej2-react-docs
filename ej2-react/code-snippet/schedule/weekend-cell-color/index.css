@@ -1,0 +1,3 @@
+.schedule-cell-customization.e-schedule .e-month-view .e-work-cells:not(.e-work-days) {
+    background-color: #f08080;
+}

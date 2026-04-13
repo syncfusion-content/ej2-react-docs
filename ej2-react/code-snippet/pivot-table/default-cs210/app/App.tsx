@@ -1,0 +1,55 @@
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { IDataSet, PivotViewComponent, PDFExport, Inject, PdfExportProperties} from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
+import * as React from 'react';
+import { pivotData } from './datasource';
+
+function App() {
+
+  let dataSourceSettings: DataSourceSettingsModel = {
+    columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
+    dataSource: pivotData as IDataSet[],
+    expandAll: false,
+    filters: [],
+    formatSettings: [{ name: 'Amount', format: 'C0' }],
+    rows: [{ name: 'Country' }, { name: 'Products' }],
+    values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' }]
+  }
+  let pivotObj: PivotViewComponent;
+  
+  return (<div><div className="col-md-9"> <PivotViewComponent  ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' height={280} dataSourceSettings={dataSourceSettings} allowPdfExport={true}><Inject services={[PDFExport]} /></PivotViewComponent></div>
+    <div className='col-lg-3 property-section'><ButtonComponent cssClass='e-primary' onClick={btnClick.bind(this)}>Export</ButtonComponent></div></div>);
+
+  function btnClick(): void {
+    let pdfExportProperties: PdfExportProperties = {
+      header: {
+          fromTop: 0,
+          height: 130,
+          contents: [
+              {
+                  type: 'Text',
+                  value: "Pivot Table",
+                  position: { x: 0, y: 50 },
+                  style: { textBrushColor: '#000000', fontSize: 13, dashStyle:'Solid',hAlign:'Center' }
+              }
+          ]
+      },
+      footer: {
+          fromBottom: 160,
+          height: 150,
+          contents: [
+              {
+                  type: 'PageNumber',
+                  pageNumberType: 'Arabic',
+                  format: 'Page {$current} of {$total}',
+                  position: { x: 0, y: 25 },
+                  style: { textBrushColor: '#02007a', fontSize: 15 }
+              }
+          ]
+      }
+    };
+    pivotObj.pdfExport(pdfExportProperties);
+  }
+};
+
+export default App;

@@ -1,0 +1,26 @@
+#container {
+    visibility: hidden;
+}
+
+#loader {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+
+#target {
+    background-color: #cfd8dc;
+    border: 3px solid #eceff1;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 100px;
+    padding: 20px 0;
+    width: 200px;
+    text-align: center;
+    color: #424242;
+    font-size: 20px;
+}

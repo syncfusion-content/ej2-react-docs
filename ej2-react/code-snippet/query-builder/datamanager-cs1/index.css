@@ -1,0 +1,42 @@
+#loader {
+	color: #008cff;
+	height: 40px;
+	left: 45%;
+	position: absolute;
+	top: 45%;
+	width: 30%;
+}
+
+.e-qb-button {
+	margin: 2% 1% 0 0%;
+}
+
+.e-qb-button button {
+	margin-right: 20px;
+}
+
+.e-query-builder {
+	margin: 0 auto;
+}
+#datatable {
+    margin-left: 15%;
+}
+  
+#datatable.e-table {
+    border: solid 1px #e0e0e0;
+    border-collapse: collapse;
+    font-family: Roboto;
+}
+  
+#datatable.e-table td, #datatable.e-table th {
+    border: solid #e0e0e0;
+    border-width: 1px 0 0;
+    display: table-cell;
+    font-size: 14px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 8px 21px;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+}

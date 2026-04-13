@@ -1,0 +1,39 @@
+#container {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 75px;
+}
+
+#loader {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+
+#disabledbutton {
+    pointer-events: none;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.e-tooltip-wrap.e-popup .e-tip-content {
+    padding: 10px;
+    font-size: 14px;
+}
+
+#tooltip {
+    position: relative;
+    transform: translateX(-50%);
+}
+
+.switchContainer {
+    vertical-align: sub;
+    display: inline-block;
+    position: relative;
+    left: 3%;
+}
