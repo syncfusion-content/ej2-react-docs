@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 The grouping feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid enables data to be organized into a hierarchical structure, allowing records to be expanded and collapsed for improved readability and analysis.
 
+For an overview of the grouping feature available in the React Grid, refer to the following video:
+
+{% youtube "https://www.youtube.com/watch?v=z2-54wZyNSI" %}
+
 The group feature is enabled by importing the `Group` module from `@syncfusion/ej2-react-grids` and injecting the `Group` service into the grid.
 
 ```js
