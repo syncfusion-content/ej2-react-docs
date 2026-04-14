@@ -1,21 +1,25 @@
-import { getValue } from '@syncfusion/ej2-base';
 import * as React from 'react';
+import { getValue } from '@syncfusion/ej2-base';
 import { IOrders } from './orders';
 
-export class Row extends React.Component<{}, {}>{
-    public render() {
-        const item: IOrders = this.props as IOrders; 
-        if (getValue('caption', item)) {
-            return (<tr>
-                <td colSpan={3}>{getValue('caption', item)}</td>
-            </tr>)
-        }
+export const Row: React.FC<Partial<IOrders> & { caption?: string }> = (props) => {
+    const caption = getValue('caption', props);
+
+    if (caption) {
         return (
-            <tr>
-                <td>{item.OrderID}</td>
-                <td>{item.CustomerID}</td>
-                <td>{item.EmployeeID}</td>
-            </tr>
-        )
+        <tr>
+            <td colSpan={3}>{caption}</td>
+        </tr>
+        );
     }
-}
+
+    const item = props as IOrders;
+
+    return (
+        <tr>
+            <td>{item.OrderID}</td>
+            <td>{item.CustomerID}</td>
+            <td>{item.EmployeeID}</td>
+        </tr>
+    );
+};

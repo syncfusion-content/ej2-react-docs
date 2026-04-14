@@ -54,39 +54,35 @@ The example demonstrates using the [UrlAdaptor](./adaptors/url-adaptor) with mid
 {% highlight ts tabtitle="App.jsx" %}
 {% raw %}
 
-import React, { Component } from "react";
-import { DataManager, Query, UrlAdaptor } from "@syncfusion/ej2-data";
+import React, { useEffect, useState } from 'react';
+import { DataManager, Query, UrlAdaptor } from '@syncfusion/ej2-data';
 
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { items: [] };
-  }
+const App = () => {
+  const [items, setItems] = useState([]);
 
-  componentDidMount() {
+  useEffect(() => {
     const dataManager = new DataManager({
-      url: "https://services.syncfusion.com/react/production/api/UrlDataSource",
+      url: 'https://services.syncfusion.com/react/production/api/UrlDataSource',
       adaptor: new UrlAdaptor(),
-    }).executeQuery(new Query().take(8)).then((e) => {
-      this.setState({ items: e.result });
     });
 
     // Method to apply middleware before sending a request to the server.
     dataManager.applyPreRequestMiddlewares = async (request) => {
-      const response = await fetch("https://example.com/api/token", { // Replace with your actual endpoint. This URL is just for example purposes..
-        method: "POST",
+      const response = await fetch('https://example.com/api/token', { // Replace with your actual endpoint. This URL is just for example purposes.
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
       });
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-      return { token: "your_token_value" };
+      return { token: 'your_token_value' };
     };
-  
+
+    // DataManager failure handler event.
     dataManager.dataManagerFailure = (e) => {
-      //Handle DataManager failure event.
+      console.error('DataManager error:', e);
     };
 
     // Method to apply middleware after receiving a response from the server.
@@ -94,31 +90,34 @@ export default class App extends Component {
       return response;
     };
 
-  }
+    dataManager.executeQuery(new Query().take(8)).then((e) => {
+      setItems(e.result);
+    });
+  }, []);
 
-  render() {
-    return (
-      <table id='datatable' className='e-table'>
-        <thead>
-          <tr>
-            <th>Order ID</th>
-            <th>Customer ID</th>
-            <th>Employee ID</th>
+  return (
+    <table id="datatable" className="e-table">
+      <thead>
+        <tr>
+          <th>Employee ID</th>
+          <th>Employees</th>
+          <th>Designation</th>
+        </tr>
+      </thead>
+      <tbody>
+        {items.map((row, index) => (
+          <tr key={index}>
+            <td>{row.EmployeeID}</td>
+            <td>{row.Employees}</td>
+            <td>{row.Designation}</td>
           </tr>
-        </thead>
-        <tbody>
-          {this.state.items.map((row, index) => (
-            <tr key={index}>
-              <td>{row.OrderID}</td>
-              <td>{row.CustomerID}</td>
-              <td>{row.EmployeeID}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    );
-  }
-}
+        ))}
+      </tbody>
+    </table>
+  );
+};
+
+export default App;
 
 {% endraw %}
 {% endhighlight %}
@@ -126,71 +125,85 @@ export default class App extends Component {
 {% highlight ts tabtitle="App.tsx" %}
 {% raw %}
 
-import React, { Component } from "react";
-import { DataManager, Query, UrlAdaptor } from "@syncfusion/ej2-data";
+import * as React from 'react';
+import { useEffect, useState } from 'react';
+import { DataManager, Query, UrlAdaptor } from '@syncfusion/ej2-data';
 
-export default class App extends Component {
-  constructor(props: object) {
-    super(props);
-    this.state = { items: [] };
-  }
+interface Order {
+  OrderID: number;
+  CustomerID?: string;
+  EmployeeID?: number;
+  [key: string]: any;
+}
 
-  componentDidMount() {
-    const dataManager:DataManager = new DataManager({
-      url: "https://services.syncfusion.com/react/production/api/UrlDataSource",
+const App: React.FC = () => {
+  const [items, setItems] = useState<Order[]>([]);
+
+  useEffect(() => {
+    const dataManager: DataManager = new DataManager({
+      url: 'https://services.syncfusion.com/react/production/api/UrlDataSource',
       adaptor: new UrlAdaptor(),
-    }).executeQuery(new Query().take(8)).then((e:any) => {
-      this.setState({ items: e.result });
     });
-    
+
     // Method to apply middleware before sending a request to the server.
-    dataManager.applyPreRequestMiddlewares = async (request: string | Object): Promise<object> => {
+    dataManager.applyPreRequestMiddlewares = async (
+      request: string | Object
+    ): Promise<object> => {
       // Fetch authentication token from an external service.
       const response = await fetch('https://example.com/api/token', { // Replace with your actual endpoint. This URL is just for example purposes.
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
-        }
+          'Content-Type': 'application/json',
+        },
       });
+
       if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
+       throw new Error(`HTTP error! Status: ${response.status}`);
       }
       // Return the authentication token.
-      return { token: "your_token_value" };
+      return { token: 'your_token_value' };
     };
 
+    // Handle DataManager failure event.
     dataManager.dataManagerFailure = (e: Error) => {
-      //Handle DataManager failure event.
-    }
+      console.error('DataManager error:', e);
+    };
 
     // Method to apply middleware after receiving a response from the server.
-    dataManager.applyPostRequestMiddlewares = async (response: string | Object): Promise<Object> => {
+    dataManager.applyPostRequestMiddlewares = async (
+      response: string | Object
+    ): Promise<Object> => {
       return response;
     };
-  }
-  render() {
-    return (
-      <table id='datatable' className='e-table'>
-        <thead>
-          <tr>
-            <th>Order ID</th>
-            <th>Customer ID</th>
-            <th>Employee ID</th>
+
+    dataManager.executeQuery(new Query().take(8)).then((e: any) => {
+      setItems(e.result);
+    });
+  }, []);
+
+  return (
+    <table id="datatable" className="e-table">
+      <thead>
+        <tr>
+          <th>Employee ID</th>
+          <th>Employees</th>
+          <th>Designation</th>
+        </tr>
+      </thead>
+      <tbody>
+        {items.map((row, index) => (
+          <tr key={index}>
+            <td>{row.EmployeeID}</td>
+            <td>{row.Employees}</td>
+            <td>{row.Designation}</td>
           </tr>
-        </thead>
-        <tbody>
-          {this.state.items.map((row, index) => (
-            <tr key={index}>
-              <td>{row.OrderID}</td>
-              <td>{row.CustomerID}</td>
-              <td>{row.EmployeeID}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    );
-  }
-}
+        ))}
+      </tbody>
+    </table>
+  );
+};
+
+export default App;
 
 {% endraw %}
 {% endhighlight %}

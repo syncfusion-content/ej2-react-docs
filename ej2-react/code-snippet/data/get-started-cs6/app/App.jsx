@@ -1,20 +1,30 @@
-import { DataManager, Query } from '@syncfusion/ej2-data';
-import * as React from 'react';
+import React from 'react';
+import { DataManager, JsonAdaptor, Query } from '@syncfusion/ej2-data';
 import { data } from './datasource';
 import { Row } from './rowTemplate';
-import './App.css';
 
-export default class App extends React.Component {
-    result = new DataManager(data).executeLocal(new Query().take(8));
-    items = this.result.map((row, index) => (
+const App = () => {
+    const result = new DataManager({
+        json: data,
+        adaptor: new JsonAdaptor(),
+    }).executeLocal(new Query().take(8));
+
+    const items = result.map((row, index) => (
         <Row key={index} {...row} />
     ));
-    render() {
-        return (<table id='datatable' className='e-table'>
+
+    return (
+        <table id="datatable" className="e-table">
             <thead>
-             <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th></tr>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer ID</th>
+                    <th>Employee ID</th>
+                </tr>
             </thead>
-            <tbody>{this.items}</tbody>
-           </table>);
-    }
-}
+            <tbody>{items}</tbody>
+        </table>
+    );
+};
+
+export default App;

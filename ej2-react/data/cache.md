@@ -23,64 +23,66 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager provides the `e
 The following code demonstrates how to enable caching using the `enableCache` property in the Syncfusion<sup style="font-size:70%">&reg;</sup> React DataManager:
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% raw %}
 
+import React from 'react';
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import * as React from "react";
 
-export default class App extends React.Component {
-  const data = new DataManager({ 
+const App = () => {
+  const data = new DataManager({
     url: 'https://services.syncfusion.com/react/production/api/Orders',
     adaptor: new WebApiAdaptor(),
     crossDomain: true,
-    enableCache: true // Enables caching to prevent repeated HTTP requests. 
+    enableCache: true // Enables caching to prevent repeated HTTP requests.
   });
-  render() {
-    return 
-      <GridComponent dataSource={data}>
-        <ColumnsDirective>
-          <ColumnDirective field='OrderID' width='100' textAlign="Right"/>
-          <ColumnDirective field='CustomerID' width='100'/>
-          <ColumnDirective field='EmployeeID' width='100' textAlign="Right"/>
-          <ColumnDirective field="OrderDate" headerText="Order Date" format="yMd" textAlign="Right" width="120"/>
-        </ColumnsDirective>
-      </GridComponent>
-    ;
-  }
+
+  return (
+    <GridComponent dataSource={data}>
+      <ColumnsDirective>
+        <ColumnDirective field="OrderID" width="100" textAlign="Right" />
+        <ColumnDirective field="CustomerID" width="100" />
+        <ColumnDirective field="EmployeeID" width="100" textAlign="Right" />
+        <ColumnDirective field="OrderDate" headerText="Order Date" format="yMd" textAlign="Right" width="120" />
+      </ColumnsDirective>
+    </GridComponent>
+  );
 };
+
+export default App;
 
 {% endraw %}
 {% endhighlight %}
 
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% raw %}
 
+import * as React from 'react';
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import * as React from "react";
 
-export default class App extends React.Component {
-  const data = new DataManager({ 
+const App: React.FC = () => {
+  const data: DataManager = new DataManager({
     url: 'https://services.syncfusion.com/react/production/api/Orders',
     adaptor: new WebApiAdaptor(),
     crossDomain: true,
-    enableCache: true // Enables caching to prevent repeated HTTP requests. 
+    enableCache: true // Enables caching to prevent repeated HTTP requests.
   });
-  render() {
-    return 
-      <GridComponent dataSource={data}>
-        <ColumnsDirective>
-          <ColumnDirective field='OrderID' width='100' textAlign="Right"/>
-          <ColumnDirective field='CustomerID' width='100'/>
-          <ColumnDirective field='EmployeeID' width='100' textAlign="Right"/>
-          <ColumnDirective field="OrderDate" headerText="Order Date" format="yMd" textAlign="Right" width="120"/>
-        </ColumnsDirective>
-      </GridComponent>
-    ;
-  }
+
+  return (
+    <GridComponent dataSource={data}>
+      <ColumnsDirective>
+        <ColumnDirective field="OrderID" width="100" textAlign="Right" />
+        <ColumnDirective field="CustomerID" width="100" />
+        <ColumnDirective field="EmployeeID" width="100" textAlign="Right" />
+        <ColumnDirective field="OrderDate" headerText="Order Date" format="yMd" textAlign="Right" width="120" />
+      </ColumnsDirective>
+    </GridComponent>
+  );
 };
+
+export default App;
 
 {% endraw %}
 {% endhighlight %}

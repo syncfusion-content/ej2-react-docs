@@ -12,11 +12,11 @@ domainurl: ##DomainURL##
 
 ## Overview
 
-When working with large datasets in the React Pivotview component, loading all field values in the filter dialog's member editor can cause performance issues. The [`maxNodeLimitInMemberEditor`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#maxnodelimitinmembereditor) property allows you to set a limit on the number of field values displayed initially, improving the loading performance while still providing access to all data through search functionality.
+When working with large datasets in the React Pivotview component, loading all field values in the filter dialog's member editor can cause performance issues. The [`maxNodeLimitInMemberEditor`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#maxnodelimitinmembereditor) property allows you to set a limit on the number of field values displayed initially, improving the loading performance while still providing access to all data through search functionality.
 
 ## Setting the data limit
 
-The [`maxNodeLimitInMemberEditor`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#maxnodelimitinmembereditor) property determines how many field values are loaded initially in the member editor. By default, this property is set to 1000 items.
+The [`maxNodeLimitInMemberEditor`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#maxnodelimitinmembereditor) property determines how many field values are loaded initially in the member editor. By default, this property is set to 1000 items.
 
 When the number of field values exceeds this limit:
 - Only the specified number of values will load initially

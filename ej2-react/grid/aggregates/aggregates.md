@@ -16,6 +16,10 @@ The Aggregates feature in Syncfusion<sup style="font-size:70%">&reg;</sup> React
 - `Group Footer`: aggregate values for each group of records.
 - `Group Caption`: summary information shown alongside the group title.
 
+For an overview of the aggregate feature available in the React Grid, refer to the following video:
+
+{% youtube "https://www.youtube.com/watch?v=z2-54wZyNSI&t=146s" %}
+
 The aggregate feature is enabled by importing the `Aggregate` module from `@syncfusion/ej2-react-grids` and injecting the `Aggregate` service into the grid.
 
 ```js

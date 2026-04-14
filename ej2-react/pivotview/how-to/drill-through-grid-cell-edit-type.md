@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The drill-through feature in the Pivot Table allows users to view the raw data behind aggregated values by opening a detailed grid dialog. When this dialog appears, you can customize the edit behavior of specific columns to provide appropriate input controls based on their data types.
 
-Using the [`drillThrough`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#drillthrough) event in the Pivot Table, you can define the edit type for any column in the drill-through grid. This is accomplished by checking the column name within the event handler and setting the appropriate edit type using the [`gridColumns.editType`](https://ej2.syncfusion.com/react/documentation/api/grid/column/#edittype) event argument.
+Using the [`drillThrough`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#drillthrough) event in the Pivot Table, you can define the edit type for any column in the drill-through grid. This is accomplished by checking the column name within the event handler and setting the appropriate edit type using the [`gridColumns.editType`](https://ej2.syncfusion.com/react/documentation/api/grid/column#edittype) event argument.
 
 ## Edit type options
 
@@ -25,7 +25,7 @@ The following edit types are available for different data types:
 * [`DatePicker`](https://ej2.syncfusion.com/react/documentation/datepicker/getting-started) - For date data type.
 * [`DateTimePicker`](https://ej2.syncfusion.com/react/documentation/datetimepicker/getting-started) - For date time data type.
 
-> The [`gridColumns.editType`](https://ej2.syncfusion.com/react/documentation/api/grid/column/#edittype) property must be set based on the column's data type. For example, string data will not work properly with numeric text box edit type.
+> The [`gridColumns.editType`](https://ej2.syncfusion.com/react/documentation/api/grid/column#edittype) property must be set based on the column's data type. For example, string data will not work properly with numeric text box edit type.
 
 ## Implementation example
 

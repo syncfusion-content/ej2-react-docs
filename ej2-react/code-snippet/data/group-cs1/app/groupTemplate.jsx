@@ -1,21 +1,22 @@
-import * as React from 'react';
+import React from 'react';
 import { Row } from './rowTemplate';
 
-export class GroupRow extends React.Component {
-    getRows(data) {
-        return data.map((row, index) => (
-            <Row key={index} {...row} />
-        ));
-    }
+export const GroupRow = (props) => {
+  const getRows = (data) => {
+    return data.map((row, index) => (
+      <Row key={index} {...row} />
+    ));
+  };
 
-    render() {
-        const item = this.props;
-        const ag = { caption: item.field + ' - ' + (item.items && item.items[0][item.field]) };
-        return (
-            <tbody>
-                <Row key={ag.caption} {...ag} />
-                {this.getRows(item.items)}
-            </tbody>
-        );
-    }
-}
+  const caption =
+    props.field +
+    ' - ' +
+    (props.items && props.items[0][props.field]);
+
+  return (
+    <tbody>
+      <Row key={caption} caption={caption} />
+      {getRows(props.items)}
+    </tbody>
+  );
+};

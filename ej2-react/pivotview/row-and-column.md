@@ -313,7 +313,7 @@ Selection in the Pivot Table allows users to easily highlight rows, columns, or 
 
 To enable selection, set the [`allowSelection`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettingsModel/#allowselection) property to **true** within the [`gridSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#gridsettings) configuration. This allows users to select table elements using a mouse click or arrow keys.
 
-The Pivot Table provides two selection modes, controlled by the [`type`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotSelectionSettings/#type) property in [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettingsModel/#selectionsettings):
+The Pivot Table provides two selection modes, controlled by the [`type`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotselectionsettings#type) property in [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridsettingsmodel#selectionsettings):
 
 - **Single**: Allows you to select only one row, column, or cell at a time. This is the default mode.
 - **Multiple**: Lets you select several rows, columns, or cells. To select multiple items, hold down the "CTRL" key and click the rows or cells you wish to select. To select a range, hold the "SHIFT" key and click the first and last item in the range.
@@ -337,7 +337,7 @@ The Pivot Table provides two selection modes, controlled by the [`type`](https:/
 
 ### Selection mode
 
-You can choose how selection works by setting the [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotSelectionSettings/#mode) property within the [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettingsModel/#selectionsettings) configuration. The Pivot Table offers four simple options for selection mode:
+You can choose how selection works by setting the [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotselectionsettings#mode) property within the [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridsettingsmodel#selectionsettings) configuration. The Pivot Table offers four simple options for selection mode:
 
 - **Row**: This is the default mode. It lets the user select an entire row with a single click.
 - **Column**: In this mode, only entire columns can be selected.
@@ -365,7 +365,7 @@ By choosing the right selection mode, users can quickly highlight and review the
 
 ### Cell Selection Mode
 
-To set the cell selection mode, use the [`cellSelectionMode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotSelectionSettings/#cellselectionmode) option within the [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettingsModel/#selectionsettings). The available modes are:
+To set the cell selection mode, use the [`cellSelectionMode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotselectionsettings#cellselectionmode) option within the [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridsettingsmodel#selectionsettings). The available modes are:
 
 - **Flow** (default): Selects a continuous range of cells from the starting cell to the ending cell, including all rows in between.
 - **Box**: Selects a rectangular block of cells that spans from the starting cell to the ending cell, covering all intermediate rows and columns within the selected range.
@@ -388,7 +388,7 @@ To set the cell selection mode, use the [`cellSelectionMode`](https://ej2.syncfu
 
 {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs264" %}
 
-> To use cell selection modes, ensure that the [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotSelectionSettings/#mode) property in [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettingsModel/#selectionsettings) is set to **Cell** or **Both** and the [`type`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotSelectionSettings/#type) property is set to **Multiple**. This allows users to select more than one cell at a time for better comparison and review.
+> To use cell selection modes, ensure that the [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotselectionsettings#mode) property in [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridsettingsmodel#selectionsettings) is set to **Cell** or **Both** and the [`type`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotselectionsettings#type) property is set to **Multiple**. This allows users to select more than one cell at a time for better comparison and review.
 
 ### Changing background color of the selected cell
 
@@ -468,7 +468,7 @@ You can use these parameters to decide whether or not the cell should be selecte
 
 ### Limitations
 
-The [grouping](./grouping) feature is applied based on the selected row or column headers using the following [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettingsModel/#selectionsettings): selection [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotSelectionSettings/#mode) set to **Cell**, selection [`type`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotSelectionSettings/#type) set to **Multiple**, and [`cellSelectionMode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotSelectionSettings/#cellselectionmode) set to **Box** by default. When using the selection and [grouping](./grouping.md) features together, cell selection is limited to row or column headers with these settings. Other settings, such as selection [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotSelectionSettings/#mode) set to **Row** or **Column**, selection [`type`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotSelectionSettings/#type) set to **Single**, or [`cellSelectionMode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotSelectionSettings/#cellselectionmode) set to **Flow**, are incompatible with [grouping](./grouping.md) in the pivot table.
+The [grouping](./grouping) feature is applied based on the selected row or column headers using the following [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridsettingsmodel#selectionsettings): selection [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotselectionsettings#mode) set to **Cell**, selection [`type`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotselectionsettings#type) set to **Multiple**, and [`cellSelectionMode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotselectionsettings#cellselectionmode) set to **Box** by default. When using the selection and [grouping](./grouping.md) features together, cell selection is limited to row or column headers with these settings. Other settings, such as selection [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotselectionsettings#mode) set to **Row** or **Column**, selection [`type`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotselectionsettings#type) set to **Single**, or [`cellSelectionMode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotselectionsettings#cellselectionmode) set to **Flow**, are incompatible with [grouping](./grouping.md) in the pivot table.
 
 ## Clip Mode
 

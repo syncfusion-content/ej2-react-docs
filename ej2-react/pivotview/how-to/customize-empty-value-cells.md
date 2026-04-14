@@ -14,7 +14,7 @@ When working with pivot table, certain combinations of row and column headers ma
 
 ## Configuration
 
-Use the [`emptyCellsTextContent`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#emptycellstextcontent) property under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#datasourcesettings) in the pivot table to define custom text for empty cells. This string option accepts any text value and applies it consistently across all empty cells in the pivot table.
+Use the [`emptyCellsTextContent`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#emptycellstextcontent) property under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings) in the pivot table to define custom text for empty cells. This string option accepts any text value and applies it consistently across all empty cells in the pivot table.
 
 ### Basic Implementation
 

@@ -19,7 +19,7 @@ The field list can be displayed in two different formats to interact with the pi
 
 ## In-built Field List (Popup)
 
-To enable deferred updates in the pivot table, set the [`allowDeferLayoutUpdate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#allowdeferlayoutupdate) property to **true** in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview/). Note that the defer update option can be controlled only via Field List during runtime.
+To enable deferred updates in the pivot table, set the [`allowDeferLayoutUpdate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#allowdeferlayoutupdate) property to **true** in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default). Note that the defer update option can be controlled only via Field List during runtime.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -40,9 +40,9 @@ To enable deferred updates in the pivot table, set the [`allowDeferLayoutUpdate`
 
 ## Stand-alone Field List (Fixed)
 
-The field list can be rendered in a static position anywhere in the web page layout, functioning as a separate component. To achieve this, set the [`renderMode`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/pivotFieldListModel/#rendermode) property to **Fixed** in [`PivotFieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/).
+The field list can be rendered in a static position anywhere in the web page layout, functioning as a separate component. To achieve this, set the [`renderMode`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/pivotfieldlistmodel#rendermode) property to **Fixed** in [`PivotFieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/index-default).
 
-To enable deferred updates in the static fieldlist, set the [`allowDeferLayoutUpdate`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/pivotFieldListModel/#allowdeferlayoutupdate) property to **true** in [`PivotFieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/). Note that the defer update option can be controlled only via Field List during runtime.
+To enable deferred updates in the static fieldlist, set the [`allowDeferLayoutUpdate`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/pivotfieldlistmodel#allowdeferlayoutupdate) property to **true** in [`PivotFieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/index-default). Note that the defer update option can be controlled only via Field List during runtime.
 
 > To make the field list interact with the pivot table, use the **updateView** and **update** methods to synchronize data source updates between both the field list and pivot table components simultaneously.
 
