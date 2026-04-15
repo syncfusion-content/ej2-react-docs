@@ -1,13 +1,13 @@
-import * as React from 'react';
-export class AggregateRow extends React.Component {
-    render() {
-        const item = this.props;
-        return (
-            <tr>
-                <td />
-                <td />
-                <td>Min: {item.min}</td>
-            </tr>
-        );
-    }
-}
+import React from 'react';
+
+export const AggregateRow = (props) => {
+    const { min } = props;
+
+    return (
+        <tr>
+            <td />
+            <td />
+            <td>{`Min: ${min}`}</td>
+        </tr>
+    );
+};

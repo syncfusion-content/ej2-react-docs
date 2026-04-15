@@ -1,38 +1,41 @@
-import { getValue } from '@syncfusion/ej2-base';
-import { DataManager, Query, ReturnOption,ODataV4Adaptor } from '@syncfusion/ej2-data';
 import * as React from 'react';
+import { useEffect, useState } from 'react';
+import { DataManager, Query, ReturnOption, ODataV4Adaptor } from '@syncfusion/ej2-data';
 import { IOrders } from './orders';
 import { Row } from './rowTemplate';
-import './App.css';
 
-const SERVICE_URI: string = 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/';
+const SERVICE_URL: string =
+  'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/';
 
-export default class App extends React.Component<{}, {}>{
-    constructor(props: object) {
-        super(props);
-        this.state = { items: [] };
-    }
-    componentDidMount() {
-      new DataManager({ url: SERVICE_URI ,adaptor: new ODataV4Adaptor() }).executeQuery(new Query().take(8))
+const App: React.FC = () => {
+    const [items, setItems] = useState<React.ReactNode[]>([]);
+
+    useEffect(() => {
+        new DataManager({
+            url: SERVICE_URL,
+            adaptor: new ODataV4Adaptor(),
+        })
+        .executeQuery(new Query().take(8))
         .then((e: ReturnOption) => {
-            const res = (e.result as IOrders[]).map((row: IOrders, index: number) => (
-                <Row key={row.OrderID} {...row} />
-              ));
-              this.setState({
-                items: res
-              });
+            const rows = (e.result as IOrders[]).map((row: IOrders) => (
+            <Row key={row.OrderID} {...row} />
+            ));
+            setItems(rows);
         });
-     }
+    }, []);
 
-    public render() {
-        return (<table id='datatable' className='e-table'>
-                <thead>
-                    <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th></tr>
-                </thead>
-                <tbody>{ getValue('items', this.state) }</tbody>
-            </table>)
-    }
+    return (
+        <table id="datatable" className="e-table">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer ID</th>
+                    <th>Employee ID</th>
+                </tr>
+            </thead>
+            <tbody>{items}</tbody>
+        </table>
+    );
+};
 
-}
-
-
+export default App;

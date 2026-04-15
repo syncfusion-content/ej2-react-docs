@@ -1,85 +1,116 @@
-
-
-import { getValue } from '@syncfusion/ej2-base';
-import { DataManager, Query, ReturnOption } from '@syncfusion/ej2-data';
 import * as React from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { DataManager, JsonAdaptor, Query, ReturnOption } from '@syncfusion/ej2-data';
 import { data } from './datasource';
 import { Row } from './rowTemplate';
 
-export default class App extends React.Component<{}, {}>{
-    public dataManager: DataManager;
-    public style: { [x: string]: string };
-    public changes: {
-        addedRecords: object[],
-        changedRecords: object[],  
-        deletedRecords: object[]
-    };
-    constructor(props: object) {
-        super(props);
-        this.state = { items: [] };
-        this.style = { class: 'e-form' };
-        this.changes = { changedRecords: [], addedRecords: [], deletedRecords: [] };
-        this.dataManager = new DataManager(data.slice(0, 5));
-        this.dataManager.executeQuery(new Query())
-        .then((e: ReturnOption) => {
-            this.setState({
-            items: (e.result as object[]).map((row: object) => (
-                <Row key={row.OrderID} {...row} />
-            ))
-            });
-        });
-        this.action = this.action.bind(this);
-        this.saveChanges = this.saveChanges.bind(this);
-    }
-
-    public action(event: React.MouseEvent) {
-        let action: string = event.currentTarget.getAttribute('value') as string;
-        action = (action === 'Update' ? 'changed' : action === 'Insert' ? 'added' : 'deleted') + 'Records';
-        const orderid: HTMLInputElement = document.getElementById('OrderID') as HTMLInputElement;
-        const cusid: HTMLInputElement = document.getElementById('CustomerID') as HTMLInputElement;
-        const empid: HTMLInputElement = document.getElementById('EmployeeID') as HTMLInputElement;
-        const rowdata: { OrderID: number, CustomerID: string, EmployeeID: number } = {
-            CustomerID: cusid.value,
-            EmployeeID: +empid.value,
-            OrderID: +orderid.value
-        };
-        if (!rowdata.OrderID) { return; }
-        this.changes[action].push(rowdata);
-        orderid.value = cusid.value = empid.value = '';
-    }
-
-    public saveChanges(): void {
-        this.dataManager.saveChanges(this.changes);
-        this.dataManager.executeQuery(new Query())
-            .then((e: ReturnOption) => {
-                this.setState({
-                    items: (e.result as object[]).map((row: object) => (
-                        <Row key={row.OrderID} {...row} />
-                      ))
-                });
-            });
-        this.changes = { changedRecords: [], addedRecords: [], deletedRecords: [] };
-    }
-
-    public render() {
-        return (<div><div style={this.style}>
-            <input type="number" id='OrderID' placeholder="Order ID" />
-            <input type="text" id="CustomerID" placeholder="Customer ID" />
-            <input type="number" id="EmployeeID" placeholder="Employee ID" />
-            <input type="button" value="Insert" onClick={this.action} />
-            <input type="button" value="Update" onClick={this.action} />
-            <input type="button" value="Remove" onClick={this.action} /></div>
-            <div style={this.style}>
-                <label>Click to Save changes:</label>
-                <input type="button" value="Save Changes" onClick={this.saveChanges} /></div>
-            <div><table id='datatable' className='e-table'>
-                <thead>
-                    <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th></tr>
-                </thead>
-                <tbody>{getValue('items', this.state)}</tbody>
-            </table></div></div>
-        )
-    }
+interface Changes {
+  addedRecords: object[];
+  changedRecords: object[];
+  deletedRecords: object[];
 }
 
+const App: React.FC = () => {
+    const [items, setItems] = useState<React.ReactNode[]>([]);
+    const dataManagerRef = useRef<DataManager | null>(null);
+    const changesRef = useRef<Changes>({
+        addedRecords: [],
+        changedRecords: [],
+        deletedRecords: [],
+    });
 
+    useEffect(() => {
+        const dm = new DataManager({
+            json: data.slice(0, 5),
+            adaptor: new JsonAdaptor(),
+        });
+
+        dataManagerRef.current = dm;
+
+        dm.executeQuery(new Query()).then((e: ReturnOption) => {
+        setItems(
+            (e.result as object[]).map((row: any) => (
+            <Row key={row.OrderID} {...row} />
+            ))
+        );
+        });
+    }, []);
+
+    const action = (e: React.MouseEvent<HTMLInputElement>) => {
+        let actionType =
+        e.currentTarget.value === 'Update'
+            ? 'changedRecords'
+            : e.currentTarget.value === 'Insert'
+            ? 'addedRecords'
+            : 'deletedRecords';
+
+        const orderId = (document.getElementById('OrderID') as HTMLInputElement).value;
+        const customerId = (document.getElementById('CustomerID') as HTMLInputElement).value;
+        const employeeId = (document.getElementById('EmployeeID') as HTMLInputElement).value;
+
+        if (!orderId) return;
+
+        const rowData = {
+        OrderID: +orderId,
+        CustomerID: customerId,
+        EmployeeID: +employeeId,
+        };
+
+        changesRef.current[actionType].push(rowData);
+
+        (document.getElementById('OrderID') as HTMLInputElement).value = '';
+        (document.getElementById('CustomerID') as HTMLInputElement).value = '';
+        (document.getElementById('EmployeeID') as HTMLInputElement).value = '';
+    };
+
+    const saveChanges = () => {
+        if (!dataManagerRef.current) return;
+
+        dataManagerRef.current.saveChanges(changesRef.current, 'OrderID');
+
+        dataManagerRef.current.executeQuery(new Query()).then((e: ReturnOption) => {
+        setItems(
+            (e.result as object[]).map((row: any) => (
+            <Row key={row.OrderID} {...row} />
+            ))
+        );
+        });
+
+        changesRef.current = {
+            addedRecords: [],
+            changedRecords: [],
+            deletedRecords: [],
+        };
+    };
+
+    return (
+        <div>
+        <div className="e-form">
+            <input type="number" id="OrderID" placeholder="Order ID" />
+            <input type="text" id="CustomerID" placeholder="Customer ID" />
+            <input type="number" id="EmployeeID" placeholder="Employee ID" />
+            <input type="button" id="Insert" value="Insert" onClick={action} />
+            <input type="button" id="Update" value="Update" onClick={action} />
+            <input type="button" id="Remove" value="Remove" onClick={action} />
+        </div>
+
+        <div className="e-form">
+            <label>Click to Save changes:</label>
+            <input type="button" id="Save" value="Save Changes" onClick={saveChanges} />
+        </div>
+
+        <table id="datatable" className="e-table">
+            <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Customer ID</th>
+                <th>Employee ID</th>
+            </tr>
+            </thead>
+            <tbody>{items}</tbody>
+        </table>
+        </div>
+    );
+};
+
+export default App;

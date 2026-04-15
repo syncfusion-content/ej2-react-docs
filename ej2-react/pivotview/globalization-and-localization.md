@@ -232,15 +232,16 @@ PercentageOfColumnTotal | % of Column Total
 NotEquals | Not Equals
 AllValues | All Values
 conditionalFormatting | Conditional Formatting
-apply | APPLY
+applyToGrandTotal | Apply to Grand Total
+apply | Apply
 condition | Add Condition
 formatLabel | Format
 valueFieldSettings | Value field settings
-baseField | Base field :
-baseItem | Base item :
-summarizeValuesBy | Summarize values by :
+baseField | Base field
+baseItem | Base item
+summarizeValuesBy | Summarize values by
 sourceName | Field name :
-sourceCaption | Field caption :
+sourceCaption | Field caption
 example | e.g:
 editorDataLimitMsg |  more items. Search to refine further.
 details | Details
@@ -281,9 +282,10 @@ fieldList | Show fieldlist
 grid | Show table
 toolbarFormatting | Conditional formatting
 chart | Chart
+columnChart | Column
 reportMsg | Please enter valid report name!!!
 reportList | Report list
-removeConfirm | Are you sure want to delete this report?
+removeConfirm | Are you sure you want to delete this report?
 emptyReport | No reports found!!
 bar | Bar
 line | Line
@@ -293,7 +295,7 @@ polar | Polar
 of | of
 emptyFormat | No format found!!!
 emptyInput | Enter a value
-newReportConfirm | Want to save changes to report?
+newReportConfirm | Do you want to save the changes to this report?
 emptyReportName | Enter a report name
 qtr | Qtr
 null | null
@@ -319,7 +321,7 @@ false | False
 decimalPlaces | Decimal Places
 numberFormat | Number Formatting
 memberType | Field Type
-formatString | Format String
+formatString | Format
 expressionField | Expression
 customFormat | Enter custom format string
 selectedHierarchy | Parent Hierarchy
@@ -330,13 +332,13 @@ Measure | Measure
 Dimension | Dimension
 Standard | Standard
 blank | (Blank)
-fieldTooltip | Drag and drop fields to create an expression. And, if you want to edit the existing the calculated fields! Then you can achieve it by simply selecting the field under 'Calculated Members'.
+fieldTooltip | Drag and drop fields to create an expression. And, if you want to edit the existing calculated fields! Then you can achieve it by simply selecting the field under 'Calculated Members'.
 QuarterYear | Quarter Year
 fieldTitle | Field Name
 drillError | Cannot show the raw items of calculated fields.
 caption | Field Caption
 copy | Copy
-defaultReport | Default report
+defaultReport | Sample Report
 customFormatString | Custom Format
 invalidFormat | Invalid Format.
 group | Group
@@ -362,11 +364,11 @@ spline | Spline
 stackingcolumn100 | 100% Stacked Column
 stackingbar100 | 100% Stacked Bar
 stackingarea100 | 100% Stacked Area
-bubble | bubble
+bubble | Bubble
 pareto | Pareto
 radar | Radar
 chartTypeSettings | Chart type settings
-multipleAxes | Multiple Axes
+multipleAxes | Multiple Axis
 sortAscending | Sort ascending order
 sortDescending | Sort descending order
 sortNone | Sort data order
@@ -408,6 +410,8 @@ goToLastPage | Go to last page
 combined | Combined
 subTotalPosition | Subtotals position
 auto | Auto
+loading | Loading...
+add | Add
 
 The following list of properties and its values are used in the pivot field list.
 
@@ -422,7 +426,7 @@ dropValPrompt | Drop value here
 addPrompt | Add field here
 adaptiveFieldHeader | Choose field
 centerHeader | Drag fields between axes below:
-add | add
+add | Add
 drag | Drag
 filter | Filter
 filtered | Filtered
@@ -517,13 +521,13 @@ Days | Days
 Hours | Hours
 Minutes | Minutes
 Seconds | Seconds
-apply | APPLY
+apply | Apply
 valueFieldSettings | Value field settings
 sourceName | Field name :
-sourceCaption | Field caption :
-summarizeValuesBy | Summarize values by :
-baseField | Base field :
-baseItem | Base item :
+sourceCaption | Field caption
+summarizeValuesBy | Summarize values by
+baseField | Base field
+baseItem | Base item
 example | e.g:
 editorDataLimitMsg |  more items. Search to refine further.
 deferLayoutUpdate | Defer Layout Update
@@ -534,7 +538,7 @@ fieldDropErrorAction | The field you are moving cannot be placed in that area of
 MoreOption | More...
 memberType | Field Type
 selectedHierarchy | Parent Hierarchy
-formatString | Format String
+formatString | Format
 expressionField | Expression
 olapDropText | Example: [Measures].[Order Quantity] + ([Measures].[Order Quantity] * 0.10)
 customFormat | Enter custom format string
@@ -545,7 +549,7 @@ Currency | Currency
 Percent | Percent
 Custom | Custom
 blank | (Blank)
-fieldTooltip | Drag and drop fields to create an expression. And, if you want to edit the existing the calculated fields! You can achieve it by simply selecting the field under 'Calculated Members'.
+fieldTooltip | Drag and drop fields to create an expression. And, if you want to edit the existing calculated fields! You can achieve it by simply selecting the field under 'Calculated Members'.
 fieldTitle | Field Name
 QuarterYear | Quarter Year
 caption | Field Caption
@@ -562,6 +566,8 @@ of | of
 removeCalculatedField | Are you sure you want to delete this calculated field?
 yes | Yes
 no | No
+qtr | Qtr
+grandTotal | Grand Total
 None | None
 
 N> To access the most recent localization keywords for the Pivot Table and Pivot Field List components in different languages, visit the [GitHub repository](https://github.com/syncfusion/ej2-locale).

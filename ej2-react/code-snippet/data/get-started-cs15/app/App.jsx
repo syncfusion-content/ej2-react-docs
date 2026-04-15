@@ -1,55 +1,65 @@
-import { getValue } from '@syncfusion/ej2-base';
-import { DataManager, Query } from '@syncfusion/ej2-data';
-import * as React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { DataManager, JsonAdaptor, Query } from '@syncfusion/ej2-data';
 import { data } from './datasource';
 import { Row } from './rowTemplate';
-export default class App extends React.Component {
-    dataManager;
-    style;
-    constructor(props) {
-        super(props);
-        this.state = { items: [] };
-        this.style = { class: 'e-form' };
-        this.dataManager = new DataManager(data.slice(0, 5));
-        this.dataManager.executeQuery(new Query())
-        .then((e) => {
-            this.setState({
-                items: e.result.map((row,index) => (
-                    <Row key={index} {...row} />
-                ))
-            });
-        });
-        this.removeRecord = this.removeRecord.bind(this);
-    }
-    removeRecord() {
-        const orderid = document.getElementById('OrderID');
-        const rowdata = {
-            OrderID: +orderid.value,
-        };
-        if (!rowdata.OrderID) {
-            return;
-        }
-        this.dataManager.remove('OrderID', rowdata);
-        this.dataManager.executeQuery(new Query())
-            .then((e) => {
-            this.setState({
-                items: e.result.map((row,index) => (
-                    <Row key={index} {...row} />
-                ))
-            });
-        });
-    }
-    render() {
-        return (<div><div style={this.style}>
-            <input type="number" id='OrderID' placeholder="Order ID"/>
-            <input type="button" value="Remove" id="manipulate" onClick={this.removeRecord}/></div>
-            <table id='datatable' className='e-table'>
-                <thead>
-                    <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th></tr>
-                </thead>
-                <tbody>{getValue('items', this.state)}</tbody>
-            </table>
-            </div>
-        );
-    }
-}
+
+const App = () => {
+  const [items, setItems] = useState([]);
+  const dataManagerRef = useRef(null);
+
+  useEffect(() => {
+    const dm = new DataManager({
+      json: data.slice(0, 5),
+      adaptor: new JsonAdaptor(),
+    });
+
+    dataManagerRef.current = dm;
+
+    dm.executeQuery(new Query()).then((e) => {
+      setItems(
+        e.result.map((row, index) => (
+          <Row key={index} {...row} />
+        ))
+      );
+    });
+  }, []);
+
+  const removeRecord = () => {
+    if (!dataManagerRef.current) return;
+
+    const orderId = document.getElementById('OrderID').value;
+    if (!orderId) return;
+
+    dataManagerRef.current.remove('OrderID', { OrderID: +orderId });
+
+    dataManagerRef.current.executeQuery(new Query()).then((e) => {
+      setItems(
+        e.result.map((row, index) => (
+          <Row key={index} {...row} />
+        ))
+      );
+    });
+  };
+
+  return (
+    <div>
+      <div className="e-form">
+        <input type="number" id="OrderID" placeholder="Order ID" />
+        <input type="button" id="Remove" value="Remove" onClick={removeRecord} />
+      </div>
+
+      <table id="datatable" className="e-table">
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Customer ID</th>
+            <th>Employee ID</th>
+          </tr>
+        </thead>
+        <tbody>{items}</tbody>
+      </table>
+    </div>
+  );
+};
+
+export default App;
