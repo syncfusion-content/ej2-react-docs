@@ -22,13 +22,13 @@ Steps to integrate custom headers into DataManager requests:
 3. Trigger the [executeQuery](https://ej2.syncfusion.com/documentation/api/data/dataManager/executequery) method to send the request to the server with the custom headers.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% raw %}
 
-import React from 'react';
-import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';
+import React, { useEffect, useState } from 'react';
+import { DataManager, ODataV4Adaptor, Query } from '@syncfusion/ej2-data';
 
-function Row({ item }) {
+const Row = ({ item }) => {
   return (
     <tr>
       <td>{item.OrderID}</td>
@@ -36,55 +36,53 @@ function Row({ item }) {
       <td>{item.EmployeeID}</td>
     </tr>
   );
-}
-const SERVICE_URI = 'https://services.syncfusion.com/react/production/api/Orders';
+};
 
-export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { items: [] };
-  }
-  componentDidMount() {
+const SERVICE_URL = 'https://services.syncfusion.com/react/production/api/Orders';
+
+const App = () => {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
     const dataManager = new DataManager({
-      url: SERVICE_URI,
+      url: SERVICE_URL,
       adaptor: new ODataV4Adaptor(),
       headers: [{ 'syncfusion-data-manager': 'true' }],
     });
     dataManager.executeQuery(new Query()).then((e) => {
       const results = e && e.result ? e.result : [];
-      this.setState({ items: results });
+      setItems(results);
     });
-  }
-  render() {
-    const { items } = this.state;
-    return (
-      <div>
-        <table id="datatable" className="e-table">
-          <thead>
-            <tr>
-              <th>Order ID</th>
-              <th>Customer ID</th>
-              <th>Employee ID</th>
-            </tr>
-          </thead>
-          <tbody>
-            {items.map((row) => (
-              <Row key={row.OrderID} item={row} />
-            ))}
-          </tbody>
-        </table>
-      </div>
-    );
-  }
-}
+  }, []);
+
+  return (
+    <table id="datatable" className="e-table">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Customer ID</th>
+          <th>Employee ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        {items.map((row) => (
+          <Row key={row.OrderID} item={row} />
+        ))}
+      </tbody>
+    </table>
+  );
+};
+
+export default App;
 
 {% endraw %}
 {% endhighlight %}
 
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% raw %}
 
 import * as React from 'react';
+import { useEffect, useState } from 'react';
 import { DataManager, ODataV4Adaptor, Query } from '@syncfusion/ej2-data';
 
 interface Order {
@@ -92,10 +90,6 @@ interface Order {
   CustomerID?: string;
   EmployeeID?: number;
   [key: string]: any;
-}
-interface AppState {
-  items: Order[];
-  error?: string | null;
 }
 function Row({ item }: { item: Order }) {
   return (
@@ -106,44 +100,43 @@ function Row({ item }: { item: Order }) {
     </tr>
   );
 }
-const SERVICE_URI: string = 'https://services.syncfusion.com/react/production/api/Orders';
-export default class App extends React.Component<{}, AppState>{
-  constructor(props: {}) {
-    super(props);
-    this.state = { items: [] };
-  }
-  componentDidMount() {
-    const dataManager: DataManager = new DataManager({ 
-      url: SERVICE_URI,
+const SERVICE_URL: string = 'https://services.syncfusion.com/react/production/api/Orders';
+
+const App: React.FC = () => {
+  const [items, setItems] = useState<Order[]>([]);
+
+  useEffect(() => {
+    const dataManager: DataManager = new DataManager({
+      url: SERVICE_URL,
       adaptor: new ODataV4Adaptor(),
-      headers: [{ 'syncfusion-data-manager': 'true' }], 
+      headers: [{ 'syncfusion-data-manager': 'true' }],
     });
-    dataManager.executeQuery(new Query())
-    .then((e: any) => {
-      const results: Order[] = (e && e.result) ? e.result : [];
-      this.setState({ items: results });
+
+    dataManager.executeQuery(new Query()).then((e: any) => {
+      const results: Order[] = e && e.result ? e.result : [];
+      setItems(results);
     });
-  }
-  public render() {
-    const { items } = this.state;
-    return (
-      <table id="datatable" className="e-table">
-        <thead>
-          <tr>
-            <th>Order ID</th>
-            <th>Customer ID</th>
-            <th>Employee ID</th>
-          </tr>
-        </thead>
-        <tbody>
-          {items.map((row) => (
-            <Row key={row.OrderID} item={row} />
-          ))}
-        </tbody>
-      </table>
-    );
-  }
-}
+  }, []);
+
+  return (
+    <table id="datatable" className="e-table">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Customer ID</th>
+          <th>Employee ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        {items.map((row) => (
+          <Row key={row.OrderID} item={row} />
+        ))}
+      </tbody>
+    </table>
+  );
+};
+
+export default App;
 
 {% endraw %}
 {% endhighlight %}

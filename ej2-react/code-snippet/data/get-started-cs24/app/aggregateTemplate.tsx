@@ -1,17 +1,14 @@
-import { Aggregates } from '@syncfusion/ej2-data';
 import * as React from 'react';
+import { Aggregates } from '@syncfusion/ej2-data';
 
-export class AggregateRow extends React.Component<{ }, {}> {
-  public render() {
-    const item: Aggregates = this.props as Aggregates;
-    return (
-      <tr>
-        <td/>
-        <td/>
-        <td>{`Min: ${item.min}`}</td>
-      </tr>
-    );
-  }
-}
+export const AggregateRow: React.FC<Aggregates> = ({ min }) => {
+  return (
+    <tr>
+      <td />
+      <td />
+      <td>{`Min: ${min}`}</td>
+    </tr>
+  );
+};
 
 
