@@ -107,10 +107,10 @@ ReactDOM.render(<App />, document.getElementById('speech-to-text'));
 Import the SpeechToText component required CSS references as follows in `src/App.css`.
 
 ```css
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-react-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-react-inputs/styles/tailwind3.css";
 ```
 ## Run the application
 
@@ -136,11 +136,11 @@ The following example shows a basic SpeechToText component.
 
  {% previewsample "page.domainurl/code-snippet/speech-to-text/getting-started-cs1/index" %}
 
-> **Important:** The [SpeechToText](../api/speech-to-text/) component requires an internet connection and a browser that supports [SpeechRecognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) from the Web Speech API. Speech recognition may request microphone permissions from the user.
+> **Important:** The [SpeechToText](../api/speech-to-text) component requires an internet connection and a browser that supports [SpeechRecognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) from the Web Speech API. Speech recognition may request microphone permissions from the user.
 
 ## Adding Button Content
 
-Customize the button text using the [buttonSettings](../api/speech-to-text/#buttonSettings) property. Use the [content](../api/speech-to-text/buttonSettingsModel/#content) property to display the start listening text and [stopContent](../api/speech-to-text/buttonSettingsModel/#stopContent) for the stop listening text.
+Customize the button text using the [buttonSettings](../api/speech-to-text#buttonSettings) property. Use the [content](../api/speech-to-text/buttonSettingsModel#content) property to display the start listening text and [stopContent](../api/speech-to-text/buttonSettingsModel#stopContent) for the stop listening text.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

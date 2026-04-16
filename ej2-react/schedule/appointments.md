@@ -129,7 +129,7 @@ The following example illustrates creating a recurring event using a specific re
 
 To exclude specific instances from a recurrence series, add the exception dates to the [`recurrenceException`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#recurrenceexception) field in ISO date time format without hyphens.
 
-For example, 22nd February 2018 can be represented as 20180222. Also, the time part being represented in UTC format needs to add "Z" after the time portion with no space. "07:30:00 UTC" is therefore represented as "073000Z".
+For example, 22nd February 2026 can be represented as 20260222. Also, the time part being represented in UTC format needs to add "Z" after the time portion with no space. "07:30:00 UTC" is therefore represented as "073000Z".
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
