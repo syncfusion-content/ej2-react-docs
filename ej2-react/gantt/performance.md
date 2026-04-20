@@ -3,7 +3,7 @@ layout: post
 title: Performance tips for ##Platform_Name## Gantt control | Syncfusion
 description: Checkout and learn here all about how to improve the loading performance of ##Platform_Name## Gantt control of Syncfusion Essential JS 2 and more.
 platform: ej2-react
-control: Gantt permformance
+control: Gantt performance
 publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##

@@ -30,5 +30,5 @@ The following code example shows how to open add and dialog on separate button c
 
 ## See also
 - [How to configure task editing?](https://ej2.syncfusion.com/react/documentation/gantt/managing-tasks/task-bar-editing)
-- [How to manage task dependencies?](https://ej2.syncfusion.com/react/documentation/gantt/taskdependency)
+- [How to manage task dependencies?](https://ej2.syncfusion.com/react/documentation/gantt/task-dependency)
 - [How to configure critical path?](https://ej2.syncfusion.com/react/documentation/gantt/critical-path)

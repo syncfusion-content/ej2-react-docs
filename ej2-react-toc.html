@@ -854,12 +854,14 @@ DataManager
 <li><a href="/ej2-react/data/cache">Cache</a></li>
 <li><a href="/ej2-react/data/querying">Querying</a></li>
 <li><a href="/ej2-react/data/manipulation">CRUD Data operations</a></li>
+<li><a href="/ej2-react/data/state-persistence">State Persistence</a></li>
 <li><a href="/ej2-react/data/applying-middleware-logic">Applying Middleware Logic</a></li>
 <li>How To
     <ul>
         <li><a href="/ej2-react/data/how-to/working-in-offline-mode">Working in offline mode</a></li>
         <li><a href="/ej2-react/data/how-to/sending-additional-parameters">Sending additional parameters to server</a></li>
         <li><a href="/ej2-react/data/how-to/adding-custom-headers">Adding custom headers</a></li>
+        <li><a href="/ej2-react/data/how-to/error-handling">Deferred execution and error handling</a></li>
     </ul>
 </li> 
 </ul>
@@ -1043,12 +1045,6 @@ Diagram
 </li>
 <li><a href="/ej2-react/diagram/visio">Visio Integration</a></li>
 <li><a href="/ej2-react/diagram/umlsequencediagram">UML Sequence Diagram</a></li>
-<li><a href="/ej2-react/diagram/collaborative-editing/collaborative-editing">Collaborative Editing</a>
-        <ul>
-        <li><a href="/ej2-react/diagram/collaborative-editing/collaborative-editing-hub">SignalR Hub Services in ASP.NET Core</a></li>
-        <li><a href="/ej2-react/diagram/collaborative-editing/react-app-collaborative-editing">SignalR Hub Configuration in React</a></li>
-        </ul>
-    </li>
 <li><a href="/ej2-react/diagram/accessibility">Accessibility</a></li>
 <li><a href="/ej2-react/diagram/commands">Commands</a></li>
 <li><a href="/ej2-react/diagram/undo-redo">Undo and Redo</a></li>
@@ -1325,8 +1321,11 @@ Form Validator
                 </li>
             </ul>
         </li>
-        <li><a href="/ej2-react/gantt/scrolling">Scrolling</a></li>
-        <li><a href="/ej2-react/gantt/virtual-scroll">Virtual Scrolling</a></li>
+        <li><a href="/ej2-react/gantt/scrolling/scrolling">Scrolling</a>
+            <ul>
+                <li><a href="/ej2-react/gantt/scrolling/virtual-scrolling">Virtual Scrolling</a></li>
+            </ul>
+        </li>
         <li><a href="/ej2-react/gantt/resources">Resources in Project View</a>
             <ul>
                 <li><a href="/ej2-react/gantt/work">Work</a></li>
@@ -1355,11 +1354,10 @@ Form Validator
             <ul>
                 <li><a href="/ej2-react/gantt/excel-export/excel-export">Excel Export</a>
                     <ul>
-                        <li><a href="/ej2-react/gantt/excel-export/custom-data-source">Custom Data Source</a></li>
-                        <li><a href="/ej2-react/gantt/excel-export/multiple-gantt-exporting">Multiple Gantt Exporting</a></li>
+                        <li><a href="/ej2-react/gantt/excel-export/excel-export-options">Excel Export Options</a></li>
                     </ul>
                 </li>
-                <li><a href="/ej2-react/gantt/pdf-export/pdf-export">Pdf Export</a>
+                <li><a href="/ej2-react/gantt/pdf-export/pdf-export">PDF Export</a>
                     <ul>
                         <li><a href="/ej2-react/gantt/pdf-export/header-and-footer">Header and Footer</a></li>
                         <li><a href="/ej2-react/gantt/pdf-export/customize-pdf-export">Customize PDF Export</a></li>
@@ -1665,7 +1663,7 @@ Image Editor
         <li><a href="/ej2-react/inline-ai-assist/response-settings">Response Actions</a></li>
         <li><a href="/ej2-react/inline-ai-assist/inline-toolbar">Inline Toolbar Configuration</a></li>
         <li><a href="/ej2-react/inline-ai-assist/templates">Template Customization</a></li>
-        <li><a href="/ej2-react/inline-ai-assist/appearance.md">Appearance and Styling</a></li>
+        <li><a href="/ej2-react/inline-ai-assist/appearance">Appearance and Styling</a></li>
         <li><a href="/ej2-react/inline-ai-assist/globalization">Globalization</a></li>
         <li><a href="/ej2-react/inline-ai-assist/methods">Methods</a></li>
         <li><a href="/ej2-react/inline-ai-assist/events">Events</a></li>
@@ -3181,7 +3179,7 @@ Uploader
 						<li><a href="/ej2-react/release-notes/33.1.46">33.1.46</a></li>
 						<li><a href="/ej2-react/release-notes/33.1.45">33.1.45</a></li>
 					</ul>
-				</li>
+				</li><li><a href="/ej2-react/release-notes/33.2.3">33.2.3 Service Pack Release</a></li>
 				<li><a href="/ej2-react/release-notes/33.1.44">33.1.44 Main Release</a></li>
 			</ul>
 		</li>

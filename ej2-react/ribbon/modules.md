@@ -33,6 +33,7 @@ These modules should be injected into the Ribbon using the `Inject` directive.
 {% highlight ts tabtitle="index.jsx" %}
 
 import { RibbonFileMenu, RibbonColorPicker, Inject } from "@syncfusion/ej2-react-ribbon";
+
 const fileMenuOptions = { visible: true, menuItems: fileOptions };
 
 <RibbonComponent id="ribbon" fileMenu={fileMenuOptions}>

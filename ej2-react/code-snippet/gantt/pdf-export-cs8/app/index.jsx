@@ -1,38 +1,60 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, Inject, Toolbar, PdfExport, Selection,Column, ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-react-gantt';
-import { taskData } from './datasource';
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Toolbar, PdfExport, Selection } from '@syncfusion/ej2-react-gantt';
+import { data } from './datasource';
+
 function App() {
+
+    let ganttInstance = null;
+
     const taskFields = {
         id: 'TaskId',
         name: 'TaskName',
         startDate: 'StartDate',
         duration: 'Duration',
         progress: 'Progress',
-        parentID: 'ParentId',
+        parentID: 'ParentId'
     };
-    const toolbarOptions = ['PdfExport'];
-    let ganttObj;
+
+    const toolbar = ['PdfExport'];
+
     function toolbarClick(args) {
-        ganttObj.pdfExport();
+        if (args.item.id === 'ganttDefault_pdfexport' && ganttInstance) {
+            ganttInstance.pdfExport();
+        }
     }
 
     function beforePdfExport() {
-        if (ganttObj) {
-            const cols = ganttObj.treeGrid.columns;
-            cols[3].visible = true;
-            cols[2].visible = false;
+        if (ganttInstance) {
+            ganttInstance.treeGrid.columns[2].visible = false;
+            ganttInstance.treeGrid.columns[3].visible = true;
         }
-    };
-    return <GanttComponent id='root' dataSource={taskData} beforePdfExport={beforePdfExport} taskFields={taskFields} toolbar={toolbarOptions} toolbarClick={toolbarClick} allowPdfExport={true} height='400px' ref={gantt => ganttObj = gantt}>
-        <ColumnsDirective>
-                    <ColumnDirective field='TaskId' width='100'/>
-                    <ColumnDirective field='TaskName' headerText='Task Name'/>
-                    <ColumnDirective field='StartDate'/>
-                    <ColumnDirective field='Duration' visible={false}/>
-                    <ColumnDirective field='Progress'/>
-                </ColumnsDirective>
-            <Inject services={[Toolbar, PdfExport, Selection]}/>
+    }
+
+    return (
+        <GanttComponent
+            ref={(g) => ganttInstance = g}
+            id="ganttDefault"
+            height="430px"
+            dataSource={data}
+            taskFields={taskFields}
+            toolbar={toolbar}
+            toolbarClick={toolbarClick}
+            beforePdfExport={beforePdfExport}
+            allowPdfExport={true}
+            treeColumnIndex={1}
+        >
+            <ColumnsDirective>
+                <ColumnDirective field="TaskId" headerText="Task ID" textAlign="Left" width="100" />
+                <ColumnDirective field="TaskName" headerText="Task Name" width="150" />
+                <ColumnDirective field="StartDate" headerText="StartDate" width="150" />
+                <ColumnDirective field="Duration" headerText="Duration" width="150" visible={false} />
+                <ColumnDirective field="Progress" headerText="Progress" width="150" />
+            </ColumnsDirective>
+
+            <Inject services={[Toolbar, PdfExport, Selection]} />
         </GanttComponent>
-};
+    );
+}
+
 ReactDOM.render(<App />, document.getElementById('root'));

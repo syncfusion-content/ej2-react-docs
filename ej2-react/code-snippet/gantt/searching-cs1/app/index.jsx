@@ -1,8 +1,9 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, Inject, Filter, Toolbar} from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, Toolbar, Inject, Filter } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-function App(){
+
+function App() {
   const taskFields = {
     id: 'TaskID',
     name: 'TaskName',
@@ -11,10 +12,23 @@ function App(){
     progress: 'Progress',
     parentID: 'ParentID'
   };
- const toolbarOptions = ['Search'];
-    return <GanttComponent dataSource={data} taskFields={taskFields}
-         allowFiltering={true} toolbar={toolbarOptions} height = '450px'>
-            <Inject services={[Filter, Toolbar]} />
-        </GanttComponent>
-    };
+
+  const splitterSettings = {
+    columnIndex: 3
+  };
+
+  const toolbar = ['Search'];
+
+  return (
+    <GanttComponent
+      dataSource={data}
+      taskFields={taskFields}
+      splitterSettings={splitterSettings}
+      toolbar={toolbar}
+      height="370px">
+      <Inject services={[Filter, Toolbar]} />
+    </GanttComponent>
+  );
+}
+
 ReactDOM.render(<App />, document.getElementById('root'));

@@ -113,6 +113,6 @@ holidays: [
 This code styles holidays with distinct colors and labels, enhancing timeline readability.
 
 ## See Also
-- [How to configure event markers?](https://ej2.syncfusion.com/react/documentation/gantt/eventmarkers)
-- [How to manage task dependencies?](https://ej2.syncfusion.com/react/documentation/gantt/taskdependency)
+- [How to configure event markers?](https://ej2.syncfusion.com/react/documentation/gantt/event-markers)
+- [How to manage task dependencies?](https://ej2.syncfusion.com/react/documentation/gantt/task-dependency)
 - [How to enable critical path analysis?](https://ej2.syncfusion.com/react/documentation/gantt/critical-path)

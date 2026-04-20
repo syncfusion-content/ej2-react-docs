@@ -1,10 +1,7 @@
-
-
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Toolbar, PdfExport, Selection, PdfQueryCellInfoEventArgs } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Toolbar, PdfExport, Selection } from '@syncfusion/ej2-react-gantt';
+import { base64Data, editingResources } from './datasource';
 
 function App() {
     const taskFields = {
@@ -31,7 +28,7 @@ function App() {
         if (args.data.ganttProperties.resourceNames) {
             args.labelSettings.rightLabel.value = args.data.ganttProperties.resourceNames;
             args.labelSettings.rightLabel.image = [{
-                base64: (args).data.taskData.resourcesImage, width: 20, height: 20
+                base64: args.data.taskData.resourcesImage, width: 20, height: 20
             }]
 
         }
@@ -43,23 +40,35 @@ function App() {
     const templateLeft = LeftLabelTemplate;
     const RightLabelTemplate = (props) => {
         if (props.ganttProperties.resourceInfo) {
-            let resources = props.ganttProperties.resourceInfo;
-            let out = [];
-            for (let index = 0; index < resources.length; index++) {
-                let src = 'https://ej2.syncfusion.com/react/demos/src/gantt/images/' + resources[index].resourceName + '.png';
-                let img = <img src={src} height='40px' />;
-                let span = <span style={{ marginLeft: '5px', marginRight: '5px' }}>{resources[index].resourceName}</span>;
-                out.push(img, span);
-            }
-            return (<div>{out}</div>);
-        } else {
-            return <div></div>
+            const resources = props.ganttProperties.resourceInfo;
+            return (
+                <div>
+                    {resources.map((resource, index) => {
+                        const src =
+                            'https://ej2.syncfusion.com/react/demos/src/gantt/images/' +
+                            resource.resourceName + '.png';
+
+                        return (
+                            <span
+                                key={resource.resourceId}
+                                style={{ marginLeft: '5px', marginRight: '5px', display: 'inline-flex', alignItems: 'center' }}
+                            >
+                                <img src={src} height="40px" />
+                                <span style={{ marginLeft: '5px' }}>
+                                    {resource.resourceName}
+                                </span>
+                            </span>
+                        );
+                    })}
+                </div>
+            );
         }
+        return <div />;
     };
     const templateRight = RightLabelTemplate;
     const labelSettings = {
-        leftLabel: templateLeft.bind(this),
-        rightLabel: templateRight.bind(this),
+        leftLabel: templateLeft,
+        rightLabel: templateRight,
         taskLabel: '${Progress}%'
     };
     const splitterSettings = {
@@ -71,7 +80,8 @@ function App() {
     };
     const projectStartDate = new Date('03/24/2019');
     const projectEndDate = new Date('04/30/2019');
-    return <GanttComponent dataSource={base64Data} rowHeight={60} taskFields={taskFields} toolbar={toolbarOptions} pdfQueryTaskbarInfo={pdfQueryTaskbarInfo} toolbarClick={toolbarClick} allowPdfExport={true} ref={gantt => ganttChart = gantt}
+
+    return <GanttComponent dataSource={base64Data} rowHeight={60} taskFields={taskFields} pdfQueryTaskbarInfo={pdfQueryTaskbarInfo} toolbar={toolbarOptions} toolbarClick={toolbarClick} allowPdfExport={true} ref={gantt => ganttChart = gantt}
         splitterSettings={splitterSettings} labelSettings={labelSettings} resourceFields={resourceFields} resources={editingResources} projectStartDate={projectStartDate} projectEndDate={projectEndDate} height='450px'>
         <ColumnsDirective>
             <ColumnDirective field='TaskID'></ColumnDirective>

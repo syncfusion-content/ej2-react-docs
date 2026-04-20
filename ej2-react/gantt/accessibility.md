@@ -17,10 +17,10 @@ The React Gantt Chart component is designed with comprehensive accessibility sup
 The accessibility compliance for the Gantt Chart component provides detailed insight into supported features and current limitations. Understanding these compliance levels helps developers implement appropriate accessibility measures and identify areas requiring additional attention.
 
 <style>
-    .post .post-content img {
-        display: inline-block;
-        margin: 0.5em 0;
-    }
+  .post .post-content img {
+      display: inline-block;
+      margin: 0.5em 0;
+  }
 </style>
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
 
@@ -182,9 +182,9 @@ ReactDOM.render(<App />, document.getElementById('root'));
 ```
 ## Mobile and touch accessibility
 
-The Gantt Chart component provides comprehensive accessibility support for mobile and touch devices through the [enableAdaptiveUI](https://ej2.syncfusion.com/React/documentation/api/gantt#enableadaptiveui) property, ensuring individuals with disabilities can effectively interact with the component across all device types.
+The Gantt Chart component provides comprehensive accessibility support for mobile and touch devices through the [enableAdaptiveUI](https://ej2.syncfusion.com/react/documentation/api/gantt#enableadaptiveui) property, ensuring individuals with disabilities can effectively interact with the component across all device types.
 
-Touch gesture accessibility includes single tap equivalent to click for task selection and activation, double tap to open task editing dialog or activate focused elements, long press to open context menu with full keyboard navigation support, swipe gestures for horizontal scrolling through timeline with appropriate announcements, and pinch to zoom for timeline scaling with accessibility feedback. These gestures are optimized for assistive touch technologies and provide haptic feedback where supported by the device platform.
+Touch gesture accessibility includes single tap equivalent to click for task selection and activation, double tap to open task editing dialog or activate focused elements, long press to open context menu with full keyboard navigation support, swipe gestures for horizontal scrolling through timeline with appropriate announcements, and pinch to zoom for timeline scaling with accessibility feedback. These gestures are optimized for assistive touch technologies and provide feedback where supported by the device platform.
 
 ## Testing accessibility
 

@@ -2,17 +2,17 @@
 layout: post
 title: Searching in React Gantt Chart Component | Syncfusion
 description: Learn here all about Searching in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
-control: Searching 
 platform: ej2-react
+control: Searching 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 # Searching in React Gantt Chart Component
 
-You can search for records in the Gantt Chart component by using the [search](https://ej2.syncfusion.com/react/documentation/api/gantt#search) method with search key as a parameter. The Gantt Chart component provides an option to integrate the search text box in the toolbar by adding the search item to the [toolbar](https://ej2.syncfusion.com/react/documentation/api/gantt#toolbar) property.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component allows quick filtering of records based on search input, improving access to relevant data in large datasets.
 
-To search records, inject the `Filter` module into the Gantt Chart component.
+To enable search functionality, include the **Search** item in the [toolbar](https://ej2.syncfusion.com/react/documentation/api/gantt#toolbar) configuration and inject both `Filter` service and `Toolbar` service into the component's `providers` array.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -30,8 +30,19 @@ To search records, inject the `Filter` module into the Gantt Chart component.
 
 ## Initial search
 
-In the Gantt Chart component, you can load a task with some search criteria by using the [searchSettings](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings/) property.
-To apply a search at initial rendering, set the value for [fields](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings#fields), [operator](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings#operator), [key](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings#key), and [ignoreCase](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings#ignorecase) in the [searchSettings](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings/) property.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt component allows applying search criteria during initial load using the [searchSettings](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings) property.  
+
+To configure this feature, define the following properties:
+
+| Property       | Description                                                   |
+| -------------- | ------------------------------------------------------------- |
+| `fields`       | Defines the fields where the search should be applied.        |
+| `operator`     | Sets the condition for matching (e.g., `contains`, `equals`). |
+| `key`          | Specifies the value to search for.                            |
+| `ignoreCase`   | Determines if the search should be case-insensitive.          |
+| `ignoreAccent` | Ignores diacritic characters or accents during the search.    |
+
+The following sample demonstrates an initial search where `fields` is set to **TaskName**, `operator` is **contains**, `key` is **Pröduct**, with `ignoreCase` set to **true** and `ignoreAccent` set to **true** (e.g., typing "product" will match "Pröduct").
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -51,23 +62,37 @@ To apply a search at initial rendering, set the value for [fields](https://ej2.s
 
 ## Search operators
 
-The search operator can be defined in the [searchSettings.operator](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings#operator) property to configure specific searching.
+Search operators specify the type of comparison used during a search. These are configured through the [searchSettings.operator](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings#operator) property.
 
 The following operators are supported in searching:
 
-Operator |Description
------|-----
-startsWith |Checks whether a value begins with the specified value.
-endsWith |Checks whether a value ends with the specified value.
-contains |Checks whether a value contains the specified value.
-equal |Checks whether a value is equal to the specified value.
-notEqual |Checks for the values that are not equal to the specified value.
+| Operator   | Description                                           |
+| ---------- | ----------------------------------------------------- |
+| startsWith | Matches values that begin with the specified text.    |
+| endsWith   | Matches values that end with the specified text.      |
+| contains   | Matches values that include the specified text.       |
+| equal      | Matches values that exactly match the specified text. |
+| notEqual   | Matches values that do not match the specified text.  |
 
-> By default, the [searchSettings.operator](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings#operator) value is `contains`.
+> The default value for `searchSettings.operator` is `contains`.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/searching-cs6/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/searching-cs6/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/searching-cs6/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/searching-cs6" %}
 
 ## Search by external button
 
-To search the Gantt records from an external button, invoke the [search](https://ej2.syncfusion.com/react/documentation/api/gantt#search) method.
+To perform a search from an external button in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt, call the [search](https://ej2.syncfusion.com/react/documentation/api/gantt#search) method programmatically with the desired keyword.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -83,11 +108,13 @@ To search the Gantt records from an external button, invoke the [search](https:/
         
 {% previewsample "page.domainurl/code-snippet/gantt/searching-cs3" %}
 
->Note: You should set the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/gantt#allowfiltering) property to `true` for searching the content externally.
+> You should set the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/gantt#allowfiltering) property to **true** for searching the content externally.
 
 ## Search specific columns
 
-By default, the Gantt Chart component searches all the columns. You can search specific columns by defining the specific column's field names in the [searchSettings.fields](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings#fields) property.
+To search specific columns in the Gantt Chart component, use the [searchSettings.fields](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings#fields) property. This allows you to define which column fields should be included in the search, instead of searching across all columns by default.
+
+This following sample demonstrates searching only within the **TaskName** and **Duration** columns.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -103,11 +130,11 @@ By default, the Gantt Chart component searches all the columns. You can search s
         
 {% previewsample "page.domainurl/code-snippet/gantt/searching-cs4" %}
 
-> In above sample, you can search only **TaskName** and **Duration** column values.
-
 ## Clear search by external button
 
-You can set [searchSettings.key](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings#key) property as `empty` string, to clear the searched Gantt records from external button.
+To clear the search results in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt from an external button, set the [searchSettings.key](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings#key) property to an empty string. 
+ 
+Alternatively, you can invoke the [search](https://ej2.syncfusion.com/react/documentation/api/gantt#search) method with an empty string to reset the search.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -122,3 +149,41 @@ You can set [searchSettings.key](https://ej2.syncfusion.com/react/documentation/
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/gantt/searching-cs5" %}
+
+## Search on each key stroke
+
+You can enable instant filtering in the Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component by calling the [search](https://ej2.syncfusion.com/react/documentation/api/gantt#search) method on each `keyup` event.  This can be configured within the component’s [created](https://ej2.syncfusion.com/react/documentation/gantt/events#created) event.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/searching-cs7/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/searching-cs7/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/searching-cs7/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/searching-cs7" %}
+
+## Highlight the search text
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component supports highlighting matched search text within grid cells to improve visibility of search results. 
+
+This can be achieved using the [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/gantt#querycellinfo) event, which is triggered during cell rendering. Within this event, check if the cell belongs to the target column, retrieve the cell value and search keyword, and use the `includes` method to detect matches. If a match is found, wrap the matched text in a `<span>` with a custom CSS class for styling.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/searching-cs8/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/searching-cs8/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/searching-cs8/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/searching-cs8" %}

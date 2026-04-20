@@ -219,7 +219,7 @@ The GraphQL schema defines the structure of the "expense" data model and the ser
       matchCase: Boolean
     }
     ```
-7. Add type definition for "DataManagerInput":
+7. Add type definition for **DataManagerInput**:
 
     ```
     # Add additional parameters (e.g., group, aggregates) here if needed

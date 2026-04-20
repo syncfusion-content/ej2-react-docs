@@ -1,69 +1,102 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Toolbar, ExcelExport, Selection, TaskFieldsModel, LabelSettingsModel, SplitterSettingsModel, IQueryTaskbarInfoEventArgs, ToolbarItems } from '@syncfusion/ej2-react-gantt';
+import { Column, ExcelQueryCellInfoEventArgs, QueryCellInfoEventArgs } from '@syncfusion/ej2-grids';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
-import { GanttComponent, Inject, Toolbar, ToolbarItem, ExcelExport, Selection, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
-import { ganttData } from './datasource';
-function App (){
-    let ganttInstance;
-   const taskFields = {
+import { editingData } from './datasource';
+
+function App() {
+    let ganttInstance = null;
+
+    const data = editingData;
+
+    const taskSettings = {
         id: 'TaskID',
         name: 'TaskName',
         startDate: 'StartDate',
         duration: 'Duration',
         progress: 'Progress',
-        child: 'subtasks'
-  };
-  const toolbarOptions= ['ExcelExport'];
-function toolbarClick(args) {
-       if (args.item.id === 'GanttExport_excelexport') {
-           ganttInstance.excelExport();
-        }
+        parentID: 'ParentID'
     };
-    function excelQueryCellInfo(args)  {
-        if(args.column.field == 'Progress') {
-            if(args.value > 80) {
-                args.style = { backColor: '#A569BD' };
-            }
-            else if(args.value < 20) {
-                args.style = { backColor: '#F08080' };
-            }
-        }
-    };
-    function queryTaskbarInfo(args)  {
-        if (args.data.Progress > 80) {
-            args.progressBarBgColor = "#6C3483";
-            args.taskbarBgColor = args.taskbarBorderColor = "#A569BD";
-        } else if (args.data.Progress < 20) {
-            args.progressBarBgColor = "#CD5C5C";
-            args.taskbarBgColor = args.taskbarBorderColor = "#F08080";
-        }
-    };
-   function queryCellInfo(args)  {
-        if(args.column.field == 'Progress') {
-            if(args.data.Progress > 80) {
-                args.cell.style.backgroundColor  = '#A569BD';
-            }
-            else if(args.data.Progress < 20) {
-                args.cell.style.backgroundColor  = '#F08080';
-            }
-        }
-    };
-   const labelSettings = {
+
+    const toolbar = ['ExcelExport'];
+
+    const labelSettings = {
         taskLabel: '${Progress}%'
     };
+
     const splitterSettings = {
         columnIndex: 3
     };
-        return <GanttComponent id='GanttExport' dataSource={ganttData} taskFields={taskFields} toolbar={toolbarOptions}
-        toolbarClick={toolbarClick} queryCellInfo={queryCellInfo} excelQueryCellInfo={excelQueryCellInfo} queryTaskbarInfo={queryTaskbarInfo} allowExcelExport={true} height='400px' ref={gantt =>ganttInstance = gantt} treeColumnIndex={1} labelSettings={labelSettings} splitterSettings={splitterSettings} >
+
+    function toolbarClick(args) {
+        if (args.item.id === 'ganttDefault_excelexport') {
+            ganttInstance.excelExport();
+        }
+    }
+
+    function excelQueryCellInfo(args: ExcelQueryCellInfoEventArgs): void {
+        if (args.column.field === 'Progress') {
+            const progressValue = args.value as number;
+            if (progressValue > 80) {
+                args.style = { backColor: '#A569BD' };
+            } else if (progressValue < 20) {
+                args.style = { backColor: '#F08080' };
+            }
+        }
+    }
+
+    function queryTaskbarInfo(args) {
+        const progress = (args.data).Progress;
+        if (progress > 80) {
+            args.progressBarBgColor = '#6C3483';
+            args.taskbarBgColor = args.taskbarBorderColor = '#A569BD';
+        } else if (progress < 20) {
+            args.progressBarBgColor = '#CD5C5C';
+            args.taskbarBgColor = args.taskbarBorderColor = '#F08080';
+        }
+    }
+
+    function queryCellInfo(args) {
+        if ((args.column).field === 'Progress') {
+            const progress = (args.data).Progress;
+            if (progress > 80) {
+                (args.cell).style.backgroundColor = '#A569BD';
+            } else if (progress < 20) {
+                (args.cell).style.backgroundColor = '#F08080';
+            }
+        }
+    }
+
+    return (
+        <GanttComponent
+            id="ganttDefault"
+            height="430px"
+            dataSource={data}
+            taskFields={taskSettings}
+            toolbar={toolbar}
+            allowExcelExport={true}
+            treeColumnIndex={1}
+            labelSettings={labelSettings}
+            splitterSettings={splitterSettings}
+            toolbarClick={toolbarClick}
+            queryCellInfo={queryCellInfo}
+            excelQueryCellInfo={excelQueryCellInfo}
+            queryTaskbarInfo={queryTaskbarInfo}
+            ref={(g) => {
+                ganttInstance = g;
+            }}
+        >
             <ColumnsDirective>
-                <ColumnDirective field='TaskID' headerText= 'Task ID' textAlign= 'Left' width= '100' visible= {false}></ColumnDirective>
-                <ColumnDirective field='TaskName' headerText= 'Task Name' width= '150'></ColumnDirective>
-                <ColumnDirective field='Progress' headerText= 'Progress' width= '150'></ColumnDirective>
-                <ColumnDirective field='StartDate' headerText= 'Start Date' width= '150'></ColumnDirective>
-                <ColumnDirective field='Duration' headerText= 'Duration' width= '150'></ColumnDirective>
+                <ColumnDirective field="TaskID" headerText="Task ID" textAlign="Left" width="100" visible={false} />
+                <ColumnDirective field="TaskName" headerText="Task Name" width="150" />
+                <ColumnDirective field="Progress" headerText="Progress" width="150" />
+                <ColumnDirective field="StartDate" headerText="Start Date" width="150" />
+                <ColumnDirective field="Duration" headerText="Duration" width="150" />
             </ColumnsDirective>
             <Inject services={[Toolbar, ExcelExport, Selection]} />
         </GanttComponent>
-};
+    );
+}
+
 ReactDOM.render(<App />, document.getElementById('root'));

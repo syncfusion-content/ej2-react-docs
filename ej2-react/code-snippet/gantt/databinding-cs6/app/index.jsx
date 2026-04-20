@@ -1,20 +1,43 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject } from '@syncfusion/ej2-react-gantt';
+import { Toolbar, ExcelExport, Selection } from '@syncfusion/ej2-react-gantt';
 import { GanttData } from './datasource';
 
 function App() {
-    const taskFields = {
+
+    let ganttRef = null;
+
+    const taskSettings = {
         id: 'TaskID',
         name: 'TaskName',
         startDate: 'StartDate',
-        endDate: 'EndDate',
         duration: 'Duration',
+        endDate: 'EndDate',
         progress: 'Progress',
-        child: 'subtasks',
-        segments: 'Segments'
+        segments: 'Segments',
+        child: 'subtasks'
+
     };
-    return <GanttComponent dataSource={GanttData} taskFields={taskFields} height='450px'>
-    </GanttComponent>;
-};
+
+    return (
+        <GanttComponent
+            height="450px"
+            dataSource={GanttData}
+            taskFields={taskSettings}
+            ref={(g) => { ganttRef = g; }}
+        >
+            <ColumnsDirective>
+                <ColumnDirective field="TaskID" headerText="Task ID" width="100" />
+                <ColumnDirective field="TaskName" headerText="Task Name" width="150" />
+                <ColumnDirective field="StartDate" headerText="Start Date" width="150" />
+                <ColumnDirective field="Duration" headerText="Duration" width="150" />
+                <ColumnDirective field="Progress" headerText="Progress" width="150" />
+            </ColumnsDirective>
+
+            <Inject services={[Toolbar, ExcelExport, Selection]} />
+        </GanttComponent>
+    );
+}
+
 ReactDOM.render(<App />, document.getElementById('root'));

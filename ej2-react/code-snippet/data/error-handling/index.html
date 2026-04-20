@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Syncfusion React Grid</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Essential JS 2 for React Components" />
+    <meta name="author" content="Syncfusion" />
+    <link href="https://cdn.syncfusion.com/ej2/32.2.3/ej2-react-grids/styles/material.css" rel="stylesheet" />
+
+     <link href="https://cdn.syncfusion.com/ej2/32.2.3/ej2-base/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/32.2.3/ej2-react-buttons/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/32.2.3/ej2-react-popups/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/32.2.3/ej2-react-navigations/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/32.2.3/ej2-react-dropdowns/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/32.2.3/ej2-react-lists/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/32.2.3/ej2-react-inputs/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/32.2.3/ej2-react-calendars/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/32.2.3/ej2-base/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/32.2.3/ej2-react-splitbuttons/styles/material.css" rel="stylesheet" />
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
+    <script src="systemjs.config.js"></script>
+    <style>
+        #loader {
+            color: #008cff;
+            height: 40px;
+            left: 45%;
+            position: absolute;
+            top: 45%;
+            width: 30%;
+        }
+
+        #datatable {
+            width: 90%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            font-family: Roboto, sans-serif;
+            font-size: 14px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #datatable thead {
+            background-color: #007bff;
+            color: white;
+        }
+
+        #datatable th,
+        #datatable td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        #datatable tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        #datatable tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        #message {
+            text-align: center;
+            margin-left: 60px;
+            color: red;
+            padding-bottom: 20px;
+        }
+        #container{
+            display: flex; 
+            align-items: center;
+            margin: 20px 60px; 
+            gap: 10px;
+            font-weight:bold
+        }
+        
+        /* Customize Handle and Bar Switch */
+        .e-switch-wrapper.handle-text {
+            width: 200px;
+            height: 30px;
+        }
+
+        .e-switch-wrapper.handle-text .e-switch-handle {
+            width: 90px;
+            height: 20px;
+            left: 10px;
+            background-color: #fff;
+        }
+
+        .e-switch-wrapper.handle-text .e-switch-inner,
+        .e-switch-wrapper.handle-text .e-switch-handle {
+            border-radius: 0;
+        }
+
+        .e-switch-wrapper.handle-text .e-switch-handle.e-switch-active {
+            left: 125px;
+        }
+
+        .e-switch-wrapper.handle-text .e-switch-inner.e-switch-active,
+        .e-switch-wrapper.handle-text:hover .e-switch-inner.e-switch-active .e-switch-on {
+            background-color: #4d841d;
+            border-color: #4d841d;
+        }
+
+        .e-switch-wrapper.handle-text .e-switch-inner,
+        .e-switch-wrapper.handle-text .e-switch-off {
+            background-color: #e3165b;
+            border-color: #e3165b;
+        }
+
+        .e-switch-wrapper.handle-text .e-switch-inner:after,
+        .e-switch-wrapper.handle-text .e-switch-inner:before {
+            font-size: 10px;
+            position: absolute;
+            line-height: 21px;
+            font-family: "Helvetica", sans-serif;
+            z-index: 1;
+            height: 100%;
+            transition: all 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        }
+
+        .e-switch-wrapper.handle-text .e-switch-inner:before {
+            content: "UrlAdaptor";
+            padding-top: 4px;
+            color: #e3165b;
+            left: 12px;
+        }
+
+        .e-switch-wrapper.handle-text .e-switch-inner:after {
+            content: "ODataV4Adaptor";
+            right: 10px;
+            color: #fff;
+            padding-top: 4px;
+        }
+
+        .e-switch-wrapper.handle-text .e-switch-inner.e-switch-active:before {
+            color: #fff;
+        }
+
+        .e-switch-wrapper.handle-text .e-switch-inner.e-switch-active:after {
+            color: #4d841d;
+        }
+
+        .e-switch-wrapper.handle-text:not(.e-switch-disabled):hover .e-switch-handle:not(.e-switch-active) {
+            background-color: #fff;
+        }
+
+        .switch-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            /* space between switch and label */
+            margin: 20px 60px;
+            font-family: Roboto, sans-serif;
+        }
+
+        #switch-label {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='root'>
+        <div id='loader'>Loading....</div>
+    </div>
+</body>
+
+</html>

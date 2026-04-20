@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, ColumnsDirective, PdfExportProperties,ColumnDirective, pdfQueryTaskbarInfoEventArgs, Inject, Toolbar, PdfExport, Selection } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, ColumnsDirective, PdfExportProperties, ColumnDirective, pdfQueryTaskbarInfoEventArgs, Inject, Toolbar, PdfExport, Selection } from '@syncfusion/ej2-react-gantt';
 import { base64Data, editingResources } from './datasource';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 
@@ -16,7 +16,7 @@ function App() {
     };
     const toolbarOptions = ['PdfExport'];
     let ganttChart: any;
-    function toolbarClick(args : ClickEventArgs) {
+    function toolbarClick(args: ClickEventArgs) {
         if (args.item.text === 'PDF export') {
             let exportProperties: PdfExportProperties = {
                 enableFooter: false
@@ -35,29 +35,41 @@ function App() {
         }
         args.labelSettings.taskLabel.value = args.data.ganttProperties.progress + '%'
     }
-    const LeftLabelTemplate = (props : any) => {
+    const LeftLabelTemplate = (props: any) => {
         return (<span>{props.TaskName} [ {props.Progress}% ]</span>);
     };
     const templateLeft: any = LeftLabelTemplate;
-    const RightLabelTemplate = (props : any) => {
+    const RightLabelTemplate = (props: any) => {
         if (props.ganttProperties.resourceInfo) {
-            let resources = props.ganttProperties.resourceInfo;
-            let out : any = [];
-            for (let index = 0; index < resources.length; index++) {
-                let src = 'https://ej2.syncfusion.com/react/demos/src/gantt/images/' + resources[index].resourceName + '.png';
-                let img = <img src={src} height='40px' />;
-                let span = <span style={{ marginLeft: '5px', marginRight: '5px' }}>{resources[index].resourceName}</span>;
-                out.push(img, span);
-            }
-            return (<div>{out}</div>);
-        } else {
-            return <div></div>
+            const resources = props.ganttProperties.resourceInfo;
+            return (
+                <div>
+                    {resources.map((resource: any, index: number) => {
+                        const src =
+                            'https://ej2.syncfusion.com/react/demos/src/gantt/images/' +
+                            resource.resourceName + '.png';
+
+                        return (
+                            <span
+                                key={resource.resourceId}
+                                style={{ marginLeft: '5px', marginRight: '5px', display: 'inline-flex', alignItems: 'center' }}
+                            >
+                                <img src={src} height="40px" />
+                                <span style={{ marginLeft: '5px' }}>
+                                    {resource.resourceName}
+                                </span>
+                            </span>
+                        );
+                    })}
+                </div>
+            );
         }
+        return <div />;
     };
     const templateRight: any = RightLabelTemplate;
     const labelSettings: any = {
-        leftLabel: templateLeft.bind(this),
-        rightLabel: templateRight.bind(this),
+        leftLabel: templateLeft,
+        rightLabel: templateRight,
         taskLabel: '${Progress}%'
     };
     const splitterSettings: any = {
@@ -71,7 +83,7 @@ function App() {
     const projectEndDate = new Date('04/30/2019');
 
     return <GanttComponent dataSource={base64Data} rowHeight={60} taskFields={taskFields} pdfQueryTaskbarInfo={pdfQueryTaskbarInfo} toolbar={toolbarOptions} toolbarClick={toolbarClick} allowPdfExport={true} ref={gantt => ganttChart = gantt}
-        splitterSettings={splitterSettings} labelSettings={labelSettings} resourceFields={resourceFields} resources={editingResources}  projectStartDate={projectStartDate} projectEndDate={projectEndDate} height='450px'>
+        splitterSettings={splitterSettings} labelSettings={labelSettings} resourceFields={resourceFields} resources={editingResources} projectStartDate={projectStartDate} projectEndDate={projectEndDate} height='450px'>
         <ColumnsDirective>
             <ColumnDirective field='TaskID'></ColumnDirective>
             <ColumnDirective field='TaskName'></ColumnDirective>
