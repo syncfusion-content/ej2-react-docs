@@ -213,7 +213,7 @@ Now that **my-app** is set up with the desired theme configuration, the next ste
 
 While copying and pasting the TSX (HTML and TS) code, you'll notice that Syncfusion<sup style="font-size:70%">&reg;</sup> React components are used. To incorporate them into **my-app**, install the necessary packages and import the corresponding modules to the **src -> app -> page.tsx** file for the app to run.
 
-In the simple sign-in block, components such as textbox, checkbox and button are used. After copying and pasting HTML and TS code into the TSX file, open the **package.json** file and add the required packages: `@syncfusion/ej2-react-buttons` and `@syncfusion/ej2-react-inputs`. For more details about other Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages, refer to this [link](https://www.npmjs.com/search?q=%40syncfusion%2Fej2-react).
+In the simple sign-in block, components such as [textbox](https://ej2.syncfusion.com/react/documentation/textbox/getting-started), [checkbox](https://ej2.syncfusion.com/react/documentation/check-box/getting-started) and [button](https://ej2.syncfusion.com/react/documentation/button/getting-started) are used. After copying and pasting HTML and TS code into the TSX file, open the **package.json** file and add the required packages: `@syncfusion/ej2-react-buttons` and `@syncfusion/ej2-react-inputs`. For more details about other Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages, refer to this [link](https://www.npmjs.com/search?q=%40syncfusion%2Fej2-react).
 
 ![Adding required packages for Syncfusion components](images/adding-required-packages-for-syncfusion-components.png)
 
