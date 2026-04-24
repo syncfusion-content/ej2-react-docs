@@ -28,16 +28,16 @@ This filtering option displays the Pivot Table with selective records based on t
 
 Users can apply member filters at runtime by clicking the filter icon next to any field in the row, column, and filter axes, available in both the field list and grouping bar interfaces.
 
-![Member filter icon in field list](images/fieldlist_filtericon.webp)
+![Member filter icon in field list](images/fieldlist_filtericon.png)
 <br/>
 
-![Member filter icon in grouping bar](images/filter_icon_gb.webp)
+![Member filter icon in grouping bar](images/filter_icon_gb.png)
 <br/>
 
-![Member filter dialog with checked and unchecked members](images/filter_dialog_gb.webp)
+![Member filter dialog with checked and unchecked members](images/filter_dialog_gb.png)
 <br/>
 
-![Resultant pivot table on member filter](images/filter_grid_gb.webp)
+![Resultant pivot table on member filter](images/filter_grid_gb.png)
 
 You can also configure filtering programmatically using the [`filterSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#filtersettings) property during the initial rendering of the component. The essential settings required to add filter criteria are:
 
@@ -71,11 +71,11 @@ This option lets you quickly manage all members at once, saving time when workin
 
 When you check the **All** option, it selects all members in the list. When you uncheck it, all members become deselected. If you manually select some members while others remain unselected, the **All** option displays an intermediate state (partially checked) to show that the list contains both selected and unselected members.
 
-![Intermediate state of All option](images/editor_inter.webp)
+![Intermediate state of All option](images/editor_inter.png)
 
 > **Note:** When all members are deselected, the **OK** button becomes disabled. You must select at least one member to apply the filter and display data in the Pivot Table.
 
-![All members unchecked state](images/editor_alluncheck.webp)
+![All members unchecked state](images/editor_alluncheck.png)
 
 ### Provision to search specific member(s)
 
@@ -83,7 +83,7 @@ This option helps you quickly locate specific members without scrolling through 
 
 Simply enter the starting characters of the member name you want to find, and the list will automatically filter to show only matching members. This makes it easy to locate and select specific members, especially when dealing with large datasets.
 
-![Search functionality in member filter](images/search.webp)
+![Search functionality in member filter](images/search.png)
 
 ### Option to sort members
 
@@ -91,7 +91,7 @@ This option allows you to organize members in a logical order for easier selecti
 
 You can click the ascending sort icon to arrange members from A to Z (or lowest to highest for numerical values), or click the descending sort icon to arrange them from Z to A (or highest to lowest). When neither sorting option is selected, members appear in their original order as retrieved from the data source.
 
-![Member sorting options](images/member-sort.webp)
+![Member sorting options](images/member-sort.png)
 
 ### Performance tips
 
@@ -136,7 +136,7 @@ This approach prevents performance issues when working with hierarchies that con
 
 {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs97" %}
 
-![Loading members on-demand](images/ondemand_member.webp)
+![Loading members on-demand](images/ondemand_member.png)
 
 In the example above, the "Customer Geography" dimension loads with only the first level (Country) initially. Search operations will apply only to the "Country" level members. You can then load the next level members (State-Province) on-demand in two ways:
 
@@ -147,7 +147,7 @@ Once loaded, these members are stored internally and remain available until you 
 
 When the [`loadOnDemandInMemberEditor`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#loadondemandinmembereditor) property is set to **false**, all members from all levels are loaded during the initial setup. This approach executes a single query to retrieve all members at once. While this may cause slower performance when opening the member editor due to the large number of members being fetched, expand and search operations will be faster since all members are already available.
 
-![Loading all members initially](images/initial_member.webp)
+![Loading all members initially](images/initial_member.png)
 
 ### Loading members based on level number
 
@@ -168,7 +168,7 @@ The [`levelCount`](https://ej2.syncfusion.com/react/documentation/api/pivotview/
 
 {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs98" %}
 
-![Loading members based on level number](images/level-count.webp)
+![Loading members based on level number](images/level-count.png)
 
 In the above example, the [`levelCount`](https://ej2.syncfusion.com/react/documentation/api/pivotview/filtermodel#levelcount) is set to **2** for the "Customer Geography" dimension in [`filterSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#filtersettings). This loads both the "Country" and "State-Province" levels during the initial loading process. Any search or filter operations will be applied only to the members within these two levels. To access members from deeper levels like "City", you can either expand the respective "State-Province" node or select the "City" level from the dropdown list.
 
@@ -199,16 +199,16 @@ To enable label filtering, set the [`allowLabelFilter`](https://ej2.syncfusion.c
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs99" %}
 
-![Filter icon in field list](images/labelfiltering_fl_icon.webp)
+![Filter icon in field list](images/labelfiltering_fl_icon.png)
 <br/>
 
-![Filter icon in grouping bar](images/labelfiltering_gb_icon.webp)
+![Filter icon in grouping bar](images/labelfiltering_gb_icon.png)
 <br/>
 
-![Label filter tab in member editor dialog](images/labelfiltering_dialog.webp)
+![Label filter tab in member editor dialog](images/labelfiltering_dialog.png)
 <br/>
 
-![Resultant pivot table on label filter](images/labelfiltering_grid.webp)
+![Resultant pivot table on label filter](images/labelfiltering_grid.png)
 
 > In label filtering UI, based on the field chosen, it’s member data type is automatically recognized and filtering operation will be carried out. Where as in code behind, user need to define the data type through a property and it has been explained in the immediate section below.
 
@@ -327,7 +327,7 @@ To apply date filtering, specify your filtering criteria using the [`value1`](ht
 
 Users can clear the applied label filter by clicking the **Clear** option at the bottom of the filter dialog. This option is located under the **Label** tab for string and number type filtering, and under the **Date** tab for date type filtering.
 
-![output](images/clearfilter.webp)
+![output](images/clearfilter.png)
 
 ## Value filtering
 
@@ -352,16 +352,16 @@ You can enable value filtering by setting the [`allowValueFilter`](https://ej2.s
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs103" %}
 
-![Filter icon in field list](images/labelfiltering_fl_icon.webp)
+![Filter icon in field list](images/labelfiltering_fl_icon.png)
 <br/>
 
-![Filter icon in grouping bar](images/labelfiltering_gb_icon.webp)
+![Filter icon in grouping bar](images/labelfiltering_gb_icon.png)
 <br/>
 
-![Value filter tab in member editor dialog](images/valuefiltering_dialog.webp)
+![Value filter tab in member editor dialog](images/valuefiltering_dialog.png)
 <br/>
 
-![Resultant pivot table on value filter](images/valuefiltering_grid.webp)
+![Resultant pivot table on value filter](images/valuefiltering_grid.png)
 
 You can also configure value filtering programmatically using the [`filterSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#filtersettings) property. The following properties are required for value filtering:
 
@@ -409,7 +409,7 @@ The following table shows the available operators for value filtering:
 
 You can clear the applied value filter by clicking the "Clear" option at the bottom of the filter dialog under the "Value" tab.
 
-![Clearing the existing value filter](images/clearvaluefilter.webp)
+![Clearing the existing value filter](images/clearvaluefilter.png)
 
 ## Event
 

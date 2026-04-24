@@ -146,7 +146,7 @@ In accumulation charts, you can use the drill down and drill up options to explo
 
 {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs225" %}
 
-![output](images/expand_collapse.webp)
+![output](images/expand_collapse.png)
 
 ### Column Headers and Delimiters
 
