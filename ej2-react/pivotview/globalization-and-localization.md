@@ -66,7 +66,7 @@ For more details:
 
 The locale JSON file will look like:
 
-![output](images/locale.webp)
+![output](images/locale.png)
 
 ## Internationalization
 

@@ -51,11 +51,11 @@ Users can load members on demand by setting the [`loadOnDemandInMemberEditor`](h
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs182" %}
 
-![output](images/ondemand_member.webp)
+![output](images/ondemand_member.png)
 
 If the property is set to false, all members will be loaded for all levels at initial loading. So, it will take time to fetch the members at initial loading alone. After that, all operations (like drill, search) are performed using existing members without any performance constraints.
 
-![output](images/initial_member.webp)
+![output](images/initial_member.png)
 
 ### Loading members based on level count
 
@@ -74,7 +74,7 @@ User can load the members based on the level count by using the property [`level
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs183" %}
 
-![output](images/level-count.webp)
+![output](images/level-count.png)
 
 ## See Also
 
