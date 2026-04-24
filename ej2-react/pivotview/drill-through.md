@@ -120,7 +120,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
-![output](images/maxrows.webp)
+![output](images/maxrows.jpeg)
 
 ## Events
 

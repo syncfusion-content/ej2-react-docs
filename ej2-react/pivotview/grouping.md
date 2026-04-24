@@ -68,22 +68,22 @@ Number grouping allows users to organize numerical data into different ranges, s
 
 {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs147" %}
 
-![Context-menu options for number grouping](images/number-group-option.webp)
+![Context-menu options for number grouping](images/number-group-option.png)
 
 ### Range selection
 
 The "**Starting at**" and "**Ending at**" options are used to set the number range depending on which the headers will be grouped. For example, if the "Product_ID" field holds the number from "1001" to "1010" and the user chooses to group the number range by setting "**1004**" to "**Starting at**" and "**1008**" to "**Ending at**" options on their own. Then the specified number range will be used for number grouping and the rest will be grouped as "**Out of Range**".
 
-![Range options applied for number grouping](images/number-group-settings-range-applied.webp)
+![Range options applied for number grouping](images/number-group-settings-range-applied.png)
 
 ### Range interval
 
 The "**Interval by**" option is used to separate the selected number data type field into range-wise such as 1-5, 6-10, etc. For example, if the user wants to display the "Product_ID" data field with a group interval of "**2**" by setting the "**Interval by**" option on their own. The "Product_ID" field will then be grouped by the specified range of intervals, such as "**1004-1005**", "**1006-1007**", etc.
 
-![Grouping settings options applied for number grouping](images/number-group-settings-applied.webp)
+![Grouping settings options applied for number grouping](images/number-group-settings-applied.png)
 <br/>
 
-![Applied grouping settings updated in Pivot Table for number grouping](images/number-group-updated.webp)
+![Applied grouping settings updated in Pivot Table for number grouping](images/number-group-updated.png)
 
 ### Configuring Number Grouping Programmatically
 
@@ -114,13 +114,13 @@ You can configure number grouping through code-behind using the [`groupSettings`
 
 {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs148" %}
 
-![Applied grouping settings updated in Pivot Table for number grouping](images/number-group-updated.webp)
+![Applied grouping settings updated in Pivot Table for number grouping](images/number-group-updated.png)
 
 ### Ungrouping the existing number groups
 
 To remove an applied number grouping, simply right-click on the grouped header in the Pivot Table and select **Ungroup** option from the context menu. This action will break apart the grouped ranges and display the original, ungrouped values in the table.
 
-![output](images/number-ungroup.webp)
+![output](images/number-ungroup.png)
 
 ## Date Grouping
 
@@ -143,13 +143,13 @@ Date grouping organizes date and time data into hierarchical segments, such as y
 
 {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs149" %}
 
-![Context-menu options for date grouping](images/date-group-option.webp)
+![Context-menu options for date grouping](images/date-group-option.jpeg)
 
 ### Range Selection
 
 The **Starting at** and **Ending at** options allow users to define the date range for grouping headers. For example, if the "Date" field contains data from "01/01/2015" to "02/12/2018" and the user sets **Starting at** to "**01/07/2015**" and **Ending at** to "**31/07/2017**", only records within this range will be grouped according to the selected settings. Dates outside this range are labeled as **Out of Range**.
 
-![Range options applied for date grouping](images/date-group-settings-range-applied.webp)
+![Range options applied for date grouping](images/date-group-settings-range-applied.png)
 
 ### Group Interval
 
@@ -157,13 +157,13 @@ The **Interval by** option allows users to split date fields into years, quarter
 
 > If no options are selected in the **Interval by** section, the **OK** button in the dialog remains disabled. At least one interval must be chosen to enable date grouping.
 
-![Group interval option applied for date grouping](images/date-group-settings-interval-applied.webp)
+![Group interval option applied for date grouping](images/date-group-settings-interval-applied.png)
 <br/>
 
-![Grouping settings options applied for date grouping](images/date-group-settings-applied.webp)
+![Grouping settings options applied for date grouping](images/date-group-settings-applied.png)
 <br/>
 
-![Applied grouping settings updated in Pivot Table for date grouping](images/date-group-updated.webp)
+![Applied grouping settings updated in Pivot Table for date grouping](images/date-group-updated.jpeg)
 
 ### Configuring Date Grouping Programmatically
 
@@ -196,13 +196,13 @@ You can configure date grouping programmatically using the [`groupSettings`](htt
 
 Furthermore, in the field list UI, these date group fields **Years (Date)**, **Quarters (Date)**, **Months (Date)**, etc... will be automatically grouped and displayed under the **Date** folder name.
 
-![Date fields are grouped and displayed under a folder named Date](images/treeview.webp)
+![Date fields are grouped and displayed under a folder named Date](images/treeview.png)
 
 ### Ungrouping the existing date groups
 
 To remove a previously applied date grouping, simply right-click the relevant date-based header within the Pivot Table and select the **Ungroup** option from the context menu. This action will revert the grouped dates back to their original, ungrouped state, allowing you to view and analyze the raw date values in the Pivot Table component.
 
-![output](images/date-ungroup.webp)
+![output](images/date-ungroup.png)
 
 ## Custom Grouping
 
@@ -229,7 +229,7 @@ Custom grouping is an option that enables users to group data types (date, time,
 
 To create a custom group in the Pivot Table, select at least two headers from the same field. Hold the **CTRL** key to select multiple headers individually or the **SHIFT** key to select a range of headers. Then, right-click and choose **Group** from the context menu.
 
-![Context-menu options for custom grouping](images/custom-group-option.webp)
+![Context-menu options for custom grouping](images/custom-group-option.png)
 
 In the dialog box:
 - **Field Caption**: Set an alias name for the new custom field, which will appear in the Pivot Table.
@@ -237,25 +237,25 @@ In the dialog box:
 
 For example, to group the headers "Gloves," "Jerseys," and "Shorts" in the "Products" field under a single group, set the **Group Name** to "Clothings." The selected headers will then appear under "Clothings" in the Pivot Table.
 
-![Caption applied for custom grouping](images/custom-group-settings-caption-applied.webp)
+![Caption applied for custom grouping](images/custom-group-settings-caption-applied.png)
 <br/>
 
-![Grouping settings applied for custom grouping](images/custom-group-settings-applied.webp)
+![Grouping settings applied for custom grouping](images/custom-group-settings-applied.png)
 <br/>
 
-![Applied grouping settings updated in Pivot Table for custom grouping](images/custom-group-updated.webp)
+![Applied grouping settings updated in Pivot Table for custom grouping](images/custom-group-updated.png)
 
 ### Nested Custom Grouping
 
 User can also apply new custom grouping options to an existing custom field by right-clicking on the custom group header in the Pivot Table. For example, if the user wants to create a new custom group for the current custom group headers such as "**Bottles and Cages**", "**Cleaners**" and "**Fenders**" by setting the top level name as "**Accessories**" to "**Group Name**" on their own. The selected headers will then be grouped in the Pivot Table under the name "**Accessories**" with a new custom field called "**Product category 1**".
 
-![Context-menu options for nested custom grouping](images/nested-custom-group-option.webp)
+![Context-menu options for nested custom grouping](images/nested-custom-group-option.png)
 <br/>
 
-![Grouping settings applied for nested custom grouping](images/nested-custom-group-settings-applied.webp)
+![Grouping settings applied for nested custom grouping](images/nested-custom-group-settings-applied.png)
 <br/>
 
-![Applied grouping settings updated in Pivot Table for custom grouping](images/nested-custom-group-updated.webp)
+![Applied grouping settings updated in Pivot Table for custom grouping](images/nested-custom-group-updated.png)
 
 ### Configuring Custom Grouping Programmatically
 
@@ -292,7 +292,7 @@ Here’s an example of configuring custom grouping programmatically:
 
 {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs152" %}
 
-![Applied grouping settings updated in Pivot Table for custom grouping](images/custom-group-updated.webp)
+![Applied grouping settings updated in Pivot Table for custom grouping](images/custom-group-updated.png)
 
 ### Ungrouping Existing Custom Groups
 
@@ -300,7 +300,7 @@ To remove a custom group in the Pivot Table, simply right-click on the grouped h
 
 > After ungrouping, if you remove the related field from the report, any custom group fields associated with it will also be removed from the Pivot Table.
 
-![output](images/custom-ungroup.webp)
+![output](images/custom-ungroup.png)
 
 ## Limitations
 
