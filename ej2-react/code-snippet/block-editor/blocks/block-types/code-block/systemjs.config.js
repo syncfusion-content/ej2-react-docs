@@ -41,6 +41,7 @@ System.config({
         "@syncfusion/ej2-inputs": "syncfusion:ej2-inputs/dist/ej2-inputs.umd.min.js",
         "@syncfusion/ej2-react-dropdowns": "syncfusion:ej2-react-dropdowns/dist/ej2-react-dropdowns.umd.min.js",
         "@syncfusion/ej2-progressbar": "syncfusion:ej2-progressbar/dist/ej2-progressbar.umd.min.js",
+        "@syncfusion/ej2-svg-base": "syncfusion:ej2-svg-base/dist/ej2-svg-base.umd.min.js",
         "react-dom": "https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js",
         "react": "https://unpkg.com/react@18.2.0/umd/react.production.min.js",
     },

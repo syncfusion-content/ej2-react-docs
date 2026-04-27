@@ -12,8 +12,8 @@ documentation: ug
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> publishes the Visual Studio extension on the Visual Studio Marketplace. Install it directly from Visual Studio or download and install the VSIX from the marketplace.
 
-- Visual Studio 2022: https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.ASPNETCoreVSExtensions  
-- Visual Studio 2019 or earlier: https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.ASPNETCoreExtensions
+- [Visual Studio 2022](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.ASPNETCoreVSExtensions) 
+- [Visual Studio 2019 or earlier](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.ASPNETCoreExtensions)
 
 ## Prerequisites
 
@@ -49,8 +49,8 @@ Follow these steps to install the Syncfusion<sup style="font-size:70%">&reg;</su
 To install the extension from the Marketplace site:
 
 1. Open the extension page for your Visual Studio version and click **Install**:
-   - Visual Studio 2022: https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.ASPNETCoreVSExtensions  
-   - Visual Studio 2019 or earlier: https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.ASPNETCoreExtensions
+   - [Visual Studio 2022](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.ASPNETCoreVSExtensions)
+   - [Visual Studio 2019 or earlier](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.ASPNETCoreExtensions)
 2. Close all running instances of Visual Studio.  
 3. If downloading the VSIX, double-click the file to start installation. Select the Visual Studio instances to install into when prompted.
 
