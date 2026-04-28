@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React DataManager - Web Method Adaptor | Syncfusion
-description: React DataManager Web Method provides server-side integration with REST APIs by detailing the backend setup and endpoint configuration required for data operations.
+description: React DataManager Web Method enables remote data binding with REST APIs, explaining backend configuration and endpoints for efficient data operations.
 control: Web Method Adaptor
 platform: ej2-react
 documentation: ug
@@ -67,7 +67,7 @@ The following scenario uses `UrlAdaptor` directly instead of `WebMethodAdaptor`:
 | Requirement           | Details                                                      | Download / Command                 |
 |----------------------|--------------------------------------------------------------|------------------------------------|
 | **Visual Studio**  | Community, Professional, or Enterprise edition               | [Visual Studio](https://visualstudio.microsoft.com/) |
-| **Node.js**           | Version 14.0 or later                                         | [Node.js](https://nodejs.org/)                |
+| **Node.js**           | Version 14.0 or later                                         | [Node.js](https://nodejs.org/en/)                |
 | **Verify Node.js**    | Check installed version                                        | `node --version`  
 
 ## Backend setup (ASP.NET Core API)

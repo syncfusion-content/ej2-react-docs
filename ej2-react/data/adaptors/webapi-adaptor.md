@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React DataManager - WebApiAdaptor | Syncfusion
-description: React DataManager WebApiAdaptor provides server-side integration with REST APIs by detailing the backend setup and endpoint configuration required for data operations.
+description: React DataManager WebApiAdaptor enables remote data binding with REST APIs, explaining backend configuration and endpoints for efficient data operations.
 control: Adaptors
 platform: ej2-react
 documentation: ug
@@ -31,7 +31,7 @@ While both adaptors work with OData-style queries, they have distinct use cases:
 | Software | Recommended version | Download / Command |
 |--------------------|---------------------|---------|
 | **Visual Studio**  | Community, Professional, or Enterprise | [Visual Studio](https://visualstudio.microsoft.com) |
-| **Node.js**            | 14.0 or later                          | [Node.js](https://nodejs.org) |
+| **Node.js**            | 14.0 or later                          | [Node.js](https://nodejs.org/en) |
 
 ## Configure Web API service in ASP.NET Core (server-side)
 
