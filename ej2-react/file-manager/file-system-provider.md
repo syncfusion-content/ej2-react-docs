@@ -63,102 +63,191 @@ After setting the root directory of the file system, just build and run the proj
 
 ## Azure cloud file system provider
 
-The Azure cloud file system provider allows the users to access and manage the blobs in the Azure blob storage. To get started, clone the [azure-aspcore-file-provider](https://github.com/SyncfusionExamples/azure-aspcore-file-provider) using the following command
+### Introduction to Azure Blob Storage
 
-   ```ts
+Azure Blob Storage is Microsoft Azure's object storage solution for the cloud, optimized for storing massive amounts of unstructured data. In this guide, the Syncfusion React File Manager connects to Blob Storage through an ASP.NET Core backend so you can securely browse and perform file operations in the File Manager component.
 
-   git clone https://github.com/SyncfusionExamples/azure-aspcore-file-provider  azure-aspcore-file-provider
+### Prerequisites
 
-  ```
+Before you integrate Azure Blob Storage with the Syncfusion React File Manager, ensure you have:
+- An active Microsoft Azure subscription
+- A Storage Account with Blob service enabled
+- A Blob Container and an optional root folder inside that container
+- Azure credentials: `accountName`, `accountKey`, and `blobName`
 
-After cloning, just open the project in Visual Studio and restore the NuGet packages. Now, register the Azure storage by passing details like name, password, and blob name to the Register Azure method in the File Manager controller.
+### Setting Up Azure Blob Storage
 
-   ```ts
+- Sign in to the [Azure Portal](https://portal.azure.com/) and [create a storage account](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal) with Blob service enabled.
+- [Create a Blob Container](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?tabs=azure-portal#create-a-container) (example: files). See Azure docs for [container naming rules](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction#naming-and-referencing-containers-blobs-and-metadata).
 
-   void RegisterAzure(string accountName, string accountKey, string blobName)
+### Backend Setup
 
-  ```
+Clone the [Azure File Provider](https://github.com/SyncfusionExamples/azure-aspcore-file-provider) using the following command,
 
-Then, set the blob container and the root blob directory by passing the corresponding URLs as parameters in the setBlobContainer method as follows.
+```bash
+git clone https://github.com/SyncfusionExamples/ej2-azure-aspcore-file-provider ej2-azure-aspcore-file-provider
+```
 
-   ```ts
-    void setBlobContainer(string blobPath, string filePath)
-  ```
+> **Note:** This Azure Blob Storage provider for the Syncfusion React File Manager is intended for demonstration and evaluation only. Before using it in production, consult your security team and complete a security review.
 
-> **Note:** Also, assign the same *blobPath URL* and *filePath URL* in [**AzureFileOperations** and **AzureUpload**](https://github.com/SyncfusionExamples/azure-aspcore-file-provider/blob/master/Controllers/AzureProviderController.cs) methods in the File Manager controller to determine the original path of the Azure blob.
+To initialize a local service with the above-mentioned file operations, create a folder named `Controllers` in the server project. Then, create a `.cs` file in the `Controllers` folder and add the required file operation code from [AzureProviderController.cs](https://github.com/SyncfusionExamples/azure-aspcore-file-provider/blob/master/Controllers/AzureProviderController.cs). You can also find the method-level details for this provider in the same repository.
 
-After setting the blob container references, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the **ajaxSettings** property of the File Manager component to the appropriate controller methods allows to manage the Azure blob storage.
+### Registering Azure Credentials in the Provider
 
-  {% raw %}
+After cloning, open the project in Visual Studio and restore the NuGet packages. Then, register Azure Storage by passing **accountName**, **accountKey**, and **blobName** to the `RegisterAzure` method in the `AzureProviderController.cs` file.
 
-  ```ts
-  // Initializing File Manager Azure cloud file system service.
-   <div>
-        <div className="control-section">
-            <FileManagerComponent  id="file"
-                ajaxSettings = {{
-                    // Replace the hosted port number in the place of "{port}"
-                    url="http://localhost:{port}/api/AzureProvider/AzureFileOperations",
-                    downloadUrl="http://localhost:{port}/api/AzureProvider/AzureDownload",
-                    uploadUrl="http://localhost:{port}/api/AzureProvider/AzureUpload",
-                    getImageUrl="http://localhost:{port}/api/AzureProvider/AzureGetImage"
-                }} >
-            </FileManagerComponent>
-        </div>
-    </div>
- ```
-  {% endraw %}
+```csharp
+this.operation.RegisterAzure("<--accountName-->", "<--accountKey-->", "<--blobName-->");
+```
 
-> **NuGet:** Additionally, we have created a [**NuGet**](https://www.nuget.org/packages/Syncfusion.EJ2.FileManager.AzureFileProvider.AspNet.Core) package of **ASP.NET Core Azure file system provider**.
+Then, set the blob container and the root blob directory by passing the corresponding URLs as parameters to the `SetBlobContainer` method, as shown below.
 
-Please, use the following command to install the NuGet package in an application.
+```csharp
+public AzureProviderController(IHostingEnvironment hostingEnvironment)
+{
+    this.operation = new AzureFileProvider();
+    blobPath = "<--blobPath-->";
+    filePath = "<--filePath-->";
+    ...
+    this.operation.SetBlobContainer(blobPath, filePath);
+}
+```
 
-   ```ts
+> **Note:** The **blobPath** represents a container path in Azure Blob Storage, and **filePath** refers to the file location path. For example, create a container named **blob** in the specified Azure Blob Storage account. Inside that container, create a folder named **Files** that contains all the files and folders to be displayed in the File Manager. Refer to the following paths as an example.
 
-    dotnet add package Syncfusion.EJ2.FileManager.AzureFileProvider.AspNet.Core
-   ```
+```csharp
+public AzureProviderController(IHostingEnvironment hostingEnvironment)
+{
+    this.operation = new AzureFileProvider();
+    blobPath = "https://azure_service_account.blob.core.windows.net/blob/";
+    filePath = "https://azure_service_account.blob.core.windows.net/blob/Files";
+    ...
+}
+```
 
-> **Note:** To learn more about file actions that can be performed with Azure cloud file system Provider, refer to this [link](https://github.com/SyncfusionExamples/azure-aspcore-file-provider#key-features)
+### Configuring Syncfusion File Manager UI
+
+File Manager can be initialized using the `<FileManagerComponent>` tag. To include the File Manager component in application import the `FileManagerComponent` from `ej2-react-filemanager` package in `App.tsx` or `App.jsx`. Then add the File Manager component as shown in below code example.
+
+Now, build and run the Azure File Service provider project. It will be hosted in `http://localhost:{port}`. Map the [ajaxSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/index-default#ajaxsettings) of the File Manager component to the AzureProvider controller endpoints (Url, UploadUrl, DownloadUrl, GetImageUrl) to manage blobs in your Azure Blob Storage container.
+
+{% raw %}
+
+```ts
+// Initializing File Manager Azure cloud file system service.
+  <div>
+      <div className="control-section">
+          <FileManagerComponent  id="file"
+              ajaxSettings = {{
+                  // Replace the hosted port number in the place of "{port}"
+                  url="http://localhost:{port}/api/AzureProvider/AzureFileOperations",
+                  downloadUrl="http://localhost:{port}/api/AzureProvider/AzureDownload",
+                  uploadUrl="http://localhost:{port}/api/AzureProvider/AzureUpload",
+                  getImageUrl="http://localhost:{port}/api/AzureProvider/AzureGetImage"
+              }} >
+          </FileManagerComponent>
+      </div>
+  </div>
+```
+{% endraw %}
+
+To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> React File Manager component using the Azure cloud file system provider, initialize the Azure cloud provider in the controller.
+
+### Supported File Operations
+
+We have enabled below list of features that can be performed using Azure File Service provider,
+
+|Operation | Function |
+|---|---|
+| Upload | <ul><li>[Directory upload](https://ej2.syncfusion.com/react/documentation/api/file-manager/uploadsettingsmodel#directoryupload)</li><li>[Sequential upload](https://ej2.syncfusion.com/react/documentation/api/file-manager/uploadsettingsmodel#sequentialupload)</li><li>[Chunk upload](https://ej2.syncfusion.com/react/documentation/api/file-manager/uploadsettingsmodel#chunksize)</li><li>[Auto upload](https://ej2.syncfusion.com/react/documentation/api/file-manager/uploadsettingsmodel#autoupload)</li></ul> |
+| Access Control | <ul><li>[Setting rules to files/folders](https://github.com/SyncfusionExamples/azure-aspcore-file-provider/blob/master/Models/AzureFileProvider.cs#L58)</li><li>[Supported rules](https://github.com/SyncfusionExamples/azure-aspcore-file-provider/blob/master/Models/Base/AccessDetails.cs#L65)</li></ul> |
+
+Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
+
+> **Note:** To learn more about the file actions supported by the Azure cloud file system provider, refer to the [key features](https://github.com/SyncfusionExamples/azure-aspcore-file-provider#key-features).
 
 ## Amazon S3 cloud file provider
 
-The Amazon ***S3*** (*Simple Storage Service*) cloud file provider allows the users to access and manage a server hosted file system as collection of objects stored in the Amazon S3 Bucket. To get started, clone the [amazon-s3-aspcore-file-provider](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider) using the following command
+### Introduction to Amazon S3
 
-   ```ts
-   git clone https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider.git  amazon-s3-aspcore-file-provider.git
-  ```
+Amazon Simple Storage Service (Amazon S3) is AWS's object storage service for storing and retrieving any amount of data. S3 is durable, scalable, and pay‑as‑you‑go. In this guide the Syncfusion React File Manager connects to S3 through an ASP.NET Core backend so you can securely browse and perform file operations in the File Manager component.
 
-> **Note:** To learn more about creating and configuring an Amazon S3 bucket, refer to this [link](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-configure-bucket.html).
+### Prerequisites
 
-After cloning, open the project in Visual Studio and restore the NuGet packages. Now, register Amazon S3 client account details like *awsAccessKeyId*, *awsSecretKeyId* and *awsRegion* details in **RegisterAmazonS3** method in the File Manager controller to perform the file operations.
+Before you integrate Amazon S3 with the Syncfusion React File Manager, ensure you have:
+ - An AWS Account
+ - A configured S3 Bucket
+ - AWS credentials: `awsAccessKeyId`, `awsSecretAccessKeyId`, `bucketRegion`, `awsRegion`.
 
-  ```ts
-   void RegisterAmazonS3(string bucketName, string awsAccessKeyId, string awsSecretAccessKey, string bucketRegion)
-  ```
+### Setting Up Amazon S3
 
-After registering the Amazon client account details, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the **ajaxSettings** property of the File Manager component to the appropriate controller methods allows to manage the Amazon ***S3*** (*Simple Storage Service*) bucket's objects storage.
+#### Create an S3 Bucket
 
-  {% raw %}
+ - Open the [AWS Management Console guide](https://docs.aws.amazon.com/awsconsolehelpdocs/) and log into AWS Console -> Navigate to S3.
+ - Proceed by clicking `Create Bucket`. A bucket is a container for objects. An object is a file and any metadata that describes that file. The Amazon S3 provider requires a top-level root folder in your bucket to place all required files and subfolders inside this root. Click this [link](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-buckets-s3.html) for more details.
+ - Provide a DNS-compliant bucket name. Click this [link](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) for more details.
+ - Choose the AWS region. Click this [link](https://docs.aws.amazon.com/general/latest/gr/s3.html) for more details.
 
- ```ts
-  // Initializing File Manager Amazon S3 cloud file system service.
-   <div>
-        <div className="control-section">
-            <FileManagerComponent  id="file"
-                ajaxSettings = {{
-                    // Replace the hosted port number in the place of "{port}"
-                    url="http://localhost:{port}/api/AmazonS3Provider/AmazonS3FileOperations",
-                    downloadUrl="http://localhost:{port}/api/AmazonS3Provider/AmazonS3Download",
-                    uploadUrl="http://localhost:{port}/api/AmazonS3Provider/AmazonS3Upload",
-                    getImageUrl="http://localhost:{port}/api/AmazonS3Provider/AmazonS3GetImage"
-                }} >
-            </FileManagerComponent>
-        </div>
-    </div>
- ```
- {% endraw %}
+### Backend Setup
 
-> **Note:** To learn more about the file actions that can be performed with Amazon S3 cloud file provider, refer to this [link](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider#key-features)
+Clone the [Amazon S3 File Provider](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider) using the following command,
+
+```bash
+git clone https://github.com/SyncfusionExamples/ej2-amazon-s3-aspcore-file-provider ej2-amazon-s3-aspcore-file-provider
+```
+
+> **Note:** This Amazon S3 provider for the Syncfusion React File Manager is intended for demonstration and evaluation only. Before using it consult your security team and complete a security review.
+
+To initialize a local service with the above-mentioned file operations, create a folder named `Controllers` in the server project. Then, create a `.cs` file in the `Controllers` folder and add the required file operation code from [AmazonS3ProviderController.cs](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider/blob/master/Controllers/AmazonS3ProviderController.cs). You can also find the method-level details for this provider in the same repository.
+
+### Registering S3 Credentials in the Provider
+
+After cloning, open the project in Visual Studio and restore the NuGet packages. Then, register the Amazon S3 client details (for example, **bucketName**, **awsAccessKeyId**, **awsSecretAccessKeyId**, and **awsRegion**) in the `RegisterAmazonS3` method in the `AmazonS3ProviderController.cs` file.
+
+```csharp
+this.operation.RegisterAmazonS3("<---bucketName--->", "<---awsAccessKeyId--->", "<---awsSecretAccessKey--->", "<---region--->");
+```
+
+### Configuring Syncfusion File Manager UI
+
+File Manager can be initialized using the `<FileManagerComponent>` tag. To include the File Manager component in application import the `FileManagerComponent` from `ej2-react-filemanager` package in `App.tsx` or `App.jsx`. Then add the File Manager component as shown in below code example.
+
+Now, build and run the Amazon File Service provider project. It will be hosted in `http://localhost:{port}`. Map the [ajaxSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/index-default#ajaxsettings) of the File Manager component to the AmazonS3Provider controller endpoints (Url, UploadUrl, DownloadUrl, GetImageUrl) to manage blobs in your S3 bucket.
+
+{% raw %}
+
+```ts
+// Initializing File Manager Amazon file service.
+  <div>
+      <div className="control-section">
+          <FileManagerComponent  id="file"
+              ajaxSettings = {{
+                  // Replace the hosted port number in the place of "{port}"
+                  url="http://localhost:{port}/api/AmazonS3Provider/AmazonS3FileOperations",
+                  downloadUrl="http://localhost:{port}/api/AmazonS3Provider/AmazonS3Download",
+                  uploadUrl="http://localhost:{port}/api/AmazonS3Provider/AmazonS3Upload",
+                  getImageUrl="http://localhost:{port}/api/AmazonS3Provider/AmazonS3GetImage"
+              }} >
+          </FileManagerComponent>
+      </div>
+  </div>
+```
+{% endraw %}
+
+To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> React File Manager component using the Amazon S3 cloud file provider, initialize the Amazon S3 cloud provider in the controller.
+
+### Supported File Operations
+
+We have enabled below list of features that can be performed using Amazon File Service provider,
+
+|Operation | Function |
+|---|---|
+| Upload | <ul><li>[Directory upload](https://ej2.syncfusion.com/react/documentation/api/file-manager/uploadsettingsmodel#directoryupload)</li><li>[Sequential upload](https://ej2.syncfusion.com/react/documentation/api/file-manager/uploadsettingsmodel#sequentialupload)</li><li>[Chunk upload](https://ej2.syncfusion.com/react/documentation/api/file-manager/uploadsettingsmodel#chunksize)</li><li>[Auto upload](https://ej2.syncfusion.com/react/documentation/api/file-manager/uploadsettingsmodel#autoupload)</li></ul> |
+| Access Control | <ul><li>[Setting rules to files/folders](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider/blob/master/Models/AmazonS3FileProvider.cs#L51)</li><li>[Supported rules](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider/blob/master/Models/Base/AccessDetails.cs#L13)</li></ul> |
+
+Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
+
+> **Note:** To learn more about the file actions supported by the Amazon S3 Cloud File provider, refer to the [key features](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider#key-features).
 
 ## SharePoint file provider
 
@@ -332,79 +421,85 @@ After configuring the connection, just build and run the project. Now, the proje
 
 > **Note:** To learn more about file actions that can be performed with SQL database file system provider, refer to this [link](https://github.com/SyncfusionExamples/sql-server-database-aspcore-file-provider#key-features)
 
-## NodeJS file system provider
+## Node JS file system provider
 
-The NodeJS file system provider allows the users to manage the files and folders in a physical file system. It provides methods for performing all basic file operations like creating a folder, copy, move, delete, and download files and folders in the file system. We can use of the NodeJS file system provider either by installing the [ej2-filemanager-node-filesystem](https://www.npmjs.com/package/@syncfusion/ej2-filemanager-node-filesystem) package or by cloning the [file system provider](https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem) from the GitHub.
+### Introduction
 
-### Using ej2-filemanager-node-filesystem package
+The Node JS file system provider lets File Manager perform all basic file operations like creating a folder, copy, move, delete, and download files and folders on a physical file system via a lightweight Node service.
 
-* Install the ej2-filemanager-node-filesystem package by running the below command.
+### Backend Setup
 
- ```ts
+Clone the [Node JS provider](https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem) using the following command,
 
-  npm install @syncfusion/ej2-filemanager-node-filesystem
+```bash
 
-  ```
+git clone  https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem.git node-filesystem-provider
 
-* After installing the package, navigate to the ej2-filemanager-node-filesystem package folder within the node-modules
-* Run the command **npm install** command.
+```
 
-### Cloning the ej2-filemanager-node-filesystem from GitHub
+**Note:** This Node JS file system provider for the Syncfusion React File Manager is intended for demonstration and evaluation only. Before using it in production, consult your security team and complete a security review.
 
-* Clone the ej2-filemanager-node-filesystem using the following command.
-
-  ```ts
-
-  git clone  https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem.git node-filesystem-provider
-
-  ```
-
-* After cloning, open the root folder and run the command **npm install** command.
+After cloning, open the root folder and run the **npm install** command.
 
 After installing the packages, set the root folder directory of the physical file system in the package JSON under scripts sections as follows.
 
-  ```ts
+```json
 
-   "start": "node filesystem-server.js -d D:/Projects"
+"start": "node filesystem-server.js -d D:/Projects"
 
-   ```
+```
 
 > **Note:** By default, the root directory will be configured to set `C:/Users` as the root directory.
 
 To set the port in which the project to be hosted and the root directory of the file system. Run the following command.
 
-  ```ts
+```bash
 
-   set PORT=3000 && node filesystem-server.js -d D:/Projects
+set PORT=3000 && node filesystem-server.js -d D:/Projects
 
-   ```
+```
 
 > **Note:** By default, the service will run `8090` port.
 
-Now, just mapping the **ajaxSettings** property of the File Manager component to the appropriate file operation methods in the filesystem-server.js file will allow to manage the physical file system with NodeJS file system provider.
+### Configuring Syncfusion File Manager UI
 
-  {% raw %}
+File Manager can be initialized using the `<FileManagerComponent>` tag. To include the File Manager component in application import the `FileManagerComponent` from `ej2-react-filemanager` package in `App.tsx` or `App.jsx`. Then add the File Manager component as shown in below code example.
 
-  ```ts
+Map the [ajaxSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/index-default#ajaxsettings) of the File Manager component to the AzureProvider controller endpoints.
 
-  // File Manager sample with nodejs service.
-   <div>
-    <div className="control-section">
-        <FileManagerComponent  id="file"
-            ajaxSettings = {{
-                url="http://localhost:{port}/",
-                downloadUrl="http://localhost:{port}/Download",
-                uploadUrl="http://localhost:{port}/Upload",
-                getImageUrl="http://localhost:{port}/GetImage"
-            }} >
-        </FileManagerComponent>
-      </div>
-  </div>
+{% raw %}
 
-  ```
-  {% endraw %}
+```typescript
 
-> **Note:** To learn more about file actions that can be performed with NodeJS file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem#key-features)
+// File Manager sample with nodejs service.
+  <div>
+  <div className="control-section">
+      <FileManagerComponent  id="file"
+          ajaxSettings = {{
+              url="http://localhost:{port}/",
+              downloadUrl="http://localhost:{port}/Download",
+              uploadUrl="http://localhost:{port}/Upload",
+              getImageUrl="http://localhost:{port}/GetImage"
+          }} >
+      </FileManagerComponent>
+    </div>
+</div>
+
+```
+{% endraw %}
+
+### Supported File Operations
+
+We have enabled below list of features that can be performed using Node JS File Service provider,
+
+|Operation | Function |
+|---|---|
+| Upload | <ul><li>[Directory upload](https://ej2.syncfusion.com/react/documentation/api/file-manager/uploadsettingsmodel#directoryupload)</li><li>[Sequential upload](https://ej2.syncfusion.com/react/documentation/api/file-manager/uploadsettingsmodel#sequentialupload)</li><li>[Chunk upload](https://ej2.syncfusion.com/react/documentation/api/file-manager/uploadsettingsmodel#chunksize)</li><li>[Auto upload](https://ej2.syncfusion.com/react/documentation/api/file-manager/uploadsettingsmodel#autoupload)</li></ul> |
+| Access Control | <ul><li>[Setting rules to files/folders](https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem/blob/master/accessRules.json)</li></ul> |
+
+Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
+
+> **Note:** To learn more about the file actions supported by the Node JS File provider, refer to the [key features](https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem/blob/master/README.md#key-features)
 
 ## Google Drive file system provider
 
@@ -540,7 +635,7 @@ Here, the `Files` denotes the `rootNode` and the subsequent object refers to the
 
 ![generate_key](images/generate_key.png)
 
-* Next, you will need to clone the [`firebase-realtime-database-apscore-file-provider`](https://github.com/SyncfusionExamples/firebase-realtime-database-aspcore-file-provider) repository. Once cloned, simply open the project in Visual Studio and restore the NuGet package.
+* Next, you will need to clone the [`firebase-realtime-database-aspcore-file-provider`](https://github.com/SyncfusionExamples/firebase-realtime-database-aspcore-file-provider) repository. Once cloned, simply open the project in Visual Studio and restore the NuGet package.
 
 * Once you have generated the secret key, you will need to replace the JSON in the `access_key.json` file in the Firebase Realtime Database provider project with the newly generated key. This will enable authentication and allow you to perform read and write operations.
 
@@ -599,7 +694,7 @@ After configuring the Firebase Realtime Database service link, build and run the
 
 ## IBM Cloud Object Storage file provider
 
-The IBM Cloud Object Storage file provider module allows you work with the IBM Cloud Object Storage. It also provides the methods for performing various file actions such as creating a new folder, renaming files, and deleting files. The IBM Cloud Object Storage file provider serves the file provider support for the File Manager component with the IBM Cloud Object Storage. We can make use of IBM Cloud Object Storage file provider by installing the[ej2-filemanager-ibm-cos-node-file-provider](https://www.npmjs.com/package/@syncfusion/ej2-filemanager-ibm-cos-node-file-provider)npm package or by cloning the [file provider](https://github.com/SyncfusionExamples/filemanager-ibm-cos-node-file-provider) from the GitHub.
+The IBM Cloud Object Storage file provider module allows you work with the IBM Cloud Object Storage. It also provides the methods for performing various file actions such as creating a new folder, renaming files, and deleting files. The IBM Cloud Object Storage file provider serves the file provider support for the File Manager component with the IBM Cloud Object Storage. We can make use of IBM Cloud Object Storage file provider by installing the[ej2-filemanager-ibm-cos-node-file-provider](https://www.npmjs.com/package/@syncfusion/ej2-filemanager-ibm-cos-node-file-provider) npm package or by cloning the [file provider](https://github.com/SyncfusionExamples/filemanager-ibm-cos-node-file-provider) from the GitHub.
 
 ### Using ej2-filemanager-ibm-cos-node-file-provider npm package
 
