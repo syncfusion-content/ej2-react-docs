@@ -18,6 +18,7 @@ The following modules should be injected to extend grid's functionality.
 | [Sort](https://ej2.syncfusion.com/angular/documentation/api/grid/sort)| Inject this module to use sorting feature.|
 | [Filter](https://ej2.syncfusion.com/angular/documentation/api/grid/filter)| Inject this module to use filtering feature.|
 | [Group](https://ej2.syncfusion.com/angular/documentation/api/grid/group)| Inject this module to use grouping feature|
+| `LazyLoadGroup`| Inject this module to use lazy load grouping feature.|
 | [Edit](https://ej2.syncfusion.com/angular/documentation/api/grid/edit)| Inject this module to use editing feature.|
 | `Aggregate`| Inject this module to use aggregate feature.|
 | [ColumnChooser](https://ej2.syncfusion.com/angular/documentation/api/grid/columnChooser)| Inject this module to use column chooser feature.|
@@ -32,10 +33,9 @@ The following modules should be injected to extend grid's functionality.
 | `RowDD`| Inject this module to use row drag and drop feature.|
 | [Search](https://ej2.syncfusion.com/angular/documentation/api/grid/search)| Inject this module to use search feature and this is a default injected module.|
 | [Selection](https://ej2.syncfusion.com/angular/documentation/api/grid/selection)| Inject this module to use selection feature and this is a default injected module.|
-| [Scroll](https://ej2.syncfusion.com/angular/documentation/api/grid/scroll)| Inject this module to use scrolling feature and this is a default injected module.|
-| [Print](https://ej2.syncfusion.com/angular/documentation/api/grid/print)| Inject this module to use to use print feature and this is a default injected module.|
+| `VirtualScroll`| Inject this module to use virtual scrolling feature.|
+| `InfiniteScroll`| Inject this module to use infinite scrolling feature.|
 | `Toolbar`| Inject this module to use toolbar feature.|
-| `VirtualScroll`| Inject this module to use virtual scroll feature.|
 | `ExcelExport`| Inject this module to use excel export feature.|
 | `PdfExport`| Inject this module to use PDF export feature.|
 
