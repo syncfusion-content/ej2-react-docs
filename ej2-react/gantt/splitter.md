@@ -100,5 +100,5 @@ The following example customizes the splitter’s background and hides the resiz
 
 ## See also
 - [How to configure Gantt Chart columns?](https://ej2.syncfusion.com/react/documentation/gantt/columns/columns)
-- [How to customize the timeline?](https://ej2.syncfusion.com/react/documentation/gantt/time-line/time-line)
+- [How to customize the timeline?](https://ej2.syncfusion.com/react/documentation/gantt/timeline/timeline)
 - [How to handle scrolling?](https://ej2.syncfusion.com/react/documentation/gantt/scrolling)

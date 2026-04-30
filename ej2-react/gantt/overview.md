@@ -19,7 +19,7 @@ The Gantt chart is a project management tool which provides a Microsoft Project-
 * [**Editing**](./managing-tasks/): A task’s fields, such as duration, start date, end date, predecessors, and more, can be edited directly in their respective cells using the Edit dialog or interactively using taskbars.
 * [**Undo/Redo**](./undo-redo/): It enables users to revert the most recent action performed in the Gantt Chart. Redo feature can reapply an action that was previously undone using the Undo feature. This allows users to revert their decision to undo an action.
 * [**Task dependencies**](./task-dependency/): Defines task relationships using finish-to-start, start-to-finish, start-to-start, and finish-to-finish task dependency types.
-* [**Customizable timeline**](./time-line/): Displays timescale from minutes to decades easily and also displays the custom texts in timescale. Timeline can be displayed in either one-tier or two-tier layout.
+* [**Customizable timeline**](./timeline/): Displays timescale from minutes to decades easily and also displays the custom texts in timescale. Timeline can be displayed in either one-tier or two-tier layout.
 * [**Taskbars**](./task-scheduling/): Supports unscheduled tasks, and it can be customized. Baselines can also be displayed for the tasks.
 * [**Critical path**](./critical-path/):  It is a series of tasks (or sometimes only a single task) that controls the calculated finish date of the project. If a task in a critical path is delayed, then the entire project will be delayed.
 * [**Timezone**](./timezone/): It explains the Gantt Chart schedules project in their respective timezones.

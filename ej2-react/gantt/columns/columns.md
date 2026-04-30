@@ -93,6 +93,7 @@ The column width is specified as an absolute pixel value. For example, a column 
 ```js
 <ColumnDirective field="TaskID" headerText="Task ID" textAlign="Right" width="100" />
 ```
+
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/gantt/columns-cs2/app/index.jsx %}
@@ -146,17 +147,17 @@ The following example code demonstrates the formatting of data for the **TaskID*
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/format-cs1/app/index.jsx %}
+{% include code-snippet/gantt/format-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/format-cs1/app/index.tsx %}
+{% include code-snippet/gantt/format-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/format-cs1/index.html %}
+{% include code-snippet/gantt/format-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/gantt/format-cs1" %}
+{% previewsample "page.domainurl/code-snippet/gantt/format-cs3" %}
 
 >To learn more about number formatting, you can refer to the [number](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#number-formatting) section.
 
@@ -328,49 +329,6 @@ The following sample hides the checkbox for the row with `ariaRowIndex` set to 3
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/gantt/checkbox-cs2" %}
-
-## Render boolean value as checkbox
-
-You can render boolean values as checkboxes in Gantt Chart component by setting the [displayAsCheckBox](https://ej2.syncfusion.com/react/documentation/api/gantt/column#displayascheckbox) property to **true** for the desired column. This replaces the default text representation of **true** or **false** with a checkbox, making boolean fields visually clearer and more intuitive.
-
-The following sample demonstrates how to display a boolean value as a checkbox for the **Verified** column.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/checkbox-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/checkbox-cs1/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/checkbox-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/gantt/checkbox-cs1" %}
-
->* The `displayAsCheckBox` property is only applicable to boolean values in Gantt columns.
->* When `displayAsCheckBox` is set to **true**, the boolean values will be rendered as checkboxes in the Gantt column, with checked state indicating **true** and unchecked state indicating **false**.
-
-### How to prevent checkbox for particular row
-
-You can prevent the checkbox from rendering in a specific row of the Gantt even when [displayAsCheckBox](https://ej2.syncfusion.com/react/documentation/api/gantt/column#displayascheckbox) is set to **true** for the column. This can be done using the [rowDataBound](https://ej2.syncfusion.com/react/documentation/gantt/events#rowdatabound) event, where you check the row index and conditionally set the inner HTML of the target cell to an empty string to hide the checkbox.
-
-The following sample hides the checkbox for the row with `ariaRowIndex` set to 3.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/checkbox-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/checkbox-cs1/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/checkbox-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/gantt/checkbox-cs1" %}
 
 ## AutoFit columns
 

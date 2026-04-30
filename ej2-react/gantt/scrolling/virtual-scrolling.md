@@ -64,6 +64,6 @@ Virtual scrolling has the following constraints:
 
 ## See also
 
-- [How to configure timeline settings?](https://ej2.syncfusion.com/react/documentation/gantt/time-line/time-line)
+- [How to configure timeline settings?](https://ej2.syncfusion.com/react/documentation/gantt/timeline/timeline)
 - [How to manage large datasets?](https://ej2.syncfusion.com/react/documentation/gantt/data-binding)
 - [How to configure critical path?](https://ej2.syncfusion.com/react/documentation/gantt/critical-path)

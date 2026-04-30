@@ -124,5 +124,3 @@ Apply themes to exported PDF documents by setting the [theme](https://ej2.syncfu
 - [How to export to Excel?](https://ej2.syncfusion.com/react/documentation/gantt/excel-export)
 - [How to customize PDF export?](https://ej2.syncfusion.com/react/documentation/gantt/pdf-export/customize-pdf-export)
 - [How to manage task dependencies?](https://ej2.syncfusion.com/react/documentation/gantt/task-dependency)
-- 
-{% youtube "https://www.youtube.com/watch?v=y-FfHD02-s0" %}
