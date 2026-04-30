@@ -106,17 +106,17 @@ By default, we render the default footer for a PDF file, this can be enabled or 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/pdf-export-cs4/app/index.jsx %}
+{% include code-snippet/gantt/pdf-export-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/pdf-export-cs4/app/index.tsx %}
+{% include code-snippet/gantt/pdf-export-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/pdf-export-cs4/index.html %}
+{% include code-snippet/gantt/pdf-export-cs5/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/gantt/pdf-export-cs4" %}
+{% previewsample "page.domainurl/code-snippet/gantt/pdf-export-cs5" %}
 
 ## Export hidden columns
 

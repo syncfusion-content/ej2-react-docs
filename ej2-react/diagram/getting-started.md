@@ -80,7 +80,6 @@ The following CSS files are available in ../node_modules/@syncfusion package fol
 @import "../node_modules/@syncfusion/ej2-react-diagrams/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 ```
 N> To refer App.css in the application, import it in the src/App.tsx file.        `import './App.css';`
@@ -174,9 +173,9 @@ Create and add a `node` (JSON data) with specific position, size, label, and sha
 ### Apply Shape and Style to Node
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> diagram control provides support to render many built-in shapes in diagrams.
-Please refer to [`Shapes`](https://helpej2.syncfusion.com/react/documentation/api/diagram/shapes/) to know about built-in shapes.
+Please refer to [`Shapes`](https://helpej2.syncfusion.com/react/documentation/api/diagram/shapes) to know about built-in shapes.
 
-The appearance of a node can be customized by changing its [`fill`](../api/diagram/shapeStyleModel/#fill-string) color, [`strokeColor`](../api/diagram/shapeStyleModel/#strokecolor-string), [`strokeWidth`](../api/diagram/shapeStyleModel/#strokewidth-number), [`borderColor`](../api/diagram/node/#borderColor-string), [`borderWidth`](../api/diagram/node/#borderWidth-number), [`strokeDashArray`](../api/diagram/shapeStyleModel/#strokeDashArray-number), [`opacity`](../api/diagram/shapeStyleModel/#opacity-number), and [`shadow`](../api/diagram/shapeStyleModel/#shadow-number).
+The appearance of a node can be customized by changing its [`fill`](https://helpej2.syncfusion.com/react/documentation/api/diagram/shapestylemodel#fill) color, [`strokeColor`](https://helpej2.syncfusion.com/react/documentation/api/diagram/shapestylemodel#strokecolor), [`strokeWidth`](https://helpej2.syncfusion.com/react/documentation/api/diagram/shapestylemodel#strokewidth), [`borderColor`](https://helpej2.syncfusion.com/react/documentation/api/diagram/node#bordercolor), [`borderWidth`](https://helpej2.syncfusion.com/react/documentation/api/diagram/node#borderwidth), [`strokeDashArray`](https://helpej2.syncfusion.com/react/documentation/api/diagram/shapestylemodel#strokedasharray), [`opacity`](https://helpej2.syncfusion.com/react/documentation/api/diagram/shapestylemodel#opacity), and [`shadow`](https://helpej2.syncfusion.com/react/documentation/api/diagram/node#shadow).
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -240,7 +239,7 @@ root.render(<App />);
 
 ### Connect Flow Chart Nodes
 
-Connect these nodes by adding a connector using the [`connectors`](../api/diagram/connectorModel/) property of the diagram and refer to the source and target end by using the [`sourceID`](../api/diagram/connectorModel/#sourceid) and [`targetID`](../api/diagram/connectorModel/#targetid) properties.
+Connect these nodes by adding a connector using the [`connectors`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connectormodel) property of the diagram and refer to the source and target end by using the [`sourceID`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connectormodel#sourceid) and [`targetID`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connectormodel#targetid) properties.
 The required nodes and connectors can be added to form a complete flow diagram.
 
 {% tabs %}
@@ -257,7 +256,7 @@ The required nodes and connectors can be added to form a complete flow diagram.
 
  {% previewsample "page.domainurl/code-snippet/diagram/getting-started/flowdiagram-cs1" %}
  
-Default values for all [`nodes`](../api/diagram/nodemodel/) and [`connectors`](../api/diagram/connectorModel/) can be set using the [`getNodeDefaults`](../api/diagram/#getnodedefaults) and [`getConnectorDefaults`](../api/diagram/#getconnectordefaults) properties, respectively. For example, if all nodes have the same width and height, such properties can be moved into `getNodeDefaults`.
+Default values for all [`nodes`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nodemodel) and [`connectors`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connectormodel) can be set using the [`getNodeDefaults`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#getnodedefaults) and [`getConnectorDefaults`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#getconnectordefaults) properties, respectively. For example, if all nodes have the same width and height, such properties can be moved into `getNodeDefaults`.
 
 
 ## Module Injection
@@ -382,7 +381,7 @@ Define Employee Information as JSON data. The following code example shows an em
 
 ### Map Data Source
 
-You can configure the above "Employee Information" with the diagram, so that the nodes and connectors are automatically generated using the mapping properties. The following code example demonstrates how to use [`dataSourceSettings`](../api/diagram/datasourcemodel/) to map [`id`](../api/diagram/dataSourceModel/#id) and [`parentId`](../api/diagram/dataSourceModel/#parentid) with the corresponding property names of employee information.
+You can configure the above "Employee Information" with the diagram, so that the nodes and connectors are automatically generated using the mapping properties. The following code example demonstrates how to use [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/diagram/datasourcemodel) to map [`id`](https://ej2.syncfusion.com/react/documentation/api/diagram/datasourcemodel#id) and [`parentId`](https://ej2.syncfusion.com/react/documentation/api/diagram/datasourcemodel#parentid) with the corresponding property names of employee information.
 
 ```ts
 import { DataManager } from "@syncfusion/ej2-data";
@@ -446,7 +445,7 @@ root.render(<App />);
 
 ### Rendering Layout with Data Source
 
-To create an organizational chart, the [`type`](../api/diagram/layoutType/) of layout should be set as an `OrganizationalChart`. The following code example shows how DataManager is used to generate layouts based on the DataSourceSettings of the Diagram.
+To create an organizational chart, the [`type`](https://ej2.syncfusion.com/react/documentation/api/diagram/layouttype) of layout should be set as an `OrganizationalChart`. The following code example shows how DataManager is used to generate layouts based on the DataSourceSettings of the Diagram.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -464,7 +463,7 @@ To create an organizational chart, the [`type`](../api/diagram/layoutType/) of l
 
 ### Customize Employee Appearance
 
-The following code examples indicate how to define the default appearance of nodes and connectors. The [`setNodeTemplate`](../api/diagram/#setnodetemplate) is used to update each node based on employee data.
+The following code examples indicate how to define the default appearance of nodes and connectors. The [`setNodeTemplate`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#setnodetemplate) is used to update each node based on employee data.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
