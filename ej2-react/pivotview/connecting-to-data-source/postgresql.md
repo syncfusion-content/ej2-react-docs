@@ -1056,7 +1056,9 @@ You should see JSON data similar to:
 
 We have provided a production‑ready sample application that demonstrates how to integrate the React Pivot Table with a PostgreSQL database, including support for data binding and full CRUD operations.
 
-You can explore the complete implementation in this [GitHub repository](https://github.com/SyncfusionExamples/how-to-bind-PostgreSQL-database-to-pivot-table).
+You can explore the complete implementation in this [GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-pivot-table-postgresql-database-binding-sample).
+
+![output](../images/postgresql-CRUD-editing.gif)
 
 ## See Also
 
