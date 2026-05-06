@@ -59,9 +59,8 @@ PostgreSQL is a powerful, open-source relational database management system (RDB
 1. **Connect to the Server**: In the pgAdmin left sidebar, expand **Servers** and locate your PostgreSQL server (usually named "PostgreSQL 17" or similar, depending on your version)
 2. **Open Query Editor**: Expand the **Databases** node. Right‑click on the existing server name or **postgres** database(default maintenance DB). Choose **Query Tool** to open the SQL editor.
 
-![PgAdmin Query Tool Interface](../images/pgadmin-connect-server.png)
-
-3. **Create the Database**: Paste the following SQL script into the query editor window and click the "Execute" button (or press F6):
+![PgAdmin Query Tool Interface](../images/pgadmin-connect-server.png) 
+3. **Create the Database**: Paste the following SQL script into the query editor window and click the **Execute** button (or press F6):
 
 ```sql
 -- Create Database
@@ -79,8 +78,8 @@ After creating the database, you need to create a table to store sales records. 
 **Using pgAdmin Query Tool:**
 
 1. **Select the salesdb Database**: In the left sidebar, expand **Databases** and click on **salesdb** to select it.
-2. **Open Query Tool**: Right-click on the **salesdb** database and select "Query Tool"
-3. **Create the Table**: Paste the following SQL script into the query editor and click "Execute":
+2. **Open Query Tool**: Right-click on the **salesdb** database and select **Query Tool**
+3. **Create the Table**: Paste the following SQL script into the query editor and click **Execute**:
 
 ```sql
 -- Create SalesData Table
@@ -126,7 +125,7 @@ Insert sample sales data into the table. This data will be used to populate the 
 **Using pgAdmin Query Tool:**
 
 1. **Open Query Tool**: With **salesdb** still selected, open the Query Tool again (or use the existing one)
-2. **Insert Sample Data**: Paste the following SQL script into the query editor and click "Execute":
+2. **Insert Sample Data**: Paste the following SQL script into the query editor and click **Execute**:
 
 ```sql
 -- Insert Sample Data
@@ -146,7 +145,7 @@ You should see a success message showing "INSERT 0 8" or similar, indicating tha
 
 **Verify the Data:**
 
-To confirm the data was inserted correctly, run the following verification query in the Query Tool:
+To confirm the data was inserted correctly, run the following verification query in the **Query Tool**:
 
 ```sql
 SELECT * FROM salesdata;
@@ -263,7 +262,7 @@ app.Run();
 
 **What's Happening:**
 
-1. **AddSingleton<NpgsqlConnection>**: Registers the PostgreSQL connection globally, making it available to all controllers
+1. **AddSingleton**: Registers the PostgreSQL connection globally, making it available to all controllers
 2. **AddCors**: Enables Cross-Origin Resource Sharing (CORS), allowing the React frontend to make API requests to this backend
 3. **AllowAll policy**: Permits all origins, methods, and headers (suitable for development; restrict in production)
 
@@ -1065,5 +1064,4 @@ You can explore the complete implementation in this [GitHub repository](https://
 - [**PivotTable Data Binding**](https://ej2.syncfusion.com/react/documentation/pivotview/data-binding)
 - [**DataManager**](https://ej2.syncfusion.com/react/documentation/data/getting-started)
 - [**UrlAdaptor**](https://ej2.syncfusion.com/react/documentation/data/adaptors/url-adaptor)
-- [**Grid CRUD with UrlAdaptor**](https://ej2.syncfusion.com/documentation/grid/connecting-to-database/postgresql-server#handling-crud-operations)
 - [**PivotTable Editing**](https://ej2.syncfusion.com/react/documentation/pivotview/editing)
