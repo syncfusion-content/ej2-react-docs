@@ -3,7 +3,7 @@
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { ToastComponent, ToastUtility } from '@syncfusion/ej2-react-notifications';
 import * as React from "react";
-const toastObj;
+let toastObj;
 class App extends React.Component<{}, {}> {
   public infoShow() {
     toastObj = ToastUtility.show('Please read the comments carefully', 'Information', 20000);
