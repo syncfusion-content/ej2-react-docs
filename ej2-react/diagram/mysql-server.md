@@ -508,6 +508,7 @@ Remote data binding enables the diagram to fetch organizational chart data from 
 
 Add the data binding configuration to DiagramComponent:
 
+{% raw %}
 ```typescript
 import {
   DiagramComponent,
@@ -563,6 +564,7 @@ export default function App() {
   );
 }
 ```
+{% endraw %}
 
 ### Step 5: Inject required services
 
@@ -582,6 +584,7 @@ Add the `<Inject>` component inside `DiagramComponent` to enable data binding an
 
 Here is the complete **src/App.tsx** file:
 
+{% raw %}
 ```typescript
 import {
   DiagramComponent,
@@ -657,6 +660,7 @@ export default function App() {
   );
 }
 ```
+{% endraw %}
 
 ## Running the complete application
 
