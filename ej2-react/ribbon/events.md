@@ -378,6 +378,13 @@ import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
 function App() {
+    const checkBoxProps = {
+        label: "Ruler",
+        checked: false,
+        created: function () { 
+            // Your required actions here
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -387,9 +394,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="CheckBox" checkBoxSettings={{ label: "Ruler", checked: false, created: function () { 
-                                            // Your required actions here
-                                        } }}>
+                                        <RibbonItemDirective type="CheckBox" checkBoxSettings={checkBoxProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
