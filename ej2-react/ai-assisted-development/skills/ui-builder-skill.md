@@ -10,7 +10,8 @@ domainurl: ##DomainURL##
 
 # Syncfusion® React UI Builder Skill for AI Assistants
 
-**Syncfusion® React UI Builder** is an AI-powered skill and companion agent that accelerates React application development by transforming natural-language UI requirements into production-ready components using Syncfusion® React UI libraries.
+**Syncfusion® React UI Builder** is an AI-powered skill and companion agent that accelerates React application development by transforming natural-language UI requirements into production-ready components using Syncfusion® React UI libraries. 
+
 Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® components** to deliver accurate and ready-to-use code.
 By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, React UI Builder helps you rapidly build scalable dashboards and user interfaces without leaving your development workflow.
 
@@ -18,11 +19,11 @@ By combining intelligent code generation with best practices, accessibility stan
 
 Before installing React UI Builder, ensure the following:
 
-- Install [APM (Agent Package Manager)](https://microsoft.github.io/apm/getting-started/installation/)
+- Install [APM (Agent Package Manager)](https://microsoft.github.io/apm/getting-started/installation/#quick-install-recommended)
 - Required [Node.js](https://nodejs.org/en) version ≥ 18
-- Existing React project (React 18+, Next.js 13+, Vite, or CRA); see [Quick Start](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start)
-- A supported AI agent or IDE that integrates with the Skills CLI (VS Code, Cursor, Syncfusion® Code Studio, etc.)
-- Valid Syncfusion® license:
+- React application (existing or new); see [Quick Start](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start)
+- A supported AI agent or IDE that integrates with the Skills (VS Code, Cursor, Syncfusion® Code Studio, etc.)
+- Active Syncfusion<sup style="font-size:70%">&reg;</sup> license(any of the following):  
   - [Commercial](https://www.syncfusion.com/sales/unlimitedlicense)  
   - [Community License](https://www.syncfusion.com/products/communitylicense)  
   - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
@@ -69,23 +70,42 @@ apm --version
 
 Use the APM CLI to install the React UI Builder skill for your preferred environment:
 
-```bash
-# Install for GitHub Copilot (default)
+{% tabs %}
+{% highlight bash tabtitle="Copilot" %}
+
+// By default, it installs to the GitHub Copilot target
+
 apm install Syncfusion/react-ui-builder
 
-# Install for Claude Code
-apm install Syncfusion/react-ui-builder -t claude
+{% endhighlight %}
+{% highlight bash tabtitle="Cursor" %}
 
-# Install for Cursor
 apm install Syncfusion/react-ui-builder -t cursor
 
-```
+{% endhighlight %}
+{% highlight bash tabtitle="Code Studio" %}
+
+// For Code Studio, refer to the note below to configure the agent location explicitly to use it in the chat.
+
+apm install Syncfusion/react-ui-builder
+
+
+{% endhighlight %}
+{% highlight bash tabtitle="Claude" %}
+
+apm install Syncfusion/react-ui-builder -t claude
+
+{% endhighlight %}
+{% endtabs %}
+
 After installation, the following artifacts are added to your project for the GitHub Copilot target:
 
-`.agent/skills/` – contains the skill files
-`.github/agents/` – contains the agent configuration
+- `.agent/skills/` – contains the skill files
+- `.github/agents/` – contains the agent configuration
 
-For details on supported deployment targets, refer [here](https://microsoft.github.io/apm/reference/cli-commands/#apm-targets---show-resolved-deployment-targets)
+For details on supported deployment targets, refer to the [documentation](https://microsoft.github.io/apm/reference/cli-commands/#apm-targets---show-resolved-deployment-targets).
+
+> For Syncfusion® Code Studio, users must explicitly configure the agent location to use it in the chat. Refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations).
 
 ## How the Syncfusion® React UI Builder Skill Works
 
@@ -111,22 +131,23 @@ Key enforcement points:
 
 > The assistant handles most stages automatically and may request confirmation where required.
 
-
 ## Using the AI Assistant
 
 After installing React UI Builder with APM, the relevant agent and skill files are added to your project under:
 
-.agent/skills/ (skill files)
-.github/agents/ (agent configuration, based on the selected target)
+- `.agent/skills/` (skill files)
+- `.github/agents/` (React UI builder agent configuration, based on the selected target)
 
 To start using the skill:
 
 1. Open your supported IDE.
 2. In the chat panel, select the `react-ui-builder` agent from the **Agent dropdown**.
+
 ![Set Agent](images/UI-Builder-Agent.png)
+
 3. Start prompting the agent with a clear description of your UI requirements.
 
-Examples prompts:
+Examples Prompts:
 
 {% promptcards %}
 {% promptcard Authentication %}
@@ -139,9 +160,9 @@ Create a CMS Admin Dashboard UI featuring a collapsible sidebar with navigation 
 
 Generated code follows best practices with accessible, semantic HTML, responsive mobile-first layouts, strong TypeScript typing, and built-in security measures such as input validation and avoidance of hardcoded secrets.
 
-> For Syncfusion® Code Studio, users must explicitly configure the agent location to use it in chat. Refer to the documentation: [link](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations).
-
 ## Troubleshooting
+
+- **APM installation failure**: Refer to this [documentation](https://microsoft.github.io/apm/getting-started/installation/#troubleshooting)
 
 - **Skills not loading**: Ensure the **.agent/** and **.github/agents/** folders exist in your project and that the skill was installed successfully using APM. Verify that the correct agent is selected from the Agent dropdown in your IDE.
 
