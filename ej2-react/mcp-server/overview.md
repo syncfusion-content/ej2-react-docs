@@ -81,7 +81,6 @@ The MCP Server acts purely as a knowledge bridge, connecting your AI model with 
 
 ## See also
 
-* [Installation](./installation)
 * [Agentic UI Builder - Getting Started](./agentic-ui-builder/getting-started)
 * [AI Coding Assistant - Getting Started](./ai-coding-assistant/getting-started)
 * [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro)
