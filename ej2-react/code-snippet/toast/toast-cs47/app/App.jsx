@@ -1,7 +1,7 @@
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { ToastUtility } from '@syncfusion/ej2-react-notifications';
 import * as React from "react";
-const toastObj;
+let toastObj;
 class App extends React.Component {
     toastShow() {
         toastObj = ToastUtility.show({
