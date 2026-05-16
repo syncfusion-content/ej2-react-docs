@@ -1,26 +1,28 @@
-import { ColumnDirective, ColumnsDirective, Filter, GridComponent, Group } from '@syncfusion/ej2-react-grids';
-import { Inject, Page, Sort } from '@syncfusion/ej2-react-grids';
+// Import the required grid modules from the grid package.
+import { ColumnDirective, ColumnsDirective, Filter, GridComponent, Inject, Page, Sort, Edit, Toolbar } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
+// Import Grid data from external file.
 import { data } from './datasource';
+
 function App() {
     const pageSettings = { pageSize: 6 };
-    const sortSettings = { columns: [
-            { field: 'EmployeeID', direction: 'Ascending' }
-        ] };
-    const filterSettings = { columns: [
-            { field: 'EmployeeID', operator: 'greaterthan', value: 2 }
-        ] };
-    const groupSettings = { columns: ['EmployeeID'] };
-    return <GridComponent dataSource={data} allowPaging={true} pageSettings={pageSettings} filterSettings={filterSettings} allowGrouping={true} groupSettings={groupSettings} allowSorting={true} sortSettings={sortSettings} allowFiltering={true} height={180}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' width='100' textAlign="Right"/>
-            <ColumnDirective field='CustomerID' width='100'/>
-            <ColumnDirective field='EmployeeID' width='100' textAlign="Right"/>
-            <ColumnDirective field='Freight' width='100' format="C2" textAlign="Right"/>
-            <ColumnDirective field='ShipCountry' width='100'/>
-        </ColumnsDirective>
-        <Inject services={[Page, Sort, Filter, Group]}/>
-    </GridComponent>;
+    const filterSettings = { type: 'CheckBox' };
+    const editOptions = { allowEditing: true, allowAdding: true, allowDeleting: true };
+    const toolbarOptions = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
+    const orderIDRules = { required: true, number: true };
+    const customerNameRules = { required: true };
+    return <div>
+        <GridComponent dataSource={data} allowPaging={true} pageSettings={pageSettings} allowFiltering={true} filterSettings={filterSettings} allowSorting={true} editSettings={editOptions} toolbar={toolbarOptions}>
+            <ColumnsDirective>
+                <ColumnDirective field='OrderID' width='100' validationRules={orderIDRules} isPrimaryKey={true} textAlign='Right'/>
+                <ColumnDirective field='CustomerName' validationRules={customerNameRules} width='100'/>
+                <ColumnDirective field='OrderDate' width='100' format='yMd' editType='datepickeredit' textAlign='Right'/>
+                <ColumnDirective field='Freight' width='100' format='C2' editType='numericedit' textAlign='Right'/>
+                <ColumnDirective field='ShipCountry' editType='dropdownedit' width='100'/>
+            </ColumnsDirective>
+            {/* Inject required Grid features */}
+            <Inject services={[Page, Sort, Filter, Edit, Toolbar]} />
+        </GridComponent>
+    </div>
 }
-;
 export default App;
