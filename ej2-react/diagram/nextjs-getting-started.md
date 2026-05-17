@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# Creating a Next.js Application
+# Creating a Next.js Application 
 
 This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Diagram component.
 
@@ -42,7 +42,7 @@ yarn create next-app
 {% endhighlight %}
 {% endtabs %}
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+Running the above command starts the project configuration process.
 
 1.Define the project name: Users can specify the name of the project directly. Let's specify the name of the project as `ej2-nextjs-diagram`.
 
@@ -54,24 +54,25 @@ Using one of the above commands will lead you to set up additional configuration
 {% endhighlight %}
 {% endtabs %}
 
-2.Select the required packages.
+This creates a new project folder with the specified name.
+
+2.Select Configuration Options.
+
+Choose the required configuration. For a quick setup, select the recommended defaults:
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
-√ What is your project named? ... ej2-nextjs-diagram
-√ Would you like to use TypeScript? ... No / `Yes`
-√ Would you like to use ESLint? ... No / `Yes`
-√ Would you like to use Tailwind CSS? ... `No` / Yes
-√ Would you like to use `src/` directory? ... No / `Yes`
-√ Would you like to use App Router? (recommended) ... No / `Yes`
-√ Would you like to customize the default import alias? ... `No`/ Yes
-Creating a new Next.js app in D:\ej2-nextjs-diagram.
+? Would you like to use the recommended Next.js defaults? » - Use arrow-keys. Return to submit.
+>   Yes, use recommended defaults
+    TypeScript, ESLint, No React Compiler, Tailwind CSS, No src/ directory, App Router, AGENTS.md
+    No, reuse previous settings
+    No, customize settings
 
 {% endhighlight %}
 {% endtabs %}
 
-3.Once complete the above mentioned steps to create `ej2-nextjs-diagram`, navigate to the directory using the below command:
+3.Navigate to the project directory using the below command:
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -106,15 +107,16 @@ yarn add @syncfusion/ej2-react-diagrams
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
 
-Import the `Material` theme into the **src/app/globals.css** file and removed the existing styles in that file, as shown below:
+Import the `Material` theme into the **app/globals.css** file and removed the existing styles in that file, as shown below:
 
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
 
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-react-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-diagrams/styles/material.css";
 
 {% endhighlight %}
 {% endtabs %}
@@ -125,7 +127,7 @@ Import the `Material` theme into the **src/app/globals.css** file and removed th
 
 Follow the below steps to add the React Diagram component to the Next.js project:
 
-1.Before adding the Diagram component to your markup, create a `datasource.tsx` file within the **src/app/** folder and add the Diagram component data.
+1.Before adding the Diagram component to your markup, create a `datasource.tsx` file within the **app** folder and add the Diagram component data.
 
 {% tabs %}
 {% highlight ts tabtitle="datasource.tsx" %}
@@ -181,7 +183,7 @@ export let data: object[] = [{
 {% endhighlight %}
 {% endtabs %}
 
-2.Then, import and define the Diagram component in the **src/app/page.tsx** file, as shown below: 
+2.Then, import and define the Diagram component in the **app/page.tsx** file, as shown below: 
 
 {% raw %}
 
