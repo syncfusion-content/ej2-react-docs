@@ -259,8 +259,6 @@ Here’s the complete code to initialize the Pivot Table with sample data:
 
 ```ts
 import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
-import * as React from 'react';
-import * as ReactDOM from "react-dom";
 import './App.css';
 
 let pivotData = [
@@ -282,11 +280,26 @@ function App() {
         rows: [{ name: 'Country' }, { name: 'Products' }],
         values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' }]
     }
-    let pivotObj;
     return (<PivotViewComponent id='PivotView' height={350} dataSourceSettings={dataSourceSettings}></PivotViewComponent>);
 };
 
 export default App;
+```
+
+### 4. Run the application
+
+Running the Pivot Table application allows you to see your changes and data in real time directly in the browser, making it easy to check your results.
+
+To start the application, open a command prompt in your project folder and run the following command. This will compile the project and automatically open it in your browser.
+
+```bash
+npm run dev
+```
+
+or
+
+```bash
+yarn dev
 ```
 
 ## Adding fields to row, column, value, and filter axes
@@ -327,8 +340,6 @@ In this example, "Date" and "Product" are positioned in the column axis, "Countr
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pivot-table/getting-started-cs1" %}
-
 ## Applying Formatting to a Value Field
 
 Formatting enhances the readability and presentation of numerical data in a Pivot Table, making it more user-friendly and professional. For instance, you can display values with currency symbols or control the number of decimal places for better clarity.
@@ -354,8 +365,6 @@ Within each format object in the [`formatSettings`](https://ej2.syncfusion.com/r
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pivot-table/getting-started-cs2" %}
-
 This approach allows you to apply different formatting patterns to multiple value fields by adding additional objects to the [`formatSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatsettings) array. Each object in the array can target a different field, providing complete control over how numerical data is displayed in the Pivot Table.
 
 ## Module Injection
@@ -371,7 +380,6 @@ The following modules are available to extend the basic Pivot Table functionalit
 To make these modules available, inject them into the PivotView using the `Inject` component within your `App.tsx` file, as shown below. By injecting only the modules you need, your application loads faster and uses fewer resources, as unnecessary module code is excluded from the final bundle.
 
 ```ts
-import * as React from 'react';
 import { PivotViewComponent, Inject, GroupingBar, FieldList, CalculatedField } from '@syncfusion/ej2-react-pivotview';
 
 function App() {
@@ -409,8 +417,6 @@ To enable the field list, set the [`showFieldList`](https://ej2.syncfusion.com/r
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pivot-table/getting-started-cs3" %}
-
 ## Enable Grouping Bar
 
 The grouping bar allows users to easily manage and modify the report settings of the Pivot Table directly through the user interface. With the grouping bar, users can instantly move fields between columns, rows, values, and filters by dragging them, allowing for quick arrangement and analysis of the data.
@@ -434,8 +440,6 @@ Users can also use the grouping bar to sort, filter, or remove fields quickly wi
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pivot-table/getting-started-cs4" %}
-
 ## Exploring Filter Axis
 
 The filter axis helps users display only the most relevant information in the Pivot Table for easier analysis. Users can add fields to the filter axis, which act as a master filter over the data displayed in the [`rows`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#rows), [`columns`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#columns), and [`values`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#values) axes. You can set these fields and their filter items in two ways: by configuring them in your [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings) through code, or by simply dragging and dropping fields from other axes to the filter axis using the grouping bar or the field list at runtime. This makes it easier to analyze targeted subsets of data without modifying the underlying structure of the Pivot Table.
@@ -456,8 +460,6 @@ The following example shows how to add fields to the filter axis in a React Pivo
 {% include code-snippet/pivot-table/getting-started-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/pivot-table/getting-started-cs5" %}
 
 ## Calculated Field
 
@@ -488,41 +490,6 @@ Below is a sample code that shows how to set up calculated fields both through c
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pivot-table/getting-started-cs6" %}
-
-## Run the application
-
-Running the Pivot Table application allows you to see your changes and data in real time directly in the browser, making it easy to check your results.
-
-To start the application, open a command prompt in your project folder and run the following command. This will compile the project and automatically open it in your browser.
-
-```bash
-npm run dev
-```
-
-or
-
-```bash
-yarn dev
-```
-
-{% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/pivot-table/getting-started-cs7/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/pivot-table/getting-started-cs7/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/pivot-table/getting-started-cs7/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/pivot-table/getting-started-cs7/app/datasource.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/pivot-table/getting-started-cs7" %}
-
 For more information and to access the quick start project, visit: [GitHub Repository](https://github.com/SyncfusionExamples/getting-started-with-the-react-pivot-table-component)
 
 > You can also explore our [React Pivot Table example](https://ej2.syncfusion.com/react/demos/#/tailwind3/pivot-table/default) that shows how to rendering of the pivot table with drill-up and drill-down functionality bound to a relational report.
@@ -530,4 +497,3 @@ For more information and to access the quick start project, visit: [GitHub Repos
 ## See Also
 
 * [Tips and Tricks to Quickly Render the Pivot Table for Web](https://www.syncfusion.com/blogs/post/tips-and-tricks-to-quickly-render-the-pivot-table)
-

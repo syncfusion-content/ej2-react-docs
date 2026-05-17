@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with React Diagram Component | Syncfusion®
-description: Checkout and learn about getting started with Syncfusion Essential® React Diagram Component, it's elements, and more.
+description: Learn how to get started with the Syncfusion® React Diagram component, explore its elements, and create a simple diagram.
 control: Getting started 
 platform: ej2-react
 documentation: ug
@@ -10,91 +10,156 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Diagram Component
 
-This section explains the steps required to create a simple diagram and demonstrates the basic usage of the diagram control in React applications.
+This section explains how to create a React application from scratch and build a simple diagram using the Syncfusion® Diagram component.
 
-> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview)
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/mcp-server/ai-coding-assistant/getting-started)
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement)
+Ensure that the system meets the requirements for Syncfusion<sup style="font-size:70%">®</sup> React UI components:
 
-## Dependencies
+- [System requirements](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
-The following list of dependencies are required to use the `Diagram` component in your application.
+## Installation and configuration
 
-```javascript
-|-- @syncfusion/ej2-react-diagrams
-    |-- @syncfusion/ej2-base
-    |-- @syncfusion/ej2-data
-    |-- @syncfusion/ej2-navigations
-    |-- @syncfusion/ej2-inputs
-    |-- @syncfusion/ej2-popups
-    |-- @syncfusion/ej2-buttons
-    |-- @syncfusion/ej2-lists
-    |-- @syncfusion/ej2-splitbuttons
-    |-- @syncfusion/ej2-diagrams
-    |-- @syncfusion/ej2-react-base
-```
+This section explains how to create and run a React application using Vite.
 
-## Installation and Configuration
+### Step 1: Open terminal
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+Open a terminal (Command Prompt, PowerShell, or Terminal) on the system.
 
-> **Note:** To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+### Step 2: Create a React application
 
-To create a new React application, run the following command.
+Run the following command:
 
 ```bash
-npm create vite@latest my-app
+npm create vite@latest
 ```
-To set-up a React application in TypeScript environment, run the following command.
+
+### Step 3: Configure project settings
+
+Follow the prompts shown in the terminal.
+
+**Enter the Project Name**
 
 ```bash
-npm create vite@latest my-app -- --template react-ts
-cd my-app
-npm run dev
+? Project name: » react-diagram-app
 ```
-To set-up a React application in JavaScript environment, run the following command.
+
+**Select the Framework**
+
+Use the arrow keys and select **React**:
 
 ```bash
-npm create vite@latest my-app -- --template react
-cd my-app
-npm run dev
+? Select a framework: » - Use arrow-keys. Return to submit.
+  Vanilla
+  Vue
+> React
+  Preact
+  Lit
+  Svelte
+  Solid
+  Qwik
+  Angular
+  Others
+```
+This configures the project as a React application.
+
+**Select the Variant**
+
+Select **TypeScript**:
+
+```bash
+? Select a variant: » - Use arrow-keys. Return to submit.
+> TypeScript
+  TypeScript + React Compiler
+  TypeScript + SWC 
+  JavaScript  
+  JavaScript + React Compiler
+  JavaScript + SWC
+  React Router v7
+  TanStack Router
+  RedwoodSDK
+  RSC
+  Vike
 ```
 
-### Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Packages
+This enables TypeScript support for better code quality and type checking.
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`Node Package Manager`](https://www.npmjs.com/~syncfusionorg) public registry. You can choose the component that you want to install. For this application, we are going to use the `Diagram` component.
+When prompted:
 
-To install the Diagram component, use the following command:
+```bash
+? Install with npm and start now?
+  > Yes /   No
+```
+
+Select **No**.
+
+### Step 4: Install dependencies
+
+Run the following commands:
+
+```bash
+cd react-diagram-app
+```
+
+Moves into the project directory.
+
+```bash
+npm install
+```
+
+Installs all required packages for the application.
+
+
+### Step 5: Install Syncfusion® package
+
+Run the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-diagrams --save
 ```
 
-### Adding Style Sheet to the Application
+This installs the Syncfusion Diagram component.
 
-The following CSS files are available in ../node_modules/@syncfusion package folder. Add these references in `src/App.css`.
+### Step 6: Add stylesheet
+
+Add the following CSS to the **src/App.css** file:
 
 ```css
-@import "../node_modules/@syncfusion/ej2-react-diagrams/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-diagrams/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css"; 
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
 ```
-N> To refer App.css in the application, import it in the src/App.tsx file.        `import './App.css';`
 
-## Adding Diagram Component to the Application
+These styles are required for rendering the Diagram component.
 
-To include the Diagram component in your application, import the `DiagramComponent` from the `ej2-react-diagrams` package.
-
-Then add the Diagram component as shown in the code example below.
-
-`[src/App.jsx]`
+Import the stylesheet in the **src/App.tsx** file:
 
 ```ts
 import './App.css';
-import { DiagramComponent } from '@syncfusion/ej2-react-diagrams';
+```
+
+## Create a simple diagram
+
+This section explains how to add the Diagram component to the application, create an empty diagram, and build a simple flowchart using nodes and connectors.
+
+### Step 7: Import required modules
+
+Add the following import in the **src/App.tsx** file:
+
+```ts
+import { DiagramComponent, type NodeModel, type ConnectorModel } from '@syncfusion/ej2-react-diagrams';
+```
+
+These modules are used to create diagrams, nodes, and connectors.
+
+### Step 8: Create an empty diagram
+
+Add the following code in the **src/App.tsx** file below the imports:
+
+```ts
 function App() {
   return (
     <div className="App">
@@ -106,377 +171,179 @@ function App() {
   );
 }
 export default App;
+```
+
+This renders an empty diagram in the application.
+
+### Step 9: Define nodes
+
+Add the following code above the `App` function:
+
+```ts
+const nodes: NodeModel[] = [
+  {
+    id: 'Start',
+    offsetX: 300,
+    offsetY: 100,
+    width: 200,
+    height: 80,
+    shape: { type: 'Flow', shape: 'Terminator' },
+    annotations: [{ content: 'Start' }]
+  },
+  {
+    id: 'Process',
+    offsetX: 300,
+    offsetY: 220,
+    width: 200,
+    height: 80,
+    shape: { type: 'Flow', shape: 'Process' },
+    annotations: [{ content: 'Process' }]
+  },
+  {
+    id: 'End',
+    offsetX: 300,
+    offsetY: 340,
+    width: 200,
+    height: 80,
+    shape: { type: 'Flow', shape: 'Terminator' },
+    annotations: [{ content: 'End' }]
+  }
+];
+
+```
+Nodes represent elements in the diagram.
+
+### Step 10: Define connectors
+
+Add the following:
+
+```ts
+const connectors: ConnectorModel[] = [
+  {
+    id: 'connector1',
+    sourceID: 'Start',
+    targetID: 'Process',
+    type: 'Orthogonal'
+  },
+  {
+    id: 'connector2',
+    sourceID: 'Process',
+    targetID: 'End',
+    type: 'Orthogonal'
+  }
+];
+
+```
+Connectors are used to link nodes together.
+
+### Step 11: Bind nodes and connectors
+
+Update the DiagramComponent:
+
+```ts
+function App() {
+  return (
+    <div className="App">
+        <DiagramComponent 
+        id="diagram"
+        width={'100%'}
+        height={'500px'}
+        nodes={nodes}
+        connectors={connectors}></DiagramComponent>
+    </div>
+  );
+}
+export default App;
+```
+This displays the complete diagram.
+
+### Final code
+
+Copy and paste the following code into the **src/App.tsx** file and run the application.
+
+`[src/App.tsx]`
+
+```ts
+import './App.css';
+import { DiagramComponent, type NodeModel, type ConnectorModel } from '@syncfusion/ej2-react-diagrams';
+
+const nodes: NodeModel[] = [
+  {
+    id: 'Start',
+    offsetX: 300,
+    offsetY: 100,
+    width: 200,
+    height: 80,
+    shape: { type: 'Flow', shape: 'Terminator' },
+    annotations: [{ content: 'Start' }]
+  },
+  {
+    id: 'Process',
+    offsetX: 300,
+    offsetY: 220,
+    width: 200,
+    height: 80,
+    shape: { type: 'Flow', shape: 'Process' },
+    annotations: [{ content: 'Process' }]
+  },
+  {
+    id: 'End',
+    offsetX: 300,
+    offsetY: 340,
+    width: 200,
+    height: 80,
+    shape: { type: 'Flow', shape: 'Terminator' },
+    annotations: [{ content: 'End' }]
+  }
+];
+
+const connectors: ConnectorModel[] = [
+  {
+    id: 'connector1',
+    sourceID: 'Start',
+    targetID: 'Process',
+    type: 'Orthogonal'
+  },
+  {
+    id: 'connector2',
+    sourceID: 'Process',
+    targetID: 'End',
+    type: 'Orthogonal'
+  }
+];
+
+function App() {
+  return (
+    <div className="App">
+        <DiagramComponent 
+        id="diagram"
+        width={'100%'}
+        height={'500px'}
+        nodes={nodes}
+        connectors={connectors}></DiagramComponent>
+    </div>
+  );
+}
+export default App;
 
 ```
 
-## Defining Basic Diagram
+### Step 12: Run the application
 
-The example below shows a basic diagram component that renders an empty diagram canvas.
+Run:
 
-{% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/diagram/getting-started/initialize-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/diagram/getting-started/initialize-cs1/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/getting-started/initialize-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/diagram/getting-started/initialize-cs1" %}
-
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally,opening it in the browser.
-
-```
+```bash
 npm run dev
 ```
 
-## Basic Diagram Elements
+### Step 13: View output
 
-Understanding the core elements of a diagram helps you build effective visualizations:
+Open the URL shown in the terminal:
 
-* **Node**: Visualizes any graphical object using nodes, which can be arranged and manipulated on a diagram page. Use nodes to represent entities, processes, or decision points.
-* **Connector**: Represents the relationship between two nodes. Three types of connectors are provided:
-
-```
-1) Orthogonal - Right-angled connectors for structured layouts.
-2) Bezier - Curved connectors for smooth, organic flows.
-3) Straight - Direct linear connections between nodes.
-```
-* **Port**: Acts as the connection points of nodes or connectors, allowing you to create connections with only specific points for precise layout control.
-* **Annotation**: Shows additional information by adding text or labels on nodes and connectors to provide context and meaning.
-
-## Flow Diagram
-
-This section demonstrates how to create a flowchart by manually adding nodes and connecting them with connectors.
-
-### Create and Add Node
-
-Create and add a `node` (JSON data) with specific position, size, label, and shape.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/diagram/getting-started/addnode-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/diagram/getting-started/addnode-cs1/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/getting-started/addnode-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/diagram/getting-started/addnode-cs1" %}
-
-### Apply Shape and Style to Node
-
-The Syncfusion<sup style="font-size:70%">&reg;</sup> diagram control provides support to render many built-in shapes in diagrams.
-Please refer to [`Shapes`](https://helpej2.syncfusion.com/react/documentation/api/diagram/shapes) to know about built-in shapes.
-
-The appearance of a node can be customized by changing its [`fill`](https://helpej2.syncfusion.com/react/documentation/api/diagram/shapestylemodel#fill) color, [`strokeColor`](https://helpej2.syncfusion.com/react/documentation/api/diagram/shapestylemodel#strokecolor), [`strokeWidth`](https://helpej2.syncfusion.com/react/documentation/api/diagram/shapestylemodel#strokewidth), [`borderColor`](https://helpej2.syncfusion.com/react/documentation/api/diagram/node#bordercolor), [`borderWidth`](https://helpej2.syncfusion.com/react/documentation/api/diagram/node#borderwidth), [`strokeDashArray`](https://helpej2.syncfusion.com/react/documentation/api/diagram/shapestylemodel#strokedasharray), [`opacity`](https://helpej2.syncfusion.com/react/documentation/api/diagram/shapestylemodel#opacity), and [`shadow`](https://helpej2.syncfusion.com/react/documentation/api/diagram/node#shadow).
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/diagram/getting-started/apply-style/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/diagram/getting-started/apply-style/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/getting-started/apply-style/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/diagram/getting-started/apply-style" %}
-
-### Add Other Flowchart Nodes to the Diagram
-
-You can add multiple nodes with different shapes to create a complete flowchart diagram.
-
-```Javascript
-
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { DiagramComponent } from "@syncfusion/ej2-react-diagrams";
-export default function App() {
-    const nodes = [
-        {
-            id: 'Start', width: 140, height: 70, offsetX: 300, offsetY: 100,
-            annotations: [{
-              id: 'label1',
-              content: 'Start'
-            }],
-            shape: { type: 'Flow', shape: 'Terminator' },
-            style:{fill:'skyblue',strokeColor:'skyblue',},
-        },
-        {
-            id: 'Process', width: 140, height: 70, offsetX: 300, offsetY: 200,
-            annotations: [{
-              id: 'label1',
-              content: 'Process'
-            }],
-            shape: { type: 'Flow', shape: 'Process' },
-            style:{fill:'skyblue',strokeColor:'skyblue',},
-        },
-        {
-            id: 'Decision', width: 140, height: 70, offsetX: 300, offsetY: 300,
-            annotations: [{
-              id: 'label1',
-              content: 'Decision'
-            }],
-            shape: { type: 'Flow', shape: 'Decision' },
-            style:{fill:'skyblue',strokeColor:'skyblue',},
-        }
-    ];
-    return (<DiagramComponent id="container" width={"100%"} height={"350px"} nodes={nodes}/>);
-}
-const root = ReactDOM.createRoot(document.getElementById("diagram"));
-root.render(<App />);
-
+```bash
+http://localhost:5173/
 ```
 
-### Connect Flow Chart Nodes
+The output will appear as follows:
 
-Connect these nodes by adding a connector using the [`connectors`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connectormodel) property of the diagram and refer to the source and target end by using the [`sourceID`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connectormodel#sourceid) and [`targetID`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connectormodel#targetid) properties.
-The required nodes and connectors can be added to form a complete flow diagram.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/diagram/getting-started/flowdiagram-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/diagram/getting-started/flowdiagram-cs1/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/getting-started/flowdiagram-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/diagram/getting-started/flowdiagram-cs1" %}
- 
-Default values for all [`nodes`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nodemodel) and [`connectors`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connectormodel) can be set using the [`getNodeDefaults`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#getnodedefaults) and [`getConnectorDefaults`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#getconnectordefaults) properties, respectively. For example, if all nodes have the same width and height, such properties can be moved into `getNodeDefaults`.
-
-
-## Module Injection
-
-The diagram component is divided into individual feature-wise modules. To use a particular feature, you need to inject its feature service in the App. For basic diagram functionality, you typically only need `DataBinding` and layout modules like `HierarchicalTree`. The following list describes the module names and their descriptions:
-
-* `BpmnDiagrams` - Inject this provider to add built-in BPMN Shapes to diagrams.
-* `ConnectorBridging` - Inject this provider to add bridges to connectors.
-* `ConnectorEditing` - Inject this provider to edit the segments for connectors.
-* `ComplexHierarchicalTree` - Inject this provider to use complex hierarchical tree-like structures.
-* `DataBinding` - Inject this provider to populate nodes from given data source.
-* `DiagramContextMenu` - Inject this provider to manipulate context menu.
-* `HierarchicalTree` - Inject this provider to use hierarchical tree-like structures.
-* `LayoutAnimation` - Inject this provider to add animation to layouts.
-* `MindMap` - Inject this provider to use mind map layouts.
-* `PrintAndExport` - Inject this provider to print or export the objects.
-* `RadialTree` - Inject this provider to use radial tree-like structures.
-* `Snapping` - Inject this provider to snap the objects.
-* `SymmetricLayout` - Inject this provider to render layouts in symmetrical method.
-* `UndoRedo` - Inject this provider to revert and restore the changes.
-* `Ej1Serialization` - Inject this provider to load ej1 diagram json in ej2 diagram.
-
-These modules should be injected into the diagram using the **Inject** directive.
-
-```javascript
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import {
-  DiagramComponent,
-  HierarchicalTree,
-  MindMap,
-  RadialTree,
-  ComplexHierarchicalTree,
-  DataBinding,
-  Snapping,
-  PrintAndExport,
-  BpmnDiagrams,
-  SymmetricLayout,
-  ConnectorBridging,
-  UndoRedo,
-  LayoutAnimation,
-  DiagramContextMenu,
-  ConnectorEditing,
-  Ej1Serialization,
-  Inject
-} from "@syncfusion/ej2-react-diagrams";
-
-export default function App() {
-  return (
-    <DiagramComponent id="diagram" width={1000} height={500}>
-      <Inject
-        services={[
-          HierarchicalTree,
-          MindMap,
-          RadialTree,
-          ComplexHierarchicalTree,
-          DataBinding,
-          Snapping,
-          PrintAndExport,
-          BpmnDiagrams,
-          SymmetricLayout,
-          ConnectorBridging,
-          UndoRedo,
-          LayoutAnimation,
-          DiagramContextMenu,
-          ConnectorEditing,
-          Ej1Serialization
-        ]}
-      />
-    </DiagramComponent>
-  );
-}
-const root = ReactDOM.createRoot(document.getElementById("diagram"));
-root.render(<App />);
-```
-## Automatic Organizational Chart
-
-While the previous section showed how to create diagrams manually, this section demonstrates how to create and position diagrams automatically using data binding and layout algorithms.
-
-### Create Business Object (Employee Information)
-
-Define Employee Information as JSON data. The following code example shows an employee array where `Name` is used as a unique identifier and `ReportingPerson` is used to identify the person to whom an employee reports in the organization.
-
-```ts
-    const data: Object[] = [
-        {
-            Name: "Elizabeth",
-            Role: "Director"
-        },
-        {
-            Name: "Christina",
-            ReportingPerson: "Elizabeth",
-            Role: "Manager"
-        },
-        {
-            Name: "Yoshi",
-            ReportingPerson: "Christina",
-            Role: "Lead"
-        },
-        {
-            Name: "Philip",
-            ReportingPerson: "Christina",
-            Role: "Lead"
-        },
-        {
-            Name: "Yang",
-            ReportingPerson: "Elizabeth",
-            Role: "Manager"
-        },
-        {
-            Name: "Roland",
-            ReportingPerson: "Yang",
-            Role: "Lead"
-        },
-        {
-            Name: "Yvonne",
-            ReportingPerson: "Yang",
-            Role: "Lead"
-        }
-    ];
-```
-
-### Map Data Source
-
-You can configure the above "Employee Information" with the diagram, so that the nodes and connectors are automatically generated using the mapping properties. The following code example demonstrates how to use [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/diagram/datasourcemodel) to map [`id`](https://ej2.syncfusion.com/react/documentation/api/diagram/datasourcemodel#id) and [`parentId`](https://ej2.syncfusion.com/react/documentation/api/diagram/datasourcemodel#parentid) with the corresponding property names of employee information.
-
-```ts
-import { DataManager } from "@syncfusion/ej2-data";
-
-export default function App() {
-  const data: Object[] = [
-    {
-      Name: "Elizabeth",
-      Role: "Director"
-    },
-    {
-      Name: "Christina",
-      ReportingPerson: "Elizabeth",
-      Role: "Manager"
-    },
-    {
-      Name: "Yoshi",
-      ReportingPerson: "Christina",
-      Role: "Lead"
-    },
-    {
-      Name: "Philip",
-      ReportingPerson: "Christina",
-      Role: "Lead"
-    },
-    {
-      Name: "Yang",
-      ReportingPerson: "Elizabeth",
-      Role: "Manager"
-    },
-    {
-      Name: "Roland",
-      ReportingPerson: "Yang",
-      Role: "Lead"
-    },
-    {
-      Name: "Yvonne",
-      ReportingPerson: "Yang",
-      Role: "Lead"
-    }
-  ];
-  const dataSettings: object = {
-    id: "Name",
-    parentId: "ReportingPerson",
-    dataManager: new DataManager(data as JSON[])
-  }
-  return (
-    <DiagramComponent
-      id="container"
-      width={"100%"}
-      height={"350px"}
-      dataSourceSettings={dataSettings}
-    >
-      <Inject services={[HierarchicalTree, DataBinding]} />
-    </DiagramComponent>
-  );
-}
-const root = ReactDOM.createRoot(document.getElementById("diagram"));
-root.render(<App />);
-```
-
-### Rendering Layout with Data Source
-
-To create an organizational chart, the [`type`](https://ej2.syncfusion.com/react/documentation/api/diagram/layouttype) of layout should be set as an `OrganizationalChart`. The following code example shows how DataManager is used to generate layouts based on the DataSourceSettings of the Diagram.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/diagram/getting-started/orgchart-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/diagram/getting-started/orgchart-cs1/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/getting-started/orgchart-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/diagram/getting-started/orgchart-cs1" %}
-
-### Customize Employee Appearance
-
-The following code examples indicate how to define the default appearance of nodes and connectors. The [`setNodeTemplate`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#setnodetemplate) is used to update each node based on employee data.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/diagram/getting-started/orgchart-cs2/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/diagram/getting-started/orgchart-cs2/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/getting-started/orgchart-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/diagram/getting-started/orgchart-cs2" %}
-
-N> You can refer to our [React Diagram](https://www.syncfusion.com/react-components/react-diagram) feature tour page for its groundbreaking feature representations. You can also explore our [React Diagram example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/diagram/default-functionality) that shows how to render the Diagram in React.
+ ![Getting started](./images/Getting-started.png)
