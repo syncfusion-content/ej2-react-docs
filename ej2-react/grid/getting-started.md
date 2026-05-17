@@ -97,7 +97,7 @@ npm run dev
 
 ## See also
 
-* [Grid Modules and Available Features](./module)
+* [Grid Feature Modules](./module)
 * [Top 5 Features of React Data Grid](https://www.syncfusion.com/blogs/post/top-5-features-react-data-grid.aspx)
 * [How to render React Grid with bootstrap theme](https://support.syncfusion.com/kb/article/10054/how-to-render-react-grid-with-bootstrap-theme)
 * [Getting Started with Next.js](./nextjs-getting-started)

@@ -1,8 +1,10 @@
-import { ColumnDirective, ColumnsDirective, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
-import * as React from 'react';
+
+
+import { ColumnDirective, ColumnsDirective, TreeGridComponent } from '@syncfusion/ej2-react-grids';
+import './App.css';
 
 // Defines the data to be displayed in the TreeGrid.
-const data = [
+const data: object[] = [
     { 
         TaskID: 1, TaskName: 'Planning', StartDate: new Date('02/04/2025'), EndDate: new Date('02/07/2025'), Duration: 4,
         subtasks: [
@@ -36,3 +38,5 @@ function App() {
     </div>
 }
 export default App;
+
+
