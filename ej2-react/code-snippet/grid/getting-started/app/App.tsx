@@ -1,7 +1,7 @@
 
 
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import * as React from 'react';
+import './App.css';
 
 // Defines the data to be displayed in the Grid.
 const data: object[] = [
