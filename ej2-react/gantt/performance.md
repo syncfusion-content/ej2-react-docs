@@ -46,14 +46,6 @@ By incorporating `useMemo`, developers can optimize the rendering process, enhan
 
 When integrating image or template elements into a Gantt column, it’s recommended to utilize the [Column Template](https://ej2.syncfusion.com/react/documentation/gantt/columns/column-template) feature instead of customizing data through the [rowDataBound](https://ej2.syncfusion.com/react/documentation/api/gantt#rowdatabound) or [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/gantt#querycellinfo) events. These events are triggered for each row and cell rendering, which can introduce delays in the component's rendering process. Moreover, rendering custom elements using these events may lead to the persistence of rendered elements, potentially causing longer rendering times over time. By opting for the column template feature, you can efficiently fulfill this requirement without experiencing rendering delays and ensure a more streamlined rendering process.
 
-## How to improve loading performance by referring individual script and CSS
-
-To enhance the performance of the Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component during initial rendering and certain actions, it is recommended to download specific component scripts using CRG (Custom Resource Generator) for optimized project loading. By default, the ej2.min.js script file includes all Syncfusion<sup style="font-size:70%">&reg;</sup> component scripts, which may lead to longer load times. Using [CRG](https://ej2.syncfusion.com/aspnetmvc/documentation/common/custom-resource-generator), you can selectively choose the components and their modules that your project requires. Subsequently, you can download only the necessary scripts and CSS, thereby improving loading times and optimizing resource utilization according to your project's needs.
-
-[CRG website link](https://crg.syncfusion.com/) 
-
-So to improve the performance of gantt during the initial rendering, suggested you to refer individual script and CSS.
-
 ## How to optimize server-side data operations with adaptors
 
 The Gantt Chart component provides support for various adaptors (OData, ODataV4, WebAPI, URL, etc.) to facilitate server-side data operations and CRUD functionalities. By utilizing these adaptors along with the `DataManager` component, you can seamlessly bind remote data sources to the Gantt and execute actions. During data operations such as filtering and sorting, the corresponding action queries are generated according to the adaptor's requirements. It is crucial to handle these actions on the application side and return the processed data back to the Gantt. Refer to the documentation for comprehensive details. It's worth noting that for efficient data processing, the suggested order for returning processed data to the Gantt is as follows:

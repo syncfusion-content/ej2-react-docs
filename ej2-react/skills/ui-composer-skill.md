@@ -30,27 +30,27 @@ Before installing React UI Composer, ensure the following:
 
 ## Key Benefits
 
-### **AI-Driven UI Generation**
+**AI-Driven UI Generation**
 - Converts prompts into complete React components—not just snippets
 - Automatically selects appropriate Syncfusion® components and features
 - Produces structured, maintainable code
 
-### **Component Usage & API Accuracy**
+**Component Usage & API Accuracy**
 - Uses correct Syncfusion® component APIs
 - Injects required feature modules (paging, sorting, filtering, etc.)
 - Avoids unsupported or deprecated patterns
 
-### **Patterns & Best Practices**
+**Patterns & Best Practices**
 - Recommended component composition and state management
 - Event handling aligned with React standards
 - Secure and scalable coding patterns
 
-### **Accessibility & Responsiveness**
+**Accessibility & Responsiveness**
 - WCAG 2.1 AA–aligned output
 - Semantic HTML with ARIA support
 - Mobile-first responsive layouts
 
-### **Design-System Integration**
+**Design-System Integration**
 - Supports Tailwind, Bootstrap, Material, or custom themes
 - Ensures consistent Syncfusion® styling and theme usage
 
@@ -58,7 +58,7 @@ Before installing React UI Composer, ensure the following:
 
 Before installing React UI Composer, ensure that APM (Agent Package Manager) is installed and available in your environment.
 
-### Verify APM Installation
+**Verify APM Installation**
 
 Run the following command to confirm APM is installed:
 
@@ -66,29 +66,34 @@ Run the following command to confirm APM is installed:
 apm --version
 ```
 
-### Install the Syncfusion® React UI Composer package using APM
+**Install the Syncfusion® React UI Composer package using APM**
 
 Use the APM CLI to install the React UI Composer skill for your preferred environment:
 
 {% tabs %}
 {% highlight bash tabtitle="Copilot" %}
 
-apm install syncfusion/react-ui-composer -t copilot
+// By default, it installs to the GitHub Copilot target
+
+apm install Syncfusion/react-ui-composer
 
 {% endhighlight %}
 {% highlight bash tabtitle="Cursor" %}
 
-apm install syncfusion/react-ui-composer -t cursor
+apm install Syncfusion/react-ui-composer -t cursor
 
 {% endhighlight %}
-{% highlight bash tabtitle="Codex" %}
+{% highlight bash tabtitle="Code Studio" %}
 
-apm install syncfusion/react-ui-composer -t codex
+// For Code Studio, refer to the note below to configure the agent location explicitly to use it in the chat.
 
-{% endhighlight  %}
+apm install Syncfusion/react-ui-composer
+
+
+{% endhighlight %}
 {% highlight bash tabtitle="Claude" %}
 
-apm install syncfusion/react-ui-composer -t claude
+apm install Syncfusion/react-ui-composer -t claude
 
 {% endhighlight %}
 {% endtabs %}
@@ -98,9 +103,9 @@ After installation, the following artifacts are added to your project for the Gi
 - `.agent/skills/` – contains the skill files
 - `.github/agents/` – contains the agent configuration
 
-Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targets/#detection-signals) for details about supported deployment targets.
+For details on supported deployment targets, refer to the [documentation](https://microsoft.github.io/apm/reference/cli-commands/#apm-targets---show-resolved-deployment-targets).
 
-> For Syncfusion® Code Studio, use the Copilot command above to install the React UI Composer.
+> For Syncfusion® Code Studio, users must explicitly configure the agent location to use it in the chat. Refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations).
 
 ## How the Syncfusion® React UI Composer Skill Works
 
@@ -109,9 +114,8 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 3. **Component Mapping** — Map intent to Syncfusion® components and required feature modules.
 4. **Theming & Design System**  
    Load required theming guidelines and confirm key design choices:
-   - CSS framework (Tailwind, Bootstrap, Material, or Greenfield(custom theme)). If no themes detected in the existing project, Greenfield and Syncfusion Tailwind3 theme are shown as the default option—proceed with this or change the theme as preferred.
+   - CSS framework (Tailwind, Bootstrap, Material, or Greenfield(custom theme))
    - Syncfusion theme (Tailwind3, Bootstrap5, Material3, fluent2)
-   - Light and Dark Mode
    - Core design basics (colors, spacing, typography, responsiveness, accessibility)
 5. **Code Generation** — Produce TypeScript React components, props interfaces, and CSS/styling scaffolding.
 6. **Dependency Management** — Recommend or install required Syncfusion® packages and peer dependencies.
@@ -136,14 +140,14 @@ After installing React UI Composer with APM, the relevant agent and skill files 
 
 To start using the skill:
 
-1. Open your supported IDE.
-2. In the chat panel, select the `syncfusion-react-ui-composer` agent from the **Agent dropdown**.
+1.Open your supported IDE.
+2.In the chat panel, select the `syncfusion-react-ui-composer` agent from the **Agent dropdown**.
 
 ![Set Agent](images/UI-Composer-Agent.png)
 
-3. Start prompting the agent with a clear description of your UI requirements.
+3.Start prompting the agent with a clear description of your UI requirements.
 
-Examples Prompts:
+**Examples Prompts:**
 
 {% promptcards %}
 {% promptcard Authentication %}
@@ -154,15 +158,8 @@ Create a CMS Admin Dashboard UI featuring a collapsible sidebar with navigation 
 {% endpromptcard %}
 {% endpromptcards %}
 
-Generated code follows best practices with accessible, semantic HTML, responsive mobile-first layouts, strong TypeScript typing, and built-in security measures such as input validation and avoidance of embedded secrets.
 
-## Best Practices
-
-Follow these guidelines to get the most out of UI Composer and ensure high-quality production-ready result:
-
-- **Stay consistent** — Maintain consistent file organization, naming conventions, and coding standards throughout your project.
-- **Use advanced AI models** — For best results, use **Claude Sonnet 4.6 or higher** capability models to produce better code quality and more accurate implementations.
-- **Review all content and assets before production** — Replace any placeholder images or icons (e.g., from Unsplash or emoji sets) with your brand assets. Also validate the logic, security, and compatibility with your existing code before deployment.
+Generated code follows best practices with accessible, semantic HTML, responsive mobile-first layouts, strong TypeScript typing, and built-in security measures such as input validation and avoidance of hardcoded secrets.
 
 ## Troubleshooting
 
@@ -184,7 +181,7 @@ Any Skills-compatible agent that reads local skill files (Code Studio, VS Code, 
 Yes. Supported agents automatically load relevant skills based on your query.
 
 **Can I customize the generated styles?**
-Yes — the skill supports choosing Tailwind, Bootstrap, Material, or a custom theme; generated components include clear integration points for style adjustments.
+Yes. The skill supports choosing Tailwind, Bootstrap, Material, or a custom theme; generated components include clear integration points for style adjustments.
 
 **Does it modify files automatically?**
 The skill proposes changes and requires confirmation for insertion; automatic dependency installation may be offered depending on agent permissions.

@@ -1,34 +1,85 @@
 ---
 layout: post
-title: Index in React Gantt Chart component | Syncfusion
-description: Learn here all about Index in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
-control: Index 
+title: Overview in React Gantt Chart component | Syncfusion
+description: Learn about the React Gantt Chart component features, capabilities, and how to build interactive project schedules.
+control: Overview 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in React Gantt Chart component
+# React Gantt Chart Overview
 
-The Gantt chart is a project management tool which provides a Microsoft Project-like interface for scheduling and managing projects. Its intuitive user interface lets you visually manage tasks, task relationships, and resources in a project.
+The React Gantt Chart is a project management component that provides a Microsoft Project-like interface for scheduling and managing projects. It enables you to visually manage tasks, task relationships, and resources with an intuitive and interactive timeline view.
 
-## Key Features
+## Quick start
 
-* [**Data sources**](./data-binding/) - Bind the Gantt Chart component with an array of JSON objects or DataManager.
-* [**Large data binding**](./data-binding/) - To render a large number of tasks in the Gantt Chart with an effective performance. It allows users to load parent records alone on load time. Child records render on demand during expansion action.
-* [**Editing**](./managing-tasks/): A task’s fields, such as duration, start date, end date, predecessors, and more, can be edited directly in their respective cells using the Edit dialog or interactively using taskbars.
-* [**Undo/Redo**](./undo-redo/): It enables users to revert the most recent action performed in the Gantt Chart. Redo feature can reapply an action that was previously undone using the Undo feature. This allows users to revert their decision to undo an action.
-* [**Task dependencies**](./task-dependency/): Defines task relationships using finish-to-start, start-to-finish, start-to-start, and finish-to-finish task dependency types.
-* [**Customizable timeline**](./timeline/): Displays timescale from minutes to decades easily and also displays the custom texts in timescale. Timeline can be displayed in either one-tier or two-tier layout.
-* [**Taskbars**](./task-scheduling/): Supports unscheduled tasks, and it can be customized. Baselines can also be displayed for the tasks.
-* [**Critical path**](./critical-path/):  It is a series of tasks (or sometimes only a single task) that controls the calculated finish date of the project. If a task in a critical path is delayed, then the entire project will be delayed.
-* [**Timezone**](./timezone/): It explains the Gantt Chart schedules project in their respective timezones.
-* [**Columns**](./columns/): Customizes the columns and adds the custom columns to the Gantt chart at initialization.
-* [**Resources**](./resources/): Resources are represented by staff, equipment, materials, and more. You can show and allocate the resources for each task.
-* [**Filtering**](./filtering/): Filters individual columns using menu and excel-like filtering options, along with the toolbar search box.
-* [**Toolbar**](./tool-bar/): Managing the Gantt data using toolbars.
-* [**Rows**](./rows/): Customizes the rows and adds the custom rows to the Gantt chart at initialization and dynamically.
-* [**Selection**](./selection/): Customizes the row and cell selection to the Gantt chart at initialization and dynamically.
-* [**Data markers or indicators**](./appearance-customization/): Displays indicators and flags along with taskbars and task labels.
-* [**Event markers**](./event-markers/): Highlights important days or events in a project using the event markers.
-* [**Holidays**](./holidays/): Defines non-working days in a project using holidays.
+- [Getting Started](./getting-started/) - Install and render your first Gantt Chart
+- [Live Demos](https://ej2.syncfusion.com/react/demos/#/tailwind3/gantt/default) - Explore interactive examples
+- [API Reference](https://ej2.syncfusion.com/react/documentation/api/gantt) - Complete API documentation
+
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Try the Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant for faster setup, smart suggestions, and seamless integration in IDEs like VS Code and Cursor. [Explore now](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview)
+
+## Data binding and performance
+
+- [**Data sources**](./data-binding/) - Bind local arrays, JSON objects, or remote data using DataManager
+- [**Load on demand**](./data-binding/) - Load parent tasks initially and render child tasks on expansion for large datasets
+- [**Virtual scrolling**](./scrolling/virtual-scrolling/) - Handle thousands of tasks with optimized rendering
+
+## Task management
+
+- [**Task editing**](./managing-tasks/editing-tasks/) - Edit tasks inline, through dialogs, or by dragging taskbars
+- [**Task dependencies**](./task-dependency/) - Define relationships using finish-to-start, start-to-finish, start-to-start, and finish-to-finish types
+- [**Undo and redo**](./undo-redo/) - Revert or reapply recent actions in the Gantt Chart
+- [**Task scheduling**](./task-scheduling/) - Configure automatic or manual task scheduling modes
+- [**Splitting tasks**](./managing-tasks/splitting-and-merging-tasks/) - Split tasks into multiple segments and merge them back
+
+## Timeline and visualization
+
+- [**Customizable timeline**](./timeline/) - Configure timeline tiers from minutes to decades with custom text
+- [**Zooming**](./timeline/zooming/) - Zoom in and out to view tasks at different time scales
+- [**Taskbars**](./taskbar/) - Customize taskbar appearance and display baselines for planned vs actual progress
+- [**Critical path**](./critical-path/) - Identify task sequences that determine project completion dates
+- [**Timezone support**](./timezone/) - Schedule projects across different timezones
+
+## Columns and layout
+
+- [**Columns**](./columns/columns/) - Configure, customize, and add columns to display task information
+- [**Column templates**](./columns/column-template/) - Use custom templates to format column content
+- [**Frozen columns**](./columns/frozen-column/) - Lock columns to keep them visible during horizontal scrolling
+- [**Column reordering**](./columns/column-reorder/) - Reorder columns by dragging and dropping
+- [**Column resizing**](./columns/column-resizing/) - Adjust column widths interactively
+
+## Data operations
+
+- [**Filtering**](./filtering/filtering/) - Filter tasks using menu, Excel-like, and toolbar search options
+- [**Sorting**](./sorting/) - Sort tasks by one or multiple columns
+- [**Selection**](./selection/selection/) - Select single or multiple rows and cells
+- [**Context menu**](./context-menu/) - Access common operations through right-click menus
+
+## Resources and indicators
+
+- [**Resource allocation**](./resources/) - Assign and manage staff, equipment, and materials across tasks
+- [**Resource view**](./resource-view/) - Display tasks grouped by assigned resources
+- [**Data markers**](./data-markers/) - Display custom indicators and flags on taskbars
+- [**Event markers**](./event-markers/) - Highlight important dates or milestones in the timeline
+- [**Holidays**](./holidays/) - Define non-working days in project schedules
+
+## User interface
+
+- [**Toolbar**](./toolbar/) - Add built-in or custom toolbar actions for common operations
+- [**Row customization**](./rows/rows/) - Customize row appearance and height
+- [**Drag and drop**](./rows/drag-and-drop/) - Reorder tasks by dragging rows
+- [**Indent and outdent**](./rows/indent-and-outdent/) - Change task hierarchy levels
+
+## Export
+
+- [**PDF export**](./pdf-export/pdf-export/) - Export Gantt Charts to PDF with customization options
+- [**Excel export**](./excel-export/excel-export/) - Export task data to Excel format
+
+## Additional features
+
+- [**Immutable mode**](./immutable/) - Optimize performance for frequent data updates
+- [**State persistence**](./state-persistence/) - Save and restore user preferences
+- [**Accessibility**](./accessibility/) - Built-in keyboard navigation and screen reader support
+- [**Globalization**](./global-local/) - Localize dates, numbers, and text for different cultures

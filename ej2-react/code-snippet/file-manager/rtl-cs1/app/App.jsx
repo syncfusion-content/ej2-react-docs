@@ -1,6 +1,6 @@
 {% raw %}
 import { DetailsView, FileManagerComponent, NavigationPane, Toolbar, Inject } from '@syncfusion/ej2-react-filemanager';
-import * as React from 'react';
+
 function App() {
     let hostUrl = "https://ej2-aspcore-service.azurewebsites.net/";
 
@@ -11,7 +11,7 @@ function App() {
             uploadUrl: hostUrl + 'api/FileManager/Upload',
             url: hostUrl + "api/FileManager/FileOperations"
         }}>
-            <Inject services={[NavigationPane, DetailsView, Toolbar]}/>
+            <Inject services={[NavigationPane, DetailsView, Toolbar]} />
         </FileManagerComponent>
     </div>);
 }

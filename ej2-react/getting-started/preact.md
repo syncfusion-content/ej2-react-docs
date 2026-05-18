@@ -1,14 +1,14 @@
 ---
 layout: post
 title: React getting started with Preact | Syncfusion
-description: Check out and learn about how to use Syncfusion React UI components in Preact project.
+description: Check out and learn about how to create and integrate Syncfusion React UI components in Preact project.
 control: Preact
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> React Components in Preact
+# Getting Started with Syncfusion® React Components in Preact
 
 This article outlines the steps required to set up a [Preact](https://preactjs.com/) project and integrate Syncfusion<sup style="font-size:70%">&reg;</sup> React components.
 
@@ -22,15 +22,18 @@ This article outlines the steps required to set up a [Preact](https://preactjs.c
 
 To create a new `Preact` project, use one of the commands that are specific to either NPM or Yarn.
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm init preact@latest
-```
 
-or
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
 
-```bash
 yarn create preact
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Using one of the above commands will lead you to set up additional configurations for the project, as below:
 
@@ -92,19 +95,22 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are av
 
 This guide uses the [React Grid component](https://www.syncfusion.com/react-components/react-data-grid) as an example. To install the React Grid component package, use the following command:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm install @syncfusion/ej2-react-grids --save
-```
 
-or
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
 
-```bash
 yarn add @syncfusion/ej2-react-grids
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be added using CSS or SASS styles in the npm packages. Additional options are available via CDN or the [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/). See the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme/) for full details.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be added using CSS or SASS styles in the npm packages. Additional options are available via CDN or the [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). See the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for full details.
 
 This example uses the `Tailwind 3` theme, imported in the **src/style.css** file:
 

@@ -1,34 +1,15 @@
-
-
-const projectResources: object[] = [
-    { ResourceId: 1, ResourceName: 'Project Manager' },
-    { ResourceId: 2, ResourceName: 'Software Analyst' },
-    { ResourceId: 3, ResourceName: 'Developer' },
-    { ResourceId: 4, ResourceName: 'Testing Engineer' }
-];
 const data: object[] = [
-    {
-        TaskID: 1,
-        TaskName: 'Project Initiation',
-        StartDate: new Date('04/02/2019'),
-        EndDate: new Date('04/21/2019'),
-    },
-    { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, ParentId:1, Progress: 50, Resources: [2, 3] },
-    { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, ParentId:1, Progress: 50, Resources: [2] },
-    { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, ParentId:1, Predecessor: '3FS', Progress: 50, Resources: [1] },
-    {
-        TaskID: 5,
-        TaskName: 'Project Estimation',
-        StartDate: new Date('04/02/2019'),
-        EndDate: new Date('04/21/2019'),
-    },
-    { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, ParentId:5, Progress: 50 },
-    { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, ParentId:5, Progress: 50, Resources: [1, 3, 5] },
-    { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, ParentId:5, Predecessor: '7SS', Progress: 50 }
+    {TaskID: 1, TaskName: 'Project initiation', StartDate: new Date('2024-04-01'), EndDate: new Date('2024-04-15')},
+    {TaskID: 2, TaskName: 'Identify site location', StartDate: new Date('2024-04-01'), Duration: 4, Progress: 70, ParentID: 1},
+    {TaskID: 3, TaskName: 'Perform site survey', StartDate: new Date('2024-04-01'), Duration: 4, Progress: 50, ParentID: 1},
+    {TaskID: 4, TaskName: 'Soil testing', StartDate: new Date('2024-04-01'), Duration: 3, Progress: 40, ParentID: 1},
+    {TaskID: 5, TaskName: 'Project estimation', StartDate: new Date('2024-04-08'), EndDate: new Date('2024-04-18')},
+    {TaskID: 6, TaskName: 'Develop floor plan', StartDate: new Date('2024-04-08'), Duration: 5, Progress: 30, ParentID: 5},
+    {TaskID: 7, TaskName: 'Estimate project cost', StartDate: new Date('2024-04-08'), Duration: 5, Progress: 20, ParentID: 5}
 ];
 
 
-import { GanttComponent, Inject, Edit, Filter, Sort } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent} from '@syncfusion/ej2-react-gantt';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
@@ -39,26 +20,9 @@ function App () {
         startDate: 'StartDate',
         duration: 'Duration',
         progress: 'Progress',
-        parentID:'ParentId',
-        dependency: 'Predecessor',
-        resourceInfo: 'Resources'
+        parentID: 'ParentID'
     };
-    const labelSettings: any = {
-        rightLabel: 'Resources'
-    };
-    const editSettings: any = {
-        allowEditing: true,
-        editMode: 'Auto',
-        allowTaskbarEditing: true
-    };
-    const resourceFields: any = {
-        id: 'ResourceId',
-        name: 'ResourceName',
-    };
-        return <GanttComponent dataSource={data} allowFiltering={true} allowSorting={true} taskFields={taskFields} editSettings={editSettings} labelSettings={labelSettings}
-            resourceFields={resourceFields} resources={projectResources} height='400px'>
-            <Inject services={[Edit, Filter, Sort]} />
-        </GanttComponent>
+        return <GanttComponent dataSource={data} taskFields={taskFields} height='400px'></GanttComponent>
     };
 ReactDOM.render(<App />, document.getElementById('root'));
 
