@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> React Components using Webpack Externals
+# Getting Started with Syncfusion® React using Webpack Externals
 
 This article provides a step-by-step guide for configuring a React application to use Syncfusion<sup style="font-size:70%">&reg;</sup> React components with [Webpack Externals](https://webpack.js.org/configuration/externals/). Webpack Externals instruct Webpack to treat specified dependencies as external, loading them via CDN or global variables instead of bundling them into your app.
 
@@ -33,7 +33,7 @@ This approach helps reduce bundle sizes and allows for sharing libraries via CDN
      ```bash
      npm init -y
 
-     npm install react react-dom
+     npm install react@18.2.0 react-dom@18.2.0
      ```
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
@@ -194,26 +194,26 @@ module.exports = {
     <script crossorigin src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
 
     <!-- Syncfusion React controls styles -->
-    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/32.1.19/tailwind3.css" />
+    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/33.1.44/tailwind3.css" />
 
     <!-- Syncfusion React controls scripts -->
-    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-base/dist/ej2-base.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-data/dist/ej2-data.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-buttons/dist/ej2-buttons.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-splitbuttons/dist/ej2-splitbuttons.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-popups/dist/ej2-popups.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-navigations/dist/ej2-navigations.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-inputs/dist/ej2-inputs.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-dropdowns/dist/ej2-dropdowns.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-calendars/dist/ej2-calendars.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-lists/dist/ej2-lists.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-excel-export/dist/ej2-excel-export.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-pdf-export/dist/ej2-pdf-export.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-file-utils/dist/ej2-file-utils.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-compression/dist/ej2-compression.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-grids/dist/ej2-grids.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-react-base/dist/ej2-react-base.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/32.1.19/ej2-react-grids/dist/ej2-react-grids.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.1.44/ej2-base/dist/ej2-base.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.1.44/ej2-data/dist/ej2-data.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.1.44/ej2-buttons/dist/ej2-buttons.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.1.44/ej2-splitbuttons/dist/ej2-splitbuttons.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.1.44/ej2-popups/dist/ej2-popups.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.1.44/ej2-navigations/dist/ej2-navigations.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.1.44/ej2-inputs/dist/ej2-inputs.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.1.44/ej2-dropdowns/dist/ej2-dropdowns.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.1.44/ej2-calendars/dist/ej2-calendars.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.1.44/ej2-lists/dist/ej2-lists.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.1.44/ej2-excel-export/dist/ej2-excel-export.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.1.44/ej2-pdf-export/dist/ej2-pdf-export.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.1.44/ej2-file-utils/dist/ej2-file-utils.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.1.44/ej2-compression/dist/ej2-compression.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.1.44/ej2-grids/dist/ej2-grids.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.1.44/ej2-react-base/dist/ej2-react-base.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.1.44/ej2-react-grids/dist/ej2-react-grids.min.js"></script>
     <title>Syncfusion Webpack Externals Demo</title>
 </head>
 <body>

@@ -51,18 +51,22 @@ This command will prompt you for a few settings for the new project, such as sel
 
 ![Initial_setup](./images/Initial-setup.jpg)
 
-To set up a React application in TypeScript environment, run the following command.
+Otherwise, you can directly set up our project with TypeScript or JavaScript environment based on the following commands
+
+To set up a React application in **TypeScript** environment:
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
-cd my-app
-npm run dev
 ```
 
-To set up a React application in JavaScript environment, run the following command.
+To set up a React application in **JavaScript** environment:
 
 ```bash
 npm create vite@latest my-app -- --template react
+```
+
+To navigate and run your project:
+```bash
 cd my-app
 npm run dev
 ```
@@ -111,6 +115,47 @@ Now run the `npm run dev` command in the console to start the development server
 ```
 npm run dev
 ```
+
+## Module injection
+
+Accumulation Chart component are segregated into individual feature-wise modules. In order to use a particular feature, you need to inject its feature service in the AppModule. In the current application, we are going to modify the above basic chart to visualize data in a pie chart. For this application we are going to use pie series. Please find relevant feature service name and description as follows.
+
+* `PieSeries` - Inject this module in to `services` to use pie series.
+
+Import the above-mentioned modules from the chart package and inject them into the `services` section of the Accumulation Chart component as follows.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+
+import { AccumulationChartComponent, PieSeries, Inject } from '@syncfusion/ej2-react-charts';
+import * as React from 'react';
+
+function App() {
+    return (
+        <AccumulationChartComponent>
+            <Inject services={[PieSeries]} />
+        </AccumulationChartComponent>
+    );
+}
+export default App;
+
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+
+import { AccumulationChartComponent, PieSeries, Inject } from '@syncfusion/ej2-react-charts';
+import * as React from 'react';
+
+function App() {
+    return (
+        <AccumulationChartComponent>
+            <Inject services={[PieSeries]} />
+        </AccumulationChartComponent>
+    );
+}
+export default App;
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Pie series
 

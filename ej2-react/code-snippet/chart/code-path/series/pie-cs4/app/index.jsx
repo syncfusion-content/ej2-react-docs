@@ -1,8 +1,6 @@
 {% raw %}
 
 import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective } from '@syncfusion/ej2-react-charts';
-import * as React from "react";
-import * as ReactDOM from "react-dom";
 function App() {
     const data = [
         { x: 'Jan', y: 3, text: 'Jan: 3' }, { x: 'Feb', y: 3.5, text: 'Feb: 3.5' },
@@ -19,7 +17,5 @@ function App() {
 }
 ;
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('charts'));
-root.render(<App />);
 
 {% endraw %}

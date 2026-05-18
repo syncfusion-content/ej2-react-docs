@@ -55,6 +55,8 @@ Using one of the above commands will lead you to set up additional configuration
 
 2.Select the required packages.
 
+Either use the default packages or customize each of them.
+
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
@@ -65,6 +67,7 @@ Using one of the above commands will lead you to set up additional configuration
 √ Would you like to use `src/` directory? ... No / `Yes`
 √ Would you like to use App Router? (recommended) ... No / `Yes`
 √ Would you like to customize the default import alias? ... `No`/ Yes
+√ Would you like to include AGENTS.md to guide coding agents to write up-to-date Next.js code? ... No / `Yes`
 Creating a new Next.js app in D:\ej2-nextjs-chart.
 
 {% endhighlight %}
