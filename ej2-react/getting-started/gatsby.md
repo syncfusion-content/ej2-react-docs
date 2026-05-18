@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> React Components in a Gatsby Project
+# Getting Started with Syncfusion® React Components in a Gatsby
 
-This article provides a step-by-step guide for creating a [Gatsby](https://www.gatsbyjs.com/) application and integrating Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components.
+This article provides a step-by-step guide for creating a [Gatsby](https://www.gatsbyjs.com) application and integrating Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components.
 
 `Gatsby` is an open-source React-based framework for building high-performance, modern web applications and static websites. It includes out-of-the-box optimizations and integrates React, GraphQL, and the modern JavaScript ecosystem.
 
@@ -22,15 +22,18 @@ This article provides a step-by-step guide for creating a [Gatsby](https://www.g
 
 To create a new `Gatsby` project, use one of the commands that are specific to either NPM or Yarn.
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="NPM" %}
+
 npm create gatsby@latest
-```
 
-or
+{% endhighlight %}
+{% highlight bash tabtitle="YARN" %}
 
-```bash
 yarn create gatsby
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Using one of the above commands will lead you to set up additional configurations for the project, as below:
 
@@ -49,12 +52,9 @@ What would you like to name the folder where your site will be created?
 · No (or I'll add it later)
 √ Would you like to install additional features with other plugins?No items were selected
 
-
 Thanks! Here's what we'll now do:
-
-    Create a new Gatsby site in the folder my-project
-
-? Shall we do this? (Y/n) » Yes
+Create a new Gatsby site in the folder my-project? 
+Shall we do this? (Y/n) » Yes
 ```
 
 Upon completing the aforementioned steps to create `my-project`, run the following command to jump into the project directory:
@@ -69,15 +69,18 @@ Now that `my-project` is ready to run with default settings, let's add Syncfusio
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). Install the required component package using the following command:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="NPM" %}
+
 npm install @syncfusion/ej2-react-grids --save
-```
 
-or
+{% endhighlight %}
+{% highlight bash tabtitle="YARN" %}
 
-```bash
 yarn add @syncfusion/ej2-react-grids
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 This guide uses the [React Grid component](https://www.syncfusion.com/react-components/react-data-grid) as an example.
 
@@ -85,7 +88,9 @@ This guide uses the [React Grid component](https://www.syncfusion.com/react-comp
 
 Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be imported using CSS or SASS styles provided in the npm packages. Additional customization options, CDN, and theme generation tools are available; see the [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) for more information.
 
-For this example, the `Tailwind 3` theme is imported into the **src/pages/style.css** file to style the Grid component and its dependencies.
+**Step 1: Create the style.css file** - Create a new file named `style.css` in the **src/pages/** directory.
+
+**Step 2: Import Syncfusion CSS styles** - Add the `Tailwind 3` theme imports to the **src/pages/style.css** file to style the Grid component and its dependencies.
 
 {% tabs %}
 {% highlight css tabtitle="~/src/pages/style.css" %}
@@ -119,7 +124,7 @@ import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej
 {% endhighlight %}
 {% endtabs %}
 
-**Step 2:** Define the Grid component with the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource) property and column definitions. Declare the values for the `dataSource` property.
+**Step 2:** Define the Grid component with the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasource) property and column definitions. Declare the values for the `dataSource` property.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/pages/index.tsx" %}
@@ -162,15 +167,18 @@ export default App;
 
 To run the project, use the following command:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="NPM" %}
+
 npm run develop
-```
 
-or
+{% endhighlight %}
+{% highlight bash tabtitle="YARN" %}
 
-```bash
 yarn run develop
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 The output will appear as follows:
 

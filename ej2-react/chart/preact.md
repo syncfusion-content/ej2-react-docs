@@ -117,7 +117,7 @@ import { Category, ChartComponent, ColumnSeries, Inject, LineSeries, SeriesColle
 {% highlight js tabtitle="~/src/index.jsx" %}
 
 import { render } from 'preact';
-import { Category, ChartComponent, ColumnSeries, Inject, LineSeries, SeriesCollectionDirective, SeriesDirective, Tooltip } from '@syncfusion/ej2-react-charts';
+import { Category, ChartComponent , Inject, LineSeries, SeriesCollectionDirective, SeriesDirective } from '@syncfusion/ej2-react-charts';
 
 
 export function App() {
@@ -130,11 +130,10 @@ export function App() {
     { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
     { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
   ];
-  const primaryXAxis = { valueType: 'Category' };
 
   return (
-    <ChartComponent id="charts" primaryXAxis={primaryXAxis}>
-      <Inject services={[ColumnSeries, Tooltip, LineSeries, Category]}/>
+    <ChartComponent id="charts" primaryXAxis={{ valueType: 'Category' }}>
+      <Inject services={[LineSeries, Category]}/>
       <SeriesCollectionDirective>
       <SeriesDirective dataSource={data} xName='month' yName='sales' name='Sales'/>
       </SeriesCollectionDirective>

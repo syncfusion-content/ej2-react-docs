@@ -1,14 +1,14 @@
 ---
 layout: post
 title: React getting started with Vite | Syncfusion
-description: Check out and learn about how to use Syncfusion React UI components in Vite project.
+description: Check out and learn about how to create and integrate Syncfusion React UI components in Vite projects.
 control: Vite
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> React Components in a Vite Project
+# Getting Started with Syncfusion® React Components in a Vite Project
 
 This article provides a step-by-step guide for setting up a [Vite](https://vite.dev/guide/) project with JavaScript and integrating Syncfusion<sup style="font-size:70%">&reg;</sup> React components.
 
@@ -22,17 +22,16 @@ This article provides a step-by-step guide for setting up a [Vite](https://vite.
 
 To create a new `Vite` project, use one of the commands that are specific to either NPM or Yarn.
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
 npm create vite@latest
-```
-
-or
-
-```bash
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
 yarn create vite
-```
+{% endhighlight %}
+{% endtabs %}
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+Running the above command will prompt you with several configuration questions. Here's how to answer them:
 
 **Step 1: Define the project name** - You can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
 
@@ -46,7 +45,7 @@ Using one of the above commands will lead you to set up additional configuration
 ? Select a framework: » - Use arrow-keys. Return to submit.
   Vanilla
   Vue
-> React
+> React       ← Select this
   Preact
   Lit
   Svelte
@@ -63,7 +62,7 @@ Using one of the above commands will lead you to set up additional configuration
   TypeScript
   TypeScript + React Compiler
   TypeScript + SWC 
-> JavaScript  
+> JavaScript  ← Select this
   JavaScript + React Compiler
   JavaScript + SWC
   React Router v7
@@ -73,32 +72,31 @@ Using one of the above commands will lead you to set up additional configuration
   Vike
 ```
 
-**Step 4:** If prompted for experimental options, choose according to your needs. In this guide, **No** option is selected.
-```bash
-? Use rolldown-vite (Experimental)?:
-  Yes
-> No
-```
-
-**Step 5:** When asked whether to install dependencies and start now, choose "Yes" to install and run immediately, or "No" to install later and run the dev server manually.
+**Step 4: Choose when to install dependencies**
 
 ```bash
 ? Install with npm and start now?
-  > Yes /   No
+  > Yes
+  > No       ← Select this option
 ```
 
-As Syncfusion packages are not installed, as of now, **No** option is selected. Then navigate to the project directory and install its dependencies using below commands:
+Select **No** so we can install Syncfusion packages along with dependencies. Navigate to your project directory and install the dependencies:
 
-```bash
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 cd my-project
 npm install
-```
-or
 
-```bash
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+
 cd my-project
-yarn
-```
+yarn install
+
+{% endhighlight %}
+{% endtabs %}
 
 After running the above commands, the project will be created and all required dependencies will be installed automatically.
 
@@ -108,19 +106,24 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are av
 
 This guide uses the [React Grid component](https://www.syncfusion.com/react-components/react-grid) as an example. To install the React Grid component package, use the following command:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm install @syncfusion/ej2-react-grids --save
-```
 
-or
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
 
-```bash
 yarn add @syncfusion/ej2-react-grids
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied with CSS files supplied by the npm packages, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme/).
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied with CSS files supplied by the npm packages, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
+
+By default, Vite projects include a `index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `index.css` file to prevent style conflicts.
 
 In this example, the `Tailwind 3` theme styles for the Grid component and its dependencies are imported in the **src/App.css** file:
 
