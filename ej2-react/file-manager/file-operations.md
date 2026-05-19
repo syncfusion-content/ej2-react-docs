@@ -31,7 +31,7 @@ The following table represents the basic operations available in the File Manage
 
 ## Folder Upload support
 
-To perform the directory(folder) upload in File Manager, set [directoryUpload](https://ej2.syncfusion.com/react/documentation/api/file-manager/uploadSettings/#directoryupload) as true within the uploadSettings property. The directory upload feature is supported for the following file service providers:
+To perform the directory(folder) upload in File Manager, set [directoryUpload](https://ej2.syncfusion.com/react/documentation/api/file-manager/uploadSettings#directoryupload) as true within the uploadSettings property. The directory upload feature is supported for the following file service providers:
 * Physical file service provider.
 * Azure file service provider.
 * NodeJS file service provider.
@@ -1040,3 +1040,82 @@ The following table provides the default context menu item and the corresponding
         </td>
     </tr>
 </table>
+
+## Ajax Settings Configuration
+
+The File Manager's [ajaxSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/index-default#ajaxsettings) property allows you to configure the URLs for various file operations including file operations, upload, download, and image preview.
+
+### File Download Support
+
+To enable file download functionality in the File Manager, configure the [downloadUrl](https://ej2.syncfusion.com/react/documentation/api/file-manager/ajaxsettingsmodel#downloadurl) property within the `ajaxSettings`. This URL handles the file download requests from the server.
+
+{% raw %}
+```ts
+import { FileManagerComponent } from '@syncfusion/ej2-react-filemanager';
+
+function App() {
+  let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
+
+  return (
+    <div className="control-section">
+        <FileManagerComponent id="file" ajaxSettings = {{
+            url: hostUrl + "api/FileManager/FileOperations",
+            downloadUrl: hostUrl + 'api/FileManager/Download'
+        }} />
+    </div>
+  );
+}
+export default App;
+```
+{% endraw %}
+
+### File Upload Support
+
+To enable file upload functionality in the File Manager, configure the [uploadUrl](https://ej2.syncfusion.com/react/documentation/api/file-manager/ajaxsettingsmodel#uploadurl) property within the `ajaxSettings`. This URL handles the file upload requests to the server.
+
+{% raw %}
+```ts
+import { FileManagerComponent } from '@syncfusion/ej2-react-filemanager';
+
+function App() {
+  let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
+
+  return (
+    <div className="control-section">
+        <FileManagerComponent id="file" ajaxSettings = {{
+            url: hostUrl + "api/FileManager/FileOperations",
+            uploadUrl: hostUrl + 'api/FileManager/Upload'
+        }} />
+    </div>
+  );
+}
+export default App;
+
+```
+{% endraw %}
+
+For more details on implementing upload support, refer to the [upload](./upload) documentation.
+
+### Image Preview Support
+
+To enable image preview functionality in the File Manager, configure the [getImageUrl](https://ej2.syncfusion.com/react/documentation/api/file-manager/ajaxsettingsmodel#getimageurl) property within the `ajaxSettings`. This URL handles retrieving the image files for preview display.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/file-manager/image-preview-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/file-manager/image-preview-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/file-manager/image-preview-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/file-manager/image-preview-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/file-manager/image-preview-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/file-manager/image-preview-cs1" %}

@@ -1,95 +1,54 @@
 ---
 layout: post
 title: React Gantt getting started with Next.js | Syncfusion
-description: Check out and learn here all about how to use the Syncfusion React UI components in the Next.js project.
+description: Learn how to use the React Gantt Chart component in Next.js applications with App Router and server-side rendering support.
 control: Next.js
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion React Gantt Component in Next.js
+# Getting Started with Next.js
 
-This section outlines the process of creating a Next.js application and integrating Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component.
-
-## What is Next.js?
-
-[Next.js](https://nextjs.org/) is a React framework designed for building fast, SEO-friendly web applications. It provides server-side rendering, automatic code splitting, routing, and API routes.
+This guide shows how to integrate the React Gantt Chart component into a Next.js application using the App Router. For detailed component concepts and features, see the [main Getting Started guide](./getting-started/).
 
 ## Prerequisites
 
-Before getting started with the Next.js application, ensure the following prerequisites are met:
+Before you begin, ensure you have:
 
-* [Node.js 18.17.0](https://nodejs.org/en) or later (LTS recommended).
-
-* Compatible with macOS, Windows, and Linux
+- [Node.js 18.17.0](https://nodejs.org/en) or later
+- npm or yarn package manager
+- Basic knowledge of Next.js and React
 
 ## Create a Next.js application
 
-Generate a new Next.js application using npm or yarn:
+Create a new Next.js application with the recommended defaults (TypeScript, ESLint, Tailwind CSS, App Router):
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
 
-npx create-next-app@latest
+npx create-next-app@latest my-gantt-app
+cd my-gantt-app
 
 {% endhighlight %}
 {% highlight bash tabtitle="YARN" %}
 
-yarn create next-app
+yarn create next-app my-gantt-app
+cd my-gantt-app
 
 {% endhighlight %}
 {% endtabs %}
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+When prompted, select **Yes** to use the recommended Next.js defaults. This will set up your project with all necessary configurations.
 
-**Step 1: Define the project name** - You can specify the name of the project directly. Let's specify the name of the project as `ej2-nextjs-gantt`.
+## Install the Gantt Chart package
 
-{% tabs %}
-{% highlight bash tabtitle="CMD" %}
-
-√ What is your project named? » ej2-nextjs-gantt
-
-{% endhighlight %}
-{% endtabs %}
-
-**Step 2: Select the required packages** - Choose the configuration options for your project. Select **Yes** to use default packages in the application.
-
-{% tabs %}
-{% highlight bash tabtitle="CMD" %}
-
-√ What is your project named? ... ej2-nextjs-gantt
-? Would you like to use the recommended Next.js defaults?
->   Yes, use recommended defaults - TypeScript, ESLint, Tailwind CSS, App Router
-    No, reuse previous settings
-    No, customize settings
-
-{% endhighlight %}
-{% endtabs %}
-
-After running the above commands, the project will be created and all required dependencies will be installed automatically.
-
-**Step 3: Navigate to the project directory** - Once you complete the above steps to create `ej2-nextjs-gantt`, navigate to the directory using the below command:
-{% tabs %}
-{% highlight bash tabtitle="CMD" %}
-
-cd ej2-nextjs-gantt
-
-{% endhighlight %}
-{% endtabs %}
-
-The application is ready to run with default settings. Now, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
-
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
-
-This guide uses the [React Gantt Chart component](https://www.syncfusion.com/react-components/react-gantt-chart) as an example. To install the React Gantt Chart component in the project, use the following command:
+Install the React Gantt Chart component:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
 
-npm install @syncfusion/ej2-react-gantt --save
+npm install @syncfusion/ej2-react-gantt
 
 {% endhighlight %}
 {% highlight bash tabtitle="YARN" %}
@@ -99,126 +58,122 @@ yarn add @syncfusion/ej2-react-gantt
 {% endhighlight %}
 {% endtabs %}
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Add theme styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
-
-Import the **Tailwind 3** CSS styles for the Gantt Chart component and its dependent components in the **src/app/globals.css** file and remove the existing styles in that file, as shown below:
+Import the basic Gantt Chart styles in `src/app/globals.css` (replace the existing content):
 
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
 
-@import '../../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';  
-@import '../../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';  
-@import '../../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';  
-@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';  
-@import '../../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-richtexteditor/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css';
-@import "../../node_modules/@syncfusion/ej2-react-gantt/styles/tailwind3.css";
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-gantt/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
 
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** To learn more about built-in themes, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
+> **Note:** When using features like editing, toolbar, filtering, or dialogs, you need to import additional component styles:
+> ```css
+> /* For editing, toolbar, and dialog features */
+> @import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';
+> @import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+> @import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+> @import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+> @import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+> @import '../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css';
+> 
+> /* For rich text editor in dialog notes tab */
+> @import '../node_modules/@syncfusion/ej2-richtexteditor/styles/tailwind3.css';
+> ```
 
-## Add a Syncfusion<sup style="font-size:70%">&reg;</sup> React component
+## Create sample data
 
-Follow the below steps to add the React Gantt Chart component to the Next.js project:
+Define a simple task list with hierarchical relationships. Each task must have a `StartDate` and either a `Duration` or `EndDate` to render properly.
 
-**Step 1:** Create a `datasource.tsx` file within the **src/app/** folder and add the Gantt Chart component data.
-
-{% tabs %}
-{% highlight ts tabtitle="datasource.tsx" %}
-
-export const projectResources: object[] = [
-    { ResourceId: 1, ResourceName: 'Project Manager' },
-    { ResourceId: 2, ResourceName: 'Software Analyst' },
-    { ResourceId: 3, ResourceName: 'Developer' },
-    { ResourceId: 4, ResourceName: 'Testing Engineer' }
+```typescript
+const taskData = [
+  {TaskID: 1, TaskName: 'Project initiation', StartDate: new Date('2024-04-01'), EndDate: new Date('2024-04-15')},
+  {TaskID: 2, TaskName: 'Identify site location', StartDate: new Date('2024-04-01'), Duration: 4, Progress: 70, ParentID: 1},
+  {TaskID: 3, TaskName: 'Perform site survey', StartDate: new Date('2024-04-01'), Duration: 4, Progress: 50, ParentID: 1},
+  {TaskID: 4, TaskName: 'Soil testing', StartDate: new Date('2024-04-01'), Duration: 3, Progress: 40, ParentID: 1},
+  {TaskID: 5, TaskName: 'Project estimation', StartDate: new Date('2024-04-08'), EndDate: new Date('2024-04-18')},
+  {TaskID: 6, TaskName: 'Develop floor plan', StartDate: new Date('2024-04-08'), Duration: 5, Progress: 30, ParentID: 5},
+  {TaskID: 7, TaskName: 'Estimate project cost', StartDate: new Date('2024-04-08'), Duration: 5, Progress: 20, ParentID: 5}
 ];
+```
 
-export const data: object[] = [
-    {
-        TaskID: 1,
-        TaskName: 'Project Initiation',
-        StartDate: new Date('04/02/2019'),
-        EndDate: new Date('04/21/2019'),
-    },
-    { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, ParentId: 1, Progress: 50, Resources: [2, 3] },
-   { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, ParentId:1, Progress: 50, Resources: [2] },
-    { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, ParentId: 1, Predecessor: '3FS', Progress: 50, Resources: [1] },
-    {
-        TaskID: 5,
-        TaskName: 'Project Estimation',
-        StartDate: new Date('04/02/2019'),
-        EndDate: new Date('04/21/2019'),
-    },
-   { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, ParentId: 5, Progress: 50 },
-    { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, ParentId: 5,Progress: 50, Resources: [1, 3, 5] },
-    { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, ParentId: 5, Predecessor: '7SS', Progress: 50 }
-];
+## Configure task fields
 
-{% endhighlight %}
-{% endtabs %}
+Map your data fields to Gantt Chart properties using `taskFields`:
 
-**Step 2:** Import and define the Gantt Chart component with the [dataSource](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#datasource) property and column definitions in the **src/app/page.tsx** file, as shown below:
+```typescript
+const taskFields = {
+  id: 'TaskID',
+  name: 'TaskName',
+  startDate: 'StartDate',
+  duration: 'Duration',
+  progress: 'Progress',
+  parentID: 'ParentID'
+};
+```
+
+### Field mapping reference
+
+| Property | Description | Required |
+|----------|-------------|----------|
+| `id` | Unique task identifier | Yes |
+| `name` | Task display name | Yes |
+| `startDate` | Task start date | Yes |
+| `duration` | Task duration in days | Yes* |
+| `progress` | Task completion percentage (0-100) | No |
+| `parentID` | Parent task ID for hierarchy | No |
+
+*Either `duration` or `endDate` is required for a task to render properly.
+
+## Render the Gantt component
+
+Open **src/app/page.tsx** and replace its content:
 
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
 
 'use client'
-import { GanttComponent, Inject, Edit, Filter, Sort } from '@syncfusion/ej2-react-gantt';
-import { projectResources, data } from './datasource';
+import { GanttComponent } from '@syncfusion/ej2-react-gantt';
 
 export default function Home() {
-  const taskFields: any = {
+  const taskData = [
+    {TaskID: 1, TaskName: 'Project initiation', StartDate: new Date('2024-04-01'), EndDate: new Date('2024-04-15')},
+    {TaskID: 2, TaskName: 'Identify site location', StartDate: new Date('2024-04-01'), Duration: 4, Progress: 70, ParentID: 1},
+    {TaskID: 3, TaskName: 'Perform site survey', StartDate: new Date('2024-04-01'), Duration: 4, Progress: 50, ParentID: 1},
+    {TaskID: 4, TaskName: 'Soil testing', StartDate: new Date('2024-04-01'), Duration: 3, Progress: 40, ParentID: 1},
+    {TaskID: 5, TaskName: 'Project estimation', StartDate: new Date('2024-04-08'), EndDate: new Date('2024-04-18')},
+    {TaskID: 6, TaskName: 'Develop floor plan', StartDate: new Date('2024-04-08'), Duration: 5, Progress: 30, ParentID: 5},
+    {TaskID: 7, TaskName: 'Estimate project cost', StartDate: new Date('2024-04-08'), Duration: 5, Progress: 20, ParentID: 5}
+  ];
+
+  const taskFields = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    parentID:'ParentId',
-    dependency: 'Predecessor',
-    resourceInfo: 'Resources'
+    parentID: 'ParentID'
   };
-  const labelSettings: any = {
-    rightLabel: 'Resources'
-  };
-  const editSettings: any = {
-    allowEditing: true,
-    editMode: 'Auto',
-    allowTaskbarEditing: true
-  };
-  const resourceFields: any = {
-    id: 'ResourceId',
-    name: 'ResourceName',
-  };
+
   return (
-    <>
-      <h2>Syncfusion React Gantt Component</h2>
-      <GanttComponent dataSource={data} allowFiltering={true} allowSorting={true} taskFields={taskFields} editSettings={editSettings} labelSettings={labelSettings}
-        resourceFields={resourceFields} resources={projectResources} height='400px'>
-        <Inject services={[Edit, Filter, Sort]} />
-      </GanttComponent>
-    </>
-  )
+    <GanttComponent dataSource={taskData} taskFields={taskFields} height='400px' />
+  );
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-> NOTE: When using the Next.js App Router, the **src/app/page.tsx** file must be a client component to use Syncfusion interactive features. So the code includes `'use client'` at the top of the file.
+> **Note:** The `'use client'` directive is required for Next.js App Router to enable client-side interactivity.
 
 ## Run the application
-
-To run the application, use the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -233,6 +188,21 @@ yarn run dev
 {% endhighlight %}
 {% endtabs %}
 
-To learn more about the functionality of the Gantt Chart component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/gantt/getting-started#module-injection).
+Access the running application through your configured development URL.
 
-> [View the Next.js Gantt sample in the GitHub repository](https://github.com/SyncfusionExamples/ej2-nextjs-gantt).
+## Output
+
+You will see a Gantt Chart with:
+
+- Task hierarchy with parent-child relationships
+- Timeline view showing task bars
+- Progress indicators on each task
+- Automatically calculated dates based on duration
+
+The chart displays one parent task ("Project initiation") with three subtasks shown in a tree structure. Task bars are rendered on the timeline, sized according to their duration and start dates. 
+
+## Next Steps
+
+- **[Key Elements](./key-elements)** - Learn about UI components and interactions
+- **[Feature Modules](./module)** - Enable advanced features with module injection
+- **[Overview](./overview)** - Explore all available features

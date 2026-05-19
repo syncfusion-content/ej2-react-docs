@@ -24,7 +24,7 @@ The File Manager component allows customizing its functionalities like, context 
 
 ## Context menu customization
 
-The context menu settings like, items to be displayed on files, folders and layout click and visibility can be customized using [contextMenuSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/#contextmenusettings) property.
+The context menu settings like, items to be displayed on files, folders and layout click and visibility can be customized using [contextMenuSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager#contextmenusettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -45,7 +45,7 @@ The context menu settings like, items to be displayed on files, folders and layo
 
 ## Details view customization
 
-The details view settings like, column width, header text, template for each field can be customized using [detailsViewSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/#detailsviewsettings) property.
+The details view settings like, column width, header text, template for each field can be customized using [detailsViewSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager#detailsviewsettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -66,7 +66,7 @@ The details view settings like, column width, header text, template for each fie
 
 ## Navigation pane customization
 
-The navigation pane settings like, minimum and maximum width, visibility and sort order can be customized using [navigationPaneSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/#navigationpanesettings) property.
+The navigation pane settings like, minimum and maximum width, visibility and sort order can be customized using [navigationPaneSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager#navigationpanesettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -87,9 +87,9 @@ The navigation pane settings like, minimum and maximum width, visibility and sor
 
 ## Show/Hide file extension
 
-The file extensions are displayed in the File Manager by default. This can be hidden by disabling the [showFileExtension](https://ej2.syncfusion.com/react/documentation/api/file-manager/#showfileextension) property.
+The file extensions are displayed in the File Manager by default. This can be hidden by disabling the [showFileExtension](https://ej2.syncfusion.com/react/documentation/api/file-manager#showfileextension) property.
 
-In File Manager [fileLoad](https://ej2.syncfusion.com/react/documentation/api/file-manager/#fileload) and [fileOpen](https://ej2.syncfusion.com/react/documentation/api/file-manager/#fileopen) events are triggered before the file/folder is rendered and before the file/folder is opened respectively. These events can be utilized to perform operations before a file/folder is rendered or opened.
+In File Manager [fileLoad](https://ej2.syncfusion.com/react/documentation/api/file-manager#fileload) and [fileOpen](https://ej2.syncfusion.com/react/documentation/api/file-manager#fileopen) events are triggered before the file/folder is rendered and before the file/folder is opened respectively. These events can be utilized to perform operations before a file/folder is rendered or opened.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -110,7 +110,7 @@ In File Manager [fileLoad](https://ej2.syncfusion.com/react/documentation/api/fi
 
 ## Show/Hide hidden items
 
-The File Manager provides support to show/hide the hidden items by enabling/disabling the [showHiddenItems](https://ej2.syncfusion.com/react/documentation/api/file-manager/#showhiddenitems) property.
+The File Manager provides support to show/hide the hidden items by enabling/disabling the [showHiddenItems](https://ej2.syncfusion.com/react/documentation/api/file-manager#showhiddenitems) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -131,7 +131,7 @@ The File Manager provides support to show/hide the hidden items by enabling/disa
 
 ## Show/Hide thumbnail images in large icons view
 
-The thumbnail images are displayed in the File Manager's large icons view by default. This can be hidden by disabling the [showThumbnail](https://ej2.syncfusion.com/react/documentation/api/file-manager/#showthumbnail) property.
+The thumbnail images are displayed in the File Manager's large icons view by default. This can be hidden by disabling the [showThumbnail](https://ej2.syncfusion.com/react/documentation/api/file-manager#showthumbnail) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -152,7 +152,7 @@ The thumbnail images are displayed in the File Manager's large icons view by def
 
 ## Toolbar customization
 
-The toolbar settings like, items to be displayed in toolbar and visibility can be customized using [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/#toolbarsettings) property.
+The toolbar settings like, items to be displayed in toolbar and visibility can be customized using [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager#toolbarsettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -177,7 +177,7 @@ The toolbar settings like, items to be displayed in toolbar and visibility can b
 
 ## Upload customization
 
-The upload settings like, minimum and maximum file size and enabling auto upload can be customized using [uploadSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/#uploadsettings) property.
+The upload settings like, minimum and maximum file size and enabling auto upload can be customized using [uploadSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager#uploadsettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -216,3 +216,82 @@ The tooltip value can be customized by adding extra content to the title of the 
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/file-manager/tooltip-cs1" %}
+
+## Maintaining Component State on Page Reload
+
+The File Manager supports maintaining the component state on page reload. This can be achieved by enabling [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/file-manager#enablepersistence) property, which maintains the following:
+* Previous view of the File Manager - [View](https://ej2.syncfusion.com/react/documentation/api/file-manager#view)
+* Previous path of the File Manager - [Path](https://ej2.syncfusion.com/react/documentation/api/file-manager#path)
+* Previous selected items of the File Manager - [SelectedItems](https://ej2.syncfusion.com/react/documentation/api/file-manager#selecteditems)
+
+For every operation in File Manager, ajax request will be sent to the server which then processes the request and sends back the response. When the ajax request is success, [success](https://ej2.syncfusion.com/react/documentation/api/file-manager#success) event will be triggered and [failure](https://ej2.syncfusion.com/react/documentation/api/file-manager#failure) event will be triggered if the request gets failed.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/file-manager/persistence-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/file-manager/persistence-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/file-manager/persistence-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/file-manager/persistence-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/file-manager/persistence-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/file-manager/persistence-cs1" %}
+
+>**Note:** The files of the current folder opened in the File Manager can be refreshed programatically by calling the [refreshFiles](https://ej2.syncfusion.com/react/documentation/api/file-manager#refreshfiles) method.
+
+## Specifying the Current Path of the File Manager
+
+The current path of the File Manager can be specified initially or dynamically using the [path](https://ej2.syncfusion.com/react/documentation/api/file-manager#path) property.
+
+The following code snippet demonstrates specifying the current path in File Manager on rendering.
+
+**src/App.tsx**
+
+{% raw %}
+
+```ts
+
+import {  FileManagerComponent } from '@syncfusion/ej2-react-filemanager';
+
+function App() {
+  let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
+
+  return (
+    <div className="control-section">
+        <FileManagerComponent id="file" path="/Pictures" ajaxSettings = {{
+          url: hostUrl + "api/FileManager/FileOperations"
+        }} />
+    </div>
+  );
+}
+export default App;
+
+```
+{% endraw %}
+
+**src/App.jsx**
+
+{% raw %}
+```ts
+import { FileManagerComponent } from '@syncfusion/ej2-react-filemanager';
+
+function App() {
+    let hostUrl = "https://ej2-aspcore-service.azurewebsites.net/";
+    return (<div className="control-section">
+        <FileManagerComponent id="file" path="/Pictures" ajaxSettings={{
+            url: hostUrl + "api/FileManager/FileOperations"
+        }}/>
+    </div>);
+}
+export default App;
+```
+{% endraw %}

@@ -33,16 +33,9 @@ This command will prompt you for a few settings for the new project, such as sel
 
 ![Initial_setup](images/Initial-setup.jpg)
 
-To set up a React application in TypeScript environment, run the following command.
+Terminate the application, then run the following command:
 
 ```bash
-npm create vite@latest my-app -- --template react-ts
-cd my-app
-```
-To set up a React application in JavaScript environment, run the following command.
-
-```bash
-npm create vite@latest my-app -- --template react
 cd my-app
 ```
 

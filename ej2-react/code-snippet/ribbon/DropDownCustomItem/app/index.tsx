@@ -5,6 +5,16 @@ import { ItemModel, MenuEventArgs } from "@syncfusion/ej2-splitbuttons";
 
 function App() {
     const tableOptions: ItemModel[] = [{ text: "Insert Table" }, { text: "This device" }, { text: "Convert Table" }, { text: "Excel SpreadSheet" }];
+    const dropDownSettingsProps = {
+        iconCss: "e-icons e-table",
+        items: tableOptions,
+        content: "Table",
+        beforeItemRender: function (args: MenuEventArgs) { 
+            if (args.item.text === 'Insert Table') {
+                args.element.classList.add("e-custom-class");
+            }
+        } 
+    }
     return (
         <div>
             <RibbonComponent id="ribbon">
@@ -15,11 +25,7 @@ function App() {
                                 <RibbonCollectionsDirective>
                                     <RibbonCollectionDirective>
                                         <RibbonItemsDirective>
-                                            <RibbonItemDirective type="DropDown" dropDownSettings={{ iconCss: "e-icons e-table", items: tableOptions, content: "Table", beforeItemRender: function (args: MenuEventArgs) { 
-                                                    if (args.item.text === 'Insert Table') {
-                                                        args.element.classList.add("e-custom-class");
-                                                    }
-                                                } }}>
+                                            <RibbonItemDirective type="DropDown" dropDownSettings={dropDownSettingsProps}>
                                             </RibbonItemDirective>
                                         </RibbonItemsDirective>
                                     </RibbonCollectionDirective>

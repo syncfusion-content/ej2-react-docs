@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# Creating a Next.js Application Using Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
+# Creating a Next.js Application Using Syncfusion® Components
 
 This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React File Manager component.
 
@@ -42,7 +42,7 @@ yarn create next-app
 {% endhighlight %}
 {% endtabs %}
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+Using one of the above commands will prompt you to set up additional configurations for the project as below:
 
 1.Define the project name: Users can specify the name of the project directly. Let's specify the name of the project as `ej2-nextjs-file-manager`.
 
@@ -60,18 +60,15 @@ Using one of the above commands will lead you to set up additional configuration
 {% highlight bash tabtitle="CMD" %}
 
 √ What is your project named? ... ej2-nextjs-file-manager
-√ Would you like to use TypeScript? ... No / `Yes`
-√ Would you like to use ESLint? ... No / `Yes`
-√ Would you like to use Tailwind CSS? ... `No` / Yes
-√ Would you like to use `src/` directory? ... No / `Yes`
-√ Would you like to use App Router? (recommended) ... No / `Yes`
-√ Would you like to customize the default import alias? ... `No`/ Yes
-Creating a new Next.js app in D:\ej2-nextjs-file-manager.
+? Would you like to use the recommended Next.js defaults?
+>   Yes, use recommended defaults - TypeScript, ESLint, Tailwind CSS, App Router
+    No, reuse previous settings
+    No, customize settings
 
 {% endhighlight %}
 {% endtabs %}
 
-3.Once complete the above mentioned steps to create `ej2-nextjs-file-manager`, navigate to the directory using the below command:
+3.Once you have completed the above-mentioned steps to create `ej2-nextjs-file-manager`, navigate to the directory using the below command:
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -104,9 +101,9 @@ yarn add @syncfusion/ej2-react-filemanager
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme/), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It's easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
 
-Import the `Tailwind3` theme into the **src/app/globals.css** file and removed the existing styles in that file, as shown below:
+Import the `Tailwind3` theme into the **app/globals.css** file and remove the existing styles in that file, as shown below:
 
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
@@ -125,13 +122,13 @@ Import the `Tailwind3` theme into the **src/app/globals.css** file and removed t
 {% endhighlight %}
 {% endtabs %}
 
-> To know more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme/) section.
+> To know more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
 Follow the below steps to add the React File Manager component to the Next.js project:
 
-1.Define the File Manager component in the **src/app/page.tsx** file, as shown below:
+1.Define the File Manager component in the **app/page.tsx** file, as shown below:
 
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
@@ -142,15 +139,15 @@ import { DetailsView, FileManagerComponent, NavigationPane, Toolbar, Inject } fr
 function App() {
   let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
   let ajaxSettings: object = {
-          url: hostUrl + "api/FileManager/FileOperations",
-          getImageUrl: hostUrl + "api/FileManager/GetImage"
-        };
+    url: hostUrl + "api/FileManager/FileOperations",
+    getImageUrl: hostUrl + "api/FileManager/GetImage"
+  };
 
   return (
     <div className="control-section">
-        <FileManagerComponent id="file" view="LargeIcons" ajaxSettings = {ajaxSettings} >
-          <Inject services={[ NavigationPane, DetailsView, Toolbar]} />
-        </FileManagerComponent>
+      <FileManagerComponent id="file" view="LargeIcons" ajaxSettings={ajaxSettings} >
+        <Inject services={[NavigationPane, DetailsView, Toolbar]} />
+      </FileManagerComponent>
     </div>
   );
 }

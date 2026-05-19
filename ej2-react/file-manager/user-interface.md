@@ -28,6 +28,30 @@ The basic File Manager is a light weight component with all the basic functions.
 
 ![Basic File Manager](./images/default-ui.png)
 
+## Injecting Services for Overview
+
+By default, the File Manager component does not include additional modules. You can configure `NavigationPane`, `Toolbar`, and `ContextMenu` modules using `Inject`.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/file-manager/overview-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/file-manager/overview-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/file-manager/overview-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/file-manager/overview-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/file-manager/overview-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/file-manager/overview-cs1" %}
+
 ## Toolbar
 
 The toolbar is an injectable module in File Manager. It should be injected before rendering the File Manager to avail its functionality. It is present at the top of the File Manager. Toolbar provides easy access to the file operations using different buttons.
