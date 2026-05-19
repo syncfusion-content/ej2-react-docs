@@ -125,3 +125,27 @@ The below example shows adding the German culture locale(`de-DE`)
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/file-manager/locale-cs1" %}
+
+## Rendering Component in Right-to-Left Direction
+
+It is possible to render the File Manager in right-to-left direction by setting the [enableRtl](https://ej2.syncfusion.com/react/documentation/api/file-manager#enablertl) API to true.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/file-manager/rtl-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/file-manager/rtl-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/file-manager/rtl-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/file-manager/rtl-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/file-manager/rtl-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/file-manager/rtl-cs1" %}

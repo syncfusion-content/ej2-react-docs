@@ -9,9 +9,9 @@ domainurl: ##DomainURL##
 ---
 
 
-# Creating a Next.js Application Using Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
+# Getting Started with Next.js
 
-This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Kanban  component.
+This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Kanban component.
 
 ## What is Next.js?
 
@@ -25,61 +25,36 @@ Before getting started with the Next.js application, ensure the following prereq
 
 * The application is compatible with macOS, Windows, and Linux operating systems.
 
+## Overview
+
+The Kanban component is composed of:
+- **Cards**: tasks displayed on the board; mapped from a `dataSource` via `cardSettings`.
+- **Columns**: workflow stages; defined using `keyField`.
+- **Swimlanes**: optional grouping of cards; configured with `swimlaneSettings`.
+
+> The `keyField` property maps each column to a specific field in the data source. Each column displays cards whose field value matches its `keyField`.
+> The `cardSettings` property defines how each card is displayed, including which fields are used for the header and content.
+
 ## Create a Next.js application
 
-To create a new `Next.js` application, use one of the commands that are specific to either NPM or Yarn.
+Create a new `Next.js` application with the recommended defaults (TypeScript, ESLint, Tailwind CSS, App Router):
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
 
-npx create-next-app@latest
+npx create-next-app@latest my-kanban-app
+cd my-kanban-app
 
 {% endhighlight %}
 {% highlight bash tabtitle="YARN" %}
 
-yarn create next-app
+yarn create next-app my-kanban-app
+cd my-kanban-app
 
 {% endhighlight %}
 {% endtabs %}
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
-
-1.Define the project name: Users can specify the name of the project directly. Let's specify the name of the project as `ej2-nextjs-kanban`.
-
-{% tabs %}
-{% highlight bash tabtitle="CMD" %}
-
-√ What is your project named? » ej2-nextjs-kanban
-
-{% endhighlight %}
-{% endtabs %}
-
-2.Select the required packages.
-
-{% tabs %}
-{% highlight bash tabtitle="CMD" %}
-
-√ What is your project named? ... ej2-nextjs-kanban
-√ Would you like to use TypeScript? ... No / `Yes`
-√ Would you like to use ESLint? ... No / `Yes`
-√ Would you like to use Tailwind CSS? ... `No` / Yes
-√ Would you like to use `src/` directory? ... No / `Yes`
-√ Would you like to use App Router? (recommended) ... No / `Yes`
-√ Would you like to customize the default import alias? ... `No`/ Yes
-Creating a new Next.js app in D:\ej2-nextjs-kanban.
-
-{% endhighlight %}
-{% endtabs %}
-
-3.Once complete the above mentioned steps to create `ej2-nextjs-kanban`, navigate to the directory using the below command:
-
-{% tabs %}
-{% highlight bash tabtitle="CMD" %}
-
-cd ej2-nextjs-kanban
-
-{% endhighlight %}
-{% endtabs %}
+When prompted, select **Yes** to use the recommended Next.js defaults. This will set up your project with all necessary configurations.
 
 The application is ready to run with default settings. Now, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
@@ -92,7 +67,7 @@ Here, the [React Kanban component](https://www.syncfusion.com/react-components/r
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
 
-npm install @syncfusion/ej2-react-kanban --save
+npm install @syncfusion/ej2-react-kanban
 
 {% endhighlight %}
 {% highlight bash tabtitle="YARN" %}
@@ -106,19 +81,20 @@ yarn add @syncfusion/ej2-react-kanban
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
 
-Import the `Material` theme into the **src/app/globals.css** file and removed the existing styles in that file, as shown below:
+Import the Tailwind theme (tailwind3) into the **app/globals.css** file and remove the existing styles in that file, as shown below:
 
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
 
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-react-kanban/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-kanban/styles/tailwind3.css';
 
 {% endhighlight %}
 {% endtabs %}
@@ -129,31 +105,94 @@ Import the `Material` theme into the **src/app/globals.css** file and removed th
 
 Follow the below steps to add the React Kanban component to the Next.js project:
 
-1.Define the kanban component in the **src/app/page.tsx** file, as shown below:
+1.Create the data source file in **app/datasource.ts** with the `kanbanData` object shown below:
+
+{% tabs %}
+{% highlight ts tabtitle="datasource.ts" %}
+
+export let kanbanData: Object[] = [
+  {
+    Id: 1, Status: 'Open', Summary: 'Analyze the new requirements gathered from the customer.',
+    Type: 'Story', Priority: 'Low', Tags: 'Analyze,Customer', Estimate: 3.5,
+    Assignee: 'Nancy Davloio', RankId: 1
+  },
+  {
+    Id: 2, Status: 'InProgress', Summary: 'Improve application performance',
+    Type: 'Improvement', Priority: 'Normal', Tags: 'Improvement',
+    Estimate: 6, Assignee: 'Andrew Fuller', RankId: 1
+  },
+  {
+    Id: 3, Status: 'Open', Summary: 'Arrange a web meeting with the customer to get new requirements.',
+    Type: 'Others', Priority: 'Critical', Tags: 'Meeting',
+    Estimate: 5.5, Assignee: 'Janet Leverling', RankId: 2
+  },
+  {
+    Id: 4, Status: 'InProgress', Summary: 'Fix the issues reported in the IE browser.',
+    Type: 'Bug', Priority: 'Release Breaker', Tags: 'IE',
+    Estimate: 2.5, Assignee: 'Janet Leverling', RankId: 2
+  },
+  {
+    Id: 5, Status: 'Testing', Summary: 'Fix the issues reported by the customer.',
+    Type: 'Bug', Priority: 'Low', Tags: 'Customer',
+    Estimate: 3.5, Assignee: 'Steven walker', RankId: 1
+  },
+  {
+    Id: 6, Status: 'Close', Summary: 'Arrange a web meeting with the customer to get the login page requirements.',
+    Type: 'Others', Priority: 'Low', Tags: 'Meeting',
+    Estimate: 2, Assignee: 'Michael Suyama', RankId: 1
+  },
+  {
+    Id: 7, Status: 'Validate', Summary: 'Validate new requirements',
+    Type: 'Improvement', Priority: 'Low', Tags: 'Validation',
+    Estimate: 1.5, Assignee: 'Robert King', RankId: 1
+  },
+  {
+    Id: 8, Status: 'Close', Summary: 'Login page validation',
+    Type: 'Story', Priority: 'Release Breaker', Tags: 'Validation,Fix',
+    Estimate: 2.5, Assignee: 'Laura Callahan', RankId: 2
+  },
+  {
+    Id: 9, Status: 'Testing', Summary: 'Fix the issues reported in Safari browser.',
+    Type: 'Bug', Priority: 'Release Breaker', Tags: 'Fix,Safari',
+    Estimate: 1.5, Assignee: 'Nancy Davloio', RankId: 2
+  },
+  {
+    Id: 10, Status: 'Close', Summary: 'Test the application in the IE browser.',
+    Type: 'Story', Priority: 'Low', Tags: 'Testing,IE',
+    Estimate: 5.5, Assignee: 'Margaret hamilt', RankId: 3
+  },
+  {
+    Id: 11, Status: 'Validate', Summary: 'Validate the issues reported by the customer.',
+    Type: 'Story', Priority: 'High', Tags: 'Validation,Fix',
+    Estimate: 1, Assignee: 'Andrew Fuller', RankId: 1
+  }
+];
+
+{% endhighlight %}
+{% endtabs %}
+
+2.Define the kanban component in the **app/page.tsx** file, as shown below:
 
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
 
 'use client'
-import { DataManager, ODataAdaptor } from '@syncfusion/ej2-data';
+import { extend } from '@syncfusion/ej2-base';
 import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-react-kanban";
-function App(this: any) {
-    let cardsettings = { contentField: "Summary", headerField: "Id" }
-    let data = new DataManager({
-        url: 'https://ej2services.syncfusion.com/production/web-services/api/Kanban',
-        adaptor: new ODataAdaptor
-    });
-    function DialogOpen(args: { cancel: boolean; }) {
-        args.cancel = true;
-    }
-    return (<KanbanComponent id="kanban" keyField="Status" dataSource={data} cardSettings={cardsettings} allowDragAndDrop={false} dialogOpen={DialogOpen.bind(this)}>
+import { kanbanData } from './datasource';
+
+function App() {
+    // Clone the data to avoid mutating the original datasource
+    const data = extend([], kanbanData, null, true);
+    return (<KanbanComponent id="kanban" keyField="Status" dataSource={data} 
+        cardSettings={{ contentField: "Summary", headerField: "Id" }}>
         <ColumnsDirective>
-              <ColumnDirective headerText="To Do" keyField="Open"/>
-              <ColumnDirective headerText="In Progress" keyField="InProgress"/>
-              <ColumnDirective headerText="Testing" keyField="Testing"/>
-              <ColumnDirective headerText="Done" keyField="Close"/>
-            </ColumnsDirective>
-        </KanbanComponent>);
+          <ColumnDirective headerText="To Do" keyField="Open"/>
+          <ColumnDirective headerText="In Progress" keyField="InProgress"/>
+          <ColumnDirective headerText="Testing" keyField="Testing"/>
+          <ColumnDirective headerText="Done" keyField="Close"/>
+        </ColumnsDirective>
+    </KanbanComponent>);
 }
 export default App;
 
@@ -177,6 +216,16 @@ yarn run dev
 {% endhighlight %}
 {% endtabs %}
 
-To learn more about the functionality of the Kanban  component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/kanban/getting-started#module-injection).
+## Output
 
-> [View the NEXT.js Kanban  sample in the GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-kanban-component-in-nextjs).
+The Kanban board now displays cards from the `kanbanData` array. In this example, the board renders:
+
+- A set of workflow columns for `Open`, `InProgress`, `Testing`, and `Close`.
+- Cards mapped to each column by the `Status` field.
+- Card headers and content using `Id` and `Summary` via `cardSettings`.
+
+## See also
+
+- [Kanban columns](./columns.md)
+- [Kanban data binding](./data-binding.md)
+- [Kanban dialog](./dialog.md)

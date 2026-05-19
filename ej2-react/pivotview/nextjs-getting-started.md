@@ -151,7 +151,7 @@ export let pivotData: object[] = [
 {% endtabs %}
 
 2. Next, update the **app/page.tsx** file to import and set up the Pivot Table component. This step connects the data and configures the table’s report settings. Use the following code to define the component:
-
+> **Note:** Remove all existing code in the **app/page.tsx** file and replace it with the code below to avoid conflicts with default Next.js template code.
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
 

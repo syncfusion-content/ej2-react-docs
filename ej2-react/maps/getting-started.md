@@ -45,17 +45,22 @@ This command will prompt you for a few settings for the new project, such as sel
 
 ![Initial_setup](./images/Initial-setup.jpg)
 
-To set up a React application in a TypeScript environment, run the following command.
+Otherwise, We can directly set up our project with TypeScript or JavaScript environment based on the following commands
+
+To set up a React application in **TypeScript** environment:
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
-cd my-app
-npm run dev
 ```
-To set up a React application in a JavaScript environment, run the following command.
+
+To set up a React application in **JavaScript** environment:
 
 ```bash
 npm create vite@latest my-app -- --template react
+```
+
+To navigate and run your project:
+```bash
 cd my-app
 npm run dev
 ```
@@ -213,26 +218,6 @@ The JSON object "uncountries" is used as data source below.
 
 >**Note:** Refer to the value of the data source [`world-map.ts`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/world_map1260719407) and [`data.ts`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/data445116385) here.
 
-## Apply Color Mapping
-
-The Color Mapping feature supports customization of shape colors based on the underlying value of shape received from the bound data.
-Specify the field name from which the values have to be compared for the shapes in [`colorValuePath`](https://ej2.syncfusion.com/react/documentation/api/maps/shapeSettingsModel#colorvaluepath) property in [`shapeSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/shapeSettingsModel).
-
-Specify color and value in [`colorMapping`](https://ej2.syncfusion.com/react/documentation/api/maps/colorMappingSettingsModel) property. Here '#D84444' is specified for 'Permanent' and '#316DB5' is specified for 'Non-Permanent' membership types.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/maps/code-path/default-map-cs35/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/maps/code-path/default-map-cs35/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/maps/default-map-cs35" %}
-
->**Note:** Refer to the value of the data source [`world-map.ts`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/world_map1260719407) and [`data.ts`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/data445116385) here.
-
 ## Add Title for Maps
 
 You can add a title using [`titleSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/titleSettingsModel) property to the map to provide quick information to the user about the shapes rendered in the map.
@@ -247,55 +232,5 @@ You can add a title using [`titleSettings`](https://ej2.syncfusion.com/react/doc
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/maps/default-map-cs36" %}
-
->**Note:** Refer to the value of the data source [`world-map.ts`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/world_map1260719407) and [`data.ts`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/data445116385) here.
-
-## Enable Legend
-
-You can show a legend for the maps by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel#visible) property as `true` in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel) object and by injecting the `Legend` service using `Inject` tag.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/maps/code-path/default-map-cs37/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/maps/code-path/default-map-cs37/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/maps/default-map-cs37" %}
-
->**Note:** Refer to the value of the data source [`world-map.ts`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/world_map1260719407) and [`data.ts`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/data445116385) here.
-
-## Add Data Label
-
-You can add data labels to show additional information of the shapes in the map. This can be achieved by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel#visible) property to `true` in the [`dataLabelSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel) object and by injecting the `DataLabel` service using `Inject` tag.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/maps/code-path/default-map-cs38/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/maps/code-path/default-map-cs38/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/maps/default-map-cs38" %}
-
-## Enable Tooltip
-
-The tooltip is useful when you cannot display information by using the data labels due to space constraints.
-You can enable tooltip by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/maps/tooltipSettingsModel#visible) property to `true` in [`tooltipSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/tooltipSettingsModel) object and by injecting `MapsTooltip` service using `Inject` tag.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/maps/code-path/default-map-cs39/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/maps/code-path/default-map-cs39/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/maps/default-map-cs39" %}
 
 N> You can refer to our [React Maps Library](https://www.syncfusion.com/react-components/react-maps-library) feature tour page for its groundbreaking feature representations. You can also explore our [React Maps Library example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/maps/default) that shows you how to configure the Maps Library in React.
