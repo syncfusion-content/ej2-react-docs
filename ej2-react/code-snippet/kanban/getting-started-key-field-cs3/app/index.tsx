@@ -8,7 +8,8 @@ function App() {
   const data = extend([], kanbanData, null, true);
 
   return (
-    <KanbanComponent id="kanban" keyField="Status" dataSource={data} cardSettings={{ contentField: "Summary", headerField: "Id" }}>
+    <KanbanComponent id="kanban" keyField="Status" dataSource={data} 
+        cardSettings={{ contentField: "Summary", headerField: "Id" }}>
         <ColumnsDirective>
           <ColumnDirective headerText="To Do" keyField="Open" />
           <ColumnDirective headerText="In Progress" keyField="InProgress" />

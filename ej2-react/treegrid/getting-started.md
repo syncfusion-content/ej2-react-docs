@@ -33,16 +33,10 @@ To create a new React application with Vite, run the following command:
 ```bash
 npm create vite@latest my-app
 ```
-To set up a React application in a TypeScript environment, run the following command:
+
+Terminate the application, then run the following command:
 
 ```bash
-npm create vite@latest my-app -- --template react-ts
-cd my-app
-```
-To set up a React application in a JavaScript environment, run the following command:
-
-```bash
-npm create vite@latest my-app -- --template react
 cd my-app
 ```
 

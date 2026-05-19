@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Feature Modules
+# Feature Modules in React Gantt Chart Component
 
 The React Gantt Chart uses a modular architecture for bundle size optimization. Basic rendering requires no additional modules. Advanced features like sorting, editing, toolbar, and export require explicit module injection.
 
@@ -18,7 +18,7 @@ This approach loads only the functionality you need, reducing bundle size and im
 
 Import and inject modules using the `Inject` component inside your Gantt component:
 
-```jsx
+```ts
 import React from 'react';
 import { GanttComponent, Inject, Sort, Filter, Edit, Toolbar } from '@syncfusion/ej2-react-gantt';
 
@@ -87,7 +87,7 @@ Modern React build tools (Vite, Webpack, etc.) automatically tree-shake unused c
 
 **Import only what you need:**
 
-```jsx
+```ts
 // Good - Tree-shakeable
 import { GanttComponent, Inject, Sort, Edit } from '@syncfusion/ej2-react-gantt';
 
@@ -97,7 +97,7 @@ import * as GanttComponents from '@syncfusion/ej2-react-gantt';
 
 **Only inject required modules:**
 
-```jsx
+```ts
 // Only include modules for features you're actually using
 <Inject services={[Sort, Edit]} />
 ```
@@ -106,7 +106,7 @@ This ensures your production bundle includes only the Gantt features your applic
 
 ## See also
 
-- [Event Markers](./event-markers/)
-- [Virtual Scrolling](./scrolling/virtual-scrolling/)
-- [Editing Tasks](./managing-tasks/editing-tasks/)
-- [Overview](./overview/)
+- [Event Markers](./event-markers)
+- [Virtual Scrolling](./scrolling/virtual-scrolling)
+- [Editing Tasks](./managing-tasks/editing-tasks)
+- [Overview](./overview)

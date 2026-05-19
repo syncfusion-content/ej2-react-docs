@@ -1,4 +1,4 @@
-import { ColumnDirective, ColumnsDirective, TreeGridComponent } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import './App.css';
 
 // Defines the data to be displayed in the TreeGrid.
