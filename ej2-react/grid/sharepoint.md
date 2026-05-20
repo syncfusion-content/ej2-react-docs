@@ -86,7 +86,7 @@ This generates the necessary files as shown in the below image.
 
 ![SharePoint Setup](./images/sharepoint_setup.png)
 
-**6. Change Serve JSON Path:** Update the initial path of the config/serve.json to your SharePoint site instead of **{tenantDomain}**. Modify it to https://**your-sharepoint-site**/_layouts/workbench.aspx.
+**6. Change Serve JSON Path:** Update the initial path of the config/serve.json to your SharePoint site instead of **{tenantDomain}**. Modify it to https://**your-share-point-site**/_layouts/workbench.aspx.
 
 **7. Establish Trust for Certificate:** After the project is created, establish trust for the development certificate by executing the following command: To establish trust for the certificate in the development environment, execute the provided command:
 
