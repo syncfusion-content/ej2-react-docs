@@ -72,14 +72,14 @@ Add scheduler component's styles as given below in `src/App.css`.
 
 ## Initialize the Schedule and configure module injection
 
-This section explains how to set up the Syncfusion React Schedule component in your application and enable the required view modules.
+Import the Scheduler component into your app.tsx file and inject the required modules. Since each view in the Scheduler is maintained as a separate module, you need to inject the modules required for the desired views.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
 import './App.css';
 
-const App = () => {
+function App () {
   return (
     <ScheduleComponent>
       <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
@@ -93,7 +93,7 @@ export default App;
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
 import './App.css';
 
-const App = () => {
+function App () {
   return (
     <ScheduleComponent>
       <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
@@ -124,7 +124,7 @@ The StartTime and EndTime fields are mandatory for each appointment. The followi
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, type EventSettingsModel } from '@syncfusion/ej2-react-schedule';
 import './App.css';
 
-const App = () => {
+function App () {
   const data = [
     {
       Id: 1,
@@ -149,7 +149,7 @@ export default App;
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
 import './App.css';
 
-const App = () => {
+function App () {
   const data = [
     {
       Id: 1,
@@ -181,7 +181,7 @@ Scheduler usually displays the system date as its current date. To change the cu
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
 import './App.css';
 
-const App = () => {
+function App () {
   return (
     <ScheduleComponent selectedDate={new Date(2026, 4, 18)}>
       <Inject services={[Day, Week, WorkWeek, Agenda, Month]} />
@@ -195,7 +195,7 @@ export default App;
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
 import './App.css';
 
-const App = () => {
+function App () {
   return (
     <ScheduleComponent selectedDate={new Date(2026, 4, 18)}>
       <Inject services={[Day, Week, WorkWeek, Agenda, Month]} />
@@ -222,7 +222,7 @@ Scheduler displays `week` view by default. To change the current view, define th
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
 import './App.css';
 
-const App = () => {
+function App () {
   return (
     <ScheduleComponent currentView='Day'>
       <Inject services={[Day, Week, WorkWeek, Agenda, Month]} />
@@ -236,7 +236,7 @@ export default App;
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
 import './App.css';
 
-const App = () => {
+function App () {
   return (
     <ScheduleComponent currentView='Day'>
       <Inject services={[Day, Week, WorkWeek, Agenda, Month]} />

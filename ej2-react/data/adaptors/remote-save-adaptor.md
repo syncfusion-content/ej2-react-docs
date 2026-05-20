@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React DataManager - Remote Save Adaptor | Syncfusion
-description: React DataManager Remote Save provides server-side integration with REST APIs by detailing the backend setup and endpoint configuration required for data operations.
+description: React DataManager Remote Save enables remote data binding with REST APIs, explaining backend configuration and endpoints for efficient data operations.
 control: Remote Save Adaptor
 platform: ej2-react
 keywords: RemoteSaveAdaptor, client-side operations, hybrid adaptor, local filtering, server CRUD
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hybrid Data Binding in Syncfusion React with Client and Server Operations
+# Hybrid Data Binding in Syncfusion React with Client and Server
 
 The `RemoteSaveAdaptor` provides a hybrid approach to data management that combines the best of both client-side and server-side processing. It loads all data once from the server, then performs filtering, sorting, and paging , searching, grouping operations locally in the browser without additional server requests. Only CRUD operations (Create, Update, Delete) communicate with the server to persist data changes.
 
@@ -72,7 +72,7 @@ This guide demonstrates setting up `RemoteSaveAdaptor` with ASP.NET Core backend
 | Requirement           | Details                                                      | Download / Command                 |
 |----------------------|--------------------------------------------------------------|------------------------------------|
 | **Visual Studio**  | Community, Professional, or Enterprise edition               | [Visual Studio](https://visualstudio.microsoft.com/) |
-| **Node.js**           | Version 14.0 or later                                         | [Node.js](https://nodejs.org/)                |
+| **Node.js**           | Version 14.0 or later                                         | [Node.js](https://nodejs.org/en/)                |
 | **Verify Node.js**    | Check installed version                                        | `node --version`  |
 
 ## Backend setup (ASP.NET Core API)

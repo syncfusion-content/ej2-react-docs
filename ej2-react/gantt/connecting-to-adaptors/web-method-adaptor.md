@@ -10,9 +10,11 @@ domainurl: ##DomainURL##
 
 # Remote Data Binding with Custom Web Methods in Syncfusion React Gantt
 
-The WebMethod adaptor enables the React Gantt to communicate with server web methods and legacy endpoints by packaging task data requests and task modification payloads into a structured request envelope the server can deserialize. This adaptor is suitable for backend that expose web methods where task requests and updates are handled via HTTP POST operations.
+The [WebMethodAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/web-method-adaptor) enables the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt to communicate with server web methods and legacy endpoints by packaging task data requests and task modification payloads into a structured request envelope the server can deserialize. This adaptor is suitable for backend that expose web methods where task requests and updates are handled via HTTP POST operations.
 
 For backend configuration and expected request/response shapes, consult the WebMethod adaptor backend setup documentation for your platform. After the backend is prepared, configure the DataManager in the React application to use the WebMethod adaptor as the Gantt data source.
+
+For complete server‑side configuration and additional implementation details, refer to the [DataManager Webmethod Adaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/web-method-adaptor), which covers endpoint setup, query processing, and best practices for integrating WebMethod‑based services.
 
 **Project structure (conceptual):**
 
@@ -87,14 +89,53 @@ import "./App.css";
 
 Conceptually, the adaptor sends a request object that contains request metadata (for example, whether the client requires counts or which timeline range to return) together with task update payloads when the user performs create, update, or delete actions in the Gantt.
 
-## Server-side data operations
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+import React from "react";
+import { DataManager, WebMethodAdaptor } from "@syncfusion/ej2-data";
+import { GanttComponent, Inject, Selection, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
 
-When task sets are large or when scheduling rules must be applied consistently, the server receives responsibility for processing task queries and task modifications. Using web methods, the server applies scheduling rules, dependency validation, and any project‑specific business logic before returning task records or acknowledging changes.
+function App() {
+  // Configure DataManager with WebMethodAdaptor
+  const data = new DataManager({
+    url: "https://localhost:xxxx/api/Gantt", // Here xxxx represents the port number.
+    adaptor: new WebMethodAdaptor(),
+    crossDomain: true
+  });
+  const taskFields = {
+    id: 'TaskID',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    endDate: 'EndDate',
+    duration: 'Duration',
+    progress: 'Progress',
+    dependency: 'Dependency',
+    parentID: 'ParentID',
+  };
 
-Advantages of server handling in WebMethod scenarios:
-- Performance: centralized processing of scheduling and dependency calculations keeps the client responsive.
-- Consistency: server enforces business rules so all clients observe the same scheduling outcomes.
-- Bandwidth control: the server can return only tasks and related data relevant to the requested timeline range.
+  return (
+    <GanttComponent dataSource={data} taskFields={taskFields} height='400px' >
+      <ColumnsDirective>
+        <ColumnDirective field="TaskID" headerText="Task ID" textAlign="Right" width="90" type="number" />
+        <ColumnDirective field="TaskName" headerText="Task Name" textAlign="Left" width="270" type="string" />
+        <ColumnDirective field="StartDate" headerText="Start Date" textAlign="Right" width="150" format="yMd" type="dateTime" />
+        <ColumnDirective field="EndDate" headerText="End Date" textAlign="Right" width="150" format="dd/MM/yyyy hh:mm" type="dateTime" />
+        <ColumnDirective field="Duration" headerText="Duration" textAlign="Right" width="90" type="string" />
+        <ColumnDirective field="Progress" headerText="Progress" textAlign="Right" width="120" type="number" />
+      </ColumnsDirective>
+      <Inject services={[Selection]} />
+    </GanttComponent>
+  );
+}
+
+export default App;
+
+{% endhighlight %}
+{% endtabs %}
+
+**Server-side data operations**
+
+When task sets are large or when scheduling rules must be applied consistently, the server receives responsibility for processing task queries and task modifications. Using web methods, the server applies scheduling rules, dependency validation, and any project‑specific business logic before returning task records or acknowledging changes.The `Syncfusion.EJ2.AspNet.Core` package supports this approach by providing built‑in methods that efficiently handle these operations on the server, ensuring smooth performance even with heavy data loads.
 
 ## CRUD operations
 
@@ -281,12 +322,19 @@ Run the application in Visual Studio, accessible on a URL like **https://localho
 
 ## Troubleshooting
 
-- Empty response: Verify the web method returns task records and required metadata (parent ids, resource assignments, start/end dates) for the requested timeline range.
-- 404 responses: Confirm the web method route and endpoint URLs configured in the DataManager are correct.
-- 500 or server errors: Check server logs and validate that request parameters are parsed correctly and that scheduling or dependency logic does not throw exceptions.
-- CORS errors: Ensure cross‑origin requests are permitted when frontend and backend are hosted separately.
-- Related data mismatches: When related datasets are remote, confirm their endpoints return the expected values used for display and dependency resolution.
+| Issue                     | Cause                                                                                   | Solution                                                                                                              |
+|---------------------------|-----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
+| Empty response            | Web method not returning task records or required metadata                              | Verify method returns records with parent ids, resource assignments, and start/end dates for the timeline range     |
+| 404 responses             | Incorrect web method route or endpoint configuration                                     | Confirm DataManager URLs and routes are correctly configured and accessible                                          |
+| 500 or server errors      | Server-side exceptions or improper request parameter handling                            | Check server logs, validate parameter parsing, and ensure scheduling/dependency logic is error-free                  |
+| CORS errors               | Cross-origin requests blocked or not configured                                          | Ensure CORS is enabled when frontend and backend are hosted on different origins                                     |
+| Related data mismatches   | Remote datasets not returning expected values for relationships and dependencies         | Confirm related endpoints return correct data required for display and dependency resolution                         |
 
 ## Complete sample repository
 
 For the complete working implementation of this example, refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-react-gantt-chart-samples/tree/master/WebMethodAdaptor) repository.
+
+## See also
+- [Connect to OdataV4 services](https://ej2.syncfusion.com/react/documentation/gantt/connecting-to-adaptors/odatav4-adaptor)
+- [Hybrid data binding](https://ej2.syncfusion.com/react/documentation/gantt/connecting-to-adaptors/remote-save-adaptor)
+- [Data binding](https://ej2.syncfusion.com/react/documentation/gantt/data-binding)
