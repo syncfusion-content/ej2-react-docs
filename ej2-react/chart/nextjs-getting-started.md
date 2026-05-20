@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Creating a Next.js Application Using Syncfusion React Components
+# Creating a Next.js Application Using Syncfusion React Chart Component
 
 This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Chart component.
 
@@ -24,7 +24,7 @@ Before getting started with the Next.js application, ensure the following prereq
 
 * The application is compatible with macOS, Windows, and Linux operating systems.
 
-## Create a Next.js application
+## Step 1: Create a Next.js application
 
 To create a new `Next.js` application, use one of the commands that are specific to either NPM or Yarn.
 
@@ -55,23 +55,15 @@ Using one of the above commands will lead you to set up additional configuration
 
 2.Select the required packages.
 
-Either use the default packages or customize each of them.
-
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
-√ What is your project named? ... ej2-nextjs-chart
-√ Would you like to use TypeScript? ... No / `Yes`
-√ Would you like to use ESLint? ... No / `Yes`
-√ Would you like to use Tailwind CSS? ... `No` / Yes
-√ Would you like to use `src/` directory? ... No / `Yes`
-√ Would you like to use App Router? (recommended) ... No / `Yes`
-√ Would you like to customize the default import alias? ... `No`/ Yes
-√ Would you like to include AGENTS.md to guide coding agents to write up-to-date Next.js code? ... No / `Yes`
-Creating a new Next.js app in D:\ej2-nextjs-chart.
+√ Would you like to use the recommended Next.js defaults? » Yes, use recommended defaults
 
 {% endhighlight %}
 {% endtabs %}
+
+By selecting default packages, all essential packages for Next.js will be installed.
 
 3.Once complete the above mentioned steps to create `ej2-nextjs-chart`, navigate to the directory using the below command:
 
@@ -85,7 +77,7 @@ cd ej2-nextjs-chart
 
 The application is ready to run with default settings. Now, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
+## Step 2: Install Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
@@ -104,7 +96,7 @@ yarn add @syncfusion/ej2-react-charts
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React component
+## Step 3: Add Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
 Follow the below steps to add the React Chart component to the Next.js project:
 
@@ -126,11 +118,10 @@ import {
 
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
-
 'use client'
 import {
-  AxisModel, Category, ChartComponent, ColumnSeries, DataLabel, Inject,
-  Legend, LegendSeriesModel, LineSeries, SeriesCollectionDirective, SeriesDirective, Tooltip, TooltipSettingsModel, MarkerSettingsModel
+  Category, ChartComponent, ColumnSeries, Inject,
+  LineSeries, SeriesCollectionDirective, SeriesDirective
 } from '@syncfusion/ej2-react-charts';
 
 export default function Home() {
@@ -142,31 +133,21 @@ export default function Home() {
     { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
     { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
   ];
-  const tooltip: TooltipSettingsModel = { enable: true, shared: false };
-  const primaryYAxis: AxisModel = { labelFormat: '${value}K' };
-  const primaryXAxis: AxisModel = { valueType: 'Category' };
-  const legendSettings: LegendSeriesModel = { visible: true };
-  const marker: MarkerSettingsModel = { dataLabel: { visible: true } };
 
   return (
-    <>
-      <h2>Syncfusion React Chart Component</h2>
-      <ChartComponent id="charts" primaryXAxis={primaryXAxis} legendSettings={legendSettings}
-        primaryYAxis={primaryYAxis} tooltip={tooltip}>
-        <Inject services={[ColumnSeries, DataLabel, Tooltip, Legend, LineSeries, Category]} />
-        <SeriesCollectionDirective>
-          <SeriesDirective dataSource={data} xName='month' yName='sales' name='Sales' marker={marker} />
-        </SeriesCollectionDirective>
-      </ChartComponent>
-    </>
+    <ChartComponent id="charts" primaryXAxis={{ valueType: 'Category' }}
+      primaryYAxis={{ labelFormat: '${value}K' }} >
+      <Inject services={[ColumnSeries, LineSeries, Category]} />
+      <SeriesCollectionDirective>
+        <SeriesDirective dataSource={data} xName='month' yName='sales' name='Sales' />
+      </SeriesCollectionDirective>
+    </ChartComponent>
   )
 }
-
-
 {% endhighlight %}
 {% endtabs %}
 
-## Run the application
+## Step 4: Run the application
 
 To run the application, use the following command:
 
@@ -182,6 +163,10 @@ yarn run dev
 
 {% endhighlight %}
 {% endtabs %}
+
+Open the generated local URL (for example, `/localhost:3000/`) from terminal in the browser. The application displays the chart as shown below:
+
+![NextJS](./images/next-js.png)
 
 To learn more about the functionality of the Chart component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/chart/getting-started#module-injection).
 

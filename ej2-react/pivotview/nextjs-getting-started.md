@@ -8,8 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-
-# Creating a Next.js Application Using Syncfusion React Components 
+# Getting Started with React Pivot Table in Next.js
 
 This section explains how to set up a Next.js application and add the Syncfusion<sup style="font-size:70%">&reg;</sup> React [Pivot Table](https://www.syncfusion.com/react-components/react-pivot-table) component. Follow these steps to create a user-friendly web application with the Pivot Table for data analysis.
 
@@ -165,7 +164,6 @@ export default function Home() {
     columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
     dataSource: pivotData as IDataSet[],
     expandAll: false,
-    filters: [],
     drilledMembers: [{ name: 'Country', items: ['Germany'] }],
     formatSettings: [{ name: 'Amount', format: 'C0' }],
     rows: [{ name: 'Country' }, { name: 'Products' }],
