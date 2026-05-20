@@ -8,8 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-
-# Creating a Next.js Application Using Syncfusion React Components
+# Getting Started with React Grid Component in the Next.js
 
 This section provides a step-by-step guide for creating a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component.
 
@@ -116,15 +115,15 @@ Import the `Tailwind 3` theme into the **src/app/globals.css** file and remove t
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
 
-@import '../../node_modules/@syncfusion/ej2-base/styles/material3.css';
-@import '../../node_modules/@syncfusion/ej2-buttons/styles/material3.css';  
-@import '../../node_modules/@syncfusion/ej2-calendars/styles/material3.css';  
-@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css';  
-@import '../../node_modules/@syncfusion/ej2-inputs/styles/material3.css';  
-@import '../../node_modules/@syncfusion/ej2-navigations/styles/material3.css';
-@import '../../node_modules/@syncfusion/ej2-popups/styles/material3.css';
-@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css';
-@import "../../node_modules/@syncfusion/ej2-react-grids/styles/material3.css";
+@import '../../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';  
+@import '../../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';  
+@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';  
+@import '../../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';  
+@import '../../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import "../../node_modules/@syncfusion/ej2-react-grids/styles/tailwind3.css";
 
 {% endhighlight %}
 {% endtabs %}
@@ -133,139 +132,39 @@ Import the `Tailwind 3` theme into the **src/app/globals.css** file and remove t
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
-Follow the below steps to add the React Grid component to the Next.js project:
-
-**Step 1: Create a datasource file**
-
-Create a `datasource.tsx` file in the **src/app/** folder and add the sample data for the Grid component:
-
-{% tabs %}
-{% highlight ts tabtitle="datasource.tsx" %}
-
-export let data: Object[] = [
-    {
-        OrderID: 10248, CustomerID: 'VINET', EmployeeID: 5, OrderDate: new Date(8364186e5),
-        ShipName: 'Vins et alcools Chevalier', ShipCity: 'Reims', ShipAddress: '59 rue de l Abbaye',
-        ShipRegion: 'CJ', ShipPostalCode: '51100', ShipCountry: 'France', Freight: 32.38, Verified: !0
-    },
-    {
-        OrderID: 10249, CustomerID: 'TOMSP', EmployeeID: 6, OrderDate: new Date(836505e6),
-        ShipName: 'Toms Spezialitäten', ShipCity: 'Münster', ShipAddress: 'Luisenstr. 48',
-        ShipRegion: 'CJ', ShipPostalCode: '44087', ShipCountry: 'Germany', Freight: 11.61, Verified: !1
-    },
-    {
-        OrderID: 10250, CustomerID: 'HANAR', EmployeeID: 4, OrderDate: new Date(8367642e5),
-        ShipName: 'Hanari Carnes', ShipCity: 'Rio de Janeiro', ShipAddress: 'Rua do Paço, 67',
-        ShipRegion: 'RJ', ShipPostalCode: '05454-876', ShipCountry: 'Brazil', Freight: 65.83, Verified: !0
-    },
-    {
-        OrderID: 10251, CustomerID: 'VICTE', EmployeeID: 3, OrderDate: new Date(8367642e5),
-        ShipName: 'Victuailles en stock', ShipCity: 'Lyon', ShipAddress: '2, rue du Commerce',
-        ShipRegion: 'CJ', ShipPostalCode: '69004', ShipCountry: 'France', Freight: 41.34, Verified: !0
-    },
-    {
-        OrderID: 10252, CustomerID: 'SUPRD', EmployeeID: 4, OrderDate: new Date(8368506e5),
-        ShipName: 'Suprêmes délices', ShipCity: 'Charleroi', ShipAddress: 'Boulevard Tirou, 255',
-        ShipRegion: 'CJ', ShipPostalCode: 'B-6000', ShipCountry: 'Belgium', Freight: 51.3, Verified: !0
-    },
-    {
-        OrderID: 10253, CustomerID: 'HANAR', EmployeeID: 3, OrderDate: new Date(836937e6),
-        ShipName: 'Hanari Carnes', ShipCity: 'Rio de Janeiro', ShipAddress: 'Rua do Paço, 67',
-        ShipRegion: 'RJ', ShipPostalCode: '05454-876', ShipCountry: 'Brazil', Freight: 58.17, Verified: !0
-    },
-    {
-        OrderID: 10254, CustomerID: 'CHOPS', EmployeeID: 5, OrderDate: new Date(8370234e5),
-        ShipName: 'Chop-suey Chinese', ShipCity: 'Bern', ShipAddress: 'Hauptstr. 31',
-        ShipRegion: 'CJ', ShipPostalCode: '3012', ShipCountry: 'Switzerland', Freight: 22.98, Verified: !1
-    },
-    {
-        OrderID: 10255, CustomerID: 'RICSU', EmployeeID: 9, OrderDate: new Date(8371098e5),
-        ShipName: 'Richter Supermarkt', ShipCity: 'Genève', ShipAddress: 'Starenweg 5',
-        ShipRegion: 'CJ', ShipPostalCode: '1204', ShipCountry: 'Switzerland', Freight: 148.33, Verified: !0
-    },
-    {
-        OrderID: 10256, CustomerID: 'WELLI', EmployeeID: 3, OrderDate: new Date(837369e6),
-        ShipName: 'Wellington Importadora', ShipCity: 'Resende', ShipAddress: 'Rua do Mercado, 12',
-        ShipRegion: 'SP', ShipPostalCode: '08737-363', ShipCountry: 'Brazil', Freight: 13.97, Verified: !1
-    },
-    {
-        OrderID: 10257, CustomerID: 'HILAA', EmployeeID: 4, OrderDate: new Date(8374554e5),
-        ShipName: 'HILARION-Abastos', ShipCity: 'San Cristóbal', ShipAddress: 'Carrera 22 con Ave. Carlos Soublette #8-35',
-        ShipRegion: 'Táchira', ShipPostalCode: '5022', ShipCountry: 'Venezuela', Freight: 81.91, Verified: !0
-    },
-    {
-        OrderID: 10258, CustomerID: 'ERNSH', EmployeeID: 1, OrderDate: new Date(8375418e5),
-        ShipName: 'Ernst Handel', ShipCity: 'Graz', ShipAddress: 'Kirchgasse 6',
-        ShipRegion: 'CJ', ShipPostalCode: '8010', ShipCountry: 'Austria', Freight: 140.51, Verified: !0
-    },
-    {
-        OrderID: 10259, CustomerID: 'CENTC', EmployeeID: 4, OrderDate: new Date(8376282e5),
-        ShipName: 'Centro comercial Moctezuma', ShipCity: 'México D.F.', ShipAddress: 'Sierras de Granada 9993',
-        ShipRegion: 'CJ', ShipPostalCode: '05022', ShipCountry: 'Mexico', Freight: 3.25, Verified: !1
-    },
-    {
-        OrderID: 10260, CustomerID: 'OTTIK', EmployeeID: 4, OrderDate: new Date(8377146e5),
-        ShipName: 'Ottilies Käseladen', ShipCity: 'Köln', ShipAddress: 'Mehrheimerstr. 369',
-        ShipRegion: 'CJ', ShipPostalCode: '50739', ShipCountry: 'Germany', Freight: 55.09, Verified: !0
-    },
-    {
-        OrderID: 10261, CustomerID: 'QUEDE', EmployeeID: 4, OrderDate: new Date(8377146e5),
-        ShipName: 'Que Delícia', ShipCity: 'Rio de Janeiro', ShipAddress: 'Rua da Panificadora, 12',
-        ShipRegion: 'RJ', ShipPostalCode: '02389-673', ShipCountry: 'Brazil', Freight: 3.05, Verified: !1
-    },
-    {
-        OrderID: 10262, CustomerID: 'RATTC', EmployeeID: 8, OrderDate: new Date(8379738e5),
-        ShipName: 'Rattlesnake Canyon Grocery', ShipCity: 'Albuquerque', ShipAddress: '2817 Milton Dr.',
-        ShipRegion: 'NM', ShipPostalCode: '87110', ShipCountry: 'USA', Freight: 48.29, Verified: !0
-    }
-];
-
-{% endhighlight %}
-{% endtabs %}
-
-**Step 2: Define the Grid component**
-
-Import and configure the Grid component with the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource) property, column definitions, and required modules in the **src/app/page.tsx** file: 
+The grid code should be added to the **src/app/page.tsx** file.
 
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
 
 'use client'
-import {
-  ColumnDirective, ColumnsDirective, GridComponent,
-  Inject, Page, Sort, Filter, Group
-} from '@syncfusion/ej2-react-grids';
-import { data } from "./datasource";
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+
+// Defines the data to be displayed in the Grid.
+const data = [
+    { OrderID: 10248, CustomerName: 'Ana Trujillo', OrderDate: new Date(2025, 0, 12), ShipCountry: 'France', Freight: 32.38 },
+    { OrderID: 10249, CustomerName: 'Martin Sommer', OrderDate: new Date(2025, 0, 15), ShipCountry: 'Germany', Freight: 11.61 },
+    { OrderID: 10250, CustomerName: 'Thomas Hardy', OrderDate: new Date(2025, 1, 5), ShipCountry: 'Brazil', Freight: 65.83 },
+    { OrderID: 10251, CustomerName: 'Elizabeth Lincoln', OrderDate: new Date(2025, 1, 18), ShipCountry: 'France', Freight: 41.34 },
+    { OrderID: 10252, CustomerName: 'Victoria Ashworth', OrderDate: new Date(2025, 2, 10), ShipCountry: 'Belgium', Freight: 51.30 },
+    { OrderID: 10253, CustomerName: 'Martine Rance', OrderDate: new Date(2025, 2, 22), ShipCountry: 'Brazil', Freight: 58.17 },
+]; 
 
 export default function Home() {
-  const pageSettings: object = { pageSize: 6 };
-  const filterSettings: object = { type: 'Excel' };
-  return (
+
+    return (
     <>
       <h2>Syncfusion React Grid Component</h2>
-      <GridComponent
-        dataSource={data}
-        allowGrouping={true}
-        allowSorting={true}
-        allowFiltering={true}
-        allowPaging={true}
-        pageSettings={pageSettings}
-        filterSettings={filterSettings}
-        height={180}
-      >
+      {/* Assigns the dataset to the Grid component */}
+      <GridComponent dataSource={data} >
+        {/* Define the columns to be displayed */}
         <ColumnsDirective>
-          <ColumnDirective field="OrderID" width="100" textAlign="Right" />
-          <ColumnDirective field="CustomerID" width="100" />
-          <ColumnDirective field="EmployeeID" width="100" textAlign="Right" />
-          <ColumnDirective
-            field="Freight"
-            width="100"
-            format="C2"
-            textAlign="Right"
-          />
-          <ColumnDirective field="ShipCountry" width="100" />
-        </ColumnsDirective>
-        <Inject services={[Page, Sort, Filter, Group]} />
+            <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign='Right'/>
+            <ColumnDirective field='CustomerName' headerText='Customer Name' width='100'/>
+            <ColumnDirective field='OrderDate' headerText='Order Date' width='100' format='yMd' textAlign='Right'/>
+            <ColumnDirective field='Freight' width='100' format='C2' textAlign='Right'/>
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100'/>
+        </ColumnsDirective>     
       </GridComponent>
     </>
   )
@@ -275,8 +174,6 @@ export default function Home() {
 {% endtabs %}
 
 ## Run the application
-
-To run the application, use the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -291,6 +188,8 @@ yarn run dev
 {% endhighlight %}
 {% endtabs %}
 
-To learn more about the functionality of the Grid component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/grid/getting-started#module-injection).
-
 > [View the NEXT.js Grid sample in the GitHub repository](https://github.com/SyncfusionExamples/ej2-nextjs-grid).
+
+## See also
+
+* [Grid Feature Modules](./module)
