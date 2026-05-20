@@ -8,8 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-
-# Creating a Next.js Application Using Syncfusion React Components
+# Creating a Next.js Application Using Syncfusion React Data Grid Component
 
 This section provides a step-by-step guide for creating a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component.
 
