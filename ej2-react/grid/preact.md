@@ -105,7 +105,7 @@ yarn add @syncfusion/ej2-react-grids
 
 You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> React component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) to know more about built-in themes and different ways to refer to theme's in a React project.
 
-In this article, the `Tailwind 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Tailwind 3` CSS styles for the Grid component and its dependents were imported into the **src/style.css** file.
+In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the Grid component and its dependents were imported into the **src/style.css** file.
 
 {% tabs %}
 {% highlight css tabtitle="~/src/style.css" %}
@@ -127,23 +127,7 @@ In this article, the `Tailwind 3` theme is applied using CSS styles, which are a
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
-Follow these steps to add the React Grid component to your Preact project:
-
-**Step 1: Import Grid components**
-
-In the **src/index.jsx** file, import the necessary Grid components:
-
-{% tabs %}
-{% highlight js tabtitle="~/src/index.jsx" %}
-
-import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-
-{% endhighlight %}
-{% endtabs %}
-
-**Step 2: Define and render the Grid**
-
-Create the Grid component with sample data and column definitions:
+The grid code should be added to the **src/index.jsx** file.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
@@ -153,6 +137,7 @@ import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej
 import './style.css';
 
 export function App() {
+  // Defines the data to be displayed in the Grid.
   const data = [
     { OrderID: 10248, CustomerID: 'VINET', EmployeeID: 5, ShipCountry: 'France', Freight: 32.38 },
     { OrderID: 10249, CustomerID: 'TOMSP', EmployeeID: 6, ShipCountry: 'Germany', Freight: 11.61 },
@@ -160,7 +145,9 @@ export function App() {
   ];
 
   return (
+    {/* Assigns the dataset to the Grid component */}
     <GridComponent dataSource={data}>
+      {/* Define the columns to be displayed */}
       <ColumnsDirective>
         <ColumnDirective field='OrderID' width='100' textAlign="Right" />
         <ColumnDirective field='CustomerID' width='100' />
@@ -179,8 +166,6 @@ render(<App />, document.getElementById('app'));
 
 ## Run the project
 
-To run the project, use the following command:
-
 ```bash
 npm run dev
 ```
@@ -197,4 +182,4 @@ The output will appear as follows:
 
 ## See also
 
-To explore more Grid component features and customization options, refer to the [Getting Started with the Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Component](../getting-started/quick-start).
+* [Grid Feature Modules](./module)
