@@ -26,7 +26,7 @@ Before you start using Syncfusion<sup style="font-size:70%">&reg;</sup> React UI
 
 Follow these steps to install and set up SharePoint Framework for your project:
 
-**1. Create a New Project:** Create a new directory called **ej2-sharepoint**, open the command prompt from that directory.
+**1. Create a New Project:** Create a new directory called **ej2-share-point**, open the command prompt from that directory.
 
 **2. Install Gulp:** Gulp is a JavaScript-based task runner used to automate repetitive tasks. Install the Gulp CLI globally using the following command:
 
@@ -54,10 +54,10 @@ yo @microsoft/sharepoint
 
 After executing the above command, you will be prompted to configure the project settings. Follow the prompts and provide the necessary information:
 
-**1. Solution Name:** Enter the name for your solution, such as "ej-2-sharepoint". 
+**1. Solution Name:** Enter the name for your solution, such as "ej2-share-point". 
 
 ```bash
-What is your solution name? **ej-2-sharepoint**
+What is your solution name? **ej2-share-point**
 ```
 **2. Client-Side Component Type:** Choose the type of client-side component you want to create:
 
