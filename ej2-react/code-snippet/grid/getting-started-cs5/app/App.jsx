@@ -14,11 +14,11 @@ function App() {
     return <div>
         <GridComponent dataSource={data} allowPaging={true} pageSettings={pageSettings} allowFiltering={true} filterSettings={filterSettings} allowSorting={true} editSettings={editOptions} toolbar={toolbarOptions}>
             <ColumnsDirective>
-                <ColumnDirective field='OrderID' width='100' validationRules={orderIDRules} isPrimaryKey={true} textAlign='Right'/>
-                <ColumnDirective field='CustomerName' validationRules={customerNameRules} width='100'/>
-                <ColumnDirective field='OrderDate' width='100' format='yMd' editType='datepickeredit' textAlign='Right'/>
+                <ColumnDirective field='OrderID' headerText='Order ID' width='100' validationRules={orderIDRules} isPrimaryKey={true} textAlign='Right'/>
+                <ColumnDirective field='CustomerName' headerText='Customer Name' validationRules={customerNameRules} width='100'/>
+                <ColumnDirective field='OrderDate' headerText='Order Date' width='100' format='yMd' editType='datepickeredit' textAlign='Right'/>
                 <ColumnDirective field='Freight' width='100' format='C2' editType='numericedit' textAlign='Right'/>
-                <ColumnDirective field='ShipCountry' editType='dropdownedit' width='100'/>
+                <ColumnDirective field='ShipCountry' headerText='Ship Country' editType='dropdownedit' width='100'/>
             </ColumnsDirective>
             {/* Inject required Grid features */}
             <Inject services={[Page, Sort, Filter, Edit, Toolbar]} />
