@@ -66,7 +66,7 @@ The following CSS files are available in the **../node_modules/@syncfusion** pac
 
 ## Adding Grid component
 
-The grid code should be placed in the **src/App.tsx** file.
+The grid code should be added to the **src/App.tsx** file.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
