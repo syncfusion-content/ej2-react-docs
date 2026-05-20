@@ -10,11 +10,13 @@ domainurl: ##DomainURL##
 
 # Hybrid Remote Binding with RemoteSaveAdaptor in Syncfusion React Gantt
 
-The RemoteSaveAdaptor provides a hybrid data workflow for the React Gantt: the client fetches the complete task set once and applies client‑side operations locally while persisting edits back to the server via batch CRUD requests. This approach keeps the UI responsive for interactive scheduling while ensuring server‑side persistence and authoritative processing for inserts, updates and deletes.
+The [RemoteSaveAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/remote-save-adaptor) in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt chart provides a hybrid data workflow. The client fetches the complete task set once and applies client‑side operations locally while persisting edits back to the server via batch CRUD requests. This approach keeps the UI responsive for interactive scheduling while ensuring server‑side persistence and authoritative processing for inserts, updates and deletes.
 
-This guide describes the conceptual project layout and patterns for wiring the Gantt to a backend that implements a batch CRUD endpoint
+For complete server‑side configuration and additional implementation details, refer to the [DataManager RemoteSaveAdaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/remote-save-adaptor), which explains endpoint setup, request handling, and best practices for synchronizing CRUD operations with remote services.
 
-**Project structure (conceptual):**
+This guide describes the conceptual project layout and patterns for wiring the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt chart to a backend that implements a batch CRUD endpoint.
+
+**Project structure:**
 
 - Frontend: a React project that hosts the Gantt and loads the full task dataset into a `DataManager` configured with `RemoteSaveAdaptor`.
 - Backend: a web API that serves the complete task list and exposes a batch endpoint that accepts added/changed/deleted records in a single payload.
@@ -82,10 +84,104 @@ import "./App.css";
 
 ### Step 3: Configure DataManager with RemoteSave Adaptor
 
-- Configure a DataManager instance that targets your web method endpoints and specifies the RemoteSave Adaptor. The Gantt uses that DataManager to fetch tasks, request related datasets, and submit task create/update/delete payloads wrapped in the expected envelope.
+In the React component file **App.jsx**, import `DataManager` and `RemoteSaveAdaptor` from `@syncfusion/ej2-data`. The `DataManager` serves as an abstraction layer that manages the data source configuration and coordinates data operations with the Gantt chart.
 
-Conceptually, the adaptor sends a request object that contains request metadata (for example, whether the client requires counts or which timeline range to return) together with task update payloads when the user performs create, update, or delete actions in the Gantt.
+**Configure the DataManager**
 
+1. **Assign RemoteSaveAdaptor:** Set the `adaptor` property within the `dataSource` configuration to `new RemoteSaveAdaptor()`.
+
+2. **Map CRUD operations**: CRUD operations within the Gantt chart can be mapped to server-side controller actions using specific properties:
+   - `batchUrl`: Specifies the URL for batch editing
+
+3. **Load JSON data**: Fetch initial data from the server that contains all records.
+
+**Configure the Gantt chart**
+
+1. **Set dataSource:** Configure the `dataSource` property of Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt chart with a JSON object.
+
+2. **Enable editing:** Use [editSettings](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#editsettings) to allow CRUD actions (allowEditing, allowAdding, allowDeleting).
+
+3. **Add toolbar:** Configure [toolbar](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#toolbar) with items such as Add, Edit, Delete, Update, Cancel, and Search.
+
+4. **Enable client-side features:**
+
+    - [allowAdding](https://ej2.syncfusion.com/react/documentation/api/gantt/editsettingsmodel#allowadding): Enables adding.
+
+    - [allowDeleting](https://ej2.syncfusion.com/react/documentation/api/gantt/editsettingsmodel#allowdeleting): Enables deleting.
+
+    - [allowTaskbarEditing](https://ej2.syncfusion.com/react/documentation/api/gantt/editsettingsmodel#allowtaskbarediting): Enables taskbar editing.
+
+In this example, data is fetched from the server using the `fetch` method and assigned to the Grid's [dataSource](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#datasource) property through the `DataManager` instance.
+
+
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+import './App.css';
+import { GanttComponent, Inject, Edit, Selection, Toolbar, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
+import React, { useEffect, useState } from "react";
+import { DataManager, RemoteSaveAdaptor } from "@syncfusion/ej2-data";
+
+const serviceUrl = "https://localhost:xxxx/api/gantt"; // Here xxxx represents the port number.
+
+function App() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch(serviceUrl)
+      .then((response) => response.json())
+      .then((result) => {
+        setData(new DataManager({
+          json: result,
+          adaptor: new RemoteSaveAdaptor(),
+          batchUrl: `${serviceUrl}/Batch`,
+          enableOffline: true
+        }));
+      })
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+
+  const taskFields = {
+    id: 'TaskID',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    endDate: 'EndDate',
+    duration: 'Duration',
+    progress: 'Progress',
+    parentID: 'ParentID'
+  };
+
+  const editSettings = {
+    allowEditing: true,
+    allowAdding: true,
+    allowDeleting: true,
+    allowTaskbarEditing: true
+  };
+
+  const toolbarOptions = ["Add", "Edit", "Delete", "Update", "Cancel"];
+
+  return (
+    <div>
+      {data && (
+        <GanttComponent dataSource={data} taskFields={taskFields} allowSelection={true} editSettings={editSettings} height='400px' toolbar={toolbarOptions}>
+          <ColumnsDirective>
+            <ColumnDirective field="TaskID" headerText="Task ID" textAlign="Right" width="90" type="number" />
+            <ColumnDirective field="TaskName" headerText="Task Name" textAlign="Left" width="270" type="string" />
+            <ColumnDirective field="StartDate" headerText="Start Date" textAlign="Right" width="150" format="yMd" type="dateTime" />
+            <ColumnDirective field="EndDate" headerText="End Date" textAlign="Right" width="150" format="dd/MM/yyyy hh:mm" type="dateTime" />
+            <ColumnDirective field="Duration" headerText="Duration" textAlign="Right" width="90" type="number" />
+            <ColumnDirective field="Progress" headerText="Progress" textAlign="Right" width="120" type="number" />
+          </ColumnsDirective>
+          <Inject services={[Edit, Selection, Toolbar]} />
+        </GanttComponent>
+      )}
+    </div>
+  );
+}
+
+export default App;
+{% endhighlight %}
+{% endtabs %}
 
 ## CRUD operations
 
@@ -261,12 +357,18 @@ export default App;
 Run the application in Visual Studio, accessible on a URL like **https://localhost:xxxx**. Verify the API returns data at **https://localhost:xxxx/api/gantt/Batch**, where **xxxx** is the port. Gantt displays data fetched from the backend API.
 
 ## Troubleshooting
-
-- Empty initial load: Verify the GET task endpoint returns task records with required fields (ids, start/end dates, parent ids when used).
-- Batch requests not applied: Confirm `batchUrl` is correctly configured and server accepts the expected payload shape.
-- Identifier mismatches: Ensure server assigns stable keys for newly inserted tasks and returns them so the client can replace temporary ids.
-- CORS or network errors: Confirm cross‑origin requests are permitted when frontend and backend are hosted separately.
+| Issue                     | Cause                                                      | Solution                                                                                 |
+|---------------------------|------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| Empty initial load        | GET task endpoint not returning required task records      | Verify endpoint returns records with required fields (ids, start/end dates, parent ids) |
+| Batch requests not applied| Incorrect batchUrl or unsupported server payload            | Confirm `batchUrl` is correct and server accepts expected payload format                |
+| Identifier mismatches     | Server not returning stable keys for new records            | Ensure server returns assigned ids so client can replace temporary ids                  |
+| CORS or network errors    | Cross-origin requests blocked or misconfiguration              | Confirm CORS is enabled when frontend and backend are hosted separately                 |
 
 ## Complete sample repository
 
 For the complete working implementation of this example, refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-react-gantt-chart-samples/tree/master/RemoteSaveAdaptor) repository.
+
+## See also
+- [Connect to OdataV4 services](https://ej2.syncfusion.com/react/documentation/gantt/connecting-to-adaptors/odatav4-adaptor)
+- [RESTful CRUD Operations in ASP.NET Web Forms](https://ej2.syncfusion.com/react/documentation/gantt/connecting-to-adaptors/web-method-adaptor)
+- [Data binding](https://ej2.syncfusion.com/react/documentation/gantt/data-binding)

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with Next.js
 
-This guide shows how to integrate the React Gantt Chart component into a Next.js application using the App Router. For detailed component concepts and features, see the [main Getting Started guide](./getting-started/).
+This guide shows how to integrate the React Gantt Chart component into a Next.js application using the App Router. For detailed component concepts and features, see the [main Getting Started guide](./getting-started).
 
 ## Prerequisites
 
@@ -60,7 +60,7 @@ yarn add @syncfusion/ej2-react-gantt
 
 ## Add theme styles
 
-Import the basic Gantt Chart styles in `src/app/globals.css` (replace the existing content):
+Import the basic Gantt Chart styles in `app/globals.css` (replace the existing content):
 
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
@@ -135,7 +135,7 @@ const taskFields = {
 
 ## Render the Gantt component
 
-Open **src/app/page.tsx** and replace its content:
+Open **app/page.tsx** and replace its content:
 
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}

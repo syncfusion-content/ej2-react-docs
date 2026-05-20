@@ -10,9 +10,11 @@ domainurl: ##DomainURL##
 
 # OData Remote Data Binding in Syncfusion React Gantt
 
-The ODataV4Adaptor in the Syncfusion DataManager enables integration between the React Gantt and OData v4 services by translating the Gantt's task data requests and update actions into OData‑formatted requests and by interpreting OData responses. The adaptor provides a consistent pathway for the Gantt to obtain task records, relationship metadata, and any counts or summaries the server returns, while allowing server‑side scheduling rules, dependency resolution, and related dataset processing to remain authoritative.
+The [ODataV4Adaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/odatav4-adaptor) in the Syncfusion<sup style="font-size:70%">&reg;</sup> React DataManager enables seamless integration between the React Gantt chart and OData v4 services by translating the Gantt's task data requests and update actions into OData‑formatted requests and by interpreting OData responses. The adaptor provides a consistent pathway for the Gantt to obtain task records, relationship metadata, and any counts or summaries the server returns, while allowing server‑side scheduling rules, dependency resolution, and related dataset processing to remain authoritative.
 
-For server configuration and OData service expectations (query options, response structure, and capabilities), consult the ODataV4Adaptor backend setup documentation for your chosen platform. After the backend is prepared, the Gantt consumes its task data via a DataManager configured to use the ODataV4Adaptor.
+For complete server‑side configuration and additional implementation details, refer to the [DataManager ODataV4Adaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/odatav4-adaptor), which covers endpoint setup, query processing, and best practices for integrating OData V4 services.
+
+Once the project creation and backend setup are complete, the next step is to render the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt chart Component on the client side.
 
 **Project structure:**
 
@@ -84,21 +86,59 @@ import "./App.css";
 
 - Configure a DataManager instance that points to the OData v4 task endpoint and specifies the ODataV4Adaptor. The Gantt then uses that DataManager as its source for task records and related datasets.
 
-Conceptually, the adaptor formats timeline and task‑related requests (for example, requests scoped to a timeline range, requests to fetch related resources, or requests that convey task modifications) as OData v4 queries the server can process.
+Conceptually, the adaptor formats timeline and task‑related requests (for example, requests scoped to a taskbar edit, requests to fetch related resources, or requests that convey task modifications) as OData v4 queries the server can process.
 
-## Server-side data operations
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
+import { GanttComponent, Inject, Selection, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
 
-When tasks, dependencies or resource assignments are numerous or governed by centralized business rules, the server commonly performs processing that would be costly or inconsistent on the client. For Gantt scenarios, server responsibilities typically include selecting tasks for a requested timeline range, applying visibility rules, resolving dependencies, and producing any roll‑up or hierarchical values required by the client.
+function App() {
+    // Create DataManager with ODataV4Adaptor
+    const data = new DataManager({
+        url: 'https://localhost:xxxx/odata/GanttTasks', // Here xxxx represents the port number.
+        adaptor: new ODataV4Adaptor(), // Handles all ODataV4 communication
+        key: 'TaskID',
+        crossDomain: true // Enables cross-domain requests
+    });
+    const taskFields = {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        endDate: 'EndDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        dependency: 'Dependency',
+        parentID: 'ParentID',
+    };
 
-Advantages of using OData v4 services with the Gantt:
-- Performance: server executes heavy queries and scheduling calculations to keep the client responsive.
-- Scalability: centralized logic handles complex dependency resolution and resource assignment at scale.
-- Bandwidth: the server can return only the task records and related data required for the timeline range or view.
-- Consistency: scheduling rules and validations are applied once on the server and reflected consistently to all clients.
+    return (
+        <GanttComponent dataSource={data} taskFields={taskFields} height='400px'>
+            <ColumnsDirective>
+                <ColumnDirective field="TaskID" headerText="Task ID" textAlign="Right" width="90" type="number" isPrimaryKey={true} />
+                <ColumnDirective field="TaskName" headerText="Task Name" textAlign="Left" width="270" type="string" />
+                <ColumnDirective field="StartDate" headerText="Start Date" textAlign="Right" width="150" format="yMd" type="dateTime" />
+                <ColumnDirective field="EndDate" headerText="End Date" textAlign="Right" width="150" format="dd/MM/yyyy hh:mm" type="dateTime" />
+                <ColumnDirective field="Duration" headerText="Duration" textAlign="Right" width="90" type="number" />
+                <ColumnDirective field="Progress" headerText="Progress" textAlign="Right" width="120" type="number" />
+            </ColumnsDirective>
+            <Inject services={[Selection]} />
+        </GanttComponent>
+    );
+}
+
+export default App;
+
+{% endhighlight %}
+{% endtabs %}
+
+**Server-side data operations**
+
+When tasks, dependencies or resource assignments are numerous or governed by centralized business rules, the server commonly performs processing that would be costly or inconsistent on the client. For Gantt scenarios, server responsibilities typically include selecting tasks for a requested timeline range, applying visibility rules, resolving dependencies, and producing any roll‑up or hierarchical values required by the client. The `Syncfusion.EJ2.AspNet.Core` package supports this approach by providing built‑in methods that efficiently handle these operations on the server, ensuring smooth performance even with heavy data loads.
 
 ## CRUD operations
 
-The DataManager with ODataV4Adaptor supports Create, Read, Update, and Delete workflows for task entities. In Gantt usage, these operations cover task creation, task edits (including taskbar edits and resulting scheduling recalculations), dependency creation or modification, and task deletion.
+The DataManager with ODataV4Adaptor supports **Create** (add records), **Read** (view records), **Update** (modify records), and **Delete** (remove records) workflows for task entities. In Gantt usage, these operations cover task creation, task edits (including taskbar edits and resulting scheduling recalculations), dependency creation or modification, and task deletion.
 
 **Mapping CRUD operations to service endpoints**
 
@@ -108,12 +148,12 @@ CRUD operations are conveyed to the service using standard OData conventions. Th
 |-----------|-------------|-------------|-------------|
 | **Read** | GET | `/odata/GanttTasks` | Get all records. |
 | **Create** | POST | `/odata/GanttTasks` | Add a new record. |
-| **Update** | PATCH | `/odata/GanttTasks/5(5)` | Update record with key "5". |
-| **Delete** | DELETE | `/odata/GanttTasks/5(5)` | Delete record with key "5". |
+| **Update** | PATCH | `/odata/GanttTasks(1)` | Update record with key "1". |
+| **Delete** | DELETE | `/odata/GanttTasks(1)` | Delete record with key "1". |
 
 ### Step 1: Complete server-side controller
 
-Add all CRUD methods to the GanttController.cs. Replace the entire controller with this complete version:
+Add all CRUD methods to the **GanttController.cs**. Replace the entire controller with this complete version:
 
 {% tabs %}
 {% highlight cs tabtitle="GanttController.cs - Complete CRUD Implementation" %}
@@ -192,9 +232,9 @@ function App() {
     const data = new DataManager({
 
         url: 'https://localhost:xxxx/odata/GanttTasks', // Here xxxx represents the port number.
-        adaptor: new ODataV4Adaptor(),
+        adaptor: new ODataV4Adaptor(), // Handles all ODataV4 communication
         key: 'TaskID',
-        crossDomain: true
+        crossDomain: true // Enables cross-domain requests
 
     });
     const taskFields = {
@@ -235,18 +275,27 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
+> * For detailed editing setup, refer to the [editing documentation](https://ej2.syncfusion.com/react/documentation/gantt/managing-tasks/editing-tasks). 
+
 ## Run the application
 
 Run the application in Visual Studio, accessible on a URL like **https://localhost:xxxx**. Verify the API returns data at **https://localhost:xxxx/odata/GanttTasks**, where **xxxx** is the port. Gantt displays data fetched from the backend API.
 
 ## Troubleshooting
-
-- Empty response: Verify the service returns task records and required metadata (parent ids, resource assignments, start/end dates) for the requested range.
-- 404 responses: Confirm the service route and endpoint URLs configured in the DataManager are correct.
-- 500 or server errors: Check server logs and validate that request parameters are parsed correctly and that scheduling or dependency logic does not throw exceptions.
-- Cross-origin errors: Ensure cross‑origin requests are permitted when frontend and backend are hosted separately.
-- Related data mismatches: When related datasets are remote, confirm their endpoints return the expected values used for display and dependency resolution.
+| Issue                     | Cause                                                                 | Solution                                                                                                     |
+|---------------------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| Empty response            | Service not returning task records or required metadata               | Verify service returns records with fields like parent ids, resources, and start/end dates                  |
+| 404 responses             | Incorrect route or endpoint configuration                             | Confirm DataManager URLs are correct and endpoints exist                                                     |
+| 500 or server errors      | Server-side exceptions or improper request handling                   | Check server logs, validate parameters, and ensure scheduling/dependency logic is error-free                |
+| Cross-origin errors       | CORS not enabled or misconfiguration                                     | Ensure cross-origin requests are allowed when frontend and backend are on different domains                 |
+| Related data mismatches   | Remote datasets not returning expected values                         | Confirm related endpoints return correct data for display and dependency mapping                            |
 
 ## Complete sample repository
 
 For the complete working implementation of this example, refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-react-gantt-chart-samples/tree/master/ODataV4Adaptor) repository.
+
+
+## See also
+- [Hybrid data binding](https://ej2.syncfusion.com/react/documentation/gantt/connecting-to-adaptors/remote-save-adaptor)
+- [RESTful CRUD Operations in ASP.NET Web Forms](https://ej2.syncfusion.com/react/documentation/gantt/connecting-to-adaptors/web-method-adaptor)
+- [Data binding](https://ej2.syncfusion.com/react/documentation/gantt/data-binding)

@@ -22,83 +22,17 @@ This article provides a step-by-step guide for setting up a [Vite](https://vite.
 
 To create a new `Vite` project, use one of the commands that are specific to either NPM or Yarn.
 
-{% tabs %}
-{% highlight bash tabtitle="npm" %}
-npm create vite@latest
-{% endhighlight %}
-{% highlight bash tabtitle="yarn" %}
-yarn create vite
-{% endhighlight %}
-{% endtabs %}
-
-Running the above command will prompt you with several configuration questions. Here's how to answer them:
-
-**Step 1: Define the project name** - You can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
-
-```bash
-? Project name: » my-project
-```
-
-**Step 2: Select the framework** - Select `React` as the framework. This will create a React project.
-
-```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
-  Vanilla
-  Vue
-> React       ← Select this
-  Preact
-  Lit
-  Svelte
-  Solid
-  Qwik
-  Angular
-  Others
-```
-
-**Step 3: Choose the framework variant** - Select `JavaScript` as the framework variant to build this Vite project using JavaScript.
-
-```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
-  TypeScript
-  TypeScript + React Compiler
-  TypeScript + SWC 
-> JavaScript  ← Select this
-  JavaScript + React Compiler
-  JavaScript + SWC
-  React Router v7
-  TanStack Router
-  RedwoodSDK
-  RSC
-  Vike
-```
-
-**Step 4: Choose when to install dependencies**
-
-```bash
-? Install with npm and start now?
-  > Yes
-  > No       ← Select this option
-```
-
-Select **No** so we can install Syncfusion packages along with dependencies. Navigate to your project directory and install the dependencies:
-
+> **Tip:** When you run the command below, you will be prompted with **"Install dependencies and start now? (yes/no)"**. Type `yes` to proceed with the installation and automatically start your development server, or `no` if you prefer to install dependencies manually later.
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
-
-cd my-project
-npm install
-
+npm create vite@latest my-project -- --template react
 {% endhighlight %}
 {% highlight bash tabtitle="yarn" %}
-
-cd my-project
-yarn install
-
+yarn create vite my-project --template react
 {% endhighlight %}
 {% endtabs %}
 
-After running the above commands, the project will be created and all required dependencies will be installed automatically.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
@@ -147,19 +81,7 @@ In this example, the `Tailwind 3` theme styles for the Grid component and its de
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
-Follow the below steps to add the React Grid component to the Vite project:
-
-1. Before adding the Grid component to your markup, import the Grid component in the **src/App.jsx** file.
-
-{% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-
-import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-
-{% endhighlight %}
-{% endtabs %}
-
-2.Then, define the Grid component with the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource) property and column definitions. Declare the values for the `dataSource` property.
+Now, you can add the React Grid component to your **src/App.jsx** file by importing it and defining it with the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource) property and column definitions. Use the following code:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -201,15 +123,14 @@ export default App;
 
 To run the project, use the following command:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
 npm run dev
-```
-
-or
-
-```bash
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
 yarn run dev
-```
+{% endhighlight %}
+{% endtabs %}
 
 The output will appear as follows:
 

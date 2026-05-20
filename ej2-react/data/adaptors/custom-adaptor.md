@@ -1,14 +1,14 @@
 ---
 layout: post
 title: React DataManager - Custom Adaptor | Syncfusion
-description: React DataManager Custom provides server-side integration with REST APIs by detailing the backend setup and endpoint configuration required for data operations.
+description: React DataManager Custom enables remote data binding with REST APIs, explaining backend configuration and endpoints for efficient data operations.
 control: Custom Adaptor
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-#  Custom Remote Data Binding in Syncfusion React Components
+# Custom Remote Data Binding in Syncfusion React Components
 
 The Custom Adaptor is a powerful extension mechanism that **customizes any existing adaptor** ([UrlAdaptor](./url-adaptor), [WebApiAdaptor](./webapi-adaptor), [ODataV4Adaptor](./odatav4-adaptor), [GraphQLAdaptor](./graphql-adaptor)) to meet specific application requirements. Instead of creating an entirely new adaptor from scratch, Custom Adaptor extends and modifies the behavior of existing adaptors by intercepting and customizing HTTP requests and responses.
 

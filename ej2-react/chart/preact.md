@@ -18,7 +18,7 @@ This article provides a step-by-step guide for setting up a [Preact](https://pre
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](../system-requirement)
 
-## Set up the Preact project
+## Step 1: Set up the Preact project
 
 To create a new `Preact` project, use one of the commands that are specific to either NPM or Yarn.
 
@@ -81,7 +81,7 @@ cd my-project
 
 Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
-## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
+## Step 2: Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
@@ -97,7 +97,7 @@ or
 yarn add @syncfusion/ej2-react-charts
 ```
 
-## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React component
+## Step 3: Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
 Follow the below steps to add the React Chart component to the Preact project:
 
@@ -106,7 +106,7 @@ Follow the below steps to add the React Chart component to the Preact project:
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
 
-import { Category, ChartComponent, ColumnSeries, Inject, LineSeries, SeriesCollectionDirective, SeriesDirective, Tooltip } from '@syncfusion/ej2-react-charts';
+import { Category, ChartComponent, Inject, LineSeries, SeriesCollectionDirective, SeriesDirective } from '@syncfusion/ej2-react-charts';
 
 {% endhighlight %}
 {% endtabs %}
@@ -146,7 +146,7 @@ render(<App />, document.getElementById('app'));
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
+## Step 4: Run the project
 
 To run the project, use the following command:
 
@@ -160,7 +160,7 @@ or
 yarn run dev
 ```
 
-The output will appear as follows:
+Open the generated local URL (for example, `/localhost:5174/`) from terminal in the browser. The application displays the chart as shown below:
 
 ![preact](./images/preact.png)
 
