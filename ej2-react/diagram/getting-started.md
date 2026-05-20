@@ -29,7 +29,7 @@ The main files used in this guide are:
 * `src/main.tsx` — Application entry point.
 * `index.html` — Root HTML file.
 
-N> In a Vite React TypeScript application, the root component is commonly generated as `src/App.tsx`. If your application uses JavaScript, the equivalent file is typically `src/App.jsx`.
+N> In a Vite React TypeScript application, the root component is commonly generated as **src/App.tsx**. If your application uses JavaScript, the equivalent file is typically **src/App.jsx**.
 
 N> This guide uses the TypeScript template for better type checking with Diagram models such as `NodeModel`, `ConnectorModel`, and `FlowShapeModel`.
 
@@ -41,7 +41,7 @@ Use [Vite](https://vitejs.dev/) to create and manage React applications. Vite pr
 
 Create a new React application using the below command.
 
-```bash
+```
 npm create vite@latest my-diagram-app -- --template react-ts
 ```
 
@@ -49,13 +49,13 @@ If Vite prompts you to install dependencies and start the project immediately, c
 
 Navigate to the project folder:
 
-```bash
+```
 cd my-diagram-app
 ```
 
 Install the application dependencies:
 
-```bash
+```
 npm install
 ```
 
@@ -67,7 +67,7 @@ All Syncfusion Essential® JS 2 packages are available in the [npmjs.com](https:
 
 Install the React Diagram package using the following command:
 
-```bash
+```
 npm install @syncfusion/ej2-react-diagrams
 ```
 
@@ -75,26 +75,26 @@ N> Installing `@syncfusion/ej2-react-diagrams` automatically installs the requir
 
 ## Step 4: Add the required CSS references
 
-Add the required Syncfusion® styles to the `src/App.css` file by replacing the existing content with the following CSS imports:
+Add the required Syncfusion® styles to the **src/App.css** file by replacing the existing content with the following CSS imports:
 
-```css
+```
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-react-diagrams/styles/tailwind3.css';
 ```
 
-N> Syncfusion® provides multiple built-in themes. If your application uses a different theme, replace the `tailwind3.css` references with the corresponding theme file, such as `material3.css`.
+N> Syncfusion® provides multiple built-in themes. If your application uses a different theme, replace the **tailwind3.css** references with the corresponding theme file, such as **material3.css**.
 
-N> Ensure that `App.css` is imported in the `src/App.tsx` file so that the theme styles are applied to the Diagram component.
+N> Ensure that **App.css** is imported in the **src/App.tsx** file so that the theme styles are applied to the Diagram component.
 
 ## Step 5: Add the Diagram component
 
 Import `DiagramComponent` from `@syncfusion/ej2-react-diagrams` and add it to the React component.
 
-Update the `src/App.tsx` file as follows:
+Update the **src/App.tsx** file as follows:
 
-```tsx
+```
 import { DiagramComponent } from '@syncfusion/ej2-react-diagrams';
 import './App.css';
 
@@ -115,7 +115,7 @@ At this stage, the Diagram component renders an empty canvas.
 
 N> The Diagram component must have a valid height. If the height is not set, the Diagram canvas may not be visible.
 
-N> In a Vite React application, the root element is defined in `index.html` as `<div id="root"></div>`, and the application is rendered from `src/main.tsx`.
+N> In a Vite React application, the root element is defined in **index.html** as `<div id="root"></div>`, and the application is rendered from **src/main.tsx**.
 
 ## Step 6: Create your first Diagram with nodes and connectors
 
@@ -123,9 +123,9 @@ This section explains how to create a simple flowchart by adding nodes, customiz
 
 The following example creates a flowchart with four nodes: **Start**, **Process**, **Decision**, and **End**. It also applies common node and connector settings using the `getNodeDefaults` and `getConnectorDefaults` properties.
 
-Update the `src/App.tsx` file as follows:
+Update the **src/App.tsx** file as follows:
 
-```tsx
+```
 import {
   DiagramComponent,
   type ConnectorModel,
@@ -264,7 +264,7 @@ In this example:
 
 Run the application using the following command:
 
-```bash
+```
 npm run dev
 ```
 Open the generated local URL in the browser. The application displays the diagram as shown below:
