@@ -2,14 +2,13 @@ import React from 'react';
 import { DataManager, JsonAdaptor, Query } from '@syncfusion/ej2-data';
 import { data } from './datasource';
 import { Row } from './rowTemplate';
+import './App.css';
 
 const App = () => {
     const result = new DataManager({
         json: data,
         adaptor: new JsonAdaptor(),
-    }).executeLocal(
-        new Query().sortBy('CustomerID').take(8)
-    );
+    }).executeLocal(new Query().take(8));
 
     const items = result.map((row, index) => (
         <Row key={index} {...row} />

@@ -88,7 +88,8 @@ cd my-project
 
 Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
-## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid packages
+
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available on [npmjs.com](https://www.npmjs.com/search?q=ej2-react). This article uses the [React Grid component](https://www.syncfusion.com/react-components/react-data-grid) as an example. To use the React Grid component in the project, the `@syncfusion/ej2-react-grids` package needs to be installed using the following command:
 
 ```bash
@@ -101,7 +102,7 @@ or
 yarn add @syncfusion/ej2-react-grids
 ```
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Adding CSS reference
 
 You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> React component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) to know more about built-in themes and different ways to refer to theme's in a React project.
 
@@ -123,9 +124,7 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 {% endhighlight %}
 {% endtabs %}
 
-> The order of importing CSS styles should be in line with its dependency graph.
-
-## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React component
+## Adding Grid component
 
 The grid code should be added to the **src/index.jsx** file.
 

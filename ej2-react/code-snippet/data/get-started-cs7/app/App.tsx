@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { DataManager, Query, ReturnOption, ODataV4Adaptor } from '@syncfusion/ej2-data';
 import { IOrders } from './orders';
 import { Row } from './rowTemplate';
-import './App.css'
 
 const SERVICE_URL: string =
   'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/';

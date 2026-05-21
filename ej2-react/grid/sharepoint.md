@@ -100,7 +100,7 @@ gulp trust-dev-cert
 gulp serve
 ```
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid packages
 
 To utilize Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component in your project, you need to install the necessary npm package. 
 
@@ -108,7 +108,7 @@ To utilize Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component
 npm install @syncfusion/ej2-react-grids
 ```
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Adding CSS reference
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> provides various themes for React components. You can import CSS styles for the desired theme into your project.  Refer to the [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a React project.
 

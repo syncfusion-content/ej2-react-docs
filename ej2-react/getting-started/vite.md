@@ -79,7 +79,7 @@ The required styles for the Grid component and its dependencies are imported in 
 {% tabs %}
 {% highlight css tabtitle="Theme Package" %}
 
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/grids/grid/index.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/grids/grid/index.css";
 
 {% endhighlight %}
 {% highlight css tabtitle="Component Package" %}

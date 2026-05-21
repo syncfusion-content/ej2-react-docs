@@ -87,7 +87,7 @@ cd ej2-nextjs-grid
 
 Once the setup is complete, the application is ready to be configured with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid packages
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available on [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
@@ -106,9 +106,9 @@ yarn add @syncfusion/ej2-react-grids
 {% endhighlight %}
 {% endtabs %}
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Adding CSS reference
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It's easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
 
 Import the `Tailwind 3` theme into the **src/app/globals.css** file and remove the existing styles in that file, as shown below:
 
@@ -130,7 +130,7 @@ Import the `Tailwind 3` theme into the **src/app/globals.css** file and remove t
 
 > Refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for information about other available themes and component-specific CSS references.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React component
+## Adding Grid component
 
 The grid code should be added to the **src/app/page.tsx** file.
 
