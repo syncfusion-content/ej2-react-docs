@@ -3,7 +3,6 @@ import { DataManager, JsonAdaptor, Query } from '@syncfusion/ej2-data';
 import { data } from './datasource';
 import { IOrders } from './orders';
 import { Row } from './rowTemplate';
-import './App.css';
 
 const App: React.FC = () => {
     const result = new DataManager({

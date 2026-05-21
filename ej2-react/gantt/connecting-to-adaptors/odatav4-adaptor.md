@@ -282,6 +282,7 @@ export default App;
 Run the application in Visual Studio, accessible on a URL like **https://localhost:xxxx**. Verify the API returns data at **https://localhost:xxxx/odata/GanttTasks**, where **xxxx** is the port. Gantt displays data fetched from the backend API.
 
 ## Troubleshooting
+
 | Issue                     | Cause                                                                 | Solution                                                                                                     |
 |---------------------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
 | Empty response            | Service not returning task records or required metadata               | Verify service returns records with fields like parent ids, resources, and start/end dates                  |

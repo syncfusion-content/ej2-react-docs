@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';
+import * as React from 'react';
+import { useEffect, useState } from 'react';
+import { DataManager, Query, ReturnOption, ODataV4Adaptor } from '@syncfusion/ej2-data';
+import { IOrders } from './orders';
 import { Row } from './rowTemplate';
+import './App.css'
 
-const SERVICE_URL = 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/';
+const SERVICE_URL: string =
+  'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/';
 
-const App = () => {
-    const [items, setItems] = useState([]);
+const App: React.FC = () => {
+    const [items, setItems] = useState<React.ReactNode[]>([]);
 
     useEffect(() => {
         new DataManager({
@@ -13,8 +17,8 @@ const App = () => {
             adaptor: new ODataV4Adaptor(),
         })
         .executeQuery(new Query().take(8))
-        .then((e) => {
-            const rows = e.result.map((row) => (
+        .then((e: ReturnOption) => {
+            const rows = (e.result as IOrders[]).map((row: IOrders) => (
             <Row key={row.OrderID} {...row} />
             ));
             setItems(rows);

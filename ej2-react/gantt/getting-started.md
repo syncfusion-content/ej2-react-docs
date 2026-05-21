@@ -16,7 +16,7 @@ This guide walks you through installing and rendering your first React Gantt Cha
 
 Before you begin, ensure you have:
 
-- [Node.js](https://nodejs.org/) (v14.0 or later)
+- [Node.js](https://nodejs.org/en) (v14.0 or later)
 - npm or yarn package manager
 - Basic knowledge of React
 
@@ -112,8 +112,6 @@ const taskFields = {
 | `progress` | Task completion percentage (0-100) | No |
 | `parentID` | Parent task ID for hierarchy | No |
 
-*Either `duration` or `endDate` is required for a task to render properly.
-
 ## Render the Gantt component
 
 Put it all together in `src/App.tsx`:
@@ -174,14 +172,11 @@ The chart displays two parent tasks ("Project initiation" and "Project estimatio
 You can preview the following sample by clicking the **Preview Sample** button.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/gantt/run-cs1/app/index.jsx %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/gantt/run-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/gantt/run-cs1/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/run-cs1/index.html %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/gantt/run-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

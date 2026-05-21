@@ -131,8 +131,6 @@ const taskFields = {
 | `progress` | Task completion percentage (0-100) | No |
 | `parentID` | Parent task ID for hierarchy | No |
 
-*Either `duration` or `endDate` is required for a task to render properly.
-
 ## Render the Gantt component
 
 Open **app/page.tsx** and replace its content:

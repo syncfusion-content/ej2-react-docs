@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Gantt getting started with Preact | Syncfusion
-description: Learn how to use the React Gantt Chart component in Preact applications with minimal configuration.
+description: Learn how to integrate and use the React Gantt Chart component in Preact applications with minimal setup and configuration.
 control: Preact
 platform: ej2-react
 documentation: ug
@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Getting Started with Preact
 
-This guide shows how to integrate the React Gantt Chart component into a Preact application. For detailed component concepts and features, see the [main Getting Started guide](./getting-started/).
+This guide shows how to integrate the React Gantt Chart component into a Preact application. For detailed component concepts and features, see the [main Getting Started guide](./getting-started).
 
 ## Prerequisites
 
 Before you begin, ensure you have:
 
-- [Node.js](https://nodejs.org/) (v14.0 or later)
+- [Node.js](https://nodejs.org/en) (v14.0 or later)
 - npm or yarn package manager
 - Basic knowledge of Preact and React
 
@@ -130,8 +130,6 @@ const taskFields = {
 | `duration` | Task duration in days | Yes* |
 | `progress` | Task completion percentage (0-100) | No |
 | `parentID` | Parent task ID for hierarchy | No |
-
-*Either `duration` or `endDate` is required for a task to render properly.
 
 ## Render the Gantt component
 

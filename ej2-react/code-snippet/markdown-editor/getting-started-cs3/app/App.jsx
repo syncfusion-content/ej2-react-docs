@@ -1,5 +1,5 @@
 import { MarkdownEditor, Inject, RichTextEditorComponent, Toolbar, Link, Image, Table } from '@syncfusion/ej2-react-richtexteditor';
-import * as React from 'react';
+import './App.css';
 
 function App() {
   return (<RichTextEditorComponent editorMode={'Markdown'}>

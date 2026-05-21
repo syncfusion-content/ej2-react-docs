@@ -95,10 +95,10 @@ Add the CSS below to the **app/app.css** file to style the table, then import it
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/data/get-started-cs6/app/App.jsx %}
+{% include code-snippet/data/getting-started/json.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/data/get-started-cs6/app/App.tsx %}
+{% include code-snippet/data/getting-started/json.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="rowTemplate.jsx" %}
 {% include code-snippet/data/get-started-cs6/app/rowTemplate.jsx %}
@@ -128,10 +128,10 @@ Bind [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/data/get-started-cs7/app/App.jsx %}
+{% include code-snippet/data/getting-started/odata.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/data/get-started-cs7/app/App.tsx %}
+{% include code-snippet/data/getting-started/odata.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="rowTemplate.jsx" %}
 {% include code-snippet/data/get-started-cs7/app/rowTemplate.jsx %}
@@ -161,10 +161,10 @@ Data filtering narrows the dataset based on specified filter criteria. Build fil
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/data/get-started-cs8/app/App.jsx %}
+{% include code-snippet/data/getting-started/filter.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/data/get-started-cs8/app/App.tsx %}
+{% include code-snippet/data/getting-started/filter.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="rowTemplate.jsx" %}
 {% include code-snippet/data/get-started-cs8/app/rowTemplate.jsx %}
@@ -194,10 +194,10 @@ Order data in ascending or descending sequence using the [sortBy](https://ej2.sy
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/data/get-started-cs9/app/App.jsx %}
+{% include code-snippet/data/getting-started/sort.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/data/get-started-cs9/app/App.tsx %}
+{% include code-snippet/data/getting-started/sort.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="rowTemplate.jsx" %}
 {% include code-snippet/data/get-started-cs9/app/rowTemplate.jsx %}
@@ -227,10 +227,10 @@ Retrieve a subset of data based on the page number and total page size using the
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/data/get-started-cs10/app/App.jsx %}
+{% include code-snippet/data/getting-started/page.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/data/get-started-cs10/app/App.tsx %}
+{% include code-snippet/data/getting-started/page.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="rowTemplate.jsx" %}
 {% include code-snippet/data/get-started-cs10/app/rowTemplate.jsx %}
@@ -266,62 +266,10 @@ Create a local data source inline with other Syncfusion<sup style="font-size:70%
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% raw %}
-
-import React from 'react';
-import { DataManager } from '@syncfusion/ej2-data';
-import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import { data } from './datasource';
-import './App.css'
-
-const App = () => {
-    const gridData = new DataManager(data);
-
-    return (
-        <GridComponent dataSource={gridData}>
-            <ColumnsDirective>
-                <ColumnDirective field="OrderID" width="100" textAlign="Right" />
-                <ColumnDirective field="CustomerID" width="100" />
-                <ColumnDirective field="EmployeeID" width="100" textAlign="Right" />
-                <ColumnDirective field="Freight" width="100" format="C2" textAlign="Right" />
-                <ColumnDirective field="ShipCountry" width="100" />
-            </ColumnsDirective>
-        </GridComponent>
-    );
-};
-
-export default App;
-
-{% endraw %}
+{% include code-snippet/data/getting-started/localdata.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% raw %}
-
-import * as React from 'react';
-import { DataManager } from '@syncfusion/ej2-data';
-import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import { data } from './datasource';
-import './App.css'
-
-const App: React.FC = () => {
-    const gridData: DataManager = new DataManager(data);
-
-    return (
-        <GridComponent dataSource={gridData}>
-            <ColumnsDirective>
-                <ColumnDirective field="OrderID" width="100" textAlign="Right" />
-                <ColumnDirective field="CustomerID" width="100" />
-                <ColumnDirective field="EmployeeID" width="100" textAlign="Right" />
-                <ColumnDirective field="Freight" width="100" format="C2" textAlign="Right" />
-                <ColumnDirective field="ShipCountry" width="100" />
-            </ColumnsDirective>
-        </GridComponent>
-    );
-};
-
-export default App;
-
-{% endraw %}
+{% include code-snippet/data/getting-started/localdata.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/data/component-binding-cs1/app/datasource.jsx %}
@@ -339,66 +287,10 @@ Bind remote data to Syncfusion<sup style="font-size:70%">&reg;</sup> components 
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% raw %}
-
-import React from 'react';
-import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
-import { ColumnDirective, ColumnsDirective, GridComponent, } from '@syncfusion/ej2-react-grids';
-import './App.css'
-
-const SERVICE_URL = 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/';
-
-const App = () => {
-    const data = new DataManager({
-        url: SERVICE_URL,
-        adaptor: new ODataV4Adaptor(),
-    });
-
-    return (
-        <GridComponent dataSource={data}>
-            <ColumnsDirective>
-                <ColumnDirective field="OrderID" width="100" textAlign="Right" />
-                <ColumnDirective field="CustomerID" width="100" />
-                <ColumnDirective field="EmployeeID" width="100" textAlign="Right" />
-                <ColumnDirective field="Freight" width="100" format="C2" textAlign="Right" />
-                <ColumnDirective field="ShipCountry" width="100" />
-            </ColumnsDirective>
-        </GridComponent>
-    );
-};
-
-export default App;
-
-{% endraw %}
+{% include code-snippet/data/getting-started/remotedata.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% raw %}
-
-import * as React from 'react';
-import { DataManager } from '@syncfusion/ej2-data';
-import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import { data } from './datasource';
-import './App.css'
-
-const App: React.FC = () => {
-    const gridData: DataManager = new DataManager(data);
-
-    return (
-        <GridComponent dataSource={gridData}>
-            <ColumnsDirective>
-                <ColumnDirective field="OrderID" width="100" textAlign="Right" />
-                <ColumnDirective field="CustomerID" width="100" />
-                <ColumnDirective field="EmployeeID" width="100" textAlign="Right" />
-                <ColumnDirective field="Freight" width="100" format="C2" textAlign="Right" />
-                <ColumnDirective field="ShipCountry" width="100" />
-            </ColumnsDirective>
-        </GridComponent>
-    );
-};
-
-export default App;
-
-{% endraw %}
+{% include code-snippet/data/getting-started/remotedata.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -2,7 +2,6 @@ import React from 'react';
 import { DataManager, JsonAdaptor, Query } from '@syncfusion/ej2-data';
 import { data } from './datasource';
 import { Row } from './rowTemplate';
-import './App.css'
 
 const App = () => {
     const result = new DataManager({

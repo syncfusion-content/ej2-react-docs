@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';
 import { Row } from './rowTemplate';
+import './App.css'
 
 const SERVICE_URL = 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/';
 
