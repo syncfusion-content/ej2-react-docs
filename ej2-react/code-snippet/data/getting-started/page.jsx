@@ -2,13 +2,14 @@ import React from 'react';
 import { DataManager, JsonAdaptor, Query } from '@syncfusion/ej2-data';
 import { data } from './datasource';
 import { Row } from './rowTemplate';
+import './App.css'
 
 const App = () => {
     const result = new DataManager({
         json: data,
         adaptor: new JsonAdaptor(),
     }).executeLocal(
-        new Query().sortBy('CustomerID').take(8)
+        new Query().page(1, 8)
     );
 
     const items = result.map((row, index) => (
@@ -19,9 +20,9 @@ const App = () => {
         <table id="datatable" className="e-table">
             <thead>
                 <tr>
-                    <th>Order ID</th>
-                    <th>Customer ID</th>
-                    <th>Employee ID</th>
+                <th>Order ID</th>
+                <th>Customer ID</th>
+                <th>Employee ID</th>
                 </tr>
             </thead>
             <tbody>{items}</tbody>

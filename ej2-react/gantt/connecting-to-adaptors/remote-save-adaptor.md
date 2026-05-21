@@ -357,6 +357,7 @@ export default App;
 Run the application in Visual Studio, accessible on a URL like **https://localhost:xxxx**. Verify the API returns data at **https://localhost:xxxx/api/gantt/Batch**, where **xxxx** is the port. Gantt displays data fetched from the backend API.
 
 ## Troubleshooting
+
 | Issue                     | Cause                                                      | Solution                                                                                 |
 |---------------------------|------------------------------------------------------------|------------------------------------------------------------------------------------------|
 | Empty initial load        | GET task endpoint not returning required task records      | Verify endpoint returns records with required fields (ids, start/end dates, parent ids) |
