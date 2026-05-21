@@ -116,6 +116,7 @@ import {
 
 2.Then, define the Chart component in the **src/app/page.tsx** file, as shown below:
 
+{% raw %}
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
 'use client'
@@ -135,8 +136,7 @@ export default function Home() {
   ];
 
   return (
-    <ChartComponent id="charts" primaryXAxis={{ valueType: 'Category' }}
-      primaryYAxis={{ labelFormat: '${value}K' }} >
+    <ChartComponent id="charts" primaryXAxis={{ valueType: 'Category' }} >
       <Inject services={[ColumnSeries, LineSeries, Category]} />
       <SeriesCollectionDirective>
         <SeriesDirective dataSource={data} xName='month' yName='sales' name='Sales' />
@@ -146,6 +146,7 @@ export default function Home() {
 }
 {% endhighlight %}
 {% endtabs %}
+{% endraw %}
 
 ## Step 4: Run the application
 
