@@ -2,7 +2,7 @@
 layout: post
 title: Accessibility in React Gantt Chart Component | Syncfusion
 description: Learn here all about Accessibility in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+control: Accessibility
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -70,6 +70,28 @@ The Gantt Chart component implements comprehensive [WAI-ARIA](https://www.w3.org
 | `aria-describedby` | Links tasks to detailed descriptions, tooltips, or error messages                                                                | Dynamically associates contextual information with interactive elements     |
 | `aria-rowindex`    | Applied to grid rows to indicate position within the complete dataset                                                            | Updates based on current view and virtualization state                      |
 | `aria-colindex`    | Applied to grid cells to indicate column position                                                                                | Maintains column identification during horizontal scrolling                 |
+
+The Syncfusion React Gantt Chart component is structured using a combined TreeGrid and chart architecture for rendering its grid (table) and timeline sections. To enhance accessibility for screen readers, roles and ARIA attributes are incorporated for the treegrid parent and all its child elements. Although this architectural approach may have some limitations with accessibility checker tools, it is important to note that these limitations do not affect the readability or usability of the Gantt content in screen readers.
+
+The accessibility checker tools highlight the following known issues:
+
+* The `<table>` element with `role="presentation"` or `role="none"` contains structural elements such as `<th>`.
+* Verify that the table is not being used solely to format text content in columns unless the table can be properly linearized.  
+* Content is not placed within a landmark element.  
+* Verify that the `<div>` element with `role="grid"` provides proper keyboard access.  
+* The element with `role="grid"` contains child elements with roles such as `"generic"` and `"textbox"`, which are not allowed. Only `"row"` or `"rowgroup"` roles are permitted as direct children.  
+* Interactive component with ARIA role `treegrid` does not have a programmatically associated accessible name.  
+* None of the descendant elements with `role="row"` are tabbable.  
+* The explicitly assigned ARIA role `"rowgroup"` is redundant with the implicit role of the `<tbody>` element.  
+* The explicitly assigned ARIA role `"row"` is redundant with the implicit role of the `<tr>` element.  
+* The explicitly assigned ARIA role `"gridcell"` is redundant with the implicit role of the `<td>` element.  
+* The tabbable element with role `"columnheader"` is not a widget role.  
+* The explicitly assigned ARIA role `"columnheader"` is redundant with the implicit role of the `<th>` element.  
+* The element with `role="rowgroup"` does not contain required child elements with role `"row"`.  
+* The ARIA attribute `aria-valuenow` is not valid for a `<div>` element with `role="separator"`.  
+* The `cellspacing` attribute is deprecated for the `<table>` element in HTML5.  
+* The ARIA attribute `aria-label` is not valid for a `<div>` element with `role="term"`.  
+* The ARIA attribute `aria-label` is not valid for a `<div>` element with the implicit `"generic"` role.  
 
 ## Keyboard navigation
 
@@ -180,6 +202,7 @@ function App() {
 
 ReactDOM.render(<App />, document.getElementById('root'));
 ```
+
 ## Mobile and touch accessibility
 
 The Gantt Chart component provides comprehensive accessibility support for mobile and touch devices through the [enableAdaptiveUI](https://ej2.syncfusion.com/react/documentation/api/gantt#enableadaptiveui) property, ensuring individuals with disabilities can effectively interact with the component across all device types.
@@ -206,7 +229,7 @@ The sample demonstrates complete keyboard navigation functionality, screen reade
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> React components](../common/accessibility)
-* [Keyboard Navigation in React Gantt Chart component](./keyboard-navigation)
-* [WCAG 2.2 Guidelines](https://www.w3.org/TR/WCAG22/)
-* [Section 508 Standards](https://www.section508.gov/)
+- [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> React components](../common/accessibility)
+- [Keyboard Navigation in React Gantt Chart component](./keyboard-navigation)
+- [WCAG 2.2 Guidelines](https://www.w3.org/TR/WCAG22/)
+- [Section 508 Standards](https://www.section508.gov/)

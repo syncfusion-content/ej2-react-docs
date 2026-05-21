@@ -88,13 +88,17 @@ The steps up to this point can be completed using the initially opened terminal 
 
 Add the Chart component to `src/App.tsx` using the following code.
 
-```tsx
+{% raw %}
+{% tabs %}
+{% highlight ts tabtitle="~/src/App.tsx" %}
 import { ChartComponent } from '@syncfusion/ej2-react-charts';
 function App() {
   return (<ChartComponent />);
 }
 export default App;
-```
+{% endhighlight %}
+{% endtabs %}
+{% endraw %}
 
 > **Note:** This will render an empty chart area by running `npm run dev` in terminal ([Refer Step 7](#step-7-run-the-application)). Proceed to the next steps to add data, series, and necessary module injections to visualize your data.
 
@@ -107,7 +111,9 @@ Chart features are delivered as separate modules and must be explicitly injected
 
 Import the above-mentioned modules from the Chart package and inject them into the `services` section of the Chart component as follows.
 
-```tsx
+{% raw %}
+{% tabs %}
+{% highlight ts tabtitle="~/src/App.tsx" %}
 import { ChartComponent, LineSeries, Category, Inject } from '@syncfusion/ej2-react-charts';
 function App() {
     return <ChartComponent>
@@ -115,7 +121,9 @@ function App() {
   </ChartComponent>;
 }
 export default App;
-```
+{% endhighlight %}
+{% endtabs %}
+{% endraw %}
 
 **Note:** At this stage, no series are rendered because the Chart component has not yet been configured with a data source.
 
@@ -123,7 +131,9 @@ export default App;
 
 The chart data should be provided as a JSON array in the following format. You can define the data in the same `src/App.tsx` file or place it in a separate file (for example, `src/datasource.ts`) and import it into `App.tsx`.
 
-```tsx
+{% raw %}
+{% tabs %}
+{% highlight ts tabtitle="~/src/datasource.ts" %}
 export const data: Object[] = [
     { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
     { month: 'Mar', sales: 34 }, { month: 'Apr', sales: 32 },
@@ -132,11 +142,15 @@ export const data: Object[] = [
     { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
     { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
 ];
-```
+{% endhighlight %}
+{% endtabs %}
+{% endraw %}
 
 After defining the required data set, bind the data to the Chart component in the `SeriesDirective` tag. The following code snippet demonstrates the complete configuration required to render a basic chart.
 
-```tsx
+{% raw %}
+{% tabs %}
+{% highlight ts tabtitle="~/src/App.tsx" %}
 import {  ChartComponent, Inject, SeriesCollectionDirective, SeriesDirective, Category, LineSeries } from '@syncfusion/ej2-react-charts';
 
 const data: Object[] = [
@@ -157,7 +171,9 @@ function App() {
   </ChartComponent>
 }
 export default App;
-```
+{% endhighlight %}
+{% endtabs %}
+{% endraw %}
 
 ### Step 7: Run the application
 
