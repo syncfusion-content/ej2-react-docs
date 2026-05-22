@@ -87,14 +87,15 @@ The steps up to this point can be completed using the initially opened terminal 
 
 Add the Stock Chart component to `src/App.tsx` using the following code.
 
-```tsx
+{% tabs %}
+{% highlight ts tabtitle="~/src/App.tsx" %}
 import { StockChartComponent } from '@syncfusion/ej2-react-charts';
 function App() {
     return (<StockChartComponent />);
 }
 export default App;
-
-```
+{% endhighlight %}
+{% endtabs %}
 
 > **Note:** This will render an empty stock chart area by running `npm run dev` in terminal ([Refer Step 7](#step-7-run-the-application)). Proceed to the next steps to add data, series, and necessary module injections to visualize your data.
 
@@ -107,7 +108,8 @@ Stock Chart features are delivered as separate modules and must be explicitly in
 
 Import the above-mentioned modules from the chart package and inject them into the `services` section of the Stock Chart component as follows.
 
-```tsx
+{% tabs %}
+{% highlight ts tabtitle="~/src/App.tsx" %}
 import { StockChartComponent, CandleSeries, DateTime, Inject } from '@syncfusion/ej2-react-charts';
 function App() {
     return (
@@ -117,7 +119,8 @@ function App() {
     );
 }
 export default App;
-```
+{% endhighlight %}
+{% endtabs %}
 
 **Note:** At this stage, no stock chart is rendered because the Stock Chart component has not yet been configured with a data source.
 
@@ -125,7 +128,8 @@ export default App;
 
 The chart data should be provided as a JSON array in the following format. You can define the data in the same `src/App.tsx` file or place it in a separate file (for example, `src/datasource.ts`) and import it into `App.tsx`.
 
-```tsx
+{% tabs %}
+{% highlight ts tabtitle="~/src/datasource.ts" %}
 export const data: Object[] = [
     {
         "x": new Date('2012-04-02T00:00:00.000Z'),
@@ -160,11 +164,13 @@ export const data: Object[] = [
         "volume": 46327000
     }
 ];
-```
+{% endhighlight %}
+{% endtabs %}
 
 After defining the required data set, bind the data to the Chart component in the `StockChartSeriesDirective` tag. The following code snippet demonstrates the complete configuration required to render a basic chart.
 
-```tsx
+{% tabs %}
+{% highlight ts tabtitle="~/src/App.tsx" %}
 import { StockChartComponent, StockChartSeriesCollectionDirective, StockChartSeriesDirective, Inject, DateTime, CandleSeries } from '@syncfusion/ej2-react-charts';
 
 let data = [
@@ -209,7 +215,8 @@ function App() {
 }
 
 export default App;
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Step 7: Run the application
 

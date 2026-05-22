@@ -146,7 +146,6 @@ const data = [
 
 After defining the required data set, bind the data to the Chart component in the `AccumulationSeriesDirective` tag. The following code snippet demonstrates the complete configuration required to render a basic pie chart.
 
-{% raw %}
 {% tabs %}
 {% highlight ts tabtitle="~/src/App.tsx" %}
 import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, Inject, PieSeries } from '@syncfusion/ej2-react-charts';
@@ -170,7 +169,6 @@ function App() {
 export default App;
 {% endhighlight %}
 {% endtabs %}
-{% endraw %}
 
 ### Step 7: Run the application
 

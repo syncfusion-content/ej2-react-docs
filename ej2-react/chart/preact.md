@@ -130,9 +130,10 @@ export function App() {
     { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
     { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
   ];
+  const xAxisCategory = { valueType: 'Category' };
 
   return (
-    <ChartComponent id="charts" primaryXAxis={{ valueType: 'Category' }}>
+    <ChartComponent id="charts" primaryXAxis={xAxisCategory}>
       <Inject services={[LineSeries, Category]}/>
       <SeriesCollectionDirective>
       <SeriesDirective dataSource={data} xName='month' yName='sales' name='Sales'/>
