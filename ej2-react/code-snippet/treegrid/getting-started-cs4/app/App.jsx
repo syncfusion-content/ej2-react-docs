@@ -1,27 +1,29 @@
 import { ColumnDirective, ColumnsDirective, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
+// Import the required treegrid modules from the treegrid package.
 import { Filter, Inject, Page, Sort } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import { sortData } from './data';
+// Import Treegrid data from external file.
+import { data } from './data';
+
 function App() {
-    const pageOptions = { pageSize: 7 };
-    const sortingOptions = {
-        columns: [
-            { field: 'Category', direction: 'Ascending' },
-            { field: 'orderName', direction: 'Ascending' }
-        ]
-    };
-    const filterSettings = { columns: [
-            { field: 'price', operator: 'lessthan', value: 40 }
-        ] };
-    return <TreeGridComponent dataSource={sortData} treeColumnIndex={1} childMapping='subtasks' allowPaging={true} allowSorting={true} allowFiltering={true} filterSettings={filterSettings} sortSettings={sortingOptions}>
-        <ColumnsDirective>
-            <ColumnDirective field='Category' headerText='Category' width='150'/>
-            <ColumnDirective field='orderName' headerText='Order Name' width='170'/>
-            <ColumnDirective field='orderDate' headerText='Order Date' width='130' format='yMd' textAlign='Right' type='date'/>
-            <ColumnDirective field='price' headerText='Price' width='100' textAlign='Right' type='number' format='C0'/>
-        </ColumnsDirective>
-        <Inject services={[Page, Sort, Filter]}/>
-    </TreeGridComponent>;
+    const pageSettings = { pageSize: 6 };
+    const filterSettings = { type: 'CheckBox' };
+    const editOptions = { allowEditing: true, allowAdding: true, allowDeleting: true };
+    const toolbarOptions = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
+    const taskIDRules = { required: true, number: true };
+    const taskNameRules = { required: true };
+    return <div>
+        <TreeGridComponent dataSource={data} treeColumnIndex={1} childMapping='subtasks' allowPaging={true} pageSettings={pageSettings} allowSorting={true} allowFiltering={true} filterSettings={filterSettings} editSettings={editOptions} toolbar={toolbarOptions}>
+            <ColumnsDirective>
+                <ColumnDirective field='TaskID' headerText='Task ID' validationRules={taskIDRules} textAlign='Right' width='150'/>
+                <ColumnDirective field='TaskName' headerText='Task Name' validationRules={taskNameRules} width='170'/>
+                <ColumnDirective field='StartDate' headerText='Start Date' width='130' editType='datepickeredit' format='yMd' textAlign='Right' />
+                <ColumnDirective field='EndDate' headerText='End Date' width='130' editType='datepickeredit' format='yMd' textAlign='Right' />
+                <ColumnDirective field='Duration' headerText='Duration' width='100' editType='numericedit' textAlign='Right' />
+            </ColumnsDirective>
+            {/* Inject required TreeGrid features */}
+            <Inject services={[Page, Sort, Filter, Edit, Toolbar]} />
+        </TreeGridComponent>
+    </div>
 }
-;
 export default App;
