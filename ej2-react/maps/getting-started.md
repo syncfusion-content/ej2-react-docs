@@ -89,7 +89,8 @@ Add the Map component to `src/App.tsx` using the following code.
 
 > **Note:** Before running this code, download the `world_map.ts` file from the link provided below and place it in your project's src folder. Refer to the world_map GeoJSON data at Syncfusion [Downloads](https://www.syncfusion.com/downloads/support/directtrac/general/ze/world-map-2091224620). This data must be imported into `src\App.tsx`.
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="~/src/App.tsx" %}
 import { world_map } from './world_map.ts';
 import { MapsComponent, LayersDirective, LayerDirective } from '@syncfusion/ej2-react-maps';
 
@@ -107,7 +108,9 @@ function App() {
 }
 
 export default App;
-```
+{% endhighlight %}
+{% endtabs %}
+
 **Note:** At this stage, only the basic map is rendered, without any additional features applied.
 
 ### Step 5: Module Injection
@@ -118,7 +121,8 @@ The Maps component is divided into feature-specific modules. To use a feature, i
 
 For example, to use the tooltip, data label, and legend features, import the corresponding modules and inject them into the Maps component using the `Inject` component.
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="~/src/App.tsx" %}
 import { MapsComponent, Inject, DataLabel, LayerDirective, LayersDirective } from '@syncfusion/ej2-react-maps';
 import { world_map } from './world_map.ts';
 
@@ -134,7 +138,8 @@ export function App() {
 }
 
 export default App;
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Step 6: Run the application
 

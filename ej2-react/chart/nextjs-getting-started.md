@@ -116,7 +116,6 @@ import {
 
 2.Then, define the Chart component in the **src/app/page.tsx** file, as shown below:
 
-{% raw %}
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
 'use client'
@@ -134,9 +133,10 @@ export default function Home() {
     { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
     { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
   ];
+  const xAxisCategory = { valueType: 'Category' };
 
   return (
-    <ChartComponent id="charts" primaryXAxis={{ valueType: 'Category' }} >
+    <ChartComponent id="charts" primaryXAxis={xAxisCategory} >
       <Inject services={[ColumnSeries, LineSeries, Category]} />
       <SeriesCollectionDirective>
         <SeriesDirective dataSource={data} xName='month' yName='sales' name='Sales' />
@@ -146,7 +146,6 @@ export default function Home() {
 }
 {% endhighlight %}
 {% endtabs %}
-{% endraw %}
 
 ## Step 4: Run the application
 
@@ -167,7 +166,7 @@ yarn run dev
 
 Open the generated local URL (for example, `/localhost:3000/`) from terminal in the browser. The application displays the chart as shown below:
 
-![NextJS](./images/next-js.png)
+![NextJS](./images/Getting-Started.png)
 
 To learn more about the functionality of the Chart component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/chart/getting-started#module-injection).
 
