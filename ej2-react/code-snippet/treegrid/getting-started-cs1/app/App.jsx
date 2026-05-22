@@ -1,38 +1,18 @@
 import { ColumnDirective, ColumnsDirective, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
+import { Filter, Inject, Page, Sort } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-
-// Defines the data to be displayed in the TreeGrid.
-const data = [
-    { 
-        TaskID: 1, TaskName: 'Planning', StartDate: new Date('02/04/2025'), EndDate: new Date('02/07/2025'), Duration: 4,
-        subtasks: [
-            { TaskID: 2, TaskName: 'Plan timeline', StartDate: new Date('02/04/2025'), EndDate: new Date('02/07/2025'), Duration: 4, },
-            { TaskID: 3, TaskName: 'Plan budget', StartDate: new Date('02/04/2025'), EndDate: new Date('02/07/2025'), Duration: 4, },
-        ],
-    },
-    {
-        TaskID: 4, TaskName: 'Design', StartDate: new Date('02/10/2025'), EndDate: new Date('02/14/2025'), Duration: 5,
-        subtasks: [
-            { TaskID: 5, TaskName: 'Software Specification', StartDate: new Date('02/10/2025'), EndDate: new Date('02/12/2025'), Duration: 3, },
-            { TaskID: 6, TaskName: 'Design Documentation', StartDate: new Date('02/13/2025'), EndDate: new Date('02/14/2025'), Duration: 2, },
-            { TaskID: 7, TaskName: 'Design complete', StartDate: new Date('02/14/2025'), EndDate: new Date('02/14/2025'), Duration: 1 },
-        ],
-    },
-];
-
+import { sortData } from './data';
 function App() {
-    return <div>
-        {/* Assigns the dataset to the TreeGrid component */}
-        <TreeGridComponent dataSource={data} treeColumnIndex={1} childMapping='subtasks'>
-            {/* Define the columns to be displayed */}
-            <ColumnsDirective>
-                <ColumnDirective field='TaskID' headerText='Task ID' textAlign='Right' width='150'/>
-                <ColumnDirective field='TaskName' headerText='Task Name' width='170'/>
-                <ColumnDirective field='StartDate' headerText='Start Date' width='130' format='yMd' textAlign='Right' />
-                <ColumnDirective field='EndDate' headerText='End Date' width='130' format='yMd' textAlign='Right' />
-                <ColumnDirective field='Duration' headerText='Duration' width='100' textAlign='Right' />
-            </ColumnsDirective>
-        </TreeGridComponent>
-    </div>
+    const pageOptions = { pageSize: 2 };
+    return <TreeGridComponent dataSource={sortData} treeColumnIndex={1} childMapping='subtasks' allowPaging={true}>
+        <ColumnsDirective>
+            <ColumnDirective field='Category' headerText='Category' width='150'/>
+            <ColumnDirective field='orderName' headerText='Order Name' width='170'/>
+            <ColumnDirective field='orderDate' headerText='Order Date' width='130' format='yMd' textAlign='Right' type='date'/>
+            <ColumnDirective field='price' headerText='Price' width='100' textAlign='Right' type='number' format='C0'/>
+        </ColumnsDirective>
+        <Inject services={[Page, Sort, Filter]}/>
+    </TreeGridComponent>;
 }
+;
 export default App;

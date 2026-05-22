@@ -81,7 +81,7 @@ cd my-project
 
 With `my-project` ready using default settings, add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React TreeGrid packages
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
@@ -97,7 +97,7 @@ or
 yarn add @syncfusion/ej2-react-treegrid
 ```
 
-## Adding CSS reference
+## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
 Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be imported in multiple ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). Refer to the [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) for details about built-in themes and approaches for referencing themes in a React project.
 
@@ -120,7 +120,9 @@ In this article, the `Material 3` theme is applied using CSS styles from install
 {% endhighlight %}
 {% endtabs %}
 
-## Adding TreeGrid component
+> Ensure the import order of CSS files follows the dependency graph.
+
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
 Follow these steps to add the React TreeGrid component to the Preact project:
 
@@ -134,7 +136,7 @@ import { ColumnDirective, ColumnsDirective, TreeGridComponent } from '@syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-2\. Define the TreeGrid component with the [dataSource](https://helpej2.syncfusion.com/react/documentation/api/treegrid#datasource) property and column definitions. Declare the values for the `dataSource` property.
+2\. Define the TreeGrid component with the [dataSource](https://helpej2.syncfusion.com/react/documentation/api/treegrid/#datasource) property and column definitions. Declare the values for the `dataSource` property.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
