@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Syncfusion® React UI Builder Skill for AI Assistants
 
-**Syncfusion® React UI Builder** is an AI-powered skill and companion agent that accelerates React application development by transforming natural-language UI requirements into production-ready components using Syncfusion® React UI libraries. 
+**Syncfusion® React UI Builder** is an AI-powered agent skill that accelerates React application development by transforming natural-language UI requirements into production-ready code using Syncfusion® React UI components. 
 
 Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® components** to deliver accurate and ready-to-use code.
 By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, React UI Builder helps you rapidly build scalable dashboards and user interfaces without leaving your development workflow.
@@ -31,7 +31,7 @@ Before installing React UI Builder, ensure the following:
 ## Key Benefits
 
 **AI-Driven UI Generation**
-- Converts prompts into complete React components—not just snippets
+- Transforms prompts into fully developed React components rather than just partial code snippets.
 - Automatically selects appropriate Syncfusion® components and features
 - Produces structured, maintainable code
 
@@ -73,22 +73,27 @@ Use the APM CLI to install the React UI Builder skill for your preferred environ
 {% tabs %}
 {% highlight bash tabtitle="Copilot" %}
 
-apm install syncfusion/react-ui-builder -t copilot
+// By default, it installs to the GitHub Copilot target
+
+apm install Syncfusion/react-ui-builder
 
 {% endhighlight %}
 {% highlight bash tabtitle="Cursor" %}
 
-apm install syncfusion/react-ui-builder -t cursor
+apm install Syncfusion/react-ui-builder -t cursor
 
 {% endhighlight %}
-{% highlight bash tabtitle="Codex" %}
+{% highlight bash tabtitle="Code Studio" %}
 
-apm install syncfusion/react-ui-builder -t codex
+// For Code Studio, refer to the note below to configure the agent location explicitly to use it in the chat.
 
-{% endhighlight  %}
+apm install Syncfusion/react-ui-builder
+
+
+{% endhighlight %}
 {% highlight bash tabtitle="Claude" %}
 
-apm install syncfusion/react-ui-builder -t claude
+apm install Syncfusion/react-ui-builder -t claude
 
 {% endhighlight %}
 {% endtabs %}
@@ -98,25 +103,24 @@ After installation, the following artifacts are added to your project for the Gi
 - `.agent/skills/` – contains the skill files
 - `.github/agents/` – contains the agent configuration
 
-Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targets/#detection-signals) for details about supported deployment targets.
+For details on supported deployment targets, refer to the [documentation](https://microsoft.github.io/apm/reference/cli-commands/#apm-targets---show-resolved-deployment-targets).
 
-> For Syncfusion® Code Studio, use the Copilot command above to install the React UI Builder.
+> For Syncfusion® Code Studio, users must explicitly configure the agent location to use it in the chat. Refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations).
 
 ## How the Syncfusion® React UI Builder Skill Works
 
-1. **Intent Analysis** — Parse the user's prompt to identify component types and high-level layout intent.
-2. **Project Detection** — Automatically detects project framework, package manager, and existing themes.
-3. **Component Mapping** — Map intent to Syncfusion® components and required feature modules.
+1. **Intent Analysis:** Parse the user's prompt to identify component types and high-level layout intent.
+2. **Project Detection:** Automatically detects project framework, package manager, and existing themes.
+3. **Component Mapping:** Map intent to Syncfusion® components and required icons.
 4. **Theming & Design System**  
    Load required theming guidelines and confirm key design choices:
-   - CSS framework (Tailwind, Bootstrap, Material, or Greenfield(custom theme)). If no themes detected in the existing project, Greenfield and Syncfusion Tailwind3 theme are shown as the default option—proceed with this or change the theme as preferred.
+   - CSS framework (Tailwind, Bootstrap, Material, or Greenfield(custom theme)). If no themes detected in the existing project, Greenfield and Syncfusion Tailwind3 theme are shown as the default option, which can be used as is or changed based on preference.
    - Syncfusion theme (Tailwind3, Bootstrap5, Material3, fluent2)
-   - Light and Dark Mode
    - Core design basics (colors, spacing, typography, responsiveness, accessibility)
-5. **Code Generation** — Produce TypeScript React components, props interfaces, and CSS/styling scaffolding.
-6. **Dependency Management** — Recommend or install required Syncfusion® packages and peer dependencies.
-7. **Validation** — Run accessibility and basic security checks, request confirmation for changes.
-8. **Code Insertion** — Create files or patch existing files following project structure and conventions.
+5. **Code Generation:** Produce TypeScript React components, props interfaces, and CSS/styling scaffolding.
+6. **Dependency Management:** Recommend or install required Syncfusion® packages and peer dependencies.
+7. **Validation:** Run accessibility and basic security checks, request confirmation for changes.
+8. **Code Insertion:** Create files or patch existing files following project structure and conventions.
 
 Key enforcement points:
 
@@ -143,6 +147,8 @@ To start using the skill:
 
 3.Start prompting the agent with a clear description of your UI requirements.
 
+> For Syncfusion® Code Studio, If the ui builder agent is not shown, ensure that the agent location is configured to use it in the chat, and refer to the  [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations) for configure the agent location properly.
+
 **Examples Prompts:**
 
 {% promptcards %}
@@ -155,15 +161,15 @@ Design a full-viewport premium admin dashboard that feels fluid, spacious, and v
 {% endpromptcards %}
 
 
-Generated code follows best practices with accessible, semantic HTML, responsive mobile-first layouts, strong TypeScript typing, and built-in security measures such as input validation and avoidance of embedded secrets.
+Generated code follows best practices with accessible, semantic HTML, responsive mobile-first layouts, strong TypeScript typing, and built-in security measures such as input validation and avoidance of hardcoded secrets.
 
 ## Best Practices
 
 Follow these guidelines to get the most out of UI Builder and ensure high-quality production-ready result:
 
-- **Stay consistent** — Maintain consistent file organization, naming conventions, and coding standards throughout your project.
-- **Use advanced AI models** — For best results, use **Claude Sonnet 4.6 or higher** capability models to produce better code quality and more accurate implementations.
-- **Review all content and assets before production** — Replace any placeholder images or icons (e.g., from Unsplash or emoji sets) with your brand assets. Also validate the logic, security, and compatibility with your existing code before deployment.
+- **Stay consistent:** Maintain consistent file organization, naming conventions, and coding standards throughout your project.
+- **Use advanced AI models:** For best results, use **Claude Sonnet 4.6 or higher** capability models to produce better code quality and more accurate implementations.
+- **Review all content and assets before production:** Replace any placeholder images or icons (e.g., from Unsplash or emoji sets) with your brand assets. Also validate the logic, security, and compatibility with your existing code before deployment.
 
 ## Troubleshooting
 
