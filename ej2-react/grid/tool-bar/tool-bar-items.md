@@ -352,4 +352,3 @@ In the following sample, the "Collapse All" toolbar item is positioned on the `R
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/grid/toolbar-cs4" %}
-

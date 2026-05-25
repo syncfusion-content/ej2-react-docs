@@ -197,4 +197,3 @@ The following example demonstrates rendering the `Button` component in the toolb
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/grid/toolbar-template-cs4" %}
-

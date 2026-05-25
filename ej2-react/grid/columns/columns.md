@@ -909,4 +909,3 @@ This example shows a Grid with three columns: "Order ID", "Customer ID", and "Fr
 ## See also
 
 * [Group Column by Format](../grouping#group-by-format)
-

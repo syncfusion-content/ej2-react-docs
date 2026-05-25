@@ -326,4 +326,3 @@ The following example demonstrates preventing local time zone conversion for dat
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/grid/databinding-timezone" %}
-

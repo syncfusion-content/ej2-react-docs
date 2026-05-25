@@ -199,4 +199,3 @@ Column menu events in the React Data Grid provide ways to customize behavior whe
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/grid/column-cs8" %}
-

@@ -369,4 +369,3 @@ The row template feature offers focused functionality, working seamlessly with a
 - [Column Template](https://ej2.syncfusion.com/react/documentation/grid/columns/column-template)
 - [Header Template](https://ej2.syncfusion.com/react/documentation/grid/columns/column-headers#header-template)
 - [Empty Record Template](https://ej2.syncfusion.com/react/documentation/grid/how-to/customize-the-empty-record-template)
-

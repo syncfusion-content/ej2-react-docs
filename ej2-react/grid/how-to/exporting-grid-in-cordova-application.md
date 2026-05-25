@@ -30,4 +30,3 @@ The example below demonstrates how to export the React Grid in a Cordova environ
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/grid/exporting-cs1" %}
-

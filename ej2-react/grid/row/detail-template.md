@@ -607,4 +607,3 @@ Detail template is not supported with the following features:
 ## See also
 
 * [Detail row events](../hierarchy-grid#detail-row-events)
-

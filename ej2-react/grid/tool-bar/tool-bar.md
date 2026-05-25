@@ -191,4 +191,3 @@ The following example demonstrates changing the background color of the `Add`, `
 ## See also
 
 * [Toolbar Component](https://ej2.syncfusion.com/react/documentation/toolbar/getting-started)
-

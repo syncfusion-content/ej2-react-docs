@@ -163,4 +163,3 @@ npm test
 
 > * This is only for local data. Use the [currentViewData](https://ej2.syncfusion.com/react/documentation/api/grid#currentviewdata) property when rendering remote data.
 > * Find the sample of the Unit Jest testing in DataGrid [here](https://github.com/SyncfusionExamples/DataGrid-react-test-case)
-

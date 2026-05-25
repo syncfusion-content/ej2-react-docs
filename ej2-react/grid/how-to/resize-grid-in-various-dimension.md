@@ -113,4 +113,3 @@ export default App;
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/grid/grid-resize" %}
-
