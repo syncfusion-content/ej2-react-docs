@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: React Grid - Row Template | Syncfusion
 description: React Grid row template explains customizing full row rendering with templates, advanced layout options, and examples for complex row UIs.
@@ -285,7 +285,7 @@ export default App;
 
  {% previewsample "page.domainurl/code-snippet/grid/row-template-cs4" %}
 
-> When using the `rowTemplate` feature in [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid), keep in mind that any formatting applied to columns using the `format` property will not work inside the template.
+> When using the `rowTemplate` feature in React Data Grid, keep in mind that any formatting applied to columns using the `format` property will not work inside the template.
 
 ## Render Syncfusion<sup style="font-size:70%">&reg;</sup> controls in row template
 
@@ -314,7 +314,7 @@ The following example demonstrates rendering Syncfusion<sup style="font-size:70%
 
 ## Render Syncfusion<sup style="font-size:70%">&reg;</sup> React Chart in row template
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component provides flexibility to include custom controls such as Chart within the rows of the Grid. This feature enhances Grid interactivity by displaying graphical representations of data instead of plain text.
+The React Data Grid component provides flexibility to include custom controls such as Chart within the rows of the Grid. This feature enhances Grid interactivity by displaying graphical representations of data instead of plain text.
 
 Render a Syncfusion<sup style="font-size:70%">&reg;</sup> Chart within a row template of the Grid by utilizing the [rowTemplate](https://ej2.syncfusion.com/react/documentation/api/grid#rowtemplate) property. This property accepts a custom HTML template that specifies the layout for each row, enabling rich data visualization.
 
@@ -369,3 +369,4 @@ The row template feature offers focused functionality, working seamlessly with a
 - [Column Template](https://ej2.syncfusion.com/react/documentation/grid/columns/column-template)
 - [Header Template](https://ej2.syncfusion.com/react/documentation/grid/columns/column-headers#header-template)
 - [Empty Record Template](https://ej2.syncfusion.com/react/documentation/grid/how-to/customize-the-empty-record-template)
+

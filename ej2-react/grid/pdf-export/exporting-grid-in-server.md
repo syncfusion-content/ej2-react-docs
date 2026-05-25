@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: React Grid – PDF Server Export | Syncfusion
 description: React Grid PDF server export covers server‑side PDF generation, API endpoints, and efficient large grid export without relying on client‑side processing.
@@ -300,7 +300,7 @@ private void PdfHeaderQueryCellInfo(object pdf)
 
 ## Passing additional parameters to the server while exporting
 
-Passing additional parameters to the server when exporting data in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) provides flexibility to include extra information or customize the export process based on specific requirements.
+Passing additional parameters to the server when exporting data in the React Data Grid provides flexibility to include extra information or customize the export process based on specific requirements.
 
 This is achieved by utilizing the [query](https://ej2.syncfusion.com/react/documentation/api/grid#query) property and the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid#toolbarclick) event. Within the `query` property, invoke the `addParams` method to add parameters to the request.
 

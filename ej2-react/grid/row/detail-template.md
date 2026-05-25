@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: React Grid - Detail Template | Syncfusion
 description: React Grid detail template supports rendering complex row-level detail content, embedding nested components, and customizing layouts and data presentation.
@@ -407,7 +407,7 @@ export default App;
 
 ## Customize detail template icon
 
-The detail template icon in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) expands or collapses the detail content of a row. By default, the icon represents a right arrow for the collapsed state and a down arrow for the expanded state. To customize this icon, override the following CSS styles:
+The detail template icon in the React Data Grid expands or collapses the detail content of a row. By default, the icon represents a right arrow for the collapsed state and a down arrow for the expanded state. To customize this icon, override the following CSS styles:
 
 ```css
 
@@ -607,3 +607,4 @@ Detail template is not supported with the following features:
 ## See also
 
 * [Detail row events](../hierarchy-grid#detail-row-events)
+

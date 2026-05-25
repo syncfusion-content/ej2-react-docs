@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: React Grid - SharePoint | Syncfusion
 description: React Grid SharePoint integration connects the grid to SharePoint lists, supports auth, and provides data access methods for SharePoint apps.
@@ -102,7 +102,7 @@ gulp serve
 
 (https://www.syncfusion.com/react-components/react-data-grid) packages
 
-To utilize [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component in your project, you need to install the necessary npm package. 
+To utilize React Data Grid component in your project, you need to install the necessary npm package. 
 
 ```bash
 npm install @syncfusion/ej2-react-grids

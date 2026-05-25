@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: React Grid - Jest Unit Testing | Syncfusion
 description: React Grid testing with Jest provides unit and integration test patterns, mocks, and examples to validate grid behavior in React applications.
@@ -20,7 +20,7 @@ Ensure that node version 14 or higher is installed. If not, install a supported 
 
 - Create a React application and install the Grid package:
 
-Follow the [[React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) Getting Started](https://ej2.syncfusion.com/react/documentation/grid/getting-started) guide to create a React app and install the required [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) package.
+Follow the [React Data Grid Getting Started](https://ej2.syncfusion.com/react/documentation/grid/getting-started) guide to create a React app and install the required React Data Grid package.
 
 - Install Jest:
 
@@ -163,3 +163,4 @@ npm test
 
 > * This is only for local data. Use the [currentViewData](https://ej2.syncfusion.com/react/documentation/api/grid#currentviewdata) property when rendering remote data.
 > * Find the sample of the Unit Jest testing in DataGrid [here](https://github.com/SyncfusionExamples/DataGrid-react-test-case)
+

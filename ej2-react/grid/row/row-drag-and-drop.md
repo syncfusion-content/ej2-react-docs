@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: React Grid - Row Drag and Drop | Syncfusion
 description: React Grid row drag and drop explains enabling row reorder, drag behavior, drop targets, and handling events to update underlying data accordingly.
@@ -167,11 +167,11 @@ The following example demonstrates transferring selected Grid rows to a `TreeGri
 
 ## Hide drag and drop icons
 
-By default, the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) displays drag icon in each row when enabling the row drag and drop feature. To hide these icons, set the [targetID](https://ej2.syncfusion.com/react/documentation/api/grid/rowDropSettings#targetid) property of the [rowDropSettings](https://ej2.syncfusion.com/react/documentation/api/grid/rowDropSettings) object to the current Grid's ID.
+By default, the React Data Grid displays drag icon in each row when enabling the row drag and drop feature. To hide these icons, set the [targetID](https://ej2.syncfusion.com/react/documentation/api/grid/rowDropSettings#targetid) property of the [rowDropSettings](https://ej2.syncfusion.com/react/documentation/api/grid/rowDropSettings) object to the current Grid's ID.
 
 When `targetID` references the Grid's own ID, the Grid renders without drag helper icons. Customize drag and drop behavior by binding to the [rowDrop](https://ej2.syncfusion.com/react/documentation/api/grid#rowdrop) event. Within the event handler, prevent the default action by setting `args.cancel` to `true`, then reorder rows using the [reorderRows](https://ej2.syncfusion.com/react/documentation/api/grid#reorderrows) method.
 
-The following example demonstrates hide drag and drop icons in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid):
+The following example demonstrates hide drag and drop icons in the React Data Grid:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -333,5 +333,5 @@ The row drag and drop feature offers focused functionality, working seamlessly w
 
 ## See also
 
-* [Sorting data in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid)](../sorting)
-* [Filtering data in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid)](../filtering/filtering)
+* [Sorting data in the React Data Grid](../sorting)
+* [Filtering data in the React Data Grid](../filtering/filtering)
