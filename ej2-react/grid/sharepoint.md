@@ -100,7 +100,7 @@ gulp trust-dev-cert
 gulp serve
 ```
 
-## Adding [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) packages
+(https://www.syncfusion.com/react-components/react-data-grid) packages
 
 To utilize [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component in your project, you need to install the necessary npm package. 
 

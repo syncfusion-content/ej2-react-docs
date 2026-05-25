@@ -87,7 +87,7 @@ cd ej2-nextjs-grid
 
 Once the setup is complete, the application is ready to be configured with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
-## Adding [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) packages
+## Adding React Data Grid packages
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available on [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
