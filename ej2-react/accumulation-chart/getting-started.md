@@ -86,7 +86,6 @@ The steps up to this point can be completed using the initially opened terminal 
 
 Add the Accumulation Chart component to `src/App.tsx` using the following code.
 
-{% raw %}
 {% tabs %}
 {% highlight ts tabtitle="~/src/App.tsx" %}
 import { AccumulationChartComponent } from '@syncfusion/ej2-react-charts';
@@ -96,7 +95,6 @@ function App() {
 export default App;
 {% endhighlight %}
 {% endtabs %}
-{% endraw %}
 
 > **Note:** This will render an empty accumulation chart area by running `npm run dev` in terminal ([Refer Step 7](#step-7-run-the-application)). Proceed to the next steps to add data, series, and necessary module injections to visualize your data.
 
@@ -108,7 +106,6 @@ Accumulation Chart features are delivered as separate modules and must be explic
 
 Import the above-mentioned module from the chart package and inject that into the `services` section of the Accumulation Chart component as follows.
 
-{% raw %}
 {% tabs %}
 {% highlight ts tabtitle="~/src/App.tsx" %}
 import { AccumulationChartComponent, PieSeries, Inject } from '@syncfusion/ej2-react-charts';
@@ -122,7 +119,6 @@ function App() {
 export default App;
 {% endhighlight %}
 {% endtabs %}
-{% endraw %}
 
 **Note:** At this stage, No pie series is rendered because the Accumulation Chart component has not yet been configured with a data source.
 
@@ -130,7 +126,6 @@ export default App;
 
 The pie chart data should be provided as a JSON array in the following format. You can define the data in the same `src/App.tsx` file or place it in a separate file (for example, `src/datasource.ts`) and import it into `App.tsx`.
 
-{% raw %}
 {% tabs %}
 {% highlight ts tabtitle="~/src/datasource.ts" %}
 const data = [
@@ -142,7 +137,6 @@ const data = [
   ];
 {% endhighlight %}
 {% endtabs %}
-{% endraw %}
 
 After defining the required data set, bind the data to the Chart component in the `AccumulationSeriesDirective` tag. The following code snippet demonstrates the complete configuration required to render a basic pie chart.
 
