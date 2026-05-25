@@ -12,6 +12,16 @@ domainurl: ##DomainURL##
 
 The Syncfusion React Markdown Editor is a web-based editor that enables users to create, edit, and format Markdown content with features such as table support and structured content formatting. This section explains you the steps required to create a simple Markdown Editor and demonstrate the basic usage of the Markdown Editor component in React environment.
 
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview)
+
+To get started quickly with the React Markdown Editor, refer to this video tutorial:
+
+{% youtube "https://www.youtube.com/watch?v=OGzfKaZe7bo" %}
+
+## Prerequisites
+
+This guide uses Vite as the bundler and development environment. Install Node.js `24.13.0` or higher before proceeding. For detailed information about Vite’s capabilities and configuration options, refer to the [Vite documentation](https://vitejs.dev/).
+
 ## Create a React Application
 
 Run the following commands to set up a React application:
@@ -39,7 +49,7 @@ All the available Essential JS 2 packages are published in [`npmjs.com`](https:/
 To install Rich Text Editor component, use the following command
 
 ```
-npm install @syncfusion/ej2-react-richtexteditor --save
+npm install @syncfusion/ej2-react-richtexteditor
 ```
 
 ## Adding CSS reference
