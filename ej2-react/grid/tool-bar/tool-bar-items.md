@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: React Grid - Toolbar Items | Syncfusion
 description: React Grid custom toolbar offers full layout and appearance control with templates, enabling integration of custom components and interactive behaviors.
@@ -14,7 +14,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://w
 
 ## Built-in toolbar items
 
-Built-in toolbar items in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component provide predefined actions to perform standard operations within the grid. These items can be added by defining the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property as a collection of built-in items. Each item is rendered as a button with an icon and text. The following table lists the built-in toolbar items and their respective actions.
+Built-in toolbar items in the React Data Grid component provide predefined actions to perform standard operations within the grid. These items can be added by defining the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property as a collection of built-in items. Each item is rendered as a button with an icon and text. The following table lists the built-in toolbar items and their respective actions.
 
 | Built-in Toolbar Items | Actions |
 |------------------------|---------|
@@ -81,7 +81,7 @@ This is demonstrated in the following sample:
 
 ### Customize the built-in toolbar items
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component allows customization of the built-in toolbar items to meet specific requirements. This customization can include adding, removing, or modifying toolbar items, as well as handling custom actions when toolbar buttons are clicked.
+The React Data Grid component allows customization of the built-in toolbar items to meet specific requirements. This customization can include adding, removing, or modifying toolbar items, as well as handling custom actions when toolbar buttons are clicked.
 
 Customization of built-in toolbar items is achieved using the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid#toolbarclick) event of the grid. This event is triggered when any toolbar button is clicked, allowing custom logic to be implemented.
 
@@ -194,7 +194,7 @@ export default App;
 
 ## Custom toolbar items
 
-Custom toolbar items in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) allow addition of personalized functionality to the toolbar. These items can be added by defining the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property as a collection of [ItemModel](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel) objects. These objects define the custom items and their corresponding actions. The actions for customized toolbar items are defined in the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid#toolbarclick) event.
+Custom toolbar items in the React Data Grid allow addition of personalized functionality to the toolbar. These items can be added by defining the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property as a collection of [ItemModel](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel) objects. These objects define the custom items and their corresponding actions. The actions for customized toolbar items are defined in the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid#toolbarclick) event.
 
 By default, custom toolbar items are positioned on the left side of the toolbar. The position can be changed by using the [align](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel#align) property of the `ItemModel`. The following example demonstrates applying the `align` property with the value `Right` for the "Collapse All" toolbar item.
 
@@ -217,7 +217,7 @@ By default, custom toolbar items are positioned on the left side of the toolbar.
 
 ## Both built-in and custom items in toolbar
 
-The toolbar in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) supports a combination of built-in and custom toolbar items to provide standard and custom actions within the same toolbar.
+The toolbar in the React Data Grid supports a combination of built-in and custom toolbar items to provide standard and custom actions within the same toolbar.
 
 To use both types of toolbar items, define the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property of the grid as an array that includes both built-in and custom items. Built-in items are specified as strings, while custom items are defined as objects with properties such as [text](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemmodel#text), [prefixIcon](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemmodel#prefixicon), and [id](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemmodel#id) within the toolbar component.
 
@@ -330,7 +330,7 @@ Additionally, the [change](https://ej2.syncfusion.com/react/documentation/api/au
 
 ## Custom toolbar items in a specific position
 
-Custom toolbar items in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) can be positioned in specific locations by modifying the default placement. This enables precise control of each custom toolbar item's positioning according to specific requirements and desired layout within the grid.
+Custom toolbar items in the React Data Grid can be positioned in specific locations by modifying the default placement. This enables precise control of each custom toolbar item's positioning according to specific requirements and desired layout within the grid.
 
 By default, custom toolbar items in the Grid component are aligned on the left side of the toolbar. The position of custom toolbar items can be modified by utilizing the [align](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel#align) property of the [ItemModel](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel).
 
@@ -352,3 +352,4 @@ In the following sample, the "Collapse All" toolbar item is positioned on the `R
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/grid/toolbar-cs4" %}
+

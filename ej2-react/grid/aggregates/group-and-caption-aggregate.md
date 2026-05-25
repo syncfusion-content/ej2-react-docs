@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: React Grid - Group and Caption Aggregate | Syncfusion
 description: React Grid group and caption aggregate covers computing aggregates for groups, displaying captions, and customizing group summaries and formats.
@@ -49,7 +49,7 @@ The following example displays the sum of the "Freight" field in the footer of e
 
 Group caption aggregates are displayed in the caption cells at the top of each group, providing a quick summary of the grouped data. To render these aggregates, use the [groupCaptionTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn#groupcaptiontemplate) property, which allows to display aggregate values in the group caption cells.
 
-The following example displays the max of the "Freight" field in the each group caption cell using the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid):
+The following example displays the max of the "Freight" field in the each group caption cell using the React Data Grid:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -72,7 +72,7 @@ The following example displays the max of the "Freight" field in the each group 
 
 ## Disable page wise aggregates for grouping
 
-In some cases, disabling the page-wise aggregates for grouping is necessary. By default, when grouping is enables with pagination, the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) calculates group aggregates only for the current page.
+In some cases, disabling the page-wise aggregates for grouping is necessary. By default, when grouping is enables with pagination, the React Data Grid calculates group aggregates only for the current page.
 
 To calculate aggregates across the entire grouped data, set the [groupSettings.disablePageWiseAggregates](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings#disablepagewiseaggregates) property to `true`.
 

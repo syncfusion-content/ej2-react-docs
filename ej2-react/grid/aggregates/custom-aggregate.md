@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: React Grid - Custom Aggregate | Syncfusion
 description: React Grid custom aggregate enables defining custom aggregate functions, applying them to columns, and displaying computed summaries.
@@ -14,7 +14,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://w
 
 To configure a custom aggregate, set the [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn#type) property to "Custom" in the `AggregateColumnDirective` and provide the custom aggregation logic using the [customAggregate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn#customaggregate) property.
 
-The custom aggregate function in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component is executed differently based on the aggregation context:
+The custom aggregate function in the React Data Grid component is executed differently based on the aggregation context:
 
 - **Total Aggregation:** The function is executed with the entire dataset and the corresponding aggregate column object.
 

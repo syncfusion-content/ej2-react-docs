@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  React Grid - Column Rendering | Syncfusion
 description: React Grid column rendering allows custom cell and header layouts, templates, and flexible options for complex content and interactive elements.
@@ -14,7 +14,7 @@ Columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid
 
 ## Define columns manually
 
-Columns in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) can be manually defined using the [ColumnDirective](https://ej2.syncfusion.com/react/documentation/api/grid/column) element. Each column is configured with properties such as `field`, `headerText`, `type`, and `width`, allowing precise control over the column's behavior and appearance to meet specific layout and data requirements.
+Columns in the React Data Grid can be manually defined using the [ColumnDirective](https://ej2.syncfusion.com/react/documentation/api/grid/column) element. Each column is configured with properties such as `field`, `headerText`, `type`, and `width`, allowing precise control over the column's behavior and appearance to meet specific layout and data requirements.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -228,7 +228,7 @@ This formula ensures that serial numbers continue correctly across pages. Once c
 
 ## Complex data binding
 
-Complex data binding in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component can be achieved using the dot (.) operator in the `field` property. This feature is particularly useful when dealing with nested or complex data structures.
+Complex data binding in the React Data Grid component can be achieved using the dot (.) operator in the `field` property. This feature is particularly useful when dealing with nested or complex data structures.
 
 ### Using local data
 
@@ -313,3 +313,4 @@ The following example demonstrates how to set the "Employee.EmployeeID" column a
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/grid/foreign-key-cs6" %}
+

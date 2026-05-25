@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: React Grid - Toolbar | Syncfusion
 description: React Grid toolbar provides default buttons, configuration options, and examples for common operations like adding records, exporting data, and searching.
@@ -35,7 +35,7 @@ The following example demonstrates enabling toolbar items in the Grid:
 
 ## Enable or disable toolbar items
 
-Enabling or disabling toolbar items dynamically in [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) is to provide control over the availability of specific functionality based on application logic. This powerful capability allows toolbar customization based on various conditions or user interactions.
+Enabling or disabling toolbar items dynamically in React Data Grid is to provide control over the availability of specific functionality based on application logic. This powerful capability allows toolbar customization based on various conditions or user interactions.
 
 Toolbar items can be enabled or disabled dynamically by using the [enableToolbarItems](https://ej2.syncfusion.com/react/documentation/api/grid#enabletoolbaritems) method. This method allows control over the availability of specific toolbar items based on application logic requirements.
 
@@ -133,7 +133,7 @@ export default App;
 
 ## Add toolbar at the bottom of grid
 
-By default, the toolbar is placed at the top of the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid). Adding the toolbar at the bottom of the Grid keeps important actions and functionality consistently visible and easily accessible, eliminating the need for scrolling to locate toolbar operations.
+By default, the toolbar is placed at the top of the React Data Grid. Adding the toolbar at the bottom of the Grid keeps important actions and functionality consistently visible and easily accessible, eliminating the need for scrolling to locate toolbar operations.
 
 To add the toolbar at the bottom of the grid, use the [created](https://ej2.syncfusion.com/react/documentation/api/grid#created) event. By handling this event, the toolbar items can be dynamically inserted at the desired position in the grid layout.
 
@@ -158,7 +158,7 @@ The following example shows adding toolbar items at the bottom using the Grid's 
 
 ## Customize toolbar buttons using CSS
 
-Enhance the visual presentation of toolbar buttons in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) by modifying their appearance with CSS styles. This flexible approach creates a cohesive user interface tailored to application design requirements.
+Enhance the visual presentation of toolbar buttons in the React Data Grid by modifying their appearance with CSS styles. This flexible approach creates a cohesive user interface tailored to application design requirements.
 
 The appearance of the built-in toolbar buttons can be modified by applying the following CSS styles.
 
@@ -191,3 +191,4 @@ The following example demonstrates changing the background color of the `Add`, `
 ## See also
 
 * [Toolbar Component](https://ej2.syncfusion.com/react/documentation/toolbar/getting-started)
+

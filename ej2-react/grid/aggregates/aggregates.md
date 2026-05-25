@@ -194,7 +194,7 @@ Here is an example that demonstrates how to use built-in aggregate types in the 
 
 A grid column typically supports a single aggregate function such as Sum, Average, or Count, which produces one summary value for the entire column. In cases where different summary values are required at the same time, multiple aggregates can be configured. This feature makes it possible to calculate and display several values such as Sum, Average, Minimum, Maximum, or custom calculations concurrently for a specific column.
 
-In the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid), multiple aggregates can be defined in two ways:
+In the React Data Grid, multiple aggregates can be defined in two ways:
 
 - By specifying the aggregate `type` as an array, which allows multiple values to be shown together in a single summary row. For example:
   ```ts

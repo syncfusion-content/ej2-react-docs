@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: React Grid - GraphQL Adaptor | Syncfusion
 description: React Grid GraphQL adaptor supports using GraphQL endpoints, mapping queries, and configuring operations to fetch, sort, and page data from GraphQL servers.
@@ -84,7 +84,7 @@ The `GraphQLAdaptor` is a specialized adaptor in Syncfusion<sup style="font-size
 - **Paging**: Sends `datamanager.skip` and `datamanager.take` variables.
 - **CRUD**: Executes mutations (createOrder, updateOrder, deleteOrder).
 
-For complete integration of the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) with GraphQL, including support for data operations such as paging, sorting, filtering, and full CRUD functionality, refer to the following official guides:
+For complete integration of the React Data Grid with GraphQL, including support for data operations such as paging, sorting, filtering, and full CRUD functionality, refer to the following official guides:
 
 - [Syncfusion React Grid with GraphQL backend in Node.js](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-backends/graphql-nodejs-server)
 

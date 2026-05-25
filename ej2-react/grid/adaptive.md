@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: React Grid - Adaptive | Syncfusion
 description: React Grid adaptive explains responsive behavior, layout adjustments, and configuration to optimize grid usability on mobile and small screens with examples.
@@ -37,7 +37,7 @@ Additionally, apply the `e-bigger` class to the grid's parent element to enable 
 
 ## Vertical row rendering
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) introduces vertical row rendering, which displays row elements in a vertical order. This presentation enhances data visibility in scenarios where a vertical layout is preferable. Set the [rowRenderingMode](https://ej2.syncfusion.com/react/documentation/api/grid#rowrenderingmode) property to `Vertical`.
+The React Data Grid introduces vertical row rendering, which displays row elements in a vertical order. This presentation enhances data visibility in scenarios where a vertical layout is preferable. Set the [rowRenderingMode](https://ej2.syncfusion.com/react/documentation/api/grid#rowrenderingmode) property to `Vertical`.
 
 >The default row rendering mode is `Horizontal`.
 
@@ -344,3 +344,4 @@ export default App;
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/grid/adaptive-cs1" %}
+
