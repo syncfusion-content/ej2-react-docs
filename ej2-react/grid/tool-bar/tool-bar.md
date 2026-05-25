@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Toolbar in React Grid Component
 
-The toolbar in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component offers several general use cases to enhance data manipulation and overall experience. Actions such as adding, editing, and deleting records within the grid can be performed, providing efficient data manipulation capabilities. The toolbar also facilitates data export and import functionality, allowing users to generate downloadable files in formats like Excel, CSV, or PDF.
+The toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component offers several general use cases to enhance data manipulation and overall experience. Actions such as adding, editing, and deleting records within the grid can be performed, providing efficient data manipulation capabilities. The toolbar also facilitates data export and import functionality, allowing users to generate downloadable files in formats like Excel, CSV, or PDF.
 
 To enable the toolbar functionality, you need to inject the `Toolbar` module in the grid. This service provides the necessary methods to interact with the toolbar items. The toolbar can be customized with built-in toolbar items or custom toolbar items using the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property. The `toolbar` property accepts an array of strings representing the built-in toolbar items or an array of [ItemModel](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel) objects for custom toolbar items.
 

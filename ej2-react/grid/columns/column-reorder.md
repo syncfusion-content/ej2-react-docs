@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Column Reorder in React Grid Component
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component provides column reordering through drag-and-drop functionality. This feature allows columns to be moved from one position to another within the grid, making it possible to customize the layout according to application requirements.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component provides column reordering through drag-and-drop functionality. This feature allows columns to be moved from one position to another within the grid, making it possible to customize the layout according to application requirements.
 
 When a column header is dragged, a move indicator icon appears to show where the column will be placed. Dropping the header into the new position changes the column’s index, and the grid updates the order seamlessly. This makes it easier to organize and analyze data, especially when working with large datasets.
 

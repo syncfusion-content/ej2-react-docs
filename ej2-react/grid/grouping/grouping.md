@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Grouping in React Grid Component
 
-The grouping feature in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) enables data to be organized into a hierarchical structure, allowing records to be expanded and collapsed for improved readability and analysis.
+The grouping feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) enables data to be organized into a hierarchical structure, allowing records to be expanded and collapsed for improved readability and analysis.
 
 For an overview of the grouping feature available in the React Grid, refer to the following video:
 

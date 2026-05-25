@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Column Rendering in React Grid Component
 
-Columns in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) define the structure and presentation of data. This section outlines manual, automatic, and dynamic rendering approaches to ensure clarity and flexibility in grid design.
+Columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) define the structure and presentation of data. This section outlines manual, automatic, and dynamic rendering approaches to ensure clarity and flexibility in grid design.
 
 ## Define columns manually
 

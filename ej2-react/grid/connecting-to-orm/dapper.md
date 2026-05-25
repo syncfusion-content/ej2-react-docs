@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Connecting SQL Server to Syncfusion React Grid Using Dapper
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) supports binding data from SQL Server using the lightweight **Dapper** micro‑ORM. This modern approach provides a simpler, more direct alternative where raw SQL control is preferred.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) supports binding data from SQL Server using the lightweight **Dapper** micro‑ORM. This modern approach provides a simpler, more direct alternative where raw SQL control is preferred.
 
 ## What is Dapper?
 

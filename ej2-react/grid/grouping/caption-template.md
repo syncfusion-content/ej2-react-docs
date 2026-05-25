@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Group Row Title Customization in React Grid
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) provides the [captionTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings#captiontemplate) property to customize the text shown in group row titles.  This feature enhances the visual presentation of grouped data by allowing the display of grouped values, record counts, and custom HTML elements such as icons or images.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) provides the [captionTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings#captiontemplate) property to customize the text shown in group row titles.  This feature enhances the visual presentation of grouped data by allowing the display of grouped values, record counts, and custom HTML elements such as icons or images.
 
 The `captionTemplate` receives a data object with properties such as `field`, `headerText`, `key`, and `count`, which can be used to dynamically render informative group captions.
 

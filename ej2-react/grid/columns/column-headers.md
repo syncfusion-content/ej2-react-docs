@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Headers in React Grid component
 
-Column headers in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) display the titles for each column, making it clear what data is shown. They provide context and make the grid easier to read and navigate. Headers can be customized by adjusting text alignment, applying templates, stacking multiple headers, or updating them dynamically, offering flexibility to design the grid as needed.
+Column headers in the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) display the titles for each column, making it clear what data is shown. They provide context and make the grid easier to read and navigate. Headers can be customized by adjusting text alignment, applying templates, stacking multiple headers, or updating them dynamically, offering flexibility to design the grid as needed.
 
 ## Header text
 

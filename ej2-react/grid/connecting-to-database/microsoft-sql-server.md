@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Connecting SQL Server to React Grid Using ASP.NET Core Web API
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) supports binding data from a Microsoft SQL Server database through an ASP.NET Core Web API using ADO.NET SqlClient. This modern architecture provides a secure and scalable alternative to accessing the database directly from the client, while enabling efficient server‑side processing for paging, sorting, and filtering. By leveraging React for the UI and ASP.NET Core with SqlClient for data access, applications maintain a clear separation between presentation and data layers and retain full control over SQL Server interactions.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) supports binding data from a Microsoft SQL Server database through an ASP.NET Core Web API using ADO.NET SqlClient. This modern architecture provides a secure and scalable alternative to accessing the database directly from the client, while enabling efficient server‑side processing for paging, sorting, and filtering. By leveraging React for the UI and ASP.NET Core with SqlClient for data access, applications maintain a clear separation between presentation and data layers and retain full control over SQL Server interactions.
 
 **What is Microsoft SqlClient?**
 

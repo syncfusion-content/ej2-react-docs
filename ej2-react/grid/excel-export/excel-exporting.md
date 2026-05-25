@@ -149,7 +149,7 @@ The following example demonstrates performing export with cell and row spanning 
 
 ## Export with custom date format
 
-The exporting functionality in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) allows exporting grid data, including custom date format. This feature is useful when exporting grid data with customized date values is needed.
+The exporting functionality in the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) allows exporting grid data, including custom date format. This feature is useful when exporting grid data with customized date values is needed.
 
 To apply a custom date format to grid columns during the export, utilize the [format](https://ej2.syncfusion.com/react/documentation/api/grid/column#format) property. This property allows defining a custom format using format options.
 

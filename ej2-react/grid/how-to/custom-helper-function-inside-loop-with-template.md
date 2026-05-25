@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Displaying Custom Templates in React Grid component
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) supports using custom helper functions inside a column's [template](https://ej2.syncfusion.com/react/documentation/api/grid/columnmodel#template), allowing the creation of complex, dynamic UI elements.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) supports using custom helper functions inside a column's [template](https://ej2.syncfusion.com/react/documentation/api/grid/columnmodel#template), allowing the creation of complex, dynamic UI elements.
 
 In the "Customer Rating" column, a custom template loops through the item array and renders `<span>` elements styled as stars using the following CSS:
 

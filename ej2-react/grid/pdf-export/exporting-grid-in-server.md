@@ -14,7 +14,7 @@ The Grid component provides the ability to export grid data to a PDF document on
 
 ## Server dependencies
 
-To enable server-side PDF exporting in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component, include the following dependencies:
+To enable server-side PDF exporting in the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component, include the following dependencies:
 
 * `Syncfusion.EJ2`
 * `Syncfusion.EJ2.GridExport`

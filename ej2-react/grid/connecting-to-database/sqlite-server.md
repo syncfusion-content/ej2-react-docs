@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Connecting SQLite Data to React Grid using EF Core
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) supports binding data from a SQLite database using Entity Framework Core (EF Core). This approach provides a lightweight, server less database solution ideal for mobile applications, desktop applications, and small-to-medium scale web applications.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) supports binding data from a SQLite database using Entity Framework Core (EF Core). This approach provides a lightweight, server less database solution ideal for mobile applications, desktop applications, and small-to-medium scale web applications.
 
 **What is Entity Framework Core?**
 

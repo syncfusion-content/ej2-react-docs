@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Syncfusion React Grid with Django REST Framework
 
-This guide explains connecting the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) to a **Django REST Framework (DRF)** backend with **Custom Binding**. Custom Binding provides full control over the Grid’s communication with the server: the Grid raises events for data operations (paging, sorting, filtering, searching) and CRUD,  client code calls DRF endpoints, and DRF returns standardized results.
+This guide explains connecting the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) to a **Django REST Framework (DRF)** backend with **Custom Binding**. Custom Binding provides full control over the Grid’s communication with the server: the Grid raises events for data operations (paging, sorting, filtering, searching) and CRUD,  client code calls DRF endpoints, and DRF returns standardized results.
 
 **Difference between Custom Binding and UrlAdaptor:**
 

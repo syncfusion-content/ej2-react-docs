@@ -14,7 +14,7 @@ The [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/ur
 
 For details on configuring the backend (expected request/response format, server‑side processing), refer to the [UrlAdaptor backend setup documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/url-adaptor).
 
-Once the project creation and backend setup are complete, the next step is to render the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) Component on the client side.
+Once the project creation and backend setup are complete, the next step is to render the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) Component on the client side.
 
 **Project structure:**
 

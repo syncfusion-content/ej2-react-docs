@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Selection Customization in React Grid Component
 
-The appearance of selection in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component can be customized using CSS. Here are examples for customizing the row selection background, cell selection background, and column selection background.
+The appearance of selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component can be customized using CSS. Here are examples for customizing the row selection background, cell selection background, and column selection background.
 
 ## Customizing the row selection background
 

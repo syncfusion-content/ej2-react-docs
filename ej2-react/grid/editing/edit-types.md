@@ -16,7 +16,7 @@ The React Grid component in Syncfusion<sup style="font-size:70%">&reg;</sup> pro
 
 ## Built-in cell editors
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) provides pre-built default editors that enhance data editing and input handling within the grid. The `editType` property specifies which editor component renders in a grid column during editing. Each data type (string, number, date, boolean) has a corresponding editor that automatically formats and validates user input.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) provides pre-built default editors that enhance data editing and input handling within the grid. The `editType` property specifies which editor component renders in a grid column during editing. Each data type (string, number, date, boolean) has a corresponding editor that automatically formats and validates user input.
 
 The available default edit types are as follows:
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # PDF export in React Grid component
 
-The PDF export feature in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) exporting grid data to a PDF document, providing the ability to generate printable reports or share data in a standardized format.
+The PDF export feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) exporting grid data to a PDF document, providing the ability to generate printable reports or share data in a standardized format.
 
 To enable PDF export in the Grid, set the [allowPdfExport](https://ej2.syncfusion.com/react/documentation/api/grid#allowpdfexport) property to `true` and use the [pdfExport](https://ej2.syncfusion.com/react/documentation/api/grid#pdfexport) method.
 

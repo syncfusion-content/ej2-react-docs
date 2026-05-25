@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Cell in React Grid Component
 
-A cell in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component represents the smallest unit of data within the grid. Each cell corresponds to the intersection of a row and a column, and it is responsible for displaying the value associated with that specific row-column combination. Cells can display plain text, formatted values, or fully customized content, making them highly flexible for presenting structured data in a grid layout.
+A cell in the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component represents the smallest unit of data within the grid. Each cell corresponds to the intersection of a row and a column, and it is responsible for displaying the value associated with that specific row-column combination. Cells can display plain text, formatted values, or fully customized content, making them highly flexible for presenting structured data in a grid layout.
 
 ## Displaying the HTML content
 

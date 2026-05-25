@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Row Drag and Drop in React Grid Component
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component provides built-in support for seamless row drag and drop functionality. This feature enables effortless row rearrangement within the grid by dragging and dropping rows to new positions. Additionally, rows can be transferred between grids, as well as dragged and dropped to custom components, providing powerful flexibility for complex data management scenarios.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component provides built-in support for seamless row drag and drop functionality. This feature enables effortless row rearrangement within the grid by dragging and dropping rows to new positions. Additionally, rows can be transferred between grids, as well as dragged and dropped to custom components, providing powerful flexibility for complex data management scenarios.
 
 To use the row drag and drop feature in Grid component, inject the `RowDD` module in the grid. The `RowDD` service handles the row drag and drop functionality within the Grid component. Once the `RowDD` service is injected, use the [allowRowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/grid#allowrowdraganddrop) and [targetID](https://ej2.syncfusion.com/react/documentation/api/grid/rowDropSettings#targetid) properties to enable and configure the row drag and drop feature in the Grid.
 

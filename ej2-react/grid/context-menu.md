@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Context Menu in React Grid Component
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component includes a context menu that appears on right-click anywhere within the grid. The context menu provides quick access to actions such as sorting, filtering, and editing without navigating away from the grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component includes a context menu that appears on right-click anywhere within the grid. The context menu provides quick access to actions such as sorting, filtering, and editing without navigating away from the grid.
 
 Enable the context menu by configuring the grid's [contextMenuItems](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#contextmenuitems) property. The property accepts the default set of menu items or a custom collection of objects.
 

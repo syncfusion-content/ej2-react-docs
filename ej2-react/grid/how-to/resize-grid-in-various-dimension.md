@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Resize the grid in various dimension in React Grid Component
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) supports dynamic resizing to enhance data presentation across different layouts. The grid can be resized by adjusting the dimensions of its parent container.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) supports dynamic resizing to enhance data presentation across different layouts. The grid can be resized by adjusting the dimensions of its parent container.
 
 To resize the grid externally, modify the width or height of the container element using an input and button. This will effectively resize the grid along with its parent container.
 

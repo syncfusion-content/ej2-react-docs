@@ -14,7 +14,7 @@ The [ODataV4Adaptor](https://ej2.syncfusion.com/react/documentation/data/adaptor
 
 For complete server‑side configuration and additional implementation details, refer to the [DataManager ODataV4Adaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/odatav4-adaptor), which covers endpoint setup, query processing, and best practices for integrating OData V4 services.
 
-Once the project creation and backend setup are complete, the next step is to render the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) Component on the client side.
+Once the project creation and backend setup are complete, the next step is to render the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) Component on the client side.
 
 **Project structure:**
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
  
 # GraphQL in Remote Data Binding in Syncfusion React Components
  
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) provides seamless integration with GraphQL services, enabling modern, efficient data operations through a flexible query language. This comprehensive guide demonstrates configuring and using GraphQL with the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) to perform server-side operations including querying, mutations, filtering, sorting, paging, and complete CRUD functionality.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) provides seamless integration with GraphQL services, enabling modern, efficient data operations through a flexible query language. This comprehensive guide demonstrates configuring and using GraphQL with the React Data Grid to perform server-side operations including querying, mutations, filtering, sorting, paging, and complete CRUD functionality.
  
 ## Understanding GraphQL
  

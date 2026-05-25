@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # React Grid - Jest Unit Testing
 
-[Jest](https://jestjs.io/docs/tutorial-react) is a widely used testing framework for React applications, enabling the creation and execution of unit tests for components, functions, and methods. Unit testing helps validate individual parts of a React application, detect issues early, and maintain overall reliability. The following steps explain how to create Jest test cases for the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid).
+[Jest](https://jestjs.io/docs/tutorial-react) is a widely used testing framework for React applications, enabling the creation and execution of unit tests for components, functions, and methods. Unit testing helps validate individual parts of a React application, detect issues early, and maintain overall reliability. The following steps explain how to create Jest test cases for the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid).
 
 Step 1: Set up the Jest testing environment
 

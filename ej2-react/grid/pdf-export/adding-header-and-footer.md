@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Adding Header and Footer in React Grid Component
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) enables customized header and footer sections to be added in exported PDF documents. This feature supports custom text, page numbers, lines, page size configuration, and orientation changes for header and footer sections.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) enables customized header and footer sections to be added in exported PDF documents. This feature supports custom text, page numbers, lines, page size configuration, and orientation changes for header and footer sections.
 
 ## Adding text in header and footer
 

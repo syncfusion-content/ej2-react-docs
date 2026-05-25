@@ -35,7 +35,7 @@ The grid will persist only the last selected row index.
 
 ## Restore initial Grid state
 
-In the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component, restoring the grid to its initial state reverts all changes. This is useful for returning the grid to original settings, removing applied filters, sorting, or column reordering.
+In the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component, restoring the grid to its initial state reverts all changes. This is useful for returning the grid to original settings, removing applied filters, sorting, or column reordering.
 
 The following steps describe the process of resetting the grid to its initial state, even when the [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid#enablepersistence) property is enabled.
 

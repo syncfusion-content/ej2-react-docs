@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Toolbar items in React Grid Component
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) includes a customizable toolbar positioned above the grid for accessing various actions and functionalities. Both built-in and custom toolbar items can be added to meet specific application requirements.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) includes a customizable toolbar positioned above the grid for accessing various actions and functionalities. Both built-in and custom toolbar items can be added to meet specific application requirements.
 
 ## Built-in toolbar items
 

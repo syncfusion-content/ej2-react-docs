@@ -24,7 +24,7 @@ To configure this in the grid, use the following properties on the `AggregateCol
 
 Group footer aggregates appear in the footer row of each group and display summary values calculated from that group's records. To render values in the group footer, use the `groupFooterTemplate` property in the `AggregateColumnDirective`.
 
-The following example displays the sum of the "Freight" field in the footer of each group using the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid):
+The following example displays the sum of the "Freight" field in the footer of each group using the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid):
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

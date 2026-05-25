@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Column template in React Grid component
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) provides a [template](https://ej2.syncfusion.com/react/documentation/api/grid/column#template) option for displaying custom elements in a column instead of the field value. This is useful for displaying images, buttons, or other custom content within a column.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) provides a [template](https://ej2.syncfusion.com/react/documentation/api/grid/column#template) option for displaying custom elements in a column instead of the field value. This is useful for displaying images, buttons, or other custom content within a column.
 
 > When using template columns, they are primarily meant for rendering custom content and may not provide built-in support for grid actions like sorting, filtering, or editing. It is essential to define the `field` property of the column to perform any grid actions.
 

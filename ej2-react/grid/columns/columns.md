@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Columns in React Grid Component
 
-In [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid), columns are the fundamental building blocks that display data from a data source. Each column maps to a specific field in the data source and is responsible for rendering values in the required format. For example, a dataset containing customer details such as "ID", "Name", "Email", and "Purchase Date" will present each field as an individual column in the Grid.
+In Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid), columns are the fundamental building blocks that display data from a data source. Each column maps to a specific field in the data source and is responsible for rendering values in the required format. For example, a dataset containing customer details such as "ID", "Name", "Email", and "Purchase Date" will present each field as an individual column in the Grid.
 
 A column definition commonly includes the following properties:
 - `field`: The [field](https://ej2.syncfusion.com/react/documentation/api/grid/column#field) property establishes the connection between the dataset and the column by mapping a data source field to a grid column. This property is required for performing data operations between the Grid and the data source.

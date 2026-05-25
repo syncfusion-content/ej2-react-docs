@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Remote Data Binding with Custom REST API using WebMethod
 
-The `WebMethodAdaptor` in [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) facilitates data binding from remote services using web methods. This powerful feature enables efficient communication between the client-side application and the server. The `WebMethodAdaptor`, like the `URLAdaptor`, sends query parameters encapsulated within an object named `value`. Within this `value` object, various datamanager properties such as `requiresCounts`, `skip`, `take`, `sorted`, and `where` queries are included.
+The `WebMethodAdaptor` in Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) facilitates data binding from remote services using web methods. This powerful feature enables efficient communication between the client-side application and the server. The `WebMethodAdaptor`, like the `URLAdaptor`, sends query parameters encapsulated within an object named `value`. Within this `value` object, various datamanager properties such as `requiresCounts`, `skip`, `take`, `sorted`, and `where` queries are included.
  
 ![Webmethod Adaptor](../images/web-method-adaptor-value.png)
 
