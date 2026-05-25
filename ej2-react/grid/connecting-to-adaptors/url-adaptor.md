@@ -33,7 +33,7 @@ UrlAdaptor/
 
 ## React Grid frontend setup using Syncfusion UrlAdaptor
 
-After finishing the backend setup for the **UrlAdaptor** ASP.NET Core project, next step is to integrate the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) on the client side by following these instructions.
+After finishing the backend setup for the **UrlAdaptor** ASP.NET Core project, next step is to integrate the React Data Grid on the client side by following these instructions.
 
 ### Step 1: Install Syncfusion packages
 
@@ -585,7 +585,7 @@ The Grid has now been successfully created with including paging, sorting, filte
 
 ## CRUD operations
 
-[React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) integrates CRUD (Create, Read, Update, Delete) operations with server-side controller actions through `insertUrl`, `removeUrl`, `updateUrl`, `crudUrl`, and `batchUrl` properties.
+React Data Grid integrates CRUD (Create, Read, Update, Delete) operations with server-side controller actions through `insertUrl`, `removeUrl`, `updateUrl`, `crudUrl`, and `batchUrl` properties.
 
 ### Configure CRUD URL mapping
 

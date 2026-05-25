@@ -356,7 +356,7 @@ The Grid component provides powerful options for dynamically inserting, deleting
 
 **Integrating CRUD Operations**
 
-To implement CRUD operations using [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid), follow these steps:
+To implement CRUD operations using React Data Grid, follow these steps:
 
 1. **Configure grid settings:** Set up the grid to allow editing, adding, and deleting operations, and specify the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbar) options that will provide access to these features.
 
@@ -747,13 +747,13 @@ The following code example shows the process of exporting all records on the cli
 
 ## Sending additional parameters to the server
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component allows custom parameters to be included in data requests. This feature is particularly useful when additional information must be provided to the server for enhanced processing.
+The React Data Grid component allows custom parameters to be included in data requests. This feature is particularly useful when additional information must be provided to the server for enhanced processing.
 
 By using the [query](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#query) property of the Grid together with the `addParams` method of the Query class, custom parameters can be seamlessly incorporated into data requests for every grid action.
 
 To enable custom parameters in data requests for the grid component, follow these steps:
 
-**1. Bind the Query Object to the Grid**: Assign the initialized query object to the query property of the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component.
+**1. Bind the Query Object to the Grid**: Assign the initialized query object to the query property of the React Data Grid component.
 
 **2. Initialize the Query Object:** Create a new instance of the Query class and use the addParams method to add the custom parameters.
 

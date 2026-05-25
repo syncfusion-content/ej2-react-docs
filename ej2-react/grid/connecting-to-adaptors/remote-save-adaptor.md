@@ -15,7 +15,7 @@ The [RemoteSaveAdaptor](https://ej2.syncfusion.com/react/documentation/data/adap
 
 For complete server‑side configuration and additional implementation details, refer to the [DataManager RemoteSaveAdaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/remote-save-adaptor), which explains endpoint setup, request handling, and best practices for synchronizing CRUD operations with remote services.
 
-Once the project creation and backend setup are complete, the next step is to render the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component on the client side.
+Once the project creation and backend setup are complete, the next step is to render the React Data Grid component on the client side.
 
 **Project Structure:**
 
@@ -34,7 +34,7 @@ RemoteSaveAdaptor/
 
 ## React Grid setup and client-side configuration
 
-After finishing the backend setup for the **RemoteSaveAdaptor** ASP.NET Core project, next step is to integrate the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) on the client side by following these instructions.
+After finishing the backend setup for the **RemoteSaveAdaptor** ASP.NET Core project, next step is to integrate the React Data Grid on the client side by following these instructions.
 
 ### Step 1: Installing Syncfusion packages
 
@@ -95,7 +95,7 @@ In the React component file **App.jsx**, import `DataManager` and `RemoteSaveAda
 
 **Configure the Grid**
 
-1. **Set dataSource:** Configure the `dataSource` property of [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) with a JSON object.
+1. **Set dataSource:** Configure the `dataSource` property of React Data Grid with a JSON object.
 
 2. **Enable editing:** Use [editSettings](https://ej2.syncfusion.com/react/documentation/api/grid#editsettings) to allow CRUD actions (allowEditing, allowAdding, allowDeleting).
 

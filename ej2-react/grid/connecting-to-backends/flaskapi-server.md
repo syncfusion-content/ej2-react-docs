@@ -42,7 +42,7 @@ domainurl: ##DomainURL##
 
 ## Setting up the Flask backend using Python
 
-The Flask backend acts as the central REST API service, handling HTTP requests and responses that power the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid).
+The Flask backend acts as the central REST API service, handling HTTP requests and responses that power the React Data Grid.
 
 ### Step 1: Create the Flask server and install required packages
 
@@ -430,7 +430,7 @@ npm install
 
 ### Step 2: Install Syncfusion packages
 
-Install the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) and DataManager packages:
+Install the React Data Grid and DataManager packages:
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
@@ -486,7 +486,7 @@ export default function App() {
 
 ### Step 5: Integrate Syncfusion React Grid with custom binding
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) custom databinding feature seamlessly integrates with external API services. When Grid actions such as paging, sorting, filtering, or CRUD operations are performed, requests are sent to the API. The API processes these operations and returns the results in the required format, giving complete control over application-specific workflows and enabling efficient handling of large datasets. The custom databinding feature interacts with backend APIs through two key events.
+The React Data Grid custom databinding feature seamlessly integrates with external API services. When Grid actions such as paging, sorting, filtering, or CRUD operations are performed, requests are sent to the API. The API processes these operations and returns the results in the required format, giving complete control over application-specific workflows and enabling efficient handling of large datasets. The custom databinding feature interacts with backend APIs through two key events.
 
 - **[dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datastatechange)**: Triggered when the Grid performs actions such as paging, sorting, or filtering. It provides the current state details (skip, take, sorted, where, search), which are sent to the API so the request can be processed and data returned in the required `{ result:[], count:100 }` format.
 
@@ -927,7 +927,7 @@ For a complete working implementation, refer to the [GitHub](https://github.com/
 
 The repository contains the complete Flask backend implementation with all API endpoints, business logic, data models, and a ready-to-run React frontend application.
 
-The application now provides a complete solution for integrating the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) with Flask API backend, enabling seamless data operations with a modern, user-friendly interface.
+The application now provides a complete solution for integrating the React Data Grid with Flask API backend, enabling seamless data operations with a modern, user-friendly interface.
 
 ## See also
 

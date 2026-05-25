@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Connecting MySQL server to Syncfusion React Grid Using LINQ2DB
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) supports binding data from a MySQL database. This documentation demonstrates integrating MySQL with [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) using LINQ2DB (Light-weight ORM) for data operations with the use of `CustomAdaptor` to build a Transaction Management Application.
+The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) supports binding data from a MySQL database. This documentation demonstrates integrating MySQL with React Data Grid using LINQ2DB (Light-weight ORM) for data operations with the use of `CustomAdaptor` to build a Transaction Management Application.
 
 **What is LINQ2DB?**
 

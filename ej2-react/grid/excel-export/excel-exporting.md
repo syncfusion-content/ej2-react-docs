@@ -174,7 +174,7 @@ The following example demonstrates exporting the grid with custom date format. I
 
 ## Merge duplicate cells on export
 
-Duplicate cells (based on their values) in a specific column of the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) can be merged. This can be achieved by utilizing the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid#databound) event. Additionally, duplicate cells in the specified column can be merged during export by using the [excelQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#excelquerycellinfo) event for Excel and CSV formats. This functionality is useful for improving the readability of data and providing a clearer visual representation.
+Duplicate cells (based on their values) in a specific column of the React Data Grid can be merged. This can be achieved by utilizing the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid#databound) event. Additionally, duplicate cells in the specified column can be merged during export by using the [excelQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#excelquerycellinfo) event for Excel and CSV formats. This functionality is useful for improving the readability of data and providing a clearer visual representation.
 
 The following example demonstrates merging duplicate cells in the "Order ID" column in both Grid view and export:
 
@@ -197,7 +197,7 @@ The following example demonstrates merging duplicate cells in the "Order ID" col
 
 ## Export multiple grids
 
-Exporting multiple grids in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component allows exporting different grids to compare them side by side in external applications on the same or different pages of an Excel document. Each grid is identified by its unique ID. The grids to export can be specified by listing their IDs in the [exportGrids](https://ej2.syncfusion.com/react/documentation/api/grid#exportgrids) property.
+Exporting multiple grids in the React Data Grid component allows exporting different grids to compare them side by side in external applications on the same or different pages of an Excel document. Each grid is identified by its unique ID. The grids to export can be specified by listing their IDs in the [exportGrids](https://ej2.syncfusion.com/react/documentation/api/grid#exportgrids) property.
 
 ### Same sheet
 
@@ -265,7 +265,7 @@ The following example demonstrates exporting multiple grids to an Excel file whe
 
 ## Export hierarchy grid 
 
-Exporting a hierarchy grid in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component allows generating an Excel or CSV document that includes the parent grid along with its child grids. This feature is useful when exporting hierarchical data with its related details is needed.
+Exporting a hierarchy grid in the React Data Grid component allows generating an Excel or CSV document that includes the parent grid along with its child grids. This feature is useful when exporting hierarchical data with its related details is needed.
 
 To achieve this, the exporting behavior can be customized by using the `ExcelExportProperties.hierarchyExportMode` property of the Grid. This property allows specifying the exporting behavior for the hierarchy grid. The following options are available:
 

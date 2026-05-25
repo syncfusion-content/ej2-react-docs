@@ -455,7 +455,7 @@ To achieve this functionality, leverage the [recordDoubleClick](https://ej2.sync
 
 ## Enable editing in single click
 
-Enabling single-click editing in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid)'s `Normal` editing mode is a valuable and intuitive feature that makes a row editable with just one click. This seamless experience is achieved by using the [startEdit](https://ej2.syncfusion.com/react/documentation/api/grid#startedit) and [endEdit](https://ej2.syncfusion.com/react/documentation/api/grid#endedit) methods for rapid, efficient data modification.
+Enabling single-click editing in the React Data Grid's `Normal` editing mode is a valuable and intuitive feature that makes a row editable with just one click. This seamless experience is achieved by using the [startEdit](https://ej2.syncfusion.com/react/documentation/api/grid#startedit) and [endEdit](https://ej2.syncfusion.com/react/documentation/api/grid#endedit) methods for rapid, efficient data modification.
 
 To implement this feature, bind the `onMouseUp` React event for the grid and, within the event handler, call the `startEdit` and `endEdit` methods based on the clicked target element. This ensures that the editing mode is triggered when clicking on a specific element within the grid.
 

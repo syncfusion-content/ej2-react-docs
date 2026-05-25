@@ -436,7 +436,7 @@ In the demo below, the expand/collapse icons have been changed to arrow-down and
 
 ## Child Grid expand and collapse events
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component provides [detailExpand](https://ej2.syncfusion.com/react/documentation/api/grid#detailexpand) and [detailCollapse](https://ej2.syncfusion.com/react/documentation/api/grid#detailcollapse) events, triggered before a detail row(parent row) is expanded or collapsed. These events provide control over the expand/collapse behavior by allowing conditional logic through event arguments.
+The React Data Grid component provides [detailExpand](https://ej2.syncfusion.com/react/documentation/api/grid#detailexpand) and [detailCollapse](https://ej2.syncfusion.com/react/documentation/api/grid#detailcollapse) events, triggered before a detail row(parent row) is expanded or collapsed. These events provide control over the expand/collapse behavior by allowing conditional logic through event arguments.
 
 In the example below, expansion is prevented for the "Nancy" row, and collapse is prevented for the "Andrew" row.
 

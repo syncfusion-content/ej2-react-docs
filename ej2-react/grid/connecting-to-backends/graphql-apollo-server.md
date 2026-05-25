@@ -48,7 +48,7 @@ domainurl: ##DomainURL##
 
 ## Setting up the GraphQL backend using Apollo
 
-The Apollo GraphQL backend acts as the primary data layer, handling all queries and mutations required by the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid).
+The Apollo GraphQL backend acts as the primary data layer, handling all queries and mutations required by the React Data Grid.
 
 ### Step 1: Create the GraphQL server and install required packages
 
@@ -512,7 +512,7 @@ cd GridClient
 ```
 This command creates a React application named **GridClient** with the essential folder structure and files required to begin development immediately.
 
-The integration process begins by installing the required [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) packages before establishing the GraphQL connection.
+The integration process begins by installing the required React Data Grid packages before establishing the GraphQL connection.
 
 ### Step 1: Adding Syncfusion packages
 
@@ -522,7 +522,7 @@ Install the necessary Syncfusion<sup style="font-size:70%">&reg;</sup> packages 
 npm install @syncfusion/ej2-react-grids --save
 npm install @syncfusion/ej2-data --save
 ```
-- `@syncfusion/ej2-react-grids` – required to use the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component.
+- `@syncfusion/ej2-react-grids` – required to use the React Data Grid component.
 - `@syncfusion/ej2-data` – Provides data utilities for binding and manipulating Grid data.
 
 ### Step 2: Including required Syncfusion stylesheets
@@ -1421,7 +1421,7 @@ syncfusion-react-grid-with-apollo-server
 
 For a complete working implementation of this example, refer to the following [GitHub](https://github.com/SyncfusionExamples/syncfusion-react-grid-with-apollo-server) repository.
 
-This guide provides a modern, high‑performance architecture in which the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) integrates seamlessly with an Apollo‑powered GraphQL backend.
+This guide provides a modern, high‑performance architecture in which the React Data Grid integrates seamlessly with an Apollo‑powered GraphQL backend.
 
 ## See also
 

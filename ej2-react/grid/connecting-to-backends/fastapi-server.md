@@ -702,11 +702,11 @@ def handle_remove(payload: Dict[str, Any], products: List[Dict[str, Any]], save_
     raise HTTPException(status_code=404, detail=f'Record {key} not found')
 ```
 
-At this point, the server configuration supports all Grid data operations, including paging, sorting, searching, filtering, and CRUD actions such as insert, update, and delete. The next section covers the integration of the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) with the configured server.
+At this point, the server configuration supports all Grid data operations, including paging, sorting, searching, filtering, and CRUD actions such as insert, update, and delete. The next section covers the integration of the React Data Grid with the configured server.
 
 ## Integrating Syncfusion React Grid with FastAPI
 
-This section demonstrates how to bind the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) to a FastAPI endpoint using the DataManager and the `UrlAdaptor`. The DataManager standardizes how the Grid serializes its actions into a request body, and the `UrlAdaptor` formats the transport to align with a RESTful endpoint that accepts POST requests for both reads and mutations.
+This section demonstrates how to bind the React Data Grid to a FastAPI endpoint using the DataManager and the `UrlAdaptor`. The DataManager standardizes how the Grid serializes its actions into a request body, and the `UrlAdaptor` formats the transport to align with a RESTful endpoint that accepts POST requests for both reads and mutations.
 
 [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) is a data layer that sends all Grid actions (read, sort, filter, search, paging, CRUD) to the backend. It standardizes how components communicate with remote services and handles query serialization.
 
@@ -974,7 +974,7 @@ Open the URL shown in the terminal which is typically **http://localhost:5173/**
 
 For a complete working implementation of this example, refer to the following [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-backends/syncfusion-reactgrid-with-fastapi-server) repository.
 
-The application demonstrates a complete product management workflow with a [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) connected to a Python FastAPI REST backend through a single, predictable transport.
+The application demonstrates a complete product management workflow with a React Data Grid connected to a Python FastAPI REST backend through a single, predictable transport.
 
 ## See also
 
