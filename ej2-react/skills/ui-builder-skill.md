@@ -73,29 +73,24 @@ Use the APM CLI to install the React UI Builder skill for your preferred environ
 {% tabs %}
 {% highlight bash tabtitle="Copilot" %}
 
-// By default, it installs to the GitHub Copilot target
+apm install syncfusion/react-ui-builder -t copilot
 
-apm install Syncfusion/react-ui-builder
-
-{% endhighlight %}
+{% endhighlight  %}
 {% highlight bash tabtitle="Cursor" %}
 
-apm install Syncfusion/react-ui-builder -t cursor
+apm install syncfusion/react-ui-builder -t cursor
 
-{% endhighlight %}
-{% highlight bash tabtitle="Code Studio" %}
+{% endhighlight  %}
+{% highlight bash tabtitle="Codex" %}
 
-// For Code Studio, refer to the note below to configure the agent location explicitly to use it in the chat.
+apm install syncfusion/react-ui-builder -t codex
 
-apm install Syncfusion/react-ui-builder
-
-
-{% endhighlight %}
+{% endhighlight  %}
 {% highlight bash tabtitle="Claude" %}
 
-apm install Syncfusion/react-ui-builder -t claude
+apm install syncfusion/react-ui-builder -t claude
 
-{% endhighlight %}
+{% endhighlight  %}
 {% endtabs %}
 
 After installation, the following artifacts are added to your project for the GitHub Copilot target:
@@ -103,9 +98,9 @@ After installation, the following artifacts are added to your project for the Gi
 - `.agent/skills/` – contains the skill files
 - `.github/agents/` – contains the agent configuration
 
-For details on supported deployment targets, refer to the [documentation](https://microsoft.github.io/apm/reference/cli-commands/#apm-targets---show-resolved-deployment-targets).
+Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targets/#detection-signals) for details about supported deployment targets.
 
-> For Syncfusion® Code Studio, users must explicitly configure the agent location to use it in the chat. Refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations).
+> For Syncfusion® Code Studio, use the Copilot command above to install the React UI Builder.
 
 ## How the Syncfusion® React UI Builder Skill Works
 
@@ -116,6 +111,7 @@ For details on supported deployment targets, refer to the [documentation](https:
    Load required theming guidelines and confirm key design choices:
    - CSS framework (Tailwind, Bootstrap, Material, or Greenfield(custom theme)). If no themes detected in the existing project, Greenfield and Syncfusion Tailwind3 theme are shown as the default option, which can be used as is or changed based on preference.
    - Syncfusion theme (Tailwind3, Bootstrap5, Material3, fluent2)
+	 - Light and Dark Mode
    - Core design basics (colors, spacing, typography, responsiveness, accessibility)
 5. **Code Generation:** Produce TypeScript React components, props interfaces, and CSS/styling scaffolding.
 6. **Dependency Management:** Recommend or install required Syncfusion® packages and peer dependencies.
@@ -161,7 +157,7 @@ Design a full-viewport premium admin dashboard that feels fluid, spacious, and v
 {% endpromptcards %}
 
 
-Generated code follows best practices with accessible, semantic HTML, responsive mobile-first layouts, strong TypeScript typing, and built-in security measures such as input validation and avoidance of hardcoded secrets.
+Generated code follows best practices with accessible, semantic HTML, responsive mobile-first layouts, strong TypeScript typing, and built-in security measures such as input validation and avoidance of embedded secrets.
 
 ## Best Practices
 
