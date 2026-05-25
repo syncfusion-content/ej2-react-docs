@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Cell in React Grid Component
 
-A cell in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component represents the smallest unit of data within the grid. Each cell corresponds to the intersection of a row and a column, and it is responsible for displaying the value associated with that specific row-column combination. Cells can display plain text, formatted values, or fully customized content, making them highly flexible for presenting structured data in a grid layout.
+A cell in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component represents the smallest unit of data within the grid. Each cell corresponds to the intersection of a row and a column, and it is responsible for displaying the value associated with that specific row-column combination. Cells can display plain text, formatted values, or fully customized content, making them highly flexible for presenting structured data in a grid layout.
 
 ## Displaying the HTML content
 
@@ -121,7 +121,7 @@ const change = ((args:ChangeEventArgs) {
 
 ## Autowrap the grid content
 
-The auto wrap feature allows cell content in the grid to wrap to the next line when it exceeds the boundary of the specified cell width. Cell content wrapping works based on the position of white space between words. To support the Autowrap functionality in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, an appropriate [width](https://ej2.syncfusion.com/react/documentation/api/grid/column#width) must be set for the columns. The column `width` defines the maximum width of a column and helps wrap content automatically.
+The auto wrap feature allows cell content in the grid to wrap to the next line when it exceeds the boundary of the specified cell width. Cell content wrapping works based on the position of white space between words. To support the Autowrap functionality in [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid), an appropriate [width](https://ej2.syncfusion.com/react/documentation/api/grid/column#width) must be set for the columns. The column `width` defines the maximum width of a column and helps wrap content automatically.
 
 To enable auto wrap, set the [allowTextWrap](https://ej2.syncfusion.com/react/documentation/api/grid#allowtextwrap) property to `true`. The wrap mode can also be configured by setting the [textWrapSettings.wrapMode](https://ej2.syncfusion.com/react/documentation/api/grid/textWrapSettings#wrapmode) property.
 
@@ -587,7 +587,7 @@ export default App;
 
 ## Tooltip
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid displays information about grid columns when the user hovers over them with the mouse.
+The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) displays information about grid columns when the user hovers over them with the mouse.
 
 ### Render bootstrap tooltip in grid cells
 

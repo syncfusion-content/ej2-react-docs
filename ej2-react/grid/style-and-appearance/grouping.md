@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Grouping Customization in React Grid Component
 
-The appearance of grouping elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component can be customized using CSS. Here are examples for customizing the group header, group expand/collapse icons, group caption row, and grouping indent cell.
+The appearance of grouping elements in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component can be customized using CSS. Here are examples for customizing the group header, group expand/collapse icons, group caption row, and grouping indent cell.
 
 ## Customizing the group header
 

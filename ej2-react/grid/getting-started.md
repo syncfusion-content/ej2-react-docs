@@ -39,7 +39,7 @@ Terminate the application, then run the following command:
 cd my-app
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid packages
+## Adding [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) packages
 
 To install the Grid component, use the following command:
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Virtual Scrolling in React Grid Component
 
-The virtual scrolling feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid seamlessly handles and displays large amounts of data without performance degradation. It improves the rendering process by loading only the visible rows in the grid viewport, rather than rendering the entire dataset at once. This powerful capability is essential when dealing with datasets that contain thousands of records.
+The virtual scrolling feature in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) seamlessly handles and displays large amounts of data without performance degradation. It improves the rendering process by loading only the visible rows in the grid viewport, rather than rendering the entire dataset at once. This powerful capability is essential when dealing with datasets that contain thousands of records.
 
 To use the virtual scrolling feature, inject the `VirtualScroll` module into the Grid component's `Inject` services array as shown below:
 

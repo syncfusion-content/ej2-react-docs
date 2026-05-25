@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Syncfusion React Grid with Django REST Framework
 
-This guide explains connecting the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid to a **Django REST Framework (DRF)** backend with **Custom Binding**. Custom Binding provides full control over the Grid’s communication with the server: the Grid raises events for data operations (paging, sorting, filtering, searching) and CRUD,  client code calls DRF endpoints, and DRF returns standardized results.
+This guide explains connecting the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) to a **Django REST Framework (DRF)** backend with **Custom Binding**. Custom Binding provides full control over the Grid’s communication with the server: the Grid raises events for data operations (paging, sorting, filtering, searching) and CRUD,  client code calls DRF endpoints, and DRF returns standardized results.
 
 **Difference between Custom Binding and UrlAdaptor:**
 
@@ -483,7 +483,7 @@ ViewSet configured for RESTful reads and writes aligned with Custom Binding.
 
 ## Integrate Syncfusion React Grid with Django REST Framework (Custom Binding)
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid is a robust, high‑performance component built to efficiently display, manage, and manipulate large datasets. It provides advanced features such as sorting, filtering, and paging. Follow these steps to render the grid and integrate it with a Django backend.
+The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) is a robust, high‑performance component built to efficiently display, manage, and manipulate large datasets. It provides advanced features such as sorting, filtering, and paging. Follow these steps to render the grid and integrate it with a Django backend.
 
 ### Step 1 : Creating the React client application
 
@@ -498,7 +498,7 @@ cd client
 
 This command creates a React application named **client** with the essential folder structure and files required to begin development immediately.
 
-The integration process begins by installing the required Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid packages before establishing the DRF API.
+The integration process begins by installing the required [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) packages before establishing the DRF API.
 
 ### Step 2: Install Syncfusion Grid packages
 
@@ -787,7 +787,7 @@ The client service bridges Syncfusion<sup style="font-size:70%">&reg;</sup> Grid
 
 ### Step 6: Integrate Syncfusion React Grid with custom binding
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid custom databinding feature integrates with the Django REST API through event-driven calls. Grid actions (paging, sorting, filtering, searching) are sent via **dataStateChange**, and CRUD is sent via **dataSourceChanged**. The client uses the shared **apiClient** service (created in the previous step) to translate Grid state into DRF query parameters and to call REST endpoints.
+The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) custom databinding feature integrates with the Django REST API through event-driven calls. Grid actions (paging, sorting, filtering, searching) are sent via **dataStateChange**, and CRUD is sent via **dataSourceChanged**. The client uses the shared **apiClient** service (created in the previous step) to translate Grid state into DRF query parameters and to call REST endpoints.
 
 **Instructions:**
 
@@ -1127,7 +1127,7 @@ The complete folder structure look like below.
 
 For a complete working implementation of this example, refer the [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-backends/syncfusion-react-grid-custom-binding-with-django-server) repository.
 
-The application now offers a reliable, scalable solution for managing book lending records with a robust Django REST API on Microsoft SQL Server and a Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid front end.
+The application now offers a reliable, scalable solution for managing book lending records with a robust Django REST API on Microsoft SQL Server and a [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) front end.
 
 ## See also
 
