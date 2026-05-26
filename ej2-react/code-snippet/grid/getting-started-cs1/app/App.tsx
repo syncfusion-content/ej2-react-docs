@@ -20,7 +20,7 @@ function App() {
             {/* Define the columns to be displayed */}
             <ColumnsDirective>
                 <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign='Right'/>
-                <ColumnDirective field='CustomerName' headerText='Customer Name' width='100'/>
+                <ColumnDirective field='CustomerName' headerText='Customer Name' width='120'/>
                 <ColumnDirective field='OrderDate' headerText='Order Date' width='100' format='yMd' textAlign='Right'/>
                 <ColumnDirective field='Freight' width='100' format='C2' textAlign='Right'/>
                 <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100'/>

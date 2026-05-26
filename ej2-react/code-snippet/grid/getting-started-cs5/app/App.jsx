@@ -15,7 +15,7 @@ function App() {
         <GridComponent dataSource={data} allowPaging={true} pageSettings={pageSettings} allowFiltering={true} filterSettings={filterSettings} allowSorting={true} editSettings={editOptions} toolbar={toolbarOptions}>
             <ColumnsDirective>
                 <ColumnDirective field='OrderID' headerText='Order ID' width='100' validationRules={orderIDRules} isPrimaryKey={true} textAlign='Right'/>
-                <ColumnDirective field='CustomerName' headerText='Customer Name' validationRules={customerNameRules} width='100'/>
+                <ColumnDirective field='CustomerName' headerText='Customer Name' validationRules={customerNameRules} width='120'/>
                 <ColumnDirective field='OrderDate' headerText='Order Date' width='100' format='yMd' editType='datepickeredit' textAlign='Right'/>
                 <ColumnDirective field='Freight' width='100' format='C2' editType='numericedit' textAlign='Right'/>
                 <ColumnDirective field='ShipCountry' headerText='Ship Country' editType='dropdownedit' width='100'/>
