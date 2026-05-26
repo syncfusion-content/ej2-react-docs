@@ -71,6 +71,13 @@ The following CSS files are available in the **../node_modules/@syncfusion** pac
 @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-image-editor/styles/tailwind3.css";
+
+/**
+* Custom styles
+*/
+#root {
+  text-align: start;
+}
 ```
 
 > To refer **App.css** in the application then import it in the **src/App.tsx** file.
