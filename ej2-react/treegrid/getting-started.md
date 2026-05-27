@@ -48,6 +48,8 @@ To install the TreeGrid component, use the following command:
 npm install @syncfusion/ej2-react-treegrid --save
 ```
 
+> Before including Syncfusion styles, make sure to remove the default styles defined in **index.css**. This helps prevent unintended style overrides and ensures that Syncfusion components render correctly.
+
 ## Adding CSS reference
 
 The following CSS files are available in the **../node_modules/@syncfusion** package folder. Add these as references in **src/App.css**.

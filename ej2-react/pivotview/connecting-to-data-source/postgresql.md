@@ -56,12 +56,11 @@ PostgreSQL is a powerful, open-source relational database management system (RDB
 
 **Using pgAdmin Query Tool:**
 
-1. **Connect to the Server**: In the pgAdmin left sidebar, expand **Servers** and locate your PostgreSQL server (usually named "PostgreSQL 17" or similar, depending on your version)
+1. **Connect to the Server**: In the pgAdmin left sidebar, expand **Servers** and locate your PostgreSQL server (usually named **PostgreSQL 17** or similar, depending on your version)
 2. **Open Query Editor**: Expand the **Databases** node. Right‑click on the existing server name or **postgres** database(default maintenance DB). Choose **Query Tool** to open the SQL editor.
 
-![PgAdmin Query Tool Interface](../images/pgadmin-connect-server.png)
-
-3. **Create the Database**: Paste the following SQL script into the query editor window and click the "Execute" button (or press F6):
+![PgAdmin Query Tool Interface](../images/pgadmin-connect-server.png) 
+3. **Create the Database**: Paste the following SQL script into the query editor window and click the **Execute** button (or press F6):
 
 ```sql
 -- Create Database
@@ -79,8 +78,8 @@ After creating the database, you need to create a table to store sales records. 
 **Using pgAdmin Query Tool:**
 
 1. **Select the salesdb Database**: In the left sidebar, expand **Databases** and click on **salesdb** to select it.
-2. **Open Query Tool**: Right-click on the **salesdb** database and select "Query Tool"
-3. **Create the Table**: Paste the following SQL script into the query editor and click "Execute":
+2. **Open Query Tool**: Right-click on the **salesdb** database and select **Query Tool**
+3. **Create the Table**: Paste the following SQL script into the query editor and click **Execute**:
 
 ```sql
 -- Create SalesData Table
@@ -91,7 +90,7 @@ CREATE TABLE salesdata (
     country VARCHAR(50),
     productcategory VARCHAR(100),
     productname VARCHAR(100),
-    orderdate DATE,
+    orderdate TIMESTAMP,
     quantity INT,
     unitprice DECIMAL(10, 2),
     totalamount DECIMAL(10, 2),
@@ -113,7 +112,7 @@ You should see a success message confirming the table creation.
 | country | VARCHAR(50) | Country where the order was placed |
 | productcategory | VARCHAR(100) | Category of the product (e.g., Electronics, Furniture) |
 | productname | VARCHAR(100) | Name of the product ordered |
-| orderdate | DATE | Date when the order was placed |
+| orderdate | DATE | Date and time when the order was placed (includes both date and time values) |
 | quantity | INT | Number of units ordered |
 | unitprice | DECIMAL(10, 2) | Price per unit of the product |
 | totalamount | DECIMAL(10, 2) | Total cost of the order (quantity × unitprice) |
@@ -126,7 +125,7 @@ Insert sample sales data into the table. This data will be used to populate the 
 **Using pgAdmin Query Tool:**
 
 1. **Open Query Tool**: With **salesdb** still selected, open the Query Tool again (or use the existing one)
-2. **Insert Sample Data**: Paste the following SQL script into the query editor and click "Execute":
+2. **Insert Sample Data**: Paste the following SQL script into the query editor and click **Execute**:
 
 ```sql
 -- Insert Sample Data
@@ -146,7 +145,7 @@ You should see a success message showing "INSERT 0 8" or similar, indicating tha
 
 **Verify the Data:**
 
-To confirm the data was inserted correctly, run the following verification query in the Query Tool:
+To confirm the data was inserted correctly, run the following verification query in the **Query Tool**:
 
 ```sql
 SELECT * FROM salesdata;
@@ -263,7 +262,7 @@ app.Run();
 
 **What's Happening:**
 
-1. **AddSingleton<NpgsqlConnection>**: Registers the PostgreSQL connection globally, making it available to all controllers
+1. **AddSingleton**: Registers the PostgreSQL connection globally, making it available to all controllers
 2. **AddCors**: Enables Cross-Origin Resource Sharing (CORS), allowing the React frontend to make API requests to this backend
 3. **AllowAll policy**: Permits all origins, methods, and headers (suitable for development; restrict in production)
 
@@ -482,20 +481,20 @@ function App() {
   let pivotObj: PivotViewComponent;
 
   // Initialize DataManager with the Web API endpoint
-  let oData: DataManager = new DataManager({
+  let data: DataManager = new DataManager({
     url: 'https://localhost:7086/api/Sales',
     adaptor: new UrlAdaptor
   });
   
   // Configure the Pivot Table data structure
   const dataSourceSettings = {
-    dataSource: oData,
+    dataSource: data,
     expandAll: true,
     rows: [{ name: 'country', caption: 'Country' }],
-    columns: [{ name: 'region', caption: 'Region' }],
+    columns: [{ name: 'productCategory', caption: 'Product Category' }],
     values: [{ name: 'quantity', caption: 'Quantity' }, { name: 'totalAmount', caption: 'Total Amount' }],
-    fieldMapping: [{ name: 'orderDate', caption: 'Order Date' }, { name: 'orderID', caption: 'Order ID' }, { name: 'customerName', caption: 'Customer Name' }, { name: 'region', caption: 'Region' }, { name: 'salesPerson', caption: 'Sales Person' }, { name: 'productName', caption: 'Product Name' }, { name: 'unitPrice', caption: 'Unit Price' }]
     filters: [],
+    fieldMapping: [{ name: 'orderDate', caption: 'Order Date' }, { name: 'orderID', caption: 'Order ID' }, { name: 'customerName', caption: 'Customer Name' }, { name: 'region', caption: 'Region' }, { name: 'salesPerson', caption: 'Sales Person' }, { name: 'productName', caption: 'Product Name' }, { name: 'unitPrice', caption: 'Unit Price' }]
   }
   
   return (
@@ -520,8 +519,8 @@ export default App;
 - [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/url-adaptor): Uses the standard URL adaptor to automatically send requests to and receive responses from the backend API.
 
 - [dataSourceSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings): Defines the Pivot Table layout:
-  - [rows](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#rows): Displays country as row headers
-  - [columns](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#columns): Displays **region** as column headers
+  - [rows](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#rows): Displays **country** as row headers
+  - [columns](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#columns): Displays **productCategory** as column headers
   - [values](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#values): Aggregates **quantity** and **totalAmount** based on rows and columns
   - [fieldMapping](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#fieldmapping):  Defines captions for fields that are not bound in pivot reports.
 - [showFieldList](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#showfieldlist): Displays the field list panel allowing users to rearrange fields
@@ -824,7 +823,7 @@ function App() {
   let pivotObj: PivotViewComponent;
 
   // Configure DataManager with CRUD URLs
-  let oData: DataManager = new DataManager({
+  let data: DataManager = new DataManager({
     url: 'https://localhost:7086/api/Sales',                    // Data retrieval endpoint
     insertUrl: 'https://localhost:7086/api/Sales/Insert',       // Called when user adds a new record
     updateUrl: 'https://localhost:7086/api/Sales/Update',       // Called when user edits an existing record
@@ -857,6 +856,15 @@ Configure the [editSettings](https://ej2.syncfusion.com/react/documentation/api/
     allowDeleting: true,   // Enables the Delete button and allows users to remove records
     mode: 'Normal'         // Uses Normal mode (popup dialog) for editing; other options: 'Dialog', 'Batch'
   };
+
+  return (
+    <PivotViewComponent 
+      id='PivotView' 
+      ref={(scope: any) => { pivotObj = scope; }}
+      editSettings={editSettings} 
+      >
+    </PivotViewComponent>
+  );
 ```
 
 The Pivot Table supports different editing modes (Normal, Dialog, Batch, and Command Column) that can be configured using the [mode](https://ej2.syncfusion.com/react/documentation/api/pivotview/celleditsettingsmodel#mode) property. For detailed information about each editing mode and their usage, refer to the [Editing documentation](https://ej2.syncfusion.com/react/documentation/pivotview/editing).
@@ -891,6 +899,15 @@ Here's how to configure it:
       }
     }
   }
+
+  return (
+    <PivotViewComponent 
+      id='PivotView' 
+      ref={(scope: any) => { pivotObj = scope; }}
+      beginDrillThrough={beginDrillThrough}
+      >
+    </PivotViewComponent>
+  );
 ```
 
 ### Using CRUD Operations
@@ -1065,5 +1082,4 @@ You can explore the complete implementation in this [GitHub repository](https://
 - [**PivotTable Data Binding**](https://ej2.syncfusion.com/react/documentation/pivotview/data-binding)
 - [**DataManager**](https://ej2.syncfusion.com/react/documentation/data/getting-started)
 - [**UrlAdaptor**](https://ej2.syncfusion.com/react/documentation/data/adaptors/url-adaptor)
-- [**Grid CRUD with UrlAdaptor**](https://ej2.syncfusion.com/documentation/grid/connecting-to-database/postgresql-server#handling-crud-operations)
 - [**PivotTable Editing**](https://ej2.syncfusion.com/react/documentation/pivotview/editing)

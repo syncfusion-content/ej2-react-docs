@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 Filtering is a powerful feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component that enables selective viewing of data based on specific criteria. It allows narrowing down large datasets to focus on relevant information, thereby enhancing data analysis and decision-making.
 
+For an overview of the filtering feature available in the React Grid, refer to the following video:
+
+{% youtube "https://www.youtube.com/watch?v=G5ocVU3EWsw" %}
+
 ## Set up filtering
 
 Before using filtering in the grid, understand that the component needs the `Filter module` to unlock all filtering features. 

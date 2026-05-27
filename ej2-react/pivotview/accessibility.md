@@ -65,6 +65,28 @@ The accessibility compliance for the pivot table component is outlined below.
 | `data-formatString` | This attribute is added to the treeview item in the calculated field popup. It denotes the format string used for the specified calculated field. |
 | `data-customformatstring` | This attribute is added to the treeview item in the calculated field popup. It denotes the custom format string used for the specified calculated field. |
 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Pivot Table internally uses the Syncfusion Grid component, which follows a two‑table structure for header and content rendering. This improves screen reader interpretation but may trigger warnings in automated accessibility tools. These issues occur due to the underlying grid rendering. These warnings do not necessarily affect actual assistive-technology usability. Known checker tool warnings include:
+
+* aria-required-children: This warning can occur when the grid renders certain feature elements (for example, textarea or toolbar content). It may be reported when toolbar or grouping features are enabled.
+
+* color-contrast: This warning can appear when the toolbar search item or custom styles reduce text contrast below WCAG thresholds.
+
+* An explicit ARIA 'role' is not valid for `<tr>` element within an ARIA role 'grid' per the ARIA in HTML specification.
+
+* An explicit ARIA 'role' is not valid for `<th>` element within an ARIA role 'grid' per the ARIA in HTML specification.
+
+* An explicit ARIA 'role' is not valid for `<td>` element within an ARIA role 'grid' per the ARIA in HTML specification.
+
+* The element with role "button" contains descendants with roles "rowgroup" which are ignored by browsers.
+
+* Content is not within a landmark element.
+
+* Multiple elements with "search" role do not have unique labels.
+
+* Interactive component with ARIA role 'grid' does not have a programmatically associated name.
+
+* The element with role "rowgroup" is not contained in or owned by an element with one of the following roles: "grid, table, treegrid".
+
 ## Keyboard interaction
 
 The pivot table component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Message component.

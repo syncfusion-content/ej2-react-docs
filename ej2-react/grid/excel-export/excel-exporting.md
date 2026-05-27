@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 The Excel export feature in the React Grid component enables exporting Grid data to Excel or CSV documents. This capability is helpful when sharing or analyzing data in spreadsheet format is required.
 
+For an overview of the excel export feature available in the React Grid, refer to the following video:
+
+{% youtube "https://www.youtube.com/watch?v=D6URzM6kziI&t=286s" %}
+
 ## Enable Excel export
 
 Excel export configuration in the Grid component requires the following setup:
