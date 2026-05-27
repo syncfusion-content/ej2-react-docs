@@ -10,7 +10,13 @@ domainurl: ##DomainURL##
  
 # Sorting in React Grid Component
 
-The Grid component provides built-in support for sorting data-bound columns in ascending or descending order. To enable sorting in the grid, set the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) property to `true`.
+The Grid component provides built-in support for sorting data-bound columns in ascending or descending order. 
+
+For an overview of the sorting feature available in the React Grid, refer to the following video:
+
+{% youtube "https://www.youtube.com/watch?v=uPrWgkByI48" %}
+
+To enable sorting in the grid, set the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid#allowsorting) property to `true`.
 
 Sorting a particular column is accomplished by clicking on its column header. Each click on the header toggles the sort order between `Ascending` and `Descending`.
 

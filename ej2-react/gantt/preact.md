@@ -22,7 +22,7 @@ Before you begin, ensure you have:
 
 ## Create a Preact application
 
-Create a new Preact application with the recommended defaults:
+Create a new Preact application using the following commands:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -39,7 +39,16 @@ cd my-gantt-app
 {% endhighlight %}
 {% endtabs %}
 
-When prompted, select your preferred options (JavaScript or TypeScript, router settings, etc.). The CLI will set up your project with all necessary configurations.
+During project creation, the CLI prompts for several configuration options. Choose the options based on project requirements:
+
+- **Project language**: JavaScript or TypeScript (based on your preference)
+- **Use router?**: Select "Yes" for multi-page applications, otherwise select "No"
+- **Prerender app (SSG)?**: Select "Yes" for static site generation, otherwise select "No" for a standard setup
+- **Use ESLint?**: Select "Yes" for code quality checks or "No" for a minimal setup
+
+> Note: A minimal configuration (without router, pre-rendering, and ESLint) is used in this documentation for simplicity.
+
+After completing the prompts, the CLI automatically sets up the project and installs the required dependencies.
 
 ## Install the Gantt Chart package
 
@@ -89,7 +98,7 @@ Import the basic Gantt Chart styles in `src/style.css`:
 > @import '../node_modules/@syncfusion/ej2-richtexteditor/styles/tailwind3.css';
 > ```
 
-## Create sample data
+## Create sample task data
 
 Define a simple task list with hierarchical relationships. Each task must have a `StartDate` and either a `Duration` or `EndDate` to render properly.
 
@@ -105,7 +114,7 @@ const taskData = [
 ];
 ```
 
-## Configure task fields
+## Configure task fields mapping
 
 Map your data fields to Gantt Chart properties using `taskFields`:
 
@@ -127,7 +136,7 @@ const taskFields = {
 | `id` | Unique task identifier | Yes |
 | `name` | Task display name | Yes |
 | `startDate` | Task start date | Yes |
-| `duration` | Task duration in days | Yes* |
+| `duration` | Task duration in days | Yes |
 | `progress` | Task completion percentage (0-100) | No |
 | `parentID` | Parent task ID for hierarchy | No |
 
