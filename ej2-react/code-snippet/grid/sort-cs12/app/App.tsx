@@ -12,7 +12,7 @@ function App() {
     (grid as GridComponent).clearSorting();
   }
   return (<div>
-    <ButtonComponent style={{ marginTop: "10px" }} cssClass='e-outline' onClick={clearSorting}>Clear Sorting</ButtonComponent>
+    <ButtonComponent cssClass='e-outline' onClick={clearSorting}>Clear Sorting</ButtonComponent>
     <GridComponent ref={g => grid = g} dataSource={data} allowSorting={true} sortSettings={sortingOptions} height={315}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />

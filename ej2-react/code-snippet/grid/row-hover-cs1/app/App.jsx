@@ -10,10 +10,10 @@ function App() {
   });
   return (
     <div>
-      <label style={{ padding: "10px 10px" }}>
-        Enable/Disable Row Hover
-      </label>
-      <SwitchComponent id="switch" checked={enableRowHover} change={changeValue}></SwitchComponent>
+      <div id="switchContainer">
+        <label>Enable/Disable Row Hover</label>
+        <SwitchComponent id="switch" checked={enableRowHover} change={changeValue}></SwitchComponent>
+      </div>
       <GridComponent dataSource={data} enableHover={enableRowHover}>
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' width='100' />

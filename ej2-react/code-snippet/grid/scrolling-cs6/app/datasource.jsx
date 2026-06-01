@@ -47,7 +47,7 @@ function createLazyLoadData() {
             'shipAddress': shipaddress[Math.floor(Math.random() * shipaddress.length)],
             'ProductName': product[Math.floor(Math.random() * product.length)],
             'ProductID': i,
-            'Frieght': frieght[Math.floor(Math.random() * frieght.length)]
+            'Freight': frieght[Math.floor(Math.random() * frieght.length)]
         })
     }
     return lazyLoadData;

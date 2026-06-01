@@ -17,8 +17,10 @@ function App() {
   })
   return (
     <div>
-      <label style={{ padding: '30px 17px 0 0' }}>Change the grid lines:</label>
-      <DropDownListComponent dataSource={dropDownData} index={0} width="100" change={valueChange}></DropDownListComponent>
+      < div className="input-container">
+        <label id="dropdownLabel">Change the grid lines:</label>
+        <DropDownListComponent dataSource={dropDownData} index={0} width="100" change={valueChange}></DropDownListComponent>
+      </div>
       <GridComponent dataSource={inventoryData} height={300} gridLines={gridLine}>
         <ColumnsDirective>
           <ColumnDirective field='Inventor' headerText='Inventor' width='100' />

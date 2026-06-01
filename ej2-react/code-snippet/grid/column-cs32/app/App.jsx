@@ -36,8 +36,8 @@ function App() {
     }
   }
   return (<div><p id='message'>{message}</p>
-    <ButtonComponent onClick={saveBtn}>Save column settings</ButtonComponent>
-    <ButtonComponent onClick={restoreBtn}>Restore column settings</ButtonComponent>
+    <ButtonComponent className="button" onClick={saveBtn}>Save column settings</ButtonComponent>
+    <ButtonComponent className="button" onClick={restoreBtn}>Restore column settings</ButtonComponent>
     <GridComponent id='Orders' dataSource={data} allowFiltering={true} allowPaging={true} enablePersistence={true} height={220}
       ref={g => grid = g}>
       <ColumnsDirective>

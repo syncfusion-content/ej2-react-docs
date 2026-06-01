@@ -11,8 +11,10 @@ function App() {
     grid.pageSettings.enableQueryString = args.checked;
   }
   return (<div>
-    <label style={{ padding: "30px 17px 0 0" }}>Enable/Disable Query String</label>
-    <SwitchComponent checked={isQueryEnabled} change={toggleQueryString}></SwitchComponent>
+    <div id="switchContainer">
+      <label>Enable/Disable Query String</label>
+      <SwitchComponent checked={isQueryEnabled} change={toggleQueryString}></SwitchComponent>
+    </div>
     <GridComponent dataSource={data} height={265} ref={g => grid = g} allowPaging={true} pageSettings={{ enableQueryString: true }}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" isPrimaryKey={true} />

@@ -367,62 +367,10 @@ The following example demonstrates toggling the `ignoreAccent` property using a 
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% raw %}
-import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
-import { ColumnDirective, ColumnsDirective, GridComponent, Search } from '@syncfusion/ej2-react-grids';
-import { Inject, Toolbar } from '@syncfusion/ej2-react-grids';
-import * as React from 'react';
-import { data } from './datasource';
-function App() {
-    let grid;
-    const valueChange = (args) => {
-        grid.searchSettings.ignoreAccent = args.checked;
-    }
-    return (<div>
-        <label style={{ padding: "10px 10px" }}>Enable or disable ignoreAccent property</label>
-        <SwitchComponent id='switch' change={valueChange}></SwitchComponent>
-        <GridComponent ref={g => grid = g} dataSource={data} height={280} toolbar={['Search']} >
-            <ColumnsDirective>
-                <ColumnDirective field='CategoryName' headerText='Category Name' width='100' textAlign="Right" />
-                <ColumnDirective field='ProductName' headerText='Product Name' width='100' />
-                <ColumnDirective field='QuantityPerUnit' headerText='Quantity Per Unit' width='100' textAlign="Right" />
-                <ColumnDirective field='UnitsInStock' headerText='Units In Stock' width='100' />
-            </ColumnsDirective>
-            <Inject services={[Toolbar, Search]} />
-        </GridComponent>
-    </div>);
-};
-export default App;
-{% endraw %}
+{% include code-snippet/grid/searching-cs10/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% raw %}
-import { SwitchComponent, ChangeEventArgs } from '@syncfusion/ej2-react-buttons';
-import { ColumnDirective, ColumnsDirective, GridComponent, Search } from '@syncfusion/ej2-react-grids';
-import { Inject, Toolbar } from '@syncfusion/ej2-react-grids';
-import * as React from 'react';
-import { data } from './datasource';
-function App() {
-  let grid: GridComponent | null;
-  const valueChange = (args: ChangeEventArgs) => {
-    (grid as GridComponent).searchSettings.ignoreAccent = args.checked;
-  }
-  return (<div>
-    <label style={{ padding: "10px 10px" }}>Enable or disable ignoreAccent property:</label>
-    <SwitchComponent id='switch' change={valueChange}></SwitchComponent>
-    <GridComponent ref={g => grid = g} dataSource={data} height={280} toolbar={['Search']} >
-      <ColumnsDirective>
-        <ColumnDirective field='CategoryName' headerText='Category Name' width='100' textAlign="Right" />
-        <ColumnDirective field='ProductName' headerText='Product Name' width='100' />
-        <ColumnDirective field='QuantityPerUnit' headerText='Quantity Per Unit' width='100' textAlign="Right" />
-        <ColumnDirective field='UnitsInStock' headerText='Units In Stock' width='100' />
-      </ColumnsDirective>
-      <Inject services={[Toolbar, Search]} />
-    </GridComponent>
-  </div>);
-};
-export default App;
-{% endraw %}
+{% include code-snippet/grid/searching-cs10/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/searching-cs10/app/datasource.jsx %}
@@ -525,14 +473,12 @@ The following example demonstrates retrieving searched records using an external
 {% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/retrieve-searched-records-cs1/app/App.jsx %}
 {% endhighlight %}
-
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/retrieve-searched-records-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/retrieve-searched-records-cs1/app/datasource.jsx %}
 {% endhighlight %}
-
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/retrieve-searched-records-cs1/app/datasource.tsx %}
 {% endhighlight %}

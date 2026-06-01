@@ -18,8 +18,10 @@ function App() {
         }
     }
     return (<div>
-        <label style={{ padding: "10px 10px" }}>Include or exclude hidden columns </label>
-        <SwitchComponent ref={s => switchData = s}></SwitchComponent>
+        <div id="switchContainer">
+            <label>Include or exclude hidden columns </label>
+            <SwitchComponent ref={s => switchData = s}></SwitchComponent>
+        </div>
         <GridComponent id='Grid' dataSource={data} allowPaging={true} allowExcelExport={true} toolbar={toolbar} toolbarClick={toolbarClick} ref={g => grid = g}>
             <ColumnsDirective>
                 <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />

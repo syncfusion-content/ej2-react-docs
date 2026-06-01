@@ -778,7 +778,7 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/show-hide-spinner-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/show-hide-spinner-cs1" %}
 
 ## Immutable mode  
 

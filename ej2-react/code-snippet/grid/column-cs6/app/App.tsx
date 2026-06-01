@@ -15,7 +15,7 @@ function App() {
         }
     }
     return <div>
-        <ButtonComponent cssClass='e-flat' onClick={show}>Open Column Chooser</ButtonComponent>
+        <ButtonComponent id="button" cssClass='e-outlined' onClick={show}>Open Column Chooser</ButtonComponent>
         <GridComponent dataSource={data} showColumnChooser={true} height={295} ref={g => grid = g}>
             <ColumnsDirective>
                 <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />

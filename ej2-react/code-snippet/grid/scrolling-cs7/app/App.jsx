@@ -33,8 +33,10 @@ function App() {
     grid.getContent().children[0].scrollTop = rowHeight * grid.getSelectedRowIndexes()[0];
   }
   return (<div>
-    <label style={{ padding: "30px 20px 0 0" }} > Select row index :</label>
-    <DropDownListComponent index={0} width={200} dataSource={dropDownData} change={onChange}></DropDownListComponent>
+    <div className="inputContainer">
+      <label id="dropdownLabel"> Select row index :</label>
+      <DropDownListComponent index={0} width={120} dataSource={dropDownData} change={onChange}></DropDownListComponent>
+    </div>
     <GridComponent dataSource={data} height="315" width="100%"
       rowSelected={rowSelected} ref={g => grid = g}>
       <ColumnsDirective>

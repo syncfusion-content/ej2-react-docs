@@ -22,8 +22,8 @@ function App() {
     grid.columns.pop();
     grid.refreshColumns();
   }
-    return( <div> <ButtonComponent onClick= { addColumn }>Add Columns</ButtonComponent>
-    <ButtonComponent onClick= { removeColumn }>Remove Columns</ButtonComponent>
+    return( <div> <ButtonComponent className="button" onClick= { addColumn }>Add Columns</ButtonComponent>
+    <ButtonComponent className="button" onClick= { removeColumn }>Remove Columns</ButtonComponent>
     <GridComponent id="Grid" dataSource={data} allowPaging={true} enablePersistence={true} dataBound={dataBound} height={280}
     ref={g => grid = g}>
         <ColumnsDirective>

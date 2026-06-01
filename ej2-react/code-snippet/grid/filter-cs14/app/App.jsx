@@ -16,6 +16,7 @@ function App() {
     fieldDrop.dataSource = fieldData
   }
   const onFieldChange = (args) => {
+    availableOperator=[];
     operatorDrop.enabled = true;
     column = grid.getColumnByField(args.value);
     if(column) {
@@ -27,11 +28,13 @@ function App() {
     let filterOptions = { operator: args.value, showFilterBarStatus: true };
     column.filter = filterOptions;
   }
-  return (<div><div className="input-container">
-    <label><b>Select Column</b> </label>
-    <DropDownListComponent ref={field => fieldDrop = field} width={120} onChange={onFieldChange} placeholder="Eg: OrderID"></DropDownListComponent>
-    <label><b>Select Operator</b> </label>
-    <DropDownListComponent ref={operator => operatorDrop = operator} width={120} onChange={onOperatorChange} placeholder="Eg: Excel" enabled={false}></DropDownListComponent></div>
+  return (<div>
+    <div className='input-container'>
+      <label className="dropdownLabel"><b>Select Column</b></label>
+      <DropDownListComponent ref={(field) => (fieldDrop = field)} id='fields' placeholder='Eg: OrderID' change={onFieldChange} width={120} />
+      <label className="dropdownLabel"><b>Select Operator</b></label>
+      <DropDownListComponent id='operator' placeholder='Eg: Equal' enabled={false} ref={d => operatorDropdown = d} change={onOperatorChange} width={120} />
+    </div>
     <GridComponent ref={g => grid = g} dataSource={data} allowFiltering={true} allowPaging={true} dataBound={dataBound} >
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />

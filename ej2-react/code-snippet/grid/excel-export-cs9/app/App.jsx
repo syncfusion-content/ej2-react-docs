@@ -18,8 +18,10 @@ function App() {
     }
     return (
         <div>
-            <label style={{ padding: "30px 17px 0 0" }}>Enter file name: </label>
-            <TextBoxComponent ref={t => textBox = t} placeholder="Enter file name" width="120"></TextBoxComponent>
+            <div id="inputContainer">
+                <label id="textboxLabel">Enter file name: </label>
+                <TextBoxComponent ref={t => textBox = t} placeholder="Enter file name" width="120"></TextBoxComponent>
+            </div>
             <GridComponent id='Grid' dataSource={data} height={250} toolbar={toolbar}
                 allowExcelExport={true} toolbarClick={toolbarClick} ref={g => grid = g}>
                 <ColumnsDirective>

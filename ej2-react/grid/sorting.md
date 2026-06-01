@@ -463,7 +463,7 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/sort-cs10" %}
+{% previewsample "page.domainurl/code-snippet/grid/sort-cs10" %}
 
 ### Remove sort columns
 
@@ -499,7 +499,7 @@ function App() {
   return (<div>
     <div>
       <label style={{ padding: "30px 20px 0 0" }}> Column name :</label>
-      <DropDownListComponent ref={dc => dropColumn = dc} index={0} width='120' dataSource={columns} fields={field}></DropDownListComponent></div>
+      <DropDownListComponent id="dropdown" ref={dc => dropColumn = dc} index={0} width='120' dataSource={columns} fields={field}></DropDownListComponent></div>
     <ButtonComponent style={{ marginTop: "10px" }} cssClass='e-outline' onClick={addSortColumn}>Remove Sort Column</ButtonComponent>
     <GridComponent ref={g => grid = g} dataSource={data} allowSorting={true} sortSettings={sortingOptions} height={315}>
       <ColumnsDirective>
@@ -541,7 +541,7 @@ function App() {
   return (<div>
     <div>
       <label style={{ padding: "30px 20px 0 0" }}> Column name :</label>
-      <DropDownListComponent ref={dc => dropColumn = dc} index={0} width='120' dataSource={columns} fields={field}></DropDownListComponent></div>
+      <DropDownListComponent id="dropdown" ref={dc => dropColumn = dc} index={0} width='120' dataSource={columns} fields={field}></DropDownListComponent></div>
     <ButtonComponent style={{ marginTop: "10px" }} cssClass='e-outline' onClick={removeSortColumn}>Remove Sort Column</ButtonComponent>
     <GridComponent ref={g => grid = g} dataSource={data} allowSorting={true} sortSettings={sortingOptions} height={315}>
       <ColumnsDirective>
@@ -564,7 +564,7 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/sort-cs11" %}
+{% previewsample "page.domainurl/code-snippet/grid/sort-cs11" %}
 
 ### Clear sorting 
 
@@ -574,64 +574,10 @@ The following example demonstrates clearing sorting using the `clearSorting` met
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% raw %}
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Sort, SortSettingsModel } from '@syncfusion/ej2-react-grids';
-import * as React from 'react';
-import { data } from './datasource';
-
-function App() {
-  let grid;
-  const sortingOptions = {
-    columns: [{ field: 'CustomerID', direction: 'Ascending' }, { field: 'ShipName', direction: 'Descending' }]
-  };
-  const clearSorting = () => {
-    grid.clearSorting();
-  }
-  return (<div>
-    <ButtonComponent style={{ marginTop: "10px" }} cssClass='e-outline' onClick={clearSorting}>Clear Sorting</ButtonComponent>
-    <GridComponent ref={g => grid = g} dataSource={data} allowSorting={true} sortSettings={sortingOptions} height={315}>
-      <ColumnsDirective>
-        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
-        <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
-        <ColumnDirective field='ShipCity' headerText='Ship City' width='100' textAlign="Right" />
-        <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
-      </ColumnsDirective>
-      <Inject services={[Sort]} />
-    </GridComponent></div>)
-};
-export default App;
-{% endraw %}
+{% include code-snippet/grid/sort-cs12/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% raw %}
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Sort, SortSettingsModel } from '@syncfusion/ej2-react-grids';
-import * as React from 'react';
-import { data } from './datasource';
-
-function App() {
-  let grid: GridComponent | null;
-  const sortingOptions: SortSettingsModel = {
-    columns: [{ field: 'CustomerID', direction: 'Ascending' }, { field: 'ShipName', direction: 'Descending' }]
-  };
-  const clearSorting = () => {
-    (grid as GridComponent).clearSorting();
-  }
-  return (<div>
-    <ButtonComponent style={{ marginTop: "10px" }} cssClass='e-outline' onClick={clearSorting}>Clear Sorting</ButtonComponent>
-    <GridComponent ref={g => grid = g} dataSource={data} allowSorting={true} sortSettings={sortingOptions} height={315}>
-      <ColumnsDirective>
-        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
-        <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
-        <ColumnDirective field='ShipCity' headerText='Ship City' width='100' textAlign="Right" />
-        <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
-      </ColumnsDirective>
-      <Inject services={[Sort]} />
-    </GridComponent></div>)
-};
-export default App;
-{% endraw %}
+{% include code-snippet/grid/sort-cs12/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/sort-cs12/app/datasource.jsx %}
@@ -641,7 +587,7 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/sort-cs12" %}
+{% previewsample "page.domainurl/code-snippet/grid/sort-cs12" %}
 
 ## Sorting events
 
