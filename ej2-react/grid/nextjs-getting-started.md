@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Grid Component in the Next.js
 
-This section provides a step-by-step guide for creating a Next.js application and integrating the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component.
+This section provides a step-by-step guide for creating a Next.js application and integrating the React Data Grid component.
 
 ## What is Next.js?
 

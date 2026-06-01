@@ -521,7 +521,7 @@ The service registration has been completed successfully.
 
 ## Integrating Syncfusion React Grid
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) is a robust, high‑performance component built to efficiently display, manage, and manipulate large datasets. It provides advanced features such as sorting, filtering, and paging. Follow these steps to render the grid and integrate it with a SQL Server database using Dapper.
+The React Data Grid is a robust, high‑performance component built to efficiently display, manage, and manipulate large datasets. It provides advanced features such as sorting, filtering, and paging. Follow these steps to render the grid and integrate it with a SQL Server database using Dapper.
 
 ### Step 1: Creating the React client application
 

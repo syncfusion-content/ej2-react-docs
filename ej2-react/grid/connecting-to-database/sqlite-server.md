@@ -508,7 +508,7 @@ app.Run();
 
 ## Integrating Syncfusion React Grid
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) is a robust, high‑performance component built to efficiently display, manage, and manipulate large datasets. It provides advanced features such as sorting, filtering, and paging. Follow these steps to render the grid and integrate it with a SQLite database.
+The React Data Grid is a robust, high‑performance component built to efficiently display, manage, and manipulate large datasets. It provides advanced features such as sorting, filtering, and paging. Follow these steps to render the grid and integrate it with a SQLite database.
 
 > The React client application **grid_sqlite.client** is already created as part of the ASP.NET Core with React template.
 

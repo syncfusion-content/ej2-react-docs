@@ -14,7 +14,7 @@ Column headers in the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Da
 
 ## Header text
 
-In the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid), the [headerText](https://ej2.syncfusion.com/react/documentation/api/grid/column#headertext) property of the `ColumnDirective` defines the label shown in a column’s header; when this property is not set, the column automatically displays its [field](https://ej2.syncfusion.com/react/documentation/api/grid/column#field) value, so assigning header text provides a more descriptive label in place of the field name.
+In the React Data Grid, the [headerText](https://ej2.syncfusion.com/react/documentation/api/grid/column#headertext) property of the `ColumnDirective` defines the label shown in a column’s header; when this property is not set, the column automatically displays its [field](https://ej2.syncfusion.com/react/documentation/api/grid/column#field) value, so assigning header text provides a more descriptive label in place of the field name.
 
 
 {% tabs %}
