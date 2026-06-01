@@ -190,6 +190,8 @@ yarn run dev
 
 > [View the NEXT.js Grid sample in the GitHub repository](https://github.com/SyncfusionExamples/ej2-nextjs-grid).
 
+N> Looking for the full React Data Grid component overview, features, pricing, and documentation? Visit the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) page.
+
 ## See also
 
 * [Grid Feature Modules](./module)
