@@ -63,7 +63,7 @@ All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages 
 
 
 ```bash
-npm install @syncfusion/ej2-react-barcodegenerator --save
+npm install @syncfusion/ej2-react-barcode-generator --save
 ```
 
 ## Adding Barcode Generator control
