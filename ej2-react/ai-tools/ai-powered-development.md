@@ -157,7 +157,7 @@ When you include the specific docs URL, the AI generates correct code: proper im
 **Without MCP Server:**
 When you autocomplete a GridComponent, the IDE AI suggests:
 
-```jsx
+```javascript
 <Grid columns={columns} />
 ```
 
