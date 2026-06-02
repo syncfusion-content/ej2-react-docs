@@ -21,8 +21,10 @@ function App() {
     (grid as GridComponent).toolbarModule.enableItems(['Grid_Collapse', 'Grid_Expand'], !args.checked); // Enable or Disable toolbar items.
   }
   return (<div>
-    <label style={{ padding: "30px 17px 0 0" }}> Enable or disable toolbar items </label>
-    <SwitchComponent change={onChange}></SwitchComponent>
+    <div id="switchContainer">
+      <label> Enable or disable toolbar items </label>
+      <SwitchComponent change={onChange}></SwitchComponent>
+    </div>
     <GridComponent id="Grid" dataSource={data} ref={g => grid = g} allowGrouping={true} groupSettings={groupSettings} toolbar={toolbar} toolbarClick={toolbarClick}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />

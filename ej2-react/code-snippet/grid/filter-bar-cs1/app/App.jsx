@@ -13,7 +13,7 @@ function App() {
     }
     return (<div>
         <label><b>Select Filter Mode:</b> </label>
-        <DropDownListComponent dataSource={filterModesData} width={200} change={onModeChange}></DropDownListComponent>
+        <DropDownListComponent id="dropdown"  dataSource={filterModesData} width={120} change={onModeChange}></DropDownListComponent>
         <GridComponent dataSource={data} allowFiltering={true} allowPaging={true} pageSettings={pageSettings} filterSettings={filterSettings} height={200}>
             <ColumnsDirective>
                 <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />

@@ -11,12 +11,12 @@ function App() {
   };
   const onSingleValueFilter = () => {
     (grid as GridComponent).clearFiltering();
-    // filter OrderID column with single value
+    // Filter OrderID column with single value.
     (grid as GridComponent).filterByColumn('OrderID', 'equal', 10248);
   }
   const onMultipleValueFilter = () => {
     (grid as GridComponent).clearFiltering();
-    // filter CustomerID column with multiple values
+    // Filter CustomerID column with multiple values.
     (grid as GridComponent).filterByColumn('CustomerID', 'equal', [
       'VINET',
       'TOMSP',
@@ -24,8 +24,8 @@ function App() {
     ]);
   }
   return (<div>
-    <ButtonComponent cssClass="e-outline" onClick={onSingleValueFilter}>Filter with single value</ButtonComponent>
-    <ButtonComponent cssClass="e-outline" onClick={onMultipleValueFilter}>Filter with multiple values</ButtonComponent>
+    <ButtonComponent cssClass="e-outline" id="singleFilter" onClick={onSingleValueFilter}>Filter with single value</ButtonComponent>
+    <ButtonComponent cssClass="e-outline" id='multipleFilter' onClick={onMultipleValueFilter}>Filter with multiple values</ButtonComponent>
     <GridComponent ref={g => grid = g} dataSource={data} filterSettings={filterOptions} allowFiltering={true} height={315} >
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />

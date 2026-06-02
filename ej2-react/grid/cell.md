@@ -20,76 +20,10 @@ In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% raw %}
-import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import * as React from 'react';
-import { data } from './datasource';
-import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
-function App() {
-  let grid;
-  const change = ((args) => {
-    if (args.checked) {
-      grid.getColumnByField('CustomerID').disableHtmlEncode = false;
-    } else {
-      grid.getColumnByField('CustomerID').disableHtmlEncode = true;
-    }
-    grid.refreshColumns();
-  })
-  return (
-    <div>
-      <div>
-        <label style={{ padding: "10px 10px" }}>
-          Enable or disable HTML Encode
-        </label>
-        <SwitchComponent id="switch" change={change}></SwitchComponent>
-        <GridComponent ref={g => grid = g} dataSource={data} height={315}>
-          <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign='Right' />
-            <ColumnDirective field='CustomerID' headerText='<strong> Customer ID </strong>' width='120' />
-            <ColumnDirective field='Freight' headerText='Freight' width='150' textAlign='Right' format='C' />
-            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='120' />
-
-          </ColumnsDirective>
-        </GridComponent></div></div>)
-}
-export default App;
-{% endraw %}
+{% include code-snippet/grid/display-html-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% raw %}
-import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import * as React from 'react';
-import { data } from './datasource';
-import { SwitchComponent, ChangeEventArgs } from '@syncfusion/ej2-react-buttons';
-function App() {
-  let grid: GridComponent | null;
-  const change = ((args: ChangeEventArgs) => {
-    if (args.checked) {
-      (grid as GridComponent).getColumnByField('CustomerID').disableHtmlEncode = false;
-    } else {
-      (grid as GridComponent).getColumnByField('CustomerID').disableHtmlEncode = true;
-    }
-    (grid as GridComponent).refreshColumns();
-  })
-  return (
-    <div>
-      <div>
-        <label style={{ padding: "10px 10px" }}>
-          Enable or disable HTML Encode
-        </label>
-        <SwitchComponent id="switch" change={change}></SwitchComponent>
-        <GridComponent ref={g => grid = g} dataSource={data} height={315}>
-          <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign='Right' />
-            <ColumnDirective field='CustomerID' headerText='<strong> Customer ID </strong>' width='120' />
-            <ColumnDirective field='Freight' headerText='Freight' width='150' textAlign='Right' format='C' />
-            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='120' />
-
-          </ColumnsDirective>
-        </GridComponent></div></div>)
-}
-export default App;
-{% endraw %}
+{% include code-snippet/grid/display-html-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/display-html-cs1/app/datasource.jsx %}
@@ -139,73 +73,10 @@ The following example demonstrates setting the [allowTextWrap](https://ej2.syncf
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% raw %}
-
-import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
-import React, { useState } from 'react';
-import { inventoryData } from './datasource';
-
-function App() {
-  const [wrapSettings, setWrapSettings] = useState({ wrapMode: 'Content' });
-  const dropDownData = [
-    { text: 'Content', value: 'Content' },
-    { text: 'Both', value: 'Both' },
-  ];
-  const valueChange = ((args) => {
-    const newWrapValue = { wrapMode: args.value };
-    setWrapSettings(newWrapValue);
-  })
-  return (
-    <div>
-      <label style={{ padding: '30px 17px 0 0' }}>Change the wrapmode of auto wrap feature:</label>
-      <DropDownListComponent dataSource={dropDownData} index={0} width="100" change={valueChange}></DropDownListComponent>
-      <GridComponent dataSource={inventoryData} height={315} allowPaging={true} allowTextWrap={true} textWrapSettings={wrapSettings}>
-        <ColumnsDirective>
-          <ColumnDirective field='Inventor' headerText='Inventor' width='100' />
-          <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' textAlign='Right' width='100' />
-          <ColumnDirective field='Country' headerText='Country' width='100' />
-          <ColumnDirective field='Mainfieldsofinvention' headerText='Main fields of invention' width='140' />
-        </ColumnsDirective>
-      </GridComponent></div>)
-}
-export default App;
-
-{% endraw %}
+{% include code-snippet/grid/autowrap-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% raw %}
-
-import { ColumnDirective, ColumnsDirective, GridComponent, TextWrapSettingsModel } from '@syncfusion/ej2-react-grids';
-import { ChangeEventArgs, DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
-import React, { useState } from 'react';
-import { inventoryData } from './datasource';
-
-function App() {
-  const [wrapSettings, setWrapSettings] = useState<TextWrapSettingsModel>({ wrapMode: 'Content' });
-  const dropDownData: { [key: string]: Object; }[] = [
-    { text: 'Content', value: 'Content' },
-    { text: 'Both', value: 'Both' },
-  ];
-  const valueChange = ((args: ChangeEventArgs) => {
-    const newWrapValue: TextWrapSettingsModel = { wrapMode: args.value };
-    setWrapSettings(newWrapValue);
-  })
-  return (
-    <div>
-      <label style={{ padding: '30px 17px 0 0' }}>Change the wrapmode of auto wrap feature:</label>
-      <DropDownListComponent dataSource={dropDownData} index={0} width="100" change={valueChange}></DropDownListComponent>
-      <GridComponent dataSource={inventoryData} height={315} allowPaging={true} allowTextWrap={true} textWrapSettings={wrapSettings}>
-        <ColumnsDirective>
-          <ColumnDirective field='Inventor' headerText='Inventor' width='100' />
-          <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' textAlign='Right' width='100' />
-          <ColumnDirective field='Country' headerText='Country' width='100' />
-          <ColumnDirective field='Mainfieldsofinvention' headerText='Main fields of invention' width='140' />
-        </ColumnsDirective>
-      </GridComponent></div>)
-}
-export default App;
-{% endraw %}
+{% include code-snippet/grid/autowrap-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/autowrap-cs1/app/datasource.jsx %}
@@ -261,58 +132,10 @@ The following example demonstrates customizing the appearance of a specific row 
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% raw %}
-
-import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import * as React from 'react';
-import { data } from './datasource';
-
-function App() {
-  const selectOptions = {
-    type: 'Multiple',
-    mode: 'Cell'
-  }
-  return (
-    <div>
-      <div style={{ padding: '40px 0 0 0' }}>
-        <GridComponent dataSource={data} height={315} selectionSettings={selectOptions}>
-          <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign='Right' />
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
-            <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign='Right' />
-            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='140' />
-          </ColumnsDirective>
-        </GridComponent></div></div>)
-}
-export default App;
-{% endraw %}
+{% include code-snippet/grid/customize-cell-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% raw %}
-
-import { ColumnDirective, ColumnsDirective, GridComponent, SelectionSettingsModel } from '@syncfusion/ej2-react-grids';
-import * as React from 'react';
-import { data } from './datasource';
-
-function App() {
-  const selectOptions: SelectionSettingsModel = {
-    type: 'Multiple',
-    mode: 'Cell'
-  }
-  return (
-    <div>
-      <div style={{ padding: '40px 0 0 0' }}>
-        <GridComponent dataSource={data} height={315} selectionSettings={selectOptions}>
-          <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right"/>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
-            <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign="Right"/>
-            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='140' />
-          </ColumnsDirective>
-        </GridComponent></div></div>)
-}
-export default App;
-{% endraw %}
+{% include code-snippet/grid/customize-cell-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/customize-cell-cs1/app/datasource.jsx %}
@@ -322,7 +145,7 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/customize-cell-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/customize-cell-cs1" %}
 
 ### Using property
 
@@ -395,7 +218,7 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/customize-cell-cs2" %}
+{% previewsample "page.domainurl/code-snippet/grid/customize-cell-cs2" %}
 
 > Custom attributes can be used to customize any cell in the grid, including header and footer cells.
 
@@ -411,67 +234,10 @@ The following example demonstrates the use of the [getColumnHeaderByIndex](https
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% raw %}
-
-import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import * as React from 'react';
-import { data } from './datasource';
-
-function App() {
-  let grid;
-  const dataBound = (() => {
-    let header = grid.getHeaderContent().querySelector('.e-headercell');
-    header.style.backgroundColor = 'red';
-    header.style.color = 'white';
-    let cell = grid.getCellFromIndex(1, 2);
-    cell.style.background = '#f9920b';
-    cell.style.color = 'white';
-  });
-  return (
-    <div>
-      <div style={{ padding: '40px 0 0 0' }}>
-        <GridComponent dataSource={data} height={315} ref={g => grid = g} dataBound={dataBound}>
-          <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right"/>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
-            <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign="Right"/>
-            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='140' />
-          </ColumnsDirective>
-        </GridComponent></div></div>)
-}
-export default App;
-{% endraw %}
+{% include code-snippet/grid/customize-cell-cs3/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% raw %}
-import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import * as React from 'react';
-import { data } from './datasource';
-
-function App() {
-  let grid: GridComponent | null;
-  const dataBound = (() => {
-    let header = (grid as GridComponent).getHeaderContent().querySelector('.e-headercell');
-    header.style.backgroundColor = 'red';
-    header.style.color = 'white';
-    let cell = (grid as GridComponent).getCellFromIndex(1, 2);
-    cell.style.background = '#f9920b';
-    cell.style.color = 'white';
-  });
-  return (
-    <div>
-      <div style={{ padding: '40px 0 0 0' }}>
-        <GridComponent dataSource={data} height={315} ref={g => grid = g} dataBound={dataBound}>
-          <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right"/>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
-            <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign="Right"/>
-            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='140' />
-          </ColumnsDirective>
-        </GridComponent></div></div>)
-}
-export default App;
-{% endraw %}
+{% include code-snippet/grid/customize-cell-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/customize-cell-cs3/app/datasource.jsx %}
@@ -481,7 +247,7 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/customize-cell-cs3" %}
+{% previewsample "page.domainurl/code-snippet/grid/customize-cell-cs3" %}
 
 > Make sure to pass the correct row and column indices to [getCellFromIndex](https://ej2.syncfusion.com/react/documentation/api/grid#getcellfromindex) method, or else the appearance of the wrong cell might get customized.
 
@@ -500,76 +266,10 @@ The following example demonstrates, setting the [clipMode](https://ej2.syncfusio
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% raw %}
-
-import { ClipMode, ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import { DropDownListComponent, ChangeEventArgs } from '@syncfusion/ej2-react-dropdowns';
-import * as React from 'react';
-import { inventoryData } from './datasource';
-
-function App() {
-  let grid;
-  const dropDownData = [
-    { text: 'Ellipsis', value: 'Ellipsis' },
-    { text: 'Clip', value: 'Clip' },
-    { text: 'EllipsisWithTooltip', value: 'EllipsisWithTooltip' }
-  ];
-  const valueChange = ((args) => {
-    grid.getColumnByField('Mainfieldsofinvention').clipMode = args.value ;
-    grid.refreshColumns();
-
-  })
-  return (
-    <div>
-      <label style={{ padding: '30px 17px 0 0' }}> Change the clip mode: </label>
-      <DropDownListComponent dataSource={dropDownData} index={0} width="100" change={valueChange}></DropDownListComponent>
-      <GridComponent dataSource={inventoryData} height={315} ref={g => grid = g} allowPaging={true}>
-        <ColumnsDirective>
-          <ColumnDirective field='Inventor' headerText='Inventor' width='100' />
-          <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' textAlign='Right' width='100' />
-          <ColumnDirective field='Country' headerText='Country' width='100' />
-          <ColumnDirective field='Mainfieldsofinvention' headerText='Main fields of invention' width='140' />
-        </ColumnsDirective>
-      </GridComponent></div>)
-}
-export default App;
-{% endraw %}
+{% include code-snippet/grid/autowrap-cs3/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% raw %}
-
-import { ClipMode, ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import { DropDownListComponent, ChangeEventArgs } from '@syncfusion/ej2-react-dropdowns';
-import * as React from 'react';
-import { inventoryData } from './datasource';
-
-function App() {
-  let grid: GridComponent | null;
-  const dropDownData: { [key: string]: Object; }[] = [
-    { text: 'Ellipsis', value: 'Ellipsis' },
-    { text: 'Clip', value: 'Clip' },
-    { text: 'EllipsisWithTooltip', value: 'EllipsisWithTooltip' }
-  ];
-  const valueChange = ((args: ChangeEventArgs) => {
-    (grid as GridComponent).getColumnByField('Mainfieldsofinvention').clipMode = args.value as ClipMode;
-    (grid as GridComponent).refreshColumns();
-
-  })
-  return (
-    <div>
-      <label style={{ padding: '30px 17px 0 0' }}> Change the clip mode: </label>
-      <DropDownListComponent dataSource={dropDownData} index={0} width="100" change={valueChange}></DropDownListComponent>
-      <GridComponent dataSource={inventoryData} height={315} ref={g => grid = g} allowPaging={true}>
-        <ColumnsDirective>
-          <ColumnDirective field='Inventor' headerText='Inventor' width='100' />
-          <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' textAlign='Right' width='100' />
-          <ColumnDirective field='Country' headerText='Country' width='100' />
-          <ColumnDirective field='Mainfieldsofinvention' headerText='Main fields of invention' width='140' />
-        </ColumnsDirective>
-      </GridComponent></div>)
-}
-export default App;
-{% endraw %}
+{% include code-snippet/grid/autowrap-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/autowrap-cs3/app/datasource.jsx %}
@@ -579,7 +279,7 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/autowrap-cs3" %}
+{% previewsample "page.domainurl/code-snippet/grid/autowrap-cs3" %}
 
 > * By default, [clipMode](https://ej2.syncfusion.com/react/documentation/api/grid/column#clipmode) value is `Ellipsis`.
 > * When the [width](https://ej2.syncfusion.com/react/documentation/api/grid/column#width) property is set for a column, the clip mode feature is automatically applied to that column if content exceeds the specified width.
@@ -709,76 +409,10 @@ The following example demonstrates setting the [gridLines](https://ej2.syncfusio
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% raw %}
-
-import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
-import React, { useState } from 'react';
-import { inventoryData } from './datasource';
-
-function App() {
-  const [gridLine, setGridLine] = useState('Default');
-  const dropDownData = [
-    { text: 'Default', value: 'Default' },
-    { text: 'Both', value: 'Both' },
-    { text: 'Horizontal', value: 'Horizontal' },
-    { text: 'Vertical', value: 'Vertical' },
-    { text: 'None', value: 'None' }
-  ];
-  const valueChange = ((args) => {
-    setGridLine(args.value);
-  })
-  return (
-    <div>
-      <label style={{ padding: '30px 17px 0 0' }}>Change the grid lines:</label>
-      <DropDownListComponent dataSource={dropDownData} index={0} width="100" change={valueChange}></DropDownListComponent>
-      <GridComponent dataSource={inventoryData} height={315} gridLines={gridLine}>
-        <ColumnsDirective>
-          <ColumnDirective field='Inventor' headerText='Inventor' width='100' />
-          <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' textAlign='Right' width='100' />
-          <ColumnDirective field='Country' headerText='Country' width='100' />
-          <ColumnDirective field='Mainfieldsofinvention' headerText='Main fields of invention' width='140' />
-        </ColumnsDirective>
-      </GridComponent></div>)
-}
-export default App;
-{% endraw %}
+{% include code-snippet/grid/autowrap-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% raw %}
-
-import { ColumnDirective, ColumnsDirective, GridComponent, GridLine } from '@syncfusion/ej2-react-grids';
-import { DropDownListComponent, ChangeEventArgs } from '@syncfusion/ej2-react-dropdowns';
-import React, { useState } from 'react';
-import { inventoryData } from './datasource';
-
-function App() {
-  const [gridLine, setGridLine] = useState<GridLine>('Default');
-  const dropDownData: any = [
-    { text: 'Default', value: 'Default' },
-    { text: 'Both', value: 'Both' },
-    { text: 'Horizontal', value: 'Horizontal' },
-    { text: 'Vertical', value: 'Vertical' },
-    { text: 'None', value: 'None' }
-  ];
-  const valueChange = ((args: ChangeEventArgs) => {
-    setGridLine(args.value);
-  })
-  return (
-    <div>
-      <label style={{ padding: '30px 17px 0 0' }}>Change the grid lines:</label>
-      <DropDownListComponent dataSource={dropDownData} index={0} width="100" change={valueChange}></DropDownListComponent>
-      <GridComponent dataSource={inventoryData} height={315} gridLines={gridLine}>
-        <ColumnsDirective>
-          <ColumnDirective field='Inventor' headerText='Inventor' width='100' />
-          <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' textAlign='Right' width='100' />
-          <ColumnDirective field='Country' headerText='Country' width='100' />
-          <ColumnDirective field='Mainfieldsofinvention' headerText='Main fields of invention' width='140' />
-        </ColumnsDirective>
-      </GridComponent></div>)
-}
-export default App;
-{% endraw %}
+{% include code-snippet/grid/autowrap-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/autowrap-cs2/app/datasource.jsx %}
@@ -788,7 +422,7 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/autowrap-cs2" %}
+{% previewsample "page.domainurl/code-snippet/grid/autowrap-cs2" %}
 
 > By default, the grid renders with `Default` mode.
 

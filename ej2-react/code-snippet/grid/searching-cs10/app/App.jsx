@@ -9,8 +9,10 @@ function App() {
         grid.searchSettings.ignoreAccent = args.checked;
     }
     return (<div>
-        <label style={{ padding: "10px 10px" }}>Enable or disable ignoreAccent property</label>
-        <SwitchComponent id='switch' change={valueChange}></SwitchComponent>
+        <div id="switchContainer">
+            <label>Enable or disable ignoreAccent property:</label>
+            <SwitchComponent id='switch' change={valueChange}></SwitchComponent>
+        </div>
         <GridComponent ref={g => grid = g} dataSource={data} height={280} toolbar={['Search']} >
             <ColumnsDirective>
                 <ColumnDirective field='CategoryName' headerText='Category Name' width='100' textAlign="Right" />

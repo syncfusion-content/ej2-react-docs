@@ -18,7 +18,7 @@ function App() {
         (grid as GridComponent).changeDataSource(data.slice(0, count + 100), newColumn as Object[]);
     }
     return <div>
-        <ButtonComponent onClick={onClick}>Click Button</ButtonComponent>
+        <ButtonComponent id="button" onClick={onClick}>Click Button</ButtonComponent>
         <GridComponent dataSource={data} height={280} ref={g => grid = g} allowPaging={true} pageSettings={pageSettings}>
             <ColumnsDirective>
                 <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />

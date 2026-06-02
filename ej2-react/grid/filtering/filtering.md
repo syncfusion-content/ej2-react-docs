@@ -265,76 +265,10 @@ Below is an example demonstrating how to toggle case sensitivity.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% raw %}
-import { ChangeEventArgs, SwitchComponent } from '@syncfusion/ej2-react-buttons';
-import { ColumnDirective, ColumnsDirective, FilterSettingsModel } from '@syncfusion/ej2-react-grids';
-import { Filter, GridComponent, Inject } from '@syncfusion/ej2-react-grids'
-import * as React from 'react';
-import { data } from './datasource';
-
-function App() {
-  let grid;
-  const filterSettings = { enableCaseSensitivity: false };
-  const onToggleCaseSensitive = (args) => {
-    if (args.checked) {
-      grid.filterSettings.enableCaseSensitivity = true;
-    }
-    else {
-    grid.filterSettings.enableCaseSensitivity = false;
-    }
-  }
-  return (<div>
-    <label style={{marginTop:'20px'}}> Enable Case Sensitivity </label>
-    <SwitchComponent change={onToggleCaseSensitive}></SwitchComponent>
-    <GridComponent ref={g => grid = g} dataSource={data} allowFiltering={true} filterSettings={filterSettings} >
-      <ColumnsDirective>
-        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
-        <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
-        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
-        <ColumnDirective field='ShipCity' headerText='Ship City' width='100' textAlign="Right" />
-        <ColumnDirective field='ShipRegion' headerText='Ship Region' width='100' textAlign="Right" />
-      </ColumnsDirective>
-      <Inject services={[Filter]} />
-    </GridComponent></div>)
-};
-export default App;
-{% endraw %}
+{% include code-snippet/grid/filter-cs12/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% raw %}
-import { ChangeEventArgs, SwitchComponent } from '@syncfusion/ej2-react-buttons';
-import { ColumnDirective, ColumnsDirective, FilterSettingsModel } from '@syncfusion/ej2-react-grids';
-import { Filter, GridComponent, Inject } from '@syncfusion/ej2-react-grids'
-import * as React from 'react';
-import { data } from './datasource';
-
-function App() {
-  let grid: GridComponent | null;
-  const filterSettings: FilterSettingsModel = { enableCaseSensitivity: false };
-  const onToggleCaseSensitive = (args: ChangeEventArgs) => {
-    if (args.checked) {
-      (grid as GridComponent).filterSettings.enableCaseSensitivity = true;
-    }
-    else {
-      (grid as GridComponent).filterSettings.enableCaseSensitivity = false;
-    }
-  }
-  return (<div>
-    <label style={{marginTop:'20px'}}> Enable Case Sensitivity </label>
-    <SwitchComponent change={onToggleCaseSensitive}></SwitchComponent>
-    <GridComponent ref={g => grid = g} dataSource={data} allowFiltering={true} filterSettings={filterSettings} >
-      <ColumnsDirective>
-        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
-        <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
-        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
-        <ColumnDirective field='ShipCity' headerText='Ship City' width='100' textAlign="Right" />
-        <ColumnDirective field='ShipRegion' headerText='Ship Region' width='100' textAlign="Right" />
-      </ColumnsDirective>
-      <Inject services={[Filter]} />
-    </GridComponent></div>)
-};
-export default App;
-{% endraw %}
+{% include code-snippet/grid/filter-cs12/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/filter-cs12/app/datasource.jsx %}
@@ -344,7 +278,7 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/filter-cs12" %}
+{% previewsample "page.domainurl/code-snippet/grid/filter-cs12" %}
 
 ## Enable different filter for a column
 
@@ -369,7 +303,7 @@ Here's an example where the menu filter is enabled by default, but filter types 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/filter-cs13" %}
+{% previewsample "page.domainurl/code-snippet/grid/filter-cs13" %}
 
 ## Change default filter operator for particular column
 
@@ -390,7 +324,7 @@ The Grid provides flexibility to change the default filter operator for a partic
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/filter-cs14" %}
+{% previewsample "page.domainurl/code-snippet/grid/filter-cs14" %}
 
 ## Programmatic filtering
 
@@ -413,7 +347,7 @@ The following example demonstrates programmatic filtering using single and multi
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/filter-cs22" %}
+{% previewsample "page.domainurl/code-snippet/grid/filter-cs22" %}
 
 ## How to get filtered records
 
@@ -461,8 +395,8 @@ function App() {
   }
   return (<div><div id='msgWarning' style={{ display: isMsgWarningVisible ? 'block' : 'none' }}>
     <MessageComponent content="No Records" cssClass="e-content-center" severity="Warning"></MessageComponent></div>
-    <ButtonComponent cssClass="e-success" onClick={getFilter}>Get Filtered Data</ButtonComponent>
-    <ButtonComponent cssClass='e-danger' onClick={clear}>Clear</ButtonComponent>
+    <ButtonComponent cssClass="e-success" id="filterBtn" onClick={getFilter}>Get Filtered Data</ButtonComponent>
+    <ButtonComponent cssClass='e-danger' id="clearBtn" onClick={clear}>Clear</ButtonComponent>
     <GridComponent ref={g => grid = g} dataSource={data} allowFiltering={true} pageSettings={pageSettings} allowPaging={true}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
@@ -527,8 +461,8 @@ function App() {
   }
   return (<div><div id='msgWarning' style={{ display: isMsgWarningVisible ? 'block' : 'none' }}>
     <MessageComponent content="No Records" cssClass="e-content-center" severity="Warning"></MessageComponent></div>
-    <ButtonComponent cssClass="e-success" onClick={getFilter}>Get Filtered Data</ButtonComponent>
-    <ButtonComponent cssClass='e-danger' onClick={clear}>Clear</ButtonComponent>
+    <ButtonComponent cssClass="e-success" id="filterBtn" onClick={getFilter}>Get Filtered Data</ButtonComponent>
+    <ButtonComponent cssClass='e-danger' id="clearBtn" onClick={clear}>Clear</ButtonComponent>
     <GridComponent ref={g => grid = g} dataSource={data} allowFiltering={true} pageSettings={pageSettings} allowPaging={true}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
@@ -605,7 +539,7 @@ The Grid provides a [clearFiltering](https://ej2.syncfusion.com/react/documentat
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/filter-cs15" %}
+{% previewsample "page.domainurl/code-snippet/grid/filter-cs15" %}
 
 ## Filtering events
 

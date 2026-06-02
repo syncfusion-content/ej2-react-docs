@@ -202,64 +202,10 @@ Here is an example that demonstrates enabling or disabling the Row hover feature
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% raw %}
-import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
-import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import React, { useState } from 'react';
-import { data } from './datasource';
-
-function App() {
-  const [enableRowHover, setEnableRowHover] = useState(true);
-  const changeValue = (() => {
-    setEnableRowHover(!enableRowHover);
-  });
-  return (
-    <div>
-      <label style={{ padding: "10px 10px" }}>
-        Enable/Disable Row Hover
-      </label>
-      <SwitchComponent id="switch" checked={enableRowHover} change={changeValue}></SwitchComponent>
-      <GridComponent dataSource={data} enableHover={enableRowHover}>
-        <ColumnsDirective>
-          <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign='Right' />
-          <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
-          <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign='Right' />
-          <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' textAlign='Right' />
-        </ColumnsDirective>
-      </GridComponent></div>)
-}
-export default App;
-{% endraw %}
+{% include code-snippet/grid/row-hover-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% raw %}
-import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
-import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import React, { useState } from 'react';
-import { data } from './datasource';
-
-function App() {
-  const [enableRowHover, setEnableRowHover] = useState(true);
-  const changeValue = (() => {
-    setEnableRowHover(!enableRowHover);
-  });
-  return (
-    <div>
-      <label style={{ padding: "10px 10px" }}>
-        Enable/Disable Row Hover
-      </label>
-      <SwitchComponent id="switch" checked={enableRowHover} change={changeValue}></SwitchComponent>
-      <GridComponent dataSource={data} enableHover={enableRowHover}>
-        <ColumnsDirective>
-          <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign='Right' />
-          <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
-          <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign='Right' />
-          <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' textAlign='Right' />
-        </ColumnsDirective>
-      </GridComponent></div>)
-}
-export default App;
-{% endraw %}
+{% include code-snippet/grid/row-hover-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/row-hover-cs1/app/datasource.jsx %}
@@ -269,7 +215,7 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/row-hover-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/row-hover-cs1" %}
 
 > The `enableHover` property applies to the entire grid, not individual rows or columns.
 

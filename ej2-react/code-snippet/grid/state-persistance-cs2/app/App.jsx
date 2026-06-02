@@ -25,7 +25,7 @@ function App() {
       <p id='message'>{message}</p>
       <div>
       {version.map((v) => (
-        <ButtonComponent key={v} onClick={() => clickHandler(`v.${v}`)}>Version{v}</ButtonComponent>
+        <ButtonComponent className="button" key={v} onClick={() => clickHandler(`v.${v}`)}>Version{v}</ButtonComponent>
       ))}
       </div>
       

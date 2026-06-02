@@ -13,7 +13,7 @@ function App() {
         //reloads the page
         location.reload();
     }
-    return (<div> <ButtonComponent onClick={clickHandler}>Restore to initial state</ButtonComponent>
+    return (<div> <ButtonComponent id="restoreButton" onClick={clickHandler}>Restore to initial state</ButtonComponent>
         <GridComponent id="Grid" dataSource={data} allowFiltering={true} allowPaging={true} enablePersistence={true} height={230}
             ref={g => grid = g}>
             <ColumnsDirective>

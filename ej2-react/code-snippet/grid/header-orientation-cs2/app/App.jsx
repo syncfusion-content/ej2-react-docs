@@ -47,8 +47,10 @@ function App() {
         args.cell.cellHeight = textWidth;
     };
     return (<div>
-        <label>Select a degree:</label>
-        <DropDownListComponent style={{ marginLeft: "20px" }} placeholder="Select a degree" id="ddlelement" dataSource={degree} ref={(scope) => { dropDownListObject = scope; }} width={150}></DropDownListComponent>
+        <div id="inputContainer">
+            <label id="dropdownLabel">Select a degree: </label>
+            <DropDownListComponent placeholder="Select a degree" id="ddlelement" dataSource={degree} ref={(scope) => { dropDownListObject = scope; }} width={150}></DropDownListComponent>
+        </div>
         <GridComponent id='grid' dataSource={data} height={120} created={setHeaderHeight} allowExcelExport={true} excelQueryCellInfo={excelQueryCellInfo} excelHeaderQueryCellInfo={excelHeaderQueryCellInfo} toolbar={toolbar} toolbarClick={toolbarClick} ref={g => grid = g}>
             <ColumnsDirective>
                 <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />

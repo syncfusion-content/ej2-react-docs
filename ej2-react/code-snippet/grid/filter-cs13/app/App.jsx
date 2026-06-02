@@ -26,11 +26,13 @@ function App() {
     column.filter = columnFilterSettings;
     grid.refreshColumns();
   }
-  return (<div><div className="input-container">
-    <label><b>Select Column</b> </label>
-    <DropDownListComponent ref={field => fieldDrop = field} width={120} onChange={onFieldChange} placeholder="Eg: OrderID"></DropDownListComponent>
-    <label><b>Select Filter Type</b> </label>
-    <DropDownListComponent ref={type => typeDrop = type} width={120} onChange={onTypeChange} placeholder="Eg: Excel" enabled={false}></DropDownListComponent></div>
+  return (<div>
+    <div className="input-container">
+      <label className="dropdownLabel"><b>Select Column</b> </label>
+      <DropDownListComponent id="fieldDrodown" ref={field => fieldDrop = field} width={120} onChange={onFieldChange} placeholder="Eg: OrderID"></DropDownListComponent>
+      <label className="dropdownLabel"><b>Select Filter Type</b> </label>
+      <DropDownListComponent ref={type => typeDrop = type} width={120} onChange={onTypeChange} placeholder="Eg: Excel" enabled={false}></DropDownListComponent>
+    </div>
     <GridComponent ref={g => grid = g} dataSource={data} allowFiltering={true} filterSettings={filterSettings} dataBound={dataBound} >
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />

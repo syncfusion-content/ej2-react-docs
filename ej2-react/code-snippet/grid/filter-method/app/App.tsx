@@ -22,9 +22,9 @@ function App() {
   }
   return (
     <div>
-      <div style={{marginBottom: "20px"}}>
+      <div style={{margin: "5px"}}>
         <ButtonComponent id='performFilter' onClick={btnClick}>Filter Customer ID Column</ButtonComponent>
-        <ButtonComponent  style={{marginLeft: "10px" }} id='clearFilter' onClick={btnClick}>Clear Filter</ButtonComponent>
+        <ButtonComponent  style={{marginLeft: "5px" }} id='clearFilter' onClick={btnClick}>Clear Filter</ButtonComponent>
       </div>
       <GridComponent  ref={g => grid = g} dataSource={data} filterSettings={FilterOptions} allowFiltering={true}
         height={273}>

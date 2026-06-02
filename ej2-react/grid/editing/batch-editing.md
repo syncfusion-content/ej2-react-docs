@@ -99,78 +99,10 @@ Here's an example that demonstrates how to enable adding new rows at the bottom 
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% raw %}
-import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
-import { ColumnDirective, ColumnsDirective, GridComponent, Edit, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
-import * as React from 'react';
-import { data } from './datasource';
-
-function App() {
-  let grid;
-  const editOptions = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Batch' };
-  const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
-  const positionData = [
-    { text: 'Top', value: 'Top' },
-    { text: 'Bottom', value: 'Bottom' },
-  ];
-  const orderIDRules = { required: true, number: true };
-  const customerIDRules = { required: true, minLength: 3 };
-  const freightIDRules = { required: true, min: 1, max: 1000 };
-  const changePosition = (args) => {
-    grid.editSettings.newRowPosition = args.value;
-  }
-  return (<div>
-    <label style={{ padding: "30px 17px 0 0" }}> Select new row position:</label>
-    <DropDownListComponent index={0} width="100" dataSource={positionData} change={changePosition}></DropDownListComponent>
-    <GridComponent ref={g => grid = g} dataSource={data} editSettings={editOptions} toolbar={toolbar} height={300}>
-      <ColumnsDirective>
-        <ColumnDirective field='OrderID' headerText='Order ID' validationRules={orderIDRules} width='100' textAlign="Right" isPrimaryKey={true} />
-        <ColumnDirective field='CustomerID' validationRules={customerIDRules} headerText='Customer ID' width='120' />
-        <ColumnDirective field='Freight' headerText='Freight' width='120' format="C2" editType='numericedit' textAlign="Right" validationRules={freightIDRules} />
-        <ColumnDirective field='ShipCountry' headerText='Ship Country' editType='dropdownedit' width='150' />
-      </ColumnsDirective>
-      <Inject services={[Edit, Toolbar]} />
-    </GridComponent></div>)
-};
-export default App;
-{% endraw %}
+{% include code-snippet/grid/edit-batch-add-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% raw %}
-import { DropDownListComponent, ChangeEventArgs } from '@syncfusion/ej2-react-dropdowns';
-import { ColumnDirective, ColumnsDirective, GridComponent, Edit, EditSettingsModel, Inject, Toolbar, ToolbarItems, Grid } from '@syncfusion/ej2-react-grids';
-import * as React from 'react';
-import { data } from './datasource';
-
-function App() {
-  let grid: GridComponent | null;
-  const editOptions: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Batch' };
-  const toolbar: ToolbarItems[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
-  const positionData: { [key: string]: Object; }[] = [
-    { text: 'Top', value: 'Top' },
-    { text: 'Bottom', value: 'Bottom' },
-  ];
-  const orderIDRules = { required: true, number: true };
-  const customerIDRules = { required: true, minLength: 3 };
-  const freightIDRules = { required: true, min: 1, max: 1000 };
-  const changePosition = (args: ChangeEventArgs) => {
-    (grid as GridComponent).editSettings.newRowPosition = args.value;
-  }
-  return (<div>
-    <label style={{ padding: "30px 17px 0 0" }}> Select new row position:</label>
-    <DropDownListComponent index={0} width="100" dataSource={positionData} change={changePosition}></DropDownListComponent>
-    <GridComponent ref={g => grid = g} dataSource={data} editSettings={editOptions} toolbar={toolbar} height={300}>
-      <ColumnsDirective>
-        <ColumnDirective field='OrderID' headerText='Order ID' validationRules={orderIDRules} width='100' textAlign="Right" isPrimaryKey={true} />
-        <ColumnDirective field='CustomerID' validationRules={customerIDRules} headerText='Customer ID' width='120' />
-        <ColumnDirective field='Freight' headerText='Freight' width='120' format="C2" editType='numericedit' textAlign="Right" validationRules={freightIDRules} />
-        <ColumnDirective field='ShipCountry' headerText='Ship Country' editType='dropdownedit' width='150' />
-      </ColumnsDirective>
-      <Inject services={[Edit, Toolbar]} />
-    </GridComponent></div>)
-};
-export default App;
-{% endraw %}
+{% include code-snippet/grid/edit-batch-add-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/edit-batch-add-cs1/app/datasource.jsx %}
@@ -180,7 +112,7 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/edit-batch-add-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/edit-batch-add-cs1" %}
 
 > - **Bottom position**: <kbd>Tab</kbd> moves between cells or rows in edit mode. Data entry in each cell with <kbd>Tab</kbd> press automatically creates new rows below the current row, allowing convenient addition of multiple rows without leaving edit mode.
 > - **Top position**: Grid displays a blank row form at the top by default for new record entry. Upon saving or updating, the record inserts at the bottom of the grid, ensuring the new record appears at the end of the existing dataset.
@@ -204,98 +136,10 @@ Here's an example that demonstrates how to enable/disable the confirmation dialo
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% raw %}
-import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
-import { ColumnDirective, ColumnsDirective, GridComponent, Edit, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
-import React, { useState } from 'react';
-import { data } from './datasource';
-
-function App() {
-  let grid;
-  const editOptions = {
-    allowAdding: true,
-    allowDeleting: true,
-    allowEditing: true,
-    mode: 'Batch',
-  };
-  const [enableShowDeleteConfirmDialog, setEnableShowDeleteConfirmDialog] = useState(false);
-  const [enableShowConfirmDialog, setEnableShowConfirmDialog] = useState(true);
-  const orderidrules = { required: true, number: true };
-  const customeridrules = { required: true };
-  const freightrules = { min: 1, max: 1000 };
-  const toggleShowDeleteConfirmDialog = () => {
-    setEnableShowDeleteConfirmDialog(grid.editSettings.showDeleteConfirmDialog = !enableShowDeleteConfirmDialog);
-  }
-  const toggleShowConfirmDialog = () => {
-    setEnableShowConfirmDialog(grid.editSettings.showConfirmDialog = !enableShowConfirmDialog);
-  }
-  const toolbarOptions = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
-  return (<div><div style={{ padding: "20px" }}>
-    <label>Enable/Disable show confirmation dialog</label>
-    <SwitchComponent checked={enableShowConfirmDialog} change={toggleShowConfirmDialog}></SwitchComponent></div>
-    <div style={{ padding: "20px" }}>
-      <label>Enable/Disable show delete confirmation dialog</label>
-      <SwitchComponent checked={enableShowDeleteConfirmDialog} change={toggleShowDeleteConfirmDialog}></SwitchComponent></div>
-    <GridComponent ref={g => grid = g} dataSource={data} editSettings={editOptions} toolbar={toolbarOptions} height={265}>
-      <ColumnsDirective>
-        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} validationRules={orderidrules} />
-        <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' validationRules={customeridrules} />
-        <ColumnDirective field='Freight' headerText='Freight' width='120' format="C2" editType='numericedit' textAlign="Right" validationRules={freightrules} />
-        <ColumnDirective field='ShipCountry' headerText='Ship Country' editType='dropdownedit' width='150' />
-      </ColumnsDirective>
-      <Inject services={[Edit, Toolbar]} />
-    </GridComponent></div>);
-}
-;
-export default App;
-{% endraw %}
+{% include code-snippet/grid/editing-cs5/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% raw %}
-import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
-import { ColumnDirective, ColumnsDirective, GridComponent, Edit, Inject, Toolbar, EditSettingsModel, ToolbarItems } from '@syncfusion/ej2-react-grids';
-import React, { useState } from 'react';
-import { data } from './datasource';
-
-function App() {
-  let grid: GridComponent | null;
-  const editOptions: EditSettingsModel = {
-    allowAdding: true,
-    allowDeleting: true,
-    allowEditing: true,
-    mode: 'Batch',
-  };
-  const [enableShowDeleteConfirmDialog, setEnableShowDeleteConfirmDialog] = useState(false);
-  const [enableShowConfirmDialog, setEnableShowConfirmDialog] = useState(true);
-  const orderidrules: object = { required: true, number: true };
-  const customeridrules: object = { required: true };
-  const freightrules: object = { min: 1, max: 1000 };
-  const toggleShowDeleteConfirmDialog = () => {
-    setEnableShowDeleteConfirmDialog((grid as GridComponent).editSettings.showDeleteConfirmDialog = !enableShowDeleteConfirmDialog);
-  }
-  const toggleShowConfirmDialog = () => {
-    setEnableShowConfirmDialog((grid as GridComponent).editSettings.showConfirmDialog = !enableShowConfirmDialog);
-  }
-  const toolbarOptions: ToolbarItems[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
-  return (<div><div style={{ padding: "5px" }}>
-    <label>Enable/Disable show confirmation dialog</label>
-    <SwitchComponent checked={enableShowConfirmDialog} change={toggleShowConfirmDialog}></SwitchComponent></div>
-    <div style={{ padding: "5px" }}>
-      <label>Enable/Disable show delete confirmation dialog</label>
-      <SwitchComponent checked={enableShowDeleteConfirmDialog} change={toggleShowDeleteConfirmDialog}></SwitchComponent></div>
-    <GridComponent ref={g => grid = g} dataSource={data} editSettings={editOptions} toolbar={toolbarOptions} height={265}>
-      <ColumnsDirective>
-        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} validationRules={orderidrules} />
-        <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' validationRules={customeridrules} />
-        <ColumnDirective field='Freight' headerText='Freight' width='120' format="C2" editType='numericedit' textAlign="Right" validationRules={freightrules} />
-        <ColumnDirective field='ShipCountry' headerText='Ship Country' editType='dropdownedit' width='150' />
-      </ColumnsDirective>
-      <Inject services={[Edit, Toolbar]} />
-    </GridComponent></div>);
-}
-;
-export default App;
-{% endraw %}
+{% include code-snippet/grid/editing-cs5/app/Aapp.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/editing-cs5/app/datasource.jsx %}
@@ -305,7 +149,7 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/editing-cs5" %}
+{% previewsample "page.domainurl/code-snippet/grid/editing-cs5" %}
 
 > * `editSettings.showConfirmDialog` requires [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) = `Batch`.
 > * When set to `false`, no confirmation dialog displays during batch editing.
