@@ -18,8 +18,10 @@ function App() {
     grid.editSettings.newRowPosition = args.value;
   }
   return (<div>
-    <label style={{ padding: "30px 17px 0 0" }}> Select new row position:</label>
-    <DropDownListComponent index={0} width="100" dataSource={positionData} change={changePosition}></DropDownListComponent>
+    <div className='input-container'>
+      <label id="dropdownLabel"> Select new row position:</label>
+      <DropDownListComponent index={0} width="100" dataSource={positionData} change={changePosition}></DropDownListComponent>
+    </div>
     <GridComponent ref={g => grid = g} dataSource={data} editSettings={editOptions} toolbar={toolbar} height={250}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' validationRules={orderIDRules} width='100' textAlign="Right" isPrimaryKey={true} />

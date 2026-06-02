@@ -16,8 +16,10 @@ function App() {
     }
   }
   return (<div>
-    <label style={{marginTop:'20px'}}> Enable Case Sensitivity </label>
-    <SwitchComponent change={onToggleCaseSensitive}></SwitchComponent>
+    <div id="switchContainer">
+      <label id="switchLabel"> Enable Case Sensitivity </label>
+      <SwitchComponent change={onToggleCaseSensitive}></SwitchComponent>
+    </div>
     <GridComponent ref={g => grid = g} dataSource={data} allowFiltering={true} filterSettings={filterSettings} >
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />

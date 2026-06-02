@@ -69,8 +69,10 @@ function App() {
     grid.detailRowModule.expand(textBox.value);
   }
   return (<div>
-    <TextBoxComponent ref={t =>textBox =t} placeholder='Enter the row Index' width="250px" floatLabelType='Auto'></TextBoxComponent>
-    <ButtonComponent id='sample' onClick={expand}>Expand</ButtonComponent>
+    <div className="inputContainer">
+      <TextBoxComponent ref={t =>textBox =t} placeholder='Enter the row Index' width="250px" floatLabelType='Auto'></TextBoxComponent>
+      <ButtonComponent id='sample' onClick={expand}>Expand</ButtonComponent>
+    </div>
     <GridComponent ref={g => grid = g} dataSource={employeeData} detailTemplate={gridTemplate} height='315'>
       <ColumnsDirective>
         <ColumnDirective field='FirstName' headerText='First Name' width='140' />

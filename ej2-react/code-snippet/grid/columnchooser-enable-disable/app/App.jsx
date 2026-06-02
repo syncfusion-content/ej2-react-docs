@@ -12,8 +12,10 @@ function App() {
     }
     return (
         <div>
-            <label style={{ padding: "30px 17px 0 0" }}>Enable and disable search option</label>
-            <SwitchComponent change={toggleColumnSelection}></SwitchComponent>
+            <div id="switchContainer">
+                <label>Enable and disable search option</label>
+                <SwitchComponent checked={true} change={toggleColumnSelection}></SwitchComponent>
+            </div>
             <GridComponent dataSource={data} toolbar={toolbarOptions} height={260} showColumnChooser={true}  ref={(g) => (grid = g)} >
                 <ColumnsDirective>
                     <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' showInColumnChooser={false} />

@@ -9,8 +9,10 @@ function App() {
     grid.enableStickyHeader = args.checked;
   }
   return (<div>
-    <label style={{ padding: "30px 20px 0 0" }}>Enable/Disable Sticky Header </label>
-    <SwitchComponent change={onChange}></SwitchComponent>
+    <div id="switchContainer">
+      <label>Enable/Disable Sticky Header </label>
+      <SwitchComponent change={onChange}></SwitchComponent>
+    </div>
     <GridComponent ref={g => grid = g} dataSource={data} >
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />

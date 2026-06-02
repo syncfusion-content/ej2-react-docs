@@ -16,8 +16,8 @@ function App() {
     }
   }
   return (<div>
-    <ButtonComponent cssClass='e-info' onClick={show}>Show</ButtonComponent>
-    <ButtonComponent style={{marginLeft:'20px'}} cssClass='e-info' onClick={hide}>Hide</ButtonComponent>
+    <ButtonComponent id= "show" cssClass='e-info' onClick={show}>Show</ButtonComponent>
+    <ButtonComponent id="hide"  cssClass='e-info' onClick={hide}>Hide</ButtonComponent>
     <GridComponent dataSource={data} height={295} ref={g => grid = g}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />

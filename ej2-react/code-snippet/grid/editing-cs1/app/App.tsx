@@ -48,7 +48,7 @@ function App() {
         }
     }
     return <div>
-        <ButtonComponent onClick={changeDatasource}>Change Datasource</ButtonComponent>
+        <ButtonComponent id="button" onClick={changeDatasource}>Change Datasource</ButtonComponent>
         <GridComponent dataSource={data} height={280} ref={g => grid = g}>
             <ColumnsDirective>
                 <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />

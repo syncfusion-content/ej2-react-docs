@@ -9,12 +9,14 @@ function App() {
     let grid: GridComponent | null;
     const toolbarOptions: ToolbarItems[] = ['ColumnChooser'];
     const toggleColumnSelection = (args: ChangeEventArgs) => {
-        (grid as GridComponent).selectionSettings.enableToggle = args.checked;
+        (grid as GridComponent).columnChooserSettings.enableSearching = args.checked;
       }
       return (
         <div>
-            <label style={{ padding: "30px 17px 0 0" }}>Enable and disable search option</label>
-            <SwitchComponent checked={true} change={toggleColumnSelection}></SwitchComponent>
+            <div id="switchContainer">
+                <label>Enable and disable search option</label>
+                <SwitchComponent checked={true} change={toggleColumnSelection}></SwitchComponent>
+            </div>
             <GridComponent dataSource={data} toolbar={toolbarOptions} height={260} showColumnChooser={true} ref={(g) => (grid = g)}>
                 <ColumnsDirective>
                     <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' showInColumnChooser={false} />

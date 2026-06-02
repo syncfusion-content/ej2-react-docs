@@ -11,8 +11,10 @@ function App() {
         setPageSize(newValue);
     }
     return (<div>
-        <label style={{ padding: "30px 17px 0 0" }}>Select page size:</label>
-        <NumericTextBoxComponent placeholder='select container height' format='####.##' min={150} step={50} width={200} change={calculatePageSize}></NumericTextBoxComponent>
+        <div id="inputContainer">
+            <label id="dropdownLabel">Select page size:</label>
+            <NumericTextBoxComponent placeholder='select container height' format='####.##' min={150} step={50} width={210} change={calculatePageSize}></NumericTextBoxComponent>
+        </div>
         <GridComponent dataSource={data} ref={g => grid = g} allowPaging={true} pageSettings={pageSize}>
             <ColumnsDirective>
                 <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" isPrimaryKey={true} />

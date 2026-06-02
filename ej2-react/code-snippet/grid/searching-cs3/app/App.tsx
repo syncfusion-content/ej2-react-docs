@@ -19,7 +19,7 @@ function App() {
         <span className="e-float-line" />
         <label className="e-float-text">Search text</label>
       </div>
-      <ButtonComponent onClick={clickHandler}>Search</ButtonComponent>
+      <ButtonComponent id="button" onClick={clickHandler}>Search</ButtonComponent>
       <GridComponent dataSource={employeeData} height={260} ref={g => grid = g}>
         <ColumnsDirective>
           <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign='Right' />

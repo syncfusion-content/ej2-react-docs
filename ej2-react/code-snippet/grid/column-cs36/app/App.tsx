@@ -11,7 +11,7 @@ function App() {
     (grid as GridComponent).columns.push(obj); //you can add the columns by using the Grid columns method
     (grid as GridComponent).refreshColumns();
   }
-  return (<div> <ButtonComponent onClick={addColumn}>Add Columns</ButtonComponent>
+  return (<div> <ButtonComponent className="button" onClick={addColumn}>Add Columns</ButtonComponent>
     <GridComponent id="Grid" dataSource={data} allowPaging={true} enablePersistence={true} height={280}
       ref={g => grid = g}>
       <ColumnsDirective>

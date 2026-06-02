@@ -11,8 +11,10 @@ function App() {
         setFilterSettings({ showFilterBarOperator: args.checked });
     }
     return (<div>
-        <label><b> Show filter bar operator </b></label>
-        <SwitchComponent change={onChange}></SwitchComponent>
+        <div id="switchContainer">
+            <label id="switchLabel">Show filter bar operator</label>
+            <SwitchComponent change={onChange}></SwitchComponent>
+        </div>
         <GridComponent dataSource={data} allowFiltering={true} allowPaging={true} pageSettings={pageSettings} filterSettings={filterSettings} height={240}>
             <ColumnsDirective>
                 <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />

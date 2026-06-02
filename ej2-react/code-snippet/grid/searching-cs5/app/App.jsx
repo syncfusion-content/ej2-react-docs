@@ -18,7 +18,7 @@ function App() {
         }
     };
     return (<div>
-    <ButtonComponent onClick={clickHandler}>Clear Search</ButtonComponent>
+    <ButtonComponent id="button" onClick={clickHandler}>Clear Search</ButtonComponent>
     <GridComponent dataSource={data} toolbar={toolbarOptions} searchSettings={searchOptions} height={260} ref={g => grid = g}>
         <ColumnsDirective>
             <ColumnDirective field='OrderID' width='100' textAlign="Right"/>

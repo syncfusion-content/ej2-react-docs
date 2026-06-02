@@ -1,8 +1,8 @@
 
 
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
-import { PageSettingsModel, InfiniteScroll } from '@syncfusion/ej2-react-grids';
-import { SwitchComponent, ChangeEventArgs } from '@syncfusion/ej2-react-buttons';
+import { InfiniteScroll } from '@syncfusion/ej2-react-grids';
+import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
 import { data } from './largeData';
 

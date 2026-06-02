@@ -14,11 +14,12 @@ function App() {
   })
   return (
     <div>
-      <div>
+      <div id="switchContainer">
         <label style={{ padding: "10px 10px" }}>
           Enable or disable HTML Encode
         </label>
         <SwitchComponent id="switch" change={change}></SwitchComponent>
+      </div>
         <GridComponent ref={g => grid = g} dataSource={data} height={315}>
           <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign='Right'/>
@@ -27,6 +28,6 @@ function App() {
             <ColumnDirective field='ShipCountry' headerText='Ship Country' width='120' />
 
           </ColumnsDirective>
-        </GridComponent></div></div>)
+        </GridComponent></div>)
 }
 export default App;

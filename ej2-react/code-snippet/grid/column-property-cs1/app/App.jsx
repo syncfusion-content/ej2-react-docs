@@ -3,9 +3,23 @@ import * as React from 'react';
 import { data } from './datasource';
 
 function App() {
+
+    let grid;
+    const change = ((args) => {
+        if (args.checked) {
+          grid.getColumnByField('ShipCity').visible = true;
+        } else {
+          grid.getColumnByField('ShipCity').visible = false;
+        }
+        grid.refreshColumns();
+    })
     return (
         <div>
-            <GridComponent dataSource={data} height={315} >
+            <div id="switchContainer">
+                <label>Show or hide Ship City column using visible property:</label>
+                <SwitchComponent id="switch" change={change}></SwitchComponent>
+            </div>
+            <GridComponent ref={g => grid = g} dataSource={data} height={315} >
                 <ColumnsDirective>
                     <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
                     <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />

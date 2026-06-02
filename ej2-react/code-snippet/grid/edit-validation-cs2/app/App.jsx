@@ -55,8 +55,8 @@ function App() {
     }
   }
   return (<div>
-    <div style={{ padding: '10px'}}>
-      <CheckBoxComponent ref={c => checkBox = c} label='Enable/Disable validation rule for customerID column' checked={true} change={checkboxChange}></CheckBoxComponent>
+    <div className='inputContainer'>
+      <CheckBoxComponent ref={c => checkBox = c} label='Enable/Disable validation rule for Customer ID column' checked={true} change={checkboxChange}></CheckBoxComponent>
     </div>
     <GridComponent ref={g => grid = g} dataSource={data} editSettings={editOptions}
       toolbar={toolbarOptions} height={265} actionComplete={onActionComplete}>

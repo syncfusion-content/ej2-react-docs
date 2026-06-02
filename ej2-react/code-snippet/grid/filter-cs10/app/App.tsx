@@ -33,8 +33,8 @@ function App() {
   }
   return (<div><div id='msgWarning' style={{ display: isMsgWarningVisible ? 'block' : 'none' }}>
     <MessageComponent content="No Records" cssClass="e-content-center" severity="Warning"></MessageComponent></div>
-    <ButtonComponent cssClass="e-success" onClick={getFilter}>Get Filtered Data</ButtonComponent>
-    <ButtonComponent cssClass='e-danger' onClick={clear}>Clear</ButtonComponent>
+    <ButtonComponent cssClass="e-success" id="filterBtn" onClick={getFilter}>Get Filtered Data</ButtonComponent>
+    <ButtonComponent cssClass='e-danger' id="clearBtn" onClick={clear}>Clear</ButtonComponent>
     <GridComponent ref={g => grid = g} dataSource={data} allowFiltering={true} pageSettings={pageSettings} allowPaging={true}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
