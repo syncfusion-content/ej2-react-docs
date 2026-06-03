@@ -1,5 +1,3 @@
-{% raw %}
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { DiagramComponent, Inject, NodeModel, ConnectorModel, DataBinding,
@@ -83,5 +81,3 @@ export default function App() {
 // Render the App component into the 'diagram' element in the DOM
 const root = ReactDOM.createRoot(document.getElementById("diagram") as HTMLElement);
 root.render(<App />);
-
-{% endraw %}

@@ -12,106 +12,51 @@ domainurl: ##DomainURL##
 
 Many developers use AI assistants to accelerate their Syncfusion development workflows. However, without proper context, AI generates code that appears structurally sound but fails at runtime—often due to incorrect import paths, missing `Inject` services, or deprecated API calls.
 
-The root cause is clear: AI models are trained on general React knowledge and lack familiarity with Syncfusion-specific patterns. Without direct access to the documentation, they cannot accurately model the complexities of a 145+ component library.
+The solution is straightforward: give AI access to Syncfusion documentation and it generates accurate, production-ready code.
 
-The solution is equally straightforward. When AI has access to current Syncfusion documentation and established patterns, it generates production-ready code immediately. This reduces manual corrections, speeds up debugging, and accelerates the development cycle.
+**In this guide, you'll learn:**
+- Three ways to use AI with Syncfusion (Browser, IDE, API)
+- How to get accurate code suggestions on the first try for each approach
+- Which tools (MCP Server or Component Skills) improve your results
 
-**This guide covers:**
-- Why AI suggestions fail without Syncfusion context
-- Two tools that solve this problem (MCP Server and Component Skills)
-- When to use browser AI versus IDE AI
-- How to get accurate code suggestions on the first try
-- Step-by-step setup for different scenarios
-
-This guide outlines the most suitable AI approach for different needs and explains how to configure the development environment for optimal results.
-
-Syncfusion provides two tools designed to address this challenge:
-
-## MCP Server (Model Context Protocol)
-
-MCP Server provides the AI with direct access to up-to-date Syncfusion documentation. When the AI encounters an unfamiliar component, it retrieves current information in real-time instead of guessing from outdated training data.
-
-**What it connects to:**
-- Complete documentation for all 145+ React components  
-- Live API references (properties, methods, events)
-- Current implementation patterns and best practices
-
-This ensures that IDE-based AI uses up-to-date and accurate Syncfusion information during development.
-
-[Install MCP Server](https://ej2.syncfusion.com/react/documentation/mcp-server/installation)
-
-## Component Skills
-
-Component Skills are reference documents stored within a project that enable AI to effectively build with Syncfusion. They function as structured documentation that the AI can access, interpret, and follow during development.
-
-**What they include:**
-- Best practices for each component family
-- Common configuration patterns
-- Implementation guidance for specific features (sorting, filtering, editing)
-- Data binding examples and event handling
-
-**Two key advantages:** offline availability and team consistency. Everyone's AI follows the same patterns, reducing code review friction.
-
-**Key benefit:** Offline access to Syncfusion patterns is available directly within the project, enabling consistent and accurate AI-assisted development.
-
-[Install Syncfusion Skills](https://ej2.syncfusion.com/react/documentation/skills/component-skills)
-
-## Two Ways to Use AI with Syncfusion
-
-AI is already commonly integrated into development workflows. The following sections describe effective ways to use it with Syncfusion across different development contexts:
+## Three Ways to Use AI with Syncfusion
 
 ### Browser-Based AI
 
-Browser-based AI platforms (ChatGPT, Claude, Gemini) are straightforward: submit a query, get code suggestions. No setup required.
+Browser-based AI platforms (ChatGPT, Claude, Gemini) are the simplest way to get started. Their built-in web search lets them read Syncfusion documentation in real-time.
 
 **Best for:**
 - Learning Syncfusion and exploring components
 - Quick samples and prototypes
 - Evaluating approaches before implementation
-- Documentation lookup and reference
 
-**Advantages:**
-- Zero setup required
-- AI can search and reference online docs
-- Immediate feedback and experimentation
+**How to get the best results:**
 
-**Trade-offs:**
-- Code must be manually transferred into the project
-- Session context is not retained between interactions
+1. **Include documentation links in your prompts** — Paste the specific Syncfusion docs URL for the component you need
+2. **Be specific about requirements** — Component type, features needed, framework, TypeScript or JavaScript
+3. **Reference exact documentation pages** — Direct links improve accuracy significantly
 
-**Quick win:** Adding Syncfusion documentation links to prompts significantly improves code quality.
+**Use this prompt template:**
 
-### IDE-Based AI
+```
+I need a [component name] with the following specifications:
+- [specific requirements]
+- [feature list]
 
-IDE-integrated AI tools (such as GitHub Copilot, Cursor, and Windsurf) deliver real-time code suggestions during development and are widely adopted by production teams.
+Reference: https://ej2.syncfusion.com/react/documentation/[component]/getting-started
+```
 
-**Without Syncfusion knowledge:**
-IDE AI relies on general React patterns and can't understand Syncfusion-specific requirements. Suggestions look right but fail at runtime, requiring manual fixes.
+**What to expect:**
 
-**With MCP Server or Component Skills:**
-IDE-based AI gains an understanding of Syncfusion, enabling accurate suggestions from the outset and eliminating the need for rework.
+This approach requires no initial setup and allows the AI to search and reference documentation in real-time. It provides immediate feedback and simplifies exploration of various Syncfusion components.
 
-## Choosing the Right Approach
+**Development considerations:**
 
-| Situation | Recommended Approach | Rationale |
-|---|---|---|
-| Learning Syncfusion, exploring components | Browser AI | Fast, no setup, web search finds docs |
-| Building production features in the IDE | IDE AI + MCP Server | Real-time Syncfusion knowledge, integrated workflow |
-| Quick code samples needed | Browser AI | Fastest turnaround |
-| Large team using same patterns | IDE AI + Skills | Consistent patterns across team |
-| Offline development (no internet) | IDE AI + Skills | Skills work offline |
+* Hand-off of the generated code to your project must be performed manually.
+* Conversation context is not retained across different sessions.
 
-## Practical Examples
+**Example prompt for Grid:**
 
-### Browser AI Example: Creating a Grid with Sorting and Filtering
-
-**Without documentation context:**
-A generic request like "Create a Syncfusion React Grid" generates code that looks structurally correct but fails at runtime—wrong imports, missing Inject configuration, unsupported properties.
-
-**With detailed requirements and docs:**
-Clear and specific prompts, combined with references to official documentation, enable the AI to generate accurate code.
-
-**Example prompt:**
 ```
 I need a Syncfusion React Grid component with the following specifications:
 - Display employee data (ID, Name, Email, Department)
@@ -123,21 +68,104 @@ I need a Syncfusion React Grid component with the following specifications:
 Reference: https://ej2.syncfusion.com/react/documentation/grid/getting-started
 ```
 
-The AI reads the docs link and generates correct code: proper imports, `<ColumnsDirective>` structure, required `<Inject services={[Sort, Filter, Page]} />`, CSS, and all necessary details.
+### IDE-Based AI
 
-**The pattern:** Specific requirements + documentation links = reliable code.
+IDE-integrated AI tools (GitHub Copilot, Cursor, Windsurf) provide real-time suggestions while you code. Most production teams use this approach because it integrates directly into their workflow.
 
-### IDE AI Example: Real-World Scenario
+**Best for:**
+- Production development
+- Writing code directly in your project
+- Teams needing consistent patterns
+
+**Development considerations:**
+
+Standard IDE AI tools often lack real-time access to Syncfusion-specific documentation. Integrating these tools with the proper context ensures that generated code adheres to current API standards and avoids common implementation errors.
+
+**How to get the best results:**
+
+Choose one of these two options:
+
+| Option | What it does | Best for |
+|--------|--------------|----------|
+| **MCP Server** (recommended) | Gives your IDE real-time access to Syncfusion documentation | Real-time suggestions, live updates |
+| **Component Skills** | Stores Syncfusion patterns in your project for any AI to read | Teams, offline work, consistent patterns |
+
+**Option 1: Install MCP Server**
+
+The [MCP Server installation](https://ej2.syncfusion.com/react/documentation/mcp-server/installation) establishes a direct connection between your IDE-integrated AI and the Syncfusion documentation, allowing the AI to retrieve accurate, real-time information when encountering unfamiliar components and ensuring the generation of precise and up-to-date code.
+
+**What you get:**
+- Complete documentation for all 145+ React components
+- Live API references (properties, methods, events)
+- Current implementation patterns and best practices
+
+**Option 2: Install Component Skills**
+
+The [Syncfusion Skills installation](https://ej2.syncfusion.com/react/documentation/skills/component-skills) provides reference documents stored directly in your project. These files allow the AI to read specific patterns during code generation, ensuring consistent implementation and best practices across your development team.
+
+**What they include:**
+- Best practices for each component family
+- Common configuration patterns
+- Implementation guidance for specific features
+- Data binding examples and event handling
+
+Teams benefit most from Component Skills because everyone follows the same Syncfusion patterns, it works offline without internet, and reduces code review friction on pattern-related issues.
+
+### API-Based AI
+
+If you're building tools or applications that use AI APIs (Claude API, OpenAI, Gemini) to generate Syncfusion code programmatically:
+
+**How to get the best results:**
+
+1. **Enable web search** — Use API providers that support web search as a tool
+2. **Include Syncfusion skill files** — Add skill files to your system prompt for better accuracy
+3. **Specify React components** — Always mention "React components" to avoid vanilla JS confusion
+
+**Example system prompt:**
+
+```
+You are an expert in Syncfusion React components.
+- Always use @syncfusion/ej2-react-grids packages
+- Use the <Inject> directive for services like Sort, Filter, Page
+- Import from @syncfusion/ej2-react-[package]
+- If unsure about API details, search the documentation at https://ej2.syncfusion.com/react/
+```
+
+## Choosing the Right Approach
+
+| Situation | Recommended Approach |
+|---|---|
+| Learning Syncfusion, exploring components | Browser AI |
+| Quick code samples needed | Browser AI |
+| Building production features in the IDE | IDE AI + MCP Server |
+| Large team using same patterns | IDE AI + Skills |
+| Offline development | IDE AI + Skills |
+| Building AI-powered tools | API + Web Search |
+
+## Practical Examples
+
+### Browser AI Example
+
+**Without documentation context:**
+A generic request like "Create a Syncfusion React Grid" generates code that fails at runtime—wrong imports, missing Inject configuration, unsupported properties.
+
+**With documentation links:**
+When you include the specific docs URL, the AI generates correct code: proper imports, `<ColumnsDirective>` structure, required `<Inject services={[Sort, Filter, Page]} />`, CSS, and all necessary details.
+
+### IDE AI Example
 
 **Without MCP Server:**
-When a GridComponent is autocompleted, IDE-based AI typically suggests:
-```
+When you autocomplete a GridComponent, the IDE AI suggests:
+
+```javascript
 <Grid columns={columns} />
 ```
-This suggestion does not follow the correct Syncfusion syntax and requires manual correction.
+
+That's incorrect Syncfusion syntax.
 
 **With MCP Server installed:**
-The IDE AI now correctly suggests:
+The IDE AI correctly suggests:
+
 ```typescript
 import { GridComponent } from '@syncfusion/ej2-react-grids';
 
@@ -149,12 +177,9 @@ export const EmployeeGrid = () => {
   );
 };
 ```
+
 ```typescript
-<GridComponent dataSource={employees} 
-      allowSorting={true}
-      allowFiltering={true}
-      allowPaging={true}
->
+<GridComponent dataSource={employees} allowSorting allowFiltering allowPaging>
   <ColumnsDirective>
     <ColumnDirective field='id' headerText='ID' width='80' />
     <ColumnDirective field='name' headerText='Name' width='120' />
@@ -163,58 +188,12 @@ export const EmployeeGrid = () => {
 </GridComponent>
 ```
 
-The code is accurate and production-ready.
+## Quick Reference
 
-**Why it matters:**
-MCP Server connects IDE-based AI to live Syncfusion documentation, enabling accurate understanding of syntax, imports, service configuration, and current API patterns without requiring rework or manual fixes.
-
-## Recommended Practices
-
-**Core principle:** Accurate Syncfusion code requires AI access to current documentation and patterns.
-
-**For learning and quick exploration:**
-- Use browser platforms (ChatGPT, Claude, Gemini)
-- Include Syncfusion documentation links in the prompts
-- Benefit: Better code quality with zero setup
-
-**For production work:**
-- Install MCP Server (one-time setup)
-- IDE AI gains live Syncfusion knowledge
-- Benefit: Accurate suggestions on the first try
-
-**For team development:**
-- Add Component Skills to the project repository
-- All team members' AI follows consistent patterns
-- Benefit: Uniform code style and faster code reviews
-
-**Expected results across all approaches:**
-- Correct imports and component structure
-- Accurate API usage and syntax
-- Proper service configuration
-- Production-ready code from initial suggestions
-
-## Getting Started
-
-### Learning and Exploration
-To explore Syncfusion components and learn implementation patterns:
-
-1. Open a browser-based AI platform (ChatGPT, Claude, or Gemini)
-2. Include links to relevant Syncfusion documentation in the queries
-3. Reference official examples to guide code generation
-4. Experiment and iterate on implementation approaches
-
-### Production Development
-To configure development environment for production work:
-
-1. [Install and configure MCP Server](https://ej2.syncfusion.com/react/documentation/mcp-server/installation)
-2. Complete setup in the IDE (one-time configuration)
-3. Begin development with AI-assisted code generation
-4. Receive accurate Syncfusion suggestions in real-time
-
-### Team Implementation
-To ensure consistency across the development team:
-
-1. [Install Component Skills](https://ej2.syncfusion.com/react/documentation/skills/component-skills) 
-2. Add to the project repository root
-3. All team members' AI assistants inherit consistent Syncfusion patterns
-4. Reduce pattern-related code review feedback and standardize implementations
+| If you want... | Do this... |
+|---|---|
+| Quick learning and exploration | Use browser AI with documentation links |
+| Production code in your IDE | Install MCP Server |
+| Team consistency | Use Component Skills |
+| Offline development | Use Component Skills |
+| Programmatic AI tools | Use API with web search enabled |

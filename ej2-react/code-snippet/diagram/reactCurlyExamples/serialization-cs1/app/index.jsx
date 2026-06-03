@@ -1,4 +1,4 @@
-{% raw %}
+
 
   return (
     <div>
@@ -8,4 +8,3 @@
     </div>
   )
 
-{% endraw %}

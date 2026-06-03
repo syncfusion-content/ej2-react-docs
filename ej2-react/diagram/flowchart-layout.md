@@ -50,7 +50,7 @@ Different flowchart symbols have specific meanings used to represent various sta
 
 ## Render Flowchart layout with Data Source
 
-To render a flowchart layout, set the [`layoutType`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout/#type) property to **Flowchart**. The following code example demonstrates how to render a flowchart layout using a data source.
+To render a flowchart layout, set the [`layoutType`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout#type) property to **Flowchart**. The following code example demonstrates how to render a flowchart layout using a data source.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -66,7 +66,7 @@ To render a flowchart layout, set the [`layoutType`](https://ej2.syncfusion.com/
 
 ![EJ2 Flowchart layout diagram](./images/flowchart-images/Flowchart_Layout.png)
 
->Note: If you want to convert the data source into flowchart layout, you need to inject DataBinding along with FlowchartLayout module in the diagram.
+N> If you want to convert the data source into flowchart layout, you need to inject DataBinding along with FlowchartLayout module in the diagram.
 
 
 ## Configuring Data Source with Appearance Settings
@@ -117,7 +117,7 @@ This structure enables comprehensive customization of the flowchart's visual ele
 
 ## Render Flowchart Layout with Nodes and Connectors
 
-The following example demonstrates how to render a flowchart layout using nodes and connectors. To achieve this, you need to define the [`nodes`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeModel/) and [`connectors`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectormodel/) collections and assign them to the diagram. Additionally, you need to set the `layoutType` to **Flowchart**.
+The following example demonstrates how to render a flowchart layout using nodes and connectors. To achieve this, you need to define the [`nodes`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeModel) and [`connectors`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectormodel) collections and assign them to the diagram. Additionally, you need to set the `layoutType` to **Flowchart**.
 
 
 {% tabs %}
@@ -134,7 +134,7 @@ The following example demonstrates how to render a flowchart layout using nodes 
 
 ## Customize Flowchart Layout Orientation
 
-Customize the flow direction of the flowchart using the [orientation](https://ej2.syncfusion.com/react/documentation/api/diagram/layout/#orientation) property of the layout class. The flowchart can flow either vertically from top to bottom or horizontally from left to right. The default orientation is **TopToBottom**.
+Customize the flow direction of the flowchart using the [orientation](https://ej2.syncfusion.com/react/documentation/api/diagram/layout#orientation) property of the layout class. The flowchart can flow either vertically from top to bottom or horizontally from left to right. The default orientation is **TopToBottom**.
 
 
 ### TopToBottom Orientation
@@ -197,7 +197,7 @@ export class AppComponent {
 
 ## Customize the Decision Output Directions
 
-The decision symbol in a flowchart represents a question or condition that leads to different paths based on a binary outcome (Yes/No, True/False). You can customize the output direction of these paths using the [`yesBranchDirection`](https://ej2.syncfusion.com/react/documentation/api/diagram/branchDirection/) and [`noBranchDirection`](https://ej2.syncfusion.com/react/documentation/api/diagram/branchDirection/) properties of the [`flowchartLayoutSettings`](https://ej2.syncfusion.com/react/documentation/api/diagram/flowchartLayoutSettingsModel/) class.
+The decision symbol in a flowchart represents a question or condition that leads to different paths based on a binary outcome (Yes/No, True/False). You can customize the output direction of these paths using the [`yesBranchDirection`](https://ej2.syncfusion.com/react/documentation/api/diagram/branchDirection) and [`noBranchDirection`](https://ej2.syncfusion.com/react/documentation/api/diagram/branchDirection) properties of the [`flowchartLayoutSettings`](https://ej2.syncfusion.com/react/documentation/api/diagram/flowchartLayoutSettingsModel) class.
 
 ### Branch Direction Options
 
@@ -231,7 +231,7 @@ The following table illustrates the visual behavior of different branch directio
 | Left In Flow | Same As Flow |![Decision output with left yes and same flow no branches in vertical layout](./images/flowchart-images/Flowchart_YesLeft_NoSame.png)|![Decision output with left yes and same flow no branches in horizontal layout](./images/flowchart-images/Flowchart_YesLeft_NoSame_LTR.png) |
 |Same As Flow |Same As Flow|![Decision output with both branches in same flow direction in vertical layout](./images/flowchart-images/Flowchart_VerticalSameBranches.png)|![Decision output with both branches in same flow direction in horizontal layout](./images/flowchart-images/Flowchart_HorizontalSameBranches.png)|
 
->Note: When both branch directions are set to the same value, the **Yes** branch takes priority in positioning.
+N> When both branch directions are set to the same value, the **Yes** branch takes priority in positioning.
 
 
 ## Custom Yes and No Branch Values

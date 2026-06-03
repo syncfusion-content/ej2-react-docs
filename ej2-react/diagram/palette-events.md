@@ -59,7 +59,7 @@ The [`DragOver`](https://ej2.syncfusion.com/react/documentation/api/diagram/iDra
 
 ## Drop Event
 
-The [`Drop`](https://ej2.syncfusion.com/react/documentation/api/diagram/iDropEventArgs/) event triggers when a symbol is successfully dropped onto the diagram surface. This event serves as the final step in the drag-and-drop process and provides access to both the dropped symbol and the target location.
+The [`Drop`](https://ej2.syncfusion.com/react/documentation/api/diagram/iDropEventArgs) event triggers when a symbol is successfully dropped onto the diagram surface. This event serves as the final step in the drag-and-drop process and provides access to both the dropped symbol and the target location.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -74,7 +74,7 @@ The [`Drop`](https://ej2.syncfusion.com/react/documentation/api/diagram/iDropEve
 
 ## PaletteExpanding Event
 
-The [`PaletteExpanding`](https://ej2.syncfusion.com/react/documentation/api/diagram/iPaletteExpandArgs/) event triggers when a palette group is expanded or collapsed within the symbol palette. This event enables developers to control palette expansion behavior and implement custom logic based on palette state changes.
+The [`PaletteExpanding`](https://ej2.syncfusion.com/react/documentation/api/diagram/iPaletteExpandArgs) event triggers when a palette group is expanded or collapsed within the symbol palette. This event enables developers to control palette expansion behavior and implement custom logic based on palette state changes.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -89,7 +89,7 @@ The [`PaletteExpanding`](https://ej2.syncfusion.com/react/documentation/api/diag
 
 ## PaletteSelectionChange Event
 
-The [`PaletteSelectionChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/iPaletteSelectionChangeArgs/) event triggers when the selection changes within the symbol palette. This event provides information about both the previously selected and newly selected symbols, enabling developers to respond to selection changes appropriately.
+The [`PaletteSelectionChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/iPaletteSelectionChangeArgs) event triggers when the selection changes within the symbol palette. This event provides information about both the previously selected and newly selected symbols, enabling developers to respond to selection changes appropriately.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

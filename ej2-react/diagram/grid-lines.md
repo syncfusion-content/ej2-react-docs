@@ -16,11 +16,11 @@ Gridlines are crisscross lines drawn in diagram pages like the lines on traditio
 
 To use gridlines and snapping functionality, ensure that the snapping module is injected into the diagram component.
 
-The [`snapSettings`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#snapsettings) property is used to customize the gridlines and control the snapping behavior in the diagram.
+The [`snapSettings`](https://helpej2.syncfusion.com/react/documentation/api/diagram#snapsettings) property is used to customize the gridlines and control the snapping behavior in the diagram.
 
 ## Customize the Gridlines Visibility
 
-The [`snapConstraints`](https://helpej2.syncfusion.com/react/documentation/api/diagram/snapSettings/#constraints) enables you to show/hide the gridlines. The following code example illustrates how to show the gridlines.
+The [`snapConstraints`](https://helpej2.syncfusion.com/react/documentation/api/diagram/snapSettings#constraints) enables you to show/hide the gridlines. The following code example illustrates how to show the gridlines.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -35,17 +35,17 @@ The [`snapConstraints`](https://helpej2.syncfusion.com/react/documentation/api/d
 
 N>If you want to enable snapping, then inject snapping module into the diagram.
 
-To show only horizontal/vertical gridlines or to hide gridlines, refer to [`Constraints`](https://helpej2.syncfusion.com/react/documentation/api/diagram/snapSettings/#constraints).
+To show only horizontal/vertical gridlines or to hide gridlines, refer to [`Constraints`](https://helpej2.syncfusion.com/react/documentation/api/diagram/snapSettings#constraints).
 
 ## Appearance
 
 The appearance of the gridlines can be customized using a set of predefined properties to match your application's design requirements.
 
-* The [`horizontalGridLines`](https://helpej2.syncfusion.com/react/documentation/api/diagram/snapSettings/#horizontalgridlines) and the [`verticalGridLines`](https://helpej2.syncfusion.com/react/documentation/api/diagram/snapSettings/#verticalgridlines) properties allow you to customize the appearance of the horizontal and vertical gridlines respectively.
+* The [`horizontalGridLines`](https://helpej2.syncfusion.com/react/documentation/api/diagram/snapSettings#horizontalgridlines) and the [`verticalGridLines`](https://helpej2.syncfusion.com/react/documentation/api/diagram/snapSettings#verticalgridlines) properties allow you to customize the appearance of the horizontal and vertical gridlines respectively.
 
-* The horizontal gridlines [`lineColor`](https://helpej2.syncfusion.com/react/documentation/api/diagram/gridlines/#linecolor) and [`lineDashArray`](https://helpej2.syncfusion.com/react/documentation/api/diagram/gridlines/#linedasharray) properties are used to customizes the line color and line style of the horizontal gridlines.
+* The horizontal gridlines [`lineColor`](https://helpej2.syncfusion.com/react/documentation/api/diagram/gridlines#linecolor) and [`lineDashArray`](https://helpej2.syncfusion.com/react/documentation/api/diagram/gridlines#linedasharray) properties are used to customizes the line color and line style of the horizontal gridlines.
 
-* The vertical gridlines `lineColor` and [`lineDashArray`](https://helpej2.syncfusion.com/react/documentation/api/diagram/gridlines/#linedasharray) properties are used to customizes the line color and line style of the vertical gridlines.
+* The vertical gridlines `lineColor` and [`lineDashArray`](https://helpej2.syncfusion.com/react/documentation/api/diagram/gridlines#linedasharray) properties are used to customizes the line color and line style of the vertical gridlines.
 
 The following code example illustrates how to customize the appearance of gridlines.
 
@@ -64,7 +64,7 @@ The following code example illustrates how to customize the appearance of gridli
 
 ## Line Intervals
 
-The thickness and spacing between gridlines can be customized using the horizontal gridlines's [`linesInterval`](https://helpej2.syncfusion.com/react/documentation/api/diagram/gridlines/#lineintervals) and vertical gridlines’s `linesInterval` properties. In the lines interval collections, values at the odd places are referred as the thickness of lines and values at the even places are referred as the space between gridlines.
+The thickness and spacing between gridlines can be customized using the horizontal gridlines's [`linesInterval`](https://helpej2.syncfusion.com/react/documentation/api/diagram/gridlines#lineintervals) and vertical gridlines’s `linesInterval` properties. In the lines interval collections, values at the odd places are referred as the thickness of lines and values at the even places are referred as the space between gridlines.
 
 The following code example illustrates how to customize the thickness of lines and the line intervals.
 
@@ -83,7 +83,7 @@ The following code example illustrates how to customize the thickness of lines a
 
 ## Dot Grid Patterns
 
-The appearance of the grid lines can be changed into dots by setting the [`gridType`](https://helpej2.syncfusion.com/react/documentation/api/diagram/gridType/) of `snapSettings` as Dots.  By default, the grid type is **Lines**.Dot patterns can be particularly useful for creating a less intrusive visual guide while maintaining alignment functionality.
+The appearance of the grid lines can be changed into dots by setting the [`gridType`](https://helpej2.syncfusion.com/react/documentation/api/diagram/gridType) of `snapSettings` as Dots.  By default, the grid type is **Lines**.Dot patterns can be particularly useful for creating a less intrusive visual guide while maintaining alignment functionality.
 
 The following code illustrates how to render grid patterns as dots.
 
@@ -127,7 +127,7 @@ Snapping to gridlines can be enabled or disabled using the `snapConstraints` pro
 
 The snap-to-object feature provides visual cues to assist with aligning and spacing diagram elements. A node can snap to its neighboring objects based on specific alignments, such as the same size and position. These alignments are visually represented by smart guide lines in a cyan shade, with the color code '#07EDE1'.
 
-The [`snapObjectDistance`](https://helpej2.syncfusion.com/react/documentation/api/diagram/snapSettings/#snapobjectdistance) property allows you to define minimum distance between the selected object and the nearest object. By default, the snap object distance is set to **5 pixels**.
+The [`snapObjectDistance`](https://helpej2.syncfusion.com/react/documentation/api/diagram/snapSettings#snapobjectdistance) property allows you to define minimum distance between the selected object and the nearest object. By default, the snap object distance is set to **5 pixels**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -144,7 +144,7 @@ The [`snapObjectDistance`](https://helpej2.syncfusion.com/react/documentation/ap
 
 ## Snap Angle
 
-The [`snapAngle`](https://helpej2.syncfusion.com/react/documentation/api/diagram/snapSettings/#snapangle) property defines the increments by which an object can be rotated within a diagram. 
+The [`snapAngle`](https://helpej2.syncfusion.com/react/documentation/api/diagram/snapSettings#snapangle) property defines the increments by which an object can be rotated within a diagram. 
 
 For example, if the snapAngle is set to 15 degrees, an object can only be rotated to angles that are multiples of 15 degrees, such as 15°, 30°, 45°, and so on. This ensures precise angular alignment and consistent object positioning, enhancing the overall design accuracy. By default, the snap angle is set to 5 degrees.
 
@@ -165,9 +165,9 @@ The following code example demonstrates how to set the `snapAngle` property and 
 
 ## Snap Line Color
 
-The [`snapLineColor`](https://helpej2.syncfusion.com/react/documentation/api/diagram/snapSettings/#snaplinecolor) property allows you to define the color of the snapline used in the diagram. By customizing the snapline color, you can enhance the visual contrast and visibility of these guides, making it easier to achieve accurate alignment. 
+The [`snapLineColor`](https://helpej2.syncfusion.com/react/documentation/api/diagram/snapSettings#snaplinecolor) property allows you to define the color of the snap line used in the diagram. By customizing the snap line color, you can enhance the visual contrast and visibility of these guides, making it easier to achieve accurate alignment. 
 
-This property accepts color values in various formats, such as hexadecimal, RGB, or predefined color names, providing flexibility in how you choose to represent the snaplines in your diagramming application. By default the snap line color is set to `'#07EDE1'`.
+This property accepts color values in various formats, such as hexadecimal, RGB, or predefined color names, providing flexibility in how you choose to represent the snap lines in your diagramming application. By default the snap line color is set to `'#07EDE1'`.
 
 The following code example demonstrates how to set the `snapLineColor` property and update it dynamically.
 
@@ -184,7 +184,7 @@ The following code example demonstrates how to set the `snapLineColor` property 
 
 ## Customization of Snap Intervals
 
-By default, the objects are snapped towards the nearest gridline. The gridline or position towards where the diagram object snaps can be customized with the horizontal gridlines’s [`snapInterval`](https://helpej2.syncfusion.com/react/documentation/api/diagram/gridlines/#snapintervals) and the vertical gridlines’s `snapInterval` properties.
+By default, the objects are snapped towards the nearest gridline. The gridline or position towards where the diagram object snaps can be customized with the horizontal gridlines’s [`snapInterval`](https://helpej2.syncfusion.com/react/documentation/api/diagram/gridlines#snapintervals) and the vertical gridlines’s `snapInterval` properties.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

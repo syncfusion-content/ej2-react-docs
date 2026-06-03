@@ -16,7 +16,7 @@ To know more about Bitwise operators, refer to [`Bitwise Operations`](#bitwise-o
 
 ## Diagram Constraints
 
-[`Diagram constraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramConstraints/) control the overall behavior and functionality of the diagram canvas.
+[`Diagram constraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramConstraints) control the overall behavior and functionality of the diagram canvas.
 
 The following table displays the list of all diagram constraints.
 

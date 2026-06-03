@@ -1,4 +1,4 @@
-{% raw %}
+
 
 <DiagramComponent id="container" width={'100%'} height={'600px'} 
     //Set locale
@@ -9,4 +9,4 @@
     }}
     nodes={node}/>
 
-    {% endraw %}
+    

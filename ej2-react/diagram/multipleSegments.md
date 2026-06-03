@@ -14,7 +14,7 @@ Connectors in the React Diagram component can be composed of multiple segments t
 A connector segment represents a portion of the connector's path. By combining multiple segments, you can create connectors that change direction multiple times, forming L-shapes, Z-shapes, or more complex routing patterns. Each segment can have different properties and behaviors depending on the segment type used.
 
 ## Create Multiple Segments
-Multiple segments can be defined sequentially to form a complete connector path. To create a connector with multiple segments, define and add the segments to the [`segments`](https://ej2.syncfusion.com/react/documentation/api/diagram/connector/#segments) collection.
+Multiple segments can be defined sequentially to form a complete connector path. To create a connector with multiple segments, define and add the segments to the [`segments`](https://ej2.syncfusion.com/react/documentation/api/diagram/connector#segments) collection.
 The following example demonstrates how to create a connector with multiple segments that forms a custom routing path:
 
 {% tabs %}

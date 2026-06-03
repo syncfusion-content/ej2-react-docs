@@ -1,4 +1,3 @@
-{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DiagramComponent, Inject, ComplexHierarchicalTree, ConnectionPointOrigin, LineDistribution, DataBinding, } from "@syncfusion/ej2-react-diagrams";
@@ -67,4 +66,3 @@ function App() {
 // Initializes the diagram
 const root = ReactDOM.createRoot(document.getElementById("diagram"));
 root.render(<App />);
-{% endraw %}

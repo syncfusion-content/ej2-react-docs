@@ -18,7 +18,7 @@ The expanded subprocess automatically adjusts its size to accommodate child elem
 
 ### Create BPMN Expanded SubProcess
 
-To create an expanded subprocess, configure the shape as[`activity`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnActivityModel/)  and [`collapsed`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnSubProcessModel/#collapsed) to false. Enable the [`AllowDrop`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeConstraints/) constraint to allow child nodes to be dropped inside the expanded subprocess container.
+To create an expanded subprocess, configure the shape as [`activity`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnActivityModel)  and [`collapsed`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnSubProcessModel#collapsed) to false. Enable the [`AllowDrop`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeConstraints) constraint to allow child nodes to be dropped inside the expanded subprocess container.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -33,7 +33,7 @@ To create an expanded subprocess, configure the shape as[`activity`](https://ej2
 
 ### Add BPMN Nodes into Expanded SubProcess
 
-The [`Processes`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnSubProcessModel/#processes)property is an array collection that defines the child node values for the BPMN subprocess. This allows you to programmatically specify which BPMN elements should be contained within the expanded subprocess during initialization.
+The [`Processes`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnSubProcessModel#processes) property is an array collection that defines the child node values for the BPMN subprocess. This allows you to programmatically specify which BPMN elements should be contained within the expanded subprocess during initialization.
 
 The following code example demonstrates how to define child processes within an expanded subprocess:
 
@@ -58,7 +58,7 @@ This interactive behavior ensures that the subprocess container always properly 
 
 #### Add/Remove Process Programmatically
 
-The expanded subprocess supports dynamic process management through dedicated methods. Use the [`addProcess`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addprocess) method to add new child processes at runtime, and the [`removeProcess`](https://ej2.syncfusion.com/react/documentation/api/diagram/#removeprocess) method to remove existing processes. These methods provide programmatic control over subprocess content without requiring manual manipulation.
+The expanded subprocess supports dynamic process management through dedicated methods. Use the [`addProcess`](https://ej2.syncfusion.com/react/documentation/api/diagram#addprocess) method to add new child processes at runtime, and the [`removeProcess`](https://ej2.syncfusion.com/react/documentation/api/diagram#removeprocess) method to remove existing processes. These methods provide programmatic control over subprocess content without requiring manual manipulation.
 
 The following example demonstrates how to implement dynamic process addition and removal:
 

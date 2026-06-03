@@ -63,6 +63,7 @@ let nodes: NodeModel[] = [{
 ];
 let connectors: ConnectorModel[] = [{
     id: "connector1",
+    type:'Orthogonal',
     sourceID: 'node',
     targetID: 'node1',
     sourcePortID: 'port1',

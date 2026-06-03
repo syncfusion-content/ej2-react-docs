@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Overview
 
-BPMN (Business Process Model and Notation) activities represent work performed within a business process. An [`activity`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnActivity#BpmnActivity)appears as a rounded rectangle and serves as the fundamental unit of work in process modeling.
+BPMN (Business Process Model and Notation) activities represent work performed within a business process. An [`activity`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnActivity#BpmnActivity) appears as a rounded rectangle and serves as the fundamental unit of work in process modeling.
 
 Activities fall into two main categories:
 
@@ -34,7 +34,7 @@ To create a BPMN activity, set the shape property to **activity**. Specify the a
 
 ### Tasks
 
-The [`task`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnTask#BpmnTask) property of the [`bpmn activity`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnactivitymodel/)defines specific task types such as user tasks, service tasks, or message tasks. The default task type is **none**. Different task types indicate the nature of work being performed and who or what performs it.
+The [`task`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnTask#BpmnTask) property of the [`bpmn activity`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnactivitymodel) defines specific task types such as user tasks, service tasks, or message tasks. The default task type is **none**. Different task types indicate the nature of work being performed and who or what performs it.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -66,7 +66,7 @@ Subprocesses represent activities that contain other processes or activities wit
 
 #### Collapsed Subprocess
 
-A [`Collapsed Sub-Process`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnSubProcessModel/#collapsed)appears as a single activity but contains additional process details that remain hidden. This approach helps maintain process diagram clarity while preserving detailed information.
+A [`Collapsed Sub-Process`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnSubProcessModel#collapsed) appears as a single activity but contains additional process details that remain hidden. This approach helps maintain process diagram clarity while preserving detailed information.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -133,9 +133,9 @@ A [`call`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnTask#c
 
 N> The call property applies only to task-type activities.
 
-#### Adhoc
+#### Ad-hoc
 
-  An [`adhoc`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnSubProcess#adhoc)subprocess contains activities that performers can execute in any order or skip entirely, provided the overall objective is achieved. Enable ad hoc behavior using the adhoc property of the subprocess. The default value is **false**.
+  An [`adhoc`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnSubProcess#adhoc) subprocess contains activities that performers can execute in any order or skip entirely, provided the overall objective is achieved. Enable ad hoc behavior using the adhoc property of the subprocess. The default value is **false**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -181,7 +181,7 @@ BPMN defines two specialized subprocess types for specific business scenarios:
 
 An event subprocess executes when triggered by a specific event rather than following the normal process flow. Event subprocesses reside within other subprocesses but remain outside the main sequence flow until activated.
 
-Configure an event subprocess using the the [`event`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnEvent##BpmnEvent) and [`trigger`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnEvent#trigger) property of the subprocess. The [`type`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnSubProcess#type)property determines whether the subprocess is an event subprocess or transaction subprocess.
+Configure an event subprocess using the the [`event`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnEvent##BpmnEvent) and [`trigger`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnEvent#trigger) property of the subprocess. The [`type`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnSubProcess#type) property determines whether the subprocess is an event subprocess or transaction subprocess.
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/diagram/bpmnShapes/es5EventSub-cs1/app/index.jsx %}

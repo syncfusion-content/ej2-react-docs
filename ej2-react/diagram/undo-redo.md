@@ -26,7 +26,7 @@ Use these standard keyboard shortcuts for quick undo/redo operations:
 
 ### Programmatic undo and redo
 
-The [`undo`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#undo) and [`redo`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#redo) methods allow you to control undo/redo operations programmatically. The following example demonstrates how to implement these methods:
+The [`undo`](https://helpej2.syncfusion.com/react/documentation/api/diagram#undo) and [`redo`](https://helpej2.syncfusion.com/react/documentation/api/diagram#redo) methods allow you to control undo/redo operations programmatically. The following example demonstrates how to implement these methods:
 
 ```ts
 
@@ -51,11 +51,11 @@ diagramInstance.redo();
 ```
 ### Enabling and Disabling Undo/Redo
 
-Undo/Redo for diagram can be enabled/disabled with the [`constraints`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramConstraints/) property of the diagram component.
+Undo/Redo for diagram can be enabled/disabled with the [`constraints`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramConstraints) property of the diagram component.
 
 ### History Change Events
 
-The [`historyChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#historychange) event triggers whenever an action is undone or redone, allowing you to respond to history state changes.
+The [`historyChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram#historychange) event triggers whenever an action is undone or redone, allowing you to respond to history state changes.
 
 ## Advanced history management
 
@@ -63,7 +63,7 @@ The [`historyChange`](https://helpej2.syncfusion.com/react/documentation/api/dia
 
 Group related changes into a single undo/redo operation using the history grouping feature. This approach allows users to undo or redo multiple related changes simultaneously rather than reversing each action individually.
 
-Use [`startGroupAction`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#startgroupaction)to begin grouping actions and [`endGroupAction`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#endgroupaction) to complete the group. The following example shows how to group multiple fill color changes:
+Use [`startGroupAction`](https://helpej2.syncfusion.com/react/documentation/api/diagram#startgroupaction) to begin grouping actions and [`endGroupAction`](https://helpej2.syncfusion.com/react/documentation/api/diagram#endgroupaction) to complete the group. The following example shows how to group multiple fill color changes:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -77,7 +77,7 @@ Use [`startGroupAction`](https://helpej2.syncfusion.com/react/documentation/api/
  {% previewsample "page.domainurl/code-snippet/diagram/undoredo/groupAction-cs1" %}
 
 ### Managing History Stack Size
-The [`stackLimit`](https://helpej2.syncfusion.com/react/documentation/api/diagram/history/#stacklimit) property controls the maximum number of actions stored in the history manager. Setting an appropriate limit helps manage memory usage in applications with extensive editing operations.
+The [`stackLimit`](https://helpej2.syncfusion.com/react/documentation/api/diagram/history#stacklimit) property controls the maximum number of actions stored in the history manager. Setting an appropriate limit helps manage memory usage in applications with extensive editing operations.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -92,7 +92,7 @@ The [`stackLimit`](https://helpej2.syncfusion.com/react/documentation/api/diagra
 
 ### Restricting History Logging
 
-Prevent specific actions from being recorded in the history using the [`canLog`](https://helpej2.syncfusion.com/react/documentation/api/diagram/history/#canlog) property. This feature is useful when certain operations should not be undoable.
+Prevent specific actions from being recorded in the history using the [`canLog`](https://helpej2.syncfusion.com/react/documentation/api/diagram/history#canlog) property. This feature is useful when certain operations should not be undoable.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -109,7 +109,7 @@ Prevent specific actions from being recorded in the history using the [`canLog`]
 
 ### Accessing Undo and Redo Stacks
 
-The [`undoStack`](https://helpej2.syncfusion.com/react/documentation/api/diagram/history/#undostack) property is used to get the collection of undo actions which should be performed in the diagram. The [`redoStack`](https://helpej2.syncfusion.com/react/documentation/api/diagram/history/#redostack) property is used to get the collection of redo actions which should be performed in the diagram. The undoStack/redoStack is the read-only property.
+The [`undoStack`](https://helpej2.syncfusion.com/react/documentation/api/diagram/history#undostack) property is used to get the collection of undo actions which should be performed in the diagram. The [`redoStack`](https://helpej2.syncfusion.com/react/documentation/api/diagram/history#redostack) property is used to get the collection of redo actions which should be performed in the diagram. The undoStack/redoStack is the read-only property.
 
 ```ts
 let diagramInstance: DiagramComponent;
@@ -136,7 +136,7 @@ let redoStack = diagramInstance.historyManager.redoStack;
 
 ### Checking Availability of Undo and Redo Operations
 
-The [`canUndo`](https://helpej2.syncfusion.com/react/documentation/api/diagram/history/#canundo) and [`canRedo`](https://helpej2.syncfusion.com/react/documentation/api/diagram/history/#canredo) properties indicate whether undo or redo operations are available. These properties return **true** when actions exist in their respective history stacks.
+The [`canUndo`](https://helpej2.syncfusion.com/react/documentation/api/diagram/history#canundo) and [`canRedo`](https://helpej2.syncfusion.com/react/documentation/api/diagram/history#canredo) properties indicate whether undo or redo operations are available. These properties return **true** when actions exist in their respective history stacks.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -151,7 +151,7 @@ The [`canUndo`](https://helpej2.syncfusion.com/react/documentation/api/diagram/h
 
 ### Current Entry Tracking
 
-During user interactions with nodes or connectors, the current history entry is stored in the [`currentEntry`](https://helpej2.syncfusion.com/react/documentation/api/diagram/history/#currententry) property of the [`historyManager`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#historymanager).
+During user interactions with nodes or connectors, the current history entry is stored in the [`currentEntry`](https://helpej2.syncfusion.com/react/documentation/api/diagram/history#currententry) property of the [`historyManager`](https://helpej2.syncfusion.com/react/documentation/api/diagram#historymanager).
 
 The following code shows how to get the current entry from the diagram history:
 
@@ -170,7 +170,7 @@ The following code shows how to get the current entry from the diagram history:
 
 ### Clearing History
 
-The [`clearHistory`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#clearhistory)  method to remove all recorded actions from both undo and redo history stacks:
+The [`clearHistory`](https://helpej2.syncfusion.com/react/documentation/api/diagram#clearhistory)  method to remove all recorded actions from both undo and redo history stacks:
 
 ```ts
 //Clears all the histories
@@ -179,7 +179,7 @@ diagramInstance.clearHistory();
 ```
 ### Retrieving History Stacks
 
-The [`getHistoryStack`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#gethistorystack) method retrieves either the [`undoStack`](https://helpej2.syncfusion.com/react/documentation/api/diagram/history/#undostack) or [`redoStack`](https://helpej2.syncfusion.com/react/documentation/api/diagram/history/#redostack) from the history manager. Pass **true** to get the undo stack or false to get the redo stack:
+The [`getHistoryStack`](https://helpej2.syncfusion.com/react/documentation/api/diagram#gethistorystack) method retrieves either the [`undoStack`](https://helpej2.syncfusion.com/react/documentation/api/diagram/history#undostack) or [`redoStack`](https://helpej2.syncfusion.com/react/documentation/api/diagram/history#redostack) from the history manager. Pass **true** to get the undo stack or false to get the redo stack:
 
 ```ts
 // Fetch undoStack from history manager
@@ -194,7 +194,7 @@ diagramInstance.getHistoryStack(false)
 
 ### History Change Event
 
-The [`historyChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iHistoryChangeArgs/) event triggers whenever interactions with nodes and connectors occur. This event provides an opportunity to implement custom logic or UI updates based on history state changes:
+The [`historyChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iHistoryChangeArgs) event triggers whenever interactions with nodes and connectors occur. This event provides an opportunity to implement custom logic or UI updates based on history state changes:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

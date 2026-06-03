@@ -71,18 +71,16 @@ diagramInstance.loadDiagram(saveData);
 
 ```
 
->Note: Before loading a new diagram, the existing diagram content is automatically cleared.
+N> Before loading a new diagram, the existing diagram content is automatically cleared.
 
 ### Handling Load Completion
 
 The [`loaded`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#loaded) event triggers when all diagram elements finish loading through the [`loadDiagram`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#loaddiagram) method. Use this event to perform post-load customizations or validations.
 
 ```ts
-  return (
-    loaded={(args) => {
-            //You can use this event to customize diagram elements during the loading process
-        }}/>
-  )
+  loaded={(args) => {
+      //You can use this event to customize diagram elements during the loading process
+  }}
 
 ```
 

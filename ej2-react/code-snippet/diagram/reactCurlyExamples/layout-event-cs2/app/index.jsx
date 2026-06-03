@@ -1,4 +1,4 @@
-{% raw %}
+
 
 function handleLayoutUpdated(args){
         if (args.state === 'Started') {
@@ -15,4 +15,3 @@ function handleLayoutUpdated(args){
     <Inject services={[HierarchicalTree]} />
 </DiagramComponent>
 
-{% endraw %}

@@ -49,7 +49,7 @@ let App = () => {
         ]}
       />
       <DiagramComponent
-        id="diagram"
+        id="diagram-container"
         width="100%"
         height="700px"
       />

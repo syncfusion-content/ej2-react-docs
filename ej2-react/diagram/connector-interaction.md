@@ -54,7 +54,7 @@ When a connector is selected, circular handles (thumbs) appear at the source and
 
 ![End Point drag GIF](images/EndPointDragGif.gif)
 
-The end points of connectors can also be updated programmatically using the [`dragSourceEnd`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#dragsourceend) and [`dragTargetEnd`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#dragtargetend) methods of the diagram component.
+The end points of connectors can also be updated programmatically using the [`dragSourceEnd`](https://helpej2.syncfusion.com/react/documentation/api/diagram#dragsourceend) and [`dragTargetEnd`](https://helpej2.syncfusion.com/react/documentation/api/diagram#dragtargetend) methods of the diagram component.
 
 The following code example demonstrates how to drag connector end points at runtime.
 
@@ -71,7 +71,7 @@ The following code example demonstrates how to drag connector end points at runt
 
 ## Segment Editing
 
-The diagram allows editing of individual connector segments at runtime. To enable this feature, activate the [`DragSegmentThumb`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/#constraints) constraint for the connector.
+The diagram allows editing of individual connector segments at runtime. To enable this feature, activate the [`DragSegmentThumb`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#constraints) constraint for the connector.
 
 ```ts
 {     connector.constraints =
@@ -86,15 +86,15 @@ N> To edit connector segments, inject the **ConnectorEditing** module into the d
 
 ## Flip
 
-The diagram provides support for flipping connectors to create mirrored versions of the original element. The [`flip`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/#flip) operation transforms the connector based on the specified flip direction.
+The diagram provides support for flipping connectors to create mirrored versions of the original element. The [`flip`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#flip) operation transforms the connector based on the specified flip direction.
 
 The available flip types are:
 
-* **Horizontal Flip** - [`Horizontal`](https://helpej2.syncfusion.com/react/documentation/api/diagram/flipDirection/) interchanges the connector source and target x coordinates.
+* **Horizontal Flip** - [`Horizontal`](https://helpej2.syncfusion.com/react/documentation/api/diagram/flipDirection) interchanges the connector source and target x coordinates.
 
-* **Vertical Flip** - [`Vertical`](https://helpej2.syncfusion.com/react/documentation/api/diagram/flipDirection/) interchanges the connector source and target y coordinates.
+* **Vertical Flip** - [`Vertical`](https://helpej2.syncfusion.com/react/documentation/api/diagram/flipDirection) interchanges the connector source and target y coordinates.
 
-* **Both** - [`Both`](https://helpej2.syncfusion.com/react/documentation/api/diagram/flipDirection/) swaps the source point as the target point and the target point as the source point.
+* **Both** - [`Both`](https://helpej2.syncfusion.com/react/documentation/api/diagram/flipDirection) swaps the source point as the target point and the target point as the source point.
 
 
 {% tabs %}

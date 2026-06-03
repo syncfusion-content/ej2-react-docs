@@ -33,8 +33,7 @@ Collaborative editing in diagram allows multiple users to edit and review diagra
 * Unsupported synchronized settings
     * Changes to [pageSettings](../page-settings), [contextMenuSettings](../context-menu), [snapSettings](../grid-lines#snapping), [rulerSettings](../ruler), [layout](../automatic-layout), and [scrollSettings](../scroll-settings) are not propagated to other users and apply only locally.
 
->**Note:** 
-Collaboration will work when [DiagramCollaboration](https://ej2.syncfusion.com/react/documentation/diagram/getting-started#module-injection) and [UndoRedo](https://ej2.syncfusion.com/react/documentation/diagram/getting-started#module-injection) modules are enabled. Collaboration applies to actions that raise the [historyChange](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#historychange) event.
+N> Collaboration will work when [DiagramCollaboration](https://ej2.syncfusion.com/react/documentation/diagram/getting-started#module-injection) and [UndoRedo](https://ej2.syncfusion.com/react/documentation/diagram/getting-started#module-injection) modules are enabled. Collaboration applies to actions that raise the [historyChange](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#historychange) event.
 
 ## Sample code
 
