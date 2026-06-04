@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Paging Customization in React Grid Component
 
-The appearance of the paging elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component can be customized using CSS. Here are examples for customizing the pager root element, pager container element, pager navigation elements, pager page numeric link elements, and the pager current page numeric element.
+The appearance of the paging elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component can be customized using CSS. Here are examples for customizing the pager root element, pager container element, pager navigation elements, pager page numeric link elements, and the pager current page numeric element.
 
 ## Customizing the grid pager root element
 

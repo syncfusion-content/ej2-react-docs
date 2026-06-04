@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Aggregate Customization in React Grid Component
 
-The appearance of aggregate elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component can be customized using CSS. Below are examples for customizing the aggregate root element and the aggregate cell elements.
+The appearance of aggregate elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component can be customized using CSS. Below are examples for customizing the aggregate root element and the aggregate cell elements.
 
 ## Customizing the aggregate root element
 

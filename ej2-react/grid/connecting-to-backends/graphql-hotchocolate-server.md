@@ -41,7 +41,7 @@ domainurl: ##DomainURL##
 | # | Topics | Link |
 |---|---------|-------|
 | 1 | Set up and configure the HotChocolate GraphQL backend using ASP.NET Core | [View](#setting-up-the-hotchocolate-graphql-backend-using-aspnet-core) |
-| 2 | Integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid with HotChocolate GraphQL API | [View](#integrating-syncfusion-react-grid-with-hotchocolate-graphql) |
+| 2 | Integrate the React Data Grid with HotChocolate GraphQL API | [View](#integrating-syncfusion-react-grid-with-hotchocolate-graphql) |
 | 3 | Implement data operations including filtering, searching, sorting, and paging | [View](#perform-data-operations-in-server) |
 | 4 | Perform CRUD operations | [View](#perform-crud-operations-in-server) |
 | 5 | Run the HotChocolate GraphQL application | [View](#running-the-application) |
@@ -49,7 +49,7 @@ domainurl: ##DomainURL##
 
 ## Setting up the HotChocolate GraphQL backend using ASP.NET Core
 
-The HotChocolate GraphQL backend acts as the central data service, handling queries and mutations that power the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid.
+The HotChocolate GraphQL backend acts as the central data service, handling queries and mutations that power the React Data Grid.
 
 ### Step 1: Create the ASP.NET Core project with React template
 
@@ -1665,7 +1665,7 @@ A complete working sample of the React Grid with HotChocolate GraphQL backend is
 
 **GitHub repository:**
 
-[Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid with HotChocolate GraphQL Sample](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-backends/syncfusion-reactgrid-with-hotchocolate-graphQL-server)
+[React Data Grid with HotChocolate GraphQL Sample](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-backends/syncfusion-reactgrid-with-hotchocolate-graphQL-server)
 
 **Repository contents:**
 

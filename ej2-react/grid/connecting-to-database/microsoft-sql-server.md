@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Connecting SQL Server to React Grid Using ASP.NET Core Web API
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports binding data from a Microsoft SQL Server database through an ASP.NET Core Web API using ADO.NET SqlClient. This modern architecture provides a secure and scalable alternative to accessing the database directly from the client, while enabling efficient server‑side processing for paging, sorting, and filtering. By leveraging React for the UI and ASP.NET Core with SqlClient for data access, applications maintain a clear separation between presentation and data layers and retain full control over SQL Server interactions.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) supports binding data from a Microsoft SQL Server database through an ASP.NET Core Web API using ADO.NET SqlClient. This modern architecture provides a secure and scalable alternative to accessing the database directly from the client, while enabling efficient server‑side processing for paging, sorting, and filtering. By leveraging React for the UI and ASP.NET Core with SqlClient for data access, applications maintain a clear separation between presentation and data layers and retain full control over SQL Server interactions.
 
 **What is Microsoft SqlClient?**
 
@@ -46,7 +46,7 @@ Ensure the following software and packages are installed before proceeding:
 | # | Topics | Link |
 |---|---------|-------|
 | 1 | Setting up and configuring a Microsoft SQL Server–backed ASP.NET Core Web API using ADO.NET SqlClient | [View](#setting-up-the-sql-server-environment-for-sqlclient) |
-| 2 | Integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid with the ASP.NET Core Web API using DataManager and CustomAdaptor | [View](#integrating-syncfusion-react-grid) |
+| 2 | Integrating the React Data Grid with the ASP.NET Core Web API using DataManager and CustomAdaptor | [View](#integrating-syncfusion-react-grid) |
 | 3 | Implementing server‑side data operations including paging, searching, filtering, and sorting | [View](#step-6-implement-paging-feature) |
 | 4 | Performing full CRUD and batch operations from the React Grid against the SQL Server database | [View](#step-10-perform-crud-operations) |
 | 5 | Explore a complete working sample available on GitHub | [View](#complete-sample-repository) |
@@ -605,7 +605,7 @@ This setup registers controllers, enables a permissive CORS policy for developme
 
 ## Integrating Syncfusion React Grid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid is a robust, high‑performance component built to efficiently display, manage, and manipulate large datasets. It provides advanced features such as sorting, filtering, and paging. Follow these steps to render the grid and integrate it with the SQL Server database.
+The React Data Grid is a robust, high‑performance component built to efficiently display, manage, and manipulate large datasets. It provides advanced features such as sorting, filtering, and paging. Follow these steps to render the grid and integrate it with the SQL Server database.
 
 ### Step 1: Creating the React client application
 
@@ -682,11 +682,11 @@ const App: React.FC = () => {
 export default App;
 ```
 
-This completes the React UI setup required to display and manage ticket data using the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid.
+This completes the React UI setup required to display and manage ticket data using the React Data Grid.
 
 ### Step 4: Implement the CustomAdaptor
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid can bind data from a **SQL Server** database using [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) and set the `adaptor` property to `CustomAdaptor` for scenarios that require full control over data operations.
+The React Data Grid can bind data from a **SQL Server** database using [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) and set the `adaptor` property to `CustomAdaptor` for scenarios that require full control over data operations.
 
 The `CustomAdaptor` (client-side) is a bridge between the React Grid and the ASP.NET Core backend. It extends the `UrlAdaptor` and handles all data operation requests by constructing HTTP POST calls to corresponding server endpoints. When the Grid performs operations like reading, searching, filtering, sorting, paging, and CRUD operations, the CustomAdaptor intercepts these actions and formats them into HTTP requests. These requests are sent to the ASP.NET Core Web API controller on the server, which processes the `DataManagerRequest` using ADO.NET SqlClient to query the SQL Server database and return the results.
 
@@ -1727,7 +1727,7 @@ From the client folder, install dependencies and start the React dev server:
 
 A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-database/syncfusion-react-grid-MSSQL).
 
-The application now provides a complete end‑to‑end ticket management workflow using the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid with server‑side processing and direct integration with Microsoft SQL Server.
+The application now provides a complete end‑to‑end ticket management workflow using the React Data Grid with server‑side processing and direct integration with Microsoft SQL Server.
 
 ## See also
 - [Types of edit](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types)

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: React Grid - Column Autofit | Syncfusion
 description: React Grid column autofit supports automatically sizing columns to content and offers configuration options to improve readability and overall layout.
@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # AutoFit Columns in React Grid Component
 
-The AutoFit feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid allows columns to automatically adjust their widths based on the maximum content width within each column. This ensures that all cell values are fully visible without truncation or wrapping.
+The AutoFit feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) allows columns to automatically adjust their widths based on the maximum content width within each column. This ensures that all cell values are fully visible without truncation or wrapping.
 
 **Usage:**
 
 - Hover the mouse over a column header. A resizer icon appears on the right edge of the header.
 - Double-click the resizer icon to resize the column to fit its longest content.
 
-To display the resizer icon on column headers while hovering in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid:
+To display the resizer icon on column headers while hovering in the React Data Grid:
 
 - Set the [allowResizing](https://ej2.syncfusion.com/react/documentation/api/grid#allowresizing) property to `true` in the Grid component.
 - Inject the `Resize` module from `@syncfusion/ej2-react-grids`.
@@ -113,7 +113,7 @@ This feature can be enabled by setting the [autoFit](https://ej2.syncfusion.com/
 
 ## AutoFit columns when changing column visibility using column chooser
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, columns can be auto-fitted when their visibility is changed through the column chooser UI. This can be done by calling the `autoFitColumns` method inside the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) event. The event arguments include a property called `requestType`, which indicates the type of action performed. When the `requestType` is `columnState`, the `autoFitColumns` method can be invoked to resize the affected columns automatically.
+In the React Data Grid, columns can be auto-fitted when their visibility is changed through the column chooser UI. This can be done by calling the `autoFitColumns` method inside the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) event. The event arguments include a property called `requestType`, which indicates the type of action performed. When the `requestType` is `columnState`, the `autoFitColumns` method can be invoked to resize the affected columns automatically.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
