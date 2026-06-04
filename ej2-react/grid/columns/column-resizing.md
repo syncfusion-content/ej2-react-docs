@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: React Grid - Column Resizing | Syncfusion
 description: React Grid column resizing enables manual and automatic width adjustments, multiple resize modes, and control over user or programmatic changes.
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Column resizing in React Grid Component
 
-Column resizing in the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component allows adjusting column widths dynamically to fit content and improve data readability. This feature provides flexibility in customizing the grid layout based on data requirements and screen size.
+Column resizing in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component allows adjusting column widths dynamically to fit content and improve data readability. This feature provides flexibility in customizing the grid layout based on data requirements and screen size.
 
 To enable column resizing, set the [`allowResizing`](https://ej2.syncfusion.com/react/documentation/api/grid#allowresizing) property to `true` and inject the `Resize` module into the Grid component. Once enabled, columns can be resized by clicking and dragging the right edge of the column header. The column width updates immediately during the drag operation, providing real-time visual feedback.
 
@@ -137,7 +137,7 @@ The Grid supports resizing stacked header columns, which are columns grouped und
 
 ## Resizing modes
 
-The React Data Grid component provides flexible column resizing behavior through the [ResizeSettingsModel](https://ej2.syncfusion.com/react/documentation/api/grid/resizeSettingsModel#resizesettingsmodel) interface. The [mode](https://ej2.syncfusion.com/react/documentation/api/grid/resizeSettings#mode) property determines the way the Grid handles space distribution when columns are resized.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provides flexible column resizing behavior through the [ResizeSettingsModel](https://ej2.syncfusion.com/react/documentation/api/grid/resizeSettingsModel#resizesettingsmodel) interface. The [mode](https://ej2.syncfusion.com/react/documentation/api/grid/resizeSettings#mode) property determines the way the Grid handles space distribution when columns are resized.
 
 **Available resize modes:**
 
@@ -501,4 +501,3 @@ export default App;
 
 > * The `ResizeArgs` object provides comprehensive information such as the current column width, new column width, column index, and the original DOM event.
 > * The `resizing` event is triggered continuously during drag operations, potentially triggering dozens of times per second. Avoid heavy computations or DOM manipulations in this event handler to maintain smooth performance.
-

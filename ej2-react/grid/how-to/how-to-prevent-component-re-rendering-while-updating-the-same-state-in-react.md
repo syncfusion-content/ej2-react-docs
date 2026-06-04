@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 React components re-render whenever state is updated, even if the new value is identical to the previous one. To enhance performance and avoid unnecessary re-renders, React provides hooks such as `useCallback` and `useEffect` that help control when updates should trigger re-renders.
 
-This implementation demonstrates a Master-Detail grid structure using the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid). The detail view is rendered in a separate grid, which displays information related to the selected record from the master grid. Selection is handled through row interactions, and updates are optimized using React `useCallback` hook.
+This implementation demonstrates a Master-Detail grid structure using the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid. The detail view is rendered in a separate grid, which displays information related to the selected record from the master grid. Selection is handled through row interactions, and updates are optimized using React `useCallback` hook.
 
 Step 1: Optimize state updates with `useCallback`
 

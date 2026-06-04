@@ -35,13 +35,13 @@ domainurl: ##DomainURL##
 | 2 | Handle server-side filtering, searching, sorting, and paging for efficient data processing | [View](#perform-data-operations-in-server) |
 | 3 | Handle server-side CRUD actions | [View](#perform-crud-operations-in-server) |
 | 4 | Start servers locally and access the backend | [View](#run-the-server-application) |
-| 5 | Connecting [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) – Create a React project and configure Syncfusion<sup style="font-size:70%">&reg;</sup> Grid with UrlAdaptor | [View](#connecting-syncfusion-react-grid-with-expressjs) |
+| 5 | Connecting Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid – Create a React project and configure Syncfusion<sup style="font-size:70%">&reg;</sup> Grid with UrlAdaptor | [View](#connecting-syncfusion-react-grid-with-expressjs) |
 | 6 | Start servers locally and access the frontend | [View](#run-the-application) |
 | 7 | Explore a complete working sample on GitHub | [View](#complete-sample-repository) |
 
 ## Setting up the Express.js backend using Node.js
 
-The Express.js backend acts as the central REST API service, handling HTTP requests and responses that power the React Data Grid.
+The Express.js backend acts as the central REST API service, handling HTTP requests and responses that power the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid.
 
 ### Step 1: Create the Express server and install required packages
 
@@ -500,7 +500,7 @@ npm run dev
 The server will start on **http://localhost:5000** and the patients endpoint is **http://localhost:5000/api/patients**.
 
 With the Express.js backend now fully implemented, all data operations (filtering, searching, sorting, and paging) along with CRUD operations (create, update, delete) are handled on the server side.
-The backend is now ready to be connected to the React Data Grid component in the React frontend.
+The backend is now ready to be connected to the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component in the React frontend.
 
 ## Connecting Syncfusion React Grid with Express.js
 
@@ -520,7 +520,7 @@ This command creates a React application named **GridClient** with TypeScript su
 
 ### Step 2: Install Syncfusion packages
 
-Install the React Data Grid and DataManager packages using npm.
+Install the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid and DataManager packages using npm.
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save

@@ -14,7 +14,7 @@ Each row typically represents a single record or item from a data source. Rows i
 
 ## Styling rows 
 
-Customizing the styles of rows in a Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) allows modification of row appearance to meet specific design requirements. This feature is useful when highlighting certain rows or changing the font style, background color, and other properties of the row to enhance the visual appeal of the grid. To customize the row styles in the grid, the React Data Grid component provides CSS, properties, methods, and event support.
+Customizing the styles of rows in a Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid allows modification of row appearance to meet specific design requirements. This feature is useful when highlighting certain rows or changing the font style, background color, and other properties of the row to enhance the visual appeal of the grid. To customize the row styles in the grid, the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provides CSS, properties, methods, and event support.
 
 ### Using event
 
@@ -337,7 +337,7 @@ export default App;
 
 ## Row pinning (frozen) in React Grid
 
-The React Data Grid allows freezing rows to keep them visible while scrolling vertically through large datasets. This feature enhances the experience by maintaining important information within view at all times.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid allows freezing rows to keep them visible while scrolling vertically through large datasets. This feature enhances the experience by maintaining important information within view at all times.
 
 The [frozenRows](https://ej2.syncfusion.com/react/documentation/api/grid#frozenrows) property in the React Grid is used to freeze a specified number of rows at the top of the grid, keeping them fixed while the rest of the content scrolls vertically. 
 

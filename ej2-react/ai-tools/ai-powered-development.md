@@ -70,7 +70,7 @@ Reference: https://ej2.syncfusion.com/react/documentation/grid/getting-started
 
 ### IDE-Based AI
 
-IDE-integrated AI tools (GitHub Copilot, Cursor, Windsurf) provide real-time suggestions while you code. Most production teams use this approach because it integrates directly into their workflow.
+IDE-integrated AI tools (GitHub Copilot, Cursor, Syncfusion Code Studio) provide real-time suggestions while you code. Most production teams use this approach because it integrates directly into their workflow.
 
 **Best for:**
 - Production development

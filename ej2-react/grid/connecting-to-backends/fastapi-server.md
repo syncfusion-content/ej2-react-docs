@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Connecting the Syncfusion React Grid with FastAPI backend
 
-[FastAPI](https://fastapi.tiangolo.com/) is a modern, high‑performance Python web framework for building RESTful APIs with automatic OpenAPI documentation and robust validation. In a REST architecture, the server exposes resource‑oriented endpoints and relies on standard HTTP verbs while the client exchanges well structured JSON payloads. FastAPI combines asynchronous I/O, type hints, and Pydantic validation to produce low‑latency APIs that React applications can call reliably. This design is particularly effective for the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) because every grid action translates to a predictable JSON contract that the backend can process consistently and efficiently.
+[FastAPI](https://fastapi.tiangolo.com/) is a modern, high‑performance Python web framework for building RESTful APIs with automatic OpenAPI documentation and robust validation. In a REST architecture, the server exposes resource‑oriented endpoints and relies on standard HTTP verbs while the client exchanges well structured JSON payloads. FastAPI combines asynchronous I/O, type hints, and Pydantic validation to produce low‑latency APIs that React applications can call reliably. This design is particularly effective for the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid because every grid action translates to a predictable JSON contract that the backend can process consistently and efficiently.
 
 ## Prerequisites
 
@@ -702,11 +702,11 @@ def handle_remove(payload: Dict[str, Any], products: List[Dict[str, Any]], save_
     raise HTTPException(status_code=404, detail=f'Record {key} not found')
 ```
 
-At this point, the server configuration supports all Grid data operations, including paging, sorting, searching, filtering, and CRUD actions such as insert, update, and delete. The next section covers the integration of the React Data Grid with the configured server.
+At this point, the server configuration supports all Grid data operations, including paging, sorting, searching, filtering, and CRUD actions such as insert, update, and delete. The next section covers the integration of the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid with the configured server.
 
 ## Integrating Syncfusion React Grid with FastAPI
 
-This section demonstrates how to bind the React Data Grid to a FastAPI endpoint using the DataManager and the `UrlAdaptor`. The DataManager standardizes how the Grid serializes its actions into a request body, and the `UrlAdaptor` formats the transport to align with a RESTful endpoint that accepts POST requests for both reads and mutations.
+This section demonstrates how to bind the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid to a FastAPI endpoint using the DataManager and the `UrlAdaptor`. The DataManager standardizes how the Grid serializes its actions into a request body, and the `UrlAdaptor` formats the transport to align with a RESTful endpoint that accepts POST requests for both reads and mutations.
 
 [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) is a data layer that sends all Grid actions (read, sort, filter, search, paging, CRUD) to the backend. It standardizes how components communicate with remote services and handles query serialization.
 
@@ -974,7 +974,7 @@ Open the URL shown in the terminal which is typically **http://localhost:5173/**
 
 For a complete working implementation of this example, refer to the following [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-backends/syncfusion-reactgrid-with-fastapi-server) repository.
 
-The application demonstrates a complete product management workflow with a React Data Grid connected to a Python FastAPI REST backend through a single, predictable transport.
+The application demonstrates a complete product management workflow with a Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid connected to a Python FastAPI REST backend through a single, predictable transport.
 
 ## See also
 
