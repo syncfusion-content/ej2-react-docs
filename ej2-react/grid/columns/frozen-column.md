@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Column Pinning (Frozen) in React Grid component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) provides a column pinning (freezing) feature that keeps "selected columns" visible while scrolling across large datasets. This improves readability by ensuring that important information remains accessible, even when working with wide tables.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a column pinning (freezing) feature that keeps "selected columns" visible while scrolling across large datasets. This improves readability by ensuring that important information remains accessible, even when working with wide tables.
 
 In a frozen layout, chosen columns remain fixed on either the left or right side of the Grid, while other columns continue to scroll horizontally. This makes it easier to compare and analyze data without losing sight of key details.
 

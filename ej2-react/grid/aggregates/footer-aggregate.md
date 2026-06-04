@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Footer Aggregate in React Grid Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) supports calculating and displaying aggregate values in the footer cells. These footer aggregates are computed from all rows in the grid. The [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn#footertemplate) property can be used to customize how the aggregate values are rendered in the footer cells, allowing formatted text or custom layouts to be displayed.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports calculating and displaying aggregate values in the footer cells. These footer aggregates are computed from all rows in the grid. The [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn#footertemplate) property can be used to customize how the aggregate values are rendered in the footer cells, allowing formatted text or custom layouts to be displayed.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

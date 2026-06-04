@@ -39,7 +39,7 @@ Terminate the application, then run the following command:
 cd my-app
 ```
 
-## Adding React Data Grid packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid packages
 
 To install the Grid component, use the following command:
 
@@ -89,8 +89,6 @@ The grid code should be added to the **src/App.tsx** file.
 ```bash
 npm run dev
 ```
-
-N> Looking for the full React Data Grid component overview, features, pricing, and documentation? Visit the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) page.
 
 ## See also
 

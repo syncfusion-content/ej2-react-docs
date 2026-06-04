@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Enable or disable grid and its actions in React Grid component
 
-Enabling or disabling the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) and its actions is essential for managing interaction based on application state. This approach enhances usability and ensures controlled access to grid operations.
+Enabling or disabling the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid and its actions is essential for managing interaction based on application state. This approach enhances usability and ensures controlled access to grid operations.
 
 To toggle the grid's interactivity, apply or remove a custom CSS class conditionally. The example below demonstrates how to use the "is-disabled" class to visually and functionally disable the grid:
 

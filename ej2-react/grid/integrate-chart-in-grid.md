@@ -108,7 +108,7 @@ Import the required CSS files from the **node_modules** directory. For example, 
 
 ### Chart integration via context menu in grid
 
-This section explains how the grid can render charts dynamically based on interactions within the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) using the context menu. **Right-clicking** on selected rows presents chart types such as bar, pie, or line for immediate visualization. This enhances interactivity and provides a quick analytical view.
+This section explains how the grid can render charts dynamically based on interactions within the Syncfusion<sup style="font-size:70%">&reg;</sup> React grid using the context menu. **Right-clicking** on selected rows presents chart types such as bar, pie, or line for immediate visualization. This enhances interactivity and provides a quick analytical view.
 
 For example, in a sales dashboard, selecting records for specific products can display a comparative bar or pie chart that shows online sales versus retail sales or revenue trends across months.
 

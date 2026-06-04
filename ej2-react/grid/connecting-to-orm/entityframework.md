@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Connecting SQL Server to Syncfusion React Grid Using Entity Framework
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) supports binding data from a SQL Server database. This documentation demonstrates integrating SQL Server with React Grid using **Entity Framework Core (EF Core)** for data operations with both `UrlAdaptor` and `CustomAdaptor` approaches.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports binding data from a SQL Server database. This documentation demonstrates integrating SQL Server with Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid using **Entity Framework Core (EF Core)** for data operations with both `UrlAdaptor` and `CustomAdaptor` approaches.
 
 **What is Entity Framework Core?**
 
@@ -454,7 +454,7 @@ The **Program.cs** configuration is now complete and Entity Framework Core is pr
 
 ## Integrating Syncfusion React Grid
 
-The React Data Grid is a robust, high‑performance component built to efficiently display, manage, and manipulate large datasets. It provides advanced features such as sorting, filtering, and paging. Follow these steps to render the grid and integrate it with a SQL Server database.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid is a robust, high‑performance component built to efficiently display, manage, and manipulate large datasets. It provides advanced features such as sorting, filtering, and paging. Follow these steps to render the grid and integrate it with a SQL Server database.
 
 ### Step 1: Creating the React client application
 

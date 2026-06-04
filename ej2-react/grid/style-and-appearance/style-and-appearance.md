@@ -39,7 +39,7 @@ Syncfusion's Theme Studio tool allows creation of custom themes for all controls
 
 ## Customizing the grid root element
 
-The `.e-grid` class is used to style the root element of the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component.
+The `.e-grid` class is used to style the root element of the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component.
 
 ```css
 .e-grid {
