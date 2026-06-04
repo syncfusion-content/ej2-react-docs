@@ -14,7 +14,7 @@ The [WebApiAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors
 
 For details on configuring the backend (expected request/response format, server‑side processing), refer to the [WebApiAdaptor backend setup documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/webapi-adaptor).
 
-Once the project creation and backend setup are complete, the next step is to render the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid Component on the client side.
+Once the project creation and backend setup are complete, the next step is to render the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) Component on the client side.
 
 **Project structure:**
 
@@ -33,7 +33,7 @@ WebApiAdaptor/
 
 ## React Grid frontend setup using Syncfusion WebAPIAdaptor
 
-After finishing the backend setup for the **WebApiAdaptorDemo** ASP.NET Core project, next step is to integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid on the client side by following these instructions.
+After finishing the backend setup for the **WebApiAdaptorDemo** ASP.NET Core project, next step is to integrate the React Data Grid on the client side by following these instructions.
 
 ### Step 1: Install Syncfusion packages
 

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: React Grid - SharePoint | Syncfusion
 description: React Grid SharePoint integration connects the grid to SharePoint lists, supports auth, and provides data access methods for SharePoint apps.
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Grid Component in the SharePoint Framework
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component can be integrated into a [SharePoint](https://learn.microsoft.com/en-us/sharepoint/dev) Framework (SPFx) project using the techniques outlined in this article. These steps will walk you through the process of adding a robust data grid to your SharePoint solutions.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component can be integrated into a [SharePoint](https://learn.microsoft.com/en-us/sharepoint/dev) Framework (SPFx) project using the techniques outlined in this article. These steps will walk you through the process of adding a robust data grid to your SharePoint solutions.
 
 `SharePoint` Framework (SPFx) is a development model and framework provided by Microsoft for building custom solutions and extensions for SharePoint and Microsoft Teams. It is a modern, client-side framework that allows developers to create web parts, extensions, and customizations that can be deployed and used within SharePoint sites and Teams applications.
 
@@ -100,9 +100,9 @@ gulp trust-dev-cert
 gulp serve
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid packages
+(https://www.syncfusion.com/react-components/react-data-grid) packages
 
-To utilize Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component in your project, you need to install the necessary npm package. 
+To utilize React Data Grid component in your project, you need to install the necessary npm package. 
 
 ```bash
 npm install @syncfusion/ej2-react-grids

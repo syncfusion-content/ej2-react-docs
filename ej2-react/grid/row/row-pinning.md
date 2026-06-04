@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Row Pinning in React Grid Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides support for pinning specific rows at the top, ensuring important information stays visible during vertical scrolling. This feature is useful when certain rows must remain accessible for quick reference or priority viewing, regardless of user interactions.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) provides support for pinning specific rows at the top, ensuring important information stays visible during vertical scrolling. This feature is useful when certain rows must remain accessible for quick reference or priority viewing, regardless of user interactions.
 
 To enable row pinning, configure the [isRowPinned](https://ej2.syncfusion.com/react/documentation/api/grid#isrowpinned) callback function. This function receives each row's data and returns `true` or `false` based on the desired pinning condition. It executes only during the initial rendering of the Grid, ensuring that each row's pinning state is determined at that stage.
 

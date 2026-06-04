@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: React Grid - Row Template | Syncfusion
 description: React Grid row template explains customizing full row rendering with templates, advanced layout options, and examples for complex row UIs.
@@ -134,7 +134,7 @@ export default App;
 
 ## Row template with formatting
 
-By default, Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides the [format](https://ej2.syncfusion.com/react/documentation/api/grid/column#format) property to format the values displayed in each column. When the [rowtemplate](https://ej2.syncfusion.com/react/documentation/api/grid#rowtemplate) feature is used, customized formatting can be applied directly within the template.
+By default, [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) provides the [format](https://ej2.syncfusion.com/react/documentation/api/grid/column#format) property to format the values displayed in each column. When the [rowtemplate](https://ej2.syncfusion.com/react/documentation/api/grid#rowtemplate) feature is used, customized formatting can be applied directly within the template.
 
 Format the values within the row template by defining a global function that handles the formatting logic. This function is invoked inside the template to format the corresponding values.
 
@@ -285,7 +285,7 @@ export default App;
 
  {% previewsample "page.domainurl/code-snippet/grid/row-template-cs4" %}
 
-> When using the `rowTemplate` feature in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, keep in mind that any formatting applied to columns using the `format` property will not work inside the template.
+> When using the `rowTemplate` feature in React Data Grid, keep in mind that any formatting applied to columns using the `format` property will not work inside the template.
 
 ## Render Syncfusion<sup style="font-size:70%">&reg;</sup> controls in row template
 
@@ -314,7 +314,7 @@ The following example demonstrates rendering Syncfusion<sup style="font-size:70%
 
 ## Render Syncfusion<sup style="font-size:70%">&reg;</sup> React Chart in row template
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provides flexibility to include custom controls such as Chart within the rows of the Grid. This feature enhances Grid interactivity by displaying graphical representations of data instead of plain text.
+The React Data Grid component provides flexibility to include custom controls such as Chart within the rows of the Grid. This feature enhances Grid interactivity by displaying graphical representations of data instead of plain text.
 
 Render a Syncfusion<sup style="font-size:70%">&reg;</sup> Chart within a row template of the Grid by utilizing the [rowTemplate](https://ej2.syncfusion.com/react/documentation/api/grid#rowtemplate) property. This property accepts a custom HTML template that specifies the layout for each row, enabling rich data visualization.
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Reactive Aggregate in React Grid Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports reactive aggregates, which automatically recalculate and update aggregate values in real time whenever the data changes.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) supports reactive aggregates, which automatically recalculate and update aggregate values in real time whenever the data changes.
 
 ## Auto-update aggregate values in Batch editing
 
