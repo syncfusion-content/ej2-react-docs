@@ -106,17 +106,17 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> React components include [built
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
 
-@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-react-pivotview/styles/tailwind3.css';
+@import '@syncfusion/ej2-base/styles/tailwind3.css';
+@import '@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '@syncfusion/ej2-grids/styles/tailwind3.css';
+@import '@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '@syncfusion/ej2-lists/styles/tailwind3.css';
+@import '@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '@syncfusion/ej2-calendars/styles/tailwind3.css';
+@import '@syncfusion/ej2-react-pivotview/styles/tailwind3.css';
 
 {% endhighlight %}
 {% endtabs %}
@@ -127,10 +127,10 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> React components include [built
 
 This section guides you through adding the Syncfusion<sup style="font-size:70%">&reg;</sup> React Pivot Table component to your Next.js project. Follow these steps to set up the data and display the component in your application.
 
-1. First, create a file named `datasource.tsx` in the **app/** folder. This file will hold the data for the Pivot Table component. Add the following sample data to populate the table:
+1. First, create a file named `datasource.ts` at `app/datasource.ts`. This file will hold the data for the Pivot Table component. Add the following sample data to populate the table:
 
 {% tabs %}
-{% highlight ts tabtitle="datasource.tsx" %}
+{% highlight ts tabtitle="datasource.ts" %}
 
 export let pivotData: object[] = [
     { 'In_Stock': 42, 'Sold': 80, 'Amount': 2460, 'Country': 'Germany', 'Product_Categories': 'Accessories', 'Products': 'Hydration Packs', 'Order_Source': 'Retail Outlets', 'Year': 'FY 2015', 'Quarter': 'Q1' },
@@ -154,7 +154,8 @@ export let pivotData: object[] = [
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
 
-'use client'
+'use client';
+
 import { CalculatedField, FieldList, IDataSet, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import { pivotData } from './datasource';

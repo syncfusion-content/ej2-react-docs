@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started in React Pivotview component
+# Getting started in React PivotView component
 
-This section guides you through the steps to create a simple [Pivot Table](https://www.syncfusion.com/react-components/react-pivot-table) in a React application. It demonstrates how to set up and use the Pivot Table component to display and analyze data effectively.
+This section guides you through the steps to create a simple [Pivot Table](https://www.syncfusion.com/react-components/react-pivot-table) using the Syncfusion `PivotView` component in a React application. It demonstrates how to set up and use the component to display and analyze data effectively.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview)
 
@@ -18,13 +18,18 @@ To get started quickly with the React [Pivot Table](https://www.syncfusion.com/r
 
 {% youtube "https://www.youtube.com/watch?v=vwoijhliTAI" %}
 
+## Prerequisites
+
+- **Node.js**: 18.0 or later
+- **npm**: 8.0 or later
+
 ## Setup for local development
 
-Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
+Easily set up a React application using [Vite](https://vitejs.dev), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+> **Note:** To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-To create a new React application, run the following command.
+To create a new React application, run the following command and choose the `React` framework. Select the `TypeScript` variant if you plan to follow the `App.tsx` example below.
 
 ```bash
 npm create vite@latest my-app
@@ -39,9 +44,9 @@ Terminate the application, then run the following command:
 cd my-app
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React Pivot Table packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React PivotView package
 
-To install the Pivot Table component, use the following command:
+To install the `PivotView` package, run:
 
 ```bash
 npm install @syncfusion/ej2-react-pivotview --save
@@ -49,7 +54,7 @@ npm install @syncfusion/ej2-react-pivotview --save
 
 ## Adding CSS reference
 
-The following CSS files are available in the **../node_modules/@syncfusion** package folder. Add these as references in **src/App.css**.
+The following CSS files are available in the **../node_modules/@syncfusion** package folder. You can add these as references in **src/App.css** (or your global stylesheet):
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
@@ -64,6 +69,8 @@ The following CSS files are available in the **../node_modules/@syncfusion** pac
 @import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-react-pivotview/styles/tailwind3.css';
 ```
+
+> Before including Syncfusion styles, make sure to remove the default styles defined in **index.css**. This helps prevent unintended style overrides and ensures that Syncfusion components render correctly.
 
 ## Adding Pivot Table component
 
