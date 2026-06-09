@@ -102,7 +102,8 @@ Choose one of these two options:
 
 **Option 1: Install MCP Server**
 
-The [MCP Server installation](https://ej2.syncfusion.com/react/documentation/mcp-server/installation) establishes a direct connection between your IDE-integrated AI and the Syncfusion documentation, allowing the AI to retrieve accurate, real-time information when encountering unfamiliar components and ensuring the generation of precise and up-to-date code.
+The [MCP Server installation](https://ej2.syncfusion.com/react/documentation/mcp-server/installation) establishes a direct connection between your IDE-integrated AI and Syncfusion documentation, enabling the AI to retrieve real-time information for unfamiliar components. Using Retrieval-Augmented Generation (RAG), it injects relevant documentation into the AI’s context to generate accurate and up-to-date code suggestions.
+ 
 
 **What you get:**
 - Complete documentation for all 145+ React components
@@ -124,8 +125,6 @@ Teams benefit most from Component Skills because everyone follows the same Syncf
 ### API-Based AI
 
 If you're building tools or applications that use AI APIs (Claude API, OpenAI, Gemini) to generate Syncfusion code programmatically:
-
-> **Note:** This approach is architecturally a form of **Retrieval-Augmented Generation (RAG)** — you ground the model's outputs by injecting accurate, current Syncfusion documentation into the context window, reducing hallucinations caused by stale training data.
 
 **How to get the best results:**
 
@@ -181,14 +180,7 @@ That's incorrect Syncfusion syntax — it uses a wrong component name and a non-
 The IDE AI correctly suggests typed, accurate code.
 
 ```typescript
-import {
-  GridComponent, ColumnsDirective,
-  ColumnDirective,
-  Inject,
-  Sort,
-  Filter,
-  Page
-} from '@syncfusion/ej2-react-grids';
+import { GridComponent, ColumnsDirective, ColumnDirective, Inject, Sort, Filter, Page } from '@syncfusion/ej2-react-grids';
 
 interface Employee {
   id: number;
