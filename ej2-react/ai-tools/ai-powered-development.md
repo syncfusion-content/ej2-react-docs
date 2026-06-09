@@ -12,12 +12,22 @@ domainurl: ##DomainURL##
 
 Many developers use AI assistants to accelerate their Syncfusion development workflows. However, without proper context, AI generates code that appears structurally sound but fails at runtime—often due to incorrect import paths, missing `Inject` services, or deprecated API calls.
 
-The solution is straightforward: give AI access to Syncfusion documentation and it generates accurate, production-ready code.
+The solution is straightforward: give AI access to Syncfusion documentation and it significantly improves the accuracy of generated code, reducing common runtime errors and mismatched APIs.
 
 **In this guide, you'll learn:**
 - Three ways to use AI with Syncfusion (Browser, IDE, API)
 - How to get accurate code suggestions on the first try for each approach
 - Which tools (MCP Server or Component Skills) improve your results
+
+## Package Installation
+
+Before using AI to generate Syncfusion React code, make sure the relevant packages are installed in your project. For example, to use the Grid component:
+
+```bash
+npm install @syncfusion/ej2-react-grids
+```
+
+Each Syncfusion component family has its own package (e.g., `@syncfusion/ej2-react-charts`, `@syncfusion/ej2-react-schedule`). Always include the correct package name when prompting AI so it generates accurate import statements.
 
 ## Three Ways to Use AI with Syncfusion
 
@@ -115,6 +125,8 @@ Teams benefit most from Component Skills because everyone follows the same Syncf
 
 If you're building tools or applications that use AI APIs (Claude API, OpenAI, Gemini) to generate Syncfusion code programmatically:
 
+> **Note:** This approach is architecturally a form of **Retrieval-Augmented Generation (RAG)** — you ground the model's outputs by injecting accurate, current Syncfusion documentation into the context window, reducing hallucinations caused by stale training data.
+
 **How to get the best results:**
 
 1. **Enable web search** — Use API providers that support web search as a tool
@@ -155,38 +167,81 @@ When you include the specific docs URL, the AI generates correct code: proper im
 ### IDE AI Example
 
 **Without MCP Server:**
+
 When you autocomplete a GridComponent, the IDE AI suggests:
 
 ```javascript
 <Grid columns={columns} />
 ```
 
-That's incorrect Syncfusion syntax.
+That's incorrect Syncfusion syntax — it uses a wrong component name and a non-existent `columns` prop.
 
 **With MCP Server installed:**
-The IDE AI correctly suggests:
+
+The IDE AI correctly suggests typed, accurate code.
 
 ```typescript
-import { GridComponent } from '@syncfusion/ej2-react-grids';
+import {
+  GridComponent, ColumnsDirective,
+  ColumnDirective,
+  Inject,
+  Sort,
+  Filter,
+  Page
+} from '@syncfusion/ej2-react-grids';
+
+interface Employee {
+  id: number;
+  name: string;
+  email: string;
+  department: string;
+}
 
 export const EmployeeGrid = () => {
   return (
-    <GridComponent dataSource={employees}>
-      // AI autocompletes here
+    <GridComponent
+      dataSource={employees}
+      allowSorting={true}
+      allowFiltering={true}
+      allowPaging={true}
+    >
+      <ColumnsDirective>
+        <ColumnDirective field="id" headerText="ID" width="80" />
+        <ColumnDirective field="name" headerText="Name" width="120" />
+      </ColumnsDirective>
+
+      <Inject services={[Sort, Filter, Page]} />
     </GridComponent>
   );
 };
 ```
 
-```typescript
-<GridComponent dataSource={employees} allowSorting allowFiltering allowPaging>
-  <ColumnsDirective>
-    <ColumnDirective field='id' headerText='ID' width='80' />
-    <ColumnDirective field='name' headerText='Name' width='120' />
-  </ColumnsDirective>
-  <Inject services={[Sort, Filter, Page]} />
-</GridComponent>
+## API Accuracy
+
+AI models are trained on historical data and may suggest APIs from older Syncfusion versions. To ensure accurate API usage, include the component's API reference link directly in your prompt:
+
 ```
+Use Syncfusion EJ2 React latest APIs only.
+Target: React 18+ with @syncfusion/ej2-react-grids latest.
+
+Find any Syncfusion component's API reference at https://ej2.syncfusion.com/react/documentation/api/
+```
+
+Using MCP Server mitigates this automatically by grounding the AI against live documentation.
+
+## Troubleshooting
+
+If you encounter unexpected results, use this as a quick diagnostic reference:
+
+| Problem | Likely Cause | Fix |
+|---|---|---|
+| Component feature doesn't work (e.g. sorting, filtering) | Missing `Inject` for required service | Add `<Inject services={[...]} />` inside the component |
+| Wrong or missing imports | AI confused by JavaScript vs React packages | Explicitly prompt: "Use `@syncfusion/ej2-react-[package]` imports only" |
+| Deprecated API usage (e.g. old property names) | AI trained on stale documentation | Enable MCP Server for live doc grounding |
+| Wrong component name (e.g. `<Grid>` instead of `<GridComponent>`) | AI using generic component name | Include docs URL or install Component Skills |
+| CSS not applied / unstyled component | Missing stylesheet import | Add `import '@syncfusion/ej2-base/styles/tailwind3.css'` and component theme CSS |
+| `<Inject>` placed outside the component | Incorrect nesting | `<Inject>` must be a direct child of the component it services |
+
 
 ## Quick Reference
 
