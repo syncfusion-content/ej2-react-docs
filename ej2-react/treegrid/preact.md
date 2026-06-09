@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Preact Getting Started with React TreeGrid Component | Syncfusion
-description: Check out and learn about getting started with the Preact Framework and React TreeGrid Component of Syncfusion Essential JS 2 and more details.
+title: Preact Getting Started with React Tree Grid Component | Syncfusion
+description: Check out and learn about getting started with the Preact Framework and React Tree Grid Component of Syncfusion Essential JS 2 and more details.
 control: Preact
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the TreeGrid Component in the Preact Framework
+# Getting Started with the Tree Grid Component in the Preact Framework
 
-This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React TreeGrid component.
+This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Tree Grid component.
 
 `Preact` is a fast and lightweight JavaScript library for building user interfaces. It is often used as an alternative to larger frameworks like React. The key difference is that Preact is designed to be smaller in size and faster in performance, making it suitable for projects where file size and load times are critical factors. 
 
@@ -81,11 +81,11 @@ cd my-project
 
 With `my-project` ready using default settings, add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React TreeGrid packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React Tree Grid packages
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
-This article uses the [React TreeGrid component](https://www.syncfusion.com/react-components/react-tree-grid) as an example. To use the React TreeGrid component in the project, install the `@syncfusion/ej2-react-treegrid` package using one of the following commands:
+This article uses the [React Tree Grid component](https://www.syncfusion.com/react-components/react-tree-grid) as an example. To use the React Tree Grid component in the project, install the `@syncfusion/ej2-react-treegrid` package using one of the following commands:
 
 ```bash
 npm install @syncfusion/ej2-react-treegrid --save
@@ -103,7 +103,7 @@ yarn add @syncfusion/ej2-react-treegrid
 
 Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be imported in multiple ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). Refer to the [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) for details about built-in themes and approaches for referencing themes in a React project.
 
-In this article, the `Material 3` theme is applied using CSS styles from installed packages. The required `Material 3` CSS files for the TreeGrid component and its dependencies are imported into the **src/style.css** file.
+In this article, the `Material 3` theme is applied using CSS styles from installed packages. The required `Material 3` CSS files for the Tree Grid component and its dependencies are imported into the **src/style.css** file.
 
 {% tabs %}
 {% highlight css tabtitle="~/src/style.css" %}
@@ -122,11 +122,11 @@ In this article, the `Material 3` theme is applied using CSS styles from install
 {% endhighlight %}
 {% endtabs %}
 
-## Adding TreeGrid component
+## Adding Tree Grid component
 
-Follow these steps to add the React TreeGrid component to the Preact project:
+Follow these steps to add the React Tree Grid component to the Preact project:
 
-1\. Before adding the TreeGrid component to the markup, import the TreeGrid component in the **src/index.jsx** file.
+1\. Before adding the Tree Grid component to the markup, import the Tree Grid component in the **src/index.jsx** file.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
@@ -136,7 +136,7 @@ import { ColumnDirective, ColumnsDirective, TreeGridComponent } from '@syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-2\. Define the TreeGrid component with the [dataSource](https://helpej2.syncfusion.com/react/documentation/api/treegrid#datasource) property and column definitions. Declare the values for the `dataSource` property.
+2\. Define the Tree Grid component with the [dataSource](https://helpej2.syncfusion.com/react/documentation/api/treegrid#datasource) property and column definitions. Declare the values for the `dataSource` property.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}

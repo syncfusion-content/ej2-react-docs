@@ -1,20 +1,20 @@
 ---
 layout: post
-title: React Grid Getting Started (Quick Setup Guide) | Syncfusion
-description: Learn how to install and configure the Syncfusion React Grid. Set up a new React app and enable paging, sorting, filtering, and grouping.
+title: React DataGrid Getting Started (Quick Setup Guide) | Syncfusion
+description: Learn how to install and configure the Syncfusion React DataGrid. Set up a new React app and enable paging, sorting, filtering, and grouping.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Grid
+# Getting Started with React DataGrid
 
-This section explains the steps required to create a simple React Grid component and demonstrate its basic usage in a React environment.
+This section explains the steps required to create a simple React DataGrid component and demonstrate its basic usage in a React environment.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
 
-To get started quickly with React Grid, you can watch this video:
+To get started quickly with React DataGrid, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=IGLlZiuFdbA" %}
 
@@ -39,9 +39,9 @@ Terminate the application, then run the following command:
 cd my-app
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React Grids package
 
-To install the Grid component, use the following command:
+To install the Grids package, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
@@ -66,9 +66,9 @@ The following CSS files are available in the **../node_modules/@syncfusion** pac
 @import "../node_modules/@syncfusion/ej2-react-grids/styles/material3.css";
 ```
 
-## Adding Grid component
+## Adding DataGrid component
 
-The grid code should be added to the **src/App.tsx** file.
+The DataGrid code should be added to the **src/App.tsx** file.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -92,9 +92,9 @@ npm run dev
 
 ## See also
 
-* [Grid Feature Modules](./module)
-* [Top 5 Features of React Data Grid](https://www.syncfusion.com/blogs/post/top-5-features-react-data-grid.aspx)
-* [How to render React Grid with bootstrap theme](https://support.syncfusion.com/kb/article/10054/how-to-render-react-grid-with-bootstrap-theme)
+* [DataGrid Feature Modules](./module)
+* [Top 5 Features of React Data DataGrid](https://www.syncfusion.com/blogs/post/top-5-features-react-data-grid.aspx)
+* [How to render React DataGrid with bootstrap theme](https://support.syncfusion.com/kb/article/10054/how-to-render-react-grid-with-bootstrap-theme)
 * [Getting Started with Next.js](./nextjs-getting-started)
 * [Getting Started with SharePoint](./sharepoint)
 * [Getting Started with Preact](./preact)
