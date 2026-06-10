@@ -139,7 +139,7 @@ You are an expert in Syncfusion React components.
 - Always use @syncfusion/ej2-react-grids packages
 - Use the <Inject> directive for services like Sort, Filter, Page
 - Import from @syncfusion/ej2-react-[package]
-- If unsure about API details, search the documentation at https://ej2.syncfusion.com/react/
+- If unsure about API details, search the documentation at https://ej2.syncfusion.com/react/documentation/
 ```
 
 ## Choosing the Right Approach

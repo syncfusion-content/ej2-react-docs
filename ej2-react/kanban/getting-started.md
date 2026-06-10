@@ -134,6 +134,7 @@ export let kanbanData: Object[] = [
 
 Then update `src/App.tsx` to import the data:
 
+{% raw %}
 ```typescript
 import { extend } from '@syncfusion/ej2-base';
 import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-react-kanban";
@@ -156,6 +157,7 @@ function App() {
 }
 export default App;
 ```
+{% endraw %}
 
 ## Run the application
 

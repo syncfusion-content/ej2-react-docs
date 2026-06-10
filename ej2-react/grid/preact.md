@@ -1,16 +1,16 @@
 ---
 layout: post
-title: React Grid - Preact | Syncfusion
-description: React Grid Preact guide explains notes, setup steps, and adjustments needed to use the Grid with Preact while preserving key features and performance.
+title: React DataGrid - Preact | Syncfusion
+description: React DataGrid Preact guide explains notes, setup steps, and adjustments needed to use the DataGrid with Preact while preserving key features and performance.
 control: Preact
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the React Grid Component in the Preact Framework
+# Getting Started with React DataGrid Component in Preact Framework
 
-This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component.
+This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React DataGrid component.
 
 `Preact` is a fast and lightweight JavaScript library for building user interfaces. It's often used as an alternative to larger frameworks like React. The key difference is that Preact is designed to be smaller in size and faster in performance, making it a good choice for projects where file size and load times are critical factors. 
 
@@ -88,9 +88,9 @@ cd my-project
 
 Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React Grids package
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available on [npmjs.com](https://www.npmjs.com/search?q=ej2-react). This article uses the [React Grid component](https://www.syncfusion.com/react-components/react-data-grid) as an example. To use the React Grid component in the project, the `@syncfusion/ej2-react-grids` package needs to be installed using the following command:
+Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available on [npmjs.com](https://www.npmjs.com/search?q=ej2-react). This article uses the [React DataGrid component](https://www.syncfusion.com/react-components/react-data-grid) as an example. To use the React DataGrid component in the project, the `@syncfusion/ej2-react-grids` package needs to be installed using the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
@@ -108,7 +108,7 @@ yarn add @syncfusion/ej2-react-grids
 
 You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> React component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) to know more about built-in themes and different ways to refer to theme's in a React project.
 
-In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the Grid component and its dependents were imported into the **src/style.css** file.
+In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the DataGrid component and its dependents were imported into the **src/style.css** file.
 
 {% tabs %}
 {% highlight css tabtitle="~/src/style.css" %}
@@ -126,9 +126,9 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 {% endhighlight %}
 {% endtabs %}
 
-## Adding Grid component
+## Adding DataGrid component
 
-The grid code should be added to the **src/index.jsx** file.
+The DataGrid code should be added to the **src/index.jsx** file.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
@@ -138,7 +138,7 @@ import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej
 import './style.css';
 
 export function App() {
-  // Defines the data to be displayed in the Grid.
+  // Defines the data to be displayed in the DataGrid.
   const data = [
     { OrderID: 10248, CustomerID: 'VINET', EmployeeID: 5, ShipCountry: 'France', Freight: 32.38 },
     { OrderID: 10249, CustomerID: 'TOMSP', EmployeeID: 6, ShipCountry: 'Germany', Freight: 11.61 },
@@ -146,7 +146,7 @@ export function App() {
   ];
 
   return (
-    {/* Assigns the dataset to the Grid component */}
+    {/* Assigns the dataset to the DataGrid component */}
     <GridComponent dataSource={data}>
       {/* Define the columns to be displayed */}
       <ColumnsDirective>
@@ -183,4 +183,4 @@ The output will appear as follows:
 
 ## See also
 
-* [Grid Feature Modules](./module)
+* [DataGrid Feature Modules](./module)
