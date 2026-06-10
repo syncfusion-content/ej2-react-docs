@@ -18,6 +18,7 @@ This approach loads only the functionality you need, reducing bundle size and im
 
 Import and inject modules using the `Inject` component inside your Gantt component:
 
+{% raw %}
 ```ts
 import React from 'react';
 import { GanttComponent, Inject, Sort, Filter, Edit, Toolbar } from '@syncfusion/ej2-react-gantt';
@@ -49,6 +50,7 @@ export default function App() {
   );
 }
 ```
+{% endraw %}
 
 Each module enables specific features. For example, `Sort` enables column sorting, while `Edit` enables task editing through the dialog or inline editing.
 

@@ -139,7 +139,7 @@ Here's an example that demonstrates how to enable/disable the confirmation dialo
 {% include code-snippet/grid/editing-cs5/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/editing-cs5/app/Aapp.tsx %}
+{% include code-snippet/grid/editing-cs5/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/editing-cs5/app/datasource.jsx %}

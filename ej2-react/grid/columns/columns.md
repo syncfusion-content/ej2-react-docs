@@ -613,7 +613,6 @@ The `showColumns` and `hideColumns` methods enable dynamic control of column vis
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/column-cs26/app/App.tsx %}
-{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/column-cs26/app/datasource.jsx %}
@@ -634,7 +633,7 @@ External buttons can control column visibility by field name using the `showColu
 {% include code-snippet/grid/column-field-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/column-field-cs1/app/App.sx %}
+{% include code-snippet/grid/column-field-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/column-field-cs1/app/datasource.jsx %}
