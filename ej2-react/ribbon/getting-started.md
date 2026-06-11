@@ -191,6 +191,8 @@ import "./App.css";
 
 function App() {
   const splitbuttonModel = { iconCss: "e-icons e-paste", items: [{ text: "Keep Source Format" }, { text: "Merge format" }, { text: "Keep text only" }], content: "Paste" };
+  const cutButton = { iconCss: "e-icons e-cut", content: "Cut" };
+  const copyButton = { iconCss: "e-icons e-copy", content: "Copy" };
   return (
     <RibbonComponent id="ribbon">
       <RibbonTabsDirective>
@@ -207,9 +209,9 @@ function App() {
                   </RibbonCollectionDirective>
                   <RibbonCollectionDirective id="cutcopy-collection">
                       <RibbonItemsDirective>
-                          <RibbonItemDirective type="Button" buttonSettings={{ iconCss: "e-icons e-cut", content: "Cut" }}>
+                          <RibbonItemDirective type="Button" buttonSettings={cutButton}>
                           </RibbonItemDirective>
-                          <RibbonItemDirective type="Button" buttonSettings={{ iconCss: "e-icons e-copy", content: "Copy" }}>
+                          <RibbonItemDirective type="Button" buttonSettings={copyButton}>
                           </RibbonItemDirective>
                       </RibbonItemsDirective>
                   </RibbonCollectionDirective>

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React DataGrid Component in Preact Framework
 
-This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React DataGrid component.
+This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com) project and integrating the React Data Grid component.
 
 `Preact` is a fast and lightweight JavaScript library for building user interfaces. It's often used as an alternative to larger frameworks like React. The key difference is that Preact is designed to be smaller in size and faster in performance, making it a good choice for projects where file size and load times are critical factors. 
 
@@ -88,7 +88,7 @@ cd my-project
 
 Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React Grids package
+## Adding React Data Grid packages
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available on [npmjs.com](https://www.npmjs.com/search?q=ej2-react). This article uses the [React DataGrid component](https://www.syncfusion.com/react-components/react-data-grid) as an example. To use the React DataGrid component in the project, the `@syncfusion/ej2-react-grids` package needs to be installed using the following command:
 

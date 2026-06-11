@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Column template in React Grid component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a [template](https://ej2.syncfusion.com/react/documentation/api/grid/column#template) option for displaying custom elements in a column instead of the field value. This is useful for displaying images, buttons, or other custom content within a column.
+The React Data Grid provides a [template](https://ej2.syncfusion.com/react/documentation/api/grid/column#template) option for displaying custom elements in a column instead of the field value. This is useful for displaying images, buttons, or other custom content within a column.
 
 > When using template columns, they are primarily meant for rendering custom content and may not provide built-in support for grid actions like sorting, filtering, or editing. It is essential to define the `field` property of the column to perform any grid actions.
 
@@ -358,7 +358,7 @@ The following example shows the Progress Bar component in the Grid "Freight" col
 
 ### Render RadioButton in a column 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports rendering the [RadioButton](https://ej2.syncfusion.com/react/documentation/radio-button/getting-started) within a column using the `template` property. This feature is useful for displaying selection options, such as order statuses, payment methods, or approval choices, within the Grid.
+The React Data Grid supports rendering the [RadioButton](https://ej2.syncfusion.com/react/documentation/radio-button/getting-started) within a column using the `template` property. This feature is useful for displaying selection options, such as order statuses, payment methods, or approval choices, within the Grid.
 
 The following example demonstrates rendering a RadioButton in the "Order Status" column of the Grid by defining the `template` property.
 
@@ -495,7 +495,7 @@ The following example demonstrates adding a template column using an external bu
 
 ## Enhancing Grid performance by enabling or disabling Aria Labels
 
-By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid automatically adds custom "aria-label" attributes to template cells. These attributes combine the cell value, the identifier "is template cell", and the column header name. Aria labels are accessibility features that help screen readers understand the content and purpose of cells.
+By default, the React Data Grid automatically adds custom "aria-label" attributes to template cells. These attributes combine the cell value, the identifier "is template cell", and the column header name. Aria labels are accessibility features that help screen readers understand the content and purpose of cells.
 
 However, in applications with many template columns, these labels can slightly impact rendering performance. To improve performance, disable aria labels for non-critical template columns by setting the `enableAriaLabel` property to `false` in the `templateOptions` of those columns. If accessibility support is required, set it to `true` to retain aria labels.
 
