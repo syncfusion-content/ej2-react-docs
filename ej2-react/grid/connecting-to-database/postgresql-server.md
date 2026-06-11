@@ -1829,6 +1829,6 @@ public class CRUDModel<T> where T : class
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion React Grid bound with PostgreSQL Server data](../images/connecting-micro-curd.gif)
+![React Grid bound with PostgreSQL Server data](../images/connecting-micro-curd.gif)
 
 > Find the sample in this GitHub location

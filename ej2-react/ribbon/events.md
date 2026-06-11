@@ -689,6 +689,13 @@ import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
 function App() {
     const fontStyle: string[] = ["Algerian", "Arial", "Calibri", "Cambria", "Cambria Math", "Courier New", "Candara", "Georgia", "Impact", "Segoe Print", "Segoe Script", "Segoe UI", "Symbol", "Times New Roman", "Verdana", "Windings"];
+    const comboBoxProps = {
+        dataSource: fontStyle,
+        index: 3,
+        change: (args) => { 
+            // your logic here
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -698,9 +705,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="ComboBox" comboBoxSettings={{ dataSource: fontStyle, index: 3, change: function (args) { 
-                                            // Your required action here
-                                        } }}>
+                                        <RibbonItemDirective type="ComboBox" comboBoxSettings={comboBoxProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -726,6 +731,13 @@ import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
 function App() {
     const fontStyle: string[] = ["Algerian", "Arial", "Calibri", "Cambria", "Cambria Math", "Courier New", "Candara", "Georgia", "Impact", "Segoe Print", "Segoe Script", "Segoe UI", "Symbol", "Times New Roman", "Verdana", "Windings"];
+    const comboBoxProps = {
+        dataSource: fontStyle,
+        index: 3,
+        close: (args) => { 
+            // your logic here
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -735,9 +747,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="ComboBox" comboBoxSettings={{ dataSource: fontStyle, index: 3, close: function (args) { 
-                                            // Your required action here
-                                        } }}>
+                                        <RibbonItemDirective type="ComboBox" comboBoxSettings={comboBoxProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -763,6 +773,13 @@ import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
 function App() {
     const fontStyle: string[] = ["Algerian", "Arial", "Calibri", "Cambria", "Cambria Math", "Courier New", "Candara", "Georgia", "Impact", "Segoe Print", "Segoe Script", "Segoe UI", "Symbol", "Times New Roman", "Verdana", "Windings"];
+    const comboBoxProps = {
+        dataSource: fontStyle,
+        index: 3,
+        open: (args) => { 
+            // your logic here
+        }
+    }
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -772,9 +789,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="ComboBox" comboBoxSettings={{ dataSource: fontStyle, index: 3, open: function (args) { 
-                                            // Your required action here
-                                        } }}>
+                                        <RibbonItemDirective type="ComboBox" comboBoxSettings={comboBoxProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -800,6 +815,13 @@ import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
 function App() {
     const fontStyle: string[] = ["Algerian", "Arial", "Calibri", "Cambria", "Cambria Math", "Courier New", "Candara", "Georgia", "Impact", "Segoe Print", "Segoe Script", "Segoe UI", "Symbol", "Times New Roman", "Verdana", "Windings"];
+    const comboBoxProps = {
+        dataSource: fontStyle,
+        index: 3,
+        open: (args) => { 
+            // your logic here
+        }
+    }
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -809,9 +831,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="ComboBox" comboBoxSettings={{ dataSource: fontStyle, index: 3, created: function (args) { 
-                                            // Your required action here
-                                        } }}>
+                                        <RibbonItemDirective type="ComboBox" comboBoxSettings={comboBoxProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -837,6 +857,13 @@ import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
 function App() {
     const fontStyle: string[] = ["Algerian", "Arial", "Calibri", "Cambria", "Cambria Math", "Courier New", "Candara", "Georgia", "Impact", "Segoe Print", "Segoe Script", "Segoe UI", "Symbol", "Times New Roman", "Verdana", "Windings"];
+    const comboBoxProps = {
+        dataSource: fontStyle,
+        index: 3,
+        open: (args) => { 
+            // your logic here
+        }
+    }
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -846,9 +873,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="ComboBox" comboBoxSettings={{ dataSource: fontStyle, index: 3, filtering: function (args) { 
-                                            // Your required action here
-                                        } }}>
+                                        <RibbonItemDirective type="ComboBox" comboBoxSettings={comboBoxProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -874,6 +899,13 @@ import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
 function App() {
     const fontStyle: string[] = ["Algerian", "Arial", "Calibri", "Cambria", "Cambria Math", "Courier New", "Candara", "Georgia", "Impact", "Segoe Print", "Segoe Script", "Segoe UI", "Symbol", "Times New Roman", "Verdana", "Windings"];
+    const comboBoxProps = {
+        dataSource: fontStyle,
+        index: 3,
+        open: (args) => { 
+            // your logic here
+        }
+    }
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -883,9 +915,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="ComboBox" comboBoxSettings={{ dataSource: fontStyle, index: 3, select: function (args) { 
-                                            // Your required action here 
-                                        } }}>
+                                        <RibbonItemDirective type="ComboBox" comboBoxSettings={comboBoxProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -911,6 +941,13 @@ import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
 function App() {
     const fontStyle: string[] = ["Algerian", "Arial", "Calibri", "Cambria", "Cambria Math", "Courier New", "Candara", "Georgia", "Impact", "Segoe Print", "Segoe Script", "Segoe UI", "Symbol", "Times New Roman", "Verdana", "Windings"];
+    const comboBoxProps = {
+        dataSource: fontStyle,
+        index: 3,
+        open: (args) => { 
+            // your logic here
+        }
+    }
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -920,9 +957,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="ComboBox" comboBoxSettings={{ dataSource: fontStyle, index: 3, beforeOpen: function (args) { 
-                                            // Your required action here 
-                                        } }}>
+                                        <RibbonItemDirective type="ComboBox" comboBoxSettings={comboBoxProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
