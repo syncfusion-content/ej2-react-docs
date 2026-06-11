@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Predefined icons library in Syncfusion<sup style="font-size:70%">&reg;</sup> React components
+# Predefined icons library in Syncfusion® React components
 
 Syncfusion's icon library provides an extensive collection of pre-designed, font-based icons (embedded as base64 in themes) to enhance user interfaces in React applications. These icons ensure visual consistency across Syncfusion components and are available via npm or CDN with minimal setup.
 
@@ -21,29 +21,56 @@ Icons can be included in a React application using the following methods:
 
 ### The npm package
 
-Syncfusion theme icons are distributed in the [@syncfusion/ej2-icons](https://www.npmjs.com/package/@syncfusion/ej2-icons) package on npm. The package includes CSS/SCSS files for all supported themes.
+Syncfusion theme icons are distributed in the [@syncfusion/ej2-icons](https://www.npmjs.com/package/@syncfusion/ej2-icons) package and as well as through all theme packages such as [@syncfusion/ej2-tailwind3-theme](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) available on npm. These packages include CSS/SCSS files for all supported themes.
 
 Install the package:
 
-```bash
-npm install @syncfusion/ej2-icons
-```
+{% tabs %}
+{% highlight bash tabtitle="Theme Package" %}
+
+npm install @syncfusion/ej2-tailwind3-theme --save
+
+{% endhighlight %}
+{% highlight bash tabtitle="Icon Package" %}
+
+npm install @syncfusion/ej2-icons --save
+
+{% endhighlight %}
+{% endtabs %}
 
 Then import the desired theme’s icon stylesheet in your application:
 
 `[src/App.css]`
 
-```css
-@import "../node_modules/@syncfusion/ej2-icons/styles/<theme_name>.css";
-```
+{% tabs %}
+{% highlight css tabtitle="Theme Package" %}
 
-> To apply these styles, ensure you import `App.css` in your `src/App.tsx` (or equivalent entry file).
+@import "../node_modules/@syncfusion/ej2-<theme-name>-theme/styles/icons/<theme_name>.css";
+
+{% endhighlight %}
+{% highlight css tabtitle="Icon Package" %}
+
+@import "../node_modules/@syncfusion/ej2-icons/styles/<theme_name>.css";
+
+{% endhighlight %}
+{% endtabs %}
+
+> To apply these styles, ensure you import `App.css` in your `src/App.tsx` (or equivalent entry file).`
 
 **Example:**
 
-```css
+{% tabs %}
+{% highlight css tabtitle="Theme Package" %}
+
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/icons/tailwind3.css";
+
+{% endhighlight %}
+{% highlight css tabtitle="Component Package" %}
+
 @import "../node_modules/@syncfusion/ej2-icons/styles/tailwind3.css";
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### CDN reference
 

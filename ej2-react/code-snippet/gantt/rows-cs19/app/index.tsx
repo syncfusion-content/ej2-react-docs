@@ -5,9 +5,9 @@ import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { ganttData } from './datasource';
 
 function App() {
-  const gantt: GanttComponent = null;
+  var gantt: GanttComponent = null;
 
-  const taskFields: object = {
+  var taskFields: object = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -16,10 +16,10 @@ function App() {
     child: 'subtasks'
   };
 
-  const splitterSettings: object = { position: '75%' };
-  const editSettings: object = { allowEditing: true, allowAdding: true, allowDeleting: true };
+  var splitterSettings: object = { position: '75%' };
+  var editSettings: object = { allowEditing: true, allowAdding: true, allowDeleting: true };
 
-  const generateNewTask = () => ({
+  var generateNewTask = () => ({
     TaskID: generateTaskID(),
     TaskName: generateTaskName(),
     StartDate: new Date(),
@@ -27,24 +27,24 @@ function App() {
     Progress: 0
   });
 
-  const generateTaskID = () => Math.floor(1000 + Math.random() * 90000);
-  const generateTaskName = () => {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var generateTaskID = () => Math.floor(1000 + Math.random() * 90000);
+  var generateTaskName = () => {
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     return Array.from({ length: 5 }, () => characters.charAt(Math.floor(Math.random() * characters.length))).join('');
   };
 
-  const addAbove = () => {
-    const newRecord = generateNewTask();
+  var addAbove = () => {
+    var newRecord = generateNewTask();
     gantt.addRecord(newRecord, 'Above', 0);
   };
 
-  const addBelow = () => {
-    const newRecord = generateNewTask();
+  var addBelow = () => {
+    var newRecord = generateNewTask();
     gantt.addRecord(newRecord, 'Below', 1);
   };
 
-  const addChild = () => {
-    const newRecord = generateNewTask();
+  var addChild = () => {
+    var newRecord = generateNewTask();
     gantt.clearSelection();
     gantt.addRecord(newRecord, 'Child', 2);
   };

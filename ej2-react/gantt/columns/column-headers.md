@@ -435,17 +435,17 @@ The following example demonstrates how to update the header text of the column a
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/columnheader-cs6/app/index.jsx %}
+{% include code-snippet/gantt/columnheader-cs14/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/columnheader-cs6/app/index.tsx %}
+{% include code-snippet/gantt/columnheader-cs14/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/columnheader-cs6/index.html %}
+{% include code-snippet/gantt/columnheader-cs14/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/gantt/columnheader-cs6" %}
+{% previewsample "page.domainurl/code-snippet/gantt/columnheader-cs14" %}
 
 ## Access header element 
 

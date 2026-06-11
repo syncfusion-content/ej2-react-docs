@@ -32,6 +32,7 @@ function App() {
 
   const queryCellInfo = (args: QueryCellInfoEventArgs) => {
     if (args.column.field === 'TaskName') {
+       (args.cell as HTMLElement).innerHTML = '';
       const value = (args.data as any).TaskName;
       const button = new Button({ content: value });
       const buttonElement = document.createElement('button');

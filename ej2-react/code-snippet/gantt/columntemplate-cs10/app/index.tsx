@@ -1,8 +1,6 @@
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, QueryCellInfoEventArgs, TaskFieldsModel } from '@syncfusion/ej2-react-gantt';
-import { Button } from '@syncfusion/ej2-buttons';
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, TaskFieldsModel, SplitterSettingsModel } from '@syncfusion/ej2-react-gantt';
 import { GanttData } from './datasource';
 
 function App() {
@@ -10,39 +8,16 @@ function App() {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
-    endDate: 'EndDate',
     duration: 'Duration',
     progress: 'Progress',
-    dependency: 'Predecessor',
     parentID: 'ParentID'
   };
 
-  const toolbar: string[] = ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll', 'Indent', 'Outdent'];
+  const splitterSettings: SplitterSettingsModel = { position: '75%' };
 
-  const editSettings = {
-    allowAdding: true,
-    allowEditing: true,
-    allowDeleting: true,
-    allowTaskbarEditing: true,
-    showDeleteConfirmDialog: true
-  };
-
-  // Column template for TaskName
-  const taskNameTemplate = (props: any): React.ReactElement => (
-    <span></span>
+  const formatProgressTemplate = (props: any) => (
+    <span>{props.Progress ? props.Progress.toFixed(3) + '%' : '0%'}</span>
   );
-
-  // Event for additional customization
-  const queryCellInfo = (args: QueryCellInfoEventArgs) => {
-    if (args.column.field === 'TaskName') {
-      const value = (args.data as any).TaskName;
-      const extraButton = new Button({ content: value });
-      const buttonElement = document.createElement('button');
-      buttonElement.classList.add('e-btn');
-      (args.cell as HTMLElement).appendChild(buttonElement);
-      extraButton.appendTo(buttonElement);
-    }
-  };
 
   return (
     <GanttComponent
@@ -51,14 +26,13 @@ function App() {
       dataSource={GanttData}
       taskFields={taskFields}
       treeColumnIndex={1}
-      editSettings={editSettings}
-      toolbar={toolbar}
-      queryCellInfo={queryCellInfo}
+      splitterSettings={splitterSettings}
     >
       <ColumnsDirective>
-        <ColumnDirective field="TaskID" headerText="Task ID" width="80" />
-        <ColumnDirective field="TaskName" headerText="Task Name" width="250" template={taskNameTemplate} />
-        <ColumnDirective field="StartDate" headerText="Start Date" textAlign="Right" width="150" format="yMd" type="date" />
+        <ColumnDirective field="TaskID" headerText="TaskID" width="80" />
+        <ColumnDirective field="TaskName" headerText="TaskName" width="290" />
+        <ColumnDirective field="Progress" headerText="Progress" width="120" template={formatProgressTemplate} />
+        <ColumnDirective field="Duration" headerText="Duration" width="90" />
       </ColumnsDirective>
       <Inject />
     </GanttComponent>

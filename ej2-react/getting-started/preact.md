@@ -110,12 +110,32 @@ yarn add @syncfusion/ej2-react-grids
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be added using CSS or SASS styles in the npm packages. Additional options are available via CDN or the [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). See the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for full details.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS or SASS either npm component packages or [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme). Additionally, themes can be loaded via CDN or customized using the [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
 
-This example uses the `Tailwind 3` theme, imported in the **src/style.css** file:
+This example uses the Tailwind 3 theme for the Grid component from the theme package. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
 
 {% tabs %}
-{% highlight css tabtitle="~/src/style.css" %}
+{% highlight bash tabtitle="npm" %}
+
+npm install @syncfusion/ej2-tailwind3-theme --save
+
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+
+yarn add @syncfusion/@syncfusion/ej2-tailwind3-theme
+
+{% endhighlight %}
+{% endtabs %}
+
+The required styles for the Grid component and its dependencies are imported in the **src/style.css** file:
+
+{% tabs %}
+{% highlight css tabtitle="Theme Package" %}
+
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/grid/index.css";
+
+{% endhighlight %}
+{% highlight css tabtitle="Component Package" %}
 
 @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";

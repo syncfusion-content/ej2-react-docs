@@ -32,9 +32,6 @@ To enable sorting functionality, add the [Sort](https://ej2.syncfusion.com/react
         
 {% previewsample "page.domainurl/code-snippet/gantt/sorting-cs2" %}
 
-> * Gantt columns are sorted in the ascending order. If you click the already sorted column, the sort direction toggles.
-> * To disable sorting for a particular column, set the [columns.allowSorting](https://ej2.syncfusion.com/react/documentation/api/gantt/column#allowsorting) property to `false`.
-
 > * The Gantt columns are sorted in the ascending order. If you click the already sorted column, the sort direction toggles.
 > * To disable sorting for a particular column, set the [columns.allowSorting](https://ej2.syncfusion.com/react/documentation/api/gantt/column#allowsorting) property to **false**.
 

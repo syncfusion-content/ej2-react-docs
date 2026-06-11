@@ -12,9 +12,9 @@ import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
 import { data } from './datasource';
 
 function App() {
-    let ganttInstance: GanttComponent | null = null;
+    let ganttInstance = null;
 
-    const taskFields: TaskFieldsModel = {
+    const taskFields = {
         id: 'TaskID',
         name: 'TaskName',
         startDate: 'StartDate',
@@ -24,19 +24,19 @@ function App() {
         parentID: 'ParentID'
     };
 
-    const selectionSettings: SelectionSettingsModel = {
+    const selectionSettings = {
         mode: 'Row',
         type: 'Multiple',
         enableToggle: true
     };
 
-    const valueChange = (args: ChangeEventArgs): void => {
+    const valueChange = (args) => {
         if (ganttInstance) {
-            ganttInstance.selectionSettings.mode = args.value as 'Row' | 'Cell' | 'Both';
+            ganttInstance.selectionSettings.mode = args.value;
         }
     };
 
-    const toggleColumnSelection = (args: any): void => {
+    const toggleColumnSelection = (args) => {
         if (ganttInstance) {
             ganttInstance.selectionSettings.enableToggle = args.checked;
         }

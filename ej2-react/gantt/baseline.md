@@ -76,7 +76,7 @@ The following example demonstrates complete baseline configuration with proper f
 
 > For a comprehensive demonstration of baseline functionality, explore the [interactive sample](https://ej2.syncfusion.com/react/demos#/tailwind3/gantt/baseline).
 
-## Customize basline using event
+## Customize baseline using event
 
 You can customize the baseline bar in the Gantt chart using the [queryTaskbarInfo](https://ej2.syncfusion.com/react/documentation/gantt/events#querytaskbarinfo) event.
  

@@ -1,92 +1,121 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import {
-  GanttComponent,
-  ColumnsDirective,
-  ColumnDirective,
-  Inject,
-  Toolbar
-} from '@syncfusion/ej2-react-gantt';
-import { DialogComponent } from '@syncfusion/ej2-react-popups';
-import { ClickEventArgs } from '@syncfusion/ej2-navigations';
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Selection, TaskFieldsModel, SplitterSettingsModel } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
 
 function App() {
-  let ganttInstance: GanttComponent | null = null;
-  let dialogInstance: DialogComponent | null = null;
-  let parentTasks: any[] = [];
-
-  const taskFields = {
+  const taskFields: TaskFieldsModel = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
+    endDate: 'EndDate',
     duration: 'Duration',
     progress: 'Progress',
     parentID: 'ParentID'
   };
 
-  const splitterSettings = { position: '75%' };
+  const splitterSettings: SplitterSettingsModel = {
+    position: '75%'
+  };
 
-  const toolbarOptions = [
-    'Add',
-    'Edit',
-    'Delete',
-    { text: 'Show Expand Parent Tasks', id: 'show_parents', tooltipText: 'Show expanded parent tasks in dialog' }
-  ];
+  let message: string = '';
+  let messageColor: string = 'black';
+  let msgRef: any;
+  let ganttRef: any;
 
-  const onToolbarClick = (args: ClickEventArgs): void => {
-    if (args.item.id === 'show_parents' && ganttInstance && dialogInstance) {
-      const expandedRecords = ganttInstance.getExpandedRecords(ganttInstance.flatData);
-      parentTasks = expandedRecords
-        .filter((record: any) => record.hasChildRecords && record.expanded === true)
-        .map((record: any) => ({
-          TaskID: record.TaskID,
-          TaskName: record.TaskName
-        }));
+  const expanding = (args: any): void => {
+    const data = args.data as any;
+    if (data) {
+      message = `Expanding Task: ${data.TaskName} (ID: ${data.TaskID})`;
+      messageColor = 'blue';
+      if (data.TaskID === 1) {
+        args.cancel = true;
+        message = `Expanding cancelled for Task: ${data.TaskName} (ID: ${data.TaskID})`;
+        messageColor = 'red';
+      }
+      if (msgRef) {
+        msgRef.innerText = message;
+        msgRef.style.color = messageColor;
+      }
+    }
+  };
 
-      // Update dialog content manually
-      const contentHtml = parentTasks.length
-        ? `<ul>${parentTasks.map(task => `<li>Task ID: ${task.TaskID}, Task Name: ${task.TaskName}</li>`).join('')}</ul>`
-        : `<div>No parent tasks found.</div>`;
+  const collapsing = (args: any): void => {
+    const data = args.data as any;
+    if (data) {
+      message = `Collapsing Task: ${data.TaskName} (ID: ${data.TaskID})`;
+      messageColor = 'orange';
+      if (data.TaskID === 5) {
+        args.cancel = true;
+        message = `Collapsing cancelled for Task: ${data.TaskName} (ID: ${data.TaskID})`;
+        messageColor = 'red';
+      }
+      if (msgRef) {
+        msgRef.innerText = message;
+        msgRef.style.color = messageColor;
+      }
+    }
+  };
 
-      dialogInstance.content = contentHtml;
-      dialogInstance.show();
+  const expanded = (args: any): void => {
+    const data = args.data as any;
+    if (data && args.row) {
+      message = `Task Expanded: ${data.TaskName} (ID: ${data.TaskID})`;
+      messageColor = 'green';
+      if (msgRef) {
+        msgRef.innerText = message;
+        msgRef.style.color = messageColor;
+      }
+      args.row.style.background = '';
+      if ((data.Progress) > 50) {
+        args.row.style.background = '#c0f6c7ff';
+      }
+    }
+  };
+
+  const collapsed = (args: any): void => {
+    const data = args.data as any;
+    if (data && args.row) {
+      message = `Task Collapsed: ${data.TaskName} (ID: ${data.TaskID})`;
+      messageColor = 'purple';
+      if (msgRef) {
+        msgRef.innerText = message;
+        msgRef.style.color = messageColor;
+      }
+      args.row.style.background = '';
+      if ((data.Progress) < 50) {
+        args.row.style.background = '#fb9c9cff';
+      }
     }
   };
 
   return (
-    <div>
+    <div className="control-section">
+      <div style={{ marginLeft: '180px' }}>
+        <p ref={(el) => (msgRef = el)} id="message"></p>
+      </div>
       <GanttComponent
-        ref={(gantt) => (ganttInstance = gantt)}
-        id="gantt"
-        height="370px"
+        id="ganttDefault"
+        height="430px"
         dataSource={data}
         taskFields={taskFields}
         treeColumnIndex={1}
         splitterSettings={splitterSettings}
-        collapseAllParentTasks={true}
-        toolbar={toolbarOptions}
-        toolbarClick={onToolbarClick}
+        expanding={expanding}
+        collapsing={collapsing}
+        expanded={expanded}
+        collapsed={collapsed}
+        ref={(gantt) => (ganttRef = gantt)}
       >
         <ColumnsDirective>
-          <ColumnDirective field="TaskID" headerText="Task ID" width="90" />
-          <ColumnDirective field="TaskName" headerText="Task Name" width="290" />
-          <ColumnDirective field="StartDate" headerText="Start Date" width="120" />
-          <ColumnDirective field="Duration" headerText="Duration" width="90" />
-          <ColumnDirective field="Progress" headerText="Progress" width="120" />
+          <ColumnDirective field="TaskID" headerText="Task ID" textAlign="Right" width="90" />
+          <ColumnDirective field="TaskName" headerText="Task Name" textAlign="Left" width="290" />
+          <ColumnDirective field="StartDate" headerText="Start Date" textAlign="Right" width="120" />
+          <ColumnDirective field="Duration" headerText="Duration" textAlign="Right" width="90" />
+          <ColumnDirective field="Progress" headerText="Progress" textAlign="Right" width="120" />
         </ColumnsDirective>
-        <Inject services={[Toolbar]} />
+        <Inject services={[Selection]} />
       </GanttComponent>
-
-      <DialogComponent
-        ref={(dialog) => (dialogInstance = dialog)}
-        width="400px"
-        height="auto"
-        header="Parent Tasks"
-        visible={false}
-        showCloseIcon={true}
-        isModal={true}
-      />
     </div>
   );
 }

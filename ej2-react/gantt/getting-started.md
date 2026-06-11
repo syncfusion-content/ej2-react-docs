@@ -173,10 +173,10 @@ You can preview the following sample by clicking the **Preview Sample** button.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/gantt/run-cs1/app/App.jsx %}
+{% include code-snippet/gantt/run-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/gantt/run-cs1/app/App.tsx %}
+{% include code-snippet/gantt/run-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

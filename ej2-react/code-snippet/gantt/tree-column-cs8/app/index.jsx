@@ -1,83 +1,121 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, ColumnsDirective, ColumnDirective, Inject } from '@syncfusion/ej2-react-gantt';
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Selection } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
 
 function App() {
-  let gantt = null;
-
   const taskFields = {
     id: 'TaskID',
     name: 'TaskName',
+    startDate: 'StartDate',
+    endDate: 'EndDate',
     duration: 'Duration',
     progress: 'Progress',
-    parentID: 'parentID'
+    parentID: 'ParentID'
   };
 
-  // 1. Expand all
-  const expandAll = () => gantt.expandAll();
+  const splitterSettings = {
+    position: '75%'
+  };
 
-  // 2. Collapse all
-  const collapseAll = () => gantt.collapseAll();
-
-  // 3. Expand at level (Level 0 = root tasks)
-  const expandLevel0 = () => gantt.treeGrid.expandAtLevel(0);
-
-  // 4. Collapse at level (Level 1 = first child level)
-  const collapseLevel1 = () => gantt.treeGrid.collapseAtLevel(1);
-
-  // 5. Expand by key (TaskID)
-  const expandById = (id) => gantt.treeGrid.expandByKey(id);
-
-  // 6. Collapse by key (TaskID)
-  const collapseById = (id) => gantt.treeGrid.collapseByKey(id);
-
-  // 7. Expand first row by DOM element
-  const expandFirstRow = () => {
-    const rows = gantt.treeGrid.getRows();
-    if (rows && rows.length > 0) {
-      gantt.treeGrid.expandRow(rows[0]);
+  let message = '';
+  let messageColor = 'black';
+  let msgRef;
+  const expanding = (args) => {
+    const data = args.data;
+    if (data) {
+      message = `Expanding Task: ${data.TaskName} (ID: ${data.TaskID})`;
+      messageColor = 'blue';
+      if (data.TaskID === 1) {
+        args.cancel = true;
+        message = `Expanding cancelled for Task: ${data.TaskName} (ID: ${data.TaskID})`;
+        messageColor = 'red';
+      }
+      if (msgRef) {
+        msgRef.innerText = message;
+        msgRef.style.color = messageColor;
+      }
     }
   };
 
-  // 8. Collapse first row by DOM element
-  const collapseFirstRow = () => {
-    const rows = gantt.treeGrid.getRows();
-    if (rows && rows.length > 0) {
-      gantt.treeGrid.collapseRow(rows[0]);
+  const collapsing = (args) => {
+    const data = args.data;
+    if (data) {
+      message = `Collapsing Task: ${data.TaskName} (ID: ${data.TaskID})`;
+      messageColor = 'orange';
+      if (data.TaskID === 5) {
+        args.cancel = true;
+        message = `Collapsing cancelled for Task: ${data.TaskName} (ID: ${data.TaskID})`;
+        messageColor = 'red';
+      }
+      if (msgRef) {
+        msgRef.innerText = message;
+        msgRef.style.color = messageColor;
+      }
+    }
+  };
+
+  const expanded = (args) => {
+    const data = args.data;
+    if (data && args.row) {
+      message = `Task Expanded: ${data.TaskName} (ID: ${data.TaskID})`;
+      messageColor = 'green';
+      if (msgRef) {
+        msgRef.innerText = message;
+        msgRef.style.color = messageColor;
+      }
+      args.row.style.background = '';
+      if ((data.Progress) > 50) {
+        args.row.style.background = '#c0f6c7ff';
+      }
+    }
+  };
+
+  const collapsed = (args) => {
+    const data = args.data;
+    if (data && args.row) {
+      message = `Task Collapsed: ${data.TaskName} (ID: ${data.TaskID})`;
+      messageColor = 'purple';
+      if (msgRef) {
+        msgRef.innerText = message;
+        msgRef.style.color = messageColor;
+      }
+      args.row.style.background = '';
+      if ((data.Progress) < 50) {
+        args.row.style.background = '#fb9c9cff';
+      }
     }
   };
 
   return (
-    <div>
-      <div className="controls" style={{ padding: '12px', display: 'flex', flexWrap: 'wrap', gap: '8px', background: '#f5f5f5', borderTop: '1px solid #ddd' }}>
-        <ButtonComponent cssClass="e-primary" onClick={expandAll}>Expand All</ButtonComponent>
-        <ButtonComponent cssClass="e-primary" onClick={collapseAll}>Collapse All</ButtonComponent>
-        <ButtonComponent cssClass="e-primary" onClick={expandLevel0}>Expand Level 0</ButtonComponent>
-        <ButtonComponent cssClass="e-primary" onClick={collapseLevel1}>Collapse Level 1</ButtonComponent>
-        <ButtonComponent cssClass="e-primary" onClick={() => expandById(2)}>Expand Task ID 2</ButtonComponent>
-        <ButtonComponent cssClass="e-primary" onClick={() => collapseById(1)}>Collapse Task ID 1</ButtonComponent>
-        <ButtonComponent cssClass="e-primary" onClick={expandFirstRow}>Expand First Row (DOM)</ButtonComponent>
-        <ButtonComponent cssClass="e-primary" onClick={collapseFirstRow}>Collapse First Row (DOM)</ButtonComponent>
+    <div className="control-section">
+      <div style={{ marginLeft: '180px' }}>
+        <p ref={(el) => (msgRef = el)} id="message"></p>
       </div>
-
       <GanttComponent
-        ref={g => gantt = g}
+        id="ganttDefault"
+        height="430px"
         dataSource={data}
         taskFields={taskFields}
         treeColumnIndex={1}
-        height="460px"
+        splitterSettings={splitterSettings}
+        expanding={expanding}
+        collapsing={collapsing}
+        expanded={expanded}
+        collapsed={collapsed}
+        ref={(gantt) => (ganttRef = gantt)}
       >
         <ColumnsDirective>
-          <ColumnDirective field="TaskID" headerText="ID" width="80" />
-          <ColumnDirective field="TaskName" headerText="Name" width="200" />
-          <ColumnDirective field="Duration" headerText="Duration" width="100" />
+          <ColumnDirective field="TaskID" headerText="Task ID" textAlign="Right" width="90" />
+          <ColumnDirective field="TaskName" headerText="Task Name" textAlign="Left" width="290" />
+          <ColumnDirective field="StartDate" headerText="Start Date" textAlign="Right" width="120" />
+          <ColumnDirective field="Duration" headerText="Duration" textAlign="Right" width="90" />
+          <ColumnDirective field="Progress" headerText="Progress" textAlign="Right" width="120" />
         </ColumnsDirective>
-        <Inject services={[]} />
+        <Inject services={[Selection]} />
       </GanttComponent>
     </div>
   );
-};
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));

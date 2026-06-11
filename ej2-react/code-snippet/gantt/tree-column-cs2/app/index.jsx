@@ -4,8 +4,8 @@ import { GanttComponent, ColumnsDirective, ColumnDirective, Inject } from '@sync
 import { data } from './datasource';
 
 function App() {
-  const ganttInstance = null;
-  const taskSettings = {
+  var ganttInstance = null;
+  var taskSettings = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -13,14 +13,14 @@ function App() {
     progress: 'Progress',
     parentID: 'ParentID'
   };
-  const splitterSettings = {
+  var splitterSettings = {
     position: '75%'
   };
 
-  const queryCellInfo = (args) => {
-    const rowData = args.data;
-    const columnIndex = args.column.index;
-    const treeColumnIndex = ganttInstance.treeColumnIndex;
+  var queryCellInfo = (args) => {
+    var rowData = args.data;
+    var columnIndex = args.column.index;
+    var treeColumnIndex = ganttInstance.treeColumnIndex;
     if (!rowData.hasChildRecords && columnIndex === treeColumnIndex) {
       args.cell.classList.add('indents');
     }

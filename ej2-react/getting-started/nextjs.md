@@ -102,21 +102,41 @@ yarn add @syncfusion/ej2-react-grids
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS Styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It's easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of the application by referring to one of the built-in themes.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React component provide built-in themes, which are available through both [theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme) and individual component packages. You can apply styles using either approach based on your project setup; however, using the theme package is the recommended approach, as it automatically includes all required dependency styles and simplifies maintenance.
+
+This example uses the Tailwind 3 theme for the Grid component from the theme package. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+npm install @syncfusion/ej2-tailwind3-theme --save
+
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+
+yarn add @syncfusion/@syncfusion/ej2-tailwind3-theme
+
+{% endhighlight %}
+{% endtabs %}
 
 Import the **Tailwind 3** CSS styles for the Grid component and its dependent components in the **app/globals.css** file and remove the existing styles in that file, as shown below:
 
 {% tabs %}
-{% highlight css tabtitle="globals.css" %}
+{% highlight css tabtitle="Theme Package" %}
 
-@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/grid/index.css";
+
+{% endhighlight %}
+{% highlight css tabtitle="Component Package" %}
+
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-react-grids/styles/tailwind3.css";
 
 {% endhighlight %}

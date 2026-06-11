@@ -17,7 +17,7 @@ function App() {
         mode: 'Auto'
     };
     const toolbarOptions = ['Indent', 'Outdent'];
-    let ganttInstance: any;
+    let ganttInstance;
     function indent() {
         ganttInstance.selectRow(2);
         ganttInstance.indent();
