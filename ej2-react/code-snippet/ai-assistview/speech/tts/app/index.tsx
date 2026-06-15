@@ -11,7 +11,6 @@ let stopStreaming = false;
 
 function App() {
     const assistInstance = React.useRef<AIAssistViewComponent>(null);
-    let currentUtterance: SpeechSynthesisUtterance | null = null;
 
     const assistViewToolbarSettings: ToolbarSettingsModel = {
         items: [{ iconCss: 'e-icons e-refresh', align: 'Right' }],
@@ -21,11 +20,10 @@ function App() {
     const responseToolbarSettings: ResponseToolbarSettingsModel = {
         items: [
             { type: 'Button', iconCss: 'e-icons e-assist-copy', tooltip: 'Copy' },
-            { type: 'Button', iconCss: 'e-icons e-audio', tooltip: 'Read Aloud' },
+            { type: 'Button', iconCss: 'e-icons e-assist-audio', tooltip: 'Read Aloud' },
             { type: 'Button', iconCss: 'e-icons e-assist-like', tooltip: 'Like' },
             { type: 'Button', iconCss: 'e-icons e-assist-dislike', tooltip: 'Need Improvement' },
         ],
-        itemClicked: (args) => onResponseToolbarItemClicked(args)
     };
 
     // Renders the banner template indicating voice-enabled assistance
@@ -91,35 +89,6 @@ function App() {
     const toolbarItemClicked = (args: ToolbarItemClickedEventArgs) => {
         if (args.item.iconCss === 'e-icons e-refresh') {
             assistInstance.current.prompts = [];
-        }
-    };
-
-    // Handles clicks on response toolbar items, such as copying, reading aloud, liking, or disliking the response
-    const onResponseToolbarItemClicked = (args: ToolbarItemClickedEventArgs) => {
-        const responseHtml = assistInstance.current.prompts[args.dataIndex].response;
-        if (responseHtml) {
-            const tempDiv = document.createElement('div');
-            tempDiv.innerHTML = responseHtml;
-            const text = (tempDiv.textContent || tempDiv.innerText || '').trim();
-            if (args.item.iconCss === 'e-icons e-audio' || args.item.iconCss === 'e-icons e-assist-stop') {
-                if (currentUtterance) {
-                    speechSynthesis.cancel();
-                    currentUtterance = null;
-                    assistInstance.current.responseToolbarSettings.items[1].iconCss = 'e-icons e-audio';
-                    assistInstance.current.responseToolbarSettings.items[1].tooltip = 'Read Aloud';
-                } else {
-                    const utterance = new SpeechSynthesisUtterance(text);
-                    utterance.onend = () => {
-                        currentUtterance = null;
-                        assistInstance.current.responseToolbarSettings.items[1].iconCss = 'e-icons e-audio';
-                        assistInstance.current.responseToolbarSettings.items[1].tooltip = 'Read Aloud';
-                    };
-                    speechSynthesis.speak(utterance);
-                    currentUtterance = utterance;
-                    assistInstance.current.responseToolbarSettings.items[1].iconCss = 'e-icons e-assist-stop';
-                    assistInstance.current.responseToolbarSettings.items[1].tooltip = 'Stop';
-                }
-            }
         }
     };
 

@@ -397,6 +397,50 @@ The [itemClicked](https://ej2.syncfusion.com/react/documentation/api/ai-assistvi
 
 {% previewsample "page.domainurl/code-snippet/ai-assistview/toolbar-items/response-itemClick" %}
 
+### Regenerate responses
+
+The AI AssistView allows users to `regenerate` responses to request a new response for the same prompt. The navigation buttons with `previous` and `next` buttons are rendered along with a response (e.g., `1 / 3`) allowing users to navigate between all regenerated responses for the prompt.
+
+> The navigation UI appears automatically once more than one response is available for a prompt either re-generated or preloaded using the `regeneratedResponses` property in prompts collection.
+
+#### Adding regenerate item
+
+You can enable the regenerate button by adding the `e-assist-regenerate` icon to the `items` collection of the [responseToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#responsetoolbarsettings) property.
+
+#### Adding regenerated response
+
+When regenerated, it triggers the [promptRequest](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#promptrequest) event with the existing prompt, enabling you to call your preferred AI service again and update the response using the [addPromptResponse](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#addpromptresponse) method.
+
+In the following example, AI AssistView is rendered with the built-in `regenerate` toolbar item in the response toolbar.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/ai-assistview/toolbar-items/regenerate-response/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/ai-assistview/toolbar-items/regenerate-response/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/ai-assistview/toolbar-items/regenerate-response" %}
+
+#### Pre-loading regenerated responses
+
+You can use the [regeneratedResponses](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/promptModel#regeneratedresponses) property in the `prompts` property collection to pre-load multiple responses for a prompt at the initial render, without requiring the user to trigger the regenerate action. Users can navigate between the pre-loaded responses using the `previous` and `next` buttons in the response navigation UI.
+
+In the following example, the `regeneratedResponses` property is used to pre-load multiple responses for a prompt.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/ai-assistview/toolbar-items/regenerate-preload/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/ai-assistview/toolbar-items/regenerate-preload/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/ai-assistview/toolbar-items/regenerate-preload" %}
+
 ## Adding custom toolbar items
 
 You can also add custom toolbar items in the AI AssistView by using the [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#toolbarsettings), [responseToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#responsetoolbarsettings) & [promptToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#prompttoolbarsettings) properties.
