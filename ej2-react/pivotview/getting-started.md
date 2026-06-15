@@ -70,7 +70,7 @@ The following CSS files are available in the **../node_modules/@syncfusion** pac
 @import '../node_modules/@syncfusion/ej2-react-pivotview/styles/tailwind3.css';
 ```
 
-> Before including Syncfusion styles, make sure to remove the default styles defined in **index.css**. This helps prevent unintended style overrides and ensures that Syncfusion components render correctly.
+N> Before including Syncfusion styles, make sure to remove the default styles defined in the **App.css** and **index.css** files. This helps prevent unintended style overrides and ensures that the Syncfusion components render correctly.
 
 ## Adding Pivot Table component
 
