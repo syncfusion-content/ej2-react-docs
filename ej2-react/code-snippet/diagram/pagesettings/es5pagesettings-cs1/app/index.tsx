@@ -30,6 +30,25 @@ let node: NodeModel[] = [{
       content: 'Node3'
     }]
 }];
+const pageSettings = {
+  // Sets the Page Break for diagram
+  showPageBreaks: true,
+  // Defines the background color and image  of diagram
+  background: {
+    color: 'grey',
+  },
+  // Sets the width for the Page
+  width: 300,
+  // Sets the height for the Page
+  height: 300,
+  // Sets the space to be left between an annotation and its parent node/connector
+  margin: {
+    left: 10,
+    top: 10,
+    bottom: 10,
+    right: 10
+  },
+};
 function App() {
   return (
     <DiagramComponent
@@ -39,25 +58,7 @@ function App() {
       nodes={node}
       connectors={connector}
       // Defines the pageSettings for the diagram
-      pageSettings={{
-        // Sets the Page Break for diagram
-        showPageBreaks: true,
-        // Defines the background color and image  of diagram
-        background: {
-          color: 'grey',
-        },
-        // Sets the width for the Page
-        width: 300,
-        // Sets the height for the Page
-        height: 300,
-        // Sets the space to be left between an annotation and its parent node/connector
-        margin: {
-          left: 10,
-          top: 10,
-          bottom: 10,
-          right: 10
-        },
-      }}
+      pageSettings={pageSettings}>
     />
   );
 }

@@ -41,6 +41,46 @@ let species: object[] = [
     { 'Name': 'Birds', 'Category': 'Vertebrates' },
     { 'Name': 'Mammals', 'Category': 'Vertebrates' }
 ];
+const layout = {
+  type: 'HierarchicalTree',
+  horizontalSpacing: 15,
+  verticalSpacing: 50,
+  margin: {
+    top: 10,
+    left: 10,
+    right: 10,
+    bottom: 0,
+  },
+};
+const dataSourceSettings = {
+  id: 'Name',
+  parentId: 'Category',
+  dataManager: new DataManager(species),
+  //binds the external data with node
+  doBinding: (nodeModel: NodeModel, data: DataInfo, diagram: Diagram) => {
+    nodeModel.annotations = [
+      {
+        /* tslint:disable:no-string-literal */
+        content: data['Name'],
+        margin: {
+          top: 10,
+          left: 10,
+          right: 10,
+          bottom: 0,
+        },
+        style: {
+          color: 'black',
+        },
+      },
+    ];
+    /* tslint:disable:no-string-literal */
+    nodeModel.style = {
+      fill: '#ffeec7',
+      strokeColor: '#f5d897',
+      strokeWidth: 1,
+    };
+  },
+};
 //Initializes diagram control
 function App() {
   return (
@@ -49,47 +89,9 @@ function App() {
       width={'100%'}
       height={490}
       //Configures data source
-      dataSourceSettings={{
-        id: 'Name',
-        parentId: 'Category',
-        dataManager: new DataManager(species),
-        //binds the external data with node
-        doBinding: (nodeModel: NodeModel, data: DataInfo, diagram: Diagram) => {
-          nodeModel.annotations = [
-            {
-              /* tslint:disable:no-string-literal */
-              content: data['Name'],
-              margin: {
-                top: 10,
-                left: 10,
-                right: 10,
-                bottom: 0,
-              },
-              style: {
-                color: 'black',
-              },
-            },
-          ];
-          /* tslint:disable:no-string-literal */
-          nodeModel.style = {
-            fill: '#ffeec7',
-            strokeColor: '#f5d897',
-            strokeWidth: 1,
-          };
-        },
-      }}
+      dataSourceSettings={dataSourceSettings}
       //Configrues HierarchicalTree layout
-      layout={{
-        type: 'HierarchicalTree',
-        horizontalSpacing: 15,
-        verticalSpacing: 50,
-        margin: {
-          top: 10,
-          left: 10,
-          right: 10,
-          bottom: 0,
-        },
-      }}
+      layout={layout}
       //Sets the default values of nodes
       getNodeDefaults={(obj: Node, diagram: Diagram) => {
         //Initialize shape
@@ -111,9 +113,7 @@ function App() {
       }}
       //Disables all interactions except zoom/pan
       tool={DiagramTools.ZoomPan}
-      snapSettings={{
-        constraints: 0,
-      }}
+      snapSettings={{ constraints: 0 }}
     >
       <Inject services={[DataBinding, HierarchicalTree]} />
     </DiagramComponent>

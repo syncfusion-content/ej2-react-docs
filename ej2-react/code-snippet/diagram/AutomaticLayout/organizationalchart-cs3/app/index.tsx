@@ -14,6 +14,24 @@ let data: object[] = [
 ];
 let items: DataManager = new DataManager(data as JSON[], new Query().take(7));
 
+const layout = {
+  //Sets layout type
+  type: 'OrganizationalChart',
+  // define the getLayoutInfo
+  getLayoutInfo: (node: Node, options: TreeInfo) => {
+    if (!options.hasSubTree) {
+      options.type = 'Center';
+      options.orientation = 'Horizontal';
+    }
+  }
+};
+
+const dataSourceSettings = {
+  id: 'Id',
+  parentId: 'Team',
+  dataSource: items
+};
+
 export default function App() {
   let diagramInstance: DiagramComponent;
   let alignmentInstance: HTMLSelectElement;
@@ -48,24 +66,10 @@ export default function App() {
         snapSettings={{ constraints: 0 }}
 
         //Uses layout to auto-arrange nodes on the diagram page
-        layout={{
-          //Sets layout type
-          type: 'OrganizationalChart',
-          // define the getLayoutInfo
-          getLayoutInfo: (node: Node, options: TreeInfo) => {
-            if (!options.hasSubTree) {
-              options.type = 'Center';
-              options.orientation = 'Horizontal';
-            }
-          }
-        }}
+        layout={layout}
 
         //Configures data source for diagram
-        dataSourceSettings={{
-          id: 'Id',
-          parentId: 'Team',
-          dataSource: items
-        }}
+        dataSourceSettings={dataSourceSettings}
 
         //Sets the default properties for nodes
         getNodeDefaults={(node: NodeModel) => {

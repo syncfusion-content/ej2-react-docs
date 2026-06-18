@@ -36,6 +36,16 @@ let nodes: NodeModel[] = [{
     { content: 'Drag or resize the node to activate autoscroll' },
   ],
 }];
+const scrollSettings = {
+  scrollLimit: 'Infinity',
+  canAutoScroll: true,
+  autoScrollBorder: {
+    left: 100,
+    right: 100,
+    top: 100,
+    bottom: 100
+  }
+};
 function App() {
   return (
     <DiagramComponent
@@ -46,18 +56,7 @@ function App() {
       connectors={connector}
       rulerSettings={{ showRulers: true }}
       // set the autoScrollBorder
-      scrollSettings = {
-        {
-          scrollLimit: 'Infinity',
-          canAutoScroll: true,
-          autoScrollBorder: {
-            left: 100,
-            right: 100,
-            top: 100,
-            bottom: 100
-          }
-        }
-      }>
+      scrollSettings = {scrollSettings}>
     <Inject services={[ConnectorEditing]}/>
     </DiagramComponent>
   );

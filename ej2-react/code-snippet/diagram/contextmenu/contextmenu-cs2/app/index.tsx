@@ -24,50 +24,52 @@ let node: NodeModel[] = [{
     }
 ];
 
+const contextMenuSettings = {
+    //Enables the context menu
+    show: true,
+    items: [
+        {
+            // Text to be displayed
+            text: 'Fill',
+            items: [
+            { id: 'red', text: 'Red' },
+            { id: 'yellow', text: 'Yellow' },
+            { id: 'green', text: 'Green' },
+            { id: 'blue', text: 'Blue' },
+            ],
+            //Sets the id for the item
+            id: 'fill',
+            target: '.e-elementcontent',
+            // Sets the css icons for the item
+            iconCss: 'e-icons e-paint-bucket',
+        },
+        {
+            text: 'Annotation color',
+            id: 'annotationColor',
+            items: [
+            { id: 'pink', text: 'Pink' },
+            { id: 'orange', text: 'Orange' },
+            { id: 'violet', text: 'Violet' },
+            { id: 'brown', text: 'Brown' },
+            ],
+            target: '.e-elementcontent',
+            iconCss: 'e-icons e-font-color',
+        },
+        {
+            text: 'Clone',
+            id: 'clone',
+            target: '.e-elementcontent',
+            iconCss: 'e-icons e-copy',
+        },
+        ],
+    // Hides the default context menu items
+    showCustomMenuOnly: true,
+};
+
 //Initializes the Diagram component
 function App() {
     return (<DiagramComponent id="diagram_contextmenu" ref={(diagram) => (diagramInstance = diagram)} width={'650px'} height={'350px'} nodes={node}  
-        contextMenuSettings={{
-            //Enables the context menu
-            show: true,
-            items: [
-                {
-                  // Text to be displayed
-                  text: 'Fill',
-                  items: [
-                    { id: 'red', text: 'Red' },
-                    { id: 'yellow', text: 'Yellow' },
-                    { id: 'green', text: 'Green' },
-                    { id: 'blue', text: 'Blue' },
-                  ],
-                  //Sets the id for the item
-                  id: 'fill',
-                  target: '.e-elementcontent',
-                  // Sets the css icons for the item
-                  iconCss: 'e-icons e-paint-bucket',
-                },
-                {
-                  text: 'Annotation color',
-                  id: 'annotationColor',
-                  items: [
-                    { id: 'pink', text: 'Pink' },
-                    { id: 'orange', text: 'Orange' },
-                    { id: 'violet', text: 'Violet' },
-                    { id: 'brown', text: 'Brown' },
-                  ],
-                  target: '.e-elementcontent',
-                  iconCss: 'e-icons e-font-color',
-                },
-                {
-                  text: 'Clone',
-                  id: 'clone',
-                  target: '.e-elementcontent',
-                  iconCss: 'e-icons e-copy',
-                },
-              ],
-            // Hides the default context menu items
-            showCustomMenuOnly: true,
-        }}  
+        contextMenuSettings={contextMenuSettings}  
 
         contextMenuClick={(args: MenuEventArgs) => {
             let selectedNode = diagramInstance.selectedItems.nodes[0];

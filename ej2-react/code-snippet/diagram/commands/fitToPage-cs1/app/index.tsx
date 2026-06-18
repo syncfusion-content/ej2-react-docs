@@ -975,6 +975,21 @@ const fitToHeight = function () {
   });
 
 }
+const layout = {
+  type: 'OrganizationalChart',
+  margin: { top: 20 },
+  getLayoutInfo: (node:Node, tree:TreeInfo) => {
+    if (!tree.hasSubTree) {
+      tree.orientation = 'Vertical';
+      tree.type = 'Alternate';
+    }
+  },
+};
+const dataSourceSettings = {
+  id: 'Id',
+  parentId: 'ReportingPerson',
+  dataSource: items,
+};
 //Initializes the Diagram component
 function App() {
   return (
@@ -983,22 +998,8 @@ function App() {
       <ButtonComponent content="Fit to Width" onClick={fitToWidth} />
       <ButtonComponent content="Fit to Height" onClick={fitToHeight} />
       <DiagramComponent id="diagram1" ref={(diagram) => (diagramInstance = diagram)} width={'1250px'} height={'590px'}
-        layout={{
-          type: 'OrganizationalChart',
-          margin: { top: 20 },
-          getLayoutInfo: (node:Node, tree:TreeInfo) => {
-            if (!tree.hasSubTree) {
-              tree.orientation = 'Vertical';
-              tree.type = 'Alternate';
-            }
-          },
-        }}
-        dataSourceSettings={{
-          id: 'Id',
-          parentId: 'ReportingPerson',
-          dataSource: items,
-        }
-        }
+        layout={layout}
+        dataSourceSettings={dataSourceSettings}
         getNodeDefaults={(obj: NodeModel) => {
           obj.height = 50;
           obj.backgroundColor = 'lightgrey';

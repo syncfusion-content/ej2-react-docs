@@ -18,7 +18,17 @@ let data = [
     { id: 9, Label: "Text Block", parentId: 5 },
 ];
 let items = new DataManager(data, new Query().take(7));
-
+const layout = {
+    //Sets layout type
+    type: "MindMap",
+    orientation: "Horizontal"
+};
+const dataSourceSettings = {
+    id: "id",
+    parentId: "parentId",
+    dataManager: items,
+    root: String(1),
+};
 export default function App() {
     return (
         <DiagramComponent
@@ -27,19 +37,10 @@ export default function App() {
             height={"550px"}
 
             //Uses layout to auto-arrange nodes on the diagram page
-            layout={{
-                //Sets layout type
-                type: "MindMap",
-                orientation: "Horizontal"
-            }}
+            layout={layout}
 
             //Configures data source for diagram
-            dataSourceSettings={{
-                id: "id",
-                parentId: "parentId",
-                dataManager: items,
-                root: String(1),
-            }}
+            dataSourceSettings={dataSourceSettings}
 
             //Sets the default properties for nodes
             getNodeDefaults={(node) => {
