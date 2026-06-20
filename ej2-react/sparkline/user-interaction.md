@@ -44,9 +44,55 @@ The fill color, text styles, format, and border of the tooltip can be customized
 
  {% previewsample "page.domainurl/code-snippet/sparkline/user-interaction-cs2" %}
 
+ ### Inline tooltip formatting
+
+The tooltip content can be formatted directly within the [`format`] property by adding DateTime or number format specifiers to supported tooltip tokens. This allows you to control how point and series values are displayed without using additional events.
+
+A format specifier can be applied to a tooltip token by adding a colon (`:`) followed by the required format.
+
+For example:
+
+```typescript
+const tooltipSettings = {
+    visible: true,
+    format: '${x:MMM yyyy} : ${y:n2}'
+}
+```
+
+In the above example, `x` is displayed in month-year format and `y` is displayed with two decimal places.
+
+Inline formatting can be applied to the following tooltip tokens:
+
+- `${x}` or `${x:MMM yyyy}` – Specifies the x-value of the Sparkline data point, such as DateTime or category values.
+- `${y}` or `${y:n2}` – Specifies the numeric y-value of the Sparkline data point.
+
+**Important:** DateTime formatting is applied when the resolved value is a Date object, and number formatting is applied when the resolved value is numeric. 
+
+The following format types are supported:
+
+- DateTime formats such as `MMM yyyy`, `MM:yy`, and `dd MMM`
+- Number formats such as:
+  - `n2` – number with two decimal places
+  - `n0` – number without decimals
+  - `c2` – currency format
+  - `p1` – percentage format
+
+If the specified format does not match the resolved value type, the original value is displayed.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/sparkline/user-interaction-cs5/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/sparkline/user-interaction-cs5/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/sparkline/user-interaction-cs5" %}
+
 ### Tooltip template
 
-Sparkline tooltip has template support. By using tooltip template, you can customize tooltips. The following code example shows more customization options provided to  `sparktooltip` css class that is used in tooltip template div. Using this template, images also can be added to tooltip.
+Sparkline tooltip has template support. By using tooltip template, you can customize tooltips. The following code example shows more customization options provided to  `sparkline-tooltip` css class that is used in tooltip template div. Using this template, images also can be added to tooltip.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

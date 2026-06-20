@@ -66,3 +66,24 @@ A StockChart overlay that shows the upper and lower limits of normal price movem
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/stock-chart/technical-indicators-cs1" %}
+
+ ## Indicator Events
+
+The StockChart component supports **indicator lifecycle events**, allowing you to monitor and control indicator add and remove operations triggered through the built-in toolbar indicator dropdown. These events are useful for validating user actions, restricting specific indicators, tracking indicator changes, and integrating indicator interactions with application logic.
+
+The following indicator events are supported by the StockChart component:
+
+- **`beforeIndicatorChange`** – Fired before an indicator is added or removed. This event allows you to review the requested action in advance and cancel it by setting `cancel` to `true`.
+
+- **`indicatorChanged`** – Fired after an indicator has been added or removed successfully. This event occurs only if the action was not canceled and can be used to handle the updated state in your application.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/stock-chart/code-path/technical-indicators-cs2/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/stock-chart/code-path/technical-indicators-cs2/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/stock-chart/technical-indicators-cs2" %}
