@@ -6,6 +6,7 @@ control: Next.js
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
+canonical_url: "https://www.syncfusion.com/react-components/react-diagram"
 ---
 
 
