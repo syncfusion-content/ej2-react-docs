@@ -1,24 +1,27 @@
-{% raw %}
+
 import { DetailsView, FileManagerComponent, NavigationPane, Toolbar, Inject } from '@syncfusion/ej2-react-filemanager';
 import * as React from 'react';
 
 function App() {
   let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
   let fileObj: FileManagerComponent;
+  let ajaxSettings: object = {
+    downloadUrl: hostUrl + 'api/FileManager/Download',
+    getImageUrl: hostUrl + "api/FileManager/GetImage",
+    uploadUrl: hostUrl + 'api/FileManager/Upload',
+    url: hostUrl + "api/FileManager/FileOperations"
+  };
+  let uploadSettings: object = { chunkSize: 5242880, maxFileSize: 73728000 };
+  let height: string = "375px";
+  let view: string = "LargeIcons";
   
   return (
     <div className="control-section">
-      <FileManagerComponent ref={s => (fileObj = s as FileManagerComponent)} id="file" view="LargeIcons"height="375px" 
-        ajaxSettings={{
-          downloadUrl: hostUrl + 'api/FileManager/Download',
-          getImageUrl: hostUrl + "api/FileManager/GetImage",
-          uploadUrl: hostUrl + 'api/FileManager/Upload',
-          url: hostUrl + "api/FileManager/FileOperations"
-        }} uploadSettings={{ chunkSize: 5242880, maxFileSize: 73728000 }}>
+      <FileManagerComponent ref={s => (fileObj = s as FileManagerComponent)} id="file" view={view} height={height} 
+        ajaxSettings={ajaxSettings} uploadSettings={uploadSettings}>
         <Inject services={[NavigationPane, DetailsView, Toolbar]} />
       </FileManagerComponent>
     </div>
   );
 }
 export default App;
-{% endraw %}

@@ -1,4 +1,4 @@
-{% raw %}
+
 import { createRoot } from 'react-dom/client';
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -275,67 +275,25 @@ function App() {
   let resultData: { [key: string]: Object }[] = [].slice.call(fileData) as {
     [key: string]: Object;
   }[];
+  let toolbarSettings: object = {
+    items: ['NewFolder', 'Cut', 'Copy', 'Paste', 'Delete', 'Rename', 'SortBy', 'Refresh', 'Selection', 'View', 'Details']
+  };
+  let contextMenuSettings: object = {
+    file: ['Open', '|', 'Cut', 'Copy', 'Paste', 'Delete', 'Rename', '|', 'Details'],
+    folder: ['Open', '|', 'Cut', 'Copy', 'Paste', '|', 'Delete', 'Rename', '|', 'Details'],
+    layout: ['SortBy', 'View', 'Refresh', '|', 'Paste', '|', 'NewFolder', '|', 'Details', '|', 'SelectAll'],
+    visible: true,
+  };
+  let height: string = "375px";
 
   return (
     <div className="control-section">
       <FileManagerComponent
         id="flatdata"
-        height="375px"
+        height={height}
         fileSystemData={resultData}
-        toolbarSettings={{
-          items: [
-            'NewFolder',
-            'Cut',
-            'Copy',
-            'Paste',
-            'Delete',
-            'Rename',
-            'SortBy',
-            'Refresh',
-            'Selection',
-            'View',
-            'Details',
-          ],
-        }}
-        contextMenuSettings={{
-          file: [
-            'Open',
-            '|',
-            'Cut',
-            'Copy',
-            'Paste',
-            'Delete',
-            'Rename',
-            '|',
-            'Details',
-          ],
-          folder: [
-            'Open',
-            '|',
-            'Cut',
-            'Copy',
-            'Paste',
-            '|',
-            'Delete',
-            'Rename',
-            '|',
-            'Details',
-          ],
-          layout: [
-            'SortBy',
-            'View',
-            'Refresh',
-            '|',
-            'Paste',
-            '|',
-            'NewFolder',
-            '|',
-            'Details',
-            '|',
-            'SelectAll',
-          ],
-          visible: true,
-        }}
+        toolbarSettings={toolbarSettings}
+        contextMenuSettings={contextMenuSettings}
       >
         <Inject services={[NavigationPane, DetailsView, Toolbar]} />
       </FileManagerComponent>
@@ -343,4 +301,3 @@ function App() {
   );
 }
 export default App;
-{% endraw %}

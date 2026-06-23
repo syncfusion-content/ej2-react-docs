@@ -1,4 +1,4 @@
-{% raw %}
+
 import * as React from 'react';
 import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';
 import { DetailsView, FileManagerComponent, Inject, NavigationPane, Toolbar } from '@syncfusion/ej2-react-filemanager';
@@ -19,16 +19,18 @@ function App() {
     }
     function template2() {
         let hostUrl = "https://ej2-aspcore-service.azurewebsites.net/";
+        let allowDragAndDrop = true;
+        let ajaxSettings = {
+            downloadUrl: hostUrl + 'api/FileManager/Download',
+            getImageUrl: hostUrl + "api/FileManager/GetImage",
+            uploadUrl: hostUrl + 'api/FileManager/Upload',
+            url: hostUrl + "api/FileManager/FileOperations"
+        };
         return (<div className="template">
               <div className="content-title">
                    <div className="cnt-text">File Manager with default functionalities</div>
               </div>
-              <FileManagerComponent ref={s => (fileObj = s)} id="file" allowDragAndDrop={true} ajaxSettings={{
-                  downloadUrl: hostUrl + 'api/FileManager/Download',
-                  getImageUrl: hostUrl + "api/FileManager/GetImage",
-                  uploadUrl: hostUrl + 'api/FileManager/Upload',
-                  url: hostUrl + "api/FileManager/FileOperations"
-                }}>
+              <FileManagerComponent ref={s => (fileObj = s)} id="file" allowDragAndDrop={allowDragAndDrop} ajaxSettings={ajaxSettings}>
                 <Inject services={[NavigationPane, DetailsView, Toolbar]}/>
               </FileManagerComponent>
             </div>);
@@ -43,4 +45,3 @@ function App() {
           </TabComponent>);
 }
 export default App;
-{% endraw %}

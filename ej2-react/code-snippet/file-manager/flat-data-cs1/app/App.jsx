@@ -1,4 +1,4 @@
-{% raw %}
+
 import { createRoot } from 'react-dom/client';
 import * as React from 'react';
 import { useEffect } from "react";
@@ -263,14 +263,19 @@ const FlatData = () => {
         }
     ];
     let resultData = [].slice.call(fileData);
-    
+    let height = "375px";
+    let toolbarSettings = { items: ['NewFolder', 'Cut', 'Copy', 'Paste', 'Delete', 'Rename', 'SortBy', 'Refresh', 'Selection', 'View', 'Details'] };
+    let contextMenuSettings = {
+        file: ["Open", "|", "Cut", "Copy", "Paste", "Delete", "Rename", "|", "Details"], 
+        folder: ["Open", "|", "Cut", "Copy", "Paste", "|", "Delete", "Rename", "|", "Details"], 
+        layout: ["SortBy", "View", "Refresh", "|", "Paste", "|", "NewFolder", "|", "Details", "|", "SelectAll"], 
+        visible: true
+    };
     return (<div>
             <div className="control-section">
-                <FileManagerComponent id="flatdata" height="375px" fileSystemData={resultData} toolbarSettings={{ items: ['NewFolder', 'Cut', 'Copy', 'Paste', 'Delete', 'Rename', 'SortBy', 'Refresh', 'Selection', 'View', 'Details'] }} contextMenuSettings={{
-            file: ["Open", "|", "Cut", "Copy", "Paste", "Delete", "Rename", "|", "Details"], folder: ["Open", "|", "Cut", "Copy", "Paste", "|", "Delete", "Rename", "|", "Details"], layout: ["SortBy", "View", "Refresh", "|", "Paste", "|", "NewFolder", "|", "Details", "|", "SelectAll"], visible: true
-        }}>
-                    <Inject services={[NavigationPane, DetailsView, Toolbar]}/>
-                </FileManagerComponent>
+            <FileManagerComponent id="flatdata" height={height} fileSystemData={resultData} toolbarSettings={toolbarSettings} contextMenuSettings={contextMenuSettings}>
+                <Inject services={[NavigationPane, DetailsView, Toolbar]} />
+            </FileManagerComponent>
             </div>
 
         </div>);
@@ -279,4 +284,3 @@ export default FlatData;
 
 const root = createRoot(document.getElementById('root'));
 root.render(<FlatData />);
-{% endraw %}

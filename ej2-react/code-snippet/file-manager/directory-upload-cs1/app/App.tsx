@@ -1,4 +1,4 @@
-{% raw %}
+
 import * as React from 'react';
 import { FileManagerComponent, Inject, NavigationPane, DetailsView, Toolbar } from '@syncfusion/ej2-react-filemanager';
 import { DropDownButton, ItemModel } from '@syncfusion/ej2-splitbuttons';
@@ -10,6 +10,13 @@ function App() {
   let fmObj: FileManagerComponent;
   let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
   let items: ItemModel[] = [{ text: 'Folder' }, { text: 'Files' }];
+  let height: string = "375px";
+  let ajaxSettings: object = {
+    url: hostUrl + "api/FileManager/FileOperations",
+    getImageUrl: hostUrl + "api/FileManager/GetImage",
+    uploadUrl: hostUrl + 'api/FileManager/Upload',
+    downloadUrl: hostUrl + 'api/FileManager/Download'
+  };
 
   function onCreated(args) {
       (document.getElementById('file_tb_upload') as HTMLElement).onclick = (e) => {
@@ -35,12 +42,7 @@ function App() {
   return(
       <div>
           <div className="control-section">
-              <FileManagerComponent id="file" ref={(scope) => { fmObj = scope; }} height="375px" ajaxSettings = {{
-                  url: hostUrl + "api/FileManager/FileOperations",
-                  getImageUrl: hostUrl + "api/FileManager/GetImage",
-                  uploadUrl: hostUrl + 'api/FileManager/Upload',
-                  downloadUrl: hostUrl + 'api/FileManager/Download'
-              }}
+              <FileManagerComponent id="file" ref={(scope) => { fmObj = scope as FileManagerComponent; }} height={height} ajaxSettings={ajaxSettings}
               created={onCreated.bind(this)}>
           <Inject services={[ NavigationPane, DetailsView, Toolbar]} />
               </FileManagerComponent>
@@ -50,4 +52,3 @@ function App() {
   );
 }
 export default App;
-{% endraw %}

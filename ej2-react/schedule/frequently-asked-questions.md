@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Frequently asked questions in React Schedule component
 
-In this article, you can find some frequently asked questions and corresponding solutions while getting hands-on experience with the Schedule component.
+In this article, you can find some frequently asked questions and corresponding solutions while getting hands-on experience with the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler).
 
 ## Maximum call stack size exceeded
 

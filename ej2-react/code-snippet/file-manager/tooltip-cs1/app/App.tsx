@@ -1,4 +1,4 @@
-{% raw %}
+
 import { DetailsView, FileManagerComponent, NavigationPane, Toolbar, Inject } from '@syncfusion/ej2-react-filemanager';
 import * as React from 'react';
 import { getValue, select } from '@syncfusion/ej2-base';
@@ -8,6 +8,13 @@ function App() {
     let fileObj: FileManagerComponent;
     let tooltipObj: TooltipComponent;
     let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";   
+    let height: string = "375px";
+    let ajaxSettings: object = {
+        downloadUrl: hostUrl + 'api/FileManager/Download',
+        getImageUrl: hostUrl + "api/FileManager/GetImage",
+        uploadUrl: hostUrl + 'api/FileManager/Upload',
+        url: hostUrl + "api/FileManager/FileOperations"
+    };
     function onTooltipBeforeRender(args: TooltipEventArgs): void {
       const buttonId: string = select('button', args.target).id;
       let description: string = '';
@@ -78,13 +85,8 @@ function App() {
         <TooltipComponent id="template-tootip" ref={ s => (tooltipObj = s as TooltipComponent)} target="#file_toolbar [title]" beforeRender={onTooltipBeforeRender} >
             <div className="filemanager-container">
             {/* File Manager element */}
-                <FileManagerComponent ref={ s => (fileObj = s as FileManagerComponent)} id="file" height="375px"
-                    ajaxSettings = {{
-                        downloadUrl: hostUrl +'api/FileManager/Download',
-                        getImageUrl: hostUrl +'api/FileManager/GetImage',
-                        uploadUrl: hostUrl +'api/FileManager/Upload',
-                        url: hostUrl + 'api/FileManager/FileOperations'         
-                    }} fileLoad={fileLoad}>
+                <FileManagerComponent ref={ s => (fileObj = s as FileManagerComponent)} id="file" height={height}
+                    ajaxSettings={ajaxSettings} fileLoad={fileLoad}>
                     <Inject services={[ NavigationPane, DetailsView, Toolbar]} />
                 </FileManagerComponent>
             </div>
@@ -93,4 +95,3 @@ function App() {
 }
 export default App;
 
-{% endraw %}
