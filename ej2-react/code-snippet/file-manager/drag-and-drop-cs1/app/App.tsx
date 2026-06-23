@@ -1,10 +1,18 @@
-{% raw %}
+
 import { DetailsView, FileManagerComponent, Inject, NavigationPane, Toolbar } from '@syncfusion/ej2-react-filemanager';
 import * as React from 'react';
 
 function App() {
   let fileObj: FileManagerComponent;
   let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
+  let height: string = "375px";
+  let allowDragAndDrop: boolean = true;
+  let ajaxSettings: object = {
+    downloadUrl: hostUrl + 'api/FileManager/Download',
+    getImageUrl: hostUrl + "api/FileManager/GetImage",
+    uploadUrl: hostUrl + 'api/FileManager/Upload',
+    url: hostUrl + "api/FileManager/FileOperations"
+  };
   // File Manager Drag start event
   function onFileDragStart(args: any) {
     console.log("File Drag Start");
@@ -24,17 +32,12 @@ function App() {
   return (
   <div>
       <div className="control-section">
-          <FileManagerComponent ref={ s => (fileObj = s as FileManagerComponent)} height="375px" id="file" allowDragAndDrop={true}
-              ajaxSettings = {{
-                downloadUrl: hostUrl + 'api/FileManager/Download',
-                getImageUrl: hostUrl + "api/FileManager/GetImage",
-                uploadUrl: hostUrl + 'api/FileManager/Upload',
-                url: hostUrl + "api/FileManager/FileOperations"
-              }} fileDragStart={onFileDragStart.bind(this)} fileDragStop={onFileDragStop.bind(this)}  fileDragging={onFileDragging.bind(this)} fileDropped={onFileDropped.bind(this)}>
+          <FileManagerComponent ref={ s => (fileObj = s as FileManagerComponent)} height={height} id="file" allowDragAndDrop={allowDragAndDrop}
+              ajaxSettings={ajaxSettings} fileDragStart={onFileDragStart.bind(this)} fileDragStop={onFileDragStop.bind(this)}  fileDragging={onFileDragging.bind(this)} fileDropped={onFileDropped.bind(this)}>
               <Inject services={[ NavigationPane, DetailsView, Toolbar]} />
           </FileManagerComponent>
       </div>
   </div>
   );
 }
-export default App;{% endraw %}
+export default App;

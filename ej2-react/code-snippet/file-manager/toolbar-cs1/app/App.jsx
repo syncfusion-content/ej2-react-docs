@@ -1,4 +1,4 @@
-{% raw %}
+
 import { DetailsView, FileManagerComponent, NavigationPane, Toolbar, Inject, ToolbarItemsDirective, ToolbarItemDirective } from '@syncfusion/ej2-react-filemanager';
 import { CheckBoxComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
@@ -6,6 +6,15 @@ function App() {
     let fileObj;
     let checkbox;
     let hostUrl = "https://ej2-aspcore-service.azurewebsites.net/";
+    let height = "375px";
+    let view = "Details";
+    let ajaxSettings = {
+        downloadUrl: hostUrl + 'api/FileManager/Download',
+        getImageUrl: hostUrl + "api/FileManager/GetImage",
+        uploadUrl: hostUrl + 'api/FileManager/Upload',
+        url: hostUrl + "api/FileManager/FileOperations"
+    };
+
     function checkboxTemplate() {
         return (
           <CheckBoxComponent ref={ scope => (checkbox = scope )} label="Select All" checked={false} change={onChange} />
@@ -24,12 +33,7 @@ function App() {
     }
     return (<div>
       <div className="control-section">
-          <FileManagerComponent ref={s => (fileObj = s)} id="file" height="375px" view="Details" ajaxSettings={{
-            downloadUrl: hostUrl + 'api/FileManager/Download',
-            getImageUrl: hostUrl + "api/FileManager/GetImage",
-            uploadUrl: hostUrl + 'api/FileManager/Upload',
-            url: hostUrl + "api/FileManager/FileOperations"
-        }}>
+          <FileManagerComponent ref={s => (fileObj = s)} id="file" height={height} view={view} ajaxSettings={ajaxSettings}>
             <ToolbarItemsDirective>
                 <ToolbarItemDirective name= 'NewFolder' text= 'Create folder' prefixIcon= 'e-plus' tooltipText= 'Create folder'/>
                 <ToolbarItemDirective name= 'Upload'/>
@@ -52,4 +56,3 @@ function App() {
   </div>);
 }
 export default App;
-{% endraw %}

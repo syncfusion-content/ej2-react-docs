@@ -1,4 +1,4 @@
-{% raw %}
+
 import { FileManagerComponent, Inject, NavigationPane, DetailsView, Toolbar, Virtualization } from '@syncfusion/ej2-react-filemanager';
 import * as React from 'react';
 /**
@@ -7,6 +7,15 @@ import * as React from 'react';
 function App() {
 
     let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
+    let height: string = "375px";
+    let view: string = "Details";
+    let enableVirtualization: boolean = true;
+    let ajaxSettings: object = {
+        url: hostUrl + "api/Virtualization/FileOperations",
+        getImageUrl: hostUrl + "api/Virtualization/GetImage",
+        uploadUrl: hostUrl + 'api/Virtualization/Upload',
+        downloadUrl: hostUrl + 'api/Virtualization/Download'
+    };
     function onBeforeSend(args) {
         args.ajaxSettings.beforeSend = function (args) {
             args.httpRequest.setRequestHeader('Authorization', 'FileBrowser');
@@ -21,15 +30,10 @@ function App() {
     return(
         <div>
             <div className="control-section">
-                <FileManagerComponent id="filemanager" height="375px" 
-                    ajaxSettings = {{
-                        url: hostUrl + "api/Virtualization/FileOperations",
-                        getImageUrl: hostUrl + "api/Virtualization/GetImage",
-                        uploadUrl: hostUrl + 'api/Virtualization/Upload',
-                        downloadUrl: hostUrl + 'api/Virtualization/Download'
-                    }}
-                    view = {"Details"}
-                    enableVirtualization = {true}
+                <FileManagerComponent id="filemanager" height={height} 
+                    ajaxSettings={ajaxSettings}
+                    view={view}
+                    enableVirtualization={enableVirtualization}
                     beforeSend={onBeforeSend.bind(this)}
                     beforeImageLoad={beforeImageLoad.bind(this)}
                     beforeDownload={beforeDownload.bind(this)}>
@@ -40,4 +44,3 @@ function App() {
     );
 };
 export default App;
-{% endraw %}

@@ -1,4 +1,4 @@
-{% raw %}
+
 import { DetailsView, Inject, FileManagerComponent, NavigationPane, Toolbar } from '@syncfusion/ej2-react-filemanager';
 import * as React from 'react';
 import { UploaderComponent } from '@syncfusion/ej2-react-inputs';
@@ -39,6 +39,15 @@ function App() {
   }
   let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
   let contextmenuItems: string[] = ['Open', '|', 'Cut', 'Copy', 'Delete', 'Rename', '|', 'Details'];
+  let ajaxSettings: object = {
+    url: hostUrl + "api/FileManager/FileOperations",
+    getImageUrl: hostUrl + "api/FileManager/GetImage",
+    uploadUrl: hostUrl + 'api/FileManager/Upload',
+    downloadUrl: hostUrl + 'api/FileManager/Download'
+  };
+  let toolbarSettings: object = { items: ['NewFolder', 'Upload', 'Delete', 'Cut', 'Copy', 'Rename', 'SortBy', 'Refresh', 'Selection', 'View', 'Details'] };
+  let contextMenuSettings: object = { file: contextmenuItems, folder: contextmenuItems };
+  let allowMultiSelection: boolean = false;
 
   return (
     <div>
@@ -51,15 +60,10 @@ function App() {
               <DialogComponent width='850px' id='dialog' target={'#target'} ref={(scope) => {(dialogObj as any) = scope}} header="Select a file" showCloseIcon={true} 
                   visible={false} open={dialogOpen.bind(this)} close={dialogClose.bind(this)} animationSettings={animationSettings} >
                   <FileManagerComponent id="filemanager" ref = {(scope) => {(filemanagerObj as any) = scope}} 
-                    ajaxSettings = {{
-                      url: hostUrl + "api/FileManager/FileOperations",
-                      getImageUrl: hostUrl + "api/FileManager/GetImage",
-                      uploadUrl: hostUrl + 'api/FileManager/Upload',
-                      downloadUrl: hostUrl + 'api/FileManager/Download'
-                    }} 
-                    allowMultiSelection={false}                      
-                    toolbarSettings={{ items: ['NewFolder', 'Upload', 'Delete', 'Cut', 'Copy', 'Rename', 'SortBy', 'Refresh', 'Selection', 'View', 'Details'] }} 
-                    contextMenuSettings={{ file: contextmenuItems, folder: contextmenuItems }} 
+                    ajaxSettings={ajaxSettings} 
+                    allowMultiSelection={allowMultiSelection}                      
+                    toolbarSettings={toolbarSettings} 
+                    contextMenuSettings={contextMenuSettings} 
                     fileOpen={onFileOpen.bind(this)}>
                     <Inject services={[ NavigationPane, DetailsView, Toolbar]} />
                   </FileManagerComponent>
@@ -69,4 +73,4 @@ function App() {
     </div>
   );
 }
-export default App;{% endraw %}
+export default App;
