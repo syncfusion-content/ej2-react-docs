@@ -1,7 +1,7 @@
 ---
 layout: post
 title: FlatData in React File Manager component | Syncfusion
-description: Learn here all about FlatData in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
+description: Learn here all about FlatData in React File Manager component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: FlatData 
 documentation: ug

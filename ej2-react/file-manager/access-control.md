@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Access control in React File Manager component | Syncfusion
-description: Learn here all about Access control in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Access control in React File Manager component of Syncfusion Essential JS 2 and more.
 control: Access control 
 platform: ej2-react
 documentation: ug

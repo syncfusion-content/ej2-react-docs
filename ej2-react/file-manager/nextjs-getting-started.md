@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Creating a Next.js Application Using Syncfusion® Components
 
-This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React File Manager component.
+This section provides a step-by-step guide for setting up a Next.js application and integrating the [React File Manager](https://www.syncfusion.com/react-ui-components/react-file-manager) component.
 
 ## What is Next.js?
 

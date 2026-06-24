@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Nested items in React File Manager component | Syncfusion
-description: Learn here all about Nested items in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Nested items in React File Manager component of Syncfusion Essential JS 2 and more.
 control: Nested items 
 platform: ej2-react
 documentation: ug

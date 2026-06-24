@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize Navigation Pane in React File Manager component | Syncfusion
-description: Learn here all about Customize the Navigation Pane in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Customize the Navigation Pane in React File Manager component of Syncfusion Essential JS 2 and more.
 control: Customize the Navigation Pane 
 platform: ej2-react
 documentation: ug
