@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Syncfusion® React Scheduler using Vite and JavaScript
 
-This article provides a step-by-step guide for setting up a [Vite](https://vite.dev/guide/) project with JavaScript and integrating [Syncfusion® React Schedule component](https://www.syncfusion.com/react-components/react-scheduler). 
+This article provides a step-by-step guide for setting up a [Vite](https://vite.dev/guide/) project with JavaScript and integrating the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler). 
 
 Vite is a fast, modern build tool and development server optimized for projects using technologies such as ES modules, TypeScript, JSX, and CSS modules. Its development server leverages native ES modules in modern browsers, providing rapid project startup and efficient feedback during development.
 

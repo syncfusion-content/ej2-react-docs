@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize custom thumbnail in React File Manager component | Syncfusion
-description: Learn here all about Customize custom thumbnail in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
+title: Customize thumbnail in React File Manager | Syncfusion
+description: Learn here all about Customize custom thumbnail in React File Manager component of Syncfusion Essential JS 2 and more.
 control: Customize custom thumbnail 
 platform: ej2-react
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize custom thumbnail in React File Manager component
 
-The default appearance of the File Manager can customize with your own icon by using [showThumbnail](https://ej2.syncfusion.com/react/documentation/api/file-manager/#showthumbnail) property.
+The default appearance of the File Manager can customize with your own icon by using [showThumbnail](https://ej2.syncfusion.com/react/documentation/api/file-manager#showthumbnail) property.
 
 The following example demonstrate how to add a custom icon in largeicons view.
 

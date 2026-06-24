@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting started with Syncfusion React Scheduler and MongoDB
 
-The Syncfusion [React Scheduler](https://ej2.syncfusion.com/react/documentation/schedule/getting-started) combined with MongoDB provides a robust, scalable, and flexible data-driven application architecture suitable for modern event-management systems.
+The Syncfusion [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) combined with MongoDB provides a robust, scalable, and flexible data-driven application architecture suitable for modern event-management systems.
 
 MongoDB's schema-less design seamlessly supports complex scheduling data, making it ideal for storing events, resources, recurrence rules, and user-specific calendar configurations.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: User interface in React File Manager component | Syncfusion
-description: Learn here all about User interface in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
+description: Learn here all about User interface in React File Manager component of Syncfusion Essential JS 2 and more.
 control: User interface 
 platform: ej2-react
 documentation: ug

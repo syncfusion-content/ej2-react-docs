@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in React File Manager component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Accessibility in React File Manager component of Syncfusion Essential JS 2 and more.
 control: Accessibility 
 platform: ej2-react
 documentation: ug

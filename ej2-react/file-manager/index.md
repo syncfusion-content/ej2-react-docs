@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Index in React File Manager component | Syncfusion
-description: Learn here all about Index in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
+description: Learn how the Index works in Syncfusion’s React File Manager component, including practical usage, configuration, and key implementation details.
 control: Index 
 platform: ej2-react
 documentation: ug

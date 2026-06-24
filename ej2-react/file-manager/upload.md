@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Upload in React File Manager component | Syncfusion
-description: Learn here all about Upload in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
+description: Learn how to use the Upload feature in Syncfusion React File Manager, with configuration details, usage guidance, and practical examples.
 control: Upload 
 platform: ej2-react
 documentation: ug
@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Upload in React File Manager component
 
-The React File Manager component provides a [uploadSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/uploadsettings) property with various options to customize how files are uploaded, including controlling file size, restricting file types, checking for excessively large and empty files, and enabling chunk uploads.
+The [React File Manager](https://www.syncfusion.com/react-ui-components/react-file-manager) component provides a [uploadSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/uploadsettings) property with various options to customize how files are uploaded, including controlling file size, restricting file types, checking for excessively large and empty files, and enabling chunk uploads.
 
 ## Directory Upload
 
-The [directoryUpload](https://ej2.syncfusion.com/react/documentation/api/file-manager/uploadsettingsmodel#directoryupload) property controls whether users can browse and upload entire directories (folders) in the Syncfusion<sup style="font-size:70%">&reg;</sup> React File Manager component. 
+The [directoryUpload](https://ej2.syncfusion.com/react/documentation/api/file-manager/uploadsettingsmodel#directoryupload) property controls whether users can browse and upload entire directories (folders) in the React File Manager component. 
 
 To enable directory upload, set the `directoryUpload` property to `true` in the `uploadSettings` configuration.
 
@@ -43,7 +43,7 @@ To learn more about the folder upload actions, refer to this [link](https://ej2.
 
 ## Sequential Upload
 
-The [sequentialUpload](https://ej2.syncfusion.com/react/documentation/api/file-manager/uploadsettingsmodel#sequentialupload) property controls whether users can upload files one by one in a sequential manner in the Syncfusion<sup style="font-size:70%">&reg;</sup> React File Manager component. 
+The [sequentialUpload](https://ej2.syncfusion.com/react/documentation/api/file-manager/uploadsettingsmodel#sequentialupload) property controls whether users can upload files one by one in a sequential manner in the React File Manager component. 
 
 To enable sequential upload, set the `sequentialUpload` property to `true` in the `uploadSettings` configuration.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in React File Manager component | Syncfusion
-description: Learn here all about Localization in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Localization in React File Manager component of Syncfusion Essential JS 2 and more.
 control: Localization 
 platform: ej2-react
 documentation: ug

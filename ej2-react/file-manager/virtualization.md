@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Virtualization in React File Manager component | Syncfusion
-description: Learn here all about Virtualization in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Virtualization in React File Manager component of Syncfusion Essential JS 2 and more.
 control: Virtualization 
 platform: ej2-react
 documentation: ug
@@ -43,9 +43,9 @@ export default App;
 
 ## Enable Virtualization
 
-The virtualization of the File Manager component is based on the height and width of the viewport. The items will be loaded in both [largeIconsView](https://ej2.syncfusion.com/react/documentation/api/file-manager/#view) and [detailsView](https://ej2.syncfusion.com/react/documentation/api/file-manager/detailsViewSettings/) based on the viewport size.
+The virtualization of the File Manager component is based on the height and width of the viewport. The items will be loaded in both [largeIconsView](https://ej2.syncfusion.com/react/documentation/api/file-manager#view) and [detailsView](https://ej2.syncfusion.com/react/documentation/api/file-manager/detailsViewSettings) based on the viewport size.
 
-In order to enable `virtualization`, you must set the [enableVirtualization](https://ej2.syncfusion.com/react/documentation/api/file-manager/#enablevirtualization) property to true.
+In order to enable `virtualization`, you must set the [enableVirtualization](https://ej2.syncfusion.com/react/documentation/api/file-manager#enablevirtualization) property to true.
 
 In the instance below, a sizable collection of files can be found in the folders **Documents** and **Text Documents**.
 
