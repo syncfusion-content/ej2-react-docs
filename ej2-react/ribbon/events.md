@@ -25,6 +25,10 @@ function App() {
     function tabSelected ( args: TabSelectedEventArgs) {
         // Your required actions here
     }
+    const cutButtonSettingsProps = {
+        iconCss: "e-icons e-cut",
+        content: "Cut"
+    };
     return (
         <RibbonComponent id="ribbon" tabSelected = { tabSelected }>
             <RibbonTabsDirective>
@@ -34,7 +38,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="Button" buttonSettings={{ iconCss: "e-icons e-cut", content: "Cut" }}>
+                                        <RibbonItemDirective type="Button" buttonSettings={cutButtonSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -64,6 +68,10 @@ function App() {
     function tabSelectingEvent ( args: TabSelectingEventArgs) {
         // Your required actions here
     }
+    const cutButtonSettingsProps = {
+        iconCss: "e-icons e-cut",
+        content: "Cut"
+    };
     return (
         <RibbonComponent id="ribbon" tabSelecting = { tabSelectingEvent }>
             <RibbonTabsDirective>
@@ -73,7 +81,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="Button" buttonSettings={{ iconCss: "e-icons e-cut", content: "Cut" }}>
+                                        <RibbonItemDirective type="Button" buttonSettings={cutButtonSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -103,6 +111,10 @@ function App() {
     function ribbonCollapsing ( args: ExpandCollapseEventArgs) {
         // Your required actions here
     }
+    const cutButtonSettingsProps = {
+        iconCss: "e-icons e-cut",
+        content: "Cut"
+    };
     return (
         <RibbonComponent id="ribbon" ribbonCollapsing = { ribbonCollapsing }>
             <RibbonTabsDirective>
@@ -112,7 +124,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="Button" buttonSettings={{ iconCss: "e-icons e-cut", content: "Cut" }}>
+                                        <RibbonItemDirective type="Button" buttonSettings={cutButtonSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -141,6 +153,10 @@ function App() {
     function ribbonExpanding ( args: ExpandCollapseEventArgs) {
         // Your required actions here
     }
+    const cutButtonSettingsProps = {
+        iconCss: "e-icons e-cut",
+        content: "Cut"
+    };
     return (
         <RibbonComponent id="ribbon" ribbonExpanding = { ribbonExpanding }>
             <RibbonTabsDirective>
@@ -150,7 +166,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="Button" buttonSettings={{ iconCss: "e-icons e-cut", content: "Cut" }}>
+                                        <RibbonItemDirective type="Button" buttonSettings={cutButtonSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -179,6 +195,10 @@ function App() {
     function launchClick ( args: LauncherClickEventArgs) {
         // Your required actions here
     }
+    const cutButtonSettingsProps = {
+        iconCss: "e-icons e-cut",
+        content: "Cut"
+    };
     return (
         <RibbonComponent id="ribbon" launcherIconClick = { launchClick }>
             <RibbonTabsDirective>
@@ -188,7 +208,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="Button" buttonSettings={{ iconCss: "e-icons e-cut", content: "Cut" }}>
+                                        <RibbonItemDirective type="Button" buttonSettings={cutButtonSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -225,6 +245,10 @@ function App() {
     function overflowPopupClose (args: OverflowPopupEventArgs) {
         // Your required actions here
     }
+    const cutButtonSettingsProps = {
+        iconCss: "e-icons e-cut",
+        content: "Cut"
+    };
     return (
         <RibbonComponent id="ribbon" overflowPopupOpen= { overflowPopupOpen } overflowPopupClose= { overflowPopupClose } activeLayout="Simplified">
             <RibbonTabsDirective>
@@ -234,7 +258,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="Button" buttonSettings={{ iconCss: "e-icons e-cut", content: "Cut" }}>
+                                        <RibbonItemDirective type="Button" buttonSettings={cutButtonSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -261,6 +285,13 @@ import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
 function App() {
+    const cutButtonSettingsProps = {
+        iconCss: "e-icons e-cut",
+        content: "Cut",
+        clicked: function () { 
+            // Your required actions here
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -270,9 +301,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="Button" buttonSettings={{ iconCss: "e-icons e-cut", content: "Cut" , clicked: function () { 
-                                            // Your required actions here
-                                        }}}>
+                                        <RibbonItemDirective type="Button" buttonSettings={cutButtonSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -297,6 +326,13 @@ import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
 function App() {
+    const cutButtonSettingsProps = {
+        iconCss: "e-icons e-cut",
+        content: "Cut",
+        created: function () { 
+            // Your required actions here
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -306,9 +342,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="Button" buttonSettings={{ iconCss: "e-icons e-cut", content: "Cut" , created: function () { 
-                                            // Your required actions here
-                                        }}}>
+                                        <RibbonItemDirective type="Button" buttonSettings={cutButtonSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -422,6 +456,12 @@ import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
 import { RibbonColorPicker, Inject } from "@syncfusion/ej2-react-ribbon";
 function App() {
+    const colorpickerSettingsProps = {
+        value: "#123456" ,
+        change: function (args) { 
+            // Your required actions here
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -431,9 +471,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="ColorPicker" colorPickerSettings={{ value: "#123456" ,change: function (args) { 
-                                            // Your required actions here
-                                        }}}>
+                                        <RibbonItemDirective type="ColorPicker" colorPickerSettings={colorpickerSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -460,6 +498,12 @@ import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
 import { RibbonColorPicker, Inject } from "@syncfusion/ej2-react-ribbon";
 function App() {
+    const colorpickerSettingsProps = {
+        value: "#123456" ,
+        created: function (args) { 
+            // Your required actions here
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -469,9 +513,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="ColorPicker" colorPickerSettings={{ value: "#123456" ,created: function (args) { 
-                                            // Your required actions here
-                                        }}}>
+                                        <RibbonItemDirective type="ColorPicker" colorPickerSettings={colorpickerSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -498,6 +540,12 @@ import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
 import { RibbonColorPicker, Inject } from "@syncfusion/ej2-react-ribbon";
 function App() {
+    const colorpickerSettingsProps = {
+        value: "#123456" ,
+        open: function (args) { 
+            // Your required actions here
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -507,9 +555,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="ColorPicker" colorPickerSettings={{ value: "#123456" ,open: function (args) { 
-                                            // Your required actions here
-                                        }}}>
+                                        <RibbonItemDirective type="ColorPicker" colorPickerSettings={colorpickerSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -536,6 +582,12 @@ import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
 import { RibbonColorPicker, Inject } from "@syncfusion/ej2-react-ribbon";
 function App() {
+    const colorpickerSettingsProps = {
+        value: "#123456" ,
+        select: function (args) { 
+            // Your required actions here
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -545,9 +597,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="ColorPicker" colorPickerSettings={{ value: "#123456" ,select: function (args) { 
-                                            // Your required actions here
-                                        }}}>
+                                        <RibbonItemDirective type="ColorPicker" colorPickerSettings={colorpickerSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -574,6 +624,12 @@ import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
 import { RibbonColorPicker, Inject } from "@syncfusion/ej2-react-ribbon";
 function App() {
+    const colorpickerSettingsProps = {
+        value: "#123456" ,
+        beforeClose: function (args) { 
+            // Your required actions here
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -583,9 +639,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="ColorPicker" colorPickerSettings={{ value: "#123456" ,beforeClose: function (args) { 
-                                            // Your required actions here
-                                        }}}>
+                                        <RibbonItemDirective type="ColorPicker" colorPickerSettings={colorpickerSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -612,6 +666,12 @@ import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
 import { RibbonColorPicker, Inject } from "@syncfusion/ej2-react-ribbon";
 function App() {
+    const colorpickerSettingsProps = {
+        value: "#123456" ,
+        beforeOpen: function (args) { 
+            // Your required actions here
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -621,9 +681,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="ColorPicker" colorPickerSettings={{ value: "#123456" ,beforeOpen: function (args) { 
-                                            // Your required actions here
-                                        }}}>
+                                        <RibbonItemDirective type="ColorPicker" colorPickerSettings={colorpickerSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -649,6 +707,12 @@ import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
 import { RibbonColorPicker, Inject } from "@syncfusion/ej2-react-ribbon";
 function App() {
+    const colorpickerSettingsProps = {
+        value: "#123456" ,
+        beforeTileRender: function (args) { 
+            // Your required actions here
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -658,9 +722,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="ColorPicker" colorPickerSettings={{ value: "#123456" ,beforeTileRender: function (args) { 
-                                            // Your required actions here
-                                        }}}>
+                                        <RibbonItemDirective type="ColorPicker" colorPickerSettings={colorpickerSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -779,7 +841,7 @@ function App() {
         open: (args) => { 
             // your logic here
         }
-    }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -818,10 +880,10 @@ function App() {
     const comboBoxProps = {
         dataSource: fontStyle,
         index: 3,
-        open: (args) => { 
+        created: (args) => { 
             // your logic here
         }
-    }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -860,10 +922,10 @@ function App() {
     const comboBoxProps = {
         dataSource: fontStyle,
         index: 3,
-        open: (args) => { 
+        filtering: (args) => { 
             // your logic here
         }
-    }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -902,10 +964,10 @@ function App() {
     const comboBoxProps = {
         dataSource: fontStyle,
         index: 3,
-        open: (args) => { 
+        select: (args) => { 
             // your logic here
         }
-    }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -944,10 +1006,10 @@ function App() {
     const comboBoxProps = {
         dataSource: fontStyle,
         index: 3,
-        open: (args) => { 
+        beforeOpen: (args) => { 
             // your logic here
         }
-    }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -986,6 +1048,14 @@ import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollect
 import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const tableOptions: ItemModel[] = [{ text: "Insert Table" }, { text: "This device" }, { text: "Convert Table" }, { text: "Excel SpreadSheet" }];
+    const dropDownSettingsProps = {
+        iconCss: "e-icons e-table",
+        items: tableOptions,
+        content: "Table",
+        beforeClose: function (args) { 
+            // Your required action here 
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -995,9 +1065,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="DropDown" dropDownSettings={{ iconCss: "e-icons e-table", items: tableOptions, content: "Table", beforeClose: function (args) { 
-                                            // Your required action here 
-                                        } }}>
+                                        <RibbonItemDirective type="DropDown" dropDownSettings={dropDownSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -1025,6 +1093,14 @@ import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollect
 import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const tableOptions: ItemModel[] = [{ text: "Insert Table" }, { text: "This device" }, { text: "Convert Table" }, { text: "Excel SpreadSheet" }];
+    const dropDownSettingsProps = {
+        iconCss: "e-icons e-table",
+        items: tableOptions,
+        content: "Table",
+        beforeOpen: function (args) { 
+            // Your required action here 
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -1034,9 +1110,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="DropDown" dropDownSettings={{ iconCss: "e-icons e-table", items: tableOptions, content: "Table", beforeOpen: function (args) { 
-                                            // Your required action here 
-                                        } }}>
+                                        <RibbonItemDirective type="DropDown" dropDownSettings={dropDownSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -1064,6 +1138,14 @@ import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollect
 import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const tableOptions: ItemModel[] = [{ text: "Insert Table" }, { text: "This device" }, { text: "Convert Table" }, { text: "Excel SpreadSheet" }];
+    const dropDownSettingsProps = {
+        iconCss: "e-icons e-table",
+        items: tableOptions,
+        content: "Table",
+        beforeItemRender: function (args) { 
+            // Your required action here 
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -1073,9 +1155,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="DropDown" dropDownSettings={{ iconCss: "e-icons e-table", items: tableOptions, content: "Table", beforeItemRender: function (args) { 
-                                            // Your required action here 
-                                        } }}>
+                                        <RibbonItemDirective type="DropDown" dropDownSettings={dropDownSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -1103,6 +1183,14 @@ import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollect
 import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const tableOptions: ItemModel[] = [{ text: "Insert Table" }, { text: "This device" }, { text: "Convert Table" }, { text: "Excel SpreadSheet" }];
+    const dropDownSettingsProps = {
+        iconCss: "e-icons e-table",
+        items: tableOptions,
+        content: "Table",
+        open: function (args) { 
+            // Your required action here 
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -1112,9 +1200,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="DropDown" dropDownSettings={{ iconCss: "e-icons e-table", items: tableOptions, content: "Table", open: function (args) { 
-                                            // Your required action here 
-                                        } }}>
+                                        <RibbonItemDirective type="DropDown" dropDownSettings={dropDownSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -1142,6 +1228,14 @@ import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollect
 import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const tableOptions: ItemModel[] = [{ text: "Insert Table" }, { text: "This device" }, { text: "Convert Table" }, { text: "Excel SpreadSheet" }];
+    const dropDownSettingsProps = {
+        iconCss: "e-icons e-table",
+        items: tableOptions,
+        content: "Table",
+        close: function (args) { 
+            // Your required action here 
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -1151,9 +1245,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="DropDown" dropDownSettings={{ iconCss: "e-icons e-table", items: tableOptions, content: "Table", close: function (args) { 
-                                            // Your required action here 
-                                        } }}>
+                                        <RibbonItemDirective type="DropDown" dropDownSettings={dropDownSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -1181,6 +1273,14 @@ import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollect
 import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const tableOptions: ItemModel[] = [{ text: "Insert Table" }, { text: "This device" }, { text: "Convert Table" }, { text: "Excel SpreadSheet" }];
+    const dropDownSettingsProps = {
+        iconCss: "e-icons e-table",
+        items: tableOptions,
+        content: "Table",
+        created: function (args) { 
+            // Your required action here 
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -1190,9 +1290,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="DropDown" dropDownSettings={{ iconCss: "e-icons e-table", items: tableOptions, content: "Table", created: function (args) { 
-                                            // Your required action here 
-                                        } }}>
+                                        <RibbonItemDirective type="DropDown" dropDownSettings={dropDownSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -1220,6 +1318,14 @@ import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollect
 import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const tableOptions: ItemModel[] = [{ text: "Insert Table" }, { text: "This device" }, { text: "Convert Table" }, { text: "Excel SpreadSheet" }];
+    const dropDownSettingsProps = {
+        iconCss: "e-icons e-table",
+        items: tableOptions,
+        content: "Table",
+        select: function (args) { 
+            // Your required action here 
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -1229,9 +1335,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="DropDown" dropDownSettings={{ iconCss: "e-icons e-table", items: tableOptions, content: "Table", select: function (args) { 
-                                            // Your required action here 
-                                        } }}>
+                                        <RibbonItemDirective type="DropDown" dropDownSettings={dropDownSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -1261,6 +1365,14 @@ import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollect
 import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const selectOptions: ItemModel[] = [{ text: "Select All" }, { text: "Select Objects" }];
+    const splitButtonSettingsProps = {
+        iconCss: "e-icons e-mouse-pointer",
+        items: selectOptions,
+        content: "Select",
+        beforeClose: function (args) { 
+            // Your required action here 
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -1270,9 +1382,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="SplitButton" splitButtonSettings={{ iconCss: "e-icons e-mouse-pointer", items: selectOptions, content: "Select", beforeClose: function (args) { 
-                                            // Your required action here 
-                                        }}}>
+                                        <RibbonItemDirective type="SplitButton" splitButtonSettings={splitButtonSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -1300,6 +1410,14 @@ import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollect
 import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const selectOptions: ItemModel[] = [{ text: "Select All" }, { text: "Select Objects" }];
+    const splitButtonSettingsProps = {
+        iconCss: "e-icons e-mouse-pointer",
+        items: selectOptions,
+        content: "Select",
+        beforeOpen: function (args) { 
+            // Your required action here 
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -1309,9 +1427,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="SplitButton" splitButtonSettings={{ iconCss: "e-icons e-mouse-pointer", items: selectOptions, content: "Select", beforeOpen: function (args) { 
-                                            // Your required action here 
-                                        }}}>
+                                        <RibbonItemDirective type="SplitButton" splitButtonSettings={splitButtonSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -1339,6 +1455,14 @@ import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollect
 import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const selectOptions: ItemModel[] = [{ text: "Select All" }, { text: "Select Objects" }];
+    const splitButtonSettingsProps = {
+        iconCss: "e-icons e-mouse-pointer",
+        items: selectOptions,
+        content: "Select",
+        beforeItemRender: function (args) { 
+            // Your required action here 
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -1348,9 +1472,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="SplitButton" splitButtonSettings={{ iconCss: "e-icons e-mouse-pointer", items: selectOptions, content: "Select", beforeItemRender: function (args) { 
-                                            // Your required action here 
-                                        }}}>
+                                        <RibbonItemDirective type="SplitButton" splitButtonSettings={splitButtonSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -1378,6 +1500,14 @@ import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollect
 import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const selectOptions: ItemModel[] = [{ text: "Select All" }, { text: "Select Objects" }];
+    const splitButtonSettingsProps = {
+        iconCss: "e-icons e-mouse-pointer",
+        items: selectOptions,
+        content: "Select",
+        open: function (args) { 
+            // Your required action here 
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -1387,9 +1517,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="SplitButton" splitButtonSettings={{ iconCss: "e-icons e-mouse-pointer", items: selectOptions, content: "Select", open: function (args) { 
-                                            // Your required action here 
-                                        }}}>
+                                        <RibbonItemDirective type="SplitButton" splitButtonSettings={splitButtonSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -1417,6 +1545,14 @@ import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollect
 import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const selectOptions: ItemModel[] = [{ text: "Select All" }, { text: "Select Objects" }];
+    const splitButtonSettingsProps = {
+        iconCss: "e-icons e-mouse-pointer",
+        items: selectOptions,
+        content: "Select",
+        close: function (args) { 
+            // Your required action here 
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -1426,9 +1562,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="SplitButton" splitButtonSettings={{ iconCss: "e-icons e-mouse-pointer", items: selectOptions, content: "Select", close: function (args) { 
-                                            // Your required action here 
-                                        }}}>
+                                        <RibbonItemDirective type="SplitButton" splitButtonSettings={splitButtonSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -1456,6 +1590,14 @@ import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollect
 import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const selectOptions: ItemModel[] = [{ text: "Select All" }, { text: "Select Objects" }];
+    const splitButtonSettingsProps = {
+        iconCss: "e-icons e-mouse-pointer",
+        items: selectOptions,
+        content: "Select",
+        created: function (args) { 
+            // Your required action here 
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -1465,9 +1607,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="SplitButton" splitButtonSettings={{ iconCss: "e-icons e-mouse-pointer", items: selectOptions, content: "Select", created: function (args) { 
-                                            // Your required action here 
-                                        }}}>
+                                        <RibbonItemDirective type="SplitButton" splitButtonSettings={splitButtonSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -1495,6 +1635,14 @@ import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollect
 import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const selectOptions: ItemModel[] = [{ text: "Select All" }, { text: "Select Objects" }];
+    const splitButtonSettingsProps = {
+        iconCss: "e-icons e-mouse-pointer",
+        items: selectOptions,
+        content: "Select",
+        select: function (args) { 
+            // Your required action here 
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -1504,9 +1652,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="SplitButton" splitButtonSettings={{ iconCss: "e-icons e-mouse-pointer", items: selectOptions, content: "Select", select: function (args) { 
-                                            // Your required action here 
-                                        }}}>
+                                        <RibbonItemDirective type="SplitButton" splitButtonSettings={splitButtonSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -1534,6 +1680,14 @@ import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollect
 import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const selectOptions: ItemModel[] = [{ text: "Select All" }, { text: "Select Objects" }];
+    const splitButtonSettingsProps = {
+        iconCss: "e-icons e-mouse-pointer",
+        items: selectOptions,
+        content: "Select",
+        click: function (args) { 
+            // Your required action here 
+        }
+    };
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
@@ -1543,9 +1697,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="SplitButton" splitButtonSettings={{ iconCss: "e-icons e-mouse-pointer", items: selectOptions, content: "Select", click: function (args) { 
-                                            // Your required action here 
-                                        }}}>
+                                        <RibbonItemDirective type="SplitButton" splitButtonSettings={splitButtonSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -1703,6 +1855,10 @@ function App() {
             // Your required action here
         }
     };
+    const buttonSettingsProps = {
+        iconCss: "e-icons e-cut",
+        content: "Cut"
+    };
 
     return (
         <RibbonComponent id="ribbon" fileMenu= {filesettings}> 
@@ -1713,7 +1869,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="Button" buttonSettings={{ iconCss: "e-icons e-cut", content: "Cut" }}>
+                                        <RibbonItemDirective type="Button" buttonSettings={buttonSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -1753,6 +1909,10 @@ function App() {
             // Your required action here
         }
     };
+    const buttonSettingsProps = {
+        iconCss: "e-icons e-cut",
+        content: "Cut"
+    };
 
     return (
         <RibbonComponent id="ribbon" fileMenu= {filesettings}> 
@@ -1763,7 +1923,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="Button" buttonSettings={{ iconCss: "e-icons e-cut", content: "Cut" }}>
+                                        <RibbonItemDirective type="Button" buttonSettings={buttonSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -1803,6 +1963,10 @@ function App() {
             // Your required action here
         }
     };
+    const buttonSettingsProps = {
+        iconCss: "e-icons e-cut",
+        content: "Cut"
+    };
 
     return (
         <RibbonComponent id="ribbon" fileMenu= {filesettings}> 
@@ -1813,7 +1977,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="Button" buttonSettings={{ iconCss: "e-icons e-cut", content: "Cut" }}>
+                                        <RibbonItemDirective type="Button" buttonSettings={buttonSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -1853,6 +2017,10 @@ function App() {
             // Your required action here
         }
     };
+    const buttonSettingsProps = {
+        iconCss: "e-icons e-cut",
+        content: "Cut"
+    };
 
     return (
         <RibbonComponent id="ribbon" fileMenu= {filesettings}> 
@@ -1863,7 +2031,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="Button" buttonSettings={{ iconCss: "e-icons e-cut", content: "Cut" }}>
+                                        <RibbonItemDirective type="Button" buttonSettings={buttonSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -1903,6 +2071,10 @@ function App() {
             // Your required action here
         }
     };
+    const buttonSettingsProps = {
+        iconCss: "e-icons e-cut",
+        content: "Cut"
+    };
 
     return (
         <RibbonComponent id="ribbon" fileMenu= {filesettings}> 
@@ -1913,7 +2085,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="Button" buttonSettings={{ iconCss: "e-icons e-cut", content: "Cut" }}>
+                                        <RibbonItemDirective type="Button" buttonSettings={buttonSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -1953,6 +2125,10 @@ function App() {
             // Your required action here
         }
     };
+    const buttonSettingsProps = {
+        iconCss: "e-icons e-cut",
+        content: "Cut"
+    };
 
     return (
         <RibbonComponent id="ribbon" fileMenu= {filesettings}> 
@@ -1963,7 +2139,7 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="Button" buttonSettings={{ iconCss: "e-icons e-cut", content: "Cut" }}>
+                                        <RibbonItemDirective type="Button" buttonSettings={buttonSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
@@ -2003,7 +2179,19 @@ function App() {
         backButton: {
             text: 'Close',
         }
-    }
+    };
+    const cutButtonSettingsProps = {
+        iconCss: "e-icons e-cut",
+        content: "Cut"
+    };
+    const copyButtonSettingsProps = {
+        iconCss: "e-icons e-copy",
+        content: "Copy"
+    };
+    const pasteButtonSettingsProps = {
+        iconCss: "e-icons e-cut",
+        content: "Paste"
+    };
 
     return (
         <RibbonComponent id="backstage-ribbon" backStageMenu={backstageSettings}>
@@ -2014,11 +2202,11 @@ function App() {
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
-                                        <RibbonItemDirective type="Button" buttonSettings={{ iconCss: "e-icons e-cut", content: "Cut" }}>
+                                        <RibbonItemDirective type="Button" buttonSettings={cutButtonSettingsProps}>
                                         </RibbonItemDirective>
-                                        <RibbonItemDirective type="Button" buttonSettings={{ iconCss: "e-icons e-copy", content: "Copy" }}>
+                                        <RibbonItemDirective type="Button" buttonSettings={copyButtonSettingsProps}>
                                         </RibbonItemDirective>
-                                        <RibbonItemDirective type="Button" buttonSettings={{ iconCss: "e-icons e-paste", content: "Paste" }}>
+                                        <RibbonItemDirective type="Button" buttonSettings={pasteButtonSettingsProps}>
                                         </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
