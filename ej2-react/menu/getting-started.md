@@ -20,49 +20,67 @@ The following list of dependencies are required to use the Menu component in an 
 |-- @syncfusion/ej2-react-navigations
 |   |-- @syncfusion/ej2-react-base
 |   |-- @syncfusion/ej2-navigations
-|   |   `-- @syncfusion/ej2-base
+|   |   -- @syncfusion/ej2-base
+```
 
-Setup a development environment
-To easily set up a React application, use create-vite-app, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like create-react-app. For detailed steps, refer to the Vite installation instructions. Vite sets up the environment using JavaScript and optimizes applications for production.
+## Setup for local development
 
-Note: To create a React application using create-react-app, refer to this documentation for more details.
+Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
+
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
 To create a new React application, run the following command.
 
+```bash
 npm create vite@latest my-app
+```
+This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
 
-To set up a React application in a TypeScript environment, run the following command.
+![Initial_setup](images/Initial-setup.jpg)
 
+To set up a React application in TypeScript environment, run the following command.
+
+```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
+```
+To set up a React application in JavaScript environment, run the following command.
 
-To set up a React application in a JavaScript environment, run the following command.
-
+```bash
 npm create vite@latest my-app -- --template react
 cd my-app
 npm run dev
+```
 
-Adding Syncfusion<sup style="font-size:70%">®</sup> packages
-All available Essential<sup style="font-size:70%">®</sup> JS 2 packages are published in the npmjs.com public registry.
+## Adding Syncfusion<sup style="font-size:70%">®</sup> packages
+
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 
 To install the Menu component, use the following command:
 
+```bash
 npm install @syncfusion/ej2-react-navigations --save
+```
 
 This command installs the necessary packages and their dependencies, which are required to render the component in a React environment.
 
-Adding Stylesheets to the Application
+## Adding Stylesheets to the Application
+
 Add the Menu component's styles as shown below in App.css.
 
+```css
 @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+```
 
-Add Menu to the project
+## Add Menu to the project
+
 Create the Menu component in the application. Add the Menu component to the src/App.tsx file using the following code snippet. The items property defines the structure of the menu.
 
+```ts
 import { MenuComponent, MenuItemModel } from '@syncfusion/ej2-react-navigations';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
@@ -107,12 +125,14 @@ function App() {
     );
 }
 export default App;
+```
 
-Run the application
-Run the npm run dev command in the console to start the development server. This command compiles code and serves the application locally, opening it in the browser.
+## Run the application
 
+Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+
+```bash
 npm run dev
+```
 
 {% previewsample "page.domainurl/code-snippet/menu/default-cs1" %}
-
-Integrating with Toolbar component

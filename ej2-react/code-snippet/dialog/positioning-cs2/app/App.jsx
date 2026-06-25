@@ -25,7 +25,7 @@ class App extends React.Component {
         this.setState({ hideDialog: true });
     };
     footerTemplate = () => {
-        return (<span id="posvalue"/>);
+        return (<span id="posvalue" ref={posvalue => this.PositioningInstance = posvalue}/>);
     };
     render() {
         return (<div className="App" id='dialog-target'>

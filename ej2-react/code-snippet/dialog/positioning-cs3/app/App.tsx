@@ -7,16 +7,17 @@ import * as React from "react";
 
 function App() {  
   let defaultDialogInstance: DialogComponent;
-  let PositioningInstance: HTMLElement;
   const [status, setStatus] = React.useState({ hideDialog: true });
+  const posRef = React.useRef(null);
   let position: PositionDataModel;
   position = { X: 'center', Y: 'center' };
 
-  function changePosition(event: any): void {
-    defaultDialogInstance.position = { X: event.currentTarget.value.split(" ")[0], Y: event.currentTarget.value.split(" ")[1] };
-    PositioningInstance.innerHTML = 'Position: {X: "' + event.currentTarget.value.split(" ")[0] + '", Y: "' + event.currentTarget.value.split(" ")[1] + '"}'
-    const txt: string[] = event.target.parentElement.querySelector('.e-label').innerText.split(" ");
-    PositioningInstance.innerHTML = 'Position: { X: "' + txt[0] + '", Y: "' + txt[1] + '" }';
+  function changePosition(event: any) {
+    const [x, y] = event.currentTarget.value.split(" ");
+    defaultDialogInstance.position = { X: x, Y: y };
+    if (posRef.current) {
+        posRef.current.innerHTML = `Position: { X: "${x}", Y: "${y}" }`;
+    }
   }
 
   function dialogClose (){
@@ -27,11 +28,11 @@ function App() {
     setStatus({ hideDialog: true });
   }
 
-  function footerTemplate (): JSX.Element {
-    return (
-        <span id="posvalue" />
-    )
+  
+  function footerTemplate(): JSX.Element {
+    return <span id="posvalue" ref={posRef}></span>;
   }
+
   return (
     <div className="App" id='dialog-target'>
         <DialogComponent id='defaultDialog' header='Choose a Dialog Position' visible={status.hideDialog} showCloseIcon={false} position={position} footerTemplate={footerTemplate} width='452px' ref={defaultDialog => defaultDialogInstance = defaultDialog!}

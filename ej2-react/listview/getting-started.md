@@ -82,18 +82,6 @@ function App() {
 export default App;
 ```
 
-```ts
-import * as React from 'react';
-import { ListViewComponent } from '@syncfusion/ej2-react-lists';
-import './App.css';
-function App() {
-    return (
-    //specifies the tag to render the ListView component
-    <ListViewComponent id='list'/>);
-}
-export default App;
-```
-
 ## Adding CSS Reference
 
 Import `ListView` component required theme references at the top of `src/App.css`.
@@ -114,7 +102,7 @@ If the `CheckList` behavior is used in the ListView, include the Button componen
 
 Populate the data in ListView using [`dataSource`](https://helpej2.syncfusion.com/react/documentation/api/list-view#datasource) property. Here, an array of JSON values passed to `ListView` component.
 
-
+**App.tsx**
 
 ```ts
 import * as React from 'react';
@@ -138,6 +126,7 @@ function App() {
 export default App;
 
 ```
+**App.jsx**
 
 ```ts
 import * as React from 'react';
