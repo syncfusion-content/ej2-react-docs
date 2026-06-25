@@ -1,7 +1,7 @@
 ---
 layout: post
 title: File operations in React File Manager component | Syncfusion
-description: Learn here all about File operations in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
+description: Learn here all about File operations in React File Manager component of Syncfusion Essential JS 2 and more.
 control: File operations 
 platform: ej2-react
 documentation: ug

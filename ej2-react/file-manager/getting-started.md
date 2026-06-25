@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion React File Manager Component
+# Getting Started with React File Manager Component
 
 This section explains how to create and configure the **File Manager** component in a React application.
 
-To get started quickly with the React File Manager, refer to the video below:
+To get started quickly with the [React File Manager](https://www.syncfusion.com/react-ui-components/react-file-manager), refer to the video below:
 
 {% youtube "https://www.youtube.com/watch?v=_9bKaJBgkxs" %}
 
@@ -37,7 +37,7 @@ Terminate the application, then run the following command:
 cd my-app
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React File Manager packages
+## Adding React File Manager packages
 
 To install the File Manager component, use the following command:
 

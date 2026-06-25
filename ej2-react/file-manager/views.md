@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Views in React File Manager component | Syncfusion
-description: Learn here all about Views in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
+description: Learn how to use Views in Syncfusion React File Manager, with configuration options, usage guidance, and practical examples for effective file management. 
 control: Views 
 platform: ej2-react
 documentation: ug

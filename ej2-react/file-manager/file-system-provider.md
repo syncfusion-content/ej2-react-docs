@@ -1,7 +1,7 @@
 ---
 layout: post
 title: File system provider in React File Manager component | Syncfusion
-description: Learn here all about File system provider in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
+description: Learn here all about File system provider in React File Manager component of Syncfusion Essential JS 2 and more.
 control: File system provider 
 platform: ej2-react
 documentation: ug
@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The file system provider allows the File Manager component to manage the files and folders in a physical or cloud-based file system. It provides the methods for performing various file actions like creating a new folder, copying and moving of files or folders, deleting, uploading, and downloading the files or folders in the file system.
 
-The following file providers are added in Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 File Manager component.
+The following file providers are added in EJ2 File Manager component.
 
 * [Physical file system provider](#physical-file-system-provider)
 * [Azure cloud file system Provider](#azure-cloud-file-system-provider)
@@ -332,9 +332,9 @@ After configuring the connection, just build and run the project. Now, the proje
 
 > **Note:** To learn more about file actions that can be performed with SQL database file system provider, refer to this [link](https://github.com/SyncfusionExamples/sql-server-database-aspcore-file-provider#key-features)
 
-## NodeJS file system provider
+## Node.js file system provider
 
-The NodeJS file system provider allows the users to manage the files and folders in a physical file system. It provides methods for performing all basic file operations like creating a folder, copy, move, delete, and download files and folders in the file system. We can use of the NodeJS file system provider either by installing the [ej2-filemanager-node-filesystem](https://www.npmjs.com/package/@syncfusion/ej2-filemanager-node-filesystem) package or by cloning the [file system provider](https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem) from the GitHub.
+The Node.js file system provider allows the users to manage the files and folders in a physical file system. It provides methods for performing all basic file operations like creating a folder, copy, move, delete, and download files and folders in the file system. We can use of the Node.js file system provider either by installing the [ej2-filemanager-node-filesystem](https://www.npmjs.com/package/@syncfusion/ej2-filemanager-node-filesystem) package or by cloning the [file system provider](https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem) from the GitHub.
 
 ### Using ej2-filemanager-node-filesystem package
 
@@ -381,7 +381,7 @@ To set the port in which the project to be hosted and the root directory of the 
 
 > **Note:** By default, the service will run `8090` port.
 
-Now, just mapping the **ajaxSettings** property of the File Manager component to the appropriate file operation methods in the filesystem-server.js file will allow to manage the physical file system with NodeJS file system provider.
+Now, just mapping the **ajaxSettings** property of the File Manager component to the appropriate file operation methods in the filesystem-server.js file will allow to manage the physical file system with Node.js file system provider.
 
   {% raw %}
 
@@ -404,7 +404,7 @@ Now, just mapping the **ajaxSettings** property of the File Manager component to
   ```
   {% endraw %}
 
-> **Note:** To learn more about file actions that can be performed with NodeJS file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem#key-features)
+> **Note:** To learn more about file actions that can be performed with Node.js file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem#key-features)
 
 ## Google Drive file system provider
 
@@ -540,7 +540,7 @@ Here, the `Files` denotes the `rootNode` and the subsequent object refers to the
 
 ![generate_key](images/generate_key.png)
 
-* Next, you will need to clone the [`firebase-realtime-database-apscore-file-provider`](https://github.com/SyncfusionExamples/firebase-realtime-database-aspcore-file-provider) repository. Once cloned, simply open the project in Visual Studio and restore the NuGet package.
+* Next, you will need to clone the [`firebase-realtime-database-aspcore-file-provider`](https://github.com/SyncfusionExamples/firebase-realtime-database-aspcore-file-provider) repository. Once cloned, simply open the project in Visual Studio and restore the NuGet package.
 
 * Once you have generated the secret key, you will need to replace the JSON in the `access_key.json` file in the Firebase Realtime Database provider project with the newly generated key. This will enable authentication and allow you to perform read and write operations.
 
@@ -599,7 +599,7 @@ After configuring the Firebase Realtime Database service link, build and run the
 
 ## IBM Cloud Object Storage file provider
 
-The IBM Cloud Object Storage file provider module allows you work with the IBM Cloud Object Storage. It also provides the methods for performing various file actions such as creating a new folder, renaming files, and deleting files. The IBM Cloud Object Storage file provider serves the file provider support for the File Manager component with the IBM Cloud Object Storage. We can make use of IBM Cloud Object Storage file provider by installing the[ej2-filemanager-ibm-cos-node-file-provider](https://www.npmjs.com/package/@syncfusion/ej2-filemanager-ibm-cos-node-file-provider)npm package or by cloning the [file provider](https://github.com/SyncfusionExamples/filemanager-ibm-cos-node-file-provider) from the GitHub.
+The IBM Cloud Object Storage file provider module allows you work with the IBM Cloud Object Storage. It also provides the methods for performing various file actions such as creating a new folder, renaming files, and deleting files. The IBM Cloud Object Storage file provider serves the file provider support for the File Manager component with the IBM Cloud Object Storage. We can make use of IBM Cloud Object Storage file provider by installing the[ej2-filemanager-ibm-cos-node-file-provider](https://www.npmjs.com/package/@syncfusion/ej2-filemanager-ibm-cos-node-file-provider) npm package or by cloning the [file provider](https://github.com/SyncfusionExamples/filemanager-ibm-cos-node-file-provider) from the GitHub.
 
 ### Using ej2-filemanager-ibm-cos-node-file-provider npm package
 

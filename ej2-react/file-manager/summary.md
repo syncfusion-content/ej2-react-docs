@@ -1,12 +1,14 @@
 ---
 layout: post
 title: Summary in React File Manager component | Syncfusion
-description: Learn here all about Summary in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
+description: Learn how to use the Summary feature in Syncfusion React File Manager, with configuration details, usage guidance, and practical examples.
 control: Summary 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
+
+# Summary in React File Manager component
 
 * [Getting Started](file-manager/getting-started.md)
 * [User Interface](file-manager/user-interface.md)
