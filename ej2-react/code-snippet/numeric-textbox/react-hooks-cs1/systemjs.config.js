@@ -33,8 +33,8 @@ System.config({
         "@syncfusion/ej2-react-splitbuttons": "syncfusion:ej2-react-splitbuttons/dist/ej2-react-splitbuttons.umd.min.js",
         "@syncfusion/ej2-react-popups": "syncfusion:ej2-react-popups/dist/ej2-react-popups.umd.min.js",
         "@syncfusion/ej2-lists": "syncfusion:ej2-lists/dist/ej2-lists.umd.min.js",
-"react-dom":"https://unpkg.com/react-dom@16.8.0/umd/react-dom.development.js",
-"react":"https://unpkg.com/react@16.8.0/umd/react.development.js",
+"react-dom":"https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js",
+"react":"https://unpkg.com/react@18.2.0/umd/react.development.js",
     },
     packages: {
         'app': { main: 'index', defaultExtension: 'tsx' },

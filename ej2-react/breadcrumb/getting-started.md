@@ -94,15 +94,6 @@ function App() {
 export default App;
 ```
 
-```ts
-import { BreadcrumbComponent } from '@syncfusion/ej2-react-navigations';
-import * as React from 'react';
-function App() {
-    return (<BreadcrumbComponent enableNavigation={false}> </BreadcrumbComponent>);
-}
-export default App;
-```
-
 ## Run the application
 
 Run the following command to start the development server. This compiles code and serves the application locally.

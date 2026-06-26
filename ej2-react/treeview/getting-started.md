@@ -92,20 +92,6 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ```
 
-```ts
-import * as React from 'react';
-import './App.css';
-import * as ReactDOM from "react-dom";
-import { TreeViewComponent } from '@syncfusion/ej2-react-navigations';
-function App() {
-    return (
-    // specifies the tag to render the TreeView component
-    <TreeViewComponent></TreeViewComponent>);
-}
-export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
-```
-
 ## Adding CSS reference
 
 Import the TreeView component required CSS references as follows in **src/App.css**.
@@ -127,7 +113,7 @@ Import the TreeView component required CSS references as follows in **src/App.cs
 TreeView can load data either from local data sources or remote data services. This can be done using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treeview/fieldsSettingsModel#datasource) property that is a member of the [fields](https://ej2.syncfusion.com/react/documentation/api/treeview#fields) property. The dataSource property supports array of JavaScript objects and [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started). Here, an array of JSON values is passed to the TreeView component.
 
 
-
+**App.tsx**
 ```ts
 
 import * as React from 'react';
@@ -238,7 +224,7 @@ export default App;
 ReactDOM.render(<App />, document.getElementById('root'));
 
 ```
-
+**App.jsx**
 ```ts
 import * as React from 'react';
 import './App.css';

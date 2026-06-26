@@ -114,6 +114,7 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 {% endtabs %}
 
 > The order of importing CSS styles should be in line with its dependency graph.
+
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
 Follow the steps below to add the React DropDownList component to the Preact project:

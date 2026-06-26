@@ -256,9 +256,9 @@ The output appears as follows.
 
 ## Display Mention character
 
-By using the [showMentionChar](https://ej2.syncfusion.com/react/documentation/api/mention/index-default#showMentionChar) property, the text content can be displayed along with the mention character. You can customize the mention character by using the [mentionChar](https://ej2.syncfusion.com/react/documentation/api/mention/index-default#mentionChar) property in the Mention component.
+By using the [showMentionChar](https://ej2.syncfusion.com/react/documentation/api/mention/index-default#showmentionchar) property, the text content can be displayed along with the mention character. You can customize the mention character by using the [mentionChar](https://ej2.syncfusion.com/react/documentation/api/mention/index-default#mentionchar) property in the Mention component.
 
-> By default, the [mentionChar](https://ej2.syncfusion.com/react/documentation/api/mention/index-default#mentionChar) is `@` and the [showMentionChar](https://ej2.syncfusion.com/react/documentation/api/mention/index-default#showMentionChar) property is disabled.
+> By default, the [mentionChar](https://ej2.syncfusion.com/react/documentation/api/mention/index-default#mentionchar) is `@` and the [showMentionChar](https://ej2.syncfusion.com/react/documentation/api/mention/index-default#showmentionchar) property is disabled.
 
 The following example displays the text content along with the mention character configured as `#`.
 

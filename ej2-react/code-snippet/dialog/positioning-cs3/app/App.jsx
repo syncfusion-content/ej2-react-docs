@@ -3,15 +3,16 @@ import { DialogComponent } from '@syncfusion/ej2-react-popups';
 import * as React from "react";
 function App() {
     let defaultDialogInstance;
-    let PositioningInstance;
     const [status, setStatus] = React.useState({ hideDialog: true });
+    const posRef = React.useRef(null);
     let position;
     position = { X: 'center', Y: 'center' };
     function changePosition(event) {
-        defaultDialogInstance.position = { X: event.currentTarget.value.split(" ")[0], Y: event.currentTarget.value.split(" ")[1] };
-        PositioningInstance.innerHTML = 'Position: {X: "' + event.currentTarget.value.split(" ")[0] + '", Y: "' + event.currentTarget.value.split(" ")[1] + '"}';
-        const txt = event.target.parentElement.querySelector('.e-label').innerText.split(" ");
-        PositioningInstance.innerHTML = 'Position: { X: "' + txt[0] + '", Y: "' + txt[1] + '" }';
+        const [x, y] = event.currentTarget.value.split(" ");
+        defaultDialogInstance.position = { X: x, Y: y };
+        if (posRef.current) {
+            posRef.current.innerHTML = `Position: { X: "${x}", Y: "${y}" }`;
+        }
     }
     function dialogClose() {
         setStatus({ hideDialog: false });
@@ -20,7 +21,7 @@ function App() {
         setStatus({ hideDialog: true });
     }
     function footerTemplate() {
-        return (<span id="posvalue"/>);
+        return <span id="posvalue" ref={posRef}></span>;
     }
     return (<div className="App" id='dialog-target'>
         <DialogComponent id='defaultDialog' header='Choose a Dialog Position' visible={status.hideDialog} showCloseIcon={false} position={position} footerTemplate={footerTemplate} width='452px' ref={defaultDialog => defaultDialogInstance = defaultDialog} target='#dialog-target' open={dialogOpen} close={dialogClose} closeOnEscape={false}>
