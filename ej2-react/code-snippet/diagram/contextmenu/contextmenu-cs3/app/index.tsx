@@ -32,34 +32,36 @@ let connectors: ConnectorModel[]= [
     },
   ];
 
+const contextMenuSettings = {
+    //Enables the context menu
+    show: true,
+    items: [
+        {
+          text: 'Change fill',
+          id: 'applyFill',
+          target: '.e-diagramcontent',
+          iconCss: 'e-icons e-paint-bucket',
+        },
+        {
+          text: 'Change stroke',
+          id: 'applyStroke',
+          target: '.e-diagramcontent',
+          iconCss: 'e-icons e-edit',
+        },
+        {
+          text: 'Select All',
+          id: 'selectAll',
+          target: '.e-diagramcontent',
+        },
+      ],
+    // Hides the default context menu items
+    showCustomMenuOnly: true,
+};
+
 //Initializes the Diagram component
 function App() {
     return (<DiagramComponent id="diagram_contextmenu" ref={(diagram) => (diagramInstance = diagram)} width={'650px'} height={'350px'} nodes={node} connectors={connectors}
-        contextMenuSettings={{
-            //Enables the context menu
-            show: true,
-            items: [
-                {
-                  text: 'Change fill',
-                  id: 'applyFill',
-                  target: '.e-diagramcontent',
-                  iconCss: 'e-icons e-paint-bucket',
-                },
-                {
-                  text: 'Change stroke',
-                  id: 'applyStroke',
-                  target: '.e-diagramcontent',
-                  iconCss: 'e-icons e-edit',
-                },
-                {
-                  text: 'Select All',
-                  id: 'selectAll',
-                  target: '.e-diagramcontent',
-                },
-              ],
-            // Hides the default context menu items
-            showCustomMenuOnly: true,
-        }}  
+        contextMenuSettings={contextMenuSettings}  
 
         contextMenuOpen= {(args: DiagramBeforeMenuOpenEventArgs) =>{
 

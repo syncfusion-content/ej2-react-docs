@@ -13,7 +13,22 @@ let data = [
     { Id: 6, Role: 'Marketing Manager', Team: 1 },
 ];
 let items = new DataManager(data, new Query().take(7));
-
+const layout = {
+    //Sets layout type
+    type: 'OrganizationalChart',
+    // define the getLayoutInfo
+    getLayoutInfo: (node, options) => {
+        if (!options.hasSubTree) {
+            options.type = 'Left';
+            options.orientation = 'Vertical';
+        }
+    }
+};
+const dataSourceSettings = {
+    id: 'Id',
+    parentId: 'Team',
+    dataSource: items
+};
 export default function App() {
     let diagramInstance;
     let alignmentInstance;
@@ -47,24 +62,10 @@ export default function App() {
                 snapSettings={{ constraints: 0 }}
 
                 //Uses layout to auto-arrange nodes on the diagram page
-                layout={{
-                    //Sets layout type
-                    type: 'OrganizationalChart',
-                    // define the getLayoutInfo
-                    getLayoutInfo: (node, options) => {
-                        if (!options.hasSubTree) {
-                            options.type = 'Left';
-                            options.orientation = 'Vertical';
-                        }
-                    }
-                }}
+                layout={layout}
 
                 //Configures data source for diagram
-                dataSourceSettings={{
-                    id: 'Id',
-                    parentId: 'Team',
-                    dataSource: items
-                }}
+                dataSourceSettings={dataSourceSettings}
 
                 //Sets the default properties for nodes
                 getNodeDefaults={(node) => {

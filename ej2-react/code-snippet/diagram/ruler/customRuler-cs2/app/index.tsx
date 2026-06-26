@@ -20,23 +20,26 @@ let arrange = (args: IArrangeTickOptions) => {
     } 
 };
 
+const rulerSettings = {
+    showRulers: true,
+    horizontalRuler: {
+        segmentWidth: 50,
+        orientation: 'Horizontal',
+        interval: 10,
+        thickness: 50,
+        arrangeTick: arrange,
+    },
+    verticalRuler: {
+        segmentWidth: 200,
+        interval: 20,
+        thickness: 20,
+        tickAlignment: 'LeftOrTop',
+        markerColor: 'red',
+    }
+};
+
 function App() {
-    return (<DiagramComponent id="container" width={'100%'} height={'600px'} nodes={node} rulerSettings={{
-            showRulers: true,
-            horizontalRuler: {
-                segmentWidth: 50,
-                orientation: 'Horizontal',
-                interval: 10,
-                thickness: 50,
-                arrangeTick: arrange,
-            },
-            verticalRuler: {
-                segmentWidth: 200,
-                interval: 20,
-                thickness: 20,
-                tickAlignment: 'LeftOrTop',
-                markerColor: 'red',
-            }}}
+    return (<DiagramComponent id="container" width={'100%'} height={'600px'} nodes={node} rulerSettings={rulerSettings}
 
         ></DiagramComponent>);
 }

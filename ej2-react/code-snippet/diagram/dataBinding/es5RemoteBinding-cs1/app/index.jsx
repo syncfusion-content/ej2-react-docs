@@ -3,33 +3,54 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DiagramComponent, DataBinding, HierarchicalTree, DiagramTools, Inject } from "@syncfusion/ej2-react-diagrams";
 import { DataManager, Query } from '@syncfusion/ej2-data';
+
+const layout = {
+    type: 'HierarchicalTree',
+    margin: {
+        left: 0,
+        right: 0,
+        top: 100,
+        bottom: 0,
+    },
+    verticalSpacing: 40,
+    getLayoutInfo: (node, options) => {
+        if (options.level === 3) {
+            node.style.fill = '#3c418d';
+        }
+        if (options.level === 2) {
+            node.style.fill = '#108d8d';
+            options.type = 'Center';
+            options.orientation = 'Horizontal';
+        }
+        if (options.level === 1) {
+            node.style.fill = '#822b86';
+        }
+    },
+};
+
+const dataSourceSettings = {
+    id: "Id",
+    parentId: "ParentId",
+    dataSource: new DataManager({
+        url: "https://services.syncfusion.com/react/production/api/RemoteData",
+        crossDomain: true
+    }),
+    //binds the external data with node
+    doBinding: (nodeModel, data, diagram) => {
+        nodeModel.annotations = [
+            {
+                /* tslint:disable:no-string-literal */
+                content: data["Label"],
+                style: { color: "white" }
+            }
+        ];
+    }
+};
+
 //Initializes diagram control
 function App() {
     return (<DiagramComponent id="container" width={'100%'} height={490} 
-    //Configrues hierarchical tree layout
-    layout={{
-            type: 'HierarchicalTree',
-            margin: {
-                left: 0,
-                right: 0,
-                top: 100,
-                bottom: 0,
-            },
-            verticalSpacing: 40,
-            getLayoutInfo: (node, options) => {
-                if (options.level === 3) {
-                    node.style.fill = '#3c418d';
-                }
-                if (options.level === 2) {
-                    node.style.fill = '#108d8d';
-                    options.type = 'Center';
-                    options.orientation = 'Horizontal';
-                }
-                if (options.level === 1) {
-                    node.style.fill = '#822b86';
-                }
-            },
-        }} 
+    layout={layout} 
     //Sets the default values of nodes
     getNodeDefaults={(obj) => {
             obj.width = 80;
@@ -51,24 +72,7 @@ function App() {
             connector.targetDecorator.shape = 'None';
         }} 
     //Configures data source
-        dataSourceSettings={{
-            id: "Id",
-            parentId: "ParentId",
-            dataSource: new DataManager({
-                url: "https://services.syncfusion.com/react/production/api/RemoteData",
-                crossDomain: true
-            }),
-            //binds the external data with node
-            doBinding: (nodeModel, data, diagram) => {
-                nodeModel.annotations = [
-                    {
-                        /* tslint:disable:no-string-literal */
-                        content: data["Label"],
-                        style: { color: "white" }
-                    }
-                ];
-            }
-        }}
+        dataSourceSettings={dataSourceSettings}
     //Disables all interactions except zoom/pan
     tool={DiagramTools.ZoomPan} snapSettings={{
             constraints: 0,
