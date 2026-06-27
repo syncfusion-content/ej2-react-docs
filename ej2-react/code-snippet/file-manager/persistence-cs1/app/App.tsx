@@ -1,5 +1,6 @@
 
 import { DetailsView, FileManagerComponent, NavigationPane, Toolbar, Inject } from '@syncfusion/ej2-react-filemanager';
+import * as React from 'react';
 
 function App() {
   let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
