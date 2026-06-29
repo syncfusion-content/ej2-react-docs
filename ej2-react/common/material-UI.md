@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Integration of Material-UI Components with Syncfusion React Grid | Syncfusion
+title: Integration of MUI Components with Syncfusion React Grid | Syncfusion
 description: Learn how to integrate Material-UI components with Syncfusion React Grid using column templates for a consistent Material-themed user interface.
 control: MaterialUI
 platform: ej2-react
@@ -37,7 +37,7 @@ import * as React from 'react';
 import { useState } from 'react';
 import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-grids';
 import { Button } from '@mui/material';
-import '@syncfusion/ej2-react-grids/styles/material.css';
+import '@syncfusion/ej2-material-theme/styles/grid/index.css';
 
 const dataSource = [
   {
