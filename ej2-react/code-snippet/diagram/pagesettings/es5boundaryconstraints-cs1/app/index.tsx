@@ -38,6 +38,18 @@ let node: NodeModel[] = [{
     offsetX: 300,
     offsetY: 350,
 }];
+
+const pageSettings = {
+    // Sets the BoundaryConstraints to page
+    boundaryConstraints: 'Page',
+    background: {
+        color: 'grey'
+    },
+    width: 400,
+    height: 400,
+    showPageBreaks: true,
+};
+
 function App() {
   return (
     <DiagramComponent
@@ -47,18 +59,7 @@ function App() {
       nodes={node}
       connectors={connector}
       // Defines the pageSettings for the diagram
-      pageSettings = {
-        {
-            // Sets the BoundaryConstraints to page
-            boundaryConstraints: 'Page',
-            background: {
-                color: 'grey'
-            },
-            width: 400,
-            height: 400,
-            showPageBreaks: true,
-        }
-    }
+      pageSettings = {pageSettings}
     />
   );
 }
