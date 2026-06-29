@@ -21,7 +21,7 @@ The Essential<sup style="font-size:70%">&reg;</sup> UI Kit for React comprises o
     <td>Authentication</td>
     <td>
       <ul>
-	      <li><a href="https://ej2.syncfusion.com/react/essential-ui-kit/blocks/signin">Sign In</a></li>
+        <li><a href="https://ej2.syncfusion.com/react/essential-ui-kit/blocks/signin">Sign In</a></li>
         <li><a href="https://ej2.syncfusion.com/react/essential-ui-kit/blocks/signup">Sign Up</a></li>
         <li><a href="https://ej2.syncfusion.com/react/essential-ui-kit/blocks/mobile-signin">Sign In - Mobile</a></li>
         <li><a href="https://ej2.syncfusion.com/react/essential-ui-kit/blocks/otp-signin">Sign In - OTP</a></li>
@@ -35,7 +35,7 @@ The Essential<sup style="font-size:70%">&reg;</sup> UI Kit for React comprises o
     <td>Layouts</td>
     <td>
       <ul>
-	      <li><a href="https://ej2.syncfusion.com/react/essential-ui-kit/blocks/header">Header</a></li>
+        <li><a href="https://ej2.syncfusion.com/react/essential-ui-kit/blocks/header">Header</a></li>
         <li><a href="https://ej2.syncfusion.com/react/essential-ui-kit/blocks/navigation-bar">Navigation Bar</a></li>
         <li><a href="https://ej2.syncfusion.com/react/essential-ui-kit/blocks/sidebar">Sidebar</a></li>
         <li><a href="https://ej2.syncfusion.com/react/essential-ui-kit/blocks/search">Search</a></li>
@@ -59,7 +59,7 @@ The Essential<sup style="font-size:70%">&reg;</sup> UI Kit for React comprises o
     <td>Data Visualization</td>
     <td>
       <ul>
-	      <li><a href="https://ej2.syncfusion.com/react/essential-ui-kit/blocks/line-chart">Line Chart</a></li>
+        <li><a href="https://ej2.syncfusion.com/react/essential-ui-kit/blocks/line-chart">Line Chart</a></li>
         <li><a href="https://ej2.syncfusion.com/react/essential-ui-kit/blocks/area-chart">Area Chart</a></li>
         <li><a href="https://ej2.syncfusion.com/react/essential-ui-kit/blocks/bar-chart">Bar Chart</a></li>
         <li><a href="https://ej2.syncfusion.com/react/essential-ui-kit/blocks/scatter-chart">Scatter Chart</a></li>
@@ -92,7 +92,7 @@ The Essential<sup style="font-size:70%">&reg;</sup> UI Kit for React comprises o
     <td>E-commerce</td>
     <td>
       <ul>
-	        <li><a href="https://ej2.syncfusion.com/react/essential-ui-kit/blocks/pricing-card">Pricing Card</a></li>
+        <li><a href="https://ej2.syncfusion.com/react/essential-ui-kit/blocks/pricing-card">Pricing Card</a></li>
         <li><a href="https://ej2.syncfusion.com/react/essential-ui-kit/blocks/plan-and-price-comparison">Plan and Price Comparison</a></li>
         <li><a href="https://ej2.syncfusion.com/react/essential-ui-kit/blocks/checkout-page">Checkout Page</a></li>
         <li><a href="https://ej2.syncfusion.com/react/essential-ui-kit/blocks/product-return-page">Product Return Page</a></li>

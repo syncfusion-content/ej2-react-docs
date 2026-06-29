@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integration of Syncfusion<sup style="font-size:70%">&reg;</sup> React Components in Redux Form
+# Integration of Syncfusion® React Components in Redux Form
 
 [Redux Form](https://redux-form.com/) is a library for managing form state in React applications. It integrates with the Redux state management library ([Redux Store](https://redux.js.org/api/store)) and provides a straightforward way to handle form inputs, validation, submission, and synchronization with Redux.
 
@@ -119,10 +119,10 @@ export default LoginForm = reduxForm({
 
 To incorporate Syncfusion<sup style="font-size:70%">&reg;</sup> React components (DatePicker, TextBox, Button) into the login form, follow these steps:
 
-1. Install the required Syncfusion packages:
+1. Install the required Syncfusion components packages and needed theme package:
 
 ```bash
-npm install @syncfusion/ej2-react-calendars @syncfusion/ej2-react-inputs @syncfusion/ej2-react-buttons --save
+npm install @syncfusion/ej2-react-calendars @syncfusion/ej2-react-inputs @syncfusion/ej2-react-buttons @syncfusion/ej2-tailwind3-theme --save
 ```
 
 2. Import the Syncfusion theme stylesheet in **App.js** to ensure proper component styling:
@@ -131,10 +131,8 @@ npm install @syncfusion/ej2-react-calendars @syncfusion/ej2-react-inputs @syncfu
 {% highlight js tabtitle="App.js" %}
 
 import './App.css';
-import '@syncfusion/ej2-base/styles/tailwind3.css';
-import '@syncfusion/ej2-react-inputs/styles/tailwind3.css';
-import '@syncfusion/ej2-react-calendars/styles/tailwind3.css';
-import '@syncfusion/ej2-react-buttons/styles/tailwind3.css';
+import '@syncfusion/ej2-tailwind3-theme/styles/textbox/index.css';
+import '@syncfusion/ej2-tailwind3-theme/styles/datepicker/index.css';
 import LoginForm from "./LoginForm";
 
 {% endhighlight %}
