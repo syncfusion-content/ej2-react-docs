@@ -95,6 +95,28 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are av
 
 This guide uses the [React Grid component](https://www.syncfusion.com/react-components/react-data-grid) as an example. To install the React Grid component package, use the following command:
 
+<<<<<<< HEAD
+=======
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+npm install @syncfusion/ej2-react-grids --save
+
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+
+yarn add @syncfusion/ej2-react-grids
+
+{% endhighlight %}
+{% endtabs %}
+
+## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be added using CSS or SASS styles in the npm packages. Additional options are available via CDN or the [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). See the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for full details.
+
+This example uses the `Tailwind 3` theme, imported in the **src/style.css** file:
+
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
 

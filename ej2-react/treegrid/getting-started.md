@@ -8,7 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
+<<<<<<< HEAD
 # Getting Started with React Tree Grid
+=======
+# Getting Started with React TreeGrid
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 
 This section outlines the steps to create a simple Essential JS 2 Tree Grid and demonstrates basic usage in a React application.
 
@@ -40,9 +44,15 @@ Terminate the application, then run the following command:
 cd my-app
 ```
 
+<<<<<<< HEAD
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React Tree Grid packages
 
 To install the Tree Grid component, use the following command:
+=======
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React TreeGrid packages
+
+To install the TreeGrid component, use the following command:
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 
 ```
 npm install @syncfusion/ej2-react-treegrid --save
@@ -67,9 +77,15 @@ The following CSS files are available in the **../node_modules/@syncfusion** pac
 @import "../node_modules/@syncfusion/ej2-react-treegrid/styles/tailwind3.css";
 ```
 
+<<<<<<< HEAD
 ## Adding Tree Grid component
 
 The tree grid code should be placed in the **src/App.tsx** file.
+=======
+## Adding TreeGrid component
+
+The treegrid code should be placed in the **src/App.tsx** file.
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

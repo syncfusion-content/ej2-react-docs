@@ -81,7 +81,11 @@ cd my-project
 
 With `my-project` ready using default settings, add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
+<<<<<<< HEAD
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React Tree Grid packages
+=======
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React TreeGrid packages
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
@@ -97,8 +101,11 @@ or
 yarn add @syncfusion/ej2-react-treegrid
 ```
 
+<<<<<<< HEAD
 > Before including Syncfusion styles, make sure to remove the default styles defined in **index.css**. This helps prevent unintended style overrides and ensures that Syncfusion components render correctly.
 
+=======
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 ## Adding CSS reference
 
 Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be imported in multiple ways, such as using CSS or SASS styles from npm packages, CDN, CRG, and [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). Refer to the [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) for details about built-in themes and approaches for referencing themes in a React project.
@@ -122,9 +129,13 @@ In this article, the `Material 3` theme is applied using CSS styles from install
 {% endhighlight %}
 {% endtabs %}
 
+<<<<<<< HEAD
 ## Adding Tree Grid component
 
 Follow these steps to add the React Tree Grid component to the Preact project:
+=======
+## Adding TreeGrid component
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 
 1\. Before adding the Tree Grid component to the markup, import the Tree Grid component in the **src/index.jsx** file.
 
@@ -136,7 +147,11 @@ import { ColumnDirective, ColumnsDirective, TreeGridComponent } from '@syncfusio
 {% endhighlight %}
 {% endtabs %}
 
+<<<<<<< HEAD
 2\. Define the Tree Grid component with the [dataSource](https://helpej2.syncfusion.com/react/documentation/api/treegrid#datasource) property and column definitions. Declare the values for the `dataSource` property.
+=======
+2\. Define the TreeGrid component with the [dataSource](https://helpej2.syncfusion.com/react/documentation/api/treegrid#datasource) property and column definitions. Declare the values for the `dataSource` property.
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}

@@ -68,7 +68,11 @@ The following CSS files are available in `../node_modules/@syncfusion` package f
 @import '../node_modules/@syncfusion/ej2-richtexteditor/styles/tailwind3.css';
 ```
 
+<<<<<<< HEAD
 I> To apply the application-specific styles correctly, import **App.css** into `src/App.tsx` and remove all the default styles from `src/index.css`.
+=======
+I> To apply the application-specific styles correctly, import **App.css** into **src/App.tsx** and remove all the default styles from **src/index.css**.
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 
 ## Module injection
 

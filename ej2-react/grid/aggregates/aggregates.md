@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Aggregates in React Grid Component
 
-The Aggregates feature in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides built-in calculations such as sum, average, count, minimum, and maximum for specific columns. The results can be displayed in different sections of the grid.
+The Aggregates feature in React Data Grid provides built-in calculations such as sum, average, count, minimum, and maximum for specific columns. The results can be displayed in different sections of the grid.
 
 - `Footer`: overall summary values for the entire grid.
 - `Group Footer`: aggregate values for each group of records.

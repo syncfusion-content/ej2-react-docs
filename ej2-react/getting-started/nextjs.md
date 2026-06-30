@@ -102,6 +102,7 @@ yarn add @syncfusion/ej2-react-grids
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS Styles
 
+<<<<<<< HEAD
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component provide built-in themes, which are available from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages). Additionally, themes can be loaded via CDN or customized using the [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
 
 This example uses the Tailwind 3 theme for the Grid component from the theme package. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
@@ -118,6 +119,9 @@ yarn add @syncfusion/@syncfusion/ej2-tailwind3-theme
 
 {% endhighlight %}
 {% endtabs %}
+=======
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It's easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of the application by referring to one of the built-in themes.
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 
 Import the **Tailwind 3** CSS styles for the Grid component and its dependent components in the **app/globals.css** file and remove the existing styles in that file, as shown below:
 

@@ -10,7 +10,11 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Grid Component in the Next.js
 
+<<<<<<< HEAD
 This section provides a step-by-step guide for creating a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component.
+=======
+This section provides a step-by-step guide for creating a Next.js application and integrating the React Data Grid component.
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 
 ## What is Next.js?
 
@@ -87,7 +91,11 @@ cd ej2-nextjs-grid
 
 Once the setup is complete, the application is ready to be configured with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
+<<<<<<< HEAD
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid packages
+=======
+## Adding React Data Grid packages
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available on [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
