@@ -29,6 +29,7 @@ Run the following commands to set up a React application:
 ```bash
 npm create vite@latest my-app -- --template react-ts
 ```
+<<<<<<< HEAD
 
 This command will prompt you to install the required packages and start the application. Select the options as shown below.
 
@@ -39,7 +40,21 @@ As Syncfusion packages are not installed yet, currently, the `No` option will be
 ```bash
 cd my-app
 npm install
+=======
+
+This command will prompt you to install the required packages and start the application. Select the options as shown below.
+
+![Markdown Editor Initial setup](../rich-text-editor/images/initial_setup.png)
+
+As Syncfusion packages are not installed yet, currently, the `No` option will be selected. Then, navigate to the project directory and install the dependencies using the following commands:
+
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 ```
+cd my-app
+npm install
+```
+
+> **Note:** To set up a React application with Nextjs or Remix, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start) for more details.
 
 > **Note:** To set up a React application with Nextjs or Remix, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start) for more details.
 
@@ -91,6 +106,7 @@ Place the following Markdown Editor code in the **src/App.tsx**.
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/markdown-editor/getting-started-cs3/app/App.tsx %}
+<<<<<<< HEAD
 {% endhighlight %}
 {% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/markdown-editor/getting-started-cs3/app/App.jsx %}
@@ -105,10 +121,30 @@ Place the following Markdown Editor code in the **src/App.tsx**.
 @import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-richtexteditor/styles/tailwind3.css';
+=======
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
+{% endhighlight %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/markdown-editor/getting-started-cs3/app/App.jsx %}
+{% endhighlight %}
+{% highlight css tabtitle="App.css" %}
+
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-richtexteditor/styles/tailwind3.css';
+
 {% endhighlight %}
 {% endtabs %}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 ## Run the application
 
 Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
