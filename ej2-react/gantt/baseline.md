@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The baseline feature in the Gantt Chart component enables comparison between original planned schedules and actual task execution timelines. This visualization provides clear insights into schedule deviations, helping assess project performance and identify areas requiring attention. Baseline functionality displays both the original planned timeline and current progress side-by-side for comprehensive project tracking.
 
-Before implementing baseline functionality, ensure the data source includes baseline date fields and configure the [taskFields](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/) object with appropriate field mappings. The baseline feature requires proper field mapping to display planned versus actual timelines effectively.
+Before implementing baseline functionality, ensure the data source includes baseline date fields and configure the [taskFields](https://ej2.syncfusion.com/react/documentation/api/gantt/taskfields) object with appropriate field mappings. The baseline feature requires proper field mapping to display planned versus actual timelines effectively.
 
 **Baseline fields**:
 
@@ -74,7 +74,7 @@ The following example demonstrates complete baseline configuration with proper f
         
 {% previewsample "page.domainurl/code-snippet/gantt/baseline-cs1" %}
 
-> For a comprehensive demonstration of baseline functionality, explore the [interactive sample](https://ej2.syncfusion.com/react/demos#/tailwind3/gantt/baseline).
+> For a comprehensive demonstration of baseline functionality, explore the [interactive sample](https://ej2.syncfusion.com/react/demos/#/tailwind3/gantt/baseline).
 
 ## Customize baseline using event
 
@@ -91,3 +91,34 @@ const queryTaskbarInfo = (args: IQueryTaskbarInfoEventArgs): void => {
     }
 };
 ```
+
+## Customize baseline templates
+
+The [baselineTemplate](https://ej2.syncfusion.com/react/documentation/api/gantt#baselinetemplate) property allows customization of baseline rendering by replacing the default baseline UI with a custom HTML structure. This enables advanced scenarios such as rendering additional baseline elements, visual indicators, or multiple baselines using task-specific data.
+
+Set the `baselineTemplate` property with a template string or function. The template receives the task data object, which can be used to dynamically generate baseline elements.
+
+### Multiple baseline rendering using template
+
+By default, the Gantt component supports a single baseline per task. However, using the `baselineTemplate`, you can extend this behavior to render multiple baselines by maintaining additional baseline data within a custom field in your data source.
+
+This enables rich visualization scenarios such as:
+* Comparing original vs revised schedules.
+* Visualizing multiple planning phases.
+* Highlighting deviations across timeline checkpoints.
+
+The following example demonstrates how to render multiple baselines using `baselineTemplate`.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/baseline-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/baseline-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/baseline-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/baseline-cs1" %}

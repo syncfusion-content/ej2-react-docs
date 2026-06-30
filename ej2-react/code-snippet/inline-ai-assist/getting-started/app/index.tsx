@@ -5,6 +5,12 @@ import * as ReactDOM from 'react-dom';
 const App: React.FC = () => {
     const assistRef = React.useRef<InlineAIAssistComponent>(null);
     const editableRef = React.useRef<HTMLDivElement>(null);
+    const responseSettingprops = {
+        itemSelect: handleResponseItemSelect
+    };
+    const summarizeBtnStyle = {
+        marginBottom: '10px'
+    };
 
     const handleSummarizeBtnClick = () => {
         if (assistRef.current && typeof assistRef.current.showPopup === 'function') {
@@ -46,7 +52,7 @@ const App: React.FC = () => {
             <button 
                 id="summarizeBtn" 
                 className="e-btn e-primary" 
-                style={{ marginBottom: '10px' }}
+                style={summarizeBtnStyle}
                 onClick={handleSummarizeBtnClick}
             >
                 Content Summarize
@@ -64,9 +70,7 @@ const App: React.FC = () => {
                 ref={assistRef}
                 relateTo="#summarizeBtn"
                 promptRequest={handlePromptRequest}
-                responseSettings={{
-                    itemSelect: handleResponseItemSelect
-                }}
+                responseSettings={responseSettingprops}
                 popupWidth="500px"
             />
         </div>

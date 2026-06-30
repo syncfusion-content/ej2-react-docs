@@ -42,24 +42,21 @@ cd my-app
 To install the File Manager component, use the following command:
 
 ```bash
-npm install @syncfusion/ej2-react-filemanager --save
+npm i @syncfusion/ej2-react-filemanager
 ```
 
 ## Adding CSS reference
 
-To render the File Manager component, import File Manager and its dependent styles in **src/App.css**:
+To install the [Tailwind3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+
+```bash
+npm i @syncfusion/ej2-tailwind3-theme
+```
+
+In this package, the File Manager component includes an `index.css` file that automatically loads all the required dependency styles. Add the following import to the **src/App.css** file.
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-icons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
-@import "../node_modules/@syncfusion/ej2-react-filemanager/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/file-manager/index.css";
 ```
 
 To reference `App.css` in the application, import it into the `src/App.tsx` file. Also, remove any unnecessary styles from `src/index.css` and `src/App.css`, as they may affect the File Manager component UI.

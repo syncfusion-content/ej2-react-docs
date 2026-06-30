@@ -103,21 +103,18 @@ yarn add @syncfusion/ej2-react-filemanager
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It's easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
 
-Import the `Tailwind3` theme into the **app/globals.css** file and remove the existing styles in that file, as shown below:
+To install the [Tailwind3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+
+```bash
+npm i @syncfusion/ej2-tailwind3-theme
+```
+
+In this package, the File Manager component includes an `index.css` file that automatically loads all the required dependency styles. Add the following import to the **app/globals.css** file and remove the existing styles from that file.
 
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
 
-@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-icons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-filemanager/styles/tailwind3.css';
-@import "../node_modules/@syncfusion/ej2-react-filemanager/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/file-manager/index.css";
 
 {% endhighlight %}
 {% endtabs %}
