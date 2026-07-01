@@ -70,23 +70,6 @@ npm install @syncfusion/ej2-react-dropdowns --save
 After installing the required packages, add the Dropdown Tree component to the application. For a basic setup, add the following code to the `src/App.tsx` file to initialize the component.
 
 ```ts
-
-import { DropDownTreeComponent } from '@syncfusion/ej2-react-dropdowns';
-import * as React from 'react';
-import * as ReactDOM from "react-dom";
-
-function App() {
-  return (
-      // specifies the tag for render the DropDownTree component
-    <DropDownTreeComponent id='dropdowntree'/>
-  );
-}
-export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
-
-```
-
-```ts
 import { DropDownTreeComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
@@ -119,7 +102,7 @@ Import the Dropdown Tree component required CSS references as follows in `src/Ap
 
 The Dropdown Tree component can load the data either from local data sources or remote data services. This can be done using the [`dataSource`](https://helpej2.syncfusion.com/react/documentation/api/drop-down-tree/fieldsModel#datasource) property that is a member of the [`fields`](https://helpej2.syncfusion.com/react/documentation/api/drop-down-tree#fields) property. The dataSource property supports array of JavaScript objects and DataManager. Here, an array of JSON values is passed to the Dropdown Tree component.
 
-
+**App.tsx**
 
 ```ts
 
@@ -164,6 +147,7 @@ export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
+**App.jsx**
 
 ```ts
 import { DropDownTreeComponent } from '@syncfusion/ej2-react-dropdowns';
