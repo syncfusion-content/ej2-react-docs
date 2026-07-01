@@ -9,15 +9,17 @@ import * as ReactDOM from 'react-dom';
 export default class App extends React.Component<{}, {}> {
   private dropDownListObject: any;
   private sportsData: string[] = ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis'];
-  public onclick() {
-    this.dropDownListObject.value = null;
-  }
+  public onclick = () => {
+    if (this.dropDownListObject) {
+      this.dropDownListObject.value = null;
+    }
+  };
   public render() {
     return (
       // specifies the tag for render the DropDownList component
       <div>
         <DropDownListComponent id="ddlelement" ref={(scope) => { this.dropDownListObject = scope; }} dataSource={this.sportsData} placeholder="Select a game" />
-        <button id='btn' className="e-control e-btn" onClick={this.onclick = this.onclick.bind(this)}> Set null to value property</button>
+        <button id='btn' className="e-control e-btn" onClick={this.onclick}> Set null to value property</button>
       </div>
     );
   }
