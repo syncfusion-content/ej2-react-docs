@@ -16,6 +16,10 @@ For an overview of the filtering feature available in the React Grid, refer to t
 
 {% youtube "https://www.youtube.com/watch?v=G5ocVU3EWsw" %}
 
+For an overview of the filtering feature available in the React Grid, refer to the following video:
+
+{% youtube "https://www.youtube.com/watch?v=G5ocVU3EWsw" %}
+
 ## Set up filtering
 
 Before using filtering in the grid, understand that the component needs the `Filter module` to unlock all filtering features. 

@@ -1,36 +1,75 @@
-import * as React from "react";
-import { getValue } from '@syncfusion/ej2-base';
-import * as ReactDOM from "react-dom";
-import { GanttComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-react-gantt";
-import { data } from "./datasource";
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import {
+  GanttComponent,
+  ColumnsDirective,
+  ColumnDirective,
+  TaskFieldsModel,
+  SplitterSettingsModel
+} from '@syncfusion/ej2-react-gantt';
+import { GanttData } from './datasource';
 
 function App() {
-  const taskFields = {
-    id: "TaskID",
-    name: "TaskName",
-    startDate: "StartDate",
-    duration: "Duration",
-    progress: "Progress",
-    parentID: "ParentID"
-  };
-  const splitterSettings = {
-    position: "75%"
-  };
-  const concatenateFields = (field: string, data: object, ) => {
-    return data[field] + '-' + getValue('TaskID', data);
-  };
-  const percentageFormatter = (field: string, data: object, ) => {
-    return data[field] + '%';
+  let gantt: GanttComponent | null;
 
+  const taskFields: TaskFieldsModel = {
+    id: 'TaskID',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    duration: 'Duration',
+    progress: 'Progress',
+    parentID: 'ParentID'
   };
-  return <div><GanttComponent dataSource={data} taskFields={taskFields} height="450px" splitterSettings={splitterSettings}>
-    <ColumnsDirective>
-      <ColumnDirective field="TaskID" > </ColumnDirective>
-      <ColumnDirective field="TaskName" headerText="Task Name" width="180" valueAccessor={concatenateFields} > </ColumnDirective>
-      <ColumnDirective field="StartDate" headerText="Start Date" width="180" > </ColumnDirective>
-      <ColumnDirective field="Duration" headerText="Duration" width="100" > </ColumnDirective>
-      <ColumnDirective field="Progress" headerText="Progress" width="120" valueAccessor={percentageFormatter} > </ColumnDirective>
-    </ColumnsDirective>
-  </GanttComponent></div>
-};
-ReactDOM.render(<App />, document.getElementById("root"));
+
+  const splitterSettings: SplitterSettingsModel = {
+    position: '75%'
+  };
+
+  const getConcatenatedNames = (field: string, rowData: GanttTask): string => {
+    return rowData.Name.map(
+      (person: PersonName) => person.lastName || person.firstName
+    ).join(' ');
+  };
+
+  return (
+    <GanttComponent
+      ref={(g: GanttComponent) => (gantt = g)}
+      height="430px"
+      dataSource={GanttData}
+      taskFields={taskFields}
+      treeColumnIndex={1}
+      splitterSettings={splitterSettings}
+    >
+      <ColumnsDirective>
+        <ColumnDirective field="TaskID" headerText="Task ID" width="100" />
+        <ColumnDirective field="TaskName" headerText="Task Name" width="290" />
+        <ColumnDirective
+          field="Name"
+          headerText="Full Name"
+          textAlign="Right"
+          valueAccessor={getConcatenatedNames}
+          width="250"
+        />
+        <ColumnDirective field="Duration" headerText="Duration" width="90" />
+        <ColumnDirective field="Progress" headerText="Progress" width="120" />
+      </ColumnsDirective>
+    </GanttComponent>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+export interface PersonName {
+  firstName: string;
+  lastName: string;
+}
+
+export interface GanttTask {
+  TaskID: number;
+  ParentID?: number;
+  TaskName: string;
+  StartDate: Date;
+  Duration: number;
+  Progress: number;
+  Name: PersonName[];
+}

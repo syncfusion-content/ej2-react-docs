@@ -17,7 +17,7 @@ A group functions as a container for its children (nodes, groups, and connectors
 
 ## Add Group when Initializing Diagram
 
-A group can be added to the diagram model through [`nodes`](https://ej2.syncfusion.com/react/documentation/api/diagram/#nodes) collection. To define an object as group, add the child objects to the [`children`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#children) collection of the group.  The following code illustrates how to create a group node.
+A group can be added to the diagram model through [`nodes`](https://ej2.syncfusion.com/react/documentation/api/diagram#nodes) collection. To define an object as group, add the child objects to the [`children`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#children) collection of the group.  The following code illustrates how to create a group node.
 
 * While creating group, its child node need to be declared before the group declaration.
 
@@ -49,7 +49,7 @@ Connectors can be added to a group. The following code illustrates how to add co
 
 ### Group Nodes at Runtime
 
-Groups can be dynamically created during runtime in the diagram by invoking the [`diagram.group`](https://ej2.syncfusion.com/react/documentation/api/diagram/#group) method. To initiate this process, first, select the nodes that you intend to include within the group. Subsequently, by utilizing the `diagram.group` method will encapsulate the selected nodes within a newly formed group node.
+Groups can be dynamically created during runtime in the diagram by invoking the [`diagram.group`](https://ej2.syncfusion.com/react/documentation/api/diagram#group) method. To initiate this process, first, select the nodes that you intend to include within the group. Subsequently, by utilizing the `diagram.group` method will encapsulate the selected nodes within a newly formed group node.
 
 The following code illustrates how to group at runtime.
 
@@ -66,7 +66,7 @@ The following code illustrates how to group at runtime.
 
 ### Ungroup Nodes at Runtime
 
-Group node can be unGrouped dynamically using the [`diagram.unGroup`](https://ej2.syncfusion.com/react/documentation/api/diagram/#ungroup) method.This operation dissolves the group container while preserving all child elements as individual diagram elements.
+Group node can be unGrouped dynamically using the [`diagram.unGroup`](https://ej2.syncfusion.com/react/documentation/api/diagram#ungroup) method.This operation dissolves the group container while preserving all child elements as individual diagram elements.
 The following code example shows how to ungroup a group node at runtime:
 
 {% tabs %}
@@ -82,7 +82,7 @@ The following code example shows how to ungroup a group node at runtime:
 
 ### Add Group Node at Runtime
 
-A group node can be added at runtime by using the diagram method [`diagram.add`](https://ej2.syncfusion.com/react/documentation/api/diagram/#add).This method allows programmatic addition of predefined group structures to an existing diagram.
+A group node can be added at runtime by using the diagram method [`diagram.add`](https://ej2.syncfusion.com/react/documentation/api/diagram#add). This method allows programmatic addition of predefined group structures to an existing diagram.
 
 The following code illustrates how a group node is added at runtime:
 
@@ -99,7 +99,7 @@ The following code illustrates how a group node is added at runtime:
 
 ### Add Collection of Group Nodes at Runtime
 
-The collection of group nodes can be dynamically added using the [`addElements`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addelements) method.Each time an element is added to the diagram canvas, the [`collectionChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/iCollectionChangeEventArgs/) event will be triggered.
+The collection of group nodes can be dynamically added using the [`addElements`](https://ej2.syncfusion.com/react/documentation/api/diagram#addelements) method. Each time an element is added to the diagram canvas, the [`collectionChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/iCollectionChangeEventArgs) event will be triggered.
 
 The following code illustrates how to add group nodes collection at runtime.
 
@@ -118,7 +118,7 @@ The following code illustrates how to add group nodes collection at runtime.
 
 ### Add Children to Group at Runtime
 
-A child node can be added to a specified group at runtime using the diagram method [`diagram.addChildToGroup`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addchildtogroup). This functionality requires passing the group and the existing child node as arguments to the method.
+A child node can be added to a specified group at runtime using the diagram method [`diagram.addChildToGroup`](https://ej2.syncfusion.com/react/documentation/api/diagram#addchildtogroup). This functionality requires passing the group and the existing child node as arguments to the method.
 
 The following code illustrates how a child node can be added to a group node at runtime:
 
@@ -129,7 +129,7 @@ diagram.addChildToGroup(groupNode, childNode);
 ```
 ### Remove Children from Group at Runtime
 
-A specific child from a group node can be removed at runtime by utilizing the diagram method [`diagram.removeChildFromGroup`](https://ej2.syncfusion.com/react/documentation/api/diagram/#removechildfromgroup). This functionality requires passing the group and its child node as arguments to the method.
+A specific child from a group node can be removed at runtime by utilizing the diagram method [`diagram.removeChildFromGroup`](https://ej2.syncfusion.com/react/documentation/api/diagram#removechildfromgroup). This functionality requires passing the group and its child node as arguments to the method.
 
 The following code illustrates how a child node is removed from a group at runtime:
 
@@ -154,7 +154,7 @@ diagram.removeChildFromGroup (groupNode, childNode);
 ### Group Padding
 
 
-The [`Padding`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeModel/#padding) property of a group node defines the spacing between the group node's edges and its children. This property helps maintain visual separation and improves the overall appearance of grouped elements.
+The [`Padding`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeModel#padding) property of a group node defines the spacing between the group node's edges and its children. This property helps maintain visual separation and improves the overall appearance of grouped elements.
 
 The following code illustrates how to add padding to a node group:
 
@@ -192,7 +192,7 @@ The following example shows how to apply flip transformations to group nodes:
 
 ### Group Flip Mode
 
-The [`flipMode`](https://ej2.syncfusion.com/react/documentation/api/diagram/flipMode/)property of a group node behaves similarly to that of normal nodes. However, when a flip mode is applied to a group node, it takes precedence over any flip mode set on its child nodes, overriding their individual settings.
+The [`flipMode`](https://ej2.syncfusion.com/react/documentation/api/diagram/flipMode) property of a group node behaves similarly to that of normal nodes. However, when a flip mode is applied to a group node, it takes precedence over any flip mode set on its child nodes, overriding their individual settings.
 
 **Example of flip mode precedence:**
 In the code below, the `flipMode` for the child node `Node1` is set to `LabelText`, while the `flipMode` for the group node is set to `Label`. The effective `flipMode` for both the child node and the group node will be `Label`, as the group node's `flipMode` overrides the child's setting.
@@ -275,7 +275,7 @@ The canvas panel supports absolute positioning and provides minimal layout funct
 - Supports absolute positioning using margin and alignment properties.
 - Enables rendering operations independently for each contained element.
 - Allows elements to be aligned vertically or horizontally.
-- Child elements are defined using the [`canvas.children`](https://ej2.syncfusion.com/react/documentation/api/diagram/canvas/#children) property.
+- Child elements are defined using the [`canvas.children`](https://ej2.syncfusion.com/react/documentation/api/diagram/canvas#children) property.
 - Basic elements can be defined within the `basicElements` collection.
 
 The following code illustrates how to add canvas panel.
@@ -297,7 +297,7 @@ The stack panel arranges its children in a single line or stack order, either ve
 
 **Stack Container Characteristics:**
 - Controls spacing using margin properties of child elements and padding properties of the group.
-- Default [`orientation`](https://ej2.syncfusion.com/react/documentation/api/diagram/stackPanel/#orientation)is vertical.
+- Default [`orientation`](https://ej2.syncfusion.com/react/documentation/api/diagram/stackPanel#orientation) is vertical.
 - Provides consistent alignment and distribution of child elements.
 - Ideal for creating organized, sequential layouts.
 

@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 Row selection in the Grid component provides interactive selection of specific rows or ranges of rows within the grid. Row selection can be performed effortlessly through mouse clicks or arrow keys (up, down, left, and right). This feature is useful when highlighting, manipulating, or performing actions on specific rows within the grid.
 
+For an overview of the row selection feature available in the React Grid, refer to the following video:
+
+{% youtube "https://www.youtube.com/watch?v=faV2-f1lT7I" %}
+
 > To enable row selection, set the [selectionSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#mode) property to either `Row` or `Both`. This property determines the selection mode of the grid.
 
 ## Single row selection 

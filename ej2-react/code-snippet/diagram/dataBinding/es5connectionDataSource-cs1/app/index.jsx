@@ -1,4 +1,4 @@
-{% raw %}
+
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { useRef } from "react";
@@ -91,38 +91,42 @@ const App = () => {
     return connector;
   };
 
+  const layout = {
+    type: "OrganizationalChart",
+    verticalSpacing: 100,
+    getLayoutInfo: (node, options) => {
+      if (!options.hasSubTree) {
+        options.orientation = "Horizontal";
+      }
+    },
+  };
+
+  const dataSourceSettings = {
+    id: "id",
+    parentId: "ParentId",
+    dataSource: dataModify,
+    crudAction: {
+      customFields: ["Id", "Description", "Color"],
+    },
+    connectionDataSource: {
+      id: "id",
+      sourceID: "sourceID",
+      targetID: "targetID",
+      crudAction: {
+        customFields: ["srcPortID", "targetPortID"],
+      },
+      dataManager: designConnectors(),
+    },
+  };
+
   return (
     <DiagramComponent
       id="container"
       ref={diagramRef}
       width="100%"
       height="700px"
-      layout={{
-        type: "OrganizationalChart",
-        verticalSpacing: 100,
-        getLayoutInfo: (node, options) => {
-          if (!options.hasSubTree) {
-            options.orientation = "Horizontal";
-          }
-        },
-      }}
-      dataSourceSettings={{
-        id: "id",
-        parentId: "ParentId",
-        dataSource: dataModify,
-        crudAction: {
-          customFields: ["Id", "Description", "Color"],
-        },
-        connectionDataSource: {
-          id: "id",
-          sourceID: "sourceID",
-          targetID: "targetID",
-          crudAction: {
-            customFields: ["srcPortID", "targetPortID"],
-          },
-          dataManager: designConnectors(),
-        },
-      }}
+      layout={layout}
+      dataSourceSettings={dataSourceSettings}
       getNodeDefaults={getNodeDefaults}
       getConnectorDefaults={getConnectorDefaults}
     >
@@ -133,4 +137,3 @@ const App = () => {
 
 const root = ReactDOM.createRoot(document.getElementById("diagram"));
 root.render(<App />);
-{% endraw %}

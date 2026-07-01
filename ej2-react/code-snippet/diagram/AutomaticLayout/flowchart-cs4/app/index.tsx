@@ -1,4 +1,3 @@
-{% raw %}
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
@@ -22,6 +21,18 @@ let connectors: ConnectorModel[] = [
   { id: 'connector4', sourceID: '4', targetID: '5', },
 ];
 
+const layout = {
+  //Sets layout type
+  type: 'Flowchart',
+
+  //Customizes the flowchart layout
+  flowchartLayoutSettings: {
+    //Sets the yes branch values
+    yesBranchValues: ["Yes", "Accept"],
+    //Sets the no branch values
+    noBranchValues: ["No", "Reject"]
+  }
+};
 export default function App() {
 
   return (
@@ -34,18 +45,7 @@ export default function App() {
         connectors={connectors}
 
         //Uses layout to auto-arrange nodes on the diagram page
-        layout={{
-          //Sets layout type
-          type: 'Flowchart',
-
-          //Customizes the flowchart layout
-          flowchartLayoutSettings: {
-            //Sets the yes branch values
-            yesBranchValues: ["Yes", "Accept"],
-            //Sets the no branch values
-            noBranchValues: ["No", "Reject"]
-          }
-        }}
+        layout={layout}
 
         //Sets the default properties for nodes
         getNodeDefaults={(node: NodeModel) => {
@@ -74,4 +74,3 @@ export default function App() {
 const root = ReactDOM.createRoot(document.getElementById("diagram") as HTMLElement);
 root.render(<App />);
 
-{% endraw %}

@@ -1,5 +1,5 @@
 
-{% raw %}
+
 
 import { useEffect, useState } from 'react';
 import {
@@ -114,4 +114,3 @@ const OrganizationalLayout = () => {
 
 export default OrganizationalLayout;
 
-{% endraw %}

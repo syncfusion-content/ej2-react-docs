@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bezier Control Points Interaction in React Diagram Component | Syncfusion®
+title: Bezier Control Points in React Diagram Component | Syncfusion®
 description: Learn how to interact with bezier control points, configure smoothness settings, and control visibility in Syncfusion® React Diagram Component.
 control: Bezier control points interaction
 platform: ej2-react
@@ -14,14 +14,14 @@ Bezier control points determine the curvature and shape of bezier connector segm
 
 ## Configure Bezier Segment Smoothness
 
-When working with multiple bezier segments, maintain visual consistency by configuring the `smoothness` behavior of control points using the [`bezierSettings`](https://ej2.syncfusion.com/react/documentation/api/diagram/bezierSettingsModel/) property of the connector. The `smoothness` property controls how adjacent control points respond when one is modified.
+When working with multiple bezier segments, maintain visual consistency by configuring the `smoothness` behavior of control points using the [`bezierSettings`](https://ej2.syncfusion.com/react/documentation/api/diagram/bezierSettingsModel) property of the connector. The `smoothness` property controls how adjacent control points respond when one is modified.
 
 | BezierSmoothness value | Description | Output |
 |-------- | -------- | -------- |
 | SymmetricDistance| Both control points of adjacent segments will be at the same distance when any one of them is editing. | ![Symmetric distance](images/Symmetric-distance.gif) |
 | SymmetricAngle | Both control points of adjacent segments will be at the same angle when any one of them is editing. | ![Symmetric Angle](images/symmetric-Angle.gif) |
 | Default | Both control points of adjacent segments will be at the same angle and same distance when any one of them is editing. | ![Default](images/DefaultSymmetric.gif) |
-| None | Segment’s control points are interacted independently from each other. | ![None](images/SymmetricNoneImage.png) |
+| None | Segment’s control points are interacted independently from each other. | ![None](images/SymmetricNone.gif) |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -36,7 +36,7 @@ When working with multiple bezier segments, maintain visual consistency by confi
 
 ## How to Show or Hide the Bezier Segment’s Control Points
 
-Configure which control points are visible during interaction using the [`controlPointsVisibility`](https://ej2.syncfusion.com/react/documentation/api/diagram/controlPointsVisibility/) property within [`bezierSettings`](https://ej2.syncfusion.com/react/documentation/api/diagram/bezierSettingsModel/). This property provides granular control over control point display for different connector segments.
+Configure which control points are visible during interaction using the [`controlPointsVisibility`](https://ej2.syncfusion.com/react/documentation/api/diagram/controlPointsVisibility) property within [`bezierSettings`](https://ej2.syncfusion.com/react/documentation/api/diagram/bezierSettingsModel). This property provides granular control over control point display for different connector segments.
 
 | ControlPointsVisibility value | Description | Output |
 |-------- | -------- | -------- |

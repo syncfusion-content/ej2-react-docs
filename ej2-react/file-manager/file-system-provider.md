@@ -421,9 +421,15 @@ After configuring the connection, just build and run the project. Now, the proje
 
 > **Note:** To learn more about file actions that can be performed with SQL database file system provider, refer to this [link](https://github.com/SyncfusionExamples/sql-server-database-aspcore-file-provider#key-features)
 
+<<<<<<< HEAD
+## Node.js file system provider
+
+The Node.js file system provider allows the users to manage the files and folders in a physical file system. It provides methods for performing all basic file operations like creating a folder, copy, move, delete, and download files and folders in the file system. We can use of the Node.js file system provider either by installing the [ej2-filemanager-node-filesystem](https://www.npmjs.com/package/@syncfusion/ej2-filemanager-node-filesystem) package or by cloning the [file system provider](https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem) from the GitHub.
+=======
 ## Node JS file system provider
 
 ### Introduction
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 
 The Node JS file system provider lets File Manager perform all basic file operations like creating a folder, copy, move, delete, and download files and folders on a physical file system via a lightweight Node service.
 
@@ -461,7 +467,11 @@ set PORT=3000 && node filesystem-server.js -d D:/Projects
 
 > **Note:** By default, the service will run `8090` port.
 
+<<<<<<< HEAD
+Now, just mapping the **ajaxSettings** property of the File Manager component to the appropriate file operation methods in the filesystem-server.js file will allow to manage the physical file system with Node.js file system provider.
+=======
 ### Configuring Syncfusion File Manager UI
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 
 File Manager can be initialized using the `<FileManagerComponent>` tag. To include the File Manager component in application import the `FileManagerComponent` from `ej2-react-filemanager` package in `App.tsx` or `App.jsx`. Then add the File Manager component as shown in below code example.
 
@@ -471,6 +481,9 @@ Map the [ajaxSettings](https://ej2.syncfusion.com/react/documentation/api/file-m
 
 ```typescript
 
+<<<<<<< HEAD
+> **Note:** To learn more about file actions that can be performed with Node.js file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem#key-features)
+=======
 // File Manager sample with nodejs service.
   <div>
   <div className="control-section">
@@ -500,6 +513,7 @@ We have enabled below list of features that can be performed using Node JS File 
 Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
 
 > **Note:** To learn more about the file actions supported by the Node JS File provider, refer to the [key features](https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem/blob/master/README.md#key-features)
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 
 ## Google Drive file system provider
 

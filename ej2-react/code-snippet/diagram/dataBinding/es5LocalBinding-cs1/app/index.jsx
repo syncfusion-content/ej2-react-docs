@@ -1,4 +1,4 @@
-{% raw %}
+
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DiagramComponent, DataBinding, HierarchicalTree, DiagramTools, Inject } from "@syncfusion/ej2-react-diagrams";
@@ -26,51 +26,53 @@ let species = [
     { 'Name': 'Birds', 'Category': 'Vertebrates' },
     { 'Name': 'Mammals', 'Category': 'Vertebrates' }
 ];
+const layout = {
+    type: 'HierarchicalTree',
+    horizontalSpacing: 15,
+    verticalSpacing: 50,
+    margin: {
+        top: 10,
+        left: 10,
+        right: 10,
+        bottom: 0,
+    },
+};
+const dataSourceSettings = {
+    id: 'Name',
+    parentId: 'Category',
+    dataManager: new DataManager(species),
+    //binds the external data with node
+    doBinding: (nodeModel, data, diagram) => {
+        nodeModel.annotations = [
+            {
+                /* tslint:disable:no-string-literal */
+                content: data['Name'],
+                margin: {
+                    top: 10,
+                    left: 10,
+                    right: 10,
+                    bottom: 0,
+                },
+                style: {
+                    color: 'black',
+                },
+            },
+        ];
+        /* tslint:disable:no-string-literal */
+        nodeModel.style = {
+            fill: '#ffeec7',
+            strokeColor: '#f5d897',
+            strokeWidth: 1,
+        };
+    },
+};
 //Initializes diagram control
 function App() {
     return (<DiagramComponent id="container" width={'100%'} height={490} 
     //Configures data source
-    dataSourceSettings={{
-            id: 'Name',
-            parentId: 'Category',
-            dataManager: new DataManager(species),
-            //binds the external data with node
-            doBinding: (nodeModel, data, diagram) => {
-                nodeModel.annotations = [
-                    {
-                        /* tslint:disable:no-string-literal */
-                        content: data['Name'],
-                        margin: {
-                            top: 10,
-                            left: 10,
-                            right: 10,
-                            bottom: 0,
-                        },
-                        style: {
-                            color: 'black',
-                        },
-                    },
-                ];
-                /* tslint:disable:no-string-literal */
-                nodeModel.style = {
-                    fill: '#ffeec7',
-                    strokeColor: '#f5d897',
-                    strokeWidth: 1,
-                };
-            },
-        }} 
+    dataSourceSettings={dataSourceSettings} 
     //Configrues HierarchicalTree layout
-    layout={{
-            type: 'HierarchicalTree',
-            horizontalSpacing: 15,
-            verticalSpacing: 50,
-            margin: {
-                top: 10,
-                left: 10,
-                right: 10,
-                bottom: 0,
-            },
-        }} 
+    layout={layout} 
     //Sets the default values of nodes
     getNodeDefaults={(obj, diagram) => {
             //Initialize shape
@@ -91,12 +93,9 @@ function App() {
             connector.targetDecorator.shape = 'None';
         }} 
     //Disables all interactions except zoom/pan
-    tool={DiagramTools.ZoomPan} snapSettings={{
-            constraints: 0,
-        }}>
+    tool={DiagramTools.ZoomPan} snapSettings={{ constraints: 0 }}>
       <Inject services={[DataBinding, HierarchicalTree]}/>
     </DiagramComponent>);
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
-{% endraw %}

@@ -14,7 +14,7 @@ The hierarchical tree layout arranges nodes in a tree-like structure where nodes
 
 ## Hierarchical Tree Layout with Nodes and Connectors
 
-To arrange nodes in a hierarchical structure, specify the layout [`type`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout/#type) as **HierarchicalTree**. This approach provides full control over node and connector definitions while leveraging automatic positioning.
+To arrange nodes in a hierarchical structure, specify the layout [`type`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout#type) as **HierarchicalTree**. This approach provides full control over node and connector definitions while leveraging automatic positioning.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +27,7 @@ To arrange nodes in a hierarchical structure, specify the layout [`type`](https:
 
  {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/hierarchicallayout-cs1" %}
 
->Note: The HierarchicalTree module must be injected into the diagram to use hierarchical tree layout functionality.
+N> The HierarchicalTree module must be injected into the diagram to use hierarchical tree layout functionality.
 
 ## Hierarchical Layout with DataSource
 
@@ -45,6 +45,6 @@ For data-driven scenarios, hierarchical layout can be created using a DataSource
  {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/hierarchicallayout-cs2" %}
 
 
->Note: When using DataSource for layout generation, both DataBinding and HierarchicalTree modules must be injected into the diagram.
+N> When using DataSource for layout generation, both DataBinding and HierarchicalTree modules must be injected into the diagram.
 
 ![Hierarchical tree layout showing nodes with multiple parent relationships](images/hierarchicalTree.png)

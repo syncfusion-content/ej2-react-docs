@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { DiagramComponent ,ConnectorConstraints} from "@syncfusion/ej2-react-diagrams";
+import { DiagramComponent, Diagram, ConnectorEditing, ConnectorConstraints } from "@syncfusion/ej2-react-diagrams";
+Diagram.Inject(ConnectorEditing);
 
 let connectors = [{
     id: "connector1",
@@ -19,7 +20,8 @@ let connectors = [{
     targetPoint: {
         x: 200,
         y: 200
-    }
+    },
+    constraints:ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb,
 },
 {
     id: "connector2",

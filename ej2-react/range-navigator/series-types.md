@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Series types in React Range navigator component
 
-To render the data, the Range Selector supports three types of series.
+To render the data, the Range Selector supports six types of series.
 
 <!-- markdownlint-disable MD036 -->
 
@@ -60,3 +60,48 @@ To render a Step line series, use series [`type`](https://ej2.syncfusion.com/rea
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/rangenavigator/getting-started-cs32" %}
+
+ ## Spline
+
+To render a Spline series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/rangeNavigatorSeriesModel#type) as **Spline** and inject `SplineSeries` module using `RangeNavigator.Inject(SplineSeries)` method.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/rangenavigator/getting-started-cs35/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/rangenavigator/getting-started-cs35/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rangenavigator/getting-started-cs35" %}
+
+ ## Spline Area
+
+To render a Spline Area series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/rangeNavigatorSeriesModel#type) as **SplineArea** and inject `SplineAreaSeries` module using `RangeNavigator.Inject(SplineAreaSeries)` method.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/rangenavigator/getting-started-cs36/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/rangenavigator/getting-started-cs36/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rangenavigator/getting-started-cs36" %}
+
+ ## Column
+
+To render a Column series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/rangeNavigatorSeriesModel#type) as **Column** and inject `ColumnSeries` module using `RangeNavigator.Inject(ColumnSeries)` method.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/rangenavigator/getting-started-cs37/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/rangenavigator/getting-started-cs37/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rangenavigator/getting-started-cs37" %}

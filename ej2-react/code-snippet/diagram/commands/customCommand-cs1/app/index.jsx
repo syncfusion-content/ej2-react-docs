@@ -1,4 +1,4 @@
-{% raw %}
+
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
@@ -16,6 +16,42 @@ let node = [
   },
 ];
 
+const commandManager = {
+  commands: [
+    {
+      name: 'clone',
+      canExecute: function () {
+        return diagramInstance.selectedItems.nodes.length > 0;
+      },
+      execute: function () {
+        diagramInstance.copy();
+        diagramInstance.paste();
+      },
+      gesture: {
+        // Press G to clone node
+        key: Keys.G,
+        keyModifiers: null,
+      },
+    },
+    {
+      name: 'color',
+      canExecute: function () {
+        return diagramInstance.selectedItems.nodes.length > 0;
+      },
+      execute: function () {
+        const node = diagramInstance.selectedItems.nodes[0];
+        node.style.fill = node.style.fill === '#64abbb' ? 'yellow' : '#64abbb';
+        diagramInstance.dataBind();
+      },
+      gesture: {
+        // Press Shift+G or Alt+G to change node color
+        key: Keys.G,
+        keyModifiers: KeyModifiers.Shift | KeyModifiers.Alt,
+      },
+    },
+  ],
+};
+
 // Initializes the Diagram component
 function App() {
   return (
@@ -26,41 +62,7 @@ function App() {
       width={'650px'}
       height={'350px'}
       nodes={node}
-      commandManager={{
-        commands: [
-          {
-            name: 'clone',
-            canExecute: function () {
-              return diagramInstance.selectedItems.nodes.length > 0;
-            },
-            execute: function () {
-              diagramInstance.copy();
-              diagramInstance.paste();
-            },
-            gesture: {
-              // Press G to clone node
-              key: Keys.G,
-              keyModifiers: null,
-            },
-          },
-          {
-            name: 'color',
-            canExecute: function () {
-              return diagramInstance.selectedItems.nodes.length > 0;
-            },
-            execute: function () {
-              const node = diagramInstance.selectedItems.nodes[0];
-              node.style.fill = node.style.fill === '#64abbb' ? 'yellow' : '#64abbb';
-              diagramInstance.dataBind();
-            },
-            gesture: {
-              // Press Shift+G or Alt+G to change node color
-              key: Keys.G,
-              keyModifiers: KeyModifiers.Shift | KeyModifiers.Alt,
-            },
-          },
-        ],
-      }}
+      commandManager={commandManager}
     />
   );
 }
@@ -68,4 +70,3 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
 
-{% endraw %}

@@ -86,6 +86,21 @@ To achieve a doughnut in pie series, customize the [`innerRadius`](https://ej2.s
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/doughnut-cs1" %}
 
+## Multiple Donut
+
+You can create multiple donuts within a single chart by adding multiple series with different [`innerRadius`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationSeries#innerradius) and [`radius`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationSeries#radius) values. This allows you to compare multiple data sets with the same categories. Each series can have different data, colors, and customizations. You can also use the [`mappingKey`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationLegendSettings#mappingkey) property in `legendSettings` to map the legend items based on the specified field from the data source. When set, points with matching `mappingKey` values are grouped into a single legend item.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/code-path/series/multiple-doughnut-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/code-path/series/multiple-doughnut-cs1/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/multiple-doughnut-cs1" %}
+
 ## Start and end angles
 
 You can customize the start and end angle of the pie series using the [`startAngle`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationSeries#startangle) and [`endAngle`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationSeries#endangle) properties. The default value of  `startAngle` is 0 degree, and `endAngle` is 360 degrees. By customizing this, you can achieve a semi pie series.

@@ -38,7 +38,7 @@ The `event`property of the node allows you to define the type of the event. The 
 
 ## BPMN Event Trigger
 
-Event triggers are notated as icons inside the circle and represent the specific circumstances that cause the event to occur. The [`trigger`](https://helpej2.syncfusion.com/react/documentation/api/diagram/bpmnEvent/#trigger) property of the node allows you to set the type of trigger and by default, it is set as **none**. The following table illustrates the types of event triggers available for each event type.
+Event triggers are notated as icons inside the circle and represent the specific circumstances that cause the event to occur. The [`trigger`](https://helpej2.syncfusion.com/react/documentation/api/diagram/bpmnEvent#trigger) property of the node allows you to set the type of trigger and by default, it is set as **none**. The following table illustrates the types of event triggers available for each event type.
 
 | Triggers | Start | Non-Interrupting Start | Intermediate | Non-Interrupting Intermediate | Throwing Intermediate | End |
 | -------- | -------- | -------- | -------- | -------- | -------- | -------- |

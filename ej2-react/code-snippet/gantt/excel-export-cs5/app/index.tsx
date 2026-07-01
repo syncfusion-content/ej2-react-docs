@@ -6,7 +6,7 @@ import { data } from './datasource';
 function App() {
     let ganttInstance: GanttComponent;
     const taskFields: TaskFieldsModel = {
-        id: 'TaskId',
+        id: 'TaskID',
         name: 'TaskName',
         startDate: 'StartDate',
         duration: 'Duration',
@@ -40,7 +40,7 @@ function App() {
             treeColumnIndex={1}
         >
             <ColumnsDirective>
-                <ColumnDirective field='TaskId' headerText='Task ID' textAlign='Left' width='100' ></ColumnDirective>
+                <ColumnDirective field='TaskID' headerText='Task ID' textAlign='Left' width='100' ></ColumnDirective>
                 <ColumnDirective field='TaskName' headerText='Task Name' width='150'></ColumnDirective>
                 <ColumnDirective field='StartDate' headerText='StartDate' width='150' visible={false}></ColumnDirective>
                 <ColumnDirective field='Duration' headerText='Duration' width='150' ></ColumnDirective>

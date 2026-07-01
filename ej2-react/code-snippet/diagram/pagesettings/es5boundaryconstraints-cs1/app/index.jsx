@@ -1,4 +1,4 @@
-{% raw %}
+
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DiagramComponent } from "@syncfusion/ej2-react-diagrams";
@@ -32,20 +32,22 @@ let node = [{
         offsetX: 300,
         offsetY: 350,
     }];
+
+const pageSettings = {
+    // Sets the BoundaryConstraints to page
+    boundaryConstraints: 'Page',
+    background: {
+        color: 'grey'
+    },
+    width: 400,
+    height: 400,
+    showPageBreaks: true,
+};
+
 function App() {
     return (<DiagramComponent id="container" width={'100%'} height={'600px'} nodes={node} connectors={connector} 
     // Defines the pageSettings for the diagram
-    pageSettings={{
-            // Sets the BoundaryConstraints to page
-            boundaryConstraints: 'Page',
-            background: {
-                color: 'grey'
-            },
-            width: 400,
-            height: 400,
-            showPageBreaks: true,
-        }}/>);
+    pageSettings={pageSettings}/>);
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
-{% endraw %}

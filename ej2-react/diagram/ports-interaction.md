@@ -14,7 +14,7 @@ Ports in React Diagram components support various interactive features that enha
 
 ## Draw Connector from Port
 
-Ports can serve as connection points for creating connectors dynamically. Enable the `Draw` constraint on the [`constraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/portconstraints/) property to allow users to draw connectors directly from ports. The default connector segment type is **Orthogonal**, providing structured, right-angled connections suitable for flowcharts and organizational diagrams.
+Ports can serve as connection points for creating connectors dynamically. Enable the `Draw` constraint on the [`constraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/portconstraints) property to allow users to draw connectors directly from ports. The default connector segment type is **Orthogonal**, providing structured, right-angled connections suitable for flowcharts and organizational diagrams.
 
 The following code explains how to draw the connector by using the port constraints.
 
@@ -107,10 +107,10 @@ Port interactions trigger specific events that enable custom handling and applic
 
 | Event| Description|
 |----|----|
-| [`Click`](https://ej2.syncfusion.com/react/documentation/api/diagram/iClickEventArgs/) | Triggers when the port is clicked. |
-| [`Element Draw`](https://ej2.syncfusion.com/react/documentation/api/diagram/iElementDrawEventArgs/)  | Triggers when drawing a connector from the port. |
-| [`Position Change`](https://ej2.syncfusion.com/react/documentation/api/diagram/iDraggingEventArgs/)  | Triggers when the port is dragged. |
-| [`Connection Change`](https://ej2.syncfusion.com/react/documentation/api/diagram/iConnectionChangeEventArgs/) | Triggers when a connector is connected or disconnected from the port|
+| [`Click`](https://ej2.syncfusion.com/react/documentation/api/diagram/iClickEventArgs) | Triggers when the port is clicked. |
+| [`Element Draw`](https://ej2.syncfusion.com/react/documentation/api/diagram/iElementDrawEventArgs)  | Triggers when drawing a connector from the port. |
+| [`Position Change`](https://ej2.syncfusion.com/react/documentation/api/diagram/iDraggingEventArgs)  | Triggers when the port is dragged. |
+| [`Connection Change`](https://ej2.syncfusion.com/react/documentation/api/diagram/iConnectionChangeEventArgs) | Triggers when a connector is connected or disconnected from the port|
 
 The following example shows how to get these events in diagram.
 

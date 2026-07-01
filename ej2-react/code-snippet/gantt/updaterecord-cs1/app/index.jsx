@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import { GanttComponent, Inject, Edit, Selection } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, Inject, Edit, EditSettingsModel, Selection, TaskFieldsModel } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
 function App() {
     const taskFields = {

@@ -71,9 +71,7 @@ function App() {
     return (
         <div>
             <p id="message" style={{ display: "none", fontWeight: "bold" }}></p>
-
             <GanttComponent
-                ref={(g) => (ganttInstance = g)}
                 height="370px"
                 dataSource={data}
                 taskFields={taskSettings}

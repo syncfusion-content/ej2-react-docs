@@ -1,4 +1,4 @@
-{% raw %}
+
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
@@ -24,36 +24,38 @@ let node: NodeModel[] = [{
         offsetY: 100,
         annotations: [{id: 'label2',content: 'Rectangle2'}]
     }];
+
+const contextMenuSettings = {
+    //Enables the context menu
+    show: true,
+    items: [
+        {
+          text: 'Cut',
+          id: 'Cut',
+          target: '.e-diagramcontent',
+          iconCss: 'e-cut e-icons',
+        },
+        {
+          text: 'Copy',
+          id: 'Copy',
+          target: '.e-diagramcontent',
+          iconCss: 'e-icons e-copy',
+        },
+        {
+          text: 'Paste',
+          id: 'Paste',
+          target: '.e-diagramcontent',
+          iconCss: 'e-icons e-paste',
+        },
+      ],
+    // Hides the default context menu items
+    showCustomMenuOnly: true,
+};
     
 //Initializes the Diagram component
 function App() {
     return (<DiagramComponent id="diagram_contextmenu" ref={(diagram) => (diagramInstance = diagram)} width={'650px'} height={'350px'} nodes={node} 
-    contextMenuSettings={{
-        //Enables the context menu
-        show: true,
-        items: [
-            {
-              text: 'Cut',
-              id: 'Cut',
-              target: '.e-diagramcontent',
-              iconCss: 'e-cut e-icons',
-            },
-            {
-              text: 'Copy',
-              id: 'Copy',
-              target: '.e-diagramcontent',
-              iconCss: 'e-icons e-copy',
-            },
-            {
-              text: 'Paste',
-              id: 'Paste',
-              target: '.e-diagramcontent',
-              iconCss: 'e-icons e-paste',
-            },
-          ],
-        // Hides the default context menu items
-        showCustomMenuOnly: true,
-    }}  
+    contextMenuSettings={contextMenuSettings}  
     contextMenuBeforeItemRender= {(args: MenuEventArgs) =>{
         // To render template in li.
         let shortCutSpan = createElement('span');
@@ -86,4 +88,3 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
 
-{% endraw %}

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Export in React Diagram Component
 
-The React Diagram component provides comprehensive support for exporting diagram content as image files (JPG, PNG) or vector graphics (SVG). This functionality enables users to save diagrams for documentation, presentations, or further processing. The [`exportDiagram`](https://ej2.syncfusion.com/react/documentation/api/diagram/#exportdiagram) method serves as the primary interface for all export operations.
+The React Diagram component provides comprehensive support for exporting diagram content as image files (JPG, PNG) or vector graphics (SVG). This functionality enables users to save diagrams for documentation, presentations, or further processing. The [`exportDiagram`](https://ej2.syncfusion.com/react/documentation/api/diagram#exportdiagram) method serves as the primary interface for all export operations.
 
->Note: To export diagrams, inject `PrintAndExport` in the diagram component.
+N> To export diagrams, inject `PrintAndExport` in the diagram component.
 
 ## Basic Export Example
 
@@ -48,7 +48,7 @@ To export the React Diagram elements in various formats, refer to below video li
 
 ## Export Configuration Options
 
-The diagram component supports extensive customization through the [`exportOptions`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/) interface. The following table details all available configuration properties:
+The diagram component supports extensive customization through the [`exportOptions`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions) interface. The following table details all available configuration properties:
 
 | Name | Type | Description|
 |-------- | -------- | -------- |
@@ -66,12 +66,12 @@ The diagram component supports extensive customization through the [`exportOptio
 
 ## File Name Configuration
 
-[`FileName`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/#filename) property specifies the name for downloaded files. When not specified, the default name **Diagram** is used.
+[`FileName`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions#filename) property specifies the name for downloaded files. When not specified, the default name **Diagram** is used.
 
 
 ## Export Formats
 
-The [`Format`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/#format) property determines the output file type. The component supports three formats with distinct characteristics:
+The [`Format`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions#format) property determines the output file type. The component supports three formats with distinct characteristics:
 
 * **JPG**: Compressed format suitable for photographs and complex diagrams with many colors.
 * **PNG**: Lossless format ideal for diagrams with transparency or sharp edges.
@@ -93,7 +93,7 @@ The default export format is JPG. The following example shows format specificati
 
 ## Margin Configuration
 
-The [`margin`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/#margin) property adds whitespace around the exported diagram content. This spacing improves presentation and prevents content from appearing cramped.
+The [`margin`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions#margin) property adds whitespace around the exported diagram content. This spacing improves presentation and prevents content from appearing cramped.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -109,7 +109,7 @@ The [`margin`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExpor
 
 ## Export Modes
 
-The [`mode`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/#mode) property controls how the exported content is delivered:
+The [`mode`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions#mode) property controls how the exported content is delivered:
 
 * **Download**: Automatically downloads the diagram as a file to the user's device.
 * **Data**: Returns a base64 string representation for programmatic processing.
@@ -148,7 +148,7 @@ root.render(<App />);
 
 ## Region-Based Export
 
-Exporting particular region of diagram is possible by using the [`region`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/#region) property of the [`exportOptions`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/). The available export regions are listed in the table below.
+Exporting particular region of diagram is possible by using the [`region`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions#region) property of the [`exportOptions`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions). The available export regions are listed in the table below.
 
 | Region | Description |
 |-------- | -------- |
@@ -170,11 +170,11 @@ The following example demonstrates different region export options:
 
  {% previewsample "page.domainurl/code-snippet/diagram/export/export-cs3" %}
 
->Note: The [`bounds`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/#bounds) property of `exportOptions` should be defined to export the diagram with CustomBounds region.
+N> The [`bounds`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions#bounds) property of `exportOptions` should be defined to export the diagram with CustomBounds region.
 
 ## Multi-Page Export
 
-For large diagrams that exceed standard page dimensions, the [`multiplePage`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/#multiplepage) option enables export across multiple pages:
+For large diagrams that exceed standard page dimensions, the [`multiplePage`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions#multiplepage) option enables export across multiple pages:
 
 * **false** (default): Export as a single image regardless of size
 * **true**: Split the diagram across multiple pages based on specified dimensions
@@ -195,7 +195,7 @@ The following example shows multi-page export configuration:
 
 ## Direct Image Export
 
-The [`exportImage`](https://ej2.syncfusion.com/react/documentation/api/diagram/#exportimage)  method allows direct export of base64 image data without requiring a diagram instance. This method is useful for processing pre-existing image data.
+The [`exportImage`](https://ej2.syncfusion.com/react/documentation/api/diagram#exportimage)  method allows direct export of base64 image data without requiring a diagram instance. This method is useful for processing pre-existing image data.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -211,7 +211,7 @@ The [`exportImage`](https://ej2.syncfusion.com/react/documentation/api/diagram/#
 
 ## Diagram Content Retrieval
 
-The [`getDiagramContent`](https://ej2.syncfusion.com/react/documentation/api/diagram/#getdiagramcontent) method retrieves the HTML representation of the diagram at runtime. This functionality supports dynamic content analysis and processing.
+The [`getDiagramContent`](https://ej2.syncfusion.com/react/documentation/api/diagram#getdiagramcontent) method retrieves the HTML representation of the diagram at runtime. This functionality supports dynamic content analysis and processing.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -227,7 +227,7 @@ The [`getDiagramContent`](https://ej2.syncfusion.com/react/documentation/api/dia
 
 ## Stretch Option for Enhanced Quality
 
-The [`stretch`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions/#stretch) property improves exported image quality by adjusting the aspect ratio. Images exported with stretch enabled are clearer but result in larger file sizes.
+The [`stretch`](https://ej2.syncfusion.com/react/documentation/api/diagram/iExportOptions#stretch) property improves exported image quality by adjusting the aspect ratio. Images exported with stretch enabled are clearer but result in larger file sizes.
 
 The following code example illustrates how to export the region occupied by the diagram elements.
 

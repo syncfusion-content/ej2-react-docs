@@ -1,4 +1,4 @@
-{% raw %}
+
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
@@ -30,24 +30,26 @@ let node: NodeModel[] = [{
         annotations: [{id: 'label2', content: 'Rectangle2'}]
 }];
 
+const contextMenuSettings = {
+        //Enables the context menu
+        show: true,
+        items: [
+            {
+              text: 'menu item 1',
+              id: 'item1',
+            },
+            {
+              text: 'menu item 2',
+              id: 'item2',
+            },
+          ],
+        // Hides the default context menu items
+        showCustomMenuOnly: true,
+};
+
 //Initializes the Diagram component
 function App() {
-    return (<DiagramComponent id="diagram_contextmenu" ref={(diagram) => (diagramInstance = diagram)} width={'650px'} height={'350px'} nodes={node} connectors={connector} contextMenuSettings={{
-            //Enables the context menu
-            show: true,
-            items: [
-                {
-                  text: 'menu item 1',
-                  id: 'item1',
-                },
-                {
-                  text: 'menu item 2',
-                  id: 'item2',
-                },
-              ],
-            // Hides the default context menu items
-            showCustomMenuOnly: true,
-    }} 
+    return (<DiagramComponent id="diagram_contextmenu" ref={(diagram) => (diagramInstance = diagram)} width={'650px'} height={'350px'} nodes={node} connectors={connector} contextMenuSettings={contextMenuSettings} 
     contextMenuBeforeItemRender={(args: MenuEventArgs) => {
         //Triggers when the menu is openned
         console.log('context menu before item render');
@@ -67,4 +69,4 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
 
-{% endraw %}
+

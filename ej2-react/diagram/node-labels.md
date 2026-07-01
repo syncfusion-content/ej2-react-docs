@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Node Labels in React Diagram component | Syncfusion®
-description: Learn here all about Labels in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+description: Learn how to position and align annotations on nodes using offset, horizontalAlignment, and verticalAlignment in Syncfusion® React Diagram Component.
 control: Node Labels 
 platform: ej2-react
 documentation: ug
@@ -25,9 +25,9 @@ These properties can be combined to achieve precise annotation positioning for v
 
 ## Set annotation offset and size
 
-The [`offset`](https://ej2.syncfusion.com/react/documentation/api/diagram/pointModel/) property positions annotations using fractional values between 0 and 1. The offset represents the relative position within the node boundaries, where (0,0) is the top-left corner and (1,1) is the bottom-right corner. The default offset is (0.5, 0.5), which centers the annotation.
+The [`offset`](https://ej2.syncfusion.com/react/documentation/api/diagram/pointModel) property positions annotations using fractional values between 0 and 1. The offset represents the relative position within the node boundaries, where (0,0) is the top-left corner and (1,1) is the bottom-right corner. The default offset is (0.5, 0.5), which centers the annotation.
 
-The annotation size is automatically calculated based on its content. To specify custom dimensions, use the [`width`](https://ej2.syncfusion.com/react/documentation/api/diagram/annotationModel/#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/diagram/annotationModel/#height) properties.
+The annotation size is automatically calculated based on its content. To specify custom dimensions, use the [`width`](https://ej2.syncfusion.com/react/documentation/api/diagram/annotationModel#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/diagram/annotationModel#height) properties.
 
 The following example demonstrates how to configure offset, width, and height for node annotations:
 
@@ -77,7 +77,7 @@ offset|image|
 
 ## Annotation alignment
 
-After determining the annotation position using offset values, the [`horizontalAlignment`](https://helpej2.syncfusion.com/react/documentation/api/diagram/annotationModel/#horizontalalignment) property of annotation is used to set how the annotation is horizontally aligned at the annotation position determined from the fraction values. The [`verticalAlignment`](https://helpej2.syncfusion.com/react/documentation/api/diagram/annotationModel/#verticalalignment) properties control how the annotation aligns at that calculated position.
+After determining the annotation position using offset values, the [`horizontalAlignment`](https://helpej2.syncfusion.com/react/documentation/api/diagram/annotationModel#horizontalalignment) property of annotation is used to set how the annotation is horizontally aligned at the annotation position determined from the fraction values. The [`verticalAlignment`](https://helpej2.syncfusion.com/react/documentation/api/diagram/annotationModel#verticalalignment) properties control how the annotation aligns at that calculated position.
 
 The horizontal alignment determines the annotation's horizontal positioning relative to the calculated point, while vertical alignment controls the vertical positioning. This two-step positioning system (offset calculation followed by alignment) provides precise control over annotation placement.
 

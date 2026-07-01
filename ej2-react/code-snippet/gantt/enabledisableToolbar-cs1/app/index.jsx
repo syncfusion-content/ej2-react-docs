@@ -43,7 +43,7 @@ function App() {
     if (!ganttInstance) return;
 
     if (args.item.id === 'QuickFilter') {
-      ganttInstance.filterByColumn('TaskName', 'startswith', 'Approval');
+      ganttInstance.filterByColumn('TaskName', 'contains', 'Approval');
       message = 'Filtered rows starting with "Approval".';
       document.getElementById('message').textContent = message;
     }

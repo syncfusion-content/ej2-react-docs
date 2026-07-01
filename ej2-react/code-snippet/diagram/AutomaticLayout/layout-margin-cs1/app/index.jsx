@@ -1,4 +1,4 @@
-{% raw %}
+
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
@@ -15,6 +15,19 @@ let data = [
 ];
 let items = new DataManager(data, new Query().take(7));
 
+const layout = {
+  //Sets layout type
+  type: 'HierarchicalTree',
+  //set layout margin
+  margin: { left: 100, top: 100 },
+};
+
+const dataSourceSettings = {
+  id: 'Name',
+  parentId: 'ReportingPerson',
+  dataManager: items,
+};
+
 export default function App() {
 
   return (
@@ -25,19 +38,10 @@ export default function App() {
         height={'550px'}
 
         //Uses layout to auto-arrange nodes on the diagram page
-        layout={{
-          //Sets layout type
-          type: 'HierarchicalTree',
-          //set layout margin
-          margin: { left: 100, top: 100 },
-        }}
+        layout={layout}
 
         //Configures data source for diagram
-        dataSourceSettings={{
-          id: 'Name',
-          parentId: 'ReportingPerson',
-          dataManager: items,
-        }}
+        dataSourceSettings={dataSourceSettings}
 
         //Sets the default properties for nodes
         getNodeDefaults={(node) => {
@@ -66,4 +70,3 @@ export default function App() {
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
 
-{% endraw %}

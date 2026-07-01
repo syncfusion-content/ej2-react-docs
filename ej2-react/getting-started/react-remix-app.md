@@ -61,22 +61,36 @@ npm install @syncfusion/ej2-react-grids --save
 
 ## Adding CSS reference
 
+<<<<<<< HEAD
+Syncfusion<sup style="font-size:70%">&reg;</sup> React component provide built-in themes, which are available from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages). Additionally, themes can be loaded via CDN or customized using the [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
+=======
+Import the Syncfusion<sup style="font-size:70%">&reg;</sup> component themes in the `~/app/routes/home.tsx` file as shown below:
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
+
+This example uses the `Tailwind 3` theme for the Grid component from the theme package. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+npm install @syncfusion/ej2-tailwind3-theme --save
+
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+
+yarn add @syncfusion/@syncfusion/ej2-tailwind3-theme
+
+{% endhighlight %}
+{% endtabs %}
+
 Import the Syncfusion<sup style="font-size:70%">&reg;</sup> component themes in the `~/app/routes/home.tsx` file as shown below:
 
-```ts
-import '@syncfusion/ej2-base/styles/tailwind3.css';
-import '@syncfusion/ej2-buttons/styles/tailwind3.css';
-import '@syncfusion/ej2-calendars/styles/tailwind3.css';
-import '@syncfusion/ej2-dropdowns/styles/tailwind3.css';
-import '@syncfusion/ej2-inputs/styles/tailwind3.css';
-import '@syncfusion/ej2-navigations/styles/tailwind3.css';
-import '@syncfusion/ej2-popups/styles/tailwind3.css';
-import '@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-import '@syncfusion/ej2-notifications/styles/tailwind3.css';
-import '@syncfusion/ej2-react-grids/styles/tailwind3.css';
-```
+{% tabs %}
+{% highlight css tabtitle="home.tsx" %}
 
-> **Note:** The Grid component requires CSS from multiple packages because it depends on other Syncfusion components for its full functionality.
+@import "@syncfusion/ej2-tailwind3-theme/styles/grid/index.css";
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Configure Server-Side Rendering (SSR)
 

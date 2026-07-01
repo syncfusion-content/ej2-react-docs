@@ -55,7 +55,7 @@ npm install @syncfusion/ej2-react-richtexteditor
 
 ## Adding CSS reference
 
-The following CSS files are available in **../node_modules/@syncfusion** package folder. This can be added as reference in **src/App.css**.
+The following CSS files are available in `../node_modules/@syncfusion` package folder. This can be added as reference in `src/App.css`.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
@@ -68,7 +68,11 @@ The following CSS files are available in **../node_modules/@syncfusion** package
 @import '../node_modules/@syncfusion/ej2-richtexteditor/styles/tailwind3.css';
 ```
 
+<<<<<<< HEAD
+I> To apply the application-specific styles correctly, import **App.css** into `src/App.tsx` and remove all the default styles from `src/index.css`.
+=======
 I> To apply the application-specific styles correctly, import **App.css** into **src/App.tsx** and remove all the default styles from **src/index.css**.
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 
 ## Module injection
 
@@ -86,7 +90,7 @@ These modules should be injected into the `services` section of the component.
 
 ## Adding Rich Text Editor component
 
-Now, you can start adding React Rich Text Editor component in the application. For getting started, add the Rich Text Editor component in **src/App.tsx** file using following sample.
+Now, you can start adding React Rich Text Editor component in the application. For getting started, add the Rich Text Editor component in `src/App.tsx` file using following sample.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}

@@ -16,7 +16,7 @@ export class App extends React.Component {
         // To enable tooltip template for sparkline with fill color, border radius and padding customization
         tooltipSettings={{
                 visible: true,
-                template: '<div id="sparktooltip" style="border-radius: 5px;background: #008cff;' +
+                template: '<div id="sparkline-tooltip" style="border-radius: 5px;background: #008cff;' +
                     'color: #FFFFFF !important;font-size: 16px;font-style: italic;padding: 8px;">' +
                     '${x} : ${y} </div>'
             }}>

@@ -35,9 +35,9 @@ function App() {
         }
     }
 
-    function excelQueryCellInfo(args: ExcelQueryCellInfoEventArgs): void {
+    function excelQueryCellInfo(args) {
         if (args.column.field === 'Progress') {
-            const progressValue = args.value as number;
+            const progressValue = args.value;
             if (progressValue > 80) {
                 args.style = { backColor: '#A569BD' };
             } else if (progressValue < 20) {
