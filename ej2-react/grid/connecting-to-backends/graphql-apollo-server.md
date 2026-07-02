@@ -40,7 +40,7 @@ domainurl: ##DomainURL##
 |---|---------|-------|
 | 1 | Setting up and configuring the GraphQL backend using Apollo | [View](#setting-up-the-graphql-backend-using-apollo) |
 | 2 | Set up the Apollo Server | [View](#step-6-setting-up-the-apollo-server) |
-| 3 | Integrating Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid with Apollo GraphQL | [View](#integrating-syncfusion-react-grid-with-apollo-graphql) |
+| 3 | Integrating React DataGrid with Apollo GraphQL | [View](#integrating-syncfusion-react-grid-with-apollo-graphql) |
 | 4 | Perform data operations including filtering, sorting, searching, and paging | [View](#step-4-add-toolbar-with-crud-and-search-options) |
 | 5 | Perform CRUD operations | [View](#perform-crud-operations) |
 | 6 | Run the GraphQL application | [View](#running-the-application) |
@@ -512,7 +512,7 @@ cd GridClient
 ```
 This command creates a React application named **GridClient** with the essential folder structure and files required to begin development immediately.
 
-The integration process begins by installing the required Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid packages before establishing the GraphQL connection.
+The integration process begins by installing the required React DataGrid packages before establishing the GraphQL connection.
 
 ### Step 1: Adding Syncfusion packages
 
@@ -522,7 +522,7 @@ Install the necessary Syncfusion<sup style="font-size:70%">&reg;</sup> packages 
 npm install @syncfusion/ej2-react-grids --save
 npm install @syncfusion/ej2-data --save
 ```
-- `@syncfusion/ej2-react-grids` – required to use the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component.
+- `@syncfusion/ej2-react-grids` – required to use the React DataGrid component.
 - `@syncfusion/ej2-data` – Provides data utilities for binding and manipulating Grid data.
 
 ### Step 2: Including required Syncfusion stylesheets
@@ -1421,7 +1421,7 @@ syncfusion-react-grid-with-apollo-server
 
 For a complete working implementation of this example, refer to the following [GitHub](https://github.com/SyncfusionExamples/syncfusion-react-grid-with-apollo-server) repository.
 
-This guide provides a modern, high‑performance architecture in which the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid integrates seamlessly with an Apollo‑powered GraphQL backend.
+This guide provides a modern, high‑performance architecture in which the React DataGrid integrates seamlessly with an Apollo‑powered GraphQL backend.
 
 ## See also
 

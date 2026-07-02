@@ -873,6 +873,10 @@ We can show more indicator if more than one appointment is available in a same c
 
 ## Limiting maximum number of events displayed
 
+In the Scheduler, you can limit the number of concurrent events displayed in each time slot to improve the quality of the presentation and prevent visual overcrowding. This can be accomplished using the following properties based on the view type:
+
+### Limiting events in month and timeline views
+
 In the Scheduler, the default behavior is to display concurrent events based on cell height, with each new event represented as 
 `+n more` characters. However, you may want to improve the quality of the presentation by limiting the number of concurrent events. This can be accomplished by using the [`maxEventsPerRow`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#maxeventsperrow) property, which is defaulted to the [`views`](https://ej2.syncfusion.com/react/documentation/api/schedule/views) property.
 
@@ -890,6 +894,81 @@ The [`maxEventsPerRow`](https://ej2.syncfusion.com/react/documentation/api/sched
 {% previewsample "page.domainurl/code-snippet/schedule/max-events-per-row-cs1" %}
 
 > The property [`maxEventsPerRow`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#maxeventsperrow) will be applicable only when [`rowAutoHeight`](https://ej2.syncfusion.com/react/documentation/api/schedule#rowautoheight) feature is disabled in the Scheduler.
+
+### Limiting events in vertical views
+
+The `maxEventStack` property on the [views](https://ej2.syncfusion.com/react/documentation/api/schedule/views) allows you to limit the number of overlapping events displayed in each time slot. This feature prevents visual overcrowding when multiple events overlap in the same time slot. When the number of overlapping events exceeds the specified limit, a `+N` indicator appears, indicating how many additional events exist. Users can click this indicator to view all remaining events in a popup window. By default, the Scheduler shows all overlapping events without any restrictions. The default value of `maxEventStack` is `0`.
+
+Below is a code example that demonstrates how to use this constraint:
+
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
+import { ScheduleComponent, Day, Week, WorkWeek, Inject, type EventSettingsModel } from '@syncfusion/ej2-react-schedule';
+
+function App () {
+  const eventsData = [
+    { Id: 1, Subject: "Board Meeting", StartTime: new Date(2026, 5, 15, 9, 30, 0), EndTime: new Date(2026, 5, 15, 11, 0, 0) },
+    { Id: 2, Subject: "Annual Conference", StartTime: new Date(2026, 5, 15, 10, 0, 0), EndTime: new Date(2026, 5, 15, 11, 0, 0) },
+    { Id: 3, Subject: "Tech Symposium", StartTime: new Date(2026, 5, 15, 10, 30, 0), EndTime: new Date(2026, 5, 15, 11, 30, 0) },
+    { Id: 4, Subject: "Client Meeting", StartTime: new Date(2026, 5, 15, 12, 0, 0), EndTime: new Date(2026, 5, 15, 14, 0, 0) },
+    { Id: 5, Subject: "Project Review", StartTime: new Date(2026, 5, 15, 13, 0, 0), EndTime: new Date(2026, 5, 15, 15, 0, 0) }
+  ];
+
+  const eventSettings: EventSettingsModel = { dataSource: eventsData };
+
+  return (
+    <ScheduleComponent height ='550px' eventSettings={eventSettings} selectedDate={new Date(2026, 5, 15)}>
+      <ViewsDirective>
+		<ViewDirective option='Day' maxEventStack={2} />
+		<ViewDirective option='Week' maxEventStack={2} />
+		<ViewDirective option='WorkWeek' maxEventStack={2} />
+	  </ViewsDirective>
+      <Inject services={[Day, Week, WorkWeek]} />
+    </ScheduleComponent>
+  );
+};
+
+export default App;
+{% endhighlight %}
+{% highlight js tabtitle="App.jsx" %}
+import { ScheduleComponent, Day, Week, WorkWeek, Inject } from '@syncfusion/ej2-react-schedule';
+
+function App () {
+  const eventsData = [
+    { Id: 1, Subject: "Board Meeting", StartTime: new Date(2026, 5, 15, 9, 30, 0), EndTime: new Date(2026, 5, 15, 11, 0, 0) },
+    { Id: 2, Subject: "Annual Conference", StartTime: new Date(2026, 5, 15, 10, 0, 0), EndTime: new Date(2026, 5, 15, 11, 0, 0) },
+    { Id: 3, Subject: "Tech Symposium", StartTime: new Date(2026, 5, 15, 10, 30, 0), EndTime: new Date(2026, 5, 15, 11, 30, 0) },
+    { Id: 4, Subject: "Client Meeting", StartTime: new Date(2026, 5, 15, 12, 0, 0), EndTime: new Date(2026, 5, 15, 14, 0, 0) },
+    { Id: 5, Subject: "Project Review", StartTime: new Date(2026, 5, 15, 13, 0, 0), EndTime: new Date(2026, 5, 15, 15, 0, 0) }
+  ];
+
+  const eventSettings = { dataSource: eventsData };
+
+  return (
+    <ScheduleComponent height ='550px' eventSettings={eventSettings} selectedDate={new Date(2026, 5, 15)}>
+      <ViewsDirective>
+		<ViewDirective option='Day' maxEventStack={2} />
+		<ViewDirective option='Week' maxEventStack={2} />
+		<ViewDirective option='WorkWeek' maxEventStack={2} />
+	  </ViewsDirective>
+      <Inject services={[Day, Week, WorkWeek]} />
+    </ScheduleComponent>
+  );
+};
+
+export default App;
+{% endhighlight %}
+{% endtabs %}
+
+**How it works:** In this example, `maxEventStack` is set to `2` for all three views. When you have three or more overlapping events in the same time slot:
+
+* The Scheduler displays only the first two events
+* A "+N" indicator appears to show how many additional events exist (for example, "+1" if there are 3 total events)
+* Users can click the indicator to open a popup displaying all remaining events for that time slot
+
+![Scheduler with MaxEventStack](./images/scheduler-max-event-stack.png)
+
+> The `maxEventStack` property is applicable only with **Day**, **Week**, and **WorkWeek** views when the [`timeScale`](https://ej2.syncfusion.com/react/documentation/api/schedule#timescale) option is enabled.
 
 ## Display tooltip for appointments
 

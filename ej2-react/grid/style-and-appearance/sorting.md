@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Sorting Customization in React Grid Component
 
-The appearance of the sorting icons and multi sorting icons in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component can be customized using CSS. Available Syncfusion<sup style="font-size:70%">&reg;</sup> [icons](https://ej2.syncfusion.com/react/documentation/appearance/icons#material) can be used based on the active theme.
+The appearance of the sorting icons and multi sorting icons in the React DataGrid component can be customized using CSS. Available Syncfusion<sup style="font-size:70%">&reg;</sup> [icons](https://ej2.syncfusion.com/react/documentation/appearance/icons#material) can be used based on the active theme.
 
 ## Customizing the grid sorting icon
 

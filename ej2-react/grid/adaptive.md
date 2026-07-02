@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Adaptive in React Grid Component
 
-The Grid user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, column chooser, column menu(supports only when the `rowRenderingMode` as Horizontal) and edit dialogs adaptively and have an option to render the grid row elements in the vertical direction.
+The [React DataGrid](https://www.syncfusion.com/react-components/react-data-grid) user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, column chooser, column menu(supports only when the `rowRenderingMode` as Horizontal) and edit dialogs adaptively and have an option to render the grid row elements in the vertical direction.
 
 ## Render adaptive dialogs
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid offers a valuable feature for rendering adaptive dialogs, specifically designed to enhance usability on smaller screens. This feature proves especially useful for optimizing the interface on devices with limited screen real estate. The functionality is achieved by enabling the [enableAdaptiveUI](https://ej2.syncfusion.com/react/documentation/api/grid#enableadaptiveui) property, allowing the grid to render filter, sort, and edit dialogs in full-screen mode.
+The React DataGrid offers a valuable feature for rendering adaptive dialogs, specifically designed to enhance usability on smaller screens. This feature proves especially useful for optimizing the interface on devices with limited screen real estate. The functionality is achieved by enabling the [enableAdaptiveUI](https://ej2.syncfusion.com/react/documentation/api/grid#enableadaptiveui) property, allowing the grid to render filter, sort, and edit dialogs in full-screen mode.
 
 Additionally, apply the `e-bigger` class to the grid's parent element to enable the adaptive view.
 
@@ -37,7 +37,7 @@ Additionally, apply the `e-bigger` class to the grid's parent element to enable 
 
 ## Vertical row rendering
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid introduces vertical row rendering, which displays row elements in a vertical order. This presentation enhances data visibility in scenarios where a vertical layout is preferable. Set the [rowRenderingMode](https://ej2.syncfusion.com/react/documentation/api/grid#rowrenderingmode) property to `Vertical`.
+The React DataGrid introduces vertical row rendering, which displays row elements in a vertical order. This presentation enhances data visibility in scenarios where a vertical layout is preferable. Set the [rowRenderingMode](https://ej2.syncfusion.com/react/documentation/api/grid#rowrenderingmode) property to `Vertical`.
 
 >The default row rendering mode is `Horizontal`.
 
@@ -344,3 +344,5 @@ export default App;
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/grid/adaptive-cs1" %}
+
+N> Looking for the full responsive React DataGrid component overview, features, pricing, and documentation? Visit the [React DataGrid](https://www.syncfusion.com/react-components/react-data-grid) page.

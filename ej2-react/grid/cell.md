@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Cell in React Grid Component
 
-A cell in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component represents the smallest unit of data within the grid. Each cell corresponds to the intersection of a row and a column, and it is responsible for displaying the value associated with that specific row-column combination. Cells can display plain text, formatted values, or fully customized content, making them highly flexible for presenting structured data in a grid layout.
+A cell in the React DataGrid component represents the smallest unit of data within the grid. Each cell corresponds to the intersection of a row and a column, and it is responsible for displaying the value associated with that specific row-column combination. Cells can display plain text, formatted values, or fully customized content, making them highly flexible for presenting structured data in a grid layout.
 
 ## Displaying the HTML content
 
@@ -291,7 +291,7 @@ The following example demonstrates, setting the [clipMode](https://ej2.syncfusio
 
 ## Tooltip
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid displays information about grid columns when the user hovers over them with the mouse.
+The React DataGrid displays information about grid columns when the user hovers over them with the mouse.
 
 ### Render bootstrap tooltip in grid cells
 

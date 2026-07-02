@@ -36,7 +36,7 @@ domainurl: ##DomainURL##
 | 1 | Setting up and configuring the Flask backend using Python | [View](#setting-up-the-flask-backend-using-python) |
 | 2 | Performing data operations in server with filtering, searching, sorting, and paging for efficient data processing | [View](#perform-data-operations-in-server) |
 | 3 | Performing CRUD operations in server with REST endpoints | [View](#perform-crud-operations-in-server) |
-| 4 | Connecting Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid with Flask API and configuring Syncfusion<sup style="font-size:70%">&reg;</sup> Grid with custom binding | [View](#connecting-syncfusion-react-grid-with-flask-api) |
+| 4 | Connecting React DataGrid with Flask API and configuring Syncfusion<sup style="font-size:70%">&reg;</sup> Grid with custom binding | [View](#connecting-syncfusion-react-grid-with-flask-api) |
 | 5 | Running the application by starting servers locally and accessing the frontend | [View](#run-the-application) |
 | 6 | Exploring a complete working sample in the complete sample repository on GitHub | [View](#complete-sample-repository) |
 
@@ -430,7 +430,7 @@ npm install
 
 ### Step 2: Install Syncfusion packages
 
-Install the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid and DataManager packages:
+Install the React DataGrid and DataManager packages:
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
@@ -454,7 +454,7 @@ Include the required CSS files in the **src/index.css** file:
 @import '../node_modules/@syncfusion/ej2-react-grids/styles/bootstrap5.3.css';
 ```
 
-For this project, the "Bootstrap 5.3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.
+For this project, the "Bootstrap 5.3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.
 
 ### Step 4: Create the Grid component
 
@@ -486,7 +486,7 @@ export default function App() {
 
 ### Step 5: Integrate Syncfusion React Grid with custom binding
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid custom databinding feature seamlessly integrates with external API services. When Grid actions such as paging, sorting, filtering, or CRUD operations are performed, requests are sent to the API. The API processes these operations and returns the results in the required format, giving complete control over application-specific workflows and enabling efficient handling of large datasets. The custom databinding feature interacts with backend APIs through two key events.
+The React DataGrid custom databinding feature seamlessly integrates with external API services. When Grid actions such as paging, sorting, filtering, or CRUD operations are performed, requests are sent to the API. The API processes these operations and returns the results in the required format, giving complete control over application-specific workflows and enabling efficient handling of large datasets. The custom databinding feature interacts with backend APIs through two key events.
 
 - **[dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datastatechange)**: Triggered when the Grid performs actions such as paging, sorting, or filtering. It provides the current state details (skip, take, sorted, where, search), which are sent to the API so the request can be processed and data returned in the required `{ result:[], count:100 }` format.
 
@@ -927,7 +927,7 @@ For a complete working implementation, refer to the [GitHub](https://github.com/
 
 The repository contains the complete Flask backend implementation with all API endpoints, business logic, data models, and a ready-to-run React frontend application.
 
-The application now provides a complete solution for integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid with Flask API backend, enabling seamless data operations with a modern, user-friendly interface.
+The application now provides a complete solution for integrating the React DataGrid with Flask API backend, enabling seamless data operations with a modern, user-friendly interface.
 
 ## See also
 

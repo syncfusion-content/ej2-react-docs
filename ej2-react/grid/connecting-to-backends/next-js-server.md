@@ -25,7 +25,7 @@ domainurl: ##DomainURL##
 |------|------------------------------------------------------------------------------------------------------|-------------------------------------------------|
 | 1    | Create a Next.js project and install the required packages                                          | [View](#building-the-nextjs-application)          |
 | 2    | Configure Next.js route handlers to create server-side API endpoints                                | [View](#configuring-nextjs-server)                |
-| 3    | Integrate Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid with the Next.js server using the custom data binding feature        | [View](#integrating-syncfusion-react-grid-with-nextjs) |
+| 3    | Integrate React DataGrid with the Next.js server using the custom data binding feature        | [View](#integrating-syncfusion-react-grid-with-nextjs) |
 | 4    | Handle data operations like filtering, searching, sorting, and paging in the Grid                    | [View](#step-3-implement-data-operations-on-server-side) |
 | 5    | Implement CRUD operations (Create, Read, Update, Delete) using POST, GET, PUT, and DELETE methods   | [View](#step-8-implement-crud-operations)         |
 | 6    | Set up navigation to other pages using the Next.js routing feature                                   | [View](#routing)                                  |
@@ -79,7 +79,7 @@ The required response format includes:
 
 ## Integrating Syncfusion React Grid with Next.js
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid is a robust, high‑performance component built to efficiently display, manage, and manipulate large datasets. It provides advanced features such as sorting, filtering, and paging. Follow these steps to render the grid and integrate it with a Next.js application.
+The React DataGrid is a robust, high‑performance component built to efficiently display, manage, and manipulate large datasets. It provides advanced features such as sorting, filtering, and paging. Follow these steps to render the grid and integrate it with a Next.js application.
 
 ### Step 1: Adding Syncfusion packages
 
@@ -107,12 +107,12 @@ After installation, the necessary CSS files are available in the (**../node_modu
   @import "../node_modules/@syncfusion/ej2-icons/styles/material3.css";
 ```
 
-For this project, the "Material 3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
+For this project, the "Material 3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
 
 
 ### Step 2: Add Syncfusion React Grid component with Next.js
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides [custom data binding](https://ej2.syncfusion.com/react/documentation/grid/data-binding/remote-data#custom-binding), which enables seamless integration with external API services. With this feature, the grid can fetch data from a Next.js server and efficiently display health care details. It supports search, filter, sort, and pagination capabilities, making it easy to navigate and manage large datasets.
+The React DataGrid provides [custom data binding](https://ej2.syncfusion.com/react/documentation/grid/data-binding/remote-data#custom-binding), which enables seamless integration with external API services. With this feature, the grid can fetch data from a Next.js server and efficiently display health care details. It supports search, filter, sort, and pagination capabilities, making it easy to navigate and manage large datasets.
 
 ```ts
   [app/page.tsx]
@@ -168,7 +168,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides [custom
 
 **Custom data binding workflow**:
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports custom data binding, enabling seamless integration with external API services. When Grid actions such as paging, sorting, filtering, or CRUD operations are performed, requests are sent to the API. The API processes these operations and returns the results in the required format, giving complete control over application‑specific workflows and enabling efficient handling of large datasets. The custom data binding feature can interact with backend APIs through two key events.
+The React DataGrid supports custom data binding, enabling seamless integration with external API services. When Grid actions such as paging, sorting, filtering, or CRUD operations are performed, requests are sent to the API. The API processes these operations and returns the results in the required format, giving complete control over application‑specific workflows and enabling efficient handling of large datasets. The custom data binding feature can interact with backend APIs through two key events.
 
   - [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datastatechange): Triggered when the Grid performs actions such as paging, sorting, or filtering. It provides the current state details, which are sent to the API so the request can be processed and data returned in the required "{ result:[], count:100 }" format.
 
@@ -836,7 +836,7 @@ Open **http://localhost:3000** in the browser.
 
 A complete, working sample implementation is available in the [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-backends/syncfusion-reactgrid-with-nextjs-server/Connecting_to_Next_js_server) repository.               
   
-The application now provides a complete solution for integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid with Next.js server, enabling seamless data operations with a modern, user-friendly interface.
+The application now provides a complete solution for integrating the React DataGrid with Next.js server, enabling seamless data operations with a modern, user-friendly interface.
 
 ## See also
 

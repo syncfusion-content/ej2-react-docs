@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Paging in React Grid Component
 
-Paging allows the React Grid to display data in segmented pages instead of loading the entire dataset at once. This greatly improves initial load performance and overall responsiveness especially with large datasets by rendering only the records of the current page.
+Paging allows the [React DataGrid](https://www.syncfusion.com/react-components/react-data-grid) to display data in segmented pages instead of loading the entire dataset at once. This greatly improves initial load performance and overall responsiveness especially with large datasets by rendering only the records of the current page.
 
 The paging feature is enabled by importing the `Page` module from `@syncfusion/ej2-react-grids` and injecting it into the grid.
 
@@ -49,7 +49,7 @@ Use the [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid#p
 
 ## Customize pager options
 
-Customize the pager options in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid using the [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings) object:
+Customize the pager options in the React DataGrid using the [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings) object:
 
 - `pageCount`: Number of pages to display in the pager.
 - `currentPage`: Denotes the active page.
@@ -153,7 +153,7 @@ export default App;
 
 ### Change page count
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports customizing the number of page links shown in the pager through the [pageSettings.pageCount](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings#pagecount) property. The default value is "8", and it can be adjusted to enhance navigation, especially when handling large datasets.
+The React DataGrid supports customizing the number of page links shown in the pager through the [pageSettings.pageCount](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings#pagecount) property. The default value is "8", and it can be adjusted to enhance navigation, especially when handling large datasets.
 
 The example below demonstrates updating the page count dynamically using a textbox value and an external button click:
 
@@ -243,7 +243,7 @@ export default App;
 
 ### Change current page
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports programmatic page navigation through the [pageSettings.currentPage](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings#currentpage) property. The default value is "1", indicating the first page. This property can be modified during initial rendering or updated later to navigate to a specific page based on interaction.
+The React DataGrid supports programmatic page navigation through the [pageSettings.currentPage](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings#currentpage) property. The default value is "1", indicating the first page. This property can be modified during initial rendering or updated later to navigate to a specific page based on interaction.
 
 The following example demonstrates dynamically changing the current page using a textbox value and an external button click:
 
@@ -334,7 +334,7 @@ export default App;
 
 ### Add current page in URL as query string 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid allows appending the current page number to the URL by enabling the [enableQueryString](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings#enablequerystring) property. When set to `true`, the grid includes the current page as a query string, maintaining pagination state and enabling easy sharing of specific views.
+The React DataGrid allows appending the current page number to the URL by enabling the [enableQueryString](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings#enablequerystring) property. When set to `true`, the grid includes the current page as a query string, maintaining pagination state and enabling easy sharing of specific views.
 
 The following example demonstrates toggling this behavior using an [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/react/documentation/switch/getting-started). The switch's [change](https://ej2.syncfusion.com/react/documentation/api/switch#change) event updates the `enableQueryString` property dynamically.
 
@@ -357,7 +357,7 @@ The following example demonstrates toggling this behavior using an [EJ2 Toggle S
 
 ## Pager template
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports customizing the pager through the [pagerTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings#template) property, allowing replacement of default pager controls with custom elements.
+The React DataGrid supports customizing the pager through the [pagerTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings#template) property, allowing replacement of default pager controls with custom elements.
 
 Within the template, context values such as `currentPage`, `pageSize`, `pageCount`, `totalPage`, and `totalRecordCount` are available for building customized pager layouts.
 
@@ -463,7 +463,7 @@ export default App;
 
 ## Pager with page size dropdown
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a built-in page size dropdown that enables adjusting the number of records displayed per page. This can be enabled by setting the [pageSettings.pageSizes](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings#pagesizes) property to `true`.
+The React DataGrid provides a built-in page size dropdown that enables adjusting the number of records displayed per page. This can be enabled by setting the [pageSettings.pageSizes](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings#pagesizes) property to `true`.
 
 When enabled, the pager displays a dropdown that allows selecting the preferred page size, and the grid updates immediately based on the selected value.
 
@@ -488,7 +488,7 @@ When enabled, the pager displays a dropdown that allows selecting the preferred 
 
 ### Customize page size dropdown 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid allows customizing the page size dropdown by setting the [pageSizes](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings#pagesizes) property as an array of strings. This defines the selectable page size options and controls the number of records displayed per page.
+The React DataGrid allows customizing the page size dropdown by setting the [pageSizes](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings#pagesizes) property as an array of strings. This defines the selectable page size options and controls the number of records displayed per page.
 
 The following example demonstrates configuring custom values for the pager dropdown using the `pageSizes` property:
 
@@ -513,7 +513,7 @@ The following example demonstrates configuring custom values for the pager dropd
 
 ## Navigate to particular page
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports programmatic page navigation through the [goToPage](https://ej2.syncfusion.com/react/documentation/api/grid#gotopage) method. This method is useful for quickly accessing a particular page, especially when working with large datasets.
+The React DataGrid supports programmatic page navigation through the [goToPage](https://ej2.syncfusion.com/react/documentation/api/grid#gotopage) method. This method is useful for quickly accessing a particular page, especially when working with large datasets.
 
 The example below demonstrates navigating to a specific page by using `goToPage` method through an external button click based on textbox input.
 
@@ -601,7 +601,7 @@ export default App;
 
 ## How to get the pager element
 
-The pager element in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid can be obtained using the [getPager](https://ej2.syncfusion.com/react/documentation/api/grid#getpager) method which returns an HTML element representing the pager. This enables customizing the pager's appearance or behavior to meet application requirements.
+The pager element in the React DataGrid can be obtained using the [getPager](https://ej2.syncfusion.com/react/documentation/api/grid#getpager) method which returns an HTML element representing the pager. This enables customizing the pager's appearance or behavior to meet application requirements.
 
 ```ts
   grid.getPager()
@@ -609,7 +609,7 @@ The pager element in the Syncfusion<sup style="font-size:70%">&reg;</sup> React 
 
 ## Dynamically calculate page size based on element height
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports calculating the pageSize dynamically based on the height of its parent element. This ensures efficient use of available space by adjusting the number of displayed records to prevent unnecessary scrolling or empty areas.
+The React DataGrid supports calculating the pageSize dynamically based on the height of its parent element. This ensures efficient use of available space by adjusting the number of displayed records to prevent unnecessary scrolling or empty areas.
 
 Use the [calculatePageSizeByParentHeight](https://ej2.syncfusion.com/react/documentation/api/grid#calculatepagesizebyparentheight) method to recalculate the page size whenever the parent element's height changes.
 
@@ -660,7 +660,7 @@ By default, pager displayed at the bottom of the grid. It is also possible to di
 
 ## Pager events 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provides two primary events for handling paging operations:
+The React DataGrid component provides two primary events for handling paging operations:
 
 - [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid#actionbegin): Triggered before a paging action occurs, such as changing the page or page size. Use this event to customize or control the behavior of paging actions.
 

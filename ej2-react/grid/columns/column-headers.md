@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Headers in React Grid component
 
-Column headers in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid display the titles for each column, making it clear what data is shown. They provide context and make the grid easier to read and navigate. Headers can be customized by adjusting text alignment, applying templates, stacking multiple headers, or updating them dynamically, offering flexibility to design the grid as needed.
+Column headers in the React DataGrid display the titles for each column, making it clear what data is shown. They provide context and make the grid easier to read and navigate. Headers can be customized by adjusting text alignment, applying templates, stacking multiple headers, or updating them dynamically, offering flexibility to design the grid as needed.
 
 ## Header text
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, the [headerText](https://ej2.syncfusion.com/react/documentation/api/grid/column#headertext) property of the `ColumnDirective` defines the label shown in a column’s header; when this property is not set, the column automatically displays its [field](https://ej2.syncfusion.com/react/documentation/api/grid/column#field) value, so assigning header text provides a more descriptive label in place of the field name.
+In the [React DataGrid](https://www.syncfusion.com/react-components/react-data-grid), the [headerText](https://ej2.syncfusion.com/react/documentation/api/grid/column#headertext) property of the `ColumnDirective` defines the label shown in a column’s header; when this property is not set, the column automatically displays its [field](https://ej2.syncfusion.com/react/documentation/api/grid/column#field) value, so assigning header text provides a more descriptive label in place of the field name.
 
 
 {% tabs %}
@@ -264,7 +264,7 @@ export default App;
 
 ## Header text wrapping
 
-Header text wrapping enables proper display of lengthy column names or descriptive labels within defined column widths. When content exceeds boundary limits, automatic wrapping to multiple lines maintains readability and prevents text overflow. The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports configurable text wrapping with options to wrap headers only, content only, or both, optimizing space usage without sacrificing information clarity. To enable autowrap, set the `allowTextWrap` property to `true`. The auto wrap mode can be configured using the [textWrapSettings.wrapMode](https://ej2.syncfusion.com/react/documentation/api/grid/textWrapSettings#wrapmode) property.
+Header text wrapping enables proper display of lengthy column names or descriptive labels within defined column widths. When content exceeds boundary limits, automatic wrapping to multiple lines maintains readability and prevents text overflow. The React DataGrid supports configurable text wrapping with options to wrap headers only, content only, or both, optimizing space usage without sacrificing information clarity. To enable autowrap, set the `allowTextWrap` property to `true`. The auto wrap mode can be configured using the [textWrapSettings.wrapMode](https://ej2.syncfusion.com/react/documentation/api/grid/textWrapSettings#wrapmode) property.
 
 Grid provides the below three options for configuring:
 
@@ -397,11 +397,11 @@ To dynamically adjust the header height, use the [getHeaderContent](https://ej2.
 
 ## Change header text dynamically
 
-Dynamic header modification is essential for interactive grids where header content needs to change based on input, runtime conditions, or business logic. The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component enables real-time modification of column header text through events or property accessors. This feature is particularly useful in scenarios such as localization, conditional labeling, or updating headers based on applied filters or grouping.
+Dynamic header modification is essential for interactive grids where header content needs to change based on input, runtime conditions, or business logic. The React DataGrid component enables real-time modification of column header text through events or property accessors. This feature is particularly useful in scenarios such as localization, conditional labeling, or updating headers based on applied filters or grouping.
 
 **Using event:**
 
-The [headerCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#headercellinfo) event of the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid enables modification of header text dynamically. This event triggers for each header cell element rendered in the Grid. When the `headerCellInfo` event triggers, it provides a `HeaderCellInfoEventArgs` object containing the following properties:
+The [headerCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#headercellinfo) event of the React DataGrid enables modification of header text dynamically. This event triggers for each header cell element rendered in the Grid. When the `headerCellInfo` event triggers, it provides a `HeaderCellInfoEventArgs` object containing the following properties:
 
 * **cell**: The header cell being modified.
 * **node**: The DOM element of the header cell being modified.
@@ -538,7 +538,7 @@ export default App;
 
 **Conditional header text customization:**
 
-The column `headerValueAccessor` property in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid enables customization of column header cell text. This is useful in scenarios requiring alternate language display, specific formatting, or additional header information. This property triggers every time the header cell renders. This property accepts a callback function with two arguments:
+The column `headerValueAccessor` property in React DataGrid enables customization of column header cell text. This is useful in scenarios requiring alternate language display, specific formatting, or additional header information. This property triggers every time the header cell renders. This property accepts a callback function with two arguments:
 
 * **field**: The current column field.
 * **column**: The current column object.
@@ -840,7 +840,7 @@ Custom tooltips can be enabled using the [beforeRender](https://ej2.syncfusion.c
 
 ## Customize header text styles
 
-Header styling enables visual distinction and emphasizes important columns or data categories within the grid. Customizing header appearance through font, background color, and other styles meets specific design requirements and improves information hierarchy. The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provides multiple approaches for header customization through CSS, properties, methods, or event-based styling.
+Header styling enables visual distinction and emphasizes important columns or data categories within the grid. Customizing header appearance through font, background color, and other styles meets specific design requirements and improves information hierarchy. The React DataGrid component provides multiple approaches for header customization through CSS, properties, methods, or event-based styling.
 
 **Using CSS:**
 
@@ -945,7 +945,7 @@ export default App;
 
 **Using methods:** 
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides methods to customize column header appearance:
+React DataGrid provides methods to customize column header appearance:
 
 | # | Method | Description |
 |---|--------|-------------|
@@ -1078,7 +1078,7 @@ export default App;
 
 ## Get header element 
 
-Accessing header elements programmatically is necessary for advanced customizations, styling, or interaction handling that go beyond built-in configuration options. The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides multiple methods to retrieve specific header elements by various identifiers, enabling direct DOM manipulation or reading header metadata.
+Accessing header elements programmatically is necessary for advanced customizations, styling, or interaction handling that go beyond built-in configuration options. The React DataGrid provides multiple methods to retrieve specific header elements by various identifiers, enabling direct DOM manipulation or reading header metadata.
 
 | # | Method | Description | Example |
 |---|--------|-------------|---------|

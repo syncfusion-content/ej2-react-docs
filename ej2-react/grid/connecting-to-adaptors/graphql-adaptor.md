@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
  
 # GraphQL in Remote Data Binding in Syncfusion React Components
  
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides seamless integration with GraphQL services, enabling modern, efficient data operations through a flexible query language. This comprehensive guide demonstrates configuring and using GraphQL with the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid to perform server-side operations including querying, mutations, filtering, sorting, paging, and complete CRUD functionality.
+The React DataGrid provides seamless integration with GraphQL services, enabling modern, efficient data operations through a flexible query language. This comprehensive guide demonstrates configuring and using GraphQL with the React DataGrid to perform server-side operations including querying, mutations, filtering, sorting, paging, and complete CRUD functionality.
  
 ## Understanding GraphQL
  
@@ -84,11 +84,11 @@ The `GraphQLAdaptor` is a specialized adaptor in Syncfusion<sup style="font-size
 - **Paging**: Sends `datamanager.skip` and `datamanager.take` variables.
 - **CRUD**: Executes mutations (createOrder, updateOrder, deleteOrder).
 
-For complete integration of the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid with GraphQL, including support for data operations such as paging, sorting, filtering, and full CRUD functionality, refer to the following official guides:
+For complete integration of the React DataGrid with GraphQL, including support for data operations such as paging, sorting, filtering, and full CRUD functionality, refer to the following official guides:
 
-- [Syncfusion React Grid with GraphQL backend in Node.js](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-backends/graphql-nodejs-server)
+- [React Grid with GraphQL backend in Node.js](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-backends/graphql-nodejs-server)
 
-- [Syncfusion React Grid with Hot Chocolate GraphQL backend in ASP.NET Core]()
+- [React Grid with Hot Chocolate GraphQL backend in ASP.NET Core](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-backends/graphql-hotchocolate-server)
 
 ## See also
 - [Using Remote Data Binding in ASP.NET Web APIs](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/webapi-adaptor)

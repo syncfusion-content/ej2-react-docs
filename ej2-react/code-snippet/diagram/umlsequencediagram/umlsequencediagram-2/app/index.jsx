@@ -1,16 +1,16 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DiagramComponent } from "@syncfusion/ej2-react-diagrams";
-import { SnapConstraints, UmlSequenceMessageType } from "@syncfusion/ej2-diagrams";
+import { SnapConstraints, UmlSequenceMessageType, UmlSequenceParticipantStereotype } from "@syncfusion/ej2-diagrams";
 
 // Define the UML Sequence Diagram model with participants and messages
 const umlSequenceDiagramModel = {
   // Defines the participants involved in the sequence diagram
   participants: [
-    { id: "User", content: "User", isActor: true, }, // User as an actor
-    { id: "System", content: "System", isActor: false, showDestructionMarker: true, }, // System participant
-    { id: "Logger", content: "Logger", isActor: false, showDestructionMarker: true, }, // Logger participant
-    { id: "SessionManager", content: "SessionManager", isActor: false, } // SessionManager participant
+    { id: "User", content: "User", stereotype: UmlSequenceParticipantStereotype.Actor }, // User as an actor
+    { id: "System", content: "System", showDestructionMarker: true, }, // System participant
+    { id: "Logger", content: "Logger", showDestructionMarker: true, }, // Logger participant
+    { id: "SessionManager", content: "SessionManager" } // SessionManager participant
   ],
   // Define messages exchanged between participants
   messages: [

@@ -1,53 +1,155 @@
 ---
 layout: post
-title: React Grid - Style and Appearance | Syncfusion
-description: React Grid style and appearance provides a consolidated guide to theming, CSS customization, and style tokens to match application design.
+title: React DataGrid - Style and Appearance | Syncfusion
+description: React DataGrid style and appearance provides a consolidated guide to theming, CSS customization, and style tokens to match application design.
 control: Style and appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and Appearance in React Grid Component
+# Style and Appearance in React DataGrid Component
 
-The Grid component offers various ways to customize its appearance using both default CSS and custom themes. Common approaches:
+The React DataGrid provides flexible styling and appearance customization options to align with your application's design requirements. You can choose from a wide range of built-in themes, customize visual elements using CSS, and create consistent experiences through theme-based styling.
 
-**Default CSS override:**
+## Built-in themes
 
-Custom CSS can override the default styles of the Grid component. This allows changes to colors, fonts, paddings, and more. Inspect the generated HTML of the grid using browser developer tools to identify the relevant CSS classes and styles.
+Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid components include a comprehensive collection of themes to match popular design systems and provide both light and dark variants. Available themes include:
 
-A basic example demonstrates how to override the header background color of the grid:
+|Theme                 |Style Sheet Name       |
+|----------------------|-----------------------|
+|Tailwind 3.4          | tailwind3.css         |
+|Tailwind 3.4 Dark     | tailwind3-dark.css    |
+|Bootstrap 5.3         | bootstrap5.3.css      |
+|Bootstrap 5.3 Dark    | bootstrap5.3-dark.css |
+|Fluent 2              | fluent2.css           |
+|Fluent 2 Dark         | fluent2-dark.css      |
+|Material 3            | material3.css         |
+|Material 3 Dark       | material3-dark.css    |
+|Bootstrap 5           | bootstrap5.css        |
+|Bootstrap 5 Dark      | bootstrap5-dark.css   |
+|Bootstrap 4           | bootstrap4.css        |
+|Bootstrap 3           | bootstrap.css         |
+|Bootstrap 3 Dark      | bootstrap-dark.css    |
+|Material              | material.css          |
+|Material Dark         | material-dark.css     |
+|Tailwind CSS          | tailwind.css          |
+|Tailwind CSS Dark     | tailwind-dark.css     |
+|Fluent                | fluent.css            |
+|Fluent Dark           | fluent-dark.css       |
+|Microsoft Office Fabric| fabric.css           |
+|Microsoft Office Fabric Dark| fabric-dark.css |
+|High Contrast         | highcontrast.css      |
 
-```css
-/* In the component's CSS file */
-.e-grid .e-headercell {
-    background-color: #333; /* Override the header background color */
-    color: #fff;
-}
-```
+## Theme packages
 
-![Change header background](../images/header-background.png)
+Syncfusion built-in themes are distributed as theme packages available on npm. These packages include CSS/SCSS files for all components. The following table lists all available theme packages:
 
-**Using Theme Studio:**
+| Theme | Light Package | Dark Package |
+|-------|---------------|---------------|
+| Tailwind 3 | [`@syncfusion/ej2-tailwind3-theme`](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) | [`@syncfusion/ej2-tailwind3-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-dark-theme) |
+| Bootstrap 5.3 | [`@syncfusion/ej2-bootstrap5.3-theme`](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap5.3-theme) | [`@syncfusion/ej2-bootstrap5.3-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap5.3-dark-theme) |
+| Fluent 2 | [`@syncfusion/ej2-fluent2-theme`](https://www.npmjs.com/package/@syncfusion/ej2-fluent2-theme) | [`@syncfusion/ej2-fluent2-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-fluent2-dark-theme) |
+| Material 3 | [`@syncfusion/ej2-material3-theme`](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme) | [`@syncfusion/ej2-material3-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-material3-dark-theme) |
+| Bootstrap 5 | [`@syncfusion/ej2-bootstrap5-theme`](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap5-theme) | [`@syncfusion/ej2-bootstrap5-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap5-dark-theme) |
+| Bootstrap 4 | [`@syncfusion/ej2-bootstrap4-theme`](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap4-theme) | - |
+| Bootstrap | [`@syncfusion/ej2-bootstrap-theme`](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap-theme) | [`@syncfusion/ej2-bootstrap-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap-dark-theme) |
+| Material | [`@syncfusion/ej2-material-theme`](https://www.npmjs.com/package/@syncfusion/ej2-material-theme) | [`@syncfusion/ej2-material-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-material-dark-theme) |
+| Tailwind | [`@syncfusion/ej2-tailwind-theme`](https://www.npmjs.com/package/@syncfusion/ej2-tailwind-theme) | [`@syncfusion/ej2-tailwind-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-tailwind-dark-theme) |
+| Fluent | [`@syncfusion/ej2-fluent-theme`](https://www.npmjs.com/package/@syncfusion/ej2-fluent-theme) | [`@syncfusion/ej2-fluent-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-fluent-dark-theme) |
+| Fabric | [`@syncfusion/ej2-fabric-theme`](https://www.npmjs.com/package/@syncfusion/ej2-fabric-theme) | [`@syncfusion/ej2-fabric-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-fabric-dark-theme) |
+| High Contrast | [`@syncfusion/ej2-highcontrast-theme`](https://www.npmjs.com/package/@syncfusion/ej2-highcontrast-theme) | - |
 
-Syncfusion's Theme Studio tool allows creation of custom themes for all controls, including the grid. This advanced approach defines a comprehensive set of styles to achieve a consistent look and feel across an application.
+## Size modes
 
-1. Visit the [Syncfusion<sup style="font-size:70%">&reg;</sup> Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=material).
-2. Select the grid control from the left panel.
-3. Customize various aspects of the control's appearance, such as colors, typography, and spacing.
-4. Download the generated CSS file and include it in the React project.
+Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid components support two size modes to optimize user experience across different devices and input methods:
 
-## Customizing the grid root element
+- **Normal mode** (default) — Standard sizing optimized for mouse and keyboard interactions.
+- **Touch mode** (bigger) — Larger elements with increased padding, font sizes, and touch targets for improved touch interaction and accessibility. Apply the `e-bigger` CSS class to the `<body>` element to enable touch-friendly sizing.
 
-The `.e-grid` class is used to style the root element of the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component.
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/style-appearance-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/style-appearance-cs2/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/style-appearance-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/style-appearance-cs2/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
 
-```css
-.e-grid {
-    font-family: cursive;
-}
-```
+{% previewsample "page.domainurl/code-snippet/grid/style-appearance-cs2" %}
 
-![grid root element](../images/whole-grid.png)
+## Theme customization
+
+### Default CSS override
+
+The Data Grid themes use CSS variables with the unified --sf naming convention. This ensures visual consistency, simple customization, and global updates. Centralized variables allow quick adjustments to colors, backgrounds, and borders across the grid.
+
+### Material 3 theme color variables
+
+The Material 3 theme applies scalable CSS custom properties to maintain consistency within the Data Grid. Variables are designed for straightforward theming and responsive behavior.
+The following table highlights commonly used color related variables in the Material 3 theme.
+
+| Name | Purpose |
+|------|-------------|
+| --e-font-name | Specifies the default font family used across the DataGrid |
+| --color-sf-content-bg-color-alt1 | Controls the background of the DataGrid header |
+| --color-sf-content-bg-color | Controls the background of the DataGrid content |
+| --color-sf-table-bg-color-hover | Defines the background styling for selected rows during hover interaction |
+| --color-sf-content-bg-color-hover | Defines background behavior when primary elements are hovered |
+| --color-sf-primary | Defines the main theme styling used across components |
+| --color-sf-primary-light | Provides a softer variation of the primary theme for backgrounds |
+| --color-sf-border-light | Specifies styling for light borders and separators |
+
+### Bootstrap 5.3 theme color variables
+
+The Bootstrap 5.3 theme extends Bootstrap’s framework with CSS custom properties for the Data Grid. These variables align with Bootstrap applications while enabling easy updates to grid colors, backgrounds, and borders.
+The following table lists color related variables defined for the Bootstrap 5.3 theme.
+
+| Name | Purpose |
+|------|-------------|
+| --e-font-name | Specifies the default font family used across the DataGrid |
+| --color-sf-content-bg-color-alt1 | Controls the background of the DataGrid header |
+| --color-sf-content-bg-color | Controls the background of the DataGrid content |
+| --color-sf-table-bg-color-hover | Defines the background styling for selected rows during hover interaction |
+| --color-sf-content-bg-color-hover | Defines background behavior when primary elements are hovered |
+| --color-sf-primary | Defines the main theme styling used across components |
+| --color-sf-primary-light | Provides a softer variation of the primary theme for backgrounds |
+| --color-sf-border-light | Specifies styling for light borders and separators |
+
+### Tailwind 3 theme color variables
+
+The Tailwind 3 theme uses utility first CSS custom properties to deliver a flexible, modern design system. A single update reflects instantly across the Data Grid, supporting efficient and maintainable theming.
+The following table presents color related variables available in the Tailwind 3 theme.
+
+| Name | Purpose |
+|------|--------------|
+| --e-font-name | Specifies the default font family used across the UI |
+| --color-sf-content-bg-color | Controls the main background of the application area |
+| --color-sf-table-bg-color-hover | Defines background behavior during hover interaction |
+| --color-sf-content-bg-color-hover | Defines the background color for pager during hover interaction |
+| --color-sf-primary | Defines the main theme color used across components |
+| --color-sf-border-light | Defines the border color used across the component |
+
+### Fluent 2 theme color variables
+
+The Fluent 2 theme leverages modern CSS custom properties to provide a clean and consistent design aligned with Fluent UI principles. These variables enable seamless customization of the Data Grid's visual elements, ensuring adaptability across applications.
+The following table outlines the color related variables available in the Fluent 2 theme.
+
+| Name | Purpose |
+|------|-------------|
+| --e-font-name | Specifies the default font family used across the DataGrid |
+| --color-sf-content-bg-color-alt1 | Controls the main background of the DataGrid |
+| --color-sf-table-bg-color-hover | Defines the background styling for selected rows during hover interaction |
+| --color-sf-content-bg-color-hover | Defines background behavior when primary elements are hovered |
+| --color-sf-primary | Defines the main theme styling used across components |
+| --color-sf-border-light | Specifies styling for light borders and separators |
+| --color-sf-border-alt | Defines alternate border styling for DataGrid elements |
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -64,8 +166,25 @@ The `.e-grid` class is used to style the root element of the Syncfusion<sup styl
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/style-appearance-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/style-appearance-cs1" %}
+
+### Using Theme Studio
+
+Syncfusion's Theme Studio tool allows creation of custom themes for all controls, including the grid. This advanced approach defines a comprehensive set of styles to achieve a consistent look and feel across an application.
+
+1. Visit the [Syncfusion<sup style="font-size:70%">&reg;</sup> Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=material).
+2. Select the grid control from the left panel.
+3. Customize various aspects of the control's appearance, such as colors, typography, and spacing.
+4. Download the generated CSS file and include it in the React project.
 
 ## See also
 
-[Footer template styling in React Grid](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/aggregate#customizing-the-aggregate-cell-elements)
+[Header style customization in React DataGrid](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/header#customizing-the-grid-header)
+[Paging style customization in React DataGrid](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/paging#customizing-the-grid-pager-root-element)
+[Sorting icon customization in React DataGrid](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/sorting#customizing-the-grid-sorting-icon)
+[Filter style customization in React DataGrid](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/filtering)
+[Grouping style customization in React DataGrid](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/grouping)
+[Toolbar style customization in React DataGrid](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/grouping)
+[Editing style customization in React DataGrid](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/editing)
+[Footer template styling in React DataGrid](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/aggregate#customizing-the-aggregate-cell-elements)
+[Selection background styling in React DataGrid](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/selection#customizing-the-row-selection-background)

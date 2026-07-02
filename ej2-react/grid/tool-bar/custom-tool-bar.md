@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Custom Toolbar in React Grid Component
 
-Custom toolbar in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid enables the creation of a customized toolbar layout and functionality to match specific application requirements. This is achieved by utilizing the [toolbarTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbartemplate) property, which provides comprehensive customization options for the toolbar layout and styling. Define a custom template for the toolbar and handle the actions of the toolbar items in the [clicked](https://ej2.syncfusion.com/react/documentation/api/toolbar/index-default#clicked) event.
+Custom toolbar in React DataGrid enables the creation of a customized toolbar layout and functionality to match specific application requirements. This is achieved by utilizing the [toolbarTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbartemplate) property, which provides comprehensive customization options for the toolbar layout and styling. Define a custom template for the toolbar and handle the actions of the toolbar items in the [clicked](https://ej2.syncfusion.com/react/documentation/api/toolbar/index-default#clicked) event.
 
 The following example demonstrates rendering the custom toolbar `toolbarTemplate` property.
  
@@ -33,7 +33,7 @@ The following example demonstrates rendering the custom toolbar `toolbarTemplate
 
 ## Render image with text in custom toolbar
 
-Rendering an image with text in custom toolbar in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid enables easy display of an image along with text in the toolbar of the grid. This feature enhances the visual presentation of the grid, providing additional context and improving the overall experience.
+Rendering an image with text in custom toolbar in React DataGrid enables easy display of an image along with text in the toolbar of the grid. This feature enhances the visual presentation of the grid, providing additional context and improving the overall experience.
 
 The following example demonstrates rendering an image in the Grid toolbar using `toolbarTemplate` property. 
 
@@ -58,7 +58,7 @@ The following example demonstrates rendering an image in the Grid toolbar using 
 
 ## Render DropDownList in custom toolbar
 
-Rendering a DropDownList in custom toolbar in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid extends the functionality of the custom toolbar by incorporating a [DropDownList](https://ej2.syncfusion.com/react/documentation/drop-down-list/getting-started) component, allowing various actions to be performed within the grid based on the selected items.
+Rendering a DropDownList in custom toolbar in React DataGrid extends the functionality of the custom toolbar by incorporating a [DropDownList](https://ej2.syncfusion.com/react/documentation/drop-down-list/getting-started) component, allowing various actions to be performed within the grid based on the selected items.
 
 This can be achieved by utilizing the `toolbarTemplate` property. The example below demonstrates rendering the `DropDownList` component in the custom toolbar, and its [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#change) event is bound to the `onChange` method to handle the custom actions.
 
@@ -175,7 +175,7 @@ export default App;
 
 ## Render custom components using the toolbar template
 
-Rendering custom components using the toolbar template in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides flexibility to enhance the toolbar with custom buttons, dropdowns, input fields, icons, or any other desired UI elements. Event handlers can be bound and interactions handled within the template to enable specific actions or behaviors associated with the added components or elements.
+Rendering custom components using the toolbar template in the React DataGrid provides flexibility to enhance the toolbar with custom buttons, dropdowns, input fields, icons, or any other desired UI elements. Event handlers can be bound and interactions handled within the template to enable specific actions or behaviors associated with the added components or elements.
 
 To render custom components or elements within the toolbar, use the `toolbarTemplate` property. This allows the inclusion of other components, such as a [Button](https://ej2.syncfusion.com/react/documentation/button/getting-started), and enables specific grid actions based on the button click. For example, when the `ExcelExport` button is clicked, the [excelExport](https://ej2.syncfusion.com/react/documentation/api/grid#excelexport) method is called to export the grid to `Excel`. Similarly, when the `PdfExport` button is clicked, the [pdfExport](https://ej2.syncfusion.com/react/documentation/api/grid#pdfexport) method is called to export the grid to PDF format. Likewise, when the `Print` button is clicked, the [print](https://ej2.syncfusion.com/react/documentation/api/grid#print) method is triggered to print the grid.
 

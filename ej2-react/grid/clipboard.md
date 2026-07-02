@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Clipboard in React Grid Component
 
-The clipboard feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid enables copying selected rows or cells to the system clipboard for use in other applications. The grid supports keyboard shortcuts for quick copy operations.
+The clipboard feature in the React DataGrid enables copying selected rows or cells to the system clipboard for use in other applications. The grid supports keyboard shortcuts for quick copy operations.
 
 Interaction keys | Description
 -----|-----
@@ -61,7 +61,7 @@ Use the grid's [copy](https://ej2.syncfusion.com/react/documentation/api/grid/in
 
 ## AutoFill
 
-The AutoFill feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid copies values from a selected cell range into target cells by dragging the AutoFill handle. This provides a fast method for populating repetitive or sequential data.
+The AutoFill feature in the React DataGrid copies values from a selected cell range into target cells by dragging the AutoFill handle. This provides a fast method for populating repetitive or sequential data.
 
 Enable AutoFill by setting the [enableAutoFill](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#enableautofill) property to `true`.
 
@@ -101,7 +101,7 @@ Using AutoFill
 
 ## Paste
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid supports pasting clipboard content into selected cells for quick data entry and updates. Standard shortcuts allow copying and pasting between ranges within the grid or between the grid and external applications.
+The React DataGrid supports pasting clipboard content into selected cells for quick data entry and updates. Standard shortcuts allow copying and pasting between ranges within the grid or between the grid and external applications.
 
 Steps to paste:
 

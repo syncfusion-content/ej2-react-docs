@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Connecting MySQL server to Syncfusion React Grid Using LINQ2DB
 
-The [Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid](https://ej2.syncfusion.com/react/documentation/grid/getting-started) supports binding data from a MySQL database. This documentation demonstrates integrating MySQL with Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid using LINQ2DB (Light-weight ORM) for data operations with the use of `CustomAdaptor` to build a Transaction Management Application.
+The [React DataGrid](https://www.syncfusion.com/react-components/react-data-grid) supports binding data from a MySQL database. This documentation demonstrates integrating MySQL with React DataGrid using LINQ2DB (Light-weight ORM) for data operations with the use of `CustomAdaptor` to build a Transaction Management Application.
 
 **What is LINQ2DB?**
 
@@ -406,7 +406,7 @@ After installation, the necessary CSS files are available in the (**../node_modu
 
 ```
 
-For this project, the "Bootstrap 5.3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.
+For this project, the "Bootstrap 5.3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.
 
 ### Step 3: Add Syncfusion React Grid
 

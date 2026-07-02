@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Hierarchy Grid in React Grid Component
 
-The Hierarchy Grid in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid is designed to display hierarchical or nested data structures within a tabular layout. It enables the representation of parent-child relationships by allowing rows to be expanded or collapsed, revealing related child records beneath their corresponding parent rows.
+The Hierarchy Grid in the React DataGrid is designed to display hierarchical or nested data structures within a tabular layout. It enables the representation of parent-child relationships by allowing rows to be expanded or collapsed, revealing related child records beneath their corresponding parent rows.
 
 This structure enhances data readability and navigation, especially when working with datasets that include multiple levels of related information. Each parent row can be expanded to display its associated child grid, which can itself be configured with columns, templates, and features similar to the main grid.
 
@@ -320,7 +320,7 @@ export default App;
 
 ## Expand and collapse all child grids dynamically
 
-The Hierarchy Grid in the Data Grid component supports expanding all child grid rows through an external button, providing a comprehensive view of hierarchical data without requiring manual interaction.
+The Hierarchy Grid in the DataGrid component supports expanding all child grid rows through an external button, providing a comprehensive view of hierarchical data without requiring manual interaction.
 
 By default, all child grids are rendered in a collapsed state. To programmatically expand or collapse all child rows, use the [expandAll](https://ej2.syncfusion.com/react/documentation/api/grid/detailRow#expandall) and [collapseAll](https://ej2.syncfusion.com/react/documentation/api/grid/detailRow#collapseall) methods provided by the `DetailRow` module. The following example demonstrates how these methods can be triggered via external button clicks.
 
@@ -345,7 +345,7 @@ By default, all child grids are rendered in a collapsed state. To programmatical
 
 ## Hide the expand/collapse icon in parent row when no record in child grid
 
-The Data Grid supports hiding the expand/collapse icon in parent rows when there are no child records, providing a cleaner and more intuitive interface.
+The DataGrid supports hiding the expand/collapse icon in parent rows when there are no child records, providing a cleaner and more intuitive interface.
 
 To achieve this, the [rowDataBound](https://ej2.syncfusion.com/react/documentation/api/grid#rowdatabound) event can be utilized to hide the icon when there are no records in the child grid.
 
@@ -436,7 +436,7 @@ In the demo below, the expand/collapse icons have been changed to arrow-down and
 
 ## Child Grid expand and collapse events
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provides [detailExpand](https://ej2.syncfusion.com/react/documentation/api/grid#detailexpand) and [detailCollapse](https://ej2.syncfusion.com/react/documentation/api/grid#detailcollapse) events, triggered before a detail row(parent row) is expanded or collapsed. These events provide control over the expand/collapse behavior by allowing conditional logic through event arguments.
+The React DataGrid component provides [detailExpand](https://ej2.syncfusion.com/react/documentation/api/grid#detailexpand) and [detailCollapse](https://ej2.syncfusion.com/react/documentation/api/grid#detailcollapse) events, triggered before a detail row(parent row) is expanded or collapsed. These events provide control over the expand/collapse behavior by allowing conditional logic through event arguments.
 
 In the example below, expansion is prevented for the "Nancy" row, and collapse is prevented for the "Andrew" row.
 

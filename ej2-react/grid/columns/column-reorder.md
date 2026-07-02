@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Column Reorder in React Grid Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provides column reordering through drag-and-drop functionality. This feature allows columns to be moved from one position to another within the grid, making it possible to customize the layout according to application requirements.
+The [React DataGrid](https://www.syncfusion.com/react-components/react-data-grid) component provides column reordering through drag-and-drop functionality. This feature allows columns to be moved from one position to another within the grid, making it possible to customize the layout according to application requirements.
 
 When a column header is dragged, a move indicator icon appears to show where the column will be placed. Dropping the header into the new position changes the column’s index, and the grid updates the order seamlessly. This makes it easier to organize and analyze data, especially when working with large datasets.
 
@@ -43,7 +43,7 @@ To enable column reordering in the Grid, set the [allowReordering](https://ej2.s
 
 ## Prevent reordering for specific columns
 
-By default, all columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid can be reordered when the grid-level [allowReordering](https://ej2.syncfusion.com/react/documentation/api/grid#allowreordering) property is set to `true`. However, there may be specific columns that should remain in a fixed position and not be reordered. To prevent reordering for a particular column, set the [allowReordering](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowreordering) property of that column to `false` in the column definition.
+By default, all columns in the React DataGrid can be reordered when the grid-level [allowReordering](https://ej2.syncfusion.com/react/documentation/api/grid#allowreordering) property is set to `true`. However, there may be specific columns that should remain in a fixed position and not be reordered. To prevent reordering for a particular column, set the [allowReordering](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowreordering) property of that column to `false` in the column definition.
 
 In the following example, the "ShipCity" column is prevented from being reordered by setting its [`allowReordering`](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowreordering) property to `false`:
 
@@ -66,7 +66,7 @@ In the following example, the "ShipCity" column is prevented from being reordere
 
 ## Reorder columns programmatically
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides several methods to reorder columns programmatically without interaction. These methods allow moving columns based on their index, target index, or field name, providing flexibility in column arrangement based on application logic or preferences.
+The React DataGrid provides several methods to reorder columns programmatically without interaction. These methods allow moving columns based on their index, target index, or field name, providing flexibility in column arrangement based on application logic or preferences.
 
 The Grid provides the following methods for programmatic column reordering:
 
@@ -222,7 +222,7 @@ This shows the method handling reordering of both normal and stacked header colu
 
 ## Column reorder events
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provides events that are triggered during different stages of the column reordering process. These events make it possible to run custom actions or show the current status while columns are being reordered through drag-and-drop.
+The React DataGrid component provides events that are triggered during different stages of the column reordering process. These events make it possible to run custom actions or show the current status while columns are being reordered through drag-and-drop.
 
 The Grid component supports the following column reorder events:
 

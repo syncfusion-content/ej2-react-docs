@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Header in React Grid Component
 
-The appearance of the header elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component can be customized using CSS. Here are examples for customizing the grid header, header cell, and header cell div element.
+The appearance of the header elements in the React DataGrid component can be customized using CSS. Here are examples for customizing the grid header, header cell, and header cell div element.
 
 ## Customizing the grid header
 

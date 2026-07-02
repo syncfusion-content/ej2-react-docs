@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Custom Remote Data Binding in Syncfusion React Grid
 
-The `CustomAdaptor` in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid is a powerful extension mechanism that **customizes any existing adaptor** ([UrlAdaptor](./url-adaptor), [WebApiAdaptor](./webapi-adaptor), [ODataV4Adaptor](./odatav4-adaptor), [GraphQLAdaptor](./graphql-adaptor)) to meet specific application requirements. Instead of creating an entirely new adaptor from scratch, `CustomAdaptor` extends and modifies the behavior of existing adaptors by intercepting and customizing HTTP requests and responses.
+The `CustomAdaptor` in the React DataGrid is a powerful extension mechanism that **customizes any existing adaptor** ([UrlAdaptor](./url-adaptor), [WebApiAdaptor](./webapi-adaptor), [ODataV4Adaptor](./odatav4-adaptor), [GraphQLAdaptor](./graphql-adaptor)) to meet specific application requirements. Instead of creating an entirely new adaptor from scratch, `CustomAdaptor` extends and modifies the behavior of existing adaptors by intercepting and customizing HTTP requests and responses.
 
 For detailed guidance, refer to the [DataManager CustomAdaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/custom-adaptor), which explains the usage of custom adaptors in depth. For complete server-side setup and advanced implementation details, see the [DataManager ODataV4Adaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/odatav4-adaptor), covering endpoint configuration, query handling, and recommended practices for integrating OData V4 services.
 
-Once the project creation and backend setup are complete, the next step is to render the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component on the client side.
+Once the project creation and backend setup are complete, the next step is to render the React DataGrid component on the client side.
 
 ## React Grid setup and client-side configuration
 
-After finishing the backend setup for the **ODataV4Adaptor** ASP.NET Core project, next step is to integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid on the client side by following these instructions.
+After finishing the backend setup for the **ODataV4Adaptor** ASP.NET Core project, next step is to integrate the React DataGrid on the client side by following these instructions.
 
 ### Step 1: Installing Syncfusion packages
 
@@ -62,7 +62,7 @@ createRoot(document.getElementById('root')).render(
 
 ### Step 3: Create React Grid component with CustomAdaptor
 
-Integrating a `CustomAdaptor` with the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid requires configuring the `DataManager` as the communication bridge between the Grid component and the backend data source. The `CustomAdaptor` serves as a powerful customization layer that provides complete control over how data operations—such as filtering, sorting, paging, and querying—are processed and transmitted to the server.
+Integrating a `CustomAdaptor` with the React DataGrid requires configuring the `DataManager` as the communication bridge between the Grid component and the backend data source. The `CustomAdaptor` serves as a powerful customization layer that provides complete control over how data operations—such as filtering, sorting, paging, and querying—are processed and transmitted to the server.
 
 #### Step 3.1: Creating an Extended ODataV4Adaptor:
 

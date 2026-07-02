@@ -72,7 +72,7 @@ The following example displays the max of the "Freight" field in the each group 
 
 ## Disable page wise aggregates for grouping
 
-In some cases, disabling the page-wise aggregates for grouping is necessary. By default, when grouping is enables with pagination, the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid calculates group aggregates only for the current page.
+In some cases, disabling the page-wise aggregates for grouping is necessary. By default, when grouping is enables with pagination, the React DataGrid calculates group aggregates only for the current page.
 
 To calculate aggregates across the entire grouped data, set the [groupSettings.disablePageWiseAggregates](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings#disablepagewiseaggregates) property to `true`.
 
