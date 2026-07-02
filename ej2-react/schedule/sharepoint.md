@@ -49,9 +49,9 @@ heft trust-dev-cert
 
 With these steps complete, your `my-project` SharePoint Framework solution is ready for Syncfusion<sup style="font-size:70%">&reg;</sup> component integration.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React Schedule packages
+## Add React Schedule packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React Schedule component in the project, install the corresponding npm package:
+Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use React Schedule component in the project, install the corresponding npm package:
 
 ```bash
 npm install @syncfusion/ej2-react-schedule --save
@@ -96,7 +96,7 @@ Update the TypeScript configuration `tsconfig.json` to map Syncfusion package pa
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React Schedule component
+## Add React Schedule component
 
 Follow the below steps to add the component,
 
@@ -329,5 +329,6 @@ The output will appear as follows:
 
 ## See also
 
-* [Getting Started with the Syncfusion<sup style="font-size:70%">&reg;</sup> React Schedule component](https://ej2.syncfusion.com/react/documentation/schedule/getting-started)
+* [React Schedule component](https://www.syncfusion.com/react-components/react-scheduler)
+* [Getting Started with the React Schedule component](https://ej2.syncfusion.com/react/documentation/schedule/getting-started)
 * [Getting Started with the Syncfusion<sup style="font-size:70%">&reg;</sup> React UI component](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start)

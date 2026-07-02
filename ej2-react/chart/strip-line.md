@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 # Strip line in React Chart component
 
-The React Chart component supports horizontal and vertical strip lines, providing visual guides to highlight specific ranges in the chart area. Strip lines can be added to both axes and fully customized based on visual and functional requirements. To use strip line features, inject the `StripLine` module into the `services`.
+The [React Charts](https://www.syncfusion.com/react-components/react-charts) component supports horizontal and vertical strip lines, providing visual guides to highlight specific ranges in the chart area. Strip lines can be added to both axes and fully customized based on visual and functional requirements. To use strip line features, inject the `StripLine` module into the `services`.
 
 ## Horizontal strip lines
 

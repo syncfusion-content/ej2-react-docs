@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with Next.js
 
-This guide shows how to integrate the React Gantt Chart component into a Next.js application using the App Router. For detailed component concepts and features, see the [main Getting Started guide](./getting-started).
+This guide shows how to integrate the [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component into a Next.js application using the App Router. For detailed component concepts and features, see the [main Getting Started guide](./getting-started).
 
 ## Prerequisites
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Top Tier and Bottom Tier in React Gantt Chart Component
 
-The React Gantt Chart component supports a two-tier timeline layout, enabling customization of both the top and bottom tiers through specific configuration options.
+The [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component supports a two-tier timeline layout, enabling customization of both the top and bottom tiers through specific configuration options.
 
 - [topTier](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings#toptier) and [bottomTier](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings#bottomtier): Define the structure and visibility of each timeline tier.
 - [unit](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineTierSettings#unit): Specifies the time unit for each tier, such as day, week, or month.

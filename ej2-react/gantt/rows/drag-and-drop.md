@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Row Drag and Drop in React Gantt Chart Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt chart component includes built-in support for row drag and drop, enabling rows to be rearranged within the Gantt chart or dropped into custom components. 
+The [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component includes built-in support for row drag and drop, enabling rows to be rearranged within the Gantt chart or dropped into custom components. 
 
 To enable this feature, inject the `RowDD` and `Edit` module in the Gantt. Once injected, enable the functionality by setting the [allowRowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/gantt#allowrowdraganddrop) property.
 
@@ -453,6 +453,6 @@ In the example, the drop action in **Child** position is blocked, and the dragge
 
 ## See also
 
-* [Sorting data in the Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart](https://ej2.syncfusion.com/react/documentation/gantt/sorting)
-* [Filtering data in the Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart](https://ej2.syncfusion.com/react/documentation/gantt/filtering/filtering)
+* [Sorting data in the Gantt Chart](https://ej2.syncfusion.com/react/documentation/gantt/sorting)
+* [Filtering data in the Gantt Chart](https://ej2.syncfusion.com/react/documentation/gantt/filtering/filtering)
 * [How to configure row drag and drop?](https://ej2.syncfusion.com/react/documentation/gantt/rows/drag-and-drop)

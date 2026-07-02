@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Sorting in React Gantt Chart Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component provides sorting functionality to arrange task data in ascending or descending order based on column values.
+The [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component provides sorting functionality to arrange task data in ascending or descending order based on column values.
 
 To enable sorting, set the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/gantt#allowsorting) property to **true**. You can configure sorting behavior using the [sortSettings](https://ej2.syncfusion.com/react/documentation/api/gantt/sortSettings) property.
 
@@ -118,7 +118,7 @@ You can clear all sorted columns in the Syncfusion<sup style="font-size:70%">&re
 
 ## Customize sort icon
 
-You can customize the sort icons in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component by overriding the **.e-icon-ascending** and **.e-icon-descending** CSS classes using the `content` property, as shown below:
+You can customize the sort icons in the React Gantt Chart component by overriding the **.e-icon-ascending** and **.e-icon-descending** CSS classes using the `content` property, as shown below:
 
 ```css
 .e-gantt .e-icon-ascending::before {
@@ -146,7 +146,7 @@ You can customize the sort icons in the Syncfusion<sup style="font-size:70%">&re
 
 ## Custom sorting
 
-You can customize the default sort behavior for a column in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component by assigning a [column.sortComparer](https://ej2.syncfusion.com/react/documentation/api/gantt/column#sortcomparer) function to define custom sorting logic.
+You can customize the default sort behavior for a column in the React Gantt Chart component by assigning a [column.sortComparer](https://ej2.syncfusion.com/react/documentation/api/gantt/column#sortcomparer) function to define custom sorting logic.
 
 The sorting process includes the following steps:
 
@@ -170,7 +170,7 @@ The sorting process includes the following steps:
 
 ### Display null values always at bottom
 
-You can customize the sorting behavior in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component to make `null` values consistently appear at the bottom, regardless of sort direction, by defining a column-level [column.sortComparer](https://ej2.syncfusion.com/react/documentation/api/gantt/column#sortcomparer) function. By default, `null` values are placed at the bottom when sorting in ascending order and at the top when sorting in descending order. Applying a custom `sortComparer` helps override this default logic and is particularly useful when working with datasets where `null` entries should be visually separated from valid data.
+You can customize the sorting behavior in the React Gantt Chart component to make `null` values consistently appear at the bottom, regardless of sort direction, by defining a column-level [column.sortComparer](https://ej2.syncfusion.com/react/documentation/api/gantt/column#sortcomparer) function. By default, `null` values are placed at the bottom when sorting in ascending order and at the top when sorting in descending order. Applying a custom `sortComparer` helps override this default logic and is particularly useful when working with datasets where `null` entries should be visually separated from valid data.
  
 The example below demonstrates how to display `null` values at the bottom of the Gantt Chart while sorting the `TaskName` column in both ascending and descending order.
 
@@ -190,7 +190,7 @@ The example below demonstrates how to display `null` values at the bottom of the
 
 ## Sorting custom columns
 
-You can sort custom columns of various types such as string or numeric in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component by adding them to the column collection. Initial sorting can be configured using the [sortSettings](https://ej2.syncfusion.com/react/documentation/api/gantt/sortSettings) property, or sorting can be triggered dynamically through external actions such as a button click. 
+You can sort custom columns of various types such as string or numeric in the React Gantt Chart component by adding them to the column collection. Initial sorting can be configured using the [sortSettings](https://ej2.syncfusion.com/react/documentation/api/gantt/sortSettings) property, or sorting can be triggered dynamically through external actions such as a button click. 
 
 The following code snippet demonstrates how to sort the `CustomColumn` using an external button.
 
@@ -210,7 +210,7 @@ The following code snippet demonstrates how to sort the `CustomColumn` using an 
 
 ## Prevent sorting on specific columns
 
-You can prevent sorting on specific columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component by handling the [actionBegin](https://ej2.syncfusion.com/react/documentation/gantt/events#actionbegin) or [actionComplete](https://ej2.syncfusion.com/react/documentation/gantt/events#actioncomplete) events. Alternatively, you can disable sorting for a column by setting its [allowSorting](https://ej2.syncfusion.com/react/documentation/api/gantt/column#allowsorting) property to **false** in the column configuration.
+You can prevent sorting on specific columns in the React Gantt Chart component by handling the [actionBegin](https://ej2.syncfusion.com/react/documentation/gantt/events#actionbegin) or [actionComplete](https://ej2.syncfusion.com/react/documentation/gantt/events#actioncomplete) events. Alternatively, you can disable sorting for a column by setting its [allowSorting](https://ej2.syncfusion.com/react/documentation/api/gantt/column#allowsorting) property to **false** in the column configuration.
 
 The following sample demonstrates how to prevent sorting for the **TaskID** and **StartDate** columns.
 
@@ -248,6 +248,6 @@ By default, clicking a column header switches the sort order between ascending, 
 
 ## Touch interaction
 
-To perform a tap action on a column header in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component, the [sorting](sorting#sorting) operation is triggered for the selected column. A popup appears when multi-column sorting is enabled. To sort multiple columns, tap the popup and then tap the desired column headers. The following screenshot shows Gantt touch sorting.
+To perform a tap action on a column header in the React Gantt Chart component, the [sorting](sorting#sorting) operation is triggered for the selected column. A popup appears when multi-column sorting is enabled. To sort multiple columns, tap the popup and then tap the desired column headers. The following screenshot shows Gantt touch sorting.
 
 ![Multiple Sorting](images/multiple-sorting.png)

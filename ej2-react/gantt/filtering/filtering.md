@@ -21,7 +21,7 @@ To activate filtering functionality, inject the `Filter` service in the `provide
 
 ## Apply initial filter on load
 
-To apply filtering during the initial render of the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component, define the filter conditions using a **predicate** object within the [filterSettings.columns](https://ej2.syncfusion.com/react/documentation/api/gantt/filterSettings#columns) property.
+To apply filtering during the initial render of the React Gantt Chart component, define the filter conditions using a **predicate** object within the [filterSettings.columns](https://ej2.syncfusion.com/react/documentation/api/gantt/filterSettings#columns) property.
 
 The following sample demonstrates how to apply an initial filter where **TaskName** starts with **Identify** and **TaskID** equals **2**, using a `Predicate` condition set to **and**.
 
@@ -87,7 +87,7 @@ The React Gantt Chart component supports multiple filtering modes, which can be 
 
 ## Enable diacritic-sensitive filtering
 
-By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component ignores diacritic characters during filtering. To enable filtering with diacritic sensitivity, set the [filterSettings.ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/gantt/filterSettings#ignoreaccent) property to **true**.
+By default, the React Gantt Chart component ignores diacritic characters during filtering. To enable filtering with diacritic sensitivity, set the [filterSettings.ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/gantt/filterSettings#ignoreaccent) property to **true**.
 
 The following sample demonstrates this behavior: when filtering the **TaskName** column, entries containing diacritic characters (e.g., “Próject”, “Projéct”) will be matched if you enter the base text **Project**.
 

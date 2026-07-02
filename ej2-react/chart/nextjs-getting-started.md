@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Creating a Next.js Application Using Syncfusion React Chart Component
 
-This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Chart component.
+This section provides a step-by-step guide for setting up a Next.js application and integrating the [React Charts](https://www.syncfusion.com/react-components/react-charts) component.
 
 ## What is Next.js?
 
@@ -170,4 +170,4 @@ Open the generated local URL (for example, `/localhost:3000/`) from terminal in 
 
 To learn more about the functionality of the Chart component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/chart/getting-started#module-injection).
 
-> [View the NEXT.js Chart sample in the GitHub repository](https://github.com/SyncfusionExamples/ej2-nextjs-chart).
+N> [View the NEXT.js Chart sample in the GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-chart-component-in-nextjs). Looking for the full React Charts component overview, features, pricing, and documentation? Visit the [React Charts](https://www.syncfusion.com/react-components/react-charts) page.

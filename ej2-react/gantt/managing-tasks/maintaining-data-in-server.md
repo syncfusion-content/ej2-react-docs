@@ -14,7 +14,7 @@ Maintaining Gantt data in a server enables persistent project updates through RE
 
 ## Configure URL adaptor with batch updates
 
-Configure the Gantt Chart component to fetch and update data using DataManager with `UrlAdaptor`. Set the data source to a DataManager instance with `url` for the server endpoint to retrieve data and `batchUrl` for batch CRUD operations (insert, edit, delete). The server returns JSON with `result` as the data list and `count` as the total records. This setup supports large datasets and batch updates, automatically handling related tasks, such as parent or predecessor adjustments, via the `BatchSave` endpoint.
+Configure the [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component to fetch and update data using DataManager with `UrlAdaptor`. Set the data source to a DataManager instance with `url` for the server endpoint to retrieve data and `batchUrl` for batch CRUD operations (insert, edit, delete). The server returns JSON with `result` as the data list and `count` as the total records. This setup supports large datasets and batch updates, automatically handling related tasks, such as parent or predecessor adjustments, via the `BatchSave` endpoint.
 
 ```ts
 import * as React from 'react';
