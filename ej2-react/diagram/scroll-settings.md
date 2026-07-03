@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Scroll Settings in React Diagram Component
 
-The diagram component provides comprehensive scrolling capabilities through both vertical and horizontal scrollbars, as well as mouse wheel navigation. The diagram's [`scrollSettings`](https://helpej2.syncfusion.com/react/documentation/api/diagram/scrollSettingsModel/) enable developers to monitor the current scroll status, viewport dimensions, zoom levels, and programmatically control diagram navigation. These settings are essential for managing large diagrams and providing smooth user interaction experiences.
+The [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component provides comprehensive scrolling capabilities through both vertical and horizontal scrollbars, as well as mouse wheel navigation. The diagram's [`scrollSettings`](https://helpej2.syncfusion.com/react/documentation/api/diagram/scrollSettingsModel/) enable developers to monitor the current scroll status, viewport dimensions, zoom levels, and programmatically control diagram navigation. These settings are essential for managing large diagrams and providing smooth user interaction experiences.
 
 ## Access and Customize Scroll Settings
 

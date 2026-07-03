@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Interactive Port Features in React Diagram Component
 
-Ports in React Diagram components support various interactive features that enhance user workflow and diagram creation efficiency. This guide covers drawing connectors from ports, drag functionality, automatic port creation, tooltips, and event handling.
+Ports in [React Diagram](https://www.syncfusion.com/react-components/react-diagram) components support various interactive features that enhance user workflow and diagram creation efficiency. This guide covers drawing connectors from ports, drag functionality, automatic port creation, tooltips, and event handling.
 
 ## Draw Connector from Port
 

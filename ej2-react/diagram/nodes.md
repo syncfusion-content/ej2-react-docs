@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Nodes in React Diagram Component
 
-Nodes are graphical objects that visually represent entities, processes, data flow, or any business logic within diagrams. They serve as the fundamental building blocks for creating flowcharts, organizational charts, network diagrams, and other visual representations. Each node can be customized with different shapes, sizes, colors, and interactive behaviors to suit specific diagram requirements.
+Nodes are graphical objects that visually represent entities, processes, data flow, or any business logic within diagrams. They serve as the fundamental building blocks for creating flowcharts, organizational charts, network diagrams, and other visual representations. Each node can be customized with different shapes, sizes, colors, and interactive behaviors to suit specific [React Diagram](https://www.syncfusion.com/react-components/react-diagram) requirements.
 
 ![Node](images/node.png)
 

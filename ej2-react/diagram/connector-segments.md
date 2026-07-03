@@ -14,7 +14,7 @@ Connector segments define the path and visual appearance of connectors between n
 
 ## Segment Types
 
-The React Diagram component supports three primary types of connector segments, each serving different visual and functional requirements:
+The [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component supports three primary types of connector segments, each serving different visual and functional requirements:
 
 * Straight
 * Orthogonal

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Tools in React Diagram Component
 
-The React Diagram component provides a comprehensive set of interactive tools that enable users to create, modify, and navigate diagrams efficiently. These tools facilitate real-time interaction with diagram elements through mouse and keyboard operations.
+The [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component provides a comprehensive set of interactive tools that enable users to create, modify, and navigate diagrams efficiently. These tools facilitate real-time interaction with diagram elements through mouse and keyboard operations.
 
 ## Overview
 

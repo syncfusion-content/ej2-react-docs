@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Loading React Diagram from PostgreSQL database
 
-The Syncfusion® React Diagram component allows visualization of organizational chart layout using data from a PostgreSQL database through a REST API. This guide explains how to set up the PostgreSQL database, create a Node.js backend service, and link the data to the React Diagram component to display an organizational chart layout.
+The [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component allows visualization of organizational chart layout using data from a PostgreSQL database through a REST API. This guide explains how to set up the PostgreSQL database, create a Node.js backend service, and link the data to the React Diagram component to display an organizational chart layout.
 
 > **Note**: This guide works with React Diagram version 28.x or later. The REST API needs to return an array of JSON objects with **id**, **parent_id**, and **role** fields for correct data binding.
 
@@ -20,7 +20,7 @@ This integration workflow connects:
 
 * **PostgreSQL** – Stores the organizational chart data.
 * **Node.js + Express** – REST API that serves JSON data from PostgreSQL.
-* **React + Syncfusion® EJ2 Diagram** – data binding via DataManager and rendering of an organizational chart layout.
+* **React + EJ2 Diagram** – data binding via DataManager and rendering of an organizational chart layout.
 
 ## Prerequisites
 
@@ -622,7 +622,7 @@ function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1>Syncfusion® React Diagram - Organizational Chart Layout</h1>
+        <h1>React Diagram - Organizational Chart Layout</h1>
       </header>
       <main className="app-main">
         <OrganizationalLayout />
@@ -757,7 +757,7 @@ An empty diagram (no nodes visible) can result from API failures, empty database
 
 ## See Also
 
-- [Syncfusion® React Diagram Documentation](https://ej2.syncfusion.com/react/documentation/diagram/getting-started)
+- [React Diagram Documentation](https://ej2.syncfusion.com/react/documentation/diagram/getting-started)
 - [DataManager API Reference](https://ej2.syncfusion.com/react/documentation/data/getting-started)
 - [Organizational Chart Layout](https://ej2.syncfusion.com/react/documentation/diagram/org-chart)
 - [PostgreSQL Node.js Driver](https://node-postgres.com/)

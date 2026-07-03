@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 ## Core Layer Properties
 
-In a diagram, [Layers](https://ej2.syncfusion.com/react/documentation/api/diagram/layerModel/)  enable modification of properties for all shapes assigned to a specific layer. The primary configurable properties include:
+In a [React Diagram](https://www.syncfusion.com/react-components/react-diagram), [Layers](https://ej2.syncfusion.com/react/documentation/api/diagram/layermodel)  enable modification of properties for all shapes assigned to a specific layer. The primary configurable properties include:
 
 * **Objects** - Define which elements belong to the layer.
 * **Visible** - Control layer visibility.
@@ -23,7 +23,7 @@ In a diagram, [Layers](https://ej2.syncfusion.com/react/documentation/api/diagra
 
 ## Objects
 
-The layer's [objects](https://ej2.syncfusion.com/react/documentation/api/diagram/layer/#objects) property specifies which diagram elements belong to that layer. This property contains a collection of element IDs that defines the categories of nodes and connectors the layer encompasses.
+The layer's [objects](https://ej2.syncfusion.com/react/documentation/api/diagram/layer#objects) property specifies which diagram elements belong to that layer. This property contains a collection of element IDs that defines the categories of nodes and connectors the layer encompasses.
 
 **Use case**: Separate different types of diagram elements for independent management - for example, keeping background elements in one layer and interactive elements in another.
 
@@ -43,7 +43,7 @@ In the following example, basic shapes are categorized in layer 1, and flow shap
 
 ## Visible
 
-The layer's [visible](https://ej2.syncfusion.com/react/documentation/api/diagram/layer/#visible)property controls the visibility of all elements assigned to the layer. This allows selective display of different diagram sections without removing elements permanently.
+The layer's [visible](https://ej2.syncfusion.com/react/documentation/api/diagram/layer#visible)  property controls the visibility of all elements assigned to the layer. This allows selective display of different diagram sections without removing elements permanently.
 
 **Use case**: Create diagrams with multiple views where users can toggle between different information layers, such as showing only critical path items in a project diagram.
 
@@ -62,7 +62,7 @@ In the following example, the visibility of layer one is set to false. By defaul
 
 ## Lock
 
-The layer's [lock](https://ej2.syncfusion.com/react/documentation/api/diagram/layer/#lock) property prevents or allows changes to element dimensions and positions. When a layer is locked, all interactions with objects in that layer are disabled, including selecting, dragging, rotating, and connecting operations.
+The layer's [lock](https://ej2.syncfusion.com/react/documentation/api/diagram/layer#lock) property prevents or allows changes to element dimensions and positions. When a layer is locked, all interactions with objects in that layer are disabled, including selecting, dragging, rotating, and connecting operations.
 
 **Use case**: Protect template elements or background graphics from accidental modification while allowing users to work with other diagram elements.
 
@@ -83,7 +83,7 @@ In the following example, the objects in layer one are locked. By default, the `
 
 ## AddInfo
 
-The [`addInfo`](https://ej2.syncfusion.com/react/documentation/api/diagram/layer/#addinfo) property allows storage of additional custom information with layers. This can be useful for storing metadata, configuration settings, or application-specific data associated with the layer.
+The [`addInfo`](https://ej2.syncfusion.com/react/documentation/api/diagram/layer#addinfo) property allows storage of additional custom information with layers. This can be useful for storing metadata, configuration settings, or application-specific data associated with the layer.
 
 **Use case**: Store layer descriptions, creation timestamps, owner information, or custom application data for enhanced layer management.
 
@@ -167,9 +167,9 @@ root.render(<App />);
 
 ## Add Layer at Runtime
 
-Layers can be added at runtime using the [`addLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addlayer) public method.
+Layers can be added at runtime using the [`addLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram#addlayer) public method.
 
-The layer's [`ID`](https://ej2.syncfusion.com/react/documentation/api/diagram/layer/#id) property defines the ID of the layer, which is used to find the layer at runtime and apply any customizations. You can also add new objects to the new layer using the `addLayer` method.
+The layer's [`ID`](https://ej2.syncfusion.com/react/documentation/api/diagram/layer#id) property defines the ID of the layer, which is used to find the layer at runtime and apply any customizations. You can also add new objects to the new layer using the `addLayer` method.
 
 The following code illustrates how to add a new layer with new connectors stored in an object array of the new layer:
 
@@ -187,7 +187,7 @@ The following code illustrates how to add a new layer with new connectors stored
 
 ## Remove Layer at Runtime
 
-Layers can be removed at runtime by using the [`removeLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram/#removelayer) public method.
+Layers can be removed at runtime by using the [`removeLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram#removelayer) public method.
 
 To remove a layer, pass the ID of the layer you want to remove as a parameter to the `removeLayer` method.
 
@@ -207,7 +207,7 @@ The following code illustrates how to remove a layer.
 
 ### MoveObjects
 
-You can move objects from one layer to another dynamically using the [`moveObjects`](https://ej2.syncfusion.com/react/documentation/api/diagram/#moveobjects) public method of the diagram control. This can be useful for managing complex diagrams with multiple layers where you need to update the categorization of elements based on user interaction or other dynamic conditions.
+You can move objects from one layer to another dynamically using the [`moveObjects`](https://ej2.syncfusion.com/react/documentation/api/diagram#moveobjects) public method of the diagram control. This can be useful for managing complex diagrams with multiple layers where you need to update the categorization of elements based on user interaction or other dynamic conditions.
 
 The following code illustrates how to move objects from one layer to another layer.
 
@@ -224,12 +224,12 @@ The following code illustrates how to move objects from one layer to another lay
 
 ## Z-Index
 
-[`zIndex`](https://ej2.syncfusion.com/react/documentation/api/diagram/layer/#zindex) property of a layer defines its position in the stacking order within the diagram. Higher z-index values render above lower values, allowing control over which layers appear in front of others.
+[`zIndex`](https://ej2.syncfusion.com/react/documentation/api/diagram/layer#zindex) property of a layer defines its position in the stacking order within the diagram. Higher z-index values render above lower values, allowing control over which layers appear in front of others.
 
 
 ### Bring Layer Forward
 
-Move a layer forward in the stacking order using the  [`bringLayerForward`](https://ej2.syncfusion.com/react/documentation/api/diagram/#bringlayerforward) public method.
+Move a layer forward in the stacking order using the  [`bringLayerForward`](https://ej2.syncfusion.com/react/documentation/api/diagram#bringlayerforward) public method.
 
 The following code illustrates how to bring forward to layer.
 
@@ -242,7 +242,7 @@ diagram.bringLayerForward('layer1');
 
 ### Send Layer Backward
 
-Move a layer backward in the stacking order using the [`sendLayerBackward`](https://ej2.syncfusion.com/react/documentation/api/diagram/#sendlayerbackward) public method.
+Move a layer backward in the stacking order using the [`sendLayerBackward`](https://ej2.syncfusion.com/react/documentation/api/diagram#sendlayerbackward) public method.
 
 
 ```ts
@@ -266,13 +266,13 @@ The following code illustrates how to send the layer forward/backward to another
 
 ### Layer and Objects Rendering Order
 
-The rendering of diagram elements with layer properties involves grouping them within a `diagram_diagramLayer` for basic shape nodes and `diagram_nativeLayer_svg` for SVG-native elements. Even if different types of nodes are added within the same layer, the rendering at the DOM level occurs in separate layers. Therefore, when executing layering commands like [`bringLayerForward`](https://ej2.syncfusion.com/react/documentation/api/diagram/#bringlayerforward) and [`sendLayerBackward`](https://ej2.syncfusion.com/react/documentation/api/diagram/#sendlayerbackward), the native SVG elements will always render above the basic shape elements. 
+The rendering of diagram elements with layer properties involves grouping them within a `diagram_diagramLayer` for basic shape nodes and `diagram_nativeLayer_svg` for SVG-native elements. Even if different types of nodes are added within the same layer, the rendering at the DOM level occurs in separate layers. Therefore, when executing layering commands like [`bringLayerForward`](https://ej2.syncfusion.com/react/documentation/api/diagram#bringlayerforward) and [`sendLayerBackward`](https://ej2.syncfusion.com/react/documentation/api/diagram#sendlayerbackward), the native SVG elements will always render above the basic shape elements. 
 
 The order of rendering is as follows: HTML shapes -> SVG shapes -> Path data shapes & Basic shapes.
 
 ## Clone Layer
 
-Layers can be cloned with its object by using the [`cloneLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram/#clonelayer) public method.This creates an identical copy of the layer and all its assigned elements.
+Layers can be cloned with its object by using the [`cloneLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram#clonelayer) public method.This creates an identical copy of the layer and all its assigned elements.
 
 **Use case**: Create template layers or duplicate complex layer configurations for reuse in different diagram sections.
 
@@ -297,7 +297,7 @@ The active layer represents the layer with the highest z-index in a diagram. Whe
 
 ### Get ActiveLayer
 
-Retrieve the current active layer of the diagram using the [`getActiveLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram/#getactivelayer) public method.
+Retrieve the current active layer of the diagram using the [`getActiveLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram#getactivelayer) public method.
 
 The following code illustrates how fetch active layer from the diagram
 
@@ -310,7 +310,7 @@ diagram.getActiveLayer();
 
 ### Set ActiveLayer
 
-You can set any layer to be the active layer of the diagram by using the[`setActiveLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram/#setactivelayer) public method.
+You can set any layer to be the active layer of the diagram by using the[`setActiveLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram#setactivelayer) public method.
 
 The following code illustrates how to set active layer for diagram
 

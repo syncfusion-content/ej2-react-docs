@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Print in React Diagram Component
 
-The React Diagram component provides comprehensive printing capabilities that allow users to generate high-quality printed outputs of their diagrams. The [`print`](https://ej2.syncfusion.com/react/documentation/api/diagram/#print) method enables printing the diagram as an image with extensive customization options for different printing scenarios.
+The [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component provides comprehensive printing capabilities that allow users to generate high-quality printed outputs of their diagrams. The [`print`](https://ej2.syncfusion.com/react/documentation/api/diagram/#print) method enables printing the diagram as an image with extensive customization options for different printing scenarios.
 
 ```JavaScript
 

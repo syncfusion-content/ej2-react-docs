@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Diagram Component
 
-The Diagram component provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications. WAI-ARIA accessibility support is achieved through attributes like `aria-label`, which provide information about elements in a document for assistive technologies such as screen readers.
+The [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications. WAI-ARIA accessibility support is achieved through attributes like `aria-label`, which provide information about elements in a document for assistive technologies such as screen readers.
 
 The following table outlines accessibility compliance for the Diagram component:
 
@@ -108,13 +108,13 @@ The Diagram component supports screen readers, and its information is properly c
 
 ### Mobile Device Support
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component is designed to be user-friendly and accessible on mobile devices, including for users with disabilities. The component is responsive, adapts to various screen sizes and orientations, and provides touch-friendly interactions.
+React Diagram component is designed to be user-friendly and accessible on mobile devices, including for users with disabilities. The component is responsive, adapts to various screen sizes and orientations, and provides touch-friendly interactions.
 
 
 
 ### Keyboard Navigation Support
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component supports keyboard navigation, allowing users who rely on assistive technologies to navigate and interact with the component effectively.
+React Diagram component supports keyboard navigation, allowing users who rely on assistive technologies to navigate and interact with the component effectively.
 
 ## Keyboard Interaction
 

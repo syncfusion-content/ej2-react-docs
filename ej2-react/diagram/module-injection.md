@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Module Injection in React Diagram Component
 
-The Diagram component is divided into feature-based modules. To enable a specific feature, inject the corresponding service into the Diagram component. For basic diagram functionality, modules are not required. Additional modules are used to enable advanced features such as layouts, data binding, and BPMN.
+The [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component is divided into feature-based modules. To enable a specific feature, inject the corresponding service into the Diagram component. For basic diagram functionality, modules are not required. Additional modules are used to enable advanced features such as layouts, data binding, and BPMN.
 
 ## Available Modules
 
