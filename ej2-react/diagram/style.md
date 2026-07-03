@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Style in React Diagram Component
 
-The React Diagram component provides extensive styling capabilities through CSS classes. This guide demonstrates how to customize various visual elements including connector handles, selection indicators, and interactive controls using CSS overrides.
+The [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component provides extensive styling capabilities through CSS classes. This guide demonstrates how to customize various visual elements including connector handles, selection indicators, and interactive controls using CSS overrides.
 
 ## Customizing Connector Endpoint Handles
 

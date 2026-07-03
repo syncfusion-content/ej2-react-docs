@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Diagram Component
 
-This section explains how to create a React application from scratch and build a simple diagram using the Syncfusion® Diagram component.
+This section explains how to create a React application from scratch and build a simple diagram using the [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/mcp-server/ai-coding-assistant/getting-started)
 
@@ -270,3 +270,5 @@ npm run dev
 Open the generated local URL in the browser. The application displays the diagram as shown below:
 
  ![Getting started](./images/Getting-started.png)
+
+N> Looking for the full React Diagram component overview, features, pricing, and documentation? Visit the [React Diagram](https://www.syncfusion.com/react-components/react-diagram) page.

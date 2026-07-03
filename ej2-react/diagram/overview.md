@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Overview Component in React Diagram Component
 
-The Overview component provides a miniature preview of the entire diagram content, enabling efficient navigation and viewport management for large diagrams. This component displays a scaled-down version of the diagram with a highlighted rectangle representing the current viewport, allowing users to quickly navigate to specific areas without manual zooming and panning.
+The Overview component provides a miniature preview of the entire [React Diagram](https://www.syncfusion.com/react-components/react-diagram) content, enabling efficient navigation and viewport management for large diagrams. This component displays a scaled-down version of the diagram with a highlighted rectangle representing the current viewport, allowing users to quickly navigate to specific areas without manual zooming and panning.
 
 ## When to Use Overview
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Port positioning in React Diagram Component
 
-The React Diagram component provides flexible options for positioning ports on nodes. Ports can be precisely positioned using offset coordinates, alignment properties, and margin values to create professional diagram layouts that meet specific design requirements.
+The [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component provides flexible options for positioning ports on nodes. Ports can be precisely positioned using offset coordinates, alignment properties, and margin values to create professional diagram layouts that meet specific design requirements.
 
 ## Understanding Port Offset Positioning
 

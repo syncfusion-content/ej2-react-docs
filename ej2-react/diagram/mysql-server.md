@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Connecting MySQL Server to Syncfusion® React Diagram using LINQ2DB
 
-This guide explains how to load and visualize organizational chart data stored in a MySQL database using the Syncfusion® React Diagram component. It demonstrates how to configure MySQL, create the required database schema, expose the data through an ASP.NET Core Web API, and bind the API response to a React application to render an organizational chart.
+This guide explains how to load and visualize organizational chart data stored in a MySQL database using the [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component. It demonstrates how to configure MySQL, create the required database schema, expose the data through an ASP.NET Core Web API, and bind the API response to a React application to render an organizational chart.
 
 **What is LINQ2DB?**
 
@@ -172,7 +172,7 @@ The database can also be created using the MySQL Command Line Client.
 
 ## Integrating MySQL Server with ASP.NET Core Web API
 
-This section explains how to create an ASP.NET Core Web API project that connects to MySQL and exposes data for use by the Syncfusion® React Diagram component.
+This section explains how to create an ASP.NET Core Web API project that connects to MySQL and exposes data for use by the React Diagram component.
 
 ### Creating the Web API project using Visual Studio
 
@@ -436,7 +436,7 @@ app.Run();
 
 The backend API is now configured.
 
-## Integrating Syncfusion® React Diagram
+## Integrating React Diagram
 
 The following steps describe how to render the Diagram and connect it to the MySQL Server back-end.
 
@@ -473,7 +473,7 @@ Add the required CSS references to the **src/index.css** file to apply styling t
 
 For this project, the "Bootstrap 5.3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion® React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.
 
-### Step 3: Add Syncfusion® React Diagram
+### Step 3: Add React Diagram
 
 Create a basic Diagram component in **src/App.tsx**:
 
@@ -740,6 +740,6 @@ You can clone the sample repository, update the MySQL connection string, and run
 
 ## See also
 
-- [Syncfusion® React Diagram Getting Started](https://ej2.syncfusion.com/react/documentation/diagram/getting-started)
+- [React Diagram Getting Started](https://ej2.syncfusion.com/react/documentation/diagram/getting-started)
 - [Data Binding Documentation](https://ej2.syncfusion.com/react/documentation/diagram/data-binding)
 - [Organizational Chart Layout](https://ej2.syncfusion.com/react/documentation/diagram/org-chart)

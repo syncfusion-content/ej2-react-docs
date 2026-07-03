@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Expand and Collapse Nodes in React Diagram Component
 
-The React Diagram component provides built-in support for expanding and collapsing nodes, enabling users to create hierarchical views where child nodes can be hidden or shown dynamically. This functionality is particularly useful for organizational charts, mind maps, and tree structures where managing visual complexity is essential.
+The [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component provides built-in support for expanding and collapsing nodes, enabling users to create hierarchical views where child nodes can be hidden or shown dynamically. This functionality is particularly useful for organizational charts, mind maps, and tree structures where managing visual complexity is essential.
 
 The expand and collapse feature allows users to:
 - Compress hierarchical views to show only root elements.

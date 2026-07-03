@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD010 -->
 
-In Graphical User Interface (GUI), a tooltip is a message that appears when the mouse hovers over an element. Tooltips enhance user experience by providing contextual information, guidance, and feedback without cluttering the interface. The diagram component provides comprehensive tooltip support while dragging, resizing, rotating nodes, and when the mouse hovers over any diagram element.
+In Graphical User Interface (GUI), a tooltip is a message that appears when the mouse hovers over an element. Tooltips enhance user experience by providing contextual information, guidance, and feedback without cluttering the interface. The [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component provides comprehensive tooltip support while dragging, resizing, rotating nodes, and when the mouse hovers over any diagram element.
 
 ## Default Tooltip
 

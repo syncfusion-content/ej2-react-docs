@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Appearance of Nodes in React Diagram Component
 
-To customize the appearance and position of nodes in the React Diagram component, refer to the video link below.
+To customize the appearance and position of nodes in the [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component, refer to the video link below.
 
 {% youtube "https://www.youtube.com/watch?v=pn02S_rwupw" %}
 

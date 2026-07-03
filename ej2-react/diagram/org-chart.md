@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Organizational Chart Layout in React Diagram Component
 
-An organizational chart is a diagram that displays the hierarchical structure of an organization, showing reporting relationships and roles within the company. The React Diagram component provides specialized support for creating professional organizational charts through automatic layout algorithms. To create an organizational chart, set the [`type`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout/#type) of layout should be set as an **OrganizationalChart**.
+An organizational chart is a diagram that displays the hierarchical structure of an organization, showing reporting relationships and roles within the company. The [React Diagram](https://www.syncfusion.com/react-components/react-diagram)component provides specialized support for creating professional organizational charts through automatic layout algorithms. To create an organizational chart, set the [`type`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout/#type) of layout should be set as an **OrganizationalChart**.
 
 
 ## Organizational Chart with DataSource
