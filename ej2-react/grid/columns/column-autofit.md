@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # AutoFit Columns in React Grid Component
 
-The AutoFit feature in the React DataGrid allows columns to automatically adjust their widths based on the maximum content width within each column. This ensures that all cell values are fully visible without truncation or wrapping.
+The AutoFit feature in the React Data Grid allows columns to automatically adjust their widths based on the maximum content width within each column. This ensures that all cell values are fully visible without truncation or wrapping.
 
 **Usage:**
 

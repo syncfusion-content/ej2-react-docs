@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React DataGrid Component in Preact Framework
 
-This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React DataGrid component.
+This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com) project and integrating the React Data Grid component.
 
 `Preact` is a fast and lightweight JavaScript library for building user interfaces. It's often used as an alternative to larger frameworks like React. The key difference is that Preact is designed to be smaller in size and faster in performance, making it a good choice for projects where file size and load times are critical factors. 
 
@@ -88,7 +88,7 @@ cd my-project
 
 Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React Grids package
+## Adding React Data Grid packages
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available on [npmjs.com](https://www.npmjs.com/search?q=ej2-react). This article uses the [React DataGrid component](https://www.syncfusion.com/react-components/react-data-grid) as an example. To use the React DataGrid component in the project, the `@syncfusion/ej2-react-grids` package needs to be installed using the following command:
 
@@ -106,35 +106,9 @@ yarn add @syncfusion/ej2-react-grids
 
 ## Adding CSS reference
 
-You can add the CSS files required for the Syncfusion React DataGrid component using one of the following methods.
+You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> React component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) to know more about built-in themes and different ways to refer to theme's in a React project.
 
-### Option 1: Add CSS references from a theme package
-
-Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid component can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
-
-Install the **Material 3** theme package using the following command:
-
-{% tabs %}
-{% highlight bash tabtitle="npm" %}
-
-npm install @syncfusion/ej2-material3-theme --save
-
-{% endhighlight %}
-{% endtabs %}
-
-Then add the following CSS reference to the **src/App.css** file:
-
-{% tabs %}
-{% highlight css tabtitle="App.css" %}
-
-@import "../node_modules/@syncfusion/ej2-material3-theme/grids/grid/index.css";
-
-{% endhighlight %}
-{% endtabs %}
-
-### Option 2: Add CSS references from component packages
-
-After installing the DataGrid package, the required CSS files are available in the corresponding Syncfusion packages under the **node_modules/@syncfusion** directory. Add the following CSS references to the **src/App.css** file:
+In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the DataGrid component and its dependents were imported into the **src/style.css** file.
 
 {% tabs %}
 {% highlight css tabtitle="~/src/style.css" %}

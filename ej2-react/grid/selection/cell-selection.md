@@ -12,10 +12,6 @@ domainurl: ##DomainURL##
 
 Cell selection in the Grid component allows interactive selection of specific cells or ranges of cells within the grid. Selection can be performed through mouse clicks or arrow keys (up, down, left, and right). This functionality allows highlighting, manipulating, or performing actions on specific cells within the grid.
 
-For an overview of the cell selection feature available in the React Grid, refer to the following video:
-
-{% youtube "https://www.youtube.com/watch?v=yHUAftfLd6w" %}
-
 > To enable cell selection, set the [selectionSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings#mode) property to either `Cell` or `Both`. This property determines the selection mode of the grid.
 
 ## Single cell selection 

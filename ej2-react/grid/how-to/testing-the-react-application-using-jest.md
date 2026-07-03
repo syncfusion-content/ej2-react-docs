@@ -20,7 +20,7 @@ Ensure that node version 14 or higher is installed. If not, install a supported 
 
 - Create a React application and install the Grid package:
 
-Follow the [React DataGrid Getting Started](https://ej2.syncfusion.com/react/documentation/grid/getting-started) guide to create a React app and install the required React DataGrid package.
+Follow the [React Data Grid Getting Started](https://ej2.syncfusion.com/react/documentation/grid/getting-started) guide to create a React app and install the required React Data Grid package.
 
 - Install Jest:
 

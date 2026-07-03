@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Lazy loading in React refers to dynamically loading data as needed, rather than all at once, to enhance application performance by minimizing initial load time.
 
-The React DataGrid supports lazy load grouping, which optimizes the rendering of large datasets by loading only the required grouped data on demand. Initially, only the top-level group caption rows are rendered in a collapsed state. Child rows are fetched and displayed dynamically when a group is expanded.
+The React Data Grid supports lazy load grouping, which optimizes the rendering of large datasets by loading only the required grouped data on demand. Initially, only the top-level group caption rows are rendered in a collapsed state. Child rows are fetched and displayed dynamically when a group is expanded.
 
 To enable this feature, set the [groupSettings.enableLazyLoading](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings#enableLazyLoading) property to `true`. The following example demonstrates how to configure lazy load grouping using the `groupSettings.enableLazyLoading` property.
 

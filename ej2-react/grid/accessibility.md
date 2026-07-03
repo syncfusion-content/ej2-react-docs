@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in the React Grid Component
 
-The [React DataGrid](https://www.syncfusion.com/react-components/react-data-grid) component follows major accessibility guidelines and standards, including the [Americans with Disabilities Act (ADA)](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI‑ARIA roles](https://www.w3.org/TR/wai-aria#roles). These standards ensure the grid is usable with assistive technologies and keyboard‑only navigation. 
+The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component follows major accessibility guidelines and standards, including the [Americans with Disabilities Act (ADA)](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI‑ARIA roles](https://www.w3.org/TR/wai-aria#roles). These standards ensure the grid is usable with assistive technologies and keyboard‑only navigation. 
 
 The sections below describe the grid's accessibility compliance and behavior.
 
@@ -70,7 +70,7 @@ The React Grid follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/g
 | `aria-labelledby` | Provides an accessible name for specific elements such as filter dialog items. |
 | `aria-describedby` | Provides descriptive help text for focused header cells. |
 
-The React DataGrid uses a two‑table structure for header and content rendering. This improves screen reader interpretation but may trigger warnings in automated accessibility tools. These warnings do not necessarily affect actual assistive-technology usability. Known checker tool warnings include:
+The React Data Grid uses a two‑table structure for header and content rendering. This improves screen reader interpretation but may trigger warnings in automated accessibility tools. These warnings do not necessarily affect actual assistive-technology usability. Known checker tool warnings include:
 
 * aria-required-children: This warning can occur when the grid renders certain feature elements (for example, textarea or toolbar content). It may be reported when toolbar or grouping features are enabled.
 
@@ -203,7 +203,7 @@ The Grid provides keyboard navigation and follows WAI‑ARIA [keyboard interacti
 
 ### Preventing default key actions
 
-The React DataGrid provides the capability to disable the default key action behavior according to your needs.
+The React Data Grid provides the capability to disable the default key action behavior according to your needs.
 
 This allows the application to intercept and modify the response when specific keys are pressed within the web interface.
 
@@ -229,7 +229,7 @@ This allows the application to intercept and modify the response when specific k
 
 ### Custom shortcut keys
 
-The React DataGrid component allows improving the usability of keyboard shortcuts for various grid actions and navigation.
+The React Data Grid component allows improving the usability of keyboard shortcuts for various grid actions and navigation.
 
 Besides the built-in keyboard navigation features, custom keyboard shortcuts can be created to perform specific tasks.
 
@@ -251,7 +251,7 @@ Additionally, the default actions for these keyboard shortcuts related to groupi
 * Delete
 * Enter
 
-Additional custom shortcuts and actions can be added as needed to enhance the capabilities of the React DataGrid component.
+Additional custom shortcuts and actions can be added as needed to enhance the capabilities of the React Data Grid component.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

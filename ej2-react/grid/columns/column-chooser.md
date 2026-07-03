@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Column Chooser in React Grid component
 
-The React DataGrid includes a built-in Column Chooser feature that allows columns to be shown or hidden through a simple dialog with checkboxes.
+The React Data Grid includes a built-in Column Chooser feature that allows columns to be shown or hidden through a simple dialog with checkboxes.
 
 To enable the Column Chooser, configure the following properties in the Grid component:
 

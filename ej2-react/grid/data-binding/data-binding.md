@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Data binding is a fundamental technique that empowers the Grid component to integrate data into its interface, enabling the creation of dynamic and interactive grid views. This feature is particularly valuable when working with large datasets or when data needs to be fetched remotely. 
 
-The React DataGrid utilizes the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started), which supports both local binding with JavaScript object arrays and remote binding with RESTful JSON data services. The key property, [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource), can be assigned to a DataManager instance or a collection of JavaScript object arrays.
+The React Data Grid utilizes the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started), which supports both local binding with JavaScript object arrays and remote binding with RESTful JSON data services. The key property, [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource), can be assigned to a DataManager instance or a collection of JavaScript object arrays.
 
 It supports two kinds of data binding methods:
 
@@ -25,7 +25,7 @@ To learn about binding local or remote data to the React Grid, refer to this vid
 
 ## Loading indicator
 
-The React DataGrid provides a loading animation feature, which makes it easy to identify when data is being loaded or refreshed. This feature provides a clear understanding of the grid's current state and actions, such as sorting, filtering, grouping, and more.
+The React Data Grid provides a loading animation feature, which makes it easy to identify when data is being loaded or refreshed. This feature provides a clear understanding of the grid's current state and actions, such as sorting, filtering, grouping, and more.
 
 To achieve this, the [loadingIndicator.indicatorType](https://ej2.syncfusion.com/react/documentation/api/grid/loadingIndicatorModel) property of the grid can be utilized, which supports two types of indicators:
 
@@ -134,7 +134,7 @@ export default App;
 
 ## Refresh the datasource using property
 
-Refreshing the data source in a React DataGrid involves updating the data that the grid displays dynamically. This operation reflects changes in the underlying data without reloading the entire page or component.
+Refreshing the data source in a React Data Grid involves updating the data that the grid displays dynamically. This operation reflects changes in the underlying data without reloading the entire page or component.
 
 To achieve this, use the [datasource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasource) property in conjunction with the `setProperties` method. This ensures the grid reflects changes in the `dataSource` without requiring a complete page or component reload.
 
@@ -174,7 +174,7 @@ The following example demonstrates adding a new record to the data source throug
 
 ## Dynamically change the datasource or columns or both
 
-The [React DataGrid](https://www.syncfusion.com/react-components/react-data-grid) component supports dynamic modification of the data source, columns, or both. This feature refreshes the grid's content and structure without requiring a complete page reload.
+The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component supports dynamic modification of the data source, columns, or both. This feature refreshes the grid's content and structure without requiring a complete page reload.
 
 To achieve dynamic changes, the [changeDataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#changedatasource) method allows updating the grid's data source dynamically. This method enables updating the data source, columns, or both, based on application requirements. However, it is important to note that during the changing process for the data source and columns, the grid's existing actions such as sorting, filtering, grouping, aggregation, and searching will be reset. The `changeDataSource` method has two optional arguments: the first argument represents the data source, and the second argument represents the columns. The various uses of the `changeDataSource` method are explained in the following topic.
 
@@ -310,7 +310,7 @@ The following example demonstrates setting custom headers using the custom adapt
 
 ## Prevent conversion to local time zone for date columns
 
-By default, React DataGrid converts date values to the client system's local time zone. In some scenarios, it is necessary to display the original date as received from the server without timezone conversion.
+By default, React Data Grid converts date values to the client system's local time zone. In some scenarios, it is necessary to display the original date as received from the server without timezone conversion.
 
 To prevent timezone conversion for a date column, use the `DataUtil.serverTimezoneOffset` property. Setting this property to "0" ensures that dates remain in the original server-provided format without conversion to the local timezone.
 

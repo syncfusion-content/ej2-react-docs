@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Context Menu in React Grid Component
 
-The [React DataGrid](https://www.syncfusion.com/react-components/react-data-grid) component includes a context menu that appears on right-click anywhere within the grid. The context menu provides quick access to actions such as sorting, filtering, and editing without navigating away from the grid.
+The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component includes a context menu that appears on right-click anywhere within the grid. The context menu provides quick access to actions such as sorting, filtering, and editing without navigating away from the grid.
 
 Enable the context menu by configuring the grid's [contextMenuItems](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#contextmenuitems) property. The property accepts the default set of menu items or a custom collection of objects.
 
@@ -76,7 +76,7 @@ Items| Description
 
 ## Custom context menu items
 
-The React DataGrid supports adding custom context menu items to the default menu.
+The React Data Grid supports adding custom context menu items to the default menu.
 
 Custom items are defined by setting the `contextMenuItems` property to a collection of [contextMenuItemModel](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#contextmenumodule) objects. Menu item actions are handled through the [contextMenuClick](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#contextmenuclick) event.
 
@@ -99,7 +99,7 @@ Custom items are defined by setting the `contextMenuItems` property to a collect
 
 ## Show context menu on left click
 
-The React DataGrid can display the context menu on a left mouse click instead of the default right-click.
+The React Data Grid can display the context menu on a left mouse click instead of the default right-click.
 
 Implementing left-click behaviour typically involves handling the Grid's [created](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#created) event and the context menu's [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#beforeopen) event. Capture the click coordinates via the `onclick` listener and pass them to the context menu's `open` method so the menu opens at the clicked location. Prevent the default right-click behaviour where necessary, for example within the `created` handler.
 
@@ -124,7 +124,7 @@ Implementing left-click behaviour typically involves handling the Grid's [create
 
 ## Enable or disable context menu items
 
-The React DataGrid supports enabling or disabling default and custom context menu items via the context menu's [enableItems](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#enableitems) method. Call `enableItems` with `true` to enable items or `false` to disable them.
+The React Data Grid supports enabling or disabling default and custom context menu items via the context menu's [enableItems](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#enableitems) method. Call `enableItems` with `true` to enable items or `false` to disable them.
 
 The example below uses the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component to toggle a menu item. When the switch changes state, the `change` event updates the `Copy` item by calling `enableItems`.
 
@@ -209,7 +209,7 @@ export default App;
 
 ## Show or hide context menu items
 
-The React DataGrid supports showing or hiding default and custom context menu items using the context menu's [showItems](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#showitems) and [hideItems](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#hideitems) methods. Pass the target items as an argument to these methods.
+The React Data Grid supports showing or hiding default and custom context menu items using the context menu's [showItems](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#showitems) and [hideItems](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#hideitems) methods. Pass the target items as an argument to these methods.
 
 The example below demonstrates the use of the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component. Its `change` event triggers either "showItems" or "hideItems" to modify the "Edit Record" and "Delete Record" items accordingly.
 

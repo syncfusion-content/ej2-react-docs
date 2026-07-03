@@ -37,7 +37,7 @@ domainurl: ##DomainURL##
 | # | Topics | Link |
 |---|--------|-------|
 | 1 | Set up and configure the GraphQL backend using Node.js | [View](#setting-up-the-graphql-backend-using-nodejs) |
-| 2 | Integrate the React DataGrid with the GraphQL API | [View](#integrating-syncfusion-react-grid-with-graphql) |
+| 2 | Integrate the React Data Grid with the GraphQL API | [View](#integrating-syncfusion-react-grid-with-graphql) |
 | 3 | Implement data operations including filtering, searching, sorting, and paging | [View](#step-4-add-toolbar-with-crud-and-search-options) |
 | 4 | Perform CRUD operations | [View](#step-9-perform-crud-operations) |
 | 5 | Run the GraphQL application | [View](#running-the-application) |
@@ -370,7 +370,7 @@ cd GridClient
 ```
 This command creates a React application named **GridClient** with the essential folder structure and files required to begin development immediately.
 
-The integration process begins by installing the required React DataGrid packages before establishing the GraphQL connection.
+The integration process begins by installing the required React Data Grid packages before establishing the GraphQL connection.
 
 ### Step 1: Adding Syncfusion packages
 
@@ -380,7 +380,7 @@ Install the necessary Syncfusion<sup style="font-size:70%">&reg;</sup> packages 
 npm install @syncfusion/ej2-react-grids --save
 npm install @syncfusion/ej2-data --save
 ```
-- `@syncfusion/ej2-react-grids` –  required to use the React DataGrid component.
+- `@syncfusion/ej2-react-grids` –  required to use the React Data Grid component.
 - `@syncfusion/ej2-data` – Provides data utilities for binding and manipulating Grid data.
 
 ### Step 2: Including required Syncfusion stylesheets
@@ -1205,7 +1205,7 @@ Open a terminal or Command Prompt. Run the server application first, then start 
 
 For a complete working implementation of this example, refer to the following [GitHub](https://github.com/SyncfusionExamples/ej2-react-grid-samples/tree/master/connecting-to-backends/syncfusion-reactgrid-with-graphql-server) repository.
 
-The application now provides a fully integrated "product" management workflow using the React DataGrid connected to a Node.js GraphQL backend.
+The application now provides a fully integrated "product" management workflow using the React Data Grid connected to a Node.js GraphQL backend.
 
 ## See also
 

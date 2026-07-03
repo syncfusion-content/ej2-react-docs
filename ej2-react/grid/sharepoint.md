@@ -1,16 +1,16 @@
 ---
 layout: post
-title: React DataGrid - SharePoint | Syncfusion
-description: React DataGrid SharePoint integration connects the grid to SharePoint lists, supports auth, and provides data access methods for SharePoint apps.
+title: React Grid - SharePoint | Syncfusion
+description: React Grid SharePoint integration connects the grid to SharePoint lists, supports auth, and provides data access methods for SharePoint apps.
 control: SharePoint 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React DataGrid in SharePoint
+# Getting Started with React Grid Component in the SharePoint Framework
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React DataGrid component can be integrated into a [SharePoint](https://learn.microsoft.com/en-us/sharepoint/dev) Framework (SPFx) project using the techniques outlined in this article. These steps will walk you through the process of adding a robust data grid to your SharePoint solutions.
+The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component can be integrated into a [SharePoint](https://learn.microsoft.com/en-us/sharepoint/dev) Framework (SPFx) project using the techniques outlined in this article. These steps will walk you through the process of adding a robust data grid to your SharePoint solutions.
 
 `SharePoint` Framework (SPFx) is a development model and framework provided by Microsoft for building custom solutions and extensions for SharePoint and Microsoft Teams. It is a modern, client-side framework that allows developers to create web parts, extensions, and customizations that can be deployed and used within SharePoint sites and Teams applications.
 
@@ -100,9 +100,9 @@ gulp trust-dev-cert
 gulp serve
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React DataGrid packages
+## Adding React Data Grid packages
 
-To utilize Syncfusion<sup style="font-size:70%">&reg;</sup> React DataGrid component in your project, you need to install the necessary npm package. 
+To utilize React Data Grid component in your project, you need to install the necessary npm package. 
 
 ```bash
 npm install @syncfusion/ej2-react-grids
@@ -110,20 +110,9 @@ npm install @syncfusion/ej2-react-grids
 
 ## Adding CSS reference
 
-You can add the CSS files required for the Syncfusion React DataGrid component using one of the following methods.
-
-### Option 1: Add CSS references from a theme package
-
-Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid component can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
-
-```bash
-require('@syncfusion/ej2-tailwind3-theme/styles/grid/index.css');
-```
-### Option 2: Add CSS references from component packages
-
 Syncfusion<sup style="font-size:70%">&reg;</sup> provides various themes for React components. You can import CSS styles for the desired theme into your project.  Refer to the [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a React project.
 
-In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the DataGrid component were imported into the `~src/webparts/reactGridComponent/components/ReactGridComponent.tsx` file. 
+In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the Grid component were imported into the `~src/webparts/reactGridComponent/components/ReactGridComponent.tsx` file. 
 
 To add Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JS 2 style reference from npm packages:
 
@@ -131,7 +120,7 @@ To add Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="fon
 require ('@syncfusion/ej2-react-grids/styles/material3.css');
 ```
 
-### Option 3: Add CSS References from CDN Link
+or
 
 To add Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JS 2 style reference from CDN:
 
@@ -139,7 +128,7 @@ To add Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="fon
 <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/32.1.19/ej2/material3.css" /> // use the latest version to refer the css through CDN//
 ```
 
-## Adding DataGrid component
+## Adding Grid component
 
 The grid code should be added to the **ReactGridComponent.tsx** file.
 
@@ -165,10 +154,10 @@ const ReactGridComponent: React.FC<IReactGridComponentProps> = (props) => {
     return (
       <section className={`${styles.reactGridComponent} ${hasTeamsContext ? styles.teams : ''}`}>
         <div>
-          <h3>Welcome to React DataGrid component in the SharePoint Framework!</h3>
+          <h3>Welcome to React Grid component in the SharePoint Framework!</h3>
         </div>
           <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/32.1.19/ej2/material3.css" />
-          {/* Assigns the dataset to the DataGrid component */}
+          {/* Assigns the dataset to the Grid component */}
           <GridComponent id='grid' dataSource={data} >
           {/* Define the columns to be displayed */}
             <ColumnsDirective>
@@ -185,7 +174,7 @@ export default ReactGridComponent;
 {% endhighlight %}
 {% endtabs %}
 
-**3. Run the project:** To preview your SharePoint project with the integrated React DataGrid component, run the following commands:
+**3. Run the project:** To preview your SharePoint project with the integrated React Grid component, run the following commands:
 
 ```bash
 gulp trust-dev-cert
@@ -194,8 +183,8 @@ gulp serve
 
 The output will appear as follows:
 
-![DataGrid Component](./images/sharepoint-grid.png)
+![Grid Component](./images/sharepoint-grid.png)
 
 ## See also
 
-* [DataGrid Feature Modules](./module)
+* [Grid Feature Modules](./module)

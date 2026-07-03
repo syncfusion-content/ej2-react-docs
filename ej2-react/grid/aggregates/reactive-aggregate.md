@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Reactive Aggregate in React Grid Component
 
-The React DataGrid supports reactive aggregates, which automatically recalculate and update aggregate values in real time whenever the data changes.
+The React Data Grid supports reactive aggregates, which automatically recalculate and update aggregate values in real time whenever the data changes.
 
 ## Auto-update aggregate values in Batch editing
 

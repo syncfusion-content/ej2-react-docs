@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Paging Customization in React Grid Component
 
-The appearance of the paging elements in the React DataGrid component can be customized using CSS. Here are examples for customizing the pager root element, pager container element, pager navigation elements, pager page numeric link elements, and the pager current page numeric element.
+The appearance of the paging elements in the React Data Grid component can be customized using CSS. Here are examples for customizing the pager root element, pager container element, pager navigation elements, pager page numeric link elements, and the pager current page numeric element.
 
 ## Customizing the grid pager root element
 

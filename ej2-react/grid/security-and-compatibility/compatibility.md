@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# React supported versions
+# React Supported Versions
 
 The following table lists React versions and the minimum Syncfusion React Data Grid versions that support them.
 
-| React version | Minimum Syncfusion React components version |
+| React version | Minimum Syncfusion React DataGrid version |
 | ------------- | ------------------------------------------- |
 | [React v19](https://react.dev/blog/2024/12/05/react-19) | 29.1.33 and above |
 | [React v18](https://reactjs.org/blog/2022/03/29/react-v18.html) | 20.2.36 and above |

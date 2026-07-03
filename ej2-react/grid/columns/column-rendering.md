@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Column Rendering in React Grid Component
 
-Columns in the React DataGrid define the structure and presentation of data. This section outlines manual, automatic, and dynamic rendering approaches to ensure clarity and flexibility in grid design.
+Columns in the React Data Grid define the structure and presentation of data. This section outlines manual, automatic, and dynamic rendering approaches to ensure clarity and flexibility in grid design.
 
 ## Define columns manually
 
-Columns in the React DataGrid can be manually defined using the [ColumnDirective](https://ej2.syncfusion.com/react/documentation/api/grid/column) element. Each column is configured with properties such as `field`, `headerText`, `type`, and `width`, allowing precise control over the column's behavior and appearance to meet specific layout and data requirements.
+Columns in the React Data Grid can be manually defined using the [ColumnDirective](https://ej2.syncfusion.com/react/documentation/api/grid/column) element. Each column is configured with properties such as `field`, `headerText`, `type`, and `width`, allowing precise control over the column's behavior and appearance to meet specific layout and data requirements.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -228,7 +228,7 @@ This formula ensures that serial numbers continue correctly across pages. Once c
 
 ## Complex data binding
 
-Complex data binding in the React DataGrid component can be achieved using the dot (.) operator in the `field` property. This feature is particularly useful when dealing with nested or complex data structures.
+Complex data binding in the React Data Grid component can be achieved using the dot (.) operator in the `field` property. This feature is particularly useful when dealing with nested or complex data structures.
 
 ### Using local data
 

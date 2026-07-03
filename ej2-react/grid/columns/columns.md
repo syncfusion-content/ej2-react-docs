@@ -91,7 +91,7 @@ The Grid allocates column space using the [width](https://ej2.syncfusion.com/rea
 
 ### Supported column width types
 
-React DataGrid supports the following three types of column width:
+React Data Grid supports the following three types of column width:
 
 **1. Auto**
 
@@ -183,7 +183,7 @@ The [format](https://ej2.syncfusion.com/react/documentation/api/grid/column#form
 
 ### Number formatting
 
-Number formatting enables customization of numeric value display in React DataGrid columns. Standard numeric format strings or custom numeric format strings specify the desired presentation. The `format` property of Grid columns can be used to specify the number format for numeric columns.
+Number formatting enables customization of numeric value display in React Data Grid columns. Standard numeric format strings or custom numeric format strings specify the desired presentation. The `format` property of Grid columns can be used to specify the number format for numeric columns.
 
 Format |Description |Remarks
 -------|-------|-------
@@ -288,7 +288,7 @@ For more details about loading culture files and working with globalization in S
 
 ### Format template column value
 
-Template columns in React DataGrid enable customization of column value appearance through HTML templates. Number formatting can also be applied within template columns to control the display of values. To format values in a column template, use the React pipes and the `format` property.
+Template columns in React Data Grid enable customization of column value appearance through HTML templates. Number formatting can also be applied within template columns to control the display of values. To format values in a column template, use the React pipes and the `format` property.
 
 In this example, the date pipe formats the "Order Date" value as a date in the format "dd/MMM/yyyy".
 
@@ -313,7 +313,7 @@ In this example, the date pipe formats the "Order Date" value as a date in the f
 
 ### Custom formatting
 
-React DataGrid supports customizing the formatting of data in its columns. Custom formats can be applied to numeric or date fields to display values in a specific style as required. The `format` property is used to define these custom formats.
+React Data Grid supports customizing the formatting of data in its columns. Custom formats can be applied to numeric or date fields to display values in a specific style as required. The `format` property is used to define these custom formats.
 
 A custom format string must contain one or more of the following standard date/time symbols.
 
@@ -509,7 +509,7 @@ To prevent the checkbox in blank rows of the Grid, even when the [displayAsCheck
 
 ## Lock columns
 
-The React DataGrid allows locking columns to prevent reordering and automatically position them first. This can be achieved by setting the [lockColumn](https://ej2.syncfusion.com/react/documentation/api/grid/column#lockcolumn) property to `true`.
+The React Data Grid allows locking columns to prevent reordering and automatically position them first. This can be achieved by setting the [lockColumn](https://ej2.syncfusion.com/react/documentation/api/grid/column#lockcolumn) property to `true`.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -570,7 +570,7 @@ export default App;
 
 ## Show or hide columns
 
-Column visibility in the React DataGrid can be shown or hidden dynamically through built-in properties and methods. This feature helps customize which columns appear based on specific needs.
+Column visibility in the React Data Grid can be shown or hidden dynamically through built-in properties and methods. This feature helps customize which columns appear based on specific needs.
 
 **Using property**
 
@@ -647,7 +647,7 @@ External buttons can control column visibility by field name using the `showColu
 
 ## Controlling grid actions
 
-Column-specific actions like filtering, grouping, sorting, resizing, reordering, editing, and searching in the React DataGrid can be enabled or disabled using these properties:
+Column-specific actions like filtering, grouping, sorting, resizing, reordering, editing, and searching in the React Data Grid can be enabled or disabled using these properties:
 
 * [allowEditing](https://ej2.syncfusion.com/react/documentation/api/grid/columnModel#allowediting): Controls editing capability for a column.
 * [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/columnModel#allowfiltering): Controls filtering capability for a column.
@@ -686,7 +686,7 @@ This section explains working with columns in the Syncfusion<sup style="font-siz
 
 ### Accessing columns
 
-Accessing columns in the React DataGrid is done using these grid methods:
+Accessing columns in the React Data Grid is done using these grid methods:
 
 | Method | Description | Example |
 |--------|-------------|---------|
@@ -745,7 +745,7 @@ New columns can be added using the `push` method to add the column object to the
 
 ### Refreshing columns
 
-The [refreshColumns](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#refreshcolumns) method of the React DataGrid can be used to refresh the columns in the grid. This method is useful when grid columns need to be updated dynamically based on user actions or data changes.
+The [refreshColumns](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#refreshcolumns) method of the React Data Grid can be used to refresh the columns in the grid. This method is useful when grid columns need to be updated dynamically based on user actions or data changes.
 
 ```ts
 grid.refreshColumns();
@@ -753,7 +753,7 @@ grid.refreshColumns();
 
 ## Responsive columns
 
-Column visibility in the React DataGrid can be toggled based on screen size using the [hideAtMedia](https://ej2.syncfusion.com/react/documentation/api/grid/column#hideatmedia) property. This property accepts valid [Media Queries](http://cssmediaqueries.com/what-are-css-media-queries.html) to control when columns appear or hide.
+Column visibility in the React Data Grid can be toggled based on screen size using the [hideAtMedia](https://ej2.syncfusion.com/react/documentation/api/grid/column#hideatmedia) property. This property accepts valid [Media Queries](http://cssmediaqueries.com/what-are-css-media-queries.html) to control when columns appear or hide.
 
 This example shows a Grid with three columns: "Order ID", "Customer ID", and "Freight". The "OrderID" column uses `hideAtMedia` set to "(min-width: 700px)", hiding the column when the browser width is "700px" or less.
 

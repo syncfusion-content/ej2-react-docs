@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Resize the grid in various dimension in React Grid Component
 
-The React DataGrid supports dynamic resizing to enhance data presentation across different layouts. The grid can be resized by adjusting the dimensions of its parent container.
+The React Data Grid supports dynamic resizing to enhance data presentation across different layouts. The grid can be resized by adjusting the dimensions of its parent container.
 
 To resize the grid externally, modify the width or height of the container element using an input and button. This will effectively resize the grid along with its parent container.
 

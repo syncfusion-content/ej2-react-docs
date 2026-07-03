@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Column resizing in React Grid Component
 
-Column resizing in the [React DataGrid](https://www.syncfusion.com/react-components/react-data-grid) component allows adjusting column widths dynamically to fit content and improve data readability. This feature provides flexibility in customizing the grid layout based on data requirements and screen size.
+Column resizing in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component allows adjusting column widths dynamically to fit content and improve data readability. This feature provides flexibility in customizing the grid layout based on data requirements and screen size.
 
 To enable column resizing, set the [`allowResizing`](https://ej2.syncfusion.com/react/documentation/api/grid#allowresizing) property to `true` and inject the `Resize` module into the Grid component. Once enabled, columns can be resized by clicking and dragging the right edge of the column header. The column width updates immediately during the drag operation, providing real-time visual feedback.
 
@@ -137,7 +137,7 @@ The Grid supports resizing stacked header columns, which are columns grouped und
 
 ## Resizing modes
 
-The React DataGrid component provides flexible column resizing behavior through the [ResizeSettingsModel](https://ej2.syncfusion.com/react/documentation/api/grid/resizeSettingsModel#resizesettingsmodel) interface. The [mode](https://ej2.syncfusion.com/react/documentation/api/grid/resizeSettings#mode) property determines the way the Grid handles space distribution when columns are resized.
+The React Data Grid component provides flexible column resizing behavior through the [ResizeSettingsModel](https://ej2.syncfusion.com/react/documentation/api/grid/resizeSettingsModel#resizesettingsmodel) interface. The [mode](https://ej2.syncfusion.com/react/documentation/api/grid/resizeSettings#mode) property determines the way the Grid handles space distribution when columns are resized.
 
 **Available resize modes:**
 

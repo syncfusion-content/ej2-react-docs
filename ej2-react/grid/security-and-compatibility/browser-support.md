@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Browser Support for React DataGrid
+# Browser Support for Syncfusion® React DataGrid
 
 Syncfusion® React Data Grid component support modern browsers and rely on current web platform features.
 The Data Grid is compatible with all common desktop and mobile browsers.

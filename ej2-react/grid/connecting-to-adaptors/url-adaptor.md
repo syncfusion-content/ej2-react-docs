@@ -14,7 +14,7 @@ The [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/ur
 
 For details on configuring the backend (expected request/response format, server‑side processing), refer to the [UrlAdaptor backend setup documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/url-adaptor).
 
-Once the project creation and backend setup are complete, the next step is to render the React DataGrid Component on the client side.
+Once the project creation and backend setup are complete, the next step is to render the React Data Grid Component on the client side.
 
 **Project structure:**
 
@@ -33,7 +33,7 @@ UrlAdaptor/
 
 ## React Grid frontend setup using Syncfusion UrlAdaptor
 
-After finishing the backend setup for the **UrlAdaptor** ASP.NET Core project, next step is to integrate the React DataGrid on the client side by following these instructions.
+After finishing the backend setup for the **UrlAdaptor** ASP.NET Core project, next step is to integrate the React Data Grid on the client side by following these instructions.
 
 ### Step 1: Install Syncfusion packages
 
@@ -585,7 +585,7 @@ The Grid has now been successfully created with including paging, sorting, filte
 
 ## CRUD operations
 
-React DataGrid integrates CRUD (Create, Read, Update, Delete) operations with server-side controller actions through `insertUrl`, `removeUrl`, `updateUrl`, `crudUrl`, and `batchUrl` properties.
+React Data Grid integrates CRUD (Create, Read, Update, Delete) operations with server-side controller actions through `insertUrl`, `removeUrl`, `updateUrl`, `crudUrl`, and `batchUrl` properties.
 
 ### Configure CRUD URL mapping
 
@@ -1023,6 +1023,6 @@ For a complete working implementation of this example, refer to the following [G
 - [Using Remote Data Binding in ASP.NET Web APIs](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/webapi-adaptor)
 - [Custom Remote Binding](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/custom-adaptor)
 - [Hybrid data binding](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/remote-save-adaptor)
-- [RESTful CRUD Operations in ASP.NET Web Forms](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/web-method-adaptor)
+- [RESTful CRUD Operations in ASP.NET WebForms](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/web-method-adaptor)
 - [Connect to OdataV4 services](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/odatav4-adaptor)
 - [GraphQL Integration for Syncfusion React Grids](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/graphql-adaptor)

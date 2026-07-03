@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Filter Customization in React Grid Component
 
-The appearance of filtering elements in the React DataGrid component can be customized using CSS. Below are examples for customizing various filtering elements, including filter bar cell elements, filter bar input elements, focus styles, clear icons, filter icons, filter dialog content, filter dialog footer, filter dialog input elements, filter dialog button elements, and excel filter dialog number filters.
+The appearance of filtering elements in the React Data Grid component can be customized using CSS. Below are examples for customizing various filtering elements, including filter bar cell elements, filter bar input elements, focus styles, clear icons, filter icons, filter dialog content, filter dialog footer, filter dialog input elements, filter dialog button elements, and excel filter dialog number filters.
 
 ## Customizing the filter bar cell element
 
