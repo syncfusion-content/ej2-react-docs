@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Hybrid Remote Binding with RemoteSaveAdaptor in Syncfusion React Gantt
 
-The [RemoteSaveAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/remote-save-adaptor) in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt chart provides a hybrid data workflow. The client fetches the complete task set once and applies client‑side operations locally while persisting edits back to the server via batch CRUD requests. This approach keeps the UI responsive for interactive scheduling while ensuring server‑side persistence and authoritative processing for inserts, updates and deletes.
+The [RemoteSaveAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/remote-save-adaptor) in the [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) provides a hybrid data workflow. The client fetches the complete task set once and applies client‑side operations locally while persisting edits back to the server via batch CRUD requests. This approach keeps the UI responsive for interactive scheduling while ensuring server‑side persistence and authoritative processing for inserts, updates and deletes.
 
 For complete server‑side configuration and additional implementation details, refer to the [DataManager RemoteSaveAdaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/remote-save-adaptor), which explains endpoint setup, request handling, and best practices for synchronizing CRUD operations with remote services.
 
-This guide describes the conceptual project layout and patterns for wiring the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt chart to a backend that implements a batch CRUD endpoint.
+This guide describes the conceptual project layout and patterns for wiring the React Gantt chart to a backend that implements a batch CRUD endpoint.
 
 **Project structure:**
 
@@ -97,7 +97,7 @@ In the React component file **App.jsx**, import `DataManager` and `RemoteSaveAda
 
 **Configure the Gantt chart**
 
-1. **Set dataSource:** Configure the `dataSource` property of Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt chart with a JSON object.
+1. **Set dataSource:** Configure the `dataSource` property of React Gantt chart with a JSON object.
 
 2. **Enable editing:** Use [editSettings](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#editsettings) to allow CRUD actions (allowEditing, allowAdding, allowDeleting).
 

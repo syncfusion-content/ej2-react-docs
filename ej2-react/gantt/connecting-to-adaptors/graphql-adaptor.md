@@ -38,7 +38,7 @@ For server configuration and schema expectations (queries, mutations, and respon
 | # | Topics | Link |
 |---|--------|-------|
 | 1 | Set up and configure the GraphQL backend using Node.js | [View](#setting-up-the-graphql-backend-using-nodejs) |
-| 2 | Integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt chart with the GraphQL API | [View](#integrating-syncfusion-react-gantt-with-graphql) |
+| 2 | Integrate the React Gantt chart with the GraphQL API | [View](#integrating-syncfusion-react-gantt-with-graphql) |
 | 3 | Implement data operations including filtering, searching, sorting, and paging | [View](#step-4-add-toolbar-with-crud-and-search-options) |
 | 4 | Perform CRUD operations | [View](#step-9-perform-crud-operations) |
 | 5 | Run the GraphQL application | [View](#running-the-application) |
@@ -46,7 +46,7 @@ For server configuration and schema expectations (queries, mutations, and respon
 
 ### GraphQL vs REST comparison
  
-Understanding the key differences between GraphQL and REST helps appreciate the benefits of using GraphQL with Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt chart:
+Understanding the key differences between GraphQL and REST helps appreciate the benefits of using GraphQL with Gantt chart:
  
 | Aspect | REST API | GraphQL |
 |--------|----------|---------|
@@ -75,7 +75,7 @@ query {
 ```
 ## Setting up the GraphQL backend using Node.js
 
-The GraphQL backend acts as the central data service, handling queries and mutations that power the Syncfusion React Gantt chart.
+The GraphQL backend acts as the central data service, handling queries and mutations that power the React Gantt chart.
 
 ### Step 1: Create the GraphQL server and install required packages
 
@@ -366,7 +366,7 @@ cd GanttClient
 ```
 This command creates a React application named **GanttClient** with the essential folder structure and files required to begin development immediately.
 
-The integration process begins by installing the required Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt chart packages before establishing the GraphQL connection.
+The integration process begins by installing the required React Gantt chart packages before establishing the GraphQL connection.
 
 ### Step 1: Packages and dependencies
 
@@ -376,7 +376,7 @@ Install the necessary Syncfusion<sup style="font-size:70%">&reg;</sup> packages 
 npm install @syncfusion/ej2-react-gantt --save
 npm install @syncfusion/ej2-data --save
 ```
-- `@syncfusion/ej2-react-gantt` –  required to use the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt chart component.
+- `@syncfusion/ej2-react-gantt` –  required to use the React Gantt chart component.
 - `@syncfusion/ej2-data` – Provides data utilities for binding and manipulating Gantt chart data.
 
 ### Step 2: CSS and component styling

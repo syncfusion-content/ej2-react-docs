@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Context Menu in React Gantt Chart Component
 
-The context menu in the Syncfusion React Gantt Chart component provides right-click access to task and column operations, improving efficiency with contextual task actions. Menu items adapt based on the clicked element, such as task rows, column headers, or chart areas.
+The context menu in the [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component provides right-click access to task and column operations, improving efficiency with contextual task actions. Menu items adapt based on the clicked element, such as task rows, column headers, or chart areas.
 
 ## Enabling context menu
 
@@ -54,7 +54,7 @@ The following example demonstrates context menu implementation with default item
 
 ## Custom context menu items
 
-Extend the context menu functionality by adding custom items using the [contextMenuItems](https://ej2.syncfusion.com/react/documentation/api/gantt#contextmenuitems) property. Custom items are defined as a collection of [contextMenuItemModel](https://ej2.syncfusion.com/react/documentation/api/grid/contextMenuItemModel/) objects with properties for `id` (unique identifier), `text` (display label), `target` (CSS selector for appearance context), and `iconCss` (icon styling class).
+Extend the context menu functionality by adding custom items using the [contextMenuItems](https://ej2.syncfusion.com/react/documentation/api/gantt#contextmenuitems) property. Custom items are defined as a collection of [contextMenuItemModel](https://ej2.syncfusion.com/react/documentation/api/grid/contextMenuItemModel) objects with properties for `id` (unique identifier), `text` (display label), `target` (CSS selector for appearance context), and `iconCss` (icon styling class).
 
 The `target` property determines where custom menu items appear: **.e-content** for task-related operations, like add, delete, save, and cancel, `.e-gridheader` for column-related operations.
 
@@ -84,4 +84,4 @@ On touch devices, context menu functionality is accessible through **long press*
 
 This touch interaction ensures consistent experience across different device types and input methods while maintaining full functionality through intuitive gesture-based navigation.
 
-> For a comprehensive demonstration of context menu functionality, including default items, custom items, and sub-menus, explore the [interactive sample](https://ej2.syncfusion.com/react/demos#/tailwind3/gantt/context-menu).
+> For a comprehensive demonstration of context menu functionality, including default items, custom items, and sub-menus, explore the [interactive sample](https://ej2.syncfusion.com/react/demos/#/tailwind3/gantt/context-menu).

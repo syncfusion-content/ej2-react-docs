@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Excel Export Options in React Gantt Chart Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component provides configurable options for Excel or CSV export through the [ExcelExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties) object. You can customize column selection, include hidden columns, define a custom data source, apply filters, and format exported data. It also supports setting file names, adding headers and footers, and exporting multiple Gantt Charts.
+The [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component provides configurable options for Excel or CSV export through the [ExcelExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties) object. You can customize column selection, include hidden columns, define a custom data source, apply filters, and format exported data. It also supports setting file names, adding headers and footers, and exporting multiple Gantt Charts.
 
 ## Export selected records
 

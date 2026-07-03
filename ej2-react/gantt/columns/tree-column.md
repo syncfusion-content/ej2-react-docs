@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Tree Column in React Gantt Chart Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component provides a structured way to display parent-child relationships using expand/collapse icons.  
+The [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component provides a structured way to display parent-child relationships using expand/collapse icons.  
 
 To configure this, set the [treeColumnIndex](https://ej2.syncfusion.com/react/documentation/api/gantt#treecolumnindex) property to the index of the column where these icons should appear. This enables clear visualization and navigation of hierarchical tasks within the Gantt chart.
 
@@ -22,7 +22,7 @@ To configure this, set the [treeColumnIndex](https://ej2.syncfusion.com/react/do
 
 ## Customize expand and collapse icons
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component provides support for customizing default expand/collapse icons through CSS. 
+The React Gantt Chart component provides support for customizing default expand/collapse icons through CSS. 
 
 To apply custom icons, override the default styles with the following CSS:
 
@@ -51,7 +51,7 @@ To apply custom icons, override the default styles with the following CSS:
 
 ## Customize indentation of tree column text 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component allows customization of the indent space in tree column cells using the [queryCellInfo](https://ej2.syncfusion.com/react/documentation/gantt/events#querycellinfo) event.  
+The React Gantt Chart component allows customization of the indent space in tree column cells using the [queryCellInfo](https://ej2.syncfusion.com/react/documentation/gantt/events#querycellinfo) event.  
 
 In the following demonstration, indentation is applied by dynamically adding a CSS class to the tree column cell of **TaskName** using the `queryCellInfo` event.
 
@@ -107,7 +107,7 @@ You can retain the expanded or collapsed state of parent rows during initial ren
 
 ##  Persist expand/collapse state across page refresh using localStorage
  
-To retain the expanded and collapsed state of rows after a page refresh in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component:
+To retain the expanded and collapsed state of rows after a page refresh in the React Gantt Chart component:
 
 1. Use the [collapsed](https://ej2.syncfusion.com/react/documentation/api/gantt#collapsed) event to store the collapsed row's primary key in `localStorage` via [setItem](https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem).
 2. On page reload, retrieve the stored keys in the [dataBound](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#databound) event using [getItem](https://developer.mozilla.org/en-US/docs/Web/API/Storage/getItem).
@@ -133,7 +133,7 @@ In the following demo, the steps mentioned above are used to persist the expande
 
 ## Programmatically expand or collapse rows   
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component provides built-in methods to programmatically control row expansion and collapse:
+The React Gantt Chart component provides built-in methods to programmatically control row expansion and collapse:
 
 * **[expandAll()](https://ej2.syncfusion.com/react/documentation/api/gantt#expandall)**: Expands all rows. 
 
@@ -217,9 +217,9 @@ To retrieve the currently expanded rows in the Gantt Chart component, use the [g
 
 ## Customize expand/collapse behavior using events
 
-You can customize expand and collapse behavior in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component using the [expanding](https://ej2.syncfusion.com/react/documentation/gantt/events#expanding), [expanded](https://ej2.syncfusion.com/react/documentation/gantt/events#expanded), [collapsing](https://ej2.syncfusion.com/react/documentation/api/gantt#collapsing), and [collapsed](https://ej2.syncfusion.com/react/documentation/api/gantt#collapsed) events.  These events allow you to control and respond to row state changes programmatically based on your application logic.
+You can customize expand and collapse behavior in the React Gantt Chart component using the [expanding](https://ej2.syncfusion.com/react/documentation/gantt/events#expanding), [expanded](https://ej2.syncfusion.com/react/documentation/gantt/events#expanded), [collapsing](https://ej2.syncfusion.com/react/documentation/api/gantt#collapsing), and [collapsed](https://ej2.syncfusion.com/react/documentation/api/gantt#collapsed) events.  These events allow you to control and respond to row state changes programmatically based on your application logic.
 
-The following sample demonstrates how to customize expand and collapse actions in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component:
+The following sample demonstrates how to customize expand and collapse actions in the React Gantt Chart component:
 
 - Expanding is canceled for the row where **TaskID** is 1.  
 - Collapsing is canceled for the row where **TaskID** is 5.  

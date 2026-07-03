@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Selection in React Gantt Chart Component
 
-The Selection feature provides the ability to highlight a row or cell in the Gantt Chart component. Selection can be performed using arrow keys or mouse clicks.
+The Selection feature provides the ability to highlight a row or cell in the [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component. Selection can be performed using arrow keys or mouse clicks.
 
 To disable selection, set the [allowSelection](https://ej2.syncfusion.com/react/documentation/api/gantt#allowselection) property to **false**.
 
@@ -89,7 +89,7 @@ Persist Selection retains selected tasks even after performing actions such as s
 
 ## Hover highlighting
 
-The hover highlighting feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart enhances usability by visually highlighting **tree grid rows**, **chart task bars**, **header cells**, and **timeline cells** on hover. This makes it easier to follow tasks in complex project timelines.
+The hover highlighting feature in the React Gantt Chart enhances usability by visually highlighting **tree grid rows**, **chart task bars**, **header cells**, and **timeline cells** on hover. This makes it easier to follow tasks in complex project timelines.
 
 To enable this feature, set the `enableHover` property to **true** in the component. By default, this property is set to **false**.
 
@@ -129,7 +129,7 @@ To clear selected rows and cells in the Gantt Chart component, use the [clearSel
 
 ## Touch interaction
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component supports touch interaction, allowing you to intuitively navigate and interact with chart elements on touch-enabled devices like smart phones and tablets. This feature enhances usability by allowing intuitive gestures for selecting and managing tasks.
+The React Gantt Chart component supports touch interaction, allowing you to intuitively navigate and interact with chart elements on touch-enabled devices like smart phones and tablets. This feature enhances usability by allowing intuitive gestures for selecting and managing tasks.
 
 [Single Row selection](https://ej2.syncfusion.com/react/documentation/gantt/selection/row-selection#single-row-selection): Tapping a row on a touch screen automatically selects it, offering a straightforward way to interact with the chart.
 

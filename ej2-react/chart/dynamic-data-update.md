@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Dynamic data update in React Chart component
 
-The React Chart component provides methods to dynamically modify data without requiring a full chart refresh. This enables real-time data visualization, interactive features, and responsive user experiences. Common scenarios include adding sensor readings, removing outdated data points, replacing entire datasets, and enabling click-based data manipulation.
+The [React Charts](https://www.syncfusion.com/react-components/react-charts) component provides methods to dynamically modify data without requiring a full chart refresh. This enables real-time data visualization, interactive features, and responsive user experiences. Common scenarios include adding sensor readings, removing outdated data points, replacing entire datasets, and enabling click-based data manipulation.
 
 ## Adding a new data point
 

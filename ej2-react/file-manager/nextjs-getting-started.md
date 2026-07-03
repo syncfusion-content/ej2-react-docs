@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Creating a Next.js Application Using Syncfusion® Components
 
-This section provides a step-by-step guide for setting up a Next.js application and integrating the [React File Manager](https://www.syncfusion.com/react-ui-components/react-file-manager) component.
+This section provides a step-by-step guide for setting up a Next.js application and integrating the [React File Manager](https://www.syncfusion.com/react-components/react-file-manager) component.
 
 ## What is Next.js?
 
@@ -175,4 +175,6 @@ yarn run dev
 
 To learn more about the functionality of the File Manager component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/file-manager/getting-started#module-injection).
 
-> [View the NEXT.js File Manager sample in the GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-filemanager-component-in-nextjs).
+> [View the NEXT.js File Manager sample in the GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-filemanager-component-in-nextjs). 
+
+N> Looking for the full React File Manager component overview, features, pricing, and documentation? Visit the [React File Manager](https://www.syncfusion.com/react-components/react-file-manager) page.

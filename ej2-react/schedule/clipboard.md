@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Clipboard in React Schedule component | Syncfusion
-description: Learn here all about Context menu in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Clipboard in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Scheduler
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Clipboard in React Schedule component
 
-The Clipboard functionality in the Syncfusion<sup style="font-size:70%">&reg;</sup> Schedule control enhances scheduling efficiency by enabling users to cut, copy, and paste appointments with ease. This feature is especially beneficial for those managing multiple appointments, as it eliminates the need for repetitive data entry and allows users to quickly adjust their schedules without hassle.
+The Clipboard functionality in the Schedule control enhances scheduling efficiency by enabling users to cut, copy, and paste appointments with ease. This feature is especially beneficial for those managing multiple appointments, as it eliminates the need for repetitive data entry and allows users to quickly adjust their schedules without hassle.
 To activate the clipboard feature in the scheduler, simply set the [`allowClipboard`](https://ej2.syncfusion.com/react/documentation/api/schedule#allowclipboard) property to **true**.
 
 >Note: The [`allowKeyboardInteraction`](https://ej2.syncfusion.com/react/documentation/api/schedule#allowkeyboardinteraction) property must be true for proper functionality of the clipboard feature.

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # PDF Export in React Gantt Chart Component
 
-PDF export in the React Gantt Chart component enables exporting project data to PDF documents for sharing or archiving, using the [pdfExport](https://ej2.syncfusion.com/react/documentation/api/gantt#pdfexport) method with [allowPdfExport](https://ej2.syncfusion.com/react/documentation/api/gantt#allowpdfexport) set to **true** and `PdfExport` module injected. This feature supports exporting timelines, tasks, and dependencies, with options for indicators via `base64` images, blob objects for previews, single-page layouts, multiple Gantt instances in one file, and themes like Tailwind3 or Bootstrap. Focus on auto-scheduled tasks for accurate export, as manual scheduling is not currently supported.
+PDF export in the [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component enables exporting project data to PDF documents for sharing or archiving, using the [pdfExport](https://ej2.syncfusion.com/react/documentation/api/gantt#pdfexport) method with [allowPdfExport](https://ej2.syncfusion.com/react/documentation/api/gantt#allowpdfexport) set to **true** and `PdfExport` module injected. This feature supports exporting timelines, tasks, and dependencies, with options for indicators via `base64` images, blob objects for previews, single-page layouts, multiple Gantt instances in one file, and themes like Tailwind3 or Bootstrap. Focus on auto-scheduled tasks for accurate export, as manual scheduling is not currently supported.
 
 ## Export basic Gantt data
 

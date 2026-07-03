@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Indent and Outdent in React Gantt Chart Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component provides built-in support for indenting and outdenting rows, allowing hierarchy levels to be adjusted within the Gantt chart.
+The [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component provides built-in support for indenting and outdenting rows, allowing hierarchy levels to be adjusted within the Gantt chart.
 
  * **Indent** – Moves a selected row one level deeper, making it the last child of its previous row.
  * **Outdent** – Shifts a row one level up, placing it as a sibling to its parent.
