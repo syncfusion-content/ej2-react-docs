@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Immutable Mode in React Gantt Chart Component | Syncfusion
-description: Learn how to enable immutable mode in the Syncfusion React Gantt Chart component for optimized task rendering and performance with large datasets.
+title: Immutable in React Gantt Chart component | Syncfusion
+description: Learn here all about Immutable in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Immutable 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Immutable Mode in React Gantt Chart Component
+# Immutable in React Gantt Chart component
 
 Immutable mode optimizes the React Gantt Chart component’s rendering performance by minimizing unnecessary re-renders, ideal for large projects with hundreds of tasks or frequent updates like real-time progress tracking. When enabled via the [enableImmutableMode](https://ej2.syncfusion.com/react/documentation/api/gantt#enableimmutablemode) property, the component uses object reference comparison to identify changed tasks, re-rendering only modified or new rows while preserving unchanged rows’ DOM elements. This reduces DOM operations, CPU usage, and rendering time, ensuring smooth interactions for complex hierarchies or batch updates. For example, updating a single task’s progress in a 1,000-task project re-renders only that task’s row, significantly improving performance over standard mode, which re-renders all visible rows.
 

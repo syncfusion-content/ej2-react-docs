@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Feature Modules in React Gantt Chart Component
 
-The React Gantt Chart uses a modular architecture for bundle size optimization. Basic rendering requires no additional modules. Advanced features like sorting, editing, toolbar, and export require explicit module injection.
+The [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) uses a modular architecture for bundle size optimization. Basic rendering requires no additional modules. Advanced features like sorting, editing, toolbar, and export require explicit module injection.
 
 This approach loads only the functionality you need, reducing bundle size and improving load times.
 

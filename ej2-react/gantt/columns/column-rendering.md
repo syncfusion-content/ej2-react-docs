@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Column Rendering in React Gantt Chart Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component supports column rendering to control data presentation. Column definitions act as the data schema and support operations such as sorting and filtering. The [field](https://ej2.syncfusion.com/react/documentation/api/gantt/column#field) property is required to map data source values to columns and must be defined for features like complex binding and template-based actions.
+The [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component supports column rendering to control data presentation. Column definitions act as the data schema and support operations such as sorting and filtering. The [field](https://ej2.syncfusion.com/react/documentation/api/gantt/column#field) property is required to map data source values to columns and must be defined for features like complex binding and template-based actions.
 
 > - If the `field` is not defined in the [dataSource](https://ej2.syncfusion.com/react/documentation/api/gantt#datasource), the column will display empty values.
 > - To enable CRUD, filtering, or searching, the `field` must be defined for template columns.
@@ -35,7 +35,7 @@ To manually define columns in the Gantt Chart component, use `e-columns` and set
 
 ## Auto generated columns
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component automatically generates columns when the [columns](https://ej2.syncfusion.com/react/documentation/api/gantt#columns) property is either empty or undefined during initialization, binding all fields from the [dataSource](https://ej2.syncfusion.com/react/documentation/api/gantt#datasource) as individual Gantt columns.
+The Gantt Chart component automatically generates columns when the [columns](https://ej2.syncfusion.com/react/documentation/api/gantt#columns) property is either empty or undefined during initialization, binding all fields from the [dataSource](https://ej2.syncfusion.com/react/documentation/api/gantt#datasource) as individual Gantt columns.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -53,7 +53,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component autom
 
 ## Dynamic column generation
 
-You can dynamically generate columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component at runtime based on the provided data. This is useful when the column structure needs to adapt to user requirements or dynamic data sources.
+You can dynamically generate columns in the Gantt Chart component at runtime based on the provided data. This is useful when the column structure needs to adapt to user requirements or dynamic data sources.
 
 ### Using valueAccessor property
 

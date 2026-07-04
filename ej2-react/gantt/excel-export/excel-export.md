@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Excel Export in React Gantt Chart Component
 
-The Syncfusion React Gantt Chart component supports exporting project data to Excel and CSV formats, enabling seamless sharing, reporting, and offline analysis.  
+The [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component supports exporting project data to Excel and CSV formats, enabling seamless sharing, reporting, and offline analysis.  
  
 To enable Excel or CSV export functionality, set the [allowExcelExport](https://ej2.syncfusion.com/react/documentation/api/gantt#allowexcelexport) property to **true** and inject the `ExcelExport` service into the component's `providers` array. 
 

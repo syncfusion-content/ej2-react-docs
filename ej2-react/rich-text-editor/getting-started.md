@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with React Rich Text Editor Component | Syncfusion
 description: Learn how to set up and configure the Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more details.
-canonical_url: "https://www.syncfusion.com/rich-text-editor-sdk/react-rich-text-editor"
+canonical_url: "https://www.syncfusion.com/react-components/react-rich-text-editor"
 control: Getting started
 platform: ej2-react
 documentation: ug
@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Rich Text Editor
 
-The Syncfusion React Rich Text Editor is a WYSIWYG (What You See Is What You Get) editor that enables users to create, edit, and format rich text content with features like multimedia insertion, lists, and links. This section explains the steps to create a simple React Rich Text Editor and demonstrates the basic usage of the Rich Text Editor control using a Vite-based React project scaffolded with latest vite version.
+The [React Rich Text Editor](https://www.syncfusion.com/react-components/react-rich-text-editor) is a WYSIWYG (What You See Is What You Get) editor that enables users to create, edit, and format rich text content with features like multimedia insertion, lists, and links. This section explains the steps to create a simple React Rich Text Editor and demonstrates the basic usage of the Rich Text Editor control using a Vite-based React project scaffolded with latest vite version.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview)
 
@@ -55,7 +55,7 @@ npm install @syncfusion/ej2-react-richtexteditor
 
 ## Adding CSS reference
 
-The following CSS files are available in `../node_modules/@syncfusion` package folder. This can be added as reference in `src/App.css`.
+The following CSS files are available in **../node_modules/@syncfusion** package folder. This can be added as reference in **src/App.css**.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
@@ -68,7 +68,7 @@ The following CSS files are available in `../node_modules/@syncfusion` package f
 @import '../node_modules/@syncfusion/ej2-richtexteditor/styles/tailwind3.css';
 ```
 
-I> To apply the application-specific styles correctly, import **App.css** into `src/App.tsx` and remove all the default styles from `src/index.css`.
+I> To apply the application-specific styles correctly, import **App.css** into **src/App.tsx** and remove all the default styles from **src/index.css**.
 
 ## Module injection
 
@@ -86,7 +86,7 @@ These modules should be injected into the `services` section of the component.
 
 ## Adding Rich Text Editor component
 
-Now, you can start adding React Rich Text Editor component in the application. For getting started, add the Rich Text Editor component in `src/App.tsx` file using following sample.
+Now, you can start adding React Rich Text Editor component in the application. For getting started, add the Rich Text Editor component in **src/App.tsx** file using following sample.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -123,3 +123,4 @@ npm run dev
 * [Keyboard support in Rich text editor](https://ej2.syncfusion.com/react/documentation/rich-text-editor/keyboard-support)
 * [Globalization in Rich text editor](https://ej2.syncfusion.com/react/documentation/rich-text-editor/globalization)
 
+N> Looking for the full React Rich Text Editor component overview, features, pricing, and documentation? Visit the [React Rich Text Editor](https://www.syncfusion.com/react-components/react-rich-text-editor) page.

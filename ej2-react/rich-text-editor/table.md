@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Table in React Rich Text Editor Component
 
-The Syncfusion React Rich Text Editor allows inserting table in the edit panel, providing options to add, edit, format, and remove tables as well as perform other table related action. For inserting the table to the Rich Text Editor, the following list of options have been provided in the [tableSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/tableSettingsModel)
+The [React Rich Text Editor](https://www.syncfusion.com/react-components/react-rich-text-editor) allows inserting table in the edit panel, providing options to add, edit, format, and remove tables as well as perform other table related action. For inserting the table to the Rich Text Editor, the following list of options have been provided in the [tableSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/tableSettingsModel)
 
 ## Configuring the table tool in toolbar
 

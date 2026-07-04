@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Globalization and Localization in React Gantt Chart Component | Syncfusion
+title: Globalization and Localization in React Gantt Chart | Syncfusion
 description: Learn here all about globalization and localization in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Globalization and Localization 
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Globalization and Localization in React Gantt Chart Component
 
-The React Gantt Chart component supports globalization to adapt project management interfaces to diverse languages, cultures, and regional preferences without code changes. Globalization encompasses localization for translating text elements like column headers and dialog titles, internationalization for formatting dates, numbers, and times in timelines and task fields, and Right-to-Left (RTL) support for languages like Arabic and Hebrew. These features ensure that task names, toolbar actions, and timeline displays align with users’ linguistic and cultural expectations, enhancing accessibility and usability in project management workflows for global users.
+The [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component supports globalization to adapt project management interfaces to diverse languages, cultures, and regional preferences without code changes. Globalization encompasses localization for translating text elements like column headers and dialog titles, internationalization for formatting dates, numbers, and times in timelines and task fields, and Right-to-Left (RTL) support for languages like Arabic and Hebrew. These features ensure that task names, toolbar actions, and timeline displays align with users’ linguistic and cultural expectations, enhancing accessibility and usability in project management workflows for global users.
 
 ## Key globalization features
 
@@ -24,7 +24,7 @@ Implement globalization when targeting multilingual users, complying with region
 
 ## Localization implementation
 
-The [Localization](https://ej2.syncfusion.com/react/documentation/common/localization) library allows you to localize default text content of the Gantt Chart component. Static text elements such as column headers, dialog titles, tooltips, toolbar items, and system messages can be translated to different languages by defining the [locale](https://ej2.syncfusion.com/react/documentation/api/gantt#locale) value and providing translation objects.
+The [Localization](../common/localization) library allows you to localize default text content of the Gantt Chart component. Static text elements such as column headers, dialog titles, tooltips, toolbar items, and system messages can be translated to different languages by defining the [locale](https://ej2.syncfusion.com/react/documentation/api/gantt#locale) value and providing translation objects.
 
 1. **Import required libraries**:
    ```typescript
@@ -211,8 +211,8 @@ The following tables organize all available locale keys by functional category:
 | milestone        | Milestone            |
 | toTask           | To Task              |
 | toMilestone      | To Milestone         |
-| autoFitAll       | Auto Fit all columns |
-| autoFit          | Auto Fit this column |
+| AutoFitAll       | Auto Fit all columns |
+| AutoFit          | Auto Fit this column |
 | SortAscending    | Sort Ascending       |
 | SortDescending   | Sort Descending      |
 
@@ -311,7 +311,7 @@ The following example demonstrates comprehensive German (Deutsch) localization:
 
 ## Internationalization (I18N)
 
-The [Internationalization](https://ej2.syncfusion.com/react/documentation/common/internationalization) library globalizes number, date, and time values in the Gantt Chart component. This ensures that dates, numbers, and currencies display according to the user's cultural preferences and regional conventions.
+The [Internationalization](../common/internationalization) library globalizes number, date, and time values in the Gantt Chart component. This ensures that dates, numbers, and currencies display according to the user's cultural preferences and regional conventions.
 
 Internationalization affects multiple aspects of the Gantt Chart component:
 

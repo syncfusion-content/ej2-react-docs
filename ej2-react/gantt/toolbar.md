@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Toolbar in React Gantt Chart Component
 
-The React Gantt Chart component includes built-in toolbar support for executing common actions such as editing, searching, and navigating the timeline. The [toolbar](https://ej2.syncfusion.com/react/documentation/api/gantt#toolbar) property accepts the collection of built-in toolbar items and `ItemModel` objects for custom toolbar items.
+The [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component includes built-in toolbar support for executing common actions such as editing, searching, and navigating the timeline. The [toolbar](https://ej2.syncfusion.com/react/documentation/api/gantt#toolbar) property accepts the collection of built-in toolbar items and `ItemModel` objects for custom toolbar items.
 
 To enable toolbar functionality, inject the `Toolbar` in the `service` array.
 

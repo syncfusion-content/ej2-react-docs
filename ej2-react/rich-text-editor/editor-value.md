@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Editor Value in React Rich Text Editor Component
 
-The React Rich Text Editor allows flexible management of content through properties and methods for setting placeholders, retrieving values, and enabling two-way binding. This section explains how to configure and access the editor's content effectively
+The [React Rich Text Editor](https://www.syncfusion.com/react-components/react-rich-text-editor) allows flexible management of content through properties and methods for setting placeholders, retrieving values, and enabling two-way binding. This section explains how to configure and access the editor's content effectively
 
 ## Set placeholder text 
 
@@ -124,7 +124,7 @@ To get the content from the Rich Text Editor, use the following approaches:
 
 ## Two-way binding value
 
-Two-way binding allows the Syncfusion<sup style="font-size:70%">&reg;</sup> React Rich Text Editor to stay synchronized with the component’s state. When the state is updated, all instances of the editor using the same state will reflect the changes automatically.
+Two-way binding allows the React Rich Text Editor to stay synchronized with the component’s state. When the state is updated, all instances of the editor using the same state will reflect the changes automatically.
 
 In the below example, the React `useState` hook is used to manage the content of the editor. Initially, the editor displays "Initial content". After one second, a `useEffect` hook updates the state to "Updated content after 1 second".
 

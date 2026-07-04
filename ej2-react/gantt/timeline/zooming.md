@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Zooming Functionality in React Gantt Chart Component
 
-The React Gantt Chart component provides zooming support to adjust the timeline view dynamically. This includes increasing or decreasing the width of timeline cells and changing the timeline units to view tasks across various timespan from minutes to decades.
+The [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component provides zooming support to adjust the timeline view dynamically. This includes increasing or decreasing the width of timeline cells and changing the timeline units to view tasks across various timespan from minutes to decades.
 
 To enable zooming features, add `ZoomIn`, `ZoomOut`, and `ZoomToFit` to the toolbar items collection. These actions can also be triggered externally using the built-in methods like [zoomIn](https://ej2.syncfusion.com/react/documentation/api/gantt#zoomin), [zoomOut](https://ej2.syncfusion.com/react/documentation/api/gantt#zoomout), and [fitToProject](https://ej2.syncfusion.com/react/documentation/api/gantt#fittoproject).
 

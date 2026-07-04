@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Gantt Chart
 
-This guide walks you through installing and rendering your first React Gantt Chart component. You'll learn how to bind task data, map fields, and display a basic project schedule in just a few minutes.
+This guide walks you through installing and rendering your first [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component. You'll learn how to bind task data, map fields, and display a basic project schedule in just a few minutes.
 
 ## Prerequisites
 
@@ -187,3 +187,5 @@ You can preview the following sample by clicking the **Preview Sample** button.
 - **[Key Elements](./key-elements)** - Learn about UI components and interactions
 - **[Feature Modules](./module)** - Enable advanced features with module injection
 - **[Overview](./overview)** - Explore all available features
+
+N> Looking for the full React Gantt Chart component overview, features, pricing, and documentation? Visit the [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) page.

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Column Menu in React Gantt Chart Component
 
-The column menu in the React Gantt Chart component offers built-in actions including sorting, filtering, column chooser, and autofit. When you click the column menu icon, a menu appears with these features.
+The column menu in the [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component offers built-in actions including sorting, filtering, column chooser, and autofit. When you click the column menu icon, a menu appears with these features.
 
 To activate the column menu feature, set the [showColumnMenu](https://ej2.syncfusion.com/react/documentation/api/gantt#showcolumnmenu) property to **true** in the Gantt configuration and inject the `ColumnMenu` service in the Gantt Chart component.
 

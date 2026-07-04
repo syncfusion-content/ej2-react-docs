@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Searching in React Gantt Chart Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component allows quick filtering of records based on search input, improving access to relevant data in large datasets.
+The [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component allows quick filtering of records based on search input, improving access to relevant data in large datasets.
 
 To enable search functionality, include the **Search** item in the [toolbar](https://ej2.syncfusion.com/react/documentation/api/gantt#toolbar) configuration and inject both `Filter` service and `Toolbar` service into the component's `providers` array.
 
@@ -30,7 +30,7 @@ To enable search functionality, include the **Search** item in the [toolbar](htt
 
 ## Initial search
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt component allows applying search criteria during initial load using the [searchSettings](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings) property.  
+The React Gantt component allows applying search criteria during initial load using the [searchSettings](https://ej2.syncfusion.com/react/documentation/api/gantt/searchSettings) property.  
 
 To configure this feature, define the following properties:
 
@@ -152,7 +152,7 @@ Alternatively, you can invoke the [search](https://ej2.syncfusion.com/react/docu
 
 ## Search on each key stroke
 
-You can enable instant filtering in the Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component by calling the [search](https://ej2.syncfusion.com/react/documentation/api/gantt#search) method on each `keyup` event.  This can be configured within the component’s [created](https://ej2.syncfusion.com/react/documentation/gantt/events#created) event.
+You can enable instant filtering in the Gantt Chart component by calling the [search](https://ej2.syncfusion.com/react/documentation/api/gantt#search) method on each `keyup` event.  This can be configured within the component’s [created](https://ej2.syncfusion.com/react/documentation/gantt/events#created) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -170,7 +170,7 @@ You can enable instant filtering in the Syncfusion<sup style="font-size:70%">&re
 
 ## Highlight the search text
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component supports highlighting matched search text within grid cells to improve visibility of search results. 
+The React Gantt Chart component supports highlighting matched search text within grid cells to improve visibility of search results. 
 
 This can be achieved using the [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/gantt#querycellinfo) event, which is triggered during cell rendering. Within this event, check if the cell belongs to the target column, retrieve the cell value and search keyword, and use the `includes` method to detect matches. If a match is found, wrap the matched text in a `<span>` with a custom CSS class for styling.
 
