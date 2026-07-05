@@ -41,7 +41,7 @@ System.config({
         
     },
     packages: {
-        'app': { main: 'index', defaultExtension: 'tsx' },
+        'app': { main: 'main', defaultExtension: 'jsx' },
     }
     
 });

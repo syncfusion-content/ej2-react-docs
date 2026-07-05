@@ -1,4 +1,4 @@
-{% raw %}
+
 
 
 import * as React from "react";
@@ -105,7 +105,7 @@ function App() {
         </div>
         <div id="diagram-space" className="sb-mobile-diagram">
         <DiagramComponent
-            id="diagram"
+            id="diagram-container"
             ref={(diagram) => (diagramInstance = diagram)}
             width={'100%'}
             height={'700px'}
@@ -117,4 +117,3 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
 
-{% endraw %}

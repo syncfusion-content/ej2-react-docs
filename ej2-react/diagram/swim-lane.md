@@ -15,7 +15,7 @@ Swimlanes are specialized diagram nodes that visualize business processes by org
 ![Swimlane](images/swimlane-image.png)
 
 ## Create a Swimlane
-To create a swimlane, set the node's shape type to [`swimlane`](https://ej2.syncfusion.com/react/documentation/api/diagram/swimLaneModel).Swimlanes are arranged horizontally by default and require proper configuration of headers and lanes to function correctly.
+To create a swimlane, set the node's shape type to [`swimlane`](https://ej2.syncfusion.com/react/documentation/api/diagram/swimLaneModel). Swimlanes are arranged horizontally by default and require proper configuration of headers and lanes to function correctly.
 
 The following code example demonstrates how to define a basic swimlane object:
 
@@ -58,7 +58,7 @@ Lanes are arranged from left to right, with the header positioned at the top. Th
 
 The header serves as the primary identifying element of a swimlane, providing a title or description for the entire swimlane container. The [`header`](https://ej2.syncfusion.com/react/documentation/api/diagram/headerModel) property allows customization of both content and appearance.
 
->Note: By using this header, the swimlane interaction will be performed, like selection, dragging,etc.
+N> By using this header, the swimlane interaction will be performed, like selection, dragging,etc.
 
 The following code example illustrates how to define a swimlane header.
 
@@ -75,9 +75,9 @@ The following code example illustrates how to define a swimlane header.
 
 ### Header Customization
 
-Swimlane headers can be extensively customized to match design requirements and improve visual clarity. The dimensions can be controlled using [`width`](https://ej2.syncfusion.com/react/documentation/api/diagram/headerModel#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/diagram/headerModel#height) properties. Visual styling, including background color and text formatting, can be applied through the [`style`](https://ej2.syncfusion.com/react/documentation/api/diagram/headerModel#style) property. The swimlane's orientation can be controlled using the [`orientation`](https://ej2.syncfusion.com/react/documentation/api/diagram/swimLaneModel#header) property.
+Swimlane headers can be extensively customized to match design requirements and improve visual clarity. The dimensions can be controlled using [`width`](https://ej2.syncfusion.com/react/documentation/api/diagram/headerModel#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/diagram/headerModel#height) properties. Visual styling, including background color and text formatting, can be applied through the [`style`](https://ej2.syncfusion.com/react/documentation/api/diagram/headerModel#style) property. The swimlane's orientation can be controlled using the [`orientation`](https://ej2.syncfusion.com/react/documentation/api/diagram/swimlanemodel#orientation) property.
 
->Note: By default, the swimlane orientation is Horizontal.
+N> By default, the swimlane orientation is **Horizontal**.
 
 The following code example illustrates how to customize the swimlane header.
 

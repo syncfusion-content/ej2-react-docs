@@ -104,13 +104,16 @@ ReactDOM.render(<App />, document.getElementById('speech-to-text'));
 
 ## Adding CSS Reference
 
-Import the SpeechToText component required CSS references as follows in `src/App.css`.
+To install the [tailwind3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+
+```bash
+npm install @syncfusion/ej2-tailwind3-theme --save
+```
+
+Import the SpeechToText component required CSS references as follows in `src/index.css`.
 
 ```css
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-react-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/speech-to-text/index.css";
 ```
 ## Run the application
 

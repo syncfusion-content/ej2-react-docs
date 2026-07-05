@@ -50,17 +50,14 @@ npm install @syncfusion/ej2-react-interactive-chat --save
 
 To apply styling to the AI AssistView component, import the required CSS theme files into your `src/App.css` file. The following example uses the Tailwind3 theme, but other themes like Bootstrap 5, Tailwind CSS, or Fluent are also available.
 
+To install the [tailwind3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+
+```bash
+npm install @syncfusion/ej2-tailwind3-theme --save
+```
+
 ```css
-
-/* import the AI AssistView dependency styles */
-
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import "../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-react-interactive-chat/styles/tailwind3.css";
-
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/ai-assistview/index.css";
 ```
 
 ## Adding the AI AssistView Component

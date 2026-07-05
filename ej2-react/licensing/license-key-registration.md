@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Register Syncfusion<sup style="font-size:70%">&reg;</sup> License Key in ReactJS Application
+# Register Syncfusion® License Key in ReactJS Application
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> license key must be registered if your project uses Syncfusion<sup style="font-size:70%">&reg;</sup> ReactJS packages. The generated license key is a string that needs to be registered after any [Syncfusion<sup style="font-size:70%">&reg;</sup> ReactJS reference](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start/#preparing-the-application).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> license key must be registered if your project uses Syncfusion<sup style="font-size:70%">&reg;</sup> ReactJS packages. The generated license key is a string that needs to be registered after any [Syncfusion<sup style="font-size:70%">&reg;</sup> ReactJS reference](https://ej2.syncfusion.com/react/documentation/getting-started/vite).
 
 > Syncfusion<sup style="font-size:70%">&reg;</sup> license validation is performed offline during application execution and does not require internet access. Apps registered with a Syncfusion<sup style="font-size:70%">&reg;</sup> license key can be deployed on any system without an internet connection.
 
-Generate the [Syncfusion<sup style="font-size:70%">&reg;</sup> license key](https://ej2.syncfusion.com/react/documentation/licensing/license-key-generation/) and register it using one of the following methods:
+Generate the [Syncfusion<sup style="font-size:70%">&reg;</sup> license key](https://ej2.syncfusion.com/react/documentation/licensing/license-key-generation) and register it using one of the following methods:
 
 * [Register the license key in the project](#register-syncfusion-license-key-in-the-project)
 * [Register the license key using the npx command](#register-syncfusion-license-key-using-the-npx-command)
@@ -71,7 +71,7 @@ The following steps show how to register the Syncfusion<sup style="font-size:70%
 
 * Remove the `.cache` folder from `node_modules` in the application.
 
-* Now run the application. If you encounter a license validation error, refer to this [link](https://ej2.syncfusion.com/react/documentation/licensing/licensing-errors/) to resolve it. Also, find the most frequently asked license registration questions at this [link](https://ej2.syncfusion.com/react/documentation/licensing/licensing-troubleshoot/).
+* Now run the application. If you encounter a license validation error, refer to this [link](https://ej2.syncfusion.com/react/documentation/licensing/licensing-errors) to resolve it. Also, find the most frequently asked license registration questions at this [link](https://ej2.syncfusion.com/react/documentation/licensing/licensing-troubleshoot).
 
 > If you don't want to use the license text file in the application, refer to [this section](#register-the-license-key-with-the-environment-variable) to use an environment variable and register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key. Also, check out common licensing FAQs while registering the license key using the npx command from this [link](https://ej2.syncfusion.com/react/documentation/licensing/licensing-troubleshoot#reactivating-license-once-after-updating-the-package-version-while-using-npx).
 
@@ -135,7 +135,7 @@ The following steps show how to set the environment variable in different operat
 
 * Remove the `.cache` folder from `node_modules` in the application.
 
-* Now run the application. If you encounter a license validation error, refer to this [link](https://ej2.syncfusion.com/react/documentation/licensing/licensing-errors/) to resolve it. Also, find the most frequently asked license registration questions at this [link](https://ej2.syncfusion.com/react/documentation/licensing/licensing-troubleshoot/).
+* Now run the application. If you encounter a license validation error, refer to this [link](https://ej2.syncfusion.com/react/documentation/licensing/licensing-errors) to resolve it. Also, find the most frequently asked license registration questions at this [link](https://ej2.syncfusion.com/react/documentation/licensing/licensing-troubleshoot).
 
 ### Register Syncfusion<sup style="font-size:70%">&reg;</sup> License Key in CI Services
 
@@ -209,6 +209,19 @@ steps:
 
 ![Bash task](images/bash-script.png)
 
+## Register Multiple License Keys
+
+If you need to register multiple Syncfusion<sup style="font-size:70%">&reg;</sup> license keys in your application, you can do so by separating each key with a semicolon. This is useful when your application uses multiple Syncfusion<sup style="font-size:70%">&reg;</sup> products or editions.
+
+**Format:** `key1;key2;key3`
+
+**Example:**
+```ts
+registerLicense('license-key-1-here;license-key-2-here');
+```
+
+> When registering multiple keys, ensure there are no spaces before or after the semicolon separator.
+
 ## See Also
 
-* [Licensing FAQ](https://ej2.syncfusion.com/react/documentation/licensing/licensing-troubleshoot/)
+* [Licensing FAQ](https://ej2.syncfusion.com/react/documentation/licensing/licensing-troubleshoot)

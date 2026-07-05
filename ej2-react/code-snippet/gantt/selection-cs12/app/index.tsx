@@ -33,12 +33,11 @@ function App() {
     };
     return (
         <div>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{ display: 'flex', alignItems: 'center',gap: '10px'}}>
                 <label style={{ padding: '30px 17px 0 0', fontWeight: 'bold' }}>
                     Choose selection mode:
                 </label>
                 <DropDownListComponent
-                    style={{ padding: '26px 0 0 0' }}
                     dataSource={['Row', 'Cell', 'Both']}
                     width={150}
                     index={0}

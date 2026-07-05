@@ -1,16 +1,16 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DiagramComponent } from "@syncfusion/ej2-react-diagrams";
-import { SnapConstraints, UmlSequenceDiagramModel, UmlSequenceMessageType, UmlSequenceFragmentType } from "@syncfusion/ej2-diagrams";
+import { SnapConstraints, UmlSequenceDiagramModel, UmlSequenceMessageType, UmlSequenceFragmentType, UmlSequenceParticipantStereotype } from "@syncfusion/ej2-diagrams";
 
 // Define the UML Sequence Diagram model
 const model: UmlSequenceDiagramModel = {
   // Define the space between participants
   spaceBetweenParticipants: 300,
   participants: [
-    { id: "Customer", content: "Customer", isActor: true, },
-    { id: "OrderSystem", content: "Order System", isActor: false, },
-    { id: "PaymentGateway", content: "Payment Gateway", isActor: false, }
+    { id: "Customer", content: "Customer", stereotype: UmlSequenceParticipantStereotype.Actor },
+    { id: "OrderSystem", content: "Order System" },
+    { id: "PaymentGateway", content: "Payment Gateway" }
   ],
   // Define the messages passed between participants
   messages: [

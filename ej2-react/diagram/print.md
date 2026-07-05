@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Print in React Diagram Component
 
-The [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component provides comprehensive printing capabilities that allow users to generate high-quality printed outputs of their diagrams. The [`print`](https://ej2.syncfusion.com/react/documentation/api/diagram/#print) method enables printing the diagram as an image with extensive customization options for different printing scenarios.
+The React Diagram component provides comprehensive printing capabilities that allow users to generate high-quality printed outputs of their diagrams. The [`print`](https://ej2.syncfusion.com/react/documentation/api/diagram#print) method enables printing the diagram as an image with extensive customization options for different printing scenarios.
 
 ```JavaScript
 
@@ -33,7 +33,7 @@ root.render(<App />);
 
 ```
 
->Note: To Print diagram you need to inject `PrintAndExport` in the diagram.
+N> To Print diagram you need to inject `PrintAndExport` in the diagram.
 
 To print the React Diagram elements in various formats, refer to the video link below.
 
@@ -41,7 +41,7 @@ To print the React Diagram elements in various formats, refer to the video link 
 
 ## Print Options
 
-The diagram printing behavior can be extensively customized using the [`printOptions`](https://ej2.syncfusion.com/react/documentation/api/diagram/iPrintOptions/)parameter. These options provide control over the printed output's layout, size, and content selection.
+The diagram printing behavior can be extensively customized using the [`printOptions`](https://ej2.syncfusion.com/react/documentation/api/diagram/iPrintOptions) parameter. These options provide control over the printed output's layout, size, and content selection.
 
 The available print options are detailed in the table below:
 
@@ -57,7 +57,7 @@ The available print options are detailed in the table below:
 
 ### Region
 
-The [`region`](https://ej2.syncfusion.com/react/documentation/api/diagram/iPrintOptions/#region) property allows selective printing of specific diagram areas. This feature is particularly useful when working with large diagrams where only certain sections need to be printed.
+The [`region`](https://ej2.syncfusion.com/react/documentation/api/diagram/iPrintOptions#region) property allows selective printing of specific diagram areas. This feature is particularly useful when working with large diagrams where only certain sections need to be printed.
 
 The following code example illustrates how to print the diagram based on different regions:
 
@@ -75,7 +75,7 @@ The following code example illustrates how to print the diagram based on differe
 
 ### Multiple Page
 
-Large diagrams can be printed across multiple pages by setting the [`multiplePage`](https://ej2.syncfusion.com/react/documentation/api/diagram/iPrintOptions/#multiplepage) property to true. This feature automatically divides the diagram content across multiple print pages while maintaining proper scaling and alignment.
+Large diagrams can be printed across multiple pages by setting the [`multiplePage`](https://ej2.syncfusion.com/react/documentation/api/diagram/iPrintOptions#multiplepage) property to true. This feature automatically divides the diagram content across multiple print pages while maintaining proper scaling and alignment.
 
 The following code example demonstrates how to enable multiple page printing:
 
@@ -93,7 +93,7 @@ The following code example demonstrates how to enable multiple page printing:
 
 ### Margin
 
-The margin for the print region can be set using the [`margin`](https://ej2.syncfusion.com/react/documentation/api/diagram/iPrintOptions/#margin) property of the `printOptions`
+The margin for the print region can be set using the [`margin`](https://ej2.syncfusion.com/react/documentation/api/diagram/iPrintOptions#margin) property of the `printOptions`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -109,7 +109,7 @@ The margin for the print region can be set using the [`margin`](https://ej2.sync
 
 ### Page Width and Page Height
 
-The [`pageHeight`](https://ej2.syncfusion.com/react/documentation/api/diagram/iPrintOptions/#pageheight) and [`pageWidth`](https://ej2.syncfusion.com/react/documentation/api/diagram/iPrintOptions/#pagewidth) properties control the dimensions of the printed output. These settings are particularly important when printing to specific paper sizes or when precise scaling is required.
+The [`pageHeight`](https://ej2.syncfusion.com/react/documentation/api/diagram/iPrintOptions#pageheight) and [`pageWidth`](https://ej2.syncfusion.com/react/documentation/api/diagram/iPrintOptions#pagewidth) properties control the dimensions of the printed output. These settings are particularly important when printing to specific paper sizes or when precise scaling is required.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -125,7 +125,7 @@ The [`pageHeight`](https://ej2.syncfusion.com/react/documentation/api/diagram/iP
 
 ### Page Orientation
 
-[`pageOrientation`](https://ej2.syncfusion.com/react/documentation/api/diagram/iPrintOptions/#pageorientation)property determines how the diagram is oriented on the printed page:
+[`pageOrientation`](https://ej2.syncfusion.com/react/documentation/api/diagram/iPrintOptions#pageorientation) property determines how the diagram is oriented on the printed page:
 
 * **Landscape** - Prints with page width greater than page height, ideal for wide diagrams
 * **Portrait** - Prints with page height greater than page width, suitable for tall diagrams

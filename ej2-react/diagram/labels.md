@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Labels in React Diagram component | Syncfusion®
-description: Learn here all about Labels in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+description: Learn how to create, add, update, and remove labels on nodes and connectors in Syncfusion® React Diagram Component.
 control: Labels 
 platform: ej2-react
 documentation: ug
@@ -33,7 +33,7 @@ N> When setting an Annotation's ID, ensure that it does not contain white spaces
 
 ## Add annotations at runtime
 
-Annotations can be added at runtime by using the client-side method [`addLabels`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addlabels). The following code illustrates how to add an annotation to a node.
+Annotations can be added at runtime by using the client-side method [`addLabels`](https://ej2.syncfusion.com/react/documentation/api/diagram#addlabels). The following code illustrates how to add an annotation to a node.
 
 The annotation's [`id`](https://ej2.syncfusion.com/react/documentation/api/diagram/annotationModel#id) property is used to define the name of the annotation and is further used to find the annotation at runtime and perform any customization.
 
@@ -68,7 +68,7 @@ The following code example illustrates how to change the annotation properties.
 
 ## Remove annotations
 
-A collection of annotations can be removed from the node by using the diagram method [`removeLabels`](https://ej2.syncfusion.com/react/documentation/api/diagram/#removelabels). The following code illustrates how to remove an annotation from a node.
+A collection of annotations can be removed from the node by using the diagram method [`removeLabels`](https://ej2.syncfusion.com/react/documentation/api/diagram#removelabels). The following code illustrates how to remove an annotation from a node.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

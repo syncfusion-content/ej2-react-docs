@@ -29,7 +29,7 @@ Before creating nodes, understanding their core properties helps in effective di
 
 ### Add Nodes through Nodes Collection
 
-To create a node, define the [`node`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#node) object and add it to the [`nodes`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeModel/) collection of the diagram model. The [`id`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#id) property serves as the unique identifier for runtime operations and customization.
+To create a node, define the [`node`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#node) object and add it to the [`nodes`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeModel) collection of the diagram model. The [`id`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#id) property serves as the unique identifier for runtime operations and customization.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -46,7 +46,7 @@ N> Node id should not begin with numbers(should begin with a letter). Node Id sh
 
 ### Create Node from Data Source
 
-Nodes can be generated automatically using the dataSource property. Default properties for these nodes are retrieved from([`getNodeDefaults`](https://ej2.syncfusion.com/react/documentation/api/diagram/#getnodedefaults)) settings. For detailed information about data binding, refer to [`DataBinding`](./data-binding).
+Nodes can be generated automatically using the dataSource property. Default properties for these nodes are retrieved from([`getNodeDefaults`](https://ej2.syncfusion.com/react/documentation/api/diagram#getnodedefaults)) settings. For detailed information about data binding, refer to [`DataBinding`](./data-binding).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -77,7 +77,7 @@ Nodes can be predefined in a symbol palette and dragged into the diagram as need
 
 ### Draw Nodes Interactively
 
-To enable interactive node drawing, activate the drawing tool by setting `DrawOnce` or `ContinuousDraw` to the [`tool`](https://ej2.syncfusion.com/react/documentation/api/diagram/#tool) property and configure the node template using the [`drawingObject`](https://ej2.syncfusion.com/react/documentation/api/diagram/#drawingobject) property. 
+To enable interactive node drawing, activate the drawing tool by setting `DrawOnce` or `ContinuousDraw` to the [`tool`](https://ej2.syncfusion.com/react/documentation/api/diagram#tool) property and configure the node template using the [`drawingObject`](https://ej2.syncfusion.com/react/documentation/api/diagram#drawingobject) property. 
 
 The following code example illustrates how to draw a rectangle at runtime.
 
@@ -96,7 +96,7 @@ The following code example illustrates how to draw a rectangle at runtime.
 
 ### Add and Remove Individual Nodes
 
-Nodes can be dynamically added using the [`add`](https://ej2.syncfusion.com/react/documentation/api/diagram/#add) method and removed using the [`remove`](https://ej2.syncfusion.com/react/documentation/api/diagram/#remove) method. Both operations trigger the [`collectionChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#collectionchange) event, allowing for custom handling of diagram modifications.
+Nodes can be dynamically added using the [`add`](https://ej2.syncfusion.com/react/documentation/api/diagram#add) method and removed using the [`remove`](https://ej2.syncfusion.com/react/documentation/api/diagram#remove) method. Both operations trigger the [`collectionChange`](https://ej2.syncfusion.com/react/documentation/api/diagram#collectionchange) event, allowing for custom handling of diagram modifications.
 
 The following code illustrates how to add a node.
 
@@ -113,7 +113,7 @@ The following code illustrates how to add a node.
 
 ### Add Multiple Nodes Simultaneously
 
-Collections of nodes can be efficiently added using the[`addElements`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addelements) method. This approach is optimal for bulk operations and triggers the `collectionChange` event for each added element.
+Collections of nodes can be efficiently added using the [`addElements`](https://ej2.syncfusion.com/react/documentation/api/diagram#addelements) method. This approach is optimal for bulk operations and triggers the `collectionChange` event for each added element.
 
 The following code illustrates how to add nodes collection at run time.
 
@@ -146,11 +146,11 @@ Node properties can be modified at runtime with immediate visual updates. Change
           
 {% previewsample "page.domainurl/code-snippet/diagram/nodes/nodes-cs7" %}
 
-N> Call the [`dataBind`](./data-binding) `dataBind` method after property updates to ensure immediate reflection of changes.
+N> Call the [`dataBind`](./data-binding) method after property updates to ensure immediate reflection of changes.
 
 ### Clone Node at Runtime
 
-Node cloning creates new instances with identical properties and attributes. Use the [`copy`](https://ej2.syncfusion.com/react/documentation/api/diagram/#copy) and [`paste`](https://ej2.syncfusion.com/react/documentation/api/diagram/#paste) methods to duplicate existing nodes programmatically.
+Node cloning creates new instances with identical properties and attributes. Use the [`copy`](https://ej2.syncfusion.com/react/documentation/api/diagram#copy) and [`paste`](https://ej2.syncfusion.com/react/documentation/api/diagram#paste) methods to duplicate existing nodes programmatically.
 
  
 The following code example illustrates how to clone node at runtime
@@ -170,7 +170,7 @@ The following code example illustrates how to clone node at runtime
 
 ### Import Nodes from External Components
 
-Custom [`dragEnter`](https://ej2.syncfusion.com/react/documentation/api/diagram/#dragenter) functionality enables conversion of elements from other components, such as tree views, into diagram nodes based on the dragged element's data properties.
+Custom [`dragEnter`](https://ej2.syncfusion.com/react/documentation/api/diagram#dragenter) functionality enables conversion of elements from other components, such as tree views, into diagram nodes based on the dragged element's data properties.
 
 ## See Also
 

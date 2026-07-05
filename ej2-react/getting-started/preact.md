@@ -95,6 +95,8 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are av
 
 This guide uses the [React Grid component](https://www.syncfusion.com/react-components/react-data-grid) as an example. To install the React Grid component package, use the following command:
 
+<<<<<<< HEAD
+=======
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
 
@@ -114,23 +116,48 @@ Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can
 
 This example uses the `Tailwind 3` theme, imported in the **src/style.css** file:
 
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 {% tabs %}
-{% highlight css tabtitle="~/src/style.css" %}
+{% highlight bash tabtitle="npm" %}
 
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-react-grids/styles/tailwind3.css";
+npm install @syncfusion/ej2-react-grids --save
+
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+
+yarn add @syncfusion/ej2-react-grids
 
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** The order of importing CSS styles should be in line with its dependency graph. The Grid component requires CSS from multiple packages because it depends on other Syncfusion components for its full functionality.
+## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS or SASS from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages). Additionally, themes can be loaded via CDN or customized using the [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
+
+This example uses the Tailwind 3 theme for the Grid component from the theme package. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+npm install @syncfusion/ej2-tailwind3-theme --save
+
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+
+yarn add @syncfusion/@syncfusion/ej2-tailwind3-theme
+
+{% endhighlight %}
+{% endtabs %}
+
+The required styles for the Grid component are imported in the **src/style.css** file:
+
+{% tabs %}
+{% highlight css tabtitle="style.css" %}
+
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/grid/index.css";
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add a Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 

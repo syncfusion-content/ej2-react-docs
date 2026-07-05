@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, Edit } from '@syncfusion/ej2-react-gantt';
+import { data } from './datasource';
 
 function App() {
   const taskFields = {

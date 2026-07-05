@@ -20,7 +20,7 @@ Node selection is fundamental to diagram interaction. Users can select nodes by 
 
 ### Programmatic Node Selection
 
-Nodes can be selected at runtime by using the [`select`](https://ej2.syncfusion.com/react/documentation/api/diagram/#select) method and the selection can be cleared in the diagram by using the [`clearSelection`](https://ej2.syncfusion.com/react/documentation/api/diagram/#clearselection) or [`unSelect`](https://ej2.syncfusion.com/react/documentation/api/diagram/#unselect) method to remove specific objects from selection.
+Nodes can be selected at runtime by using the [`select`](https://ej2.syncfusion.com/react/documentation/api/diagram#select) method and the selection can be cleared in the diagram by using the [`clearSelection`](https://ej2.syncfusion.com/react/documentation/api/diagram#clearselection) or [`unSelect`](https://ej2.syncfusion.com/react/documentation/api/diagram#unselect) method to remove specific objects from selection.
  The following code explains how to select and clear selection in the diagram.
 
 {% tabs %}
@@ -37,8 +37,8 @@ Nodes can be selected at runtime by using the [`select`](https://ej2.syncfusion.
 
 |Method | Parameter | Description|
 |----|----|----|
-|[`unSelect`](https://ej2.syncfusion.com/react/documentation/api/diagram/#unselect)| NodeModel/ConnectorModel | The object to remove from the selection.|
-|[`clearSelection`](https://ej2.syncfusion.com/react/documentation/api/diagram/#clearselection)| - | Clears all the selection in the diagram.|
+|[`unSelect`](https://ej2.syncfusion.com/react/documentation/api/diagram#unselect)| NodeModel/ConnectorModel | The object to remove from the selection.|
+|[`clearSelection`](https://ej2.syncfusion.com/react/documentation/api/diagram#clearselection)| - | Clears all the selection in the diagram.|
 
 ## Drag
 
@@ -48,7 +48,7 @@ Node dragging allows users to reposition nodes within the diagram canvas. Users 
 
 ### Programmatic Node Dragging
 
-Nodes can be moved programmatically using the [`drag`](https://ej2.syncfusion.com/react/documentation/api/diagram/#drag) method, which accepts the target object and new position coordinates.
+Nodes can be moved programmatically using the [`drag`](https://ej2.syncfusion.com/react/documentation/api/diagram#drag) method, which accepts the target object and new position coordinates.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -69,7 +69,7 @@ When a node is selected, resize handles appear on all sides, allowing users to m
 
 ### Programmatic Node Resizing
 
-Node dimensions can be modified at runtime using the  [`scale`](https://ej2.syncfusion.com/react/documentation/api/diagram/#scale) method, which applies scaling factors to adjust the node size proportionally.
+Node dimensions can be modified at runtime using the  [`scale`](https://ej2.syncfusion.com/react/documentation/api/diagram#scale) method, which applies scaling factors to adjust the node size proportionally.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -90,7 +90,7 @@ Node rotation is performed interactively by clicking and dragging the rotate han
 
 ### Programmatic Node Rotation
 
-Nodes can be rotated at runtime using the [`rotate`](https://ej2.syncfusion.com/react/documentation/api/diagram/#rotate) method, which accepts the target object and rotation angle in degrees.
+Nodes can be rotated at runtime using the [`rotate`](https://ej2.syncfusion.com/react/documentation/api/diagram#rotate) method, which accepts the target object and rotation angle in degrees.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -105,20 +105,20 @@ Nodes can be rotated at runtime using the [`rotate`](https://ej2.syncfusion.com/
 
 ## Flip
 
-The diagram component supports node flipping operations to create mirrored images of nodes. The [`flip`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#flip) property controls the flip direction and behavior.
+The diagram component supports node flipping operations to create mirrored images of nodes. The [`flip`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#flip) property controls the flip direction and behavior.
 
 ### Flip Directions
 give the mirrored image of the original element.
 The flip types are as follows:
 
 * HorizontalFlip
- [`Horizontal`](https://ej2.syncfusion.com/react/documentation/api/diagram/flipDirection/) is used to change the element in horizontal direction.
+ [`Horizontal`](https://ej2.syncfusion.com/react/documentation/api/diagram/flipDirection) is used to change the element in horizontal direction.
 
 * VerticalFlip
-[`Vertical`](https://ej2.syncfusion.com/react/documentation/api/diagram/flipDirection/) is used to change the element in vertical direction
+[`Vertical`](https://ej2.syncfusion.com/react/documentation/api/diagram/flipDirection) is used to change the element in vertical direction
 
 * Both
-[`Both`](https://ej2.syncfusion.com/react/documentation/api/diagram/flipDirection/) which involves both vertical and horizontal changes of the element.
+[`Both`](https://ej2.syncfusion.com/react/documentation/api/diagram/flipDirection) which involves both vertical and horizontal changes of the element.
 
 The following example demonstrates how to apply flip transformations to nodes:
 
@@ -133,7 +133,7 @@ The following example demonstrates how to apply flip transformations to nodes:
 
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/nInteraction-cs5" %}
 
->Note: The flip is also applicable for group and BPMN shapes.
+N> The flip is also applicable for group and BPMN shapes.
 
 ### Runtime Flip Updates
 
@@ -155,7 +155,7 @@ The following example demonstrates how to update the flip for a node dynamically
 
 ### Flip Modes
 
-The [`flipMode`](https://ej2.syncfusion.com/react/documentation/api/diagram/flipMode/) property controls which elements are affected during flip operations, determining whether ports, labels, and label text are flipped along with the node.
+The [`flipMode`](https://ej2.syncfusion.com/react/documentation/api/diagram/flipMode) property controls which elements are affected during flip operations, determining whether ports, labels, and label text are flipped along with the node.
 
 | FlipMode | Description | 
 | -------- | -------- |

@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Overview
 
-Phases are subprocesses that split each lane horizontally or vertically based on the swimlane orientation. Phases help organize workflow stages within lanes, making it easier to visualize process steps and milestones. Multiple [`Phase`](https://ej2.syncfusion.com/react/documentation/api/diagram/phaseModel)objects can be added to a swimlane to represent different stages of a process.
+Phases are subprocesses that split each lane horizontally or vertically based on the swimlane orientation. Phases help organize workflow stages within lanes, making it easier to visualize process steps and milestones. Multiple [`Phase`](https://ej2.syncfusion.com/react/documentation/api/diagram/phaseModel) objects can be added to a swimlane to represent different stages of a process.
 
 The following code example illustrates how to create phase.
 
@@ -29,7 +29,7 @@ The following code example illustrates how to create phase.
 
 ### Dynamically Add and Remove Phases from Lanes
 
-Phases can be added at runtime using the [`addPhases`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addphases) method and removed using the [`removePhase`](https://ej2.syncfusion.com/react/documentation/api/diagram/#removephase) method. This dynamic functionality allows for flexible workflow management as process requirements change.
+Phases can be added at runtime using the [`addPhases`](https://ej2.syncfusion.com/react/documentation/api/diagram#addphases) method and removed using the [`removePhase`](https://ej2.syncfusion.com/react/documentation/api/diagram#removephase) method. This dynamic functionality allows for flexible workflow management as process requirements change.
 
 The following code example illustrates how to add and remove phases at runtime.
 
@@ -48,8 +48,8 @@ The following code example illustrates how to add and remove phases at runtime.
 
 Phase appearance and behavior can be customized through several properties:
 
-* The length of each region can be controlled using the[`offset`](https://ej2.syncfusion.com/react/documentation/api/diagram/phaseModel#offset) property of the phase.
-* Each phase region can include descriptive text through the[`header`](https://ej2.syncfusion.com/react/documentation/api/diagram/headerModel) property of the phase.
+* The length of each region can be controlled using the [`offset`](https://ej2.syncfusion.com/react/documentation/api/diagram/phaseModel#offset) property of the phase.
+* Each phase region can include descriptive text through the [`header`](https://ej2.syncfusion.com/react/documentation/api/diagram/headerModel) property of the phase.
 * The height of phases can be increased using the [`phaseSize`](https://ej2.syncfusion.com/react/documentation/api/diagram/swimLaneModel#phaseSize) property of swimlane.
 * Additional information can be stored with phases using the [`addInfo`](https://ej2.syncfusion.com/react/documentation/api/diagram/phaseModel#addInfo) property of the phase.
 

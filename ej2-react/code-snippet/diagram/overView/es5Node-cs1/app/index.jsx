@@ -1,4 +1,4 @@
-{% raw %}
+
 
 import * as React from "react";
 import { createRoot } from 'react-dom/client';
@@ -152,5 +152,5 @@ function App() {
 const root = createRoot(document.getElementById('diagram'));
 root.render(<App />);
 
-{% endraw %}
+
 

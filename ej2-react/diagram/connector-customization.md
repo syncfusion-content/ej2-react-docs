@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Connector Customization
 
-The [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component provides extensive customization options for connectors, allowing developers to modify visual appearance, behavior, and interaction properties. This guide covers decorator shapes, styling options, spacing controls, bridging effects, and advanced connector features.
+The Diagram component provides extensive customization options for connectors, allowing developers to modify visual appearance, behavior, and interaction properties. This guide covers decorator shapes, styling options, spacing controls, bridging effects, and advanced connector features.
 
 ## Decorator Shapes and Customization
 
@@ -20,7 +20,7 @@ Decorators are visual elements that appear at the starting and ending points of 
 
 * Starting and ending points of a connector can be decorated with some customizable shapes like arrows, circles, diamond, or path. The connection end points can be decorated with the [`sourceDecorator`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#sourcedecorator) and [`targetDecorator`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#targetdecorator) properties of the connector.
 
-* The [`shape`](https://helpej2.syncfusion.com/react/documentation/api/diagram/decoratorshapes) property of `sourceDecorator` allows to define the shape of the decorators. Similarly, the `shape` property of `targetDecorator` allows to define the shape of the decorators.
+* The [`shape`](https://helpej2.syncfusion.com/react/documentation/api/diagram/decoratorShapes) property of `sourceDecorator` allows to define the shape of the decorators. Similarly, the `shape` property of `targetDecorator` allows to define the shape of the decorators.
 
 * To create custom shape for source decorator, use the [`pathData`](https://helpej2.syncfusion.com/react/documentation/api/diagram/decorator#pathdata) property to define SVG path strings for both source and target decorators.
 
@@ -41,9 +41,9 @@ Decorators are visual elements that appear at the starting and ending points of 
 
 The visual appearance of decorators can be customized using stroke and fill properties to match design requirements or highlight specific connector types.
 
-* The source decorator’s [`strokeColor`](https://helpej2.syncfusion.com/react/documentation/api/diagram/strokestyle#strokecolor), [`strokeWidth`](https://helpej2.syncfusion.com/react/documentation/api/diagram/strokestyle#strokewidth), and [`strokeDashArray`](https://helpej2.syncfusion.com/react/documentation/api/diagram/strokestyle#strokedasharray) properties are used to customize the color, width, and appearance of the decorator.
+* The source decorator's [`strokeColor`](https://helpej2.syncfusion.com/react/documentation/api/diagram/strokeStyle#strokecolor), [`strokeWidth`](https://helpej2.syncfusion.com/react/documentation/api/diagram/strokeStyle#strokewidth), and [`strokeDashArray`](https://helpej2.syncfusion.com/react/documentation/api/diagram/strokeStyle#strokedasharray) properties are used to customize the color, width, and appearance of the decorator.
 
-* To set the border stroke color, stroke width, and stroke dash array for the target decorator, use [`strokeColor`](https://helpej2.syncfusion.com/react/documentation/api/diagram/strokestyle#strokecolor), `strokeWidth` , and `strokeDashArray`.
+* To set the border stroke color, stroke width, and stroke dash array for the target decorator, use [`strokeColor`](https://helpej2.syncfusion.com/react/documentation/api/diagram/strokeStyle#strokecolor), `strokeWidth` , and `strokeDashArray`.
 
 * To set the size for source and target decorator, use width and height properties.
 
@@ -85,7 +85,7 @@ The following code example illustrates how to apply gradient effects to decorato
 
 The visual appearance of connector segments can be customized to distinguish different types of connections or match application themes.
 
-The connector's `strokeWidth`, `strokeColor`, `strokeDashArray`, and [`opacity`](https://helpej2.syncfusion.com/react/documentation/api/diagram/strokestyle#opacity) properties are used to customize the appearance of the connector segments.
+The connector's `strokeWidth`, `strokeColor`, `strokeDashArray`, and [`opacity`](https://helpej2.syncfusion.com/react/documentation/api/diagram/strokeStyle#opacity) properties are used to customize the appearance of the connector segments.
 
 The [`visible`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#visible) property of the connector enables or disables the visibility of the connector.
 
@@ -172,7 +172,7 @@ Corner radius creates connectors with rounded corners instead of sharp angles, p
 
 ## Connector Appearance
 
-* The connector’s `strokeWidth`, `strokeColor`, `strokeDashArray`, and `opacity`] properties are used to customize the appearance of the connector segments.
+* The connector’s `strokeWidth`, `strokeColor`, `strokeDashArray`, and `opacity` properties are used to customize the appearance of the connector segments.
 
 * The [`visible`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#visible) property of the connector enables or disables the visibility of connector.
 
@@ -267,7 +267,7 @@ The following code example illustrates how to configure connector spacing.
 
 #### Maximum Segment Thumbs
 
-The [`maxSegmentThumb`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#maxsegmentthumb)property limits the number of segment manipulation handles displayed on a connector, helping maintain clean interfaces in complex diagrams.
+The [`maxSegmentThumb`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#maxsegmentthumb) property limits the number of segment manipulation handles displayed on a connector, helping maintain clean interfaces in complex diagrams.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

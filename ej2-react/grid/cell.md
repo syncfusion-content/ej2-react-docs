@@ -92,6 +92,10 @@ The following example demonstrates setting the [allowTextWrap](https://ej2.syncf
 
 Customizing grid cell styles allows modification of cell appearance in the Grid control to meet specific design requirements. The font, background color, and other cell styles can be customized using grid events, CSS, properties, or method support.
 
+For an overview of the cell customization available in the React Grid, refer to the following video:
+
+{% youtube "https://www.youtube.com/watch?v=ewNm_hQkBC8" %}
+
 ### Using event
 
 The [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#querycellinfo) event of the grid can be used to customize cell appearance. This event triggers when the grid renders each header cell and provides an object containing information about the header cell. This object can be used to modify header cell styles.

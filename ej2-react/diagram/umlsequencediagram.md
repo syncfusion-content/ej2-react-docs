@@ -11,31 +11,38 @@ domainurl: ##DomainURL##
 # UML Sequence Diagram in React Diagram Component
 A UML sequence diagram is a type of interaction diagram that visualizes how objects communicate with each other over time. These diagrams show the sequence of messages exchanged between participants, making them essential for understanding system interactions, API workflows, and process flows.
 
-The [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component provides comprehensive support for creating and visualizing UML sequence diagrams through the [`UmlSequenceDiagramModel`](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceDiagramModel/). This specialized model enables the creation of sequence diagrams with proper UML notation and automated layout capabilities.
+The Syncfusion® React Diagram component provides comprehensive support for creating and visualizing UML sequence diagrams through the [`UmlSequenceDiagramModel`](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceDiagramModel). This specialized model enables the creation of sequence diagrams with proper UML notation and automated layout capabilities.
 
 ## UML Sequence Diagram Elements
 
-A sequence diagram comprises several essential elements that work together to represent system interactions. The following sections demonstrate how to define and configure these components.
+A sequence diagram includes several key elements, such as participants, messages, activation boxes, and fragments. The sections below demonstrate how to define and configure these components using the Diagram control.
 
 ### Participants
 
-[`UmlSequenceParticipantModel`](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceParticipantModel/) represents the entities that participate in the interaction sequence. Participants appear as rectangular boxes at the top of the diagram, with lifelines extending vertically downward to show their existence throughout the interaction timeline.
-
-#### Participant Types
-
-Participants can be displayed in two forms:
-- **Actors**: Human users or external systems (displayed with stick figure notation).
-- **Objects**: System components, classes, or services (displayed as rectangular boxes).
+[`UmlSequenceParticipantModel`](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceParticipantModel) represents an entity that interacts with other entities in a sequence diagram. Participants appear at the top of the diagram, with lifelines extending vertically downward.
 
 #### UmlSequenceParticipantModel Properties
 
 | Property | Type | Description |
 |---|---|---|
 | id | string \| number | A unique identifier for the participant. |
-| content | string | The display text for the participant.. |
-| isActor | boolean | Specifies whether the participant is displayed as an actor (true) or an object (false). |
-| showDestructionMarker | boolean | Indicates whether a destruction marker (X) is shown at the end of the lifeline. |
-| activationBoxes | UmlSequenceActivationBoxModel[] | A collection of activation boxes associated with the participant .|
+| content | string | The display text of the participant. |
+| showDestructionMarker | boolean | Indicates whether a destruction marker (X) is shown at the end of the participant lifeline. |
+| activationBoxes | UmlSequenceActivationBoxModel[] | A collection of activation boxes associated with the participant. |
+| stereotype | UmlSequenceParticipantStereotype | The visual stereotype used to render the participant header, such as Actor, Boundary, Control, Entity, or Database. |
+
+#### Participant Stereotypes
+
+The [`UmlSequenceParticipantStereotype`](https://ej2.syncfusion.com/react/documentation/api/diagram/umlSequenceParticipantStereotype) enum defines the visual style of a participant. A stereotype helps show the role of a participant in the interaction.
+
+| Stereotype | Description | Shape |
+|---|---|---|
+| Default | Standard object participant displayed as a labeled rectangle. | ![Default stereotype](./images/umlSequenceDiagram-images/Default.png) |
+| Actor | External person or system that interacts with the process. | ![Actor stereotype](./images/umlSequenceDiagram-images/Actor.png) |
+| Boundary | Interface or entry point, such as a UI, API gateway, or external system. | ![Boundary stereotype](./images/umlSequenceDiagram-images/Boundary.png) |
+| Control | Object that manages the flow, such as a controller or coordinator. | ![Control stereotype](./images/umlSequenceDiagram-images/Control.png) |
+| Entity | Object that represents data, domain objects, or stored information. | ![Entity stereotype](./images/umlSequenceDiagram-images/Entity.png) |
+| Database | Database or persistent storage system, displayed using a cylindrical shape. | ![Database stereotype](./images/umlSequenceDiagram-images/Database.png) |
 
 #### Creating Participants
 
@@ -54,7 +61,7 @@ The following code example demonstrates how to create different types of partici
 
 ### Messages
 
-[`UmlSequenceMessageModel`](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceMessageModel/) represents communication between participants . Messages are displayed as arrows connecting lifelines and indicate the flow of information or requests between system components.
+[`UmlSequenceMessageModel`](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceMessageModel) represents communication between participants . Messages are displayed as arrows connecting lifelines and indicate the flow of information or requests between system components.
 
 #### Message Types and Usage
 
@@ -96,7 +103,7 @@ The following example shows how to create different types of messages between pa
  
 ### Activation Boxes
 
-[`UmlSequenceActivationBoxModel`](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceActivationBoxModel/) represents periods when a participant is actively processing or executing operations. Activation boxes appear as thin rectangles overlaid on participant lifelines, indicating the duration of active processing between specific messages.
+[`UmlSequenceActivationBoxModel`](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceActivationBoxModel) represents periods when a participant is actively processing or executing operations. Activation boxes appear as thin rectangles overlaid on participant lifelines, indicating the duration of active processing between specific messages.
 
 #### UmlSequenceActivationBoxModel Properties
 
@@ -123,7 +130,7 @@ The following example demonstrates how to create activation boxes that span spec
 
 ### Fragments
 
-[`UmlSequenceFragmentModel`](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceFragmentModel/) represents logical groupings of messages based on specific conditions or control structures. Fragments appear as rectangular enclosures that visually organize conditional logic, loops, and alternative execution paths within sequence diagrams.
+[`UmlSequenceFragmentModel`](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceFragmentModel) represents logical groupings of messages based on specific conditions or control structures. Fragments appear as rectangular enclosures that visually organize conditional logic, loops, and alternative execution paths within sequence diagrams.
 
 #### Fragment Applications
 
@@ -136,7 +143,7 @@ Fragments are essential for modeling:
 
 #### Fragment Types
 
-The [`UmlSequenceFragmentType`](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceFragmentType/) enum defines the following fragment types:
+The [`UmlSequenceFragmentType`](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceFragmentType) enum defines the following fragment types:
 
 | Fragment Type  | Description  | Example  |  
 |---------------|-------------|--------|  
@@ -179,7 +186,7 @@ The following example illustrates how to create fragments with different conditi
 
 ### Adjusting Participant Spacing
 
-The [`spaceBetweenParticipants`](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceDiagramModel/#spaceBetweenParticipants) property controls the horizontal spacing between participants in the sequence diagram. Adjust this value to accommodate longer message labels or improve diagram readability.
+The [`spaceBetweenParticipants`](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceDiagramModel#spaceBetweenParticipants) property controls the horizontal spacing between participants in the sequence diagram. Adjust this value to accommodate longer message labels or improve diagram readability.
 
 ```javascript
 // Define the UML Sequence Diagram model

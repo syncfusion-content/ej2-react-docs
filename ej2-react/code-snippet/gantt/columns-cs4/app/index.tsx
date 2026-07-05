@@ -1,18 +1,18 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, ColumnsDirective, ColumnDirective, SplitterSettings } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, ColumnsDirective, ColumnDirective, SplitterSettings, Inject, Resize, TaskFieldsModel } from '@syncfusion/ej2-react-gantt';
 import { GanttData } from './datasource';
 
 function App() {
     var gantt: GanttComponent = null;
 
-    const taskFields: object = {
+    const taskFields: TaskFieldsModel = {
         id: 'TaskID',
         name: 'TaskName',
         startDate: 'StartDate',
         duration: 'Duration',
         progress: 'Progress',
-        child: 'subtasks'
+        parentID: 'ParentID'
     };
 
     const splitterSettings: SplitterSettings = {
@@ -26,7 +26,7 @@ function App() {
     return (
         <div>
             <GanttComponent
-                ref={g=> gantt = g}
+                ref={(g: GanttComponent)=> gantt = g}
                 dataSource={GanttData}
                 taskFields={taskFields}
                 splitterSettings={splitterSettings}
@@ -41,6 +41,7 @@ function App() {
                     <ColumnDirective field="Duration" headerText="Duration" textAlign="Right" width={90} />
                     <ColumnDirective field="Progress" headerText="Progress" textAlign="Right" width={120} />
                 </ColumnsDirective>
+                <Inject services={[Resize]} />
             </GanttComponent>
         </div>
     );

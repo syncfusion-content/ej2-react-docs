@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Connector Interaction in EJ2 React Diagram Component
 
-Connectors in the [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component support various interaction capabilities including selection, dragging, endpoint manipulation, segment editing, and flipping operations. These interactions enable users to dynamically modify connector behavior and appearance within the diagram.
+Connectors in the React Diagram component support various interaction capabilities including selection, dragging, endpoint manipulation, segment editing, and flipping operations. These interactions enable users to dynamically modify connector behavior and appearance within the diagram.
 
 ## Select and Unselect connector
 
@@ -90,11 +90,11 @@ The diagram provides support for flipping connectors to create mirrored versions
 
 The available flip types are:
 
-* **Horizontal Flip** - [`Horizontal`](https://helpej2.syncfusion.com/react/documentation/api/diagram/flipdirection) interchanges the connector source and target x coordinates.
+* **Horizontal Flip** - [`Horizontal`](https://helpej2.syncfusion.com/react/documentation/api/diagram/flipDirection) interchanges the connector source and target x coordinates.
 
-* **Vertical Flip** - [`Vertical`](https://helpej2.syncfusion.com/react/documentation/api/diagram/flipdirection) interchanges the connector source and target y coordinates.
+* **Vertical Flip** - [`Vertical`](https://helpej2.syncfusion.com/react/documentation/api/diagram/flipDirection) interchanges the connector source and target y coordinates.
 
-* **Both** - [`Both`](https://helpej2.syncfusion.com/react/documentation/api/diagram/flipdirection) swaps the source point as the target point and the target point as the source point.
+* **Both** - [`Both`](https://helpej2.syncfusion.com/react/documentation/api/diagram/flipDirection) swaps the source point as the target point and the target point as the source point.
 
 
 {% tabs %}

@@ -99,10 +99,12 @@ import * as GanttComponents from '@syncfusion/ej2-react-gantt';
 
 **Only inject required modules:**
 
+{% raw %}
 ```ts
 // Only include modules for features you're actually using
 <Inject services={[Sort, Edit]} />
 ```
+{% endraw %}
 
 This ensures your production bundle includes only the Gantt features your application uses. For example, if you don't use Excel export, don't import or inject the `ExcelExport` module.
 

@@ -1,4 +1,4 @@
-{% raw %}
+
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
@@ -69,6 +69,20 @@ function setPaletteNodeDefaults(node: NodeModel): void {
     node.height = 70;
     node.style.strokeColor = '#3A3A3A';
 }
+const symbolPreview = {
+    height: 70,
+    width: 70,
+    offset: {
+        x: 0.5,
+        y: 0.5
+    },
+};
+const symbolMargin = {
+    left: 12,
+    right: 12,
+    top: 12,
+    bottom: 12
+};
 // Initialize the Symbol palette
 function App() {
   return (
@@ -83,20 +97,8 @@ function App() {
           title: 'Swimlane Shapes',
         },
       ]}
-      symbolPreview={{
-        height: 70,
-        width: 70,
-        offset: {
-          x: 0.5,
-          y: 0.5
-        },
-      }}
-      symbolMargin={{
-        left: 12,
-        right: 12,
-        top: 12,
-        bottom: 12
-      }}
+      symbolPreview={symbolPreview}
+      symbolMargin={symbolMargin}
       //Returns the default properties of node
       getNodeDefaults={setPaletteNodeDefaults}
        getSymbolInfo = {
@@ -112,4 +114,3 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
 
-{% endraw %}

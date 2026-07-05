@@ -44,17 +44,16 @@ npm install @syncfusion/ej2-react-blockeditor --save
 ```
 ## Adding CSS reference
 
-Import the required CSS theme files for the Block Editor and its dependencies in your `src/App.css` file.
+To install the [tailwind3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+
+```bash
+npm install @syncfusion/ej2-tailwind3-theme --save
+```
+
+Import the required CSS theme files for the Block Editor and its dependencies in your `src/index.css` file.
 
 ```css
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
-@import "../node_modules/@syncfusion/ej2-react-blockeditor/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/blockeditor/index.css";
 ```
 
 ## Add the Block Editor Component

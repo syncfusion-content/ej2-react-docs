@@ -10,11 +10,19 @@ domainurl: ##DomainURL##
 
 # Immutable in React Gantt Chart component
 
-The immutable mode optimizes the Gantt re-rendering performance by using the object reference and [deep compare](https://dmitripavlutin.com/how-to-compare-objects-in-javascript#4-deep-equality) concept. When performing the Gantt actions, it will only re-render the modified or newly added rows and prevent the re-rendering of the unchanged rows.
+Immutable mode optimizes the React Gantt Chart component’s rendering performance by minimizing unnecessary re-renders, ideal for large projects with hundreds of tasks or frequent updates like real-time progress tracking. When enabled via the [enableImmutableMode](https://ej2.syncfusion.com/react/documentation/api/gantt#enableimmutablemode) property, the component uses object reference comparison to identify changed tasks, re-rendering only modified or new rows while preserving unchanged rows’ DOM elements. This reduces DOM operations, CPU usage, and rendering time, ensuring smooth interactions for complex hierarchies or batch updates. For example, updating a single task’s progress in a 1,000-task project re-renders only that task’s row, significantly improving performance over standard mode, which re-renders all visible rows.
 
-To enable this feature, you have to set the [enableImmutableMode](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#enableimmutablemode) property as **true**.
+## Configure immutable mode
 
-> This feature uses the primary key value for data comparison. So, you need to provide the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/gantt/column#isprimarykey) column.
+Immutable mode requires a unique primary key in the data source, configured via the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/gantt/column#isprimarykey) property, and valid [taskFields](https://ej2.syncfusion.com/react/documentation/api/gantt#taskfields) mappings (e.g., id to a unique field like TaskID). The component compares object references to detect changes, requiring immutable data patterns where updates create new objects rather than mutating existing ones. Hierarchical task updates (e.g., parent-child tasks) are efficiently handled by checking only changed references, preserving nested structures.
+
+**Configuration requirements**
+
+- **Primary key**: Set `isPrimaryKey` to **true** on a unique column (e.g., TaskID) to ensure accurate change detection.
+- **Unique identifiers**: Assign stable, unique IDs to all tasks via `taskFields.id`.
+- **Immutable data**: Create new objects for updates (e.g., { ...task, progress: 50 }) to trigger reference changes.
+
+The following example enables immutable mode:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -30,9 +38,16 @@ To enable this feature, you have to set the [enableImmutableMode](https://ej2.sy
         
 {% previewsample "page.domainurl/code-snippet/gantt/immutable-cs1" %}
 
-## Limitations
+## Feature compatibility and limitations
 
-The following features are not supported in the immutable mode:
+Immutable mode is incompatible with certain features due to its reference-based change detection:
+- **Column reordering**: Conflicts with reference tracking, requiring temporary disabling of `enableImmutableMode`.
+- **Virtualization**: Incompatible with [enableVirtualization](https://ej2.syncfusion.com/react/documentation/api/gantt#enablevirtualization), as both optimize rendering differently; choose based on dataset size.
 
-* Column reorder
-* Virtualization
+For small datasets, standard rendering may suffice. For dynamic column operations, disable immutable mode temporarily. While immutable mode reduces rendering time, it may increase memory usage to maintain object references, a trade-off to consider for extremely large projects.
+
+## See also
+
+- [How to manage task dependencies?](https://ej2.syncfusion.com/react/documentation/gantt/task-dependency)
+- [How to enable virtual scrolling?](https://ej2.syncfusion.com/react/documentation/gantt/scrolling/virtual-scrolling)
+- [How to configure critical path?](https://ej2.syncfusion.com/react/documentation/gantt/critical-path)

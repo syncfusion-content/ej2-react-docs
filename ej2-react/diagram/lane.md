@@ -88,7 +88,7 @@ Lane header style and text properties can be customized dynamically. The followi
 
 ### Add and Remove Lanes at Runtime
 
-Lanes can be added at runtime by using the [`addLanes`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addlanes) method and remove lane at runtime using the [`removeLane`](https://ej2.syncfusion.com/react/documentation/api/diagram/#removelane) method. The following code illustrates how to dynamically add and remove lane in swimlane.
+Lanes can be added at runtime by using the [`addLanes`](https://ej2.syncfusion.com/react/documentation/api/diagram#addlanes) method and remove lane at runtime using the [`removeLane`](https://ej2.syncfusion.com/react/documentation/api/diagram#removelane) method. The following code illustrates how to dynamically add and remove lane in swimlane.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -120,7 +120,7 @@ The following code example illustrates how to add nodes to lane.
 
 #### Add Child Dynamically into the Lane.
 
-The child node can be inserted into the lane at runtime by using the [`addNodetoLane`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addnodetolane) method.
+The child node can be inserted into the lane at runtime by using the [`addNodetoLane`](https://ej2.syncfusion.com/react/documentation/api/diagram#addnodetolane) method.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -156,7 +156,7 @@ Here is an example of how to apply these constraints:
 
 ### Additional Information Storage
 
-Additional information storage for lanes is similar to nodes. Additional information about a specific lane can be stored by using the [`addInfo`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addinfo) property.
+Additional information storage for lanes is similar to nodes. Additional information about a specific lane can be stored by using the [`addInfo`](https://ej2.syncfusion.com/react/documentation/api/diagram#addinfo) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

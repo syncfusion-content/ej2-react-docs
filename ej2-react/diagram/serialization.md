@@ -71,18 +71,16 @@ diagramInstance.loadDiagram(saveData);
 
 ```
 
->Note: Before loading a new diagram, the existing diagram content is automatically cleared.
+N> Before loading a new diagram, the existing diagram content is automatically cleared.
 
 ### Handling Load Completion
 
 The [`loaded`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#loaded) event triggers when all diagram elements finish loading through the [`loadDiagram`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#loaddiagram) method. Use this event to perform post-load customizations or validations.
 
 ```ts
-  return (
-    loaded={(args) => {
-            //You can use this event to customize diagram elements during the loading process
-        }}/>
-  )
+  loaded={(args) => {
+      //You can use this event to customize diagram elements during the loading process
+  }}
 
 ```
 
@@ -115,6 +113,25 @@ When enabled, only explicitly set properties are included in the JSON output, si
 {% include code-snippet/diagram/reactCurlyExamples/serialization-cs1/app/index.jsx %}
 {% endhighlight %}
 {% endtabs %}
+
+## Detect unsaved changes
+
+The [`isModified`](https://ej2.syncfusion.com/react/documentation/api/diagram#ismodified) property indicates whether the diagram has unsaved changes. It becomes **true** when the diagram is changed, such as when nodes, connectors, or diagram properties are updated, or when undo and redo actions are performed.
+
+This property can be used to show save indicators or to display a warning before unsaved changes are discarded.
+
+```ts
+// Check whether the diagram has unsaved changes.
+if (diagramInstance.isModified) {
+    const confirmed = confirm('There are unsaved changes. Discard them?');
+
+    if (!confirmed) {
+        return;
+    }
+}
+```
+
+N> Transient interactions such as zooming, panning, or selecting elements do not affect the `isModified` state.
 
 ## File-Based Save and Load Operations
 

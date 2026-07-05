@@ -1,12 +1,11 @@
 
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import { ColumnDirective, ColumnsDirective, AggregatesDirective, TreeGridComponent,AggregateDirective,AggregateColumnsDirective, AggregateColumnDirective } from '@syncfusion/ej2-react-treegrid';
 import { Inject, ExcelExport, Toolbar, Aggregate, ToolbarItems, TreeGrid } from '@syncfusion/ej2-react-treegrid';
 import { summaryData } from './datasource';
-import { DropDownList } from '@syncfusion/ej2-react-dropdowns';
+import { DropDownList } from '@syncfusion/ej2-dropdowns';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
 import { getObject,PdfExportProperties } from '@syncfusion/ej2-grids';
 

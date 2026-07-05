@@ -1,4 +1,4 @@
-{% raw %}
+
 
   function dataLoaded(args) {
     //we can get diagram instance in args.
@@ -17,4 +17,3 @@
       <Inject services={[HierarchicalTree]} />
   </DiagramComponent>
 
-{% endraw %}

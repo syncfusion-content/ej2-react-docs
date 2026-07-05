@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Theme in React Appearance component | Syncfusion
-description: Learn all about built-in themes including Tailwind 3.4, Material 3, Fluent 2, Bootstrap 5.3 in Syncfusion React (Essential JS 2) components, optimized CSS, and customization options.
+description: Explore Syncfusion React built-in themes including Tailwind 3.4, Material 3, Fluent 2, and Bootstrap 5.3 with optimized CSS and customization options.
 control: Theme 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# React Themes in Syncfusion<sup style="font-size:70%">&reg;</sup> Components
+# React Themes in Syncfusion® Components
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components provide a comprehensive set of built-in themes to deliver a consistent, modern, and visually appealing appearance across applications. The following table lists all currently supported themes in the Syncfusion<sup style="font-size:70%">&reg;</sup> React components library:
 
@@ -39,13 +39,32 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components provide a c
 
 > The Syncfusion<sup style="font-size:70%">&reg;</sup> React Bootstrap theme is based on Bootstrap v3, while the Bootstrap 4, Bootstrap 5, and Bootstrap 5.3 themes are aligned with their respective Bootstrap framework versions. In addition to these built-in themes, the [ThemeStudio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) supports the Fusion theme, which can be customized and downloaded exclusively from [Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=fusion).
 
+## Theme packages
+
+Syncfusion built-in themes are distributed as theme packages available on npm. These packages include CSS/SCSS files for all components. The following table lists all available theme packages:
+
+| Theme | Light Package | Dark Package |
+|-------|---------------|---------------|
+| Tailwind 3 | [`@syncfusion/ej2-tailwind3-theme`](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) | [`@syncfusion/ej2-tailwind3-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-dark-theme) |
+| Bootstrap 5.3 | [`@syncfusion/ej2-bootstrap5.3-theme`](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap5.3-theme) | [`@syncfusion/ej2-bootstrap5.3-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap5.3-dark-theme) |
+| Fluent 2 | [`@syncfusion/ej2-fluent2-theme`](https://www.npmjs.com/package/@syncfusion/ej2-fluent2-theme) | [`@syncfusion/ej2-fluent2-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-fluent2-dark-theme) |
+| Material 3 | [`@syncfusion/ej2-material3-theme`](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme) | [`@syncfusion/ej2-material3-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-material3-dark-theme) |
+| Bootstrap 5 | [`@syncfusion/ej2-bootstrap5-theme`](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap5-theme) | [`@syncfusion/ej2-bootstrap5-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap5-dark-theme) |
+| Bootstrap 4 | [`@syncfusion/ej2-bootstrap4-theme`](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap4-theme) | - |
+| Bootstrap | [`@syncfusion/ej2-bootstrap-theme`](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap-theme) | [`@syncfusion/ej2-bootstrap-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap-dark-theme) |
+| Material | [`@syncfusion/ej2-material-theme`](https://www.npmjs.com/package/@syncfusion/ej2-material-theme) | [`@syncfusion/ej2-material-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-material-dark-theme) |
+| Tailwind | [`@syncfusion/ej2-tailwind-theme`](https://www.npmjs.com/package/@syncfusion/ej2-tailwind-theme) | [`@syncfusion/ej2-tailwind-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-tailwind-dark-theme) |
+| Fluent | [`@syncfusion/ej2-fluent-theme`](https://www.npmjs.com/package/@syncfusion/ej2-fluent-theme) | [`@syncfusion/ej2-fluent-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-fluent-dark-theme) |
+| Fabric | [`@syncfusion/ej2-fabric-theme`](https://www.npmjs.com/package/@syncfusion/ej2-fabric-theme) | [`@syncfusion/ej2-fabric-dark-theme`](https://www.npmjs.com/package/@syncfusion/ej2-fabric-dark-theme) |
+| High Contrast | [`@syncfusion/ej2-highcontrast-theme`](https://www.npmjs.com/package/@syncfusion/ej2-highcontrast-theme) | - |
+
 ## Optimized CSS files
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> components support two size modes in each theme: **normal** (default) and **bigger**. The normal size mode provides the standard appearance suitable for most devices and scenarios. The bigger size mode increases the size of UI elements to enhance readability, touch interaction, and accessibility — particularly useful for high-resolution displays or touch-based applications.
 
 Below is a comparison of the Button component in normal and bigger size modes:
 
-![Button component displayed in normal size mode (left) and bigger size mode (right)](./images/bigger-theme-button.png)
+![Button component displayed in normal size mode and bigger size mode](./images/bigger-theme-button.png)
 
 Each complete theme stylesheet includes styles for both size modes, which increases the file size. To optimize performance in applications that do not need the bigger size mode, Syncfusion provides optimized (lite) theme variants that include only normal size styles. These lite files significantly reduce CSS size and improve application load times.
 
@@ -68,94 +87,86 @@ For better maintainability, customization, and bundle optimization, prefer the *
 
 ## Refer themes through npm packages
 
-Themes are shipped as both combined and individual CSS/SCSS files. Combined files are available in the `@syncfusion/ej2` package, while component-specific files are located in each component package’s `styles` folder. Both CSS and SCSS formats are provided.
+Themes are shipped as both combined and individual CSS/SCSS files. Each theme package includes Combined and component-specific styles in both CSS and SCSS formats. For a list of available theme packages, refer to the [available theme packages](#theme-packages) section.
 
-To use the combined CSS files, install the `ej2` package:
+To use the combined SCSS/CSS files, install the required theme package. 
 
 ```bash
- npm install @syncfusion/ej2
+npm install @syncfusion/ej2-material3-theme
 ```
 
 **Referring all components CSS**
 
 ```css
-@import "./node_modules/@syncfusion/ej2/<theme_name>.css";
+@import "@syncfusion/ej2-<theme-name>-theme/styles/<theme-name>.css";
+```
+
+**Example:**
+
+```css
+@import "@syncfusion/ej2-material3-theme/styles/material3.css";
 ```
 
 **Referring all components SCSS**
 
-```css
-@import "./node_modules/@syncfusion/ej2/<theme_name>.scss";
+```scss
+@use "@syncfusion/ej2-<theme-name>-theme/styles/<theme-name>.scss" as *;
+```
+
+**Example:**
+
+```scss
+@use "@syncfusion/ej2-material3-theme/styles/material3.scss" as *;
 ```
 
 ### Referring to individual component theme
 
-You can reference individual component themes either from dedicated component packages or from the unified `@syncfusion/ej2` package.
-
-**From individual package** (recommended for smallest possible bundle):
+You can reference individual component themes from the unified theme package. In this package, each component includes an `index.css/index.scss` files that automatically loads all the required dependency styles.
 
 ```css
-@import "<dependent-package>/styles/<theme_name>.scss";
-@import "ej2-react-buttons/styles/button/<theme_name>.scss";
+@import "@syncfusion/ej2-<theme-name>-theme/styles/<component-name>/index.css";
 ```
 
 **Example:**
 
 ```css
-@import "ej2-base/styles/tailwind3.scss";
-@import "ej2-react-buttons/styles/button/tailwind3.scss";
-```
-
-> The `ej2-base` package contains shared styles required by all Syncfusion<sup style="font-size:70%">&reg;</sup> React components and must be imported first.
-
-**From `@syncfusion/ej2` package:**
-
-```css
-@import "ej2/<dependent-component>/<theme_name>.scss";
-@import "ej2/button/<theme_name>.scss";
-```
-
-**Example:**
-
-```css
-@import "ej2/base/tailwind3.scss";
-@import "ej2/button/tailwind3.scss";
+@import "@syncfusion/ej2-material3-theme/styles/grid/index.css";
 ```
 
 ### Referring all components optimized CSS file
 
-To reference optimized (lite) versions of all components from the `@syncfusion/ej2` package:
+To reference optimized (lite) versions of all component styles using theme packages.
 
 ```css
-@import "@syncfusion/ej2/<theme_name>-lite.css";
+@import "@syncfusion/ej2-<theme-name>-theme/styles/<theme-name>-lite.css";
 /* or */
-@import "@syncfusion/ej2/<theme_name>-lite.scss";
+@use "@syncfusion/ej2-<theme-name>-theme/styles/<theme-name>-lite.scss" as *;
 ```
 
 **Example:**
 
 ```css
-@import "@syncfusion/ej2/fluent2-lite.css";
+@import "@syncfusion/ej2-fluent2-theme/styles/fluent2-lite.css";
 /* or */
-@import "@syncfusion/ej2/fluent2-lite.scss";
+@use "@syncfusion/ej2-fluent2-theme/styles/fluent2-lite.scss" as *;
 ```
 
 ### Referring individual component optimized CSS file
 
-From individual component packages:
+From individual component styles:
 
 ```css
-@import "<dependent-package>/styles/<theme_name>-lite.css";
+@import "@syncfusion/ej2-<theme-name>-theme/styles/<component-name>/index-lite.css";
 /* or */
-@import "<dependent-package>/styles/<theme_name>-lite.scss";
+@use "@syncfusion/ej2-<theme-name>-theme/styles/<component-name>/index-lite.scss" as *;
 ```
 
 **Example:**
 
 ```css
-@import "@syncfusion/ej2-buttons/styles/fluent2-lite.css";
+@import "@syncfusion/ej2-fluent2-theme/styles/grid/index-lite.css";
 /* or */
-@import "@syncfusion/ej2-buttons/styles/fluent2-lite.scss";
+@use "@syncfusion/ej2-fluent2-theme/styles/grid/index-lite.scss" as *;
 ```
 
 ### Advantages of individual components theme

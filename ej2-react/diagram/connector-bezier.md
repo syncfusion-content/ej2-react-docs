@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Bezier segments create curved paths whose shape can be configured using either control points or vectors.
 
-To create a bezier segment, the [`segment.type`](https://ej2.syncfusion.com/react/documentation/api/diagram/segments) is set as **bezier** and need to specify [`type`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/#type) for the connector. 
+To create a bezier segment, the [`segment.type`](https://ej2.syncfusion.com/react/documentation/api/diagram/segments) is set as **bezier** and need to specify [`type`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#type) for the connector. 
 
 The following code example illustrates how to create a default bezier segment.
 
@@ -38,11 +38,11 @@ The shape of a Bezier connector can be interactively modified by dragging its se
 
 The curvature of a Bezier segment is determined by its control points. There are two primary ways to define the position of these control points:
 
-*   **Fixed Positioning (`point1`, `point2`)**: When you use the [`point1`](https://helpej2.syncfusion.com/react/documentation/api/diagram/bezierSegment/#point1) and [`point2`](https://helpej2.syncfusion.com/react/documentation/api/diagram/bezierSegment/#point2) properties, the control points are set at fixed coordinates. These points remain stationary even when the connector's start or end points are moved. This is useful for creating static, predictable curves.
+*   **Fixed Positioning (`point1`, `point2`)**: When you use the [`point1`](https://helpej2.syncfusion.com/react/documentation/api/diagram/bezierSegment#point1) and [`point2`](https://helpej2.syncfusion.com/react/documentation/api/diagram/bezierSegment#point2) properties, the control points are set at fixed coordinates. These points remain stationary even when the connector's start or end points are moved. This is useful for creating static, predictable curves.
 
 #### Point
 
-The `point1 ` and `point2`(https://helpej2.syncfusion.com/react/documentation/api/diagram/bezierSegment/#point2) properties of bezier segment enable you to set the control points. The following code example illustrates how to configure the bezier segments with control points.
+The `point1 ` and `point2`(https://helpej2.syncfusion.com/react/documentation/api/diagram/bezierSegment#point2) properties of bezier segment enable you to set the control points. The following code example illustrates how to configure the bezier segments with control points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -59,7 +59,7 @@ The `point1 ` and `point2`(https://helpej2.syncfusion.com/react/documentation/ap
 
 #### Vector
 
-The [`vector1`](https://helpej2.syncfusion.com/react/documentation/api/diagram/bezierSegment/#vector1) and [`vector2`](https://helpej2.syncfusion.com/react/documentation/api/diagram/bezierSegment/#vector2) properties of bezier segment enable you to define the vectors. The following code illustrates how to configure a bezier curve with vectors.
+The [`vector1`](https://helpej2.syncfusion.com/react/documentation/api/diagram/bezierSegment#vector1) and [`vector2`](https://helpej2.syncfusion.com/react/documentation/api/diagram/bezierSegment#vector2) properties of bezier segment enable you to define the vectors. The following code illustrates how to configure a bezier curve with vectors.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -118,9 +118,9 @@ When `allowSegmentReset` is **false**, the custom positions of the control point
 
 ### How to Customize Bezier Segment Thumb Size
 
-The interactive thumbs used to edit Bezier segments have a default size of 10×10 pixels. This size can be customized either globally for all connectors or individually for each connector using the [`segmentThumbSize`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#segmentthumbsize) property.
+The interactive thumbs used to edit Bezier segments have a default size of 10×10 pixels. This size can be customized either globally for all connectors or individually for each connector using the [`segmentThumbSize`](https://helpej2.syncfusion.com/react/documentation/api/diagram#segmentthumbsize) property.
 To change the thumb size for all Bezier connectors, set the `segmentThumbSize` property in the diagram’s model.
-To customize the thumb size for a specific connector, disable the [`InheritSegmentThumbSize`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connectorConstraints/) constraint, then set the desired `segmentThumbSize.
+To customize the thumb size for a specific connector, disable the [`InheritSegmentThumbSize`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connectorConstraints) constraint, then set the desired `segmentThumbSize.
 
 
 {% tabs %}

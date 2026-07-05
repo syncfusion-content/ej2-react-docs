@@ -1,18 +1,22 @@
 ---
 layout: post
-title: Getting started with React Treegrid component | Syncfusion
-description:  Checkout and learn about Getting started with React Treegrid component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React Tree Grid component | Syncfusion
+description:  Checkout and learn about Getting started with React Tree Grid component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
+<<<<<<< HEAD
+# Getting Started with React Tree Grid
+=======
 # Getting Started with React TreeGrid
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 
-This section outlines the steps to create a simple Essential JS 2 TreeGrid and demonstrates basic usage in a React application.
+This section outlines the steps to create a simple Essential JS 2 Tree Grid and demonstrates basic usage in a React application.
 
-For a quick start with React TreeGrid, refer to this video:
+For a quick start with React Tree Grid, refer to this video:
 
 {% youtube "https://www.youtube.com/watch?v=dQcIAoSgARc" %}
 
@@ -40,15 +44,51 @@ Terminate the application, then run the following command:
 cd my-app
 ```
 
+<<<<<<< HEAD
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React Tree Grid packages
+
+To install the Tree Grid component, use the following command:
+=======
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React TreeGrid packages
 
 To install the TreeGrid component, use the following command:
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 
 ```
 npm install @syncfusion/ej2-react-treegrid --save
 ```
 
+> Before including Syncfusion styles, make sure to remove the default styles defined in **index.css**. This helps prevent unintended style overrides and ensures that Syncfusion components render correctly.
+
 ## Adding CSS reference
+
+You can add the CSS files required for the Syncfusion React Tree Grid component using one of the following methods.
+
+### Option 1: Add CSS references from a theme package
+
+Themes for Syncfusion® React Tree Grid component can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
+
+Install the **Material 3** theme package using the following command:
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+npm install @syncfusion/ej2-material3-theme --save
+
+{% endhighlight %}
+{% endtabs %}
+
+Then add the following CSS reference to the **src/App.css** file:
+
+{% tabs %}
+{% highlight css tabtitle="App.css" %}
+
+@import "../node_modules/@syncfusion/ej2-material3-theme/treegrid/treegrid/index.css";
+
+{% endhighlight %}
+{% endtabs %}
+
+### Option 2: Add CSS references from component packages
 
 The following CSS files are available in the **../node_modules/@syncfusion** package folder. Add these as references in **src/App.css**.
 
@@ -65,9 +105,15 @@ The following CSS files are available in the **../node_modules/@syncfusion** pac
 @import "../node_modules/@syncfusion/ej2-react-treegrid/styles/tailwind3.css";
 ```
 
+<<<<<<< HEAD
+## Adding Tree Grid component
+
+The tree grid code should be placed in the **src/App.tsx** file.
+=======
 ## Adding TreeGrid component
 
 The treegrid code should be placed in the **src/App.tsx** file.
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

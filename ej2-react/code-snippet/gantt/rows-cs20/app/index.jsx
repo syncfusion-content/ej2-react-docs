@@ -5,16 +5,16 @@ import { CheckBoxComponent } from '@syncfusion/ej2-react-buttons';
 import { ganttData } from './datasource';
 
 function App() {
-    const gantt = null;
+    var gantt = null;
     let messageRef = null;
-    const updateMessage = (text) => {
+    var updateMessage = (text) => {
         if (messageRef) {
             messageRef.textContent = text;
         }
     };
     let hiddenRows = [];
 
-    const taskFields = {
+    var taskFields = {
         id: 'TaskID',
         name: 'TaskName',
         startDate: 'StartDate',
@@ -23,19 +23,19 @@ function App() {
         parentID: 'ParentID'
     };
 
-    const splitterSettings = { position: '75%' };
+    var splitterSettings = { position: '75%' };
 
-    const onCheckBoxChange = (args) => {
+    var onCheckBoxChange = (args) => {
         if (!gantt) return;
 
-        const rows = gantt.treeGrid.grid.getRowsObject();
+        var rows = gantt.treeGrid.grid.getRowsObject();
         if (args.checked) {
             hiddenRows = [];
             rows.forEach((row, index) => {
-                const task = row.data;
+                var task = row.data;
                 if (task.TaskName === 'Perform Soil test') {
-                    const treeRow = gantt.treeGrid.getRowByIndex(index);
-                    const ganttRow = gantt.getRowByIndex(index);
+                    var treeRow = gantt.treeGrid.getRowByIndex(index);
+                    var ganttRow = gantt.getRowByIndex(index);
                     if (treeRow) treeRow.style.display = 'none';
                     if (ganttRow) ganttRow.style.display = 'none';
                     hiddenRows.push(index);
@@ -46,8 +46,8 @@ function App() {
             }
         } else {
             hiddenRows.forEach(index => {
-                const treeRow = gantt.treeGrid.getRowByIndex(index);
-                const ganttRow = gantt.getRowByIndex(index);
+                var treeRow = gantt.treeGrid.getRowByIndex(index);
+                var ganttRow = gantt.getRowByIndex(index);
                 if (treeRow) treeRow.style.display = '';
                 if (ganttRow) ganttRow.style.display = '';
             });

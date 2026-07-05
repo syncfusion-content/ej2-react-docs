@@ -11,6 +11,7 @@ import {
     ResourceFieldsModel,
     SplitterSettingsModel
 } from '@syncfusion/ej2-react-gantt';
+import { data, resources } from './datasource';
 
 function App() {
 

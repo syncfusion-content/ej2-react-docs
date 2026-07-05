@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Diagram Component
 
-The [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications. WAI-ARIA accessibility support is achieved through attributes like `aria-label`, which provide information about elements in a document for assistive technologies such as screen readers.
+The Diagram component provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices) specifications. WAI-ARIA accessibility support is achieved through attributes like `aria-label`, which provide information about elements in a document for assistive technologies such as screen readers.
 
 The following table outlines accessibility compliance for the Diagram component:
 
@@ -108,19 +108,20 @@ The Diagram component supports screen readers, and its information is properly c
 
 ### Mobile Device Support
 
-React Diagram component is designed to be user-friendly and accessible on mobile devices, including for users with disabilities. The component is responsive, adapts to various screen sizes and orientations, and provides touch-friendly interactions.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component is designed to be user-friendly and accessible on mobile devices, including for users with disabilities. The component is responsive, adapts to various screen sizes and orientations, and provides touch-friendly interactions.
 
 
 
 ### Keyboard Navigation Support
 
-React Diagram component supports keyboard navigation, allowing users who rely on assistive technologies to navigate and interact with the component effectively.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component supports keyboard navigation, allowing users who rely on assistive technologies to navigate and interact with the component effectively.
 
 ## Keyboard Interaction
 
 The Diagram component follows [keyboard interaction](https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html) guidelines, making it accessible for users who rely on keyboard navigation. The following keyboard shortcuts are supported:
 
 **Selection and Clipboard Operations**
+
 | **Command** | **Action** |
 | --- | --- |
 | Ctrl + A | Select All |
@@ -129,6 +130,7 @@ The Diagram component follows [keyboard interaction](https://www.w3.org/WAI/WCAG
 | Ctrl + V | Paste |
 
 **Edit Operations**
+
 | **Command** | **Action** |
 | --- | --- |
 | Ctrl + Z | Undo |
@@ -136,6 +138,7 @@ The Diagram component follows [keyboard interaction](https://www.w3.org/WAI/WCAG
 | Delete | Delete |
 
 **Navigation and Movement**
+
 | **Command** | **Action** |
 | --- | --- |
 | <kbd>Up Arrow </kbd> | Move selected object to up |
@@ -144,6 +147,7 @@ The Diagram component follows [keyboard interaction](https://www.w3.org/WAI/WCAG
 | <kbd>Right Arrow</kbd> | Move selected object to right |
 
 **Annotation Editing**
+
 | **Command** | **Action** |
 | --- | --- |
 | <kbd>Enter</kbd> | Start Annotation Edit |

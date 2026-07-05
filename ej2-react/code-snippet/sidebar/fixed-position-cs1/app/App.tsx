@@ -1,4 +1,3 @@
-{% raw %}
 import * as React from 'react';
 import { SidebarComponent } from '@syncfusion/ej2-react-navigations';
 import { enableRipple } from '@syncfusion/ej2-base';
@@ -213,4 +212,3 @@ function App() {
     )
 }
 export default App;
-{% endraw %}

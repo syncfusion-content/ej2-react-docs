@@ -2,7 +2,7 @@
 layout: post
 title: Column Menu in React Gantt Chart Component | Syncfusion
 description: Learn here all about column menu in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
-control: Column menu 
+control: Column menu
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -36,12 +36,11 @@ The following built-in column menu items are available:
 {% include code-snippet/gantt/columnmenu-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/columnmenu-cs1" %}
 
-> * You can disable the column menu for specific columns by setting [columns.showColumnMenu](https://ej2.syncfusion.com/react/documentation/api/gantt/column#showcolumnmenu) to **false**.
-
-> * You can customize the default column menu items by defining [columnMenuItems](https://ej2.syncfusion.com/react/documentation/api/gantt#columnmenuitems) with only the required items.
+> - You can disable the column menu for specific columns by setting [columns.showColumnMenu](https://ej2.syncfusion.com/react/documentation/api/gantt/column#showcolumnmenu) to **false**.
+> - You can customize the default column menu items by defining [columnMenuItems](https://ej2.syncfusion.com/react/documentation/api/gantt#columnmenuitems) with only the required items.
 
 ## Add a custom column menu item
 
@@ -62,7 +61,7 @@ The following example demonstrates how to add a custom column menu item to clear
 {% include code-snippet/gantt/colmenu-item-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/colmenu-item-cs1" %}
 
 ## Customize column menu items per column
@@ -82,10 +81,10 @@ The following example demonstrates hiding the **Filter** item when the column me
 {% include code-snippet/gantt/colmenu-action-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/colmenu-action-cs1" %}
 
-> * You can disable the column menu for a specific column by setting [column.showColumnMenu](https://ej2.syncfusion.com/react/documentation/api/gantt/column#showcolumnmenu) to **false**.
+> - You can disable the column menu for a specific column by setting [column.showColumnMenu](https://ej2.syncfusion.com/react/documentation/api/gantt/column#showcolumnmenu) to **false**.
 
 ## Render nested column menu items
 
@@ -104,7 +103,7 @@ The following example demonstrates how to configure `columnMenuItems` to include
 {% include code-snippet/gantt/columnmenu-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/columnmenu-cs2" %}
 
 ## Customize the column menu icon
@@ -124,8 +123,14 @@ To customize the column menu icon, follow these steps:
 **2.** Import the required icon stylesheets (e.g., Material or Bootstrap5):
 
 ```html
-<link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/tailwind3.css" rel="stylesheet" />
-<link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/bootstrap5.css" rel="stylesheet" />
+<link
+  href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/tailwind3.css"
+  rel="stylesheet"
+/>
+<link
+  href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/bootstrap5.css"
+  rel="stylesheet"
+/>
 ```
 
 {% tabs %}
@@ -139,5 +144,5 @@ To customize the column menu icon, follow these steps:
 {% include code-snippet/gantt/columnmenu-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/gantt/columnmenu-cs3" %}

@@ -4,7 +4,6 @@ import {
   GanttComponent,
   ColumnsDirective,
   ColumnDirective,
-  SplitterSettingsModel
 } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
 
@@ -18,7 +17,7 @@ function App() {
     parentID: 'ParentID'
   };
 
-  const splitterSettings: SplitterSettingsModel = {
+  const splitterSettings = {
     position: '75%'
   };
 

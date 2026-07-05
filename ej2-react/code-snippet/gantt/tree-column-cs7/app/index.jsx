@@ -1,83 +1,94 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, ColumnsDirective, ColumnDirective, Inject } from '@syncfusion/ej2-react-gantt';
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import {
+  GanttComponent,
+  ColumnsDirective,
+  ColumnDirective,
+  Inject,
+  Toolbar
+} from '@syncfusion/ej2-react-gantt';
+import { DialogComponent } from '@syncfusion/ej2-react-popups';
+import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import { data } from './datasource';
 
 function App() {
-  let gantt = null;
+  let ganttInstance = null;
+  let dialogInstance = null;
+  let parentTasks = [];
 
-  const taskFields = {
+  var taskFields = {
     id: 'TaskID',
     name: 'TaskName',
+    startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    parentID: 'parentID'
+    parentID: 'ParentID'
   };
 
-  // 1. Expand all
-  const expandAll = () => gantt.expandAll();
+  var splitterSettings = { position: '75%' };
 
-  // 2. Collapse all
-  const collapseAll = () => gantt.collapseAll();
+  var toolbarOptions = [
+    'Add',
+    'Edit',
+    'Delete',
+    { text: 'Show Expand Parent Tasks', id: 'show_parents', tooltipText: 'Show expanded parent tasks in dialog' }
+  ];
 
-  // 3. Expand at level (Level 0 = root tasks)
-  const expandLevel0 = () => gantt.treeGrid.expandAtLevel(0);
+  var onToolbarClick = (args) => {
+    if (args.item.id === 'show_parents' && ganttInstance && dialogInstance) {
+      var expandedRecords = ganttInstance.getExpandedRecords(ganttInstance.flatData);
+      parentTasks = expandedRecords
+        .filter((record) => record.hasChildRecords && record.expanded === true)
+        .map((record) => ({
+          TaskID: record.TaskID,
+          TaskName: record.TaskName
+        }));
 
-  // 4. Collapse at level (Level 1 = first child level)
-  const collapseLevel1 = () => gantt.treeGrid.collapseAtLevel(1);
+      // Update dialog content manually
+      var contentHtml = parentTasks.length
+        ? `<ul>${parentTasks.map(task => `<li>Task ID: ${task.TaskID}, Task Name: ${task.TaskName}</li>`).join('')}</ul>`
+        : `<div>No parent tasks found.</div>`;
 
-  // 5. Expand by key (TaskID)
-  const expandById = (id) => gantt.treeGrid.expandByKey(id);
-
-  // 6. Collapse by key (TaskID)
-  const collapseById = (id) => gantt.treeGrid.collapseByKey(id);
-
-  // 7. Expand first row by DOM element
-  const expandFirstRow = () => {
-    const rows = gantt.treeGrid.getRows();
-    if (rows && rows.length > 0) {
-      gantt.treeGrid.expandRow(rows[0]);
-    }
-  };
-
-  // 8. Collapse first row by DOM element
-  const collapseFirstRow = () => {
-    const rows = gantt.treeGrid.getRows();
-    if (rows && rows.length > 0) {
-      gantt.treeGrid.collapseRow(rows[0]);
+      dialogInstance.content = contentHtml;
+      dialogInstance.show();
     }
   };
 
   return (
     <div>
-      <div className="controls" style={{ padding: '12px', display: 'flex', flexWrap: 'wrap', gap: '8px', background: '#f5f5f5', borderTop: '1px solid #ddd' }}>
-        <ButtonComponent cssClass="e-primary" onClick={expandAll}>Expand All</ButtonComponent>
-        <ButtonComponent cssClass="e-primary" onClick={collapseAll}>Collapse All</ButtonComponent>
-        <ButtonComponent cssClass="e-primary" onClick={expandLevel0}>Expand Level 0</ButtonComponent>
-        <ButtonComponent cssClass="e-primary" onClick={collapseLevel1}>Collapse Level 1</ButtonComponent>
-        <ButtonComponent cssClass="e-primary" onClick={() => expandById(2)}>Expand Task ID 2</ButtonComponent>
-        <ButtonComponent cssClass="e-primary" onClick={() => collapseById(1)}>Collapse Task ID 1</ButtonComponent>
-        <ButtonComponent cssClass="e-primary" onClick={expandFirstRow}>Expand First Row (DOM)</ButtonComponent>
-        <ButtonComponent cssClass="e-primary" onClick={collapseFirstRow}>Collapse First Row (DOM)</ButtonComponent>
-      </div>
-
       <GanttComponent
-        ref={g => gantt = g}
+        ref={(gantt) => (ganttInstance = gantt)}
+        id="gantt"
+        height="370px"
         dataSource={data}
         taskFields={taskFields}
         treeColumnIndex={1}
-        height="460px"
+        splitterSettings={splitterSettings}
+        collapseAllParentTasks={true}
+        toolbar={toolbarOptions}
+        toolbarClick={onToolbarClick}
       >
         <ColumnsDirective>
-          <ColumnDirective field="TaskID" headerText="ID" width="80" />
-          <ColumnDirective field="TaskName" headerText="Name" width="200" />
-          <ColumnDirective field="Duration" headerText="Duration" width="100" />
+          <ColumnDirective field="TaskID" headerText="Task ID" width="90" />
+          <ColumnDirective field="TaskName" headerText="Task Name" width="290" />
+          <ColumnDirective field="StartDate" headerText="Start Date" width="120" />
+          <ColumnDirective field="Duration" headerText="Duration" width="90" />
+          <ColumnDirective field="Progress" headerText="Progress" width="120" />
         </ColumnsDirective>
-        <Inject services={[]} />
+        <Inject services={[Toolbar]} />
       </GanttComponent>
+
+      <DialogComponent
+        ref={(dialog) => (dialogInstance = dialog)}
+        width="400px"
+        height="auto"
+        header="Parent Tasks"
+        visible={false}
+        showCloseIcon={true}
+        isModal={true}
+      />
     </div>
   );
-};
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Diagram Component in the Preact Framework
 
-This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component.
+This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Diagram component.
 
 `Preact` is a fast and lightweight JavaScript library for building user interfaces. It's often used as an alternative to larger frameworks like React. The key difference is that Preact is designed to be smaller in size and faster in performance, making it a good choice for projects where file size and load times are critical factors. 
 
@@ -291,8 +291,6 @@ yarn run dev
 The output will appear as follows:
 
 ![preact](./images/preact.png)
-
-N> Looking for the full React Diagram component overview, features, pricing, and documentation? Visit the [React Diagram](https://www.syncfusion.com/react-components/react-diagram) page.
 
 ## See also
 

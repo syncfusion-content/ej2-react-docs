@@ -25,7 +25,7 @@ function App() {
         if (gantt) {
             const allColumns = gantt.getGanttColumns();
             if (allColumns.length > 0) {
-                const firstColumnHeader = allColumns[2].headerText as string;
+                const firstColumnHeader = allColumns[2].headerText;
                 gantt.showColumn(firstColumnHeader, 'headerText');
             }
         }

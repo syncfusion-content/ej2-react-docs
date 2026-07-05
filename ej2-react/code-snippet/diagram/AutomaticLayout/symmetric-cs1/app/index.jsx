@@ -1,4 +1,4 @@
-{% raw %}
+
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
@@ -60,6 +60,15 @@ function populateNodes() {
 //sets the layout child elements
 populateNodes();
 
+const layout = {
+    //Sets layout type
+    type: 'SymmetricalLayout',
+    springLength: 80,
+    springFactor: 0.8,
+    maxIteration: 500,
+    margin: { left: 20, top: 20 },
+};
+
 export default function App() {
 
     return (
@@ -72,14 +81,7 @@ export default function App() {
                 connectors={connectors}
 
                 //Uses layout to auto-arrange nodes on the diagram page
-                layout={{
-                    //Sets layout type
-                    type: 'SymmetricalLayout',
-                    springLength: 80,
-                    springFactor: 0.8,
-                    maxIteration: 500,
-                    margin: { left: 20, top: 20 },
-                }}
+                layout={layout}
             >
 
                 {/* Inject necessary services for the diagram */}
@@ -94,4 +96,3 @@ export default function App() {
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
 
-{% endraw %}

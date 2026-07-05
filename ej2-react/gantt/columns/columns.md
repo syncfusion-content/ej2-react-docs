@@ -238,7 +238,7 @@ const dateTemplate = (props) => {
         
 {% previewsample "page.domainurl/code-snippet/gantt/format-cs5" %}
 
-> In React, you can use JavaScript or TypeScript formatting utilities like **Inti.NumberFormat** or **toLocaleString()** to format values such as **dates**, **currency**, **decimals**, or **percentages** in column templates based on your requirements.
+> In React, you can use JavaScript or TypeScript formatting utilities like **Intl.NumberFormat** or **toLocaleString()** to format values such as **dates**, **currency**, **decimals**, or **percentages** in column templates based on your requirements.
 
 ### Custom formatting
 
@@ -260,7 +260,7 @@ In the example below, `numberFormatOptions` is used for the **Progress** column 
         
 {% previewsample "page.domainurl/code-snippet/gantt/format-cs6" %}
 
->To learn more about custom formatting, you can refer to Custom Date formatting and Custom Number formatting. 
+>To learn more about custom formatting, you can refer to [Custom Date formatting](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#custom-formats) and [Custom Number formatting](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#custom-number-formatting-and-parsing). 
 
 ## Align the text of content
 

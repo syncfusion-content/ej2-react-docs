@@ -1,20 +1,19 @@
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
   GanttComponent,
   Inject,
+  Edit,
   Toolbar,
   Selection,
+  ToolbarItem,
   TaskFieldsModel,
-  ToolbarItem
+  EditSettingsModel
 } from '@syncfusion/ej2-react-gantt';
-
-import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import { data } from './datasource';
 
 function App() {
-  let ganttInstance: GanttComponent | null = null;
+  let ganttInstance: GanttComponent = null;
 
   const taskSettings: TaskFieldsModel = {
     id: 'TaskID',
@@ -26,17 +25,21 @@ function App() {
     parentID: 'ParentID'
   };
 
+  const editSettings: EditSettingsModel = {
+    allowAdding: true,
+    allowEditing: true,
+    allowDeleting: true
+  };
+
   const toolbar: ToolbarItem[] = [
-    { text: 'Expand All', tooltipText: 'Expand All', prefixIcon: 'e-expand', id: 'expandall' },
-    { text: 'Collapse All', tooltipText: 'Collapse All', prefixIcon: 'e-collapse-2', id: 'collapseall', align: 'Right' }
+    'Add', 'Edit', 'Delete', 'Update', 'Cancel',
+    'ExpandAll', 'CollapseAll'
   ];
 
-  const toolbarClick = (args: ClickEventArgs): void => {
-    if (args.item.id === 'expandall' && ganttInstance) {
-      ganttInstance.expandAll();
-    }
-    if (args.item.id === 'collapseall' && ganttInstance) {
-      ganttInstance.collapseAll();
+  const created = () => {
+    const toolbarElement = ganttInstance.element.querySelector('.e-toolbar');
+    if (toolbarElement && ganttInstance.element) {
+      ganttInstance.element.appendChild(toolbarElement);
     }
   };
 
@@ -45,11 +48,11 @@ function App() {
       height="430px"
       dataSource={data}
       taskFields={taskSettings}
+      editSettings={editSettings}
       toolbar={toolbar}
-      toolbarClick={toolbarClick}
-      ref={(gantt) => (ganttInstance = gantt)}
-    >
-      <Inject services={[Toolbar, Selection]} />
+      created={created}
+      ref={(gantt) => (ganttInstance = gantt)}>
+      <Inject services={[Edit, Toolbar, Selection]} />
     </GanttComponent>
   );
 }

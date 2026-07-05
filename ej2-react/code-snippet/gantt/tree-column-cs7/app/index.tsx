@@ -16,7 +16,7 @@ function App() {
   let dialogInstance: DialogComponent | null = null;
   let parentTasks: any[] = [];
 
-  const taskFields = {
+  var taskFields = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -25,18 +25,18 @@ function App() {
     parentID: 'ParentID'
   };
 
-  const splitterSettings = { position: '75%' };
+  var splitterSettings = { position: '75%' };
 
-  const toolbarOptions = [
+  var toolbarOptions = [
     'Add',
     'Edit',
     'Delete',
     { text: 'Show Expand Parent Tasks', id: 'show_parents', tooltipText: 'Show expanded parent tasks in dialog' }
   ];
 
-  const onToolbarClick = (args: ClickEventArgs): void => {
+  var onToolbarClick = (args: ClickEventArgs): void => {
     if (args.item.id === 'show_parents' && ganttInstance && dialogInstance) {
-      const expandedRecords = ganttInstance.getExpandedRecords(ganttInstance.flatData);
+      var expandedRecords = ganttInstance.getExpandedRecords(ganttInstance.flatData);
       parentTasks = expandedRecords
         .filter((record: any) => record.hasChildRecords && record.expanded === true)
         .map((record: any) => ({
@@ -45,7 +45,7 @@ function App() {
         }));
 
       // Update dialog content manually
-      const contentHtml = parentTasks.length
+      var contentHtml = parentTasks.length
         ? `<ul>${parentTasks.map(task => `<li>Task ID: ${task.TaskID}, Task Name: ${task.TaskName}</li>`).join('')}</ul>`
         : `<div>No parent tasks found.</div>`;
 

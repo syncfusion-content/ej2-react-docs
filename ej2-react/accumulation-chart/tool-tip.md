@@ -55,6 +55,62 @@ By default, tooltip shows information of x and y value in points. In addition to
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/legend-cs15" %}
 
+## Inline tooltip formatting
+
+The tooltip content can be formatted directly within the [`format`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/tooltipsettings#format) property by adding DateTime or number format specifiers to supported tooltip tokens. This allows you to control how point and series values are displayed without using additional events.
+
+A format specifier can be applied to a tooltip token by adding a colon (`:`) followed by the required format.
+
+For example:
+
+```typescript
+const tooltip = {
+    enable: true,
+    format: '${series.name}<br>${point.x} : ${point.y:n2}<br>Percentage: ${point.percentage:p1}<br>Opacity: ${series.opacity}'
+};
+```
+
+In the above example, `point.y` is displayed with two decimal places, `point.percentage` is displayed in percentage format, and `series.opacity` displays the opacity value applied to the series.
+
+Inline formatting can be applied to the following tooltip tokens:
+
+- `point.x` – Specifies the x-value or category value of the accumulation chart point.
+- `point.y` – Specifies the numeric y-value of the accumulation chart point.
+- `point.percentage` – Specifies the percentage contribution of the point value in the accumulation chart.
+- `point.text` – Specifies the text value mapped to the point, when text mapping is configured.
+- `point.tooltip` – Specifies the tooltip value mapped from the data source, when tooltip mapping is configured.
+- `point.index` – Specifies the index position of the point in the accumulation chart.
+- `point.color` – Specifies the fill color applied to the point.
+- `point.visible` – Specifies the visibility state of the point.
+- `series.name` – Specifies the name assigned to the accumulation chart series.
+- `series.type` – Specifies the rendering type of the accumulation chart series, such as `Pie`, `Doughnut`, `Pyramid`, or `Funnel`.
+- `series.opacity` – Specifies the opacity value applied to the accumulation chart series. This value controls the visual transparency of the series and can be customized in the series configuration.
+
+**Important:** The availability of point-specific tokens depends on the values configured in the data source and the accumulation chart series type. For example, `point.percentage` is useful for pie and doughnut charts, while `point.text` and `point.tooltip` depend on the corresponding field mappings. The `series.name` and `series.type` tokens return string values, so DateTime or number formatting is not applied to these tokens.
+
+The following format types are supported:
+
+- DateTime formats such as `MMM yyyy`, `MM:yy`, and `dd MMM`
+- Number formats such as:
+  - `n2` – number with two decimal places
+  - `n0` – number without decimals
+  - `c2` – currency format
+  - `p1` – percentage format
+  - `e1` – exponential notation 
+
+If the specified format does not match the resolved value type, the original value is displayed.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-format/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/code-path/user-interaction/tooltip-format/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/tooltip-format" %}
+
 ## Tooltip mapping name
 
 By default, tooltip shows information of x and y value in points. You can show more information from datasource in tooltip by using the [`tooltipMappingName`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationSeriesModel#tooltipmappingname) property of the tooltip. You can use the `${point.tooltip}` as place holders to display the specified tooltip content.

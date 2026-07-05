@@ -37,7 +37,7 @@ The [React Data Grid](https://www.syncfusion.com/react-components/react-data-gri
 | # | Topics | Link |
 |---|---------|-------|
 | 1 | Set up Django REST Framework and connect it to a Microsoft SQL Server database | [View](#setting-up-the-django-rest-framework-for-microsoft-sql-database) |
-| 2 | Create and configure the React application with the React Data Grid | [View](#integrate-syncfusion-react-grid-with-django-rest-framework-post-request) |
+| 2 | Create and configure the React application with the React DataGrid | [View](#integrate-syncfusion-react-grid-with-django-rest-framework-post-request) |
 | 3 | Handle server‑side data operations such as filtering, searching, sorting, and paging | [View](#perform-data-operations) |
 | 4 | Enable create, update, and delete operations from the Grid using DRF | [View](#performing-crud-operations) |
 | 5 | Run the Django and React applications locally for development | [View](#running-the-application) |

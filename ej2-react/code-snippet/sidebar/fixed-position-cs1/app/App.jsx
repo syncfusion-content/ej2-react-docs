@@ -1,4 +1,3 @@
-{% raw %}
 import * as React from 'react';
 import { SidebarComponent } from '@syncfusion/ej2-react-navigations';
 function App() {
@@ -210,4 +209,3 @@ function App() {
         </div>);
 }
 export default App;
-{% endraw %}

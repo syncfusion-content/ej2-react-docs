@@ -1,4 +1,4 @@
-{% raw %}
+
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
@@ -109,5 +109,5 @@ class CloneTool extends MoveTool {
     }
 }
 
-{% endraw %}
+
 

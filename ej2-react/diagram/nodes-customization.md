@@ -15,7 +15,7 @@ To customize the appearance and position of nodes in the [React Diagram](https:/
 {% youtube "https://www.youtube.com/watch?v=pn02S_rwupw" %}
 
 ## Common values to the node.
-The [`getNodeDefaults`](https://ej2.syncfusion.com/react/documentation/api/diagram/#getnodedefaults) property in the React Diagram control allows you to define default settings that apply to all nodes based on specific conditions or requirements. This approach ensures consistency across your diagram and reduces repetitive code.
+The [`getNodeDefaults`](https://ej2.syncfusion.com/react/documentation/api/diagram#getnodedefaults) property in the React Diagram control allows you to define default settings that apply to all nodes based on specific conditions or requirements. This approach ensures consistency across your diagram and reduces repetitive code.
 
 The following code example shows how to use the getNodeDefaults function to apply common styling to all nodes:
 
@@ -36,7 +36,7 @@ N> The value we set in the getNodeDefaults has the higher priority in rendering.
 
 ### Apply style to nodes
 
-The appearance of a node can be customized by changing its [`fill`](https://ej2.syncfusion.com/react/documentation/api/diagram/shapeStyleModel/#fill) color, [`strokeDashArray`](https://ej2.syncfusion.com/react/documentation/api/diagram/shapeStyleModel/#strokedasharray), ['strokeWidth'](https://ej2.syncfusion.com/react/documentation/api/diagram/shapeStyleModel/#strokewidth), ['strokeColor'](https://ej2.syncfusion.com/react/documentation/api/diagram/shapeStyleModel/#strokecolor) and [`opacity`](https://ej2.syncfusion.com/react/documentation/api/diagram/shapeStyleModel/#opacity). The [`visible`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#visible) property of the node enables or disables the visibility of the node.
+The appearance of a node can be customized by changing its [`fill`](https://ej2.syncfusion.com/react/documentation/api/diagram/shapeStyleModel#fill) color, [`strokeDashArray`](https://ej2.syncfusion.com/react/documentation/api/diagram/shapeStyleModel#strokedasharray), ['strokeWidth'](https://ej2.syncfusion.com/react/documentation/api/diagram/shapeStyleModel#strokewidth), ['strokeColor'](https://ej2.syncfusion.com/react/documentation/api/diagram/shapeStyleModel#strokecolor) and [`opacity`](https://ej2.syncfusion.com/react/documentation/api/diagram/shapeStyleModel#opacity). The [`visible`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#visible) property of the node enables or disables the visibility of the node.
  
 The following code illustrates how to customize the appearance of nodes using style properties:
  
@@ -53,7 +53,7 @@ The following code illustrates how to customize the appearance of nodes using st
 
 ### Apply gradient style to nodes
  
-The [`gradient`](https://ej2.syncfusion.com/react/documentation/api/diagram/gradientModel/) property of the node allows you to define and apply gradient effects to create visually appealing nodes with smooth color transitions.
+The [`gradient`](https://ej2.syncfusion.com/react/documentation/api/diagram/gradientModel) property of the node allows you to define and apply gradient effects to create visually appealing nodes with smooth color transitions.
 
 The gradient stop property defines the color and position where the previous color transition ends and a new color transition starts. The gradient stop's opacity property defines the transparency level of the region.
 
@@ -64,7 +64,7 @@ There are two types of gradients available:
 
 #### Linear gradient
  
-* [`LinearGradient`](https://ej2.syncfusion.com/react/documentation/api/diagram/lineargradientmodel/) defines a smooth transition between a set of colors (called stops) along a straight line. This is ideal for creating directional color effects on nodes.
+* [`LinearGradient`](https://ej2.syncfusion.com/react/documentation/api/diagram/lineargradientmodel) defines a smooth transition between a set of colors (called stops) along a straight line. This is ideal for creating directional color effects on nodes.
 
 A linear gradient's x1, y1, x2, y2 properties are used to define the position (relative to the node) of the rectangular region that needs to be painted.
 
@@ -81,7 +81,7 @@ A linear gradient's x1, y1, x2, y2 properties are used to define the position (r
  
 #### Radial gradient
 
-* [`RadialGradient`](https://ej2.syncfusion.com/react/documentation/api/diagram/radialGradientModel/) defines a smooth transition between stops that radiates from a central point in a circular pattern. This creates a spotlight or glow effect on nodes.
+* [`RadialGradient`](https://ej2.syncfusion.com/react/documentation/api/diagram/radialGradientModel) defines a smooth transition between stops that radiates from a central point in a circular pattern. This creates a spotlight or glow effect on nodes.
 
 A radial gradient's cx, cy, fx, fy properties are used to define the position (relative to the node) of the outermost or innermost circle of the radial gradient.
 
@@ -118,9 +118,9 @@ Use the following CSS to customize the style of the main node during multiple se
 
 Node appearance can be enhanced using rotation and corner radius properties:
 
-- **Rotate angle**: The [`rotateAngle`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#rotateangle)property allows you to rotate nodes within the diagram. This is particularly useful when you want to represent nodes from different perspectives or angles to match your design requirements.
+- **Rotate angle**: The [`rotateAngle`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#rotateangle) property allows you to rotate nodes within the diagram. This is particularly useful when you want to represent nodes from different perspectives or angles to match your design requirements.
 
-- **Corner radius**: The [`cornerRadius`](https://ej2.syncfusion.com/react/documentation/api/diagram/basicShapeModel/#cornerradius) property allows you to round the corners of rectangular nodes in the diagram. It adds a visual styling effect to the nodes, making them appear softer and more polished.
+- **Corner radius**: The [`cornerRadius`](https://ej2.syncfusion.com/react/documentation/api/diagram/basicShapeModel#cornerradius) property allows you to round the corners of rectangular nodes in the diagram. It adds a visual styling effect to the nodes, making them appear softer and more polished.
 
 The following code shows how to set the rotate angle and corner radius for nodes:
 
@@ -137,7 +137,7 @@ The following code shows how to set the rotate angle and corner radius for nodes
 
 ## Apply shadow effect to nodes
  
-Diagram provides support to add [`shadow`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#shadow) effects to nodes, which is disabled by default. Shadow effects can be enabled using the constraints property of the node to create depth and visual hierarchy in your diagrams.
+Diagram provides support to add [`shadow`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#shadow) effects to nodes, which is disabled by default. Shadow effects can be enabled using the constraints property of the node to create depth and visual hierarchy in your diagrams.
 
 The following code illustrates how to apply shadow effects to nodes:
  
@@ -154,7 +154,7 @@ The following code illustrates how to apply shadow effects to nodes:
  
 ### Customizing shadow effects
  
-The [`angle`](https://ej2.syncfusion.com/react/documentation/api/diagram/shadowModel/#angle), [`distance`](https://ej2.syncfusion.com/react/documentation/api/diagram/shadowModel/#distance), and [`opacity`](https://ej2.syncfusion.com/react/documentation/api/diagram/shadowModel/#opacity) of the shadow can be customized using the `shadow` property of the node. These properties allow you to control the direction, positioning, and transparency of the shadow effect.
+The [`angle`](https://ej2.syncfusion.com/react/documentation/api/diagram/shadowModel#angle), [`distance`](https://ej2.syncfusion.com/react/documentation/api/diagram/shadowModel#distance), and [`opacity`](https://ej2.syncfusion.com/react/documentation/api/diagram/shadowModel#opacity) of the shadow can be customized using the `shadow` property of the node. These properties allow you to control the direction, positioning, and transparency of the shadow effect.
 
 The following code example illustrates how to customize shadow properties:
  
@@ -171,7 +171,7 @@ The following code example illustrates how to customize shadow properties:
 
 ## Provide additional information to the node
 
-The [`addInfo`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#addinfo) property of the node allows you to maintain additional information with the node. You can specify either object or string values to store custom data that can be retrieved and used in your application logic.
+The [`addInfo`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#addinfo) property of the node allows you to maintain additional information with the node. You can specify either object or string values to store custom data that can be retrieved and used in your application logic.
 
 The following code shows how to set the addInfo value:
 
@@ -214,11 +214,11 @@ root.render(<App />);
 
 ## Constraints
 
-The [`constraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#constraints) property of the node allows you to enable or disable certain behaviors of the node. This provides fine-grained control over node interactions and capabilities. For more information about node constraints, refer to the [`Node Constraints`](./constraints#node-constraints) documentation.
+The [`constraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#constraints) property of the node allows you to enable or disable certain behaviors of the node. This provides fine-grained control over node interactions and capabilities. For more information about node constraints, refer to the [`Node Constraints`](./constraints#node-constraints) documentation.
 
 ## Stack order
 
-The [`zIndex`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#zindex) property of nodes specifies the stack order of the node. A node with a greater stack order is always rendered in front of a node with a lower stack order, allowing you to control the layering of overlapping elements.
+The [`zIndex`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#zindex) property of nodes specifies the stack order of the node. A node with a greater stack order is always rendered in front of a node with a lower stack order, allowing you to control the layering of overlapping elements.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -235,7 +235,7 @@ N> By default, the zIndex will be generated automatically based on the order of 
 
 ## Pivot
 
-Node rotation angle will be based on [`Pivot`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#pivot) values which range from 0 to 1, similar to offset values. By default, the pivot values are set to X = 0.5 and Y = 0.5, meaning rotation occurs around the center of the node.
+Node rotation angle will be based on [`Pivot`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#pivot) values which range from 0 to 1, similar to offset values. By default, the pivot values are set to X = 0.5 and Y = 0.5, meaning rotation occurs around the center of the node.
 
 The following table illustrates how pivot relates to offset values with node boundaries:
 
@@ -260,7 +260,7 @@ The following code illustrates how to change the `pivot` value.
 
 ## Get connected connector from node
 
-Node has the inEdges and outEdges read-only properties. These properties allow you to identify all connectors that are connected to the node. You can then retrieve these connectors using the [`getObject`](https://ej2.syncfusion.com/react/documentation/api/diagram/#getobject) method in the diagram.
+Node has the inEdges and outEdges read-only properties. These properties allow you to identify all connectors that are connected to the node. You can then retrieve these connectors using the [`getObject`](https://ej2.syncfusion.com/react/documentation/api/diagram#getobject) method in the diagram.
 
 ```ts
 import * as React from "react";

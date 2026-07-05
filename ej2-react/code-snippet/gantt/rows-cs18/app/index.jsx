@@ -1,16 +1,11 @@
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { GanttComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
+import * as React from 'react'; import * as ReactDOM from 'react-dom';
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Selection } from '@syncfusion/ej2-react-gantt';
 import { Tooltip } from '@syncfusion/ej2-popups';
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { ganttData } from './datasource';
 
 function App() {
-  let ganttInstance = null;
-  let message = '';
-
-  const taskSettings = {
+  let gantt;
+  const taskFields = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -18,17 +13,14 @@ function App() {
     progress: 'Progress',
     parentID: 'ParentID'
   };
-
   const splitterSettings = {
     position: '50%'
   };
-
+  let message = '';
   const dataBound = () => {
-    const ganttElement = ganttInstance.getRootElement();
-
+    const ganttElement = gantt.element;
     ganttElement.addEventListener('mouseover', (mouseargs) => {
-      let target = null;
-
+      let target;
       if (
         mouseargs.target &&
         (mouseargs.target.classList.contains('e-rowcell') ||
@@ -36,29 +28,33 @@ function App() {
       ) {
         target = mouseargs.target;
       }
-
       if (target) {
-        const buttonElement = document.createElement('div');
+        const buttonElement = document.createElement('button');
+        buttonElement.textContent = 'Row details';
+        buttonElement.style.color = '#000';
+        buttonElement.style.backgroundColor = '#fff';
 
-        ReactDOM.render(<ButtonComponent>Row details</ButtonComponent>, buttonElement);
-
-        const tooltip = new Tooltip(
-          {
-            content: buttonElement,
-            width: '130px',
-            height: '40px',
-            opensOn: 'Hover'
-          },
-          target
-        );
-
+        new Tooltip({
+          content: buttonElement,
+          width: '100px',
+          height: '40px',
+          opensOn: 'Hover'
+        }, target);
         buttonElement.addEventListener('click', () => {
-          const rowInfo = ganttInstance.treeGrid.getRowInfo(target);
-          const rowData = rowInfo.rowData;
-
-          if (rowData) {
-            message = `Button clicked for Task ID: ${rowData['TaskID']}`;
-            document.getElementById('message').innerText = message;
+          const rowElement = target.closest('.e-row') || target.closest('.e-chart-row');
+          if (rowElement) {
+            const rowIndex = rowElement.getAttribute('aria-rowindex');
+            if (rowIndex !== null && gantt) {
+              const rowInfo = gantt.treeGrid.getRowInfo(target);
+              const rowData = rowInfo.rowData;
+              if (rowData) {
+                message = `Button clicked for Task ID: ${rowData['TaskID']}`;
+                const msgEle = document.getElementById('message');
+                if (msgEle) {
+                  msgEle.textContent = message;
+                }
+              }
+            }
           }
         });
       }
@@ -68,14 +64,13 @@ function App() {
   return (
     <div>
       <div style={{ padding: '0 0 20px 0' }}></div>
-      <p id="message">{message}</p>
-
+      <p id="message"></p>
       <GanttComponent
+        ref={(g) => (gantt = g)}
         id="ganttDefault"
-        ref={(g) => (ganttInstance = g)}
         height="430px"
         dataSource={ganttData}
-        taskFields={taskSettings}
+        taskFields={taskFields}
         treeColumnIndex={1}
         splitterSettings={splitterSettings}
         dataBound={dataBound}
@@ -87,6 +82,7 @@ function App() {
           <ColumnDirective field="StartDate" headerText="Start Date" textAlign="Right" width="120" />
           <ColumnDirective field="Duration" headerText="Duration" textAlign="Right" width="90" />
         </ColumnsDirective>
+        <Inject services={[Selection]} />
       </GanttComponent>
     </div>
   );

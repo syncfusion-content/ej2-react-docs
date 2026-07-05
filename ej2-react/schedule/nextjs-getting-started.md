@@ -284,6 +284,6 @@ yarn run dev
 
 To learn more about the functionality of the Schedule component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/schedule/getting-started#module-injection).
 
-> [View the NEXT.js Schedule sample in the GitHub repository](https://github.com/SyncfusionExamples/ej2-nextjs-schedule). 
+> [View the NEXT.js Schedule sample in the GitHub repository](https://github.com/SyncfusionExamples/ej2-nextjs-schedule).
 
 N> Looking for the full React Scheduler component overview, features, pricing, and documentation? Visit the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) page.

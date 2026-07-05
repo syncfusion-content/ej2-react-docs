@@ -64,17 +64,17 @@ The following sample shows context menu items for parent rows to expand or colla
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/contextMenuRowAdding-cs1/app/index.jsx %}
+{% include code-snippet/gantt/contextmenu-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/contextMenuRowAdding-cs1/app/index.tsx %}
+{% include code-snippet/gantt/contextmenu-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/contextMenuRowAdding-cs1/index.html %}
+{% include code-snippet/gantt/contextmenu-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/gantt/contextMenuRowAdding-cs1" %}
+{% previewsample "page.domainurl/code-snippet/gantt/contextmenu-cs2" %}
 
 This implementation shows custom context menu integration with event handling. The `contextMenuClick` event receives parameters including the selected item's id, text, and the current row data, enabling specific actions based on the context.
 

@@ -32,6 +32,7 @@ To create a BPMN shape, set the node's shape type property to **BPMN** and speci
 ## Available BPMN Shapes
 
 The react Diagram component supports the following standard BPMN shapes:
+
 | Shape | Image |
 | -------- | -------- |
 | Event | ![Event Shape](images/Event.png) |

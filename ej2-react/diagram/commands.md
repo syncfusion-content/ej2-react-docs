@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD010 -->
 
-The commands in [React Diagram](https://www.syncfusion.com/react-components/react-diagram) control are used to perform various interactions within the diagram when called. Several commands are available in the diagram, as follows:
+The commands in diagram control are used to perform various interactions within the diagram when called. Several commands are available in the diagram, as follows:
 
 * Alignment commands
 * Distribute commands
@@ -50,7 +50,7 @@ Defines the objects to be aligned. This is an optional parameter. By default, al
 
 ### Alignment Mode
 
-[`Alignment Mode`](https://ej2.syncfusion.com/react/documentation/api/diagram/alignmentmode)  defines the specific mode with respect to which the objects are aligned. This is an optional parameter. The default alignment mode is **Object**. The accepted values of the argument "alignment mode" are as follows.
+[`Alignment Mode`](https://ej2.syncfusion.com/react/documentation/api/diagram/alignmentMode)  defines the specific mode with respect to which the objects are aligned. This is an optional parameter. The default alignment mode is **Object**. The accepted values of the argument "alignment mode" are as follows.
 
 The table below shows the alignment as **Left** for different alignment modes.
 
@@ -77,7 +77,7 @@ The following code example illustrates how to align all the selected objects at 
 
 ## Distribute Commands
 
-The [`distribute`](https://ej2.syncfusion.com/react/documentation/api/diagram#distribute)method enable you to place the selected objects on the page at equal intervals from each other. The selected objects are equally spaced within the selection boundary. The `distribute` method parameters are explained below.
+The [`distribute`](https://ej2.syncfusion.com/react/documentation/api/diagram#distribute) method enable you to place the selected objects on the page at equal intervals from each other. The selected objects are equally spaced within the selection boundary. The `distribute` method parameters are explained below.
 
 ### Distribute Options
 
@@ -223,7 +223,7 @@ You can also use CTRL+R to rotate clockwise and CTRL+L to rotate anti-clockwise.
 
 ### Bring To Front Command
 
-The [`bringToFront`](https://ej2.syncfusion.com/react/documentation/api/diagram#bringtofront)command moves the selected element to the front, placing it above all other elements in the diagram. The following code illustrates how to use the `bringToFront` command.
+The [`bringToFront`](https://ej2.syncfusion.com/react/documentation/api/diagram#bringtofront) command moves the selected element to the front, placing it above all other elements in the diagram. The following code illustrates how to use the `bringToFront` command.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -405,7 +405,7 @@ The following code illustrates how to execute the `bringToCenter` command.
 
 ## FitToPage
 
-The [`fitToPage`](https://ej2.syncfusion.com/react/documentation/api/diagram#fittopage)command helps to fit the diagram content into the view with respect to either width, height, or the entire content. The fitToPage method takes one parameter,[`fitOptions`](https://ej2.syncfusion.com/react/documentation/api/diagram/fitoptions), which specifies the options for fitting the diagram to the page.
+The [`fitToPage`](https://ej2.syncfusion.com/react/documentation/api/diagram#fittopage) command helps to fit the diagram content into the view with respect to either width, height, or the entire content. The `fitToPage` method takes one parameter, [`fitOptions`](https://ej2.syncfusion.com/react/documentation/api/diagram/FitOptions), which specifies the options for fitting the diagram to the page.
 
 ### FitOptions
 
@@ -417,7 +417,7 @@ The [`margin`](https://ej2.syncfusion.com/react/documentation/api/diagram/iFitOp
 
 The [`canZoomIn`](https://ej2.syncfusion.com/react/documentation/api/diagram/iFitOptions#canZoomIn) parameter enables/disables zooming to fit the smaller content into a larger viewport.
 
-The [`canZoomOut`](https://ej2.syncfusion.com/react/documentation/api/diagram/ifitoptions#canzoomout) parameter enables or disables zooming out to fit larger content into a smaller viewport.
+The [`canZoomOut`](https://ej2.syncfusion.com/react/documentation/api/diagram/iFitOptions#canzoomout) parameter enables or disables zooming out to fit larger content into a smaller viewport.
 
 The [`customBounds`](https://ej2.syncfusion.com/react/documentation/api/diagram/iFitOptions#customBounds) parameter defines a custom region that should be fit into the viewport.
 

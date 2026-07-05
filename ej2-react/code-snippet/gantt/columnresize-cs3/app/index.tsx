@@ -24,9 +24,11 @@ function App() {
     (ganttInstance as GanttComponent).treeGrid.grid.resizeSettings.mode = args.value;
   })
   return <div>
-    <label style={{ padding: "30px 17px 0 0" }}>Change the resize mode:</label>
-    <DropDownListComponent style={{ padding: "20px 0 0 0" }} dataSource={alignmentData} index={0} width="100" change={changeValue}></DropDownListComponent>
+    <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
+      <label style={{ paddingRight: '10px', fontWeight: 'bold' }}>Change the resize mode:</label>
+      <DropDownListComponent dataSource={alignmentData} index={0} width="120px" change={changeValue} />
     <div style={{ padding: "40px 0 0 0" }}></div>
+      </div>
     <GanttComponent ref={g => ganttInstance = g} dataSource={data} taskFields={taskFields} allowResizing={true} splitterSettings={splitterSettings} height="450px">
       <ColumnsDirective>
         <ColumnDirective field="TaskID" width="100"></ColumnDirective>

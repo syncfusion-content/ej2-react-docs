@@ -1,4 +1,4 @@
-{% raw %}
+
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
@@ -19,6 +19,25 @@ let data = [
 ];
 let items = new DataManager(data, new Query().take(7));
 
+const layout = {
+    //Sets layout type
+    type: "MindMap",
+    orientation: "Horizontal",
+    getBranch: (node) => {
+        if (node.data.id === 1) {
+            return 'Root';
+        }
+        return 'Right';
+    }
+};
+
+const dataSourceSettings = {
+    id: "id",
+    parentId: "parentId",
+    dataManager: items,
+    root: String(1),
+};
+
 export default function App() {
     return (
         <DiagramComponent
@@ -27,25 +46,10 @@ export default function App() {
             height={"550px"}
 
             //Uses layout to auto-arrange nodes on the diagram page
-            layout={{
-                //Sets layout type
-                type: "MindMap",
-                orientation: "Horizontal",
-                getBranch: (node) => {
-                    if (node.data.id === 1) {
-                        return 'Root';
-                    }
-                    return 'Right';
-                }
-            }}
+            layout={layout}
 
             //Configures data source for diagram
-            dataSourceSettings={{
-                id: "id",
-                parentId: "parentId",
-                dataManager: items,
-                root: String(1),
-            }}
+            dataSourceSettings={dataSourceSettings}
 
             //Sets the default properties for nodes
             getNodeDefaults={(node) => {
@@ -71,4 +75,3 @@ export default function App() {
 const root = ReactDOM.createRoot(document.getElementById("diagram"));
 root.render(<App />);
 
-{% endraw %}

@@ -1,0 +1,37 @@
+#container {
+    visibility: hidden;
+    margin: 20px auto;
+    width: 350px;
+}
+
+#loader {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+
+.integration-texttospeech-settings {
+  height: 350px;
+  width: 650px;
+  margin: 0 auto;
+}
+
+.integration-texttospeech-settings .e-view-container {
+  margin: auto;
+}
+.integration-texttospeech-settings .e-banner-view {
+  margin-left: 0;
+}
+.integration-texttospeech-settings .banner-content .e-audio:before {
+  font-size: 25px;
+}
+
+.integration-texttospeech-settings .banner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}

@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 ## Core Layer Properties
 
-In a [React Diagram](https://www.syncfusion.com/react-components/react-diagram), [Layers](https://ej2.syncfusion.com/react/documentation/api/diagram/layermodel)  enable modification of properties for all shapes assigned to a specific layer. The primary configurable properties include:
+In a diagram, [Layers](https://ej2.syncfusion.com/react/documentation/api/diagram/layerModel)  enable modification of properties for all shapes assigned to a specific layer. The primary configurable properties include:
 
 * **Objects** - Define which elements belong to the layer.
 * **Visible** - Control layer visibility.
@@ -43,7 +43,7 @@ In the following example, basic shapes are categorized in layer 1, and flow shap
 
 ## Visible
 
-The layer's [visible](https://ej2.syncfusion.com/react/documentation/api/diagram/layer#visible)  property controls the visibility of all elements assigned to the layer. This allows selective display of different diagram sections without removing elements permanently.
+The layer's [visible](https://ej2.syncfusion.com/react/documentation/api/diagram/layer#visible) property controls the visibility of all elements assigned to the layer. This allows selective display of different diagram sections without removing elements permanently.
 
 **Use case**: Create diagrams with multiple views where users can toggle between different information layers, such as showing only critical path items in a project diagram.
 
@@ -310,7 +310,7 @@ diagram.getActiveLayer();
 
 ### Set ActiveLayer
 
-You can set any layer to be the active layer of the diagram by using the[`setActiveLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram#setactivelayer) public method.
+You can set any layer to be the active layer of the diagram by using the [`setActiveLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram#setactivelayer) public method.
 
 The following code illustrates how to set active layer for diagram
 

@@ -1,4 +1,4 @@
-{% raw %}
+
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DiagramComponent, NodeModel } from "@syncfusion/ej2-react-diagrams";
@@ -91,4 +91,3 @@ root.render(<App />);
 
 
 
-{% endraw %}

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Resize } from '@syncfusion/ej2-react-gantt';
 import { GanttData } from './datasource';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         startDate: 'StartDate',
         duration: 'Duration',
         progress: 'Progress',
-        child: 'subtasks'
+        parentID: 'ParentID'
     };
 
     const splitterSettings = {
@@ -26,7 +26,7 @@ function App() {
     return (
         <div>
             <GanttComponent
-                ref={g=> gantt = g}
+                ref={(g)=> gantt = g}
                 dataSource={GanttData}
                 taskFields={taskFields}
                 splitterSettings={splitterSettings}
@@ -41,6 +41,7 @@ function App() {
                     <ColumnDirective field="Duration" headerText="Duration" textAlign="Right" width={90} />
                     <ColumnDirective field="Progress" headerText="Progress" textAlign="Right" width={120} />
                 </ColumnsDirective>
+                <Inject services={[Resize]} />
             </GanttComponent>
         </div>
     );

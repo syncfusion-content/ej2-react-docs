@@ -1,4 +1,4 @@
-{% raw %}
+
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
@@ -16,6 +16,51 @@ let node:NodeModel[] = [
     },
 ];
 
+const commandManager = {
+    commands: [
+        {
+            //Preventing default cut command
+            name: 'cut',
+            canExecute: function () {
+                return false;
+            },
+            execute: null,
+            gesture: {
+                key: Keys.X,
+                keyModifiers: KeyModifiers.Control,
+            },
+        },
+        {
+            //Preventing default delete command
+            name: 'delete',
+            canExecute: function () {
+                return false;
+            },
+            execute: null,
+            gesture: {
+                key: Keys.Delete,
+            },
+        },
+        {
+            //Modifying copy command to clone node
+            name: 'clone',
+            canExecute: function () {
+                let execute = diagramInstance.selectedItems.nodes.length > 0;
+                return execute;
+            },
+            execute: function () {
+                diagramInstance.copy();
+                diagramInstance.paste();
+            },
+            gesture: {
+                //Press CTRL+C to clone node
+                key: Keys.C,
+                keyModifiers: KeyModifiers.Control,
+            },
+        },
+    ],
+};
+
 // Initializes the Diagram component
 function App() {
     return (
@@ -26,50 +71,7 @@ function App() {
             width={'650px'}
             height={'350px'}
             nodes={node}
-            commandManager={{
-                commands: [
-                    {
-                        //Preventing default cut command
-                        name: 'cut',
-                        canExecute: function () {
-                            return false;
-                        },
-                        execute: null,
-                        gesture: {
-                            key: Keys.X,
-                            keyModifiers: KeyModifiers.Control,
-                        },
-                    },
-                    {
-                        //Preventing default delete command
-                        name: 'delete',
-                        canExecute: function () {
-                            return false;
-                        },
-                        execute: null,
-                        gesture: {
-                            key: Keys.Delete,
-                        },
-                    },
-                    {
-                        //Modifying copy command to clone node
-                        name: 'clone',
-                        canExecute: function () {
-                            let execute = diagramInstance.selectedItems.nodes.length > 0;
-                            return execute;
-                        },
-                        execute: function () {
-                            diagramInstance.copy();
-                            diagramInstance.paste();
-                        },
-                        gesture: {
-                            //Press CTRL+C to clone node
-                            key: Keys.C,
-                            keyModifiers: KeyModifiers.Control,
-                        },
-                    },
-                ],
-            }}
+            commandManager={commandManager}
         />
     );
 }
@@ -77,4 +79,3 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
 
-{% endraw %}

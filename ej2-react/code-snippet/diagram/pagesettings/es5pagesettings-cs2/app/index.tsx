@@ -1,4 +1,4 @@
-{% raw %}
+
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
@@ -30,6 +30,22 @@ let node: NodeModel[] = [{
       content: 'Node2'
     }]
 }];
+
+const pageSettings = {
+  // Sets the Page Break for diagram
+  showPageBreaks: true,
+  // Defines the background color and image  of diagram
+  background: {
+    color: 'grey',
+  },
+  // Sets the width for the Page
+  width: 500,
+  // Sets the height for the Page
+  height: 300,
+  //Sets the orientation for the page
+  orientation: 'Portrait'
+};
+
 function App() {
   return (
     <DiagramComponent
@@ -39,23 +55,9 @@ function App() {
       nodes={node}
       connectors={connector}
       // Defines the pageSettings for the diagram
-      pageSettings={{
-        // Sets the Page Break for diagram
-        showPageBreaks: true,
-        // Defines the background color and image  of diagram
-        background: {
-          color: 'grey',
-        },
-        // Sets the width for the Page
-        width: 500,
-        // Sets the height for the Page
-        height: 300,
-        //Sets the orientation for the page
-        orientation: 'Portrait'
-      }}
+      pageSettings={pageSettings}
     />
   );
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
-{% endraw %}

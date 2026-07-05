@@ -99,7 +99,7 @@ yarn add @syncfusion/ej2-react-dropdowns
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> React component using CSS or SASS styles from npm packages, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme/) for information about built-in themes and ways to reference themes in your React project.
+Import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> React component using CSS or SASS styles from npm packages, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) for information about built-in themes and ways to reference themes in your React project.
 
 In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the DropDownList component and its dependents were imported into the **src/style.css** file.
 
@@ -114,6 +114,7 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 {% endtabs %}
 
 > The order of importing CSS styles should be in line with its dependency graph.
+
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
 Follow the steps below to add the React DropDownList component to the Preact project:
