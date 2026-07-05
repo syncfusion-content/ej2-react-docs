@@ -88,7 +88,13 @@ This guide uses the [React Grid component](https://www.syncfusion.com/react-comp
 
 Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS or SASS from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages). Additionally, themes can be loaded via CDN or customized using the [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
 
+<<<<<<< HEAD
 This example uses the `Tailwind 3` theme for the Grid component from the theme package. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+=======
+**Step 1: Create the style.css file** - Create a new file named `style.css` in the **src/pages/** directory.
+
+**Step 2: Import Syncfusion CSS styles** - Add the `Tailwind 3` theme imports to the **src/pages/style.css** file to style the Grid component and its dependencies.
+>>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
