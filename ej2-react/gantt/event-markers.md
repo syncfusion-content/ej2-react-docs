@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Event Markers in React Gantt Chart Component
 
-Event markers highlight significant project events by displaying vertical timeline indicators that span across the entire Gantt chart. These markers identify critical dates, milestones, deadlines, or important project events that affect multiple tasks or the overall project timeline, providing visual reference points for project-wide activities.
+Event markers highlight significant project events by displaying vertical timeline indicators that span across the entire [React Gantt chart](https://www.syncfusion.com/react-components/react-gantt-chart). These markers identify critical dates, milestones, deadlines, or important project events that affect multiple tasks or the overall project timeline, providing visual reference points for project-wide activities.
 
 Understanding event markers implementation enables effective visualization of project-critical dates and enhances timeline awareness across all project phases.
 

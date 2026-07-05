@@ -75,16 +75,16 @@ Use the `InlineAIAssistComponent` tag where you want the inline assistant to app
 
 ## Adding CSS References
 
-Import the required theme files in your `src/App.css` (or equivalent) to apply styling. The example below uses the Tailwind3 theme; other themes are available.
+To apply styling to the Inline AI Assist component, import the required CSS theme files into your `src/App.css` file. The following example uses the Tailwind3 theme, but other themes like Bootstrap 5, Tailwind CSS, or Fluent are also available.
+
+To install the [tailwind3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+
+```bash
+npm install @syncfusion/ej2-tailwind3-theme --save
+```
 
 ```css
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-react-interactive-chat/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/inline-ai-assist/index.css";
 ```
 
 ## Run the Application

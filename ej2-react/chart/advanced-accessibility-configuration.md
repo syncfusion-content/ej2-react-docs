@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility customization in React Chart component
 
-The Syncfusion® React Chart component visualizes data graphically and provides accessibility customization options to improve usability for people with disabilities. The primary accessibility attributes are described in this section.
+The [React Charts](https://www.syncfusion.com/react-components/react-charts) component visualizes data graphically and provides accessibility customization options to improve usability for people with disabilities. The primary accessibility attributes are described in this section.
 
 The chart component exposes attributes that enable accessibility customization, including:
 

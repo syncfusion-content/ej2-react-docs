@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DiagramComponent } from "@syncfusion/ej2-react-diagrams";
-import { SnapConstraints, UmlSequenceMessageType } from "@syncfusion/ej2-diagrams";
+import { SnapConstraints, UmlSequenceMessageType, UmlSequenceParticipantStereotype } from "@syncfusion/ej2-diagrams";
 
 // Define the UML Sequence Diagram model with participants and activation boxes
 const model = {
@@ -10,12 +10,11 @@ const model = {
     {
       id: "User",
       content: "User",
-      isActor: true,
+      stereotype: UmlSequenceParticipantStereotype.Actor
     },
     {
       id: "System",
       content: "System",
-      isActor: false,
       showDestructionMarker: true,
       // Activation boxes for System
       activationBoxes: [

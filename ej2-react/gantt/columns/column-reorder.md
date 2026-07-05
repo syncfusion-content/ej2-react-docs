@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Column Reorder in React Gantt Chart Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component supports column reordering by dragging a column header to a new position. 
+The [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component supports column reordering by dragging a column header to a new position. 
 
 To enable column reordering, set the [allowReordering](https://ej2.syncfusion.com/react/documentation/api/gantt#allowreordering) property to **true** in the Gantt configuration and inject the `Reorder` in the service array.
 
@@ -34,7 +34,7 @@ To enable column reordering, set the [allowReordering](https://ej2.syncfusion.co
 
 ## Disable column reordering for specific columns
 
-In Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component, columns are reordered by default. To restrict reordering for a specific column, set its [allowReordering](https://ej2.syncfusion.com/react/documentation/api/gantt/column#allowreordering) property to **false**.  
+In React Gantt Chart component, columns are reordered by default. To restrict reordering for a specific column, set its [allowReordering](https://ej2.syncfusion.com/react/documentation/api/gantt/column#allowreordering) property to **false**.  
 
 The following example demonstrates how reordering is restricted for the **TaskName** column.
 
@@ -54,7 +54,7 @@ The following example demonstrates how reordering is restricted for the **TaskNa
 
 ## Reorder columns programmatically
 
-You can programmatically reorder columns in Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component using available methods based on field names, index, or target index.  
+You can programmatically reorder columns in React Gantt Chart component using available methods based on field names, index, or target index.  
 
 > To perform external column reordering, the column's [allowReordering](https://ej2.syncfusion.com/react/documentation/api/gantt/column#allowreordering) property must be enabled.
 

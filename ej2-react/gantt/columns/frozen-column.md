@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Column Pinning (Frozen) in React Gantt Chart Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component provides a frozen columns feature that keeps selected columns fixed while scrolling horizontally through large datasets. This functionality ensures that critical information remains visible at all times, improving readability and user experience. By maintaining key columns in view, it simplifies navigation and makes referencing important data points easier when working with extensive project details.
+The [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component provides a frozen columns feature that keeps selected columns fixed while scrolling horizontally through large datasets. This functionality ensures that critical information remains visible at all times, improving readability and user experience. By maintaining key columns in view, it simplifies navigation and makes referencing important data points easier when working with extensive project details.
 
 To enable frozen columns, use the [frozenColumns](https://ej2.syncfusion.com/react/documentation/api/gantt#frozencolumns) property in the Gantt Chart component.
 
@@ -84,7 +84,7 @@ In the following example, the **TaskID** column is frozen on the left side, the 
 
 ## Change default frozen line color
 
-The frozen line borders of frozen columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component can be customized by applying custom CSS styles to the respective frozen columns. This allows you to change the border color of left, right, and fixed frozen columns to match your application's design and theme.
+The frozen line borders of frozen columns in the React Gantt Chart component can be customized by applying custom CSS styles to the respective frozen columns. This allows you to change the border color of left, right, and fixed frozen columns to match your application's design and theme.
 
 To change the default frozen line color, use the following CSS class names and apply the desired border color:
 

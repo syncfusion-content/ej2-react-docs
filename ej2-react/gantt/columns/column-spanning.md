@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Column Spanning in React Gantt Chart Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component supports **column spanning**, allowing adjacent cells to merge horizontally for improved layout clarity. This feature is useful for grouping related data or enhancing visual structure.
+The [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component supports **column spanning**, allowing adjacent cells to merge horizontally for improved layout clarity. This feature is useful for grouping related data or enhancing visual structure.
 
 To enable column spanning, use the [queryCellInfo](https://ej2.syncfusion.com/react/documentation/gantt/events#querycellinfo) event and set the [colSpan](https://ej2.syncfusion.com/react/documentation/api/gantt/queryCellInfoEventArgs#colspan) property to define how many columns a cell should span.
 

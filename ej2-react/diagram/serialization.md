@@ -114,6 +114,25 @@ When enabled, only explicitly set properties are included in the JSON output, si
 {% endhighlight %}
 {% endtabs %}
 
+## Detect unsaved changes
+
+The [`isModified`](https://ej2.syncfusion.com/react/documentation/api/diagram#ismodified) property indicates whether the diagram has unsaved changes. It becomes **true** when the diagram is changed, such as when nodes, connectors, or diagram properties are updated, or when undo and redo actions are performed.
+
+This property can be used to show save indicators or to display a warning before unsaved changes are discarded.
+
+```ts
+// Check whether the diagram has unsaved changes.
+if (diagramInstance.isModified) {
+    const confirmed = confirm('There are unsaved changes. Discard them?');
+
+    if (!confirmed) {
+        return;
+    }
+}
+```
+
+N> Transient interactions such as zooming, panning, or selecting elements do not affect the `isModified` state.
+
 ## File-Based Save and Load Operations
 
 ### Using Uploader Component

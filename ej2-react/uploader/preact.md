@@ -99,7 +99,7 @@ yarn add @syncfusion/ej2-react-inputs
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> React component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to theme's in a React project.
+You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> React component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) to know more about built-in themes and different ways to refer to theme's in a React project.
 
 In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the Uploader component and its dependents were imported into the **src/style.css** file.
 
@@ -114,6 +114,7 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 {% endtabs %}
 
 > The order of importing CSS styles should be in line with its dependency graph.
+
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
 Follow these steps to add the React Uploader component to the Preact project:

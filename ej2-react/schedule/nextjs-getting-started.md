@@ -9,9 +9,9 @@ domainurl: ##DomainURL##
 ---
 
 
-# Next.js Application Using Syncfusion® React Components 
+# Next.js Application Using Syncfusion® React Components
 
-This section provides a step-by-step guide for setting up a Next.js application and integrating the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler).
+This section provides a step-by-step guide for setting up a Next.js application and integrating the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) component.
 
 ## What is Next.js?
 
@@ -85,7 +85,7 @@ The application is ready to run with default settings. Now, let's add Syncfusion
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use React components in the project, install the corresponding npm package.
 
 Here, the [React Schedule component](https://www.syncfusion.com/react-components/react-scheduler) is used in the project. To install the React Schedule component, use the following command:
 
@@ -104,7 +104,7 @@ yarn add @syncfusion/ej2-react-schedule
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
+React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It’s easy to adapt the React components to match the style of your application by referring to one of the built-in themes.
 
 Import the `Material` theme into the **src/app/globals.css** file and removed the existing styles in that file, as shown below:
 
@@ -285,3 +285,5 @@ yarn run dev
 To learn more about the functionality of the Schedule component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/schedule/getting-started#module-injection).
 
 > [View the NEXT.js Schedule sample in the GitHub repository](https://github.com/SyncfusionExamples/ej2-nextjs-schedule).
+
+N> Looking for the full React Scheduler component overview, features, pricing, and documentation? Visit the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) page.

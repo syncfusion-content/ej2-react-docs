@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Cell Selection in React Gantt Chart Component
 
-Cell selection in the Gantt Chart component enables interactive selection of specific cells or ranges of cells within the grid. You may select cells using mouse clicks or arrow keys (up, down, left, right). This is useful for highlighting, manipulating, or performing operations on particular Gantt cells.
+Cell selection in the [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component enables interactive selection of specific cells or ranges of cells within the grid. You may select cells using mouse clicks or arrow keys (up, down, left, right). This is useful for highlighting, manipulating, or performing operations on particular Gantt cells.
 
 ## Single cell selection
 

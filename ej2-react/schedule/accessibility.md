@@ -111,4 +111,4 @@ The accessibility compliance of the Scheduler component is demonstrated in the f
 
 ## See also
 
-- [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> React components](../common/accessibility)
+- [Accessibility in React components](../common/accessibility)

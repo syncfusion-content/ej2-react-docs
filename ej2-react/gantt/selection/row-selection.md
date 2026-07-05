@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Row Selection in React Gantt Chart Component
 
-The React Gantt Chart component supports row selection using mouse clicks or keyboard navigation (arrow keys). This enables users to highlight, manipulate, or trigger actions on selected task rows.
+The [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component supports row selection using mouse clicks or keyboard navigation (arrow keys). This enables users to highlight, manipulate, or trigger actions on selected task rows.
 
 ## Single row selection
 

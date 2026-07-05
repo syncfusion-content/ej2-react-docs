@@ -35,7 +35,7 @@ class App extends React.Component<{}, {hideDialog: boolean;}> {
 
   public footerTemplate = (): JSX.Element => {
       return (
-          <span id="posvalue" />
+          <span id="posvalue" ref={posvalue => this.PositioningInstance = posvalue}/>
       )
   }
   public render() {

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Module in React Rich Text Editor
 
-The React Rich Text Editor employs a modular architecture, allowing selective inclusion of features to optimize performance and customize functionality. This approach reduces bundle size and enhances flexibility for developers adapting the editor to specific use cases.
+The [React Rich Text Editor](https://www.syncfusion.com/react-components/react-rich-text-editor) employs a modular architecture, allowing selective inclusion of features to optimize performance and customize functionality. This approach reduces bundle size and enhances flexibility for developers adapting the editor to specific use cases.
 
 ## What are modules in React Rich Text Editor?
 
@@ -81,3 +81,5 @@ The following example demonstrates how to import and inject modules.
 | `AIAssistant` | Injecting this module provides AI Assistant functionalities to the Rich Text Editor. |
 
 These modules should be injected using the `<Inject>` component inside the Rich Text Editor component.
+
+N> Looking for the full React Rich Text Editor component overview, features, pricing, and documentation? Visit the [React Rich Text Editor](https://www.syncfusion.com/react-components/react-rich-text-editor) page.

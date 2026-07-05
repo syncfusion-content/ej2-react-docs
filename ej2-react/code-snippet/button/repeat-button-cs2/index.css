@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+#container .frame {
+  width: 100%;
+  max-width: 760px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  padding: 28px 30px;
+}
+
+#container h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+#container p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+#container .controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+#container .controls label {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  color: #4b5563;
+  min-width: 180px;
+}
+
+#container .controls label.inline {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+#container .controls input[type='number'] {
+  margin-top: 8px;
+  width: 130px;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #111827;
+}
+
+#container .controls input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+}
+
+#container .counter-display {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+#container .counter-box {
+  padding: 22px 18px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  text-align: center;
+}
+
+#container .counter-box.repeat {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+#container .counter-box .label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+#container .counter-box .value {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111827;
+}
+
+#container .reset-link {
+  display: inline-block;
+  margin-top: 18px;
+  color: #2563eb;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#container .reset-link:hover {
+  text-decoration: underline;
+}
+
+#repeat-btn {
+  margin-top: 18px;
+}
+
+@media (max-width: 680px) {
+  #container .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #container .counter-display {
+    grid-template-columns: 1fr;
+  }
+}

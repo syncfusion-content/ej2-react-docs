@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Access control in React File Manager component
 
-The [React File Manager](https://www.syncfusion.com/react-ui-components/react-file-manager) allows you to define access permissions for folders and files using a set of access rules to user(s).
+The [React File Manager](https://www.syncfusion.com/react-components/react-file-manager) allows you to define access permissions for folders and files using a set of access rules to user(s).
 
 * [Access Rules](#access-rules)
 * [Permissions](#permissions)

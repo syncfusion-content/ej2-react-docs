@@ -10,11 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React DataGrid
 
-<<<<<<< HEAD
-This section explains the steps required to create a simple React DataGrid component and demonstrate its basic usage in a React environment.
-=======
 This section explains the steps required to create a simple [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component and demonstrate its basic usage in a React environment.
->>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
 
@@ -43,11 +39,7 @@ Terminate the application, then run the following command:
 cd my-app
 ```
 
-<<<<<<< HEAD
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React Grids package
-=======
 ## Adding React Data Grid packages
->>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 
 To install the Grids package, use the following command:
 
@@ -98,11 +90,8 @@ The DataGrid code should be added to the **src/App.tsx** file.
 npm run dev
 ```
 
-<<<<<<< HEAD
-=======
 N> Looking for the full React Data Grid component overview, features, pricing, and documentation? Visit the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) page.
 
->>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 ## See also
 
 * [DataGrid Feature Modules](./module)

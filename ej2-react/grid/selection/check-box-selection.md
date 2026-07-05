@@ -12,10 +12,6 @@ domainurl: ##DomainURL##
 
 Checkbox selection provides functionality to select multiple grid records through checkboxes in each row. This selection method allows efficient bulk operations on selected records within the grid.
 
-For an overview of the checkbox selection feature available in the React Grid, refer to the following video:
-
-{% youtube "https://www.youtube.com/watch?v=faV2-f1lT7I&t=93s" %}
-
 To render checkboxes in each grid row, configure a checkbox column by setting the column [type](https://ej2.syncfusion.com/react/documentation/api/grid/column#type) property to `checkbox`.
 
 Here's an example of enabling checkbox selection using the `type` property in the Grid component:

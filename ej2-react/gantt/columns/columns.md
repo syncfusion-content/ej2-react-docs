@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Columns in React Gantt Chart Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component displays task data in a tabular format using columns. Columns help organize data efficiently and support user interaction within the Gantt chart.
+The [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component displays task data in a tabular format using columns. Columns help organize data efficiently and support user interaction within the Gantt chart.
 
 Each column is defined using the [field](https://ej2.syncfusion.com/react/documentation/api/gantt/column#field) property, which maps values from the [dataSource](https://ej2.syncfusion.com/react/documentation/api/gantt#datasource). This mapping ensures accurate data binding and enables formatting and customization for each column.
 
 ## Column types
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component supports specifying the data type for each column using the `type` property. This ensures that values are displayed with the correct formatting—such as number or date—based on the column's data.
+The React Gantt Chart component supports specifying the data type for each column using the `type` property. This ensures that values are displayed with the correct formatting—such as number or date—based on the column's data.
 
 **Gantt supports the following column types:**
 
@@ -110,7 +110,7 @@ The column width is specified as an absolute pixel value. For example, a column 
 
 ## Column formatting
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component for React supports column formatting to customize data presentation. You can format numbers, dates, or apply templates based on specific requirements. Use the [columns.format](https://ej2.syncfusion.com/react/documentation/api/gantt/column#format) property to define the desired format for each column.
+The Gantt Chart component for React supports column formatting to customize data presentation. You can format numbers, dates, or apply templates based on specific requirements. Use the [columns.format](https://ej2.syncfusion.com/react/documentation/api/gantt/column#format) property to define the desired format for each column.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -134,7 +134,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component for R
 
 ### Number formatting
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component for React supports number formatting through the [columns.format](https://ej2.syncfusion.com/react/documentation/api/gantt/column#format) property, where standard format strings define numeric value presentation including currency, percentage, and decimal formats. The following standard format strings are available:
+The Gantt Chart component for React supports number formatting through the [columns.format](https://ej2.syncfusion.com/react/documentation/api/gantt/column#format) property, where standard format strings define numeric value presentation including currency, percentage, and decimal formats. The following standard format strings are available:
 
 | Format | Description       | Remarks                                                               |
 | ------ | ----------------- | --------------------------------------------------------------------- |
@@ -163,7 +163,7 @@ The following example code demonstrates the formatting of data for the **TaskID*
 
 ### Date formatting
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component for React supports date formatting in columns using the [columns.format](https://ej2.syncfusion.com/react/documentation/api/gantt/column#format) property, where format strings such as **d**, **D**, **MMM dd, yyyy** can be applied. Both built-in formats like **yMd** and custom formats are supported to define the layout and detail of date and time values based on column requirements. The following custom formats and their corresponding output are listed below:
+The Gantt Chart component for React supports date formatting in columns using the [columns.format](https://ej2.syncfusion.com/react/documentation/api/gantt/column#format) property, where format strings such as **d**, **D**, **MMM dd, yyyy** can be applied. Both built-in formats like **yMd** and custom formats are supported to define the layout and detail of date and time values based on column requirements. The following custom formats and their corresponding output are listed below:
 
 | Format                                                | Formatted value        |
 | ----------------------------------------------------- | ---------------------- |
@@ -242,7 +242,7 @@ const dateTemplate = (props) => {
 
 ### Custom formatting
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component supports custom formatting for numeric and date values. You can use the [format](https://ej2.syncfusion.com/react/documentation/api/gantt/column#format) property to display data in a specific format based on requirements.
+The Gantt Chart component supports custom formatting for numeric and date values. You can use the [format](https://ej2.syncfusion.com/react/documentation/api/gantt/column#format) property to display data in a specific format based on requirements.
 
 In the example below, `numberFormatOptions` is used for the **Progress** column to show four decimal places, and `dateFormatOptions` is used for the **StartDate** column to display the date as day-of-week, month abbreviation, day, and 2-digit year (e.g., Sun, May 8, '23).
 
@@ -260,7 +260,7 @@ In the example below, `numberFormatOptions` is used for the **Progress** column 
         
 {% previewsample "page.domainurl/code-snippet/gantt/format-cs6" %}
 
->To learn more about custom formatting, you can refer to [Custom Date formatting](https://ej2.syncfusion.com/react/documentation/common/internationalization#custom-formats) and [Custom Number formatting](https://ej2.syncfusion.com/react/documentation/common/internationalization#custom-number-formatting-and-parsing). 
+>To learn more about custom formatting, you can refer to [Custom Date formatting](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#custom-formats) and [Custom Number formatting](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#custom-number-formatting-and-parsing). 
 
 ## Align the text of content
 
@@ -332,7 +332,7 @@ The following sample hides the checkbox for the row with `ariaRowIndex` set to 3
 
 ## AutoFit columns
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component for React supports automatic column width adjustment based on content. Double-clicking the column header resizer adjusts the width to fit the maximum content, ensuring clear data visibility without wrapping.
+The Gantt Chart component for React supports automatic column width adjustment based on content. Double-clicking the column header resizer adjusts the width to fit the maximum content, ensuring clear data visibility without wrapping.
 
 To enable this feature, set [allowResizing](https://ej2.syncfusion.com/react/documentation/api/gantt#allowresizing) to **true** and inject `Resize` in the Gantt Chart component. 
 
@@ -362,7 +362,7 @@ You can resize a column in Gantt to fit its content using the `autoFitColumns` m
 
 ## Locked columns
 
-You can lock columns in Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component to prevent them from being reordered and to keep them fixed at the first position. This is achieved by setting the `column.lockColumn` property to **true** in the column configuration. To visually differentiate locked columns, you can apply custom CSS using attribute selectors.
+You can lock columns in Gantt Chart component to prevent them from being reordered and to keep them fixed at the first position. This is achieved by setting the `column.lockColumn` property to **true** in the column configuration. To visually differentiate locked columns, you can apply custom CSS using attribute selectors.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -380,7 +380,7 @@ You can lock columns in Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt C
 
 ## Show or hide columns
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component allows dynamic control over column visibility using built-in properties and methods. This is useful for customizing which columns are shown or hidden based on specific requirements.
+The React Gantt Chart component allows dynamic control over column visibility using built-in properties and methods. This is useful for customizing which columns are shown or hidden based on specific requirements.
 
 ### Using property
 
@@ -484,7 +484,7 @@ For more information check on this [documentation](https://ej2.syncfusion.com/re
 
 ## Updating column definitions
 
-To update column definitions in React Gantt Chart component, modify the [columns](https://helpej2.syncfusion.com/react/documentation/api/gantt/column/) property to adjust column appearance and behavior by changing attributes like [headerText](https://ej2.syncfusion.com/react/documentation/api/gantt/column#headertext), [width](https://ej2.syncfusion.com/react/documentation/api/gantt/column#width), or [visible](https://ej2.syncfusion.com/react/documentation/api/gantt/column#visible). After making the required updates, use the `refreshColumns` method from the `treeGrid` object to apply and reflect the changes in the Gantt chart.
+To update column definitions in React Gantt Chart component, modify the [columns](https://helpej2.syncfusion.com/react/documentation/api/gantt/column) property to adjust column appearance and behavior by changing attributes like [headerText](https://ej2.syncfusion.com/react/documentation/api/gantt/column#headertext), [width](https://ej2.syncfusion.com/react/documentation/api/gantt/column#width), or [visible](https://ej2.syncfusion.com/react/documentation/api/gantt/column#visible). After making the required updates, use the `refreshColumns` method from the `treeGrid` object to apply and reflect the changes in the Gantt chart.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -502,7 +502,7 @@ To update column definitions in React Gantt Chart component, modify the [columns
 
 ## Adding/removing columns
 
-You can add or remove columns in the React Gantt by updating the [columns](https://helpej2.syncfusion.com/react/documentation/api/gantt/column/) option in the Gantt instance. To add a column, **push** a new column object into the `columns` array. To remove a column, use **pop** to delete the last item or `splice` to remove a specific one from the array.
+You can add or remove columns in the React Gantt by updating the [columns](https://helpej2.syncfusion.com/react/documentation/api/gantt/column) option in the Gantt instance. To add a column, **push** a new column object into the `columns` array. To remove a column, use **pop** to delete the last item or `splice` to remove a specific one from the array.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -520,7 +520,7 @@ You can add or remove columns in the React Gantt by updating the [columns](https
 
 ## Responsive columns
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component provides a built-in feature to control column visibility based on media queries using the `hideAtMedia` property in the column object. This method can be used to hide columns automatically when the screen width matches specified [media query](http://cssmediaqueries.com/what-are-css-media-queries.html) conditions.
+The React Gantt Chart component provides a built-in feature to control column visibility based on media queries using the `hideAtMedia` property in the column object. This method can be used to hide columns automatically when the screen width matches specified [media query](http://cssmediaqueries.com/what-are-css-media-queries.html) conditions.
 
 The following example demonstrates a Gantt chart where the **Task Name** column is set to `(min-width: 700px)`, meaning it will be hidden when the browser width is less than or equal to 700px. Similarly, the **Duration** column is set to `(max-width: 500px)`, so it will be hidden when the browser width exceeds 500px.
 
