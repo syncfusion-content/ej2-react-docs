@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Node Interaction Events in React Diagram Component
 
-The [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component provides comprehensive event support for node interactions, allowing developers to respond to user actions and customize behavior during various interaction scenarios. These events are triggered when users interact with nodes through clicking, dragging, resizing, rotating, and other operations.
+The React Diagram component provides comprehensive event support for node interactions, allowing developers to respond to user actions and customize behavior during various interaction scenarios. These events are triggered when users interact with nodes through clicking, dragging, resizing, rotating, and other operations.
 
 ## Click Event
 

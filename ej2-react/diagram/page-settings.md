@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Page Settings in React Diagram Component
 
-Page settings allow customization of the appearance, size, and orientation of the [React Diagram](https://www.syncfusion.com/react-components/react-diagram) page.
+Page settings allow customization of the appearance, size, and orientation of the diagram page.
 
 To customize the diagram page settings, insert page breaks, display multiple pages, and change the orientation of the canvas in the EJ2 React Diagram, refer to the video link below.
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Straight Connector Segments
 
-Straight connector segments create direct linear connections between two points in a [React Diagram](https://www.syncfusion.com/react-components/react-diagram). These segments are the simplest form of connector routing, providing the shortest path between nodes or connection points. Straight segments are ideal when you need clean, unobstructed connections without intermediate directional changes.
+Straight connector segments create direct linear connections between two points in a diagram. These segments are the simplest form of connector routing, providing the shortest path between nodes or connection points. Straight segments are ideal when you need clean, unobstructed connections without intermediate directional changes.
 
 ## Creating Straight Segments
 

@@ -61,11 +61,7 @@ npm install @syncfusion/ej2-react-grids --save
 
 ## Adding CSS reference
 
-<<<<<<< HEAD
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component provide built-in themes, which are available from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages). Additionally, themes can be loaded via CDN or customized using the [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
-=======
-Import the Syncfusion<sup style="font-size:70%">&reg;</sup> component themes in the `~/app/routes/home.tsx` file as shown below:
->>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 
 This example uses the `Tailwind 3` theme for the Grid component from the theme package. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
 

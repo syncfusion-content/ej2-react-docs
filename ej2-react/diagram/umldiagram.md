@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # UML Diagrams in React Diagram Component
 
-This guide demonstrates how to create and customize UML (Unified Modeling Language) diagrams using the [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component. You'll learn to build UML Class diagrams for object-oriented system modeling and UML Activity diagrams for workflow visualization.
+This guide demonstrates how to create and customize UML (Unified Modeling Language) diagrams using the Syncfusion React Diagram component. You'll learn to build UML Class diagrams for object-oriented system modeling and UML Activity diagrams for workflow visualization.
 
 ## UML Class Diagram
 

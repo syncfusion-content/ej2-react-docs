@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Connecting SQL Server to React Diagram using ASP.NET Core Web API
 
-This guide explains how to load and visualize organizational chart data stored in a Microsoft SQL Server database using the [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component. It demonstrates how to configure SQL Server, create the required database schema, expose the data through an ASP.NET Core Web API, and bind the API response to a React application to render an organizational chart diagram.
+This guide explains how to load and visualize organizational chart data stored in a Microsoft SQL Server database using the Syncfusion® React Diagram component. It demonstrates how to configure SQL Server, create the required database schema, expose the data through an ASP.NET Core Web API, and bind the API response to a React application to render an organizational chart diagram.
 
 **What is Microsoft SqlClient?**
 
@@ -121,7 +121,7 @@ The SQL Server environment is now ready for database creation and data configura
 
 ## Creating the database and schema
 
-After connecting to SQL Server using SSMS, the next step is to create the database and schema required to store organizational chart data. The schema represents parent–child relationships that are rendered as nodes and connectors in the React Diagram component.
+After connecting to SQL Server using SSMS, the next step is to create the database and schema required to store organizational chart data. The schema represents parent–child relationships that are rendered as nodes and connectors in the Syncfusion® React Diagram component.
 
 ### Creating the database
 
@@ -233,7 +233,7 @@ SELECT * FROM dbo.LayoutNode;
 
 ## Integrating SQL Server with ASP.NET Core Web API
 
-In this section, an ASP.NET Core Web API project is created and configured to connect to SQL Server using **Microsoft.Data.SqlClient**. The API retrieves organizational chart layout data from the database and returns it in a format that can be consumed by the React Diagram component.
+In this section, an ASP.NET Core Web API project is created and configured to connect to SQL Server using **Microsoft.Data.SqlClient**. The API retrieves organizational chart layout data from the database and returns it in a format that can be consumed by the Syncfusion® React Diagram component.
 
 ### Step 1: Create the ASP.NET Core Web API project
 
@@ -305,7 +305,7 @@ dotnet add package Syncfusion.EJ2.AspNet.Core
 
 ### Step 3: Create the data model
 
-A data model defines how data stored in a database table is represented within the ASP.NET Core application. It maps database records to C# objects that can be used by the Web API and returned to the React Diagram component.
+A data model defines how data stored in a database table is represented within the ASP.NET Core application. It maps database records to C# objects that can be used by the Web API and returned to the Syncfusion® React Diagram component.
 
 In this application, the data model maps directly to the **LayoutNode** table created in SQL Server.
 
@@ -579,7 +579,7 @@ app.Run();
 
 The backend setup is now complete. 
 
-## Integrating React Diagram
+## Integrating Syncfusion® React Diagram
 
 The following steps describe how to render the Diagram and connect it to the SQL Server back-end.
 
@@ -613,7 +613,7 @@ Add the required CSS references to the **src/index.css** file to apply styling t
 
 For this project, the "Bootstrap 5.3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion® React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.
 
-### Step 3: Add React Diagram
+### Step 3: Add Syncfusion® React Diagram
 
 The React Diagram component can be added to the (**src/App.tsx**) file using the following code.
 
@@ -811,7 +811,7 @@ A complete, working sample implementation is available in the [GitHub repository
 | 1 | Install and configure Microsoft SQL Server and SQL Server Management Studio | [View](#installing-and-configuring-microsoft-sql-server-and-ssms) |
 | 2 | Create the database, schema, and insert organizational chart diagram data | [View](#creating-the-database-and-schema) |
 | 3 | Create and configure the ASP.NET Core Web API back-end | [View](#integrating-sql-server-with-aspnet-core-web-api) |
-| 4 | Integrate and configure the React Diagram component | [View](#integrating-syncfusion-react-diagram) |
+| 4 | Integrate and configure the Syncfusion® React Diagram component | [View](#integrating-syncfusion-react-diagram) |
 | 5 | Run and test the complete application | [View](#running-the-application) |
 
 ## See also

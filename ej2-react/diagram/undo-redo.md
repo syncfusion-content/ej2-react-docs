@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Undo and Redo in React Diagram Component
 
-The [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component automatically tracks all user interactions and programmatic changes, providing robust undo and redo functionality. This feature enables users to reverse or restore actions, making diagram editing more intuitive and error-tolerant.
+The React Diagram component automatically tracks all user interactions and programmatic changes, providing robust undo and redo functionality. This feature enables users to reverse or restore actions, making diagram editing more intuitive and error-tolerant.
 
 ## Basic Undo and Redo Operations
 

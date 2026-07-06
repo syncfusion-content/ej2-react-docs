@@ -10,15 +10,11 @@ domainurl: ##DomainURL##
 
 # Connecting MySQL Server to Syncfusion® React Diagram using LINQ2DB
 
-This guide explains how to load and visualize organizational chart data stored in a MySQL database using the [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component. It demonstrates how to configure MySQL, create the required database schema, expose the data through an ASP.NET Core Web API, and bind the API response to a React application to render an organizational chart.
+This guide explains how to load and visualize organizational chart data stored in a MySQL database using the Syncfusion® React Diagram component. It demonstrates how to configure MySQL, create the required database schema, expose the data through an ASP.NET Core Web API, and bind the API response to a React application to render an organizational chart.
 
 **What is LINQ2DB?**
 
-<<<<<<< HEAD
 [LINQ2DB](https://linq2db.github.io) is a lightweight object-relational mapping (ORM) library for .NET that simplifies database access. It enables applications to query relational databases such as MySQL using LINQ syntax, providing a type-safe and efficient way to retrieve data without the overhead of larger ORM frameworks.
-=======
-[LINQ2DB](https://linq2db.github.io/) is a lightweight object-relational mapping (ORM) library for .NET that simplifies database access. It enables applications to query relational databases such as MySQL using LINQ syntax, providing a type-safe and efficient way to retrieve data without the overhead of larger ORM frameworks.
->>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 
 **Key benefits of LINQ2DB:**
 
@@ -70,11 +66,7 @@ MySQL Server provides the relational database engine used to store organizationa
 
 MySQL Workbench is a graphical tool used to connect to MySQL Server, manage databases, execute SQL queries, and inspect data.
 
-<<<<<<< HEAD
 1. Download MySQL Workbench Installer version 8.0.47 from [mysql-workbench](https://dev.mysql.com/downloads/workbench)
-=======
-1. Download MySQL Workbench Installer version 8.0.47 from [mysql-workbench](https://dev.mysql.com/downloads/workbench/)
->>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 2. Run the installer and follow the setup wizard.
    - Choose the setup type as **Complete**.
    - Click **Finish** after installing MySQL Workbench.
@@ -180,7 +172,7 @@ The database can also be created using the MySQL Command Line Client.
 
 ## Integrating MySQL Server with ASP.NET Core Web API
 
-This section explains how to create an ASP.NET Core Web API project that connects to MySQL and exposes data for use by the React Diagram component.
+This section explains how to create an ASP.NET Core Web API project that connects to MySQL and exposes data for use by the Syncfusion® React Diagram component.
 
 ### Creating the Web API project using Visual Studio
 
@@ -444,7 +436,7 @@ app.Run();
 
 The backend API is now configured.
 
-## Integrating React Diagram
+## Integrating Syncfusion® React Diagram
 
 The following steps describe how to render the Diagram and connect it to the MySQL Server back-end.
 
@@ -481,7 +473,7 @@ Add the required CSS references to the **src/index.css** file to apply styling t
 
 For this project, the "Bootstrap 5.3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion® React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.
 
-### Step 3: Add React Diagram
+### Step 3: Add Syncfusion® React Diagram
 
 Create a basic Diagram component in **src/App.tsx**:
 
@@ -748,6 +740,6 @@ You can clone the sample repository, update the MySQL connection string, and run
 
 ## See also
 
-- [React Diagram Getting Started](https://ej2.syncfusion.com/react/documentation/diagram/getting-started)
+- [Syncfusion® React Diagram Getting Started](https://ej2.syncfusion.com/react/documentation/diagram/getting-started)
 - [Data Binding Documentation](https://ej2.syncfusion.com/react/documentation/diagram/data-binding)
 - [Organizational Chart Layout](https://ej2.syncfusion.com/react/documentation/diagram/org-chart)

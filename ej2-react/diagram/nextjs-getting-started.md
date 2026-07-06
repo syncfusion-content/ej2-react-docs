@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Creating a Next.js Application 
 
-This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component.
+This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Diagram component.
 
 ## What is Next.js?
 
@@ -298,5 +298,3 @@ yarn run dev
 To learn more about the functionality of the Diagram component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/diagram/getting-started#module-injection).
 
 > [View the NEXT.js Diagram sample in the GitHub repository](https://github.com/SyncfusionExamples/ej2-nextjs-diagram).
-
-N> Looking for the full React Diagram component overview, features, pricing, and documentation? Visit the [React Diagram](https://www.syncfusion.com/react-components/react-diagram) page.

@@ -16,7 +16,7 @@ BPMN data sources represent information that is required for or produced by busi
 
 ## Creating a Data Source
 
-To create a BPMN data source shape in the [React Diagram](https://www.syncfusion.com/react-components/react-diagram) component, set the shape type as **BpmnShape** and specify the shape property as **DataSource**. Data sources are typically used to represent databases, files, or other data repositories that business processes interact with.
+To create a BPMN data source shape in the React Diagram component, set the shape type as **BpmnShape** and specify the shape property as **DataSource**. Data sources are typically used to represent databases, files, or other data repositories that business processes interact with.
 
 ![DataSource BPMN Shape](images/Datasource.png)
 
