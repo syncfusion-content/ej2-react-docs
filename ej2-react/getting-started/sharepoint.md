@@ -61,7 +61,6 @@ npm install @syncfusion/ej2-react-grids --save
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-<<<<<<< HEAD
 Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
 
 This example uses the `Tailwind 3` theme for the Grid component from the theme package. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
@@ -79,20 +78,12 @@ yarn add @syncfusion/@syncfusion/ej2-tailwind3-theme
 {% endhighlight %}
 {% endtabs %}
 
-=======
-Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS files from npm packages, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). Refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for more detail.
-
->>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 This example demonstrates importing the `tailwind3` theme CSS within the `App.tsx` file located at `~/src/webparts/app/components/App.tsx`:
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
 
-<<<<<<< HEAD
 require('@syncfusion/ej2-tailwind3-theme/styles/grid/index.css');
-=======
-require('@syncfusion/ej2-grids/styles/tailwind3.css');
->>>>>>> 8f3c51b893fb30a2292cc772a92ba38135a0569f
 
 {% endhighlight %}
 {% endtabs %}
