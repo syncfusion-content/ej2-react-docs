@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Hybrid Remote Binding with RemoteSaveAdaptor in Syncfusion React Gantt
 
-The [RemoteSaveAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/remote-save-adaptor) in the [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) provides a hybrid data workflow. The client fetches the complete task set once and applies client‑side operations locally while persisting edits back to the server via batch CRUD requests. This approach keeps the UI responsive for interactive scheduling while ensuring server‑side persistence and authoritative processing for inserts, updates and deletes.
+The [RemoteSaveAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/remote-save-adaptor) in the [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) provides a hybrid data workflow. Use this adaptor when want to fetch the complete task set once, perform client-side operations for responsiveness, and persist edits back to the server via batch CRUD requests. Choose RemoteSaveAdaptor when fast client-side interaction is required while maintaining server-side data persistence. Unlike fully remote adaptors, it combines local data operations with remote synchronization.
 
-For complete server‑side configuration and additional implementation details, refer to the [DataManager RemoteSaveAdaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/remote-save-adaptor), which explains endpoint setup, request handling, and best practices for synchronizing CRUD operations with remote services.
+For detailed server‑side configuration and further implementation details, refer to the [DataManager RemoteSaveAdaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/remote-save-adaptor), which explains endpoint setup, request handling, and best practices for synchronizing CRUD operations with remote services.
 
 This guide describes the conceptual project layout and patterns for wiring the React Gantt chart to a backend that implements a batch CRUD endpoint.
 
@@ -36,7 +36,7 @@ RemoteSaveAdaptor/
 
 ## React Gantt frontend setup using RemoteSave Adaptor
 
-This section describes, at a conceptual level, how the Gantt consumes task data from remote save and submits task changes. Implementation and package installation steps are covered in platform‑specific setup guides and are intentionally omitted here.
+This section describes at a conceptual level, how the Gantt consumes task data from remote save and submits task changes. Implementation and package installation steps are covered in platform‑specific setup guides and are intentionally omitted here.
 
 ### Step 1: Packages and dependencies
 
@@ -191,9 +191,9 @@ The DataManager with RemoteSaveAdaptor supports Create, Read, Update, and Delete
 
 The server receives a batch payload that contains `added`, `changed`, and `deleted` arrays. The batch endpoint applies each section in turn—assigning identifiers for new tasks if required, updating existing records, and removing deleted items—then returns a response the client can reconcile against its local state.
 
-### Step 1: Complete server-side controller
+### Step 1: Server-side controller
 
-Add all CRUD methods to the GanttController.cs. Replace the entire controller with this complete version:
+Add the required controller method to **GanttController.cs**. Replace the entire controller with this complete version:
 
 {% tabs %}
 {% highlight cs tabtitle="GanttController.cs - Batch Handler" %}
@@ -278,7 +278,7 @@ namespace GanttServerSample.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-> Note: The sample above is a focused illustration of the batch handler shape. Implement your project‑specific scheduling, dependency validation, and identifier assignment logic inside the batch method so server rules remain authoritative.
+> Note: The sample above is a focused illustration of the batch handler shape. Implement project‑specific scheduling, dependency validation, and identifier assignment logic inside the batch method so server rules remain authoritative.
 
 ### Step 2: Client-side gantt configuration
 

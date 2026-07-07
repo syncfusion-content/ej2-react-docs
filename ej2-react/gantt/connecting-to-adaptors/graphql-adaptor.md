@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # GraphQL Remote Data Binding in Syncfusion React Gantt
 
-The [GraphQLAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/graphql-adaptor) in the Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager enables the React Gantt to interact with GraphQL services by translating the Gantt's data requests and task update actions into GraphQL queries and mutations. This approach lets the Gantt request precisely the task fields and related entities it needs for timeline rendering, dependency resolution, and taskbar presentation.
+The [GraphQLAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/graphql-adaptor) in the Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager enables the React Gantt to interact with GraphQL services by translating the Gantt's data requests and task update actions into GraphQL queries and mutations. Use this adaptor when backend exposes a GraphQL API and want flexible, efficient data fetching and mutation for Gantt tasks. GraphQLAdaptor is best for scenarios requiring precise data selection and real-time updates, offering capabilities not present in REST or OData adaptors.
 
-For server configuration and schema expectations (queries, mutations, and response shapes), consult the GraphQL backend documentation appropriate for your stack. After the GraphQL service is available, configure the Gantt's DataManager to use the GraphQL adaptor as its task data source.
+For server configuration and schema expectations (queries, mutations, and response shapes), consult the GraphQL backend documentation appropriate for stack. After the GraphQL service is available, configure the Gantt's DataManager to use the GraphQL adaptor as its task data source.
 
 [GraphQL](https://graphql.org/learn/introduction/) provides a single, flexible endpoint where clients specify the exact data shape required. For the Gantt this means requesting task fields, parent/child relationships, resource assignments, and any server‑computed scheduling values in one query. Mutations allow the client to create, update, or delete tasks and dependencies while the server enforces scheduling rules and returns reconciled task states.
 
@@ -39,10 +39,9 @@ For server configuration and schema expectations (queries, mutations, and respon
 |---|--------|-------|
 | 1 | Set up and configure the GraphQL backend using Node.js | [View](#setting-up-the-graphql-backend-using-nodejs) |
 | 2 | Integrate the React Gantt chart with the GraphQL API | [View](#integrating-syncfusion-react-gantt-with-graphql) |
-| 3 | Implement data operations including filtering, searching, sorting, and paging | [View](#step-4-add-toolbar-with-crud-and-search-options) |
-| 4 | Perform CRUD operations | [View](#step-9-perform-crud-operations) |
-| 5 | Run the GraphQL application | [View](#running-the-application) |
-| 6 | Explore a complete working sample available on GitHub | [View](#complete-sample-repository) |
+| 3 | Perform CRUD operations | [View](#step-4-perform-crud-operations) |
+| 4 | Run the GraphQL application | [View](#running-the-application) |
+| 5 | Explore a complete working sample available on GitHub | [View](#complete-sample-repository) |
 
 ### GraphQL vs REST comparison
  
@@ -174,7 +173,7 @@ The GraphQL schema defines the structure of the "task" data model and the server
       TaskID: Int!
       TaskName: String!
       StartDate: String
-      #include additional fields--
+      # include additional fields here.
     }
     ```
 3. Add type definition for **GanttReturnType**:
@@ -216,7 +215,7 @@ The GraphQL schema defines the structure of the "task" data model and the server
       TaskID: Int!
       TaskName: String!
       StartDate: String
-      #include additional fields--
+      # include additional fields here.
     }
     ```
 7. Define the Query type to expose the "getTasks" operation that returns the list of "tasks".
@@ -237,10 +236,10 @@ The GraphQL schema defines the structure of the "task" data model and the server
     }
     ```
     **Key parameters definitions:**
-    - **key**: The unique identifier (primary key) of the task to be updated.
+    - **key**: The unique identifier (primary key) of the task to be deleted.
     - **value**: An object containing the created or updated task details.
 
-### Step 4: GraphQL - Query resolvers
+### Step 3: GraphQL - Query resolvers
 
 A resolver in GraphQL is a function responsible for fetching the data for a specific field in a GraphQL schema.
 
@@ -272,7 +271,7 @@ const resolvers = {
 }
 ```
 
-### Step 5: GraphQL - Mutation resolvers
+### Step 4: GraphQL - Mutation resolvers
 
 Mutations in GraphQL are used to modify data on the server, such as creating, updating, or deleting records.
 
@@ -428,9 +427,9 @@ The `GraphQLAdaptor` needs to be configured on the Syncfusion<sup style="font-si
     [App.jsx]
 
     const ganttDataManager = new DataManager({
-        url: 'http://localhost:xxxx/',
+        url: 'http://localhost:xxxx/', // Here xxxx represents the port number.
         adaptor: new GraphQLAdaptor({
-            // Map to { result, count } in your GraphQL payload
+            // Map to { result, count } in GraphQL payload
             response: {
                 result: 'getTasks.result',
                 count:  'getTasks.count'
@@ -560,9 +559,9 @@ Open `src/App.jsx` and configure the `getMutation` function in the `GraphQLAdapt
   ```ts
   [App.jsx]
     const ganttDataManager = new DataManager({
-            url: 'http://localhost:xxxx/', // xxxx represents the port number.
+            url: 'http://localhost:xxxx/', // Here xxxx represents the port number.
             adaptor: new GraphQLAdaptor({
-                // Map to { result, count } in your GraphQL payload
+                // Map to { result, count } in GraphQL payload
                 response: {
                     result: 'getTasks.result',
                     count:  'getTasks.count'
@@ -613,9 +612,9 @@ Open `src/App.jsx` and configure the `getMutation` function in the `GraphQLAdapt
   ```ts
   [App.jsx]
 const ganttDataManager = new DataManager({
-            url: 'http://localhost:xxxx/', // xxxx represents the port number.
+            url: 'http://localhost:xxxx/', // Here xxxx represents the port number.
             adaptor: new GraphQLAdaptor({
-                // Map to { result, count } in your GraphQL payload
+                // Map to { result, count } in GraphQL payload
                 response: {
                     result: 'getTasks.result',
                     count:  'getTasks.count'
@@ -664,9 +663,9 @@ Open `src/App.jsx` and configure the `getMutation` function in the `GraphQLAdapt
 ```ts
   [App.jsx]
   const ganttDataManager = new DataManager({
-            url: 'http://localhost:xxxx/', // xxxx represents the port number.
+            url: 'http://localhost:xxxx/', // Here xxxx represents the port number.
             adaptor: new GraphQLAdaptor({
-                // Map to { result, count } in your GraphQL payload
+                // Map to { result, count } in GraphQL payload
                 response: {
                     result: 'getTasks.result',
                     count:  'getTasks.count'
@@ -750,9 +749,9 @@ class GraphQLCrudAdaptor extends GraphQLAdaptor {
     }
 }
 const ganttDataManager = new DataManager({
-    url: 'http://localhost:xxxx/',
+    url: 'http://localhost:xxxx/', // Here xxxx represents the port number.
     adaptor: new GraphQLCrudAdaptor({ // Updated GraphQLAdaptor for CRUD operations
-        // Map to { result, count } in your GraphQL payload
+        // Map to { result, count } in GraphQL payload
         response: {
             result: 'getTasks.result',
             count:  'getTasks.count'

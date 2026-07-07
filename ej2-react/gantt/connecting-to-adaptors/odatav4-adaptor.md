@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # OData Remote Data Binding in Syncfusion React Gantt
 
-The [ODataV4Adaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/odatav4-adaptor) in the Syncfusion<sup style="font-size:70%">&reg;</sup> React DataManager enables seamless integration between the [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) and OData v4 services by translating the Gantt's task data requests and update actions into OData‑formatted requests and by interpreting OData responses. The adaptor provides a consistent pathway for the Gantt to obtain task records, relationship metadata, and any counts or summaries the server returns, while allowing server‑side scheduling rules, dependency resolution, and related dataset processing to remain authoritative.
+The [ODataV4Adaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/odatav4-adaptor) in the Syncfusion<sup style="font-size:70%">&reg;</sup> React DataManager enables seamless integration between the [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) and OData v4 services by translating the Gantt's task data requests and update actions into OData‑formatted requests and by interpreting OData responses. Use this adaptor when backend exposes OData v4 endpoints and require standardized query capabilities with server-side processing. ODataV4Adaptor is intended specifically for OData-compliant services and is not required for standard REST or custom web-method endpoints.
 
-For complete server‑side configuration and additional implementation details, refer to the [DataManager ODataV4Adaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/odatav4-adaptor), which covers endpoint setup, query processing, and best practices for integrating OData V4 services.
+For detailed server‑side configuration and further implementation details, refer to the [DataManager ODataV4Adaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/odatav4-adaptor), which covers endpoint setup, query processing, and best practices for integrating OData V4 services.
 
 Once the project creation and backend setup are complete, the next step is to render the React Gantt chart Component on the client side.
 
@@ -36,11 +36,11 @@ ODataV4Adaptor/
 
 ## React Gantt frontend setup using Syncfusion ODataV4Adaptor
 
-This section explains, how the Gantt interacts with an OData v4 service. Implementation and package installation steps are covered in platform‑specific setup guides and are intentionally omitted here.
+This section explains how the Gantt interacts with an OData v4 service. Implementation and package installation steps are covered in platform‑specific setup guides and are intentionally omitted here.
 
 ### Step 1: Packages and dependencies
 
-- Ensure your React project includes the Syncfusion Gantt and data packages required to render the Gantt and to use the DataManager and ODataV4Adaptor.
+- Ensure React project includes the Syncfusion Gantt and data packages required to render the Gantt and to use the DataManager and ODataV4Adaptor.
 - Right‑click the **OdataV4Adaptor.client** folder in **Solution Explorer** and select **Open in Terminal** (available in newer Visual Studio versions), or open a Developer Command prompt/PowerShell from the Start menu and navigate manually to the **OdataV4Adaptor.client directory**. Once inside the folder, confirm that **package.json** is present, then run the following commands to install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages:
 
 ```bash
@@ -153,7 +153,7 @@ CRUD operations are conveyed to the service using standard OData conventions. Th
 
 ### Step 1: Complete server-side controller
 
-Add all CRUD methods to the **GanttController.cs**. Replace the entire controller with this complete version:
+Add the required controller method **GanttController.cs**. Replace the entire controller with this complete version:
 
 {% tabs %}
 {% highlight cs tabtitle="GanttController.cs - Complete CRUD Implementation" %}

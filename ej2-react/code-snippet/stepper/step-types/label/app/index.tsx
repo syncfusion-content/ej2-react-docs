@@ -1,5 +1,3 @@
-{% raw %}
-
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import { StepperComponent, StepsDirective, StepDirective } from '@syncfusion/ej2-react-navigations';
@@ -21,5 +19,3 @@ function App() {
 }
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
-
-{% endraw %}

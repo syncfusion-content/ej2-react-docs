@@ -111,14 +111,14 @@ The following example demonstrates how to render multiple baselines using `basel
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/baseline-cs1/app/index.jsx %}
+{% include code-snippet/gantt/baseline-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/baseline-cs1/app/index.tsx %}
+{% include code-snippet/gantt/baseline-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/baseline-cs1/index.html %}
+{% include code-snippet/gantt/baseline-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/gantt/baseline-cs1" %}
+{% previewsample "page.domainurl/code-snippet/gantt/baseline-cs2" %}

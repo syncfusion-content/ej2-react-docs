@@ -8,8 +8,8 @@ Diagram.Inject(ErDiagrams);
 // Define a basic ER entity (Customer table)
 const customer: NodeModel = {
   id: 'Customer',
-  offsetX: 400,
-  offsetY: 300,
+  offsetX: 300,
+  offsetY: 200,
   shape: {
     type: 'Er',
     header: {

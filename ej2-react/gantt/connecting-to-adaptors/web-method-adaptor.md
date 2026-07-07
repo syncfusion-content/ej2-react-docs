@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Remote Data Binding with Custom Web Methods in Syncfusion React Gantt
 
-The [WebMethodAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/web-method-adaptor) enables the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt to communicate with server web methods and legacy endpoints by packaging task data requests and task modification payloads into a structured request envelope the server can deserialize. This adaptor is suitable for backend that expose web methods where task requests and updates are handled via HTTP POST operations.
+The [WebMethodAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/web-method-adaptor) enables the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt to communicate with server web methods and legacy endpoints by packaging task data requests and task modification payloads into a structured request envelope the server can deserialize. Use this adaptor when backend exposes web methods that handle task requests and updates via HTTP POST operations, especially if need to integrate with legacy systems or custom endpoints. Unlike other adaptors, `WebMethodAdaptor` is designed for scenarios where standard REST or OData endpoints are not available.
 
-For backend configuration and expected request/response shapes, consult the WebMethod adaptor backend setup documentation for your platform. After the backend is prepared, configure the DataManager in the React application to use the WebMethod adaptor as the Gantt data source.
+For backend configuration and expected request/response shapes, consult the WebMethod adaptor backend setup documentation for platform. After the backend is prepared, configure the DataManager in the React application to use the WebMethod adaptor as the Gantt data source.
 
-For complete server‑side configuration and additional implementation details, refer to the [DataManager Webmethod Adaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/web-method-adaptor), which covers endpoint setup, query processing, and best practices for integrating WebMethod‑based services.
+For detailed server‑side configuration and further implementation details, refer to the [DataManager Webmethod Adaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/web-method-adaptor), which covers endpoint setup, query processing, and best practices for integrating WebMethod‑based services.
 
 **Project structure (conceptual):**
 
@@ -37,7 +37,7 @@ WebMethodAdaptor/
 
 ## React Gantt frontend setup using WebMethod adaptor
 
-This section describes, at a conceptual level, how the Gantt consumes task data from web methods and submits task changes. Implementation and package installation steps are covered in platform‑specific setup guides and are intentionally omitted here.
+This section describes at a conceptual level, how the Gantt consumes task data from web methods and submits task changes. Implementation and package installation steps are covered in platform‑specific setup guides and are intentionally omitted here.
 
 ### Step 1: Packages and dependencies
 
@@ -85,7 +85,7 @@ import "./App.css";
 
 ### Step 3: Configure DataManager with WebMethod adaptor
 
-- Configure a DataManager instance that targets your web method endpoints and specifies the WebMethod adaptor. The Gantt uses that DataManager to fetch tasks, request related datasets, and submit task create/update/delete payloads wrapped in the expected envelope.
+- Configure a DataManager instance that targets web method endpoints and specifies the WebMethod adaptor. The Gantt uses that DataManager to fetch tasks, request related datasets, and submit task create/update/delete payloads wrapped in the expected envelope.
 
 Conceptually, the adaptor sends a request object that contains request metadata (for example, whether the client requires counts or which timeline range to return) together with task update payloads when the user performs create, update, or delete actions in the Gantt.
 
@@ -143,7 +143,7 @@ The DataManager with WebMethodAdaptor supports Create, Read, Update, and Delete 
 
 **Mapping CRUD operations to service endpoints**
 
-CRUD operations are conveyed to the service using standard WebMethod conventions. The WebMethodAdaptor works with a single task endpoint and standard HTTP methods:
+CRUD operations are conveyed to the service using standard WebMethod conventions. The WebMethodAdaptor works with a single task endpoint for task operations:
 
 | Operation | HTTP Method | URL Example | Description |
 |-----------|-------------|-------------|-------------|
@@ -152,9 +152,9 @@ CRUD operations are conveyed to the service using standard WebMethod conventions
 | **Update** | POST | `/api/Gantt` | Update record. |
 | **Delete** | POST | `/api/Gantt` | Delete record. |
 
-### Step 1: Complete server-side controller
+### Step 1: Server-side controller
 
-Add all CRUD methods to the GanttController.cs. Replace the entire controller with this complete version:
+Add the required controller method to **GanttController.cs**. Replace the entire controller with this complete version:
 
 {% tabs %}
 {% highlight cs tabtitle="GanttController.cs - Complete CRUD Implementation" %}

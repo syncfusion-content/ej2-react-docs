@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Gantt Chart - Custom Adaptor | Syncfusion
-description: React Gantt Chart custom adaptor explains creating a custom data adaptor to transform requests and responses, enabling custom backends and behaviors.
+description: React Gantt Chart CustomAdaptor explains creating a custom data adaptor to transform requests and responses, enabling custom backends and behaviors.
 control: Custom Adaptor
 platform: ej2-react
 documentation: ug
@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Custom Remote Data Binding in Syncfusion React Gantt Chart
 
-The `CustomAdaptor` in Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart is a powerful extension mechanism that **customizes any existing adaptor** ([RemoteSaveAdaptor](./remote-save-adaptor), [WebMethodAdaptor](./web-method-adaptor), [ODataV4Adaptor](./odatav4-adaptor), [GraphQLAdaptor](./graphql-adaptor)) to meet specific application requirements. Instead of creating an adaptor from scratch, `CustomAdaptor` intercepts and customizes the HTTP request/response pipeline used by the Syncfusion React Gantt Chart.
+The `CustomAdaptor` in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart is a powerful extension mechanism that **customizes any existing adaptor** ([RemoteSaveAdaptor](./remote-save-adaptor), [WebMethodAdaptor](./web-method-adaptor), [ODataV4Adaptor](./odatav4-adaptor), [GraphQLAdaptor](./graphql-adaptor)) to meet specific application requirements.  Use this adaptor when the built-in adaptors do not fully match backend requirements and need to customize request or response processing. Instead of creating an adaptor from scratch, `CustomAdaptor` intercepts and customizes the HTTP request/response pipeline used by the Syncfusion React Gantt Chart.
 
-For detailed guidance, refer to the [DataManager CustomAdaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/custom-adaptor), which explains the usage of custom adaptors in depth. For complete server-side setup and advanced implementation details, see the [DataManager ODataV4Adaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/odatav4-adaptor), covering endpoint configuration, query handling, and recommended practices for integrating OData V4 services.
+For detailed guidance, refer to the [DataManager CustomAdaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/custom-adaptor), which explains the usage of custom adaptors in depth. For detailed server-side setup and further implementation details, see the [DataManager ODataV4Adaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/odatav4-adaptor), covering endpoint configuration, query handling, and recommended practices for integrating OData V4 services.
 
 Once the project creation and backend setup are complete, the next step is to render the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component on the client side.
 
@@ -26,7 +26,7 @@ CustomAdaptor/
 ├── CustomAdaptor.client/       # React frontend (Vite/React project).
 │   ├── src/
 │   │   ├── App.css
-│   │   ├── App.jsx             # Add your CustomAdaptor here.
+│   │   ├── App.jsx             # Add CustomAdaptor here.
 |   |   └── CustomAdaptor.jsx   # Extend odatav4 adaptor here.
 │   └── package.json
 └── CustomAdaptor.Server/      # ASP.NET Core backend (API).
@@ -37,11 +37,11 @@ CustomAdaptor/
 
 ## React Gantt Chart setup and client-side configuration
 
-This section explains how the Gantt Chart interacts with a custom adaptor for extending OData v4 services. Implementation and package installation steps are covered in platform-specific setup guides and are intentionally omitted here.
+This section explains how the Gantt Chart interacts with a `CustomAdaptor` for extending OData v4 services. Implementation and package installation steps are covered in platform-specific setup guides and are intentionally omitted here.
 
 ### Step 1: Packages and dependencies
 
-- Ensure your React project includes the Syncfusion Gantt Chart and data packages required to render the Gantt Chart and to use the DataManager and ODataV4Adaptor.
+- Ensure React project includes the Syncfusion Gantt Chart and data packages required to render the Gantt Chart and to use the DataManager and ODataV4Adaptor.
 - Right-click the **CustomAdaptor.client** folder in **Solution Explorer** and select **Open in Terminal** (available in newer Visual Studio versions), or open a Developer Command prompt/PowerShell from the Start menu and navigate manually to the **CustomAdaptor.client** directory. Once inside the folder, confirm that **package.json** is present, then run the following commands to install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages:
 
 ```bash
@@ -89,7 +89,7 @@ Integrating a `CustomAdaptor` with the Syncfusion<sup style="font-size:70%">&reg
 
 #### Step 3.1: Creating an Extended ODataV4Adaptor
 
-The first step involves creating a custom adaptor by extending the existing `ODataV4Adaptor` class. This extension allows modification of the default behavior to meet specific application requirements. 
+The first step involves creating a CustomAdaptor by extending the existing `ODataV4Adaptor` class. This extension allows modification of the default behavior to meet specific application requirements. 
 
 Begin by creating a new TypeScript file named **CustomAdaptor.jsx** in the project's source directory. This file will house the custom adaptor class definition.
 
@@ -122,7 +122,7 @@ export class CustomAdaptor extends ODataV4Adaptor {
         return original;
     }
     processQuery(dm, query) {
-        dm.dataSource.url = 'https://localhost:7284/odata/GanttTasks';
+        dm.dataSource.url = 'https://localhost:xxxx/odata/GanttTasks'; // Here xxxx represents the port number.
         query.addParams('Syncfusion in React Gantt Chart', 'true');
         const result = super.processQuery.apply(this, arguments);
         return result;
@@ -138,7 +138,7 @@ export class CustomAdaptor extends ODataV4Adaptor {
 
 #### Step 3.2: Integrating CustomAdaptor into React Gantt Chart
 
-After creating the custom adaptor class, integrate it with the React Gantt Chart in the main application file (typically **App.tsx** or **App.jsx**). This requires importing the necessary modules and configuring the Gantt Chart to use the custom adaptor:
+After creating the custom adaptor class, integrate it with the React Gantt Chart in the main application file (typically **App.tsx** or **App.jsx**). This requires importing the necessary modules and configuring the Gantt Chart to use the `CustomAdaptor`:
 
 - Import `DataManager` from `@syncfusion/ej2-data` to act as the link between the Gantt Chart and the OData service.
 - Import `CustomAdaptor` from the local **./CustomAdaptor** file to apply custom request and response logic.
@@ -157,7 +157,7 @@ import './App.css';
 function App() {
     // Create DataManager with ODataV4Adaptor
     const data = new DataManager({
-        url: 'https://localhost:7284/odata/GanttTasks',
+        url: 'https://localhost:xxxx/odata/GanttTasks', // Here xxxx represents the port number.
         adaptor: new CustomAdaptor(),
         key: 'TaskID',
         crossDomain: true
@@ -234,11 +234,11 @@ When tasks, dependencies or resource assignments are numerous or governed by cen
 
 ## CRUD operations
 
-The DataManager with Custom Adaptor supports **Create** (add records), **Read** (view records), **Update** (modify records), and **Delete** (remove records) workflows for task entities. In Gantt Chart usage, these operations cover task creation, task edits (including taskbar edits and resulting scheduling recalculations), dependency creation or modification, and task deletion.
+The DataManager with `CustomAdaptor` supports **Create** (add records), **Read** (view records), **Update** (modify records), and **Delete** (remove records) workflows for task entities. In Gantt Chart usage, these operations cover task creation, task edits (including taskbar edits and resulting scheduling recalculations), dependency creation or modification, and task deletion.
 
 **Mapping CRUD operations to service endpoints**
 
-CRUD operations are conveyed to the service using standard OData conventions. The CustomAdaptor works with ODataV4Adaptor with a single task endpoint and standard HTTP methods:
+CRUD operations are conveyed to the service using standard OData conventions. The `CustomAdaptor` works with ODataV4Adaptor with a single task endpoint and standard HTTP methods:
 
 | Operation | HTTP Method | URL Example | Description |
 |-----------|-------------|-------------|-------------|
@@ -247,9 +247,9 @@ CRUD operations are conveyed to the service using standard OData conventions. Th
 | **Update** | PATCH | `/odata/GanttTasks(1)` | Update record with key "1". |
 | **Delete** | DELETE | `/odata/GanttTasks(1)` | Delete record with key "1". |
 
-### Step 1: Complete server-side controller
+### Step 1: Server-side controller
 
-Add all CRUD methods to the **GanttController.cs**. Replace the entire controller with this complete version:
+Add the required controller method to **GanttController.cs**. Replace the entire controller with this complete version:
 
 {% tabs %}
 {% highlight cs tabtitle="GanttController.cs - Complete CRUD Implementation" %}
@@ -329,7 +329,7 @@ import './App.css';
 function App() {
     // Create DataManager with ODataV4Adaptor
     const data = new DataManager({
-        url: 'https://localhost:7284/odata/GanttTasks',
+        url: 'https://localhost:xxxx/odata/GanttTasks', // Here xxxx represents the port number.
         adaptor: new CustomAdaptor(),
         key: 'TaskID',
         crossDomain: true

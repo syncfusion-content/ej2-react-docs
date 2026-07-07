@@ -153,6 +153,8 @@ export default App;
 
 ```
 
+`[src/App.jsx]`
+
 ```ts
 // import the DashboardLayout component
 import { DashboardLayoutComponent } from '@syncfusion/ej2-react-layouts';
@@ -284,6 +286,7 @@ function App() {
 export default App;
 
 ```
+`[src/App.jsx]`
 
 ```ts
 // import the DashboardLayout component
