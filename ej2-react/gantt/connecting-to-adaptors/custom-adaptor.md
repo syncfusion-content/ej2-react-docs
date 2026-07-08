@@ -148,7 +148,7 @@ After creating the custom adaptor class, integrate it with the React Gantt Chart
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-
+{% raw %}
 import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
 import { CustomAdaptor } from './CustomAdaptor';
 import { GanttComponent, Inject, Edit, Selection, Toolbar, ColumnsDirective, ColumnDirective, ContextMenu, Filter, Sort, Reorder, Resize, ColumnMenu, VirtualScroll, RowDD, } from '@syncfusion/ej2-react-gantt';
@@ -222,7 +222,7 @@ function App() {
 }
 
 export default App;
-
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -320,7 +320,7 @@ React Gantt Chart enables full CRUD functionality by configuring the required [t
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-
+{% raw %}
 import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
 import { CustomAdaptor } from './CustomAdaptor';
 import { GanttComponent, Inject, Edit, Selection, Toolbar, ColumnsDirective, ColumnDirective, ContextMenu, Filter, Sort, Reorder, Resize, ColumnMenu, VirtualScroll, RowDD, } from '@syncfusion/ej2-react-gantt';
@@ -394,7 +394,7 @@ function App() {
 }
 
 export default App;
-
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
