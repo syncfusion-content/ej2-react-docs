@@ -7,7 +7,7 @@ import {
 } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { double } from 'default-data.ts';
+import { double } from './default-data.ts';
 
 function App() {
 

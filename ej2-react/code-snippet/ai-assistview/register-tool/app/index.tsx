@@ -10,6 +10,12 @@ const getScoreComment = (score: number): string => {
   return 'Average recipe. Consider refining ingredients or steps.';
 };
 
+const gaugeLabelStyle = {
+  font: {size: '12px'},
+  position: 'Outside',
+  offset: -40
+};
+
 const calculateRecipeScore = (recipe: any): number => {
   const ingredients: any[] = recipe.ingredients || [];
   const instructions: any[] = recipe.instructions || [];
@@ -103,7 +109,7 @@ const RecipeScoreTemplate = (args: any) => (
           lineStyle={{ width: 0 }}
           majorTicks={{ height: 12, width: 1.5, interval: 2, offset: 35 }}
           minorTicks={{ height: 0 }}
-          labelStyle={{ font: { size: '12px' }, position: 'Outside', offset: -40 }}
+          labelStyle={gaugeLabelStyle}
         >
           <AnnotationsDirective>
             <AnnotationDirective

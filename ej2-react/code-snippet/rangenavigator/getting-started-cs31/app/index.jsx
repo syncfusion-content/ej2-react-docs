@@ -4,7 +4,7 @@
 import { AreaSeries, DateTime, Inject, RangeNavigatorComponent, RangenavigatorSeriesCollectionDirective, RangenavigatorSeriesDirective, RangeTooltip } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { bitCoinData } from 'default-data.ts';
+import { bitCoinData } from './default-data.ts';
 function App() {
   const data = bitCoinData;
   const tooltip = { enable: true };

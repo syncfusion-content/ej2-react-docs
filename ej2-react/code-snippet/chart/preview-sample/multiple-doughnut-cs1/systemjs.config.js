@@ -14,7 +14,8 @@ System.config({
       }
     },
     paths: {
-        "syncfusion:": "https://cdn.syncfusion.com/ej2/34.1.29/"},
+        "syncfusion:": "https://cdn.syncfusion.com/ej2/34.1.29/"
+    },
     map: {
         app: 'app',
         ts: "https://unpkg.com/plugin-typescript@4.0.10/lib/plugin.js",

@@ -61,7 +61,7 @@ To render a Step line series, use series [`type`](https://ej2.syncfusion.com/rea
 
  {% previewsample "page.domainurl/code-snippet/rangenavigator/getting-started-cs32" %}
 
- ## Spline
+## Spline
 
 To render a Spline series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/rangeNavigatorSeriesModel#type) as **Spline** and inject `SplineSeries` module using `RangeNavigator.Inject(SplineSeries)` method.
 
@@ -76,7 +76,7 @@ To render a Spline series, use series [`type`](https://ej2.syncfusion.com/react/
 
  {% previewsample "page.domainurl/code-snippet/rangenavigator/getting-started-cs35" %}
 
- ## Spline Area
+## Spline Area
 
 To render a Spline Area series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/rangeNavigatorSeriesModel#type) as **SplineArea** and inject `SplineAreaSeries` module using `RangeNavigator.Inject(SplineAreaSeries)` method.
 
@@ -91,7 +91,7 @@ To render a Spline Area series, use series [`type`](https://ej2.syncfusion.com/r
 
  {% previewsample "page.domainurl/code-snippet/rangenavigator/getting-started-cs36" %}
 
- ## Column
+## Column
 
 To render a Column series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/rangeNavigatorSeriesModel#type) as **Column** and inject `ColumnSeries` module using `RangeNavigator.Inject(ColumnSeries)` method.
 

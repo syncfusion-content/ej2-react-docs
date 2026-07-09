@@ -5,7 +5,7 @@
 import { ColumnSeries, Inject, RangeNavigatorComponent, RangenavigatorSeriesCollectionDirective, RangenavigatorSeriesDirective, RangeTooltip } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { double } from 'default-data.ts';
+import { double } from './default-data.ts';
 function App() {
   const data = double;
   const tooltip = { enable: true };
