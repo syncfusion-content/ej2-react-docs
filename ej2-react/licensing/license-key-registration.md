@@ -21,7 +21,7 @@ Generate the [Syncfusion<sup style="font-size:70%">&reg;</sup> license key](http
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> License Key in the Project
 
-Register the license key in the `index.js` file of the React project:
+Register the license key in the `index.js` file of the React project after installing `@syncfusion/ej2-base`:
 
 ```ts
 import React from 'react';
@@ -61,15 +61,15 @@ The following steps show how to register the Syncfusion<sup style="font-size:70%
 
 * Open the command prompt in the application root directory and activate the license key using the following command:
 
-      ```bash
-       npx syncfusion-license activate
-      ```
+    ```bash
+    npx syncfusion-license activate
+    ```
 
 * Once the Syncfusion<sup style="font-size:70%">&reg;</sup> license key is activated, the following console message will appear:
 
   **License message:** <br /> (INFO) Syncfusion<sup style="font-size:70%">&reg;</sup> License imported successfully.
 
-* Remove the `.cache` folder from `node_modules` in the application.
+* Remove the `.cache` folder from `node_modules` in the application after activation.
 
 * Now run the application. If you encounter a license validation error, refer to this [link](https://ej2.syncfusion.com/react/documentation/licensing/licensing-errors) to resolve it. Also, find the most frequently asked license registration questions at this [link](https://ej2.syncfusion.com/react/documentation/licensing/licensing-troubleshoot).
 
@@ -81,15 +81,15 @@ You can set the environment variable `SYNCFUSION_LICENSE` in your system and pas
 
 The following steps show how to set the environment variable in different operating systems and register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key:
 
-* Set the environment variable in different operating systems as shown below:
+* Set the environment variable in the operating system you use as shown below:
 
 #### Windows
 
 * Open the command prompt and use the [setx](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/setx) command to add the new environment variable:
 
-    ```bash
-     setx SYNCFUSION_LICENSE "license key"
-    ```
+  ```bash
+  setx SYNCFUSION_LICENSE "license key"
+  ```
 
 #### Mac
 
@@ -97,15 +97,15 @@ The following steps show how to set the environment variable in different operat
 
 * Set the environment variable using the following command:
 
-    ```bash
-    echo 'export SYNCFUSION_LICENSE="license key"' >> ~/.bash_profile
-    ```
+  ```bash
+  echo 'export SYNCFUSION_LICENSE="license key"' >> ~/.bash_profile
+  ```
 
 * To modify the environment variable in the bash profile, use the following command:
 
-     ```bash
-     nano .bash_profile
-     ```
+  ```bash
+  nano .bash_profile
+  ```
 
 * Once modified, press `Ctrl+X` to exit, then press `Y` and `Enter` to save the changes.
 
@@ -117,17 +117,17 @@ The following steps show how to set the environment variable in different operat
 
 * Set or modify the [environment variable](https://help.ubuntu.com/community/EnvironmentVariables) using the following command:
 
-    ```bash
-    export SYNCFUSION_LICENSE='license key'
-    ```
+  ```bash
+  export SYNCFUSION_LICENSE='license key'
+  ```
 
 * Once the `SYNCFUSION_LICENSE` environment variable is set, restart the IDE or application terminal before using the license activation command.
 
 * Open the command prompt in the application root directory and activate the license key using the following command:
 
-     ```bash
-     npx syncfusion-license activate
-     ```
+  ```bash
+  npx syncfusion-license activate
+  ```
 
 * Once the Syncfusion<sup style="font-size:70%">&reg;</sup> license key is activated, the following console message will appear:
 
@@ -148,7 +148,7 @@ The following sections show how to use an environment variable in CI services.
 * Add the Syncfusion<sup style="font-size:70%">&reg;</sup> license activation command after running npm install or yarn:
 
 ```yaml
-  steps:
+steps:
   - name: Install node modules
     run: npm install
 
@@ -202,10 +202,10 @@ steps:
 
 * Add the Syncfusion<sup style="font-size:70%">&reg;</sup> license activation command after running npm install or yarn using a bash task:
 
-   ```bash
-    # Activate the license
-   npx syncfusion-license activate
-   ```
+```bash
+# Activate the license
+npx syncfusion-license activate
+```
 
 ![Bash task](images/bash-script.png)
 
