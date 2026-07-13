@@ -1,20 +1,20 @@
 ---
 layout: post
-title: React Data Grid Getting Started (Quick Setup Guide) | Syncfusion
-description: Learn how to install and configure the Syncfusion React Data Grid. Set up a new React app and enable paging, sorting, filtering, and grouping.
+title: React DataGrid Getting Started (Quick Setup Guide) | Syncfusion
+description: Learn how to install and configure the Syncfusion React DataGrid. Set up a new React app and enable paging, sorting, filtering, and grouping.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Data Grid
+# Getting Started with React DataGrid
 
-This section explains the steps required to create a simple [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component and demonstrate its basic usage in a React environment.
+This section explains the steps required to create a simple [React DataGrid](https://www.syncfusion.com/react-components/react-data-grid) component and demonstrate its basic usage in a React environment.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
 
-To get started quickly with React Data Grid, you can watch this video:
+To get started quickly with React DataGrid, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=IGLlZiuFdbA" %}
 
@@ -39,7 +39,7 @@ Terminate the application, then run the following command:
 cd my-app
 ```
 
-## Adding React Data Grid packages
+## Adding React DataGrid packages
 
 To install the Grids package, use the following command:
 
@@ -51,11 +51,11 @@ npm install @syncfusion/ej2-react-grids --save
 
 ## Adding CSS reference
 
-You can add the CSS files required for the Syncfusion React Data Grid component using one of the following methods.
+You can add the CSS files required for the Syncfusion React DataGrid component using one of the following methods.
 
 ### Option 1: Add CSS references from a theme package
 
-Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Data Grid component can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid component can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
 
 Install the **Material 3** theme package using the following command:
 
@@ -79,7 +79,7 @@ Then add the following CSS reference to the **src/App.css** file:
 
 ### Option 2: Add CSS references from component packages
 
-After installing the Data Grid package, the required CSS files are available in the corresponding Syncfusion packages under the **node_modules/@syncfusion** directory. Add the following CSS references to the **src/App.css** file:
+After installing the DataGrid package, the required CSS files are available in the corresponding Syncfusion packages under the **node_modules/@syncfusion** directory. Add the following CSS references to the **src/App.css** file:
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/material3.css';  
@@ -94,9 +94,9 @@ After installing the Data Grid package, the required CSS files are available in 
 @import "../node_modules/@syncfusion/ej2-react-grids/styles/material3.css";
 ```
 
-## Adding Data Grid component
+## Adding DataGrid component
 
-The Data Grid code should be added to the **src/App.tsx** file.
+The DataGrid code should be added to the **src/App.tsx** file.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -118,14 +118,14 @@ The Data Grid code should be added to the **src/App.tsx** file.
 npm run dev
 ```
 
-N> Looking for the full React Data Grid component overview, features, pricing, and documentation? Visit the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) page.
+N> Looking for the full React DataGrid component overview, features, pricing, and documentation? Visit the [React DataGrid](https://www.syncfusion.com/react-components/react-data-grid) page.
 
 ## See also
 
-* [Data Grid Feature Modules](./module)
+* [DataGrid Feature Modules](./module)
 * [Data Binding](./data-binding)
-* [Top 5 Features of React Data Data Grid](https://www.syncfusion.com/blogs/post/top-5-features-react-data-grid.aspx)
-* [How to render React Data Grid with bootstrap theme](https://support.syncfusion.com/kb/article/10054/how-to-render-react-grid-with-bootstrap-theme)
+* [Top 5 Features of React Data DataGrid](https://www.syncfusion.com/blogs/post/top-5-features-react-data-grid.aspx)
+* [How to render React DataGrid with bootstrap theme](https://support.syncfusion.com/kb/article/10054/how-to-render-react-grid-with-bootstrap-theme)
 * [Getting Started with Next.js](./nextjs-getting-started)
 * [Getting Started with SharePoint](./sharepoint)
 * [Getting Started with Preact](./preact)
