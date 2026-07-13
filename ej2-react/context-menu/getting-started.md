@@ -96,7 +96,7 @@ Add ContextMenu component's styles as given below in `App.css`.
 
 Create the `ContextMenu` component in the application. Add the ContextMenu component to the `src/App.tsx` file. The component uses items for `menu` options and a `target` property to specify where the ContextMenu will open.
 
-
+**App.tsx**
 
 ```ts
 
@@ -126,6 +126,7 @@ function App() {
 }
 export default App;  
 ```
+**App.jsx**
 
 ```ts
 import { ContextMenuComponent } from '@syncfusion/ej2-react-navigations';

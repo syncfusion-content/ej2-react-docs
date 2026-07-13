@@ -1,4 +1,3 @@
-{% raw %}
 import * as React from 'react';
 import { SliderComponent } from '@syncfusion/ej2-react-inputs';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
@@ -83,4 +82,3 @@ export function AgeTemplate(props) {
           </div>
         </div>);
 }
-{% endraw %}

@@ -1,4 +1,3 @@
-{% raw %}
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { ListViewComponent } from '@syncfusion/ej2-react-lists';
 import { SidebarComponent } from '@syncfusion/ej2-react-navigations';
@@ -50,4 +49,3 @@ function App() {
         </div>);
 }
 export default App;
-{% endraw %}

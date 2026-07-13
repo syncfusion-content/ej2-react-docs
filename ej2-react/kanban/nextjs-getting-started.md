@@ -175,7 +175,7 @@ export let kanbanData: Object[] = [
 
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
-
+{% raw %}
 'use client'
 import { extend } from '@syncfusion/ej2-base';
 import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-react-kanban";
@@ -195,7 +195,7 @@ function App() {
     </KanbanComponent>);
 }
 export default App;
-
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
