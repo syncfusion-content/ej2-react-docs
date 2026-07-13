@@ -1,16 +1,16 @@
 ---
 layout: post
-title: React Data Grid - Next.js Getting Started | Syncfusion
-description: React Data Grid Next.js getting started guides server-side rendering, dynamic imports, and setup steps to use the Data Grid component in Next.js applications.
+title: React DataGrid - Next.js Getting Started | Syncfusion
+description: React DataGrid Next.js getting started guides server-side rendering, dynamic imports, and setup steps to use the DataGrid component in Next.js applications.
 control: Next.js
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Data Grid Component in the Next.js
+# Getting Started with React DataGrid Component in the Next.js
 
-This section provides a step-by-step guide for creating a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Data Grid component.
+This section provides a step-by-step guide for creating a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React DataGrid component.
 
 ## What is Next.js?
 
@@ -87,11 +87,11 @@ cd ej2-nextjs-grid
 
 Once the setup is complete, the application is ready to be configured with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React Data Grid packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React DataGrid packages
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available on [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
-Here, the [React Data Grid component](https://www.syncfusion.com/react-components/react-data-grid) is used as an example. To install the React Data Grid component in the project, use the following command:
+Here, the [React DataGrid component](https://www.syncfusion.com/react-components/react-data-grid) is used as an example. To install the React DataGrid component in the project, use the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -108,11 +108,11 @@ yarn add @syncfusion/ej2-react-grids
 
 ## Adding CSS reference
 
-You can add the CSS files required for the Syncfusion React Data Grid component using one of the following methods.
+You can add the CSS files required for the Syncfusion React DataGrid component using one of the following methods.
 
 ### Option 1: Add CSS references from a theme package
 
-Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Data Grid component can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid component can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
 
 Install the Tailwind 3 theme package using the following command:
 
@@ -136,7 +136,7 @@ Then add the following CSS reference to the  **src/app/globals.css** file:
 
 ### Option 2: Add CSS references from component packages
 
-After installing the Data Grid package, the required CSS files are available in the corresponding Syncfusion packages under the **node_modules/@syncfusion** directory. Add the following CSS references to the **src/app/globals.css** file:
+After installing the DataGrid package, the required CSS files are available in the corresponding Syncfusion packages under the **node_modules/@syncfusion** directory. Add the following CSS references to the **src/app/globals.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
@@ -154,9 +154,9 @@ After installing the Data Grid package, the required CSS files are available in 
 {% endhighlight %}
 {% endtabs %}
 
-## Adding Data Grid component
+## Adding DataGrid component
 
-The Data Grid code should be added to the **src/app/page.tsx** file.
+The DataGrid code should be added to the **src/app/page.tsx** file.
 
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
@@ -212,8 +212,8 @@ yarn run dev
 {% endhighlight %}
 {% endtabs %}
 
-> [View the NEXT.js Data Grid sample in the GitHub repository](https://github.com/SyncfusionExamples/ej2-nextjs-grid).
+> [View the NEXT.js DataGrid sample in the GitHub repository](https://github.com/SyncfusionExamples/ej2-nextjs-grid).
 
 ## See also
 
-* [Data Grid Feature Modules](./module)
+* [DataGrid Feature Modules](./module)
