@@ -7,8 +7,8 @@ Diagram.Inject(ErDiagrams);
 // Define an ER entity with various field properties
 const product = {
   id: 'Product',
-  offsetX: 400,
-  offsetY: 350,
+  offsetX: 300,
+  offsetY: 200,
   shape: {
     type: 'Er',
     header: {
@@ -60,7 +60,7 @@ function App() {
   return (
     <DiagramComponent id="container"
       width={'100%'}
-      height={'600px'}
+      height={'400px'}
       nodes={[product]}
     />
   );

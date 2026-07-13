@@ -47,8 +47,7 @@ class App extends React.Component {
         // Code block for click action</div>
         <span> {closeBrace}) </span>
         </div>
-      </div>
-    </div>);
+      </div>);
     }
     render() {
         return (<div className="App">

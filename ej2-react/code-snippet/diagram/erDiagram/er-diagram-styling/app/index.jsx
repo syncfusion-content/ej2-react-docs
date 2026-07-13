@@ -7,8 +7,8 @@ Diagram.Inject(ErDiagrams);
 // Define ER entities with custom styling
 const customer = {
   id: 'Customer',
-  offsetX: 300,
-  offsetY: 300,
+  offsetX: 200,
+  offsetY: 200,
   shape: {
     type: 'Er',
     header: {
@@ -52,8 +52,8 @@ const customer = {
 
 const product = {
   id: 'Product',
-  offsetX: 550,
-  offsetY: 300,
+  offsetX: 600,
+  offsetY: 200,
   shape: {
     type: 'Er',
     header: {
@@ -102,7 +102,7 @@ function App() {
   return (
     <DiagramComponent id="container"
       width={'100%'}
-      height={'600px'}
+      height={'400px'}
       nodes={[customer, product]}
     />
   );

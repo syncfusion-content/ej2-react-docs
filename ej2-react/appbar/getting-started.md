@@ -71,6 +71,7 @@ Add AppBar component's styles as given below in `App.css`.
 ```css
 @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
 ```
 
 ## Add AppBar to the project

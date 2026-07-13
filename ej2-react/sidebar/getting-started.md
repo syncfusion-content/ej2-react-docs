@@ -114,25 +114,6 @@ export default App;
 
 ```
 
-```ts
-import { SidebarComponent } from '@syncfusion/ej2-react-navigations';
-import * as React from 'react';
-function App() {
-    return (<div className="control-section">
-            <div id="wrapper">
-                <SidebarComponent id="default-sidebar">
-                    <div className="title"> Sidebar content</div>
-                </SidebarComponent>
-                <div className="content">
-                    <div className="title">Main content</div>
-                    <div className="sub-title"> content goes here</div>
-                </div>
-            </div>
-        </div>);
-}
-export default App;
-```
-
 ## Run the application
 
 Now run the `npm run dev` command in the console to start the development server. This command compiles code and serves the application locally, opening it in the browser.

@@ -80,8 +80,6 @@ Add Breadcrumb component's styles as given below in `App.css`.
 
 Now, the `Breadcrumb` component can be created in the application. Add the `Breadcrumb` component in `src/App.tsx` file using the following code snippet.
 
-
-
 ```ts
 
 import { BreadcrumbComponent, BreadcrumbItemDirective, BreadcrumbItemsDirective } from '@syncfusion/ej2-react-navigations';
@@ -90,15 +88,6 @@ import * as React from 'react';
 function App() {
 
     return (<BreadcrumbComponent enableNavigation={false} > </BreadcrumbComponent>);
-}
-export default App;
-```
-
-```ts
-import { BreadcrumbComponent } from '@syncfusion/ej2-react-navigations';
-import * as React from 'react';
-function App() {
-    return (<BreadcrumbComponent enableNavigation={false}> </BreadcrumbComponent>);
 }
 export default App;
 ```

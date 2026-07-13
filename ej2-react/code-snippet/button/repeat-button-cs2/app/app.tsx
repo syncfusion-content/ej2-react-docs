@@ -40,7 +40,7 @@ function App() {
                     repeatInterval={repeatInterval}
                     content="Hold Me"
                     disabled={disabled}
-                    onClick={clickHandler}
+                    clicked={clickHandler}
                 />
 
                 <div className="controls">
@@ -88,7 +88,7 @@ function App() {
                     </div>
                 </div>
 
-                <span className="reset-link" id="reset-btn" onClick={resetCounts}>
+                <span className="reset-link" id="reset-btn" clicked={resetCounts}>
                     Reset counters
                 </span>
             </div>
