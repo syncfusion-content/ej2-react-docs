@@ -16,6 +16,11 @@ const gaugeLabelStyle = {
   offset: -40
 };
 
+const capSettings = {
+  radius: 8,
+  border: { width: 2 }
+};
+
 const calculateRecipeScore = (recipe) => {
   const ingredients = recipe.ingredients || [];
   const instructions = recipe.instructions || [];
@@ -125,7 +130,7 @@ const RecipeScoreTemplate = (args) => (
               needleEndWidth={2}
               pointerWidth={5}
               value={args.score / 10}
-              cap={{ radius: 8, border: { width: 2 } }}
+              cap={capSettings}
             />
           </PointersDirective>
           <RangesDirective>

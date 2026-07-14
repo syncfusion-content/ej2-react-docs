@@ -14,7 +14,7 @@ Typography blocks are essential for organizing and presenting text-based content
 
 ## Configure paragraph block
 
-Paragraph blocks are the most common type, used for standard text content. They serve as the default block type and provide basic text formatting options. To render a Paragraph block, set the [blockType](../../api/blockeditor/blockModel#blockType) property to `Paragraph`.
+Paragraph blocks are the most common type, used for standard text content. They serve as the default block type and provide basic text formatting options. To render a Paragraph block, set the [blockType](https://ej2.syncfusion.com/react/documentation/api/blockeditor/blockmodel#blocktype) property to `Paragraph`.
 
 ### BlockType
 
@@ -46,7 +46,7 @@ The following sample demonstrates the configuration of a paragraph block in the 
 
 ### Configure placeholder
 
-You can configure placeholder text for block using the [placeholder](../../api/blockeditor/blockModel#placeholder) property. This text appears when the block is empty. The default placeholder for the paragraph block is `Write something or ‘/’ for commands.`.
+You can configure placeholder text for block using the [placeholder](https://ej2.syncfusion.com/react/documentation/api/blockeditor/baseplaceholderprop#placeholder) property. This text appears when the block is empty. The default placeholder for the paragraph block is `Write something or ‘/’ for commands.`.
 
 ### Block type & properties
 
@@ -73,11 +73,11 @@ The below sample demonstrates the configuration of placeholder in the Block Edit
 
 ## Configure heading block
 
-Heading blocks create document titles and section headers. These blocks help structure content hierarchically, making it easier to read and navigate. Render a Heading block by setting the [blockType](../../api/blockeditor/blockModel#blockType) property to `Heading`.
+Heading blocks create document titles and section headers. These blocks help structure content hierarchically, making it easier to read and navigate. Render a Heading block by setting the [blockType](https://ej2.syncfusion.com/react/documentation/api/blockeditor/blockmodel#blocktype) property to `Heading`.
 
 ### Configuring levels
 
-By using the [properties](../../api/blockeditor/blockModel#properties), you can set the heading level using the `level` property, with `1` being the highest level (title) and `4` being the lowest (subsection).
+By using the [properties](https://ej2.syncfusion.com/react/documentation/api/blockeditor/blockModel#properties), you can set the heading level using the `level` property, with `1` being the highest level (title) and `4` being the lowest (subsection).
 
 ### Block type & properties
 
@@ -111,7 +111,7 @@ The following sample demonstrates the configuration of a heading block in the Bl
 
 ### Configure placeholder
 
-You can configure placeholder text for block using the [placeholder](../../api/blockeditor/blockModel#placeholder) property. This text appears when the block is empty. The default placeholder for heading block is `Heading{level}`.
+You can configure placeholder text for block using the [placeholder](https://ej2.syncfusion.com/react/documentation/api/blockeditor/baseplaceholderprop#placeholder) property. This text appears when the block is empty. The default placeholder for heading block is `Heading{level}`.
 
 ```typescript
 // Adding placeholder value to blocktype
@@ -127,7 +127,7 @@ You can configure placeholder text for block using the [placeholder](../../api/b
 
 ## Configure divider block
 
-A Divider block inserts a horizontal line to separate content. Render it by setting the [blockType](../../api/blockeditor/blockModel#blockType) to `Divider`.
+A Divider block inserts a horizontal line to separate content. Render it by setting the [blockType](https://ej2.syncfusion.com/react/documentation/api/blockeditor/blockmodel#blocktype) to `Divider`.
 
 ### Block type & properties
 
