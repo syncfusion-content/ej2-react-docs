@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BlockEditorComponent, BlockModel, ContentType, BlockActionMenuOpeningEventArgs, BlockActionMenuClosingEventArgs, BlockActionItemSelectEventArgs} from '@syncfusion/ej2-react-blockeditor';
+import { BlockEditorComponent, ContentType } from '@syncfusion/ej2-react-blockeditor';
+import type { BlockModel, BlockActionMenuBeforeOpenEventArgs, BlockActionMenuBeforeCloseEventArgs, BlockActionItemSelectEventArgs } from '@syncfusion/ej2-react-blockeditor';
 
 function App() {
   const blocksData: BlockModel[] = [
@@ -56,10 +57,10 @@ function App() {
                 tooltip: 'Show block information'
             }
         ],
-        opening: (args: BlockActionMenuOpeningEventArgs) => {
+        beforeOpen: (args: BlockActionMenuBeforeOpenEventArgs) => {
             // Your actions here
         },
-        closing: (args: BlockActionMenuClosingEventArgs) => {
+        beforeClose: (args: BlockActionMenuBeforeCloseEventArgs) => {
             // Your actions here
         },
         itemSelect: (args: BlockActionItemSelectEventArgs) => {

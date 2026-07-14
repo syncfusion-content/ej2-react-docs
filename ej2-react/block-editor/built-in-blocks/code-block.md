@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Code Blocks in React Block Editor component
 
-The Syncfusion Block Editor allows you to render code snippets with syntax highlighting by setting the block's [blockType](../../api/blockeditor/blockModel#blocktype) property to `Code`. You can customize the available programming languages and set a default language using the `properties` property.
+The Syncfusion Block Editor allows you to render code snippets with syntax highlighting by setting the block's [blockType](https://ej2.syncfusion.com/react/documentation/api/blockeditor/blockmodel#blocktype) property to `Code`. You can customize the available programming languages and set a default language using the `properties` property.
 
 ## Global Code Settings
 
@@ -20,14 +20,14 @@ The `codeBlockSettings` property supports the following options:
 
 | Property | Description | Default Value |
 |----------|-------------|---------------|
-| [languages](../../api/blockeditor/codeSettingsModel#languages) | Specifies the array of language options for syntax highlighting. | [] |
-| [defaultLanguage](../../api/blockeditor/codeSettingsModel#defaultlanguage) | Defines the default language to use for syntax highlighting. | 'plaintext' |
+| [languages](https://ej2.syncfusion.com/react/documentation/api/blockeditor/codeBlockSettingsModel#languages) | Specifies the array of language options for syntax highlighting. | [] |
+| [defaultLanguage](https://ej2.syncfusion.com/react/documentation/api/blockeditor/codeBlockSettingsModel#defaultlanguage) | Defines the default language to use for syntax highlighting. | 'plaintext' |
 
 ## Configure code properties
 
-For Code blocks, you can specify the language for syntax highlighting using the [properties](../../api/blockeditor/blockModel) property. This property supports the following options:
+For Code blocks, you can specify the language for syntax highlighting using the [properties](https://ej2.syncfusion.com/react/documentation/api/blockeditor/blockModel) property. This property supports the following options:
 
-- [language](../../api/blockeditor/codeLanguageModel#language): The default language value used for syntax highlighting.
+- [language](https://ej2.syncfusion.com/react/documentation/api/blockeditor/codeLanguageModel#language): The default language value used for syntax highlighting.
 
 ### Block type & properties
 ```typescript

@@ -83,7 +83,32 @@ npm install @syncfusion/ej2-react-charts --save
 
 The steps up to this point can be completed using the initially opened terminal or command prompt. For adding Chart components, open the project in the IDE installed on your device.
 
-### Step 4: Add Stock Chart to the project
+### Step 4: Import Syncfusion® CSS styles
+
+Themes for Syncfusion® React Stock Chart components can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
+
+This guide uses the Tailwind 3 theme as an example, sourced from the theme package. In this package, each component includes an index.css file that automatically loads all the required dependency styles. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+
+{% tabs %} 
+{% highlight bash tabtitle="npm" %}
+npm install @syncfusion/ej2-tailwind3-theme --save
+{% endhighlight %} 
+{% highlight bash tabtitle="yarn" %}
+yarn add @syncfusion/@syncfusion/ej2-tailwind3-theme
+{% endhighlight %} 
+{% endtabs %}
+
+By default, Vite projects include a index.css file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the index.css file to prevent style conflicts.
+
+The required styles for the Stock Chart component are imported in the src/App.css file:
+
+{% tabs %} {% highlight css tabtitle="App.css" %}
+
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/stock-chart/index.css";
+
+{% endhighlight %} {% endtabs %}
+
+### Step 5: Add Stock Chart to the project
 
 Add the Stock Chart component to `src/App.tsx` using the following code.
 
@@ -99,7 +124,7 @@ export default App;
 
 > **Note:** This will render an empty stock chart area by running `npm run dev` in terminal ([Refer Step 7](#step-7-run-the-application)). Proceed to the next steps to add data, series, and necessary module injections to visualize your data.
 
-### Step 5: Module injection
+### Step 6: Module injection
 
 Stock Chart features are delivered as separate modules and must be explicitly injected. Here, the CandleSeries and DateTime modules are used to render basic stock chart.
 
@@ -124,7 +149,7 @@ export default App;
 
 **Note:** At this stage, no stock chart is rendered because the Stock Chart component has not yet been configured with a data source.
 
-### Step 6: Populate Stock Chart with data
+### Step 7: Populate Stock Chart with data
 
 The chart data should be provided as a JSON array in the following format. You can define the data in the same `src/App.tsx` file or place it in a separate file (for example, `src/datasource.ts`) and import it into `App.tsx`.
 
@@ -218,7 +243,7 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-### Step 7: Run the application
+### Step 8: Run the application
 
 Run the application using the following command:
 

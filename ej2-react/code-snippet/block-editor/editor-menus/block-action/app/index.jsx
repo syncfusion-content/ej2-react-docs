@@ -56,10 +56,10 @@ function App() {
                 tooltip: 'Show block information'
             }
         ],
-        opening: (args) => {
+        beforeOpen: (args) => {
             // Your actions here
         },
-        closing: (args) => {
+        beforeClose: (args) => {
             // Your actions here
         },
         itemSelect: (args) => {
