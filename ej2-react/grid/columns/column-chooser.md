@@ -37,6 +37,31 @@ The column chooser dialog displays the header text of each column. If a column d
 
 {% previewsample "page.domainurl/code-snippet/grid/column-cs5" %}
 
+## Column chooser modes
+
+The Grid column chooser supports two modes, `Default` and `Immediate`. In `Default` mode, column visibility changes are applied only after clicking the "OK" button in the column chooser dialog. In `Immediate` mode, column visibility changes are applied automatically when columns are checked or unchecked through the checkboxes in the column chooser.
+ 
+The following example enables immediate mode by setting the `columnChooserSettings.mode` property to `Immediate`:
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/column-chooser-cs5/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/column-chooser-cs5/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-chooser-cs5/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/column-chooser-cs5/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/column-chooser-cs5" %}
+
+> The `columnChooserSettings.immediateModeDelay` property can be used to control how quickly visibility changes are applied in immediate mode. This property specifies the delay interval, in milliseconds, before the update is executed. The default value is `0`, which applies changes immediately.
+
 ## Hide column in column chooser dialog
 
 Column names can be hidden in the column chooser by setting the [showInColumnChooser](https://ej2.syncfusion.com/react/documentation/api/grid/column#showincolumnchooser) property to `false`. This is useful when a column should always remain visible in the Grid and should not be hidden through the Column Chooser.

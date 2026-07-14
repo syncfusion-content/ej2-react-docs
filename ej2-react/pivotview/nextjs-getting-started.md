@@ -101,27 +101,34 @@ The provided code installs the Syncfusion React Pivot Table package. The `--save
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components include [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) that you can easily apply to style your Pivot Table. These themes are available in the installed Syncfusion packages and can be imported to match your application's look. To use the **Tailwind 3** theme, import its CSS files into the **app/globals.css** file after removing any existing styles, as shown below:
+Themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> React Pivot Table can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
+
+The following example demonstrates the installation of the `Tailwind 3` theme package from npm. Each component in this theme package includes an `index.css` file that automatically loads all required dependency styles.
+
+To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
 
 {% tabs %}
-{% highlight css tabtitle="globals.css" %}
+{% highlight bash tabtitle="npm" %}
 
-@import '@syncfusion/ej2-base/styles/tailwind3.css';
-@import '@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import '@syncfusion/ej2-dropdowns/styles/tailwind3.css';
-@import '@syncfusion/ej2-grids/styles/tailwind3.css';
-@import '@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '@syncfusion/ej2-lists/styles/tailwind3.css';
-@import '@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import '@syncfusion/ej2-calendars/styles/tailwind3.css';
-@import '@syncfusion/ej2-react-pivotview/styles/tailwind3.css';
+npm install @syncfusion/ej2-tailwind3-theme --save
+
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+
+yarn add @syncfusion/ej2-tailwind3-theme
 
 {% endhighlight %}
 {% endtabs %}
 
-> To know more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
+Import the `Tailwind 3` CSS styles for the Pivot Table component in the **app/globals.css** file. Remove any existing styles in that file before adding the import:
+
+{% tabs %}
+{% highlight css tabtitle="app/globals.css" %}
+
+@import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pivotview/index.css';
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 

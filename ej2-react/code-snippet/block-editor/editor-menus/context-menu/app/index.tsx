@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BlockEditorComponent, BlockModel, ContentType, ContextMenuOpeningEventArgs, ContextMenuClosingEventArgs, ContextMenuItemSelectEventArgs, ContextMenuItemModel } from '@syncfusion/ej2-react-blockeditor';
+import { BlockEditorComponent, ContentType } from '@syncfusion/ej2-react-blockeditor';
+import type { BlockModel, ContextMenuBeforeOpenEventArgs, ContextMenuBeforeCloseEventArgs, ContextMenuItemSelectEventArgs, ContextMenuItemModel } from '@syncfusion/ej2-react-blockeditor';
 
 function App() {
     const customContextMenuItems: ContextMenuItemModel[] = [
@@ -60,10 +61,10 @@ const contextMenuSettings =  {
         enable: true,
         showItemOnClick: true,
         items: customContextMenuItems,
-        opening: (args: ContextMenuOpeningEventArgs) => {
+        beforeOpen: (args: ContextMenuBeforeOpenEventArgs) => {
             // Your actions here
         },
-        closing: (args: ContextMenuClosingEventArgs) => {
+        beforeClose: (args: ContextMenuBeforeCloseEventArgs) => {
             // Your actions here
         },
         itemSelect: (args: ContextMenuItemSelectEventArgs) => {

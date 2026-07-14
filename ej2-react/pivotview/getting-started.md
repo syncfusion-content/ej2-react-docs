@@ -78,7 +78,7 @@ The required styles for the Pivot Table component are imported in the **src/App.
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
 
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pivotview/index.css";
+@import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pivotview/index.css';
 
 {% endhighlight %}
 {% endtabs %}

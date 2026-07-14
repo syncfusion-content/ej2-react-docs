@@ -1,0 +1,11 @@
+.control-section {
+    padding: 20px;
+}
+
+.e-grid {
+    font-family: Segoe UI, Helvetica;
+}
+
+.e-grid .e-gridcontent .e-rowcell {
+    padding: 12px 20px;
+}

@@ -1,8 +1,8 @@
 {% raw %}
 
 
-// import the datetimepickercomponent
-import { DateTimePickerComponent} from '@syncfusion/ej2-react-calendars';
+// import the DateTimePickerComponent
+import { DateTimePickerComponent } from '@syncfusion/ej2-react-calendars';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from "react";
 import * as ReactDOM from "react-dom";

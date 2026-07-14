@@ -88,7 +88,7 @@ function App() {
                     </div>
                 </div>
 
-                <span className="reset-link" id="reset-btn" clicked={resetCounts}>
+                <span className="reset-link" id="reset-btn" onClick={resetCounts}>
                     Reset counters
                 </span>
             </div>

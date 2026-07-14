@@ -61,10 +61,10 @@ const contextMenuSettings =  {
         enable: true,
         showItemOnClick: true,
         items: customContextMenuItems,
-        opening: (args) => {
+        beforeOpen: (args) => {
             // Your actions here
         },
-        closing: (args) => {
+        beforeClose: (args) => {
             // Your actions here
         },
         itemSelect: (args) => {
