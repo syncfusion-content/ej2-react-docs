@@ -1,8 +1,9 @@
-{ /* Import the Speed Dial. */ }
 import { SpeedDialComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
-import * as ReactDom from 'react-dom';
-{ /* To render Speed Dial.*/ }
+import { createRoot } from 'react-dom/client';
+import '../index.css';
+
+/* To render Speed Dial.*/
 function App() {
   const items = [
     { text: 'Cut' },
@@ -15,4 +16,4 @@ function App() {
   </div>);
 }
 export default App;
-ReactDom.render(<App />, document.getElementById('button'));
+createRoot(document.getElementById('button')).render(<App />);
