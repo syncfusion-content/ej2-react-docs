@@ -2,36 +2,53 @@
 layout: post
 title: npm Packages for Syncfusion React Components | Syncfusion
 description: Learn about the npm packages available for Syncfusion React components, including package structure and installation commands.
-control: Npm package 
+control: Npm package
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# npm Packages for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Components
+# npm Packages for Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components are available as individual [npm packages](https://www.npmjs.com/search?q=%40syncfusion%2Fej2-react). The npm packages are organized based on component functionality and usage.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components are available as individual [npm packages](https://www.npmjs.com/search?q=%40syncfusion%2Fej2-react). The npm packages are organized based on component functionality and usage.
+
+## Overview
+
+Use this page when you want to add a Syncfusion<sup style="font-size:70%">&reg;</sup> React component to an existing React project via npm. For project-level installation instructions (creating a React project, installing `react`/`react-dom`, and registering the license key), see the [Installation guide](installation).
 
 ## Anatomy of npm Packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components are distributed as npm packages. The following table explains the purpose of each file available in the package:
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components are distributed as npm packages. The following table explains the purpose of each file and folder available in the package:
 
 |    Files                                                                  |    Purpose                                                                                                                                                                                                                                                                                   |
 |---------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    `dist/es6`                                                               |    Contains ES6 formatted JavaScript files for the package.                                                                                                   |
 |    `dist/<packagename>.umd.min.js`<br>`dist/<packagename>.umd.js`              |        For applications using AMD or CommonJS module loaders. These files can be used with RequireJS or other compatible module loaders.                                                                                                                                                                                             |
+|    `dist/<packagename>.d.ts`                                              |    TypeScript type definitions for the package.                                                                                                                                                                                                                                              |
 |    `src/`                                                                   |    Contains script files in AMD format. These AMD files can be connected as a package in SystemJS or RequireJS.                                                                                                                                                                                                         |
 |    `styles/<theme name>.css`<br>`styles/<theme name>.scss`                     |    Contains the CSS and SCSS files for the package.                                                                                                                                                                                                                             |
+|    `locales/`                                                              |    Contains culture-specific resource files used for internationalization (i18n).                                                                                                                                                                                                              |
+|    `peerDependencies` (in `package.json`)                                 |    Lists the React and React DOM versions that the package supports; these must be installed in the host project.                                                                                                                                                                              |
+
+## Setup
+
+Before installing a Syncfusion<sup style="font-size:70%">&reg;</sup> React package, ensure the following:
+
+* A React project is available with `react` and `react-dom` installed.
+* Node.js 18.x or later (LTS recommended).
+* The `syncfusion` license is registered. See the [license key registration guide](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration).
 
 ## Available npm Packages
 
+The `--save` flag in the install commands is implicit in npm 5 and later; you can omit it. Each package exposes one or more components as listed below.
+
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React Base
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Base is a common package for JavaScript - EJ2 React components, containing base libraries, methods, and class definitions.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Base package is the common foundation for all Syncfusion React (JavaScript - EJ2) components, containing base libraries, methods, and class definitions.
 
 |Package Name  |Installation command|
 |--------|--------|
-| [ej2-react-base](https://www.npmjs.com/package/@syncfusion/ej2-react-base)    | npm install @syncfusion/ej2-react-base |
+| [ej2-react-base](https://www.npmjs.com/package/@syncfusion/ej2-react-base)    | `npm install @syncfusion/ej2-react-base` |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React BarcodeGenerator
 
@@ -39,7 +56,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Barcode component enables r
 
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
-| [ej2-react-barcode-generator](https://www.npmjs.com/package/@syncfusion/ej2-react-barcode-generator)    | npm install @syncfusion/ej2-react-barcode-generator | BarcodeGenerator |
+| [ej2-react-barcode-generator](https://www.npmjs.com/package/@syncfusion/ej2-react-barcode-generator)    | `npm install @syncfusion/ej2-react-barcode-generator` | BarcodeGenerator |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React Buttons
 
@@ -49,7 +66,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Buttons package conta
 
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
-| [ej2-react-buttons](https://www.npmjs.com/package/@syncfusion/ej2-react-buttons)    | npm install @syncfusion/ej2-react-buttons | &bull; Button<br> &bull; CheckBox<br> &bull; Chip<br> &bull; RadioButton<br> &bull; Switch<br> |
+| [ej2-react-buttons](https://www.npmjs.com/package/@syncfusion/ej2-react-buttons)    | `npm install @syncfusion/ej2-react-buttons` | &bull; Button<br> &bull; CheckBox<br> &bull; Chip<br> &bull; RadioButton<br> &bull; Switch<br> |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React Calendars
 
@@ -59,7 +76,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Calendars package con
 
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
-| [ej2-react-calendars](https://www.npmjs.com/package/@syncfusion/ej2-react-calendars)    |npm install @syncfusion/ej2-react-calendars | &bull; Calendar<br> &bull; DatePicker<br> &bull; DateRangePicker<br> &bull; DateTimePicker<br> &bull; TimePicker<br> |
+| [ej2-react-calendars](https://www.npmjs.com/package/@syncfusion/ej2-react-calendars)    | `npm install @syncfusion/ej2-react-calendars` | &bull; Calendar<br> &bull; DatePicker<br> &bull; DateRangePicker<br> &bull; DateTimePicker<br> &bull; TimePicker<br> |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React Charts
 
@@ -69,7 +86,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Chart component visua
 
 |Package Name  |Installation command|Components
 |--------|--------|-------|
-| [ej2-react-charts](https://www.npmjs.com/package/@syncfusion/ej2-react-charts)    | npm install @syncfusion/ej2-react-charts | &bull; Accumulation Chart<br> &bull; Bullet Chart<br> &bull; Chart<br> &bull; Range Navigator<br> &bull; Smith Chart<br> &bull; Sparkline<br> &bull; Stock Chart<br> |
+| [ej2-react-charts](https://www.npmjs.com/package/@syncfusion/ej2-react-charts)    | `npm install @syncfusion/ej2-react-charts` | &bull; Accumulation Chart<br> &bull; Bullet Chart<br> &bull; Chart<br> &bull; Range Navigator<br> &bull; Smith Chart<br> &bull; Sparkline<br> &bull; Stock Chart<br> |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React CircularGauge
 
@@ -77,15 +94,15 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React CircularGauge compone
 
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
-| [ej2-react-circulargauge](https://www.npmjs.com/package/@syncfusion/ej2-react-circulargauge)    | npm install @syncfusion/ej2-react-circulargauge | CircularGauge |
+| [ej2-react-circulargauge](https://www.npmjs.com/package/@syncfusion/ej2-react-circulargauge)    | `npm install @syncfusion/ej2-react-circulargauge` | CircularGauge |
 
-### Syncfusion<sup style="font-size:70%">&reg;</sup> React Data
+### Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 Data
 
 A data management package for performing data operations such as grouping and sorting in client applications. It acts as an abstraction for using local data sources like arrays of JavaScript objects and remote data sources like web services returning JSON, JSONP, OData, or XML. Note: `ej2-data` is framework-agnostic and can be used outside React projects.
 
 |Package Name  |Installation command|
 |--------|--------|
-| [ej2-data](https://www.npmjs.com/package/@syncfusion/ej2-data)    | npm install @syncfusion/ej2-data |
+| [ej2-data](https://www.npmjs.com/package/@syncfusion/ej2-data)    | `npm install @syncfusion/ej2-data` |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React Diagrams
 
@@ -93,7 +110,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Diagram component vis
 
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
-| [ej2-react-diagrams](https://www.npmjs.com/package/@syncfusion/ej2-react-diagrams)    | npm install @syncfusion/ej2-react-diagrams | Diagrams |
+| [ej2-react-diagrams](https://www.npmjs.com/package/@syncfusion/ej2-react-diagrams)    | `npm install @syncfusion/ej2-react-diagrams` | Diagrams |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React DropDowns
 
@@ -103,7 +120,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Dropdowns package con
 
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
-| [ej2-react-dropdowns](https://www.npmjs.com/package/@syncfusion/ej2-react-dropdowns)    | npm install @syncfusion/ej2-react-dropdowns | &bull; AutoComplete<br> &bull; ComboBox<br> &bull; DropDown List<br> &bull; DropDown Tree<br> &bull; ListBox<br> &bull; MultiSelect Dropdown<br> |
+| [ej2-react-dropdowns](https://www.npmjs.com/package/@syncfusion/ej2-react-dropdowns)    | `npm install @syncfusion/ej2-react-dropdowns` | &bull; AutoComplete<br> &bull; ComboBox<br> &bull; DropDown List<br> &bull; DropDown Tree<br> &bull; ListBox<br> &bull; MultiSelect Dropdown<br> |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React FileManager
 
@@ -111,7 +128,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> File Manager is a graphical
 
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
-| [ej2-react-filemanager](https://www.npmjs.com/package/@syncfusion/ej2-react-filemanager)    | npm install @syncfusion/ej2-react-filemanager | FileManager |
+| [ej2-react-filemanager](https://www.npmjs.com/package/@syncfusion/ej2-react-filemanager)    | `npm install @syncfusion/ej2-react-filemanager` | FileManager |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt
 
@@ -119,7 +136,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt visualizes and 
 
 |Package Name  |Installation command|Components |
 |--------|--------|
-| [ej2-react-gantt](https://www.npmjs.com/package/@syncfusion/ej2-react-gantt)    | npm install @syncfusion/ej2-react-gantt | Gantt |
+| [ej2-react-gantt](https://www.npmjs.com/package/@syncfusion/ej2-react-gantt)    | `npm install @syncfusion/ej2-react-gantt` | Gantt |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid
 
@@ -127,7 +144,7 @@ The React Data Grid component displays and manipulates tabular data with configu
 
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
-| [ej2-react-grids](https://www.npmjs.com/package/@syncfusion/ej2-react-grids)    | npm install @syncfusion/ej2-react-grids | Grid |
+| [ej2-react-grids](https://www.npmjs.com/package/@syncfusion/ej2-react-grids)    | `npm install @syncfusion/ej2-react-grids` | Grid |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React HeatMap
 
@@ -135,7 +152,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React HeatMap visualizes tw
 
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
-| [ej2-react-heatmap](https://www.npmjs.com/package/@syncfusion/ej2-react-heatmap)    | npm install @syncfusion/ej2-react-heatmap | HeatMap |
+| [ej2-react-heatmap](https://www.npmjs.com/package/@syncfusion/ej2-react-heatmap)    | `npm install @syncfusion/ej2-react-heatmap` | HeatMap |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React InPlaceEditor
 
@@ -143,7 +160,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React InPlace Editor compon
 
 |Package Name  |Installation command|Components  |
 |--------|--------|-------|
-| [ej2-react-inplace-editor](https://www.npmjs.com/package/@syncfusion/ej2-react-inplace-editor)    | npm install @syncfusion/ej2-react-inplace-editor | InPlaceEditor |
+| [ej2-react-inplace-editor](https://www.npmjs.com/package/@syncfusion/ej2-react-inplace-editor)    | `npm install @syncfusion/ej2-react-inplace-editor` | InPlaceEditor |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React Inputs
 
@@ -153,7 +170,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Input components incl
 
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
-| [ej2-react-inputs](https://www.npmjs.com/package/@syncfusion/ej2-react-inputs)    |npm install @syncfusion/ej2-react-inputs | &bull; ColorPicker<br> &bull; MaskedTextBox<br> &bull; NumericTextBox<br> &bull; Slider<br> &bull; Signature<br> &bull; TextBox<br> &bull; Uploader<br> |
+| [ej2-react-inputs](https://www.npmjs.com/package/@syncfusion/ej2-react-inputs)    | `npm install @syncfusion/ej2-react-inputs` | &bull; ColorPicker<br> &bull; MaskedTextBox<br> &bull; NumericTextBox<br> &bull; Slider<br> &bull; Signature<br> &bull; TextBox<br> &bull; Uploader<br> |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React Kanban
 
@@ -161,25 +178,22 @@ The Kanban Board component efficiently visualizes workflow at each stage along i
 
 |Package Name  |Installation command|Components  |
 |--------|--------|-------|
-| [ej2-react-kanban](https://www.npmjs.com/package/@syncfusion/ej2-react-kanban)    | npm install @syncfusion/ej2-react-kanban | Kanban |
+| [ej2-react-kanban](https://www.npmjs.com/package/@syncfusion/ej2-react-kanban)    | `npm install @syncfusion/ej2-react-kanban` | Kanban |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React Layouts
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Layout package contains Cards, Avatars, Splitter, and Dashboard Layout components.
 
-* The `Card` is a small container displaying defined content in a specific structure.
-
-* `Avatars` are icons, initials, or figures representing a particular person, used in popular media formats like images, SVG, font icons, and letters.
-
-* The `Splitter` is a container component used to construct different layouts using multiple and nested panes.
-
-* The `Dashboard Layout` is a grid-structured layout component that helps create dashboards with panels. Panels hold UI components and allow resize, reorder, drag-and-drop, remove, and add options, enabling users to easily place components at desired positions within the grid layout.
+- The `Card` is a small container displaying defined content in a specific structure.
+- An `Avatar` is an icon, initial, or figure representing a particular person, used in popular media formats like images, SVG, font icons, and letters.
+- The `Splitter` is a container component used to construct different layouts using multiple and nested panes.
+- The `Dashboard Layout` is a grid-structured layout component that helps create dashboards with panels. Panels hold UI components and allow resize, reorder, drag-and-drop, remove, and add options, enabling users to easily place components at desired positions within the grid layout.
 
 <!-- markdownlint-disable MD033 -->
 
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
-| [ej2-react-layouts](https://www.npmjs.com/package/@syncfusion/ej2-react-layouts)    |npm install @syncfusion/ej2-react-layouts | &bull; Avatar<br> &bull; Card<br> &bull; Dashboard Layout<br> &bull; Splitter<br> |
+| [ej2-react-layouts](https://www.npmjs.com/package/@syncfusion/ej2-react-layouts)    | `npm install @syncfusion/ej2-react-layouts` | &bull; Avatar<br> &bull; Card<br> &bull; Dashboard Layout<br> &bull; Splitter<br> |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React LinearGauge
 
@@ -187,7 +201,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Linear Gauge visualizes num
 
 |Package Name  |Installation command|Components  |
 |--------|--------|-------|
-| [ej2-react-lineargauge](https://www.npmjs.com/package/@syncfusion/ej2-react-lineargauge)    | npm install @syncfusion/ej2-react-lineargauge | LinearGauge |
+| [ej2-react-lineargauge](https://www.npmjs.com/package/@syncfusion/ej2-react-lineargauge)    | `npm install @syncfusion/ej2-react-lineargauge` | LinearGauge |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React Lists
 
@@ -195,7 +209,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React ListView component al
 
 |Package Name  |Installation command|Components  |
 |--------|--------|-------|
-| [ej2-react-lists](https://www.npmjs.com/package/@syncfusion/ej2-react-lists)    | npm install @syncfusion/ej2-react-lists | ListView |
+| [ej2-react-lists](https://www.npmjs.com/package/@syncfusion/ej2-react-lists)    | `npm install @syncfusion/ej2-react-lists` | ListView |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React Maps
 
@@ -203,7 +217,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Maps visualizes geogr
 
 |Package Name  |Installation command|Components  |
 |--------|--------|-------|
-| [ej2-react-maps](https://www.npmjs.com/package/@syncfusion/ej2-react-maps)    | npm install @syncfusion/ej2-react-maps | Maps |
+| [ej2-react-maps](https://www.npmjs.com/package/@syncfusion/ej2-react-maps)    | `npm install @syncfusion/ej2-react-maps` | Maps |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React Navigations
 
@@ -213,7 +227,7 @@ A package of React navigation components including Accordion, Breadcrumb, Contex
 
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
-| [ej2-react-navigations](https://www.npmjs.com/package/@syncfusion/ej2-react-navigations)    |npm install @syncfusion/ej2-react-navigations | &bull; Accordion<br> &bull; Breadcrumb<br> &bull; ContextMenu<br> &bull; MenuBar<br> &bull; Tabs<br> &bull; Toolbar<br> &bull; TreeView<br> &bull; Sidebar<br> |
+| [ej2-react-navigations](https://www.npmjs.com/package/@syncfusion/ej2-react-navigations)    | `npm install @syncfusion/ej2-react-navigations` | &bull; Accordion<br> &bull; Breadcrumb<br> &bull; ContextMenu<br> &bull; MenuBar<br> &bull; Tabs<br> &bull; Toolbar<br> &bull; TreeView<br> &bull; Sidebar<br> |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React Notifications
 
@@ -223,7 +237,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Notification componen
 
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
-| [ej2-react-notifications](https://www.npmjs.com/package/@syncfusion/ej2-react-notifications)    |npm install @syncfusion/ej2-react-notifications | &bull; Badge<br> &bull; Spinner<br> &bull; Toast<br> |
+| [ej2-react-notifications](https://www.npmjs.com/package/@syncfusion/ej2-react-notifications)    | `npm install @syncfusion/ej2-react-notifications` | &bull; Badge<br> &bull; Spinner<br> &bull; Toast<br> |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React PdfViewer
 
@@ -231,7 +245,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React PDF Viewer supports v
 
 |Package Name  |Installation command|Components  |
 |--------|--------|-------|
-| [ej2-react-pdfviewer](https://www.npmjs.com/package/@syncfusion/ej2-react-pdfviewer)    | npm install @syncfusion/ej2-react-pdfviewer | PdfViewer |
+| [ej2-react-pdfviewer](https://www.npmjs.com/package/@syncfusion/ej2-react-pdfviewer)    | `npm install @syncfusion/ej2-react-pdfviewer` | PdfViewer |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React PivotTable
 
@@ -239,7 +253,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Pivot Table is a powe
 
 |Package Name  |Installation command|Components  |
 |--------|--------|-------|
-| [ej2-react-pivotview](https://www.npmjs.com/package/@syncfusion/ej2-react-pivotview)    | npm install @syncfusion/ej2-react-pivotview | PivotTable |
+| [ej2-react-pivotview](https://www.npmjs.com/package/@syncfusion/ej2-react-pivotview)    | `npm install @syncfusion/ej2-react-pivotview` | PivotTable |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React Popups
 
@@ -249,7 +263,7 @@ A package of Popup components including Dialog and Tooltip used to display infor
 
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
-| [ej2-react-popups](https://www.npmjs.com/package/@syncfusion/ej2-react-popups)    |npm install @syncfusion/ej2-react-popups | &bull; Dialog<br> &bull; Tooltip<br> |
+| [ej2-react-popups](https://www.npmjs.com/package/@syncfusion/ej2-react-popups)    | `npm install @syncfusion/ej2-react-popups` | &bull; Dialog<br> &bull; Tooltip<br> |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React ProgressBar
 
@@ -257,7 +271,7 @@ The Progress Bar visualizes the changing status of an extended operation such as
 
 |Package Name  |Installation command|Components  |
 |--------|--------|-------|
-| [ej2-react-progressbar](https://www.npmjs.com/package/@syncfusion/ej2-react-progressbar)    | npm install @syncfusion/ej2-react-progressbar | ProgressBar |
+| [ej2-react-progressbar](https://www.npmjs.com/package/@syncfusion/ej2-react-progressbar)    | `npm install @syncfusion/ej2-react-progressbar` | ProgressBar |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React QueryBuilder
 
@@ -265,7 +279,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React QueryBuilder package 
 
 |Package Name  |Installation command|Components  |
 |--------|--------|-------|
-| [ej2-react-querybuilder](https://www.npmjs.com/package/@syncfusion/ej2-react-querybuilder)    | npm install @syncfusion/ej2-react-querybuilder | QueryBuilder |
+| [ej2-react-querybuilder](https://www.npmjs.com/package/@syncfusion/ej2-react-querybuilder)    | `npm install @syncfusion/ej2-react-querybuilder` | QueryBuilder |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React RichTextEditor
 
@@ -273,7 +287,7 @@ The RichTextEditor component is an HTML and markdown editor that provides the be
 
 |Package Name  |Installation command|Components  |
 |--------|--------|-------|
-| [ej2-react-richtexteditor](https://www.npmjs.com/package/@syncfusion/ej2-react-richtexteditor)    | npm install @syncfusion/ej2-react-richtexteditor | RichTextEditor |
+| [ej2-react-richtexteditor](https://www.npmjs.com/package/@syncfusion/ej2-react-richtexteditor)    | `npm install @syncfusion/ej2-react-richtexteditor` | RichTextEditor |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React Schedule
 
@@ -281,7 +295,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Scheduler component i
 
 |Package Name  |Installation command|Components  |
 |--------|--------|-------|
-| [ej2-react-schedule](https://www.npmjs.com/package/@syncfusion/ej2-react-schedule)    | npm install @syncfusion/ej2-react-schedule | Schedule |
+| [ej2-react-schedule](https://www.npmjs.com/package/@syncfusion/ej2-react-schedule)    | `npm install @syncfusion/ej2-react-schedule` | Schedule |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React SplitButtons
 
@@ -291,7 +305,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React SplitButtons package 
 
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
-| [ej2-react-splitbuttons](https://www.npmjs.com/package/@syncfusion/ej2-react-splitbuttons)    |npm install @syncfusion/ej2-react-splitbuttons | &bull; ButtonGroup<br> &bull; DropDownButton<br> &bull; ProgressButton<br> &bull; SplitButton<br> |
+| [ej2-react-splitbuttons](https://www.npmjs.com/package/@syncfusion/ej2-react-splitbuttons)    | `npm install @syncfusion/ej2-react-splitbuttons` | &bull; ButtonGroup<br> &bull; DropDownButton<br> &bull; ProgressButton<br> &bull; SplitButton<br> |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React Spreadsheet
 
@@ -299,7 +313,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Spreadsheet is a user
 
 |Package Name  |Installation command|Components  |
 |--------|--------|-------|
-| [ej2-react-spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-react-spreadsheet)    | npm install @syncfusion/ej2-react-spreadsheet | Spreadsheet |
+| [ej2-react-spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-react-spreadsheet)    | `npm install @syncfusion/ej2-react-spreadsheet` | Spreadsheet |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React TreeGrid
 
@@ -307,7 +321,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Tree Grid is a featur
 
 |Package Name  |Installation command|Components  |
 |--------|--------|-------|
-| [ej2-react-treegrid](https://www.npmjs.com/package/@syncfusion/ej2-react-treegrid)    | npm install @syncfusion/ej2-react-treegrid | TreeGrid |
+| [ej2-react-treegrid](https://www.npmjs.com/package/@syncfusion/ej2-react-treegrid)    | `npm install @syncfusion/ej2-react-treegrid` | TreeGrid |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React TreeMap
 
@@ -315,7 +329,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React TreeMap is a feature-
 
 |Package Name  |Installation command|Components  |
 |--------|--------|-------|
-| [ej2-react-treemap](https://www.npmjs.com/package/@syncfusion/ej2-react-treemap)    | npm install @syncfusion/ej2-react-treemap | TreeMap |
+| [ej2-react-treemap](https://www.npmjs.com/package/@syncfusion/ej2-react-treemap)    | `npm install @syncfusion/ej2-react-treemap` | TreeMap |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React WordProcessor
 
@@ -323,7 +337,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Word Processor (Docum
 
 |Package Name  |Installation command|Components  |
 |--------|--------|-------|
-| [ej2-react-documenteditor](https://www.npmjs.com/package/@syncfusion/ej2-react-documenteditor)    | npm install @syncfusion/ej2-react-documenteditor | DocumentEditor |
+| [ej2-react-documenteditor](https://www.npmjs.com/package/@syncfusion/ej2-react-documenteditor)    | `npm install @syncfusion/ej2-react-documenteditor` | DocumentEditor |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React ImageEditor
 
@@ -331,7 +345,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React ImageEditor provides 
 
 |Package Name  |Installation command|Components  |
 |--------|--------|-------|
-| [ej2-react-image-editor](https://www.npmjs.com/package/@syncfusion/ej2-react-image-editor)    | npm install @syncfusion/ej2-react-image-editor | ImageEditor |
+| [ej2-react-image-editor](https://www.npmjs.com/package/@syncfusion/ej2-react-image-editor)    | `npm install @syncfusion/ej2-react-image-editor` | ImageEditor |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React Ribbon
 
@@ -339,7 +353,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Ribbon component offe
 
 |Package Name  |Installation command|Components  |
 |--------|--------|-------|
-| [ej2-react-ribbon](https://www.npmjs.com/package/@syncfusion/ej2-react-ribbon)    | npm install @syncfusion/ej2-react-ribbon | Ribbon |
+| [ej2-react-ribbon](https://www.npmjs.com/package/@syncfusion/ej2-react-ribbon)    | `npm install @syncfusion/ej2-react-ribbon` | Ribbon |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React Multicolumn ComboBox
 
@@ -347,7 +361,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Multicolumn ComboBox 
 
 |Package Name  |Installation command|Components  |
 |--------|--------|-------|
-| [ej2-react-multicolumn-combobox](https://www.npmjs.com/package/@syncfusion/ej2-react-multicolumn-combobox)    | npm install @syncfusion/ej2-react-multicolumn-combobox | MultiColumnComboBox |
+| [ej2-react-multicolumn-combobox](https://www.npmjs.com/package/@syncfusion/ej2-react-multicolumn-combobox)    | `npm install @syncfusion/ej2-react-multicolumn-combobox` | MultiColumnComboBox |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React Interactive Chat
 
@@ -355,7 +369,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Interactive Chat comp
 
 |Package Name  |Installation command|Components  |
 |--------|--------|-------|
-| [ej2-react-interactive-chat](https://www.npmjs.com/package/@syncfusion/ej2-react-interactive-chat)    | npm install @syncfusion/ej2-react-interactive-chat | InteractiveChat |
+| [ej2-react-interactive-chat](https://www.npmjs.com/package/@syncfusion/ej2-react-interactive-chat)    | `npm install @syncfusion/ej2-react-interactive-chat` | InteractiveChat |
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React BlockEditor
 
@@ -363,12 +377,35 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React BlockEditor is a bloc
 
 |Package Name  |Installation command|Components  |
 |--------|--------|-------|
-| [ej2-react-blockeditor](https://www.npmjs.com/package/@syncfusion/ej2-react-blockeditor)    | npm install @syncfusion/ej2-react-blockeditor | BlockEditor |
+| [ej2-react-blockeditor](https://www.npmjs.com/package/@syncfusion/ej2-react-blockeditor)    | `npm install @syncfusion/ej2-react-blockeditor` | BlockEditor |
 
-## See Also
+## Updating and uninstalling packages
 
-* [Installation with npm CLI](https://ej2.syncfusion.com/react/documentation/installation/installation/)
+To update a Syncfusion<sup style="font-size:70%">&reg;</sup> React package to the latest version, run:
+
+```bash
+npm update @syncfusion/ej2-react-grids
+```
+
+To update all dependencies, run `npm update` from the project root. For major-version upgrades, see the [Update npm Packages](https://ej2.syncfusion.com/react/documentation/upgrade/update-npm-package) guide.
+
+To uninstall a package, run:
+
+```bash
+npm uninstall @syncfusion/ej2-react-grids
+```
+
+## See also
+
+### Related documentation
+
+* [Installation with npm CLI](https://ej2.syncfusion.com/react/documentation/installation/installation)
+* [Update npm Packages](https://ej2.syncfusion.com/react/documentation/upgrade/update-npm-package)
+* [License key registration](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration)
+* [Common installation errors](https://ej2.syncfusion.com/react/documentation/installation/common-installation-errors)
+
+### External resources
+
 * [Browse all Syncfusion npm packages](https://www.npmjs.com/search?q=%40syncfusion%2Fej2-react)
-* [Download JavaScript - EJ2 Installer](https://ej2.syncfusion.com/react/documentation/installation/web-installer/download/)
-* [Product Development Life Cycle](https://www.syncfusion.com/support/product-lifecycle/)
-* [Update npm Packages](https://ej2.syncfusion.com/react/documentation/upgrade/update-npm-package/)
+* [Syncfusion React components catalog](https://www.syncfusion.com/react-ui-components)
+* [Product development life cycle](https://www.syncfusion.com/support/product-lifecycle)

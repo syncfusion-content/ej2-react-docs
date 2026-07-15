@@ -8,33 +8,31 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Installation using Offline Installer
+# Installing React Components using the Offline Installer
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 offline installer supports the following frameworks:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React (JavaScript - EJ2) offline installer is a single Windows distributable that ships samples and resources for all supported frameworks. Once installed, you can access the React-specific content and demos from the same installation directory.
 
-* JavaScript (ES5)
-* JavaScript (ES6+)
-* Angular
-* React
-* Vue
+The installer is available in two formats:
 
-> The offline installer includes shared resources and samples for all supported frameworks. Once installed, you can access React-specific content and demos.
+* **Graphical (UI) installer** — interactive setup wizard.
+* **Silent (command-line) installer** — for automated, scripted deployments.
 
 ## System Requirements
 
 Before installation, ensure the system meets these requirements:
 
-- **Operating System**: Windows 7 SP1 or later, macOS 10.13 or later, Linux (Ubuntu 16.04 or later)
+- **Operating System**: Windows 7 SP1 or later
 - **Disk space**: At least 2 GB of free disk space
-- **Node.js**: Version 14.x or later (required to run demos)
+- **Node.js**: Version 18.x or later (LTS recommended), required to run the demos
+- **Privileges**: Administrator privileges are required to run the installer
 
 ## Installing with UI (Windows)
 
 These steps describe installing the Essential Studio<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 offline installer using the graphical interface on Windows.
 
-### Step 1: Launch the Installer
+### Step 1: Launch the installer
 
-1. Double-click the downloaded Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 offline installer (.exe) to open the Installer Wizard; the package is extracted automatically.
+1. Double-click the downloaded Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 offline installer (.exe) to open the Installer Wizard; the package is extracted automatically. If prompted by Windows User Account Control, click **Yes** to allow the installer to run with administrator privileges.
 
     ![Installer extraction](images/offline1.png)
 
@@ -44,17 +42,17 @@ These steps describe installing the Essential Studio<sup style="font-size:70%">&
 
 2. To unlock the installer, choose one of the following options:
 
-    **Option 1: Login to install**
+    **Option 1: Log in to install**
 
     Enter the Syncfusion<sup style="font-size:70%">&reg;</sup> account email and password. If an account is not available, select **Create an account**. Use **Forgot Password** to reset credentials if necessary, then click **Next**.
 
     ![Login to install](images/offline2.png)
 
-    **Option 2: Use unlock key**
+    **Option 2: Use an unlock key**
 
     Unlock keys are platform- and version-specific. Provide a licensed or trial unlock key to proceed; trial keys are valid for 30 days.
 
-    For instructions on generating an unlock key, see the Knowledge Base article: [Syncfusion Knowledge Base - How to generate unlock key](https://www.syncfusion.com/kb/2326).
+    For instructions on generating an unlock key, see the Knowledge Base article: [How to generate an unlock key for Essential Studio products](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products).
 
     ![Unlock key entry](images/offline3.png)
 
@@ -73,8 +71,6 @@ These steps describe installing the Essential Studio<sup style="font-size:70%">&
     * **Install Demos**: Installs sample projects and demos when checked; uncheck to skip demo installation.
     * **Create Desktop Shortcut**: Adds a Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel shortcut to the desktop.
     * **Create Start Menu Shortcut**: Adds a Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel shortcut to the Start Menu.
-
-    > The "Configure Syncfusion Extensions in Visual Studio" option applies only to ASP.NET development and does not affect React projects.
 
 ### Step 5: Uninstall Previous Versions (Optional)
 
@@ -108,6 +104,11 @@ These steps describe installing the Essential Studio<sup style="font-size:70%">&
 
 8. Click **Launch Control Panel** to open the Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel, or click **Finish** to exit.
 
+### Verify the installation
+
+1. Open the installation directory (default: `C:\Program Files (x86)\Syncfusion\Essential Studio\JavaScript - EJ2\x.x.x.x`) and confirm the `Samples`, `Packages`, and `Build` folders are present.
+2. Open the Syncfusion Control Panel from the desktop or Start Menu shortcut to view the installed version and license status.
+
 ## Installing in Silent Mode (Windows)
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 installer supports silent installation and uninstallation via the command line on Windows.
@@ -127,7 +128,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style=
 
     **Example:**
     ```
-    "D:\Temp\\syncfusionejs2_20.1.0.47.exe" /Install silent /UNLOCKKEY:"ABC123XYZ456" /log "C:\Temp\\install.log" /InstallPath:"C:\Syncfusion\\20.1.0.47" /InstallSamples:true
+    "D:\Temp\\syncfusionejs2_27.1.0.50.exe" /Install silent /UNLOCKKEY:"ABC123XYZ456" /log "C:\Temp\\install.log" /InstallPath:"C:\Syncfusion\\27.1.0.50" /InstallSamples:true
     ```
 
     **Parameters:**
@@ -151,7 +152,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style=
 
     **Example:**
     ```
-    "D:\Temp\\syncfusionejs2_20.1.0.47.exe" /Uninstall silent
+    "D:\Temp\\syncfusionejs2_27.1.0.50.exe" /Uninstall silent
     ```
 
 3. The uninstallation completes silently.
@@ -162,4 +163,10 @@ After installation:
 
 - **Access demos**: Navigate to the installation directory (default: `C:\Program Files (x86)\Syncfusion\Essential Studio\JavaScript - EJ2\\x.x.x.x`) to find sample projects.
 - **Launch Control Panel**: Use the desktop or Start Menu shortcut to open the Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel for utilities and documentation.
-- **Register license key**: For licensed installations, register the license key in React projects. See the License Key Registration Guide: Syncfusion - License Key Registration (https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration).
+- **Register license key**: For licensed installations, register the license key in React projects. See the [license key registration guide](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration).
+
+## Next steps
+
+* [Syncfusion React Sample Browser](https://ej2.syncfusion.com/react/demos/) — online demos of all components
+* [Syncfusion NPM registration](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration) — register the license key for NPM-based projects
+* [Syncfusion system requirements](https://ej2.syncfusion.com/react/documentation/system-requirements) — supported platforms, Node.js, and browser versions
