@@ -16,7 +16,24 @@ Rendering every row and column in the DOM creates performance and memory challen
 
 To enable DOM virtualization in the React Grid, you need to inject the **DomVirtualization** module. This module is responsible for managing the DOM pooling behavior and optimizing the rendering of data to enhance performance.
 
-DOM virtualization can be enabled by setting the [enableDomVirtualization](../../api/grid#enabledomvirtualization) property to `true`.
+DOM virtualization can be enabled by setting the [enableDomVirtualization](../../api/grid#enabledomvirtualization) property to `true`. 
+
+```ts
+import { GridComponent, ColumnsDirective, ColumnDirective, Inject } from '@syncfusion/ej2-react-grids';
+import { DomVirtualization } from '@syncfusion/ej2-react-grids';
+
+function App() {
+  return (
+    <GridComponent enableDomVirtualization={true} height={500}>
+      <Inject services={[DomVirtualization]} />
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+        <ColumnDirective field='CustomerName' headerText='Customer Name' width='150' />
+      </ColumnsDirective>
+    </GridComponent>
+  );
+}
+```
 
 ## Height configuration requirement
 
@@ -109,8 +126,9 @@ These behaviors are inherent to lazy height calculation and occur because height
 
 Use the [setRowHeight](../../api/grid#setrowheight) callback to programmatically define row heights based on row data. This approach provides control over row sizing logic without DOM measurement overhead.
 
-```tsx
+```ts
 const setRowHeight = (row) => {
+  // Return custom height in pixels based on row data
   return row.data['Priority'] === 'High' ? 80 : 40;
 };
 

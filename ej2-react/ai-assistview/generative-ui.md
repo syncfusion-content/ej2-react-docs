@@ -43,7 +43,7 @@ You can configure the AI service to return structured JSON blocks through `syste
 
 The following example demonstrates how to connect your AI service to generate and display dynamic UI components within the AI AssistView.
 
-```tsx
+```ts
 import React, { useRef } from 'react';
 import { AIAssistViewComponent } from '@syncfusion/ej2-react-interactive-chat';
 
