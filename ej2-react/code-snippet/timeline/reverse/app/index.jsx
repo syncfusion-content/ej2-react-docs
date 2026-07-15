@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as ReactDom from "react-dom";
+import * as ReactDOM from 'react-dom/client';
 import { TimelineComponent, ItemsDirective, ItemDirective } from '@syncfusion/ej2-react-layouts';
 
 function App() {
@@ -12,8 +12,8 @@ function App() {
     ];
 
     return (
-        <div id='timeline' style={{ height: "350px" }}>
-            <TimelineComponent align='before' reverse={true}>
+        <div id='timeline'>
+            <TimelineComponent align='Before' reverse={true}>
                 <ItemsDirective>
                     <ItemDirective content='June 2022' oppositeContent = {careerProgress[0]} />
                     <ItemDirective content='Aug 2022' oppositeContent = {careerProgress[1]} />
@@ -25,4 +25,5 @@ function App() {
     );
 }
 export default App;
-ReactDom.render(<App />, document.getElementById("element"));
+const root = ReactDOM.createRoot(document.getElementById('element'));
+root.render(<App />);

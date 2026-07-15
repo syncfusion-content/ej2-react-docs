@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The Timeline component provides comprehensive template customization through the [template](https://ej2.syncfusion.com/react/documentation/api/timeline#template) property. Templates allow complete control over the rendered structure and appearance of timeline items, including dot indicators, content areas, styling, and layout, enabling designs that match application-specific UI requirements.
 
-The `template` context exposes the following values for each timeline item:timeline item:
+The `template` context exposes the following values for each timeline item:
 
 | Type | Purpose |
 | --- | --- |

@@ -18,7 +18,7 @@ To enable DOM virtualization in the React Grid, you need to inject the **DomVirt
 
 DOM virtualization can be enabled by setting the [enableDomVirtualization](../../api/grid#enabledomvirtualization) property to `true`. 
 
-```tsx
+```ts
 import { GridComponent, ColumnsDirective, ColumnDirective, Inject } from '@syncfusion/ej2-react-grids';
 import { DomVirtualization } from '@syncfusion/ej2-react-grids';
 
@@ -126,7 +126,7 @@ These behaviors are inherent to lazy height calculation and occur because height
 
 Use the [setRowHeight](../../api/grid#setrowheight) callback to programmatically define row heights based on row data. This approach provides control over row sizing logic without DOM measurement overhead.
 
-```tsx
+```ts
 const setRowHeight = (row) => {
   // Return custom height in pixels based on row data
   return row.data['Priority'] === 'High' ? 80 : 40;

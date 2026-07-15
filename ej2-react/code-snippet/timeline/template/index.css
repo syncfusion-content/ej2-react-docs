@@ -67,3 +67,9 @@
   top: 50%;
 }
 /* END --- Customizing Icon and progress line */
+
+#timeline {
+  height: 150px;
+  width: 600px;
+  margin: 50px auto;
+}

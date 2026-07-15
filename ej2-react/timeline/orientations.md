@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Orientations in React Timeline component | Syncfusion
+title: Orientations in the React Timeline component | Syncfusion
 description:  Checkout and learn about Orientations with Syncfusion React Timeline component of Syncfusion Essential JS 2 and more.
 control: Timeline
 platform: ej2-react

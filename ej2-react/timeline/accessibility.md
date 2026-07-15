@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Timeline component
+# Accessibility in the React Timeline component
 
 The Timeline component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov), [Section 508](https://www.section508.gov), [WCAG 2.2](https://www.w3.org/TR/WCAG22) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) that are commonly used to evaluate accessibility.
 
@@ -42,8 +42,8 @@ The following ARIA attributes are used in the Timeline component to ensure prope
 
 | Attributes | Purpose |
 | --- | --- |
-| `role=navigation` | Specified its purpose as a navigational element. |
-| `aria-label` | Provides an accessibile name for an element when a visible label is not present |
+| `role=navigation` | Specifies its purpose as a navigational element. |
+| `aria-label` | Provides an accessible name for an element when a visible label is not present. |
 
 ## Ensuring accessibility
 

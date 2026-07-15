@@ -1,16 +1,15 @@
 import * as React from "react";
-import * as ReactDom from "react-dom";
+import * as ReactDOM from 'react-dom/client';
 import { TimelineComponent, ItemsDirective, ItemDirective } from '@syncfusion/ej2-react-layouts';
-import './index.css'
 
 function App() {
     return (
-        <div id='timeline' style={{ height: "350px" }}>
+        <div id='timeline'>
             <TimelineComponent cssClass='dot-size'>
                 <ItemsDirective>
                     <ItemDirective content='Ordered' cssClass='x-small' />
                     <ItemDirective content='Shipped' cssClass='small' />
-                    <ItemDirective content='Delivered' cssClass='medium' />
+                    <ItemDirective content='Out for Delivery' cssClass='medium' />
                     <ItemDirective content='Delivered' cssClass='large' />
                 </ItemsDirective>
             </TimelineComponent>
@@ -18,4 +17,5 @@ function App() {
     );
 }
 export default App;
-ReactDom.render(<App />, document.getElementById("element"));
+const root = ReactDOM.createRoot(document.getElementById('element'));
+root.render(<App />);

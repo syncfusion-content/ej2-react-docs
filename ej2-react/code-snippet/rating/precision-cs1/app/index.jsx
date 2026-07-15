@@ -1,6 +1,7 @@
 // Import the Rating.
 import { RatingComponent, PrecisionType } from '@syncfusion/ej2-react-inputs';
 import * as React from 'react';
+import * as ReactDom from 'react-dom';
 // To render Rating.
 function App() {
     return (<div className='wrap'>
