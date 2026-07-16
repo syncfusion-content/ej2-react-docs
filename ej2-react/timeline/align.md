@@ -75,7 +75,7 @@ The [Alternate](https://ej2.syncfusion.com/react/documentation/api/timeline/time
 
 {% previewsample "page.domainurl/code-snippet/timeline/align/alternate" %}
 
-## Alternate reverse
+## Alternate Reverse
 
 The [AlternateReverse](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineAlign) alignment creates the opposite pattern of Alternate alignment, where timeline items are arranged in reverse alternating order. This provides another visual variation for displaying data with an inverted alternating pattern, maintaining effectiveness across both Timeline orientations.
 

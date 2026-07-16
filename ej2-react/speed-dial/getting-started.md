@@ -75,6 +75,7 @@ The following speed dial code should be placed in the **src/App.tsx** file.
 ```ts
 import { SpeedDialComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
+import { createRoot } from 'react-dom/client';
 import './App.css';
 
 function App() {
@@ -83,6 +84,7 @@ function App() {
     );
 }
 export default App;
+createRoot(document.getElementById('button')!).render(<App />);
 ```
 
 ## Run the application

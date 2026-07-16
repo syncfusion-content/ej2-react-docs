@@ -1,12 +1,13 @@
-import { SpeedDialComponent, SpeedDialItemModel, SpeedDialAnimationSettingsModel } from '@syncfusion/ej2-react-buttons';
+import { SpeedDialComponent, type SpeedDialItemModel, type SpeedDialAnimationSettingsModel } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
-import * as ReactDom from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import '../index.css';
 
 function App() {
   const items: SpeedDialItemModel[] = [
-    { text: 'Cut', iconCss: 'e-icons e-cut' },
-    { text: 'Copy', iconCss: 'e-icons e-copy' },
-    { text: 'Paste', iconCss: 'e-icons e-paste' }
+    { text: 'Cut', iconCss: 'e-icons e-cut', title: 'Cut' },
+    { text: 'Copy', iconCss: 'e-icons e-copy', title: 'Copy' },
+    { text: 'Paste', iconCss: 'e-icons e-paste', title: 'Paste' }
   ];
   const animation: SpeedDialAnimationSettingsModel =
     { effect: 'Zoom' };
@@ -19,4 +20,4 @@ function App() {
   );
 }
 export default App;
-ReactDom.render(<App />, document.getElementById('button'));
+createRoot(document.getElementById('button')!).render(<App />);

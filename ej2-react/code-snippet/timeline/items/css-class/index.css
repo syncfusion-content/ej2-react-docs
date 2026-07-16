@@ -1,0 +1,29 @@
+/* Represents the styles for loader */
+#loader {
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+
+.e-timeline .e-timeline-item.shipped .e-dot {
+  background-color: #8b5cf6;
+}
+
+.e-timeline .e-timeline-item.departed .e-dot {
+  background-color: #3b82f6;
+}
+
+.e-timeline .e-timeline-item.arrived .e-dot {
+  background-color: #f59e0b;
+}
+
+.e-timeline .e-timeline-item.out-for-delivery .e-dot {
+  background-color: #10b981;
+}
+
+#timeline {
+  height: 350px;
+}

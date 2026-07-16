@@ -1,0 +1,30 @@
+/* Represents the styles for loader */
+#loader {
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+
+.opposite-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+}
+
+.opposite-container .time {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.opposite-container .label {
+    font-size: 11px;
+    color: #999999;
+}
+
+#timeline {
+  height: 330px;
+}

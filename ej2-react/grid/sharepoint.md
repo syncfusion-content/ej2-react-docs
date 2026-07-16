@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - SharePoint | Syncfusion
-description: React Grid SharePoint integration connects the grid to SharePoint lists, supports auth, and provides data access methods for SharePoint apps.
+title: React Data Grid - SharePoint | Syncfusion
+description: React Data Grid SharePoint integration connects the data grid to SharePoint lists, supports auth, and provides data access methods for SharePoint apps.
 control: SharePoint 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Grid Component in the SharePoint Framework
+# Getting Started with React Data Grid in SharePoint Framework
 
 The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component can be integrated into a [SharePoint](https://learn.microsoft.com/en-us/sharepoint/dev) Framework (SPFx) project using the techniques outlined in this article. These steps will walk you through the process of adding a robust data grid to your SharePoint solutions.
 
@@ -112,7 +112,7 @@ npm install @syncfusion/ej2-react-grids
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> provides various themes for React components. You can import CSS styles for the desired theme into your project.  Refer to the [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a React project.
 
-In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the Grid component were imported into the `~src/webparts/reactGridComponent/components/ReactGridComponent.tsx` file. 
+In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the Data Grid component were imported into the `~src/webparts/reactGridComponent/components/ReactGridComponent.tsx` file. 
 
 To add Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JS 2 style reference from npm packages:
 
@@ -128,9 +128,9 @@ To add Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="fon
 <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/32.1.19/ej2/material3.css" /> // use the latest version to refer the css through CDN//
 ```
 
-## Adding Grid component
+## Adding Data Grid component
 
-The grid code should be added to the **ReactGridComponent.tsx** file.
+The data grid code should be added to the **ReactGridComponent.tsx** file.
 
 {% tabs %}
 {% highlight ts tabtitle="ReactGridComponent.tsx" %}
@@ -145,7 +145,7 @@ const ReactGridComponent: React.FC<IReactGridComponentProps> = (props) => {
     const {
       hasTeamsContext,
     } = props;
-    // Defines the data to be displayed in the Grid.
+    // Defines the data to be displayed in the Data Grid.
     const data = [
       { OrderID: 10248, CustomerID: 'VINET', EmployeeID: 5, ShipCountry: 'France', Freight: 32.38 },
       { OrderID: 10249, CustomerID: 'TOMSP', EmployeeID: 6, ShipCountry: 'Germany', Freight: 11.61 },
@@ -154,10 +154,10 @@ const ReactGridComponent: React.FC<IReactGridComponentProps> = (props) => {
     return (
       <section className={`${styles.reactGridComponent} ${hasTeamsContext ? styles.teams : ''}`}>
         <div>
-          <h3>Welcome to React Grid component in the SharePoint Framework!</h3>
+          <h3>Welcome to React Data Grid component in the SharePoint Framework!</h3>
         </div>
           <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/32.1.19/ej2/material3.css" />
-          {/* Assigns the dataset to the Grid component */}
+          {/* Assigns the dataset to the Data Grid component */}
           <GridComponent id='grid' dataSource={data} >
           {/* Define the columns to be displayed */}
             <ColumnsDirective>
@@ -174,7 +174,7 @@ export default ReactGridComponent;
 {% endhighlight %}
 {% endtabs %}
 
-**3. Run the project:** To preview your SharePoint project with the integrated React Grid component, run the following commands:
+**3. Run the project:** To preview your SharePoint project with the integrated React Data Grid component, run the following commands:
 
 ```bash
 gulp trust-dev-cert
@@ -183,8 +183,8 @@ gulp serve
 
 The output will appear as follows:
 
-![Grid Component](./images/sharepoint-grid.png)
+![Data Grid Component](./images/sharepoint-grid.png)
 
 ## See also
 
-* [Grid Feature Modules](./module)
+* [Data Grid Feature Modules](./module)

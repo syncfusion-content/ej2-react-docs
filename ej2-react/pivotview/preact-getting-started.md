@@ -18,6 +18,8 @@ This article provides a step-by-step guide for setting up a [Preact](https://pre
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](../system-requirement)
 
+Ensure [Node.js](https://nodejs.org/en) LTS and a package manager (`npm` or `yarn`) are installed before starting.
+
 ## Set up the Preact project
 
 Create a new Preact project using the initialization command:
@@ -48,7 +50,7 @@ T  Preact - Fast 3kB alternative to React with the same modern API
 
 **Project language**
 
-Choose `JavaScript` as the framework variant to build this Preact project using JavaScript and React.
+Choose `JavaScript` as the project language.
 
 ```bash
 T  Preact - Fast 3kB alternative to React with the same modern API
@@ -90,7 +92,7 @@ Now that `my-project` is ready to run with default settings, let's add Syncfusio
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React Pivot Table packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available on [npmjs.com](https://www.npmjs.com/search?q=ej2-react). This article uses the [React Pivot Table component](https://www.syncfusion.com/react-components/react-pivot-table) as an example. To use the React Pivot Table component in the project, the `@syncfusion/ej2-react-pivotview` package needs to be installed using the following command:
+Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available on [npmjs.com](https://www.npmjs.com/search?q=ej2-react). This article uses the [React Pivot Table component](https://www.syncfusion.com/react-components/react-pivot-table) as an example. To use the React Pivot Table component in the project, install the `@syncfusion/ej2-react-pivotview` package using the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-pivotview --save
@@ -102,11 +104,9 @@ or
 yarn add @syncfusion/ej2-react-pivotview
 ```
 
->Before including Syncfusion styles, make sure to remove the default styles defined in **index.css**. This helps prevent unintended style overrides and ensures that Syncfusion components render correctly.
-
 ## Adding CSS reference
 
-Themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Preact Pivot Table can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
+Themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> React Pivot Table can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
 
 The following example demonstrates the installation of the `Tailwind 3` theme package from npm. Each component in this theme package includes an `index.css` file that automatically loads all required dependency styles.
 
@@ -125,7 +125,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 {% endhighlight %}
 {% endtabs %}
 
-Import the `Tailwind 3` CSS styles for the Pivot Table component in the **src/style.css** file. Remove any existing styles in that file before adding the import:
+By default, Preact projects include a `src/style.css` file with default styles. These default styles may conflict with Syncfusion component styles. Replace the contents of `src/style.css` with the following import to apply the Pivot Table theme styles:
 
 {% tabs %}
 {% highlight css tabtitle="~/src/style.css" %}
@@ -137,7 +137,7 @@ Import the `Tailwind 3` CSS styles for the Pivot Table component in the **src/st
 
 ## Adding Pivot Table component
 
-The pivot table code should be added to the **src/index.jsx** file.
+The Pivot Table code should be placed in the **src/index.jsx** file.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
@@ -184,8 +184,11 @@ or
 yarn run dev
 ```
 
+Once the dev server starts, open `http://localhost:5173` in your browser to view the rendered Pivot Table, which displays sales data grouped by Country/Products on rows and Year/Quarter on columns with Sold Amount and Units Sold values.
+
 ## See also
 
+* [React Pivot Table Getting Started](./getting-started)
 * [Getting Started with Next.js](./nextjs-getting-started)
 * [Data Binding](./data-binding)
 * [Field List](./field-list)

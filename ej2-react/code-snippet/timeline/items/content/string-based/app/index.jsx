@@ -1,10 +1,10 @@
 import * as React from "react";
-import * as ReactDom from "react-dom";
+import * as ReactDOM from 'react-dom/client';
 import { TimelineComponent, ItemsDirective, ItemDirective } from '@syncfusion/ej2-react-layouts';
 
 function App() {
     return (
-        <div id='timeline' style={{ height: "350px" }}>
+        <div id='timeline'>
             <TimelineComponent>
                 <ItemsDirective>
                     <ItemDirective content='Shipped' />
@@ -17,4 +17,5 @@ function App() {
     );
 }
 export default App;
-ReactDom.render(<App />, document.getElementById("element"));
+const root = ReactDOM.createRoot(document.getElementById('element'));
+root.render(<App />);

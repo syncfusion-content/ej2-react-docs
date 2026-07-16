@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Items in React Speed dial component
 
-Define the action items displayed in the SpeedDial popup using the [`items`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#items) property. Each item is a SpeedDialItemModel object that can include text, icons, disabled states, and custom IDs. Configure item appearance and behavior to create a functional and user-friendly action menu.
+Define the action items displayed in the SpeedDial popup using the [`items`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#items) property. Each item is a [`SpeedDialItemModel`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speeddialitemmodel) object that can include text, icons, disabled states, and custom IDs. Configure item appearance and behavior to create a functional and user-friendly action menu.
 
 | Fields | Type | Description |
 |------|------|-------------|

@@ -15,3 +15,7 @@
 .e-dot.custom-text::before {
   content: 'A';
 }
+
+#timeline {
+  height: 330px;
+}
