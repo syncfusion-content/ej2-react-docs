@@ -14,7 +14,7 @@ Globalization enables components to support multiple languages and regional form
 
 By default, the DateTimePicker uses `American English` culture for date format, week names, month names, time format, and meridian names. It leverages the [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Internationalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) package with official [`UNICODE CLDR`](http://cldr.unicode.org/) JSON data to parse and format dates and times according to the selected culture.
 
-### **Quick Start: Enable a Different Culture**
+## Quick Start: Enable a Different Culture
 
 To display the DateTimePicker in a culture other than English, follow these steps:
 
@@ -24,13 +24,13 @@ To display the DateTimePicker in a culture other than English, follow these step
      npm install cldr-data --save
     ```
 
-    Once the package is installed, you can find the culture specific JSON data under the location `\node_modules\cldr-data`.
+    Once the package is installed, the culture specific JSON data can be found under the location `\node_modules\cldr-data`.
 
 * Import the installed CLDR JSON data into the `app.ts` file.
 
 * Use the [`loadCldr`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#loading-culture-data) method to load the culture specific CLDR JSON data from the installed location to `app.ts` file.
 
-* DateTimePicker displayed `Sunday` as the first day of week based on default culture ("en-US"). If you want to display the DateTimePicker with loaded culture’s first day of week, you need to import `weekdata.json` file from the `cldr-data/suppemental` as given in the code example.
+* DateTimePicker displays `Sunday` as the first day of week based on default culture ("en-US"). To display the DateTimePicker with loaded culture's first day of week, import the `weekdata.json` file from the `cldr-data/supplemental` folder as given in the code example.
 
 ```ts
 
@@ -47,7 +47,7 @@ import * as weekData from 'cldr-data/supplemental/weekData.json';// To load the 
 loadCldr(numberingSystems, gregorian, numbers, timeZoneNames, weekData);
 ```
 
-> if you are facing the error `/node_modules/cldr-data/main/de/*.json (1,1): unused expression, expected an assignment or function call` when you are adding the json files to render the culture sample, then add the below configuration in your `tslint.json` file
+> If the error `/node_modules/cldr-data/main/de/*.json (1,1): unused expression, expected an assignment or function call` is encountered when adding the JSON files to render the culture sample, add the below configuration in the `tslint.json` file.
 
 ```ts
 
@@ -59,7 +59,9 @@ loadCldr(numberingSystems, gregorian, numbers, timeZoneNames, weekData);
   }
 ```
 
-> The `Localization` library allows you to localize default text content of the DateTimePicker. The DateTimePicker component has static text for  **today** feature that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker#locale) value and translation object.
+## Localization
+
+The `Localization` library provides the ability to localize default text content of the DateTimePicker. The DateTimePicker component has static text for the **today** feature that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker#locale) value and translation object.
 
 Locale keywords |Text
 -----|-----
@@ -84,6 +86,8 @@ placeholder | Hint to describe expected value in input element.
     });
    ```
 
+> Locale texts can also be obtained from the [ej2-locale](https://github.com/syncfusion/ej2-locale) repository. The repository contains a comprehensive collection of locale-specific resources that can be used to customize the DateTimePicker component for different cultures. Refer to the [Localization](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) topic for more information on how to use locale texts from the repository.
+
 * Set the culture by using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker#locale) property. In the following code example, the DateTimePicker is initialized in `German` culture with corresponding localized text.
 
 The following example demonstrates the DateTimePicker in `German` culture.
@@ -91,41 +95,11 @@ The following example demonstrates the DateTimePicker in `German` culture.
 `[Class-component]`
 
 {% tabs %}
-{% highlight json tabtitle="ca-gregorian.json" %}
-{% include code-snippet/datetimepicker/localization-cs1/app/ca-gregorian.json %}
-{% endhighlight %}
-{% highlight js tabtitle="ca-gregorian.jsx" %}
-{% include code-snippet/datetimepicker/localization-cs1/app/ca-gregorian.jsx %}
-{% endhighlight %}
-{% highlight json tabtitle="currencies.json" %}
-{% include code-snippet/datetimepicker/localization-cs1/app/currencies.json %}
-{% endhighlight %}
-{% highlight js tabtitle="currencies.jsx" %}
-{% include code-snippet/datetimepicker/localization-cs1/app/currencies.jsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/datetimepicker/localization-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/datetimepicker/localization-cs1/app/index.tsx %}
-{% endhighlight %}
-{% highlight json tabtitle="numberingsystems.json" %}
-{% include code-snippet/datetimepicker/localization-cs1/app/numberingSystems.json %}
-{% endhighlight %}
-{% highlight js tabtitle="numberingsystems.jsx" %}
-{% include code-snippet/datetimepicker/localization-cs1/app/numberingSystems.jsx %}
-{% endhighlight %}
-{% highlight json tabtitle="numbers.json" %}
-{% include code-snippet/datetimepicker/localization-cs1/app/numbers.json %}
-{% endhighlight %}
-{% highlight js tabtitle="numbers.jsx" %}
-{% include code-snippet/datetimepicker/localization-cs1/app/numbers.jsx %}
-{% endhighlight %}
-{% highlight json tabtitle="timezonenames.json" %}
-{% include code-snippet/datetimepicker/localization-cs1/app/timeZoneNames.json %}
-{% endhighlight %}
-{% highlight js tabtitle="timezonenames.jsx" %}
-{% include code-snippet/datetimepicker/localization-cs1/app/timeZoneNames.jsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -134,41 +108,11 @@ The following example demonstrates the DateTimePicker in `German` culture.
 `[Functional-component]`
 
 {% tabs %}
-{% highlight json tabtitle="ca-gregorian.json" %}
-{% include code-snippet/datetimepicker/localization-cs2/app/ca-gregorian.json %}
-{% endhighlight %}
-{% highlight js tabtitle="ca-gregorian.jsx" %}
-{% include code-snippet/datetimepicker/localization-cs2/app/ca-gregorian.jsx %}
-{% endhighlight %}
-{% highlight json tabtitle="currencies.json" %}
-{% include code-snippet/datetimepicker/localization-cs2/app/currencies.json %}
-{% endhighlight %}
-{% highlight js tabtitle="currencies.jsx" %}
-{% include code-snippet/datetimepicker/localization-cs2/app/currencies.jsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/datetimepicker/localization-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/datetimepicker/localization-cs2/app/index.tsx %}
-{% endhighlight %}
-{% highlight json tabtitle="numberingsystems.json" %}
-{% include code-snippet/datetimepicker/localization-cs2/app/numberingSystems.json %}
-{% endhighlight %}
-{% highlight js tabtitle="numberingsystems.jsx" %}
-{% include code-snippet/datetimepicker/localization-cs2/app/numberingSystems.jsx %}
-{% endhighlight %}
-{% highlight json tabtitle="numbers.json" %}
-{% include code-snippet/datetimepicker/localization-cs2/app/numbers.json %}
-{% endhighlight %}
-{% highlight js tabtitle="numbers.jsx" %}
-{% include code-snippet/datetimepicker/localization-cs2/app/numbers.jsx %}
-{% endhighlight %}
-{% highlight json tabtitle="timezonenames.json" %}
-{% include code-snippet/datetimepicker/localization-cs2/app/timeZoneNames.json %}
-{% endhighlight %}
-{% highlight js tabtitle="timezonenames.jsx" %}
-{% include code-snippet/datetimepicker/localization-cs2/app/timeZoneNames.jsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -176,47 +120,17 @@ The following example demonstrates the DateTimePicker in `German` culture.
 
 ## Right-To-Left
 
-The DateTimePicker supports RTL (right-to-left) functionality for languages like Arabic and Hebrew to displays the text in the right-to-left direction. Use `enableRtl` property to set the RTL direction.
-The following code example initialize the DateTimePicker component in `Arabic` culture and also explains how to set the localized text to the placeholder using `load` method of [L10n](http://ej2.syncfusion.com/documentation/api/base/l10n/) class.
+The DateTimePicker supports RTL (right-to-left) functionality for languages like Arabic and Hebrew to display text in the right-to-left direction. Use the `enableRtl` property to set the RTL direction.
+The following code example initializes the DateTimePicker component in `Arabic` culture and also demonstrates how to set the localized text to the placeholder using the `load` method of the [L10n](http://ej2.syncfusion.com/documentation/api/base/l10n) class.
 
 `[Class-component]`
 
 {% tabs %}
-{% highlight json tabtitle="ca-gregorian.json" %}
-{% include code-snippet/datetimepicker/rtl-cs1/app/ca-gregorian.json %}
-{% endhighlight %}
-{% highlight js tabtitle="ca-gregorian.jsx" %}
-{% include code-snippet/datetimepicker/rtl-cs1/app/ca-gregorian.jsx %}
-{% endhighlight %}
-{% highlight json tabtitle="currencies.json" %}
-{% include code-snippet/datetimepicker/rtl-cs1/app/currencies.json %}
-{% endhighlight %}
-{% highlight js tabtitle="currencies.jsx" %}
-{% include code-snippet/datetimepicker/rtl-cs1/app/currencies.jsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/datetimepicker/rtl-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/datetimepicker/rtl-cs1/app/index.tsx %}
-{% endhighlight %}
-{% highlight json tabtitle="numberingsystems.json" %}
-{% include code-snippet/datetimepicker/rtl-cs1/app/numberingSystems.json %}
-{% endhighlight %}
-{% highlight js tabtitle="numberingsystems.jsx" %}
-{% include code-snippet/datetimepicker/rtl-cs1/app/numberingSystems.jsx %}
-{% endhighlight %}
-{% highlight json tabtitle="numbers.json" %}
-{% include code-snippet/datetimepicker/rtl-cs1/app/numbers.json %}
-{% endhighlight %}
-{% highlight js tabtitle="numbers.jsx" %}
-{% include code-snippet/datetimepicker/rtl-cs1/app/numbers.jsx %}
-{% endhighlight %}
-{% highlight json tabtitle="timezonenames.json" %}
-{% include code-snippet/datetimepicker/rtl-cs1/app/timeZoneNames.json %}
-{% endhighlight %}
-{% highlight js tabtitle="timezonenames.jsx" %}
-{% include code-snippet/datetimepicker/rtl-cs1/app/timeZoneNames.jsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -225,41 +139,11 @@ The following code example initialize the DateTimePicker component in `Arabic` c
 `[Functional-component]`
 
 {% tabs %}
-{% highlight json tabtitle="ca-gregorian.json" %}
-{% include code-snippet/datetimepicker/rtl-cs2/app/ca-gregorian.json %}
-{% endhighlight %}
-{% highlight js tabtitle="ca-gregorian.jsx" %}
-{% include code-snippet/datetimepicker/rtl-cs2/app/ca-gregorian.jsx %}
-{% endhighlight %}
-{% highlight json tabtitle="currencies.json" %}
-{% include code-snippet/datetimepicker/rtl-cs2/app/currencies.json %}
-{% endhighlight %}
-{% highlight js tabtitle="currencies.jsx" %}
-{% include code-snippet/datetimepicker/rtl-cs2/app/currencies.jsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/datetimepicker/rtl-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/datetimepicker/rtl-cs2/app/index.tsx %}
-{% endhighlight %}
-{% highlight json tabtitle="numberingsystems.json" %}
-{% include code-snippet/datetimepicker/rtl-cs2/app/numberingSystems.json %}
-{% endhighlight %}
-{% highlight js tabtitle="numberingsystems.jsx" %}
-{% include code-snippet/datetimepicker/rtl-cs2/app/numberingSystems.jsx %}
-{% endhighlight %}
-{% highlight json tabtitle="numbers.json" %}
-{% include code-snippet/datetimepicker/rtl-cs2/app/numbers.json %}
-{% endhighlight %}
-{% highlight js tabtitle="numbers.jsx" %}
-{% include code-snippet/datetimepicker/rtl-cs2/app/numbers.jsx %}
-{% endhighlight %}
-{% highlight json tabtitle="timezonenames.json" %}
-{% include code-snippet/datetimepicker/rtl-cs2/app/timeZoneNames.json %}
-{% endhighlight %}
-{% highlight js tabtitle="timezonenames.jsx" %}
-{% include code-snippet/datetimepicker/rtl-cs2/app/timeZoneNames.jsx %}
 {% endhighlight %}
 {% endtabs %}
 

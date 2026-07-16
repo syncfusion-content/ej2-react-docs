@@ -101,10 +101,6 @@ yarn add @syncfusion/ej2-react-treegrid
 
 ## Adding CSS reference
 
-You can add the CSS files required for the Syncfusion React Tree Grid component using one of the following methods.
-
-### Option 1: Add CSS references from a theme package
-
 Themes for Syncfusion® React Tree Grid component can be applied using CSS files provided through npm theme packages, CDN, CRG, or Theme Studio. For more information, refer to the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
 
 Install the **Material 3** theme package using the following command:
@@ -122,28 +118,7 @@ Then add the following CSS reference to the **src/style.css** file:
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
 
-@import "../node_modules/@syncfusion/ej2-material3-theme/treegrid/treegrid/index.css";
-
-{% endhighlight %}
-{% endtabs %}
-
-### Option 2: Add CSS references from component packages
-
-The following CSS files are available in the **../node_modules/@syncfusion** package folder. Add these as references in **src/App.css**.
-
-{% tabs %}
-{% highlight css tabtitle="~/src/style.css" %}
-
-@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';  
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';  
-@import '../node_modules/@syncfusion/ej2-calendars/styles/material3.css';  
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css';  
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';  
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css';
-@import "../node_modules/@syncfusion/ej2-grids/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-react-treegrid/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/treegrid/index.css";
 
 {% endhighlight %}
 {% endtabs %}

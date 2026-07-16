@@ -1,6 +1,5 @@
 import { type IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import type { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
-import './App.css';
 
 let pivotData: IDataSet[] = [
   { 'Sold': 31, 'Amount': 52824, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q1' },

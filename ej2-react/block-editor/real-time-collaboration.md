@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Collaborative Editing in React Block Editor component | Syncfusion
+title: Real-Time Collabortion in React Block Editor component | Syncfusion
 description: Enable real-time collaborative editing in the React Block Editor component of Syncfusion Essential JS 2 with user presence and version history.
 platform: ej2-react
 control: Block Editor
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative Editing in React Block Editor component
+# Real-Time Collaboration in React Block Editor component
 
 The Block Editor supports real-time collaborative editing, enabling multiple users to work on the same document simultaneously. Collaboration is powered by **Yjs**, a Conflict-free Replicated Data Type (CRDT) framework that synchronizes document changes across all connected users and automatically resolves conflicts.
 
@@ -30,9 +30,11 @@ Inject the `Collaboration` module into the Block Editor before use.
 
 {% raw %}
 ```typescript
-import { BlockEditorComponent, Collaboration } from '@syncfusion/ej2-react-blockeditor';
+import { BlockEditorComponent, Collaboration, Inject } from '@syncfusion/ej2-react-blockeditor';
 
-BlockEditorComponent.Inject(Collaboration);
+<BlockEditorComponent>
+<Inject services={[Collaboration]} />
+</BlockEditorComponent>
 ```
 {% endraw %}
 
@@ -79,11 +81,12 @@ Create an adapter that provides the Yjs runtime and the shared fragment to the B
 {% raw %}
 ```typescript
 import * as Y from 'yjs';
+import { YjsAdapter } from '@syncfusion/ej2-react-blockeditor';
 
-const adapter = new YjsAdapter({
+const adapter: YjsAdapter = {
     yRuntime: Y,
     yXmlFragment: yFragment
-});
+};
 ```
 {% endraw %}
 
@@ -187,9 +190,7 @@ Inject the `VersionHistory` module and configure the `versionHistory` property u
 
 {% raw %}
 ```typescript
-import { BlockEditorComponent, VersionHistory } from '@syncfusion/ej2-react-blockeditor';
-
-BlockEditorComponent.Inject(VersionHistory);
+import { BlockEditorComponent, VersionHistory, Inject } from '@syncfusion/ej2-react-blockeditor';
 
 const myStorage = new CustomVersionStorage(`blockeditor-${uniqueId}`);
 
@@ -202,7 +203,8 @@ const myStorage = new CustomVersionStorage(`blockeditor-${uniqueId}`);
             snapshotInterval: 3000
         }
     }}
-/>
+> <Inject services={[VersionHistory]} />
+</BlockEditorComponent>
 ```
 {% endraw %}
 
