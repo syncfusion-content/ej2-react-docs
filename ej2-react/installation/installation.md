@@ -31,7 +31,7 @@ Before installing a Syncfusion<sup style="font-size:70%">&reg;</sup> React packa
     npm install react react-dom --save
     ```
 
-For more details about `package.json` configuration, refer to the [npm documentation](https://docs.npmjs.com/files/package.json). Also consult the [Syncfusion React release notes](https://ej2.syncfusion.com/react/documentation/release-notes) and [Syncfusion system requirements](https://ej2.syncfusion.com/react/documentation/system-requirements) for compatible React and Node.js versions.
+For more details about `package.json` configuration, refer to the [npm documentation](https://docs.npmjs.com/files/package.json). Also consult the [Syncfusion React release notes](https://ej2.syncfusion.com/react/documentation/release-notes) and [Syncfusion system requirements](https://ej2.syncfusion.com/react/documentation/system-requirement) for compatible React and Node.js versions.
 
 ## Method 1: Install using npm CLI
 
@@ -71,9 +71,9 @@ The command should print the installed Grid version and its dependency tree.
 
 2. Open a terminal **at the project root** and run `npm install`. This installs all modules listed as dependencies in [package.json](https://docs.npmjs.com/cli/v8/configuring-npm/package-json).
 
-    If a `package-lock.json` already exists, npm will resolve dependencies according to the lockfile. To update the lockfile, run `npm update <package-name>` instead.
+    If a `package-lock.json` already exists, npm will resolve dependencies according to the lock file. To update the lock file, run `npm update <package-name>` instead.
 
-If using an alternative package manager, use the equivalent command (for example, `yarn install` or `pnpm install`).
+If using an alternative package manager, use the equivalent command (for example, `yarn install`).
 
 ### Verify the install
 
@@ -117,6 +117,6 @@ If the install fails, see the [Common Installation Errors](common-installation-e
 
 After installation, refer to the following resources to start using Syncfusion<sup style="font-size:70%">&reg;</sup> React components:
 
-* [Syncfusion React Getting Started](https://ej2.syncfusion.com/react/documentation/getting-started/typescript) — quick-start guide for React.
+* [Syncfusion React Getting Started](https://ej2.syncfusion.com/react/documentation/getting-started) — quick-start guide for React.
 * [Syncfusion React Sample Browser](https://ej2.syncfusion.com/react/demos/) — online demos for every component.
 * [Syncfusion React components catalog](https://www.syncfusion.com/react-ui-components) — full list of available React components.

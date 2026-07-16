@@ -349,7 +349,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React ImageEditor provides 
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React Ribbon
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Ribbon component offers a Microsoft Office-like ribbon UI for grouping commands into tabs and contextual toolsets.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Ribbon component offers a Microsoft Office-like ribbon UI for grouping commands into tabs and contextual toolset.
 
 |Package Name  |Installation command|Components  |
 |--------|--------|-------|

@@ -76,7 +76,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Mac instal
 * Node.js 18.x or later (LTS recommended), required for running demos and using npm packages
 * At least 4 GB of free disk space for the installer and installed content
 
-For the latest system requirements, refer to the [Syncfusion system requirements documentation](https://ej2.syncfusion.com/react/documentation/system-requirements).
+For the latest system requirements, refer to the [Syncfusion system requirements documentation](https://ej2.syncfusion.com/react/documentation/system-requirement).
 
 ## Uninstalling the Mac Installer
 

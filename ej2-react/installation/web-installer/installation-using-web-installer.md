@@ -146,4 +146,4 @@ To remove all installed Syncfusion products for a version, select **Syncfusion E
 
 * [Syncfusion React Sample Browser](https://ej2.syncfusion.com/react/demos/) — online demos of all components
 * [Syncfusion NPM registration](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration) — register the license key for NPM-based projects
-* [Syncfusion system requirements](https://ej2.syncfusion.com/react/documentation/system-requirements) — supported platforms, Node.js, and browser versions
+* [Syncfusion system requirements](https://ej2.syncfusion.com/react/documentation/system-requirement) — supported platforms, Node.js, and browser versions

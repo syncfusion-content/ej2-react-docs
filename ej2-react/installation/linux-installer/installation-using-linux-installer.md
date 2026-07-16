@@ -19,7 +19,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript/React Linux inst
 * Node.js 14.x or later (LTS recommended) — required to run the included demos and to use NPM packages
 * A tool such as `unzip` to extract the archive
 
-For the latest system requirements, refer to the [Syncfusion system requirements documentation](https://ej2.syncfusion.com/react/documentation/system-requirements).
+For the latest system requirements, refer to the [Syncfusion system requirements documentation](https://ej2.syncfusion.com/react/documentation/system-requirement).
 
 ## Step-by-Step Installation
 

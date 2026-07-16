@@ -152,7 +152,7 @@ The drive selected for installation does not have enough free space to hold the 
 
 ## NPM peer-dependency or invalid-package errors
 
-**Error Message:** `npm install` fails with `EINVALIDPKG`, `peer depencies...`, or `EINVALIDTAG` errors when consuming Syncfusion<sup style="font-size:70%">&reg;</sup> NPM packages.
+**Error Message:** `npm install` fails with `EINVALIDPKG`, `peer dependencies...`, or `EINVALIDTAG` errors when consuming Syncfusion<sup style="font-size:70%">&reg;</sup> NPM packages.
 
 **Reason:**
 Common causes include an outdated Node.js / npm version, an unsupported React version, or an invalid tag such as `@latest` versus `@dev`.
