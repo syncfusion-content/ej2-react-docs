@@ -8,7 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Installing Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Mac Installer
+# Installing Syncfusion<sup style="font-size:70%">&reg;</sup> React (JavaScript - EJ2) Mac Installer
+
+The Mac distribution is provided as a `.dmg` disk image. Installation consists of mounting the DMG and dragging the Syncfusion application into the **Applications** folder.
 
 ## Resolving Security Warnings on macOS Catalina or Later
 
@@ -70,7 +72,25 @@ After installation, a license key is required to run the demo source included in
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Mac installer is compatible with:
 
-* macOS 10.13 (High Sierra) or later
-* Node.js 14.x or later (LTS recommended) (for running demos and using npm packages)
+* macOS 10.13 (High Sierra) or later, including Apple Silicon (M1/M2/M3) devices
+* Node.js 18.x or later (LTS recommended), required for running demos and using npm packages
+* At least 4 GB of free disk space for the installer and installed content
 
-For the latest system requirements, refer to the [Syncfusion system requirements documentation](https://ej2.syncfusion.com/react/documentation/system-requirements).
+For the latest system requirements, refer to the [Syncfusion system requirements documentation](https://ej2.syncfusion.com/react/documentation/system-requirement).
+
+## Uninstalling the Mac Installer
+
+To remove the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Mac installer:
+
+1. Open the **Applications** folder in Finder.
+2. Drag the **Syncfusion** application to the **Trash**, or right-click and select **Move to Trash**.
+3. Empty the **Trash** to complete the uninstallation.
+
+The application bundle in Applications is self-contained; there are no additional files to remove.
+
+## Next Steps
+
+After installation, refer to the following resources to get started:
+
+* [Syncfusion React Sample Browser](https://ej2.syncfusion.com/react/demos/) — online demos of all components
+* [Syncfusion NPM registration](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration) — register the license key for NPM-based projects
