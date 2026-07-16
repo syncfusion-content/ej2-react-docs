@@ -69,9 +69,29 @@ npm install @syncfusion/ej2-react-diagrams
 
 N> Installing `@syncfusion/ej2-react-diagrams` automatically installs the required dependency packages.
 
-## Step 4: Add the required CSS references
+## Step 4: Add the required styles
 
-Add the required Syncfusion® styles to the **src/App.css** file by replacing the existing content with the following CSS imports:
+The Diagram component needs Syncfusion® theme styles to display correctly. Add the styles using one of the following options.
+
+### Option 1: Add styles from a theme package
+
+Syncfusion® theme packages include ready-to-use styles for supported components. Install the Tailwind 3 theme package using the following command:
+
+```
+npm install @syncfusion/ej2-tailwind3-theme --save
+```
+
+Add the following import to the **src/App.css** file:
+
+```
+@import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/diagram/index.css';
+```
+
+For the list of available themes, refer to the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
+
+### Option 2: Add styles from component packages
+
+After installing the Diagram package, the required style files are available under the **node_modules/@syncfusion** directory. Add the following imports to the **src/App.css** file:
 
 ```
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
@@ -80,7 +100,7 @@ Add the required Syncfusion® styles to the **src/App.css** file by replacing th
 @import '../node_modules/@syncfusion/ej2-react-diagrams/styles/tailwind3.css';
 ```
 
-N> Syncfusion® provides multiple built-in themes. If your application uses a different theme, replace the **tailwind3.css** references with the corresponding theme file, such as **material3.css**.
+N> Syncfusion® provides multiple built-in themes. If the application uses a different theme, replace the **tailwind3.css** references with the corresponding theme file, such as **material3.css**.
 
 N> Ensure that **App.css** is imported in the **src/App.tsx** file so that the theme styles are applied to the Diagram component.
 

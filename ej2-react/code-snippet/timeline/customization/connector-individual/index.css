@@ -14,3 +14,7 @@
 .custom-connector .state-intermediate.e-connector::after {
   border: 1.5px #4d85f5 dashed;
 }
+
+#timeline {
+  height: 350px;
+}

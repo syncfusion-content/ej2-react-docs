@@ -12,3 +12,7 @@
   border-color: #f7c867;
   border-width: 1.4px;
 }
+
+#timeline {
+  height: 350px;
+}

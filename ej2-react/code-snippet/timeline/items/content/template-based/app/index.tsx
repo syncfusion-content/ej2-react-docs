@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as ReactDom from "react-dom";
+import * as ReactDOM from 'react-dom/client';
 import { TimelineComponent, ItemsDirective, ItemDirective } from '@syncfusion/ej2-react-layouts';
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
   const templateContents = [
     { title: 'Shipped', description: 'Package details received', info: '- Awaiting dispatch' },
     { title: 'Departed', description: 'In-transit', info: '(International warehouse)' },
-    { title: 'Arrived', description: 'Package arrived at nearest hub', info: '(New york - US)' }
+    { title: 'Arrived', description: 'Package arrived at nearest hub', info: '(New York - US)' }
 ];
 
 const contentTemplate = (data: any) => (
@@ -25,7 +25,7 @@ const contentTemplate = (data: any) => (
 );
 
 return (
-  <div className="container" style={{ height: '330px', marginTop: '30px' }}>
+  <div className="container">
       <TimelineComponent id="timeline">
           <ItemsDirective>
               {templateContents.map((item, index) => (
@@ -39,4 +39,5 @@ return (
 
 }
 export default App;
-ReactDom.render(<App />, document.getElementById("element"));
+const root = ReactDOM.createRoot(document.getElementById('element'));
+root.render(<App />);

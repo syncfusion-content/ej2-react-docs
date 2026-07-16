@@ -9,10 +9,11 @@ function App() {
   const idRules = { required: true };
   const unitPriceRules = { required: true, min: 1 };
   const dropdownEditParams = { params: { showSpinButton: false } };
+  const editParams = { params: { popupHeight: '200px' } };
   return <GridComponent dataSource={inventoryStoreData} editSettings={editOptions} allowPaging={true} toolbar={toolbarOptions} height={265}>
     <ColumnsDirective>
       <ColumnDirective field='ID' headerText='ID' width='120' textAlign="Right" isPrimaryKey={true} validationRules={idRules} />
-      <ColumnDirective field='Product' headerText='Product Name' width='180' editType='dropdownedit' edit={{ params: { popupHeight: '200px' } }} />
+      <ColumnDirective field='Product' headerText='Product Name' width='180' editType='dropdownedit' edit={editParams} />
       <ColumnDirective field='VendorA' headerText='Vendor A (units)' width='160' textAlign='Right' editType='numericedit' edit={dropdownEditParams} />
       <ColumnDirective field='VendorB' headerText='Vendor B (units)' width='160' textAlign='Right' editType='numericedit' edit={dropdownEditParams} />
       <ColumnDirective field='VendorC' headerText='Vendor C (units)' width='160' textAlign='Right' editType='numericedit' edit={dropdownEditParams} />
