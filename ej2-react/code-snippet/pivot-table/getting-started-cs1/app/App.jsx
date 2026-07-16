@@ -1,5 +1,4 @@
 import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
-import './App.css';
 
 let pivotData = [
   { 'Sold': 31, 'Amount': 52824, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2025', 'Quarter': 'Q1' },

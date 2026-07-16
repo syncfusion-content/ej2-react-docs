@@ -23,3 +23,7 @@
 .dot-size .large .e-dot {
   --dot-size: 30px;
 }
+
+#timeline {
+  height: 350px;
+}

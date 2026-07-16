@@ -1,6 +1,7 @@
-import { SpeedDialComponent, SpeedDialItemModel } from '@syncfusion/ej2-react-buttons';
+import { SpeedDialComponent, type SpeedDialItemModel } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
-import * as ReactDom from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import '../index.css';
 
 function App() {
   const items: SpeedDialItemModel[] = [
@@ -27,4 +28,4 @@ function App() {
   );
 }
 export default App;
-ReactDom.render(<App />, document.getElementById('button'));
+createRoot(document.getElementById('button')!).render(<App />);

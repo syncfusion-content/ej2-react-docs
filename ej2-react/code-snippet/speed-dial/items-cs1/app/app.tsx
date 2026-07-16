@@ -1,12 +1,13 @@
-import { SpeedDialComponent, SpeedDialItemModel } from '@syncfusion/ej2-react-buttons';
+import { SpeedDialComponent, type SpeedDialItemModel } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
-import * as ReactDom from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import '../index.css';
 
 function App() {
   const items: SpeedDialItemModel[] = [
-    { iconCss: 'e-icons e-cut' },
-    { iconCss: 'e-icons e-copy' },
-    { iconCss: 'e-icons e-paste' }
+    { iconCss: 'e-icons e-cut', title: 'Cut' },
+    { iconCss: 'e-icons e-copy', title: 'Copy' },
+    { iconCss: 'e-icons e-paste', title: 'Paste' }
   ];
 
   return (
@@ -17,4 +18,4 @@ function App() {
   );
 }
 export default App;
-ReactDom.render(<App />, document.getElementById('button'));
+createRoot(document.getElementById('button')!).render(<App />);

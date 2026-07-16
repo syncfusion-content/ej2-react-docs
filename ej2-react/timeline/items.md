@@ -27,7 +27,7 @@ Define simple text content for Timeline items using string values.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/timeline/items/content/string-based/app/index.tsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.css" %}
+{% highlight css tabtitle="index.css" %}
 {% include code-snippet/timeline/items/content/string-based/index.css %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
@@ -60,7 +60,11 @@ Create rich, dynamic content for Timeline items by specifying template selectors
 
 ## Adding opposite content
 
-Enhance Timeline items with supplementary information using the [oppositeContent](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineItem#oppositecontent) property. This content appears on the opposite side of the timeline from the main content and is ideal for dates, metadata, or secondary details. Like content property, oppositeContent accepts both string and template values.
+Enhance Timeline items with supplementary information using the [oppositeContent](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineItem#oppositecontent) property. This content appears on the opposite side of the timeline from the main content and is ideal for dates, metadata, or secondary details. Like the content property, oppositeContent accepts both string and template values.
+
+### String opposite content
+
+Define simple text as opposite content using string values.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -78,6 +82,27 @@ Enhance Timeline items with supplementary information using the [oppositeContent
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/timeline/items/opposite-content" %}
+
+### Templated opposite content
+
+Create rich, dynamic opposite content for Timeline items using templates to display structured information such as time labels and category tags.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/timeline/items/opposite-content-template/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/timeline/items/opposite-content-template/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/timeline/items/opposite-content-template/index.css %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/timeline/items/opposite-content-template/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/timeline/items/opposite-content-template" %}
 
 ## Customizing dot appearance
 
@@ -114,7 +139,7 @@ Display short text labels within dots by using CSS classes or template [`content
 
 ## Disabling items
 
-Control item interactivity using the [disabled](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineItem#disabled) property. When set to `true`, the item appears visually disabled reduced opacity and becomes non-interactive. The default value is `false`.
+Control item interactivity using the [disabled](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineItem#disabled) property. When set to `true`, the item appears visually disabled with reduced opacity and becomes non-interactive. The default value is `false`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -136,3 +161,20 @@ Control item interactivity using the [disabled](https://ej2.syncfusion.com/react
 ## CSS class customization
 
 Apply custom styling to individual Timeline items using the [cssClass](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineItem#cssclass) property. This property accepts CSS class names that enable comprehensive visual customization including colors, fonts, spacing, and layout modifications.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/timeline/items/css-class/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/timeline/items/css-class/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/timeline/items/css-class/index.css %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/timeline/items/css-class/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/timeline/items/css-class" %}

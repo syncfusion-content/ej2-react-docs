@@ -35,14 +35,14 @@ To create a new React application, run the following command.
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+To set up a React application in a TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in a JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -54,7 +54,7 @@ npm run dev
 
 All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.
 
-To install `Timeline` component, use the following command
+To install the `Timeline` component, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-layouts --save
@@ -69,9 +69,9 @@ Import the required CSS references for the Timeline component in `src/App.css` a
 @import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
 ```
 
-## Adding Timeline component to the application
+## Adding the Timeline Component to the Application
 
-To include the Timeline component in the application, import the `TimelineComponent` from the `ej2-react-layouts` package into the `App.tsx` file.
+To include the Timeline component in your application, import the `TimelineComponent` from the `ej2-react-layouts` package into the `App.tsx` file.
 
 Each Timeline item is defined using the `ItemDirective`, which must be placed inside the `ItemsDirective`. The `ItemsDirective` acts as a container for managing multiple Timeline items, and each `ItemDirective` represents an individual entry in the Timeline.
 
@@ -80,12 +80,12 @@ Each Timeline item is defined using the `ItemDirective`, which must be placed in
 ```ts
 import { TimelineComponent, ItemsDirective, ItemDirective } from '@syncfusion/ej2-react-layouts';
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from 'react-dom/client';
 import "./App.css";
 
 function App() {
   return (
-    <div id='timeline' style={{ height: "350px" }}>
+    <div id="timeline" style={{ height: "350px" }}>
       <TimelineComponent>
           <ItemsDirective>
               <ItemDirective />
@@ -98,7 +98,10 @@ function App() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById("element"));
+export default App;
+const root = ReactDOM.createRoot(
+  document.getElementById('element')
+);
 root.render(<App />);
 ```
 {% endraw %}
@@ -111,7 +114,7 @@ Run the `npm run dev` command in the console to start the development server. Th
 npm run dev
 ```
 
-The following example shows a basic Timeline component.
+The following example renders a basic Timeline with four default items.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -119,6 +122,9 @@ The following example shows a basic Timeline component.
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/timeline/getting-started/app/index.tsx %}
+{% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/timeline/items/content/string-based/index.css %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
 {% include code-snippet/timeline/getting-started/index.html %}

@@ -29,3 +29,7 @@
     background-color: unset;
     --dot-size: 25px;
 }
+
+#timeline {
+  height: 350px;
+}

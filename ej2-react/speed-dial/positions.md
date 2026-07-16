@@ -30,9 +30,6 @@ The available position values are:
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/speed-dial/position-cs1/app/app.tsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.css" %}
-{% include code-snippet/speed-dial/position-cs1/index.css %}
-{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/speed-dial/position-cs1" %}
@@ -41,27 +38,19 @@ The available position values are:
 
 Auto-open the SpeedDial action items when the user hovers over the button by enabling the [`opensOnHover`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#opensonhover) property. By default, items only display when the button is clicked. Enabling hover opening provides a more interactive experience where items appear as the user approaches the button.
 
-```ts
-{/* Import the Speed Dial. */}
-import { SpeedDialComponent, SpeedDialItemModel } from '@syncfusion/ej2-react-buttons';
-import * as React from 'react';
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/speed-dial/position-cs4/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/speed-dial/position-cs4/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/speed-dial/position-cs4/index.css %}
+{% endhighlight %}
+{% endtabs %}
 
-{/* To render Speed Dial.*/}
-function App() {
-
-  const items: SpeedDialItemModel[] = [
-    { iconCss: 'e-icons e-cut' },
-    { iconCss: 'e-icons e-copy' },
-    { iconCss: 'e-icons e-paste' }
-  ];
-
-  return (
-    {/* Initialize the SpeedDial component. */}
-    <SpeedDialComponent id='speeddial' openIconCss='e-icons e-edit' closeIconCss='e-icons e-close' items={items} opensOnHover= {true} target="#targetElement"></SpeedDialComponent>
-  );
-}
-export default App;
-```
+ {% previewsample "page.domainurl/code-snippet/speed-dial/position-cs4" %}
 
 ## Programmatically show/hide Speed Dial items
 
@@ -75,9 +64,6 @@ The following example demonstrates how to open and close the action items progra
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/speed-dial/position-cs2/app/app.tsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.css" %}
-{% include code-snippet/speed-dial/position-cs2/index.css %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -95,9 +81,6 @@ The following sample demonstrates how to refresh the SpeedDial position when lay
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/speed-dial/position-cs3/app/app.tsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.css" %}
-{% include code-snippet/speed-dial/position-cs3/index.css %}
 {% endhighlight %}
 {% endtabs %}
 

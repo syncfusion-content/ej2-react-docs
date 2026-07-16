@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as ReactDom from "react-dom";
+import * as ReactDOM from 'react-dom/client';
 import { TimelineComponent, ItemsDirective, ItemDirective, TimelineItemModel } from '@syncfusion/ej2-react-layouts';
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
     }
 
     return (
-        <div id='timeline' style={{ height: "150px", width: "600px", margin: '50px auto' }}>
+        <div id='timeline'>
             <TimelineComponent cssClass='custom-timeline' template={getTemplate} orientation='Horizontal' >
                 <ItemsDirective>
                     {projectMilestones.map((item, index) => {
@@ -38,4 +38,5 @@ function App() {
     );
 }
 export default App;
-ReactDom.render(<App />, document.getElementById("element"));
+const root = ReactDOM.createRoot(document.getElementById('element'));
+root.render(<App />);

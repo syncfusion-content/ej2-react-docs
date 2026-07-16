@@ -25,7 +25,7 @@ To get started quickly with the React [Pivot Table](https://www.syncfusion.com/r
 
 ## Setup for local development
 
-Easily set up a React application using [Vite](https://vitejs.dev), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
+Easily set up a React application using [Vite](https://vitejs.dev), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide).
 
 > **Note:** To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
@@ -66,17 +66,15 @@ npm install @syncfusion/ej2-tailwind3-theme --save
 {% endhighlight %}
 {% highlight bash tabtitle="yarn" %}
 
-yarn add @syncfusion/@syncfusion/ej2-tailwind3-theme
+yarn add @syncfusion/ej2-tailwind3-theme
 
 {% endhighlight %}
 {% endtabs %}
 
-By default, Vite projects include a `index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `index.css` file to prevent style conflicts.
-
-The required styles for the Pivot Table component are imported in the **src/App.css** file:
+By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Replace the contents of `src/index.css` with the following import to apply the Pivot Table theme styles:
 
 {% tabs %}
-{% highlight css tabtitle="App.css" %}
+{% highlight css tabtitle="src/index.css" %}
 
 @import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pivotview/index.css';
 
@@ -85,7 +83,7 @@ The required styles for the Pivot Table component are imported in the **src/App.
 
 ## Adding Pivot Table component
 
-The Pivot Table code should be placed in the **src/App.tsx** file.
+The Pivot Table code should be placed in the **src/App.tsx** file (or **src/App.jsx** if you chose the JavaScript variant). Refer to the tab that matches your Vite variant.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -94,12 +92,11 @@ The Pivot Table code should be placed in the **src/App.tsx** file.
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/getting-started-cs1/app/App.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="App.css" %}
-{% include code-snippet/pivot-table/getting-started-cs1/app/App.css %}
-{% endhighlight %}
 {% endtabs %}
 
 ## Run the application
+
+Run the following command from the `my-app` directory, then open the URL printed in the terminal (by default `http://localhost:5173`) in your browser to view the Pivot Table.
 
 ```bash
 npm run dev

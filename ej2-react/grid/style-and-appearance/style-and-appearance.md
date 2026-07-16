@@ -1,20 +1,20 @@
 ---
 layout: post
-title: React DataGrid - Style and Appearance | Syncfusion
-description: React DataGrid style and appearance provides a consolidated guide to theming, CSS customization, and style tokens to match application design.
+title: React Data Grid - Style and Appearance | Syncfusion
+description: React Data Grid style and appearance provides a consolidated guide to theming, CSS customization, and style tokens to match application design.
 control: Style and appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and Appearance in Syncfusion® React DataGrid
+# Style and Appearance in Syncfusion® React Data Grid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React DataGrid provides flexible styling and appearance customization options to align with your application's design requirements. You can choose from a wide range of built-in themes, customize visual elements using CSS, and create consistent experiences through theme-based styling.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Data Grid provides flexible styling and appearance customization options to align with your application's design requirements. You can choose from a wide range of built-in themes, customize visual elements using CSS, and create consistent experiences through theme-based styling.
 
 ## Built-in themes
 
-The DataGrid components include a comprehensive collection of themes to match popular design systems and provide both light and dark variants. Available themes include:
+The Data Grid component include a comprehensive collection of themes to match popular design systems and provide both light and dark variants. Available themes include:
 
 | Theme                         | Style Sheet Name                         |
 |------------------------------|------------------------------------------|
@@ -59,7 +59,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> built-in themes are distributed
 
 ## Size modes
 
-The DataGrid components support two size modes to optimize user experience across different devices and input methods:
+The Data Grid component support two size modes to optimize user experience across different devices and input methods:
 
 - **Normal mode** (default) — Standard sizing optimized for mouse and keyboard interactions.
 - **Touch mode** (bigger) — Larger elements with increased padding, font sizes, and touch targets for improved touch interaction and accessibility. Apply the `e-bigger` CSS class to the `<body>` element to enable touch-friendly sizing.
@@ -96,12 +96,12 @@ The following table highlights commonly used color related variables in the Mate
 
 | Name | Purpose |
 |------|-------------|
-| --e-font-name | Specifies the default font family used across the DataGrid |
-| --color-sf-content-bg-color-alt1 | Controls the background of the DataGrid header |
-| --color-sf-content-bg-color | Controls the background of the DataGrid content |
+| --e-font-name | Specifies the default font family used across the Data Grid |
+| --color-sf-content-bg-color-alt1 | Controls the background of the Data Grid header |
+| --color-sf-content-bg-color | Controls the background of the Data Grid content |
 | --color-sf-table-bg-color-hover | Defines the background styling for selected rows during hover interaction |
 | --color-sf-content-bg-color-hover | Defines background behavior when primary elements are hovered |
-| --color-sf-primary | Defines the main theme styling used across components |
+| --color-sf-primary | Defines the main theme styling used across component |
 | --color-sf-primary-light | Provides a softer variation of the primary theme for backgrounds |
 | --color-sf-border-light | Specifies styling for light borders and separators |
 
@@ -111,9 +111,9 @@ The Bootstrap 5.3 theme extends Bootstrap's framework with CSS custom properties
 
 | Name | Purpose |
 |------|-------------|
-| --e-font-name | Specifies the default font family used across the DataGrid |
-| --color-sf-content-bg-color-alt1 | Controls the background of the DataGrid header |
-| --color-sf-content-bg-color | Controls the background of the DataGrid content |
+| --e-font-name | Specifies the default font family used across the Data Grid |
+| --color-sf-content-bg-color-alt1 | Controls the background of the Data Grid header |
+| --color-sf-content-bg-color | Controls the background of the Data Grid content |
 | --color-sf-table-bg-color-hover | Defines the background styling for selected rows during hover interaction |
 | --color-sf-content-bg-color-hover | Defines background behavior when primary elements are hovered |
 | --color-sf-primary | Defines the main theme styling used across components |
@@ -139,13 +139,13 @@ The Fluent 2 theme leverages modern CSS custom properties to provide a clean and
 
 | Name | Purpose |
 |------|-------------|
-| --e-font-name | Specifies the default font family used across the DataGrid |
-| --color-sf-content-bg-color-alt1 | Controls the main background of the DataGrid |
+| --e-font-name | Specifies the default font family used across the Data Grid |
+| --color-sf-content-bg-color-alt1 | Controls the main background of the Data Grid |
 | --color-sf-table-bg-color-hover | Defines the background styling for selected rows during hover interaction |
 | --color-sf-content-bg-color-hover | Defines background behavior when primary elements are hovered |
 | --color-sf-primary | Defines the main theme styling used across components |
 | --color-sf-border-light | Specifies styling for light borders and separators |
-| --color-sf-border-alt | Defines alternate border styling for DataGrid elements |
+| --color-sf-border-alt | Defines alternate border styling for Data Grid elements |
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -175,12 +175,12 @@ Syncfusion's Theme Studio tool allows creation of custom themes for all controls
 
 ## See also
 
-[Header style customization in React DataGrid](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/header#customizing-the-grid-header)
-[Paging style customization in React DataGrid](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/paging#customizing-the-grid-pager-root-element)
-[Sorting icon customization in React DataGrid](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/sorting#customizing-the-grid-sorting-icon)
-[Filter style customization in React DataGrid](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/filtering)
-[Grouping style customization in React DataGrid](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/grouping)
-[Toolbar style customization in React DataGrid](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/grouping)
-[Editing style customization in React DataGrid](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/editing)
-aggregate#customizing-the-aggregate-cell-elements)
-[Selection background styling in React DataGrid](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/selection#customizing-the-row-selection-background)
+[Customize Header](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/header#customizing-the-grid-header)
+[Customize Paging](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/paging#customizing-the-grid-pager-root-element)
+[Customize Sorting](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/sorting#customizing-the-grid-sorting-icon)
+[Customize Filtering](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/filtering)
+[Customize Grouping](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/grouping)
+[Customize Toolbar](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/grouping)
+[Customize Editing](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/editing)
+[Customize Aggregate](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/aggregate)
+[Customize Selection](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/selection#customizing-the-row-selection-background)

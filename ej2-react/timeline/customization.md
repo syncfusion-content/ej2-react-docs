@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in React Timeline component
+# Customization in the React Timeline component
 
 The Timeline component offers extensive customization options for visual styling including dot appearance, connector lines, borders, spacing, and color schemes. This section demonstrates various approaches to customize Timeline items and create visually distinctive event displays.
 
@@ -36,7 +36,7 @@ Define styles that apply uniformly to all Timeline item connectors to maintain c
 
 ### Individual styling
 
-Apply unique styles to individual connectors to visually differentiate particular Timeline sequence.
+Apply unique styles to individual connectors to visually differentiate a particular Timeline sequence.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
