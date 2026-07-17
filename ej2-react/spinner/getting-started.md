@@ -25,7 +25,7 @@ To create a new React application, run the following command.
 ```bash
 npm create vite@latest my-app
 ```
-This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
+This command will prompt you for a few settings for the new project, such as selecting a framework, variant, and linter preference as shown in the following image.
 
 ![Initial_setup](images/Initial-setup.jpg)
 
@@ -74,22 +74,21 @@ The following spinner code should be placed in the **src/App.tsx** file.
 
 ```ts
 import { createSpinner, showSpinner } from '@syncfusion/ej2-popups';
-import * as React from 'react';
 import { useEffect } from "react";
 import './App.css';
 
 function App() {
   useEffect(() => {
     componentDidMount();
-  });
+  }, []);
   function componentDidMount() {
     //createSpinner() method is used to create spinner
     createSpinner({
       // Specify the target for the spinner to show
-      target: document.getElementById('container'),
+      target: document.getElementById('container') as HTMLElement,
     });
     // showSpinner() will make the spinner visible
-    showSpinner(document.getElementById('container'));
+    showSpinner(document.getElementById('container') as HTMLElement);
   }
   return (<div className="control-pane">
     <div id="container" className="control-section col-lg-12 spinner-target"></div>
@@ -106,7 +105,7 @@ Run the `npm run dev` command in the terminal to start the development server. T
 npm run dev
 ```
 
-The output appears as follows.
+The output appears as follows in the preview sample.
 
 `[Class-component]`
 

@@ -58,14 +58,13 @@ npm run dev
 
 All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 
-To install `Carousel` component, use the following command
+To install `Carousel` component, use the following command.
 
 ```bash
 npm install @syncfusion/ej2-react-navigations --save
 ```
 
-The above command installs [Carousel dependencies](./getting-started#dependencies)
-which are required to render the component in the `React` environment.
+The above command installs [Carousel dependencies](./getting-started#dependencies) which are required to render the component in the `React` environment.
 
 ## Adding Style sheet to the Application
 
@@ -79,9 +78,7 @@ Add Carousel component's styles as given below in `App.css`.
 
 ## Add Carousel to the project
 
-Now, you can create `Carousel` component in the application. Add `Carousel` component in `src/App.tsx` file using the following code snippet.
-
-
+Now, create the `Carousel` component in the application. Add the `Carousel` component in the `src/App.tsx` file using the following code snippet.
 
 ```ts
 import { CarouselComponent, CarouselItemsDirective, CarouselItemDirective } from "@syncfusion/ej2-react-navigations";

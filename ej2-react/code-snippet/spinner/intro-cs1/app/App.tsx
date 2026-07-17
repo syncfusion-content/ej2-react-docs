@@ -1,19 +1,18 @@
 
 
 
-import { createSpinner, showSpinner, hideSpinner } from '@syncfusion/ej2-popups';
+import { createSpinner, showSpinner } from '@syncfusion/ej2-popups';
 import * as React from 'react';
-import * as ReactDOM from "react-dom";
 
 export default class App extends React.Component<{}, {}> {
-  componentDidMount(prevProps) {
+  componentDidMount() {
     //createSpinner() method is used to create spinner
     createSpinner({
       // Specify the target for the spinner to show
-      target: document.getElementById('container'),
+      target: document.getElementById('container') as HTMLElement,
     });
     // showSpinner() will make the spinner visible
-    showSpinner(document.getElementById('container'));
+    showSpinner(document.getElementById('container') as HTMLElement);
   }
   render() {
     return (

@@ -1,7 +1,7 @@
 import { createSpinner, showSpinner } from '@syncfusion/ej2-popups';
 import * as React from 'react';
 export default class App extends React.Component {
-    componentDidMount(prevProps) {
+    componentDidMount() {
         //createSpinner() method is used to create spinner
         createSpinner({
             // Specify the target for the spinner to show
