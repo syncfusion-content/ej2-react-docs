@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The Rich Text Editor supports automatic cleanup of clipboard content during copy (`Ctrl + C`) and cut (`Ctrl + X`) operations. When this feature is enabled, unwanted inline styles are automatically removed from the clipboard content while preserving important structural elements such as tables, lists, and images. You can enable this behavior using the [enableClipboardCleanup](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor#enableClipboardCleanup) property.
 
-> To use ClipboardCleanup feature, inject link module using the `<Inject services{[ClipboardCleanup]} />`.
+> To use ClipBoardCleanup feature, inject link module using the `<Inject services{[ClipBoardCleanup]} />`.
 
 When `enableClipboardCleanup` is set to `true`, copy and cut operations are intercepted to remove unwanted inline styles. When set to `false` the browser’s default copy and cut behavior applies.
 
@@ -80,11 +80,11 @@ In this example, the `beforeClipboardWrite` event is used to customize the selec
 
 ### Best Practices
 
-- Always include `ClipboardCleanup` in production application - it’s the #1 way to prevent style explosion.
+- Always include `ClipBoardCleanup` in production application - it’s the #1 way to prevent style explosion.
 - Combine with Paste Cleanup module for even stricter incoming paste handling.
 - Use `beforeClipboardWrite` sparingly — heavy processing can slightly delay `Ctrl+C`.
 
 ### Common Issues
 
-- “Copied content still has inline styles” → Confirm `ClipboardCleanup` is in providers.
+- “Copied content still has inline styles” → Confirm `ClipBoardCleanup` is in providers.
 - “Event not firing” → Make sure you’re using the correct event name `beforeClipboardWrite` (camelCase in React).

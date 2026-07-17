@@ -5,7 +5,7 @@ import * as ReactDOM from "react-dom";
  const App = () => {
     return (
       <div className='control-container'>
-        <CarouselComponent animationEffect= "Custom" cssClass= "parallax">
+        <CarouselComponent animationEffect="Custom" cssClass="parallax">
           <CarouselItemsDirective>
             <CarouselItemDirective template='<figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/cardinal.png" alt="cardinal" style="height:100%;width:100%;" /><figcaption class="img-caption">Cardinal</figcaption></figure>' />
             <CarouselItemDirective template='<figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/hunei.png" alt="kingfisher" style="height:100%;width:100%;" /><figcaption class="img-caption">Kingfisher</figcaption></figure>' />

@@ -60,10 +60,10 @@ DOM row virtualization renders only rows visible in the viewport, plus configura
 Row virtualization is ideal for datasets with many rows (10,000+) but manageable column counts (fewer than 30). It simplifies horizontal scrolling since no columns are hidden, and ensures all columns remain accessible.
 
 {% tabs %}
-{% highlight jsx tabtitle="App.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/dom-virtualization-massive-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight tsx tabtitle="App.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/dom-virtualization-massive-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
@@ -78,10 +78,10 @@ Row virtualization is ideal for datasets with many rows (10,000+) but manageable
 Buffer configuration defines how many extra rows the Grid renders beyond the visible viewport. The [rowBuffer](../../api/grid/domVirtualizationSettings#rowbuffer) property controls this behavior. The default buffer value is `rowBuffer: 5`, which balances scroll smoothness against DOM size.
 
 {% tabs %}
-{% highlight jsx tabtitle="App.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/dom-virtualization-buffer-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight tsx tabtitle="App.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/dom-virtualization-buffer-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
@@ -194,10 +194,10 @@ Server-side virtualization powerfully handles extremely large datasets (millions
 Server-side virtualization manages only page size rows in memory at any time, scaling regardless of backend capacity and supporting live data streams and real-time updates. This approach is ideal for extremely large datasets exceeding browser DOM height limits.
 
 {% tabs %}
-{% highlight jsx tabtitle="App.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/dom-virtual-scroll-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight tsx tabtitle="App.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/dom-virtual-scroll-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
