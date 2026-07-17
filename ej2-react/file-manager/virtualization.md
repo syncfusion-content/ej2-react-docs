@@ -23,7 +23,7 @@ import { FileManagerComponent, Inject, Virtualization } from '@syncfusion/ej2-re
 import * as React from 'react';
 
 function App() {
-    let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
+    let hostUrl: string = "https://physical-service.syncfusion.com/";
     return (
             // specifies the tag to render the File Manager component
             <FileManagerComponent id="filemanager" ajaxSettings={{

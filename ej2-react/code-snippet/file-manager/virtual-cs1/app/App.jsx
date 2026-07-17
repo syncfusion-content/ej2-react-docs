@@ -5,7 +5,7 @@ import * as React from 'react';
  * File Manager virtualization feature sample
  */
 function App() {
-    let hostUrl = "https://ej2-aspcore-service.azurewebsites.net/";
+    let hostUrl = "https://physical-service.syncfusion.com/";
     let height = "375px";
     let view = "Details";
     let enableVirtualization = true;

@@ -1,11 +1,10 @@
 import { createSpinner, showSpinner } from '@syncfusion/ej2-popups';
-import * as React from 'react';
 import { useEffect } from "react";
 function App() {
     useEffect(() => {
         componentDidMount();
-    });
-    function componentDidMount(prevProps) {
+    }, []);
+    function componentDidMount() {
         //createSpinner() method is used to create spinner
         createSpinner({
             // Specify the target for the spinner to show
@@ -18,3 +17,4 @@ function App() {
         <div id="container" className="control-section col-lg-12 spinner-target"></div>
       </div>);
 }
+export default App;

@@ -3,7 +3,7 @@ import { DetailsView, FileManagerComponent, NavigationPane, Toolbar, Inject, sor
 import * as React from 'react';
 
 function App() {
-  let hostUrl : string = "https://ej2-aspcore-service.azurewebsites.net/";
+  let hostUrl : string = "https://physical-service.syncfusion.com/";
   let ajaxSettings: object = {
     downloadUrl: hostUrl + 'api/NaturalSorting/Download',
     getImageUrl: hostUrl + "api/NaturalSorting/GetImage",

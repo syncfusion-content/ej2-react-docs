@@ -4,7 +4,7 @@ import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
 function App() {
     let fileObj;
-    let hostUrl = "https://ej2-aspcore-service.azurewebsites.net/";
+    let hostUrl = "https://physical-service.syncfusion.com/";
     let height = "330px";
     let view = "Details";
     let ajaxSettings = {

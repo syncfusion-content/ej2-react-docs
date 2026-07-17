@@ -8,26 +8,26 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Styles and appearance in React Carousel component
+# Styles and appearance in Carousel component
 
 To modify the Carousel appearance, you need to override the default CSS of Carousel component. Please find the list of CSS classes and its corresponding section in Carousel component. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 
-## CSS Structure in React Carousel Control
+## CSS Structure in Carousel Control
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on user preference.
 
-CSS Class | Purpose of Class
------|-----
-|.e-carousel .e-carousel-item|To customize the carousel item
-|.e-carousel-item.e-active| To customize the active carousel item
-|.e-carousel .e-carousel-indicators|To customize the indicators
-|.e-carousel .e-carousel-indicators .e-indicator-bars .e-indicator-bar|To customize the indicator bars
-|.e-carousel .e-carousel-indicators .e-indicator-bars .e-indicator-bar .e-indicator|To customize the individual indicator appearance
-|.e-carousel .e-carousel-navigators|To customize the navigators
-|.e-carousel .e-carousel-navigators .e-previous|To customize the previous button
-|.e-carousel .e-carousel-navigators .e-next|To customize the next button
-|.e-carousel .e-carousel-navigators .e-play-pause|To customize the play and pause button
-|.e-carousel.e-partial .e-carousel-slide-container|To customize the partial visible slides
+| CSS Class | Purpose of Class |
+| ----- | ----- |
+| `.e-carousel .e-carousel-item` | To customize the carousel item |
+| `.e-carousel-item.e-active` | To customize the active carousel item |
+| `.e-carousel .e-carousel-indicators` | To customize the indicators |
+| `.e-carousel .e-carousel-indicators .e-indicator-bars .e-indicator-bar` | To customize the indicator bars |
+| `.e-carousel .e-carousel-indicators .e-indicator-bars .e-indicator-bar .e-indicator` | To customize the individual indicator appearance |
+| `.e-carousel .e-carousel-navigators` | To customize the navigators |
+| `.e-carousel .e-carousel-navigators .e-previous` | To customize the previous button |
+| `.e-carousel .e-carousel-navigators .e-next` | To customize the next button |
+| `.e-carousel .e-carousel-navigators .e-play-pause` | To customize the play and pause button |
+| `.e-carousel.e-partial .e-carousel-slide-container` | To customize the partial visible slides |
 
 ![Carousel](./images/carousel.jpg)
 

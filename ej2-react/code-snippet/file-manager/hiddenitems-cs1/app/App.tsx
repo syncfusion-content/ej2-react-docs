@@ -3,7 +3,7 @@ import { DetailsView, FileManagerComponent, NavigationPane, Toolbar, Inject } fr
 import * as React from 'react';
 
 function App() {
-  let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
+  let hostUrl: string = "https://physical-service.syncfusion.com/";
   let view: string = "LargeIcons";
   let height: string = "375px";
   let showHiddenItems: boolean = true;

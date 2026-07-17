@@ -7,7 +7,7 @@ import { TooltipComponent, TooltipEventArgs } from '@syncfusion/ej2-react-popups
 function App() {
     let fileObj: FileManagerComponent;
     let tooltipObj: TooltipComponent;
-    let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";   
+    let hostUrl: string = "https://physical-service.syncfusion.com/";   
     let height: string = "375px";
     let ajaxSettings: object = {
         downloadUrl: hostUrl + 'api/FileManager/Download',

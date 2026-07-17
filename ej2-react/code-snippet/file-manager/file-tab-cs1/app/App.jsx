@@ -18,7 +18,7 @@ function App() {
           </div>);
     }
     function template2() {
-        let hostUrl = "https://ej2-aspcore-service.azurewebsites.net/";
+        let hostUrl = "https://physical-service.syncfusion.com/";
         let allowDragAndDrop = true;
         let ajaxSettings = {
             downloadUrl: hostUrl + 'api/FileManager/Download',

@@ -134,7 +134,7 @@ Follow the below steps to add the React File Manager component to the Next.js pr
 import { DetailsView, FileManagerComponent, NavigationPane, Toolbar, Inject } from '@syncfusion/ej2-react-filemanager';
 
 function App() {
-  let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
+  let hostUrl: string = "https://physical-service.syncfusion.com/";
   let ajaxSettings: object = {
     url: hostUrl + "api/FileManager/FileOperations",
     getImageUrl: hostUrl + "api/FileManager/GetImage"

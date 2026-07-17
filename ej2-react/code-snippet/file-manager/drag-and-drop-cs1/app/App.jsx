@@ -3,7 +3,7 @@ import { DetailsView, FileManagerComponent, Inject, NavigationPane, Toolbar } fr
 import * as React from 'react';
 function App() {
     let fileObj;
-    let hostUrl = "https://ej2-aspcore-service.azurewebsites.net/";
+    let hostUrl = "https://physical-service.syncfusion.com/";
     let height = "375px";
     let allowDragAndDrop = true;
     let ajaxSettings = {

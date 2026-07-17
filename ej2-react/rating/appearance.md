@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 You can also customize the appearance of rating component.
 
-## Items Count
+## Number of items to display
 
-You can specify the number of rating items using the [`itemsCount`](https://ej2.syncfusion.com/react/documentation/api/rating/#itemscount) property.
+You can specify the number of rating items using the [`itemsCount`](https://ej2.syncfusion.com/react/documentation/api/rating/index-default#itemscount) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,9 +27,9 @@ You can specify the number of rating items using the [`itemsCount`](https://ej2.
 
 {% previewsample "page.domainurl/code-snippet/rating/appearance/items-count-cs1" %}
 
-## Disabled
+## Setting disabled state
 
-Disable the rating component by setting the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/rating/#disabled) property to `true`. When disabled, the rating component prevents user interaction and may display a different visual appearance than an enabled component.
+Disable the rating component by setting the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/rating/index-default#disabled) property to `true`. When disabled, the rating component prevents user interaction and may display a different visual appearance than an enabled component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -42,9 +42,9 @@ Disable the rating component by setting the [`disabled`](https://ej2.syncfusion.
 
 {% previewsample "page.domainurl/code-snippet/rating/appearance/disabled-cs1" %}
 
-## Visible
+## Show or hide the rating
 
-Use the [`visible`](https://ej2.syncfusion.com/react/documentation/api/rating/#visible) property to control the visibility of the rating component. When set to `true`, the component is visible on the page. When set to `false`, the component is hidden.
+Use the [`visible`](https://ej2.syncfusion.com/react/documentation/api/rating/index-default#visible) property to control the visibility of the rating component. When set to `true`, the component is visible on the page. When set to `false`, the component is hidden.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -57,9 +57,9 @@ Use the [`visible`](https://ej2.syncfusion.com/react/documentation/api/rating/#v
 
 {% previewsample "page.domainurl/code-snippet/rating/appearance/visible-cs1" %}
 
-## Read only
+## Make the rating non-interactive
 
-You can use the [`readOnly`](https://ej2.syncfusion.com/react/documentation/api/rating/#readonly) property of the rating component to make the component non-interactive and prevent the user from changing the rating value.
+You can use the [`readOnly`](https://ej2.syncfusion.com/react/documentation/api/rating/index-default#readonly) property of the rating component to make the component non-interactive and prevent the user from changing the rating value.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -72,9 +72,9 @@ You can use the [`readOnly`](https://ej2.syncfusion.com/react/documentation/api/
 
 {% previewsample "page.domainurl/code-snippet/rating/appearance/read-only-cs1" %}
 
-## CssClass
+## Customizing the appearance
 
-You can customize the appearance of the rating component, such as by changing its colors, fonts, sizes, or other visual aspects by using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/rating/#cssclass) property.
+You can customize the appearance of the rating component, such as by changing its colors, fonts, sizes, or other visual aspects by using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/rating/index-default#cssclass) property.
 
 ### Changing rating symbol border color
 
@@ -132,7 +132,7 @@ Change the spacing between rating items by using the `cssClass` property and set
 
 {% previewsample "page.domainurl/code-snippet/rating/appearance/spacing-cs1" %}
 
-## Changing icon using CssClass
+### Changing icon using CssClass
 
 Change the rating item icon by using the `cssClass` property and setting the `content` CSS property of `.e-icons.e-star-filled:before` to your desired font icon.
 

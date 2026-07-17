@@ -14,17 +14,17 @@ You can load the carousel image in the webp format, which aims to create smaller
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/accordion/accordion-disable-cs1/app/index.jsx %}
+{% include code-snippet/carousel/default-webp/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/accordion/accordion-disable-cs1/app/index.tsx %}
+{% include code-snippet/carousel/default-webp/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/accordion/accordion-disable-cs1/index.html %}
+{% include code-snippet/carousel/default-webp/index.html %}
 {% endhighlight %}
 {% highlight css tabtitle="index.css" %}
-{% include code-snippet/accordion/accordion-disable-cs1/index.css %}
+{% include code-snippet/carousel/default-webp/index.css %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/accordion/accordion-disable-cs1" %}
+{% previewsample "page.domainurl/code-snippet/carousel/default-webp" %}

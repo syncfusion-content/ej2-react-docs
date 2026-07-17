@@ -2,7 +2,7 @@
 import { DetailsView, FileManagerComponent, NavigationPane, Toolbar, Inject } from '@syncfusion/ej2-react-filemanager';
 
 function App() {
-  let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
+  let hostUrl: string = "https://physical-service.syncfusion.com/";
   let view: string = "LargeIcons";
   let height: string = "375px";
   let ajaxSettings: object = {
