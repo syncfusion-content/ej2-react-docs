@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 This article provides a step-by-step guide for creating a [Gatsby](https://www.gatsbyjs.com) application and integrating Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components.
 
-`Gatsby` is an open-source React-based framework for building high-performance, modern web applications and static websites. It includes out-of-the-box optimizations and integrates React, GraphQL, and the modern JavaScript ecosystem.
+Gatsby is an open-source React-based framework for building high-performance, modern web applications and static websites. It includes out-of-the-box optimizations and integrates React, GraphQL, and the modern JavaScript ecosystem.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ This article provides a step-by-step guide for creating a [Gatsby](https://www.g
 
 ## Set up the Gatsby project
 
-To create a new `Gatsby` project, use one of the commands that are specific to either NPM or Yarn.
+To create a new Gatsby project, use one of the following npm or yarn commands.
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -35,7 +35,7 @@ yarn create gatsby
 {% endhighlight %}
 {% endtabs %}
 
-Using one of the above commands will lead you to set up additional configurations for the project, as below:
+After running one of the above commands, you'll be prompted to configure the project as follows:
 
 **Define the project name:** You can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
 
@@ -57,7 +57,7 @@ Create a new Gatsby site in the folder my-project?
 Shall we do this? (Y/n) » Yes
 ```
 
-Upon completing the aforementioned steps to create `my-project`, run the following command to jump into the project directory:
+After completing the above steps to create `my-project`, run the following command to navigate to the project directory:
 
 ```bash
 cd my-project
@@ -98,7 +98,7 @@ npm install @syncfusion/ej2-tailwind3-theme --save
 {% endhighlight %}
 {% highlight bash tabtitle="yarn" %}
 
-yarn add @syncfusion/@syncfusion/ej2-tailwind3-theme
+yarn add @syncfusion/ej2-tailwind3-theme
 
 {% endhighlight %}
 {% endtabs %}
@@ -117,7 +117,7 @@ yarn add @syncfusion/@syncfusion/ej2-tailwind3-theme
 
 ## Add a Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
-Follow the below steps to add the React Grid component to the Gatsby project:
+Follow these steps to add the React Grid component to the Gatsby project:
 
 **Step 1:** Import the Grid component and its required directives in the **src/pages/index.tsx** file.
 
@@ -191,4 +191,4 @@ The output will appear as follows:
 
 ## See also
 
-[Getting Started with the Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Component](../getting-started/quick-start)
+[Getting Started with the Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Components](./vite)

@@ -90,7 +90,7 @@ This guide uses the [React Grid component](https://www.syncfusion.com/react-comp
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
 
-npm install @syncfusion/ej2-react-grids --save
+npm install @syncfusion/ej2-react-grids
 
 {% endhighlight %}
 {% highlight bash tabtitle="YARN" %}
@@ -102,19 +102,19 @@ yarn add @syncfusion/ej2-react-grids
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS Styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React component provide built-in themes, which are available from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages). Additionally, themes can be loaded via CDN or customized using the [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components provide built-in themes, which are available from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages). Additionally, themes can be loaded via CDN or customized using the [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
 
 This example uses the Tailwind 3 theme for the Grid component from the theme package. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
 
-npm install @syncfusion/ej2-tailwind3-theme --save
+npm install @syncfusion/ej2-tailwind3-theme
 
 {% endhighlight %}
 {% highlight bash tabtitle="yarn" %}
 
-yarn add @syncfusion/@syncfusion/ej2-tailwind3-theme
+yarn add @syncfusion/ej2-tailwind3-theme
 
 {% endhighlight %}
 {% endtabs %}
@@ -229,10 +229,14 @@ yarn run dev
 {% endhighlight %}
 {% endtabs %}
 
+The Output will appears follows,
+
+![nextjs](./images/nextjs-output.png)
+
 To learn more about the functionality of the Grid component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/grid/getting-started#module-injection).
 
 > [View the Next.js Grid sample in the GitHub repository](https://github.com/SyncfusionExamples/ej2-nextjs-grid).
 
 ## See also
 
-[Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Component](../getting-started/quick-start)
+[Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Component](./vite)

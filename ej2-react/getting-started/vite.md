@@ -22,8 +22,6 @@ This article provides a step-by-step guide for setting up a [Vite](https://vite.
 
 To create a new `Vite` project, use one of the commands that are specific to either NPM or Yarn.
 
-> **Tip:** When you run the command below, you will be prompted with **"Install dependencies and start now? (yes/no)"**. Type `yes` to proceed with the installation and automatically start your development server, or `no` if you prefer to install dependencies manually later.
-
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
 npm create vite@latest my-project -- --template react
@@ -33,7 +31,16 @@ yarn create vite my-project --template react
 {% endhighlight %}
 {% endtabs %}
 
+After running the command, you will be prompted with a series of interactive questions to configure your project. Select the appropriate options for each prompt:
 
+1. **Select a linter to use**: Choose the linter for your project (for example, `ESLint`).
+2. **Install with npm and start now?**: Type `Yes` to proceed with installing the dependencies and automatically start the development server, or `No` to install dependencies manually later.
+
+Navigate into the project directory with:
+
+```
+cd my-project
+```
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
@@ -43,7 +50,7 @@ This guide uses the [React Grid component](https://www.syncfusion.com/react-comp
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
 
-npm install @syncfusion/ej2-react-grids --save
+npm install @syncfusion/ej2-react-grids
 
 {% endhighlight %}
 {% highlight bash tabtitle="yarn" %}
@@ -62,17 +69,17 @@ This guide uses the `Tailwind 3` theme as an example, sourced from the theme pac
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
 
-npm install @syncfusion/ej2-tailwind3-theme --save
+npm install @syncfusion/ej2-tailwind3-theme
 
 {% endhighlight %}
 {% highlight bash tabtitle="yarn" %}
 
-yarn add @syncfusion/@syncfusion/ej2-tailwind3-theme
+yarn add @syncfusion/ej2-tailwind3-theme
 
 {% endhighlight %}
 {% endtabs %}
 
-By default, Vite projects include a `index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `index.css` file to prevent style conflicts.
+By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
 
 The required styles for the Grid component are imported in the **src/App.css** file:
 
@@ -91,7 +98,7 @@ Now, you can add the React Grid component to your **src/App.jsx** file by import
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 
-import './App.css'
+import './App.css';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 
 function App() {
@@ -143,4 +150,4 @@ The output will appear as follows:
 
 ## See also
 
-[Getting Started with the Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Component](../getting-started/quick-start)
+[Getting Started with the Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Component](./preact)

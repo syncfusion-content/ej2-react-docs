@@ -55,13 +55,31 @@ npm install @syncfusion/ej2-react-popups --save
 
 > The --save will instruct NPM to include the Spinner package inside of the **dependencies** section of the package.json.
 
-## Adding CSS reference
+## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-The following CSS files are available in the **../node_modules/@syncfusion** package folder. Add these as references in **src/App.css**.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
+
+This guide uses the `Tailwind 3` theme as an example, sourced from the theme package. In this package, each component includes an `index.css` file that automatically loads all the required dependency styles. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+npm install @syncfusion/ej2-tailwind3-theme --save
+
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+
+yarn add @syncfusion/ej2-tailwind3-theme
+
+{% endhighlight %}
+{% endtabs %}
+
+By default, Vite projects include a `index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `index.css` file to prevent style conflicts.
+
+The required styles for the Spinner component are imported in the **src/App.css** file:
 
 ```css
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-react-popups/styles/tailwind3.css";
+@import "@syncfusion/ej2-tailwind3-theme/styles/spinner/index.css";
 ```
 
 > To refer **App.css** in the application then import it in the **src/App.tsx** file.
