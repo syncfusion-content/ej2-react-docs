@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Managing Tasks in React Gantt Chart Component | Syncfusion
-description: Learn here all about Managing tasks in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Managing tasks in React Gantt Chart component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Managing tasks 
 documentation: ug

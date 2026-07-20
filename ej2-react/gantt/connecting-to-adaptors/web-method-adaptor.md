@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Remote Data Binding with Custom Web Methods in Syncfusion React Gantt
+# Remote Data Binding with Custom Web Methods in React Gantt
 
 The [WebMethodAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/web-method-adaptor) enables the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt to communicate with server web methods and legacy endpoints by packaging task data requests and task modification payloads into a structured request envelope the server can deserialize. This adaptor is suitable for backend that expose web methods where task requests and updates are handled via HTTP POST operations.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Maintain Record Index Position in React Gantt Chart | Syncfusion
-description: Learn how to maintain record index positions in the Syncfusion React Gantt Chart component using row drag-and-drop for efficient task reordering.
+description: Learn how to maintain record index positions in the React Gantt Chart component using row drag-and-drop for efficient task reordering.
 platform: ej2-react
 control: Record index
 documentation: ug

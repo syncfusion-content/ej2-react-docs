@@ -18,6 +18,8 @@ This article provides a step-by-step guide for setting up a [Preact](https://pre
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](../system-requirement)
 
+Before you begin, ensure Node.js **20.19.0** or later is installed on your machine.
+
 ## Set up the Preact project
 
 To create a new `Preact` project, use one of the commands that are specific to either NPM or Yarn.
@@ -73,7 +75,7 @@ T  Preact - Fast 3kB alternative to React with the same modern API
 —
 ```
 
-5\. Upon completing the aforementioned steps to create `my-project`, run the following command to jump into the project directory:
+4\. Upon completing the aforementioned steps to create `my-project`, run the following command to jump into the project directory:
 
 ```bash
 cd my-project
@@ -88,7 +90,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are av
 This article uses the [React Diagram component](https://www.syncfusion.com/react-components/react-diagram) as an example. To use the React Diagram component in the project, the `@syncfusion/ej2-react-diagrams` package needs to be installed using the following command:
 
 ```bash
-npm install @syncfusion/ej2-react-diagrams --save
+npm install @syncfusion/ej2-react-diagrams
 ```
 
 or
@@ -106,7 +108,7 @@ The Diagram component needs Syncfusion® theme styles to display correctly. Add 
 Syncfusion® theme packages include ready-to-use styles for supported components. Install the Tailwind 3 theme package using the following command:
 
 ```bash
-npm install @syncfusion/ej2-tailwind3-theme --save
+npm install @syncfusion/ej2-tailwind3-theme
 ```
 
 or
@@ -138,7 +140,7 @@ N> Syncfusion® provides multiple built-in themes. If the application uses a dif
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
-Follow the below steps to add the React Diagram component to the Vite project:
+Follow these steps to add the React Diagram component to the Preact project:
 
 1\. Before adding the Diagram component to your markup, create a **datasource.jsx** file within the **src** folder and add the Diagram component data.
 
@@ -178,7 +180,7 @@ export let data = [{
 },
 {
     'Id': 4,
-    'Name': 'Christina kaff',
+    'Name': 'Christina Kaff',
     'Designation': 'S/w Engg',
     'IsExpand': 'false',
     'RatingColor': '#93B85A',
@@ -308,7 +310,7 @@ or
 yarn run dev
 ```
 
-The output will appear as follows:
+Open the generated local URL (for example, **http://localhost:5173**) from the terminal in the browser. The application displays the diagram as shown below:
 
 ![preact](./images/preact.png)
 

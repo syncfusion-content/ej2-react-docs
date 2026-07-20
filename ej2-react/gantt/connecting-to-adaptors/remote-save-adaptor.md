@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hybrid Remote Binding with RemoteSaveAdaptor in Syncfusion React Gantt
+# Hybrid Remote Binding with RemoteSaveAdaptor in React Gantt
 
 The [RemoteSaveAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/remote-save-adaptor) in the [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) provides a hybrid data workflow. The client fetches the complete task set once and applies client‑side operations locally while persisting edits back to the server via batch CRUD requests. This approach keeps the UI responsive for interactive scheduling while ensuring server‑side persistence and authoritative processing for inserts, updates and deletes.
 

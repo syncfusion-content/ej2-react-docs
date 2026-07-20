@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Gantt Chart Cell Selection API | Syncfusion
-description: Explore cell selection in Syncfusion React Gantt Chart, including single, multiple, external selection, and customization via API methods and events.
+description: Explore cell selection in React Gantt Chart, including single, multiple, external selection, and customization via API methods and events.
 platform: ej2-react
 control: Cell selection 
 documentation: ug

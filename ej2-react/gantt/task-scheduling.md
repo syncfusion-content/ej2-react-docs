@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Task Scheduling in React Gantt Component | Syncfusion
-description: Learn here all about task scheduling in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
+description: Learn here all about task scheduling in React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Task scheduling 
 platform: ej2-react
 documentation: ug

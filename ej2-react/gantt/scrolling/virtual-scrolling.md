@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Virtual Scroll in React Gantt Chart Component | Syncfusion
-description: Learn how to configure virtual scrolling in the Syncfusion React Gantt Chart component for high-performance rendering of large datasets and wide timelines.
+description: Learn how to configure virtual scrolling in the React Gantt Chart component for high-performance rendering of large datasets and wide timelines.
 platform: ej2-react
 control: Virtual scroll
 documentation: ug

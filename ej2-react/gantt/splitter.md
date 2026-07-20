@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Splitter in React Gantt Chart Component | Syncfusion
-description: Learn how to configure the splitter in the Syncfusion React Gantt Chart component for flexible TreeGrid and Chart panel sizing.
+description: Learn how to configure the splitter in the React Gantt Chart component for flexible TreeGrid and Chart panel sizing.
 control: Splitter
 platform: ej2-react
 documentation: ug

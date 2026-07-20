@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Timezone in React Gantt Chart Component | Syncfusion
-description: Learn how to configure timezones in the Syncfusion React Gantt Chart component for consistent task scheduling, CRUD operations, and global team coordination.
+description: Learn how to configure timezones in the React Gantt Chart component for consistent task scheduling, CRUD operations, and global team coordination.
 platform: ej2-react
 control: Timezone
 documentation: ug

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# GraphQL Remote Data Binding in Syncfusion React Gantt
+# GraphQL Remote Data Binding in React Gantt
 
 The [GraphQLAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/graphql-adaptor) in the Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager enables the React Gantt to interact with GraphQL services by translating the Gantt's data requests and task update actions into GraphQL queries and mutations. This approach lets the Gantt request precisely the task fields and related entities it needs for timeline rendering, dependency resolution, and taskbar presentation.
 
@@ -352,7 +352,7 @@ Previously, the CRUD mutation types were defined in the **schema.graphql** file.
 
 Now all required GraphQL types, queries, and mutations have now been fully added.
 
-## Integrating Syncfusion React Gantt with GraphQL
+## Integrating React Gantt with GraphQL
 
 This section describes conceptually how the Gantt consumes data through GraphQL. Implementation and installation steps are covered in platform‑specific setup guides and are intentionally excluded here.
 

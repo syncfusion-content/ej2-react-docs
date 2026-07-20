@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resource View in React Gantt Chart Component | Syncfusion
-description: Learn how to configure resource view in the Syncfusion React Gantt Chart component for hierarchical task visualization and resource allocation.
+description: Learn how to configure resource view in the React Gantt Chart component for hierarchical task visualization and resource allocation.
 platform: ej2-react
 control: Resource view
 documentation: ug

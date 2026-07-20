@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Loading animation in React Gantt Chart component | Syncfusion
-description: Learn here all about Loading animation in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Loading animation in React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Loading animation 
 platform: ej2-react
 documentation: ug

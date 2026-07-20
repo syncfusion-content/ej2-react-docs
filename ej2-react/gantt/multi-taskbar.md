@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resource Multi Taskbar in React Gantt Chart Component | Syncfusion
-description: Learn how to configure the resource multi taskbar in the Syncfusion React Gantt Chart component to visualize multiple tasks per resource in resource view.
+description: Learn how to configure the resource multi taskbar in the React Gantt Chart component to visualize multiple tasks per resource in resource view.
 platform: ej2-react
 control: Resource multi taskbar
 documentation: ug

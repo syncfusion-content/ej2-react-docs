@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization and Localization in React Gantt Chart | Syncfusion
-description: Learn here all about globalization and localization in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
+description: Learn here all about globalization and localization in React Gantt Chart component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Globalization and Localization 
 documentation: ug

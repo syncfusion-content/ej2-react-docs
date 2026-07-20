@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Configure Custom Fields in React Gantt Chart Component | Syncfusion
-description: Learn how to configure custom fields in the Syncfusion React Gantt Chart component’s add/edit dialogs for enhanced task data management.
+description: Learn how to configure custom fields in the React Gantt Chart component’s add/edit dialogs for enhanced task data management.
 platform: ej2-react
 control: Custom fields
 documentation: ug

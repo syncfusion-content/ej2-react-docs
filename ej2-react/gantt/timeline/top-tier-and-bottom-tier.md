@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Top tier and bottom tier in React Gantt Chart Component | Syncfusion
-description: Learn how to configure top and bottom tiers in the Syncfusion React Gantt Chart Component using timeline settings such as unit, format, count, and formatter.
+description: Learn how to configure top and bottom tiers in the React Gantt Chart Component using timeline settings such as unit, format, count, and formatter.
 platform: ej2-react
 control: Top tier and bottom tier 
 documentation: ug

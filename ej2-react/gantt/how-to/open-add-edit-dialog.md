@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open Add and Edit Dialogs in React Gantt Chart Component | Syncfusion
-description: Learn how to open add and edit dialogs programmatically in the Syncfusion React Gantt Chart component for efficient task creation and modification.
+description: Learn how to open add and edit dialogs programmatically in the React Gantt Chart component for efficient task creation and modification.
 platform: ej2-react
 control: Add edit dialog
 documentation: ug

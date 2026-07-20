@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Span Columns in React Gantt Chart Component | Syncfusion
-description: Learn how to span columns in the Syncfusion React Gantt Chart component using the queryCellInfo event, customize borders, and understand limitations.
+description: Learn how to span columns in the React Gantt Chart component using the queryCellInfo event, customize borders, and understand limitations.
 platform: ej2-react
 control: Column Spanning
 documentation: ug

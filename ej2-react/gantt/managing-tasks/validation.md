@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Validation in React Gantt Chart component | Syncfusion
-description: Learn how to validate task data in the Syncfusion React Gantt Chart component using column, custom, dependency, and resource grid rules for accurate project management.
+description: Learn how to validate task data in the React Gantt Chart component using column, custom, dependency, and resource grid rules for accurate project management.
 platform: ej2-react
 control: Validating Tasks
 documentation: ug

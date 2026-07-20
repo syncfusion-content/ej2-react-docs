@@ -54,7 +54,7 @@ npm install @syncfusion/ej2-react-interactive-chat --save
 
 ## Adding the Inline AI Assist Component
 
-Add the Inline AI Assist component to your application. In this example we use a functional component and render the component into the page.
+Add the Inline AI Assist component to your application. In this example, use a functional component and render it into a container element in the page.
 
 ```ts
 import { InlineAIAssistComponent } from '@syncfusion/ej2-react-interactive-chat';
@@ -95,7 +95,7 @@ Start the development server to view the Inline AI Assist component.
 npm start
 ```
 
-`[Functional-componnet]`
+`[Functional component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -110,7 +110,7 @@ npm start
 
 ## RelateTo and target configuration
 
-You can use the `relateTo` property to position the Inline AI Assist relative to a specific DOM element. It accepts either a CSS selector string (e.g., '.container' or '#id') or an HTMLElement. The `target` property specifies the element or CSS selector where the Inline AI Assist will be appended. It accepts either a CSS selector string (e.g., '.container' or '#id') or an HTMLElement.
+You can use the `relateTo` property to position the Inline AI Assist relative to a specific DOM element. It accepts either a CSS selector string such as `.container` or `#id`, or an `HTMLElement`. The `target` property specifies the element or CSS selector where the Inline AI Assist will be appended. It accepts either a CSS selector string or an `HTMLElement`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -125,7 +125,7 @@ You can use the `relateTo` property to position the Inline AI Assist relative to
 
 ## Response display modes
 
-Responses can be shown in two modes: `Inline` (updates content in-place) and `Popup` (shows responses in a floating popup). Toggle this behavior with the `responseMode` property.
+Responses can be shown in two modes: `Inline`, which updates the content in place, and `Popup`, which displays responses in a floating popup. Toggle this behavior with the `responseMode` property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

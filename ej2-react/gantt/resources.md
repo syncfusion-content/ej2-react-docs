@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resources in React Gantt Chart Component | Syncfusion
-description: Learn how to configure resources in the Syncfusion React Gantt Chart component for task allocation and utilization visualization.
+description: Learn how to configure resources in the React Gantt Chart component for task allocation and utilization visualization.
 platform: ej2-react
 control: Resources
 documentation: ug

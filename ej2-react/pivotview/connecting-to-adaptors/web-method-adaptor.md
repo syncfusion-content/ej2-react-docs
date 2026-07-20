@@ -390,7 +390,7 @@ With the backend API configured and running, the next step is to connect the Rea
 
 ### Step 1: Set up a React project with Pivot Table
 
-Set up a React project with the Pivot Table by following the [Getting Started](../getting-started) documentation. The examples below assume a Vite-based React app (`npm run dev`); if you used `create-react-app`, use `npm start` instead. Ensure that all necessary Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 Pivot Table dependencies are installed in the React project. Install them with:
+Set up a Vite + TypeScript React project with the Pivot Table by following the [Getting Started](../getting-started) documentation. The examples below assume a Vite-based React app with TypeScript (`npm run dev`). Ensure that all necessary Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 Pivot Table dependencies are installed in the React project. Install them with:
 
 ```bash
 npm install @syncfusion/ej2-react-pivotview
@@ -401,22 +401,23 @@ npm install @syncfusion/ej2-react-pivotview
 The Pivot Table connects to the backend API through the [WebMethodAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/web-method-adaptor). This adaptor handles communication between the Pivot Table and the REST API endpoint. Configure the Pivot Table in the React application as shown in the following code example.
 
 {% tabs %}
-{% highlight ts tabtitle="App.jsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% raw %}
 
 import * as React from 'react';
 import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import { DataManager, WebMethodAdaptor } from '@syncfusion/ej2-data';
+import type { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import './App.css';
 
-function App() {
+function App(): React.ReactElement {
     // Configure DataManager with WebMethodAdaptor.
-    const data = new DataManager({
+    const data: DataManager = new DataManager({
         url: 'https://localhost:<port>/api/Orders',
         adaptor: new WebMethodAdaptor(),
     });
 
-    const dataSourceSettings = {
+    const dataSourceSettings: DataSourceSettingsModel = {
         dataSource: data,
         expandAll: false,
         rows: [{ name: 'CustomerID' }],
@@ -424,11 +425,12 @@ function App() {
         values: [{ name: 'Freight' }],
         formatSettings: [{ name: 'Freight', format: 'N0' }],
     };
-    let pivotObj;
+
+    const pivotObj = React.useRef<PivotViewComponent>(null);
 
     return (
         <div className='control-section' style={{ margin: 100 }}>
-            <PivotViewComponent ref={d => pivotObj = d} id='PivotView' height={350} width={700} dataSourceSettings={dataSourceSettings}>
+            <PivotViewComponent ref={pivotObj} id='PivotView' height={350} width={700} dataSourceSettings={dataSourceSettings}>
             </PivotViewComponent>
         </div>
     );
@@ -722,7 +724,7 @@ try {
 
 ### Configure client-side CRUD endpoints
 
-Update the React **App.jsx** file to configure the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) with CRUD endpoints and to enable editing in the Pivot Table. This involves three steps: configuring the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) with CRUD URLs, enabling edit settings, and configuring the `beginDrillThrough` event to set the primary key.
+Update the React **App.tsx** file to configure the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) with CRUD endpoints and to enable editing in the Pivot Table. This involves three steps: configuring the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) with CRUD URLs, enabling edit settings, and configuring the `beginDrillThrough` event to set the primary key.
 
 #### Configure DataManager with CRUD URLs
 
@@ -731,11 +733,12 @@ The [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-st
 ```typescript
 import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import { DataManager, WebMethodAdaptor } from '@syncfusion/ej2-data';
+import type { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import './App.css';
 
-function App() {
+function App(): React.ReactElement {
   // Configure DataManager with CRUD URLs
-  let data = new DataManager({
+  const data: DataManager = new DataManager({
     url: 'https://localhost:<port>/api/Orders',         // Replace <port> with the backend port.
     insertUrl: 'https://localhost:<port>/api/Orders/Insert',
     updateUrl: 'https://localhost:<port>/api/Orders/Update',
@@ -754,21 +757,29 @@ function App() {
 
 #### Enable edit settings
 
-Configure the [editSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#editsettings) property to enable CRUD operations in the Pivot Table:
+Configure the [editSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#editsettings) property to enable CRUD operations in the Pivot Table. Add the `CellEditSettings` type import at the top of `App.tsx`:
+
+```typescript
+import { CellEditSettings } from '@syncfusion/ej2-react-pivotview';
+```
+
+Then define the settings inside the component and wire them to the `PivotViewComponent`:
 
 ```typescript
   // Enable editing functionality
-  const editSettings = { 
+  const editSettings: CellEditSettings = { 
     allowEditing: true,    // Enables the Edit button and allows users to modify existing records.
     allowAdding: true,     // Enables the Add button and allows users to create new records.
     allowDeleting: true,   // Enables the Delete button and allows users to remove records.
     mode: 'Normal'         // Uses Normal mode for editing; other options: 'Dialog', 'Batch', 'CommandColumn'.
   };
 
+  const pivotObj = React.useRef<PivotViewComponent>(null);
+
   return (
     <PivotViewComponent 
       id='PivotView' 
-      ref={(scope) => { pivotObj = scope; }}
+      ref={pivotObj}
       editSettings={editSettings} 
       >
     </PivotViewComponent>
@@ -789,11 +800,17 @@ The primary key (**OrderID**) uniquely identifies each record. When the [DataMan
 
 > **Note:** Editing is enabled by setting `allowEditing`, `allowAdding`, or `allowDeleting` to `true` in [editSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#editsettings). Fetching this setting enables the drill-through grid when a pivot value cell is double-clicked; the snippet below configures the column behavior fired from the [beginDrillThrough](https://ej2.syncfusion.com/react/documentation/pivotview/drill-through#begindrillthrough) event.
 
-Configure the primary key as follows:
+Configure the primary key as follows. Add the type import at the top of `App.tsx`:
+
+```typescript
+import type { BeginDrillThroughEventArgs } from '@syncfusion/ej2-pivotview';
+```
+
+Then define the handler inside the component and wire it to the `beginDrillThrough` event:
 
 ```typescript
     // Configure the beginDrillThrough event to set the primary key
-    function beginDrillThrough(args) {
+    function beginDrillThrough(args: BeginDrillThroughEventArgs) {
         for (var i = 0; i < args.gridObj.columns.length; i++) {
             if (args.gridObj.columns[i].field === "OrderID") {
                 args.gridObj.columns[i].isPrimaryKey = true;
@@ -809,7 +826,7 @@ Configure the primary key as follows:
   return (
     <PivotViewComponent 
       id='PivotView' 
-      ref={(scope) => { pivotObj = scope; }}
+      ref={pivotObj}
       beginDrillThrough={beginDrillThrough}
       >
     </PivotViewComponent>
@@ -824,24 +841,24 @@ Configure the primary key as follows:
 
 > **Note:** Setting `visible = true` on every non-key column in `beginDrillThrough` overrides any field-hiding the user applied via the Pivot Table field list. Remove that assignment or scope it to specific fields if you want to honor user hiding.
 
-#### Complete App.jsx with editing and CRUD endpoints
+#### Complete App.tsx with editing and CRUD endpoints
 
 The following example combines the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) configuration, [editSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#editsettings), and the [beginDrillThrough](https://ej2.syncfusion.com/react/documentation/pivotview/drill-through#begindrillthrough) event handler shown in the preceding snippets into a single working component:
 
 {% tabs %}
-{% highlight ts tabtitle="App.jsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% raw %}
 
 import * as React from 'react';
-import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { PivotViewComponent, CellEditSettings } from '@syncfusion/ej2-react-pivotview';
 import { DataManager, WebMethodAdaptor } from '@syncfusion/ej2-data';
+import type { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
+import type { BeginDrillThroughEventArgs } from '@syncfusion/ej2-pivotview';
 import './App.css';
 
-let pivotObj;
-
-function App() {
+function App(): React.ReactElement {
   // Configure DataManager with CRUD URLs.
-  const data = new DataManager({
+  const data: DataManager = new DataManager({
     url: 'https://localhost:<port>/api/Orders',               // Replace <port> with the backend port.
     insertUrl: 'https://localhost:<port>/api/Orders/Insert',
     updateUrl: 'https://localhost:<port>/api/Orders/Update',
@@ -849,7 +866,7 @@ function App() {
     adaptor: new WebMethodAdaptor()
   });
 
-  const dataSourceSettings = {
+  const dataSourceSettings: DataSourceSettingsModel = {
     dataSource: data,
     expandAll: false,
     rows: [{ name: 'CustomerID' }],
@@ -859,15 +876,17 @@ function App() {
   };
 
   // Enable editing functionality.
-  const editSettings = {
+  const editSettings: CellEditSettings = {
     allowAdding: true,    // Enables the Add button and allows users to create new records.
     allowEditing: true,   // Enables the Edit button and allows users to modify existing records.
     allowDeleting: true,  // Enables the Delete button and allows users to remove records.
     mode: 'Normal'        // Uses Normal mode for editing; other options: 'Dialog', 'Batch', 'CommandColumn'.
   };
 
+  const pivotObj = React.useRef<PivotViewComponent>(null);
+
   // Configure the beginDrillThrough event to set the primary key.
-  function beginDrillThrough(args) {
+  function beginDrillThrough(args: BeginDrillThroughEventArgs) {
     for (var i = 0; i < args.gridObj.columns.length; i++) {
       if (args.gridObj.columns[i].field === "OrderID") {
         args.gridObj.columns[i].isPrimaryKey = true;
@@ -883,7 +902,7 @@ function App() {
   return (
     <div className='control-section' style={{ margin: 100 }}>
       <PivotViewComponent
-        ref={d => pivotObj = d}
+        ref={pivotObj}
         id='PivotView'
         height={350}
         width={700}
@@ -961,9 +980,9 @@ import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import { DataManager, WebMethodAdaptor } from '@syncfusion/ej2-data';
 import './App.css';
 
-function App() {
+function App(): React.ReactElement {
   // Configure DataManager with single CRUD URL
-  let data = new DataManager({
+  const data: DataManager = new DataManager({
     url: 'https://localhost:<port>/api/Orders',
     crudUrl:'https://localhost:<port>/api/Orders/CrudUpdate',
     adaptor: new WebMethodAdaptor()

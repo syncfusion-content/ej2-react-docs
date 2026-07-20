@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Taskbar in React Gantt Chart Component | Syncfusion
-description: Learn how to customize taskbars in the Syncfusion React Gantt Chart component, including height, templates, and editing interactions.
+description: Learn how to customize taskbars in the React Gantt Chart component, including height, templates, and editing interactions.
 platform: ej2-react
 control: Taskbar
 documentation: ug

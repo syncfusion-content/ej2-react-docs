@@ -43,7 +43,7 @@ yarn create next-app
 
 After running the command, you will be prompted to configure your project with the following steps:
 
-1. **Name your project**: You can specify the name of the project directly. For this guide, specify the project name as `ej2-nextjs-pivotview`.
+- **Name your project**: You can specify the name of the project directly. For this guide, specify the project name as `ej2-nextjs-pivotview`.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -53,7 +53,7 @@ After running the command, you will be prompted to configure your project with t
 {% endhighlight %}
 {% endtabs %}
 
-2. **Select the required packages**: Choose the configuration options for your project. Select **Yes, use recommended defaults** to use the recommended Next.js defaults (TypeScript, ESLint, Tailwind CSS, and the App Router). This guide assumes you select this option.
+- **Select the required packages**: Choose the configuration options for your project. Select **Yes, use recommended defaults** to use the recommended Next.js defaults (TypeScript, ESLint, Tailwind CSS, and the App Router). This guide assumes you select this option.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -69,7 +69,7 @@ After running the command, you will be prompted to configure your project with t
 
 After running the above commands, the project will be created and all required dependencies will be installed automatically.
 
-3. **Navigate to the project folder**: Once the setup is complete, move to the project directory using the command below:
+- **Navigate to the project folder**: Once the setup is complete, move to the project directory using the command below:
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -137,7 +137,7 @@ Import the `Tailwind 3` CSS styles for the Pivot Table component in the **app/gl
 
 This section guides you through adding the Syncfusion<sup style="font-size:70%">&reg;</sup> React Pivot Table component to your Next.js project. Follow these steps to set up the data and display the component in your application.
 
-1. First, create the file `app/datasource.ts`. This file will hold the data for the Pivot Table component. Add the following sample data to populate the table:
+- First, create the file `app/datasource.ts`. This file will hold the data for the Pivot Table component. Add the following sample data to populate the table:
 
 {% tabs %}
 {% highlight ts tabtitle="datasource.ts" %}
@@ -159,7 +159,7 @@ export let pivotData: object[] = [
 {% endhighlight %}
 {% endtabs %}
 
-2. Next, update the **app/page.tsx** file to import and set up the Pivot Table component. This step connects the data and configures the table’s report settings.
+- Next, update the **app/page.tsx** file to import and set up the Pivot Table component. This step connects the data and configures the table’s report settings.
 
 N>
 - Remove all existing code in the **app/page.tsx** file and replace it with the code below to avoid conflicts with default Next.js template code.

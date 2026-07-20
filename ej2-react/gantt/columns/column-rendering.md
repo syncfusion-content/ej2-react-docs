@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Column Rendering in React Gantt Chart Component | Syncfusion
-description: Learn here all about column rendering in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
+description: Learn here all about column rendering in React Gantt Chart component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Column rendering
 documentation: ug

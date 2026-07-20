@@ -102,30 +102,29 @@ yarn add @syncfusion/ej2-react-schedule
 {% endhighlight %}
 {% endtabs %}
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles from a theme package
 
-React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It’s easy to adapt the React components to match the style of your application by referring to one of the built-in themes.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React Schedule component can be applied with CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
 
-Import the `Material` theme into the **src/app/globals.css** file and removed the existing styles in that file, as shown below:
+Install the **Tailwind 3** theme package using the following command:
 
 {% tabs %}
-{% highlight css tabtitle="globals.css" %}
+{% highlight bash tabtitle="npm" %}
 
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-calendars/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-lists/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-react-schedule/styles/material.css";
+npm install @syncfusion/ej2-tailwind3-theme --save
 
 {% endhighlight %}
 {% endtabs %}
 
-> To know more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
+Then add the following CSS reference to the **src/app/globals.css** file:
+
+{% tabs %}
+{% highlight css tabtitle="globals.css" %}
+
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/schedule/index.css";
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
@@ -285,5 +284,3 @@ yarn run dev
 To learn more about the functionality of the Schedule component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/schedule/getting-started#module-injection).
 
 > [View the NEXT.js Schedule sample in the GitHub repository](https://github.com/SyncfusionExamples/ej2-nextjs-schedule).
-
-N> Looking for the full React Scheduler component overview, features, pricing, and documentation? Visit the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) page.

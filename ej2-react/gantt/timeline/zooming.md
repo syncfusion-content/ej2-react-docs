@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Zooming functionality in React Gantt Chart Component | Syncfusion
-description: Explore zooming options in the Syncfusion React Gantt Chart component, including Zoom In, Zoom Out, Zoom To Fit, and custom zooming levels.
+description: Explore zooming options in the React Gantt Chart component, including Zoom In, Zoom Out, Zoom To Fit, and custom zooming levels.
 platform: ej2-react
 control: Zooming
 documentation: ug

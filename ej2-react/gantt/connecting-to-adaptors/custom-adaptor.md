@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom Remote Data Binding in Syncfusion React Gantt Chart
+# Custom Remote Data Binding in React Gantt Chart
 
-The `CustomAdaptor` in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart is a powerful extension mechanism that **customizes any existing adaptor** ([RemoteSaveAdaptor](./remote-save-adaptor), [WebMethodAdaptor](./web-method-adaptor), [ODataV4Adaptor](./odatav4-adaptor), [GraphQLAdaptor](./graphql-adaptor)) to meet specific application requirements.  Use this adaptor when the built-in adaptors do not fully match backend requirements and need to customize request or response processing. Instead of creating an adaptor from scratch, `CustomAdaptor` intercepts and customizes the HTTP request/response pipeline used by the Syncfusion React Gantt Chart.
+The `CustomAdaptor` in the React Gantt Chart is a powerful extension mechanism that **customizes any existing adaptor** ([RemoteSaveAdaptor](./remote-save-adaptor), [WebMethodAdaptor](./web-method-adaptor), [ODataV4Adaptor](./odatav4-adaptor), [GraphQLAdaptor](./graphql-adaptor)) to meet specific application requirements.  Use this adaptor when the built-in adaptors do not fully match backend requirements and need to customize request or response processing. Instead of creating an adaptor from scratch, `CustomAdaptor` intercepts and customizes the HTTP request/response pipeline used by the React Gantt Chart.
 
 For detailed guidance, refer to the [DataManager CustomAdaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/custom-adaptor), which explains the usage of custom adaptors in depth. For detailed server-side setup and further implementation details, see the [DataManager ODataV4Adaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/odatav4-adaptor), covering endpoint configuration, query handling, and recommended practices for integrating OData V4 services.
 
-Once the project creation and backend setup are complete, the next step is to render the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component on the client side.
+Once the project creation and backend setup are complete, the next step is to render the React Gantt Chart component on the client side.
 
 **Project structure:**
 
@@ -85,7 +85,7 @@ import "./App.css";
 
 ### Step 3: Create React Gantt Chart component with CustomAdaptor
 
-Integrating a `CustomAdaptor` with the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart requires configuring the `DataManager` as the communication bridge between the Gantt Chart component and the backend data source. The `CustomAdaptor` serves as a powerful customization layer that provides complete control over how data operations are transmitted to the server.
+Integrating a `CustomAdaptor` with the React Gantt Chart requires configuring the `DataManager` as the communication bridge between the Gantt Chart component and the backend data source. The `CustomAdaptor` serves as a powerful customization layer that provides complete control over how data operations are transmitted to the server.
 
 #### Step 3.1: Creating an Extended ODataV4Adaptor
 

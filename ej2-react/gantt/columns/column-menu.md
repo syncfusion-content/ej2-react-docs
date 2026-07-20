@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Column Menu in React Gantt Chart Component | Syncfusion
-description: Learn here all about column menu in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
+description: Learn here all about column menu in React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Column menu
 platform: ej2-react
 documentation: ug

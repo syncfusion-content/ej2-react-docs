@@ -1,7 +1,7 @@
 ---
 layout: post
 title: State Persistence in React Gantt Chart Component | Syncfusion
-description: Learn here all about State persistence in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
+description: Learn here all about State persistence in React Gantt Chart component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: State persistence 
 documentation: ug

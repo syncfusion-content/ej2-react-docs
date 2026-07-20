@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Timeline in React Gantt Chart component | Syncfusion
-description: Learn how to configure timelines in the Syncfusion React Gantt Chart component with view modes, zooming, weekend highlighting, and templates.
+description: Learn how to configure timelines in the React Gantt Chart component with view modes, zooming, weekend highlighting, and templates.
 platform: ej2-react
 control: Timeline
 documentation: ug

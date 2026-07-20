@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Immutable in React Gantt Chart component | Syncfusion
-description: Learn here all about Immutable in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Immutable in React Gantt Chart component of Syncfusion Essential JS 2 and more.
 control: Immutable 
 platform: ej2-react
 documentation: ug

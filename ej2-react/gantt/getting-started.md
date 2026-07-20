@@ -187,5 +187,3 @@ You can preview the following sample by clicking the **Preview Sample** button.
 - **[Key Elements](./key-elements)** - Learn about UI components and interactions
 - **[Feature Modules](./module)** - Enable advanced features with module injection
 - **[Overview](./overview)** - Explore all available features
-
-N> Looking for the full React Gantt Chart component overview, features, pricing, and documentation? Visit the [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) page.
