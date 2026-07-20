@@ -19,11 +19,10 @@ This section provides a step-by-step guide for setting up a Next.js application 
 
 ## Prerequisites
 
-Before getting started with the Next.js application, ensure the following prerequisites are met:
+Before starting with Next.js, ensure the following prerequisites are met:
 
-* [Node.js 18.17](https://nodejs.org/en) or later.
-
-* The application is compatible with macOS, Windows, and Linux operating systems.
+* [Node.js 16.8](https://nodejs.org/en) or later (verify your installed version using `node --version`).
+* A compatible operating system: macOS, Windows, or Linux.
 
 ## Create a Next.js application
 
@@ -101,15 +100,19 @@ yarn add @syncfusion/ej2-react-filemanager
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It's easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> File Manager component can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
 
-To install the [Tailwind3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+Install the Tailwind 3 theme package using the following command:
 
-```bash
-npm i @syncfusion/ej2-tailwind3-theme
-```
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
 
-In this package, the File Manager component includes an `index.css` file that automatically loads all the required dependency styles. Add the following import to the **app/globals.css** file and remove the existing styles from that file.
+npm install @syncfusion/ej2-tailwind3-theme --save
+
+{% endhighlight %}
+{% endtabs %}
+
+Then add the following CSS reference to the  **src/app/globals.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
@@ -126,6 +129,8 @@ In this package, the File Manager component includes an `index.css` file that au
 Follow the below steps to add the React File Manager component to the Next.js project:
 
 1.Define the File Manager component in the **app/page.tsx** file, as shown below:
+
+To enable file operation functionality in the File Manager, configure the [url](https://ej2.syncfusion.com/react/documentation/api/file-manager/ajaxsettingsmodel#url) property within the [ajaxSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/ajaxsettings). This URL handles the file operation requests from the server.
 
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
@@ -152,6 +157,12 @@ export default App;
 
 {% endhighlight %}
 {% endtabs %}
+
+### Server-side setup
+
+The sample uses `https://physical-service.syncfusion.com/` as the `url` endpoint in `ajaxSettings`.
+
+To use your own files, host a File Manager service and replace the `url` value with your service endpoint. See the [File System Provider](./file-system-provider) documentation for setup details.
 
 ## Run the application
 

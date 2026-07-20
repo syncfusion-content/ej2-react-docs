@@ -76,13 +76,24 @@ The above package installs [Input dependencies](./getting-started/#dependencies)
 
 ## Adding Style sheet to the Application
 
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
+
+This example uses the `Fluent 2` theme for the Smart TextArea component from the theme package. To install the [Fluent 2](https://www.npmjs.com/package/@syncfusion/ej2-fluent2-theme) theme package, use the following command:
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+npm install @syncfusion/ej2-fluent2-theme --save
+
+{% endhighlight %}
+{% endtabs %}
+
 Add Smart TextArea component's styles as given below in `App.css`.
 
 {% tabs %}
-{% highlight css tabtitle="style.css" %}
+{% highlight css tabtitle="App.css" %}
 
-@import "../node_modules/@syncfusion/ej2-base/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-react-inputs/styles/fluent2.css";
+@import "../node_modules/@syncfusion/ej2-fluent2-theme/styles/textarea/index.css";
 
 {% endhighlight %}
 {% endtabs %}

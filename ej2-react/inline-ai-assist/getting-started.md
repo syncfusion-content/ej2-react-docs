@@ -10,41 +10,75 @@ domainurl: ##DomainURL##
 
 # Getting Started with the React Inline AI Assist Component
 
-This guide explains how to add a simple **Inline AI Assist** component and configure its basic functionality in a React application.
+This section explains how to create a simple [React Inline AI Assist](https://www.syncfusion.com/react-components/react-inline-ai-assist) component and demonstrate its basic usage in a React environment.
 
-## Dependencies
+## Prerequisites
 
-The following dependencies are required to use the React `Inline AI Assist` component. The component is distributed as part of the `@syncfusion/ej2-react-interactive-chat` package.
+| Requirement | Version |
+|-------------|---------|
+| React | 15.5.4 or higher |
+| Node.js | 14.0.0 or above |
+| Yarn (optional) | 0.25 or above |
 
-```javascript
-|-- @syncfusion/ej2-react-interactive-chat
-    |-- @syncfusion/ej2-base
-    |-- @syncfusion/ej2-navigations
-    |-- @syncfusion/ej2-inputs
-    |-- @syncfusion/ej2-buttons
-    |-- @syncfusion/ej2-dropdowns
-    |-- @syncfusion/ej2-popups
-```
+### React supported versions
 
-## Setup for Local Development
+| React version | Minimum Syncfusion React Inline AI Assist version |
+| ------------- | -------------------------------------------------- |
+| [React v19](https://react.dev/blog/2024/12/05/react-19) | 29.1.33 and above |
+| [React v18](https://reactjs.org/blog/2022/03/29/react-v18.html) | 20.2.36 and above |
+| [React v17](https://reactjs.org/blog/2020/10/20/react-v17.html) | 18.3.50 and above |
+| [React v16](https://reactjs.org/blog/2017/09/26/react-v16.0.html) | 16.2.45 and above |
 
-Create a new React application using `create-react-app` (or use an existing app).
+### Browser support
+
+| Browser | Supported versions |
+|---|---|
+| Chrome | Latest |
+| Firefox | Latest |
+| Opera | Latest |
+| Edge | 13+ |
+| Internet Explorer (IE) | 11+ |
+| Safari | 9+ |
+| iOS Safari | 9+ |
+| Android Browser / Chrome for Android | 4.4+ |
+| Windows Mobile | IE 11+ |
+
+## Setup for local development
+
+Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide).
+
+> **Note:** To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+
+To create a new React application, run one of the following commands based on your preferred language:
+
+***React with JavaScript***
 
 ```bash
-npx create-react-app my-app
-cd my-app
-npm start
+npx create vite@latest my-app -- --template react
 ```
 
-For a TypeScript template:
+***React with TypeScript***
 
 ```bash
-npx create-react-app my-app --template typescript
-cd my-app
-npm start
+npx create vite@latest my-app -- --template react-ts
 ```
 
-## Adding Syncfusion Packages
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
+
+- **Which linter to use?** → **ESLint**
+- **Install with npm and start now?** → **Yes**
+
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
+
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
+
+Then, navigate to the project directory:
+
+```bash
+cd my-app
+```
+
+## Adding React Inline AI Assist packages
 
 Install the interactive chat package that contains the Inline AI Assist component:
 
@@ -52,72 +86,77 @@ Install the interactive chat package that contains the Inline AI Assist componen
 npm install @syncfusion/ej2-react-interactive-chat --save
 ```
 
-## Adding the Inline AI Assist Component
+## Adding CSS reference
 
-Add the Inline AI Assist component to your application. In this example we use a functional component and render the component into the page.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Inline AI Assist component can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
 
-```ts
-import { InlineAIAssistComponent } from '@syncfusion/ej2-react-interactive-chat';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-
-function App() {
-    return (
-        // specifies the tag to render the Inline AI Assist component
-        <InlineAIAssistComponent id="inlineAiAssist"></InlineAIAssistComponent>
-    );
-}
-
-ReactDOM.render(<App />, document.getElementById('root'));
-```
-
-Use the `InlineAIAssistComponent` tag where you want the inline assistant to appear.
-
-## Adding CSS References
-
-To apply styling to the Inline AI Assist component, import the required CSS theme files into your `src/App.css` file. The following example uses the Tailwind3 theme, but other themes like Bootstrap 5, Tailwind CSS, or Fluent are also available.
-
-To install the [tailwind3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
-
-```bash
-npm install @syncfusion/ej2-tailwind3-theme --save
-```
-
-```css
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/inline-ai-assist/index.css";
-```
-
-## Run the Application
-
-Start the development server to view the Inline AI Assist component.
-
-```bash
-npm start
-```
-
-`[Functional-componnet]`
+Install the **Tailwind 3** theme package using the following command:
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/inline-ai-assist/getting-started/app/index.jsx %}
+{% highlight bash tabtitle="npm" %}
+
+npm install @syncfusion/ej2-tailwind3-theme --save
+
 {% endhighlight %}
+{% endtabs %}
+
+Then add the following CSS reference to the **src/App.css** file:
+
+{% tabs %}
+{% highlight css tabtitle="App.css" %}
+
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/inline-ai-assist/index.css";
+
+{% endhighlight %}
+{% endtabs %}
+
+## Adding the Inline AI Assist component
+
+The Inline AI Assist code should be added to the **src/App.tsx** file.
+
+{% tabs %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/inline-ai-assist/getting-started/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/inline-ai-assist/getting-started/app/index.jsx %}
 {% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/inline-ai-assist/getting-started" %}
 
+Use the `InlineAIAssistComponent` tag where you want the inline assistant to appear.
+
+## Registering your Syncfusion license
+
+Generate a license key from the [Syncfusion License Dashboard](https://www.syncfusion.com/account/downloads) and register it before rendering your React application:
+
+```tsx
+import { registerLicense } from '@syncfusion/ej2-base';
+
+registerLicense('YOUR_LICENSE_KEY');
+```
+
+> **Note:** A valid Syncfusion license is required for production use. Without a valid license, a trial license warning message will be displayed.
+
+## Run the application
+
+With the configuration complete, run the application to see the Inline AI Assist component rendered in your browser.
+
+```bash
+npm start
+```
+
 ## RelateTo and target configuration
 
-You can use the `relateTo` property to position the Inline AI Assist relative to a specific DOM element. It accepts either a CSS selector string (e.g., '.container' or '#id') or an HTMLElement. The `target` property specifies the element or CSS selector where the Inline AI Assist will be appended. It accepts either a CSS selector string (e.g., '.container' or '#id') or an HTMLElement.
+You can use the `relateTo` property to position the Inline AI Assist relative to a specific DOM element. It accepts either a CSS selector string such as `.container` or `#id`, or an `HTMLElement`. The `target` property specifies the element or CSS selector where the Inline AI Assist will be appended. It accepts either a CSS selector string or an `HTMLElement`.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/inline-ai-assist/relateTo-target/app/index.jsx %}
-{% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/inline-ai-assist/relateTo-target/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/inline-ai-assist/relateTo-target/app/index.jsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -125,15 +164,35 @@ You can use the `relateTo` property to position the Inline AI Assist relative to
 
 ## Response display modes
 
-Responses can be shown in two modes: `Inline` (updates content in-place) and `Popup` (shows responses in a floating popup). Toggle this behavior with the `responseMode` property.
+Responses can be shown in two modes: `Inline`, which updates the content in place, and `Popup`, which displays responses in a floating popup. Toggle this behavior with the `responseMode` property.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/inline-ai-assist/response-mode/app/index.jsx %}
-{% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/inline-ai-assist/response-mode/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/inline-ai-assist/response-mode/app/index.jsx %}
 {% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/inline-ai-assist/response-mode" %}
+
+### Production build
+
+To create an optimized production build:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Troubleshooting
+
+- **Inline AI Assist not rendering styles:** Ensure the theme CSS is imported in `App.css` and that you removed the default Vite CSS in `index.css`.
+- **Trial license warning banner:** Register a license key via `registerLicense()` from `@syncfusion/ej2-base`.
+- **Port 5173 already in use:** Stop the conflicting process or run Vite on a different port with `npm run dev -- --port 3000`.

@@ -14,7 +14,7 @@ This section explains how to create a simple Ribbon and configure its functional
 
 ## Dependencies
 
-The following list of dependencies are required to use the Ribbon component in your application.
+The following dependencies are required to use the Ribbon component in your application.
 
 ```javascript
 |-- @syncfusion/ej2-react-ribbon
@@ -42,14 +42,14 @@ To create a new React application, run the following command.
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+To set up a React application in TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -247,7 +247,7 @@ root.render(<App />);
 
 ## Run the application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally.
 
 ```
 npm run dev
