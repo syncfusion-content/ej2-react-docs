@@ -9,8 +9,8 @@ domainurl: ##DomainURL##
 ---
 
 # UML Diagrams in React Diagram Component
-
-This guide demonstrates how to create and customize UML (Unified Modeling Language) diagrams using the Syncfusion React Diagram component. You'll learn to build UML Class diagrams for object-oriented system modeling and UML Activity diagrams for workflow visualization.
+ 
+This guide demonstrates how to create and customize UML (Unified Modeling Language) diagrams using the [React Diagram](https://www.syncfusion.com/diagram-sdk/react-diagram) component. You'll learn to build UML Class diagrams for object-oriented system modeling and UML Activity diagrams for workflow visualization.
 
 ## UML Class Diagram
 
@@ -47,7 +47,7 @@ The UML class diagram shapes are explained as follows.
 
 ### Interface
 
-An [`interface`](https://ej2.syncfusion.com/react/documentation/api/diagram/umlinterfacemodel) is a specific type of classifier that represents a declaration of a cohesive set of public features and obligations. When creating an interface, define the classifier property using the interface notation. This concept in object-oriented programming outlines a contract for classes to implement, specifying the required methods and behaviors without providing implementation details.
+An [`interface`](https://ej2.syncfusion.com/react/documentation/api/diagram/umlClassifierShapeModel#interface) is a specific type of classifier that represents a declaration of a cohesive set of public features and obligations. When creating an interface, define the classifier property using the interface notation. This concept in object-oriented programming outlines a contract for classes to implement, specifying the required methods and behaviors without providing implementation details.
 
 Additionally, you can define the `name`, `attributes`, and `methods` of the interface using the interface property of the node.
 
@@ -72,7 +72,7 @@ The following code example illustrates how to create an interface:
 
 ### Enumeration
 
-To establish an enumeration, designate the classifier property of the node as [enumeration](https://ej2.syncfusion.com/react/documentation/api/diagram/umlenumerationmodel). Additionally, define the `name` and enumerate the [members](https://ej2.syncfusion.com/react/documentation/api/diagram/umlEnumerationMemberModel) of the enumeration using the appropriate enumeration property of the node. This process encapsulates a set of distinct values within the enumeration, allowing for a clear representation of specific,and named constants within a system.
+To establish an enumeration, designate the classifier property of the node as [enumeration](https://ej2.syncfusion.com/react/documentation/api/diagram/umlClassifierShapeModel#enumeration). Additionally, define the `name` and enumerate the [`members`](https://ej2.syncfusion.com/react/documentation/api/diagram/umlEnumerationMemberModel/) of the enumeration using the appropriate enumeration property of the node. This process encapsulates a set of distinct values within the enumeration, allowing for a clear representation of specific,and named constants within a system.
 
 You can set a name for the enumeration members collection using the `name` property of members collection.
 
@@ -123,7 +123,7 @@ The association property allows you to define the type of association. The defau
 
 ### Aggregation
 
-`Aggregation` is a binary association between a property and one or more composite objects that group together a set of instances. Aggregation is decorated with a hollow diamond. To create an aggregation shape, define the [`relationship`](https://ej2.syncfusion.com/react/documentation/api/diagram/relationShipModel#relationship) as “Aggregation”.
+`Aggregation` is a binary association between a property and one or more composite objects that group together a set of instances. Aggregation is decorated with a hollow diamond. To create an aggregation shape, define the [`relationship`](https://ej2.syncfusion.com/react/documentation/api/diagram/relationShipModel/#relationship) as “Aggregation”.
 
 The following code example illustrates how to create an aggregation.
 
@@ -206,7 +206,7 @@ By default, the multiplicity is considered as **OneToOne**.
 
 The multiplicity property in UML allows you to specify a large number of elements or some collection of elements.
 
-The shape multiplicity’s [`source`](https://ej2.syncfusion.com/react/documentation/api/diagram/classifierMultiplicityModel#source) property sets the source label to the connector and the [`target`](https://ej2.syncfusion.com/react/documentation/api/diagram/classifierMultiplicityModel#target) property is used to set the target label to the connector.
+The shape multiplicity’s [`source`](https://ej2.syncfusion.com/react/documentation/api/diagram/classifierMultiplicityModel/#source) property sets the source label to the connector and the [`target`](https://ej2.syncfusion.com/react/documentation/api/diagram/classifierMultiplicityModel/#target) property is used to set the target label to the connector.
 
 To set an optionality or cardinality for the connector source label, use the optional property.
 
@@ -254,7 +254,7 @@ To include a child, select a node, move the mouse outside it, and position the p
 
 ## Adding UML Nodes in Symbol Palette
 
-UML built-in shapes are efficiently rendered in a symbol palette. The [symbols](https://ej2.syncfusion.com/react/documentation/api/diagram/paletteModel#symbols) property of [palettes](https://ej2.syncfusion.com/react/documentation/api/diagram/paletteModel) is used to define UML symbols with the necessary classes and methods. This feature allows you to add a collection of predefined UML symbols to the palette, making your UML diagramming application more versatile.
+UML built-in shapes are efficiently rendered in a symbol palette. The [`symbols`](https://ej2.syncfusion.com/react/documentation/api/diagram/paletteModel/#symbols) property of [`palettes`](https://ej2.syncfusion.com/react/documentation/api/diagram/paletteModel/) is used to define UML symbols with the necessary classes and methods. This feature allows you to add a collection of predefined UML symbols to the palette, making your UML diagramming application more versatile.
 
 The following code example showcases the rendering of UML built-in shapes in a symbol palette.
 

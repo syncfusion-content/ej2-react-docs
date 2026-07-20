@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Nodes in React Diagram component | Syncfusion®
-description: Learn here all about Nodes in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: Nodes Position in React Diagram component | Syncfusion
+description: Learn here all about Nodes in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and much more.
 control: Nodes 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-
+ 
 # Positioning a Node in in React Diagram Component
 
-To customize the position of nodes in the React Diagram component, refer to the video link below.
+To customize the position of nodes in the [React Diagram](https://www.syncfusion.com/diagram-sdk/react-diagram) component, refer to the video link below.
 
 {% youtube "https://www.youtube.com/watch?v=pn02S_rwupw" %}
 
@@ -52,7 +52,7 @@ The following code illustrates how to change the `pivot` value.
 
 ## Minimum and Maximum size for nodes.
 
-The size constraints ensure nodes maintain appropriate dimensions during resizing operations. The [`minWidth`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#minwidth) and [`minHeight`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#minheight) properties define the smallest allowable size for a node during resize operations. Similarly, the [`maxWidth`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#maxwidth) and [`maxHeight`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#maxheight) properties define the largest allowable size.
+The size constraints ensure nodes maintain appropriate dimensions during resizing operations. The [`minWidth`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#minwidth) and [`minHeight`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#minheight) properties define the smallest allowable size for a node during resize operations. Similarly, the `maxWidth` and `maxHeight` properties define the largest allowable size.
 
 These constraints are particularly useful when creating diagrams where nodes need to maintain specific size ranges for visual consistency or functional requirements.
 

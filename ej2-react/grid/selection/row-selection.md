@@ -784,7 +784,7 @@ In the following example, row selection is canceled when the value of "Customer 
 
 ## Pass selected records to server using AJAX
 
-The Syncfusion React Grid enables selecting multiple or single records and sending them to the server using AJAX requests. This feature is useful for scenarios where processing or manipulating selected data on the server side is required.
+The React Grid enables selecting multiple or single records and sending them to the server using AJAX requests. This feature is useful for scenarios where processing or manipulating selected data on the server side is required.
 
 To achieve passing selected records to the server using AJAX requests in the grid, follow these steps:
 
@@ -1008,7 +1008,7 @@ The following screenshot shows passing of selected records to the server:
 
 ## Pass selected records to server using FETCH
 
-The Syncfusion React Grid enables selecting multiple or single records and sending them to the server using Fetch requests. This feature is useful for scenarios where processing or manipulating selected data on the server side is required.
+The React Grid enables selecting multiple or single records and sending them to the server using Fetch requests. This feature is useful for scenarios where processing or manipulating selected data on the server side is required.
 
 To achieve passing selected records to the server using Fetch requests in the grid, follow these steps:
 

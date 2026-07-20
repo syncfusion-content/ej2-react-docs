@@ -33,7 +33,7 @@ function fetchAI(text: string | undefined, grid: GridComponent, dialog: DialogCo
     - sort/group/filter only by available columns.
     - Include a "message" field describing the interpreted query action and expected behavior.
     - Handled actions: paging, filtering, sorting, grouping.
-    - If the action is not handled by this schema, need to clearly explain the action not handled in this schema and how to achieve it in Syncfusion React Grid. Dont explain the JSON structure.
+    - If the action is not handled by this schema, need to clearly explain the action not handled in this schema and how to achieve it in React Grid. Dont explain the JSON structure.
     User Input: ${text}`;
 
     let aiOutput = serverAIRequest({ messages: [{ role: 'user', content: textArea }] });

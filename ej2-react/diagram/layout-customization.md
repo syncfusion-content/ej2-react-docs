@@ -9,10 +9,10 @@ domainurl: ##DomainURL##
 ---
 
 # Customizing layout in React Diagram Component
+ 
+The [React Diagram](https://www.syncfusion.com/diagram-sdk/react-diagram) component provides extensive customization options for automatic layouts, allowing developers to control orientation, spacing, alignment, bounds, and visual behavior. These properties enable fine-tuned positioning and appearance of nodes within hierarchical, organizational, and tree-based diagrams.
 
-The React Diagram component provides extensive customization options for automatic layouts, allowing developers to control orientation, spacing, alignment, bounds, and visual behavior. These properties enable fine-tuned positioning and appearance of nodes within hierarchical, organizational, and tree-based diagrams.
-
-To explore all available layout properties, refer to [`Layout Properties`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout#properties).
+To explore all available layout properties, refer to[`Layout Properties`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout#properties).
 
 ## Layout Bounds
 
@@ -61,7 +61,7 @@ The following code illustrates how to configure layout alignment and modify alig
 
 ## Layout Spacing
 
-Layout spacing controls the distance between nodes in the layout. The [`horizontalSpacing`](https://ej2.syncfusion.com/react/documentation/api/diagram/layoutModel#horizontalspacing) and [`verticalSpacing`](https://ej2.syncfusion.com/react/documentation/api/diagram/layoutModel#verticalspacing) properties define the gaps between nodes horizontally and vertically respectively.
+Layout spacing controls the distance between nodes in the layout. The[`horizontalSpacing`](https://ej2.syncfusion.com/react/documentation/api/diagram/layoutModel#horizontalspacing) and [`verticalSpacing`](https://ej2.syncfusion.com/react/documentation/api/diagram/layoutModel#verticalspacing) properties define the gaps between nodes horizontally and vertically respectively.
 
 Proper spacing ensures visual clarity and prevents node overlap. Spacing values are measured in pixels and can be adjusted based on node sizes and content density requirements.
 
@@ -113,7 +113,7 @@ The layout orientation determines the primary direction in which the layout flow
 
 Diagram provides support to customize the  [`orientation`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout#orientation) property can be customized to match specific design requirements or cultural reading patterns.
 
-N> In the diagram the default orientation is **TopToBottom**.
+>Note: In the diagram the default orientation is **TopToBottom**.
 
 The following code demonstrates how to set the initial orientation for the layout and how to change it dynamically at runtime.
 
@@ -133,7 +133,7 @@ The following code demonstrates how to set the initial orientation for the layou
 
 ## Exclude From Layout
 
-In certain scenarios, specific nodes may need manual positioning rather than automatic arrangement by the layout algorithm. These nodes can be excluded from layout calculations by setting the [`excludeFromLayout`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeModel#excludefromlayout) property to **true**.
+In certain scenarios, specific nodes may need manual positioning rather than automatic arrangement by the layout algorithm. These nodes can be excluded from layout calculations by setting the[`excludeFromLayout`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeModel#excludefromlayout) property to **true**.
 
 This feature is useful for annotation nodes, floating panels, or special elements that require fixed positioning regardless of the overall layout structure.
 
@@ -194,7 +194,7 @@ For more details about customizing the expand and collapse icon refer [`expand C
 
 ## Layout Animation
 
-Expand and collapse operations can be animated by applying transitions during layout changes. The [`enableAnimation`](https://ej2.syncfusion.com/react/documentation/api/diagram/layoutModel#enableanimation)  property controls this behavior, enhancing the visual experience during structural changes.
+Expand and collapse operations can be animated by applying transitions during layout changes. The[`enableAnimation`](https://ej2.syncfusion.com/react/documentation/api/diagram/layoutModel#enableanimation)  property controls this behavior, enhancing the visual experience during structural changes.
 
 Animation provides visual continuity and helps users track changes in the layout structure. By default, `enableAnimation` is set to **true**.
 
@@ -213,7 +213,7 @@ The following example demonstrates how layout animation enhances the visual expe
  {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layout-animation-cs1" %}
 
 
-N> To enable layout animation, inject the LayoutAnimation module in the diagram.
+>Note: To enable layout animation, inject the LayoutAnimation module in the diagram.
 
 ## Parent - Child Relation with Dropped Nodes from Symbol Palette
 
@@ -242,7 +242,7 @@ The following code example creates parent-child relationships between source and
 
 The [`setNodeTemplate`](https://ej2.syncfusion.com/react/documentation/api/diagram#setnodetemplate) function allows you to customize the visual representation and behavior of nodes within your diagram. It is invoked during the initialization of each node, enabling you to define the node’s style, properties, and bind custom JSON data to it.
 
-Typically, the `setNodeTemplate` function accepts a container element (e.g., StackPanel, Grid) to organize the visual components within the node. In the following example, a [`StackPanel`](https://ej2.syncfusion.com/react/documentation/api/diagram/stackPanel) is used to organize the node's content, with an [`ImageElement`](https://ej2.syncfusion.com/react/documentation/api/diagram/imageElement) displaying an image and a TextBlock showing text bound to the "Name" property of the node’s data. The StackPanel can contain a variety of elements, including [`PathElement`](https://ej2.syncfusion.com/react/documentation/api/diagram/pathElement), [`NativeElement`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramNativeElement), [`DiagramElement`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramElement) and [`HtmlElement`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramHtmlElement).
+Typically, the `setNodeTemplate` function accepts a container element (e.g., StackPanel, Grid) to organize the visual components within the node. In the following example, a [`StackPanel`](https://ej2.syncfusion.com/react/documentation/api/diagram/stackPanel) is used to organize the node's content, with an [`ImageElement`](https://ej2.syncfusion.com/react/documentation/api/diagram/imageElement) displaying an image and a TextBlock showing text bound to the "Name" property of the node’s data. The StackPanel can contain a variety of elements, including [`PathElement`](https://ej2.syncfusion.com/react/documentation/api/diagram/pathElement),[`NativeElement`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramNativeElement),[`DiagramElement`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramElement) and [`HtmlElement`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramHtmlElement).
 You can also set the [`cornerRadius`](https://ej2.syncfusion.com/react/documentation/api/diagram/stackPanel#cornerradius) to create a rounded appearance for the node, while [`horizontalAlignment`](https://ej2.syncfusion.com/react/documentation/api/diagram/stackPanel#horizontalalignment) and [`verticalAlignment`](https://ej2.syncfusion.com/react/documentation/api/diagram/stackPanel#verticalalignment) control the positioning of the StackPanel within the node. 
 
 The [`orientation`](https://ej2.syncfusion.com/react/documentation/api/diagram/stackPanel#orientation) property determines whether child elements are arranged horizontally or vertically. By effectively utilizing the setNodeTemplate function, you can create visually appealing and informative nodes that enhance the overall user experience of your diagram.

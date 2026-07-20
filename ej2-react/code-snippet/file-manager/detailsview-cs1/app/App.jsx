@@ -2,7 +2,7 @@
 import { DetailsView, FileManagerComponent, Inject, NavigationPane, Toolbar } from '@syncfusion/ej2-react-filemanager';
 import * as React from 'react';
 function App() {
-    let hostUrl = "https://ej2-aspcore-service.azurewebsites.net/";
+    let hostUrl = "https://physical-service.syncfusion.com/";
     let ajaxSettings = {
         downloadUrl: hostUrl + 'api/FileManager/Download',
         getImageUrl: hostUrl + "api/FileManager/GetImage",

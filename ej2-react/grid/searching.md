@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Searching in React Grid Component
 
-The Syncfusion React Grid includes a powerful built-in searching feature that enables efficient filtering of grid records based on search criteria. This feature allows quick discovery of specific data within large datasets. Whether the application works with small or large datasets, the search feature provides a seamless solution for locating relevant records instantly.
+The React Grid includes a powerful built-in searching feature that enables efficient filtering of grid records based on search criteria. This feature allows quick discovery of specific data within large datasets. Whether the application works with small or large datasets, the search feature provides a seamless solution for locating relevant records instantly.
 
 ## Enable searching
 

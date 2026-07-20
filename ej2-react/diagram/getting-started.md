@@ -9,8 +9,8 @@ domainurl: ##DomainURL##
 ---
 
 # Getting Started with React Diagram Component
-
-This section explains how to create a React application from scratch and build a simple diagram using the Syncfusion® React Diagram component.
+ 
+This section explains how to create a React application from scratch and build a simple diagram using the [React Diagram](https://www.syncfusion.com/diagram-sdk/react-diagram) component.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/mcp-server/ai-coding-assistant/getting-started)
 
@@ -37,7 +37,7 @@ N> This guide uses the TypeScript template for better type checking with Diagram
 
 ## Step 1: Create a React application
 
-Use [Vite](https://vite.dev) to create and manage React applications. Vite provides a fast development environment and optimized builds for modern React applications. Syncfusion® recommends using Vite for setting up React applications.
+Use [Vite](https://vitejs.dev/) to create and manage React applications. Vite provides a fast development environment and optimized builds for modern React applications. Syncfusion® React documentation also recommends Vite for setting up React applications.
 
 Create a new React application using the following command:
 
@@ -53,7 +53,13 @@ Navigate to the project folder:
 cd my-diagram-app
 ```
 
-N> If you prefer JavaScript instead of TypeScript, create the application using `npm create vite@latest my-diagram-app --template react`. The root component file will then be **src/App.jsx** instead of **src/App.tsx**.
+Install the application dependencies:
+
+```
+npm install
+```
+
+N> If you prefer JavaScript instead of TypeScript, create the application using `npm create vite@latest my-diagram-app -- --template react`.
 
 ## Step 2: Install the Syncfusion® React Diagram package
 
@@ -268,4 +274,4 @@ npm run dev
 ```
 Open the generated local URL (by default, `http://localhost:5173`) in the browser. The application displays the diagram as shown below:
 
- ![Rendered flowchart with four nodes connected vertically by arrows](./images/Getting-started.png)
+ ![Getting started](./images/Getting-started.png)

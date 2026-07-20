@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Building a Next.js Application with Syncfusion React Grid and Routing
+# Building a Next.js Application with React Grid and Routing
 
 [Next.js](https://nextjs.org/) is a powerful React framework designed for building full-stack web applications. It includes built‑in features such as server‑side rendering, automatic code splitting, intuitive routing, and API routes, providing a solid foundation for developing modern, high‑performance applications.
 

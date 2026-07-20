@@ -9,8 +9,8 @@ domainurl: ##DomainURL##
 ---
 
 # BPMN Shapes in React Diagram Component
-
-BPMN (Business Process Model and Notation) shapes are standardized graphical elements used to represent business processes in a visual workflow. These shapes enable teams to communicate business procedures clearly and consistently across organizations. The React Diagram component provides comprehensive support for creating BPMN diagrams with all standard shape types.
+ 
+BPMN (Business Process Model and Notation) shapes are standardized graphical elements used to represent business processes in a visual workflow. These shapes enable teams to communicate business procedures clearly and consistently across organizations. The [React Diagram](https://www.syncfusion.com/diagram-sdk/react-diagram) component provides comprehensive support for creating BPMN diagrams with all standard shape types.
 
 To create a BPMN shape, set the node's shape type property to **BPMN** and specify the shape property as one of the available built-in shapes. Each BPMN shape serves a specific purpose in modeling business processes, from representing events and activities to showing data flow and decision points.
 
@@ -32,7 +32,6 @@ To create a BPMN shape, set the node's shape type property to **BPMN** and speci
 ## Available BPMN Shapes
 
 The react Diagram component supports the following standard BPMN shapes:
-
 | Shape | Image |
 | -------- | -------- |
 | Event | ![Event Shape](images/Event.png) |

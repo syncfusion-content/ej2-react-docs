@@ -263,7 +263,7 @@ The following code snippet demonstrates specifying the current path in File Mana
 import {  FileManagerComponent } from '@syncfusion/ej2-react-filemanager';
 
 function App() {
-  let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
+  let hostUrl: string = "https://physical-service.syncfusion.com/";
 
   return (
     <div className="control-section">
@@ -285,7 +285,7 @@ export default App;
 import { FileManagerComponent } from '@syncfusion/ej2-react-filemanager';
 
 function App() {
-    let hostUrl = "https://ej2-aspcore-service.azurewebsites.net/";
+    let hostUrl = "https://physical-service.syncfusion.com/";
     return (<div className="control-section">
         <FileManagerComponent id="file" path="/Pictures" ajaxSettings={{
             url: hostUrl + "api/FileManager/FileOperations"

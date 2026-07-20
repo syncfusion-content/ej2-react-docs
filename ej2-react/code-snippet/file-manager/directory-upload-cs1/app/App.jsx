@@ -7,7 +7,7 @@ import { DropDownButton } from '@syncfusion/ej2-splitbuttons';
  */
 function App() {
     let fmObj;
-    let hostUrl = "https://ej2-aspcore-service.azurewebsites.net/";
+    let hostUrl = "https://physical-service.syncfusion.com/";
     let items = [{ text: 'Folder' }, { text: 'Files' }];
     let height = "375px";
     let ajaxSettings = {

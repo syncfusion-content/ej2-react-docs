@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Modules in React Grid component
 
-Syncfusion React Grid modules help optimize your application’s bundle size by including only the features you need. To enable a specific Grid feature, import and inject the corresponding Feature Module into your Grid configuration. The available Grid Feature Modules include:
+React Grid modules help optimize your application’s bundle size by including only the features you need. To enable a specific Grid feature, import and inject the corresponding Feature Module into your Grid configuration. The available Grid Feature Modules include:
 
 | Feature | Module | Description |
 |--------|--------|-------------|

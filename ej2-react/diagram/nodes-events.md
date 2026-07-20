@@ -7,10 +7,10 @@ platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-
+ 
 # Node Interaction Events in React Diagram Component
 
-The React Diagram component provides comprehensive event support for node interactions, allowing developers to respond to user actions and customize behavior during various interaction scenarios. These events are triggered when users interact with nodes through clicking, dragging, resizing, rotating, and other operations.
+The [React Diagram](https://www.syncfusion.com/diagram-sdk/react-diagram) component provides comprehensive event support for node interactions, allowing developers to respond to user actions and customize behavior during various interaction scenarios. These events are triggered when users interact with nodes through clicking, dragging, resizing, rotating, and other operations.
 
 ## Click Event
 
@@ -47,7 +47,7 @@ The following code example shows how to handle the [`selectionChange`](https://e
  
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvent-cs2" %}
 
-Selection can be prevented by setting the `cancel` property [`SelectionChangeEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iSelectionChangeEventArgs) to **true**, as shown in the following code:
+Selection can be prevented by setting the `cancel` property[`SelectionChangeEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iSelectionChangeEventArgs) to **true**, as shown in the following code:
 ```ts
   selectionChange: function (args: ISelectionChangeEventArgs) {
     if (args.state == 'Changing') {
@@ -105,7 +105,7 @@ The following code example shows how to handle the [`sizeChange`](https://ej2.sy
  
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvent-cs4" %}
 
-Resizing can be prevented by setting the `cancel` property of [`SizeChangeEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/isizechangeeventargs) to **true**:
+Resizing can be prevented by setting the `cancel` property of[`SizeChangeEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/isizechangeeventargs) to **true**:
 
  ```ts
     sizeChange: function (args: ISizeChangeEventArgs) {
@@ -134,7 +134,7 @@ The following code example demonstrates how to handle the [`rotateChange`](https
  
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvent-cs5" %}
 
-Rotation can be prevented by setting the `cancel` property of [`RotationEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/irotationeventargs) to **true**:
+Rotation can be prevented by setting the `cancel` property of[`RotationEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/irotationeventargs) to **true**:
 
  ```ts
   rotateChange: function (args: IRotationEventArgs) {
@@ -180,7 +180,7 @@ The following code example demonstrates how to handle the  [`collectionChange`](
  
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvent-cs7" %}
 
-Collection changes can be prevented by setting the `cancel` property of [`CollectionChangeEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/icollectionchangeeventargs) to **true**:
+Collection changes can be prevented by setting the `cancel` property of[`CollectionChangeEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/icollectionchangeeventargs) to **true**:
 
  ```ts
     collectionChange: function (args: ICollectionChangeEventArgs) {
