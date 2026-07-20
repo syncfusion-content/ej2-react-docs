@@ -27,7 +27,7 @@ To set up a basic Remix sample, run the following command:
 npx create-react-router@latest
 ```
 
-The `create-react-router@latest` command create a remix app using the latest package versions.
+The `create-react-router@latest` command creates a Remix app using the latest package versions.
 
 When you run this command, you will be asked the following questions.
 
@@ -43,7 +43,11 @@ git  :: Initialize a new git repository?
 
 deps :: Install dependencies with npm?
         Yes
+
+skill :: Include the React Router agent skill?
+         Yes or No
 ```
+If you need the skill folder, select **Yes**; otherwise, select **No**.
 
 Navigate into the project directory with:
 
@@ -61,7 +65,7 @@ npm install @syncfusion/ej2-react-grids --save
 
 ## Adding CSS reference
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React component provide built-in themes, which are available from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages). Additionally, themes can be loaded via CDN or customized using the [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components provide built-in themes, which are available from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages). Additionally, themes can be loaded via CDN or customized using the [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
 
 This example uses the `Tailwind 3` theme for the Grid component from the theme package. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
 
@@ -73,15 +77,15 @@ npm install @syncfusion/ej2-tailwind3-theme --save
 {% endhighlight %}
 {% highlight bash tabtitle="yarn" %}
 
-yarn add @syncfusion/@syncfusion/ej2-tailwind3-theme
+yarn add @syncfusion/ej2-tailwind3-theme
 
 {% endhighlight %}
 {% endtabs %}
 
-Import the Syncfusion<sup style="font-size:70%">&reg;</sup> component themes in the `~/app/routes/home.tsx` file as shown below:
+Import the Syncfusion<sup style="font-size:70%">&reg;</sup> component themes in the `~/app/app.css` file as shown below:
 
 {% tabs %}
-{% highlight css tabtitle="home.tsx" %}
+{% highlight css tabtitle="app.css" %}
 
 @import "@syncfusion/ej2-tailwind3-theme/styles/grid/index.css";
 
@@ -108,7 +112,7 @@ This configuration ensures Syncfusion modules are properly transpiled for SSR co
 
 ## Adding React Grid component
 
-Now, you can add Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the Remix application. Add the React Grid component in `~/app/routes/home.tsx` file using the following code:
+Now, you can add Syncfusion<sup style="font-size:70%">&reg;</sup> React components in a Remix application. Add the React Grid component in `~/app/routes/home.tsx` file using the following code:
 
 {% tabs %}
 {% highlight ts tabtitle="~/app/routes/home.tsx" %}
@@ -167,6 +171,9 @@ Start your Remix application in development mode:
 ```
 npm run dev
 ```
+The Output will appears follows,
+
+![remix](./images/remix-dev.png)
 
 For deployment, build your app for production,
 

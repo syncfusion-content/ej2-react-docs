@@ -28,7 +28,7 @@ This approach helps reduce bundle sizes and allows for sharing libraries via CDN
     cd Syncfusion-react-demo
     ```
 
-* Use the following commands to create a `package.json` file. Then install the [react](https://www.npmjs.com/package/react) and [react-dom](https://www.npmjs.com/package/react-dom) packages in the application.
+* Use the following commands to create a `package.json` file, then install the [react](https://www.npmjs.com/package/react) and [react-dom](https://www.npmjs.com/package/react-dom) packages in the application.
 
      ```bash
      npm init -y
@@ -43,12 +43,12 @@ Install the required Syncfusion<sup style="font-size:70%">&reg;</sup> React comp
 In this article, the **Grid component** is used as an example. To install the Grid component package, use the following command:
 
 ```bash
-npm install @syncfusion/ej2-react-grids --save
+npm install @syncfusion/ej2-react-grids
 ```
 
 ## Add babel packages
 
-Install the required babel preset packages in the application using the following command:
+Install the required Babel preset packages in the application using the following command:
 
 ```bash
 npm install babel-loader @babel/preset-react @babel/preset-env @babel/core --save-dev
@@ -56,7 +56,7 @@ npm install babel-loader @babel/preset-react @babel/preset-env @babel/core --sav
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component
 
-* Create an `src` folder in the application repository. Then create an `index.html`, `index.js` entry and `App.js` component files inside the `src` folder location. Start adding the required components to the application.
+* Create an `src` folder in the application repository. Then create `index.html`, `index.js` (entry), and `App.js` (component) files inside the `src` folder. Then start adding the required components to the application.
 
 * Open the `src/App.js` file and add the Grid component as follows.
 
@@ -113,15 +113,15 @@ root.render(
 );
 ```
 
-## Install and configure the webpack
+## Install and configure Webpack
 
-* Install the webpack packages using the following command:
+* Install the Webpack packages using the following command:
 
     ```bash
      npm install webpack webpack-cli webpack-dev-server html-webpack-plugin --save-dev
     ```
 
-* Create a `webpack.config.js` file in the application root repository using the following code sample.
+* Create a `webpack.config.js` file in the application root directory using the following code sample.
 
 ```js
 const path =  require('path');
@@ -158,9 +158,9 @@ module.exports = {
 
 ## Configure Webpack externals
 
-* The Syncfusion<sup style="font-size:70%">&reg;</sup> React externals naming convention is `SyncfusionReact[PackageName]`, where `PackageName` is PascalCase (e.g., `SyncfusionReactGrids`).
+* The Syncfusion<sup style="font-size:70%">&reg;</sup> React externals naming convention is `SyncfusionReact[PackageName]`, where `PackageName` is in PascalCase (e.g., `SyncfusionReactGrids`).
 
-* Open the `webpack.config.js` file and add the Syncfusion<sup style="font-size:70%">&reg;</sup> react packages in the externals option as follows.
+* Open the `webpack.config.js` file and add the Syncfusion<sup style="font-size:70%">&reg;</sup> React packages to the `externals` option as follows.
 
    ``` js
     module.exports = {
@@ -174,11 +174,11 @@ module.exports = {
     }
   ```
 
-* Find the Syncfusion<sup style="font-size:70%">&reg;</sup> external CDN script `[package-name].min.js` file inside `dist` folder of the packages.
+* Find the Syncfusion<sup style="font-size:70%">&reg;</sup> external CDN script `[package-name].min.js` file inside the `dist` folder of each package.
 
     ![Syncfusion External CDN](images/external-cdn.png)
 
-* Add the [React](https://reactjs.org/docs/cdn-links.html) and Syncfusion<sup style="font-size:70%">&reg;</sup> react Grid CDN references in the `src/index.html` file. The order of individual Syncfusion<sup style="font-size:70%">&reg;</sup> control package loading should be in line with its dependency graph. The CDN of the Dependency Packages should be included manually before the intended individual Syncfusion<sup style="font-size:70%">&reg;</sup> control package CDN.
+* Add the [React](https://reactjs.org/docs/cdn-links.html) and Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid CDN references in the `src/index.html` file. The order of individual Syncfusion<sup style="font-size:70%">&reg;</sup> control package loading should be in line with its dependency graph. The CDN of the dependency packages must be included manually before the intended individual Syncfusion<sup style="font-size:70%">&reg;</sup> control package CDN.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -226,7 +226,7 @@ module.exports = {
 
 > Refer to the [Script Dependency](../common/script-dependency) section to discover the correct script reference sequence and its dependencies for a certain Syncfusion<sup style="font-size:70%">&reg;</sup> React component.
 
-## Configure the package JSON
+## Configure the package.json
 
 Open the `package.json` file and configure the application scripts as follows:
 
@@ -247,8 +247,8 @@ Run the application using the following command:
 npm start
 ```
 
-Your browser should automatically open. The application displays a Syncfusion Grid component as shown below:
+Your browser should automatically open and display the Syncfusion Grid component, as shown below:
 
 ![Grid component](images/grid-component.png)
 
->[View Sample in GitHub.](https://github.com/SyncfusionExamples/ej2-react-webpack-externals)
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/ej2-react-webpack-externals)

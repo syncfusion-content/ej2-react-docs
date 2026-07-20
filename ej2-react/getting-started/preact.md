@@ -20,7 +20,7 @@ This article outlines the steps required to set up a [Preact](https://preactjs.c
 
 ## Set up the Preact project
 
-To create a new `Preact` project, use one of the commands that are specific to either NPM or Yarn.
+To create a new `Preact` project, use one of the following npm or yarn commands.
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
@@ -35,7 +35,7 @@ yarn create preact
 {% endhighlight %}
 {% endtabs %}
 
-Using one of the above commands will lead you to set up additional configurations for the project, as below:
+After running one of the above commands, you'll be prompted to configure the project as follows:
 
 **Step 1: Define the project name** - You can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
 
@@ -47,7 +47,7 @@ T  Preact - Fast 3kB alternative to React with the same modern API
 —      
 ```
 
-**Step 2: Choose the project language** - Select `JavaScript` as the framework variant to build this Preact project using JavaScript.
+**Step 2: Choose the project language** - Select `JavaScript` as the project language to build this Preact project.
 
 ```bash
 T  Preact - Fast 3kB alternative to React with the same modern API
@@ -122,7 +122,7 @@ npm install @syncfusion/ej2-tailwind3-theme --save
 {% endhighlight %}
 {% highlight bash tabtitle="yarn" %}
 
-yarn add @syncfusion/@syncfusion/ej2-tailwind3-theme
+yarn add @syncfusion/ej2-tailwind3-theme
 
 {% endhighlight %}
 {% endtabs %}
@@ -139,7 +139,7 @@ The required styles for the Grid component are imported in the **src/style.css**
 
 ## Add a Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
-Follow the below steps to add the React Grid component to the Preact project:
+Follow these steps to add the React Grid component to the Preact project:
 
 **Step 1:** Import the Grid component and its required directives in the **src/index.jsx** file.
 
@@ -194,15 +194,18 @@ render(<App />, document.getElementById('app'));
 
 To run the project, use the following command:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm run dev
-```
 
-or
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
 
-```bash
 yarn run dev
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 The output will appear as follows:
 
@@ -210,4 +213,4 @@ The output will appear as follows:
 
 ## See also
 
-[Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Component](../getting-started/quick-start)
+[Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Components](./vite)
