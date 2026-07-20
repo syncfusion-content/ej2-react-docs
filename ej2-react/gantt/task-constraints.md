@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Task Constraints in React Gantt Chart Component | Syncfusion
-description: Learn how to configure task constraints in the Syncfusion React Gantt Chart component to enforce scheduling rules, manage dependencies, and meet deadlines.
+description: Learn how to configure task constraints in the React Gantt Chart component to enforce scheduling rules, manage dependencies, and meet deadlines.
 platform: ej2-react
 control: Task Constraints
 documentation: ug

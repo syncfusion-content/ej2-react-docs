@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Editing Tasks in React Gantt Chart Component | Syncfusion
-description: Learn how to edit tasks dynamically in the Syncfusion React Gantt Chart component using cell editing, dialog, taskbar, or programmatic methods for project updates.
+description: Learn how to edit tasks dynamically in the React Gantt Chart component using cell editing, dialog, taskbar, or programmatic methods for project updates.
 platform: ej2-react
 control: Editing tasks
 documentation: ug

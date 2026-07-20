@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Copy and Paste Records in React Gantt Chart Component | Syncfusion
-description: Learn how to programmatically copy and paste records in the Syncfusion React Gantt Chart component using context menus for efficient task duplication.
+description: Learn how to programmatically copy and paste records in the React Gantt Chart component using context menus for efficient task duplication.
 platform: ej2-react
 control: Copy paste records
 documentation: ug

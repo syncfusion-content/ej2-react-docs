@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Adding New Tasks in React Gantt Chart Component | Syncfusion
-description: Learn how to add tasks dynamically in the Syncfusion React Gantt Chart component using toolbar, context menu, or programmatic methods for project management.
+description: Learn how to add tasks dynamically in the React Gantt Chart component using toolbar, context menu, or programmatic methods for project management.
 platform: ej2-react
 control: Adding new tasks
 documentation: ug

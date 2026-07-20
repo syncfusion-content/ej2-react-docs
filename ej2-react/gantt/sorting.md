@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting in React Gantt Chart Component | Syncfusion
-description: Learn here all about Sorting in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Sorting in React Gantt Chart component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Sorting 
 documentation: ug
@@ -37,7 +37,7 @@ To enable sorting functionality, add the [Sort](https://ej2.syncfusion.com/react
 
 ## Initial sorting
 
-You can apply sorting during the initial render of the Syncfusion React Gantt Chart component by configuring the [sortSettings.columns](https://ej2.syncfusion.com/react/documentation/api/gantt/sortSettings#columns) property. Each column should be defined with a specific [field](https://ej2.syncfusion.com/react/documentation/api/gantt/sortDescriptorModel#field) and [direction](https://ej2.syncfusion.com/react/documentation/api/gantt/sortDescriptorModel#direction), ensuring that the Gantt loads with the desired sort order applied to the specified columns.
+You can apply sorting during the initial render of the React Gantt Chart component by configuring the [sortSettings.columns](https://ej2.syncfusion.com/react/documentation/api/gantt/sortSettings#columns) property. Each column should be defined with a specific [field](https://ej2.syncfusion.com/react/documentation/api/gantt/sortDescriptorModel#field) and [direction](https://ej2.syncfusion.com/react/documentation/api/gantt/sortDescriptorModel#direction), ensuring that the Gantt loads with the desired sort order applied to the specified columns.
 
 The following code example shows how to add sorted columns during Gantt initialization, with `field` set to **TaskID** and `direction` to **Descending**, and another with `field` as **TaskName** and `direction` as **Ascending**.
 
@@ -57,11 +57,11 @@ The following code example shows how to add sorted columns during Gantt initiali
 
 ## Sort columns externally
 
-You can externally sort columns, remove a specific sort, or clear all sorting in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component using button clicks.
+You can externally sort columns, remove a specific sort, or clear all sorting in the React Gantt Chart component using button clicks.
 
 ### Add sort columns
 
-You can externally sort a column in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component using the [sortColumn](https://ej2.syncfusion.com/react/documentation/api/gantt#sortcolumn) method with parameters for column name, sort direction, and multi-sort configuration.
+You can externally sort a column in the React Gantt Chart component using the [sortColumn](https://ej2.syncfusion.com/react/documentation/api/gantt#sortcolumn) method with parameters for column name, sort direction, and multi-sort configuration.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -79,7 +79,7 @@ You can externally sort a column in the Syncfusion<sup style="font-size:70%">&re
 
 ### Remove sort columns
 
-You can externally remove sorting from a specific column in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component using the [removeSortColumn](https://ej2.syncfusion.com/react/documentation/api/gantt/sort#removesortcolumn) method by passing the column name.
+You can externally remove sorting from a specific column in the React Gantt Chart component using the [removeSortColumn](https://ej2.syncfusion.com/react/documentation/api/gantt/sort#removesortcolumn) method by passing the column name.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -97,7 +97,7 @@ You can externally remove sorting from a specific column in the Syncfusion<sup s
 
 ### Clear sorting
 
-You can clear all sorted columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt Chart component using the [clearSorting](https://ej2.syncfusion.com/react/documentation/api/gantt#clearsorting) method to reset the Gantt Chart to its unsorted state.
+You can clear all sorted columns in the React Gantt Chart component using the [clearSorting](https://ej2.syncfusion.com/react/documentation/api/gantt#clearsorting) method to reset the Gantt Chart to its unsorted state.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

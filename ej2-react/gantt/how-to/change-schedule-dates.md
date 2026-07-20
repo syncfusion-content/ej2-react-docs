@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Update Project Schedule Dates in React Gantt Chart | Syncfusion
-description: Learn how to programmatically update project schedule dates in the Syncfusion React Gantt Chart component to adjust timelines and task schedules efficiently.
+description: Learn how to programmatically update project schedule dates in the React Gantt Chart component to adjust timelines and task schedules efficiently.
 platform: ej2-react
 control: Schedule dates
 documentation: ug

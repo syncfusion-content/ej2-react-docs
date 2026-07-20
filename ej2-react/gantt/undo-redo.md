@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Undo Redo in React Gantt Chart Component | Syncfusion
-description: Learn how to configure undo redo actions in the Syncfusion React Gantt Chart component for reverting task edits, dependencies, and project changes.
+description: Learn how to configure undo redo actions in the React Gantt Chart component for reverting task edits, dependencies, and project changes.
 platform: ej2-react
 control: Undo redo
 documentation: ug

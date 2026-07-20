@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in React Gantt Chart Component | Syncfusion
-description: Learn here all about Selection in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Selection in React Gantt Chart component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Selection 
 documentation: ug

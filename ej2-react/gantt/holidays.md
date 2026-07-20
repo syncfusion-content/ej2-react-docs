@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Holidays in React Gantt Component | Syncfusion
-description: Learn how to configure holidays in the Syncfusion React Gantt Chart component for accurate task scheduling with non-working days.
+description: Learn how to configure holidays in the React Gantt Chart component for accurate task scheduling with non-working days.
 platform: ej2-react
 control: Holidays
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Set Vertical Scroll Position in React Gantt Chart Component | Syncfusion
-description: Learn how to programmatically set the vertical scroll position in the Syncfusion React Gantt Chart component for efficient navigation in large project datasets.
+description: Learn how to programmatically set the vertical scroll position in the React Gantt Chart component for efficient navigation in large project datasets.
 platform: ej2-react
 control: Scroll position
 documentation: ug

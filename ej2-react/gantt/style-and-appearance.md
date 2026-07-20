@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and Appearance in React Gantt Chart Component | Syncfusion
-description: Learn how to customize the style and appearance of the Syncfusion React Gantt Chart component with CSS overrides and grid line configurations.
+description: Learn how to customize the style and appearance of the React Gantt Chart component with CSS overrides and grid line configurations.
 platform: ej2-react
 control: Style and appearance
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Critical Path in React Gantt Chart Component | Syncfusion
-description: Learn here all about Critical path in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Critical path in React Gantt Chart component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Critical path 
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Indent and Outdent in React Gantt Chart Component | Syncfusion
-description: Learn how to use Indent and Outdent features in the Syncfusion React Gantt Chart component to manage task hierarchy effectively.
+description: Learn how to use Indent and Outdent features in the React Gantt Chart component to manage task hierarchy effectively.
 platform: ej2-react
 control: Indent and outdent 
 documentation: ug

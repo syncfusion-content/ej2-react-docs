@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PDF Headers and Footers in React Gantt Chart | Syncfusion
-description: Learn how to customize headers and footers in PDF exports of the Syncfusion React Gantt Chart component with text, lines, page numbers, and images.
+description: Learn how to customize headers and footers in PDF exports of the React Gantt Chart component with text, lines, page numbers, and images.
 platform: ej2-react
 control: header and footer of PDF exporting
 documentation: ug

@@ -170,4 +170,4 @@ Open the generated local URL (for example, `/localhost:3000/`) from terminal in 
 
 To learn more about the functionality of the Chart component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/chart/getting-started#module-injection).
 
-N> [View the NEXT.js Chart sample in the GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-chart-component-in-nextjs). Looking for the full React Charts component overview, features, pricing, and documentation? Visit the [React Charts](https://www.syncfusion.com/react-components/react-charts) page.
+N> [View the NEXT.js Chart sample in the GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-chart-component-in-nextjs).

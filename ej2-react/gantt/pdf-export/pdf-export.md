@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PDF Export in React Gantt Chart Component | Syncfusion
-description: Learn how to export Gantt to PDF in Syncfusion React Gantt Chart component with indicators, blob objects, single-page, and theme options.
+description: Learn how to export Gantt to PDF in React Gantt Chart component with indicators, blob objects, single-page, and theme options.
 platform: ej2-react
 control: PDF export
 documentation: ug

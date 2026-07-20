@@ -52,22 +52,30 @@ cd my-app
 npm install @syncfusion/ej2-react-schedule --save
 ```
 
-## Adding CSS reference
+## Adding CSS reference from a theme package
 
-Add scheduler component's styles as given below in `src/App.css`.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React Schedule component can be applied with CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
 
-```
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-react-schedule/styles/tailwind3.css";
-```
+Install the **Tailwind 3** theme package using the following command:
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+npm install @syncfusion/ej2-tailwind3-theme --save
+
+{% endhighlight %}
+{% endtabs %}
+
+Then add the following CSS reference to the **src/App.css** file:
+
+{% tabs %}
+{% highlight css tabtitle="App.css" %}
+
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/schedule/index.css";
+
+{% endhighlight %}
+{% endtabs %}
+
 >To refer `App.css` in the application then import it in the `src/App.tsx` file.
 
 ## Initialize the Schedule and configure module injection
@@ -247,8 +255,6 @@ function App () {
 export default App;
 {% endhighlight %}
 {% endtabs %}
-
-N> Looking for the full React Scheduler component overview, features, pricing, and documentation? Visit the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) page.
 
 ## See also
 

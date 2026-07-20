@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tree Column in React Gantt Chart Component | Syncfusion
-description: Learn here all about Tree Column in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Tree Column in React Gantt Chart component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Tree Column 
 documentation: ug

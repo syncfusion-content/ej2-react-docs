@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deleting tasks in React Gantt Chart Component | Syncfusion
-description: Learn how to delete tasks dynamically in the Syncfusion React Gantt Chart component using toolbar or programmatic methods for efficient project management.
+description: Learn how to delete tasks dynamically in the React Gantt Chart component using toolbar or programmatic methods for efficient project management.
 platform: ej2-react
 control: Deleting tasks
 documentation: ug

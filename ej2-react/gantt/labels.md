@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Task Labels in React Gantt Chart Component | Syncfusion
-description: Learn how to configure taskbar labels in the Syncfusion React Gantt Chart component for enhanced data visualization and project management.
+description: Learn how to configure taskbar labels in the React Gantt Chart component for enhanced data visualization and project management.
 platform: ej2-react
 control: Task labels
 documentation: ug

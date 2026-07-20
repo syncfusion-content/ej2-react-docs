@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Maintain Zoom-to-fit in React Gantt Chart Component | Syncfusion
-description: Learn how to maintain zoom-to-fit functionality in the Syncfusion React Gantt Chart component during editing and dynamic data source changes.
+description: Learn how to maintain zoom-to-fit functionality in the React Gantt Chart component during editing and dynamic data source changes.
 platform: ej2-react
 control: Zoom to fit
 documentation: ug

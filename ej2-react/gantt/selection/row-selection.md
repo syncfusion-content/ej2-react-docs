@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Gantt Row Selection API Guide | Syncfusion
-description: Explore how to configure and customize row selection in the Syncfusion React Gantt Chart component using API methods and events.
+description: Explore how to configure and customize row selection in the React Gantt Chart component using API methods and events.
 platform: ej2-react
 control: Row selection 
 documentation: ug

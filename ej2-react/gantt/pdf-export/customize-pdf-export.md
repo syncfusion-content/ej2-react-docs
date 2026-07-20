@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize PDF Exporting in React Gantt Chart | Syncfusion
-description: Learn here all about customize PDF exporting in Syncfusion React Gantt Chart component of Syncfusion Essential JS 2 and more.
+description: Learn here all about customize PDF exporting in React Gantt Chart component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Multiple gantt exporting 
 documentation: ug

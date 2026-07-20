@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Configure Work in React Gantt Chart Component | Syncfusion
-description: Learn how to configure work and task types in the Syncfusion React Gantt Chart component for accurate task scheduling and resource allocation.
+description: Learn how to configure work and task types in the React Gantt Chart component for accurate task scheduling and resource allocation.
 platform: ej2-react
 control: Work
 documentation: ug
