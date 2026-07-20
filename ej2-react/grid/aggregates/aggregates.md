@@ -161,7 +161,7 @@ The aggregate type `Sum` by default displays the raw value (e.g., "1234.56") in 
 
 ## Built-in aggregate types
 
-The Syncfusion React Grid supports the following built-in aggregate types that can be specified in the [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn#type) property:
+The React Grid supports the following built-in aggregate types that can be specified in the [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn#type) property:
 
 - `Sum`: Calculates the total of all values in the column.
 - `Average`: Calculates the mean of all values.

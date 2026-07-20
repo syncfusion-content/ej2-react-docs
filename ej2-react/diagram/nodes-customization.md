@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Appearence of a nodes in React Diagram component | Syncfusion®
-description: Learn here all about Nodes in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+description: Learn here all about Nodes in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and many more.
 control: Appearence of nodes 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-
+ 
 # Appearance of Nodes in React Diagram Component
 
-To customize the appearance and position of nodes in the React Diagram component, refer to the video link below.
+To customize the appearance and position of nodes in the [React Diagram](https://www.syncfusion.com/diagram-sdk/react-diagram) component, refer to the video link below.
 
 {% youtube "https://www.youtube.com/watch?v=pn02S_rwupw" %}
 
@@ -118,7 +118,7 @@ Use the following CSS to customize the style of the main node during multiple se
 
 Node appearance can be enhanced using rotation and corner radius properties:
 
-- **Rotate angle**: The [`rotateAngle`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#rotateangle) property allows you to rotate nodes within the diagram. This is particularly useful when you want to represent nodes from different perspectives or angles to match your design requirements.
+- **Rotate angle**: The [`rotateAngle`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#rotateangle)property allows you to rotate nodes within the diagram. This is particularly useful when you want to represent nodes from different perspectives or angles to match your design requirements.
 
 - **Corner radius**: The [`cornerRadius`](https://ej2.syncfusion.com/react/documentation/api/diagram/basicShapeModel#cornerradius) property allows you to round the corners of rectangular nodes in the diagram. It adds a visual styling effect to the nodes, making them appear softer and more polished.
 

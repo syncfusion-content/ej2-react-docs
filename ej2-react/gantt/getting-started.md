@@ -18,7 +18,7 @@ Before you begin, ensure you have:
 
 - [Node.js](https://nodejs.org/en) (v14.0 or later)
 - npm or yarn package manager
-- Basic knowledge of React
+- Basic knowledge of React (v18 or later recommended)
 
 ## Installation
 
@@ -37,52 +37,47 @@ Install the Gantt Chart package:
 npm install @syncfusion/ej2-react-gantt
 ```
 
+> To install a specific version (for matching an internal version pin), use `npm install @syncfusion/ej2-react-gantt@<version>`. The `ej2-base` and other dependent `@syncfusion/ej2-*` packages are installed transitively.
+
+If you created the app with the JavaScript Vite template instead of TypeScript, use `src/App.jsx` and keep the same component structure with JSX syntax.
+
 ## Add theme styles
 
-Import the basic Gantt Chart styles in your `src/App.css`:
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
 
-```css
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-gantt/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-treegrid/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-```
+Install the **Tailwind 3** theme package using the following command:
 
-> **Note:** When using features like editing, toolbar, filtering, or dialogs, you need to import additional component styles:
-> ```css
-> /* For editing, toolbar, and dialog features */
-> @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css";
-> @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-> @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-> @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-> @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-> @import "../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css";
-> 
-> /* For rich text editor in dialog notes tab */
-> @import "../node_modules/@syncfusion/ej2-richtexteditor/styles/tailwind3.css";
-> ```
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
 
-Import the CSS file in `src/App.tsx`:
+npm install @syncfusion/ej2-tailwind3-theme --save
 
-```typescript
-import './App.css';
-```
+{% endhighlight %}
+{% endtabs %}
+
+Then add the following CSS reference to the **src/App.css** file:
+
+{% tabs %}
+{% highlight css tabtitle="App.css" %}
+
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/gantt/index.css";
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Create sample data
 
-Define a simple task list with hierarchical relationships. Each task must have a `StartDate` and either a `Duration` or `EndDate` to render properly.
+Define a simple task list with hierarchical relationships. Each task must have a `StartDate` and either a `Duration` or `EndDate` to render properly. If both are provided, `EndDate` takes precedence. The `Duration` value is in working days; `EndDate` is an absolute calendar date.
 
 ```typescript
-const tasks = [
-  {TaskID: 1, TaskName: 'Project initiation', StartDate: new Date('2024-04-01'), EndDate: new Date('2024-04-15')},
-  {TaskID: 2, TaskName: 'Identify site location', StartDate: new Date('2024-04-01'), Duration: 4, Progress: 70, ParentID: 1},
-  {TaskID: 3, TaskName: 'Perform site survey', StartDate: new Date('2024-04-01'), Duration: 4, Progress: 50, ParentID: 1},
-  {TaskID: 4, TaskName: 'Soil testing', StartDate: new Date('2024-04-01'), Duration: 3, Progress: 40, ParentID: 1},
-  {TaskID: 5, TaskName: 'Project estimation', StartDate: new Date('2024-04-15'), EndDate: new Date('2024-04-25')},
-  {TaskID: 6, TaskName: 'Develop floor plan', StartDate: new Date('2024-04-15'), Duration: 5, Progress: 30, ParentID: 5},
-  {TaskID: 7, TaskName: 'Estimate project cost', StartDate: new Date('2024-04-15'), Duration: 5, Progress: 20, ParentID: 5}
+const taskData = [
+  { TaskID: 1, TaskName: 'Project initiation', StartDate: new Date('2024-04-01'), EndDate: new Date('2024-04-15') },
+  { TaskID: 2, TaskName: 'Identify site location', StartDate: new Date('2024-04-01'), Duration: 4, Progress: 70, ParentID: 1 },
+  { TaskID: 3, TaskName: 'Perform site survey', StartDate: new Date('2024-04-01'), Duration: 4, Progress: 50, ParentID: 1 },
+  { TaskID: 4, TaskName: 'Soil testing', StartDate: new Date('2024-04-01'), Duration: 3, Progress: 40, ParentID: 1 },
+  { TaskID: 5, TaskName: 'Project estimation', StartDate: new Date('2024-04-15'), EndDate: new Date('2024-04-25') },
+  { TaskID: 6, TaskName: 'Develop floor plan', StartDate: new Date('2024-04-15'), Duration: 5, Progress: 30, ParentID: 5 },
+  { TaskID: 7, TaskName: 'Estimate project cost', StartDate: new Date('2024-04-15'), Duration: 5, Progress: 20, ParentID: 5 }
 ];
 ```
 
@@ -95,6 +90,7 @@ const taskFields = {
   id: 'TaskID',
   name: 'TaskName',
   startDate: 'StartDate',
+  endDate: 'EndDate',
   duration: 'Duration',
   progress: 'Progress',
   parentID: 'ParentID'
@@ -108,38 +104,43 @@ const taskFields = {
 | `id` | Unique task identifier | Yes |
 | `name` | Task display name | Yes |
 | `startDate` | Task start date | Yes |
-| `duration` | Task duration in days | Yes |
-| `progress` | Task completion percentage (0-100) | No |
+| `duration` | Task duration in working days (numeric, optional decimal) | No (use `endDate` instead) |
+| `endDate` | Task end date | No (use `duration` instead) |
+| `progress` | Task completion percentage (0–100) | No |
 | `parentID` | Parent task ID for hierarchy | No |
+| `dependency` | Predecessor relationships (e.g., `2FS+1d`) | No |
+| `hasChildMapping` | Indicates whether a row has child rows (load-on-demand) | No |
+| `resourceInfo` | Field name that holds resource data | No |
 
-## Render the Gantt component
+## Render the Gantt Chart component
 
-Put it all together in `src/App.tsx`:
+Put it all together in `src/App.tsx`. The `taskData` and `taskFields` variables defined earlier are reused here.
 
 ```typescript
 import { GanttComponent } from '@syncfusion/ej2-react-gantt';
 import './App.css';
 
 const taskData = [
-  {TaskID: 1, TaskName: 'Project initiation', StartDate: new Date('2024-04-01'), EndDate: new Date('2024-04-15')},
-  {TaskID: 2, TaskName: 'Identify site location', StartDate: new Date('2024-04-01'), Duration: 4, Progress: 70, ParentID: 1},
-  {TaskID: 3, TaskName: 'Perform site survey', StartDate: new Date('2024-04-01'), Duration: 4, Progress: 50, ParentID: 1},
-  {TaskID: 4, TaskName: 'Soil testing', StartDate: new Date('2024-04-01'), Duration: 3, Progress: 40, ParentID: 1},
-  {TaskID: 5, TaskName: 'Project estimation', StartDate: new Date('2024-04-08'), EndDate: new Date('2024-04-18')},
-  {TaskID: 6, TaskName: 'Develop floor plan', StartDate: new Date('2024-04-08'), Duration: 5, Progress: 30, ParentID: 5},
-  {TaskID: 7, TaskName: 'Estimate project cost', StartDate: new Date('2024-04-08'), Duration: 5, Progress: 20, ParentID: 5}
+  { TaskID: 1, TaskName: 'Project initiation', StartDate: new Date('2024-04-01'), EndDate: new Date('2024-04-15') },
+  { TaskID: 2, TaskName: 'Identify site location', StartDate: new Date('2024-04-01'), Duration: 4, Progress: 70, ParentID: 1 },
+  { TaskID: 3, TaskName: 'Perform site survey', StartDate: new Date('2024-04-01'), Duration: 4, Progress: 50, ParentID: 1 },
+  { TaskID: 4, TaskName: 'Soil testing', StartDate: new Date('2024-04-01'), Duration: 3, Progress: 40, ParentID: 1 },
+  { TaskID: 5, TaskName: 'Project estimation', StartDate: new Date('2024-04-15'), EndDate: new Date('2024-04-25') },
+  { TaskID: 6, TaskName: 'Develop floor plan', StartDate: new Date('2024-04-15'), Duration: 5, Progress: 30, ParentID: 5 },
+  { TaskID: 7, TaskName: 'Estimate project cost', StartDate: new Date('2024-04-15'), Duration: 5, Progress: 20, ParentID: 5 }
 ];
 
-export default function App() {
-  const taskFields = {
-    id: 'TaskID',
-    name: 'TaskName',
-    startDate: 'StartDate',
-    duration: 'Duration',
-    progress: 'Progress',
-    parentID: 'ParentID'
-  };
+const taskFields = {
+  id: 'TaskID',
+  name: 'TaskName',
+  startDate: 'StartDate',
+  endDate: 'EndDate',
+  duration: 'Duration',
+  progress: 'Progress',
+  parentID: 'ParentID'
+};
 
+export default function App() {
   return (
     <GanttComponent
       dataSource={taskData}
@@ -156,7 +157,7 @@ export default function App() {
 npm run dev
 ```
 
-Access the running application through your configured development URL.
+Access the running application through your configured development URL (Vite default: `http://localhost:5173`).
 
 ## Output
 
@@ -182,8 +183,17 @@ You can preview the following sample by clicking the **Preview Sample** button.
 
 {% previewsample "page.domainurl/code-snippet/gantt/run-cs1" %}
 
+## Troubleshooting
+
+- **License warning in console:** Register a valid Syncfusion license key using `registerLicense` from `@syncfusion/ej2-base`. You can obtain a key from your [Syncfusion account](https://www.syncfusion.com/account).
+- **Styles not applied:** Verify the CSS `@import` paths resolve from `src/`. With Vite, prefer importing CSS in `src/main.tsx` if `@import` inside CSS fails.
+- **Peer dependency errors:** Ensure React 18+ is installed (`npm install react@18 react-dom@18`).
+- **TypeScript errors on task data:** Define an interface for your task records, e.g. `interface ITask { TaskID: number; TaskName: string; StartDate: Date; Duration?: number; EndDate?: Date; Progress?: number; ParentID?: number; }`.
+
 ## Next Steps
 
 - **[Key Elements](./key-elements)** - Learn about UI components and interactions
 - **[Feature Modules](./module)** - Enable advanced features with module injection
 - **[Overview](./overview)** - Explore all available features
+
+N> Looking for the full React Gantt Chart component overview, features, pricing, and documentation? Visit the [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) page.

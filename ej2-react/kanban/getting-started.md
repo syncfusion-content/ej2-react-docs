@@ -14,15 +14,34 @@ This article provides a step-by-step  guide to getting started with the Syncfusi
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview)
 
+## Prerequisites
+
+Before you begin, ensure the following tools are installed:
+
+| Tool | Version | Purpose |
+|------|---------|---------|
+| [Node.js](https://nodejs.org/en) | 18.x or later (LTS recommended) | Required by Vite and npm |
+| [npm](https://www.npmjs.com/) | 9.x or later (bundled with Node.js) | Package manager |
+
+Verify your setup:
+
+```bash
+node --version
+npm --version
+```
+
 ## Overview
 
 The Kanban component is composed of:
 - **Cards**: tasks displayed on the board; mapped from a `dataSource` via `cardSettings`.
-- **Columns**: workflow stages; defined using `keyField`.
+- **Columns**: workflow stages; defined using `keyField` on each `ColumnDirective`.
 - **Swimlanes**: optional grouping of cards; configured with `swimlaneSettings`.
 
-> The `keyField` property maps each column to a specific field in the data source. Each column displays cards whose field value matches its `keyField`.
-> The `cardSettings` property defines how each card is displayed, including which fields are used for the header and content.
+> **Note on `keyField`:** The Kanban component's `keyField` property is the name of the field in the data source that categorizes cards (for example, `"Status"`). Each `ColumnDirective` also has its own `keyField` property, which is the *value* the column matches against. A card is rendered in a column when the card's `Status` value equals that column's `keyField`.
+>
+> The `cardSettings` property defines how each card is displayed. The two main sub-properties are:
+> - `headerField` — the data field used for the card header.
+> - `contentField` — the data field used for the card body.
 
 ## Create the React application
 
@@ -35,6 +54,12 @@ cd my-kanban-app
 
 > Use `--template react` for JavaScript instead of TypeScript.
 
+Install the project's base dependencies before adding Syncfusion packages:
+
+```bash
+npm install
+```
+
 ### Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
 Once you have created the React application, install the required Syncfusion<sup style="font-size:70%">&reg;</sup> React component package in the application. All Syncfusion<sup style="font-size:70%">&reg;</sup> React (Essential<sup style="font-size:70%">&reg;</sup> JS 2) packages are published on the [npmjs](https://www.npmjs.com/~syncfusionorg) public registry.To install the Kanban component package, use the following command.
@@ -45,30 +70,29 @@ npm install @syncfusion/ej2-react-kanban
 
 ## Adding CSS reference
 
-Syncfusion provides multiple themes (Tailwind, Material, etc.). Import only the CSS files required by your chosen theme. Example — Tailwind theme: add these imports to `src/App.css`
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Kanban component can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
 
-```css
-@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-kanban/styles/tailwind3.css';
-```
-Import the CSS file in `src/App.tsx`:
+Install the **Tailwind 3** theme package using the following command:
 
-```typescript
-import './App.css';
-```
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
 
-## Adding Kanban component
+npm install @syncfusion/ej2-tailwind3-theme --save
 
-Start adding the required components to the application. Add the Kanban component to src/App.tsx using the following code:
+{% endhighlight %}
+{% endtabs %}
 
-* Then, add the Kanban component in the application using the following code sample.
+Then add the following CSS reference to the **src/App.css** file:
+
+{% tabs %}
+{% highlight css tabtitle="App.css" %}
+
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/kanban/index.css";
+
+{% endhighlight %}
+{% endtabs %}
+
+## Adding the Kanban component
 
 Create a new file named `src/datasource.ts` and define the following data source:
 
@@ -132,28 +156,32 @@ export let kanbanData: Object[] = [
 ];
 ```
 
-Then update `src/App.tsx` to import the data:
+> **Note:** The `extend` helper from `@syncfusion/ej2-base` is used to deep-clone the data so that the Kanban component's internal state (for example, drag-and-drop rank changes) does not mutate the imported `kanbanData` array.
+
+Update `src/App.tsx` to import the data and render the Kanban component:
 
 {% raw %}
 ```typescript
 import { extend } from '@syncfusion/ej2-base';
 import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-react-kanban";
 import { kanbanData } from './datasource';
-import './App.css'
+import './App.css';
 
 function App() {
-    // Clone the data to avoid mutating the original datasource
-    const data = extend([], kanbanData, null, true);
-    return (
-      <KanbanComponent id="kanban" keyField="Status" dataSource={data} 
-          cardSettings={{ contentField: "Summary", headerField: "Id" }}>
-          <ColumnsDirective>
-            <ColumnDirective headerText="To Do" keyField="Open"/>
-            <ColumnDirective headerText="In Progress" keyField="InProgress"/>
-            <ColumnDirective headerText="Testing" keyField="Testing"/>
-            <ColumnDirective headerText="Done" keyField="Close"/>
-          </ColumnsDirective>
-      </KanbanComponent>);
+  // Deep-clone the data to avoid mutating the imported data source
+  const data = extend([], kanbanData, null, true);
+  return (
+    <KanbanComponent id="kanban" keyField="Status" dataSource={data}
+        cardSettings={{ contentField: "Summary", headerField: "Id" }}>
+        <ColumnsDirective>
+          <ColumnDirective headerText="To Do" keyField="Open" />
+          <ColumnDirective headerText="In Progress" keyField="InProgress" />
+          <ColumnDirective headerText="Testing" keyField="Testing" />
+          <ColumnDirective headerText="Validate" keyField="Validate" />
+          <ColumnDirective headerText="Done" keyField="Close" />
+        </ColumnsDirective>
+    </KanbanComponent>
+  );
 }
 export default App;
 ```
@@ -167,13 +195,15 @@ Run the following command to start the development server:
 npm run dev
 ```
 
+By default, Vite serves the application at `http://localhost:5173`. Open this URL in a browser to view the Kanban board.
+
 ## Output
 
-The Kanban board displays cards based on the kanbanData array. In this example, the board renders:
+The Kanban board displays cards based on the `kanbanData` array. In this example, the board renders:
 
-- A set of workflow columns for `Open`, `InProgress`, `Testing`, and `Close`.
+- Five workflow columns: `To Do` (Open), `In Progress`, `Testing`, `Validate`, and `Done` (Close).
 - Cards mapped to each column by the `Status` field.
-- Card headers and content using `Id` and `Summary` via `cardSettings`.
+- Card headers and content using the `Id` and `Summary` fields configured in `cardSettings`.
 
 You can preview the following sample by clicking the **Preview Sample** button.
 
@@ -197,8 +227,35 @@ You can preview the following sample by clicking the **Preview Sample** button.
         
 {% previewsample "page.domainurl/code-snippet/kanban/getting-started-key-field-cs3" %}
 
+## Troubleshooting
+
+| Issue | Possible cause | Fix |
+|-------|----------------|-----|
+| Dev server fails to start | Node.js version is too old | Upgrade to Node.js 18.x or later |
+| Port `5173` is already in use | Another process is using the port | Stop the other process, or run `npm run dev -- --port 3000` |
+| Styles are not being applied. | Theme CSS not imported | Verify all `@syncfusion/ej2-*/styles/*.css` imports are present in `src/App.css` and that `App.css` is imported in `App.tsx` |
+| "Module not found" errors | Dependencies not installed | Run `npm install` in the project root |
+| Cards missing from a column | Card `Status` value has no matching column `keyField` | Add a `ColumnDirective` whose `keyField` matches the missing `Status`, or update the data |
+
+## Version compatibility
+
+| Package | Tested version |
+|---------|----------------|
+| `@syncfusion/ej2-react-kanban` | Latest (as of July 2026) |
+| React | 18.x and 19.x |
+| TypeScript | 5.x (when using the `react-ts` template) |
+| Vite | 5.x and 6.x |
+
+To verify the installed version of the Kanban package, run:
+
+```bash
+npm list @syncfusion/ej2-react-kanban
+```
+
 ## See also
 
 - [Kanban columns](./columns.md)
 - [Kanban data binding](./data-binding.md)
 - [Kanban dialog](./dialog.md)
+- [Kanban swimlane](./swimlane.md)
+- [Kanban priority](./priority.md)

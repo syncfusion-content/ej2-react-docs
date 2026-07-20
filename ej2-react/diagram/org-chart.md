@@ -7,10 +7,10 @@ platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-
+ 
 # Organizational Chart Layout in React Diagram Component
 
-An organizational chart is a diagram that displays the hierarchical structure of an organization, showing reporting relationships and roles within the company. The React Diagram component provides specialized support for creating professional organizational charts through automatic layout algorithms. To create an organizational chart, set the [`type`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout#type) of layout should be set as an **OrganizationalChart**.
+An organizational chart is a diagram that displays the hierarchical structure of an organization, showing reporting relationships and roles within the company. The [React Diagram](https://www.syncfusion.com/diagram-sdk/react-diagram) component provides specialized support for creating professional organizational charts through automatic layout algorithms. To create an organizational chart, set the [`type`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout#type) of layout should be set as an **OrganizationalChart**.
 
 
 ## Organizational Chart with DataSource
@@ -30,7 +30,7 @@ This approach is ideal when working with dynamic data from databases, APIs, or w
  {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/organizationalchart-cs1" %}
 
 
-N> When using organizational chart layout, both HierarchicalTree and DataBinding modules must be injected into the diagram component.
+>Note: When using organizational chart layout, both HierarchicalTree and DataBinding modules must be injected into the diagram component.
 
 
 ## Organizational Chart with Nodes and Connectors
@@ -150,7 +150,7 @@ The following code example illustrates how to add assistants to layout.
 
 ![Assistant](images/assistant.png)
 
-N> Assistant nodes cannot have child nodes and serve as terminal positions in the organizational hierarchy.
+>Note: Assistant nodes cannot have child nodes and serve as terminal positions in the organizational hierarchy.
 
 ## Best Practices
 

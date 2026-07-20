@@ -9,8 +9,8 @@ domainurl: ##DomainURL##
 ---
 
 # Tools in React Diagram Component
-
-The React Diagram component provides a comprehensive set of interactive tools that enable users to create, modify, and navigate diagrams efficiently. These tools facilitate real-time interaction with diagram elements through mouse and keyboard operations.
+ 
+The [React Diagram](https://www.syncfusion.com/diagram-sdk/react-diagram) component provides a comprehensive set of interactive tools that enable users to create, modify, and navigate diagrams efficiently. These tools facilitate real-time interaction with diagram elements through mouse and keyboard operations.
 
 ## Overview
 
@@ -24,7 +24,7 @@ These tools are essential for building complex diagrams and provide the foundati
 
 ## Drawing Tools
 
-Drawing tools enable real-time creation of diagram elements by clicking and dragging on the diagram canvas. All drawing operations are configured through the [`drawingObject`](https://ej2.syncfusion.com/react/documentation/api/diagram#drawingobject) property and activated using the [`tool`](https://ej2.syncfusion.com/react/documentation/api/diagram#tool) property.
+Drawing tools enable real-time creation of diagram elements by clicking and dragging on the diagram canvas. All drawing operations are configured through the [`drawingObject`](https://ej2.syncfusion.com/react/documentation/api/diagram/#drawingobject) property and activated using the [`tool`](https://ej2.syncfusion.com/react/documentation/api/diagram/#tool) property.
 
 ### Draw Nodes
 
@@ -56,7 +56,7 @@ Path shapes can be drawn using the same approach with custom path data. The foll
 
 ### Text Nodes
 
-Similarly, you can draw a text node by setting the type of shape as 'Text' in the `drawingObject` property. The [`text`](https://ej2.syncfusion.com/react/documentation/api/diagram/textModel) node includes a content property that defines the displayed text. Users can add or modify the content after completing the drawing operation:
+Similarly, you can draw a text node by setting the type of shape as 'Text' in the `drawingObject` property. The [`text`](https://ej2.syncfusion.com/react/documentation/api/diagram/textModel/) node includes a content property that defines the displayed text. Users can add or modify the content after completing the drawing operation:
 
 
 {% tabs %}
@@ -120,11 +120,11 @@ The following code illustrates how to draw a polyline connector.
 
  {% previewsample "page.domainurl/code-snippet/diagram/Tools/tools-cs6" %}
 
- The segments of a polyline connector can be adjusted at runtime by dragging the segment thumb, as shown in the image below. To enable segment editing, you should set the [`DragSegmentThumb`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectorConstraints) constraint for the connector.
+ The segments of a polyline connector can be adjusted at runtime by dragging the segment thumb, as shown in the image below. To enable segment editing, you should set the [`DragSegmentThumb`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectorConstraints/) constraint for the connector.
 
 ![Polyline connector drawing](images/polyline-draw.gif)
 
-N> To make the segment thumb visible, inject the [`ConnectorEditing`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectorEditing) module into the diagram.
+N> To make the segment thumb visible, inject the [`ConnectorEditing`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectorEditing/) module into the diagram.
 
 ### Freehand Drawing
 
@@ -143,7 +143,7 @@ The following code illustrates how to perform freehand drawing:
 
  {% previewsample "page.domainurl/code-snippet/diagram/Tools/tools-cs7" %}
 
-The segments of a freehand connector can be adjusted at runtime by dragging the segment thumb, as shown in the image below. To enable segment editing, you should set the [`DragSegmentThumb`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectorConstraints) constraint for the connector.
+The segments of a freehand connector can be adjusted at runtime by dragging the segment thumb, as shown in the image below. To enable segment editing, you should set the [`DragSegmentThumb`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectorConstraints/) constraint for the connector.
 
 ![Freehand connector drawing](images/freehand-draw.gif)
 
@@ -168,7 +168,7 @@ These tools provide flexibility and functionality for creating and interacting w
 
 ### Zoom Pan Tool
 
-The pan tool enables users to navigate large diagrams by dragging the view area. To activate panning mode, set the  [`tool`](https://ej2.syncfusion.com/react/documentation/api/diagram#tool) property to `ZoomPan`:
+The pan tool enables users to navigate large diagrams by dragging the view area. To activate panning mode, set the  [`tool`](https://ej2.syncfusion.com/react/documentation/api/diagram/#tool) property to `ZoomPan`:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -185,7 +185,7 @@ N> Please note that panning the diagram is not possible when 'multiplePage' is s
 
 ## Events
 
-The [`elementDraw`](https://ej2.syncfusion.com/react/documentation/api/diagram#elementdraw) event triggers whenever users create nodes or connectors using drawing tools. This event provides access to the newly created element and enables custom logic during the drawing process:
+The [`elementDraw`](https://ej2.syncfusion.com/react/documentation/api/diagram/#elementdraw) event triggers whenever users create nodes or connectors using drawing tools. This event provides access to the newly created element and enables custom logic during the drawing process:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

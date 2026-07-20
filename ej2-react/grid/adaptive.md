@@ -344,5 +344,3 @@ export default App;
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/grid/adaptive-cs1" %}
-
-N> Looking for the full responsive React Data Grid component overview, features, pricing, and documentation? Visit the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) page.

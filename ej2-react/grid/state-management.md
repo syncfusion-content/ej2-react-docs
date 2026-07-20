@@ -163,7 +163,7 @@ When [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid
 
 ## Observable binding with state persistence
 
-The Syncfusion React Grid supports state persistence with observable binding, ensuring the grid retains state across sessions. This is useful for real-time data updates or asynchronous data sources while preserving interactions such as sorting, filtering, paging, and grouping.
+The React Grid supports state persistence with observable binding, ensuring the grid retains state across sessions. This is useful for real-time data updates or asynchronous data sources while preserving interactions such as sorting, filtering, paging, and grouping.
 
 Implementing state persistence with observables requires manual handling of the initial query state. This involves:
 

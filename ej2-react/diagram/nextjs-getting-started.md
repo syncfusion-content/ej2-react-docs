@@ -7,15 +7,15 @@ platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-
+ 
 
 # Creating a Next.js Application 
 
-This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Diagram component.
+This section provides a step-by-step guide for setting up a Next.js application and integrating the [React Diagram](https://www.syncfusion.com/diagram-sdk/react-diagram) component.
 
 ## What is Next.js?
 
-[Next.js](https://nextjs.org) is a React framework that makes it easy to build fast, SEO-friendly, and user-friendly web applications. It provides features such as server-side rendering, automatic code splitting, routing, and API routes, making it an excellent choice for building modern web applications.
+[Next.js](https://nextjs.org/) is a React framework that makes it easy to build fast, SEO-friendly, and user-friendly web applications. It provides features such as server-side rendering, automatic code splitting, routing, and API routes, making it an excellent choice for building modern web applications.
 
 ## Prerequisites
 
@@ -90,7 +90,7 @@ The application is ready to run with default settings. Now, let's add Syncfusion
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
-Here, the [React Diagram component](https://www.syncfusion.com/react-components/react-diagram) is used in the project. To install the React Diagram component, use the following command:
+Here, the [React Diagram component](https://www.syncfusion.com/diagram-sdk/react-diagram) is used in the project. To install the React Diagram component, use the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -326,4 +326,5 @@ Open the generated local URL (for example, http://localhost:3000) from the termi
 
 To learn more about the functionality of the Diagram component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/diagram/getting-started#module-injection).
 
-> [View the Next.js Diagram sample in the GitHub repository](https://github.com/SyncfusionExamples/ej2-nextjs-diagram).
+> [View the NEXT.js Diagram sample in the GitHub repository](https://github.com/SyncfusionExamples/ej2-nextjs-diagram).
+

@@ -3,7 +3,7 @@ import { FileManagerComponent, Inject, NavigationPane, Toolbar } from '@syncfusi
 import * as React from 'react';
 function App() {
     let fileObj;
-    let hostUrl = "https://ej2-aspcore-service.azurewebsites.net/";
+    let hostUrl = "https://physical-service.syncfusion.com/";
     let ajaxSettings = {
         downloadUrl: hostUrl + 'api/FileManager/Download',
         getImageUrl: hostUrl + 'api/FileManager/GetImage',

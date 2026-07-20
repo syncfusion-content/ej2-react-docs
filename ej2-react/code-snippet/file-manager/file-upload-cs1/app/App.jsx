@@ -35,7 +35,7 @@ function App() {
         filemanagerObj.selectedItems = [];
         filemanagerObj.refresh();
     }
-    let hostUrl = "https://ej2-aspcore-service.azurewebsites.net/";
+    let hostUrl = "https://physical-service.syncfusion.com/";
     let contextmenuItems = ['Open', '|', 'Cut', 'Copy', 'Delete', 'Rename', '|', 'Details'];
     let ajaxSettings = {
         url: hostUrl + "api/FileManager/FileOperations",

@@ -484,7 +484,7 @@ export default function App() {
 }
 ```
 
-### Step 5: Integrate Syncfusion React Grid with custom binding
+### Step 5: Integrate React Grid with custom binding
 
 The React Data Grid custom databinding feature seamlessly integrates with external API services. When Grid actions such as paging, sorting, filtering, or CRUD operations are performed, requests are sent to the API. The API processes these operations and returns the results in the required format, giving complete control over application-specific workflows and enabling efficient handling of large datasets. The custom databinding feature interacts with backend APIs through two key events.
 

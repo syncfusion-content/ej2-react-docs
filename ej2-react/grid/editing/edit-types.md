@@ -676,7 +676,7 @@ To utilize the custom cell editor template feature, implement these four essenti
 
 ### Render AutoComplete in edit form
 
-The Syncfusion React Grid allows rendering the [AutoComplete](../../auto-complete/getting-started) within the edit form by using the cell edit template feature. This feature enables selection of values from a predefined list during the editing of a specific column. It is especially valuable for providing a dropdown-like auto-suggestion and input assistance for data entry in the grid's columns.
+The React Grid allows rendering the [AutoComplete](../../auto-complete/getting-started) within the edit form by using the cell edit template feature. This feature enables selection of values from a predefined list during the editing of a specific column. It is especially valuable for providing a dropdown-like auto-suggestion and input assistance for data entry in the grid's columns.
 
 Define the cell edit template for the column using the [edit](https://ej2.syncfusion.com/react/documentation/api/grid/column#edit) property. This property specifies the necessary functions for creating, reading, and writing the AutoComplete into the specific column.
 

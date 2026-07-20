@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Smart AI with Syncfusion React Grid
+# Experience Smart AI in Syncfusion React Grid
 
 Easily integrate Syncfusion EJ2 React Grid with AI models (e.g., **OpenAI GPT-4o-mini**, **Azure OpenAI**) to enable predictive analysis, anomaly detection, and semantic filtering via natural language or data-driven prompts. This toolkit transforms your grid into an intelligent data explorer, predicting future values, spotting irregularities, and enabling semantic searches without exact keywords.
 

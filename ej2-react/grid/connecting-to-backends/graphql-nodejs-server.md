@@ -45,7 +45,7 @@ domainurl: ##DomainURL##
 
 ## Setting up the GraphQL backend using Node.js
 
-The GraphQL backend acts as the central data service, handling queries and mutations that power the Syncfusion React Grid.
+The GraphQL backend acts as the central data service, handling queries and mutations that power the React Grid.
 
 ### Step 1: Create the GraphQL server and install required packages
 

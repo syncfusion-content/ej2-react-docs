@@ -104,7 +104,7 @@ L10n.load({
 })
 
 function App() {
-  let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
+  let hostUrl: string = "https://physical-service.syncfusion.com/";
   let locale: string = 'de';
   let height: string = "375px";
   let view: string = "Details";

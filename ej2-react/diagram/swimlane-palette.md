@@ -7,10 +7,10 @@ platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-
+ 
 # Swimlane in Symbol Palette
 
-The React Diagram component provides comprehensive support for adding swimlane shapes and phases to the symbol palette. Swimlanes help organize process flows by grouping related activities into lanes, making complex diagrams more readable and structured.
+The [React Diagram](https://www.syncfusion.com/diagram-sdk/react-diagram) component provides comprehensive support for adding swimlane shapes and phases to the symbol palette. Swimlanes help organize process flows by grouping related activities into lanes, making complex diagrams more readable and structured.
 
 ## Add Swimlane to Palette
 

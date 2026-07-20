@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion React Grid with HotChocolate GraphQL Backend
+# React Grid with HotChocolate GraphQL Backend
 
 [GraphQL](https://graphql.org/learn/introduction) is a query language that allows applications to request exactly the data needed, nothing more and nothing less. Unlike traditional REST APIs that return fixed data structures, GraphQL enables the client to specify the shape and content of the response.
 
@@ -835,7 +835,7 @@ public bool DeleteOrder(int orderID)
 
 The backend configuration is now complete. The next step is to create the React frontend and integrate it with the HotChocolate GraphQL API.
 
-## Integrating Syncfusion React Grid with HotChocolate GraphQL
+## Integrating React Grid with HotChocolate GraphQL
 
 After configuring the HotChocolate GraphQL backend, the next step is to set up the React frontend and integrate it with the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component using the `GraphQLAdaptor`.
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Localization in EJ2 React Diagram Component
 
-The EJ2 React Diagram component supports localization functionality, allowing developers to adapt the user interface to different languages and regions. The diagram's symbol palette search box and context menu items can be localized based on the selected culture. Use the locale property of the diagram to specify the desired culture for localization.
+The [React Diagram](https://www.syncfusion.com/diagram-sdk/react-diagram) component supports localization functionality, allowing developers to adapt the user interface to different languages and regions. The diagram's symbol palette search box and context menu items can be localized based on the selected culture. Use the locale property of the diagram to specify the desired culture for localization.
 
 ## Localize Diagram Context Menu
 

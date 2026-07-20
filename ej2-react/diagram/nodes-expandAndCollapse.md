@@ -7,10 +7,10 @@ platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-
+ 
 # Expand and Collapse Nodes in React Diagram Component
 
-The React Diagram component provides built-in support for expanding and collapsing nodes, enabling users to create hierarchical views where child nodes can be hidden or shown dynamically. This functionality is particularly useful for organizational charts, mind maps, and tree structures where managing visual complexity is essential.
+The [React Diagram](https://www.syncfusion.com/diagram-sdk/react-diagram) component provides built-in support for expanding and collapsing nodes, enabling users to create hierarchical views where child nodes can be hidden or shown dynamically. This functionality is particularly useful for organizational charts, mind maps, and tree structures where managing visual complexity is essential.
 
 The expand and collapse feature allows users to:
 - Compress hierarchical views to show only root elements.
@@ -25,7 +25,7 @@ The following properties control the expand and collapse behavior of nodes:
 
 N> Icons are only created when the node has outgoing edges (outEdges).
 
-For detailed API information, refer to [`expandIcon`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#expandicon) and [`collapseIcon`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#collapseicon).
+For detailed API information, refer to[`expandIcon`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#expandicon) and [`collapseIcon`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#collapseicon).
 
 ## Customizing expand and collapse icons
 
@@ -76,7 +76,7 @@ The following code example illustrates the customization of icons.
 
 ## Managing node expansion state
 
-The [`isExpanded`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#isexpanded)property controls whether a node displays its child nodes. When set to `true`, child nodes are visible; when **false**, they are hidden.
+The[`isExpanded`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#isexpanded)property controls whether a node displays its child nodes. When set to `true`, child nodes are visible; when **false**, they are hidden.
 
 **Default value:** **true**
 

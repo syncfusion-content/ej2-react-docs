@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion React Grid with Django REST Framework
+# React Grid with Django REST Framework
 
 This guide explains connecting the React Data Grid to a **Django REST Framework (DRF)** backend with **Custom Binding**. Custom Binding provides full control over the Grid’s communication with the server: the Grid raises events for data operations (paging, sorting, filtering, searching) and CRUD,  client code calls DRF endpoints, and DRF returns standardized results.
 
@@ -785,7 +785,7 @@ interface Predicate {
 
 The client service bridges Syncfusion<sup style="font-size:70%">&reg;</sup> Grid Custom Binding with DRF’s REST API and query parameter conventions.
 
-### Step 6: Integrate Syncfusion React Grid with custom binding
+### Step 6: Integrate React Grid with custom binding
 
 The React Data Grid custom databinding feature integrates with the Django REST API through event-driven calls. Grid actions (paging, sorting, filtering, searching) are sent via **dataStateChange**, and CRUD is sent via **dataSourceChanged**. The client uses the shared **apiClient** service (created in the previous step) to translate Grid state into DRF query parameters and to call REST endpoints.
 

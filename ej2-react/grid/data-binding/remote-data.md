@@ -649,7 +649,7 @@ The following example demonstrates the process of binding custom data to handle 
 
 Export all records is especially beneficial when dealing with large datasets that need to be exported for offline analysis or sharing.
 
-By default, the Syncfusion React Grid component exports only the records available on the current page. However, the Grid component also supports exporting all records—including those spanning multiple pages by configuring the [pdfExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties) and [excelExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties).
+By default, the React Grid component exports only the records available on the current page. However, the Grid component also supports exporting all records—including those spanning multiple pages by configuring the [pdfExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties) and [excelExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties).
 
 To export all records, including those from multiple pages, configure the [pdfExportProperties.dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/pdfexportproperties#datasource) for PDF exporting and [excelExportProperties.dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/excelexportproperties#datasource) for Excel exporting within the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid#toolbarclick) event handler. Inside this event, set the `dataSource` property of `pdfExportProperties` and `excelExportProperties` for PDF and Excel exporting to include all records.
 
@@ -826,7 +826,7 @@ export default App;
 
 ## Fetch result from the DataManager query using external button 
 
-By default, the Syncfusion React Grid automatically binds a remote data source using the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started). However, in certain scenarios, data may need to be fetched dynamically from the server using a query triggered by an external button. This approach provides greater control over when data is loaded into the Grid.
+By default, the React Grid automatically binds a remote data source using the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started). However, in certain scenarios, data may need to be fetched dynamically from the server using a query triggered by an external button. This approach provides greater control over when data is loaded into the Grid.
 
 To achieve this, the `executeQuery` method of `DataManager` can be used along with a query object. This method enables running a custom query and retrieving results dynamically.
 
