@@ -60,13 +60,13 @@ To create a new React application, run one of the following commands based on yo
 ***React with JavaScript***
 
 ```bash
-npx create vite@latest my-app -- --template react
+npx create-vite@latest my-app --template react
 ```
 
 ***React with TypeScript***
 
 ```bash
-npx create vite@latest my-app -- --template react-ts
+npx create-vite@latest my-app --template react-ts
 ```
 
 During the setup process, the CLI will prompt you for a few configuration options. Select the following:
