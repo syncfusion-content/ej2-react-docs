@@ -51,7 +51,7 @@ td { border:0 !important; vertical-align: top; }
   <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/document-editor/getting-started">Document Editor</a></div>
   <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/image-editor/getting-started">Image Editor</a></div>
   <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/inplace-editor/getting-started/">In-place Editor</a></div>
-  <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/rich-text-editor/getting-started/">RichTextEditor</a></div>
+  <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/rich-text-editor/getting-started/">Rich Text Editor</a></div>
   <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/pdfviewer/getting-started/">PDF Viewer</a></div>
   <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/document-editor/getting-started/">Word Processor</a></div>
 
