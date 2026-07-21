@@ -16,7 +16,7 @@ The Syncfusion React Rich Text Editor provides a powerful toolbar that enables u
 
 ## Toolbar types
 
-The Rich Text Editor allows you to configure different types of toolbar using [type](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#type) field in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/) property. The types of toolbar are:
+The Rich Text Editor allows you to configure different types of toolbar using [type](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarsettings#type) field in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarsettings) property. The types of toolbar are:
 
 1. Expand 
 2. MultiRow
@@ -25,7 +25,7 @@ The Rich Text Editor allows you to configure different types of toolbar using [t
 
 ## Expanding the toolbar
 
-Setting the `type` as `MultiRow` in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#type) will arrange the toolbar items across multiple rows, displaying all configured toolbar items.
+Setting the `type` as `MultiRow` in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarsettings#type) will arrange the toolbar items across multiple rows, displaying all configured toolbar items.
 
 `[Class-component]`
 
@@ -55,7 +55,7 @@ Setting the `type` as `MultiRow` in [toolbarSettings](https://ej2.syncfusion.com
 
 ## Configuring a multi-row toolbar
 
-Setting the `type` as `MultiRow` in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#type) will arrange the toolbar items across multiple rows, displaying all configured toolbar items.
+Setting the `type` as `MultiRow` in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarsettings#type) will arrange the toolbar items across multiple rows, displaying all configured toolbar items.
 
 `[Class-component]`
 
@@ -85,7 +85,7 @@ Setting the `type` as `MultiRow` in [toolbarSettings](https://ej2.syncfusion.com
 
 ## Implementing a scrollable toolbar
 
-Setting the `type` to `Scrollable` in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#type) will display the toolbar items in a single line, enabling horizontal scrolling in the toolbar.
+Setting the `type` to `Scrollable` in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarsettings#type) will display the toolbar items in a single line, enabling horizontal scrolling in the toolbar.
 
 `[Class-component]`
 
@@ -115,7 +115,7 @@ Setting the `type` to `Scrollable` in [toolbarSettings](https://ej2.syncfusion.c
 
  ## Configuring a popup toolbar
 
-Setting the `type` to `Popup` in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#type) will display overflowing toolbar items into a popup container, optimizing the toolbar layout for limited space and smaller screens.
+Setting the `type` to `Popup` in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarsettings#type) will display overflowing toolbar items into a popup container, optimizing the toolbar layout for limited space and smaller screens.
 
 `[Class-component]`
 
@@ -145,9 +145,9 @@ Setting the `type` to `Popup` in [toolbarSettings](https://ej2.syncfusion.com/re
 
 ## Creating a sticky toolbar
 
-By default, the toolbar remains fixed at the top of the Rich Text Editor when scrolling. You can customize the position of this sticky toolbar by setting the [floatingToolbarOffset](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#floatingtoolbaroffset) to adjust its offset from the top of the document.
+By default, the toolbar remains fixed at the top of the Rich Text Editor when scrolling. You can customize the position of this sticky toolbar by setting the [floatingToolbarOffset](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/index-default#floatingtoolbaroffset) to adjust its offset from the top of the document.
 
-Additionally, you can enable or disable the floating toolbar using the [enableFloating](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#enablefloating) property.
+Additionally, you can enable or disable the floating toolbar using the [enableFloating](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarsettings#enablefloating) property.
 
 `[Class-component]`
 
@@ -178,5 +178,5 @@ Additionally, you can enable or disable the floating toolbar using the [enableFl
 ## See also
 
 * [Customizing Rich Text Editor Toolbar Styles](https://ej2.syncfusion.com/react/documentation/rich-text-editor/style#customizing-the-rich-text-editors-toolbar)
-* [Implementing Inline Editing](https://ej2.syncfusion.com/react/documentation/rich-text-editor/inline-mode)
+* [Implementing Inline Editing](https://ej2.syncfusion.com/react/documentation/rich-text-editor/editor-types/inline-editing)
 * [Customizing Accessibility Shortcut Keys](https://ej2.syncfusion.com/react/documentation/rich-text-editor/accessibility#keyboard-interaction)

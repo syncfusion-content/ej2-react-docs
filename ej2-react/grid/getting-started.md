@@ -35,7 +35,7 @@ To get started quickly with React Data Grid, you can watch this video:
 | [React v17](https://reactjs.org/blog/2020/10/20/react-v17.html) | 18.3.50 and above |
 | [React v16](https://reactjs.org/blog/2017/09/26/react-v16.0.html) | 16.2.45 and above | |
 
-### Browser Support
+### Browser support
 
 | Browser | Supported versions |
 |---|---|
@@ -49,10 +49,6 @@ To get started quickly with React Data Grid, you can watch this video:
 | Android Browser / Chrome for Android | 4.4+ |
 | Windows Mobile | IE 11+ |
 
-### Security
-
-Syncfusion® React Data Grid includes built-in support for common security practices such as Cross-Site Scripting (XSS) protection, Content Security Policy (CSP) compliance, Cross-Site Request Forgery (CSRF) prevention, and protection against injection attacks. These features help build secure and enterprise-ready applications.
-
 ## Setup for local development
 
 Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
@@ -64,13 +60,13 @@ To create a new React application, run one of the following commands based on yo
 ***React with JavaScript***
 
 ```bash
-npx create vite@latest my-app -- --template react
+npx create-vite@latest my-app --template react
 ```
 
 ***React with TypeScript***
 
 ```bash
-npx create vite@latest my-app -- --template react-ts
+npx create-vite@latest my-app --template react-ts
 ```
 
 During the setup process, the CLI will prompt you for a few configuration options. Select the following:
@@ -132,13 +128,23 @@ The Data Grid code should be added to the **src/App.tsx** file.
 {% include code-snippet/grid/getting-started/app/App.tsx %}
 {% endhighlight %}
 {% highlight css tabtitle="App.css" %}
-{% include code-snippet/grid/getting-started/app/App.css %}
+{% raw %}
+
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.css";
+
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/grid/getting-started-cs1" %}
 
-## Registering Your Syncfusion License
+## Run the application
+
+```bash
+npm run dev
+```
+
+## Registering Syncfusion license
 
 Generate a license key from the [Syncfusion License Dashboard](https://www.syncfusion.com/account/downloads) and register it before rendering your React application:
 
@@ -150,33 +156,12 @@ registerLicense('YOUR_LICENSE_KEY');
 
 > **Note:** A valid Syncfusion license is required for production use. Without a valid license, a trial license warning message will be displayed.
 
-## Run the application
-
-```bash
-npm run dev
-```
-
-N> Looking for the full React Data Grid component overview, features, pricing, and documentation? Visit the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) page.
-
-### Production build
-
-To create an optimized production build:
-
-```bash
-npm run build
-```
-
-Preview the production build locally:
-
-```bash
-npm run preview
-```
-
 ## Troubleshooting
 
 - **Grid not rendering styles:** Ensure the theme CSS is imported in `App.css` and that you removed the default Vite CSS in `index.css`.
 - **Trial license warning banner:** Register a license key via `registerLicense()` from `@syncfusion/ej2-base`.
-- **Port 5173 already in use:** Stop the conflicting process or run Vite on a different port with `npm run dev -- --port 3000`.
+
+N> Looking for the full React Data Grid component overview, features, pricing, and documentation? Visit the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) page.
 
 ## See also
 

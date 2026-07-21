@@ -64,13 +64,13 @@ To create a new React application, run one of the following commands based on yo
 ***React with JavaScript***
 
 ```bash
-npx create vite@latest my-app -- --template react
+npx create-vite@latest my-app --template react
 ```
 
 ***React with TypeScript***
 
 ```bash
-npx create vite@latest my-app -- --template react-ts
+npx create-vite@latest my-app --template react-ts
 ```
 
 During the setup process, the CLI will prompt you for a few configuration options. Select the following:
@@ -132,7 +132,11 @@ The tree grid code should be placed in the **src/App.tsx** file.
 {% include code-snippet/treegrid/getting-started/app/App.tsx %}
 {% endhighlight %}
 {% highlight css tabtitle="App.css" %}
-{% include code-snippet/treegrid/getting-started/app/App.css %}
+{% raw %}
+
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/treegrid/index.css";
+
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with React Diagram Component | Syncfusion®
 description: Learn how to get started with the Syncfusion® React Diagram component, explore its elements, and create a simple diagram.
-control: Getting started 
+control: Getting started
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,15 +10,37 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Diagram Component
 
-This section explains how to create a React application from scratch and build a simple diagram using the Syncfusion® Diagram component.
+This section explains how to create a React application from scratch and build a simple diagram using the Syncfusion® React Diagram component.
 
-> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/mcp-server/ai-coding-assistant/getting-started)
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/mcp-server/ai-coding-assistant/getting-started).
 
 ## Prerequisites
 
-Before getting started, ensure that your development environment meets the [system requirements for Syncfusion® React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement)
+| Requirement | Version |
+|-------------|---------|
+| React | 16 or higher |
+| Node.js | 18.0.0 or above |
 
-N> To use **Vite** with a React application, make sure you have **Node.js version 20.19.0 or higher** installed. Older versions may not support Vite’s modern build features. For detailed setup instructions, refer to the [Vite guide](https://vite.dev/guide).
+### React supported versions
+
+| React version | Minimum Syncfusion® React Diagram version |
+| ------------- | ------------------------------------------- |
+| [React v19](https://react.dev/blog/2024/12/05/react-19) | 29.1.33 and above |
+| [React v18](https://reactjs.org/blog/2022/03/29/react-v18.html) | 20.2.36 and above |
+| [React v17](https://reactjs.org/blog/2020/10/20/react-v17.html) | 18.3.50 and above |
+| [React v16](https://reactjs.org/blog/2017/09/26/react-v16.0.html) | 16.2.45 and above |
+
+### Browser Support
+
+| Browser | Supported versions |
+|---|---|
+| Chrome | Latest |
+| Firefox | Latest |
+| Opera | Latest |
+| Edge | 79+ (Chromium) |
+| Safari | 9+ |
+| iOS Safari | 9+ |
+| Android Browser / Chrome for Android | 4.4+ |
 
 ## Before You Begin
 
@@ -28,26 +50,24 @@ The main files used in this guide are:
 
 * `src/App.tsx` — Defines the root React component.
 * `src/App.css` — Contains Syncfusion® theme references.
-* `src/main.tsx` — Application entry point.
-* `index.html` — Root HTML file.
 
-N> In a Vite React TypeScript application, the root component is commonly generated as **src/App.tsx**. If your application uses JavaScript, the equivalent file is typically **src/App.jsx**.
+N> In a Vite React TypeScript application, the root component is generated as **src/App.tsx** by default. If your application uses JavaScript, the equivalent file is **src/App.jsx**.
 
 N> This guide uses the TypeScript template for better type checking with Diagram models such as `NodeModel`, `ConnectorModel`, and `FlowShapeModel`.
 
-## Step 1: Set up the React environment
+## Step 1: Create a React application
 
-Use [Vite](https://vitejs.dev) to create and manage React applications. Vite provides a fast development environment and optimized builds for modern React applications. Syncfusion® React documentation also recommends Vite for setting up React applications.
+Use [Vite](https://vite.dev) to create and manage React applications. Vite provides a fast development environment and optimized builds for modern React applications. Syncfusion® recommends using Vite for setting up React applications.
 
-## Step 2: Create a React application
-
-Create a new React application using the below command.
+Create a new React application using the following command:
 
 ```
 npm create vite@latest my-diagram-app -- --template react-ts
 ```
 
-If Vite prompts you to install dependencies and start the project immediately, choose **No**. The Syncfusion package is installed in a later step.
+If Vite prompts to install dependencies and start the project immediately, choose **No**. The base dependencies and the Syncfusion® package are installed in the next steps.
+
+N> To use JavaScript instead of TypeScript, create the application using `npm create vite@latest my-diagram-app -- --template react`. The root component file will then be **src/App.jsx** instead of **src/App.tsx**.
 
 Navigate to the project folder:
 
@@ -55,9 +75,7 @@ Navigate to the project folder:
 cd my-diagram-app
 ```
 
-N> If you prefer JavaScript instead of TypeScript, create the application using `npm create vite@latest my-diagram-app -- --template react`.
-
-## Step 3: Install the Syncfusion® React Diagram package
+## Step 2: Install the Syncfusion® React Diagram package
 
 All Syncfusion Essential® JS 2 packages are available in the [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry.
 
@@ -69,16 +87,16 @@ npm install @syncfusion/ej2-react-diagrams
 
 N> Installing `@syncfusion/ej2-react-diagrams` automatically installs the required dependency packages.
 
-## Step 4: Add the required styles
+N> A Syncfusion® license key is not required for local development. However, a valid Syncfusion® license key must be registered before deploying the application to production. For details, see [Registering a Syncfusion® license key](https://ej2.syncfusion.com/react/documentation/licensing/overview).
 
-The Diagram component needs Syncfusion® theme styles to display correctly. Add the styles using one of the following options.
+## Step 3: Add the required styles
 
-### Option 1: Add styles from a theme package
+The Diagram component needs Syncfusion® theme styles to display correctly. Syncfusion® theme packages include ready-to-use styles for supported components.
 
-Syncfusion® theme packages include ready-to-use styles for supported components. Install the Tailwind 3 theme package using the following command:
+Install the Tailwind 3 theme package using the following command:
 
 ```
-npm install @syncfusion/ej2-tailwind3-theme --save
+npm install @syncfusion/ej2-tailwind3-theme
 ```
 
 Add the following import to the **src/App.css** file:
@@ -89,22 +107,13 @@ Add the following import to the **src/App.css** file:
 
 For the list of available themes, refer to the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
 
-### Option 2: Add styles from component packages
-
-After installing the Diagram package, the required style files are available under the **node_modules/@syncfusion** directory. Add the following imports to the **src/App.css** file:
-
-```
-@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-react-diagrams/styles/tailwind3.css';
-```
-
-N> Syncfusion® provides multiple built-in themes. If the application uses a different theme, replace the **tailwind3.css** references with the corresponding theme file, such as **material3.css**.
+N> Syncfusion® provides multiple built-in themes. If the application uses a different theme, replace the `@syncfusion/ej2-tailwind3-theme/styles/diagram/index.css` reference with the corresponding theme path, such as `@syncfusion/ej2-material3-theme/styles/diagram/index.css`.
 
 N> Ensure that **App.css** is imported in the **src/App.tsx** file so that the theme styles are applied to the Diagram component.
 
-## Step 5: Add the Diagram component
+N> The `@import` path depth (`../node_modules/...`) assumes `App.css` lives in `src/`. If `App.css` is at the project root, use `./node_modules/...` instead.
+
+## Step 4: Add the Diagram component
 
 Import `DiagramComponent` from `@syncfusion/ej2-react-diagrams` and add it to the React component.
 
@@ -127,19 +136,17 @@ function App() {
 export default App;
 ```
 
-At this stage, the Diagram component renders an empty canvas.
+At this stage, the Diagram component renders an empty canvas. The next step replaces this code with a more complete example.
 
 N> The Diagram component must have a valid height. If the height is not set, the Diagram canvas may not be visible.
 
-N> In a Vite React application, the root element is defined in **index.html** as `<div id="root"></div>`, and the application is rendered from **src/main.tsx**.
-
-## Step 6: Create your first Diagram with nodes and connectors
+## Step 5: Create your first Diagram with nodes and connectors
 
 This section explains how to create a simple flowchart by adding nodes, customizing their appearance, and connecting them using connectors.
 
-The following example creates a flowchart with four nodes: **Start**, **Process**, **Decision**, and **End**. It also applies common node and connector settings using the `getNodeDefaults` and `getConnectorDefaults` properties.
+The following example creates a flowchart with four nodes: **Start**, **Process**, **Decision**, and **End**. It also applies common node and connector settings using the `getNodeDefaults` and `getConnectorDefaults` callback bindings.
 
-Update the **src/App.tsx** file as follows:
+Replace the entire contents of **src/App.tsx** with the following code:
 
 ```
 import {
@@ -276,13 +283,26 @@ In this example:
 * [`getNodeDefaults`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#getnodedefaults) applies common width, height, fill color, and stroke color to all nodes.
 * [`getConnectorDefaults`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#getconnectordefaults) applies common connector settings, such as orthogonal routing and target arrows.
 
-## Step 7: Run the application
+## Step 6: Run the application
 
 Run the application using the following command:
 
 ```
 npm run dev
 ```
-Open the generated local URL in the browser. The application displays the diagram as shown below:
 
- ![Getting started](./images/Getting-started.png)
+Open the generated local URL (by default, `http://localhost:5173`) in the browser. The application displays the diagram as shown below:
+
+![Rendered flowchart with four nodes connected vertically by arrows](./images/Getting-started.png)
+
+N> To stop the development server, press `Ctrl + C` in the terminal where it is running.
+
+N> To build the application for production, run `npm run build`. The generated output is placed in the `dist` folder.
+
+## Next steps
+
+To explore the Diagram component in more depth, refer to the following topics:
+
+* [Nodes](https://ej2.syncfusion.com/react/documentation/diagram/nodes)
+* [Connectors](https://ej2.syncfusion.com/react/documentation/diagram/connectors)
+* [Annotations](https://ej2.syncfusion.com/react/documentation/diagram/labels)

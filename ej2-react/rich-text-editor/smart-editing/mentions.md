@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Mentions in React Rich Text Editor Component
 
-The Mention feature, integrated with the Syncfusion React Rich Text Editor via the [Mention](https://ej2.syncfusion.com/react/documentation/mention/getting-started/) component , enables users to tag or mention users or objects from a suggestion list. This functionality streamlines tagging by eliminating manual entry of names or identifiers, enhancing efficiency and accuracy.
+The Mention feature, integrated with the Syncfusion React Rich Text Editor via the [Mention](https://ej2.syncfusion.com/react/documentation/mention/getting-started) component , enables users to tag or mention users or objects from a suggestion list. This functionality streamlines tagging by eliminating manual entry of names or identifiers, enhancing efficiency and accuracy.
 
 ## Setup and configuration
 
-Use the [target](https://ej2.syncfusion.com/react/documentation/api/mention/#target) property of the Mention component to specify the `ID` of the content editable div element within the Rich Text Editor. When setting the target, make sure to append the suffix `_rte-edit-view` to the ID. This allows you to enable the Mention functionality within the Rich Text Editor, so that users can mention or tag other users or objects from the suggested list while editing the text.
+Use the [target](https://ej2.syncfusion.com/react/documentation/api/mention/index-default#target) property of the Mention component to specify the `ID` of the content editable div element within the Rich Text Editor. When setting the target, make sure to append the suffix `_rte-edit-view` to the ID. This allows you to enable the Mention functionality within the Rich Text Editor, so that users can mention or tag other users or objects from the suggested list while editing the text.
 
 ## Using mentions
 
@@ -27,7 +27,7 @@ When users type the `@` symbol followed by a character the Rich Text Editor, a s
 
 ### Minimum input length for Mention suggestions
 
-You can control when the suggestion list appears by setting the [minLength](https://ej2.syncfusion.com/react/documentation/api/mention/#minlength) property in the Mention component. This property defines the minimum number of characters a user must type after the mention character (@) to trigger the search action. This is especially useful when working with large datasets, as it helps reduce unnecessary queries and improves performance.
+You can control when the suggestion list appears by setting the [minLength](https://ej2.syncfusion.com/react/documentation/api/mention/index-default#minlength) property in the Mention component. This property defines the minimum number of characters a user must type after the mention character (@) to trigger the search action. This is especially useful when working with large datasets, as it helps reduce unnecessary queries and improves performance.
 
 By default, `minLength` is set to 0, which means the suggestion list appears immediately after the mention character is entered. However, you can increase this value to delay the search until the user has typed a specific number of characters.
 
@@ -61,7 +61,7 @@ In the following example, the `minLength` is set to 3, so the suggestion list wi
 
 ### Customizing suggestion list count
 
-You can control the number of items displayed in the Mention suggestion list using the [suggestionCount](https://ej2.syncfusion.com/react/documentation/api/mention/#suggestioncount) property. This is particularly useful when working with large datasets, allowing you to limit the number of suggestions shown to the user.
+You can control the number of items displayed in the Mention suggestion list using the [suggestionCount](https://ej2.syncfusion.com/react/documentation/api/mention/index-default#suggestioncount) property. This is particularly useful when working with large datasets, allowing you to limit the number of suggestions shown to the user.
 
 By default, the suggestion list displays 25 items. You can customize this value to show fewer or more items based on your application's needs.
 
@@ -97,11 +97,11 @@ In the example below, the `suggestionCount` is set to 5, so only 5 items will be
 
 #### Item template
 
-You can customize how each item appears in the suggestion list using the [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/mention/#itemtemplate) property. This allows you to display additional details such as email, role, or profile image alongside the mention name.
+You can customize how each item appears in the suggestion list using the [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/mention/index-default#itemtemplate) property. This allows you to display additional details such as email, role, or profile image alongside the mention name.
 
 #### Display template 
 
-Use the [displayTemplate](https://ej2.syncfusion.com/react/documentation/api/mention/#displaytemplate) property to define how the selected mention appears in the editor content.
+Use the [displayTemplate](https://ej2.syncfusion.com/react/documentation/api/mention/index-default#displaytemplate) property to define how the selected mention appears in the editor content.
 
 For example, by default, the mention chip renders as:
 
@@ -120,10 +120,10 @@ This allows you to create more interactive and informative mentions within the e
 
 In the following sample, we configured the following properties:
 
-* [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/mention/#itemtemplate) - Used to display the customized appearance in suggestion list.
-* [displayTemplate](https://ej2.syncfusion.com/react/documentation/api/mention/#displaytemplate) - Used to customize how the selected value appears in the editor content.
-* [allowSpaces](https://ej2.syncfusion.com/react/documentation/api/mention/#allowspaces) - Allow to continue search action if user enter space after mention character while searching.
-* [suggestionCount](https://ej2.syncfusion.com/react/documentation/api/mention/#suggestioncount) - The maximum number of items that will be displayed in the suggestion list.
+* [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/mention/index-default#itemtemplate) - Used to display the customized appearance in suggestion list.
+* [displayTemplate](https://ej2.syncfusion.com/react/documentation/api/mention/index-default#displaytemplate) - Used to customize how the selected value appears in the editor content.
+* [allowSpaces](https://ej2.syncfusion.com/react/documentation/api/mention/index-default#allowspaces) - Allow to continue search action if user enter space after mention character while searching.
+* [suggestionCount](https://ej2.syncfusion.com/react/documentation/api/mention/index-default#suggestioncount) - The maximum number of items that will be displayed in the suggestion list.
 
 
 `[Class-component]`
@@ -156,4 +156,4 @@ In the following sample, we configured the following properties:
 
 ## See also
 
-* [Mention](https://ej2.syncfusion.com/react/documentation/mention/getting-started/)
+* [Mention](https://ej2.syncfusion.com/react/documentation/mention/getting-started)

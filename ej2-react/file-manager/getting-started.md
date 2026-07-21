@@ -144,7 +144,7 @@ To use your own files, host a File Manager service and replace the `url` value w
 
 Generate a license key from the [Syncfusion License Dashboard](https://www.syncfusion.com/account/downloads) and register it before rendering your React application:
 
-```tsx
+```ts
 import { registerLicense } from '@syncfusion/ej2-base';
 
 registerLicense('YOUR_LICENSE_KEY');

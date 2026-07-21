@@ -133,7 +133,7 @@ The AI AssistView code should be added to the **src/App.tsx** file.
 
 Generate a license key from the [Syncfusion License Dashboard](https://www.syncfusion.com/account/downloads) and register it before rendering your React application:
 
-```tsx
+```ts
 import { registerLicense } from '@syncfusion/ej2-base';
 
 registerLicense('YOUR_LICENSE_KEY');

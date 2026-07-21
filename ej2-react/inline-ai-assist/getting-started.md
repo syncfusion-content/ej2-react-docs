@@ -131,7 +131,7 @@ Use the `InlineAIAssistComponent` tag where you want the inline assistant to app
 
 Generate a license key from the [Syncfusion License Dashboard](https://www.syncfusion.com/account/downloads) and register it before rendering your React application:
 
-```tsx
+```ts
 import { registerLicense } from '@syncfusion/ej2-base';
 
 registerLicense('YOUR_LICENSE_KEY');
