@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Getting started with React Mention component | Syncfusion
-description:  Checkout and learn about Getting started with React Mention component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+description: Checkout and learn about Getting started with React Mention component of Syncfusion Essential JS 2 and more details.
+control: Mention
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Mention component
+# Getting started with React Mention component
 
 This section explains the steps required to create a simple React Mention component and demonstrate its basic usage in a React environment.
 
@@ -18,47 +18,53 @@ To get started quickly with React Mention, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=n_AIrumqQsw" %}
 
-## Setup for local development
+## Prerequisites
 
-Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
-> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+## Set up the Vite project
 
-To create a new React application, run the following command.
+To create a new `Vite` project, use one of the commands that are specific to either NPM or Yarn.
 
-```bash
-npm create vite@latest my-app
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+npm create vite@latest my-project -- --template react
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+yarn create vite my-project --template react
+{% endhighlight %}
+{% endtabs %}
+
+After running the command, you will be prompted with a series of interactive questions to configure your project. Select the appropriate options for each prompt:
+
+1. **Select a linter to use**: Choose the linter for your project (for example, `ESLint`).
+2. **Install with npm and start now?**: Type `Yes` to proceed with installing the dependencies and automatically start the development server, or `No` to install dependencies manually later.
+
+Navigate into the project directory with:
+
 ```
-This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
-
-![Initial_setup](images/Initial-setup.jpg)
-
-To set up a React application in TypeScript environment, run the following command.
-
-```bash
-npm create vite@latest my-app -- --template react-ts
-cd my-app
-npm run dev
-```
-To set up a React application in JavaScript environment, run the following command.
-
-```bash
-npm create vite@latest my-app -- --template react
-cd my-app
-npm run dev
+cd my-project
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Mention packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
-To install the Mention component, use the following command
+Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
-```bash
-npm install @syncfusion/ej2-react-dropdowns --save
-```
+To install the React component package, use the following command:
 
-> The --save will instruct NPM to include the Mention package inside of the **dependencies** section of the package.json.
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
 
+npm install @syncfusion/ej2-react-dropdowns
+
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+
+yarn add @syncfusion/ej2-react-dropdowns
+
+{% endhighlight %}
+{% endtabs %}
+ 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
 Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
@@ -68,7 +74,7 @@ This guide uses the `Tailwind 3` theme as an example, sourced from the theme pac
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
 
-npm install @syncfusion/ej2-tailwind3-theme --save
+npm install @syncfusion/ej2-tailwind3-theme
 
 {% endhighlight %}
 {% highlight bash tabtitle="yarn" %}
@@ -78,9 +84,9 @@ yarn add @syncfusion/ej2-tailwind3-theme
 {% endhighlight %}
 {% endtabs %}
 
-By default, Vite projects include a `index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `index.css` file to prevent style conflicts.
+By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
 
-The required styles for the component are imported in the **src/App.css** file:
+The required styles for the Mention component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -90,139 +96,37 @@ The required styles for the component are imported in the **src/App.css** file:
 {% endhighlight %}
 {% endtabs %}
 
-> To refer **App.css** in the application then import it in the **src/App.tsx** file.
+> You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Adding Mention component
+## Add the Mention component
 
-The React Mention component can be added to the application by following these steps. To get started, add the Mention component to the **src/App.tsx** file using the following code.
+Now, you can add the React Mention component to your **src/App.jsx** file by importing and defining it within your application. Then, populate the Mention with data using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/mention/index-default#datasource) property, which accepts an array of string values to display as suggestions. Use the following code:
 
-The following mention code should be placed in the **src/App.tsx** file.
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
 
-`[Class-component]`
-
-```ts
-import { MentionComponent } from '@syncfusion/ej2-react-dropdowns';
-import * as React from 'react';
 import './App.css';
-
-export default class App extends React.Component<{}, {}> {
-  // Defines the target in which the Mention component is rendered.
-  private mentionTarget: string = '#mentionElement';
-  public render() {
-    return (
-      <div id='mention_default'>
-        <table>
-            <tr>
-                <td>
-                  <label>Comments</label>
-                  <div id="mentionElement" placeholder='Type @ and tag user'></div>
-                </td>
-            </tr>
-        </table>
-
-        <MentionComponent target={this.mentionTarget} ></MentionComponent>
-      </div>
-    );
-  }
-}
-```
-
-`[Functional-component]`
-
-```ts
 import { MentionComponent } from '@syncfusion/ej2-react-dropdowns';
-import * as React from 'react';
-import './App.css';
 
-function App (){
-  // Defines the target in which the Mention component is rendered.
-  let mentionTarget: string = '#mentionElement';
+function App() {
+    // Defines the target in which the Mention component is rendered.
+    let mentionTarget = '#mentionElement';
+    // Defines the array of data.
+    let userData = ['Selma Rose', 'Garth', 'Robert', 'William', 'Joseph'];
     return (
-      <div id='mention_default'>
-        <table>
-            <tr>
-                <td>
-                    <label>Comments</label>
-                    <div id="mentionElement" placeholder='Type @ and tag user'></div>
-                </td>
-            </tr>
-        </table>
+        <div id='mention_default'>
+            <label id="comment">Comments</label>
+            <div id="mentionElement" placeholder='Type @ and tag user'></div>
 
-        <MentionComponent target={mentionTarget} ></MentionComponent>
-      </div>
+            <MentionComponent target={mentionTarget} dataSource={userData}></MentionComponent>
+        </div>
     );
-
 }
+
 export default App;
-```
 
-## Binding data source
-
-After initialization, populate the data using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/mention/index-default#datasource) property. Here, an array of string values is passed to the Mention component.
-
-`[Class-component]`
-
-```ts
-import { MentionComponent } from '@syncfusion/ej2-react-dropdowns';
-import * as React from 'react';
-import './App.css';
-
-export default class App extends React.Component<{}, {}> {
-  // Defines the target in which the Mention component is rendered.
-  private mentionTarget: string = '#mentionElement';
-
-  // Defines the array of data.
-  private userData: string[] = ['Selma Rose', 'Garth', 'Robert', 'William', 'Joseph'];
-
-  public render() {
-    return (
-      <div id='mention_default'>
-        <table>
-            <tr>
-                <td>
-                    <label>Comments</label>
-                    <div id="mentionElement" placeholder='Type @ and tag user'></div>
-                </td>
-            </tr>
-        </table>
-
-        <MentionComponent target={this.mentionTarget} dataSource={this.userData}></MentionComponent>
-      </div>
-    );
-  }
-}
-```
-
-`[Functional-component]`
-
-```ts
-import { MentionComponent } from '@syncfusion/ej2-react-dropdowns';
-import * as React from 'react';
-import './App.css';
-
-function App () {
-  // Defines the target in which the Mention component is rendered.
-  let mentionTarget: string = '#mentionElement';
-
-  // Defines the array of data.
-  let userData: string[] = ['Selma Rose', 'Garth', 'Robert', 'William', 'Joseph'];
-  return (
-      <div id='mention_default'>
-        <table>
-            <tr>
-                <td>
-                    <label>Comments</label>
-                    <div id="mentionElement" placeholder='Type @ and tag user'></div>
-                </td>
-            </tr>
-        </table>
-
-        <MentionComponent target={mentionTarget} dataSource={userData}></MentionComponent>
-      </div>
-  );
-}
-export default App;
-```
+{% endhighlight %}
+{% endtabs %}
 
 Add the following CSS to your project's stylesheet:
 
@@ -247,21 +151,6 @@ npm run dev
 
 The output appears as follows.
 
-`[Class-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/mention/basic-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/mention/basic-cs1/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/mention/basic-cs1" %}
-
-`[Functional-component]`
-
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/mention/basic-cs2/app/index.jsx %}
@@ -271,40 +160,6 @@ The output appears as follows.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/mention/basic-cs2" %}
-
-## Display Mention character
-
-By using the [showMentionChar](https://ej2.syncfusion.com/react/documentation/api/mention/index-default#showmentionchar) property, the text content can be displayed along with the mention character. You can customize the mention character by using the [mentionChar](https://ej2.syncfusion.com/react/documentation/api/mention/index-default#mentionchar) property in the Mention component.
-
-> By default, the [mentionChar](https://ej2.syncfusion.com/react/documentation/api/mention/index-default#mentionchar) is `@` and the [showMentionChar](https://ej2.syncfusion.com/react/documentation/api/mention/index-default#showmentionchar) property is disabled.
-
-The following example displays the text content along with the mention character configured as `#`.
-
-`[Class-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/mention/basic-cs3/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/mention/basic-cs3/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/mention/basic-cs3" %}
-
-`[Functional-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/mention/basic-cs4/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/mention/basic-cs4/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/mention/basic-cs4" %}
+{% previewsample "page.domainurl/code-snippet/mention/basic-cs2" %}
 
 > Refer to the [React Mention](https://www.syncfusion.com/react-components/react-mention) feature tour page for its groundbreaking feature representations. You can also explore our [React Mention component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/mention/default) that shows how to render the Mention in React.

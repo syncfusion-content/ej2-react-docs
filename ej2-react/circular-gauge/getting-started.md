@@ -1,22 +1,29 @@
 ---
 layout: post
-title: Getting started with React Circular gauge component | Syncfusion
-description:  Checkout and learn about Getting started with React Circular gauge component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+title: Getting Started with React Circular Gauge component | Syncfusion
+description: Check out and learn about getting started with the React Circular Gauge component of Syncfusion Essential JS 2 and more details.
+control: Getting Started
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Circular gauge component
+# Getting Started with React Circular Gauge component
 
 This section explains the steps required to create a simple React Circular Gauge component and demonstrate its basic usage in a React environment.
 
-> Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development? Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
+> Ready to streamline your Syncfusion<sup>&reg;</sup> React development. Discover the full potential of Syncfusion<sup>&reg;</sup> React components with Syncfusion<sup>&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup>&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup>&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
+
+## Prerequisites
+
+Before getting started, ensure that your development environment meets the [system requirements for Syncfusion<sup>&reg;</sup> React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement). That page documents the supported React, Node.js, and npm versions, and includes the React-version compatibility table for Syncfusion<sup>&reg;</sup> React components.
+
+- Basic knowledge of React and TypeScript (recommended)
+- A code editor like Visual Studio Code
 
 ## Dependencies
 
-Following is the list of minimum dependencies required to use the Circular Gauge.
+The following table lists the minimum required dependencies to use the Circular Gauge.
 
 ```
 |-- @syncfusion/ej2-react-circulargauge
@@ -24,54 +31,55 @@ Following is the list of minimum dependencies required to use the Circular Gauge
 |-- @syncfusion/ej2-circulargauge
     |-- @syncfusion/ej2-base
     |-- @syncfusion/ej2-svg-base
-    |-- @syncfusion/ej2-paf-export
+    |-- @syncfusion/ej2-pdf-export
 ```
+
+> **Compatibility:** This component is compatible with React 18 and React 19. The latest stable packages are published under the [Syncfusion org](https://www.npmjs.com/~syncfusionorg) scope on npm.
 
 ## Setup for local development
 
-Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
+Set up a React application using `create-vite`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite scaffolds your project with JavaScript or TypeScript and optimizes your application for production.
 
 > Note: To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
 To create a new React application, run the following command.
 
-```
+```bash
 npm create vite@latest my-app
 ```
 
-This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
+When prompted, select the following options:
 
-![Initial_setup](./images/Initial-setup.jpg)
+- **Framework:** React
+- **Variant:** JavaScript or TypeScript (your choice)
 
-To set up a React application in TypeScript environment, run the following command.
+![Initial setup](./images/Initial-setup.jpg)
 
-```
+To set up a React application in a TypeScript environment, run the following commands.
+
+```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
-npm run dev
 ```
 
-To set up a React application in JavaScript environment, run the following command.
+To set up a React application in a JavaScript environment, run the following commands.
 
-```
+```bash
 npm create vite@latest my-app -- --template react
 cd my-app
-npm run dev
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React Circular Gauge packages
+## Adding Syncfusion<sup>&reg;</sup> React Circular Gauge packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. To install the Circular Gauge component, use the following command.
+All the available Essential<sup>&reg;</sup> JS 2 packages are published in the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. The `--save` flag instructs npm to add the package to the `dependencies` section of `package.json`. To install the Circular Gauge component, use the following command.
 
+```bash
+npm install @syncfusion/ej2-react-circulargauge
 ```
-npm install @syncfusion/ej2-react-circulargauge --save
-```
 
-> The –save will instruct NPM to include the Circular Gauge package inside of the dependencies section of the package.json.
+## Adding the Circular Gauge component
 
-## Adding Circular Gauge component
-
-Add the Circular Gauge component to the application. To initialize the Circular Gauge control in the React application, import the component into `src/App.js` or `src/App.tsx` as appropriate. Use the example below to include the Circular Gauge component.
+Add the Circular Gauge component to the application. To initialize the Circular Gauge control in the React application, import the component into `src/App.tsx` or `src/App.jsx` as appropriate. Use the example below to include the Circular Gauge component.
 
 ```ts
 
@@ -79,22 +87,40 @@ import React from 'react';
 import { CircularGaugeComponent } from '@syncfusion/ej2-react-circulargauge';
 
 export function App() {
-    return (<CircularGaugeComponent></CircularGaugeComponent>);
+    return (<CircularGaugeComponent></CircularGaugeComponent>);
 }
 
 export default App;
 
 ```
 
-### Run the application
+A bare `<CircularGaugeComponent />` renders an empty frame. To display a visible gauge you must configure at least one axis and one pointer using `<AxesDirective>`, `<AxisDirective>`, `<PointersDirective>`, and `<PointerDirective>`. The example below shows the minimum configuration needed to render a functional gauge.
 
-The Circular Gauge control is now included in the **quickstart** application. Use the following command to run the application.
+```ts
+import * as React from 'react';
+import {
+  CircularGaugeComponent, AxesDirective, AxisDirective,
+  PointersDirective, PointerDirective
+} from '@syncfusion/ej2-react-circulargauge';
 
+export function App() {
+  return (
+    <CircularGaugeComponent>
+      <AxesDirective>
+        <AxisDirective minimum={0} maximum={120}>
+          <PointersDirective>
+            <PointerDirective value={60} />
+          </PointersDirective>
+        </AxisDirective>
+      </AxesDirective>
+    </CircularGaugeComponent>
+  );
+}
+
+export default App;
 ```
-npm start
-```
 
-The below example shows the basic Circular Gauge.
+The full sample is shown below.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -109,82 +135,30 @@ The below example shows the basic Circular Gauge.
 
 ## Module injection
 
-Circular Gauge component features are segregated into individual feature-wise modules. To use a particular feature, inject its feature module using the `Inject` directive. The current application uses the Legend, Tooltip, and Annotation features of the Circular Gauge. The relevant feature module names and descriptions are listed below.
+Circular Gauge component features are segregated into individual feature-wise modules. To use a particular feature, inject its feature module using the `Inject` directive. The relevant feature module names and descriptions are listed below.
 
-* `Legend` - Inject this module to use legend feature.
-* `Tooltip` - Inject this module to use tooltip feature.
-* `Annotations` - Inject this module to use annotations feature.
-* `GaugeTooltip` - Inject this module to use gauge tooltip feature.
+* `Legend` - Inject this module to use the legend feature.
+* `Annotations` - Inject this module to use the annotations feature.
+* `GaugeTooltip` - Inject this module to use the gauge-specific tooltip feature (distinct from the generic `Tooltip`).
 
-These modules should be injected into the Circular Gauge using the `Inject` directive.
+Inject the required modules into the Circular Gauge using the `Inject` directive, as shown below.
+
+```ts
+import { CircularGaugeComponent, Legend, Annotations, GaugeTooltip, Inject } from '@syncfusion/ej2-react-circulargauge';
+
+<CircularGaugeComponent>
+  <Inject services={[Legend, Annotations, GaugeTooltip]} />
+  {/* axes, pointers, ranges, etc. */}
+</CircularGaugeComponent>
+```
 
 > Additional feature modules are available [here](https://ej2.syncfusion.com/react/documentation/circular-gauge/gauge-user-interaction).
-
-## Set pointer value
-
-You can change the pointer value in the above sample using the [value](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer#value-number) property in [pointers](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer). The pointer indicates the current value on the gauge scale.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/code-path/getting-started-cs2/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/code-path/getting-started-cs2/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/circulargauge/getting-started-cs2" %}
-
-## Adding ranges
-
-Ranges are used to categorize the axis values into different sections with distinct colors. Add ranges to the gauge by configuring the [ranges](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/range) property. Each range can have a start value, end value, and color to visually represent different sections of the gauge.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/code-path/gauge-ranges-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/code-path/gauge-ranges-cs1/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/circulargauge/gauge-ranges-cs1" %}
-
-## Adding annotations
-
-Annotations provide the ability to add custom HTML content at specific locations within the gauge. Enable annotations by injecting the `Annotations` module and using the [annotations](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/annotation) property. Annotations are useful for displaying additional information, labels, or custom content on the gauge.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/code-path/gauge-annotations-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/code-path/gauge-annotations-cs1/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/circulargauge/gauge-annotations-cs1" %}
-
-## Adding legend
-
-Legends provide information about the ranges displayed in the circular gauge. Enable legends by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/legendSettings#visible) property to `true` in [legendSettings](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/legendSettings) and injecting the `Legend` module. Without the Legend module, the legend will not render.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/circulargauge/code-path/gauge-legend-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/circulargauge/code-path/gauge-legend-cs1/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/circulargauge/preview-sample/gauge-legend-cs1" %}
 
 ## Run the application
 
 Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-```
+```bash
 npm run dev
 ```
 
@@ -200,8 +174,6 @@ The output appears as follows.
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/circulargauge/preview-sample/gauge-legend-cs1" %}
-
-> Refer to the [React Circular Gauge](https://www.syncfusion.com/react-components/react-circular-gauge) feature tour page for its groundbreaking feature representations. You can also explore our [React Circular Gauge Component example](https://ej2.syncfusion.com/react/demos/#/material3/circular-gauge/default) that shows how to render the Circular Gauge in React.
 
 ## See also
 

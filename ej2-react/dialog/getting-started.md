@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Dialog component
+# Getting Started with React Dialog component
 
 This section explains the steps required to create a simple React Dialog component and demonstrate its basic usage in a React environment.
 
@@ -18,123 +18,94 @@ To get started quickly with React Dialog, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=upDeXQMYFoc" %}
 
-## Setup for local development
-
-Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
-
-> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
-
-To create a new React application, run the following command.
-
-```bash
-npm create vite@latest my-app
-```
-This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
-
-![Initial_setup](images/Initial-setup.jpg)
-
-To set up a React application in TypeScript environment, run the following command.
-
-```bash
-npm create vite@latest my-app -- --template react-ts
-cd my-app
-npm run dev
-```
-To set up a React application in JavaScript environment, run the following command.
-
-```bash
-npm create vite@latest my-app -- --template react
-cd my-app
-npm run dev
-```
-
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Dialog packages
-
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
-To install the Dialog component, use the following command
-
-```bash
-npm install @syncfusion/ej2-react-popups --save
-```
-
-> The --save will instruct NPM to include the Dialog package inside of the **dependencies** section of the package.json.
-
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
-
-Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
-
-This guide uses the `Tailwind 3` theme as an example, sourced from the theme package. In this package, each component includes an `index.css` file that automatically loads all the required dependency styles. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
-
+## Prerequisites
+ 
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement)
+ 
+## Set up the Vite project
+ 
+To create a new `Vite` project, use one of the commands that are specific to either NPM or Yarn.
+ 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
-
-npm install @syncfusion/ej2-tailwind3-theme --save
-
+npm create vite@latest my-project -- --template react
 {% endhighlight %}
 {% highlight bash tabtitle="yarn" %}
-
-yarn add @syncfusion/ej2-tailwind3-theme
-
+yarn create vite my-project --template react
 {% endhighlight %}
 {% endtabs %}
-
-By default, Vite projects include a `index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `index.css` file to prevent style conflicts.
-
-The required styles for the Dialog component are imported in the **src/App.css** file:
-
-```css
-
-@import "@syncfusion/ej2-tailwind3-theme/styles/dialog/index.css";
-
+ 
+After running the command, you will be prompted with a series of interactive questions to configure your project. Select the appropriate options for each prompt:
+ 
+1. **Select a linter to use**: Choose the linter for your project (for example, `ESLint`).
+2. **Install with npm and start now?**: Type `Yes` to proceed with installing the dependencies and automatically start the development server, or `No` to install dependencies manually later.
+ 
+Navigate into the project directory with:
+ 
 ```
-
-> To refer **App.css** in the application then import it in the **src/App.tsx** file.
+cd my-project
+```
+ 
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
+ 
+Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
+ 
+To install the React component package, use the following command:
+ 
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+ 
+npm install @syncfusion/ej2-react-popups
+ 
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+ 
+yarn add @syncfusion/ej2-react-popups
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+ 
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
+ 
+This guide uses the `Tailwind 3` theme as an example, sourced from the theme package. In this package, each component includes an `index.css` file that automatically loads all the required dependency styles. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+ 
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+ 
+npm install @syncfusion/ej2-tailwind3-theme
+ 
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+ 
+yarn add @syncfusion/ej2-tailwind3-theme
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
+ 
+The required styles for the Dialog component are imported in the **src/App.css** file:
+ 
+{% tabs %}
+{% highlight css tabtitle="App.css" %}
+ 
+@import "@syncfusion/ej2-tailwind3-theme/styles/dialog/index.css";
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+> You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
 ## Adding Dialog component
 
-The React Dialog component can be added to the application by following these steps. To get started, add the Dialog component to the **src/App.tsx** file using the following code.
+Now, you can add the React Dialog component to your **src/App.jsx** file by importing and defining it within your application. Then, populate the Dialog with data using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/dialog/index-default#datasource) property, which accepts an array of string values to display as suggestions. Use the following code:
+ 
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
 
-The following dialog code should be placed in the **src/App.tsx** file.
 
-`[Class-component]`
-
-```ts
-import React, { Component } from 'react';
-import { DialogComponent } from '@syncfusion/ej2-react-popups';
-import './App.css';
-
-interface AppState { hideDialog: boolean; }
-
-export default class App extends Component<{}, AppState> {
-  constructor(props: {}) {
-    super(props);
-    this.state = {
-      hideDialog: false
-    };
-  }
-
-  handleClick = () => {
-    this.setState({ hideDialog: true });
-  };
-
-  handleClose = () => {
-    this.setState({ hideDialog: true });
-  };
-
-  render() {
-    return (
-      <div className="App" id="dialog-target">
-        <button className="e-control e-btn" id="targetButton1" role="button" onClick={this.handleClick} > Open </button>
-        <DialogComponent width="250px" content="This is a Dialog with content" target="#dialog-target" visible={this.state.hideDialog} showCloseIcon={true} close={this.handleClose} />
-      </div>
-    );
-  }
-}
-```
-
-`[Functional-component]`
-
-```ts
 import { DialogComponent } from '@syncfusion/ej2-react-popups';
 import * as React from "react";
 import './App.css';
@@ -154,7 +125,9 @@ export default function App() {
     </div>
   );
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Run the application
 
@@ -163,23 +136,6 @@ Run the `npm run dev` command in the terminal to start the development server. T
 ```bash
 npm run dev
 ```
-
-The output appears as follows.
-
-`[Class-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/dialog/getting-started-cs9/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/dialog/getting-started-cs9/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/dialog/getting-started-cs9" %}
-
-`[Functional-component]`
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -190,187 +146,10 @@ The output appears as follows.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/dialog/getting-started-cs10" %}
-
-> In the Dialog control, the `max-height` is calculated based on the height of the Dialog target element. If the `target` property is not configured, `document.body` is used as the target. To ensure the Dialog displays at the proper height, add a `min-height` to the target element.
-> If the Dialog is rendered based on the body, the Dialog height is determined by the body element height. If the Dialog's height is larger than the body height, the Dialog height will not be set; in that case, set the CSS for `html` and `body` to ensure the Dialog can size correctly.
-
-```css
-html, body {
-   height: 100%;
-}
-```
+{% previewsample "page.domainurl/code-snippet/dialog/getting-started-cs10" %}
 
 > **Note - Target Property in Dialog:** In React applications, it is important to set the [`target`](https://ej2.syncfusion.com/react/documentation/api/dialog/index-default#target) property of the Dialog component. When the Dialog component is rendered without a `target` property, it defaults to appending itself to `document.body`, which places the Dialog outside the React component tree. This prevents React's event delegation system from properly handling events and may cause styling issues. Always set the `target` property to ensure proper integration with your React component tree, or use the [`content`](https://ej2.syncfusion.com/react/documentation/api/dialog/index-default#content) template property to render Dialog content.
 
-## Modal Dialog
-
-A [modal](https://ej2.syncfusion.com/react/documentation/api/dialog/index-default#ismodal) shows an overlay behind the Dialog. The user must interact with the Dialog before interacting with the remaining content in the application.
-
-Clicks on the overlay can be handled through the [`overlayClick`](https://ej2.syncfusion.com/react/documentation/api/dialog/index-default#overlayclick) event. The sample below closes the Dialog when the overlay is clicked.
-
-> When a modal Dialog is opened, scrolling of the Dialog's target is disabled. Scrolling is re-enabled after the Dialog is closed.
-
-`[Class-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/dialog/modal-cs2/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/dialog/modal-cs2/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/dialog/modal-cs2" %}
-
-`[Functional-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/dialog/modal-cs3/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/dialog/modal-cs3/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/dialog/modal-cs3" %}
-
-## Enable header
-
-Enable the Dialog header by providing text or HTML content to the [`header`](https://ej2.syncfusion.com/react/documentation/api/dialog/index-default#header) property.
-
-`[Class-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/dialog/getting-started-cs11/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/dialog/getting-started-cs11/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/dialog/getting-started-cs11" %}
-
-`[Functional-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/dialog/getting-started-cs12/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/dialog/getting-started-cs12/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/dialog/getting-started-cs12" %}
-
-## Enable footer
-
-The React Dialog provides built-in support to render `buttons` in the footer (for example, ‘OK’ or ‘Cancel’). Each Dialog button can perform any configured action when clicked.
-
-The primary button receives focus automatically when the Dialog opens. Add the [`click`](https://ej2.syncfusion.com/react/documentation/api/dialog/buttonpropsmodel#click) event to handle button actions.
-
-> When the Dialog initializes with more than one primary button, the first primary button receives focus on open.
-
-The sample below renders buttons and demonstrates handling their `click` events.
-
-`[Class-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/dialog/getting-started-cs13/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/dialog/getting-started-cs13/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/dialog/getting-started-cs13" %}
-
-`[Functional-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/dialog/getting-started-cs14/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/dialog/getting-started-cs14/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/dialog/getting-started-cs14" %}
-
-## Draggable
-
-The Dialog supports [dragging](https://ej2.syncfusion.com/react/documentation/api/dialog/index-default#allowdragging) within its target container by grabbing the Dialog header, allowing the user to reposition the Dialog dynamically.
-
-> The Dialog is draggable only when the header is enabled. Starting from version `16.2.x`, draggable support is enabled for modal dialogs as well.
-
-`[Class-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/dialog/getting-started-cs15/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/dialog/getting-started-cs15/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/dialog/getting-started-cs15" %}
-
-`[Functional-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/dialog/getting-started-cs16/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/dialog/getting-started-cs16/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/dialog/getting-started-cs16" %}
-
-## Positioning
-
-The Dialog position can be set through the [`position`](https://ej2.syncfusion.com/react/documentation/api/dialog/index-default#position) property by providing X and Y coordinates. The Dialog can be positioned inside the target container based on the given X and Y values.
-
-For example: <code>position: { X: 'center', Y: 'center' }</code>. Possible values:
-
-- X: `left`, `center`, `right`, or any offset value
-- Y: `top`, `center`, `bottom`, or any offset value
-
-The sample below demonstrates different Dialog positions.
-
-`[Class-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/dialog/positioning-cs2/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/dialog/positioning-cs2/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/dialog/positioning-cs2" %}
-
-`[Functional-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/dialog/positioning-cs3/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/dialog/positioning-cs3/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/dialog/positioning-cs3" %}
 
 > Refer to the [React Dialog](https://www.syncfusion.com/react-components/react-modal-dialog) feature tour page for its groundbreaking feature representations. You can also explore our [React Dialog component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/dialog/default) that shows how to render the Dialog in React.
 

@@ -45,7 +45,22 @@ root.render(<App />);
 ```
 {% endraw %}
 
-**Step 2**:
+## Add labels
+
+Labels display additional information about the items in the TreeMap. By default, labels are visible. This can be customized using the `showLabels` property in `leafItemSettings`.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/treemap/code-path/getting-started-cs4/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/treemap/code-path/getting-started-cs4/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/treemap/getting-started-cs4" %}
+
+## Hide Default Labels
 
 Add the label template in the `leafItemSettings` options, and then set the `showLabels` property to **false** to hide another labels and show only label template.
 

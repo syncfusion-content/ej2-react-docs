@@ -2,13 +2,13 @@
 layout: post
 title: Getting started with React Tooltip component | Syncfusion
 description: Checkout and learn about Getting started with React Tooltip component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+control: Getting started
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Tooltip component
+# Getting Started with React Tooltip component
 
 This section explains the steps required to create a simple React Tooltip component and demonstrate its basic usage in a React environment.
 
@@ -18,83 +18,93 @@ To get started quickly with React Tooltip, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=lCzUw3fOS1g" %}
 
-## Setup for local development
-
-Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
-
-> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
-
-To create a new React application, run the following command.
-
-```bash
-npm create vite@latest my-app
-```
-This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
-
-![Initial_setup](images/Initial-setup.jpg)
-
-To set up a React application in TypeScript environment, run the following command.
-
-```bash
-npm create vite@latest my-app -- --template react-ts
-cd my-app
-npm run dev
-```
-To set up a React application in JavaScript environment, run the following command.
-
-```bash
-npm create vite@latest my-app -- --template react
-cd my-app
-npm run dev
-```
-
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Tooltip packages
-
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
-To install the Tooltip component, use the following command
-
-```bash
-npm install @syncfusion/ej2-react-popups --save
-```
-
-> The --save will instruct NPM to include the Tooltip package inside of the **dependencies** section of the package.json.
-
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
-
-Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
-
-This guide uses the `Tailwind 3` theme as an example, sourced from the theme package. In this package, each component includes an `index.css` file that automatically loads all the required dependency styles. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
-
+## Prerequisites
+ 
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement)
+ 
+## Set up the Vite project
+ 
+To create a new `Vite` project, use one of the commands that are specific to either NPM or Yarn.
+ 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
-
-npm install @syncfusion/ej2-tailwind3-theme --save
-
+npm create vite@latest my-project -- --template react
 {% endhighlight %}
 {% highlight bash tabtitle="yarn" %}
-
-yarn add @syncfusion/ej2-tailwind3-theme
-
+yarn create vite my-project --template react
 {% endhighlight %}
 {% endtabs %}
-
-By default, Vite projects include a `index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `index.css` file to prevent style conflicts.
-
-The required styles for the Tooltip component are imported in the **src/App.css** file:
-
-```css
-@import "@syncfusion/ej2-tailwind3-theme/styles/tooltip/index.css";
+ 
+After running the command, you will be prompted with a series of interactive questions to configure your project. Select the appropriate options for each prompt:
+ 
+1. **Select a linter to use**: Choose the linter for your project (for example, `ESLint`).
+2. **Install with npm and start now?**: Type `Yes` to proceed with installing the dependencies and automatically start the development server, or `No` to install dependencies manually later.
+ 
+Navigate into the project directory with:
+ 
 ```
-
-> To refer **App.css** in the application then import it in the **src/App.tsx** file.
+cd my-project
+```
+ 
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
+ 
+Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
+ 
+To install the React component package, use the following command:
+ 
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+ 
+npm install @syncfusion/ej2-react-popups
+ 
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+ 
+yarn add @syncfusion/ej2-react-popups
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+ 
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
+ 
+This guide uses the `Tailwind 3` theme as an example, sourced from the theme package. In this package, each component includes an `index.css` file that automatically loads all the required dependency styles. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+ 
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+ 
+npm install @syncfusion/ej2-tailwind3-theme
+ 
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+ 
+yarn add @syncfusion/ej2-tailwind3-theme
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
+ 
+The required styles for the Tooltip component are imported in the **src/App.css** file:
+ 
+{% tabs %}
+{% highlight css tabtitle="App.css" %}
+ 
+@import "@syncfusion/ej2-tailwind3-theme/styles/tooltip/index.css";
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+> You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
 ## Adding Tooltip component
 
-The React Tooltip component can be added to the application by following these steps. To get started, add the Tooltip component to the **src/App.tsx** file using the following code.
+Now, you can add the React Tooltip component to your **src/App.jsx** file by importing and defining it within your application. Then, populate the Tooltip with data using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/tooltip/index-default#datasource) property, which accepts an array of string values to display as suggestions. Use the following code:
+ 
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
 
-The following tooltip code should be placed in the **src/App.tsx** file.
-
-```ts
 import * as React from 'react';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import './App.css';
@@ -111,7 +121,9 @@ function App() {
   );
 }
 export default App;
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Run the application
 
@@ -139,25 +151,6 @@ The output appears as follows.
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/tooltip/default-cs1" %}
-
-## Initialize Tooltip within a container
-
-You can create Tooltips on multiple targets within a container. To do this, define specific target elements using the [`target`](https://helpej2.syncfusion.com/react/documentation/api/tooltip#target) property so that the Tooltip is initialized only on matched targets within the container. In this case, the Tooltip content is assigned from the `title` attribute of each target element.
-
-Refer to the following code example to create a Tooltip on multiple targets within a container.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tooltip/multi-target-cs2/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tooltip/multi-target-cs2/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/tooltip/multi-target-cs2" %}
-
-> In the above sample, `details` refers to the container's id, and the target `.e-info` refers to the target elements available within that container.
 
 > Refer to the [React Tooltip](https://www.syncfusion.com/react-components/react-tooltip) feature tour page for its groundbreaking feature representations. You can also explore our [React Tooltip component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/tooltip/default) that shows how to render the Tooltip in React.
 

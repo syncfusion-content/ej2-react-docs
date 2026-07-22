@@ -10,7 +10,34 @@ domainurl: ##DomainURL##
 
 # Color mapping in React Treemap component
 
-Color mapping is used to customize the color for each group or item based on the specified types. The following options are available to customize the group and leaf items in the TreeMap.
+## Apply color mapping
+
+The color mapping feature supports customization of item colors based on the underlying value of each item received from the bound data source. Specify the field name whose values will be compared for each item using the `equalColorValuePath` or `rangeColorValuePath` property.
+
+The color mapping feature allows you to customize item colors based on the underlying values in the data source. Specify the field whose values should be evaluated using the [`equalColorValuePath`](https://ej2.syncfusion.com/react/documentation/api/treemap#equalcolorvaluepath) or [`rangeColorValuePath`](https://ej2.syncfusion.com/react/documentation/api/treemap#rangecolorvaluepath) property.
+
+
+Color mapping can be applied to both group and leaf items in the TreeMap. The following color mapping types are supported:
+
+- Range color mapping
+- Equal color mapping
+- Desaturation color mapping
+- Palette color mapping
+- Desaturation with multiple colors
+- Color for items excluded from color mapping
+
+The following example demonstrates how to apply color mapping in a TreeMap:
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/treemap/code-path/getting-started-cs2/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/treemap/code-path/getting-started-cs2/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/treemap/getting-started-cs2" %}
 
 ## Range color mapping
 

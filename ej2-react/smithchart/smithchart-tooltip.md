@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Smithchart tooltip in React Smithchart component
 
-The Smith chart displays details about the points using tooltip when the mouse is hovered over the points. By default, the tooltips are disabled. To enable the tooltips, import and inject the TooltipRender module from Smith chart, and set the visible property to true in tooltip settings. You can customize the visibility and appearance of tooltips for each series in the Smith chart.
+The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/smithchart/seriestooltipmodel#visible) property as `true` in [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/smithchart/smithchartseriesmodel#tooltip) object and by injecting the `TooltipRender` module into the `services`.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/code-path/getting-started-cs27/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/smithchart/code-path/getting-started-cs7/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/code-path/getting-started-cs27/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/smithchart/code-path/getting-started-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs27" %}
+{% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs7" %}

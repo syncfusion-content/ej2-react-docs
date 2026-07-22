@@ -24,6 +24,21 @@ Range is the set of values in the axis. The range can be defined using the [`sta
 
  {% previewsample "page.domainurl/code-snippet/linear-gauge/ranges-cs1" %}
 
+## Setting the Axis Range
+
+The range of the axis can be set using the [`minimum`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/axis#minimum-number) and [`maximum`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/axis#maximum-number) properties of the Linear Gauge. The default values are `0` for `minimum` and `100` for `maximum`. These properties define the start and end values displayed on the gauge axis.
+
+{% tabs %}
+{% highlight jsx tabtitle="app.jsx" %}
+{% include code-snippet/linear-gauge/code-path/getting-started-cs2/app/index.jsx %}
+{% endhighlight %}
+{% highlight tsx tabtitle="app.tsx" %}
+{% include code-snippet/linear-gauge/code-path/getting-started-cs2/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/linear-gauge/getting-started-cs2" %}
+
 ## Customizing the range
 
 Ranges can be customized using the following properties in [`RangeDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/rangeModel).
