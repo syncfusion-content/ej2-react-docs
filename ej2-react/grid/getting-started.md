@@ -59,13 +59,13 @@ To create a new React application, run one of the following commands based on yo
 
 ***React with JavaScript***
 
-```bash
+```
 npx create-vite@latest my-app --template react
 ```
 
 ***React with TypeScript***
 
-```bash
+```
 npx create-vite@latest my-app --template react-ts
 ```
 
@@ -80,7 +80,7 @@ After verifying that the application starts successfully, terminate the developm
 
 Then, navigate to the project directory:
 
-```bash
+```
 cd my-app
 ```
 
@@ -88,7 +88,7 @@ cd my-app
 
 To install the Grids package, use the following command:
 
-```bash
+```
 npm install @syncfusion/ej2-react-grids --save
 ```
 
@@ -136,7 +136,7 @@ The Data Grid code should be added to the **src/App.tsx** file.
 
 ## Run the application
 
-```bash
+```
 npm run dev
 ```
 
