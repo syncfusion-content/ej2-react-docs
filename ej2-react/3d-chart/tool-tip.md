@@ -14,20 +14,20 @@ domainurl: ##DomainURL##
 
 The 3D Chart will display details about the points through tooltip, when the mouse is moved over the specific point.
 
-## Default tooltip
+## Enable tooltip
 
-By default, tooltip is not visible. The tooltip can be enabled by setting the [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart3d/threeDimensionalTooltipSettingsModel#enable) in `tooltipSettings` to **true** and by injecting the `Tooltip3D` module into the services.
+The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3dtooltipsettingsmodel#enable) property as `true` in [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel#tooltip) object and by injecting `Tooltip3D` module into the `services`.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/3d-chart/tooltip/tooltip-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/3d-chart/getting-started/getting-started-cs6/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/3d-chart/tooltip/tooltip-cs1/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/3d-chart/getting-started/getting-started-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/3d-chart/tooltip/tooltip-cs1" %}
+{% previewsample "page.domainurl/code-snippet/3d-chart/getting-started/getting-started-cs6" %}
 
 <!-- markdownlint-disable MD013 -->
 

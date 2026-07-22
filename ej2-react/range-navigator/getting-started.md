@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Getting started with React Range Navigator component | Syncfusion
-description:  Checkout and learn about Getting started with React Range Navigator component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+description: Check out and learn about getting started with the React Range Navigator component of Syncfusion Essential JS 2 and more details.
+control: Getting started
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -12,11 +12,17 @@ domainurl: ##DomainURL##
 
 This section describes the steps to create a simple Range Navigator and demonstrates the basic usage of the Range Navigator component.
 
+## Prerequisites
+
+Before getting started, ensure that your development environment meets the [system requirements for Syncfusion® React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement). That page documents the supported React, Node.js, and npm versions, and includes the React-version compatibility table for Syncfusion React components.
+
+- Node.js 18 or later.
+- A modern code editor such as Visual Studio Code.
+
+
 ## Dependencies
 
-Below is the list of minimum dependencies required to use the Range Navigator component.
-
-```
+When you install `@syncfusion/ej2-react-charts`, the following peer dependencies are installed automatically:
 
 |-- @syncfusion/ej2-react-charts
     |-- @syncfusion/ej2-base
@@ -36,65 +42,83 @@ To easily set up a React application, use the Vite CLI (`npm create vite`), whic
 
 > **Note:** To create a React application using `create-react-app` instead, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-To create a new React application, run the following command.
+To create a new React application, run the following command. The command will prompt you for a few settings, such as selecting a framework and a variant.
 
 ```bash
 npm create vite@latest my-app
 ```
-This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
 
-![Initial_setup](../images/Initial-setup.jpg)
+For reference, the interactive prompt looks like this:
 
-To set up a React application in TypeScript environment, run the following command.
+![Vite CLI framework and variant selection prompt](../images/Initial-setup.jpg)
 
-```bash
+You can also skip the interactive prompts by passing the template flag directly. Pick the template that matches your preferred language and run the matching block:
+
+{% tabs %}
+{% highlight bash tabtitle="TypeScript" %}
+
 npm create vite@latest my-app -- --template react-ts
 cd my-app
-npm run dev
-```
-To set up a React application in JavaScript environment, run the following command.
+npm install
 
-```bash
+{% endhighlight %}
+{% highlight bash tabtitle="JavaScript" %}
+
 npm create vite@latest my-app -- --template react
 cd my-app
-npm run dev
-```
+npm install
 
-### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Range Navigator Package
+{% endhighlight %}
+{% endtabs %}
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
-To install the Syncfusion<sup style="font-size:70%">&reg;</sup> Range Navigator package, use the following command
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Range Navigator package
+
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. To install the Range Navigator package, run the following command from the project folder:
 
 ```bash
-   npm install @syncfusion/ej2-react-charts --save
+npm install @syncfusion/ej2-react-charts
 ```
 
-> The –save will instruct NPM to include the Range Navigator package inside of the dependencies section of the package.json.
+> `@syncfusion/ej2-react-charts` includes the Range Navigator component along with the rest of the chart components, and automatically pulls in the peer dependencies listed in the [Dependencies](#dependencies) section above.
 
 ## Add Range Navigator to the project
 
-Add the Range Navigator component to `src/App.tsx` using the following code.
+The Range Navigator's root component is `RangeNavigatorComponent`. Open `src/App.tsx` (or `src/App.jsx` for the JavaScript template) and replace its contents with the following code.
 
-```ts
-import * as React from 'react';
-import { RangeNavigatorComponent } from '@syncfusion/ej2-react-charts';
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+
+import { RangeNavigatorComponent } from "@syncfusion/ej2-react-charts";
+import * as React from "react";
 
 function App() {
   return (<RangeNavigatorComponent></RangeNavigatorComponent>);
 }
 export default App;
-```
 
-Then, update the `src/main.tsx` file to render the App component using React 18's [`createRoot`](https://react.dev/reference/react-dom/client/createRoot) API.
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+
+import { RangeNavigatorComponent } from "@syncfusion/ej2-react-charts";
+import * as React from "react";
+
+function App() {
+  return (<RangeNavigatorComponent></RangeNavigatorComponent>);
+}
+export default App;
+
+{% endhighlight %}
+{% endtabs %}
+
+Then, update `src/main.tsx` (or `src/main.jsx`) to mount the App component using React 18's [`createRoot`](https://react.dev/reference/react-dom/client/createRoot) API.
 
 ```ts
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App';
-import './index.css';
+import React from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App";
+import "./index.css";
 
-const root = createRoot(document.getElementById('root')!);
-root.render(
+createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
@@ -103,50 +127,47 @@ root.render(
 
 Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-  ```bash
-   npm run dev
-  ```
+```bash
+npm run dev
+```
 
 The below example shows a basic Range Navigator.
 
 {% tabs %}
-{% highlight js tabtitle="App.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/rangenavigator/getting-started-cs17/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/rangenavigator/getting-started-cs17/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/rangenavigator/getting-started-cs17" %}
+{% previewsample "page.domainurl/code-snippet/rangenavigator/getting-started-cs17" %}
 
 ## Module injection
 
-Range Navigator component are segregated into individual feature-wise modules. In order to use a particular feature, you need to inject its feature service in the AppModule. The following services are used to extend Range Navigator’s basic functionality.
+The Range Navigator is segregated into individual feature-wise modules. To use a particular feature, you need to inject its feature service in the `services` of the `Inject` component. The following services are commonly used to extend the Range Navigator's basic functionality.
 
-* `AreaSeries` - Inject this module in to `services` to use area series.
-* `DateTime` - Inject this module in to `services` to use date time feature.
-* `RangeTooltip` - Inject this module in to `services` to use tooltip feature.
+* `AreaSeries` - Inject this module in to `services` to use the area series.
+* `DateTime` - Inject this module in to `services` to use the DateTime axis.
+* `RangeTooltip` - Inject this module in to `services` to use the tooltip feature.
 
-Import the above-mentioned modules from the chart package and inject them into the `services` section of the Range Navigator component as follows.
+Import the modules from the chart package and inject them into the `services` section of the Range Navigator component as follows.
 
- ```javascript
-import { RangeNavigatorComponent, AreaSeries, DateTime, RangeTooltip, Inject } from '@syncfusion/ej2-react-charts';
-import * as React from 'react';
-import * as ReactDOM from "react-dom";
+```javascript
+import { RangeNavigatorComponent, AreaSeries, DateTime, RangeTooltip, Inject } from "@syncfusion/ej2-react-charts";
+import * as React from "react";
 
 function App() {
-    return (
-        <RangeNavigatorComponent id='charts'>
-            <Inject services={[AreaSeries, DateTime, RangeTooltip]} />
-        </RangeNavigatorComponent>
-    );
+  return (
+    <RangeNavigatorComponent id="charts">
+      <Inject services={[AreaSeries, DateTime, RangeTooltip]} />
+    </RangeNavigatorComponent>
+  );
 }
 
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('charts'));
-root.render(<App />);
- ```
+```
 
 ## Populate Range Navigator with data
 
@@ -165,17 +186,47 @@ Since the JSON contains category data, set the [`valueType`](https://ej2.syncfus
 
 {% previewsample "page.domainurl/code-snippet/rangenavigator/getting-started-cs18" %}
 
-## Enable tooltip
+## Troubleshooting
 
-The tooltip is useful to show the selected data. You can enable tooltip by setting the [`enable`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/rangetooltipsettingsmodel#enable) property as `true` in [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/rangenavigatormodel#tooltip) object and by injecting `RangeTooltip` module into the `services`.
+Use the following guidance to resolve common issues when getting started with the Range Navigator component.
 
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rangenavigator/getting-started-cs19/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rangenavigator/getting-started-cs19/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
+- **Range Navigator does not render (blank page)**
+  - Verify that `index.html` contains a container with `id="root"`, and that `main.tsx`/`main.jsx` calls `ReactDOM.createRoot(document.getElementById("root"))` followed by `root.render(<App />)`.
+  - Run `npm install` again to ensure all peer dependencies listed in the [Dependencies](#dependencies) section are installed.
 
-{% previewsample "page.domainurl/code-snippet/rangenavigator/getting-started-cs19" %}
+- **Tooltip is not visible after setting `tooltip.enable = true`**
+  - Confirm that the `RangeTooltip` module is included in the `services` array of the `Inject` component as shown in the [Module injection](#module-injection) and [Enable tooltip](#enable-tooltip) sections.
+
+- **Series data is not plotted or appears empty**
+  - Confirm that the `dataSource` array contains objects with property names matching `xName` and `yName` (case sensitive).
+  - If the `x` field holds `Date` values, set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/rangeNavigatorModel#valuetype) of `primaryXAxis` to `DateTime`; for string categories use `Category`.
+
+- **TypeScript errors on import**
+  - Ensure `@types/react` and `@types/react-dom` are installed. The Syncfusion package ships with its own types, so no additional type packages are required.
+
+- **`Module not found: Can't resolve '@syncfusion/ej2-react-charts'`**
+  - The package was not installed in the current project. Run `npm install @syncfusion/ej2-react-charts` from the project root.
+
+- **`ERESOLVE` peer-dependency errors during installation**
+  - A React or Node.js version mismatch is the most common cause. Install a supported React version (18 or 19) and Node.js 18 or later, then delete `node_modules` and `package-lock.json` and run `npm install` again.
+
+- **Build or dev server fails to start**
+  - Confirm that you are using a supported Node.js version (Node 18 or later for the latest Vite templates).
+  - Delete `node_modules` and `package-lock.json`, then run `npm install` again.
+
+## See also
+
+Explore the following related topics:
+
+- [Selecting Range](./selecting-range)
+- [Lightweight](./lightweight)
+- [Series Types](./series-types)
+- [Types of Data](./data)
+- [Period Selector](./period-selector)
+- [Labels](./labels)
+- [Grid and Tick Lines](./grid-tick)
+- [Customization](./customization)
+- [Tooltip](./tool-tip)
+- [RTL](./r-t-l)
+- [Export and Print](./export-print)
+- [Accessibility](./accessibility)

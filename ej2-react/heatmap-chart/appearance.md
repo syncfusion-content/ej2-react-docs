@@ -112,9 +112,9 @@ The title is used to provide a quick information about the data plotted in heatm
 
  {% previewsample "page.domainurl/code-snippet/heatmap/appearance-cs6" %}
 
-## Data label
+## Add data label
 
-The visibility of data labels can be toggled using the [showLabel](https://ej2.syncfusion.com/react/documentation/api/heatmap/cellSettings#showlabel) property. By default, the data labels will be visible.
+Add data labels to improve the readability of the heat map. Set the [showLabel](https://ej2.syncfusion.com/react/documentation/api/heatmap/cellSettings#showlabel) property to **true** in the [cellSettings](https://ej2.syncfusion.com/react/documentation/api/heatmap#cellsettings) object:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
