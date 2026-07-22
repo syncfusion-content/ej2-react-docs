@@ -63,13 +63,13 @@ To create a new React application, run one of the following commands based on yo
 
 ***React with JavaScript***
 
-```bash
+```
 npx create-vite@latest my-app --template react
 ```
 
 ***React with TypeScript***
 
-```bash
+```
 npx create-vite@latest my-app --template react-ts
 ```
 
@@ -84,7 +84,7 @@ After verifying that the application starts successfully, terminate the developm
 
 Then, navigate to the project directory:
 
-```bash
+```
 cd my-app
 ```
 
@@ -140,7 +140,7 @@ The tree grid code should be placed in the **src/App.tsx** file.
 
 ## Run the application
 
-```bash
+```
 npm run dev
 ```
 
@@ -155,8 +155,6 @@ registerLicense('YOUR_LICENSE_KEY_HERE');
 ```
 
 > Replace `'YOUR_LICENSE_KEY_HERE'` with the actual license key obtained from your Syncfusion account. For more information, refer to the [Syncfusion Licensing documentation](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration).
-
-> **Note:** A valid Syncfusion license is required for production use. Without a valid license, a trial license warning message will be displayed.
 
 ## Troubleshooting
 
