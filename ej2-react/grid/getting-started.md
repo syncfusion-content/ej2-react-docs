@@ -128,7 +128,11 @@ The Data Grid code should be added to the **src/App.tsx** file.
 {% include code-snippet/grid/getting-started/app/App.tsx %}
 {% endhighlight %}
 {% highlight css tabtitle="App.css" %}
-{% include code-snippet/grid/getting-started/app/App.css %}
+{% raw %}
+
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.css";
+
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -10,13 +10,26 @@ domainurl: ##DomainURL##
 
 # Sparkline types in React Sparkline component
 
-Different types of shapes can be used to represent the sparkline. You can change the sparkline type by setting the type property. Sparkline supports the following types:
+Different shapes can be used to visualize data in a Sparkline component. You can change the Sparkline type using the [`type`](https://ej2.syncfusion.com/react/documentation/api/sparkline/sparklinemodel#type) property.
 
-* Line
-* Column
-* Win-Loss
-* Pie
-* Area
+The React Sparkline component supports the following types:
+
+* `Line` – Connects data points with a continuous line; ideal for trend visualization.
+* `Column` – Renders data as vertical bars; ideal for comparing discrete values.
+* `WinLoss` – Renders each data point as a positive or negative bar; ideal for win/loss or profit/loss data.
+* `Pie` – Renders data as proportional slices of a circle; ideal for composition.
+* `Area` – Renders a filled line chart; ideal for emphasizing magnitude over time. Here, the `Area` type is applied.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/sparkline/getting-started-cs2/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/sparkline/getting-started-cs2/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/sparkline/getting-started-cs2" %}
 
 The following code sample shows different types of sparklines.
 
