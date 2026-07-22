@@ -14,7 +14,7 @@ Tooltip is used to provide the details of the heatmap cell, and this can be disp
 
 ## Default tooltip
 
-You can enable the tooltip by setting the [showTooltip](https://ej2.syncfusion.com/react/documentation/api/heatmap#showtooltip)  property to **true** and injecting the `Tooltip` module into the `services`.
+The tooltip is used to display information that cannot be shown using data labels due to space constraints. Enable the tooltip by setting the [showTooltip](https://ej2.syncfusion.com/react/documentation/api/heatmap#showtooltip) property to **true** and injecting the `Tooltip` module via `<Inject services={[..., Tooltip]} />`:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

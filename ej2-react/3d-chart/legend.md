@@ -15,6 +15,21 @@ domainurl: ##DomainURL##
 
 Legend provides information about the series rendered in the 3D chart.
 
+## Enable legend
+
+You can use legend for the 3D Chart by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3dlegendsettingsmodel#visible) property to `true` in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel#legendsettings) object and by injecting the `Legend3D` module into the `services`.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/3d-chart/getting-started/getting-started-cs4/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/3d-chart/getting-started/getting-started-cs4/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/3d-chart/getting-started/getting-started-cs4" %}
+
 ## Position and alignment
 
 By using the [`position`](https://ej2.syncfusion.com/react/documentation/api/chart3d/legendSettingsModel#position) property, the legend can be positioned at left, right, top or bottom of the 3D chart. The legend is positioned at the bottom of the 3D chart, by default.
