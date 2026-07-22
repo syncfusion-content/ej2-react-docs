@@ -10,9 +10,15 @@ domainurl: ##DomainURL##
 
 # Syncfusion React AI and Smart Tooling Release Notes
 
-This document provides information about the changes and new features included in each version of the Syncfusion React AI and Smart Tooling, including the [@syncfusion/react-mcp](https://www.npmjs.com/package/@syncfusion/react-mcp) MCP Server, Skills, Agentic UI Builder and so on.
+This document provides information about the changes and new features included in each version of the Syncfusion React AI and Smart Tooling, including the [@syncfusion/react-assistant](https://www.npmjs.com/package/@syncfusion/react-assistant) MCP Server, Skills, Agentic UI Builder and so on.
 
 ## MCP Server
+
+**(v3.0.0) - July 21, 2026**
+
+**Breaking Changes**
+
+- The **UI Builder** tool has been redefined as an agent-skill based experience and is no longer available within this server. For more information about the **Agentic UI Builder**, refer to this [link](https://www.syncfusion.com/explore/agentic-ui-builder).
 
 **(v2.0.1) - March 27, 2026**
 
