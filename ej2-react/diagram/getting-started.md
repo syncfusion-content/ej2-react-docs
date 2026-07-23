@@ -65,7 +65,12 @@ Create a new React application using the following command:
 npm create vite@latest my-diagram-app -- --template react-ts
 ```
 
-If Vite prompts to install dependencies and start the project immediately, choose **No**. The base dependencies and the Syncfusion® package are installed in the next steps.
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
+
+- **Which linter to use?** → **ESLint**
+- **Install with npm and start now?** → **No**
+
+The base dependencies and the Syncfusion® package are installed in the next steps.
 
 N> To use JavaScript instead of TypeScript, create the application using `npm create vite@latest my-diagram-app -- --template react`. The root component file will then be **src/App.jsx** instead of **src/App.tsx**.
 

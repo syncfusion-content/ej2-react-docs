@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Editing Tasks in React Gantt Chart Component | Syncfusion
-description: Learn how to edit tasks dynamically in the Syncfusion React Gantt Chart component using cell editing, dialog, taskbar, or programmatic methods for project updates.
+description: Learn how to edit tasks in the Syncfusion React Gantt Chart component using cell, dialog, taskbar or programmatic editing.
 platform: ej2-react
 control: Editing tasks
 documentation: ug
@@ -54,7 +54,7 @@ Enable dialog editing by setting [editSettings.allowEditing](https://ej2.syncfus
 
 ## Customize dialog tabs
 
-Customize the edit dialog by defining tabs with [addDialogFields](https://ej2.syncfusion.com/react/documentation/api/gantt#adddialogfields) and [editDialogFields](https://ej2.syncfusion.com/react/documentation/api/gantt#editdialogfields), using the [type](https://ej2.syncfusion.com/react/documentation/api/gantt/dialogFieldType/) property (e.g., General, Dependency). This organizes fields into tabs for focused editing, such as task details or dependencies, with `Edit` required.
+Customize the edit dialog by defining tabs with [addDialogFields](https://ej2.syncfusion.com/react/documentation/api/gantt#adddialogfields) and [editDialogFields](https://ej2.syncfusion.com/react/documentation/api/gantt#editdialogfields), using the [type](https://ej2.syncfusion.com/react/documentation/api/gantt/dialogFieldType) property (e.g., General, Dependency). This organizes fields into tabs for focused editing, such as task details or dependencies, with `Edit` required.
 
 The following sample demonstrates customization using properties and the [actionComplete](https://ej2.syncfusion.com/react/documentation/gantt/events#actioncomplete) event.
 
@@ -164,6 +164,30 @@ You can render a custom edit component for a column using the [column.edit](http
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/gantt/custom-dynamic-cs1" %}
+
+## Update custom column values using updateRecordByID
+
+The [updateRecordByID](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#updaterecordbyid) method can be used to update task records dynamically in the Gantt chart. When working with custom fields, the field must be defined in the Gantt columns collection. If a custom field is not bound to a column, the `updateRecordByID` method cannot maintain or update its value in the Gantt chart.
+
+This behavior occurs because custom fields are stored within the task data (taskData). Only the custom fields that are bound in the column collection are tracked and maintained by the Gantt component during record updates.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/custom-dynamic-cs2/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/custom-dynamic-cs2/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/custom-dynamic-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/gantt/custom-dynamic-cs2" %}
+
+In the above example, the description field is bound in the column collection. Therefore, calling `updateRecordByID` successfully updates the custom column value for the specified task record. If the description field is removed from the column collection, the updated value will not be maintained by the Gantt chart.
+
+>NOTE: Custom column values can be updated through the [updateRecordByID](https://ej2.syncfusion.com/react/documentation/api/gantt/index-default#updaterecordbyid) method only when the corresponding field is included in the Gantt columns collection.
 
 ## See also
 
