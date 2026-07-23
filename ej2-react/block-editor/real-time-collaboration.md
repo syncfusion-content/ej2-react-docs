@@ -268,6 +268,7 @@ Create a `versionHistoryService.ts` file in the src folder, replace the `App.tsx
 
 {% tabs %}
 {% highlight tsx tabtitle="App.tsx" %}
+{% raw %}
 import { BlockEditorComponent, Collaboration, VersionHistory, Inject } from '@syncfusion/ej2-react-blockeditor';
 import { useRef, useState, useEffect } from 'react';
 import type { VersionSnapshot } from '@syncfusion/ej2-react-blockeditor';
@@ -331,6 +332,7 @@ function App() {
 }
 
 export default App;
+{% endraw %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="App.css" %}

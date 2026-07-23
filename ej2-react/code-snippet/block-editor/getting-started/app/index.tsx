@@ -4,9 +4,8 @@ import * as React from 'react';
 import './App.css';
 // To render BlockEditor.
 function App() {
-    
     return (
-            <BlockEditorComponent id="block-editor"></BlockEditorComponent>
+        <BlockEditorComponent id="block-editor"></BlockEditorComponent>
     );
 }
 export default App;

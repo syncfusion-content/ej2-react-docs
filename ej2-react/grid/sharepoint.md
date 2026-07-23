@@ -18,9 +18,10 @@ The [React Data Grid](https://www.syncfusion.com/react-components/react-data-gri
 
 Before you start using Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components, ensure that your system meets the following prerequisites by referring to the system requirements documentation. This documentation provides information about supported browsers, Node.js versions, and other dependencies required for using Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components and `SharePoint` Framework effectively. 
 
-* [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement)
-
-* [System requirements for the SharePoint Framework Development Environment](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment)
+* **React:** Use React version 15.5.4 or higher.
+* **Node.js:** Use Node.js version 14.0.0 or above.
+* **Yarn (optional):** If using Yarn, ensure Yarn version >= 0.25.
+* [System requirements for the SharePoint Framework Development Environment](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment).
 
 ## Set up the SharePoint project
 

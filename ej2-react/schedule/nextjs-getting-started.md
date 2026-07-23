@@ -320,5 +320,3 @@ To learn more about the functionality of the Schedule component, refer to the [S
 * [Resources](./resources.md)
 * [Views](./views.md)
 * [Appointments and event data handling](./appointments.md)
-
-N> Looking for the full React Schedule component overview, features, pricing, and documentation? Visit the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) page.

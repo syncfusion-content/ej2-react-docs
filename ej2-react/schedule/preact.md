@@ -147,18 +147,9 @@ import { render } from 'preact';
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
 import './style.css';
 
-const eventData = [
-  {
-    Id: 1,
-    Subject: 'Team Meeting',
-    StartTime: new Date(2024, 0, 15, 10, 0),
-    EndTime: new Date(2024, 0, 15, 11, 0)
-  }
-];
-
 export function App() {
   return (
-    <ScheduleComponent eventSettings={{ dataSource: eventData }}>
+    <ScheduleComponent>
       <Inject services={[Day, Week, WorkWeek, Month, Agenda]}/>
     </ScheduleComponent>
   );
