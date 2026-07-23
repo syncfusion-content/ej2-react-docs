@@ -146,15 +146,7 @@ npm run dev
 
 ## Registering Syncfusion license
 
-Generate a license key from the [Syncfusion License Dashboard](https://www.syncfusion.com/account/downloads) and register it in the `main.jsx` or `main.tsx` file before rendering your React application:
- 
-```
-import { registerLicense } from '@syncfusion/ej2-base';
-
-registerLicense('YOUR_LICENSE_KEY_HERE');
-```
-
-> Replace `'YOUR_LICENSE_KEY_HERE'` with the actual license key obtained from your Syncfusion account. For more information, refer to the [Syncfusion Licensing documentation](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration).
+The Syncfusion® React Data Grid requires a valid license key to be registered in the application. To prevent license validation warnings, refer to the [Syncfusion licensing](https://ej2.syncfusion.com/react/documentation/licensing/overview) documentation.
 
 ## Troubleshooting
 

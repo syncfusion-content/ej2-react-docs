@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Toolbar, PdfExport, Selection } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Toolbar, PdfExport } from '@syncfusion/ej2-react-gantt';
 import { editingData } from './datasource';
 
 function App() {
@@ -88,7 +88,7 @@ function App() {
                         <ColumnDirective field="Duration" />
                         <ColumnDirective field="Progress" />
                     </ColumnsDirective>
-                    <Inject services={[Toolbar, PdfExport, Selection]} />
+                    <Inject services={[Toolbar, PdfExport]} />
                 </GanttComponent>
             </div>
         </div>

@@ -52,6 +52,10 @@ The following implementation demonstrates event marker integration within a Gant
         
 {% previewsample "page.domainurl/code-snippet/gantt/event-markers-cs1" %}
 
+## Limitations
+
+- When an event marker is configured with a date and time value very close to midnight (for example, 23:59:59.999), the marker may appear visually at the beginning of the next day on the timeline. This is expected behavior because the marker is rendered at the exact timestamp, which is positioned on the day boundary and may appear in the next day depending on the timeline scale and zoom level.
+
 ## Programmatically show and hide event markers
 
 You can programmatically show or hide event markers in the Gantt chart by updating the [eventMarkers](https://ej2.syncfusion.com/react/documentation/api/gantt#eventmarkers) property.

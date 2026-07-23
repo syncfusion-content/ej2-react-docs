@@ -1,4 +1,4 @@
-import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Table, Toolbar, ClipboardCleanup} from '@syncfusion/ej2-react-richtexteditor';
+import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Table, Toolbar, ClipBoardCleanup} from '@syncfusion/ej2-react-richtexteditor';
 import * as React from 'react';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
       }
   };
   return (<RichTextEditorComponent beforeClipboardWrite={onBeforeClipboardWrite}>
-    <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar, Table, ClipboardCleanup]} />
+    <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar, Table, ClipBoardCleanup]} />
   </RichTextEditorComponent>);
 }
 export default App;
