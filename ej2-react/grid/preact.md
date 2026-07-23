@@ -16,7 +16,9 @@ This article provides a step-by-step guide for setting up a [Preact](https://pre
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](../system-requirement)
+- **React:** Use React version 15.5.4 or higher.
+- **Node.js:** Use Node.js version 14.0.0 or above.
+- **Yarn (optional):** If using Yarn, ensure Yarn version >= 0.25.
 
 ## Set up the Preact project
 

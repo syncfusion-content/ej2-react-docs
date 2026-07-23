@@ -104,7 +104,7 @@ createRoot(document.getElementById('root')!).render(<App />);
 
 **JavaScript (src/App.jsx):**
 
-```jsx
+```
 import { ProgressBarComponent } from '@syncfusion/ej2-react-progressbar';
 import * as React from 'react';
 
