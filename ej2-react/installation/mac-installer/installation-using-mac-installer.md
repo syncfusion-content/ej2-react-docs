@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Installing Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Mac Installer
+# Installing Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Mac installer
 
-## Resolving Security Warnings on macOS Catalina or Later
+## Resolving security warnings on macOS Catalina or later
 
 When running the Essential Studio<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Mac Installer on macOS Catalina or later, you may encounter the following security alert:
 
@@ -27,7 +27,7 @@ If this alert appears, follow these steps:
 
 4. If macOS still prevents the installer from opening, open **System Preferences > Security & Privacy > General**, locate the blocked app message, and click **Open Anyway**. Then repeat step 3.
 
-## Step-by-Step Installation
+## Step-by-step installation
 
 Follow the steps below to install the Essential Studio<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Mac installer:
 
@@ -59,14 +59,14 @@ Follow the steps below to install the Essential Studio<sup style="font-size:70%"
 
    > The installed application remains in your Applications folder and is not affected by ejecting or deleting the DMG file.
 
-## License Key Registration in Samples
+## License key registration in samples
 
 After installation, a license key is required to run the demo source included in the Mac installer. For instructions on registering the license key for JavaScript - EJ2, refer to the following topics:
 
 * [Register Syncfusion<sup style="font-size:70%">&reg;</sup> License key in the project](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration#register-syncfusion-license-key-in-the-project)
 * [Register the license key using the npx command](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration#register-syncfusion-license-key-using-the-npx-command)
 
-## System Requirements
+## System requirements
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Mac installer is compatible with:
 

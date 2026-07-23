@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Installation using Offline Installer
+# Installation using offline installer
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 offline installer supports the following frameworks:
 
@@ -20,7 +20,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 offline in
 
 > The offline installer includes shared resources and samples for all supported frameworks. Once installed, you can access React-specific content and demos.
 
-## System Requirements
+## System requirements
 
 Before installation, ensure the system meets these requirements:
 
@@ -40,7 +40,7 @@ These steps describe installing the Essential Studio<sup style="font-size:70%">&
 
     > The installer displays an extraction progress dialog while unpacking the installation files.
 
-### Step 2: Unlock the Installer
+### Step 2: Unlock the installer
 
 2. To unlock the installer, choose one of the following options:
 
@@ -58,11 +58,11 @@ These steps describe installing the Essential Studio<sup style="font-size:70%">&
 
     ![Unlock key entry](images/offline3.png)
 
-### Step 3: Accept License Agreement
+### Step 3: Accept license agreement
 
 3. After reading the License Terms and Privacy Policy, check the **"I agree to the License Terms and Privacy Policy"** checkbox and click **Next**.
 
-### Step 4: Configure Installation Settings
+### Step 4: Configure installation settings
 
 4. Specify the installation and sample locations, or accept the defaults. Click **Next** or **Install** to continue.
 
@@ -76,7 +76,7 @@ These steps describe installing the Essential Studio<sup style="font-size:70%">&
 
     > The "Configure Syncfusion Extensions in Visual Studio" option applies only to ASP.NET development and does not affect React projects.
 
-### Step 5: Uninstall Previous Versions (Optional)
+### Step 5: Uninstall previous versions (Optional)
 
 5. If previous versions are detected, the **Uninstall Previous Version(s)** wizard appears; select versions to remove and click **Proceed**.
 
@@ -92,7 +92,7 @@ These steps describe installing the Essential Studio<sup style="font-size:70%">&
 
     ![Uninstall progress](images/offline7.png)
 
-### Step 6: Monitor Installation Progress
+### Step 6: Monitor installation progress
 
 6. The installer displays progress for uninstallation (if selected) and for installation.
 
@@ -100,7 +100,7 @@ These steps describe installing the Essential Studio<sup style="font-size:70%">&
 
     ![Installation progress](images/offline8.png)
 
-### Step 7: Complete Installation
+### Step 7: Complete installation
 
 7. After installation completes, the completion screen displays the status.
 
@@ -108,7 +108,7 @@ These steps describe installing the Essential Studio<sup style="font-size:70%">&
 
 8. Click **Launch Control Panel** to open the Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel, or click **Finish** to exit.
 
-## Installing in Silent Mode (Windows)
+## Installing in silent mode (Windows)
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 installer supports silent installation and uninstallation via the command line on Windows.
 
@@ -156,7 +156,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style=
 
 3. The uninstallation completes silently.
 
-## Post-Installation
+## Post-installation
 
 After installation:
 

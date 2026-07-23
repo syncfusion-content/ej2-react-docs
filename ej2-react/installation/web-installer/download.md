@@ -8,21 +8,21 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Download React (JavaScript - EJ2) Web Installer
+# Download React (JavaScript - EJ2) web installer
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 web installer can be downloaded from the [Syncfusion](https://www.syncfusion.com/react-ui-components) website. Depending on your license type, you can download either the licensed installer or the trial installer.
 
 * **Trial Installer**: For evaluating the product.
 * **Licensed Installer**: For customers with a valid license.
 
-## Download the Free Trial Version
+## Download the free trial version
 
 Obtain the 30-day trial in either of the following ways:
 
 1. Download the Free Trial setup.
 2. Start a trial if components were installed via [npm](https://www.npmjs.com/~syncfusionorg).
 
-### Download Free Trial Setup
+### Download free trial setup
 
 1. Visit the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the JavaScript platform to start the evaluation.
 
@@ -42,7 +42,7 @@ Obtain the 30-day trial in either of the following ways:
 
     ![Download installer button](images/start-trial-download-installer.png)
 
-### Start Trial for npm Users
+### Start trial for npm users
 
 If components were installed via [npm](https://www.npmjs.com/~syncfusionorg), start an evaluation to obtain a license key:
 
@@ -60,7 +60,7 @@ If components were installed via [npm](https://www.npmjs.com/~syncfusionorg), st
 
     ![Trial installer download](images/start-trial-download-installer.png)
 
-## Download the Licensed Version
+## Download the licensed version
 
 1. Licensed installers are available on the [License & Downloads](https://www.syncfusion.com/account/downloads) page in the registered Syncfusion<sup style="font-size:70%">&reg;</sup> account.
 
