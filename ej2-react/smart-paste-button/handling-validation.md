@@ -15,7 +15,7 @@ The `Smart Paste Button` can be configured to validate that all required input f
 
 {% tabs %}
 {% highlight ts tabtitle="app.tsx" %}
-
+{% raw %}
 import { useEffect } from 'react';
 import { ButtonComponent, ChatOptions, SmartPasteButtonComponent } from "@syncfusion/ej2-react-buttons";
 import { TextBoxComponent, TextAreaComponent, FormValidator, FormValidatorModel } from "@syncfusion/ej2-react-inputs";
@@ -183,7 +183,7 @@ function SmartPasteValidation() {
 }
 
 export default SmartPasteValidation
-
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="ai-models.ts" %}
 

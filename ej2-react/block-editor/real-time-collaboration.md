@@ -173,6 +173,7 @@ export { yDoc, yFragment, adapter, provider, roomName };
 
 In your React component file, add the following code. Replace your existing Block Editor setup with this:
 
+{% raw %}
 ```typescript
 import {BlockEditorComponent, Inject, Collaboration} from '@syncfusion/ej2-react-blockeditor';
 import { adapter, provider } from './collaboration';
@@ -192,6 +193,7 @@ function App() {
 
 export default App;
 ```
+{% endraw %}
 
 ### Step 6: Test the collaboration
  
@@ -533,6 +535,7 @@ Use the following event callbacks in `versionHistory` settings to respond to sna
 
 Triggered when a new snapshot is created.
 
+{% raw %}
 ```typescript
 <BlockEditorComponent
     collaborationSettings={{
@@ -545,11 +548,13 @@ Triggered when a new snapshot is created.
     }}
 />
 ```
+{% endraw %}
 
 #### snapshotRestored
 
 Triggered when a snapshot is restored.
 
+{% raw %}
 ```typescript
 <BlockEditorComponent
     collaborationSettings={{
@@ -562,3 +567,4 @@ Triggered when a snapshot is restored.
     }}
 />
 ```
+{% endraw %}

@@ -35,7 +35,7 @@ Add the **data-smartpaste-description** attribute to the form fields where the s
 
 {% tabs %}
 {% highlight ts tabtitle="app.tsx" %}
-
+{% raw %}
 import { useEffect } from 'react';
 import { ButtonComponent, ChatOptions, SmartPasteButtonComponent } from "@syncfusion/ej2-react-buttons";
 import { TextBoxComponent, TextAreaComponent } from "@syncfusion/ej2-react-inputs";
@@ -179,7 +179,7 @@ function SmartPaste() {
 }
 
 export default SmartPaste;
-
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="ai-models.ts" %}
 

@@ -158,11 +158,9 @@ npm run dev
 
 ## Troubleshooting
 
-| Issue | Likely cause | Fix |
-| --- | --- | --- |
-| `Module not found: Can't resolve '@syncfusion/ej2-react-charts'` | Package not installed or wrong working directory | Run `npm install @syncfusion/ej2-react-charts` inside the project root. |
-| Tooltip/legend don't appear | Modules not injected | Ensure `SankeyTooltip` and/or `SankeyLegend` are passed to the `Inject` service as shown in the "Module injection" step. |
-| `ERESOLVE` peer-dependency errors | Mismatched React version | Install a supported React version (18 or 19) and rerun `npm install`. |
+- **`Module not found: Can't resolve '@syncfusion/ej2-react-charts'`** — Package not installed or wrong working directory. Run `npm install @syncfusion/ej2-react-charts` inside the project root.
+- **Tooltip/legend don't appear** — Modules not injected. Ensure `SankeyTooltip` and/or `SankeyLegend` are passed to the `Inject` service as shown in the "Module injection" step.
+- **`ERESOLVE` peer-dependency errors** — Mismatched React version. Install a supported React version (18 or 19) and rerun `npm install`.
 
 ## See also
 

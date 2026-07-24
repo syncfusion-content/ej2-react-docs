@@ -504,7 +504,7 @@ Once both the server and client are running:
 - The Pivot Table retrieves data from the backend API through the [ODataV4Adaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/odatav4-adaptor) and displays it according to the defined report layout.
 - The resulting Pivot Table appears as shown in the following image:
 
-![Pivot Table bound with ODataV4Adaptor](images/ODataV4Adaptor.png)
+![Pivot Table bound with ODataV4Adaptor](../images/ODataV4Adaptor.png)
 
 The Pivot Table is now successfully connected to the backend API and displays the data in the configured layout.
 
@@ -585,7 +585,7 @@ public IActionResult Patch(int key, [FromBody] OrdersDetails updatedOrder)
 
 ```
 
-![Update record](images/odatav4adaptor-update-record.png)
+![Update record](../images/odatav4adaptor-update-record.png)
 
 **How it works:**
 
