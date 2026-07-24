@@ -420,7 +420,7 @@ Once both the server and client are running:
 - The Pivot Table retrieves data from the backend API through the [WebApiAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/webapi-adaptor) and displays it according to the defined report layout.
 - The resulting Pivot Table appears as shown in the following image:
 
-![Pivot Table bound with WebApiAdaptor](images/WebApiAdaptor.png)
+![Pivot Table bound with WebApiAdaptor](../images/WebApiAdaptor.png)
 
 The Pivot Table is now successfully connected to the backend API and displays the data in the configured layout.
 
@@ -465,7 +465,7 @@ public IActionResult Post([FromBody] OrdersDetails newRecord)
 }
 ```
 
-![Insert record](images/webapiadaptor-insert-record.png)
+![Insert record](../images/webapiadaptor-insert-record.png)
 
 #### Update operation
 
@@ -494,7 +494,7 @@ public IActionResult Put([FromBody] OrdersDetails updatedOrder)
 
 ```
 
-![Update record](images/webapiadaptor-update-record.png)
+![Update record](../images/webapiadaptor-update-record.png)
 
 **How it works:**
 
@@ -524,7 +524,7 @@ public IActionResult Delete(int key)
 }
 ```
 
-![Delete record](images/webapiadaptor-delete-record.png)
+![Delete record](../images/webapiadaptor-delete-record.png)
 
 **How it works:**
 

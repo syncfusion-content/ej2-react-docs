@@ -110,24 +110,28 @@ npm install @syncfusion/ej2-react-grids
 ```
 
 ## Adding CSS reference
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> provides various themes for React components. You can import CSS styles for the desired theme into your project.  Refer to the [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a React project.
-
-In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the Data Grid component were imported into the `~src/webparts/reactGridComponent/components/ReactGridComponent.tsx` file. 
-
-To add Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JS 2 style reference from npm packages:
-
-```bash
-require ('@syncfusion/ej2-react-grids/styles/material3.css');
-```
-
-or
-
-To add Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JS 2 style reference from CDN:
-
-```bash
-<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/32.1.19/ej2/material3.css" /> // use the latest version to refer the css through CDN//
-```
+ 
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Data Grid component can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
+ 
+Install the **Material 3** theme package using the following command:
+ 
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+ 
+npm install @syncfusion/ej2-material3-theme --save
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+This example imports the `material3` theme CSS in `~src/webparts/reactGridComponent/components/ReactGridComponent.tsx`:
+ 
+{% tabs %}
+{% highlight ts tabtitle="ReactGridComponent.tsx" %}
+ 
+require('@syncfusion/ej2-material3-theme/styles/grid/index.css');
+ 
+{% endhighlight %}
+{% endtabs %}
 
 ## Adding Data Grid component
 

@@ -24,6 +24,7 @@ Before getting started, ensure that your development environment meets the [syst
 
 When you install `@syncfusion/ej2-react-charts`, the following peer dependencies are installed automatically:
 
+```
 |-- @syncfusion/ej2-react-charts
     |-- @syncfusion/ej2-base
     |-- @syncfusion/ej2-data
