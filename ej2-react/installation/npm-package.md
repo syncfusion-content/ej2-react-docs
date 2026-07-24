@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# npm packages for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Components
+# npm Packages for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Components
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components are available as individual [npm packages](https://www.npmjs.com/search?q=%40syncfusion%2Fej2-react). The npm packages are organized based on component functionality and usage.
 
-## Anatomy of npm packages
+## Anatomy of npm Packages
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components are distributed as npm packages. The following table explains the purpose of each file available in the package:
 
@@ -23,7 +23,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components are distrib
 |    `src/`                                                                   |    Contains script files in AMD format. These AMD files can be connected as a package in SystemJS or RequireJS.                                                                                                                                                                                                         |
 |    `styles/<theme name>.css`<br>`styles/<theme name>.scss`                     |    Contains the CSS and SCSS files for the package.                                                                                                                                                                                                                             |
 
-## Available npm packages
+## Available npm Packages
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> React Base
 
@@ -365,7 +365,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React BlockEditor is a bloc
 |--------|--------|-------|
 | [ej2-react-blockeditor](https://www.npmjs.com/package/@syncfusion/ej2-react-blockeditor)    | npm install @syncfusion/ej2-react-blockeditor | BlockEditor |
 
-## See also
+## See Also
 
 * [Installation with npm CLI](https://ej2.syncfusion.com/react/documentation/installation/installation/)
 * [Browse all Syncfusion npm packages](https://www.npmjs.com/search?q=%40syncfusion%2Fej2-react)

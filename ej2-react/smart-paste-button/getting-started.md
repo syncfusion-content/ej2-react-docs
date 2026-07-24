@@ -41,14 +41,14 @@ To create a new React application, run the following command.
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+To set up a React application in TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+To set up a React application in JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -70,16 +70,27 @@ npm install @syncfusion/ej2-react-buttons --save
 
 ## Adding CSS Reference
 
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components provide built-in themes, which are available from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages). Additionally, themes can be loaded via CDN or customized using the [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
+
+This example uses the `Tailwind 3` theme for the Smart Paste Button component from the theme package. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+npm install @syncfusion/ej2-tailwind3-theme --save
+
+{% endhighlight %}
+{% endtabs %}
+
 Import the Smart Paste Button component's required CSS references as follows in `src/App.css`.
 
 ```css
-@import "../node_modules/@syncfusion/ej2-base/styles/fluent2.css";
-@import "../node_modules/@syncfusion/ej2-react-buttons/styles/fluent2.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/button/index.css";
 ```
 
 ## Adding Smart Paste Button component to the Application
 
-To include Smart Paste Button component in your application import the `SmartPasteButtonComponent` from `ej2-react-buttons` package in `App.tsx`. The component utilizes the [aiAssistHandler](https://ej2.syncfusion.com/react/documentation/api/smart-paste-button/smartPasteButtonModel/#aiassisthandler) property, a callback function that sends a request to the AI model and updates the form with the generated content based on the AI's response.
+To include Smart Paste Button component in your application import the `SmartPasteButtonComponent` from `ej2-react-buttons` package in `App.tsx`. The component utilizes the [aiAssistHandler](https://ej2.syncfusion.com/react/documentation/api/smart-paste-button/smartPasteButtonModel#aiassisthandler) property, a callback function that sends a request to the AI model and updates the form with the generated content based on the AI's response.
 
 Add Smart Paste Button component in application as shown in below code example.
 
@@ -120,7 +131,7 @@ npm run dev
 
 {% tabs %}
 {% highlight ts tabtitle="app.tsx" %}
-
+{% raw %}
 import { useEffect } from 'react';
 import { ButtonComponent, ChatOptions, SmartPasteButtonComponent } from "@syncfusion/ej2-react-buttons";
 import { TextBoxComponent, TextAreaComponent } from "@syncfusion/ej2-react-inputs";
@@ -258,7 +269,7 @@ function SmartPaste() {
 }
 
 export default SmartPaste;
-
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="ai-models.ts" %}
 

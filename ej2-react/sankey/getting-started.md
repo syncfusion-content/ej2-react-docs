@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Getting started with React Sankey Chart component | Syncfusion
-description: Checkout and learn about Getting started with React Sankey Chart component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+description: Check out and learn about getting started with the React Sankey Chart component of Syncfusion Essential JS 2 and more details.
+control: Getting Started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -16,7 +16,7 @@ This section describes how to integrate the Syncfusion React Sankey Chart compon
 
 ## Prerequisites
 
-- Node.js version 14 or later
+Before getting started, ensure that your development environment meets the [system requirements for Syncfusion® React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement). That page documents the supported React, Node.js, and npm versions, and includes the React-version compatibility table for Syncfusion React components.
 - Basic knowledge of React and TypeScript (recommended)
 - A code editor like Visual Studio Code
 
@@ -25,7 +25,6 @@ This section describes how to integrate the Syncfusion React Sankey Chart compon
 Below is the list of minimum dependencies required to use the Sankey Chart component.
 
 ```
-
 |-- @syncfusion/ej2-react-charts
     |-- @syncfusion/ej2-base
     |-- @syncfusion/ej2-data
@@ -63,12 +62,13 @@ This command will prompt you for a few settings for the new project, such as sel
 
 ![Initial_setup](../images/Initial-setup.jpg)
 
+Choose **React** from the framework list, then select either the `TypeScript` or `JavaScript` variant. The next two sections show the exact commands for each variant.
+
 To set up a React application in TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
-npm run dev
 ```
 
 To set up a React application in JavaScript environment, run the following command.
@@ -76,24 +76,29 @@ To set up a React application in JavaScript environment, run the following comma
 ```bash
 npm create vite@latest my-app -- --template react
 cd my-app
+```
+
+After the project is created, start the development server with:
+
+```bash
 npm run dev
 ```
 
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Sankey Chart Package
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+All Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published on the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 
 To install the Sankey Chart package, run the following command:
 
 ```bash
-npm install @syncfusion/ej2-react-charts --save
+npm install @syncfusion/ej2-react-charts
 ```
 
-> The `--save` flag will instruct NPM to include the Sankey Chart package inside the `dependencies` section of the `package.json` file.
+> The package is added to the `dependencies` section of the `package.json` file automatically. The `--save` flag is no longer required for npm 5 and later.
 
 ## Add Sankey Chart to the project
 
-Add the Sankey Chart component to `src/App.tsx` using the following code.
+Add the Sankey Chart component to your entry file (`src/App.jsx` or `src/App.tsx`):
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -106,17 +111,9 @@ Add the Sankey Chart component to `src/App.tsx` using the following code.
 
  {% previewsample "page.domainurl/code-snippet/sankey/preview-sample/getting-started/initialize-cs1" %}
 
-### Run the Development Server
-
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally in your browser:
-
-```
-npm run dev
-```
-
 ## Add data to Sankey Chart
 
-Now you can add data to the Sankey Chart component by defining nodes and links. Nodes represent the categories, and links represent the flow between them.
+Now you can add data to the Sankey Chart control by defining nodes and links. Nodes represent the categories, and links represent the flow between them.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -133,10 +130,10 @@ Now you can add data to the Sankey Chart component by defining nodes and links. 
 
 Sankey Chart component provides support for tooltip and legend interactions. To enable these features, you need to inject the required modules into the component.
 
-* `SankeyTooltip` - Inject this module to enable tooltip feature.
-* `SankeyLegend` - Inject this module to enable legend feature.
+- `SankeyTooltip` - Inject this module to enable tooltip feature.
+- `SankeyLegend` - Inject this module to enable legend feature.
 
-Import the above-mentioned modules from the chart package and inject them into the component as follows.
+These modules are tree-shakable; only the ones you inject are added to the bundle. Import the modules from the chart package and inject them into the component as follows.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -148,3 +145,23 @@ Import the above-mentioned modules from the chart package and inject them into t
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/sankey/preview-sample/getting-started/tooltip-cs1" %}
+
+## Run the Development Server
+
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally in your browser at `http://localhost:5173` by default.
+
+```bash
+npm run dev
+```
+
+> To stop the development server, press `Ctrl+C` in the terminal.
+
+## Troubleshooting
+
+- **`Module not found: Can't resolve '@syncfusion/ej2-react-charts'`** — Package not installed or wrong working directory. Run `npm install @syncfusion/ej2-react-charts` inside the project root.
+- **Tooltip/legend don't appear** — Modules not injected. Ensure `SankeyTooltip` and/or `SankeyLegend` are passed to the `Inject` service as shown in the "Module injection" step.
+- **`ERESOLVE` peer-dependency errors** — Mismatched React version. Install a supported React version (18 or 19) and rerun `npm install`.
+
+## See also
+
+- Explore the full SankeyChart [API reference](https://ej2.syncfusion.com/angular/documentation/api/sankey/index-default) for all props, events, and methods.

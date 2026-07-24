@@ -33,7 +33,7 @@ To get started quickly with React Data Grid, you can watch this video:
 | [React v19](https://react.dev/blog/2024/12/05/react-19) | 29.1.33 and above |
 | [React v18](https://reactjs.org/blog/2022/03/29/react-v18.html) | 20.2.36 and above |
 | [React v17](https://reactjs.org/blog/2020/10/20/react-v17.html) | 18.3.50 and above |
-| [React v16](https://reactjs.org/blog/2017/09/26/react-v16.0.html) | 16.2.45 and above | |
+| [React v16](https://reactjs.org/blog/2017/09/26/react-v16.0.html) | 16.2.45 and above |
 
 ### Browser support
 

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Download Syncfusion<sup style="font-size:70%">&reg;</sup> React Mac installer
+# Download Syncfusion<sup style="font-size:70%">&reg;</sup> React Mac Installer
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React (JavaScript - EJ2) Mac installer can be downloaded from the Syncfusion<sup style="font-size:70%">&reg;</sup> website. Depending on your license type, you can download either the licensed installer or the trial installer.
 
@@ -17,14 +17,14 @@ Download the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 M
 - **Trial Installer**: For evaluating the product.
 - **Licensed Installer**: For customers with a valid license.
 
-## Download the trial version
+## Download the Trial Version
 
 The 30-day trial can be obtained in two ways:
 
 1. Downloading the Free Trial Setup.
 2. Starting a trial if using components via [npm](https://www.npmjs.com/~syncfusionorg).
 
-### Download free trial setup
+### Download Free Trial Setup
 
 1. Evaluate the 30-day free trial by visiting the [Download Free Trial](https://www.syncfusion.com/downloads) page and selecting the JavaScript platform.
 
@@ -42,7 +42,7 @@ The 30-day trial can be obtained in two ways:
 
    ![Mac installer download option — DMG available](images/mac-installer.PNG)
 
-### Start trial for npm users
+### Start Trial for npm Users
 
 If components were installed via [npm](https://www.npmjs.com/~syncfusionorg), start an evaluation to obtain a license key.
 
@@ -61,7 +61,7 @@ If components were installed via [npm](https://www.npmjs.com/~syncfusionorg), st
 
 5. Active trial products are listed on the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
 
-## Download the licensed version
+## Download the Licensed Version
 
 1. Licensed installers are available on the [License & Downloads](https://www.syncfusion.com/account/downloads) page of the registered Syncfusion<sup style="font-size:70%">&reg;</sup> account.
 2. This page lists all licenses (active and expired) associated with the account.

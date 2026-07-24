@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The **Smart TextArea** is an advanced component designed to elevate the text input experience by providing intelligent autocomplete suggestions for entire sentences through text-generative AI functionality. This component enhances user productivity by predicting and offering relevant completions based on the context of what is being typed.
 
-This section briefly explains how to create a simple Smart TextArea and demonstrate the basic functionalities of the Smart TextArea component in an React environment.
+This section briefly explains how to create a simple Smart TextArea and demonstrate the basic functionality of the Smart TextArea component in a React environment.
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ This section briefly explains how to create a simple Smart TextArea and demonstr
 
 ## Dependencies
 
-The following list of dependencies are required to use the Smart TextArea component in your application.
+The following list of dependencies is required to use the Smart TextArea component in your application.
 
 ```javascript
 |-- @syncfusion/ej2-react-inputs
@@ -41,14 +41,16 @@ To create a new React application, run the following command.
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+
+To set up a React application in a TypeScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+
+To set up a React application in a JavaScript environment, run the following command.
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -72,28 +74,28 @@ npm install @syncfusion/ej2-react-inputs --save
 {% endhighlight %}
 {% endtabs %}
 
-The above package installs [Input dependencies](./getting-started/#dependencies) which are required to render the Smart TextArea component in React environment.
+The above package installs the [Input dependencies](#dependencies) required to render the Smart TextArea component in a React environment.
 
-## Adding Style sheet to the Application
+## Adding stylesheet to the application
 
 Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
 
-This example uses the `Fluent 2` theme for the Smart TextArea component from the theme package. To install the [Fluent 2](https://www.npmjs.com/package/@syncfusion/ej2-fluent2-theme) theme package, use the following command:
+This example uses the `Tailwind 3` theme for the Smart TextArea component from the theme package. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
 
-npm install @syncfusion/ej2-fluent2-theme --save
+npm install @syncfusion/ej2-tailwind3-theme --save
 
 {% endhighlight %}
 {% endtabs %}
 
-Add Smart TextArea component's styles as given below in `App.css`.
+Add the Smart TextArea component's styles as given below in `App.css`.
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
 
-@import "../node_modules/@syncfusion/ej2-fluent2-theme/styles/textarea/index.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/textarea/index.css";
 
 {% endhighlight %}
 {% endtabs %}
@@ -153,7 +155,7 @@ export default SmartTextarea;
 
 ## Running the application
 
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+Run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}

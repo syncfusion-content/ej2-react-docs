@@ -30,7 +30,7 @@ You are trying to use a trial unlock key to unlock the licensed installer.
 **Suggested Solution:**
 Only a licensed unlock key can unlock the licensed installer. To generate a licensed unlock key, refer to [this article](https://www.syncfusion.com/kb/2326/how-to-generate-syncfusion-setup-unlock-key-from-syncfusion-support-account).
 
-## License expiration
+## License Expiration
 
 **Error Message:** Your license for Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> for JavaScript - EJ2 expired on {date}. Please renew your subscription and try again.
 
@@ -113,18 +113,18 @@ Controlled folder access is enabled on the computer and is preventing the instal
 
 **Suggested Solution:**
 
-### Option 1: Temporarily disable controlled folder access
+### Option 1: Temporarily Disable Controlled Folder Access
 
 1. By default, demos are installed in the Public Documents folder.
 2. When controlled folder access is enabled, demos cannot be installed in the Documents folder.
 3. To allow installation in the Documents folder, follow the steps in [this Microsoft article](https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034) to temporarily disable controlled folder access or allow the installer.
 4. Re-enable controlled folder access after the Syncfusion<sup style="font-size:70%">&reg;</sup> setup completes, if desired.
 
-### Option 2: Change installation directory
+### Option 2: Change Installation Directory
 
 If you do not want to disable controlled folder access, install the demos in another directory that is not protected by controlled folder access.
 
-## Need additional help?
+## Need Additional Help?
 
 If you encounter installation errors not covered in this article, contact Syncfusion<sup style="font-size:70%">&reg;</sup> support:
 

@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Installing Syncfusion<sup style="font-size:70%">&reg;</sup> React (JavaScript - EJ2) Linux installer
+# Installing Syncfusion<sup style="font-size:70%">&reg;</sup> React (JavaScript - EJ2) Linux Installer
 
-## Step-by-step installation
+## Step-by-Step Installation
 
 Follow the steps below to install the JavaScript Linux installer:
 
@@ -29,7 +29,7 @@ Follow the steps below to install the JavaScript Linux installer:
 
 3. Launch the demo sources or use the included packages locally in a development environment.
 
-## License key registration in samples
+## License Key Registration in Samples
 
 A license key is required to register and run the demo sources included with the Linux installer. For instructions on registering the license key, refer to the following topics:
 
