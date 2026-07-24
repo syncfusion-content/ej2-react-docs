@@ -117,7 +117,7 @@ The Web Installer can remove products of the same version directly. Open the **I
 
 ![Uninstall using the Web Installer](images/4.png)
 
-### Option 2: Uninstall from Windows Control Panel
+### Option 2: Uninstall from Windows control panel
 
 To remove all installed Syncfusion products for a version, select **Syncfusion Essential Studio {version}** in the Windows Control Panel. To remove only JavaScript - EJ2, select **Syncfusion Essential Studio for JavaScript - EJ2 {version}**.
 

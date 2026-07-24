@@ -8,14 +8,14 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Download React (JavaScript - EJ2) Installer
+# Download React (JavaScript - EJ2) installer
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React (JavaScript - EJ2) installer is available from the Syncfusion<sup style="font-size:70%">&reg;</sup> website. Depending on the license type, download either the licensed installer or the trial installer.
 
 - **Trial installer**: For evaluating the product.
 - **Licensed installer**: For customers with a valid license.
 
-## Download the Trial Version
+## Download the trial version
 
 The 30-day trial is available in two ways:
 

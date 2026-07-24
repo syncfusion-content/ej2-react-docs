@@ -8,21 +8,21 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Download Syncfusion<sup style="font-size:70%">&reg;</sup> React Linux Installer
+# Download Syncfusion<sup style="font-size:70%">&reg;</sup> React Linux installer
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> installer is available from the [Syncfusion](https://www.syncfusion.com/) website. Select the appropriate download based on license type:
 
 - **Trial Installer**: Use to evaluate the product for 30 days.
 - **Licensed Installer**: Use if a valid Syncfusion license is available.
 
-## Download the Trial Version
+## Download the trial version
 
 The 30-day trial can be obtained in two ways:
 
 1. Download the Free Trial setup (offline installer).
 2. Start a trial from the account pages if components were installed via NPM or NuGet.
 
-### Download Free Trial Setup
+### Download free trial setup
 
 1. Visit the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the Syncfusion product to evaluate.
 2. Complete the download form or sign in with a registered Syncfusion<sup style="font-size:70%">&reg;</sup> account, then download the trial installer from the confirmation page.
@@ -39,7 +39,7 @@ The 30-day trial can be obtained in two ways:
 
    ![Offline installer download option](images/start-trial-download-offline-installer.png)
 
-### Start Trial for NPM/NuGet Users
+### Start trial for NPM/NuGet users
 
 If components were installed via [NPM](https://www.npmjs.com/search?q=syncfusion%20ej2) or [NuGet](https://www.nuget.org/packages?q=syncfusion), start an evaluation to obtain the license key required for using trial packages in applications.
 
@@ -59,7 +59,7 @@ If components were installed via [NPM](https://www.npmjs.com/search?q=syncfusion
 
 4. Active trial products are listed on the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
 
-## Download the Licensed Version
+## Download the licensed version
 
 1. Licensed products are available on the [License & Downloads](https://www.syncfusion.com/account/downloads) page in the registered Syncfusion<sup style="font-size:70%">&reg;</sup> account.
 2. The page lists all licenses associated with the account (active and expired).
