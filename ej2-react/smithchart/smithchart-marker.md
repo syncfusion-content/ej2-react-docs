@@ -14,20 +14,20 @@ domainurl: ##DomainURL##
 
 The markers and data labels are used to provide information about the data points in the series. You can add a shape to adorn each data point. By default, both the marker and data label are disabled in Smith chart. You can enable them by setting the visible property to true in marker and data label settings.
 
-## Marker
+## Enable marker for Smith Chart
 
-By default, the visibility of marker is false. You can enable marker by setting the visible property to true in marker settings. Using marker settings, you can customize marker differently for each series in Smith chart.
+You can add and customize the markers in the Smith Chart. This can be achieved by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/smithchart/seriesmarkermodel#visible) property to `true` in the [`marker`](https://ej2.syncfusion.com/react/documentation/api/smithchart/smithchartseriesmodel#marker) object. The sample below enables markers for the first series. 
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/code-path/getting-started-cs21/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/smithchart/code-path/getting-started-cs4/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/code-path/getting-started-cs21/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/smithchart/code-path/getting-started-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs21" %}
+{% previewsample "page.domainurl/code-snippet/smithchart/preview-sample/getting-started-cs4" %}
 
 ### Marker customization
 
@@ -51,20 +51,20 @@ Using marker settings in series, you can customize the marker for each series di
 
  {% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs22" %}
 
-## Data labels
+## Enable dataLabel for Smith Chart marker
 
-By default, the data labels are disabled. You can enable the data labels by setting the visible property to true in data label settings. For each point in series, a data label is created. The data labels for each series can be customized differently using the data label settings.
+You can add data labels to improve the readability of the Smith Chart. This can be achieved by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/smithchart/seriesmarkerdatalabelmodel#visible) property to `true` in the [`dataLabel`](https://ej2.syncfusion.com/react/documentation/api/smithchart/seriesmarkermodel#datalabel) object. The data labels are arranged automatically to avoid overlap based on the position of each series. The sample below enables data labels for the first series.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/code-path/getting-started-cs23/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/smithchart/code-path/getting-started-cs5/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/code-path/getting-started-cs23/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/smithchart/code-path/getting-started-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs23" %}
+{% previewsample "page.domainurl/code-snippet/smithchart/preview-sample/getting-started-cs5" %}
 
 ### Data label customization
 

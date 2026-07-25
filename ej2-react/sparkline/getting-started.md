@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Getting started with React Sparkline component | Syncfusion
-description:  Checkout and learn about Getting started with React Sparkline component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+description: Checkout and learn about Getting started with React Sparkline component of Syncfusion Essential JS 2 and more details.
+control: Getting started
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -11,6 +11,13 @@ domainurl: ##DomainURL##
 # Getting started with React Sparkline component
 
 This section describes the steps to create a simple Sparkline and demonstrates the basic usage of the Sparkline component.
+
+## Prerequisites
+
+Before getting started, ensure that your development environment meets the [system requirements for Syncfusion® React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement). That page documents the supported React, Node.js, and npm versions, and includes the React-version compatibility table for Syncfusion React components.
+
+- Basic knowledge of React and TypeScript (recommended)
+- A code editor like Visual Studio Code
 
 ## Dependencies
 
@@ -46,19 +53,21 @@ This command will prompt you for a few settings for the new project, such as sel
 
 ![Initial_setup](../images/Initial-setup.jpg)
 
-To set up a React application in TypeScript environment, run the following command.
+To set up a React application in a TypeScript environment, run the following commands.
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
+npm install
 npm run dev
 ```
 
-To set up a React application in JavaScript environment, run the following command.
+To set up a React application in a JavaScript environment, run the following commands.
 
 ```bash
 npm create vite@latest my-app -- --template react
 cd my-app
+npm install
 npm run dev
 ```
 
@@ -69,10 +78,8 @@ All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages 
 To install the Syncfusion<sup style="font-size:70%">&reg;</sup> Sparkline package, use the following command
 
 ```bash
-npm install @syncfusion/ej2-react-charts --save
+npm install @syncfusion/ej2-react-charts
 ```
-
-> The –save will instruct NPM to include the Sparkline package inside of the **dependencies** section of the package.json.
 
 ## Add Sparkline to the project
 
@@ -103,7 +110,7 @@ export default App;
 
 Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-```
+```bash
 npm run dev
 ```
 
@@ -111,11 +118,14 @@ Since the data source has not been specified to the Sparkline, no shapes will be
 
 ## Module injection
 
-Sparkline components are segregated into individual feature-wise modules. In order to use a particular feature, you need to inject its feature service in the Sparkline component. Please find relevant feature service name and description as follows.
+Sparkline components are segregated into individual feature-wise modules. To use a particular feature, you must inject its feature service into the `services` section of the Sparkline component.
 
-* `SparklineTooltip` - Inject this module in to `services` to use tooltip feature.
+The following feature services are available:
 
-Import the above-mentioned module from the chart package and inject them into the `services` section of the Sparkline component as follows.
+* `SparklineTooltip` – Inject this module into `services` to use the tooltip feature.
+* `SparklineRangeBand` – Inject this module into `services` to render range bands.
+
+Import the required module from the chart package and inject it into the `services` section of the Sparkline component as follows.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -147,7 +157,7 @@ export default App;
 
 ## Bind data source to Sparkline
 
-The [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/sparkline/sparklinemodel#datasource) property enables data binding for the Sparkline. It accepts a collection of values as input, such as a list of objects.
+The [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/sparkline/sparklinemodel#datasource) property enables data binding for the Sparkline. It accepts a collection of values as input, such as a list of objects. Use [`xName`](https://ej2.syncfusion.com/react/documentation/api/sparkline/sparklinemodel#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/sparkline/sparklinemodel#yname) to map the data field names to the horizontal and vertical axes.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -160,32 +170,25 @@ The [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/sparkline/
 
 {% previewsample "page.domainurl/code-snippet/sparkline/getting-started-cs1" %}
 
-## Change the type of Sparkline
+## Troubleshooting
 
-The Sparkline type can be configured using the [`type`](https://ej2.syncfusion.com/react/documentation/api/sparkline/sparklinemodel#type) property, which supports `Line`, `Column`, `WinLoss`, `Pie`, and `Area`. Here, the `Area` type is applied.
+If the Sparkline does not render or build errors appear, verify the following common causes before raising an issue.
 
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/sparkline/getting-started-cs2/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/sparkline/getting-started-cs2/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
+* **Empty container or no shapes rendered** – Ensure `dataSource` is set and the field names referenced in `xName` and `yName` exist on each data object. Without a data source, the component renders only an empty SVG element.
+* **`SparklineTooltip is not a function` or tooltip does not appear** – Confirm the `SparklineTooltip` module is imported from `@syncfusion/ej2-react-charts` and injected inside `<SparklineComponent>` using `<Inject services={[SparklineTooltip]} />`. Also set `tooltipSettings.visible` to `true`.
+* **Module not found / package not installed** – Run `npm install @syncfusion/ej2-react-charts --save` from the project root and restart the dev server.
+* **TypeScript errors for props such as `xName`, `yName`, or `tooltipSettings`** – Verify the installed package version supports your React version (see the [system requirements](https://ej2.syncfusion.com/react/documentation/system-requirement)) and that `@types/react` matches your React major version.
 
-{% previewsample "page.domainurl/code-snippet/sparkline/getting-started-cs2" %}
+## See also
 
-## Enable tooltip for Sparkline
-
-The Sparkline provides additional information through a tooltip that appears when the mouse pointer hovers over the chart. You can enable tooltip by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/sparkline/sparklinetooltipsettingsmodel#visible) property to `true` in [`tooltipSettings`](https://ej2.syncfusion.com/react/documentation/api/sparkline/sparklinemodel#tooltipsettings) and injecting `SparklineTooltip` module into the `services`.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/sparkline/code-path/getting-started-cs3/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/sparkline/code-path/getting-started-cs3/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/sparkline/preview-sample/getting-started-cs3" %}
+* [Sparkline types](sparkline-types.md)
+* [Sparkline dimensions](sparkline-dimensions.md)
+* [Sparkline appearance](appearance.md)
+* [Axis customization](axis-customization.md)
+* [Data labels](data-labels.md)
+* [Marker](marker.md)
+* [Range band](range-band.md)
+* [Special points customization](special-points-customization.md)
+* [User interaction](user-interaction.md)
+* [Localization](localization.md)
+* [Accessibility in Sparkline](accessibility.md)

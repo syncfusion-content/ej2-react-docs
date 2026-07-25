@@ -10,20 +10,20 @@ domainurl: ##DomainURL##
 
 # Pointers in React Linear Gauge Component
 
-<!-- markdownlint-disable MD013 -->
+## Setting the Pointer Value
 
-Pointers are used to indicate values on an axis. The value of the pointer can be modified using the  [value](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/pointerModel#value) property in [PointerDirective](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/pointerModel).
+The pointer value is demonstrated in the following sample using the [`value`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/pointer#value-number) property of a `PointerDirective` inside the `PointersDirective` collection of the axis. The pointer can be customized with a different color using the `color` property to make it visually distinct.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/code-path/pointers-cs1/app/index.jsx %}
+{% highlight jsx tabtitle="app.jsx" %}
+{% include code-snippet/linear-gauge/code-path/getting-started-cs4/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/code-path/pointers-cs1/app/index.tsx %}
+{% highlight tsx tabtitle="app.tsx" %}
+{% include code-snippet/linear-gauge/code-path/getting-started-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/linear-gauge/pointers-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/linear-gauge/getting-started-cs4" %}
 
 ## Types of pointer
 

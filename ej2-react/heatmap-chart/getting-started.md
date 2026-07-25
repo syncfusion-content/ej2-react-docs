@@ -1,8 +1,8 @@
 ﻿---
 layout: post
 title: Getting started with React HeatMap chart component | Syncfusion
-description:  Checkout and learn about Getting started with React HeatMap chart component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+description: Check out and learn about getting started with the React HeatMap chart component of Syncfusion Essential JS 2 and more details.
+control: HeatMap
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -16,79 +16,84 @@ You can explore some useful features in the HeatMap component using the followin
 
 {% youtube "https://www.youtube.com/watch?v=F5H2BMOl_6A" %}
 
+## Prerequisites
+
+Before getting started, ensure that your development environment meets the [system requirements for Syncfusion® React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement). That page documents the supported React, Node.js, and npm versions, and includes the React-version compatibility table for Syncfusion React components.
+
+- Basic knowledge of React and TypeScript (recommended)
+- A code editor like Visual Studio Code
+
 ## Dependencies
 
-The HeatMap component requires the following packages and their dependencies.
+The following list shows the package dependencies for the HeatMap component.
 
 ```ts
 |-- @syncfusion/ej2-react-heatmap
-    |-- @syncfusion/ej2-heatmap
-    |-- @syncfusion/ej2-base
-    |-- @syncfusion/ej2-data
-    |-- @syncfusion/ej2-svg-base
-    |-- @syncfusion/ej2-react-base
+     |-- @syncfusion/ej2-heatmap
+     |-- @syncfusion/ej2-base
+     |-- @syncfusion/ej2-data
+     |-- @syncfusion/ej2-svg-base
+     |-- @syncfusion/ej2-react-base
 ```
 
 ## Installation and configuration
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
+To easily set up a React application, use `create-vite`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+> **Note:** To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-To create a new Vite React application, run one of the following commands.
+To create a new Vite React application, run the following command:
 
 ```bash
 npm create vite@latest my-app
 ```
-To set-up a React application in TypeScript environment, run the following command.
+
+To set up a React application in TypeScript environment, run the following commands:
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
+npm install
 npm run dev
 ```
-To set-up a React application in JavaScript environment, run the following command.
+
+To set up a React application in JavaScript environment, run the following commands:
 
 ```bash
 npm create vite@latest my-app -- --template react
 cd my-app
+npm install
 npm run dev
 ```
 
-Include a Syncfusion theme CSS in the application entry point. Import a theme (for example, the Material theme) in `src/main.tsx` or `src/index.js`:
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-```ts
-import '@syncfusion/ej2-base/styles/material.css';
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. To install the HeatMap package, run the following command in your project directory:
+
+```bash
+npm install @syncfusion/ej2-react-heatmap
 ```
 
-Replace `material` with the desired theme name (e.g., `bootstrap5`, `fabric`, `tailwind`).
-
-
-### Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
-
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. To install HeatMap package, use the following command.
-
-```
-npm install @syncfusion/ej2-react-heatmap --save
-```
+Installing `@syncfusion/ej2-react-heatmap` automatically pulls in all required transitive dependencies.
 
 ## Adding HeatMap to the project
 
-Add the HeatMap component to the application. For a basic example, add the component in `src/App.tsx` using the following code.
+Add the HeatMap component to the application. For a basic example, add the component in `src/App.tsx` (or `src/App.jsx`) using the following code, then mount it into the `#container` element with `createRoot`:
 
-  ```ts
+```ts
+import * as React from 'react';
+import { createRoot } from 'react-dom/client';
+import { HeatMapComponent } from '@syncfusion/ej2-react-heatmap';
 
-  import * as React from 'react';
-  import * as ReactDOM from 'react-dom';
-  import { HeatMapComponent } from '@syncfusion/ej2-react-heatmap';
+export function App() {
+  return (<HeatMapComponent id='heatmap'></HeatMapComponent>);
+}
 
-   export function App() {
-    return ( <HeatMapComponent id='heatmap'></HeatMapComponent> );
-  }
+export default App;
 
-  export default App;
-
- ```
+const root = createRoot(document.getElementById('container')!);
+root.render(<App />);
+```
 
 Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
@@ -96,50 +101,56 @@ Now run the `npm run dev` command in the console to start the development server
 npm run dev
 ```
 
-The application compiles and serves locally in the browser. The following example shows a basic HeatMap.
+The following example shows a complete basic HeatMap. It includes the data source used in the later sections of this guide:
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/code-path/getting-started-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/heatmap/code-path/getting-started-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/heatmap/getting-started-cs1" %}
+{% previewsample "page.domainurl/code-snippet/heatmap/getting-started-cs1" %}
 
 ## Module injection
 
-The heat map components are segregated into individual feature-wise modules. To use its feature, you need to inject its feature service in the AppModule. In the current application,the basic heat map is modified to visualize sales revenue data for week, and  the tooltip and legend features of the heat map are used. Find the relevant feature modules and descriptions as follows.
+HeatMap features are segregated into individual feature-wise modules. To use a feature, inject its service into the HeatMap component using the `<Inject>` child element with the `services` prop. The following modules are used in the examples in this guide:
 
-  * Legend - Provides the legend feature by injecting it.
-  * Tooltip - Provides the tooltip feature by injecting it.
+- **Legend** - Provides the legend feature by injecting it.
+- **Tooltip** - Provides the tooltip feature by injecting it.
+ 
+> **Note:** Injecting a module is required only for the features you use. For example, if you do not inject the `Tooltip` module, the `showTooltip` property will have no effect.
 
-Now, import the above-mentioned modules from the heat map package and inject them into `services`.
+Import the modules from the HeatMap package and inject them as shown below. Note that `createRoot` is imported from `react-dom/client` (React 18+):
 
 ```ts
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { HeatMapComponent, Inject, Legend, Tooltip} from '@syncfusion/ej2-react-heatmap';
+import { createRoot } from "react-dom/client";
+import { HeatMapComponent, Inject, Legend, Tooltip } from '@syncfusion/ej2-react-heatmap';
 
 export function App() {
-  return(<HeatMapComponent id='heatmap'>
-        <Inject services={[Legend, Tooltip]}/>
-        </HeatMapComponent>
-        );
+  return (
+    <HeatMapComponent id='heatmap'>
+      <Inject services={[Legend, Tooltip]} />
+    </HeatMapComponent>
+  );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('heatmap'));
-root.render(<App />);
+export default App;
 
+const root = createRoot(document.getElementById('container')!);
+root.render(<App />);
 ```
 
-When using React 18, import `createRoot` from `react-dom/client` or use the appropriate rendering API for the React version in use.
+> **Note:** In React 18 and later, `createRoot` is provided by `react-dom/client`. If you are using React 17 or earlier, use `ReactDOM.render(<App />, document.getElementById('container'))` instead.
+
+For a complete list of injectable HeatMap modules, see the [HeatMap API reference](https://ej2.syncfusion.com/react/documentation/api/heatmap).
 
 ## Populate heat map with data
 
-This section shows how to populate a two-dimensional array of values into the heat map.
+This section shows how to populate the heat map with a two-dimensional array of values using the `dataSource` property:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -150,95 +161,20 @@ This section shows how to populate a two-dimensional array of values into the he
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/heatmap/getting-started-cs2" %}
+{% previewsample "page.domainurl/code-snippet/heatmap/getting-started-cs2" %}
 
-## Enable axis labels
+## Troubleshooting
 
-Axis labels can be added and formatted using the [xAxis](https://ej2.syncfusion.com/react/documentation/api/heatmap#xaxis) and [yAxis](https://ej2.syncfusion.com/react/documentation/api/heatmap#yaxis) properties. Axis labels provide contextual information for the heat map values.
+- **`createRoot is not a function`** — Likely cause: `createRoot` imported from `react-dom` instead of `react-dom/client`. Fix: Import `createRoot` from `react-dom/client` (React 18+).
+- **`Tooltip`/`Legend` does not show** — Likely cause: The corresponding module was not injected. Fix: Add the module to `<Inject services={...} />`.
 
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/heatmap/code-path/getting-started-cs3/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/heatmap/code-path/getting-started-cs3/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
+## See also
 
- {% previewsample "page.domainurl/code-snippet/heatmap/getting-started-cs3" %}
-
-## Add heat map title
-
-Add a title using the [titleSettings](https://ej2.syncfusion.com/react/documentation/api/heatmap#titlesettings) property to the heat map to provide quick information to the user about the data populated in the heat map.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/code-path/getting-started-cs4/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/code-path/getting-started-cs4/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/heatmap/getting-started-cs4" %}
-
-## Enable legend
-
-Enable a legend through the [legendSettings](https://ej2.syncfusion.com/react/documentation/api/heatmap#legendsettings) object by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/heatmap/legendSettings#visible) property to **true** and injecting the `Legend` module into `services`.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/code-path/getting-started-cs5/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/code-path/getting-started-cs5/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/heatmap/getting-started-cs5" %}
-
-## Add data label
-
-Add data labels to improve the readability of the heat map. This can be achieved by setting the [showLabel](https://ej2.syncfusion.com/react/documentation/api/heatmap/cellSettings#showlabel) property to **true** in the [cellSettings](https://ej2.syncfusion.com/react/documentation/api/heatmap#cellsettings) object.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/code-path/getting-started-cs6/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/code-path/getting-started-cs6/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/heatmap/getting-started-cs6" %}
-
-## Add custom cell palette
-
-The default palette settings of the heat map cells can be customized by using the [paletteSettings](https://ej2.syncfusion.com/react/documentation/api/heatmap#palettesettings) property. Using the [palette](https://ej2.syncfusion.com/react/documentation/api/heatmap/paletteSettings#palette) property in `paletteSettings` object, you can change the color set for the cells. You can change the color mode of the cells to fixed or gradient mode using the [type](https://ej2.syncfusion.com/react/documentation/api/heatmap/paletteSettings#type) property.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/code-path/getting-started-cs7/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/code-path/getting-started-cs7/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/heatmap/getting-started-cs7" %}
-
-## Enable tooltip
-
-The tooltip is used when you cannot display information by using the data labels due to space constraints. You can enable the tooltip by setting the [showTooltip](https://ej2.syncfusion.com/react/documentation/api/heatmap#showtooltip) property to **true** and injecting the `Tooltip` module into the `services`.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/code-path/getting-started-cs8/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/code-path/getting-started-cs8/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/heatmap/getting-started-cs8" %}
+* [HeatMap appearance](appearance.md)
+* [HeatMap axis](axis.md)
+* [HeatMap events](events.md)
+* [HeatMap legend](legend.md)
+* [HeatMap palette](palette.md)
+* [HeatMap tooltip](tooltip.md)
+* [HeatMap API reference](https://ej2.syncfusion.com/react/documentation/api/heatmap)
  

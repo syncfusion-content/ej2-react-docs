@@ -12,18 +12,18 @@ domainurl: ##DomainURL##
 
 ## Enable title
 
-The title and subtitle are used to describe the information about the data being plotted in the Smith chart. You can set the title and subtitle of the Smith chart using the [`text`] property. By default, the visibility of the title and subtitle is enabled. The following code sample demonstrates how to simply set text to title and subtitle.
+You can add a title using the [`title`](https://ej2.syncfusion.com/react/documentation/api/smithchart/smithchartmodel#title) property to provide quick information to the user about the data plotted in the Smith Chart.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/smithchart/code-path/getting-started-cs28/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/smithchart/code-path/getting-started-cs3/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/smithchart/code-path/getting-started-cs28/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/smithchart/code-path/getting-started-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs28" %}
+{% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs3" %}
 
 ## Trim title
 

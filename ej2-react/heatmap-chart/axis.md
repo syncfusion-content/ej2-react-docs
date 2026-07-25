@@ -12,6 +12,21 @@ domainurl: ##DomainURL##
 
 HeatMap consists of two axes namely, X-axis and Y-axis that displays the row headers and column headers to plot the data points respectively. You can define the type, format, and other customizing options for both axes in the HeatMap.
 
+## Enable axis labels
+
+Axis labels provide contextual information for the heat map values. Add and format labels using the [xAxis](https://ej2.syncfusion.com/react/documentation/api/heatmap#xaxis) and [yAxis](https://ej2.syncfusion.com/react/documentation/api/heatmap#yaxis) properties. The `labels` array maps one-to-one to the columns/rows of the `dataSource`. For object data, set `valueType` to bind the label field. See the [axis API reference](https://ej2.syncfusion.com/react/documentation/api/heatmap/xAxis) for all options:
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/heatmap/code-path/getting-started-cs3/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/heatmap/code-path/getting-started-cs3/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/heatmap/getting-started-cs3" %}
+
 ## Types
 
 There are three different axis types available in the HeatMap, which defines the data type of the axis labels. You can define the axis type by using the [valueType](https://ej2.syncfusion.com/react/documentation/api/heatmap/axis#valuetype) property in the HeatMap.
