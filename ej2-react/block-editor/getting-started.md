@@ -66,16 +66,16 @@ Now, You can add the Block Editor component to your application. Replace the def
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/block-editor/getting-started/app/index.tsx %}
+{% include code-snippet/block-editor/getting-started/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/block-editor/getting-started/app/index.jsx %}
+{% include code-snippet/block-editor/getting-started/app/App.jsx %}
 {% endhighlight %}
 {% highlight css tabtitle="App.css" %}
 {% include code-snippet/block-editor/getting-started/app/App.css %}
 {% endhighlight %}
 {% endtabs %}
- {% previewsample "page.domainurl/code-snippet/block-editor/getting-started" %}
+{% previewsample "page.domainurl/code-snippet/block-editor/getting-started-cs1" %}
 
 > **Note:** This guide assumes React 18+. The Vite template mounts the app into a `<div id="root">` element in `index.html` via `src/main.tsx` using `createRoot`. Ensure your `main.tsx` renders the `App` component into that node.
 
