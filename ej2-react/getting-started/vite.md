@@ -16,7 +16,7 @@ This article provides a step-by-step guide for setting up a [Vite](https://vite.
 
 {% tabcontents %}
 
-{% tabcontent Using Sycnfusion CLI %}
+{% tabcontent Syncfusion CLI %}
 
 ## Prerequisites
 
@@ -47,7 +47,7 @@ sf new my-project --framework react --template grid
 {% endhighlight %}
 {% endtabs %}
 
-In this mode, the project configuration is passed directly in the command. The above command creates a React Vite application configured with the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component.
+In this mode, the project configuration is passed directly in the command. The above command creates a React Vite application configured with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Grid` component.
 
 ### Interactive mode
 
@@ -59,7 +59,7 @@ sf
 {% endhighlight %}
 {% endtabs %}
 
-When you run the `sf` command, the CLI prompts you to select the required project configuration. To create a React Vite application with the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component, select the following options:
+When you run the `sf` command, the CLI prompts you to select the required project configuration. To create a React Vite application with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Grid` component, select the following options:
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -78,7 +78,7 @@ When you run the `sf` command, the CLI prompts you to select the required projec
 {% endhighlight %}
 {% endtabs %}
 
-The above selections generate a React Vite application configured with the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component. You can choose different values for language, theme, style format, MCP setup, and skills installation based on your project requirements.
+The above selections generate a React Vite application configured with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Grid` component. You can choose different values for language, theme, style format, MCP setup, and skills installation based on your project requirements.
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> CLI creates the project with a predefined template. After the project is generated, you can customize or replace the component code based on your application requirements.
 
@@ -100,7 +100,7 @@ The output will appear as follows:
 
 {% endtabcontent %}
 
-{% tabcontent Using Vite CLI %}
+{% tabcontent Vite CLI %}
 
 ## Prerequisites
 
