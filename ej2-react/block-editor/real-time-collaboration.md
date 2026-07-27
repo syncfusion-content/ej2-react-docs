@@ -269,7 +269,7 @@ Make Storage Room-Specific by importing roomName from collaboration.ts to make e
 Create a `versionHistoryService.ts` file in the src folder, replace the `App.tsx` file to configure the BlockEditorComponent, and replace the `App.css` file with the styles required for the version history panel.
 
 {% tabs %}
-{% highlight tsx tabtitle="App.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% raw %}
 import { BlockEditorComponent, Collaboration, VersionHistory, Inject } from '@syncfusion/ej2-react-blockeditor';
 import { useRef, useState, useEffect } from 'react';

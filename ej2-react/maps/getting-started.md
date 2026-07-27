@@ -187,4 +187,13 @@ If the map does not appear as expected, work through the following common issues
 * **Port `5173` already in use** — Vite will pick the next free port automatically; use the URL it prints in the terminal.
 * **TypeScript errors on `world_map`** — Add `src/world_map.ts` to the `include` array in `tsconfig.json` (the default Vite TS config already includes `src`, so this is usually unnecessary).
 
-> **Note:** You can refer to our [React Maps Library](https://www.syncfusion.com/react-components/react-maps-library) feature tour page for its groundbreaking feature representations. You can also explore our [React Maps Library example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/maps/default) that shows you how to configure the Maps Library in React.
+## See also
+
+* [Layers in React Maps](./layers) — Learn how to add and configure multiple layers and sublayers in the Maps component.
+* [Data label in React Maps](./data-label) — Configure data labels to display information about map shapes.
+* [Populate data in React Maps](./populate-data) — Bind data sources to the Maps component and visualize statistical data.
+* [Map providers in React Maps](./map-providers) — Integrate map providers such as Bing and OpenStreetMap as main layers.
+* [Markers in React Maps](./markers) — Add markers to highlight specific locations on the map.
+* [Legend in React Maps](./legend) — Display a legend that maps colors to data values.
+* [Customization in React Maps](./customization) — Customize the appearance of the Maps component, including background, borders, and titles.
+
