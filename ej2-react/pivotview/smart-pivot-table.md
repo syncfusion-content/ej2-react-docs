@@ -317,6 +317,7 @@ async function requestPivotAction(
 
 Use `AIAssistViewComponent` for prompt entry, built-in suggestions, conversation history, response actions, keyboard support, and stop-response behavior. The following excerpt assumes that `assistRef`, `requestController`, `suggestions`, stable `toolbarSettings`, templates, and `onPromptRequest` are defined in the containing component:
 
+{% raw %}
 ```tsx
 import {
   AIAssistViewComponent,
@@ -351,6 +352,7 @@ import {
   </ViewsDirective>
 </AIAssistViewComponent>
 ```
+{% endraw %}
 
 Keep `toolbarSettings` referentially stable with `useMemo`. Recreating it for every render can cause third-party toolbar state to be rebuilt unnecessarily. The sample toolbar provides **Start new chat**, **Undo**, **Reset**, **Developer details**, and **Close** actions. Use `promptToolbarSettings` to customize prompt actions and `responseToolbarSettings` to customize response actions. Leave the default prompt toolbar actions (**Edit** and **Copy**) and response actions (**Copy**, **Like**, and **Dislike**) enabled unless the application has a reason to replace them.
 
@@ -379,6 +381,7 @@ const dataSourceSettings: IDataOptions = {
 
 The following component excerpt assumes the imported services and state shown by the complete sample:
 
+{% raw %}
 ```tsx
 <PivotViewComponent
   ref={pivotRef}
@@ -401,6 +404,7 @@ The following component excerpt assumes the imported services and state shown by
   <Inject services={[GroupingBar, FieldList, CalculatedField, Toolbar, ConditionalFormatting, NumberFormatting, PivotChart]} />
 </PivotViewComponent>
 ```
+{% endraw %}
 
 If the Pivot Table must fill a responsive parent, give the parent an explicit height and pass a measured pixel height to the component. Create and clean up a `ResizeObserver` in an effect:
 

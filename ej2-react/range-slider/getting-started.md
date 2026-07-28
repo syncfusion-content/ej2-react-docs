@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with React Range Slider | Syncfusion
 description: Learn how to get started with the React Range Slider component in Syncfusion, including installation with Vite, configuration, and required styles.
-control: Getting started 
+control: Range Slider 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -18,47 +18,53 @@ To get started quickly with React Slider, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=B0rPxt5tOSE" %}
 
-## Setup for local development
+## Prerequisites
 
-Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
-> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+## Set up the Vite project
 
-To create a new React application, run the following command.
+To create a new `Vite` project, use one of the commands that are specific to either NPM or Yarn.
 
-```bash
-npm create vite@latest my-app
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+npm create vite@latest my-project -- --template react
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+yarn create vite my-project --template react
+{% endhighlight %}
+{% endtabs %}
+
+After running the command, you will be prompted with a series of interactive questions to configure your project. Select the appropriate options for each prompt:
+
+1. **Select a linter to use**: Choose the linter for your project (for example, `ESLint`).
+2. **Install with npm and start now?**: Type `Yes` to proceed with installing the dependencies and automatically start the development server, or `No` to install dependencies manually later.
+
+Navigate into the project directory with:
+
 ```
-This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
-
-![Initial_setup](images/Initial-setup.jpg)
-
-To set up a React application in TypeScript environment, run the following command.
-
-```bash
-npm create vite@latest my-app -- --template react-ts
-cd my-app
-npm run dev
-```
-To set up a React application in JavaScript environment, run the following command.
-
-```bash
-npm create vite@latest my-app -- --template react
-cd my-app
-npm run dev
+cd my-project
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Slider packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React package
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
-To install the Slider component, use the following command
+Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
-```bash
-npm install @syncfusion/ej2-react-inputs --save
-```
+To install the React component package, use the following command:
 
-> The --save will instruct NPM to include the Slider package inside of the **dependencies** section of the package.json.
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
 
+npm install @syncfusion/ej2-react-inputs
+
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+
+yarn add @syncfusion/ej2-react-inputs
+
+{% endhighlight %}
+{% endtabs %}
+ 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
 Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
@@ -68,7 +74,7 @@ This guide uses the `Tailwind 3` theme as an example, sourced from the theme pac
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
 
-npm install @syncfusion/ej2-tailwind3-theme --save
+npm install @syncfusion/ej2-tailwind3-theme
 
 {% endhighlight %}
 {% highlight bash tabtitle="yarn" %}
@@ -78,9 +84,9 @@ yarn add @syncfusion/ej2-tailwind3-theme
 {% endhighlight %}
 {% endtabs %}
 
-By default, Vite projects include a `index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `index.css` file to prevent style conflicts.
+By default, Vite projects include default styles in the `src/index.css` and `src/App.css` files. These default styles may conflict with Syncfusion component styles. Clear all content from both files to prevent style conflicts.
 
-The required styles for the component are imported in the **src/App.css** file:
+The required styles for the Slider component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -90,16 +96,15 @@ The required styles for the component are imported in the **src/App.css** file:
 {% endhighlight %}
 {% endtabs %}
 
-> To refer **App.css** in the application then import it in the **src/App.tsx** file.
+> You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
 ## Adding Slider component
 
-The React Slider component can be added to the application by following these steps. To get started, add the Slider component to the **src/App.tsx** file using the following code.
+Now, you can add the React Slider component to your **src/App.jsx** file by importing and defining it within your application.
 
-The following slider code should be placed in the **src/App.tsx** file.
-
-```ts
-import * as React from 'react';
+{% tabs %}
+{% highlight jsx tabtitle="App.jsx" %}
+import React from 'react';
 import { SliderComponent } from '@syncfusion/ej2-react-inputs';
 import './App.css';
 
@@ -113,11 +118,8 @@ function App() {
   );
 }
 export default App;
-```
-
-Add the following CSS to your project's stylesheet:
-
-```css
+{% endhighlight %}
+{% highlight css tabtitle="App.css" %}
 .wrap {
   box-sizing: border-box;
   height: 100px;
@@ -125,124 +127,29 @@ Add the following CSS to your project's stylesheet:
   padding: 30px 10px;
   width: 460px;
 }
-```
-
-## Run the Application
-
-Run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
-
-```
-npm run dev
-```
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/slider/getting-started-cs5/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/slider/getting-started-cs5/app/index.tsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.css" %}
-{% include code-snippet/slider/getting-started-cs5/index.css %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.html" %}
-{% include code-snippet/slider/getting-started-cs5/index.html %}
 {% endhighlight %}
 {% endtabs %}
+
+## Run the application
+
+To run the project, use the following command:
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+npm run dev
+
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+
+yarn run dev
+
+{% endhighlight %}
+{% endtabs %}
+
+The output appears as follows.
 
  {% previewsample "page.domainurl/code-snippet/slider/getting-started-cs5" %}
-
-## Types
-
-Slider supports the following types:
-
-| **Types** | **Usage** |
-| --- | --- |
-| Default | Shows a default Slider to select a single value. |
-| MinRange | Displays the shadow from the start value to the current selected value. |
-| Range | Selects a range of values. It also displays the shadow in-between the selection range. |
-
-> Both Default and MinRange types select a single value. In MinRange, the selection shadow spans from the start value to the current handle position. The Range type uses two handles to select a range of values, and the shadow spans between the two handles.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/slider/getting-started-cs6/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/slider/getting-started-cs6/app/index.tsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.css" %}
-{% include code-snippet/slider/getting-started-cs6/index.css %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.html" %}
-{% include code-snippet/slider/getting-started-cs6/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/slider/getting-started-cs6" %}
-
-## Customization
-
-### Orientation
-
-The Slider can be displayed either in horizontal or vertical orientation using the [`orientation`](https://ej2.syncfusion.com/react/documentation/api/slider#orientation) property. By default, the Slider renders in horizontal orientation.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/slider/orientation-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/slider/orientation-cs1/app/index.tsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.css" %}
-{% include code-snippet/slider/orientation-cs1/index.css %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.html" %}
-{% include code-snippet/slider/orientation-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/slider/orientation-cs1" %}
-
-### Tooltip
-
-The Slider displays a tooltip to indicate the current value when clicking the Slider bar or dragging the Slider handle. The tooltip position can be customized using the [`placement`](https://ej2.syncfusion.com/react/documentation/api/slider/tooltipDataModel#placement) property.
-It also controls the tooltip display mode on the page (hover, focus, or click) and whether it remains visible.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/slider/getting-started-cs7/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/slider/getting-started-cs7/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/slider/getting-started-cs7" %}
-
-
-### Buttons
-
-Change the Slider value using the [`showButtons`](https://ej2.syncfusion.com/react/documentation/api/slider#showbuttons) property to increase and decrease the values. In a Range Slider, the first handle value changes by default when clicking the buttons. Change the handle focus and press the button to change the last focused handle value.
-
-> After enabling the Slider buttons, if the Tab key is pressed, the focus moves to the handle and not to the buttons.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/slider/getting-started-cs8/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/slider/getting-started-cs8/app/index.tsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.css" %}
-{% include code-snippet/slider/getting-started-cs8/index.css %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.html" %}
-{% include code-snippet/slider/getting-started-cs8/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/slider/getting-started-cs8" %}
 
 > Refer to the [React Slider](https://www.syncfusion.com/react-components/react-slider) feature tour page for its groundbreaking feature representations. You can also explore our [React Slider component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/range-slider/default) that shows how to render the Slider in React.
 
