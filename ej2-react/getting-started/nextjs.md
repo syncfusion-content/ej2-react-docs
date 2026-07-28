@@ -184,7 +184,6 @@ export default function Home() {
         allowGrouping={true}
         allowSorting={true}
         allowFiltering={true}
-        allowPaging={true}
         pageSettings={pageSettings}
         filterSettings={filterSettings}
         height={180}

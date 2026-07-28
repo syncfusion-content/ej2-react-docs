@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with React OTP Input component | Syncfusion
+title: Getting Started with React OTP Input component | Syncfusion
 description: Checkout and learn about Getting started with React OTP Input component of Syncfusion Essential JS 2 and more details.
 control: OTP Input
 platform: ej2-react
@@ -18,47 +18,53 @@ To get started quickly with React OTP Input, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=MAs2MfwFNhE" %}
 
-## Setup for local development
+## Prerequisites
 
-Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
-> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+## Set up the Vite project
 
-To create a new React application, run the following command.
+To create a new `Vite` project, use one of the commands that are specific to either NPM or Yarn.
 
-```bash
-npm create vite@latest my-app
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+npm create vite@latest my-project -- --template react
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+yarn create vite my-project --template react
+{% endhighlight %}
+{% endtabs %}
+
+After running the command, you will be prompted with a series of interactive questions to configure your project. Select the appropriate options for each prompt:
+
+1. **Select a linter to use**: Choose the linter for your project (for example, `ESLint`).
+2. **Install with npm and start now?**: Type `Yes` to proceed with installing the dependencies and automatically start the development server, or `No` to install dependencies manually later.
+
+Navigate into the project directory with:
+
 ```
-This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
-
-![Initial_setup](images/Initial-setup.jpg)
-
-To set up a React application in TypeScript environment, run the following command.
-
-```bash
-npm create vite@latest my-app -- --template react-ts
-cd my-app
-npm run dev
-```
-To set up a React application in JavaScript environment, run the following command.
-
-```bash
-npm create vite@latest my-app -- --template react
-cd my-app
-npm run dev
+cd my-project
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> OTP Input packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React package
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
-To install the OTP Input component, use the following command
+Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
-```bash
-npm install @syncfusion/ej2-react-inputs --save
-```
+To install the React component package, use the following command:
 
-> The --save will instruct NPM to include the OTP Input package inside of the **dependencies** section of the package.json.
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
 
+npm install @syncfusion/ej2-react-inputs
+
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+
+yarn add @syncfusion/ej2-react-inputs
+
+{% endhighlight %}
+{% endtabs %}
+ 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
 Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
@@ -68,7 +74,7 @@ This guide uses the `Tailwind 3` theme as an example, sourced from the theme pac
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
 
-npm install @syncfusion/ej2-tailwind3-theme --save
+npm install @syncfusion/ej2-tailwind3-theme
 
 {% endhighlight %}
 {% highlight bash tabtitle="yarn" %}
@@ -78,9 +84,9 @@ yarn add @syncfusion/ej2-tailwind3-theme
 {% endhighlight %}
 {% endtabs %}
 
-By default, Vite projects include a `index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `index.css` file to prevent style conflicts.
+By default, Vite projects include default styles in the `src/index.css` and `src/App.css` files. These default styles may conflict with Syncfusion component styles. Clear all content from both files to prevent style conflicts.
 
-The required styles for the component are imported in the **src/App.css** file:
+The required styles for the OTP Input component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -90,15 +96,13 @@ The required styles for the component are imported in the **src/App.css** file:
 {% endhighlight %}
 {% endtabs %}
 
-> To refer **App.css** in the application then import it in the **src/App.tsx** file.
+> You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
 ## Adding OTP Input component
 
-The React OTP Input component can be added to the application by following these steps. To get started, add the OTP Input component to the **src/App.tsx** file using the following code.
+Now, you can add the React OTP Input component to your **src/App.jsx** file by importing and defining it within your application.
 
-The following OTP input code should be placed in the **src/App.tsx** file.
-
-```ts
+```js
 import { OtpInputComponent } from '@syncfusion/ej2-react-inputs';
 import * as React from 'react';
 import './App.css';
@@ -113,23 +117,27 @@ export default App;
 
 ## Run the application
 
-Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
-
-```bash
-npm run dev
-```
-
-The output appears as follows.
+To run the project, use the following command:
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/otp-input/getting-started-cs1/app/index.jsx %}
+{% highlight bash tabtitle="npm" %}
+
+npm run dev
+
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/otp-input/getting-started-cs1/app/index.tsx %}
+{% highlight bash tabtitle="yarn" %}
+
+yarn run dev
+
 {% endhighlight %}
 {% endtabs %}
+
+The output appears as follows.
 
 {% previewsample "page.domainurl/code-snippet/otp-input/getting-started-cs1" %}
 
 > Refer to the [React OTP Input](https://www.syncfusion.com/react-components/react-otp-input) feature tour page for its groundbreaking feature representations. You can also explore our [React OTP Input component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/otp-input/default) that shows how to render the OTP Input in React.
+
+## See Also
+
+* [How to Set a Placeholder in OTP Input](./placeholder)

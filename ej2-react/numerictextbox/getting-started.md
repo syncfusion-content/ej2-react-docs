@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Getting started with React Numerictextbox component | Syncfusion
+title: Getting Started with React Numerictextbox component | Syncfusion
 description:  Checkout and learn about Getting started with React Numerictextbox component of Syncfusion Essential JS 2 and more details.
-control: Getting started
+control: Numerictextbox
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -18,47 +18,53 @@ To get started quickly with React NumericTextBox, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=CCcvKHTlydI" %}
 
-## Setup for local development
+## Prerequisites
 
-Easily set up a React application using `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
-> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+## Set up the Vite project
 
-To create a new React application, run the following command.
+To create a new `Vite` project, use one of the commands that are specific to either NPM or Yarn.
 
-```bash
-npm create vite@latest my-app
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+npm create vite@latest my-project -- --template react
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+yarn create vite my-project --template react
+{% endhighlight %}
+{% endtabs %}
+
+After running the command, you will be prompted with a series of interactive questions to configure your project. Select the appropriate options for each prompt:
+
+1. **Select a linter to use**: Choose the linter for your project (for example, `ESLint`).
+2. **Install with npm and start now?**: Type `Yes` to proceed with installing the dependencies and automatically start the development server, or `No` to install dependencies manually later.
+
+Navigate into the project directory with:
+
 ```
-This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
-
-![Initial_setup](images/Initial-setup.jpg)
-
-To set up a React application in TypeScript environment, run the following command.
-
-```bash
-npm create vite@latest my-app -- --template react-ts
-cd my-app
-npm run dev
-```
-To set up a React application in JavaScript environment, run the following command.
-
-```bash
-npm create vite@latest my-app -- --template react
-cd my-app
-npm run dev
+cd my-project
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> NumericTextBox packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React package
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
-To install the NumericTextBox component, use the following command
+Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
-```bash
-npm install @syncfusion/ej2-react-inputs --save
-```
+To install the React component package, use the following command:
 
-> The --save will instruct NPM to include the NumericTextBox package inside of the **dependencies** section of the package.json.
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
 
+npm install @syncfusion/ej2-react-inputs
+
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+
+yarn add @syncfusion/ej2-react-inputs
+
+{% endhighlight %}
+{% endtabs %}
+ 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
 Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
@@ -68,7 +74,7 @@ This guide uses the `Tailwind 3` theme as an example, sourced from the theme pac
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
 
-npm install @syncfusion/ej2-tailwind3-theme --save
+npm install @syncfusion/ej2-tailwind3-theme
 
 {% endhighlight %}
 {% highlight bash tabtitle="yarn" %}
@@ -78,9 +84,9 @@ yarn add @syncfusion/ej2-tailwind3-theme
 {% endhighlight %}
 {% endtabs %}
 
-By default, Vite projects include a `index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `index.css` file to prevent style conflicts.
+By default, Vite projects include default styles in the `src/index.css` and `src/App.css` files. These default styles may conflict with Syncfusion component styles. Clear all content from both files to prevent style conflicts.
 
-The required styles for the component are imported in the **src/App.css** file:
+The required styles for the NumericTextBox component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -90,33 +96,13 @@ The required styles for the component are imported in the **src/App.css** file:
 {% endhighlight %}
 {% endtabs %}
 
-> To refer **App.css** in the application then import it in the **src/App.tsx** file.
+> You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
 ## Adding NumericTextBox component
 
-The React NumericTextBox component can be added to the application by following these steps. To get started, add the NumericTextBox component to the **src/App.tsx** file using the following code.
+Now, you can add the React NumericTextBox component to your **src/App.jsx** file by importing and defining it within your application.
 
-The following numerictextbox code should be placed in the **src/App.tsx** file.
-
-`[Class-component]`
-
-```ts
-import * as React from "react";
-import { NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs';
-import './App.css';
-
-export default class App extends React.Component<{}, {}> {
-  render() {
-    return (
-      <NumericTextBoxComponent value={10} />
-    );
-  }
-}
-```
-
-`[Functional-component]`
-
-```ts
+```js
 import * as React from 'react';
 import { NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs';
 import './App.css';
@@ -130,138 +116,24 @@ export default function App(){
 
 ## Run the application
 
-Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+To run the project, use the following command:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm run dev
-```
+
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+
+yarn run dev
+
+{% endhighlight %}
+{% endtabs %}
 
 The output appears as follows.
 
-`[Class-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/numeric-textbox/getting-started-cs3/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/numeric-textbox/getting-started-cs3/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/numeric-textbox/getting-started-cs3" %}
-
-`[Functional-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/numeric-textbox/getting-started-cs4/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/numeric-textbox/getting-started-cs4/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
  {% previewsample "page.domainurl/code-snippet/numeric-textbox/getting-started-cs4" %}
-
-## Range validation
-
-You can set the minimum and maximum range of values in the NumericTextBox using the [`min`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/index-default#min) and [`max`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/index-default#max) properties, so the numeric value should be in the min and max range.
-
-The validation behavior depends on the [`strictMode`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/index-default#strictmode) property.
-
-`[Class-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/numeric-textbox/getting-started-cs5/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/numeric-textbox/getting-started-cs5/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/numeric-textbox/getting-started-cs5" %}
-
-`[Functional-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/numeric-textbox/getting-started-cs6/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/numeric-textbox/getting-started-cs6/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/numeric-textbox/getting-started-cs6" %}
-
-## Formatting the value
-
-User can set the format of the NumericTextBox component using [`format`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/index-default#format) property. The value will be displayed in the specified format, when the component is in focused out state. For more information about
-formatting the value, refer to this [link](./formats).
-
-The below example demonstrates format the value by using currency format value `c2`.
-
-`[Class-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/numeric-textbox/getting-started-cs7/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/numeric-textbox/getting-started-cs7/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/numeric-textbox/getting-started-cs7" %}
-
-`[Functional-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/numeric-textbox/getting-started-cs8/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/numeric-textbox/getting-started-cs8/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/numeric-textbox/getting-started-cs8" %}
-
-## Precision of numbers
-
-You can restrict the number of decimals to be entered in the NumericTextBox by using the [`decimals`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/index-default#decimals) and [`validateDecimalOnType`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/index-default#validatedecimalontype) properties.
-So, you can't enter the number whose precision is greater than the mentioned decimals.
-
-* If `validateDecimalOnType` is false, number of decimals will not be restricted.
-Else, number of decimals will be restricted while typing in the NumericTextBox.
-
-`[Class-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/numeric-textbox/precision-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/numeric-textbox/precision-cs1/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/numeric-textbox/precision-cs1" %}
-
-`[Functional-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/numeric-textbox/precision-cs2/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/numeric-textbox/precision-cs2/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/numeric-textbox/precision-cs2" %}
 
 > Refer to the [React NumericTextBox](https://www.syncfusion.com/react-components/react-numeric-textbox) feature tour page for its groundbreaking feature representations. You can also explore our [React NumericTextBox component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/numerictextbox/default) that shows how to render the NumericTextBox in React.
 
