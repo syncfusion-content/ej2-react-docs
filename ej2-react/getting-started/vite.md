@@ -146,7 +146,7 @@ yarn run dev
 
 The output will appear as follows:
 
-![vite](../appearance/images/vite.png)
+![vite](./images/nextjs.png)
 
 ## See also
 
