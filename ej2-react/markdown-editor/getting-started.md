@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with React Markdown Editor component | Syncfusion
-description: Checkout and learn about Getting started with React Markdown Editor component of Syncfusion Essential JS 2 and more details.
+description: Check out and learn about Getting started with React Markdown Editor component of Syncfusion Essential JS 2 and more details.
 control: Getting Started
 platform: ej2-react
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Markdown Editor Component
 
-The Syncfusion React Markdown Editor is a web-based editor that enables users to create, edit, and format Markdown content with features such as table support and structured content formatting. This section explains you the steps required to create a simple Markdown Editor and demonstrate the basic usage of the Markdown Editor component in React environment.
+The Syncfusion React Markdown Editor is a web-based editor that enables users to create, edit, and format Markdown content with features such as table support and structured content formatting. This section explains the steps required to create a simple Markdown Editor and demonstrate the basic usage of the Markdown Editor component in a React environment.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview)
 
@@ -20,17 +20,23 @@ To get started quickly with the React Markdown Editor, refer to this video tutor
 
 ## Prerequisites
 
-This guide uses Vite as the bundler and development environment. Install Node.js `24.13.0` or higher before proceeding. For detailed information about Vite’s capabilities and configuration options, refer to the [Vite documentation](https://vitejs.dev/).
+This guide uses Vite as the bundler and development environment. Install Node.js `24.13.0` or `higher` before proceeding. For detailed information about Vite’s capabilities and configuration options, refer to the [Vite documentation](https://vitejs.dev/).
+
+N> For information about supported React versions and Syncfusion package compatibility, refer to the [Version Compatibility](https://ej2.syncfusion.com/react/documentation/upgrade/version-compatibility) documentation.
 
 ## Create a React Application
 
-Run the following commands to set up a React application:
+Run the following command to set up a React application:
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 ```
 
-This command will prompt you to install the required packages and start the application. Select the options as shown below.
+This command prompts you to configure the React application. When prompted to choose a linter, select an option based on your preference.
+
+![Markdown Editor Linter configuration](images/linter-config.png)
+
+Continue with the project setup and select the options as shown below.
 
 ![Markdown Editor Initial setup](../rich-text-editor/images/initial_setup.png)
 
@@ -45,10 +51,10 @@ npm install
 
 ## Adding Syncfusion Rich Text Editor packages
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
-To install Rich Text Editor component, use the following command
+All the available Essential JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+To install the Rich Text Editor component, use the following command
 
-```
+```bash
 npm install @syncfusion/ej2-react-richtexteditor
 ```
 
@@ -62,8 +68,7 @@ To apply the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind
 npm install @syncfusion/ej2-tailwind3-theme
 ```
 
-The installed theme package includes an `index.css` file that automatically imports all the required dependency styles. Import the following stylesheet into **src/App.css**:
-
+In this package, the Rich Text Editor component includes an `index.css` file that automatically loads all the required dependency styles. Add the following import to **src/App.css**:
 
 ```css
 @import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/rich-text-editor/index.css';
@@ -75,20 +80,27 @@ I> To apply the application-specific styles correctly, import **App.css** into *
 
 The following modules provide the basic features of the Markdown Editor.
 
-* **MarkdownEditor** - Inject this module to use Rich Text Editor as markdown editor.
-* **Image** - Inject this module to use image feature in Markdown Editor.
-* **Link** - Inject this module to use link feature in Markdown Editor.
-* **Toolbar** - Inject this module to use Toolbar feature.
+* **MarkdownEditor** - Inject this module to use the Rich Text Editor as Markdown Editor.
+* **Image** - Inject this module to use the image feature in Markdown Editor.
+* **Link** - Inject this module to use the link feature in Markdown Editor.
+* **Toolbar** - Inject this module to use the Toolbar feature.
 
-These modules should be injected into the `services` section of the component.
+These modules can be injected into the `services` prop of the `<Inject>` component, as demonstrated in the following example.
 
-> Additional feature modules are available [here](https://ej2.syncfusion.com/react/documentation/rich-text-editor/module).
+{% tabs %}
+{% highlight ts hl_lines="6" tabtitle="App.tsx" %}
+{% include code-snippet/markdown-editor/getting-started-cs3/app/App.tsx %}
+{% endhighlight %}
+{% highlight js hl_lines="6" tabtitle="App.jsx" %}
+{% include code-snippet/markdown-editor/getting-started-cs3/app/App.jsx %}
+{% endhighlight %}
+{% endtabs %}
+
+T> Additional feature modules are available [here](https://ej2.syncfusion.com/react/documentation/rich-text-editor/module).
 
 ## Adding Markdown Editor component
 
-Now, you can start adding React Markdown Editor component in the application. For getting started, add the Markdown Editor component in **src/App.tsx** file using following code.
-
-Place the following Markdown Editor code in the **src/App.tsx**.
+Now, you can start adding React Markdown Editor component to the application. For getting started, add the Markdown Editor component to the **src/App.tsx** file using following code.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -105,7 +117,7 @@ Place the following Markdown Editor code in the **src/App.tsx**.
 {% endtabs %}
 
 
-## Run the application
+## Run the Application
 
 Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
@@ -113,8 +125,12 @@ Now run the `npm run dev` command in the console to start the development server
 npm run dev
 ```
 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Markdown Editor is displayed in the browser as shown below.
+
+![Syncfusion React Markdown Editor output](images/getting-started.png)
+
 ## See also
 
-* [Accessibility in Markdown editor](https://ej2.syncfusion.com/react/documentation/markdown-editor/accessibility)
-* [Keyboard support in Markdown editor](https://ej2.syncfusion.com/react/documentation/markdown-editor/keyboard-support)
-* [Globalization in Markdown editor](https://ej2.syncfusion.com/react/documentation/rich-text-editor/globalization)
+* [Accessibility in Markdown Editor](./accessibility)
+* [Keyboard support in Markdown Editor](./keyboard-support)
+* [Globalization in Rich Text Editor](rich-text-editor/globalization)

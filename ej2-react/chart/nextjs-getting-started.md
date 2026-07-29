@@ -8,20 +8,18 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Creating a Next.js Application Using Syncfusion React Chart Component
+# Getting Started with React Chart in Next.js
 
 This section provides a step-by-step guide for setting up a Next.js application and integrating the [React Charts](https://www.syncfusion.com/react-components/react-charts) component.
-
-## What is Next.js?
-
-[Next.js](https://nextjs.org) is a React framework that makes it easy to build fast, SEO-friendly, and user-friendly web applications. It provides features such as server-side rendering, automatic code splitting, routing, and API routes, making it an excellent choice for building modern web applications.
 
 ## Prerequisites
 
 Before getting started with the Next.js application, ensure the following prerequisites are met:
 
-* [Node.js 16.8](https://nodejs.org/en) or later.
-
+* [Node.js 18.17](https://nodejs.org/en) or later (required by Next.js 14/15).
+* [Next.js](https://nextjs.org) 14 or 15.
+* React 18 or 19.
+* `@syncfusion/ej2-react-charts` 27.2.x or later (compatible with React 18/19).
 * The application is compatible with macOS, Windows, and Linux operating systems.
 
 ## Step 1: Create a Next.js application
@@ -96,53 +94,48 @@ yarn add @syncfusion/ej2-react-charts
 {% endhighlight %}
 {% endtabs %}
 
-## Step 3: Add Syncfusion<sup style="font-size:70%">&reg;</sup> React component
+## Step 3: Add the Chart component
 
-Follow the below steps to add the React Chart component to the Next.js project:
-
-1.Before adding the Chart component to your markup, import the Chart component in the **src/app/page.tsx** file.
+Replace the contents of `src/app/page.tsx` with the following code. The example below uses typed data, registers the Syncfusion license, imports a theme stylesheet, and renders the chart as columns.
 
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
-
-'use client'
+'use client';
 import {
-  AxisModel, Category, ChartComponent, ColumnSeries, DataLabel, Inject,
-  Legend, LegendSeriesModel, LineSeries, SeriesCollectionDirective, SeriesDirective, Tooltip, TooltipSettingsModel
+  Category,
+  ChartComponent,
+  ColumnSeries,
+  Inject,
+  SeriesCollectionDirective,
+  SeriesDirective,
 } from '@syncfusion/ej2-react-charts';
 
-{% endhighlight %}
-{% endtabs %}
-
-2.Then, define the Chart component in the **src/app/page.tsx** file, as shown below:
-
-{% tabs %}
-{% highlight ts tabtitle="page.tsx" %}
-'use client'
-import {
-  Category, ChartComponent, ColumnSeries, Inject,
-  LineSeries, SeriesCollectionDirective, SeriesDirective
-} from '@syncfusion/ej2-react-charts';
 
 export default function Home() {
-  const data: Object[] = [
+  const data = [
     { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
     { month: 'Mar', sales: 34 }, { month: 'Apr', sales: 32 },
     { month: 'May', sales: 40 }, { month: 'Jun', sales: 32 },
     { month: 'Jul', sales: 35 }, { month: 'Aug', sales: 55 },
     { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
-    { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
+    { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 },
   ];
-  const xAxisCategory = { valueType: 'Category' };
+  const primaryXAxis = { valueType: 'Category' } as const;
 
   return (
-    <ChartComponent id="charts" primaryXAxis={xAxisCategory} >
-      <Inject services={[ColumnSeries, LineSeries, Category]} />
+    <ChartComponent id="charts" primaryXAxis={primaryXAxis}>
+      <Inject services={[ColumnSeries, Category]} />
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={data} xName='month' yName='sales' name='Sales' />
+        <SeriesDirective
+          dataSource={data}
+          xName="month"
+          yName="sales"
+          name="Sales"
+          type="Column"
+        />
       </SeriesCollectionDirective>
     </ChartComponent>
-  )
+  );
 }
 {% endhighlight %}
 {% endtabs %}
@@ -164,10 +157,18 @@ yarn run dev
 {% endhighlight %}
 {% endtabs %}
 
-Open the generated local URL (for example, `/localhost:3000/`) from terminal in the browser. The application displays the chart as shown below:
+Open the URL printed in the terminal (for example, `http://localhost:3000/`) in a browser. The application displays the chart as shown below:
 
-![NextJS](./images/Getting-Started.png)
+![NextJS Chart in Next.js](./images/Getting-Started.png)
 
 To learn more about the functionality of the Chart component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/chart/getting-started#module-injection).
 
-N> [View the NEXT.js Chart sample in the GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-chart-component-in-nextjs).
+> [View the Next.js Chart sample in the GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-chart-component-in-nextjs).
+
+## Troubleshooting
+
+- **Chart does not render (blank page)**
+  - Confirm `src/app/page.tsx` begins with `'use client';`.
+
+- **`Module not found: Can't resolve '@syncfusion/ej2-react-charts'`**
+  - Run `npm install @syncfusion/ej2-react-charts` (or `yarn add @syncfusion/ej2-react-charts`) in the project root.

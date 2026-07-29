@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with React Chart component | Syncfusion
-description: Check out and learn about the Getting started with React Chart component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Chart Component | Syncfusion
+description: Check out and learn about the Getting Started with React Chart component of Syncfusion Essential JS 2 and more details.
 control: Getting started
 platform: ej2-react
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the React Chart Component
 
-This section describes the steps to create a simple Chart component.
+This section explains how to create a simple Chart component.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview)
 
@@ -20,8 +20,7 @@ A quick video overview of the React Charts setup is available:
 
 ## Prerequisites
 
-Before getting started, ensure that your development environment meets the [system requirements for Syncfusion® React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement). That page documents the supported React, Node.js, and npm versions, and includes the React-version compatibility table for Syncfusion React components.
-
+Before getting started, ensure that your development environment meets the [system requirements for Syncfusion React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement). That page documents the supported React, Node.js, and npm versions, and includes the React-version compatibility table for Syncfusion React components.
 
 ## Before You Begin
 
@@ -142,30 +141,15 @@ export const data: Object[] = [
 After defining the required data set, bind the data to the Chart component in the `SeriesDirective` tag. The following code snippet demonstrates the complete configuration required to render a basic chart.
 
 {% tabs %}
-{% highlight ts tabtitle="~/src/App.tsx" %}
-import {  ChartComponent, Inject, SeriesCollectionDirective, SeriesDirective, Category, LineSeries } from '@syncfusion/ej2-react-charts';
-
-const data: Object[] = [
-    { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
-    { month: 'Mar', sales: 34 }, { month: 'Apr', sales: 32 },
-    { month: 'May', sales: 40 }, { month: 'Jun', sales: 32 },
-    { month: 'Jul', sales: 35 }, { month: 'Aug', sales: 55 },
-    { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
-    { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
-];
-const xAxisCategory = { valueType: 'Category' };
-
-function App() {
-  return <ChartComponent id="charts" primaryXAxis={xAxisCategory}>
-    <Inject services={[LineSeries, Category]} />
-    <SeriesCollectionDirective>
-      <SeriesDirective dataSource={data} xName='month' yName='sales' name='Sales' type='Line'/>
-    </SeriesCollectionDirective>
-  </ChartComponent>
-}
-export default App;
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/getting-started-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/getting-started-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/getting-started-cs1" %}
 
 ### Step 7: Run the application
 
@@ -177,3 +161,38 @@ npm run dev
 Open the generated local URL (for example, `localhost:5173/`) from terminal in the browser. The application displays the chart as shown below:
 
 ![Getting Started](./images/Getting-Started.png)
+
+## Troubleshooting
+
+Use the following guidance to resolve common issues when getting started with the React Chart component.
+
+- **Chart does not render (blank page)**
+  - Verify that `index.html` contains a container with `id="root"`, and that `main.tsx` (or `main.jsx`) calls `createRoot(document.getElementById("root")!).render(<App />)`.
+  - Run `npm install` again to ensure all peer dependencies are installed.
+
+- **Chart area renders but no series is displayed**
+  - Confirm that the required series module (for example, `LineSeries` or `ColumnSeries`) and axis module (for example, `Category` or `DateTime`) are listed in the `services` array of the `Inject` component.
+  - Confirm that `<SeriesDirective>` is wrapped in a `<SeriesCollectionDirective>` and that `dataSource`, `xName`, `yName`, and `type` are set.
+
+- **Series data is plotted in the wrong order or with wrong labels**
+  - Check that the property names passed to `xName` and `yName` exactly match the keys in the `dataSource` array (the comparison is case-sensitive).
+  - If the `x` field holds `Date` values, set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel#valuetype) of `primaryXAxis` to `DateTime`; for string categories use `Category`.
+
+- **`Module not found: Can't resolve '@syncfusion/ej2-react-charts'`**
+  - The package was not installed in the current project. Run `npm install @syncfusion/ej2-react-charts` from the project root.
+
+- **Tooltip, legend, or data label is not visible after enabling it**
+  - Confirm that the corresponding module (for example, `Tooltip`, `Legend`, `DataLabel`) is included in the `services` array of the `Inject` component.
+
+## See also
+
+Explore the following related topics:
+
+- [Chart Series Types](./chart-series)
+- [Chart Data Markers](./data-markers)
+- [Chart Tooltip](./tool-tip)
+- [Chart Legend](./legend)
+- [Chart Data Labels](./data-labels)
+- [Chart Appearance](./chart-appearance)
+- [Next.js Getting Started](./nextjs-getting-started)
+- [Preact Getting Started](./preact)
