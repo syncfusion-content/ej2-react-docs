@@ -1,0 +1,95 @@
+.analytics-dashboard {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.dashboard-panel {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid #d7dce5;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+.dashboard-panel h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 18px;
+}
+
+.panel-description {
+  margin: 6px 0 16px;
+  color: #596579;
+  font-size: 13px;
+}
+
+.chart-container {
+  display: flex;
+  min-height: 390px;
+  align-items: center;
+  justify-content: center;
+}
+
+.d3-chart {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 360px;
+  outline-offset: 3px;
+}
+
+.chart-title {
+  fill: #172033;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.chart-legend {
+  fill: #39465a;
+  font-size: 12px;
+}
+
+.chart-axis {
+  color: #667085;
+  font-size: 11px;
+}
+
+.chart-grid .domain {
+  display: none;
+}
+
+.chart-grid line {
+  stroke: #e4e7ec;
+}
+
+.axis-title {
+  fill: #475467;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.data-bar {
+  opacity: 0.9;
+  transition: opacity 120ms ease;
+}
+
+.data-bar:hover,
+.data-bar:focus {
+  opacity: 1;
+  outline: none;
+  stroke: #172033;
+  stroke-width: 2px;
+}
+
+.chart-empty {
+  margin: 0;
+  color: #667085;
+}
+
+@media (max-width: 900px) {
+  .analytics-dashboard {
+    grid-template-columns: 1fr;
+  }
+}

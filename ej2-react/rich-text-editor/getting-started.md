@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Rich Text Editor
 
-The [React Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/react-rich-text-editor) is a WYSIWYG (What You See Is What You Get) editor that enables users to create, edit, and format rich text content with features like multimedia insertion, lists, and links. This section explains the steps to create a simple React Rich Text Editor and demonstrates the basic usage of the Rich Text Editor control using a Vite-based React project scaffolded with latest vite version.
+The [React Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/react-rich-text-editor) is a <abbr title="What You See Is What You Get">WYSIWYG</abbr> editor that enables users to create, edit, and format rich text content with features like multimedia insertion, lists, and links. This section explains the steps to create a simple React Rich Text Editor and demonstrates the basic usage of the Rich Text Editor control using a Vite-based React project scaffolded with the latest Vite version.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/mcp-server/ai-coding-assistant/getting-started)
 
@@ -109,7 +109,9 @@ The output will appear as follows:
 
 ## Prerequisites
 
-This guide uses Vite as the bundler and development environment. Install Node.js 24.13.0 or higher before proceeding. For detailed information about Vite’s capabilities and configuration options, refer to the [Vite documentation](https://vite.dev/).
+This guide uses Vite as the bundler and development environment. Install Node.js `24.13.0` or `higher` before proceeding. For detailed information about Vite’s capabilities and configuration options, refer to the [Vite documentation](https://vite.dev/).
+
+N> For information about supported React versions and Syncfusion package compatibility, refer to the [Version Compatibility](https://ej2.syncfusion.com/react/documentation/upgrade/version-compatibility) documentation.
 
 ## Create a React Application
 
@@ -119,13 +121,17 @@ Run the following commands to set up a React application:
 npm create vite@latest my-app -- --template react-ts
 ```
 
-This command will prompt you to install the required packages and start the application. Select the options as shown below.
+This command prompts you to configure the React application. When prompted to choose a linter, select an option based on your preference.
+
+![Rich Text Editor Linter configuration](images/linter-config.png)
+
+Continue with the project setup and select the options as shown below.
 
 ![Rich Text Editor Initial setup](images/initial_setup.png)
 
 As Syncfusion packages are not installed yet, currently, the `No` option will be selected. Then, navigate to the project directory and install the dependencies using the following commands:
 
-```
+```bash
 cd my-app
 npm install
 ```
@@ -134,10 +140,10 @@ npm install
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Rich Text Editor packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 To install Rich Text Editor component, use the following command
 
-```
+```bash
 npm install @syncfusion/ej2-react-richtexteditor
 ```
 
@@ -153,7 +159,6 @@ npm install @syncfusion/ej2-tailwind3-theme
 
 The installed theme package includes an `index.css` file that automatically imports all the required dependency styles. Import the following stylesheet into **src/App.css**:
 
-
 ```css
 @import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/rich-text-editor/index.css';
 ```
@@ -164,19 +169,28 @@ I> To apply the application-specific styles correctly, import **App.css** into *
 
 The following modules provide the basic features of the Rich Text Editor.
 
-* **HtmlEditor** - Inject this module to use Rich Text Editor as html editor.
-* **Image** - Inject this module to use image feature in Rich Text Editor.
-* **Link** - Inject this module to use link feature in Rich Text Editor.
-* **QuickToolbar** - Inject this module to use quick toolbar feature for the target element.
-* **Toolbar** - Inject this module to use Toolbar feature.
+* **HtmlEditor** - Inject this module to use the Rich Text Editor as HTML editor.
+* **Image** - Inject this module to use the image feature in Rich Text Editor.
+* **Link** - Inject this module to use the link feature in Rich Text Editor.
+* **QuickToolbar** - Inject this module to use the quick toolbar feature for the target element.
+* **Toolbar** - Inject this module to use the Toolbar feature.
 
-These modules should be injected into the `services` section of the component.
+These modules can be injected into the `services` prop of the `<Inject>` component, as demonstrated in the following example.
 
-> Additional feature modules are available [here](https://ej2.syncfusion.com/react/documentation/rich-text-editor/module).
+{% tabs %}
+{% highlight ts hl_lines="7" tabtitle="App.tsx" %}
+{% include code-snippet/rich-text-editor/basic-cs7/app/App.tsx %}
+{% endhighlight %}
+{% highlight js hl_lines="6" tabtitle="App.jsx" %}
+{% include code-snippet/rich-text-editor/basic-cs7/app/App.jsx %}
+{% endhighlight %}
+{% endtabs %}
+
+T> Additional feature modules are available [here](https://ej2.syncfusion.com/react/documentation/rich-text-editor/module).
 
 ## Adding Rich Text Editor component
 
-Now, you can start adding React Rich Text Editor component in the application. For getting started, add the Rich Text Editor component in **src/App.tsx** file using following sample.
+Now, you can start adding the React Rich Text Editor component in the application. For getting started, replace the default Vite template content in **src/App.tsx** with the following sample.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -192,22 +206,25 @@ Now, you can start adding React Rich Text Editor component in the application. F
 {% endhighlight %}
 {% endtabs %}
 
-## Run the application
+## Run the Application
 
 Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```bash
 npm run dev
 ```
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Rich Text Editor is displayed in the browser as shown below.
+
+![Syncfusion React Rich Text Editor output](images/getting-started.png)
 
 {% endtabcontent %}
 
 {% endtabcontents %}
 
-## See also
+## See Also
 
-* [Accessibility in Rich text editor](https://ej2.syncfusion.com/react/documentation/rich-text-editor/accessibility)
-* [Keyboard support in Rich text editor](https://ej2.syncfusion.com/react/documentation/rich-text-editor/keyboard-support)
-* [Globalization in Rich text editor](https://ej2.syncfusion.com/react/documentation/rich-text-editor/globalization)
+* [Accessibility in Rich Text Editor](./accessibility)
+* [Keyboard support in Rich Text Editor](./keyboard-support)
+* [Globalization in Rich Text Editor](./globalization)
 
 N> Looking for the full React Rich Text Editor component overview, features, pricing, and documentation? Visit the [React Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/react-rich-text-editor) page.
