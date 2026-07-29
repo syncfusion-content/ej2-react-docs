@@ -117,10 +117,10 @@ function App() {
     <GridComponent dataSource={data}>
       <ColumnsDirective>
           <ColumnDirective field='OrderID' width='100' textAlign="Right"/>
-          <ColumnDirective field='CustomerID' width='100'/>
+          <ColumnDirective field='CustomerID' width='100' textAlign="left"/>
           <ColumnDirective field='EmployeeID' width='100' textAlign="Right"/>
           <ColumnDirective field='Freight' width='100' format="C2" textAlign="Right"/>
-          <ColumnDirective field='ShipCountry' width='100'/>
+          <ColumnDirective field='ShipCountry' width='100' textAlign="left"/>
       </ColumnsDirective>
     </GridComponent>
   );
@@ -146,7 +146,7 @@ yarn run dev
 
 The output will appear as follows:
 
-![vite](./images/nextjs.png)
+![vite](./images/vite.png)
 
 ## See also
 

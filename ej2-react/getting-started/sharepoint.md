@@ -62,27 +62,23 @@ npm install @syncfusion/ej2-react-grids --save
 
 Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
 
-This example uses the `Tailwind 3` theme for the Grid component from the theme package. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+This example imports the `tailwind3` theme CSS in `~/src/webparts/app/AppWebPart.ts`:
 
 {% tabs %}
-{% highlight bash tabtitle="npm" %}
+{% highlight ts tabtitle="AppWebPart.ts" %}
 
-npm install @syncfusion/ej2-tailwind3-theme --save
+import { SPComponentLoader } from '@microsoft/sp-loader';
 
-{% endhighlight %}
-{% highlight bash tabtitle="yarn" %}
+...
+...
 
-yarn add @syncfusion/ej2-tailwind3-theme
-
-{% endhighlight %}
-{% endtabs %}
-
-This example imports the `tailwind3` theme CSS in `~/src/webparts/app/components/App.tsx`:
-
-{% tabs %}
-{% highlight ts tabtitle="App.tsx" %}
-
-require('@syncfusion/ej2-tailwind3-theme/styles/grid/index.css');
+protected onInit(): Promise<void>{
+  // Load Syncfusion Tailwind 3 theme
+  SPComponentLoader.loadCss('https://cdn.syncfusion.com/ej2/34.1.29/tailwind3.css');
+    return this._getEnvironmentMessage().then(message => {
+    this._environmentMessage = message;
+  });
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -147,8 +143,6 @@ Here is the complete code for the above steps:
 import * as React from 'react';
 import { IAppProps } from './IAppProps';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-
-require('@syncfusion/ej2-tailwind3-theme/styles/grid/index.css');
 
 export default class App extends React.Component<IAppProps, {}> {
   

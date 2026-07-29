@@ -118,7 +118,7 @@ Now, you can add Syncfusion<sup style="font-size:70%">&reg;</sup> React componen
 {% highlight ts tabtitle="~/app/routes/home.tsx" %}
 {% raw %}
 
-import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page, Sort } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 
 export let meta = () => {
   return [{
@@ -146,7 +146,7 @@ export default function Index() {
       }
   ];
   return (
-    <GridComponent dataSource={data} allowPaging={true}>
+    <GridComponent dataSource={data}>
       <ColumnsDirective>
         <ColumnDirective field="OrderID" width="100" textAlign="Right" />
         <ColumnDirective field="CustomerID" width="100" />
@@ -154,7 +154,6 @@ export default function Index() {
         <ColumnDirective field="Freight" width="100" format="C2" textAlign="Right"/>
         <ColumnDirective field="ShipCountry" width="100" />
       </ColumnsDirective>
-      <Inject services={[Page, Sort]} />
     </GridComponent>
   );
 }

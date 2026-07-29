@@ -33,7 +33,11 @@ Run the following commands to set up a React application:
 npm create vite@latest my-app -- --template react-ts
 ```
 
-This command will prompt you to install the required packages and start the application. Select the options as shown below.
+This command prompts you to configure the React application. When prompted to choose a linter, select an option based on your preference.
+
+![Rich Text Editor Linter configuration](images/linter-config.png)
+
+Continue with the project setup and select the options as shown below.
 
 ![Rich Text Editor Initial setup](images/initial_setup.png)
 
@@ -78,11 +82,11 @@ I> To apply the application-specific styles correctly, import **App.css** into *
 
 The following modules provide the basic features of the Rich Text Editor.
 
-* **HtmlEditor** - Inject this module to use Rich Text Editor as html editor.
-* **Image** - Inject this module to use image feature in Rich Text Editor.
-* **Link** - Inject this module to use link feature in Rich Text Editor.
-* **QuickToolbar** - Inject this module to use quick toolbar feature for the target element.
-* **Toolbar** - Inject this module to use Toolbar feature.
+* **HtmlEditor** - Inject this module to use the Rich Text Editor as HTML editor.
+* **Image** - Inject this module to use the image feature in Rich Text Editor.
+* **Link** - Inject this module to use the link feature in Rich Text Editor.
+* **QuickToolbar** - Inject this module to use the quick toolbar feature for the target element.
+* **Toolbar** - Inject this module to use the Toolbar feature.
 
 These modules can be injected into the `services` prop of the `<Inject>` component, as demonstrated in the following example.
 
