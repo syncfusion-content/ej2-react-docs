@@ -12,58 +12,53 @@ domainurl: ##DomainURL##
 
 This section explains how to create a simple AppBar, and configure its available functionalities in React.
 
-## Dependencies
+## Prerequisites
 
-The following dependencies are required to use the AppBar component in an application. These packages provide core functionalities and UI controls for the AppBar.
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
-```javascript
-|-- @syncfusion/ej2-react-navigations
-    |-- @syncfusion/ej2-react-base
-    |-- @syncfusion/ej2-navigations
-        |-- @syncfusion/ej2-base
-```
+## Set up the Vite project
 
-## Setup your development environment
+To create a new `Vite` project, use one of the commands that are specific to either NPM or Yarn.
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+npm create vite@latest my-project -- --template react
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+yarn create vite my-project --template react
+{% endhighlight %}
+{% endtabs %}
 
-> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+After running the command, you will be prompted with a series of interactive questions to configure your project. Select the appropriate options for each prompt:
 
-To create a new React application, run the following command.
+1. **Select a linter to use**: Choose the linter for your project (for example, `ESLint`).
+2. **Install with npm and start now?**: Type `Yes` to proceed with installing the dependencies and automatically start the development server, or `No` to install dependencies manually later.
 
-```bash
-npm create vite@latest my-app
-```
-To set-up a React application in TypeScript environment, run the following command.
-
-```bash
-npm create vite@latest my-app -- --template react-ts
-cd my-app
-npm run dev
-```
-To set-up a React application in JavaScript environment, run the following command.
-
-```bash
-npm create vite@latest my-app -- --template react
-cd my-app
-npm run dev
-```
-
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
-
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
-
-To install `AppBar` component, use the following command
-
-```bash
-npm install @syncfusion/ej2-react-navigations --save
-npm install @syncfusion/ej2-react-buttons --save
+Navigate into the project directory with:
 
 ```
+cd my-project
+```
 
-The above command installs [AppBar dependencies](./getting-started#dependencies)
-which are required to render the component in the `React` environment.
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
+Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
+
+To install the React component package, use the following command:
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+npm install @syncfusion/ej2-react-navigations
+
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+
+yarn add @syncfusion/ej2-react-navigations
+
+{% endhighlight %}
+{% endtabs %}
+ 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
 Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
@@ -73,7 +68,7 @@ This guide uses the `Tailwind 3` theme as an example, sourced from the theme pac
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
 
-npm install @syncfusion/ej2-tailwind3-theme --save
+npm install @syncfusion/ej2-tailwind3-theme
 
 {% endhighlight %}
 {% highlight bash tabtitle="yarn" %}
@@ -83,53 +78,60 @@ yarn add @syncfusion/ej2-tailwind3-theme
 {% endhighlight %}
 {% endtabs %}
 
-By default, Vite projects include a `index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `index.css` file to prevent style conflicts.
+By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
 
-The required styles for the component are imported in the **src/App.css** file:
+The required styles for the AppBar component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
 
 @import "@syncfusion/ej2-tailwind3-theme/styles/appbar/index.css";
+@import "@syncfusion/ej2-tailwind3-theme/styles/button/index.css";
 
 {% endhighlight %}
 {% endtabs %}
 
-> To refer **App.css** in the application then import it in the **src/App.tsx** file.
+> You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add AppBar to the project
+## Add the AppBar component
 
-Create the `AppBar` component in the application by adding the following code snippet to the `src/App.tsx` file.
+Now, you can add the React AppBar component to your **src/App.jsx** file by importing and defining it within your application. Use the following code:
 
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
 
-
-```ts
 import { AppBarComponent } from "@syncfusion/ej2-react-navigations";
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from "react";
+import './App.css';
 
 const App = () => {
   return (
     <div className='control-container'>
       <AppBarComponent colorMode="Primary">
-        <ButtonComponent cssClass='e-inherit menu' iconCss='e-icons e-menu'></ButtonComponent>
+        <button className="menu-btn">
+          <span className="e-icons e-menu"></span>
+        </button>
         <span className="regular">React AppBar</span>
         <div className="e-appbar-spacer"></div>
-        <ButtonComponent cssClass='e-inherit login'>FREE TRIAL</ButtonComponent>
+        <button className="trial-btn">FREE TRIAL</button>
       </AppBarComponent>
     </div>
   );
 }
 
 export default App;
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Run the application
 
-Run the `npm run dev` command in the console to start the development server. This command compiles code and serves the application locally, opening it in the browser.
+Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-```
+```bash
 npm run dev
 ```
 
- {% previewsample "page.domainurl/code-snippet/appbar/getting-started-cs1" %}
+The output will appear as follows:
+
+{% previewsample "page.domainurl/code-snippet/appbar/getting-started-cs1" %}

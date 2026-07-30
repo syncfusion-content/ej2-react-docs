@@ -16,54 +16,53 @@ To get started quickly with React Tabs using Create React App, you can check out
 
 {% youtube "https://www.youtube.com/watch?v=k1yvVlO-RN8" %}
 
-## Dependencies
+## Prerequisites
 
-The following is the list of dependencies required to use the Tab component in your application.
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
-```javascript
-|-- @syncfusion/ej2-react-navigations
-    |-- @syncfusion/ej2-base
-    |-- @syncfusion/ej2-react-base
-    |-- @syncfusion/ej2-navigations
-        |-- @syncfusion/ej2-buttons
-        |-- @syncfusion/ej2-popups
-```
+## Set up the Vite project
 
-## Setup for Local Development
+To create a new `Vite` project, use one of the commands that are specific to either NPM or Yarn.
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up the environment using JavaScript and optimizes the application for production.
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+npm create vite@latest my-project -- --template react
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+yarn create vite my-project --template react
+{% endhighlight %}
+{% endtabs %}
 
-> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+After running the command, you will be prompted with a series of interactive questions to configure your project. Select the appropriate options for each prompt:
 
-To create a new React application, run the following command.
+1. **Select a linter to use**: Choose the linter for your project (for example, `ESLint`).
+2. **Install with npm and start now?**: Type `Yes` to proceed with installing the dependencies and automatically start the development server, or `No` to install dependencies manually later.
 
-```bash
-npm create vite@latest my-app
-```
-To set-up a React application in TypeScript environment, run the following command.
-
-```bash
-npm create vite@latest my-app -- --template react-ts
-cd my-app
-npm run dev
-```
-To set-up a React application in JavaScript environment, run the following command.
-
-```bash
-npm create vite@latest my-app -- --template react
-cd my-app
-npm run dev
-```
-
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
-
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
-To install Tab component, use the following command
+Navigate into the project directory with:
 
 ```
-npm install @syncfusion/ej2-react-navigations --save
+cd my-project
 ```
 
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
+
+Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
+
+To install the React component package, use the following command:
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+npm install @syncfusion/ej2-react-navigations
+
+{% endhighlight %}
+{% highlight bash tabtitle="yarn" %}
+
+yarn add @syncfusion/ej2-react-navigations
+
+{% endhighlight %}
+{% endtabs %}
+ 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
 Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
@@ -73,7 +72,7 @@ This guide uses the `Tailwind 3` theme as an example, sourced from the theme pac
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
 
-npm install @syncfusion/ej2-tailwind3-theme --save
+npm install @syncfusion/ej2-tailwind3-theme
 
 {% endhighlight %}
 {% highlight bash tabtitle="yarn" %}
@@ -83,9 +82,9 @@ yarn add @syncfusion/ej2-tailwind3-theme
 {% endhighlight %}
 {% endtabs %}
 
-By default, Vite projects include a `index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `index.css` file to prevent style conflicts.
+By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
 
-The required styles for the component are imported in the **src/App.css** file:
+The required styles for the Tab component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -95,71 +94,65 @@ The required styles for the component are imported in the **src/App.css** file:
 {% endhighlight %}
 {% endtabs %}
 
-> To refer **App.css** in the application then import it in the **src/App.tsx** file.
+> You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Initialize the Tab using JSON items collection
+## Add the Tab component
 
-The Tab can be rendered by defining a JSON array. The item is rendered with [`header`](https://ej2.syncfusion.com/react/documentation/api/tab/tabItem#header) text and [`content`](https://ej2.syncfusion.com/react/documentation/api/tab/tabItem#content) for each Tab.
-
-*   Import the Tab component into the `src/App.tsx` file using the following code.
+Now, you can add the React Tab component to your **src/App.jsx** file by importing and defining it within your application.Use the following code:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/tab/tab-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/tab/tab-cs1/app/index.tsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.html" %}
-{% include code-snippet/tab/tab-cs1/index.html %}
+
+import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import './App.css';
+
+function App() {
+
+    let headerText = [{ text: "Twitter" }, { text: "Facebook" }, { text: "WhatsApp" }];
+    const content0 = () => {
+        return <div>
+      Twitter is an online social networking service that enables users to send and read short 140-character messages called "tweets". Registered users can read and post tweets, but those who are unregistered can only read them. Users access Twitter through the website interface, SMS or mobile device app Twitter Inc. is based in San Francisco and has more than 25 offices around the world. Twitter was created in March 2006 by Jack Dorsey, Evan Williams, Biz Stone, and Noah Glass and launched in July 2006. The service rapidly gained worldwide popularity, with more than 100 million users posting 340 million tweets a day in 2012.The service also handled 1.6 billion search queries per day.
+    </div>;
+    }
+    const content1 = () => {
+        return <div>
+      Facebook is an online social networking service headquartered in Menlo Park, California. Its website was launched on February 4, 2004, by Mark Zuckerberg with his Harvard College roommates and fellow students Eduardo Saverin, Andrew McCollum, Dustin Moskovitz and Chris Hughes.The founders had initially limited the website membership to Harvard students, but later expanded it to colleges in the Boston area, the Ivy League, and Stanford University. It gradually added support for students at various other universities and later to high-school students.
+    </div>;
+    }
+    const content2 = () => {
+        return <div>
+      WhatsApp Messenger is a proprietary cross-platform instant messaging client for smartphones that operates under a subscription business model. It uses the Internet to send text messages, images, video, user location and audio media messages to other users using standard cellular mobile numbers. As of February 2016, WhatsApp had a user base of up to one billion,[10] making it the most globally popular messaging application. WhatsApp Inc., based in Mountain View, California, was acquired by Facebook Inc. on February 19, 2014, for approximately US$19.3 billion.
+    </div>;
+    }
+    
+    return (<TabComponent heightAdjustMode='Auto'>
+      <TabItemsDirective>
+        <TabItemDirective header={headerText[0]} content={content0}/>
+        <TabItemDirective header={headerText[1]} content={content1}/>
+        <TabItemDirective header={headerText[2]} content={content2}/>
+      </TabItemsDirective>
+    </TabComponent>);
+}
+export default App;
+
 {% endhighlight %}
 {% endtabs %}
-
-
-Now run the `npm run dev` command in the console to start the development server. This command compiles the code and serves the application locally in the browser.
-
-```
-npm run dev
-```
-
- {% previewsample "page.domainurl/code-snippet/tab/tab-cs1" %}
 
 > In the above sample code, `element` is the `id` of the HTML element in a page to which the Tab is initialized.
 
-## Initialize the Tab using HTML elements
+## Run the application
 
-The Tab component can be rendered based on the given HTML element using `<TabComponent>` tag. Header section must be enclosed with in a wrapper element using `e-tab-header` class and corresponding content must be mapped with `e-content` class.
+Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-Use the following HTML structure to render the Tab:
-
+```bash
+npm run dev
 ```
 
-  <TabComponent id='defaultTab'>   --> Root Tab element
-    <div class="e-tab-header">      --> Tab header
-       <div>   --> Header Item
-       </div>
-    </div>
-    <div class="e-content">      --> Tab content
-       <div>   --> Content Item
-       </div>
-    </div>
-  </TabComponent>
+The output will appear as follows:
 
-```
-
-{% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/tab/tab-container-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/tab/tab-container-cs1/app/index.tsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.html" %}
-{% include code-snippet/tab/tab-container-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/tab/tab-container-cs1" %}
+{% previewsample "page.domainurl/code-snippet/tab/tab-cs1" %}
 
 ## See Also
 
