@@ -62,10 +62,10 @@ You can use the following key shortcuts to access the AutoComplete without inter
 
 | **Keyboard shortcuts** | **Actions** |
 | --- | --- |
-| <kbd>Arrow Down</kbd> | In popup hidden state, opens the suggestion list. In popup open state, selects the first item when no item is selected, or selects the item next to the currently selected item. |
-| <kbd>Arrow Up</kbd> | In popup hidden state, opens the suggestion list. In popup open state, selects the last item when no item is selected, or selects the item previous to the currently selected one. |
-| <kbd>Page Down</kbd> | Scrolls down to the next page and selects the first item when popup list opens. |
-| <kbd>Page Up</kbd> | Scrolls up to the previous page and selects the first item when popup list opens. |
+| <kbd>Arrow Down</kbd> | In popup hidden state, opens the suggestion list. In popup open state, focus the first item when no item is selected, or focus the item next to the currently selected item. |
+| <kbd>Arrow Up</kbd> | In popup hidden state, opens the suggestion list. In popup open state, focus the last item when no item is selected, or focus the item previous to the currently selected one. |
+| <kbd>Page Down</kbd> | Scrolls down to the next page and focus the first item when popup list opens. |
+| <kbd>Page Up</kbd> | Scrolls up to the previous page and focus the first item when popup list opens. |
 | <kbd>Enter</kbd> | Selects the focused item and sets it to the AutoComplete component. |
 | <kbd>Tab</kbd> | Focuses on the next tab indexed element when the popup is closed. Otherwise, closes the popup list and remains the focus in the component if it is in an open state. |
 | <kbd>Shift + tab </kbd> | Focuses on the previous tab indexed element when the popup is closed. Otherwise, closes the popup list and remains the focus in the component if it is in an open state. |

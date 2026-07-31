@@ -41,7 +41,7 @@ Ensure the following software and packages are installed before proceeding:
 | TypeScript | 5.x or later | Type-checks the `.tsx` client source used in this sample |
 | .NET SDK | 8.0 or later | Build and run ASP.NET Core Web API |
 | Visual Studio or Visual Studio Code | Latest | Configure the backend API service |
-| @syncfusion/ej2-react-pivotview | 33.1.45 or later | React Pivot Table component |
+| @syncfusion/ej2-react-pivotview | 34.1.29 or later | React Pivot Table component |
 | Microsoft.AspNetCore.OData | 8.0.x or later | OData V4 services for ASP.NET Core |
 | Microsoft.AspNetCore.Mvc.NewtonsoftJson | 8.0.x or later | Preserves original property casing during JSON serialization |
 

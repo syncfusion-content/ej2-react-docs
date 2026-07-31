@@ -36,8 +36,8 @@ Ensure the following software and packages are installed before proceeding:
 | .NET SDK | 8.0 or later | Build and run ASP.NET Core Web API |
 | PostgreSQL | 12 or later | Database server |
 | Npgsql (NuGet) | Latest | PostgreSQL connectivity |
-| Syncfusion.EJ2.AspNet.Core | 33.1.45 or later | Server helpers (DataManagerRequest, DataOperations) |
-| @syncfusion/ej2-react-pivotview | 33.1.45 or later | React Pivot Table component |
+| Syncfusion.EJ2.AspNet.Core | 34.1.29 or later | Server helpers (DataManagerRequest, DataOperations) |
+| @syncfusion/ej2-react-pivotview | 34.1.29 or later | React Pivot Table component |
 
 ## Setting up the PostgreSQL environment
 

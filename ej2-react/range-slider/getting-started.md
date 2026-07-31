@@ -102,8 +102,7 @@ The required styles for the Slider component are imported in the **src/App.css**
 
 Now, you can add the React Slider component to your **src/App.jsx** file by importing and defining it within your application.
 
-{% tabs %}
-{% highlight jsx tabtitle="App.jsx" %}
+```js
 import React from 'react';
 import { SliderComponent } from '@syncfusion/ej2-react-inputs';
 import './App.css';
@@ -118,8 +117,9 @@ function App() {
   );
 }
 export default App;
-{% endhighlight %}
-{% highlight css tabtitle="App.css" %}
+```
+
+```css
 .wrap {
   box-sizing: border-box;
   height: 100px;
@@ -127,8 +127,7 @@ export default App;
   padding: 30px 10px;
   width: 460px;
 }
-{% endhighlight %}
-{% endtabs %}
+```
 
 ## Run the application
 
