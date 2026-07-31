@@ -54,13 +54,13 @@ To create a new React application, run one of the following commands based on yo
 ***React with JavaScript***
 
 ```bash
-npx create vite@latest my-app -- --template react
+npx create-vite@latest my-app -- --template react
 ```
 
 ***React with TypeScript***
 
 ```bash
-npx create vite@latest my-app -- --template react-ts
+npx create-vite@latest my-app -- --template react-ts
 ```
 
 During the setup process, the CLI will prompt you for a few configuration options. Select the following:
@@ -115,15 +115,23 @@ Then add the following CSS reference to the **src/App.css** file:
 The Inline AI Assist code should be added to the **src/App.tsx** file.
 
 {% tabs %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/inline-ai-assist/getting-started/app/index.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/inline-ai-assist/getting-started/app/index.jsx %}
 {% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/inline-ai-assist/getting-started" %}
+
+## Run the application
+
+With the configuration complete, run the application to see the Inline AI Assist component rendered in your browser.
+
+```bash
+npm run dev
+```
 
 Use the `InlineAIAssistComponent` tag where you want the inline assistant to appear.
 
@@ -139,23 +147,15 @@ registerLicense('YOUR_LICENSE_KEY');
 
 > **Note:** A valid Syncfusion license is required for production use. Without a valid license, a trial license warning message will be displayed.
 
-## Run the application
-
-With the configuration complete, run the application to see the Inline AI Assist component rendered in your browser.
-
-```bash
-npm start
-```
-
 ## RelateTo and target configuration
 
 You can use the `relateTo` property to position the Inline AI Assist relative to a specific DOM element. It accepts either a CSS selector string such as `.container` or `#id`, or an `HTMLElement`. The `target` property specifies the element or CSS selector where the Inline AI Assist will be appended. It accepts either a CSS selector string or an `HTMLElement`.
 
 {% tabs %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/inline-ai-assist/relateTo-target/app/index.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/inline-ai-assist/relateTo-target/app/index.jsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -167,10 +167,10 @@ You can use the `relateTo` property to position the Inline AI Assist relative to
 Responses can be shown in two modes: `Inline`, which updates the content in place, and `Popup`, which displays responses in a floating popup. Toggle this behavior with the `responseMode` property.
 
 {% tabs %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/inline-ai-assist/response-mode/app/index.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/inline-ai-assist/response-mode/app/index.jsx %}
 {% endhighlight %}
 {% endtabs %}

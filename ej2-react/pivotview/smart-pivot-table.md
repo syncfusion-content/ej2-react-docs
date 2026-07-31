@@ -130,7 +130,7 @@ Use the current Tailwind 3 theme-package styles in the global stylesheet. The Pi
 
 Register the Syncfusion license before rendering the application:
 
-```tsx
+```ts
 import { registerLicense } from '@syncfusion/ej2-base';
 import { createRoot } from 'react-dom/client';
 import App from './App';
@@ -318,7 +318,7 @@ async function requestPivotAction(
 Use `AIAssistViewComponent` for prompt entry, built-in suggestions, conversation history, response actions, keyboard support, and stop-response behavior. The following excerpt assumes that `assistRef`, `requestController`, `suggestions`, stable `toolbarSettings`, templates, and `onPromptRequest` are defined in the containing component:
 
 {% raw %}
-```tsx
+```ts
 import {
   AIAssistViewComponent,
   ViewDirective,
@@ -382,7 +382,7 @@ const dataSourceSettings: IDataOptions = {
 The following component excerpt assumes the imported services and state shown by the complete sample:
 
 {% raw %}
-```tsx
+```ts
 <PivotViewComponent
   ref={pivotRef}
   id="ai-pivot"

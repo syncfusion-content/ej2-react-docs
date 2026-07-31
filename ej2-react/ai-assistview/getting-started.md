@@ -58,13 +58,13 @@ To create a new React application, run one of the following commands based on yo
 ***React with JavaScript***
 
 ```bash
-npx create vite@latest my-app -- --template react
+npx create-vite@latest my-app -- --template react
 ```
 
 ***React with TypeScript***
 
 ```bash
-npx create vite@latest my-app -- --template react-ts
+npx create-vite@latest my-app -- --template react-ts
 ```
 
 During the setup process, the CLI will prompt you for a few configuration options. Select the following:
@@ -129,6 +129,15 @@ The AI AssistView code should be added to the **src/App.tsx** file.
 
 {% previewsample "page.domainurl/code-snippet/ai-assistview/getting-started" %}
 
+## Run the application
+
+With the configuration complete, run the application to see the AI AssistView component rendered in your browser.
+
+```
+npm run dev
+```
+> **Note:** Starting from version 33.1x, when a user submits a prompt to the AI AssistView, the component automatically scrolls and focuses on the latest prompt and response. This behavior eliminates the need for users to manually scroll down to see the new response, ensuring they always view the most recent AI response without interruption. Prior to version 33.1x, the previous responses remained visible when new responses were added.
+
 ## Registering your Syncfusion License
 
 Generate a license key from the [Syncfusion License Dashboard](https://www.syncfusion.com/account/downloads) and register it before rendering your React application:
@@ -140,16 +149,6 @@ registerLicense('YOUR_LICENSE_KEY');
 ```
 
 > **Note:** A valid Syncfusion license is required for production use. Without a valid license, a trial license warning message will be displayed.
-
-## Run the application
-
-With the configuration complete, run the application to see the AI AssistView component rendered in your browser.
-
-```
-npm start
-```
-
-> **Note:** Starting from version 33.1x, when a user submits a prompt to the AI AssistView, the component automatically scrolls and focuses on the latest prompt and response. This behavior eliminates the need for users to manually scroll down to see the new response, ensuring they always view the most recent AI response without interruption. Prior to version 33.1x, the previous responses remained visible when new responses were added.
 
 ## Configure suggestions and asynchronous responses
 

@@ -54,13 +54,13 @@ To create a new React application, run one of the following commands based on yo
 ***React with JavaScript***
 
 ```bash
-npx create vite@latest my-app -- --template react
+npx create-vite@latest my-app -- --template react
 ```
 
 ***React with TypeScript***
 
 ```bash
-npx create vite@latest my-app -- --template react-ts
+npx create-vite@latest my-app -- --template react-ts
 ```
 
 During the setup process, the CLI will prompt you for a few configuration options. Select the following:
@@ -127,6 +127,14 @@ To configure the current user in the Chat UI, use the [user](../api/chat-ui#user
 
 {% previewsample "page.domainurl/code-snippet/chat-ui/defaultMessage" %}
 
+## Run the application
+
+After completing the basic configuration, run the following command to display the Chat UI component in your default browser:
+
+```bash
+npm run dev
+```
+
 ## Registering your Syncfusion license
 
 Generate a license key from the [Syncfusion License Dashboard](https://www.syncfusion.com/account/downloads) and register it before rendering your React application:
@@ -138,14 +146,6 @@ registerLicense('YOUR_LICENSE_KEY');
 ```
 
 > **Note:** A valid Syncfusion license is required for production use. Without a valid license, a trial license warning message will be displayed.
-
-## Run the application
-
-After completing the basic configuration, run the following command to display the Chat UI component in your default browser:
-
-```bash
-npm start
-```
 
 ### Production build
 
