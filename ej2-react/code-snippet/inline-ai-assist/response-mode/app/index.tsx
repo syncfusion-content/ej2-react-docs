@@ -1,6 +1,4 @@
 import { InlineAIAssistComponent, ResponseItemSelectEventArgs } from '@syncfusion/ej2-react-interactive-chat';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 
 const App: React.FC = () => {
     const assistRef = React.useRef<InlineAIAssistComponent>(null);
@@ -94,4 +92,4 @@ const App: React.FC = () => {
     );
 };
 
-ReactDOM.render(<App />, document.getElementById('container'));
+export default App;

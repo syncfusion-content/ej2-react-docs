@@ -1,6 +1,4 @@
 import { InlineAIAssistComponent } from '@syncfusion/ej2-react-interactive-chat';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 
 function App() {
     const assistRef = React.useRef(null);
@@ -94,4 +92,4 @@ function App() {
     );
 }
 
-ReactDOM.render(<App />, document.getElementById('container'));
+export default App;

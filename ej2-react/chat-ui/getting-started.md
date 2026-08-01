@@ -54,13 +54,13 @@ To create a new React application, run one of the following commands based on yo
 ***React with JavaScript***
 
 ```bash
-npx create vite@latest my-app -- --template react
+npx create-vite@latest my-app -- --template react
 ```
 
 ***React with TypeScript***
 
 ```bash
-npx create vite@latest my-app -- --template react-ts
+npx create-vite@latest my-app -- --template react-ts
 ```
 
 During the setup process, the CLI will prompt you for a few configuration options. Select the following:
@@ -112,38 +112,9 @@ Then add the following CSS reference to the **src/App.css** file:
 
 ## Adding Chat UI component
 
-Now, you can start adding Chat UI component in the application. For getting started, add the Chat UI component by using `<ChatUIComponent>` tag directive in `src/App.tsx` file using following code. Now place the below Chat UI code in the `src/App.tsx`.
+The AI AssistView code should be added to the **src/App.tsx** file.
 
-```ts
-import { ChatUIComponent } from '@syncfusion/ej2-react-interactive-chat';
-import * as React from 'react';
-import * as ReactDOM from "react-dom";
-
-function App() {
-    return (
-        // specifies the tag for render the Chat UI component
-        <ChatUIComponent ></ChatUIComponent>
-    );
-}
-
-ReactDOM.render(<App />, document.getElementById('chat-ui'));
-```
-
-## Registering your Syncfusion license
-
-Generate a license key from the [Syncfusion License Dashboard](https://www.syncfusion.com/account/downloads) and register it before rendering your React application:
-
-```ts
-import { registerLicense } from '@syncfusion/ej2-base';
-
-registerLicense('YOUR_LICENSE_KEY');
-```
-
-> **Note:** A valid Syncfusion license is required for production use. Without a valid license, a trial license warning message will be displayed.
-
-## Configure user
-
-Enhance your Chat UI by configuring users. The [user](../api/chat-ui#user) property configures the current user for the chat interface.
+To configure the current user in the Chat UI, use the [user](../api/chat-ui#user) property. This property defines the current user information for the chat interface.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -161,19 +132,20 @@ Enhance your Chat UI by configuring users. The [user](../api/chat-ui#user) prope
 After completing the basic configuration, run the following command to display the Chat UI component in your default browser:
 
 ```bash
-npm start
+npm run dev
 ```
 
-{% tabs %}
-{% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/chat-ui/getting-started/app/index.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/chat-ui/getting-started/app/index.jsx %}
-{% endhighlight %}
-{% endtabs %}
+## Registering your Syncfusion license
 
-{% previewsample "page.domainurl/code-snippet/chat-ui/getting-started" %}
+Generate a license key from the [Syncfusion License Dashboard](https://www.syncfusion.com/account/downloads) and register it before rendering your React application:
+
+```ts
+import { registerLicense } from '@syncfusion/ej2-base';
+
+registerLicense('YOUR_LICENSE_KEY');
+```
+
+> **Note:** A valid Syncfusion license is required for production use. Without a valid license, a trial license warning message will be displayed.
 
 ### Production build
 

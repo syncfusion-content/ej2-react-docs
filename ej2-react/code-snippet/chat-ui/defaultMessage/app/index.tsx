@@ -1,6 +1,4 @@
 import { ChatUIComponent, MessagesDirective, MessageDirective, UserModel } from '@syncfusion/ej2-react-interactive-chat';
-import * as React from 'react';
-import * as ReactDOM from "react-dom";
 
 function App() {
     const currentUserModel: UserModel = {
@@ -25,4 +23,4 @@ function App() {
     );
 }
 
-ReactDOM.render(<App />, document.getElementById('container'));
+export default App;

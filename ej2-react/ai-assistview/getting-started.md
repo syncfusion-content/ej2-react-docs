@@ -30,7 +30,7 @@ To get started quickly with the React AI AssistView component, you can check out
 | [React v19](https://react.dev/blog/2024/12/05/react-19) | 29.1.33 and above |
 | [React v18](https://reactjs.org/blog/2022/03/29/react-v18.html) | 20.2.36 and above |
 | [React v17](https://reactjs.org/blog/2020/10/20/react-v17.html) | 18.3.50 and above |
-| [React v16](https://reactjs.org/blog/2017/09/26/react-v16.0.html) | 16.2.45 and above | |
+| [React v16](https://reactjs.org/blog/2017/09/26/react-v16.0.html) | 16.2.45 and above |
 
 ### Browser support
 
@@ -58,13 +58,13 @@ To create a new React application, run one of the following commands based on yo
 ***React with JavaScript***
 
 ```bash
-npx create vite@latest my-app -- --template react
+npx create-vite@latest my-app -- --template react
 ```
 
 ***React with TypeScript***
 
 ```bash
-npx create vite@latest my-app -- --template react-ts
+npx create-vite@latest my-app -- --template react-ts
 ```
 
 During the setup process, the CLI will prompt you for a few configuration options. Select the following:
@@ -116,42 +116,7 @@ Then add the following CSS reference to the **src/App.css** file:
 
 ## Adding AI AssistView component
 
-Now, you can start adding AI AssistView component in the application. For getting started, add the AI AssistView component by using `<AIAssistViewComponent>` tag directive in `src/App.tsx` file using following code. Now place the below AI AssistView code in the `src/App.tsx`.
-
-```ts
-import { AIAssistViewComponent } from '@syncfusion/ej2-react-interactive-chat';
-import * as React from 'react';
-import * as ReactDOM from "react-dom";
-
-function App() {
-    return (
-        // specifies the tag for render the AI AssistView component
-        <AIAssistViewComponent ></AIAssistViewComponent>
-    );
-}
-
-ReactDOM.render(<App />, document.getElementById('aiAssistView'));
-```
-
-## Registering your Syncfusion License
-
-Generate a license key from the [Syncfusion License Dashboard](https://www.syncfusion.com/account/downloads) and register it before rendering your React application:
-
-```ts
-import { registerLicense } from '@syncfusion/ej2-base';
-
-registerLicense('YOUR_LICENSE_KEY');
-```
-
-> **Note:** A valid Syncfusion license is required for production use. Without a valid license, a trial license warning message will be displayed.
-
-## Run the application
-
-With the configuration complete, run the application to see the AI AssistView component rendered in your browser.
-
-```
-npm start
-```
+The AI AssistView code should be added to the **src/App.tsx** file.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -164,7 +129,26 @@ npm start
 
 {% previewsample "page.domainurl/code-snippet/ai-assistview/getting-started" %}
 
+## Run the application
+
+With the configuration complete, run the application to see the AI AssistView component rendered in your browser.
+
+```
+npm run dev
+```
 > **Note:** Starting from version 33.1x, when a user submits a prompt to the AI AssistView, the component automatically scrolls and focuses on the latest prompt and response. This behavior eliminates the need for users to manually scroll down to see the new response, ensuring they always view the most recent AI response without interruption. Prior to version 33.1x, the previous responses remained visible when new responses were added.
+
+## Registering your Syncfusion License
+
+Generate a license key from the [Syncfusion License Dashboard](https://www.syncfusion.com/account/downloads) and register it before rendering your React application:
+
+```ts
+import { registerLicense } from '@syncfusion/ej2-base';
+
+registerLicense('YOUR_LICENSE_KEY');
+```
+
+> **Note:** A valid Syncfusion license is required for production use. Without a valid license, a trial license warning message will be displayed.
 
 ## Configure suggestions and asynchronous responses
 

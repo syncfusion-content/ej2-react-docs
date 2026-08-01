@@ -1,6 +1,4 @@
 {% raw %}
-
-
 import {
   AreaSeries, DateTime, Inject, RangeNavigatorComponent, RangenavigatorSeriesCollectionDirective,
   RangenavigatorSeriesDirective, RangeTooltip
@@ -27,7 +25,5 @@ export default App;
 
 const root = ReactDOM.createRoot(document.getElementById('charts'));
 root.render(<App />);
-
-
 
 {% endraw %}

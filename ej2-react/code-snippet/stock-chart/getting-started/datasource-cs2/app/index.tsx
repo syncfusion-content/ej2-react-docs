@@ -1,6 +1,3 @@
-
-
-
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
@@ -44,5 +41,3 @@ export default App;
 
 const root = ReactDOM.createRoot(document.getElementById('charts'));
 root.render(<App />);
-
-

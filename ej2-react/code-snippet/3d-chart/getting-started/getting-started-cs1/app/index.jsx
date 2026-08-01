@@ -4,7 +4,6 @@ import * as ReactDOM from "react-dom";
 function App() {
     return <Chart3DComponent id='charts' />;
 }
-;
 export default App;
 
 const root = ReactDOM.createRoot(document.getElementById('charts'));
