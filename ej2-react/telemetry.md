@@ -134,7 +134,9 @@ If you do not want telemetry to be collected during development, disable it befo
 
 If you are using npm packages and ES module imports, call `Telemetry` from `@syncfusion/ej2-base` before creating any EJ2 component.
 
-```tsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import { Telemetry } from '@syncfusion/ej2-base';
 
@@ -169,7 +171,9 @@ function App() {
 }
 
 export default App;
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 > Note: Call `Telemetry.disable();` before creating or using any Syncfusion<sup style="font-size:70%">&reg;</sup> React component.
 

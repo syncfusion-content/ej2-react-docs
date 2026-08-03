@@ -169,7 +169,7 @@ export let data: Object[] = [
 'use client'
 import {
   ColumnDirective, ColumnsDirective, GridComponent,
-  Inject, Page, Sort, Filter, Group
+  Inject, Sort, Filter, Group
 } from '@syncfusion/ej2-react-grids';
 import { data } from "./datasource";
 
@@ -184,10 +184,8 @@ export default function Home() {
         allowGrouping={true}
         allowSorting={true}
         allowFiltering={true}
-        allowPaging={true}
         pageSettings={pageSettings}
         filterSettings={filterSettings}
-        height={180}
       >
         <ColumnsDirective>
           <ColumnDirective field="OrderID" width="100" textAlign="Right" />
@@ -201,7 +199,7 @@ export default function Home() {
           />
           <ColumnDirective field="ShipCountry" width="100" />
         </ColumnsDirective>
-        <Inject services={[Page, Sort, Filter, Group]} />
+        <Inject services={[ Sort, Filter, Group]} />
       </GridComponent>
     </>
   )

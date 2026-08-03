@@ -1,18 +1,26 @@
 ---
 layout: post
-title: Release Notes - Syncfusion React AI and Smart Tooling | Syncfusion
-description: Explore the release notes for Syncfusion React AI and Smart Tooling, covering MCP Server, Skills, and Agentic UI Builder updates across all versions.
-control: Syncfusion React AI and Smart Tooling Release Notes
+title: Release Notes - Syncfusion React AI Coding Assistants | Syncfusion
+description: Explore the release notes for Syncfusion React AI Coding Assistants, covering MCP Server, Skills, and Agentic UI Builder updates across all versions.
+control: Syncfusion React AI Coding Assistants Release Notes
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion React AI and Smart Tooling Release Notes
+# Syncfusion React AI Coding Assistants Release Notes
 
-This document provides information about the changes and new features included in each version of the Syncfusion React AI and Smart Tooling, including the [@syncfusion/react-assistant](https://www.npmjs.com/package/@syncfusion/react-assistant) MCP Server, Skills, Agentic UI Builder and so on.
+This document provides information about the changes and new features included in each version of the Syncfusion React AI Coding Assistants, including the [@syncfusion/react-mcp](https://www.npmjs.com/package/@syncfusion/react-mcp) MCP Server, Skills, Agentic UI Builder and so on.
 
 ## MCP Server
+
+**(v1.0.0) - August 3, 2026**
+
+**Breaking Changes**
+
+- The package has been renamed from [@syncfusion/react-assistant](https://www.npmjs.com/package/@syncfusion/react-assistant) to [@syncfusion/react-mcp](https://www.npmjs.com/package/@syncfusion/react-mcp). The [@syncfusion/react-assistant](https://www.npmjs.com/package/@syncfusion/react-assistant) package is deprecated and will no longer receive updates.
+
+- The coding assistant tool identifier has been changed from **`sf_react_assistant`** to **`search_docs`** for a better naming convention.
 
 **(v3.0.0) - July 21, 2026**
 
@@ -58,7 +66,7 @@ This document provides information about the changes and new features included i
 
 **Features**
 
-- Initial release of AI Coding Assistant for Syncfusion React components.
+- Initial release of AI Coding Assistants for Syncfusion React components.
 - Provides context-aware assistance for building React applications with Syncfusion components.
 - Includes support for component APIs, properties, and troubleshooting guidance.
 
@@ -66,7 +74,7 @@ This document provides information about the changes and new features included i
 
 **Features**
 
-- Introduced [Agent Skills](https://www.syncfusion.com/explore/agent-skills) — a set of lightweight, modular capabilities that extend the AI Coding Assistant with specialized knowledge, including pre-defined instructions, best practices, and curated code patterns for building React applications with Syncfusion components.
+- Introduced [Agent Skills](https://www.syncfusion.com/explore/agent-skills) — a set of lightweight, modular capabilities that extend the AI Coding Assistants with specialized knowledge, including pre-defined instructions, best practices, and curated code patterns for building React applications with Syncfusion components.
 - Each skill is defined in a simple, readable `SKILL.md` file that specifies the correct setup, required modules, current APIs and patterns, and what a valid implementation looks like for a given component.
 - Works as a standard, lightweight approach supported by modern AI development tools: install skills, the tool detects them, and the relevant skill is automatically applied to the user's prompt.
 

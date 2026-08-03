@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 This article provides a step-by-step guide for setting up a [SharePoint](https://learn.microsoft.com/en-us/sharepoint/dev/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React components.
 
-`SharePoint` Framework (SPFx) is a development model and framework provided by Microsoft for building custom solutions and extensions for SharePoint and Microsoft Teams. It is a modern, client-side framework that allows developers to create web parts, extensions, and customizations that can be deployed and used within SharePoint sites and Teams applications.
+The SharePoint Framework (SPFx) is a development model and framework provided by Microsoft for building custom solutions and extensions for SharePoint and Microsoft Teams. It is a modern, client-side framework that allows developers to create web parts, extensions, and customizations that can be deployed and used within SharePoint sites and Teams applications.
 
 ## Prerequisites
 
@@ -30,18 +30,18 @@ Create a new SPFx project using the following command:
 yo @microsoft/sharepoint
 ```
 
-**Step 2:** Specify the name of the project as `my-project` and the name of the WebPart as `App` for this article. You will be prompted with a series of configuration questions as shown below:
+**Step 2:** Specify the name of the project as `my-project` and the name of the Web part as `App` for this article. You will be prompted with a series of configuration questions as shown below:
 
 ```bash
 Let's create a new Microsoft 365 solution.
 ? What is your solution name? my-project
-? Which type of client-side component to create? WebPart
-Add new Web part to solution my-project.
-? What is your Web part name? App
+? Which type of client-side component to create? Web part
+Add a new web part to solution my-project.
+? What is your web part name? App
 ? Which template would you like to use? React
 ```
 
-**Step 3:** To establish trust for the certificate in the development environment, execute the following command:
+**Step 3:** To trust the development certificate, run the following command:
 
 ```bash
 heft trust-dev-cert
@@ -50,7 +50,6 @@ heft trust-dev-cert
 With these steps complete, your `my-project` SharePoint Framework solution is ready for Syncfusion<sup style="font-size:70%">&reg;</sup> component integration.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
-
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
 This guide uses the [React Grid component](https://www.syncfusion.com/react-components/react-data-grid) as an example. To install the React Grid component package, use the following command:
@@ -63,34 +62,30 @@ npm install @syncfusion/ej2-react-grids --save
 
 Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
 
-This example uses the `Tailwind 3` theme for the Grid component from the theme package. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+This example imports the `tailwind3` theme CSS in `~/src/webparts/app/AppWebPart.ts`:
 
 {% tabs %}
-{% highlight bash tabtitle="npm" %}
+{% highlight ts tabtitle="AppWebPart.ts" %}
 
-npm install @syncfusion/ej2-tailwind3-theme --save
+import { SPComponentLoader } from '@microsoft/sp-loader';
 
-{% endhighlight %}
-{% highlight bash tabtitle="yarn" %}
+...
+...
 
-yarn add @syncfusion/@syncfusion/ej2-tailwind3-theme
+protected onInit(): Promise<void>{
+  // Load Syncfusion Tailwind 3 theme
+  SPComponentLoader.loadCss('https://cdn.syncfusion.com/ej2/34.1.29/tailwind3.css');
+    return this._getEnvironmentMessage().then(message => {
+    this._environmentMessage = message;
+  });
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-This example demonstrates importing the `tailwind3` theme CSS within the `App.tsx` file located at `~/src/webparts/app/components/App.tsx`:
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React components
 
-{% tabs %}
-{% highlight ts tabtitle="App.tsx" %}
-
-require('@syncfusion/ej2-tailwind3-theme/styles/grid/index.css');
-
-{% endhighlight %}
-{% endtabs %}
-
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React component
-
-Follow the below steps to add the React Grid component:
+Follow these steps to add the React Grid component:
 
 **Step 1:** In the `App.tsx` file inside the **~/src/webparts/app/components** folder, declare the values for the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource) property.
 
@@ -140,7 +135,7 @@ export default class App extends React.Component<IAppProps, {}> {
 {% endhighlight %}
 {% endtabs %}
 
-Here is the summarized code for the above steps:
+Here is the complete code for the above steps:
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -148,8 +143,6 @@ Here is the summarized code for the above steps:
 import * as React from 'react';
 import { IAppProps } from './IAppProps';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-
-require('@syncfusion/ej2-tailwind3-theme/styles/grid/index.css');
 
 export default class App extends React.Component<IAppProps, {}> {
   
@@ -182,6 +175,17 @@ export default class App extends React.Component<IAppProps, {}> {
 
 {% endhighlight %}
 {% endtabs %}
+
+Set your tenant domain in the `serve.json` file located in the `config` folder.
+
+ ```
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "initialPage": "https://{tenantDomain}/_layouts/workbench.aspx"
+}
+ ```
 
 ## Run the project
 

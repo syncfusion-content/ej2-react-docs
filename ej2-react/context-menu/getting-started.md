@@ -12,22 +12,6 @@ domainurl: ##DomainURL##
 
 This section explains how to create a simple Context Menu and configure its core functionalities in a React application.
 
-## Dependencies
-
-The following dependencies are required to use the Context Menu component:
-
-```javascript
-|-- @syncfusion/ej2-react-navigations
-    |-- @syncfusion/ej2-react-base
-    |-- @syncfusion/ej2-navigations
-        |-- @syncfusion/ej2-base
-        |-- @syncfusion/ej2-data
-        |-- @syncfusion/ej2-inputs
-        |-- @syncfusion/ej2-lists
-        |-- @syncfusion/ej2-popups
-            |-- @syncfusion/ej2-buttons
-```
-
 ## Prerequisites
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement)
@@ -101,7 +85,7 @@ The required styles for the Context Menu component are imported in the **src/App
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
 
-@import "@syncfusion/ej2-tailwind3-theme/styles/tailwind3.css";
+@import "@syncfusion/ej2-tailwind3-theme/styles/context-menu/index.css";
 
 {% endhighlight %}
 {% endtabs %}
@@ -114,9 +98,9 @@ Replace the existing boilerplate content in `src/App.jsx` with the following cod
 
 The `target` prop accepts a CSS selector string that specifies the element on which the Context Menu opens (on right-click or touch hold). The `items` prop accepts an array of menu item objects — each item supports `text`, `iconCss`, and nested `items` for sub-menus. For a full list of supported properties, see the [ContextMenuComponent API reference](https://ej2.syncfusion.com/react/documentation/api/context-menu).
 
-**App.jsx**
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
 
-```js
 import { ContextMenuComponent } from '@syncfusion/ej2-react-navigations';
 import * as React from 'react';
 import './App.css';
@@ -139,26 +123,20 @@ function App() {
       </div>);
 }
 export default App;
-```
-
-## Run the application
-
-To run the project, use the following command:
-
-{% tabs %}
-{% highlight bash tabtitle="npm" %}
-
-npm run dev
-
-{% endhighlight %}
-{% highlight bash tabtitle="yarn" %}
-
-yarn run dev
 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/context-menu/getting-started-cs1" %}
+## Run the application
+
+Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+
+```bash
+npm run dev
+```
+The output will appear as follows:
+
+{% previewsample "page.domainurl/code-snippet/context-menu/getting-started-cs1" %}
 
  > Refer to the [React Context Menu](https://www.syncfusion.com/react-components/react-context-menu) feature tour page for its groundbreaking feature representations. You can also explore our [React Context Menu component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/context-menu/default) that shows how to render the Context Menu in React.
 

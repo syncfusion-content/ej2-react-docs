@@ -87,7 +87,7 @@ The required styles for the DropDownButton component are imported in the **src/A
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
 
-@import "@syncfusion/ej2-tailwind3-theme/styles/tailwind3.css";
+@import "@syncfusion/ej2-tailwind3-theme/styles/drop-down-button/index.css";
 
 {% endhighlight %}
 {% endtabs %}
@@ -98,7 +98,9 @@ The required styles for the DropDownButton component are imported in the **src/A
 
 Add the DropDownButton component to the **src/App.jsx** file using the following code.
 
-```js
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+
 import { DropDownButtonComponent} from '@syncfusion/ej2-react-splitbuttons';
 import { enableRipple } from '@syncfusion/ej2-base';
 import * as React from 'react';
@@ -124,24 +126,19 @@ function App() {
     );
 }
 export default App;
-```
-
-## Run the application
-
-To run the project, use the following command:
-
-{% tabs %}
-{% highlight bash tabtitle="npm" %}
-
-npm run dev
-
-{% endhighlight %}
-{% highlight bash tabtitle="yarn" %}
-
-yarn run dev
 
 {% endhighlight %}
 {% endtabs %}
+
+## Run the application
+
+Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+
+```bash
+npm run dev
+```
+
+The output will appear as follows:
 
  {% previewsample "page.domainurl/code-snippet/drop-down-button/getting-started-cs1" %}
 
