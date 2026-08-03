@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Release Notes - Syncfusion React AI and Smart Tooling | Syncfusion
-description: Explore the release notes for Syncfusion Angular AI and Smart Tooling, covering MCP Server, Skills, and Agentic UI Builder updates across all versions.
+description: Explore the release notes for Syncfusion React AI and Smart Tooling, covering MCP Server, Skills, and Agentic UI Builder updates across all versions.
 control: Syncfusion React AI and Smart Tooling Release Notes
 platform: ej2-react
 documentation: ug
