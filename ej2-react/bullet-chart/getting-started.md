@@ -18,15 +18,11 @@ This section describes the steps to create a simple Bullet Chart component.
 
 Before getting started, ensure that your development environment meets the [system requirements for Syncfusion® React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement). That page documents the supported React, Node.js, and npm versions, and includes the React-version compatibility table for Syncfusion React components.
 
-- Basic knowledge of React and TypeScript (recommended)
-- A code editor like Visual Studio Code
-
 ## Dependencies
 
 The Bullet Chart component is shipped as part of the `@syncfusion/ej2-react-charts` package. Below is the list of minimum dependencies required to use the component.
 
 ```
-
 |-- @syncfusion/ej2-react-charts
     |-- @syncfusion/ej2-base
     |-- @syncfusion/ej2-data
@@ -38,93 +34,56 @@ The Bullet Chart component is shipped as part of the `@syncfusion/ej2-react-char
     |-- @syncfusion/ej2-svg-base
 ```
 
-## Set up the React project
+## Set up a development environment
 
-To create a new React application, use the Vite CLI, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide).
+To set up a React application quickly, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up the environment using JavaScript and optimizes applications for production.
 
-> **Note:** To create a React application using `create-react-app` instead, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+> As an alternative, you can create a React application using [`create-react-app`](https://github.com/facebook/create-react-app). For detailed instructions, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app).
 
-To create a new React application, run the following command.
+To create a new React application, run one of the following commands based on your preferred language:
 
-```bash
-npm create vite@latest my-app
+**React with JavaScript**
+
 ```
-
-This command prompts you to select a framework and a variant.
-
-![Initial_setup](../images/Initial-setup.jpg)
-
-To set up a React application in a TypeScript environment, run the following command.
-
-```bash
-npm create vite@latest my-app -- --template react-ts
-cd my-app
-```
-
-To set up a React application in a JavaScript environment, run the following command.
-
-```bash
 npm create vite@latest my-app -- --template react
+```
+
+**React with TypeScript**
+
+```
+npm create vite@latest my-app -- --template react-ts
+```
+
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
+
+- **Which linter to use?** → **ESLint**
+- **Install with npm and start now?** → **Yes**
+
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
+
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
+
+Then, navigate to the project directory:
+
+```
 cd my-app
 ```
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Bullet Chart Package
+## Install the Syncfusion® React Bullet Chart package
 
-All Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published on the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. To install the Bullet Chart package, use the following command:
+All Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published on the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. 
+
+To install the Bullet Chart package, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-charts
 ```
 
-This adds the Bullet Chart package to the `dependencies` section of `package.json`.
+## Add the Bullet Chart component to the project
 
-## Add Bullet Chart to the project
+Open the application entry file (`src/App.jsx` or `src/App.tsx`) and add the Bullet Chart component using the following code.
 
-Open your entry file (`src/App.jsx` or `src/App.tsx`) and add the Bullet Chart component using the following code.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-import { BulletChartComponent } from "@syncfusion/ej2-react-charts";
-import * as React from "react";
-
-function App() {
-    return <BulletChartComponent id="bulletChart" />;
-}
-export default App;
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-import { BulletChartComponent } from "@syncfusion/ej2-react-charts";
-import * as React from "react";
-
-function App() {
-    return <BulletChartComponent id="bulletChart" />;
-}
-export default App;
-{% endhighlight %}
-{% endtabs %}
-
-Render the `App` component in `src/main.jsx` or `src/main.tsx` as shown below.
-
-{% tabs %}
-{% highlight js tabtitle="main.jsx" %}
-import * as React from "react";
-import * as ReactDOM from "react-dom/client";
-import App from "./App";
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
-{% endhighlight %}
-{% highlight ts tabtitle="main.tsx" %}
-import * as React from "react";
-import * as ReactDOM from "react-dom/client";
-import App from "./App";
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
-{% endhighlight %}
-{% endtabs %}
-
-The example below shows a basic Bullet Chart component rendered with no data.
+The following example demonstrates how to render a basic Bullet Chart component without binding any data.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -137,39 +96,29 @@ The example below shows a basic Bullet Chart component rendered with no data.
 
 {% previewsample "page.domainurl/code-snippet/bullet-chart/preview-sample/getting-started/initialize-cs1" %}
 
-## Module injection
+## Inject Required Modules
 
-The Bullet Chart component is segregated into individual feature-wise modules. To use a particular feature, inject its feature service using the `Inject` component. The following module is available:
+Bullet Chart features are delivered as separate modules and must be explicitly injected. The `Inject` component accepts a `services` array that registers the modules required by the Bullet Chart component. Injecting only the modules you need helps reduce the application bundle size.
 
-- `BulletTooltip` - Inject this module to use the tooltip feature.
+In this example, the `BulletTooltip` module is injected to enable tooltip functionality in the Bullet Chart.
 
-Import the required module from the chart package and inject it using the `Inject` component as follows. You can list multiple modules comma-separated inside the `services` array.
+* `BulletTooltip` - Inject this module into the `services` array to enable tooltips in the Bullet Chart.
+
+Import the required module from the Charts package and register it through the `Inject` component as shown below.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-import { BulletChartComponent, BulletTooltip, Inject } from "@syncfusion/ej2-react-charts";
-import * as React from "react";
-
-function App() {
-    return (
-      <BulletChartComponent id="bulletChart">
-        <Inject services={[BulletTooltip]} />
-      </BulletChartComponent>
-    );
-}
-export default App;
-{% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-import { BulletChartComponent, BulletTooltip, Inject } from "@syncfusion/ej2-react-charts";
-import * as React from "react";
+import { BulletChartComponent, BulletTooltip, Inject } from '@syncfusion/ej2-react-charts';
+import * as React from 'react';
 
 function App() {
-    return (
-      <BulletChartComponent id="bulletChart">
-        <Inject services={[BulletTooltip]} />
-      </BulletChartComponent>
-    );
+  return (
+    <BulletChartComponent id="bulletChart">
+      <Inject services={[BulletTooltip]} />
+    </BulletChartComponent>
+  );
 }
+
 export default App;
 {% endhighlight %}
 {% endtabs %}
@@ -179,16 +128,8 @@ export default App;
 This section explains how to plot the following JSON data in the Bullet Chart component.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-const data = [
-    { value: 100, target: 80 },
-    { value: 200, target: 180 },
-    { value: 300, target: 280 },
-    { value: 400, target: 380 },
-    { value: 500, target: 480 }
-];
-{% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
+
 interface DataPoint {
     value: number;
     target: number;
@@ -204,7 +145,7 @@ const data: DataPoint[] = [
 {% endhighlight %}
 {% endtabs %}
 
-Assign the local data to the `dataSource` property on the `BulletChartComponent`. Map the `value` key to the `valueField` prop and the `target` key to the `targetField` prop. Other commonly used props include `minimum`, `maximum`, and `interval` for the value axis, and `title` for the chart header.
+Assign the local data to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/bullet-chart/index-default#datasource) property of the `BulletChartComponent`. Map the `value` field to the [`valueField`](https://ej2.syncfusion.com/react/documentation/api/bullet-chart/index-default#valuefield) property and the `target` field to the [`targetField`](https://ej2.syncfusion.com/react/documentation/api/bullet-chart/index-default#targetfield) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -217,15 +158,13 @@ Assign the local data to the `dataSource` property on the `BulletChartComponent`
 
 {% previewsample "page.domainurl/code-snippet/bullet-chart/preview-sample/getting-started/datasource-cs1" %}
 
-## Run the Development Server
+## Run the application
 
-Run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally at `http://localhost:5173` by default. Add `--open` to the command to open the browser automatically.
+Run the application using the following command:
 
 ```bash
 npm run dev
 ```
-
-> To stop the development server, press `Ctrl+C` in the terminal.
 
 ## Troubleshooting
 
@@ -253,11 +192,12 @@ Use the following guidance to resolve common issues when getting started with th
 
 Explore the following related topics:
 
-- [Title and Subtitle](./title)
-- [Ranges](./ranges)
-- [Tooltip](./tool-tip)
-- [Data Labels](./data-label)
-- [Axis Customization](./axis-customization)
-- [Working with Data](./data-binding)
-- [Dimensions](./bullet-chart-dimensions)
-- [Accessibility](./accessibility)
+* [Title and Subtitle](./title)
+* [Ranges](./ranges)
+* [Tooltip](./tool-tip)
+* [Data Labels](./data-label)
+* [Axis Customization](./axis-customization)
+* [Working with Data](./data-binding)
+* [Dimensions](./bullet-chart-dimensions)
+* [Accessibility](./accessibility)
+* [Bullet Chart API reference](https://ej2.syncfusion.com/react/documentation/api/bullet-chart/index-default)

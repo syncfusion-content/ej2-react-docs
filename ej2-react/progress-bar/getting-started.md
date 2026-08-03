@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with React Progress Bar Component | Syncfusion
 description: Learn how to get started with the React Progress Bar component of Syncfusion Essential JS 2 and configure its properties.
-control: Getting started
+control: Getting Started
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -14,10 +14,7 @@ This section explains the steps required to create the Progress Bar component us
 
 ## Prerequisites
 
-Before getting started, ensure you have:
-
-- [Node.js](https://nodejs.org/en) version 14 or later installed
-- React 16 or later (React 18+ recommended for `createRoot`)
+Before getting started, ensure that your development environment meets the [system requirements for Syncfusion® React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement). That page documents the supported React, Node.js, and npm versions, and includes the React-version compatibility table for Syncfusion React components.
 
 ## Dependencies
 
@@ -32,53 +29,58 @@ Below is the list of minimum dependencies required to use the Progress Bar compo
 
 These dependencies will be installed automatically when you install the main package.
 
-## Installation and Configuration
+## Set up a development environment
 
-To easily set up a React application, use the Vite CLI (`npm create vite`), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To set up a React application quickly, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up the environment using JavaScript and optimizes applications for production.
 
-> **Note:** To create a React application using `create-react-app` instead, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+> As an alternative, you can create a React application using [`create-react-app`](https://github.com/facebook/create-react-app). For detailed instructions, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app).
 
-To create a new React application, run the following command.
+To create a new React application, run one of the following commands based on your preferred language:
 
-```bash
-npm create vite@latest my-app
+**React with JavaScript**
+
 ```
-This command will prompt you for a few settings for the new project, such as selecting a framework and a variant.
-
-![Initial setup - Vite prompts for framework and variant selection](images/Initial-setup.jpg)
-
-To set up a React application in a TypeScript environment, run the following command.
-
-```bash
-npm create vite@latest my-app -- --template react-ts
-cd my-app
-npm run dev
-```
-To set up a React application in a JavaScript environment, run the following command.
-
-```bash
 npm create vite@latest my-app -- --template react
-cd my-app
-npm run dev
 ```
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Progress Bar Package
+**React with TypeScript**
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+```
+npm create vite@latest my-app -- --template react-ts
+```
 
-To install the Syncfusion<sup style="font-size:70%">&reg;</sup> Progress Bar package, use the following command.
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
+
+- **Which linter to use?** → **ESLint**
+- **Install with npm and start now?** → **Yes**
+
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
+
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
+
+Then, navigate to the project directory:
+
+```
+cd my-app
+```
+
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> React Progress Bar Package
+
+All Syncfusion Essential® JS 2 packages are available in the [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry.
+
+Install the React Progress Bar package using the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-progressbar
 ```
 
-## Add the Progress Bar Component
+## Add the Progress Bar Component to the Project
 
-Now you can add the Progress Bar component to your application. Update the `src/App.tsx` (or `src/App.jsx`) file with the following code to create a basic linear Progress Bar.
+Add the Progress Bar component to `src/App.tsx` using the following code to create a basic linear Progress Bar.
 
-**TypeScript (src/App.tsx):**
+{% tabs %}
+{% highlight ts tabtitle="~/src/App.tsx" %}
 
-```ts
 import { ProgressBarComponent } from '@syncfusion/ej2-react-progressbar';
 import * as React from 'react';
 
@@ -88,33 +90,9 @@ function App() {
   )
 }
 export default App;
-```
 
-Ensure `src/main.tsx` contains the following code to render the component into `<div id="root">` defined in `index.html`.
-
-**TypeScript (src/main.tsx):**
-
-```ts
-import { createRoot } from 'react-dom/client';
-import * as React from 'react';
-import App from './App';
-
-createRoot(document.getElementById('root')!).render(<App />);
-```
-
-**JavaScript (src/App.jsx):**
-
-```
-import { ProgressBarComponent } from '@syncfusion/ej2-react-progressbar';
-import * as React from 'react';
-
-function App() {
-  return (
-    <ProgressBarComponent id="linear" type="Linear" value={40} />
-  )
-}
-export default App;
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Run the Application
 
@@ -139,7 +117,7 @@ The following demonstrates a complete implementation, including the entry file a
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/progress-bar/default-cs9" %}
+{% previewsample "page.domainurl/code-snippet/progress-bar/default-cs9" %}
 
 ## Troubleshooting
 
@@ -151,7 +129,7 @@ Common issues and fixes:
 
 ## See also
 
-* [Progress Bar types](types.md)
-* [Progress Bar accessibility](accessibility.md)
-* [Progress Bar events](events.md)
-* [Progress Bar API reference](https://ej2.syncfusion.com/react/documentation/api/progressbar)
+* [Progress Bar types](types)
+* [Progress Bar accessibility](accessibility)
+* [Progress Bar events](events)
+* [Progress Bar API Reference](https://ej2.syncfusion.com/react/documentation/api/progressbar)

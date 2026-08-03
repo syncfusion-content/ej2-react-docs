@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React HeatMap chart component
+# Getting Started with React HeatMap Chart Component
 
 This section explains the steps required to create a HeatMap and demonstrates the basic usage of the HeatMap component.
 
@@ -19,9 +19,6 @@ You can explore some useful features in the HeatMap component using the followin
 ## Prerequisites
 
 Before getting started, ensure that your development environment meets the [system requirements for Syncfusion® React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement). That page documents the supported React, Node.js, and npm versions, and includes the React-version compatibility table for Syncfusion React components.
-
-- Basic knowledge of React and TypeScript (recommended)
-- A code editor like Visual Studio Code
 
 ## Dependencies
 
@@ -36,72 +33,54 @@ The following list shows the package dependencies for the HeatMap component.
      |-- @syncfusion/ej2-react-base
 ```
 
-## Installation and configuration
+## Set up a development environment
 
-To easily set up a React application, use `create-vite`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
+To set up a React application quickly, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up the environment using JavaScript and optimizes applications for production.
 
-> **Note:** To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+> As an alternative, you can create a React application using [`create-react-app`](https://github.com/facebook/create-react-app). For detailed instructions, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app).
 
-To create a new Vite React application, run the following command:
+To create a new React application, run one of the following commands based on your preferred language:
 
-```bash
-npm create vite@latest my-app
+**React with JavaScript**
+
 ```
-
-To set up a React application in TypeScript environment, run the following commands:
-
-```bash
-npm create vite@latest my-app -- --template react-ts
-cd my-app
-npm install
-npm run dev
-```
-
-To set up a React application in JavaScript environment, run the following commands:
-
-```bash
 npm create vite@latest my-app -- --template react
-cd my-app
-npm install
-npm run dev
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
+**React with TypeScript**
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. To install the HeatMap package, run the following command in your project directory:
+```
+npm create vite@latest my-app -- --template react-ts
+```
+
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
+
+- **Which linter to use?** → **ESLint**
+- **Install with npm and start now?** → **Yes**
+
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
+
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
+
+Then, navigate to the project directory:
+
+```
+cd my-app
+```
+
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React HeatMap packages
+
+All Syncfusion Essential® JS 2 packages are available in the [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry.
+
+Install the React HeatMap package using the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-heatmap
 ```
 
-Installing `@syncfusion/ej2-react-heatmap` automatically pulls in all required transitive dependencies.
+## Add the HeatMap Chart Component to the Project
 
-## Adding HeatMap to the project
-
-Add the HeatMap component to the application. For a basic example, add the component in `src/App.tsx` (or `src/App.jsx`) using the following code, then mount it into the `#container` element with `createRoot`:
-
-```ts
-import * as React from 'react';
-import { createRoot } from 'react-dom/client';
-import { HeatMapComponent } from '@syncfusion/ej2-react-heatmap';
-
-export function App() {
-  return (<HeatMapComponent id='heatmap'></HeatMapComponent>);
-}
-
-export default App;
-
-const root = createRoot(document.getElementById('container')!);
-root.render(<App />);
-```
-
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
-
-```bash
-npm run dev
-```
-
-The following example shows a complete basic HeatMap. It includes the data source used in the later sections of this guide:
+Add the HeatMap Chart component to `src/App.tsx` using the following code to create a basic HeatMap Chart component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -114,16 +93,17 @@ The following example shows a complete basic HeatMap. It includes the data sourc
 
 {% previewsample "page.domainurl/code-snippet/heatmap/getting-started-cs1" %}
 
-## Module injection
+## Inject Required Modules
 
-HeatMap features are segregated into individual feature-wise modules. To use a feature, inject its service into the HeatMap component using the `<Inject>` child element with the `services` prop. The following modules are used in the examples in this guide:
+HeatMap features are delivered as separate modules and must be explicitly injected. The `Inject` component accepts a `services` array that registers the modules required by the HeatMap component. Injecting only the modules you need helps reduce the application bundle size.
 
-- **Legend** - Provides the legend feature by injecting it.
-- **Tooltip** - Provides the tooltip feature by injecting it.
- 
-> **Note:** Injecting a module is required only for the features you use. For example, if you do not inject the `Tooltip` module, the `showTooltip` property will have no effect.
+In this example, the `Legend` and `Tooltip` modules are injected to enable legend and tooltip functionality in the HeatMap Chart.
 
-Import the modules from the HeatMap package and inject them as shown below. Note that `createRoot` is imported from `react-dom/client` (React 18+):
+* `Legend` - Inject this module into the `services` array to enable the legend feature.
+* `Tooltip` - Inject this module into the `services` array to enable tooltips.
+
+Import the required modules from the HeatMap package and register them through the `Inject` component as shown below:
+
 
 ```ts
 import * as React from "react";
@@ -139,18 +119,15 @@ export function App() {
 }
 
 export default App;
-
 const root = createRoot(document.getElementById('container')!);
 root.render(<App />);
 ```
 
-> **Note:** In React 18 and later, `createRoot` is provided by `react-dom/client`. If you are using React 17 or earlier, use `ReactDOM.render(<App />, document.getElementById('container'))` instead.
+> In React 18 and later, `createRoot` is provided by `react-dom/client`. If you are using React 17 or earlier, use `ReactDOM.render(<App />, document.getElementById('container'))` instead.
 
-For a complete list of injectable HeatMap modules, see the [HeatMap API reference](https://ej2.syncfusion.com/react/documentation/api/heatmap).
+## Bind Data to the HeatMap Component
 
-## Populate heat map with data
-
-This section shows how to populate the heat map with a two-dimensional array of values using the `dataSource` property:
+This section shows how to populate the heat map with a two-dimensional array of values using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/heatmap/index-default#datasource) property:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -163,6 +140,14 @@ This section shows how to populate the heat map with a two-dimensional array of 
 
 {% previewsample "page.domainurl/code-snippet/heatmap/getting-started-cs2" %}
 
+## Run the application
+
+Run the application using the following command:
+
+```bash
+npm run dev
+```
+
 ## Troubleshooting
 
 - **`createRoot is not a function`** — Likely cause: `createRoot` imported from `react-dom` instead of `react-dom/client`. Fix: Import `createRoot` from `react-dom/client` (React 18+).
@@ -170,11 +155,11 @@ This section shows how to populate the heat map with a two-dimensional array of 
 
 ## See also
 
-* [HeatMap appearance](appearance.md)
-* [HeatMap axis](axis.md)
-* [HeatMap events](events.md)
-* [HeatMap legend](legend.md)
-* [HeatMap palette](palette.md)
-* [HeatMap tooltip](tooltip.md)
-* [HeatMap API reference](https://ej2.syncfusion.com/react/documentation/api/heatmap)
+* [HeatMap appearance](appearance)
+* [HeatMap axis](axis)
+* [HeatMap events](events)
+* [HeatMap legend](legend)
+* [HeatMap palette](palette)
+* [HeatMap tooltip](tooltip)
+* [HeatMap API Reference](https://ej2.syncfusion.com/react/documentation/api/heatmap)
  

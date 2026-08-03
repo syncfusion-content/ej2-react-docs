@@ -16,9 +16,6 @@ This document explains the steps required to create and render a TreeMap compone
 
 Before getting started, ensure that your development environment meets the [system requirements for Syncfusion® React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement). That page documents the supported React, Node.js, and npm versions, and includes the React-version compatibility table for Syncfusion React components.
 
-- Basic knowledge of React and TypeScript (recommended)
-- A code editor like Visual Studio Code
-
 ## Dependencies
 
 The following list of minimum dependencies is required to use the TreeMap component:
@@ -33,37 +30,46 @@ The following list of minimum dependencies is required to use the TreeMap compon
 |-- @syncfusion/ej2-react-base
 ```
 
-> **Note:** The `ej2-pdf-export` dependency is required only when you use the print and export features. See the [Print and Export](print-and-export) section for details.
+## Set up a development environment
 
-## Installation and configuration
+To set up a React application quickly, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up the environment using JavaScript and optimizes applications for production.
 
-To set up a React application, use the [Vite](https://vitejs.dev/guide) scaffolding tool, which provides a faster development environment, smaller bundle sizes, and optimized builds compared with traditional tools like `create-react-app`.
+> As an alternative, you can create a React application using [`create-react-app`](https://github.com/facebook/create-react-app). For detailed instructions, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app).
 
-> **Note:** To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+To create a new React application, run one of the following commands based on your preferred language:
 
-### Create a new React application
+**React with JavaScript**
 
-To set up a React application in TypeScript environment, run the following commands:
-
-```bash
-npm create vite@latest my-app -- --template react-ts
-cd my-app
-npm install
-npm run dev
 ```
-
-To set up a React application in JavaScript environment, run the following commands:
-
-```bash
 npm create vite@latest my-app -- --template react
-cd my-app
-npm install
-npm run dev
 ```
 
-### Add Syncfusion<sup style="font-size:70%">&reg;</sup> packages
+**React with TypeScript**
 
-All available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [npm public registry](https://www.npmjs.com/~syncfusionorg). To install the TreeMap package, run the following command from your project folder:
+```
+npm create vite@latest my-app -- --template react-ts
+```
+
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
+
+- **Which linter to use?** → **ESLint**
+- **Install with npm and start now?** → **Yes**
+
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
+
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
+
+Then, navigate to the project directory:
+
+```
+cd my-app
+```
+
+## Install the Syncfusion® React Treemap package
+
+All Syncfusion Essential® JS 2 packages are available in the [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry.
+
+Install the React TreeMap package using the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-treemap
@@ -74,77 +80,49 @@ npm install @syncfusion/ej2-react-treemap
 Replace the contents of `src/App.jsx` (or `src/App.tsx` for TypeScript) with the following code to render a simple TreeMap:
 
 ```tsx
-
 import * as React from 'react';
 import { TreeMapComponent } from '@syncfusion/ej2-react-treemap';
 
 export function App() {
-  const dataSource = [
-    { State: "Brazil", Count: 25 },
-    { State: "Colombia", Count: 1 },
-    { State: "Argentina", Count: 9 },
-    { State: "Ecuador", Count: 7 },
-    { State: "Chile", Count: 6 }
-  ];
   return (
-    <TreeMapComponent
-      height="350px"
-      dataSource={dataSource}
-      weightValuePath="Count"
-      leafItemSettings={{ labelPath: 'State' }}
-    />
+    <TreeMapComponent id="treemap"></TreeMapComponent>
   );
 }
 
 export default App;
-
 ```
 
-### Render the app
+## Inject Required Modules
 
-Open `src/main.jsx` (or `src/main.tsx`) and ensure the `App` component is mounted to the DOM:
+The TreeMap component features are delivered as separate modules and must be explicitly injected. The `Inject` component accepts a `services` array that registers the modules required by the Treemap component. Injecting only the modules you need helps reduce the application bundle size.
 
-```tsx
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { App } from './App';
+In this example, the `TreeMapLegend` module is injected to enable the legend feature.
 
-const root = createRoot(document.getElementById('root')!);
-root.render(<App />);
-```
+* `TreeMapLegend` – Inject this module into `services` to use the legend feature.
 
-### Run the application
+Import the required modules from the TreeMap package and register them through the `Inject` component as shown below.
 
-Run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
+{% tabs %}
+{% highlight ts tabtitle="~/src/App.tsx" %}
 
-```bash
-npm run dev
-```
-
-## Module injection
-
-The TreeMap component is segregated into individual feature-wise modules. To use a particular feature, inject its feature module using the `<Inject services={} />` method inside `TreeMapComponent`. The following modules are available:
-
-- `TreeMapHighlight` — Inject this provider to use the highlight feature.
-- `TreeMapSelection` — Inject this provider to use the selection feature.
-- `TreeMapLegend` — Inject this provider to use the legend feature.
-- `TreeMapTooltip` — Inject this provider to use the tooltip feature.
-
-The example below shows how to inject the `TreeMapLegend` module:
-
-```tsx
 import { TreeMapComponent, Inject, TreeMapLegend } from '@syncfusion/ej2-react-treemap';
+import * as React from 'react';
 
-<TreeMapComponent dataSource={dataSource} weightValuePath="Count">
-  <Inject services={[TreeMapLegend]} />
-</TreeMapComponent>
-```
+function App() {
+  return (
+    <TreeMapComponent>
+      <Inject services={[TreeMapLegend]} />
+    </TreeMapComponent>
+  )
+}
+export default App;
 
-For a full list of module options, see the [Legend](legend), [Tooltip](tooltip), and [Selection and Highlight](selection-and-highlight) sections.
+{% endhighlight %}
+{% endtabs %}
 
-## Render TreeMap
+## Bind Data to the TreeMap Component
 
-This section shows how to render a TreeMap using a bound data source. The example visualizes the number of international airports in South America.
+This section explains how to bind data to the TreeMap component. In the following example, the TreeMap visualizes the number of international airports in South American countries based on the provided data source.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -155,9 +133,15 @@ This section shows how to render a TreeMap using a bound data source. The exampl
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/treemap/getting-started-cs1" %}
+{% previewsample "page.domainurl/code-snippet/treemap/getting-started-cs1" %}
 
-The TreeMap is created with a data source and the `weightValuePath` property is set to the **Count** field of the data source as the value. The leaf-level items of the TreeMap can be customized using `leafItemSettings`. The `leafItemSettings` allows you to change properties such as `fill`, `border`, `labelPath`, and `labelPosition`.
+## Run the application
+
+Run the application using the following command:
+
+```bash
+npm run dev
+```
 
 ## Troubleshooting
 
@@ -176,3 +160,4 @@ The TreeMap is created with a data source and the `weightValuePath` property is 
 * [Selection and Highlight](selection-and-highlight)
 * [Print and Export](print-and-export)
 * [Accessibility](accessibility)
+* [TreeMap API Reference](https://ej2.syncfusion.com/react/documentation/api/treemap)

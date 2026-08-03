@@ -54,13 +54,13 @@ To create a new React application, run one of the following commands based on yo
 ***React with JavaScript***
 
 ```bash
-npx create vite@latest my-app -- --template react
+npx create-vite@latest my-app -- --template react
 ```
 
 ***React with TypeScript***
 
 ```bash
-npx create vite@latest my-app -- --template react-ts
+npx create-vite@latest my-app -- --template react-ts
 ```
 
 During the setup process, the CLI will prompt you for a few configuration options. Select the following:
@@ -112,21 +112,25 @@ Then add the following CSS reference to the **src/App.css** file:
 
 ## Adding the Inline AI Assist component
 
-Now, you can start adding the Inline AI Assist component to the application. For getting started, add the component by using the `<InlineAIAssistComponent>` tag directive in the `src/App.tsx` file. Place the following code in `src/App.tsx`.
+The Inline AI Assist code should be added to the **src/App.tsx** file.
 
-```ts
-import { InlineAIAssistComponent } from '@syncfusion/ej2-react-interactive-chat';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/inline-ai-assist/getting-started/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/inline-ai-assist/getting-started/app/index.jsx %}
+{% endhighlight %}
+{% endtabs %}
 
-function App() {
-    return (
-        // specifies the tag to render the Inline AI Assist component
-        <InlineAIAssistComponent id="inlineAiAssist"></InlineAIAssistComponent>
-    );
-}
+{% previewsample "page.domainurl/code-snippet/inline-ai-assist/getting-started" %}
 
-ReactDOM.render(<App />, document.getElementById('root'));
+## Run the application
+
+With the configuration complete, run the application to see the Inline AI Assist component rendered in your browser.
+
+```bash
+npm run dev
 ```
 
 Use the `InlineAIAssistComponent` tag where you want the inline assistant to appear.
@@ -143,34 +147,15 @@ registerLicense('YOUR_LICENSE_KEY');
 
 > **Note:** A valid Syncfusion license is required for production use. Without a valid license, a trial license warning message will be displayed.
 
-## Run the application
-
-With the configuration complete, run the application to see the Inline AI Assist component rendered in your browser.
-
-```bash
-npm start
-```
-
-{% tabs %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/inline-ai-assist/getting-started/app/index.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/inline-ai-assist/getting-started/app/index.jsx %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/inline-ai-assist/getting-started" %}
-
 ## RelateTo and target configuration
 
 You can use the `relateTo` property to position the Inline AI Assist relative to a specific DOM element. It accepts either a CSS selector string such as `.container` or `#id`, or an `HTMLElement`. The `target` property specifies the element or CSS selector where the Inline AI Assist will be appended. It accepts either a CSS selector string or an `HTMLElement`.
 
 {% tabs %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/inline-ai-assist/relateTo-target/app/index.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/inline-ai-assist/relateTo-target/app/index.jsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -182,10 +167,10 @@ You can use the `relateTo` property to position the Inline AI Assist relative to
 Responses can be shown in two modes: `Inline`, which updates the content in place, and `Popup`, which displays responses in a floating popup. Toggle this behavior with the `responseMode` property.
 
 {% tabs %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/inline-ai-assist/response-mode/app/index.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/inline-ai-assist/response-mode/app/index.jsx %}
 {% endhighlight %}
 {% endtabs %}

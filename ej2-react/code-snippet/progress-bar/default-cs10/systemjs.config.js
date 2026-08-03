@@ -25,8 +25,8 @@ System.config({
         "@syncfusion/ej2-react-base": "syncfusion:ej2-react-base/dist/ej2-react-base.umd.min.js",
         "@syncfusion/ej2-react-progressbar": "syncfusion:ej2-react-progressbar/dist/ej2-react-progressbar.umd.min.js",
         "@syncfusion/ej2-svg-base": "syncfusion:ej2-svg-base/dist/ej2-svg-base.umd.min.js",
-"react-dom":"https://unpkg.com/react-dom@16.3.1/umd/react-dom.development.js",
-"react":"https://unpkg.com/react@16.3.1/umd/react.development.js",
+        "react-dom":"https://unpkg.com/react-dom@16.3.1/umd/react-dom.development.js",
+        "react":"https://unpkg.com/react@16.3.1/umd/react.development.js",
     },
     packages: {
         'app': { main: 'index', defaultExtension: 'tsx' },
