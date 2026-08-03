@@ -199,7 +199,7 @@ The GraphQL schema acts as a blueprint for the GraphQL API. It defines what data
 
 2. Define the **Product** type to represent the product data structure.
 
-```graphql
+```
 # Product type
 type Product {
   ProductID: String!
@@ -214,7 +214,7 @@ The **Product** type contains the fields available in the sample data source.
 
 3. Define the **ReturnType** type to return the product data along with the total record count.
 
-```graphql
+```
 # Response type
 type ReturnType {
   result: [Product!]!
@@ -227,7 +227,7 @@ type ReturnType {
 
 4. Define the **DataManagerInput** type to receive request parameters from the client application.
 
-```graphql
+```
 # DataManager input
 input DataManagerInput {
   params: String
@@ -238,7 +238,7 @@ The `datamanager` argument receives request metadata from the `GraphQLAdaptor`. 
 
 5. Define the **Query** type to expose the operations used to retrieve product data from the GraphQL server.
 
-```graphql
+```
 type Query {
   getProducts(datamanager: DataManagerInput): ReturnType!
 }
@@ -389,7 +389,7 @@ Run the following query to verify that the GraphQL server is returning product d
 
 **Test query example:**
 
-```graphql
+```
 query GetProducts {
   getProducts {
     count
@@ -606,7 +606,7 @@ The mapping paths are relative to the GraphQL response's `data` object. For exam
 
 The `query` property specifies the [GraphQL](https://graphql.org/learn/introduction) query that is sent to the server.
 
-```graphql
+```
 query getProducts($datamanager: DataManagerInput) {
     getProducts(datamanager: $datamanager) {
         count
@@ -689,7 +689,7 @@ The schema must include:
 
 2. Add the **ProductInput** type after the existing **Product** type.
 
-```graphql
+```
 # --- Product input (for mutations) ---
 input ProductInput {
   ProductID: String!
@@ -702,7 +702,7 @@ input ProductInput {
 
 3. Add the following **Mutation** type definitions after the existing **Query** type.
 
-```graphql
+```
 type Mutation {
   createProduct(value: ProductInput!): Product!
   updateProduct(key: String!, keyColumn: String, value: ProductInput!): Product

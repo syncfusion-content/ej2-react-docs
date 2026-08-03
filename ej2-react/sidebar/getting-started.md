@@ -102,7 +102,7 @@ The required styles for the Sidebar component are imported in the **src/App.css*
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
 
-@import "@syncfusion/ej2-tailwind3-theme/styles/tailwind3.css";
+@import "@syncfusion/ej2-tailwind3-theme/styles/sidebar/index.css";
 
 {% endhighlight %}
 {% endtabs %}
@@ -139,31 +139,6 @@ function App() {
     );
 }
 export default App;
-{% endhighlight %}
-{% highlight css tabtitle="App.css" %}
-
-@import "@syncfusion/ej2-tailwind3-theme/styles/tailwind3.css";
-
-.title {
-    text-align: center;
-    font-size: 20px;
-    padding: 15px;
-}
-
-.sub-title {
-    text-align: center;
-    font-size: 16px;
-    padding: 10px;
-}
-
-#wrapper {
-    display: block;
-}
-
-#default-sidebar {
-    background-color: rgb(25, 118, 210);
-    color: #ffffff;
-}
 {% endhighlight %}
 {% endtabs %}
 
